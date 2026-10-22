@@ -4,13 +4,13 @@ subtitle: "Sept âges d'histoire pour une seule hypothèse : le désordre ne se 
 promo_slug: "anthropie"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-09-09
 lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
-description: "L'ouvrage fondateur du cadre anthropique. En 622 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
+description: "L'ouvrage fondateur du cadre anthropique. En 630 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
 amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
 amazon_rating_date: 2026-09-13  # date du relevé, affichée sous la note ; la mettre à jour avec elle
 amazon_reviews: 26       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
-description_en: "The foundational work on the anthropic framework. Across 622 pages, the book develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Drawing on economic history, public finance, and ecological economics, it argues that what appears as order in one location is sustained by debt — material, ecological, or moral — contracted elsewhere."
-pages: 622  # sync data/works.yaml (book-anthropie.pages) — nombre de pages broché
+description_en: "The foundational work on the anthropic framework. Across 630 pages, the book develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Drawing on economic history, public finance, and ecological economics, it argues that what appears as order in one location is sustained by debt — material, ecological, or moral — contracted elsewhere."
+pages: 630  # sync data/works.yaml (book-anthropie.pages) — nombre de pages broché
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer (priceCurrency EUR par défaut)
 serie: "anthropie"
 # Axe du cadre affiché sur /livres/ (auteur, 01/10/2026) ; source : sous-titre « Sept âges d'histoire pour une seule hypothèse ».
@@ -41,7 +41,7 @@ faq:
   - question: "Que signifie « Ordre ici. Dette ailleurs. » ?"
     answer: "Le sous-titre condense l'hypothèse du livre : tout ordre local — une ville propre, un réseau qui fonctionne, un budget maîtrisé — est financé par un désordre déplacé ailleurs, vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. C'est une comptabilité, pas une dénonciation de l'ordre. La formule ne renvoie pas à L'Ordre de la dette de Benjamin Lemoine (2016), qui relève de la sociologie des marchés de dette souveraine : seule la proximité des mots les rapproche."
   - question: "Faut-il lire ANTHROPIE avant les Anthropie Working Papers ?"
-    answer: "Non, les deux entrées sont indépendantes. ANTHROPIE pose le cadre complet — sept âges historiques, 622 pages — dont chaque working paper développe ensuite un théorème ou une application (dette publique, transition énergétique, recherche académique). On peut commencer par la fresque ou par un paper."
+    answer: "Non, les deux entrées sont indépendantes. ANTHROPIE pose le cadre complet — sept âges historiques, 630 pages — dont chaque working paper développe ensuite un théorème ou une application (dette publique, transition énergétique, recherche académique). On peut commencer par la fresque ou par un paper."
   - question: "À qui s'adresse ANTHROPIE ?"
     answer: "Au lecteur d'essais qui cherche une grille de lecture d'ensemble — économie politique, histoire longue, écologie — plutôt qu'un traitement d'actualité. Aucun prérequis technique : l'appareil conceptuel est construit pas à pas, de l'outil paléolithique au métaprogramme numérique. Les premiers lecteurs le rapprochent des grandes synthèses de Jared Diamond ou de Yuval Noah Harari."
 ressources_livre:
@@ -65,7 +65,7 @@ related_awp:
 
 L'ouvrage fondateur du cadre anthropique.
 
-*ANTHROPIE – Ordre ici. Dette ailleurs* propose une hypothèse simple mais radicale&nbsp;: les systèmes sociaux ne résolvent pas le désordre, ils le déplacent. En 622 pages, Stéphane Lalut déploie cette hypothèse à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie.
+*ANTHROPIE – Ordre ici. Dette ailleurs* propose une hypothèse simple mais radicale&nbsp;: les systèmes sociaux ne résolvent pas le désordre, ils le déplacent. En 630 pages, Stéphane Lalut déploie cette hypothèse à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie.
 
 ## Argument
 
@@ -89,7 +89,7 @@ L'ouverture de la préface, «&nbsp;Liberté sous contrainte&nbsp;»&nbsp;:
 
 ## Réception
 
-Les premiers lecteurs saluent l'ampleur de la fresque — avec des comparaisons aux grandes synthèses de Jared Diamond ou de Yuval Noah Harari — et certains jugent le propos très détaillé et l'écriture exigeante&nbsp;: 622 pages qui prennent le temps de déplier chaque âge historique. Le livre assume ce parti&nbsp;: c'est un cadre complet, pas un essai d'intervention. Les recensions des travaux liés sont réunies sur la page [Publications](/publications/).
+Les premiers lecteurs saluent l'ampleur de la fresque — avec des comparaisons aux grandes synthèses de Jared Diamond ou de Yuval Noah Harari — et certains jugent le propos très détaillé et l'écriture exigeante&nbsp;: 630 pages qui prennent le temps de déplier chaque âge historique. Le livre assume ce parti&nbsp;: c'est un cadre complet, pas un essai d'intervention. Les recensions des travaux liés sont réunies sur la page [Publications](/publications/).
 
 *Pour offrir la version Kindle par lien prépayé&nbsp;: [mode d'emploi](/offrir-un-livre-kindle/).*
 

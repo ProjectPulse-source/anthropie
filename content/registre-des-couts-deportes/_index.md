@@ -18,7 +18,7 @@ faq:
   - question: "Le Registre des coûts déportés est-il la même chose que les registres de coûts couplés ?"
     answer: "Non. Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : une chronologie de 168 jalons historiques. Les registres de coûts couplés sont un apport théorique d'AWP-06 : la grille des quatre registres — énergie, matière, territoire, attention — selon lesquels l'infrastructure numérique déplace simultanément le désordre. L'un est une chronologie, l'autre une typologie ; seul le mot « registre » est commun."
   - question: "Où trouver le Registre des coûts déportés complet ?"
-    answer: "Dans le livre ANTHROPIE — Ordre ici. Dette ailleurs (2025, 622 pages), dont il constitue l'épilogue documentaire, accompagné des schémas, de la postface analytique et des sept âges déployés chapitre par chapitre. La version en ligne, en consultation libre sur cette page, en reprend l'essentiel jalon par jalon."
+    answer: "Dans le livre ANTHROPIE — Ordre ici. Dette ailleurs (2025, 630 pages), dont il constitue l'épilogue documentaire, accompagné des schémas, de la postface analytique et des sept âges déployés chapitre par chapitre. La version en ligne, en consultation libre sur cette page, en reprend l'essentiel jalon par jalon."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["corpus", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "corpus"
@@ -60,7 +60,7 @@ Autre limite, assumée par le livre&nbsp;: les catégories du Registre — écon
 
 ## D'où vient ce registre
 
-Le Registre des coûts déportés constitue l'épilogue du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 622&nbsp;pages), où il accompagne les sept âges déployés chapitre par chapitre, les schémas et la postface analytique. La présente version en ligne reprend, jalon par jalon, la version publiée par l'auteur&nbsp;; les jalons y sont classés selon la segmentation des sept âges du livre, par leurs bornes chronologiques. Le vocabulaire du cadre est défini au [glossaire](/glossaire/)&nbsp;— à ne pas confondre avec les [registres de coûts couplés](/glossaire/#registres-de-couts-couples) d'AWP-06, qui sont une typologie et non une chronologie.
+Le Registre des coûts déportés constitue l'épilogue du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 630&nbsp;pages), où il accompagne les sept âges déployés chapitre par chapitre, les schémas et la postface analytique. La présente version en ligne reprend, jalon par jalon, la version publiée par l'auteur&nbsp;; les jalons y sont classés selon la segmentation des sept âges du livre, par leurs bornes chronologiques. Le vocabulaire du cadre est défini au [glossaire](/glossaire/)&nbsp;— à ne pas confondre avec les [registres de coûts couplés](/glossaire/#registres-de-couts-couples) d'AWP-06, qui sont une typologie et non une chronologie.
 
 {{< canonical-definition >}}
 

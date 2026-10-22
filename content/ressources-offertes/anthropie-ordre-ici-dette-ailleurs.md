@@ -16,7 +16,7 @@ _build:
 systèmes sociaux ne suppriment pas le désordre&nbsp;: ils le déplacent vers d'autres
 lieux, d'autres temps ou d'autres groupes sociaux. Essai d'histoire longue à la
 croisée de l'économie politique, de l'écologie et de la philosophie du pouvoir, il
-déploie — sur 622 pages et sept âges, de l'outil paléolithique au métaprogramme
+déploie — sur 630 pages et sept âges, de l'outil paléolithique au métaprogramme
 numérique — une grille de lecture transversale des coûts cachés de l'ordre
 moderne&nbsp;: climat, numérique, dette, inégalités.
 

@@ -6,7 +6,7 @@ description: "Les ouvrages de Stéphane Lalut : la série anthropique et autres 
 commencer:
   - livre: "anthropie-ordre-ici-dette-ailleurs"
     pour: "L'hypothèse et sa démonstration"
-    pourquoi: "622 pages, sept âges d'histoire"
+    pourquoi: "630 pages, sept âges d'histoire"
   - livre: "dette-publique-qui-paie-vraiment"
     pour: "Un cas chiffré, au cœur du débat"
     pourquoi: "le coût suivi canal par canal"

@@ -209,4 +209,4 @@ Plusieurs pages prolongent le cadre sur ses terrains d'application&nbsp;: [Qu'es
 
 ## Le livre
 
-Le cadre présenté sur cette page est déployé dans le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (622 pages)&nbsp;: sept configurations historiques, l'appareil conceptuel complet et ses applications contemporaines. Pour l'application aux finances publiques, voir [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/).
+Le cadre présenté sur cette page est déployé dans le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (630 pages)&nbsp;: sept configurations historiques, l'appareil conceptuel complet et ses applications contemporaines. Pour l'application aux finances publiques, voir [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/).

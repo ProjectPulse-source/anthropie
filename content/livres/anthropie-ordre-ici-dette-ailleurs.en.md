@@ -76,7 +76,7 @@ The subtitle condenses the book's hypothesis. The common misreading takes it for
 
 ## How it reads
 
-622 pages in the original — 632 in this English edition — that take the time to unfold each historical age. The book assumes that choice: it is a complete framework, not an intervention essay. Early readers of the work have compared its scope to the great syntheses of Jared Diamond and Yuval Noah Harari. Reviews of the related work are gathered on the [Publications](/en/publications/) page.
+630 pages in the original — 632 in this English edition — that take the time to unfold each historical age. The book assumes that choice: it is a complete framework, not an intervention essay. Early readers of the work have compared its scope to the great syntheses of Jared Diamond and Yuval Noah Harari. Reviews of the related work are gathered on the [Publications](/en/publications/) page.
 
 ## Contents
 
