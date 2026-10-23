@@ -52,6 +52,14 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-23 (soir) — bloc « École et lycée » élargi en « École, lycée et université » ; EN LIGNE (`c6e4b01`)
+
+Décision de l'auteur, pour accueillir une page sur le supérieur (chantier `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\` :
+note reçue, neuf avis contradictoires, contre-expertise `PRO-20261023-180856` en attente d'envoi). Chapô inchangé tant
+qu'aucune page du supérieur n'est en ligne. Pastille : 197 px, une ligne, à 320, 390 et 768 px. Instantanés de relecture
+des trois pages du bloc refaits (seule phrase changée : l'intitulé). Version servie attestée sur `/ressources/` et les
+trois pages (nouvel intitulé présent, ancien absent).
+
 ### 2026-10-23 (soir) — fiche ANTHROPIE : extrait de la préface aligné sur l'édition 630 p.
 
 L'auteur signale que les pages des livres n'ont pas suivi les changements de texte. Contrôle systématique : toute
