@@ -1,4 +1,4 @@
-# relu le 2026-10-23 ; texte servi de /budget-2027-votre-commune/, build de 11e243c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-23 ; texte servi de /budget-2027-votre-commune/, build de 8b79e69 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Budget 2027 : que sait-on réellement pour votre commune ?
 Le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
@@ -73,7 +73,7 @@ Prochaine échéance : suite de l'examen de la première partie du 27 octobre au
 Chaque ligne est développée mesure par mesure, avec ce qu’il serait trompeur de chiffrer à ce stade.
 Budget 2027 : ce qui pourrait changer pour votre commune
 Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au 22 octobre 2026.
-À imprimer pour le débat d’orientation budgétaire.
+Une fiche pour préparer le budget 2027 et, s’il y a lieu, le débat d’orientation budgétaire.
 Votre commune : nom, département ou code Insee
 Voir la fiche
 La fiche a besoin de JavaScript.

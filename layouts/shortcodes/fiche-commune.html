@@ -35,6 +35,7 @@
      data-temoin="{{ $m.dotations.temoin_annexes | jsonify }}"
      data-procedure="{{ $proc | jsonify }}"
      data-echeance="{{ $a.plf_etape_suivante }}"
+     data-procnote="{{ with site.Data.plf_procedure }}{{ cond $en .note_en .note_fr }}{{ end }}"
      data-releve="{{ (time $m.releve_le) | time.Format (cond $en "2 January 2006" ":date_long") }}">
 <form class="fiche-commune__recherche" role="search" onsubmit="return false">
 <label class="fiche-commune__label" for="fiche-commune-champ">{{ cond $en "Your municipality: name, department or INSEE code" "Votre commune : nom, département ou code Insee" }}</label>

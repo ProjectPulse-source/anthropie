@@ -2,10 +2,47 @@
  "_role": "Frise « Où en est le texte » de la fiche de chaque commune (/budget-2027-votre-commune/#fiche, maquette v3, auteur 23/10/2026). Une entrée par étape de la procédure, état : fait | encours | prevu | possible. La date de dépôt et la prochaine échéance, écrite sous la frise, viennent du registre des votes (plf_depot, plf_etape_suivante de data/dette_collectivites.json) : rien à réécrire ici tant que l'étape ne change pas. À mettre à jour avec le registre des votes, à chaque échéance de data/sources_maj.json (source plf-2027-etat, un ticket par échéance passée) : passer l'étape achevée à « fait », la suivante à « encours », et `etat_au`.",
  "etat_au": "2026-10-23",
  "etapes": [
-  {"cle": "depot", "etat": "fait", "fr": "Projet déposé", "en": "Bill tabled", "detail": "plf_depot"},
-  {"cle": "an", "etat": "encours", "fr": "Assemblée nationale, 1re lecture", "en": "National Assembly, first reading", "detail_fr": "en cours", "detail_en": "under way"},
-  {"cle": "senat", "etat": "prevu", "fr": "Sénat", "en": "Senate", "detail_fr": "prévu", "detail_en": "scheduled"},
-  {"cle": "cmp", "etat": "possible", "fr": "Commission mixte paritaire", "en": "Joint committee", "detail_fr": "si désaccord", "detail_en": "if the chambers disagree"},
-  {"cle": "loi", "etat": "prevu", "fr": "Loi de finances", "en": "Finance act", "detail_fr": "en principe avant le 31 décembre", "detail_en": "in principle before 31 December"}
- ]
+  {
+   "cle": "depot",
+   "etat": "fait",
+   "fr": "Projet déposé",
+   "en": "Bill tabled",
+   "detail": "plf_depot"
+  },
+  {
+   "cle": "an",
+   "etat": "encours",
+   "fr": "Assemblée nationale, 1re lecture",
+   "en": "National Assembly, first reading",
+   "detail_fr": "en cours",
+   "detail_en": "under way"
+  },
+  {
+   "cle": "senat",
+   "etat": "prevu",
+   "fr": "Sénat",
+   "en": "Senate",
+   "detail_fr": "prévu",
+   "detail_en": "scheduled"
+  },
+  {
+   "cle": "cmp",
+   "etat": "possible",
+   "fr": "Commission mixte paritaire",
+   "en": "Joint committee",
+   "detail_fr": "si désaccord",
+   "detail_en": "if the chambers disagree"
+  },
+  {
+   "cle": "loi",
+   "etat": "prevu",
+   "fr": "Loi de finances",
+   "en": "Finance act",
+   "detail_fr": "en principe avant le 31 décembre",
+   "detail_en": "in principle before 31 December"
+  }
+ ],
+ "note_fr": "Les dates annoncées peuvent changer, et l'adoption d'une partie du texte ne vaut pas adoption de chaque mesure. Délais de l'article 47 de la Constitution : l'Assemblée nationale jusqu'au 17 novembre à minuit, le Parlement jusqu'au 17 décembre à minuit.",
+ "note_en": "Announced dates may change, and adopting one part of the bill does not mean adopting each measure. Deadlines under article 47 of the Constitution: the National Assembly until midnight on 17 November, Parliament until midnight on 17 December.",
+ "_source_note": "Assemblée nationale, Direction de la séance, « Organisation de la discussion budgétaire », 29/09/2026, annexe 1 (point de départ des délais : vendredi 9 octobre 2026) ; archive scripts/sources_collectivites/an_organisation_discussion_budgetaire_plf2027_2026-09-29.pdf, SHA-256 623281d5…"
 }

@@ -1,4 +1,4 @@
-# relu le 2026-10-23 ; texte servi de /en/2027-budget-your-municipality/, build de 11e243c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-23 ; texte servi de /en/2027-budget-your-municipality/, build de 8b79e69 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
@@ -73,7 +73,7 @@ Next deadline: the first part continues to be examined from 27 October to 2 Nove
 Each row is developed measure by measure, with what it would be misleading to quantify at this stage.
 2027 budget: what could change for your municipality
 The municipality’s official figures and the provisional status of each measure as of 22 October 2026.
-To print for the budget policy debate.
+A sheet to help prepare the 2027 budget and, where applicable, the budget policy debate.
 Your municipality: name, department or INSEE code
 See the sheet
 The sheet needs JavaScript.
