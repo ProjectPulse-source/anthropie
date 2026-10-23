@@ -38,8 +38,8 @@
       col: ['Mesure', 'Statut au ' + etat, 'Pour la commune', 'Pour préparer 2027'],
       qDil: function (n, x) { return n + NB + ': ' + x + ' de reversement DILICO différés en 2027' + NB + '?'; },
       rDil: 'C’est l’écart entre le calendrier actuel de restitution du DILICO et celui du projet de loi déposé (article 84). Le montant total restitué ne change pas' + NB + '; seule sa répartition dans le temps serait modifiée si l’article était adopté en l’état.',
-      qDgf: function (n, x) { return n + NB + ': ' + x + ' des recettes de fonctionnement proviennent de la DGF, dont le montant 2027 reste à notifier'; },
-      pDgf: function (x, m, a) { return x + NB + ': part observée dans les comptes ' + a + ' (médiane de la strate' + NB + ': ' + m + '), non une prévision de variation en 2027.'; },
+      qDgf: function (n, x, m, a) { return n + NB + ': en ' + a + ', la DGF représente ' + x + ' des recettes de fonctionnement, contre ' + m + ' pour la médiane des communes de même taille'; },
+      pDgf: function () { return 'Une part observée, non une prévision' + NB + ': le montant de la DGF 2027 de la commune ne sera connu qu’à la notification.'; },
       qExo: function (n) { return n + NB + ': exonérée si la contribution sur les recettes était rétablie'; },
       qRien: function (n) { return n + NB + ': aucun effet individuel chiffrable des mesures examinées à ce stade'; },
       nonContrib: 'La commune n’a pas contribué au DILICO en 2025.',
@@ -126,8 +126,8 @@
       col: ['Measure', 'Status as of ' + etat, 'For the municipality', 'To prepare 2027'],
       qDil: function (n, x) { return n + ': ' + x + ' of DILICO repayment deferred in 2027?'; },
       rDil: 'This is the gap between the current DILICO repayment schedule and that of the bill as tabled (article 84). The total repaid does not change; only its spread over time would change if the article were adopted as it stands.',
-      qDgf: function (n, x) { return n + ': ' + x + ' of operating revenue comes from the DGF, whose 2027 amount is still to be notified'; },
-      pDgf: function (x, m, a) { return x + ': share observed in the ' + a + ' accounts (size-band median: ' + m + '), not a forecast of change in 2027.'; },
+      qDgf: function (n, x, m, a) { return n + ': in ' + a + ', the DGF makes up ' + x + ' of operating revenue, against ' + m + ' for the median municipality of the same size'; },
+      pDgf: function () { return 'An observed share, not a forecast: the municipality’s 2027 DGF will be known only on notification.'; },
       qExo: function (n) { return n + ': exempt if the revenue contribution were reinstated'; },
       qRien: function (n) { return n + ': no individual effect of the measures examined can be quantified at this stage'; },
       nonContrib: 'The municipality did not contribute to the 2025 DILICO.',
@@ -229,7 +229,6 @@
   }
   function court(x) { return Math.abs(x) < 1e6 ? eur(x) : meur(x); } // etiquette de barre : euros sous le million
   function pct(x) { if (x === null || x === undefined) return T.nd; return L === 'fr' ? dec(100 * x, 1) + NB + '%' : dec(100 * x, 1) + '%'; }
-  function pct0(x) { return L === 'fr' ? dec(100 * x, 0) + NB + '%' : dec(100 * x, 0) + '%'; }
   function ans(x) { if (x === null || x === undefined) return T.nd; if (x === 'nc') return T.nc; return dec(x, 1); }
   function ansU(x) { // français : « an » au singulier sous 2 (« 1,9 an »), comme l'accord de « point » du module de langue
     var a = ans(x);
@@ -324,7 +323,7 @@
     var faitDgf = partDgf !== null && medDgf !== null && medDgf !== undefined && partDgf >= 1.5 * medDgf && partDgf - medDgf >= 0.05;
     if (dil) { q = T.qDil(nom, eur(ecart)); rep = T.rDil; }
     else if (!d) { q = T.qRien(nom); rep = T.sansDot + T.dgfReste + T.autres; }
-    else if (faitDgf) { q = T.qDgf(nom, pct0(partDgf)); rep = T.nonContrib + phraseExo + T.dgfReste; prec = T.pDgf(pct(partDgf), pct(medDgf), a1); }
+    else if (faitDgf) { q = T.qDgf(nom, pct(partDgf), pct(medDgf), a1); rep = T.nonContrib + phraseExo; prec = T.pDgf(); }
     else if (exoDoc) { q = T.qExo(nom); rep = T.nonContrib + phraseExo + T.aucuneAutre + T.dgfReste; }
     else { q = T.qRien(nom); rep = T.nonContrib + phraseExo + T.dgfReste + T.autres; }
 
