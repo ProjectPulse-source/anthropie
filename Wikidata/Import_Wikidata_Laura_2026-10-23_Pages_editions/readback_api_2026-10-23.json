@@ -1,0 +1,48 @@
+{
+ "Q138827344": {
+  "lastrevid": 2560013383,
+  "P1104": [
+   {
+    "mainsnak": {
+     "snaktype": "value",
+     "property": "P1104",
+     "hash": "d4d86bebb3befbf89ef48457de0b74f7e549673e",
+     "datavalue": {
+      "value": {
+       "amount": "+630",
+       "unit": "1"
+      },
+      "type": "quantity"
+     },
+     "datatype": "quantity"
+    },
+    "type": "statement",
+    "id": "Q138827344$9BB19910-F004-4A62-97B5-23D5ABB8CD2A",
+    "rank": "normal"
+   }
+  ]
+ },
+ "Q140645013": {
+  "lastrevid": 2560013393,
+  "P1104": [
+   {
+    "mainsnak": {
+     "snaktype": "value",
+     "property": "P1104",
+     "hash": "fe46f122787010300d9e9dff0eef1b692ef08195",
+     "datavalue": {
+      "value": {
+       "amount": "+644",
+       "unit": "1"
+      },
+      "type": "quantity"
+     },
+     "datatype": "quantity"
+    },
+    "type": "statement",
+    "id": "Q140645013$6BE51472-FF36-4B95-9AF0-0F5075189C75",
+    "rank": "normal"
+   }
+  ]
+ }
+}
