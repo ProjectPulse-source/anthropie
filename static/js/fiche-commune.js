@@ -27,6 +27,7 @@
   var SEUILS = JSON.parse(root.dataset.seuils || '{}');
   var DOCS = JSON.parse(root.dataset.documents || '{}');
   var TEMOIN = JSON.parse(root.dataset.temoin || '{}');
+  var PROC = JSON.parse(root.dataset.procedure || '[]');
   var NB = ' ', FIN = ' ';
   var T = {
     fr: {
@@ -113,8 +114,9 @@
       exoDsrc: function (r) { return 'Exonération possible, à confirmer' + NB + ': ' + r + ', que le texte déposé exonérait' + NB + '; mais il ne précise pas l’année du classement retenu pour 2027.'; },
       paris: ' Ville de Paris' + NB + ': le texte déposé ne retenait que 70,87' + NB + '% de ses recettes pour cette contribution, et la soumettait en outre, sur 29,13' + NB + '% de ses recettes, à la contribution des départements (taux de 0 à 2' + NB + '% selon un indice de fragilité sociale).',
       nc: 'non calculable (épargne brute nulle ou négative)',
-      texte: 'Où en est le texte' + NB + ': ', texteL: 'le projet déposé et ce qu’il en reste',
-      lien: 'Copier le lien de cette fiche', copie: 'Lien copié', imprimer: 'Imprimer la fiche', aucun: 'Aucune commune trouvée.',
+      texte: 'Où en est le texte', echeance: 'Prochaine échéance' + NB + ': ', texteL: 'Le projet déposé et ce qu’il en reste, mesure par mesure',
+      lien: 'Copier le lien', copie: 'Lien copié', imprimer: 'Imprimer', transmettre: 'Transmettre', aucun: 'Aucune commune trouvée.',
+      objetT: function (n) { return 'Budget 2027 : la fiche de ' + n; },
       source: function (r) { return 'Sources' + NB + ': OFGL, comptes des communes (DGFiP) et dotations des communes (DGCL), données relevées le ' + r + NB + '; annexes des arrêtés publiées au Journal officiel' + NB + '; CSV complet et méthode en bas de page.'; }
     },
     en: {
@@ -201,8 +203,9 @@
       exoDsrc: function (r) { return 'Exemption possible, to be confirmed: ' + r + ', which the bill as tabled exempted; but it does not specify the year of the ranking used for 2027.'; },
       paris: ' City of Paris: the bill as tabled took only 70.87% of its revenue into account for this contribution, and also subjected it, on 29.13% of its revenue, to the departments’ contribution (rate from 0 to 2% according to a social fragility index).',
       nc: 'not calculable (gross savings zero or negative)',
-      texte: 'Where the text stands: ', texteL: 'the bill as tabled and what remains of it',
-      lien: 'Copy the link to this sheet', copie: 'Link copied', imprimer: 'Print the sheet', aucun: 'No municipality found.',
+      texte: 'Where the text stands', echeance: 'Next step: ', texteL: 'The bill as tabled and what remains of it, measure by measure',
+      lien: 'Copy the link', copie: 'Link copied', imprimer: 'Print', transmettre: 'Pass on', aucun: 'No municipality found.',
+      objetT: function (n) { return '2027 budget: the sheet for ' + n; },
       source: function (r) { return 'Sources: OFGL, municipal accounts (DGFiP) and municipal grants (DGCL), data retrieved on ' + r + '; annexes to the orders published in the Official Journal; full CSV and method at the foot of the page.'; }
     }
   }[L];
@@ -211,9 +214,10 @@
     if (x === null || x === undefined) return T.nd;
     return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, L === 'fr' ? FIN : ',');
   }
-  function dec(x, n) { // decimal, partie entiere groupee comme ent()
+  function dec(x, n) { // decimal, partie entiere groupee comme ent() ; nombre rond a la precision affichee : sans
+    // decimale (auteur, 23/10/2026 : « 1 an, 2 ans », jamais « 1,0 an »)
     var s = x.toFixed(n).split('.'), e = s[0].replace(/\B(?=(\d{3})+(?!\d))/g, L === 'fr' ? FIN : ',');
-    return s.length > 1 ? e + (L === 'fr' ? ',' : '.') + s[1] : e;
+    return s.length > 1 && /[1-9]/.test(s[1]) ? e + (L === 'fr' ? ',' : '.') + s[1] : e;
   }
   function meur(x, ref) { // millions d'euros ; sous le million, euros a la centaine (« 0,02 M€ » effacait l'ordre de grandeur).
     // ref : plus grande valeur de la ligne, pour qu'une ligne du tableau garde une seule unite.
@@ -329,7 +333,9 @@
 
     var h = '';
     h += '<header class="fiche-commune__tete"><div><h3>' + nom + '</h3><p class="fiche-commune__id">' + ent(p) + NB + T.pop + ' · ' + (nomE || T.aucune) + ' · ' + T.insee + ' ' + esc(insee) + '</p></div>';
-    h += '<p class="fiche-commune__actions"><button type="button" data-action="imprimer">' + T.imprimer + '</button> <button type="button" data-action="copier">' + T.lien + '</button></p></header>';
+    var urlFiche = location.origin + location.pathname + '?insee=' + encodeURIComponent(insee) + '#fiche';
+    h += '<p class="fiche-commune__actions"><button type="button" data-action="imprimer">' + T.imprimer + '</button><button type="button" data-action="copier">' + T.lien + '</button>' +
+      '<a href="mailto:?subject=' + encodeURIComponent(T.objetT(c.nom)) + '&amp;body=' + encodeURIComponent(urlFiche) + '">' + T.transmettre + '</a></p></header>';
     h += '<p class="fiche-commune__sous">' + T.sous(has0 ? a0 + T.et + a1 : a1) + '</p>';
     h += bloc(T.n1, '<div class="fiche-commune__reponse"><p class="fiche-commune__q">' + q + '</p><p>' + rep + '</p></div>' + (prec ? '<p class="fiche-commune__note">' + prec + '</p>' : ''));
 
@@ -435,7 +441,12 @@
     det += mesure(T.tvaM, statuts.tva, T.tvaTxt);
     corps4 += '<details class="fiche-commune__repli fiche-commune__preuves"><summary>' + T.calc + '</summary>' + calc + det + '</details>';
     h += bloc(T.n4(n4, a1), corps4);
-    h += '<p class="fiche-commune__texte">' + T.texte + '<a href="#etat-du-texte">' + T.texteL + '</a></p>';
+    if (PROC.length) {
+      h += '<section class="fiche-commune__bloc"><p class="fiche-commune__num">' + T.texte + '</p><ol class="fiche-commune__frise">' +
+        PROC.map(function (e) { return '<li class="' + esc(e.etat) + '"><span>' + esc(e.lib) + '</span><span>' + esc(e.detail) + '</span></li>'; }).join('') +
+        '</ol>' + (root.dataset.echeance ? '<p class="fiche-commune__note">' + T.echeance + esc(root.dataset.echeance) + '.</p>' : '') +
+        '<p class="fiche-commune__texte"><a href="#etat-du-texte">' + T.texteL + '</a></p></section>';
+    }
     h += '<p class="fiche-commune__note fiche-commune__sources">' + T.source(root.dataset.releve) + '</p>';
     sortie.innerHTML = '<article class="fiche-commune__fiche">' + h + '</article>';
     var u = new URL(location.href); u.searchParams.set('insee', insee); u.hash = 'fiche';
@@ -455,6 +466,14 @@
       window.print();
     });
   }
+  var voir = document.getElementById('fiche-commune-voir');
+  if (voir) voir.addEventListener('click', function () {
+    chargerIndex().then(function () {
+      var r = chercher(champ.value);
+      if (r.length) { champ.value = r[0].nom; liste.hidden = true; afficher(r[0].insee); }
+      else { proposer(); }
+    });
+  });
   champ.addEventListener('focus', chargerIndex);
   champ.addEventListener('input', proposer);
   liste.addEventListener('click', function (e) {

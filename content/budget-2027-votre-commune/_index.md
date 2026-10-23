@@ -86,11 +86,13 @@ dossier_dette_role_en: "draft budget bill, state of the text"
 
 Prochaine échéance&nbsp;: {{< coll-val "plf_etape_suivante" >}}. Chaque ligne est développée [mesure par mesure](#mesure-par-mesure), avec ce qu'il serait trompeur de chiffrer à ce stade.
 
-## La fiche de votre commune {#fiche}
+## Budget 2027&nbsp;: ce qui pourrait changer pour votre commune {#fiche .fiche-commune__titre data-etiquette="La fiche de votre commune"}
 
-Pour chaque commune, la fiche commence par une réponse&nbsp;: le fait le plus informatif que les données établissent pour elle. C'est l'effet du report des reversements du DILICO quand elle y a contribué en 2025, la part de la dotation globale dans ses recettes quand elle dépasse nettement celle des communes de même taille, ou ce que les données publiées permettent de dire de son exonération de la contribution progressive. Suivent les principales mesures du projet, avec leur statut au Parlement, puis sa situation financière comparée à celle des communes de même taille, et enfin le calcul et les sources, chacune liée à son document officiel. Le seul montant pour 2027 est l'écart du DILICO, qui suppose l'article 84 adopté en l'état&nbsp;: ce qui n'est pas publié s'affiche «&nbsp;non disponible&nbsp;», jamais zéro, et la commune n'est jamais confondue avec son intercommunalité.
+Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au {{< coll-val "plf_etat_au" >}}. À imprimer pour le débat d'orientation budgétaire.
 
 {{< fiche-commune >}}
+
+Pour chaque commune, la fiche commence par une réponse&nbsp;: le fait le plus informatif que les données établissent pour elle. C'est l'effet du report des reversements du DILICO quand elle y a contribué en 2025, la part de la dotation globale dans ses recettes quand elle dépasse nettement celle des communes de même taille, ou ce que les données publiées permettent de dire de son exonération de la contribution progressive. Suivent les principales mesures du projet, avec leur statut au Parlement, puis sa situation financière comparée à celle des communes de même taille, et enfin le calcul et les sources, chacune liée à son document officiel. Le seul montant pour 2027 est l'écart du DILICO, qui suppose l'article 84 adopté en l'état&nbsp;: ce qui n'est pas publié s'affiche «&nbsp;non disponible&nbsp;», jamais zéro, et la commune n'est jamais confondue avec son intercommunalité.
 
 ## Le projet déposé et ce qu'il en reste {#etat-du-texte}
 

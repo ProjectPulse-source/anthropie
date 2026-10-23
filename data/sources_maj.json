@@ -1,5 +1,5 @@
 {
- "_doc": "Registre des sources de données du site : UNE ligne par source, lue par scripts/maj_sources.py (détection, intégration, état), par les générateurs (quelle édition lire) et par le workflow maj-sources.yml. Règles : CLAUDE.md, section « Module de mise à jour ». Une source en mode « fichier » est une pièce archivée dans scripts/sources_enseignants/, empreinte dans SHA256SUMS ; une source en mode « api » est interrogée par son générateur et servie par son propre workflow. Mode « manuel » (16/10/2026) : jeu sans détecteur, mis à jour à la main ; `nature` dit pourquoi, `revoir_avant` est la date d'une édition ou d'une relecture due (retard signalé par maj_sources.py controle, jamais avant cette date ; condition de mort : la ligne meurt quand son jeu reçoit un détecteur ou disparaît).",
+ "_doc": "Registre des sources de données du site : UNE ligne par source, lue par scripts/maj_sources.py (détection, intégration, état), par les générateurs (quelle édition lire) et par le workflow maj-sources.yml. Règles : CLAUDE.md, section « Module de mise à jour ». Une source en mode « fichier » est une pièce archivée dans scripts/sources_enseignants/, empreinte dans SHA256SUMS ; une source en mode « api » est interrogée par son générateur et servie par son propre workflow. Mode « manuel » (16/10/2026) : jeu sans détecteur, mis à jour à la main ; `nature` dit pourquoi, `revoir_avant` est la date d'une édition ou d'une relecture due (retard signalé par maj_sources.py controle, jamais avant cette date ; condition de mort : la ligne meurt quand son jeu reçoit un détecteur ou disparaît). Champs « echeances » (23/10/2026) : liste de dates convenues {date, etape} ; l'échéance en vigueur est la plus ancienne que le jeu n'a pas rattrapée, un ticket par échéance. « date_cle » : clé qui date le jeu quand ce n'est pas releve_le.",
  "sources": [
   {
    "id": "sies-licence",
@@ -244,6 +244,48 @@
    "cadence": "annuelle (comptes de l'exercice N publiés en N+1)",
    "nature": "API OFGL sans workflow à ce jour : relevé lancé à la main ; à relancer à chaque étape de la loi de finances et à la publication des comptes 2026",
    "revoir_avant": "2026-12-31"
-  }
+  },
+ {
+  "id": "plf-2027-etat",
+  "producteur": "Assemblée nationale, Sénat (comptes rendus des séances)",
+  "objet": "état du projet de loi de finances pour 2027 article par article (art. 34 à 37, 84) : statuts affichés par la fiche de chaque commune, le tableau du service financier et les pages collectivités ; contrôles des envois aux maires",
+  "mode": "manuel",
+  "pages": [
+   "/budget-2027-votre-commune/",
+   "/en/2027-budget-your-municipality/",
+   "/dette-publique-collectivites-locales/",
+   "/en/local-government-debt/"
+  ],
+  "generateurs": [
+   "update_dette_collectivites.py",
+   "update_budget_communes.py"
+  ],
+  "jeu": "scripts/sources_collectivites/plf_votes.json",
+  "date_cle": "etat_au",
+  "cadence": "à chaque étape de la procédure parlementaire",
+  "nature": "juridique (procédure parlementaire) : registre des votes à compléter (citation verbatim du compte rendu, verifier_plf_votes.py) et frise de la fiche (data/plf_procedure.json)",
+  "echeances": [
+   {
+    "date": "2026-11-03",
+    "etape": "vote solennel sur la première partie (Assemblée nationale, séance du mardi 3 novembre, après-midi ; dossier législatif lu le 23/10/2026)"
+   },
+   {
+    "date": "2026-11-10",
+    "etape": "fin du délai de quarante jours de l'Assemblée nationale en première lecture (Constitution, art. 47 ; dépôt le 1er octobre)"
+   },
+   {
+    "date": "2026-11-25",
+    "etape": "fin du délai de quinze jours du Sénat s'il est saisi le 10 novembre (Constitution, art. 47)"
+   },
+   {
+    "date": "2026-12-10",
+    "etape": "délai de soixante-dix jours (Constitution, art. 47 : mise en vigueur possible par ordonnance)"
+   },
+   {
+    "date": "2026-12-31",
+    "etape": "loi de finances promulguée en principe ; fiche et lots de courriels à revoir sur le texte définitif"
+   }
+  ]
+ }
  ]
 }

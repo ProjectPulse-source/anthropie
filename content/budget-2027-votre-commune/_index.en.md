@@ -82,11 +82,13 @@ dossier_dette_role: "draft budget bill, state of the text"
 
 Next deadline: {{< coll-val "plf_etape_suivante" >}}. Each row is developed [measure by measure](#measure-by-measure), with what it would be misleading to quantify at this stage.
 
-## Your municipality's sheet {#fiche}
+## 2027 budget: what could change for your municipality {#fiche .fiche-commune__titre data-etiquette="Your municipality's sheet"}
 
-For each municipality, the sheet opens with an answer: the most informative fact that the data establish for it. That is the effect of deferring DILICO repayments when it contributed in 2025, the share of the general operating grant in its revenue when it clearly exceeds that of municipalities of the same size, or what the published data allow us to say about its exemption from the progressive contribution. Then come the main measures of the bill, with their status in Parliament, its financial position set against municipalities of the same size, and finally the calculation and the sources, each linked to its official document. The only amount for 2027 is the DILICO gap, which assumes article 84 is adopted as it stands: anything not published shows as “not available”, never zero, and the municipality is never confused with its inter-municipal body.
+The municipality's official figures and the provisional status of each measure as of {{< coll-val "plf_etat_au" >}}. To print for the budget policy debate.
 
 {{< fiche-commune >}}
+
+For each municipality, the sheet opens with an answer: the most informative fact that the data establish for it. That is the effect of deferring DILICO repayments when it contributed in 2025, the share of the general operating grant in its revenue when it clearly exceeds that of municipalities of the same size, or what the published data allow us to say about its exemption from the progressive contribution. Then come the main measures of the bill, with their status in Parliament, its financial position set against municipalities of the same size, and finally the calculation and the sources, each linked to its official document. The only amount for 2027 is the DILICO gap, which assumes article 84 is adopted as it stands: anything not published shows as “not available”, never zero, and the municipality is never confused with its inter-municipal body.
 
 ## The bill as tabled and what is left of it {#state-of-the-text}
 

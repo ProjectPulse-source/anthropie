@@ -1,4 +1,4 @@
-# relu le 2026-10-23 ; texte servi de /en/2027-budget-your-municipality/, build de 29ce93c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-23 ; texte servi de /en/2027-budget-your-municipality/, build de 11e243c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
@@ -71,14 +71,17 @@ A share of VAT received by the municipality, or by its inter-municipal body
 For the 2027 budget → Enter the share under the current rules; the capping is no longer in the text at this stage.
 Next deadline: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November.
 Each row is developed measure by measure, with what it would be misleading to quantify at this stage.
-Your municipality’s sheet
+2027 budget: what could change for your municipality
+The municipality’s official figures and the provisional status of each measure as of 22 October 2026.
+To print for the budget policy debate.
+Your municipality: name, department or INSEE code
+See the sheet
+The sheet needs JavaScript.
+All figures are in the full CSV file.
 For each municipality, the sheet opens with an answer: the most informative fact that the data establish for it.
 That is the effect of deferring DILICO repayments when it contributed in 2025, the share of the general operating grant in its revenue when it clearly exceeds that of municipalities of the same size, or what the published data allow us to say about its exemption from the progressive contribution.
 Then come the main measures of the bill, with their status in Parliament, its financial position set against municipalities of the same size, and finally the calculation and the sources, each linked to its official document.
 The only amount for 2027 is the DILICO gap, which assumes article 84 is adopted as it stands: anything not published shows as “not available”, never zero, and the municipality is never confused with its inter-municipal body.
-Your municipality: name, department or INSEE code
-The sheet needs JavaScript.
-All figures are in the full CSV file.
 The bill as tabled and what is left of it
 The five measures of the draft budget bill as tabled aimed at local authorities, and what Parliament did with them.
 Amounts in the bill as tabled: they describe the initial framing, not the current state of the text; their arithmetic sum does not measure a net levy.

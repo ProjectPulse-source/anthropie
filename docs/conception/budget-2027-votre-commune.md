@@ -191,5 +191,14 @@ une section de `/budget-2027-votre-commune/` (`#fiche`), non une page neuve — 
     sans question suggérant un effet du projet (pièce `0304_Communes-14` : « en 2025, la DGF représente 21,0 % des recettes de fonctionnement, contre 11,7 % pour la médiane des communes de même taille ») ; coût de trésorerie du
     report dit sans montant ; contrôle de bout en bout de la version servie (profil de navigateur ayant l'ancien script en
     cache) ;
+  - fait — conformité à la maquette v3 (auteur, 23/10) : entrée « La fiche de votre commune » (étiquette portée par le
+    titre `#fiche`, attribut `data-etiquette`), titre « Budget 2027 : ce qui pourrait changer pour votre commune », chapeau
+    daté par jeton, champ et bouton « Voir la fiche » ; actions Imprimer, Copier le lien, Transmettre (courriel) ; frise
+    « Où en est le texte » rétablie, tirée de `data/plf_procedure.json` et de la prochaine échéance du registre des votes ;
+    nombre rond sans décimale (« 1 an », « 21 % »), contrôlé par la recette dans la langue de la page ;
+  - fait — suivi automatique aux dates convenues : source `plf-2027-etat` de `data/sources_maj.json`, échéances du
+    3/11 (vote solennel, dossier législatif), 10/11, 25/11 et 10/12 (Constitution, art. 47, lu au texte), 31/12 ;
+    `maj_sources.py controle` (tâche quotidienne de `maj-sources.yml`) ouvre un ticket le lendemain de chaque échéance non
+    rattrapée par le registre ; témoin vu mordre (date simulée), levé par `verifie_le` ;
   - non fait — contre-expertise de la fiche intégrée seule (motif : la pièce 12 a validé l'architecture ; à proposer à
     l'auteur si une décision en dépend) ; panel (même motif qu'au 22/10).
