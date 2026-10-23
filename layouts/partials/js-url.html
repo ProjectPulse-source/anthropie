@@ -1,0 +1,9 @@
+{{- /* js-url.html — adresse d'un script de static/js/, suivie de l'empreinte de son contenu (?v=…).
+       MOTIF (23/10/2026) : la feuille de style porte une empreinte (pipeline Hugo), les scripts non : servis sous une
+       adresse fixe avec « Cache-Control: max-age=600 », un script modifié restait en cache chez le visiteur, qui voyait
+       l'ancienne fiche de commune sous la nouvelle feuille de style (constaté par l'auteur après le déploiement 8e9c9ec).
+       L'empreinte change avec le contenu, et seulement avec lui. Usage : {{ partial "js-url.html" "fiche-commune.js" }}.
+       Un fichier absent arrête le build. */ -}}
+{{- $chemin := printf "static/js/%s" . -}}
+{{- if not (fileExists $chemin) -}}{{- errorf "js-url : %s absent" $chemin -}}{{- end -}}
+{{- printf "js/%s" . | relURL -}}?v={{ substr (os.ReadFile $chemin | sha256) 0 12 -}}
