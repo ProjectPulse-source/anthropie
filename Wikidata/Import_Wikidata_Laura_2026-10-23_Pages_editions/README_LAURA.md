@@ -18,5 +18,5 @@ Lot : `batch_quickstatements.txt`, lien : `deeplink.txt` (retrait de l'ancienne 
    - EN : **Amazon.fr affiche 632 pages** (23/10). L'auteur confirme le même jour que l'édition en ligne est la
      dernière (644 p.) et que ce champ, calculé par Amazon, est hors de sa main : **644 maintenu**. Pas de référence
      Amazon tant que la page contredit la valeur ; voie de correction : demande au support KDP.
-2. **Descriptions KDP** : FR corrigée par l'auteur le 23/10, sans nombre de pages ; EN encore « Seven ages, 168
-   milestones, 632 pages » à la lecture du 23/10.
+2. **Descriptions KDP** : FR corrigée par l'auteur le 23/10, sans nombre de pages ; EN alignée le même jour
+   (« A long history, 168 ways in »), sans nombre de pages. Réglé.
