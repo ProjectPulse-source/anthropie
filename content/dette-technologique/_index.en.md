@@ -64,5 +64,5 @@ Technological debt is the application of this hypothesis to digital infrastructu
 ## Further reading
 
 - [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) — the working paper that formalises the concept (DOI: 10.5281/zenodo.20025421, open-access PDF).
-- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 632 p.) deploys the complete framework of which technological debt is one of the applications.
+- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 p.) deploys the complete framework of which technological debt is one of the applications.
 - [What is anthropy?](/en/quest-ce-que-lanthropie/) — the page of the general concept.

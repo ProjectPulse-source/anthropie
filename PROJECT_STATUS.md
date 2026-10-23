@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-23 (après-midi, suite) — ANTHROPIE 630 p. et ANTHROPY 644 p. : nouvelles éditions en ligne (auteur)
+
+Le commit `6b1cc4d` (FR 622 → 630, onze fichiers) attendait la mise en ligne KDP de n+47 ; l'auteur l'annonce, avec
+l'édition anglaise révisée. Pages anglaises 632 → 644 : fiche du livre (description, `pages:`, FAQ, corps), six pages
+« (2026, 632 p.) », `data/works.yaml` (`pages:` et résumé `en` ; commentaires historiques datés laissés tels quels),
+`static/llms.txt` (FR et EN). `numberOfPages` du balisage : 630 et 644 dans le build. `check-all --ci`, liens et dates à 0.
+Reste : Wikidata (Q138827344 P1104 622 → 630 ; Q140645013 P1104 632 → 644), lot QuickStatements écrit dans
+`03_LIVRES/anthropie/AUDIT_EXACTITUDE/REPRISE.md`.
+
 ### 2026-10-23 (après-midi) — « Lire le détail » sur tout bloc dépliable (règle constante) ; frise de la fiche en orange
 
 Règle constante de l'auteur : toute partie qui se déplie porte la ligne d'action. `replis-action.js` vise désormais tout

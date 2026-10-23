@@ -61,4 +61,4 @@ The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](
 
 - [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) (DOI: 10.5281/zenodo.20025421, open-access PDF) — where digital technology joins the candidate negative commons.
 - [What is technological debt?](/en/technological-debt/) and [What is the anthropic loop?](/en/anthropic-loop/) — the neighbouring pages of the framework.
-- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 632 p.) — the general framework, of which negative commons are one of the meeting points with the ecology of dismantling.
+- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 p.) — the general framework, of which negative commons are one of the meeting points with the ecology of dismantling.

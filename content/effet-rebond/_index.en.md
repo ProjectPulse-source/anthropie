@@ -73,4 +73,4 @@ The practical consequence is known to serious energy scenarios: efficiency is ne
 
 - [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/) — the working paper that places the rebound effect among the transfer mechanisms of the transition (DOI: 10.5281/zenodo.19269244, open-access PDF).
 - [What is anthropy?](/en/quest-ce-que-lanthropie/) — the general framework: local order, displaced disorder, boomerang effect.
-- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 632 p.) devotes a chapter to energy and to the transfers of the transition.
+- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 p.) devotes a chapter to energy and to the transfers of the transition.

@@ -521,7 +521,7 @@ works:
     wikidata: "Q138827344"
     abstract_short:
       fr: "L'ouvrage fondateur du cadre anthropique. En 630 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
-      en: "The foundational work of the anthropic framework. Across 632 pages (English edition), the hypothesis that social systems displace disorder rather than resolve it is deployed through deep history, economics, public finance and epistemology. Order here. Debt elsewhere."  # sync fiche EN 2026-08-01
+      en: "The foundational work of the anthropic framework. Across 644 pages (English edition), the hypothesis that social systems displace disorder rather than resolve it is deployed through deep history, economics, public finance and epistemology. Order here. Debt elsewhere."  # sync fiche EN 2026-08-01
     keywords: [anthropie, anthropy, économie politique, dette, ordre social, transfert]
     site_pages:
       fr: "https://stephane-lalut.com/livres/anthropie-ordre-ici-dette-ailleurs/"
@@ -536,7 +536,7 @@ works:
       publication_date: "2026-07-21"
       isbn: "978-2-958634-75-9"
       isbn_13_normalized: "9782958634759"
-      pages: 632
+      pages: 644
       asin_paperback: "2958634752"
       asin_kindle: "B0H9QMR1CN"
       wikidata: "Q140645013"  # item de l'ÉDITION anglaise (P629 → Q138827344) — vérifié via l'API le 2026-08-11 : ISBN 978-2-9586347-5-9, 632 p., 17 propriétés

@@ -228,4 +228,4 @@ Three pages extend the framework in English: [What is the anthropic loop?](/en/a
 
 ## The book
 
-The framework presented on this page is developed in full in the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 632 pages): seven historical configurations, the complete conceptual apparatus, and its contemporary applications. For the application to public finance, see [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (in French).
+The framework presented on this page is developed in full in the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 pages): seven historical configurations, the complete conceptual apparatus, and its contemporary applications. For the application to public finance, see [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (in French).

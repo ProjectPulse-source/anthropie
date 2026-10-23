@@ -3,11 +3,11 @@ title: "ANTHROPY – A Big History of Civilization's Hidden Costs"
 subtitle: "Seven ages of history for a single hypothesis: disorder is never resolved, only displaced."
 date: 2026-07-21  # date de publication de l'édition anglaise (mise en vente KDP)
 lastmod: 2026-08-15
-description: "The foundational work on the anthropic framework. Across 632 pages, ANTHROPY develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Order here. Debt elsewhere."
+description: "The foundational work on the anthropic framework. Across 644 pages, ANTHROPY develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Order here. Debt elsewhere."
 isbn: "978-2-958634-75-9"
 currency: "USD"
 price: "29.99"  # prix broché USD — affiché + schema.org Offer (priceCurrency USD)
-pages: 632  # nombre de pages broché (édition anglaise)
+pages: 644  # nombre de pages broché (édition anglaise)
 wikidata_qid: "Q140645013"  # item de l'ÉDITION anglaise (P629 → Q138827344, l'œuvre) — alimente sameAs
 serie: "anthropie"
 axe_cadre: "All three axes, over the long run"
@@ -34,7 +34,7 @@ faq:
   - question: "What does \"Order here. Debt elsewhere.\" mean?"
     answer: "The subtitle condenses the book's hypothesis: every local order — a clean city, a working network, a balanced budget — is financed by disorder displaced elsewhere, toward other places, other times, or other social groups. It is an accounting, not a denunciation of order."
   - question: "Should I read ANTHROPY before the Anthropy Working Papers?"
-    answer: "No, the two entry points are independent. ANTHROPY lays out the complete framework — seven historical ages, 632 pages — from which each working paper then develops a theorem or an application (public debt, the energy transition, academic research). You can begin with the fresco or with a single paper."
+    answer: "No, the two entry points are independent. ANTHROPY lays out the complete framework — seven historical ages, 644 pages — from which each working paper then develops a theorem or an application (public debt, the energy transition, academic research). You can begin with the fresco or with a single paper."
   - question: "Who is ANTHROPY for?"
     answer: "For the essay reader looking for an overall reading grid — political economy, deep history, ecology — rather than topical commentary. No technical prerequisite: the conceptual apparatus is built step by step, from the Paleolithic tool to the digital metaprogram. Early readers place it alongside the great syntheses of Jared Diamond or Yuval Noah Harari."
 ressources_livre:
@@ -58,7 +58,7 @@ related_awp:
 
 The foundational work of the anthropic framework.
 
-*ANTHROPY – A Big History of Civilization's Hidden Costs* advances a simple but radical hypothesis: social systems do not resolve disorder, they displace it. Across 632 pages, Stéphane Lalut deploys this hypothesis through deep history, economics, public finance and epistemology.
+*ANTHROPY – A Big History of Civilization's Hidden Costs* advances a simple but radical hypothesis: social systems do not resolve disorder, they displace it. Across 644 pages, Stéphane Lalut deploys this hypothesis through deep history, economics, public finance and epistemology.
 
 ## Argument
 
@@ -76,7 +76,7 @@ The subtitle condenses the book's hypothesis. The common misreading takes it for
 
 ## How it reads
 
-630 pages in the original — 632 in this English edition — that take the time to unfold each historical age. The book assumes that choice: it is a complete framework, not an intervention essay. Early readers of the work have compared its scope to the great syntheses of Jared Diamond and Yuval Noah Harari. Reviews of the related work are gathered on the [Publications](/en/publications/) page.
+630 pages in the original — 644 in this English edition — that take the time to unfold each historical age. The book assumes that choice: it is a complete framework, not an intervention essay. Early readers of the work have compared its scope to the great syntheses of Jared Diamond and Yuval Noah Harari. Reviews of the related work are gathered on the [Publications](/en/publications/) page.
 
 ## Contents
 

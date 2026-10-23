@@ -78,4 +78,4 @@ The formalisation — nine definitions, five states, three conditions, four form
 
 - [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/) — the working paper that formalises the apparatus (DOI: 10.5281/zenodo.21200288, open-access PDF).
 - [What is anthropy?](/en/quest-ce-que-lanthropie/) — the general concept and its distinctions (entropy, Anthropocene, anthropic principle, anthropology, Anthropic).
-- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 632 p.) — the complete framework, of which the loop is the theoretical keystone.
+- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 p.) — the complete framework, of which the loop is the theoretical keystone.
