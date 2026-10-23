@@ -54,6 +54,9 @@ HORS_RESEAU = [
     # mecaniquement (carte de partage, resultat en une phrase, Reutiliser, Dataset, JSON + CSV, livre sans note
     # Amazon) est bloquant, sinon une ressource neuve naitrait en dessous du modele sans que personne le voie.
     ("modele des ressources de donnees", "check-ressource-modele.py", []),
+    # Replis (regle constante de l'auteur, 23/10/2026) : tout bloc qui se deplie dit « Lire le detail ». Bloquant : la
+    # ligne manquait sur la fiche de commune (replis construits par script), sans erreur ni avertissement.
+    ("ligne « Lire le detail » des replis", "check-replis.py", []),
     # Dates et jeux (16/10/2026, arbitrage PRO-20261016-174136) : tout jeu date qu'une page affiche entre dans sa date
     # (donnees: ou date_suit:). Bloquant : une nouvelle edition integree restait invisible des moteurs, sortie 0
     # (cas fondateur : /enseignants/environnement/, Insee Premiere n° 2130, sitemap reste au 02/10).

@@ -23,7 +23,8 @@ Que change le projet de loi de finances pour 2027 pour une commune, et qu'en peu
 
 ### Enjeu
 
-Les maires préparent leur débat d'orientation budgétaire avec des montants annoncés au dépôt du projet ; le Parlement
+Les maires préparent leur budget (et, à partir de 3 500 habitants, leur débat d'orientation budgétaire : CGCT
+L. 2312-1, L. 1612-26) avec des montants annoncés au dépôt du projet ; le Parlement
 en a déjà défait une partie. Se tromper d'état du texte, c'est inscrire au budget un prélèvement supprimé, ou en oublier
 un qui reviendra.
 

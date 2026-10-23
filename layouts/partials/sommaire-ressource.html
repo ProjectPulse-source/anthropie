@@ -11,7 +11,7 @@
   {{- if eq .Level 2 }}{{ $titres = $titres | append . }}{{ else }}{{ range .Headings }}{{ if eq .Level 2 }}{{ $titres = $titres | append . }}{{ end }}{{ end }}{{ end -}}
 {{- end -}}
 {{- if ge (len $titres) 5 }}
-<details class="sommaire-page">
+<details class="sommaire-page" data-repli="nav">
   <summary>{{ if $isEn }}On this page · {{ len $titres }} sections{{ else }}Dans cette page · {{ len $titres }} sections{{ end }}</summary>
   {{- /* Libellé lu dans le CONTENU RENDU (11/10/2026) : .Fragments garde le titre source, où un shortcode n'est pas
          résolu — un titre à jeton ({{< coll-val >}}, {{< infl-val >}}) s'affichait « HAHAHUGOSHORTCODE… » dans le

@@ -274,6 +274,11 @@ section « Production des ressources » ci-dessous.
     navigateur de bureau fait déborder ou rogner) : marge négative exacte du conteneur, calculée depuis `--marge-main` et `--marge-colonne` (`_layout.scss`, 11/10/2026 :
     20 px de marge de page sous 600 px au lieu de 52, aucune valeur recopiée). La barre
     collante garde la pastille du dossier (décision de l'auteur du 06/10) : la compacter se décide avec lui.
+    **Tout bloc qui se déplie porte « Lire le détail · N paragraphes ▾ »** (règle constante de l'auteur, 23/10/2026),
+    sur toute page, qu'il vienne du Markdown, d'un shortcode ou d'un script : un seul organe, `static/js/replis-action.js`,
+    chargé sur toute page, vise tout `<details>` (classe `.repli` ou non, blocs posés après chargement compris) ; seule
+    exemption, la navigation (`data-repli="nav"`, liste fermée). Contrôle bloquant `scripts/check-replis.py`. Cas
+    fondateur : « Évolution 2024-2025 et détail des comptes » de la fiche de commune, sans la ligne.
 14. **La divergence entre indicateurs est une information à expliquer, pas encore une explication** (contre-expertise
     de la page « Niveau », 10/10/2026). Grille de contrôle, pas plan : résultat → instrument → population et temps →
     inférence → mécanisme encore inconnu. Une baisse significative d'un côté et une évolution non significative de
