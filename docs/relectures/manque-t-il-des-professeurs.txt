@@ -1,11 +1,11 @@
-# relu le 2026-10-16 ; texte servi de /manque-t-il-des-professeurs/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-23 ; texte servi de /manque-t-il-des-professeurs/, build de 0a84b95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Manque-t-il des professeurs au lycée ?
 Au lycée général et technologique public, 10,4 % des heures de cours prévues n'ont pas été assurées en 2024-2025, une sur dix.
 Sur ces 10,4 points, les absences individuelles d'enseignants non remplacées en représentent 3,9 ; les fermetures d'établissement, les enseignants mobilisés par les examens ou les commissions et leur formation, 6,6.
 Ce chiffre ne compte pas les professeurs qui manquent : aucune statistique publique ne mesure l'écart entre les enseignants nécessaires et ceux qui sont en poste.
 Cours non assurés, postes non pourvus, classes chargées : trois mesures, qui ne disent pas la même chose.
 Page mise à jour le 10 octobre 2026
-École et lycée
+École, lycée et université
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données mises à jour le 10 octobre 2026 DEPP : Repères et références statistiques 2026, Notes d'Information 26-14, 25-36, 26-38 et 26-42 ; ministère, résultats des concours 2026 ; OCDE, dépense par élève (2012-2023) ; énoncés relus à leur source.
 Télécharger : CSV · JSON · méthode

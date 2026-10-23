@@ -1,10 +1,10 @@
-# relu le 2026-10-16 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-23 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 0a84b95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Le niveau des élèves baisse-t-il ?
 Selon PISA, oui : de 2015 à 2025, les jeunes Français de 15 ans ont perdu 43 points en compréhension de l'écrit et 35 en mathématiques, une baisse significative.
 Mais les évaluations passées en classe, en CM1 et en quatrième, ne mettent pas en évidence la même baisse récente.
 Les évaluations se contredisent-elles vraiment ?
 Page mise à jour le 16 octobre 2026 · révisions
-École et lycée
+École, lycée et université
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données mises à jour le 9 octobre 2026 OCDE : PISA 2025, volume I, et Regards sur l'éducation 2026 ; IEA : TIMSS 2023, TIMSS Advanced 2015 ; DEPP : PIRLS 2021, Notes d'Information 16-37, 26-39, 26-40 et 26-22, Repères et références statistiques.
 Télécharger : CSV · JSON · méthode

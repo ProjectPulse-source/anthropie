@@ -14,11 +14,13 @@ blocs:
     bande_donnees: "dossier_dette"       # libellés des questions : data/dossier_dette.yaml, source de la barre
     chapo: "Pourquoi elle augmente, ce qu'elle coûte, qui la paie, ce qui se passe ailleurs et à quelles conditions elle peut baisser."
   - id: ecole
-    titre: "École et lycée"
+    titre: "École, lycée et université"
     dossier: true
     chapo: "Ce que les séries officielles disent des moyens du lycée et des parcours d'élèves : recrutement, classes, cours perdus, dépense, et ce qu'elles ne disent pas."
     # Bloc créé le 07/10/2026 (ressource « Manque-t-il des professeurs au lycée ? », pendant la consultation nationale des
-    # lycéens). Français seulement : pas de bloc dans _index.en.md tant qu'aucune page anglaise n'existe (exclusion déclarée).
+    # lycéens). Élargi le 23/10/2026 à l'université (décision de l'auteur ; chantier
+    # 06_PROMOTION/RECHERCHE_MALAISE_ETUDIANT_2026-10-23) : chapô inchangé tant qu'aucune page du supérieur n'est en
+    # ligne, il décrit ce que le bloc contient. Français seulement : pas de bloc dans _index.en.md tant qu'aucune page anglaise n'existe (exclusion déclarée).
   - id: enseigner
     titre: "Pour enseigner"
     dossier: true
