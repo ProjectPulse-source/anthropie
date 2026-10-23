@@ -27,3 +27,8 @@ Le lot « ajouter la référence à la déclaration existante » s'est terminé 
 écriture** (relecture API : révision inchangée 2560013383, P1104 = 630 sans référence ; contributions de Laura : rien
 après 15 h 01 UTC ; `readback_api_2026-10-23_reference.json`). Lot refait sur le modèle qui a fonctionné le 04/10 :
 retrait de la déclaration, puis recréation avec sa référence (`batch_reference_FR.txt`, `deeplink_reference_FR.txt`).
+
+> ✅ **Référence FR FAITE le 2026-10-23 (15:28 UTC, Laura)** — relecture API (`readback_api_2026-10-23_reference_2.json`) :
+> Q138827344 révision 2560021572, un seul P1104 `+630`, référence S854 `https://www.amazon.fr/dp/2958634728` et S813
+> `+2026-10-23`. Séquence : retrait 15:28:33, création 15:28:34, référence 15:28:36. Reste : EN sans référence tant
+> qu'Amazon affiche 632.

@@ -1,0 +1,67 @@
+{
+ "Q138827344": {
+  "lastrevid": 2560021572,
+  "P1104": [
+   {
+    "mainsnak": {
+     "snaktype": "value",
+     "property": "P1104",
+     "hash": "d4d86bebb3befbf89ef48457de0b74f7e549673e",
+     "datavalue": {
+      "value": {
+       "amount": "+630",
+       "unit": "1"
+      },
+      "type": "quantity"
+     },
+     "datatype": "quantity"
+    },
+    "type": "statement",
+    "id": "Q138827344$0D3B8284-AB60-4B4D-A864-479E73B7333F",
+    "rank": "normal",
+    "references": [
+     {
+      "hash": "40a1353133432874d66e42b36cbbd150ba09fcc4",
+      "snaks": {
+       "P813": [
+        {
+         "snaktype": "value",
+         "property": "P813",
+         "hash": "12309887d1f764a6cf3e2e85d1ea4a80818b1efa",
+         "datavalue": {
+          "value": {
+           "time": "+2026-10-23T00:00:00Z",
+           "timezone": 0,
+           "before": 0,
+           "after": 0,
+           "precision": 11,
+           "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+          },
+          "type": "time"
+         },
+         "datatype": "time"
+        }
+       ],
+       "P854": [
+        {
+         "snaktype": "value",
+         "property": "P854",
+         "hash": "e3aabee31d4a857c6a4dd48d28211973cfb7bc63",
+         "datavalue": {
+          "value": "https://www.amazon.fr/dp/2958634728",
+          "type": "string"
+         },
+         "datatype": "url"
+        }
+       ]
+      },
+      "snaks-order": [
+       "P813",
+       "P854"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
