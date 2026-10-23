@@ -52,6 +52,8 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import releve_jeu as rj  # noqa: E402  -- releve date par les seules donnees (organe commun, 17/10/2026)
 OUT_DIR = ROOT / "static" / "budget2027-communes"
 OUT_CSV = ROOT / "static" / "budget_communes.csv"
 OUT_JSON = ROOT / "static" / "budget_communes.json"
@@ -176,6 +178,20 @@ ANNEXES = ROOT / "scripts" / "sources_budget_communes"
 PDF_ANNEXES = {("dil", AN_DOT - 1): "legifrance_da_2025-06-06_n0011_dilico_prelevement_communes.pdf",
                ("rev", AN_DOT): "legifrance_da_2026-06-04_n0008_dilico_reversement.pdf",
                ("dgf", AN_DOT): "legifrance_da_2026-05-12_n0006_dgf_communes.pdf"}
+# Documents officiels lus par le temoin, cites par la fiche avec leur lien (piece 0133_Communes-12 : preuves accessibles).
+DOCUMENTS = {
+    "arrete_dilico": {"titre_en": "order of 21 May 2025", "titre": "arrêté du 21 mai 2025", "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051695423"},
+    "dil": {"titre_en": "administrative document no. 0011 of 6 June 2025", "titre": "document administratif n° 0011 du 6 juin 2025", "fichier": PDF_ANNEXES[("dil", AN_DOT - 1)],
+            "url": "https://www.legifrance.gouv.fr/download/pdf?id=YzOx2OdCcw8z8XNaI5ZoWYstvrbVw7vibSIX3L_C8eE="},
+    "rev": {"titre_en": "administrative document no. 0008 of 4 June 2026", "titre": "document administratif n° 0008 du 4 juin 2026", "fichier": PDF_ANNEXES[("rev", AN_DOT)],
+            "url": "https://www.legifrance.gouv.fr/download/pdf?id=VoEIffkZdyyg3ErfrLMQZglgj8aUOv1MZCf1HPdWY3s="},
+    "dgf": {"titre_en": "administrative document no. 0006 of 12 May 2026", "titre": "document administratif n° 0006 du 12 mai 2026", "fichier": PDF_ANNEXES[("dgf", AN_DOT)],
+            "url": "https://www.legifrance.gouv.fr/download/pdf?id=briayEHf_x1Jh-oGjekY0Cu1fmt64dDetDQxhvJZNMc="},
+    "lf2025_186": {"titre_en": "article 186 of the 2025 Finance Act", "titre": "article 186 de la loi de finances pour 2025", "url": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000051169538"},
+    "plf": {"titre_en": "draft budget bill for 2027, no. 3210", "titre": "projet de loi de finances pour 2027, n° 3210", "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf"},
+    "ofgl": {"titre_en": "OFGL, municipal database", "titre": "OFGL, base des communes", "url": "https://data.ofgl.fr/explore/dataset/ofgl-base-communes/"},
+    "ofgl_dot": {"titre_en": "OFGL, municipal grants", "titre": "OFGL, dotations des communes", "url": "https://data.ofgl.fr/explore/dataset/dotations-communes/"},
+}
 # Omissions constatees dans l'annexe DGF 2026 (page 286 -> 287 : la liste des Landes s'ouvre sur 40004), valeurs OFGL gardees.
 OMISES_ANNEXE_DGF = {"40001", "40002", "40003"}
 
@@ -237,6 +253,7 @@ def temoin_annexes(dot: dict[str, dict]) -> None:
         fail("annexe DILICO : total %.2f" % sum(lu["dil"].values()))
     print("temoin annexes officielles : %d montants OFGL non nuls relus dans les arretes, 0 ecart a l'euro "
           "(omission de l'annexe DGF : %s)" % (compte, ", ".join(sorted(OMISES_ANNEXE_DGF))))
+    return compte
 
 
 def fiche_dot(e: dict | None, rf24) -> dict | None:
@@ -298,7 +315,7 @@ def main() -> int:
             fail("temoin : commune %s, seconde voie %s, export %s" % (i, bp, attendu))
     print("temoin : 10 communes relues par une seconde voie, 0 ecart")
     dot = dotations(cache)
-    temoin_annexes(dot)
+    montants_relus = temoin_annexes(dot)
     for i, c in gardees.items():
         c["d"] = fiche_dot(dot.get(i), c["v"].get("2024", {}).get("rf"))
     sans_dot = [i for i, c in gardees.items() if c["d"] is None]
@@ -316,7 +333,7 @@ def main() -> int:
     an = str(ans[-1])
     strates: dict[str, dict] = {}
     for c in gardees.values():
-        s = strates.setdefault(c.get("strate") or "?", {"pops": [], "taux_eb": [], "dette_hab": [], "dgf_hab": [], "equip_hab": [], "annees_dette": []})
+        s = strates.setdefault(c.get("strate") or "?", {"pops": [], "taux_eb": [], "dette_hab": [], "dgf_hab": [], "equip_hab": [], "annees_dette": [], "part_dgf": []})
         v, p = c["v"][an], c.get("pop")
         if p:
             s["pops"].append(p)
@@ -330,23 +347,36 @@ def main() -> int:
             s["equip_hab"].append(v["equip"] / p)
         if v.get("eb") and v["eb"] > 0 and v.get("dette") is not None:
             s["annees_dette"].append(v["dette"] / v["eb"])
+        # Part de la DGF comptabilisee dans les recettes de fonctionnement (piece 0124_Communes-11 : la DGF par habitant
+        # ne mesure pas une dependance) ; repere de la premiere reponse de la fiche (piece 0133_Communes-12).
+        if v.get("rf") and v.get("dgf") is not None:
+            s["part_dgf"].append(v["dgf"] / v["rf"])
     meds = {}
     for k, s in strates.items():
         meds[k] = {"n": len(s["pops"]), "pop_min": min(s["pops"]) if s["pops"] else None,  # brut-ok: populations entieres, affichees entieres
                    "pop_max": max(s["pops"]) if s["pops"] else None}  # brut-ok: populations entieres, affichees entieres
-        for m in ("taux_eb", "dette_hab", "dgf_hab", "equip_hab", "annees_dette"):
+        for m in ("taux_eb", "dette_hab", "dgf_hab", "equip_hab", "annees_dette", "part_dgf"):
             meds[k][m] = statistics.median(s[m]) if s[m] else None
             meds[k][m + "_n"] = len(s[m])
-    meta = {"releve_le": date.today().isoformat(), "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source OFGL (comptes des communes, DGFiP)",
+    meta = {"releve_le": None, "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source OFGL (comptes des communes, DGFiP)",
             "exercices": ans, "communes": len(gardees), "ecartees": len(ecartees), "lignes_lues": lus,
             "perimetres": perimetres,
             "dotations": {"annee": AN_DOT, "source": "https://data.ofgl.fr/explore/dataset/dotations-communes/",
                           "sans_dotations": len(sans_dot), "dilico_contributrices": sum(1 for c in gardees.values() if c["d"] and c["d"]["dil"]),
-                          "seuils_exoneration": SEUILS},
+                          "seuils_exoneration": SEUILS,
+                          # Lus par la fiche (preuves repliees, piece 0133_Communes-12) : le compte est celui du temoin
+                          # qui vient de tourner, jamais un nombre ecrit dans la page.
+                          "temoin_annexes": {"montants_relus": montants_relus, "ecart_max_euro": 1},
+                          "documents": DOCUMENTS},
             "strates": meds, "source": "https://data.ofgl.fr/explore/dataset/ofgl-base-communes/",
             "definitions": {"perimetre": "budget principal de la commune ; budgets annexes et intercommunalite exclus",
                             "valeurs": "euros courants ; null = non publie, jamais zero",
                             "strate": "tranche de population de l'OFGL (tranche_population) ; bornes et medianes calculees sur les communes de la tranche, dernier exercice"}}
+    # Releve date par les donnees (organe commun releve_jeu, 17/10/2026) ; avec --cache, date des exports lus : relire un
+    # cache ne releve rien de nouveau.
+    jour = (date.fromtimestamp(min(f.stat().st_mtime for f in cache.glob("*.csv"))).isoformat() if cache
+            else date.today().isoformat())
+    meta["releve_le"] = rj.releve(OUT_DATA, meta, jour)
     if check:
         print("--check : %d communes, %d ecartees, %d strates ; rien ecrit." % (len(gardees), len(ecartees), len(meds)))
         return 0
