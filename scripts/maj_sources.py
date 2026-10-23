@@ -673,7 +673,9 @@ def etat(controle: bool) -> int:
     retards = []
     for s in reg["sources"]:
         jeu = ROOT / s["jeu"]
-        releve = json.loads(jeu.read_text(encoding="utf-8")).get("releve_le", "?") if jeu.is_file() else "ABSENT"
+        # `date_cle` (23/10/2026) : un jeu qui date son etat sous une autre cle que releve_le (registre des votes du projet
+        # de loi : `etat_au`).
+        releve = json.loads(jeu.read_text(encoding="utf-8")).get(s.get("date_cle", "releve_le"), "?") if jeu.is_file() else "ABSENT"
         p = prochaine(s) if s["mode"] == "fichier" and "fenetre" in s else None
         suite = ("attendu : %s, fenetre close le %s" % (p[0], p[1].isoformat())) if p else \
             ("veille (signal par ticket, integration a la main) : edition lue %s" % s["lu"]) if s["mode"] == "veille" else \
@@ -688,9 +690,20 @@ def etat(controle: bool) -> int:
         # change. Elle leve le retard sans toucher a la date des donnees ni a celle de la page : verifier n'est pas
         # mettre a jour. La poser a la main, avec la date du jour, apres avoir consulte la source.
         if s["mode"] == "manuel":
+            vu = max(str(releve), str(s.get("verifie_le", "")))
+            # `echeances` (auteur, 23/10/2026 : « suivi en automatique avec mise a jour aux dates convenues ») : liste de
+            # dates convenues (etapes d'une procedure, delais d'un texte). L'echeance en vigueur est la plus ancienne que
+            # le jeu n'a pas encore rattrapee (date passee et etat anterieur) ; sinon la prochaine a venir. Une seule
+            # echeance signalee a la fois, un ticket par echeance : jamais une alerte toujours vraie.
+            if s.get("echeances"):
+                ech = sorted(s["echeances"], key=lambda e: e["date"])
+                dues = [e for e in ech if date.today() > date.fromisoformat(e["date"]) and vu < e["date"]]
+                a_venir = [e for e in ech if date.fromisoformat(e["date"]) >= date.today()]
+                cible = dues[0] if dues else (a_venir[0] if a_venir else None)
+                s = dict(s, revoir_avant=cible["date"], nature="%s : %s" % (s["nature"], cible["etape"])) if cible else \
+                    {k: v for k, v in s.items() if k != "revoir_avant"}
             suite = "%s, a revoir avant le %s" % (s["nature"], s.get("revoir_avant", "-")) if s.get("revoir_avant") else \
                 "%s, sans echeance" % s["nature"]
-            vu = max(str(releve), str(s.get("verifie_le", "")))
             if s.get("revoir_avant") and date.today() > date.fromisoformat(s["revoir_avant"]) and vu < s["revoir_avant"]:
                 retards.append("%s : a revoir avant le %s (%s), jeu releve le %s" % (s["id"], s["revoir_avant"],
                                                                                       s["nature"], releve))

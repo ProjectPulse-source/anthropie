@@ -10,6 +10,16 @@
 {{- $m := site.Data.budget_communes -}}
 {{- if not $m -}}{{ errorf "fiche-commune: data/budget_communes.json absent (%s)" .Page.File.Path }}{{- end -}}
 {{- $statuts := dict "cpeb" $a.plf_statut_cpeb "fctva" $a.plf_statut_fctva "dgf" $a.plf_statut_dgf "dilico" $a.plf_statut_dilico "tva" $a.plf_statut_tva -}}
+{{- /* Frise « Où en est le texte » (maquette v3) : étapes de data/plf_procedure.json ; le détail de l'étape en cours et la
+       date de dépôt sont des jetons du registre des votes (plf_etape_suivante, plf_depot). */ -}}
+{{- $proc := slice -}}
+{{- with site.Data.plf_procedure -}}
+{{- range .etapes -}}
+{{- $d := cond (isset . "detail") (index $a (.detail | default "")) (cond $en (.detail_en | default "") (.detail_fr | default "")) -}}
+{{- if not $d }}{{ errorf "fiche-commune: detail vide pour l'etape %q de data/plf_procedure.json" .cle }}{{ end -}}
+{{- $proc = $proc | append (dict "etat" .etat "lib" (cond $en .en .fr) "detail" $d) -}}
+{{- end -}}
+{{- else -}}{{ errorf "fiche-commune: data/plf_procedure.json absent (%s)" $.Page.File.Path }}{{- end -}}
 {{- range $k, $v := $statuts }}{{ if not $v }}{{ errorf "fiche-commune: statut %q absent (%s)" $k $.Page.File.Path }}{{ end }}{{ end -}}
 {{- if not $m.dotations }}{{ errorf "fiche-commune: bloc dotations absent de data/budget_communes.json (%s)" .Page.File.Path }}{{ end -}}
 {{- if not (and $m.dotations.documents $m.dotations.temoin_annexes) }}{{ errorf "fiche-commune: documents ou temoin des annexes absents de data/budget_communes.json (%s)" .Page.File.Path }}{{ end -}}
@@ -23,10 +33,12 @@
      data-seuils="{{ $m.dotations.seuils_exoneration | jsonify }}"
      data-documents="{{ $m.dotations.documents | jsonify }}"
      data-temoin="{{ $m.dotations.temoin_annexes | jsonify }}"
+     data-procedure="{{ $proc | jsonify }}"
+     data-echeance="{{ $a.plf_etape_suivante }}"
      data-releve="{{ (time $m.releve_le) | time.Format (cond $en "2 January 2006" ":date_long") }}">
 <form class="fiche-commune__recherche" role="search" onsubmit="return false">
-<label for="fiche-commune-champ">{{ cond $en "Your municipality: name, department or INSEE code" "Votre commune : nom, département ou code Insee" }}</label>
-<input id="fiche-commune-champ" type="search" autocomplete="off" spellcheck="false" placeholder="{{ cond $en "e.g. Oyonnax, 01283" "par exemple Oyonnax, 01283" }}" aria-controls="fiche-commune-liste">
+<label class="fiche-commune__label" for="fiche-commune-champ">{{ cond $en "Your municipality: name, department or INSEE code" "Votre commune : nom, département ou code Insee" }}</label>
+<div class="fiche-commune__saisie"><input id="fiche-commune-champ" type="search" autocomplete="off" spellcheck="false" placeholder="{{ cond $en "Municipality or INSEE code" "Commune ou code Insee" }}" aria-controls="fiche-commune-liste"><button type="button" id="fiche-commune-voir">{{ cond $en "See the sheet" "Voir la fiche" }}</button></div>
 <ul id="fiche-commune-liste" class="fiche-commune__liste" role="listbox" hidden></ul>
 </form>
 <div class="fiche-commune__resultat" id="fiche-commune-resultat" aria-live="polite"></div>

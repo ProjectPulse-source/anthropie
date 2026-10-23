@@ -1,4 +1,4 @@
-# relu le 2026-10-23 ; texte servi de /budget-2027-votre-commune/, build de 29ce93c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-23 ; texte servi de /budget-2027-votre-commune/, build de 11e243c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Budget 2027 : que sait-on réellement pour votre commune ?
 Le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
@@ -71,14 +71,17 @@ Une fraction de TVA perçue par la commune, ou par son intercommunalité
 Pour préparer le budget 2027 → Inscrire la fraction selon les règles actuelles ; l'écrêtement n'est plus dans le texte à ce stade.
 Prochaine échéance : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre.
 Chaque ligne est développée mesure par mesure, avec ce qu’il serait trompeur de chiffrer à ce stade.
-La fiche de votre commune
+Budget 2027 : ce qui pourrait changer pour votre commune
+Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au 22 octobre 2026.
+À imprimer pour le débat d’orientation budgétaire.
+Votre commune : nom, département ou code Insee
+Voir la fiche
+La fiche a besoin de JavaScript.
+Tous les chiffres sont dans le fichier CSV complet.
 Pour chaque commune, la fiche commence par une réponse : le fait le plus informatif que les données établissent pour elle.
 C’est l’effet du report des reversements du DILICO quand elle y a contribué en 2025, la part de la dotation globale dans ses recettes quand elle dépasse nettement celle des communes de même taille, ou ce que les données publiées permettent de dire de son exonération de la contribution progressive.
 Suivent les principales mesures du projet, avec leur statut au Parlement, puis sa situation financière comparée à celle des communes de même taille, et enfin le calcul et les sources, chacune liée à son document officiel.
 Le seul montant pour 2027 est l’écart du DILICO, qui suppose l’article 84 adopté en l’état : ce qui n’est pas publié s’affiche « non disponible », jamais zéro, et la commune n’est jamais confondue avec son intercommunalité.
-Votre commune : nom, département ou code Insee
-La fiche a besoin de JavaScript.
-Tous les chiffres sont dans le fichier CSV complet.
 Le projet déposé et ce qu’il en reste
 Les cinq mesures du projet de loi de finances déposé qui visent les collectivités, et leur sort au Parlement.
 Montants du projet déposé : ils décrivent le cadrage initial, non l’état actuel du texte ; leur somme arithmétique ne mesure pas un prélèvement net.

@@ -263,18 +263,25 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
   .mesure-budget__grille { grid-template-columns: minmax(0, 1fr); }
 }
 
-// Fiche de votre commune (shortcode fiche-commune + static/js/fiche-commune.js, 22/10/2026).
-.fiche-commune {
-  margin: 1.2rem 0;
-  padding: 1rem;
-  border: 1px solid var(--color-rule-medium);
-  border-radius: 4px;
-  background: #fff;   // les motifs décoratifs du fond ne passent pas sous les chiffres
-  label { display: block; font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; }
+// Fiche de votre commune (shortcode fiche-commune + static/js/fiche-commune.js, 22/10/2026 ; entrée de la maquette v3,
+// 23/10/2026 : étiquette, titre, chapeau, champ et bouton sur une ligne, la fiche en carte unique).
+.fiche-commune { margin: 1rem 0 1.4rem; }
+h2.fiche-commune__titre::before {
+  content: attr(data-etiquette); display: block; margin-bottom: 0.4rem;
+  font-family: var(--font-sans); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+.fiche-commune__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.fiche-commune__saisie {
+  display: flex; max-width: 640px; border: 1px solid var(--color-rule-medium); border-radius: 4px; background: #fff;
   input[type="search"] {
-    width: 100%; box-sizing: border-box; padding: 0.6rem 0.7rem; font-size: 1rem;
-    border: 1px solid var(--color-rule-medium); border-radius: 4px; background: #fff;
+    flex: 1; min-width: 0; border: 0; padding: 0.75rem 0.9rem; font: 1rem var(--font-sans); background: transparent; outline: none;
   }
+  button {
+    border: 0; background: var(--color-accent); color: #fff; font: 600 0.8rem var(--font-sans); letter-spacing: 0.05em;
+    text-transform: uppercase; padding: 0 1.1rem; border-radius: 0 3px 3px 0; cursor: pointer; white-space: nowrap;
+  }
+  &:focus-within { outline: 2px solid var(--color-link); outline-offset: 1px; }
 }
 .fiche-commune__recherche { position: relative; }
 .fiche-commune__liste {
@@ -293,12 +300,26 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
 .fiche-commune__tete {
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.6rem;
   padding: 1.1rem 1.4rem 0.8rem; border-bottom: 1px solid var(--color-rule-medium);
-  h3 { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 1.9rem; line-height: 1.15; }
+  h3 { margin: 0 !important; padding: 0 !important; border: 0 !important; font-family: var(--font-serif); font-weight: 400; font-size: 1.9rem; line-height: 1.15; }
 }
 .fiche-commune__id { font-size: 0.85rem; color: var(--color-text-subtle); margin-top: 0.3rem !important; }
-.fiche-commune__actions button {
-  font-family: var(--font-sans); font-size: 0.85rem; padding: 0.35rem 0.7rem; margin: 0 0.4rem 0.3rem 0;
-  border: 1px solid var(--color-accent); border-radius: 4px; background: #fff; color: var(--color-accent); cursor: pointer;
+.fiche-commune__actions {
+  font-family: var(--font-sans); font-size: 0.85rem;
+  button, a { font: inherit; color: var(--color-link); background: none; border: 0; padding: 0; margin-left: 0.9rem;
+    text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+}
+.fiche-commune__frise {
+  list-style: none; margin: 0.3rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+  font-family: var(--font-sans); font-size: 0.78rem; line-height: 1.35; color: var(--color-text-subtle); text-align: center;
+  li { position: relative; padding: 16px 0.3rem 0; }
+  li::before { content: ""; position: absolute; top: 4px; left: 0; right: 0; height: 1px; background: var(--color-rule-medium); }
+  li::after { content: ""; position: absolute; top: 0; left: calc(50% - 5px); width: 9px; height: 9px; border-radius: 50%;
+    background: var(--color-bg); border: 1px solid var(--color-text-subtle); }
+  li span { display: block; }
+  li span:first-child { color: var(--color-text-body); }
+  .fait::after { background: var(--color-accent); border-color: var(--color-accent); }
+  .encours::after { background: #fff; border: 2px solid var(--color-accent); }
+  .possible::after { border-style: dashed; }
 }
 .fiche-commune__sous { font-size: 0.8rem; color: var(--color-text-subtle); padding: 0.5rem 1.4rem; border-bottom: 1px solid var(--color-rule-medium); }
 .fiche-commune__bloc {
@@ -369,7 +390,7 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
   li { margin: 0.35rem 0; }
 }
 .fiche-commune__dtitre { font-weight: 600; font-size: 0.9rem; margin: 0.9rem 0 0.2rem !important; }
-.fiche-commune__texte { font-size: 0.88rem; padding: 0.8rem 1.4rem 0; }
+.fiche-commune__texte { font-size: 0.88rem; margin-top: 0.6rem !important; }
 .fiche-commune__sources { padding: 0 1.4rem 1rem; }
 .fiche-commune__grille { margin: 0.4rem 0; font-size: 0.88rem; }
 .fiche-commune__ligne {
@@ -386,7 +407,7 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
 // colonnes, comptes en cartes (data-col).
 @media (max-width: 720px) {
   .fiche-commune__tete, .fiche-commune__sous, .fiche-commune__bloc { padding-left: 1rem; padding-right: 1rem; }
-  .fiche-commune__texte { padding: 0.8rem 1rem 0; }
+
   .fiche-commune__sources { padding: 0 1rem 1rem; }
   .fiche-commune__mtete { display: none; }
   .fiche-commune__mrow { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
@@ -397,6 +418,13 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
   .fiche-commune__rangee { display: none; }
   .fiche-commune__cal { display: block; }
   .fiche-commune__kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fiche-commune__saisie input[type="search"] { padding: 0.7rem 0.6rem; font-size: 0.95rem; }
+  .fiche-commune__saisie button { padding: 0 0.7rem; font-size: 0.72rem; }
+  .fiche-commune__actions button, .fiche-commune__actions a { margin: 0 0.9rem 0 0; }
+  .fiche-commune__frise { grid-template-columns: minmax(0, 1fr); text-align: left; }
+  .fiche-commune__frise li { padding: 0 0 0.5rem 1.4rem; }
+  .fiche-commune__frise li::before { display: none; }
+  .fiche-commune__frise li::after { top: 0.25rem; left: 0; }
 }
 @media (max-width: 600px) {
   .fiche-commune__entete { display: none; }
