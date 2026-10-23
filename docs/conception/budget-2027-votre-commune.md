@@ -181,5 +181,8 @@ une section de `/budget-2027-votre-commune/` (`#fiche`), non une page neuve — 
     l'extraction) ; relecture phrase à phrase : quatre défauts corrigés (« 1,9 ans », majuscule et parenthèses
     imbriquées de l'arrêté, accord « contribution… supprimé », nom pluriel « Les Abymes serait ») ; instantanés FR et EN
     refaits ; check-all, liens, rendu, dates à 0 ;
+  - fait — push sur demande de l'auteur (23/10/2026, commit 8e9c9ec, sans le commit ANTHROPIE 6b1cc4d), déploiement
+    réussi ; version servie attestée sans session : script et méta en ligne, fiches de Nanterre, Oyonnax (FR) et Les
+    Abymes (EN) conformes (réponse, liens vers les sources, calendrier en tableau à 390 px) ;
   - non fait — contre-expertise de la fiche intégrée (motif : la pièce 12 a validé l'architecture ; à proposer à
     l'auteur si une décision en dépend) ; panel (même motif qu'au 22/10).
