@@ -32,4 +32,4 @@
 <div class="fiche-commune__resultat" id="fiche-commune-resultat" aria-live="polite"></div>
 <noscript><p>{{ cond $en "The sheet needs JavaScript. All figures are in the" "La fiche a besoin de JavaScript. Tous les chiffres sont dans le" }} <a href="{{ "budget_communes.csv" | relURL }}">{{ cond $en "full CSV file" "fichier CSV complet" }}</a>.</p></noscript>
 </div>
-<script src="{{ "js/fiche-commune.js" | relURL }}" defer></script>
+<script src="{{ partial "js-url.html" "fiche-commune.js" }}" defer></script>

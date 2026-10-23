@@ -18,10 +18,10 @@
     </main>
     {{- partial "footer.html" . -}}
   </div>
-  <script src="{{ "js/amazon-button.js" | relURL }}" defer></script>
-  <script src="{{ "js/copy-citation.js" | relURL }}" defer></script>
-  <script src="{{ "js/figure-zoom.js" | relURL }}" defer></script>
-  <script src="{{ "js/amazon-outbound.js" | relURL }}" defer></script>
-  <script src="{{ "js/zenodo-outbound.js" | relURL }}" defer></script>
+  <script src="{{ partial "js-url.html" "amazon-button.js" }}" defer></script>
+  <script src="{{ partial "js-url.html" "copy-citation.js" }}" defer></script>
+  <script src="{{ partial "js-url.html" "figure-zoom.js" }}" defer></script>
+  <script src="{{ partial "js-url.html" "amazon-outbound.js" }}" defer></script>
+  <script src="{{ partial "js-url.html" "zenodo-outbound.js" }}" defer></script>
 </body>
 </html>
