@@ -88,8 +88,10 @@
 <script src="{{ partial "js-url.html" "transmettre.js" }}" defer></script>
 <script src="{{ partial "js-url.html" "mobile-menu.js" }}" defer></script>
 {{ if eq .Lang "fr" }}<script src="{{ partial "js-url.html" "french-typography.js" }}" defer></script>{{ end }}
-{{/* Ligne d'action des replis (« Lire le détail · 3 paragraphes ▾ ») : toute page qui en contient (30/09). */}}
-{{ if in .Content "class=\"repli" }}<script src="{{ partial "js-url.html" "replis-action.js" }}" defer></script>{{ end }}
+{{/* Ligne d'action des replis (« Lire le détail · 3 paragraphes ▾ ») : sur TOUTE page (30/09 ; règle constante de
+     l'auteur du 23/10 : les replis posés par un gabarit ou par un script ne sont pas dans .Content, la condition
+     d'avant les manquait). Contrôle : scripts/check-replis.py. */}}
+<script src="{{ partial "js-url.html" "replis-action.js" }}" defer></script>
 
 <!-- CSS -->
 {{- /* EMPREINTE sur le nom du fichier : sans elle, /css/style.css reste en cache

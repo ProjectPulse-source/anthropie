@@ -48,7 +48,7 @@
       {{- with .panneau }}
       {{- $p := . }}
       <li class="dossier-dette__volet dossier-dette__volet--plus{{ if .actif }} is-actif{{ end }}"{{ if .actif }} aria-current="page"{{ end }}>
-        <details class="dossier-dette__plus">
+        <details class="dossier-dette__plus" data-repli="nav">
           <summary class="dossier-dette__onglet"><b><span class="dossier-dette__long">{{ .titre }}</span><span class="dossier-dette__court">{{ .court }}<span class="sr-only">{{ $sep }}{{ .nom | default (lower .titre) }}</span></span><span class="dossier-dette__chevron" aria-hidden="true">▾</span></b>{{ with .role }}<span class="dossier-dette__role">{{ . }}</span>{{ end }}</summary>
           <div class="dossier-dette__panneau">
             <p class="dossier-dette__panneau-titre">{{ .entete | default .titre }}</p>

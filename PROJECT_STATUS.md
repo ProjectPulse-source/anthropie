@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-23 (après-midi) — « Lire le détail » sur tout bloc dépliable (règle constante) ; frise de la fiche en orange
+
+Règle constante de l'auteur : toute partie qui se déplie porte la ligne d'action. `replis-action.js` vise désormais tout
+`<details>` (et non plus `.repli`), voit les blocs posés après chargement (MutationObserver), compte les éléments du
+repli où qu'ils soient enveloppés (tableau à `role="table"` compris) et ignore un bloc sans contenu ; `head.html` le
+charge sur toute page ; style de la ligne sorti de `.repli` ; seule exemption, la navigation (`data-repli="nav"` :
+sommaire de page, menu du dossier). Contrôle bloquant `scripts/check-replis.py` (check-all), vu mordre sur deux
+mutations (chargement conditionnel, exemption hors liste). Recette navigateur 1280 et 390 px : fiche de commune 34243
+(deux replis construits par script), notions de `/quest-ce-que-lanthropie/` (ligne sous la phrase, notion vide sans
+ligne), `/publications/` ; les 60 pages à `<details>` du build chargent le script. Frise « Où en est le texte » et son
+titre en orange de la charte (`#eb6834`). `check-all --ci` à 0 ; build minifié : rendu, liens, dates à 0 ; relecture :
+10 pages à phrases changées, signal identique sur HEAD (antérieur, non causé ici).
+
 ### 2026-10-23 — fiche par commune : architecture v3 (pièces 0124_Communes-11 et 0133_Communes-12)
 
 La fiche commence par une réponse propre à la commune (écart DILICO 2027 ; sinon part de la DGF nettement au-dessus de sa
