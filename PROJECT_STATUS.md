@@ -52,6 +52,13 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-23 (soir) — fiche ANTHROPIE : extrait de la préface aligné sur l'édition 630 p.
+
+L'auteur signale que les pages des livres n'ont pas suivi les changements de texte. Contrôle systématique : toute
+phrase du site (11 393 phrases, FR et EN) présente dans l'ancienne édition (PDF 622 p. / 632 p. archivés) et absente de
+la nouvelle (630 p. / 644 p.). Seul écart : l'extrait « À l'aube, le bâtiment respire… » de la fiche FR (trois passages
+réécrits dans n+47) ; remplacé, présent mot pour mot dans le PDF 630 p. Nombres de pages déjà justes en ligne (630 / 644).
+
 ### 2026-10-23 (après-midi, suite) — ANTHROPIE 630 p. et ANTHROPY 644 p. : nouvelles éditions en ligne (auteur)
 
 Le commit `6b1cc4d` (FR 622 → 630, onze fichiers) attendait la mise en ligne KDP de n+47 ; l'auteur l'annonce, avec

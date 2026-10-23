@@ -20,3 +20,10 @@ Lot : `batch_quickstatements.txt`, lien : `deeplink.txt` (retrait de l'ancienne 
      Amazon tant que la page contredit la valeur ; voie de correction : demande au support KDP.
 2. **Descriptions KDP** : FR corrigée par l'auteur le 23/10, sans nombre de pages ; EN alignée le même jour
    (« A long history, 168 ways in »), sans nombre de pages. Réglé.
+
+## Référence FR : premier lot sans effet, lot refait (23/10, soir)
+
+Le lot « ajouter la référence à la déclaration existante » s'est terminé en vert dans QuickStatements **sans aucune
+écriture** (relecture API : révision inchangée 2560013383, P1104 = 630 sans référence ; contributions de Laura : rien
+après 15 h 01 UTC ; `readback_api_2026-10-23_reference.json`). Lot refait sur le modèle qui a fonctionné le 04/10 :
+retrait de la déclaration, puis recréation avec sa référence (`batch_reference_FR.txt`, `deeplink_reference_FR.txt`).
