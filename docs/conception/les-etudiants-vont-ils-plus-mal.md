@@ -51,9 +51,12 @@ qui est propre aux études plutôt qu'à ce que vit toute leur génération ?
 ### Enjeu
 
 Le « malaise étudiant » fonde des demandes de moyens, des politiques (repas à 1 €, aide psychologique, restrictions du
-téléphone) et un récit public de l'université abandonnée. Si la dégradation est surtout commune à la génération, les
-réponses universitaires visent à côté ; si elle est plus forte chez les étudiants, l'argument de la génération sert
-d'excuse. Se tromper de population, c'est se tromper de politique — et l'enjeu concerne les lycéens qui y entrent.
+téléphone) et un récit public de l'université abandonnée. Trois questions s'y mêlent, qui décident de choses
+différentes : **qui souffre davantage** (les populations à cibler), **qu'est-ce qui explique l'écart** (les mécanismes
+sur lesquels agir), **quelle intervention fonctionne** (prévention, aide financière, logement, soins). Se tromper de
+population conduit à mal cibler ; se tromper de cause, à choisir une intervention inefficace ; mais l'origine d'un
+trouble ne désigne pas le lieu du remède : un service de santé universitaire peut être utile pour une détresse née au
+lycée (arbitrage de la pièce 01, 23/10/2026). L'enjeu concerne aussi les lycéens qui entrent dans le supérieur.
 
 ### Croyance initiale
 
@@ -64,17 +67,29 @@ indépendant de l'université. La page les éprouve tous les deux.
 
 ### Découverte principale
 
-Ni l'un ni l'autre ne tient tel quel. De 2017 à 2021, la dépression progresse chez tous les adultes, mais **le plus chez
-les étudiants** : +7 points, contre +5,3 chez les chômeurs et +4,4 chez les actifs occupés (Santé publique France, BEH
-2023 n° 2, 18-75 ans) ; dans le même temps, l'anxiété, mesurée autrement, reste stable (BEH 2025 n° 14). Ces écarts ne
-sont pas standardisés selon l'âge : aucune donnée publiée ne permet encore de dire si être étudiant ajoute quelque chose
-à être jeune. Le « malaise » n'est pas un objet unique, et la question décisive n'a pas encore reçu de réponse
-publique. **Candidate, à confirmer par la lecture** : la dégradation commence avant le supérieur (enquête EnCLASS,
-collégiens et lycéens, 2018-2022) — si c'est le cas, elle déplace la question vers le lycée.
+Ni l'un ni l'autre ne tient tel quel. Trois niveaux d'énoncé gouvernent la rédaction :
+- **établi** : de 2017 à 2021, l'épisode dépressif déclaré augmente dans chacune des situations publiées ; chez les
+  étudiants, il passe de 10,1 % (2010) à 13,3 % (2017) puis 20,3 % (2021) : la hausse précède le covid, qui l'accélère ;
+- **descriptivement établi** : la hausse ponctuelle est la plus forte chez les étudiants (+7 points, contre +5,3 chez
+  les chômeurs et +4,4 chez les actifs occupés ; BEH 2023 n° 2, 18-75 ans, groupes de structures d'âge différentes) ;
+- **non établi** : que cette progression excède celle de jeunes non étudiants comparables, et que l'excédent tienne aux
+  conditions d'études. Les auteurs du BEH le disent eux-mêmes ; l'étude CONFINS (*BMJ Open*, 2021 ; en ligne, premier
+  confinement, PHQ-9) trouve un risque plus élevé chez les étudiants après ajustement (rapport de cotes 1,58), sans
+  représentativité nationale.
+Deux témoins déplacent la question : les enquêtes ne détectent pas d'augmentation significative des états anxieux sur
+la même période (BEH 2025 n° 14, autre instrument, autre fenêtre) ; et la dégradation est visible **avant le
+supérieur** (EnCLASS : collégiens et lycéens, 2018-2022), avec en 2024 un bien-être qui remonte (+11 points au collège,
++12 au lycée) pendant que le risque important de dépression des lycéens continue de croître (18,9 %). Le « malaise »
+n'est pas une grandeur unique. Hypothèse directrice, à mesurer : des vulnérabilités qui apparaissent à différents
+moments de la jeunesse, et dont les études peuvent modifier l'intensité.
 
 ### Mécanisme explicatif
 
 Deux familles de mécanismes, qui peuvent se combiner et ne s'excluent pas :
+- **une question de sexe avant d'être de statut ?** L'écart le plus constant de toutes les sources est entre femmes et
+  hommes (18-24 ans : +11,4 points contre +6,9 de 2017 à 2021 ; lycéennes 25,7 % contre lycéens 11,7 % de risque
+  important de dépression en 2024) ; le supérieur étant majoritairement féminin, une part du « malaise étudiant » peut
+  être celui des jeunes femmes — à tester par le croisement sexe × statut, jamais à affirmer ;
 - **communs à la génération** : le choc du confinement (isolement, rupture des routines, 2020-2021), certains usages
   numériques (effet causal possible de pratiques précises, Castelo et al. 2025 ; effet non détecté de politiques
   scolaires restrictives, SMART Schools 2025), des anticipations dégradées (climat, logement, défiance) ;
@@ -94,15 +109,23 @@ documentées dont la contribution au malaise n'est pas identifiée.
    figure 3 — **figure à lire dans le PDF** (`beh.santepubliquefrance.fr/beh/2023/2/pdf/2023_2_1.pdf`) pour les niveaux
    2017 et 2021 de chaque statut ; les écarts (+7,0 / +5,3 / +4,4 / +1,7) sont relus dans le texte (23/10).
 2. La stabilité des états anxieux 2017-2021, BEH 2025 n° 14 (relu le 23/10).
-3. La série EnCLASS (bien-être des collégiens et lycéens) — **non lue** : si elle ne montre pas de dégradation avant le
-   supérieur, l'angle « avant l'université » tombe et la page le dit.
+3. EnCLASS 2018-2022 et 2024 (Santé publique France, *Le point sur*, 02/06/2026) — lu le 23/10 par sources
+   secondaires et communiqué : à relire dans le PDF avant chiffre.
 4. Témoin de comptabilité des sources : chaque valeur OVE avec son enquête et son champ (fiche SIES n° 16, lue le 23/10
    dans l'archive du web, le site du SIES répondant 503) ; la dépense par étudiant dans la seule édition n° 19 du SIES.
+5. **Témoin non déclaratif** (arbitrage de la pièce 01, pattern P1) : décès par suicide (CépiDc) et gestes
+   auto-infligés aux urgences et à l'hôpital des 18-24 ans (Odissé, Santé publique France), traitements antidépresseurs
+   des 20-24 ans (cartographie des pathologies, Assurance maladie). Il éprouve le récit de génération, pas l'écart
+   étudiant (aucune de ces séries ne connaît le statut d'étudiant).
 
-**Test décisif avant d'écrire la page** (modèle dette, discipline 4) : la page ne s'écrit que si la figure 3 du BEH
-confirme, en niveaux, que l'écart d'évolution étudiants / autres statuts est lisible avec ses intervalles ; s'il ne
-l'est pas (intervalles qui se recouvrent), la découverte principale devient « aucune donnée publique ne distingue les
-étudiants », et le plan se réécrit autour de ce manque.
+**Test décisif avant d'écrire la page** (modèle dette, discipline 4) : **l'écart des variations** entre étudiants et
+jeunes non étudiants du même âge, avec son incertitude (ou l'interaction année × statut sous plan de sondage) — non
+publié, demandé si l'auteur l'approuve, **sans suspendre la rédaction**. À défaut, la page s'écrit sur les trois niveaux
+d'énoncé de la découverte principale, et le test manquant y figure comme résultat (« ce que les données publiques ne
+permettent pas d'identifier »). Le test par recouvrement des intervalles de niveaux, écrit d'abord ici, est **retiré** :
+des intervalles de niveaux ne disent rien d'une différence d'évolutions. Test décisif du scénario 3 : les séries non
+déclaratives se prêtent-elles à la comparaison 2010-2023 (méthodologie lue, ruptures nommées) ? Sinon, le scénario 3
+tombe.
 
 ### Limite
 
@@ -127,13 +150,16 @@ concordance → ce qui l'invaliderait → conclusion limitée », appliquée aux
 
 ### Singularité
 
-Cette page existe parce qu'elle confronte le malaise des étudiants à celui des autres jeunes et distingue trois mesures
-qui n'évoluent pas ensemble, ce que le lecteur ne découvre pas dans les publications de l'OVE (étudiants seulement, vagues
-présentées à la suite), dans le bulletin de Santé publique France (statuts comparés sans lecture étudiante ni réserve
-d'âge mise en avant) ni dans le débat public, qui oppose le récit de l'université abandonnée à celui de la génération
-des écrans sans tester ni l'un ni l'autre (lus : synthèse MESR des enquêtes OVE, BEH 2023 n° 2 et 2025 n° 14, fiche SIES
-n° 16, débat Haidt-Odgers par sources secondaires — **la revue de presse et des rapports militants reste à faire** avant
-de figer cette phrase).
+Cette page existe parce qu'elle pose la même question à des sources de natures différentes — ce qu'on déclare
+(enquêtes), ce qu'on soigne (traitements remboursés), ce qu'on fait (gestes auto-infligés, suicides) — et à deux témoins
+(jeunes du même âge, lycéens), en disant pour chacune ce qu'elle permet d'identifier, ce que le lecteur ne découvre pas
+dans les publications de l'OVE (étudiants seulement, vagues présentées à la suite), dans le BEH 2023 (qui pose la
+question âge / statut et renvoie à des analyses complémentaires), dans CONFINS (un échantillon en ligne, un confinement)
+ni dans le débat public, qui oppose le récit de l'université abandonnée à celui de la génération des écrans. Elle ne
+prétend pas être la première à poser la question étudiants / non-étudiants (rectifié le 23/10, pièce 01). Lus :
+synthèse MESR des enquêtes OVE, BEH 2023 n° 2 (discussion comprise) et 2025 n° 14, fiche SIES n° 16, CONFINS, EnCLASS
+2024 ; **la revue de presse et des rapports reste à faire** avant de figer cette phrase, et la triangulation dépend des
+séries non déclaratives, non encore extraites.
 
 ### Raccords
 
@@ -161,7 +187,11 @@ Résultat visé, au plus près de la finalité : que la page soit citée ou repr
 et autres jeunes (crédibilité de l'auteur sur l'éducation) et qu'elle ouvre la demande du test à âge égal ; diagnostics :
 impressions et clics Search Console sur les requêtes « santé mentale étudiants », « malaise étudiant », « détresse
 psychologique étudiants » ; citations par des moteurs de réponse (relevé VEILLE_GEO) ; reprises. État initial : page
-inexistante au 23/10/2026, aucune impression. Relevés : J+30 et J+60 après publication. **À inscrire dans
+inexistante au 23/10/2026, aucune impression. Relevés : J+30 et J+60 après publication. **Critère de réussite
+intellectuelle** (pièce 01) : la page rend vérifiable au moins une distinction que les synthèses ordinaires laissent
+ambiguë — ce que les données représentatives permettent ou non d'identifier après contrôle de l'âge, et ce que les
+séries non déclaratives confirment ou non du récit déclaratif. Une reprise par un journaliste, un enseignant ou un
+chercheur est un résultat à observer, jamais une propriété déclarée avant publication. **À inscrire dans
 `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` avant publication** (non fait à ce jour : la page n'existe pas).
 
 ## Étapes de la méthode
@@ -172,13 +202,24 @@ inexistante au 23/10/2026, aucune impression. Relevés : J+30 et J+60 après pub
 - Forme et rattachement : fait le 23/10 — bloc `ecole`, élargi en « École, lycée et université » sur décision de
   l'auteur (en ligne, commit du site `c6e4b01`).
 - Contre-expertise de phase A : faite et arbitrée le 23/10 (`PRO-20261023-180856`, audit fermé).
-- Protocole du type : non fait — lectures à faire avant le texte : figure 3 du BEH 2023 (PDF) ; EnCLASS ; série DEPP des
-  bacheliers par génération ; tableau rétrospectif du SIES n° 19 ; chômage des 15-24 ans (Insee, série longue) ;
-  enquête OVE 2024 (champ, sélection des répondants) ; Castelo et al. 2025 (durée, effectif) ; revue de presse.
-- Test décisif (figure 3 du BEH) : non fait.
-- Scénarios d'architecture : non fait — deux à écrire : B+A retenu par l'arbitrage (constat → témoin → histoire →
-  ruptures depuis 2020 → explications disputées → ce qui reste à établir, six maillons en encadré) ; A pur (la chaîne
-  maillon par maillon). Un troisième si la lecture d'EnCLASS le justifie (« le malaise commence au lycée »).
+- Contre-expertise de la fiche (pièce 01, 23/10) : faite et arbitrée —
+  `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\ARBITRAGE_PIECE_01_2026-10-23.md` ; quatre corrections
+  portées ici le même jour (enjeu, découverte en trois niveaux, test décisif, singularité).
+- Protocole du type : en cours — lu : BEH 2023 (texte et discussion), BEH 2025 n° 14, CONFINS, EnCLASS 2024 (communiqué
+  et reprises), fiche SIES n° 16. À lire avant le texte : figure 3 du BEH 2023 (PDF) ; BEH 2025 n° 14 (valeur étudiante) ;
+  EnCLASS 2024 (PDF) ; série DEPP des bacheliers (`data.education.gouv.fr`) ; tableau rétrospectif du SIES n° 19 ;
+  chômage des 15-24 ans (Insee, série longue) ; OVE 2024 (champ, sélection) ; Castelo et al. 2025 (durée, effectif) ;
+  revue de presse.
+- Bases nouvelles (arbitrage pièce 01, § 9) : joignables par API le 23/10 — Odissé (suicides, gestes auto-infligés,
+  EDC régional), Assurance maladie (`effectifs`, traitements antidépresseurs par âge de cinq ans), SIES (réussite en
+  licence, InserSup, logement Crous, enseignants), DEPP (bacheliers par génération) ; Eurostat EHIS par `sources`
+  (ventilation « étudiants » à vérifier). Extraction non faite.
+- Test décisif : non fait (écart des variations non publié ; demande à Santé publique France en attente de l'auteur) ;
+  test du scénario 3 (méthodologies des séries non déclaratives) : non fait.
+- Scénarios d'architecture : non fait — trois à écrire : 1, les sept séquences de la pièce 01 (paradoxe, premier
+  témoin, deuxième témoin, avant la crise sanitaire, ce que les études ajoutent, réponses qui fonctionnent, frontière),
+  six maillons en tableau de confrontation ; 2, « deux témoins » ; 3, « trois instruments » (déclarer, soigner, agir),
+  si son test passe.
 - Panel avant : non fait (page nouvelle dont la réception décide du choix d'architecture : à faire sur les scénarios).
 - Gardes vues mordre : non fait (générateur à écrire).
 - Figures téléphone : non fait.
