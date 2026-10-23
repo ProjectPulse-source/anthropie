@@ -84,7 +84,7 @@ Next deadline: {{< coll-val "plf_etape_suivante" >}}. Each row is developed [mea
 
 ## 2027 budget: what could change for your municipality {#fiche .fiche-commune__titre data-etiquette="Your municipality's sheet"}
 
-The municipality's official figures and the provisional status of each measure as of {{< coll-val "plf_etat_au" >}}. To print for the budget policy debate.
+The municipality's official figures and the provisional status of each measure as of {{< coll-val "plf_etat_au" >}}. A sheet to help prepare the 2027 budget and, where applicable, the budget policy debate.
 
 {{< fiche-commune >}}
 

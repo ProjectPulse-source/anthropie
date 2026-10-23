@@ -265,26 +265,11 @@
   "cadence": "à chaque étape de la procédure parlementaire",
   "nature": "juridique (procédure parlementaire) : registre des votes à compléter (citation verbatim du compte rendu, verifier_plf_votes.py) et frise de la fiche (data/plf_procedure.json)",
   "echeances": [
-   {
-    "date": "2026-11-03",
-    "etape": "vote solennel sur la première partie (Assemblée nationale, séance du mardi 3 novembre, après-midi ; dossier législatif lu le 23/10/2026)"
-   },
-   {
-    "date": "2026-11-10",
-    "etape": "fin du délai de quarante jours de l'Assemblée nationale en première lecture (Constitution, art. 47 ; dépôt le 1er octobre)"
-   },
-   {
-    "date": "2026-11-25",
-    "etape": "fin du délai de quinze jours du Sénat s'il est saisi le 10 novembre (Constitution, art. 47)"
-   },
-   {
-    "date": "2026-12-10",
-    "etape": "délai de soixante-dix jours (Constitution, art. 47 : mise en vigueur possible par ordonnance)"
-   },
-   {
-    "date": "2026-12-31",
-    "etape": "loi de finances promulguée en principe ; fiche et lots de courriels à revoir sur le texte définitif"
-   }
+   {"date": "2026-11-03", "etape": "vote solennel sur la première partie (Assemblée nationale, séance du mardi 3 novembre, après-midi ; page de l'Assemblée lue le 23/10/2026)"},
+   {"date": "2026-11-17", "etape": "vote solennel sur l'ensemble prévu et expiration du délai de 40 jours de l'Assemblée, mardi 17 novembre à minuit (Direction de la séance, organisation de la discussion budgétaire du 29/09/2026, annexe 1 : point de départ des délais le vendredi 9 octobre ; Constitution, art. 47)"},
+   {"date": "2026-12-02", "etape": "délai de quinze jours du Sénat s'il est saisi à l'expiration des 40 jours (Constitution, art. 47) : date conditionnelle, à recalculer sur la saisine effective"},
+   {"date": "2026-12-17", "etape": "expiration du délai de 70 jours, jeudi 17 décembre à minuit (même annexe ; mise en vigueur possible par ordonnance)"},
+   {"date": "2026-12-31", "etape": "loi de finances promulguée en principe ; fiche et lots de courriels à revoir sur le texte définitif"}
   ]
  }
  ]

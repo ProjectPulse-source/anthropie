@@ -40,7 +40,7 @@
       qDil: function (n, x) { return n + NB + ': ' + x + ' de reversement DILICO différés en 2027' + NB + '?'; },
       rDil: 'C’est l’écart entre le calendrier actuel de restitution du DILICO et celui du projet de loi déposé (article 84). Le montant total restitué ne change pas' + NB + '; seule sa répartition dans le temps serait modifiée si l’article était adopté en l’état.',
       qDgf: function (n, x, m, a) { return n + NB + ': en ' + a + ', la DGF représente ' + x + ' des recettes de fonctionnement, contre ' + m + ' pour la médiane des communes de même taille'; },
-      pDgf: function () { return 'Une part observée, non une prévision' + NB + ': le montant de la DGF 2027 de la commune ne sera connu qu’à la notification.'; },
+      pDgf: function () { return 'Cet écart décrit la structure des recettes de la commune' + NB + '; il ne permet, à lui seul, ni d’apprécier sa fragilité financière ni de prévoir sa DGF 2027, qui ne sera connue qu’à la notification.'; },
       qExo: function (n) { return n + NB + ': exonérée si la contribution sur les recettes était rétablie'; },
       qRien: function (n) { return n + NB + ': aucun effet individuel chiffrable des mesures examinées à ce stade'; },
       nonContrib: 'La commune n’a pas contribué au DILICO en 2025.',
@@ -71,7 +71,7 @@
       dgfPrep: 'distinguer l’hypothèse de DGF 2027 du montant qui sera notifié',
       hDil: 'Ce que la commune récupère chaque année au titre du DILICO 2025',
       actuel: 'Droit actuel', projet: 'Projet déposé', annee: 'Année', aucunV: 'aucun versement', parAn: ' par an', a2029: '2029 à 2031',
-      noteDil: function (t, p) { return 'Un reversement plus faible à court terme, compensé par des versements étalés jusqu’en 2031' + NB + ': total restitué identique (' + t + ' sur ' + p + ' prélevés)' + NB + '; ce décalage peut avoir un coût de trésorerie, non chiffré ici.'; },
+      noteDil: function (t, p) { return 'Un reversement plus faible à court terme, compensé par des versements étalés jusqu’en 2031' + NB + ': total restitué identique (' + t + ' sur ' + p + ' prélevés)' + NB + '; ce décalage peut avoir un coût de trésorerie, non chiffré ici. Le calcul porte sur le DILICO prélevé sur la commune en 2025' + NB + '; il ne comprend pas les effets éventuels du DILICO de son intercommunalité.'; },
       aFaire: 'Pour préparer le budget 2027 →', aFaireDil: 'comparer deux scénarios de trésorerie' + NB + ': le calendrier actuel et celui qui résulterait de l’adoption de l’article 84 sans modification.',
       kEb: 'Épargne brute (marge d’autofinancement)', kEbS: 'en % des recettes de fonctionnement',
       kDh: 'Dette par habitant', kDhS: 'encours du budget principal',
@@ -129,7 +129,7 @@
       qDil: function (n, x) { return n + ': ' + x + ' of DILICO repayment deferred in 2027?'; },
       rDil: 'This is the gap between the current DILICO repayment schedule and that of the bill as tabled (article 84). The total repaid does not change; only its spread over time would change if the article were adopted as it stands.',
       qDgf: function (n, x, m, a) { return n + ': in ' + a + ', the DGF makes up ' + x + ' of operating revenue, against ' + m + ' for the median municipality of the same size'; },
-      pDgf: function () { return 'An observed share, not a forecast: the municipality’s 2027 DGF will be known only on notification.'; },
+      pDgf: function () { return 'This gap describes the structure of the municipality’s revenue; on its own, it neither measures its financial fragility nor predicts its 2027 DGF, which will be known only on notification.'; },
       qExo: function (n) { return n + ': exempt if the revenue contribution were reinstated'; },
       qRien: function (n) { return n + ': no individual effect of the measures examined can be quantified at this stage'; },
       nonContrib: 'The municipality did not contribute to the 2025 DILICO.',
@@ -160,7 +160,7 @@
       dgfPrep: 'distinguish the 2027 DGF assumption from the amount that will be notified',
       hDil: 'What the municipality recovers each year from the 2025 DILICO',
       actuel: 'Current law', projet: 'Bill as tabled', annee: 'Year', aucunV: 'no payment', parAn: ' a year', a2029: '2029 to 2031',
-      noteDil: function (t, p) { return 'A smaller repayment in the short term, offset by payments spread until 2031: the same total repaid (' + t + ' of ' + p + ' levied); this shift may carry a cash-flow cost, not quantified here.'; },
+      noteDil: function (t, p) { return 'A smaller repayment in the short term, offset by payments spread until 2031: the same total repaid (' + t + ' of ' + p + ' levied); this shift may carry a cash-flow cost, not quantified here. The calculation covers the DILICO levied on the municipality in 2025; it excludes any effect of its inter-municipal body’s DILICO.'; },
       aFaire: 'To prepare the 2027 budget →', aFaireDil: 'compare two cash-flow scenarios: the current schedule and the one that would result from adopting article 84 unchanged.',
       kEb: 'Gross savings (self-financing margin)', kEbS: 'as % of operating revenue',
       kDh: 'Debt per inhabitant', kDhS: 'main-budget debt outstanding',
@@ -237,7 +237,9 @@
   function ansU(x) { // français : « an » au singulier sous 2 (« 1,9 an »), comme l'accord de « point » du module de langue
     var a = ans(x);
     if (x === null || x === undefined || x === 'nc') return a;
-    return a + NB + (L === 'fr' && Math.abs(x) < 2 ? 'an' : T.ans);
+    // accord sur la valeur AFFICHÉE (arrondie) : « 1,9 an », « 2 ans » ; anglais : singulier pour 1 seulement
+    var v = Number(a.replace(/[^0-9,.\-]/g, '').replace(',', '.'));
+    return a + NB + (L === 'fr' ? (Math.abs(v) < 2 ? 'an' : 'ans') : (v === 1 ? 'year' : T.ans));
   }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
   function norm(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[-'’ ]+/g, ' ').trim(); }
@@ -445,6 +447,7 @@
       h += '<section class="fiche-commune__bloc"><p class="fiche-commune__num">' + T.texte + '</p><ol class="fiche-commune__frise">' +
         PROC.map(function (e) { return '<li class="' + esc(e.etat) + '"><span>' + esc(e.lib) + '</span><span>' + esc(e.detail) + '</span></li>'; }).join('') +
         '</ol>' + (root.dataset.echeance ? '<p class="fiche-commune__note">' + T.echeance + esc(root.dataset.echeance) + '.</p>' : '') +
+        (root.dataset.procnote ? '<p class="fiche-commune__note">' + esc(root.dataset.procnote) + '</p>' : '') +
         '<p class="fiche-commune__texte"><a href="#etat-du-texte">' + T.texteL + '</a></p></section>';
     }
     h += '<p class="fiche-commune__note fiche-commune__sources">' + T.source(root.dataset.releve) + '</p>';

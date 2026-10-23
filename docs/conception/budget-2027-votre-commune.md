@@ -200,5 +200,10 @@ une section de `/budget-2027-votre-commune/` (`#fiche`), non une page neuve — 
     3/11 (vote solennel, dossier législatif), 10/11, 25/11 et 10/12 (Constitution, art. 47, lu au texte), 31/12 ;
     `maj_sources.py controle` (tâche quotidienne de `maj-sources.yml`) ouvre un ticket le lendemain de chaque échéance non
     rattrapée par le registre ; témoin vu mordre (date simulée), levé par `verifie_le` ;
+  - fait — contre-expertise PRO-20261023-034500 (pièce `0351_Communes-15_Reponse.txt`) : échéances corrigées sur le
+    document officiel de la Direction de la séance du 29/09/2026 (délais partant du 9 octobre : 17 novembre et 17 décembre à
+    minuit, archivé dans `scripts/sources_collectivites/`) ; limite de la comparaison de la DGF ; périmètre du calcul DILICO
+    (commune seule, sans l'intercommunalité) ; note sous la frise (dates révisables, délais de l'article 47) ; chapeau
+    (débat d'orientation budgétaire « s'il y a lieu ») ; accord de « an » / « year » sur la valeur affichée ;
   - non fait — contre-expertise de la fiche intégrée seule (motif : la pièce 12 a validé l'architecture ; à proposer à
     l'auteur si une décision en dépend) ; panel (même motif qu'au 22/10).

@@ -88,7 +88,7 @@ Prochaine échéance&nbsp;: {{< coll-val "plf_etape_suivante" >}}. Chaque ligne 
 
 ## Budget 2027&nbsp;: ce qui pourrait changer pour votre commune {#fiche .fiche-commune__titre data-etiquette="La fiche de votre commune"}
 
-Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au {{< coll-val "plf_etat_au" >}}. À imprimer pour le débat d'orientation budgétaire.
+Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au {{< coll-val "plf_etat_au" >}}. Une fiche pour préparer le budget 2027 et, s'il y a lieu, le débat d'orientation budgétaire.
 
 {{< fiche-commune >}}
 
