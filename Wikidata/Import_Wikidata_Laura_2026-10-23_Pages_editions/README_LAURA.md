@@ -15,8 +15,8 @@ Lot : `batch_quickstatements.txt`, lien : `deeplink.txt` (retrait de l'ancienne 
    - FR : Amazon.fr affiche « Nombre de pages de l'édition imprimée : 630 pages » (lu dans le navigateur le 23/10) →
      lot prêt : `batch_reference_FR.txt`, lien `deeplink_reference_FR.txt` (ajoute la référence à la déclaration
      existante, sans la dupliquer).
-   - EN : **Amazon.fr affichait encore 632 pages le 23/10** (détails et description) : pas de référence tant que la page
-     ne montre pas 644. Si elle ne le montre pas d'ici le 26/10, vérifier dans KDP que l'édition révisée est bien
-     publiée ; si non, revenir à 632 sur Wikidata et sur le site.
-2. **Descriptions KDP périmées** (texte du produit, geste de l'auteur dans KDP) : FR « Sept âges, 168 jalons, 622 pages » ;
-   EN « Seven ages, 168 milestones, 632 pages ».
+   - EN : **Amazon.fr affiche 632 pages** (23/10). L'auteur confirme le même jour que l'édition en ligne est la
+     dernière (644 p.) et que ce champ, calculé par Amazon, est hors de sa main : **644 maintenu**. Pas de référence
+     Amazon tant que la page contredit la valeur ; voie de correction : demande au support KDP.
+2. **Descriptions KDP** : FR corrigée par l'auteur le 23/10, sans nombre de pages ; EN encore « Seven ages, 168
+   milestones, 632 pages » à la lecture du 23/10.
