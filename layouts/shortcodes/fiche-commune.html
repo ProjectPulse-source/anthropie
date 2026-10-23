@@ -12,6 +12,7 @@
 {{- $statuts := dict "cpeb" $a.plf_statut_cpeb "fctva" $a.plf_statut_fctva "dgf" $a.plf_statut_dgf "dilico" $a.plf_statut_dilico "tva" $a.plf_statut_tva -}}
 {{- range $k, $v := $statuts }}{{ if not $v }}{{ errorf "fiche-commune: statut %q absent (%s)" $k $.Page.File.Path }}{{ end }}{{ end -}}
 {{- if not $m.dotations }}{{ errorf "fiche-commune: bloc dotations absent de data/budget_communes.json (%s)" .Page.File.Path }}{{ end -}}
+{{- if not (and $m.dotations.documents $m.dotations.temoin_annexes) }}{{ errorf "fiche-commune: documents ou temoin des annexes absents de data/budget_communes.json (%s)" .Page.File.Path }}{{ end -}}
 <div class="fiche-commune" id="fiche-commune"
      data-lang="{{ cond $en "en" "fr" }}"
      data-base="{{ "budget2027-communes/" | relURL }}"
@@ -20,6 +21,8 @@
      data-strates="{{ $m.strates | jsonify }}"
      data-exercices="{{ $m.exercices | jsonify }}"
      data-seuils="{{ $m.dotations.seuils_exoneration | jsonify }}"
+     data-documents="{{ $m.dotations.documents | jsonify }}"
+     data-temoin="{{ $m.dotations.temoin_annexes | jsonify }}"
      data-releve="{{ (time $m.releve_le) | time.Format (cond $en "2 January 2006" ":date_long") }}">
 <form class="fiche-commune__recherche" role="search" onsubmit="return false">
 <label for="fiche-commune-champ">{{ cond $en "Your municipality: name, department or INSEE code" "Votre commune : nom, département ou code Insee" }}</label>

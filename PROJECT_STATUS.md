@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-23 — fiche par commune : architecture v3 (pièces 0124_Communes-11 et 0133_Communes-12)
+
+La fiche commence par une réponse propre à la commune (écart DILICO 2027 ; sinon part de la DGF nettement au-dessus de sa
+strate ; sinon exonération établie ; sinon limites), puis les principales mesures examinées, la conséquence DILICO
+(calendrier en tableau sur téléphone), la situation financière (quatre indicateurs, évolution 2024-2025 repliée) et les
+preuves repliées, liées aux documents officiels. Générateur : médiane de la part de la DGF, compte du témoin et documents
+dans la méta, relevé daté par les données. Limite de la page corrigée (« aucun montant certain pour 2027 »). Recette
+neuf communes FR et EN, témoin vu mordre ; détail : `docs/conception/budget-2027-votre-commune.md`, « Refonte de la fiche ».
+
 ### 2026-10-22 (nuit, fin) — fiche par commune de `/budget-2027-votre-commune/#fiche` (option A, pièce 2024_Communes-04)
 Recherche par nom, département ou code Insee, lien direct `?insee=`. Générateur `scripts/update_budget_communes.py` (OFGL :
 comptes des communes et dotations des communes, données DGCL) : `static/budget2027-communes/` (index + un fichier par

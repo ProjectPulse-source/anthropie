@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /en/2027-budget-your-municipality/, build de 6b1cc4d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-23 ; texte servi de /en/2027-budget-your-municipality/, build de 29ce93c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
@@ -72,8 +72,10 @@ For the 2027 budget → Enter the share under the current rules; the capping is 
 Next deadline: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November.
 Each row is developed measure by measure, with what it would be misleading to quantify at this stage.
 Your municipality’s sheet
-For each municipality, the sheet brings together what its published accounts already say, set against municipalities of the same size, and what each measure of the bill could change for it, with its status in Parliament: what the published data allow us to say about its exemption from the progressive contribution under the bill as tabled, its general operating grant notified for 2026, what it placed in reserve under DILICO in 2025 and the schedule for its repayment.
-It gives no amount for 2027: anything not published shows as “not available”, never zero, and the municipality is never confused with its inter-municipal body.
+For each municipality, the sheet opens with an answer: the most informative fact that the data establish for it.
+That is the effect of deferring DILICO repayments when it contributed in 2025, the share of the general operating grant in its revenue when it clearly exceeds that of municipalities of the same size, or what the published data allow us to say about its exemption from the progressive contribution.
+Then come the main measures of the bill, with their status in Parliament, its financial position set against municipalities of the same size, and finally the calculation and the sources, each linked to its official document.
+The only amount for 2027 is the DILICO gap, which assumes article 84 is adopted as it stands: anything not published shows as “not available”, never zero, and the municipality is never confused with its inter-municipal body.
 Your municipality: name, department or INSEE code
 The sheet needs JavaScript.
 All figures are in the full CSV file.
@@ -257,7 +259,7 @@ These aggregates are not the legal base of the progressive contribution, which d
 The page on local authorities explains how to read these lines.
 What this page does not say
 It does not forecast the final text: a measure deleted in plenary may be reinstated.
-It gives no amount for any municipality; the orders of magnitude it mentions are static comparisons, under the conditions written next to them.
+It gives no certain amount for 2027: the only 2027 amount in a municipality’s sheet, the DILICO gap, assumes article 84 is adopted as it stands; the orders of magnitude it mentions are static comparisons, under the conditions written next to them.
 It covers only the provisions of the bill that target municipalities directly; general tax measures may also weigh on their revenue.
 Where these figures come from
 State of the text — National Assembly, records of the first and second sittings of 19 October 2026 (in French); each result used here is quoted word for word in the page’s register of votes, archived with the hash of the records.

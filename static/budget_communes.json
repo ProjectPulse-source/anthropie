@@ -27,6 +27,55 @@
    "r_dsu10": 250,
    "r_dsu5": 30,
    "r_dsrc": 2500
+  },
+  "temoin_annexes": {
+   "montants_relus": 91459,
+   "ecart_max_euro": 1
+  },
+  "documents": {
+   "arrete_dilico": {
+    "titre_en": "order of 21 May 2025",
+    "titre": "arrêté du 21 mai 2025",
+    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051695423"
+   },
+   "dil": {
+    "titre_en": "administrative document no. 0011 of 6 June 2025",
+    "titre": "document administratif n° 0011 du 6 juin 2025",
+    "fichier": "legifrance_da_2025-06-06_n0011_dilico_prelevement_communes.pdf",
+    "url": "https://www.legifrance.gouv.fr/download/pdf?id=YzOx2OdCcw8z8XNaI5ZoWYstvrbVw7vibSIX3L_C8eE="
+   },
+   "rev": {
+    "titre_en": "administrative document no. 0008 of 4 June 2026",
+    "titre": "document administratif n° 0008 du 4 juin 2026",
+    "fichier": "legifrance_da_2026-06-04_n0008_dilico_reversement.pdf",
+    "url": "https://www.legifrance.gouv.fr/download/pdf?id=VoEIffkZdyyg3ErfrLMQZglgj8aUOv1MZCf1HPdWY3s="
+   },
+   "dgf": {
+    "titre_en": "administrative document no. 0006 of 12 May 2026",
+    "titre": "document administratif n° 0006 du 12 mai 2026",
+    "fichier": "legifrance_da_2026-05-12_n0006_dgf_communes.pdf",
+    "url": "https://www.legifrance.gouv.fr/download/pdf?id=briayEHf_x1Jh-oGjekY0Cu1fmt64dDetDQxhvJZNMc="
+   },
+   "lf2025_186": {
+    "titre_en": "article 186 of the 2025 Finance Act",
+    "titre": "article 186 de la loi de finances pour 2025",
+    "url": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000051169538"
+   },
+   "plf": {
+    "titre_en": "draft budget bill for 2027, no. 3210",
+    "titre": "projet de loi de finances pour 2027, n° 3210",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf"
+   },
+   "ofgl": {
+    "titre_en": "OFGL, municipal database",
+    "titre": "OFGL, base des communes",
+    "url": "https://data.ofgl.fr/explore/dataset/ofgl-base-communes/"
+   },
+   "ofgl_dot": {
+    "titre_en": "OFGL, municipal grants",
+    "titre": "OFGL, dotations des communes",
+    "url": "https://data.ofgl.fr/explore/dataset/dotations-communes/"
+   }
   }
  },
  "strates": {
@@ -43,7 +92,9 @@
    "equip_hab": 371.7480604632003,
    "equip_hab_n": 359,
    "annees_dette": 4.669362071999046,
-   "annees_dette_n": 357
+   "annees_dette_n": 357,
+   "part_dgf": 0.11703185375320486,
+   "part_dgf_n": 351
   },
   "9": {
    "n": 92,
@@ -58,7 +109,9 @@
    "equip_hab": 423.07165260417145,
    "equip_hab_n": 92,
    "annees_dette": 5.744020093984671,
-   "annees_dette_n": 92
+   "annees_dette_n": 92,
+   "part_dgf": 0.13504903676193428,
+   "part_dgf_n": 87
   },
   "10": {
    "n": 42,
@@ -73,7 +126,9 @@
    "equip_hab": 339.8020488800545,
    "equip_hab_n": 42,
    "annees_dette": 5.363740344545301,
-   "annees_dette_n": 42
+   "annees_dette_n": 42,
+   "part_dgf": 0.1543447106526003,
+   "part_dgf_n": 42
   },
   "6": {
    "n": 1216,
@@ -88,7 +143,9 @@
    "equip_hab": 372.01063482869773,
    "equip_hab_n": 1216,
    "annees_dette": 3.5304141424665776,
-   "annees_dette_n": 1205
+   "annees_dette_n": 1205,
+   "part_dgf": 0.1184370451459658,
+   "part_dgf_n": 1199
   },
   "7": {
    "n": 568,
@@ -103,7 +160,9 @@
    "equip_hab": 363.8304083999027,
    "equip_hab_n": 568,
    "annees_dette": 3.833739010909142,
-   "annees_dette_n": 559
+   "annees_dette_n": 559,
+   "part_dgf": 0.11657701228162136,
+   "part_dgf_n": 538
   },
   "5": {
    "n": 1021,
@@ -118,7 +177,9 @@
    "equip_hab": 356.88160236625515,
    "equip_hab_n": 1021,
    "annees_dette": 3.3495921086823066,
-   "annees_dette_n": 1007
+   "annees_dette_n": 1007,
+   "part_dgf": 0.13836466851380153,
+   "part_dgf_n": 1006
   },
   "2": {
    "n": 9396,
@@ -133,7 +194,9 @@
    "equip_hab": 218.8836941986234,
    "equip_hab_n": 9396,
    "annees_dette": 1.8978446449600879,
-   "annees_dette_n": 8651
+   "annees_dette_n": 8651,
+   "part_dgf": 0.20699453895604042,
+   "part_dgf_n": 9299
   },
   "3": {
    "n": 11212,
@@ -148,7 +211,9 @@
    "equip_hab": 244.92377027851637,
    "equip_hab_n": 11212,
    "annees_dette": 2.857364705490436,
-   "annees_dette_n": 10725
+   "annees_dette_n": 10725,
+   "part_dgf": 0.19124781064989632,
+   "part_dgf_n": 11052
   },
   "4": {
    "n": 2286,
@@ -163,7 +228,9 @@
    "equip_hab": 311.4329862068121,
    "equip_hab_n": 2286,
    "annees_dette": 3.1983191305501144,
-   "annees_dette_n": 2252
+   "annees_dette_n": 2252,
+   "part_dgf": 0.16308400424372116,
+   "part_dgf_n": 2255
   },
   "1": {
    "n": 5326,
@@ -178,7 +245,9 @@
    "equip_hab": 248.64617391304347,
    "equip_hab_n": 5326,
    "annees_dette": 1.1849223706572594,
-   "annees_dette_n": 4757
+   "annees_dette_n": 4757,
+   "part_dgf": 0.2103402496279238,
+   "part_dgf_n": 5248
   },
   "0": {
    "n": 3254,
@@ -193,7 +262,9 @@
    "equip_hab": 335.87478610910836,
    "equip_hab_n": 3254,
    "annees_dette": 0.3975775918414256,
-   "annees_dette_n": 2840
+   "annees_dette_n": 2840,
+   "part_dgf": 0.18634549880883158,
+   "part_dgf_n": 3185
   }
  },
  "source": "https://data.ofgl.fr/explore/dataset/ofgl-base-communes/",

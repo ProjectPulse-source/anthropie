@@ -157,3 +157,29 @@ une section de `/budget-2027-votre-commune/` (`#fiche`), non une page neuve — 
     périmètres documentés ; annexes officielles téléchargées par le navigateur et versionnées
     (`scripts/sources_budget_communes/`) ; témoin complet dans le générateur, vu mordre : 91 459 montants, 0 écart à l'euro ;
   - non fait — panel (motif : deux contre-expertises ont porté sur le texte servi ; l'auteur a clos la phase scientifique).
+- **Refonte de la fiche, architecture v3** (23/10/2026 ; pièces `0124_Communes-11` et `0133_Communes-12`, arbitrage dans
+  `D:\PRO\06_PROMOTION\RECHERCHE_VOTRE_COMMUNE_2026-10-22\ARBITRAGE_1924_COMMUNES-01.md` ; maquettes et recettes dans
+  `MAQUETTE_FICHE\` du même dossier). Ordre : 01 la réponse → 02 principales mesures examinées → 03 conséquence DILICO
+  (contributrices) → 04 situation financière → preuves repliées. **Réponse, critères explicites** : écart DILICO 2027
+  (conditionnel à l'article 84 en l'état) ; sinon part de la DGF ≥ 1,5 fois la médiane de la strate et ≥ 5 points
+  au-dessus, dite comme part observée ; sinon exonération établie ; sinon limites. Les textes de la fiche du 22/10
+  (exonération graduée, Paris, intercommunalité, TVA affectée) sont gardés dans le repli « Comprendre le calcul » ; la
+  frise de procédure de la maquette n'est pas reprise (état figé), remplacée par un lien vers `#etat-du-texte`.
+  - fait — générateur : médiane de la part de la DGF par strate, compte du témoin des annexes et documents officiels
+    (titres FR et EN, liens) écrits dans la méta et lus par la fiche (aucun chiffre écrit dans le script) ; relevé daté
+    par les données (`releve_jeu`, date du cache avec `--cache`) : relevé inchangé (22/10), fiches par département
+    identiques ;
+  - fait — page : présentation de la fiche réécrite ; limite « aucun montant pour une commune » corrigée (fausse depuis
+    le 22/10 : la fiche donnait déjà les montants DILICO) en « aucun montant certain pour 2027 », FR et EN ;
+  - fait — recette 320, 390, 768, 1 280 et 1 600 px, FR et EN, neuf communes (contributrices Nanterre, Bandol, Paris ;
+    part de la DGF Oyonnax, Conques-en-Rouergue sans compte 2024 ; outre-mer Les Abymes ; commune nouvelle Les Auxons ;
+    sans intercommunalité Île-de-Bréhat ; seuil de 5 000 € Artemps) : aucun débordement, police ≥ 11 px, calendrier en
+    tableau sous 720 px, aucune erreur de console ; témoin relu dans le JSON servi (catégorie de réponse, écart, lignes du
+    calendrier), vu mordre (montant servi faussé : 24 défauts) ; impression de la fiche seule, A4 (4 à 5 pages, replis
+    ouverts) ; script `MAQUETTE_FICHE\recette_fiche_site.py` ;
+  - fait — LanguageTool sur le texte servi de huit fiches FR et EN (signalements restants lus : cellules accolées par
+    l'extraction) ; relecture phrase à phrase : quatre défauts corrigés (« 1,9 ans », majuscule et parenthèses
+    imbriquées de l'arrêté, accord « contribution… supprimé », nom pluriel « Les Abymes serait ») ; instantanés FR et EN
+    refaits ; check-all, liens, rendu, dates à 0 ;
+  - non fait — contre-expertise de la fiche intégrée (motif : la pièce 12 a validé l'architecture ; à proposer à
+    l'auteur si une décision en dépend) ; panel (même motif qu'au 22/10).

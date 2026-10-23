@@ -88,7 +88,7 @@ Prochaine échéance&nbsp;: {{< coll-val "plf_etape_suivante" >}}. Chaque ligne 
 
 ## La fiche de votre commune {#fiche}
 
-Pour chaque commune, la fiche réunit ce que ses comptes publiés disent déjà, comparés à ceux des communes de même taille, et ce que chaque mesure du projet pouvait changer pour elle, avec son statut au Parlement&nbsp;: ce que les données publiées permettent de dire de son exonération de la contribution progressive par le texte déposé, sa dotation globale notifiée pour 2026, ce qu'elle a mis en réserve au DILICO en 2025 et l'échéancier de son remboursement. Elle ne donne aucun montant pour 2027&nbsp;: ce qui n'est pas publié s'affiche «&nbsp;non disponible&nbsp;», jamais zéro, et la commune n'est jamais confondue avec son intercommunalité.
+Pour chaque commune, la fiche commence par une réponse&nbsp;: le fait le plus informatif que les données établissent pour elle. C'est l'effet du report des reversements du DILICO quand elle y a contribué en 2025, la part de la dotation globale dans ses recettes quand elle dépasse nettement celle des communes de même taille, ou ce que les données publiées permettent de dire de son exonération de la contribution progressive. Suivent les principales mesures du projet, avec leur statut au Parlement, puis sa situation financière comparée à celle des communes de même taille, et enfin le calcul et les sources, chacune liée à son document officiel. Le seul montant pour 2027 est l'écart du DILICO, qui suppose l'article 84 adopté en l'état&nbsp;: ce qui n'est pas publié s'affiche «&nbsp;non disponible&nbsp;», jamais zéro, et la commune n'est jamais confondue avec son intercommunalité.
 
 {{< fiche-commune >}}
 
@@ -220,7 +220,7 @@ L'Observatoire des finances et de la gestion publique locales publie, commune pa
 ## Ce que cette page ne dit pas {#limites}
 
 - Elle ne prévoit pas le texte définitif&nbsp;: une mesure supprimée en séance peut être rétablie.
-- Elle ne donne aucun montant pour une commune&nbsp;; les ordres de grandeur qu'elle indique sont des comparaisons statiques, sous les conditions écrites à côté d'eux.
+- Elle ne donne aucun montant certain pour 2027&nbsp;: le seul montant 2027 de la fiche d'une commune, l'écart du DILICO, suppose l'article&nbsp;84 adopté en l'état&nbsp;; les ordres de grandeur qu'elle indique sont des comparaisons statiques, sous les conditions écrites à côté d'eux.
 - Elle ne reprend que les dispositions du projet qui visent directement les communes&nbsp;; les mesures fiscales générales peuvent aussi peser sur leurs recettes.
 
 ## D'où viennent ces chiffres {#sources}
