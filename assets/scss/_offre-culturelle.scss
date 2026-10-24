@@ -1,0 +1,118 @@
+// =======================================================================
+// _offre-culturelle.scss — pages de comité /offre-culturelle/<id>/
+// Reprise de la maquette D validée le 14/10/2026 (06_PROMOTION/PARTENARIATS/
+// CSE/MAQUETTES_2026-10-14/_gen_version_d.py) : en-tête du comité, compteur
+// au-dessus des livres, deux cartes en vitrine, quatre lignes, bouton sous le
+// texte sur téléphone. Tout est préfixé .oc : rien ne fuit vers le site.
+// =======================================================================
+
+.oc-body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text-body);
+  font: 16px/1.5 var(--font-sans);
+}
+
+.oc {
+  --oc-bleu: #184f95;
+  --oc-nuit: #1B2A4E;
+  --oc-doux: #4a5263;
+  --oc-trait: #e4e1d8;
+
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--oc-bleu); }
+}
+
+.oc-wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+.oc-tete {
+  background: var(--oc-nuit);
+  color: #fff;
+  padding: 12px 0 16px;
+}
+.oc-part {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: #d6dcea; margin: 0;
+}
+.oc-logo { width: 28px; height: 28px; border-radius: 6px; object-fit: contain; background: #fff; }
+.oc-surtitre {
+  margin: 10px 0 0; font-size: 12px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: #c9d2e6;
+}
+.oc-titre {
+  font: 600 clamp(23px, 6vw, 36px)/1.15 var(--font-serif);
+  margin: 4px 0 6px; color: #fff;
+}
+.oc-chapo { margin: 0 0 6px; color: #e3e8f2; font-size: 15px; }
+.oc-mention { font-size: 13px; color: #c9d2e6; margin: 0; }
+
+.oc-dispo {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 8px; margin: 16px 0 10px; flex-wrap: wrap;
+  h2 { font: 600 20px var(--font-serif); color: var(--oc-nuit); margin: 0; }
+  p { font-size: 13.5px; color: var(--oc-doux); margin: 0; }
+  b { color: var(--oc-bleu); font-size: 17px; }
+}
+.oc-offre-etat {
+  background: #fff4d6; color: #5a4400; border-radius: 8px;
+  padding: 10px 14px; font-size: 14.5px; margin: 0 0 12px;
+}
+.oc-sec { font: 600 19px var(--font-serif); color: var(--oc-nuit); margin: 24px 0 10px; }
+
+.oc-vitrine { display: grid; gap: 12px; }
+.oc-liste { background: #fff; border: 1px solid var(--oc-trait); border-radius: 10px; }
+
+.oc-livre {
+  h3 { font: 600 18px/1.25 var(--font-serif); margin: 2px 0 4px; }
+  .ressources-book__state { font-size: 13.5px; color: var(--oc-doux); margin: 0 0 4px; }
+  .ressources-book__state:empty { display: none; }
+}
+.oc-livre--carte {
+  background: #fff; border: 1px solid var(--oc-trait); border-radius: 10px;
+  padding: 12px; display: grid; grid-template-columns: 78px 1fr; gap: 12px; align-items: start;
+  .oc-couv img { border-radius: 3px; box-shadow: 0 2px 8px rgba(0, 0, 0, .18); }
+}
+.oc-livre--ligne {
+  display: grid; grid-template-columns: 52px 1fr; gap: 4px 12px;
+  padding: 12px 14px; border-top: 1px solid var(--oc-trait); align-items: start;
+  &:first-child { border-top: 0; }
+  h3 { font-size: 16px; margin: 0; }
+  .oc-q { font-size: 14px; margin: 2px 0 0; }
+  .oc-couv img { border-radius: 2px; }
+  .oc-btn { padding: 8px 12px; font-size: 14px; min-height: 40px; margin-top: 6px; }
+}
+.oc-theme {
+  font-size: 11.5px; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--oc-bleu); margin: 0;
+}
+.oc-q { font-style: italic; margin: 0 0 3px; font-size: 15px; }
+.oc-l { font-size: 14px; color: var(--oc-doux); margin: 0 0 10px; }
+
+.oc-btn {
+  display: inline-block; background: var(--oc-bleu); color: #fff; border: 0; border-radius: 6px;
+  padding: 10px 14px; font: 600 15px var(--font-sans); cursor: pointer; min-height: 44px;
+  &:hover:not(:disabled), &:focus-visible { background: var(--oc-nuit); outline: 2px solid #9fb6dc; outline-offset: 2px; }
+  &:disabled { background: #b8c2d3; cursor: default; }
+}
+
+.oc-aide { background: #eef3fa; border-radius: 8px; padding: 12px 14px; font-size: 14px; margin: 18px 0 0; }
+.oc-auteur {
+  font-size: 14px; color: var(--oc-doux);
+  border-top: 1px solid var(--oc-trait); margin-top: 20px; padding-top: 14px;
+}
+.oc-conditions {
+  font-size: 14px; color: var(--oc-doux); padding-bottom: 32px;
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 6px 0; }
+  b { color: var(--color-text-body); }
+}
+
+@media (min-width: 720px) {
+  .oc-vitrine { grid-template-columns: 1fr 1fr; }
+  .oc-livre--carte { grid-template-columns: 96px 1fr; }
+  .oc-livre--ligne {
+    grid-template-columns: 52px 1fr;
+    .ressources-book__obtain { display: flex; align-items: center; gap: 12px; }
+    .oc-btn { margin-top: 6px; }
+  }
+}

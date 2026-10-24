@@ -1,0 +1,34 @@
+# Pages de comité (/offre-culturelle/<id>/) — texte éditorial par livre, repris de la maquette D validée le 14/10/2026
+# (06_PROMOTION/PARTENARIATS/CSE/MAQUETTES_2026-10-14/_gen_version_d.py). Le titre, la couverture et la clé du guichet
+# (promo_slug) se lisent dans content/livres/ : seuls le thème, la question et la raison de lire sont écrits ici.
+# Clé = nom du fichier du livre dans content/livres/.
+
+[livres.livresque-des-mots]
+theme = "Littérature"
+question = "Et si les plus belles citations se répondaient à travers vingt-cinq siècles ?"
+raison = "4 656 citations, 1 387 voix : des romans aux chansons et au cinéma."
+
+[livres.lodyssee-des-idees]
+theme = "Culture générale"
+question = "Comment les idées qui ont changé le monde sont-elles nées ?"
+raison = "250 escales, de l'aube de l'humanité à l'intelligence artificielle."
+
+[livres.la-societe-du-premier-coup]
+theme = "École et société"
+question = "Pourquoi certains ont-ils droit à l'erreur, et d'autres non ?"
+raison = "Ce que les mesures d'inégalité laissent hors champ : le nombre d'essais dont on dispose."
+
+[livres.anthropie-ordre-ici-dette-ailleurs]
+theme = "Histoire longue"
+question = "Résolvons-nous vraiment nos problèmes, ou les déplaçons-nous ?"
+raison = "Sept âges d'histoire à l'épreuve d'une seule hypothèse."
+
+[livres.dette-publique-qui-paie-vraiment]
+theme = "Économie"
+question = "La dette publique : qui en supporte réellement le coût ?"
+raison = "Du contribuable d'aujourd'hui aux générations qui n'ont pas voté."
+
+[livres.un-president-peut-il-tenir-ses-promesses]
+theme = "Institutions"
+question = "Un président peut-il vraiment faire ce qu'il promet ?"
+raison = "Une grille pour savoir où une promesse casse."

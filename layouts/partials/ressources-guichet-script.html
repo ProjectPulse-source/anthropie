@@ -6,7 +6,13 @@
        d'usage) : identifiant technique localStorage + verrou serveur (index
        UNIQUE côté D1). Fail-closed : guichet fermé, stock vide ou réseau KO
        => « momentanément indisponibles ». Opère sur tout article
-       `.ressources-book[data-book]` présent dans la page. */ -}}
+       `.ressources-book[data-book]` présent dans la page.
+       MODE COMITÉ (25/10/2026) : si la page porte un élément [data-partner],
+       l'identifiant du comité accompagne /stock (?p=) et /claim ; le compteur du
+       comité s'affiche (data-role restant / total) ; un titre vide dit « réassort
+       en cours » (le comité garde ses exemplaires), un compteur épuisé ou une
+       offre inactive désactivent tous les boutons. Sans [data-partner], rien ne
+       change. */ -}}
 <script>
 (function () {
   var toastTimer;
@@ -23,6 +29,31 @@
   var UNAVAIL = "Exemplaires momentanément indisponibles.";
   var GENERR = "Impossible d'attribuer un lien pour le moment. Réessayez plus tard.";
   var claimed = false;
+  var partnerEl = document.querySelector("[data-partner]");
+  var PARTNER = partnerEl ? partnerEl.getAttribute("data-partner") : null;
+  var RESTOCK = "Temporairement indisponible — réassort en cours.";
+  var QUOTA = "Tous les exemplaires offerts par votre comité ont été attribués.";
+  var INACTIVE = "Cette offre n'est pas ou plus active.";
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+  // Compteur du comité : « N exemplaires encore disponibles sur M ».
+  function showPartner(p) {
+    if (!PARTNER || !p) return;
+    document.querySelectorAll('[data-role="restant"]').forEach(function (el) { el.textContent = fmt(p.remaining); });
+    document.querySelectorAll('[data-role="total"]').forEach(function (el) { el.textContent = fmt(p.total); });
+    document.querySelectorAll('[data-role="compteur"]').forEach(function (el) { el.hidden = false; });
+    document.querySelectorAll('[data-role="sans-compteur"]').forEach(function (el) { el.hidden = true; });
+    document.querySelectorAll('[data-role="pluriel"]').forEach(function (el) { el.hidden = p.remaining < 2; });
+  }
+  // Offre close pour tout le comité (compteur à zéro, ou offre inactive) :
+  // tous les boutons éteints, un seul message, en tête.
+  function closeOffer(msg) {
+    books().forEach(function (article) {
+      var cta = article.querySelector(".ressources-book__cta");
+      if (cta) cta.disabled = true;
+      setState(article, "");
+    });
+    document.querySelectorAll('[data-role="offre-etat"]').forEach(function (el) { el.textContent = msg; el.hidden = false; });
+  }
 
   function visitorId() {
     var v = localStorage.getItem("ro-visitor");
@@ -104,15 +135,33 @@
     });
   }
 
+  function stockUrl() { return WORKER + "/stock" + (PARTNER ? "?p=" + encodeURIComponent(PARTNER) : ""); }
+
+  // Visiteur déjà servi, page de comité : le compteur seul, sans rien réactiver.
+  function fetchCounter() {
+    if (!PARTNER) return;
+    fetch(stockUrl(), { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { if (j && j.ok) showPartner(j.partner); })
+      .catch(function () {});
+  }
+
   function fetchStock() {
-    fetch(WORKER + "/stock", { cache: "no-store" })
+    fetch(stockUrl(), { cache: "no-store" })
       .then(function (r) { return r.json(); })
       .then(function (j) {
+        if (PARTNER && j && j.ok) {
+          if (!j.partner) { closeOffer(INACTIVE); return; }
+          showPartner(j.partner);
+          if (j.partner.remaining <= 0) { closeOffer(QUOTA); return; }
+        }
         books().forEach(function (article) {
           var b = article.getAttribute("data-book");
           var avail = j && j.ok && j.stock && j.stock[b] === true;
           var cta = article.querySelector(".ressources-book__cta");
           if (avail) { if (cta) cta.disabled = false; setState(article, ""); }
+          // Page de comité : le comité garde ses exemplaires, le titre attend le réassort de nuit.
+          else if (PARTNER && j && j.ok) { if (cta) cta.disabled = true; setState(article, RESTOCK); }
           else if (j && j.ok && j.stock) { setSoldOut(article); }  // réponse lue : rupture réelle
           else { if (cta) cta.disabled = true; setState(article, UNAVAIL); }  // guichet fermé ou réponse illisible
         });
@@ -137,7 +186,8 @@
     fetch(WORKER + "/claim", {
       method: "POST", cache: "no-store",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ book: book, visitor: visitorId() }),
+      body: JSON.stringify(PARTNER ? { book: book, visitor: visitorId(), partner: PARTNER }
+                                   : { book: book, visitor: visitorId() }),
     })
       .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); })
       .then(function (res) {
@@ -149,6 +199,7 @@
           // On ne persiste QUE le livre choisi, jamais l'URL en clair.
           try { localStorage.setItem("ro-claim", JSON.stringify({ book: book })); } catch (e) {}
           applyClaimed({ book: book, url: res.j.url });
+          showPartner(res.j.partner);
           if (!win) {
             var m = article.querySelector(".ressources-assigned-msg");
             if (m) m.textContent = "Touchez le bouton ci-dessous pour l'ouvrir sur Amazon.fr.";
@@ -159,7 +210,12 @@
                     : "Votre exemplaire Kindle prépayé a été attribué. Touchez le bouton pour l'ouvrir.");
         } else {
           if (win) win.close();
-          if (res.status === 409) { setSoldOut(article); toast(SOLDOUT + "."); }
+          var code = res.j && res.j.code;
+          if (PARTNER && res.j && res.j.partner) showPartner(res.j.partner);
+          if (PARTNER && code === "quota") { closeOffer(QUOTA); toast(QUOTA); }
+          else if (PARTNER && code === "partner") { closeOffer(INACTIVE); toast(INACTIVE); }
+          else if (PARTNER && code === "restock") { setState(article, RESTOCK); toast(RESTOCK); }
+          else if (res.status === 409) { setSoldOut(article); toast(SOLDOUT + "."); }
           else { setState(article, GENERR); toast(GENERR); }
         }
       })
@@ -178,7 +234,7 @@
   // Retour d'un visiteur ayant déjà choisi : on rétablit son état sans appel réseau.
   var stored = null;
   try { stored = JSON.parse(localStorage.getItem("ro-claim") || "null"); } catch (e) {}
-  if (stored && stored.book) { reclaim(stored.book); }
+  if (stored && stored.book) { reclaim(stored.book); fetchCounter(); }
   else { fetchStock(); }
 })();
 </script>

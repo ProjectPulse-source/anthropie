@@ -1,0 +1,12 @@
+{{- /* Pages de comité : gabarit dépouillé, sans l'en-tête ni le pied du site, comme la maquette D validée le 14/10/2026
+       (le premier bouton doit rester haut sur téléphone). La feuille de style et la typographie du site restent
+       chargées par head.html. */ -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body class="oc-body">
+  {{- block "main" . }}{{- end }}
+</body>
+</html>
