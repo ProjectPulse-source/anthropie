@@ -4,13 +4,20 @@
        vient du guichet (/stock?p=<partner>), qui seul connaît l'engagement du comité et son compteur. Sans réponse du
        guichet, la page dit « des livres » et n'affiche aucun chiffre. */ -}}
 {{- $p := .Params -}}
-{{- if not $p.partner -}}{{- errorf "offre-culturelle : %s sans « partner » en front matter" .File.Path -}}{{- end -}}
-{{- if not (findRE `^[a-z0-9-]{2,40}$` $p.partner) -}}{{- errorf "offre-culturelle : identifiant de comité invalide « %s » (%s)" $p.partner .File.Path -}}{{- end -}}
+{{- /* demo: true => page de DÉMONSTRATION pour le responsable d'un comité (arbitrage du 14/10 : « démonstration
+       publique ≠ test de réception réel ») : aucun appel au guichet, aucun lien délivré, aucun identifiant de comité ;
+       chaque bouton ouvre la fenêtre qui décrit le parcours réel. Le script du guichet n'est PAS chargé : en son
+       absence de [data-partner], il attribuerait sur le stock ordinaire. */ -}}
+{{- $demo := $p.demo | default false -}}
+{{- if and (not $demo) (not $p.partner) -}}{{- errorf "offre-culturelle : %s sans « partner » en front matter" .File.Path -}}{{- end -}}
+{{- if and $demo $p.partner -}}{{- errorf "offre-culturelle : %s est une démonstration, elle ne déclare pas de « partner »" .File.Path -}}{{- end -}}
+{{- if and (not $demo) (not (findRE `^[a-z0-9-]{2,40}$` $p.partner)) -}}{{- errorf "offre-culturelle : identifiant de comité invalide « %s » (%s)" $p.partner .File.Path -}}{{- end -}}
 {{- if ne (len $p.ordre) 6 -}}{{- errorf "offre-culturelle : %s doit ordonner les six livres (ordre)" .File.Path -}}{{- end -}}
 {{- $edito := site.Data.offre_culturelle.livres -}}
 {{- $public := $p.public | default "bénéficiaires" -}}
 {{- $fin := time.AsTime ($p.fin | default "2027-03-31") -}}
-<div class="oc" data-partner="{{ $p.partner }}">
+{{- if $demo }}<p class="oc-demo" role="note">Démonstration&nbsp;: aucun exemplaire n'est délivré depuis cette page.</p>{{ end }}
+<div class="oc"{{ if not $demo }} data-partner="{{ $p.partner }}"{{ end }}>
   <header class="oc-tete">
     <div class="oc-wrap">
       <p class="oc-part">
@@ -27,6 +34,7 @@
   <main class="oc-wrap">
     <div class="oc-dispo">
       <h2>Quel livre vous tente&nbsp;?</h2>
+      {{ if $demo }}<p>Ici, le compteur de votre comité&nbsp;: «&nbsp;<b>N</b> exemplaires encore disponibles sur M&nbsp;»</p>{{ end }}
       <p data-role="compteur" hidden><b data-role="restant"></b> exemplaire<span data-role="pluriel">s</span> encore disponible<span data-role="pluriel">s</span> sur <span data-role="total"></span></p>
     </div>
     <p class="oc-offre-etat" data-role="offre-etat" role="status" hidden></p>
@@ -47,8 +55,9 @@
           <p class="oc-q">{{ partial "fr-typo.html" $e.question }}</p>
           {{ if lt $i 2 }}<p class="oc-l">{{ partial "fr-typo.html" $e.raison }}</p>{{ end }}
           <div class="ressources-book__obtain">
-            <p class="ressources-book__state" data-role="state">Vérification des exemplaires…</p>
-            <button class="ressources-btn ressources-book__cta oc-btn" type="button" disabled>Choisir ce livre</button>
+            {{ if $demo }}<button class="oc-btn" type="button" data-demo-livre="{{ $livre.Title }}">Choisir ce livre</button>
+            {{ else }}<p class="ressources-book__state" data-role="state">Vérification des exemplaires…</p>
+            <button class="ressources-btn ressources-book__cta oc-btn" type="button" disabled>Choisir ce livre</button>{{ end }}
             <p class="ressources-btn-note" data-role="note" hidden></p>
           </div>
           <div class="ressources-book__assigned" hidden>
@@ -95,6 +104,33 @@
   </main>
 </div>
 
+{{ if $demo }}
+<div class="oc-fenetre" id="oc-fenetre" role="dialog" aria-modal="true" aria-labelledby="oc-fenetre-titre"><div>
+  <p class="oc-fenetre__sur">Démonstration — sur la page réelle de votre comité&nbsp;:</p>
+  <p class="oc-fenetre__titre" id="oc-fenetre-titre"></p>
+  <ol><li>ce livre est attribué au lecteur, et le compteur du comité baisse d'un exemplaire&nbsp;;</li>
+  <li>Amazon.fr s'ouvre&nbsp;: le lecteur se connecte à son compte&nbsp;;</li>
+  <li>il accepte le livre, sans paiement&nbsp;; le livre apparaît dans son application Kindle.</li></ol>
+  <button class="oc-btn" type="button">Fermer</button>
+</div></div>
+<script>
+(function () {
+  var f = document.getElementById("oc-fenetre"), t = document.getElementById("oc-fenetre-titre"),
+      fermer = f.querySelector("button"), retour = null;
+  function ouvrir(b) { retour = b; t.textContent = b.getAttribute("data-demo-livre"); f.classList.add("on"); fermer.focus(); }
+  function clore() { f.classList.remove("on"); if (retour) retour.focus(); }
+  document.querySelectorAll("[data-demo-livre]").forEach(function (b) { b.addEventListener("click", function () { ouvrir(b); }); });
+  fermer.addEventListener("click", clore);
+  f.addEventListener("click", function (e) { if (e.target === f) clore(); });
+  document.addEventListener("keydown", function (e) {
+    if (!f.classList.contains("on")) return;
+    if (e.key === "Escape") clore();
+    if (e.key === "Tab") { e.preventDefault(); fermer.focus(); }
+  });
+})();
+</script>
+{{ else }}
 <div class="ressources-toast" id="ro-toast" role="status" aria-live="polite"></div>
 {{ partial "ressources-guichet-script.html" . }}
+{{ end }}
 {{ end }}
