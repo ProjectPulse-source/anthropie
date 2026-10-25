@@ -48,15 +48,25 @@
       {{- if eq $i 0 }}<section class="oc-vitrine">{{ end -}}
       {{- if eq $i 2 }}</section><h2 class="oc-sec">Quatre autres lectures</h2><section class="oc-liste">{{ end }}
       <article class="ressources-book oc-livre {{ if lt $i 2 }}oc-livre--carte{{ else }}oc-livre--ligne{{ end }}" data-book="{{ $livre.Params.promo_slug }}">
-        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" (cond (lt $i 2) "96px" "52px")) }}
-          {{- /* Signal de crédibilité par livre (arbitrage CSE § 14) : la note Amazon.fr et son nombre
-                 d'évaluations, même règle que /ressources-offertes/ (seuil, date du relevé). */ -}}
-          {{ if lt $i 2 }}{{ partial "preuve-sociale.html" $livre }}{{ end }}</div>
+        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" (cond (lt $i 2) "96px" "52px")) }}</div>
         <div class="oc-livre__corps">
           <p class="oc-theme">{{ $e.theme }}</p>
           <h3>{{ partial "fr-typo.html" $livre.Title }}</h3>
+          {{- /* Signal de crédibilité par livre (arbitrage CSE § 14) : la note Amazon.fr et son nombre d'évaluations,
+                 même règle que /ressources-offertes/ (seuil, date du relevé). Dans le texte de la carte, sur une
+                 ligne : sous la couverture, la colonne de 96 px la cassait en trois lignes (auteur, 25/10). */ -}}
+          <div class="oc-note">{{ partial "preuve-sociale.html" $livre }}</div>
           <p class="oc-q">{{ partial "fr-typo.html" $e.question }}</p>
           {{ if lt $i 2 }}<p class="oc-l">{{ partial "fr-typo.html" $e.raison }}</p>{{ end }}
+          {{- /* Aperçu avant le choix (auteur, 25/10 : « avant de choisir, le lecteur doit avoir un aperçu plus large du
+                 livre avant de basculer vers Amazon ») : sous-titre, description de la fiche (chiffres résolus par
+                 desc-figures), pages, et la fiche complète dans un nouvel onglet, pour ne pas perdre la page du comité. */ -}}
+          <details class="oc-apercu">
+            <summary>Découvrir ce livre</summary>
+            {{ with $livre.Params.subtitle }}<p class="oc-apercu__sous-titre">{{ partial "fr-typo.html" . }}</p>{{ end }}
+            {{ with $livre.Description }}<p>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $livre.Params.isbn)) }}</p>{{ end }}
+            <p class="oc-apercu__meta">{{ with $livre.Params.pages }}Édition brochée&nbsp;: {{ . }}&nbsp;pages · {{ end }}<a href="{{ $livre.RelPermalink }}" target="_blank" rel="noopener">La fiche complète du livre</a></p>
+          </details>
           <div class="ressources-book__obtain">
             {{ if $demo }}<button class="oc-btn" type="button" data-demo-livre="{{ $livre.Title }}">Choisir ce livre</button>
             {{ else }}<p class="ressources-book__state" data-role="state">Vérification des exemplaires…</p>

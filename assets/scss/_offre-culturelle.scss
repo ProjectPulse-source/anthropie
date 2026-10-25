@@ -129,7 +129,30 @@
 .oc-fenetre__sur { margin: 0; font-size: 13px; color: #6b6560; }
 .oc-fenetre__titre { font: 600 19px var(--font-serif); margin: 4px 0 6px; }
 
-// Note Amazon.fr sous la couverture des deux livres en vitrine (partial preuve-sociale.html)
-.oc-livre--carte .oc-livre__couv {
-  .ressources-book__rating, .ressources-book__rating-date { font-size: 11.5px; margin: 6px 0 0; line-height: 1.3; }
+// Note Amazon.fr dans le texte de la carte, sur une ligne (25/10 : sous la couverture, la colonne de 96 px la
+// cassait en trois lignes et décalait les boutons des deux cartes).
+.oc-note {
+  .ressources-book__rating { display: block; margin: 2px 0 4px; font-size: 13px; line-height: 1.35; color: var(--oc-doux); }
+  .ressources-book__stars { color: #E3A32D; margin-right: 3px; }
+  .ressources-book__rating-score { font-weight: 600; color: var(--color-text-body); }
+  .ressources-book__rating-date { display: none; }   // le mois du relevé reste dans l'étiquette accessible
+  .ressources-book__novelty { margin: 2px 0 4px; }
+}
+
+// Cartes de la vitrine : même hauteur, bouton en bas de chacune — les deux boutons s'alignent quelle que soit la
+// longueur des textes.
+.oc-livre--carte {
+  align-items: stretch;
+  .oc-livre__couv { align-self: start; }
+  .oc-livre__corps { display: flex; flex-direction: column; }
+  .ressources-book__obtain, .ressources-book__assigned { margin-top: auto; padding-top: 8px; }
+}
+
+// Aperçu du livre avant le choix
+.oc-apercu {
+  margin: 0 0 10px; font-size: 14px;
+  summary { cursor: pointer; color: var(--oc-bleu); font-weight: 600; font-size: 14px; }
+  p { margin: 6px 0 0; color: var(--color-text-body); line-height: 1.5; }
+  .oc-apercu__sous-titre { font-style: italic; }
+  .oc-apercu__meta { font-size: 13px; color: var(--oc-doux); }
 }
