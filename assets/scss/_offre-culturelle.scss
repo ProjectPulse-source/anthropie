@@ -51,18 +51,22 @@
 .oc-chapo { margin: 0 0 6px; color: #e3e8f2; font-size: 15px; }
 .oc-mention { font-size: 13px; color: #c9d2e6; margin: 0; }
 // Bande des six couvertures (auteur, 25/10) : une rangée de couvertures égales, sous le texte sur téléphone, à droite au-delà
-// de 860 px ; aucune n'est mise en avant.
+// de 860 px ; aucune n'est mise en avant. Posée sur un socle clair (solution 2 retenue par l'auteur, 25/10) : couvertures
+// sombres et claires s'y lisent toutes, l'en-tête reste nuit.
 .oc-tete__couvs {
   display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 14px 0 0; max-width: 460px;
+  background: linear-gradient(180deg, #fff 0, #eef2f8 100%); border-radius: 10px; padding: 12px 12px 14px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 12px 30px rgba(0, 0, 0, .35);
+  box-sizing: border-box;
   // min-width : sans lui, la largeur intrinsèque de l'image (1000 px) élargit la colonne de la grille.
   // Format 2:3 imposé : deux couvertures sont en 1000 × 1600 ; elles perdent 3 % en haut et en bas plutôt que de dépasser.
   .oc-tete__couv { min-width: 0; }
-  img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 2px; box-shadow: 0 6px 16px rgba(0, 0, 0, .4); }
+  img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 2px; box-shadow: 0 1px 2px rgba(10, 20, 45, .2), 0 6px 12px rgba(10, 20, 45, .22); }
 }
 @media (min-width: 860px) {
   .oc-tete .oc-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 420px; column-gap: 32px; }
   .oc-tete .oc-wrap > * { grid-column: 1; }
-  .oc-tete .oc-wrap > .oc-tete__couvs { grid-column: 2; grid-row: 1 / span 6; align-self: center; margin: 0; gap: 10px; }
+  .oc-tete .oc-wrap > .oc-tete__couvs { grid-column: 2; grid-row: 1 / span 6; align-self: center; margin: 0; gap: 10px; padding: 16px; }
 }
 
 .oc-dispo {
@@ -137,7 +141,13 @@
 }
 
 // ----- Bandeau de la page d'essai (essai: true) -----
-.oc-demo { margin: 0; background: #fff4d6; color: #5a4400; font-size: 12.5px; text-align: center; padding: 5px 12px; }
+// Bandeau de la page d'essai, collé en haut au défilement (auteur, 25/10 : « qu'il demeure apparent ») ; les ancres de la
+// page s'arrêtent sous lui.
+.oc-demo {
+  margin: 0; background: #fff4d6; color: #5a4400; font-size: 12.5px; text-align: center; padding: 5px 12px;
+  position: sticky; top: 0; z-index: 20; box-shadow: 0 1px 0 rgba(90, 68, 0, .12), 0 2px 8px rgba(0, 0, 0, .08);
+}
+.oc-demo ~ .oc [id] { scroll-margin-top: 56px; }
 
 // Note Amazon.fr dans le texte de la carte, sur une ligne (25/10 : sous la couverture, la colonne de 96 px la
 // cassait en trois lignes et décalait les boutons des deux cartes).
