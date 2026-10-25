@@ -46,9 +46,9 @@
     <section class="oc-etapes" aria-labelledby="oc-etapes-titre">
       <h2 class="oc-sec" id="oc-etapes-titre">Comment recevoir votre livre&nbsp;?</h2>
       <ol>
-        <li><b>Choisissez un titre</b> parmi les six.</li>
-        <li><b>Recevez votre lien</b>&nbsp;: Amazon.fr s'ouvre, livre déjà payé.</li>
-        <li><b>Acceptez-le</b>&nbsp;: il s'ajoute à votre bibliothèque Kindle, sans paiement.</li>
+        <li><span class="oc-etapes__n" aria-hidden="true">1</span><span><b>Choisissez un titre</b> parmi les six.</span></li>
+        <li><span class="oc-etapes__n" aria-hidden="true">2</span><span><b>Recevez votre lien</b>&nbsp;: Amazon.fr s'ouvre, livre déjà payé.</span></li>
+        <li><span class="oc-etapes__n" aria-hidden="true">3</span><span><b>Acceptez-le</b>&nbsp;: il s'ajoute à votre bibliothèque Kindle, sans paiement.</span></li>
       </ol>
     </section>
     <h2 class="oc-sec oc-sec--choix" id="oc-livres">Quel livre vous tente&nbsp;?</h2>
@@ -60,10 +60,12 @@
       {{- $e := index $edito $slug -}}
       {{- if not $e -}}{{- errorf "offre-culturelle : data/offre_culturelle.toml sans entrée pour « %s »" $slug -}}{{- end -}}
       {{- if not $livre.Params.promo_slug -}}{{- errorf "offre-culturelle : /livres/%s sans promo_slug" $slug -}}{{- end -}}
-      {{- if eq $i 0 }}<section class="oc-vitrine">{{ end -}}
-      {{- if eq $i 2 }}</section><h2 class="oc-sec">Quatre autres lectures</h2><section class="oc-liste">{{ end }}
-      <article class="ressources-book oc-livre {{ if lt $i 2 }}oc-livre--carte{{ else }}oc-livre--ligne{{ end }}" data-book="{{ $livre.Params.promo_slug }}">
-        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" (cond (lt $i 2) "96px" "78px")) }}</div>
+      {{- /* Six cartes égales (pièces CSE-09 et « Arbitrage livres offerts », 25/10 : la vitrine de deux livres et la
+             liste de quatre faisaient « catalogue inachevé » et laissaient un grand blanc à droite) ; l'ordre éditorial
+             du front matter reste celui de la lecture. */ -}}
+      {{- if eq $i 0 }}<section class="oc-grille">{{ end }}
+      <article class="ressources-book oc-livre oc-livre--carte" data-book="{{ $livre.Params.promo_slug }}">
+        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" "110px") }}</div>
         <div class="oc-livre__corps">
           <p class="oc-theme">{{ $e.theme }}</p>
           <h3>{{ partial "fr-typo.html" $livre.Title }}</h3>
@@ -80,7 +82,7 @@
             {{- else }}{{ partial "preuve-sociale.html" $livre }}{{ end -}}
           </div>
           <p class="oc-q">{{ partial "fr-typo.html" $e.question }}</p>
-          {{ if lt $i 2 }}<p class="oc-l">{{ partial "fr-typo.html" $e.raison }}</p>{{ end }}
+          <p class="oc-l">{{ partial "fr-typo.html" $e.raison }}</p>
           {{- /* Aperçu avant le choix (auteur, 25/10 : « avant de choisir, le lecteur doit avoir un aperçu plus large du
                  livre avant de basculer vers Amazon ») : sous-titre, description de la fiche (chiffres résolus par
                  desc-figures), pages, et la fiche complète dans un nouvel onglet, pour ne pas perdre la page du comité. */ -}}
@@ -118,14 +120,14 @@
            les six titres sont proposés par l'auteur. */ -}}
     <section class="oc-chaine" aria-labelledby="oc-chaine-titre">
       <h2 class="oc-sec" id="oc-chaine-titre">Une chaîne de lecteurs</h2>
-      <ol class="oc-chaine__maillons">
+      <ul class="oc-chaine__maillons">
         <li><b>L'auteur a payé ces livres à l'avance</b>, pour faire circuler les idées au-delà de leur public
         habituel.</li>
         <li><b>Votre comité a choisi de vous les offrir</b>&nbsp;: il les met à la portée de chacun de ses {{ $public }},
         et de leurs proches.</li>
         <li><b>À vous de choisir le vôtre.</b> Il est à vous, vous le gardez&nbsp;; s'il vous a plu, faites-le connaître
         autour de vous.</li>
-      </ol>
+      </ul>
       <p class="oc-chaine__action"><a class="oc-btn" href="#oc-livres">Choisir mon livre&nbsp;↑</a></p>
       <p class="oc-auteur"><b>L'auteur.</b> Stéphane Lalut, économiste et chercheur indépendant, publie dans plusieurs
       revues de sciences sociales et d'idées&nbsp;: <i>En attendant Nadeau</i>, <i>La Vie des idées</i>,
