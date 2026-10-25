@@ -1,6 +1,6 @@
 ---
 title: "Ressources — données, dossiers et repères"
-description: "Les chiffres du débat public circulent souvent sans leur source ni leur méthode. Ces ressources les reprennent aux séries officielles, les recalculent et disent ce qu'ils montrent et ce qu'ils ne montrent pas : sur la dette publique, l'école, les institutions, et le cadre d'analyse qui les relie."
+description: "Les chiffres du débat public circulent souvent sans leur source ni leur méthode. Les dossiers les reprennent aux séries officielles et aux textes, les recalculent et disent ce qu'ils montrent et ce qu'ils ne montrent pas : dette publique, école, institutions. Dans un espace distinct, l'auteur présente son cadre d'analyse, ses notions et ses outils documentaires."
 # Index éditorial. La PRÉSENCE vient des pages elles-mêmes : une page entre ici en déclarant
 # `ressource.bloc` dans son front matter (layouts/ressources/list.html). Ce fichier ne porte
 # que l'ordre et l'intitulé des blocs. Un bloc inconnu arrête le build ; un bloc vide avertit.
@@ -52,11 +52,13 @@ blocs:
     chapo: "Qui peut décider, avec quels accords, dans quel délai — et comment vérifier le résultat ?"
     # Remplace le bloc « Pouvoir et institutions » (arbitrage PRO-20261005-153428, décision de l'auteur du 05/10).
   - id: notions
-    titre: "Notions et cadre d'analyse"
-    chapo: "Les définitions du cadre anthropique, chacune reliée à ses sources."
-  - id: corpus
-    titre: "Corpus et documentation"
-    chapo: "Les appareils documentaires qui accompagnent les livres, consultables pour eux-mêmes."
+    # Le cadre d'analyse de l'auteur (arbitrage PRO-20261025-225715, 25/10/2026) : la définition, les notions et le
+    # Registre des coûts déportés, séparés des dossiers de faits, qui ne sont jamais présentés comme ses démonstrations.
+    # L'identifiant `notions` est gardé : l'ancre /ressources/#notions est publiée. Le bloc « Corpus et documentation »
+    # est retiré : le Registre vient ici, le répertoire de La Société du premier coup vit sous la page de son livre.
+    titre: "L'anthropie : le cadre d'analyse de l'auteur"
+    titre_barre: "Cadre d'analyse de l'auteur"   # ligne d'appartenance des pages (partials/ressource-appartenance.html)
+    chapo: "L'hypothèse de l'auteur et sa définition, les notions qu'elle mobilise, chacune attribuée à qui l'a forgée, et le Registre qui l'applique à l'histoire longue."
   - id: guides
     titre: "Guides et éclairages"
     chapo: "Des éclairages d'histoire des idées et de méthode : l'écriture, la tabula rasa, le travail de recherche hors institution."

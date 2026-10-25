@@ -9,7 +9,14 @@
          barre: "propre"   la page appelle elle-même la sienne (dossier dette : `dossier-dette volet="…"`, qui porte
                            les questions du dossier, sa source et ses prolongements) ;
          disciplines: […]  barre d'une discipline (Pour enseigner) : partials/barre-discipline.html ;
-         sinon             barre du bloc : partials/barre-bloc.html (onglets = pages du bloc, rien sous deux entrées). */ -}}
+         dossier: true     barre du bloc : partials/barre-bloc.html (onglets = pages du bloc, rien sous deux entrées) ;
+         sinon             AUCUNE barre, une ligne d'appartenance : partials/ressource-appartenance.html.
+
+       Arbitrage PRO-20261025-225715 (25/10/2026) : « un dossier regroupe des questions ; un cadre regroupe des concepts ;
+       un livre regroupe ses prolongements ». Une barre d'onglets dit au lecteur que les pages sont les volets d'un même
+       ensemble ; posée sur tout bloc, elle affichait « Registre » et « La Société du premier coup » comme deux volets
+       d'un dossier, alors que ce sont les appareils de deux livres sans rapport. La décision de l'auteur du 03/10 visait
+       « chaque dossier » : la barre ne se pose que pour un bloc qui déclare `dossier: true`. */ -}}
 {{- with .Params.ressource -}}{{- with .bloc -}}
   {{- $bloc := . -}}
   {{- $decl := dict -}}
@@ -19,6 +26,7 @@
   {{- if not $decl.id }}{{ errorf "barre-auto: bloc %q absent de l'index /ressources/ (%s)" $bloc $.File.Path }}{{ end -}}
   {{- if eq $decl.barre "propre" -}}
   {{- else if $decl.disciplines -}}{{ partial "barre-discipline.html" (dict "page" $ "bloc" $decl) }}
-  {{- else -}}{{ partial "barre-bloc.html" (dict "page" $ "bloc" $decl) }}
+  {{- else if $decl.dossier -}}{{ partial "barre-bloc.html" (dict "page" $ "bloc" $decl) }}
+  {{- else -}}{{ partial "ressource-appartenance.html" (dict "page" $ "bloc" $decl) }}
   {{- end -}}
 {{- end -}}{{- end -}}

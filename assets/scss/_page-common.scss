@@ -169,3 +169,15 @@ main .pouvoirs-table {
 // spécificité : les règles propres aux barres de dossier (_enseignants.scss, dossier dette) restent prioritaires.
 main :is(h2, h3, h4)[id] { scroll-margin-top: 5rem; }
 
+
+// Ligne d'appartenance d'une ressource hors dossier (partials/ressource-appartenance.html, 25/10/2026) : elle tient
+// la place de la barre d'onglets, réservée aux dossiers. Même registre que la nature des cartes d'index.
+.ressource-appartenance {
+  font-family: var(--font-sans);
+  font-size: .8rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  margin: 0 0 1.5rem;
+  em { font-style: normal; }
+}

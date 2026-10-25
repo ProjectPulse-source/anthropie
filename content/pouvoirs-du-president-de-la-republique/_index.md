@@ -36,6 +36,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"
   bloc: "promesses"
+  livres: ["un-president-peut-il-tenir-ses-promesses"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
   nature: "Le texte de la Constitution, citation par citation ; données ouvertes"
 onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)

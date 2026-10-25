@@ -72,6 +72,14 @@ frontiere:
     - texte: "To provide a single answer: it offers a clearer way of asking the questions."
       ancre: "some-domains-of-application"
       section: "Domains of application"
+ressource:  # /en/resources/ index: head of the analytical framework (PRO-20261025-225715); keeps its menu entry
+  type: ["notion"]
+  bloc: "notions"
+  rang: 1
+  encart: true
+  nature: "Founding definition"
+  bouton: "Read the definition"
+  livres: ["anthropie-ordre-ici-dette-ailleurs"]
 ---
 
 ## Definition

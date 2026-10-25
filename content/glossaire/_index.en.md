@@ -9,6 +9,7 @@ og_image_alt: "Glossary — Anthropy. Order here. Debt elsewhere."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
+  livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
   nature: "Definitions"
   accueil: 3

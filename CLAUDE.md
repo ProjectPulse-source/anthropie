@@ -168,7 +168,17 @@ organe** (auteur, 03/10/2026 : « pour chaque dossier, le même type d'architect
 barre de discipline si le bloc déclare `disciplines` (`barre-discipline.html`), aucune si le bloc déclare
 `barre: "propre"` (dette : chaque page appelle `dossier-dette volet="…"`). **Une page neuve n'a rien d'autre à faire que
 déclarer son bloc** (et ses libellés d'onglet) : elle entre dans l'index, dans sa barre et dans celle des autres pages ;
-un nouveau dossier = un bloc déclaré dans `content/ressources/_index*.md`. Essai rejoué le 03/10 (copie du site, trois
+un nouveau dossier = un bloc déclaré dans `content/ressources/_index*.md`. **La barre est réservée aux blocs qui
+déclarent `dossier: true`** (arbitrage `PRO-20261025-225715`, 25/10/2026 : « un dossier regroupe des questions ; un
+cadre regroupe des concepts ; un livre regroupe ses prolongements » ; posée sur tout bloc, elle montrait le Registre et
+l'appareil de *Premier coup* comme deux volets d'un dossier). Une page d'un autre bloc reçoit à la place une **ligne
+d'appartenance** (`partials/ressource-appartenance.html` : intitulé court du bloc, `titre_barre`, et le livre dont elle
+est l'appareil, `ressource.appareil_de`). Le bloc `notions` (ancre gardée) est le **cadre d'analyse de l'auteur** :
+définition en tête (encart), notions, glossaire, Registre ; les dossiers de faits n'y sont jamais présentés comme ses
+démonstrations. **Réciprocité livre → ressources** : une page déclare les livres qu'elle prolonge
+(`ressource.livres: ["<slug>"]`, relation éditoriale, jamais déduite d'un lien ou d'un `appel-livre`) ; la fiche du
+livre les liste sous « Ressources et données du livre », après sa liste manuelle `ressources_livre` (qui garde ses
+notes). Un appareil de livre peut vivre hors de l'index (`/premier-coup/` : `appareil_de` et `livres`, sans `bloc`). Essai rejoué le 03/10 (copie du site, trois
 pages témoins) : deuxième page d'un bloc, quatrième thème SES, première page de Littérature. Rien à déclarer dans l'index : le
 tri se déduit des pages (`layouts/ressources/list.html`, partials `ressource-entree.html` et `ressource-encart.html`).
 **Une nouvelle ressource de données fait produire sa vignette par le générateur de sa carte de partage**, dans le même

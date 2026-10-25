@@ -8,6 +8,10 @@
 <div class="home-section anthropie-page">
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
+    {{- /* Ligne de date visible : la page est une ressource depuis le 25/10/2026 (tête du cadre d'analyse dans
+           l'index, arbitrage PRO-20261025-225715) ; check-dates-build.py exige la même date au sitemap, au balisage et
+           à l'écran. */}}
+    {{- if .Params.ressource }}{{ partial "page-date-visible.html" . }}{{ end }}
   </header>
 
   <aside class="anthropie-phrase" aria-label="{{ if $isEn }}Anthropy in one sentence{{ else }}L'anthropie en une phrase{{ end }}">

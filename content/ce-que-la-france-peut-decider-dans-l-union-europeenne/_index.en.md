@@ -45,6 +45,7 @@ ressource:  # index /en/resources/ (layouts/ressources/list.html)
   type: ["juridique-institutionnel", "quantitatif"]  # protocoles de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-12"
   bloc: "promesses"
+  livres: ["un-president-peut-il-tenir-ses-promesses"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 70
   prolongement: true
   nature: "Treaties (EUR-Lex), EU Council votes checked against a second dataset, results and acts read at the source, European Commission; open data"

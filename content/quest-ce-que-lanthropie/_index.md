@@ -58,6 +58,14 @@ frontiere:
     - texte: "Apporter une réponse unique : il fournit une manière de poser les questions avec plus de netteté."
       ancre: "quelques-domaines-dapplication"
       section: "Domaines d'application"
+ressource:  # index /ressources/ : en tête du cadre d'analyse (arbitrage PRO-20261025-225715, 25/10/2026) ; garde son entrée de menu
+  type: ["notion"]
+  bloc: "notions"
+  rang: 1
+  encart: true
+  nature: "Définition fondatrice"
+  bouton: "Lire la définition"
+  livres: ["anthropie-ordre-ici-dette-ailleurs"]
 ---
 
 ## Définition

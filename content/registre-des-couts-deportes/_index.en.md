@@ -27,13 +27,12 @@ journal:
     texte: "Scope stated at the top (165 of the 168 milestones, the three missing ones named); the Register is no longer presented as the book’s epilogue—the book sums it up in diagrams and points to it through a QR code; the Templars milestone aligned with the corrected edition of the book (the Temple left the royal administration a lesson more than its methods)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["corpus", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
-  bloc: "corpus"
-  rang: 10
-  nature: "Documented corpus — annotated chronology"
+  bloc: "notions"   # the author's analytical framework (PRO-20261025-225715)
+  rang: 70
+  nature: "Documentary apparatus of ANTHROPY — annotated chronology"
+  appareil_de: "anthropie-ordre-ici-dette-ailleurs"
+  livres: ["anthropie-ordre-ici-dette-ailleurs"]
   accueil: 2
-onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
-  long: "Register of Offloaded Costs"
-  court: "Register"
 ---
 
 The Register of Offloaded Costs is the **documentary apparatus** of the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/): the book tells deep history in 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, and the Register asks each of them the same two questions: **what order did this innovation create, and what debt did it displace**—toward other places, other times, or other social groups? The English version, below, is freely browsable; it holds 165 milestones. The other three—the Olmecs (900 BCE), the *Odyssey* (800 BCE), and Gutenberg (1454)—can for now be read in the book only.

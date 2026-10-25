@@ -19,6 +19,7 @@ faq:
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
+  livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 50
   nature: "Notion — definition, origin and sources"
 onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)

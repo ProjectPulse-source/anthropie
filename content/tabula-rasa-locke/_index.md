@@ -28,6 +28,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources ») : définition sourcée, origine, frontière, exemple
   refonte: "2026-10-17"  # relecture attestée (instantané docs/relectures/) après l'avis entrant du 17/10
   bloc: "guides"
+  livres: ["lodyssee-des-idees"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 15
   nature: "Notion — histoire d'une idée"
 onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)

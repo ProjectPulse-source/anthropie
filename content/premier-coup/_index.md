@@ -13,14 +13,11 @@ description: "Le compagnon documentaire de La Société du premier coup (Stépha
 # elle est un compagnon. Voir docs/ARCHITECTURE_GEO_PREMIER_COUP.md.
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["corpus"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
-  bloc: "corpus"
-  rang: 20
-  intitule: "Inégalités et possibilités de recommencer — sources et répertoire"
-  nature: "Sources et répertoire du livre « La Société du premier coup »"
-onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
-  long: "La Société du premier coup"
-  court: "Premier coup"
-  long_en: "La Société du premier coup"
+  # Hors de l'index /ressources/ (exclusion déclarée, arbitrage PRO-20261025-225715, 25/10/2026) : « un livre regroupe
+  # ses prolongements ». Cette page est l'appareil de son livre ; elle se trouve depuis la fiche du livre (Ressources et
+  # données du livre), la notion de réversibilité sociale et le bandeau « compagnon » de sa propre page.
+  appareil_de: "la-societe-du-premier-coup"
+  livres: ["la-societe-du-premier-coup"]
 lang_repli: "/en/books/"  # appareil d'un livre paru en français seul : pas de version anglaise (exclusion déclarée), cible de l'onglet EN
 ---
 

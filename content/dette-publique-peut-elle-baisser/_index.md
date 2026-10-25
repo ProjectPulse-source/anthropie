@@ -48,6 +48,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
+  livres: ["dette-publique-qui-paie-vraiment"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 35
   nature: "Séries officielles (Eurostat) décomposées et calculs de l'auteur"
 ---

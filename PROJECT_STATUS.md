@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-26 — architecture de l'index des ressources (arbitrage `PRO-20261025-225715`, go de l'auteur)
+
+Trois gestes, tous par métadonnées et organes communs. (1) Barre d'onglets réservée aux blocs `dossier: true` ; les
+autres pages reçoivent une ligne d'appartenance (`partials/ressource-appartenance.html`) : plus de barre « Registre /
+Premier coup ». (2) Bloc `notions` devenu « L'anthropie : le cadre d'analyse de l'auteur » (ancre gardée) : définition
+en encart de tête (elle garde son entrée de menu ; ligne de date visible ajoutée à son gabarit), notions, glossaire,
+Registre (`appareil_de`) ; bloc « Corpus et documentation » retiré (aucun lien vers `#corpus`) ; `/premier-coup/` sort de
+l'index et reste sous la fiche de son livre ; chapô de l'index réécrit FR et EN (faits d'un côté, cadre « dans un
+espace distinct »). (3) `ressource.livres` déclaré sur 45 fichiers FR/EN ; la fiche de livre en tire « Ressources et
+données du livre » : promesses 0 → 7, dette 1 → 8, *Odyssée* 0 → 2, *Premier coup* 0 → 2, *ANTHROPIE* 1 → 7,
+*Livresque* rien (aucun prolongement réel). Champ « cadre » de l'arbitrage non créé : l'appartenance au cadre est le bloc.
+Contrôles : build 0, `check-all --ci` 0, audit des liens 0, dates 61/61, rendu 0 ; `check-relecture --strict` à 10 pages
+du dossier dette, **identique sur HEAD** (build séparé) : préexistant, non causé ici. Non fait : recette visuelle
+320-1280 px de la ligne d'appartenance et de l'encart ; test de compréhension par lecteurs réels (décision de l'auteur).
+
 ### 2026-10-25 — `/registre-des-couts-deportes/` (FR et EN) confronté aux éditions 630 p. et 644 p.
 
 Constats sur les PDF en ligne (signets : 168 chapitres-jalons ; FR `17f9f1b4…`, EN révision du 23/10) : le livre n'a

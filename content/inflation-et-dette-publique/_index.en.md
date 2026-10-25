@@ -48,6 +48,7 @@ ressource:
   type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
+  livres: ["dette-publique-qui-paie-vraiment"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 45
   nature: "Author's calculation on official data (AFT, Eurostat, ECB, Banque de France)"
   prolongement: true

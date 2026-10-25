@@ -18,6 +18,7 @@ faq:
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "guides"
+  livres: ["lodyssee-des-idees"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
   nature: "Éclairage — histoire des idées"
 onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)

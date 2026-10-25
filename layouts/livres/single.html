@@ -55,8 +55,26 @@
          le front matter : liste ressources_livre (label, url, note facultative).
          Rien déclaré = rien affiché ; même idiome que subtitle/price/reviews.
          Placé AVANT les Working Papers : demande auteur 15/08 (« plus en
-         évidence » — c'est le prolongement vivant du livre). */ -}}
-  {{ with .Params.ressources_livre }}
+         évidence » — c'est le prolongement vivant du livre).
+         RÉCIPROCITÉ (arbitrage PRO-20261025-225715, 25/10/2026 : « un livre regroupe ses prolongements ») : s'y ajoutent
+         les pages qui déclarent prolonger ce livre (`ressource.livres`, relation éditoriale déclarée par la ressource,
+         jamais déduite d'un lien ou d'un appel au livre). Ordre : l'appareil du livre (`ressource.appareil_de`), puis
+         les blocs dans l'ordre de l'index, puis `ressource.rang`. Une page déjà dans ressources_livre n'est pas répétée :
+         la liste manuelle garde ses notes, qui disent ce qu'aucune métadonnée ne dit (le QR code imprimé…). */ -}}
+  {{- $slug := .File.ContentBaseName -}}
+  {{- $items := slice -}}
+  {{- range .Params.ressources_livre }}{{ $items = $items | append (dict "url" .url "label" .label "note" .note) }}{{ end -}}
+  {{- $assoc := where site.Pages "Params.ressource.livres" "intersect" (slice $slug) -}}
+  {{- $ordre := where $assoc "Params.ressource.appareil_de" $slug -}}
+  {{- with site.GetPage "/ressources" -}}
+    {{- range .Params.blocs }}{{ $ordre = $ordre | append (sort (where $assoc "Params.ressource.bloc" .id) "Params.ressource.rang") }}{{ end -}}
+  {{- end -}}
+  {{- range $ordre -}}
+    {{- $url := .RelPermalink -}}{{- $deja := false -}}
+    {{- range $items }}{{ if eq .url $url }}{{ $deja = true }}{{ end }}{{ end -}}
+    {{- if not $deja }}{{ $items = $items | append (dict "url" $url "label" (.Params.ressource.intitule | default .Title) "note" .Params.ressource.nature) }}{{ end -}}
+  {{- end -}}
+  {{ with $items }}
   <section class="book-others">
     <h2 class="book-others__title">{{ i18n "book_resources" }}</h2>
     <ul class="book-others__list">

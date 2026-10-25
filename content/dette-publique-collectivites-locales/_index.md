@@ -54,6 +54,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # phase B de la refonte (méthode OPTIMUM-26) ; relecture attestée par docs/relectures/
   bloc: "dette"
+  livres: ["dette-publique-qui-paie-vraiment"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 30
   nature: "Séries officielles (Eurostat, OFGL) et calculs de l'auteur"
   prolongement: true   # option B : rangée « Prolongements du dossier », sous la grille des quatre volets

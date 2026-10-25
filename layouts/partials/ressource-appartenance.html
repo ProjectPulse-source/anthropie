@@ -1,0 +1,19 @@
+{{- /* ressource-appartenance.html — ligne d'appartenance d'une page de ressource HORS dossier (posée par barre-auto.html
+       à la place de la barre d'onglets ; arbitrage PRO-20261025-225715, 25/10/2026).
+
+       Le lecteur arrive surtout par un moteur, sur une page isolée : la ligne lui dit, sans passer par l'index, à quel
+       ensemble la page appartient (intitulé court du bloc, `titre_barre` sinon `titre`, lien vers le bloc dans l'index)
+       et, si elle est l'appareil documentaire d'un livre, lequel (`ressource.appareil_de: "<slug du livre>"`). Tout se
+       dérive : aucun libellé recopié dans la page. Un slug de livre inconnu arrête le build. */ -}}
+{{- $page := .page -}}
+{{- $bloc := .bloc -}}
+{{- $en := eq $page.Lang "en" -}}
+{{- $index := site.GetPage "/ressources" -}}
+<p class="ressource-appartenance">
+  <a href="{{ $index.RelPermalink }}#{{ $bloc.id }}">{{ partial "fr-typo.html" ($bloc.titre_barre | default $bloc.titre) }}</a>
+  {{- with $page.Params.ressource.appareil_de -}}
+    {{- $livre := site.GetPage (printf "/livres/%s" .) -}}
+    {{- if not $livre }}{{ errorf "ressource-appartenance : %s déclare appareil_de %q, livre introuvable" $page.File.Path . }}{{ end -}}
+    <span class="ressource-appartenance__sep" aria-hidden="true"> · </span>{{ if $en }}Documentary apparatus of {{ else }}Appareil documentaire du livre {{ end }}<a href="{{ $livre.RelPermalink }}"><em>{{ partial "fr-typo.html" $livre.Title }}</em></a>
+  {{- end }}
+</p>

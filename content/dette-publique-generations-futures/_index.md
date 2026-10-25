@@ -55,6 +55,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["quantitatif", "explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
+  livres: ["dette-publique-qui-paie-vraiment"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 40
   nature: "Séries officielles (Eurostat, Insee, BCE, Commission européenne, COR) et calculs de l'auteur"
   prolongement: true   # option B : rangée « Prolongements du dossier », sous la grille des volets
