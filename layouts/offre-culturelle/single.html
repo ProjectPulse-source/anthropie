@@ -32,6 +32,11 @@
       <p class="oc-initiative">Une initiative culturelle proposée par votre comité, avec des livres financés par l'auteur.</p>
       <p class="oc-chapo">{{ partial "fr-typo.html" $p.intro }}</p>
       <p class="oc-mention">Sans paiement · Compte Amazon.fr nécessaire · Application Kindle gratuite</p>
+      {{- /* Les six couvertures dès l'en-tête, toutes de la même taille, dans l'ordre éditorial (auteur, 25/10 : « conserve
+             exactement le modèle actuel et rajoute les livres ») ; décoratives, les cartes plus bas les nomment. */}}
+      <div class="oc-tete__couvs" aria-hidden="true">
+        {{- range $p.ordre }}{{ partial "book-cover.html" (dict "slug" . "alt" "" "wrapClass" "oc-tete__couv" "sizes" "72px" "loading" "eager") }}{{ end -}}
+      </div>
     </div>
   </header>
 

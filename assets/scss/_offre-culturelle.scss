@@ -50,6 +50,20 @@
 }
 .oc-chapo { margin: 0 0 6px; color: #e3e8f2; font-size: 15px; }
 .oc-mention { font-size: 13px; color: #c9d2e6; margin: 0; }
+// Bande des six couvertures (auteur, 25/10) : une rangée de couvertures égales, sous le texte sur téléphone, à droite au-delà
+// de 860 px ; aucune n'est mise en avant.
+.oc-tete__couvs {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 14px 0 0; max-width: 460px;
+  // min-width : sans lui, la largeur intrinsèque de l'image (1000 px) élargit la colonne de la grille.
+  // Format 2:3 imposé : deux couvertures sont en 1000 × 1600 ; elles perdent 3 % en haut et en bas plutôt que de dépasser.
+  .oc-tete__couv { min-width: 0; }
+  img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 2px; box-shadow: 0 6px 16px rgba(0, 0, 0, .4); }
+}
+@media (min-width: 860px) {
+  .oc-tete .oc-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 420px; column-gap: 32px; }
+  .oc-tete .oc-wrap > * { grid-column: 1; }
+  .oc-tete .oc-wrap > .oc-tete__couvs { grid-column: 2; grid-row: 1 / span 6; align-self: center; margin: 0; gap: 10px; }
+}
 
 .oc-dispo {
   display: flex; justify-content: space-between; align-items: baseline;
