@@ -23,7 +23,7 @@
   a { color: var(--oc-bleu); }
 }
 
-.oc-wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+.oc-wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
 
 .oc-tete {
   background: var(--oc-nuit);
@@ -188,3 +188,19 @@
   }
 }
 .oc-chaine .oc-auteur { border-top: 0; margin-top: 14px; padding-top: 0; }
+
+// Audit du 25/10 : qui finance / qui propose ; parcours en trois étapes avant les livres ; notes plus lisibles.
+.oc-initiative { margin: 2px 0 6px; font-size: 15px; font-weight: 600; color: #fff; }
+.oc-etapes {
+  ol { list-style: none; counter-reset: etape; margin: 0; padding: 0; display: grid; gap: 8px; }
+  li {
+    counter-increment: etape; position: relative; padding: 8px 12px 8px 44px; background: #fff;
+    border: 1px solid var(--oc-trait); border-radius: 10px; font-size: 14.5px;
+  }
+  li::before {
+    content: counter(etape); position: absolute; left: 12px; top: 8px; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--oc-bleu); color: #fff; font: 700 13px/22px var(--font-sans); text-align: center;
+  }
+}
+@media (min-width: 720px) { .oc-etapes ol { grid-template-columns: repeat(3, 1fr); } }
+.oc-note .ressources-book__rating { font-size: 14px; }

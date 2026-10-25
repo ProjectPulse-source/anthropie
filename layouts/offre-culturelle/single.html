@@ -29,8 +29,9 @@
       </div>
       <p class="oc-surtitre">Offre culturelle de votre comité</p>
       <h1 class="oc-titre"><span data-role="compteur" hidden><span data-role="total"></span> livres numériques offerts</span><span data-role="sans-compteur">Des livres numériques offerts</span></h1>
+      <p class="oc-initiative">Une initiative culturelle proposée par votre comité, avec des livres financés par l'auteur.</p>
       <p class="oc-chapo">{{ partial "fr-typo.html" $p.intro }}</p>
-      <p class="oc-mention">Offert par l'auteur · Sans paiement · Compte Amazon.fr nécessaire</p>
+      <p class="oc-mention">Sans paiement · Compte Amazon.fr nécessaire · Application Kindle gratuite</p>
     </div>
   </header>
 
@@ -39,9 +40,17 @@
            jauge ; affiché seulement quand le guichet a répondu (data-role compteur). */ -}}
     <div class="oc-compteur" data-role="compteur" hidden>
       <p class="oc-compteur__n"><span data-role="restant"></span></p>
-      <p class="oc-compteur__txt">exemplaire<span data-role="pluriel">s</span> encore disponible<span data-role="pluriel">s</span><br>sur <span data-role="total"></span> offerts par votre comité</p>
+      <p class="oc-compteur__txt">exemplaire<span data-role="pluriel">s</span> rest<span data-role="singulier">e</span><span data-role="pluriel">ent</span> à offrir aux {{ $public }} de votre comité,<br>sur <span data-role="total"></span></p>
       <div class="oc-compteur__jauge" aria-hidden="true"><span data-role="jauge"></span></div>
     </div>
+    <section class="oc-etapes" aria-labelledby="oc-etapes-titre">
+      <h2 class="oc-sec" id="oc-etapes-titre">Comment recevoir votre livre&nbsp;?</h2>
+      <ol>
+        <li><b>Choisissez un titre</b> parmi les six.</li>
+        <li><b>Recevez votre lien</b>&nbsp;: Amazon.fr s'ouvre, livre déjà payé.</li>
+        <li><b>Acceptez-le</b>&nbsp;: il s'ajoute à votre bibliothèque Kindle, sans paiement.</li>
+      </ol>
+    </section>
     <h2 class="oc-sec oc-sec--choix">Quel livre vous tente&nbsp;?</h2>
     <p class="oc-offre-etat" data-role="offre-etat" role="status" hidden></p>
 
@@ -75,14 +84,14 @@
                  livre avant de basculer vers Amazon ») : sous-titre, description de la fiche (chiffres résolus par
                  desc-figures), pages, et la fiche complète dans un nouvel onglet, pour ne pas perdre la page du comité. */ -}}
           <details class="oc-apercu">
-            <summary>Découvrir ce livre</summary>
+            <summary>En savoir plus sur ce livre</summary>
             {{ with $livre.Params.subtitle }}<p class="oc-apercu__sous-titre">{{ partial "fr-typo.html" . }}</p>{{ end }}
             {{ with $livre.Description }}<p>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $livre.Params.isbn)) }}</p>{{ end }}
             <p class="oc-apercu__meta">{{ with $livre.Params.pages }}Édition brochée&nbsp;: {{ . }}&nbsp;pages · {{ end }}<a href="{{ $livre.RelPermalink }}" target="_blank" rel="noopener">La fiche complète du livre</a></p>
           </details>
           <div class="ressources-book__obtain">
             <p class="ressources-book__state" data-role="state">Vérification des exemplaires…</p>
-            <button class="ressources-btn ressources-book__cta oc-btn" type="button" disabled>Choisir ce livre</button>
+            <button class="ressources-btn ressources-book__cta oc-btn" type="button" disabled>Recevoir ce livre gratuitement</button>
             <p class="ressources-btn-note" data-role="note" hidden></p>
           </div>
           <div class="ressources-book__assigned" hidden>
@@ -100,7 +109,7 @@
     <a href="{{ "/contact/" | relLangURL }}">m'écrire</a>&nbsp;: je vous transmets votre exemplaire.</p></noscript>
 
     <p class="oc-aide">Vous choisissez le livre, puis vous l'acceptez gratuitement sur Amazon.fr. Pas besoin de
-    liseuse&nbsp;: l'application Kindle est gratuite sur téléphone, tablette et ordinateur. Un livre par personne.</p>
+    liseuse&nbsp;: l'application Kindle est gratuite sur téléphone, tablette et ordinateur. Un livre par bénéficiaire.</p>
 
     {{- /* Chaîne de circulation (auteur, 25/10 : « plus causal, donner l'impression que le lecteur et le comité font
            partie d'une chaîne de circulation culturelle ») : chaque maillon est un fait du dispositif. */ -}}
@@ -109,8 +118,8 @@
       <ol class="oc-chaine__maillons">
         <li><b>Des lecteurs achètent ces livres.</b> Une part de leurs recettes paie des exemplaires Kindle à l'avance.</li>
         <li><b>Votre comité les transmet</b> à ses {{ $public }} et à leurs proches, sans budget ni gestion.</li>
-        <li><b>Chacun choisit son livre et le garde.</b> S'il l'a aimé, il peut le faire connaître&nbsp;; chaque livre
-        acheté ensuite finance, à son tour, d'autres exemplaires offerts.</li>
+        <li><b>Chacun choisit son livre et le garde.</b> S'il l'a aimé, il peut le faire connaître&nbsp;; une part
+        des ventes qui suivent contribue, à son tour, à financer d'autres exemplaires offerts.</li>
       </ol>
       <p class="oc-auteur"><b>L'auteur.</b> Stéphane Lalut, économiste et chercheur indépendant, publie dans plusieurs
       revues de sciences sociales et d'idées&nbsp;: <i>En attendant Nadeau</i>, <i>La Vie des idées</i>,
@@ -123,17 +132,18 @@
       <ul>
         <li><b>Pour vous et vos proches.</b> L'offre s'adresse aux {{ $public }} de votre comité et à leur famille. Chaque
         lien est individuel et ne sert qu'une fois&nbsp;: un livre, un lecteur.</li>
-        <li><b>Jusqu'au {{ $fin | time.Format ":date_long" }}</b>, dans la limite des exemplaires offerts. Si un titre
-        manque un moment, il revient après réassort.</li>
-        <li><b>Aucune inscription.</b> Votre comité ne nous transmet aucune donnée sur ses {{ $public }}&nbsp;; aucun nom ni
-        aucune adresse électronique ne vous est demandé. Un identifiant aléatoire, enregistré dans votre navigateur,
-        évite d'attribuer deux livres à la même personne.
+        <li><b>Jusqu'au {{ $fin | time.Format ":date_long" }}</b>, dans la limite des exemplaires offerts. Un titre momentanément
+        indisponible pourra être proposé de nouveau après réassort.</li>
+        <li><b>Aucune inscription sur ce site</b>&nbsp;; un compte Amazon.fr est nécessaire pour recevoir le livre. Votre
+        comité ne nous transmet aucune donnée sur ses {{ $public }}, et aucun nom ni aucune adresse électronique ne vous
+        est demandé. Un livre par bénéficiaire&nbsp;: un identifiant technique, enregistré dans votre navigateur, limite
+        les retraits répétés depuis un même navigateur.
         <a href="{{ with site.GetPage "/transparence-contacts" }}{{ .RelPermalink }}{{ end }}#ressources-offertes">Transparence et données</a>.</li>
         <li><b>Une proposition indépendante.</b> Votre comité relaie une proposition de l'auteur, sans contrepartie
         d'aucune sorte. Le lien utilise l'infrastructure Kindle d'Amazon comme canal de transmission&nbsp;; il ne
         constitue pas un partenariat avec Amazon.</li>
         <li><b>Un souci avec votre lien&nbsp;?</b> <a href="{{ "/contact/" | relLangURL }}">Écrivez-moi</a>&nbsp;: je
-        vérifie et je remets l'exemplaire en circulation.</li>
+        vérifie votre lien et vous propose une solution.</li>
       </ul>
     </section>
   </main>
