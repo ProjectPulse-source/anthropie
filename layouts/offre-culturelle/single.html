@@ -84,12 +84,16 @@
           <p class="oc-q">{{ partial "fr-typo.html" $e.question }}</p>
           <p class="oc-l">{{ partial "fr-typo.html" $e.raison }}</p>
           {{- /* Aperçu avant le choix (auteur, 25/10 : « avant de choisir, le lecteur doit avoir un aperçu plus large du
-                 livre avant de basculer vers Amazon ») : description de la fiche (sans le sous-titre, qui redisait l'accroche : CSE-12, 25/10) (chiffres résolus par
-                 desc-figures), pages, et la fiche complète dans un nouvel onglet, pour ne pas perdre la page du comité. */ -}}
+                 livre avant de basculer vers Amazon ») : l'aperçu propre à cette page (`apercu` de data/offre_culturelle.toml,
+                 CSE-13 du 25/10 : le détail apprend quelque chose de plus que l'accroche, en mots de lecteur), sinon la
+                 description de la fiche (chiffres résolus par desc-figures) ; ni sous-titre (il redisait l'accroche,
+                 CSE-12) ni pagination brochée (offre numérique, CSE-13) ; la fiche complète dans un nouvel onglet. Le
+                 titre du repli dit ce qu'il contient : l'action est la ligne commune de replis-action.js (règle
+                 constante du 23/10), une seule commande. */ -}}
           <details class="oc-apercu">
-            <summary>En savoir plus sur ce livre</summary>
-            {{ with $livre.Description }}<p>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $livre.Params.isbn)) }}</p>{{ end }}
-            <p class="oc-apercu__meta">{{ with $livre.Params.pages }}Édition brochée&nbsp;: {{ . }}&nbsp;pages · {{ end }}<a href="{{ $livre.RelPermalink }}" target="_blank" rel="noopener">La fiche complète du livre</a></p>
+            <summary>Ce que vous y trouverez</summary>
+            {{ with $e.apercu }}<p>{{ partial "fr-typo.html" . }}</p>{{ else }}{{ with $livre.Description }}<p>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $livre.Params.isbn)) }}</p>{{ end }}{{ end }}
+            <p class="oc-apercu__meta"><a href="{{ $livre.RelPermalink }}" target="_blank" rel="noopener">La fiche complète du livre</a></p>
           </details>
           <div class="ressources-book__obtain">
             <p class="ressources-book__state" data-role="state">Vérification des exemplaires…</p>

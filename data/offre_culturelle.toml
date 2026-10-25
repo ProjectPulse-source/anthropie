@@ -13,6 +13,8 @@ raison = "1 387 voix se répondent, des romans aux chansons et au cinéma : une 
 theme = "Culture générale"
 question = "Comment naissent les idées qui changent notre façon de penser ?"
 raison = "250 escales et sept chemins de lecture : penseurs, inventions et bascules qui se répondent, de Socrate à Turing."
+# Aperçu (CSE-13) : ce que la fiche dit en plus de l'accroche, tiré de content/livres/lodyssee-des-idees.md.
+apercu = "Une œuvre, une vie, une invention, une crise : chaque escale éclaire une manière d'habiter le monde, d'Euclide à Darwin, de Machiavel à Beauvoir. On peut le lire dans l'ordre, l'ouvrir au gré d'un nom ou le parcourir par ses sept chemins : les signes, le pouvoir, l'argent, la liberté, le sacré, l'opinion, la condition humaine."
 
 [livres.la-societe-du-premier-coup]
 theme = "École et société"
@@ -23,11 +25,15 @@ raison = "Une autre manière de comprendre les inégalités : le nombre d'essais
 theme = "Histoire longue"
 question = "Quand un problème semble résolu ici, où son coût est-il passé ?"
 raison = "Sept âges d'histoire pour suivre comment nos sociétés déplacent ce qu'elles croient avoir résolu."
+# Aperçu (CSE-13 : des situations familières au lieu du vocabulaire du cadre), exemples de la FAQ de la fiche.
+apercu = "Une ville paraît propre parce que ses déchets partent ailleurs. Un réseau fonctionne, un budget se tient, et leur coût se retrouve en d'autres lieux, en d'autres temps ou chez d'autres groupes sociaux. À travers sept âges de l'histoire humaine, ce livre suit une même question : quand nous créons de l'ordre ici, quel désordre déplaçons-nous ailleurs ?"
 
 [livres.dette-publique-qui-paie-vraiment]
 theme = "Économie"
 question = "On parle sans cesse du montant de la dette. Mais qui en paie réellement le coût ?"
 raison = "Une enquête sur les canaux par lesquels ce coût se déplace, vers les générations futures et les groupes sociaux les moins mobiles."
+# Aperçu (CSE-13 : des mécanismes à découvrir, sans reposer « qui paie ? »), d'après la description et la FAQ de la fiche.
+apercu = "Qui supporte les intérêts ? Que se passe-t-il quand l'État emprunte davantage ? Comment une décision budgétaire d'aujourd'hui pèse-t-elle sur les générations suivantes ? Le livre suit les mécanismes par lesquels ce transfert devient invisible, sur les finances publiques françaises, puis sur la Grèce, le Japon, les États-Unis, la Norvège et la Chine."
 
 [livres.un-president-peut-il-tenir-ses-promesses]
 theme = "Institutions"

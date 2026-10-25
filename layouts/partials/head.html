@@ -39,11 +39,19 @@
 {{- $defDesc := "" -}}{{- with .Description -}}{{- $defDesc = partial "desc-figures.html" (dict "text" . "isbn" $.Params.isbn) -}}{{- else -}}{{- $defDesc = $.Site.Params.description -}}{{- end -}}
 {{- $ogTitle := .Params.og_title | default $defTitle -}}
 {{- $ogDesc := .Params.og_description | default $defDesc -}}
+{{- /* Pages de comité (/offre-culturelle/<id>/) : le lien circule entre bénéficiaires (WhatsApp, courriel). Le
+       titre porte le nom du comité, l'image est commune à tous (scripts/og_offre_culturelle.py, maquette B retenue
+       par l'auteur le 25/10/2026) ; le front matter garde la priorité. */ -}}
+{{- $estComite := and (eq .Type "offre-culturelle") .IsPage -}}
+{{- if $estComite -}}
+  {{- $ogTitle = .Params.og_title | default (printf "%s vous offre un livre numérique" (.Params.partenaire | default "Votre comité")) -}}
+  {{- $ogDesc = .Params.og_description | default "Six livres au choix, sans paiement. Choisissez le vôtre : il est à vous." -}}
+{{- end -}}
 <meta property="og:title" content="{{ $ogTitle }}">
 <meta property="og:description" content="{{ $ogDesc }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{- $ogImg := .Params.og_image | default "images/og-image.jpg" -}}
-{{- $ogAlt := .Params.og_image_alt | default "Stéphane Lalut — Anthropie : on ne crée pas l'ordre, on déplace le désordre." -}}
+{{- $ogImg := .Params.og_image | default (cond $estComite "images/og-offre-culturelle.jpg" "images/og-image.jpg") -}}
+{{- $ogAlt := .Params.og_image_alt | default (cond $estComite "Six livres de Stéphane Lalut, dont L'Odyssée des idées : un livre numérique offert, à garder." "Stéphane Lalut — Anthropie : on ne crée pas l'ordre, on déplace le désordre.") -}}
 {{- $ogURL := $ogImg | absURL -}}
 {{- $ogW := 1200 -}}{{- $ogH := 630 -}}
 {{- /* Fiches livres sans og_image explicite : l'aperçu devient la couverture
