@@ -54,7 +54,7 @@
       {{- if eq $i 0 }}<section class="oc-vitrine">{{ end -}}
       {{- if eq $i 2 }}</section><h2 class="oc-sec">Quatre autres lectures</h2><section class="oc-liste">{{ end }}
       <article class="ressources-book oc-livre {{ if lt $i 2 }}oc-livre--carte{{ else }}oc-livre--ligne{{ end }}" data-book="{{ $livre.Params.promo_slug }}">
-        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" (cond (lt $i 2) "96px" "52px")) }}</div>
+        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" (cond (lt $i 2) "96px" "78px")) }}</div>
         <div class="oc-livre__corps">
           <p class="oc-theme">{{ $e.theme }}</p>
           <h3>{{ partial "fr-typo.html" $livre.Title }}</h3>
@@ -102,12 +102,21 @@
     <p class="oc-aide">Vous choisissez le livre, puis vous l'acceptez gratuitement sur Amazon.fr. Pas besoin de
     liseuse&nbsp;: l'application Kindle est gratuite sur téléphone, tablette et ordinateur. Un livre par personne.</p>
 
-    <p class="oc-auteur"><b>Qui finance ces livres&nbsp;?</b> Stéphane Lalut, économiste et chercheur indépendant. Ses
-    analyses paraissent notamment dans <i>En attendant Nadeau</i>, <i>La Vie des idées</i>,
-    <i>Alternatives Économiques</i> et <i>Le Temps</i>. Une
-    part des recettes de ses livres finance des exemplaires offerts à de nouveaux lecteurs&nbsp;; votre comité les
-    propose à ses {{ $public }} et à leurs proches.
-    <a href="{{ "/a-propos/" | relLangURL }}">L'auteur</a> · <a href="{{ "/publications/" | relLangURL }}">Ses publications</a></p>
+    {{- /* Chaîne de circulation (auteur, 25/10 : « plus causal, donner l'impression que le lecteur et le comité font
+           partie d'une chaîne de circulation culturelle ») : chaque maillon est un fait du dispositif. */ -}}
+    <section class="oc-chaine" aria-labelledby="oc-chaine-titre">
+      <h2 class="oc-sec" id="oc-chaine-titre">Une chaîne de lecteurs, dont votre comité est un maillon</h2>
+      <ol class="oc-chaine__maillons">
+        <li><b>Des lecteurs achètent ces livres.</b> Une part de leurs recettes paie des exemplaires Kindle à l'avance.</li>
+        <li><b>Votre comité les transmet</b> à ses {{ $public }} et à leurs proches, sans budget ni gestion.</li>
+        <li><b>Chacun choisit son livre et le garde.</b> S'il l'a aimé, il peut le faire connaître&nbsp;; chaque livre
+        acheté ensuite finance, à son tour, d'autres exemplaires offerts.</li>
+      </ol>
+      <p class="oc-auteur"><b>L'auteur.</b> Stéphane Lalut, économiste et chercheur indépendant, publie dans plusieurs
+      revues de sciences sociales et d'idées&nbsp;: <i>En attendant Nadeau</i>, <i>La Vie des idées</i>,
+      <i>Alternatives Économiques</i>, <i>Le Temps</i>.
+      <a href="{{ "/a-propos/" | relLangURL }}">L'auteur</a> · <a href="{{ "/publications/" | relLangURL }}">Ses publications</a></p>
+    </section>
 
     <section class="oc-conditions">
       <h2 class="oc-sec">Bon à savoir</h2>
