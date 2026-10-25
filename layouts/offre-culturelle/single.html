@@ -51,7 +51,7 @@
         <li><b>Acceptez-le</b>&nbsp;: il s'ajoute à votre bibliothèque Kindle, sans paiement.</li>
       </ol>
     </section>
-    <h2 class="oc-sec oc-sec--choix">Quel livre vous tente&nbsp;?</h2>
+    <h2 class="oc-sec oc-sec--choix" id="oc-livres">Quel livre vous tente&nbsp;?</h2>
     <p class="oc-offre-etat" data-role="offre-etat" role="status" hidden></p>
 
     {{- range $i, $slug := $p.ordre -}}
@@ -70,12 +70,13 @@
           {{- /* Signal de crédibilité par livre (arbitrage CSE § 14) : la note Amazon.fr et son nombre d'évaluations,
                  même règle que /ressources-offertes/ (seuil, date du relevé). Dans le texte de la carte, sur une
                  ligne : sous la couverture, la colonne de 96 px la cassait en trois lignes (auteur, 25/10). */ -}}
-          {{- /* Sur ces pages, la note de CHAQUE livre, même sous le seuil de 10 évaluations du reste du site (auteur,
-                 25/10 : « il faut mettre les notes également aux autres livres ») ; sans note relevée : le partial. */ -}}
+          {{- /* Sur ces pages, la note de CHAQUE livre (auteur, 25/10 : « les notes aussi aux autres livres »), sans le
+                 nombre d'évaluations (auteur, 25/10 : « cela permet d'éviter deux poids, deux mesures ») ; sans note
+                 relevée : le partial (« Nouveauté » ou rien). */ -}}
           <div class="oc-note">
             {{- with $livre.Params.amazon_rating }}{{ $n := replace (printf "%.1f" .) "." "," -}}
-            <p class="ressources-book__rating" aria-label="Note moyenne {{ $n }} sur 5 — {{ $livre.Params.amazon_reviews }} évaluations sur Amazon.fr">
-              <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $n }}/5</span><span class="ressources-book__rating-count"> · {{ $livre.Params.amazon_reviews }}&nbsp;évaluation{{ if gt $livre.Params.amazon_reviews 1 }}s{{ end }} sur&nbsp;Amazon.fr</span></p>
+            <p class="ressources-book__rating" aria-label="Note moyenne {{ $n }} sur 5 sur Amazon.fr">
+              <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $n }}/5</span><span class="ressources-book__rating-count"> sur&nbsp;Amazon.fr</span></p>
             {{- else }}{{ partial "preuve-sociale.html" $livre }}{{ end -}}
           </div>
           <p class="oc-q">{{ partial "fr-typo.html" $e.question }}</p>
@@ -111,16 +112,21 @@
     <p class="oc-aide">Vous choisissez le livre, puis vous l'acceptez gratuitement sur Amazon.fr. Pas besoin de
     liseuse&nbsp;: l'application Kindle est gratuite sur téléphone, tablette et ordinateur. Un livre par bénéficiaire.</p>
 
-    {{- /* Chaîne de circulation (auteur, 25/10 : « plus causal, donner l'impression que le lecteur et le comité font
-           partie d'une chaîne de circulation culturelle ») : chaque maillon est un fait du dispositif. */ -}}
+    {{- /* Chaîne de lecteurs (auteur, 25/10 : « valoriser le comité et inciter le lecteur à prendre un livre ») : trois
+           maillons, chacun porté par un acteur, sans mécanisme économique (audit du 25/10 : les recettes et les ventes
+           futures se lisaient comme une promotion). « A choisi de vous les offrir », jamais « a choisi ces livres » :
+           les six titres sont proposés par l'auteur. */ -}}
     <section class="oc-chaine" aria-labelledby="oc-chaine-titre">
-      <h2 class="oc-sec" id="oc-chaine-titre">Une chaîne de lecteurs, dont votre comité est un maillon</h2>
+      <h2 class="oc-sec" id="oc-chaine-titre">Une chaîne de lecteurs</h2>
       <ol class="oc-chaine__maillons">
-        <li><b>Des lecteurs achètent ces livres.</b> Une part de leurs recettes paie des exemplaires Kindle à l'avance.</li>
-        <li><b>Votre comité les transmet</b> à ses {{ $public }} et à leurs proches, sans budget ni gestion.</li>
-        <li><b>Chacun choisit son livre et le garde.</b> S'il l'a aimé, il peut le faire connaître&nbsp;; une part
-        des ventes qui suivent contribue, à son tour, à financer d'autres exemplaires offerts.</li>
+        <li><b>L'auteur a payé ces livres à l'avance</b>, pour faire circuler les idées au-delà de leur public
+        habituel.</li>
+        <li><b>Votre comité a choisi de vous les offrir</b>&nbsp;: il les met à la portée de chacun de ses {{ $public }},
+        et de leurs proches.</li>
+        <li><b>À vous de choisir le vôtre.</b> Il est à vous, vous le gardez&nbsp;; s'il vous a plu, faites-le connaître
+        autour de vous.</li>
       </ol>
+      <p class="oc-chaine__action"><a class="oc-btn" href="#oc-livres">Choisir mon livre&nbsp;↑</a></p>
       <p class="oc-auteur"><b>L'auteur.</b> Stéphane Lalut, économiste et chercheur indépendant, publie dans plusieurs
       revues de sciences sociales et d'idées&nbsp;: <i>En attendant Nadeau</i>, <i>La Vie des idées</i>,
       <i>Alternatives Économiques</i>, <i>Le Temps</i>.

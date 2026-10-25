@@ -204,3 +204,5 @@
 }
 @media (min-width: 720px) { .oc-etapes ol { grid-template-columns: repeat(3, 1fr); } }
 .oc-note .ressources-book__rating { font-size: 14px; }
+
+.oc-chaine__action { margin: 14px 0 0; a.oc-btn { text-decoration: none; } }
