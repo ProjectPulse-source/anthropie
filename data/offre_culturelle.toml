@@ -1,34 +1,35 @@
-# Pages de comité (/offre-culturelle/<id>/) — texte éditorial par livre, repris de la maquette D validée le 14/10/2026
+# Pages de comité (/offre-culturelle/<id>/) — texte éditorial par livre, repris de la maquette D validée le 14/10/2026 ;
+# question et raison réécrites le 25/10 (contre-expertise CSE-12 : une curiosité, puis une promesse de lecture ; faits relus dans content/livres/)
 # (06_PROMOTION/PARTENARIATS/CSE/MAQUETTES_2026-10-14/_gen_version_d.py). Le titre, la couverture et la clé du guichet
 # (promo_slug) se lisent dans content/livres/ : seuls le thème, la question et la raison de lire sont écrits ici.
 # Clé = nom du fichier du livre dans content/livres/.
 
 [livres.livresque-des-mots]
 theme = "Littérature"
-question = "Et si les plus belles citations se répondaient à travers vingt-cinq siècles ?"
-raison = "4 656 citations, 1 387 voix : des romans aux chansons et au cinéma."
+question = "Et si 4 656 citations formaient une conversation à travers les siècles ?"
+raison = "1 387 voix se répondent, des romans aux chansons et au cinéma : une anthologie à explorer au fil de ses curiosités."
 
 [livres.lodyssee-des-idees]
 theme = "Culture générale"
-question = "Comment les idées qui ont changé le monde sont-elles nées ?"
-raison = "250 escales, de l'aube de l'humanité à l'intelligence artificielle."
+question = "Comment naissent les idées qui changent notre façon de penser ?"
+raison = "250 escales et sept chemins de lecture : penseurs, inventions et bascules qui se répondent, de Socrate à Turing."
 
 [livres.la-societe-du-premier-coup]
 theme = "École et société"
-question = "Pourquoi certains ont-ils droit à l'erreur, et d'autres non ?"
-raison = "Ce que les mesures d'inégalité laissent hors champ : le nombre d'essais dont on dispose."
+question = "Pourquoi certains peuvent-ils échouer et recommencer, quand d'autres paient chaque erreur ?"
+raison = "Une autre manière de comprendre les inégalités : le nombre d'essais dont chacun dispose."
 
 [livres.anthropie-ordre-ici-dette-ailleurs]
 theme = "Histoire longue"
-question = "Résolvons-nous vraiment nos problèmes, ou les déplaçons-nous ?"
-raison = "Sept âges d'histoire à l'épreuve d'une seule hypothèse."
+question = "Quand un problème semble résolu ici, où son coût est-il passé ?"
+raison = "Sept âges d'histoire pour suivre comment nos sociétés déplacent ce qu'elles croient avoir résolu."
 
 [livres.dette-publique-qui-paie-vraiment]
 theme = "Économie"
-question = "La dette publique : qui en supporte réellement le coût ?"
-raison = "Du contribuable d'aujourd'hui aux générations qui n'ont pas voté."
+question = "On parle sans cesse du montant de la dette. Mais qui en paie réellement le coût ?"
+raison = "Une enquête sur les canaux par lesquels ce coût se déplace, vers les générations futures et les groupes sociaux les moins mobiles."
 
 [livres.un-president-peut-il-tenir-ses-promesses]
 theme = "Institutions"
-question = "Un président peut-il vraiment faire ce qu'il promet ?"
-raison = "Une grille pour savoir où une promesse casse."
+question = "Entre une promesse et son résultat, où se trouve le pouvoir ?"
+raison = "Neuf promesses suivies une à une, pour voir ce qu'un président décide, doit faire voter ou doit négocier."

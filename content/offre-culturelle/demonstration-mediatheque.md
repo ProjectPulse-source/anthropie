@@ -9,7 +9,7 @@ partner: "essai-comites"
 partenaire: "Votre comité"
 public: "bénéficiaires"
 intro: "Pour prolonger les lectures de votre médiathèque : six livres numériques, à choisir librement."
-ordre: ["livresque-des-mots", "lodyssee-des-idees", "dette-publique-qui-paie-vraiment", "la-societe-du-premier-coup", "un-president-peut-il-tenir-ses-promesses", "anthropie-ordre-ici-dette-ailleurs"]
+ordre: ["lodyssee-des-idees", "livresque-des-mots", "dette-publique-qui-paie-vraiment", "la-societe-du-premier-coup", "un-president-peut-il-tenir-ses-promesses", "anthropie-ordre-ici-dette-ailleurs"]
 fin: 2027-03-31
 noindex: true
 lang_repli: "/en/books/"

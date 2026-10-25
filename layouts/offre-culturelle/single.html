@@ -84,11 +84,10 @@
           <p class="oc-q">{{ partial "fr-typo.html" $e.question }}</p>
           <p class="oc-l">{{ partial "fr-typo.html" $e.raison }}</p>
           {{- /* Aperçu avant le choix (auteur, 25/10 : « avant de choisir, le lecteur doit avoir un aperçu plus large du
-                 livre avant de basculer vers Amazon ») : sous-titre, description de la fiche (chiffres résolus par
+                 livre avant de basculer vers Amazon ») : description de la fiche (sans le sous-titre, qui redisait l'accroche : CSE-12, 25/10) (chiffres résolus par
                  desc-figures), pages, et la fiche complète dans un nouvel onglet, pour ne pas perdre la page du comité. */ -}}
           <details class="oc-apercu">
             <summary>En savoir plus sur ce livre</summary>
-            {{ with $livre.Params.subtitle }}<p class="oc-apercu__sous-titre">{{ partial "fr-typo.html" . }}</p>{{ end }}
             {{ with $livre.Description }}<p>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $livre.Params.isbn)) }}</p>{{ end }}
             <p class="oc-apercu__meta">{{ with $livre.Params.pages }}Édition brochée&nbsp;: {{ . }}&nbsp;pages · {{ end }}<a href="{{ $livre.RelPermalink }}" target="_blank" rel="noopener">La fiche complète du livre</a></p>
           </details>
