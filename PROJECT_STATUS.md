@@ -52,7 +52,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-10-26 — architecture de l'index des ressources (arbitrage `PRO-20261025-225715`, go de l'auteur)
+### 2026-10-26 — architecture de l'index des ressources (arbitrage `PRO-20261025-225715`, go de l'auteur) ; EN LIGNE (`7cb1a74`, déploiement vert, version servie attestée : bloc du cadre, `#corpus` absent, ligne d’appartenance et fin de la barre sur le Registre FR et EN, 165 des 168, Templiers version B)
 
 Trois gestes, tous par métadonnées et organes communs. (1) Barre d'onglets réservée aux blocs `dossier: true` ; les
 autres pages reçoivent une ligne d'appartenance (`partials/ressource-appartenance.html`) : plus de barre « Registre /
