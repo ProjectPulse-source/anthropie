@@ -1,8 +1,11 @@
 ---
-title: "Livres offerts — démonstration (société)"
+title: "Livres offerts — page d'essai (société)"
 description: "Démonstration de la page qu'un comité propose à ses bénéficiaires : livres numériques offerts par leur auteur."
-# Démonstration pour les responsables de comités (lien des messages de prospection). Aucun guichet, aucun exemplaire.
-demo: true
+# Page d'ESSAI RÉEL pour les responsables de comités (lien des messages de prospection ; auteur, 25/10 : « il faut
+# que la page soit opérationnelle pour que le comité teste »). Engagement commun aux trois pages : comité « essai-comites »
+# du guichet (python gift.py partner add --id essai-comites ...). Un livre par personne.
+essai: true
+partner: "essai-comites"
 partenaire: "Votre comité"
 public: "bénéficiaires"
 intro: "Six livres pour comprendre ce qui se joue dans nos sociétés : choisissez celui qui vous tente."

@@ -43,6 +43,8 @@
     document.querySelectorAll('[data-role="compteur"]').forEach(function (el) { el.hidden = false; });
     document.querySelectorAll('[data-role="sans-compteur"]').forEach(function (el) { el.hidden = true; });
     document.querySelectorAll('[data-role="pluriel"]').forEach(function (el) { el.hidden = p.remaining < 2; });
+    var part = p.total > 0 ? Math.max(0, Math.min(1, p.remaining / p.total)) : 0;
+    document.querySelectorAll('[data-role="jauge"]').forEach(function (el) { el.style.width = (part * 100) + "%"; });
   }
   // Offre close pour tout le comité (compteur à zéro, ou offre inactive) :
   // tous les boutons éteints, un seul message, en tête.

@@ -4,26 +4,29 @@
        vient du guichet (/stock?p=<partner>), qui seul connaît l'engagement du comité et son compteur. Sans réponse du
        guichet, la page dit « des livres » et n'affiche aucun chiffre. */ -}}
 {{- $p := .Params -}}
-{{- /* demo: true => page de DÉMONSTRATION pour le responsable d'un comité (arbitrage du 14/10 : « démonstration
-       publique ≠ test de réception réel ») : aucun appel au guichet, aucun lien délivré, aucun identifiant de comité ;
-       chaque bouton ouvre la fenêtre qui décrit le parcours réel. Le script du guichet n'est PAS chargé : en son
-       absence de [data-partner], il attribuerait sur le stock ordinaire. */ -}}
-{{- $demo := $p.demo | default false -}}
-{{- if and (not $demo) (not $p.partner) -}}{{- errorf "offre-culturelle : %s sans « partner » en front matter" .File.Path -}}{{- end -}}
-{{- if and $demo $p.partner -}}{{- errorf "offre-culturelle : %s est une démonstration, elle ne déclare pas de « partner »" .File.Path -}}{{- end -}}
-{{- if and (not $demo) (not (findRE `^[a-z0-9-]{2,40}$` $p.partner)) -}}{{- errorf "offre-culturelle : identifiant de comité invalide « %s » (%s)" $p.partner .File.Path -}}{{- end -}}
+{{- /* essai: true => page d'ESSAI RÉEL pour les responsables de comités (auteur, 25/10 : « il faut que la page soit
+       opérationnelle pour que le comité teste ») : même guichet qu'une page de comité, sur l'engagement propre du
+       comité d'essai déclaré dans `partner` ; un bandeau dit que le livre choisi est réellement offert. Remplace le
+       mode démonstration du 25/10 (aucun lien délivré), retiré dans le même geste. */ -}}
+{{- $essai := $p.essai | default false -}}
+{{- if $p.demo -}}{{- errorf "offre-culturelle : %s déclare demo, mode retiré le 25/10 -- utiliser essai: true et partner" .File.Path -}}{{- end -}}
+{{- if not $p.partner -}}{{- errorf "offre-culturelle : %s sans « partner » en front matter" .File.Path -}}{{- end -}}
+{{- if not (findRE `^[a-z0-9-]{2,40}$` $p.partner) -}}{{- errorf "offre-culturelle : identifiant de comité invalide « %s » (%s)" $p.partner .File.Path -}}{{- end -}}
 {{- if ne (len $p.ordre) 6 -}}{{- errorf "offre-culturelle : %s doit ordonner les six livres (ordre)" .File.Path -}}{{- end -}}
 {{- $edito := site.Data.offre_culturelle.livres -}}
 {{- $public := $p.public | default "bénéficiaires" -}}
 {{- $fin := time.AsTime ($p.fin | default "2027-03-31") -}}
-{{- if $demo }}<p class="oc-demo" role="note">Démonstration&nbsp;: aucun exemplaire n'est délivré depuis cette page.</p>{{ end }}
-<div class="oc"{{ if not $demo }} data-partner="{{ $p.partner }}"{{ end }}>
+{{- if $essai }}<p class="oc-demo" role="note">Page d'essai pour les comités&nbsp;: le livre que vous choisissez vous est réellement offert, un par personne.</p>{{ end }}
+<div class="oc" data-partner="{{ $p.partner }}">
   <header class="oc-tete">
     <div class="oc-wrap">
-      <p class="oc-part">
-        {{- with $p.logo }}<img class="oc-logo" src="{{ . | relURL }}" alt="" width="28" height="28">{{ end -}}
-        <span>{{ partial "fr-typo.html" $p.partenaire }}</span>
-      </p>
+      {{- /* Place du logo du comité (auteur, 25/10 : « une place plus importante doit être laissée pour le logo ») :
+             le logo n'apparaît qu'avec l'accord exprès du comité ; sur la page d'essai, l'emplacement est montré. */ -}}
+      <div class="oc-part">
+        {{- with $p.logo }}<img class="oc-logo" src="{{ . | relURL }}" alt="Logo de {{ $p.partenaire }}" width="96" height="96">
+        {{- else }}{{ if $essai }}<span class="oc-logo oc-logo--place" aria-hidden="true">Logo de<br>votre comité</span>{{ end }}{{ end -}}
+        <span class="oc-part__nom">{{ partial "fr-typo.html" $p.partenaire }}</span>
+      </div>
       <p class="oc-surtitre">Offre culturelle de votre comité</p>
       <h1 class="oc-titre"><span data-role="compteur" hidden><span data-role="total"></span> livres numériques offerts</span><span data-role="sans-compteur">Des livres numériques offerts</span></h1>
       <p class="oc-chapo">{{ partial "fr-typo.html" $p.intro }}</p>
@@ -32,11 +35,14 @@
   </header>
 
   <main class="oc-wrap">
-    <div class="oc-dispo">
-      <h2>Quel livre vous tente&nbsp;?</h2>
-      {{ if $demo }}<p>Ici, le compteur de votre comité&nbsp;: «&nbsp;<b>N</b> exemplaires encore disponibles sur M&nbsp;»</p>{{ end }}
-      <p data-role="compteur" hidden><b data-role="restant"></b> exemplaire<span data-role="pluriel">s</span> encore disponible<span data-role="pluriel">s</span> sur <span data-role="total"></span></p>
+    {{- /* Compteur du comité (auteur, 25/10 : « le design du compteur n'est pas assez visible ») : grand chiffre, phrase,
+           jauge ; affiché seulement quand le guichet a répondu (data-role compteur). */ -}}
+    <div class="oc-compteur" data-role="compteur" hidden>
+      <p class="oc-compteur__n"><span data-role="restant"></span></p>
+      <p class="oc-compteur__txt">exemplaire<span data-role="pluriel">s</span> encore disponible<span data-role="pluriel">s</span><br>sur <span data-role="total"></span> offerts par votre comité</p>
+      <div class="oc-compteur__jauge" aria-hidden="true"><span data-role="jauge"></span></div>
     </div>
+    <h2 class="oc-sec oc-sec--choix">Quel livre vous tente&nbsp;?</h2>
     <p class="oc-offre-etat" data-role="offre-etat" role="status" hidden></p>
 
     {{- range $i, $slug := $p.ordre -}}
@@ -55,7 +61,14 @@
           {{- /* Signal de crédibilité par livre (arbitrage CSE § 14) : la note Amazon.fr et son nombre d'évaluations,
                  même règle que /ressources-offertes/ (seuil, date du relevé). Dans le texte de la carte, sur une
                  ligne : sous la couverture, la colonne de 96 px la cassait en trois lignes (auteur, 25/10). */ -}}
-          <div class="oc-note">{{ partial "preuve-sociale.html" $livre }}</div>
+          {{- /* Sur ces pages, la note de CHAQUE livre, même sous le seuil de 10 évaluations du reste du site (auteur,
+                 25/10 : « il faut mettre les notes également aux autres livres ») ; sans note relevée : le partial. */ -}}
+          <div class="oc-note">
+            {{- with $livre.Params.amazon_rating }}{{ $n := replace (printf "%.1f" .) "." "," -}}
+            <p class="ressources-book__rating" aria-label="Note moyenne {{ $n }} sur 5 — {{ $livre.Params.amazon_reviews }} évaluations sur Amazon.fr">
+              <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $n }}/5</span><span class="ressources-book__rating-count"> · {{ $livre.Params.amazon_reviews }}&nbsp;évaluation{{ if gt $livre.Params.amazon_reviews 1 }}s{{ end }} sur&nbsp;Amazon.fr</span></p>
+            {{- else }}{{ partial "preuve-sociale.html" $livre }}{{ end -}}
+          </div>
           <p class="oc-q">{{ partial "fr-typo.html" $e.question }}</p>
           {{ if lt $i 2 }}<p class="oc-l">{{ partial "fr-typo.html" $e.raison }}</p>{{ end }}
           {{- /* Aperçu avant le choix (auteur, 25/10 : « avant de choisir, le lecteur doit avoir un aperçu plus large du
@@ -68,9 +81,8 @@
             <p class="oc-apercu__meta">{{ with $livre.Params.pages }}Édition brochée&nbsp;: {{ . }}&nbsp;pages · {{ end }}<a href="{{ $livre.RelPermalink }}" target="_blank" rel="noopener">La fiche complète du livre</a></p>
           </details>
           <div class="ressources-book__obtain">
-            {{ if $demo }}<button class="oc-btn" type="button" data-demo-livre="{{ $livre.Title }}">Choisir ce livre</button>
-            {{ else }}<p class="ressources-book__state" data-role="state">Vérification des exemplaires…</p>
-            <button class="ressources-btn ressources-book__cta oc-btn" type="button" disabled>Choisir ce livre</button>{{ end }}
+            <p class="ressources-book__state" data-role="state">Vérification des exemplaires…</p>
+            <button class="ressources-btn ressources-book__cta oc-btn" type="button" disabled>Choisir ce livre</button>
             <p class="ressources-btn-note" data-role="note" hidden></p>
           </div>
           <div class="ressources-book__assigned" hidden>
@@ -118,33 +130,6 @@
   </main>
 </div>
 
-{{ if $demo }}
-<div class="oc-fenetre" id="oc-fenetre" role="dialog" aria-modal="true" aria-labelledby="oc-fenetre-titre"><div>
-  <p class="oc-fenetre__sur">Démonstration — sur la page réelle de votre comité&nbsp;:</p>
-  <p class="oc-fenetre__titre" id="oc-fenetre-titre"></p>
-  <ol><li>ce livre est attribué au lecteur, et le compteur du comité baisse d'un exemplaire&nbsp;;</li>
-  <li>Amazon.fr s'ouvre&nbsp;: le lecteur se connecte à son compte&nbsp;;</li>
-  <li>il accepte le livre, sans paiement&nbsp;; le livre apparaît dans son application Kindle.</li></ol>
-  <button class="oc-btn" type="button">Fermer</button>
-</div></div>
-<script>
-(function () {
-  var f = document.getElementById("oc-fenetre"), t = document.getElementById("oc-fenetre-titre"),
-      fermer = f.querySelector("button"), retour = null;
-  function ouvrir(b) { retour = b; t.textContent = b.getAttribute("data-demo-livre"); f.classList.add("on"); fermer.focus(); }
-  function clore() { f.classList.remove("on"); if (retour) retour.focus(); }
-  document.querySelectorAll("[data-demo-livre]").forEach(function (b) { b.addEventListener("click", function () { ouvrir(b); }); });
-  fermer.addEventListener("click", clore);
-  f.addEventListener("click", function (e) { if (e.target === f) clore(); });
-  document.addEventListener("keydown", function (e) {
-    if (!f.classList.contains("on")) return;
-    if (e.key === "Escape") clore();
-    if (e.key === "Tab") { e.preventDefault(); fermer.focus(); }
-  });
-})();
-</script>
-{{ else }}
 <div class="ressources-toast" id="ro-toast" role="status" aria-live="polite"></div>
 {{ partial "ressources-guichet-script.html" . }}
-{{ end }}
 {{ end }}
