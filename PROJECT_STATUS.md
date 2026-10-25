@@ -52,6 +52,24 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-25 — `/registre-des-couts-deportes/` (FR et EN) confronté aux éditions 630 p. et 644 p.
+
+Constats sur les PDF en ligne (signets : 168 chapitres-jalons ; FR `17f9f1b4…`, EN révision du 23/10) : le livre n'a
+**pas d'épilogue « Registre »** — il résume chaque âge par un schéma et renvoie au Registre en ligne par un QR code
+(p. 619 FR, p. 631 EN) ; la page le disait « épilogue » et annonçait 168 jalons en ligne pour 165 servis. Appariement
+titre à titre : 165/165 retrouvés (similarité ≥ 0,87) ; absents : Olmèques (−900, p. 83), *Odyssée* (−800, p. 86),
+Gutenberg (1454, p. 244). Croisement des 3 437 corrections de l'audit d'exactitude avec le texte du Registre (noms et
+nombres retirés par une correction et encore présents dans l'entrée du même chapitre) : 17 signalements, un seul réel,
+**Templiers** (« l'État […] s'approprie sa technologie de contrôle », démenti par la version B décidée par l'auteur le
+10/10) ; entrée réécrite FR et EN. Limite : ce croisement ne voit que la classe « nom ou nombre retiré » ; la fidélité
+des 165 entrées au livre corrigé n'est pas établie entrée par entrée. Périmètre dit en tête, FAQ et description
+corrigées, journal posé (section « Révisions »), onglet EN « Register of Offloaded Costs » (nom canonique), `llms.txt`
+et note de la fiche du livre alignés (165 des 168). Build 0, `check-all --ci` 0, `audit-liens-build` 0, dates 59/59.
+Ouvert : rédiger les trois jalons absents (texte de l'auteur) ; architecture du cadre anthropique dans `/ressources/`
+→ contre-expertise `PRO-20261025-225715`, **arbitrée le même soir** (`D:\PRO\.claude\external-audits\ARBITRATIONS\`) :
+S3 modifié (« un dossier regroupe des questions ; un cadre, des concepts ; un livre, ses prolongements ») ; exécution
+en attente du go de l'auteur. Fait dans le même geste : glossaire FR et EN, « 165 jalons sur 168 en ligne ».
+
 ### 2026-10-23 (soir) — bloc « École et lycée » élargi en « École, lycée et université » ; EN LIGNE (`c6e4b01`)
 
 Décision de l'auteur, pour accueillir une page sur le supérieur (chantier `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\` :

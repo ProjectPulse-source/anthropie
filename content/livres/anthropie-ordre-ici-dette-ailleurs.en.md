@@ -40,7 +40,7 @@ faq:
 ressources_livre:
   - label: "The Register of Offloaded Costs — online version"
     url: "/en/register-of-offloaded-costs/"
-    note: "the book's documentary apparatus: 168 milestones on the « Order created / Debt displaced » grid, organized by the seven ages, freely browsable"
+    note: "the book's documentary apparatus: 165 of the 168 milestones on the « Order created / Debt displaced » grid, organized by the seven ages, freely browsable"
 related_awp:
   - chapter: "What is anthropy? Principles of a hypothesis"
     awp: "awp-01"
