@@ -8,7 +8,7 @@ description: "Nous ne disposons pas tous du même nombre d'essais. Ce livre prop
 description_en: "We are not all granted the same number of attempts. This book offers a grid for seeing a dimension of inequality that the usual columns — income, wealth, mobility — leave out of frame: what a failure costs depending on who fails, and how many attempts a trajectory actually allows. A narrative essay for the general reader, companion to working paper AWP-08."
 isbn: "978-2-9586347-6-6"
 amazon_rating: 5.0       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
-amazon_rating_date: 2026-09-13  # date du relevé, affichée sous la note ; la mettre à jour avec elle
+amazon_rating_date: 2026-10-25  # date du relevé, affichée sous la note ; la mettre à jour avec elle
 amazon_reviews: 4        # sous socialProofMinReviews (10) : « Nouveauté » s'affiche à la place,
                          # et la note prend le relais toute seule au 10e avis.
 wikidata_qid: "Q141072263"  # item créé le 15/08/2026, resté absent de la fiche jusqu'au 16/08 — alimente le sameAs du JSON-LD Book

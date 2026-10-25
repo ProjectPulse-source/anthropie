@@ -7,8 +7,8 @@ lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur le
 description: "L'ouvrage fondateur du cadre anthropique. En 630 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
 amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
-amazon_rating_date: 2026-09-13  # date du relevé, affichée sous la note ; la mettre à jour avec elle
-amazon_reviews: 26       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
+amazon_rating_date: 2026-10-25  # date du relevé, affichée sous la note ; la mettre à jour avec elle
+amazon_reviews: 27       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
 description_en: "The foundational work on the anthropic framework. Across 630 pages, the book develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Drawing on economic history, public finance, and ecological economics, it argues that what appears as order in one location is sustained by debt — material, ecological, or moral — contracted elsewhere."
 pages: 630  # sync data/works.yaml (book-anthropie.pages) — nombre de pages broché
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer (priceCurrency EUR par défaut)

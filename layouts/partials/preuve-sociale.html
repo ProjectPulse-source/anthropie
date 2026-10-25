@@ -3,6 +3,9 @@
        RÈGLE UNIQUE pour la liste ET la fiche : les deux gabarits appellent ce partial,
        aucun ne porte sa propre copie — deux copies divergent en silence.
 
+       Libellé « évaluations » (25/10/2026) : le nombre relevé est celui qu'Amazon.fr affiche comme
+       « évaluations globales », qui comptent aussi les notes sans commentaire — « avis » le surestimait.
+
        Trois états, dans cet ordre :
          1. assez d'avis (>= site.Params.socialProofMinReviews) → la note Amazon.fr ;
          2. sinon, livre paru depuis moins de site.Params.noveltyWindowMonths mois
@@ -61,8 +64,8 @@
   {{- else -}}
     {{- warnf "preuve-sociale : %s affiche une note Amazon sans amazon_rating_date — date du relevé absente sous la note" .File.Path -}}
   {{- end -}}
-<p class="ressources-book__rating" aria-label="Note moyenne {{ $aff }} sur 5 — {{ $avis }} avis sur Amazon.fr{{ with $releve }}, relevée en {{ . }}{{ end }}">
-  <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $aff }}/5</span><span class="ressources-book__rating-count"> · {{ $avis }}&nbsp;avis sur&nbsp;Amazon.fr</span>
+<p class="ressources-book__rating" aria-label="Note moyenne {{ $aff }} sur 5 — {{ $avis }} évaluations sur Amazon.fr{{ with $releve }}, relevée en {{ . }}{{ end }}">
+  <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $aff }}/5</span><span class="ressources-book__rating-count"> · {{ $avis }}&nbsp;évaluations sur&nbsp;Amazon.fr</span>
 </p>
 {{- with $releve }}
 <p class="ressources-book__rating-date" aria-hidden="true">Note relevée en {{ . }}</p>
