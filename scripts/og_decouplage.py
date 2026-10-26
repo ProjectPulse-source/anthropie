@@ -24,8 +24,8 @@ def barres(d, j: dict, lang: str = "fr") -> None:
     X = lambda v: x0 + (x1 - x0) * (v - vmin) / (vmax - vmin)  # noqa: E731
     fl, fv = og.font("inter", 18, 500), og.font("inter", 20, 600)
     pct = "%" if lang == "en" else " %"
-    libs = {"fr": ("Effet de la population", "Effet du revenu par habitant", "Effet de l'intensité énergétique", "Variation de la consommation"),
-            "en": ("Population effect", "Income-per-head effect", "Energy-intensity effect", "Change in consumption")}[lang]
+    libs = {"fr": ("Effet de la population", "Effet du PIB par habitant", "Effet de l'intensité énergétique", "Variation de la consommation"),
+            "en": ("Population effect", "GDP-per-head effect", "Energy-intensity effect", "Change in consumption")}[lang]
     for i, k in enumerate(("pop", "rev", "int", "tot")):
         y = 110 + 78 * i
         v = w[k + "_pct"]

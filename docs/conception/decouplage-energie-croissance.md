@@ -39,10 +39,10 @@ consommation monte, c'est d'abord parce que la population mondiale augmente » (
 ### Découverte principale
 
 De 2000 à 2024, l'intensité énergétique mondiale a baissé de 28,5 % et la consommation d'énergie a augmenté de 58 % :
-découplage relatif, pas absolu. Dans la décomposition, la hausse du revenu par habitant pèse environ deux fois plus que
-celle de la population (+263 EJ contre +144 EJ), et la baisse de l'intensité en retire 172 : elle compense environ
+découplage relatif, pas absolu. Dans la décomposition, la hausse du PIB par habitant pèse 1,8 fois plus que
+celle de la population (+263 EJ contre +144 EJ, PIB en parité de pouvoir d'achat), et la baisse de l'intensité en retire 172 : elle compense environ
 deux cinquièmes de la poussée, pas davantage. Dans l'Union européenne, même producteur, même définition, la
-consommation a baissé de 18 % pendant que le PIB augmentait de 42 % : un découplage absolu, sur son territoire.
+consommation a baissé de 18 % pendant que le PIB augmentait de 43 % : un découplage absolu, sur son territoire.
 
 ### Mécanisme explicatif
 
@@ -54,9 +54,12 @@ mesure des énergies ; elle ne permet pas d'estimer un effet rebond (phrase inte
 ### Preuve décisive
 
 Séries de l'EIA (énergie, PIB PPA constant, population), monde et UE, lues par script ; somme exacte de la
-décomposition contrôlée ; témoin d'un autre producteur et d'une autre convention : énergie primaire de l'Energy
-Institute (méthode de substitution), relayée par Our World in Data, et PIB de la Banque mondiale à prix constants
-(`NY.GDP.MKTP.PP.KD`), recalcul complet de la décomposition sur ces sources.
+décomposition contrôlée ; témoin d'un autre producteur, même convention de contenu physique : offre totale d'énergie de
+l'Energy Institute (jeu `owid_energy` d'Our World in Data, total mondial 2024 contrôlé contre celui de l'édition 2025),
+et PIB de la Banque mondiale à prix constants (`NY.GDP.MKTP.PP.KD`), recalcul complet de la décomposition ; variante du
+PIB aux taux de change de marché (`NY.GDP.MKTP.KD`) ; baisse européenne depuis 2005 chez Eurostat (`nrg_ind_eff`).
+Jusqu'à la contre-expertise du 26/10/2026, le témoin était la série en substitution d'Our World in Data (mêlant EI et
+EIA), présentée à tort comme celle de l'Energy Institute.
 
 ### Pouvoir discriminant
 
@@ -73,19 +76,22 @@ Institute (méthode de substitution), relayée par Our World in Data, et PIB de 
 - **Ce que la série isolée ne montre pas.** Une courbe d'intensité qui baisse et une courbe de consommation qui monte
   se lisent séparément partout ; leur réunion dans une décomposition exacte, en exajoules, dit de combien chaque terme
   a pesé.
-- **Robustesse, montrée par une variante calculée.** Recalcul sur l'Energy Institute et la Banque mondiale (autre
-  producteur, autre convention pour l'électricité non fossile) ; fenêtres 1990, 2000, 2010, 2015 et 2019.
+- **Robustesse, montrée par des variantes calculées.** Recalcul sur l'Energy Institute et la Banque mondiale (autre
+  producteur, même convention) ; PIB aux taux de change de marché (l'ordre PIB par habitant > population tient dans les
+  cinq fenêtres ; la baisse de l'intensité tombe à −20,8 % et passe sous l'effet de la population en partant de 1990 ou
+  2000) ; trois producteurs pour l'UE depuis 2005 ; fenêtres 1990, 2000, 2010, 2015 et 2019.
 - **Niveau atteint.** Descriptif et comptable ; discriminant entre (a) et (b) au sens arithmétique seulement ; pas
   décisionnel.
 - **Levier ou risque éclairé.** Un objectif de baisse de la consommation totale ne s'atteint pas par la seule baisse
-  de l'intensité si le revenu par habitant croît plus vite qu'elle ne baisse : c'est un ordre de grandeur, non une
+  de l'intensité si le PIB par habitant croît plus vite qu'elle ne baisse : c'est un ordre de grandeur, non une
   prescription.
 
 ### Limite
 
 La décomposition est comptable : elle n'attribue aucune cause. L'intensité énergétique n'est pas l'efficacité d'un
-usage. La convention de l'EIA compte l'électricité renouvelable à son contenu électrique : la croissance des
-renouvelables y pèse moins qu'avec la méthode de substitution de l'Energy Institute (variante calculée). La
+usage. L'EIA et l'Energy Institute comptent l'électricité hydraulique et éolienne à son contenu électrique (le solaire de
+l'EIA à un rapport voisin en 2024, plus élevé avant) : avec la méthode de substitution, la croissance des renouvelables
+pèserait plus (variante non calculée, faute d'une série identifiée). La
 consommation est territoriale : l'énergie contenue dans les importations n'est pas comptée (limite décisive pour
 l'UE). Le PIB en parité de pouvoir d'achat dépend d'une année de base et de révisions.
 
@@ -153,7 +159,20 @@ de physique, débat sur la sobriété). Diagnostics : vues, citations. État ini
   défini, parité de pouvoir d'achat et indice de Divisia restent difficiles pour un lecteur pressé) ; accroche *tenu* ;
   progression *tenu* (paradoxe → décomposition → témoin UE → robustesse → recherche → limites) ; originalité *partiel*
   (le découplage relatif est connu ; l'apport est la décomposition chiffrée et son recalcul) ; valeur finale *tenu*.
-- Contre-expertise de la page : non faite (à décider par l'auteur, comme pour G1 et G3).
+- Contre-expertise de la page : faite le 26/10/2026, paquet transmis à la main hors navette (`G2-DECOUPLAGE-20261026`),
+  réponse archivée verbatim (SHA-256 `c1b8e19b…3362`), arbitrage
+  `D:\PRO\.claude\external-audits\ARBITRATIONS\G2-DECOUPLAGE-20261026_arbitrage.md`. Deux erreurs confirmées et
+  corrigées : témoin attribué à tort à l'Energy Institute (série en substitution d'Our World in Data ; l'EI est passé au
+  contenu physique en 2025, total mondial 2024 publié 592,22 EJ) ; convention éolien et solaire affirmée sans mesure
+  (éolien mesuré à 3 412 chaque année ; solaire NON, 3 443 en 2024 et beaucoup plus avant : la page le dit). Ajouts
+  calculés et gardés : variante aux taux de change de marché (elle infirme l'« idée-force » proposée, intensité >
+  population, rejetée), comparaison EIA, EI, Eurostat pour l'UE depuis 2005 (−22,7, −21,7, −20,3 %). « Revenu par
+  habitant » devient « PIB par habitant ». Gardes : 16, mutations : 16 (`eolien`, `solaire`, `provenance`, `marche`,
+  `marche_ordre`, `eurostat` ajoutées), chacune vue mordre. Antécédents de méthode (Kaya au GIEC, décompositions de
+  l'AIE) : non cités, sources non encore lues (point ouvert). Recette 12/12 après correction d'un défaut commun : la
+  section « Révisions » (journal) passait sous l'en-tête collant (`scroll-margin-top` ajouté à `.revisions`, vaut pour
+  toutes les pages à journal). Relecture du texte servi et LanguageTool (FR, EN) : faits, signalements tous faux
+  positifs ; instantanés refaits.
 - Accord de l'auteur : demandé avec le diff du 26/10/2026.
 
 ## Test de compréhension simulé (26/10/2026)

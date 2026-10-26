@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 831" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm-t dcm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="dcm-t">Energy, 2000-2024: what pushed consumption up, what held it back</title><desc id="dcm-d">Decomposition of the change in primary energy consumption from 2000 to 2024, as % of 2000 consumption. World: population effect +35.6%, income-per-head effect +65.0%, energy-intensity effect −42.6%, total change +57.9% (intensity itself fell by 28.5%). European Union (27 countries): population effect +4.6%, income-per-head effect +27.6%, energy-intensity effect −50.1%, total change −17.9%.</desc>
-<rect width="300" height="831" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 848" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm-t dcm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="dcm-t">Energy, 2000-2024: what pushed consumption up, what held it back</title><desc id="dcm-d">Decomposition of the change in primary energy consumption from 2000 to 2024, as % of 2000 consumption. World: population effect +35.6%, GDP-per-head effect +65.0%, energy-intensity effect −42.6%, total change +57.9% (intensity itself fell by 28.5%). European Union (27 countries): population effect +4.6%, GDP-per-head effect +27.6%, energy-intensity effect −50.1%, total change −17.9%.</desc>
+<rect width="300" height="848" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Energy, 2000-2024: what pushed</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">consumption up, what held it</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">back</text>
@@ -10,7 +10,7 @@
 <text x="0" y="170" font-size="13.5" fill="#26262f">Population effect</text>
 <rect x="66.7" y="178" width="39.5" height="12" fill="#eb6834"/>
 <text x="112.2" y="188" font-size="13.5" font-weight="600" fill="#26262f">+35.6%</text>
-<text x="0" y="210" font-size="13.5" fill="#26262f">Income-per-head effect</text>
+<text x="0" y="210" font-size="13.5" fill="#26262f">GDP-per-head effect</text>
 <rect x="66.7" y="218" width="72.2" height="12" fill="#eb6834"/>
 <text x="144.9" y="228" font-size="13.5" font-weight="600" fill="#26262f">+65.0%</text>
 <text x="0" y="250" font-size="13.5" fill="#26262f">Energy-intensity effect (energy per</text>
@@ -24,7 +24,7 @@
 <text x="0" y="378" font-size="13.5" fill="#26262f">Population effect</text>
 <rect x="66.7" y="386" width="5.1" height="12" fill="#eb6834"/>
 <text x="77.7" y="396" font-size="13.5" font-weight="600" fill="#26262f">+4.6%</text>
-<text x="0" y="418" font-size="13.5" fill="#26262f">Income-per-head effect</text>
+<text x="0" y="418" font-size="13.5" fill="#26262f">GDP-per-head effect</text>
 <rect x="66.7" y="426" width="30.7" height="12" fill="#eb6834"/>
 <text x="103.3" y="436" font-size="13.5" font-weight="600" fill="#26262f">+27.6%</text>
 <text x="0" y="458" font-size="13.5" fill="#26262f">Energy-intensity effect (energy per</text>
@@ -40,14 +40,15 @@
 <text class="pied-source" x="0" y="609.0" font-size="13.5" fill="#55524f">prices, population)</text>
 <text class="pied-note" x="0" y="630.0" font-size="13.5" fill="#55524f">Primary energy consumed on the</text>
 <text class="pied-note" x="0" y="647.0" font-size="13.5" fill="#55524f">territory (energy embodied in imports</text>
-<text class="pied-note" x="0" y="664.0" font-size="13.5" fill="#55524f">not counted); renewable electricity</text>
-<text class="pied-note" x="0" y="681.0" font-size="13.5" fill="#55524f">counted at its electrical content,</text>
-<text class="pied-note" x="0" y="698.0" font-size="13.5" fill="#55524f">nuclear at the heat produced.</text>
+<text class="pied-note" x="0" y="664.0" font-size="13.5" fill="#55524f">not counted); hydro and wind</text>
+<text class="pied-note" x="0" y="681.0" font-size="13.5" fill="#55524f">electricity counted at its electrical</text>
+<text class="pied-note" x="0" y="698.0" font-size="13.5" fill="#55524f">content, nuclear at the heat produced.</text>
 <text class="pied-note" x="0" y="715.0" font-size="13.5" fill="#55524f">Accounting decomposition (Divisia</text>
-<text class="pied-note" x="0" y="732.0" font-size="13.5" fill="#55524f">index): it does not say why intensity</text>
-<text class="pied-note" x="0" y="749.0" font-size="13.5" fill="#55524f">falls. Values rounded to one decimal:</text>
-<text class="pied-note" x="0" y="766.0" font-size="13.5" fill="#55524f">their sum may differ from the total by</text>
-<text class="pied-note" x="0" y="783.0" font-size="13.5" fill="#55524f">one tenth.</text>
-<text class="pied-licence" x="0" y="804.0" font-size="13.5" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="821.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="732.0" font-size="13.5" fill="#55524f">index), GDP at purchasing power</text>
+<text class="pied-note" x="0" y="749.0" font-size="13.5" fill="#55524f">parity: it does not say why intensity</text>
+<text class="pied-note" x="0" y="766.0" font-size="13.5" fill="#55524f">falls. Values rounded to one decimal:</text>
+<text class="pied-note" x="0" y="783.0" font-size="13.5" fill="#55524f">their sum may differ from the total by</text>
+<text class="pied-note" x="0" y="800.0" font-size="13.5" fill="#55524f">one tenth.</text>
+<text class="pied-licence" x="0" y="821.0" font-size="13.5" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="838.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
 </svg>

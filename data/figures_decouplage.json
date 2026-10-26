@@ -4,9 +4,9 @@
    "id": "decomposition",
    "fichier": "decouplage-decomposition",
    "titre": "Consommation d'énergie, 2000-2024 : ce qui l'a fait monter, ce qui l'a freinée",
-   "montre": "De 2000 à 2024, la consommation mondiale d'énergie a augmenté de 58 % : la population et le revenu par habitant y ont ajouté 407 exajoules, la baisse de l'intensité énergétique en a retiré 172. Dans l'UE, elle a baissé de 18 %.",
+   "montre": "De 2000 à 2024, la consommation mondiale d'énergie a augmenté de 58 % : la décomposition attribue 407 exajoules à la population et au PIB par habitant, et en retire 172 à la baisse de l'intensité énergétique. Dans l'UE, elle a baissé de 18 %.",
    "source": "EIA, données internationales (énergie, PIB en parité de pouvoir d'achat à prix constants, population)",
-   "precaution": "Énergie primaire consommée sur le territoire (énergie contenue dans les importations non comptée) ; électricité renouvelable comptée à son contenu électrique, nucléaire à la chaleur produite. Décomposition comptable (indice de Divisia) : elle ne dit pas pourquoi l'intensité baisse. Valeurs arrondies au dixième : leur somme peut différer d'un dixième du total."
+   "precaution": "Énergie primaire consommée sur le territoire (énergie contenue dans les importations non comptée) ; électricité hydraulique et éolienne comptée à son contenu électrique, nucléaire à la chaleur produite. Décomposition comptable (indice de Divisia), PIB en parité de pouvoir d'achat : elle ne dit pas pourquoi l'intensité baisse. Valeurs arrondies au dixième : leur somme peut différer d'un dixième du total."
   }
  ],
  "en": [
@@ -14,9 +14,9 @@
    "id": "decomposition",
    "fichier": "decouplage-decomposition-en",
    "titre": "Energy consumption, 2000-2024: what pushed it up, what held it back",
-   "montre": "From 2000 to 2024, world energy consumption rose by 58%: population and income per head added 407 exajoules, the fall in energy intensity took away 172. In the EU, it fell by 18%.",
+   "montre": "From 2000 to 2024, world energy consumption rose by 58%: the decomposition attributes 407 exajoules to population and GDP per head, and takes 172 away for the fall in energy intensity. In the EU, it fell by 18%.",
    "source": "EIA, international data (energy, GDP at purchasing power parity in constant prices, population)",
-   "precaution": "Primary energy consumed on the territory (energy embodied in imports not counted); renewable electricity counted at its electrical content, nuclear at the heat produced. Accounting decomposition (Divisia index): it does not say why intensity falls. Values rounded to one decimal: their sum may differ from the total by one tenth."
+   "precaution": "Primary energy consumed on the territory (energy embodied in imports not counted); hydro and wind electricity counted at its electrical content, nuclear at the heat produced. Accounting decomposition (Divisia index), GDP at purchasing power parity: it does not say why intensity falls. Values rounded to one decimal: their sum may differ from the total by one tenth."
   }
  ]
 }

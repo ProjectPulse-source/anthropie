@@ -3,6 +3,8 @@
  "pages": {
   "budget-2027-votre-commune/_index.en.md": "2026-10-22",
   "budget-2027-votre-commune/_index.md": "2026-10-22",
+  "decouplage-energie-croissance/_index.en.md": "2026-10-26",
+  "decouplage-energie-croissance/_index.md": "2026-10-26",
   "dette-publique-collectivites-locales/_index.en.md": "2026-10-18",
   "dette-publique-collectivites-locales/_index.md": "2026-10-18",
   "dette-publique-comparaison-internationale/_index.en.md": "2026-10-16",
@@ -24,6 +26,12 @@
   ],
   "budget-2027-votre-commune/_index.md": [
    "2026-10-22"
+  ],
+  "decouplage-energie-croissance/_index.en.md": [
+   "2026-10-26"
+  ],
+  "decouplage-energie-croissance/_index.md": [
+   "2026-10-26"
   ],
   "dette-publique-collectivites-locales/_index.en.md": [
    "2026-10-16",

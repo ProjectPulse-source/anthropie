@@ -52,6 +52,27 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-26 (suite 7) — G2 : contre-expertise arbitrée et appliquée
+
+Réponse reçue hors navette (`Ressources++-02.txt`, SHA-256 `c1b8e19b…3362`, archivée avant lecture), arbitrage
+`D:\PRO\.claude\external-audits\ARBITRATIONS\G2-DECOUPLAGE-20261026_arbitrage.md`, chaque affirmation vérifiée à la
+source.
+- **Témoin corrigé.** Il n'était pas l'Energy Institute : c'était la série en substitution d'Our World in Data, qui mêle
+  l'EI et l'EIA. L'EI est passé au contenu physique en 2025 (Statistical Review 2025, p. 69 ; total mondial 2024 :
+  592,22 EJ). Le témoin est désormais le nouveau jeu `owid_energy` (`total_energy_twh`, EI édition 2026), sous garde de
+  provenance contre la valeur publiée, transcrite et déclarée.
+- **Convention de l'EIA mesurée pour l'éolien** (3 412 chaque année). Le solaire ne l'est pas : 3 443 en 2024, beaucoup
+  plus avant ; la page le dit.
+- **Variantes ajoutées.** PIB aux taux de change de marché (l'ordre PIB par habitant > population tient dans les cinq
+  fenêtres ; l'« idée-force » intensité > population ne tient pas, elle est donc rejetée) ; UE 2005-2024 chez trois
+  producteurs (−22,7, −21,7, −20,3 %).
+- **Vocabulaire et formulations.** « Revenu par habitant » devient « PIB par habitant » ; formulations comptables ;
+  Brockway et al. resserré ; journal de révision.
+- **Contrôles.** 16 gardes, 16 mutations vues mordre ; `check-all --ci` à 0 ; build 0 ; audit des liens 0 ; dates
+  concordantes ; recette 12/12. La recette a mordu sur `#revisions` sous l'en-tête collant à 390 px : `scroll-margin-top`
+  a été ajouté à `.revisions` (`_page-common.scss`), ce qui vaut pour toute page à journal.
+- **Point ouvert.** Antécédents de méthode (Kaya au GIEC, AIE) à lire avant d'être cités.
+
 ### 2026-10-26 (suite 6) — Page de données « L'économie mondiale se découple-t-elle de l'énergie ? » (G2)
 
 `scripts/update_decouplage.py` : EIA (fichier groupé INTL.zip, sans clé ; l'Energy Institute refuse les scripts, canal
