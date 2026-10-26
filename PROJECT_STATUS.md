@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-26 (suite 6) — Page de données « L'économie mondiale se découple-t-elle de l'énergie ? » (G2)
+
+`scripts/update_decouplage.py` : EIA (fichier groupé INTL.zip, sans clé ; l'Energy Institute refuse les scripts, canal
+changé), décomposition LMDI de la consommation d'énergie en population, revenu par habitant et intensité, monde et UE ;
+témoin Energy Institute (édition 2025, dépôt owid/energy-data) et Banque mondiale ; convention de l'EIA mesurée chaque
+année (hydro 3 412 Btu/kWh, nucléaire à la chaleur), prix constants vérifiés ; 12 gardes, 10 mutations vues mordre.
+`og_decouplage.py`, shortcode `dc-val`, jetons `{dc.*}`, pages FR et EN (non publiées), renvoi depuis `/effet-rebond/`,
+workflow `dette-monde.yml`, `llms.txt`. Test de compréhension simulé (trois lecteurs) : aucun contresens, sept
+corrections (arrondis, deux pourcentages voisins, encadré chiffré, fenêtres, convention sur toute la série, année
+d'arrivée de l'UE, édition du témoin). En chemin : FAQ de la page des déchets passée à la formule de méthode exacte ;
+fiches D0 et registre des ressources de G1 et G3, oubliés à leur publication, écrits. Build 0, check-all 0, liens 0,
+recette 12/12.
+
 ### 2026-10-26 (suite 5) — Page de données « Déchets radioactifs : le volume dit-il le problème ? » (G3) ; test de compréhension simulé ; contre-expertise PRO-20261026-045248 envoyable
 
 `scripts/update_dechets_radioactifs.py` (Inventaire national de l'Andra, fichiers data.gouv fin 2013 à fin 2024 ; 11

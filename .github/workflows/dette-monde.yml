@@ -72,6 +72,9 @@ jobs:
           # Page « Dechets radioactifs » (26/10/2026) : Inventaire national de l'Andra (data.gouv), annuel ; le script ne
           # telecharge rien si le catalogue n'a pas change (date de modification data.gouv comparee a la sienne).
           python3 scripts/update_dechets_radioactifs.py
+          # Page « L'economie mondiale se decouple-t-elle de l'energie ? » (26/10/2026) : EIA (fichier groupe INTL.zip,
+          # sans cle), temoin Energy Institute (depot owid/energy-data) et Banque mondiale ; annuelles, cadence hebdomadaire.
+          python3 scripts/update_decouplage.py
 
       # Carte de partage de la page (30/09) : elle imprime la paire de faux jumeaux et leurs chiffres, lus
       # dans data/dette_monde.json. Redessinee dans le meme geste que les donnees, sinon elle mentirait
@@ -98,6 +101,12 @@ jobs:
           else
             python3 -m pip install --quiet pillow==12.2.0
             python3 scripts/og_dechets_radioactifs.py
+          fi
+          if git diff --quiet -- data/decouplage.json; then
+            echo "Jeu decouplage inchange : carte non redessinee."
+          else
+            python3 -m pip install --quiet pillow==12.2.0
+            python3 scripts/og_decouplage.py
           fi
 
       - name: Detecter un changement
@@ -162,7 +171,7 @@ jobs:
                   static/img/dette-generations-actifs-en.svg static/img/dette-generations-actifs-en.png \
                   static/img/dette-generations-detention-en.svg static/img/dette-generations-detention-en.png \
                   static/img/dette-generations-vieillissement-en.svg static/img/dette-generations-vieillissement-en.png \
-                  static/img/dette-generations-*-m.svg static/img/dette-generations-*-m.png                   data/menages_imprevu.json static/menages_imprevu.json static/menages_imprevu.csv data/figures_imprevu.json                   static/img/imprevu-menages*.svg static/img/imprevu-menages*.png                   static/images/og-imprevu-menages.jpg static/images/og-imprevu-menages-en.jpg                   static/images/vig-imprevu-menages.jpg static/images/vig-imprevu-menages-en.jpg                   data/dechets_radioactifs.json static/dechets_radioactifs.json static/dechets_radioactifs.csv data/figures_dechets.json                   static/img/dechets-volume-activite*.svg static/img/dechets-volume-activite*.png                   static/images/og-dechets-radioactifs.jpg static/images/og-dechets-radioactifs-en.jpg                   static/images/vig-dechets-radioactifs.jpg static/images/vig-dechets-radioactifs-en.jpg
+                  static/img/dette-generations-*-m.svg static/img/dette-generations-*-m.png                   data/menages_imprevu.json static/menages_imprevu.json static/menages_imprevu.csv data/figures_imprevu.json                   static/img/imprevu-menages*.svg static/img/imprevu-menages*.png                   static/images/og-imprevu-menages.jpg static/images/og-imprevu-menages-en.jpg                   static/images/vig-imprevu-menages.jpg static/images/vig-imprevu-menages-en.jpg                   data/dechets_radioactifs.json static/dechets_radioactifs.json static/dechets_radioactifs.csv data/figures_dechets.json                   static/img/dechets-volume-activite*.svg static/img/dechets-volume-activite*.png                   static/images/og-dechets-radioactifs.jpg static/images/og-dechets-radioactifs-en.jpg                   static/images/vig-dechets-radioactifs.jpg static/images/vig-dechets-radioactifs-en.jpg                   data/decouplage.json static/decouplage.json static/decouplage.csv data/figures_decouplage.json                   static/img/decouplage-decomposition*.svg static/img/decouplage-decomposition*.png                   static/images/og-decouplage.jpg static/images/og-decouplage-en.jpg                   static/images/vig-decouplage.jpg static/images/vig-decouplage-en.jpg
           git commit -m "data(dette-monde): Eurostat/OCDE/FMI/Banque mondiale du $(date -u +%Y-%m-%d)"
           pushed=0
           for attempt in 1 2 3; do

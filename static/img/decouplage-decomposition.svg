@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 441" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="dc-t">Consommation d'énergie, 2000-2024 : ce qui l'a fait monter, ce qui l'a freinée</title><desc id="dc-d">Décomposition de la variation de la consommation d'énergie primaire de 2000 à 2024, en % de la consommation de 2000. Monde : effet de la population +35,6 %, du revenu par habitant +65,0 %, de l'intensité énergétique −42,6 %, variation totale +57,9 % (l'intensité elle-même a baissé de 28,5 %). Union européenne (27 pays) : effet de la population +4,6 %, du revenu par habitant +27,6 %, de l'intensité énergétique −50,1 %, variation totale −17,9 %.</desc>
+<rect width="720" height="441" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Consommation d'énergie, 2000-2024 : ce qui l'a fait monter, ce qui l'a freinée</text>
+<text x="250" y="46" font-size="11" fill="#55524f">effets et variation, en % de la consommation de 2000</text>
+<text x="0" y="80" font-size="13" font-weight="600" fill="#26262f">Monde</text>
+<text x="0" y="102" font-size="11" fill="#26262f">Effet de la population</text>
+<rect x="445.6" y="90" width="115.9" height="16" fill="#eb6834"/>
+<text x="565.4" y="102" font-size="11" font-weight="600" fill="#eb6834">+35,6 %</text>
+<text x="0" y="130" font-size="11" fill="#26262f">Effet du revenu par habitant</text>
+<rect x="445.6" y="118" width="211.8" height="16" fill="#eb6834"/>
+<text x="661.4" y="130" font-size="11" font-weight="600" fill="#eb6834">+65,0 %</text>
+<text x="0" y="152" font-size="11" fill="#26262f">Effet de l'intensité énergétique</text>
+<text x="0" y="164" font-size="11" fill="#26262f">(énergie par unité de PIB)</text>
+<rect x="306.7" y="146" width="138.9" height="16" fill="#8a8781"/>
+<text x="302.7" y="158" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">−42,6 %</text>
+<text x="0" y="186" font-size="11" font-weight="600" fill="#26262f">Variation de la consommation</text>
+<rect x="445.6" y="174" width="188.8" height="16" fill="#184f95"/>
+<text x="638.4" y="186" font-size="11" font-weight="600" fill="#184f95">+57,9 %</text>
+<line x1="445.6" y1="86" x2="445.6" y2="194" stroke="#55524f"/>
+<text x="0" y="222" font-size="13" font-weight="600" fill="#26262f">Union européenne (27 pays)</text>
+<text x="0" y="244" font-size="11" fill="#26262f">Effet de la population</text>
+<rect x="445.6" y="232" width="14.8" height="16" fill="#eb6834"/>
+<text x="464.4" y="244" font-size="11" font-weight="600" fill="#eb6834">+4,6 %</text>
+<text x="0" y="272" font-size="11" fill="#26262f">Effet du revenu par habitant</text>
+<rect x="445.6" y="260" width="90.0" height="16" fill="#eb6834"/>
+<text x="539.5" y="272" font-size="11" font-weight="600" fill="#eb6834">+27,6 %</text>
+<text x="0" y="294" font-size="11" fill="#26262f">Effet de l'intensité énergétique</text>
+<text x="0" y="306" font-size="11" fill="#26262f">(énergie par unité de PIB)</text>
+<rect x="282.3" y="288" width="163.2" height="16" fill="#8a8781"/>
+<text x="278.3" y="300" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">−50,1 %</text>
+<text x="0" y="328" font-size="11" font-weight="600" fill="#26262f">Variation de la consommation</text>
+<rect x="387.1" y="316" width="58.4" height="16" fill="#184f95"/>
+<text x="383.1" y="328" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">−17,9 %</text>
+<line x1="445.6" y1="228" x2="445.6" y2="336" stroke="#55524f"/>
+<line x1="0" y1="348.0" x2="720" y2="348.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="363.0" font-size="11" fill="#55524f">EIA, données internationales (énergie, PIB en parité de pouvoir d'achat à prix constants, population)</text>
+<text class="pied-note" x="0" y="377.0" font-size="11" fill="#55524f">Énergie primaire consommée sur le territoire (énergie contenue dans les importations non comptée) ; électricité</text>
+<text class="pied-note" x="0" y="391.0" font-size="11" fill="#55524f">renouvelable comptée à son contenu électrique, nucléaire à la chaleur produite. Décomposition comptable (indice de</text>
+<text class="pied-note" x="0" y="405.0" font-size="11" fill="#55524f">Divisia) : elle ne dit pas pourquoi l'intensité baisse. Valeurs arrondies au dixième : leur somme peut différer d'un</text>
+<text class="pied-note" x="0" y="419.0" font-size="11" fill="#55524f">dixième du total.</text>
+<text class="pied-licence" x="0" y="433.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/decouplage-energie-croissance/</text>
+</svg>

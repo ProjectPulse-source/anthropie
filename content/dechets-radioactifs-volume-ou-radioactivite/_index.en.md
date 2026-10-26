@@ -30,7 +30,7 @@ faq:
   - question: "Is the most radioactive waste disposed of?"
     answer: "Not yet in final form. High-level and long-lived intermediate-level waste, which together hold {dr.ha_mavl_act}% of the declared radioactivity (end-{dr.an_act}), is stored on its production sites: its deep geological disposal, Cigéo, is planned at Bure; after the 2026 public inquiry and the inquiry commission's favourable opinion, the creation licence is still to be decided. Low- and intermediate-level short-lived waste and very-low-level waste, over nine tenths of the volume, have disposal facilities in operation."
   - question: "Where do these figures come from?"
-    answer: "From the open files of Andra's National Inventory (waste declared at end-{dr.an_vol}, and at end-{dr.an_act} for activity), read by a script that refuses to publish if a figure stops supporting a sentence of the page; the status of disposal routes comes from Andra's publications. The data can be downloaded as CSV and JSON, under a CC BY 4.0 licence."
+    answer: "From the open files of Andra's National Inventory (waste declared at end-{dr.an_vol}, and at end-{dr.an_act} for activity), read by a script that stops if a figure no longer meets the conditions on which the page's main sentences depend. The status of disposal routes and the Malvési volumes are transcribed from Andra's publications (Les Essentiels 2026, read on 26 October 2026). The data can be downloaded as CSV and JSON, under a CC BY 4.0 licence."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   conception: "docs/conception/dechets-radioactifs-volume-ou-radioactivite.md"  # fiche de conception (regle 12)

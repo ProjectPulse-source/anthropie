@@ -48,6 +48,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{dr." -}}{{- errorf "desc-figures: placeholder {dr.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Page « L'économie mondiale se découple-t-elle de l'énergie ? » : placeholders {dc.<cle>}, depuis data/decouplage.json
+       (bloc affichage, scripts/update_decouplage.py ; 26/10/2026). Page anglaise : bloc affichage_en. Meme contrat. */ -}}
+{{- with site.Data.decouplage -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
+    {{- $text = replace $text (printf "{dc.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{dc." -}}{{- errorf "desc-figures: placeholder {dc.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Page « Qui peut faire face à une dépense imprévue ? » : placeholders {imp.<cle>}, depuis data/menages_imprevu.json
        (bloc affichage, scripts/update_menages_imprevu.py ; 26/10/2026). Page anglaise : bloc affichage_en. Meme contrat. */ -}}
 {{- with site.Data.menages_imprevu -}}

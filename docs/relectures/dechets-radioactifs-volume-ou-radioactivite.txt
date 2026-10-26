@@ -1,4 +1,4 @@
-# relu le 2026-10-26 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de c98a2e1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-26 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 0d57c1a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Déchets radioactifs : le volume dit-il le problème ?
 Les déchets radioactifs se comptent d'abord en mètres cubes : 1,89 million fin 2024.

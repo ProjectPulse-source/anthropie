@@ -1,0 +1,165 @@
+# relu le 2026-10-26 ; texte servi de /decouplage-energie-croissance/, build de 0d57c1a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+L'économie mondiale se découple-t-elle de l'énergie ?
+L'économie mondiale consomme de moins en moins d'énergie pour chaque unité de richesse produite : 28,5 % de moins en 2024 qu'en 2000.
+Sa consommation d'énergie, elle, a augmenté de 58 % sur la même période.
+La baisse de l'intensité énergétique a freiné la hausse ; elle ne l'a pas renversée.
+Page publiée le 26 octobre 2026
+Guides et éclairages
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Données du : 26 octobre 2026 EIA, données internationales : consommation d'énergie primaire, PIB en parité de pouvoir d'achat à prix constants et population, monde et Union européenne, de 1980 à 2024.
+Télécharger : CSV · JSON
+L’intensité baisse, la consommation monte
+De 2000 à 2024, le PIB mondial, mesuré en parité de pouvoir d’achat à prix constants, a augmenté de 121 %.
+L’énergie consommée pour produire chaque unité de ce PIB, l’intensité énergétique, a baissé de 28,5 %.
+Et la consommation mondiale d’énergie primaire est passée de 405 à 639 exajoules (un exajoule vaut un milliard de milliards de joules) : 58 % de plus.
+L’économie mondiale s’est donc découplée de l’énergie au sens relatif : sa consommation croît moins vite que sa production.
+Elle ne s’en est pas découplée au sens absolu, où la consommation baisserait pendant que l’économie croît.
+Énergie primaire consommée sur le territoire, convention de l'EIA ; effets calculés par un indice de Divisia, qui s'additionnent exactement à la variation (EIA, données internationales).
+Le résultat en une phrase.
+De 2000 à 2024, la consommation mondiale d’énergie a augmenté de 58 % : la population et le revenu par habitant y ont ajouté 407 exajoules, et la baisse de l’intensité énergétique n’en a retiré que 172.
+Démographie ou revenu ?
+On lit souvent que la consommation d’énergie augmente parce que la population mondiale augmente.
+Une décomposition comptable sépare les deux.
+La consommation d’énergie est le produit de trois termes : la population, le revenu par habitant et l’énergie consommée par unité de revenu.
+De 2000 à 2024, l’effet de la population a ajouté 144 exajoules, celui du revenu par habitant 263, et la baisse de l’intensité en a retiré 172 : au total, 235 exajoules de plus.
+Le revenu par habitant a donc pesé environ deux fois plus que la démographie.
+La hiérarchie ne dépend pas de l’année de départ : elle est la même dans chacune des fenêtres testées, qui partent de 1990, 2000, 2010, 2015 et 2019 et s’arrêtent en 2024 ; dans chacune, la consommation a augmenté.
+Les cinq fenêtres, en exajoules
+Départ
+Effet de la population
+Effet du revenu par habitant
+Effet de l’intensité
+Variation de la consommation
+1990
++210
++321
+−248
++283
+2000
++144
++263
+−172
++235
+2010
++89
++166
+−146
++109
+2015
++54
++107
+−90
++71
+2019
++28
++56
+−46
++37
+Chaque fenêtre s’arrête en 2024 ; monde, EIA.
+Valeurs arrondies à l’exajoule : leur somme peut différer d’une unité du total.
+Une décomposition comptable n’est pas une explication.
+Elle dit combien chaque terme a pesé, pas pourquoi.
+Elle ne dit pas que l’enrichissement cause la hausse de la consommation, ni que la baisse de l’intensité vient de l’efficacité des usages : l’intensité baisse aussi quand l’économie se tourne vers les services, ou quand une convention de mesure compte autrement l’électricité.
+Elle ne permet pas, non plus, d’estimer un effet rebond.
+Pourquoi l'effet de l'intensité (−172 exajoules) dépasse la baisse de l'intensité elle-même
+La décomposition mesure chaque variation en logarithme, ce qui rend la somme des effets exacte.
+L’intensité a été multipliée par 0,715 (une baisse de 28,5 %), dont le logarithme vaut −0,34.
+Cette valeur s’applique à la consommation moyenne de la période, 513 exajoules (une moyenne dite logarithmique, entre 405 et 639) : d’où un effet de −172 exajoules.
+Rapporté aux 405 exajoules de 2000, il vaut 42,6 %, le chiffre de la figure : c’est la même baisse de l’intensité, mesurée sur une base plus large, pas une seconde baisse.
+L’Union européenne : un découplage absolu, sur son territoire
+Le même producteur, avec la même définition, donne pour l’Union européenne à 27 l’autre cas de figure.
+De 2000 à 2024, sa consommation d’énergie primaire a baissé de 18 %, de 66 à 54 exajoules, pendant que son PIB augmentait de 43 % ; elle culmine en 2006.
+L’effet de la population y ajoute 3 exajoules, celui du revenu par habitant 18, et la baisse de l’intensité, 42,4 %, en retire 33 : plus que les deux autres réunis.
+L’année d’arrivée compte.
+En s’arrêtant en 2019, avant la pandémie et la flambée des prix de l’énergie de 2022, la consommation européenne baisse de 6,4 % depuis 2000, pour un PIB en hausse de 34 %.
+Le découplage absolu est déjà là, mais plus de la moitié de la baisse mesurée jusqu’en 2024 est intervenue après 2019 ; ces données ne disent pas quelle part en durera.
+Ce que la comparaison ne dit pas.
+Ces chiffres comptent l’énergie consommée sur le territoire européen, pas celle qui a servi à fabriquer les biens que l’Europe importe.
+Ils ne permettent donc pas de dire si la baisse tient à l’efficacité, au recul des industries les plus consommatrices d’énergie ou à leur déplacement hors d’Europe.
+Pour trancher, il faudrait une empreinte énergétique de la demande européenne, que nous n’avons pas trouvée publiée sous une forme réutilisable.
+Le résultat dépend-il de la source ?
+Les conventions de l’énergie primaire diffèrent d’un producteur à l’autre.
+L’EIA compte l’électricité hydraulique, éolienne et solaire à son contenu électrique, 3 412 Btu par kilowattheure, et le nucléaire à la chaleur du réacteur, de 10 400 à 10 700 Btu par kilowattheure selon les années : nous retrouvons ces rapports dans ses fichiers chaque année de 1990 à 2024, sans rupture de convention.
+L’Energy Institute, qui publie la Statistical Review of World Energy, compte toute l’électricité non fossile comme la quantité de combustible fossile qu’il aurait fallu brûler pour la produire.
+Avec son énergie primaire (édition 2025) et le PIB et la population de la Banque mondiale, la décomposition donne le même ordre : consommation mondiale en hausse de 60 % de 2000 à 2024, effet du revenu par habitant 261 exajoules, de la population 141, de l’intensité −164 : 164 retirés des 403 ajoutés.
+Pour l’Union européenne, la baisse est de 12 % au lieu de 18 % : le sens ne change pas, l’ampleur dépend de la convention.
+Confrontation à la recherche
+Paul Brockway et quatre coauteurs, chercheurs en économie et en ingénierie de l’énergie (universités de Leeds, du Sussex, du Massachusetts, SOAS et Calvin, IFP Énergies nouvelles), ont passé en revue en 2021 trente-trois études qui estiment l’effet rebond à l’échelle d’une économie entière, vingt et une fondées sur des modèles d’équilibre général et douze sur d’autres méthodes.
+Ils concluent que ces effets pourraient effacer plus de la moitié des économies d’énergie attendues de l’efficacité, et que les scénarios mondiaux en tiennent trop peu compte : c’est la thèse qu’ils défendent contre les modèles qui projettent un découplage absolu.
+Sur le constat, nos chiffres concordent avec le leur : de 1971 à 2018, écrivent-ils, le monde n’a connu aucun découplage absolu, seulement des cas nationaux ; la série de l’EIA prolonge ce constat jusqu’en 2024.
+Sur l’explication, cette page ne les teste pas.
+Les mêmes auteurs soulignent qu’une amélioration de l’efficacité mesurée à un niveau n’entraîne pas nécessairement une amélioration mesurée à un autre : une intensité énergétique agrégée ne mesure pas l’efficacité, et aucun taux de rebond ne se déduit d’une décomposition comme celle-ci.
+Ce que ces données ne disent pas
+Une décomposition, pas une cause.
+Les trois effets s’additionnent exactement à la variation de la consommation ; ils n’en attribuent aucune part à une cause.
+L’intensité n’est pas l’efficacité.
+L’énergie par unité de PIB baisse aussi quand la composition de l’économie change, ou quand la convention de mesure change.
+Une convention de mesure.
+L’EIA compte l’électricité renouvelable à son contenu électrique : sa croissance y pèse moins que dans la convention de l’Energy Institute.
+Le recalcul sur cette autre convention est donné plus haut.
+Le territoire, pas l’empreinte.
+L’énergie contenue dans les importations n’est pas comptée : c’est la limite décisive de la comparaison avec l’Union européenne.
+Un PIB en parité de pouvoir d’achat.
+Il dépend d’une année de base et de révisions ; les prix constants de l’EIA sont contrôlés contre la Banque mondiale à chaque mise à jour.
+Un agrégat mondial.
+Il additionne des trajectoires très différentes d’une région à l’autre, que cette page ne détaille pas.
+Une lecture de l’auteur, non testée ici.
+La notion d’effet rebond désigne la reprise de consommation qui rogne un gain d’efficacité.
+Dans le working paper AWP-04, l’économiste Stéphane Lalut la range parmi les mécanismes de transfert de la transition énergétique.
+Les chiffres de cette page décrivent un découplage relatif ; ils ne mesurent pas un rebond et ne démontrent pas cette lecture.
+Pour prolonger la question
+ANTHROPIE – Ordre ici.
+Dette ailleurs
+Sept âges d'histoire pour une seule hypothèse : le désordre ne se résout pas, il se déplace.
+ANTHROPIE suit, sur le temps long, ce que chaque ordre laisse derrière lui, et sur qui il en reporte la charge.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
+Demander l'exemplaire offert →
+Version papier : 36 € · Kindle : disponible
+Sommaire, extraits et recensions →
+Sources
+EIA (U.S.
+Energy Information Administration), données internationales, fichier groupé INTL.zip lu par script : consommation totale d’énergie, PIB en parité de pouvoir d’achat, population.
+Convention de mesure relevée dans le même fichier (production et consommation d’électricité hydraulique et nucléaire).
+Calculs de l’auteur : décomposition par l’indice de Divisia logarithmique moyen.
+Energy Institute, Statistical Review of World Energy, édition 2025, énergie primaire, lue dans le dépôt de données d’Our World in Data (owid/energy-data), le site de l’Energy Institute refusant les lectures automatiques ; Banque mondiale, PIB en parité de pouvoir d’achat à prix constants et population.
+Paul E.
+Brockway, Steve Sorrell, Gregor Semieniuk, Matthew Kuperus Heun et Victor Court, « Energy efficiency and economy-wide rebound effects : A review of the evidence and its implications », Renewable and Sustainable Energy Reviews, vol.
+141, 2021, doi:10.1016/j.rser.2021.110781, lu dans sa version en accès libre.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Consommation d'énergie, 2000-2024 : ce qui l'a fait monter, ce qui l'a freinée
+De 2000 à 2024, la consommation mondiale d'énergie a augmenté de 58 % : la population et le revenu par habitant y ont ajouté 407 exajoules, la baisse de l'intensité énergétique en a retiré 172.
+Dans l'UE, elle a baissé de 18 %.
+Précaution d'interprétation.
+Énergie primaire consommée sur le territoire (énergie contenue dans les importations non comptée) ; électricité renouvelable comptée à son contenu électrique, nucléaire à la chaleur produite.
+Décomposition comptable (indice de Divisia) : elle ne dit pas pourquoi l'intensité baisse.
+Valeurs arrondies au dixième : leur somme peut différer d'un dixième du total.
+EIA, données internationales (énergie, PIB en parité de pouvoir d'achat à prix constants, population)
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « L'économie mondiale se découple-t-elle de l'énergie ? ».
+Données EIA (données internationales), relevé du 26 octobre 2026. https://stephane-lalut.com/decouplage-energie-croissance/
+Copier la citation
+En trois phrases
+De 2000 à 2024, la consommation mondiale d’énergie a augmenté de 58 % pendant que l’énergie consommée par unité de PIB baissait de 28,5 % : un découplage relatif, non absolu.
+Dans une décomposition comptable, l’effet du revenu par habitant pèse environ deux fois plus que celui de la population.
+Dans l’Union européenne, la consommation a baissé sur le territoire ; ces données ne disent pas si c’est par efficacité ou par déplacement.
+Copier le résumé
+Les données
+Pour le monde et l'Union européenne à 27, chaque année depuis 1980 : consommation d'énergie primaire, PIB en parité de pouvoir d'achat à prix constants et population ; décomposition de la variation de la consommation et son recalcul sur d'autres sources, dans le JSON ; les séries annuelles existent aussi en CSV, une ligne par zone et par année.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (EIA (données internationales)), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien
