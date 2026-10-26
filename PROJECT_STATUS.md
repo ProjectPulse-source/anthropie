@@ -52,6 +52,34 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-26 (suite 5) — Page de données « Déchets radioactifs : le volume dit-il le problème ? » (G3) ; test de compréhension simulé ; contre-expertise PRO-20261026-045248 envoyable
+
+`scripts/update_dechets_radioactifs.py` (Inventaire national de l'Andra, fichiers data.gouv fin 2013 à fin 2024 ; 11
+gardes vues mordre, dont une qui a mordu sur la donnée réelle : 2014 = 84,7 %, « neuf dixièmes » devenu « quatre
+cinquièmes » ; témoin des Essentiels 2026 retrouvé à l'arrondi ; filières transcrites et déclarées ; rien téléchargé si
+le catalogue n'a pas changé), `og_dechets_radioactifs.py`, shortcode `dr-val`, pages FR et EN (non publiées), renvoi
+depuis `/communs-negatifs/`, workflow `dette-monde.yml`, `llms.txt`. Corrigés en chemin : composant `appel-livre` pour un
+livre à édition anglaise (devise, Amazon.com, sans « French edition ») ; PNG rendus en mémoire avant toute écriture dans
+les deux nouveaux générateurs (point ouvert : les autres générateurs écrivent encore les données avant les figures) ;
+affirmation fausse « l'absence de stockage suit la radioactivité » (FA-VL la dément) remplacée par la durée de vie. Test
+de compréhension simulé (six lecteurs, deux pages) consigné dans les fiches : aucun contresens sur la page « dépense
+imprévue » ; deux sur la page des déchets, corrigés, contre-épreuve partielle. Paquet de contre-expertise des deux pages
+enregistré (PRO-20261026-045248). Build 0, check-all 0, liens 0, dates 65/65, recette 12/12.
+
+Contre-expertise PRO-20261026-045248 reçue et arbitrée (`D:\PRO\.claude\external-audits\ARBITRATIONS\`, copie dans
+`06_PROMOTION\GRAPHES_NOTIONS_2026-10-26\`). Corrigés : statut de Cigéo, périmé (enquête close le 16/07/2026, avis
+favorable en août, autorisation non délivrée) ; figure et comparaison des déchets au même millésime (fin 2021) ;
+« hiérarchies très différentes » ; durée de vie, une contrainte parmi d'autres ; hors bilan non interprété ; page
+« dépense imprévue » : écart en points, association qualifiée, unité « personnes », garde `peu_fiables`. Recette 12/12
+sur les deux pages FR et EN, LanguageTool, instantanés refaits. Ouverts : définition Eurostat du montant (non
+vérifiée), test par de vrais lecteurs.
+
+Seconde réponse de PRO-20261026-045248 arbitrée (même fichier d'arbitrage). Vérifiés à la source : règle d'Eurostat
+(HS060, guide 2025, p. 154 : 1/12 du seuil, n−2, arrondi à 5 %) et montant français (1 000 €, Insee). Apport : 1 000 € est
+17 % sous le douzième du seuil de 2023 (1 209 €, `ilc_li01`) ; la page le dit, montant au premier paragraphe, seuil lu par
+le générateur, gardes `montant` et `enquete` vues mordre. FAQ : phrase de méthode corrigée. Déchets : préfecture en
+source de Cigéo, phrase du hors bilan précisée, piste Malvési (écart du fichier ouvert depuis fin 2023) dans la fiche.
+
 ### 2026-10-26 (suite 4) — Page de données « Qui peut faire face à une dépense imprévue ? » ; champ « pouvoir discriminant » ; EN LIGNE (`b7ff575`, déploiement vert, version servie attestée FR et EN : titre, chiffres, figure, CSV, carte de partage, renvoi depuis la notion)
 
 Contre-expertise PRO-20261026-033434 (graphes pour les notions) arbitrée : S2 (pages de données distinctes), ordre G1,

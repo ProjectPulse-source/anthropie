@@ -1,0 +1,239 @@
+{
+ "releve_le": "2026-10-26",
+ "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; source Andra (Licence ouverte)",
+ "meta": {
+  "page": "https://stephane-lalut.com/dechets-radioactifs-volume-ou-radioactivite/",
+  "licence": "CC BY 4.0",
+  "source": "Andra, Inventaire national des matières et déchets radioactifs, fichiers « déchets déclarés à fin AAAA » (data.gouv.fr)",
+  "catalogue_modifie": "2026-02-11T10:10:45.410000+00:00",
+  "fichiers": {
+   "2013": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20181213-125143/dechets-declares-au-31-12-2013.csv",
+    "sha256": "03423ea27b5ca09976cdb9c1d4102dce469651742daa6a6c2de5133b3359831d",
+    "titre": "Dechets_declares_au_31_12_2013.csv"
+   },
+   "2014": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20181213-125204/dechets-declares-au-31-12-2014.csv",
+    "sha256": "0acc45a7dc3b35c89a66f72ce4b07f3c900e1ad064adacc9560122c0741418ff",
+    "titre": "Dechets_declares_au_31_12_2014.csv"
+   },
+   "2015": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20181213-114454/dechets-declares-au-31-12-2015.csv",
+    "sha256": "16ada83cf985b1682ad15f0d3ef1d74fe6b6fc12ae023cdba4b17f38117bcca1",
+    "titre": "dechets_declares_au_31_12_2015.csv"
+   },
+   "2016": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20181213-114427/dechets-declares-au-31-12-2016.csv",
+    "sha256": "36985e9223577ecb716a0d586ff25caea806519db46dca14d15a5a8dd745ba4c",
+    "titre": "dechets_declares_au_31_12_2016.csv"
+   },
+   "2017": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20190307-154134/dechets-declares-au-31-12-2017.csv",
+    "sha256": "c179925b8b513822812a2831c4bd82950c68a89746b84986c65e831c9e1f1e52",
+    "titre": "dechets-declares-au-31-12-2017.csv"
+   },
+   "2018": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20200212-114320/dechets-declares-au-31-12-2018.csv",
+    "sha256": "16bc7033d1415ccbd5cb92c694bf707fa2fce14d6725941448bd69c5297562ef",
+    "titre": "dechets-declares-au-31-12-2018.csv"
+   },
+   "2019": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20210216-105656/dechets-declares-au-31-12-2019.csv",
+    "sha256": "1b64fc63de0ce4a18d475f9c4922e91304deb9356179965fcef3a881b8cbd702",
+    "titre": "Déchets déclarés à fin 2019"
+   },
+   "2020": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20250228-161452/open-data-a-fin-2020-revision-fevrier-2025.csv",
+    "sha256": "c3840170dbf52a89befa365fc17f053861a0b5a1932686fb74f5b68a4e757466",
+    "titre": "Déchets déclarés à fin 2020"
+   },
+   "2021": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20250228-161421/open-data-a-fin-2021-revision-fevrier-2025.csv",
+    "sha256": "e24cbe96e62be99c4faf16783c7e27f777cdceb78f17136ea8a5ba3b7f7a1866",
+    "titre": "Déchets déclarés à fin 2021"
+   },
+   "2022": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20250228-161331/open-data-a-fin-2022-revision-fevrier-2025.csv",
+    "sha256": "e1dae06c2af6408a9aa1cbe66ef081c9eeb2c4128bc437e3754e3a7724665e8d",
+    "titre": "Déchets déclarés à fin 2022"
+   },
+   "2023": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20250211-155101/dechets-declares-a-fin-2023.csv",
+    "sha256": "f6e130c5ace341b9d2f8c0bda8b4bf2fbd98a216ab0e2c22f608e9b26b76086f",
+    "titre": "Déchets déclarés à fin 2023"
+   },
+   "2024": {
+    "url": "https://static.data.gouv.fr/resources/inventaire-national-des-matieres-et-dechets-radioactifs/20260210-174659/dechets-declares-a-fin-2024.csv",
+    "sha256": "81d683688e0e5ce222090267111326df3db729673a3e778d718da9ad0877bffd",
+    "titre": "Déchets déclarés à fin 2024.csv"
+   }
+  },
+  "unite_volume": "m³ en équivalent conditionné",
+  "unite_activite": "Bq déclarés",
+  "categories_bilan": [
+   "HA",
+   "MA-VL",
+   "FA-VL",
+   "FMA-VC",
+   "TFA"
+  ],
+  "hors_bilan": "catégories AUTRES / SANS CATEGORIE du fichier (gestion particulière)",
+  "filieres_transcrites": {
+   "HA": "stockage géologique profond en projet (Cigéo)",
+   "MA-VL": "stockage géologique profond en projet (Cigéo)",
+   "FA-VL": "stockage à l'étude",
+   "FMA-VC": "stockage en surface en service (Aube, depuis 1992)",
+   "TFA": "stockage en service (Cires, depuis 2003)"
+  },
+  "filieres_source": "Andra, Les Essentiels 2026, p. 11 ; inventaire.andra.fr (classification et filières), lus le 26/10/2026",
+  "annee_volume": 2024,
+  "annee_activite": 2021,
+  "editions_activite": [
+   2013,
+   2014,
+   2015,
+   2016,
+   2021
+  ]
+ },
+ "parts": {
+  "volume": {
+   "HA": 0.24971469015071654,
+   "MA-VL": 1.8796712018822572,
+   "FA-VL": 6.618236940935893,
+   "FMA-VC": 53.31165634161766,
+   "TFA": 37.94072082541348
+  },
+  "activite": {
+   "HA": 97.14051355636873,
+   "MA-VL": 2.673695413133303,
+   "FA-VL": 0.008906641728972042,
+   "FMA-VC": 0.12392339015156667,
+   "TFA": 0.00042746752833775354
+  },
+  "activite_ajustee": {
+   "HA": 96.73559788016554,
+   "MA-VL": 3.0499300128319864,
+   "FA-VL": 0.009798705457211777,
+   "FMA-VC": 0.12681603352284407,
+   "TFA": 0.00043407914600389076
+  },
+  "activite_par_edition": {
+   "2013": {
+    "HA": 90.71701962950104,
+    "MA-VL": 9.186352407981229,
+    "FA-VL": 0.00399058662306822,
+    "FMA-VC": 0.00774649455958039,
+    "TFA": 0.0005000732452427362
+   },
+   "2014": {
+    "HA": 84.66598214247038,
+    "MA-VL": 15.050112278479245,
+    "FA-VL": 0.1258566676563274,
+    "FMA-VC": 0.06260254204639581,
+    "TFA": 0.0005834041373931333
+   },
+   "2015": {
+    "HA": 94.23697731443461,
+    "MA-VL": 5.525745442330304,
+    "FA-VL": 0.1401256165509268,
+    "FMA-VC": 0.018646932395407087,
+    "TFA": 0.00010672607698875076
+   },
+   "2016": {
+    "HA": 94.8299476783374,
+    "MA-VL": 4.935015363464207,
+    "FA-VL": 0.13761591990370065,
+    "FMA-VC": 0.025288811514395753,
+    "TFA": 0.00013762356572172076
+   },
+   "2021": {
+    "HA": 97.14051355636873,
+    "MA-VL": 2.673695413133303,
+    "FA-VL": 0.008906641728972042,
+    "FMA-VC": 0.12392339015156667,
+    "TFA": 0.00042746752833775354
+   }
+  },
+  "stocke_andra": {
+   "FMA-VC": 90.84065204997931,
+   "TFA": 67.92812162116323
+  }
+ },
+ "affichage": {
+  "an_vol": "2024",
+  "an_act": "2021",
+  "an_hors": "2021",
+  "ed_premiere": "2013",
+  "editions": "2013, 2014, 2015, 2016 et 2021",
+  "nb_editions": "cinq",
+  "tot5": "1,89",
+  "hors": "1,33",
+  "ha_vol": "0,25",
+  "ha_act": "97,1",
+  "ha_act_aj": "96,7",
+  "ha_mavl_act": "99,8",
+  "ha_ed_bas": "84,7",
+  "ha_ed_haut": "97,1",
+  "ha_mavl_ed_bas": "99,7",
+  "masse_vol": "91,3",
+  "masse_act": "0,12",
+  "stocke_fmavc": "91",
+  "stocke_tfa": "68",
+  "ha_m3": "4 717",
+  "ha_vol_a": "0,25",
+  "masse_vol_a": "91,7",
+  "tot5_a": "1,76",
+  "rtcu": "0,89",
+  "malvesi": "690 000",
+  "vol_ha": "0,25",
+  "act_ha": "97,1",
+  "vol_mavl": "2,2",
+  "act_mavl": "2,7",
+  "vol_favl": "5,9",
+  "act_favl": "0,01",
+  "vol_fmavc": "55,7",
+  "act_fmavc": "0,12",
+  "vol_tfa": "35,9",
+  "act_tfa": "< 0,01",
+  "pct": " %"
+ },
+ "affichage_en": {
+  "an_vol": "2024",
+  "an_act": "2021",
+  "an_hors": "2021",
+  "ed_premiere": "2013",
+  "editions": "2013, 2014, 2015, 2016 and 2021",
+  "nb_editions": "five",
+  "tot5": "1.89",
+  "hors": "1.33",
+  "ha_vol": "0.25",
+  "ha_act": "97.1",
+  "ha_act_aj": "96.7",
+  "ha_mavl_act": "99.8",
+  "ha_ed_bas": "84.7",
+  "ha_ed_haut": "97.1",
+  "ha_mavl_ed_bas": "99.7",
+  "masse_vol": "91.3",
+  "masse_act": "0.12",
+  "stocke_fmavc": "91",
+  "stocke_tfa": "68",
+  "ha_m3": "4,717",
+  "ha_vol_a": "0.25",
+  "masse_vol_a": "91.7",
+  "tot5_a": "1.76",
+  "rtcu": "0.89",
+  "malvesi": "690,000",
+  "vol_ha": "0.25",
+  "act_ha": "97.1",
+  "vol_mavl": "2.2",
+  "act_mavl": "2.7",
+  "vol_favl": "5.9",
+  "act_favl": "0.01",
+  "vol_fmavc": "55.7",
+  "act_fmavc": "0.12",
+  "vol_tfa": "35.9",
+  "act_tfa": "< 0.01",
+  "pct": "%"
+ }
+}

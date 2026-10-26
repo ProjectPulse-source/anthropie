@@ -93,6 +93,8 @@ This reading links the two notions without conflating them: negative commons des
 
 {{< notion-schema id="mecanisme" >}}
 
+What such a legacy amounts to, in figures, for French radioactive waste: the data page [Radioactive waste: does volume tell the problem?](/en/radioactive-waste-volume-or-radioactivity/) shows that radioactivity is concentrated in a tiny share of the volume, the share still awaiting final disposal.
+
 ## The coming textbook case: digital technology
 
 The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) (2026) ranks digital technologies among the **candidate negative commons**: data centers sized for decades, short-lived equipment with unresolved recycling, networks whose dismantling will cost more than anyone has provisioned. Digital technology presents itself as immaterial; its remains will be very material — and shared. To think the cloud in negative commons is to ask today the question that polluted soils taught us too late: who will inherit the infrastructure, and who will take care of it?

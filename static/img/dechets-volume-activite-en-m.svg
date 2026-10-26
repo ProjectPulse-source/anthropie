@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 871" role="img" font-variant-numeric="tabular-nums" aria-labelledby="drm-t drm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="drm-t">Radioactive waste: volume does not show where the radioactivity is</title><desc id="drm-d">For each category, share of the volume of radioactive waste and share of its declared radioactivity, end-2021 (latest edition declaring activity), and disposal route. HA: 0.25% of volume, 97.1% of radioactivity. MA-VL: 2.2%, 2.7%. FA-VL: 5.9%, 0.01%. FMA-VC: 55.7%, 0.12%. TFA: 35.9%, &lt; 0.01%.</desc>
+<rect width="300" height="871" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Radioactive waste: volume does</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">not show where the</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">radioactivity is</text>
+<text x="0" y="120" font-size="15" font-weight="600" fill="#26262f">High-level (HA)</text>
+<rect x="0" y="130" width="1.5" height="12" fill="#8a8781"/>
+<text x="7.5" y="140" font-size="13.5" font-weight="600" fill="#26262f">0.25% volume</text>
+<rect x="0" y="150" width="145.7" height="12" fill="#eb6834"/>
+<text x="151.7" y="160" font-size="13.5" font-weight="600" fill="#eb6834">97.1% radioactivity</text>
+<text x="0" y="178" font-size="13.5" fill="#55524f">deep geological disposal planned</text>
+<text x="0" y="196" font-size="13.5" fill="#55524f">(Cigéo)</text>
+<text x="0" y="226" font-size="15" font-weight="600" fill="#26262f">Intermediate-level, long-lived</text>
+<text x="0" y="245" font-size="15" font-weight="600" fill="#26262f">(MA-VL)</text>
+<rect x="0" y="255" width="3.4" height="12" fill="#8a8781"/>
+<text x="9.4" y="265" font-size="13.5" font-weight="600" fill="#26262f">2.2% volume</text>
+<rect x="0" y="275" width="4.0" height="12" fill="#eb6834"/>
+<text x="10.0" y="285" font-size="13.5" font-weight="600" fill="#eb6834">2.7% radioactivity</text>
+<text x="0" y="303" font-size="13.5" fill="#55524f">deep geological disposal planned</text>
+<text x="0" y="321" font-size="13.5" fill="#55524f">(Cigéo)</text>
+<text x="0" y="351" font-size="15" font-weight="600" fill="#26262f">Low-level, long-lived (FA-VL)</text>
+<rect x="0" y="361" width="8.8" height="12" fill="#8a8781"/>
+<text x="14.8" y="371" font-size="13.5" font-weight="600" fill="#26262f">5.9% volume</text>
+<rect x="0" y="381" width="1.5" height="12" fill="#eb6834"/>
+<text x="7.5" y="391" font-size="13.5" font-weight="600" fill="#eb6834">0.01% radioactivity</text>
+<text x="0" y="409" font-size="13.5" fill="#55524f">disposal under study</text>
+<text x="0" y="439" font-size="15" font-weight="600" fill="#26262f">Low- and intermediate-level,</text>
+<text x="0" y="458" font-size="15" font-weight="600" fill="#26262f">short-lived (FMA-VC)</text>
+<rect x="0" y="468" width="83.6" height="12" fill="#8a8781"/>
+<text x="89.6" y="478" font-size="13.5" font-weight="600" fill="#26262f">55.7% volume</text>
+<rect x="0" y="488" width="1.5" height="12" fill="#eb6834"/>
+<text x="7.5" y="498" font-size="13.5" font-weight="600" fill="#eb6834">0.12% radioactivity</text>
+<text x="0" y="516" font-size="13.5" fill="#184f95">near-surface disposal in operation</text>
+<text x="0" y="534" font-size="13.5" fill="#184f95">(Aube, since 1992)</text>
+<text x="0" y="564" font-size="15" font-weight="600" fill="#26262f">Very-low-level (TFA)</text>
+<rect x="0" y="574" width="53.9" height="12" fill="#8a8781"/>
+<text x="59.9" y="584" font-size="13.5" font-weight="600" fill="#26262f">35.9% volume</text>
+<rect x="0" y="594" width="1.5" height="12" fill="#eb6834"/>
+<text x="7.5" y="604" font-size="13.5" font-weight="600" fill="#eb6834">&lt; 0.01% radioactivity</text>
+<text x="0" y="622" font-size="13.5" fill="#184f95">disposal in operation (Cires, since</text>
+<text x="0" y="640" font-size="13.5" fill="#184f95">2003)</text>
+<line x1="0" y1="662.0" x2="300" y2="662.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="683.0" font-size="13.5" fill="#55524f">Andra, National Inventory (open data,</text>
+<text class="pied-source" x="0" y="700.0" font-size="13.5" fill="#55524f">data.gouv.fr); disposal routes: Andra,</text>
+<text class="pied-source" x="0" y="717.0" font-size="13.5" fill="#55524f">Les Essentiels 2026</text>
+<text class="pied-note" x="0" y="738.0" font-size="13.5" fill="#55524f">Volume in conditioned equivalent and</text>
+<text class="pied-note" x="0" y="755.0" font-size="13.5" fill="#55524f">declared radioactivity, five</text>
+<text class="pied-note" x="0" y="772.0" font-size="13.5" fill="#55524f">categories of Andra's balances, same</text>
+<text class="pied-note" x="0" y="789.0" font-size="13.5" fill="#55524f">year. Radioactivity alone measures</text>
+<text class="pied-note" x="0" y="806.0" font-size="13.5" fill="#55524f">neither health risk nor management</text>
+<text class="pied-note" x="0" y="823.0" font-size="13.5" fill="#55524f">cost.</text>
+<text class="pied-licence" x="0" y="844.0" font-size="13.5" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="861.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+</svg>

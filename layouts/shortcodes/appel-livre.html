@@ -38,21 +38,26 @@
 {{- if not $livre -}}{{ errorf "appel-livre: fiche /livres/%s introuvable dans aucune langue (appel depuis %s)" $slug .Page.File.Path }}{{- end -}}
 {{- $p := $livre.Params -}}
 {{- $en := eq .Page.Lang "en" -}}
-{{- $broche := or $p.url_amazon_fr $p.url_amazon_com -}}
+{{- /* Édition anglaise (fiche en `en`, 26/10/2026 : ANTHROPY, premier livre cité qui en a une) : boutique Amazon.com et
+       devise de la fiche (`currency`) ; jusque-là le bloc supposait toujours l'édition française (Amazon.fr, euros,
+       « French edition »). */ -}}
+{{- $editionEn := eq $livre.Lang "en" -}}
+{{- $broche := cond $editionEn (or $p.url_amazon_com $p.url_amazon_fr) (or $p.url_amazon_fr $p.url_amazon_com) -}}
 {{- with $broche }}{{ $broche = partial "amazon-href.html" . }}{{ end -}}
-{{- $kindle := $p.url_amazon_fr_kindle -}}
+{{- $kindle := cond $editionEn (or $p.url_amazon_com_kindle $p.url_amazon_fr_kindle) $p.url_amazon_fr_kindle -}}
 {{- with $kindle }}{{ $kindle = partial "amazon-href.html" . }}{{ end -}}
 {{- /* Le prix reste en euros dans les deux langues — c'est l'edition francaise
        qui est vendue — mais sa PRESENTATION suit la page : « 19 € » d'un cote,
        « €19 » de l'autre, symbole avant et point decimal. Le montant est le
        meme ; seule la convention change. */ -}}
+{{- $symbole := cond (eq $p.currency "USD") "$" "€" -}}
 {{- $prix := "" -}}
 {{- with $p.price -}}
-  {{- $prix = cond $en (printf "€%s" .) (printf "%s&nbsp;€" (replace . "." ",")) -}}
+  {{- $prix = cond $en (printf "%s%s" $symbole .) (cond (eq $symbole "$") (printf "%s&nbsp;$" (replace . "." ",")) (printf "%s&nbsp;€" (replace . "." ","))) -}}
 {{- end -}}
 {{- $prixK := "" -}}
 {{- with $p.kindle_price -}}
-  {{- $prixK = cond $en (printf "€%s" .) (printf "%s&nbsp;€" (replace . "." ",")) -}}
+  {{- $prixK = cond $en (printf "%s%s" $symbole .) (printf "%s&nbsp;€" (replace . "." ",")) -}}
 {{- end -}}
 {{- $T := dict
     "sur" "Le livre dont cette page est issue"
@@ -65,7 +70,7 @@
 {{- if $en -}}
   {{- $T = dict
       "sur" "The book this page comes from"
-      "pages" "paperback, %s pages — French edition"
+      "pages" (cond $editionEn "paperback, %s pages" "paperback, %s pages — French edition")
       "avis" "%s/5 · %s Amazon ratings"
       "releve" " (retrieved %s)"
       "acheter" "Buy the paperback"

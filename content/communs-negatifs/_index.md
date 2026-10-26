@@ -92,6 +92,8 @@ Cette lecture relie les deux notions sans les confondre&nbsp;: les communs néga
 
 {{< notion-schema id="mecanisme" >}}
 
+Ce que représente un tel héritage, en chiffres, pour les déchets radioactifs français&nbsp;: la page de données [Déchets radioactifs&nbsp;: le volume dit-il le problème&nbsp;?](/dechets-radioactifs-volume-ou-radioactivite/) montre que la radioactivité se concentre dans une part infime du volume, celle qui attend encore un stockage définitif.
+
 ## Le cas d'école qui vient&nbsp;: le numérique
 
 Le working paper [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (2026) range les technologies numériques parmi les **communs négatifs candidats**&nbsp;: data centers dimensionnés pour des décennies, équipements à durée de vie courte et à recyclage non résolu, réseaux dont le démantèlement coûtera plus que personne ne l'a provisionné. Le numérique se présente comme immatériel&nbsp;; ses restes seront très matériels — et partagés. Penser le cloud en communs négatifs, c'est poser aujourd'hui la question que les sols pollués nous ont apprise trop tard&nbsp;: qui héritera de l'infrastructure, et qui en prendra soin&nbsp;?

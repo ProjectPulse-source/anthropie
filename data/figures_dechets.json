@@ -1,0 +1,22 @@
+{
+ "fr": [
+  {
+   "id": "volume-activite",
+   "fichier": "dechets-volume-activite",
+   "titre": "Déchets radioactifs : le volume ne dit pas où est la radioactivité",
+   "montre": "Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,1 % de la radioactivité déclarée ; leur stockage définitif est en projet.",
+   "source": "Andra, Inventaire national (données ouvertes, data.gouv.fr) ; filières : Andra, Les Essentiels 2026",
+   "precaution": "Volume en équivalent conditionné et radioactivité déclarée, cinq catégories des bilans de l'Andra, même année. La radioactivité ne mesure à elle seule ni le risque sanitaire ni le coût de gestion."
+  }
+ ],
+ "en": [
+  {
+   "id": "volume-activite",
+   "fichier": "dechets-volume-activite-en",
+   "titre": "Radioactive waste: volume does not show where the radioactivity is",
+   "montre": "At end-2021, high-level waste made up 0.25% of the volume and 97.1% of the declared radioactivity; its final disposal is planned.",
+   "source": "Andra, National Inventory (open data, data.gouv.fr); disposal routes: Andra, Les Essentiels 2026",
+   "precaution": "Volume in conditioned equivalent and declared radioactivity, five categories of Andra's balances, same year. Radioactivity alone measures neither health risk nor management cost."
+  }
+ ]
+}

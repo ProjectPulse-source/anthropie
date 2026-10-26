@@ -88,7 +88,11 @@ Cette page existe parce qu'elle croise seuil de pauvreté et composition du foye
 le lecteur ne trouve pas, à notre connaissance, dans les publications d'Eurostat et de l'Insee sur l'indicateur
 (recherche du 26/10/2026 : Eurostat publie la part des personnes seules avec enfants, 56 % en 2019, communiqué du
 05/05/2020, et l'Observatoire des inégalités 56 % des familles monoparentales, tous deux sans le seuil de pauvreté ;
-aucun croisement trouvé — une recherche n'est pas exhaustive ; à revoir si une publication le donne).
+aucun croisement trouvé — une recherche n'est pas exhaustive ; à revoir si une publication le donne). Apport d'analyse
+ajouté après la seconde réponse de PRO-20261026-045248 : la question française porte sur 1 000 €, environ 17 % sous le
+douzième du seuil que fixe la règle d'Eurostat (1 209 € pour l'enquête 2025) ; le niveau français se compare donc aux
+autres pays sur une question plus facile. Niveau atteint par la figure : descriptive, discriminante en partie (elle
+écarte « le revenu suffit », n'isole pas l'effet de la composition du foyer) ; pas décisionnelle.
 
 ### Raccords
 
@@ -131,5 +135,26 @@ jusqu'à la limite. Diagnostics : vues, sources d'arrivée, citations ; test de 
   nombre d'enfants, bandeau des années, pronom, redondance, « as high »).
 - Instantané de relecture : fait (`docs/relectures/`, FR 99 phrases, EN 92).
 - Test de compréhension par trois lecteurs réels (D2) : non fait (recrutement par l'auteur).
-- Contre-expertise de la page : non faite (à décider après publication).
+- Contre-expertise de la page : faite (PRO-20261026-045248, arbitrée le 26/10/2026, `ARBITRATIONS\PRO-20261026-045248_arbitrage.md`) ;
+  corrections : écart en points dans le résultat, association et facteurs concurrents écrits, « personnes, non ménages »,
+  garde `peu_fiables` (drapeau « u » d'Eurostat) vue mordre ; recette 12/12 et LanguageTool refaits. Restent ouverts :
+  définition Eurostat du montant (vérifiée depuis : ligne suivante), test par de vrais lecteurs (auteur).
+- Seconde réponse de la contre-expertise (26/10/2026) : arbitrée. Montant de la question (1 000 €, Insee) et règle
+  d'Eurostat (HS060, p. 154) lus à la source ; seuil `ilc_li01` lu par le générateur ; gardes `montant` et `enquete` vues
+  mordre (15 gardes) ; limite sur les drapeaux complétée ; phrase de méthode de la FAQ corrigée ; page datée au fond.
 - Accord de l'auteur : demandé avec le diff du 26/10/2026.
+
+## Test de compréhension simulé (26/10/2026)
+
+Demandé par l'auteur. Trois lecteurs simulés, isolés, recevant le seul texte servi de la page (figures décrites par leur
+texte alternatif) et les questions de la décision D2 ; aucun ne connaissait les réponses attendues. Limite : un lecteur
+simulé partage les présupposés du modèle qui l'écrit ; ce test ne remplace pas les trois lecteurs réels (D2, ouvert).
+
+| Lecteur | Ce que montre le graphe | Ce qu'il ne montre pas | Question ouverte | Contresens |
+|---|---|---|---|---|
+| Professeure de SES, lecture attentive | juste (46,9 contre 18,6 au-dessus du seuil ; majorité exposée en dessous) | juste (association, déclaratif, personnes et non ménages) | juste (position dans la tranche) | aucun |
+| Artisan, lecture rapide | juste | juste (« ça va ensemble, c'est tout ») | juste | aucun ; amplification mineure : « une **grosse** facture surprise » (la page ne donne pas le montant) |
+| Journaliste économique | juste | juste | juste (« microdonnées, ou découpage par déciles ») | aucun ; phrase publiable exacte, avec source |
+
+Décision : aucune correction de fond. Le montant de la dépense imprévue n'est pas donné (définition non vérifiée à la
+source) ; à préciser si la définition d'Eurostat est lue.

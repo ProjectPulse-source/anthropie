@@ -15,7 +15,7 @@ Chaque qualificatif de la prose est une garde (fonction gardes) ; si la donnée 
 Témoin : l'UE à 27 (même indicateur, autre population) et la variante « couple avec deux enfants » ; le calcul ne
 partage avec eux que la définition de l'indicateur.
 
-Usage : python scripts/update_menages_imprevu.py [--check] [--mutation=total|dessus|dessous|ratio|ecarts|chaque|serre|ue|deux|majorite|rupture|annee]
+Usage : python scripts/update_menages_imprevu.py [--check] [--mutation=total|dessus|dessous|ratio|ecarts|chaque|serre|ue|deux|majorite|fiable|rupture|annee|montant|enquete]
 Sorties : data/ et static/menages_imprevu.json, static/menages_imprevu.csv, data/figures_imprevu.json,
           static/img/imprevu-menages{,-en}{,-m}.svg + .png
 """
@@ -50,6 +50,16 @@ GEOS = ("FR", "EU27_2020")
 MENAGES = ("TOTAL", "A2", "A1", "A2_DCH1", "A2_DCH2", "A1_DCH")
 SEUILS = ("TOTAL", "A_60", "B_60")
 DEBUT = 2015          # fenêtre des écarts publiés (série France complète depuis 2004 ; UE à 27 depuis 2010)
+# Montant de la question en France -- valeur TRANSCRITE, contrôlée contre les publications de l'Insee (contre-expertise
+# PRO-20261026-045248, seconde réponse) : « faire face à une dépense imprévue d'un montant de 1 000 euros » (communiqués
+# de lancement de l'enquête SRCV, 29/01/2024 et 31/01/2025) ; « dépense inattendue de 1 000 euros » (Insee Références,
+# Revenus et patrimoine des ménages 2024, figure 2, enquête 2022). Une année d'enquête absente de la liste arrête le
+# générateur : le montant se revérifie avant d'être publié pour une autre enquête.
+MONTANT_FR = 1000
+MONTANT_FR_ENQUETES = (2022, 2024, 2025)
+# Règle commune (Eurostat, EU-SILC Methodological guidelines 2025 operation, HS060, p. 154) : 1/12 du seuil national de
+# risque de pauvreté d'une unité de consommation, tiré de l'enquête n-2, arrondi à 5 % près. Seuil lu dans ilc_li01.
+API_SEUIL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_li01"
 
 W = 720
 WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
@@ -103,6 +113,20 @@ def relever() -> tuple[dict, dict]:
                     if str(pos) in st:
                         statuts[(g, r_, h, int(t))] = st[str(pos)]
     return serie, statuts
+
+
+def relever_seuil(annee: int) -> float:
+    """Seuil de risque de pauvreté (60 % du revenu médian équivalent), personne seule, France, en euros par an."""
+    q = "format=JSON&lang=en&geo=FR&hhcomp=A1&statinfo=MED_EI&rskpovth=B_60&unit=EUR&time=%d" % annee
+    try:
+        with urllib.request.urlopen(API_SEUIL + "?" + q, timeout=60) as r:
+            d = json.loads(r.read().decode("utf-8"))
+        v = list(d["value"].values())
+    except Exception as exc:
+        fail("releve du seuil ilc_li01 %d impossible : %s" % (annee, exc))
+    if len(v) != 1 or not 8000 < float(v[0]) < 40000:
+        fail("seuil ilc_li01 %d : valeur absente ou hors bande (%s)" % (annee, v))
+    return float(v[0])
 
 
 def plausibilite(s: dict) -> int:
@@ -168,8 +192,14 @@ def mutation(c: dict):
         c["g_enf2"][c["y"]] = 4.0
     elif m == "majorite":   # « en grande majorité exposés » sous le seuil
         c["c1_dessous"] = 55.0
+    elif m == "fiable":     # une valeur utilisée signalée peu fiable : la phrase des limites deviendrait fausse
+        c["peu_fiables"] = [("FR", "A_60", "A1_DCH", c["y"])]
     elif m == "rupture":    # plus aucune rupture : la phrase des limites deviendrait fausse
         c["ruptures_fr"] = []
+    elif m == "montant":    # montant de la question conforme à la règle : la phrase « plus faible » deviendrait fausse
+        c["douzieme"] = MONTANT_FR
+    elif m == "enquete":    # enquête dont le montant n'a pas été vérifié
+        c["enquete"] = 2026
     elif m == "annee":      # traitée avant le calcul (main) : la série relevée est tronquée après 2019
         pass
     elif m is not None:
@@ -206,6 +236,12 @@ def gardes(c: dict) -> int:
       % {a: round(c["g_enf2"][a], 1) for a in ans})
     g(c["ps_dessous"] > 66 and c["c1_dessous"] > 66,
       "« sous le seuil, parents seuls comme couples avec un enfant y sont en grande majorité exposés » : %.1f / %.1f" % (c["ps_dessous"], c["c1_dessous"]))
+    # « aucune des valeurs utilisées n'est signalée comme peu fiable » (contre-expertise PRO-20261026-045248) : drapeau « u »
+    g(not c["peu_fiables"], "valeurs utilisees signalees peu fiables par Eurostat : %s" % c["peu_fiables"][:5])
+    # « En France, l'enquête de {annee} demande … 1 000 € » : montant vérifié pour cette enquête (constante transcrite)
+    g(c["enquete"] in MONTANT_FR_ENQUETES, "montant de la question non verifie pour l'enquete %d (verifies : %s)" % (c["enquete"], MONTANT_FR_ENQUETES))
+    # « une somme plus faible que la règle commune » : hors de la marge d'arrondi de 5 %
+    g(MONTANT_FR < 0.95 * c["douzieme"], "« somme plus faible que la regle » : %d contre 1/12 du seuil = %.0f" % (MONTANT_FR, c["douzieme"]))
     g(len(c["ruptures_fr"]) >= 1, "la page cite des ruptures de série en France dans la fenêtre : aucune lue (%s)" % c["ruptures_fr"])
     g(c["ue_ps_dessus"] > 2 * c["ue_c1_dessus"] - 5,
       "UE : parent seul au-dessus du seuil « environ deux fois » le couple avec un enfant : %.1f / %.1f" % (c["ue_ps_dessus"], c["ue_c1_dessus"]))
@@ -227,6 +263,7 @@ def affichage(c: dict, lang: str) -> dict:
          "plage_dessous_bas": f(min(c["g_enf_dessous"][a] for a in ans), 0), "plage_dessous_haut": f(max(c["g_enf_dessous"][a] for a in ans), 0),
          "ue_total": f(c["ue_total"]), "ue_ecart_enf": pts(c["ue_g_enf"][y]), "ue_ecart_sans": pts(c["ue_g_sans"][y]),
          "ue_plage_enf_bas": f(min(c["ue_g_enf"][a] for a in ans), 0), "ue_plage_enf_haut": f(max(c["ue_g_enf"][a] for a in ans), 0),
+         "montant_question": f(MONTANT_FR, 0), "douzieme": f(c["douzieme"], 0), "annee_seuil": str(y - 2),
          "ruptures_fr": lg.enumere([str(a) for a in c["ruptures_fr"]], lang),
          "ue_plage_sans_bas": f(min(c["ue_g_sans"][a] for a in ans), 0), "ue_plage_sans_haut": f(max(c["ue_g_sans"][a] for a in ans), 0)}
     for p in ("", "ue_"):
@@ -379,7 +416,10 @@ def main() -> int:
     y = plausibilite(s)
     c = calcul(s, y)
     # ruptures de série (drapeau « b ») en France dans la fenêtre : la page les cite, lues ici, jamais saisies
+    c["peu_fiables"] = sorted((g, r_, h, a) for (g, r_, h, a), f in statuts.items()
+                              if "u" in f and DEBUT <= a <= y and r_ in ("A_60", "B_60", "TOTAL"))
     c["ruptures_fr"] = sorted({a for (g, _r, _h, a), f in statuts.items() if g == "FR" and "b" in f and DEBUT <= a <= y})
+    c["douzieme"], c["enquete"] = relever_seuil(y - 2) / 12, y
     m = mutation(c)
     n = gardes(c)
     if m:
@@ -438,12 +478,15 @@ def main() -> int:
     payload = {"releve_le": releve or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; source Eurostat (EU-SILC)", **payload}
     txt_ = json.dumps(payload, ensure_ascii=False, indent=1)
+    # Tous les PNG rendus EN MÉMOIRE avant toute écriture : un rendu qui échoue ne laisse pas un JSON neuf à côté de
+    # figures anciennes (défaut constaté le 26/10/2026 : « < » non échappé, JSON écrit puis arrêt au rendu).
+    pngs = {f: cairosvg.svg2png(bytestring=v.encode("utf-8"), output_width=1440, background_color="white") for f, v in figs.items()}
     OUT_DATA.write_text(txt_, encoding="utf-8")
     OUT_STATIC.write_text(txt_, encoding="utf-8")
     OUT_CSV.write_text(csv_texte(s, statuts), encoding="utf-8-sig", newline="\n")
     for f, v in figs.items():
         (OUT_IMG / f).write_text(v, encoding="utf-8")
-        cairosvg.svg2png(url=str(OUT_IMG / f), write_to=str(OUT_IMG / f.replace(".svg", ".png")), output_width=1440, background_color="white")
+        (OUT_IMG / f.replace(".svg", ".png")).write_bytes(pngs[f])
     OUT_FIGURES.write_text(json.dumps(fiches(figs, Aff), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     log("Ecrit : data/ et static/menages_imprevu.json, static/menages_imprevu.csv, data/figures_imprevu.json, %d figures SVG + PNG" % len(figs))
     return 0

@@ -1,4 +1,4 @@
-# relu le 2026-10-26 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de 4d11865 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-26 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de c98a2e1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire face à une dépense imprévue ?
 Ne pas pouvoir faire face à une dépense imprévue, est-ce une affaire de pauvreté ?
@@ -11,14 +11,14 @@ Guides et éclairages
 Données du : 26 octobre 2026 Eurostat, enquête EU-SILC, jeu ilc_mdes04 : France et Union européenne à 27, séries complètes depuis le début de l'enquête ; écarts étudiés de 2015 à 2025.
 Télécharger : CSV · JSON
 Qui ne pourrait pas faire face à une dépense imprévue ?
-En France, en 2025, 28,8 % des personnes vivent dans un ménage qui, selon ses propres déclarations, ne pourrait pas faire face à une dépense imprévue : près de trois sur dix.
+En France, en 2025, 28,8 % des personnes vivent dans un ménage qui, selon ses propres déclarations, ne pourrait pas faire face, par ses seuls moyens, à une dépense imprévue de 1 000 € : près de trois sur dix.
 Le revenu pèse lourd.
 Sous le seuil de pauvreté, la part atteint 65,9 %, environ deux tiers ; au-dessus, 21,6 %, environ une sur cinq.
 Mais le revenu ne dit pas tout.
 Au-dessus du seuil, là où le classement par le revenu dit « pas pauvre », la composition du foyer sépare nettement les situations.
-Part des personnes, déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation (Eurostat, EU-SILC).
+Part des personnes (et non des ménages), déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation (Eurostat, EU-SILC).
 Le résultat en une phrase.
-En France, en 2025, au-dessus du seuil de pauvreté, 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant : 2,5 fois plus.
+En France, en 2025, au-dessus du seuil de pauvreté, 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant, soit 28,3 points d’écart.
 Deux explications, un test
 On pourrait croire que tout se joue sur le revenu : être au-dessus ou en dessous du seuil de pauvreté.
 Si c’était le cas, deux foyers situés du même côté du seuil devraient avoir des parts voisines.
@@ -27,7 +27,8 @@ Avec un enfant, passer de deux adultes à un seul ajoute 28,3 points au-dessus d
 Sans enfant, le même passage n’ajoute que 9,4 points (de 9 à 13 points sur la même période).
 Le nombre d’enfants ne suffit pas à expliquer l’écart.
 La statistique compte comme « parent seul » tout adulte seul avec un enfant ou plus ; face aux couples avec deux enfants, l’écart reste de 29,3 points.
-L’écart lié au fait d’être seul est donc deux à trois fois plus grand quand il y a des enfants, et c’est au-dessus du seuil de pauvreté qu’il est le plus net.
+Au-dessus du seuil, l’écart entre foyers d’un et de deux adultes est donc deux à trois fois plus grand avec des enfants que sans.
+Il persiste dans toute la série, mais il ne permet pas d’isoler l’effet propre de la composition familiale : le nombre et l’âge des enfants, l’emploi, les transferts sociaux et les charges peuvent aussi différer entre ces foyers.
 En dessous, il se resserre (5,1 points en 2025) : parents seuls comme couples avec un enfant y sont en grande majorité exposés.
 Être au-dessus ou en dessous du seuil ne suffit donc pas à expliquer ces écarts.
 Ce que le test ne tranche pas.
@@ -39,13 +40,20 @@ Au-dessus du seuil de pauvreté, le passage de deux adultes à un seul ajoute 22
 Le constat n’est pas propre à la France.
 Ce que ces données ne disent pas
 Une déclaration, pas un compte en banque.
-La question porte sur la capacité perçue du ménage à couvrir une dépense imprévue d’un montant fixé par l’enquête pour chaque pays ; elle ne mesure ni l’épargne ni les actifs disponibles.
+La question porte sur la capacité perçue du ménage à payer une dépense imprévue sans aide extérieure ni nouvel emprunt ; elle ne mesure ni l’épargne ni les actifs disponibles.
+Un montant plus bas que la règle commune.
+En France, l’enquête de 2025 porte sur une dépense de 1 000 € (Insee).
+Le guide d’Eurostat fixe ce montant, pays par pays, au douzième du seuil de pauvreté tiré de l’enquête menée deux ans plus tôt, arrondi à 5 % près : environ 1 209 € pour la France en 2025, sur le seuil de 2023.
+La question française porte donc sur une somme plus faible, ce qui compte quand on compare son niveau à celui d’autres pays ; elle ne touche pas la comparaison entre ménages français, qui répondent tous à la même question.
 Des personnes, pas des ménages.
 Les parts sont calculées sur les personnes : un enfant d’un foyer exposé compte comme exposé.
 Le seuil de pauvreté est relatif.
 Il vaut 60 % du revenu médian par unité de consommation ; il tient compte de la taille du ménage, pas de la réserve dont il dispose.
 Une association, non une cause.
 Le graphe montre que la composition du foyer et la vulnérabilité au choc vont ensemble, pas que l’une produit l’autre ; la position dans la tranche de revenu n’est pas contrôlée.
+Une précision non publiée.
+Eurostat ne publie pas d’intervalle de confiance pour ces sous-groupes ; aucune des valeurs utilisées n’est signalée par Eurostat comme peu fiable.
+Ce signal ne dit pas qu’un écart de quelques dixièmes de point est significatif : la page ne commente que des écarts de plusieurs points.
 Des ruptures de série.
 Eurostat signale des ruptures en France en 2020 et 2022 : les plages pluriannuelles se lisent avec prudence.
 Le constat principal compare des ménages la même année, et la rupture ne l’atteint pas.
@@ -64,6 +72,8 @@ Sommaire, extraits et recensions →
 Sources
 Eurostat, enquête européenne sur les revenus et les conditions de vie (EU-SILC), jeu ilc_mdes04 (« Incapacité à faire face à des dépenses financières imprévues »), relevé par l’API de diffusion.
 Calculs de l’auteur : écarts entre compositions de ménage, plages annuelles.
+Montant de la question : Insee, communiqué de lancement de l’enquête SRCV du 31 janvier 2025 (« Êtes-vous en mesure de faire face à une dépense imprévue d’un montant de 1 000 euros ? ») ; règle commune : Eurostat, EU-SILC Methodological guidelines, 2025 operation, variable HS060, p.
+154 ; seuil de pauvreté d’une personne seule : Eurostat, jeu ilc_li01, relevé par le script.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
@@ -81,7 +91,7 @@ Données Eurostat (EU-SILC), relevé du 26 octobre 2026. https://stephane-lalut.
 Copier la citation
 En trois phrases
 Au-dessus du seuil de pauvreté, la part des personnes incapables de faire face à une dépense imprévue est plus de deux fois plus élevée chez les parents seuls que chez les couples avec un enfant.
-Quand il y a des enfants, le passage de deux adultes à un seul pèse deux à trois fois plus qu’en l’absence d’enfants.
+Quand il y a des enfants, l’écart entre foyers d’un et de deux adultes est deux à trois fois plus grand qu’en l’absence d’enfants ; c’est une association, non un effet isolé.
 Le revenu relatif ne dit donc pas tout de la capacité d’encaisser un choc.
 Copier le résumé
 Les données

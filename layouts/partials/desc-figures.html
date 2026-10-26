@@ -40,6 +40,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{monde." -}}{{- errorf "desc-figures: placeholder {monde.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Page « Déchets radioactifs : le volume dit-il le problème ? » : placeholders {dr.<cle>}, depuis
+       data/dechets_radioactifs.json (bloc affichage, scripts/update_dechets_radioactifs.py ; 26/10/2026). Meme contrat. */ -}}
+{{- with site.Data.dechets_radioactifs -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
+    {{- $text = replace $text (printf "{dr.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{dr." -}}{{- errorf "desc-figures: placeholder {dr.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Page « Qui peut faire face à une dépense imprévue ? » : placeholders {imp.<cle>}, depuis data/menages_imprevu.json
        (bloc affichage, scripts/update_menages_imprevu.py ; 26/10/2026). Page anglaise : bloc affichage_en. Meme contrat. */ -}}
 {{- with site.Data.menages_imprevu -}}
