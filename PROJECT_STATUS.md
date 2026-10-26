@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-26 (suite) — Registre complet (168/168) et réaligné sur l'édition corrigée ; recette 320-1280 px
+
+Mandat de l'auteur (« compléter ce qu'il faut compléter, tu as le livre comme référence »). Trois jalons rédigés sur
+leur chapitre (Olmèques, *Odyssée*, Gutenberg), FR et EN ; compteur « Les 168 jalons du livre » (comparaison en `int` :
+Hugo lit un nombre JSON comme un flottant, `eq 168 168.0` est faux). Les 165 autres entrées confrontées chapitre par
+chapitre : 43 signalements, citations et nombres revérifiés dans le livre, 43 corrections sur 41 entrées appliquées, 2
+lectures de l'auteur conservées. Dossier et règle : `D:\PRO\06_PROMOTION\ARCHITECTURE_RESSOURCES_2026-10-25\FIDELITE_REGISTRE\`.
+Journal de la page (26/10) ; `data/dates_affichage.json` porte le 25/10 dans l'historique du Registre et du glossaire
+(une entrée de journal doit tomber un jour de fond : le build l'a exigé). Recette 320/390/768/1280 sur 7 pages : aucun
+débordement ; ligne d'appartenance raccourcie au nom court du livre (3-4 lignes à 320 px avant). LanguageTool : 13
+signalements, tous faux. Build 0, `check-all --ci` 0, liens 0, dates 61/61.
+
 ### 2026-10-26 — architecture de l'index des ressources (arbitrage `PRO-20261025-225715`, go de l'auteur) ; EN LIGNE (`7cb1a74`, déploiement vert, version servie attestée : bloc du cadre, `#corpus` absent, ligne d’appartenance et fin de la barre sur le Registre FR et EN, 165 des 168, Templiers version B)
 
 Trois gestes, tous par métadonnées et organes communs. (1) Barre d'onglets réservée aux blocs `dossier: true` ; les

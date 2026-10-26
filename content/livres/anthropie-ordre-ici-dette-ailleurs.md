@@ -47,7 +47,7 @@ faq:
 ressources_livre:
   - label: "Le Registre des coûts déportés — version en ligne"
     url: "/registre-des-couts-deportes/"
-    note: "l'appareil documentaire du livre : 165 des 168 jalons « ordre créé / dette déportée », classés selon les sept âges, en consultation libre"
+    note: "l'appareil documentaire du livre : les 168 jalons « ordre créé / dette déportée », classés selon les sept âges, en consultation libre"
 related_awp:
   - chapter: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
     awp: "awp-01"

@@ -10,10 +10,13 @@
   {{- errorf "registre-ages : fichier data absent pour la langue %s" .Page.Lang -}}
 {{- end -}}
 <div class="registre">
+  {{- /* Complet (26/10/2026 : les trois jalons absents ajoutés) : le compte dit « les N jalons du livre » ; s'il
+         redevient partiel, il dit « N des M ». */ -}}
+  {{- $complet := eq (len $reg.jalons) (int $reg._meta.jalons_livre) -}}  {{- /* int : un nombre lu dans un JSON est un flottant pour Hugo */ -}}
   {{- if $isEn }}
-  <p class="registre__compte">Online: {{ len $reg.jalons }} of the {{ $reg._meta.jalons_livre }} milestones in the book—each on the same grid: <strong>Order created</strong>, <strong>Debt displaced</strong>, categories of the transfer.</p>
+  <p class="registre__compte">{{ if $complet }}All {{ len $reg.jalons }} milestones of the book{{ else }}Online: {{ len $reg.jalons }} of the {{ $reg._meta.jalons_livre }} milestones in the book{{ end }}—each on the same grid: <strong>Order created</strong>, <strong>Debt displaced</strong>, categories of the transfer.</p>
   {{- else }}
-  <p class="registre__compte">En ligne&nbsp;: {{ len $reg.jalons }} jalons des {{ $reg._meta.jalons_livre }} que compte le livre — chacun sur la même grille&nbsp;: <strong>ordre créé</strong>, <strong>dette déportée</strong>, catégories du transfert.</p>
+  <p class="registre__compte">{{ if $complet }}Les {{ len $reg.jalons }} jalons du livre{{ else }}En ligne&nbsp;: {{ len $reg.jalons }} jalons des {{ $reg._meta.jalons_livre }} que compte le livre{{ end }} — chacun sur la même grille&nbsp;: <strong>ordre créé</strong>, <strong>dette déportée</strong>, catégories du transfert.</p>
   {{- end }}
   {{- range $age := $reg.ages }}
   {{- $jalons := where $reg.jalons "age" $age.num }}

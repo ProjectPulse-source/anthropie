@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "source": "English edition of the Register of Offloaded Costs (the book's documentary apparatus). Translated 2026-08-15 from data/registre_couts_deportes.json (sealed source, commit a209a97) through the short-text translation chain: locale pack en-US, author-validated terminology (decisions_terminologiques.yaml, app70 canonical name 'Register of Offloaded Costs', ch. 177 grid 'Order created / Debt displaced'), deterministic gates, sequential adversarial review (P3B), arbitration (fidelity > voice > fluency > elegance). Editorial corrections happen HERE for EN display text; structure follows the FR file.",
+  "source": "English edition of the Register of Offloaded Costs (the book's documentary apparatus). Translated 2026-08-15 from data/registre_couts_deportes.json; completed and realigned 2026-10-26 with the French file (three milestones added, 41 entries corrected against the corrected edition of the book). Editorial corrections happen HERE for EN display text; structure follows the FR file.",
   "jalons_livre": 168
  },
  "ages": [
@@ -98,7 +98,7 @@
    "tri": -300000,
    "date": "≈ −300,000",
    "titre": "Homo sapiens—the face-interface",
-   "ordre": "A high-frequency interface of social recognition, accelerating coordination and establishing nonverbal protocols of trust.",
+   "ordre": "A high-frequency interface of social recognition, which may have accelerated coordination and set up nonverbal protocols of trust.",
    "dette": "The metabolic cost of processing facial information; future infrastructures of control (biometrics) built on the surveillance of faces.",
    "categories": [
     "Social",
@@ -111,7 +111,7 @@
    "tri": -120000,
    "date": "≈ −120,000",
    "titre": "Trade—the bond that divides",
-   "ordre": "Long-distance exchange networks based on conventions of value (ornaments, pigments), reducing uncertainty.",
+   "ordre": "Circulation of ornaments and pigments between groups, founded on shared conventions of value, which reduce local uncertainty.",
    "dette": "Inequalities formalized through the accumulation of symbolic goods; the cost of logistics; division between those who share the code and everyone else.",
    "categories": [
     "Economic",
@@ -125,7 +125,7 @@
    "date": "≈ −70,000",
    "titre": "Religion—the invisible held in common",
    "ordre": "Social cohesion beyond kinship through the ritualized management of anxiety and a shared sacred calendar.",
-   "dette": "The material cost of offerings and places of worship; time taken from subsistence; division between initiates and those excluded from the rite.",
+   "dette": "The material cost of offerings and of places set aside for ritual; time taken from subsistence; a division between those who share the rite and those who stand apart from it.",
    "categories": [
     "Symbolic",
     "Social",
@@ -137,7 +137,7 @@
    "tri": -45000,
    "date": "≈ −45,000",
    "titre": "Cave art—mind on rock",
-   "ordre": "A durable symbolic external memory that fixes complex narratives and lets consciousness reflect upon itself.",
+   "ordre": "A durable external symbolic memory that fixes images, hands, and recurring signs, where attention learns to reflect on itself.",
    "dette": "The energy and physical cost of producing the works in remote places (pigments, lighting, danger); representational codes fixed in ways that frame how the world is perceived.",
    "categories": [
     "Cognitive",
@@ -163,7 +163,7 @@
    "tri": -5000,
    "date": "≈ −5,000",
    "titre": "The wheel—the eternal mechanical return",
-   "ordre": "Logistical efficiency, hauling set free, standardized production (the potter’s wheel).",
+   "ordre": "Logistical efficiency, the back freed from carrying loads, and the potter's wheel, where mechanical repetition gives rise to variation of form.",
    "dette": "The obligation to build and maintain infrastructure (roads); confinement within mechanical logic and its upkeep costs.",
    "categories": [
     "Technical",
@@ -176,8 +176,8 @@
    "tri": -3500,
    "date": "≈ −3,500",
    "titre": "Uruk—gathering to divide",
-   "ordre": "Specialization of tasks, centralized management of surpluses, safety through urban concentration.",
-   "dette": "Rigid social stratification; loss of individual autonomy; heightened fragility in the face of epidemics and centralized famines.",
+   "ordre": "Specialization of tasks, centralized management of flows (water, grain, rations, tablets, seals), predictability through urban concentration.",
+   "dette": "Social stratification that saturates quickly; loss of polymorphy; heightened vulnerability to contagion; each layer of order adds a layer of cost (corvées, levies, registers).",
    "categories": [
     "Social",
     "Political",
@@ -189,8 +189,8 @@
    "tri": -3200,
    "date": "≈ −3,200",
    "titre": "Cuneiform—carving to last",
-   "ordre": "An infallible administrative memory, written law, State accounting that guarantees contracts.",
-   "dette": "The creation of a scribal caste; exclusion of the illiterate; social norms rigidified and flexibility lost.",
+   "ordre": "Durable administrative memory, written and public law, written accounts (rations, debts, contracts) that reduce local uncertainty.",
+   "dette": "A body of scribes holding a relative monopoly over the world-to-sign interface, paid for in years of subsistence; exclusion of the illiterate; loss of granularity; an entire economy of proofs, archives, and corvées.",
    "categories": [
     "Cognitive",
     "Social",
@@ -203,7 +203,7 @@
    "date": "≈ −2,000",
    "titre": "Pantheons & kingdoms—believing to obey",
    "ordre": "Divine legitimation of temporal power, the empire synchronized by a shared ritual calendar.",
-   "dette": "The colossal material cost of temples and sacrifices; politics subordinated to theology; the logistical debt of offerings.",
+   "dette": "The material cost of temples and sacrifices, borne by the countryside; the legitimacy of power hanging on the supply of the rite; the logistical debt of offerings.",
    "categories": [
     "Symbolic",
     "Political",
@@ -216,7 +216,7 @@
    "date": "≈ −1,200",
    "titre": "Tyranny—governing time",
    "ordre": "Acceleration and efficiency in decision-making by short-circuiting deliberation.",
-   "dette": "Loss of collective legitimacy; risk concentrated on a single head; structural instability; a debt of time levied on citizens.",
+   "dette": "Guarantees dissolved and citizens demobilized; dissent postponed rather than suppressed; the perpetual upkeep of order (guards, repairs, levies); a debt of time levied on citizens.",
    "categories": [
     "Political",
     "Temporal",
@@ -234,6 +234,32 @@
     "Symbolic",
     "Political",
     "Social"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -900,
+   "date": "≈ −900",
+   "titre": "The Olmecs—glyphs of power",
+   "ordre": "Sovereignty inscribed in stone: emblems, colossal heads, sun-aligned plazas, and the calendar fix who rules and when, more durably than the voice.",
+   "dette": "Legibility at the center is bought at the periphery: basalt hauled over dozens of kilometers, felled forests, shoulders and maize rations, workshops and distant exchanges; even erasing the signs, in decline, has its price.",
+   "categories": [
+    "Political",
+    "Symbolic",
+    "Ecological"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -800,
+   "date": "≈ −800",
+   "titre": "The Odyssey—the grammar of return",
+   "ordre": "A technology of return: metis, recognition in stages, and regulated hospitality (xenia) restore a home without shattering the present.",
+   "dette": "The return is paid for elsewhere: lost companions, punished hosts, sacrificed animals, the vigils of Penelope and the servants; the slaughter of the suitors displaces disorder into the city, until Athena intervenes.",
+   "categories": [
+    "Social",
+    "Moral",
+    "Temporal"
    ]
   },
   {
@@ -294,7 +320,7 @@
    "date": "≈ −551",
    "titre": "Confucius—the motionless revolution",
    "ordre": "A social order founded on the exemplarity of gestures (li) and roles, spreading by imitation rather than by decree.",
-   "dette": "The cost in time and attention of learning and maintaining the rites; the “models” financed by the community; the risk of rigidifying into conformism.",
+   "dette": "The cost in time and attention of learning and maintaining the rites; the community's funding of its « models » (hours stolen from the field, decades of study for the imperial examinations, families feeding an unproductive son).",
    "categories": [
     "Social",
     "Symbolic",
@@ -410,7 +436,7 @@
    "date": "≈ −441",
    "titre": "Sophocles—the law of the heart against the heart of the law",
    "ordre": "A theatrical space for staging the irreducible tension between the impersonal norm of the city and the unwritten law of conscience and family.",
-   "dette": "The material cost of performance (the choregia); civic time immobilized to allow collective catharsis, paid for by those excluded from citizenship.",
+   "dette": "The material cost of performance (the choregia, paid by the wealthy citizens designated for it); civic time immobilized for collective catharsis, paid in attendance by the citizens themselves (days taken from workshop and building site) and by the public treasury.",
    "categories": [
     "Social",
     "Political",
@@ -449,7 +475,7 @@
    "date": "≈ −400",
    "titre": "Callicles—the right of the strongest, the law of the weak",
    "ordre": "A “natural” legitimation of domination and of the maximization of desires (pleonexia) by an elite.",
-   "dette": "The burden of moderation and cooperation is shifted onto the “weak”; the order of the strong is financed by the exhaustion and servitude of everyone else.",
+   "dette": "The order of the strong displaces its disorder onto others: craftsmen, vine-growers, rowers, weavers pay so that a handful may « grow »; it is financed by the exhaustion and invisibility of its debtors (unpaid hours, broken solidarities).",
    "categories": [
     "Social",
     "Political",
@@ -578,7 +604,7 @@
    "tri": -49,
    "date": "≈ −49",
    "titre": "The Rubicon—when speed assassinates the law",
-   "ordre": "An end to civil war through a lightning seizure of power, where the speed of the fait accompli replaces deliberation.",
+   "ordre": "A lightning seizure of power that opens the civil war, where the speed of the fait accompli replaces deliberation: the law is no longer a wall, only a delay.",
    "dette": "Republican legality assassinated; the human and economic cost of the military campaigns; a debt of legitimacy settled by dictatorship.",
    "categories": [
     "Political",
@@ -631,7 +657,7 @@
    "date": "135",
    "titre": "Stoicism—the will to will nothing",
    "ordre": "An impregnable inner citadel, freedom through the mastery of judgments and the discipline of desire.",
-   "dette": "The social cost of indifference to common burdens; the otium (free time) this asceticism requires is financed by the labor of others (slaves, servants).",
+   "dette": "The bodily cost of invulnerability to power (Stoic martyrs, a debt settled in civic blood); the otium this asceticism requires is financed by the labor of others (slaves, secretaries, stewards).",
    "categories": [
     "Cognitive",
     "Social",
@@ -683,7 +709,7 @@
    "date": "632",
    "titre": "The Quran—the algorithm of transcendence",
    "ordre": "A unified social and spiritual protocol (prayers, zakāt) that synchronizes a decentralized network of believers and creates a community (the Umma).",
-   "dette": "The cost of establishing a consensus (standardization under ʿUthmān), which displaces conflict into politics (schisms); the cost of conformity for society (time, resources).",
+   "dette": "The cost of establishing a consensus (standardization under ʿUthmān: private codices burned, grudges, a grievance of the insurgents of 656) that displaces disorder toward politics; the cost of conformity for society (time, resources).",
    "categories": [
     "Symbolic",
     "Social",
@@ -787,7 +813,7 @@
    "date": "1272",
    "titre": "Thomas Aquinas—the architect of compatibilities",
    "ordre": "An intellectual synthesis that makes Aristotelian reason and Christian faith compatible, creating a durable architecture of knowledge.",
-   "dette": "Institutional costs (university quarrels); conflict displaced onto technical points that would feed future schisms; clarity paid for in conceptual exclusions.",
+   "dette": "Institutional cost (university quarrels, the quarrel over the mendicant orders, the condemnations of 1277); conflict is deferred into technical clauses where Ockham and the nominalists will flourish; clarity is paid for in conceptual exclusions.",
    "categories": [
     "Philosophical",
     "Cognitive",
@@ -812,7 +838,7 @@
    "tri": 1314,
    "date": "1314",
    "titre": "The Templars—turning creed into credit",
-   "ordre": "A transnational financial network in which religious trust guarantees the circulation of value without transporting metal (letters, accounts, seals): accounts backed by a vow.",
+   "ordre": "A transnational financial network in which religious trust makes money travel, and not only metal (letters, accounts, seals): accounts backed by a vow.",
    "dette": "A network of trust that keeps its records beyond the prince's control lives at his mercy: the crown, already keeping its own accounts through its Treasury, destroys the order and comes out paid; trust moves from the vow to the prince's register.",
    "categories": [
     "Economic",
@@ -825,7 +851,7 @@
    "tri": 1325,
    "date": "1325",
    "titre": "Timbuktu—ink in the sand",
-   "ordre": "A major intellectual hub founded on a knowledge economy (a book worth more than gold) and distributed resilience (private libraries).",
+   "ordre": "A major intellectual center founded on an economy of knowledge (the book is exchanged for gold and becomes social capital) and on distributed resilience (private libraries).",
    "dette": "The high cost of importing the raw material (paper); preservation in a hostile environment demands constant engineering and investment.",
    "categories": [
     "Cognitive",
@@ -839,7 +865,7 @@
    "date": "1377",
    "titre": "Ibn Khaldun—the cycle of empires",
    "ordre": "A cyclical model of history that makes the rise and fall of dynasties intelligible through the force of social cohesion (’asabiyya).",
-   "dette": "Lucidity about the mechanics of power can lead to cynicism or paralysis; the cycle itself is a debt of blood and resources paid at every transition.",
+   "dette": "Each phase of the cycle has its bill: blood and want at the conquest, fixed charges at the peak, mercenaries, tributes, and ransoms in decline; the cycle is a debt of blood and resources paid at every transition.",
    "categories": [
     "Political",
     "Philosophical",
@@ -865,7 +891,7 @@
    "date": "1435",
    "titre": "Alberti—framing the world, building the eye",
    "ordre": "A rationalized visual space, measurable and reproducible through perspective, turning painting into a “window onto the world.”",
-   "dette": "The eye is bound to a single, immobile point of view; the frame excludes what lies outside it; mastery of the visible is paid for with the loss of peripheral, multisensory vision.",
+   "dette": "The eye is constrained to a single, motionless point of view; the frame excludes what lies outside it; mastery of the visible is paid for by a loss of laterality and of peripheral vision.",
    "categories": [
     "Cognitive",
     "Technical",
@@ -874,11 +900,24 @@
   },
   {
    "age": 4,
+   "tri": 1454,
+   "date": "1454",
+   "titre": "Gutenberg—multiplying the word, redistributing authority",
+   "ordre": "Exact reproducibility of the text: movable type, oil-based ink, and the screw press make copies identical, bring down the price of books, and make verifiable citation and shared criticism possible.",
+   "dette": "The end of single authority: dispute escalates into the wars of religion; dialects sidelined by printed languages, slander industrialized along with proof, the rent captured by the financier rather than the inventor.",
+   "categories": [
+    "Cognitive",
+    "Political",
+    "Cultural"
+   ]
+  },
+  {
+   "age": 4,
    "tri": 1492,
    "date": "1492",
    "titre": "New worlds—discovering, counting, conquering",
    "ordre": "Planetary unification, the creation of a Euro-centered world-system through cartography, accounting, and military power.",
-   "dette": "Amerindian civilizations destroyed, the slave trade, resources plundered; a bottomless human, ecological, and moral debt.",
+   "dette": "The collapse of Amerindian populations (epidemics, war, forced labor), the encomienda and the mita of Potosí, the plunder of Andean silver; a human and moral debt.",
    "categories": [
     "Spatial",
     "Economic",
@@ -1034,7 +1073,7 @@
    "date": "1651",
    "titre": "Hobbes—the monster that saves us from ourselves",
    "ordre": "Absolute security through the total alienation of individual liberties to an artificial sovereign (the Leviathan) who ends the “war of all against all.”",
-   "dette": "Fear becomes the foundation of politics; the question “who protects us from the protector?” remains unanswered, opening the way to totalitarianism.",
+   "dette": "Fear becomes the foundation of politics; the question « who protects us from the protector? » remains open when the Leviathan turns totalitarian, the monster then turning against its creators.",
    "categories": [
     "Political",
     "Social",
@@ -1164,7 +1203,7 @@
    "date": "1762",
    "titre": "Insurance—the code of risk",
    "ordre": "Risk mutualized, transforming an uncertain future into calculable probabilities and payable premiums.",
-   "dette": "New exclusions created (the “uninsurable”); the moral debt of surveillance (moral hazard); the socialization of risk can lead to its privatization (bank bailouts).",
+   "dette": "New exclusions (the « uninsurable »); the moral debt of surveillance (moral hazard); when private risk overflows, the debt falls back on the taxpayer (AIG, 2008).",
    "categories": [
     "Economic",
     "Social",
@@ -1229,7 +1268,7 @@
    "date": "1789",
    "titre": "The Rights of Man—transcendence without God",
    "ordre": "Universal principles (liberty, equality) becoming a norm above the State, founding a right of resistance.",
-   "dette": "Abstract universality masks de facto exclusions (women, slaves, the colonized); the ideal becomes a tool of justification for new forms of domination.",
+   "dette": "Proclaimed universality stumbles over its exclusions (women, slaves, the poor shut out by property-based suffrage); the « common utility » clause allows a privilege to be renamed a utility, and the algorithm today reproduces hierarchies.",
    "categories": [
     "Inequalities",
     "Symbolic violence",
@@ -1281,7 +1320,7 @@
    "date": "1792",
    "titre": "Romantic love—the heart as a code of exclusion",
    "ordre": "Individual choice and intimacy legitimized as the foundation of the couple, against the socially arranged match.",
-   "dette": "Gender roles naturalized; the mental and domestic load (borne mostly by women) rendered invisible; affects commodified.",
+   "dette": "The mental and domestic load made invisible (often borne by women); debts of time, care, and opportunity; intimacy commodified by platforms.",
    "categories": [
     "Social",
     "Inequalities",
@@ -1346,7 +1385,7 @@
    "date": "1824",
    "titre": "Thermodynamics—the entropy of the terminal program",
    "ordre": "Universal laws of energy allowing an unprecedented optimization of machines and industry.",
-   "dette": "Awareness of energy’s inescapable degradation (entropy); the end of the illusion of perpetual progress; an ecological debt through massive combustion.",
+   "dette": "Awareness of the inescapable degradation of energy (entropy); the end of the illusion of perpetual progress; a permanent thermal tribute: losses from engines, power plants, and data centers, a bill charged elsewhere.",
    "categories": [
     "Energetic",
     "Ecological",
@@ -1372,7 +1411,7 @@
    "date": "1835",
    "titre": "Tocqueville—the aristocratic prophet of our servitudes",
    "ordre": "A lucid diagnosis of democracy, of its strengths (equality) and its risks (tyranny of the majority, soft despotism).",
-   "dette": "The critique of conformity can itself become a posture of intellectual distinction; a risk of paralysis through hyper-awareness of the perils.",
+   "dette": "Equality opens two slopes: independence, which can turn into anarchy, and gentle tutelage, which leads to infantilization and weariness of the will; democracy also knows how to eliminate « within the forms » (slavery, the Indians), as Tocqueville himself points out.",
    "categories": [
     "Cognitive",
     "Social",
@@ -1385,7 +1424,7 @@
    "date": "1835",
    "titre": "The telegraph—humanity wired",
    "ordre": "Instant long-distance communication, the synchronization of markets, empires, and clocks.",
-   "dette": "The tyranny of urgency, the loss of depth and time for reflection; the systemic vulnerability of centralized networks; an infrastructure debt.",
+   "dette": "The tyranny of urgency and of the obligation to reply, the loss of depth and of the right to slowness; the human cost borne by operators (nerves, sleepless nights); the small catastrophes of speed, such as the misread Ems dispatch.",
    "categories": [
     "Temporal",
     "Cognitive",
@@ -1398,7 +1437,7 @@
    "date": "1848",
    "titre": "The Spring of 1848—the simultaneous failure of the peoples",
    "ordre": "Continental diffusion of democratic, national, and social ideas; an apprenticeship in political mobilization.",
-   "dette": "Coordinated repression by the empires; a lasting fracture between liberals and socialists; failure immunizes the elites and delays reform.",
+   "dette": "Coordinated repression by the empires (Russia crushes Hungary, Austria retakes Vienna and Prague, France stifles Rome); in June the Republic fires on republicans and the bourgeoisie chooses order over liberty; failure inoculates Europe against the illusion of an overthrow at one stroke and defers the successes (suffrage, social rights, nations).",
    "categories": [
     "Political",
     "Social",
@@ -1411,7 +1450,7 @@
    "date": "1853–1870",
    "titre": "Haussmann—order set in stone",
    "ordre": "Fluid circulation, public hygiene (sewers, ventilation), imperial monumentality.",
-   "dette": "Social segregation through the expulsion of the working classes to the outskirts; the old social fabric destroyed; a colossal financial debt.",
+   "dette": "Social segregation through the expulsion of the working classes to the outskirts; destruction of the old social fabric; fortunes built on expropriations (Pereire, Rothschild); a city made controllable by troops, turned in 1871 into a « highway of repression ».",
    "categories": [
     "Spatial",
     "Social",
@@ -1423,7 +1462,7 @@
    "tri": 1854,
    "date": "1854",
    "titre": "Hygienism—the body under a public-health contract",
-   "ordre": "Public health, a spectacular drop in mortality through hygiene norms (water, vaccines).",
+   "ordre": "Public health: safe water, sewers, asepsis, vaccination, which probably account for a major part of the fall in mortality (world life expectancy of about 32 years around 1900, nearly 73 years in 2019).",
    "dette": "Biopolitics: social and normative control of bodies; stigmatization of the classes deemed “dangerous”; an immune debt (the hygiene hypothesis).",
    "categories": [
     "Social",
@@ -1450,7 +1489,7 @@
    "date": "1862",
    "titre": "The corporation—an immortal legal creature",
    "ordre": "Long-term capital accumulation through legal personhood and limited liability.",
-   "dette": "Systemic externalization of costs (social, ecological); organized irresponsibility; economic power without a democratic counterweight.",
+   "dette": "Profits privatized, costs socialized: when the venture goes wrong, liabilities spill over onto the community (employees, neighbors, the river downstream); social and ecological externalities still to be made billable; concentrated economic power (platforms, margins, tax optimization) that regulation and governance seek to rein in.",
    "categories": [
     "Economic",
     "Ecological",
@@ -1463,7 +1502,7 @@
    "date": "1867",
    "titre": "Capital—the vampire with equations",
    "ordre": "A critical grammar of capitalism, unveiling the mechanism of exploitation (surplus value); an organizing tool for the workers’ movement.",
-   "dette": "A risk of dogmatism and economic reductionism in certain readings; an ideological polarization that can freeze analysis.",
+   "dette": "Costs that accumulation displaces onto labor (surplus labor, the industrial reserve army) and onto nature (CO₂, deforestation, the sixth extinction); the tendency of the rate of profit to fall remains contested (Okishio, 1961), though the question of these costs does not depend on it.",
    "categories": [
     "Cognitive",
     "Political",
@@ -1489,7 +1528,7 @@
    "date": "1871",
    "titre": "The Commune—the revolution that invents its own vocabulary",
    "ordre": "An experiment in direct democratic self-government (recallable mandates, self-management).",
-   "dette": "Civil war and extreme repression (the “Bloody Week”); the memory of the crushing would long weigh on France’s social movements.",
+   "dette": "Civil war and extreme repression (the « Bloody Week »: provost courts, some 43,000 arrests, perhaps twenty thousand dead); a new vocabulary that cost so many lives: the city lost, the language won.",
    "categories": [
     "Political",
     "Social",
@@ -1502,7 +1541,7 @@
    "date": "1882",
    "titre": "Ferry’s schools—the machine for formatting souls",
    "ordre": "National unity through compulsory schooling, secularism, and a common language.",
-   "dette": "Regional cultures eradicated by the imposition of a “single canon”; the formatting of a schoolroom nationalism that prepared the slaughter of 1914–18 and legitimized the “coloniality of knowledge.”",
+   "dette": "Regional languages eradicated (the « signal », a « pedagogy of eradication »); a national narrative instilled that helped make possible mass mobilization and the acceptance of sacrifice in 1914-18; the history of France taught in the colonies, a « double alienation ».",
    "categories": [
     "Cultural",
     "Political",
@@ -1593,7 +1632,7 @@
    "date": "1905–1915",
    "titre": "Einstein—elastic time, curved space",
    "ordre": "Space, time, matter, and energy unified under invariant physical laws.",
-   "dette": "A nuclear debt (E=mc²); the cognitive debt of a counterintuitive world; the cost of the infrastructures needed to verify and use his theories (GPS, accelerators).",
+   "dette": "Nuclear debt (E=mc²: heat, radiation, long-lived waste); the cost of the infrastructure that maintains a global time (GPS corrections, satellites to replace, orbital debris); a relativistic debt toward nature, generations, and physics.",
    "categories": [
     "Cognitive",
     "Energetic",
@@ -1632,7 +1671,7 @@
    "date": "1922–1928",
    "titre": "Lippmann & Bernays—consent unaware of itself",
    "ordre": "The engineering of public opinion, making the masses governable and desires predictable for the market.",
-   "dette": "A cognitive debt (the impoverishment of debate), a democratic debt (the citizen’s alienation), and a social debt (needs artificially created).",
+   "dette": "Epistemic debt (a pseudo-environment replaces the environment, distrust accumulates), attentional debt (decision fatigue, polarization, chronic outrage), and social debt (costs externalized onto those left out of the story: tobacco cancers, overthrown regimes, discredited institutions).",
    "categories": [
     "Cognitive",
     "Political",
@@ -1658,7 +1697,7 @@
    "date": "1928",
    "titre": "Penicillin—the body under an algorithmic contract",
    "ordre": "An administered victory over bacterial infections, a drastic drop in mortality, surgical safety.",
-   "dette": "The biological debt of antibiotic resistance; disorder displaced onto chronic diseases; a debt of surveillance (biopolitics).",
+   "dette": "The biological debt of antibiotic resistance; disorder displaced toward data governance (capture, ransomware), the economy (rents, prices), and anxiety (self-tracking, overdiagnosis).",
    "categories": [
     "Ecological",
     "Social",
@@ -1839,7 +1878,7 @@
    "date": "1958–1988",
    "titre": "Climate—measuring in order to ignore",
    "ordre": "An ever more precise body of scientific evidence on global warming.",
-   "dette": "Exact knowledge becomes an alibi for political inaction; the carbon debt accumulates, transferring physical chaos onto future generations.",
+   "dette": "Exact knowledge sometimes becomes the alibi for political inaction; the carbon debt accumulates, shifting physical chaos onto future generations.",
    "categories": [
     "Cognitive",
     "Temporal",
@@ -2007,7 +2046,7 @@
    "date": "1991",
    "titre": "The USSR—the empire that killed itself trying to cure itself",
    "ordre": "The end of the Cold War, the liberation of the nations held captive by the Soviet empire.",
-   "dette": "Post-collapse economic and social chaos (shock therapy); political disorder displaced into regional conflicts and the rise of a revanchist Russian nationalism.",
+   "dette": "Economic and social chaos after the collapse (shock therapy, hyperinflation, « loans for shares »); political disorder shifts toward regional conflicts (Crimea and the Donbas in 2014, the 2022 invasion) and a Russia held together by authoritarian order, oil rent, and nostalgia.",
    "categories": [
     "Geopolitical",
     "Political",
@@ -2163,7 +2202,7 @@
    "date": "2022",
    "titre": "Psittacism 2.0—the parrot speaks to parrots",
    "ordre": "The production of language and images automated, productivity gained.",
-   "dette": "A verification debt (hallucinations), a social debt (jobs replaced), and a cognitive debt (judgment atrophied); the plundering of creative corpora.",
+   "dette": "A debt of verification (hallucinations), a social debt (tasks replaced, retraining left to the individual), and a cognitive debt (atrophy of judgment); value concentrated at the expense of the creators whose works serve as the corpus.",
    "categories": [
     "Cognitive",
     "Economic",

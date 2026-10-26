@@ -1,12 +1,12 @@
 ---
 title: "Le Registre des coûts déportés"
-description: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : les jalons du livre, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains, ramenés chacun à l'ordre créé et à la dette déportée — le désordre déplacé ailleurs, plus tard ou sur d'autres. 165 des 168 jalons en consultation libre, classés selon les sept âges du livre."
+description: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : les jalons du livre, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains, ramenés chacun à l'ordre créé et à la dette déportée — le désordre déplacé ailleurs, plus tard ou sur d'autres. Les 168 jalons en consultation libre, classés selon les sept âges du livre."
 date: 2026-08-15
-lastmod: 2026-10-25
+lastmod: 2026-10-26
 og_title: "Le Registre des coûts déportés — chronologie documentée — S. Lalut"
 faq:
   - question: "Qu'est-ce que le Registre des coûts déportés ?"
-    answer: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE — Ordre ici. Dette ailleurs (Stéphane Lalut, 2025). Le livre raconte l'histoire longue en 168 jalons, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains ; le Registre ramène chaque jalon à la même grille : l'ordre créé par une innovation et la dette déportée — le désordre déplacé vers d'autres lieux, d'autres temps ou d'autres groupes. Le livre y renvoie par un QR code ; 165 des 168 jalons sont en consultation libre sur cette page."
+    answer: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE — Ordre ici. Dette ailleurs (Stéphane Lalut, 2025). Le livre raconte l'histoire longue en 168 jalons, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains ; le Registre ramène chaque jalon à la même grille : l'ordre créé par une innovation et la dette déportée — le désordre déplacé vers d'autres lieux, d'autres temps ou d'autres groupes. Le livre y renvoie par un QR code ; les 168 jalons sont en consultation libre sur cette page."
   - question: "Quels sont les sept âges de l'anthropie ?"
     answer: "Le livre ANTHROPIE organise l'histoire longue en sept âges : 1. Les programmes fondateurs (≈ −3,3 millions d'années → −10 000) ; 2. Le piège néolithique (−10 000 → −1 000) ; 3. Les systèmes d'exploitation antiques (−1 000 → 500) ; 4. Les réseaux : routes, relais, relais de pouvoir (500 → 1500) ; 5. La machine-État moderne (1500 → 1800) ; 6. L'industrialisation et les nations (1800 → 1945) ; 7. Le métaprogramme contemporain (1945 → présent). Chaque âge regroupe les jalons du Registre qui tombent dans sa période."
   - question: "Que signifient « ordre créé » et « dette déportée » ?"
@@ -18,8 +18,10 @@ faq:
   - question: "Le Registre des coûts déportés est-il la même chose que les registres de coûts couplés ?"
     answer: "Non. Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : une chronologie des jalons historiques du livre. Les registres de coûts couplés sont un apport théorique d'AWP-06 : la grille des quatre registres — énergie, matière, territoire, attention — selon lesquels l'infrastructure numérique déplace simultanément le désordre. L'un est une chronologie, l'autre une typologie ; seul le mot « registre » est commun."
   - question: "Où trouver le Registre des coûts déportés complet ?"
-    answer: "Sur cette page, en consultation libre : 165 des 168 jalons du livre ANTHROPIE — Ordre ici. Dette ailleurs (2025, 630 pages). Les trois jalons qui n'y figurent pas encore (Olmèques, Odyssée, Gutenberg) se lisent dans le livre, qui déploie chaque jalon en chapitre, résume chaque âge par un schéma « ordre créé / désordre déporté » et tire la trajectoire d'ensemble dans sa postface. Le livre renvoie à cette page par un QR code (« Pour aller plus loin », p. 619)."
+    answer: "Sur cette page, en consultation libre : les 168 jalons du livre ANTHROPIE — Ordre ici. Dette ailleurs (2025, 630 pages). Le livre déploie chaque jalon en chapitre, résume chaque âge par un schéma « ordre créé / désordre déporté » et tire la trajectoire d'ensemble dans sa postface. Le livre renvoie à cette page par un QR code (« Pour aller plus loin », p. 619)."
 journal:
+  - date: 2026-10-26
+    texte: "Les trois jalons absents ajoutés (Olmèques, Odyssée, Gutenberg), rédigés sur le texte du livre : le Registre compte désormais les 168 jalons. Les 165 autres entrées relues contre l'édition corrigée ; 41 réalignées là où elles contredisaient le livre, affirmaient plus que lui ou lui prêtaient un fait qu'il ne porte pas (par exemple : le Rubicon ouvre la guerre civile, il ne la clôt pas ; l'hygiène explique « sans doute une part majeure » de la baisse de la mortalité, non toute)."
   - date: 2026-10-25
     texte: "Périmètre dit en tête (165 des 168 jalons, les trois absents nommés) ; le Registre n'est plus présenté comme l'épilogue du livre, qui le résume en schémas et y renvoie par un QR code ; jalon « Templiers » aligné sur l'édition corrigée du livre (le Temple a moins légué ses méthodes à l'administration royale qu'une leçon)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
@@ -32,7 +34,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   accueil: 3
 ---
 
-Le Registre des coûts déportés est l'**appareil documentaire** du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025)&nbsp;: le livre raconte l'histoire longue en 168 jalons, des premiers outils de pierre (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains, et le Registre pose à chacun les deux mêmes questions&nbsp;: **quel ordre cette innovation a-t-elle créé, et quelle dette a-t-elle déportée** — vers d'autres lieux, d'autres temps ou d'autres groupes sociaux&nbsp;? La version en ligne, ci-dessous, est en consultation libre&nbsp;; elle compte 165 jalons. Les trois autres — les Olmèques (−900), l'*Odyssée* (−800) et Gutenberg (1454) — se lisent pour l'instant dans le livre seulement.
+Le Registre des coûts déportés est l'**appareil documentaire** du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025)&nbsp;: le livre raconte l'histoire longue en 168 jalons, des premiers outils de pierre (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains, et le Registre pose à chacun les deux mêmes questions&nbsp;: **quel ordre cette innovation a-t-elle créé, et quelle dette a-t-elle déportée** — vers d'autres lieux, d'autres temps ou d'autres groupes sociaux&nbsp;? La version en ligne, ci-dessous, est en consultation libre&nbsp;; elle compte les 168 jalons du livre.
 
 ## Comment lire un jalon
 

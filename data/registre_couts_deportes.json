@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "source": "Registre des couts deportes du livre ANTHROPIE (epilogue). Version en ligne derivee le 2026-08-15 de l'ancienne page d'accueil (branche backup-mini-site du depot), redigee par l'auteur ; le livre imprime compte 168 jalons. Les ages suivent la segmentation du livre publie (fiche content/livres/anthropie-ordre-ici-dette-ailleurs.md), affectation chronologique par bornes officielles. Toute correction editoriale se fait ICI (source maintenue).",
+  "source": "Registre des couts deportes, appareil documentaire du livre ANTHROPIE (le livre y renvoie par un QR code, p. 619 de l'edition de 630 p.). Version en ligne derivee le 2026-08-15 de l'ancienne page d'accueil, redigee par l'auteur ; completee et realignee le 2026-10-26 sur l'edition corrigee (630 p.) : trois jalons ajoutes (Olmeques, Odyssee, Gutenberg), 41 entrees relues chapitre par chapitre et corrigees (trace : D:/PRO/06_PROMOTION/ARCHITECTURE_RESSOURCES_2026-10-25/FIDELITE_REGISTRE/). Les ages suivent la segmentation du livre publie, affectation chronologique par bornes. Toute correction editoriale se fait ICI (source maintenue), et suit le livre.",
   "jalons_livre": 168
  },
  "ages": [
@@ -98,7 +98,7 @@
    "tri": -300000,
    "date": "≈ -300 000",
    "titre": "Homo sapiens — visage-interface",
-   "ordre": "Interface de reconnaissance sociale à haute fréquence, accélérant la coordination et établissant des protocoles de confiance non-verbaux.",
+   "ordre": "Interface de reconnaissance sociale à haute fréquence, qui a pu accélérer la coordination et instaurer des protocoles de confiance non-verbaux.",
    "dette": "Coût métabolique du traitement de l'information faciale ; infrastructures futures de contrôle (biométrie) basées sur la surveillance du visage.",
    "categories": [
     "Social",
@@ -111,7 +111,7 @@
    "tri": -120000,
    "date": "≈ -120 000",
    "titre": "Commerce — le lien qui divise",
-   "ordre": "Réseaux d'échange à longue distance basés sur des conventions de valeur (parures, pigments), réduisant l'incertitude.",
+   "ordre": "Circulations de parures et de pigments entre groupes, fondées sur des conventions de valeur partagées, qui réduisent l'incertitude locale.",
    "dette": "Formalisation des inégalités par l'accumulation de biens symboliques ; coût de la logistique ; division entre ceux qui partagent le code et les autres.",
    "categories": [
     "Économique",
@@ -125,7 +125,7 @@
    "date": "≈ -70 000",
    "titre": "Religion — l'invisible en partage",
    "ordre": "Cohésion sociale au-delà de la parenté par la gestion ritualisée de l'angoisse et un calendrier sacré partagé.",
-   "dette": "Coût matériel des offrandes et des lieux de culte ; temps soustrait à la subsistance ; division entre les initiés et les exclus du rituel.",
+   "dette": "Coût matériel des offrandes et des lieux réservés au rite ; temps soustrait à la subsistance ; division entre ceux qui partagent le rite et ceux qui s'en écartent.",
    "categories": [
     "Symbolique",
     "Social",
@@ -137,7 +137,7 @@
    "tri": -45000,
    "date": "≈ -45 000",
    "titre": "Art pariétal — esprit sur roche",
-   "ordre": "Mémoire externe symbolique durable, qui fixe des récits complexes et permet à la conscience de se réfléchir elle-même.",
+   "ordre": "Mémoire externe symbolique durable, qui fixe des images, des mains et des signes récurrents et où l'attention apprend à se réfléchir elle-même.",
    "dette": "Coût énergétique et physique pour produire les œuvres dans des lieux reculés (pigments, éclairage, risques) ; fixation de codes de représentation qui cadrent la perception du monde.",
    "categories": [
     "Cognitif",
@@ -163,7 +163,7 @@
    "tri": -5000,
    "date": "≈ -5 000",
    "titre": "La roue — l'éternel retour mécanique",
-   "ordre": "Efficacité logistique, libération du transport de charges, standardisation de la production (tour de potier).",
+   "ordre": "Efficacité logistique, libération du dos pour le transport de charges, tour du potier où la répétition mécanique engendre la variation formelle.",
    "dette": "Obligation de créer et maintenir des infrastructures (routes) ; enfermement dans la logique mécanique et ses coûts d'entretien.",
    "categories": [
     "Technique",
@@ -176,8 +176,8 @@
    "tri": -3500,
    "date": "≈ -3 500",
    "titre": "Uruk — rassembler pour diviser",
-   "ordre": "Spécialisation des tâches, gestion centralisée des surplus, sécurité par la concentration urbaine.",
-   "dette": "Stratification sociale rigide ; perte d'autonomie individuelle ; fragilité accrue face aux épidémies et aux famines centralisées.",
+   "ordre": "Spécialisation des tâches, gestion centralisée des flux (eau, grain, rations, tablettes, sceaux), prévisibilité par la concentration urbaine.",
+   "dette": "Stratification sociale qui sature vite ; perte de polymorphie ; fragilité accrue face aux contagions ; chaque couche d'ordre ajoute une couche de coût (corvées, prélèvements, registres).",
    "categories": [
     "Social",
     "Politique",
@@ -189,8 +189,8 @@
    "tri": -3200,
    "date": "≈ -3 200",
    "titre": "Cunéiforme — graver pour durer",
-   "ordre": "Mémoire administrative infaillible, loi écrite, comptabilité de l'État garantissant les contrats.",
-   "dette": "Création d'une caste de scribes ; exclusion des illettrés ; rigidification des normes sociales et perte de flexibilité.",
+   "ordre": "Mémoire administrative durable, loi écrite et publique, comptes écrits (rations, dettes, contrats) qui réduisent l'incertitude locale.",
+   "dette": "Un corps de scribes au monopole relatif de l'interface monde-signe, payé en années de subsistance ; exclusion des illettrés ; perte de granularité ; économie entière de preuves, d'archives et de corvées.",
    "categories": [
     "Cognitif",
     "Social",
@@ -203,7 +203,7 @@
    "date": "≈ -2 000",
    "titre": "Panthéons & royaumes — croire pour obéir",
    "ordre": "Légitimation divine du pouvoir temporel, synchronisation de l'empire par un calendrier rituel commun.",
-   "dette": "Coût matériel colossal des temples et des sacrifices ; subordination de la politique à la théologie ; dette logistique des offrandes.",
+   "dette": "Coût matériel des temples et des sacrifices, porté par les campagnes ; légitimité du pouvoir suspendue à l'approvisionnement du rite ; dette logistique des offrandes.",
    "categories": [
     "Symbolique",
     "Politique",
@@ -216,7 +216,7 @@
    "date": "≈ -1 200",
    "titre": "La Tyrannie — gouverner le temps",
    "ordre": "Accélération et efficacité de la décision en court-circuitant les délibérations.",
-   "dette": "Perte de la légitimité collective ; concentration du risque sur une seule tête ; instabilité structurelle ; dette de temps prélevée sur les citoyens.",
+   "dette": "Dissolution des garanties et démobilisation des citoyens ; contestation décalée plutôt que supprimée ; entretien perpétuel de l'ordre (gardes, réparations, prélèvements) ; dette de temps prélevée sur les citoyens.",
    "categories": [
     "Politique",
     "Temporel",
@@ -234,6 +234,32 @@
     "Symbolique",
     "Politique",
     "Social"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -900,
+   "date": "≈ -900",
+   "titre": "Olmèques — glyphes de pouvoir",
+   "ordre": "Souveraineté inscrite dans la pierre : emblèmes, têtes colossales, places orientées sur le soleil et calendrier fixent qui gouverne et quand, plus durablement que la voix.",
+   "dette": "La lisibilité du centre s'achète à la périphérie : basalte tiré sur des dizaines de kilomètres, forêts abattues, épaules et rations de maïs, ateliers et échanges lointains ; même l'effacement des signes, au déclin, a son prix.",
+   "categories": [
+    "Politique",
+    "Symbolique",
+    "Écologique"
+   ]
+  },
+  {
+   "age": 3,
+   "tri": -800,
+   "date": "≈ -800",
+   "titre": "Odyssée — la grammaire du retour",
+   "ordre": "Une technologie du retour : la mètis, la reconnaissance par paliers et l'hospitalité réglée (xénia) rétablissent un foyer sans fracasser le présent.",
+   "dette": "Le retour se paie ailleurs : compagnons perdus, hôtes punis, bêtes sacrifiées, veilles de Pénélope et des serviteurs ; le massacre des prétendants déporte le désordre dans la cité, jusqu'à l'intervention d'Athéna.",
+   "categories": [
+    "Social",
+    "Moral",
+    "Temporel"
    ]
   },
   {
@@ -294,7 +320,7 @@
    "date": "≈ -551",
    "titre": "Confucius — la révolution immobile",
    "ordre": "Ordre social fondé sur l'exemplarité des gestes (li) et des rôles, se propageant par imitation plutôt que par décret.",
-   "dette": "Coût en temps et en attention pour l'apprentissage et le maintien des rites ; financement des \"modèles\" par la communauté ; risque de rigidification en conformisme.",
+   "dette": "Coût en temps et en attention pour l'apprentissage et le maintien des rites ; financement des « modèles » par la communauté (heures volées au champ, décennies d'étude pour les examens impériaux, familles qui nourrissent un fils improductif).",
    "categories": [
     "Social",
     "Symbolique",
@@ -410,7 +436,7 @@
    "date": "≈ -441",
    "titre": "Sophocle — loi du cœur contre cœur de la loi",
    "ordre": "Espace théâtral pour la mise en scène de la tension irréductible entre la norme impersonnelle de la cité et la loi non écrite de la conscience et de la famille.",
-   "dette": "Coût matériel de la représentation (chorégie) ; temps civique immobilisé pour permettre la catharsis collective, payé par les exclus de la citoyenneté.",
+   "dette": "Coût matériel de la représentation (chorégie, payée par les riches citoyens désignés) ; temps civique immobilisé pour permettre la catharsis collective, payé en présence par les citoyens eux-mêmes (journées soustraites à l'atelier et au chantier) et par la caisse publique.",
    "categories": [
     "Social",
     "Politique",
@@ -449,7 +475,7 @@
    "date": "≈ -400",
    "titre": "Calliclès — le droit du plus fort, la loi des plus faibles",
    "ordre": "Légitimation \"naturelle\" de la domination et de la maximisation des désirs (pleonexia) par une élite.",
-   "dette": "Le fardeau de la modération et de la coopération est reporté sur les \"faibles\" ; l'ordre du fort se finance par l'épuisement et la servitude des autres.",
+   "dette": "L'ordre du fort déplace son désordre sur les autres : artisans, vignerons, rameurs, tisserandes paient pour qu'une poignée « croisse » ; il se finance par l'épuisement et l'invisibilité des débiteurs (heures non payées, solidarités cassées).",
    "categories": [
     "Social",
     "Politique",
@@ -578,7 +604,7 @@
    "tri": -49,
    "date": "≈ -49",
    "titre": "Le Rubicon — quand la vitesse assassine la loi",
-   "ordre": "Fin de la guerre civile par la prise de pouvoir fulgurante, où la rapidité du fait accompli remplace la délibération.",
+   "ordre": "Prise de pouvoir fulgurante qui ouvre la guerre civile, où la rapidité du fait accompli remplace la délibération : la loi n'est plus un mur, mais une lenteur.",
    "dette": "Assassinat de la légalité républicaine ; coût humain et économique des campagnes militaires ; dette de légitimité soldée par la dictature.",
    "categories": [
     "Politique",
@@ -631,7 +657,7 @@
    "date": "135",
    "titre": "Stoïcisme — vouloir ne rien vouloir",
    "ordre": "Citadelle intérieure imprenable, liberté par la maîtrise des jugements et la discipline du désir.",
-   "dette": "Coût social de l'indifférence aux charges communes ; l'otium (temps libre) nécessaire à cette ascèse est financé par le travail d'autrui (esclaves, serviteurs).",
+   "dette": "Coût en corps de l'invulnérabilité face au pouvoir (martyrs stoïciens, dette réglée en sang civil) ; l'otium nécessaire à cette ascèse est financé par le travail d'autrui (esclaves, secrétaires, intendants).",
    "categories": [
     "Cognitif",
     "Social",
@@ -683,7 +709,7 @@
    "date": "632",
    "titre": "Coran — l'algorithme de la transcendance",
    "ordre": "Protocole social et spirituel unifié (prières, zakāt) qui synchronise un réseau décentralisé de croyants et crée une communauté (Umma).",
-   "dette": "Coût de l'établissement d'un consensus (standardisation par ʿUthmān) qui déplace le conflit vers la politique (schismes) ; coût de la conformité pour la société (temps, ressources).",
+   "dette": "Coût de l'établissement d'un consensus (standardisation par ʿUthmān : codices privés brûlés, rancunes, grief des insurgés de 656) qui déplace le désordre vers la politique ; coût de la conformité pour la société (temps, ressources).",
    "categories": [
     "Symbolique",
     "Social",
@@ -787,7 +813,7 @@
    "date": "1272",
    "titre": "Thomas d'Aquin — l'architecte des compatibilités",
    "ordre": "Synthèse intellectuelle qui rend compatibles la raison aristotélicienne et la foi chrétienne, créant une architecture de la connaissance durable.",
-   "dette": "Coût institutionnel (querelles universitaires) ; le conflit est déplacé vers des points techniques qui nourriront les schismes futurs ; la clarté se paie en exclusions conceptuelles.",
+   "dette": "Coût institutionnel (querelles universitaires, querelle des mendiants, condamnations de 1277) ; le conflit est reporté dans des clauses techniques où fleuriront Ockham et les nominalistes ; la clarté se paie en exclusions conceptuelles.",
    "categories": [
     "Philosophique",
     "Cognitif",
@@ -812,7 +838,7 @@
    "tri": 1314,
    "date": "1314",
    "titre": "Templiers — transformer le crédo en crédit",
-   "ordre": "Réseau financier transnational où la confiance religieuse garantit la circulation de la valeur sans transport de métal (lettres, comptes, sceaux) : des comptes adossés à un vœu.",
+   "ordre": "Réseau financier transnational où la confiance religieuse fait voyager l'argent, et pas seulement le métal (lettres, comptes, sceaux) : des comptes adossés à un vœu.",
    "dette": "Un réseau de confiance qui tient registre hors du prince vit à sa merci : la couronne, qui compte déjà par son propre Trésor, détruit l'ordre et en sort payée ; la confiance passe du vœu au registre du prince.",
    "categories": [
     "Économique",
@@ -825,7 +851,7 @@
    "tri": 1325,
    "date": "1325",
    "titre": "Tombouctou — l'encre dans le sable",
-   "ordre": "Pôle intellectuel majeur fondé sur une économie du savoir (le livre vaut plus que l'or) et une résilience distribuée (bibliothèques privées).",
+   "ordre": "Pôle intellectuel majeur fondé sur une économie du savoir (le livre s'échange contre de l'or et devient capital social) et une résilience distribuée (bibliothèques privées).",
    "dette": "Coût élevé de l'importation de la matière première (papier) ; la conservation dans un milieu hostile exige une ingénierie et un investissement constants.",
    "categories": [
     "Cognitif",
@@ -839,7 +865,7 @@
    "date": "1377",
    "titre": "Ibn Khaldoun — le cycle des empires",
    "ordre": "Modèle cyclique de l'histoire qui rend intelligible la montée et la chute des dynasties par la force de cohésion sociale ('asabiyya).",
-   "dette": "La lucidité sur la mécanique du pouvoir peut conduire au cynisme ou à la paralysie ; le cycle lui-même est une dette de sang et de ressources payée à chaque transition.",
+   "dette": "Chaque phase du cycle a son addition : sang et manque à la conquête, charges fixes à l'apogée, mercenaires, tributs et rançons au déclin ; le cycle est une dette de sang et de ressources payée à chaque transition.",
    "categories": [
     "Politique",
     "Philosophique",
@@ -865,7 +891,7 @@
    "date": "1435",
    "titre": "Alberti — cadrer le monde, construire l'œil",
    "ordre": "Un espace visuel rationalisé, mesurable et reproductible par la perspective, qui transforme la peinture en \"fenêtre sur le monde\".",
-   "dette": "L'œil est contraint à un point de vue unique et immobile ; le cadre exclut le hors-champ ; la maîtrise du visible se paie d'une perte de vision périphérique et multi-sensorielle.",
+   "dette": "L'œil est contraint à un point de vue unique et immobile ; le cadre exclut le hors-champ ; la maîtrise du visible se paie d'une perte de latéralité et de vision périphérique.",
    "categories": [
     "Cognitif",
     "Technique",
@@ -874,11 +900,24 @@
   },
   {
    "age": 4,
+   "tri": 1454,
+   "date": "1454",
+   "titre": "Gutenberg — multiplier la parole, redistribuer l'autorité",
+   "ordre": "Reproductibilité exacte du texte : caractères mobiles, encre grasse et presse à vis rendent les exemplaires identiques, font chuter le prix du livre et rendent possibles la citation vérifiable et la critique commune.",
+   "dette": "Fin de l'autorité unique : la dispute s'emballe jusqu'aux guerres de religion ; dialectes relégués par les langues imprimées, calomnie industrialisée comme la preuve, rente captée par le financeur plutôt que par l'inventeur.",
+   "categories": [
+    "Cognitif",
+    "Politique",
+    "Culturel"
+   ]
+  },
+  {
+   "age": 4,
    "tri": 1492,
    "date": "1492",
    "titre": "Nouveaux mondes — découvrir, compter, conquérir",
    "ordre": "Unification planétaire, création d'un système-monde euro-centré par la cartographie, la comptabilité et la puissance militaire.",
-   "dette": "Destruction des civilisations amérindiennes, traite négrière, pillage des ressources ; dette humaine, écologique et morale abyssale.",
+   "dette": "Effondrement des populations amérindiennes (épidémies, guerre, travail forcé), encomienda et mita de Potosí, pillage de l'argent des Andes ; dette humaine et morale.",
    "categories": [
     "Spatial",
     "Économique",
@@ -1034,7 +1073,7 @@
    "date": "1651",
    "titre": "Hobbes — le monstre qui nous sauve de nous-mêmes",
    "ordre": "Sécurité absolue par l'aliénation totale des libertés individuelles à un souverain artificiel (le Léviathan) qui met fin à la \"guerre de tous contre tous\".",
-   "dette": "La peur devient le fondement du politique ; la question \"qui protège du protecteur ?\" reste sans réponse, ouvrant la voie au totalitarisme.",
+   "dette": "La peur devient le fondement du politique ; la question « qui protège du protecteur ? » reste ouverte quand le Léviathan devient totalitaire, le monstre se retournant alors contre ses créateurs.",
    "categories": [
     "Politique",
     "Social",
@@ -1164,7 +1203,7 @@
    "date": "1762",
    "titre": "L'assurance — le code du risque",
    "ordre": "Mutualisation du risque, transformant le futur incertain en probabilités calculables et en primes payables.",
-   "dette": "Création de nouvelles exclusions (\"inassurables\") ; dette morale de la surveillance (aléa moral) ; la socialisation du risque peut mener à sa privatisation (sauvetages bancaires).",
+   "dette": "Création de nouvelles exclusions (« inassurables ») ; dette morale de la surveillance (aléa moral) ; quand le risque privé déborde, la dette se reporte sur le contribuable (AIG, 2008).",
    "categories": [
     "Économique",
     "Social",
@@ -1229,7 +1268,7 @@
    "date": "1789",
    "titre": "Droits de l'homme — la transcendance sans Dieu",
    "ordre": "Principes universels (liberté, égalité) devenant une norme supérieure à l'État, fondant un droit de résistance.",
-   "dette": "L'universalité abstraite masque des exclusions de fait (femmes, esclaves, colonisés) ; l'idéal devient un outil de justification pour de nouvelles dominations.",
+   "dette": "L'universalité proclamée trébuche sur ses exclusions (femmes, esclaves, pauvres écartés par le suffrage censitaire) ; la clause de l'« utilité commune » permet de rebaptiser un privilège en utilité, et l'algorithme reconduit aujourd'hui les hiérarchies.",
    "categories": [
     "Inégalités",
     "Violence symbolique",
@@ -1281,7 +1320,7 @@
    "date": "1792",
    "titre": "L'Amour Romantique — le cœur code d'exclusion",
    "ordre": "Légitimation du choix individuel et de l'intimité comme fondement du couple, contre l'arrangement social.",
-   "dette": "Naturalisation des rôles de genre ; invisibilisation de la charge mentale et domestique (majoritairement féminine) ; marchandisation des affects.",
+   "dette": "Invisibilisation de la charge mentale et domestique (souvent féminine) ; dettes de temps, de soins et d'opportunités ; marchandisation de l'intimité par les plateformes.",
    "categories": [
     "Social",
     "Inégalités",
@@ -1346,7 +1385,7 @@
    "date": "1824",
    "titre": "La thermodynamique — l'entropie du programme terminal",
    "ordre": "Lois universelles de l'énergie permettant une optimisation sans précédent des machines et de l'industrie.",
-   "dette": "Conscience de la dégradation inéluctable de l'énergie (entropie) ; fin de l'illusion du progrès perpétuel ; dette écologique par la combustion massive.",
+   "dette": "Conscience de la dégradation inéluctable de l'énergie (entropie) ; fin de l'illusion du progrès perpétuel ; tribut thermique permanent : pertes des moteurs, des centrales et des data centers, facture qui s'impute ailleurs.",
    "categories": [
     "Énergétique",
     "Écologique",
@@ -1372,7 +1411,7 @@
    "date": "1835",
    "titre": "Tocqueville — le prophète aristocrate de nos servitudes",
    "ordre": "Diagnostic lucide de la démocratie, de ses forces (égalité) et de ses risques (tyrannie de la majorité, despotisme doux).",
-   "dette": "La critique de la conformité peut elle-même devenir une posture de distinction intellectuelle ; risque de paralysie par l'hyper-conscience des périls.",
+   "dette": "L'égalité ouvre deux pentes : l'indépendance, qui peut tourner à l'anarchie, et la tutelle douce, qui mène à l'infantilisation et à la lassitude du vouloir ; la démocratie sait aussi éliminer « dans les formes » (esclavage, Indiens), comme Tocqueville le relève lui-même.",
    "categories": [
     "Cognitif",
     "Social",
@@ -1385,7 +1424,7 @@
    "date": "1835",
    "titre": "Télégraphe — l'humanité câblée",
    "ordre": "Communication instantanée à grande distance, synchronisation des marchés, des empires et des horloges.",
-   "dette": "Tyrannie de l'urgence, perte de la profondeur et du temps de réflexion ; vulnérabilité systémique des réseaux centralisés ; dette d'infrastructure.",
+   "dette": "Tyrannie de l'urgence et de l'obligation de répondre, perte de profondeur et du droit à la lenteur ; coût humain des opérateurs (nerfs, nuits blanches) ; petites catastrophes de la vitesse, comme la dépêche d'Ems mal lue.",
    "categories": [
     "Temporel",
     "Cognitif",
@@ -1398,7 +1437,7 @@
    "date": "1848",
    "titre": "Printemps 48 — l'échec simultané des peuples",
    "ordre": "Diffusion continentale des idées démocratiques, nationales et sociales ; apprentissage de la mobilisation politique.",
-   "dette": "Répression coordonnée des empires ; fracture durable entre libéraux et socialistes ; l'échec vaccine les élites et retarde les réformes.",
+   "dette": "Répression coordonnée des empires (la Russie écrase la Hongrie, l'Autriche reprend Vienne et Prague, la France étouffe Rome) ; en juin, la République tire sur des républicains et la bourgeoisie choisit l'ordre contre la liberté ; l'échec vaccine l'Europe contre l'illusion d'un renversement d'un seul coup et diffère les réussites (suffrage, droits sociaux, nations).",
    "categories": [
     "Politique",
     "Social",
@@ -1411,7 +1450,7 @@
    "date": "1853-1870",
    "titre": "Haussmann — l'ordre dans la pierre",
    "ordre": "Fluidité de la circulation, hygiène publique (égouts, aération), monumentalité impériale.",
-   "dette": "Ségrégation sociale par l'expulsion des classes populaires vers les périphéries ; destruction du tissu social ancien ; dette financière colossale.",
+   "dette": "Ségrégation sociale par l'expulsion des classes populaires vers les périphéries ; destruction du tissu social ancien ; fortunes bâties sur les expropriations (Pereire, Rothschild) ; ville rendue maîtrisable par la troupe, retournée en 1871 en « autoroute de répression ».",
    "categories": [
     "Spatial",
     "Social",
@@ -1423,7 +1462,7 @@
    "tri": 1854,
    "date": "1854",
    "titre": "L'Hygiénisme — le corps sous contrat sanitaire",
-   "ordre": "Santé publique, baisse spectaculaire de la mortalité par les normes d'hygiène (eau, vaccins).",
+   "ordre": "Santé publique : eau sûre, égouts, asepsie, vaccination, qui expliquent sans doute une part majeure de la baisse de la mortalité (espérance de vie mondiale d'environ 32 ans vers 1900, près de 73 ans en 2019).",
    "dette": "Biopolitique : contrôle social et normatif des corps ; stigmatisation des classes jugées \"dangereuses\" ; dette immunitaire (hypothèse hygiéniste).",
    "categories": [
     "Social",
@@ -1450,7 +1489,7 @@
    "date": "1862",
    "titre": "L'entreprise — créature juridique immortelle",
    "ordre": "Accumulation de capital à long terme par la personnalité morale et la responsabilité limitée.",
-   "dette": "Externalisation systémique des coûts (sociaux, écologiques) ; irresponsabilité organisée ; pouvoir économique sans contrepartie démocratique.",
+   "dette": "Profits privatisés, coûts socialisés : quand l'aventure tourne mal, le passif déborde vers la communauté (salariés, voisins, rivière en aval) ; externalités sociales et écologiques à rendre facturables ; pouvoir économique concentré (plateformes, marges, optimisation fiscale) que la régulation et la gouvernance cherchent à encadrer.",
    "categories": [
     "Économique",
     "Écologique",
@@ -1463,7 +1502,7 @@
    "date": "1867",
    "titre": "Le Capital — le vampire aux équations",
    "ordre": "Grammaire critique du capitalisme, dévoilant le mécanisme de l'exploitation (plus-value) ; outil d'organisation pour le mouvement ouvrier.",
-   "dette": "Risque de dogmatisme et de réductionnisme économique dans certaines lectures ; polarisation idéologique qui peut figer l'analyse.",
+   "dette": "Coûts que l'accumulation déplace sur le travail (surtravail, armée industrielle de réserve) et sur la nature (CO₂, déforestation, sixième extinction) ; la baisse tendancielle du taux de profit reste contestée (Okishio, 1961), sans que la question de ces coûts en dépende.",
    "categories": [
     "Cognitif",
     "Politique",
@@ -1489,7 +1528,7 @@
    "date": "1871",
    "titre": "La Commune — la révolution qui invente son vocabulaire",
    "ordre": "Expérimentation d'un autogouvernement démocratique direct (mandats révocables, autogestion).",
-   "dette": "Guerre civile et répression extrême (« Semaine sanglante ») ; la mémoire de l'écrasement pèsera durablement sur le mouvement social français.",
+   "dette": "Guerre civile et répression extrême (« Semaine sanglante » : cours prévôtales, quelque 43 000 arrestations, vingt mille morts peut-être) ; un vocabulaire neuf qui aura coûté tant de vies : la ville perdue, la langue gagnée.",
    "categories": [
     "Politique",
     "Social",
@@ -1502,7 +1541,7 @@
    "date": "1882",
    "titre": "L'école de Ferry — la machine à formater les âmes",
    "ordre": "Unité nationale par l'instruction obligatoire, la laïcité et une langue commune.",
-   "dette": "Éradication des cultures régionales par l'imposition d'un \"canon unique\" ; formatage d'un nationalisme scolaire qui a préparé l'hécatombe de 14-18 et légitimé la \"colonialité du savoir\".",
+   "dette": "Éradication des idiomes régionaux (le « signal », une « pédagogie d'éradication ») ; formatage d'un récit national qui a contribué à rendre possibles la mobilisation de masse et l'acceptation du sacrifice en 14-18 ; histoire de France enseignée aux colonies, « double aliénation ».",
    "categories": [
     "Culturel",
     "Politique",
@@ -1593,7 +1632,7 @@
    "date": "1905-1915",
    "titre": "Einstein — temps élastique, espace courbe",
    "ordre": "Unification de l'espace, du temps, de la matière et de l'énergie sous des lois physiques invariantes.",
-   "dette": "Dette nucléaire (E=mc²) ; dette cognitive d'un monde contre-intuitif ; coût des infrastructures pour vérifier et utiliser ses théories (GPS, accélérateurs).",
+   "dette": "Dette nucléaire (E=mc² : chaleur, radiations, déchets à demi-vie longue) ; coût des infrastructures qui maintiennent un temps global (corrections GPS, satellites à remplacer, débris orbitaux) ; dette relativiste envers la nature, les générations et la physique.",
    "categories": [
     "Cognitif",
     "Énergétique",
@@ -1632,7 +1671,7 @@
    "date": "1922-1928",
    "titre": "Lippmann & Bernays — le consentement qui s'ignore",
    "ordre": "Ingénierie de l'opinion publique, rendant les masses gouvernables et les désirs prévisibles pour le marché.",
-   "dette": "Dette cognitive (appauvrissement du débat), dette démocratique (aliénation du citoyen) et dette sociale (besoins créés artificiellement).",
+   "dette": "Dette épistémique (un pseudo-environnement remplace l'environnement, la méfiance s'accumule), dette attentionnelle (fatigue décisionnelle, polarisation, indignation chronique) et dette sociale (coûts externalisés sur les exclus du récit : cancers tabagiques, régimes renversés, institutions discréditées).",
    "categories": [
     "Cognitif",
     "Politique",
@@ -1658,7 +1697,7 @@
    "date": "1928",
    "titre": "Pénicilline — le corps sous contrat algorithmique",
    "ordre": "Victoire administrée contre les infections bactériennes, baisse drastique de la mortalité, sécurité chirurgicale.",
-   "dette": "Dette biologique de l'antibiorésistance ; déplacement du désordre vers les maladies chroniques ; dette de surveillance (biopolitique).",
+   "dette": "Dette biologique de l'antibiorésistance ; désordre déplacé vers la gouvernance des données (captation, rançongiciels), l'économie (rentes, prix) et l'angoisse (auto-mesure, sur-diagnostics).",
    "categories": [
     "Écologique",
     "Social",
@@ -1839,7 +1878,7 @@
    "date": "1958-1988",
    "titre": "Climat — mesurer pour ignorer",
    "ordre": "Un corpus de preuves scientifiques de plus en plus précis sur le réchauffement climatique.",
-   "dette": "La connaissance exacte devient l'alibi de l'inaction politique ; la dette carbone s'accumule, transférant le chaos physique sur les générations futures.",
+   "dette": "La connaissance exacte devient parfois l'alibi de l'inaction politique ; la dette carbone s'accumule, transférant le chaos physique sur les générations futures.",
    "categories": [
     "Cognitif",
     "Temporel",
@@ -2007,7 +2046,7 @@
    "date": "1991",
    "titre": "URSS — l'empire qui s'est suicidé en voulant se soigner",
    "ordre": "Fin de la Guerre froide, libération des nations captives de l'empire soviétique.",
-   "dette": "Chaos économique et social post-effondrement (thérapie de choc) ; le désordre politique se déplace vers des conflits régionaux et la montée d'un nationalisme russe revanchard.",
+   "dette": "Chaos économique et social post-effondrement (thérapie de choc, hyperinflation, « prêts contre actions ») ; le désordre politique se déplace vers des conflits régionaux (Crimée et Donbass en 2014, invasion de 2022) et une Russie qui se tient par l'ordre autoritaire, la rente pétrolière et la nostalgie.",
    "categories": [
     "Géopolitique",
     "Politique",
@@ -2163,7 +2202,7 @@
    "date": "2022",
    "titre": "Psittacisme 2.0 — le perroquet parle aux perroquets",
    "ordre": "Automatisation de la production de langage et d'images, gain de productivité.",
-   "dette": "Dette de vérification (hallucinations), dette sociale (remplacement d'emplois) et dette cognitive (atrophie du jugement) ; pillage des corpus de création.",
+   "dette": "Dette de vérification (hallucinations), dette sociale (tâches remplacées, reconversion renvoyée à l'individu) et dette cognitive (atrophie du jugement) ; valeur concentrée au détriment des créateurs dont les œuvres servent de corpus.",
    "categories": [
     "Cognitif",
     "Économique",

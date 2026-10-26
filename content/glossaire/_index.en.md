@@ -1,6 +1,6 @@
 ---
 date: 2026-04-15  # premier commit de la page (git log --follow)
-lastmod: 2026-10-25  # derniere modification de fond (entree « Registre des couts deportes » : 165 jalons sur 168 en ligne, 25/10/2026)
+lastmod: 2026-10-26  # derniere modification de fond (entree « Registre des couts deportes » : 168 jalons sur 168 en ligne, 26/10/2026)
 title: "Glossary"
 og_title: "Glossary — the concepts, defined and sourced — S. Lalut"
 description: "Key terms of the anthropic framework."
@@ -130,7 +130,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="register-of-offloaded-costs">
 <dt>Register of Offloaded Costs</dt>
-<dd>The documentary apparatus of the book <em>ANTHROPY – A Big History of Civilization's Hidden Costs</em> (2026; French original 2025): a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, documenting for each innovation the order created and the debt displaced, with the categories of the transfer. Browsable online, 165 of the 168 milestones: <a href="/en/register-of-offloaded-costs/">The Register of Offloaded Costs</a>. Not to be confused with the <a href="#coupled-cost-registers">coupled cost registers</a> of AWP-06, which are a typology rather than a chronology.</dd>
+<dd>The documentary apparatus of the book <em>ANTHROPY – A Big History of Civilization's Hidden Costs</em> (2026; French original 2025): a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, documenting for each innovation the order created and the debt displaced, with the categories of the transfer. Browsable online, all 168 milestones: <a href="/en/register-of-offloaded-costs/">The Register of Offloaded Costs</a>. Not to be confused with the <a href="#coupled-cost-registers">coupled cost registers</a> of AWP-06, which are a typology rather than a chronology.</dd>
 </div>
 
 </dl>

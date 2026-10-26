@@ -1,6 +1,6 @@
 ---
 date: 2026-04-02  # premier commit de la page (git log --follow)
-lastmod: 2026-10-25  # derniere modification de fond (entree « Registre des couts deportes » : 165 jalons sur 168 en ligne, 25/10/2026)
+lastmod: 2026-10-26  # derniere modification de fond (entree « Registre des couts deportes » : 168 jalons sur 168 en ligne, 26/10/2026)
 title: "Glossaire"
 og_title: "Glossaire — les notions, définies et sourcées — S. Lalut"
 description: "Glossaire des termes clés du cadre anthropique."
@@ -129,7 +129,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="registre-des-couts-deportes">
 <dt>Registre des coûts déportés</dt>
-<dd>Appareil documentaire du livre <em>ANTHROPIE — Ordre ici. Dette ailleurs</em> (2025)&nbsp;: chronologie de 168 jalons, des premiers outils (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains, qui documente pour chaque innovation l'ordre créé et la dette déportée, avec les catégories du transfert. Version en ligne en consultation libre, 165 jalons sur 168&nbsp;: <a href="/registre-des-couts-deportes/">Le Registre des coûts déportés</a>. À ne pas confondre avec les <a href="#registres-de-couts-couples">registres de coûts couplés</a> d'AWP-06, qui sont une typologie et non une chronologie.</dd>
+<dd>Appareil documentaire du livre <em>ANTHROPIE — Ordre ici. Dette ailleurs</em> (2025)&nbsp;: chronologie de 168 jalons, des premiers outils (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains, qui documente pour chaque innovation l'ordre créé et la dette déportée, avec les catégories du transfert. Version en ligne en consultation libre, les 168 jalons&nbsp;: <a href="/registre-des-couts-deportes/">Le Registre des coûts déportés</a>. À ne pas confondre avec les <a href="#registres-de-couts-couples">registres de coûts couplés</a> d'AWP-06, qui sont une typologie et non une chronologie.</dd>
 </div>
 
 </dl>
