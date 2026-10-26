@@ -1,0 +1,26 @@
+{{- /* {{< notion-fiche >}} — encadré « La notion en bref » des pages du cadre (26/10/2026).
+       Rend visible le protocole `notion` (CLAUDE.md du site) : définition sourcée, origine, frontière avec les notions
+       voisines, exemple, limite, lecture anthropique. Contenu : front matter `fiche:` de la page (FR et EN dans leur
+       fichier), jamais recopié ici ; il reprend ce que la page dit, sans fait nouveau.
+         fiche:
+           titre: "La notion en bref"          (facultatif)
+           lignes:
+             - t: "Définition"
+               d: "texte Markdown en ligne"
+               anthropie: true                  (facultatif : ligne de la lecture anthropique, en bleu) */ -}}
+{{- $isEn := eq .Page.Lang "en" -}}
+{{- with .Page.Params.fiche -}}
+<aside class="notion-fiche" aria-label="{{ .titre | default (cond $isEn "The notion at a glance" "La notion en bref") }}">
+  <p class="notion-fiche__titre">{{ .titre | default (cond $isEn "The notion at a glance" "La notion en bref") | markdownify }}</p>
+  <dl class="notion-fiche__grille">
+    {{- range .lignes }}
+    <div class="notion-fiche__ligne{{ if .anthropie }} notion-fiche__ligne--anthropie{{ end }}">
+      <dt>{{ .t | markdownify }}</dt>
+      <dd>{{ .d | markdownify }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+</aside>
+{{- else -}}
+{{- errorf "notion-fiche : front matter `fiche:` absent sur %s" .Page.RelPermalink -}}
+{{- end -}}

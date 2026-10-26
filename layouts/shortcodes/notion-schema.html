@@ -1,0 +1,36 @@
+{{- /* {{< notion-schema id="mecanisme" >}} — schéma d'un mécanisme en étages reliés par des flèches (26/10/2026).
+       HTML et CSS, pas d'image : le texte reste lisible, traduit et indexable, et la mise en page passe en colonne sur
+       téléphone sans seconde version. Couleurs du site : `ton: ordre` (bleu), `cout` (orange), sinon neutre.
+       Contenu : front matter `schemas.<id>` de la page.
+         schemas:
+           mecanisme:
+             titre: "…"
+             etages:
+               - titre: "…"                        (facultatif)
+                 boites: [{t: "…", d: "…", ton: "ordre"}]
+                 fleche: "…"                       (flèche vers l'étage suivant ; texte facultatif, "" = flèche seule)
+             note: "…"                             (facultatif) */ -}}
+{{- $id := .Get "id" | default "mecanisme" -}}
+{{- $s := index (.Page.Params.schemas | default dict) $id -}}
+{{- if not $s -}}{{- errorf "notion-schema : schemas.%s absent sur %s" $id .Page.RelPermalink -}}{{- end -}}
+{{- $n := len $s.etages -}}
+<figure class="notion-schema" role="group" aria-label="{{ $s.titre | plainify }}">
+  <p class="notion-schema__titre">{{ $s.titre | markdownify }}</p>
+  {{- range $i, $e := $s.etages }}
+  <div class="notion-schema__etage">
+    {{- with $e.titre }}<p class="notion-schema__etage-titre">{{ . | markdownify }}</p>{{ end }}
+    <div class="notion-schema__boites">
+      {{- range $e.boites }}
+      <div class="notion-schema__boite{{ with .ton }} notion-schema__boite--{{ . }}{{ end }}">
+        {{- with .t }}<strong>{{ . | markdownify }}</strong>{{ end }}
+        {{- with .d }}<p>{{ . | markdownify }}</p>{{ end }}
+      </div>
+      {{- end }}
+    </div>
+  </div>
+  {{- if lt (add $i 1) $n }}
+  <div class="notion-schema__fleche"><span aria-hidden="true">↓</span>{{ with $e.fleche }}<span>{{ . | markdownify }}</span>{{ end }}</div>
+  {{- end }}
+  {{- end }}
+  {{- with $s.note }}<figcaption class="notion-schema__note">{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

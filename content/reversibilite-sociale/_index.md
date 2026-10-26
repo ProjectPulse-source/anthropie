@@ -2,7 +2,7 @@
 title: "Qu'est-ce que la réversibilité sociale ?"
 description: "La réversibilité sociale est la capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de son avenir. Ni un stock ni un flux : une troisième dimension de l'inégalité — ce qu'on peut se permettre de rater."
 date: 2026-07-24
-lastmod: 2026-07-24
+lastmod: 2026-10-26
 og_title: "Qu'est-ce que la réversibilité sociale ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que la réversibilité sociale ?"
@@ -17,8 +17,50 @@ faq:
     answer: "C'est l'objet du programme ouvert par AWP-08 : une architecture de mesure (V = f(C, T, A)), quatre familles de propositions testables et un protocole d'identification sur deux terrains datés — la suppression de l'indicateur 040 du FIBEN par la Banque de France et le droit à l'oubli assurantiel de la loi Lemoine. C'est un cadre réfutable, pas encore un résultat empirique."
   - question: "Qui a proposé le concept de réversibilité sociale ?"
     answer: "Stéphane Lalut, économiste et chercheur indépendant, dans le working paper AWP-08 — « La réversibilité sociale comme dimension de l'inégalité » (2026, DOI 10.5281/zenodo.21506320), huitième des Anthropie Working Papers. Le concept prolonge le cadre anthropique : le tarif stratifié de l'échec est un mécanisme de distribution du désordre social."
+fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
+  lignes:
+    - t: "Définition"
+      d: "La capacité, évaluée *avant* une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles."
+    - t: "Origine"
+      d: "Proposée par l'économiste Stéphane Lalut dans [AWP-08](/awp/awp-08/) (2026), comme troisième dimension de l'inégalité."
+    - t: "À ne pas confondre"
+      d: "La résilience, capacité psychologique individuelle&nbsp;; et le droit à l'erreur de la loi ESSOC (2018), borné aux déclarations faites à l'administration."
+    - t: "Exemple"
+      d: "Deux personnes au même revenu&nbsp;: l'une peut tenter une création d'entreprise, un repli existe&nbsp;; pour l'autre, le même échec enclenche l'engrenage — découvert, fichage, logement."
+    - t: "Limite"
+      d: "Un cadre réfutable, non un résultat empirique&nbsp;: AWP-08 propose une architecture de mesure et un protocole d'identification sur deux terrains datés."
+    - t: "Lecture anthropique"
+      d: "Le coût de l'échec ne disparaît pas&nbsp;: il est déplacé et réparti, inégalement. Le tarif stratifié de l'échec distribue le désordre social."
+      anthropie: true
+schemas:  # schéma de mécanisme (shortcode notion-schema)
+  mecanisme:
+    titre: "Ce qui permet de rebondir&nbsp;: V = f(C, T, A)"
+    etages:
+      - titre: "Trois composantes complémentaires"
+        boites:
+          - {t: "C — Capacité de repli", d: "Tenir l'intervalle entre la chute et la tentative suivante&nbsp;: épargne, entourage, filet institutionnel"}
+          - {t: "T — Tarif d'échec", d: "Ce que l'échec coûte en droit et en pratique, y compris la trace qu'il laisse"}
+          - {t: "A — Réadmission", d: "Des portes qui se rouvrent&nbsp;: employeurs, prêteurs, institutions"}
+        fleche: "l'effet de chacune dépend du niveau des autres"
+      - boites:
+          - {t: "V — Réversibilité sociale", d: "Supporter un échec sans fermer durablement son avenir", ton: "ordre"}
+        fleche: "elle agit avant et après l'échec"
+      - boites:
+          - {t: "Avant&nbsp;: la décision d'essayer", d: "Qui sait qu'un échec serait irrécupérable s'abstient — une abstention invisible dans les statistiques", ton: "cout"}
+          - {t: "Après&nbsp;: le tarif de l'échec", d: "Stratifié selon la position sociale&nbsp;; la trace conditionne le crédit, l'assurance, le logement", ton: "cout"}
+    note: "Un repli solide ne vaut rien si la trace verrouille la réadmission&nbsp;; une réadmission ouverte ne protège personne qui ne peut pas tenir l'intervalle."
+comparaisons:  # frontière entre notions voisines (shortcode notion-comparaison)
+  dimensions:
+    titre: "Trois dimensions de l'inégalité"
+    colonnes: ["Stocks", "Trajectoires", "Réversibilité"]
+    accent: 3
+    lignes:
+      - {critere: "Ce qu'on mesure", valeurs: ["Ce qu'on possède&nbsp;: revenu, patrimoine", "Ce qu'on franchit&nbsp;: la mobilité entre positions sociales", "Ce qu'on peut se permettre de rater"]}
+      - {critere: "Quand", valeurs: ["Un état, à une date", "Un parcours, entre deux dates", "Avant la tentative"]}
+    note: "Deux personnes au revenu identique peuvent avoir une réversibilité très différente&nbsp;: cette différence ne se lit ni dans les statistiques de revenu, ni dans celles de mobilité."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  conception: "docs/conception/reversibilite-sociale.md"  # fiche de conception (regle 12), refonte de presentation du 26/10/2026
   bloc: "notions"
   livres: ["la-societe-du-premier-coup"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 30
@@ -30,11 +72,15 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 La réversibilité sociale est la capacité, évaluée *avant* une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Le concept est proposé par l'économiste Stéphane Lalut dans le working paper [AWP-08](/awp/awp-08/) (2026) comme une troisième dimension de l'inégalité, à côté des stocks (revenu, patrimoine) et des trajectoires (mobilité sociale).
 
+{{< notion-fiche >}}
+
 ## Ce qu'on peut se permettre de rater
 
 Les inégalités se mesurent habituellement par ce qu'on possède — revenu, patrimoine — ou par ce qu'on franchit — la mobilité entre positions sociales. Il manque une troisième mesure&nbsp;: ce qu'une personne peut se permettre de **rater** sans fermer durablement son avenir.
 
 Deux personnes au revenu identique n'ont pas le même rapport au risque. L'une peut quitter un emploi, tenter une création d'entreprise, reprendre des études&nbsp;: si l'essai échoue, un repli existe — épargne, entourage, retour possible. L'autre joue chaque tentative à quitte ou double&nbsp;: le même échec entraîne l'engrenage — découvert, fichage, logement, réputation. La première dispose d'une réversibilité élevée&nbsp;; la seconde, faible. Cette différence ne se lit ni dans les statistiques de revenu, ni dans celles de mobilité — et elle gouverne pourtant qui peut essayer.
+
+{{< notion-comparaison id="dimensions" >}}
 
 ## Le droit à l'erreur&nbsp;: deux sens à ne pas confondre
 
@@ -51,6 +97,8 @@ Un incident de paiement, un défaut d'entreprise, un signalement ne disparaissen
 ## Rebondir après un échec&nbsp;: une question de structure, pas seulement de psychologie
 
 Le discours courant sur le rebond après un échec est presque entièrement psychologique&nbsp;: résilience, état d'esprit, «&nbsp;transformer l'échec en apprentissage&nbsp;». Cette grille laisse dans l'ombre l'essentiel&nbsp;: **rebondir suppose des conditions matérielles et institutionnelles** que la volonté ne remplace pas.
+
+{{< notion-schema id="mecanisme" >}}
 
 Le cadre d'AWP-08 les nomme. Rebondir exige&nbsp;:
 

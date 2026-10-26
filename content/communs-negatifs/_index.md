@@ -2,7 +2,7 @@
 title: "Qu'est-ce que les communs négatifs ?"
 description: "Les communs négatifs désignent ce dont nous héritons collectivement sans l'avoir choisi : déchets, sols pollués, centrales à démanteler, infrastructures obsolètes. Notion développée par Alexandre Monnin, Emmanuel Bonnet et Diego Landivar — et lecture anthropique de ces héritages."
 date: 2026-07-26
-lastmod: 2026-07-26
+lastmod: 2026-10-26
 og_title: "Qu'est-ce que les communs négatifs ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce qu'un commun négatif ?"
@@ -13,8 +13,49 @@ faq:
     answer: "L'externalité est une notion comptable : un coût non facturé, qu'on imagine corrigible par un prix (taxe, marché). La notion de communs négatifs conteste cette lecture : un sol pollué ou une centrale en fin de vie ne sont pas des écarts de prix mais des réalités matérielles installées, qui exigent du soin, des institutions et du travail — pas seulement une internalisation monétaire."
   - question: "Quel est le lien entre communs négatifs et anthropie ?"
     answer: "Les communs négatifs sont le transfert anthropique devenu matière : quand un système déplace son désordre (déchets, pollutions, infrastructures en fin de vie) et que le réceptacle s'accumule, ce qui reste est un héritage négatif partagé. Le working paper AWP-06 (Stéphane Lalut, 2026) range les infrastructures numériques — data centers, équipements à démanteler — parmi les communs négatifs candidats."
+fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
+  lignes:
+    - t: "Définition"
+      d: "Ce dont nous héritons collectivement sans l'avoir choisi — déchets nucléaires, sols pollués, centrales à démanteler, ruines industrielles, infrastructures obsolètes&nbsp;: des charges communes à gérer, refermer ou démanteler."
+    - t: "Origine"
+      d: "Alexandre Monnin, avec Emmanuel Bonnet et Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021)."
+    - t: "À ne pas confondre"
+      d: "Les communs d'Elinor Ostrom, ressources qu'une communauté fait durer&nbsp;; et l'externalité, coût non facturé qu'un prix suffirait à corriger."
+    - t: "Exemple"
+      d: "Un stock de déchets radioactifs&nbsp;: une réalité matérielle installée pour des millénaires, qui exige des institutions, des compétences, du travail et de la vigilance."
+    - t: "Portée"
+      d: "Une notion d'action&nbsp;: elle tourne l'attention vers les gestes négligés — maintenir, refermer, démanteler, dépolluer."
+    - t: "Lecture anthropique"
+      d: "Un déplacement de désordre devenu héritage&nbsp;: le transfert anthropique cristallisé dans la matérialité du monde."
+      anthropie: true
+schemas:  # schéma de mécanisme (shortcode notion-schema)
+  mecanisme:
+    titre: "Du transfert à l'héritage"
+    etages:
+      - boites:
+          - {t: "Un ordre produit", d: "Centrales, industries, réseaux, data centers", ton: "ordre"}
+        fleche: "le désordre est déplacé"
+      - titre: "Le trajet&nbsp;: la boucle anthropique"
+        boites:
+          - {t: "Déplacement", d: "Vers d'autres lieux, d'autres temps, d'autres groupes"}
+          - {t: "Accumulation", d: "Le réceptacle se remplit"}
+          - {t: "Saturation", d: "Il n'absorbe plus"}
+        fleche: "ce qui reste devient matière"
+      - boites:
+          - {t: "Un commun négatif", d: "Sols, nappes, infrastructures en fin de vie&nbsp;: un héritage partagé dont il faut prendre soin", ton: "cout"}
+    note: "La [boucle anthropique](/boucle-anthropique/) décrit le trajet — déplacement, accumulation, saturation, retour&nbsp;; les communs négatifs décrivent ce qui reste."
+comparaisons:  # frontière entre notions voisines (shortcode notion-comparaison)
+  frontiere:
+    titre: "Commun, externalité, commun négatif"
+    colonnes: ["Commun (Ostrom)", "Externalité", "Commun négatif"]
+    accent: 3
+    lignes:
+      - {critere: "Ce qui est partagé", valeurs: ["Une ressource&nbsp;: pâturage, irrigation, savoir", "Un coût non facturé", "Une réalité dont personne ne veut"]}
+      - {critere: "Le geste", valeurs: ["La faire durer, sans État ni marché", "L'internaliser par un prix&nbsp;: taxe, quota, marché de droits", "Surveiller, confiner, dépolluer, démanteler — parfois sur des générations"]}
+      - {critere: "La question", valeurs: ["Comment gérer durablement la ressource&nbsp;?", "Combien cela coûte-t-il&nbsp;?", "Qui en prend soin, comment, et pendant combien de temps&nbsp;?"]}
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  conception: "docs/conception/communs-negatifs.md"  # fiche de conception (regle 12), refonte de presentation du 26/10/2026
   bloc: "notions"
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 40
@@ -26,6 +67,8 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 ---
 
 Les communs négatifs désignent ce dont nous héritons collectivement **sans l'avoir choisi**&nbsp;: déchets nucléaires, sols pollués, centrales à démanteler, ruines industrielles, infrastructures obsolètes. La notion a été développée par le philosophe Alexandre Monnin avec Emmanuel Bonnet et Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021)&nbsp;: non plus des biens communs à préserver, mais des **charges communes** à gérer, refermer ou démanteler — parfois sur des générations.
+
+{{< notion-fiche >}}
 
 ## L'inversion d'une figure classique
 
@@ -39,11 +82,15 @@ L'économie standard range ces réalités sous la catégorie d'**externalité**&
 
 Cette critique rejoint celle que la tradition du *cost-shifting* de K.&nbsp;William Kapp adressait déjà à l'externalité&nbsp;: le report des coûts n'est pas un raté du marché, c'est un mécanisme systémique — et le corriger demande plus qu'un prix.
 
+{{< notion-comparaison id="frontiere" >}}
+
 ## La lecture anthropique&nbsp;: le transfert devenu matière
 
 Le cadre de l'[anthropie](/quest-ce-que-lanthropie/) offre une généalogie de ces héritages. Un système social produit son ordre en déplaçant son désordre — vers d'autres lieux, d'autres temps, d'autres groupes. Quand le réceptacle s'accumule et sature, ce qui reste au sol, dans les nappes, dans les infrastructures en fin de vie, c'est **le transfert anthropique cristallisé dans la matérialité du monde**&nbsp;: un commun négatif est un déplacement de désordre devenu héritage.
 
 Cette lecture relie les deux notions sans les confondre&nbsp;: les communs négatifs décrivent **ce qui reste**&nbsp;; la [boucle anthropique](/boucle-anthropique/) décrit **le trajet** — déplacement, accumulation, saturation, retour. Et elle éclaire la question de la responsabilité que pose Guillaume Vuillemey à propos de l'entreprise&nbsp;: quand la responsabilité limitée sépare l'agir du répondre, les dommages glissent vers les biens communs — l'entreprise disparaît, l'héritage reste.
+
+{{< notion-schema id="mecanisme" >}}
 
 ## Le cas d'école qui vient&nbsp;: le numérique
 

@@ -3,7 +3,7 @@ title: "What is the rebound effect (Jevons paradox)?"
 url: /en/rebound-effect/
 description: "The rebound effect is the mechanism by which improved energy efficiency, instead of reducing total consumption, tends to increase it. Described by William Stanley Jevons in 1865, it remains the blind spot of efficiency policies."
 date: 2026-07-24
-lastmod: 2026-07-24
+lastmod: 2026-10-26
 og_title: "The rebound effect (Jevons paradox) — definition and sources — S. Lalut"
 faq:
   - question: "What is the rebound effect?"
@@ -16,8 +16,42 @@ faq:
     answer: "No — the size of the rebound varies by use, sector and period, and is the subject of an abundant literature. But it is structural, not anecdotal: ignoring the rebound systematically leads to overestimating the energy savings expected from efficiency policies. This is why serious scenarios distinguish efficiency from sufficiency."
   - question: "What is the link between the rebound effect and anthropy?"
     answer: "In the anthropic framework (Stéphane Lalut), the rebound effect is a case of boomerang effect: the efficiency gain produces a local order — less energy per unit — whose cost comes back as a global disorder — more total consumption. The analysis is developed in AWP-04, “Energy transition or entropic transfer?” (2026, DOI 10.5281/zenodo.19269244)."
+fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
+  lignes:
+    - t: "Definition"
+      d: "The mechanism by which an energy-efficiency gain, instead of reducing total consumption, tends to increase it: what becomes more efficient becomes cheaper, hence more used."
+    - t: "Origin"
+      d: "William Stanley Jevons, *The Coal Question* (1865), on steam engines; generalised by energy economics (the Khazzoom-Brookes postulate, 1980s)."
+    - t: "Not to be confused with"
+      d: "The [Jevons paradox](/en/glossaire/#jevons-effect) is the extreme case: the rebound in consumption exceeds the gain. The rebound effect is any rebound that erodes the gain."
+    - t: "Example"
+      d: "A more fuel-efficient car encourages more driving; heating savings pay for a plane ticket."
+    - t: "Limit"
+      d: "Its size varies by use, sector and period: it does not cancel every efficiency gain, but ignoring it leads to overestimating the expected savings."
+    - t: "Anthropic reading"
+      d: "A [boomerang effect](/en/glossaire/#boomerang-effect): the local order (less energy per unit) comes back as global disorder (more total consumption). Analysis developed in [AWP-04](/en/awp/awp-04/)."
+      anthropie: true
+schemas:  # mechanism diagram (notion-schema shortcode)
+  mecanisme:
+    titre: "How an efficiency gain comes back as consumption"
+    etages:
+      - boites:
+          - {t: "Efficiency gain", d: "Less energy per unit of service", ton: "ordre"}
+        fleche: "the service becomes cheaper"
+      - titre: "Three rebound channels"
+        boites:
+          - {t: "Direct", d: "The more economical use is consumed more"}
+          - {t: "Indirect", d: "The money saved funds other consumption"}
+          - {t: "Macroeconomic", d: "The implicit cost of energy falls across the economy: production and demand rise"}
+        fleche: "the rebounds add up"
+      - titre: "Two outcomes"
+        boites:
+          - {t: "Partial rebound", d: "The rebound erodes the gain: consumption falls less than announced", ton: "cout"}
+          - {t: "Jevons paradox", d: "The rebound exceeds the gain: total consumption rises", ton: "cout"}
+    note: "A diagram of the mechanism, not to scale: the size of each channel varies by use and sector, and is the subject of a debated literature."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  conception: "docs/conception/effet-rebond.md"  # fiche de conception (regle 12), refonte de presentation du 26/10/2026
   bloc: "notions"
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 50
@@ -30,6 +64,8 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 The rebound effect is the mechanism by which improved energy efficiency, instead of reducing total energy consumption, tends to increase it: what becomes more efficient becomes cheaper, hence more used. Described by the economist William Stanley Jevons as early as 1865, it remains the blind spot of most energy-efficiency policies.
 
+{{< notion-fiche >}}
+
 ## The origin: Jevons and the steam engine
 
 In *The Coal Question* (1865), Jevons observes a counter-intuitive fact: the steam engines of his day, far more efficient than Newcomen's a century earlier, did not reduce England's coal consumption — they made it explode. The reason is economic: a machine that draws more work from each ton of coal lowers the cost of that work, opens up new profitable uses and multiplies machines. "It is wholly a confusion of ideas to suppose that the economical use of fuel is equivalent to a diminished consumption," he writes. "The very contrary is the truth."
@@ -37,6 +73,8 @@ In *The Coal Question* (1865), Jevons observes a counter-intuitive fact: the ste
 The mechanism was rediscovered and generalised by contemporary energy economics — notably under the name of the Khazzoom-Brookes postulate, after the work of Daniel Khazzoom and Leonard Brookes around the turn of the 1980s.
 
 ## The three forms of rebound
+
+{{< notion-schema id="mecanisme" >}}
 
 The literature classically distinguishes three channels:
 

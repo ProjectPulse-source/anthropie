@@ -6,8 +6,52 @@ og_title: "Glossaire — les notions, définies et sourcées — S. Lalut"
 description: "Glossaire des termes clés du cadre anthropique."
 og_image: "images/og-glossaire.jpg"
 og_image_alt: "Glossaire — Anthropie. On ne crée pas l'ordre, on déplace le désordre."
+carte:  # carte du vocabulaire (shortcode glossaire-carte) : ensembles nommés par l'introduction ; chaque ancre doit exister (errorf au build)
+  titre: "Carte du vocabulaire"
+  coeur: {id: "anthropie", t: "Anthropie", d: "Les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."}
+  groupes:
+    - t: "Le mécanisme"
+      role: "Le transfert et ses trois dimensions&nbsp;: où va le désordre."
+      ton: "ordre"
+      termes:
+        - {id: "transfert-anthropique", t: "Transfert anthropique"}
+        - {id: "externalisation-entropique", t: "Transfert spatial"}
+        - {id: "dette-anthropique", t: "Transfert temporel"}
+        - {id: "transfert-social", t: "Transfert social"}
+        - {id: "ordre-local", t: "Ordre local"}
+        - {id: "espace-de-deportation", t: "Espace de déportation"}
+    - t: "Les seuils et le retour"
+      role: "Quand l'espace de déportation sature et que le désordre revient."
+      ton: "cout"
+      termes:
+        - {id: "saturation", t: "Saturation"}
+        - {id: "cout-marginal-croissant", t: "Coût marginal croissant"}
+        - {id: "effet-boomerang", t: "Effet boomerang"}
+        - {id: "effet-jevons", t: "Effet Jevons"}
+        - {id: "boucle-anthropique", t: "Boucle anthropique"}
+    - t: "Les configurations"
+      role: "Les agencements historiques du transfert, sur 3,3&nbsp;millions d'années."
+      termes:
+        - {id: "configuration", t: "Configuration"}
+        - {id: "metaprogramme", t: "Métaprogramme"}
+        - {id: "registre-des-couts-deportes", t: "Registre des coûts déportés"}
+    - t: "La posture"
+      role: "Devant tout ordre stable, demander où s'écoule le désordre."
+      termes:
+        - {id: "discipline-du-regard", t: "Discipline du regard"}
+    - t: "Les applications"
+      large: true
+      role: "Le cadre appliqué à un domaine&nbsp;: numérique, héritages, inégalités, savoir."
+      termes:
+        - {id: "dette-technologique", t: "Dette technologique"}
+        - {id: "registres-de-couts-couples", t: "Registres de coûts couplés"}
+        - {id: "derisking", t: "Derisking"}
+        - {id: "communs-negatifs", t: "Communs négatifs"}
+        - {id: "reversibilite-sociale", t: "Réversibilité sociale"}
+        - {id: "ordre-epistemique", t: "Ordre épistémique"}
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  conception: "docs/conception/glossaire.md"  # fiche de conception (regle 12), refonte de presentation du 26/10/2026
   bloc: "notions"
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
@@ -19,6 +63,8 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 Ce glossaire rassemble les termes propres au cadre anthropique. Il ne s'agit pas d'un dictionnaire général&nbsp;: chaque entrée désigne un concept forgé ou réapproprié dans le cadre de l'hypothèse anthropique, et n'a de sens précis que dans ce contexte théorique. Les définitions renvoient aux *Anthropie Working Papers* qui les formalisent et au livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) qui les déploie sur l'ensemble du cadre.
 
 L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dont les termes ci-dessous constituent le vocabulaire opératoire. Ils s'organisent autour de trois ensembles — le **mécanisme** (transfert anthropique et ses trois dimensions), les **seuils** (saturation, coût marginal croissant, effet boomerang), et les **configurations** (agencements historiques du transfert sur 3,3 millions d'années) — auxquels s'ajoute une posture analytique&nbsp;: la **discipline du regard**.
+
+{{< glossaire-carte >}}
 
 <dl>
 

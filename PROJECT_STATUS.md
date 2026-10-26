@@ -52,6 +52,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-26 (suite 3) — Pages du cadre : encadrés et schémas structurants (glossaire, quatre notions)
+
+Demande de l'auteur : « améliorer le style de présentation en rajoutant encadrés et éventuellement graphes
+structurants ». Un organe commun (`assets/scss/_notions-figures.scss`, shortcodes `notion-fiche`, `notion-schema`,
+`notion-comparaison`, `glossaire-carte`), contenu dans le front matter de chaque page (FR, EN), repris de la page
+sans fait nouveau : encadré « La notion en bref » (protocole `notion` visible), schéma du mécanisme, frontière avec
+les notions voisines ; carte du vocabulaire en tête du glossaire (ancres vérifiées au build, témoin vu mordre).
+Fiches de conception écrites (`docs/conception/`), pages non déclarées refondues (panel, gate, relecture entière
+et contre-expertise non faites). Build 0, check-all 0, liens 0, dates 61/61, recette 10 pages × 4 largeurs sans
+débordement, LanguageTool FR et EN (faux positifs seulement).
+
 ### 2026-10-26 (suite 2) — Registre relu contre l'édition anglaise (644 p.) ; règles du corpus appliquées ; EN LIGNE (`fe3530b`, déploiement vert, version servie attestée FR et EN : 168 paginations, périodes du livre, titre « Brain flux », ancre figée `firestealing-lightning-lighting-the-world`, Érasme « l’un des outils », femmes mariées, aucun guillemet français en anglais ; fiche du livre : âges 1905 → 2024 et « Pour aller plus loin »)
 
 Mandat de l'auteur : relire l'anglais contre le livre de 644 p. et vérifier les règles de design. 51 titres anglais

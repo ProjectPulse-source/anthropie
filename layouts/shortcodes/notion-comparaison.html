@@ -1,0 +1,32 @@
+{{- /* {{< notion-comparaison id="frontiere" >}} — frontière entre deux ou trois notions voisines, critère par critère
+       (26/10/2026). Grille CSS : colonnes sur ordinateur, blocs empilés sur téléphone (chaque cellule y porte le nom de
+       sa colonne). Contenu : front matter `comparaisons.<id>` de la page.
+         comparaisons:
+           frontiere:
+             titre: "…"
+             colonnes: ["…", "…"]
+             accent: 2                              (colonne de la notion de la page, 1 = première)
+             lignes: [{critere: "…", valeurs: ["…", "…"]}]
+             note: "…"                              (facultatif) */ -}}
+{{- $id := .Get "id" | default "frontiere" -}}
+{{- $c := index (.Page.Params.comparaisons | default dict) $id -}}
+{{- if not $c -}}{{- errorf "notion-comparaison : comparaisons.%s absent sur %s" $id .Page.RelPermalink -}}{{- end -}}
+{{- $n := len $c.colonnes -}}
+{{- $acc := int ($c.accent | default 0) -}}
+{{- range $c.lignes }}{{ if ne (len .valeurs) $n }}{{ errorf "notion-comparaison : ligne « %s » sans %d valeurs" .critere $n }}{{ end }}{{ end -}}
+<figure class="notion-comparaison" role="group" aria-label="{{ $c.titre | plainify }}">
+  <p class="notion-comparaison__titre">{{ $c.titre | markdownify }}</p>
+  <div class="notion-comparaison__grille" style="--n: {{ $n }}">
+    <div class="notion-comparaison__entete notion-comparaison__coin"></div>
+    {{- range $j, $col := $c.colonnes }}
+    <div class="notion-comparaison__entete{{ if eq (add $j 1) $acc }} notion-comparaison__entete--accent{{ end }}">{{ $col | markdownify }}</div>
+    {{- end }}
+    {{- range $c.lignes }}
+    <div class="notion-comparaison__critere">{{ .critere | markdownify }}</div>
+    {{- range $j, $v := .valeurs }}
+    <div class="notion-comparaison__cellule{{ if eq (add $j 1) $acc }} notion-comparaison__cellule--accent{{ end }}" data-col="{{ index $c.colonnes $j | plainify }}">{{ $v | markdownify }}</div>
+    {{- end }}
+    {{- end }}
+  </div>
+  {{- with $c.note }}<figcaption class="notion-comparaison__note">{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

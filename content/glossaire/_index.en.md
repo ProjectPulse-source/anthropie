@@ -6,8 +6,52 @@ og_title: "Glossary — the concepts, defined and sourced — S. Lalut"
 description: "Key terms of the anthropic framework."
 og_image: "images/og-glossaire.en.jpg"
 og_image_alt: "Glossary — Anthropy. Order here. Debt elsewhere."
+carte:  # vocabulary map (glossaire-carte shortcode): sets named by the introduction; every anchor must exist (errorf at build)
+  titre: "Map of the vocabulary"
+  coeur: {id: "anthropy", t: "Anthropy", d: "Social systems displace disorder rather than resolve it."}
+  groupes:
+    - t: "The mechanism"
+      role: "Transfer and its three dimensions: where disorder goes."
+      ton: "ordre"
+      termes:
+        - {id: "anthropic-transfer", t: "Anthropic transfer"}
+        - {id: "spatial-transfer", t: "Spatial transfer"}
+        - {id: "temporal-transfer", t: "Temporal transfer"}
+        - {id: "social-transfer", t: "Social transfer"}
+        - {id: "local-order", t: "Local order"}
+        - {id: "displacement-space", t: "Displacement space"}
+    - t: "Thresholds and return"
+      role: "When the displacement space saturates and disorder comes back."
+      ton: "cout"
+      termes:
+        - {id: "saturation", t: "Saturation"}
+        - {id: "rising-marginal-cost", t: "Rising marginal cost"}
+        - {id: "boomerang-effect", t: "Boomerang effect"}
+        - {id: "jevons-effect", t: "Jevons effect"}
+        - {id: "anthropic-loop", t: "Anthropic loop"}
+    - t: "Configurations"
+      role: "The historical arrangements of transfer, over 3.3 million years."
+      termes:
+        - {id: "configuration", t: "Configuration"}
+        - {id: "metaprogramme", t: "Metaprogramme"}
+        - {id: "register-of-offloaded-costs", t: "Register of Offloaded Costs"}
+    - t: "The posture"
+      role: "Before any stable order, ask where the disorder flows."
+      termes:
+        - {id: "discipline-of-attention", t: "Discipline of attention"}
+    - t: "Applications"
+      large: true
+      role: "The framework applied to a field: digital technology, legacies, inequality, knowledge."
+      termes:
+        - {id: "technological-debt", t: "Technological debt"}
+        - {id: "coupled-cost-registers", t: "Coupled cost registers"}
+        - {id: "derisking", t: "Derisking"}
+        - {id: "negative-commons", t: "Negative commons"}
+        - {id: "social-reversibility", t: "Social reversibility"}
+        - {id: "epistemic-order", t: "Epistemic order"}
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  conception: "docs/conception/glossaire.md"  # fiche de conception (regle 12), refonte de presentation du 26/10/2026
   bloc: "notions"
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
@@ -20,6 +64,8 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 This glossary brings together the terms specific to the anthropic framework. It is not a general dictionary: each entry designates a concept coined or repurposed within the framework of the anthropic hypothesis, and carries its precise meaning only in that theoretical context. Definitions refer to the *Anthropie Working Papers* that formalise them and to the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (in French) that develops them across the full scope of the framework.
 
 Anthropy rests on a single hypothesis — social systems displace disorder rather than resolve it — and the terms below constitute its working vocabulary. They are organised around three sets — the **mechanism** (anthropic transfer and its three dimensions), the **thresholds** (saturation, rising marginal cost, boomerang effect), and the **configurations** (historical arrangements of transfer over 3.3 million years) — to which is added an analytical posture: the **discipline of attention**.
+
+{{< glossaire-carte >}}
 
 <dl>
 

@@ -3,7 +3,7 @@ title: "What is social reversibility?"
 url: /en/social-reversibility/
 description: "Social reversibility is the capacity, assessed before an attempt, to withstand its possible failure without a lasting closure of one's future. Neither a stock nor a flow: a third dimension of inequality — what one can afford to fail."
 date: 2026-07-24
-lastmod: 2026-07-24
+lastmod: 2026-10-26
 og_title: "What is social reversibility? — definition and sources — S. Lalut"
 faq:
   - question: "What is social reversibility?"
@@ -18,8 +18,50 @@ faq:
     answer: "That is the programme opened by AWP-08: a measurement architecture (V = f(C, T, A)), four families of testable propositions and an identification protocol on two dated French institutional reforms — the removal of the 040 indicator from the Banque de France's FIBEN file and the insurance right-to-be-forgotten of the Lemoine Act. It is a refutable framework, not yet an empirical result."
   - question: "Who proposed the concept of social reversibility?"
     answer: "Stéphane Lalut, economist and independent researcher, in the working paper AWP-08 — Social Reversibility as a Dimension of Inequality (2026, DOI 10.5281/zenodo.21507249), eighth of the Anthropie Working Papers. The concept extends the framework of anthropy: the stratified price of failure is a mechanism of social disorder distribution."
+fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
+  lignes:
+    - t: "Definition"
+      d: "The capacity, assessed *before* an attempt, to withstand its possible failure without lasting closure of the set of accessible options."
+    - t: "Origin"
+      d: "Proposed by the economist Stéphane Lalut in [AWP-08](/en/awp/awp-08/) (2026), as a third dimension of inequality."
+    - t: "Not to be confused with"
+      d: "Resilience, an individual psychological capacity to overcome hardship; social reversibility is a structural position that exists before any hardship."
+    - t: "Example"
+      d: "Two people with identical incomes: one can attempt a business, a fallback exists; for the other, the same failure triggers the gears — overdraft, negative records, housing."
+    - t: "Limit"
+      d: "A refutable framework, not an empirical result: AWP-08 proposes a measurement architecture and an identification protocol on two dated settings."
+    - t: "Anthropic reading"
+      d: "The cost of failure does not disappear: it is displaced and distributed, unequally. The stratified price of failure distributes social disorder."
+      anthropie: true
+schemas:  # mechanism diagram (notion-schema shortcode)
+  mecanisme:
+    titre: "What makes bouncing back possible: V = f(C, T, A)"
+    etages:
+      - titre: "Three complementary components"
+        boites:
+          - {t: "C — Fallback capacity", d: "Holding out through the interval between the fall and the next attempt: savings, support networks, safety nets"}
+          - {t: "T — Price of failure", d: "What failure costs in law and in practice, including the trace it leaves"}
+          - {t: "A — Readmission", d: "Doors that reopen: employers, lenders, institutions"}
+        fleche: "the effect of each depends on the level of the others"
+      - boites:
+          - {t: "V — Social reversibility", d: "Withstanding a failure without durably closing one's future", ton: "ordre"}
+        fleche: "it acts before and after failure"
+      - boites:
+          - {t: "Before: the decision to try", d: "Whoever knows a failure would be irrecoverable abstains — an abstention invisible in the statistics", ton: "cout"}
+          - {t: "After: the price of failure", d: "Stratified by social position; the trace conditions credit, insurance, housing", ton: "cout"}
+    note: "A solid fallback is worth little if the trace locks readmission; open readmission protects no one who cannot hold out through the interval."
+comparaisons:  # boundary between neighbouring notions (notion-comparaison shortcode)
+  dimensions:
+    titre: "Three dimensions of inequality"
+    colonnes: ["Stocks", "Trajectories", "Reversibility"]
+    accent: 3
+    lignes:
+      - {critere: "What is measured", valeurs: ["What one owns: income, wealth", "What one crosses: mobility between social positions", "What one can afford to fail"]}
+      - {critere: "When", valeurs: ["A state, at a date", "A path, between two dates", "Before the attempt"]}
+    note: "Two people with identical incomes can have very different reversibility: the difference shows up neither in income statistics nor in mobility statistics."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  conception: "docs/conception/reversibilite-sociale.md"  # fiche de conception (regle 12), refonte de presentation du 26/10/2026
   bloc: "notions"
   livres: ["la-societe-du-premier-coup"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 30
@@ -31,11 +73,15 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 Social reversibility is the capacity, assessed *before* an attempt, to withstand its possible failure without lasting closure of the set of accessible options. The concept is proposed by economist Stéphane Lalut in the working paper [AWP-08](/en/awp/awp-08/) (2026) as a third dimension of inequality, alongside stocks (income, wealth) and trajectories (social mobility).
 
+{{< notion-fiche >}}
+
 ## What one can afford to fail
 
 Inequality is usually measured by what one owns — income, wealth — or by what one crosses — mobility between social positions. A third measure is missing: what a person can afford to **fail** without durably closing their future.
 
 Two people with identical incomes do not stand in the same relation to risk. One can leave a job, attempt a business, return to study: if the attempt fails, a fallback exists — savings, a support network, a way back. The other plays every attempt double-or-nothing: the same failure triggers the gears — overdraft, negative records, housing, reputation. The first has high reversibility; the second, low. This difference shows up neither in income statistics nor in mobility statistics — yet it governs who gets to try.
+
+{{< notion-comparaison id="dimensions" >}}
 
 ## The memory of failures
 
@@ -46,6 +92,8 @@ A payment incident, a business default, a recorded flag do not disappear with th
 ## Bouncing back: structure, not just psychology
 
 The common discourse on bouncing back after failure is almost entirely psychological: resilience, mindset, "turning failure into learning". That grid leaves the essential in the dark: **bouncing back requires material and institutional conditions** that willpower does not replace.
+
+{{< notion-schema id="mecanisme" >}}
 
 The framework of AWP-08 names them. Bouncing back requires:
 

@@ -3,7 +3,7 @@ title: "What are negative commons?"
 url: /en/negative-commons/
 description: "Negative commons designate what we inherit collectively without having chosen it: waste, polluted soils, power plants to be dismantled, obsolete infrastructures. A notion developed by Alexandre Monnin, Emmanuel Bonnet and Diego Landivar — and an anthropic reading of these legacies."
 date: 2026-07-26
-lastmod: 2026-07-26
+lastmod: 2026-10-26
 og_title: "What are negative commons? — definition and sources — S. Lalut"
 faq:
   - question: "What is a negative common?"
@@ -14,8 +14,49 @@ faq:
     answer: "The externality is an accounting notion: an unbilled cost, which one imagines can be corrected by a price (tax, market). The notion of negative commons challenges this reading: a polluted soil or a power plant at the end of its life is not a price discrepancy but an installed material reality, which demands care, institutions and labour — not only a monetary internalisation."
   - question: "What is the link between negative commons and anthropy?"
     answer: "Negative commons are the anthropic transfer turned into matter: when a system displaces its disorder (waste, pollution, end-of-life infrastructures) and the receptacle accumulates, what remains is a shared negative inheritance. The working paper AWP-06 (Stéphane Lalut, 2026) ranks digital infrastructures — data centers, equipment to be dismantled — among candidate negative commons."
+fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
+  lignes:
+    - t: "Definition"
+      d: "What we inherit collectively without having chosen it — nuclear waste, polluted soils, power plants to be dismantled, industrial ruins, obsolete infrastructures: common burdens to be managed, closed down or dismantled."
+    - t: "Origin"
+      d: "Alexandre Monnin, with Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021, in French)."
+    - t: "Not to be confused with"
+      d: "Elinor Ostrom's commons, resources a community makes last; and the externality, an unbilled cost that a price would be enough to correct."
+    - t: "Example"
+      d: "A stock of radioactive waste: a material reality installed for millennia, which demands institutions, skills, work and vigilance."
+    - t: "Scope"
+      d: "A notion of action: it turns attention toward neglected tasks — maintaining, closing down, dismantling, decontaminating."
+    - t: "Anthropic reading"
+      d: "A displacement of disorder turned into a legacy: the anthropic transfer crystallised in the materiality of the world."
+      anthropie: true
+schemas:  # mechanism diagram (notion-schema shortcode)
+  mecanisme:
+    titre: "From transfer to legacy"
+    etages:
+      - boites:
+          - {t: "An order produced", d: "Power plants, industries, networks, data centers", ton: "ordre"}
+        fleche: "disorder is displaced"
+      - titre: "The route: the anthropic loop"
+        boites:
+          - {t: "Displacement", d: "Toward other places, other times, other groups"}
+          - {t: "Accumulation", d: "The receptacle fills up"}
+          - {t: "Saturation", d: "It no longer absorbs"}
+        fleche: "what remains becomes matter"
+      - boites:
+          - {t: "A negative commons", d: "Soils, water tables, end-of-life infrastructures: a shared legacy that must be taken care of", ton: "cout"}
+    note: "The [anthropic loop](/en/anthropic-loop/) describes the route — displacement, accumulation, saturation, return; negative commons describe what remains."
+comparaisons:  # boundary between neighbouring notions (notion-comparaison shortcode)
+  frontiere:
+    titre: "Commons, externality, negative commons"
+    colonnes: ["Commons (Ostrom)", "Externality", "Negative commons"]
+    accent: 3
+    lignes:
+      - {critere: "What is shared", valeurs: ["A resource: pasture, irrigation, knowledge", "An unbilled cost", "A reality nobody wants"]}
+      - {critere: "The task", valeurs: ["Making it last, without the state or the market", "Internalising it through a price: tax, quota, market in rights", "Monitoring, containing, decontaminating, dismantling — sometimes over generations"]}
+      - {critere: "The question", valeurs: ["How to manage the resource durably?", "How much does it cost?", "Who takes care of it, how, and for how long?"]}
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  conception: "docs/conception/communs-negatifs.md"  # fiche de conception (regle 12), refonte de presentation du 26/10/2026
   bloc: "notions"
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 40
@@ -27,6 +68,8 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 ---
 
 Negative commons designate what we inherit collectively **without having chosen it**: nuclear waste, polluted soils, power plants to be dismantled, industrial ruins, obsolete infrastructures. The notion was developed by the philosopher Alexandre Monnin with Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021 — in French; title translated here as "Legacy and Closure: An Ecology of Dismantling"): no longer common goods to be preserved, but **common burdens** to be managed, closed or dismantled — sometimes over generations.
+
+{{< notion-fiche >}}
 
 ## The inversion of a classic figure
 
@@ -40,11 +83,15 @@ Standard economics files these realities under the category of **externality**: 
 
 This critique echoes K. William Kapp's *cost-shifting* tradition, which had already challenged the concept of externality: shifting costs is not a market failure but a systemic mechanism — and correcting it takes more than a price.
 
+{{< notion-comparaison id="frontiere" >}}
+
 ## The anthropic reading: transfer turned into matter
 
 The framework of [anthropy](/en/quest-ce-que-lanthropie/) offers a genealogy of these legacies. A social system produces its order by displacing its disorder — toward other places, other times, other groups. When the receptacle accumulates and saturates, what remains on the ground, in the water tables, in end-of-life infrastructures is **the anthropic transfer crystallised in the materiality of the world**: a negative common is a displacement of disorder that has become an inheritance.
 
 This reading links the two notions without conflating them: negative commons describe **what remains**; the [anthropic loop](/en/anthropic-loop/) describes **the route** — displacement, accumulation, saturation, return. And it sheds light on the question of responsibility that Guillaume Vuillemey raises about the firm: when limited liability separates action from accountability, damages slide toward common goods — the firm disappears, the inheritance remains.
+
+{{< notion-schema id="mecanisme" >}}
 
 ## The coming textbook case: digital technology
 

@@ -1,0 +1,143 @@
+// =======================================================================
+// _notions-figures.scss — encadrés et schémas des pages du cadre (26/10/2026)
+// Un seul organe pour les pages notions et le glossaire : fiche « La notion en bref »
+// (protocole `notion` rendu visible), schéma de mécanisme en étages, comparaison,
+// carte du vocabulaire. Langage graphique du site : bleu = ordre, orange = coût,
+// gris = neutre. Pas de listes (`main li` !important écrase le retrait) : des div.
+// =======================================================================
+
+$notion-ordre: #184f95;
+$notion-cout: #eb6834;
+
+// ----- Fiche « La notion en bref » -----
+.notion-fiche {
+  position: relative;
+  margin: 2rem 0 2.4rem;
+  padding: 1.4rem 1.5rem 0.6rem;
+  background: var(--color-bg-elevated);
+  border: 0.5px solid var(--color-rule-strong);
+  box-shadow: 0 2px 14px rgba(15, 15, 18, 0.07);
+  &::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--color-accent); }
+}
+.notion-fiche__titre {
+  margin: 0 0 0.9rem;
+  font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent);
+}
+.notion-fiche__grille { margin: 0; }
+.notion-fiche__ligne {
+  display: grid; grid-template-columns: 11rem 1fr; gap: 0 1.2rem;
+  padding: 0.7rem 0; border-top: 1px solid var(--color-rule-ghost);
+  &:first-child { border-top: 0; padding-top: 0; }
+}
+.notion-fiche__ligne dt {
+  font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 600;
+  color: var(--color-text-subtle); padding-top: 0.15rem;
+}
+.notion-fiche__ligne dd { margin: 0; line-height: 1.6; color: var(--color-text-body); }
+.notion-fiche__ligne dd p { margin: 0; }
+.notion-fiche__ligne--anthropie dt { color: $notion-ordre; }
+@media (max-width: 600px) {
+  .notion-fiche { padding: 1.1rem 1rem 0.4rem; }
+  .notion-fiche__ligne { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+
+// ----- Schéma de mécanisme : des étages reliés par des flèches -----
+.notion-schema {
+  margin: 2rem 0 2.2rem;
+  padding: 1.3rem 1.2rem 1rem;
+  background: var(--color-bg-card);
+  border-radius: 4px;
+}
+.notion-schema__titre, .notion-comparaison__titre {
+  margin: 0 0 1rem; font-family: var(--font-serif); font-size: 1.12rem; font-weight: 600; line-height: 1.35;
+  color: var(--color-text);  // casse normale : une capitalisation forcée déformait « V = f(C, T, A) »
+}
+.notion-schema__etage-titre {
+  margin: 0 0 0.45rem; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-faint); text-align: center;
+}
+.notion-schema__boites { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+.notion-schema__boite {
+  flex: 1 1 0; min-width: 9.5rem; max-width: 26rem;
+  padding: 0.7rem 0.85rem; background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-medium); border-top: 3px solid var(--color-text-faint);
+  border-radius: 3px; font-size: 0.92rem; line-height: 1.5; color: var(--color-text-body);
+}
+.notion-schema__boite strong { display: block; margin-bottom: 0.2rem; font-family: var(--font-sans); font-size: 0.86rem; color: var(--color-text); }
+.notion-schema__boite p { margin: 0; }
+.notion-schema__boite--ordre { border-top-color: $notion-ordre; }
+.notion-schema__boite--ordre strong { color: $notion-ordre; }
+.notion-schema__boite--cout { border-top-color: $notion-cout; }
+.notion-schema__boite--cout strong { color: #b4471b; }  // orange assombri : 5,3:1 sur blanc
+.notion-schema__fleche {
+  display: block; margin: 0.35rem auto; text-align: center;
+  font-size: 1.1rem; line-height: 1; color: var(--color-text-faint);
+}
+.notion-schema__fleche span:first-child { font-size: 1.55rem; font-weight: 300; color: var(--color-text-subtle); }
+.notion-schema__fleche span + span { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-style: italic; margin-top: 0.1rem; }
+.notion-schema__note { margin: 0.9rem 0 0; font-size: 0.86rem; line-height: 1.55; color: var(--color-text-subtle); }
+@media (max-width: 600px) {
+  .notion-schema { padding: 1rem 0.75rem 0.8rem; }
+  .notion-schema__boite { flex-basis: 100%; max-width: none; }
+}
+
+// ----- Comparaison : une grille critère × colonnes, empilée sur téléphone -----
+.notion-comparaison { margin: 2rem 0 2.2rem; }
+.notion-comparaison__grille {
+  display: grid; grid-template-columns: 9.5rem repeat(var(--n, 2), 1fr);
+  border: 1px solid var(--color-rule-medium); border-radius: 4px; overflow: hidden;
+  background: var(--color-bg-elevated); font-size: 0.92rem; line-height: 1.5;
+}
+.notion-comparaison__grille > div { padding: 0.6rem 0.75rem; border-top: 1px solid var(--color-rule-ghost); }
+.notion-comparaison__entete { font-family: var(--font-sans); font-weight: 600; background: var(--color-bg-card); border-top: 0 !important; }
+.notion-comparaison__entete--accent { color: $notion-ordre; background: var(--color-dossier-tint); }
+.notion-comparaison__critere { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600; color: var(--color-text-subtle); }
+.notion-comparaison__cellule--accent { background: rgba(235, 239, 245, 0.55); }
+.notion-comparaison__note { margin: 0.6rem 0 0; font-size: 0.86rem; color: var(--color-text-subtle); }
+@media (max-width: 680px) {
+  .notion-comparaison__grille { grid-template-columns: 1fr; }
+  .notion-comparaison__coin { display: none; }
+  .notion-comparaison__entete { display: none; }
+  .notion-comparaison__critere { background: var(--color-bg-card); }
+  .notion-comparaison__cellule::before {
+    content: attr(data-col); display: block; font-family: var(--font-sans); font-size: 0.78rem;
+    font-weight: 600; color: var(--color-text-faint); margin-bottom: 0.1rem;
+  }
+  .notion-comparaison__cellule--accent::before { color: $notion-ordre; }
+}
+
+// ----- Carte du vocabulaire (glossaire) -----
+.glossaire-carte {
+  margin: 2rem 0 2.6rem; padding: 1.3rem 1.2rem 0.9rem;
+  background: var(--color-bg-card); border-radius: 4px;
+}
+.glossaire-carte__titre {
+  margin: 0 0 1rem; font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-subtle);
+}
+.glossaire-carte__coeur {
+  margin: 0 auto 0.4rem; max-width: 34rem; padding: 0.8rem 1rem; text-align: center;
+  background: var(--color-bg-elevated); border: 1px solid var(--color-rule-medium); border-top: 3px solid var(--color-accent);
+  border-radius: 3px; font-size: 0.93rem; line-height: 1.5;
+}
+.glossaire-carte__coeur a { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; }
+.glossaire-carte__coeur p { margin: 0.2rem 0 0; color: var(--color-text-muted); }
+.glossaire-carte__groupes { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.7rem; margin-top: 0.4rem; }
+.glossaire-carte__groupe {
+  padding: 0.75rem 0.85rem; background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-medium); border-top: 3px solid var(--color-text-faint); border-radius: 3px;
+}
+.glossaire-carte__groupe--ordre { border-top-color: $notion-ordre; }
+.glossaire-carte__groupe--cout { border-top-color: $notion-cout; }
+.glossaire-carte__groupe--large { grid-column: 1 / -1; }
+.glossaire-carte__groupe-titre { margin: 0 0 0.15rem; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 600; color: var(--color-text); }
+.glossaire-carte__groupe-role { margin: 0 0 0.5rem; font-size: 0.82rem; line-height: 1.45; color: var(--color-text-subtle); }
+.glossaire-carte__termes { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.glossaire-carte__termes a {
+  display: inline-block; padding: 0.15rem 0.5rem; border: 1px solid var(--color-rule-medium); border-radius: 999px;
+  font-family: var(--font-sans); font-size: 0.8rem; line-height: 1.4; color: var(--color-link); text-decoration: none;
+  &:hover, &:focus-visible { background: var(--color-accent-faint); border-color: var(--color-accent-soft); }
+}
+.glossaire-carte__fleche { display: block; text-align: center; color: var(--color-text-faint); margin: 0.1rem 0; }
+.glossaire-entry { scroll-margin-top: 5rem; }  // en-tête collant : la carte mène aux entrées par ancre

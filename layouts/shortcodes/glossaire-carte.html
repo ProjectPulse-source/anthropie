@@ -1,0 +1,36 @@
+{{- /* {{< glossaire-carte >}} — carte du vocabulaire du cadre en tête du glossaire (26/10/2026) : l'hypothèse au
+       centre, puis les ensembles que l'introduction du glossaire nomme, chaque terme menant à son entrée par ancre.
+       Contenu : front matter `carte:` de la page. Contrôle : chaque ancre citée doit exister dans la page (une entrée
+       renommée casserait la carte en silence) — vérifié au build par la liste des `id="…"` du contenu.
+         carte:
+           titre: "…"
+           coeur: {id: "anthropie", t: "Anthropie", d: "…"}
+           groupes: [{t: "…", role: "…", ton: "ordre", large: true, termes: [{id: "…", t: "…"}]}]
+         (`large` : le groupe occupe toute la largeur de la carte) */ -}}
+{{- with .Page.Params.carte -}}
+{{- $contenu := $.Page.RawContent -}}
+<nav class="glossaire-carte" aria-label="{{ .titre | plainify }}">
+  <p class="glossaire-carte__titre">{{ .titre | markdownify }}</p>
+  {{- with .coeur }}
+  {{- if not (strings.Contains $contenu (printf "id=\"%s\"" .id)) }}{{ errorf "glossaire-carte : ancre #%s absente de %s" .id $.Page.RelPermalink }}{{ end }}
+  <div class="glossaire-carte__coeur"><a href="#{{ .id }}">{{ .t | markdownify }}</a><p>{{ .d | markdownify }}</p></div>
+  <span class="glossaire-carte__fleche" aria-hidden="true">↓</span>
+  {{- end }}
+  <div class="glossaire-carte__groupes">
+    {{- range .groupes }}
+    <div class="glossaire-carte__groupe{{ with .ton }} glossaire-carte__groupe--{{ . }}{{ end }}{{ if .large }} glossaire-carte__groupe--large{{ end }}">
+      <p class="glossaire-carte__groupe-titre">{{ .t | markdownify }}</p>
+      {{- with .role }}<p class="glossaire-carte__groupe-role">{{ . | markdownify }}</p>{{ end }}
+      <div class="glossaire-carte__termes">
+        {{- range .termes }}
+        {{- if not (strings.Contains $contenu (printf "id=\"%s\"" .id)) }}{{ errorf "glossaire-carte : ancre #%s absente de %s" .id $.Page.RelPermalink }}{{ end }}
+        <a href="#{{ .id }}">{{ .t | markdownify }}</a>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</nav>
+{{- else -}}
+{{- errorf "glossaire-carte : front matter `carte:` absent sur %s" .Page.RelPermalink -}}
+{{- end -}}

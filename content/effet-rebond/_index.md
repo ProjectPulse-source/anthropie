@@ -2,7 +2,7 @@
 title: "Qu'est-ce que l'effet rebond (paradoxe de Jevons) ?"
 description: "L'effet rebond désigne le mécanisme par lequel l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation totale, tend à l'augmenter. Décrit par William Stanley Jevons en 1865, il reste le point aveugle des politiques d'efficacité."
 date: 2026-07-24
-lastmod: 2026-07-24
+lastmod: 2026-10-26
 og_title: "L'effet rebond (paradoxe de Jevons) — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que l'effet rebond ?"
@@ -15,8 +15,42 @@ faq:
     answer: "Non — l'ampleur du rebond varie selon les usages, les secteurs et les périodes, et fait l'objet d'une littérature abondante. Mais il est structurel, pas anecdotique : ignorer le rebond conduit systématiquement à surestimer les économies d'énergie attendues des politiques d'efficacité. C'est pourquoi les scénarios sérieux distinguent efficacité et sobriété."
   - question: "Quel est le lien entre l'effet rebond et l'anthropie ?"
     answer: "Dans le cadre anthropique (Stéphane Lalut), l'effet rebond est un cas d'effet boomerang : le gain d'efficacité produit un ordre local — moins d'énergie par unité — dont le coût revient sous forme d'un désordre global — plus de consommation totale. L'analyse est développée dans AWP-04, « Transition énergétique ou transfert entropique ? » (2026, DOI 10.5281/zenodo.19269244)."
+fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
+  lignes:
+    - t: "Définition"
+      d: "Mécanisme par lequel un gain d'efficacité énergétique, au lieu de réduire la consommation totale, tend à l'augmenter&nbsp;: ce qui devient plus efficace devient moins cher, donc plus utilisé."
+    - t: "Origine"
+      d: "William Stanley Jevons, *The Coal Question* (1865), à propos des machines à vapeur&nbsp;; généralisé par l'économie de l'énergie (postulat de Khazzoom-Brookes, années 1980)."
+    - t: "À ne pas confondre"
+      d: "Le [paradoxe de Jevons](/glossaire/#effet-jevons) est le cas extrême&nbsp;: la reprise de consommation dépasse le gain. L'effet rebond désigne toute reprise qui rogne le gain."
+    - t: "Exemple"
+      d: "Une voiture plus sobre incite à rouler davantage&nbsp;; les économies de chauffage paient un billet d'avion."
+    - t: "Limite"
+      d: "Son ampleur varie selon les usages, les secteurs et les périodes&nbsp;: il n'annule pas tout gain d'efficacité, mais l'ignorer conduit à surestimer les économies attendues."
+    - t: "Lecture anthropique"
+      d: "Un [effet boomerang](/glossaire/#effet-boomerang)&nbsp;: l'ordre local (moins d'énergie par unité) revient en désordre global (plus de consommation totale). Analyse développée dans [AWP-04](/awp/awp-04/)."
+      anthropie: true
+schemas:  # schéma de mécanisme (shortcode notion-schema)
+  mecanisme:
+    titre: "Comment un gain d'efficacité revient en consommation"
+    etages:
+      - boites:
+          - {t: "Gain d'efficacité", d: "Moins d'énergie par unité de service", ton: "ordre"}
+        fleche: "le service devient moins cher"
+      - titre: "Trois canaux de rebond"
+        boites:
+          - {t: "Direct", d: "L'usage devenu sobre est davantage consommé"}
+          - {t: "Indirect", d: "L'argent économisé finance d'autres consommations"}
+          - {t: "Macroéconomique", d: "Le coût implicite de l'énergie baisse dans toute l'économie&nbsp;: production et demande augmentent"}
+        fleche: "les reprises s'additionnent"
+      - titre: "Deux issues"
+        boites:
+          - {t: "Rebond partiel", d: "La reprise rogne le gain&nbsp;: la consommation baisse moins qu'annoncé", ton: "cout"}
+          - {t: "Paradoxe de Jevons", d: "La reprise dépasse le gain&nbsp;: la consommation totale augmente", ton: "cout"}
+    note: "Schéma du mécanisme, sans échelle&nbsp;: l'ampleur de chaque canal varie selon les usages et les secteurs, et fait l'objet d'une littérature discutée."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
+  conception: "docs/conception/effet-rebond.md"  # fiche de conception (regle 12), refonte de presentation du 26/10/2026
   bloc: "notions"
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 50
@@ -29,6 +63,8 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 L'effet rebond est le mécanisme par lequel l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation totale d'énergie, tend à l'augmenter&nbsp;: ce qui devient plus efficace devient moins cher, donc plus utilisé. Décrit par l'économiste William Stanley Jevons dès 1865, il reste le point aveugle de la plupart des politiques d'efficacité énergétique.
 
+{{< notion-fiche >}}
+
 ## L'origine&nbsp;: Jevons et la machine à vapeur
 
 Dans *The Coal Question* (1865), Jevons observe un fait contre-intuitif&nbsp;: les machines à vapeur de son époque, bien plus efficaces que celles de Newcomen un siècle plus tôt, n'ont pas réduit la consommation de charbon de l'Angleterre — elles l'ont fait exploser. La raison est économique&nbsp;: une machine qui tire plus de travail de chaque tonne de charbon abaisse le coût de ce travail, ouvre de nouveaux usages rentables et multiplie les machines. «&nbsp;C'est une confusion d'idées que de supposer qu'un usage économe du combustible équivaut à une consommation moindre&nbsp;», écrit-il. «&nbsp;C'est le contraire qui est vrai.&nbsp;»
@@ -36,6 +72,8 @@ Dans *The Coal Question* (1865), Jevons observe un fait contre-intuitif&nbsp;: l
 Le mécanisme a été redécouvert et généralisé par l'économie de l'énergie contemporaine — notamment sous le nom de postulat de Khazzoom-Brookes, d'après les travaux de Daniel Khazzoom et Leonard Brookes au tournant des années 1980.
 
 ## Les trois formes du rebond
+
+{{< notion-schema id="mecanisme" >}}
 
 La littérature distingue classiquement trois canaux&nbsp;:
 
