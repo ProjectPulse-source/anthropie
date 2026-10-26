@@ -52,7 +52,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-10-26 (suite) — Registre complet (168/168) et réaligné sur l'édition corrigée ; recette 320-1280 px
+### 2026-10-26 (suite) — Registre complet (168/168) et réaligné sur l'édition corrigée ; recette 320-1280 px ; EN LIGNE (`c4e3740`, déploiement vert, version servie attestée FR et EN : « Les 168 jalons du livre » / « All 168 milestones of the book », Gutenberg, Rubicon qui ouvre la guerre civile, Templiers « et pas seulement le métal », nom court du livre dans la ligne d’appartenance)
 
 Mandat de l'auteur (« compléter ce qu'il faut compléter, tu as le livre comme référence »). Trois jalons rédigés sur
 leur chapitre (Olmèques, *Odyssée*, Gutenberg), FR et EN ; compteur « Les 168 jalons du livre » (comparaison en `int` :
