@@ -52,7 +52,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-10-26 (suite 2) — Registre relu contre l'édition anglaise (644 p.) ; règles du corpus appliquées
+### 2026-10-26 (suite 2) — Registre relu contre l'édition anglaise (644 p.) ; règles du corpus appliquées ; EN LIGNE (`fe3530b`, déploiement vert, version servie attestée FR et EN : 168 paginations, périodes du livre, titre « Brain flux », ancre figée `firestealing-lightning-lighting-the-world`, Érasme « l’un des outils », femmes mariées, aucun guillemet français en anglais ; fiche du livre : âges 1905 → 2024 et « Pour aller plus loin »)
 
 Mandat de l'auteur : relire l'anglais contre le livre de 644 p. et vérifier les règles de design. 51 titres anglais
 alignés sur le livre (ancres figées, `ancre`), 20 corrections EN et 14 reportées sur le FR, guillemets des deux langues ;
