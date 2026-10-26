@@ -37,7 +37,8 @@ cablee jusque-la : /budget-2027-votre-commune/ est partie le 22/10 sans fiche, e
  12. toute page francaise NEUVE (date >= 2026-10-22) ou REFONDUE depuis (refonte >= 2026-10-23) declare
      `ressource.conception: "docs/conception/<slug>.md"` ; le fichier existe et porte chaque intitule de
      docs/conception/_GABARIT.md, chacun suivi d'un texte reel (vide ou « A REMPLIR » = ecart) ; la page anglaise
-     declare la meme fiche. Les pages anterieures ne sont pas visees : elles le seront a leur prochaine refonte.
+     declare la meme fiche. Les pages anterieures ne sont pas visees : elles le seront a leur prochaine refonte ;
+     une fiche qu'elles declarent quand meme est verifiee (26/10/2026).
      Point d'entree qui produit la fiche : skill `ressource-site` (D:/PRO/.claude/skills/).
 
 Condition de mort (regles 1 a 10) : aucune -- regles permanentes du modele ; a reexaminer si le modele est abandonne
@@ -120,6 +121,10 @@ def classification() -> list[tuple[str, str]]:
                                         "de conception ecrite avant la page, skill ressource-site)" % CONCEPTION_DEPUIS))
                 else:
                     fautes += [(rel, e) for e in fiche_conception(str(conc))]
+            elif conc:
+                # Une fiche declaree hors du champ de la regle (page anterieure, non refondue) se verifie aussi :
+                # declaree, elle promet un contenu (26/10/2026, Registre : fiche ecrite apres coup, sans refonte).
+                fautes += [(rel, e) for e in fiche_conception(str(conc))]
         (lues if p.name.endswith(".en.md") else fr)[cle] = (rel, val)
         if not p.name.endswith(".en.md") and re.search(r"^donnees:", fm, re.M):
             nom = p.parent.relative_to(CONTENT).as_posix()

@@ -1,43 +1,43 @@
 {
  "_meta": {
-  "source": "Registre des couts deportes, appareil documentaire du livre ANTHROPIE (le livre y renvoie par un QR code, p. 619 de l'edition de 630 p.). Version en ligne derivee le 2026-08-15 de l'ancienne page d'accueil, redigee par l'auteur ; completee et realignee le 2026-10-26 sur l'edition corrigee (630 p.) : trois jalons ajoutes (Olmeques, Odyssee, Gutenberg), 41 entrees relues chapitre par chapitre et corrigees (trace : D:/PRO/06_PROMOTION/ARCHITECTURE_RESSOURCES_2026-10-25/FIDELITE_REGISTRE/). Les ages suivent la segmentation du livre publie, affectation chronologique par bornes. Toute correction editoriale se fait ICI (source maintenue), et suit le livre.",
+  "source": "Registre des couts deportes, appareil documentaire du livre ANTHROPIE (le livre y renvoie par un QR code, p. 619 de l'edition de 630 p.). Version en ligne derivee le 2026-08-15 de l'ancienne page d'accueil, redigee par l'auteur ; completee et realignee le 2026-10-26 sur l'edition corrigee (630 p.) : trois jalons ajoutes (Olmeques, Odyssee, Gutenberg), 41 entrees relues chapitre par chapitre et corrigees (trace : D:/PRO/06_PROMOTION/ARCHITECTURE_RESSOURCES_2026-10-25/FIDELITE_REGISTRE/). Les ages suivent la segmentation du livre publie, chaque jalon dans l'age de son chapitre ; periode = dates du premier et du dernier chapitre de l'age (le livre ne donne pas de bornes). Toute correction editoriale se fait ICI (source maintenue), et suit le livre.",
   "jalons_livre": 168
  },
  "ages": [
   {
    "num": 1,
    "titre": "Les programmes fondateurs",
-   "periode": "≈ −3,3 millions d’années → −10 000"
+   "periode": "≈ −3,3 millions d’années → ≈ −45 000"
   },
   {
    "num": 2,
    "titre": "Le piège néolithique",
-   "periode": "−10 000 → −1 000"
+   "periode": "≈ −10 000 → ≈ −1 046"
   },
   {
    "num": 3,
    "titre": "Les systèmes d’exploitation antiques",
-   "periode": "−1 000 → 500"
+   "periode": "≈ −900 → 312"
   },
   {
    "num": 4,
    "titre": "Les réseaux : routes, relais, relais de pouvoir",
-   "periode": "500 → 1500"
+   "periode": "486 → 1494"
   },
   {
    "num": 5,
    "titre": "La machine-État moderne",
-   "periode": "1500 → 1800"
+   "periode": "1513 → 1784"
   },
   {
    "num": 6,
    "titre": "L’industrialisation et les nations",
-   "periode": "1800 → 1945"
+   "periode": "1789 → 1905"
   },
   {
    "num": 7,
    "titre": "Le métaprogramme contemporain",
-   "periode": "1945 → présent"
+   "periode": "1905 → 2024"
   }
  ],
  "jalons": [
@@ -52,7 +52,8 @@
     "Technique",
     "Énergétique",
     "Cognitif"
-   ]
+   ],
+   "pages": "23-27"
   },
   {
    "age": 1,
@@ -65,7 +66,8 @@
     "Énergétique",
     "Social",
     "Écologique"
-   ]
+   ],
+   "pages": "27-31"
   },
   {
    "age": 1,
@@ -78,7 +80,8 @@
     "Symbolique",
     "Social",
     "Spatial"
-   ]
+   ],
+   "pages": "31-35"
   },
   {
    "age": 1,
@@ -91,7 +94,8 @@
     "Cognitif",
     "Social",
     "Symbolique"
-   ]
+   ],
+   "pages": "35-39"
   },
   {
    "age": 1,
@@ -104,7 +108,8 @@
     "Social",
     "Politique",
     "Technique"
-   ]
+   ],
+   "pages": "39-43"
   },
   {
    "age": 1,
@@ -117,7 +122,8 @@
     "Économique",
     "Social",
     "Spatial"
-   ]
+   ],
+   "pages": "43-47"
   },
   {
    "age": 1,
@@ -130,7 +136,8 @@
     "Symbolique",
     "Social",
     "Économique"
-   ]
+   ],
+   "pages": "47-50"
   },
   {
    "age": 1,
@@ -143,7 +150,8 @@
     "Cognitif",
     "Symbolique",
     "Énergétique"
-   ]
+   ],
+   "pages": "50-57"
   },
   {
    "age": 2,
@@ -156,7 +164,8 @@
     "Social",
     "Écologique",
     "Économique"
-   ]
+   ],
+   "pages": "57-61"
   },
   {
    "age": 2,
@@ -169,7 +178,8 @@
     "Technique",
     "Spatial",
     "Énergétique"
-   ]
+   ],
+   "pages": "61-64"
   },
   {
    "age": 2,
@@ -182,7 +192,8 @@
     "Social",
     "Politique",
     "Spatial"
-   ]
+   ],
+   "pages": "64-66"
   },
   {
    "age": 2,
@@ -195,7 +206,8 @@
     "Cognitif",
     "Social",
     "Politique"
-   ]
+   ],
+   "pages": "67-69"
   },
   {
    "age": 2,
@@ -208,33 +220,36 @@
     "Symbolique",
     "Politique",
     "Économique"
-   ]
+   ],
+   "pages": "70-72"
   },
   {
    "age": 2,
    "tri": -1200,
    "date": "≈ -1 200",
    "titre": "La Tyrannie — gouverner le temps",
-   "ordre": "Accélération et efficacité de la décision en court-circuitant les délibérations.",
+   "ordre": "Accélération et netteté de la décision en court-circuitant les délibérations.",
    "dette": "Dissolution des garanties et démobilisation des citoyens ; contestation décalée plutôt que supprimée ; entretien perpétuel de l'ordre (gardes, réparations, prélèvements) ; dette de temps prélevée sur les citoyens.",
    "categories": [
     "Politique",
     "Temporel",
     "Social"
-   ]
+   ],
+   "pages": "72-75"
   },
   {
    "age": 2,
    "tri": -1046,
    "date": "≈ -1 046",
    "titre": "Zhou — mandat céleste, ordre du monde",
-   "ordre": "Contrat de légitimité conditionnelle (\"Mandat du Ciel\"), liant le pouvoir à la performance visible (prospérité, ordre).",
+   "ordre": "Contrat de légitimité conditionnelle (« Mandat du Ciel »), liant le pouvoir à la performance visible (prospérité, ordre).",
    "dette": "Gouvernance par l'anxiété (peur de perdre le mandat) ; coût des rituels et inspections pour prouver la vertu ; dette de performance permanente.",
    "categories": [
     "Symbolique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "75-83"
   },
   {
    "age": 3,
@@ -247,7 +262,8 @@
     "Politique",
     "Symbolique",
     "Écologique"
-   ]
+   ],
+   "pages": "83-86"
   },
   {
    "age": 3,
@@ -260,7 +276,8 @@
     "Social",
     "Moral",
     "Temporel"
-   ]
+   ],
+   "pages": "86-88"
   },
   {
    "age": 3,
@@ -268,12 +285,13 @@
    "date": "≈ -776",
    "titre": "Olympie — la guerre jouée pour ne plus la faire",
    "ordre": "Sublimation du conflit en compétition réglée ; trêve sacrée permettant la circulation panehellénique.",
-   "dette": "Coût des infrastructures et des sacrifices rituels ; exclusion structurelle (femmes, « barbares ») ; dette physique sur les corps des athlètes.",
+   "dette": "Coût des infrastructures et des sacrifices rituels ; exclusion structurelle (femmes mariées, « barbares ») ; dette physique sur les corps des athlètes.",
    "categories": [
     "Social",
     "Politique",
     "Économique"
-   ]
+   ],
+   "pages": "88-91"
   },
   {
    "age": 3,
@@ -286,7 +304,8 @@
     "Politique",
     "Spatial",
     "Symbolique"
-   ]
+   ],
+   "pages": "91-95"
   },
   {
    "age": 3,
@@ -299,7 +318,8 @@
     "Économique",
     "Technique",
     "Social"
-   ]
+   ],
+   "pages": "95-97"
   },
   {
    "age": 3,
@@ -312,7 +332,8 @@
     "Cognitif",
     "Social",
     "Économique"
-   ]
+   ],
+   "pages": "98-100"
   },
   {
    "age": 3,
@@ -325,7 +346,8 @@
     "Social",
     "Symbolique",
     "Cognitif"
-   ]
+   ],
+   "pages": "100-102"
   },
   {
    "age": 3,
@@ -338,7 +360,8 @@
     "Social",
     "Politique",
     "Économique"
-   ]
+   ],
+   "pages": "102-105"
   },
   {
    "age": 3,
@@ -351,7 +374,8 @@
     "Politique",
     "Social",
     "Inégalités"
-   ]
+   ],
+   "pages": "105-108"
   },
   {
    "age": 3,
@@ -364,7 +388,8 @@
     "Cognitif",
     "Philosophique",
     "Social"
-   ]
+   ],
+   "pages": "108-111"
   },
   {
    "age": 3,
@@ -376,7 +401,8 @@
    "categories": [
     "Philosophique",
     "Cognitif"
-   ]
+   ],
+   "pages": "111-113"
   },
   {
    "age": 3,
@@ -389,20 +415,22 @@
     "Politique",
     "Cognitif",
     "Symbolique"
-   ]
+   ],
+   "pages": "114-116"
   },
   {
    "age": 3,
    "tri": -480,
    "date": "≈ -480",
    "titre": "Thermopyles/Salamine — l'Occident s'invente en inventant l'Orient",
-   "ordre": "Récit fondateur d'une identité \"occidentale\" (libre, mesurée) face à un \"Orient\" caricaturé (servile, démesuré).",
+   "ordre": "Récit fondateur d'une identité « occidentale » (libre, mesurée) face à un « Orient » caricaturé (servile, démesuré).",
    "dette": "Financement de la démocratie navale athénienne par l'esclavage (mines du Laurion) ; dette de violence symbolique envers les Perses.",
    "categories": [
     "Symbolique",
     "Politique",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "117-120"
   },
   {
    "age": 3,
@@ -415,7 +443,8 @@
     "Philosophique",
     "Cognitif",
     "Social"
-   ]
+   ],
+   "pages": "120-123"
   },
   {
    "age": 3,
@@ -428,7 +457,8 @@
     "Politique",
     "Social",
     "Moral"
-   ]
+   ],
+   "pages": "123-125"
   },
   {
    "age": 3,
@@ -441,7 +471,8 @@
     "Social",
     "Politique",
     "Symbolique"
-   ]
+   ],
+   "pages": "126-128"
   },
   {
    "age": 3,
@@ -454,7 +485,8 @@
     "Cognitif",
     "Social",
     "Économique"
-   ]
+   ],
+   "pages": "128-131"
   },
   {
    "age": 3,
@@ -462,25 +494,27 @@
    "date": "≈ -415",
    "titre": "Thucydide — répéter pour ne pas recommencer",
    "ordre": "Une mémoire opératoire de l'histoire, fondée sur la recherche des causes et la logique des rapports de force, pour déminer le futur.",
-   "dette": "Coût matériel de l'enquête (financée par ses mines) ; dette morale d'un savoir qui, en exposant la brutalité du réel (\"les forts font ce qu'ils peuvent\"), peut inoculer un froid durable.",
+   "dette": "Coût matériel de l'enquête (financée par ses mines) ; dette morale d'un savoir qui, en exposant la brutalité du réel (« les forts font ce qu'ils peuvent »), peut inoculer un froid durable.",
    "categories": [
     "Cognitif",
     "Politique",
     "Moral"
-   ]
+   ],
+   "pages": "131-133"
   },
   {
    "age": 3,
    "tri": -400,
    "date": "≈ -400",
    "titre": "Calliclès — le droit du plus fort, la loi des plus faibles",
-   "ordre": "Légitimation \"naturelle\" de la domination et de la maximisation des désirs (pleonexia) par une élite.",
+   "ordre": "Légitimation « naturelle » de la domination et de la maximisation des désirs (pleonexia) par une élite.",
    "dette": "L'ordre du fort déplace son désordre sur les autres : artisans, vignerons, rameurs, tisserandes paient pour qu'une poignée « croisse » ; il se finance par l'épuisement et l'invisibilité des débiteurs (heures non payées, solidarités cassées).",
    "categories": [
     "Social",
     "Politique",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "133-136"
   },
   {
    "age": 3,
@@ -488,12 +522,13 @@
    "date": "≈ -399",
    "titre": "Épicurisme — le bonheur par soustraction",
    "ordre": "Paix intérieure (ataraxie) par la limitation des désirs et l'élimination des peurs (des dieux, de la mort).",
-   "dette": "Le \"vis caché\" de la communauté épicurienne est subventionné par l'ordre et le travail de la cité qu'elle fuit ; dette de participation civique.",
+   "dette": "Le « vis caché » de la communauté épicurienne est subventionné par l'ordre et le travail de la cité qu'elle fuit ; dette de participation civique.",
    "categories": [
     "Cognitif",
     "Social",
     "Philosophique"
-   ]
+   ],
+   "pages": "136-139"
   },
   {
    "age": 3,
@@ -506,7 +541,8 @@
     "Cognitif",
     "Politique",
     "Moral"
-   ]
+   ],
+   "pages": "139-141"
   },
   {
    "age": 3,
@@ -514,12 +550,13 @@
    "date": "≈ -384",
    "titre": "Platon — bâtir l'idéal, habiter l'impossible",
    "ordre": "Une architecture de la connaissance et de la cité juste, fondée sur des formes idéales qui servent d'étalon pour juger le réel.",
-   "dette": "Le coût de la formation des \"gardiens\" est porté par la classe des producteurs ; l'ordre idéal exige la censure, le \"noble mensonge\" et l'exclusion des poètes.",
+   "dette": "Le coût de la formation des « gardiens » est porté par la classe des producteurs ; l'ordre idéal exige la censure, le « noble mensonge » et l'exclusion des poètes.",
    "categories": [
     "Philosophique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "142-145"
   },
   {
    "age": 3,
@@ -527,38 +564,41 @@
    "date": "≈ -335",
    "titre": "Aristote — l'excès mesuré, la mesure excessive",
    "ordre": "Un système de classification universel (catégories, causes) qui rend le monde intelligible et gouvernable par la mesure et la prudence (phronèsis).",
-   "dette": "Le savoir classificatoire, en devenant norme, exclut et pathologise les \"écarts\" ; la mesure devient instrument de normalisation.",
+   "dette": "Le savoir classificatoire, en devenant norme, exclut et pathologise les « écarts » ; la mesure devient instrument de normalisation.",
    "categories": [
     "Cognitif",
     "Social",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "145-147"
   },
   {
    "age": 3,
    "tri": -334,
    "date": "≈ -334",
    "titre": "Alexandre — l'ivresse de l'infini",
-   "ordre": "Unification d'un espace immense par la vitesse de la conquête, créant un premier espace culturel \"hellénistique\".",
+   "ordre": "Unification d'un espace immense par la vitesse de la conquête, créant un premier espace culturel « hellénistique ».",
    "dette": "Destruction des ordres politiques et administratifs perses; coût humain et logistique de la campagne militaire ; dette de légitimité auprès de ses propres troupes.",
    "categories": [
     "Politique",
     "Spatial",
     "Économique"
-   ]
+   ],
+   "pages": "148-151"
   },
   {
    "age": 3,
    "tri": -330,
    "date": "≈ -330",
    "titre": "Diogène — le rien qui juge tout",
-   "ordre": "Souveraineté individuelle absolue par le dépouillement radical et le refus des conventions.",
+   "ordre": "Souveraineté individuelle par le dépouillement radical et le refus des conventions.",
    "dette": "Sa liberté est subventionnée par le surplus et la tolérance de la cité qu'il méprise (aumônes, sécurité) ; dette de participation aux charges communes.",
    "categories": [
     "Social",
     "Philosophique",
     "Économique"
-   ]
+   ],
+   "pages": "151-154"
   },
   {
    "age": 3,
@@ -571,7 +611,8 @@
     "Cognitif",
     "Social",
     "Politique"
-   ]
+   ],
+   "pages": "154-157"
   },
   {
    "age": 3,
@@ -584,7 +625,8 @@
     "Technique",
     "Énergétique",
     "Économique"
-   ]
+   ],
+   "pages": "157-161"
   },
   {
    "age": 3,
@@ -597,7 +639,8 @@
     "Politique",
     "Culturel",
     "Social"
-   ]
+   ],
+   "pages": "161-164"
   },
   {
    "age": 3,
@@ -610,7 +653,8 @@
     "Politique",
     "Temporel",
     "Juridique"
-   ]
+   ],
+   "pages": "164-167"
   },
   {
    "age": 3,
@@ -623,20 +667,22 @@
     "Symbolique",
     "Social",
     "Politique"
-   ]
+   ],
+   "pages": "167-170"
   },
   {
    "age": 3,
    "tri": 105,
    "date": "105",
    "titre": "Papier (Han) — écrire l'État",
-   "ordre": "Fluidification de l'administration, créant un \"État liquide\" capable de se souvenir, de se diffuser et de se réviser à bas coût.",
+   "ordre": "Fluidification de l'administration, créant un « État liquide » capable de se souvenir, de se diffuser et de se réviser à bas coût.",
    "dette": "Coût écologique de la production (eau, fibres) ; explosion de la bureaucratie ; surveillance accrue ; dette de temps pour les scribes et les administrateurs.",
    "categories": [
     "Technique",
     "Politique",
     "Écologique"
-   ]
+   ],
+   "pages": "170-174"
   },
   {
    "age": 3,
@@ -649,7 +695,8 @@
     "Politique",
     "Social",
     "Cognitif"
-   ]
+   ],
+   "pages": "174-176"
   },
   {
    "age": 3,
@@ -662,7 +709,8 @@
     "Cognitif",
     "Social",
     "Philosophique"
-   ]
+   ],
+   "pages": "177-180"
   },
   {
    "age": 3,
@@ -670,15 +718,16 @@
    "date": "312",
    "titre": "Constantin — sauver l'empire en tuant ses dieux",
    "ordre": "Unification de l'empire sous un seul symbole (la croix), créant une nouvelle infrastructure de loyauté.",
-   "dette": "Destruction des ordres et de l'économie païens (temples, sacerdoces) ; coût de la construction du nouvel appareil ecclésiastique ; le conflit se déplace vers les hérésies.",
+   "dette": "Démantèlement progressif des ordres et de l'économie païens (temples, sacerdoces) ; coût de la construction du nouvel appareil ecclésiastique ; le conflit se déplace vers les hérésies.",
    "categories": [
     "Politique",
     "Symbolique",
     "Économique"
-   ]
+   ],
+   "pages": "180-188"
   },
   {
-   "age": 3,
+   "age": 4,
    "tri": 486,
    "date": "486",
    "titre": "Clovis — la chimie du Sacre",
@@ -688,7 +737,8 @@
     "Symbolique",
     "Politique",
     "Économique"
-   ]
+   ],
+   "pages": "188-191"
   },
   {
    "age": 4,
@@ -701,7 +751,8 @@
     "Social",
     "Économique",
     "Temporel"
-   ]
+   ],
+   "pages": "191-193"
   },
   {
    "age": 4,
@@ -714,7 +765,8 @@
     "Symbolique",
     "Social",
     "Politique"
-   ]
+   ],
+   "pages": "193-196"
   },
   {
    "age": 4,
@@ -727,7 +779,8 @@
     "Technique",
     "Énergétique",
     "Politique"
-   ]
+   ],
+   "pages": "197-200"
   },
   {
    "age": 4,
@@ -740,7 +793,8 @@
     "Cognitif",
     "Culturel",
     "Économique"
-   ]
+   ],
+   "pages": "200-203"
   },
   {
    "age": 4,
@@ -753,20 +807,22 @@
     "Politique",
     "Social",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "204-206"
   },
   {
    "age": 4,
    "tri": 1150,
    "date": "1150",
    "titre": "Tolède — traduire pour transformer",
-   "ordre": "Infrastructure de \"compatibilité cognitive\" qui rend les savoirs grecs, arabes et juifs interopérables et disponibles pour l'Occident latin.",
+   "ordre": "Infrastructure de « compatibilité cognitive » qui rend les savoirs grecs, arabes et juifs interopérables et disponibles pour l'Occident latin.",
    "dette": "Coût matériel de l'atelier de traduction (mécénat, parchemins, salaires) ; la transformation des concepts importe des cadres de pensée qui reconfigurent durablement la culture latine.",
    "categories": [
     "Cognitif",
     "Technique",
     "Culturel"
-   ]
+   ],
+   "pages": "206-211"
   },
   {
    "age": 4,
@@ -779,7 +835,8 @@
     "Cognitif",
     "Social",
     "Économique"
-   ]
+   ],
+   "pages": "211-214"
   },
   {
    "age": 4,
@@ -787,12 +844,13 @@
    "date": "1209",
    "titre": "Albigeois — la mécanique de la pureté",
    "ordre": "Unité doctrinale de la chrétienté par l'éradication de l'hérésie cathare ; invention de l'Inquisition comme procédure de contrôle des consciences.",
-   "dette": "Violence physique et symbolique (massacres, bûchers) ; destruction d'un écosystème culturel (langue d'oc) ; dette morale d'une orthodoxie imposée par la terreur.",
+   "dette": "Violence physique et symbolique (massacres, bûchers) ; écosystème culturel blessé (l'occitan perd ses cours et ses mécènes) ; dette morale d'une orthodoxie imposée par la terreur.",
    "categories": [
     "Symbolique",
     "Politique",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "214-217"
   },
   {
    "age": 4,
@@ -805,7 +863,8 @@
     "Juridique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "217-220"
   },
   {
    "age": 4,
@@ -818,7 +877,8 @@
     "Philosophique",
     "Cognitif",
     "Symbolique"
-   ]
+   ],
+   "pages": "221-224"
   },
   {
    "age": 4,
@@ -831,7 +891,8 @@
     "Symbolique",
     "Culturel",
     "Cognitif"
-   ]
+   ],
+   "pages": "227-230"
   },
   {
    "age": 4,
@@ -844,7 +905,8 @@
     "Économique",
     "Politique",
     "Technique"
-   ]
+   ],
+   "pages": "224-227"
   },
   {
    "age": 4,
@@ -857,7 +919,8 @@
     "Cognitif",
     "Économique",
     "Technique"
-   ]
+   ],
+   "pages": "231-234"
   },
   {
    "age": 4,
@@ -870,7 +933,8 @@
     "Politique",
     "Philosophique",
     "Social"
-   ]
+   ],
+   "pages": "234-237"
   },
   {
    "age": 4,
@@ -883,20 +947,22 @@
     "Symbolique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "238-241"
   },
   {
    "age": 4,
    "tri": 1435,
    "date": "1435",
    "titre": "Alberti — cadrer le monde, construire l'œil",
-   "ordre": "Un espace visuel rationalisé, mesurable et reproductible par la perspective, qui transforme la peinture en \"fenêtre sur le monde\".",
+   "ordre": "Un espace visuel rationalisé, mesurable et reproductible par la perspective, qui transforme la peinture en « fenêtre ouverte ».",
    "dette": "L'œil est contraint à un point de vue unique et immobile ; le cadre exclut le hors-champ ; la maîtrise du visible se paie d'une perte de latéralité et de vision périphérique.",
    "categories": [
     "Cognitif",
     "Technique",
     "Symbolique"
-   ]
+   ],
+   "pages": "241-244"
   },
   {
    "age": 4,
@@ -909,7 +975,8 @@
     "Cognitif",
     "Politique",
     "Culturel"
-   ]
+   ],
+   "pages": "244-247"
   },
   {
    "age": 4,
@@ -922,7 +989,8 @@
     "Spatial",
     "Économique",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "248-250"
   },
   {
    "age": 4,
@@ -935,7 +1003,8 @@
     "Économique",
     "Cognitif",
     "Technique"
-   ]
+   ],
+   "pages": "250-257"
   },
   {
    "age": 5,
@@ -943,12 +1012,13 @@
    "date": "1513",
    "titre": "Machiavel — vertu du vice, morale de la force",
    "ordre": "Stabilité et pérennité de l'État par une technologie de la décision (virtù) qui juge les actes à leurs conséquences publiques, non à leur morale privée.",
-   "dette": "Dette morale d'une cruauté devenue instrument de gouvernement ; coût humain et économique des \"nécessités\" payé par les populations civiles.",
+   "dette": "Dette morale d'une cruauté devenue instrument de gouvernement ; coût humain et économique des « nécessités » payé par les populations civiles.",
    "categories": [
     "Politique",
     "Moral",
     "Social"
-   ]
+   ],
+   "pages": "257-260"
   },
   {
    "age": 5,
@@ -956,12 +1026,13 @@
    "date": "1516",
    "titre": "Érasme — corriger pour croire",
    "ordre": "Rétablissement d'une vérité textuelle (Nouveau Testament) par la méthode philologique (ad fontes), fondant la critique moderne.",
-   "dette": "La remise en cause de la Vulgate fissure l'autorité de l'Église, fournissant les outils intellectuels de la Réforme et des guerres de religion qui s'ensuivent.",
+   "dette": "La remise en cause de la Vulgate fissure l'autorité de l'Église et livre, sans appeler à la rupture, l'un des outils qui rendent la Réforme possible ; les guerres de religion qui s'ensuivent montrent que le même texte, stabilisé, peut nourrir des orthodoxies rivales.",
    "categories": [
     "Cognitif",
     "Symbolique",
     "Politique"
-   ]
+   ],
+   "pages": "260-263"
   },
   {
    "age": 5,
@@ -974,7 +1045,8 @@
     "Symbolique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "263-266"
   },
   {
    "age": 5,
@@ -987,7 +1059,8 @@
     "Cognitif",
     "Symbolique",
     "Politique"
-   ]
+   ],
+   "pages": "266-269"
   },
   {
    "age": 5,
@@ -1000,20 +1073,22 @@
     "Politique",
     "Cognitif",
     "Moral"
-   ]
+   ],
+   "pages": "269-272"
   },
   {
    "age": 5,
    "tri": 1600,
    "date": "1600",
    "titre": "Compagnies des Indes — l'invention de l'entreprise-monde",
-   "ordre": "Réseau commercial planétaire, financé par un capital liquide et anonyme (actions), doté de prérogatives régaliennes (armer, négocier).",
+   "ordre": "Réseau commercial planétaire, financé par un capital liquide et anonyme (actions), doté de prérogatives régaliennes (lever des troupes, négocier des traités).",
    "dette": "Violence structurelle (massacre de Banda), monocultures forcées, écocides inauguraux et externalisation des risques sur les populations colonisées.",
    "categories": [
     "Économique",
     "Géopolitique",
     "Écologique"
-   ]
+   ],
+   "pages": "272-275"
   },
   {
    "age": 5,
@@ -1026,7 +1101,8 @@
     "Cognitif",
     "Technique",
     "Politique"
-   ]
+   ],
+   "pages": "275-278"
   },
   {
    "age": 5,
@@ -1034,12 +1110,13 @@
    "date": "1625",
    "titre": "Grotius — le fondateur du meurtre réglementé",
    "ordre": "Un droit commun entre les nations, fondé sur la raison naturelle, qui encadre la guerre (jus ad bellum, jus in bello) et la rend procédurale.",
-   "dette": "En \"civilisant\" la guerre, on la rend gouvernable et donc durable ; l'ordre juridique légitime la violence sous conditions, au détriment des populations civiles qui en paient le coût.",
+   "dette": "En « civilisant » la guerre, on la rend gouvernable et donc durable ; l'ordre juridique légitime la violence sous conditions, au détriment des populations civiles qui en paient le coût.",
    "categories": [
     "Juridique",
     "Politique",
     "Moral"
-   ]
+   ],
+   "pages": "278-280"
   },
   {
    "age": 5,
@@ -1052,7 +1129,8 @@
     "Philosophique",
     "Cognitif",
     "Social"
-   ]
+   ],
+   "pages": "281-283"
   },
   {
    "age": 5,
@@ -1060,25 +1138,27 @@
    "date": "1648",
    "titre": "Westphalie — l'art de coexister en s'ignorant",
    "ordre": "Paix par la séparation ; la souveraineté territoriale et la non-ingérence deviennent les principes d'un ordre international fondé sur l'équilibre des puissances.",
-   "dette": "La paix européenne se paie par le gel des aspirations des peuples et la sanctuarisation des \"tyrannies domestiques\" à l'intérieur des frontières.",
+   "dette": "La paix européenne se paie par le gel des aspirations des peuples et la sanctuarisation des « tyrannies domestiques » à l'intérieur des frontières.",
    "categories": [
     "Géopolitique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "284-286"
   },
   {
    "age": 5,
    "tri": 1651,
    "date": "1651",
    "titre": "Hobbes — le monstre qui nous sauve de nous-mêmes",
-   "ordre": "Sécurité absolue par l'aliénation totale des libertés individuelles à un souverain artificiel (le Léviathan) qui met fin à la \"guerre de tous contre tous\".",
+   "ordre": "Sécurité absolue par l'aliénation totale des libertés individuelles à un souverain artificiel (le Léviathan) qui met fin à la « guerre de tous contre tous ».",
    "dette": "La peur devient le fondement du politique ; la question « qui protège du protecteur ? » reste ouverte quand le Léviathan devient totalitaire, le monstre se retournant alors contre ses créateurs.",
    "categories": [
     "Politique",
     "Social",
     "Philosophique"
-   ]
+   ],
+   "pages": "286-290"
   },
   {
    "age": 5,
@@ -1091,7 +1171,8 @@
     "Politique",
     "Économique",
     "Social"
-   ]
+   ],
+   "pages": "290-294"
   },
   {
    "age": 5,
@@ -1104,7 +1185,8 @@
     "Cognitif",
     "Philosophique",
     "Symbolique"
-   ]
+   ],
+   "pages": "297-300"
   },
   {
    "age": 5,
@@ -1117,20 +1199,22 @@
     "Politique",
     "Économique",
     "Inégalités"
-   ]
+   ],
+   "pages": "294-297"
   },
   {
    "age": 5,
    "tri": 1748,
    "date": "1748",
    "titre": "Montesquieu — diviser pour unir",
-   "ordre": "Liberté politique par la séparation des pouvoirs (législatif, exécutif, judiciaire), où \"le pouvoir arrête le pouvoir\".",
-   "dette": "La liberté se paie d'une \"inefficacité calculée\" ; la friction institutionnelle et la lenteur procédurale deviennent le coût de la protection contre l'arbitraire.",
+   "ordre": "Liberté politique par la séparation des pouvoirs (législatif, exécutif, judiciaire), où « le pouvoir arrête le pouvoir ».",
+   "dette": "La liberté se paie d'une « inefficacité calculée » ; la friction institutionnelle et la lenteur procédurale deviennent le coût de la protection contre l'arbitraire.",
    "categories": [
     "Politique",
     "Juridique",
     "Temporel"
-   ]
+   ],
+   "pages": "300-303"
   },
   {
    "age": 5,
@@ -1143,7 +1227,8 @@
     "Cognitif",
     "Philosophique",
     "Social"
-   ]
+   ],
+   "pages": "303-307"
   },
   {
    "age": 5,
@@ -1156,20 +1241,22 @@
     "Cognitif",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "307-309"
   },
   {
    "age": 5,
    "tri": 1758,
    "date": "1758",
    "titre": "Physiocrates — le sang et la sève de la richesse",
-   "ordre": "Première modélisation macroéconomique (Tableau économique), voyant l'économie comme un organisme dont la richesse provient de la terre.",
-   "dette": "L'ordre libéralisé des flux (libre circulation du grain) déplace le désordre sur les prix, provoquant des émeutes de la faim (\"guerre des farines\").",
+   "ordre": "Une macro-modélisation pionnière (le Tableau économique), voyant l'économie comme un organisme dont la richesse provient de la terre.",
+   "dette": "L'ordre libéralisé des flux (libre circulation du grain) déplace le désordre sur les prix, provoquant des émeutes de la faim (« guerre des farines »).",
    "categories": [
     "Économique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "310-312"
   },
   {
    "age": 5,
@@ -1182,20 +1269,22 @@
     "Cognitif",
     "Politique",
     "Technique"
-   ]
+   ],
+   "pages": "312-316"
   },
   {
    "age": 5,
    "tri": 1762,
    "date": "1762",
    "titre": "Rousseau — le feu sous la cendre démocratique",
-   "ordre": "Légitimité fondée sur la \"volonté générale\" ; la liberté civile consiste à obéir à la loi qu'on s'est soi-même donnée.",
+   "ordre": "Légitimité fondée sur la « volonté générale » ; la liberté civile consiste à obéir à la loi qu'on s'est soi-même donnée.",
    "dette": "L'ordre du commun se paie en contraintes sur l'individu (impôt, service militaire) ; brandie comme un absolu, la volonté générale peut justifier la Terreur.",
    "categories": [
     "Politique",
     "Social",
     "Philosophique"
-   ]
+   ],
+   "pages": "316-319"
   },
   {
    "age": 5,
@@ -1208,7 +1297,8 @@
     "Économique",
     "Social",
     "Technique"
-   ]
+   ],
+   "pages": "319-322"
   },
   {
    "age": 5,
@@ -1221,20 +1311,22 @@
     "Économique",
     "Social",
     "Cognitif"
-   ]
+   ],
+   "pages": "322-325"
   },
   {
    "age": 5,
    "tri": 1776,
    "date": "1776",
    "titre": "Amérique — l'évangile du profit",
-   "ordre": "Une république fondée sur la \"poursuite du bonheur\", où la réussite économique devient un signe d'élection et un devoir civique.",
+   "ordre": "Une république fondée sur la « poursuite du bonheur », où la réussite économique devient un signe d'élection et un devoir civique.",
    "dette": "Le profit est sanctifié au prix de l'esclavage, de l'expropriation des peuples autochtones et de la création d'une dette sociale et raciale structurelle.",
    "categories": [
     "Économique",
     "Social",
     "Inégalités"
-   ]
+   ],
+   "pages": "325-329"
   },
   {
    "age": 5,
@@ -1247,10 +1339,11 @@
     "Philosophique",
     "Politique",
     "Temporel"
-   ]
+   ],
+   "pages": "329-337"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1789,
    "date": "1789",
    "titre": "Révolution — le théâtre qui dévore ses acteurs",
@@ -1260,10 +1353,11 @@
     "Politique",
     "Social",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "338-341"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1789,
    "date": "1789",
    "titre": "Droits de l'homme — la transcendance sans Dieu",
@@ -1273,23 +1367,25 @@
     "Inégalités",
     "Violence symbolique",
     "Juridique"
-   ]
+   ],
+   "pages": "341-344"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1791,
    "date": "1791",
    "titre": "La guillotine — l'égalité dans la mort",
-   "ordre": "Standardisation \"égale\" et rationalisation de la peine capitale, transformant le supplice en procédure administrative.",
+   "ordre": "Standardisation « égale » et rationalisation de la peine capitale, transformant le supplice en procédure administrative.",
    "dette": "Possibilité technique d'une mort industrialisée ; déresponsabilisation du bourreau devenu opérateur ; banalisation du meurtre d'État.",
    "categories": [
     "Politique",
     "Moral",
     "Technique"
-   ]
+   ],
+   "pages": "344-347"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1791,
    "date": "1791-1804",
    "titre": "Haïti — la liberté contre ses inventeurs",
@@ -1299,10 +1395,11 @@
     "Économique",
     "Inégalités",
     "Géopolitique"
-   ]
+   ],
+   "pages": "347-352"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1792,
    "date": "1792",
    "titre": "Olympe de Gouges — l'universel décapité",
@@ -1312,10 +1409,11 @@
     "Inégalités",
     "Violence symbolique",
     "Juridique"
-   ]
+   ],
+   "pages": "352-355"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1792,
    "date": "1792",
    "titre": "L'Amour Romantique — le cœur code d'exclusion",
@@ -1325,10 +1423,11 @@
     "Social",
     "Inégalités",
     "Cognitif"
-   ]
+   ],
+   "pages": "355-358"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1792,
    "date": "1792",
    "titre": "Le Nationalisme — la fraternité armée",
@@ -1338,10 +1437,11 @@
     "Politique",
     "Social",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "358-361"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1793,
    "date": "1793",
    "titre": "Terreur — la machine à purifier les âmes",
@@ -1351,7 +1451,8 @@
     "Politique",
     "Moral",
     "Social"
-   ]
+   ],
+   "pages": "362-365"
   },
   {
    "age": 6,
@@ -1364,20 +1465,22 @@
     "Juridique",
     "Inégalités",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "365-369"
   },
   {
    "age": 6,
    "tri": 1814,
    "date": "1814",
    "titre": "Vienne — le bal des cyniques éclairés",
-   "ordre": "Stabilité géopolitique en Europe pour un siècle (\"Concert européen\") par un équilibre des puissances négocié.",
+   "ordre": "Stabilité géopolitique en Europe pour un siècle (« Concert européen ») par un équilibre des puissances négocié.",
    "dette": "Étouffement des aspirations nationales et libérales des peuples ; légitimation de la répression au nom de l'ordre dynastique.",
    "categories": [
     "Géopolitique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "369-372"
   },
   {
    "age": 6,
@@ -1390,20 +1493,22 @@
     "Énergétique",
     "Écologique",
     "Philosophique"
-   ]
+   ],
+   "pages": "372-375"
   },
   {
    "age": 6,
    "tri": 1833,
    "date": "1833-1865",
    "titre": "L'abolition de l'esclavage — l'humain proclamé",
-   "ordre": "Reconnaissance juridique de la personne humaine pour des millions d'individus, fin du statut de \"bien meuble\".",
+   "ordre": "Reconnaissance juridique de la personne humaine pour des millions d'individus, fin du statut de « bien meuble ».",
    "dette": "Indemnisation des propriétaires d'esclaves (et non des victimes) ; persistance du racisme structurel et de régimes de travail forcé déguisés.",
    "categories": [
     "Inégalités",
     "Économique",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "376-379"
   },
   {
    "age": 6,
@@ -1416,7 +1521,8 @@
     "Cognitif",
     "Social",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "379-382"
   },
   {
    "age": 6,
@@ -1429,7 +1535,8 @@
     "Temporel",
     "Cognitif",
     "Technique"
-   ]
+   ],
+   "pages": "383-386"
   },
   {
    "age": 6,
@@ -1442,7 +1549,8 @@
     "Politique",
     "Social",
     "Géopolitique"
-   ]
+   ],
+   "pages": "386-390"
   },
   {
    "age": 6,
@@ -1455,7 +1563,8 @@
     "Spatial",
     "Social",
     "Inégalités"
-   ]
+   ],
+   "pages": "390-393"
   },
   {
    "age": 6,
@@ -1463,12 +1572,13 @@
    "date": "1854",
    "titre": "L'Hygiénisme — le corps sous contrat sanitaire",
    "ordre": "Santé publique : eau sûre, égouts, asepsie, vaccination, qui expliquent sans doute une part majeure de la baisse de la mortalité (espérance de vie mondiale d'environ 32 ans vers 1900, près de 73 ans en 2019).",
-   "dette": "Biopolitique : contrôle social et normatif des corps ; stigmatisation des classes jugées \"dangereuses\" ; dette immunitaire (hypothèse hygiéniste).",
+   "dette": "Biopolitique : contrôle social et normatif des corps ; stigmatisation des classes jugées « dangereuses » ; dette immunitaire (hypothèse hygiéniste).",
    "categories": [
     "Social",
     "Politique",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "393-396"
   },
   {
    "age": 6,
@@ -1476,12 +1586,13 @@
    "date": "1859",
    "titre": "Darwin — le hasard qui ordonne",
    "ordre": "Explication matérialiste et unifiée de la diversité du vivant par la sélection naturelle.",
-   "dette": "Fin du dessein divin et de la place centrale de l'homme ; instrumentalisation en \"darwinisme social\" pour justifier les inégalités et l'impérialisme.",
+   "dette": "Fin du dessein divin et de la place centrale de l'homme ; instrumentalisation en « darwinisme social » pour justifier les inégalités et l'impérialisme.",
    "categories": [
     "Philosophique",
     "Moral",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "397-400"
   },
   {
    "age": 6,
@@ -1494,7 +1605,8 @@
     "Économique",
     "Écologique",
     "Juridique"
-   ]
+   ],
+   "pages": "400-403"
   },
   {
    "age": 6,
@@ -1507,7 +1619,8 @@
     "Cognitif",
     "Politique",
     "Économique"
-   ]
+   ],
+   "pages": "404-407"
   },
   {
    "age": 6,
@@ -1520,7 +1633,8 @@
     "Politique",
     "Social",
     "Géopolitique"
-   ]
+   ],
+   "pages": "407-410"
   },
   {
    "age": 6,
@@ -1533,7 +1647,8 @@
     "Politique",
     "Social",
     "Mémoriel"
-   ]
+   ],
+   "pages": "411-414"
   },
   {
    "age": 6,
@@ -1546,7 +1661,8 @@
     "Culturel",
     "Politique",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "414-417"
   },
   {
    "age": 6,
@@ -1559,7 +1675,8 @@
     "Énergétique",
     "Écologique",
     "Temporel"
-   ]
+   ],
+   "pages": "417-420"
   },
   {
    "age": 6,
@@ -1572,20 +1689,22 @@
     "Géopolitique",
     "Social",
     "Spatial"
-   ]
+   ],
+   "pages": "420-422"
   },
   {
    "age": 6,
    "tri": 1887,
    "date": "1887",
    "titre": "Nietzsche — l'homme-dynamite",
-   "ordre": "Lucidité par la « réévaluation de toutes les valeurs » ; diagnostic de la « mort de Dieu » et de la morale du ressentiment.",
+   "ordre": "Lucidité par la « transmutation de toutes les valeurs » ; diagnostic de la « mort de Dieu » et de la morale du ressentiment.",
    "dette": "Vide métaphysique comblé par des absolus de substitution (Nation, Race, Classe) ; la « faute » (Schuld) se déplace de la théologie vers la politique et l'économie.",
    "categories": [
     "Moral",
     "Philosophique",
     "Politique"
-   ]
+   ],
+   "pages": "422-425"
   },
   {
    "age": 6,
@@ -1598,7 +1717,8 @@
     "Social",
     "Politique",
     "Moral"
-   ]
+   ],
+   "pages": "425-428"
   },
   {
    "age": 6,
@@ -1611,7 +1731,8 @@
     "Cognitif",
     "Psychique",
     "Social"
-   ]
+   ],
+   "pages": "428-431"
   },
   {
    "age": 6,
@@ -1624,10 +1745,11 @@
     "Juridique",
     "Politique",
     "Administratif"
-   ]
+   ],
+   "pages": "431-440"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1905,
    "date": "1905-1915",
    "titre": "Einstein — temps élastique, espace courbe",
@@ -1637,10 +1759,11 @@
     "Cognitif",
     "Énergétique",
     "Technique"
-   ]
+   ],
+   "pages": "440-443"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1914,
    "date": "1914-1918",
    "titre": "Guerre totale — la machine à broyer l'humain",
@@ -1650,10 +1773,11 @@
     "Social",
     "Écologique",
     "Politique"
-   ]
+   ],
+   "pages": "443-446"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1917,
    "date": "1917",
    "titre": "Révolution d'Octobre — le paradis accouche du goulag",
@@ -1663,10 +1787,11 @@
     "Politique",
     "Social",
     "Économique"
-   ]
+   ],
+   "pages": "446-450"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1922,
    "date": "1922-1928",
    "titre": "Lippmann & Bernays — le consentement qui s'ignore",
@@ -1676,10 +1801,11 @@
     "Cognitif",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "450-454"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1925,
    "date": "1925-1927",
    "titre": "Quanta — un monde qui joue aux dés",
@@ -1689,10 +1815,11 @@
     "Philosophique",
     "Énergétique",
     "Technique"
-   ]
+   ],
+   "pages": "454-457"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1928,
    "date": "1928",
    "titre": "Pénicilline — le corps sous contrat algorithmique",
@@ -1702,10 +1829,11 @@
     "Écologique",
     "Social",
     "Technique"
-   ]
+   ],
+   "pages": "458-460"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1936,
    "date": "1936",
    "titre": "Front populaire — prendre les symboles, céder l'essentiel",
@@ -1715,10 +1843,11 @@
     "Social",
     "Économique",
     "Politique"
-   ]
+   ],
+   "pages": "460-464"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1936,
    "date": "1936-1944",
    "titre": "Industrie culturelle vs service public — la guerre des récits",
@@ -1728,10 +1857,11 @@
     "Cognitif",
     "Culturel",
     "Politique"
-   ]
+   ],
+   "pages": "465-468"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1938,
    "date": "1938",
    "titre": "Munich — diplomatie du désastre",
@@ -1741,10 +1871,11 @@
     "Géopolitique",
     "Temporel",
     "Moral"
-   ]
+   ],
+   "pages": "468-472"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1940,
    "date": "1940",
    "titre": "18 juin — le verbe qui fonde l'État fantôme",
@@ -1754,10 +1885,11 @@
     "Symbolique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "472-476"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1940,
    "date": "1940-1945",
    "titre": "Churchill — l'orateur qui parlait l'empire à mort",
@@ -1767,20 +1899,22 @@
     "Symbolique",
     "Géopolitique",
     "Économique"
-   ]
+   ],
+   "pages": "476-479"
   },
   {
    "age": 7,
    "tri": 1945,
    "date": "1945",
    "titre": "Hiroshima/Nagasaki — création contre créateur",
-   "ordre": "Fin accélérée de la guerre, instauration d'un ordre de dissuasion nucléaire (la \"paix\" par la terreur).",
+   "ordre": "Fin accélérée de la guerre, instauration d'un ordre de dissuasion nucléaire (la « paix » par la terreur).",
    "dette": "Dette humaine et écologique sur les villes détruites ; dette morale et psychique d'une humanité capable de s'auto-anéantir.",
    "categories": [
     "Technique",
     "Politique",
     "Moral"
-   ]
+   ],
+   "pages": "479-482"
   },
   {
    "age": 7,
@@ -1793,7 +1927,8 @@
     "Social",
     "Économique",
     "Administratif"
-   ]
+   ],
+   "pages": "482-486"
   },
   {
    "age": 7,
@@ -1806,7 +1941,8 @@
     "Symbolique",
     "Géopolitique",
     "Mémoriel"
-   ]
+   ],
+   "pages": "486-491"
   },
   {
    "age": 7,
@@ -1814,25 +1950,27 @@
    "date": "1948",
    "titre": "La Déclaration universelle — la dignité en articles",
    "ordre": "Une norme morale universelle qui rend la violation des droits humains visible et illégitime.",
-   "dette": "Le texte crée une \"dette de conformité\" permanente pour tous les États ; le désordre est déplacé de la force brute vers la justification et la procédure.",
+   "dette": "Le texte crée une dette de conformité permanente pour tous les États ; le désordre est déplacé de la force brute vers la justification et la procédure.",
    "categories": [
     "Juridique",
     "Moral",
     "Politique"
-   ]
+   ],
+   "pages": "491-495"
   },
   {
    "age": 7,
    "tri": 1948,
    "date": "1948",
    "titre": "Shannon — tuer le sens, faire naître l'information",
-   "ordre": "Une théorie mathématique de la communication qui permet une transmission de données sans erreur et fonde l'ère numérique.",
+   "ordre": "Une théorie mathématique de la communication qui permet une transmission de données quasi sans erreur et fonde l'ère numérique.",
    "dette": "Le sens est évacué du processus ; l'ordre syntaxique se paie d'un désordre sémantique (surcharge informationnelle, perte de contexte).",
    "categories": [
     "Technique",
     "Cognitif",
     "Philosophique"
-   ]
+   ],
+   "pages": "495-498"
   },
   {
    "age": 7,
@@ -1845,7 +1983,8 @@
     "Technique",
     "Écologique",
     "Moral"
-   ]
+   ],
+   "pages": "498-502"
   },
   {
    "age": 7,
@@ -1858,7 +1997,8 @@
     "Économique",
     "Politique",
     "Juridique"
-   ]
+   ],
+   "pages": "502-505"
   },
   {
    "age": 7,
@@ -1870,7 +2010,8 @@
    "categories": [
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "505-507"
   },
   {
    "age": 7,
@@ -1883,7 +2024,8 @@
     "Cognitif",
     "Temporel",
     "Écologique"
-   ]
+   ],
+   "pages": "507-510"
   },
   {
    "age": 7,
@@ -1896,7 +2038,8 @@
     "Géopolitique",
     "Économique",
     "Politique"
-   ]
+   ],
+   "pages": "511-514"
   },
   {
    "age": 7,
@@ -1909,7 +2052,8 @@
     "Social",
     "Technique",
     "Inégalités"
-   ]
+   ],
+   "pages": "515-518"
   },
   {
    "age": 7,
@@ -1922,7 +2066,8 @@
     "Symbolique",
     "Social",
     "Mémoriel"
-   ]
+   ],
+   "pages": "519-523"
   },
   {
    "age": 7,
@@ -1935,7 +2080,8 @@
     "Cognitif",
     "Social",
     "Symbolique"
-   ]
+   ],
+   "pages": "523-527"
   },
   {
    "age": 7,
@@ -1948,7 +2094,8 @@
     "Culturel",
     "Social",
     "Économique"
-   ]
+   ],
+   "pages": "527-531"
   },
   {
    "age": 7,
@@ -1961,7 +2108,8 @@
     "Technique",
     "Symbolique",
     "Économique"
-   ]
+   ],
+   "pages": "531-535"
   },
   {
    "age": 7,
@@ -1974,7 +2122,8 @@
     "Technique",
     "Économique",
     "Écologique"
-   ]
+   ],
+   "pages": "535-538"
   },
   {
    "age": 7,
@@ -1986,7 +2135,8 @@
    "categories": [
     "Économique",
     "Géopolitique"
-   ]
+   ],
+   "pages": "539-542"
   },
   {
    "age": 7,
@@ -1994,25 +2144,27 @@
    "date": "1974",
    "titre": "Kahneman — la raison qui déraisonne",
    "ordre": "Cartographie de nos biais cognitifs, révélant une architecture prévisible de l'irrationalité humaine.",
-   "dette": "Ce savoir devient un outil de manipulation (nudge), déplaçant le désordre de nos erreurs vers une servitude consentie face à des \"architectures de choix\".",
+   "dette": "Ce savoir devient un outil de manipulation (nudge), déplaçant le désordre de nos erreurs vers une servitude consentie face à des « architectures de choix ».",
    "categories": [
     "Cognitif",
     "Politique",
     "Économique"
-   ]
+   ],
+   "pages": "543-546"
   },
   {
    "age": 7,
    "tri": 1979,
    "date": "1979",
    "titre": "Bourdieu — l'ordre du goût, le goût de l'ordre",
-   "ordre": "Dévoilement des mécanismes de la \"distinction\", où le goût sert de marqueur de classe.",
+   "ordre": "Dévoilement des mécanismes de la « distinction », où le goût sert de marqueur de classe.",
    "dette": "La lucidité sociologique devient elle-même un capital culturel, créant une nouvelle forme de distinction par la critique de la distinction.",
    "categories": [
     "Social",
     "Cognitif",
     "Violence symbolique"
-   ]
+   ],
+   "pages": "546-548"
   },
   {
    "age": 7,
@@ -2025,7 +2177,8 @@
     "Économique",
     "Social",
     "Politique"
-   ]
+   ],
+   "pages": "548-552"
   },
   {
    "age": 7,
@@ -2038,7 +2191,8 @@
     "Technique",
     "Cognitif",
     "Social"
-   ]
+   ],
+   "pages": "556-561"
   },
   {
    "age": 7,
@@ -2051,7 +2205,8 @@
     "Géopolitique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "553-556"
   },
   {
    "age": 7,
@@ -2064,7 +2219,8 @@
     "Cognitif",
     "Écologique",
     "Philosophique"
-   ]
+   ],
+   "pages": "561-564"
   },
   {
    "age": 7,
@@ -2077,7 +2233,8 @@
     "Cognitif",
     "Économique",
     "Social"
-   ]
+   ],
+   "pages": "564-568"
   },
   {
    "age": 7,
@@ -2090,7 +2247,8 @@
     "Écologique",
     "Énergétique",
     "Global"
-   ]
+   ],
+   "pages": "569-572"
   },
   {
    "age": 7,
@@ -2098,12 +2256,13 @@
    "date": "2001",
    "titre": "11 Septembre — la chute de l'empire",
    "ordre": "Un appareil sécuritaire global pour prévenir la menace terroriste.",
-   "dette": "Érosion des libertés civiles, guerres sans fin, perte de l'autorité morale ; la sécurité promise se paie d'une insécurité généralisée.",
+   "dette": "Érosion des libertés civiles, guerres sans fin, autorité morale diminuée ; la sécurité promise se paie d'une insécurité généralisée.",
    "categories": [
     "Politique",
     "Juridique",
     "Géopolitique"
-   ]
+   ],
+   "pages": "572-574"
   },
   {
    "age": 7,
@@ -2116,7 +2275,8 @@
     "Économique",
     "Politique",
     "Social"
-   ]
+   ],
+   "pages": "574-578"
   },
   {
    "age": 7,
@@ -2124,12 +2284,13 @@
    "date": "2009",
    "titre": "Bitcoin — la confiance change d'adresse",
    "ordre": "Réseau de confiance décentralisé, sans intermédiaire, fondé sur une règle algorithmique.",
-   "dette": "Dette énergétique de la \"preuve de travail\" ; volatilité extrême ; la confiance est déplacée du politique vers un code dont la gouvernance reste un enjeu.",
+   "dette": "Dette énergétique de la « preuve de travail » ; volatilité extrême ; la confiance est déplacée du politique vers un code dont la gouvernance reste un enjeu.",
    "categories": [
     "Technique",
     "Énergétique",
     "Économique"
-   ]
+   ],
+   "pages": "578-582"
   },
   {
    "age": 7,
@@ -2142,7 +2303,8 @@
     "Technique",
     "Moral",
     "Écologique"
-   ]
+   ],
+   "pages": "582-586"
   },
   {
    "age": 7,
@@ -2155,7 +2317,8 @@
     "Cognitif",
     "Politique",
     "Technique"
-   ]
+   ],
+   "pages": "586-590"
   },
   {
    "age": 7,
@@ -2168,7 +2331,8 @@
     "Politique",
     "Écologique",
     "Temporel"
-   ]
+   ],
+   "pages": "591-595"
   },
   {
    "age": 7,
@@ -2181,7 +2345,8 @@
     "Juridique",
     "Cognitif",
     "Économique"
-   ]
+   ],
+   "pages": "595-599"
   },
   {
    "age": 7,
@@ -2194,7 +2359,8 @@
     "Social",
     "Économique",
     "Politique"
-   ]
+   ],
+   "pages": "600-605"
   },
   {
    "age": 7,
@@ -2207,7 +2373,8 @@
     "Cognitif",
     "Économique",
     "Technique"
-   ]
+   ],
+   "pages": "605-608"
   },
   {
    "age": 7,
@@ -2220,7 +2387,8 @@
     "Politique",
     "Économique",
     "Social"
-   ]
+   ],
+   "pages": "609-613"
   }
  ]
 }

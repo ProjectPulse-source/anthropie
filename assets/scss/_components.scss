@@ -557,6 +557,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   color: var(--color-text-subtle); white-space: nowrap; margin-left: 6px;
 }
 .registre__jalon { border-bottom: 1px solid var(--color-rule-soft); }
+.registre__jalon { scroll-margin-top: 5rem; } // en-tete collant : une ancre #<jalon> degage l'entree
 .registre__jalon summary { cursor: pointer; padding: 10px 6px; }
 .registre__jalon summary:hover,
 .registre__jalon[open] summary { background: var(--color-accent-faint); }
@@ -571,6 +572,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   font-family: var(--font-mono); font-size: var(--fs-micro);
   color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;
 }
+.registre__pages { font-size: var(--fs-micro); color: var(--color-text-faint); }
 
 // ----- FAQ -----
 .faq-section { margin-top: 3rem; }

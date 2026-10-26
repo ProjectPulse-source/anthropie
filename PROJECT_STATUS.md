@@ -52,6 +52,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-26 (suite 2) — Registre relu contre l'édition anglaise (644 p.) ; règles du corpus appliquées
+
+Mandat de l'auteur : relire l'anglais contre le livre de 644 p. et vérifier les règles de design. 51 titres anglais
+alignés sur le livre (ancres figées, `ancre`), 20 corrections EN et 14 reportées sur le FR, guillemets des deux langues ;
+20 jalons remis dans l'âge de leur chapitre (le site affectait par des bornes de dates qui ne sont pas celles du livre),
+périodes recalculées, FAQ et fiche du livre corrigées ; pagination de chaque entrée (protocole `corpus`) ; marge de
+défilement des entrées ; fiche de conception (après coup, page non refondue) et règle 12 étendue à toute fiche déclarée
+(témoin vu mordre). Build 0, check-all 0, liens 0, dates 61/61, recette 8/8. Trace :
+`D:\PRO_PROMOTION\ARCHITECTURE_RESSOURCES_2026-10-25\FIDELITE_REGISTRE\EDITION_ANGLAISE\`. Ouvert : guillemets
+français dans 25 autres pages anglaises (surtout les promesses : citations de textes français, à trancher page par page).
+
 ### 2026-10-26 (suite) — Registre complet (168/168) et réaligné sur l'édition corrigée ; recette 320-1280 px ; EN LIGNE (`c4e3740`, déploiement vert, version servie attestée FR et EN : « Les 168 jalons du livre » / « All 168 milestones of the book », Gutenberg, Rubicon qui ouvre la guerre civile, Templiers « et pas seulement le métal », nom court du livre dans la ligne d’appartenance)
 
 Mandat de l'auteur (« compléter ce qu'il faut compléter, tu as le livre comme référence »). Trois jalons rédigés sur

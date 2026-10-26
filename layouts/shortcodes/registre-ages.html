@@ -3,7 +3,7 @@
        (source unique par langue ; voir _meta des JSON). Présence par le
        dépôt : les compteurs sont dérivés au build, jamais recopiés — si un
        jalon entre ou sort d'un JSON, la page suit seule. Chaque jalon est
-       ancré (id) pour être citable à l'entrée près. */ -}}
+       ancré (id) pour être citable à l'entrée près ; un titre corrigé garde son ancre publiée par le champ `ancre`. */ -}}
 {{- $isEn := eq .Page.Lang "en" -}}
 {{- $reg := cond $isEn site.Data.registre_couts_deportes_en site.Data.registre_couts_deportes -}}
 {{- if not $reg -}}
@@ -27,7 +27,7 @@
     <h2 id="age-{{ $age.num }}">Âge {{ $age.num }} — {{ $age.titre }} <span class="registre__periode">({{ $age.periode }})</span></h2>
     {{- end }}
     {{- range $j := $jalons }}
-    <details class="registre__jalon" id="{{ anchorize $j.titre }}">
+    <details class="registre__jalon" id="{{ $j.ancre | default (anchorize $j.titre) }}">
       <summary><span class="registre__date">{{ $j.date }}</span> <span class="registre__titre">{{ $j.titre }}</span></summary>
       <div class="registre__corps">
         {{- if $isEn }}
@@ -38,6 +38,11 @@
         <p><strong>Dette déportée.</strong> {{ $j.dette }}</p>
         {{- end }}
         <p class="registre__categories">{{ delimit $j.categories " · " }}</p>
+        {{- /* Pagination du chapitre dans l'édition en vente (630 p. FR, 644 p. EN ; signets des PDF, 26/10/2026) :
+               protocole « corpus », chaque entrée sourcée. */ -}}
+        {{- with $j.pages }}
+        <p class="registre__pages">{{ if $isEn }}<em>Anthropy</em>, {{ if in . "-" }}pp.{{ else }}p.{{ end }}&nbsp;{{ replace . "-" "–" }}{{ else }}<em>Anthropie</em>, p.&nbsp;{{ replace . "-" "‑" }}{{ end }}</p>
+        {{- end }}
       </div>
     </details>
     {{- end }}

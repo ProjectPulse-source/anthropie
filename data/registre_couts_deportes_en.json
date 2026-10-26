@@ -7,37 +7,37 @@
   {
    "num": 1,
    "titre": "Foundational Programs",
-   "periode": "≈ −3.3 million years → −10,000"
+   "periode": "≈ −3.3 million years → ≈ −45,000"
   },
   {
    "num": 2,
    "titre": "The Neolithic Trap",
-   "periode": "−10,000 → −1,000"
+   "periode": "≈ −10,000 → ≈ −1,046"
   },
   {
    "num": 3,
    "titre": "The Extractive Empires",
-   "periode": "−1,000 → 500"
+   "periode": "≈ −900 → 312"
   },
   {
    "num": 4,
    "titre": "The Networks—Routes, Relays, Relays of Power",
-   "periode": "500 → 1500"
+   "periode": "486 → 1494"
   },
   {
    "num": 5,
    "titre": "The Modern State-machine",
-   "periode": "1500 → 1800"
+   "periode": "1513 → 1784"
   },
   {
    "num": 6,
    "titre": "Industrialization and Nation-States",
-   "periode": "1800 → 1945"
+   "periode": "1789 → 1905"
   },
   {
    "num": 7,
    "titre": "The Contemporary Metaprogram",
-   "periode": "1945 → present"
+   "periode": "1905 → 2024"
   }
  ],
  "jalons": [
@@ -52,20 +52,23 @@
     "Technical",
     "Energetic",
     "Cognitive"
-   ]
+   ],
+   "pages": "24-28"
   },
   {
    "age": 1,
    "tri": -1500000,
    "date": "≈ −1,500,000",
-   "titre": "Fire—stealing lightning, lighting the world",
+   "titre": "Fire—stealing lightning, setting the world alight",
    "ordre": "A secured social center, digestion externalized through cooking, useful hours extended by pushing back the night.",
    "dette": "A permanent energy debt owed to fuel; health costs (smoke); the first extractive gaze upon nature.",
    "categories": [
     "Energetic",
     "Social",
     "Ecological"
-   ]
+   ],
+   "pages": "28-32",
+   "ancre": "firestealing-lightning-lighting-the-world"
   },
   {
    "age": 1,
@@ -78,20 +81,23 @@
     "Symbolic",
     "Social",
     "Spatial"
-   ]
+   ],
+   "pages": "32-36"
   },
   {
    "age": 1,
    "tri": -400000,
    "date": "≈ −400,000",
-   "titre": "Language—breath made world",
+   "titre": "Language—breath makes a world",
    "ordre": "Large-scale social coordination, transmission of complex knowledge, the capacity for abstract thought (past, future, hypotheses).",
    "dette": "The upkeep cost of conventions (grammar); confinement within categories of thought; exclusion through the word (taboos).",
    "categories": [
     "Cognitive",
     "Social",
     "Symbolic"
-   ]
+   ],
+   "pages": "36-39",
+   "ancre": "languagebreath-made-world"
   },
   {
    "age": 1,
@@ -104,33 +110,38 @@
     "Social",
     "Political",
     "Technical"
-   ]
+   ],
+   "pages": "40-43"
   },
   {
    "age": 1,
    "tri": -120000,
    "date": "≈ −120,000",
-   "titre": "Trade—the bond that divides",
+   "titre": "Commerce—the bond that divides",
    "ordre": "Circulation of ornaments and pigments between groups, founded on shared conventions of value, which reduce local uncertainty.",
    "dette": "Inequalities formalized through the accumulation of symbolic goods; the cost of logistics; division between those who share the code and everyone else.",
    "categories": [
     "Economic",
     "Social",
     "Spatial"
-   ]
+   ],
+   "pages": "43-47",
+   "ancre": "tradethe-bond-that-divides"
   },
   {
    "age": 1,
    "tri": -70000,
    "date": "≈ −70,000",
-   "titre": "Religion—the invisible held in common",
+   "titre": "Religion—the invisible, shared",
    "ordre": "Social cohesion beyond kinship through the ritualized management of anxiety and a shared sacred calendar.",
    "dette": "The material cost of offerings and of places set aside for ritual; time taken from subsistence; a division between those who share the rite and those who stand apart from it.",
    "categories": [
     "Symbolic",
     "Social",
     "Economic"
-   ]
+   ],
+   "pages": "48-51",
+   "ancre": "religionthe-invisible-held-in-common"
   },
   {
    "age": 1,
@@ -143,7 +154,8 @@
     "Cognitive",
     "Symbolic",
     "Energetic"
-   ]
+   ],
+   "pages": "51-54"
   },
   {
    "age": 2,
@@ -156,7 +168,8 @@
     "Social",
     "Ecological",
     "Economic"
-   ]
+   ],
+   "pages": "58-62"
   },
   {
    "age": 2,
@@ -169,7 +182,8 @@
     "Technical",
     "Spatial",
     "Energetic"
-   ]
+   ],
+   "pages": "62-65"
   },
   {
    "age": 2,
@@ -182,20 +196,23 @@
     "Social",
     "Political",
     "Spatial"
-   ]
+   ],
+   "pages": "65-67"
   },
   {
    "age": 2,
    "tri": -3200,
    "date": "≈ −3,200",
-   "titre": "Cuneiform—carving to last",
+   "titre": "Cuneiform—carved to last",
    "ordre": "Durable administrative memory, written and public law, written accounts (rations, debts, contracts) that reduce local uncertainty.",
    "dette": "A body of scribes holding a relative monopoly over the world-to-sign interface, paid for in years of subsistence; exclusion of the illiterate; loss of granularity; an entire economy of proofs, archives, and corvées.",
    "categories": [
     "Cognitive",
     "Social",
     "Political"
-   ]
+   ],
+   "pages": "68-70",
+   "ancre": "cuneiformcarving-to-last"
   },
   {
    "age": 2,
@@ -208,20 +225,22 @@
     "Symbolic",
     "Political",
     "Economic"
-   ]
+   ],
+   "pages": "71-73"
   },
   {
    "age": 2,
    "tri": -1200,
    "date": "≈ −1,200",
    "titre": "Tyranny—governing time",
-   "ordre": "Acceleration and efficiency in decision-making by short-circuiting deliberation.",
+   "ordre": "Acceleration and sharpness in decision-making by short-circuiting deliberation.",
    "dette": "Guarantees dissolved and citizens demobilized; dissent postponed rather than suppressed; the perpetual upkeep of order (guards, repairs, levies); a debt of time levied on citizens.",
    "categories": [
     "Political",
     "Temporal",
     "Social"
-   ]
+   ],
+   "pages": "73-76"
   },
   {
    "age": 2,
@@ -234,7 +253,8 @@
     "Symbolic",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "77-80"
   },
   {
    "age": 3,
@@ -247,7 +267,8 @@
     "Political",
     "Symbolic",
     "Ecological"
-   ]
+   ],
+   "pages": "84-87"
   },
   {
    "age": 3,
@@ -260,20 +281,23 @@
     "Social",
     "Moral",
     "Temporal"
-   ]
+   ],
+   "pages": "87-89"
   },
   {
    "age": 3,
    "tri": -776,
    "date": "≈ −776",
-   "titre": "Olympia—war played so it need not be waged",
+   "titre": "Olympia—war played so it need not be fought",
    "ordre": "Conflict sublimated into regulated competition; a sacred truce allowing Panhellenic circulation.",
-   "dette": "The cost of infrastructure and ritual sacrifices; structural exclusion (women, “barbarians”); a physical debt levied on athletes’ bodies.",
+   "dette": "The cost of infrastructure and ritual sacrifices; structural exclusion (married women, “barbarians”); a physical debt levied on athletes’ bodies.",
    "categories": [
     "Social",
     "Political",
     "Economic"
-   ]
+   ],
+   "pages": "90-92",
+   "ancre": "olympiawar-played-so-it-need-not-be-waged"
   },
   {
    "age": 3,
@@ -286,7 +310,8 @@
     "Political",
     "Spatial",
     "Symbolic"
-   ]
+   ],
+   "pages": "93-96"
   },
   {
    "age": 3,
@@ -299,20 +324,22 @@
     "Economic",
     "Technical",
     "Social"
-   ]
+   ],
+   "pages": "96-99"
   },
   {
    "age": 3,
    "tri": -563,
    "date": "≈ −563",
    "titre": "Buddha—the fullness that empties itself",
-   "ordre": "A protocol for release from suffering through “non-clinging” to desires; mental order and inner discipline.",
-   "dette": "Material support of the monastic community (saṃgha) by the laity; a debt of time and resources (alms, upkeep) to finance the monks’ inner peace.",
+   "ordre": "A protocol for release from suffering through “un-clinging” from desires; mental order and inner discipline.",
+   "dette": "Material support of the monastic community (the Sangha) by the laity; a debt of time and resources (alms, upkeep) to finance the monks’ inner peace.",
    "categories": [
     "Cognitive",
     "Social",
     "Economic"
-   ]
+   ],
+   "pages": "99-101"
   },
   {
    "age": 3,
@@ -320,12 +347,13 @@
    "date": "≈ −551",
    "titre": "Confucius—the motionless revolution",
    "ordre": "A social order founded on the exemplarity of gestures (li) and roles, spreading by imitation rather than by decree.",
-   "dette": "The cost in time and attention of learning and maintaining the rites; the community's funding of its « models » (hours stolen from the field, decades of study for the imperial examinations, families feeding an unproductive son).",
+   "dette": "The cost in time and attention of learning and maintaining the rites; the community's funding of its “models” (hours stolen from the field, decades of study for the imperial examinations, families feeding an unproductive son).",
    "categories": [
     "Social",
     "Symbolic",
     "Cognitive"
-   ]
+   ],
+   "pages": "102-104"
   },
   {
    "age": 3,
@@ -338,7 +366,8 @@
     "Social",
     "Political",
     "Economic"
-   ]
+   ],
+   "pages": "104-106"
   },
   {
    "age": 3,
@@ -351,7 +380,8 @@
     "Political",
     "Social",
     "Inequalities"
-   ]
+   ],
+   "pages": "106-109"
   },
   {
    "age": 3,
@@ -364,7 +394,8 @@
     "Cognitive",
     "Philosophical",
     "Social"
-   ]
+   ],
+   "pages": "109-112"
   },
   {
    "age": 3,
@@ -376,7 +407,8 @@
    "categories": [
     "Philosophical",
     "Cognitive"
-   ]
+   ],
+   "pages": "112-115"
   },
   {
    "age": 3,
@@ -389,7 +421,8 @@
     "Political",
     "Cognitive",
     "Symbolic"
-   ]
+   ],
+   "pages": "115-118"
   },
   {
    "age": 3,
@@ -402,7 +435,8 @@
     "Symbolic",
     "Political",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "118-121"
   },
   {
    "age": 3,
@@ -415,20 +449,23 @@
     "Philosophical",
     "Cognitive",
     "Social"
-   ]
+   ],
+   "pages": "122-124"
   },
   {
    "age": 3,
    "tri": -450,
    "date": "≈ −450",
-   "titre": "Alcibiades—understanding in order to betray",
+   "titre": "Alcibiades—to understand in order to betray",
    "ordre": "Absolute strategic effectiveness through a liquid intelligence, able to adapt to every system in order to manipulate it from within.",
    "dette": "Trust and loyalty dissolved; one side’s tactical gains are paid for in systemic disorder for all the others (prolonged wars, broken alliances).",
    "categories": [
     "Political",
     "Social",
     "Moral"
-   ]
+   ],
+   "pages": "125-127",
+   "ancre": "alcibiadesunderstanding-in-order-to-betray"
   },
   {
    "age": 3,
@@ -441,7 +478,8 @@
     "Social",
     "Political",
     "Symbolic"
-   ]
+   ],
+   "pages": "127-130"
   },
   {
    "age": 3,
@@ -454,7 +492,8 @@
     "Cognitive",
     "Social",
     "Economic"
-   ]
+   ],
+   "pages": "130-132"
   },
   {
    "age": 3,
@@ -467,20 +506,23 @@
     "Cognitive",
     "Political",
     "Moral"
-   ]
+   ],
+   "pages": "133-135"
   },
   {
    "age": 3,
    "tri": -400,
    "date": "≈ −400",
-   "titre": "Callicles—the right of the strongest, the law of the weak",
+   "titre": "Callicles—the right of the strongest, the law of the weakest",
    "ordre": "A “natural” legitimation of domination and of the maximization of desires (pleonexia) by an elite.",
-   "dette": "The order of the strong displaces its disorder onto others: craftsmen, vine-growers, rowers, weavers pay so that a handful may « grow »; it is financed by the exhaustion and invisibility of its debtors (unpaid hours, broken solidarities).",
+   "dette": "The order of the strong displaces its disorder onto others: craftsmen, vine-growers, rowers, weavers pay so that a handful may “grow”; it is financed by the exhaustion and invisibility of its debtors (unpaid hours, broken solidarities).",
    "categories": [
     "Social",
     "Political",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "135-138",
+   "ancre": "calliclesthe-right-of-the-strongest-the-law-of-the-weak"
   },
   {
    "age": 3,
@@ -493,7 +535,8 @@
     "Cognitive",
     "Social",
     "Philosophical"
-   ]
+   ],
+   "pages": "138-140"
   },
   {
    "age": 3,
@@ -506,7 +549,8 @@
     "Cognitive",
     "Political",
     "Moral"
-   ]
+   ],
+   "pages": "141-143"
   },
   {
    "age": 3,
@@ -519,7 +563,8 @@
     "Philosophical",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "144-147"
   },
   {
    "age": 3,
@@ -532,33 +577,36 @@
     "Cognitive",
     "Social",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "147-150"
   },
   {
    "age": 3,
    "tri": -334,
    "date": "≈ −334",
    "titre": "Alexander—the intoxication of the infinite",
-   "ordre": "An immense space unified by the speed of conquest, creating the first “Hellenistic” cultural space.",
+   "ordre": "An immense space unified by the speed of conquest, creating a “Hellenistic” cultural space.",
    "dette": "Persian political and administrative orders destroyed; the human and logistical cost of the military campaign; a debt of legitimacy owed to his own troops.",
    "categories": [
     "Political",
     "Spatial",
     "Economic"
-   ]
+   ],
+   "pages": "150-153"
   },
   {
    "age": 3,
    "tri": -330,
    "date": "≈ −330",
    "titre": "Diogenes—the nothing that judges everything",
-   "ordre": "Absolute individual sovereignty through radical renunciation and the refusal of conventions.",
+   "ordre": "Individual sovereignty through radical renunciation and the refusal of conventions.",
    "dette": "His freedom is subsidized by the surplus and tolerance of the city he despises (alms, safety); a debt of participation in the common burdens.",
    "categories": [
     "Social",
     "Philosophical",
     "Economic"
-   ]
+   ],
+   "pages": "154-156"
   },
   {
    "age": 3,
@@ -571,7 +619,8 @@
     "Cognitive",
     "Social",
     "Political"
-   ]
+   ],
+   "pages": "157-160"
   },
   {
    "age": 3,
@@ -584,7 +633,8 @@
     "Technical",
     "Energetic",
     "Economic"
-   ]
+   ],
+   "pages": "160-163"
   },
   {
    "age": 3,
@@ -597,20 +647,23 @@
     "Political",
     "Cultural",
     "Social"
-   ]
+   ],
+   "pages": "163-166"
   },
   {
    "age": 3,
    "tri": -49,
    "date": "≈ −49",
-   "titre": "The Rubicon—when speed assassinates the law",
+   "titre": "The Rubicon—when speed murders the law",
    "ordre": "A lightning seizure of power that opens the civil war, where the speed of the fait accompli replaces deliberation: the law is no longer a wall, only a delay.",
    "dette": "Republican legality assassinated; the human and economic cost of the military campaigns; a debt of legitimacy settled by dictatorship.",
    "categories": [
     "Political",
     "Temporal",
     "Legal"
-   ]
+   ],
+   "pages": "167-169",
+   "ancre": "the-rubiconwhen-speed-assassinates-the-law"
   },
   {
    "age": 3,
@@ -623,7 +676,8 @@
     "Symbolic",
     "Social",
     "Political"
-   ]
+   ],
+   "pages": "170-172"
   },
   {
    "age": 3,
@@ -636,33 +690,38 @@
     "Technical",
     "Political",
     "Ecological"
-   ]
+   ],
+   "pages": "173-177"
   },
   {
    "age": 3,
    "tri": 110,
    "date": "110",
-   "titre": "Juvenal—feeding the belly, starving the mind",
+   "titre": "Juvenal—feed the belly, starve the mind",
    "ordre": "Social peace through the distribution of food (panem) and entertainment (circenses), occupying the people’s bodies and attention.",
    "dette": "Citizenship atrophied into a passive clientele; the colossal logistical and financial cost of maintaining the grain flows and the games.",
    "categories": [
     "Political",
     "Social",
     "Cognitive"
-   ]
+   ],
+   "pages": "177-179",
+   "ancre": "juvenalfeeding-the-belly-starving-the-mind"
   },
   {
    "age": 3,
    "tri": 135,
    "date": "135",
-   "titre": "Stoicism—the will to will nothing",
+   "titre": "Stoicism—willing to will nothing",
    "ordre": "An impregnable inner citadel, freedom through the mastery of judgments and the discipline of desire.",
    "dette": "The bodily cost of invulnerability to power (Stoic martyrs, a debt settled in civic blood); the otium this asceticism requires is financed by the labor of others (slaves, secretaries, stewards).",
    "categories": [
     "Cognitive",
     "Social",
     "Philosophical"
-   ]
+   ],
+   "pages": "179-182",
+   "ancre": "stoicismthe-will-to-will-nothing"
   },
   {
    "age": 3,
@@ -670,15 +729,16 @@
    "date": "312",
    "titre": "Constantine—saving the empire by killing its gods",
    "ordre": "The empire unified under a single symbol (the cross), creating a new infrastructure of loyalty.",
-   "dette": "Pagan orders and economies destroyed (temples, priesthoods); the cost of building the new ecclesiastical apparatus; conflict displaced onto heresies.",
+   "dette": "Pagan orders and economies gradually dismantled (temples, priesthoods); the cost of building the new ecclesiastical apparatus; conflict displaced onto heresies.",
    "categories": [
     "Political",
     "Symbolic",
     "Economic"
-   ]
+   ],
+   "pages": "183-187"
   },
   {
-   "age": 3,
+   "age": 4,
    "tri": 486,
    "date": "486",
    "titre": "Clovis—the chemistry of the anointing",
@@ -688,7 +748,8 @@
     "Symbolic",
     "Political",
     "Economic"
-   ]
+   ],
+   "pages": "193-195"
   },
   {
    "age": 4,
@@ -701,7 +762,8 @@
     "Social",
     "Economic",
     "Temporal"
-   ]
+   ],
+   "pages": "196-198"
   },
   {
    "age": 4,
@@ -714,46 +776,53 @@
     "Symbolic",
     "Social",
     "Political"
-   ]
+   ],
+   "pages": "198-201"
   },
   {
    "age": 4,
    "tri": 850,
    "date": "850",
-   "titre": "Gunpowder & saltpeter—the chemistry of power (China)",
+   "titre": "Powder & saltpeter—the chemistry of power (China)",
    "ordre": "Traditional military hierarchies leveled (“ballistic democracy”); the chemical recipe prevails over birth.",
    "dette": "Death industrialized, the ecological cost of production (saltpeter, charcoal); regulating violence becomes more costly and more centralized.",
    "categories": [
     "Technical",
     "Energetic",
     "Political"
-   ]
+   ],
+   "pages": "201-204",
+   "ancre": "gunpowder--saltpeterthe-chemistry-of-power-china"
   },
   {
    "age": 4,
    "tri": 980,
    "date": "980/1126",
-   "titre": "Avicenna and Averroes—Islam, Aristotle’s ferryman",
+   "titre": "Avicenna and Averroes—Islam, the bearer of Aristotle",
    "ordre": "Greek philosophy and science transmitted and enriched, creating a conceptual infrastructure for Europe’s intellectual future.",
-   "dette": "The material cost of translation and copying (paper, scribes, libraries) financed by Islamic powers; the West would inherit the knowledge while often erasing the ferryman’s signature.",
+   "dette": "The material cost of translation and copying (paper, scribes, libraries) financed by Islamic powers; the West would inherit the knowledge while often erasing the bearer’s signature.",
    "categories": [
     "Cognitive",
     "Cultural",
     "Economic"
-   ]
+   ],
+   "pages": "205-208",
+   "ancre": "avicenna-and-averroesislam-aristotles-ferryman"
   },
   {
    "age": 4,
    "tri": 1066,
    "date": "1066",
-   "titre": "Hastings—the bastard’s alchemy",
+   "titre": "Hastings—the alchemy of the bastard",
    "ordre": "A violent conquest transformed into a centralized administrative State (the Domesday Book) and a durable legal order (common law).",
    "dette": "Massive expropriation of the Anglo-Saxon elite; the human cost of repression (the Harrying of the North); symbolic violence through the imposition of Norman language and law.",
    "categories": [
     "Political",
     "Social",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "208-211",
+   "ancre": "hastingsthe-bastards-alchemy"
   },
   {
    "age": 4,
@@ -766,33 +835,38 @@
     "Cognitive",
     "Technical",
     "Cultural"
-   ]
+   ],
+   "pages": "211-215"
   },
   {
    "age": 4,
    "tri": 1200,
    "date": "1200",
-   "titre": "The University of Paris—the forge of disputes",
+   "titre": "The University of Paris—the forge of disputations",
    "ordre": "Truth produced through regulated confrontation (the disputatio), creating an autonomous intellectual authority set against political and religious power.",
    "dette": "The social cost of maintaining an unproductive student population; a material debt (colleges, books); exclusion of those who do not master the scholastic code.",
    "categories": [
     "Cognitive",
     "Social",
     "Economic"
-   ]
+   ],
+   "pages": "216-219",
+   "ancre": "the-university-of-paristhe-forge-of-disputes"
   },
   {
    "age": 4,
    "tri": 1209,
    "date": "1209",
-   "titre": "The Albigensians—the mechanics of purity",
+   "titre": "The Albigensians—the machinery of purity",
    "ordre": "Doctrinal unity of Christendom through the eradication of the Cathar heresy; the invention of the Inquisition as a procedure for controlling consciences.",
-   "dette": "Physical and symbolic violence (massacres, pyres); a cultural ecosystem destroyed (the langue d’oc); the moral debt of an orthodoxy imposed by terror.",
+   "dette": "Physical and symbolic violence (massacres, pyres); a cultural ecosystem wounded (Occitan loses its courts and patrons); the moral debt of an orthodoxy imposed by terror.",
    "categories": [
     "Symbolic",
     "Political",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "219-222",
+   "ancre": "the-albigensiansthe-mechanics-of-purity"
   },
   {
    "age": 4,
@@ -805,7 +879,8 @@
     "Legal",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "222-226"
   },
   {
    "age": 4,
@@ -818,7 +893,8 @@
     "Philosophical",
     "Cognitive",
     "Symbolic"
-   ]
+   ],
+   "pages": "226-229"
   },
   {
    "age": 4,
@@ -831,7 +907,8 @@
     "Symbolic",
     "Cultural",
     "Cognitive"
-   ]
+   ],
+   "pages": "233-236"
   },
   {
    "age": 4,
@@ -844,7 +921,8 @@
     "Economic",
     "Political",
     "Technical"
-   ]
+   ],
+   "pages": "229-233"
   },
   {
    "age": 4,
@@ -857,7 +935,8 @@
     "Cognitive",
     "Economic",
     "Technical"
-   ]
+   ],
+   "pages": "236-239"
   },
   {
    "age": 4,
@@ -870,7 +949,8 @@
     "Political",
     "Philosophical",
     "Social"
-   ]
+   ],
+   "pages": "240-243"
   },
   {
    "age": 4,
@@ -883,20 +963,22 @@
     "Symbolic",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "243-246"
   },
   {
    "age": 4,
    "tri": 1435,
    "date": "1435",
    "titre": "Alberti—framing the world, building the eye",
-   "ordre": "A rationalized visual space, measurable and reproducible through perspective, turning painting into a “window onto the world.”",
+   "ordre": "A rationalized visual space, measurable and reproducible through perspective, turning painting into “an open window.”",
    "dette": "The eye is constrained to a single, motionless point of view; the frame excludes what lies outside it; mastery of the visible is paid for by a loss of laterality and of peripheral vision.",
    "categories": [
     "Cognitive",
     "Technical",
     "Symbolic"
-   ]
+   ],
+   "pages": "247-249"
   },
   {
    "age": 4,
@@ -909,20 +991,23 @@
     "Cognitive",
     "Political",
     "Cultural"
-   ]
+   ],
+   "pages": "250-253"
   },
   {
    "age": 4,
    "tri": 1492,
    "date": "1492",
-   "titre": "New worlds—discovering, counting, conquering",
+   "titre": "New worlds—discover, count, conquer",
    "ordre": "Planetary unification, the creation of a Euro-centered world-system through cartography, accounting, and military power.",
    "dette": "The collapse of Amerindian populations (epidemics, war, forced labor), the encomienda and the mita of Potosí, the plunder of Andean silver; a human and moral debt.",
    "categories": [
     "Spatial",
     "Economic",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "254-256",
+   "ancre": "new-worldsdiscovering-counting-conquering"
   },
   {
    "age": 4,
@@ -935,7 +1020,8 @@
     "Economic",
     "Cognitive",
     "Technical"
-   ]
+   ],
+   "pages": "257-260"
   },
   {
    "age": 5,
@@ -948,20 +1034,23 @@
     "Political",
     "Moral",
     "Social"
-   ]
+   ],
+   "pages": "264-267"
   },
   {
    "age": 5,
    "tri": 1516,
    "date": "1516",
-   "titre": "Erasmus—correcting in order to believe",
+   "titre": "Erasmus—correct to believe",
    "ordre": "A textual truth restored (the New Testament) through philological method (ad fontes), founding modern criticism.",
-   "dette": "Questioning the Vulgate cracks the Church’s authority, supplying the intellectual tools of the Reformation and of the wars of religion that follow.",
+   "dette": "Questioning the Vulgate cracks the Church’s authority and supplies, without calling for rupture, one of the tools that make the Reformation possible; the wars of religion that follow show that the same text, stabilized, can feed rival orthodoxies.",
    "categories": [
     "Cognitive",
     "Symbolic",
     "Political"
-   ]
+   ],
+   "pages": "267-270",
+   "ancre": "erasmuscorrecting-in-order-to-believe"
   },
   {
    "age": 5,
@@ -974,7 +1063,8 @@
     "Symbolic",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "270-273"
   },
   {
    "age": 5,
@@ -987,33 +1077,38 @@
     "Cognitive",
     "Symbolic",
     "Political"
-   ]
+   ],
+   "pages": "274-276"
   },
   {
    "age": 5,
    "tri": 1576,
    "date": "1576",
-   "titre": "La Boétie—the people as their own tyrant",
+   "titre": "La Boétie—the people, tyrant of itself",
    "ordre": "Servitude diagnosed as the product of active consent, founding the possibility of liberation through the simple refusal to serve.",
    "dette": "The text shifts responsibility for tyranny from the tyrant to the people themselves, creating a debt of lucidity and civic courage.",
    "categories": [
     "Political",
     "Cognitive",
     "Moral"
-   ]
+   ],
+   "pages": "277-279",
+   "ancre": "la-boétiethe-people-as-their-own-tyrant"
   },
   {
    "age": 5,
    "tri": 1600,
    "date": "1600",
-   "titre": "The East India companies—the invention of the world-company",
-   "ordre": "A planetary commercial network, financed by liquid, anonymous capital (shares), endowed with sovereign prerogatives (to fit out fleets, to negotiate).",
+   "titre": "The India companies—the invention of the world-company",
+   "ordre": "A planetary commercial network, financed by liquid, anonymous capital (shares), endowed with sovereign prerogatives (to raise troops, to negotiate treaties).",
    "dette": "Structural violence (the Banda massacre), forced monocultures, founding ecocides, and risks externalized onto colonized populations.",
    "categories": [
     "Economic",
     "Geopolitical",
     "Ecological"
-   ]
+   ],
+   "pages": "280-283",
+   "ancre": "the-east-india-companiesthe-invention-of-the-world-company"
   },
   {
    "age": 5,
@@ -1026,7 +1121,8 @@
     "Cognitive",
     "Technical",
     "Political"
-   ]
+   ],
+   "pages": "283-286"
   },
   {
    "age": 5,
@@ -1039,7 +1135,8 @@
     "Legal",
     "Political",
     "Moral"
-   ]
+   ],
+   "pages": "286-288"
   },
   {
    "age": 5,
@@ -1052,7 +1149,8 @@
     "Philosophical",
     "Cognitive",
     "Social"
-   ]
+   ],
+   "pages": "289-291"
   },
   {
    "age": 5,
@@ -1065,7 +1163,8 @@
     "Geopolitical",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "292-294"
   },
   {
    "age": 5,
@@ -1073,12 +1172,13 @@
    "date": "1651",
    "titre": "Hobbes—the monster that saves us from ourselves",
    "ordre": "Absolute security through the total alienation of individual liberties to an artificial sovereign (the Leviathan) who ends the “war of all against all.”",
-   "dette": "Fear becomes the foundation of politics; the question « who protects us from the protector? » remains open when the Leviathan turns totalitarian, the monster then turning against its creators.",
+   "dette": "Fear becomes the foundation of politics; the question “who protects us from the protector?” remains open when the Leviathan turns totalitarian, the monster then turning against its creators.",
    "categories": [
     "Political",
     "Social",
     "Philosophical"
-   ]
+   ],
+   "pages": "295-298"
   },
   {
    "age": 5,
@@ -1091,7 +1191,8 @@
     "Political",
     "Economic",
     "Social"
-   ]
+   ],
+   "pages": "298-302"
   },
   {
    "age": 5,
@@ -1104,33 +1205,38 @@
     "Cognitive",
     "Philosophical",
     "Symbolic"
-   ]
+   ],
+   "pages": "305-308"
   },
   {
    "age": 5,
    "tri": 1689,
    "date": "1689",
-   "titre": "Locke—obeying in order to be free",
+   "titre": "Locke—obey to be free",
    "ordre": "Legitimate government founded on consent and the guarantee of natural rights (life, liberty, property), with a right of resistance built in.",
    "dette": "Political liberty in the metropole is financed by economic servitude in the colonies (slavery, expropriation of lands).",
    "categories": [
     "Political",
     "Economic",
     "Inequalities"
-   ]
+   ],
+   "pages": "302-305",
+   "ancre": "lockeobeying-in-order-to-be-free"
   },
   {
    "age": 5,
    "tri": 1748,
    "date": "1748",
-   "titre": "Montesquieu—dividing to unite",
+   "titre": "Montesquieu—divide to unite",
    "ordre": "Political liberty through the separation of powers (legislative, executive, judicial), where “power checks power.”",
    "dette": "Liberty is paid for with a “calculated inefficiency”; institutional friction and procedural slowness become the cost of protection against the arbitrary.",
    "categories": [
     "Political",
     "Legal",
     "Temporal"
-   ]
+   ],
+   "pages": "309-311",
+   "ancre": "montesquieudividing-to-unite"
   },
   {
    "age": 5,
@@ -1143,59 +1249,67 @@
     "Cognitive",
     "Philosophical",
     "Social"
-   ]
+   ],
+   "pages": "311-315"
   },
   {
    "age": 5,
    "tri": 1755,
    "date": "1755",
-   "titre": "Voltaire—nothing is so certain as doubt",
+   "titre": "Voltaire—nothing is more certain than doubt",
    "ordre": "A critical public sphere in which opinion, armed with reason and publicity (the Calas affair), can judge and correct the abuses of power.",
    "dette": "By undermining traditional authorities without building replacement institutions, critique releases forces that reason alone cannot contain, risking demagoguery.",
    "categories": [
     "Cognitive",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "315-318",
+   "ancre": "voltairenothing-is-so-certain-as-doubt"
   },
   {
    "age": 5,
    "tri": 1758,
    "date": "1758",
    "titre": "The Physiocrats—the blood and sap of wealth",
-   "ordre": "The first macroeconomic model (the Tableau économique), seeing the economy as an organism whose wealth springs from the land.",
+   "ordre": "A pioneering macroeconomic model (the Economic Table), seeing the economy as an organism whose wealth springs from the land.",
    "dette": "The liberalized order of flows (free circulation of grain) displaces disorder onto prices, provoking food riots (the “Flour War”).",
    "categories": [
     "Economic",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "318-320"
   },
   {
    "age": 5,
    "tri": 1759,
    "date": "1759",
-   "titre": "The Encyclopédie—ordering knowledge, upending power",
+   "titre": "The Encyclopédie—to order knowledge, to overturn power",
    "ordre": "Knowledge democratized and unified through alphabetical order and critical cross-references, making the secrets of power and of the trades transparent.",
    "dette": "An abundance of information without hierarchy displaces disorder onto interpretation; the critique of authority can lead to its dissolution and to instability.",
    "categories": [
     "Cognitive",
     "Political",
     "Technical"
-   ]
+   ],
+   "pages": "321-324",
+   "ancre": "the-encyclopédieordering-knowledge-upending-power"
   },
   {
    "age": 5,
    "tri": 1762,
    "date": "1762",
-   "titre": "Rousseau—the fire beneath the democratic ash",
+   "titre": "Rousseau—fire beneath the democratic ashes",
    "ordre": "Legitimacy founded on the “general will”; civil liberty consists in obeying the law one has given oneself.",
    "dette": "The order of the common is paid for in constraints on the individual (taxation, military service); brandished as an absolute, the general will can justify the Terror.",
    "categories": [
     "Political",
     "Social",
     "Philosophical"
-   ]
+   ],
+   "pages": "324-327",
+   "ancre": "rousseauthe-fire-beneath-the-democratic-ash"
   },
   {
    "age": 5,
@@ -1203,25 +1317,28 @@
    "date": "1762",
    "titre": "Insurance—the code of risk",
    "ordre": "Risk mutualized, transforming an uncertain future into calculable probabilities and payable premiums.",
-   "dette": "New exclusions (the « uninsurable »); the moral debt of surveillance (moral hazard); when private risk overflows, the debt falls back on the taxpayer (AIG, 2008).",
+   "dette": "New exclusions (the “uninsurable”); the moral debt of surveillance (moral hazard); when private risk overflows, the debt falls back on the taxpayer (AIG, 2008).",
    "categories": [
     "Economic",
     "Social",
     "Technical"
-   ]
+   ],
+   "pages": "327-331"
   },
   {
    "age": 5,
    "tri": 1776,
    "date": "1776",
-   "titre": "Adam Smith—the invisible hand, a blind guide",
+   "titre": "Adam Smith—the invisible hand guides blindly",
    "ordre": "Selfish interests coordinated by the anonymous mechanism of the market, producing wealth through the division of labor.",
    "dette": "The stultification and alienation of the specialized worker; social and ecological costs externalized, unaccounted for in the price.",
    "categories": [
     "Economic",
     "Social",
     "Cognitive"
-   ]
+   ],
+   "pages": "331-333",
+   "ancre": "adam-smiththe-invisible-hand-a-blind-guide"
   },
   {
    "age": 5,
@@ -1234,7 +1351,8 @@
     "Economic",
     "Social",
     "Inequalities"
-   ]
+   ],
+   "pages": "334-337"
   },
   {
    "age": 5,
@@ -1247,10 +1365,11 @@
     "Philosophical",
     "Political",
     "Temporal"
-   ]
+   ],
+   "pages": "338-342"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1789,
    "date": "1789",
    "titre": "Revolution—the theater that devours its actors",
@@ -1260,23 +1379,25 @@
     "Political",
     "Social",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "347-350"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1789,
    "date": "1789",
    "titre": "The Rights of Man—transcendence without God",
    "ordre": "Universal principles (liberty, equality) becoming a norm above the State, founding a right of resistance.",
-   "dette": "Proclaimed universality stumbles over its exclusions (women, slaves, the poor shut out by property-based suffrage); the « common utility » clause allows a privilege to be renamed a utility, and the algorithm today reproduces hierarchies.",
+   "dette": "Proclaimed universality stumbles over its exclusions (women, slaves, the poor shut out by property-based suffrage); the “common utility” clause allows a privilege to be renamed a utility, and the algorithm today reproduces hierarchies.",
    "categories": [
     "Inequalities",
     "Symbolic violence",
     "Legal"
-   ]
+   ],
+   "pages": "350-353"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1791,
    "date": "1791",
    "titre": "The guillotine—equality in death",
@@ -1286,23 +1407,26 @@
     "Political",
     "Moral",
     "Technical"
-   ]
+   ],
+   "pages": "354-357"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1791,
    "date": "1791–1804",
-   "titre": "Haiti—liberty against its inventors",
+   "titre": "Haiti—freedom against its inventors",
    "ordre": "The first Black republic born of a victorious slave revolt, giving the Rights of Man concrete universality.",
    "dette": "A crushing indemnity paid to the former colonists; diplomatic isolation and the country’s lasting economic strangulation by the slaveholding powers.",
    "categories": [
     "Economic",
     "Inequalities",
     "Geopolitical"
-   ]
+   ],
+   "pages": "357-362",
+   "ancre": "haitiliberty-against-its-inventors"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1792,
    "date": "1792",
    "titre": "Olympe de Gouges—the universal beheaded",
@@ -1312,10 +1436,11 @@
     "Inequalities",
     "Symbolic violence",
     "Legal"
-   ]
+   ],
+   "pages": "362-365"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1792,
    "date": "1792",
    "titre": "Romantic love—the heart as a code of exclusion",
@@ -1325,23 +1450,26 @@
     "Social",
     "Inequalities",
     "Cognitive"
-   ]
+   ],
+   "pages": "365-367"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1792,
    "date": "1792",
-   "titre": "Nationalism—fraternity in arms",
+   "titre": "Nationalism—armed brotherhood",
    "ordre": "Social cohesion and a capacity for mass mobilization (conscription, taxation) founded on an imagined common belonging.",
    "dette": "Exclusion and suspicion toward minorities and the foreigner (xenophobia); borders sacralized, leading to total wars.",
    "categories": [
     "Political",
     "Social",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "368-371",
+   "ancre": "nationalismfraternity-in-arms"
   },
   {
-   "age": 5,
+   "age": 6,
    "tri": 1793,
    "date": "1793",
    "titre": "The Terror—the machine for purifying souls",
@@ -1351,7 +1479,8 @@
     "Political",
     "Moral",
     "Social"
-   ]
+   ],
+   "pages": "371-375"
   },
   {
    "age": 6,
@@ -1364,7 +1493,8 @@
     "Legal",
     "Inequalities",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "375-378"
   },
   {
    "age": 6,
@@ -1377,7 +1507,8 @@
     "Geopolitical",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "379-382"
   },
   {
    "age": 6,
@@ -1390,20 +1521,23 @@
     "Energetic",
     "Ecological",
     "Philosophical"
-   ]
+   ],
+   "pages": "382-385"
   },
   {
    "age": 6,
    "tri": 1833,
    "date": "1833–1865",
-   "titre": "The abolition of slavery—the human being proclaimed",
+   "titre": "The abolition of slavery—humanity proclaimed",
    "ordre": "Legal recognition of human personhood for millions of individuals, the end of “chattel” status.",
    "dette": "Compensation paid to slave owners (not to the victims); the persistence of structural racism and of disguised regimes of forced labor.",
    "categories": [
     "Inequalities",
     "Economic",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "385-389",
+   "ancre": "the-abolition-of-slaverythe-human-being-proclaimed"
   },
   {
    "age": 6,
@@ -1411,12 +1545,13 @@
    "date": "1835",
    "titre": "Tocqueville—the aristocratic prophet of our servitudes",
    "ordre": "A lucid diagnosis of democracy, of its strengths (equality) and its risks (tyranny of the majority, soft despotism).",
-   "dette": "Equality opens two slopes: independence, which can turn into anarchy, and gentle tutelage, which leads to infantilization and weariness of the will; democracy also knows how to eliminate « within the forms » (slavery, the Indians), as Tocqueville himself points out.",
+   "dette": "Equality opens two slopes: independence, which can turn into anarchy, and gentle tutelage, which leads to infantilization and weariness of the will; democracy also knows how to eliminate “within the proper forms” (slavery, the Indians), as Tocqueville himself points out.",
    "categories": [
     "Cognitive",
     "Social",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "389-392"
   },
   {
    "age": 6,
@@ -1429,33 +1564,38 @@
     "Temporal",
     "Cognitive",
     "Technical"
-   ]
+   ],
+   "pages": "393-396"
   },
   {
    "age": 6,
    "tri": 1848,
    "date": "1848",
-   "titre": "The Spring of 1848—the simultaneous failure of the peoples",
+   "titre": "Spring of Nations—the simultaneous failure of peoples",
    "ordre": "Continental diffusion of democratic, national, and social ideas; an apprenticeship in political mobilization.",
    "dette": "Coordinated repression by the empires (Russia crushes Hungary, Austria retakes Vienna and Prague, France stifles Rome); in June the Republic fires on republicans and the bourgeoisie chooses order over liberty; failure inoculates Europe against the illusion of an overthrow at one stroke and defers the successes (suffrage, social rights, nations).",
    "categories": [
     "Political",
     "Social",
     "Geopolitical"
-   ]
+   ],
+   "pages": "396-400",
+   "ancre": "the-spring-of-1848the-simultaneous-failure-of-the-peoples"
   },
   {
    "age": 6,
    "tri": 1853,
    "date": "1853–1870",
-   "titre": "Haussmann—order set in stone",
+   "titre": "Haussmann—order in stone",
    "ordre": "Fluid circulation, public hygiene (sewers, ventilation), imperial monumentality.",
-   "dette": "Social segregation through the expulsion of the working classes to the outskirts; destruction of the old social fabric; fortunes built on expropriations (Pereire, Rothschild); a city made controllable by troops, turned in 1871 into a « highway of repression ».",
+   "dette": "Social segregation through the expulsion of the working classes to the outskirts; destruction of the old social fabric; fortunes built on expropriations (Pereire, Rothschild); a city made controllable by troops, turned in 1871 into a “highway of repression”.",
    "categories": [
     "Spatial",
     "Social",
     "Inequalities"
-   ]
+   ],
+   "pages": "401-403",
+   "ancre": "haussmannorder-set-in-stone"
   },
   {
    "age": 6,
@@ -1468,7 +1608,8 @@
     "Social",
     "Political",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "404-407"
   },
   {
    "age": 6,
@@ -1481,33 +1622,38 @@
     "Philosophical",
     "Moral",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "407-410"
   },
   {
    "age": 6,
    "tri": 1862,
    "date": "1862",
-   "titre": "The corporation—an immortal legal creature",
+   "titre": "The corporation—an immortal juridical creature",
    "ordre": "Long-term capital accumulation through legal personhood and limited liability.",
    "dette": "Profits privatized, costs socialized: when the venture goes wrong, liabilities spill over onto the community (employees, neighbors, the river downstream); social and ecological externalities still to be made billable; concentrated economic power (platforms, margins, tax optimization) that regulation and governance seek to rein in.",
    "categories": [
     "Economic",
     "Ecological",
     "Legal"
-   ]
+   ],
+   "pages": "410-414",
+   "ancre": "the-corporationan-immortal-legal-creature"
   },
   {
    "age": 6,
    "tri": 1867,
    "date": "1867",
-   "titre": "Capital—the vampire with equations",
+   "titre": "Capital—the vampire of the equations",
    "ordre": "A critical grammar of capitalism, unveiling the mechanism of exploitation (surplus value); an organizing tool for the workers’ movement.",
    "dette": "Costs that accumulation displaces onto labor (surplus labor, the industrial reserve army) and onto nature (CO₂, deforestation, the sixth extinction); the tendency of the rate of profit to fall remains contested (Okishio, 1961), though the question of these costs does not depend on it.",
    "categories": [
     "Cognitive",
     "Political",
     "Economic"
-   ]
+   ],
+   "pages": "414-418",
+   "ancre": "capitalthe-vampire-with-equations"
   },
   {
    "age": 6,
@@ -1520,33 +1666,38 @@
     "Political",
     "Social",
     "Geopolitical"
-   ]
+   ],
+   "pages": "418-421"
   },
   {
    "age": 6,
    "tri": 1871,
    "date": "1871",
-   "titre": "The Commune—the revolution that invents its own vocabulary",
+   "titre": "The Commune—the revolution that invents its vocabulary",
    "ordre": "An experiment in direct democratic self-government (recallable mandates, self-management).",
-   "dette": "Civil war and extreme repression (the « Bloody Week »: provost courts, some 43,000 arrests, perhaps twenty thousand dead); a new vocabulary that cost so many lives: the city lost, the language won.",
+   "dette": "Civil war and extreme repression (the “Bloody Week”: provost courts, some 43,000 arrests, perhaps twenty thousand dead); a new vocabulary that cost so many lives: the city lost, the language won.",
    "categories": [
     "Political",
     "Social",
     "Memory"
-   ]
+   ],
+   "pages": "421-424",
+   "ancre": "the-communethe-revolution-that-invents-its-own-vocabulary"
   },
   {
    "age": 6,
    "tri": 1882,
    "date": "1882",
-   "titre": "Ferry’s schools—the machine for formatting souls",
+   "titre": "Ferry’s school—the machine for formatting souls",
    "ordre": "National unity through compulsory schooling, secularism, and a common language.",
-   "dette": "Regional languages eradicated (the « signal », a « pedagogy of eradication »); a national narrative instilled that helped make possible mass mobilization and the acceptance of sacrifice in 1914-18; the history of France taught in the colonies, a « double alienation ».",
+   "dette": "Regional languages eradicated (the “signal”, a “pedagogy of eradication”); a national narrative instilled that helped make possible mass mobilization and the acceptance of sacrifice in 1914-18; the history of France taught in the colonies, a “double alienation”.",
    "categories": [
     "Cultural",
     "Political",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "425-428",
+   "ancre": "ferrys-schoolsthe-machine-for-formatting-souls"
   },
   {
    "age": 6,
@@ -1559,33 +1710,37 @@
     "Energetic",
     "Ecological",
     "Temporal"
-   ]
+   ],
+   "pages": "428-431"
   },
   {
    "age": 6,
    "tri": 1884,
    "date": "1884–1885",
-   "titre": "Berlin—the world carved up with a ruler",
-   "ordre": "Geopolitical stability in Europe through the regulated partition of Africa; colonial spheres of influence sanctuarized.",
+   "titre": "Berlin—carving up the world with a ruler",
+   "ordre": "Geopolitical stability in Europe through the regulated partition of Africa; colonial spheres of influence made inviolable.",
    "dette": "Artificial borders created (a “homicidal geometry”) that divide some peoples and confine others, programming future conflicts on the African continent.",
    "categories": [
     "Geopolitical",
     "Social",
     "Spatial"
-   ]
+   ],
+   "pages": "431-433",
+   "ancre": "berlinthe-world-carved-up-with-a-ruler"
   },
   {
    "age": 6,
    "tri": 1887,
    "date": "1887",
    "titre": "Nietzsche—the man-dynamite",
-   "ordre": "Lucidity through the “revaluation of all values”; the diagnosis of the “death of God” and of the morality of ressentiment.",
+   "ordre": "Lucidity through the “transvaluation of all values”; the diagnosis of the “death of God” and of the morality of ressentiment.",
    "dette": "A metaphysical void filled by substitute absolutes (Nation, Race, Class); “guilt” (Schuld) is displaced from theology into politics and economics.",
    "categories": [
     "Moral",
     "Philosophical",
     "Political"
-   ]
+   ],
+   "pages": "433-436"
   },
   {
    "age": 6,
@@ -1598,7 +1753,8 @@
     "Social",
     "Political",
     "Moral"
-   ]
+   ],
+   "pages": "436-439"
   },
   {
    "age": 6,
@@ -1611,23 +1767,26 @@
     "Cognitive",
     "Psychological",
     "Social"
-   ]
+   ],
+   "pages": "439-443"
   },
   {
    "age": 6,
    "tri": 1905,
    "date": "1905",
-   "titre": "The separation of Church and State—the eldest daughter emancipates herself",
+   "titre": "The separation of the Churches and the State—the eldest daughter emancipates herself",
    "ordre": "State neutrality, civil peace through the privatization of faith, freedom of conscience and worship guaranteed.",
    "dette": "A secular debt: the State becomes guarantor and arbiter of the coexistence of faiths, with permanent costs of upkeep (church buildings) and regulation (procedures).",
    "categories": [
     "Legal",
     "Political",
     "Administrative"
-   ]
+   ],
+   "pages": "443-447",
+   "ancre": "the-separation-of-church-and-statethe-eldest-daughter-emancipates-herself"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1905,
    "date": "1905–1915",
    "titre": "Einstein—elastic time, curved space",
@@ -1637,10 +1796,11 @@
     "Cognitive",
     "Energetic",
     "Technical"
-   ]
+   ],
+   "pages": "453-456"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1914,
    "date": "1914–1918",
    "titre": "Total war—the machine for grinding down the human",
@@ -1650,10 +1810,11 @@
     "Social",
     "Ecological",
     "Political"
-   ]
+   ],
+   "pages": "457-459"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1917,
    "date": "1917",
    "titre": "The October Revolution—paradise gives birth to the Gulag",
@@ -1663,23 +1824,26 @@
     "Political",
     "Social",
     "Economic"
-   ]
+   ],
+   "pages": "459-463"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1922,
    "date": "1922–1928",
-   "titre": "Lippmann & Bernays—consent unaware of itself",
+   "titre": "Lippmann & Bernays—the consent that does not know itself",
    "ordre": "The engineering of public opinion, making the masses governable and desires predictable for the market.",
    "dette": "Epistemic debt (a pseudo-environment replaces the environment, distrust accumulates), attentional debt (decision fatigue, polarization, chronic outrage), and social debt (costs externalized onto those left out of the story: tobacco cancers, overthrown regimes, discredited institutions).",
    "categories": [
     "Cognitive",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "464-467",
+   "ancre": "lippmann--bernaysconsent-unaware-of-itself"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1925,
    "date": "1925–1927",
    "titre": "Quanta—a world that plays dice",
@@ -1689,10 +1853,11 @@
     "Philosophical",
     "Energetic",
     "Technical"
-   ]
+   ],
+   "pages": "468-471"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1928,
    "date": "1928",
    "titre": "Penicillin—the body under an algorithmic contract",
@@ -1702,36 +1867,41 @@
     "Ecological",
     "Social",
     "Technical"
-   ]
+   ],
+   "pages": "471-474"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1936,
    "date": "1936",
-   "titre": "The Popular Front—taking the symbols, conceding the essential",
+   "titre": "The Popular Front—seizing the symbols, surrendering the substance",
    "ordre": "Major social rights won (paid vacations, the 40-hour week), workers’ dignity recognized.",
    "dette": "Economic disorder (inflation, capital flight); the moral debt of nonintervention in Spain.",
    "categories": [
     "Social",
     "Economic",
     "Political"
-   ]
+   ],
+   "pages": "474-478",
+   "ancre": "the-popular-fronttaking-the-symbols-conceding-the-essential"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1936,
    "date": "1936–1944",
-   "titre": "Culture industry vs. public broadcasting—the war of narratives",
+   "titre": "Culture industry vs. public service—Frankfurt & the BBC, the war of narratives",
    "ordre": "Cultural formats standardized for industry, a common civic space created by public broadcasting.",
    "dette": "The culture industry displaces disorder into minds (conformism, passivity); public broadcasting displaces it into politics (pressures, elitism).",
    "categories": [
     "Cognitive",
     "Cultural",
     "Political"
-   ]
+   ],
+   "pages": "478-482",
+   "ancre": "culture-industry-vs-public-broadcastingthe-war-of-narratives"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1938,
    "date": "1938",
    "titre": "Munich—the diplomacy of disaster",
@@ -1741,10 +1911,11 @@
     "Geopolitical",
     "Temporal",
     "Moral"
-   ]
+   ],
+   "pages": "482-485"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1940,
    "date": "1940",
    "titre": "June 18—the Word that founds a phantom State",
@@ -1754,20 +1925,23 @@
     "Symbolic",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "485-489"
   },
   {
-   "age": 6,
+   "age": 7,
    "tri": 1940,
    "date": "1940–1945",
-   "titre": "Churchill—the orator who spoke his empire to death",
+   "titre": "Churchill—the orator who spoke the empire to death",
    "ordre": "National cohesion in the face of imminent defeat, speech transformed into a strategic weapon.",
    "dette": "The war effort is paid for by the liquidation of the British Empire and a colossal financial debt to the United States.",
    "categories": [
     "Symbolic",
     "Geopolitical",
     "Economic"
-   ]
+   ],
+   "pages": "490-492",
+   "ancre": "churchillthe-orator-who-spoke-his-empire-to-death"
   },
   {
    "age": 7,
@@ -1780,20 +1954,23 @@
     "Technical",
     "Political",
     "Moral"
-   ]
+   ],
+   "pages": "493-496"
   },
   {
    "age": 7,
    "tri": 1945,
    "date": "1945",
-   "titre": "Social insurance—care becomes a right",
+   "titre": "La Sécurité sociale—care becomes a right",
    "ordre": "Compulsory solidarity that mutualizes life’s risks (illness, old age) and decommodifies care.",
    "dette": "An intergenerational debt (workers paying for retirees) and a financial debt (deficits) managed by a bureaucratic apparatus.",
    "categories": [
     "Social",
     "Economic",
     "Administrative"
-   ]
+   ],
+   "pages": "496-500",
+   "ancre": "social-insurancecare-becomes-a-right"
   },
   {
    "age": 7,
@@ -1806,7 +1983,8 @@
     "Symbolic",
     "Geopolitical",
     "Memory"
-   ]
+   ],
+   "pages": "501-505"
   },
   {
    "age": 7,
@@ -1814,25 +1992,27 @@
    "date": "1948",
    "titre": "The Universal Declaration—dignity in articles",
    "ordre": "A universal moral norm that makes the violation of human rights visible and illegitimate.",
-   "dette": "The text creates a permanent “compliance debt” for all States; disorder is displaced from brute force into justification and procedure.",
+   "dette": "The text creates a permanent compliance debt for all States; disorder is displaced from brute force into justification and procedure.",
    "categories": [
     "Legal",
     "Moral",
     "Political"
-   ]
+   ],
+   "pages": "505-509"
   },
   {
    "age": 7,
    "tri": 1948,
    "date": "1948",
    "titre": "Shannon—killing meaning, giving birth to information",
-   "ordre": "A mathematical theory of communication that allows error-free data transmission and founds the digital era.",
+   "ordre": "A mathematical theory of communication that allows near error-free data transmission and founds the digital era.",
    "dette": "Meaning is evacuated from the process; syntactic order is paid for with semantic disorder (information overload, loss of context).",
    "categories": [
     "Technical",
     "Cognitive",
     "Philosophical"
-   ]
+   ],
+   "pages": "509-512"
   },
   {
    "age": 7,
@@ -1845,7 +2025,8 @@
     "Technical",
     "Ecological",
     "Moral"
-   ]
+   ],
+   "pages": "513-516"
   },
   {
    "age": 7,
@@ -1858,7 +2039,8 @@
     "Economic",
     "Political",
     "Legal"
-   ]
+   ],
+   "pages": "516-519"
   },
   {
    "age": 7,
@@ -1870,7 +2052,8 @@
    "categories": [
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "519-521"
   },
   {
    "age": 7,
@@ -1883,33 +2066,38 @@
     "Cognitive",
     "Temporal",
     "Ecological"
-   ]
+   ],
+   "pages": "522-525"
   },
   {
    "age": 7,
    "tri": 1960,
    "date": "1960",
-   "titre": "Africa—Year II of the independences",
+   "titre": "Africa—Year Two of the independences",
    "ordre": "An order of flags and national anthems, formal political independence.",
    "dette": "Structures of economic and political dependence persist (neo-colonialism); the arbitrariness of borders displaces disorder within the new States.",
    "categories": [
     "Geopolitical",
     "Economic",
     "Political"
-   ]
+   ],
+   "pages": "525-529",
+   "ancre": "africayear-ii-of-the-independences"
   },
   {
    "age": 7,
    "tri": 1960,
    "date": "1960",
-   "titre": "The pill—fertile time domesticated",
+   "titre": "The pill—the fertile span domesticated",
    "ordre": "Individual mastery of the fertility calendar, sexuality dissociated from reproduction.",
    "dette": "The contraceptive load (health-related, mental) is overwhelmingly shifted onto women; a debt of research into male contraception.",
    "categories": [
     "Social",
     "Technical",
     "Inequalities"
-   ]
+   ],
+   "pages": "529-533",
+   "ancre": "the-pillfertile-time-domesticated"
   },
   {
    "age": 7,
@@ -1922,7 +2110,8 @@
     "Symbolic",
     "Social",
     "Memory"
-   ]
+   ],
+   "pages": "533-537"
   },
   {
    "age": 7,
@@ -1935,20 +2124,23 @@
     "Cognitive",
     "Social",
     "Symbolic"
-   ]
+   ],
+   "pages": "537-541"
   },
   {
    "age": 7,
    "tri": 1968,
    "date": "1968",
-   "titre": "May ’68—pleasure without shackles, shackles without pleasure",
+   "titre": "May 68—pleasure without restraint, restraint without pleasure",
    "ordre": "A liberation of mores and a radical critique of authority.",
    "dette": "The refusal of political power lets capitalism co-opt the critique and turn it into a marketing argument; cultural freedom is paid for with economic precarity.",
    "categories": [
     "Cultural",
     "Social",
     "Economic"
-   ]
+   ],
+   "pages": "541-545",
+   "ancre": "may-68pleasure-without-shackles-shackles-without-pleasure"
   },
   {
    "age": 7,
@@ -1961,20 +2153,23 @@
     "Technical",
     "Symbolic",
     "Economic"
-   ]
+   ],
+   "pages": "545-549"
   },
   {
    "age": 7,
    "tri": 1971,
    "date": "1971",
-   "titre": "The microprocessor—the invisible in command",
+   "titre": "Microprocessor—the invisible that commands",
    "ordre": "Universal, miniaturized computing power, founding automation and the information society.",
    "dette": "An ecological debt (electronic waste), a social one (obsolete trades), and a strategic one (the vulnerability of systems).",
    "categories": [
     "Technical",
     "Economic",
     "Ecological"
-   ]
+   ],
+   "pages": "549-553",
+   "ancre": "the-microprocessorthe-invisible-in-command"
   },
   {
    "age": 7,
@@ -1986,20 +2181,23 @@
    "categories": [
     "Economic",
     "Geopolitical"
-   ]
+   ],
+   "pages": "553-556"
   },
   {
    "age": 7,
    "tri": 1974,
    "date": "1974",
-   "titre": "Kahneman—reason unreasoning",
+   "titre": "Kahneman—the reason that unreasons",
    "ordre": "A map of our cognitive biases, revealing a predictable architecture of human irrationality.",
    "dette": "This knowledge becomes a tool of manipulation (the nudge), displacing the disorder of our errors into a voluntary servitude to “choice architectures.”",
    "categories": [
     "Cognitive",
     "Political",
     "Economic"
-   ]
+   ],
+   "pages": "557-560",
+   "ancre": "kahnemanreason-unreasoning"
   },
   {
    "age": 7,
@@ -2012,20 +2210,23 @@
     "Social",
     "Cognitive",
     "Symbolic violence"
-   ]
+   ],
+   "pages": "560-562"
   },
   {
    "age": 7,
    "tri": 1979,
    "date": "1979–1980",
-   "titre": "Neoliberalism—a whiff of dollar in the air",
+   "titre": "Neoliberalism—there is dollar in the air",
    "ordre": "Monetary stability, market discipline, the liberation of capital flows.",
    "dette": "Disorder is displaced onto the social (mass unemployment, inequalities), the ecological (deregulation), and the political (loss of sovereignty).",
    "categories": [
     "Economic",
     "Social",
     "Political"
-   ]
+   ],
+   "pages": "562-567",
+   "ancre": "neoliberalisma-whiff-of-dollar-in-the-air"
   },
   {
    "age": 7,
@@ -2038,7 +2239,8 @@
     "Technical",
     "Cognitive",
     "Social"
-   ]
+   ],
+   "pages": "570-575"
   },
   {
    "age": 7,
@@ -2046,12 +2248,13 @@
    "date": "1991",
    "titre": "The USSR—the empire that killed itself trying to cure itself",
    "ordre": "The end of the Cold War, the liberation of the nations held captive by the Soviet empire.",
-   "dette": "Economic and social chaos after the collapse (shock therapy, hyperinflation, « loans for shares »); political disorder shifts toward regional conflicts (Crimea and the Donbas in 2014, the 2022 invasion) and a Russia held together by authoritarian order, oil rent, and nostalgia.",
+   "dette": "Economic and social chaos after the collapse (shock therapy, hyperinflation, “loans-for-shares”); political disorder shifts toward regional conflicts (Crimea and the Donbas in 2014, the 2022 invasion) and a Russia held together by authoritarian order, oil rent, and nostalgia.",
    "categories": [
     "Geopolitical",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "567-570"
   },
   {
    "age": 7,
@@ -2064,33 +2267,38 @@
     "Cognitive",
     "Ecological",
     "Philosophical"
-   ]
+   ],
+   "pages": "576-579"
   },
   {
    "age": 7,
    "tri": 1995,
    "date": "1995",
-   "titre": "Cerebral flux—lost abysses vs. captive surface",
+   "titre": "Brain flux—lost depths vs. captive surface",
    "ordre": "An attention economy that optimizes the capture of streams of consciousness.",
    "dette": "A collective mental desiccation, the loss of deep concentration; the cognitive debt is paid in fatigue and superficiality.",
    "categories": [
     "Cognitive",
     "Economic",
     "Social"
-   ]
+   ],
+   "pages": "579-583",
+   "ancre": "cerebral-fluxlost-abysses-vs-captive-surface"
   },
   {
    "age": 7,
    "tri": 2000,
    "date": "2000",
-   "titre": "The Anthropocene—the power that suicides",
+   "titre": "Anthropocene—the power that kills itself",
    "ordre": "A human power become geological force, capable of shaping the planet.",
    "dette": "The debt is total: climatic, ecological, biospheric; the industrial order displaces disorder onto the whole Earth system, threatening its own survival.",
    "categories": [
     "Ecological",
     "Energetic",
     "Global"
-   ]
+   ],
+   "pages": "583-586",
+   "ancre": "the-anthropocenethe-power-that-suicides"
   },
   {
    "age": 7,
@@ -2098,12 +2306,13 @@
    "date": "2001",
    "titre": "September 11—the fall of the empire",
    "ordre": "A global security apparatus to forestall the terrorist threat.",
-   "dette": "Civil liberties eroded, endless wars, moral authority lost; the promised security is paid for with generalized insecurity.",
+   "dette": "Civil liberties eroded, endless wars, moral authority diminished; the promised security is paid for with generalized insecurity.",
    "categories": [
     "Political",
     "Legal",
     "Geopolitical"
-   ]
+   ],
+   "pages": "586-588"
   },
   {
    "age": 7,
@@ -2116,7 +2325,8 @@
     "Economic",
     "Political",
     "Social"
-   ]
+   ],
+   "pages": "588-592"
   },
   {
    "age": 7,
@@ -2129,7 +2339,8 @@
     "Technical",
     "Energetic",
     "Economic"
-   ]
+   ],
+   "pages": "593-596"
   },
   {
    "age": 7,
@@ -2142,7 +2353,8 @@
     "Technical",
     "Moral",
     "Ecological"
-   ]
+   ],
+   "pages": "597-600"
   },
   {
    "age": 7,
@@ -2155,20 +2367,23 @@
     "Cognitive",
     "Political",
     "Technical"
-   ]
+   ],
+   "pages": "600-604"
   },
   {
    "age": 7,
    "tri": 2015,
    "date": "2015",
-   "titre": "The Paris Agreement—the soft in the hard",
+   "titre": "Paris Agreement—slack in the hard wall",
    "ordre": "Diplomatic unanimity, a universal procedural framework for climate action.",
    "dette": "Procedural order displaces physical disorder (real emissions) onto the future and onto the global South; the climate debt keeps growing.",
    "categories": [
     "Political",
     "Ecological",
     "Temporal"
-   ]
+   ],
+   "pages": "604-609",
+   "ancre": "the-paris-agreementthe-soft-in-the-hard"
   },
   {
    "age": 7,
@@ -2181,7 +2396,8 @@
     "Legal",
     "Cognitive",
     "Economic"
-   ]
+   ],
+   "pages": "609-613"
   },
   {
    "age": 7,
@@ -2194,7 +2410,8 @@
     "Social",
     "Economic",
     "Political"
-   ]
+   ],
+   "pages": "613-618"
   },
   {
    "age": 7,
@@ -2207,7 +2424,8 @@
     "Cognitive",
     "Economic",
     "Technical"
-   ]
+   ],
+   "pages": "618-622"
   },
   {
    "age": 7,
@@ -2220,7 +2438,8 @@
     "Political",
     "Economic",
     "Social"
-   ]
+   ],
+   "pages": "622-626"
   }
  ]
 }

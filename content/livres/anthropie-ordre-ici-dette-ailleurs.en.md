@@ -2,7 +2,7 @@
 title: "ANTHROPY – A Big History of Civilization's Hidden Costs"
 subtitle: "Seven ages of history for a single hypothesis: disorder is never resolved, only displaced."
 date: 2026-07-21  # date de publication de l'édition anglaise (mise en vente KDP)
-lastmod: 2026-08-15
+lastmod: 2026-10-26
 description: "The foundational work on the anthropic framework. Across 644 pages, ANTHROPY develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Order here. Debt elsewhere."
 isbn: "978-2-958634-75-9"
 currency: "USD"
@@ -83,13 +83,13 @@ The subtitle condenses the book's hypothesis. The common misreading takes it for
 The book traverses **seven historical Ages** — from the mastery of fire to contemporary algorithms — to show how each civilization displaced its disorder toward a spatial, temporal or social elsewhere.
 
 1. *Freedom under constraint* — preface
-2. Age 1 — Foundational Programs (−3.3 M → −10,000)
-3. Age 2 — The Neolithic Trap (−10,000 → −1,000)
-4. Age 3 — The Extractive Empires (−1,000 → 500)
-5. Age 4 — The Networks: Routes, Relays, Relays of Power (500 → 1500)
-6. Age 5 — The Modern State-machine (1500 → 1800)
-7. Age 6 — Industrialization and Nation-States (1800 → 1945)
-8. Age 7 — The Contemporary Metaprogram (1945 → present)
-9. *Constraint into freedom* — epilogue, [*Register of Offloaded Costs*](/en/register-of-offloaded-costs/) and *Afterword: the anthropy of anthropy*
+2. Age 1 — Foundational Programs (≈ −3.3 M → ≈ −45,000)
+3. Age 2 — The Neolithic Trap (≈ −10,000 → ≈ −1,046)
+4. Age 3 — The Extractive Empires (≈ −900 → 312)
+5. Age 4 — The Networks: Routes, Relays, Relays of Power (486 → 1494)
+6. Age 5 — The Modern State-machine (1513 → 1784)
+7. Age 6 — Industrialization and Nation-States (1789 → 1905)
+8. Age 7 — The Contemporary Metaprogram (1905 → 2024)
+9. *Constraint into freedom* — epilogue; *Going further*, which points to the [*Register of Offloaded Costs*](/en/register-of-offloaded-costs/) through a QR code; *Afterword: the anthropy of anthropy*
 
 *ANTHROPY lays out the framework whose theorems and applications are developed by the Anthropy Working Papers series.*

@@ -3,7 +3,7 @@ title: "ANTHROPIE – Ordre ici. Dette ailleurs"
 subtitle: "Sept âges d'histoire pour une seule hypothèse : le désordre ne se résout pas, il se déplace."
 promo_slug: "anthropie"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-09-09
-lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-10-26  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'ouvrage fondateur du cadre anthropique. En 630 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
 amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
@@ -98,13 +98,13 @@ Les premiers lecteurs saluent l'ampleur de la fresque — avec des comparaisons 
 Le livre traverse **sept Âges historiques** — de l'invention du feu aux algorithmes contemporains — pour montrer comment chaque civilisation a déplacé son désordre vers un ailleurs spatial, temporel ou social.
 
 1. *Liberté sous contrainte* — préface
-2. Âge 1 — Les programmes fondateurs (-3,3 M → -10&nbsp;000)
-3. Âge 2 — Le piège néolithique (-10&nbsp;000 → -1&nbsp;000)
-4. Âge 3 — Les systèmes d'exploitation antiques (-1&nbsp;000 → 500)
-5. Âge 4 — Les réseaux&nbsp;: routes, relais, relais de pouvoir (500 → 1500)
-6. Âge 5 — La machine-État moderne (1500 → 1800)
-7. Âge 6 — L'industrialisation et les nations (1800 → 1945)
-8. Âge 7 — Le métaprogramme contemporain (1945 → présent)
-9. *Contrainte en liberté* — épilogue, [*Registre des coûts déportés*](/registre-des-couts-deportes/) et *Postface&nbsp;: l'anthropie de l'anthropie*
+2. Âge 1 — Les programmes fondateurs (≈ −3,3 M → ≈ −45&nbsp;000)
+3. Âge 2 — Le piège néolithique (≈ −10&nbsp;000 → ≈ −1&nbsp;046)
+4. Âge 3 — Les systèmes d'exploitation antiques (≈ −900 → 312)
+5. Âge 4 — Les réseaux&nbsp;: routes, relais, relais de pouvoir (486 → 1494)
+6. Âge 5 — La machine-État moderne (1513 → 1784)
+7. Âge 6 — L'industrialisation et les nations (1789 → 1905)
+8. Âge 7 — Le métaprogramme contemporain (1905 → 2024)
+9. *Contrainte en liberté* — épilogue&nbsp;; *Pour aller plus loin*, qui renvoie au [*Registre des coûts déportés*](/registre-des-couts-deportes/) par un QR code&nbsp;; *Postface&nbsp;: l'anthropie de l'anthropie*
 
 *ANTHROPIE pose le cadre dont la série Anthropie Working Papers développe les théorèmes et les applications.*
