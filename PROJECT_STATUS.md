@@ -52,7 +52,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-10-26 (suite 4) — Page de données « Qui peut faire face à une dépense imprévue ? » ; champ « pouvoir discriminant »
+### 2026-10-26 (suite 4) — Page de données « Qui peut faire face à une dépense imprévue ? » ; champ « pouvoir discriminant » ; EN LIGNE (`b7ff575`, déploiement vert, version servie attestée FR et EN : titre, chiffres, figure, CSV, carte de partage, renvoi depuis la notion)
 
 Contre-expertise PRO-20261026-033434 (graphes pour les notions) arbitrée : S2 (pages de données distinctes), ordre G1,
 G3, G2, G4 en file, G2b suspendu. Décisions D1 et D2 tranchées par délégation de l'auteur avec un comité de lecteurs
