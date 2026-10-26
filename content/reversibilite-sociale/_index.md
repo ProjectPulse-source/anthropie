@@ -108,6 +108,8 @@ Le cadre d'AWP-08 les nomme. Rebondir exige&nbsp;:
 
 L'hypothèse propre du cadre est la **complémentarité** de ces composantes&nbsp;: l'effet de chacune dépend du niveau des autres. Un repli solide ne vaut rien si la trace verrouille la réadmission&nbsp;; une réadmission ouverte ne protège personne qui ne peut pas tenir l'intervalle. C'est pourquoi les politiques de la seconde chance qui n'agissent que sur une composante — l'accompagnement psychologique sans le filet, ou l'effacement de la trace sans le repli — déçoivent si souvent.
 
+Une seule de ces composantes se mesure aujourd'hui dans les statistiques publiques, et en partie seulement&nbsp;: la capacité financière d'encaisser un choc. La page de données [Qui peut faire face à une dépense imprévue&nbsp;?](/qui-peut-faire-face-a-une-depense-imprevue/) montre qu'elle varie fortement selon la composition du foyer, y compris au-dessus du seuil de pauvreté.
+
 ## Une inégalité qui gouverne les tentatives
 
 La réversibilité sociale n'agit pas seulement *après* l'échec&nbsp;: elle agit *avant*, sur la décision même d'essayer. Qui sait qu'un échec serait irrécupérable s'abstient — et cette abstention est invisible dans les statistiques, puisqu'il ne s'est rien passé. Une société à faible réversibilité ne produit pas seulement des échecs plus coûteux&nbsp;: elle produit moins de tentatives, et les réserve à ceux qui peuvent se permettre de rater.

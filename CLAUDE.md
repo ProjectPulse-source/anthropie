@@ -389,8 +389,13 @@ fiche ni rattachement, corrigée le soir même (fiche écrite après coup, étap
   ; une **ancre stable par entrée** ; le **périmètre du corpus** et ce qu'il ne dit pas écrits en tête ; aucune entrée
   ajoutée, retirée ou réécrite sans trace (journal). La forme ne démontre rien : elle documente.
 
-**Phase A, section 0 — fiche de conception** (dix champs, avant toute réécriture) : question centrale · enjeu ·
-croyance initiale · découverte principale · mécanisme explicatif · preuve décisive · limite · valeur finale ·
+**Phase A, section 0 — fiche de conception** (onze champs, avant toute réécriture) : question centrale · enjeu ·
+croyance initiale · découverte principale · mécanisme explicatif · preuve décisive · **pouvoir discriminant** (page de
+données : les explications rivales réellement soutenues, le témoin qui les départage en ne changeant qu'une variable,
+et quatre questions à réponse écrite, sans note — surprise informative, explications départagées, robustesse montrée
+par une variante calculée, levier ou risque éclairé ; si le graphe ne tranche rien, la page le dit, sans rivale
+inventée ; la confrontation se montre sur la page, en langage courant, **après** le chiffre principal ; page sans
+données : « sans objet » ; comité de lecteurs et arbitrage PRO-20261026-033434, 26/10/2026) · limite · valeur finale ·
 **singularité** (« cette page existe parce qu'elle révèle X, que le lecteur ne découvre pas dans Y ») ·
 **raccords** (recevabilité et raccords de la règle 4 de « Architecture des ressources » : chaque raccord retenu avec
 sa phrase ou écarté avec son motif). Les affirmations

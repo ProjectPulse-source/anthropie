@@ -38,6 +38,11 @@ V = f(C, T, A), avec complémentarité des composantes ; la trace gouverne la r�
 
 AWP-08 (architecture de mesure, protocole d'identification) ; deux terrains datés : indicateur 040 du FIBEN (2021), loi Lemoine (2022).
 
+### Pouvoir discriminant
+
+Sans objet : la page ne publie aucune série ; ses schémas décrivent un mécanisme, ils ne départagent pas d'explications
+(champ ajouté le 26/10/2026, arbitrage PRO-20261026-033434).
+
 ### Limite
 
 Un cadre réfutable, non un résultat empirique.

@@ -38,6 +38,11 @@ Lecture anthropique : le désordre déplacé s'accumule et sature ; ce qui reste
 
 Monnin, Bonnet et Landivar (*Héritage et fermeture*, 2021) ; Kapp (cost-shifting) ; Vuillemey (responsabilité limitée).
 
+### Pouvoir discriminant
+
+Sans objet : la page ne publie aucune série ; ses schémas décrivent un mécanisme, ils ne départagent pas d'explications
+(champ ajouté le 26/10/2026, arbitrage PRO-20261026-033434).
+
 ### Limite
 
 La page ne mesure aucun stock d'héritage ; le numérique y est un commun négatif *candidat* (AWP-06).

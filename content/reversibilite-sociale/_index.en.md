@@ -103,6 +103,8 @@ The framework of AWP-08 names them. Bouncing back requires:
 
 The framework's own hypothesis is the **complementarity** of these components: the effect of each depends on the level of the others. A solid fallback is worth little if the trace locks readmission; open readmission protects no one who cannot hold out through the interval. This is why second-chance policies acting on a single component — psychological support without the safety net, or record-clearing without the fallback — so often disappoint.
 
+Only one of these components can be measured in public statistics today, and only in part: the financial capacity to absorb a shock. The data page [Who can cope with an unexpected expense?](/en/who-can-cope-with-an-unexpected-expense/) shows that it varies sharply with household composition, including above the poverty threshold.
+
 ## An inequality that governs attempts
 
 Social reversibility does not act only *after* failure: it acts *before*, on the very decision to try. Whoever knows that a failure would be unrecoverable abstains — and that abstention is invisible in the statistics, since nothing happened. A low-reversibility society does not merely produce costlier failures: it produces fewer attempts, and reserves them for those who can afford to fail.

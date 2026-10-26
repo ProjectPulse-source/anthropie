@@ -38,6 +38,11 @@ Le derisking et les contrats de long terme reportent le coût sur ceux qui n'ont
 
 AWP-06 (grille des registres de coûts couplés) ; Gabor sur le derisking ; le cas des data centers.
 
+### Pouvoir discriminant
+
+Sans objet : la page ne publie aucune série ; ses schémas décrivent un mécanisme, ils ne départagent pas d'explications
+(champ ajouté le 26/10/2026, arbitrage PRO-20261026-033434).
+
 ### Limite
 
 La dette n'est que partiellement financière ; le reste est fait d'engagements non monétaires.

@@ -38,9 +38,14 @@ La carte du vocabulaire place chaque terme dans son ensemble et mène à son ent
 
 L'introduction du glossaire, qui nomme ces ensembles ; chaque entrée.
 
+### Pouvoir discriminant
+
+Sans objet : la page ne publie aucune série ; ses schémas décrivent un mécanisme, ils ne départagent pas d'explications
+(champ ajouté le 26/10/2026, arbitrage PRO-20261026-033434).
+
 ### Limite
 
-Le rangement des applications et du retour (boucle, effet Jevons) est un choix de présentation de la carte, non une définition.
+Le rangement des applications et du retour (boucle, effet Jevons) est un choix de présentation de la carte, non une définition ; validé par l'auteur le 26/10/2026 (« valide le rangement de la carte du glossaire »).
 
 ### Valeur finale
 

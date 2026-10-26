@@ -127,6 +127,11 @@ des intervalles de niveaux ne disent rien d'une différence d'évolutions. Test 
 déclaratives se prêtent-elles à la comparaison 2010-2023 (méthodologie lue, ruptures nommées) ? Sinon, le scénario 3
 tombe.
 
+### Pouvoir discriminant
+
+Champ ajouté au gabarit le 26/10/2026 (arbitrage PRO-20261026-033434), après l'ouverture de cette fiche : à écrire
+avant la publication de la page, par la session qui la conduit.
+
 ### Limite
 
 - **Aucune estimation à âge égal** : le BEH compare des statuts de structures d'âge différentes ; la différence de

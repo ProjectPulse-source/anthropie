@@ -38,6 +38,11 @@ Le prix : l'efficacité abaisse le coût du service, la demande augmente.
 
 Jevons, *The Coal Question* (1865) ; postulat de Khazzoom-Brookes ; Fressoz (*Sans transition*, 2024) sur l'addition des énergies.
 
+### Pouvoir discriminant
+
+Sans objet : la page ne publie aucune série ; ses schémas décrivent un mécanisme, ils ne départagent pas d'explications
+(champ ajouté le 26/10/2026, arbitrage PRO-20261026-033434).
+
 ### Limite
 
 L'ampleur de chaque canal varie selon les usages et les secteurs ; le rebond n'annule pas tout gain.

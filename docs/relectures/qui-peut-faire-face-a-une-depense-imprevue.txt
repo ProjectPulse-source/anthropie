@@ -1,0 +1,100 @@
+# relu le 2026-10-26 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de 4d11865 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Qui peut faire face à une dépense imprévue ?
+Ne pas pouvoir faire face à une dépense imprévue, est-ce une affaire de pauvreté ?
+En partie seulement.
+En France, en 2025, 65,9 % des personnes sous le seuil de pauvreté sont dans ce cas, et 21,6 % au-dessus.
+Mais au-dessus du seuil, la composition du foyer change tout : 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant.
+Page publiée le 26 octobre 2026
+Guides et éclairages
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Données du : 26 octobre 2026 Eurostat, enquête EU-SILC, jeu ilc_mdes04 : France et Union européenne à 27, séries complètes depuis le début de l'enquête ; écarts étudiés de 2015 à 2025.
+Télécharger : CSV · JSON
+Qui ne pourrait pas faire face à une dépense imprévue ?
+En France, en 2025, 28,8 % des personnes vivent dans un ménage qui, selon ses propres déclarations, ne pourrait pas faire face à une dépense imprévue : près de trois sur dix.
+Le revenu pèse lourd.
+Sous le seuil de pauvreté, la part atteint 65,9 %, environ deux tiers ; au-dessus, 21,6 %, environ une sur cinq.
+Mais le revenu ne dit pas tout.
+Au-dessus du seuil, là où le classement par le revenu dit « pas pauvre », la composition du foyer sépare nettement les situations.
+Part des personnes, déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation (Eurostat, EU-SILC).
+Le résultat en une phrase.
+En France, en 2025, au-dessus du seuil de pauvreté, 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant : 2,5 fois plus.
+Deux explications, un test
+On pourrait croire que tout se joue sur le revenu : être au-dessus ou en dessous du seuil de pauvreté.
+Si c’était le cas, deux foyers situés du même côté du seuil devraient avoir des parts voisines.
+Le test compare des foyers qui diffèrent d’abord par une chose : un adulte de plus ou de moins.
+Avec un enfant, passer de deux adultes à un seul ajoute 28,3 points au-dessus du seuil en 2025, et de 21 à 30 points chaque année depuis 2015.
+Sans enfant, le même passage n’ajoute que 9,4 points (de 9 à 13 points sur la même période).
+Le nombre d’enfants ne suffit pas à expliquer l’écart.
+La statistique compte comme « parent seul » tout adulte seul avec un enfant ou plus ; face aux couples avec deux enfants, l’écart reste de 29,3 points.
+L’écart lié au fait d’être seul est donc deux à trois fois plus grand quand il y a des enfants, et c’est au-dessus du seuil de pauvreté qu’il est le plus net.
+En dessous, il se resserre (5,1 points en 2025) : parents seuls comme couples avec un enfant y sont en grande majorité exposés.
+Être au-dessus ou en dessous du seuil ne suffit donc pas à expliquer ces écarts.
+Ce que le test ne tranche pas.
+Une troisième explication reste possible : au-dessus du seuil, les parents seuls pourraient être en moyenne plus proches du seuil que les couples avec un enfant.
+Le jeu d’Eurostat ne détaille pas la position dans la tranche de revenu ; il ne permet donc pas de séparer ce que pèse la composition du foyer de ce que pèse cette position.
+Le même constat dans l’Union européenne
+Dans l’Union européenne à 27, 29,2 % des personnes ne pourraient pas faire face à une dépense imprévue en 2025.
+Au-dessus du seuil de pauvreté, le passage de deux adultes à un seul ajoute 22,8 points avec un enfant (de 20 à 24 points depuis 2015), contre 10,1 points sans enfant (de 10 à 11).
+Le constat n’est pas propre à la France.
+Ce que ces données ne disent pas
+Une déclaration, pas un compte en banque.
+La question porte sur la capacité perçue du ménage à couvrir une dépense imprévue d’un montant fixé par l’enquête pour chaque pays ; elle ne mesure ni l’épargne ni les actifs disponibles.
+Des personnes, pas des ménages.
+Les parts sont calculées sur les personnes : un enfant d’un foyer exposé compte comme exposé.
+Le seuil de pauvreté est relatif.
+Il vaut 60 % du revenu médian par unité de consommation ; il tient compte de la taille du ménage, pas de la réserve dont il dispose.
+Une association, non une cause.
+Le graphe montre que la composition du foyer et la vulnérabilité au choc vont ensemble, pas que l’une produit l’autre ; la position dans la tranche de revenu n’est pas contrôlée.
+Des ruptures de série.
+Eurostat signale des ruptures en France en 2020 et 2022 : les plages pluriannuelles se lisent avec prudence.
+Le constat principal compare des ménages la même année, et la rupture ne l’atteint pas.
+Une hypothèse de l’auteur, non testée ici.
+Dans le working paper AWP-08, l’économiste Stéphane Lalut propose de lire la capacité de repli financier comme l’une des trois composantes de ce que l’auteur appelle la réversibilité sociale : ce qu’une personne peut se permettre de rater sans fermer durablement son avenir.
+L’indicateur de cette page n’en mesure qu’une partie ; il ne dit rien du coût d’un échec ni de la possibilité de recommencer.
+Pour prolonger la question
+La Société du premier coup
+Pourquoi certains peuvent recommencer — et d'autres non
+La Société du premier coup raconte, à partir de cas concrets, ce que coûte un échec selon la position sociale de celui qui le subit, et pourquoi certains ne peuvent pas se permettre d’essayer.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
+Demander l'exemplaire offert →
+Version papier : 13,90 € · Kindle : 5,99 €
+Sommaire, extraits et recensions →
+Sources
+Eurostat, enquête européenne sur les revenus et les conditions de vie (EU-SILC), jeu ilc_mdes04 (« Incapacité à faire face à des dépenses financières imprévues »), relevé par l’API de diffusion.
+Calculs de l’auteur : écarts entre compositions de ménage, plages annuelles.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Ne pas pouvoir faire face à une dépense imprévue : le revenu ne dit pas tout (France, 2025)
+Au-dessus du seuil de pauvreté, 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant : le revenu relatif ne dit pas tout de la capacité d'encaisser un choc.
+Précaution d'interprétation.
+Déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation ; montant de la dépense fixé par l'enquête.
+Association, non cause : la position dans la tranche de revenu n'est pas contrôlée.
+Eurostat, enquête SILC (ilc_mdes04), en % des personnes
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Qui peut faire face à une dépense imprévue ? ».
+Données Eurostat (EU-SILC), relevé du 26 octobre 2026. https://stephane-lalut.com/qui-peut-faire-face-a-une-depense-imprevue/
+Copier la citation
+En trois phrases
+Au-dessus du seuil de pauvreté, la part des personnes incapables de faire face à une dépense imprévue est plus de deux fois plus élevée chez les parents seuls que chez les couples avec un enfant.
+Quand il y a des enfants, le passage de deux adultes à un seul pèse deux à trois fois plus qu’en l’absence d’enfants.
+Le revenu relatif ne dit donc pas tout de la capacité d’encaisser un choc.
+Copier le résumé
+Les données
+La part des personnes incapables de faire face à une dépense imprévue, pour la France et l'Union européenne à 27, par composition du ménage et position par rapport au seuil de pauvreté, chaque année depuis le début de l'enquête ; le même contenu existe en CSV, au format long, avec les drapeaux d'Eurostat.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Eurostat (EU-SILC)), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

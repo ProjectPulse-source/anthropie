@@ -40,6 +40,15 @@ explicatif-causal, notion, corpus, usage) et pourquoi ; ses critères propres, r
 
 À REMPLIR
 
+### Pouvoir discriminant
+
+À REMPLIR — page de données : les explications rivales réellement soutenues (par qui), le témoin qui les départage en ne
+changeant qu'une variable à la fois, et la réponse écrite, sans note, à quatre questions : que révèle le graphe qu'une
+série isolée ne montre pas ? quelles explications départage-t-il ? résiste-t-il à un autre périmètre, indicateur ou
+période (variante calculée, pas affirmée) ? quel levier, contrainte ou risque aide-t-il à voir ? Si le graphe ne tranche
+rien, l'écrire : la page le dira (« ce graphe décrit, il ne tranche pas »), sans rivale inventée. Page sans données :
+« sans objet » et pourquoi. (Comité de lecteurs du 26/10/2026, arbitrage PRO-20261026-033434.)
+
 ### Limite
 
 À REMPLIR

@@ -53,6 +53,11 @@ La grille uniforme appliquée sans exception aux 168 chapitres, chaque entrée r
 le lecteur peut vérifier une entrée contre son chapitre. La preuve est documentaire, pas statistique : la forme
 documente, elle ne démontre pas.
 
+### Pouvoir discriminant
+
+Sans objet : la page ne publie aucune série ; ses schémas décrivent un mécanisme, ils ne départagent pas d'explications
+(champ ajouté le 26/10/2026, arbitrage PRO-20261026-033434).
+
 ### Limite
 
 Le Registre condense un chapitre en deux phrases : il hérite des choix du livre (sélection des jalons, lecture de

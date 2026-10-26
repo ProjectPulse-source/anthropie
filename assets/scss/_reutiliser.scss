@@ -4,8 +4,13 @@
 
 .reutiliser {
   margin-block: 3rem 2.5rem;
-  scroll-margin-top: 1.5rem;
+  scroll-margin-top: 5rem;
 }
+
+// Toute cible intérieure du bloc (citer, citation, résumé, données) dégage l'en-tête collant (59-63 px) : 1,5rem le
+// laissait recouvrir, ce que les pages longues masquaient (la cible ne pouvait pas monter jusqu'en haut) et qu'une page
+// courte a révélé à la recette du 26/10/2026 (/qui-peut-faire-face-a-une-depense-imprevue/, 320 et 390 px).
+.reutiliser [id] { scroll-margin-top: 5rem; }
 
 .reutiliser__chapo {
   max-width: 66ch;
@@ -27,7 +32,7 @@
   overflow: hidden;
   background: var(--color-bg-card);
   border-radius: 6px;
-  scroll-margin-top: 1.5rem;
+  scroll-margin-top: 5rem;
 }
 
 // La figure garde sa taille réelle de lecture : c'est elle qu'on emporte.

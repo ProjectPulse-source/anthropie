@@ -50,6 +50,11 @@ versées, donc des dépenses déjà faites (CGCT L. 1615-6).
 Les comptes rendus officiels des deux séances du 19/10/2026 (archivés, empreintes dans `plf_votes.json`), chaque
 citation retrouvée par `verifier_plf_votes.py` ; le texte du projet n° 3210 (PDF archivé, SHA-256 `132274b8…`).
 
+### Pouvoir discriminant
+
+Non renseigné à la création (champ ajouté le 26/10/2026, arbitrage PRO-20261026-033434) : à écrire à la prochaine
+refonte de la page.
+
 ### Limite
 
 La page ne prévoit pas le texte définitif et ne donne aucun montant communal ; ses ordres de grandeur sont des

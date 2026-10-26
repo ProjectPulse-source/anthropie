@@ -58,7 +58,7 @@ STATIC = ROOT / "static"
 TYPES = {"quantitatif", "juridique-institutionnel", "explicatif-causal", "notion", "usage", "corpus"}
 # Regle 12 : intitules exiges de la fiche de conception (docs/conception/_GABARIT.md) et seuils de date.
 CONCEPTION_INTITULES = ["## Forme", "### Question centrale", "### Enjeu", "### Croyance initiale",
-                        "### Découverte principale", "### Mécanisme explicatif", "### Preuve décisive", "### Limite",
+                        "### Découverte principale", "### Mécanisme explicatif", "### Preuve décisive", "### Pouvoir discriminant", "### Limite",
                         "### Valeur finale", "### Singularité", "### Raccords", "## Fiche D0", "## Étapes de la méthode"]
 CONCEPTION_DEPUIS, CONCEPTION_REFONTE_DEPUIS = "2026-10-22", "2026-10-23"
 

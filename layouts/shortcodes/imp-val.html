@@ -1,0 +1,26 @@
+{{- /* {{< imp-val "t" >}} — émet UNE valeur du bloc affichage de data/menages_imprevu.json (chaînes précalculées
+       et gardées par scripts/update_menages_imprevu.py). Même contrat que gen-val : aucun chiffre en dur dans la prose ;
+       clé inconnue ou données absentes = échec de build. « date_donnees » : date du relevé (releve_le).
+       Bilingue dès sa création (26/10/2026, modèle : infl-val) : la langue CHOISIT le bloc (affichage_en sur une page anglaise),
+       elle ne formate rien ici ; bloc anglais absent = échec, jamais un repli sur les chaînes françaises (« 54,3 » serait
+       faux en anglais). */ -}}
+{{- $k := .Get 0 -}}
+{{- $en := eq $.Page.Lang "en" -}}
+{{- if eq $k "date_donnees" -}}
+  {{- with site.Data.menages_imprevu.releve_le -}}
+    {{- $t := time . -}}
+    {{- $mois := cond $en (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December") (slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre") -}}
+    {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
+  {{- else -}}{{- errorf "imp-val: releve_le absent de data/menages_imprevu.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
+{{- else -}}
+{{- $a := "" -}}
+{{- with site.Data.menages_imprevu -}}{{- $a = cond $en .affichage_en .affichage -}}{{- end -}}
+{{- if not $a -}}
+  {{- errorf "imp-val: data/menages_imprevu.json absent ou sans bloc %s (page %s)" (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
+{{- else -}}
+  {{- $v := index $a $k -}}
+  {{- if not $v -}}
+    {{- errorf "imp-val: cle %q inconnue du bloc %s (page %s)" $k (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
+  {{- else -}}{{- $v -}}{{- end -}}
+{{- end -}}
+{{- end -}}

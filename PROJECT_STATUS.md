@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-26 (suite 4) — Page de données « Qui peut faire face à une dépense imprévue ? » ; champ « pouvoir discriminant »
+
+Contre-expertise PRO-20261026-033434 (graphes pour les notions) arbitrée : S2 (pages de données distinctes), ordre G1,
+G3, G2, G4 en file, G2b suspendu. Décisions D1 et D2 tranchées par délégation de l'auteur avec un comité de lecteurs
+simulés : champ obligatoire « Pouvoir discriminant » (gabarit, règle 12 de `check-ressource-modele.py`, CLAUDE.md) ; un
+test de compréhension par trois lecteurs réels sur la première page de données (recrutement : auteur). G1 construite :
+`scripts/update_menages_imprevu.py` (Eurostat ilc_mdes04, 12 gardes et 1 bande vues mordre), `og_imprevu_menages.py`,
+shortcode `imp-val`, jetons `{imp.*}`, pages FR et EN, renvoi depuis `/reversibilite-sociale/`, workflow
+`dette-monde.yml` (hebdomadaire), `llms.txt`. Résultat : au-dessus du seuil de pauvreté, parents seuls 46,9 % contre
+couples avec un enfant 18,6 % (France 2025) ; limite écrite : position dans la tranche de revenu non contrôlée.
+Composant « Réutiliser » corrigé pour toutes les pages (ancres intérieures sous l'en-tête collant). Build 0, check-all 0,
+liens 0, dates 63/63, périodes 0 manquante, recette 12/12, instantanés de relecture écrits.
+
 ### 2026-10-26 (suite 3) — Pages du cadre : encadrés et schémas structurants (glossaire, quatre notions) ; EN LIGNE (`6440782`, déploiement vert, version servie attestée sur les 10 pages FR et EN : encadré, schéma et comparaison sur chaque notion, carte en tête du glossaire)
 
 Demande de l'auteur : « améliorer le style de présentation en rajoutant encadrés et éventuellement graphes

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 335" role="img" font-variant-numeric="tabular-nums" aria-labelledby="imp-t imp-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="imp-t">Unable to face an unexpected expense: income is not the whole story (France, 2025)</title><desc id="imp-d">Share of people who could not face an unexpected expense, France, 2025. Above the poverty threshold: couple without children 14.0%, single adult 23.4%, couple with one child 18.6%, single parent 46.9%. Below the threshold: couple without children 50.1%, single adult 58.4%, couple with one child 71.9%, single parent 77.0%.</desc>
+<rect width="720" height="335" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Unable to face an unexpected expense: income is not the whole story (France, 2025)</text>
+<text x="0" y="70" font-size="12" font-weight="600" fill="#55524f">Above the poverty threshold</text>
+<text x="0" y="105" font-size="11.5" fill="#26262f">Couple, no children</text>
+<rect x="132" y="92" width="25.2" height="18" fill="#c9c5c0"/>
+<text x="162.2" y="105" font-size="11.5" fill="#26262f">14.0%</text>
+<text x="0" y="145" font-size="11.5" fill="#26262f">Single adult</text>
+<rect x="132" y="132" width="42.1" height="18" fill="#c9c5c0"/>
+<text x="179.1" y="145" font-size="11.5" fill="#26262f">23.4%</text>
+<text x="0" y="185" font-size="11.5" fill="#26262f">Couple, one child</text>
+<rect x="132" y="172" width="33.5" height="18" fill="#8a8781"/>
+<text x="170.5" y="185" font-size="11.5" font-weight="600" fill="#26262f">18.6%</text>
+<text x="0" y="225" font-size="11.5" fill="#26262f">Single parent</text>
+<rect x="132" y="212" width="84.4" height="18" fill="#eb6834"/>
+<text x="221.4" y="225" font-size="11.5" font-weight="600" fill="#eb6834">46.9%</text>
+<line x1="132" y1="84" x2="132" y2="248" stroke="#dcd8d3" stroke-width="1"/>
+<path d="M262.4,181 h6 v40 h-6" fill="none" stroke="#eb6834" stroke-width="1.4"/>
+<text x="272.4" y="205" font-size="11.5" font-weight="600" fill="#eb6834">+28.3 points</text>
+<text x="372" y="70" font-size="12" font-weight="600" fill="#55524f">Below the poverty threshold</text>
+<text x="372" y="105" font-size="11.5" fill="#26262f">Couple, no children</text>
+<rect x="504" y="92" width="90.2" height="18" fill="#c9c5c0"/>
+<text x="599.2" y="105" font-size="11.5" fill="#26262f">50.1%</text>
+<text x="372" y="145" font-size="11.5" fill="#26262f">Single adult</text>
+<rect x="504" y="132" width="105.1" height="18" fill="#c9c5c0"/>
+<text x="614.1" y="145" font-size="11.5" fill="#26262f">58.4%</text>
+<text x="372" y="185" font-size="11.5" fill="#26262f">Couple, one child</text>
+<rect x="504" y="172" width="129.4" height="18" fill="#8a8781"/>
+<text x="638.4" y="185" font-size="11.5" font-weight="600" fill="#26262f">71.9%</text>
+<text x="372" y="225" font-size="11.5" fill="#26262f">Single parent</text>
+<rect x="504" y="212" width="138.6" height="18" fill="#eb6834"/>
+<text x="647.6" y="225" font-size="11.5" font-weight="600" fill="#eb6834">77.0%</text>
+<line x1="504" y1="84" x2="504" y2="248" stroke="#dcd8d3" stroke-width="1"/>
+<line x1="0" y1="270.0" x2="720" y2="270.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="285.0" font-size="11" fill="#55524f">Eurostat, EU-SILC (ilc_mdes04), % of people</text>
+<text class="pied-note" x="0" y="299.0" font-size="11" fill="#55524f">Self-reported; poverty threshold: 60% of median equivalised income; expense amount set by the survey. Association, not</text>
+<text class="pied-note" x="0" y="313.0" font-size="11" fill="#55524f">cause: position within the income band is not controlled.</text>
+<text class="pied-licence" x="0" y="327.0" font-size="11" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-can-cope-with-an-unexpected-expense/</text>
+</svg>

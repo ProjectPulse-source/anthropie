@@ -40,6 +40,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{monde." -}}{{- errorf "desc-figures: placeholder {monde.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Page « Qui peut faire face à une dépense imprévue ? » : placeholders {imp.<cle>}, depuis data/menages_imprevu.json
+       (bloc affichage, scripts/update_menages_imprevu.py ; 26/10/2026). Page anglaise : bloc affichage_en. Meme contrat. */ -}}
+{{- with site.Data.menages_imprevu -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
+    {{- $text = replace $text (printf "{imp.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{imp." -}}{{- errorf "desc-figures: placeholder {imp.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Volet « Pourquoi la dette augmente » : placeholders {dyn.<cle>}, depuis data/dette_dynamique.json
        (bloc affichage, scripts/update_dette_dynamique.py). Meme contrat. */ -}}
 {{- with site.Data.dette_dynamique -}}

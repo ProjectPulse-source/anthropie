@@ -1,0 +1,22 @@
+{
+ "fr": [
+  {
+   "id": "menages",
+   "fichier": "imprevu-menages",
+   "titre": "Ne pas pouvoir faire face à une dépense imprévue : le revenu ne dit pas tout (France, 2025)",
+   "montre": "Au-dessus du seuil de pauvreté, 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant : le revenu relatif ne dit pas tout de la capacité d'encaisser un choc.",
+   "source": "Eurostat, enquête SILC (ilc_mdes04), en % des personnes",
+   "precaution": "Déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation ; montant de la dépense fixé par l'enquête. Association, non cause : la position dans la tranche de revenu n'est pas contrôlée."
+  }
+ ],
+ "en": [
+  {
+   "id": "menages",
+   "fichier": "imprevu-menages-en",
+   "titre": "Unable to face an unexpected expense: income is not the whole story (France, 2025)",
+   "montre": "Above the poverty threshold, 46.9% of single parents could not face an unexpected expense, against 18.6% of couples with one child: relative income does not tell the whole story about coping with a shock.",
+   "source": "Eurostat, EU-SILC (ilc_mdes04), % of people",
+   "precaution": "Self-reported; poverty threshold: 60% of median equivalised income; expense amount set by the survey. Association, not cause: position within the income band is not controlled."
+  }
+ ]
+}
