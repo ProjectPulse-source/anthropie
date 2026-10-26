@@ -52,7 +52,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-10-26 (suite 3) — Pages du cadre : encadrés et schémas structurants (glossaire, quatre notions)
+### 2026-10-26 (suite 3) — Pages du cadre : encadrés et schémas structurants (glossaire, quatre notions) ; EN LIGNE (`6440782`, déploiement vert, version servie attestée sur les 10 pages FR et EN : encadré, schéma et comparaison sur chaque notion, carte en tête du glossaire)
 
 Demande de l'auteur : « améliorer le style de présentation en rajoutant encadrés et éventuellement graphes
 structurants ». Un organe commun (`assets/scss/_notions-figures.scss`, shortcodes `notion-fiche`, `notion-schema`,
