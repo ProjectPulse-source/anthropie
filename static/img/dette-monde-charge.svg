@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 521" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-t mc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="mc-t">Même dette, charge différente : les 27 pays de l'UE en 2025</title><desc id="mc-d">Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. Charge : Hongrie 8,9 %, Slovénie 2,7 %, France 4,3 %, Italie 8,0 %.</desc>
+<title id="mc-t">Même dette, coût différent : les 27 pays de l'UE en 2025</title><desc id="mc-d">Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, part des recettes consacrée aux intérêts très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. Intérêts en % des recettes : Hongrie 8,9 %, Slovénie 2,7 %, France 4,3 %, Italie 8,0 %.</desc>
 <rect width="720" height="521" fill="#ffffff"/>
-<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Même dette, charge différente : les 27 pays de l'UE en 2025</text>
+<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Même dette, coût différent : les 27 pays de l'UE en 2025</text>
 <circle cx="470.0" cy="14.0" r="5.0" fill="#184f95"/>
 <text x="479.0" y="18.0" font-size="11" fill="#52514e">zone euro</text>
 <rect x="555.5" y="9.5" width="9.0" height="9.0" fill="#eb6834"/>
@@ -18,7 +18,7 @@
 <text x="52.0" y="132.8" font-size="11" fill="#898781" text-anchor="end">8 %</text>
 <line x1="58.0" y1="64.0" x2="700.0" y2="64.0" stroke="#e1e0d9"/>
 <text x="52.0" y="68.0" font-size="11" fill="#898781" text-anchor="end">10 %</text>
-<text x="58.0" y="54.0" font-size="11" fill="#52514e">charge : intérêts en % des recettes publiques</text>
+<text x="58.0" y="54.0" font-size="11" fill="#52514e">intérêts en % des recettes publiques</text>
 <line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#c3c2b7"/>
 <text x="58.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">0 %</text>
 <text x="138.2" y="403.0" font-size="11" fill="#898781" text-anchor="middle">20 %</text>
@@ -101,7 +101,7 @@
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="457.0" font-size="11" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13,</text>
 <text class="pied-source" x="0" y="471.0" font-size="11" fill="#52514e">monnaie nationale</text>
-<text class="pied-note" x="0" y="485.0" font-size="11" fill="#52514e">Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts de</text>
-<text class="pied-note" x="0" y="499.0" font-size="11" fill="#52514e">charge).</text>
+<text class="pied-note" x="0" y="485.0" font-size="11" fill="#52514e">Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts</text>
+<text class="pied-note" x="0" y="499.0" font-size="11" fill="#52514e">d'intérêts rapportés aux recettes).</text>
 <text class="pied-licence" x="0" y="513.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
 </svg>

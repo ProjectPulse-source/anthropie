@@ -243,7 +243,7 @@ def figure_ciseau(d: ImageDraw.ImageDraw, annees: list[int],
 
 
 def figure_jumeaux(d: ImageDraw.ImageDraw, rows: list[dict], bas_code: str, haut_code: str, lang: str = "fr") -> None:
-    """Volet 3 : le nuage « Même dette, charge différente » réduit à l'essentiel — les 27 pays en gris,
+    """Volet 3 : le nuage « Même dette, coût différent » réduit à l'essentiel — les 27 pays en gris,
     la paire de faux jumeaux désignée par la règle de la page, reliée, en bleu (bas) et orange (haut)."""
     x0, x1, top, bas = 660, 1126, 100, 424
     xmax = 160.0
@@ -519,7 +519,7 @@ def carte_monde() -> None:
         if 100 + fc.getlength(t) > 640:
             fail("carte monde : ligne de clé trop longue pour la colonne (%s)" % t)
     carte("og-dette-monde.jpg",
-          ["Même dette,", "charge × %s" % A["j_rapport"]],
+          ["Même dette,", "coût × %s" % A["j_rapport"]],
           "Le stock ne dit pas ce que la dette coûte.",
           "Eurostat %s · 27 pays de l'UE · CC BY 4.0" % j["meta"]["annee"],
           "stephane-lalut.com/dette-publique-comparaison-internationale/",

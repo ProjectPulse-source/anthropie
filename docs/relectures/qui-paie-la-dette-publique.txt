@@ -1,9 +1,9 @@
-# relu le 2026-10-16 ; texte servi de /qui-paie-la-dette-publique/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-27 ; texte servi de /qui-paie-la-dette-publique/, build de eeb34f1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
 Sur les comptes distribués de l'Insee de 2023, un même effort de 10 milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés.
 Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir.
-Page mise à jour le 11 octobre 2026
+Page mise à jour le 21 octobre 2026
 Dossier dette publique
 Mise à jour · 10/2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -13,7 +13,7 @@ Un même effort de 10 milliards d’euros pèse surtout sur les ménages les plu
 Le montant de la facture — encours, charge d’intérêts, coût moyen du stock — est mesuré sur une autre page de ce dossier, Combien coûte la dette publique ? ; celle-ci demande sur qui elle retombe, ce que les données permettent, ou non, d’attribuer, et ce qu’une décision réelle, envisagée pour 2026 puis écartée, en montre.
 Dette publique française — dernière donnée officielle
 3 595,5 milliards d'euros soit 119,0 % du PIB, au T2 2026.
-Source : INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608) · séries relevées le 11/10/2026 · données brutes (JSON).
+Source : INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608) · séries relevées le 21/10/2026 · données brutes (JSON).
 Ce que cette dette coûte, et pourquoi : Combien coûte la dette publique ?
 Selon la décision, l’effort ne tombe pas sur les mêmes ménages
 La population est rangée du plus modeste au plus aisé, puis coupée en dix groupes de même taille, les dixièmes de niveau de vie.
@@ -39,19 +39,19 @@ Pour le 7e ou 8e dixième, un peu au-dessus du milieu, l’effort moyen changera
 Pour les 10 % les plus aisés, elle coûterait 5,5 fois la plus légère, et au moins autant pour les 10 % les plus modestes : aux deux bouts de l’échelle, le choix du levier décide presque tout.
 Ces dixièmes ne supporteraient pas moins d’effort ; simplement, changer de levier y modifierait moins leur exposition moyenne, qui ne dit pas la situation de chacun des ménages qui les composent.
 La convergence se retrouve dans les quatre millésimes 2020-2023 — qui partagent conventions et structures, et ne sont donc pas des réplications indépendantes —, et elle ne vaut que pour ces trois leviers ainsi répartis.
-Trois épreuves du creux en D7-D8, et les limites de l'exercice
+Trois épreuves du creux aux 7e et 8e dixièmes, et les limites de l'exercice
 En vingtièmes.
-Découpée en vingt groupes au lieu de dix, la population place encore le minimum dans la zone de D7-D8 : au 14e ou 15e vingtième selon l’année.
+Découpée en vingt groupes au lieu de dix, la population place encore le minimum dans la zone des 7e et 8e dixièmes : au 14e ou 15e vingtième selon l’année.
 Le creux ne vient donc pas du regroupement par dixièmes.
 Par paires de leviers.
-La courbe de l’impôt monte avec le niveau de vie, celle de l’enseignement descend : prises deux à deux, elles se rapprochent le plus en D7, et c’est leur croisement qui fait le creux, la courbe des pensions, presque plate, passant tout près des deux.
+La courbe de l’impôt monte avec le niveau de vie, celle de l’enseignement descend : prises deux à deux, elles se rapprochent le plus au 7e dixième, et c’est leur croisement qui fait le creux, la courbe des pensions, presque plate, passant tout près des deux.
 Le coefficient de variation et l’étendue rapportée à la moyenne placent le minimum dans la même zone que le rapport du plus lourd au plus léger.
-Mesuré en points de revenu plutôt qu’en rapport, l’écart entre la décision la plus lourde et la plus légère est encore le plus faible en D7-D8.
-Sans les pensions, impôt et enseignement seuls se rapprochent le plus en D7 : le creux ne doit rien à la troisième courbe.
-Avec un quatrième levier, les taxes sur les produits, il reste en D7-D8.
+Mesuré en points de revenu plutôt qu’en rapport, l’écart entre la décision la plus lourde et la plus légère est encore le plus faible aux 7e et 8e dixièmes.
+Sans les pensions, impôt et enseignement seuls se rapprochent le plus au 7e dixième : le creux ne doit rien à la troisième courbe.
+Avec un quatrième levier, les taxes sur les produits, il reste aux 7e et 8e dixièmes.
 Avec d’autres formes de mesures — hypothèses de calcul, non mesures envisagées.
-Une baisse d’enseignement du même montant pour chaque dixième, ou concentrée là où la dépense est déjà forte, laisse le creux en D7-D8 ; épargner l’enseignement des trois premiers dixièmes le place en D8 ou D9 selon l’année ; épargner leurs pensions le laisse en D7-D8.
-Un impôt plus progressif, réparti au prorata du carré de ce que chaque dixième paie déjà, le déplace en revanche en D9.
+Une baisse d’enseignement du même montant pour chaque dixième, ou concentrée là où la dépense est déjà forte, laisse le creux aux 7e et 8e dixièmes ; épargner l’enseignement des trois premiers dixièmes le place au 8e ou au 9e dixième selon l’année ; épargner leurs pensions le laisse aux 7e et 8e dixièmes.
+Un impôt plus progressif, réparti au prorata du carré de ce que chaque dixième paie déjà, le déplace en revanche au 9e dixième.
 Le creux résiste donc à la mesure et à plusieurs répartitions, mais sa place suit la progressivité des mesures : c’est un résultat du scénario proportionnel, non une propriété générale de la redistribution.
 Le revenu de référence ne joue que sur le niveau des courbes.
 Pour un même dixième, il est commun aux trois leviers : le rapport du plus lourd au plus léger, et les points où deux courbes se croisent, ne dépendent pas de lui.
@@ -146,7 +146,7 @@ Ce qui est versé suit le niveau de vie ; ce qui est reçu, beaucoup moins.
 Ces prélèvements ne sont pas des paiements relevés un à un : outre l’impôt sur le revenu et les cotisations, ils comprennent les taxes sur les produits, comme la TVA, et des impôts sur la production, que l’Insee attribue aux ménages par convention.
 Où la dette entre dans ces comptes.
 En 2023, les transferts attribués aux ménages dépassent les prélèvements de 66 milliards d’euros, et l’Insee rattache cet écart à l’endettement public : c’est la part du revenu élargi de l’année qui n’est pas financée par des prélèvements de la même année.
-Ces 66 milliards ne sont pas la charge d’intérêts de 2025 (66,6 milliards) : année, champ et nature diffèrent, et la proximité des deux nombres est une coïncidence.
+Ces 66 milliards ne sont pas la charge d’intérêts de 2025 (65,7 milliards) : année, champ et nature diffèrent, et la proximité des deux nombres est une coïncidence.
 Un solde réparti par convention, financé à crédit, qui ne dit pas qui paiera demain
 Ce total porte sur le champ des comptes distribués, qui n’est pas celui du déficit public : les deux montants ne se substituent pas l’un à l’autre.
 Dans cette construction, l’écart élève le niveau de vie élargi des ménages de l’année — un bénéfice présent, financé à crédit —, mais ce ne sont pas 66 milliards de versements identifiables : c’est un solde réparti par convention, que l’Insee impute pour moitié à de moindres prélèvements et pour moitié à des transferts supplémentaires quand il calcule un niveau de vie « net de l’endettement ».
@@ -156,10 +156,10 @@ Insee, comptes nationaux distribués 2023 (figure 2a).
 Deux unités, deux panneaux : euros par unité de consommation, puis part de personnes.
 Télécharger · Citer · Données
 Qui verse net, qui reçoit net.
-En moyenne par UC, les transferts reçus dépassent les prélèvements dans chacun des sept premiers dixièmes — de 20 800 € par UC dans le premier —, et le solde bascule au dixième D8 : dans les trois derniers, c’est l’inverse, et le dernier dixième verse en moyenne 58 400 € par UC de plus qu’il ne reçoit.
+En moyenne par UC, les transferts reçus dépassent les prélèvements dans chacun des sept premiers dixièmes — de 20 800 € par UC dans le premier —, et le solde bascule au 8e dixième : dans les trois derniers, c’est l’inverse, et le dernier dixième verse en moyenne 58 400 € par UC de plus qu’il ne reçoit.
 Une moyenne de groupe ne décrit pas ses membres.
 56 % des personnes sont bénéficiaires nettes en 2023, 99 % dans le premier dixième et 18 % dans le dernier.
-Mais elles ne sont majoritaires que dans les cinq premiers dixièmes : dans le dixième D7, qui reçoit en moyenne 1 800 € par UC de plus qu’il ne verse, elles ne sont plus que 36 %.
+Mais elles ne sont majoritaires que dans les cinq premiers dixièmes : dans le 7e dixième, qui reçoit en moyenne 1 800 € par UC de plus qu’il ne verse, elles ne sont plus que 36 %.
 Le signe d’une moyenne ne dit pas la situation de la majorité.
 Un groupe peut recevoir plus qu’il ne verse en moyenne alors que la majorité de ses membres versent plus qu’ils ne reçoivent : il suffit que ce que reçoivent en moyenne les bénéficiaires nets l’emporte sur ce que versent en moyenne les autres.
 Les données regroupées ne disent pas comment ces soldes se répartissent.
@@ -365,7 +365,7 @@ Ce qu'un même effort représenterait pour chaque dixième de niveau de vie selo
 Précaution d'interprétation.
 Profil d'exposition comptable, non une simulation : ni comportement ni effet en retour.
 Une baisse de service valorisé n'est pas une perte de revenu monétaire.
-Le point D1 de la décision fiscale est écarté ; le motif en est donné au pied du graphique.
+Le point de la décision fiscale est écarté au 1er dixième ; le motif en est donné au pied du graphique.
 Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020) — millésime 2023
 Télécharger en PNG
 SVG

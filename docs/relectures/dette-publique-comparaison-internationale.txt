@@ -1,33 +1,33 @@
-# relu le 2026-10-16 ; texte servi de /dette-publique-comparaison-internationale/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-10-27 ; texte servi de /dette-publique-comparaison-internationale/, build de eeb34f1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
 En 2025, à dette presque égale, la Hongrie consacre 8,9 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
 Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut regarder aussi son prix, les recettes disponibles pour la servir, et le poids des emprunts anciens dans ce qu'elle coûte aujourd'hui.
-Page mise à jour le 16 octobre 2026 · révisions
+Page mise à jour le 19 octobre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 15 octobre 2026 Les 27 pays de l'Union européenne, données principales 2025 ; hors d'Europe, le millésime est indiqué pays par pays.
+Données mises à jour le 19 octobre 2026 Les 27 pays de l'Union européenne, données principales 2025 ; hors d'Europe, le millésime est indiqué pays par pays.
 Télécharger : CSV · JSON · méthode
-Même dette, charge différente
-Stock de départ (dette de fin 2024 / PIB 2025) et charge (intérêts / recettes), 2025.
-Les pointillés relient les « faux jumeaux », deux pays de dette voisine dont la charge diffère le plus, désignés par une règle fixée avant le calcul : pour chaque pays, son plus proche voisin en stock ; couples dont l’écart est inférieur à 10 points ; les trois plus grands écarts de charge.
+Même dette, coût différent
+Stock de départ (dette de fin 2024 / PIB 2025) et intérêts rapportés aux recettes publiques, 2025.
+Les pointillés relient les « faux jumeaux », deux pays de dette voisine dont les intérêts rapportés aux recettes diffèrent le plus, désignés par une règle fixée avant le calcul : pour chaque pays, son plus proche voisin en stock ; couples dont l’écart est inférieur à 10 points ; les trois plus grands écarts d’intérêts rapportés aux recettes.
 Groupes de l’année des données : la Bulgarie, hors zone euro en 2025, l’a rejointe le 1er janvier 2026.
 Le résultat en une phrase.
-En 2025, à niveau de dette voisin, la part des recettes absorbée par les intérêts peut varier de 1 à 3,3 : le stock ne suffit pas à déterminer la charge, parce qu’il ne fixe ni le prix de la dette ni le niveau des recettes publiques.
+En 2025, à niveau de dette voisin, la part des recettes absorbée par les intérêts peut varier de 1 à 3,3 : le stock ne suffit pas à déterminer ce poids, parce qu’il ne fixe ni le prix de la dette ni le niveau des recettes publiques.
 Pourquoi la Hongrie paie-t-elle 3,3 fois plus que la Slovénie ?
 Pas à cause de sa dette : rapportée au PIB, elle n’est que 1,09 fois plus élevée.
-Le taux moyen payé sur cette dette est 2,75 fois plus élevé (5,53 % contre 2,01 %), et ses recettes publiques, plus faibles (42 % du PIB contre 47 %), alourdissent encore la charge d’un facteur 1,10 : 1,09 × 2,75 × 1,10 donne bien 3,3.
+Le taux moyen payé sur cette dette est 2,75 fois plus élevé (5,53 % contre 2,01 %), et ses recettes publiques, plus faibles (42 % du PIB contre 47 %), alourdissent encore le poids des intérêts d’un facteur 1,10 : 1,09 × 2,75 × 1,10 donne bien 3,3.
 L’essentiel de l’écart tient donc au prix de la dette.
 Ce calcul dit ce qui contribue arithmétiquement à l’écart, non pourquoi la Hongrie se finance à ce taux.
 Deux groupes, deux droites.
-En 2025, parmi les sept pays de l’Union restés hors de la zone euro, la relation entre dette et charge d’intérêts est 3,9 fois plus pentue que parmi les vingt membres de la zone euro.
+En 2025, parmi les sept pays de l’Union restés hors de la zone euro, la relation entre dette et intérêts rapportés aux recettes est 3,9 fois plus pentue que parmi les vingt membres de la zone euro.
 C’est une association entre pays observée la même année, non une vitesse d’évolution.
 Elle reflète notamment les coûts de financement élevés de certains de ces pays, et ne mesure pas un effet de la monnaie commune : les pays hors euro ne forment pas un régime monétaire homogène, certains maintenant une parité fixe avec l’euro (le Danemark, la Bulgarie jusqu’à son entrée), d’autres laissant flotter leur monnaie.
 Les statistiques de la figure : une relation en partie attendue par construction, deux droites qui ne dépendent d'aucun pays isolé
-Classés par dette et par charge, les pays s’ordonnent de façon voisine (corrélation de rang de 0,76) ; le stock ne rend compte que d’une partie de la dispersion de la charge (R² = 0,40).
+Classés par dette et par poids des intérêts dans les recettes, les pays s’ordonnent de façon voisine (corrélation de rang de 0,76) ; le stock ne rend compte que d’une partie de la dispersion des intérêts rapportés aux recettes (R² = 0,40).
 À l’intérieur de chaque groupe, il en rend compte davantage : R² = 0,82 sur les vingt pays de la zone euro, 0,83 sur les sept autres.
-Une part de cette relation est attendue par construction : la charge est le stock multiplié par le prix et divisé par les recettes, si bien qu’à prix et recettes voisins, elle suit le stock.
+Une part de cette relation est attendue par construction : les intérêts rapportés aux recettes sont le stock multiplié par le prix et divisé par les recettes, si bien qu’à prix et recettes voisins, elle suit le stock.
 Ce que la figure apporte, c’est l’hétérogénéité du prix et des recettes d’un pays à l’autre.
 La pente hors zone euro ne dépend d’aucun pays isolé : quand on retire tour à tour chacun des sept pays, elle reste comprise entre 0,165 et 0,211.
 Ce test ne dit rien du poids collectif des pays qui paient le plus cher.
@@ -56,11 +56,11 @@ son coût moyenprix : taux implicite
 ÷
 les recettes publiquesen % du PIB
 =
-la chargeintérêts en % des recettes
+le poids des intérêtsintérêts en % des recettes
 Identité exacte, vérifiée pour chaque pays : intérêts / recettes = (dette de fin d'année précédente / PIB) × (intérêts / dette de fin d'année précédente) ÷ (recettes / PIB)
 Le prix est le taux implicite : les intérêts versés une année, rapportés à la dette de la fin de l’année précédente.
 Il mesure le coût moyen du stock, non le taux auquel un État emprunte aujourd’hui ; Eurostat publie aussi un « coût apparent », fondé sur la dette moyenne de l’année, proche mais non identique.
-À stock de départ égal, deux pays ne peuvent différer en charge que par leur prix ou par leurs recettes.
+À stock de départ égal, deux pays ne peuvent différer par le poids des intérêts dans leurs recettes que par leur prix ou par leurs recettes.
 Un mécanisme s’y ajoute avec le temps, la transmission : les emprunts anciens continuent de peser sur le coût d’aujourd’hui, et ne sont remplacés qu’à mesure qu’ils arrivent à échéance.
 Le prix et les recettes
 Le prix ne suit pas le stock.
@@ -160,9 +160,9 @@ oui
 3,6 %
 Croatie
 oui
-53,0 %
+52,4 %
 2,64 %
-47,1 %
+46,5 %
 3,0 %
 Pologne
 non
@@ -498,7 +498,7 @@ Afrique du Sud
 dette FMI et intérêts Banque mondiale de la même année ; intérêts de la seule administration centrale
 Ce que ces données ne disent pas
 Une coupe d’une année.
-Les comparaisons de stock, de prix et de charge portent sur 2025 ; seuls les écarts de taux avec l’Allemagne couvrent trente ans.
+Les comparaisons de stock, de prix et d’intérêts rapportés aux recettes portent sur 2025 ; seuls les écarts de taux avec l’Allemagne couvrent trente ans.
 Des corrélations, non des causes.
 Une régression sur 27 pays décrit une association.
 L’appartenance à l’euro et l’inflation passée sont d’ailleurs liées entre elles.
@@ -580,20 +580,20 @@ Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →
 D’où viennent ces chiffres
 Europe (strictement comparable) — Eurostat, administrations publiques (S.13), comptes nationaux SEC 2010, montants en monnaie nationale : intérêts versés et recettes (gov_10a_main, D41PAY et TR), dette de Maastricht (gov_10dd_edpt1), PIB (nama_10_gdp), dette par échéance résiduelle (gov_10dd_ggd), taux à 10 ans (irt_lt_mcby_a), indice des prix harmonisé (prc_hicp_aind).
-Le working paper AWP-09 reprend l’identité de la charge et ces écarts de taux, pays restés hors de l’euro en témoins, pour mettre à l’épreuve le récit d’une convergence des taux due à l’euro.
+Le working paper AWP-09 reprend l’identité du poids des intérêts et ces écarts de taux, pays restés hors de l’euro en témoins, pour mettre à l’épreuve le récit d’une convergence des taux due à l’euro.
 Économies avancées hors UE (avec réserve) — OCDE, Economic Outlook : intérêts bruts, recettes, PIB et passifs financiers bruts des administrations publiques.
 Grands émergents (indicatif) — FMI, World Economic Outlook (dette brute des administrations publiques) ; Banque mondiale, World Development Indicators (intérêts en % des recettes de l’administration centrale).
 Les stocks de dette sont ceux de la série annuelle d’Eurostat (gov_10dd_edpt1) telle que relevée à la date indiquée en tête de page ; les données trimestrielles, publiées à d’autres dates, peuvent en différer légèrement, comme sur la page Combien coûte la dette publique ?, tirée des séries trimestrielles de l’INSEE.
 Les calculs, les statistiques et les figures sont produits par un script unique, relancé à chaque publication des sources ; tous les chiffres calculés viennent des séries officielles, et ceux des études citées sont repris tels qu’elles les publient.
 Télécharger les données (licence CC BY 4.0) : CSV, une ligne par pays, lisible dans un tableur ; JSON, avec les statistiques et les définitions.
-Méthode : la charge, le stock et le prix vérifient l’identité exacte donnée plus haut, avec la dette de fin d’année précédente (convention du taux implicite de la BCE, distincte du « coût apparent » d’Eurostat, fondé sur la dette moyenne) ; la robustesse des coefficients est recalculée à chaque mise à jour sur des fenêtres d’inflation de deux à cinq ans ; les statistiques sont des moindres carrés simples, descriptifs.
+Méthode : les intérêts rapportés aux recettes, le stock et le prix vérifient l’identité exacte donnée plus haut, avec la dette de fin d’année précédente (convention du taux implicite de la BCE, distincte du « coût apparent » d’Eurostat, fondé sur la dette moyenne) ; la robustesse des coefficients est recalculée à chaque mise à jour sur des fenêtres d’inflation de deux à cinq ans ; les statistiques sont des moindres carrés simples, descriptifs.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
-Même dette, charge différente : les 27 pays de l'UE en 2025
+Même dette, coût différent : les 27 pays de l'UE en 2025
 À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à 3,3 ; hors de la zone euro, elle croît plus vite avec la dette.
 Précaution d'interprétation.
-Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts de charge).
+Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts d'intérêts rapportés aux recettes).
 Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale
 Télécharger en PNG
 SVG
@@ -630,7 +630,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon ».
-Données Eurostat, OCDE, FMI et Banque mondiale, relevé du 15 octobre 2026. https://stephane-lalut.com/dette-publique-comparaison-internationale/
+Données Eurostat, OCDE, FMI et Banque mondiale, relevé du 19 octobre 2026. https://stephane-lalut.com/dette-publique-comparaison-internationale/
 Copier la citation
 En trois phrases
 Cette page compare ce que représente une dette publique : son stock, son prix et les recettes qui la servent, puis le poids des emprunts anciens dans ce qu’elle coûte aujourd’hui.

@@ -12,52 +12,52 @@
 <text x="18.0" y="168.0" font-size="13.5" fill="#52514e" text-anchor="start">Prestations en espèces reçues (à droite)</text>
 <rect x="0" y="178.0" width="12" height="12" fill="#898781"/>
 <text x="18.0" y="188.0" font-size="13.5" fill="#52514e" text-anchor="start">Services publics valorisés reçus</text>
-<text x="0.0" y="215.0" font-size="13.5" fill="#898781" text-anchor="start">D1</text>
+<text x="0.0" y="215.0" font-size="13.5" fill="#898781" text-anchor="start">1er</text>
 <rect x="214.9" y="204.0" width="13.7" height="13" fill="#eb6834"/>
 <rect x="228.6" y="204.0" width="17.2" height="13" fill="#184f95"/>
 <rect x="245.8" y="204.0" width="41.0" height="13" fill="#898781"/>
-<text x="0.0" y="237.0" font-size="13.5" fill="#898781" text-anchor="start">D2</text>
+<text x="0.0" y="237.0" font-size="13.5" fill="#898781" text-anchor="start">2e</text>
 <rect x="209.8" y="226.0" width="18.9" height="13" fill="#eb6834"/>
 <rect x="228.6" y="226.0" width="22.7" height="13" fill="#184f95"/>
 <rect x="251.4" y="226.0" width="44.0" height="13" fill="#898781"/>
-<text x="0.0" y="259.0" font-size="13.5" fill="#898781" text-anchor="start">D3</text>
+<text x="0.0" y="259.0" font-size="13.5" fill="#898781" text-anchor="start">3e</text>
 <rect x="203.1" y="248.0" width="25.5" height="13" fill="#eb6834"/>
 <rect x="228.6" y="248.0" width="25.1" height="13" fill="#184f95"/>
 <rect x="253.7" y="248.0" width="37.3" height="13" fill="#898781"/>
-<text x="0.0" y="281.0" font-size="13.5" fill="#898781" text-anchor="start">D4</text>
+<text x="0.0" y="281.0" font-size="13.5" fill="#898781" text-anchor="start">4e</text>
 <rect x="196.2" y="270.0" width="32.4" height="13" fill="#eb6834"/>
 <rect x="228.6" y="270.0" width="24.7" height="13" fill="#184f95"/>
 <rect x="253.3" y="270.0" width="36.9" height="13" fill="#898781"/>
-<text x="0.0" y="303.0" font-size="13.5" fill="#898781" text-anchor="start">D5</text>
+<text x="0.0" y="303.0" font-size="13.5" fill="#898781" text-anchor="start">5e</text>
 <rect x="189.6" y="292.0" width="39.0" height="13" fill="#eb6834"/>
 <rect x="228.6" y="292.0" width="25.7" height="13" fill="#184f95"/>
 <rect x="254.4" y="292.0" width="32.2" height="13" fill="#898781"/>
-<text x="0.0" y="325.0" font-size="13.5" fill="#898781" text-anchor="start">D6</text>
+<text x="0.0" y="325.0" font-size="13.5" fill="#898781" text-anchor="start">6e</text>
 <rect x="182.5" y="314.0" width="46.1" height="13" fill="#eb6834"/>
 <rect x="228.6" y="314.0" width="27.0" height="13" fill="#184f95"/>
 <rect x="255.7" y="314.0" width="32.2" height="13" fill="#898781"/>
-<text x="0.0" y="347.0" font-size="13.5" fill="#898781" text-anchor="start">D7</text>
+<text x="0.0" y="347.0" font-size="13.5" fill="#898781" text-anchor="start">7e</text>
 <rect x="173.5" y="336.0" width="55.1" height="13" fill="#eb6834"/>
 <rect x="228.6" y="336.0" width="27.5" height="13" fill="#184f95"/>
 <rect x="256.1" y="336.0" width="31.5" height="13" fill="#898781"/>
-<text x="0.0" y="369.0" font-size="13.5" fill="#898781" text-anchor="start">D8</text>
+<text x="0.0" y="369.0" font-size="13.5" fill="#898781" text-anchor="start">8e</text>
 <rect x="160.6" y="358.0" width="68.0" height="13" fill="#eb6834"/>
 <rect x="228.6" y="358.0" width="28.7" height="13" fill="#184f95"/>
 <rect x="257.4" y="358.0" width="27.9" height="13" fill="#898781"/>
-<text x="0.0" y="391.0" font-size="13.5" fill="#898781" text-anchor="start">D9</text>
+<text x="0.0" y="391.0" font-size="13.5" fill="#898781" text-anchor="start">9e</text>
 <rect x="140.5" y="380.0" width="88.2" height="13" fill="#eb6834"/>
 <rect x="228.6" y="380.0" width="31.3" height="13" fill="#184f95"/>
 <rect x="260.0" y="380.0" width="29.2" height="13" fill="#898781"/>
-<text x="0.0" y="413.0" font-size="13.5" fill="#898781" text-anchor="start">D10</text>
+<text x="0.0" y="413.0" font-size="13.5" fill="#898781" text-anchor="start">10e</text>
 <rect x="36.0" y="402.0" width="192.6" height="13" fill="#eb6834"/>
 <rect x="228.6" y="402.0" width="39.7" height="13" fill="#184f95"/>
 <rect x="268.3" y="402.0" width="27.7" height="13" fill="#898781"/>
 <line x1="228.6" y1="200.0" x2="228.6" y2="424.0" stroke="#52514e" stroke-width="1.2"/>
-<text x="0.0" y="440.0" font-size="13.5" fill="#898781" text-anchor="start">D1 : 10 % les plus modestes · D10 :</text>
-<text x="0.0" y="458.0" font-size="13.5" fill="#898781" text-anchor="start">10 % les plus aisés</text>
-<text x="0.0" y="484.0" font-size="13.5" fill="#52514e" text-anchor="start">D1</text>
+<text x="0.0" y="440.0" font-size="13.5" fill="#898781" text-anchor="start">1er dixième : 10 % les plus modestes ·</text>
+<text x="0.0" y="458.0" font-size="13.5" fill="#898781" text-anchor="start">10e : 10 % les plus aisés</text>
+<text x="0.0" y="484.0" font-size="13.5" fill="#52514e" text-anchor="start">1er</text>
 <text x="42.0" y="484.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">reçoit 27,1 · verse 6,4</text>
-<text x="0.0" y="506.0" font-size="13.5" fill="#52514e" text-anchor="start">D10</text>
+<text x="0.0" y="506.0" font-size="13.5" fill="#52514e" text-anchor="start">10e</text>
 <text x="42.0" y="506.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">reçoit 31,4 · verse 89,8</text>
 <line x1="0" y1="522.0" x2="300" y2="522.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="543.0" font-size="13.5" fill="#52514e">Insee, comptes nationaux distribués</text>

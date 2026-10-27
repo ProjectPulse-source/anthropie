@@ -107,14 +107,14 @@ d'accompagnement du chapitre pose la question de la soutenabilité de la dette e
 
 1. Repérez la France sur la figure. Quelle est sa dette de départ (encours de fin {{< monde-val "annee_1" >}} rapporté au PIB {{< monde-val "annee" >}}), et quelle part de ses recettes consacre-t-elle aux intérêts&nbsp;?
 2. {{< monde-val "j_haut_le_maj" >}} et {{< monde-val "j_bas_le" >}} ont une dette voisine ({{< monde-val "j_haut_stock" >}} et {{< monde-val "j_bas_stock" >}} du PIB). Comparez la part de leurs recettes consacrée aux intérêts.
-3. {{< monde-val "j_haut_le_maj" >}} paie un taux de {{< monde-val "j_haut_prix" >}} sur sa dette, {{< monde-val "j_bas_le" >}} {{< monde-val "j_bas_prix" >}}&nbsp;; ses recettes représentent {{< monde-val "j_haut_rec" >}} du PIB, contre {{< monde-val "j_bas_rec" >}}. Expliquez l'écart de charge à l'aide de ces deux éléments.
+3. {{< monde-val "j_haut_le_maj" >}} paie un taux de {{< monde-val "j_haut_prix" >}} sur sa dette, {{< monde-val "j_bas_le" >}} {{< monde-val "j_bas_prix" >}}&nbsp;; ses recettes représentent {{< monde-val "j_haut_rec" >}} du PIB, contre {{< monde-val "j_bas_rec" >}}. Expliquez l'écart entre leurs parts de recettes consacrées aux intérêts à l'aide de ces deux éléments.
 4. La valeur de référence de 60&nbsp;% du PIB inscrite dans les traités européens porte sur le niveau de la dette. D'après la figure, ce niveau suffit-il à dire ce que la dette coûte à un pays&nbsp;? Justifiez.
 
 <details class="repli fiche__corrige"><summary>Corrigé pour l'enseignant</summary>
 
-1. Une dette de départ de {{< monde-val "fr_stock" >}} du PIB&nbsp;; {{< monde-val "fr_charge" >}} de ses recettes consacrés aux intérêts. Attention à la convention&nbsp;: l'encours de fin {{< monde-val "annee_1" >}} est rapporté au PIB de {{< monde-val "annee" >}}, l'année où la charge est payée&nbsp;; le ratio officiel publié par Eurostat pour fin {{< monde-val "annee_1" >}} le rapporte au PIB de {{< monde-val "annee_1" >}}, d'où un chiffre différent.
-2. {{< monde-val "j_haut_charge" >}} pour {{< monde-val "j_haut_le" >}}, {{< monde-val "j_bas_charge" >}} pour {{< monde-val "j_bas_le" >}}&nbsp;: à dette voisine, une charge de 1 à {{< monde-val "j_rapport" >}}.
-3. La charge rapporte les intérêts aux recettes&nbsp;: elle dépend du **prix** de la dette (le taux payé sur le stock) et du **niveau des recettes**. {{< monde-val "j_haut_le_maj" >}} cumule un prix plus élevé et des recettes plus faibles.
+1. Une dette de départ de {{< monde-val "fr_stock" >}} du PIB&nbsp;; {{< monde-val "fr_charge" >}} de ses recettes consacrées aux intérêts. Attention à la convention&nbsp;: l'encours de fin {{< monde-val "annee_1" >}} est rapporté au PIB de {{< monde-val "annee" >}}, l'année où la charge est payée&nbsp;; le ratio officiel publié par Eurostat pour fin {{< monde-val "annee_1" >}} le rapporte au PIB de {{< monde-val "annee_1" >}}, d'où un chiffre différent.
+2. {{< monde-val "j_haut_charge" >}} pour {{< monde-val "j_haut_le" >}}, {{< monde-val "j_bas_charge" >}} pour {{< monde-val "j_bas_le" >}}&nbsp;: à dette voisine, la part des recettes consacrée aux intérêts varie de 1 à {{< monde-val "j_rapport" >}}.
+3. La part des recettes consacrée aux intérêts dépend du **prix** de la dette (le taux payé sur le stock) et du **niveau des recettes**. {{< monde-val "j_haut_le_maj" >}} cumule un prix plus élevé et des recettes plus faibles.
 4. Non&nbsp;: le stock ne fixe ni le prix de la dette ni les recettes disponibles pour la servir. C'est une limite d'un indicateur, pas un jugement sur la règle. Le cadre budgétaire européen a été réformé en 2024&nbsp;: la valeur de référence de 60&nbsp;% demeure, mais la surveillance ne se résume pas à ce seuil.
 
 **Approfondissement, hors objectifs du programme.** En {{< dyn-val "annee_fin" >}}, le taux implicite de la dette française ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et la croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) étaient presque égaux&nbsp;: à solde primaire nul et hors ajustements flux-stock, le ratio serait resté presque stable. À ajustements flux-stock nuls, si le taux implicite dépasse durablement la croissance nominale, cet effet pousse le ratio vers le haut même avec un solde primaire équilibré&nbsp;: c'est la mécanique de la soutenabilité, détaillée dans [Pourquoi la dette publique augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#identite)
@@ -138,7 +138,7 @@ conceptions de la justice sociale, ni les débats sur leur efficacité et leur l
 **Durée**&nbsp;: 20&nbsp;minutes. **Support**&nbsp;: la figure ci-dessous, tirée de [Qui paie vraiment la dette
 publique&nbsp;?](/qui-paie-la-dette-publique/)
 
-{{< figure-svg fichier="qui-paie-redistribution" alt="Barres par dixième de niveau de vie : au-dessus de zéro, les transferts publics reçus ; sous zéro, les prélèvements versés, qui croissent fortement du premier au dernier dixième." >}}Prélèvements versés et transferts reçus par dixième de niveau de vie, en euros par unité de consommation, {{< qp-val "cd_annee" >}} (INSEE, comptes nationaux distribués).{{< /figure-svg >}}
+{{< figure-svg fichier="qui-paie-redistribution" alt="Barres par dixième de niveau de vie : au-dessus de zéro, les transferts publics reçus ; sous zéro, les prélèvements versés, qui croissent fortement du premier au dernier dixième." >}}Prélèvements versés et transferts reçus par dixième de niveau de vie, moyenne de chaque dixième en euros par unité de consommation, {{< qp-val "cd_annee" >}} (INSEE, comptes nationaux distribués).{{< /figure-svg >}}
 
 **Fiche élève**
 
@@ -149,7 +149,7 @@ publique&nbsp;?](/qui-paie-la-dette-publique/)
 <details class="repli fiche__corrige"><summary>Corrigé pour l'enseignant</summary>
 
 1. {{< qp-val "d1_prel" >}}&nbsp;€ et {{< qp-val "d10_prel" >}}&nbsp;€ par unité de consommation en {{< qp-val "cd_annee" >}}&nbsp;: environ {{< qp-val "ratio_prel" >}}&nbsp;fois plus.
-2. À partir du dixième noté {{< qp-val "net_bascule" >}}, en moyenne par unité de consommation.
+2. À partir du {{< qp-val "net_bascule" >}} dixième, en moyenne par unité de consommation.
 3. Les situations diffèrent à revenu voisin&nbsp;: âge, retraite ou activité, enfants, patrimoine. Rapporté aux personnes, {{< qp-val "benef_ensemble" >}}&nbsp;% sont bénéficiaires nettes cette année-là. Ce sont des comptes d'une année, selon les conventions de l'INSEE&nbsp;: ils ne disent pas qui paiera la dette demain.
 
 </details>

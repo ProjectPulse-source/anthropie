@@ -755,6 +755,23 @@ def langue(lang: str):
     return en, (lambda f, e: e), "%"
 
 
+def dixieme_fr(code: str) -> str:
+    """« D7 » -> « 7e », « D1 » -> « 1er » : affichage FRANÇAIS des groupes de niveau de vie. En français, D1 à D9
+    désignent d'abord les déciles, des SEUILS ; l'Insee note aussi D1 à D10 les groupes de ses comptes distribués,
+    et des élèves confondent les deux (remarque d'un enseignant de SES, 26/10/2026). Le calcul, les gardes et les
+    colonnes du jeu de données gardent la notation de l'Insee ; l'anglais aussi (« decile » y nomme couramment le
+    groupe : exclusion déclarée)."""
+    n = int(code[1:])
+    if not 1 <= n <= 10 or code != "D%d" % n:
+        fail("dixième illisible : %r" % code)
+    return "1er" if n == 1 else "%de" % n
+
+
+def lib_dixieme(i: int, lang: str) -> str:
+    """Étiquette d'axe du groupe i (1 à 10) : « 1er »… « 10e » en français, « D1 »… « D10 » en anglais."""
+    return dixieme_fr("D%d" % i) if lang == "fr" else "D%d" % i
+
+
 # Libellés anglais des catégories du registre du livre. Libellé inconnu = arrêt :
 # un nom français dans une figure anglaise ne se verrait qu'à la relecture.
 SS_EN = {"État": "Central government", "Sécurité sociale": "Social security funds",
@@ -944,7 +961,7 @@ def svg_redistribution(d: dict, lang: str = "fr") -> tuple[str, int]:
         pv = "600" if fort else None
         c.append(txt(cx, y0 - h1 - h2 - 7, nb(esp[i] + nat[i], 1), tv, cv, "middle", weight=pv))
         c.append(txt(cx, y0 + hp + 13, "−" + nb(-prel[i], 1), tv, cv, "middle", weight=pv))
-        c.append(txt(cx, bas + 16, "D%d" % (i + 1), TY_AXE,
+        c.append(txt(cx, bas + 16, lib_dixieme(i + 1, lang), TY_AXE,
                      INK if fort else MUTED, "middle", weight=pv))
     # Étiquetage DIRECT : chaque série nommée à la hauteur de son segment dans le
     # dernier dixième, celui que la lecture atteint en dernier.
@@ -1048,7 +1065,7 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
         tv, cv = (TY_ANNOT, INK) if fort else (TY_AXE - 1, INK2)
         pv = "600" if fort else None
         c.append(txt(cx, (y - 6) if v > 0 else (y + haut + 11), etiq, tv, cv, "middle", weight=pv))
-        c.append(txt(cx, bas + 30, "D%d" % (i + 1), TY_AXE,
+        c.append(txt(cx, bas + 30, lib_dixieme(i + 1, lang), TY_AXE,
                      INK if fort else MUTED, "middle", weight=pv))
     y = bas + 56
     c.append(txt(0, y, S("B · Part de personnes bénéficiaires nettes, en %",
@@ -1385,10 +1402,10 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
                   TY_VALEUR, INK, "middle", weight="600"))
     c_ += etiquettes_directes(W - mr + 14, [
         (YA(p[cle][9]) + 4, noms[cle][1], noms[cle][0],
-         S("%s%s%% en D10" % (fr(p[cle][9], 2), NBSP), "%s%% in D10" % en(p[cle][9], 2)))
+         S("%s%s%% au 10e dixième" % (fr(p[cle][9], 2), NBSP), "%s%% in D10" % en(p[cle][9], 2)))
         for cle in ("fiscal", "pensions", "enseignement")], topA + 8, basA - 12)
     for i in range(10):
-        c_.append(txt(X(i), basA + 16, "D%d" % (i + 1), TY_AXE, MUTED, "middle"))
+        c_.append(txt(X(i), basA + 16, lib_dixieme(i + 1, lang), TY_AXE, MUTED, "middle"))
     c_.append(txt(ml, basA + 32, S("← 10" + NBSP + "% les plus modestes", "← least well-off 10%"),
                   TY_AXE - 1, MUTED))
     c_.append(txt(W - mr, basA + 32, S("10" + NBSP + "% les plus aisés →", "best-off 10% →"),
@@ -1433,9 +1450,9 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
         c_.append(txt(X(i), basB - h_ - 7, ("≥ ×" if borne else "×") + nb(v, 1),
                       TY_ANNOT if fort else TY_AXE - 1, INK if fort else INK2, "middle",
                       weight="600" if fort else None))
-        c_.append(txt(X(i), basB + 16, "D%d" % (i + 1), TY_AXE,
+        c_.append(txt(X(i), basB + 16, lib_dixieme(i + 1, lang), TY_AXE,
                       INK if fort else MUTED, "middle", weight="600" if fort else None))
-    c_.append(txt(X(6), basB + 34, S("D7-D8 : dispersion minimale entre les trois leviers",
+    c_.append(txt(X(6), basB + 34, S("7e et 8e dixièmes : dispersion minimale entre les trois leviers",
                                      "D7-D8: minimum dispersion across the three levers"),
                   TY_AXE, INK2, "middle"))
     c_.append(txt(X(6), basB + 48, S("le levier y change le moins l'exposition moyenne du dixième",
@@ -1451,18 +1468,18 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
            "baisse de service valorisé n'est pas une perte de revenu monétaire.",
            "An exposure profile, not a simulation: no behaviour, no feedback effect. A cut in a "
            "valued public service is not a loss of cash income."), INK2),
-        (S("Point D1 des impôts écarté : l'impôt sur le revenu du premier vingtième y pèse "
+        (S("Point des impôts écarté au 1er dixième : l'impôt sur le revenu du premier vingtième y pèse "
            "%s%s%% du poste quand les vingtièmes voisins sont à zéro, et varie de 1 à %s "
            "selon le millésime." % (fr(c["part_ir_v1"]), NBSP, fr(c["ir_v1_amplitude"], 1)),
            "D1 tax point excluded: income tax of the first twentile makes up %s%% of the item "
            "while the neighbouring twentiles are at zero, and varies from 1 to %s by vintage."
            % (en(c["part_ir_v1"]), en(c["ir_v1_amplitude"], 1))), INK2),
-        (S("D1 porte « ≥ » : l'écart y est calculé sur les deux leviers conservés — c'est une borne "
+        (S("Le 1er dixième porte « ≥ » : l'écart y est calculé sur les deux leviers conservés — c'est une borne "
            "inférieure, un troisième point ne pourrait que l'élever.",
            "D1 carries “≥”: the gap there is computed on the two levers kept "
            "— a lower bound, which a third point could only raise."), INK2),
-        (S("Le creux se situe en %s sur les quatre millésimes 2020-2023, et dans la même zone avec "
-           "trois mesures de dispersion." % " ou ".join(c["creux_partout"]),
+        (S("Le creux se situe au %s dixième sur les quatre millésimes 2020-2023, et dans la même zone avec "
+           "trois mesures de dispersion." % " ou au ".join(dixieme_fr(x) for x in c["creux_partout"]),
            "The trough lies in %s in all four vintages 2020-2023, and in the same zone with "
            "three measures of dispersion." % " or ".join(c["creux_partout"])), INK2),
         (S("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE,
@@ -1491,11 +1508,12 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
             "sur les revenus et le patrimoine, %s %% du dernier ; les pensions restent entre "
             "%s et %s %%. B : le rapport entre la décision la plus lourde et la plus légère pour "
             "un même groupe, en base 1. Il vaut %s au dernier dixième et au moins autant au "
-            "premier, culmine à %s en D%d, et descend à %s en D7-D8 : c'est là que le levier retenu change le moins "
+            "premier, culmine à %s au %s dixième, et descend à %s aux 7e et 8e dixièmes : c'est là que le levier retenu change le moins "
             "l'exposition moyenne du dixième." % (
                 fr(p["enseignement"][0], 2), fr(p["enseignement"][9], 2), fr(p["fiscal"][9], 2),
                 fr(min(p["pensions"]), 2), fr(max(p["pensions"]), 2),
-                "×" + fr(max(rat[0], rat[9]), 1), "×" + fr(max(rat), 1), lg.position_unique(rat, 1, quoi="pic des rapports") + 1,
+                "×" + fr(max(rat[0], rat[9]), 1), "×" + fr(max(rat), 1),
+                dixieme_fr("D%d" % (lg.position_unique(rat, 1, quoi="pic des rapports") + 1)),
                 "×" + fr(creux, 1)))
     e = entete(h, "qp-exp", "Un même effort de 10 milliards d'euros : qui le supporterait "
                "selon la décision prise ?", desc) + c_
@@ -1640,12 +1658,12 @@ def svg_redistribution_m(d: dict, lang: str, svg_d: str) -> str:
     prel = [-v / 1000 for v in d["prel"][:10]]
     esp = [v / 1000 for v in d["esp"][:10]]
     nat = [v / 1000 for v in d["nat"][:10]]
-    y, _x0 = rangees(e, y + 16, ["D%d" % (i + 1) for i in range(10)], [[(p, C2)] for p in prel],
+    y, _x0 = rangees(e, y + 16, [lib_dixieme(i + 1, lang) for i in range(10)], [[(p, C2)] for p in prel],
                      [[(esp[i], C1), (nat[i], SEC)] for i in range(10)])
-    y = lignes_m(e, y - 2, S("D1 : 10 % les plus modestes · D10 : 10 % les plus aisés",
+    y = lignes_m(e, y - 2, S("1er dixième : 10 % les plus modestes · 10e : 10 % les plus aisés",
                              "D1: least well-off 10% · D10: best-off 10%"))
     y += 4
-    for i, nom in ((0, "D1"), (9, "D10")):
+    for i, nom in ((0, lib_dixieme(1, lang)), (9, lib_dixieme(10, lang))):
         y += 22
         e.append(tm(0, y, nom, INK2))
         e.append(tm(42, y, S("reçoit %s · verse %s" % (nb(esp[i] + nat[i], 1), nb(prel[i], 1)),
@@ -1671,9 +1689,9 @@ def svg_solde_net_m(d: dict, lang: str, svg_d: str) -> str:
                          "Average, € thousand per CU · negative: net beneficiary"))
     y = cle(e, y, [(S("reçoit plus qu'il ne verse (à gauche)", "receives more than it pays in (left)"), C1),
                    (S("verse plus qu'il ne reçoit (à droite)", "pays in more than it receives (right)"), C2)])
-    y, _x0 = rangees(e, y + 16, ["D%d" % (i + 1) for i in range(10)],
+    y, _x0 = rangees(e, y + 16, [lib_dixieme(i + 1, lang) for i in range(10)],
                      [[(-v, C1)] if v < 0 else [] for v in net], [[(v, C2)] if v > 0 else [] for v in net])
-    for i, nom in ((0, "D1"), (9, "D10")):
+    for i, nom in ((0, lib_dixieme(1, lang)), (9, lib_dixieme(10, lang))):
         y += 22
         e.append(tm(0, y, nom, INK2))
         v = net[i]
@@ -1686,7 +1704,7 @@ def svg_solde_net_m(d: dict, lang: str, svg_d: str) -> str:
     y += 8
     for i, p in enumerate(part):
         yy = y + i * 22
-        e.append(tm(0, yy + 11, "D%d" % (i + 1), MUTED))
+        e.append(tm(0, yy + 11, lib_dixieme(i + 1, lang), MUTED))
         w = 200 * p / 100
         e.append('<rect x="36" y="%.1f" width="%.1f" height="13" fill="%s"/>' % (yy, w, C1))
         fort = i in (0, 9)
@@ -1837,8 +1855,8 @@ def svg_exposition_m(c: dict, lang: str, svg_d: str) -> str:
     e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="none" stroke="%s" stroke-width="1.6" stroke-dasharray="2 2"/>'
              % (X(0), Y(0.31), C2))
     e.append(tm(X(0) + 8, Y(p["enseignement"][0]) + 5, nb(p["enseignement"][0], 2) + pc, INK, weight="600"))
-    for i, lib in ((0, "D1"), (4, "D5"), (9, "D10")):
-        e.append(tm(X(i), top + h_ + 19, lib, MUTED, "end" if i == 9 else "middle"))
+    for i in (0, 4, 9):
+        e.append(tm(X(i), top + h_ + 19, lib_dixieme(i + 1, lang), MUTED, "end" if i == 9 else "middle"))
     y = top + h_ + 26
     for cle_ in ("fiscal", "enseignement", "pensions"):
         nom, col = noms[cle_]
@@ -1851,9 +1869,9 @@ def svg_exposition_m(c: dict, lang: str, svg_d: str) -> str:
             e.append(tm(148 if lang == "fr" else 100, y, S("%s à %s%s", "%s to %s%s")
                         % (nb(min(p[cle_]), 2), nb(max(p[cle_]), 2), pc), INK, weight="600"))
         else:
-            e.append(tm(22, y, S("en D10 :", "in D10:"), INK2))
+            e.append(tm(22, y, S("au 10e :", "in D10:"), INK2))
             e.append(tm(90 if lang == "fr" else 76, y, nb(p[cle_][9], 2) + pc, INK, weight="600"))
-    y = lignes_m(e, y + 6, S("○ point D1 des impôts écarté (motif au pied)", "○ D1 tax point excluded (reason below)"))
+    y = lignes_m(e, y + 6, S("○ point des impôts écarté au 1er dixième (motif au pied)", "○ D1 tax point excluded (reason below)"))
     y += 14
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y, WM, y, AXIS))
     y = lignes_m(e, y + 6, S("B · De combien le choix change l'effort d'un même dixième",
@@ -1889,17 +1907,17 @@ def svg_exposition_m(c: dict, lang: str, svg_d: str) -> str:
         voisin = rat[i + 1] if i == 0 else rat[i - 1] if i == 9 else v
         e.append(tm(x, YB(max(v, voisin)) - 22 if (i == 0 and imax == 1) else YB(max(v, voisin)) - 6,
                     ("≥ ×" if borne else "×") + nb(v, 1), INK, ancre, "600"))
-    for i, lib in ((0, "D1"), (6, "D7"), (7, "D8"), (9, "D10")):
-        e.append(tm(X(i), topB + hB + 19, lib, INK2 if i in (6, 7) else MUTED, "end" if i == 9 else "middle"))
-    y = lignes_m(e, topB + hB + 26, S("D7-D8 : le choix du levier y change le moins l'exposition moyenne du dixième",
+    for i in (0, 6, 7, 9):
+        e.append(tm(X(i), topB + hB + 19, lib_dixieme(i + 1, lang), INK2 if i in (6, 7) else MUTED, "end" if i == 9 else "middle"))
+    y = lignes_m(e, topB + hB + 26, S("7e et 8e dixièmes : le choix du levier y change le moins l'exposition moyenne du dixième",
                                       "D7-D8: where the choice of lever changes the decile's average exposure least"), INK2)
     return pied_m(e, y + 14, [
         (S("Insee, comptes nationaux distribués, tableau CND.101, millésime 2023",
            "Insee, distributional national accounts, table CND.101, 2023 vintage"), INK2),
         (S("Profil d'exposition, non une simulation : ni comportement, ni effet en retour.",
            "An exposure profile, not a simulation: no behaviour, no feedback effect."), INK2),
-        (S("Point D1 des impôts écarté : l'impôt sur le revenu du premier vingtième y est atypique ; D1 porte "
-           "« ≥ », borne inférieure calculée sur deux leviers.",
+        (S("Point des impôts écarté au 1er dixième : l'impôt sur le revenu du premier vingtième y est atypique ; "
+           "le 1er dixième porte « ≥ », borne inférieure calculée sur deux leviers.",
            "D1 tax point excluded: income tax of the first twentieth is atypical there; D1 carries “≥”, a lower "
            "bound computed on two levers."), INK2),
         licence_m(S)])
@@ -1968,13 +1986,14 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         "exp_fisc_d10": fr(p["fiscal"][9], 2),
         "exp_pens_min": fr(min(pens), 2), "exp_pens_max": fr(max(pens), 2),
         "exp_ecart_d1": fr(rat[0], 1), "exp_ecart_d10": fr(rat[9], 1),
-        "exp_ecart_creux": fr(creux, 1), "exp_creux_dixieme": "D%d" % (icreux + 1),
-        "exp_creux_zone": "D7-D8",
+        "exp_ecart_creux": fr(creux, 1), "exp_creux_dixieme": _S(dixieme_fr("D%d" % (icreux + 1)) + " dixième", "D%d" % (icreux + 1)),
+        "exp_creux_zone": _S("7e et 8e dixièmes", "D7-D8"),
         # La même zone en toutes lettres, pour la phrase qui doit se lire sans la figure (panel « après », 11/10).
         "exp_creux_zone_mots": _S("7e ou 8e", "7th or 8th"),
         "exp_cv_creux": fr(min(c["dispersions"]["coef_variation"][1:]), 2),
         "exp_cv_d10": fr(c["dispersions"]["coef_variation"][9], 2),
-        "exp_creux_millesimes": _S(" ou ", " or ").join(c["creux_partout"]),
+        "exp_creux_millesimes": _S(" ou au ".join(dixieme_fr(x) for x in c["creux_partout"]) + " dixième",
+                                   " or ".join(c["creux_partout"])),
         "exp_masse_ens": fr(c["masse_d1_d5"]["enseignement"], 1),
         "exp_masse_fisc": fr(c["masse_d1_d5"]["fiscal"], 1),
         "exp_millesimes": "2020-2023",
@@ -1983,9 +2002,11 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         "exp_t1_rangs": _S(" ou ", " or ").join(
             _S("%de" % v, "%d%s" % (v, "th" if 10 <= v % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(v % 10, "th")))
             for v in sorted(set(c["tests"]["t1_vingtieme_min"].values()))),
-        "exp_t3_croise": c["tests"]["t3_impot_enseignement"],
-        "exp_t2_progressif": c["tests"]["t2_impot_progressif_creux"],
-        "exp_ens_epargne": _S(" ou ", " or ").join(sorted(set(c["tests"]["ens_d1_d3_epargnes"].values()))),
+        "exp_t3_croise": _S(dixieme_fr(c["tests"]["t3_impot_enseignement"]) + " dixième", c["tests"]["t3_impot_enseignement"]),
+        "exp_t2_progressif": _S(dixieme_fr(c["tests"]["t2_impot_progressif_creux"]) + " dixième",
+                                c["tests"]["t2_impot_progressif_creux"]),
+        "exp_ens_epargne": _S(" ou au ".join(dixieme_fr(x) for x in sorted(set(c["tests"]["ens_d1_d3_epargnes"].values()))) + " dixième",
+                              " or ".join(sorted(set(c["tests"]["ens_d1_d3_epargnes"].values())))),
         "exp_tva_d1": fr(c["tests"]["tva_d1"]["2023"], 2), "exp_tva_d10": fr(c["tests"]["tva_d10"]["2023"], 2),
     }
     pz = c["pieces"]
@@ -2002,13 +2023,13 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
     })
     return dict(exp, **{
         "releve_le": _S(releve_le(), date_fr_vers_en(releve_le())),
-        "net_bascule": "D%d" % (bascule + 1),
+        "net_bascule": _S(dixieme_fr("D%d" % (bascule + 1)), "D%d" % (bascule + 1)),
         "net_benef_n": fr(bascule),
         "net_d10": fr(net[9]),
         "net_d1": fr(-net[0]),
         "benef_d1": fr(part[0]), "benef_d10": fr(part[9]),
         "benef_majo_n": fr(majo),
-        "benef_dernier_moyen": "D%d" % bascule, "benef_dernier_moyen_pct": fr(part[bascule - 1]),
+        "benef_dernier_moyen": _S(dixieme_fr("D%d" % bascule), "D%d" % bascule), "benef_dernier_moyen_pct": fr(part[bascule - 1]),
         "net_dernier_moyen": fr(-net[bascule - 1]),
         "benef_ensemble": fr(d["part_benef"][-1]),
         "age_recu_65": fr(age["esp"][4] + age["nat"][4]),
@@ -2123,7 +2144,7 @@ def main() -> int:
                    "de vie, 2020-2023, base 2020) — millésime 2023",
          "precaution": "Profil d'exposition comptable, non une simulation : ni comportement ni "
                        "effet en retour. Une baisse de service valorisé n'est pas une perte de "
-                       "revenu monétaire. Le point D1 de la décision fiscale est écarté ; le motif "
+                       "revenu monétaire. Le point de la décision fiscale est écarté au 1er dixième ; le motif "
                        "en est donné au pied du graphique."},
         {"id": "mecanismes", "fichier": "qui-paie-mecanismes",
          "titre": "Par quels canaux la charge peut-elle être répartie ?",

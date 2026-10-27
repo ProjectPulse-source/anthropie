@@ -1393,13 +1393,13 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
             src_eu=("Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), %s ; "
                     "administrations publiques S.13, monnaie nationale" % an),
             c_lx="stock : dette fin %s rapportée au PIB %s" % (an_1, an),
-            c_ly="charge : intérêts en % des recettes publiques",
-            c_titre="Même dette, charge différente : les 27 pays de l'UE en %s" % an,
+            c_ly="intérêts en % des recettes publiques",
+            c_titre="Même dette, coût différent : les 27 pays de l'UE en %s" % an,
             c_desc="Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, "
-                   "charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. "
-                   "Charge : Hongrie %s, Slovénie %s, France %s, Italie %s." % tuple(
+                   "part des recettes consacrée aux intérêts très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. "
+                   "Intérêts en %% des recettes : Hongrie %s, Slovénie %s, France %s, Italie %s." % tuple(
                        pct(by[c]["charge"]) for c in ("HU", "SI", "FR", "IT")),
-            c_note="Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts de charge).",
+            c_note="Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts d'intérêts rapportés aux recettes).",
             p_lx="inflation moyenne %s-%s (IPCH)" % (an_3, an_1),
             p_ly="taux implicite : intérêts %s / dette fin %s" % (an, an_1),
             p_titre="Prix de la dette et inflation récente : l'Europe en %s" % an,
@@ -1468,7 +1468,7 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
     by = {x["code"]: x for x in rows}
     P = LOC[lang]["pct"]
     an_1 = str(int(an) - 1)
-    titres = {"fr": ("Même dette, charge différente : l'UE en %s" % an, "Prix de la dette et inflation récente, %s" % an,
+    titres = {"fr": ("Même dette, coût différent : l'UE en %s" % an, "Prix de la dette et inflation récente, %s" % an,
                      "Pression de refinancement, %s" % an, "Dette publique en % du PIB, fin " + an),
               "en": ("Same debt, different burden: the EU in %s" % an, "Average interest cost and recent inflation, %s" % an,
                      "Refinancing pressure, %s" % an, "Public debt as a % of GDP, end-" + an)}[lang]
@@ -1476,7 +1476,7 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
                  "Part de la dette à moins d'un an"),
           "en": ("Stock: debt end-%s / %s GDP" % (an_1, an), "Average inflation over the three previous years (HICP)",
                  "Share of debt due within a year")}[lang]
-    ly = {"fr": ("Charge : intérêts en % des recettes", "Taux implicite du stock", "Rendement à 10 ans − taux implicite"),
+    ly = {"fr": ("Intérêts en % des recettes", "Taux implicite du stock", "Rendement à 10 ans − taux implicite"),
           "en": ("Burden: interest as a % of revenue", "Implicit interest rate on the stock", "10-year yield − implicit rate")}[lang]
     infl = [x for x in rows if x["inflation"] is not None]
     trans = [x for x in rows if x["part_1an"] is not None and x["taux10"] is not None]

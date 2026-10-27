@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 604" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-m-t mc-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="mc-m-t">Même dette, charge différente : l'UE en 2025</title><desc id="mc-m-d">Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, charge très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. Charge : Hongrie 8,9 %, Slovénie 2,7 %, France 4,3 %, Italie 8,0 %.</desc>
+<title id="mc-m-t">Même dette, coût différent : l'UE en 2025</title><desc id="mc-m-d">Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, part des recettes consacrée aux intérêts très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. Intérêts en % des recettes : Hongrie 8,9 %, Slovénie 2,7 %, France 4,3 %, Italie 8,0 %.</desc>
 <rect width="300" height="604" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Même dette, charge</text>
-<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">différente : l'UE en 2025</text>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Même dette, coût différent :</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">l'UE en 2025</text>
 <circle cx="6.0" cy="83.0" r="5.0" fill="#184f95"/>
 <text x="16.0" y="88.0" font-size="13.5" fill="#52514e" text-anchor="start">zone euro</text>
 <rect x="145.5" y="78.5" width="9.0" height="9.0" fill="#eb6834"/>
 <text x="160.0" y="88.0" font-size="13.5" fill="#52514e" text-anchor="start">hors zone euro</text>
-<text x="0.0" y="110.0" font-size="13.5" fill="#898781" text-anchor="start">Charge : intérêts en % des recettes</text>
+<text x="0.0" y="110.0" font-size="13.5" fill="#898781" text-anchor="start">Intérêts en % des recettes</text>
 <line x1="40" y1="354.0" x2="292" y2="354.0" stroke="#c3c2b7"/>
 <text x="35.0" y="359.0" font-size="13.5" fill="#898781" text-anchor="end">0 %</text>
 <line x1="40" y1="308.0" x2="292" y2="308.0" stroke="#e1e0d9"/>
@@ -73,8 +73,8 @@
 <text class="pied-source" x="0" y="484.0" font-size="13.5" fill="#52514e">publiques S.13, monnaie nationale</text>
 <text class="pied-note" x="0" y="505.0" font-size="13.5" fill="#52514e">Pointillés : faux jumeaux (plus proche</text>
 <text class="pied-note" x="0" y="522.0" font-size="13.5" fill="#52514e">voisin en stock, écart inférieur à 10</text>
-<text class="pied-note" x="0" y="539.0" font-size="13.5" fill="#52514e">points, trois plus grands écarts de</text>
-<text class="pied-note" x="0" y="556.0" font-size="13.5" fill="#52514e">charge).</text>
+<text class="pied-note" x="0" y="539.0" font-size="13.5" fill="#52514e">points, trois plus grands écarts</text>
+<text class="pied-note" x="0" y="556.0" font-size="13.5" fill="#52514e">d'intérêts rapportés aux recettes).</text>
 <text class="pied-licence" x="0" y="577.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
 <text class="pied-licence" x="0" y="594.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

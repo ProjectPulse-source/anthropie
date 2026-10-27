@@ -11,62 +11,62 @@
 <text x="18.0" y="160.0" font-size="13.5" fill="#52514e" text-anchor="start">reçoit plus qu'il ne verse (à gauche)</text>
 <rect x="0" y="170.0" width="12" height="12" fill="#eb6834"/>
 <text x="18.0" y="180.0" font-size="13.5" fill="#52514e" text-anchor="start">verse plus qu'il ne reçoit (à droite)</text>
-<text x="0.0" y="207.0" font-size="13.5" fill="#898781" text-anchor="start">D1</text>
+<text x="0.0" y="207.0" font-size="13.5" fill="#898781" text-anchor="start">1er</text>
 <rect x="40.8" y="196.0" width="67.0" height="13" fill="#184f95"/>
-<text x="0.0" y="229.0" font-size="13.5" fill="#898781" text-anchor="start">D2</text>
+<text x="0.0" y="229.0" font-size="13.5" fill="#898781" text-anchor="start">2e</text>
 <rect x="36.0" y="218.0" width="71.8" height="13" fill="#184f95"/>
-<text x="0.0" y="251.0" font-size="13.5" fill="#898781" text-anchor="start">D3</text>
+<text x="0.0" y="251.0" font-size="13.5" fill="#898781" text-anchor="start">3e</text>
 <rect x="52.4" y="240.0" width="55.4" height="13" fill="#184f95"/>
-<text x="0.0" y="273.0" font-size="13.5" fill="#898781" text-anchor="start">D4</text>
+<text x="0.0" y="273.0" font-size="13.5" fill="#898781" text-anchor="start">4e</text>
 <rect x="63.7" y="262.0" width="44.1" height="13" fill="#184f95"/>
-<text x="0.0" y="295.0" font-size="13.5" fill="#898781" text-anchor="start">D5</text>
+<text x="0.0" y="295.0" font-size="13.5" fill="#898781" text-anchor="start">5e</text>
 <rect x="79.5" y="284.0" width="28.4" height="13" fill="#184f95"/>
-<text x="0.0" y="317.0" font-size="13.5" fill="#898781" text-anchor="start">D6</text>
+<text x="0.0" y="317.0" font-size="13.5" fill="#898781" text-anchor="start">6e</text>
 <rect x="88.2" y="306.0" width="19.7" height="13" fill="#184f95"/>
-<text x="0.0" y="339.0" font-size="13.5" fill="#898781" text-anchor="start">D7</text>
+<text x="0.0" y="339.0" font-size="13.5" fill="#898781" text-anchor="start">7e</text>
 <rect x="102.0" y="328.0" width="5.8" height="13" fill="#184f95"/>
-<text x="0.0" y="361.0" font-size="13.5" fill="#898781" text-anchor="start">D8</text>
+<text x="0.0" y="361.0" font-size="13.5" fill="#898781" text-anchor="start">8e</text>
 <rect x="107.8" y="350.0" width="17.1" height="13" fill="#eb6834"/>
-<text x="0.0" y="383.0" font-size="13.5" fill="#898781" text-anchor="start">D9</text>
+<text x="0.0" y="383.0" font-size="13.5" fill="#898781" text-anchor="start">9e</text>
 <rect x="107.8" y="372.0" width="41.6" height="13" fill="#eb6834"/>
-<text x="0.0" y="405.0" font-size="13.5" fill="#898781" text-anchor="start">D10</text>
+<text x="0.0" y="405.0" font-size="13.5" fill="#898781" text-anchor="start">10e</text>
 <rect x="107.8" y="394.0" width="188.2" height="13" fill="#eb6834"/>
 <line x1="107.8" y1="192.0" x2="107.8" y2="416.0" stroke="#52514e" stroke-width="1.2"/>
-<text x="0.0" y="438.0" font-size="13.5" fill="#52514e" text-anchor="start">D1</text>
+<text x="0.0" y="438.0" font-size="13.5" fill="#52514e" text-anchor="start">1er</text>
 <text x="42.0" y="438.0" font-size="13.5" fill="#184f95" text-anchor="start" font-weight="600">reçoit 20,8 de plus</text>
-<text x="0.0" y="460.0" font-size="13.5" fill="#52514e" text-anchor="start">D10</text>
+<text x="0.0" y="460.0" font-size="13.5" fill="#52514e" text-anchor="start">10e</text>
 <text x="42.0" y="460.0" font-size="13.5" fill="#eb6834" text-anchor="start" font-weight="600">verse 58,4 de plus</text>
 <line x1="0" y1="478.0" x2="300" y2="478.0" stroke="#c3c2b7"/>
 <text x="0.0" y="502.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">B · Part de personnes bénéficiaires</text>
 <text x="0.0" y="520.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">nettes</text>
-<text x="0.0" y="539.0" font-size="13.5" fill="#898781" text-anchor="start">D1</text>
+<text x="0.0" y="539.0" font-size="13.5" fill="#898781" text-anchor="start">1er</text>
 <rect x="36" y="528.0" width="197.2" height="13" fill="#184f95"/>
 <text x="239.2" y="539.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">99 %</text>
-<text x="0.0" y="561.0" font-size="13.5" fill="#898781" text-anchor="start">D2</text>
+<text x="0.0" y="561.0" font-size="13.5" fill="#898781" text-anchor="start">2e</text>
 <rect x="36" y="550.0" width="193.2" height="13" fill="#184f95"/>
 <text x="235.2" y="561.0" font-size="13.5" fill="#52514e" text-anchor="start">97 %</text>
-<text x="0.0" y="583.0" font-size="13.5" fill="#898781" text-anchor="start">D3</text>
+<text x="0.0" y="583.0" font-size="13.5" fill="#898781" text-anchor="start">3e</text>
 <rect x="36" y="572.0" width="173.2" height="13" fill="#184f95"/>
 <text x="215.2" y="583.0" font-size="13.5" fill="#52514e" text-anchor="start">87 %</text>
-<text x="0.0" y="605.0" font-size="13.5" fill="#898781" text-anchor="start">D4</text>
+<text x="0.0" y="605.0" font-size="13.5" fill="#898781" text-anchor="start">4e</text>
 <rect x="36" y="594.0" width="146.9" height="13" fill="#184f95"/>
 <text x="188.9" y="605.0" font-size="13.5" fill="#52514e" text-anchor="start">73 %</text>
-<text x="0.0" y="627.0" font-size="13.5" fill="#898781" text-anchor="start">D5</text>
+<text x="0.0" y="627.0" font-size="13.5" fill="#898781" text-anchor="start">5e</text>
 <rect x="36" y="616.0" width="106.9" height="13" fill="#184f95"/>
 <text x="148.9" y="627.0" font-size="13.5" fill="#52514e" text-anchor="start">53 %</text>
-<text x="0.0" y="649.0" font-size="13.5" fill="#898781" text-anchor="start">D6</text>
+<text x="0.0" y="649.0" font-size="13.5" fill="#898781" text-anchor="start">6e</text>
 <rect x="36" y="638.0" width="89.6" height="13" fill="#184f95"/>
 <text x="131.6" y="649.0" font-size="13.5" fill="#52514e" text-anchor="start">45 %</text>
-<text x="0.0" y="671.0" font-size="13.5" fill="#898781" text-anchor="start">D7</text>
+<text x="0.0" y="671.0" font-size="13.5" fill="#898781" text-anchor="start">7e</text>
 <rect x="36" y="660.0" width="71.5" height="13" fill="#184f95"/>
 <text x="113.5" y="671.0" font-size="13.5" fill="#52514e" text-anchor="start">36 %</text>
-<text x="0.0" y="693.0" font-size="13.5" fill="#898781" text-anchor="start">D8</text>
+<text x="0.0" y="693.0" font-size="13.5" fill="#898781" text-anchor="start">8e</text>
 <rect x="36" y="682.0" width="57.7" height="13" fill="#184f95"/>
 <text x="99.7" y="693.0" font-size="13.5" fill="#52514e" text-anchor="start">29 %</text>
-<text x="0.0" y="715.0" font-size="13.5" fill="#898781" text-anchor="start">D9</text>
+<text x="0.0" y="715.0" font-size="13.5" fill="#898781" text-anchor="start">9e</text>
 <rect x="36" y="704.0" width="49.8" height="13" fill="#184f95"/>
 <text x="91.8" y="715.0" font-size="13.5" fill="#52514e" text-anchor="start">25 %</text>
-<text x="0.0" y="737.0" font-size="13.5" fill="#898781" text-anchor="start">D10</text>
+<text x="0.0" y="737.0" font-size="13.5" fill="#898781" text-anchor="start">10e</text>
 <rect x="36" y="726.0" width="36.5" height="13" fill="#184f95"/>
 <text x="78.5" y="737.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">18 %</text>
 <line x1="0" y1="760.0" x2="300" y2="760.0" stroke="#e1e0d9"/>
