@@ -1,5 +1,6 @@
 ---
 title: "Resources — Data, explainers and reference material"
+date: 2026-09-28  # mise en ligne de l'index (commit c664bc2) ; la date de mise à jour se déduit des ressources (page-date.html)
 description: "The figures of public debate often circulate without their source or method. The dossiers take them back to the official series and texts, recalculate them and say what they show and what they do not. In a separate space, the author’s analytical framework is set out, with its concepts and documentary tools."
 url: /en/resources/
 # Same mechanism as the French index: presence comes from each page's `ressource` block.

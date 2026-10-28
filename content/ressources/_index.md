@@ -1,5 +1,6 @@
 ---
 title: "Ressources — données, dossiers et repères"
+date: 2026-09-28  # mise en ligne de l'index (commit c664bc2) ; la date de mise à jour se déduit des ressources (page-date.html)
 description: "Les chiffres du débat public circulent souvent sans leur source ni leur méthode. Les dossiers les reprennent aux séries officielles et aux textes, les recalculent et disent ce qu'ils montrent et ce qu'ils ne montrent pas : dette publique, école, institutions. Dans un espace distinct, l'auteur présente son cadre d'analyse, ses notions et ses outils documentaires."
 # Index éditorial. La PRÉSENCE vient des pages elles-mêmes : une page entre ici en déclarant
 # `ressource.bloc` dans son front matter (layouts/ressources/list.html). Ce fichier ne porte

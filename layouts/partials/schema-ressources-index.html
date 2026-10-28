@@ -1,0 +1,32 @@
+{{- /* Balisage de l'index /ressources/ et /en/resources/ (28/10/2026, audit GEO des ressources) : CollectionPage dont
+       l'entité principale est la liste des ressources, dans l'ordre de l'index (blocs de content/ressources/_index*.md,
+       puis `ressource.rang`). Même sélection que layouts/ressources/list.html : la PRÉSENCE vient des pages (règle de
+       surface du 11/08), rien n'est énuméré ici. Date : page-date.html, la même source que le sitemap. Les pages
+       françaises listées « in French » sur l'index anglais n'y entrent pas : la liste décrit les pages de la langue. */ -}}
+{{- $p := . -}}
+{{- $d := partial "page-date.html" $p -}}
+{{- $a := site.Data.author.author -}}
+{{- $items := slice -}}
+{{- range $p.Params.blocs -}}
+  {{- $id := .id -}}
+  {{- range sort (where $p.Site.Pages "Params.ressource.bloc" $id) "Params.ressource.rang" -}}
+    {{- $titre := partial "desc-figures.html" (dict "text" (.Params.ressource.intitule | default .Title)) | htmlUnescape -}}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" (add (len $items) 1) "url" .Permalink "name" $titre) -}}
+  {{- end -}}
+{{- end -}}
+{{- $node := dict
+    "@context" "https://schema.org"
+    "@type" "CollectionPage"
+    "@id" (printf "%s#page" $p.Permalink)
+    "url" $p.Permalink
+    "name" (partial "desc-figures.html" (dict "text" $p.Title) | htmlUnescape)
+    "inLanguage" $p.Language.Lang
+    "author" (dict "@type" "Person" "@id" $a.canonicalProfileUrl "name" $a.name "url" (replace $a.canonicalProfileUrl "#person" ""))
+    "isAccessibleForFree" true
+    "mainEntity" (dict "@type" "ItemList" "numberOfItems" (len $items) "itemListElement" $items) -}}
+{{- with $p.Description -}}{{- $node = merge $node (dict "description" (partial "desc-figures.html" (dict "text" .) | htmlUnescape)) -}}{{- end -}}
+{{- if not $d.pub.IsZero -}}{{- $node = merge $node (dict "datePublished" ($d.pub.Format "2006-01-02")) -}}{{- end -}}
+{{- if not $d.mod.IsZero -}}{{- $node = merge $node (dict "dateModified" ($d.mod.Format "2006-01-02")) -}}{{- end -}}
+<script type="application/ld+json">
+{{ $node | jsonify (dict "indent" "  ") | safeJS }}
+</script>

@@ -24,6 +24,18 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+{{- /* Index /ressources/ et /en/resources/ (28/10/2026) : la page AGRÈGE les pages qui déclarent `ressource.bloc` (même
+       sélection que layouts/ressources/list.html) ; sa date est la plus récente de leurs dates de fond. Avant, les deux
+       index n'avaient ni lastmod au sitemap ni dateModified, et Google ne les avait jamais explorés (inspection du 28/10). */ -}}
+{{- if and $p.IsSection (eq $p.Type "ressources") -}}
+  {{- range where $p.Site.Pages "Params.ressource.bloc" "!=" nil -}}
+    {{- $m := (partial "page-date.html" .).mod -}}
+    {{- if not $m.IsZero -}}
+      {{- if $m.After $lm -}}{{- $lm = $m -}}{{- end -}}
+      {{- $fond = $fond | append ($m.Format "2006-01-02") -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- with union ($p.Params.donnees | default slice) ($p.Params.date_suit | default slice) -}}
   {{- range . -}}
     {{- $t := time (partial "jeu-date.html" (dict "nom" . "page" $p.File.Path)) -}}

@@ -43,6 +43,9 @@
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
     {{ with .Description }}<p class="page-header__lede">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    {{- /* Date de l'index (28/10/2026) : celle de la ressource la plus récemment modifiée (page-date.html), la même que
+           le sitemap et le balisage CollectionPage -- check-dates-build.py exige les trois canaux. */}}
+    {{ partial "page-date-visible.html" . }}
   </header>
 
   <div class="ressources-index__intro">{{ .Content }}</div>

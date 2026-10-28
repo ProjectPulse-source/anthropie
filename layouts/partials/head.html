@@ -134,6 +134,11 @@
   {{- partial "schema-page-ressource.html" . -}}
 {{ end }}
 
+<!-- Schema.org CollectionPage + ItemList de l'index des ressources (2026-10-28) -->
+{{ if and .IsSection (eq .Type "ressources") }}
+  {{- partial "schema-ressources-index.html" . -}}
+{{ end }}
+
 <!-- Schema.org FAQ -->
 {{ if .Params.faq }}
   {{- partial "schema-faqpage.html" . -}}

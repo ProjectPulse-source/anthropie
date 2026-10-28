@@ -52,6 +52,24 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-28 — Audit GEO des ressources : maillage de la notion anglaise, index datés et balisés
+
+Audit des 68 pages reliées depuis `/ressources/` et `/en/resources/` (HTML servi, sitemaps, inspection Search Console
+URL par URL, 90 jours de performances, export Bing AI Performance). Technique servie sans défaut (canonical, hreflang
+réciproques, sitemap et dateModified concordants, robots et serveur ouverts aux robots d'IA, essai réel) ; 59 URL sur 69
+indexées par Google, dont aucune des notions FR `communs-negatifs`, `chercheur-independant`, `effet-rebond`, ni l'index
+FR (« détectée, non indexée »). 77 % des impressions des ressources (42 418 sur 55 436) vont à `/en/quest-ce-que-lanthropie/`.
+- **Maillage** : la notion anglaise, page la plus vue du site, ne renvoyait pas à `/en/negative-commons/`,
+  `/en/technological-debt/` ni `/en/rebound-effect/` (cette dernière non indexée) ; phrase périmée « Three pages extend
+  the framework in English » remplacée par l'énumération du français. FR : virgule manquante ; « ?. » retirés (le point
+  d'interrogation d'un titre final tient lieu de point), défaut vu par `check-rendu-ressources.py`.
+- **Index** : `date: 2026-09-28` (commit c664bc2) ; date de mise à jour = la plus récente des ressources listées
+  (`page-date.html`) ; ligne visible, `lastmod` et balisage `CollectionPage` + `ItemList`
+  (`partials/schema-ressources-index.html`, même sélection que l'index). Témoin : URL du balisage = liens affichés, FR et EN.
+- Vérifié : build `$?` = 0 ; `check-dates-build.py` 71/71 (2 défauts avant la ligne visible : vu mordre) ;
+  `audit-liens-build.py` 0 critique ; `check-all --reseau` sans échec (Wikidata 503, non conclu).
+- **Ouvert, geste de l'auteur** : demander l'indexation dans Search Console des 9 URL ignorées.
+
 ### 2026-10-26 (suite 7) — G2 : contre-expertise arbitrée et appliquée
 
 Réponse reçue hors navette (`Ressources++-02.txt`, SHA-256 `c1b8e19b…3362`, archivée avant lecture), arbitrage

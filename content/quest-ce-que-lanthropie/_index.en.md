@@ -232,7 +232,7 @@ The framework does not provide a single answer to these questions. It provides a
 
 {{< arc-awp >}}
 
-Three pages extend the framework in English: [What is the anthropic loop?](/en/anthropic-loop/), [What is social reversibility?](/en/social-reversibility/) and [The Register of Offloaded Costs](/en/register-of-offloaded-costs/) — the book's documentary apparatus, fully browsable milestone by milestone across the seven ages.
+Several pages extend the framework to its fields of application: [What is technological debt?](/en/technological-debt/), [Who really pays public debt?](/en/who-really-pays-public-debt/), [What is the rebound effect (Jevons paradox)?](/en/rebound-effect/), [What is the anthropic loop?](/en/anthropic-loop/), [What is social reversibility?](/en/social-reversibility/) and [What are negative commons?](/en/negative-commons/) The application of the framework to long-run history is documented milestone by milestone in [The Register of Offloaded Costs](/en/register-of-offloaded-costs/), the book's documentary apparatus, freely browsable across the seven ages. These pages, the public-debt data and the guides are gathered in the [Resources](/en/resources/).
 
 ## The book
 
