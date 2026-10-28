@@ -55,26 +55,34 @@ jobs:
 
       # SVG et PNG ensemble ou pas du tout (30/09, figures reutilisables) : le generateur echoue sans cairosvg,
       # pour qu'aucun PNG ancien ne soit jamais offert au telechargement a cote d'un SVG neuf.
-      - name: Rapatrier, calculer, valider (gardes dures et gardes de prose, exit 1 si echec)
+      # Un jeu en echec n'arrete plus les autres (28/10/2026) : sous `bash -e`, l'attente du Danemark par update_dette_monde.py
+      # (recettes 2024-2025 retirees par Eurostat le 21/10) bloquait depuis les six jeux suivants. Chaque script n'ecrit
+      # rien quand il echoue ; le suivant lit alors la derniere version valide. L'echec reste signale en fin de job.
+      - name: Rapatrier, calculer, valider (gardes dures et gardes de prose ; un jeu en echec n'arrete pas les autres)
+        id: calc
         run: |
+          echecs=""
           python3 -m pip install --quiet cairosvg==2.9.0 openpyxl==3.1.5 pyyaml  # pyyaml : gardes de texte de update_dette_generations.py (11/10/2026)
-          python3 scripts/update_dette_monde.py
+          python3 scripts/update_dette_monde.py || echecs="$echecs dette_monde"
           # Volet « Pourquoi la dette augmente » (30/09) : memes sources Eurostat annuelles, meme cadence.
-          python3 scripts/update_dette_dynamique.py
+          python3 scripts/update_dette_dynamique.py || echecs="$echecs dette_dynamique"
           # Volet « La dette peut-elle baisser » (02/10) : memes series ; lit data/dette_dynamique.json, donc APRES lui.
-          python3 scripts/update_dette_baisse.py
+          python3 scripts/update_dette_baisse.py || echecs="$echecs dette_baisse"
           # Prolongement « Generations futures » (03/10) : memes series Eurostat, plus la BCE (GFS) et deux pieces archivees
           # (DSM de la Commission, COR) verifiees par leur empreinte ; mise a jour des pieces a la main (en-tete du script).
-          python3 scripts/update_dette_generations.py
+          python3 scripts/update_dette_generations.py || echecs="$echecs dette_generations"
           # Page « Qui peut faire face a une depense imprevue ? » (26/10/2026) : Eurostat EU-SILC (ilc_mdes04), annuelle ;
           # meme cadence hebdomadaire, qui la prend des sa publication. Independante des jeux de la dette.
-          python3 scripts/update_menages_imprevu.py
+          python3 scripts/update_menages_imprevu.py || echecs="$echecs menages_imprevu"
           # Page « Dechets radioactifs » (26/10/2026) : Inventaire national de l'Andra (data.gouv), annuel ; le script ne
           # telecharge rien si le catalogue n'a pas change (date de modification data.gouv comparee a la sienne).
-          python3 scripts/update_dechets_radioactifs.py
+          python3 scripts/update_dechets_radioactifs.py || echecs="$echecs dechets_radioactifs"
           # Page « L'economie mondiale se decouple-t-elle de l'energie ? » (26/10/2026) : EIA (fichier groupe INTL.zip,
           # sans cle), temoin Energy Institute (depot owid/energy-data) et Banque mondiale ; annuelles, cadence hebdomadaire.
-          python3 scripts/update_decouplage.py
+          python3 scripts/update_decouplage.py || echecs="$echecs decouplage"
+
+          echo "echecs=$echecs" >> "$GITHUB_OUTPUT"
+          [ -z "$echecs" ] || echo "::warning::Jeux en echec :$echecs -- les autres sont publies"
 
       # Carte de partage de la page (30/09) : elle imprime la paire de faux jumeaux et leurs chiffres, lus
       # dans data/dette_monde.json. Redessinee dans le meme geste que les donnees, sinon elle mentirait
@@ -186,9 +194,16 @@ jobs:
           fi
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
+      - name: Signaler les jeux en echec (le job echoue, donc l'issue `alerte`)
+        if: steps.calc.outputs.echecs != ''
+        run: |
+          echo "::error::Jeux non mis a jour :${{ steps.calc.outputs.echecs }} -- voir l'etape de calcul"
+          exit 1
+
   deploy:
     needs: update
-    if: needs.update.outputs.changed == 'true'
+    # !cancelled() : les jeux publies se deploient meme quand un autre jeu a fait echouer le job (28/10/2026).
+    if: ${{ !cancelled() && needs.update.outputs.sha != '' }}
     permissions:
       contents: read
       pages: write
