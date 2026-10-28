@@ -79,7 +79,15 @@ def figures(h: str, build: Path) -> list[str]:
     for nom in sorted(set(_IMG.findall(main))):
         if nom.endswith("-m"):
             continue
-        if not re.search(r"<source\b[^>]*\bsrcset=\"?(?:https?://[^/\s\"]+)?/img/%s-m\.svg" % re.escape(nom), main):
+        # Version téléphone : `/img/X-m.svg` (figures de données), ou toute autre source SVG sous condition de largeur dans
+        # le <picture> de la figure (schémas : boucle-anthropique-desktop / -mobile, 28/10/2026 ; l'inventaire disait
+        # « pas de version téléphone » d'une figure qui en servait une depuis mai).
+        pic = re.search(r"<picture\b(?:(?!</picture>).)*?/img/%s\.svg(?:(?!</picture>).)*</picture>" % re.escape(nom), main, re.S)
+        autre = pic and any(
+            (build / "img" / (alt + ".svg")).is_file()  # SERVIE : le fichier existe dans le site construit
+            for src in re.findall(r"<source\b[^>]*>", pic.group(0)) if re.search(r"\bmedia=\"?\(max-width", src)
+            for alt in re.findall(r"/img/([^\"\s>,]+?)\.svg", src) if alt != nom)
+        if not autre and not re.search(r"<source\b[^>]*\bsrcset=\"?(?:https?://[^/\s\"]+)?/img/%s-m\.svg" % re.escape(nom), main):
             out.append("figure %s : pas de version telephone servie (/img/%s-m.svg dans un <picture>)" % (nom, nom))
         svg = build / "img" / (nom + ".svg")
         if svg.is_file() and not re.search(r"class=\"?pied-(?:source|note|licence)", svg.read_text(encoding="utf-8", errors="replace")):
