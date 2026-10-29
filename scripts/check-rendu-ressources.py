@@ -80,7 +80,7 @@ def figures(h: str, build: Path) -> list[str]:
         if nom.endswith("-m"):
             continue
         # Version téléphone : `/img/X-m.svg` (figures de données), ou toute autre source SVG sous condition de largeur dans
-        # le <picture> de la figure (schémas : boucle-anthropique-desktop / -mobile, 28/10/2026 ; l'inventaire disait
+        # le <picture> de la figure (schémas : boucle anthropique, bureau / téléphone, 28/10/2026 ; l'inventaire disait
         # « pas de version téléphone » d'une figure qui en servait une depuis mai).
         pic = re.search(r"<picture\b(?:(?!</picture>).)*?/img/%s\.svg(?:(?!</picture>).)*</picture>" % re.escape(nom), main, re.S)
         autre = pic and any(
