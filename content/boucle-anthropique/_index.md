@@ -1,6 +1,6 @@
 ---
 title: "Qu'est-ce que la boucle anthropique ?"
-description: "La boucle anthropique formalise le cycle du déplacement du désordre en cinq moments : déplacement, accumulation, saturation, retour, re-déplacement. Elle prolonge le cost-shifting de K. William Kapp et se distingue de la néguanthropie de Bernard Stiegler."
+description: "La boucle anthropique formalise le cycle du déplacement du désordre en cinq moments : déplacement, accumulation, saturation, retour, bifurcation. Elle prolonge le cost-shifting de K. William Kapp et se distingue de la néguanthropie de Bernard Stiegler."
 date: 2026-07-24
 lastmod: 2026-07-24
 og_title: "Qu'est-ce que la boucle anthropique ? — définition et sources — S. Lalut"
@@ -28,7 +28,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   court: "Boucle"
 ---
 
-La boucle anthropique décrit le cycle complet du déplacement du désordre par les systèmes sociaux&nbsp;: déplacement, accumulation, saturation, retour, re-déplacement. Elle est formalisée par l'économiste Stéphane Lalut dans le working paper [AWP-07](/awp/awp-07/) (2026), en dialogue explicite avec le *cost-shifting* de K.&nbsp;William Kapp, la bioéconomie de Nicholas Georgescu-Roegen et la néguanthropie de Bernard Stiegler.
+La boucle anthropique décrit le cycle complet du déplacement du désordre par les systèmes sociaux&nbsp;: déplacement, accumulation, saturation, retour, bifurcation. Elle est formalisée par l'économiste Stéphane Lalut dans le working paper [AWP-07](/awp/awp-07/) (2026), en dialogue explicite avec le *cost-shifting* de K.&nbsp;William Kapp, la bioéconomie de Nicholas Georgescu-Roegen et la néguanthropie de Bernard Stiegler.
 
 ## Les cinq moments de la boucle
 
@@ -37,8 +37,8 @@ Un système social — institution, économie, territoire — produit son ordre 
 1. **E1 — Déplacement**&nbsp;: le désordre est exporté vers un réceptacle — un ailleurs spatial, temporel ou social.
 2. **E2 — Accumulation**&nbsp;: la charge s'y dépose et s'y additionne, d'abord sans bruit.
 3. **E3 — Saturation**&nbsp;: le réceptacle atteint sa capacité&nbsp;; le coût marginal du transfert croît, les signaux remontent.
-4. **E4 — Retour**&nbsp;: le désordre revient vers le système émetteur — rarement sous la forme sous laquelle il avait été exporté.
-5. **E5 — Re-déplacement**&nbsp;: le système déplace vers un nouveau réceptacle, ou se reconfigure.
+4. **E4 — Retour**&nbsp;: le désordre peut revenir vers le système émetteur — rarement sous la forme sous laquelle il avait été exporté. Ce retour n'est pas automatique.
+5. **E5 — Bifurcation**&nbsp;: le système re-déplace vers un nouveau réceptacle, se reconfigure, ou s'effondre en partie.
 
 {{< boucle-anthropique >}}
 

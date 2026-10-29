@@ -1,7 +1,7 @@
 ---
 title: "What is the anthropic loop?"
 url: /en/anthropic-loop/
-description: "The anthropic loop formalises the cycle of disorder displacement in five moments: displacement, accumulation, saturation, return, re-displacement. It extends K. William Kapp's cost-shifting and is distinct from Bernard Stiegler's neganthropy — and from the AI company Anthropic."
+description: "The anthropic loop formalises the cycle of disorder displacement in five moments: displacement, accumulation, saturation, return, bifurcation. It extends K. William Kapp's cost-shifting and is distinct from Bernard Stiegler's neganthropy — and from the AI company Anthropic."
 date: 2026-07-24
 lastmod: 2026-07-24
 og_title: "What is the anthropic loop? — definition, origins and sources — S. Lalut"
@@ -29,7 +29,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   court: "Loop"
 ---
 
-The anthropic loop describes the complete cycle of disorder displacement by social systems: displacement, accumulation, saturation, return, re-displacement. It is formalised by economist Stéphane Lalut in the working paper [AWP-07](/en/awp/awp-07/) (2026), in explicit dialogue with K. William Kapp's *cost-shifting*, Nicholas Georgescu-Roegen's bioeconomics and Bernard Stiegler's neganthropy.
+The anthropic loop describes the complete cycle of disorder displacement by social systems: displacement, accumulation, saturation, return, bifurcation. It is formalised by economist Stéphane Lalut in the working paper [AWP-07](/en/awp/awp-07/) (2026), in explicit dialogue with K. William Kapp's *cost-shifting*, Nicholas Georgescu-Roegen's bioeconomics and Bernard Stiegler's neganthropy.
 
 ## The five moments of the loop
 
@@ -38,8 +38,8 @@ A social system — an institution, an economy, a territory — produces its ord
 1. **E1 — Displacement**: disorder is exported toward a receptacle — a spatial, temporal or social elsewhere.
 2. **E2 — Accumulation**: the charge settles and adds up, quietly at first.
 3. **E3 — Saturation**: the receptacle reaches capacity; the marginal cost of the transfer rises, signals travel back.
-4. **E4 — Return**: disorder comes back toward the emitting system — rarely in the form in which it was exported.
-5. **E5 — Re-displacement**: the system displaces toward a new receptacle, or reconfigures itself.
+4. **E4 — Return**: disorder may come back toward the emitting system — rarely in the form in which it was exported. The return is not automatic.
+5. **E5 — Bifurcation**: the system re-displaces toward a new receptacle, reconfigures itself, or partly collapses.
 
 {{< boucle-anthropique >}}
 

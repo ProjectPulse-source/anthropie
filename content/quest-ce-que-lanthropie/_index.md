@@ -39,7 +39,7 @@ frontiere:
     - texte: "Ce transfert a un mécanisme que l'on peut nommer : qui crée l'ordre, qui absorbe le désordre, et ce qui rend le transfert invisible."
       ancre: "les-trois-questions-fondamentales"
       section: "Les trois questions"
-    - texte: "Le désordre déplacé peut s'accumuler, saturer et revenir : déplacement, accumulation, saturation, retour, re-déplacement."
+    - texte: "Le désordre déplacé peut s'accumuler, saturer et revenir : déplacement, accumulation, saturation, retour, bifurcation."
       ancre: "les-trois-axes-de-transfert"
       section: "Les trois axes"
     - texte: "Il se donne des critères observables — coût marginal croissant du transfert, effet boomerang — pour dire quand un espace de déportation sature."
@@ -112,7 +112,7 @@ Dans le métaprogramme numérique contemporain, les trois axes atteignent un ré
 
 {{< boucle-anthropique >}}
 
-Cette boucle — déplacement, accumulation, saturation, retour, re-déplacement — est présentée sur la page [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) et formalisée dans [AWP-07 — *La boucle anthropique*](/awp/awp-07/), qui en donne les définitions, les états et les conditions de réfutation.
+Cette boucle — déplacement, accumulation, saturation, retour, bifurcation — est présentée sur la page [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) et formalisée dans [AWP-07 — *La boucle anthropique*](/awp/awp-07/), qui en donne les définitions, les états et les conditions de réfutation.
 
 ## Notions voisines {#notions-voisines}
 

@@ -53,7 +53,7 @@ frontiere:
     - texte: "This transfer has a mechanism that can be named: who creates order, who absorbs disorder, and what makes the transfer invisible."
       ancre: "the-three-fundamental-questions"
       section: "The three questions"
-    - texte: "Displaced disorder can accumulate, saturate and return: displacement, accumulation, saturation, return, re-displacement."
+    - texte: "Displaced disorder can accumulate, saturate and return: displacement, accumulation, saturation, return, bifurcation."
       ancre: "the-three-axes-of-transfer"
       section: "The three axes"
     - texte: "It gives itself observable criteria — rising marginal cost of transfer, boomerang effect — to say when a displacement space saturates."
@@ -126,7 +126,7 @@ In the contemporary digital metaprogram, the three axes reach a receptacle that 
 
 {{< boucle-anthropique >}}
 
-This loop — displacement, accumulation, saturation, return, re-displacement — is formalised in [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/), which provides its definitions, states, and conditions of refutation.
+This loop — displacement, accumulation, saturation, return, bifurcation — is formalised in [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/), which provides its definitions, states, and conditions of refutation.
 
 ## Neighbouring notions {#neighbouring-notions}
 
