@@ -1,19 +1,27 @@
 {{/*
   Boucle anthropique — figure responsive bilingue : la spirale (croquis de l'auteur, 29/10/2026 ;
   generateur : WORKING PAPERS/AWP-07/REVISION_V2/21_MAQUETTE_SITE/spirale.py, arbitrage 28 d'AWP-07 v2).
-  Remplace la lemniscate (boucle-anthropique-*.svg) sur les deux pages qui appellent ce partial.
+  Remplace la lemniscate (boucle-anthropique-*.svg, fichiers retires le 29/10) sur les deux pages qui appellent ce partial.
   Bascule langue   : .Lang (fr par defaut / en si "en")
   Bascule viewport : <picture> source telephone <= 768px (cadre etroit, corps plus grands, notes dans la legende)
   Accessibilite    : alt = description complete ; prefers-reduced-motion respecte dans les SVG (point circulant)
-  Context attendu  : Page (depuis un layout ou via .Page dans un shortcode)
+  Legende          : une seule explication, dans la page (les notes ont quitte l'image, 29/10) ; "renvoi" = forme courte
+  Context attendu  : dict "page" (Page) "legende" ("" ou "renvoi"), depuis le shortcode
 */}}
-{{- $isEn := eq .Lang "en" -}}
+{{- $isEn := eq .page.Lang "en" -}}
+{{- $renvoi := eq .legende "renvoi" -}}
 {{- $desktop := cond $isEn "/img/figures/spirale-anthropique-desktop-en.svg" "/img/figures/spirale-anthropique-desktop.svg" -}}
 {{- $mobile  := cond $isEn "/img/figures/spirale-anthropique-mobile-en.svg"  "/img/figures/spirale-anthropique-mobile.svg" -}}
-{{- $caption := "La boucle anthropique en spirale. Chaque tour est une itération, et sa sortie entre dans E1 du tour suivant. Le dernier, seul en clair, suit les cinq états ; chaque passage est conditionnel : le retour peut ne pas venir, la charge peut être internalisée. Les tours pâles sont des itérations antérieures : ils ne prédisent pas la suivante, et pâle veut dire ancien, pas effacé." -}}
+{{- $caption := "La spirale se lit de bas en haut. Les tours pâles sont des itérations passées, chacune achevée par un nouveau déplacement ; pâles parce qu’anciennes, leurs charges peuvent encore peser. Le tour en clair suit les cinq états de l’itération en cours, et chaque passage en tirets peut ne pas avoir lieu. E1′ n’existera que si le système déplace de nouveau." -}}
+{{- if $renvoi -}}
+  {{- $caption = "La boucle anthropique en spirale : en clair, les cinq états de l’itération en cours ; en pâle, les itérations passées." -}}
+{{- end -}}
 {{- $alt := "Spirale montante formée d'une seule ligne en boucles empilées. Le tour du haut, seul en clair, porte les cinq états : E1 Déplacement, E2 Accumulation, E3 Saturation, E4 Retour, E5 Bifurcation, reliés par des transitions conditionnelles, avec un arrêt possible du transfert et un retour précoce vers l'émetteur S. Les deux tours inférieurs, de plus en plus pâles, sont les itérations antérieures ; la ligne se termine en haut sur E1′, une itération suivante possible." -}}
 {{- if $isEn -}}
-  {{- $caption = "The anthropic loop as a spiral. Each turn is an iteration, and its exit enters E1 of the next turn. The last one, the only one in full, follows the five states; each passage is conditional: the return may not come, the load may be internalised. The faint turns are earlier iterations: they do not predict the next one, and faint means old, not erased." -}}
+  {{- $caption = "The spiral reads from the bottom up. The faint turns are past iterations, each ended by a new displacement; faint because old, their loads may still weigh. The turn in full follows the five states of the current iteration, and any dashed passage may fail to happen. E1′ will exist only if the system displaces again." -}}
+  {{- if $renvoi -}}
+    {{- $caption = "The anthropic loop as a spiral: in full, the five states of the current iteration; faint, the past iterations." -}}
+  {{- end -}}
   {{- $alt = "A rising spiral drawn as a single line in stacked loops. The top turn, the only one in full, carries the five states: E1 Displacement, E2 Accumulation, E3 Saturation, E4 Return, E5 Bifurcation, linked by conditional transitions, with a possible transfer arrest and an early return towards the emitter S. The two lower, increasingly faint turns are earlier iterations; the line ends at the top in E1′, a possible next iteration." -}}
 {{- end -}}
 <figure class="figure-boucle-anthropique">
