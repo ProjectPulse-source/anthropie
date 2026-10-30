@@ -52,6 +52,40 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-30 — Spirale de la boucle : quatre lectures, deux échelles, accueil et définition ; AWP-02 v1.1
+
+Trois contre-expertises arbitrées (pièces archivées avec SHA-256 et arbitrages 30, 32 et 35 dans
+`D:\PRO\WORKING PAPERS\AWP-07\REVISION_V2\`) ; chaque lot EN LIGNE, déploiement vert, version servie attestée FR et EN.
+- **Quatre lectures** (`f15f1c9`) : boutons Rome, Dette publique, Environnement, Numérique sur `/boucle-anthropique/`
+  (`data/boucle_exemples.yaml`, `static/js/boucle-exemples.js`, 16 SVG du générateur `spirale.py`). Les tirets gardent
+  le sens du schéma (transition conditionnelle) ; le niveau de preuve est codé à part (documenté / « ? » / non évalué) ;
+  aucun tour passé dessiné sans preuve ; énergie en second brin actif. Page AWP-03 (FR, EN, corps et FAQ) : l'asymétrie
+  sociale présentée comme hypothèse, conformément à AWP-09.
+- **Option E** (`9016046`) : la vue d'ensemble est un modèle conditionnel, E5 dessine ses trois sorties ; bouton Dette,
+  encart « Sur la durée, et de près » calculé depuis `data/dette_dynamique.json` (`partials/figures/boucle-dette-echelles.html`,
+  gardes de prose vues mordre par mutation du jeu) ; `date_suit: [dette_dynamique]` déclaré.
+- **Présence de la spirale** (`b9441fa`) : accueil, double lemniscate retirée (partial, styles, deux SVG) et prolongement
+  des trois axes vers la boucle (vignette statique) ; `/quest-ce-que-lanthropie/`, spirale juste après les trois axes,
+  clé des cinq états au conditionnel, accès aux cas, sans boutons ; tours pâles = itérations possibles figurées
+  schématiquement.
+- **AWP-02 v1.1** (`9603027`, `8fbe666`, `d289459`) : publiée sur Zenodo, FR 10.5281/zenodo.23807981, EN 23807982
+  (numérotation des configurations alignée sur le tableau 1 et le plan) ; fiches, `data/works.yaml`, paire de
+  `zenodo_audit_complet.py` (0 bloquant sur 19 records) ; Wikidata Q139771990, deux liens Zenodo v1.1 (lot de Laura,
+  readback API, `check-wikidata-registre.py` 23 ↔ 23).
+- Vérifié à chaque lot : build `$?` = 0 ; `check-all --ci` 0 ; `audit-liens-build.py` 0 critique ; boutons 2 pages ×
+  4 largeurs × 5 boutons, 0 défaut ; balayage 8 pages × 4 largeurs (320 à 1280 px), 0 défaut.
+- **Décision de l'auteur** : pas de mesure des clics sur les boutons ; la circulation se lit dans GoatCounter, bilan au
+  30/12/2026.
+- **Ouvert** : AWP-07 v2, reprise de P6 prête et non appliquée, en attente du retour de Jessop
+  (`REVISION_V2/33_REVISION_P6_EN_ATTENTE_RETOUR_JESSOP.md`) ; la page `/awp/awp-07/` (« deux corollaires ») ne change
+  qu'au dépôt de la v2 ; test de compréhension auprès de lecteurs réels (décision de l'auteur).
+
+### 2026-10-29 — Figure de la boucle en spirale (AWP-07 v2), FR et EN, téléphone
+
+- `8e96454`, `76381ef`, `9f718f4` : la spirale (générateur `WORKING PAPERS/AWP-07/REVISION_V2/21_MAQUETTE_SITE/spirale.py`)
+  remplace la lemniscate sur `/boucle-anthropique/` (forme complète) et `/quest-ce-que-lanthropie/` (forme courte) ;
+  anciens SVG retirés ; légende sans redite.
+
 ### 2026-10-28 — Audit GEO des ressources : maillage de la notion anglaise, index datés et balisés
 
 Audit des 68 pages reliées depuis `/ressources/` et `/en/resources/` (HTML servi, sitemaps, inspection Search Console
