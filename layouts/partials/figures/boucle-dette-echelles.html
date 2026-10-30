@@ -1,0 +1,34 @@
+{{/*
+  Encart « sur la duree, et de pres » du bouton Dette de la spirale (option E, contre-expertise jessop-11, 30/10/2026 ;
+  arbitrage WORKING PAPERS/AWP-07/REVISION_V2/32_ARBITRAGE_DEUX_NIVEAUX_JESSOP11_2026-10-30.md).
+  Tout chiffre est calcule ici depuis data/dette_dynamique.json (decomposition annuelle de la variation du ratio,
+  generateur scripts/update_dette_dynamique.py) : rien n'est saisi a la main, l'encart suit chaque mise a jour.
+  Gardes : chaque qualificatif de la phrase est une condition sur les donnees ; si l'une cesse d'etre vraie, le build
+  s'arrete (phrase a reecrire, garde a ne pas desserrer).
+  Context attendu : booleen isEn.
+*/}}
+{{- $isEn := . -}}
+{{- $an := site.Data.dette_dynamique.annees -}}
+{{- $n := len $an -}}
+{{- $cum := 0.0 -}}{{- $baisses := 0 -}}{{- $int := 0.0 -}}{{- $cro := 0.0 -}}{{- $sp := 0.0 -}}
+{{- range $an -}}
+  {{- $cum = add $cum .variation -}}
+  {{- if le .variation 0 }}{{ $baisses = add $baisses 1 }}{{ end -}}
+  {{- $int = add $int .effet_interets -}}
+  {{- $cro = add $cro .effet_croissance -}}
+  {{- $sp = add $sp .contribution_solde_primaire -}}
+{{- end -}}
+{{- $a0 := sub (index $an 0).annee 1 -}}
+{{- $a1 := (index $an (sub $n 1)).annee -}}
+{{- /* gardes de prose */ -}}
+{{- if le $cum 0.0 }}{{ errorf "boucle-dette-echelles : « le ratio a gagné » n'est plus vrai (cumul %v)" $cum }}{{ end -}}
+{{- if lt $baisses 2 }}{{ errorf "boucle-dette-echelles : « malgré N années de baisse » (pluriel) n'est plus vrai (%v)" $baisses }}{{ end -}}
+{{- if or (le $int 0.0) (ge $cro 0.0) }}{{ errorf "boucle-dette-echelles : les signes « intérêts + / croissance − » ont changé" }}{{ end -}}
+{{- if gt (math.Abs (add $int $cro)) (mul 0.1 $cum) }}{{ errorf "boucle-dette-echelles : « se compensent presque » n'est plus vrai (%v)" (add $int $cro) }}{{ end -}}
+{{- if lt $sp (mul 0.5 $cum) }}{{ errorf "boucle-dette-echelles : « surtout des déficits hors intérêts » n'est plus vrai (%v sur %v)" $sp $cum }}{{ end -}}
+{{- $f := dict "cum" (lang.FormatNumber 1 $cum) "int" (lang.FormatNumber 1 $int) "cro" (lang.FormatNumber 1 (math.Abs $cro)) "sp" (lang.FormatNumber 1 $sp) -}}
+{{- if $isEn -}}
+<p class="boucle-exemples__echelles"><strong>Over time, and up close.</strong> From {{ $a0 }} to {{ $a1 }}, the ratio rose by {{ $f.cum }} points of GDP, despite {{ $baisses }} years of decline out of {{ $n }}. Up close, interest (+{{ $f.int }}) and growth (−{{ $f.cro }}) almost cancel out; the rise comes mainly from deficits excluding interest (+{{ $f.sp }}). The force that shapes the trajectory is not the one seen oscillating. This accounting decomposition describes without attributing a cause: <a href="{{ "/en/why-does-public-debt-rise/" | relURL }}">the year-by-year detail</a>.</p>
+{{- else -}}
+<p class="boucle-exemples__echelles"><strong>Sur la durée, et de près.</strong> De {{ $a0 }} à {{ $a1 }}, le ratio a gagné {{ $f.cum }}&nbsp;points de PIB, malgré {{ $baisses }}&nbsp;années de baisse sur {{ $n }}. De près, les intérêts (+{{ $f.int }}) et la croissance (−{{ $f.cro }}) se compensent presque&nbsp;; la hausse vient surtout des déficits hors intérêts (+{{ $f.sp }}). La force qui fait la trajectoire n’est pas celle qu’on voit osciller. Cette décomposition comptable décrit sans attribuer de cause&nbsp;: <a href="{{ "/pourquoi-la-dette-publique-augmente/" | relURL }}">le détail année par année</a>.</p>
+{{- end -}}

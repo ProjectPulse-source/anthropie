@@ -3,7 +3,8 @@ title: "What is the anthropic loop?"
 url: /en/anthropic-loop/
 description: "The anthropic loop follows, through five conditional states, what becomes of a displaced cost: displacement, accumulation, saturation, return, bifurcation. It extends K. William Kapp's cost-shifting and is distinct from Bernard Stiegler's neganthropy — and from the AI company Anthropic."
 date: 2026-07-24
-lastmod: 2026-10-29
+lastmod: 2026-10-30
+date_suit: [dette_dynamique]  # “Over time, and up close” box of the Debt button (partials/figures/boucle-dette-echelles.html)
 og_title: "What is the anthropic loop? — definition, origins and sources — S. Lalut"
 faq:
   - question: "What is the anthropic loop?"
@@ -51,7 +52,7 @@ The asbestos industry produced its order by making others bear a risk (E1): the 
 
 ### When turns follow one another
 
-For one turn to open another, the outcome must be a new displacement: the emitter has changed, and the cycle starts again from another configuration. That is when the loop becomes a **spiral**. [AWP-04](/en/awp/awp-04/) reads the energy transition this way. The fossil regime shifted part of its costs into the atmosphere, and so into the future; the response to its saturation opens a new circuit, spatial and material — lithium from Chile, cobalt from the Democratic Republic of the Congo, far from the centres of consumption — to which the [rebound effect](/en/rebound-effect/) adds a new load. Yet the “Environment” button on the figure shows that this new turn does not replace the old one: the fossil regime remains an active strand there, with the transition coiling around it, because energy sources add up more than they substitute for one another. Each re-displacement wears down the available elsewheres a little more, unless they replenish fast enough: a turn is therefore not necessarily worse than the one before.
+For one turn to open another, the outcome must be a new displacement: the emitter has changed, and the cycle starts again from another configuration. That is when the loop becomes a **spiral**. [AWP-04](/en/awp/awp-04/) reads the energy transition this way. The fossil regime shifted part of its costs into the atmosphere, and so into the future; the response to its saturation opens a new circuit, spatial and material — lithium from Chile, cobalt from the Democratic Republic of the Congo, far from the centres of consumption — to which the [rebound effect](/en/rebound-effect/) adds a new load. Yet the “Environment” button on the figure shows that this new turn does not replace the old one: the fossil regime remains an active strand there, with the transition coiling around it, because energy sources add up more than they substitute for one another. Each re-displacement wears down the available elsewheres a little more, unless they replenish fast enough: a turn is therefore not necessarily worse than the one before. That these turns nest, the saturation of one level spreading to the level above, from territory to world-system, remains a research hypothesis: a drift observed over time, at a single level, does not demonstrate it.
 
 ## Kapp: cost-shifting is systemic
 

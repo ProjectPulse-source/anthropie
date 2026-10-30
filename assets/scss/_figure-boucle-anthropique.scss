@@ -109,3 +109,11 @@
   font-style: italic;
   color: var(--color-text-muted);
 }
+
+/* Encart « sur la duree, et de pres » (bouton Dette, option E, 30/10/2026) : les deux echelles d'un meme cas. */
+.boucle-exemples__echelles {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 3px solid var(--color-accent-rule);
+  background: var(--color-bg-elevated);
+}

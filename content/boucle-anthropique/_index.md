@@ -2,7 +2,8 @@
 title: "Qu'est-ce que la boucle anthropique ?"
 description: "La boucle anthropique suit, en cinq états conditionnels, ce que devient un coût déplacé : déplacement, accumulation, saturation, retour, bifurcation. Elle prolonge le cost-shifting de K. William Kapp et se distingue de la néguanthropie de Bernard Stiegler."
 date: 2026-07-24
-lastmod: 2026-10-29
+lastmod: 2026-10-30
+date_suit: [dette_dynamique]  # encart « Sur la durée, et de près » du bouton Dette (partials/figures/boucle-dette-echelles.html)
 og_title: "Qu'est-ce que la boucle anthropique ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que la boucle anthropique ?"
@@ -50,7 +51,7 @@ L'industrie de l'amiante a produit son ordre en faisant supporter un risque à d
 
 ### Quand les tours s'enchaînent
 
-Pour qu'un tour en ouvre un autre, l'issue doit être un nouveau déplacement&nbsp;: l'émetteur a changé, et le cycle repart d'une autre configuration. C'est alors que la boucle devient **spirale**. [AWP-04](/awp/awp-04/) lit ainsi la transition énergétique. Le régime fossile a reporté une partie de ses coûts dans l'atmosphère, donc vers l'avenir&nbsp;; la réponse à sa saturation ouvre un circuit nouveau, spatial et matériel — le lithium du Chili, le cobalt de la République démocratique du Congo, loin des centres de consommation —, auquel l'[effet rebond](/effet-rebond/) ajoute une charge nouvelle. Le bouton «&nbsp;Environnement&nbsp;» de la figure montre pourtant que ce nouveau tour ne remplace pas l'ancien&nbsp;: le régime fossile y reste un brin actif, autour duquel la transition s'enroule, parce que les sources d'énergie s'additionnent plus qu'elles ne se substituent. Chaque re-déplacement use un peu plus les ailleurs disponibles, à moins qu'ils ne se reconstituent assez vite&nbsp;: un tour n'est donc pas forcément plus grave que le précédent.
+Pour qu'un tour en ouvre un autre, l'issue doit être un nouveau déplacement&nbsp;: l'émetteur a changé, et le cycle repart d'une autre configuration. C'est alors que la boucle devient **spirale**. [AWP-04](/awp/awp-04/) lit ainsi la transition énergétique. Le régime fossile a reporté une partie de ses coûts dans l'atmosphère, donc vers l'avenir&nbsp;; la réponse à sa saturation ouvre un circuit nouveau, spatial et matériel — le lithium du Chili, le cobalt de la République démocratique du Congo, loin des centres de consommation —, auquel l'[effet rebond](/effet-rebond/) ajoute une charge nouvelle. Le bouton «&nbsp;Environnement&nbsp;» de la figure montre pourtant que ce nouveau tour ne remplace pas l'ancien&nbsp;: le régime fossile y reste un brin actif, autour duquel la transition s'enroule, parce que les sources d'énergie s'additionnent plus qu'elles ne se substituent. Chaque re-déplacement use un peu plus les ailleurs disponibles, à moins qu'ils ne se reconstituent assez vite&nbsp;: un tour n'est donc pas forcément plus grave que le précédent. Que ces tours s'emboîtent, la saturation d'un niveau gagnant le niveau supérieur, du territoire au système-monde, reste une hypothèse de recherche&nbsp;: une dérive observée sur la durée, à un même niveau, ne la démontre pas.
 
 ## Kapp&nbsp;: le report des coûts est systémique
 

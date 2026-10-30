@@ -12,17 +12,19 @@
 {{- $renvoi := eq .legende "renvoi" -}}
 {{- $desktop := cond $isEn "/img/figures/spirale-anthropique-desktop-en.svg" "/img/figures/spirale-anthropique-desktop.svg" -}}
 {{- $mobile  := cond $isEn "/img/figures/spirale-anthropique-mobile-en.svg"  "/img/figures/spirale-anthropique-mobile.svg" -}}
-{{- $caption := "La spirale se lit de bas en haut. Les tours pâles sont des itérations passées, chacune achevée par un nouveau déplacement ; pâles parce qu’anciennes, leurs charges peuvent encore peser. Le tour en clair suit les cinq états de l’itération en cours, et chaque passage en tirets peut ne pas avoir lieu. E1′ n’existera que si le système déplace de nouveau." -}}
+{{- /* Option E (contre-expertise jessop-11, 30/10) : la vue d'ensemble est un modele conditionnel, pas une trajectoire
+       demontree ; E5 montre ses trois sorties. */ -}}
+{{- $caption := "La spirale est un modèle conditionnel, non une trajectoire démontrée ; elle se lit de bas en haut. Les tours pâles sont des itérations passées, chacune achevée par un nouveau déplacement ; pâles parce qu’anciennes, leurs charges peuvent encore peser. Le tour en clair suit les cinq états de l’itération en cours, et chaque passage en tirets peut ne pas avoir lieu. À E5, le système peut s’effondrer en partie, se reconfigurer, ou déplacer de nouveau : E1′ n’existera que dans ce dernier cas." -}}
 {{- if $renvoi -}}
   {{- $caption = "La boucle anthropique en spirale : en clair, les cinq états de l’itération en cours ; en pâle, les itérations passées." -}}
 {{- end -}}
-{{- $alt := "Spirale montante formée d'une seule ligne en boucles empilées. Le tour du haut, seul en clair, porte les cinq états : E1 Déplacement, E2 Accumulation, E3 Saturation, E4 Retour, E5 Bifurcation, reliés par des transitions conditionnelles, avec un arrêt possible du transfert et un retour précoce vers l'émetteur S. Les deux tours inférieurs, de plus en plus pâles, sont les itérations antérieures ; la ligne se termine en haut sur E1′, une itération suivante possible." -}}
+{{- $alt := "Spirale montante formée d'une seule ligne en boucles empilées. Le tour du haut, seul en clair, porte les cinq états : E1 Déplacement, E2 Accumulation, E3 Saturation, E4 Retour, E5 Bifurcation, reliés par des transitions conditionnelles, avec un arrêt possible du transfert et un retour précoce vers l'émetteur S. Les deux tours inférieurs, de plus en plus pâles, sont les itérations antérieures. E5 a trois sorties possibles : un effondrement partiel, une reconfiguration, ou un re-déplacement, la ligne se terminant alors en haut sur E1′, une itération suivante possible." -}}
 {{- if $isEn -}}
-  {{- $caption = "The spiral reads from the bottom up. The faint turns are past iterations, each ended by a new displacement; faint because old, their loads may still weigh. The turn in full follows the five states of the current iteration, and any dashed passage may fail to happen. E1′ will exist only if the system displaces again." -}}
+  {{- $caption = "The spiral is a conditional model, not a demonstrated trajectory; it reads from the bottom up. The faint turns are past iterations, each ended by a new displacement; faint because old, their loads may still weigh. The turn in full follows the five states of the current iteration, and any dashed passage may fail to happen. At E5, the system may partly collapse, reconfigure, or displace again: E1′ will exist only in that last case." -}}
   {{- if $renvoi -}}
     {{- $caption = "The anthropic loop as a spiral: in full, the five states of the current iteration; faint, the past iterations." -}}
   {{- end -}}
-  {{- $alt = "A rising spiral drawn as a single line in stacked loops. The top turn, the only one in full, carries the five states: E1 Displacement, E2 Accumulation, E3 Saturation, E4 Return, E5 Bifurcation, linked by conditional transitions, with a possible transfer arrest and an early return towards the emitter S. The two lower, increasingly faint turns are earlier iterations; the line ends at the top in E1′, a possible next iteration." -}}
+  {{- $alt = "A rising spiral drawn as a single line in stacked loops. The top turn, the only one in full, carries the five states: E1 Displacement, E2 Accumulation, E3 Saturation, E4 Return, E5 Bifurcation, linked by conditional transitions, with a possible transfer arrest and an early return towards the emitter S. The two lower, increasingly faint turns are earlier iterations. E5 has three possible exits: a partial collapse, a reconfiguration, or a re-displacement, in which case the line ends at the top in E1′, a possible next iteration." -}}
 {{- end -}}
 {{- /* Exemples (auteur, 29/10/2026) : sur la forme complete seulement, des boutons recolorent la spirale d'apres le
        codage du corpus (data/boucle_exemples.yaml ; figures spirale-anthropique-<id>-*.svg du meme generateur).
@@ -58,13 +60,14 @@
   <div class="boucle-exemples__textes" aria-live="polite">
     {{- /* Deux dimensions, deux codages (contre-expertise jessop-10, 30/10) : les tirets gardent le sens du schema ;
            le niveau de preuve passe par le disque, l'epaisseur et la marque « ? ». */}}
-    <p class="boucle-exemples__lecture" hidden>{{ cond $isEn "Each reading asks the same four questions: what is observed? what proves a transfer? which causal links are established? what trajectory can be drawn? The answers differ, and so does the shape. Dashes: conditional transitions, as in the diagram · filled disc, thick line: documented · “?”: hypothesis, not established · grey dotted: not assessed." "Chaque lecture pose les mêmes quatre questions&nbsp;: qu’observe-t-on&nbsp;? qu’est-ce qui prouve un transfert&nbsp;? quels liens causaux sont établis&nbsp;? quelle trajectoire peut-on dessiner&nbsp;? Les réponses diffèrent, et la forme aussi. Tirets&nbsp;: transitions conditionnelles, comme sur le schéma · disque plein, trait épais&nbsp;: documenté · «&nbsp;?&nbsp;»&nbsp;: hypothèse, non établie · gris pointillé&nbsp;: non évalué." | safeHTML }}</p>
+    <p class="boucle-exemples__lecture" hidden>{{ cond $isEn "Each reading asks the same four questions: what is observed? what proves a transfer? which causal links are established? what trajectory can be drawn? The answers differ, and so does the shape. Each reading shows what is observed and what can be explained; that these loops form an overall dynamic remains a research hypothesis. Dashes: conditional transitions, as in the diagram · filled disc, thick line: documented · “?”: hypothesis, not established · grey dotted: not assessed." "Chaque lecture pose les mêmes quatre questions&nbsp;: qu’observe-t-on&nbsp;? qu’est-ce qui prouve un transfert&nbsp;? quels liens causaux sont établis&nbsp;? quelle trajectoire peut-on dessiner&nbsp;? Les réponses diffèrent, et la forme aussi. Chaque lecture montre ce qui s’observe et ce qui s’explique&nbsp;; que ces boucles forment une dynamique d’ensemble reste une hypothèse de recherche. Tirets&nbsp;: transitions conditionnelles, comme sur le schéma · disque plein, trait épais&nbsp;: documenté · «&nbsp;?&nbsp;»&nbsp;: hypothèse, non établie · gris pointillé&nbsp;: non évalué." | safeHTML }}</p>
     {{- range . }}
     {{- $t := cond $isEn .en .fr }}
     <div class="boucle-exemples__panneau" data-ex="{{ .id }}">
       <p class="boucle-exemples__titre">{{ $t.bouton }} — {{ $t.forme }}</p>
       <p class="boucle-exemples__statut">{{ $t.statut | markdownify }}</p>
       <p>{{ $t.texte | markdownify }}</p>
+      {{- if eq .id "dette" }}{{ partial "figures/boucle-dette-echelles.html" $isEn }}{{ end }}
     </div>
     {{- end }}
   </div>
