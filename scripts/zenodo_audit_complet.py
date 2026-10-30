@@ -68,7 +68,7 @@ AS_JSON = "--json" in sys.argv
 AWPS = [
     {"label": "AWP-01", "source": "fr",
      "records": {"fr": "19266862", "en": "19431208", "es": "21766183"}},
-    {"label": "AWP-02", "source": "fr", "records": {"fr": "19268037", "en": "19433086"}},
+    {"label": "AWP-02", "source": "fr", "records": {"fr": "23807981", "en": "23807982"}},  # v1.1 (30/10/2026)
     {"label": "AWP-03", "source": "fr", "records": {"fr": "19268769", "en": "19434094"}},
     {"label": "AWP-04", "source": "fr", "records": {"fr": "19269244", "en": "19439921"}},
     {"label": "AWP-05", "source": "fr", "records": {"fr": "19269487", "en": "19440866"}},

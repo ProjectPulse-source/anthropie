@@ -2,7 +2,7 @@
 title: "3,3 millions d'années en un principe"
 awp_number: "AWP-02"
 date: 2026-02-15
-lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML
@@ -10,9 +10,9 @@ outputs:
   - RIS
   - EndNote
 description: "L'anthropie traverse 3,3 millions d'années d'histoire humaine en sept configurations — du premier outil au métaprogramme numérique. Le déplacement du désordre est un mécanisme structurel des sociétés humaines, pas un accident de la modernité."
-doi_zenodo: "10.5281/zenodo.19268037"
+doi_zenodo: "10.5281/zenodo.23807981"  # v1.1 (30/10/2026) ; v1.0 : 19268037
 wikidata_qid: "Q139771990"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
-url_zenodo: "https://zenodo.org/records/19268037"
+url_zenodo: "https://zenodo.org/records/23807981"
 jel_codes: ["N00", "B15", "Q56"]
 keywords: ["anthropie", "longue durée", "histoire économique", "déplacement du désordre", "civilisations", "saturation"]
 keywords_en: ["anthropy", "long run", "economic history", "disorder displacement", "civilizations", "saturation"]
@@ -21,11 +21,11 @@ faq:
     answer: "La saturation désigne l'état d'un espace de déportation quand le coût marginal du transfert excède le bénéfice, ou quand le désordre déporté revient au système émetteur sous forme d'effet boomerang."
   - question: "Comment l'anthropie se distingue-t-elle de l'Anthropocène ?"
     answer: "L'Anthropocène désigne une ère géologique (Crutzen, 2000). L'anthropie désigne un mécanisme institutionnel qui précède l'Anthropocène de millions d'années et en éclaire la dynamique."
-pdf_url: "https://zenodo.org/records/19268037/files/AWP-02_anthropie_longue_duree.pdf"
+pdf_url: "https://zenodo.org/records/23807981/files/AWP-02_anthropie_longue_duree.pdf"
 language: "fr"
 publication_date: "2026-02-15"
 translation:
-  doi: "10.5281/zenodo.19433086"
+  doi: "10.5281/zenodo.23807982"
   url: "/en/awp/awp-02/"
   title: "3.3 million years in one principle"
 related:

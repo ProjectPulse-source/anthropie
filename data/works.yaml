@@ -274,8 +274,8 @@ works:
       en: [anthropy, long run, economic history, disorder displacement, civilizations, saturation]
     jel_codes: [N00, B15, Q56]
     deposits:
-      zenodo_fr: { doi: "10.5281/zenodo.19268037", url: "https://doi.org/10.5281/zenodo.19268037", status: published }
-      zenodo_en: { doi: "10.5281/zenodo.19433086", url: "https://doi.org/10.5281/zenodo.19433086", status: published, date: "2026-04-06" }
+      zenodo_fr: { doi: "10.5281/zenodo.23807981", url: "https://doi.org/10.5281/zenodo.23807981", status: published, version: "1.1" }  # v1.0 : 19268037 (2026-02-15)
+      zenodo_en: { doi: "10.5281/zenodo.23807982", url: "https://doi.org/10.5281/zenodo.23807982", status: published, date: "2026-10-30", version: "1.1" }  # v1.0 : 19433086 (2026-04-06)
       ssrn_en: { abstract_id: "6615059", doi: "10.2139/ssrn.6615059", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615059", status: approved }
       mpra_en: { item_id: "128605", url: "https://mpra.ub.uni-muenchen.de/id/eprint/128605", status: in_review, deposit_date: "2026-04-07" }
     site_pages:
