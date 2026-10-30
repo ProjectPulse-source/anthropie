@@ -17,9 +17,9 @@ keywords: ["dette publique", "anthropie", "transfert temporel", "finances publiq
 keywords_en: ["public debt", "anthropy", "temporal transfer", "public finance", "France"]
 faq:
   - question: "En quoi la dette publique est-elle un mécanisme anthropique ?"
-    answer: "La dette déplace le coût du désordre présent vers les générations futures et les groupes sociaux les moins capables de s'y soustraire. C'est un transfert temporel et social classique."
+    answer: "La dette déplace le coût du désordre présent vers les générations futures ; l'AWP-03 propose qu'elle le reporte aussi sur les groupes sociaux les moins capables de s'y soustraire. L'AWP-09 a confronté ces deux énoncés aux comptes publics : le report vers l'avenir s'y vérifie, au sens patrimonial ; l'asymétrie sociale reste une hypothèse."
   - question: "Qui paie vraiment la dette publique ?"
-    answer: "L'analyse anthropique montre que le coût est supporté différemment selon les dimensions temporelle (générations futures) et sociale (groupes captifs sans mobilité fiscale ou géographique)."
+    answer: "L'analyse anthropique pose la question sur deux axes : temporel (générations futures) et social (groupes captifs sans mobilité fiscale ou géographique). Sur l'axe social, les comptes publics ne tranchent pas : ils montrent seulement que la charge d'un ajustement dépend de l'instrument, et tombe en bas par la dépense, en haut par l'impôt sur les revenus et le patrimoine (AWP-09)."
 pdf_url: "https://zenodo.org/records/19268769/files/AWP-03_dette_publique_transfert.pdf"
 language: "fr"
 publication_date: "2026-03-01"
@@ -42,7 +42,7 @@ Le débat sur la dette publique se concentre habituellement sur la question du m
 
 Sur l'axe temporel, la dette reporte le coût du désordre présent vers les générations futures. Les dépenses courantes sont financées par un prélèvement sur l'avenir, dont les bénéficiaires ne sont pas consultés et dont ils hériteront sans avoir participé aux arbitrages qui les engagent.
 
-Sur l'axe social, la dette ne pèse pas également sur tous les groupes. Les ménages les plus mobiles — fiscalement, géographiquement — disposent de capacités d'évitement que les groupes captifs n'ont pas. Le coût réel de la dette est donc supporté de manière asymétrique.
+Sur l'axe social, ce working paper propose que la dette ne pèse pas également sur tous les groupes&nbsp;: les ménages les plus mobiles — fiscalement, géographiquement — disposeraient de capacités d'évitement que les groupes captifs n'ont pas. [AWP-09](/awp/awp-09/) a soumis cette asymétrie aux comptes publics&nbsp;: elle reste une hypothèse, car aucun compte n'observe une soustraction. Ce que les comptes établissent est plus étroit&nbsp;: la charge d'un ajustement dépend de l'instrument, et tombe en bas par la dépense, en haut par l'impôt sur les revenus et le patrimoine.
 
 ## Application aux finances publiques françaises
 

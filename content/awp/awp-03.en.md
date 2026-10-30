@@ -17,9 +17,9 @@ jel_codes: ["H63", "H62", "E62", "E58"]
 keywords: ["public debt", "anthropy", "temporal transfer", "public finance", "France"]
 faq:
   - question: "In what way is public debt an anthropic mechanism?"
-    answer: "Debt displaces the cost of present disorder toward future generations and social groups least able to escape it. It is a classic temporal and social transfer."
+    answer: "Debt displaces the cost of present disorder toward future generations; AWP-03 proposes that it also shifts it onto the social groups least able to escape it. AWP-09 tested both claims against the public accounts: the shift to the future holds, in a balance-sheet sense; the social asymmetry remains a hypothesis."
   - question: "Who really pays for public debt?"
-    answer: "The anthropic analysis shows that the cost is borne differently along temporal dimensions (future generations) and social dimensions (captive groups without fiscal or geographical mobility)."
+    answer: "The anthropic analysis asks the question along two axes: temporal (future generations) and social (captive groups without fiscal or geographical mobility). On the social axis the public accounts do not settle it: they only show that the burden of an adjustment depends on the instrument, falling lower down through spending and higher up through taxes on income and wealth (AWP-09)."
 pdf_url: "https://zenodo.org/records/19434094/files/AWP-03_Public_Debt_and_Anthropy_EN.pdf"
 language: "en"
 publication_date: "2026-04-06"
@@ -43,7 +43,7 @@ The debate on public debt typically focuses on the question of amount: how much?
 
 Along the temporal axis, debt defers the cost of present disorder to future generations. Current expenditure is financed by a levy on the future, whose beneficiaries are not consulted and will inherit commitments without having participated in the decisions that bind them.
 
-Along the social axis, debt does not weigh equally on all groups. The most mobile households — fiscally, geographically — have avoidance capacities that captive groups do not. The real cost of debt is therefore borne asymmetrically.
+Along the social axis, this working paper proposes that debt does not weigh equally on all groups: the most mobile households — fiscally, geographically — would have avoidance capacities that captive groups lack. [AWP-09](/en/awp/awp-09/) put this asymmetry to the public accounts: it remains a hypothesis, since no account observes anyone escaping. What the accounts establish is narrower: the burden of an adjustment depends on the instrument, falling lower down through spending, higher up through taxes on income and wealth.
 
 ## Application to French public finances
 

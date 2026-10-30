@@ -38,3 +38,74 @@
     margin-right: calc(-1 * (var(--marge-main) + var(--marge-colonne)));
   }
 }
+
+/* Boutons d'exemples (auteur, 29/10/2026) : une ligne qui passe a la ligne sur telephone, cibles de 44 px de haut. */
+.boucle-exemples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+}
+
+.boucle-exemples[hidden] { display: none; }
+
+/* Intitule du groupe (contre-expertise jessop-10, 30/10) : « lectures », pas « demonstrations ». */
+.boucle-exemples__intitule {
+  flex-basis: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-text-subtle);
+}
+
+.boucle-exemples button {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.9rem;
+  min-height: 44px;
+  padding: 0.4rem 0.95rem;
+  border: 1px solid var(--color-accent-rule);
+  border-radius: 999px;
+  background: var(--color-bg-elevated);
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.boucle-exemples button:hover { background: var(--color-accent-faint); }
+
+.boucle-exemples button[aria-pressed="true"] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.boucle-exemples button:focus-visible {
+  outline: 2px solid var(--color-pivot);
+  outline-offset: 2px;
+}
+
+.boucle-exemples__textes {
+  max-width: 720px;
+  margin: 1.25rem auto 0;
+}
+
+.boucle-exemples__lecture {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--color-text-subtle);
+}
+
+.boucle-exemples__panneau { margin-top: 1rem; }
+
+.boucle-exemples__titre {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.boucle-exemples__statut {
+  font-style: italic;
+  color: var(--color-text-muted);
+}

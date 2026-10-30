@@ -24,7 +24,26 @@
   {{- end -}}
   {{- $alt = "A rising spiral drawn as a single line in stacked loops. The top turn, the only one in full, carries the five states: E1 Displacement, E2 Accumulation, E3 Saturation, E4 Return, E5 Bifurcation, linked by conditional transitions, with a possible transfer arrest and an early return towards the emitter S. The two lower, increasingly faint turns are earlier iterations; the line ends at the top in E1′, a possible next iteration." -}}
 {{- end -}}
-<figure class="figure-boucle-anthropique">
+{{- /* Exemples (auteur, 29/10/2026) : sur la forme complete seulement, des boutons recolorent la spirale d'apres le
+       codage du corpus (data/boucle_exemples.yaml ; figures spirale-anthropique-<id>-*.svg du meme generateur).
+       Sans script : pas de boutons, la figure generique, et les quatre textes a la suite de la legende. */ -}}
+{{- $exemples := cond $renvoi slice (site.Data.boucle_exemples | default slice) -}}
+{{- $suf := cond $isEn "-en" "" -}}
+<figure class="figure-boucle-anthropique"{{ with $exemples }} data-boucle-exemples{{ end }}>
+  {{- with $exemples }}
+  <div class="boucle-exemples" role="group" aria-labelledby="boucle-exemples-intitule" hidden>
+    <p class="boucle-exemples__intitule" id="boucle-exemples-intitule">{{ cond $isEn "Four readings of the anthropic loop" "Quatre lectures de la boucle anthropique" }}</p>
+    <button type="button" aria-pressed="true" data-ex=""
+            data-desktop="{{ $desktop | relURL }}" data-mobile="{{ $mobile | relURL }}" data-alt="{{ $alt }}">{{ cond $isEn "The diagram" "Le schéma" }}</button>
+    {{- range . }}
+    {{- $t := cond $isEn .en .fr }}
+    <button type="button" aria-pressed="false" data-ex="{{ .id }}"
+            data-desktop="{{ printf "/img/figures/spirale-anthropique-%s-desktop%s.svg" .id $suf | relURL }}"
+            data-mobile="{{ printf "/img/figures/spirale-anthropique-%s-mobile%s.svg" .id $suf | relURL }}"
+            data-alt="{{ $t.alt }}">{{ $t.bouton }}</button>
+    {{- end }}
+  </div>
+  {{- end }}
   <picture>
     <source media="(max-width: 768px)" srcset="{{ $mobile | relURL }}">
     <img src="{{ $desktop | relURL }}"
@@ -35,4 +54,20 @@
   <figcaption class="figure-boucle-anthropique__caption">
     <em>{{ $caption }}</em>
   </figcaption>
+  {{- with $exemples }}
+  <div class="boucle-exemples__textes" aria-live="polite">
+    {{- /* Deux dimensions, deux codages (contre-expertise jessop-10, 30/10) : les tirets gardent le sens du schema ;
+           le niveau de preuve passe par le disque, l'epaisseur et la marque « ? ». */}}
+    <p class="boucle-exemples__lecture" hidden>{{ cond $isEn "Each reading asks the same four questions: what is observed? what proves a transfer? which causal links are established? what trajectory can be drawn? The answers differ, and so does the shape. Dashes: conditional transitions, as in the diagram · filled disc, thick line: documented · “?”: hypothesis, not established · grey dotted: not assessed." "Chaque lecture pose les mêmes quatre questions&nbsp;: qu’observe-t-on&nbsp;? qu’est-ce qui prouve un transfert&nbsp;? quels liens causaux sont établis&nbsp;? quelle trajectoire peut-on dessiner&nbsp;? Les réponses diffèrent, et la forme aussi. Tirets&nbsp;: transitions conditionnelles, comme sur le schéma · disque plein, trait épais&nbsp;: documenté · «&nbsp;?&nbsp;»&nbsp;: hypothèse, non établie · gris pointillé&nbsp;: non évalué." | safeHTML }}</p>
+    {{- range . }}
+    {{- $t := cond $isEn .en .fr }}
+    <div class="boucle-exemples__panneau" data-ex="{{ .id }}">
+      <p class="boucle-exemples__titre">{{ $t.bouton }} — {{ $t.forme }}</p>
+      <p class="boucle-exemples__statut">{{ $t.statut | markdownify }}</p>
+      <p>{{ $t.texte | markdownify }}</p>
+    </div>
+    {{- end }}
+  </div>
+  <script src="{{ partial "js-url.html" "boucle-exemples.js" }}" defer></script>
+  {{- end }}
 </figure>
