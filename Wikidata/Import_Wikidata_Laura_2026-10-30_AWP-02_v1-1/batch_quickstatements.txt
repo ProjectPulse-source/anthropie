@@ -1,0 +1,4 @@
+// AWP-02 v1.1 (Zenodo, 30/10/2026) : texte integral des deux versions 1.1 sur l item Q139771990.
+// P356 inchange (DOI de la v1.0, contrainte de valeur unique) ; P953 Zenodo v1.0 conserve.
+Q139771990|P953|"https://zenodo.org/records/23807981"|P407|Q150
+Q139771990|P953|"https://zenodo.org/records/23807982"|P407|Q1860
