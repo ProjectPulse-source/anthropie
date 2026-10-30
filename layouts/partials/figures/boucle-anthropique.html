@@ -14,17 +14,17 @@
 {{- $mobile  := cond $isEn "/img/figures/spirale-anthropique-mobile-en.svg"  "/img/figures/spirale-anthropique-mobile.svg" -}}
 {{- /* Option E (contre-expertise jessop-11, 30/10) : la vue d'ensemble est un modele conditionnel, pas une trajectoire
        demontree ; E5 montre ses trois sorties. */ -}}
-{{- $caption := "La spirale est un modèle conditionnel, non une trajectoire démontrée ; elle se lit de bas en haut. Les tours pâles sont des itérations passées, chacune achevée par un nouveau déplacement ; pâles parce qu’anciennes, leurs charges peuvent encore peser. Le tour en clair suit les cinq états de l’itération en cours, et chaque passage en tirets peut ne pas avoir lieu. À E5, le système peut s’effondrer en partie, se reconfigurer, ou déplacer de nouveau : E1′ n’existera que dans ce dernier cas." -}}
+{{- $caption := "La spirale est un modèle conditionnel, non une trajectoire démontrée ; elle se lit de bas en haut. Les tours pâles figurent, de façon schématique, des itérations passées possibles, chacune achevée par un nouveau déplacement ; ce ne sont pas des cycles historiques établis. Pâles parce qu’anciennes, leurs charges peuvent encore peser. Le tour en clair suit les cinq états de l’itération en cours, et chaque passage en tirets peut ne pas avoir lieu. À E5, le système peut s’effondrer en partie, se reconfigurer, ou déplacer de nouveau : E1′ n’existera que dans ce dernier cas." -}}
 {{- if $renvoi -}}
-  {{- $caption = "La boucle anthropique en spirale : en clair, les cinq états de l’itération en cours ; en pâle, les itérations passées." -}}
+  {{- $caption = "La boucle anthropique en spirale : en clair, les cinq états de l’itération en cours ; en pâle, des itérations passées possibles, figurées schématiquement." -}}
 {{- end -}}
-{{- $alt := "Spirale montante formée d'une seule ligne en boucles empilées. Le tour du haut, seul en clair, porte les cinq états : E1 Déplacement, E2 Accumulation, E3 Saturation, E4 Retour, E5 Bifurcation, reliés par des transitions conditionnelles, avec un arrêt possible du transfert et un retour précoce vers l'émetteur S. Les deux tours inférieurs, de plus en plus pâles, sont les itérations antérieures. E5 a trois sorties possibles : un effondrement partiel, une reconfiguration, ou un re-déplacement, la ligne se terminant alors en haut sur E1′, une itération suivante possible." -}}
+{{- $alt := "Spirale montante formée d'une seule ligne en boucles empilées. Le tour du haut, seul en clair, porte les cinq états : E1 Déplacement, E2 Accumulation, E3 Saturation, E4 Retour, E5 Bifurcation, reliés par des transitions conditionnelles, avec un arrêt possible du transfert et un retour précoce vers l'émetteur S. Les deux tours inférieurs, de plus en plus pâles, figurent schématiquement des itérations antérieures possibles. E5 a trois sorties possibles : un effondrement partiel, une reconfiguration, ou un re-déplacement, la ligne se terminant alors en haut sur E1′, une itération suivante possible." -}}
 {{- if $isEn -}}
-  {{- $caption = "The spiral is a conditional model, not a demonstrated trajectory; it reads from the bottom up. The faint turns are past iterations, each ended by a new displacement; faint because old, their loads may still weigh. The turn in full follows the five states of the current iteration, and any dashed passage may fail to happen. At E5, the system may partly collapse, reconfigure, or displace again: E1′ will exist only in that last case." -}}
+  {{- $caption = "The spiral is a conditional model, not a demonstrated trajectory; it reads from the bottom up. The faint turns depict, schematically, possible past iterations, each ended by a new displacement; they are not established historical cycles. Faint because old, their loads may still weigh. The turn in full follows the five states of the current iteration, and any dashed passage may fail to happen. At E5, the system may partly collapse, reconfigure, or displace again: E1′ will exist only in that last case." -}}
   {{- if $renvoi -}}
-    {{- $caption = "The anthropic loop as a spiral: in full, the five states of the current iteration; faint, the past iterations." -}}
+    {{- $caption = "The anthropic loop as a spiral: in full, the five states of the current iteration; faint, possible past iterations, drawn schematically." -}}
   {{- end -}}
-  {{- $alt = "A rising spiral drawn as a single line in stacked loops. The top turn, the only one in full, carries the five states: E1 Displacement, E2 Accumulation, E3 Saturation, E4 Return, E5 Bifurcation, linked by conditional transitions, with a possible transfer arrest and an early return towards the emitter S. The two lower, increasingly faint turns are earlier iterations. E5 has three possible exits: a partial collapse, a reconfiguration, or a re-displacement, in which case the line ends at the top in E1′, a possible next iteration." -}}
+  {{- $alt = "A rising spiral drawn as a single line in stacked loops. The top turn, the only one in full, carries the five states: E1 Displacement, E2 Accumulation, E3 Saturation, E4 Return, E5 Bifurcation, linked by conditional transitions, with a possible transfer arrest and an early return towards the emitter S. The two lower, increasingly faint turns depict, schematically, possible earlier iterations. E5 has three possible exits: a partial collapse, a reconfiguration, or a re-displacement, in which case the line ends at the top in E1′, a possible next iteration." -}}
 {{- end -}}
 {{- /* Exemples (auteur, 29/10/2026) : sur la forme complete seulement, des boutons recolorent la spirale d'apres le
        codage du corpus (data/boucle_exemples.yaml ; figures spirale-anthropique-<id>-*.svg du meme generateur).
@@ -56,6 +56,28 @@
   <figcaption class="figure-boucle-anthropique__caption">
     <em>{{ $caption }}</em>
   </figcaption>
+  {{- /* Forme courte (page de definition) : cle minimale des cinq etats, au conditionnel, et acces aux cas
+         (contre-expertise jessop-12, 30/10) ; la cle sert a dechiffrer la figure, l'analyse reste sur la page de la boucle. */}}
+  {{- if $renvoi }}
+  <div class="boucle-cle">
+    <ol class="boucle-cle__etats">
+      {{- if $isEn }}
+      <li><strong>E1 Displacement</strong> — a burden is shifted elsewhere: another place, the future, other groups.</li>
+      <li><strong>E2 Accumulation</strong> — it may build up.</li>
+      <li><strong>E3 Saturation</strong> — the receptacle may reach a limit.</li>
+      <li><strong>E4 Return</strong> — part of the burden may come back.</li>
+      <li><strong>E5 Bifurcation</strong> — the system may partly collapse, reconfigure, or displace again.</li>
+      {{- else }}
+      <li><strong>E1 Déplacement</strong> — une charge est déplacée ailleurs&nbsp;: un autre lieu, l’avenir, d’autres groupes.</li>
+      <li><strong>E2 Accumulation</strong> — elle peut s’accumuler.</li>
+      <li><strong>E3 Saturation</strong> — le réceptacle peut atteindre une limite.</li>
+      <li><strong>E4 Retour</strong> — une partie de la charge peut revenir.</li>
+      <li><strong>E5 Bifurcation</strong> — le système peut s’effondrer en partie, se reconfigurer ou déplacer de nouveau.</li>
+      {{- end }}
+    </ol>
+    <p class="boucle-cle__appel"><a href="{{ cond $isEn "/en/anthropic-loop/" "/boucle-anthropique/" | relURL }}">{{ cond $isEn "Explore the four cases and their levels of evidence →" "Explorer les quatre cas et leurs niveaux de preuve →" }}</a></p>
+  </div>
+  {{- end }}
   {{- with $exemples }}
   <div class="boucle-exemples__textes" aria-live="polite">
     {{- /* Deux dimensions, deux codages (contre-expertise jessop-10, 30/10) : les tirets gardent le sens du schema ;

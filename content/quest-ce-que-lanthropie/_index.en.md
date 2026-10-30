@@ -1,6 +1,6 @@
 ---
 title: "What is anthropy?"
-lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
 # /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
@@ -122,11 +122,13 @@ The displacement of disorder can take several forms. The framework of anthropy d
 
 These three axes are not mutually exclusive. In many configurations, they combine.
 
-In the contemporary digital metaprogram, the three axes reach a receptacle that has become central: attention. Cognitive externalization is as old as the hand, the tool, and language; tool-mediated cognition has made it possible to extend the displacement of disorder across space, across time, and between social groups. Once that receptacle saturates, however, the disorder can turn back toward cognition in its concrete forms — captured attention, delegated judgment, and the devices that extend them. This is not a fourth axis, but one form of anthropic return, directed at the very capacity that made displacement possible.
+The three axes say where the burden is shifted; the anthropic loop says what may become of it.
 
 {{< boucle-anthropique legende="renvoi" >}}
 
-This loop — displacement, accumulation, saturation, return, bifurcation — is formalised in [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/), which provides its definitions, states, and conditions of refutation.
+The page [What is the anthropic loop?](/en/anthropic-loop/) presents it in detail, and [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/) formalises it: definitions, states, and conditions of refutation.
+
+In the contemporary digital metaprogram, the three axes reach a receptacle that has become central: attention. Cognitive externalization is as old as the hand, the tool, and language; tool-mediated cognition has made it possible to extend the displacement of disorder across space, across time, and between social groups. Once that receptacle saturates, however, the disorder can turn back toward cognition in its concrete forms — captured attention, delegated judgment, and the devices that extend them. This is not a fourth axis, but one form of anthropic return, directed at the very capacity that made displacement possible.
 
 ## Neighbouring notions {#neighbouring-notions}
 

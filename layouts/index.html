@@ -79,9 +79,7 @@
     {{ end }}
   </p>
 
-  <div class="axes-overlay-wrapper">
-    {{ partial "figures/chaine-boucles.html" . }}
-    <div class="axis-grid">
+  <div class="axis-grid">
     <div class="axes-node">
       <div class="axes-node__sphere">
         <p class="axes-node__label">{{ if eq .Lang "en" }}Spatial{{ else }}Spatial{{ end }}</p>
@@ -105,6 +103,21 @@
       </div>
       <p class="axes-node__body">{{ if eq .Lang "en" }}Those with financial, legal or residential mobility transfer burdens more easily toward those who cannot refuse them: users, precarious workers, taxpayers, subcontracted labour, relegated groups.{{ else }}Ceux qui disposent de mobilité financière, juridique ou résidentielle transfèrent plus facilement les charges vers ceux qui ne peuvent pas les refuser&nbsp;: usagers, précaires, contribuables, travailleurs sous-traités, groupes relégués.{{ end }}</p>
     </div>
+  </div>
+
+  {{/* Prolongement des trois axes vers la boucle (contre-expertise jessop-12, 30/10/2026) : ou va la charge, puis ce
+       qu'elle peut devenir. Vignette statique du generateur de la spirale ; remplace le decor en double lemniscate. */}}
+  <div class="home-boucle">
+    <img class="home-boucle__vignette" src="{{ "/img/figures/spirale-anthropique-vignette.svg" | relURL }}" alt=""
+         width="160" height="200" loading="lazy" decoding="async">
+    <div class="home-boucle__texte">
+      {{ if eq .Lang "en" }}
+      <p>The three axes show where burdens are shifted. <strong>The anthropic loop</strong> shows what may become of them: they may build up, saturate their receptacle, return to those who shifted them, or open a new turn. None of it is inevitable: any passage may fail to happen.</p>
+      <p><a href="{{ "/en/anthropic-loop/" | relURL }}">Explore the loop and its four cases →</a></p>
+      {{ else }}
+      <p>Les trois axes montrent où les charges sont déplacées. <strong>La boucle anthropique</strong> montre ce qu'elles peuvent devenir&nbsp;: s'accumuler, saturer leur réceptacle, revenir vers ceux qui les ont déplacées, ou ouvrir un nouveau tour. Rien n'y est fatal&nbsp;: chaque passage peut ne pas avoir lieu.</p>
+      <p><a href="{{ "/boucle-anthropique/" | relURL }}">Explorer la boucle et ses quatre cas →</a></p>
+      {{ end }}
     </div>
   </div>
 

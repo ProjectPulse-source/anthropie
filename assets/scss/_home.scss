@@ -120,9 +120,27 @@
   margin-bottom: 2rem;
 }
 
-.axes-overlay-wrapper {
-  position: relative;
-  overflow: visible;
+// Prolongement des trois axes vers la boucle (contre-expertise jessop-12, 30/10/2026) : vignette statique et deux
+// phrases ; tient en un ecran au telephone. Remplace le decor en double lemniscate (chaine-boucles, retire).
+.home-boucle {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 760px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.home-boucle__vignette {
+  flex: 0 0 110px;
+  width: 110px;
+  height: auto;
+}
+
+.home-boucle__texte p { margin: 0 0 0.5rem; }
+
+@media (max-width: 600px) {
+  .home-boucle { gap: 0.9rem; }
+  .home-boucle__vignette { flex-basis: 76px; width: 76px; }
 }
 
 .axis-grid {
@@ -131,7 +149,6 @@
   gap: 1.5rem;
   margin-bottom: 1.5rem;
   position: relative;
-  z-index: 1;             // les cercles HTML passent devant l'overlay chaine-boucles (z-index 0)
 }
 
 .axes-node {

@@ -1,6 +1,6 @@
 ---
 title: "Qu'est-ce que l'anthropie ?"
-lastmod: 2026-08-15  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
@@ -108,11 +108,13 @@ Le déplacement du désordre peut prendre plusieurs formes. Le cadre anthropique
 
 Ces trois axes ne s'excluent pas. Dans de nombreuses configurations, ils se combinent.
 
-Dans le métaprogramme numérique contemporain, les trois axes atteignent un réceptacle devenu central&nbsp;: l'attention. L'extériorisation cognitive est aussi ancienne que l'outil, la main et le langage&nbsp;; la cognition outillée a permis d'étendre les déplacements du désordre dans l'espace, le temps et le social. Mais, quand ce réceptacle sature, le désordre peut revenir vers les prises concrètes de la cognition — attention captée, jugement délégué, dispositifs qui les prolongent. Il ne s'agit pas d'un quatrième axe, mais d'une forme de retour anthropique, dirigée vers la capacité même qui avait rendu le déplacement possible.
+Les trois axes disent où la charge est déplacée&nbsp;; la boucle anthropique dit ce qu'elle peut devenir.
 
 {{< boucle-anthropique legende="renvoi" >}}
 
-Cette boucle — déplacement, accumulation, saturation, retour, bifurcation — est présentée sur la page [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) et formalisée dans [AWP-07 — *La boucle anthropique*](/awp/awp-07/), qui en donne les définitions, les états et les conditions de réfutation.
+La page [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) la présente en détail, et [AWP-07 — *La boucle anthropique*](/awp/awp-07/) la formalise&nbsp;: définitions, états et conditions de réfutation.
+
+Dans le métaprogramme numérique contemporain, les trois axes atteignent un réceptacle devenu central&nbsp;: l'attention. L'extériorisation cognitive est aussi ancienne que l'outil, la main et le langage&nbsp;; la cognition outillée a permis d'étendre les déplacements du désordre dans l'espace, le temps et le social. Mais, quand ce réceptacle sature, le désordre peut revenir vers les prises concrètes de la cognition — attention captée, jugement délégué, dispositifs qui les prolongent. Il ne s'agit pas d'un quatrième axe, mais d'une forme de retour anthropique, dirigée vers la capacité même qui avait rendu le déplacement possible.
 
 ## Notions voisines {#notions-voisines}
 
