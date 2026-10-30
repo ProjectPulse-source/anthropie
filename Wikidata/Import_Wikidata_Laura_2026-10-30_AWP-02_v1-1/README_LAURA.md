@@ -1,8 +1,11 @@
 # Wikidata — AWP-02, version 1.1 (2026-10-30)
 
-> ⏳ **À EXÉCUTER par Laura.** Au retour : bloc ✅ avec readback API (2 déclarations P953 nouvelles, qualifiées P407,
-> aucune autre modification de Q139771990), le commit d'écriture en retour s'il y en a un (aucun attendu : le QID ne
-> change pas) et la sortie de `python scripts/check-wikidata-registre.py`.
+> ✅ **EXÉCUTÉ par Laura le 2026-10-30 (14:41 UTC, lot `temporary_batch_1793371252123`).** Readback API le jour même :
+> révision 2562581604 ; les 4 dernières révisions de Q139771990 sont exactement les 4 commandes du lot (2 créations
+> P953, 2 qualificatifs P407) ; P953 passe de 3 à 5 valeurs (`zenodo.org/records/23807981` en français Q150,
+> `…/23807982` en anglais Q1860) ; les autres propriétés sont inchangées (P31, P50, P356 `10.5281/ZENODO.19268037`,
+> P407, P577, P921, P361 : une valeur chacune). Écriture en retour : aucune (le QID ne change pas).
+> `check-wikidata-registre.py` : 23 items ↔ 23 QID, OK. **Dossier clos, aucun reste.**
 
 Laura — le working paper AWP-02 (*3,3 millions d'années en un principe : l'anthropie dans la longue durée*) a une
 **version 1.1** publiée sur Zenodo le 30/10/2026, en français et en anglais : une correction de numérotation (la
