@@ -632,7 +632,8 @@ def calcul_hors_ligne():
     cp, det_pays = j["ue"]["emplois"], j["ue"]["part_non_residents"]
     S2, C, etat = s2(), cor(), etat_negociable()
     for nom_, neuf, jeu in (("S2", S2, j["ue"]["s2"]), ("COR", C, j["cor"]), ("etat", etat, j["etat_negociable"])):
-        if json.loads(json.dumps(neuf, ensure_ascii=False)) != jeu:
+        # Le jeu est écrit normalisé depuis le 19/10/2026 : comparer normalisé, sinon le bruit au 15e chiffre bloque à tort.
+        if rj.normalise(json.loads(json.dumps(neuf, ensure_ascii=False))) != rj.normalise(jeu):
             fail("hors ligne : la piece %s ne redonne pas le jeu publie (piece changee depuis le releve)" % nom_)
     fin = max(a["annee"] for a in annees)
     if "sous_secteurs" not in j["france"]:
@@ -762,6 +763,20 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
              etat_der_lu=date_longue(etat["releve"]["lu_le"]))
     for p, x in det_pays.items():
         A["h_" + p.lower()] = fr(x["part_non_residents"], 0)
+    # Couverture du tableau européen (contre-expertise PRO-20261031-044255, anomalie A) : un pays dont la BCE ne publie pas
+    # la dernière année y figure à sa dernière année disponible ; la description du jeu le dit, pays et années calculés.
+    an_ue = max(x["annee"] for x in det_pays.values())
+    retard: dict[int, list[str]] = {}
+    for p in sorted(det_pays):
+        if det_pays[p]["annee"] != an_ue:
+            retard.setdefault(det_pays[p]["annee"], []).append(art(p))
+    n_ue, n_fin = len(det_pays), sum(1 for x in det_pays.values() if x["annee"] == an_ue)
+    if LANG == "fr":
+        A["nr_ue_couverture"] = ("%d pays : %d pour %d" % (n_ue, an_ue, n_fin) if retard else "%d pays, %d" % (n_ue, an_ue)) + "".join(
+            ", dernière observation disponible en %d pour %s" % (a, lg.enumere(v, LANG)) for a, v in sorted(retard.items()))
+    else:
+        A["nr_ue_couverture"] = ("%d countries: %d for %d" % (n_ue, an_ue, n_fin) if retard else "%d countries, %d" % (n_ue, an_ue)) + "".join(
+            ", latest available observation in %d for %s" % (a, lg.enumere(v, LANG)) for a, v in sorted(retard.items()))
     # S2
     x = S2["FR"]
     pts = lambda v, s=False: lg.points(v, 1, LANG, signe_=s)

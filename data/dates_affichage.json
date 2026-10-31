@@ -9,8 +9,8 @@
   "dette-publique-collectivites-locales/_index.md": "2026-10-18",
   "dette-publique-comparaison-internationale/_index.en.md": "2026-10-16",
   "dette-publique-comparaison-internationale/_index.md": "2026-10-16",
-  "dette-publique-generations-futures/_index.en.md": "2026-10-18",
-  "dette-publique-generations-futures/_index.md": "2026-10-18",
+  "dette-publique-generations-futures/_index.en.md": "2026-10-31",
+  "dette-publique-generations-futures/_index.md": "2026-10-31",
   "dette-publique-peut-elle-baisser/_index.en.md": "2026-10-18",
   "dette-publique-peut-elle-baisser/_index.md": "2026-10-18",
   "inflation-et-dette-publique/_index.en.md": "2026-10-16",
@@ -44,6 +44,14 @@
   "dette-publique-collectivites-locales/_index.md": [
    "2026-10-16",
    "2026-10-18"
+  ],
+  "dette-publique-generations-futures/_index.en.md": [
+   "2026-10-18",
+   "2026-10-31"
+  ],
+  "dette-publique-generations-futures/_index.md": [
+   "2026-10-18",
+   "2026-10-31"
   ],
   "glossaire/_index.en.md": [
    "2026-10-25"

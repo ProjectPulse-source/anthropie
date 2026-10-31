@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-31 — Générations futures : description du jeu corrigée avant dépôt Zenodo (contre-expertise PRO-20261031-044255)
+
+Bloc `dataset:` FR et EN de `/dette-publique-generations-futures/` réécrit (nom, description, sources) avant la
+publication du jeu sur Zenodo (brouillon 23827842) : couverture du tableau européen des non-résidents dite par un
+jeton calculé, `nr_ue_couverture` (25 pays, 2025 pour 23, Irlande et Malte en 2018 ; la page, qui ne cite que IT, SE,
+AT et BE à l'année de la France, n'était pas touchée) ; statut des quatre jeux du S2 (`base_precedente` = valeur
+centrale de l'édition 2024 reprise dans l'annexe du DSM 2025) ; calculs de l'auteur distingués des statistiques des
+producteurs ; « Ratios contrôlés contre ceux que publie Eurostat » retiré (les écarts ne sont pas dans le jeu) ; sources
++ `gov_10dd_edpt1` (PIB), `gov_10dd_ggd` (recoupement), AFT (dernier trimestre). Générateur : mode `--hors-ligne`
+réparé (il comparait à l'égalité exacte un jeu écrit normalisé depuis le 19/10 ; témoin : S2 altéré de 0,001 refusé).
+Jeu réécrit hors ligne : CSV identique, deux clés d'affichage ajoutées. `dates-affichage.py --ecrire` (fond).
+Contrôles : `check-all --ci` 0, build 0, rendu 0, dates 0, liens 0 critique. Point ouvert : la valeur AFT (usage non
+commercial selon ses mentions légales) reste, Webstat ne publiant pas encore le 1er trimestre 2026.
+
 ### 2026-10-31 — Pages de *Premier coup* (140) et de l'*Odyssée* (682, deux index) : site et Wikidata
 
 Écart trouvé en vérifiant l'effet des fiches KDP du 31/10 sur le site : deux nombres de pages périmés depuis les

@@ -19,8 +19,8 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
   - {date: 2026-10-18, texte: "Ajout : où le recul de l'investissement net s'est produit, administrations locales et autres administrations, avec son point bas de 2016 et la part locale du recul selon les années comparées (contre-expertise du 18/10)."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dette_generations"
-  nom: "Dette publique et générations futures : emplois du besoin de financement, patrimoine, détention de la dette et indicateur S2, France et Union européenne"
-  description: "Compilation dérivée automatiquement des sources officielles : emplois du besoin de financement des administrations publiques (désépargne nette, acquisitions nettes d'actifs non financiers, transferts en capital), France de {gen.a0} à {gen.fin} et 27 pays de l'Union de {gen.cp_a0} à {gen.fin} (Eurostat) ; patrimoine des administrations publiques ({gen.s0}-{gen.s1}) ; dette par secteur détenteur ({gen.h0}-{gen.h_fin}, BCE ; dette négociable de l'État, Banque de France) ; indicateur S2 de la Commission européenne ({gen.dsm_lib}) ; dépenses de retraite projetées par le COR. Ratios contrôlés contre ceux que publie Eurostat."
+  nom: "Dette publique et générations futures : déficits, investissement net, patrimoine, détention et soutenabilité, France et Union européenne"
+  description: "Compilation de séries officielles et d'indicateurs calculés par l'auteur : emplois du besoin de financement des administrations publiques (désépargne nette, acquisitions nettes d'actifs non financiers, transferts en capital), France de {gen.a0} à {gen.fin}, et 27 pays de l'Union en cumul de {gen.cp_a0} à {gen.fin} (Eurostat) ; investissement net par sous-secteur public, France ({gen.a0}-{gen.fin}) ; patrimoine des administrations publiques ({gen.s0}-{gen.s1}, Insee) ; dette par secteur détenteur, France ({gen.h0}-{gen.h_fin}, BCE) ; part des non-résidents dans la dette, {gen.nr_ue_couverture} (BCE) ; part des non-résidents dans la dette négociable de l'État (Banque de France, dernier trimestre d'après l'Agence France Trésor) ; indicateur S2 de la Commission européenne et ses composantes ({gen.dsm_lib}) : scénario central, deux scénarios de sensibilité (productivité réduite, risque non démographique) et valeur centrale de l'édition {gen.dsm_prec_an} reprise dans son annexe ; dépenses, ressources et solde des retraites, valeur {gen.cor_a0} et projection {gen.cor_a1} du Conseil d'orientation des retraites ({gen.cor_lib}). Les rapports au PIB (PIB de la notification, Eurostat gov_10dd_edpt1), cumuls et décompositions sont des calculs de l'auteur, non des statistiques des producteurs ; la détention est recoupée avec Eurostat gov_10dd_ggd ; méthode et recoupements sont décrits sur la page de référence. Les projections sont des résultats conditionnels aux hypothèses de leurs producteurs, non des observations."
   couverture_temporelle: "{gen.h0}/{gen.fin}"
   couverture_spatiale: "France ; Union européenne (27 pays)"
   variables:
@@ -38,6 +38,9 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolu
     - "https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F"
     - "https://economy-finance.ec.europa.eu/publications/debt-sustainability-monitor-2025_en"
     - "https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france"
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_ggd/default/table?lang=fr"
+    - "https://www.aft.gouv.fr/fr/principaux-chiffres-dette"
   mots: ["dette publique", "générations futures", "investissement public", "patrimoine public", "détention de la dette", "non-résidents", "retraites", "indicateur S2", "Eurostat", "BCE"]
   fichiers: ["dette_generations.csv", "dette_generations.json"]
 faq:

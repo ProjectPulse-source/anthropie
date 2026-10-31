@@ -16,8 +16,8 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
   - {date: 2026-10-18, texte: "Addition: where the decline in net investment took place, local government and other government bodies, with its 2016 low point and the local share of the decline depending on the years compared (counter-review of 18 October)."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved at build time
   jeu: "dette_generations"
-  nom: "Public debt and future generations: uses of net borrowing, net worth, debt holdings and the S2 indicator, France and European Union"
-  description: "Compilation derived automatically from official sources: uses of general government net borrowing (net dissaving, net acquisitions of non-financial assets, capital transfers), France from {gen.a0} to {gen.fin} and the 27 EU countries from {gen.cp_a0} to {gen.fin} (Eurostat); general government net worth ({gen.s0}-{gen.s1}); debt by holding sector ({gen.h0}-{gen.h_fin}, ECB; central-government marketable debt, Banque de France); the European Commission's S2 indicator ({gen.dsm_lib}); pension spending projected by the COR. Ratios checked against those published by Eurostat."
+  nom: "Public debt and future generations: deficits, net investment, net worth, debt holdings and sustainability, France and European Union"
+  description: "Compilation of official series and of indicators calculated by the author: uses of general government net borrowing (net dissaving, net acquisitions of non-financial assets, capital transfers), France from {gen.a0} to {gen.fin}, and the 27 EU countries cumulated from {gen.cp_a0} to {gen.fin} (Eurostat); net investment by government subsector, France ({gen.a0}-{gen.fin}); general government net worth ({gen.s0}-{gen.s1}, Insee); debt by holding sector, France ({gen.h0}-{gen.h_fin}, ECB); share of debt held by non-residents, {gen.nr_ue_couverture} (ECB); share of central-government marketable debt held by non-residents (Banque de France, latest quarter from Agence France Trésor); the European Commission's S2 indicator and its components ({gen.dsm_lib}): baseline, two sensitivity scenarios (lower productivity, non-demographic risk) and the {gen.dsm_prec_an} edition's baseline value as reprinted in its annex; pension spending, resources and balance, {gen.cor_a0} value and {gen.cor_a1} projection by the Conseil d'orientation des retraites ({gen.cor_lib}). Ratios to GDP (notification GDP, Eurostat gov_10dd_edpt1), cumulations and decompositions are the author's calculations, not statistics of the producers; holdings are cross-checked against Eurostat gov_10dd_ggd; method and cross-checks are described on the reference page. Projections are results conditional on their producers' assumptions, not observations."
   couverture_temporelle: "{gen.h0}/{gen.fin}"
   couverture_spatiale: "France; European Union (27 countries)"
   variables:
@@ -35,6 +35,9 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved
     - "https://webstat.banque-france.fr/fr/catalogue/det/DET.Q.FR.1315.F33000.M.Z9.8.F"
     - "https://economy-finance.ec.europa.eu/publications/debt-sustainability-monitor-2025_en"
     - "https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france"
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+    - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_ggd/default/table?lang=en"
+    - "https://www.aft.gouv.fr/fr/principaux-chiffres-dette"
   mots: ["public debt", "future generations", "public investment", "public sector net worth", "debt holdings", "non-residents", "pensions", "S2 indicator", "Eurostat", "ECB"]
   fichiers: ["dette_generations.csv", "dette_generations.json"]
 faq:
