@@ -86,6 +86,31 @@ CITE_SUP, CITE_INF = ("RO", "SI"), ("IT", "SK")
 OUT_DATA = ROOT / "data" / "dette_generations.json"
 OUT_STATIC = ROOT / "static" / "dette_generations.json"
 OUT_CSV = ROOT / "static" / "dette_generations.csv"
+# Contrôles publiés (contre-expertise PRO-20261031-044255, point 6, voie 1) : chaque comparaison faite par les témoins,
+# valeur calculée, valeur de référence, écart, tolérance et verdict, écrite telle que le contrôle l'a vue. Produit par un
+# passage EN LIGNE seulement (le mode --hors-ligne ne refait pas les témoins et laisse le fichier tel quel).
+OUT_CTRL = ROOT / "static" / "dette_generations_controles.csv"
+CONTROLES: list[list] = []
+
+
+def noter(controle: str, pays: str, periode, grandeur: str, calcule: float, reference: float, tol: float, unite: str,
+          consequence: str) -> bool:
+    """Inscrit une comparaison au registre des contrôles ; rend True si l'écart tient dans la tolérance."""
+    ok = abs(calcule - reference) <= tol
+    CONTROLES.append([controle, pays, str(periode), grandeur, "%.6f" % calcule, "%.6f" % reference,
+                      "%.6f" % (calcule - reference), "%g" % tol, unite, "conforme" if ok else "hors tolérance",
+                      "" if ok else consequence])
+    return ok
+
+
+def controles_texte() -> str:
+    buf = io.StringIO()
+    w = csv.writer(buf, lineterminator="\n")
+    w.writerow(["controle", "pays", "periode", "grandeur", "valeur_calculee", "valeur_reference", "ecart", "tolerance",
+                "unite", "resultat", "consequence"])
+    for r in sorted(CONTROLES):
+        w.writerow(r)
+    return buf.getvalue()
 OUT_FIGURES = ROOT / "data" / "figures_generations.json"
 OUT_IMG = ROOT / "static" / "img"
 PIECES = ROOT / "scripts" / "sources_generations"
@@ -328,6 +353,9 @@ def emplois():
             ecartes.append(dict(pays=p, annee=a, motif="ratio publié absent"))
             continue
         e = {it: r[it] - pub[it][(p, a)] for it in PUBLIES}
+        for it in PUBLIES:
+            noter("ratio calcule / ratio publie par Eurostat (gov_10a_main, PC_GDP)", p, a, it, r[it], pub[it][(p, a)], TOL,
+                  "points de PIB", "annee-pays ecartee du jeu" if p != "FR" else "arret du generateur")
         if any(abs(v) > TOL for v in e.values()):
             ecartes.append(dict(pays=p, annee=a, motif="écart au ratio publié", ecarts={k: round(v, 2) for k, v in e.items() if abs(v) > TOL}))
             continue
@@ -336,6 +364,8 @@ def emplois():
         K = N + r["NP"] + r["P52_P53"]          # acquisitions nettes d'actifs non financiers, usure déduite
         T = r["D9PAY"] - r["D9REC"]
         bou = B - (E + K + T)
+        noter("identite comptable : besoin = desepargne + actifs + transferts", p, a, "besoin", B, E + K + T, TOL_BOUCLAGE,
+              "points de PIB", "annee-pays ecartee du jeu")
         if abs(bou) > TOL_BOUCLAGE:
             ecartes.append(dict(pays=p, annee=a, motif="identité des comptes non bouclée", ecart=round(bou, 3)))
             continue
@@ -379,6 +409,8 @@ def sous_secteurs(annees: list) -> dict:
             fail("sous-secteurs : %d absent d'une serie" % a)
         v = {k: M[k][("FR", a)] / Y[("FR", a)] * 100 for k in M}
         apu, loc = v[("S13", "P51G")] - v[("S13", "P51C")], v[("S1313", "P51G")] - v[("S1313", "P51C")]
+        noter("investissement net S13 relu par sous-secteur / investissement net du jeu", "FR", a, "investissement_net", apu,
+              r["investissement_net"], 0.02, "points de PIB", "arret du generateur")
         if abs(apu - r["investissement_net"]) > 0.02:
             fail("sous-secteurs : investissement net S13 %d = %.3f, jeu = %.3f (temoin)" % (a, apu, r["investissement_net"]))
         if v[("S1313", "P51G")] > v[("S13", "P51G")]:
@@ -433,6 +465,8 @@ def patrimoine(fin: int):
     bf = {("FR", a): I["FA"][a] - I["FP"][a] for a in I["FA"] if a in I["FP"]}
     for a in I["B90"]:
         if ("FR", a) in bf and ("FR", a) in prod and ("FR", a) in nonprod:
+            noter("Insee 8.204 : actifs non financiers + valeur financiere nette = valeur nette (B90)", "FR", a, "B90",
+                  prod[("FR", a)] + nonprod[("FR", a)] + bf[("FR", a)], I["B90"][a], 500, "M EUR", "arret du generateur")
             if abs(prod[("FR", a)] + nonprod[("FR", a)] + bf[("FR", a)] - I["B90"][a]) > 500:
                 fail("Insee 8.204 %d : la valeur nette ne boucle pas (actifs non financiers + actifs - passifs financiers)" % a)
     e_prod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N1N")
@@ -441,6 +475,10 @@ def patrimoine(fin: int):
     if len(communs) < 10:
         fail("temoin Eurostat nama_10_nfa_bs : moins de dix annees communes avec l'Insee")
     for a in communs:
+        noter("Insee 8.204 / Eurostat nama_10_nfa_bs", "FR", a, "N1N", prod[("FR", a)], e_prod[("FR", a)], 1000, "M EUR",
+              "arret du generateur")
+        noter("Insee 8.204 / Eurostat nama_10_nfa_bs", "FR", a, "N2N", nonprod[("FR", a)], e_nonprod[("FR", a)], 1000, "M EUR",
+              "arret du generateur")
         if abs(e_prod[("FR", a)] - prod[("FR", a)]) > 1000 or abs(e_nonprod[("FR", a)] - nonprod[("FR", a)]) > 1000:
             fail("Insee 8.204 et Eurostat divergent sur les actifs non financiers en %d : millesimes differents, relire" % a)
     q4 = bf90_trimestriel()
@@ -448,6 +486,8 @@ def patrimoine(fin: int):
     if len(cq) < 2:
         fail("temoin Eurostat nasq_10_f_bs : moins de deux annees communes recentes")
     for a in cq:
+        noter("Insee 8.204 / Eurostat nasq_10_f_bs (4e trimestre)", "FR", a, "valeur financiere nette", bf[("FR", a)], q4[a],
+              2000, "M EUR", "arret du generateur")
         if abs(q4[a] - bf[("FR", a)]) > 2000:
             fail("Insee 8.204 et Eurostat trimestriel divergent sur la valeur financiere nette %d (%.0f contre %.0f M EUR)" % (a, bf[("FR", a)], q4[a]))
     ans = [a for a in range(fin - 30, fin + 1) if all(("FR", a) in s for s in (Y, prod, nonprod, terrains, bf))]
@@ -473,6 +513,7 @@ def detention():
         t, n, r, b = tot[("FR", "S1")][a], nr.get(("FR", "S1"), {}).get(a), res.get(("FR", "S1"), {}).get(a), res.get(("FR", "S121"), {}).get(a)
         if None in (n, r, b):
             fail("BCE : detention francaise incomplete en %d" % a)
+        noter("BCE : non-residents + residents = total", "FR", a, "dette", n + r, t, 0.15, "% du PIB", "arret du generateur")
         if abs(n + r - t) > 0.15:
             fail("BCE : non-residents + residents != total en %d (%.2f)" % (a, n + r - t))
         fr_.append(dict(annee=a, dette=t, non_residents=n, residents=r, banque_centrale=b, autres_residents=r - b,
@@ -484,6 +525,10 @@ def detention():
         a = x["annee"]
         if ("FR", a) in ggd["S2"]:
             vus += 1
+            noter("BCE GFS / Eurostat gov_10dd_ggd", "FR", a, "non_residents", x["non_residents"], ggd["S2"][("FR", a)], 0.15,
+                  "% du PIB", "arret du generateur")
+            noter("BCE GFS / Eurostat gov_10dd_ggd", "FR", a, "banque_centrale", x["banque_centrale"], ggd["S121"][("FR", a)], 0.15,
+                  "% du PIB", "arret du generateur")
             if abs(ggd["S2"][("FR", a)] - x["non_residents"]) > 0.15 or abs(ggd["S121"][("FR", a)] - x["banque_centrale"]) > 0.15:
                 fail("BCE et Eurostat divergent sur la detention francaise en %d" % a)
     if vus < 3:
@@ -514,6 +559,9 @@ def etat_negociable():
     rder = max(robs)
     # Garde de transcription : la période commune doit égaler Webstat à 0,1 point près.
     communs = [k for k in robs if k in obs]
+    for k in communs:
+        noter("releve AFT / Banque de France Webstat (periode commune)", "FR", k, "part_non_residents_dette_negociable_etat",
+              robs[k], obs[k], 0.1, "% de la dette negociable de l'Etat", "arret du generateur")
     if not communs or any(abs(robs[k] - obs[k]) > 0.1 for k in communs):
         fail("releve AFT : la periode commune ne concorde pas avec Webstat (%s)" % {k: (robs[k], obs.get(k)) for k in robs})
     # Garde de fraîcheur : le relevé n'a de raison d'être que s'il est plus récent que Webstat.
@@ -1585,7 +1633,17 @@ def main() -> int:
     if check:   # après les figures : parité téléphone et hauteurs déclarées se contrôlent aussi sans écrire
         log("--check : %d gardes de donnees, %d gardes de texte passees (%d cles d'affichage), parite des 6 figures telephone "
             "et hauteurs des pages controlees, rien ecrit." % (n, nt, len(A)))
+        if CONTROLES:
+            log("--check : %d comparaisons des temoins, dont %d hors tolerance (non ecrites)"
+                % (len(CONTROLES), sum(1 for r in CONTROLES if r[9] != "conforme")))
         return 0
+    # Registre des contrôles : écrit à chaque passage en ligne qui le change, avant le « rien écrit » du jeu (un premier
+    # passage doit le créer même à données identiques). Hors ligne, les témoins ne tournent pas : le fichier reste.
+    if CONTROLES and "--hors-ligne" not in sys.argv[1:]:   # hors ligne, seul le contrôle AFT tourne : registre partiel
+        ctrl = controles_texte()
+        if not OUT_CTRL.exists() or OUT_CTRL.read_text(encoding="utf-8-sig") != ctrl:
+            OUT_CTRL.write_text(ctrl, encoding="utf-8-sig", newline="\n")
+            log("Ecrit : static/dette_generations_controles.csv (%d comparaisons)" % len(CONTROLES))
     use("fr")
     tableau = tableaux["fr"]
     payload = {"meta": {"releve_le": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
