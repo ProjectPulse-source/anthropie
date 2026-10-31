@@ -2,7 +2,7 @@
 title: "Comment l'écriture a-t-elle transformé la pensée ?"
 description: "L'écriture n'a pas seulement noté la pensée : elle l'a transformée — mémoire externalisée, raison graphique, esprit critique. De Platon à l'imprimerie et à l'intelligence artificielle, l'histoire des supports est celle des bascules de notre manière de penser."
 date: 2026-07-25
-lastmod: 2026-07-25
+lastmod: 2026-10-31
 og_title: "Comment l'écriture a-t-elle transformé la pensée ? — S. Lalut"
 faq:
   - question: "Qu'est-ce que l'écriture a changé dans la pensée humaine ?"
@@ -14,7 +14,7 @@ faq:
   - question: "L'intelligence artificielle est-elle une bascule comparable à l'écriture ?"
     answer: "C'est l'hypothèse discutée aujourd'hui : après la mémoire (écriture) et la diffusion (imprimerie), l'IA externalise une part du jugement lui-même — formuler, résumer, répondre. Comme aux bascules précédentes, la question n'est pas de bénir ou maudire l'outil, mais de voir ce qu'il redistribue : qu'est-ce qui se libère, qu'est-ce qui s'atrophie, et qui contrôle le support."
   - question: "Où cette traversée est-elle développée ?"
-    answer: "Dans L'Odyssée des idées de Stéphane Lalut (nouvelle édition 2026, 696 pages) : 250 escales des premiers signes à l'intelligence artificielle, dont le chemin de lecture « Les signes » suit précisément cette histoire — écriture, alphabet, imprimerie, presse, numérique — et ses effets sur la manière de penser."
+    answer: "Dans L'Odyssée des idées de Stéphane Lalut (nouvelle édition 2026, 682 pages) : 250 escales des premiers signes à l'intelligence artificielle, dont le chemin de lecture « Les signes » suit précisément cette histoire — écriture, alphabet, imprimerie, presse, numérique — et ses effets sur la manière de penser."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "guides"
@@ -65,7 +65,7 @@ Trois régularités traversent les trois bascules&nbsp;:
 
 ## La traversée complète
 
-Cette page suit un seul fil. Le livre [*L'Odyssée des idées*](/livres/lodyssee-des-idees/) (nouvelle édition 2026, 696 pages) le déploie parmi **250 escales** — une œuvre, une vie, une invention, une bascule — reliées par sept chemins de lecture, dont «&nbsp;Les signes&nbsp;», qui va des premiers signes à l'intelligence artificielle. Chaque escale suit le même geste&nbsp;: une scène, une bascule, une chute. Celle de Socrate — «&nbsp;le philosophe sans livre&nbsp;» — se clôt ainsi&nbsp;:
+Cette page suit un seul fil. Le livre [*L'Odyssée des idées*](/livres/lodyssee-des-idees/) (nouvelle édition 2026, 682 pages) le déploie parmi **250 escales** — une œuvre, une vie, une invention, une bascule — reliées par sept chemins de lecture, dont «&nbsp;Les signes&nbsp;», qui va des premiers signes à l'intelligence artificielle. Chaque escale suit le même geste&nbsp;: une scène, une bascule, une chute. Celle de Socrate — «&nbsp;le philosophe sans livre&nbsp;» — se clôt ainsi&nbsp;:
 
 > Aucune réponse définitive. Aucune doctrine close. Rien qu'une manière de ne pas laisser les mots dormir en paix. […] vingt-quatre siècles plus tard, il ne nous apprend pas quoi penser. Il nous empêche de croire trop vite que nous pensons.
 

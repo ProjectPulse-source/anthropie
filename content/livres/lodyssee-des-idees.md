@@ -10,12 +10,12 @@ date: 2026-07-03
 # d'origine (ASIN B0CVXQSLBQ, ancre des avis) ; data/works.yaml:612 dit « première édition
 # 2023 » — écart non tranché, sans effet sur une fenêtre de 6 mois.
 first_published: 2024-02-19
-lastmod: 2026-07-25  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-10-31  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-4-2"
 amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
 amazon_rating_date: 2026-10-25  # date du relevé, affichée sous la note ; la mettre à jour avec elle
 amazon_reviews: 167      # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
-pages: 696  # sync data/works.yaml (book-lodyssee-des-idees.pages) — nombre de pages broché
+pages: 682  # sync data/works.yaml (book-lodyssee-des-idees.pages) — nombre de pages broché
 description_en: "From the dawn of humanity to artificial intelligence, 250 ports of call — works, lives, inventions, crises, tipping points — and seven itineraries connect thinkers across the centuries. Not a chronological parade but a network. An instrument of curiosity, not a reservoir of certainties."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"
@@ -42,7 +42,7 @@ url_amazon_ca_kindle: "https://www.amazon.ca/dp/B0CVXQSLBQ"
 # appartient à /offrir-un-livre-de-culture-generale/ — la réponse y renvoie.
 faq:
   - question: "Qu'est-ce que L'Odyssée des idées ?"
-    answer: "Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle : 250 escales — une œuvre, une vie, une invention, une bascule — reliées par sept chemins de lecture (les signes, le pouvoir, l'argent, la liberté, le sacré, l'opinion, la condition humaine). Nouvelle édition entièrement recomposée, 696 pages (2026)."
+    answer: "Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle : 250 escales — une œuvre, une vie, une invention, une bascule — reliées par sept chemins de lecture (les signes, le pouvoir, l'argent, la liberté, le sacré, l'opinion, la condition humaine). Nouvelle édition entièrement recomposée, 682 pages (2026)."
   - question: "Comment lire L'Odyssée des idées ?"
     answer: "Trois usages : page après page, comme une traversée chronologique ; au hasard, pour une escale de quelques minutes ; ou par chemins, en suivant les renvois qui font surgir échos, ruptures et filiations. C'est un récit continu, pas un manuel à fiches."
   - question: "À qui s'adresse L'Odyssée des idées ?"
@@ -55,7 +55,7 @@ faq:
 lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
-Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle. Nouvelle édition entièrement recomposée (2026)&nbsp;: 250 escales, sept chemins de lecture, 696 pages.
+Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle. Nouvelle édition entièrement recomposée (2026)&nbsp;: 250 escales, sept chemins de lecture, 682 pages.
 
 > «&nbsp;Ce que nous croyons penser pour la première fois a, presque toujours, déjà été pensé.&nbsp;»
 
@@ -79,7 +79,7 @@ On peut lire ce livre page après page, comme une traversée chronologique. On p
 6. L'opinion
 7. La condition humaine
 
-696 pages, un index, une bibliographie de cœur, sept cartes. Pour qui veut comprendre le monde sans renoncer à penser.
+682 pages, deux index (des noms et des notions), une bibliographie de cœur, sept cartes. Pour qui veut comprendre le monde sans renoncer à penser.
 
 Le premier de ces chemins — «&nbsp;Les signes&nbsp;» — a sa traversée sur le site&nbsp;: [Comment l'écriture a-t-elle transformé la pensée&nbsp;?](/comment-lecriture-a-transforme-la-pensee/)
 

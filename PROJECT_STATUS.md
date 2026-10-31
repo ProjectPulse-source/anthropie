@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-31 — Pages de *Premier coup* (140) et de l'*Odyssée* (682, deux index) : site et Wikidata
+
+Écart trouvé en vérifiant l'effet des fiches KDP du 31/10 sur le site : deux nombres de pages périmés depuis les
+révisions de septembre. *Premier coup* : 138 → **140** (édition révisée du 26/09, PDF de 140 pages). *Odyssée* : 696 →
+**682** (édition corrigée du 28/09, même ISBN, PDF de 682 pages) et « un index » → « deux index (des noms et des
+notions) ». Corrigé dans `data/works.yaml` (pages, commentaire de date), les deux fiches livres (`pages`, FAQ, corps ;
+`lastmod` 31/10), la page Livres FR et EN, « Comment l'écriture a transformé la pensée » FR et EN (`lastmod` 31/10),
+« Offrir un livre de culture générale », les commentaires d'exemple de `/a-propos/` et `auteur-wall.html`, et
+`static/llms.txt`. Les entrées de changelog de `works.yaml` (v1_6, v1_12) gardent la valeur de leur date.
+Contrôles : `check-fiches-registre` 0, `check-all --ci` 0, build 0, `audit-liens-build` 0 critique, `check-dates-build`
+0 ; HTML construit relu : `numberOfPages` 140 et 682, plus aucun « 138 p. » ni « 696 p. » dans le site construit.
+Wikidata porte encore 138 (Q141072263) et 696 (Q138911733), relus par l'API le 31/10 : lot pour Laura dans
+`Wikidata/Import_Wikidata_Laura_2026-10-31_Pages_PremierCoup_Odyssee/` (à exécuter, puis readback).
+
 ### 2026-10-30 — Spirale de la boucle : quatre lectures, deux échelles, accueil et définition ; AWP-02 v1.1
 
 Trois contre-expertises arbitrées (pièces archivées avec SHA-256 et arbitrages 30, 32 et 35 dans

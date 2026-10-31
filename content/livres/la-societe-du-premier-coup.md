@@ -3,7 +3,7 @@ title: "La Société du premier coup"
 subtitle: "Pourquoi certains peuvent recommencer — et d'autres non"
 promo_slug: "premier-coup"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2026-08-10
-lastmod: 2026-08-10  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-10-31  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "Nous ne disposons pas tous du même nombre d'essais. Ce livre propose une grille pour rendre visible une dimension des inégalités que les colonnes habituelles — revenus, patrimoine, mobilité — laissent hors champ : ce qu'un échec coûte selon celui qui le commet, et combien de tentatives une trajectoire autorise réellement."
 description_en: "We are not all granted the same number of attempts. This book offers a grid for seeing a dimension of inequality that the usual columns — income, wealth, mobility — leave out of frame: what a failure costs depending on who fails, and how many attempts a trajectory actually allows. A narrative essay for the general reader, companion to working paper AWP-08."
 isbn: "978-2-9586347-6-6"
@@ -12,7 +12,7 @@ amazon_rating_date: 2026-10-25  # date du relevé, affichée sous la note ; la m
 amazon_reviews: 4        # sous socialProofMinReviews (10) : « Nouveauté » s'affiche à la place,
                          # et la note prend le relais toute seule au 10e avis.
 wikidata_qid: "Q141072263"  # item créé le 15/08/2026, resté absent de la fiche jusqu'au 16/08 — alimente le sameAs du JSON-LD Book
-pages: 138  # sync data/works.yaml (book-premier-coup.pages) — nombre de pages broché
+pages: 140  # sync data/works.yaml (book-premier-coup.pages) — nombre de pages broché
 price: "13.90"  # prix broché EUR — affiché sur la page + schema.org Offer
 kindle_price: "5.99"  # prix EUR de l'édition Kindle (non rendu : information de registre)
 serie: "anthropie"
@@ -43,11 +43,11 @@ url_amazon_ca_kindle: "https://www.amazon.ca/dp/B0H1619K7W"
 # cas /qui-paie-la-dette-publique/. NE JAMAIS l'ajouter ici.
 faq:
   - question: "Que contient La Société du premier coup ?"
-    answer: "Un prologue, trois parties, dix chapitres et une conclusion, sur 138 pages. La première partie porte sur ce qui se joue avant même la première tentative — emploi, logement, assurance, crédit, orientation ; la deuxième sur ce qu'une tentative laisse inscrit derrière elle ; la troisième sur le nombre d'essais dont une trajectoire dispose réellement. L'essai avance par cas concrets et par comparaisons internationales, et chaque fait avancé porte sa source."
+    answer: "Un prologue, trois parties, dix chapitres et une conclusion, sur 140 pages. La première partie porte sur ce qui se joue avant même la première tentative — emploi, logement, assurance, crédit, orientation ; la deuxième sur ce qu'une tentative laisse inscrit derrière elle ; la troisième sur le nombre d'essais dont une trajectoire dispose réellement. L'essai avance par cas concrets et par comparaisons internationales, et chaque fait avancé porte sa source."
   - question: "Faut-il avoir lu les autres livres de Stéphane Lalut d'abord ?"
     answer: "Non. Le livre est autonome et sans prérequis : les mécanismes sont exposés à partir de situations ordinaires — un dossier de location, un barème d'assurance, une affectation post-bac. Il prolonge le cadre anthropique développé dans ANTHROPIE — Ordre ici. Dette ailleurs, mais ne suppose pas sa lecture."
   - question: "Quelle différence entre le livre et le working paper AWP-08 ?"
-    answer: "AWP-08 formalise : il définit la réversibilité sociale, propose une architecture de mesure et des propositions testables, en format académique. Le livre raconte : 138 pages pour le lecteur non spécialiste, à partir de cas concrets et sans appareil formel. Le paper ouvre un programme de recherche ; le livre rend la question lisible."
+    answer: "AWP-08 formalise : il définit la réversibilité sociale, propose une architecture de mesure et des propositions testables, en format académique. Le livre raconte : 140 pages pour le lecteur non spécialiste, à partir de cas concrets et sans appareil formel. Le paper ouvre un programme de recherche ; le livre rend la question lisible."
   - question: "Le livre propose-t-il des solutions ?"
     answer: "Ce n'est pas un programme de réforme. Le dixième chapitre, « Où poser le levier », recense les dispositifs qui rouvrent une trajectoire en indiquant pour chacun ce que la littérature établit et à quel niveau de preuve — presque toujours moins que la promesse, presque toujours plus que rien. Le répertoire complet, avec ses sources et ce qui reste à l'état d'hypothèse, est publié sur la page compagnon du livre."
 related_awp:

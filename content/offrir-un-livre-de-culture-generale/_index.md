@@ -23,7 +23,7 @@ Une transparence d'abord&nbsp;: les deux livres recommandés ici sont les miens.
 
 La culture générale s'offre le plus souvent sous forme de manuel — fiches, chapitres thématiques, résumés. [*L'Odyssée des idées*](/livres/lodyssee-des-idees/) fait le pari inverse&nbsp;: **un récit**. De l'aube de l'humanité à l'intelligence artificielle, 250 escales — une œuvre, une vie, une invention, une crise, un instant de bascule — et sept chemins de lecture (les signes, le pouvoir, l'argent, la liberté, le sacré, l'opinion, la condition humaine) qui relient les penseurs par-delà les siècles.
 
-Ce qui en fait un cadeau plutôt qu'un achat pour soi&nbsp;: les trois usages. On peut le lire page après page, comme une traversée&nbsp;; l'ouvrir au hasard, pour une escale de quelques minutes&nbsp;; ou suivre un chemin d'un bout à l'autre. Le destinataire choisit son mode d'emploi — c'est rare pour un livre de 696 pages. Nouvelle édition entièrement recomposée, 2026.
+Ce qui en fait un cadeau plutôt qu'un achat pour soi&nbsp;: les trois usages. On peut le lire page après page, comme une traversée&nbsp;; l'ouvrir au hasard, pour une escale de quelques minutes&nbsp;; ou suivre un chemin d'un bout à l'autre. Le destinataire choisit son mode d'emploi — c'est rare pour un livre de 682 pages. Nouvelle édition entièrement recomposée, 2026.
 
 Pour qui&nbsp;: le lecteur curieux de philosophie, de sciences ou d'histoire&nbsp;; l'étudiant qui veut relier ce que les disciplines séparent&nbsp;; le lecteur de fresques (ceux qui ont aimé les grandes synthèses narratives s'y retrouveront)&nbsp;— [voir la fiche complète, avec extrait](/livres/lodyssee-des-idees/).
 

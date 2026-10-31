@@ -593,7 +593,7 @@ works:
     publication_date: "2026-08-10"
     isbn: "978-2-9586347-6-6"
     isbn_13_normalized: "9782958634766"
-    pages: 138  # broché 5×8 po (sync content/livres/la-societe-du-premier-coup.md)
+    pages: 140  # broché 5×8 po, édition révisée du 26/09/2026 (138 avant) (sync content/livres/la-societe-du-premier-coup.md)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_broche: "2958634760"   # = ISBN-10 du bloc AFNIL, clé de contrôle vérifiée
@@ -723,7 +723,7 @@ works:
       fr: "L'Odyssée des idées"
       en: ""  # n/a
     subtitle_fr: "Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"  # sous-titre canonique tranché 2026-07-03 (aligné intérieur + couverture + BO + site)
-    publication_date: "2026-07-03"  # nouvelle édition entièrement recomposée (696 p., nouvel ISBN) ; première édition 2023, ISBN 978-2-9586347-1-1 / broché 295863471X dépublié
+    publication_date: "2026-07-03"  # nouvelle édition entièrement recomposée (696 p. au 03/07, 682 p. depuis le 28/09, nouvel ISBN) ; première édition 2023, ISBN 978-2-9586347-1-1 / broché 295863471X dépublié
     # TROIS ÉDITIONS, et non deux — l'écart 2023/2024 n'est pas une contradiction
     # (auteur, 2026-09-13) : 2023 = première édition chez Bookelis, distribuée par Hachette,
     # fiche hors de contrôle de l'auteur ; partenariat arrêté, réédition en direct sur KDP,
@@ -733,7 +733,7 @@ works:
     # par une source lisible, la fiche Bookelis n'existant plus.
     isbn: "978-2-9586347-4-2"
     isbn_13_normalized: "9782958634742"
-    pages: 696  # broché nouvelle édition (sync content/livres/lodyssee-des-idees.md)
+    pages: 682  # broché, édition corrigée du 28/09/2026, même ISBN (696 avant) (sync content/livres/lodyssee-des-idees.md)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_kindle: "B0CVXQSLBQ"  # conservé de la première édition (ancre des avis lecteurs)

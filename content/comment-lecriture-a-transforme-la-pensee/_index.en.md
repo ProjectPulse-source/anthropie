@@ -3,7 +3,7 @@ title: "How did writing transform thought?"
 url: /en/how-writing-transformed-thought/
 description: "Writing did not merely record thought: it transformed it — externalised memory, the graphic reason, the critical mind. From Plato to the printing press and artificial intelligence, the history of the media of writing is the history of shifts in how we think."
 date: 2026-07-25
-lastmod: 2026-07-25
+lastmod: 2026-10-31
 og_title: "How did writing transform thought? — S. Lalut"
 faq:
   - question: "What did writing change in human thought?"
@@ -15,7 +15,7 @@ faq:
   - question: "Is artificial intelligence a shift comparable to writing?"
     answer: "That is the hypothesis under discussion today: after memory (writing) and diffusion (printing), AI externalises a part of judgement itself — formulating, summarising, answering. As with the earlier shifts, the question is not whether to bless or curse the tool, but to see what it redistributes: what is freed, what atrophies, and who controls the medium."
   - question: "Where is this journey developed?"
-    answer: "In Stéphane Lalut's L'Odyssée des idées (new 2026 edition, 696 pages; in French): 250 stopovers from the first signs to artificial intelligence, of which the reading path “Les signes” (“The Signs”) follows precisely this history — writing, the alphabet, printing, the press, digital media — and its effects on how we think."
+    answer: "In Stéphane Lalut's L'Odyssée des idées (new 2026 edition, 682 pages; in French): 250 stopovers from the first signs to artificial intelligence, of which the reading path “Les signes” (“The Signs”) follows precisely this history — writing, the alphabet, printing, the press, digital media — and its effects on how we think."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "guides"
@@ -66,7 +66,7 @@ Three regularities run through the three shifts:
 
 ## The complete journey
 
-This page follows a single thread. The book [*L'Odyssée des idées*](/livres/lodyssee-des-idees/) (in French; new 2026 edition, 696 pages) unfolds it among **250 stopovers** — a work, a life, an invention, a shift — linked by seven reading paths, among them “Les signes” (“The Signs”), which runs from the first signs to artificial intelligence. Each stopover follows the same movement: a scene, a shift, a closing note. The one on Socrates — “the philosopher without a book” — ends like this (our translation):
+This page follows a single thread. The book [*L'Odyssée des idées*](/livres/lodyssee-des-idees/) (in French; new 2026 edition, 682 pages) unfolds it among **250 stopovers** — a work, a life, an invention, a shift — linked by seven reading paths, among them “Les signes” (“The Signs”), which runs from the first signs to artificial intelligence. Each stopover follows the same movement: a scene, a shift, a closing note. The one on Socrates — “the philosopher without a book” — ends like this (our translation):
 
 > No definitive answer. No closed doctrine. Nothing but a way of not letting words sleep in peace. […] twenty-four centuries later, he does not teach us what to think. He stops us from believing too quickly that we are thinking.
 

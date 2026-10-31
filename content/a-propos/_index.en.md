@@ -16,7 +16,7 @@ description: "Stéphane Lalut — Economist, independent researcher and essayist
 # Presence comes from the repository (content/livres/, grouped by `serie`) —
 # nothing to add here for a new title to show up. Only the editorial copy lives
 # here. `meta` is optional: without it the tile reuses the page count of the
-# book page ("138 pages"). A missing `line` never hides the book; it raises a
+# book page ("140 pages"). A missing `line` never hides the book; it raises a
 # build warning.
 wall_corpus_label: "The anthropic corpus"
 wall_autres_label: "Other works"  # same name as /en/books/ and the home page (author, 2026-10-01)

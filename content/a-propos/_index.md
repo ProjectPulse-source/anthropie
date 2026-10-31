@@ -23,7 +23,7 @@ description: "Stéphane Lalut — Économiste, chercheur indépendant et essayis
 # La PRÉSENCE d'un livre vient du dépôt (content/livres/, groupé par `serie`) :
 # rien à ajouter ici pour qu'un nouveau titre apparaisse. Seul l'ÉDITORIAL vit
 # ici. `meta` est facultatif — sans lui, la pagination de la fiche est reprise
-# (« 138 pages ») ; ne le poser que pour dire un rang d'édition. Une `line`
+# (« 140 pages ») ; ne le poser que pour dire un rang d'édition. Une `line`
 # manquante n'efface pas le livre : elle déclenche un avertissement au build.
 wall_corpus_label: "Corpus anthropique"
 wall_autres_label: "Autres ouvrages"  # même nom que /livres/ et l'accueil (auteur, 01/10/2026)

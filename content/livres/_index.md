@@ -15,7 +15,7 @@ commencer:
     pourquoi: "neuf promesses passées à la même grille"
   - livre: "la-societe-du-premier-coup"
     pour: "Le plus court"
-    pourquoi: "138 pages : qui peut recommencer, et qui ne le peut pas"
+    pourquoi: "140 pages : qui peut recommencer, et qui ne le peut pas"
 ---
 
 Les quatre ouvrages du corpus anthropique forment le socle long du projet. Là où les *Anthropie Working Papers* formalisent l'hypothèse et l'appliquent à des objets spécifiques — la dette publique, la transition énergétique, la recherche indépendante —, les livres la déploient sur un arc plus large&nbsp;: histoire longue, économie, finances publiques, inégalités, épistémologie. *Un président peut-il tenir ses promesses&nbsp;?* porte sur le pouvoir exécutif&nbsp;: ce qu'une promesse peut déplacer au lieu de le résoudre — des figures du cadre que le livre rencontre sans prétendre les mesurer. Chaque livre peut se lire indépendamment&nbsp;; ensemble, ils dessinent l'architecture complète du cadre.
