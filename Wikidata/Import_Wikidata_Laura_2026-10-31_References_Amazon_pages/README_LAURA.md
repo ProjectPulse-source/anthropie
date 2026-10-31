@@ -37,3 +37,16 @@ s'était terminé en vert **sans rien écrire**. *Anthropy* prend la page amazon
 
 Relire les trois items par l'API (`wbgetclaims`, `property=P1104`) : un seul P1104 par item, valeur inchangée, une
 référence S854 + S813. Consigner la révision ici, puis `python scripts/check-wikidata-registre.py`.
+
+## ✅ Exécuté le 31/10/2026 (23:09 UTC, Laura) — relu par l'API le 01/11
+
+Relecture `wbgetclaims` (`rb_Q141072263.json`, `rb_Q138911733.json`, `rb_Q140645013.json`) : un seul P1104 par item,
+valeur inchangée, une référence S854 + S813 `+2026-10-31` :
+
+- Q141072263 *Premier coup* : `+140`, `https://www.amazon.fr/dp/2958634760`, révision 2563187160 ;
+- Q138911733 *Odyssée* : `+682`, `https://www.amazon.fr/dp/2958634744`, révision 2563187173 ;
+- Q140645013 *Anthropy* : `+644`, `https://www.amazon.com/dp/2958634752`, révision 2563187189.
+
+Séquence retrait → création → référence sur chaque item. `check-wikidata-registre.py` : parité OK (23 items). Les sept
+nombres de pages du catalogue portent désormais une référence Amazon. Aucune écriture en retour dans le site : les
+valeurs n'ont pas changé.
