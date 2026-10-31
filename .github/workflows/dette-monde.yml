@@ -170,7 +170,7 @@ jobs:
                   static/img/dette-baisse-comparaison-en.svg static/img/dette-baisse-comparaison-en.png \
                   static/img/dette-baisse-stabilisant-en.svg static/img/dette-baisse-stabilisant-en.png \
                   static/img/dette-baisse-*-m.svg static/img/dette-baisse-*-m.png \
-                  data/dette_generations.json static/dette_generations.json static/dette_generations.csv data/figures_generations.json \
+                  data/dette_generations.json static/dette_generations.json static/dette_generations.csv static/dette_generations_controles.csv data/figures_generations.json \
                   static/images/og-dette-generations.jpg static/images/vig-dette-generations.jpg \
                   static/img/dette-generations-actifs.svg static/img/dette-generations-actifs.png \
                   static/img/dette-generations-detention.svg static/img/dette-generations-detention.png \

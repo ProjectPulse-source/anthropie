@@ -1,10 +1,10 @@
 ﻿tableau,pays,periode,variable,valeur,unite
-france_emplois_du_besoin_de_financement,FR,1996-2025,besoin,124.475,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,1996-2025,actifs,22.967,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,1996-2025,investissement_net,18.468,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,1996-2025,transferts,19.774,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,1996-2025,aides_investissement,25.483,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,1996-2025,desepargne,81.734,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,besoin,124.451,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,actifs,22.898,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,investissement_net,18.398,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,transferts,19.744,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,aides_investissement,25.485,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,1996-2025,desepargne,81.809,points de PIB cumulés
 france_emplois_du_besoin_de_financement,FR,1996-2005,besoin,28.599,points de PIB cumulés
 france_emplois_du_besoin_de_financement,FR,1996-2005,actifs,9.117,points de PIB cumulés
 france_emplois_du_besoin_de_financement,FR,1996-2005,investissement_net,7.649,points de PIB cumulés
@@ -17,12 +17,12 @@ france_emplois_du_besoin_de_financement,FR,2006-2015,investissement_net,7.519,po
 france_emplois_du_besoin_de_financement,FR,2006-2015,transferts,7.977,points de PIB cumulés
 france_emplois_du_besoin_de_financement,FR,2006-2015,aides_investissement,8.645,points de PIB cumulés
 france_emplois_du_besoin_de_financement,FR,2006-2015,desepargne,30.554,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,2016-2025,besoin,48.316,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,2016-2025,actifs,4.822,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,2016-2025,investissement_net,3.299,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,2016-2025,transferts,6.687,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,2016-2025,aides_investissement,10.665,points de PIB cumulés
-france_emplois_du_besoin_de_financement,FR,2016-2025,desepargne,36.807,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,besoin,48.292,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,actifs,4.752,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,investissement_net,3.229,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,transferts,6.657,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,aides_investissement,10.668,points de PIB cumulés
+france_emplois_du_besoin_de_financement,FR,2016-2025,desepargne,36.882,points de PIB cumulés
 france_annuel,FR,1996,besoin,3.896,% du PIB
 france_annuel,FR,1996,actifs,1.018,% du PIB
 france_annuel,FR,1996,investissement_net,0.888,% du PIB
@@ -197,12 +197,12 @@ france_annuel,FR,2024,investissement_net,0.582,% du PIB
 france_annuel,FR,2024,transferts,0.485,% du PIB
 france_annuel,FR,2024,aides_investissement,1.180,% du PIB
 france_annuel,FR,2024,desepargne,4.522,% du PIB
-france_annuel,FR,2025,besoin,5.093,% du PIB
-france_annuel,FR,2025,actifs,0.893,% du PIB
-france_annuel,FR,2025,investissement_net,0.708,% du PIB
-france_annuel,FR,2025,transferts,0.538,% du PIB
-france_annuel,FR,2025,aides_investissement,1.135,% du PIB
-france_annuel,FR,2025,desepargne,3.662,% du PIB
+france_annuel,FR,2025,besoin,5.068,% du PIB
+france_annuel,FR,2025,actifs,0.824,% du PIB
+france_annuel,FR,2025,investissement_net,0.639,% du PIB
+france_annuel,FR,2025,transferts,0.508,% du PIB
+france_annuel,FR,2025,aides_investissement,1.137,% du PIB
+france_annuel,FR,2025,desepargne,3.737,% du PIB
 france_investissement_net_sous_secteurs,FR,1996,net_apu,0.888,% du PIB
 france_investissement_net_sous_secteurs,FR,1996,net_loc,0.603,% du PIB
 france_investissement_net_sous_secteurs,FR,1996,net_autres,0.284,% du PIB
@@ -319,118 +319,114 @@ france_investissement_net_sous_secteurs,FR,2024,net_apu,0.582,% du PIB
 france_investissement_net_sous_secteurs,FR,2024,net_loc,0.466,% du PIB
 france_investissement_net_sous_secteurs,FR,2024,net_autres,0.117,% du PIB
 france_investissement_net_sous_secteurs,FR,2024,fbcf_loc,2.330,% du PIB
-france_investissement_net_sous_secteurs,FR,2025,net_apu,0.708,% du PIB
-france_investissement_net_sous_secteurs,FR,2025,net_loc,0.533,% du PIB
-france_investissement_net_sous_secteurs,FR,2025,net_autres,0.175,% du PIB
-france_investissement_net_sous_secteurs,FR,2025,fbcf_loc,2.360,% du PIB
-ue_emplois_du_besoin_de_financement,AT,2001-2025,besoin,66.151,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,AT,2001-2025,actifs,9.857,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,AT,2001-2025,transferts,27.308,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,AT,2001-2025,desepargne,28.986,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,BE,2001-2025,besoin,70.516,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,BE,2001-2025,actifs,6.521,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,BE,2001-2025,transferts,16.384,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,BE,2001-2025,desepargne,47.611,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,BG,2001-2025,besoin,25.050,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,BG,2001-2025,actifs,25.197,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,BG,2001-2025,transferts,-8.857,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,BG,2001-2025,desepargne,8.709,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,CY,2001-2025,besoin,56.066,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,CY,2001-2025,actifs,34.554,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,CY,2001-2025,transferts,26.538,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,CY,2001-2025,desepargne,-5.022,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,CZ,2001-2025,besoin,67.863,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,CZ,2001-2025,actifs,4.807,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,CZ,2001-2025,transferts,18.175,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,CZ,2001-2025,desepargne,44.880,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,DE,2001-2025,besoin,38.015,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,DE,2001-2025,actifs,1.861,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,DE,2001-2025,transferts,22.258,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,DE,2001-2025,desepargne,13.895,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,DK,2001-2025,besoin,-37.965,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,DK,2001-2025,actifs,7.719,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,DK,2001-2025,transferts,14.550,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,DK,2001-2025,desepargne,-60.234,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,EE,2001-2025,besoin,8.988,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,EE,2001-2025,actifs,65.406,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,EE,2001-2025,transferts,-8.928,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,EE,2001-2025,desepargne,-47.492,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,EL,2001-2025,besoin,143.786,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,EL,2001-2025,actifs,23.394,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,EL,2001-2025,transferts,0.165,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,EL,2001-2025,desepargne,120.227,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,ES,2001-2025,besoin,104.282,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,ES,2001-2025,actifs,26.195,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,ES,2001-2025,transferts,6.007,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,ES,2001-2025,desepargne,72.081,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,FI,2001-2025,besoin,10.068,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,FI,2001-2025,actifs,14.731,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,FI,2001-2025,transferts,-1.367,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,FI,2001-2025,desepargne,-3.296,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,FR,2001-2025,besoin,111.619,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,FR,2001-2025,actifs,18.956,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,FR,2001-2025,transferts,16.753,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,FR,2001-2025,desepargne,75.911,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,HR,2001-2025,besoin,86.085,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,HR,2001-2025,actifs,38.209,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,HR,2001-2025,transferts,26.238,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,HR,2001-2025,desepargne,21.638,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,HU,2001-2025,besoin,122.527,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,HU,2001-2025,actifs,24.835,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,HU,2001-2025,transferts,19.414,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,HU,2001-2025,desepargne,78.278,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,IE,2001-2025,besoin,77.657,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,IE,2001-2025,actifs,33.050,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,IE,2001-2025,transferts,27.309,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,IE,2001-2025,desepargne,17.298,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,IT,2001-2025,besoin,96.710,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,IT,2001-2025,actifs,3.050,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,IT,2001-2025,transferts,33.656,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,IT,2001-2025,desepargne,60.005,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LT,2001-2025,besoin,53.582,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LT,2001-2025,actifs,26.929,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LT,2001-2025,transferts,-7.509,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LT,2001-2025,desepargne,34.160,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LU,2001-2025,besoin,-25.761,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LU,2001-2025,actifs,52.372,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LU,2001-2025,transferts,22.466,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LU,2001-2025,desepargne,-100.599,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LV,2001-2025,besoin,67.066,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LV,2001-2025,actifs,27.823,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LV,2001-2025,transferts,-8.840,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,LV,2001-2025,desepargne,48.082,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,MT,2001-2025,besoin,76.103,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,MT,2001-2025,actifs,31.794,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,MT,2001-2025,transferts,-6.823,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,MT,2001-2025,desepargne,51.118,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,NL,2001-2025,besoin,37.625,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,NL,2001-2025,actifs,12.977,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,NL,2001-2025,transferts,4.578,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,NL,2001-2025,desepargne,20.070,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,PL,2001-2025,besoin,103.040,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,PL,2001-2025,actifs,44.034,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,PL,2001-2025,transferts,1.033,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,PL,2001-2025,desepargne,57.973,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,PT,2001-2025,besoin,100.895,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,PT,2001-2025,actifs,11.036,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,PT,2001-2025,transferts,7.489,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,PT,2001-2025,desepargne,82.369,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,RO,2001-2025,besoin,107.902,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,RO,2001-2025,actifs,65.481,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,RO,2001-2025,transferts,5.400,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,RO,2001-2025,desepargne,37.021,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SE,2001-2025,besoin,1.310,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SE,2001-2025,actifs,30.435,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SE,2001-2025,transferts,1.726,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SE,2001-2025,desepargne,-30.851,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SI,2001-2025,besoin,78.424,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SI,2001-2025,actifs,48.140,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SI,2001-2025,transferts,10.458,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SI,2001-2025,desepargne,19.826,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SK,2001-2025,besoin,98.046,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SK,2001-2025,actifs,0.737,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SK,2001-2025,transferts,2.495,points de PIB cumulés
-ue_emplois_du_besoin_de_financement,SK,2001-2025,desepargne,94.814,points de PIB cumulés
+france_investissement_net_sous_secteurs,FR,2025,net_apu,0.639,% du PIB
+france_investissement_net_sous_secteurs,FR,2025,net_loc,0.482,% du PIB
+france_investissement_net_sous_secteurs,FR,2025,net_autres,0.156,% du PIB
+france_investissement_net_sous_secteurs,FR,2025,fbcf_loc,2.363,% du PIB
+ue_emplois_du_besoin_de_financement,AT,2001-2025,besoin,66.025,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,AT,2001-2025,actifs,9.761,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,AT,2001-2025,transferts,27.301,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,AT,2001-2025,desepargne,28.963,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BE,2001-2025,besoin,70.600,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BE,2001-2025,actifs,6.469,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BE,2001-2025,transferts,16.435,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BE,2001-2025,desepargne,47.696,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BG,2001-2025,besoin,25.462,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BG,2001-2025,actifs,25.303,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BG,2001-2025,transferts,-8.223,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,BG,2001-2025,desepargne,8.380,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CY,2001-2025,besoin,56.118,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CY,2001-2025,actifs,34.508,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CY,2001-2025,transferts,26.539,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CY,2001-2025,desepargne,-4.925,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CZ,2001-2025,besoin,67.747,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CZ,2001-2025,actifs,4.833,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CZ,2001-2025,transferts,18.190,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,CZ,2001-2025,desepargne,44.724,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DE,2001-2025,besoin,37.995,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DE,2001-2025,actifs,2.282,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DE,2001-2025,transferts,21.996,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,DE,2001-2025,desepargne,13.717,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EE,2001-2025,besoin,9.694,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EE,2001-2025,actifs,65.480,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EE,2001-2025,transferts,-8.778,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EE,2001-2025,desepargne,-47.012,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EL,2001-2025,besoin,143.662,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EL,2001-2025,actifs,22.998,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EL,2001-2025,transferts,0.702,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,EL,2001-2025,desepargne,119.961,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,ES,2001-2025,besoin,104.263,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,ES,2001-2025,actifs,26.168,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,ES,2001-2025,transferts,6.017,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,ES,2001-2025,desepargne,72.078,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FI,2001-2025,besoin,10.226,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FI,2001-2025,actifs,14.689,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FI,2001-2025,transferts,-1.366,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FI,2001-2025,desepargne,-3.097,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FR,2001-2025,besoin,111.595,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FR,2001-2025,actifs,18.886,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FR,2001-2025,transferts,16.723,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,FR,2001-2025,desepargne,75.986,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HR,2001-2025,besoin,86.603,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HR,2001-2025,actifs,38.203,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HR,2001-2025,transferts,26.440,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HR,2001-2025,desepargne,21.960,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HU,2001-2025,besoin,122.618,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HU,2001-2025,actifs,25.062,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HU,2001-2025,transferts,19.334,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,HU,2001-2025,desepargne,78.222,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IE,2001-2025,besoin,77.800,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IE,2001-2025,actifs,33.339,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IE,2001-2025,transferts,27.223,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IE,2001-2025,desepargne,17.238,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IT,2001-2025,besoin,96.843,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IT,2001-2025,actifs,3.650,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IT,2001-2025,transferts,33.599,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,IT,2001-2025,desepargne,59.594,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LT,2001-2025,besoin,53.293,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LT,2001-2025,actifs,27.424,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LT,2001-2025,transferts,-8.594,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LT,2001-2025,desepargne,34.460,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LU,2001-2025,besoin,-25.416,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LU,2001-2025,actifs,51.409,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LU,2001-2025,transferts,19.427,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LU,2001-2025,desepargne,-96.252,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LV,2001-2025,besoin,66.688,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LV,2001-2025,actifs,28.375,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LV,2001-2025,transferts,-8.523,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,LV,2001-2025,desepargne,46.835,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,MT,2001-2025,besoin,76.014,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,MT,2001-2025,actifs,31.922,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,MT,2001-2025,transferts,-6.523,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,MT,2001-2025,desepargne,50.601,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,NL,2001-2025,besoin,37.641,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,NL,2001-2025,actifs,12.982,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,NL,2001-2025,transferts,4.584,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,NL,2001-2025,desepargne,20.075,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PL,2001-2025,besoin,103.024,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PL,2001-2025,actifs,43.948,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PL,2001-2025,transferts,1.096,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PL,2001-2025,desepargne,57.981,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PT,2001-2025,besoin,100.822,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PT,2001-2025,actifs,10.815,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PT,2001-2025,transferts,7.547,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,PT,2001-2025,desepargne,82.460,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,RO,2001-2025,besoin,107.834,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,RO,2001-2025,actifs,65.580,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,RO,2001-2025,transferts,5.267,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,RO,2001-2025,desepargne,36.987,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SE,2001-2025,besoin,2.263,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SE,2001-2025,actifs,30.392,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SE,2001-2025,transferts,3.829,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SE,2001-2025,desepargne,-31.959,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SI,2001-2025,besoin,78.394,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SI,2001-2025,actifs,47.938,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SI,2001-2025,transferts,10.555,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SI,2001-2025,desepargne,19.901,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SK,2001-2025,besoin,98.080,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SK,2001-2025,actifs,0.697,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SK,2001-2025,transferts,1.650,points de PIB cumulés
+ue_emplois_du_besoin_de_financement,SK,2001-2025,desepargne,95.733,points de PIB cumulés
 france_patrimoine_apu,FR,1995,actifs_produits,59.903,% du PIB
 france_patrimoine_apu,FR,1995,actifs_non_produits,8.497,% du PIB
 france_patrimoine_apu,FR,1995,terrains,7.717,% du PIB
@@ -441,10 +437,10 @@ france_patrimoine_apu,FR,1996,actifs_non_produits,8.303,% du PIB
 france_patrimoine_apu,FR,1996,terrains,7.479,% du PIB
 france_patrimoine_apu,FR,1996,valeur_financiere_nette,-36.746,% du PIB
 france_patrimoine_apu,FR,1996,patrimoine_net,31.558,% du PIB
-france_patrimoine_apu,FR,1997,actifs_produits,59.168,% du PIB
+france_patrimoine_apu,FR,1997,actifs_produits,59.167,% du PIB
 france_patrimoine_apu,FR,1997,actifs_non_produits,7.974,% du PIB
 france_patrimoine_apu,FR,1997,terrains,7.222,% du PIB
-france_patrimoine_apu,FR,1997,valeur_financiere_nette,-37.031,% du PIB
+france_patrimoine_apu,FR,1997,valeur_financiere_nette,-37.032,% du PIB
 france_patrimoine_apu,FR,1997,patrimoine_net,30.110,% du PIB
 france_patrimoine_apu,FR,1998,actifs_produits,57.604,% du PIB
 france_patrimoine_apu,FR,1998,actifs_non_produits,8.888,% du PIB
@@ -454,7 +450,7 @@ france_patrimoine_apu,FR,1998,patrimoine_net,27.653,% du PIB
 france_patrimoine_apu,FR,1999,actifs_produits,56.810,% du PIB
 france_patrimoine_apu,FR,1999,actifs_non_produits,11.439,% du PIB
 france_patrimoine_apu,FR,1999,terrains,10.676,% du PIB
-france_patrimoine_apu,FR,1999,valeur_financiere_nette,-31.929,% du PIB
+france_patrimoine_apu,FR,1999,valeur_financiere_nette,-31.930,% du PIB
 france_patrimoine_apu,FR,1999,patrimoine_net,36.320,% du PIB
 france_patrimoine_apu,FR,2000,actifs_produits,55.374,% du PIB
 france_patrimoine_apu,FR,2000,actifs_non_produits,13.233,% du PIB
@@ -561,7 +557,7 @@ france_patrimoine_apu,FR,2020,actifs_non_produits,46.299,% du PIB
 france_patrimoine_apu,FR,2020,terrains,45.072,% du PIB
 france_patrimoine_apu,FR,2020,valeur_financiere_nette,-90.523,% du PIB
 france_patrimoine_apu,FR,2020,patrimoine_net,20.438,% du PIB
-france_patrimoine_apu,FR,2021,actifs_produits,64.373,% du PIB
+france_patrimoine_apu,FR,2021,actifs_produits,64.374,% du PIB
 france_patrimoine_apu,FR,2021,actifs_non_produits,46.314,% du PIB
 france_patrimoine_apu,FR,2021,terrains,45.213,% du PIB
 france_patrimoine_apu,FR,2021,valeur_financiere_nette,-82.422,% du PIB
@@ -574,142 +570,142 @@ france_patrimoine_apu,FR,2022,patrimoine_net,40.313,% du PIB
 france_patrimoine_apu,FR,2023,actifs_produits,62.203,% du PIB
 france_patrimoine_apu,FR,2023,actifs_non_produits,39.809,% du PIB
 france_patrimoine_apu,FR,2023,terrains,38.841,% du PIB
-france_patrimoine_apu,FR,2023,valeur_financiere_nette,-73.259,% du PIB
-france_patrimoine_apu,FR,2023,patrimoine_net,28.753,% du PIB
+france_patrimoine_apu,FR,2023,valeur_financiere_nette,-74.489,% du PIB
+france_patrimoine_apu,FR,2023,patrimoine_net,27.523,% du PIB
 france_patrimoine_apu,FR,2024,actifs_produits,60.939,% du PIB
 france_patrimoine_apu,FR,2024,actifs_non_produits,37.972,% du PIB
 france_patrimoine_apu,FR,2024,terrains,37.016,% du PIB
-france_patrimoine_apu,FR,2024,valeur_financiere_nette,-72.817,% du PIB
-france_patrimoine_apu,FR,2024,patrimoine_net,26.094,% du PIB
-france_patrimoine_apu,FR,2025,actifs_produits,60.840,% du PIB
-france_patrimoine_apu,FR,2025,actifs_non_produits,37.496,% du PIB
-france_patrimoine_apu,FR,2025,terrains,36.528,% du PIB
-france_patrimoine_apu,FR,2025,valeur_financiere_nette,-73.300,% du PIB
-france_patrimoine_apu,FR,2025,patrimoine_net,25.037,% du PIB
+france_patrimoine_apu,FR,2024,valeur_financiere_nette,-73.370,% du PIB
+france_patrimoine_apu,FR,2024,patrimoine_net,25.541,% du PIB
+france_patrimoine_apu,FR,2025,actifs_produits,60.915,% du PIB
+france_patrimoine_apu,FR,2025,actifs_non_produits,37.543,% du PIB
+france_patrimoine_apu,FR,2025,terrains,36.573,% du PIB
+france_patrimoine_apu,FR,2025,valeur_financiere_nette,-71.357,% du PIB
+france_patrimoine_apu,FR,2025,patrimoine_net,27.101,% du PIB
 france_detention,FR,1995,dette,57.805,% du PIB
-france_detention,FR,1995,non_residents,22.428,% du PIB
+france_detention,FR,1995,non_residents,22.279,% du PIB
 france_detention,FR,1995,banque_centrale,0.970,% du PIB
-france_detention,FR,1995,autres_residents,34.407,% du PIB
+france_detention,FR,1995,autres_residents,34.556,% du PIB
 france_detention,FR,1996,dette,60.593,% du PIB
-france_detention,FR,1996,non_residents,25.478,% du PIB
+france_detention,FR,1996,non_residents,25.316,% du PIB
 france_detention,FR,1996,banque_centrale,0.944,% du PIB
-france_detention,FR,1996,autres_residents,34.172,% du PIB
+france_detention,FR,1996,autres_residents,34.334,% du PIB
 france_detention,FR,1997,dette,61.983,% du PIB
-france_detention,FR,1997,non_residents,27.154,% du PIB
-france_detention,FR,1997,banque_centrale,0.821,% du PIB
-france_detention,FR,1997,autres_residents,34.008,% du PIB
+france_detention,FR,1997,non_residents,26.984,% du PIB
+france_detention,FR,1997,banque_centrale,0.822,% du PIB
+france_detention,FR,1997,autres_residents,34.178,% du PIB
 france_detention,FR,1998,dette,62.100,% du PIB
-france_detention,FR,1998,non_residents,28.246,% du PIB
+france_detention,FR,1998,non_residents,28.070,% du PIB
 france_detention,FR,1998,banque_centrale,0.802,% du PIB
-france_detention,FR,1998,autres_residents,33.052,% du PIB
+france_detention,FR,1998,autres_residents,33.228,% du PIB
 france_detention,FR,1999,dette,61.423,% du PIB
-france_detention,FR,1999,non_residents,28.135,% du PIB
+france_detention,FR,1999,non_residents,27.954,% du PIB
 france_detention,FR,1999,banque_centrale,0.782,% du PIB
-france_detention,FR,1999,autres_residents,32.507,% du PIB
+france_detention,FR,1999,autres_residents,32.687,% du PIB
 france_detention,FR,2000,dette,59.721,% du PIB
-france_detention,FR,2000,non_residents,28.111,% du PIB
+france_detention,FR,2000,non_residents,27.932,% du PIB
 france_detention,FR,2000,banque_centrale,0.743,% du PIB
-france_detention,FR,2000,autres_residents,30.868,% du PIB
+france_detention,FR,2000,autres_residents,31.046,% du PIB
 france_detention,FR,2001,dette,59.322,% du PIB
-france_detention,FR,2001,non_residents,28.684,% du PIB
+france_detention,FR,2001,non_residents,28.503,% du PIB
 france_detention,FR,2001,banque_centrale,0.712,% du PIB
-france_detention,FR,2001,autres_residents,29.927,% du PIB
+france_detention,FR,2001,autres_residents,30.107,% du PIB
 france_detention,FR,2002,dette,61.256,% du PIB
-france_detention,FR,2002,non_residents,30.578,% du PIB
+france_detention,FR,2002,non_residents,30.394,% du PIB
 france_detention,FR,2002,banque_centrale,0.660,% du PIB
-france_detention,FR,2002,autres_residents,30.018,% du PIB
+france_detention,FR,2002,autres_residents,30.203,% du PIB
 france_detention,FR,2003,dette,65.364,% du PIB
-france_detention,FR,2003,non_residents,33.063,% du PIB
+france_detention,FR,2003,non_residents,32.870,% du PIB
 france_detention,FR,2003,banque_centrale,0.687,% du PIB
-france_detention,FR,2003,autres_residents,31.614,% du PIB
+france_detention,FR,2003,autres_residents,31.807,% du PIB
 france_detention,FR,2004,dette,66.879,% du PIB
-france_detention,FR,2004,non_residents,34.273,% du PIB
+france_detention,FR,2004,non_residents,34.074,% du PIB
 france_detention,FR,2004,banque_centrale,0.694,% du PIB
-france_detention,FR,2004,autres_residents,31.912,% du PIB
+france_detention,FR,2004,autres_residents,32.112,% du PIB
 france_detention,FR,2005,dette,68.186,% du PIB
-france_detention,FR,2005,non_residents,35.285,% du PIB
+france_detention,FR,2005,non_residents,35.081,% du PIB
 france_detention,FR,2005,banque_centrale,0.703,% du PIB
-france_detention,FR,2005,autres_residents,32.199,% du PIB
+france_detention,FR,2005,autres_residents,32.402,% du PIB
 france_detention,FR,2006,dette,65.401,% du PIB
-france_detention,FR,2006,non_residents,33.533,% du PIB
+france_detention,FR,2006,non_residents,33.333,% du PIB
 france_detention,FR,2006,banque_centrale,0.680,% du PIB
-france_detention,FR,2006,autres_residents,31.188,% du PIB
+france_detention,FR,2006,autres_residents,31.388,% du PIB
 france_detention,FR,2007,dette,65.477,% du PIB
-france_detention,FR,2007,non_residents,33.340,% du PIB
+france_detention,FR,2007,non_residents,33.141,% du PIB
 france_detention,FR,2007,banque_centrale,0.676,% du PIB
-france_detention,FR,2007,autres_residents,31.462,% du PIB
+france_detention,FR,2007,autres_residents,31.660,% du PIB
 france_detention,FR,2008,dette,69.819,% du PIB
-france_detention,FR,2008,non_residents,34.884,% du PIB
+france_detention,FR,2008,non_residents,34.707,% du PIB
 france_detention,FR,2008,banque_centrale,0.826,% du PIB
-france_detention,FR,2008,autres_residents,34.110,% du PIB
+france_detention,FR,2008,autres_residents,34.286,% du PIB
 france_detention,FR,2009,dette,84.056,% du PIB
-france_detention,FR,2009,non_residents,46.670,% du PIB
+france_detention,FR,2009,non_residents,46.544,% du PIB
 france_detention,FR,2009,banque_centrale,0.975,% du PIB
-france_detention,FR,2009,autres_residents,36.410,% du PIB
+france_detention,FR,2009,autres_residents,36.537,% du PIB
 france_detention,FR,2010,dette,86.278,% du PIB
-france_detention,FR,2010,non_residents,47.379,% du PIB
+france_detention,FR,2010,non_residents,47.317,% du PIB
 france_detention,FR,2010,banque_centrale,1.390,% du PIB
-france_detention,FR,2010,autres_residents,37.509,% du PIB
+france_detention,FR,2010,autres_residents,37.570,% du PIB
 france_detention,FR,2011,dette,88.749,% du PIB
-france_detention,FR,2011,non_residents,47.911,% du PIB
+france_detention,FR,2011,non_residents,47.869,% du PIB
 france_detention,FR,2011,banque_centrale,2.144,% du PIB
-france_detention,FR,2011,autres_residents,38.694,% du PIB
+france_detention,FR,2011,autres_residents,38.736,% du PIB
 france_detention,FR,2012,dette,91.742,% du PIB
-france_detention,FR,2012,non_residents,50.158,% du PIB
+france_detention,FR,2012,non_residents,50.113,% du PIB
 france_detention,FR,2012,banque_centrale,2.953,% du PIB
-france_detention,FR,2012,autres_residents,38.632,% du PIB
+france_detention,FR,2012,autres_residents,38.676,% du PIB
 france_detention,FR,2013,dette,94.558,% du PIB
-france_detention,FR,2013,non_residents,52.968,% du PIB
+france_detention,FR,2013,non_residents,52.939,% du PIB
 france_detention,FR,2013,banque_centrale,2.334,% du PIB
-france_detention,FR,2013,autres_residents,39.255,% du PIB
+france_detention,FR,2013,autres_residents,39.284,% du PIB
 france_detention,FR,2014,dette,96.164,% du PIB
-france_detention,FR,2014,non_residents,54.894,% du PIB
+france_detention,FR,2014,non_residents,54.873,% du PIB
 france_detention,FR,2014,banque_centrale,2.069,% du PIB
-france_detention,FR,2014,autres_residents,39.202,% du PIB
+france_detention,FR,2014,autres_residents,39.222,% du PIB
 france_detention,FR,2015,dette,96.978,% du PIB
-france_detention,FR,2015,non_residents,54.150,% du PIB
+france_detention,FR,2015,non_residents,54.134,% du PIB
 france_detention,FR,2015,banque_centrale,5.316,% du PIB
-france_detention,FR,2015,autres_residents,37.512,% du PIB
+france_detention,FR,2015,autres_residents,37.528,% du PIB
 france_detention,FR,2016,dette,98.150,% du PIB
-france_detention,FR,2016,non_residents,51.769,% du PIB
+france_detention,FR,2016,non_residents,51.757,% du PIB
 france_detention,FR,2016,banque_centrale,9.905,% du PIB
-france_detention,FR,2016,autres_residents,36.476,% du PIB
+france_detention,FR,2016,autres_residents,36.488,% du PIB
 france_detention,FR,2017,dette,98.761,% du PIB
-france_detention,FR,2017,non_residents,50.377,% du PIB
+france_detention,FR,2017,non_residents,50.368,% du PIB
 france_detention,FR,2017,banque_centrale,14.025,% du PIB
-france_detention,FR,2017,autres_residents,34.359,% du PIB
+france_detention,FR,2017,autres_residents,34.368,% du PIB
 france_detention,FR,2018,dette,98.530,% du PIB
-france_detention,FR,2018,non_residents,49.153,% du PIB
+france_detention,FR,2018,non_residents,49.145,% du PIB
 france_detention,FR,2018,banque_centrale,15.310,% du PIB
-france_detention,FR,2018,autres_residents,34.066,% du PIB
+france_detention,FR,2018,autres_residents,34.074,% du PIB
 france_detention,FR,2019,dette,98.158,% du PIB
-france_detention,FR,2019,non_residents,50.145,% du PIB
+france_detention,FR,2019,non_residents,50.148,% du PIB
 france_detention,FR,2019,banque_centrale,14.588,% du PIB
-france_detention,FR,2019,autres_residents,33.425,% du PIB
+france_detention,FR,2019,autres_residents,33.422,% du PIB
 france_detention,FR,2020,dette,114.907,% du PIB
-france_detention,FR,2020,non_residents,56.434,% du PIB
+france_detention,FR,2020,non_residents,56.426,% du PIB
 france_detention,FR,2020,banque_centrale,20.966,% du PIB
-france_detention,FR,2020,autres_residents,37.507,% du PIB
+france_detention,FR,2020,autres_residents,37.515,% du PIB
 france_detention,FR,2021,dette,112.786,% du PIB
-france_detention,FR,2021,non_residents,53.202,% du PIB
+france_detention,FR,2021,non_residents,53.197,% du PIB
 france_detention,FR,2021,banque_centrale,24.841,% du PIB
-france_detention,FR,2021,autres_residents,34.743,% du PIB
+france_detention,FR,2021,autres_residents,34.748,% du PIB
 france_detention,FR,2022,dette,111.366,% du PIB
-france_detention,FR,2022,non_residents,54.065,% du PIB
+france_detention,FR,2022,non_residents,54.049,% du PIB
 france_detention,FR,2022,banque_centrale,25.159,% du PIB
-france_detention,FR,2022,autres_residents,32.141,% du PIB
+france_detention,FR,2022,autres_residents,32.157,% du PIB
 france_detention,FR,2023,dette,109.507,% du PIB
-france_detention,FR,2023,non_residents,56.060,% du PIB
-france_detention,FR,2023,banque_centrale,23.323,% du PIB
-france_detention,FR,2023,autres_residents,30.125,% du PIB
+france_detention,FR,2023,non_residents,56.287,% du PIB
+france_detention,FR,2023,banque_centrale,23.324,% du PIB
+france_detention,FR,2023,autres_residents,29.896,% du PIB
 france_detention,FR,2024,dette,112.635,% du PIB
-france_detention,FR,2024,non_residents,59.228,% du PIB
-france_detention,FR,2024,banque_centrale,21.689,% du PIB
-france_detention,FR,2024,autres_residents,31.717,% du PIB
-france_detention,FR,2025,dette,115.552,% du PIB
-france_detention,FR,2025,non_residents,62.782,% du PIB
-france_detention,FR,2025,banque_centrale,19.086,% du PIB
-france_detention,FR,2025,autres_residents,33.683,% du PIB
+france_detention,FR,2024,non_residents,59.689,% du PIB
+france_detention,FR,2024,banque_centrale,21.690,% du PIB
+france_detention,FR,2024,autres_residents,31.255,% du PIB
+france_detention,FR,2025,dette,115.682,% du PIB
+france_detention,FR,2025,non_residents,62.870,% du PIB
+france_detention,FR,2025,banque_centrale,19.121,% du PIB
+france_detention,FR,2025,autres_residents,33.691,% du PIB
 france_etat_negociable_non_residents,FR,1999,part_non_residents_fin_annee,28.0,% de la dette négociable de l'État
 france_etat_negociable_non_residents,FR,2000,part_non_residents_fin_annee,33.7,% de la dette négociable de l'État
 france_etat_negociable_non_residents,FR,2001,part_non_residents_fin_annee,38.4,% de la dette négociable de l'État
@@ -737,31 +733,31 @@ france_etat_negociable_non_residents,FR,2022,part_non_residents_fin_annee,49.8,%
 france_etat_negociable_non_residents,FR,2023,part_non_residents_fin_annee,53.3,% de la dette négociable de l'État
 france_etat_negociable_non_residents,FR,2024,part_non_residents_fin_annee,54.6,% de la dette négociable de l'État
 france_etat_negociable_non_residents,FR,2025,part_non_residents_fin_annee,56.0,% de la dette négociable de l'État
-ue_part_non_residents,AT,2025,part_non_residents,66.191,% de la dette
-ue_part_non_residents,BE,2025,part_non_residents,63.376,% de la dette
-ue_part_non_residents,BG,2025,part_non_residents,50.521,% de la dette
-ue_part_non_residents,CY,2025,part_non_residents,95.899,% de la dette
-ue_part_non_residents,CZ,2025,part_non_residents,25.212,% de la dette
-ue_part_non_residents,DE,2025,part_non_residents,51.327,% de la dette
-ue_part_non_residents,DK,2025,part_non_residents,42.453,% de la dette
-ue_part_non_residents,EE,2025,part_non_residents,76.560,% de la dette
-ue_part_non_residents,ES,2025,part_non_residents,48.935,% de la dette
-ue_part_non_residents,FI,2025,part_non_residents,61.153,% de la dette
-ue_part_non_residents,FR,2025,part_non_residents,54.333,% de la dette
+ue_part_non_residents,AT,2025,part_non_residents,66.139,% de la dette
+ue_part_non_residents,BE,2025,part_non_residents,63.356,% de la dette
+ue_part_non_residents,BG,2025,part_non_residents,50.286,% de la dette
+ue_part_non_residents,CY,2025,part_non_residents,95.894,% de la dette
+ue_part_non_residents,CZ,2025,part_non_residents,25.206,% de la dette
+ue_part_non_residents,DE,2025,part_non_residents,51.254,% de la dette
+ue_part_non_residents,DK,2025,part_non_residents,43.827,% de la dette
+ue_part_non_residents,EE,2025,part_non_residents,77.016,% de la dette
+ue_part_non_residents,ES,2025,part_non_residents,48.931,% de la dette
+ue_part_non_residents,FI,2025,part_non_residents,61.670,% de la dette
+ue_part_non_residents,FR,2025,part_non_residents,54.347,% de la dette
 ue_part_non_residents,HR,2025,part_non_residents,29.361,% de la dette
-ue_part_non_residents,HU,2025,part_non_residents,36.407,% de la dette
+ue_part_non_residents,HU,2025,part_non_residents,36.403,% de la dette
 ue_part_non_residents,IE,2018,part_non_residents,56.117,% de la dette
-ue_part_non_residents,IT,2025,part_non_residents,34.343,% de la dette
-ue_part_non_residents,LT,2025,part_non_residents,72.257,% de la dette
-ue_part_non_residents,LV,2025,part_non_residents,74.208,% de la dette
+ue_part_non_residents,IT,2025,part_non_residents,34.330,% de la dette
+ue_part_non_residents,LT,2025,part_non_residents,72.138,% de la dette
+ue_part_non_residents,LV,2025,part_non_residents,74.263,% de la dette
 ue_part_non_residents,MT,2018,part_non_residents,13.092,% de la dette
-ue_part_non_residents,NL,2025,part_non_residents,49.233,% de la dette
-ue_part_non_residents,PL,2025,part_non_residents,34.597,% de la dette
-ue_part_non_residents,PT,2025,part_non_residents,47.169,% de la dette
+ue_part_non_residents,NL,2025,part_non_residents,49.197,% de la dette
+ue_part_non_residents,PL,2025,part_non_residents,34.598,% de la dette
+ue_part_non_residents,PT,2025,part_non_residents,47.165,% de la dette
 ue_part_non_residents,RO,2025,part_non_residents,50.009,% de la dette
-ue_part_non_residents,SE,2025,part_non_residents,23.022,% de la dette
-ue_part_non_residents,SI,2025,part_non_residents,56.653,% de la dette
-ue_part_non_residents,SK,2025,part_non_residents,59.805,% de la dette
+ue_part_non_residents,SE,2025,part_non_residents,22.943,% de la dette
+ue_part_non_residents,SI,2025,part_non_residents,56.675,% de la dette
+ue_part_non_residents,SK,2025,part_non_residents,59.806,% de la dette
 commission_s2,AT,base,S2,4.159,points de PIB
 commission_s2,AT,base,IBP,2.338,points de PIB
 commission_s2,AT,base,CoA,1.814,points de PIB

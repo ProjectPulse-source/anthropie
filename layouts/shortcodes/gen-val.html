@@ -18,9 +18,10 @@
 {{- if not $a -}}
   {{- errorf "gen-val: data/dette_generations.json absent ou sans bloc %s (page %s)" (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
 {{- else -}}
-  {{- $v := index $a $k -}}
-  {{- if not $v -}}
+  {{- /* Clé ABSENTE = échec ; clé présente et vide = rien à dire (une note conditionnelle, ex. inv_ccf_note quand la
+         consommation de capital n'est plus reprise de l'année précédente, 31/10/2026) : « not » confondait les deux. */ -}}
+  {{- if not (isset $a $k) -}}
     {{- errorf "gen-val: cle %q inconnue du bloc %s (page %s)" $k (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
-  {{- else -}}{{- $v -}}{{- end -}}
+  {{- else -}}{{- index $a $k -}}{{- end -}}
 {{- end -}}
 {{- end -}}

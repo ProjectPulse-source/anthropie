@@ -52,6 +52,23 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-10-31 — Générations futures : patrimoine lu chez Eurostat (dernier millésime), témoins à trois statuts, registre des contrôles
+
+Contre-expertise PRO-20261031-054411 (option C renforcée). La Banque de France révise chaque octobre les trois dernières
+années de ses comptes financiers ; Eurostat a repris la révision d'octobre 2026, le tableau 8.204 de l'Insee (juillet)
+pas encore. Réconciliation par instrument : la révision porte sur les actions détenues par les APU (F5 : −34,8, −16,2,
++58,5 Md€ en 2023-2025), pas sur la dette. Patrimoine désormais lu chez Eurostat (`nama_10_nfa_bs`, `nasa_10_f_bs`
+consolidé) ; témoin bloquant annuel = 4e trimestre ; Insee 8.204 en témoin de millésime à trois statuts (conforme,
+décalage documenté si fenêtre de révision + années antérieures concordantes + publication plus ancienne, sinon anomalie
+et arrêt ; deux témoins positifs vus mordre). Même régime pour la détention BCE / Eurostat `gov_10dd_ggd` (BCE révisée
+après le 18/10 sur 2023-2024). Le 17/10, `nasa_10_f_bs` avait été écartée à tort (elle portait déjà ce millésime).
+Passage en ligne : patrimoine net 2025 25,0 → 27,1 % du PIB, +10,2 points de 2016 à 2025 (8,1), 54 comparaisons en
+hausse sur 231 (55) ; 18 % inchangé. `static/dette_generations_controles.csv` (4 400 comparaisons, 5 décalages
+documentés) publié, lié depuis la méthode, ajouté au `git add` de `dette-monde.yml`. `journal:` FR et EN. `gen-val` :
+clé présente et vide acceptée (`isset`), clé absente toujours en échec (témoin) ; point ouvert : 24 autres `*-val` ont
+le même test `if not $v` (échec bruyant, non silencieux). Contrôles : `check-all --ci` 0, build 0, rendu 0, dates 0,
+liens 0 critique, 770 gardes de texte.
+
 ### 2026-10-31 — Générations futures : description du jeu corrigée avant dépôt Zenodo (contre-expertise PRO-20261031-044255)
 
 Bloc `dataset:` FR et EN de `/dette-publique-generations-futures/` réécrit (nom, description, sources) avant la

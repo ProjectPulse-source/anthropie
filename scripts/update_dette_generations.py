@@ -12,8 +12,9 @@ Les trois arguments qui allègent le fardeau, chacun confronté à la série qui
       TÉMOIN 1 (bloquant pour la France) : les ratios qu'Eurostat PUBLIE en % du PIB (gov_10a_main, PC_GDP), que le
       calcul n'utilise pas ; tolérance TOL ; vu mordre au test (PIB de l'année précédente : 683 rejets sur 810).
       COMPLÉMENT (autre cadre statistique, plus un témoin depuis la phase B du 11/10/2026) : le patrimoine net des APU
-      dans les bilans : Insee, tableau 8.204 (pièce archivée ; actifs non financiers N1N et N2N, valeur financière nette),
-      témoins Eurostat nama_10_nfa_bs et nasq_10_f_bs (T4) ; la série annuelle nasa_10_f_bs n'est plus lue (17/10/2026). Un stock aux prix courants, dominé par des réévaluations, monte ou
+      dans les bilans : Eurostat, dernier millésime (nama_10_nfa_bs : actifs non financiers N1N et N2N ; nasa_10_f_bs :
+      valeur financière nette consolidée), témoin bloquant nasq_10_f_bs (T4), témoin de millésime Insee 8.204 (pièce
+      archivée) à trois statuts (option C, arbitrage PRO-20261031-054411 du 31/10/2026). Un stock aux prix courants, dominé par des réévaluations, monte ou
       baisse selon la fenêtre : il ne valide pas une identité de flux.
       La décomposition dit la COMPOSITION COMPTABLE des déficits, non la charge transmise (Auerbach, Gokhale et
       Kotlikoff 1991 : le déficit dépend de l'étiquetage) ; la prose ne dit jamais « financé ».
@@ -94,13 +95,49 @@ CONTROLES: list[list] = []
 
 
 def noter(controle: str, pays: str, periode, grandeur: str, calcule: float, reference: float, tol: float, unite: str,
-          consequence: str) -> bool:
+          consequence: str, statut: str | None = None) -> bool:
     """Inscrit une comparaison au registre des contrôles ; rend True si l'écart tient dans la tolérance."""
     ok = abs(calcule - reference) <= tol
+    s = statut or ("conforme" if ok else "hors tolérance")
     CONTROLES.append([controle, pays, str(periode), grandeur, "%.6f" % calcule, "%.6f" % reference,
-                      "%.6f" % (calcule - reference), "%g" % tol, unite, "conforme" if ok else "hors tolérance",
-                      "" if ok else consequence])
+                      "%.6f" % (calcule - reference), "%g" % tol, unite, s, "" if s == "conforme" else consequence])
     return ok
+
+
+# Fenêtre de révision : la Banque de France publie chaque octobre ses comptes financiers « actualisés sur les 14 précédents
+# trimestres (3 dernières années et 2 trimestres de l'année en cours) » (note « Publication des comptes nationaux
+# financiers en nouvelle base », octobre 2024). Les trois dernières années closes peuvent donc différer entre deux
+# diffuseurs qui n'ont pas repris le même millésime.
+FENETRE_REVISION = 3
+
+
+def temoin_millesime(controle: str, grandeur: str, ref: dict, comp: dict, tol: float, unite: str, fin: int,
+                     maj_ref: str, maj_comp: str, min_communs: int = 10) -> None:
+    """Témoin à trois statuts (arbitrage PRO-20261031-054411, point 4). Un écart hors tolérance n'est un DÉCALAGE DOCUMENTÉ
+    que si les trois conditions tiennent : année dans la fenêtre de révision ; toutes les années antérieures concordantes ;
+    série de comparaison mise à jour AVANT la série de référence. Sinon ANOMALIE : arrêt. Tout s'inscrit au registre."""
+    communs = sorted(a for a in ref if a in comp and a >= fin - 30)
+    if len(communs) < min_communs:
+        fail("%s, %s : moins de %d annees communes" % (controle, grandeur, min_communs))
+    anterieurs = all(abs(ref[a] - comp[a]) <= tol for a in communs if a <= fin - FENETRE_REVISION)
+    for a in communs:
+        if abs(ref[a] - comp[a]) <= tol:
+            noter(controle, "FR", a, grandeur, ref[a], comp[a], tol, unite, "")
+        elif a > fin - FENETRE_REVISION and anterieurs and maj_comp < maj_ref:
+            noter(controle, "FR", a, grandeur, ref[a], comp[a], tol, unite,
+                  "millesime anterieur de la serie de comparaison (mise a jour %s, reference %s) ; ecart publie, calcul poursuivi"
+                  % (maj_comp, maj_ref), statut="décalage documenté")
+        else:
+            noter(controle, "FR", a, grandeur, ref[a], comp[a], tol, unite, "arret du generateur", statut="anomalie")
+            fail("%s, %s %d : ecart %.3f %s hors tolerance, non explique par un decalage de millesime" % (controle, grandeur, a, ref[a] - comp[a], unite))
+
+
+def maj_eurostat(ds: str, requete: str) -> str:
+    """Date de mise à jour (champ `updated`) d'un jeu Eurostat, AAAA-MM-JJ. Elle date le jeu, pas chaque observation."""
+    d = json.loads(fetch(API % (ds, requete + "&lastTimePeriod=1")))
+    if not d.get("updated"):
+        fail("Eurostat %s : date de mise a jour absente" % ds)
+    return d["updated"][:10]
 
 
 def controles_texte() -> str:
@@ -141,7 +178,7 @@ SOURCES = {
     "pat": dict(fichier="insee_T_8204_patrimoine_apu_2026-07-30.xlsx", lib="Insee, tableau 8.204 (30 juillet 2026)",
                 lib_en="Insee, table 8.204 (30 July 2026)",
                 producteur="Insee, comptes nationaux annuels (base 2020), compte de patrimoine des administrations publiques (S13), corrigé le 30/07/2026",
-                url="https://www.insee.fr/fr/statistiques/8988859"),
+                url="https://www.insee.fr/fr/statistiques/8988859", publie="2026-07-30"),
     "aft": dict(fichier="aft_non_residents_releve_2026T1.json", lib="Agence France Trésor, d'après la Banque de France",
                 producteur="Agence France Trésor, page « Principaux chiffres », graphique des non-résidents (source Banque de France)",
                 url="https://www.aft.gouv.fr/fr/principaux-chiffres-dette"),
@@ -457,39 +494,38 @@ def patrimoine(fin: int):
     Y = eurostat("gov_10dd_edpt1", na_item="B1GQ", sector="S1", unit="MIO_NAC")
     # Tous les actifs non financiers (arbitrage PRO-20261003-195656, B2) : produits N1N (actifs fixes, stocks, objets de
     # valeur) et non produits N2N (terrains surtout) ; les terrains seuls (N211N) gardés pour la phrase sur leur valeur.
-    # Source : l'Insee, producteur (tableau 8.204, pièce archivée). Témoins bloquants : les actifs non financiers transmis
-    # à Eurostat (nama_10_nfa_bs) et la valeur financière nette trimestrielle d'Eurostat au 4e trimestre. La série annuelle
-    # nasa_10_f_bs n'est plus lue : elle s'écartait des deux autres en octobre 2026 (voir SOURCES["pat"]).
-    I = insee_patrimoine()
-    prod, nonprod, terrains = ({("FR", a): v for a, v in I[k].items()} for k in ("N1N", "N2N", "N211N"))
-    bf = {("FR", a): I["FA"][a] - I["FP"][a] for a in I["FA"] if a in I["FP"]}
-    for a in I["B90"]:
-        if ("FR", a) in bf and ("FR", a) in prod and ("FR", a) in nonprod:
-            noter("Insee 8.204 : actifs non financiers + valeur financiere nette = valeur nette (B90)", "FR", a, "B90",
-                  prod[("FR", a)] + nonprod[("FR", a)] + bf[("FR", a)], I["B90"][a], 500, "M EUR", "arret du generateur")
-            if abs(prod[("FR", a)] + nonprod[("FR", a)] + bf[("FR", a)] - I["B90"][a]) > 500:
-                fail("Insee 8.204 %d : la valeur nette ne boucle pas (actifs non financiers + actifs - passifs financiers)" % a)
-    e_prod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N1N")
-    e_nonprod = eurostat("nama_10_nfa_bs", sector="S13", unit="CP_MNAC", asset10="N2N")
-    communs = [a for a in range(fin - 30, fin + 1) if ("FR", a) in e_prod and ("FR", a) in prod]
-    if len(communs) < 10:
-        fail("temoin Eurostat nama_10_nfa_bs : moins de dix annees communes avec l'Insee")
-    for a in communs:
-        noter("Insee 8.204 / Eurostat nama_10_nfa_bs", "FR", a, "N1N", prod[("FR", a)], e_prod[("FR", a)], 1000, "M EUR",
-              "arret du generateur")
-        noter("Insee 8.204 / Eurostat nama_10_nfa_bs", "FR", a, "N2N", nonprod[("FR", a)], e_nonprod[("FR", a)], 1000, "M EUR",
-              "arret du generateur")
-        if abs(e_prod[("FR", a)] - prod[("FR", a)]) > 1000 or abs(e_nonprod[("FR", a)] - nonprod[("FR", a)]) > 1000:
-            fail("Insee 8.204 et Eurostat divergent sur les actifs non financiers en %d : millesimes differents, relire" % a)
+    # Option C (arbitrage PRO-20261031-054411, 31/10/2026) : le compte se lit chez Eurostat, dernier millésime transmis par
+    # l'Insee (actifs non financiers, nama_10_nfa_bs) et par la Banque de France (valeur financière nette, nasa_10_f_bs,
+    # consolidée). La Banque de France révise chaque octobre les trois dernières années closes ; le 17/10/2026, la série
+    # annuelle avait été écartée à tort : elle portait déjà ce millésime, la trimestrielle pas encore. L'Insee 8.204 reste
+    # témoin sur toutes les années (temoin_millesime : conforme, décalage documenté ou anomalie).
+    fil = dict(sector="S13", unit="CP_MNAC")
+    prod, nonprod, terrains = (eurostat("nama_10_nfa_bs", asset10=k, **fil) for k in ("N1N", "N2N", "N211N"))
+    ff = dict(sector="S13", unit="MIO_NAC", na_item="BF90", finpos="LIAB", co_nco="CO")
+    bf = eurostat("nasa_10_f_bs", **ff)
+    # Témoin de validité, bloquant : la valeur annuelle égale celle du 4e trimestre (même producteur, même concept).
     q4 = bf90_trimestriel()
-    cq = [a for a in q4 if ("FR", a) in bf and a >= fin - 3]
-    if len(cq) < 2:
-        fail("temoin Eurostat nasq_10_f_bs : moins de deux annees communes recentes")
+    cq = [a for a in q4 if ("FR", a) in bf and a >= fin - 30]
+    if len(cq) < 10:
+        fail("temoin nasa/nasq_10_f_bs : moins de dix annees communes")
     for a in cq:
-        noter("Insee 8.204 / Eurostat nasq_10_f_bs (4e trimestre)", "FR", a, "valeur financiere nette", bf[("FR", a)], q4[a],
-              2000, "M EUR", "arret du generateur")
-        if abs(q4[a] - bf[("FR", a)]) > 2000:
-            fail("Insee 8.204 et Eurostat trimestriel divergent sur la valeur financiere nette %d (%.0f contre %.0f M EUR)" % (a, bf[("FR", a)], q4[a]))
+        if not noter("Eurostat nasa_10_f_bs (annuel) / nasq_10_f_bs (4e trimestre)", "FR", a, "valeur financiere nette",
+                     bf[("FR", a)], q4[a], 2000, "M EUR", "arret du generateur"):
+            fail("valeur financiere nette %d : annuel et 4e trimestre d'Eurostat divergent (%.0f contre %.0f M EUR)" % (a, bf[("FR", a)], q4[a]))
+    # Témoin de millésime : le compte de l'Insee (pièce archivée), après son propre bouclage.
+    I = insee_patrimoine()
+    for a in I["B90"]:
+        if a in I["FA"] and a in I["FP"] and a in I["N1N"] and a in I["N2N"]:
+            if not noter("Insee 8.204 : actifs non financiers + valeur financiere nette = valeur nette (B90)", "FR", a, "B90",
+                         I["N1N"][a] + I["N2N"][a] + I["FA"][a] - I["FP"][a], I["B90"][a], 500, "M EUR", "arret du generateur"):
+                fail("Insee 8.204 %d : la valeur nette ne boucle pas (actifs non financiers + actifs - passifs financiers)" % a)
+    maj_nfa = maj_eurostat("nama_10_nfa_bs", "geo=FR&sector=S13&unit=CP_MNAC&asset10=N1N")
+    maj_f = maj_eurostat("nasa_10_f_bs", "geo=FR&" + "&".join("%s=%s" % kv for kv in ff.items()))
+    vfn_insee = {a: I["FA"][a] - I["FP"][a] for a in I["FA"] if a in I["FP"]}
+    for grandeur, ref, comp, maj in (("N1N", prod, I["N1N"], maj_nfa), ("N2N", nonprod, I["N2N"], maj_nfa),
+                                     ("valeur financiere nette", bf, vfn_insee, maj_f)):
+        temoin_millesime("Eurostat / Insee 8.204", grandeur, {a: v for (p, a), v in ref.items() if p == "FR"}, comp, 1000 if
+                         grandeur != "valeur financiere nette" else 2000, "M EUR", fin, maj, SOURCES["pat"]["publie"])
     ans = [a for a in range(fin - 30, fin + 1) if all(("FR", a) in s for s in (Y, prod, nonprod, terrains, bf))]
     if not ans:
         fail("patrimoine : aucune annee complete pour la France")
@@ -520,19 +556,15 @@ def detention():
                         part_non_residents=100 * n / t, part_banque_centrale=100 * b / t, part_autres_residents=100 * (r - b) / t))
     # Cohérence avec Eurostat (même déclarant : un écart signale une clé ou un millésime cassé, pas une contre-preuve)
     ggd = {s: eurostat("gov_10dd_ggd", na_item="GD", sector="S13", unit="PC_GDP", maturity="TOTAL", sector2=s) for s in ("S2", "S121")}
-    vus = 0
-    for x in fr_:
-        a = x["annee"]
-        if ("FR", a) in ggd["S2"]:
-            vus += 1
-            noter("BCE GFS / Eurostat gov_10dd_ggd", "FR", a, "non_residents", x["non_residents"], ggd["S2"][("FR", a)], 0.15,
-                  "% du PIB", "arret du generateur")
-            noter("BCE GFS / Eurostat gov_10dd_ggd", "FR", a, "banque_centrale", x["banque_centrale"], ggd["S121"][("FR", a)], 0.15,
-                  "% du PIB", "arret du generateur")
-            if abs(ggd["S2"][("FR", a)] - x["non_residents"]) > 0.15 or abs(ggd["S121"][("FR", a)] - x["banque_centrale"]) > 0.15:
-                fail("BCE et Eurostat divergent sur la detention francaise en %d" % a)
-    if vus < 3:
-        fail("controle BCE/Eurostat : moins de trois annees communes")
+    # Témoin à trois statuts (arbitrage PRO-20261031-054411, point 4c) : la répartition par détenteur vient des comptes
+    # financiers de la Banque de France, révisés chaque octobre ; Eurostat peut porter un millésime antérieur. Le portail de
+    # la BCE ne date pas ses séries : la référence est datée du jour de lecture.
+    maj_ggd = maj_eurostat("gov_10dd_ggd", "geo=FR&na_item=GD&sector=S13&unit=PC_GDP&maturity=TOTAL&sector2=S2")
+    vus = sum(1 for x in fr_ if ("FR", x["annee"]) in ggd["S2"])
+    for cle, s in (("non_residents", "S2"), ("banque_centrale", "S121")):
+        temoin_millesime("BCE GFS / Eurostat gov_10dd_ggd", cle, {x["annee"]: x[cle] for x in fr_},
+                         {a: v for (p, a), v in ggd[s].items() if p == "FR"}, 0.15, "% du PIB", fr_[-1]["annee"],
+                         time.strftime("%Y-%m-%d"), maj_ggd, min_communs=3)
     pays = {}
     for p in PAYS:
         t, n = tot.get((p, "S1"), {}), nr.get((p, "S1"), {})
