@@ -26,3 +26,11 @@ la page relue et conforme.
 
 Relire les deux items par l'API (`wbgetentities`, `props=claims`) : un seul P1104 par item, de valeur `+140` et `+682`.
 Consigner la révision dans ce fichier. Un lancement « vert » sans écriture s'est déjà produit le 23/10.
+
+## Exécuté le 31/10/2026 — relu par l'API
+
+Lot exécuté par Laura Moreau (`#temporary_batch_1793461070943`), 15:38 UTC : retrait de 138 puis ajout de 140 sur
+Q141072263 ; retrait de 696 puis ajout de 682 sur Q138911733. Relecture `wbgetclaims` le même jour : **un seul P1104
+par item, `+140` et `+682`**, rang normal, sans référence (voulu, voir plus haut). `check-wikidata-registre.py` :
+parité OK (23 items). Reste : la référence Amazon (S854 + S813), par un second lot, une fois relue la page de chaque
+broché.
