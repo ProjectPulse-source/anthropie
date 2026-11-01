@@ -12,7 +12,7 @@
   <ul class="revisions__liste">
   {{- range sort . "date" "desc" }}
     {{- $t := time .date }}
-    <li><time datetime="{{ $t.Format "2006-01-02" }}">{{ time.Format $fmt $t }}</time>{{ " — " }}{{ if $en }}{{ .texte }}{{ else }}{{ partial "fr-typo.html" .texte }}{{ end }}</li>
+    <li><time datetime="{{ $t.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" $t "fmt" $fmt "en" $en) }}</time>{{ " — " }}{{ if $en }}{{ .texte }}{{ else }}{{ partial "fr-typo.html" .texte }}{{ end }}</li>
   {{- end }}
   </ul>
 </section>

@@ -28,7 +28,7 @@
 {{- else }}
 <summary>Confrontation à la recherche{{ with $resume }}<span class="confrontation__resume">&nbsp;: {{ . | safeHTML }}</span>{{ else }}&nbsp;: ce que la littérature fait à cette lecture{{ end }}</summary>
 {{ .Inner | .Page.RenderString }}
-<p class="confrontation__date">Revue de littérature vérifiée le {{ time.Format "2 January 2006" $verifie }}&nbsp;: chaque référence citée a été lue en entier à cette date, dans la version indiquée.</p>
+<p class="confrontation__date">Revue de littérature vérifiée le {{ partial "date-affichee.html" (dict "t" (time $verifie) "fmt" "2 January 2006" "en" false) }}&nbsp;: chaque référence citée a été lue en entier à cette date, dans la version indiquée.</p>
 {{- end }}
 </details>
 {{- else -}}

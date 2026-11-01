@@ -36,7 +36,7 @@
      data-procedure="{{ $proc | jsonify }}"
      data-echeance="{{ $a.plf_etape_suivante }}"
      data-procnote="{{ with site.Data.plf_procedure }}{{ cond $en .note_en .note_fr }}{{ end }}"
-     data-releve="{{ (time $m.releve_le) | time.Format (cond $en "2 January 2006" ":date_long") }}">
+     data-releve="{{ partial "date-affichee.html" (dict "t" (time $m.releve_le) "fmt" (cond $en "2 January 2006" ":date_long") "en" $en) }}">
 <form class="fiche-commune__recherche" role="search" onsubmit="return false">
 <label class="fiche-commune__label" for="fiche-commune-champ">{{ cond $en "Your municipality: name, department or INSEE code" "Votre commune : nom, département ou code Insee" }}</label>
 <div class="fiche-commune__saisie"><input id="fiche-commune-champ" type="search" autocomplete="off" spellcheck="false" placeholder="{{ cond $en "Municipality or INSEE code" "Commune ou code Insee" }}" aria-controls="fiche-commune-liste"><button type="button" id="fiche-commune-voir">{{ cond $en "See the sheet" "Voir la fiche" }}</button></div>

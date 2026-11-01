@@ -1,0 +1,8 @@
+{{- /* Date affichée au lecteur — organe unique (2026-11-01). Entrée : (dict "t" <time> "fmt" <format Hugo> "en" <bool>).
+       En français, le premier du mois s'écrit « 1er » : « :date_long » rendait « 1 novembre 2026 », défaut invisible
+       les autres jours, constaté le 01/11/2026 sur la ligne « Page mise à jour le » et les révisions de toutes les pages
+       datées de ce jour. Seul `pouvoirs-president.html` le traitait, en ligne. L'anglais sort inchangé. */ -}}
+{{- $t := .t -}}
+{{- $s := time.Format .fmt $t -}}
+{{- if and (not .en) (eq $t.Day 1) -}}{{- $s = replaceRE `^1 ` "1er " $s 1 -}}{{- end -}}
+{{- return $s -}}

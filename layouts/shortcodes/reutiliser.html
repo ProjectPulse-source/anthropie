@@ -37,7 +37,7 @@
   {{- /* Repli (30/09, dette_monde) : un jeu qui ne porte sa date qu'à la racine (ISO, lue par le sitemap). On la
          formate ici plutôt que de la recopier dans `affichage` : recalculée chaque jour, elle y briserait la
          règle « rien écrit à données identiques ». */ -}}
-  {{- if and (not $releve) $jeu.releve_le -}}{{- /* En anglais, le format du reste du site (« 11 October 2026 ») ; « :date_long » rendait « October 11, 2026 ». */ -}}{{- $releve = cond $isEn (time.Format "2 January 2006" (time $jeu.releve_le)) (time.Format ":date_long" (time $jeu.releve_le)) -}}{{- end -}}
+  {{- if and (not $releve) $jeu.releve_le -}}{{- /* En anglais, le format du reste du site (« 11 October 2026 ») ; « :date_long » rendait « October 11, 2026 ». */ -}}{{- $releve = cond $isEn (time.Format "2 January 2006" (time $jeu.releve_le)) (partial "date-affichee.html" (dict "t" (time $jeu.releve_le) "fmt" ":date_long" "en" false)) -}}{{- end -}}
 {{- end -}}
 {{- /* Les textes des fiches (titre, montre, precaution) sont du texte brut lu dans les SVG : echappes AVANT fr-typo, qui finit en safeHTML. Sans cela, un « < » (« ecart < 10 points ») ouvrait une balise et tronquait la phrase (volet 4, 11/10/2026). */ -}}
 {{- $sources := .Get "sources" -}}

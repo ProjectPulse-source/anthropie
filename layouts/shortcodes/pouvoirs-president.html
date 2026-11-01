@@ -155,7 +155,7 @@
   {{- if $en }}
   <li><a href="{{ $url }}" hreflang="fr">{{ $lib }}</a> (in French) — {{ if and .vigueur_depuis (ne .etat "MODIFIE") }}version in force since {{ time.Format "2 January 2006" .vigueur_depuis }}, {{ end }}read on Légifrance on {{ time.Format "2 January 2006" .lu_le }}.</li>
   {{- else }}
-  <li><a href="{{ $url }}">{{ $lib | safeHTML }}</a> — {{ if and .vigueur_depuis (ne .etat "MODIFIE") }}{{ $v := time .vigueur_depuis }}version en vigueur depuis le {{ if eq $v.Day 1 }}1er {{ time.Format "January 2006" $v }}{{ else }}{{ time.Format "2 January 2006" $v }}{{ end }}, {{ end }}{{ if isset . "cetatext" }}décision lue{{ else }}lue{{ end }} sur Légifrance le {{ $l := time .lu_le }}{{ if eq $l.Day 1 }}1er {{ time.Format "January 2006" $l }}{{ else }}{{ time.Format "2 January 2006" $l }}{{ end }}.</li>
+  <li><a href="{{ $url }}">{{ $lib | safeHTML }}</a> — {{ if and .vigueur_depuis (ne .etat "MODIFIE") }}version en vigueur depuis le {{ partial "date-affichee.html" (dict "t" (time .vigueur_depuis) "fmt" "2 January 2006" "en" false) }}, {{ end }}{{ if isset . "cetatext" }}décision lue{{ else }}lue{{ end }} sur Légifrance le {{ partial "date-affichee.html" (dict "t" (time .lu_le) "fmt" "2 January 2006" "en" false) }}.</li>
   {{- end }}
 {{- end }}
 </ul>

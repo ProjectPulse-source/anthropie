@@ -188,7 +188,7 @@
   <article class="awp-vedette">
     <p class="awp-vedette__num" aria-hidden="true">{{ $n }}</p>
     <div class="awp-vedette__corps">
-      <p class="awp-vedette__meta">{{ if eq $.Lang "en" }}Latest{{ else }}Dernier paru{{ end }} · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time> · FR / EN</p>
+      <p class="awp-vedette__meta">{{ if eq $.Lang "en" }}Latest{{ else }}Dernier paru{{ end }} · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" .Date "fmt" ":date_long" "en" (eq $.Lang "en")) }}</time> · FR / EN</p>
       <h3 class="awp-vedette__titre"><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
       {{- with first 2 (findRE `[^.!?]+[.!?]+` .Description) }}
       <p class="awp-vedette__resume">{{ partial "fr-typo.html" (strings.TrimSpace (delimit . "")) }}</p>
@@ -211,7 +211,7 @@
     <li class="awp-registre__ligne">
       <span class="awp-registre__num">{{ strings.TrimPrefix "AWP-" .Params.awp_number }}</span>
       <a class="awp-registre__titre" href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a>
-      <span class="awp-registre__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time> · FR / EN</span>
+      <span class="awp-registre__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" .Date "fmt" ":date_long" "en" (eq $.Lang "en")) }}</time> · FR / EN</span>
       <a class="awp-registre__lire" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ if eq $.Lang "en" }}Read{{ else }}Lire{{ end }}&nbsp;→</a>
     </li>
     {{- end }}
@@ -263,7 +263,7 @@
   <ul class="home-reception__liste" aria-label="{{ if eq $.Lang "en" }}Latest publications{{ else }}Dernières parutions{{ end }}">
     {{- range . }}
     <li><a href="{{ .Params.url_externe }}" target="_blank" rel="noopener"{{ if eq $.Lang "en" }} lang="fr"{{ end }}>{{ partial "fr-typo.html" .Title }}</a>
-      <span class="home-reception__revue">{{ .Params.revue }}, {{ .Date | time.Format ":date_medium" }}</span></li>
+      <span class="home-reception__revue">{{ .Params.revue }}, {{ partial "date-affichee.html" (dict "t" .Date "fmt" ":date_medium" "en" (eq site.Language.Lang "en")) }}</span></li>
     {{- end }}
   </ul>
   {{- end }}

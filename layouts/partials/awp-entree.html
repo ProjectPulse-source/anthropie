@@ -9,7 +9,7 @@
   <div class="awp-entree__corps">
     <h3 class="awp-entree__titre"><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a></h3>
     {{- with .Params.subtitle }}<p class="awp-entree__st">{{ partial "fr-typo.html" . }}</p>{{ end }}
-    <p class="awp-entree__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time> · FR / EN{{ with .Params.jel_codes }} · JEL {{ delimit . " " }}{{ end }}</p>
+    <p class="awp-entree__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" .Date "fmt" ":date_long" "en" (eq .Lang "en")) }}</time> · FR / EN{{ with .Params.jel_codes }} · JEL {{ delimit . " " }}{{ end }}</p>
     {{- with .Description }}<p class="awp-entree__resume">{{ partial "fr-typo.html" . }}</p>{{ end }}
     {{- with .Params.doi_zenodo }}<p class="awp-entree__doi">DOI <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>{{ end }}
     <p class="awp-entree__actions">

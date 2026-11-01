@@ -33,7 +33,7 @@
             <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="16" height="16">
           </a>
         </p>
-        <p class="awp-article__date">{{ time.Format ":date_long" .Date }}</p>
+        <p class="awp-article__date">{{ partial "date-affichee.html" (dict "t" .Date "fmt" ":date_long" "en" (eq .Lang "en")) }}</p>
       </header>
 
       {{/* ── Résumé / Abstract ── */}}
@@ -81,7 +81,7 @@
           </div>
           <div>
             <dt>{{ if $isEn }}Published{{ else }}Publié{{ end }}</dt>
-            <dd>{{ time.Format ":date_long" .Date }}</dd>
+            <dd>{{ partial "date-affichee.html" (dict "t" .Date "fmt" ":date_long" "en" (eq .Lang "en")) }}</dd>
           </div>
           <div>
             <dt>{{ if $isEn }}Language{{ else }}Langue{{ end }}</dt>

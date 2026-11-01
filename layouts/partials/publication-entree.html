@@ -18,7 +18,7 @@
     </span>
   </a>
   <div class="pub-entree__corps">
-    <p class="pub-entree__meta">{{ $p.Params.revue }}{{ if eq $p.Params.source_type "Académique" }} <span class="pub-entree__academique">· {{ if $isEn }}academic journal{{ else }}revue académique{{ end }}</span>{{ end }} · <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ time.Format ":date_long" $p.Date }}</time>{{ if $isEn }} · <span lang="en">In French</span>{{ end }}</p>
+    <p class="pub-entree__meta">{{ $p.Params.revue }}{{ if eq $p.Params.source_type "Académique" }} <span class="pub-entree__academique">· {{ if $isEn }}academic journal{{ else }}revue académique{{ end }}</span>{{ end }} · <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" $p.Date "fmt" ":date_long" "en" $isEn) }}</time>{{ if $isEn }} · <span lang="en">In French</span>{{ end }}</p>
     <h3 class="pub-entree__titre"><a href="{{ $p.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $p.Title }}<span class="pub-entree__ext" aria-hidden="true">&nbsp;↗</span></a></h3>
     {{- $chapo := cond (and $isEn $p.Params.chapo_en) $p.Params.chapo_en $p.Params.chapo }}
     {{- with $chapo }}<p class="pub-entree__chapo">{{ . | safeHTML }}</p>{{ end }}

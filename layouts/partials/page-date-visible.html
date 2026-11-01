@@ -14,7 +14,7 @@
 {{- $maj := and (not $d.pub.IsZero) (gt ($d.mod.Format "20060102") ($d.pub.Format "20060102")) -}}
 {{- $lib := cond $maj (cond $en "Page updated" "Page mise à jour le") (cond $en "Page published" "Page publiée le") -}}
 {{- $quand := cond $maj $d.mod (cond $d.pub.IsZero $d.mod $d.pub) -}}
-<p class="page-header__date">{{ $lib }} <time datetime="{{ $quand.Format "2006-01-02" }}">{{ time.Format $fmt $quand }}</time>
+<p class="page-header__date">{{ $lib }} <time datetime="{{ $quand.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" $quand "fmt" $fmt "en" $en) }}</time>
 {{- /* Journal des révisions (P2) : en PIED de page (partials/page-revisions.html), jamais sous le chapô -- contre-expertise
        du 16/10 : une ancienne valeur en tête déplace l'attention vers l'erreur et peut être reprise à la place du constat.
        Ici, un lien discret seulement. */ -}}
@@ -28,9 +28,9 @@
   {{- $tri := sort $dates -}}
   {{- $min := index $tri 0 -}}{{- $max := index $tri (sub (len $tri) 1) -}}
   {{- if eq ($min.Format "20060102") ($max.Format "20060102") -}}
-{{ " · " }}{{ cond $en "texts read on Légifrance on" "textes lus sur Légifrance le" }} {{ time.Format $fmt $min }}
+{{ " · " }}{{ cond $en "texts read on Légifrance on" "textes lus sur Légifrance le" }} {{ partial "date-affichee.html" (dict "t" $min "fmt" $fmt "en" $en) }}
   {{- else -}}
-{{ " · " }}{{ cond $en "texts read on Légifrance between" "textes lus sur Légifrance entre le" }} {{ time.Format $fmt $min }} {{ cond $en "and" "et le" }} {{ time.Format $fmt $max }}
+{{ " · " }}{{ cond $en "texts read on Légifrance between" "textes lus sur Légifrance entre le" }} {{ partial "date-affichee.html" (dict "t" $min "fmt" $fmt "en" $en) }} {{ cond $en "and" "et le" }} {{ partial "date-affichee.html" (dict "t" $max "fmt" $fmt "en" $en) }}
   {{- end -}}
 {{- end -}}
 </p>

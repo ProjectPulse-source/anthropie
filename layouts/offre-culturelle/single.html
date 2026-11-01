@@ -150,7 +150,7 @@
       <ul>
         <li><b>Pour vous et vos proches.</b> L'offre s'adresse aux {{ $public }} de votre comité et à leur famille. Chaque
         lien est individuel et ne sert qu'une fois&nbsp;: un livre, un lecteur.</li>
-        <li><b>Jusqu'au {{ $fin | time.Format ":date_long" }}</b>, dans la limite des exemplaires offerts. Un titre momentanément
+        <li><b>Jusqu'au {{ partial "date-affichee.html" (dict "t" (time $fin) "fmt" ":date_long" "en" false) }}</b>, dans la limite des exemplaires offerts. Un titre momentanément
         indisponible pourra être proposé de nouveau après réassort.</li>
         <li><b>Aucune inscription sur ce site</b>&nbsp;; un compte Amazon.fr est nécessaire pour recevoir le livre. Votre
         comité ne nous transmet aucune donnée sur ses {{ $public }}, et aucun nom ni aucune adresse électronique ne vous
