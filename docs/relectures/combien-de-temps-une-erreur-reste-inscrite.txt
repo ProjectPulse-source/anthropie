@@ -1,4 +1,4 @@
-# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 4300890 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de d5f7658 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 De six mois pour un point de permis à quarante ans pour le casier : la durée d'une inscription dépend du registre, et ce qui l'efface n'est pas toujours le temps.
@@ -10,6 +10,7 @@ Une dette se rembourse, une peine s’exécute, une maladie se soigne — qui n�
 Entre le moment où l’erreur est réparée et celui où elle cesse d’être lue par un banquier, un employeur ou un assureur, court un second délai, fixé par un texte.
 Cette page donne ce délai pour les principaux registres, d’après les textes lus sur Légifrance le 1er novembre 2026 dans leur version en vigueur.
 Elle décrit des règles générales ; elle ne remplace pas un conseil juridique, et chaque section renvoie au texte qui fait foi.
+Le tableau se lit registre par registre ; quatre situations courantes disent ensuite ce qu’il faut vérifier, et à qui s’adresser.
 Le tableau : combien de temps, et qu’est-ce qui efface ?
 Registre
 Ce que la règle fixe
@@ -68,6 +69,32 @@ prêts couverts par la convention AERAS, assurance prenant fin avant 71 ans ; sa
 aucune démarche : l'antécédent n'a plus à être déclaré
 Ces délais ne mesurent pas la même chose : certains bornent la conservation d’une donnée, d’autres conditionnent une réhabilitation, une récupération de points ou l’interdiction de demander une information.
 Lu par la dernière colonne, le tableau montre aussi ce que les durées seules ne disent pas : une trace peut cesser avec le temps, par une démarche de la personne, par la déclaration d’un tiers, ou, comme on le verra, par la suppression d’une règle pour toute une catégorie.
+Quatre situations : ce qu’il faut vérifier, et qui agit
+Qui accompagne une personne part de sa situation plutôt que du registre ; en voici quatre, avec ce qu’il faut vérifier et l’interlocuteur.
+Ces repères n’épuisent pas l’examen d’un dossier.
+La dette est payée, l’inscription au FICP demeure.
+La radiation suit la déclaration du paiement intégral, et cette déclaration revient à l’établissement qui a déclaré l’incident, non à la personne.
+Si le crédit a été cédé, la rédaction en vigueur le 20 novembre 2026 en charge l’entreprise qui a repris la créance, ou le gestionnaire de crédits quand elle a été vendue à un acheteur de crédits ; un contrat en cours à cette date reste régi par les règles antérieures, sauf exceptions.
+Ce que contient le fichier, la personne peut le demander à la Banque de France, en ligne depuis son espace personnel, à un guichet sur rendez-vous ou par courrier avec une copie de sa pièce d’identité.
+Si l’établissement ne fait pas la déclaration, elle peut saisir le médiateur de sa banque, puis adresser une réclamation à la CNIL (Service-public, fiche F17608, vérifiée le 25 septembre 2025).
+L’inscription ne dépasse pas, de toute façon, cinq ans (le détail).
+Une condamnation pèse sur une embauche.
+Le premier point est le bulletin en cause.
+Le bulletin n° 2 est délivré aux administrations et, par leur intermédiaire, à certains employeurs, notamment pour des activités auprès de mineurs ; il ne parvient à l’employeur que s’il ne porte aucune mention.
+Deux voies en retirent une condamnation : la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, et l’exclusion, que le tribunal décide dans le jugement ou plus tard sur requête de la personne, sauf pour les infractions de l’article 706-47 du Code de procédure pénale.
+Ce qu’il faut vérifier : la peine prononcée et la date de son exécution, d’où court le délai de réhabilitation ; une interdiction définitive, ou d’activité au contact de mineurs, qui en retarde les effets (le détail).
+Un jeune conducteur perd des points pendant le permis probatoire.
+Le délai probatoire dure trois ans, deux après un apprentissage anticipé de la conduite.
+Le permis y gagne des points chaque année, tant qu’aucune infraction ayant donné lieu à un retrait de points n’a été commise depuis son début : une seule suffit à arrêter ce gain, et la récupération de tous les points après deux ans sans infraction ne joue pas pendant ce délai (Code de la route, art.
+L.
+223-1).
+Ce qu’il faut vérifier : le solde de points, que le titulaire consulte sur le téléservice Mes points permis, avec un calendrier prévisionnel de récupération (Service-public, consulter les informations du permis) ; à zéro point, le permis perd sa validité (le détail).
+La cause est réglée depuis longtemps, une trace demeure.
+La dernière colonne du tableau dit qui la fait cesser, et l’on y lit trois cas.
+Le temps suffit pour les points du permis, le malus, la réhabilitation légale et le droit à l’oubli.
+Une démarche de la personne lève l’interdiction d’émettre des chèques dès qu’elle justifie avoir réglé le chèque ou constitué la provision, et une requête de sa part peut obtenir du tribunal l’exclusion du bulletin n° 2.
+Un tiers, enfin, déclare le paiement qui fait radier une inscription au FICP.
+Savoir lequel des trois cas s’applique dit à qui s’adresser (le tableau).
 Combien de temps reste-t-on fiché à la Banque de France ?
 Le fichier des incidents de remboursement des crédits aux particuliers (FICP) reçoit les incidents de paiement caractérisés que déclarent les établissements de crédit.
 Ces informations « ne peuvent en tout état de cause être conservées dans le fichier pendant plus de cinq ans à compter de la date d’enregistrement par la Banque de France de l’incident ».
@@ -241,7 +268,7 @@ A.
 L.
 1141-5 ; décret n° 2013-799 du 2 septembre 2013.
 Les liens sont donnés à chaque section.
-Fiches officielles : Service-public (Direction de l’information légale et administrative), F14710 (bulletins du casier), F31802 (effacement d’une condamnation), F2655 (bonus-malus).
+Fiches officielles : Service-public (Direction de l’information légale et administrative), F14710 (bulletins du casier), F31802 (effacement d’une condamnation), F2655 (bonus-malus), F17608 (FICP : consultation, radiation, recours), R17121 (téléservice Mes points permis).
 Le livre : Stéphane Lalut, La Société du premier coup, chapitres 5 (« La trace : ce qui reste inscrit ») et 8 (« Les erreurs qui disparaissent ») ; repères chiffrés et répertoire des pistes.
 Toutes les ressources : données, dossiers et repères →
 Transmettre

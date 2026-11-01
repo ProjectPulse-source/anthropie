@@ -161,3 +161,11 @@ pas les durées entre eux.
   (`…\2026-11-01_EFFACEMENT\_PIECES_RECUES\2026-11-01_Messages.txt`, SHA-256 da757d81…98b9) : « tant qu'aucune infraction
   n'a été commise » élargissait la condition ; le Code de la route, art. L. 223-1 (relu par le MCP `sources`, version en
   vigueur depuis le 30/03/2018), dit « aucune infraction ayant donné lieu à un retrait de points ». Phrase corrigée.
+- Parcours par situation (01/11/2026, demande de l'auteur sur la contre-expertise `2026-11-01_Messages-01.txt`, SHA-256
+  6f403c05…c221, § 5) : section `#situations` après le tableau (dette payée et FICP ; condamnation et embauche ; permis
+  probatoire ; trace d'une cause réglée), renvoi depuis l'introduction, deux fiches ajoutées aux sources. Faits tirés des
+  sections de la page, de l'art. L. 223-1 (relu le 01/11) et de Service-public F17608 (lue le 01/11, vérifiée par la DILA
+  le 25/09/2025 : consultation du fichier, médiateur, CNIL) et R17121 (Mes points permis ; le téléservice refuse les
+  scripts, d'où le renvoi à sa fiche). Ancres `#tableau`, `#ficp`, `#casier`, `#permis` et faits cités par le lot
+  EFFACEMENT-2026-11 inchangés. Panel et contre-expertise de la page : non faits (ajout de faits déjà vérifiés, aucune
+  thèse nouvelle ; la contre-expertise du lot en est l'origine).
