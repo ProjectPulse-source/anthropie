@@ -52,6 +52,29 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — Page « Neuf promesses de campagne : que peut vraiment faire un président ? » (dossier promesses)
+
+Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 1). Page mère du dossier « Promesses
+présidentielles », premier onglet (« 9 promesses »), FR `/que-peut-faire-un-president-promesse-par-promesse/` et EN
+`/en/what-can-a-president-do-promise-by-promise/` : la grille en quatre zones du livre *Un président peut-il tenir ses
+promesses ?* appliquée aux neuf thèmes — cinq sections complètes (salaires, prix, emploi, sécurité, immigration), quatre
+courtes qui renvoient aux pages existantes (santé, école, dette, climat), tableau des neuf promesses, limites, appel au
+livre, FAQ, sources. Forme `juridique-institutionnel`, sans données. Écart déclaré à l'arbitrage (page nouvelle plutôt
+qu'enrichie : aucune page du dossier ne traite les promesses par thème).
+- **Méthode** : fiche de conception `docs/conception/que-peut-faire-un-president-promesse-par-promesse.md` avant le texte ;
+  sections rédigées depuis les chapitres et l'appareil de sources du livre ; aucun candidat ni parti nommé.
+- **Vérifications** : 17 références CONFORMES (`python -m sources verifier`), 7 articles relus un à un sur Légifrance ;
+  chiffres des sections recomptés dans le livre ; `check_langue.py` : 6 signalements écartés.
+- **Rendu** : tableau en HTML (`table-scroll` + `pouvoirs-table`, `data-label`) — la règle globale `main table` écrasait les
+  colonnes 4 et 5 dès 1024 px ; recette 320-1600 FR et EN OK ; barre du dossier à huit onglets contrôlée.
+- **Contre-expertise de la page** `PRO-20261101-063929` : option B (publier après corrections) acceptée ; P0 (président ≠
+  chaîne exécutive ; directive retour sous réserve des exceptions ; procédure législative ≠ vote positif), P1 (juge
+  indépendant ; nuances IPP et RSA reprises **dans les termes du livre** ; climat ; titre « Dette ») appliqués FR et EN ;
+  P1.6 rejeté (formule de l'école = thèse du livre).
+- **Contrôles** : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 73/73 ; rendu sans écart ; instantanés de
+  relecture FR et EN. `static/llms.txt` : sans changement (il ne liste pas les pages du dossier une à une).
+- **Ouvert** : accord de l'auteur et push ; liens directs vers les textes cités (P3, reporté).
+
 ### 2026-11-01 — Générations futures : cause des pays absents du cumul UE ; « 1er » dans les douze shortcodes `*-val`
 
 - **Robot `dette-monde.yml` relancé à la main** (run 41260835486) : `dette_generations` passe, première fois depuis le
