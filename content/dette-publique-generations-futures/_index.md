@@ -123,7 +123,7 @@ Avec pour référence chacune des {{< gen-val "inv_dec_n" >}} périodes de dix a
 
 {{< gen-tableau >}}
 
-{{< gen-val "cp_exc_pays_maj" >}}, dont le besoin cumulé est resté sous ce seuil ou négatif, ne se comparent pas sur ce ratio.
+{{< gen-val "cp_exc_pays_maj" >}}, dont le besoin cumulé est resté sous ce seuil ou négatif, ne se comparent pas sur ce ratio. {{< gen-val "cp_absents_note" >}}
 
 </details>
 

@@ -52,6 +52,23 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — Générations futures : cause des pays absents du cumul UE ; « 1er » dans les douze shortcodes `*-val`
+
+- **Robot `dette-monde.yml` relancé à la main** (run 41260835486) : `dette_generations` passe, première fois depuis le
+  20/10 (option C du 31/10) ; `dette_monde`, `dette_dynamique`, `dette_baisse` échouent toujours (motifs propres).
+- **Danemark** : présent au tableau le 18/10, absent depuis la mise à jour Eurostat du 21/10 (`gov_10a_main` ne donne
+  plus B9 ni B8N pour 2024-2025, sans indicateur ; son investissement et sa notification y sont). Le générateur relève
+  les postes absents par pays et année (`POSTES_REQUIS`) et écrit la cause de chaque absence (jeton `cp_absents_note`,
+  FR et EN : postes manquants, sinon année écartée par un recoupement, sinon données manquantes ; `conservation.cp_absents`
+  dans le jeu). Branches essayées sur cas fabriqués. Garde « retenus + absents = pays » écrite puis retirée : tautologique.
+- **`*-val` : « 1 novembre » → « 1er »** (bandeau « Données mises à jour le ») : les douze shortcodes formataient la date
+  eux-mêmes, hors de `date-affichee.html` ; onze passent par l'organe (format `2 January 2006`, localisé par Hugo).
+  Témoin : build avant/après, un seul fichier différent, une seule ligne (« 1 novembre » → « 1er novembre ») ; anglais
+  identique. `dtc-val.html`, non versionné (autre chantier), garde l'ancien code : à aligner quand il entre au dépôt.
+- **Contrôles** : `check-all --ci` 0 ; build 0 ; `--hors-ligne --check` 772 gardes de texte ; relecture phrase à phrase
+  FR et EN des phrases nouvelles de l'instantané (dont l'ajout du 18/10, jamais attesté) ; une retouche (« n'y figure
+  pas » → « ne figure pas dans ce tableau ») ; instantanés refaits.
+
 ### 2026-11-01 — « Comment l'écriture… » : contre-expertise de la page construite, corrections ; date « 1er » sur tout le site
 
 Contre-expertise PRO-20261101-010247 (arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261101-010247_arbitrage.md`,

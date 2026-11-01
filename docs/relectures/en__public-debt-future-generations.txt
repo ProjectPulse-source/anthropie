@@ -1,16 +1,17 @@
-# relu le 2026-10-18 ; texte servi de /en/public-debt-future-generations/, build de de89b3d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-01 ; texte servi de /en/public-debt-future-generations/, build de 1aaf14f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
 What do the French accounts show?
 From 1996 to 2025, only 18% of public deficits corresponded to new public assets (equipment, buildings, land), after wear and tear; that share fell to 10% over 2016-2025.
+The human capital that education or health may leave behind is not counted: the figure says what deficits corresponded to, not what they produced.
 Two other arguments deserve scrutiny: “we owe the debt to ourselves” and “the real burden will come from ageing”.
 Three tests put them to the proof, without claiming to calculate each generation’s bill.
-Page updated 18 October 2026
+Page updated 1 November 2026 · revisions
 Public debt dossier
 Data · Eurostat and ECB 2025 · projections 2026
 ↓ Charts, data and citations to reuseReuse this page
-Data last updated 18 October 2026 General government, Eurostat, Insee and ECB series from 1995 to 2025; European Commission and COR, projections.
+Data last updated 1 November 2026 General government, Eurostat, Insee and ECB series from 1995 to 2025; European Commission and COR, projections.
 Download: CSV · JSON · method
 What deficits corresponded to in the accounts
 Borrowing to build a school, a road or a network leaves capital as well as a debt.
@@ -37,111 +38,117 @@ From the first decade to the second, the share fell mainly because cumulated net
 Over the last decade, net acquisitions of assets amounted to only 0.5 points of GDP a year on average.
 In thirty years, current revenue exceeded current spending in only two years, 2000 and 2001, and in no year did acquisitions of assets match net borrowing.
 Even counting as capital acquired all the investment grants paid outside general government, the share would reach 39% at most: still less than half.
+Where the decline took place.
+The accounts do not say why the invested share fell, but they do locate the decline.
+General government net investment, investment minus wear and tear on capital (gross fixed capital formation minus consumption of fixed capital), fell from 0.75 points of GDP a year on average over 2006-2015 to 0.32 points over 2016-2025.
+Over these two periods, local government accounts for 0.24 points out of a decline of 0.43 points, or 56%; the other government bodies, central government and social security, for the rest.
+This split depends on the years compared (details below).
+The decline was not steady: local net investment reached its low point in 2016, at 0.03 points of GDP, when local authorities’ gross investment barely covered the estimated wear and tear on their capital.
+It was back at 0.47 points in 2024, then 0.48 points in 2025.
+The 2016 trough came two years after the 2014 municipal elections, while the transfers received by local government were falling: the page Local authorities: the adjustment variable? shows that the comparison with earlier cycles weakens the explanation by the municipal calendar alone, without isolating the effect of transfers or grants.
+The local share of the decline depending on the years compared
+Taking as reference each of the eleven periods of ten consecutive years between 1996 and 2015, compared with 2016-2025, the local government share of the decline ranges from 56% (2006-2015, the period used above) to 81% (1998-2007).
+Without the last year, it is 57%; without the stimulus years, 2009 and 2010, 66%.
+These periods overlap: they are variants of one calculation, not independent observations.
 What this share does not measure.
 That only 18% of deficits correspond to recorded assets does not mean that the remaining 82% produced nothing.
 The accounts record counterparts, not all benefits: education, health and non-capitalised research are current spending, which may leave the following generations a human capital that these series do not count.
 Nor do these shares measure the return on spending, or whether a deficit run in a recession, which spreads the effort over time, was justified.
 Neither universal nor exceptional.
-The same calculation, applied to the 27 EU countries over a common window from 2001 to 2025, puts France at 17% (against 18% over 1996-2025: the difference comes from the window).
-Among the 21 countries whose cumulated net borrowing reached 30 points of GDP, the share in assets reached at least one half in four, including Romania (61%) and Slovenia (61%); it was lower than in France in eight, including Italy (3%) and Slovakia (1%).
+The same calculation, applied to the 26 EU countries over a common window from 2001 to 2025, puts France at 17% (against 18% over 1996-2025: the difference comes from the window).
+Among the 21 countries whose cumulated net borrowing reached 30 points of GDP, the share in assets reached at least one half in four, including Romania (61%) and Slovenia (61%); it was lower than in France in eight, including Italy (4%) and Slovakia (1%).
 The composition of deficits is therefore not a fate common to all states.
-The 27 countries, use by use
+The 26 countries, use by use
 Country
 Share in assets
 Net borrowing
 Assets
 Capital transfers
 Uncovered current spending
-Denmark
-not applicable
-−38.0
-7.7
-14.6
-−60.2
 Luxembourg
 not applicable
-−25.8
-52.4
-22.5
-−100.6
+−25.4
+51.4
+19.4
+−96.3
 Sweden
 above net borrowing
-1.3
+2.3
 30.4
-1.7
-−30.9
+3.8
+−32.0
 Estonia
 above net borrowing
-9.0
-65.4
-−8.9
-−47.5
+9.7
+65.5
+−8.8
+−47.0
 Finland
 above net borrowing
-10.1
+10.2
 14.7
 −1.4
-−3.3
+−3.1
 Bulgaria
-above net borrowing
-25.0
-25.2
-−8.9
-8.7
+99%
+25.5
+25.3
+−8.2
+8.4
 Cyprus
-62%
+61%
 56.1
-34.6
+34.5
 26.5
-−5.0
+−4.9
 Slovenia
 61%
 78.4
-48.1
-10.5
-19.8
+47.9
+10.6
+19.9
 Romania
 61%
-107.9
-65.5
-5.4
+107.8
+65.6
+5.3
 37.0
 Lithuania
-50%
-53.6
-26.9
-−7.5
-34.2
+51%
+53.3
+27.4
+−8.6
+34.5
 Croatia
 44%
-86.1
+86.6
 38.2
-26.2
-21.6
+26.4
+22.0
+Ireland
+43%
+77.8
+33.3
+27.2
+17.2
 Poland
 43%
 103.0
-44.0
-1.0
+43.9
+1.1
 58.0
-Ireland
+Latvia
 43%
-77.7
-33.1
-27.3
-17.3
+66.7
+28.4
+−8.5
+46.8
 Malta
 42%
-76.1
-31.8
-−6.8
-51.1
-Latvia
-41%
-67.1
-27.8
-−8.8
-48.1
+76.0
+31.9
+−6.5
+50.6
 The Netherlands
 34%
 37.6
@@ -156,91 +163,92 @@ Spain
 72.1
 Hungary
 20%
-122.5
-24.8
-19.4
-78.3
+122.6
+25.1
+19.3
+78.2
 France
 17%
 111.6
-19.0
-16.8
-75.9
+18.9
+16.7
+76.0
 Greece
 16%
-143.8
-23.4
-0.2
-120.2
+143.7
+23.0
+0.7
+120.0
 Austria
 15%
-66.2
-9.9
+66.0
+9.8
 27.3
 29.0
 Portugal
 11%
-100.9
-11.0
+100.8
+10.8
 7.5
-82.4
+82.5
 Belgium
 9%
-70.5
+70.6
 6.5
 16.4
-47.6
+47.7
 Czechia
 7%
-67.9
+67.7
 4.8
 18.2
-44.9
+44.7
 Germany
-5%
+6%
 38.0
-1.9
-22.3
-13.9
+2.3
+22.0
+13.7
 Italy
-3%
-96.7
-3.1
-33.7
-60.0
+4%
+96.8
+3.6
+33.6
+59.6
 Slovakia
 1%
-98.0
+98.1
 0.7
-2.5
-94.8
+1.7
+95.7
 Points of GDP cumulated from 2001 to 2025; assets: investment minus depreciation of capital, land and inventories; negative net borrowing means cumulated surpluses (“not applicable”); “above net borrowing”: net acquisitions of assets exceed net borrowing, the difference corresponding to positive public saving.
 Source: Eurostat, author’s calculation.
-Bulgaria, Denmark, Estonia, Finland, Luxembourg and Sweden, whose cumulated net borrowing stayed below that threshold or was negative, cannot be compared on this ratio.
+Bulgaria, Estonia, Finland, Luxembourg and Sweden, whose cumulated net borrowing stayed below that threshold or was negative, cannot be compared on this ratio.
+Denmark is not in this table: Eurostat’s annual government accounts do not give its net lending/net borrowing or its net saving for 2024 and 2025.
 The general government balance sheet: a complement, not a proof
-The general government balance sheet seems to offer confirmation: from 1995 to 2025, its net worth — all its non-financial assets, produced or not, minus its debts net of its financial assets — went from 37.1% to 25.0% of GDP.
+The general government balance sheet seems to offer confirmation: from 1995 to 2025, its net worth — all its non-financial assets, produced or not, minus its debts net of its financial assets — went from 37.1% to 27.1% of GDP.
 But this stock depends on the two years being compared.
-It reached 61.6% in 2007, was still above its starting level in 2022 (40.3%), and it rose by 8.1 points from 2016 to 2025, the decade in which the share of deficits corresponding to assets fell to 10%.
-Of the 231 possible comparisons between two years at least ten years apart, 55 show it rising.
+It reached 61.6% in 2007, was still above its starting level in 2022 (40.3%), and it rose by 10.2 points from 2016 to 2025, the decade in which the share of deficits corresponding to assets fell to 10%.
+Of the 231 possible comparisons between two years at least ten years apart, 54 show it rising.
 Its changes mix flows and revaluations.
-The value of land changed by +28.8 points of GDP over the period, unrelated to deficits; even produced assets, which changed by only +0.9 points, are stocks valued at current prices and relative to GDP, sensitive to prices as well as to the denominator.
+The value of land changed by +28.9 points of GDP over the period, unrelated to deficits; even produced assets, which changed by only +1.0 point, are stocks valued at current prices and relative to GDP, sensitive to prices as well as to the denominator.
 A flow identity, checked year by year, is not validated by a stock whose changes also obey other mechanisms: the balance sheet remains complementary information here.
 The “we owe it to ourselves” argument
 The economist Abba Lerner’s classic argument assumes that the debt is held within the country: servicing it would then amount to levying national taxpayers to pay national savers, and the generation that pays would also be the one that receives.
 Holdings statistics make it possible to check its premise, not its conclusion.
 Share of general government debt held by non-residents, the Banque de France and other residents (ECB, government finance statistics).
 In 2025, 54.3% of French public debt was recorded as held by non-residents, and 45.7% by residents (ECB).
-Of the latter, the Banque de France held 16.5% of the total, and other residents 29.2%.
+Of the latter, the Banque de France held 16.5% of the total, and other residents 29.1%.
 The Banque de France is set apart because its role is not that of an ordinary private creditor: its holdings rose sharply with the Eurosystem’s purchases of public securities, before receding.
 With more than half of the debt held by non-residents, the assumption of a debt held entirely within the country does not describe the French situation.
 It describes Italy (34% of debt held by non-residents in 2025) or Sweden (23%) better, and Austria (66%) or Belgium (63%) less well.
 It has not always been so.
-In 1995, 38.8% of the debt was held by non-residents; the share passed one half in 2003 and stayed above it in 18 years out of 23 since.
+In 1995, 38.5% of the debt was held by non-residents; the share passed one half in 2003 and stayed above it in 18 years out of 23 since.
 With these purchases, the Banque de France became a major holder, with up to 22.6% of the debt in 2022; since then, its holdings have been receding and the non-resident share has risen by 5.8 points.
 The page Who really pays for public debt? breaks central-government securities down by holder, and Did inflation really ease France’s debt burden? shows who held the debt when inflation reduced its real value.
 Holders year by year, and the scope of central-government securities
 The non-resident share peaked at 57.1% in 2014.
-The Banque de France held 1.7% of the debt in 1995; since 2016, it has held more than a tenth of it, and the growth of its holdings has offset the decline of other residents, from 40.8% in 2014 to 29.2% in 2025.
+The Banque de France held 1.7% of the debt in 1995; since 2016, it has held more than a tenth of it, and the growth of its holdings has offset the decline of other residents, from 40.8% in 2014 to 29.1% in 2025.
 In 2025, it held 6.1 points less than in 2022.
 On the narrower scope of central-government marketable securities, at market value, the Banque de France describes the same movement: 56.0% held by non-residents at end-2025, a trough of 47.5% in 2021, at the height of central bank purchases, and 57.5% in the first quarter of 2026 according to Agence France Trésor, the French debt management office.
 The general government series is at nominal value, the series for central-government marketable securities at market value: their levels cannot be compared point by point.
@@ -418,12 +426,14 @@ Each year, net borrowing = net dissaving + net acquisitions of assets + net capi
 Ratios are calculated on the GDP published with the deficit and debt notification (gov_10dd_edpt1) and cumulated by period in points of GDP; the share in assets calculated in current euros gives 17%, against 18% in points of GDP.
 Excluding land and inventories, net investment alone represents 15% of net borrowing.
 Net worth.
-Insee’s general government balance sheet (table 8.204, annual national accounts, base 2020, corrected on 30 July 2026, file archived with its hash): produced and non-produced non-financial assets (N1N and N2N, current prices), of which land (N211N), and net financial worth (financial assets minus liabilities), relative to GDP.
-Two cross-checks, which must agree or the run stops: the non-financial assets published by Eurostat (nama_10_nfa_bs) and Eurostat’s quarterly net financial worth in the fourth quarter (nasq_10_f_bs, BF90).
+General government accounts disseminated by Eurostat, in their latest vintage: produced and non-produced non-financial assets (nama_10_nfa_bs, N1N and N2N, current prices), of which land (N211N), compiled by Insee, and consolidated net financial worth (nasa_10_f_bs, BF90), compiled by the Banque de France, relative to GDP.
+Every October the Banque de France revises the last three years of its financial accounts, so the same account may then differ from one source to another.
+Blocking check: annual net financial worth equals the fourth-quarter value (nasq_10_f_bs).
+Vintage check: Insee’s balance sheet (table 8.204, corrected on 30 July 2026, file archived with its hash); a gap is accepted only within the revision window, if earlier years agree and if Insee’s release is the older of the two, and it is listed in the checks file.
 Asset stocks are valued at current prices: their changes mix flows and revaluations.
 Holdings.
 ECB, government finance statistics (GFS): Maastricht debt of general government by counterpart area (rest of the world, residents) and holding sector (central bank).
-Checks: non-residents and residents add up to total debt each year; over the common years, the values equal those of Eurostat (gov_10dd_ggd), reported by the same administration.
+Checks: non-residents and residents add up to total debt each year; over the common years, the values equal those of Eurostat (gov_10dd_ggd), reported by the same administration, except, within the Banque de France revision window, a vintage gap listed in the checks file.
 Scope witness: Banque de France, series DET.Q.FR.1315.F33000.M.Z9.8.F, on Webstat (share of central-government marketable securities held by non-residents, at market value, end of quarter; file from the series’ public page, latest observation published on 7 April 2026, archived with its hash); latest observation: chart from Agence France Trésor (source Banque de France), read on 3 October 2026 with the image’s hash, and checked against Webstat over the common period.
 The script stops if the two series cease to converge, or if Webstat publishes a period that the reading no longer goes beyond.
 S2 indicator.
@@ -434,7 +444,7 @@ The gap to the stabilising balance is read from the data of Can public debt come
 Pensions.
 COR, annual report of June 2026, data from the summary, baseline scenario; Agirc-Arrco indexation rule: part 1, chapter 2 of the report.
 Check: for each country and each year, the calculated ratios are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use.
-Beyond a gap of 0.11 points, the year is excluded and counted (0 out of 837); for France, the script stops.
+Beyond a gap of 0.11 points, the year is excluded and counted (0 out of 835); for France, the script stops.
 The computed figures all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
 Only the latest non-resident share, read on the Agence France Trésor chart, is transcribed by hand; the reading for the previous quarter is checked against Webstat.
 Figures from the studies cited are given as they publish them.
@@ -472,7 +482,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Is public debt a burden on future generations?”.
-Eurostat, Insee, ECB, European Commission, COR data, retrieved 18 October 2026. https://stephane-lalut.com/en/public-debt-future-generations/
+Eurostat, Insee, ECB, European Commission, COR data, retrieved 1 November 2026. https://stephane-lalut.com/en/public-debt-future-generations/
 Copy citation
 In three sentences
 From 1996 to 2025, 18% of French general government net borrowing corresponded, in the accounts, to a net increase in its recorded assets, and 66% to current spending not covered by current revenue; the share in assets went from 32% (1996-2005) to 10% (2016-2025).
@@ -480,11 +490,16 @@ This is an accounting reading, not a causal attribution: these shares measure ne
 In 2025, 54.3% of public debt was registered to non-residents, which gives the residence of holders, not the burden.
 Copy summary
 The data
-The uses of general government net borrowing (France by decade, 27 EU countries), general government net worth, debt holdings by sector and the Commission’s S2 indicator; the same content exists as CSV, in long format.
+The uses of general government net borrowing (France by decade, EU countries cumulated), general government net worth, debt holdings by sector and the Commission’s S2 indicator; the same content exists as CSV, in long format.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, Insee, ECB, European Commission, COR), under their own terms.
+Revisions
+31 October 2026 — Revision of general government net worth: the Banque de France financial accounts, updated in October 2026 for 2023 to 2025 and taken up by Eurostat, mainly revalue the equity held by government; net worth at the end of 2025 moves from 25.0% to 27.1% of GDP.
+Insee's July balance sheet, which does not yet include it, becomes a check.
+The decomposition of deficits, based on flows, does not depend on it (counter-review of 31 October).
+18 October 2026 — Addition: where the decline in net investment took place, local government and other government bodies, with its 2016 low point and the local share of the decline depending on the years compared (counter-review of 18 October).
 All resources: data, explainers and reference material →
 Share
 WhatsApp

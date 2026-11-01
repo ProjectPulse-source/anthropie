@@ -6,8 +6,7 @@
 {{- if eq $k "date_donnees" -}}
   {{- with site.Data.niveau_eleves.releve_le -}}
     {{- $t := time . -}}
-    {{- $mois := slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre" -}}
-    {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
+    {{- partial "date-affichee.html" (dict "t" $t "fmt" "2 January 2006" "en" (eq $.Page.Lang "en")) -}}
   {{- else -}}{{- errorf "niv-val: releve_le absent de data/niveau_eleves.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
 {{- else -}}
 {{- $a := "" -}}

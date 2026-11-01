@@ -1,8 +1,8 @@
 {
- "releve_le": "2026-10-31",
+ "releve_le": "2026-11-01",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Insee, BCE, Commission européenne, COR",
  "meta": {
-  "releve_le": "2026-10-31",
+  "releve_le": "2026-11-01",
   "page": "https://stephane-lalut.com/dette-publique-generations-futures/",
   "licence": "CC BY 4.0",
   "perimetre": "administrations publiques (S.13), SEC 2010, monnaie nationale, PIB de la notification de déficit et de dette",
@@ -3671,7 +3671,21 @@
   "annees_pays_calculables": 835,
   "retenues": 835,
   "ecartees": 0,
-  "detail_ecartees": []
+  "detail_ecartees": [],
+  "cp_absents": [
+   {
+    "pays": "DK",
+    "annees": [
+     2024,
+     2025
+    ],
+    "postes": [
+     "B9",
+     "B8N"
+    ],
+    "ecartees": []
+   }
+  ]
  },
  "affichage": {
   "fin": "2025",
@@ -3879,7 +3893,8 @@
   "inv_dec_max_lib": "1998-2007",
   "inv_ccf_note": "",
   "cons_calculables": "835",
-  "cons_ecartees": "0"
+  "cons_ecartees": "0",
+  "cp_absents_note": "Le Danemark ne figure pas dans ce tableau : les comptes annuels des administrations publiques d’Eurostat ne donnent ni son besoin de financement ni son épargne nette pour 2024 et 2025."
  },
  "affichage_en": {
   "fin": "2025",
@@ -4087,6 +4102,7 @@
   "inv_dec_max_lib": "1998-2007",
   "inv_ccf_note": "",
   "cons_calculables": "835",
-  "cons_ecartees": "0"
+  "cons_ecartees": "0",
+  "cp_absents_note": "Denmark is not in this table: Eurostat’s annual government accounts do not give its net lending/net borrowing or its net saving for 2024 and 2025."
  }
 }

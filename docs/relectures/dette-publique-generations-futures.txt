@@ -1,16 +1,17 @@
-# relu le 2026-10-18 ; texte servi de /dette-publique-generations-futures/, build de de89b3d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-01 ; texte servi de /dette-publique-generations-futures/, build de 1aaf14f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d'autres équipements.
 Que montrent les comptes français ?
 De 1996 à 2025, 18 % seulement des déficits publics ont correspondu à des actifs publics nouveaux (équipements, bâtiments, terrains), usure déduite ; cette part est tombée à 10 % sur 2016-2025.
+Le capital humain que peuvent laisser l'enseignement ou la santé n'y figure pas : ce chiffre dit à quoi les déficits ont correspondu, non ce qu'ils ont produit.
 Deux autres arguments méritent examen : « nous nous devons la dette à nous-mêmes » et « le véritable fardeau viendra du vieillissement ».
 Trois tests les éprouvent, sans prétendre calculer la facture de chaque génération.
-Page mise à jour le 18 octobre 2026
+Page mise à jour le 1er novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat et BCE 2025 · projections 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 18 octobre 2026 Administrations publiques, séries Eurostat, Insee et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
+Données mises à jour le 1er novembre 2026 Administrations publiques, séries Eurostat, Insee et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
 Télécharger : CSV · JSON · méthode
 À quoi les déficits ont correspondu dans les comptes
 Emprunter pour construire une école, une route ou un réseau laisse un capital en même temps qu’une dette.
@@ -37,111 +38,117 @@ De la première décennie à la deuxième, la part a reculé surtout parce que l
 Sur la dernière décennie, les acquisitions nettes d’actifs n’ont représenté que 0,5 point de PIB par an en moyenne.
 En trente ans, les recettes courantes n’ont dépassé les dépenses courantes que deux années, en 2000 et 2001, et aucune année les acquisitions d’actifs n’ont égalé le besoin de financement.
 Même en comptant comme un capital acquis toutes les aides à l’investissement versées hors des administrations, la part atteindrait 39 % au plus : toujours moins de la moitié.
+Où ce recul s’est produit.
+Les comptes ne disent pas pourquoi la part investie a baissé, mais ils permettent de situer ce recul.
+L’investissement net des administrations publiques, investissement moins usure du capital (formation brute de capital fixe moins consommation de capital fixe), est passé de 0,75 point de PIB par an en moyenne sur 2006-2015 à 0,32 point sur 2016-2025.
+Sur ces deux périodes, les administrations locales comptent pour 0,24 point des 0,43 point de recul, soit 56 % ; les autres administrations, administration centrale et sécurité sociale, pour le reste.
+Cette répartition dépend des années comparées (détail ci-dessous).
+La baisse n’a pas été régulière : l’investissement net local atteint son point bas en 2016, à 0,03 point de PIB, quand l’investissement brut des collectivités couvrait à peine l’usure estimée de leur capital.
+Il retrouve 0,47 point en 2024, puis 0,48 point en 2025.
+Le creux de 2016 intervient deux ans après les élections municipales de 2014, pendant la baisse des transferts reçus par les administrations locales : la page Les collectivités locales sont-elles une variable d’ajustement ? montre que la comparaison avec les cycles précédents affaiblit l’explication par le seul calendrier municipal, sans permettre d’isoler l’effet des transferts ou des dotations.
+La part locale du recul selon les années comparées
+Avec pour référence chacune des onze périodes de dix années consécutives comprises entre 1996 et 2015, comparée à 2016-2025, la part des administrations locales dans le recul va de 56 % (2006-2015, la période retenue plus haut) à 81 % (1998-2007).
+Sans la dernière année, elle est de 57 % ; sans les années du plan de relance, 2009 et 2010, de 66 %.
+Ces périodes se recouvrent : ce sont des variantes d’un même calcul, non des observations indépendantes.
 Ce que cette part ne mesure pas.
 Que 18 % seulement des déficits correspondent à des actifs comptabilisés ne veut pas dire que les 82 % restants n’ont rien produit.
 Les comptes enregistrent des contreparties, non tous les bénéfices : l’éducation, la santé ou la recherche non capitalisée sont des dépenses courantes, qui peuvent laisser aux générations suivantes un capital humain que ces séries ne comptent pas.
 Ces parts ne disent pas non plus ce que les dépenses ont rapporté, ni si un déficit de récession, qui étale l’effort dans le temps, était justifié.
 Ni universel ni exceptionnel.
-Le même calcul, appliqué aux 27 pays de l’Union sur une fenêtre commune de 2001 à 2025, place la France à 17 % (contre 18 % sur 1996-2025 : la différence tient à la fenêtre).
-Parmi les 21 pays dont le besoin de financement cumulé a atteint 30 points de PIB, la part des actifs a atteint au moins la moitié dans quatre, dont la Roumanie (61 %) et la Slovénie (61 %) ; elle a été plus faible qu’en France dans huit, dont l’Italie (3 %) et la Slovaquie (1 %).
+Le même calcul, appliqué aux 26 pays de l’Union sur une fenêtre commune de 2001 à 2025, place la France à 17 % (contre 18 % sur 1996-2025 : la différence tient à la fenêtre).
+Parmi les 21 pays dont le besoin de financement cumulé a atteint 30 points de PIB, la part des actifs a atteint au moins la moitié dans quatre, dont la Roumanie (61 %) et la Slovénie (61 %) ; elle a été plus faible qu’en France dans huit, dont l’Italie (4 %) et la Slovaquie (1 %).
 La composition des déficits n’est donc pas une fatalité commune à tous les États.
-Les 27 pays, emploi par emploi
+Les 26 pays, emploi par emploi
 Pays
 Part en actifs
 Besoin de financement
 Actifs
 Transferts en capital
 Dépenses courantes non couvertes
-Danemark
-sans objet
-−38,0
-7,7
-14,6
-−60,2
 Luxembourg
 sans objet
-−25,8
-52,4
-22,5
-−100,6
+−25,4
+51,4
+19,4
+−96,3
 Suède
 au-delà du besoin
-1,3
+2,3
 30,4
-1,7
-−30,9
+3,8
+−32,0
 Estonie
 au-delà du besoin
-9,0
-65,4
-−8,9
-−47,5
+9,7
+65,5
+−8,8
+−47,0
 Finlande
 au-delà du besoin
-10,1
+10,2
 14,7
 −1,4
-−3,3
+−3,1
 Bulgarie
-au-delà du besoin
-25,0
-25,2
-−8,9
-8,7
+99 %
+25,5
+25,3
+−8,2
+8,4
 Chypre
-62 %
+61 %
 56,1
-34,6
+34,5
 26,5
-−5,0
+−4,9
 Slovénie
 61 %
 78,4
-48,1
-10,5
-19,8
+47,9
+10,6
+19,9
 Roumanie
 61 %
-107,9
-65,5
-5,4
+107,8
+65,6
+5,3
 37,0
 Lituanie
-50 %
-53,6
-26,9
-−7,5
-34,2
+51 %
+53,3
+27,4
+−8,6
+34,5
 Croatie
 44 %
-86,1
+86,6
 38,2
-26,2
-21,6
+26,4
+22,0
+Irlande
+43 %
+77,8
+33,3
+27,2
+17,2
 Pologne
 43 %
 103,0
-44,0
-1,0
+43,9
+1,1
 58,0
-Irlande
+Lettonie
 43 %
-77,7
-33,1
-27,3
-17,3
+66,7
+28,4
+−8,5
+46,8
 Malte
 42 %
-76,1
-31,8
-−6,8
-51,1
-Lettonie
-41 %
-67,1
-27,8
-−8,8
-48,1
+76,0
+31,9
+−6,5
+50,6
 Pays-Bas
 34 %
 37,6
@@ -156,91 +163,92 @@ Espagne
 72,1
 Hongrie
 20 %
-122,5
-24,8
-19,4
-78,3
+122,6
+25,1
+19,3
+78,2
 France
 17 %
 111,6
-19,0
-16,8
-75,9
+18,9
+16,7
+76,0
 Grèce
 16 %
-143,8
-23,4
-0,2
-120,2
+143,7
+23,0
+0,7
+120,0
 Autriche
 15 %
-66,2
-9,9
+66,0
+9,8
 27,3
 29,0
 Portugal
 11 %
-100,9
-11,0
+100,8
+10,8
 7,5
-82,4
+82,5
 Belgique
 9 %
-70,5
+70,6
 6,5
 16,4
-47,6
+47,7
 Tchéquie
 7 %
-67,9
+67,7
 4,8
 18,2
-44,9
+44,7
 Allemagne
-5 %
+6 %
 38,0
-1,9
-22,3
-13,9
+2,3
+22,0
+13,7
 Italie
-3 %
-96,7
-3,1
-33,7
-60,0
+4 %
+96,8
+3,6
+33,6
+59,6
 Slovaquie
 1 %
-98,0
+98,1
 0,7
-2,5
-94,8
+1,7
+95,7
 Points de PIB cumulés de 2001 à 2025 ; actifs : investissement moins usure du capital, terrains et stocks ; un besoin de financement négatif désigne des excédents cumulés (« sans objet ») ; « au-delà du besoin » : les acquisitions nettes d'actifs dépassent le besoin de financement, la différence correspondant à une épargne publique positive.
 Source : Eurostat, calcul de l'auteur.
-La Bulgarie, le Danemark, l’Estonie, la Finlande, le Luxembourg et la Suède, dont le besoin cumulé est resté sous ce seuil ou négatif, ne se comparent pas sur ce ratio.
+La Bulgarie, l’Estonie, la Finlande, le Luxembourg et la Suède, dont le besoin cumulé est resté sous ce seuil ou négatif, ne se comparent pas sur ce ratio.
+Le Danemark ne figure pas dans ce tableau : les comptes annuels des administrations publiques d’Eurostat ne donnent ni son besoin de financement ni son épargne nette pour 2024 et 2025.
 Le bilan des administrations publiques : un complément, non une preuve
-Le bilan des administrations publiques semble offrir une confirmation : de 1995 à 2025, leur patrimoine net — tous leurs actifs non financiers, produits ou non, moins leurs dettes nettes de leurs actifs financiers — est passé de 37,1 % à 25,0 % du PIB.
+Le bilan des administrations publiques semble offrir une confirmation : de 1995 à 2025, leur patrimoine net — tous leurs actifs non financiers, produits ou non, moins leurs dettes nettes de leurs actifs financiers — est passé de 37,1 % à 27,1 % du PIB.
 Mais ce stock dépend des deux années que l’on compare.
-Il atteignait 61,6 % en 2007, était encore au-dessus de son niveau de départ en 2022 (40,3 %), et il a augmenté de 8,1 points de 2016 à 2025, décennie où la part des déficits correspondant à des actifs est tombée à 10 %.
-Sur les 231 comparaisons possibles entre deux années distantes d’au moins dix ans, 55 le montrent en hausse.
+Il atteignait 61,6 % en 2007, était encore au-dessus de son niveau de départ en 2022 (40,3 %), et il a augmenté de 10,2 points de 2016 à 2025, décennie où la part des déficits correspondant à des actifs est tombée à 10 %.
+Sur les 231 comparaisons possibles entre deux années distantes d’au moins dix ans, 54 le montrent en hausse.
 Ses variations mêlent flux et réévaluations.
-La valeur des terrains a varié de +28,8 points de PIB sur la période, sans rapport avec les déficits ; même les actifs produits, qui n’ont varié que de +0,9 point, sont des stocks évalués aux prix courants et rapportés au PIB, sensibles aux prix comme au dénominateur.
+La valeur des terrains a varié de +28,9 points de PIB sur la période, sans rapport avec les déficits ; même les actifs produits, qui n’ont varié que de +1,0 point, sont des stocks évalués aux prix courants et rapportés au PIB, sensibles aux prix comme au dénominateur.
 Une identité de flux, vérifiée année par année, ne se valide pas par un stock dont les variations obéissent aussi à d’autres mécanismes : le bilan reste ici une information complémentaire.
 « On se la doit à nous-mêmes » ?
 L’argument classique de l’économiste Abba Lerner suppose que la dette soit détenue dans le pays : la servir reviendrait alors à prélever sur des contribuables nationaux pour payer des épargnants nationaux, et la génération qui paie serait aussi celle qui encaisse.
 La statistique de détention permet d’en vérifier la prémisse, non la conclusion.
 Part de la dette des administrations publiques détenue par les non-résidents, la Banque de France et les autres résidents (BCE, statistiques de finances publiques).
 En 2025, 54,3 % de la dette publique française était enregistrée comme détenue par des non-résidents, et 45,7 % par des résidents (BCE).
-Parmi ces derniers, la Banque de France en détenait 16,5 % du total, et les autres résidents 29,2 %.
+Parmi ces derniers, la Banque de France en détenait 16,5 % du total, et les autres résidents 29,1 %.
 La Banque de France est mise à part parce que son rôle n’est pas celui d’un créancier privé ordinaire : ses avoirs ont fortement augmenté avec les achats de titres publics de l’Eurosystème, avant de refluer.
 Avec plus de la moitié de la dette détenue par des non-résidents, l’hypothèse d’une dette entièrement détenue dans le pays ne décrit pas la situation française.
 Elle décrit mieux l’Italie (34 % de dette détenue par des non-résidents en 2025) ou la Suède (23 %), moins bien l’Autriche (66 %) ou la Belgique (63 %).
 Il n’en a pas toujours été ainsi.
-En 1995, 38,8 % de la dette était détenue par des non-résidents ; la part a dépassé la moitié en 2003 et l’est restée 18 années sur 23 depuis.
+En 1995, 38,5 % de la dette était détenue par des non-résidents ; la part a dépassé la moitié en 2003 et l’est restée 18 années sur 23 depuis.
 Avec ces achats, la Banque de France est devenue un détenteur majeur, jusqu’à 22,6 % de la dette en 2022 ; depuis, ses avoirs refluent et la part des non-résidents a augmenté de 5,8 points.
 Le volet Qui paie vraiment la dette publique ? répartit les titres de l’État par détenteur, et la page L’inflation a-t-elle vraiment allégé la dette française ? dit qui détenait la dette quand l’inflation en a réduit la valeur réelle.
 Les détenteurs année par année, et le champ des titres de l’État
 La part des non-résidents a culminé à 57,1 % en 2014.
-La Banque de France détenait 1,7 % de la dette en 1995 ; depuis 2016, elle en détient plus du dixième, et la progression de ses avoirs a compensé le recul des autres résidents, passés de 40,8 % en 2014 à 29,2 % en 2025.
+La Banque de France détenait 1,7 % de la dette en 1995 ; depuis 2016, elle en détient plus du dixième, et la progression de ses avoirs a compensé le recul des autres résidents, passés de 40,8 % en 2014 à 29,1 % en 2025.
 En 2025, elle en détenait 6,1 points de moins qu’en 2022.
 Sur le seul champ des titres négociables de l’État, en valeur de marché, la Banque de France décrit le même mouvement : 56,0 % de non-résidents fin 2025, un creux à 47,5 % en 2021, au plus fort des achats de la banque centrale, et 57,5 % au premier trimestre 2026 selon l’Agence France Trésor.
 La série des administrations publiques est en valeur nominale, celle des titres négociables de l’État en valeur de marché : leurs niveaux ne se comparent pas point par point.
@@ -427,12 +435,14 @@ Chaque année, besoin de financement = désépargne nette + acquisitions nettes 
 Les ratios sont calculés sur le PIB publié avec la notification de déficit et de dette (gov_10dd_edpt1) et cumulés par période en points de PIB ; la part en actifs calculée en euros courants donne 17 %, contre 18 % en points de PIB.
 Sans les terrains ni les stocks, l’investissement net seul représente 15 % du besoin de financement.
 Patrimoine.
-Compte de patrimoine des administrations publiques de l’Insee (tableau 8.204, comptes nationaux annuels, base 2020, corrigé le 30 juillet 2026, fichier archivé avec son empreinte) : actifs non financiers produits et non produits (N1N et N2N, prix courants), dont terrains (N211N), et valeur financière nette (actifs moins passifs financiers), rapportés au PIB.
-Deux témoins, qui doivent concorder sous peine d’arrêt : les actifs non financiers publiés par Eurostat (nama_10_nfa_bs) et la valeur financière nette trimestrielle d’Eurostat au quatrième trimestre (nasq_10_f_bs, BF90).
+Comptes des administrations publiques diffusés par Eurostat, dans leur dernier millésime : actifs non financiers produits et non produits (nama_10_nfa_bs, N1N et N2N, prix courants), dont terrains (N211N), établis par l’Insee, et valeur financière nette consolidée (nasa_10_f_bs, BF90), établie par la Banque de France, rapportés au PIB.
+La Banque de France révise chaque octobre les trois dernières années de ses comptes financiers : un même compte peut alors différer d’une source à l’autre.
+Témoin bloquant : la valeur financière nette annuelle égale celle du quatrième trimestre (nasq_10_f_bs).
+Témoin de millésime : le compte de patrimoine de l’Insee (tableau 8.204, corrigé le 30 juillet 2026, fichier archivé avec son empreinte) ; un écart n’y est accepté que dans la fenêtre de révision, si les années antérieures concordent et si la publication de l’Insee est la plus ancienne des deux, et il figure dans le fichier des contrôles.
 Les stocks d’actifs sont évalués aux prix courants : leurs variations mêlent flux et réévaluations.
 Détention.
 BCE, statistiques de finances publiques (GFS) : dette de Maastricht des administrations publiques par zone de contrepartie (reste du monde, résidents) et secteur détenteur (banque centrale).
-Contrôles : non-résidents et résidents égalent la dette totale chaque année ; sur les années communes, les valeurs égalent celles d’Eurostat (gov_10dd_ggd), déclarées par la même administration.
+Contrôles : non-résidents et résidents égalent la dette totale chaque année ; sur les années communes, les valeurs égalent celles d’Eurostat (gov_10dd_ggd), déclarées par la même administration, sauf, dans la fenêtre de révision de la Banque de France, un écart de millésime publié dans le fichier des contrôles.
 Témoin de périmètre : Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F, sur Webstat (part des titres négociables de l’État détenue par des non-résidents, en valeur de marché, fin de trimestre ; fichier de la page publique de la série, dernière observation publiée le 7 avril 2026, archivé avec son empreinte) ; dernière observation : graphique de l’Agence France Trésor (source Banque de France), relevé le 3 octobre 2026 avec l’empreinte de l’image, et contrôlé contre Webstat sur la période commune.
 Le script s’arrête si les deux séries cessent de converger, ou si Webstat publie une période que le relevé ne dépasse plus.
 Indicateur S2.
@@ -443,7 +453,7 @@ L’écart au solde stabilisant est lu dans les données de La dette publique pe
 Retraites.
 COR, rapport annuel de juin 2026, données de la synthèse, scénario de référence ; règle d’indexation de l’Agirc-Arrco : partie 1, chapitre 2 du rapport.
 Contrôle : pour chaque pays et chaque année, les ratios calculés sont comparés à ceux qu’Eurostat publie en pourcentage du PIB, que le calcul n’utilise pas.
-Au-delà de 0,11 point d’écart, l’année est écartée et comptée (0 sur 837) ; pour la France, le script s’arrête.
+Au-delà de 0,11 point d’écart, l’année est écartée et comptée (0 sur 835) ; pour la France, le script s’arrête.
 Les chiffres calculés viennent tous du même script, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
 Seule la dernière part des non-résidents, lue sur le graphique de l’Agence France Trésor, est transcrite à la main ; le relevé du trimestre précédent est contrôlé contre Webstat.
 Les chiffres des études citées sont repris tels qu’elles les publient.
@@ -480,7 +490,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « La dette publique est-elle un fardeau pour les générations futures ? ».
-Données Eurostat, Insee, BCE, Commission européenne, COR, relevé du 18 octobre 2026. https://stephane-lalut.com/dette-publique-generations-futures/
+Données Eurostat, Insee, BCE, Commission européenne, COR, relevé du 1er novembre 2026. https://stephane-lalut.com/dette-publique-generations-futures/
 Copier la citation
 En trois phrases
 De 1996 à 2025, 18 % du besoin de financement des administrations publiques françaises a correspondu, dans les comptes, à un accroissement net de leurs actifs comptabilisés, et 66 % à des dépenses courantes non couvertes par les recettes courantes ; la part en actifs est passée de 32 % (1996-2005) à 10 % (2016-2025).
@@ -488,11 +498,16 @@ C’est une lecture comptable, non une attribution causale : ces parts ne mesure
 En 2025, 54,3 % de la dette publique était enregistrée au nom de non-résidents, ce qui dit la résidence des détenteurs, non le fardeau.
 Copier le résumé
 Les données
-Les emplois du besoin de financement des administrations publiques (France par décennie, 27 pays de l'Union), le patrimoine des administrations publiques, la détention de la dette par secteur et l'indicateur S2 de la Commission ; le même contenu existe en CSV, au format long.
+Les emplois du besoin de financement des administrations publiques (France par décennie, pays de l'Union en cumul), le patrimoine des administrations publiques, la détention de la dette par secteur et l'indicateur S2 de la Commission ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat, Insee, BCE, Commission européenne, COR), sous leurs propres conditions.
+Révisions
+31 octobre 2026 — Révision du patrimoine des administrations publiques : les comptes financiers de la Banque de France, actualisés en octobre 2026 pour 2023 à 2025 et repris par Eurostat, réévaluent surtout les actions détenues par les administrations ; le patrimoine net de fin 2025 passe de 25,0 % à 27,1 % du PIB.
+Le compte de l'Insee de juillet, qui ne l'intègre pas encore, devient un témoin.
+La décomposition des déficits, fondée sur les flux, n'en dépend pas (contre-expertise du 31/10).
+18 octobre 2026 — Ajout : où le recul de l'investissement net s'est produit, administrations locales et autres administrations, avec son point bas de 2016 et la part locale du recul selon les années comparées (contre-expertise du 18/10).
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

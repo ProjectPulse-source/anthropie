@@ -373,6 +373,13 @@ def piece(cle: str) -> Path:
 # ------------------------------------------------------------------ A1 : à quoi ont correspondu les déficits
 ITEMS = ("B9", "P51G", "P51C", "B8N", "D9PAY", "D9REC", "D92PAY", "NP", "P52_P53")
 PUBLIES = ("B9", "P51G", "P51C", "B8N")
+POSTES_REQUIS = ("B9", "P51G", "P51C", "B8N", "D9PAY", "D9REC")
+POSTES_NOMS = {"fr": {"B9": "son besoin de financement", "B8N": "son épargne nette", "P51G": "son investissement brut",
+                      "P51C": "sa consommation de capital fixe", "D9PAY": "ses transferts en capital versés",
+                      "D9REC": "ses transferts en capital reçus"},
+               "en": {"B9": "its net lending/net borrowing", "B8N": "its net saving", "P51G": "its gross fixed capital formation",
+                      "P51C": "its consumption of fixed capital", "D9PAY": "its capital transfers paid",
+                      "D9REC": "its capital transfers received"}}
 
 
 def emplois():
@@ -381,7 +388,7 @@ def emplois():
     Y = eurostat("gov_10dd_edpt1", na_item="B1GQ", sector="S1", unit="MIO_NAC")
     R, ecartes, calculables = {}, [], 0
     for (p, a) in sorted(M["B9"]):
-        if p not in PAYS or (p, a) not in Y or any((p, a) not in M[it] for it in ("P51G", "P51C", "B8N", "D9PAY", "D9REC")):
+        if p not in PAYS or (p, a) not in Y or any((p, a) not in M[it] for it in POSTES_REQUIS):
             continue
         calculables += 1
         y = Y[(p, a)]
@@ -413,7 +420,10 @@ def emplois():
     retenues = sum(len(v) for v in R.values())
     if calculables != retenues + len(ecartes):
         fail("conservation rompue : %d calculables, %d retenues, %d ecartees" % (calculables, retenues, len(ecartes)))
-    return R, ecartes, calculables
+    # Postes absents par pays et année où le PIB existe (01/11/2026) : nomme la cause d'une absence de la contre-population
+    # (le Danemark, sans B9 ni B8N pour 2024-2025 dans gov_10a_main alors que son investissement y figure).
+    manques = {(p, a): [it for it in POSTES_REQUIS if (p, a) not in M[it]] for (p, a) in Y if p in PAYS}
+    return R, ecartes, calculables, {k: v for k, v in manques.items() if v}
 
 
 def cumul(an: dict, a0: int, a1: int):
@@ -716,6 +726,8 @@ def calcul_hors_ligne():
         if rj.normalise(json.loads(json.dumps(neuf, ensure_ascii=False))) != rj.normalise(jeu):
             fail("hors ligne : la piece %s ne redonne pas le jeu publie (piece changee depuis le releve)" % nom_)
     fin = max(a["annee"] for a in annees)
+    if "cp_absents" not in j["conservation"]:
+        fail("hors ligne : le jeu publie n'a pas encore la cause des pays absents (premier releve en ligne)")
     if "sous_secteurs" not in j["france"]:
         fail("hors ligne : le jeu publie n'a pas encore de bloc sous_secteurs (premier releve en ligne)")
     return (fin, total, dec, annees, cp, pat, det, det_pays, j["controles"]["detention_bce_eurostat_annees"], S2, C,
@@ -726,7 +738,7 @@ def calcul_hors_ligne():
 def calcul():
     if "--hors-ligne" in sys.argv[1:]:
         return calcul_hors_ligne()
-    R, ecartes, calculables = emplois()
+    R, ecartes, calculables, manques = emplois()
     if "FR" not in R or any(e["pays"] == "FR" for e in ecartes):
         fail("France : annee ecartee par le temoin ou par l'identite (%s)" % [e for e in ecartes if e["pays"] == "FR"])
     FR = R["FR"]
@@ -747,15 +759,49 @@ def calcul():
         s = cumul(R.get(p, {}), c0, fin)
         if s:
             cp.append(dict(pays=p, nom=PAYS[p][0], **s))
+    # Pays hors de la contre-population, avec leur cause : postes absents chez Eurostat, sinon année écartée par un recoupement
+    absents = []
+    for p in sorted(set(PAYS) - {x["pays"] for x in cp}):
+        trous = [a for a in range(c0, fin + 1) if a not in R.get(p, {})]
+        postes = sorted({it for a in trous for it in manques.get((p, a), [])}, key=POSTES_REQUIS.index)
+        absents.append(dict(pays=p, annees=trous, postes=postes,
+                            ecartees=[a for a in trous if any(e["pays"] == p and e["annee"] == a for e in ecartes)]))
     pat = patrimoine(fin)
     det, det_pays, det_controle = detention()
     S2 = s2()
     C = cor()
-    cons = dict(annees_pays_calculables=calculables, retenues=sum(len(v) for v in R.values()), ecartees=len(ecartes), detail_ecartees=ecartes)
+    cons = dict(annees_pays_calculables=calculables, retenues=sum(len(v) for v in R.values()), ecartees=len(ecartes), detail_ecartees=ecartes,
+                cp_absents=absents)
     return fin, total, dec, annees, cp, pat, det, det_pays, det_controle, S2, C, cons, etat_negociable(), sous_secteurs(annees)
 
 
 # ------------------------------------------------------------------ affichage et gardes
+def phrase_absent(x: dict, a0: int, fin: int) -> str:
+    """Pourquoi un pays de l'Union manque à la contre-population : les postes qu'Eurostat ne donne pas, et pour quelles
+    années ; à défaut, l'année écartée par un recoupement ; à défaut, les années sans données."""
+    ans = lg.enumere([str(a) for a in x["annees"]], LANG)
+    pays = maj(art(x["pays"]))
+    if LANG == "fr":
+        if x["postes"]:
+            n = [POSTES_NOMS["fr"][it] for it in x["postes"]]
+            quoi = ("ni " + " ni ".join(n)) if len(n) > 1 else ("pas " + n[0])
+            return "%s ne figure pas dans ce tableau : les comptes annuels des administrations publiques d’Eurostat ne donnent %s pour %s." % (pays, quoi, ans)
+        if x["ecartees"]:
+            return "%s ne figure pas dans ce tableau : %s %s %s écartée%s par les recoupements décrits dans la méthode." % (
+                pays, "l’année" if len(x["ecartees"]) == 1 else "les années", lg.enumere([str(a) for a in x["ecartees"]], LANG),
+                "a été" if len(x["ecartees"]) == 1 else "ont été",
+                "" if len(x["ecartees"]) == 1 else "s")
+        return "%s ne figure pas dans ce tableau : ses données manquent pour %s." % (pays, ans)
+    if x["postes"]:
+        n = [POSTES_NOMS["en"][it] for it in x["postes"]]
+        quoi = n[0] if len(n) == 1 else ", ".join(n[:-1]) + " or " + n[-1]
+        return "%s is not in this table: Eurostat’s annual government accounts do not give %s for %s." % (pays, quoi, ans)
+    if x["ecartees"]:
+        return "%s is not in this table: %s %s %s set aside by the cross-checks described in the method." % (
+            pays, "the year" if len(x["ecartees"]) == 1 else "the years", lg.enumere([str(a) for a in x["ecartees"]], LANG), "was" if len(x["ecartees"]) == 1 else "were")
+    return "%s is not in this table: its data are missing for %s." % (pays, ans)
+
+
 def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat, ss):
     A = {"fin": str(fin), "a0": str(total["debut"]), "tolerance": fr(TOL, 2),
          "dsm_lib": lib("dsm"), "cor_lib": lib("cor"),
@@ -927,6 +973,7 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
                          % (der["annee"], der["annee"] - 1)) if ss["ccf_reprise"] else ""
     # contrôles et conservation
     A["cons_calculables"] = str(cons["annees_pays_calculables"]); A["cons_ecartees"] = str(cons["ecartees"])
+    A["cp_absents_note"] = " ".join(phrase_absent(x, cp[0]["debut"], fin) for x in cons["cp_absents"])
     return A, dict(sup=sup, inf=inf, exc=exc, frc=frc, vieux=vieux, cor_var=cor_var, nr_max=nr_max, bc_max=bc_max, maj1=maj1,
                    etat=etat, emax=emax, emin_apres=emin_apres, pmax=pmax, psup=psup, pd3=pd3, fen=fen, V5=V5, D=D, groupe=groupe,
                    inv=inv)

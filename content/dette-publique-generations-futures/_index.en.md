@@ -118,7 +118,7 @@ Taking as reference each of the {{< gen-val "inv_dec_n" >}} periods of ten conse
 
 {{< gen-tableau >}}
 
-{{< gen-val "cp_exc_pays_maj" >}}, whose cumulated net borrowing stayed below that threshold or was negative, cannot be compared on this ratio.
+{{< gen-val "cp_exc_pays_maj" >}}, whose cumulated net borrowing stayed below that threshold or was negative, cannot be compared on this ratio. {{< gen-val "cp_absents_note" >}}
 
 </details>
 

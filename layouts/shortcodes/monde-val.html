@@ -7,8 +7,7 @@
   {{- /* date du dernier relevé où un chiffre a bougé (releve_le à la racine, conservé à données identiques) */ -}}
   {{- with site.Data.dette_monde.releve_le -}}
     {{- $t := time . -}}
-    {{- $mois := cond (eq $.Page.Lang "en") (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December") (slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre") -}}
-    {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
+    {{- partial "date-affichee.html" (dict "t" $t "fmt" "2 January 2006" "en" (eq $.Page.Lang "en")) -}}
   {{- else -}}{{- errorf "monde-val: releve_le absent de data/dette_monde.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
 {{- else -}}
 {{- $a := "" -}}

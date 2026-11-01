@@ -9,8 +9,7 @@
 {{- if eq $k "date_donnees" -}}
   {{- with site.Data.dechets_radioactifs.releve_le -}}
     {{- $t := time . -}}
-    {{- $mois := cond $en (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December") (slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre") -}}
-    {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
+    {{- partial "date-affichee.html" (dict "t" $t "fmt" "2 January 2006" "en" (eq $.Page.Lang "en")) -}}
   {{- else -}}{{- errorf "dr-val: releve_le absent de data/dechets_radioactifs.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
 {{- else -}}
 {{- $a := "" -}}

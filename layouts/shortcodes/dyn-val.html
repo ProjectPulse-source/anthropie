@@ -7,8 +7,7 @@
          la date de mise à jour de la ressource, jamais le millésime des données (avis Architecture_Dette-01, 30/09) */ -}}
   {{- with site.Data.dette_dynamique.releve_le -}}
     {{- $t := time . -}}
-    {{- $mois := cond (eq $.Page.Lang "en") (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December") (slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre") -}}
-    {{- printf "%d %s %d" $t.Day (index $mois (sub (int $t.Month) 1)) $t.Year -}}
+    {{- partial "date-affichee.html" (dict "t" $t "fmt" "2 January 2006" "en" (eq $.Page.Lang "en")) -}}
   {{- else -}}{{- errorf "dyn-val: releve_le absent de data/dette_dynamique.json (page %s)" $.Page.RelPermalink -}}{{- end -}}
 {{- else -}}
 {{- $a := "" -}}
