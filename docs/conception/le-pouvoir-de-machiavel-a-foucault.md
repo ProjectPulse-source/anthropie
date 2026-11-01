@@ -147,4 +147,8 @@ Aucun des deux articles ne relie les réponses entre elles ni ne montre la limit
   statut textuel de la phrase de 1715). Valeur finale : tenu (grille réutilisable). Fonctions : remplies.
 - Instantané de relecture : fait le 01/11/2026 ; `refonte` posé.
 - Contrôles : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 75/75 ; rendu conforme.
-- Contre-expertise de la page : paquet à déposer après le commit.
+- Contre-expertise de la page : faite le 01/11/2026 (`PRO-20261101-081309`, réponse archivée SHA-256 1EEE9F85…).
+  Arbitrage `ARBITRATIONS/PRO-20261101-081309_arbitrage.md` : option B ; P0 acceptés, dont Tibère, *Tib.* 59, retrouvé
+  (le premier contrôle avait lu une page UTF-16 comme UTF-8). Foucault et les résistances, conseil de Machiavel
+  (chap. XVIII), trois causes de Hobbes, Hollande nommé, synthèse en trois manières de faire agir. « Bon plaisir » :
+  point ouvert pour le livre. Contrôles relancés à 0, recette OK, instantané refait.

@@ -60,10 +60,13 @@ du broché en vente (onze sentiers, trois échos ; le .docx « FINAL_Poli », av
 Neuf sections à grille uniforme (l'idée, le texte, la limite, dans le livre), trois échos, tableau « chaque ressort porte
 sa limite ». Textes primaires relus : Suétone, *Il Principe* XV/XVII/XVIII (dont « si guarda al fine », origine du
 contresens), Plaute, dédicace du *De Cive* (1651), *Leviathan* XIII, Dangeau t. XVI p. 128, Constitution de 1791, Marx
-1850 et 1852, loi 2013-672. Tibère retiré (non retrouvé) ; « There is no alternative » d'après le livre.
+1850 et 1852, loi 2013-672. « There is no alternative » d'après le livre.
 - **Contrôles** : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 75/75 ; recette 320-1600 OK ; instantané de
   relecture, `refonte` posé. `static/llms.txt` : sans changement.
-- **Ouvert** : contre-expertise de la page ; accord de l'auteur et push.
+- **Contre-expertise** `PRO-20261101-081309` : option B ; Tibère (*Tib.* 59) rétabli, erreur d'encodage du premier contrôle ;
+  Foucault et les résistances ; conseil de Machiavel ; Hobbes, trois causes ; Hollande nommé ; synthèse « trois manières de
+  faire agir ». « Bon plaisir » : point ouvert pour le livre (escale 1461).
+- **Ouvert** : accord de l'auteur et push.
 
 ### 2026-11-01 — Page « Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ? »
 
