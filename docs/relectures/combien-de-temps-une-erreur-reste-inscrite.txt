@@ -1,8 +1,8 @@
-# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 56c8c58 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 8cbd70c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 De six mois pour un point de permis à quarante ans pour le casier : la durée d'une inscription dépend du registre, et ce qui l'efface n'est pas toujours le temps.
-Le permis, le malus et la réhabilitation s'effacent seuls ; le chèque sans provision et l'exclusion d'une condamnation du bulletin n° 2 demandent une démarche ; la radiation d'une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur.
+Les points du permis se récupèrent, le malus se résorbe et la réhabilitation légale s'acquiert sans démarche ; l'interdiction d'émettre des chèques cesse au bout de cinq ans, plus tôt si l'on régularise ; une condamnation n'est exclue du bulletin n° 2 que par le tribunal, dans le jugement ou sur requête ; la radiation d'une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur.
 Et un même registre oublie à deux vitesses : un malus disparaît en deux ans, le bonus maximal en demande treize.
 Page publiée le 1er novembre 2026
 Guides et éclairages
@@ -160,8 +160,8 @@ Six mois pour un point, cinq ans pour un incident de crédit non régularisé, q
 Certaines traces protègent, et c’est leur raison d’être.
 La question que pose La Société du premier coup est ailleurs : la durée est-elle proportionnée à ce qu’elle protège encore, et quelqu’un est-il chargé de la réexaminer ?
 Qui efface compte autant que le délai.
-Le permis, le malus, la réhabilitation légale, le droit à l’oubli s’effacent seuls.
-Le chèque sans provision et l’exclusion du bulletin n° 2 demandent une démarche, et la radiation de l’inscription au FICP après un remboursement dépend d’un tiers.
+Les points du permis, le malus, la réhabilitation légale et le droit à l’oubli ne demandent aucune démarche : le temps suffit, ou la règle s’applique d’office.
+La régularisation d’un chèque abrège l’interdiction bancaire, l’exclusion du bulletin n° 2 passe par le tribunal, et la radiation de l’inscription au FICP après un remboursement dépend d’un tiers.
 Le livre montre l’autre bout de la chaîne avec l’indicateur « 040 » de la Banque de France, qui signalait aux banques les dirigeants ayant connu une liquidation judiciaire dans les trois années précédentes : un décret l’a supprimé d’un trait en septembre 2013, y compris pour les dirigeants qui y figuraient déjà (décret n° 2013-799 ; repère chiffré).
 Face à deux formes d’échec financier, deux politiques de la mémoire coexistent : un effacement collectif pour l’un, une radiation au cas par cas pour l’autre. « La durée d’une trace n’est pas une propriété de l’échec.
 C’est un choix », écrit le livre.

@@ -149,3 +149,11 @@ pas les durées entre eux.
   délais), transitoire du FICP (ordonnance 2025-880, art. 99, lu dans le navigateur, Légifrance refusant les scripts),
   conditions AERAS et L. 113-2-1, permis invalidé et probatoire (L. 223-1). P1 acceptés sauf la rectification FICP
   (arrêté non lu). Synthèse : quatre manières d'oublier. Contrôles relancés à 0, recette OK, instantané refait.
+- Correction du chapô et de « Qui efface compte autant que le délai » (01/11/2026), sur la contre-expertise du lot de
+  diffusion (`D:\PRO\06_PROMOTION\CAMPAGNES\2026-11-01_EFFACEMENT\_PIECES_RECUES\2026-11-01_resources.txt`, SHA-256
+  adcfcf76…a42b) : « le permis, le malus et la réhabilitation s'effacent seuls ; le chèque sans provision et l'exclusion
+  du bulletin n° 2 demandent une démarche » simplifiait les sections. L'interdiction de chéquier tombe seule au bout de
+  cinq ans (la régularisation l'abrège) ; l'exclusion du bulletin n° 2 se décide au tribunal, dans le jugement ou sur
+  requête (art. 775-1, déjà lu) ; ce qui revient sans démarche, ce sont les points, le malus et la réhabilitation. Les
+  sections et la FAQ, exactes, sont inchangées. `check-all --ci` 0, build 0, liens 0 critique, dates conformes,
+  `check_langue` sur les deux phrases servies (2 faux positifs), instantané refait.
