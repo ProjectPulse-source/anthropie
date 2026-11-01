@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — Page « Combien de temps une erreur reste-t-elle inscrite ? » (complément de *Premier coup*)
+
+Matrice sujet → livre, vague 1 (`06_PROMOTION/PLAN_SUJETS_LIVRES_2026-11/MATRICE_SUJET_LIVRE.md`). FR
+`/combien-de-temps-une-erreur-reste-inscrite/`, bloc `guides`, forme `juridique-institutionnel`, livre *La Société du
+premier coup* (ch. 5 et 8). Tableau de huit registres (FICP, surendettement, chèques, casier B2 et B1, permis, malus,
+droit à l'oubli) : durée maximale, ce qui efface plus tôt, qui doit agir ; une section par registre, textes en vigueur lus
+sur Légifrance le 01/11/2026 (C. consom. L. 752-1 et L. 752-3, CMF L. 131-73 et L. 131-78, C. pén. 133-13 et 133-16, CPP
+769 et 775-1, C. route L. 223-6, C. assur. A. 121-1-1 et annexe A. 121-1, CSP L. 1141-5, décret 2013-799). Signale la
+version de L. 752-1 au 20/11/2026 (déclaration du paiement en cas de cession de créance) et les versions du casier au
+01/01/2029. Lecture du livre en fin de page : manière d'effacer, « 040 », erreurs qui ne s'inscrivent pas.
+- **Au passage** : `/premier-coup/`, tableau des versions remplacé par une liste (cartes sans libellé de 320 à 768 px,
+  défaut révélé par la recette).
+- **Contrôles** : `check-all --ci` 0 ; build 0 ; liens 0 critique ; recette 320-1600 OK ; instantané de relecture.
+- **Ouvert** : contre-expertise de la page ; relecture des textes après le 20/11/2026 ; accord de l'auteur et push.
+
 ### 2026-11-01 — Fiches livres : « Pour quel besoin ? » sur les six livres (et l'édition anglaise d'ANTHROPIE)
 
 Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 5, recommandation 6a : distinguer les requêtes de

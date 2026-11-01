@@ -320,11 +320,9 @@ Environ **22&nbsp;700 places** dans près de **1&nbsp;000 structures**. Le plan 
 
 ## Versions, mises à jour et errata {#versions}
 
-| | |
-|---|---|
-| **Version de cette page** | 1.0 |
-| **Dernière mise à jour** | 29 juillet 2026 |
-| **Auteur** | Stéphane Lalut |
+- **Version de cette page**&nbsp;: 1.0
+- **Dernière mise à jour**&nbsp;: 29 juillet 2026
+- **Auteur**&nbsp;: Stéphane Lalut
 
 **Errata du livre**&nbsp;: aucun à ce jour.
 
