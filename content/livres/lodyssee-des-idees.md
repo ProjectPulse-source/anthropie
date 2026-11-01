@@ -10,7 +10,7 @@ date: 2026-07-03
 # d'origine (ASIN B0CVXQSLBQ, ancre des avis) ; data/works.yaml:612 dit « première édition
 # 2023 » — écart non tranché, sans effet sur une fenêtre de 6 mois.
 first_published: 2024-02-19
-lastmod: 2026-10-31  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-01  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-4-2"
 amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
 amazon_rating_date: 2026-10-25  # date du relevé, affichée sous la note ; la mettre à jour avec elle
@@ -86,6 +86,14 @@ Le premier de ces chemins — «&nbsp;Les signes&nbsp;» — a sa traversée sur
 ## Pour qui&nbsp;? {#pour-qui}
 
 Pour le lecteur curieux — de philosophie, de sciences, d'histoire — qui préfère un récit continu aux manuels à fiches&nbsp;; pour l'étudiant qui veut relier ce que les disciplines séparent&nbsp;; et pour qui cherche un livre à offrir&nbsp;: une fresque qui s'offre autant qu'elle se garde.
+
+**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+
+- comprendre d'où vient une idée — la démocratie, la monnaie, l'État, la liberté — et ce qu'elle est devenue, en 250 escales datées des premiers signes à l'intelligence artificielle&nbsp;;
+- relier ce que les disciplines séparent, à travers sept parcours&nbsp;: signes, sacré, pouvoir, liberté, argent, opinion, condition humaine ([le parcours du pouvoir, en ligne](/le-pouvoir-de-machiavel-a-foucault/))&nbsp;;
+- retrouver un nom ou une notion, grâce à ses deux index.
+
+**Ce qu'il n'est pas**&nbsp;: un manuel à fiches ni un dictionnaire. C'est un récit continu, qu'on peut aussi lire par parcours ou ouvrir à une escale.
 
 ## Extrait
 

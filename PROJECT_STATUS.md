@@ -52,6 +52,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — Fiches livres : « Pour quel besoin ? » sur les six livres (et l'édition anglaise d'ANTHROPIE)
+
+Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 5, recommandation 6a : distinguer les requêtes de
+connaissance des requêtes de prescription). Dans la section « Pour qui ? » de chaque fiche, un bloc « Pour quel besoin ? »
+(trois besoins, tirés de l'argument et du sommaire de la fiche) et une ligne « Ce qu'il n'est pas » (essai à thèse pour
+*Dette publique*, pas de conseil de vote pour *Un président…*, pas de loi ni de programme pour *Premier coup*, pas un
+dictionnaire pour *Livresque* et *L'Odyssée*). Chaque bloc renvoie à la ressource du site qui prolonge le livre (Registre,
+dossier dette, neuf promesses, parcours du pouvoir, citations vérifiées). `lastmod` au 01/11 sur les sept fiches.
+- **Contrôles** : `check-all --ci` 0 ; build 0 ; liens 0 critique ; recette 320-1600 sur deux fiches OK.
+
 ### 2026-11-01 — Page « À quoi tient l'obéissance ? Le pouvoir, de Machiavel à Foucault » (parcours pilote)
 
 Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 4). FR `/le-pouvoir-de-machiavel-a-foucault/` (pas

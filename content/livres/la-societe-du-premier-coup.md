@@ -3,7 +3,7 @@ title: "La Société du premier coup"
 subtitle: "Pourquoi certains peuvent recommencer — et d'autres non"
 promo_slug: "premier-coup"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2026-08-10
-lastmod: 2026-10-31  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-01  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "Nous ne disposons pas tous du même nombre d'essais. Ce livre propose une grille pour rendre visible une dimension des inégalités que les colonnes habituelles — revenus, patrimoine, mobilité — laissent hors champ : ce qu'un échec coûte selon celui qui le commet, et combien de tentatives une trajectoire autorise réellement."
 description_en: "We are not all granted the same number of attempts. This book offers a grid for seeing a dimension of inequality that the usual columns — income, wealth, mobility — leave out of frame: what a failure costs depending on who fails, and how many attempts a trajectory actually allows. A narrative essay for the general reader, companion to working paper AWP-08."
 isbn: "978-2-9586347-6-6"
@@ -75,6 +75,14 @@ Le livre instancie l'un des vecteurs du cadre anthropique&nbsp;: le déplacement
 ## Pour qui&nbsp;? {#pour-qui}
 
 Pour le lecteur qui veut comprendre pourquoi deux personnes voisines en revenu n'ont pas le même avenir après un même faux pas&nbsp;: étudiant, praticien du travail social ou de l'insertion, journaliste, chercheur, lecteur d'essais. Aucun prérequis&nbsp;: les mécanismes sont exposés à partir de cas concrets, et l'appareil de notes donne pour chaque fait sa source et son statut de preuve.
+
+**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+
+- comprendre pourquoi un même faux pas coûte plus cher à l'un qu'à l'autre, à revenu voisin&nbsp;;
+- voir une dimension des inégalités que les colonnes de revenus, de patrimoines et de diplômes laissent hors champ&nbsp;: le nombre d'essais que chacun peut se permettre&nbsp;;
+- suivre le mécanisme dans des situations ordinaires&nbsp;: un dossier de location, un barème d'assurance, un fichier d'incidents de paiement, une affectation post-bac.
+
+**Ce qu'il n'est pas**&nbsp;: une loi cachée, un indicateur statistique ou un programme&nbsp;; le livre le dit lui-même. Il rend visible une dimension, et chaque fait y porte sa source et son statut de preuve.
 
 ## Extrait
 

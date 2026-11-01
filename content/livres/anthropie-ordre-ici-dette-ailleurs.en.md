@@ -2,7 +2,7 @@
 title: "ANTHROPY – A Big History of Civilization's Hidden Costs"
 subtitle: "Seven ages of history for a single hypothesis: disorder is never resolved, only displaced."
 date: 2026-07-21  # date de publication de l'édition anglaise (mise en vente KDP)
-lastmod: 2026-10-26
+lastmod: 2026-11-01
 description: "The foundational work on the anthropic framework. Across 644 pages, ANTHROPY develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Order here. Debt elsewhere."
 isbn: "978-2-958634-75-9"
 currency: "USD"
@@ -69,6 +69,14 @@ The framework's definition and its operative vocabulary are set out on the [What
 ## Who is it for? {#who-is-it-for}
 
 For the essay reader looking for an overall reading grid — political economy, deep history, ecology — rather than topical commentary. No technical prerequisite: the conceptual apparatus is built step by step. Readers of the *Anthropy Working Papers* will find here the complete framework from which each paper develops a theorem or an application.
+
+**What need does it serve?** The book helps you:
+
+- understand why a local order — a clean city, a working network, a balanced budget — often has a cost elsewhere, later or for others, a hypothesis followed across seven ages of history;
+- connect deep history, economics, public finance and ecology through a single grid;
+- trace a specific subject — public debt, the energy transition, research — back to the framework that links it to the others.
+
+**What it is not**: an intervention essay on current affairs. It is a hypothesis developed over 644 pages, which the reader can put to the test; its application to deep history is detailed milestone by milestone in the [Register of Offloaded Costs](/en/register-of-offloaded-costs/).
 
 ## What does "Order here. Debt elsewhere." mean? {#what-does-order-here-debt-elsewhere-mean}
 

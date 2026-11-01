@@ -6,7 +6,7 @@ pages: 680  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, 
 wikidata_qid: "Q140517745"  # item canonique (doublon Q138911600 fusionné) — alimente sameAs du Book
 description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. {citations} citations, {auteurs} voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-12-20
-lastmod: 2026-09-17  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-01  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 isbn: "978-2-9586347-0-4"
 amazon_rating: 4.1       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
 amazon_rating_date: 2026-10-25  # date du relevé, affichée sous la note ; la mettre à jour avec elle
@@ -58,6 +58,14 @@ Ce que cherche cette anthologie n'est pas la commodité de la consultation thém
 ## Pour qui&nbsp;? {#pour-qui}
 
 Pour l'amoureux de la langue et des formules, le lecteur qui aime ouvrir un livre au hasard — et pour le cadeau&nbsp;: une anthologie sans ordre imposé se prête naturellement à être offerte.
+
+**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+
+- citer juste&nbsp;: pour l'édition 2026, le texte et la paternité de chaque citation ont été réexaminés, et la ligne d'auteur dit quand la paternité reste discutée ([la méthode, et vingt cas célèbres](/citations-celebres-verifiees/))&nbsp;;
+- retrouver une citation et son auteur, par l'index des auteurs de l'édition brochée ou par la recherche de la version Kindle&nbsp;;
+- trouver une formule pour un discours, une dédicace ou une carte, ou simplement lire au hasard.
+
+**Ce qu'il n'est pas**&nbsp;: un dictionnaire thématique. Les citations ne sont pas classées&nbsp;; on y entre par l'index, par la recherche ou par le hasard.
 
 ## Sans classement, à lire comme un roman
 

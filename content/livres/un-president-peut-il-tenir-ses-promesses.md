@@ -9,7 +9,7 @@ promo_slug: "promesses-2027"  # clé D1/books.toml pour /ressources-offertes (gu
 # classement Kindle Store (KDP, « Pre-orders contribute toward sales rank … before your release »).
 date: 2026-09-22
 publishDate: 2026-09-20
-lastmod: 2026-10-04  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-01  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "Un président peut décider sans que rien ne se fasse. Cet essai propose une grille en quatre zones, applicable à n'importe quelle promesse : ce qu'un président décide dans sa propre chaîne de pouvoir, ce qu'il doit faire voter, ce qu'il doit négocier avec ceux dont la signature manque, et ce qui ne dépendra jamais de lui. Elle est mise à l'épreuve sur neuf promesses écrites, datées et signées, et sur 290 entrées sourcées."
 isbn: "978-2-9586347-8-0"
 amazon_rating: 5.0       # note moyenne Amazon.fr (relevé du 25/10/2026, fiche B0HK1ZYW7C)
@@ -80,6 +80,14 @@ Elle est mise à l'épreuve sur neuf promesses écrites, datées et signées —
 ## Pour qui&nbsp;? {#pour-qui}
 
 Pour l'électeur qui veut savoir, avant de voter, ce qu'une promesse exigerait pour devenir un résultat&nbsp;; pour le journaliste et l'enseignant qui cherchent une méthode d'examen plutôt qu'un verdict&nbsp;; pour le lecteur d'essais politiques que les bilans en «&nbsp;tenue&nbsp;/ non tenue&nbsp;» laissent insatisfait. Aucun prérequis juridique&nbsp;: les textes cités sont expliqués là où ils servent, et chaque fait avancé porte sa source.
+
+**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+
+- savoir, avant de voter, ce qu'une promesse exigerait pour devenir un résultat&nbsp;;
+- distinguer, après l'élection, celui qui n'a pas pu, celui qui n'a pas essayé et celui qui revendique un résultat qu'il n'a peut-être pas causé&nbsp;;
+- disposer d'une grille en quatre zones, applicable à n'importe quelle promesse, éprouvée sur neuf thèmes — santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat ([la grille appliquée aux neuf, en ligne](/que-peut-faire-un-president-promesse-par-promesse/)).
+
+**Ce qu'il n'est pas**&nbsp;: un conseil de vote. Aucune promesse n'y est déclarée bonne ou mauvaise, aucun candidat n'y est jugé sincère ou menteur&nbsp;: le jugement reste au lecteur.
 
 ## Extrait
 

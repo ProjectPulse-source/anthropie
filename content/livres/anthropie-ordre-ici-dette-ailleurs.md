@@ -3,7 +3,7 @@ title: "ANTHROPIE – Ordre ici. Dette ailleurs"
 subtitle: "Sept âges d'histoire pour une seule hypothèse : le désordre ne se résout pas, il se déplace."
 promo_slug: "anthropie"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-09-09
-lastmod: 2026-10-26  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-01  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'ouvrage fondateur du cadre anthropique. En 630 pages, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent est déployée à travers l'histoire longue, l'économie, les finances publiques et l'épistémologie. Ordre ici. Dette ailleurs."
 isbn: "978-2-9586347-2-8"
 amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
@@ -76,6 +76,14 @@ La définition du cadre et son vocabulaire opératoire sont présentés sur la p
 ## Pour qui&nbsp;? {#pour-qui}
 
 Pour le lecteur d'essais qui cherche une grille de lecture d'ensemble — économie politique, histoire longue, écologie — plutôt qu'un traitement d'actualité. Aucun prérequis technique&nbsp;: l'appareil conceptuel est construit pas à pas. Les lecteurs des *Anthropie Working Papers* y trouveront le cadre complet dont chaque paper développe un théorème ou une application.
+
+**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+
+- comprendre pourquoi un ordre local — une ville propre, un réseau qui fonctionne, un budget à l'équilibre — a souvent un coût ailleurs, plus tard ou pour d'autres, hypothèse suivie sur sept âges de l'histoire&nbsp;;
+- relier par une même grille l'histoire longue, l'économie, les finances publiques et l'écologie&nbsp;;
+- remonter, pour un sujet précis — dette publique, transition énergétique, recherche —, au cadre qui le relie aux autres.
+
+**Ce qu'il n'est pas**&nbsp;: un essai d'intervention sur l'actualité. C'est une hypothèse développée sur 630 pages, que le lecteur peut éprouver&nbsp;; son application à l'histoire longue est détaillée jalon par jalon dans le [Registre des coûts déportés](/registre-des-couts-deportes/).
 
 ## Que signifie «&nbsp;Ordre ici. Dette ailleurs.&nbsp;»&nbsp;? {#que-signifie-ordre-ici-dette-ailleurs}
 

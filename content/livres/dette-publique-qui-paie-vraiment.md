@@ -3,7 +3,7 @@ title: "Dette Publique : Qui paie vraiment ?"
 subtitle: "La question n'est pas «&nbsp;combien&nbsp;?&nbsp;» mais «&nbsp;qui paie&nbsp;?&nbsp;» — et par quels canaux le coût se déplace."
 promo_slug: "dette-publique"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-10-17
-lastmod: 2026-10-04  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-01  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "La dette publique n'est pas un solde à contenir mais un mécanisme de transfert. Ce livre pose la question non plus combien, mais qui paie — et par quels canaux le coût se déplace vers les générations futures et les groupes sociaux les moins mobiles."
 isbn: "978-2-9586347-3-5"
 amazon_rating: 4.3       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
@@ -85,6 +85,14 @@ En appliquant le cadre anthropique aux finances publiques françaises, Stéphane
 ## Pour qui&nbsp;? {#pour-qui}
 
 Pour le citoyen qui veut comprendre le débat budgétaire au-delà des ratios, l'étudiant en économie ou en science politique, et le lecteur de presse économique. Aucun prérequis&nbsp;: les mécanismes sont exposés à partir de cas concrets — France, Grèce, Japon, Norvège, Chine.
+
+**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+
+- savoir qui supporte réellement le coût de la dette publique, au-delà des montants et des ratios&nbsp;;
+- comprendre par quels mécanismes ce coût passe d'un groupe social ou d'une génération à l'autre, et pourquoi il devient invisible dans le débat public&nbsp;;
+- comparer la France à d'autres cas — Grèce, Japon, États-Unis, Norvège, Chine — et à quatre scénarios pour la décennie 2025-2035.
+
+**Ce qu'il n'est pas**&nbsp;: un manuel neutre de finances publiques. C'est un essai qui défend une thèse&nbsp;; les séries officielles, recalculées et mises à jour, sont dans le [dossier dette publique](/pourquoi-la-dette-publique-augmente/) du site, qui sépare les constats de leur interprétation.
 
 ## Extrait
 
