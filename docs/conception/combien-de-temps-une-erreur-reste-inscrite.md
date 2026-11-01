@@ -157,3 +157,7 @@ pas les durées entre eux.
   requête (art. 775-1, déjà lu) ; ce qui revient sans démarche, ce sont les points, le malus et la réhabilitation. Les
   sections et la FAQ, exactes, sont inchangées. `check-all --ci` 0, build 0, liens 0 critique, dates conformes,
   `check_langue` sur les deux phrases servies (2 faux positifs), instantané refait.
+- Correction du délai probatoire (01/11/2026), sur la seconde contre-expertise du lot
+  (`…\2026-11-01_EFFACEMENT\_PIECES_RECUES\2026-11-01_Messages.txt`, SHA-256 da757d81…98b9) : « tant qu'aucune infraction
+  n'a été commise » élargissait la condition ; le Code de la route, art. L. 223-1 (relu par le MCP `sources`, version en
+  vigueur depuis le 30/03/2018), dit « aucune infraction ayant donné lieu à un retrait de points ». Phrase corrigée.

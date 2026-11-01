@@ -1,4 +1,4 @@
-# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 8cbd70c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 4300890 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 De six mois pour un point de permis à quarante ans pour le casier : la durée d'une inscription dépend du registre, et ce qui l'efface n'est pas toujours le temps.
@@ -123,7 +123,7 @@ Les points retirés pour des contraventions des quatre premières classes sont a
 L.
 223-6).
 Ces règles ne valent que pour un permis encore valide : « lorsque le nombre de points est nul, le permis perd sa validité ».
-Pendant le délai probatoire d’un jeune conducteur, la règle des deux ans ne s’applique pas ; le permis y gagne des points à chaque année du délai, tant qu’aucune infraction n’a été commise depuis son début (art.
+Pendant le délai probatoire d’un jeune conducteur, la règle des deux ans ne s’applique pas ; le permis y gagne des points à chaque année du délai, tant qu’aucune infraction ayant donné lieu à un retrait de points n’a été commise depuis son début (art.
 L.
 223-1).
 Combien de temps dure un malus, et combien de temps faut-il pour un bonus ?
