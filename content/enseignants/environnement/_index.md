@@ -111,7 +111,7 @@ l'épreuve.
 Les enseignants qui souhaitent prendre connaissance de cet essai peuvent disposer d'un exemplaire numérique de
 consultation, dans la limite des exemplaires disponibles. Il est proposé sans contrepartie&nbsp;: aucune recension,
 aucune recommandation aux élèves ni aucun usage en classe n'est demandé, sous réserve des règles applicables dans
-votre établissement.
+votre établissement. Un compte Amazon.fr est nécessaire.
 {{< /exemplaire >}}
 
 <script src="/js/fiche-imprimer.js" defer></script>

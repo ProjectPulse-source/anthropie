@@ -177,7 +177,7 @@ Terminale (août 2020).
     surtitre="Pour les enseignants de SES" >}}
 Les enseignants de SES qui souhaitent prolonger ces activités peuvent disposer, dans la limite des exemplaires
 disponibles, d'un exemplaire numérique de consultation de *Dette publique&nbsp;: qui paie vraiment&nbsp;?* Il est
-proposé sans contrepartie et sous réserve des règles applicables dans votre établissement.
+proposé sans contrepartie et sous réserve des règles applicables dans votre établissement. Un compte Amazon.fr est nécessaire.
 {{< /exemplaire >}}
 
 <script src="/js/fiche-imprimer.js" defer></script>

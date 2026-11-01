@@ -62,6 +62,10 @@ Mesuré sur le build : 41 pages (28 `appel-livre`, 9 `consultation`, 4 enseignan
 débordement à 320, 390 et 1280 px (une ligne sur ordinateur, deux sur téléphone). Instantanés de relecture : ligne du
 bouton reportée. `check-all --ci` à 0. ⚠ Le libellé est statique : en rupture de stock, seule la mention voisine
 « dans la limite du stock » et le guichet le disent.
+Cohérence autour du bouton : l'encadré `consultation` ne dit plus deux fois « disponible » et porte « compte Amazon.fr
+requis », comme `appel-livre` et les quatre encadrés enseignants désormais ; sur `/ressources-offertes/`, « limitée,
+contrôlée et soumise à disponibilité » (rédaction de juillet, aucune décision ultérieure, contraire à la promesse du
+bouton) devient « Chaque exemplaire s'obtient en un clic, dans la limite du stock, à raison d'un par lecteur ».
 
 ### 2026-11-01 — Page « Combien de temps une erreur reste-t-elle inscrite ? » (complément de *Premier coup*)
 
