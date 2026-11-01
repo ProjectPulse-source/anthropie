@@ -1,4 +1,4 @@
-# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de d5f7658 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de d238b5a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 De six mois pour un point de permis à quarante ans pour le casier : la durée d'une inscription dépend du registre, et ce qui l'efface n'est pas toujours le temps.
@@ -226,6 +226,17 @@ Le 20 novembre 2026, une nouvelle rédaction précise qui déclare le paiement q
 Pour un plan de surendettement, l'inscription dure le temps du plan, sans pouvoir excéder sept ans, et cinq ans s'il est exécuté sans incident ; cinq ans après un rétablissement personnel (art.
 L.
 752-3).
+J'ai remboursé mon crédit : pourquoi suis-je encore fiché au FICP ?
+La radiation suit la déclaration du paiement intégral à la Banque de France, et cette déclaration revient à l'établissement qui a déclaré l'incident, non à la personne (Code de la consommation, art.
+L.
+752-1).
+Si le crédit a été cédé, la rédaction en vigueur le 20 novembre 2026 en charge l'entreprise qui a repris la créance, ou le gestionnaire de crédits ; un contrat en cours à cette date reste régi par les règles antérieures, sauf exceptions.
+La personne peut demander à la Banque de France ce que contient le fichier, puis, si l'établissement ne fait pas la déclaration, saisir le médiateur de sa banque et la CNIL (Service-public, fiche F17608).
+L'inscription ne dépasse pas cinq ans.
+Un employeur peut-il voir une condamnation inscrite au casier judiciaire ?
+Le bulletin n° 2 est délivré aux administrations et, par leur intermédiaire, à certains employeurs, notamment pour des activités auprès de mineurs ; il ne parvient à l'employeur que s'il ne porte aucune mention (Service-public, fiche F14710).
+Une condamnation en sort par la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, ou par l'exclusion que décide le tribunal, dans le jugement ou plus tard sur requête de la personne (Code de procédure pénale, art.
+775-1).
 Comment une condamnation disparaît-elle du casier judiciaire ?
 De trois façons.
 La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation, après trois ans pour une amende, cinq ans pour une peine d'emprisonnement d'un an au plus, dix ans jusqu'à dix ans d'emprisonnement, délais doublés en récidive (Code pénal, art.

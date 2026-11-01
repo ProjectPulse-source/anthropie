@@ -169,3 +169,7 @@ pas les durées entre eux.
   scripts, d'où le renvoi à sa fiche). Ancres `#tableau`, `#ficp`, `#casier`, `#permis` et faits cités par le lot
   EFFACEMENT-2026-11 inchangés. Panel et contre-expertise de la page : non faits (ajout de faits déjà vérifiés, aucune
   thèse nouvelle ; la contre-expertise du lot en est l'origine).
+- Découvrabilité (01/11/2026, soir) : deux questions de situation ajoutées à la FAQ (JSON-LD FAQPage, 6 questions) —
+  « J'ai remboursé mon crédit : pourquoi suis-je encore fiché au FICP ? », « Un employeur peut-il voir une condamnation
+  inscrite au casier judiciaire ? » ; `lastmod` 01/11 19 h ; ligne de la page ajoutée à `static/llms.txt` (Pages de
+  référence). Contrôles à 0, instantané refait.
