@@ -52,6 +52,49 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — « Comment l'écriture… » : contre-expertise de la page construite, corrections ; date « 1er » sur tout le site
+
+Contre-expertise PRO-20261101-010247 (arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261101-010247_arbitrage.md`,
+option B). La page promettait quatre correspondances « presque terme à terme » : le tableau compte désormais six lignes et
+trois colonnes (deux rapprochements directs, un partiel, un problème voisin, la traçabilité **à rebours** de 275b-c, la
+pluralité sans équivalent direct ; « ce qui change avec l'IA »). Travaux antérieurs vérifiés et cités (Loos et Radicke
+2024, *AI and Ethics* ; Calderón et Herrera 2025, *HSSC*). Plan réordonné (*Phèdre* → IA → vérification historique →
+grille et séance de classe) ; chapô sur le paradoxe de la réponse juste ; causalités scolaire et individuelle corrigées ;
+Parry, listes lexicales, Vaï. Ancres publiées conservées et **figées en dur** (14). `ressource.refonte: "2026-11-01"`.
+- **Défaut de gabarit, tout le site** : `:date_long` rendait « 1 novembre 2026 » (visible les seuls premiers du mois :
+  ligne « Page mise à jour le », révisions, listes d'AWP et de publications, accueil). Organe unique
+  `partials/date-affichee.html`, adopté par 17 appels dans 12 gabarits (dont la logique en ligne de `pouvoirs-president.html`, retirée).
+  Témoin : build avant/après, dates françaises — seuls changent « 1 février », « 1 mars » → « 1er » et la date de la page ;
+  dates anglaises inchangées. Aucun contrôle permanent ajouté (R2 : correction, pas dispositif).
+- **Contrôles** : `check-all --ci` 0 ; build 0 ; `audit-liens-build` 0 ; `check-rendu-ressources` 0 ; `check-dates-build`
+  0 ; recette 320-1600 FR et EN OK ; `check_langue.py` FR 4 et EN 20 signalements, faux positifs ; relecture phrase à
+  phrase FR et EN du texte servi (huit retouches FR, dix EN) ; instantanés refaits (167 et 163 phrases) ; `check-relecture` 0 (forme de la CI) ; `--strict` sort 2 pour dix autres pages, déjà signalées le 31/10, aucune n'est celle-ci.
+- **Non fait** : panel après (à la demande de l'auteur). `static/llms.txt` : sans changement (lien seul).
+
+### 2026-10-31 — Refonte de « Comment l'écriture a-t-elle transformé la pensée ? »
+
+Test d'apport du 30/10 échoué pour les professeurs de philosophie, puis contre-expertise PRO-20261031-170244 (arbitrage :
+`D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261031-170244_arbitrage.md`, « réécrire, pas corriger »). Fiche de
+conception `docs/conception/comment-lecriture-a-transforme-la-pensee.md` écrite avant le texte ; `ressource.refonte:
+"2026-10-31"`, FR et EN.
+- **Retiré** : les trois « régularités » (contredites par les premiers imprimés et l'origine du Web, ou non démontrées) ;
+  « logique formelle » et « l'esprit critique est un enfant de l'écrit » ; « les erreurs de copie cessent de
+  s'accumuler », « par milliers », « la science moderne devient possible », l'imprimé qui « crée » l'opinion publique ;
+  la pensée orale « sans possibilité de revenir en arrière ».
+- **Corrigé** : les deux objections du *Phèdre* (Thamous 275a, Socrate 275d-e ; la page publiée prêtait à Thamous le
+  silence de l'écrit) ; Parry avec Lord ; date de l'écriture alignée sur le livre ; antériorités d'Asie (*Sūtra du
+  Diamant* 868, *Jikji* 1377).
+- **Apport nouveau** : les quatre premiers des six critères de Du et Yuan (Cambridge, *AI & Society*, 2026, CC BY, lu ;
+  pièce `D:\PRO\06_PROMOTION\RECHERCHE_ECRITURE_PENSEE_2026-10-31\_PIECES_RECUES\`) lus avec le *Phèdre* — rapprochement
+  donné comme lecture de l'auteur, les auteurs ne citant pas Platon (texte relu) ; grille de cinq questions ; bloc
+  « Confrontation à la recherche » (Goody et Watt / Scribner et Cole / Street ; Eisenstein / Johns ; Derrida, Stiegler).
+- **Ancres** : les sept ancres publiées de chaque langue conservées (vérifiées dans le build).
+- **Contrôles** : `check-all --ci` 0 ; build 0 ; `audit-liens-build` 0 ; `check-rendu-ressources` 0 ;
+  `check-dates-build` 0 ; recette 320-1600 FR et EN OK ; `check_langue.py` FR 11 et EN 25 signalements, tous faux
+  positifs (grec *pharmakon*, cellules de tableau collées à l'extraction, orthographe britannique) ; relecture phrase à
+  phrase FR et EN (neuf défauts corrigés, dont une attribution fausse à Du et Yuan) ; instantanés `docs/relectures/`.
+- **Non fait** : panel après, contre-expertise de la page construite. `static/llms.txt` : sans changement (lien seul).
+
 ### 2026-10-31 — Générations futures : patrimoine lu chez Eurostat (dernier millésime), témoins à trois statuts, registre des contrôles
 
 Contre-expertise PRO-20261031-054411 (option C renforcée). La Banque de France révise chaque octobre les trois dernières

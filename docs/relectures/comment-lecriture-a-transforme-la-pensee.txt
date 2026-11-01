@@ -1,0 +1,168 @@
+# relu le 2026-11-01 ; texte servi de /comment-lecriture-a-transforme-la-pensee/, build de deab4fa + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Comment l'écriture a-t-elle transformé la pensée ?
+Un élève obtient d'une intelligence artificielle une réponse juste.
+Sait-il pour autant pourquoi elle est juste ?
+La question est plus ancienne que l'IA : c'est celle que le Phèdre de Platon pose à l'écriture.
+Confrontée à six critères qu'une revue de recherche propose en 2026 pour juger la dépendance à l'IA, elle montre deux continuités nettes, des déplacements et un renversement.
+Et l'histoire de l'écrit, des premières tablettes à l'imprimerie, montre qu'une technique ouvre des possibilités sans décider de ce que l'on apprend.
+Page mise à jour le 1er novembre 2026 · révisions
+Guides et éclairages
+Les deux objections du Phèdre
+Dans le Phèdre, Socrate raconte le mythe de Theuth, le dieu égyptien qui présente l’écriture au roi Thamous comme un remède pour la mémoire et le savoir.
+Le texte porte alors deux objections, que l’on confond souvent et qui ne disent pas la même chose.
+La première est celle de Thamous (275a) : l’écriture est un remède du rappel, non de la mémoire.
+Ceux qui s’y fieront chercheront le souvenir hors d’eux, dans des signes étrangers, et ils auront l’apparence du savoir plutôt que le savoir.
+L’objection porte sur l’élève : ce qu’il garde en lui quand l’écrit lui manque, et ce qu’il croit savoir parce qu’il peut le retrouver.
+La seconde est celle de Socrate (275d-e) : un écrit ressemble à une peinture, dont les figures ont l’air vivantes et gardent un silence solennel si on les questionne.
+Interrogé, il répète toujours la même chose.
+Une fois écrit, il roule partout, chez ceux qui le comprennent comme chez ceux qui n’en ont que faire, sans savoir à qui il doit parler ; maltraité, il a besoin de son père pour le défendre.
+L’objection porte sur le discours lui-même : il ne répond pas aux questions, ne choisit pas son lecteur et ne peut pas se défendre seul.
+Socrate lui oppose le discours écrit avec science dans l’âme de celui qui apprend, qui sait se défendre et sait à qui parler (276a).
+Platon ne condamne pas l’écrit pour autant.
+Socrate admet qu’on écrive pour se constituer des aide-mémoire, pour soi quand viendra la vieillesse oublieuse et pour ceux qui suivent la même voie (276d).
+Il décrit des propriétés de l’écrit — il est muet, il ne choisit pas son lecteur —, mais ce qu’il juge, c’est l’usage : l’écrit sert qui sait déjà, il trompe qui le prend pour le savoir.
+Jacques Derrida a donné de ce passage, en 1968, une lecture devenue classique (« La pharmacie de Platon », reprise dans La Dissémination, 1972) : le pharmakon que Theuth présente est à la fois remède et poison, et cette ambivalence n’est pas un bilan de gains et de pertes, elle est constitutive.
+Bernard Stiegler l’a étendue à toutes les techniques, sous le nom de pharmacologie.
+L’intelligence artificielle au crible du Phèdre
+L’écriture, l’imprimerie, l’écran et l’intelligence artificielle ne sont pas quatre objets d’une même espèce : un système de notation, un procédé de reproduction, une interface, un ensemble de techniques qui génèrent des formulations et des synthèses.
+On peut comparer leurs fonctions — inscrire, reproduire, faire circuler, chercher, générer — à condition de dire laquelle on compare.
+Ce que l’IA générative ajoute, c’est la production automatique, sur simple demande, de textes, de résumés et d’évaluations dont la provenance et les justifications ne sont pas toujours visibles.
+Produire une formulation n’est pas encore exercer un jugement ; la part de jugement que l’on garde dépend de ce qu’on fait de la réponse — la vérifier, l’adopter, déléguer sa validation —, mais aussi de l’interface, des règles d’évaluation et des institutions qui rendent chacun de ces gestes facile ou difficile.
+Deux chercheurs de l’université de Cambridge, Yiran Du et Yijia Yuan, ont publié en 2026 dans la revue AI & Society une revue de la recherche sur la dépendance épistémique à l’IA dans l’apprentissage.
+Ils posent que la question n’est pas de savoir si l’on s’appuie sur l’IA, mais si cet appui préserve ou déplace le travail par lequel le jugement se forme, et ils proposent six critères pour distinguer une dépendance utile d’une dépendance nuisible.
+Ils ne citent pas Platon.
+Lus avec le Phèdre, ces six critères ne se rangent pas tous de la même façon :
+Critère (Du et Yuan, 2026)
+Dans le Phèdre
+Ce qui change avec l’IA
+Contestabilité : pouvoir interroger, rejeter, réviser la réponse
+rapprochement direct : l’écrit interrogé garde le silence et répète la même chose (275d)
+l’IA répond, autant qu’on veut ; répondre à une objection n’est pas encore justifier sa réponse
+Recouvrabilité : reconstruire le raisonnement, pas seulement reproduire le produit
+rapprochement direct : l’apparence du savoir (275a), contre le discours inscrit dans l’âme de qui apprend (276a)
+un produit réussi peut s’obtenir sans que le raisonnement soit maîtrisé
+Transfert : la capacité persiste quand l’outil manque ou que la tâche change
+rapprochement partiel : un remède du rappel, non de la mémoire (275a) ; Thamous ne parle pas du problème nouveau
+on l’éprouve en retirant l’aide ou en changeant la tâche
+Responsabilité distribuée : chacun répond à proportion de ce qu’il contrôle
+problème voisin, non le même : l’écrit a besoin de son père pour le défendre (275e)
+l’élève répond d’un texte dont l’établissement impose l’outil et dont le fournisseur règle le fonctionnement
+Traçabilité : remonter aux sources, aux hypothèses et aux transformations d’une synthèse
+à rebours : Socrate reproche à Phèdre de demander qui parle et d’où il vient, au lieu de juger seulement si c’est vrai (275b-c)
+pour qui ne peut pas juger lui-même une réponse, sa provenance devient le principal moyen de la vérifier
+Pluralité épistémique : voir les désaccords et les perspectives, au lieu d’une réponse présentée comme neutre
+pas d’équivalent direct : la dialectique rassemble et divise (265d-266b), elle n’expose pas des désaccords
+une synthèse peut cacher derrière une seule voix des sources qui se contredisent
+Ce rapprochement est une lecture, pas une filiation.
+Le parallèle entre le Phèdre et l’IA générative n’est pas neuf : Eugène Loos et Jan Radicke ont confronté en 2024 les représentations de ChatGPT aux arguments du Phèdre contre l’écriture (AI and Ethics) ; María Reyes Calderón et Francisco Herrera partent en 2025 du mythe de Theuth pour juger l’usage des agents conversationnels dans l’écriture scientifique (Humanities and Social Sciences Communications).
+Ce que cette page ajoute est plus étroit : confronter le Phèdre, ligne à ligne, à un cadre de six critères qui ne lui doit rien, pour voir où il converge et où il s’en écarte.
+Les deux textes ont en commun de ne pas condamner l’outil en soi : le Phèdre admet l’aide-mémoire de qui sait déjà, et la revue de 2026 écrit que s’appuyer sur un outil n’est pas le problème en tant que tel.
+Ils ne regardent pas la même chose pour autant : Platon décrit des propriétés de l’écrit, Du et Yuan des configurations — interfaces, évaluations, institutions —, sans supposer que l’IA soit seule à causer les effets qu’ils décrivent, ni qu’elle les cause partout de la même façon.
+Les deux dernières lignes du tableau ne disent pas que l’IA invente le problème des sources ou des désaccords : compilations, florilèges et encyclopédies le posaient bien avant elle.
+Du et Yuan notent eux-mêmes que la recherche en ligne n’était ni transparente ni neutre ; mais elle exposait plusieurs documents et plusieurs auteurs, quand une synthèse conversationnelle peut réunir des affirmations de provenances différentes dans une réponse unique, sans montrer les choix, les exclusions et les incertitudes qui la composent.
+Ils en tirent une conséquence que les enseignants reconnaîtront : le produit peut gagner en qualité apparente pendant que la vérification s’affaiblit, et le défaut devient plus difficile à voir.
+Les auteurs précisent que leurs critères ne sont pas une échelle de mesure et appellent une validation empirique.
+Avant l’écriture : penser avec la voix
+Le Phèdre pose la question ; l’histoire de l’écrit permet de l’éprouver.
+Si une technique transformait la pensée d’elle-même, on devrait le voir là où elle apparaît.
+Pendant l’essentiel de son histoire, l’humanité a pensé sans écrire.
+Une culture orale n’est pas une culture sans savoir : c’est une culture où le savoir doit tenir dans des mémoires vivantes, d’où le rythme, la formule, le vers, la répétition.
+Milman Parry établit dans sa thèse parisienne de 1928 le caractère traditionnel des formules homériques ; ses enquêtes en Yougoslavie dans les années 1930, prolongées par Albert Lord (The Singer of Tales, 1960), montrent que le chanteur ne récite pas un texte fixé : il compose son épopée au cours de la performance.
+Sans inscription, la reprise exacte d’un énoncé dépend des mémoires et des conventions de transmission ; la parole n’en est pas moins discutée et critiquée, et le Phèdre défend précisément la parole vivante parce qu’elle peut répondre.
+Ce que l’écriture rend possible
+Les premières tablettes proto-cunéiformes de Mésopotamie méridionale remontent à la fin du IVᵉ millénaire avant notre ère, il y a un peu plus de 5 000 ans.
+Ce sont très majoritairement des comptes : grain, bétail, rations, travail.
+D’autres portent des listes lexicales, qui servaient notamment à standardiser l’écriture administrative et à transmettre le savoir des scribes.
+La liste, justement, est au cœur de la thèse de l’anthropologue britannique Jack Goody (La Raison graphique, 1979 pour la traduction française) : l’écriture ne se contente pas d’enregistrer des pensées déjà formées.
+En fixant les énoncés et en permettant de les réorganiser sous les yeux, elle donne une portée nouvelle aux opérations de classement et de comparaison — la liste, le tableau, la comparaison terme à terme.
+Walter Ong l’a ramassé dans le titre d’un chapitre d’Orality and Literacy (1982) : l’écriture restructure la conscience.
+Possible ne veut pas dire acquis.
+Les psychologues américains Sylvia Scribner et Michael Cole ont étudié dans les années 1970 les Vaï du Liberia, dont une partie apprend une écriture propre hors de toute école.
+Les compétences qu’ils observent sont liées aux pratiques effectives de lecture et d’écriture — tenir des comptes, écrire des lettres —, et leurs résultats ne confirment pas qu’une alphabétisation sans école développe, par elle-même, des capacités générales de raisonnement logique (The Psychology of Literacy, 1981).
+L’écriture offre des possibilités ; leur appropriation dépend des pratiques d’apprentissage, de la formation et des contextes.
+L’imprimerie : la pensée change d’échelle
+L’imprimerie n’est pas née en Europe.
+Le Sūtra du Diamant, texte bouddhique imprimé en Chine à partir de planches gravées, est daté de 868 : c’est le plus ancien livre imprimé daté qui nous soit parvenu complet (British Library).
+En Corée, le Jikji, imprimé en 1377 avec des caractères métalliques mobiles, précède de près de quatre-vingts ans la Bible de Gutenberg.
+À Mayence, au milieu des années 1450, Gutenberg assemble un dispositif complet — alliage, moule à main, encre grasse, presse — et la Bible à quarante-deux lignes sort à environ cent quatre-vingts exemplaires.
+L’imprimerie multiplie les exemplaires d’un même texte et en accroît la stabilité relative : les éditions se comparent, des savants de villes différentes discutent du même texte.
+L’historienne américaine Elizabeth Eisenstein en a fait un agent du changement de l’Europe moderne (The Printing Press as an Agent of Change, 1979) ; l’historien Adrian Johns lui a objecté que cette stabilité ne venait pas de la presse seule : les premières éditions étaient fautives, contrefaites, contestées, et la confiance dans l’imprimé fut une construction lente des ateliers, du commerce et des institutions (The Nature of the Book, 1998).
+Le même écart sépare la presse de ses effets les plus souvent cités.
+Elle a favorisé la circulation et la confrontation des résultats scientifiques, sans être à elle seule la condition de la science moderne : mathématiques, astronomie et observation existaient avant elle.
+La Réforme donne, dès les années 1520, un exemple massif de diffusion ; mais un texte diffusé ne fait pas à lui seul une opinion publique, et l’histoire de l’espace public, depuis Jürgen Habermas (1962), en situe la formation aux XVIIᵉ et XVIIIᵉ siècles, avec ses publics, ses institutions et ses lieux de discussion.
+Les premiers usages ne prédisent pas les suivants
+On lit volontiers dans les débuts d’une technique le destin de ses usages.
+Les faits ne s’y prêtent pas.
+L’écriture conservée commence par des comptes.
+Les premiers imprimés de Mayence sont à la fois une Bible, des lettres d’indulgence (1454-1455), des grammaires latines et un calendrier ; le plus ancien livre imprimé daté qui nous soit parvenu complet est un texte bouddhique.
+Le Web, lui, est proposé au CERN en 1989 par Tim Berners-Lee pour que des physiciens partagent leurs documents.
+On ne peut donc pas déduire des premiers usages d’une technique ceux qui prévaudront ensuite.
+Une grille pour juger une technique
+La confrontation des deux textes permet de formuler cinq questions pour examiner une technique de l’écrit — un manuel, un moteur de recherche, un assistant conversationnel —, en tenant compte de sa fonction propre :
+Mémoire : que garde-t-on en soi quand on délègue la conservation ?
+Compréhension : savoir retrouver une réponse, est-ce savoir la reconstruire et la défendre ?
+Dialectique : peut-on contester ce que l’outil répond, et sa réponse à l’objection justifie-t-elle quelque chose ?
+Autorité : qui décide qu’une réponse mérite d’être tenue pour vraie, et sur quelles sources ?
+Pouvoir : qui contrôle l’inscription, la sélection, la diffusion et la correction, et qui répond des erreurs ?
+La grille ne dit pas qu’un outil est bon ou mauvais : elle demande quelles opérations doivent rester maîtrisées pour que l’aide reste une aide.
+D’où la conclusion de cette page : une technique change la manière de penser moins par l’opération qu’elle accomplit à notre place que par les conditions dans lesquelles elle nous fait apprendre, exercer, vérifier et transmettre cette opération.
+Une séance pour l’éprouver, proposée aux professeurs qui voudraient la mener en classe : avoir une réponse, est-ce savoir répondre ?
+Distribuer une réponse rédigée avec une IA à une question de philosophie, avec les sources qu’elle donne.
+Faire identifier la thèse, reconstruire les arguments et vérifier une référence décisive.
+Sans aide, faire répondre à une objection, ou à une question voisine.
+Comparer la qualité de la réponse de départ et ce que chacun sait en justifier.
+La séance ne mesure aucun effet de l’IA ; elle fait éprouver la différence que Platon, comme Du et Yuan, place au centre, entre disposer d’une réponse et en maîtriser les raisons.
+Confrontation à la recherche
+Les recherches ne contestent guère que les techniques de l’écrit changent ce qu’on peut inscrire, faire circuler et traiter.
+Elles divergent sur la portée cognitive de ces changements et sur la part qui revient à la technique elle-même.
+Ce que l’écriture rend possible.
+Jack Goody et Ian Watt (« The Consequences of Literacy », 1963), puis Goody seul (The Domestication of the Savage Mind, 1977), lient l’écrit à des formes de pensée ; Scribner et Cole (1981) limitent la thèse par le cas d’une écriture sans école, et Brian Street (Literacy in Theory and Practice, 1984) critique le « modèle autonome » qui prête des effets à l’écriture indépendamment de ses usages.
+Les résultats sur les Vaï affaiblissent la version forte d’une transformation générale de l’esprit ; ils n’invalident pas l’idée que certaines formes écrites favorisent des opérations précises.
+Ce que l’imprimerie stabilise.
+Eisenstein (1979) contre Johns (1998), confrontés dans l’American Historical Review (vol.
+107, n° 1, 2002) : la reproduction mécanique, ou les pratiques qui ont fait de l’imprimé une source fiable.
+Ni l’un ni l’autre ne nie la transformation matérielle ; ils divergent sur ce qui la rend efficace.
+Ce que l’externalisation fait gagner ou perdre.
+La lecture du pharmakon par Derrida (1968) et la pharmacologie de Stiegler (Ce qui fait que la vie vaut la peine d’être vécue, 2010) pensent l’ambivalence d’une technique ; elles ne mesurent pas ses effets.
+Loos et Radicke (2024), puis Calderón et Herrera (2025), ont rapproché le Phèdre de l’IA générative.
+Du et Yuan (2026) proposent, eux, des critères pour l’apprentissage, qui restent à éprouver.
+Ce que cette page ne dit pas
+Aucune mesure des effets cognitifs de l’écriture, de l’imprimé ou de l’IA n’est produite ici : la page confronte des thèses et des textes.
+La confrontation du Phèdre aux critères de 2026 est une lecture de l’auteur de cette page.
+Elle ne prétend pas que Platon a anticipé l’IA ; d’autres travaux ont rapproché avant elle le Phèdre de l’IA.
+Le Phèdre est lu ici en traduction et paraphrasé.
+L’histoire de l’imprimerie reste ici européenne, à l’exception des antériorités d’Asie nommées.
+Une hypothèse de l’auteur
+Une hypothèse de l’auteur, non testée ici : quand l’externalisation cognitive sature, la charge revient vers l’attention et le jugement.
+Elle est développée sous le nom de boucle anthropique ; la grille ci-dessus ne la suppose pas.
+La traversée complète
+Le livre L’Odyssée des idées (nouvelle édition 2026, 682 pages) raconte en escales ce que cette page examine : l’écriture (−3 500), Socrate, « le philosophe sans livre », Gutenberg.
+Ses 250 escales sont reliées par sept fils de lecture présentés en cartes, dont celui des signes.
+L’escale de Socrate se clôt ainsi :
+Aucune réponse définitive.
+Aucune doctrine close.
+Rien qu’une manière de ne pas laisser les mots dormir en paix. […] vingt-quatre siècles plus tard, il ne nous apprend pas quoi penser.
+Il nous empêche de croire trop vite que nous pensons.
+Pour aller plus loin
+L’Odyssée des idées — la fiche du livre (250 escales, sept fils, extrait).
+Quel livre de culture générale offrir ? — si la traversée est pour quelqu’un d’autre.
+Qu’est-ce que la boucle anthropique ? — l’hypothèse de l’auteur sur l’externalisation cognitive.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire de consultation
+Un exemplaire numérique de consultation de L'Odyssée des idées est disponible, dans la limite du stock.
+Il est proposé sans contrepartie : aucune recension ni aucune citation n'est demandée.
+Demander un exemplaire →
+Révisions
+1er novembre 2026 — Page refondue après deux contre-expertises.
+Retirés : les trois « régularités » de la version du 25/07 (contredites par les premiers imprimés et par l'origine du Web, ou non démontrées), l'idée que l'écriture aurait donné la logique formelle et l'esprit critique, celle que l'imprimerie aurait fait cesser les erreurs de copie et rendu la science possible.
+Corrigé : l'attribution des deux objections du Phèdre (Thamous en 275a, Socrate en 275d).
+Ajouté : la confrontation du Phèdre aux critères de 2026 pour juger la dépendance à l'IA, et les travaux antérieurs qui rapprochent le Phèdre de l'IA.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien
