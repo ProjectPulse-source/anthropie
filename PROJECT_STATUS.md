@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — Page « Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ? »
+
+Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 3). FR `/citations-celebres-verifiees/` (pas d'EN :
+livre en français seul, exclusion déclarée), bloc `guides`, forme `corpus`, livre *Livresque des mots*. Vingt citations
+relues au texte le 01/11/2026 (Wikisource, Internet Archive, Project Gutenberg), grille uniforme (statut, texte, source,
+écart), trois statuts : 14 établies, 3 variantes documentées, 3 non établies dans les sources consultées (Voltaire / Hall
+1906, Wilde / « Be yourself », Hugo / « ouvrez une école »). Synthèse : l'auteur citait déjà, la phrase va au nom
+vraisemblable, la forme se simplifie ; décomptes de l'audit du recueil pour les cinq auteurs.
+- **Vérifications** : Hall 1906 (Gutenberg 56618) ; *Le Sottisier* 1880 p. 99 et Garnier 1883 p. 218, tous deux
+  « ressemblent aux girouettes » (Wikiquote cite 1883 sous la forme « sont comme ») ; Cyrano, *Le Pédant joué*, 1654.
+  Trois circulations supposées (Guitry, Condorcet, Voltaire pour « Dieu n'a pas de main ») sans source indépendante :
+  requalifiées en attributions d'une version antérieure du recueil.
+- **Contrôles** : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 74/74 ; recette 320-1600 OK ; instantané de
+  relecture (248 phrases), `refonte` posé. `static/llms.txt` : sans changement.
+- **Ouvert** : contre-expertise de la page ; accord de l'auteur et push.
+
 ### 2026-11-01 — Registre des coûts déportés : double lecture vers *L'Odyssée des idées* (68 jalons)
 
 Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 2). Champ `odyssee` dans
