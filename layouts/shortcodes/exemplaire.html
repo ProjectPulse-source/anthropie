@@ -26,6 +26,6 @@
       <h3 id="{{ .Get "id" | default "exemplaire" }}">{{ .Get "titre" | default "Exemplaire de consultation" }}</h3>
     </div>
     {{ .Inner | .Page.RenderString (dict "display" "block") }}
-    <p class="exemplaire__action"><a class="btn btn--primary" href="{{ $lien }}">{{ .Get "bouton" | default "Demander un exemplaire" }}&nbsp;→</a></p>
+    <p class="exemplaire__action"><a class="btn btn--primary" href="{{ $lien }}">{{ .Get "bouton" | default (partial "exemplaire-libelle.html" . | strings.TrimSpace) }}&nbsp;→</a></p>
   </div>
 </aside>

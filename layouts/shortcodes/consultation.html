@@ -29,6 +29,6 @@
       <h3 id="exemplaire">Exemplaire de consultation</h3>
     </div>
     <p>Un exemplaire numérique de consultation de <em>{{ partial "fr-typo.html" $livre.Title }}</em> est disponible, dans la limite du stock. Il est proposé sans contrepartie&nbsp;: aucune recension ni aucune citation n'est demandée.</p>
-    <p class="exemplaire__action"><a class="btn btn--primary" href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">Demander un exemplaire&nbsp;→</a></p>
+    <p class="exemplaire__action"><a class="btn btn--primary" href="{{ $guichet.RelPermalink }}?src=consultation-{{ $origine }}">{{ partial "exemplaire-libelle.html" . | strings.TrimSpace }}&nbsp;→</a></p>
   </div>
 </aside>

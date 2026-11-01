@@ -52,6 +52,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — Libellé du bouton vers les exemplaires offerts
+
+Demande de l'auteur : « Demander l'exemplaire offert » et « Demander un exemplaire » laissaient croire à une procédure.
+Libellé retenu : « Votre exemplaire, disponible immédiatement » (« Téléchargez » écarté : le clic mène au guichet puis à
+Amazon.fr, aucun fichier n'est téléchargé depuis ce bouton). Le texte vit dans un seul organe,
+`partials/exemplaire-libelle.html`, lu par `appel-livre` (deux formes), `consultation` et le défaut d'`exemplaire`.
+Mesuré sur le build : 41 pages (28 `appel-livre`, 9 `consultation`, 4 enseignants), 0 occurrence de l'ancien libellé, aucun
+débordement à 320, 390 et 1280 px (une ligne sur ordinateur, deux sur téléphone). Instantanés de relecture : ligne du
+bouton reportée. `check-all --ci` à 0. ⚠ Le libellé est statique : en rupture de stock, seule la mention voisine
+« dans la limite du stock » et le guichet le disent.
+
 ### 2026-11-01 — Page « Combien de temps une erreur reste-t-elle inscrite ? » (complément de *Premier coup*)
 
 Matrice sujet → livre, vague 1 (`06_PROMOTION/PLAN_SUJETS_LIVRES_2026-11/MATRICE_SUJET_LIVRE.md`). FR
