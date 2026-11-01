@@ -57,3 +57,14 @@ Chaque entrée correspond à un run mensuel (1er du mois) ou manuel.
 |---|---|---|
 | https://stephane-lalut.com/en/sitemap.xml | OK | — |
 | https://stephane-lalut.com/fr/sitemap.xml | OK | — |
+
+## Run du 2026-11-01 12:56:33 UTC
+
+- Total URLs : 2
+- Succès : 2
+- Échecs : 0
+
+| URL | Status | Snapshot |
+|---|---|---|
+| https://stephane-lalut.com/en/sitemap.xml | OK | — |
+| https://stephane-lalut.com/fr/sitemap.xml | OK | — |
