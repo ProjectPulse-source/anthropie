@@ -191,6 +191,11 @@ refonte. Relevés : J+30 et J+60. Une reprise est un résultat à observer, jama
   instantanés refaits le 01/11 (167 et 163 phrases), `check-relecture` 0 (forme de la CI ; `--strict` sort 2 pour dix autres pages). Défaut de gabarit trouvé à la
   relecture : « 1 novembre » pour « 1er novembre », corrigé sur tout le site (`partials/date-affichee.html`).
 - Accord de l'auteur : donné le 01/11/2026 (« commite et pousse »).
+- Push et attestation de la version servie : faits le 01/11 — commits `d9eab9d` et `e4ea114`, déploiement 41257479382
+  (build, relecture, deploy : success) ; en ligne, FR « Page mise à jour le 1er novembre 2026 », EN « 1 November 2026 »,
+  tableau et travaux antérieurs présents ; `/serie-awp/` affiche « 1er février 2026 ».
+- Fiche D0 : inscrite le 01/11 dans `D:\PRO_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` (réexamen au plus tard le
+  31/12/2026, et avant toute campagne vers APPEP, ACIREPh, APPLS).
 
 ## Gate éditorial (01/11/2026, jugement de la session, après la seconde contre-expertise)
 
