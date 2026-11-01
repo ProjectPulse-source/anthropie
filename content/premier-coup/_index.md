@@ -261,6 +261,7 @@ Plus de **2,14&nbsp;millions** de personnes inscrites au fichier national des in
 
 - **Millésime**&nbsp;: fin 2024 · **Source**&nbsp;: Banque de France
 - **Durées d'inscription**&nbsp;: 5&nbsp;ans pour un incident, jusqu'à 7&nbsp;ans pour un plan de surendettement · **Texte**&nbsp;: arrêté du 26 octobre 2010, art.&nbsp;6
+- **Texte par texte, et qui intervient**&nbsp;: [combien de temps reste-t-on fiché, et qui déclare le paiement](/combien-de-temps-une-erreur-reste-inscrite/#ficp)
 - **Qualification**&nbsp;: donnée administrative + règle de droit
 - **Dans le livre**&nbsp;: chapitre&nbsp;5
 
@@ -269,6 +270,7 @@ Plus de **2,14&nbsp;millions** de personnes inscrites au fichier national des in
 **543&nbsp;900 condamnations** inscrites en une année. Le bulletin n°&nbsp;2 est consultable par les administrations et les employeurs habilités&nbsp;; la réhabilitation intervient au bout de 3, 5 ou 10&nbsp;ans selon la peine — délais doublés en récidive.
 
 - **Millésime**&nbsp;: 2023 · **Texte**&nbsp;: art.&nbsp;775-1 du Code de procédure pénale (exclusion de la mention au B2)
+- **Texte par texte, et qui intervient**&nbsp;: [comment une condamnation sort du casier](/combien-de-temps-une-erreur-reste-inscrite/#casier)
 - **Qualification**&nbsp;: donnée administrative + règle de droit
 - **Dans le livre**&nbsp;: chapitre&nbsp;5
 

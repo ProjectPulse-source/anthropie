@@ -129,4 +129,4 @@ Suivent une note méthodologique et l'appareil de notes et sources.
 
 ## Pour prolonger
 
-Le livre annonce une adresse permanente. Le [compagnon documentaire](/premier-coup/) réunit le *Répertoire des leviers et des pistes*, les repères chiffrés avec leurs sources primaires et leur qualification probatoire, ainsi que les versions, mises à jour et errata.
+Le livre annonce une adresse permanente. Le [compagnon documentaire](/premier-coup/) réunit le *Répertoire des leviers et des pistes*, les repères chiffrés avec leurs sources primaires et leur qualification probatoire, ainsi que les versions, mises à jour et errata. La page [Combien de temps une erreur reste-t-elle inscrite&nbsp;?](/combien-de-temps-une-erreur-reste-inscrite/) prolonge les chapitres 5 et 8&nbsp;: pour chaque registre, le délai, ce qui l'efface et qui intervient, texte par texte.
