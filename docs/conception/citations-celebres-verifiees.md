@@ -41,7 +41,7 @@ Une citation célèbre est soit vraie, soit fausse. Ou bien : les fausses citati
 ### Découverte principale
 
 Trois cas différents, qui ne se ramènent pas à vrai ou faux. (1) La plupart des formules vérifiées se lisent bien dans
-l'œuvre (14 sur 20). (2) Certaines y sont, mais retouchées par la circulation (3 sur 20), et la retouche va presque
+l'œuvre (15 sur 20). (2) Certaines y sont, mais retouchées par la circulation (2 sur 20), et la retouche va presque
 toujours vers une phrase plus simple. (3) Les trois qui ne s'y trouvent pas ont une origine qu'on peut dater : un
 résumé d'attitude écrit en 1906 (Voltaire), une phrase anonyme apparue en 1999 (Wilde), et pour Hugo une formule plus
 nette que le vers dont elle semble tirée. Il y a aussi un motif qu'on n'attendait pas : les auteurs citaient eux-mêmes.
@@ -139,7 +139,7 @@ circule, en citant une édition qui imprime l'autre. La page Hugo ne contient ni
 - Panel avant / après : non fait (motif : page `corpus` sans démonstration ni architecture narrative à départager ; la
   contre-expertise de la page en tient lieu).
 - Contre-expertise de phase A : faite pour le programme (arbitrage `PRO-20261101-060949`), pas pour la page.
-- Gardes vues mordre : sans objet (aucun chiffre calculé ; les décomptes 14 / 3 / 3 sont ceux des vingt entrées).
+- Gardes vues mordre : sans objet (aucun chiffre calculé ; les décomptes 15 / 2 / 3 sont ceux des vingt entrées).
 - Figures téléphone : sans objet (pas de figure).
 - Relecture de langue : faite le 01/11/2026 (`check_langue.py` sur le texte servi : 11 signalements, tous dans des
   citations d'époque ou en anglais — « alloit », « aller faire », « saurais », « substantive evidence » — aucun retenu).
@@ -158,5 +158,8 @@ circule, en citant une édition qui imprime l'autre. La page Hugo ne contient ni
 - Contrôles : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 74/74 ; rendu conforme ; page présente dans
   `fr/sitemap.xml`, l'index `/ressources/` et la fiche de *Livresque des mots*. `static/llms.txt` : sans changement (il
   ne liste pas les pages de guides).
-- Contre-expertise de la page : non faite au moment du commit (paquet à préparer).
+- Contre-expertise de la page : faite le 01/11/2026 (`PRO-20261101-074048`, réponse archivée SHA-256 69F22418…).
+  Arbitrage `ARBITRATIONS/PRO-20261101-074048_arbitrage.md` : option B ; P0.1 (vers de Hugo établi, décomptes 15 / 2 / 3),
+  P1.1 à P1.7 acceptés, dont la lettre de Hall de 1939, lue dans *Modern Language Notes*, 1943. Régnier NON VÉRIFIÉ,
+  remplacé par Quitard (1842). 25 retouches, contrôles relancés à 0, instantané refait.
 - Accord de l'auteur : demandé avec le diff.

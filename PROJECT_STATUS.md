@@ -57,7 +57,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 3). FR `/citations-celebres-verifiees/` (pas d'EN :
 livre en français seul, exclusion déclarée), bloc `guides`, forme `corpus`, livre *Livresque des mots*. Vingt citations
 relues au texte le 01/11/2026 (Wikisource, Internet Archive, Project Gutenberg), grille uniforme (statut, texte, source,
-écart), trois statuts : 14 établies, 3 variantes documentées, 3 non établies dans les sources consultées (Voltaire / Hall
+écart), trois statuts : 15 établies, 2 variantes documentées, 3 non établies dans les sources consultées (Voltaire / Hall
 1906, Wilde / « Be yourself », Hugo / « ouvrez une école »). Synthèse : l'auteur citait déjà, la phrase va au nom
 vraisemblable, la forme se simplifie ; décomptes de l'audit du recueil pour les cinq auteurs.
 - **Vérifications** : Hall 1906 (Gutenberg 56618) ; *Le Sottisier* 1880 p. 99 et Garnier 1883 p. 218, tous deux
@@ -66,7 +66,10 @@ vraisemblable, la forme se simplifie ; décomptes de l'audit du recueil pour les
   requalifiées en attributions d'une version antérieure du recueil.
 - **Contrôles** : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 74/74 ; recette 320-1600 OK ; instantané de
   relecture (248 phrases), `refonte` posé. `static/llms.txt` : sans changement.
-- **Ouvert** : contre-expertise de la page ; accord de l'auteur et push.
+- **Contre-expertise** `PRO-20261101-074048` : option B ; corrections P0-P1 appliquées (vers de Hugo établi ; lettre de Hall
+  du 9 mai 1939 lue dans *Modern Language Notes*, 1943 ; second témoin des girouettes ; antériorités de « manger pour vivre »
+  et « Aide-toi » ; portée des décomptes) ; Régnier non vérifié, écarté.
+- **Ouvert** : accord de l'auteur et push.
 
 ### 2026-11-01 — Registre des coûts déportés : double lecture vers *L'Odyssée des idées* (68 jalons)
 

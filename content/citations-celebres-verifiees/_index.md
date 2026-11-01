@@ -1,7 +1,7 @@
 ---
 title: "Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ?"
-description: "Vingt citations parmi les plus répétées de Victor Hugo, Voltaire, Molière, La Fontaine et Oscar Wilde, relues dans leurs œuvres : le texte exact, l'édition, le passage. Quatorze sont établies, trois circulent retouchées, trois n'ont pas été trouvées chez l'auteur qu'on leur prête."
-chapo: "Sur vingt de leurs citations les plus répétées, quatorze se lisent telles quelles dans leurs œuvres, trois y sont retouchées et trois n'y ont pas été trouvées. Voltaire n'a pas écrit « je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » : la phrase est d'une biographe anglaise, en 1906. Et souvent, l'auteur citait déjà quelqu'un d'autre."
+description: "Vingt citations célèbres prêtées à Victor Hugo, Voltaire, Molière, La Fontaine et Oscar Wilde, relues dans leurs œuvres : le texte exact, l'édition, le passage. Quinze sont établies, deux circulent retouchées, trois n'ont pas été trouvées chez l'auteur qu'on leur prête."
+chapo: "Sur vingt citations célèbres qu'on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n'y ont pas été trouvées. Voltaire n'a pas écrit « je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » : la phrase est d'une biographe anglaise, qui l'a reconnue pour sienne en 1939. Et souvent, l'auteur citait déjà quelqu'un d'autre."
 date: 2026-11-01T06:00:00+01:00  # heure de Paris : une date nue se lit minuit UTC
 lastmod: 2026-11-01T06:00:00+01:00
 og_title: "Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ? — S. Lalut"
@@ -12,9 +12,9 @@ stats_isbn: "978-2-9586347-0-4"  # chiffres du corpus de Livresque des mots (sho
 lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 faq:
   - question: "Voltaire a-t-il dit « Je ne suis pas d'accord avec ce que vous dites, mais je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » ?"
-    answer: "La phrase n'a pas été trouvée dans les textes de Voltaire. Elle paraît d'abord en anglais, en 1906, dans The Friends of Voltaire d'Evelyn Beatrice Hall, qui signe S. G. Tallentyre : « I disapprove of what you say, but I will defend to the death your right to say it », suivi de « was his attitude now » (telle était désormais son attitude). Hall y résume la réaction de Voltaire à la condamnation du livre d'Helvétius, De l'esprit ; ses guillemets ont été pris pour ceux d'une citation."
+    answer: "La phrase n'a pas été trouvée dans les textes de Voltaire. Elle paraît d'abord en anglais, en 1906, dans The Friends of Voltaire d'Evelyn Beatrice Hall, qui signe S. G. Tallentyre : « I disapprove of what you say, but I will defend to the death your right to say it », suivi de « was his attitude now » (telle était désormais son attitude). Hall y résume la réaction de Voltaire à la condamnation du livre d'Helvétius, De l'esprit. Dans une lettre du 9 mai 1939, publiée en 1943 dans Modern Language Notes, elle écrit que la phrase est sa propre expression et n'aurait pas dû être mise entre guillemets."
   - question: "Oscar Wilde a-t-il dit « Soyez vous-même, les autres sont déjà pris » ?"
-    answer: "Aucun texte de Wilde ne la contient dans les sources consultées. Selon l'enquête du site Quote Investigator (2014), la première occurrence exacte connue de « Be yourself; everyone else is already taken » date de décembre 1999, sur un forum Usenet, entre guillemets et sans auteur. Wilde est mort en 1900. Livresque des mots l'imprime sous « Anonyme »."
+    answer: "Aucun texte de Wilde ne la contient dans les sources consultées. Selon l'enquête du site Quote Investigator (2014), la plus ancienne attestation exacte retrouvée de « Be yourself; everyone else is already taken » date de décembre 1999, sur un forum Usenet, déjà entre guillemets et sans auteur ; son origine reste inconnue. Wilde est mort en 1900. Livresque des mots l'imprime sous « Anonyme »."
   - question: "D'où vient « Que diable allait-il faire dans cette galère ? »"
     answer: "Des Fourberies de Scapin de Molière (1671), acte II : Géronte, à qui Scapin réclame cinq cents écus pour racheter son fils prisonnier d'une galère turque, répète la question à plusieurs reprises. Molière reprend la scène de Cyrano de Bergerac, Le Pédant joué (1654), acte II, où Granger s'écrie : « Que Diable aller faire aussi dans la Galère d'un Turc ? »"
   - question: "Victor Hugo a-t-il écrit « Ouvrez une école, vous fermerez une prison » ?"
@@ -32,15 +32,17 @@ onglet:  # barre du bloc (partials/barre-bloc.html, posée par le gabarit)
   court: "Citations"
 ---
 
-Une citation célèbre se répète d'ordinaire sans son livre, sans sa page et souvent sans sa forme exacte. Cette page reprend vingt des phrases les plus répétées de cinq auteurs et les relit dans leurs œuvres, dans une édition qu'elle nomme, au passage qu'elle indique. Elle s'appuie sur la vérification des {{< stat "citations" "nbsp" >}} citations de [*Livresque des mots*](/livres/livresque-des-mots/), dont l'[édition 2026 a réexaminé le texte et la paternité](/livresque/methode-et-corpus/) une à une.
+Une citation célèbre se répète d'ordinaire sans son livre, sans sa page et souvent sans sa forme exacte. Cette page examine vingt citations célèbres prêtées à cinq auteurs, choisies pour ce qu'elles montrent de la façon dont un texte se transmet, se transforme ou change d'auteur, et les relit dans leurs œuvres, dans une édition qu'elle nomme, au passage qu'elle indique. Elle s'appuie sur la vérification des {{< stat "citations" "nbsp" >}} citations de [*Livresque des mots*](/livres/livresque-des-mots/), dont l'[édition 2026 a réexaminé le texte et la paternité](/livresque/methode-et-corpus/) une à une.
 
 ## Comment lire cette page {#comment-lire}
 
 Chaque citation reçoit l'un de trois statuts&nbsp;:
 
-- **établie** — la phrase se lit dans l'œuvre de l'auteur, sous cette forme ou à une ponctuation près&nbsp;;
+- **établie** — la phrase se lit dans l'œuvre de l'auteur, sous cette forme, à la ponctuation ou à la graphie près (le texte cité garde celle de l'édition consultée, «&nbsp;alloit&nbsp;» chez Molière)&nbsp;;
 - **variante documentée** — l'auteur a écrit une phrase voisine, et l'écart entre son texte et la forme qui circule est établi&nbsp;;
 - **non établie dans les sources consultées** — la phrase n'a pas été trouvée chez l'auteur, dans les textes cherchés. Ce statut ne dit pas qu'elle est fausse&nbsp;: il dit ce qui a été cherché, et où.
+
+Retrouver une phrase chez un auteur, la lui attribuer et en connaître l'origine sont trois opérations distinctes. Une citation établie dans une œuvre n'y fait pas toujours sa première apparition&nbsp;: plusieurs de ces auteurs citaient eux-mêmes.
 
 Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que l'auteur l'a écrit, la **source** (œuvre, date, passage, édition consultée et lien vers le texte), et **ce que l'écart change**. Les textes ont été relus le 1<sup>er</sup>&nbsp;novembre 2026. Les traductions de Wilde sont celles de cette page&nbsp;; l'anglais d'origine est donné à côté.
 
@@ -48,7 +50,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 
 ### «&nbsp;S'il n'en reste qu'un, je serai celui-là&nbsp;» {#hugo-s-il-n-en-reste-qu-un}
 
-- **Statut**&nbsp;: variante documentée.
+- **Statut**&nbsp;: établie (le vers cité)&nbsp;; le premier vers de la même strophe circule retouché.
 - **Le texte**&nbsp;: «&nbsp;Si l'on n'est plus que mille, eh bien, j'en suis&nbsp;! Si même / Ils ne sont plus que cent, je brave encor Sylla&nbsp;; / S'il en demeure dix, je serai le dixième&nbsp;; / Et s'il n'en reste qu'un, je serai celui-là&nbsp;!&nbsp;»
 - **Source**&nbsp;: *Les Châtiments* (1853), «&nbsp;Ultima verba&nbsp;», dernière strophe, datée «&nbsp;Jersey, 2 décembre 1852&nbsp;»&nbsp;; édition Hetzel, 1880, p.&nbsp;446 ([fac-similé, Wikisource](https://fr.wikisource.org/wiki/Page:Hugo_-_Les_Ch%C3%A2timents_(Hetzel,_1880).djvu/446)).
 - **Ce que l'écart change**&nbsp;: le dernier vers est exact. C'est le premier de la strophe qui circule retouché, «&nbsp;S'il n'en est plus que mille&nbsp;», calqué sur les deux derniers. Hugo écrit «&nbsp;Si l'on&nbsp;»&nbsp;: un an jour pour jour après le coup d'État, il compte les proscrits qui refusent l'Empire et se range parmi eux avant de se dire le dernier.
@@ -87,8 +89,8 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 
 - **Statut**&nbsp;: non établie chez Voltaire dans les sources consultées.
 - **Le texte**&nbsp;: la phrase existe d'abord en anglais, sous la plume d'Evelyn Beatrice Hall, qui signe S.&nbsp;G.&nbsp;Tallentyre&nbsp;: «&nbsp;*“I disapprove of what you say, but I will defend to the death your right to say it,” was his attitude now.*&nbsp;» — «&nbsp;telle était désormais son attitude&nbsp;».
-- **Source**&nbsp;: S.&nbsp;G.&nbsp;Tallentyre, *The Friends of Voltaire*, Londres, John Murray, 1906, chapitre&nbsp;VII, «&nbsp;Helvétius&nbsp;: the contradiction&nbsp;» ([texte intégral, Project Gutenberg](https://www.gutenberg.org/ebooks/56618)). La phrase française et ses variantes ont été cherchées dans les textes de Voltaire sur Wikisource&nbsp;: aucune occurrence.
-- **Ce que l'écart change**&nbsp;: Hall résume en une phrase la réaction de Voltaire à la condamnation de *De l'esprit*, le livre d'Helvétius brûlé sur ordre de justice. Elle rapporte juste avant le mot qu'elle lui prête, «&nbsp;*What a fuss about an omelette!*&nbsp;», tant de bruit pour une omelette. Son paragraphe met entre guillemets une attitude&nbsp;; la circulation en a fait une parole.
+- **Source**&nbsp;: S.&nbsp;G.&nbsp;Tallentyre, *The Friends of Voltaire*, Londres, John Murray, 1906, chapitre&nbsp;VII, «&nbsp;Helvétius&nbsp;: the contradiction&nbsp;», p.&nbsp;199 ([texte intégral, Project Gutenberg](https://www.gutenberg.org/ebooks/56618)). Lettre de Hall du 9&nbsp;mai 1939, publiée par Burdette Kinne, «&nbsp;Voltaire Never Said It!&nbsp;», *Modern Language Notes*, vol.&nbsp;58, n°&nbsp;7, novembre 1943, p.&nbsp;534-535 ([numéro numérisé, Internet Archive](https://archive.org/details/sim_mln_1943-11_58_7)&nbsp;; [doi:10.2307/2911066](https://doi.org/10.2307/2911066)).
+- **Ce que l'écart change**&nbsp;: Hall résume en une phrase la réaction de Voltaire à la condamnation de *De l'esprit*, le livre d'Helvétius brûlé sur ordre de justice. Elle rapporte juste avant le mot qu'elle lui prête, «&nbsp;*What a fuss about an omelette!*&nbsp;», tant de bruit pour une omelette. Son paragraphe met entre guillemets une attitude&nbsp;; la circulation en a fait une parole. Hall l'a dit elle-même. En 1939, elle répond à Burdette Kinne, qui l'interroge sur la version de *Voltaire in His Letters* (1919), que la phrase «&nbsp;*is my own expression and should not have been put in inverted commas*&nbsp;» — c'est sa propre expression, qui n'aurait pas dû être mise entre guillemets. L'origine de la phrase ne se déduit donc pas de son absence chez Voltaire&nbsp;: son auteure l'a revendiquée.
 
 ### «&nbsp;Le mieux est l'ennemi du bien&nbsp;» {#voltaire-le-mieux-est-l-ennemi-du-bien}
 
@@ -108,8 +110,8 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 
 - **Statut**&nbsp;: variante documentée.
 - **Le texte**&nbsp;: «&nbsp;Les femmes ressemblent aux girouettes&nbsp;: elles se fixent quand elles se rouillent.&nbsp;»
-- **Source**&nbsp;: *Le Sottisier*, carnet de notes de Voltaire publié pour la première fois en 1880 (Librairie des bibliophiles, p.&nbsp;99&nbsp;; [Internet Archive](https://archive.org/details/lesottisierdevo00voltgoog))&nbsp;; même texte dans l'édition Garnier de 1883, p.&nbsp;218 ([Internet Archive](https://archive.org/details/lesottisiersuivi00voltuoft)).
-- **Ce que l'écart change**&nbsp;: la phrase change aussi d'auteur en circulant&nbsp;: Linternaute la range sous le nom de Jean Webster, et une version antérieure de *Livresque des mots* la donnait à Sacha Guitry, né cinq ans après la parution du carnet. La forme «&nbsp;sont comme les girouettes&nbsp;» est si installée que Wikiquote la donne en citant une édition Garnier de 1883&nbsp;; celle qui a été lue ici imprime «&nbsp;ressemblent aux girouettes&nbsp;» (relevé du 1<sup>er</sup>&nbsp;novembre 2026).
+- **Source**&nbsp;: *Le Sottisier*, carnet de notes de Voltaire publié pour la première fois en 1880 (Librairie des bibliophiles, p.&nbsp;99&nbsp;; [Internet Archive](https://archive.org/details/lesottisierdevo00voltgoog))&nbsp;; même texte dans l'édition Garnier de 1883, p.&nbsp;218 ([Internet Archive](https://archive.org/details/lesottisiersuivi00voltuoft)). Un autre témoin, les *Pensées, remarques et observations* (*Œuvres complètes*, Garnier, 1880, t.&nbsp;31, p.&nbsp;117-127&nbsp;; [Wikisource](https://fr.wikisource.org/wiki/Pens%C3%A9es,_remarques_et_observations_de_Voltaire/%C3%89dition_Garnier)), inverse la fin&nbsp;: «&nbsp;Les femmes ressemblent aux girouettes&nbsp;; quand elles se rouillent, elles se fixent.&nbsp;»
+- **Ce que l'écart change**&nbsp;: la phrase change aussi d'auteur en circulant&nbsp;: Linternaute la range sous le nom de Jean Webster, et une version antérieure de *Livresque des mots* la donnait à Sacha Guitry, né cinq ans après la parution du carnet. La forme «&nbsp;sont comme les girouettes&nbsp;» est si installée que Wikiquote la donne en citant une édition Garnier de 1883&nbsp;; celle qui a été lue ici imprime «&nbsp;ressemblent aux girouettes&nbsp;» (relevé du 1<sup>er</sup>&nbsp;novembre 2026). Une réserve, enfin&nbsp;: ces textes sont des notes de Voltaire. Qu'une phrase figure dans ses papiers atteste qu'il l'a écrite ou recopiée, pas qu'il l'a inventée.
 
 ## Molière&nbsp;: des répliques exactes, et des emprunts qu'il signale {#moliere}
 
@@ -118,7 +120,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 - **Statut**&nbsp;: établie, et Molière la donne pour une maxime ancienne.
 - **Le texte**&nbsp;: «&nbsp;suivant le dire d'un ancien, il faut manger pour vivre, et non pas vivre pour manger.&nbsp;»
 - **Source**&nbsp;: *L'Avare* (1668), acte&nbsp;III, réplique de Valère (scène&nbsp;5 dans l'édition Louandre, 1910&nbsp;; [Wikisource](https://fr.wikisource.org/wiki/L%E2%80%99Avare_(Moli%C3%A8re)/%C3%89dition_Louandre,_1910/Acte_III)).
-- **Ce que l'écart change**&nbsp;: Valère cite «&nbsp;un ancien&nbsp;» sans le nommer&nbsp;; la tradition rattache la maxime à Socrate (source antique non lue ici). Harpagon, ravi, veut la répéter et la retourne&nbsp;: «&nbsp;Il faut vivre pour manger, et non pas manger pour vi… Non, ce n'est pas cela.&nbsp;» Isolée, la citation perd la réplique qui la rend comique.
+- **Ce que l'écart change**&nbsp;: Valère cite «&nbsp;un ancien&nbsp;» sans le nommer, et il a raison de citer&nbsp;: la *Rhétorique à Herennius* (IV, 28), longtemps attribuée à Cicéron, donne la formule en exemple de figure, «&nbsp;*Esse oportet ut vivas, non vivere ut edas*&nbsp;», et Rabelais en avait déjà tiré un effet comique dans le *Tiers Livre*. Le programme de recherche Molière21 en relève d'autres reprises au XVII<sup>e</sup>&nbsp;siècle ([«&nbsp;Il faut manger pour vivre&nbsp;»](https://moliere21.cnrs.fr/il-faut-manger-pour-vivre/)). Le rattachement à Socrate relève d'une autre tradition, non examinée ici. Harpagon, ravi, veut la répéter et la retourne&nbsp;: «&nbsp;Il faut vivre pour manger, et non pas manger pour vi… Non, ce n'est pas cela.&nbsp;» Isolée, la citation perd la réplique qui la rend comique.
 
 ### «&nbsp;Que diable allait-il faire dans cette galère&nbsp;?&nbsp;» {#moliere-cette-galere}
 
@@ -148,7 +150,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 - **Statut**&nbsp;: établie.
 - **Le texte**&nbsp;: «&nbsp;Rien ne sert de courir&nbsp;; il faut partir à point&nbsp;: / Le lièvre et la tortue en sont un témoignage.&nbsp;»
 - **Source**&nbsp;: *Fables* (1668), livre&nbsp;VI, fable&nbsp;10, «&nbsp;Le Lièvre et la Tortue&nbsp;»&nbsp;; édition Bernardin-Béchet, 1874, p.&nbsp;188 ([Wikisource](https://fr.wikisource.org/wiki/Fables_de_La_Fontaine_(%C3%A9d._1874)/Le_Li%C3%A8vre_et_la_Tortue)).
-- **Ce que l'écart change**&nbsp;: aucun écart de texte. «&nbsp;À point&nbsp;» veut dire au bon moment&nbsp;: la morale porte sur le moment du départ, non sur la lenteur.
+- **Ce que l'écart change**&nbsp;: aucun écart de texte. «&nbsp;À point&nbsp;» veut dire au bon moment. La fable oppose la tortue, partie à temps et qui ne s'arrête pas, au lièvre, si sûr de lui qu'il part trop tard&nbsp;: la morale porte sur le départ et la constance, non sur la lenteur.
 
 ### «&nbsp;On a souvent besoin d'un plus petit que soi&nbsp;» {#la-fontaine-un-plus-petit-que-soi}
 
@@ -162,7 +164,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 - **Statut**&nbsp;: établie.
 - **Le texte**&nbsp;: «&nbsp;Aide-toi, le Ciel t'aidera.&nbsp;»
 - **Source**&nbsp;: *Fables*, livre&nbsp;VI, fable&nbsp;18, «&nbsp;Le Chartier embourbé&nbsp;», dernier vers&nbsp;; édition Barbin ([Wikisource](https://fr.wikisource.org/wiki/Fables_de_La_Fontaine_(%C3%A9d._Barbin)/2/Le_Chartier_embourb%C3%A9)).
-- **Ce que l'écart change**&nbsp;: la morale tombe après que la voix céleste a fait faire au charretier tout le travail&nbsp;: rompre le caillou, combler l'ornière, prendre son fouet. Le ciel n'a rien soulevé.
+- **Ce que l'écart change**&nbsp;: la morale tombe après que la voix céleste a fait faire au charretier tout le travail&nbsp;: rompre le caillou, combler l'ornière, prendre son fouet. Le ciel n'a rien soulevé. Le vers est de La Fontaine, la maxime plus ancienne&nbsp;: le *Dictionnaire des proverbes* de Quitard (1842) la range parmi les proverbes, en rapproche une formule de Rabelais, et note que ce proverbe «&nbsp;a été mis en action par La Fontaine&nbsp;», dont la fable a beaucoup contribué à le rendre populaire ([Wikisource](https://fr.wikisource.org/wiki/Dictionnaire_des_proverbes_(Quitard)/aider)).
 
 ## Oscar Wilde&nbsp;: des paradoxes de personnages, et un qui n'est pas de lui {#wilde}
 
@@ -171,7 +173,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 - **Statut**&nbsp;: non établie dans les sources consultées.
 - **Le texte**&nbsp;: aucun texte de Wilde connu. En anglais&nbsp;: «&nbsp;*Be yourself; everyone else is already taken.*&nbsp;»
 - **Source**&nbsp;: enquête du site Quote Investigator, consacré à la généalogie des citations (20&nbsp;janvier 2014, lue le 1<sup>er</sup>&nbsp;novembre 2026)&nbsp;: la première occurrence exacte trouvée date de décembre 1999, sur un forum Usenet, entre guillemets et sans auteur, et l'enquête ne trouve «&nbsp;*no substantive evidence*&nbsp;» d'une origine chez Wilde. *Livresque des mots* l'imprime sous «&nbsp;Anonyme&nbsp;».
-- **Ce que l'écart change**&nbsp;: Wilde meurt en 1900&nbsp;; la phrase apparaît, d'après cette enquête, un siècle plus tard. Elle a le tour d'un paradoxe de Wilde, et cela a suffi pour qu'on la lui prête.
+- **Ce que l'écart change**&nbsp;: la plus ancienne attestation exacte retrouvée date de près d'un siècle après la mort de Wilde (1900), et elle était déjà donnée comme une citation&nbsp;: son origine reste inconnue. La phrase a le tour d'un paradoxe de Wilde, et cela a suffi pour qu'on la lui prête.
 
 ### «&nbsp;Je peux résister à tout, sauf à la tentation&nbsp;» {#wilde-resister-a-tout}
 
@@ -202,18 +204,20 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 
 **La forme se simplifie.** «&nbsp;Si l'on n'est plus que mille&nbsp;» devient «&nbsp;S'il n'en est plus que mille&nbsp;», «&nbsp;ressemblent aux girouettes&nbsp;» devient «&nbsp;sont comme les girouettes&nbsp;», «&nbsp;la conviction qu'on est aimé&nbsp;» devient «&nbsp;savoir que vous êtes aimé&nbsp;». La syntaxe se règle sur celle de la conversation, et le vers qui précède ou qui suit disparaît.
 
-La vérification des citations de *Livresque des mots* va dans le même sens pour ces cinq auteurs. Chez Molière, les citations du recueil ont toutes été retrouvées dans le texte, exactes ou à une variante près (16 sur 16)&nbsp;; chez La Fontaine, presque toutes (33 sur 36)&nbsp;; chez Hugo, sept sur dix (55 sur 78)&nbsp;; chez Voltaire, un peu plus d'une sur deux (17 sur 29). Deux explications sont possibles, et ces chiffres ne les départagent pas&nbsp;: le vers, qui retient la lettre, et l'école, qui l'a fait apprendre dans des éditions qui ne varient guère.
+Les trois mouvements se cumulent souvent. Un auteur reprend une formule ancienne, la circulation la simplifie, puis l'attache à un nom plus célèbre&nbsp;: à chaque étape, l'autorité du nom remplace un peu plus la preuve du texte. Une citation qui quitte son œuvre change parfois de mots, parfois d'auteur, et toujours de contexte.
+
+La vérification des citations de *Livresque des mots* va dans le même sens pour ces cinq auteurs. Chez Molière, les citations du recueil ont toutes été retrouvées dans le texte, exactes ou à une variante près (16 sur 16)&nbsp;; chez La Fontaine, presque toutes (33 sur 36)&nbsp;; chez Hugo, sept sur dix (55 sur 78)&nbsp;; chez Voltaire, un peu plus d'une sur deux (17 sur 29). Ces différences décrivent les citations que le recueil avait réunies&nbsp;; elles ne mesurent ni la fiabilité des attributions à chaque auteur, ni la fréquence des erreurs dans les citations qui circulent. Le genre des œuvres, le vers, l'apprentissage scolaire ou le choix initial des citations peuvent y jouer, et rien ici ne permet de faire la part de chacun.
 
 ## Vérifier une citation soi-même&nbsp;: quatre questions {#verifier-une-citation}
 
-1. **Quelle œuvre, quel passage&nbsp;?** Une citation sans titre ni chapitre n'est pas encore une citation.
+1. **Quelle œuvre, quel passage&nbsp;?** Une citation sans référence précise reste presque impossible à vérifier.
 2. **Le texte se lit-il dans une édition qu'on peut nommer&nbsp;?** Les fac-similés de Wikisource, de Gallica, d'Internet Archive ou de Project Gutenberg permettent de lire la phrase dans sa page.
 3. **Qui parle dans le texte&nbsp;?** L'auteur, un personnage, ou un auteur qu'il cite&nbsp;: Lord Henry n'est pas Wilde, et Valère cite un ancien.
-4. **Quand la phrase apparaît-elle pour la première fois, et chez qui&nbsp;?** Une date d'apparition postérieure à la mort de l'auteur règle la question.
+4. **Quand la phrase apparaît-elle pour la première fois, et chez qui&nbsp;?** Une première attestation postérieure à la mort de l'auteur écarte l'attribution. À l'inverse, trouver la phrase chez un auteur ne dit pas qu'il l'a inventée&nbsp;: «&nbsp;Aide-toi, le Ciel t'aidera&nbsp;» est bien de La Fontaine, et la maxime est plus ancienne que lui.
 
 ## Ce que cette page ne dit pas {#limites}
 
-Elle porte sur vingt citations de cinq auteurs, choisies parmi les plus répétées&nbsp;: elle ne mesure pas la part des fausses citations en général. «&nbsp;Non établie&nbsp;» y signifie «&nbsp;non trouvée dans les sources consultées&nbsp;», jamais «&nbsp;fausse&nbsp;» ni «&nbsp;jamais dite&nbsp;»&nbsp;: une phrase prononcée et non écrite échappe à cette méthode. Les éditions lues sont en ligne&nbsp;; aucune édition critique récente n'a été consultée. Les numéros de scène de Molière sont ceux de l'édition Louandre (1910), dont le découpage diffère de celui d'autres éditions. La généalogie de «&nbsp;Soyez vous-même&nbsp;» repose sur une enquête publiée, non refaite ici.
+Elle porte sur vingt citations de cinq auteurs, choisies pour ce qu'elles montrent et non par une mesure de leur fréquence&nbsp;: elle ne mesure pas la part des fausses citations en général. «&nbsp;Non établie&nbsp;» y signifie «&nbsp;non trouvée dans les sources consultées&nbsp;», jamais «&nbsp;fausse&nbsp;» ni «&nbsp;jamais dite&nbsp;»&nbsp;: une phrase prononcée et non écrite échappe à cette méthode. Les éditions lues sont en ligne&nbsp;; aucune édition critique récente n'a été consultée. Les numéros de scène de Molière sont ceux de l'édition Louandre (1910), dont le découpage diffère de celui d'autres éditions. La généalogie de «&nbsp;Soyez vous-même&nbsp;» repose sur une enquête publiée, non refaite ici.
 
 {{< appel-livre slug="livresque-des-mots" sur="Lire les citations dans leur texte" avis="non" >}}
 Cette page relit vingt citations. *Livresque des mots* en réunit {{< stat "citations" "nbsp" >}}, de {{< stat "auteurs" "nbsp" >}} voix, que l'édition 2026 a réexaminées une à une, texte et paternité&nbsp;: quand la formulation d'origine a pu être établie, c'est elle que le livre imprime, et quand la paternité reste discutée, la ligne d'auteur le dit.
@@ -227,6 +231,6 @@ Cette page relit vingt citations. *Livresque des mots* en réunit {{< stat "cita
 
 **Textes des auteurs** (relus le 1<sup>er</sup>&nbsp;novembre 2026)&nbsp;: Victor Hugo, *Les Châtiments*, Hetzel, 1880&nbsp;; *L'Homme qui rit*, 1869&nbsp;; *Les Misérables*, 1862&nbsp;; *William Shakespeare*, 1864&nbsp;; *Les Quatre Vents de l'esprit*, Ollendorff, 1908. Voltaire, «&nbsp;La Bégueule&nbsp;» et *Candide*, *Œuvres complètes*, Garnier, 1877&nbsp;; *Le Sottisier*, Librairie des bibliophiles, 1880, et Garnier, 1883. Molière, *L'Avare*, *Les Fourberies de Scapin*, *Le Tartuffe*, édition Louandre, 1910. Cyrano de Bergerac, *Le Pédant joué*, 1654. La Fontaine, *Fables*, Bernardin-Béchet, 1874, et édition Barbin. Oscar Wilde, *The Picture of Dorian Gray*, 1891, et *Lady Windermere's Fan*, 1892, Project Gutenberg. Les liens sont donnés à chaque entrée.
 
-**Sur l'origine de deux phrases**&nbsp;: S.&nbsp;G.&nbsp;Tallentyre (Evelyn Beatrice Hall), *The Friends of Voltaire*, Londres, John Murray, 1906, chapitre&nbsp;VII&nbsp;; Quote Investigator, «&nbsp;Be Yourself; Everyone Else Is Already Taken&nbsp;», 20&nbsp;janvier 2014 ([quoteinvestigator.com](https://quoteinvestigator.com/2014/01/20/be-yourself/)).
+**Sur l'origine de quatre phrases**&nbsp;: S.&nbsp;G.&nbsp;Tallentyre (Evelyn Beatrice Hall), *The Friends of Voltaire*, Londres, John Murray, 1906, chapitre&nbsp;VII&nbsp;; Burdette Kinne, «&nbsp;Voltaire Never Said It!&nbsp;», *Modern Language Notes*, 58 (7), 1943, p.&nbsp;534-535&nbsp;; Molière21, «&nbsp;Il faut manger pour vivre&nbsp;»&nbsp;; P.-M. Quitard, *Dictionnaire étymologique, historique et anecdotique des proverbes*, 1842, article «&nbsp;aider&nbsp;»&nbsp;; Quote Investigator, «&nbsp;Be Yourself; Everyone Else Is Already Taken&nbsp;», 20&nbsp;janvier 2014 ([quoteinvestigator.com](https://quoteinvestigator.com/2014/01/20/be-yourself/)).
 
 **Vérification de *Livresque des mots***&nbsp;: [méthode et corpus de l'édition 2026](/livresque/methode-et-corpus/). Sur un mot qui a changé d'auteur&nbsp;: [la *tabula rasa* de Locke](/tabula-rasa-locke/).

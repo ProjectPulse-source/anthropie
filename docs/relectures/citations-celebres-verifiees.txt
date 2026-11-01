@@ -1,25 +1,27 @@
-# relu le 2026-11-01 ; texte servi de /citations-celebres-verifiees/, build de 0759f1e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-01 ; texte servi de /citations-celebres-verifiees/, build de 75a09b2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ?
-Sur vingt de leurs citations les plus répétées, quatorze se lisent telles quelles dans leurs œuvres, trois y sont retouchées et trois n'y ont pas été trouvées.
-Voltaire n'a pas écrit « je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » : la phrase est d'une biographe anglaise, en 1906.
+Sur vingt citations célèbres qu'on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n'y ont pas été trouvées.
+Voltaire n'a pas écrit « je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » : la phrase est d'une biographe anglaise, qui l'a reconnue pour sienne en 1939.
 Et souvent, l'auteur citait déjà quelqu'un d'autre.
 Page publiée le 1er novembre 2026
 Guides et éclairages
 Une citation célèbre se répète d’ordinaire sans son livre, sans sa page et souvent sans sa forme exacte.
-Cette page reprend vingt des phrases les plus répétées de cinq auteurs et les relit dans leurs œuvres, dans une édition qu’elle nomme, au passage qu’elle indique.
+Cette page examine vingt citations célèbres prêtées à cinq auteurs, choisies pour ce qu’elles montrent de la façon dont un texte se transmet, se transforme ou change d’auteur, et les relit dans leurs œuvres, dans une édition qu’elle nomme, au passage qu’elle indique.
 Elle s’appuie sur la vérification des 4 656 citations de Livresque des mots, dont l’édition 2026 a réexaminé le texte et la paternité une à une.
 Comment lire cette page
 Chaque citation reçoit l’un de trois statuts :
-établie — la phrase se lit dans l’œuvre de l’auteur, sous cette forme ou à une ponctuation près ;
+établie — la phrase se lit dans l’œuvre de l’auteur, sous cette forme, à la ponctuation ou à la graphie près (le texte cité garde celle de l’édition consultée, « alloit » chez Molière) ;
 variante documentée — l’auteur a écrit une phrase voisine, et l’écart entre son texte et la forme qui circule est établi ;
 non établie dans les sources consultées — la phrase n’a pas été trouvée chez l’auteur, dans les textes cherchés.
 Ce statut ne dit pas qu’elle est fausse : il dit ce qui a été cherché, et où.
+Retrouver une phrase chez un auteur, la lui attribuer et en connaître l’origine sont trois opérations distinctes.
+Une citation établie dans une œuvre n’y fait pas toujours sa première apparition : plusieurs de ces auteurs citaient eux-mêmes.
 Pour chaque entrée, la même grille : le statut, le texte tel que l’auteur l’a écrit, la source (œuvre, date, passage, édition consultée et lien vers le texte), et ce que l’écart change.
 Les textes ont été relus le 1er novembre 2026.
 Les traductions de Wilde sont celles de cette page ; l’anglais d’origine est donné à côté.
 Victor Hugo : ce qu’il a écrit, ce qu’on lui prête
 « S’il n’en reste qu’un, je serai celui-là »
-Statut : variante documentée.
+Statut : établie (le vers cité) ; le premier vers de la même strophe circule retouché.
 Le texte : « Si l’on n’est plus que mille, eh bien, j’en suis !
 Si même / Ils ne sont plus que cent, je brave encor Sylla ; / S’il en demeure dix, je serai le dixième ; / Et s’il n’en reste qu’un, je serai celui-là ! »
 Source : Les Châtiments (1853), « Ultima verba », dernière strophe, datée « Jersey, 2 décembre 1852 » ; édition Hetzel, 1880, p.
@@ -65,11 +67,17 @@ G.
 Tallentyre : « “I disapprove of what you say, but I will defend to the death your right to say it,” was his attitude now. » — « telle était désormais son attitude ».
 Source : S.
 G.
-Tallentyre, The Friends of Voltaire, Londres, John Murray, 1906, chapitre VII, « Helvétius : the contradiction » (texte intégral, Project Gutenberg).
-La phrase française et ses variantes ont été cherchées dans les textes de Voltaire sur Wikisource : aucune occurrence.
+Tallentyre, The Friends of Voltaire, Londres, John Murray, 1906, chapitre VII, « Helvétius : the contradiction », p.
+199 (texte intégral, Project Gutenberg).
+Lettre de Hall du 9 mai 1939, publiée par Burdette Kinne, « Voltaire Never Said It! », Modern Language Notes, vol.
+58, n° 7, novembre 1943, p.
+534-535 (numéro numérisé, Internet Archive ; doi:10.2307/2911066).
 Ce que l’écart change : Hall résume en une phrase la réaction de Voltaire à la condamnation de De l’esprit, le livre d’Helvétius brûlé sur ordre de justice.
 Elle rapporte juste avant le mot qu’elle lui prête, « What a fuss about an omelette! », tant de bruit pour une omelette.
 Son paragraphe met entre guillemets une attitude ; la circulation en a fait une parole.
+Hall l’a dit elle-même.
+En 1939, elle répond à Burdette Kinne, qui l’interroge sur la version de Voltaire in His Letters (1919), que la phrase « is my own expression and should not have been put in inverted commas » — c’est sa propre expression, qui n’aurait pas dû être mise entre guillemets.
+L’origine de la phrase ne se déduit donc pas de son absence chez Voltaire : son auteure l’a revendiquée.
 « Le mieux est l’ennemi du bien »
 Statut : établie, et Voltaire la donne lui-même pour une citation.
 Le texte : « Dans ses écrits un sage Italien / Dit que le mieux est l’ennemi du bien. »
@@ -91,14 +99,21 @@ Le texte : « Les femmes ressemblent aux girouettes : elles se fixent quand elle
 Source : Le Sottisier, carnet de notes de Voltaire publié pour la première fois en 1880 (Librairie des bibliophiles, p.
 99 ; Internet Archive) ; même texte dans l’édition Garnier de 1883, p.
 218 (Internet Archive).
+Un autre témoin, les Pensées, remarques et observations (Œuvres complètes, Garnier, 1880, t.
+31, p.
+117-127 ; Wikisource), inverse la fin : « Les femmes ressemblent aux girouettes ; quand elles se rouillent, elles se fixent. »
 Ce que l’écart change : la phrase change aussi d’auteur en circulant : Linternaute la range sous le nom de Jean Webster, et une version antérieure de Livresque des mots la donnait à Sacha Guitry, né cinq ans après la parution du carnet.
 La forme « sont comme les girouettes » est si installée que Wikiquote la donne en citant une édition Garnier de 1883 ; celle qui a été lue ici imprime « ressemblent aux girouettes » (relevé du 1er novembre 2026).
+Une réserve, enfin : ces textes sont des notes de Voltaire.
+Qu’une phrase figure dans ses papiers atteste qu’il l’a écrite ou recopiée, pas qu’il l’a inventée.
 Molière : des répliques exactes, et des emprunts qu’il signale
 « Il faut manger pour vivre et non pas vivre pour manger »
 Statut : établie, et Molière la donne pour une maxime ancienne.
 Le texte : « suivant le dire d’un ancien, il faut manger pour vivre, et non pas vivre pour manger. »
 Source : L’Avare (1668), acte III, réplique de Valère (scène 5 dans l’édition Louandre, 1910 ; Wikisource).
-Ce que l’écart change : Valère cite « un ancien » sans le nommer ; la tradition rattache la maxime à Socrate (source antique non lue ici).
+Ce que l’écart change : Valère cite « un ancien » sans le nommer, et il a raison de citer : la Rhétorique à Herennius (IV, 28), longtemps attribuée à Cicéron, donne la formule en exemple de figure, « Esse oportet ut vivas, non vivere ut edas », et Rabelais en avait déjà tiré un effet comique dans le Tiers Livre.
+Le programme de recherche Molière21 en relève d’autres reprises au XVIIe siècle (« Il faut manger pour vivre »).
+Le rattachement à Socrate relève d’une autre tradition, non examinée ici.
 Harpagon, ravi, veut la répéter et la retourne : « Il faut vivre pour manger, et non pas manger pour vi…
 Non, ce n’est pas cela. » Isolée, la citation perd la réplique qui la rend comique.
 « Que diable allait-il faire dans cette galère ? »
@@ -128,7 +143,8 @@ Statut : établie.
 Le texte : « Rien ne sert de courir ; il faut partir à point : / Le lièvre et la tortue en sont un témoignage. »
 Source : Fables (1668), livre VI, fable 10, « Le Lièvre et la Tortue » ; édition Bernardin-Béchet, 1874, p.
 188 (Wikisource).
-Ce que l’écart change : aucun écart de texte. « À point » veut dire au bon moment : la morale porte sur le moment du départ, non sur la lenteur.
+Ce que l’écart change : aucun écart de texte. « À point » veut dire au bon moment.
+La fable oppose la tortue, partie à temps et qui ne s’arrête pas, au lièvre, si sûr de lui qu’il part trop tard : la morale porte sur le départ et la constance, non sur la lenteur.
 « On a souvent besoin d’un plus petit que soi »
 Statut : établie.
 Le texte : « Il faut, autant qu’on peut, obliger tout le monde : / On a souvent besoin d’un plus petit que soi. »
@@ -142,6 +158,7 @@ Le texte : « Aide-toi, le Ciel t’aidera. »
 Source : Fables, livre VI, fable 18, « Le Chartier embourbé », dernier vers ; édition Barbin (Wikisource).
 Ce que l’écart change : la morale tombe après que la voix céleste a fait faire au charretier tout le travail : rompre le caillou, combler l’ornière, prendre son fouet.
 Le ciel n’a rien soulevé.
+Le vers est de La Fontaine, la maxime plus ancienne : le Dictionnaire des proverbes de Quitard (1842) la range parmi les proverbes, en rapproche une formule de Rabelais, et note que ce proverbe « a été mis en action par La Fontaine », dont la fable a beaucoup contribué à le rendre populaire (Wikisource).
 Oscar Wilde : des paradoxes de personnages, et un qui n’est pas de lui
 « Soyez vous-même, les autres sont déjà pris »
 Statut : non établie dans les sources consultées.
@@ -149,8 +166,8 @@ Le texte : aucun texte de Wilde connu.
 En anglais : « Be yourself; everyone else is already taken. »
 Source : enquête du site Quote Investigator, consacré à la généalogie des citations (20 janvier 2014, lue le 1er novembre 2026) : la première occurrence exacte trouvée date de décembre 1999, sur un forum Usenet, entre guillemets et sans auteur, et l’enquête ne trouve « no substantive evidence » d’une origine chez Wilde.
 Livresque des mots l’imprime sous « Anonyme ».
-Ce que l’écart change : Wilde meurt en 1900 ; la phrase apparaît, d’après cette enquête, un siècle plus tard.
-Elle a le tour d’un paradoxe de Wilde, et cela a suffi pour qu’on la lui prête.
+Ce que l’écart change : la plus ancienne attestation exacte retrouvée date de près d’un siècle après la mort de Wilde (1900), et elle était déjà donnée comme une citation : son origine reste inconnue.
+La phrase a le tour d’un paradoxe de Wilde, et cela a suffi pour qu’on la lui prête.
 « Je peux résister à tout, sauf à la tentation »
 Statut : établie.
 Le texte : « I can resist everything except temptation. »
@@ -180,20 +197,25 @@ Livresque des mots avait lui-même recueilli trois de ces glissements, que l’�
 Le nom d’arrivée est chaque fois celui que la réputation associe au thème — la tolérance, le paradoxe, l’ironie anticléricale, le mot d’esprit sur les femmes, la justice sociale — et la citation circule d’autant mieux qu’elle confirme ce qu’on croit déjà de l’auteur.
 La forme se simplifie. « Si l’on n’est plus que mille » devient « S’il n’en est plus que mille », « ressemblent aux girouettes » devient « sont comme les girouettes », « la conviction qu’on est aimé » devient « savoir que vous êtes aimé ».
 La syntaxe se règle sur celle de la conversation, et le vers qui précède ou qui suit disparaît.
+Les trois mouvements se cumulent souvent.
+Un auteur reprend une formule ancienne, la circulation la simplifie, puis l’attache à un nom plus célèbre : à chaque étape, l’autorité du nom remplace un peu plus la preuve du texte.
+Une citation qui quitte son œuvre change parfois de mots, parfois d’auteur, et toujours de contexte.
 La vérification des citations de Livresque des mots va dans le même sens pour ces cinq auteurs.
 Chez Molière, les citations du recueil ont toutes été retrouvées dans le texte, exactes ou à une variante près (16 sur 16) ; chez La Fontaine, presque toutes (33 sur 36) ; chez Hugo, sept sur dix (55 sur 78) ; chez Voltaire, un peu plus d’une sur deux (17 sur 29).
-Deux explications sont possibles, et ces chiffres ne les départagent pas : le vers, qui retient la lettre, et l’école, qui l’a fait apprendre dans des éditions qui ne varient guère.
+Ces différences décrivent les citations que le recueil avait réunies ; elles ne mesurent ni la fiabilité des attributions à chaque auteur, ni la fréquence des erreurs dans les citations qui circulent.
+Le genre des œuvres, le vers, l’apprentissage scolaire ou le choix initial des citations peuvent y jouer, et rien ici ne permet de faire la part de chacun.
 Vérifier une citation soi-même : quatre questions
 Quelle œuvre, quel passage ?
-Une citation sans titre ni chapitre n’est pas encore une citation.
+Une citation sans référence précise reste presque impossible à vérifier.
 Le texte se lit-il dans une édition qu’on peut nommer ?
 Les fac-similés de Wikisource, de Gallica, d’Internet Archive ou de Project Gutenberg permettent de lire la phrase dans sa page.
 Qui parle dans le texte ?
 L’auteur, un personnage, ou un auteur qu’il cite : Lord Henry n’est pas Wilde, et Valère cite un ancien.
 Quand la phrase apparaît-elle pour la première fois, et chez qui ?
-Une date d’apparition postérieure à la mort de l’auteur règle la question.
+Une première attestation postérieure à la mort de l’auteur écarte l’attribution.
+À l’inverse, trouver la phrase chez un auteur ne dit pas qu’il l’a inventée : « Aide-toi, le Ciel t’aidera » est bien de La Fontaine, et la maxime est plus ancienne que lui.
 Ce que cette page ne dit pas
-Elle porte sur vingt citations de cinq auteurs, choisies parmi les plus répétées : elle ne mesure pas la part des fausses citations en général. « Non établie » y signifie « non trouvée dans les sources consultées », jamais « fausse » ni « jamais dite » : une phrase prononcée et non écrite échappe à cette méthode.
+Elle porte sur vingt citations de cinq auteurs, choisies pour ce qu’elles montrent et non par une mesure de leur fréquence : elle ne mesure pas la part des fausses citations en général. « Non établie » y signifie « non trouvée dans les sources consultées », jamais « fausse » ni « jamais dite » : une phrase prononcée et non écrite échappe à cette méthode.
 Les éditions lues sont en ligne ; aucune édition critique récente n’a été consultée.
 Les numéros de scène de Molière sont ceux de l’édition Louandre (1910), dont le découpage diffère de celui d’autres éditions.
 La généalogie de « Soyez vous-même » repose sur une enquête publiée, non refaite ici.
@@ -213,10 +235,11 @@ La phrase n'a pas été trouvée dans les textes de Voltaire.
 Elle paraît d'abord en anglais, en 1906, dans The Friends of Voltaire d'Evelyn Beatrice Hall, qui signe S.
 G.
 Tallentyre : « I disapprove of what you say, but I will defend to the death your right to say it », suivi de « was his attitude now » (telle était désormais son attitude).
-Hall y résume la réaction de Voltaire à la condamnation du livre d'Helvétius, De l'esprit ; ses guillemets ont été pris pour ceux d'une citation.
+Hall y résume la réaction de Voltaire à la condamnation du livre d'Helvétius, De l'esprit.
+Dans une lettre du 9 mai 1939, publiée en 1943 dans Modern Language Notes, elle écrit que la phrase est sa propre expression et n'aurait pas dû être mise entre guillemets.
 Oscar Wilde a-t-il dit « Soyez vous-même, les autres sont déjà pris » ?
 Aucun texte de Wilde ne la contient dans les sources consultées.
-Selon l'enquête du site Quote Investigator (2014), la première occurrence exacte connue de « Be yourself; everyone else is already taken » date de décembre 1999, sur un forum Usenet, entre guillemets et sans auteur.
+Selon l'enquête du site Quote Investigator (2014), la plus ancienne attestation exacte retrouvée de « Be yourself; everyone else is already taken » date de décembre 1999, sur un forum Usenet, déjà entre guillemets et sans auteur ; son origine reste inconnue.
 Wilde est mort en 1900.
 Livresque des mots l'imprime sous « Anonyme ».
 D'où vient « Que diable allait-il faire dans cette galère ? »
@@ -234,9 +257,11 @@ Cyrano de Bergerac, Le Pédant joué, 1654.
 La Fontaine, Fables, Bernardin-Béchet, 1874, et édition Barbin.
 Oscar Wilde, The Picture of Dorian Gray, 1891, et Lady Windermere’s Fan, 1892, Project Gutenberg.
 Les liens sont donnés à chaque entrée.
-Sur l’origine de deux phrases : S.
+Sur l’origine de quatre phrases : S.
 G.
-Tallentyre (Evelyn Beatrice Hall), The Friends of Voltaire, Londres, John Murray, 1906, chapitre VII ; Quote Investigator, « Be Yourself; Everyone Else Is Already Taken », 20 janvier 2014 (quoteinvestigator.com).
+Tallentyre (Evelyn Beatrice Hall), The Friends of Voltaire, Londres, John Murray, 1906, chapitre VII ; Burdette Kinne, « Voltaire Never Said It! », Modern Language Notes, 58 (7), 1943, p.
+534-535 ; Molière21, « Il faut manger pour vivre » ; P.-M.
+Quitard, Dictionnaire étymologique, historique et anecdotique des proverbes, 1842, article « aider » ; Quote Investigator, « Be Yourself; Everyone Else Is Already Taken », 20 janvier 2014 (quoteinvestigator.com).
 Vérification de Livresque des mots : méthode et corpus de l’édition 2026.
 Sur un mot qui a changé d’auteur : la tabula rasa de Locke.
 Toutes les ressources : données, dossiers et repères →
