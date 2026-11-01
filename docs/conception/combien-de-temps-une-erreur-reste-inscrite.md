@@ -144,5 +144,8 @@ pas les durées entre eux.
   (manière d'effacer, asymétrie bonus-malus, changement du 20/11/2026). Valeur finale : tenu. Fonctions : remplies.
 - Instantané de relecture : fait le 01/11/2026 ; `refonte` posé.
 - Contrôles : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates conformes ; rendu conforme.
-- Contre-expertise de la page : paquet à déposer après le commit (page juridique : la vérification d'un juriste ou d'une
-  contre-expertise est la garde principale).
+- Contre-expertise de la page : faite le 01/11/2026 (`PRO-20261101-091535`, réponse archivée SHA-256 061B38FC…).
+  Arbitrage `ARBITRATIONS/PRO-20261101-091535_arbitrage.md` : option B. P0 acceptés : tableau à six colonnes (nature des
+  délais), transitoire du FICP (ordonnance 2025-880, art. 99, lu dans le navigateur, Légifrance refusant les scripts),
+  conditions AERAS et L. 113-2-1, permis invalidé et probatoire (L. 223-1). P1 acceptés sauf la rectification FICP
+  (arrêté non lu). Synthèse : quatre manières d'oublier. Contrôles relancés à 0, recette OK, instantané refait.

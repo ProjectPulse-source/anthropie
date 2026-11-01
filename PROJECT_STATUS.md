@@ -65,7 +65,10 @@ version de L. 752-1 au 20/11/2026 (déclaration du paiement en cas de cession de
 - **Au passage** : `/premier-coup/`, tableau des versions remplacé par une liste (cartes sans libellé de 320 à 768 px,
   défaut révélé par la recette).
 - **Contrôles** : `check-all --ci` 0 ; build 0 ; liens 0 critique ; recette 320-1600 OK ; instantané de relecture.
-- **Ouvert** : contre-expertise de la page ; relecture des textes après le 20/11/2026 ; accord de l'auteur et push.
+- **Contre-expertise** `PRO-20261101-091535` : option B ; tableau à six colonnes ; transitoire FICP (ord. 2025-880, art. 99) ;
+  AERAS et assurance sans questionnaire (L. 113-2-1) ; permis invalidé et probatoire ; chèques (R. 131-31) ; B1 ; « quatre
+  manières d'oublier ».
+- **Ouvert** : relecture des textes après le 20/11/2026 ; accord de l'auteur et push.
 
 ### 2026-11-01 — Fiches livres : « Pour quel besoin ? » sur les six livres (et l'édition anglaise d'ANTHROPIE)
 
