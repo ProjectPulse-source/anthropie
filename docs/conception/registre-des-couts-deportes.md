@@ -117,3 +117,14 @@ relever (Search Console, page FR et EN, 26/10/2026) au relevé J+60 déjà prév
 - Instantané de relecture : non fait (suit la relecture entière).
 - Contre-expertise de la page : non faite.
 - Accord de l'auteur : demandé avec le diff du 26/10/2026.
+
+### Double lecture Registre → *L'Odyssée des idées* (01/11/2026, arbitrage PRO-20261101-060949, point 2)
+
+- Champ `odyssee` posé sur 68 jalons (FR et EN, même escale) : chaque paire vérifiée sur le manuscrit du livre (même
+  penseur, même œuvre ou même événement) ; motif unique par escale, aucune escale employée deux fois (assertions du
+  script). Écartés faute d'escale correspondante : Darwin, Freud ; jalon 93 écarté (l'escale « La Terreur » sert au 100).
+- Rendu : ligne « L'idée dans son histoire » sous « Dette déportée » (`registre-ages.html`), une puce dans « Comment lire
+  un jalon », entrée de journal ; aucune entrée du Registre réécrite.
+- Contrôles : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 73/73 (date de fond du 26/10 inscrite à
+  l'historique de `dates_affichage.json`, `lastmod` passé au 01/11) ; recette 320-1600 FR et EN OK ; `check_langue.py` :
+  7 signalements, aucun sur le texte neuf.

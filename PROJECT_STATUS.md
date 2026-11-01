@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — Registre des coûts déportés : double lecture vers *L'Odyssée des idées* (68 jalons)
+
+Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 2). Champ `odyssee` dans
+`data/registre_couts_deportes.json` et `_en.json` (68 jalons, paires vérifiées sur le manuscrit) ; ligne « L'idée dans
+son histoire » / « The idea in its history » sous « Dette déportée » (`layouts/shortcodes/registre-ages.html`), puce de
+lecture et entrée de journal FR et EN ; `lastmod` 01/11, date de fond du 26/10 gardée à l'historique de
+`data/dates_affichage.json`. Contrôles : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 73/73 ; recette
+320-1600 OK. Fiche de conception du Registre complétée. `static/llms.txt` : sans changement.
+
 ### 2026-11-01 — Page « Neuf promesses de campagne : que peut vraiment faire un président ? » (dossier promesses)
 
 Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 1). Page mère du dossier « Promesses

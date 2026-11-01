@@ -37,6 +37,11 @@
         <p><strong>Ordre créé.</strong> {{ $j.ordre }}</p>
         <p><strong>Dette déportée.</strong> {{ $j.dette }}</p>
         {{- end }}
+        {{- /* Double lecture (arbitrage PRO-20261101-060949, point 2) : l'escale de L'Odyssée des idées qui raconte
+               l'histoire de la même idée ; 68 paires vérifiées à la main, champ « odyssee » des deux fichiers de données. */ -}}
+        {{- with $j.odyssee }}
+        <p class="registre__odyssee">{{ if $isEn }}<strong>The idea in its history.</strong> Stop “{{ . }}” in <a href="{{ "/livres/lodyssee-des-idees/" | relURL }}" hreflang="fr"><em>L’Odyssée des idées</em></a> (in French).{{ else }}<strong>L’idée dans son histoire.</strong> Escale «&nbsp;{{ . }}&nbsp;» de <a href="{{ "/livres/lodyssee-des-idees/" | relURL }}"><em>L’Odyssée des idées</em></a>.{{ end }}</p>
+        {{- end }}
         <p class="registre__categories">{{ delimit $j.categories " · " }}</p>
         {{- /* Pagination du chapitre dans l'édition en vente (630 p. FR, 644 p. EN ; signets des PDF, 26/10/2026) :
                protocole « corpus », chaque entrée sourcée. */ -}}

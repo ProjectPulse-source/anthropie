@@ -137,7 +137,8 @@
     "Social",
     "Économique"
    ],
-   "pages": "47-50"
+   "pages": "47-50",
+   "odyssee": "−70 000 · La religion, représentation de l’âme humaine"
   },
   {
    "age": 1,
@@ -235,7 +236,8 @@
     "Temporel",
     "Social"
    ],
-   "pages": "72-75"
+   "pages": "72-75",
+   "odyssee": "−1 200 · Le pouvoir et ses masques : La tyrannie, être craint plutôt qu’aimé"
   },
   {
    "age": 2,
@@ -319,7 +321,8 @@
     "Technique",
     "Social"
    ],
-   "pages": "95-97"
+   "pages": "95-97",
+   "odyssee": "−650 · La Monnaie : un équilibre fragile entre confiance et pouvoir"
   },
   {
    "age": 3,
@@ -333,7 +336,8 @@
     "Social",
     "Économique"
    ],
-   "pages": "98-100"
+   "pages": "98-100",
+   "odyssee": "v. −528 · Le Bouddha : les Quatre Nobles Vérités, une voie sans dieu créateur"
   },
   {
    "age": 3,
@@ -347,7 +351,8 @@
     "Symbolique",
     "Cognitif"
    ],
-   "pages": "100-102"
+   "pages": "100-102",
+   "odyssee": "v. −500 · Confucius : l’ordre par les rites et la réciprocité"
   },
   {
    "age": 3,
@@ -375,7 +380,8 @@
     "Social",
     "Inégalités"
    ],
-   "pages": "105-108"
+   "pages": "105-108",
+   "odyssee": "−508/−507 · Clisthène : la démocratie redécoupée"
   },
   {
    "age": 3,
@@ -389,7 +395,8 @@
     "Philosophique",
     "Social"
    ],
-   "pages": "108-111"
+   "pages": "108-111",
+   "odyssee": "−530 · Pythagore : l’harmonie des nombres et la mélodie de l’univers"
   },
   {
    "age": 3,
@@ -416,7 +423,8 @@
     "Cognitif",
     "Symbolique"
    ],
-   "pages": "114-116"
+   "pages": "114-116",
+   "odyssee": "−500 · Sun Tzu : maître de la guerre ou l’art de vaincre sans combattre"
   },
   {
    "age": 3,
@@ -444,7 +452,8 @@
     "Cognitif",
     "Social"
    ],
-   "pages": "120-123"
+   "pages": "120-123",
+   "odyssee": "−430 · Leucippe : à la découverte de l’invisible nature du monde"
   },
   {
    "age": 3,
@@ -472,7 +481,8 @@
     "Politique",
     "Symbolique"
    ],
-   "pages": "126-128"
+   "pages": "126-128",
+   "odyssee": "−442 · Sophocle, l’âme a ses lois que la loi ne connaît pas"
   },
   {
    "age": 3,
@@ -500,7 +510,8 @@
     "Politique",
     "Moral"
    ],
-   "pages": "131-133"
+   "pages": "131-133",
+   "odyssee": "−415 · Thucydide : l’histoire est un perpétuel recommencement"
   },
   {
    "age": 3,
@@ -514,7 +525,8 @@
     "Politique",
     "Violence symbolique"
    ],
-   "pages": "133-136"
+   "pages": "133-136",
+   "odyssee": "v. −390 · Calliclès : la loi est l’arme des faibles"
   },
   {
    "age": 3,
@@ -542,7 +554,8 @@
     "Politique",
     "Moral"
    ],
-   "pages": "139-141"
+   "pages": "139-141",
+   "odyssee": "−399 · Socrate : le philosophe sans livre"
   },
   {
    "age": 3,
@@ -556,7 +569,8 @@
     "Politique",
     "Social"
    ],
-   "pages": "142-145"
+   "pages": "142-145",
+   "odyssee": "v. −375 · La cité idéale de Platon : un modèle politique et moral"
   },
   {
    "age": 3,
@@ -570,7 +584,8 @@
     "Social",
     "Violence symbolique"
    ],
-   "pages": "145-147"
+   "pages": "145-147",
+   "odyssee": "−335 · Aristote, ou le philosophe qui partait du réel"
   },
   {
    "age": 3,
@@ -598,7 +613,8 @@
     "Philosophique",
     "Économique"
    ],
-   "pages": "151-154"
+   "pages": "151-154",
+   "odyssee": "v. −336/−335 · Diogène, une vie de chien, une pensée sans maître"
   },
   {
    "age": 3,
@@ -612,7 +628,8 @@
     "Social",
     "Politique"
    ],
-   "pages": "154-157"
+   "pages": "154-157",
+   "odyssee": "−300 · Euclide : aux origines de la géométrie"
   },
   {
    "age": 3,
@@ -668,7 +685,8 @@
     "Social",
     "Politique"
    ],
-   "pages": "167-170"
+   "pages": "167-170",
+   "odyssee": "v. −6/−4 · Jésus-Christ : fils de Dieu ?"
   },
   {
    "age": 3,
@@ -696,7 +714,8 @@
     "Social",
     "Cognitif"
    ],
-   "pages": "174-176"
+   "pages": "174-176",
+   "odyssee": "110 · *Panem et circenses* : nourrir, distraire, et faire de la mort un spectacle"
   },
   {
    "age": 3,
@@ -724,7 +743,8 @@
     "Symbolique",
     "Économique"
    ],
-   "pages": "180-188"
+   "pages": "180-188",
+   "odyssee": "312 · Il suffira d’un signe pour Constantin et le christianisme"
   },
   {
    "age": 4,
@@ -738,7 +758,8 @@
     "Politique",
     "Économique"
    ],
-   "pages": "188-191"
+   "pages": "188-191",
+   "odyssee": "v. 496 · Clovis : catholicisme et stratégie royale"
   },
   {
    "age": 4,
@@ -794,7 +815,8 @@
     "Culturel",
     "Économique"
    ],
-   "pages": "200-203"
+   "pages": "200-203",
+   "odyssee": "v. 1020 · Avicenne : la médecine, l’âme et l’existence"
   },
   {
    "age": 4,
@@ -864,7 +886,8 @@
     "Politique",
     "Social"
    ],
-   "pages": "217-220"
+   "pages": "217-220",
+   "odyssee": "1215 · La Magna Carta : nul n’est au-dessus de la loi"
   },
   {
    "age": 4,
@@ -878,7 +901,8 @@
     "Cognitif",
     "Symbolique"
    ],
-   "pages": "221-224"
+   "pages": "221-224",
+   "odyssee": "1270 · Thomas d’Aquin : la foi et la raison tenues ensemble"
   },
   {
    "age": 4,
@@ -892,7 +916,8 @@
     "Culturel",
     "Cognitif"
    ],
-   "pages": "227-230"
+   "pages": "227-230",
+   "odyssee": "1321 · Dante : l’Enfer comme forme de la faute"
   },
   {
    "age": 4,
@@ -934,7 +959,8 @@
     "Philosophique",
     "Social"
    ],
-   "pages": "234-237"
+   "pages": "234-237",
+   "odyssee": "1377 · Ibn Khaldoun : la science des empires qui meurent"
   },
   {
    "age": 4,
@@ -948,7 +974,8 @@
     "Politique",
     "Social"
    ],
-   "pages": "238-241"
+   "pages": "238-241",
+   "odyssee": "1429-1431 · Jeanne d’Arc : faire un roi, puis l’archive d’une conscience"
   },
   {
    "age": 4,
@@ -976,7 +1003,8 @@
     "Politique",
     "Culturel"
    ],
-   "pages": "244-247"
+   "pages": "244-247",
+   "odyssee": "v. 1454 · Gutenberg : la pensée rendue reproductible"
   },
   {
    "age": 4,
@@ -1018,7 +1046,8 @@
     "Moral",
     "Social"
    ],
-   "pages": "257-260"
+   "pages": "257-260",
+   "odyssee": "1513 · Machiavel : Le Prince et la vérité nue du pouvoir"
   },
   {
    "age": 5,
@@ -1060,7 +1089,8 @@
     "Symbolique",
     "Politique"
    ],
-   "pages": "266-269"
+   "pages": "266-269",
+   "odyssee": "1543 · Copernic : la Terre déchue de son centre"
   },
   {
    "age": 5,
@@ -1074,7 +1104,8 @@
     "Cognitif",
     "Moral"
    ],
-   "pages": "269-272"
+   "pages": "269-272",
+   "odyssee": "1576 · La Boétie : la servitude volontaire"
   },
   {
    "age": 5,
@@ -1102,7 +1133,8 @@
     "Technique",
     "Politique"
    ],
-   "pages": "275-278"
+   "pages": "275-278",
+   "odyssee": "1610 · Galilée : le ciel rouvert, et le procès qui voulut le refermer"
   },
   {
    "age": 5,
@@ -1130,7 +1162,8 @@
     "Cognitif",
     "Social"
    ],
-   "pages": "281-283"
+   "pages": "281-283",
+   "odyssee": "1637 · Descartes : le premier sol"
   },
   {
    "age": 5,
@@ -1158,7 +1191,8 @@
     "Social",
     "Philosophique"
    ],
-   "pages": "286-290"
+   "pages": "286-290",
+   "odyssee": "1651 · Hobbes : l’homme, le loup et le Léviathan"
   },
   {
    "age": 5,
@@ -1186,7 +1220,8 @@
     "Philosophique",
     "Symbolique"
    ],
-   "pages": "297-300"
+   "pages": "297-300",
+   "odyssee": "1687 · Newton : la pomme, la Lune et la loi unique"
   },
   {
    "age": 5,
@@ -1200,7 +1235,8 @@
     "Économique",
     "Inégalités"
    ],
-   "pages": "294-297"
+   "pages": "294-297",
+   "odyssee": "1690 · Locke : la page blanche et le gouvernement par consentement"
   },
   {
    "age": 5,
@@ -1214,7 +1250,8 @@
     "Juridique",
     "Temporel"
    ],
-   "pages": "300-303"
+   "pages": "300-303",
+   "odyssee": "1748 · Montesquieu : du regard oblique à l’architecture des pouvoirs"
   },
   {
    "age": 5,
@@ -1242,7 +1279,8 @@
     "Politique",
     "Social"
    ],
-   "pages": "307-309"
+   "pages": "307-309",
+   "odyssee": "1759 · Voltaire : cultiver son jardin, ou la sagesse du réel"
   },
   {
    "age": 5,
@@ -1284,7 +1322,8 @@
     "Social",
     "Philosophique"
    ],
-   "pages": "316-319"
+   "pages": "316-319",
+   "odyssee": "1762 · Rousseau : de l’état de nature à l’état civil"
   },
   {
    "age": 5,
@@ -1312,7 +1351,8 @@
     "Social",
     "Cognitif"
    ],
-   "pages": "322-325"
+   "pages": "322-325",
+   "odyssee": "1776 · Adam Smith : la main invisible et les limites du marché"
   },
   {
    "age": 5,
@@ -1340,7 +1380,8 @@
     "Politique",
     "Temporel"
    ],
-   "pages": "329-337"
+   "pages": "329-337",
+   "odyssee": "1784 · Kant : la raison contre le trône, le droit contre la discorde"
   },
   {
    "age": 6,
@@ -1368,7 +1409,8 @@
     "Violence symbolique",
     "Juridique"
    ],
-   "pages": "341-344"
+   "pages": "341-344",
+   "odyssee": "1789 · La Déclaration des droits de l’homme : le fondement sans fond"
   },
   {
    "age": 6,
@@ -1382,7 +1424,8 @@
     "Moral",
     "Technique"
    ],
-   "pages": "344-347"
+   "pages": "344-347",
+   "odyssee": "1792 · La guillotine : l’égalité jusque dans la mort"
   },
   {
    "age": 6,
@@ -1410,7 +1453,8 @@
     "Violence symbolique",
     "Juridique"
    ],
-   "pages": "352-355"
+   "pages": "352-355",
+   "odyssee": "1791 · Olympe de Gouges : l’universel pris au mot"
   },
   {
    "age": 6,
@@ -1452,7 +1496,8 @@
     "Moral",
     "Social"
    ],
-   "pages": "362-365"
+   "pages": "362-365",
+   "odyssee": "1793 · La Terreur : quand la Révolution se dévore"
   },
   {
    "age": 6,
@@ -1466,7 +1511,8 @@
     "Inégalités",
     "Violence symbolique"
    ],
-   "pages": "365-369"
+   "pages": "365-369",
+   "odyssee": "1802 · Le sacre de l’ordre : la Légion d’honneur et le Code civil"
   },
   {
    "age": 6,
@@ -1508,7 +1554,8 @@
     "Économique",
     "Violence symbolique"
    ],
-   "pages": "376-379"
+   "pages": "376-379",
+   "odyssee": "1848 · Abolir l’esclavage : la morale, le capital et le travail libre"
   },
   {
    "age": 6,
@@ -1522,7 +1569,8 @@
     "Social",
     "Violence symbolique"
    ],
-   "pages": "379-382"
+   "pages": "379-382",
+   "odyssee": "1840 · Tocqueville : la démocratie et le despotisme doux"
   },
   {
    "age": 6,
@@ -1620,7 +1668,8 @@
     "Politique",
     "Économique"
    ],
-   "pages": "404-407"
+   "pages": "404-407",
+   "odyssee": "1867 · Marx : le capital et l’extraction du travail vivant"
   },
   {
    "age": 6,
@@ -1648,7 +1697,8 @@
     "Social",
     "Mémoriel"
    ],
-   "pages": "411-414"
+   "pages": "411-414",
+   "odyssee": "1870 · La République dans le sang : Sedan, la Commune"
   },
   {
    "age": 6,
@@ -1662,7 +1712,8 @@
     "Politique",
     "Violence symbolique"
    ],
-   "pages": "414-417"
+   "pages": "414-417",
+   "odyssee": "1885 · Ferry : l’école qui libère, l’empire qui domine"
   },
   {
    "age": 6,
@@ -1704,7 +1755,8 @@
     "Philosophique",
     "Politique"
    ],
-   "pages": "422-425"
+   "pages": "422-425",
+   "odyssee": "1882 · Nietzsche : Dieu est mort, l’homme reste à créer"
   },
   {
    "age": 6,
@@ -1718,7 +1770,8 @@
     "Politique",
     "Moral"
    ],
-   "pages": "425-428"
+   "pages": "425-428",
+   "odyssee": "1898 · « J’accuse » : Dreyfus et la naissance de l’intellectuel"
   },
   {
    "age": 6,
@@ -1760,7 +1813,8 @@
     "Énergétique",
     "Technique"
    ],
-   "pages": "440-443"
+   "pages": "440-443",
+   "odyssee": "1905 · Einstein : l’équation et le monde"
   },
   {
    "age": 7,
@@ -1802,7 +1856,8 @@
     "Politique",
     "Social"
    ],
-   "pages": "450-454"
+   "pages": "450-454",
+   "odyssee": "1922 · La fabrique du consentement"
   },
   {
    "age": 7,
@@ -1830,7 +1885,8 @@
     "Social",
     "Technique"
    ],
-   "pages": "458-460"
+   "pages": "458-460",
+   "odyssee": "1928 · La pénicilline : une découverte hasardeuse, une révolution médicale"
   },
   {
    "age": 7,
@@ -1844,7 +1900,8 @@
     "Économique",
     "Politique"
    ],
-   "pages": "460-464"
+   "pages": "460-464",
+   "odyssee": "1936 · Le Front populaire : l’été où le travail réclama sa part"
   },
   {
    "age": 7,
@@ -1872,7 +1929,8 @@
     "Temporel",
     "Moral"
    ],
-   "pages": "468-472"
+   "pages": "468-472",
+   "odyssee": "1938 · L’apaisement et sa faillite : de Munich à Prague"
   },
   {
    "age": 7,
@@ -1900,7 +1958,8 @@
     "Géopolitique",
     "Économique"
    ],
-   "pages": "476-479"
+   "pages": "476-479",
+   "odyssee": "1940 · Churchill : la vérité pour seule arme"
   },
   {
    "age": 7,
@@ -1928,7 +1987,8 @@
     "Économique",
     "Administratif"
    ],
-   "pages": "482-486"
+   "pages": "482-486",
+   "odyssee": "1945 · Sécurité sociale : la solidarité instituée"
   },
   {
    "age": 7,
@@ -1942,7 +2002,8 @@
     "Géopolitique",
     "Mémoriel"
    ],
-   "pages": "486-491"
+   "pages": "486-491",
+   "odyssee": "1947 · Exodus : le bateau qui força le monde à regarder"
   },
   {
    "age": 7,
@@ -1970,7 +2031,8 @@
     "Cognitif",
     "Philosophique"
    ],
-   "pages": "495-498"
+   "pages": "495-498",
+   "odyssee": "1949 · Shannon : l’information sans le sens"
   },
   {
    "age": 7,
@@ -2095,7 +2157,8 @@
     "Social",
     "Économique"
    ],
-   "pages": "527-531"
+   "pages": "527-531",
+   "odyssee": "1968 · Mai 68 : l’imagination au pouvoir contre l’ordre sans imagination"
   },
   {
    "age": 7,
@@ -2109,7 +2172,8 @@
     "Symbolique",
     "Économique"
    ],
-   "pages": "531-535"
+   "pages": "531-535",
+   "odyssee": "1969 · Apollo 11 : décrocher la Lune, revenir vers la Terre"
   },
   {
    "age": 7,
@@ -2136,7 +2200,8 @@
     "Économique",
     "Géopolitique"
    ],
-   "pages": "539-542"
+   "pages": "539-542",
+   "odyssee": "1971 · Le dollar : le privilège exorbitant et son crépuscule annoncé"
   },
   {
    "age": 7,
@@ -2164,7 +2229,8 @@
     "Cognitif",
     "Violence symbolique"
    ],
-   "pages": "546-548"
+   "pages": "546-548",
+   "odyssee": "1979 · Bourdieu : comment nos goûts révèlent notre position sociale"
   },
   {
    "age": 7,
@@ -2206,7 +2272,8 @@
     "Politique",
     "Social"
    ],
-   "pages": "553-556"
+   "pages": "553-556",
+   "odyssee": "1991 · L’effondrement de l’URSS : le réformateur et le fossoyeur"
   },
   {
    "age": 7,
@@ -2276,7 +2343,8 @@
     "Politique",
     "Social"
    ],
-   "pages": "574-578"
+   "pages": "574-578",
+   "odyssee": "2008 · La crise des subprimes : la dette privée socialisée"
   },
   {
    "age": 7,

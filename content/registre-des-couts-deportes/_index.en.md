@@ -5,7 +5,7 @@ aliases:
   - /en/register-of-deported-costs/
 description: "The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY: the book’s milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, each brought down to the order created and the debt displaced—elsewhere, later, or onto others. All 168 milestones freely browsable, organized by the book’s seven ages."
 date: 2026-08-15
-lastmod: 2026-10-26
+lastmod: 2026-11-01
 og_title: "The Register of Offloaded Costs — documented chronology — S. Lalut"
 faq:
   - question: "What is the Register of Offloaded Costs?"
@@ -23,6 +23,8 @@ faq:
   - question: "Where can I read the full Register of Offloaded Costs?"
     answer: "On this page, freely browsable and anchored entry by entry: all 168 milestones of ANTHROPY – A Big History of Civilization's Hidden Costs (2026, 644 pages). The book develops each milestone as a chapter, sums up each age in an “order created / disorder displaced” diagram, and draws the overall trajectory in its afterword. The book points to this page through a QR code (“Going Further”, p. 631). The French version is browsable at /registre-des-couts-deportes/."
 journal:
+  - date: 2026-11-01
+    texte: "For 68 milestones, a line “The idea in its history” points to the stop in L’Odyssée des idées (in French) that deals with the same idea, thinker or event; each pair checked against the text of the book, no entry of the Register rewritten."
   - date: 2026-10-26
     texte: "The three missing milestones added (the Olmecs, the Odyssey, Gutenberg), written from the book's text: the Register now holds all 168 milestones. The other 165 entries checked against the corrected edition; 41 realigned where they contradicted the book, claimed more than it does, or attributed to it a fact it does not contain (for example: crossing the Rubicon opens the civil war rather than ending it; hygiene “probably” accounts for a major part of the fall in mortality, not all of it). The same day, each milestone placed in the age of its chapter (twenty changed age: Clovis, the milestones from 1789 to 1793, those from 1905 to 1945) and given its page numbers; all entries read against the English edition (644 pages): fifty-one titles aligned on the book’s chapter titles, twenty entries corrected (for example: Erasmus supplies “one of the tools” of the Reformation, not its tools)."
   - date: 2026-10-25
@@ -47,6 +49,7 @@ Each entry applies the grid of the anthropic hypothesis—[social systems displa
 - **Order created**—the visible, immediate benefit, the structure gained: food security, written memory, monetary trust, coordination at a distance;
 - **Debt displaced**—the invisible cost that this order moves out of its visible perimeter: material dependence, social exclusion, charges passed on to later generations;
 - **Categories**—the nature of the transfer: energetic, social, cognitive, political, ecological, symbolic…
+- **The idea in its history**—for 68 milestones, the stop in [*L’Odyssée des idées*](/livres/lodyssee-des-idees/) (in French) that deals with the same idea, thinker or event: the Register keeps the account of its displaced cost, the stop tells its history.
 
 The Register does not tell the story of progress: it keeps its **accounts**. What other narratives present as solutions appears here as displacements—every solution incurs a debt, and history is the sequence of these transfers.
 

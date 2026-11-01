@@ -2,7 +2,7 @@
 title: "Le Registre des coûts déportés"
 description: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : les jalons du livre, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains, ramenés chacun à l'ordre créé et à la dette déportée — le désordre déplacé ailleurs, plus tard ou sur d'autres. Les 168 jalons en consultation libre, classés selon les sept âges du livre."
 date: 2026-08-15
-lastmod: 2026-10-26
+lastmod: 2026-11-01
 og_title: "Le Registre des coûts déportés — chronologie documentée — S. Lalut"
 faq:
   - question: "Qu'est-ce que le Registre des coûts déportés ?"
@@ -20,6 +20,8 @@ faq:
   - question: "Où trouver le Registre des coûts déportés complet ?"
     answer: "Sur cette page, en consultation libre : les 168 jalons du livre ANTHROPIE — Ordre ici. Dette ailleurs (2025, 630 pages). Le livre déploie chaque jalon en chapitre, résume chaque âge par un schéma « ordre créé / désordre déporté » et tire la trajectoire d'ensemble dans sa postface. Le livre renvoie à cette page par un QR code (« Pour aller plus loin », p. 619)."
 journal:
+  - date: 2026-11-01
+    texte: "Pour 68 jalons, une ligne « L’idée dans son histoire » renvoie à l’escale de L’Odyssée des idées qui traite la même idée, le même penseur ou le même événement ; chaque paire vérifiée sur le texte du livre, aucune entrée du Registre réécrite."
   - date: 2026-10-26
     texte: "Les trois jalons absents ajoutés (Olmèques, Odyssée, Gutenberg), rédigés sur le texte du livre : le Registre compte désormais les 168 jalons. Les 165 autres entrées relues contre l'édition corrigée ; 41 réalignées là où elles contredisaient le livre, affirmaient plus que lui ou lui prêtaient un fait qu'il ne porte pas (par exemple : le Rubicon ouvre la guerre civile, il ne la clôt pas ; l'hygiène explique « sans doute une part majeure » de la baisse de la mortalité, non toute). Le même jour, chaque jalon rangé dans l'âge de son chapitre (vingt changeaient d'âge : Clovis, les jalons de 1789 à 1793, ceux de 1905 à 1945) et pourvu de sa pagination ; relecture contre l'édition anglaise, qui a fait corriger quatorze entrées françaises de plus là où elles durcissaient le livre (par exemple : Érasme livre « l'un des outils » de la Réforme, non ses outils)."
   - date: 2026-10-25
@@ -44,6 +46,7 @@ Chaque entrée applique la grille de l'hypothèse anthropique — [les systèmes
 - **Ordre créé** — ce que l'innovation stabilise&nbsp;: sécurité alimentaire, mémoire écrite, confiance monétaire, coordination à distance&nbsp;;
 - **Dette déportée** — le coût que cet ordre déplace hors de son périmètre visible&nbsp;: dépendance matérielle, exclusion sociale, charge reportée sur les générations suivantes&nbsp;;
 - **Catégories** — la nature du transfert&nbsp;: énergétique, sociale, cognitive, politique, écologique, symbolique…
+- **L’idée dans son histoire** — pour 68 jalons, l’escale de [*L’Odyssée des idées*](/livres/lodyssee-des-idees/) qui traite la même idée, le même penseur ou le même événement&nbsp;: le Registre en tient le coût déporté, l’escale en raconte l’histoire.
 
 Le Registre ne raconte pas l'histoire du progrès&nbsp;: il en tient la **comptabilité**. Ce que d'autres récits présentent comme des solutions y apparaît comme des déplacements — chaque solution contracte une dette, et l'histoire est la suite de ces transferts.
 
