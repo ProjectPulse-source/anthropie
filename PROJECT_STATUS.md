@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-01 — Page « À quoi tient l'obéissance ? Le pouvoir, de Machiavel à Foucault » (parcours pilote)
+
+Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 4). FR `/le-pouvoir-de-machiavel-a-foucault/` (pas
+d'EN : livre en français seul), bloc `guides`, forme `corpus`, livre *L'Odyssée des idées*. Sélection = la carte « Pouvoir »
+du broché en vente (onze sentiers, trois échos ; le .docx « FINAL_Poli », avec Damiens, n'est pas la version publiée).
+Neuf sections à grille uniforme (l'idée, le texte, la limite, dans le livre), trois échos, tableau « chaque ressort porte
+sa limite ». Textes primaires relus : Suétone, *Il Principe* XV/XVII/XVIII (dont « si guarda al fine », origine du
+contresens), Plaute, dédicace du *De Cive* (1651), *Leviathan* XIII, Dangeau t. XVI p. 128, Constitution de 1791, Marx
+1850 et 1852, loi 2013-672. Tibère retiré (non retrouvé) ; « There is no alternative » d'après le livre.
+- **Contrôles** : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 75/75 ; recette 320-1600 OK ; instantané de
+  relecture, `refonte` posé. `static/llms.txt` : sans changement.
+- **Ouvert** : contre-expertise de la page ; accord de l'auteur et push.
+
 ### 2026-11-01 — Page « Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ? »
 
 Programme « sujets → livres » (arbitrage `PRO-20261101-060949`, point 3). FR `/citations-celebres-verifiees/` (pas d'EN :
