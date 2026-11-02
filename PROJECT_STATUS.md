@@ -394,6 +394,18 @@ FR (« détectée, non indexée »). 77 % des impressions des ressources (42 418
   `audit-liens-build.py` 0 critique ; `check-all --reseau` sans échec (Wikidata 503, non conclu).
 - **Ouvert, geste de l'auteur** : demander l'indexation dans Search Console des 9 URL ignorées.
 
+### 2026-11-02 — volet 1 du dossier dette débloqué (édition Eurostat du 21/10/2026)
+
+- **Cause.** `update_dette_dynamique.py` refusait l'édition du 21/10/2026 depuis sa parution : en 2025, le taux implicite
+  (1,99 %) repasse légèrement au-dessus de la croissance nominale (1,90 %). La phrase « la croissance l'emporte chaque
+  année depuis 2017, sauf en 2020 » était devenue fausse ; la garde a bloqué à bon droit, sans signal sur le site.
+- **Correctif** (commit `85686d8`). Phrase réécrite (« jusqu'en 2024 », 2025 dit) ; bascule hors années voisines de zéro ;
+  garde resserrée et vue mordre ; notification et dates d'édition en jetons ; phrase INSEE selon l'écart ; journal du
+  2/11 sur la page. Page des formules : valeur du printemps figée pour le verdict Mélenchon.
+- **En attente.** Volet 5 (`/dette-publique-peut-elle-baisser/`) : prose rendue robuste sur la branche locale
+  `attente/volet5-eurostat-oct2026` (pays écartés, rang de la croissance, Finlande, Irlande) ; ne peut écrire tant que le
+  volet 4 (`update_dette_monde.py`) attend les données 2025 du Danemark (contrôle croisé de la variation 2025).
+
 ### 2026-11-02 — page « Que valent les formules du débat sur la dette ? » (prolongement du dossier dette)
 
 - **Page** `/formules-du-debat-sur-la-dette/` · `/en/public-debt-debate-claims/`, prolongement du dossier dette
