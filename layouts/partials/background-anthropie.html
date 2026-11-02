@@ -53,4 +53,6 @@
       <circle cx="1490" cy="160" r="16"/>
     </g>
   </svg>
+  {{- /* Les ronds ne passent pas sous le contenu (arbitrage du 02/11/2026) ; sans JavaScript, ils restent. */ -}}
+  <script>(function(){var f=document.querySelector('.anthropie-bg');function r(){var w=document.documentElement.clientWidth,g=Math.min(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-max'),10)-64,w-64),a=(w-g)/2-8,b=w-a;f.querySelectorAll('circle').forEach(function(c){c.style.display='';var q=c.getBoundingClientRect();if(q.right>a&&q.left<b)c.style.display='none'})}r();addEventListener('resize',r)})();</script>
 </div>

@@ -12,6 +12,12 @@
 }
 @media (max-width: 768px) { :root { --marge-main: 20px; } }
 @media (max-width: 600px) { :root { --marge-colonne: 0px; } }
+// Grille de l'arbitrage du 02/11/2026 : contenu sur 1 216 px, aligné sur le bandeau (une seule marge, celle de .site-main) ;
+// texte à 18 px et borné à --largeur-texte, figures et onglets libres. L'impression garde ses réglages.
+:root { --largeur-texte: 880px; }
+@media (min-width: 769px) { :root { --marge-colonne: 0px; } }
+@media (min-width: 1024px) { :root { --fs-body: 18px; } }
+@media print { :root { --fs-body: 16px; --lh-body: 1.7; } }
 
 .site-wrapper {
   min-height: 100vh;
@@ -26,6 +32,10 @@
   padding: 3rem var(--marge-main);
   width: 100%;
 }
+
+.site-main :is(p, li, blockquote),
+.home-section > :is(p, ul, ol, h2, h3, details, .resultat-phrase, .retenir, .faq-visible, .revisions),
+.article__body > :is(p, ul, ol, h2, h3, details, .notions, .trois-questions) { max-width: var(--largeur-texte); }
 
 .section-title {
   font-family: var(--font-serif);

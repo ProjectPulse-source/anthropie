@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Grille élargie et texte à 18 px (version D de la maquette)
+
+Décision de l'auteur après essai sur son écran (1 920 × 1 080) : structure actuelle, texte de 18 px, contenu plus large,
+ronds retirés sous le contenu. La colonne étroite proposée (versions A et B, 600 px) a été écartée par lui. Arbitrage et
+maquette : `docs/ARBITRAGE_ERGONOMIE_2026-11-02.md`, `D:\CONTRE_EXPERTISE\2026-11-02_ERGONOMIE_SITE\MAQUETTE\`.
+
+- Contenu sur 1 216 px, largeur du bandeau (`--container-max` à 1 280 px, marge simple) ; texte borné à 880 px
+  (`--largeur-texte`), environ 121 signes par ligne contre 147 ; figures jusqu'à 960 px ; chapô à 810 px.
+- Texte à 18 px dès 1 024 px, 17 px en dessous, interligne 1,65 ; l'impression garde 16 px et 1,7.
+- Fond : un script du gabarit masque les ronds situés sous la grille. Sans JavaScript, ils restent.
+- Hors grille, déclaré : les 4 pages `offre-culturelle`, à gabarit propre.
+
 ### 2026-11-02 — Typographie appliquée au site construit, FR et EN
 
 Demande de l'auteur (01/11) : règles éditoriales respectées et appliquées de façon constante, sur les deux langues.

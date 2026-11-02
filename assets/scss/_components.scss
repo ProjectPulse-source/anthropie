@@ -194,7 +194,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   border-top: 1px solid var(--color-rule-soft);
 }
 .site-footer__inner {
-  max-width: 1120px; margin: 0 auto;
+  max-width: calc(var(--container-max) - 64px); margin: 0 auto;
   display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
 }
 @media (max-width: 768px) {
@@ -215,7 +215,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   li { margin: 0 0 6px; }
 }
 .site-footer__legal {
-  max-width: 1120px; margin: 32px auto 0;
+  max-width: calc(var(--container-max) - 64px); margin: 32px auto 0;
   padding-top: 24px; border-top: 1px solid var(--color-rule-ghost);
   font-size: 11px; color: var(--color-text-faint);
   p { margin: 0; }
@@ -457,7 +457,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 
 // ----- Figure du ciseau (page /cout-de-la-dette-publique/) -----
 .figure-ciseau { margin: 32px 0; }
-.figure-ciseau img { width: 100%; max-width: 720px; height: auto; display: block; }
+.figure-ciseau img { width: 100%; max-width: 960px; height: auto; display: block; }
 // Téléphone (10/10/2026, contre-expertise de la page « Niveau », P1 de recette à 320 px) : les figures composées pour
 // le téléphone (<picture>, versions -m) prennent presque toute la largeur — 12 px de marge, quelle que soit celle du
 // conteneur (--marge-main + --marge-colonne, _layout.scss) — pour qu'aucun texte n'y descende sous 12 px affichés, même à

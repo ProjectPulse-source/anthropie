@@ -6,7 +6,7 @@
 .home-hero {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--hero-pad-top) 2rem var(--hero-pad-bottom);
+  padding: var(--hero-pad-top) var(--marge-colonne) var(--hero-pad-bottom);
   display: grid;
   grid-template-columns: 1fr 340px;
   gap: 3rem;
