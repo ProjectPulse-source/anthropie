@@ -521,7 +521,7 @@ def carte_monde() -> None:
     carte("og-dette-monde.jpg",
           ["Même dette,", "coût × %s" % A["j_rapport"]],
           "Le stock ne dit pas ce que la dette coûte.",
-          "Eurostat %s · 27 pays de l'UE · CC BY 4.0" % j["meta"]["annee"],
+          "Eurostat %s · %d pays de l'UE · CC BY 4.0" % (j["meta"]["annee"], len(rows)),
           "stephane-lalut.com/dette-publique-comparaison-internationale/",
           lambda d: figure_jumeaux(d, rows, j0["bas"], j0["haut"]),
           cle)
@@ -537,7 +537,7 @@ def carte_monde() -> None:
     carte("og-dette-monde-en.jpg",
           ["Same debt,", "burden × %s" % E["j_rapport"]],
           "The stock does not say what the debt costs.",
-          "Eurostat %s · 27 EU countries · CC BY 4.0" % j["meta"]["annee"],
+          "Eurostat %s · %d EU countries · CC BY 4.0" % (j["meta"]["annee"], len(rows)),
           "stephane-lalut.com/en/public-debt-international-comparison/",
           lambda d: figure_jumeaux(d, rows, j0["bas"], j0["haut"], "en"),
           cle_en)

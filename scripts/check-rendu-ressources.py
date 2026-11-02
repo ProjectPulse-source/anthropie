@@ -62,13 +62,18 @@ MOTIFS = [
     ("double ponctuation", None, r"[?!]\s?\.(?!\.)|(?<!\.)\.\s?\.(?!\.)|,\s?,", "deux signes de ponctuation finale"),
     ("tournure proscrite", "fr", r"\b(?:a|ont|avait|avaient|aurait|auraient)\s+monté\b|\bpartis de plus de\b",
      "« a monte » -> « a augmente » ; « partis de plus de » -> « dont la dette depassait »"),
+    # 02/11/2026 : un jeton de générateur portant « &nbsp; » s'affichait en toutes lettres (le shortcode l'échappe) ;
+    # même classe que l'incident du 20/09/2026 (« &amp;nbsp; » sur dix pages). Écrire l'insécable  , jamais l'entité.
+    ("entite affichee", None, r"&(?:amp;)*(?:nbsp|thinsp|#160|#x0*a0);",
+     "une entite HTML s'affiche en toutes lettres : ecrire le caractere insecable dans le jeton, pas l'entite"),
 ]
 _MOTIFS = [(i, l, re.compile(m), a) for i, l, m, a in MOTIFS]
 # Un exemple fautif par motif, injecté par --temoin (le témoin positif DOIT mordre sur chacun).
 EXEMPLES = {"jeton non resolu": "La dette atteint {dette.fin} %.", "signe contraire au verbe": "Le ratio gagne +7,7 points.",
             "sign contradicts verb": "Deficits added +6.1 points.", "accord de point": "Un écart de 1,5 points.",
             "point agreement": "A gap of 0.1 point.", "em dash then comma": "the levies on it —, health",
-            "double ponctuation": "Est-ce vrai ?.", "tournure proscrite": "Les prix ont monté de 19 %."}
+            "double ponctuation": "Est-ce vrai ?.", "tournure proscrite": "Les prix ont monté de 19 %.",
+            "entite affichee": "aucun n'est écarté par le contrôle&nbsp;: chaque année"}
 
 _IMG = re.compile(r"<img\b[^>]*?\bsrc=\"?(?:https?://[^/\s\"]+)?/img/([^\"\s>]+?)\.svg[\"\s>]")
 

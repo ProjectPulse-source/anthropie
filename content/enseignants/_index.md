@@ -101,7 +101,7 @@ d'accompagnement du chapitre pose la question de la soutenabilité de la dette e
 **Durée**&nbsp;: 20&nbsp;minutes. **Support**&nbsp;: le nuage de points ci-dessous, tiré de [Dette publique&nbsp;: pourquoi
 100&nbsp;% du PIB ne pèse pas partout de la même façon](/dette-publique-comparaison-internationale/#meme-dette)
 
-{{< figure-svg fichier="dette-monde-charge" alt="Nuage de points pour les 27 pays de l'Union européenne : en abscisse la dette rapportée au PIB, en ordonnée les intérêts en pourcentage des recettes publiques. Des pays de dette voisine se situent à des hauteurs très différentes." >}}Dette de départ et part des recettes publiques consacrée aux intérêts, Union européenne, {{< monde-val "annee" >}} (Eurostat).{{< /figure-svg >}}
+{{< figure-svg fichier="dette-monde-charge" alt="Nuage de points pour les pays de l'Union européenne dont Eurostat publie les recettes : en abscisse la dette rapportée au PIB, en ordonnée les intérêts en pourcentage des recettes publiques. Des pays de dette voisine se situent à des hauteurs très différentes." >}}Dette de départ et part des recettes publiques consacrée aux intérêts, Union européenne, {{< monde-val "annee" >}} (Eurostat).{{< /figure-svg >}}
 
 **Fiche élève**
 

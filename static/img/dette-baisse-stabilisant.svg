@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 387" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bs-t bs-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="bs-t">France : le solde primaire observé et celui qui aurait stabilisé la dette</title><desc id="bs-d">Deux courbes annuelles de 1996 à 2025, en % du PIB : le solde primaire observé, positif quatre fois (1998 à 2001), et le solde primaire qui aurait stabilisé le ratio de dette, qui va de −7,3 en 2021 à +6,1 en 2020. En 2025, le solde observé est de −2,9 et le solde stabilisant de +0,0 : un écart de 2,9 points de PIB.</desc>
+<title id="bs-t">France : le solde primaire observé et celui qui aurait stabilisé la dette</title><desc id="bs-d">Deux courbes annuelles de 1996 à 2025, en % du PIB : le solde primaire observé, positif quatre fois (1998 à 2001), et le solde primaire qui aurait stabilisé le ratio de dette, qui va de −7,3 en 2021 à +6,1 en 2020. En 2025, le solde observé est de −2,9 et le solde stabilisant de +0,1 : un écart de 3,0 points de PIB.</desc>
 <rect width="720" height="387" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France : le solde primaire observé et celui qui aurait stabilisé la dette</text>
 <line x1="40" y1="290.0" x2="710" y2="290.0" stroke="#dcd8d3" stroke-width="0.6"/>
@@ -22,7 +22,7 @@
 <text x="34" y="110.9" font-size="11" fill="#96928f" text-anchor="end">+6 %</text>
 <line x1="40" y1="84.0" x2="710" y2="84.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="34" y="88.0" font-size="11" fill="#96928f" text-anchor="end">+8 %</text>
-<polyline points="51.2,151.8 73.5,157.9 95.8,166.7 118.2,165.2 140.5,179.1 162.8,165.9 185.2,161.7 207.5,161.6 229.8,176.0 252.2,173.1 274.5,181.3 296.8,180.3 319.2,162.3 341.5,124.1 363.8,175.5 386.2,176.1 408.5,158.2 430.8,164.8 453.2,167.2 475.5,176.1 497.8,168.9 520.2,184.4 542.5,185.9 564.8,193.8 587.2,105.7 609.5,259.2 631.8,224.5 654.2,234.9 676.5,195.4 698.8,175.7" fill="none" stroke="#8a8781" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="51.2,151.8 73.5,157.9 95.8,166.7 118.2,165.2 140.5,179.1 162.8,165.9 185.2,161.7 207.5,161.6 229.8,176.0 252.2,173.1 274.5,181.3 296.8,180.3 319.2,162.3 341.5,124.1 363.8,175.5 386.2,176.1 408.5,158.2 430.8,164.8 453.2,167.2 475.5,176.1 497.8,168.9 520.2,184.4 542.5,185.9 564.8,193.8 587.2,105.7 609.5,259.2 631.8,224.5 654.2,234.9 676.5,195.4 698.8,174.5" fill="none" stroke="#8a8781" stroke-width="2.2" stroke-linejoin="round"/>
 <polyline points="51.2,178.8 73.5,177.4 95.8,164.2 118.2,158.0 140.5,156.7 162.8,156.8 185.2,177.2 207.5,189.4 229.8,184.2 252.2,184.6 274.5,176.2 296.8,179.0 319.2,182.8 341.5,230.9 363.8,228.3 386.2,205.2 408.5,204.6 430.8,205.4 453.2,202.8 475.5,196.9 497.8,196.9 520.2,193.6 542.5,181.9 564.8,185.6 587.2,263.1 609.5,235.0 631.8,207.9 654.2,215.3 676.5,218.0 698.8,208.4" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linejoin="round"/>
 <text x="140.5" y="306" font-size="11" fill="#55524f" text-anchor="middle">2000</text>
 <text x="252.2" y="306" font-size="11" fill="#55524f" text-anchor="middle">2005</text>
@@ -34,14 +34,14 @@
 <text x="580.2" y="109.7" font-size="11" fill="#55524f" text-anchor="end">2020 : recul du PIB</text>
 <circle cx="609.5" cy="259.2" r="3.6" fill="#8a8781" stroke="#ffffff" stroke-width="1"/>
 <text x="614.5" y="279.2" font-size="11" fill="#55524f" text-anchor="end">2021 : rebond du PIB</text>
-<line x1="704.8" y1="175.7" x2="704.8" y2="208.4" stroke="#55524f" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="698.8" cy="175.7" r="3.6" fill="#8a8781" stroke="#ffffff" stroke-width="1"/>
+<line x1="704.8" y1="174.5" x2="704.8" y2="208.4" stroke="#55524f" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="698.8" cy="174.5" r="3.6" fill="#8a8781" stroke="#ffffff" stroke-width="1"/>
 <circle cx="698.8" cy="208.4" r="3.6" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
 <line x1="0" y1="41" x2="18" y2="41" stroke="#eb6834" stroke-width="2.6"/>
 <text x="23" y="45" font-size="11" fill="#55524f">solde primaire observé</text>
 <line x1="170" y1="41" x2="188" y2="41" stroke="#8a8781" stroke-width="2.2"/>
 <text x="193" y="45" font-size="11" fill="#55524f">solde qui aurait stabilisé le ratio cette année-là, hors autres ajustements</text>
-<text x="0" y="66" font-size="11" fill="#26262f">En 2025, l'écart entre les deux courbes (pointillé) : 2,9 points de PIB.</text>
+<text x="0" y="66" font-size="11" fill="#26262f">En 2025, l'écart entre les deux courbes (pointillé) : 3,0 points de PIB.</text>
 <line x1="0" y1="322.0" x2="720" y2="322.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="337.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025</text>
 <text class="pied-note" x="0" y="351.0" font-size="11" fill="#55524f">En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin</text>

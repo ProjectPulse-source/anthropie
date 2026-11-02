@@ -1,18 +1,18 @@
-# relu le 2026-10-18 ; texte servi de /en/can-public-debt-come-down/, build de de89b3d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-02 ; texte servi de /en/can-public-debt-come-down/, build de 8aa15f6 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
-In Portugal, public debt went from 235 to 275 billion euros from end-2015 to end-2025, and its weight from 131.0% to 89.7% of GDP.
-In France, it rose by 18.6 points over the same period: general government spent more than it took in, even leaving interest aside, and that deficit weighed more than the help from interest rates and growth.
-Page updated 18 October 2026 · revisions
+In Portugal, public debt went from 235 to 275 billion euros from end-2015 to end-2025, and its weight from 131.0% to 89.2% of GDP.
+In France, it rose by 18.7 points over the same period: general government spent more than it took in, even leaving interest aside, and that deficit weighed more than the help from interest rates and growth.
+Page updated 2 November 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
-Data last updated 16 October 2026 General government, Eurostat series from 1996 to 2025.
+Data last updated 2 November 2026 General government, Eurostat series from 1996 to 2025.
 Download: CSV · JSON · method
 The weight of debt, not its amount
 The debt ratio sets what general government owes against the wealth produced in a year, gross domestic product (GDP), measured in current euros, known as nominal GDP.
-It falls as soon as nominal GDP grows faster than the debt: in Portugal, from end-2015 to end-2025, public debt went from 235 to 275 billion euros while its weight fell from 131.0% to 89.7% of GDP.
+It falls as soon as nominal GDP grows faster than the debt: in Portugal, from end-2015 to end-2025, public debt went from 235 to 275 billion euros while its weight fell from 131.0% to 89.2% of GDP.
 That fall followed an assistance and adjustment programme whose cost to the Portuguese these series do not measure (limits).
 Every year, three terms move this ratio, set out in Why does French public debt rise?:
 interest and growth: the interest paid pushes the ratio up, nominal GDP growth, in volume and in prices, pulls it down; the page calls the net result “the interest-growth effect”;
@@ -26,7 +26,7 @@ France: three decades, and three years apart
 What pushed the French debt-to-GDP ratio up or down, by decade, in points of GDP cumulated (Eurostat).
 Orange: what pushes it up; grey: what pulls it down; blue: the change, the sum of the three.
 The finding in one sentence.
-From 2016 to 2025, primary deficits added 30.6 points to the French debt ratio, the interest-growth effect, concentrated in 2021-2023, took off 15.1, and other adjustments added 3.1: the net result is a rise of 18.6 points.
+From 2016 to 2025, primary deficits added 30.6 points to the French debt ratio, the interest-growth effect, concentrated in 2021-2023, took off 15.0, and other adjustments added 3.1: the net result is a rise of 18.7 points.
 This is an accounting decomposition: it says through which term the debt moved, not why the deficits existed.
 The two previous decades.
 From 1996 to 2015, the ratio goes from 57.8% to 97.0% of GDP: the interest-growth effect first pushes the ratio up, with the budget excluding interest close to balance, then primary deficits take over, with the 2008-2009 financial crisis.
@@ -40,41 +40,41 @@ The period contains the 2008-2009 financial crisis.
 From one decade to the next, the contribution of primary deficits went from −2.5 to +22.4 then +30.6 points.
 This finding describes a recurrence; it does not say whether these deficits were avoidable, nor which of their two terms, spending or revenue, explains them.
 2016-2025: three years of relief, outweighed by deficits.
-Over the decade, interest adds 17.7 points to the ratio and nominal GDP growth erases 32.8: the interest-growth effect is −15.1 points.
+Over the decade, interest adds 17.7 points to the ratio and nominal GDP growth erases 32.7: the interest-growth effect is −15.0 points.
 This is not a steady advantage.
-The years 2021-2023 alone take off 16.8 points; the other seven together weigh +1.7 points, including +6.1 in 2020, when GDP fell.
+The years 2021-2023 alone take off 16.8 points; the other seven together weigh +1.8 points, including +6.1 in 2020, when GDP fell.
 In 2021, activity rebounds (6.9% in volume); in the next two years, nominal growth owes more to prices than to volume.
 A fall in the ratio through inflation is not an equivalent gain in wealth: inflation higher than expected reduces the real value of fixed payments owed to creditors, a redistributive effect that depends on the indexation of the securities and their maturity.
-No year of the decade shows a primary surplus: cumulated deficits add 30.6 points, more than the whole rise in the ratio (+18.6).
+No year of the decade shows a primary surplus: cumulated deficits add 30.6 points, more than the whole rise in the ratio (+18.7).
 What brought the ratio down elsewhere
 The same decomposition, over the same decade, applies to the EU countries whose debt exceeded 90% of GDP at end-2015: France, at 97.0%, and six others, all starting from a higher level.
 This threshold is a presentation convention, close to the French level; it does not make these countries equivalent experiences, and, at 100%, France drops out of the group.
 Interest-growth effect, primary balance and other adjustments, and their sum, the change in the debt ratio, 2016-2025, in points of GDP cumulated (Eurostat).
 Countries sorted by change in the ratio.
 Two drivers, in order of weight.
-In the three countries where the ratio fell markedly, Cyprus, Portugal and Greece, the largest accounting contribution comes from interest and growth: 30.4 to 46.2 points over ten years, about twice that of their primary surpluses, 15.2 to 23.3 points (a ratio of 2.0 to 2.2).
+In the three countries where the ratio fell markedly, Cyprus, Portugal and Greece, the largest accounting contribution comes from interest and growth: 31.2 to 49.4 points over ten years, about twice that of their primary surpluses, 15.3 to 23.1 points (a ratio of 2.0 to 2.2).
 Both contributions depend on economic conditions, and neither allows the fall to be attributed to a particular policy.
 What is established.
 These three falls coincided with an average primary surplus, of 1.5% to 2.3% of GDP, and the interest-growth effect weighed more in them than the surplus.
 What is not.
 That the surpluses caused these falls, or that they were indispensable.
-Leaving the surpluses aside, the other terms together already pull the ratio down, by 18.3 to 33.3 points depending on the country.
+Leaving the surpluses aside, the other terms together already pull the ratio down, by 19.0 to 36.2 points depending on the country.
 This does not mean the ratio would have fallen without a surplus, because the terms are not independent: a surplus can slow activity, strong growth swells revenue.
 But the decomposition cannot, on its own, make the surplus a necessary condition.
-Slovenia gives an example: starting from debt of 83.4% of GDP, below the 90% threshold used here, it saw its ratio fall by 17.7 points with an average primary balance of −0.5% of GDP.
+Slovenia gives an example: starting from debt of 83.4% of GDP, below the 90% threshold used here, it saw its ratio fall by 18.3 points with an average primary balance of −0.5% of GDP.
 Their implicit interest rate was not lower.
-Over the decade, the average implicit interest rate on their debt, interest paid relative to debt, ranges from 1.76% to 2.39%, against 1.74% in France, the lowest in the group.
+Over the decade, the average implicit interest rate on their debt, interest paid relative to debt, ranges from 1.76% to 2.40%, against 1.74% in France, the lowest in the group.
 This indicator concerns the stock: it reflects the history of issuance, its maturity and official loans, and does not say on what terms these countries borrowed on the markets.
-What sets them apart is nominal GDP growth: 3.7% to 7.5% a year on average, against 3.2% in France.
-In volume, it exceeded that of France, at 1.7% to 5.3% a year against 1.3%; price growth was 1.9% to 3.2% a year, against 1.9%.
+What sets them apart is nominal GDP growth: 3.8% to 8.0% a year on average, against 3.2% in France.
+In volume, it exceeded that of France, at 1.7% to 5.9% a year against 1.3%; price growth was 2.0% to 3.3% a year, against 1.9%.
 The level of debt matters too.
 The same gap between interest rate and growth takes off more points the higher the ratio.
-Greece’s implicit interest rate is roughly the same as France’s (1.76% against 1.74%), and its nominal growth barely exceeds France’s (3.7% against 3.2%): its gap between rate and growth is hardly more favourable (−1.9 points a year, against −1.4).
-But its debt, 182% of GDP on average, the highest in the group, multiplies that gap: the interest-growth effect reaches −30.4 points there, against −15.1 in France.
+Greece’s implicit interest rate is roughly the same as France’s (1.76% against 1.74%), and its nominal growth barely exceeds France’s (3.8% against 3.2%): its gap between rate and growth is hardly more favourable (−2.0 points a year, against −1.4).
+But its debt, 182% of GDP on average, the highest in the group, multiplies that gap: the interest-growth effect reaches −31.2 points there, against −15.0 in France.
 Part of Greek debt has been owed to its European partners since the assistance programmes; these series do not separate the rate on those loans from that on the rest of the debt.
 The higher the starting debt, the more a given gap between interest rate and growth amplifies the change in the ratio, downwards as well as upwards.
 The other countries in the group.
-In France, the ratio rose by 18.6 points, the largest rise in the group, with the highest average primary deficit (−3.1% of GDP); Spain, Belgium and Italy, with an average primary deficit, stayed roughly stable, despite a favourable interest-growth effect.
+In France, the ratio rose by 18.7 points, the largest rise in the group, with the highest average primary deficit (−3.1% of GDP); Spain, Italy and Belgium, with an average primary deficit, stayed roughly stable, despite a favourable interest-growth effect.
 Portugal, Cyprus and Greece received official financing from their European partners and the IMF, Spain assistance to recapitalise its banks (timeline in the folded section below).
 Seven countries over one decade do not make a general regularity.
 The seven countries, term by term, rate by rate, and the assistance programmes
@@ -90,71 +90,71 @@ Other adjustments
 Average primary balance
 Cyprus
 111.6
-55.0
-−56.6
-−46.2
-+18.3
-−64.5
-−23.3
-+12.9
+52.3
+−59.3
+−49.4
++18.1
+−67.5
+−23.1
++13.3
 +2.3%
 Portugal
 131.0
-89.7
-−41.4
-−33.3
+89.2
+−41.9
+−33.8
 +27.2
-−60.5
-−15.5
-+7.4
-+1.5%
+−61.0
+−15.6
++7.5
++1.6%
 Greece
 179.6
-146.1
-−33.5
-−30.4
+145.4
+−34.3
+−31.2
 +30.6
-−61.0
-−15.2
-+12.1
+−61.8
+−15.3
++12.2
 +1.5%
 Spain
 102.5
-100.7
-−1.8
-−22.5
+100.5
+−2.0
+−22.7
 +23.9
-−46.4
+−46.5
 +19.1
 +1.5
 −1.9%
+Italy
+135.0
+136.7
++1.7
+−5.9
++36.9
+−42.8
++11.7
+−4.0
+−1.2%
 Belgium
 105.7
-107.9
-+2.2
-−23.8
-+20.9
-−44.7
+108.1
++2.4
+−23.6
++21.0
+−44.6
 +17.0
 +9.0
 −1.7%
-Italy
-134.8
-137.1
-+2.3
-−5.3
-+36.9
-−42.1
-+11.6
-−4.0
-−1.2%
 France
 97.0
-115.6
-+18.6
-−15.1
+115.7
++18.7
+−15.0
 +17.7
-−32.8
+−32.7
 +30.6
 +3.1
 −3.1%
@@ -170,45 +170,45 @@ Rate minus growth
 Cyprus
 93
 2.07
-7.5
-5.3
-2.1
-−5.4
+8.0
+5.9
+2.0
+−5.9
 Portugal
-119
-2.39
-5.6
+118
+2.40
+5.7
 2.3
-3.2
-−3.2
+3.3
+−3.3
 Greece
 182
 1.76
-3.7
+3.8
 1.7
-1.9
-−1.9
+2.0
+−2.0
 Spain
 105
 2.38
-4.6
+4.7
 2.1
 2.5
 −2.3
+Italy
+138
+2.77
+3.3
+1.3
+2.0
+−0.5
 Belgium
 104
 2.10
 4.5
 1.6
-2.9
+2.8
 −2.4
-Italy
-138
-2.77
-3.2
-1.3
-1.9
-−0.4
 France
 105
 1.74
@@ -219,8 +219,8 @@ France
 Annual averages over 2016-2025: debt in % of GDP at the start of each year; rates and growth in % a year.
 Volume: chain-linked national-accounts volumes; prices: (1 + nominal growth) / (1 + volume growth) − 1, year by year; the two averages do not add up exactly.
 Source: Eurostat.
-The ratio stayed roughly stable for Spain, Belgium and Italy (−1.8 to +2.3 points), with an average primary deficit, despite a favourable interest-growth effect.
-In Belgium, the contributions of interest-growth and of the primary balance total −6.8 points; other adjustments add 9.0, bringing the change to +2.2 points.
+The ratio stayed roughly stable for Spain, Italy and Belgium (−2.0 to +2.4 points), with an average primary deficit, despite a favourable interest-growth effect.
+In Belgium, the contributions of interest-growth and of the primary balance total −6.6 points; other adjustments add 9.0, bringing the change to +2.4 points.
 These countries were not financed on the same terms.
 Portugal (from 2011 to mid-2014), Cyprus (from April 2013 to March 2016) and Greece (from May 2010 to August 2018, with a last programme, financed by the European Stability Mechanism, from August 2015 to August 2018) received official financing from their European partners and the IMF; Spain received, from July 2012 to January 2014, assistance to recapitalise its banks (European Commission; European Stability Mechanism).
 The restructuring of Greek debt, in 2012, predates the decade studied.
@@ -235,8 +235,8 @@ In 2020, nominal GDP fell: stabilising the ratio would have taken a primary bala
 In 2021, it rebounded: a balance of −7.3%, hence a deficit, would have kept it stable.
 These swings do not measure a change in budget discipline: growth is what moved.
 In 2025.
-The implicit interest rate (2.0%) and nominal growth (2.0%) were almost equal: the marker was close to zero.
-The observed balance was −2.9% of GDP, a gap of 2.9 points, about 85 billion euros relative to 2025 GDP (2,995 billion), computed on the gap before rounding.
+The implicit interest rate (2.0%) and nominal growth (1.9%) were almost equal: the marker was close to zero.
+The observed balance was −2.9% of GDP, a gap of 3.0 points, about 89 billion euros relative to 2025 GDP (2,991 billion), computed on the gap before rounding.
 It is an accounting gap observed for that year, at that year’s interest rates and growth and excluding other adjustments: it changes every year with them, and it says neither which spending nor which revenue should move.
 It would also narrow through growth: at this level of debt, and with the interest rate unchanged, each additional point of nominal growth would lower the balance that stabilises the ratio by about 1.1 points.
 This is a property of the identity, for a given debt and interest rate; it does not say that a point of growth is as easy to obtain, or as cheap, as a budget adjustment.
@@ -248,17 +248,17 @@ Stabilising the ratio and bringing it down are two distinct objectives.
 An adjustment amount is read with its objective, its horizon and its assumptions; the marker calculated here for 2025 holds for that year and does not allow the multi-year estimates of institutions to be assessed.
 In the euro area, what sets France apart
 The same calculation, run on the current members of the euro area, separates what the gap to the marker, on its own, conflates: the rate paid on debt, the growth of the economy and the primary balance.
-Over 2016-2025, 19 of the 21 countries are compared; Finland and Ireland are left out, because at least one of their years departs from the ratios published by Eurostat by more than the rounding margin.
+Over 2016-2025, all 21 countries are compared; none is set aside by the check: every year of every country matches the ratios published by Eurostat within the rounding margin.
 Implicit interest rate, nominal growth and primary balance, annual averages 2016-2025, euro-area countries (Eurostat, author’s calculation).
 Among the lowest implicit interest rates.
-On average over 2016-2025, French general government paid interest equal to 1.74% of its debt, against a median of 2.11%; only four of the countries compared had a lower implicit rate, and, outside the calculation, Finland.
+On average over 2016-2025, French general government paid interest equal to 1.74% of its debt, against a median of 2.10%; only five of the countries compared had a lower implicit rate.
 This rate relates interest to the whole debt, issued over the years: it measures what the stock costs, not the rate at which the State borrows today.
 Among the weakest nominal growth.
-French nominal GDP grew by 3.2% a year, against a median of 5.5%: tied, once rounded, with Italy, the weakest growth of the countries compared; outside the calculation, Finland grew more slowly still (3.0%).
+French nominal GDP grew by 3.2% a year, against a median of 5.7%: the second weakest of the countries compared, after that of Finland.
 The primary balance that would have stabilised the ratio, excluding other adjustments, averaged −1.5% of GDP, close to the median (−1.8%): it depends at once on the implicit rate, on nominal growth and on the level of debt.
 The lowest primary balance.
-The French primary balance averaged −3.1% of GDP, against a median of −0.7%: no other country compared had so low an average primary balance over the period.
-The ranking stays the same if Finland and Ireland are brought back in, rejected years included.
+The French primary balance averaged −3.1% of GDP, against a median of −0.8%: no other country compared had so low an average primary balance over the period.
+This ranking therefore covers all current members of the euro area.
 What is established.
 Over 2016-2025, what sets France apart in the euro area is neither the rate paid on its debt, among the lowest, nor the balance that would stabilise it, close to the median: it is its primary balance, the lowest of the countries compared, together with nominal growth among the weakest.
 What is not.
@@ -270,7 +270,7 @@ This check plays no part in the calculation, without being fully independent of 
 The OECD, which makes its own estimate of potential output, also gives France the lowest structural balance of the countries it covers over the period; the IMF, whose indicator adjusts for the cycle without removing one-off measures, places it level with Finland and Slovakia.
 The structural ranking therefore depends on the estimate used; the ranking of the observed balance does not.
 The marker came down, not the balance.
-Over the last five years (2021-2025), strong nominal growth, the recovery after 2020 and then rising prices, lowered every country’s marker compared with the five years before 2020: France is no longer, on average, below its own (+0.1 points), and four countries have a less favourable gap.
+Over the last five years (2021-2025), strong nominal growth, the recovery after 2020 and then rising prices, lowered the marker of every country except Ireland compared with the five years before 2020: France is no longer, on average, below its own (+0.1 points), and five countries have a less favourable gap.
 Its primary balance nonetheless remains the lowest of the countries compared, and its structural balance among the two lowest.
 Over the five years before 2020, France was the only euro-area country whose average primary balance stayed below the marker.
 France in the euro area depending on the period chosen, and what the average gap does not add
@@ -281,22 +281,22 @@ Stabilising balance
 Gap to the marker (rank from lowest)
 Structural balance, AMECO (rank from lowest)
 2016-2025
-19
+21
 −3.1 (1)
 −1.5
-−1.5 (1)
+−1.6 (1)
 −2.4 (1)
 2021-2025
-19
+21
 −3.6 (1)
 −3.7
-+0.1 (5)
++0.1 (6)
 −3.2 (2)
 2025
-20
-−2.9 (1 to 3)
-0.0
-−2.9 (1)
+21
+−2.9 (3 to 4)
++0.1
+−3.0 (1)
 −2.5 (4)
 2015-2019
 21
@@ -311,7 +311,7 @@ Structural balance, AMECO (rank from lowest)
 −2.2 (3 to 4)
 −1.5 (1)
 Annual averages, in % of GDP (of potential GDP for the structural balance); ranks read at the displayed precision; when several countries are displayed as equal, the rank gives the places they share.
-Over 2016-2025 without the year 2020, France keeps the lowest primary and structural balances, and the weakest nominal growth.
+Over 2016-2025 without the year 2020, France keeps the lowest primary and structural balances, and the second weakest nominal growth, after that of Finland.
 What the average gap does not add.
 Over a period, the average gap between the observed balance and the marker equals, up to its sign and by construction, the rise in the ratio excluding other adjustments, divided by the number of years: it restates the change in debt, it does not confirm it.
 What cannot be deduced from it is the share due to interest rates and growth, the marker, and the share due to the primary balance: this is why the figure shows these quantities rather than the gap.
@@ -323,16 +323,16 @@ A debt is called sustainable when the State can service and refinance it without
 The first two terms are measured here; the third is not.
 What makes it fragile.
 The equality between interest and growth in 2025 is not a settled state.
-Over 30 years, the implicit interest rate exceeded nominal growth in 15 of them.
+Over 30 years, the implicit interest rate exceeded nominal growth in 16 of them.
 Down to 1.2% in 2020, it is rising as old debt is refinanced on market terms, while nominal growth falls back after the inflation years: the relief of the last decade came mostly from 2021-2023.
-At 2025 levels of debt and growth (115.6% of GDP), and all else equal, one additional point of gap between the interest rate and growth raises the stabilising balance by about 1.1 points of GDP: the higher the debt, the more its path depends on interest rates the budget does not directly control, and whose gap to growth the research cited below finds higher when debt is higher too.
+At 2025 levels of debt and growth (115.7% of GDP), and all else equal, one additional point of gap between the interest rate and growth raises the stabilising balance by about 1.1 points of GDP: the higher the debt, the more its path depends on interest rates the budget does not directly control, and whose gap to growth the research cited below finds higher when debt is higher too.
 What these data do not say.
 Lenders’ confidence, market access and the cost of future refinancing depend on the maturity of the debt and on the gap between market rates and the implicit rate (see transmission), on who holds it (Who really pays for public debt?) and on central bank decisions.
 The sustainability assessments that institutions publish rest on conditional projections, which these data can neither confirm nor rule out.
 Thirty years of European windows
 Primary balances and falls in the ratio: European ten-year periods
 The comparison above covers a single decade.
-To place it in a wider set, the same decomposition was applied to every ten-year window of the 27 current EU members, since 1996: 533 windows, which overlap, are therefore not as many independent experiments, and include the decade already compared.
+To place it in a wider set, the same decomposition was applied to every ten-year window of the 27 current EU members, since 1996: 537 windows, which overlap, are therefore not as many independent experiments, and include the decade already compared.
 This is context, not a counter-test.
 Among the 78 windows where starting debt exceeded 90% of GDP:
 negative average primary balance: 35 windows, in six countries (Belgium, Greece, Spain, France, Italy and Portugal).
@@ -357,7 +357,7 @@ Who bears an adjustment is the subject of Who really pays for public debt?
 Scope of comparison.
 The 27 current EU members, since 1996; nothing before, nothing outside the Union.
 The group compared depends on the debt threshold and the decade chosen.
-Ten country-years out of 805 are excluded by the check described below.
+Five country-years out of 803 are excluded by the check described below.
 Reach in time.
 The page describes thirty observed years.
 The paths forecast by the Government, the European Commission or the IMF are conditional scenarios, which these data can neither confirm nor rule out.
@@ -373,7 +373,7 @@ The primary balance that stabilises the debt depends on the gap between interest
 The note draws the same distinction between stabilising, which requires a zero primary balance when interest and growth are equal, and reducing, which requires a surplus.
 Across the G7 countries since the late nineteenth century, Clavères finds that, in the great majority of cases, successful fiscal consolidations rested both on a negative interest-growth gap and on primary surpluses.
 The French Treasury presents stabilising the ratio as a necessary condition of sustainability, which it also links to the State’s capacity to finance its debt durably; it puts the stabilising balance for 2025 at −2.1% of GDP, as a total public balance, against a deficit of 5.1%.
-Two different conventions, and an almost identical gap to close in 2025: about three points of GDP for the Treasury, 2.9 points measured here as a primary balance.
+Two different conventions, and an almost identical gap to close in 2025: about three points of GDP for the Treasury, 3.0 points measured here as a primary balance.
 The OFCE puts at 2.1 points, in 2024, the gap between the primary balance and the one that would stabilise the debt; the page’s Eurostat measure gives 2.0 points for 2024.
 For the four largest euro-area countries, from 1995 to 2024, the Cour des comptes (France’s court of audit) makes the finding that the euro-area section extends to nineteen countries: the change in the primary balance is “the main explanatory factor” of the differences in debt paths, France having run a primary deficit since 2002.
 The page separates what the Cour combines in the “snowball effect”, the interest rate and growth, and does not take up its reading, which sees in it the effect of a public-finance strategy: the accounting identity does not settle the causes.
@@ -434,13 +434,13 @@ F. and Wiriadinata, U., “Public Debt and r - g at Risk”, IMF Working Paper, 
 Literature review checked on 17 October 2026: every reference cited was read in full on that date, in the version indicated.
 Summary
 What to take away
-The weight of a debt can fall without its amount decreasing: in Portugal, debt went from 235 to 275 billion euros in ten years while its weight fell from 131.0% to 89.7% of GDP.
+The weight of a debt can fall without its amount decreasing: in Portugal, debt went from 235 to 275 billion euros in ten years while its weight fell from 131.0% to 89.2% of GDP.
 Among EU countries whose debt started from a higher level than France’s, the ratio fell markedly in three of them: Cyprus, Portugal and Greece.
 The largest contribution there comes from interest and growth, about twice that of their primary surpluses.
 Their average implicit interest rate was not lower than France’s: their nominal growth was stronger.
 Slovenia, below the threshold used, reduced its ratio without a surplus.
-In France, over the same decade, interest and growth took 15.1 points off the ratio, thanks to the years 2021-2023; primary deficits added 30.6, and the ratio rose by 18.6 points.
-In 2025, the implicit interest rate and nominal growth were almost equal: the observed primary balance was 2.9 points of GDP, about 85 billion euros, below the marker that would have stabilised the ratio that year, excluding other adjustments.
+In France, over the same decade, interest and growth took 15.0 points off the ratio, thanks to the years 2021-2023; primary deficits added 30.6, and the ratio rose by 18.7 points.
+In 2025, the implicit interest rate and nominal growth were almost equal: the observed primary balance was 3.0 points of GDP, about 89 billion euros, below the marker that would have stabilised the ratio that year, excluding other adjustments.
 This marker changes every year with interest rates and growth; at this level of debt, one point of gap between interest rate and growth shifts it by about 1.1 points of GDP, in either direction.
 None of the combinations observed is a transferable recipe: these comparisons say neither which policy would bring about a fall, nor at what price, nor who would pay it.
 That last point is the subject of Who really pays for public debt?
@@ -467,7 +467,7 @@ Structural primary balance: European Commission, AMECO database, series UBLGBPS 
 The same applies to the two other checks on the structural ranking: OECD, Economic Outlook No.
 119, series NLGXQU (underlying primary balance, excluding the cycle and one-off measures, in % of potential GDP, euro-area members that belong to the OECD); IMF, Fiscal Monitor, October 2026, series GGCBP_G01_PGDP_PT (cyclically adjusted primary balance only, in % of potential GDP).
 Check: for each country and each year, the calculated debt ratio and primary balance are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use.
-Beyond a gap of 0.11 points, the year is excluded and counted (ten out of 805, listed in the JSON file); for France and the compared countries, the script stops.
+Beyond a gap of 0.11 points, the year is excluded and counted (five out of 803, listed in the JSON file); for France and the compared countries, the script stops.
 A window containing a year of nominal growth above 35% (hyperinflation, series break) is excluded.
 The countries compared with France are designated by a rule, not chosen: debt above 90% of GDP at end-2015; the same calculation is redone at 80% and 100%.
 The figures computed from Eurostat series all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
@@ -505,16 +505,16 @@ In the euro area, France pays one of the lowest implicit interest rates; what se
 Reading caveat.
 An accounting comparison: it says neither whether the gap comes from spending or revenue, nor which adjustment would be desirable.
 Implicit rate = interest paid / debt at the end of the previous year.
-Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), 2016-2025; euro-area members at 1 January 2026, excluding Finland and Ireland (years rejected by the check)
+Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), 2016-2025
 Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Can public debt come down?”.
-Eurostat and European Commission (AMECO) data, retrieved 16 October 2026. https://stephane-lalut.com/en/can-public-debt-come-down/
+Eurostat and European Commission (AMECO) data, retrieved 2 November 2026. https://stephane-lalut.com/en/can-public-debt-come-down/
 Copy citation
 In three sentences
-From 2016 to 2025, primary deficits added 30.6 points of GDP to the French debt ratio, the interest-growth effect, concentrated in 2021-2023, took off 15.1, and other adjustments added 3.1: a rise of 18.6 points.
+From 2016 to 2025, primary deficits added 30.6 points of GDP to the French debt ratio, the interest-growth effect, concentrated in 2021-2023, took off 15.0, and other adjustments added 3.1: a rise of 18.7 points.
 Among the seven EU countries whose debt exceeded 90% of GDP at end-2015, the ratio fell markedly in three, first through the interest-growth effect, about twice as strong as that of their primary surpluses.
 This is an accounting decomposition, not a causal attribution.
 Copy summary
@@ -525,6 +525,7 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat and European Commission (AMECO)), under their own terms.
 Revisions
+2 November 2026 — Eurostat accounts of 21 October 2026: no euro-area country is set aside by the check any longer; Finland, back in the comparison, had weaker nominal growth than France, which moves to second place; over five years, the marker came down everywhere except Ireland.
 16 October 2026 — Correction: the implicit interest rate exceeded nominal growth in 15 years, not 16; the comparison is now made at the displayed precision.
 All resources: data, explainers and reference material →
 Share

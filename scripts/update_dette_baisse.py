@@ -522,6 +522,9 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
         A[c + "ti"] = fr(f["taux_implicite_moyen"], 2); A[c + "g"] = fr(f["croissance_nominale_moyenne"])
         A[c + "dm"] = fr(f["dette_moyenne"], 0)
         A[c + "rg"] = signe(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"])
+        # Accord de « point » sur la valeur affichée (02/11/2026 : « −2,0 point » avec l'édition du 21/10/2026).
+        v_ = abs(round(f["taux_implicite_moyen"] - f["croissance_nominale_moyenne"], 1))
+        A[c + "rg_pt"] = ("point" if v_ < 2 else "points") if LANG == "fr" else ("point" if v_ == 1 else "points")
         A[c + "gv"] = fr(f["croissance_volume_moyenne"]) if f["croissance_volume_moyenne"] is not None else "—"
         A[c + "gp"] = fr(f["prix_moyen"]) if f["prix_moyen"] is not None else "—"
     # Les trois baisses (OPTIMUM-24, B1) : hiérarchie mesurée des contributions, contrôle arithmétique.
@@ -775,21 +778,83 @@ def affichage_ze(ze: dict, V: dict, T: dict) -> dict:
         A[p + "sps_rang"] = rang_txt(f, "solde_structurel") if x["solde_structurel"] is not None else "—"
     f = ze["dix"]; x = ze_fr(f); m = f["medianes"]
     A["ze_lib"] = A["ze_dix_lib"]; A["ze_n"] = lettres(f["n"]); A["ze_total"] = lettres(len(ZONE_EURO))
+    # « 21 des 21 pays » (02/11/2026) : quand aucun pays n'est écarté, la proposition le dit autrement.
+    tous = f["n"] == len(ZONE_EURO)
+    if LANG == "fr":
+        A["ze_compares"] = ("les %s pays sont comparés" % A["ze_total"]) if tous else ("%s des %s pays sont comparés" % (A["ze_n"], A["ze_total"]))
+    else:
+        A["ze_compares"] = ("all %s countries are compared" % A["ze_total"]) if tous else ("%s of the %s countries are compared" % (A["ze_n"], A["ze_total"]))
     A["ze_fr_ti"] = fr(x["taux_implicite"], 2); A["ze_med_ti"] = fr(m["taux_implicite"], 2)
     A["ze_ti_moins_n"] = lettres(rang_bas(f, "taux_implicite", 2)[0] - 1)
     A["ze_fr_g"] = fr(x["croissance_nominale"]); A["ze_med_g"] = fr(m["croissance_nominale"])
     A["ze_fr_stab"] = sz(x["solde_stabilisant"]); A["ze_med_stab"] = sz(m["solde_stabilisant"])
     A["ze_fr_pb"] = signe(x["solde_primaire"]); A["ze_med_pb"] = signe(m["solde_primaire"])
     A["ze_fr_sps"] = signe(x["solde_structurel"]); A["ze_med_sps"] = signe(m["solde_structurel"])
-    A["ze_ecartes"] = enumere([art(e["pays"]) for e in f["ecartes"]]); A["ze_ecartes_n"] = lettres(len(f["ecartes"]))
+    # Pays écartés par le témoin : les phrases qui les nomment sont des jetons entiers, écrits aussi pour le cas où aucun
+    # pays n'est écarté (édition Eurostat du 21/10/2026 : tous retrouvent les ratios publiés ; enumere([]) plantait).
+    n_ex = len(f["ecartes"])
+    X = enumere([art(e["pays"]) for e in f["ecartes"]]) if n_ex else ""
+    if LANG == "fr":
+        A["ze_hors"] = (("%s est hors du calcul, parce qu'une de ses années au moins s'écarte" if n_ex == 1 else
+                         "%s sont hors du calcul, parce qu'une de leurs années au moins s'écarte") % X
+                        + " des ratios publiés par Eurostat au-delà de la marge d'arrondi") if n_ex else \
+            "aucun n'est écarté par le contrôle\u00a0: chaque année de chaque pays retrouve les ratios publiés par Eurostat à la marge d'arrondi près"
+        A["ze_reint"] = ("Le classement reste le même si l'on réintègre %s, années écartées comprises." % X) if n_ex else \
+            "Ce classement porte donc sur tous les membres actuels de la zone euro."
+    else:
+        A["ze_hors"] = (("%s is left out, because at least one of its years departs" if n_ex == 1 else
+                         "%s are left out, because at least one of their years departs") % X
+                        + " from the ratios published by Eurostat by more than the rounding margin") if n_ex else \
+            "none is set aside by the check: every year of every country matches the ratios published by Eurostat within the rounding margin"
+        A["ze_reint"] = ("The ranking stays the same if %s are brought back in, rejected years included." % X) if n_ex else \
+            "This ranking therefore covers all current members of the euro area."
     A["ze_edition"] = AMECO_EDITION[LANG]
+    # Sans 2020 : rang de la croissance nominale française, écrit selon le classement (même règle que ze_g_fin).
+    vs_ = V["sans2020"]["dix"]
+    rs, exs = rang_bas(vs_, "croissance_nominale")
+    sous_s = [d["pays"] for d in sorted(vs_["pays"], key=lambda d: d["croissance_nominale"]) if d["pays"] != "FR"
+              and lg.depasse(ze_fr(vs_)["croissance_nominale"], d["croissance_nominale"], 1)]
+    if LANG == "fr":
+        A["ze_s20_g"] = "la croissance nominale la plus faible" if rs == 1 else \
+            "la deuxième croissance nominale la plus faible, après celle de %s" % art(sous_s[0])
+    else:
+        A["ze_s20_g"] = "the weakest nominal growth" if rs == 1 else "the second weakest nominal growth, after that of %s" % art(sous_s[0])
+    # Cinq ans : pays dont le repère ne s'est pas abaissé par rapport aux cinq années d'avant 2020.
+    stab_av_ = {x["pays"]: x["solde_stabilisant"] for x in ze["av20"]["pays"]}
+    hors_ = [x["pays"] for x in ze["cinq"]["pays"] if not x["solde_stabilisant"] < stab_av_[x["pays"]]]
+    if LANG == "fr":
+        A["ze_cinq_tous"] = "tous les pays" if not hors_ else "tous les pays sauf %s" % enumere([art(p) for p in hors_])
+    else:
+        A["ze_cinq_tous"] = "every country" if not hors_ else "every country except %s" % enumere([art(p) for p in hors_])
     A["ze_cinq_pire_n"] = lettres(rang_bas(ze["cinq"], "ecart")[0] - 1)
-    A["ze_g_avec"] = enumere([art(p) for p in rang_bas(f, "croissance_nominale")[1]])
+    # Rang de la croissance nominale française, écrit selon le classement (édition du 21/10/2026 : la Finlande, jusque-là
+    # écartée par le témoin, revient sous la France ; la phrase « à égalité avec… la plus faible » était devenue fausse).
+    rg, ex = rang_bas(f, "croissance_nominale")
+    sous = [d["pays"] for d in sorted(f["pays"], key=lambda d: d["croissance_nominale"]) if d["pays"] != "FR"
+            and lg.depasse(ze_fr(f)["croissance_nominale"], d["croissance_nominale"], 1)]
+    if LANG == "fr":
+        g_rang = (("à égalité à l'arrondi avec %s, la croissance la plus faible des pays comparés" % enumere([art(p) for p in ex])) if ex
+                  else "la croissance la plus faible des pays comparés") if rg == 1 else \
+            "la deuxième plus faible des pays comparés, après celle de %s" % art(sous[0])
+    else:
+        g_rang = (("tied, once rounded, with %s, the weakest growth of the countries compared" % enumere([art(p) for p in ex])) if ex
+                  else "the weakest growth of the countries compared") if rg == 1 else \
+            "the second weakest of the countries compared, after that of %s" % art(sous[0])
     exc = [e["pays"] for e in f["ecartes"]]
     ti_s, g_s = sous_fr(V["complet"]["dix"], "taux_implicite", exc), sous_fr(V["complet"]["dix"], "croissance_nominale", exc)
-    A["ze_ti_ecartes_sous"] = enumere([art(d["pays"]) for d in ti_s])
-    A["ze_g_ecartes_sous"] = enumere([art(d["pays"]) for d in g_s])
-    A["ze_g_ecartes_val"] = fr(g_s[0]["croissance_nominale"]) if g_s else "—"
+    n_moins = A["ze_ti_moins_n"]
+    if LANG == "fr":
+        A["ze_ti_fin"] = "%s des pays comparés ont eu un taux implicite moins élevé" % n_moins + \
+            (", et, hors du calcul, %s" % enumere([art(d["pays"]) for d in ti_s]) if ti_s else "")
+        A["ze_g_fin"] = g_rang + \
+            ("\u00a0; hors du calcul, celle de %s a été plus faible encore (%s\u00a0%%)" % (enumere([art(d["pays"]) for d in g_s]), fr(g_s[0]["croissance_nominale"]))
+             if g_s else "")
+    else:
+        A["ze_ti_fin"] = "%s of the countries compared had a lower implicit rate" % n_moins + \
+            (", and, outside the calculation, %s" % enumere([art(d["pays"]) for d in ti_s]) if ti_s else "")
+        A["ze_g_fin"] = g_rang + \
+            ("; outside the calculation, %s grew more slowly still (%s%%)" % (enumere([art(d["pays"]) for d in g_s]), fr(g_s[0]["croissance_nominale"]))
+             if g_s else "")
     return A
 
 
@@ -806,8 +871,9 @@ def gardes_ze(ze: dict, V: dict, T: dict) -> int:
     G = [
         ("zone euro, dix ans : au moins dix-huit pays comparés, deux au plus écartés", d["n"] >= 18 and len(d["ecartes"]) <= 2),
         ("zone euro, dix ans : la France a le solde primaire moyen le plus bas, sans ex aequo", rb(d, "solde_primaire") == (1, [])),
-        ("zone euro, dix ans : la France a la croissance nominale moyenne la plus faible, à égalité à l'affichage avec un seul pays (nommé par le jeton ze_g_avec)",
-         rb(d, "croissance_nominale")[0] == 1 and len(rb(d, "croissance_nominale")[1]) == 1),
+        ("zone euro, dix ans : « parmi les plus faibles » — la France a la croissance nominale moyenne la plus faible ou la "
+         "deuxième (sans ex aequo à la deuxième place) ; le jeton ze_g_fin écrit le rang",
+         rb(d, "croissance_nominale")[0] == 1 or rb(d, "croissance_nominale") == (2, [])),
         ("zone euro, dix ans : « l'un des plus bas » : au plus cinq pays ont un taux implicite moyen plus bas que la France",
          2 <= rb(d, "taux_implicite", 2)[0] - 1 <= 5),   # « seuls N pays ont payé moins » : pluriel, N de deux à cinq
         ("zone euro, dix ans : taux implicite français sous la médiane", not lg.depasse(xd["taux_implicite"], d["medianes"]["taux_implicite"], 2)
@@ -829,13 +895,16 @@ def gardes_ze(ze: dict, V: dict, T: dict) -> int:
         ("avec les pays écartés réintégrés : solde primaire français toujours le plus bas, sans ex aequo (dix ans et cinq ans)",
          rb(vd, "solde_primaire") == (1, []) and rb(V["complet"]["cinq"], "solde_primaire") == (1, [])),
         ("avec les pays écartés réintégrés : solde structurel français toujours le plus bas, sans ex aequo", rb(vd, "solde_structurel") == (1, [])),
-        ("« seul <pays écarté> a eu une croissance plus faible » : un seul pays, et c'est un pays écarté",
-         len(sous_fr(vd, "croissance_nominale", exc)) == 1 and len(sous_fr(vd, "croissance_nominale", [x["pays"] for x in vd["pays"]])) == 1),
-        ("« comme <pays écarté>, hors du calcul » : au moins un pays écarté a un taux implicite plus bas", len(sous_fr(vd, "taux_implicite", exc)) >= 1),
-        ("sans 2020 : solde primaire et solde structurel les plus bas, croissance nominale la plus faible, sans ex aequo",
-         vs["n"] >= 18 and rb(vs, "solde_primaire") == (1, []) and rb(vs, "solde_structurel") == (1, []) and rb(vs, "croissance_nominale") == (1, [])),
-        ("cinq ans : « la forte croissance nominale a abaissé le repère de tous les pays » par rapport aux cinq années d'avant 2020",
-         all(x["pays"] in stab_av and x["solde_stabilisant"] < stab_av[x["pays"]] for x in c["pays"])),
+        ("« hors du calcul, celle de <pays écarté> a été plus faible encore » (jeton ze_g_fin) : au plus un pays écarté sous la France",
+         len(sous_fr(vd, "croissance_nominale", exc)) <= 1),
+        ("sans 2020 : solde primaire et solde structurel les plus bas, sans ex aequo ; croissance nominale la plus faible ou la "
+         "deuxième sans ex aequo (le jeton ze_s20_g écrit le rang)",
+         vs["n"] >= 18 and rb(vs, "solde_primaire") == (1, []) and rb(vs, "solde_structurel") == (1, [])
+         and (rb(vs, "croissance_nominale") == (1, []) or rb(vs, "croissance_nominale") == (2, []))),
+        ("cinq ans : « la forte croissance nominale a abaissé le repère de <tous les pays, ou tous sauf un ou deux> » par rapport "
+         "aux cinq années d'avant 2020 (le jeton ze_cinq_tous nomme les exceptions)",
+         all(x["pays"] in stab_av for x in c["pays"])
+         and sum(1 for x in c["pays"] if not x["solde_stabilisant"] < stab_av[x["pays"]]) <= 2),
         # Rang structurel selon l'OCDE et le FMI (accord de l'auteur, 18/10/2026) : la page dit « le plus bas des pays qu'elle
         # couvre » pour l'OCDE et « à égalité avec <ex aequo> » pour le FMI.
         ("témoin OCDE, dix ans : au moins quinze pays couverts, solde structurel français le plus bas, sans ex aequo", ro[2] >= 15 and ro[:2] == (1, [])),
@@ -1234,8 +1303,7 @@ def textes_ze(ze, A):
     m = f["medianes"]; x = ze_fr(f)
     desc = T["ze_desc"] % (A["ze_lib"], f["n"], fr(x["taux_implicite"], 2), fr(m["taux_implicite"], 2), fr(x["croissance_nominale"]),
                            fr(m["croissance_nominale"]), signe(x["solde_primaire"]), signe(m["solde_primaire"]))
-    hors = enumere([nom(e["pays"]) for e in f["ecartes"]])
-    src = T["ze_src"] % (A["ze_lib"], hors) if f["ecartes"] else T["ze_src"].split(" ; ")[0].split("; ")[0] % A["ze_lib"]
+    src = T["ze_src"] % (A["ze_lib"], enumere([nom(e["pays"]) for e in f["ecartes"]])) if f["ecartes"] else T["ze_src"].split(" ; ")[0].split("; ")[0] % A["ze_lib"]
     return T["ze_titre"] % A["ze_lib"], desc, src, T["ze_note"]
 
 

@@ -312,6 +312,12 @@ LOC = {
 
 
 # ------------------------------------------------------------------ niveau 1 : Europe
+# Pays dont seules les recettes manquent (Danemark, édition Eurostat du 21/10/2026 : recettes 2024-2025 retirées) :
+# gardés pour ce qui ne les demande pas (taux implicite, échéances, rendement à 10 ans), hors des indicateurs rapportés
+# aux recettes, et l'exclusion est dite sur la page (jeton hors_recettes). Rempli par niveau_europe().
+PARTIELS: list[dict] = []
+
+
 def niveau_europe() -> tuple[str, list[dict]]:
     # Annee la plus recente ou les interets sont publies pour >= 25 pays.
     an = None
@@ -351,6 +357,11 @@ def niveau_europe() -> tuple[str, list[dict]]:
             i, r, y, d1, dp = I[(g, an)], R[(g, an)], Y[(g, an)], D[(g, an_1)], DP[(g, an)]
         except KeyError:
             manquants.append(g)
+            if (g, an) not in R and all(k in X for k, X in (((g, an), I), ((g, an), Y), ((g, an_1), D), ((g, an), DP))):
+                i, y, d1, dp = I[(g, an)], Y[(g, an)], D[(g, an_1)], DP[(g, an)]
+                p1 = (100 * M1[(g, an)] / MT[(g, an)]) if (g, an) in M1 and MT.get((g, an)) else None
+                PARTIELS.append(dict(code=g, nom=NOMS[g], nom_en=NOMS_EN[g], euro=g in euro, stock_fin=dp, stock=100 * d1 / y,
+                                     prix=100 * i / d1, recettes=None, charge=None, taux10=T10.get((g, an)), part_1an=p1))
             continue
         stock, prix, rec, charge = 100 * d1 / y, 100 * i / d1, 100 * r / y, 100 * i / r
         if abs(charge - stock * prix / rec) > 1e-9:
@@ -371,7 +382,8 @@ def niveau_europe() -> tuple[str, list[dict]]:
                          charge=charge, inflation=(sum(infl) / len(infl)) if len(infl) == 3 else None,
                          inflation_fenetres=fen, taux10=T10.get((g, an)), part_1an=part1))
     if manquants:
-        log("Europe : pays sans donnees completes pour %s : %s" % (an, ", ".join(manquants)))
+        log("Europe : pays sans donnees completes pour %s : %s (dont sans recettes seulement : %s)"
+            % (an, ", ".join(manquants), ", ".join(x["code"] for x in PARTIELS) or "aucun"))
     if len(rows) < 25:
         fail("Europe : %d pays seulement (25 attendus au minimum)" % len(rows))
     for x in rows:  # gardes de vraisemblance
@@ -675,7 +687,11 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
     # Les membres des faux jumeaux sont toujours nommés. Boîte approchée : largeur_texte(), hauteur de capitale.
     POSITIONS = {"h": (0, -9, "middle"), "b": (0, 18, "middle"), "d": (9, 4, "start"), "g": (-9, 4, "end"),
                  "hd": (6, -7, "start"), "hg": (-6, -7, "end"), "bd": (9, 16, "start"), "bg": (-9, 16, "end"),
-                 "h2": (0, -13, "middle"), "b2": (0, 22, "middle")}
+                 "h2": (0, -13, "middle"), "b2": (0, 22, "middle"),
+                 # Replis éloignés, essayés en dernier (02/11/2026 : « Croatie » sans place avec l'édition du 21/10/2026) ;
+                 # en fin de dictionnaire, ils ne changent la place d'aucune étiquette qui en trouvait une avant.
+                 "d2": (14, 4, "start"), "g2": (-14, 4, "end"), "b3": (0, 27, "middle"), "h3": (0, -18, "middle"),
+                 "bd2": (13, 21, "start"), "bg2": (-13, 21, "end")}
     noms = dict(etiquettes) if isinstance(etiquettes, dict) else {c: "h" for c in etiquettes}
     for j in jumeaux:
         noms.setdefault(j["bas"], "h")
@@ -1086,7 +1102,8 @@ def ecarts_figure_m(ecarts, an, svg_d, lang):
 def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple[dict, dict]:
     """Rend (affichage, affichage_en) : UN calcul, deux présentations, aux mêmes clés (même règle que
     bloc_affichage de update_dette_insee.py). Les gardes de prose, plus bas, ne dépendent pas de la langue."""
-    by = {x["code"]: x for x in rows}
+    by = {x["code"]: x for x in PARTIELS}
+    by.update({x["code"]: x for x in rows})
     F = by["FR"]
     s = stats
     j0 = jum[0]
@@ -1107,9 +1124,23 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
     def bloc(L: dict) -> dict:
         nb, pc, nom, article = L["nb"], L["pct"], L["nom"], L["article"]
         A = {"annee": an, "annee_1": str(int(an) - 1), "n_pays": str(len(rows)),
+             "n_pays_donnees": str(len(rows) + len(PARTIELS)),   # pays du jeu, partiels compris (bandeau des données)
              "n_euro": str(sum(x["euro"] for x in rows)), "n_hors": str(sum(not x["euro"] for x in rows))}
         A["n_euro_mots"] = L["mots"](sum(x["euro"] for x in rows))
         A["n_hors_mots"] = L["mots"](sum(not x["euro"] for x in rows))
+        # Exclusion dite, au contact du nuage (02/11/2026) ; et l'exemple de parité fixe ne cite que des pays du calcul.
+        hors = [L["article"][x["code"]] for x in PARTIELS]
+        if L is LOC["fr"]:
+            phr = "%s n'entre pas dans ces deux groupes\u00a0: Eurostat ne publie pas, à ce jour, %s recettes de %s." % (
+                " et ".join(hors), "ses" if len(hors) == 1 else "leurs", an)
+            A["hors_recettes"] = (phr[0].upper() + phr[1:]) if hors else \
+                "Tous les pays de l'Union y figurent."
+            A["parite_ex"] = "le Danemark, la Bulgarie jusqu'à son entrée" if "DK" in {x["code"] for x in rows} else "la Bulgarie jusqu'à son entrée"
+        else:
+            A["hors_recettes"] = ("%s is not in either group: Eurostat does not, to date, publish %s revenue for %s."
+                                  % (" and ".join(hors), "its" if len(hors) == 1 else "their", an)) if hors else \
+                "Every EU country is included."
+            A["parite_ex"] = "Denmark, and Bulgaria until it joined" if "DK" in {x["code"] for x in rows} else "Bulgaria until it joined"
         for k in ("stock_fin", "stock", "recettes", "charge"):
             A["fr_" + k] = pc(F[k])
         A["fr_prix"] = pc(F["prix"], 2)
@@ -1191,6 +1222,8 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         # Égalité à la précision affichée : dite au contact du rang (« , à égalité avec la Belgique »), vide sinon.
         A["fr_egal_ipib"] = ((", à égalité avec " if L is LOC["fr"] else ", tied with ")
                              + L["liste"]([article[c] for c in egaux_ipib])) if egaux_ipib else ""
+        # Le jeton seul peut être vide (aucune égalité), ce que le shortcode refuse : la page lit la proposition entière.
+        A["fr_rang_ipib_union"] = (("%s rang de l'Union" if L is LOC["fr"] else "%s place in the Union") % A["fr_rang_ipib"]) + A["fr_egal_ipib"]
         A["fr_rang_charge"] = L["ordinal"](rang_charge)
         A["n_plus_ipib"] = str(len(plus_ipib))
         A["n_plus_ipib_mots"] = L["mots"](len(plus_ipib))
@@ -1210,10 +1243,13 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
 
     # Calculs de la phase B, communs aux deux langues.
     ipib = {x["code"]: x["charge"] * x["recettes"] / 100 for x in rows}
+    # Intérêts / PIB = stock × taux implicite : ne demande pas les recettes, le rang « de l'Union » compte donc aussi les
+    # pays partiels (Danemark, 02/11/2026).
+    ipib.update({x["code"]: x["stock"] * x["prix"] / 100 for x in PARTIELS})
     # Rang et dépassements à la précision AFFICHÉE (deux décimales) : un écart que le lecteur ne voit pas ne classe pas.
     # Cas fondateur, données 2025 du 15/10/2026 : Belgique 2,2285 % contre France 2,2278 %, toutes deux affichées 2,23 %.
     rang_ipib, egaux_ipib = lg.rang(ipib, "FR", 2)          # la prose dit l'égalité (jeton fr_egal_ipib)
-    plus_ipib = sorted((x for x in rows if lg.depasse(F["stock"], x["stock"], 1) and lg.depasse(ipib[x["code"]], ipib["FR"], 2)),
+    plus_ipib = sorted((x for x in rows + PARTIELS if lg.depasse(F["stock"], x["stock"], 1) and lg.depasse(ipib[x["code"]], ipib["FR"], 2)),
                        key=lambda x: x["stock"])
     # Rangs dont la prose ne prévoit pas d'égalité : une égalité à l'affichage arrête (phrase à réécrire).
     rang_charge, eg_charge = lg.rang({x["code"]: x["charge"] for x in rows}, "FR", 1)
@@ -1368,7 +1404,7 @@ def csv_texte(an: str, rows: list[dict], avances: list[dict], emergents: list[di
     w.writerow(["niveau", "comparabilite", "pays", "code", "annee", "zone_euro", "stock_depart_pct_pib",
                 "stock_cloture_pct_pib", "prix_taux_implicite_pct", "recettes_pct_pib", "charge_interets_pct_recettes",
                 "part_dette_moins_1an_pct", "taux_10ans_pct"])
-    for x in sorted(rows, key=lambda r: -r["stock"]):
+    for x in sorted(rows + PARTIELS, key=lambda r: -r["stock"]):
         w.writerow(["europe", "strictement comparable (Eurostat S.13)", x["nom"], x["code"], an, "oui" if x["euro"] else "non",
                     v(x["stock"], 2), v(x["stock_fin"], 1), v(x["prix"], 3), v(x["recettes"], 2), v(x["charge"], 2),
                     v(x["part_1an"], 2), v(x["taux10"], 2)])
@@ -1394,7 +1430,7 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
                     "administrations publiques S.13, monnaie nationale" % an),
             c_lx="stock : dette fin %s rapportée au PIB %s" % (an_1, an),
             c_ly="intérêts en % des recettes publiques",
-            c_titre="Même dette, coût différent : les 27 pays de l'UE en %s" % an,
+            c_titre="Même dette, coût différent : %s de l'UE en %s" % ("les 27 pays" if len(rows) == 27 else "%d pays" % len(rows), an),
             c_desc="Chaque point est un pays. Les pointillés relient les faux jumeaux désignés par la règle publiée : dette voisine, "
                    "part des recettes consacrée aux intérêts très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. "
                    "Intérêts en %% des recettes : Hongrie %s, Slovénie %s, France %s, Italie %s." % tuple(
@@ -1416,7 +1452,7 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
                     "general government S.13, national currency" % an),
             c_lx="stock: debt at end-%s relative to %s GDP" % (an_1, an),
             c_ly="burden: interest as a % of public revenue",
-            c_titre="Same debt, different burden: the 27 EU countries in %s" % an,
+            c_titre="Same debt, different burden: %s EU countries in %s" % ("the 27" if len(rows) == 27 else "%d" % len(rows), an),
             c_desc="Each dot is a country. Dotted lines link the look-alike pairs picked out by the published rule: similar debt, "
                    "very different burden. Two least-squares lines, one per group, over their observed range. "
                    "Burden: Hungary %s, Slovenia %s, France %s, Italy %s." % tuple(
@@ -1436,7 +1472,7 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
             src_tr="Eurostat gov_10dd_ggd (debt by residual maturity), irt_lt_mcby_a (10-year yields), %s" % an),
     }[lang]
     D = {
-        "dette-monde-stock%s.svg" % suf: barres_stock(rows, an, T["src_stock"], lang),
+        "dette-monde-stock%s.svg" % suf: barres_stock(rows + PARTIELS, an, T["src_stock"], lang),   # le stock ne demande pas les recettes
         "dette-monde-charge%s.svg" % suf: nuage(
             rows, lambda x: x["stock"], lambda x: x["charge"], 160, 10, 20, 2,
             T["c_lx"], T["c_ly"], "mc", T["c_titre"], T["c_desc"], T["src_eu"], T["c_note"],
@@ -1456,7 +1492,7 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
              "CZ": "h", "DK": "g", "BG": "d",
              # Les deux taux implicites les plus bas (auteur, 04/10 : nommer le bas de l'échelle).
              "LU": "g", "IE": "b"}, lang=lang),
-        "dette-monde-transmission%s.svg" % suf: transmission(rows, an, T["src_tr"], lang),
+        "dette-monde-transmission%s.svg" % suf: transmission(rows + PARTIELS, an, T["src_tr"], lang),
         "dette-monde-ecarts%s.svg" % suf: ecarts_figure(ecarts, an, lang),
     }
     return dict(D, **figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf))
@@ -1479,7 +1515,7 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
     ly = {"fr": ("Intérêts en % des recettes", "Taux implicite du stock", "Rendement à 10 ans − taux implicite"),
           "en": ("Burden: interest as a % of revenue", "Implicit interest rate on the stock", "10-year yield − implicit rate")}[lang]
     infl = [x for x in rows if x["inflation"] is not None]
-    trans = [x for x in rows if x["part_1an"] is not None and x["taux10"] is not None]
+    trans = [x for x in rows + PARTIELS if x["part_1an"] is not None and x["taux10"] is not None]
     tr_y = [x["taux10"] - x["prix"] for x in trans]
     sortie = {
         "dette-monde-charge%s-m.svg" % suf: nuage_m(
@@ -1570,7 +1606,10 @@ def main() -> int:
                  "niveaux": {"europe": "strictement comparable (Eurostat S.13, SEC 2010)",
                              "avances": "avec réserve (OCDE Economic Outlook, passifs financiers bruts SCN, intérêts bruts)",
                              "emergents": "indicatif (FMI WEO et Banque mondiale, administration centrale)"}},
-        "europe": rows, "statistiques": stats, "faux_jumeaux": jum, "avances": avances,
+        "europe": rows, "statistiques": stats,
+        # Pays dont seules les recettes manquent : dans le tableau, le stock et le CSV, hors des indicateurs rapportés aux recettes.
+        "europe_partiels": [dict(x, motif="recettes de %s non publiées par Eurostat" % an, motif_en="%s revenue not published by Eurostat" % an)
+                            for x in PARTIELS], "faux_jumeaux": jum, "avances": avances,
         "emergents": emergents, "annee_fmi": an_fmi, "ecarts_allemagne": ecarts,
         "affichage": aff,
         "affichage_en": aff_en,

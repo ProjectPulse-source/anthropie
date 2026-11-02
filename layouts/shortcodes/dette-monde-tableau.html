@@ -33,6 +33,14 @@
       <td>{{ replace (printf "%.1f" .stock) "." $dec }}{{ $pc }}</td><td>{{ replace (printf "%.2f" .prix) "." $dec }}{{ $pc }}</td>
       <td>{{ replace (printf "%.1f" .recettes) "." $dec }}{{ $pc }}</td><td><strong>{{ replace (printf "%.1f" .charge) "." $dec }}{{ $pc }}</strong></td></tr>
   {{- end }}
+  {{- /* Pays dont Eurostat ne publie pas les recettes de l'année (02/11/2026 : Danemark) : la ligne reste, « — » pour ce
+         qui dépend des recettes, et le build avertit (une absence se dit). */ -}}
+  {{- range $d.europe_partiels }}
+    {{- warnf "dette-monde-tableau: %s sans recettes publiees (%s), affiche avec « — »" .code $page }}
+    <tr><th scope="row">{{ index . $kn }}</th><td>{{ if .euro }}{{ cond $en "yes" "oui" }}{{ else }}{{ cond $en "no" "non" }}{{ end }}</td>
+      <td>{{ replace (printf "%.1f" .stock) "." $dec }}{{ $pc }}</td><td>{{ replace (printf "%.2f" .prix) "." $dec }}{{ $pc }}</td>
+      <td title="{{ cond $en .motif_en .motif }}">—</td><td title="{{ cond $en .motif_en .motif }}">—</td></tr>
+  {{- end }}
   </tbody>
 </table>
 </div>

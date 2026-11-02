@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 536" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mt-m-t mt-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="mt-m-t">Pression de refinancement, 2025</title><desc id="mt-m-d">Chaque point est un pays : à droite, une plus grande part de la dette arrive à échéance dans l'année ; en haut, le rendement harmonisé à 10 ans dépasse davantage le taux implicite du stock. Si les conditions de financement restaient supérieures au coût de la dette remplacée, les refinancements pousseraient le coût moyen à la hausse. Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision. France : 9,5 % de la dette à moins d'un an, écart de 1,33 point.</desc>
+<title id="mt-m-t">Pression de refinancement, 2025</title><desc id="mt-m-d">Chaque point est un pays : à droite, une plus grande part de la dette arrive à échéance dans l'année ; en haut, le rendement harmonisé à 10 ans dépasse davantage le taux implicite du stock. Si les conditions de financement restaient supérieures au coût de la dette remplacée, les refinancements pousseraient le coût moyen à la hausse. Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision. France : 9,5 % de la dette à moins d'un an, écart de 1,36 point.</desc>
 <rect width="300" height="536" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Pression de refinancement,</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">2025</text>
@@ -26,41 +26,41 @@
 <text x="134.7" y="373.0" font-size="13.5" fill="#898781" text-anchor="middle">10 %</text>
 <text x="213.3" y="373.0" font-size="13.5" fill="#898781" text-anchor="middle">20 %</text>
 <text x="292.0" y="373.0" font-size="13.5" fill="#898781" text-anchor="end">30 %</text>
-<circle cx="125.9" cy="204.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="109.1" y="265.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<rect x="96.8" y="190.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<rect x="86.6" y="307.7" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="112.9" cy="219.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="125.9" cy="206.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="109.1" y="251.1" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="96.8" y="189.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="112.9" cy="218.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="150.8" cy="188.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="110.0" cy="161.4" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="110.0" cy="159.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="90.3" cy="183.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="96.8" cy="221.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="130.5" cy="175.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="96.8" cy="222.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="130.5" cy="172.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="137.0" cy="250.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="141.6" cy="227.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="66.7" cy="199.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="75.4" cy="220.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="61.0" cy="248.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="69.9" cy="156.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="110.6" y="165.5" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="119.2" cy="229.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="141.6" cy="227.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="66.7" cy="201.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="75.4" cy="220.4" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="61.0" cy="252.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="69.9" cy="161.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="110.6" y="165.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="119.2" cy="228.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="147.6" cy="195.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="105.5" cy="209.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="105.5" cy="207.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="77.0" y="223.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="225.3" cy="210.3" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="107.0" y="173.2" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="103.1" cy="193.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="60.0" cy="223.4" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="136.6" cy="201.3" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="279.4" y="227.1" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<text x="137.5" y="180.0" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">France 1,33 pt</text>
-<text x="137.5" y="180.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">France 1,33 pt</text>
-<text x="97.4" y="316.5" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Danemark</text>
-<text x="97.4" y="316.5" font-size="13.5" fill="#0A0A0E" text-anchor="start">Danemark</text>
-<text x="276.2" y="235.9" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Suède</text>
-<text x="276.2" y="235.9" font-size="13.5" fill="#0A0A0E" text-anchor="end">Suède</text>
-<text x="232.3" y="215.3" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Portugal</text>
-<text x="232.3" y="215.3" font-size="13.5" fill="#0A0A0E" text-anchor="start">Portugal</text>
+<circle cx="225.3" cy="212.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="107.0" y="171.5" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="103.1" cy="193.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="60.0" cy="224.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="136.6" cy="201.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="279.4" y="230.5" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="86.6" y="308.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<text x="137.5" y="177.9" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">France 1,36 pt</text>
+<text x="137.5" y="177.9" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">France 1,36 pt</text>
+<text x="97.4" y="316.8" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Danemark</text>
+<text x="97.4" y="316.8" font-size="13.5" fill="#0A0A0E" text-anchor="start">Danemark</text>
+<text x="276.2" y="239.3" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Suède</text>
+<text x="276.2" y="239.3" font-size="13.5" fill="#0A0A0E" text-anchor="end">Suède</text>
+<text x="232.3" y="217.1" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Portugal</text>
+<text x="232.3" y="217.1" font-size="13.5" fill="#0A0A0E" text-anchor="start">Portugal</text>
 <text x="0.0" y="398.0" font-size="13.5" fill="#898781" text-anchor="start">Part de la dette à moins d'un an</text>
 <line x1="0" y1="412.0" x2="300" y2="412.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="433.0" font-size="13.5" fill="#52514e">Eurostat gov_10dd_ggd (dette par</text>
