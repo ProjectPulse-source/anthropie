@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Pages `offre-culturelle` : version téléphone
+
+Demande de l'auteur après audit de 40 vues en émulation tactile (320, 360, 390, 430 px, 844 px en paysage), pages entières.
+
+- Cartes sous 600 px : couverture, thème, titre et note en tête ; question, accroche, aperçu et bouton sur toute la largeur.
+- Bandeau resserré (623 → 569 px à 390 px) ; dès 720 px, éventail à droite du texte (579 → 410 px à 844 px).
+- Bandeau d'essai collant : 72 → 59 px à 320 px ; arrêt des ancres porté à 72 px, il recouvrait le titre à 320 px.
+- Premier bouton de 1 465 à 1 359 px à 390 px ; l'ordre compteur, étapes, livres reste celui de l'audit du 25/10.
+
 ### 2026-11-02 — Pages `offre-culturelle` : livres en éventail, grille du site
 
 Décision de l'auteur : maquette A (`06_PROMOTION\PARTENARIATS\CSE\MAQUETTES_BANDEAU_2026-11-02\`) et prise en compte de

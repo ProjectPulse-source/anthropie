@@ -38,7 +38,7 @@
       {{- /* Les six couvertures en éventail (maquette A, auteur, 02/11), toutes de la même taille ; ordre éditorial : le premier livre devant (auteur, 25/10 : « conserve
              exactement le modèle actuel et rajoute les livres ») ; décoratives, les cartes plus bas les nomment. */}}
       <div class="oc-tete__couvs" aria-hidden="true">
-        {{- range $p.ordre }}{{ partial "book-cover.html" (dict "slug" . "alt" "" "wrapClass" "oc-tete__couv" "sizes" "(min-width: 1024px) 166px, (min-width: 860px) 134px, 32vw" "loading" "eager") }}{{ end -}}
+        {{- range $p.ordre }}{{ partial "book-cover.html" (dict "slug" . "alt" "" "wrapClass" "oc-tete__couv" "sizes" "(min-width: 1024px) 166px, (min-width: 720px) 134px, 32vw" "loading" "eager") }}{{ end -}}
       </div>
     </div>
   </header>

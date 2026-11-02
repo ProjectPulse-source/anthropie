@@ -57,7 +57,7 @@
 // mêmes tailles, chevauchées, directement sur le bandeau nuit. L'ordre du DOM est celui du front matter : le premier livre,
 // choisi pour le public de la page, est au centre, au premier plan. Le liseré et le halo détachent les couvertures sombres.
 .oc-tete__couvs {
-  position: relative; isolation: isolate; width: 100%; max-width: 380px; aspect-ratio: 1 / .68; margin: 14px auto 2px;
+  position: relative; isolation: isolate; width: 100%; max-width: 380px; aspect-ratio: 1 / .64; margin: 10px auto 0;
   &::before { content: ""; position: absolute; z-index: -1; inset: -4% 0; background: radial-gradient(closest-side, rgba(143, 170, 220, .28), transparent); }
   .oc-tete__couv {
     position: absolute; width: 32%; transform: rotate(var(--a)); transform-origin: 50% 100%; transition: transform .18s;
@@ -73,11 +73,14 @@
   .oc-tete__couv:nth-child(6) { left: 56%; top: 17%; z-index: 1; --a: 15deg; }
 }
 @media (prefers-reduced-motion: reduce) { .oc-tete__couvs .oc-tete__couv { transition: none; } }
-@media (min-width: 860px) {
-  .oc-tete .oc-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 420px; column-gap: 32px; }
+// Dès 720 px, éventail à droite du texte : en dessous de 860 px il passait sous le texte, 579 px de bandeau sur un téléphone
+// en paysage de 390 px de haut (mesuré le 02/11).
+@media (min-width: 720px) {
+  .oc-tete .oc-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 300px; column-gap: 24px; }
   .oc-tete .oc-wrap > * { grid-column: 1; }
   .oc-tete .oc-wrap > .oc-tete__couvs { grid-column: 2; grid-row: 1 / span 6; align-self: center; margin: 0; max-width: none; }
 }
+@media (min-width: 860px) { .oc-tete .oc-wrap { grid-template-columns: minmax(0, 1fr) 420px; column-gap: 32px; } }
 @media (min-width: 1024px) { .oc-tete .oc-wrap { grid-template-columns: minmax(0, 1fr) 520px; column-gap: 40px; } }
 
 .oc-dispo {
@@ -155,10 +158,10 @@
 // Bandeau de la page d'essai, collé en haut au défilement (auteur, 25/10 : « qu'il demeure apparent ») ; les ancres de la
 // page s'arrêtent sous lui.
 .oc-demo {
-  margin: 0; background: #fff4d6; color: #5a4400; font-size: 12.5px; text-align: center; padding: 5px 12px;
+  margin: 0; background: #fff4d6; color: #5a4400; font-size: 12.5px; line-height: 1.3; text-align: center; padding: 5px 12px;
   position: sticky; top: 0; z-index: 20; box-shadow: 0 1px 0 rgba(90, 68, 0, .12), 0 2px 8px rgba(0, 0, 0, .08);
 }
-.oc-demo ~ .oc [id] { scroll-margin-top: 56px; }
+.oc-demo ~ .oc [id] { scroll-margin-top: 72px; }
 
 // Note Amazon.fr dans le texte de la carte, sur une ligne (25/10 : sous la couverture, la colonne de 96 px la
 // cassait en trois lignes et décalait les boutons des deux cartes).
@@ -254,3 +257,25 @@
 .oc .oc-etapes li { padding-left: 12px !important; }
 // Même règle globale pour le retrait de la liste : « main ol, main ul » (!important) décalait étapes et chaîne de 1,6 em.
 .oc .oc-etapes ol, .oc .oc-chaine__maillons { margin: 0 !important; padding: 0 !important; }
+
+// Téléphone (audit du 02/11, texte à 17 px) : l'interligne du corps gonflait le bandeau ; la colonne de texte à côté de la
+// couverture tombait à 154 px à 320 px de large (carte de 640 px de haut, note et repli cassés). La couverture ne garde à côté
+// d'elle que le thème, le titre et la note ; question, accroche, aperçu et bouton prennent toute la largeur de la carte.
+.oc-initiative, .oc-chapo, .oc-mention { line-height: 1.4; }
+.oc-l, .oc-apercu p { line-height: 1.5; }
+@media (max-width: 599.98px) {
+  .oc-tete { padding-bottom: 10px; }
+  .oc-compteur { margin-top: 14px; padding: 10px 14px; }
+  .oc-compteur__n { font-size: 36px; }
+  .oc-sec { margin-top: 18px; }
+  .oc-etapes ol { gap: 6px; }
+  .oc-etapes li { padding-top: 7px; padding-bottom: 7px; line-height: 1.4; }
+  .oc-livre--carte {
+    grid-template-rows: auto auto 1fr; column-gap: 12px; row-gap: 0;
+    .oc-livre__couv { grid-column: 1; grid-row: 1 / span 3; margin-bottom: 10px; }
+    .oc-livre__corps { display: contents; }
+    .oc-theme, h3, .oc-note { grid-column: 2; min-width: 0; }
+    .oc-q, .oc-l, .oc-apercu, .ressources-book__obtain, .ressources-book__assigned { grid-column: 1 / -1; min-width: 0; }
+    .oc-btn { width: 100%; }
+  }
+}
