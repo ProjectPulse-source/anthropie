@@ -127,26 +127,15 @@ jobs:
     with:
       ref: ${{ needs.update.outputs.sha }}
 
+  # Ticket d'etat (03/11/2026) : organe commun .github/workflows/ticket-flux.yml -- un ticket unique par flux,
+  # commente a chaque echec, ferme automatiquement au premier passage sans echec.
   alerte:
     needs: [update, deploy]
-    if: failure()
-    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    if: ${{ !cancelled() }}
     permissions:
       issues: write
-    steps:
-      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
-        with:
-          script: |
-            const quoi = '${{ needs.update.result }}' === 'failure'
-              ? 'rapatriement, garde (dont gardes de prose : une phrase de la page n est plus soutenue par les donnees), build gate ou push'
-              : 'deploiement de la page (la donnee est sur main, la page est en retard)';
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: 'Donnees collectivites : echec du workflow du ' + new Date().toISOString().slice(0, 10),
-              body: 'Le workflow dette-collectivites a echoue -- etape : ' + quoi + '.\n\nRun : ' +
-                context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo +
-                '/actions/runs/' + context.runId +
-                '\n\nRepli : `python scripts/update_dette_collectivites.py` en local ; si une garde de prose bloque, ' +
-                'reformuler la phrase de la page, puis commit humain.'
-            })
+    uses: ./.github/workflows/ticket-flux.yml
+    with:
+      titre: 'Donnees collectivites : echec du workflow'
+      resultat: ${{ (needs.update.result == 'failure' || needs.deploy.result == 'failure') && 'failure' || 'success' }}
+      corps: "${{ needs.update.result == 'failure' && 'Le workflow dette-collectivites a echoue -- etape : rapatriement, garde (dont gardes de prose : une phrase de la page n est plus soutenue par les donnees), build gate ou push. Repli : `python scripts/update_dette_collectivites.py` en local ; si une garde de prose bloque, reformuler la phrase de la page, puis commit humain.' || 'Le workflow dette-collectivites a echoue -- etape : deploiement de la page (la donnee est sur main, la page est en retard). Repli : `python scripts/update_dette_collectivites.py` en local ; si une garde de prose bloque, reformuler la phrase de la page, puis commit humain.' }}"

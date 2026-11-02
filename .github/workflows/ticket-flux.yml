@@ -1,0 +1,67 @@
+name: Ticket d'etat d'un flux (reutilisable)
+
+# UN SEUL ORGANE pour l'alerte des flux de donnees (dette-insee, dette-monde, dette-collectivites, maj-sources),
+# appele par leur tache `alerte` a chaque passage (03/11/2026).
+#   - echec : un ticket unique par flux, au titre fixe ; un nouvel echec le commente au lieu d'en ouvrir un autre ;
+#   - succes : le ticket ouvert (et les anciens tickets dates « ... du AAAA-MM-JJ ») se ferme, avec le run qui le prouve.
+# Cas fondateur : dette-monde a echoue quatre fois du 20/10 au 01/11/2026 ; quatre tickets dates, jamais fermes, noyes
+# parmi vingt-cinq tickets de relecture : la panne, bien signalee, n'a pas ete lue. Un ticket qui ne se ferme pas quand
+# la cause disparait est une alerte toujours vraie, et une alerte toujours vraie detruit le canal.
+
+on:
+  workflow_call:
+    inputs:
+      titre:
+        description: "Titre fixe du ticket (sans date)"
+        required: true
+        type: string
+      resultat:
+        description: "'success' ou 'failure'"
+        required: true
+        type: string
+      corps:
+        description: "Ce qui a echoue et le repli (utilise en cas d'echec)"
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  issues: write
+
+jobs:
+  ticket:
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          TITRE: ${{ inputs.titre }}
+          RESULTAT: ${{ inputs.resultat }}
+          CORPS: ${{ inputs.corps }}
+        with:
+          script: |
+            const { TITRE: titre, RESULTAT: resultat, CORPS: corps } = process.env;
+            const o = { owner: context.repo.owner, repo: context.repo.repo };
+            const run = context.serverUrl + '/' + o.owner + '/' + o.repo + '/actions/runs/' + context.runId;
+            const jour = new Date().toISOString().slice(0, 10);
+            const ouverts = await github.paginate(github.rest.issues.listForRepo, { ...o, state: 'open', per_page: 100 });
+            // Ce flux : titre fixe, ou ancien titre date (« <titre> du 2026-11-01 »).
+            const miens = ouverts.filter(i => !i.pull_request && (i.title === titre || i.title.startsWith(titre + ' du ')));
+            if (resultat === 'success') {
+              for (const i of miens) {
+                await github.rest.issues.createComment({ ...o, issue_number: i.number,
+                  body: 'Le flux est repasse sans echec le ' + jour + ' : ticket ferme automatiquement.\n\nRun : ' + run });
+                await github.rest.issues.update({ ...o, issue_number: i.number, state: 'closed', state_reason: 'completed' });
+              }
+              core.info('succes : ' + miens.length + ' ticket(s) ferme(s)');
+            } else {
+              const texte = 'Echec le ' + jour + '. ' + corps + '\n\nRun : ' + run;
+              if (miens.length) {
+                await github.rest.issues.createComment({ ...o, issue_number: miens[0].number, body: texte });
+                core.info('echec : ticket #' + miens[0].number + ' commente');
+              } else {
+                const t = await github.rest.issues.create({ ...o, title: titre, body: texte });
+                core.info('echec : ticket #' + t.data.number + ' ouvert');
+              }
+            }

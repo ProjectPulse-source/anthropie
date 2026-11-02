@@ -100,9 +100,11 @@ jobs:
   # Une issue par page dont des phrases ont change depuis leur relecture ; si elle est deja ouverte, son corps est
   # remplace (pas un commentaire par deploiement). Le deploiement n'attend pas cette tache. Les workflows qui
   # appellent celui-ci doivent accorder `issues: write` a leur tache `deploy`.
+  # Et une issue se FERME quand la page n'a plus de phrase hors de sa relecture (03/11/2026) : sans cela, les issues
+  # s'accumulaient (vingt-cinq ouvertes au 02/11) et noyaient les alertes d'echec des flux de donnees.
   relecture:
     needs: build
-    if: needs.build.outputs.relecture != '' && needs.build.outputs.relecture != '[]'
+    if: needs.build.result == 'success'
     runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
     permissions:
       issues: write
@@ -112,7 +114,7 @@ jobs:
           RELECTURE: ${{ needs.build.outputs.relecture }}
         with:
           script: |
-            const pages = JSON.parse(process.env.RELECTURE);
+            const pages = JSON.parse(process.env.RELECTURE || '[]');
             const run = context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId;
             const ouvertes = await github.paginate(github.rest.issues.listForRepo,
               {owner: context.repo.owner, repo: context.repo.repo, state: 'open', per_page: 100});
@@ -129,6 +131,14 @@ jobs:
               } else {
                 await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body});
               }
+            }
+            const encore = new Set(pages.map(p => 'Relecture ciblee : ' + p.url));
+            for (const i of ouvertes) {
+              if (i.pull_request || !i.title.startsWith('Relecture ciblee : ') || encore.has(i.title)) continue;
+              await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number,
+                body: 'Instantane a jour : plus aucune phrase servie hors de la relecture. Issue fermee automatiquement.\n\nRun : ' + run});
+              await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number,
+                state: 'closed', state_reason: 'completed'});
             }
 
   deploy:
