@@ -1,5 +1,7 @@
 ---
 title: "What is anthropy?"
+og_image: "images/og-notion-anthropie-en.jpg"
+og_image_alt: "Share card: “What is anthropy?” and its diagram"
 lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de

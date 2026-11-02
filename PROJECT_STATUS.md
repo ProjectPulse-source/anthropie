@@ -52,6 +52,14 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Cartes et vignettes des six notions à schéma
+
+Demande de l'auteur : `scripts/og_notions.py` redessine le schéma de six pages (anthropie, boucle, effet rebond, communs
+négatifs, dette technologique, réversibilité sociale), FR et EN, avec la fabrique du dossier Dette. Chaque libellé est relu
+dans la page : s'il n'y figure plus, la carte n'est pas dessinée. Sur `/ressources/`, une entrée dont la vignette existe
+passe dans la grille illustrée. Glossaire et pages sans figure restent en texte : une figure du site porte une preuve ou un
+mécanisme, elle ne décore pas.
+
 ### 2026-11-02 — Texte pleine largeur et livres égaux sur l'accueil
 
 Décision de l'auteur : le texte occupe toute la largeur disponible (`--largeur-texte: none`), soit 1 216 px à 1 920 px ; la

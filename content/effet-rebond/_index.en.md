@@ -1,5 +1,7 @@
 ---
 title: "What is the rebound effect (Jevons paradox)?"
+og_image: "images/og-notion-rebond-en.jpg"
+og_image_alt: "Share card: “The rebound effect” and its diagram"
 url: /en/rebound-effect/
 description: "The rebound effect is the mechanism by which improved energy efficiency, instead of reducing total consumption, tends to increase it. Described by William Stanley Jevons in 1865, it remains the blind spot of efficiency policies."
 date: 2026-07-24

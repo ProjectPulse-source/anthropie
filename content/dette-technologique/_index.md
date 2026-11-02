@@ -1,5 +1,7 @@
 ---
 title: "Qu'est-ce que la dette technologique ?"
+og_image: "images/og-notion-dette-techno.jpg"
+og_image_alt: "Carte de partage : « La dette technologique » et son schéma"
 description: "La dette technologique désigne le coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des mécanismes d'engagement. À ne pas confondre avec la « dette technique » du génie logiciel."
 date: 2026-07-04
 lastmod: 2026-10-26

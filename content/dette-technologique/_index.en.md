@@ -1,5 +1,7 @@
 ---
 title: "What is technological debt?"
+og_image: "images/og-notion-dette-techno-en.jpg"
+og_image_alt: "Share card: “Technological debt” and its diagram"
 url: /en/technological-debt/
 description: "Technological debt is the cost of digital infrastructures — energy, matter, territory, attention — turned into debt by mechanisms of commitment. Not to be confused with the “technical debt” of software engineering."
 date: 2026-07-04

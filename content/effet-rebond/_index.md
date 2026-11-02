@@ -1,5 +1,7 @@
 ---
 title: "Qu'est-ce que l'effet rebond (paradoxe de Jevons) ?"
+og_image: "images/og-notion-rebond.jpg"
+og_image_alt: "Carte de partage : « L’effet rebond » et son schéma"
 description: "L'effet rebond désigne le mécanisme par lequel l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation totale, tend à l'augmenter. Décrit par William Stanley Jevons en 1865, il reste le point aveugle des politiques d'efficacité."
 date: 2026-07-24
 lastmod: 2026-10-26

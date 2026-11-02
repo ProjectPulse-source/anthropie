@@ -1,5 +1,7 @@
 ---
 title: "What are negative commons?"
+og_image: "images/og-notion-communs-en.jpg"
+og_image_alt: "Share card: “Negative commons” and its diagram"
 url: /en/negative-commons/
 description: "Negative commons designate what we inherit collectively without having chosen it: waste, polluted soils, power plants to be dismantled, obsolete infrastructures. A notion developed by Alexandre Monnin, Emmanuel Bonnet and Diego Landivar — and an anthropic reading of these legacies."
 date: 2026-07-26

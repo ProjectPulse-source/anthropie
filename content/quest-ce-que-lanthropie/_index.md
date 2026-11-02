@@ -1,5 +1,7 @@
 ---
 title: "Qu'est-ce que l'anthropie ?"
+og_image: "images/og-notion-anthropie.jpg"
+og_image_alt: "Carte de partage : « Qu’est-ce que l’anthropie ? » et son schéma"
 lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:

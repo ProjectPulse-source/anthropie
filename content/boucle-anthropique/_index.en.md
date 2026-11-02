@@ -1,5 +1,7 @@
 ---
 title: "What is the anthropic loop?"
+og_image: "images/og-notion-boucle-en.jpg"
+og_image_alt: "Share card: “The anthropic loop” and its diagram"
 url: /en/anthropic-loop/
 description: "The anthropic loop follows, through five conditional states, what becomes of a displaced cost: displacement, accumulation, saturation, return, bifurcation. It extends K. William Kapp's cost-shifting and is distinct from Bernard Stiegler's neganthropy — and from the AI company Anthropic."
 date: 2026-07-24

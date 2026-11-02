@@ -1,5 +1,7 @@
 ---
 title: "What is social reversibility?"
+og_image: "images/og-notion-reversibilite-en.jpg"
+og_image_alt: "Share card: “Social reversibility” and its diagram"
 url: /en/social-reversibility/
 description: "Social reversibility is the capacity, assessed before an attempt, to withstand its possible failure without a lasting closure of one's future. Neither a stock nor a flow: a third dimension of inequality — what one can afford to fail."
 date: 2026-07-24

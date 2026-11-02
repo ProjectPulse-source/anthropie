@@ -1,5 +1,7 @@
 ---
 title: "Qu'est-ce que la boucle anthropique ?"
+og_image: "images/og-notion-boucle.jpg"
+og_image_alt: "Carte de partage : « La boucle anthropique » et son schéma"
 description: "La boucle anthropique suit, en cinq états conditionnels, ce que devient un coût déplacé : déplacement, accumulation, saturation, retour, bifurcation. Elle prolonge le cost-shifting de K. William Kapp et se distingue de la néguanthropie de Bernard Stiegler."
 date: 2026-07-24
 lastmod: 2026-10-30
