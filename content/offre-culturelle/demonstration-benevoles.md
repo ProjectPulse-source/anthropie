@@ -11,7 +11,7 @@ partenaire: "Votre association"
 structure: "association"
 public: "bénévoles"
 public_singulier: "bénévole"
-intro: "Six livres pour vous, et des passages à lire à voix haute à ceux que vous accompagnez : choisissez celui qui vous tente."
+intro: "Six livres pour vous, à choisir et à garder : celui qui vous tente est offert."
 ordre: ["lodyssee-des-idees", "livresque-des-mots", "dette-publique-qui-paie-vraiment", "la-societe-du-premier-coup", "un-president-peut-il-tenir-ses-promesses", "anthropie-ordre-ici-dette-ailleurs"]
 fin: 2027-03-31
 noindex: true
