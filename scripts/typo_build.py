@@ -48,7 +48,8 @@ PREFIXE = re.compile(r"(\b[nN]°|§|\bpp?\.|\b[aA]rt\.) (?=\d)")
 
 
 def apostrophes(t: str) -> str:
-    return re.sub(r"(?<=\w)'(?=[\w«]|$)", "’", t)
+    # Après une lettre, toujours une apostrophe (MaPrimeRénov', students') ; après un chiffre, 5' peut noter des minutes.
+    return re.sub(r"(?<=\w)'(?=[\w«]|$)|(?<=[^\W\d_])'", "’", t)
 
 
 def paires(t: str, ouvre: str, ferme: str) -> str:
@@ -169,12 +170,12 @@ DEFAUTS = {
            ("chiffre séparé de son unité", re.compile(rf"\d (?:%|€|{MOTS})(?![\w])")),
            ("milliers", re.compile(r"(?<![\d,.])\d{1,3} \d{3}(?!\d)")),
            ("guillemet droit", re.compile(r'"')),
-           ("apostrophe droite", re.compile(r"\w'\w"))],
+           ("apostrophe droite", re.compile(r"\w'\w|[^\W\d_]'"))],
     "en": [("espace devant la ponctuation", re.compile(rf"[ {NB}{FINE}][;:!?](?=\s|$)")),
            ("guillemet français", re.compile(r"[«»]")),
            ("espace devant %", re.compile(rf"\d[ {NB}{FINE}]%")),
            ("guillemet droit", re.compile(r'"')),
-           ("apostrophe droite", re.compile(r"\w'\w"))],
+           ("apostrophe droite", re.compile(r"\w'\w|[^\W\d_]'"))],
 }
 
 
@@ -209,13 +210,13 @@ def defauts(html: str):
 
 
 def temoin(titres: Titres) -> int:
-    brut_fr = """<html lang=fr><body><p>Coût : 3 536,1 milliards, soit 5 %, l'an 1 234 ; "oui" ? Livresque des mots <em>Candide</em></p></body></html>"""
+    brut_fr = """<html lang=fr><body><p>Coût : 3 536,1 milliards, soit 5 %, l'an 1 234 ; "oui" ? MaPrimeRénov' Livresque des mots <em>Candide</em></p></body></html>"""
     brut_en = "<html lang=en><body><p>DOI : « yes » 5 % <a>Livresque des mots</a></p></body></html>"
     brut_zone = """<html lang=fr><body><code>a : b</code><a title="x : y">z</a><script>a ? b : c</script></body></html>"""
     a, b = transformer(brut_fr, titres), transformer(brut_en, titres)
     essais = {
         "fr insecables": all(x in a for x in (f"Coût{NB}:", f"536,1{NB}milliards", f"5{NB}%", f"1{NB}234{NB};")),
-        "fr apostrophe et guillemets": "l’an" in a and f"«{NB}oui{NB}»" in a,
+        "fr apostrophe et guillemets": "l’an" in a and "Rénov’ " in a and f"«{NB}oui{NB}»" in a,
         "fr titre": "<em>Livresque des mots</em>" in a and "<em><em>" not in a,
         "en": "DOI:" in b and "“yes”" in b and "5%" in b and "<em>Livresque" in b,
         "idempotence": transformer(a, titres) == a and transformer(b, titres) == b,
