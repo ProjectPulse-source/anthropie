@@ -395,6 +395,9 @@ après la mise en ligne.
   testables publié ; 77 gardes). Statut `ARBITRATED`. Contrôles refaits : check-all --ci 0, build 0, RECETTE OK, instantanés.
 - Point ouvert hors section : `update_dette_dynamique.py` refuse l'édition Eurostat d'octobre 2026 (garde de prose du volet 1) ;
   la page cite donc l'édition d'octobre par un extrait figé propre et dit les deux millésimes.
-- Mises à jour d'état du site (`PROJECT_STATUS.md`, `static/llms.txt`) : non fait (motif : fichiers modifiés et non commités
-  par une autre session ; à faire au commit de la page).
-- Accord de l'auteur : non fait.
+- Mises à jour d'état du site (`PROJECT_STATUS.md`, `static/llms.txt`) : fait (02/11/2026, seuls nos ajouts indexés, les
+  modifications d'une autre session laissées hors du commit).
+- Accord de l'auteur : fait (02/11/2026, « Ok finis et pousse »). Commit `3344c98`, vérifié dans un arbre de travail propre
+  (check-all --ci 0, build 0, liens, rendu, dates, typographie) ; push ; déploiement réussi.
+- Attestation de la version servie : fait (02/11/2026) — FR et EN en 200, section `#hors-hemicycle` et bloc `hors_hemicycle`
+  du JSON présents, nom de J.-F. Legendre correct.
