@@ -15,21 +15,24 @@
 {{- if ne (len $p.ordre) 6 -}}{{- errorf "offre-culturelle : %s doit ordonner les six livres (ordre)" .File.Path -}}{{- end -}}
 {{- $edito := site.Data.offre_culturelle.livres -}}
 {{- $public := $p.public | default "bénéficiaires" -}}
+{{- /* Vocabulaire de la structure partenaire (auteur, 02/11/2026 : page d'essai pour universités du temps libre et associations) ; défaut « comité ». */ -}}
+{{- $structure := $p.structure | default "comité" -}}
+{{- $pronom := cond (eq $structure "association") "Elle" "Il" -}}
 {{- $fin := time.AsTime ($p.fin | default "2027-03-31") -}}
-{{- if $essai }}<p class="oc-demo" role="note">Page d'essai pour les comités&nbsp;: le livre que vous choisissez vous est réellement offert, un par personne.</p>{{ end }}
-<div class="oc" data-partner="{{ $p.partner }}">
+{{- if $essai }}<p class="oc-demo" role="note">Page d'essai pour les {{ $structure }}s&nbsp;: le livre que vous choisissez vous est réellement offert, un par personne.</p>{{ end }}
+<div class="oc" data-partner="{{ $p.partner }}" data-structure="{{ $structure }}">
   <header class="oc-tete">
     <div class="oc-wrap">
       {{- /* Place du logo du comité (auteur, 25/10 : « une place plus importante doit être laissée pour le logo ») :
              le logo n'apparaît qu'avec l'accord exprès du comité ; sur la page d'essai, l'emplacement est montré. */ -}}
       <div class="oc-part">
         {{- with $p.logo }}<img class="oc-logo" src="{{ . | relURL }}" alt="Logo de {{ $p.partenaire }}" width="96" height="96">
-        {{- else }}{{ if $essai }}<span class="oc-logo oc-logo--place" aria-hidden="true">Logo de<br>votre comité</span>{{ end }}{{ end -}}
+        {{- else }}{{ if $essai }}<span class="oc-logo oc-logo--place" aria-hidden="true">Logo de<br>votre {{ $structure }}</span>{{ end }}{{ end -}}
         <span class="oc-part__nom">{{ partial "fr-typo.html" $p.partenaire }}</span>
       </div>
-      <p class="oc-surtitre">Offre culturelle de votre comité</p>
+      <p class="oc-surtitre">Offre culturelle de votre {{ $structure }}</p>
       <h1 class="oc-titre"><span data-role="compteur" hidden><span data-role="total"></span> livres numériques offerts</span><span data-role="sans-compteur">Des livres numériques offerts</span></h1>
-      <p class="oc-initiative">Une initiative culturelle proposée par votre comité, avec des livres financés par l'auteur.</p>
+      <p class="oc-initiative">Une initiative culturelle proposée par votre {{ $structure }}, avec des livres financés par l'auteur.</p>
       <p class="oc-chapo">{{ partial "fr-typo.html" $p.intro }}</p>
       <p class="oc-mention">Sans paiement · Compte Amazon.fr nécessaire · Application Kindle gratuite</p>
       {{- /* Les six couvertures dès l'en-tête, toutes de la même taille, dans l'ordre éditorial (auteur, 25/10 : « conserve
@@ -45,7 +48,7 @@
            jauge ; affiché seulement quand le guichet a répondu (data-role compteur). */ -}}
     <div class="oc-compteur" data-role="compteur" hidden>
       <p class="oc-compteur__n"><span data-role="restant"></span></p>
-      <p class="oc-compteur__txt">exemplaire<span data-role="pluriel">s</span> rest<span data-role="singulier">e</span><span data-role="pluriel">ent</span> à offrir aux {{ $public }} de votre comité,<br>sur <span data-role="total"></span></p>
+      <p class="oc-compteur__txt">exemplaire<span data-role="pluriel">s</span> rest<span data-role="singulier">e</span><span data-role="pluriel">ent</span> à offrir aux {{ $public }} de votre {{ $structure }},<br>sur <span data-role="total"></span></p>
       <div class="oc-compteur__jauge" aria-hidden="true"><span data-role="jauge"></span></div>
     </div>
     <section class="oc-etapes" aria-labelledby="oc-etapes-titre">
@@ -133,7 +136,7 @@
                politesse ; le public reste celui de la page. */}}
         <li><b>L'auteur finance ces livres à l'avance.</b> Plutôt que de payer pour les promouvoir, il choisit de les
         offrir afin de faire circuler les idées et les savoirs au-delà de leur public habituel.</li>
-        <li><b>Votre comité a décidé de prendre le relais.</b> Il rend cette offre accessible à ses {{ $public }} et à leurs
+        <li><b>Votre {{ $structure }} a décidé de prendre le relais.</b> {{ $pronom }} rend cette offre accessible à ses {{ $public }} et à leurs
         proches.</li>
         <li><b>À vous de choisir.</b> Recevez gratuitement le livre qui vous tente et conservez-le dans votre
         bibliothèque Kindle. S'il vous a plu, libre à vous d'en parler autour de vous.</li>
@@ -148,16 +151,16 @@
     <section class="oc-conditions">
       <h2 class="oc-sec">Bon à savoir</h2>
       <ul>
-        <li><b>Pour vous et vos proches.</b> L'offre s'adresse aux {{ $public }} de votre comité et à leur famille. Chaque
+        <li><b>Pour vous et vos proches.</b> L'offre s'adresse aux {{ $public }} de votre {{ $structure }} et à leur famille. Chaque
         lien est individuel et ne sert qu'une fois&nbsp;: un livre, un lecteur.</li>
         <li><b>Jusqu'au {{ partial "date-affichee.html" (dict "t" (time $fin) "fmt" ":date_long" "en" false) }}</b>, dans la limite des exemplaires offerts. Un titre momentanément
         indisponible pourra être proposé de nouveau après réassort.</li>
         <li><b>Aucune inscription sur ce site</b>&nbsp;; un compte Amazon.fr est nécessaire pour recevoir le livre. Votre
-        comité ne nous transmet aucune donnée sur ses {{ $public }}, et aucun nom ni aucune adresse électronique ne vous
-        est demandé. Un livre par bénéficiaire&nbsp;: un identifiant technique, enregistré dans votre navigateur, limite
+        {{ $structure }} ne nous transmet aucune donnée sur ses {{ $public }}, et aucun nom ni aucune adresse électronique ne vous
+        est demandé. Un livre par {{ cond (eq $structure "association") "adhérent" "bénéficiaire" }}&nbsp;: un identifiant technique, enregistré dans votre navigateur, limite
         les retraits répétés depuis un même navigateur.
         <a href="{{ with site.GetPage "/transparence-contacts" }}{{ .RelPermalink }}{{ end }}#ressources-offertes">Transparence et données</a>.</li>
-        <li><b>Une proposition indépendante.</b> Votre comité relaie une proposition de l'auteur, sans contrepartie
+        <li><b>Une proposition indépendante.</b> Votre {{ $structure }} relaie une proposition de l'auteur, sans contrepartie
         d'aucune sorte. Le lien utilise l'infrastructure Kindle d'Amazon comme canal de transmission&nbsp;; il ne
         constitue pas un partenariat avec Amazon.</li>
         <li><b>Un souci avec votre lien&nbsp;?</b> <a href="{{ "/contact/" | relLangURL }}">Écrivez-moi</a>&nbsp;: je

@@ -32,7 +32,8 @@
   var partnerEl = document.querySelector("[data-partner]");
   var PARTNER = partnerEl ? partnerEl.getAttribute("data-partner") : null;
   var RESTOCK = "Temporairement indisponible — réassort en cours.";
-  var QUOTA = "Tous les exemplaires offerts par votre comité ont été attribués.";
+  var CADRE = document.querySelector(".oc");
+  var QUOTA = "Tous les exemplaires offerts par votre " + ((CADRE && CADRE.dataset.structure) || "comité") + " ont été attribués.";
   var INACTIVE = "Cette offre n'est pas ou plus active.";
   function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
   // Compteur du comité : « N exemplaires encore disponibles sur M ».
