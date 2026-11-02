@@ -12,8 +12,8 @@
 # main. Ici, en plus de l'hebdomadaire, des passages QUOTIDIENS couvrent la semaine ou le FMI publie son
 # World Economic Outlook (Assemblees annuelles, Bangkok, 12-18/10/2026).
 #
-# CONDITION DE MORT de la ligne cron « 13-20 octobre » : a retirer apres le 20/10/2026 (elle ne se
-# declencherait plus qu'en octobre 2027, et le calendrier du FMI aura change). L'hebdomadaire reste.
+# La ligne cron « 13-20 octobre » (WEO d'octobre 2026) a ete retiree le 03/11/2026, sa condition de mort remplie.
+# L'hebdomadaire reste.
 # DECROISSANCE du workflow entier : plus de 2 echecs/an pour cause non-donnee => reexamen.
 # Repli toujours viable : `python scripts/update_dette_monde.py` en local + commit humain.
 name: Donnees dette (comparaison internationale)
@@ -21,7 +21,6 @@ name: Donnees dette (comparaison internationale)
 on:
   schedule:
     - cron: '47 7 * * 3'          # chaque mercredi 07:47 UTC (apres dette-insee, 07:17)
-    - cron: '30 15 13-20 10 *'    # WEO d'octobre 2026 : chaque jour du 13 au 20/10, 15:30 UTC
   workflow_dispatch:
 
 permissions:
