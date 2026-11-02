@@ -1,0 +1,1037 @@
+{
+ "_source": "D:\\PRO\\06_PROMOTION\\PLAN_SUJETS_LIVRES_2026-11\\FORMULES_DETTE\\hors_hemicycle\\ (protocole, codage, tests) ; extrait écrit par scripts/extrait_site.py",
+ "date_reference_corpus": "2026-11-02",
+ "corpus": {
+  "declares": 37,
+  "candidats_avec_texte": 33,
+  "documents": 368,
+  "sans_texte": [
+   "asselineau",
+   "platret",
+   "billetdoux",
+   "collovati"
+  ],
+  "enonces": 352,
+  "candidats_enonces": 21,
+  "testables": 71,
+  "candidats_sans_enonce": [
+   "batho",
+   "becht",
+   "bertrand",
+   "dubuisson",
+   "durif",
+   "kazib",
+   "labib",
+   "le-pen",
+   "markovic",
+   "mathieu",
+   "mikolajczak",
+   "mlekuz"
+  ]
+ },
+ "accord": {
+  "retenu": {
+   "n": 1138,
+   "accord": 0.93,
+   "kappa": 0.84
+  },
+  "nature": {
+   "n": 351,
+   "accord": 0.89,
+   "kappa": 0.86
+  },
+  "chiffre": {
+   "n": 351,
+   "accord": 0.99,
+   "kappa": 0.98
+  },
+  "testable": {
+   "n": 351,
+   "accord": 0.97,
+   "kappa": 0.9
+  },
+  "registre": {
+   "n": 351,
+   "accord": 0.85,
+   "kappa": 0.75
+  }
+ },
+ "unites_arbitrees": 174,
+ "temoin": {
+  "documents": 37,
+  "documents_manques": 6,
+  "seuil_pct": 10
+ },
+ "registres": {
+  "arthaud": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 2,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 8
+  },
+  "attal": {
+   "necessite": 13,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 18
+  },
+  "bouamrane": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 1
+  },
+  "branco": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 1,
+   "aucun": 5
+  },
+  "cazeneuve": {
+   "necessite": 4,
+   "contrainte_reconnue_politique_contestee": 2,
+   "alarme_contestee": 2,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 18
+  },
+  "dupont-aignan": {
+   "necessite": 1,
+   "contrainte_reconnue_politique_contestee": 3,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 20
+  },
+  "egger": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 2
+  },
+  "glucksmann": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 7
+  },
+  "lalanne": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 1,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 1
+  },
+  "legendre": {
+   "necessite": 6,
+   "contrainte_reconnue_politique_contestee": 1,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 19
+  },
+  "lisnard": {
+   "necessite": 5,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 14
+  },
+  "melenchon": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 20,
+   "alarme_contestee": 4,
+   "contrainte_niee": 1,
+   "dette_illegitime": 3,
+   "aucun": 24
+  },
+  "philippe": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 4
+  },
+  "philippot": {
+   "necessite": 2,
+   "contrainte_reconnue_politique_contestee": 9,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 15
+  },
+  "polony": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 1
+  },
+  "retailleau": {
+   "necessite": 3,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 21
+  },
+  "rohou": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 3
+  },
+  "roussel": {
+   "necessite": 0,
+   "contrainte_reconnue_politique_contestee": 4,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 1
+  },
+  "ruffin": {
+   "necessite": 7,
+   "contrainte_reconnue_politique_contestee": 13,
+   "alarme_contestee": 1,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 31
+  },
+  "tondelier": {
+   "necessite": 1,
+   "contrainte_reconnue_politique_contestee": 10,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 19
+  },
+  "zemmour": {
+   "necessite": 1,
+   "contrainte_reconnue_politique_contestee": 0,
+   "alarme_contestee": 0,
+   "contrainte_niee": 0,
+   "dette_illegitime": 0,
+   "aucun": 0
+  }
+ },
+ "enonces_testes": [
+  {
+   "id": "H00",
+   "unite": "U0136",
+   "candidat": "cazeneuve",
+   "nom": "Bernard Cazeneuve",
+   "document": "D136",
+   "url": "https://assets.nationbuilder.com/laconvention/pages/2513/attachments/original/1784135398/Synthese_mesuresVfinale.pdf?1784135398",
+   "sha256_piece": "86f66a80a7b91f5fa5419344c17543ab08092234797c5ccc2b1d8a8317eda5ce",
+   "date_reference": "2026-07-15",
+   "rang": "A",
+   "citation": "la dette atteint 117,5 % du PIB au premier trimestre 2026, dix-neuf points de plus qu'en 2017",
+   "citation_en": "debt reaches 117.5% of GDP in the first quarter of 2026, nineteen points more than in 2017",
+   "annonce": {
+    "pct": 117.5
+   }
+  },
+  {
+   "id": "H01",
+   "unite": "U0113",
+   "candidat": "cazeneuve",
+   "nom": "Bernard Cazeneuve",
+   "document": "D135",
+   "url": "https://assets.nationbuilder.com/laconvention/pages/2515/attachments/original/1784151599/Auxfrancaisversionfinale1507.pdf?1784151599",
+   "sha256_piece": "00f95d1a6ddf294a6c4a3955906b4fabdfb6581d0e9b2aa7c0385a89bb0f8529",
+   "date_reference": "2026-07-15",
+   "rang": "A",
+   "citation": "la dette publique a augmenté de mille quatre cents milliards d’euros depuis 2017",
+   "citation_en": "public debt has risen by one thousand four hundred billion euros since 2017",
+   "annonce": {}
+  },
+  {
+   "id": "H02",
+   "unite": "U0156",
+   "candidat": "dupont-aignan",
+   "nom": "Nicolas Dupont-Aignan",
+   "document": "D146",
+   "url": "https://www.debout-la-france.fr/projet/economie-travail/",
+   "sha256_piece": "4d0f980e3c47ef658c6041126286be66b56327df3efdd64a541f49626df54d52",
+   "date_reference": "2026-11-02",
+   "rang": "A_maj",
+   "citation": "La dette nationale atteint 3 600 milliards d’euros et ne cesse de progresser (+ 1 400 milliards sous les désastreux quinquennats d’E. Macron)",
+   "citation_en": "national debt has reached 3,600 billion euros and keeps rising (+1,400 billion under E. Macron's disastrous terms)",
+   "annonce": {
+    "niveau": 3600,
+    "hausse": 1400
+   }
+  },
+  {
+   "id": "H03",
+   "unite": "U0319",
+   "candidat": "melenchon",
+   "nom": "Jean-Luc Mélenchon",
+   "document": "D185",
+   "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf",
+   "sha256_piece": "796b2e7a7a3d26e6812498c7ad5e0589134fdb0429918e40975dfa22a67563e7",
+   "date_reference": "2026-10",
+   "rang": "A",
+   "citation": "Il va laisser un pays avec 1 300 milliards d’euros de dette supplémentaire",
+   "citation_en": "he will leave a country with 1,300 billion euros of additional debt",
+   "annonce": {
+    "hausse": 1300
+   }
+  },
+  {
+   "id": "H04",
+   "unite": "U0230",
+   "candidat": "lisnard",
+   "nom": "David Lisnard",
+   "document": "D170",
+   "url": "https://www.unenouvelleenergie.fr/notre-programme/etre-maitre-de-notre-destin/",
+   "sha256_piece": "bb339483152fc33fe895dabbb438c2fa61b713fa2f8ed29ad8a2092ae4175221",
+   "date_reference": "2026-11-02",
+   "rang": "date_inconnue",
+   "citation": "Avec 3417 milliards d'euros la dette atteint désormais 120% du PIB",
+   "citation_en": "at 3,417 billion euros, debt now stands at 120% of GDP",
+   "annonce": {
+    "niveau": 3417,
+    "pct": 120
+   }
+  },
+  {
+   "id": "H05",
+   "unite": "U0431",
+   "candidat": "philippot",
+   "nom": "Florian Philippot",
+   "document": "D198",
+   "url": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
+   "sha256_piece": "90d0748445644a433b594864cf553a03245739e07cb65672f01c1c0b49be6f83",
+   "date_reference": "2026-09",
+   "rang": "A",
+   "citation": "La dette publique de la France dépasse désormais 3.305 Md€, soit […] plus de 113% du PIB",
+   "citation_en": "France's public debt now exceeds €3,305bn, that is […] more than 113% of GDP",
+   "annonce": {
+    "niveau": 3305,
+    "pct": 113
+   }
+  },
+  {
+   "id": "H06",
+   "unite": "U0799",
+   "candidat": "legendre",
+   "nom": "Jean-François Legendre",
+   "document": "D215",
+   "url": "https://docs.google.com/document/d/1G4dUZaI20umZghEgSgRGCQeiWDJ2fiwhLZvtUK7hofc/export?format=pdf",
+   "sha256_piece": "a6868cd44a71ea2d65c0ff8edebceac6973a76734093b98723d4ef7da8091a8e",
+   "date_reference": "2026-11-02",
+   "rang": "date_inconnue",
+   "citation": "La dette globale est de 3500 milliards",
+   "citation_en": "total debt is 3,500 billion",
+   "annonce": {
+    "niveau": 3500
+   }
+  },
+  {
+   "id": "H07",
+   "unite": "U0819",
+   "candidat": "legendre",
+   "nom": "Jean-François Legendre",
+   "document": "D215",
+   "url": "https://docs.google.com/document/d/1G4dUZaI20umZghEgSgRGCQeiWDJ2fiwhLZvtUK7hofc/export?format=pdf",
+   "sha256_piece": "a6868cd44a71ea2d65c0ff8edebceac6973a76734093b98723d4ef7da8091a8e",
+   "date_reference": "2026-11-02",
+   "rang": "date_inconnue",
+   "citation": "une dette de 3000 milliards",
+   "citation_en": "a debt of 3,000 billion",
+   "annonce": {
+    "niveau": 3000
+   }
+  },
+  {
+   "id": "H08",
+   "unite": "U1044",
+   "candidat": "cazeneuve",
+   "nom": "Bernard Cazeneuve",
+   "document": "D135",
+   "url": "https://assets.nationbuilder.com/laconvention/pages/2515/attachments/original/1784151599/Auxfrancaisversionfinale1507.pdf?1784151599",
+   "sha256_piece": "00f95d1a6ddf294a6c4a3955906b4fabdfb6581d0e9b2aa7c0385a89bb0f8529",
+   "date_reference": "2026-07-15",
+   "rang": "A",
+   "citation": "Ses intérêts représentent le premier poste du budget de l’État, devant la Défense comme devant l’Éducation nationale",
+   "citation_en": "its interest is the largest item in the State budget, ahead of Defence as well as of National Education",
+   "annonce": {}
+  },
+  {
+   "id": "H09",
+   "unite": "U0436",
+   "candidat": "philippot",
+   "nom": "Florian Philippot",
+   "document": "D198",
+   "url": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
+   "sha256_piece": "90d0748445644a433b594864cf553a03245739e07cb65672f01c1c0b49be6f83",
+   "date_reference": "2026-09",
+   "rang": "A",
+   "citation": "deuxième poste budgétaire de l’Etat",
+   "citation_en": "the State's second-largest budget item",
+   "annonce": {}
+  },
+  {
+   "id": "H10",
+   "unite": "U0014",
+   "candidat": "arthaud",
+   "nom": "Nathalie Arthaud",
+   "document": "D002",
+   "url": "https://www.lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
+   "sha256_piece": "c5d720a8cd9e06d7ba7a1229edd6f93294c41ae61c28b70e4f9b52c55052a190",
+   "date_reference": "2026-07-06",
+   "rang": "A",
+   "citation": "est passé devant celui de l’Éducation nationale",
+   "citation_en": "has overtaken that of National Education",
+   "annonce": {}
+  },
+  {
+   "id": "H11",
+   "unite": "U0800",
+   "candidat": "legendre",
+   "nom": "Jean-François Legendre",
+   "document": "D215",
+   "url": "https://docs.google.com/document/d/1G4dUZaI20umZghEgSgRGCQeiWDJ2fiwhLZvtUK7hofc/export?format=pdf",
+   "sha256_piece": "a6868cd44a71ea2d65c0ff8edebceac6973a76734093b98723d4ef7da8091a8e",
+   "date_reference": "2026-11-02",
+   "rang": "date_inconnue",
+   "citation": "Rien que les intérêts de notre dette représentent 80 milliards d'euros par an",
+   "citation_en": "the interest on our debt alone amounts to 80 billion euros a year",
+   "annonce": {
+    "interets": 80
+   }
+  },
+  {
+   "id": "H12",
+   "unite": "U0329",
+   "candidat": "melenchon",
+   "nom": "Jean-Luc Mélenchon",
+   "document": "D185",
+   "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf",
+   "sha256_piece": "796b2e7a7a3d26e6812498c7ad5e0589134fdb0429918e40975dfa22a67563e7",
+   "date_reference": "2026-10",
+   "rang": "A",
+   "citation": "le déficit serait de 2,9 % du PIB",
+   "citation_en": "the deficit would be 2.9% of GDP",
+   "annonce": {
+    "solde_sans": 2.9
+   }
+  },
+  {
+   "id": "H13",
+   "unite": "U0367",
+   "candidat": "melenchon",
+   "nom": "Jean-Luc Mélenchon",
+   "document": "D185",
+   "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf",
+   "sha256_piece": "796b2e7a7a3d26e6812498c7ad5e0589134fdb0429918e40975dfa22a67563e7",
+   "date_reference": "2026-10",
+   "rang": "A",
+   "citation": "La dette publique serait au moins inférieure de 400 milliards d’euros et serait proche des 100 % du PIB",
+   "citation_en": "public debt would be at least 400 billion euros lower and close to 100% of GDP",
+   "annonce": {
+    "moins": 400,
+    "pct": 100
+   }
+  },
+  {
+   "id": "H14",
+   "unite": "U0712",
+   "candidat": "tondelier",
+   "nom": "Marine Tondelier",
+   "document": "D211",
+   "url": "https://lesecologistes.fr/document/3N4JsAEmq6vsx42IITGNZa/vdef-programme-1.pdf",
+   "sha256_piece": "2fafd160291ff6677207c57ce1504ae6e62608cd19d8310e01a522b95beb50fc",
+   "date_reference": "2026-07-15",
+   "rang": "A",
+   "citation": "A cause de ces cadeaux fiscaux, la dette publique a augmenté de 20 points de PIB",
+   "citation_en": "because of these tax giveaways, public debt has risen by 20 points of GDP",
+   "annonce": {
+    "points": 20
+   }
+  },
+  {
+   "id": "H15",
+   "unite": "U0166",
+   "candidat": "dupont-aignan",
+   "nom": "Nicolas Dupont-Aignan",
+   "document": "D146",
+   "url": "https://www.debout-la-france.fr/projet/economie-travail/",
+   "sha256_piece": "4d0f980e3c47ef658c6041126286be66b56327df3efdd64a541f49626df54d52",
+   "date_reference": "2026-11-02",
+   "rang": "A_maj",
+   "citation": "détenue à plus de 55 % par des opérateurs étrangers",
+   "citation_en": "more than 55% held by foreign operators",
+   "annonce": {
+    "pct": 55
+   }
+  },
+  {
+   "id": "H16",
+   "unite": "U0976",
+   "candidat": "retailleau",
+   "nom": "Bruno Retailleau",
+   "document": "D341",
+   "url": "https://www.avecretailleau.fr/projet/mesure/d",
+   "sha256_piece": "6e090076aec145e820041ca6dc0938c6434c08d4fa8aacb9b2e84eee5622d016",
+   "date_reference": "2026-10-08",
+   "rang": "A",
+   "citation": "Il lui manque au moins 40 milliards d'euros chaque année, que nous empruntons",
+   "citation_en": "it is short of at least 40 billion euros every year, which we borrow",
+   "annonce": {
+    "manque": 40
+   }
+  },
+  {
+   "id": "H17",
+   "unite": "U0089",
+   "candidat": "attal",
+   "nom": "Gabriel Attal",
+   "document": "D080",
+   "url": "https://attalpresident.fr/programme/mesures/deficit-sous-trois-pour-cent",
+   "sha256_piece": "ca79d038b9a97083e72e6642eddf40554e27e67c91e4ad08e3d8fba32a576e28",
+   "date_reference": "2026-07-03",
+   "rang": "A",
+   "citation": "Le seuil de 3 % de déficit est un engagement que la France a pris et ne tient pas",
+   "citation_en": "the 3% deficit threshold is a commitment France made and does not keep",
+   "annonce": {
+    "seuil": 3
+   }
+  },
+  {
+   "id": "H18",
+   "unite": "U0545",
+   "candidat": "ruffin",
+   "nom": "François Ruffin",
+   "document": "D208",
+   "url": "https://nouspresident.fr/plan-de-redressement/",
+   "sha256_piece": "2fdfa694a339c4816742d6cec6984504198ef21ea323d6e1281b59b47cdb99ef",
+   "date_reference": "2026-10-21",
+   "rang": "A",
+   "citation": "le déficit public est ainsi passé de 3,4% du PIB à 5,8%",
+   "citation_en": "the public deficit thus went from 3.4% of GDP to 5.8%",
+   "annonce": {
+    "de": 3.4,
+    "a": 5.8
+   }
+  }
+ ],
+ "testables": [
+  {
+   "unite": "U0008",
+   "candidat": "arthaud",
+   "documents": "D002",
+   "texte": "En dix ans, sous les quinquennats de Macron, elle est passée de 2 000 à 3 500 milliards d’euros !",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0014",
+   "candidat": "arthaud",
+   "documents": "D002",
+   "texte": "Ce poste du « service de la dette » est passé devant celui de l’Éducation nationale.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0041",
+   "candidat": "attal",
+   "documents": "D008",
+   "texte": "En 2025, la France aura consacré autant d’argent à rembourser nos créanciers qu’à investir dans la recherche, le développement et l’innovation.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0043",
+   "candidat": "attal",
+   "documents": "D008",
+   "texte": "Comme Premier ministre à Matignon, Gabriel Attal avait engagé en 2024 des économies indispensables sur le budget de l’État, avec une baisse inédite de 10 milliards d’euros du budget des ministères.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0045",
+   "candidat": "attal",
+   "documents": "D008",
+   "texte": "Le prochain Président de la République héritera d’un déficit public supérieur à celui de la plupart de nos voisins européens et d’une dette publique en augmentation.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0089",
+   "candidat": "attal",
+   "documents": "D080",
+   "texte": "Le seuil de 3 % de déficit est un engagement que la France a pris et ne tient pas.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0090",
+   "candidat": "attal",
+   "documents": "D080",
+   "texte": "Le déficit public devrait atteindre 5,4 % du PIB en 2026.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0095",
+   "candidat": "attal",
+   "documents": "D080",
+   "texte": "En 2024, dès ses premiers jours à Matignon, il a annulé 10 milliards d'euros de dépenses ; et, selon l'INSEE, les dépenses de l'État ont baissé pour la première fois depuis quinze ans.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0113",
+   "candidat": "cazeneuve",
+   "documents": "D135",
+   "texte": "Or, la dette publique a augmenté de mille quatre cents milliards d’euros depuis 2017.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0114",
+   "candidat": "cazeneuve",
+   "documents": "D135",
+   "texte": "Les exonérations de cotisations patronales sont passées de soixante-six milliards d’euros en 2017 à quatre-vingts en 2024.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0116",
+   "candidat": "cazeneuve",
+   "documents": "D135",
+   "texte": "Au cours de la même période, le coût annuel des allègements fiscaux consentis aux plus riches des Français a représenté plus de cinq milliards d’euros.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0133",
+   "candidat": "cazeneuve",
+   "documents": "D136",
+   "texte": "Elle repose sur un diagnostic chiffré : la dette a augmenté de 1 400 milliards d'euros depuis 2017, non par excès de dépenses sociales mais par des choix fiscaux (suppression de l'ISF et de la taxe d'habitation, flat tax, « quoi qu'il en coûte » sans contreparties) ; le taux de pauvreté a atteint 15,4 % en 2023 ; les exonérations de cotisations patronales sont passées de 66 milliards en 2017 à 80 en 2024 ; les allègements fiscaux aux plus riches ont coûté plus de 5 milliards par an.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0136",
+   "candidat": "cazeneuve",
+   "documents": "D136",
+   "texte": "La contrainte est nommée sans détour : la dette atteint 117,5 % du PIB au premier trimestre 2026, dix-neuf points de plus qu'en 2017 quand la zone euro reste stable autour de 86 % ; ses intérêts constituent le premier poste du budget de l'État, devant la Défense et l'Éducation nationale.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0156",
+   "candidat": "dupont-aignan",
+   "documents": "D146",
+   "texte": "• La dette nationale atteint 3 600 milliards d’euros et ne cesse de progresser (+ 1 400 milliards sous les désastreux quinquennats d’E.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0158",
+   "candidat": "dupont-aignan",
+   "documents": "D146",
+   "texte": "• Un déficit budgétaire, proche de 5,5 % du PIB, souligne l’impéritie des sbires de M.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0166",
+   "candidat": "dupont-aignan",
+   "documents": "D146",
+   "texte": "Pire, notre dette est désormais détenue à plus de 55 % par des opérateurs étrangers, ce qui met la France dans une grande dépendance.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0168",
+   "candidat": "dupont-aignan",
+   "documents": "D146",
+   "texte": "En 2026, il atteindra 150 milliards d’euros, soit 5,5 points de PIB.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0229",
+   "candidat": "lisnard",
+   "documents": "D170",
+   "texte": "Depuis 1974 la France n’a plus jamais équilibré son budget et les crises de 2008 et du Covid ont été des accélérateurs spectaculaires de la dette publique.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0230",
+   "candidat": "lisnard",
+   "documents": "D170",
+   "texte": "Avec 3417 milliards d’euros la dette atteint désormais 120% du PIB.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0232",
+   "candidat": "lisnard",
+   "documents": "D170",
+   "texte": "En 2019, avant l’épidémie de Covid, les dépenses publiques représentaient 55,6% du PIB en France contre 47% en moyenne dans la zone euro, soit un écart de 8,6 points.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0268",
+   "candidat": "lisnard",
+   "documents": "D179",
+   "texte": "En 2024, le déﬁcit de la Sécurité un millefeuille technocratique qui sociale s’élève déjà à 15,3 Md€.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0269",
+   "candidat": "lisnard",
+   "documents": "D179",
+   "texte": "Il est empêche les réformes et freine l’innovation. estimé à près de 23 Md€ en 2025 selon le PLFSS 2026, puis encore à",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0319",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "Il va laisser un pays avec 1 300 milliards d’euros de dette sup- plémentaire.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0326",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "Les cadeaux au capital ont grevé les recettes de l’État et expliquent pour moitié le déficit actuel.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0329",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "En France, si les recettes étaient restées au niveau de 2017, le déficit serait de 2,9 % du PIB au lieu de 5,1 %.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0342",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "Comment nous allons remettre de l’ordre dans les comptes publics sions, permettent d’effacer le bilan de la politique macroniste (plus de",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0365",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "La situation dégradée des finances publiques s’explique par la forte baisse des recettes en proportion du PIB (2,1 points selon l’Insee, soit plus de 60 milliards d’euros) sous l’effet des réductions d’impôts d’Em- manuel Macron.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0366",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "En effet, le déficit public appro- cherait 3 % du PIB si les recettes avaient été maintenues au niveau de 2017.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0367",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "La dette publique serait au moins inférieure de 400 milliards d’euros et serait proche des 100 % du PIB.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0389",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "Cette année, en vertu du budget Lecornu, c’est en France que la poli- tique de saignées budgétaires est la plus sévère de la zone euro selon le rapport sur les finances publiques de la Commission européenne.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0390",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "Le bilan est implacable : hausse de 0,3 point du déficit, une des crois- sances les plus faibles du siècle hors crises et baisse du pouvoir d’achat.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0391",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "LES CONSÉQUENCES DU BUDGET 2026 EN FRANCE > 30 milliards d’euros de coupes > Baisse de 0,5 point de la croissance > Déficit qui passe de 5,1 % à 5,4 % (+0,3 point)",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0403",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "La charge de la dette en 2027 sera de 2,9 % du PIB, ce qui est loin d’être un record (entre 1996 et 2004, elle était comprise entre 3 et 4 %).",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0407",
+   "candidat": "melenchon",
+   "documents": "D185",
+   "texte": "De 600 milliards et 18 % de notre dette globale, la dette détenue par la Banque de France en 2026 a diminué de 80 milliards.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0431",
+   "candidat": "philippot",
+   "documents": "D198",
+   "texte": "Économiser 20 milliards d’euros y déverse sans compter des milliards La dette publique de la France dépasse désormais 3.305 Md€, soit par an par le Frexit.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0432",
+   "candidat": "philippot",
+   "documents": "D198",
+   "texte": "Le dernier plan européen plus de 113% du PIB. est un contributeur net à l’Union en date, d’un montant colossal de 50 Détenue à plus de la moitié par des étrangers, elle rend la France vulnérable européenne.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0435",
+   "candidat": "philippot",
+   "documents": "D198",
+   "texte": "En 2023, la sur le prochain cadre pluriannuel est que la charge des intérêts de la dette (de l’ordre de 55 Md€ pour 2025) contribution française (qui comprend en préparation.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0436",
+   "candidat": "philippot",
+   "documents": "D198",
+   "texte": "C’est autant d’argent est devenue le deuxième poste budgétaire de l’Etat, derrière celui de une contribution directe calculée sur qui n’ira pas à nos agriculteurs ou à nos l’Education Nationale. le revenu national brut -RNB- ainsi hôpitaux et qui, de surcroît, n’aidera que des prélèvements sur ressources) même pas les Ukrainiens, puisqu’une Malgré un niveau d’imposition record, le déficit public annuel (170 s’est élevée à 27,2 milliards d’euros ; part substantielle de ces fonds Md€ en 2024) accroît à nouveau la dette de la France.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0440",
+   "candidat": "philippot",
+   "documents": "D198",
+   "texte": "Le contrôle (1.670 Md€ de dépenses pour seulement 1.500 Md€ de recettes l’Est et les prétentions politiques de salaire des eurocrates est au-delà de en 2024), le déficit s’établit de façon chronique à plus de 150 Md€ par an. plus en plus folles de l’UE (projet de l’indécence : à Bruxelles, un simple A ce rythme, ce sera 1.000 Md€ de dette supplémentaire en 6 ans.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0445",
+   "candidat": "philippot",
+   "documents": "D198",
+   "texte": "En dans les prochaines années pour traitement moyen d’un fonctionnaire 2025, c’est au total 300 Md€ que la France va devoir emprunter sur les atteindre environ 20 milliards d’euros européen est d’environ 7000 euros marchés. de différentiel net.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0529",
+   "candidat": "ruffin",
+   "documents": "D205",
+   "texte": "Depuis 2017, les cadeaux fiscaux ont creusé le déficit sans financer les investissements dont le pays avait besoin, et la charge de la dette pourrait passer de 78 à 124 milliards d’euros d’ici 2030.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0538",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Dès le premier quinquennat d’Emmanuel Macron, des baisses durables de prélèvements ont réduit les recettes publiques de plusieurs dizaines de milliards d’euros, sans que ces marges soient consacrées à préparer suffisamment le pays aux crises à venir.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0543",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Sérieux d’autant plus cocasse que le ministre de l’Économie a récemment reconnu que le déficit public français devrait repartir à la hausse pour atteindre 5,4% du PIB en 2026.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0545",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Sur la période 2017-2024, le déficit public est ainsi passé de 3,4% du PIB à 5,8%.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0546",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "La baisse, non financée, de 2,5 points de PIB du niveau des prélèvements obligatoires depuis 2017 et non la hausse des dépenses publiques (–0,3 point de PIB sur la même période) (OFCE, juillet 2025).",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0547",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Les erreurs de prévision ayant engendré une sous-estimation du déficit en 2023 (–4,9% du PIB prévus à l’automne 2023 contre –5,5% réalisés) et leur poursuite sur l’année 2024 en raison, notamment, d’une surestimation de la croissance prévue qui a de nouveau produit une sous-estimation du déficit réel (–5,8% du PIB de déficit public en 2024).",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0550",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Dès lors, les recettes publiques se sont contractées sans compensation, ce qui a creusé le déficit budgétaire plus fortement qu’ailleurs.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0551",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Lorsque l’on compare le ratio de dettes de la France aux autres pays de la zone Euro (graphique 1), on constate qu’ils sont semblables de 2005 à 2015 et qu’ils divergent très nettement depuis.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0552",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Trois épisodes expliquent cet écart : de 2015 à 2020, les pays de la zone Euro ont profité de la conjoncture économique pour réduire leur endettement là où la France le maintenait proche de 100 % ; lors de la crise Covid, on constate un creusement de l’écart lié aux soutiens publics nettement supérieur en France par rapport aux autres pays de la zone Euro et qui témoigne d’un manque de ciblage des aides ; enfin, la période post-covid a été une période de désendettement pour les pays de la zone euro qui ont su tirer profit de la forte inflation – leur ratio d’endettement est ainsi passé d’environ 100 % à moins de 90 %.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0560",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Le récent rapport de la mission sur la transparence des finances publiques (Jaravel, Ragot, Valla et Tavernier, sous l’égide de l’Inspection générale des finances, 2026) confirme ce décrochage des conditions de financement de la France par rapport à ses homologues européens : la hiérarchie des émetteurs en zone euro a changé du tout au tout ces derniers temps (Graphique 2).",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0561",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Chaque année, c’est désormais presque 15 milliards d’euros en plus qui doivent être dégagés pour absorber la hausse de la charge de la dette.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0568",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "La hausse de la charge de la dette en serait le premier moteur : elle passerait de 78 Md€ en 2026 à près de 124 Md€ en 2030 (graphique 3).",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0711",
+   "candidat": "tondelier",
+   "documents": "D211",
+   "texte": "Sous couvert d’une politique pro- business, ses gouvernements successifs ont adopté une politique de redistribution à l’envers, coupé dans les services publics et écrasé les classes moyennes pour diminuer par dizaine de milliards les impôts des plus riches et des grandes entreprises.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0712",
+   "candidat": "tondelier",
+   "documents": "D211",
+   "texte": "A cause de ces cadeaux fiscaux, la dette publique a augmenté de 20 points de PIB.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0789",
+   "candidat": "legendre",
+   "documents": "D214",
+   "texte": "Quarante-cinq ans de budgets déficitaires et d' augmentation de la dette pèsent lourdement sur notre avenir.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0794",
+   "candidat": "legendre",
+   "documents": "D215",
+   "texte": "Associée à cette menace et à force de voter des budgets déficitaires depuis 45 ans, la mise de la France sous la tutelle du FMI apparaît désormais comme une possibilité crédible.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0797",
+   "candidat": "legendre",
+   "documents": "D215",
+   "texte": "Sur les 45 dernières années, tous les budgets annuels ont été votés… déficitaires !",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0798",
+   "candidat": "legendre",
+   "documents": "D215",
+   "texte": "Nous dépensons annuellement 150 milliards de plus que ce que nous générons comme richesse et cette somme, il faut l'emprunter sur les marchés financiers, avec intérêts.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0799",
+   "candidat": "legendre",
+   "documents": "D215",
+   "texte": "La dette globale est de 3500 milliards d'euros.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0800",
+   "candidat": "legendre",
+   "documents": "D215",
+   "texte": "Rien que les intérêts de notre dette représentent 80 milliards d'euros par an.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0803",
+   "candidat": "legendre",
+   "documents": "D215",
+   "texte": "En 2025, les dépenses de Sécurité Sociale ont atteint 680 milliards d’euros (dont",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0809",
+   "candidat": "legendre",
+   "documents": "D215",
+   "texte": "Notre déficit, à fin 2025, s'établit à 5% du PIB, soit environ 150 Milliards.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0819",
+   "candidat": "legendre",
+   "documents": "D215",
+   "texte": "Les finances françaises qui ont accumulé une dette de 3000 milliards d'euros.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0942",
+   "candidat": "retailleau",
+   "documents": "D318",
+   "texte": "Aujourd'hui, la loi de programmation est une loi ordinaire sans force contraignante : en 2022, l'Assemblée a rejeté la programmation 2023-2027, adoptée seulement fin 2023, et les budgets ont été votés entre-temps ; depuis 2011, personne n'a rouvert ce texte, et deux gouvernements sont tombés sur des économies représentant 3 % du déficit",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0951",
+   "candidat": "retailleau",
+   "documents": "D320",
+   "texte": "Un pays qui émet 340 Md€ de dette par an ne décide plus : il demande la permission aux marchés, aux agences de notation, à Bruxelles ; 56 % de la dette négociable est détenue par des non-résidents, record du G7",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0975",
+   "candidat": "retailleau",
+   "documents": "D340 D341 D342 D343 D344 D345 D346 D347",
+   "texte": "Ils ne sont plus que 1,7 aujourd'hui dans le privé , et il manque chaque année au moins 40 milliards d'euros, que nous empruntons.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U0976",
+   "candidat": "retailleau",
+   "documents": "D341",
+   "texte": "Il lui manque au moins 40 milliards d'euros chaque année, que nous empruntons, soit environ un quart du déficit public de la France.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U0983",
+   "candidat": "retailleau",
+   "documents": "D346",
+   "texte": "Le vrai risque serait de continuer à adosser toutes nos pensions à la seule signature d'un État endetté à 115 % du PIB.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U1018",
+   "candidat": "zemmour",
+   "documents": "D368",
+   "texte": "Nous ne pouvons plus accueillir toute la misère du monde alors que notre pays compte 9 mil- lions de pauvres, plus de 5 millions de chômeurs et une dette publique de plus de 2 800 milliards d’euros.",
+   "dans_le_tableau": false
+  },
+  {
+   "unite": "U1044",
+   "candidat": "cazeneuve",
+   "documents": "D135",
+   "texte": "Ses intérêts représentent le premier poste du budget de l’État, devant la Défense comme devant l’Éducation nationale.",
+   "dans_le_tableau": true
+  },
+  {
+   "unite": "U1120",
+   "candidat": "ruffin",
+   "documents": "D208",
+   "texte": "Au 1er juillet 2026, les écarts de taux souverains avec l’Allemagne étaient ainsi de 81 points de base (pb) pour la France, ils sont au 1er octobre de 130 pb contre 110 pb pour l’Italie, 100 pb pour la Grèce, 65 pb pour l’Espagne et 50 pb pour le Portugal.",
+   "dans_le_tableau": false
+  }
+ ]
+}

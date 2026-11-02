@@ -1,0 +1,293 @@
+{
+ "_role": "Valeurs TRANSCRITES de documents publiés (PDF, pages HTML) que le générateur ne lit pas par script. Chaque valeur porte sa source, sa page et l'extrait exact ; chaque pièce est archivée hors dépôt avec son empreinte (dossier de recherche de l'auteur, FORMULES_DETTE/_PIECES_RECUES/sources_fiches/). Catégorie de la méthode du site : « transcrite et vérifiée contre la source archivée ». Relu le 02/11/2026.",
+ "seance": {
+  "date": "2025-09-08",
+  "source": "Assemblée nationale, compte rendu intégral de la séance du 8 septembre 2025 (déclaration du Gouvernement suivie d'un vote, article 49, alinéa 1er), Journal officiel, débats, p. 7691 et suivantes",
+  "sha256_archive": "4ab51e508be4847ee57f7db6bf7fabbc7dbdf6334a2c75341debdaafdb023701",
+  "enonces": {
+   "E007": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7692,
+    "texte": "La France n’a pas connu de budget en équilibre depuis cinquante et un ans."
+   },
+   "E010": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7693,
+    "texte": "Tous les ans, nous dépensons plus – et souvent, beaucoup plus – que nos ressources de l’année."
+   },
+   "E018": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7693,
+    "texte": "Un euro de déficit, c’est un euro de dette supplémentaire."
+   },
+   "E021": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7693,
+    "texte": "la ponction que le service de la dette représente tous les ans, c’est-à-dire ce qu’il faut payer aux créanciers pour les intérêts et la part de capital qu’on doit rembourser"
+   },
+   "E027": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7693,
+    "texte": "en 2020, les annuités qu’il nous fallait verser représentaient environ 30 milliards ; en 2024, 60 milliards et cette année, 67 milliards"
+   },
+   "E028": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7693,
+    "texte": "L’année prochaine, en 2026, cette somme devrait atteindre 75 milliards et 85 milliards l’année suivante."
+   },
+   "E029": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7693,
+    "texte": "À la fin de la décennie, d’après la Cour des comptes, nous devrons verser 107 milliards."
+   },
+   "E031": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7693,
+    "texte": "Nous créerons donc 50 milliards par le travail et transférerons plus de 100 milliards à nos créanciers, soit le double !"
+   },
+   "E032": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7693,
+    "texte": "le fruit de tout le travail […] est entièrement reversé à nos créanciers !"
+   },
+   "E055": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7694,
+    "texte": "atteindre en 2029 le seuil de 3 % de déficit public, seuil à partir duquel la dette n’augmente plus"
+   },
+   "E101": {
+    "orateur": "François Bayrou",
+    "groupe": "Premier ministre",
+    "page": 7696,
+    "texte": "Il n’y a qu’un seul chemin pour que notre pays s’en sorte"
+   },
+   "E110": {
+    "orateur": "Boris Vallaud",
+    "groupe": "Socialistes",
+    "page": 7697,
+    "texte": "la dette a augmenté de plus de 1 000 milliards d’euros"
+   },
+   "E122": {
+    "orateur": "Laurent Wauquiez",
+    "groupe": "Droite républicaine",
+    "page": 7699,
+    "texte": "Nous en sommes au point où la France s’endette à des taux supérieurs à ceux de la Grèce."
+   },
+   "E131": {
+    "orateur": "Laurent Wauquiez",
+    "groupe": "Droite républicaine",
+    "page": 7700,
+    "texte": "À ce rythme, nous allons bientôt dépenser plus pour payer les intérêts de la dette que pour former nos enfants."
+   },
+   "E151": {
+    "orateur": "Cyrielle Chatelain",
+    "groupe": "Écologiste et social",
+    "page": 7702,
+    "texte": "ce n’est pas l’augmentation des dépenses publiques – restées stables depuis 2017 – qui a creusé le déficit, mais la baisse des recettes"
+   },
+   "E198": {
+    "orateur": "Paul Christophe",
+    "groupe": "Horizons",
+    "page": 7705,
+    "texte": "Mesurons bien la charge que nous laisserons à nos enfants et qui, chaque heure, augmente de 18 millions d’euros !"
+   },
+   "E243": {
+    "orateur": "Éric Ciotti",
+    "groupe": "UDR",
+    "page": 7709,
+    "texte": "La France a accumulé 1 200 milliards d’euros de dette supplémentaire depuis 2017, sous la présidence d’Emmanuel Macron,"
+   },
+   "E244": {
+    "orateur": "Éric Ciotti",
+    "groupe": "UDR",
+    "page": 7709,
+    "texte": "après que celle-ci a augmenté de 400 milliards sous François Hollande"
+   },
+   "E245": {
+    "orateur": "Éric Ciotti",
+    "groupe": "UDR",
+    "page": 7709,
+    "texte": "La charge de la dette s’élèvera à 66 milliards en 2026, soit 60 % de plus qu’en 2017."
+   },
+   "E246": {
+    "orateur": "Éric Ciotti",
+    "groupe": "UDR",
+    "page": 7709,
+    "texte": "Ce montant est supérieur au budget de n’importe quel ministère."
+   },
+   "E299": {
+    "orateur": "Mathilde Panot",
+    "groupe": "La France insoumise",
+    "page": 7716,
+    "texte": "Les spéculations hasardeuses du Mozart de la finance nous ont coûté 1 000 milliards de dette supplémentaire."
+   }
+  }
+ },
+ "cour_fevrier_2025": {
+  "source": "Cour des comptes, La situation des finances publiques début 2025, février 2025",
+  "url": "https://www.ccomptes.fr/fr/publications/la-situation-des-finances-publiques-debut-2025",
+  "sha256_archive": "ac517fa5d3ba36e753cbf2e493fb5c6fb1faa9b6ad787abfc3c5424036e282c3",
+  "p70_extrait": "les charges d’intérêts (toutes administrations publiques) augmenteraient continûment de 2,3 points de PIB en 2025 à 3,2 points de PIB en 2029 et 3,5 points en 2031, soit respectivement 67 Md€, 107 Md€ et 124 Md€ en euros courants",
+  "interets_apu_mdeur": {
+   "2025": 67,
+   "2029": 107,
+   "2031": 124
+  },
+  "interets_apu_pts_pib": {
+   "2025": 2.3,
+   "2029": 3.2,
+   "2031": 3.5
+  },
+  "p31_extrait": "atteindraient un montant double de celui de 2020, à près de 59 Md€",
+  "interets_apu_2024_mdeur": 59
+ },
+ "cour_juillet_2025": {
+  "source": "Cour des comptes, synthèse du rapport sur la situation et les perspectives des finances publiques, 2 juillet 2025",
+  "url": "https://www.ccomptes.fr/sites/default/files/2025-07/20250702-synthese-RSPFP-2025.pdf",
+  "sha256_archive": "51b383c016f85e07c8ad097cf5974a2c508fbbc2c5c94930a1abe24b9a7c6782",
+  "extrait_3pct": "le retour du déficit public total sous les 3 % ne suffira pas",
+  "extrait_2024": "la progression du « cœur » de la dépense publique"
+ },
+ "plafonds_juillet_2025": {
+  "source": "Gouvernement, Plafonds de dépenses en vue de l'examen et du vote du PLF 2026, juillet 2025 (rapport du 15 juillet 2025 ; copie publiée par Public Sénat, budget.gouv.fr refusant le script)",
+  "url": "https://www.publicsenat.fr/app/uploads/2025/07/PLF-2026-R48-LOLF_15-juillet.pdf",
+  "sha256_archive": "93e8712d311ef8cee8401c158e9d74f97c0b49f3c00c2b3fae30462a7ae3dbd4",
+  "p3_extrait": "une charge de la dette toutes administrations publiques confondues de plus de 66 Md€ et qui dépasse aujourd'hui le budget du ministère de l'éducation nationale",
+  "charge_apu_2025_mdeur_plus_de": 66,
+  "missions_mdeur": {
+   "engagements_financiers": {
+    "2025": 56.2,
+    "2026": 59.5
+   },
+   "enseignement_scolaire": {
+    "2025": 64.3,
+    "2026": 64.5
+   },
+   "defense": {
+    "2025": 50.5,
+    "2026": 57.1
+   },
+   "remboursements_degrevements": {
+    "2025": 148.3,
+    "2026": 152.2
+   }
+  },
+  "missions_tableau": "tableau 1 bis, crédits budgétaires par mission du budget général hors contribution au CAS Pensions ; plus grande mission hors remboursements et dégrèvements d'impôts : Enseignement scolaire (64,5 en 2026), puis Engagements financiers de l'État (59,5), Défense (57,1)",
+  "autres_missions_max_2026_mdeur": 31.2,
+  "autres_missions_max_2026_libelle": "Recherche et enseignement supérieur (plus grande des autres missions)"
+ },
+ "plafonds_juillet_2026": {
+  "source": "Gouvernement, Plafonds de dépenses en vue de l'examen et du vote du PLF 2027, 15 juillet 2026 (copie publiée par un tiers, patrickbayeux.com ; pièce archivée FORMULES_DETTE/_PIECES_RECUES/sources_fiches/Plafonds_PLF2027_R48_2026-07_copie_patrickbayeux.pdf)",
+  "url": "https://patrickbayeux.com/wp-content/uploads/2026/07/2607-Plafonds_de_depenses_PLF_2027_LOLF_Art_48_vdef.pdf",
+  "sha256_archive": "3c7ec5da4795e96e5017f98b0a73fba7245208e327c4cc6f37785ddba821d2b5",
+  "date_publication": "2026-07-15",
+  "missions_tableau": "p. 12, tableau 2 bis, crédits budgétaires par mission du budget général hors contribution au CAS Pensions ; colonnes LFI 2026 et plafonds prévisionnels pour 2027 ; remboursements et dégrèvements hors tableau (151,4 Md€ en 2027, note)",
+  "missions_mdeur": {
+   "engagements_financiers": {"2026": 60.3, "2027": 73.0},
+   "enseignement_scolaire": {"2026": 64.5, "2027": 65.3},
+   "defense": {"2026": 57.0, "2027": 63.4}
+  },
+  "autres_missions_max_mdeur": {"2026": 31.3, "2027": 32.4},
+  "autres_missions_max_libelle": "Solidarité, insertion et égalité des chances et Recherche et enseignement supérieur (31,3 chacune en 2026) ; Solidarité (32,4) en 2027",
+  "interets_apuc_mdeur": {"2026": 64.8, "2027": 74.2},
+  "interets_apuc_extrait": "p. 3, tableau 1, administrations publiques centrales, ligne « Charge d'intérêts » : 31,6 (2019), 64,8 (2026), 74,2 (2027) ; relu en extraction brute"
+ },
+ "senat_plf_2026": {
+  "source": "Sénat, rapport général sur le projet de loi de finances pour 2026, missions « Engagements financiers de l'État » et « Enseignement scolaire » (automne 2025, après la séance)",
+  "url_engagements": "https://www.senat.fr/rap/l25-139-312/l25-139-312_mono.html",
+  "url_enseignement": "https://www.senat.fr/rap/l25-139-313/l25-139-3131.html",
+  "sha256_archive": {
+   "engagements": "55fcf03387ca65b48a1799df6176b5a74b2abca4ad1e8a1a96f402119ccad797",
+   "enseignement": "17b2a6e185682eda7f03289b4a945b23fd63f3f88281030fbdc799fd3ce72d13"
+  },
+  "charge_dette_etat_lfi_2025_budgetaire_mdeur": 53.5,
+  "charge_dette_etat_2026_budgetaire_mdeur": 58.0,
+  "charge_dette_etat_2026_generale_mdeur": 60.4,
+  "charge_dette_etat_2027_plus_de_mdeur": 70,
+  "charge_dette_etat_2029_plus_de_mdeur": 90,
+  "enseignement_scolaire_lfi_2025_hors_pensions_mdeur": 64.329,
+  "enseignement_scolaire_plf_2026_avec_pensions_mdeur": 89.643,
+  "enseignement_scolaire_hausse_avec_pensions_mdeur": 0.9694,
+  "extrait_horizon": "la charge de la dette de l'État pourrait dépasser 70 milliards d'euros en 2027 et représenter plus de 90 milliards d'euros en 2029"
+ },
+ "taux_jour": {
+  "banque_de_france": {
+   "source": "Banque de France, indices obligataires quotidiens (TEC, indices à maturité constante, données MTS), pages du 8 et du 10 septembre 2025 ; ligne TEC10 identifiée par la page du 10 juillet 2024, de même structure",
+   "url": "https://www.banque-france.fr/en/statistics/rates-and-prices/bond-indexes-2025-09-08",
+   "sha256_archive": {
+    "2025-09-08": "6e68b60528d4dc2c21fe3459602ad4f3cebc0415e5773334114f1926f4fa7266",
+    "2025-09-10": "741a227d9754b2e775abd35c7a352e70908d42ba386fe77ca76671a478f258d5",
+    "temoin_2024-07-10": "c0dca8c29bb18ffab14bfdb9d9fad6953ff1d6bd1378e278a0fae481ae1dd444"
+   },
+   "tec10_pct": {
+    "2025-09-02": 3.62,
+    "2025-09-03": 3.62,
+    "2025-09-04": 3.54,
+    "2025-09-05": 3.52,
+    "2025-09-08": 3.49,
+    "2025-09-09": 3.46,
+    "2025-09-10": 3.45
+   }
+  },
+  "banque_de_grece": {
+   "source": "Banque de Grèce, Note on the Greek economy, tableau 7.1 (rendements des emprunts d'État, source LSEG) : note du 5 septembre 2025 (valeurs au 4 septembre, antérieure à la séance) et note du 19 septembre 2025 (valeurs au 18). Copies : Internet Archive (5/09) et naftemporiki.gr (19/09), bankofgreece.gr refusant le script",
+   "url": "https://www.bankofgreece.gr/Publications/Note_on_the_Greek_economy_05_09_2025.pdf",
+   "sha256_archive": {
+    "note_2025-09-05": "eb6f5114824a9169488e7dec6159e32c1353dafb23fe6aa346caada10b88ce1a",
+    "note_2025-09-19": "816575fe837e1e417926771c99640552f2291c1a18b58dcab5287d0467fd62e1"
+   },
+   "dix_ans_pct": {
+    "2025-09-04": {
+     "FR": 3.5,
+     "GR": 3.44,
+     "DE": 2.72
+    },
+    "2025-09-18": {
+     "FR": 3.54,
+     "GR": 3.4,
+     "DE": 2.72
+    }
+   }
+  },
+  "hdat": {
+   "source": "Banque de Grèce, plateforme HDAT, prix et rendements officiels des obligations de référence de l'État grec, « Last 30 trading days », copie Internet Archive du 1er octobre 2025 (bankofgreece.gr refusant le script)",
+   "url": "https://www.bankofgreece.gr/en/statistics/financial-markets-and-interest-rates/greek-government-securities",
+   "sha256_archive": "231382e3d794ba608e6fccebf5d294f23d61cbdc34745cd69aae846f86a6b81a",
+   "methode": "rendement de l'obligation de référence à 10 ans (non un taux à maturité constante)",
+   "dix_ans_pct": {
+    "2025-09-04": 3.4,
+    "2025-09-08": 3.34
+   }
+  }
+ },
+ "millesime_2025": {
+  "source": "Insee, Informations rapides n° 163, dette trimestrielle de Maastricht des APU au premier trimestre 2025 (26 juin 2025, corrigée le 15 juillet 2025) : dernier trimestre publié le 8 septembre 2025 ; le deuxième trimestre a paru le 25 septembre",
+  "url": "https://www.insee.fr/fr/statistiques/8597434",
+  "sha256_archive": {
+   "donnees_xls": "a4e57415a8500dbeb9602e1aafdc252a2440ad4e440d537d6ee93deba2737d28",
+   "pdf": "f624d1ac5d9588dd8c4c7590113040877aa4cc5fbb0cab88a4b05a88015c2a2a"
+  },
+  "dette_mdeur": {
+   "2012-Q2": 1922.6,
+   "2016-Q4": 2190.5,
+   "2017-Q2": 2281.3,
+   "2025-Q1": 3345.4
+  },
+  "dette_pct_pib": {
+   "2012-Q2": 92.6,
+   "2017-Q2": 101.2,
+   "2025-Q1": 113.9
+  },
+  "note": "Comptes annuels au millésime de la séance : Insee Première n° 2054 du 28 mai 2025, fichier de données copié dans ce dossier (insee_ip2054_donnees_2025-05-28.xlsx), figure 2, lu par le script."
+ }
+}

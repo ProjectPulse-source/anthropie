@@ -394,6 +394,27 @@ FR (« détectée, non indexée »). 77 % des impressions des ressources (42 418
   `audit-liens-build.py` 0 critique ; `check-all --reseau` sans échec (Wikidata 503, non conclu).
 - **Ouvert, geste de l'auteur** : demander l'indexation dans Search Console des 9 URL ignorées.
 
+### 2026-11-02 — page « Que valent les formules du débat sur la dette ? » (prolongement du dossier dette)
+
+- **Page** `/formules-du-debat-sur-la-dette/` · `/en/public-debt-debate-claims/`, prolongement du dossier dette
+  (`dossier_dette: prolongement`). Onze formules chiffrées de la séance de l'Assemblée du 8 septembre 2025, confrontées
+  aux données disponibles ce jour-là, en trois niveaux (mesurer, expliquer, conclure), ouverture sur « intérêts contre
+  éducation » ; inventaire de 387 énoncés codé deux fois et arbitré ; le livre passé aux mêmes tests (13 affirmations).
+- **Section « Hors de l'hémicycle »** (`#hors-hemicycle`) : textes d'engagement 2026 des 37 candidats déclarés à la
+  présidentielle de 2027 (33 avec texte, 368 documents, 352 énoncés, 71 testables), registres de la contrainte et 19
+  énoncés testés à la date de leur texte ; vivier des 71 testables dans les données.
+- **Générateur** `scripts/update_dette_formules.py` (77 gardes, mutations vues mordre ; figures grille et Grèce, FR/EN,
+  versions téléphone), `scripts/og_dette_formules.py`, shortcode `form-val`, jetons `{form.*}` ; extraits figés et
+  empreintes dans `scripts/sources_dette_formules/` (dont plafonds de juillet 2025 et 2026, recettes Eurostat du
+  21/10/2026, corpus des candidats écrit par le dossier de recherche). Mise à jour à la main (séance close ; corpus
+  daté du 2/11/2026).
+- **Contre-expertises** : phase A (PRO-20261101-192956), trois entrantes du 02/11, page (PRO-20261102-044049), section
+  hors hémicycle (PRO-20261102-080036) — toutes arbitrées.
+- **Contrôles** : `check-all --ci` 0, build 0, liens, dates, rendu, typographie conformes ; recette OK 320-1600 FR/EN ;
+  relecture phrase à phrase et instantanés.
+- **Ouvert** : `update_dette_dynamique.py --check` refuse l'édition Eurostat du 21/10/2026 (garde de « Ce qu'il faut
+  retenir » de `/pourquoi-la-dette-publique-augmente/`) ; jeu `dette_dynamique` au relevé du 18/10. Phrase à réécrire.
+
 ### 2026-10-26 (suite 7) — G2 : contre-expertise arbitrée et appliquée
 
 Réponse reçue hors navette (`Ressources++-02.txt`, SHA-256 `c1b8e19b…3362`, archivée avant lecture), arbitrage

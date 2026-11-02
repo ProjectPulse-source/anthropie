@@ -1,0 +1,57 @@
+{
+ "corpus": {
+  "enonces": 387,
+  "hors_rapporte": 364,
+  "noyau": 320
+ },
+ "codages": {
+  "A": {
+   "nec_technique": {
+    "gouvernement_soutien": 11
+   },
+   "nec_technique_bayrou": 9,
+   "negation_contrainte": {
+    "opposition": 13,
+    "gouvernement_soutien": 1
+   },
+   "nec_conditionnelle": {
+    "gouvernement_soutien": 13,
+    "autre": 2
+   }
+  },
+  "B": {
+   "nec_technique": {
+    "gouvernement_soutien": 15
+   },
+   "nec_technique_bayrou": 12,
+   "negation_contrainte": {
+    "opposition": 13,
+    "gouvernement_soutien": 1
+   },
+   "nec_conditionnelle": {
+    "gouvernement_soutien": 12,
+    "autre": 2
+   }
+  },
+  "arbitre": {
+   "nec_technique": {
+    "gouvernement_soutien": 15
+   },
+   "nec_technique_bayrou": 12,
+   "negation_contrainte": {
+    "opposition": 14,
+    "gouvernement_soutien": 1
+   },
+   "nec_conditionnelle": {
+    "gouvernement_soutien": 12,
+    "autre": 2
+   }
+  }
+ },
+ "sha256": {
+  "elargi/CODAGE_ELARGI_A.csv": "4b6deaa8b0ce06fd4e6990fe5c2f168fd208d881c11ef2df7f97ceed751c8545",
+  "elargi/CODAGE_ELARGI_B.csv": "e338b90c73300bbd3ed5cc07e0c30bf115d8c48596d61dd369f5f02109a8a6c5",
+  "elargi/CODAGE_ELARGI_ARBITRE.csv": "730713a5e5491a225aee83fc33284da4f7cb6b2473e0c57a292581f4b5b1abf1",
+  "elargi/INVENTAIRE_ELARGI.csv": "69b929a595b098da0f667b935776b052f9aba75799618fefc5f7381163d1654e"
+ }
+}

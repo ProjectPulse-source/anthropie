@@ -148,6 +148,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{infl." -}}{{- errorf "desc-figures: placeholder {infl.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Prolongement « Que valent les formules du débat sur la dette ? » : placeholders {form.<cle>}, depuis
+       data/dette_formules.json (bloc affichage, scripts/update_dette_formules.py). Bilingue dès sa création (02/11/2026). */ -}}
+{{- with site.Data.dette_formules -}}
+  {{- range $k, $v := (cond (eq site.Language.Lang "en") .affichage_en .affichage) -}}
+    {{- $text = replace $text (printf "{form.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{form." -}}{{- errorf "desc-figures: placeholder {form.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Ressource « Manque-t-il des professeurs au lycée ? » : placeholders {lyc.<cle>}, depuis data/lycee_professeurs.json
        (bloc affichage, scripts/update_lycee_professeurs.py). Français seulement (exclusion déclarée). */ -}}
 {{- with site.Data.lycee_professeurs -}}
