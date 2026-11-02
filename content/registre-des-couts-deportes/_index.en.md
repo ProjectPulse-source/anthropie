@@ -1,5 +1,7 @@
 ---
 title: "The Register of Offloaded Costs"
+og_image: "images/og-texte-registre-en.jpg"
+og_image_alt: "Share card: “The Register of Offloaded Costs”"
 url: /en/register-of-offloaded-costs/
 aliases:
   - /en/register-of-deported-costs/

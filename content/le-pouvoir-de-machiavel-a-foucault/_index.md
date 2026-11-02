@@ -1,5 +1,7 @@
 ---
 title: "À quoi tient l'obéissance ? Le pouvoir, de Machiavel à Foucault"
+og_image: "images/og-texte-pouvoir.jpg"
+og_image_alt: "Carte de partage : « À quoi tient l’obéissance ? »"
 description: "Pourquoi obéit-on ? Le parcours « Pouvoir » de L'Odyssée des idées, de la tyrannie antique au pouvoir sans visage : Machiavel, Hobbes, Louis XIV, 1789, Marx, Foucault, Thatcher. Chaque étape avec son texte d'origine, quand il a pu être lu, et la limite que le livre lui trouve."
 chapo: "La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l'attraction : de −1200 à 2012, les réponses à la question « pourquoi obéit-on ? » ne relèvent pas du même geste : faire obéir, faire reconnaître une autorité, organiser les choix possibles. La plupart rencontrent une limite qu'on peut nommer ; celle de la norme décrite par Foucault est plus difficile à localiser. Et trois formules célèbres du parcours ne sont pas ce qu'on croit, à commencer par « la fin justifie les moyens »."
 date: 2026-11-01T07:00:00+01:00  # heure de Paris : une date nue se lit minuit UTC
@@ -21,7 +23,7 @@ faq:
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   refonte: "2026-11-01"  # relecture attestée (instantané docs/relectures/)
   type: ["corpus"]  # protocole de la page (CLAUDE.md du site, « Production des ressources ») : grille uniforme, étapes datées et sourcées
-  bloc: "guides"
+  bloc: "reperes"
   livres: ["lodyssee-des-idees"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 12
   nature: "Parcours — histoire des idées"

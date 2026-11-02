@@ -1,5 +1,7 @@
 ---
 title: "La tabula rasa : Locke a-t-il vraiment parlé d'une page blanche ?"
+og_image: "images/og-texte-tabula.jpg"
+og_image_alt: "Carte de partage : « La tabula rasa »"
 description: "Locke n'a pas écrit « tabula rasa », mais « papier blanc ». D'où vient la formule, comment elle est entrée dans son texte français, et ce que Leibniz lui répond."
 chapo: "Non : en 1690, Locke écrit « white paper », papier blanc. L'image de la tablette vient d'Aristote, la formule latine de ses commentateurs médiévaux, et en français elle est entrée dans le texte de Locke par sa traduction. Leibniz lui oppose un marbre veiné. Ce que la formule fait dire de trop tient en une phrase : l'esprit naît vide d'idées, il ne naît pas inerte."
 date: 2026-10-17T00:45:00+02:00  # heure de Paris : une date nue se lit minuit UTC et passait dans le futur (page absente du build)
@@ -27,7 +29,7 @@ faq:
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources ») : définition sourcée, origine, frontière, exemple
   refonte: "2026-10-17"  # relecture attestée (instantané docs/relectures/) après l'avis entrant du 17/10
-  bloc: "guides"
+  bloc: "reperes"
   livres: ["lodyssee-des-idees"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 15
   nature: "Notion — histoire d'une idée"

@@ -1,5 +1,7 @@
 ---
 title: "How did writing transform thought?"
+og_image: "images/og-texte-ecriture-en.jpg"
+og_image_alt: "Share card: “How writing transformed thought”"
 url: /en/how-writing-transformed-thought/
 description: "A correct answer obtained with AI is not yet knowledge. Plato's Phaedrus, set against the six criteria proposed in 2026 for judging dependence on AI, shows what continues and what changes; the history of writing shows that a technology opens possibilities without deciding what we learn."
 chapo: "A pupil gets a correct answer from an artificial intelligence. Does that mean the pupil knows why it is correct? The question is older than AI: it is the one Plato's Phaedrus puts to writing. Set against six criteria that a 2026 research review proposes for judging dependence on AI, it shows two clear continuities, some displacements and one reversal. And the history of writing, from the first tablets to the printing press, shows that a technology opens possibilities without deciding what we learn."
@@ -24,7 +26,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   conception: "docs/conception/comment-lecriture-a-transforme-la-pensee.md"  # fiche de conception (regle 12)
   refonte: "2026-11-01"  # relecture attestée du jour (instantané docs/relectures/)
-  bloc: "guides"
+  bloc: "reperes"
   livres: ["lodyssee-des-idees"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
   nature: "Perspective — history of ideas"

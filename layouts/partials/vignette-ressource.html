@@ -1,0 +1,8 @@
+{{- /* vignette-ressource.html : chemin de la vignette d'index d'une page, dérivé de `og_image` (og-X -> vig-X), ou "".
+       Organe unique ; scripts/check-ressource-modele.py exige une vignette de toute page qui déclare `ressource.bloc`. */ -}}
+{{- $vig := "" -}}
+{{- with .Params.og_image -}}
+  {{- $v := replace . "og-" "vig-" 1 -}}
+  {{- if and (ne $v .) (fileExists (printf "static/%s" $v)) }}{{ $vig = $v }}{{ end -}}
+{{- end -}}
+{{- return $vig -}}

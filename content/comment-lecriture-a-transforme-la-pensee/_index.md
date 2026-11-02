@@ -1,5 +1,7 @@
 ---
 title: "Comment l'écriture a-t-elle transformé la pensée ?"
+og_image: "images/og-texte-ecriture.jpg"
+og_image_alt: "Carte de partage : « Comment l’écriture a transformé la pensée »"
 description: "Une réponse juste obtenue avec une IA n'est pas encore un savoir. Le Phèdre de Platon, confronté aux six critères proposés en 2026 pour juger la dépendance à l'IA, montre ce qui continue et ce qui change ; l'histoire de l'écrit montre qu'une technique ouvre des possibilités sans décider de ce qu'on apprend."
 chapo: "Un élève obtient d'une intelligence artificielle une réponse juste. Sait-il pour autant pourquoi elle est juste ? La question est plus ancienne que l'IA : c'est celle que le Phèdre de Platon pose à l'écriture. Confrontée à six critères qu'une revue de recherche propose en 2026 pour juger la dépendance à l'IA, elle montre deux continuités nettes, des déplacements et un renversement. Et l'histoire de l'écrit, des premières tablettes à l'imprimerie, montre qu'une technique ouvre des possibilités sans décider de ce que l'on apprend."
 date: 2026-07-25
@@ -23,7 +25,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["explicatif-causal"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   conception: "docs/conception/comment-lecriture-a-transforme-la-pensee.md"  # fiche de conception (regle 12)
   refonte: "2026-11-01"  # relecture attestée du jour (instantané docs/relectures/)
-  bloc: "guides"
+  bloc: "reperes"
   livres: ["lodyssee-des-idees"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
   nature: "Éclairage — histoire des idées"

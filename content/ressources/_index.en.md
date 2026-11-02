@@ -25,7 +25,10 @@ blocs:
     titre_barre: "The author’s analytical framework"
     chapo: "The author’s hypothesis and its definition, the concepts it draws on, each credited to whoever coined it, and the Register that applies it to deep history."
   - id: guides
-    titre: "Guides and perspectives"
+    titre: "Data and law"
+    chapo: "Analyses drawn from official series and texts: radioactive waste, energy decoupling, unexpected expenses."
+  - id: reperes
+    titre: "Ideas and method"
     chapo: "Two texts on method, on writing and on research outside an institution."
 ---
 

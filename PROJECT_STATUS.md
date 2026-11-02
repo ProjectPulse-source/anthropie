@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Vignette pour toute ressource, bloc Ressources réorganisé
+
+Demande de l'auteur. Toute ressource porte une vignette (`scripts/og_ressources_texte.py` : nuage de mots du glossaire,
+jalons du Registre, frises, tuiles) ; verrou `vignettes_index()` vu mordre ; organe unique `partials/vignette-ressource.html`.
+« Guides et éclairages » devient « Données et droit » et « Idées et méthode » ; une seule grille ; sous-titres de dossier
+réservés aux dossiers ; descriptions à trois lignes. Tuiles de `/publications/` +20 %, couvertures de l'accueil −20 %.
+
+Contre-expertise de deux agents internes, convergente : garanties communes, jamais un plan unique. Liste fermée dans
+`CLAUDE.md`. Mesure sur 36 pages : chapô, date, appartenance, sommaire, retour 36/36 ; sources 34/36 par détection (le
+Registre a la sienne ; le Glossaire renvoie aux AWP). Validation sans lecteur réel. Non fait, proposé : entrées Découvrir,
+Chercher, Réutiliser en tête d'index ; étiquette de format séparée de la provenance.
+
 ### 2026-11-02 — Cartes et vignettes des six notions à schéma
 
 Demande de l'auteur : `scripts/og_notions.py` redessine le schéma de six pages (anthropie, boucle, effet rebond, communs

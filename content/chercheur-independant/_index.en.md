@@ -1,5 +1,7 @@
 ---
 title: "Independent researcher: working and publishing outside an institution"
+og_image: "images/og-texte-chercheur-en.jpg"
+og_image_alt: "Share card: “Independent researcher”"
 url: /en/independent-researcher/
 description: "How does an independent researcher publish citable work without a university affiliation? DOIs, preprints, academic identifiers, methodological requirements — the concrete infrastructure, and an analysis of this position within the academic field."
 date: 2026-07-26
@@ -16,7 +18,7 @@ faq:
     answer: "Structurally, it occupies a margin — and this marginality is no accident, according to the working paper AWP-05: the field maintains its order by relegating to its margins the questions that are too cross-disciplinary, the non-conforming formats, the atypical postures. Open infrastructures reduce the cost of this marginality (publishing, being cited, existing academically) without abolishing its logic."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
-  bloc: "guides"
+  bloc: "reperes"
   rang: 20
   nature: "Practical guide and analysis"
 onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)

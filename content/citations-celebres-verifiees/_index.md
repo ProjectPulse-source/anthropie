@@ -1,5 +1,7 @@
 ---
 title: "Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ?"
+og_image: "images/og-texte-citations.jpg"
+og_image_alt: "Carte de partage : « Citations célèbres vérifiées »"
 description: "Vingt citations célèbres prêtées à Victor Hugo, Voltaire, Molière, La Fontaine et Oscar Wilde, relues dans leurs œuvres : le texte exact, l'édition, le passage. Quinze sont établies, deux circulent retouchées, trois n'ont pas été trouvées chez l'auteur qu'on leur prête."
 chapo: "Sur vingt citations célèbres qu'on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n'y ont pas été trouvées. Voltaire n'a pas écrit « je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » : la phrase est d'une biographe anglaise, qui l'a reconnue pour sienne en 1939. Et souvent, l'auteur citait déjà quelqu'un d'autre."
 date: 2026-11-01T06:00:00+01:00  # heure de Paris : une date nue se lit minuit UTC
@@ -22,7 +24,7 @@ faq:
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   refonte: "2026-11-01"  # relecture attestée (instantané docs/relectures/)
   type: ["corpus"]  # protocole de la page (CLAUDE.md du site, « Production des ressources ») : grille uniforme, entrées datées et sourcées
-  bloc: "guides"
+  bloc: "reperes"
   livres: ["livresque-des-mots"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 18
   nature: "Corpus — citations relues au texte"

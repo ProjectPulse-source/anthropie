@@ -1,5 +1,7 @@
 ---
 title: "Nine campaign promises: what can a president really do?"
+og_image: "images/og-texte-promesses-en.jpg"
+og_image_alt: "Share card: “Nine campaign promises”"
 url: /en/what-can-a-president-do-promise-by-promise/
 description: "Health, wages, prices, schools, jobs, security, debt, immigration, climate: for each promise, what a French president can decide, what he must get voted, what he must negotiate and what does not depend on him, according to the grid of the book Un président peut-il tenir ses promesses ? (in French)."
 chapo: "Can a president raise wages, lower prices, get people hired, make the country safer, deport more people? He decides part of each promise, almost never all of it: the rest goes through a vote, a negotiation, or depends on actors he does not command. The boundary does not fall in the same place from one theme to another."

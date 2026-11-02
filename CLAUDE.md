@@ -8,7 +8,7 @@ Static site for **stephane-lalut.com** (Stéphane Lalut, économiste). Hugo Exte
 
 Section `awp` : quatre sorties par working paper — `single.html` plus **BibTeX / RIS / EndNote**, déclarées en `outputFormats` dans `hugo.toml`. L'URL `/awp/` redirige vers `/serie-awp/` par `aliases` ; les pages individuelles restent en `/awp/awp-01/`.
 
-Section `publications` : cartes via `partials/publication-card.html`, gabarit unique **160×107** que réemploie le mur presse de `/a-propos/` (`partials/presse-wall.html`) — une seule règle y sert donc les deux pages.
+Section `publications` : cartes via `partials/publication-card.html`, gabarit **160×107** (134×90 sur `/publications/`, auteur, 02/11/2026) que réemploie le mur presse de `/a-propos/` (`partials/presse-wall.html`) — une seule règle y sert donc les deux pages.
 
 ⚠ `assets/js/hero-flowfield.js` existe dans le dépôt mais n'est plus chargé (canvas supprimé lors du redesign home).
 
@@ -150,6 +150,12 @@ déploiement ; toute page dont le front matter déclare `donnees:`) : carte de p
 « Le résultat en une phrase » (`div.resultat-phrase`) ; bloc commun « Réutiliser cette page » ; balisage `Dataset`
 (bloc `dataset:` du front matter, gabarit `schema-dataset-page.html`) ; JSON **et** CSV du jeu dans `static/` ;
 appel au livre sans note Amazon (`avis="non"`) ; **vignette d'index** `static/images/vig-X.jpg` pour `og_image: images/og-X.jpg`.
+
+**Toute ressource porte une vignette d'index** (auteur, 02/11/2026) : pas forcément un graphe (nuage de mots, frise, tuiles,
+`scripts/og_notions.py`, `scripts/og_ressources_texte.py`), mais rien que la page ne dise. Organe unique
+`partials/vignette-ressource.html` ; verrou `vignettes_index()` de `check-ressource-modele.py` pour toute page à `ressource.bloc`.
+Cette règle prime sur la phrase « cartes crème » ci-dessous. Garanties communes, jamais un plan unique : vignette, titre, chapô,
+date, appartenance, sommaire dès 5 sections, sources nommées, retour à l'index. FAQ, livre, révisions restent conditionnels.
 
 **Présentation dans l'index `/ressources/`** (auteur, 01/10/2026 ; vaut pour toutes les ressources, y compris celles à
 créer) : dans un bloc, les pages qui déclarent `donnees:` forment « le dossier » — grande grille, vignette sur fond

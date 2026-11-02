@@ -1,5 +1,7 @@
 ---
 title: "Chercheur indépendant : travailler et publier hors institution"
+og_image: "images/og-texte-chercheur.jpg"
+og_image_alt: "Carte de partage : « Chercheur indépendant »"
 description: "Comment un chercheur indépendant publie-t-il des travaux citables sans affiliation universitaire ? DOI, préprints, identifiants académiques, exigences de méthode — l'infrastructure concrète, et l'analyse de cette position dans le champ académique."
 date: 2026-07-26
 lastmod: 2026-07-26
@@ -15,7 +17,7 @@ faq:
     answer: "Structurellement, elle occupe une marge — et cette marginalité n'est pas un accident, analyse le working paper AWP-05 : le champ maintient son ordre en reléguant vers ses marges les questions trop transversales, les formats non conformes, les postures atypiques. Les infrastructures ouvertes réduisent le coût de cette marginalité (publier, être cité, exister académiquement) sans en abolir la logique."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
-  bloc: "guides"
+  bloc: "reperes"
   rang: 20
   nature: "Guide pratique et analyse"
 onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)

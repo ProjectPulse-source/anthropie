@@ -65,6 +65,7 @@
   {{- $mots = index $mots (cond $isEn "en" "fr") -}}
   {{ range $blocs }}
     {{- $id := .id -}}
+    {{- $bloc := . -}}
     {{- $items := slice -}}
     {{- range $entrees }}{{ if eq .r.bloc $id }}{{ $items = $items | append . }}{{ end }}{{ end -}}
     {{- if not $items }}{{ warnf "ressources : le bloc %q de %s est vide" $id $.File.Path }}{{ end -}}
@@ -172,7 +173,7 @@
       {{- range $encarts }}{{ partial "ressource-encart.html" (dict "page" .page "r" .r "isEn" $isEn) }}{{ end }}
       {{- with $dossier }}
         {{- $n := len . -}}{{- $mot := cond (lt $n (len $mots)) (index $mots $n) (string $n) -}}
-        {{- if $autres }}<p class="ressources-index__sous">{{ i18n "ressources_dossier" (dict "Count" $n "N" $mot) }}</p>{{ end }}
+        {{- if and $autres $bloc.dossier }}<p class="ressources-index__sous">{{ i18n "ressources_dossier" (dict "Count" $n "N" $mot) }}</p>{{ end }}
         <ul class="ressources-index__liste ressources-index__liste--dossier">
           {{- range . }}{{ partial "ressource-entree.html" (dict "page" .page "r" .r "fr" .fr "vignette" true) }}{{ end }}
         </ul>
@@ -185,20 +186,10 @@
       {{- end }}
       {{- with $autres }}
         {{- $n := len . -}}{{- $mot := cond (lt $n (len $mots)) (index $mots $n) (string $n) -}}
-        {{- if $dossier }}<p class="ressources-index__sous">{{ i18n "ressources_debat" (dict "Count" $n "N" ($mot | strings.FirstUpper)) }}</p>{{ end }}
-        {{- /* Une entrée dont la vignette existe (partials/ressource-entree.html) la porte ; les autres restent en liste. */ -}}
-        {{- $avec := slice -}}{{- $sans := slice -}}
-        {{- range . }}{{ $v := replace (.page.Params.og_image | default "") "og-" "vig-" 1 }}{{ if and $v (ne $v .page.Params.og_image) (fileExists (printf "static/%s" $v)) }}{{ $avec = $avec | append . }}{{ else }}{{ $sans = $sans | append . }}{{ end }}{{ end -}}
-        {{- with $avec }}
+        {{- if and $dossier $bloc.dossier }}<p class="ressources-index__sous">{{ i18n "ressources_debat" (dict "Count" $n "N" ($mot | strings.FirstUpper)) }}</p>{{ end }}
         <ul class="ressources-index__liste ressources-index__liste--dossier">
           {{- range . }}{{ partial "ressource-entree.html" (dict "page" .page "r" .r "fr" .fr "vignette" true) }}{{ end }}
         </ul>
-        {{- end }}
-        {{- with $sans }}
-        <ul class="ressources-index__liste">
-          {{- range . }}{{ partial "ressource-entree.html" (dict "page" .page "r" .r "fr" .fr "vignette" false) }}{{ end }}
-        </ul>
-        {{- end }}
       {{- end }}
     </section>
   {{ end }}

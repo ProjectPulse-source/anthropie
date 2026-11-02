@@ -1,5 +1,7 @@
 ---
 title: "Neuf promesses de campagne : que peut vraiment faire un président ?"
+og_image: "images/og-texte-promesses.jpg"
+og_image_alt: "Carte de partage : « Neuf promesses de campagne »"
 description: "Santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat : pour chaque promesse, ce qu'un président peut décider, ce qu'il doit faire voter, ce qu'il doit négocier et ce qui ne dépend pas de lui, d'après la grille du livre Un président peut-il tenir ses promesses ?"
 chapo: "Un président peut-il augmenter les salaires, baisser les prix, faire embaucher, rendre le pays plus sûr, expulser davantage ? Il décide une partie de chaque promesse, presque jamais toute : le reste passe par un vote, une négociation, ou dépend d'acteurs qu'il ne commande pas. La frontière n'est pas au même endroit selon le thème."
 date: 2026-11-01T05:00:00+01:00

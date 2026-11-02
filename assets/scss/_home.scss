@@ -329,6 +329,7 @@ main .awp-registre { list-style: none; padding: 0 !important; margin: 0 !importa
 }
 .home-livre { display: grid; gap: 0.4rem; align-content: start; min-width: 0; }
 .home-livre__couv { display: block; text-decoration: none; }
+@media (min-width: 761px) { .home-livre__cover-wrap { width: 80%; } } // couvertures réduites de 20 % (auteur, 02/11/2026)
 .home-livre__cover-wrap { display: block; }
 .home-livre__cover {
   display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover;

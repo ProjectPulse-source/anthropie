@@ -1,5 +1,7 @@
 ---
 title: "Le Registre des coûts déportés"
+og_image: "images/og-texte-registre.jpg"
+og_image_alt: "Carte de partage : « Le Registre des coûts déportés »"
 description: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : les jalons du livre, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains, ramenés chacun à l'ordre créé et à la dette déportée — le désordre déplacé ailleurs, plus tard ou sur d'autres. Les 168 jalons en consultation libre, classés selon les sept âges du livre."
 date: 2026-08-15
 lastmod: 2026-11-01

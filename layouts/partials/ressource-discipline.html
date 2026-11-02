@@ -11,11 +11,7 @@
 {{- $n := len $themes -}}
 {{- /* « thème » est masculin : la table des mots de l'index est au féminin (« une page »), d'où « Un » à part (vu le 03/10). */ -}}
 {{- $mot := cond (eq $n 1) "un" (cond (lt $n (len .mots)) (index .mots $n) (string $n)) -}}
-{{- $vig := "" -}}
-{{- with $p.Params.og_image -}}
-  {{- $v := replace . "og-" "vig-" 1 -}}
-  {{- if and (ne $v .) (fileExists (printf "static/%s" $v)) }}{{ $vig = $v }}{{ end -}}
-{{- end -}}
+{{- $vig := partial "vignette-ressource.html" $p -}}
 <aside class="ressources-index__encart{{ if not $vig }} ressources-index__encart--sans-image{{ end }}">
   {{- with $vig }}<a class="ressources-index__encart-image" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="/{{ . }}" alt="" width="720" height="378" loading="lazy"></a>{{ end }}
   <div class="ressources-index__encart-corps">

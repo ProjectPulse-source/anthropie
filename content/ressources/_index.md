@@ -61,7 +61,10 @@ blocs:
     titre_barre: "Cadre d'analyse de l'auteur"   # ligne d'appartenance des pages (partials/ressource-appartenance.html)
     chapo: "L'hypothèse de l'auteur et sa définition, les notions qu'elle mobilise, chacune attribuée à qui l'a forgée, et le Registre qui l'applique à l'histoire longue."
   - id: guides
-    titre: "Guides et éclairages"
-    chapo: "Des éclairages d'histoire des idées et de méthode : l'écriture, la tabula rasa, le travail de recherche hors institution."
+    titre: "Données et droit"
+    chapo: "Des analyses tirées des séries et des textes officiels : déchets radioactifs, découplage énergie-croissance, dépense imprévue, durée d’inscription des erreurs."
+  - id: reperes
+    titre: "Idées et méthode"
+    chapo: "Des éclairages d’histoire des idées et de méthode : l’écriture, le pouvoir, la tabula rasa, les citations, la recherche hors institution."
 ---
 

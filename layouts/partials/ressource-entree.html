@@ -9,12 +9,7 @@
 {{- $p := .page -}}
 {{- $r := .r -}}
 {{- $vig := "" -}}
-{{- if .vignette -}}
-  {{- with $p.Params.og_image -}}
-    {{- $v := replace . "og-" "vig-" 1 -}}
-    {{- if and (ne $v .) (fileExists (printf "static/%s" $v)) }}{{ $vig = $v }}{{ end -}}
-  {{- end -}}
-{{- end -}}
+{{- if .vignette }}{{ $vig = partial "vignette-ressource.html" $p }}{{ end -}}
 <li class="ressources-index__entree{{ with $vig }} ressources-index__entree--vignette{{ end }}">
   {{- with $vig }}<img class="ressources-index__vignette" src="/{{ . }}" alt="" width="720" height="378" loading="lazy">{{ end }}
   <div class="ressources-index__texte">

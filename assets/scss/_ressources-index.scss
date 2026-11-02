@@ -164,3 +164,6 @@ main .ressources-index__liste--dossier {
   border-top: 1px solid var(--color-rule-soft);
   font-size: .95rem;
 }
+
+// Trois lignes au plus dans les cartes : la grille reste lisible ; le texte complet reste dans le HTML.
+.ressources-index__entree .ressources-index__desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }

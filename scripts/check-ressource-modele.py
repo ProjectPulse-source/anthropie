@@ -149,6 +149,25 @@ def jeux(fm: str) -> list[str]:
     return [j.strip().strip("'\"") for j in m.group(1).split(",") if j.strip()] if m else []
 
 
+def vignettes_index() -> int:
+    """Toute page qui déclare ressource.bloc porte une vignette d'index (auteur, 02/11/2026)."""
+    vues, fautes = 0, []
+    for p in sorted(CONTENT.rglob("*.md")):
+        fm = front_matter(p.read_text(encoding="utf-8"))
+        r = bloc_ressource(fm) or {}
+        if not r.get("bloc") or re.search(r"^draft:\s*true\s*$", fm, re.M):
+            continue
+        vues += 1
+        og = re.search(r"^og_image:\s*[\"']?([^\"'\s]+)", fm, re.M)
+        vig = og.group(1).replace("og-", "vig-", 1) if og else ""
+        if not vig or vig == og.group(1) or not (STATIC / vig).is_file():
+            fautes.append("%s : vignette d'index absente (%s)" % (p.relative_to(ROOT).as_posix(), vig or "pas de og_image"))
+    for x in fautes:
+        print("  " + x)
+    print("Vignettes d'index : %d/%d ressource(s) pourvue(s)." % (vues - len(fautes), vues))
+    return 1 if fautes else 0
+
+
 def main() -> int:
     vues, conformes, brouillons, fautes = 0, 0, 0, []
     for p in sorted(CONTENT.rglob("*.md")):
@@ -212,4 +231,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main() or vignettes_index())

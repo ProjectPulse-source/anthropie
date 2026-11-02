@@ -1,5 +1,7 @@
 ---
 title: "Combien de temps une erreur reste-t-elle inscrite ? Fichier bancaire, casier, permis, assurance"
+og_image: "images/og-texte-erreur.jpg"
+og_image_alt: "Carte de partage : « Une erreur inscrite, pour combien de temps ? »"
 description: "Crédit impayé, chèque sans provision, condamnation, points de permis, malus, maladie : pour chaque registre, la durée maximale d'inscription, ce qui l'efface plus tôt et s'il faut agir soi-même, texte par texte, dans le droit en vigueur au 1er novembre 2026."
 chapo: "De six mois pour un point de permis à quarante ans pour le casier : la durée d'une inscription dépend du registre, et ce qui l'efface n'est pas toujours le temps. Les points du permis se récupèrent, le malus se résorbe et la réhabilitation légale s'acquiert sans démarche ; l'interdiction d'émettre des chèques cesse au bout de cinq ans, plus tôt si l'on régularise ; une condamnation n'est exclue du bulletin n° 2 que par le tribunal, dans le jugement ou sur requête ; la radiation d'une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur. Et un même registre oublie à deux vitesses : un malus disparaît en deux ans, le bonus maximal en demande treize."
 date: 2026-11-01T09:00:00+01:00  # heure de Paris : une date nue se lit minuit UTC
