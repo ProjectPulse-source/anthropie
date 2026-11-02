@@ -1,4 +1,4 @@
-# relu le 2026-11-01 ; texte servi de /dette-publique-generations-futures/, build de 1aaf14f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /dette-publique-generations-futures/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d'autres équipements.
@@ -289,11 +289,11 @@ Le déficit que le COR projette pour le système de retraite, 2,4 points de PIB 
 Ce sont des projections conditionnelles à leurs hypothèses.
 L’édition précédente de la Commission (2024) donnait 3,3 pour la position de départ et 0,1 pour l’évolution future des dépenses liées à l’âge : c’est un autre jeu de projections, non une évolution observée.
 S2 n’est pas l’écart calculé dans une autre page du dossier
-La page La dette publique peut-elle baisser ? mesure un écart de grandeur voisine : 2,9 points de PIB en 2025, contre 3,1 points pour S2.
+La page La dette publique peut-elle baisser ? mesure un écart de grandeur voisine : 3,0 points de PIB en 2025, contre 3,1 points pour S2.
 Le premier porte sur le solde observé d’une année ; le second est un ajustement permanent, qui inclut l’évolution projetée des dépenses liées à l’âge.
 Les deux nombres ne sont ni deux estimations interchangeables, ni la validation l’un de l’autre.
 Valeur.
-Volet 5 : 2,9 points de PIB en 2025.
+Volet 5 : 3,0 points de PIB en 2025.
 S2 : 3,1 points de PIB (Debt Sustainability Monitor 2025).
 Nature.
 Volet 5 : solde primaire observé, une année.

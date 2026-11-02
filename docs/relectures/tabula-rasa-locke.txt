@@ -1,11 +1,11 @@
-# relu le 2026-10-17 ; texte servi de /tabula-rasa-locke/, build de 88bc5c4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /tabula-rasa-locke/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 La tabula rasa : Locke a-t-il vraiment parlé d'une page blanche ?
 Non : en 1690, Locke écrit « white paper », papier blanc.
 L'image de la tablette vient d'Aristote, la formule latine de ses commentateurs médiévaux, et en français elle est entrée dans le texte de Locke par sa traduction.
 Leibniz lui oppose un marbre veiné.
 Ce que la formule fait dire de trop tient en une phrase : l'esprit naît vide d'idées, il ne naît pas inerte.
 Page publiée le 17 octobre 2026
-Guides et éclairages
+Idées et méthode
 On prête à John Locke l’idée que l’esprit naît comme une tabula rasa, une page blanche.
 Locke a donné à cette idée sa forme moderne ; la formule, elle, n’est pas de lui.
 Suivre ce déplacement d’un mot, c’est voir comment une idée se fixe sous un nom qui n’est pas celui de son auteur, puis comment elle est contestée.

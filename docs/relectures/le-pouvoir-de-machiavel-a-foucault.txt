@@ -1,11 +1,11 @@
-# relu le 2026-11-01 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de a899125 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 À quoi tient l'obéissance ?
 Le pouvoir, de Machiavel à Foucault
 La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l'attraction : de −1200 à 2012, les réponses à la question « pourquoi obéit-on ? » ne relèvent pas du même geste : faire obéir, faire reconnaître une autorité, organiser les choix possibles.
 La plupart rencontrent une limite qu'on peut nommer ; celle de la norme décrite par Foucault est plus difficile à localiser.
 Et trois formules célèbres du parcours ne sont pas ce qu'on croit, à commencer par « la fin justifie les moyens ».
 Page publiée le 1er novembre 2026
-Guides et éclairages
+Idées et méthode
 « Qu’est-ce qui fait qu’un homme obéit à un autre ? » La question ouvre, dans L’Odyssée des idées, le parcours que le livre consacre au pouvoir : onze escales datées, de −1200 à 2012, et trois échos vers d’autres routes du livre.
 Cette page suit ce parcours.
 Chaque étape reçoit la même grille : l’idée, telle que le livre la résume ; le texte, cité dans sa langue d’origine avec son édition quand il a pu être lu ; la limite, le point où ce ressort de l’obéissance cède ; et l’escale du livre.

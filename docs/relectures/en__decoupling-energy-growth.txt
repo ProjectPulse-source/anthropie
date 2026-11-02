@@ -1,11 +1,11 @@
-# relu le 2026-10-26 ; texte servi de /en/decoupling-energy-growth/, build de 99428c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /en/decoupling-energy-growth/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is the world economy decoupling from energy?
 The world economy uses less and less energy for each unit of wealth it produces: 28.5% less in 2024 than in 2000.
 Its energy consumption, meanwhile, rose by 58% over the same period.
 Falling energy intensity slowed the rise; it did not reverse it.
 Page published 26 October 2026 · revisions
-Guides and perspectives
+Data and law
 ↓ Charts, data and citations to reuseReuse this page
 Data as of: 26 October 2026 EIA, international data: primary energy consumption, GDP at purchasing power parity in constant prices and population, world and European Union, 1980 to 2024.
 Download: CSV · JSON

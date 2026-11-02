@@ -1,4 +1,4 @@
-# relu le 2026-10-22 ; texte servi de /dette-publique-collectivites-locales/, build de 7b40814 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /dette-publique-collectivites-locales/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Les collectivités locales sont-elles une variable d'ajustement des finances publiques ?
 La dette des collectivités ne permet pas de trancher : la règle d'équilibre de leurs budgets leur interdit d'emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu'une contrainte venue de l'État se lit dans leurs recettes et leurs dépenses.
@@ -6,7 +6,7 @@ De 2013 à 2017, les administrations publiques locales ont amélioré leur solde
 Leurs dépenses totales sont restées presque stables en euros courants, tandis que les recettes fiscales progressaient et que les transferts reçus reculaient.
 Rapportées au PIB, leurs dépenses ont diminué de 0,82 point, dont 0,50 point pour l'investissement.
 Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d'attribuer le recul de l'investissement à la baisse des dotations.
-Page mise à jour le 22 octobre 2026 · révisions
+Page mise à jour le 1er novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page

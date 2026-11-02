@@ -1,11 +1,11 @@
-# relu le 2026-10-26 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 0d57c1a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Radioactive waste: does volume tell the problem?
 Radioactive waste is first counted in cubic metres: 1.89 million at end-2024.
 But volume says neither where the radioactivity is nor what remains unresolved.
 At end-2021, high-level waste made up 0.25% of the volume and 97.1% of the declared radioactivity; its final disposal is planned at Bure (Cigéo), but not yet licensed.
 Page published 26 October 2026
-Guides and perspectives
+Data and law
 ↓ Charts, data and citations to reuseReuse this page
 Data as of: 26 October 2026 Andra, National Inventory of radioactive materials and waste, open files (data.gouv.fr): volume and declared radioactivity at end-2021 (latest edition declaring radioactivity), volumes at end-2024.
 Download: CSV · JSON

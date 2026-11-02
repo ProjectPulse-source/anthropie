@@ -1,4 +1,4 @@
-# relu le 2026-11-01 ; texte servi de /en/public-debt-future-generations/, build de 1aaf14f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /en/public-debt-future-generations/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -289,11 +289,11 @@ The deficit the COR projects for the pension system, 2.4 points of GDP in 2070, 
 These are projections conditional on their assumptions.
 The Commission’s previous edition (2024) gave 3.3 for the initial position and 0.1 for the future change in age-related spending: this is another set of projections, not an observed change.
 S2 is not the gap calculated on another page of the dossier
-The page Can public debt come down? measures a gap of similar size: 2.9 points of GDP in 2025, against 3.1 points for S2.
+The page Can public debt come down? measures a gap of similar size: 3.0 points of GDP in 2025, against 3.1 points for S2.
 The first concerns the observed balance of a single year; the second is a permanent adjustment, which includes the projected change in age-related spending.
 The two numbers are neither two interchangeable estimates nor a validation of each other.
 Value.
-Part 5: 2.9 points of GDP in 2025.
+Part 5: 3.0 points of GDP in 2025.
 S2: 3.1 points of GDP (Debt Sustainability Monitor 2025).
 Nature.
 Part 5: observed primary balance, one year.

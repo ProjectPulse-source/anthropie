@@ -1,11 +1,11 @@
-# relu le 2026-11-01 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de d238b5a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 De six mois pour un point de permis à quarante ans pour le casier : la durée d'une inscription dépend du registre, et ce qui l'efface n'est pas toujours le temps.
 Les points du permis se récupèrent, le malus se résorbe et la réhabilitation légale s'acquiert sans démarche ; l'interdiction d'émettre des chèques cesse au bout de cinq ans, plus tôt si l'on régularise ; une condamnation n'est exclue du bulletin n° 2 que par le tribunal, dans le jugement ou sur requête ; la radiation d'une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur.
 Et un même registre oublie à deux vitesses : un malus disparaît en deux ans, le bonus maximal en demande treize.
 Page publiée le 1er novembre 2026
-Guides et éclairages
+Données et droit
 Une dette se rembourse, une peine s’exécute, une maladie se soigne — qui n’est pas une erreur, mais laisse aussi une trace.
 Entre le moment où l’erreur est réparée et celui où elle cesse d’être lue par un banquier, un employeur ou un assureur, court un second délai, fixé par un texte.
 Cette page donne ce délai pour les principaux registres, d’après les textes lus sur Légifrance le 1er novembre 2026 dans leur version en vigueur.

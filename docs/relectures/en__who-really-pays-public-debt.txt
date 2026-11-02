@@ -1,9 +1,9 @@
-# relu le 2026-10-16 ; texte servi de /en/who-really-pays-public-debt/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /en/who-really-pays-public-debt/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
 In INSEE's 2023 distributional accounts, the same €10 billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off.
 Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it.
-Page updated 11 October 2026
+Page updated 21 October 2026
 Public debt dossier
 Updated · 10/2026
 ↓ Charts, data and citations to reuseReuse this page
@@ -15,7 +15,7 @@ The same €10 billion adjustment weighs mostly on the least well-off households
 The size of the bill — stock, interest burden, average cost of the stock — is measured on another page of this dossier, What does French public debt actually cost?; this one asks on whom it falls, what the data do, or do not, allow us to attribute, and what a real decision, considered for 2026 and then set aside, shows.
 French public debt — latest official figure
 3,595.5 billion euros or 119.0% of GDP, in Q2 2026.
-Source: INSEE, Maastricht debt of general government (series 010777616 and 010777608) · series retrieved 11 October 2026 · raw data (JSON).
+Source: INSEE, Maastricht debt of general government (series 010777616 and 010777608) · series retrieved 21 October 2026 · raw data (JSON).
 What this debt costs, and why: What does French public debt cost?
 Depending on the decision, the adjustment falls on different households
 The population is ranked from the least to the most well-off, then cut into ten groups of equal size, the standard-of-living deciles.
@@ -153,7 +153,7 @@ What is paid tracks the standard of living; what is received, much less so.
 These taxes and contributions are not payments recorded one by one: besides income tax and social contributions, they include taxes on products, such as VAT, and taxes on production, which INSEE attributes to households by convention.
 Where the debt enters these accounts.
 In 2023, transfers attributed to households exceed taxes and contributions by 66 billion euros, and INSEE links this gap to public borrowing: it is the part of the year’s extended income that is not financed by the same year’s taxes and contributions.
-These 66 billion are not the 2025 interest burden (66.6 billion): year, scope and nature differ, and the closeness of the two figures is a coincidence.
+These 66 billion are not the 2025 interest burden (65.7 billion): year, scope and nature differ, and the closeness of the two figures is a coincidence.
 A balance allocated by convention, financed on credit, which does not say who will pay tomorrow
 This total covers the scope of the distributional accounts, which is not that of the public deficit: the two amounts are not interchangeable.
 In this construction, the gap raises households’ extended standard of living for the year (a present benefit, financed on credit), but these are not 66 billion of identifiable payments: it is a balance allocated by convention, which INSEE attributes half to lower taxes and contributions and half to additional transfers when it computes a standard of living “net of borrowing”.

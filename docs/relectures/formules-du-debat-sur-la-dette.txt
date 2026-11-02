@@ -1,11 +1,11 @@
-# relu le 2026-11-02 ; texte servi de /formules-du-debat-sur-la-dette/, build de f605f9c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /formules-du-debat-sur-la-dette/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que valent les formules du débat sur la dette ?
-Le 8 septembre 2025, à l’Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
+Le 8 septembre 2025, à l'Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
 Beaucoup de montants résistent à la vérification.
-Mais il suffit souvent de changer la date, le périmètre ou l’unité pour obtenir une autre réponse, et mesurer une évolution ne suffit ni à en désigner la cause ni à justifier une décision.
+Mais il suffit souvent de changer la date, le périmètre ou l'unité pour obtenir une autre réponse, et mesurer une évolution ne suffit ni à en désigner la cause ni à justifier une décision.
 Onze cas, confrontés aux données disponibles ce jour-là, montrent comment un même chiffre peut soutenir des conclusions différentes, sans que toutes soient démontrées.
-Les textes de campagne des candidats à l’élection présidentielle de 2027, passés aux mêmes tests, rencontrent les mêmes difficultés de mesure.
+Les textes de campagne des candidats à l'élection présidentielle de 2027, passés aux mêmes tests, rencontrent les mêmes difficultés de mesure.
 Page publiée le 2 novembre 2026
 Dossier dette publique
 Mise à jour · 11/2026
@@ -31,7 +31,7 @@ Avec les pensions des enseignants, le rapport retombe à 60 %.
 La formule était défendable, et son périmètre décidait de tout.
 Qu’une comparaison soit mal construite ne dit pas que les intérêts ne pèsent pas sur les marges du budget : ils y pèsent, mais cette comparaison ne permet pas de le mesurer.
 Les onze formules examinées ici, prononcées le même jour par des orateurs de tous les groupes, suivent presque toutes ce schéma.
-Une ligne par formule, aucune case « vrai » ou « faux » : le verdict sur la question posée, puis la question voisine qui le change (calcul de l’auteur ; Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce).
+Une ligne par formule, aucune case « vrai » ou « faux » : le verdict sur la question posée, puis la question voisine qui le change (calcul de l'auteur ; Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce).
 Le résultat en une phrase.
 Sur onze cas chiffrés de la séance du 8 septembre 2025, un seul reste exact sous toutes les variantes testées (« plus de 1 000 milliards de dette en plus » depuis 2017), un seul repose sur une erreur de définition établie, et pour les autres la solidité du constat varie avec la date, l’unité, le périmètre ou l’année retenus ; aucune des conclusions qu’on en tire n’est démontrée par le chiffre.
 Chaque formule fait quatre pas, et chacun demande sa preuve : une grandeur vérifiable (67 milliards d’intérêts, 3 % de déficit) ; un cadrage choisi (la période, l’unité, le périmètre, la définition) ; une explication (« c’est la conséquence de… ») ; une conclusion (« nous n’avons pas le choix », « il faut faire autrement »).
@@ -64,7 +64,7 @@ Les deux banques centrales ne mesurent pas tout à fait la même chose (un taux 
 Mais le 4 septembre, la Banque de Grèce, avec la même mesure pour les deux pays, donnait 3,50 % contre 3,44 %, et l’écart entre méthodes ne dépassait pas quelques centièmes : bien moins que l’avance française du 8.
 Six mois plus tôt, la formule était fausse :
 Moyennes mensuelles (Eurostat) ; la ligne pointillée marque la séance.
-Un prix de marché dit le coût d’emprunt du moment, pas la solidité relative de deux pays.
+Un prix de marché dit le coût d'emprunt du moment, pas la solidité relative de deux pays.
 La France est passée au-dessus de la Grèce en août 2025, en moyenne mensuelle.
 La Grèce l’a de nouveau dépassée de mars à mai 2026.
 Sur toute l’année 2025, les deux pays ont emprunté avec presque le même écart sur l’Allemagne : 0,76 point pour la France, 0,77 pour la Grèce.
@@ -186,20 +186,20 @@ Candidat, date du texte
 Ce qu’écrit le texte
 Verdict, sur les données publiées à cette date
 Bernard Cazeneuve, juillet 2026 (synthèse de la campagne)
-« la dette atteint 117,5 % du PIB au premier trimestre 2026, dix-neuf points de plus qu’en 2017 »
+« la dette atteint 117,5 % du PIB au premier trimestre 2026, dix-neuf points de plus qu'en 2017 »
 Exact : 117,5 % au premier trimestre 2026, 18,7 points de plus que fin 2017
 Bernard Cazeneuve, juillet 2026
 « la dette publique a augmenté de mille quatre cents milliards d’euros depuis 2017 »
-Inexact à la centaine près : 1 255 milliards depuis l’élection, 1 345 depuis janvier 2017 (premier trimestre 2026)
+Inexact à la centaine près : 1 255 milliards depuis l'élection, 1 345 depuis janvier 2017 (premier trimestre 2026)
 Jean-Luc Mélenchon, octobre 2026
 « Il va laisser un pays avec 1 300 milliards d’euros de dette supplémentaire »
-Exact : 1 314 milliards depuis l’élection de 2017 (deuxième trimestre 2026)
+Exact : 1 314 milliards depuis l'élection de 2017 (deuxième trimestre 2026)
 Nicolas Dupont-Aignan, page relevée le 2 novembre 2026
 « La dette nationale atteint 3 600 milliards d’euros et ne cesse de progresser (+ 1 400 milliards sous les désastreux quinquennats d’E.
 Macron) »
-« 3 600 » : exact (3 595,5 au deuxième trimestre 2026 ; la page, datée de 2022, a été mise à jour). « + 1 400 » : exact depuis janvier 2017 (1 405), pas depuis l’élection (1 314)
+« 3 600 » : exact (3 595,5 au deuxième trimestre 2026 ; la page, datée de 2022, a été mise à jour). « + 1 400 » : exact depuis janvier 2017 (1 405), pas depuis l'élection (1 314)
 David Lisnard, page relevée le 2 novembre 2026
-« Avec 3417 milliards d’euros la dette atteint désormais 120% du PIB »
+« Avec 3417 milliards d'euros la dette atteint désormais 120% du PIB »
 Montant exact pour le deuxième trimestre 2025 (3 417,2), dépassé à la date (3 595,5) ; « 120 % » exact à la dizaine près seulement : 115,2 % pour ce montant, 119,0 % au plus haut
 Florian Philippot, septembre 2026
 « La dette publique de la France dépasse désormais 3.305 Md€, soit […] plus de 113% du PIB »
@@ -213,20 +213,20 @@ Jean-François Legendre, page relevée le 2 novembre 2026
 Inexact (3 595,5 au deuxième trimestre 2026) ; le même texte écrit aussi « 3500 milliards »
 Florian Philippot, septembre 2026
 « deuxième poste budgétaire de l’Etat »
-Exact pour 2025, l’année que vise le texte : 56,2 milliards en loi de finances, derrière l’enseignement scolaire (64,3), devant la Défense (50,5).
-Rang d’une mission, hors pensions et hors remboursements d’impôts
+Exact pour 2025, l'année que vise le texte : 56,2 milliards en loi de finances, derrière l'enseignement scolaire (64,3), devant la Défense (50,5).
+Rang d'une mission, hors pensions et hors remboursements d'impôts
 Nathalie Arthaud, juillet 2026
 le service de la dette « est passé devant celui de l’Éducation nationale »
-Inexact au même périmètre à la date du texte : en loi de finances 2026, 60,3 contre 64,5 milliards ; vrai seulement si l’on compare les intérêts de toutes les administrations (65,7 milliards en 2025) au budget d’un seul ministère.
-Les plafonds de 2027, publiés neuf jours plus tard, inversent l’ordre des missions
+Inexact au même périmètre à la date du texte : en loi de finances 2026, 60,3 contre 64,5 milliards ; vrai seulement si l'on compare les intérêts de toutes les administrations (65,7 milliards en 2025) au budget d'un seul ministère.
+Les plafonds de 2027, publiés neuf jours plus tard, inversent l'ordre des missions
 Bernard Cazeneuve, juillet 2026
 « Ses intérêts représentent le premier poste du budget de l’État, devant la Défense comme devant l’Éducation nationale »
-Selon le document : inexact pour la loi de finances de 2026, où la mission qui porte la charge de la dette (60,3 milliards) reste derrière l’enseignement scolaire (64,5) ; exact pour les plafonds de 2027 publiés le jour de la lettre (73,0, devant 65,3 et la Défense, 63,4).
-Rang d’une mission, qui contient d’autres dépenses que les intérêts
+Selon le document : inexact pour la loi de finances de 2026, où la mission qui porte la charge de la dette (60,3 milliards) reste derrière l'enseignement scolaire (64,5) ; exact pour les plafonds de 2027 publiés le jour de la lettre (73,0, devant 65,3 et la Défense, 63,4).
+Rang d'une mission, qui contient d'autres dépenses que les intérêts
 Jean-François Legendre, page relevée le 2 novembre 2026
-« Rien que les intérêts de notre dette représentent 80 milliards d’euros par an »
-Non établi : le texte ne dit ni l’année ni le périmètre.
-Aucune année réalisée n’en approche (65,7 milliards en 2025 pour toutes les administrations) ; le gouvernement prévoit 74,2 milliards en 2027 pour les seules administrations centrales
+« Rien que les intérêts de notre dette représentent 80 milliards d'euros par an »
+Non établi : le texte ne dit ni l'année ni le périmètre.
+Aucune année réalisée n'en approche (65,7 milliards en 2025 pour toutes les administrations) ; le gouvernement prévoit 74,2 milliards en 2027 pour les seules administrations centrales
 Gabriel Attal, juillet 2026
 « Le seuil de 3 % de déficit est un engagement que la France a pris et ne tient pas »
 Exact : déficit de 5,1 % en 2025, au-dessus de 3 % chaque année depuis 2020
@@ -235,21 +235,21 @@ François Ruffin, octobre 2026
 Exact : 3,4 % en 2017, 5,8 % en 2024
 Jean-Luc Mélenchon, octobre 2026
 si les recettes étaient restées au niveau de 2017, « le déficit serait de 2,9 % du PIB »
-Exact avec les comptes du printemps 2026 (recettes de 54,3 % du PIB en 2017, 52,1 % en 2025) ; 3,0 % avec l’édition d’octobre 2026 (52,2 %).
+Exact avec les comptes du printemps 2026 (recettes de 54,3 % du PIB en 2017, 52,1 % en 2025) ; 3,0 % avec l'édition d'octobre 2026 (52,2 %).
 Un calcul à dépenses inchangées, pas une cause démontrée
 Jean-Luc Mélenchon, octobre 2026
 « La dette publique serait au moins inférieure de 400 milliards d’euros et serait proche des 100 % du PIB »
 « Au moins 400 » : non établi.
-Le calcul à part de recettes constante donne 360 milliards avant intérêts et effets sur l’activité, et ne suffit ni à établir ni à réfuter la borne ; « proche des 100 % » : compatible (104 %)
+Le calcul à part de recettes constante donne 360 milliards avant intérêts et effets sur l'activité, et ne suffit ni à établir ni à réfuter la borne ; « proche des 100 % » : compatible (104 %)
 Marine Tondelier, juillet 2026
 « A cause de ces cadeaux fiscaux, la dette publique a augmenté de 20 points de PIB »
-Hausse exacte (18,7 points de fin 2017 au premier trimestre 2026) ; attribution non établie : le calcul à part de recettes constante donne environ 12 points, et il n’isole pas l’effet des mesures fiscales
+Hausse exacte (18,7 points de fin 2017 au premier trimestre 2026) ; attribution non établie : le calcul à part de recettes constante donne environ 12 points, et il n'isole pas l'effet des mesures fiscales
 Nicolas Dupont-Aignan, page relevée le 2 novembre 2026
 la dette, « détenue à plus de 55 % par des opérateurs étrangers »
-Exact pour la dette négociable de l’État (56,0 % fin 2025), inexact pour celle de toutes les administrations (54,3 %)
+Exact pour la dette négociable de l'État (56,0 % fin 2025), inexact pour celle de toutes les administrations (54,3 %)
 Bruno Retailleau, octobre 2026
-« Il lui manque au moins 40 milliards d’euros chaque année, que nous empruntons » (le système de retraite)
-Incompatible avec la mesure du Conseil d’orientation des retraites (besoin de financement de 0,17 point de PIB en 2025, environ 5 milliards) ; d’autres présentations comptent les contributions d’équilibre de l’État employeur, et le texte ne dit pas laquelle il retient : verdict suspendu à cette définition
+« Il lui manque au moins 40 milliards d'euros chaque année, que nous empruntons » (le système de retraite)
+Incompatible avec la mesure du Conseil d'orientation des retraites (besoin de financement de 0,17 point de PIB en 2025, environ 5 milliards) ; d'autres présentations comptent les contributions d'équilibre de l'État employeur, et le texte ne dit pas laquelle il retient : verdict suspendu à cette définition
 Un même stock de chiffres
 Plusieurs orateurs de camps différents mobilisent des grandeurs issues du même fonds statistique officiel, et ces chiffres circulent.
 Le rapport du gouvernement de juillet compare lui-même deux périmètres, et un orateur du camp qui soutient le gouvernement en fait une prévision.
@@ -271,7 +271,7 @@ Un stock ou un ratio, un déficit ou une hausse de dette, des intérêts ou des 
 Quelle conclusion, et que faudrait-il de plus pour l’établir ?
 Une cause, une responsabilité, une décision demandent une preuve que le chiffre seul ne donne pas.
 Le livre passé aux mêmes tests
-Le livre que cette page prolonge, Dette Publique : Qui paie vraiment ?, a été soumis aux mêmes tests que les orateurs, dans sa dernière édition.
+Le livre que cette page prolonge, Dette publique : qui paie vraiment ?, a été soumis aux mêmes tests que les orateurs, dans sa dernière édition.
 Ses grandeurs centrales tiennent : le niveau de la dette fin 2025, la charge de la dette de l’État, l’arithmétique du taux et de la croissance.
 Les faiblesses sont ailleurs, dans le passage du chiffre à la cause.
 Rapprocher le paiement des intérêts de fermetures de maternités, comme le fait le livre, suggère un arbitrage budgétaire.
@@ -374,29 +374,29 @@ Deux codeurs, l’un aveugle à l’orateur, et un arbitre sont des instances du
 Sur les textes de campagne, leur accord (kappa) vaut 0,84 pour le choix des énoncés et 0,75 pour le registre ; 174 désaccords ont été arbitrés.
 Cet accord mesure la reproductibilité de la règle, pas l’absence d’un biais commun.
 Aucun codeur humain n’a relu l’échantillon.
-Les chiffres cités à l’Assemblée le 8 septembre 2025 étaient-ils faux ?
+Les chiffres cités à l'Assemblée le 8 septembre 2025 étaient-ils faux ?
 Les montants sont souvent exacts ou proches des références disponibles : « plus de 1 000 milliards de dette en plus depuis 2017 », « pas de budget en équilibre depuis cinquante et un ans », « des taux supérieurs à ceux de la Grèce ».
-Cela ne rend pas automatiquement exactes les propositions qu’ils servent : le verdict change souvent avec la date, l’unité, le périmètre ou l’année, et la conclusion qu’on en tire demande d’autres preuves.
+Cela ne rend pas automatiquement exactes les propositions qu'ils servent : le verdict change souvent avec la date, l'unité, le périmètre ou l'année, et la conclusion qu'on en tire demande d'autres preuves.
 Une seule erreur de définition est établie : le service de la dette défini avec le remboursement du capital, puis chiffré sans lui.
 La France empruntait-elle plus cher que la Grèce en septembre 2025 ?
 Oui.
 Le jour de la séance, le 8 septembre 2025, la France empruntait à dix ans à 3,49 % (Banque de France) et la Grèce à 3,34 % (Banque de Grèce).
 Le 4 septembre, la Banque de Grèce, avec la même mesure pour les deux pays, donnait 3,50 % contre 3,44 %.
-La France était passée au-dessus en août 2025, en moyenne mensuelle ; la Grèce l’a de nouveau dépassée de mars à mai 2026.
-Le prix du marché ne dit pas, à lui seul, qu’un pays est plus fragile que l’autre.
+La France était passée au-dessus en août 2025, en moyenne mensuelle ; la Grèce l'a de nouveau dépassée de mars à mai 2026.
+Le prix du marché ne dit pas, à lui seul, qu'un pays est plus fragile que l'autre.
 Un déficit de 3 % arrête-t-il la hausse de la dette ?
-Pas en euros : un déficit de 3 % ajoute environ 89,7 milliards d’euros par an.
+Pas en euros : un déficit de 3 % ajoute environ 89,7 milliards d'euros par an.
 En pourcentage du PIB, il stabilise le ratio seulement si la croissance nominale dépasse un seuil, environ 2,74 % avec le ratio de 2024, sans écart entre déficit et hausse de la dette.
 La croissance a dépassé ce seuil en 2024 (3,58 %), pas en 2025 (1,90 %, connu après la séance).
 En juillet 2025, la Cour des comptes avertissait que revenir sous 3 % ne suffirait pas, à lui seul, à garantir la soutenabilité de la dette.
-Quel est le lien avec le livre Dette Publique : Qui paie vraiment ?
+Quel est le lien avec le livre Dette publique : qui paie vraiment ?
 Le chapitre 9 du livre analyse ces formules par le langage : qui parle, avec quel droit, en fermant quelles possibilités.
 Cette page les confronte aux comptes.
 Le livre a été soumis aux mêmes tests : ses grandeurs centrales tiennent, certains passages du chiffre à la cause ne sont pas établis.
 Dans le dossier dette publique
 Pour prolonger l’analyse
 Dette Publique : Qui paie vraiment ?
-La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
 Le chapitre 9 du livre analyse ces formules par le langage : qui parle, avec quel droit, en fermant quelles possibilités.
 Cette page les confronte aux comptes.
 Le livre examine ensuite qui paie la dette, et les choix qui le décident.
@@ -445,24 +445,24 @@ Le travail a été soumis à cinq contre-expertises externes, qui ont fait retir
 La même règle, fixer la fenêtre et l’objet avant de comparer, rapproche dans le working paper AWP-09 trois estimations savantes réputées contradictoires.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
-Onze formules du 8 septembre 2025 : ce que les chiffres tranchent, et ce qu’ils ne tranchent pas
-Pour la plupart des formules, le verdict dépend de la question posée : la date, l’unité, le périmètre ou l’année choisis.
-Aucune des conclusions tirées n’est démontrée par le chiffre.
-Précaution d’interprétation.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Onze formules du 8 septembre 2025 : ce que les chiffres tranchent, et ce qu'ils ne tranchent pas
+Pour la plupart des formules, le verdict dépend de la question posée : la date, l'unité, le périmètre ou l'année choisis.
+Aucune des conclusions tirées n'est démontrée par le chiffre.
+Précaution d'interprétation.
 Données disponibles au 8 septembre 2025 : comptes publics tels que publiés à cette date pour les dépenses, les recettes et la dette, version révisée ailleurs ; prévisions publiées après la séance exclues des verdicts.
 Nombres ronds jugés à la précision annoncée (grille de tolérances).
-Une étude de cas d’une séance, pas un échantillon du débat.
-Assemblée nationale (compte rendu du 8 septembre 2025) ; Insee ; Eurostat ; Cour des comptes ; Gouvernement ; Sénat ; Banque de France ; Banque de Grèce ; calcul de l’auteur
+Une étude de cas d'une séance, pas un échantillon du débat.
+Assemblée nationale (compte rendu du 8 septembre 2025) ; Insee ; Eurostat ; Cour des comptes ; Gouvernement ; Sénat ; Banque de France ; Banque de Grèce ; calcul de l'auteur
 Télécharger en PNG
 SVG
 Taux à dix ans : la France au-dessus ou au-dessous de la Grèce, mois par mois
-La France emprunte plus cher que la Grèce à partir de l’été 2025 : la formule est exacte au mois de la séance, et elle n’aurait pas été exacte six mois plus tôt.
-Précaution d’interprétation.
+La France emprunte plus cher que la Grèce à partir de l'été 2025 : la formule est exacte au mois de la séance, et elle n'aurait pas été exacte six mois plus tôt.
+Précaution d'interprétation.
 Moyennes mensuelles.
 Le 8 septembre 2025, la France empruntait à dix ans à 3,49 % (Banque de France) et la Grèce à 3,34 % (Banque de Grèce) ; le 4, la même mesure pour les deux pays donnait 3,50 % contre 3,44 %.
-Un prix de marché dit le coût d’emprunt du moment, pas la solidité relative de deux pays.
-Eurostat, rendements des emprunts d’État à long terme, moyennes mensuelles (irt_lt_mcby_m) ; calcul de l’auteur
+Un prix de marché dit le coût d'emprunt du moment, pas la solidité relative de deux pays.
+Eurostat, rendements des emprunts d'État à long terme, moyennes mensuelles (irt_lt_mcby_m) ; calcul de l'auteur
 Télécharger en PNG
 SVG
 Citer cette page
@@ -475,10 +475,10 @@ Un seul reste exact sous toutes les variantes testées, un seul repose sur une e
 Aucune des conclusions qu’on en tire n’est démontrée par le chiffre.
 Copier le résumé
 Les données
-Le verdict de chacune des onze formules, avec la question posée et la question voisine ; le solde public depuis 1949, le déficit et la hausse de la dette année par année, les fenêtres des dépenses et des recettes (comptes de mai 2025 et comptes révisés), la hausse de la dette par date de départ, les taux à dix ans mensuels et au jour, les intérêts et l’enseignement selon trois périmètres, les comptes de l’inventaire ; pour les candidats de 2027, les comptes par registre et les énoncés testés, avec leurs pièces ; le même contenu existe en CSV, au format long.
+Le verdict de chacune des onze formules, avec la question posée et la question voisine ; le solde public depuis 1949, le déficit et la hausse de la dette année par année, les fenêtres des dépenses et des recettes (comptes de mai 2025 et comptes révisés), la hausse de la dette par date de départ, les taux à dix ans mensuels et au jour, les intérêts et l'enseignement selon trois périmètres, les comptes de l'inventaire ; pour les candidats de 2027, les comptes par registre et les énoncés testés, avec leurs pièces ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce), sous leurs propres conditions.
 Toutes les ressources : données, dossiers et repères →
 Transmettre

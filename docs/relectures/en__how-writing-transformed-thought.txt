@@ -1,4 +1,4 @@
-# relu le 2026-11-01 ; texte servi de /en/how-writing-transformed-thought/, build de deab4fa + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /en/how-writing-transformed-thought/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 How did writing transform thought?
 A pupil gets a correct answer from an artificial intelligence.
@@ -7,7 +7,7 @@ The question is older than AI: it is the one Plato's Phaedrus puts to writing.
 Set against six criteria that a 2026 research review proposes for judging dependence on AI, it shows two clear continuities, some displacements and one reversal.
 And the history of writing, from the first tablets to the printing press, shows that a technology opens possibilities without deciding what we learn.
 Page updated 1 November 2026 · revisions
-Guides and perspectives
+Ideas and method
 The two objections of the Phaedrus
 In the Phaedrus, Socrates tells the myth of Theuth, the Egyptian god who presents writing to King Thamus as a remedy for memory and wisdom.
 The text then carries two objections, which are often confused and do not say the same thing.

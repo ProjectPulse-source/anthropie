@@ -1,4 +1,4 @@
-# relu le 2026-11-01 ; texte servi de /comment-lecriture-a-transforme-la-pensee/, build de deab4fa + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /comment-lecriture-a-transforme-la-pensee/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment l'écriture a-t-elle transformé la pensée ?
 Un élève obtient d'une intelligence artificielle une réponse juste.
@@ -7,7 +7,7 @@ La question est plus ancienne que l'IA : c'est celle que le Phèdre de Platon po
 Confrontée à six critères qu'une revue de recherche propose en 2026 pour juger la dépendance à l'IA, elle montre deux continuités nettes, des déplacements et un renversement.
 Et l'histoire de l'écrit, des premières tablettes à l'imprimerie, montre qu'une technique ouvre des possibilités sans décider de ce que l'on apprend.
 Page mise à jour le 1er novembre 2026 · révisions
-Guides et éclairages
+Idées et méthode
 Les deux objections du Phèdre
 Dans le Phèdre, Socrate raconte le mythe de Theuth, le dieu égyptien qui présente l’écriture au roi Thamous comme un remède pour la mémoire et le savoir.
 Le texte porte alors deux objections, que l’on confond souvent et qui ne disent pas la même chose.

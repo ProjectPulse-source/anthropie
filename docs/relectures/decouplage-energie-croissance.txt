@@ -1,11 +1,11 @@
-# relu le 2026-10-26 ; texte servi de /decouplage-energie-croissance/, build de 99428c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /decouplage-energie-croissance/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L'économie mondiale se découple-t-elle de l'énergie ?
 L'économie mondiale consomme de moins en moins d'énergie pour chaque unité de richesse produite : 28,5 % de moins en 2024 qu'en 2000.
 Sa consommation d'énergie, elle, a augmenté de 58 % sur la même période.
 La baisse de l'intensité énergétique a freiné la hausse ; elle ne l'a pas renversée.
 Page publiée le 26 octobre 2026 · révisions
-Guides et éclairages
+Données et droit
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données du : 26 octobre 2026 EIA, données internationales : consommation d'énergie primaire, PIB en parité de pouvoir d'achat à prix constants et population, monde et Union européenne, de 1980 à 2024.
 Télécharger : CSV · JSON

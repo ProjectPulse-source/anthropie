@@ -1,11 +1,11 @@
-# relu le 2026-10-26 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 0d57c1a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Déchets radioactifs : le volume dit-il le problème ?
 Les déchets radioactifs se comptent d'abord en mètres cubes : 1,89 million fin 2024.
 Mais le volume ne dit ni où est la radioactivité, ni ce qui reste sans solution.
 Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,1 % de la radioactivité déclarée ; leur stockage définitif est prévu à Bure (Cigéo), mais pas encore autorisé.
 Page publiée le 26 octobre 2026
-Guides et éclairages
+Données et droit
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données du : 26 octobre 2026 Andra, Inventaire national des matières et déchets radioactifs, fichiers ouverts (data.gouv.fr) : volume et radioactivité déclarée à fin 2021 (dernière édition qui déclare la radioactivité), volumes à fin 2024.
 Télécharger : CSV · JSON
