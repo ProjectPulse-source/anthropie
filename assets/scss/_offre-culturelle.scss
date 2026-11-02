@@ -189,8 +189,9 @@
   p { margin: 6px 0 0; color: var(--color-text-body); line-height: 1.5; }
   .oc-apercu__sous-titre { font-style: italic; }
   .oc-apercu__meta { font-size: var(--oc-t3); color: var(--oc-doux); }
-  // Colonne de 161 px à 320 px : « détail · 2 paragraphes ▾ » est insécable et sortait de la carte (mesuré : 4 px).
-  .repli__action { font-size: 0.7rem; letter-spacing: 0; }
+  // Lien seul sur sa ligne, donc hors de l'exemption des liens dans le texte : 44 px de zone tactile (02/11).
+  .oc-apercu__meta { margin-top: 0; }
+  .oc-apercu__meta a { display: inline-flex; align-items: center; min-height: 44px; }
 }
 
 // Compteur du comité (auteur, 25/10 : « pas assez visible ») : grand chiffre, phrase, jauge.

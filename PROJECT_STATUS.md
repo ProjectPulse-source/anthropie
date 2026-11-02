@@ -60,6 +60,9 @@ Demande de l'auteur après audit de 40 vues en émulation tactile (320, 360, 390
 - Bandeau resserré (623 → 569 px à 390 px) ; dès 720 px, éventail à droite du texte (579 → 410 px à 844 px).
 - Bandeau d'essai collant : 72 → 59 px à 320 px ; arrêt des ancres porté à 72 px, il recouvrait le titre à 320 px.
 - Premier bouton de 1 465 à 1 359 px à 390 px ; l'ordre compteur, étapes, livres reste celui de l'audit du 25/10.
+- Arbitrage de l'auteur délégué : réduction locale du repli retirée (règle commune, 0,74 rem, inchangée pour tout le site) ;
+  « La fiche complète du livre », seul sur sa ligne, à 44 px de zone tactile ; liens dans le texte laissés tels quels
+  (exemption WCAG 2.5.8, les agrandir écarterait les lignes). 56 vues de 320 à 1 280 px : libellé dans sa carte partout.
 
 ### 2026-11-02 — Pages `offre-culturelle` : livres en éventail, grille du site
 
