@@ -408,6 +408,18 @@ FR (« détectée, non indexée »). 77 % des impressions des ressources (42 418
   `audit-liens-build.py` 0 critique ; `check-all --reseau` sans échec (Wikidata 503, non conclu).
 - **Ouvert, geste de l'auteur** : demander l'indexation dans Search Console des 9 URL ignorées.
 
+### 2026-11-02 — volets 4 et 5 du dossier dette sur l'édition Eurostat du 21/10/2026
+
+- **Volet 4** (`/dette-publique-comparaison-internationale/`). Eurostat ne publie plus les recettes 2024-2025 du
+  Danemark : le générateur l'écartait en bloc et attendait. Il reste désormais là où ses données existent (tableau avec
+  « — », barres de dette, taux implicite, refinancement, rang des intérêts rapportés au PIB) et sort du seul nuage
+  intérêts/recettes, ce que la page dit. Titres et textes alternatifs sans « 27 » faux ; replis d'étiquette ajoutés.
+- **Volet 5** (`/dette-publique-peut-elle-baisser/`). Branche `attente/volet5-eurostat-oct2026` intégrée ; aucun pays
+  écarté par le contrôle, Finlande revenue (France deuxième croissance la plus faible), exception irlandaise sur cinq ans.
+- **Contrôle** : `check-rendu-ressources.py` gagne le motif « entité affichée » (« &nbsp; » en toutes lettres, vu deux
+  fois le 2/11 dans des jetons de générateur), témoin 9/9.
+- Commit `3f00d21` ; les cinq volets et les formules du débat sont sur la même édition (21/10/2026).
+
 ### 2026-11-02 — volet 1 du dossier dette débloqué (édition Eurostat du 21/10/2026)
 
 - **Cause.** `update_dette_dynamique.py` refusait l'édition du 21/10/2026 depuis sa parution : en 2025, le taux implicite
