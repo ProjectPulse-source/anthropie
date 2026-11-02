@@ -420,6 +420,20 @@ FR (« détectée, non indexée »). 77 % des impressions des ressources (42 418
   `audit-liens-build.py` 0 critique ; `check-all --reseau` sans échec (Wikidata 503, non conclu).
 - **Ouvert, geste de l'auteur** : demander l'indexation dans Search Console des 9 URL ignorées.
 
+### 2026-11-03 — canal d'alerte des mises à jour automatiques rendu lisible
+
+- **Constat.** Trente tickets ouverts : quatre « échec dette-monde » datés, jamais fermés, et vingt-cinq « Relecture
+  ciblée » qui ne se fermaient jamais. La panne du dossier dette, signalée, n'a pas été lue pendant douze jours.
+- **Organe commun** `.github/workflows/ticket-flux.yml`, appelé par dette-insee, dette-monde, dette-collectivites et
+  maj-sources : un ticket au titre fixe par flux, commenté à chaque échec, **fermé au premier passage réussi** (anciens
+  tickets datés compris). `hugo.yml` ferme l'issue de relecture d'une page dont l'instantané est à jour.
+- **Preuve en conditions réelles** : dette-monde relancé le 03/11 (run 41541891108), succès de bout en bout.
+- **File de relecture vidée** : 27 phrases sur 21 pages relues, instantanés refaits (pas les 30 autres pages : leur date
+  de relecture n'est pas avancée sans relecture).
+- **Décroissance** : ligne cron « WEO d'octobre » de dette-monde retirée, condition de mort remplie.
+- Fermer à la main les tickets #27-#33 a été refusé par le mode automatique (écriture externe) : le premier passage réussi
+  de chaque flux après le push les fermera.
+
 ### 2026-11-02 — volets 4 et 5 du dossier dette sur l'édition Eurostat du 21/10/2026
 
 - **Volet 4** (`/dette-publique-comparaison-internationale/`). Eurostat ne publie plus les recettes 2024-2025 du
