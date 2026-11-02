@@ -322,11 +322,10 @@ main .awp-registre { list-style: none; padding: 0 !important; margin: 0 !importa
 
 // Livres : quatre couvertures du corpus, les autres au moins 20 % plus petites.
 .home-livres__grille { display: grid; gap: 1.5rem 1.25rem; }
-.home-livres__grille--corpus { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.home-livres__grille--autres { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 22.5rem; }
+// Tous les livres à la même taille (auteur, 02/11/2026) : deux rangées, une seule grille.
+.home-livres__grille--corpus, .home-livres__grille--autres { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 760px) {
-  .home-livres__grille--corpus { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .home-livres__grille--autres { max-width: 12.5rem; } // 19rem rendait les deux rangées égales à 390 px (mesuré)
+  .home-livres__grille--corpus, .home-livres__grille--autres { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .home-livre { display: grid; gap: 0.4rem; align-content: start; min-width: 0; }
 .home-livre__couv { display: block; text-decoration: none; }
@@ -338,7 +337,6 @@ main .awp-registre { list-style: none; padding: 0 !important; margin: 0 !importa
 }
 .home-livre__couv:hover .home-livre__cover { transform: translateY(-2px); }
 .home-livre__titre { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.4rem 0 0; }
-.home-livres__grille--autres .home-livre__titre { font-size: 0.93rem; }
 .home-livre__phrase { font-size: var(--fs-small); color: var(--color-text-muted); line-height: 1.45; margin: 0; }
 .home-livre__langue { font-family: var(--font-sans); font-size: 12px; font-style: italic; color: var(--color-text-subtle); margin: 0; }
 @media (prefers-reduced-motion: reduce) { .home-livre__cover { transition: none; } }

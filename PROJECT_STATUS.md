@@ -52,6 +52,12 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Texte pleine largeur et livres égaux sur l'accueil
+
+Décision de l'auteur : le texte occupe toute la largeur disponible (`--largeur-texte: none`), soit 1 216 px à 1 920 px ; la
+borne de 880 px de la version D est retirée, en connaissance des quelque 169 signes par ligne. Sur l'accueil, les six livres
+ont la même taille et la même grille.
+
 ### 2026-11-02 — Grille élargie et texte à 18 px (version D de la maquette)
 
 Décision de l'auteur après essai sur son écran (1 920 × 1 080) : structure actuelle, texte de 18 px, contenu plus large,

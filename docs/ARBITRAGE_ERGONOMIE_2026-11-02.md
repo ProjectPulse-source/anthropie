@@ -15,6 +15,8 @@ Après essai de la maquette sur son écran, l'auteur retient la **version D** : 
 880 px (environ 121 signes par ligne), contenu sur 1 216 px, ronds retirés sous le contenu. Elle prime sur la colonne de
 600 px et l'ordre d'exécution ci-dessous. Le sommaire latéral et la régénération des figures ne sont pas engagés.
 
+**Mise à jour du 02/11/2026** : l'auteur retire ensuite la borne de 880 px ; le texte occupe toute la largeur disponible.
+
 ## Le fait nouveau, absent des deux diagnostics
 
 Mesure ligne par ligne, à 1 440 px : sur les pages du dossier dette, seul le chapô tient dans 720 px. **Le texte courant
