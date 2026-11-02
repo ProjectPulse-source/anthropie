@@ -123,7 +123,7 @@
     <a href="{{ "/contact/" | relLangURL }}">m'écrire</a>&nbsp;: je vous transmets votre exemplaire.</p></noscript>
 
     <p class="oc-aide">Vous choisissez le livre, puis vous l'acceptez gratuitement sur Amazon.fr. Pas besoin de
-    liseuse&nbsp;: l'application Kindle est gratuite sur téléphone, tablette et ordinateur. Un livre par bénéficiaire.</p>
+    liseuse&nbsp;: l'application Kindle est gratuite sur téléphone, tablette et ordinateur. Un livre par {{ $p.public_singulier | default (cond (eq $structure "association") "adhérent" "bénéficiaire") }}.</p>
 
     {{- /* Chaîne de lecteurs (auteur, 25/10 : « valoriser le comité et inciter le lecteur à prendre un livre ») : trois
            maillons, chacun porté par un acteur, sans mécanisme économique (audit du 25/10 : les recettes et les ventes
@@ -157,7 +157,7 @@
         indisponible pourra être proposé de nouveau après réassort.</li>
         <li><b>Aucune inscription sur ce site</b>&nbsp;; un compte Amazon.fr est nécessaire pour recevoir le livre. Votre
         {{ $structure }} ne nous transmet aucune donnée sur ses {{ $public }}, et aucun nom ni aucune adresse électronique ne vous
-        est demandé. Un livre par {{ cond (eq $structure "association") "adhérent" "bénéficiaire" }}&nbsp;: un identifiant technique, enregistré dans votre navigateur, limite
+        est demandé. Un livre par {{ $p.public_singulier | default (cond (eq $structure "association") "adhérent" "bénéficiaire") }}&nbsp;: un identifiant technique, enregistré dans votre navigateur, limite
         les retraits répétés depuis un même navigateur.
         <a href="{{ with site.GetPage "/transparence-contacts" }}{{ .RelPermalink }}{{ end }}#ressources-offertes">Transparence et données</a>.</li>
         <li><b>Une proposition indépendante.</b> Votre {{ $structure }} relaie une proposition de l'auteur, sans contrepartie
