@@ -55,7 +55,7 @@
       {{/* ── Abstract in the other language ── */}}
       {{ if .Translations }}
       {{ range .Translations }}
-      <section class="awp-article__abstract awp-article__abstract--alt">
+      <section class="awp-article__abstract awp-article__abstract--alt" lang="{{ .Lang }}">
         <h2>{{ if $isEn }}Résumé{{ else }}Abstract{{ end }}</h2>
         <p>{{ .Description }}</p>
       </section>

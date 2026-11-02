@@ -94,6 +94,8 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
 .badge-donnees {
   display: inline-block; margin-left: 0.3rem; padding: 0.05rem 0.5rem; border-radius: 0.8rem;
   font-size: 0.85rem; white-space: nowrap; background: rgba(24, 79, 149, 0.08); color: #184f95;
+  // Sur téléphone étroit, le libellé d'une ligne dépassait la colonne et faisait déborder la page (mesuré à 320 px).
+  @media (max-width: 480px) { max-width: 100%; white-space: normal; }
 }
 
 // ── Hiérarchie du 30/09 (avis « forme et fond ») : surface simple, profondeur repliée sur la même URL ──

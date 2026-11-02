@@ -49,12 +49,20 @@ def lire(f: Path) -> tuple[str | None, list[str]]:
     return (m.group(1) if m else None), [l for l in lignes if l and not l.startswith("# ")]
 
 
+def sans_typo(s: str) -> str:
+    """Ce que scripts/typo_build.py pose (insécables, apostrophes, guillemets) n'est pas une phrase changée."""
+    s = s.replace(chr(0xa0), " ").replace(chr(0x202f), " ").replace("’", "'").replace("−", "-")
+    s = re.sub(" ?[«»“”" + chr(34) + "] ?", "|", s)
+    return re.sub(" +(?=[;:!?%])", "", s)
+
+
 def changees(servies: list[str], relues: list[str]) -> list[str]:
-    reste = Counter(relues)
+    reste = Counter(sans_typo(r) for r in relues)
     out = []
     for s in servies:
-        if reste[s] > 0:
-            reste[s] -= 1
+        c = sans_typo(s)
+        if reste[c] > 0:
+            reste[c] -= 1
         else:
             out.append(s)
     return out

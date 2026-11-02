@@ -52,6 +52,28 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Typographie appliquée au site construit, FR et EN
+
+Demande de l'auteur (01/11) : règles éditoriales respectées et appliquées de façon constante, sur les deux langues.
+Mesure du texte servi avant correction : 752 espaces ordinaires devant ponctuation haute, 372 chiffres-mots séparables,
+3 940 apostrophes droites en français, 290 guillemets français sur pages anglaises. Front matter, données, gabarits et
+générateurs échappaient au linter des sources.
+
+- `scripts/typo_build.py` traite le HTML final, nœuds de texte seuls, selon la langue de l'élément ; étape bloquante de
+  `hugo.yml`, témoin de 8 essais dans `check-all`. 155 pages corrigées sur 164, 0 défaut, seconde passe à 0.
+- `data/titres_oeuvres.json` : italique des titres, en un seul endroit ; 505 italiques ajoutées, échantillonnées.
+- `lang` posé sur le texte en autre langue (`awp/single`, bandeau de langue) ; 3 points-virgules collés corrigés.
+- Affichage, 152 pages de contenu à 320 et 390 px, CSS du build : 0 débordement, 0 erreur JS. Cinq débordements antérieurs
+  corrigés (grille des cartes de l'offre culturelle, mention de repli, badge de date).
+- Témoin d'intégrité, 160 pages comparées avec et sans traitement : texte identique, hormis les 3 graphies de `variantes`
+  (titres publiés) et un signe moins (`-3 300 000` → `−3 300 000`).
+- `check-relecture.py` : 11 pages signalées, non bloquantes ; 8 subsistent sans le traitement (changements de contenu
+  antérieurs à la dernière relecture), à reprendre lors d'une relecture de ces pages.
+
+Hors champ : `<title>` et meta, flux RSS, SVG et PNG, mots étrangers en italique, ponctuation d'une citation anglaise non
+balisée sur page française. Test d'affichage : servir le build avec les URL de production redirigées vers lui, sinon le
+CSS appelé est celui du site en ligne.
+
 ### 2026-11-01 — Libellé du bouton vers les exemplaires offerts
 
 Demande de l'auteur : « Demander l'exemplaire offert » et « Demander un exemplaire » laissaient croire à une procédure.

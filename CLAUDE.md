@@ -641,6 +641,24 @@ le chiffre même que la page met en avant.
 doivent être insécables QUEL QUE SOIT LE SUPPORT ».** La règle ne s'arrête donc pas au HTML
 produit au build : elle vaut aussi pour ce qu'un script écrit dans la page après coup.
 
+**Application constante, FR et EN (auteur, 2026-11-01 : « ces règles doivent être appliquées de façon constante »).**
+`scripts/typo_build.py` passe sur le HTML final, juste après `hugo --minify` dans `hugo.yml`, seul point de déploiement, et
+bloque s'il reste un défaut. Il agit sur les seuls nœuds de texte, selon la langue de l'élément (`lang`, héritée) :
+insécables, apostrophes, guillemets, et italique des titres. Mesure du 01/11/2026 : 155 pages sur 164 corrigées, parce
+que front matter, données, gabarits et générateurs échappaient au linter des sources.
+- **Un titre d'œuvre ou de publication** s'ajoute une fois dans `data/titres_oeuvres.json`, jamais page par page ; un
+  mot à double sens (Candide, Phèdre) s'écrit en italique à la source ou passe par un motif de contexte. Le titre
+  publié fait foi (`variantes` : graphie fautive → graphie publiée). Un titre seul dans un h1 à h4 reste en romain :
+  c'est un libellé. Titres d'articles et de working papers : romain, entre guillemets dans une citation.
+- **Texte dans l'autre langue** : le baliser `lang="…"` au gabarit, sinon il prend la typographie de la page. Une
+  citation française sur une page anglaise prend les guillemets anglais ; ses mots ne changent pas.
+- **Local** : `python scripts/typo_build.py <build>` (`--controle`, `--temoin`) ; le témoin est dans `check-all`.
+- **Hors champ, déclaré** : `<title>` et meta, flux RSS, images SVG et PNG, mots étrangers en italique, ponctuation
+  d'une citation anglaise non balisée sur une page française. `check-relecture.py` ignore la typographie : elle ne
+  demande aucune relecture.
+- **Les organes ci-dessous restent** : les sources servent aussi les flux, le mode local et le texte injecté après
+  chargement, que le traitement du build ne voit pas.
+
 **TROIS** organes, un seul énoncé — et c'est le troisième qui manquait :
 
 - **Le corps des pages** est écrit avec des `&nbsp;` dans la source, et contrôlé par

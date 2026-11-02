@@ -175,6 +175,8 @@
   p { margin: 6px 0 0; color: var(--color-text-body); line-height: 1.5; }
   .oc-apercu__sous-titre { font-style: italic; }
   .oc-apercu__meta { font-size: 13px; color: var(--oc-doux); }
+  // Colonne de 161 px à 320 px : « détail · 2 paragraphes ▾ » est insécable et sortait de la carte (mesuré : 4 px).
+  .repli__action { font-size: 0.7rem; letter-spacing: 0; }
 }
 
 // Compteur du comité (auteur, 25/10 : « pas assez visible ») : grand chiffre, phrase, jauge.
@@ -225,11 +227,12 @@
 .oc-chaine__action { margin: 14px 0 0; a.oc-btn { text-decoration: none; } }
 
 // Six cartes égales : deux colonnes sur ordinateur, une sur téléphone ; couverture à gauche, 110 px (88 px téléphone).
-.oc-grille { display: grid; gap: 12px; }
-.oc-livre--carte { grid-template-columns: 88px 1fr; }
+// minmax(0, …) : une piste en 1fr ne descend pas sous le contenu de la carte (305 px mesurés, page débordante à 320 px).
+.oc-grille { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+.oc-livre--carte { grid-template-columns: 88px minmax(0, 1fr); }
 @media (min-width: 720px) {
-  .oc-grille { grid-template-columns: 1fr 1fr; }
-  .oc-livre--carte { grid-template-columns: 110px 1fr; }
+  .oc-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .oc-livre--carte { grid-template-columns: 110px minmax(0, 1fr); }
 }
 // Bouton-lien : la couleur des liens de la page (.oc a) l'emportait, texte bleu sur fond bleu (mesuré le 25/10).
 .oc a.oc-btn, .oc a.oc-btn:hover, .oc a.oc-btn:focus-visible { color: #fff; }

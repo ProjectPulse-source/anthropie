@@ -1,0 +1,23 @@
+{
+  "_doc": "Titres d'œuvres et de publications composés en italique sur le site servi (scripts/typo_build.py). Ajouter ici un titre, une fois : il vaut alors sur toutes les pages, FR et EN. N'y entrent ni les titres d'articles ou de working papers (romain, entre guillemets dans une citation), ni les institutions, ni un mot qui a un autre sens courant (Nature, Capital, Candide ou Phèdre le personnage : ceux-là s'écrivent en italique à la source, ou par un motif de contexte). variantes : graphie fautive vers graphie publiée.",
+  "titres": [
+    "ANTHROPIE – Ordre ici. Dette ailleurs", "ANTHROPY – A Big History of Civilization’s Hidden Costs", "ANTHROPIE", "ANTHROPY",
+    "Dette Publique : Qui paie vraiment ?", "Un président peut-il tenir ses promesses ?", "La Société du premier coup",
+    "L’Odyssée des idées", "Livresque des mots", "Anthropie Working Papers", "Anthropy Working Papers",
+    "Journal officiel", "Bulletin officiel", "En attendant Nadeau", "Mediapart", "Alternatives Économiques", "La Vie des idées",
+    "La Grande Conversation", "Revue Projet", "Sociologie du travail", "Revue Française de Socio-Économie", "Le Temps", "Terrestres",
+    "Insee Analyses", "Insee Première", "Informations rapides", "Emploi, chômage, revenus du travail", "Les Essentiels 2026",
+    "Repères et références statistiques", "Les Dossiers de la DREES", "Regards sur l’éducation", "Debt Sustainability Monitor 2025",
+    "Economic Outlook", "Survey of Professional Forecasters", "Modern Language Notes", "The Social Costs of Private Enterprise",
+    "The Entropy Law and the Economic Process", "The Friends of Voltaire", "Le Pédant joué", "Asinaria", "De Cive",
+    "De l’esprit", "Le Prince", "Le Capital", "Essai sur l’entendement humain", "Nouveaux Essais sur l’entendement humain"
+  ],
+  "variantes": {
+    "Dette publique : qui paie vraiment ?": "Dette Publique : Qui paie vraiment ?",
+    "ANTHROPIE — Ordre ici. Dette ailleurs": "ANTHROPIE – Ordre ici. Dette ailleurs",
+    "La Vie des Idées": "La Vie des idées"
+  },
+  "motifs": ["(?<=[Ll]e )Phèdre(?![a-zA-Zà-ÿ])", "(?<=du )Phèdre(?![a-zA-Zà-ÿ])", "(?<=[Tt]he )Phaedrus(?![a-zA-Zà-ÿ])"],
+  "sans_italique_si_seul_dans": ["h1", "h2", "h3", "h4"],
+  "jamais_dans": ["nav", "button", "footer"]
+}

@@ -53,6 +53,11 @@ jobs:
 
       - name: Build with Hugo
         run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      # Typographie FR et EN (auteur, 01/11/2026 : « de façon constante ») : appliquée au HTML final, d'où qu'il vienne,
+      # puis contrôlée. Bloquant. AVANT les contrôles du site construit : ils doivent lire ce qui sera servi.
+      - name: Typographie du site construit (bloquant)
+        run: python3 scripts/typo_build.py public
       # Porte deterministe (2026-09-02) : un depot incoherent ne se deploie pas. Trois controles
       # hors reseau, quelques secondes : compteurs de corpus, parite registre <-> fiches
       # (livres, AWP, articles), encodage console des scripts. Les controles reseau (Wikidata,
