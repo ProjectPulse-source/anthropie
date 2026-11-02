@@ -1,7 +1,7 @@
-# relu le 2026-11-03 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Déchets radioactifs : le volume dit-il le problème ?
-Les déchets radioactifs se comptent d'abord en mètres cubes : 1,89 million fin 2024.
+Les déchets radioactifs se comptent d’abord en mètres cubes : 1,89 million fin 2024.
 Mais le volume ne dit ni où est la radioactivité, ni ce qui reste sans solution.
 Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,1 % de la radioactivité déclarée ; leur stockage définitif est prévu à Bure (Cigéo), mais pas encore autorisé.
 Page publiée le 26 octobre 2026
@@ -15,7 +15,7 @@ Plus de neuf dixièmes de ce volume (91,7 %) étaient des déchets de faible et 
 Les déchets de haute activité, eux, faisaient 0,25 % du volume, quelques millièmes, et 97,1 % de la radioactivité ; avec les déchets de moyenne activité à vie longue, 99,8 %.
 Les catégories qui concentrent l’essentiel de la radioactivité déclarée ne sont donc pas celles qui occupent le plus de volume, et elles ne relèvent pas des mêmes filières de gestion.
 Leur radioactivité ne mesure pas, à elle seule, leur dangerosité ni le risque auquel la population est exposée.
-Volume en équivalent conditionné et radioactivité déclarée, en becquerels, la même année ; filières selon l'Andra (Inventaire national, données ouvertes ; Les Essentiels 2026).
+Volume en équivalent conditionné et radioactivité déclarée, en becquerels, la même année ; filières selon l’Andra (Inventaire national, données ouvertes ; Les Essentiels 2026).
 Le résultat en une phrase.
 En France, fin 2021, les déchets de haute activité faisaient 0,25 % du volume des déchets radioactifs et 97,1 % de leur radioactivité déclarée ; leur stockage définitif, prévu à Bure (Cigéo), n’est pas encore autorisé.
 Depuis, le volume a continué de croître : 1,89 million de mètres cubes fin 2024, dont 4 717 m³ de haute activité, toujours 0,25 % du total.
@@ -69,8 +69,8 @@ Les chiffres de cette page décrivent un tel héritage ; ils ne démontrent pas 
 Pour prolonger la question
 ANTHROPIE – Ordre ici.
 Dette ailleurs
-Sept âges d'histoire pour une seule hypothèse : le désordre ne se résout pas, il se déplace.
-ANTHROPIE — Ordre ici.
+Sept âges d’histoire pour une seule hypothèse : le désordre ne se résout pas, il se déplace.
+ANTHROPIE – Ordre ici.
 Dette ailleurs suit, sur la longue durée, ce que chaque ordre construit laisse derrière lui et à qui il en laisse la charge.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
 Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
@@ -86,11 +86,11 @@ Préfecture de la Haute-Marne, page de l’enquête publique, lue le 26 octobre 
 Dépêche AFP du 14 septembre 2026, reprise par Connaissance des énergies : clôture de l’enquête publique et avis de la commission.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Déchets radioactifs : le volume ne dit pas où est la radioactivité
 Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,1 % de la radioactivité déclarée ; leur stockage définitif est en projet.
-Précaution d'interprétation.
-Volume en équivalent conditionné et radioactivité déclarée, cinq catégories des bilans de l'Andra, même année.
+Précaution d’interprétation.
+Volume en équivalent conditionné et radioactivité déclarée, cinq catégories des bilans de l’Andra, même année.
 La radioactivité ne mesure à elle seule ni le risque sanitaire ni le coût de gestion.
 Andra, Inventaire national (données ouvertes, data.gouv.fr) ; filières : Andra, Les Essentiels 2026
 Télécharger en PNG
@@ -105,10 +105,10 @@ Les déchets à vie longue n’ont pas encore de filière de stockage définitif
 Le volume, lui, est porté pour l’essentiel par des catégories qui ont un stockage en service.
 Copier le résumé
 Les données
-Pour chaque fichier annuel de l'Inventaire national depuis fin 2013 : volume en équivalent conditionné et activité déclarée par catégorie, volume avec activité déclarée, volume situé dans un centre de stockage de l'Andra ; le même contenu existe en CSV, au format long.
+Pour chaque fichier annuel de l’Inventaire national depuis fin 2013 : volume en équivalent conditionné et activité déclarée par catégorie, volume avec activité déclarée, volume situé dans un centre de stockage de l’Andra ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Andra (Inventaire national)), sous leurs propres conditions.
 Toutes les ressources : données, dossiers et repères →
 Transmettre

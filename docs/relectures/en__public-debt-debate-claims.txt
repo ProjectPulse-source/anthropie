@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /en/public-debt-debate-claims/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /en/public-debt-debate-claims/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What are the claims of the French debt debate worth?
 On 8 September 2025, in the French National Assembly, every group invoked the figures on public debt.
@@ -31,7 +31,7 @@ Including teachers’ pensions, the ratio falls back to 60%.
 The claim was defensible, and its scope decided everything.
 That a comparison is badly built does not mean interest is no burden on budget room: it is one, but this comparison cannot measure it.
 The eleven claims examined here, made on the same day by speakers from every group, nearly all follow this pattern.
-One row per claim, no “true” or “false” box: the verdict on the question asked, then the neighbouring question that changes it (author's calculation; National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece).
+One row per claim, no “true” or “false” box: the verdict on the question asked, then the neighbouring question that changes it (author’s calculation; National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece).
 The result in one sentence.
 Of eleven numerical cases from the debate of 8 September 2025, only one remains accurate under every variant tested (“over €1,000bn of extra debt” since 2017), only one rests on an established error of definition, and for the others the strength of the finding varies with the date, unit, scope or year chosen; none of the conclusions drawn from them is demonstrated by the figure.
 Each claim takes four steps, and each needs its own evidence: a verifiable quantity (€67bn of interest, a 3% deficit); a chosen framing (period, unit, scope, definition); an explanation (“it is the result of…”); a conclusion (“we have no choice”, “we must act differently”).
@@ -179,7 +179,7 @@ Bruno Retailleau writes that the pension system “is short of at least 40 billi
 Other presentations count as a need the balancing contributions the State pays, as employer, to its civil servants’ scheme; the text does not say which convention gives 40 billion, and the verdict depends on it.
 Outside the Assembly as inside it, several gaps lie less in the arithmetic than in conventions that are often implicit: the date, the starting point, the scope, the document.
 To these is added the more fundamental distance between an accurate calculation and the explanation drawn from it: the four steps of a claim, from the quantity to the conclusion, recur in the campaign texts.
-The candidates' statements tested
+The candidates’ statements tested
 The table shows 19 statements: those discussed in this section, chosen because they illustrate the difficulties of date, scope, precision and attribution, and two accurate statements from candidates it does not otherwise cite.
 They are not a representative sample.
 All 71 testable statements, with their text and document, are in the downloadable data; their tests are recorded in the author’s research file, and some remain undetermined there for want of a document the site holds (autumn 2026 forecasts, social security financing acts, European comparisons), neither confirmed nor refuted.
@@ -198,13 +198,13 @@ Jean-Luc Mélenchon, October 2026
 Accurate: €1,314bn since the 2017 election (second quarter of 2026)
 Nicolas Dupont-Aignan, page captured on 2 November 2026
 “national debt has reached 3,600 billion euros and keeps rising (+1,400 billion under E.
-Macron's disastrous terms)”
+Macron’s disastrous terms)”
 “3,600”: accurate (€3,595.5bn in the second quarter of 2026; the page, dated 2022, has been updated). “+1,400”: accurate from January 2017 (€1,405bn), not from the election (€1,314bn)
 David Lisnard, page captured on 2 November 2026
 “at 3,417 billion euros, debt now stands at 120% of GDP”
 The amount is accurate for the second quarter of 2025 (€3,417.2bn), overtaken by the date (€3,595.5bn); “120%” is accurate only to the nearest ten: 115.2% for that amount, 119.0% at the highest
 Florian Philippot, September 2026
-“France's public debt now exceeds €3,305bn, that is […] more than 113% of GDP”
+“France’s public debt now exceeds €3,305bn, that is […] more than 113% of GDP”
 Accurate as thresholds: €3,535.9bn and 117.5% in the first quarter of 2026.
 The figures cited are the end-2024 ones published in May 2025 (€3,305.3bn, 113.2%), 112.6% since the revision
 Jean-François Legendre, page captured on 2 November 2026
@@ -214,12 +214,12 @@ Jean-François Legendre, page captured on 2 November 2026
 “a debt of 3,000 billion”
 Inaccurate (€3,595.5bn in the second quarter of 2026); the same text also writes “3,500 billion”
 Florian Philippot, September 2026
-“the State's second-largest budget item”
+“the State’s second-largest budget item”
 Accurate for 2025, the year the text refers to: €56.2bn in the Finance Act, behind school education (€64.3bn), ahead of Defence (€50.5bn).
 The rank of a programme, excluding pensions and tax refunds
 Nathalie Arthaud, July 2026
 debt service “has overtaken that of National Education”
-Inaccurate within one scope at the date of the text: in the 2026 Finance Act, €60.3bn against €64.5bn; true only when the interest of all general government (€65.7bn in 2025) is compared with a single ministry's budget.
+Inaccurate within one scope at the date of the text: in the 2026 Finance Act, €60.3bn against €64.5bn; true only when the interest of all general government (€65.7bn in 2025) is compared with a single ministry’s budget.
 The 2027 ceilings, published nine days later, reverse the order of the programmes
 Bernard Cazeneuve, July 2026
 “its interest is the largest item in the State budget, ahead of Defence as well as of National Education”
@@ -248,10 +248,10 @@ Marine Tondelier, July 2026
 The rise is accurate (18.7 points from the end of 2017 to the first quarter of 2026); the attribution is not established: the calculation at a constant revenue share gives about 12 points, and does not isolate the effect of tax measures
 Nicolas Dupont-Aignan, page captured on 2 November 2026
 the debt, “more than 55% held by foreign operators”
-Accurate for the State's negotiable debt (56.0% at the end of 2025), inaccurate for general government debt as a whole (54.3%)
+Accurate for the State’s negotiable debt (56.0% at the end of 2025), inaccurate for general government debt as a whole (54.3%)
 Bruno Retailleau, October 2026
 “it is short of at least 40 billion euros every year, which we borrow” (the pension system)
-Incompatible with the measure of the Conseil d'orientation des retraites, the official pensions advisory council (a financing need of 0.17 points of GDP in 2025, about €5bn); other presentations count the State's balancing contributions as employer, and the text does not say which it uses: the verdict depends on that definition
+Incompatible with the measure of the Conseil d’orientation des retraites, the official pensions advisory council (a financing need of 0.17 points of GDP in 2025, about €5bn); other presentations count the State’s balancing contributions as employer, and the text does not say which it uses: the verdict depends on that definition
 One shared stock of figures
 Several speakers from different camps draw on quantities from the same official statistical stock, and those figures circulate.
 The government’s July report itself compares two scopes, and a speaker from the camp supporting the government turns it into a forecast.
@@ -273,7 +273,7 @@ A stock or a ratio, a deficit or a debt increase, interest or repayments (the 3%
 Which conclusion, and what more would it take to establish it?
 A cause, a responsibility or a decision requires evidence the figure alone does not give.
 The book put through the same tests
-The book this page extends, Dette publique : qui paie vraiment ? (in French), was put through the same tests as the speakers, in its latest edition.
+The book this page extends, Dette Publique: Qui paie vraiment? (in French), was put through the same tests as the speakers, in its latest edition.
 Its central figures hold: the level of debt at end-2025, the central government’s debt charge, the arithmetic of interest rates and growth.
 The weaknesses lie elsewhere, in the step from figure to cause.
 Setting the payment of interest beside closures of maternity units, as the book does, suggests a budget trade-off.
@@ -391,12 +391,12 @@ Not in euros: a 3% deficit adds about €89.7bn a year.
 As a share of GDP, it stabilises the ratio only if nominal growth exceeds a threshold, about 2.74% with the 2024 ratio and no gap between deficit and debt increase.
 Growth exceeded that threshold in 2024 (3.58%), not in 2025 (1.90%, known after the debate).
 In July 2025 the French Court of Audit warned that getting back below 3% would not, on its own, be enough to ensure debt sustainability.
-How does this relate to the book Dette publique : qui paie vraiment ?
+How does this relate to the book Dette Publique: Qui paie vraiment?
 Chapter 9 of the book (in French) analyses these claims through language: who speaks, by what right, closing off which options.
 This page tests them against the accounts.
 The book was put through the same tests: its central figures hold, some steps from figure to cause are not established.
 In the public debt dossier
-To take the analysis further Dette Publique : Qui paie vraiment ?, the author's book, in French: contents, excerpts and reviews →
+To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
 Where these figures come from
 The claims.
 French National Assembly, full record of the sitting of 8 September 2025 (government statement followed by a vote), Journal officiel, debates, p.
@@ -450,7 +450,7 @@ Reading caveat.
 Data available on 8 September 2025: public accounts as published at that date for spending, revenue and debt, revised version elsewhere; forecasts published after the debate are excluded from the verdicts.
 Round numbers judged at the stated precision (tolerance grid).
 A case study of one debate, not a sample of the debate.
-French National Assembly (record of 8 September 2025); Insee; Eurostat; Court of Audit; Government; Senate; Banque de France; Bank of Greece; author's calculation
+French National Assembly (record of 8 September 2025); Insee; Eurostat; Court of Audit; Government; Senate; Banque de France; Bank of Greece; author’s calculation
 Download PNG
 SVG
 Ten-year yields: France above or below Greece, month by month
@@ -459,7 +459,7 @@ Reading caveat.
 Monthly averages.
 On 8 September 2025, France borrowed at ten years at 3.49% (Banque de France) and Greece at 3.34% (Bank of Greece); on the 4th, a like-for-like measure gave 3.50% against 3.44%.
 A market price gives the current cost of borrowing, not the relative soundness of two countries.
-Eurostat, long-term government bond yields, monthly averages (irt_lt_mcby_m); author's calculation
+Eurostat, long-term government bond yields, monthly averages (irt_lt_mcby_m); author’s calculation
 Download PNG
 SVG
 Cite this page

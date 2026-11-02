@@ -1,4 +1,4 @@
-# relu le 2026-10-16 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can the French president call a referendum?
 Can a French president put a reform to the voters whenever he wants?
@@ -56,7 +56,7 @@ Under the constitutional act of 23 July 2008 (art.
 The Conseil constitutionnel oversees; it submits nothing.
 “The Constitutional Council shall ensure the proper conduct of referendum proceedings as provided for in articles 11 and 89 and in Title XV and shall proclaim the results of the referendum.” (art.
 60).
-Article 61 also has it review “Private Members' Bills mentioned in article 11 before they are submitted to referendum”: this is the shared-initiative route, below.
+Article 61 also has it review “Private Members’ Bills mentioned in article 11 before they are submitted to referendum”: this is the shared-initiative route, below.
 How many referendums have been held, and what did they decide?
 National referendums whose results were proclaimed by the Conseil constitutionnel, from 4 October 1958 to 5 October 2026.
 Excludes the referendum of 28 September 1958 (adoption of the Constitution, before the Conseil was created) and local consultations.
@@ -155,21 +155,22 @@ It is not a citizens’ initiative: the text comes from members of Parliament, a
 The process has always stopped short of a vote: from 2015 to 5 October 2026, seven bills were referred to the Conseil constitutionnel, one was found to meet the statutory conditions, none gathered the support of one tenth of registered voters, and none was therefore put to a referendum.
 Even past that threshold, a last filter would remain: it is enough for each House to consider the bill once, even without passing it, for the condition of its submission to a referendum not to be met.
 The procedure has four steps.
-At least one fifth of the members of Parliament table a bill; « La proposition de loi est transmise au Conseil constitutionnel par le président de l'assemblée saisie. » (institutional act of 6 December 2013, art.
+At least one fifth of the members of Parliament table a bill; “La proposition de loi est transmise au Conseil constitutionnel par le président de l’assemblée saisie.” (institutional act of 6 December 2013, art.
 1; our translation: “The bill is forwarded to the Conseil constitutionnel by the president of the House in which it was tabled.”).
-The Conseil constitutionnel checks, « dans le délai d'un mois à compter de la transmission de la proposition de loi » (our translation: “within one month of the transmission of the bill”), that the one-fifth threshold is met, that the subject falls under article 11 and respects two time limits, and that no provision is contrary to the Constitution (ordinance of 7 November 1958, art.
+The Conseil constitutionnel checks, “dans le délai d’un mois à compter de la transmission de la proposition de loi” (our translation: “within one month of the transmission of the bill”), that the one-fifth threshold is met, that the subject falls under article 11 and respects two time limits, and that no provision is contrary to the Constitution (ordinance of 7 November 1958, art.
 45-2).
 The two time limits are those of article 11: the bill “may not be applied to the repeal of a legislative provision promulgated for less than one year”, and, after a rejection by the people, “no new referendum proposal on the same subject may be submitted before the end of a period of two years following the date of the vote”.
-If it meets the conditions, registered voters can support it: « La durée de la période de recueil des soutiens est de neuf mois. » (institutional act, art.
+If it meets the conditions, registered voters can support it: “La durée de la période de recueil des soutiens est de neuf mois.” (institutional act, art.
 4; our translation: “The period for collecting signatures of support is nine months.”).
-If one tenth of registered voters has supported it, the Conseil constitutionnel declares so, and each of the two Houses has six months from the publication of that decision in the Journal officiel to consider the bill; « Ce délai est suspendu entre deux sessions ordinaires. » (institutional act, art.
+If one tenth of registered voters has supported it, the Conseil constitutionnel declares so, and each of the two Houses has six months from the publication of that decision in the Journal officiel to consider the bill; “Ce délai est suspendu entre deux sessions ordinaires.” (institutional act, art.
 9; our translation: “This period is suspended between two ordinary sessions.”).
 If either House has not considered it within that period, the president submits it to a referendum.
 For there to be no referendum, it is therefore enough for each House to consider the bill at least once, even without passing it.
 For this step, the published translation of article 11 reads “the President of the Republic may submit it to a referendum”, whereas the French text reads “la soumet” (literally, “submits it”), in the indicative, where its first paragraph says “peut soumettre” (may submit).
 This page notes the difference in wording without taking a position on its legal effect.
 Article 9 of the institutional act, word for word
-The president submits the bill to a referendum if it « n'a pas été examinée au moins une fois par chacune des deux assemblées parlementaires dans un délai de six mois à compter de la publication au Journal officiel de la décision du Conseil constitutionnel déclarant qu'elle a obtenu le soutien d'au moins un dixième des électeurs inscrits sur les listes électorales » (our translation: “has not been considered at least once by each of the two Houses of Parliament within six months of the publication in the Journal officiel of the decision of the Conseil constitutionnel declaring that it has obtained the support of at least one tenth of the voters registered on the electoral lists”). « Ce délai est suspendu entre deux sessions ordinaires. » (our translation: “This period is suspended between two ordinary sessions.”)
+The president submits the bill to a referendum if it “n’a pas été examinée au moins une fois par chacune des deux assemblées parlementaires dans un délai de six mois à compter de la publication au Journal officiel de la décision du Conseil constitutionnel déclarant qu’elle a obtenu le soutien d’au moins un dixième des électeurs inscrits sur les listes électorales” (our translation: “has not been considered at least once by each of the two Houses of Parliament within six months of the publication in the Journal officiel of the decision of the Conseil constitutionnel declaring that it has obtained the support of at least one tenth of the voters registered on the electoral lists”).
+“Ce délai est suspendu entre deux sessions ordinaires.” (our translation: “This period is suspended between two ordinary sessions.”)
 Bills introduced under article 11, paragraph 3, referred to the Conseil constitutionnel, from 2015 to 5 October 2026, and what became of them.
 Download · Cite · Data
 The result in one sentence.
@@ -177,7 +178,7 @@ From 2015 to 5 October 2026, the Conseil constitutionnel received seven bills un
 The decisions in a table, with their grounds
 Decision
 Number
-Private Members' Bill
+Private Members’ Bill
 Outcome
 Grounds quoted (paragraphs)
 9 May 2019
@@ -191,93 +192,93 @@ Public hospital service (programming act)
 Did not meet the statutory conditions: art.
 45-2, 3°: provision contrary to the Constitution
 Para.
-10: « Ces dispositions, qui subordonnent à l'avis conforme de la Conférence nationale de santé l'exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution » (our translation: "These provisions, which make the exercise of the Prime Minister's regulatory power subject to the binding opinion of the National Health Conference, are contrary to the Constitution").
+10: “Ces dispositions, qui subordonnent à l’avis conforme de la Conférence nationale de santé l’exercice du pouvoir réglementaire du Premier ministre, sont contraires à la Constitution” (our translation: “These provisions, which make the exercise of the Prime Minister’s regulatory power subject to the binding opinion of the National Health Conference, are contrary to the Constitution”).
 25 October 2022
 2022-3 RIP
-Contribution on large companies' windfall profits
+Contribution on large companies’ windfall profits
 Did not meet the statutory conditions: art.
 45-2, 2°: subject of article 11
 Para.
-5: « Elle a ainsi pour seul effet d'abonder le budget de l'État par l'instauration jusqu'au 31 décembre 2025 d'une mesure qui se borne à augmenter le niveau de l'imposition existante des bénéfices de certaines sociétés » (our translation: "Its sole effect is thus to increase the State budget by introducing, until 31 December 2025, a measure that merely raises the existing level of taxation of certain companies' profits"); « Elle ne porte donc pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique économique de la nation » (our translation: "It therefore does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning the economic policy of the nation").
+5: “Elle a ainsi pour seul effet d’abonder le budget de l’État par l’instauration jusqu’au 31 décembre 2025 d’une mesure qui se borne à augmenter le niveau de l’imposition existante des bénéfices de certaines sociétés” (our translation: “Its sole effect is thus to increase the State budget by introducing, until 31 December 2025, a measure that merely raises the existing level of taxation of certain companies’ profits”); “Elle ne porte donc pas, au sens de l’article 11 de la Constitution, sur une réforme relative à la politique économique de la nation” (our translation: “It therefore does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning the economic policy of the nation”).
 14 April 2023
 2023-4 RIP
 Legal retirement age: not above 62
 Did not meet the statutory conditions: art.
 45-2, 2°: subject of article 11
 Para.
-7: « l'article L.
-161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans » (our translation: "article L.
-161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two").
+7: “l’article L.
+161-17-2 du code de la sécurité sociale prévoit que l’âge d’ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans” (our translation: “article L.
+161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two”).
 Para.
-8: « n'emporte pas de changement de l'état du droit » (our translation: "does not change the state of the law").
+8: “n’emporte pas de changement de l’état du droit” (our translation: “does not change the state of the law”).
 Para.
-9: « le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum » (our translation: "the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum").
+9: “le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu’elles résultent d’une loi votée par le Parlement ou d’une loi adoptée par voie de référendum” (our translation: “the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum”).
 Para.
-10: « elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale » (our translation: "it does not relate, within the meaning of Article 11 of the Constitution, to a "reform" concerning social policy").
+10: “elle ne porte pas, au sens de l’article 11 de la Constitution, sur une “réforme” relative à la politique sociale” (our translation: “it does not relate, within the meaning of Article 11 of the Constitution, to a ”reform“ concerning social policy”).
 3 May 2023
 2023-5 RIP
 Legal retirement age: not above 62 (second bill)
 Did not meet the statutory conditions: art.
 45-2, 2°: subject of article 11
 Para.
-8: « l'interdiction de fixer l'âge légal de départ à la retraite au-delà de soixante-deux ans n'emporte donc pas de changement de l'état du droit » (our translation: "the prohibition on setting the legal retirement age above sixty-two therefore does not change the state of the law").
+8: “l’interdiction de fixer l’âge légal de départ à la retraite au-delà de soixante-deux ans n’emporte donc pas de changement de l’état du droit” (our translation: “the prohibition on setting the legal retirement age above sixty-two therefore does not change the state of the law”).
 Para.
-10: « Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale » (our translation: "Its sole effect is thus to increase the budget of one branch of social security").
+10: “Elle a ainsi pour seul effet d’abonder le budget d’une branche de la sécurité sociale” (our translation: “Its sole effect is thus to increase the budget of one branch of social security”).
 Para.
-11: « la proposition de loi ne porte pas, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale » (our translation: "the bill does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning social policy").
+11: “la proposition de loi ne porte pas, au sens de l’article 11 de la Constitution, sur une réforme relative à la politique sociale” (our translation: “the bill does not relate, within the meaning of Article 11 of the Constitution, to a reform concerning social policy”).
 11 April 2024
 2024-6 RIP
-Foreigners' access to social benefits
+Foreigners’ access to social benefits
 Did not meet the statutory conditions: art.
 45-2, 3°: provision contrary to the Constitution
 Para.
-7: « elle porte, au sens de l'article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation » (our translation: "it relates, within the meaning of Article 11 of the Constitution, to a reform concerning the social policy of the nation").
+7: “elle porte, au sens de l’article 11 de la Constitution, sur une réforme relative à la politique sociale de la nation” (our translation: “it relates, within the meaning of Article 11 of the Constitution, to a reform concerning the social policy of the nation”).
 Para.
-13: « les dispositions de l'article 1er portent une atteinte disproportionnée à ces exigences.
-Elles sont donc contraires à la Constitution » (our translation: "the provisions of Article 1 disproportionately infringe these requirements.
-They are therefore contrary to the Constitution").
+13: “les dispositions de l’article 1er portent une atteinte disproportionnée à ces exigences.
+Elles sont donc contraires à la Constitution” (our translation: “the provisions of Article 1 disproportionately infringe these requirements.
+They are therefore contrary to the Constitution”).
 17 June 2026
 2026-7 RIP
 Excluding the active causing of death from the notion of care
 Did not meet the statutory conditions: art.
 45-2, 2°: subject of article 11
 Para.
-7: « il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: "it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution"); « Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie » (our translation: "Thus, questions of an ethical nature relating to end of life do not fall within these subjects").
+7: “il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l’article 11 de la Constitution” (our translation: “it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution”); “Ainsi, ne relèvent pas de ces objets les questions, d’ordre éthique, relatives à la fin de vie” (our translation: “Thus, questions of an ethical nature relating to end of life do not fall within these subjects”).
 Para.
-9: « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution » (our translation: "it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution").
+9: “elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l’article 11 de la Constitution” (our translation: “it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution”).
 Para.
-11: « n'emporte pas de changement de l'état du droit » (our translation: "does not change the state of the law").
+11: “n’emporte pas de changement de l’état du droit” (our translation: “does not change the state of the law”).
 Para.
-13: « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution » (our translation: "nor does the bill relate to a "reform" within the meaning of Article 11 of the Constitution").
+13: “la proposition de loi ne porte pas non plus sur une “réforme” au sens de l’article 11 de la Constitution” (our translation: “nor does the bill relate to a ”reform“ within the meaning of Article 11 of the Constitution”).
 The other six bills did not meet the statutory conditions.
 Two contained a provision contrary to the Constitution (2021-2 and 2024-6 RIP).
 Four did not meet the condition on their subject.
 The Conseil states why, and this page quotes its reasons without assessing them; the table above gives, decision by decision, the grounds and their paragraph numbers.
 The bills on retirement at 62.
-At the date of referral, the Conseil notes, « l'article L.
-161-17-2 du code de la sécurité sociale prévoit que l'âge d'ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans » (decision 2023-4 RIP, para.
+At the date of referral, the Conseil notes, “l’article L.
+161-17-2 du code de la sécurité sociale prévoit que l’âge d’ouverture du droit à une pension de retraite mentionné à ces mêmes dispositions est fixé à soixante-deux ans” (decision 2023-4 RIP, para.
 7; our translation: “article L.
 161-17-2 of the Social Security Code provides that the age at which the right to a retirement pension under these same provisions opens is set at sixty-two”).
-The bill, which prohibited setting that age any higher, « n'emporte pas de changement de l'état du droit » (“does not change the state of the law”, para.
-8), and its adoption by referendum would not alter this, because « le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu'elles résultent d'une loi votée par le Parlement ou d'une loi adoptée par voie de référendum » (“the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum”, para.
+The bill, which prohibited setting that age any higher, “n’emporte pas de changement de l’état du droit” (“does not change the state of the law”, para.
+8), and its adoption by referendum would not alter this, because “le législateur peut toujours modifier, compléter ou abroger des dispositions législatives antérieures, qu’elles résultent d’une loi votée par le Parlement ou d’une loi adoptée par voie de référendum” (“the legislature may always amend, supplement or repeal earlier legislative provisions, whether they result from an act passed by Parliament or from an act adopted by referendum”, para.
 9).
-The Conseil concludes that « elle ne porte pas, au sens de l'article 11 de la Constitution, sur une « réforme » relative à la politique sociale » (“it does not relate, within the meaning of Article 11 of the Constitution, to a "reform" concerning social policy”, para.
+The Conseil concludes that “elle ne porte pas, au sens de l’article 11 de la Constitution, sur une “réforme” relative à la politique sociale” (“it does not relate, within the meaning of Article 11 of the Constitution, to a “reform” concerning social policy”, para.
 10).
-The second bill, tabled in the Senate (2023-5 RIP), was rejected for the same reason; of the increase in a levy on income from assets and investment products that it added, the Conseil notes: « Elle a ainsi pour seul effet d'abonder le budget d'une branche de la sécurité sociale » (“Its sole effect is thus to increase the budget of one branch of social security”, para.
+The second bill, tabled in the Senate (2023-5 RIP), was rejected for the same reason; of the increase in a levy on income from assets and investment products that it added, the Conseil notes: “Elle a ainsi pour seul effet d’abonder le budget d’une branche de la sécurité sociale” (“Its sole effect is thus to increase the budget of one branch of social security”, para.
 10).
 The bill on end of life.
-Decision 2026-7 RIP rests first on another ground, based on the preparatory work for the 1995 constitutional amendment: « il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l'article 11 de la Constitution.
-Ainsi, ne relèvent pas de ces objets les questions, d'ordre éthique, relatives à la fin de vie. » (para.
+Decision 2026-7 RIP rests first on another ground, based on the preparatory work for the 1995 constitutional amendment: “il résulte des travaux préparatoires de la loi constitutionnelle du 4 août 1995 mentionnée ci-dessus que le constituant a entendu exclure les questions de société des objets mentionnés au premier alinéa de l’article 11 de la Constitution.
+Ainsi, ne relèvent pas de ces objets les questions, d’ordre éthique, relatives à la fin de vie.” (para.
 7; our translation: “it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution.
 Thus, questions of an ethical nature relating to end of life do not fall within these subjects.”).
-This is the Conseil’s interpretation of that preparatory work: article 11 does not mention « questions de société » (questions of society).
+This is the Conseil’s interpretation of that preparatory work: article 11 does not mention “questions de société” (questions of society).
 The decision concerns the subjects that the first paragraph of article 11 opens to a referendum; it says nothing about a revision of the Constitution (article 89).
-As the bill concerned end of life, the Conseil concludes that « elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l'article 11 de la Constitution » (“it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution”, para.
+As the bill concerned end of life, the Conseil concludes that “elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l’article 11 de la Constitution” (“it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution”, para.
 9).
-The decision then adds the ground used for retirement: the bill « n'emporte pas de changement de l'état du droit » (“does not change the state of the law”, para.
-11), so « la proposition de loi ne porte pas non plus sur une « réforme » au sens de l'article 11 de la Constitution » (“nor does the bill relate to a "reform" within the meaning of Article 11 of the Constitution”, para.
+The decision then adds the ground used for retirement: the bill “n’emporte pas de changement de l’état du droit” (“does not change the state of the law”, para.
+11), so “la proposition de loi ne porte pas non plus sur une “réforme” au sens de l’article 11 de la Constitution” (“nor does the bill relate to a “reform” within the meaning of Article 11 of the Constitution”, para.
 13).
-Three other bills were tabled « en application de l’article 11 » (under article 11) without any decision of the Conseil constitutionnel concerning them in the register consulted: in the Senate, No.
+Three other bills were tabled “en application de l’article 11” (under article 11) without any decision of the Conseil constitutionnel concerning them in the register consulted: in the Senate, No.
 459 (20 April 2018, immigration control); in the National Assembly, No.
 1749 (6 March 2019, measures against French jihadists who fought in Iraq and Syria) and No.
 5203 (5 April 2022, mistreatment of animals).
@@ -289,7 +290,7 @@ What a referendum decides, and what it does not
 A referendum settles the text put to the vote: once adopted, an article 11 Bill becomes an act, which the president promulgates within fifteen days, and an article 89 amendment changes the Constitution.
 The vote does not guarantee, on its own, that the text will be implemented, nor the result a promise attaches to it.
 An act adopted by referendum remains an act: the legislature may later amend or repeal it, as the Conseil constitutionnel recalls in decision 2023-4 RIP, quoted above.
-Some of its provisions may have to wait for implementing measures, since the Civil Code provides that, for acts, « l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures » (art.
+Some of its provisions may have to wait for implementing measures, since the Civil Code provides that, for acts, “l’entrée en vigueur de celles de leurs dispositions dont l’exécution nécessite des mesures d’application est reportée à la date d’entrée en vigueur de ces mesures” (art.
 1; our translation: “the entry into force of those of their provisions whose implementation requires implementing measures is postponed until the date on which those measures enter into force”; see does a law apply as soon as it is passed?).
 Nor does the vote shorten the time a measure takes to produce its effects (can a campaign promise produce results within five years?), and it does not choose the indicator that will tell whether the promise was kept.
 The proclamation says how many ballots read yes and no; it does not say why.
@@ -297,9 +298,9 @@ What happened after the 2005 rejection?
 On 29 May 2005, the Bill authorising the ratification of the Treaty establishing a Constitution for Europe was rejected.
 In 2008, the ratification of another treaty, the Treaty of Lisbon, was authorised by an act, after an amendment to the Constitution approved by Congress; no referendum was held.
 The Treaty of Lisbon, signed after the 2005 rejection, is a different treaty; its title (“Treaty of Lisbon amending the Treaty on European Union and the Treaty establishing the European Community”) says that it amends the existing treaties.
-The Conseil constitutionnel held that the authorisation to ratify it « ne peut intervenir qu'après révision de la Constitution » (decision No.
+The Conseil constitutionnel held that the authorisation to ratify it “ne peut intervenir qu’après révision de la Constitution” (decision No.
 2007-560 DC of 20 December 2007; our translation: can take place only after the Constitution has been amended).
-On 4 February 2008, Parliament convened in Congress approved the Bill amending Title XV of the Constitution « dans les conditions prévues à l'article 89, alinéa 3, de la Constitution » (under the conditions laid down in article 89, paragraph 3, of the Constitution; Congress vote); this is Act No.
+On 4 February 2008, Parliament convened in Congress approved the Bill amending Title XV of the Constitution “dans les conditions prévues à l’article 89, alinéa 3, de la Constitution” (under the conditions laid down in article 89, paragraph 3, of the Constitution; Congress vote); this is Act No.
 2008-103 of the same day, amending the Constitution.
 The ratification of the Treaty of Lisbon was then authorised by act No.
 2008-125 of 13 February 2008.
@@ -311,7 +312,7 @@ On 4 February 2008, Congress approved the amendment by 560 votes to 181, with a 
 On 6 February 2008, the National Assembly rejected, by 227 votes to 175, a motion tabled by Mr Ayrault and several of his colleagues to put the Bill authorising ratification to a referendum (vote No.
 82).
 An amendment announced with a referendum, in 2020 and 2021.
-On 29 June 2020, before the Citizens’ Convention for Climate, the President of the Republic said he was in favour of the rewriting of article 1 of the Constitution that the Convention proposed, to introduce biodiversity, the environment and the fight against climate change, and declared: « je suis prêt à recourir au référendum si celui-ci était alors constitutionnellement possible après le vote des chambres dans le cadre strict de notre Constitution » (text published by the Élysée; our translation: “I am ready to resort to a referendum if it were then constitutionally possible after the vote of the Houses, strictly within the framework of our Constitution”).
+On 29 June 2020, before the Citizens’ Convention for Climate, the President of the Republic said he was in favour of the rewriting of article 1 of the Constitution that the Convention proposed, to introduce biodiversity, the environment and the fight against climate change, and declared: “je suis prêt à recourir au référendum si celui-ci était alors constitutionnellement possible après le vote des chambres dans le cadre strict de notre Constitution” (text published by the Élysée; our translation: “I am ready to resort to a referendum if it were then constitutionally possible after the vote of the Houses, strictly within the framework of our Constitution”).
 The Government Bill to amend the Constitution supplementing article 1 and concerning the preservation of the environment was tabled in the National Assembly on 20 January 2021.
 Passed by the Assembly on 16 March 2021, amended by the Senate on 10 May 2021, passed with amendments by the Assembly on 22 June 2021, it was amended again by the Senate on 5 July 2021: this is the last step in the Senate’s legislative file.
 The two Houses therefore never passed it in identical terms, which article 89 requires before any referendum.
@@ -335,16 +336,16 @@ It does not say whether the referendum is a good or a bad instrument, nor why no
 It counts neither the referendum of 28 September 1958, before the Conseil constitutionnel existed, nor local consultations.
 It reads the Constitution as currently in force and the decisions cited, without legal doctrine or other case law, and is not legal advice.
 The register stands as at 5 October 2026; the 2020-2021 case rests on pages consulted on 12 October 2026.
-What a vote decides Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
+What a vote decides Un président peut-il tenir ses promesses?, the author’s book, in French: contents, excerpts and reviews →
 Frequently asked questions
 Can the French president hold a referendum whenever he wants?
 No, not alone and not on any subject.
-Under article 11 of the Constitution, he may submit to a referendum a Government Bill "on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses, published in the Journal Officiel", and only on the subjects the article lists.
+Under article 11 of the Constitution, he may submit to a referendum a Government Bill “on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses, published in the Journal Officiel”, and only on the subjects the article lists.
 An amendment to the Constitution (article 89) must first be passed by the two Houses in identical terms.
 For the ratification of a treaty on the accession of a State to the European Union (article 88-5), a referendum is the rule, unless the two Houses pass a motion by a three-fifths majority.
 Must the president put to a referendum a recommendation he receives?
-For article 11, the French text says that he "peut soumettre" (may submit) on a recommendation from the Government or a joint motion of the two Houses: the recommendation is required, and the article does not make it an obligation.
-For the shared initiative, once the bill has gathered the support of one tenth of voters and the two Houses have not considered it within the time limit, the French text of article 11 reads "la soumet" (submits it), where the published English translation reads "may submit it".
+For article 11, the French text says that he “peut soumettre” (may submit) on a recommendation from the Government or a joint motion of the two Houses: the recommendation is required, and the article does not make it an obligation.
+For the shared initiative, once the bill has gathered the support of one tenth of voters and the two Houses have not considered it within the time limit, the French text of article 11 reads “la soumet” (submits it), where the published English translation reads “may submit it”.
 For a Bill to amend the Constitution passed by the two Houses, article 89 leaves him the choice of Congress instead of a referendum.
 Does the shared-initiative referendum allow citizens to trigger a referendum?
 Not on their own.
@@ -406,10 +407,10 @@ Conseil constitutionnel, proclamations of results (DILA CONSTIT database, as at 
 Download PNG
 SVG
 The shared-initiative referendum, 2015 to 5 October 2026
-From 2015 to 5 October 2026, the Conseil constitutionnel received seven Private Members' Bills under article 11; one was found to meet the statutory conditions and collected 23.2% of the required signatures; none was put to a referendum.
+From 2015 to 5 October 2026, the Conseil constitutionnel received seven Private Members’ Bills under article 11; one was found to meet the statutory conditions and collected 23.2% of the required signatures; none was put to a referendum.
 Reading caveat.
 Three other bills tabled 'under article 11' (Senate, National Assembly) gave rise to no decision.
-Conseil constitutionnel, 'RIP' decisions (DILA CONSTIT database, as at 5 Oct.
+Conseil constitutionnel, 'RIP’ decisions (DILA CONSTIT database, as at 5 Oct.
 2026); Constitution, art.
 11
 Download PNG

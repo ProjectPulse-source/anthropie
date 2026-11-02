@@ -345,7 +345,10 @@ déclare désormais sa `refonte`**, contrôle bloquant de `check-ressource-model
 Les trois contrôles du build se lancent aussi en local, sur un build : `python scripts/check-rendu-ressources.py <build>
 [--detail]`, `python scripts/check-relecture.py <build> --strict`, chacun avec `--temoin` (témoin positif).
 **Après chaque relecture d'une page refondue**, refaire son instantané : `check-relecture.py <build> --instantane
-<url>` (sans URL : toutes les pages refondues), puis commit. Une faute de langue nouvelle d'une classe connue entre
+<url>`, puis commit. Le build doit être celui de la CI : `hugo --minify` **puis `typo_build.py`** (titres d'œuvres,
+guillemets selon la langue) ; sans cette étape, l'instantané diffère du texte servi et l'issue reste ouverte (03/11/2026,
+six pages). Sans URL, la commande réécrit TOUTES les pages refondues et avance leur date de relecture : ne l'employer
+qu'après les avoir toutes relues. Une faute de langue nouvelle d'une classe connue entre
 dans `MOTIFS` (avec son exemple dans `EXEMPLES`, que `--temoin` injecte) ; une faute de générateur se corrige avec
 `scripts/langue_generee.py` (nombre, signe, valeur sans signe, accord de « point » sur la valeur affichée, lettres
 jusqu'à seize, énumération), adopté générateur par générateur à sa phase B, sortie vérifiée identique ou écart

@@ -124,7 +124,7 @@ jobs:
                 ' (docs/relectures/). Les gardes de prose ont passe : ce sont des phrases a relire, pas des erreurs ' +
                 'de donnees.\n\n' + p.phrases.map(s => '- ' + s).join('\n') +
                 '\n\nRun : ' + run + '\n\nApres relecture : `python scripts/check-relecture.py public --instantane ' +
-                p.url + '` sur un build local, commit, puis fermer cette issue.';
+                p.url + '` sur un build local passe par typo_build.py (comme ici), puis commit : l issue se ferme seule au deploiement suivant.';
               const deja = ouvertes.find(i => i.title === title && !i.pull_request);
               if (deja) {
                 await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: deja.number, body});

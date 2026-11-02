@@ -1,16 +1,16 @@
-# relu le 2026-11-03 ; texte servi de /inflation-et-dette-publique/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /inflation-et-dette-publique/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
-L'inflation a-t-elle vraiment allégé la dette française ?
-L'État a-t-il gagné 150 milliards grâce à l'inflation ?
-Pas sous la forme d'une recette.
-L'inflation de 2021-2023, plus forte que prévu, a réduit d'environ 150 milliards d'euros de 2020 la valeur réelle des paiements promis sur la dette de l'État à taux fixe de fin 2020.
-Cet allègement se réalise au fil des paiements, jusqu'en 2066 : un cinquième seulement fin 2023.
+L’inflation a-t-elle vraiment allégé la dette française ?
+L’État a-t-il gagné 150 milliards grâce à l’inflation ?
+Pas sous la forme d’une recette.
+L’inflation de 2021-2023, plus forte que prévu, a réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020.
+Cet allègement se réalise au fil des paiements, jusqu’en 2066 : un cinquième seulement fin 2023.
 Il ne prouve pas un gain budgétaire net équivalent.
 Page mise à jour le 2 novembre 2026 · révisions
 Dossier dette publique
 Données · AFT, Eurostat, BCE 2020-2023
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Calcul du : 8 octobre 2026 Dette négociable de l'État au 31 décembre 2020 (AFT, ligne à ligne) ; IPCH mensuel de la France 2020-2023 (Eurostat) ; prévisions publiées entre novembre 2020 et février 2021.
+Calcul du : 8 octobre 2026 Dette négociable de l’État au 31 décembre 2020 (AFT, ligne à ligne) ; IPCH mensuel de la France 2020-2023 (Eurostat) ; prévisions publiées entre novembre 2020 et février 2021.
 Télécharger : CSV · JSON · méthode
 Qu’est-ce que l’inflation a réellement diminué ?
 Fin 2020, l’État devait des coupons et des remboursements fixés en euros, ligne par ligne, jusqu’en 2066.
@@ -20,7 +20,7 @@ Dans le premier, l’inflation est celle que prévoyaient début 2021 les prévi
 Dans le second, c’est l’inflation réalisée, mois par mois, jusqu’en décembre 2023.
 Fin 2023, les prix étaient plus élevés de 10,8 % que dans le premier monde, et l’on suppose que cet écart demeure ensuite.
 Chaque paiement promis est converti en euros de 2020 avec le niveau des prix de sa date, dans l’un et l’autre monde ; l’écart entre les deux valeurs, additionné sur tous les paiements, donne l’érosion.
-Somme non actualisée des écarts de valeur réelle, en milliards d'euros de 2020, pas de la dette effacée (calcul de l'auteur ; AFT, Eurostat, BCE).
+Somme non actualisée des écarts de valeur réelle, en milliards d’euros de 2020, pas de la dette effacée (calcul de l’auteur ; AFT, Eurostat, BCE).
 Le résultat en une phrase.
 L’écart entre l’inflation réalisée en 2021-2023 et celle anticipée début 2021 réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette négociable de l’État à taux fixe existant fin 2020, sans actualisation, soit environ 6,5 % du PIB de 2020 ; selon la prévision retenue parmi celles publiées début 2021, de 145 à 170 milliards.
 D’autres travaux trouvent davantage : Pallotti et al. obtiennent pour les administrations publiques françaises un montant 2,33 fois plus élevé, avec un périmètre, une valorisation et un choc d’inflation différents.
@@ -68,7 +68,7 @@ Pour l’État et sa banque centrale pris ensemble, une hausse des taux pèse do
 Fin 2022, une hausse durable d’un point de toute la courbe des taux aurait accru la charge d’intérêts de la première année de 7,6 milliards d’euros pour l’ensemble formé par l’État et la Banque de France (0,29 point de PIB), contre 2,75 milliards pour la seule dette de marché : 2,8 fois plus.
 À cinq ans, l’écart n’est plus que de 1,3 fois (12,4 contre 9,3 milliards) : les achats de la banque centrale ont surtout rapproché dans le temps la refixation des taux.
 Ce scénario mesure une exposition, il ne prévoit rien : une hausse des taux directeurs ne déplace pas nécessairement toute la courbe.
-Scénario à encours constant, non prévision ; l'ensemble État + Banque de France est un périmètre d'analyse, non des intérêts enregistrés au budget (calcul de l'auteur ; AFT, Banque de France, BCE).
+Scénario à encours constant, non prévision ; l’ensemble État + Banque de France est un périmètre d’analyse, non des intérêts enregistrés au budget (calcul de l’auteur ; AFT, Banque de France, BCE).
 Comment.
 Le mécanisme passe par deux canaux, qui suivent des règles différentes et donnent des mesures différentes.
 Canal économique : les réserves, rémunérées au taux de dépôt.
@@ -105,7 +105,7 @@ Sur une base homogène publiée par la BCE, qui couvre toutes les administration
 Pour la France, cette base large donne au plus 2,2, contre 2,8 fin 2022 dans la mesure centrée sur la dette de l’État à taux fixe : les deux périmètres diffèrent.
 Les écarts entre pays tiennent à la structure de leur dette de marché : ils ne font pas un classement.
 Ces mesures ne s’additionnent pas et ne se retranchent pas les unes des autres : aucune combinaison ne donne un gain net.
-Pourquoi ces quatre montants ne s'additionnent-ils pas ?
+Pourquoi ces quatre montants ne s’additionnent-ils pas ?
 Chiffre
 Ce qu’il mesure
 149 puis 114 Md€ de 2020
@@ -150,7 +150,7 @@ Elles ne mesurent pas l’effet budgétaire total de l’inflation (recettes, pr
 Elles ne disent pas qui a finalement supporté la perte, ni quelle part de la hausse des taux l’épisode a causée.
 Elles reposent sur un contrefactuel : une autre anticipation de départ donne un autre chiffre, dans la plage indiquée.
 Pour les achats de la banque centrale, elles mesurent une exposition et un écart de rendement : ni le coût causal du QE, ni ce qu’auraient été les taux sans lui, ni le revenu que l’Eurosystème tire des billets et des réserves non rémunérées, ni la soutenabilité de la dette.
-Confrontation à la recherche : l'ordre de grandeur est retrouvé chez Pallotti et al. une fois les conventions alignées, mais la littérature ne permet pas d'y lire un gain budgétaire net ; l'effet des achats sur la durée de refixation est proche de celui que publiait l'OCDE
+Confrontation à la recherche : l’ordre de grandeur est retrouvé chez Pallotti et al. une fois les conventions alignées, mais la littérature ne permet pas d’y lire un gain budgétaire net ; l’effet des achats sur la durée de refixation est proche de celui que publiait l’OCDE
 Mesuré ici.
 L’érosion réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020, au rythme où l’écart de prix s’est formé, avec son calendrier de réalisation.
 Cohérent avec.
@@ -197,26 +197,26 @@ La structure financière règle la vitesse de transmission des taux.
 Une obligation à taux fixe ne coûte plus cher qu’à son échéance ; la part que la Banque de France a payée en réserves, rémunérées au taux du moment, fait sentir une hausse des taux tout de suite à l’ensemble formé par l’État et sa banque centrale.
 Ce que l’on ne sait pas : qui a finalement supporté la perte, et quelle part de la hausse des taux l’épisode a causée.
 Questions fréquentes
-L'État a-t-il gagné de l'argent grâce à l'inflation de 2021-2023 ?
-Pas sous la forme d'une recette.
-La surprise d'inflation a réduit d'environ 150 milliards d'euros de 2020 la valeur réelle des paiements promis sur la dette de l'État à taux fixe de fin 2020 (de 145 à 170 selon la prévision de départ).
-C'est un avantage brut, étalé jusqu'en 2066, pas la preuve d'un gain budgétaire net : refinancement, recettes et dépenses suivent d'autres mécanismes.
+L’État a-t-il gagné de l’argent grâce à l’inflation de 2021-2023 ?
+Pas sous la forme d’une recette.
+La surprise d’inflation a réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020 (de 145 à 170 selon la prévision de départ).
+C’est un avantage brut, étalé jusqu’en 2066, pas la preuve d’un gain budgétaire net : refinancement, recettes et dépenses suivent d’autres mécanismes.
 Les épargnants ont-ils perdu ce que la dette a perdu en valeur réelle ?
 On ne peut pas le chiffrer.
-Fin 2020, la moitié de la dette négociable de l'État était détenue par des non-résidents, près d'un quart par la Banque de France, 17 % par les assureurs.
-Les ménages y sont exposés par l'assurance-vie ou les dépôts, mais le rendement servi, les engagements de l'intermédiaire et les changements de détenteurs empêchent de leur attribuer une part des 150 milliards.
+Fin 2020, la moitié de la dette négociable de l’État était détenue par des non-résidents, près d’un quart par la Banque de France, 17 % par les assureurs.
+Les ménages y sont exposés par l’assurance-vie ou les dépôts, mais le rendement servi, les engagements de l’intermédiaire et les changements de détenteurs empêchent de leur attribuer une part des 150 milliards.
 Les achats de dette de la BCE ont-ils rendu la France plus sensible aux taux ?
 Oui, surtout à court terme.
-La Banque de France a payé ses achats d'obligations en réserves bancaires, rémunérées au taux du moment : une hausse des taux pèse donc tout de suite sur cette part, au lieu d'attendre l'échéance des obligations.
-Fin 2022, une hausse durable d'un point de toute la courbe des taux aurait accru la charge de la première année de 7,6 milliards d'euros pour l'ensemble État + Banque de France, contre 2,75 pour la seule dette de marché ; à cinq ans, l'écart n'est plus que de 1,3 fois.
-C'est une mesure d'exposition, ni une prévision ni le coût du QE.
-Quel est le lien avec le livre Dette publique : qui paie vraiment ?
-L'inflation est l'un des payeurs possibles de la dette : le créancier, par la perte de valeur réelle de ses titres.
+La Banque de France a payé ses achats d’obligations en réserves bancaires, rémunérées au taux du moment : une hausse des taux pèse donc tout de suite sur cette part, au lieu d’attendre l’échéance des obligations.
+Fin 2022, une hausse durable d’un point de toute la courbe des taux aurait accru la charge de la première année de 7,6 milliards d’euros pour l’ensemble État + Banque de France, contre 2,75 pour la seule dette de marché ; à cinq ans, l’écart n’est plus que de 1,3 fois.
+C’est une mesure d’exposition, ni une prévision ni le coût du QE.
+Quel est le lien avec le livre Dette Publique : Qui paie vraiment ?
+L’inflation est l’un des payeurs possibles de la dette : le créancier, par la perte de valeur réelle de ses titres.
 Cette page mesure ce canal pour 2021-2023 ; le livre examine les autres payeurs et les choix qui les désignent.
 Dans le dossier dette publique
 Pour prolonger l’analyse
 Dette Publique : Qui paie vraiment ?
-La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
 Cette page mesure ce que l’inflation de 2021-2023 a retiré, en valeur réelle, à la dette ancienne de l’État, et ce qu’on ne peut pas en conclure.
 L’inflation n’est qu’un des payeurs possibles de la dette : le contribuable, l’usager des services publics, le créancier en sont d’autres.
 Le livre examine ces choix et leurs conséquences, chiffres officiels à l’appui.
@@ -257,7 +257,7 @@ Le revenu que l’Eurosystème tire des billets et des réserves non rémunéré
 Ce calcul a été soumis à une contre-expertise externe, qui a fait corriger la formulation du résultat (déplacement de toute la courbe, date de fin 2022) et vérifier, dans les comptes, l’effet de la redistribution entre banques centrales.
 Rapprochement avec Pallotti et al.
 Fait sur la version du calcul en moyennes annuelles (143,2 milliards) : nous expliquons environ 87 % de l’écart avec Pallotti et al. ; un résidu d’environ 13 % reste à réconcilier.
-Allocation mécanique de l'érosion selon la structure de détention de fin 2020, qui n'identifie pas l'incidence finale
+Allocation mécanique de l’érosion selon la structure de détention de fin 2020, qui n’identifie pas l’incidence finale
 Répartie selon les parts de détention de la dette négociable de l’État à la fin de 2020 (Banque de France, valeur de marché), l’érosion de 150 milliards donnerait : non-résidents 50 %, soit 76 milliards ; Banque de France 23 %, 35 milliards ; assureurs 17 %, 26 milliards ; banques 7 %, 10 milliards ; fonds et autres détenteurs 3 %, 4 milliards (parts arrondies sur les valeurs exactes : les fonds et les autres détenteurs pèsent chacun un peu plus de 1 %).
 C’est une allocation mécanique, pas une mesure de qui a perdu.
 Les titres changent de mains au fil des années, et l’érosion, calculée sur des flux, est répartie selon des parts mesurées en valeur de marché.
@@ -267,25 +267,25 @@ Plusieurs valeurs publiées sont transcrites dans ce calcul avec leur source : l
 Avant l’écriture, le calcul a été soumis à des contre-expertises externes, qui ont fait changer le calendrier des prix, la construction de la plage et le traitement des titres indexés.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
-Dette de l'État à taux fixe de fin 2020 : l'érosion due à la surprise d'inflation, au fil des paiements
-L'érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ 55 % d'ici fin 2027.
-Précaution d'interprétation.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Dette de l’État à taux fixe de fin 2020 : l’érosion due à la surprise d’inflation, au fil des paiements
+L’érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ 55 % d’ici fin 2027.
+Précaution d’interprétation.
 Somme non actualisée des écarts de valeur réelle des paiements promis, en Md€ de 2020 aux prix à la consommation : ni de la dette effacée, ni un gain budgétaire net, ni une perte finale.
-Contrefactuel : inflation anticipée début 2021 ; après 2023, l'écart de prix est supposé persister.
-AFT (encours au 31/12/2020), Eurostat (IPCH mensuel, France), BCE (SPF, janvier 2021) ; calcul de l'auteur
+Contrefactuel : inflation anticipée début 2021 ; après 2023, l’écart de prix est supposé persister.
+AFT (encours au 31/12/2020), Eurostat (IPCH mensuel, France), BCE (SPF, janvier 2021) ; calcul de l’auteur
 Télécharger en PNG
 SVG
-Hausse durable d'un point des taux : combien d'intérêts supplémentaires dès la première année ?
-Fin 2022, si toute la courbe des taux avait augmenté d'un point, la charge de l'ensemble État + Banque de France aurait augmenté la première année 2,8 fois plus que celle de la seule dette de marché ; l'écart se resserre depuis, sans disparaître.
-Précaution d'interprétation.
+Hausse durable d’un point des taux : combien d’intérêts supplémentaires dès la première année ?
+Fin 2022, si toute la courbe des taux avait augmenté d’un point, la charge de l’ensemble État + Banque de France aurait augmenté la première année 2,8 fois plus que celle de la seule dette de marché ; l’écart se resserre depuis, sans disparaître.
+Précaution d’interprétation.
 Scénario : +1 point sur toute la courbe, encours constant ; titres de la Banque de France au taux de référence de la BCE.
 Ni une prévision, ni une série de dépenses constatées, ni le coût du QE.
-AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l'auteur
+AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l’auteur
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « L'inflation a-t-elle vraiment allégé la dette française ? ».
+Lalut, Stéphane (2026). « L’inflation a-t-elle vraiment allégé la dette française ? ».
 Données AFT, Eurostat, BCE, Banque de France, Commission européenne, relevé du 8 octobre 2026. https://stephane-lalut.com/inflation-et-dette-publique/
 Copier la citation
 En trois phrases
@@ -293,13 +293,13 @@ Dans le contrefactuel de cette page, l’écart entre l’inflation réalisée e
 C’est un avantage brut pour l’État, pas la preuve d’un gain budgétaire net équivalent.
 Copier le résumé
 Les données
-L'érosion réelle cumulée par année de paiement, les résultats selon chaque prévision et chaque point mort, les titres indexés, la consolidation simplifiée, l'allocation mécanique par détenteur et, pour les achats de la banque centrale, l'exposition mensuelle, la durée de refixation et l'écart de rendement par année ; le même contenu existe en CSV, au format long.
+L’érosion réelle cumulée par année de paiement, les résultats selon chaque prévision et chaque point mort, les titres indexés, la consolidation simplifiée, l’allocation mécanique par détenteur et, pour les achats de la banque centrale, l’exposition mensuelle, la durée de refixation et l’écart de rendement par année ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (AFT, Eurostat, BCE, Banque de France, Commission européenne), sous leurs propres conditions.
 Révisions
-16 octobre 2026 — Correction : l'écart dû aux achats de la banque centrale culmine d'avril à juillet 2022, quatre mois à égalité à la précision affichée, et non en mai 2022.
+16 octobre 2026 — Correction : l’écart dû aux achats de la banque centrale culmine d’avril à juillet 2022, quatre mois à égalité à la précision affichée, et non en mai 2022.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp
