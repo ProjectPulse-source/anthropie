@@ -318,7 +318,8 @@ def calcul_hh(off, dyn, solde, doc, hh, gen):
         "h_elec": {k: Tm[v] - Tm["2017-Q2"] for k, v in q.items()}, "h_jan": {k: Tm[v] - Tm["2016-Q4"] for k, v in q.items()},
         "pts_17": {k: Tp[v] - Tp["2017-Q4"] for k, v in q.items()},
         "an_c": an_c, "int_c": INT[str(an_c)], "int_max": max(INT.values()),
-        "rec17": DR["2017"]["recettes"], "rec_c": DR[str(an_c)]["recettes"], "solde_c": DR[str(an_c)]["solde"],
+        # rec_c : millésime du printemps 2026, figé (le jeu du site est passé à l'édition d'octobre le 02/11/2026)
+        "rec17": DR["2017"]["recettes"], "rec_c": doc["recettes_printemps_2026"]["recettes_pct_pib"][str(an_c)], "solde_c": DR[str(an_c)]["solde"],
         "rec_rev_c": RV[str(an_c)], "rec_rev_maj": solde["rec_rev_maj"],
         "solde17": DR["2017"]["solde"], "solde24": DR["2024"]["solde"],
         "manque": manque, "manque_pts": manque / pib[an_c] * 100, "dette_sans_pct": (Tm["%d-Q4" % an_c] - manque) / pib[an_c] * 100,

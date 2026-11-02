@@ -6,7 +6,7 @@ og_title: "Pourquoi la dette publique augmente-t-elle ?"
 og_image: "images/og-dette-dynamique.jpg"
 og_image_alt: "Carte de partage : « Pourquoi la dette a doublé » — cascade de la dette française en points de PIB, de 1995 à 2025 : intérêts, croissance nominale, déficits primaires, ajustements flux-stock."
 date: 2026-09-30
-lastmod: 2026-10-11
+lastmod: 2026-10-18
 # Volet 1 du dossier dette (arbitrage PRO-20260930-092814, option E). Créé le 30/09/2026 sur décision de l'auteur,
 # qui lève pour cette page le gel des nouveaux ensembles jusqu'au 25/10 (feuille de route GEO). Test décisif passé :
 # la décomposition se referme exactement (résidu flux-stock = témoin comptable), scripts/update_dette_dynamique.py.
@@ -14,6 +14,7 @@ lastmod: 2026-10-11
 # REFONTE_PILOTE\DETTE\PHASE_A_ARBITRAGE_POURQUOI_AUGMENTE.md). Bilingue : toute correction se reporte dans _index.en.md.
 donnees: [dette_dynamique]
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-02, texte: "Comptes d'Eurostat du 21 octobre 2026 : en 2025, le taux implicite repasse légèrement au-dessus de la croissance nominale ; « la croissance l'emporte chaque année depuis 2017, sauf en 2020 » devient « jusqu'en 2024 »."}
   - {date: 2026-10-18, texte: "Ajout : section « Conjoncture ou structure ? », le déficit primaire corrigé du cycle selon la Commission, le FMI et l'OCDE, et sa décomposition en recettes et dépenses."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
@@ -64,7 +65,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-cascade-m.svg" width="300" height="660">
+    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-cascade-m.svg" width="300" height="643">
     <img src="/img/dette-dynamique-cascade.svg" alt="Cascade en points de PIB : la dette française part de {{< dyn-val "dette_depart" >}} % fin {{< dyn-val "annee_depart" >}} ; l'effet des intérêts l'aurait poussée de {{< dyn-val "effet_interets" >}} points, la croissance du PIB nominal en efface {{< dyn-val "effet_croissance" >}} ; les déficits primaires ajoutent {{< dyn-val "deficits_primaires" >}} points et les ajustements flux-stock {{< dyn-val "flux_stock" >}} ; la dette atteint {{< dyn-val "dette_fin" >}} % fin {{< dyn-val "annee_fin" >}}. Contributions comptables cumulées, non sommes versées." width="720" height="413" loading="lazy">
   </picture>
   <figcaption>Décomposition cumulée de la variation du ratio dette/PIB, France, {{< dyn-val "annee_depart" >}}-{{< dyn-val "annee_fin" >}}, en points de PIB (Eurostat). Bleu&nbsp;: le stock&nbsp;; orange&nbsp;: ce qui le fait monter&nbsp;; gris&nbsp;: ce qui le fait baisser.</figcaption>
@@ -84,8 +85,8 @@ Les {{< dyn-val "effet_interets" >}} points «&nbsp;effacés&nbsp;» pour l'esse
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-annuelle-m.svg" width="300" height="742">
-    <img src="/img/dette-dynamique-annuelle.svg" alt="Barres empilées par année, de {{< dyn-val "annee_premiere_variation" >}} à {{< dyn-val "annee_fin" >}}, en points de PIB : déficits primaires en orange, effet taux-croissance en bleu, ajustements flux-stock en gris, variation du ratio en point noir. Deux pics, 2009 (+{{< dyn-val "hausse_2009" >}} points) et 2020 (+{{< dyn-val "hausse_2020" >}}) ; un effet taux-croissance de −{{< dyn-val "effet_2021_2023" >}} points en 2021-2023." width="720" height="383" loading="lazy">
+    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-annuelle-m.svg" width="300" height="725">
+    <img src="/img/dette-dynamique-annuelle.svg" alt="Barres empilées par année, de {{< dyn-val "annee_premiere_variation" >}} à {{< dyn-val "annee_fin" >}}, en points de PIB : déficits primaires en orange, effet taux-croissance en bleu, ajustements flux-stock en gris, variation du ratio en point noir. Deux pics, 2009 (+{{< dyn-val "hausse_2009" >}} points) et 2020 (+{{< dyn-val "hausse_2020" >}}) ; un effet taux-croissance de −{{< dyn-val "effet_2021_2023" >}} points en 2021-2023." width="720" height="369" loading="lazy">
   </picture>
   <figcaption>Contributions annuelles à la variation du ratio dette/PIB, France (Eurostat). La somme des trois barres égale la variation, marquée par le point noir. Ici, les couleurs désignent des termes, non le sens de leur effet comme dans la cascade.</figcaption>
 </figure>
@@ -100,7 +101,7 @@ Trois périodes se dégagent, et le terme qui domine change de l'une à l'autre.
 
 **Le taux implicite remonte depuis son point bas de {{< dyn-val "ti_creux_an" >}}, surtout par un saut en 2022.** Après {{< dyn-val "ti_creux" >}}&nbsp;% en {{< dyn-val "ti_creux_an" >}}, il augmente légèrement en 2021 ({{< dyn-val "ti_2021" >}}&nbsp;%), bondit en 2022 ({{< dyn-val "ti_2022" >}}&nbsp;%), puis progresse plus lentement. Ce saut ne vient pas seulement du renouvellement des titres aux taux nouveaux&nbsp;: en 2022, l'inflation a aussi fortement accru la charge comptabilisée des obligations de l'État indexées sur les prix, selon le rapport du Sénat sur les comptes de l'année. Les comptes présentés ici ne permettent pas de séparer la part de chaque mécanisme dans le taux implicite de l'ensemble des administrations publiques.
 
-**Les comptes de {{< dyn-val "annee_fin" >}} restent révisables.** Ceux de cette page sont les séries d'Eurostat mises à jour le {{< dyn-val "millesime_dette" >}} pour la dette, avec la notification d'avril, et le {{< dyn-val "millesime_comptes" >}} pour les comptes. L'INSEE publie pour fin {{< dyn-val "annee_fin" >}} une dette de {{< dyn-val "dette_insee_fin" >}}&nbsp;% du PIB, contre {{< dyn-val "dette_fin" >}}&nbsp;% dans cette notification&nbsp;: la page garde la série d'Eurostat d'un bout à l'autre, pour que la décomposition reste cohérente, et la notification suivante dira si l'écart se referme. Cette année-là, taux implicite ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) sont presque égaux, et l'effet taux–croissance est voisin de zéro&nbsp;: un écart aussi mince ne dit pas dans quel sens l'effet ira ensuite.
+**Les comptes de {{< dyn-val "annee_fin" >}} restent révisables.** Ceux de cette page sont les séries d'Eurostat {{< dyn-val "maj_long" >}}. {{< dyn-val "insee_phrase" >}} Cette année-là, taux implicite ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;%) et croissance nominale ({{< dyn-val "croissance_derniere" >}}&nbsp;%) sont presque égaux, et l'effet taux–croissance est voisin de zéro&nbsp;: un écart aussi mince ne dit pas dans quel sens l'effet ira ensuite.
 
 Sur les {{< dyn-val "annees_total" >}} années de la série, le solde primaire n'a été excédentaire que {{< dyn-val "annees_excedent" >}} fois. Ce décompte décrit une récurrence&nbsp;; il ne dit pas si chacun de ces déficits était souhaitable, évitable ou conjoncturel.
 
@@ -193,7 +194,7 @@ Chaque année, le ratio dette/PIB bouge sous l'effet de trois termes. L'**effet 
 - **Des termes qui ne sont pas indépendants.** En récession, les recettes baissent et certaines dépenses montent&nbsp;: le déficit primaire dépend lui-même de la croissance.
 - **L'inflation n'efface pas la dette sans coût.** Elle réduit la valeur réelle des créances nominales, et cette perte a des porteurs&nbsp;: c'est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
 - **Rien sur l'avenir.** La suite dépend de l'écart entre le taux implicite et la croissance nominale, et du solde primaire&nbsp;: ce qu'il a fallu ailleurs pour que la dette baisse est l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
-- **Une dernière année révisable.** Les comptes de {{< dyn-val "annee_fin" >}} sont ceux des séries d'Eurostat mises à jour le {{< dyn-val "millesime_dette" >}} (dette) et le {{< dyn-val "millesime_comptes" >}} (comptes).
+- **Une dernière année révisable.** Les comptes de {{< dyn-val "annee_fin" >}} sont ceux des séries d'Eurostat {{< dyn-val "maj_court" >}}.
 - **Une série qui commence en {{< dyn-val "annee_depart" >}}.** Les intérêts harmonisés d'Eurostat ne remontent pas plus loin&nbsp;; la courbe longue de la dette, depuis 1978, est dans [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
 
 {{< confrontation-recherche verifie="2026-10-03" publie="oui" resume="le poids des déficits primaires est retrouvé sur cinquante ans&nbsp;; lire la quasi-annulation des intérêts et de la croissance comme une neutralité est mis en danger&nbsp;; dépenses ou recettes&nbsp;: le diagnostic dépend de la période et de la comparaison retenues" >}}
@@ -222,7 +223,7 @@ Chaque année, le ratio dette/PIB bouge sous l'effet de trois termes. L'**effet 
 
 En trente ans, la dette publique française a doublé en part de PIB, de {{< dyn-val "dette_depart" >}}&nbsp;% à {{< dyn-val "dette_fin" >}}&nbsp;%. Les intérêts l'ont poussée, mais sur l'ensemble de la période la croissance du PIB nominal en a effacé presque autant&nbsp;; ce qui reste, dans la décomposition Eurostat utilisée ici, ce sont les déficits primaires, {{< dyn-val "part_deficits" >}}&nbsp;% de la hausse&nbsp;: hors intérêts, les comptes publics n'ont été excédentaires que {{< dyn-val "annees_excedent" >}} années sur {{< dyn-val "annees_total" >}}.
 
-Cette quasi-annulation est une compensation dans le temps, non une neutralité. Avant {{< dyn-val "tc_bascule" >}}, le taux implicite dépassait le plus souvent la croissance nominale, et l'effet taux-croissance a ajouté {{< dyn-val "tc_avant_abs" >}} points au ratio&nbsp;; depuis, la croissance nominale l'emporte chaque année, sauf en 2020, quand le PIB a reculé, et l'effet a pesé {{< dyn-val "tc_apres" >}} points. En {{< dyn-val "annee_fin" >}}, selon des comptes encore révisables, taux implicite et croissance nominale sont presque égaux&nbsp;: tant qu'ils le restent, le sens d'évolution du ratio dépend du solde primaire, aux ajustements flux-stock près. Le taux implicite remonte depuis 2022&nbsp;; s'il repasse au-dessus de la croissance, le ratio montera davantage à solde primaire égal.
+Cette quasi-annulation est une compensation dans le temps, non une neutralité. Avant {{< dyn-val "tc_bascule" >}}, le taux implicite dépassait le plus souvent la croissance nominale, et l'effet taux-croissance a ajouté {{< dyn-val "tc_avant_abs" >}} points au ratio&nbsp;; depuis, la croissance nominale l'emporte chaque année jusqu'en {{< dyn-val "tc_fin_neg" >}}, sauf en 2020, quand le PIB a reculé, et l'effet a pesé {{< dyn-val "tc_apres" >}} points. En {{< dyn-val "annee_fin" >}}, selon des comptes encore révisables, le taux implicite repasse légèrement au-dessus de la croissance nominale ({{< dyn-val "taux_implicite_dernier" >}}&nbsp;% contre {{< dyn-val "croissance_derniere" >}}&nbsp;%)&nbsp;: l'écart est trop mince pour dire qu'une nouvelle période commence. Tant que les deux restent aussi proches, le sens d'évolution du ratio dépend du solde primaire, aux ajustements flux-stock près&nbsp;; si l'écart se confirme, le ratio montera davantage à solde primaire égal.
 
 Dépenses ou recettes&nbsp;: les comptes décrivent des mouvements, ils ne désignent pas de responsable, et leur réponse change avec les deux années que l'on compare. Ce qu'il a fallu ailleurs pour que la dette baisse est l'objet de [La dette publique peut-elle baisser&nbsp;?](/dette-publique-peut-elle-baisser/)
 

@@ -1,4 +1,4 @@
-# relu le 2026-11-02 ; texte servi de /formules-du-debat-sur-la-dette/, build de 5e08c20 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-02 ; texte servi de /formules-du-debat-sur-la-dette/, build de f605f9c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que valent les formules du débat sur la dette ?
 Le 8 septembre 2025, à l’Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
@@ -49,11 +49,11 @@ En 2020, la dette a augmenté de 70 milliards de plus que le déficit, parce que
 Sur trente ans, les cumuls se rapprochent (2 649 milliards de déficits, 2 758 de dette en plus), mais des écarts de sens contraire qui se compensent ne font pas une égalité.
 « Atteindre en 2029 le seuil de 3 % de déficit public, seuil à partir duquel la dette n’augmente plus » (François Bayrou).
 La phrase dit « la dette » sans préciser laquelle, et ses deux lectures donnent deux verdicts.
-En euros, elle est inexacte : un déficit de 3 % du PIB ajoute environ 89,8 milliards par an.
+En euros, elle est inexacte : un déficit de 3 % du PIB ajoute environ 89,7 milliards par an.
 En pourcentage du PIB, le ratio se stabilise quand le déficit égale le ratio de dette multiplié par la croissance nominale, divisé par un plus cette croissance.
 Avec le ratio de 2024, dernière année connue le jour de la séance (112,6 %), et sans écart entre déficit et hausse de la dette, 3 % suffisent si la croissance nominale dépasse environ 2,74 %.
 Ce seuil était franchi en 2024 (3,58 %) : à la date, la phrase tenait donc pour le ratio, sous cette condition.
-Il ne l’a pas été en 2025, ce qu’on n’a su qu’après : 2,02 %, pour un seuil de 2,67 % au ratio de 2025.
+Il ne l’a pas été en 2025, ce qu’on n’a su qu’après : 1,90 %, pour un seuil de 2,66 % au ratio de 2025.
 La variable qui décide n’est pas nommée : la croissance.
 La Cour des comptes, qui recommande l’ajustement, allait plus loin en juillet 2025 : « le retour du déficit public total sous les 3 % ne suffira pas.
 L’impératif de soutenabilité de la dette publique commande de stabiliser puis de faire refluer le ratio d’endettement ».
@@ -95,7 +95,7 @@ Une phrase plus tôt, l’orateur définit le service de la dette comme « les i
 Les montants de la Cour ne contiennent que les intérêts.
 Le capital, d’un autre ordre de grandeur, se refinance pour l’essentiel.
 Les dates se croisent.
-Les intérêts de 2029 sont opposés au surcroît de production d’aujourd’hui (celui de 2025 vaut 59,2 milliards).
+Les intérêts de 2029 sont opposés au surcroît de production d’aujourd’hui (celui de 2025 vaut 55,8 milliards).
 La trajectoire de la Cour implique un PIB d’environ 3 344 milliards en 2029.
 À une croissance nominale de 2 à 3 %, le surcroît de 2029 serait de 66 à 97 milliards : les intérêts en vaudraient 1,1 à 1,6 fois, et non le double.
 C’est un ordre de grandeur, calculé sur une hypothèse de croissance de l’auteur de la page, non de la Cour.
@@ -113,7 +113,7 @@ Les 1 200 milliards tiennent de justesse depuis janvier 2017 (1 155, à quelques
 La comparaison implicite entre les deux mandats dépend ensuite de l’unité : en euros, la dette a augmenté de 137 milliards par an contre 72, près du double ; en points de PIB, de 1,6 point par an contre 1,7, presque autant.
 Conclure : du chiffre à la décision
 « Mesurons bien la charge que nous laisserons à nos enfants et qui, chaque heure, augmente de 18 millions d’euros ! » (Paul Christophe, Horizons).
-Le chiffre est proche du déficit prévu pour 2025 (environ 18,5 millions par heure), pas de la hausse de la dette, qui est le mot de la phrase : 20,9 millions par heure, du premier trimestre 2024 au premier trimestre 2025.
+Le chiffre est proche du déficit prévu pour 2025 (environ 18,4 millions par heure), pas de la hausse de la dette, qui est le mot de la phrase : 20,9 millions par heure, du premier trimestre 2024 au premier trimestre 2025.
 La conclusion pose une question que le chiffre horaire ne tranche pas : quels transferts nets entre générations résultent de la dette, de son remboursement et de ce qu’elle a financé ?
 Les générations suivantes héritent d’impôts à venir, mais aussi d’actifs publics et des titres eux-mêmes.
 Le refinancement ne supprime pas la contrainte : il en change le calendrier.
@@ -168,7 +168,7 @@ Les baisses d’impôt expliquent-elles la hausse ?
 Jean-Luc Mélenchon chiffre un contrefactuel : si les recettes étaient restées à leur part du PIB de 2017 (54,3 %), « le déficit serait de 2,9 % du PIB » au lieu de 5,1 %.
 Le calcul est exact avec les comptes du printemps 2026, qui donnaient des recettes de 52,1 % du PIB en 2025 ; l’édition d’Eurostat du 21 octobre 2026, qui les porte à 52,2 %, donne 3,0 %.
 C’est une arithmétique à dépenses inchangées : elle ne dit pas quelle part de la baisse des recettes vient des mesures fiscales, quelle part de la conjoncture, ni si des baisses d’impôt ont été compensées par d’autres prélèvements.
-Cumulé de 2018 à 2025, le même calcul donne 361 milliards, environ 12 points de PIB, avant intérêts et effets sur l’activité.
+Cumulé de 2018 à 2025, le même calcul donne 360 milliards, environ 12 points de PIB, avant intérêts et effets sur l’activité.
 Il ne suffit ni à établir ni à réfuter la dette « au moins inférieure de 400 milliards d’euros » qu’en tire Jean-Luc Mélenchon, ni l’attribution de Marine Tondelier : « A cause de ces cadeaux fiscaux, la dette publique a augmenté de 20 points de PIB ».
 La hausse est exacte (18,7 points depuis fin 2017) ; son attribution aux seules baisses d’impôt n’est pas établie par ces données, ce qui ne veut pas dire qu’elle soit réfutée.
 Le périmètre décide encore.
@@ -240,7 +240,7 @@ Un calcul à dépenses inchangées, pas une cause démontrée
 Jean-Luc Mélenchon, octobre 2026
 « La dette publique serait au moins inférieure de 400 milliards d’euros et serait proche des 100 % du PIB »
 « Au moins 400 » : non établi.
-Le calcul à part de recettes constante donne 361 milliards avant intérêts et effets sur l’activité, et ne suffit ni à établir ni à réfuter la borne ; « proche des 100 % » : compatible (104 %)
+Le calcul à part de recettes constante donne 360 milliards avant intérêts et effets sur l’activité, et ne suffit ni à établir ni à réfuter la borne ; « proche des 100 % » : compatible (104 %)
 Marine Tondelier, juillet 2026
 « A cause de ces cadeaux fiscaux, la dette publique a augmenté de 20 points de PIB »
 Hausse exacte (18,7 points de fin 2017 au premier trimestre 2026) ; attribution non établie : le calcul à part de recettes constante donne environ 12 points, et il n’isole pas l’effet des mesures fiscales
@@ -385,9 +385,9 @@ Le 4 septembre, la Banque de Grèce, avec la même mesure pour les deux pays, do
 La France était passée au-dessus en août 2025, en moyenne mensuelle ; la Grèce l’a de nouveau dépassée de mars à mai 2026.
 Le prix du marché ne dit pas, à lui seul, qu’un pays est plus fragile que l’autre.
 Un déficit de 3 % arrête-t-il la hausse de la dette ?
-Pas en euros : un déficit de 3 % ajoute environ 89,8 milliards d’euros par an.
+Pas en euros : un déficit de 3 % ajoute environ 89,7 milliards d’euros par an.
 En pourcentage du PIB, il stabilise le ratio seulement si la croissance nominale dépasse un seuil, environ 2,74 % avec le ratio de 2024, sans écart entre déficit et hausse de la dette.
-La croissance a dépassé ce seuil en 2024 (3,58 %), pas en 2025 (2,02 %, connu après la séance).
+La croissance a dépassé ce seuil en 2024 (3,58 %), pas en 2025 (1,90 %, connu après la séance).
 En juillet 2025, la Cour des comptes avertissait que revenir sous 3 % ne suffirait pas, à lui seul, à garantir la soutenabilité de la dette.
 Quel est le lien avec le livre Dette Publique : Qui paie vraiment ?
 Le chapitre 9 du livre analyse ces formules par le langage : qui parle, avec quel droit, en fermant quelles possibilités.

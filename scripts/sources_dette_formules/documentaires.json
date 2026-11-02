@@ -186,6 +186,11 @@
   "autres_missions_max_2026_mdeur": 31.2,
   "autres_missions_max_2026_libelle": "Recherche et enseignement supérieur (plus grande des autres missions)"
  },
+ "recettes_printemps_2026": {
+  "source": "Jeu data/dette_dynamique.json du site au relevé du 18/10/2026 (commit 3344c98) : Eurostat gov_10a_main, édition antérieure au 21/10/2026 (comptes du printemps 2026)",
+  "recettes_pct_pib": {"2017": 54.3, "2025": 52.1},
+  "note": "Valeur figée le 02/11/2026, quand le jeu du site est passé à l'édition du 21/10/2026 (52,2 % en 2025) : elle sert au verdict sur le millésime cité par un candidat en octobre 2026."
+ },
  "plafonds_juillet_2026": {
   "source": "Gouvernement, Plafonds de dépenses en vue de l'examen et du vote du PLF 2027, 15 juillet 2026 (copie publiée par un tiers, patrickbayeux.com ; pièce archivée FORMULES_DETTE/_PIECES_RECUES/sources_fiches/Plafonds_PLF2027_R48_2026-07_copie_patrickbayeux.pdf)",
   "url": "https://patrickbayeux.com/wp-content/uploads/2026/07/2607-Plafonds_de_depenses_PLF_2027_LOLF_Art_48_vdef.pdf",

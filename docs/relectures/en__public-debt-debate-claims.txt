@@ -1,4 +1,4 @@
-# relu le 2026-11-02 ; texte servi de /en/public-debt-debate-claims/, build de 5e08c20 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-02 ; texte servi de /en/public-debt-debate-claims/, build de f605f9c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What are the claims of the French debt debate worth?
 On 8 September 2025, in the French National Assembly, every group invoked the figures on public debt.
@@ -49,11 +49,11 @@ In 2020, debt rose by €70bn more than the deficit, because the government buil
 Over thirty years the cumulative totals come close (€2,649bn of deficits, €2,758bn of extra debt), but gaps in opposite directions that cancel out do not make an equality.
 “Reaching in 2029 the threshold of a 3% public deficit, the threshold at which debt stops rising” (François Bayrou).
 The sentence says “debt” without saying which, and its two readings give two verdicts.
-In euros it is inaccurate: a deficit of 3% of GDP adds about €89.8bn a year.
+In euros it is inaccurate: a deficit of 3% of GDP adds about €89.7bn a year.
 As a share of GDP, the ratio stabilises when the deficit equals the debt ratio times nominal growth, divided by one plus that growth.
 With the 2024 ratio, the last year known on the day of the debate (112.6%), and no gap between deficit and debt increase, 3% is enough if nominal growth exceeds about 2.74%.
 It had done so in 2024 (3.58%): on the day, the sentence therefore held for the ratio, under that condition.
-It did not in 2025, which was only known later: 2.02%, against a threshold of 2.67% at the 2025 ratio.
+It did not in 2025, which was only known later: 1.90%, against a threshold of 2.66% at the 2025 ratio.
 The deciding variable goes unnamed: growth.
 The Court of Audit, which recommends the adjustment, went further in July 2025: “getting the overall deficit back below 3% will not be enough.
 The imperative of debt sustainability requires stabilising and then reducing the debt ratio”.
@@ -95,7 +95,7 @@ One sentence earlier, the speaker defines debt service as “the interest and th
 The Court’s amounts contain interest only.
 Principal, of a different order of magnitude, is mostly refinanced.
 The dates cross.
-Interest in 2029 is set against today’s extra output (2025’s was €59.2bn).
+Interest in 2029 is set against today’s extra output (2025’s was €55.8bn).
 The Court’s path implies GDP of about €3,344bn in 2029.
 At nominal growth of 2 to 3%, extra output in 2029 would be €66bn to €97bn: interest would be 1.1 to 1.6 times that, not double.
 This is an order of magnitude, based on a growth assumption by the author of this page, not by the Court.
@@ -115,7 +115,7 @@ The €1,200bn only just holds from January 2017 (€1,155bn, a few billion from
 The implied comparison between the two presidencies then depends on the unit: in euros, debt rose by €137bn a year against €72bn, nearly double; in GDP points, by 1.6 points a year against 1.7, almost the same.
 Concluding: from the figure to the decision
 “Let us take full measure of the burden we shall leave to our children, which grows by €18m every hour!” (Paul Christophe, Horizons).
-The figure is close to the deficit planned for 2025 (about €18.5m an hour), not to the increase in debt, which is the word in the sentence: €20.9m an hour, from the first quarter of 2024 to the first quarter of 2025.
+The figure is close to the deficit planned for 2025 (about €18.4m an hour), not to the increase in debt, which is the word in the sentence: €20.9m an hour, from the first quarter of 2024 to the first quarter of 2025.
 The conclusion raises a question the hourly figure does not settle: what net transfers between generations result from the debt, its repayment and what it financed?
 Later generations inherit future taxes, but also public assets and the securities themselves.
 Refinancing does not remove the constraint: it changes its timing.
@@ -170,7 +170,7 @@ On the left, the rise in debt is attributed to tax cuts.
 Jean-Luc Mélenchon puts a figure on a counterfactual: had revenue stayed at its 2017 share of GDP (54.3%), “the deficit would be 2.9% of GDP” instead of 5.1%.
 The calculation is accurate with the spring 2026 accounts, which put revenue at 52.1% of GDP in 2025; the Eurostat edition of 21 October 2026, which raises it to 52.2%, gives 3.0%.
 This is arithmetic at unchanged spending: it does not say what share of the fall in revenue comes from tax measures, what share from the economic cycle, nor whether tax cuts were offset by other levies.
-Cumulated from 2018 to 2025, the same calculation gives €361bn, about 12 points of GDP, before interest and effects on activity.
+Cumulated from 2018 to 2025, the same calculation gives €360bn, about 12 points of GDP, before interest and effects on activity.
 It can neither establish nor refute the debt “at least 400 billion euros lower” that Jean-Luc Mélenchon infers, nor Marine Tondelier’s attribution: “because of these tax giveaways, public debt has risen by 20 points of GDP”.
 The rise is accurate (18.7 points since the end of 2017); its attribution to tax cuts alone is not established by these data, which does not mean it is refuted.
 Scope decides again.
@@ -242,7 +242,7 @@ A calculation at unchanged spending, not a proven cause
 Jean-Luc Mélenchon, October 2026
 “public debt would be at least 400 billion euros lower and close to 100% of GDP”
 “At least 400”: not established.
-The calculation at a constant revenue share gives €361bn before interest and effects on activity, and can neither establish nor refute the bound; “close to 100%”: consistent (104%)
+The calculation at a constant revenue share gives €360bn before interest and effects on activity, and can neither establish nor refute the bound; “close to 100%”: consistent (104%)
 Marine Tondelier, July 2026
 “because of these tax giveaways, public debt has risen by 20 points of GDP”
 The rise is accurate (18.7 points from the end of 2017 to the first quarter of 2026); the attribution is not established: the calculation at a constant revenue share gives about 12 points, and does not isolate the effect of tax measures
@@ -387,9 +387,9 @@ On 4 September, the Bank of Greece, using the same measure for both countries, g
 France had moved above in August 2025, as a monthly average; Greece moved above it again from March to May 2026.
 The market price alone does not show that one country is weaker than the other.
 Does a 3% deficit stop debt from rising?
-Not in euros: a 3% deficit adds about €89.8bn a year.
+Not in euros: a 3% deficit adds about €89.7bn a year.
 As a share of GDP, it stabilises the ratio only if nominal growth exceeds a threshold, about 2.74% with the 2024 ratio and no gap between deficit and debt increase.
-Growth exceeded that threshold in 2024 (3.58%), not in 2025 (2.02%, known after the debate).
+Growth exceeded that threshold in 2024 (3.58%), not in 2025 (1.90%, known after the debate).
 In July 2025 the French Court of Audit warned that getting back below 3% would not, on its own, be enough to ensure debt sustainability.
 How does this relate to the book Dette Publique: Qui paie vraiment?
 Chapter 9 of the book (in French) analyses these claims through language: who speaks, by what right, closing off which options.

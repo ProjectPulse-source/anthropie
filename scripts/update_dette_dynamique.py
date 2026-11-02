@@ -93,6 +93,15 @@ MILLESIMES: dict[str, str] = {}   # jeu Eurostat -> date de sa dernière mise à
 MOIS_EN = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 
 
+def editions(lang: str) -> str:
+    """Suffixe des sources de figure : une date si dette et comptes ont la même édition, deux sinon (02/11/2026 : l'édition
+    du 21/10/2026 sert aux deux, « du 21/10/2026 et du 21/10/2026 » se répétait)."""
+    d, c = millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang)
+    if lang == "fr":
+        return (" à jour Eurostat du %s" % d) if d == c else ("s à jour Eurostat du %s et du %s" % (d, c))
+    return (" of %s" % d) if d == c else ("s of %s and %s" % (d, c))
+
+
 def millesime(ds: str, lang: str) -> str:
     a, m, j = MILLESIMES[ds][:10].split("-")
     return "%s/%s/%s" % (j, m, a) if lang == "fr" else "%d %s %s" % (int(j), MOIS_EN[int(m) - 1], a)
@@ -279,7 +288,7 @@ TXT = {
                          "croissance du PIB nominal en a effacé %s : leur effet net est de %s point. Les déficits primaires, hors intérêts, "
                          "ajoutent %s points, les ajustements flux-stock %s. La dette atteint %s %% fin %d. Décomposition comptable, non causale."),
         "legende_cascade": "En points de PIB : bleu, le stock ; orange, ce qui le fait monter ; gris, ce qui le fait baisser.",
-        "src_cascade": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, %d-%d ; mises à jour Eurostat du %s et du %s",
+        "src_cascade": "Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, %d-%d ; mise%s",
         "note_cascade": ("Contributions cumulées au ratio, en points de PIB : ni des sommes versées, ni des causes. "
                          "Totaux calculés avant arrondi, d'où un dixième d'écart possible."),
         "titre_annuelle": "Année par année : ce qui a fait monter ou baisser le ratio dette/PIB, %d-%d",
@@ -288,7 +297,7 @@ TXT = {
                           "ratio. Les deux plus fortes hausses sont en 2009 (+%s points) et en 2020 (+%s). De 2021 à 2023, l'effet "
                           "taux-croissance retire %s points au ratio, quand la croissance du PIB nominal, hausse des prix comprise, s'accélère."),
         "legende_annuelle": ("contribution du solde primaire", "effet taux-croissance", "ajustements flux-stock", "variation du ratio"),
-        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d ; mises à jour Eurostat du %s et du %s",
+        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d ; mise%s",
         "note_annuelle": ("Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme "
                           "des trois barres égale la variation (point noir), au centième près."),
         "montre_cascade": ("Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette "
@@ -326,7 +335,7 @@ TXT = {
                          "interest, add %s points, stock-flow adjustments %s. The debt reaches %s%% at the end of %d. Accounting "
                          "decomposition, not a causal one."),
         "legende_cascade": "In points of GDP: blue, the stock; orange, what pushes it up; grey, what pushes it down.",
-        "src_cascade": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, %d-%d; Eurostat releases of %s and %s",
+        "src_cascade": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, %d-%d; Eurostat release%s",
         "note_cascade": ("Cumulative contributions to the ratio, in points of GDP: neither amounts paid nor causes. "
                          "Totals computed before rounding, hence a possible gap of a tenth."),
         "titre_annuelle": "Year by year: what pushed the debt-to-GDP ratio up or down, %d-%d",
@@ -335,7 +344,7 @@ TXT = {
                           "the ratio. The two largest rises are in 2009 (+%s points) and 2020 (+%s). From 2021 to 2023, the "
                           "interest-growth effect takes %s points off the ratio, as nominal GDP growth, price rises included, accelerates."),
         "legende_annuelle": ("primary balance contribution", "interest-growth effect", "stock-flow adjustments", "change in the ratio"),
-        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d; Eurostat releases of %s and %s",
+        "src_annuelle": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, %d-%d; Eurostat release%s",
         "note_annuelle": ("Points of GDP per year; primary balance: a deficit counts as plus, a surplus as minus; the three "
                           "bars add up to the change (black dot), to within a hundredth."),
         "montre_cascade": ("Over the period, interest and nominal growth almost cancelled out; the rise in the debt is mostly due to "
@@ -435,7 +444,7 @@ def fig_cascade(a0, d_depart, rows, total, lang="fr"):
         if l2:
             e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (cx, BAS + 29, INK2, esc(l2)))
     e.append('<text x="%d" y="44" font-size="11" fill="%s">%s</text>' % (X0, INK2, esc(T["legende_cascade"])))
-    return pied(e, H + 4, T["src_cascade"] % ((a0 + 1, an_fin) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_cascade"], lang)
+    return pied(e, H + 4, T["src_cascade"] % ((a0 + 1, an_fin) + (editions(lang),)), T["note_cascade"], lang)
 
 
 def fig_annuelle(rows, lang="fr"):
@@ -482,7 +491,7 @@ def fig_annuelle(rows, lang="fr"):
         x += 14 + int(5.6 * len(lib)) + 18   # 7 px par caractère sortaient la 4e entrée du cadre (contre-expertise du 11/10/2026)
     e.append('<circle cx="%d" cy="41" r="3.2" fill="%s"/>' % (x + 4, INK))
     e.append('<text x="%d" y="45" font-size="11" fill="%s">%s</text>' % (x + 12, INK2, esc(T["legende_annuelle"][3])))
-    return pied(e, H + 4, T["src_annuelle"] % ((a0, a1) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_annuelle"], lang)
+    return pied(e, H + 4, T["src_annuelle"] % ((a0, a1) + (editions(lang),)), T["note_annuelle"], lang)
 
 
 def _cs_series(cs):
@@ -610,7 +619,7 @@ def fig_cascade_m(a0, d_depart, rows, total, lang, svg_d):
             niveau += v
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="14" fill="%s"/>' % (sx(a), y, max(1.5, sx(b) - sx(a)), col))
         y += 14
-    return finir_m(e, y + 18, T["src_cascade"] % ((a0 + 1, an_fin) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_cascade"], lang)
+    return finir_m(e, y + 18, T["src_cascade"] % ((a0 + 1, an_fin) + (editions(lang),)), T["note_cascade"], lang)
 
 
 def fig_annuelle_m(rows, lang, svg_d):
@@ -656,7 +665,7 @@ def fig_annuelle_m(rows, lang, svg_d):
         for k, l in enumerate(pied_figure.coupe(f, 30)):   # 15 px gras : au-delà de 30 caractères, la ligne touchait le bord
             y += 22 if k == 0 else 19
             e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(l)))
-    return finir_m(e, y + 18, T["src_annuelle"] % ((rows[0]["annee"], rows[-1]["annee"]) + (millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang))), T["note_annuelle"], lang)
+    return finir_m(e, y + 18, T["src_annuelle"] % ((rows[0]["annee"], rows[-1]["annee"]) + (editions(lang),)), T["note_annuelle"], lang)
 
 
 def fig_cs_m(cs, lang, svg_d):
@@ -787,6 +796,7 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
         A["tc_bascule"] = str(bascule)
         A["tc_avant"] = sg(sum(r["effet_taux_croissance"] for r in rows if r["annee"] < bascule))
         A["tc_apres"] = sg(sum(r["effet_taux_croissance"] for r in rows if r["annee"] >= bascule))
+        A["tc_fin_neg"] = str(last["annee"] - 1)   # dernière année où la croissance l'emporte (garde ci-dessous)
         # Troisième tour (Trésor-Éco n° 403) : « relative stabilité » 2001-2007 éprouvée ; fenêtres OFCE et DG Trésor.
         A["dette_2001"], A["dette_2007"] = nb(by[2001]["dette_pct_pib"]), nb(by[2007]["dette_pct_pib"])
         for k, (d0, d1) in fen.items():
@@ -838,14 +848,52 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
     if any(a not in dr for d0, d1 in fen.values() for a in (d0, d1)):
         fail("depenses et recettes publiees absentes pour une fenetre %s" % fen)
 
+    # Bascule : première année à partir de laquelle l'effet taux-croissance est négatif chaque année, hors années de recul
+    # du PIB nominal et hors années où il est voisin de zéro (moins de 0,5 point : « presque égaux », seuil de la page).
+    # Ajouté le 02/11/2026 : l'édition Eurostat du 21/10/2026 rend 2025 légèrement positif (+0,1), ce qui supprimait toute
+    # période finale ; la phrase « chaque année depuis, sauf en 2020 » a été réécrite, la garde resserrée en conséquence.
+    voisin_zero = lambda x: abs(x["effet_taux_croissance"]) < 0.5
     bascule = next((r["annee"] for r in rows
-                    if all(x["effet_taux_croissance"] < 0 or x["croissance_nominale_pct"] < 0 for x in rows if x["annee"] >= r["annee"])), None)
+                    if all(x["effet_taux_croissance"] < 0 or x["croissance_nominale_pct"] < 0 or voisin_zero(x)
+                           for x in rows if x["annee"] >= r["annee"])), None)
     if bascule is None or bascule == rows[-1]["annee"]:
         fail("« Ce qu'il faut retenir » : plus de periode finale ou l'effet taux-croissance est negatif chaque annee (bascule %s)" % bascule)
 
     A, A_en = bloc(*NB["fr"]), bloc(*NB["en"])
     for X_, lang in ((A, "fr"), (A_en, "en")):
         X_["millesime_dette"], X_["millesime_comptes"] = millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang)
+        # Notification lue (02/11/2026) : avril d'avril à septembre, octobre sinon ; « avec la notification d'avril » était écrit
+        # en dur et devenait faux avec l'édition du 21/10/2026. Phrase INSEE : l'écart s'il existe à l'affichage, l'accord sinon.
+        m_ = int(MILLESIMES["gov_10dd_edpt1"][5:7])
+        avril = 4 <= m_ < 10
+        meme = X_["millesime_dette"] == X_["millesime_comptes"]
+        X_["maj_court"] = (("mises à jour le %s (dette et comptes)" % X_["millesime_dette"]) if meme else
+                           ("mises à jour le %s (dette) et le %s (comptes)" % (X_["millesime_dette"], X_["millesime_comptes"]))) if lang == "fr" else \
+            (("released on %s (debt and accounts)" % X_["millesime_dette"]) if meme else
+             ("released on %s (debt) and %s (accounts)" % (X_["millesime_dette"], X_["millesime_comptes"])))
+        X_["notif_lib"] = ("la notification d'avril" if avril else "la notification d'octobre") if lang == "fr" else \
+            ("the April notification" if avril else "the October notification")
+        if lang == "fr":
+            X_["maj_long"] = ("mises à jour le %s, pour la dette (avec %s) comme pour les comptes" % (X_["millesime_dette"], X_["notif_lib"])) if meme else \
+                ("mises à jour le %s pour la dette, avec %s, et le %s pour les comptes" % (X_["millesime_dette"], X_["notif_lib"], X_["millesime_comptes"]))
+        else:
+            X_["maj_long"] = ("released on %s, for the debt (with %s) as for the accounts" % (X_["millesime_dette"], X_["notif_lib"])) if meme else \
+                ("released on %s for the debt, with %s, and on %s for the accounts" % (X_["millesime_dette"], X_["notif_lib"], X_["millesime_comptes"]))
+        if X_["dette_insee_fin"] and X_["dette_insee_fin"] != X_["dette_fin"]:
+            X_["insee_phrase"] = (("L'INSEE publie pour fin %s une dette de %s\u00a0%% du PIB, contre %s\u00a0%% dans cette notification\u00a0: la page "
+                                   "garde la série d'Eurostat d'un bout à l'autre, pour que la décomposition reste cohérente, et la notification "
+                                   "suivante dira si l'écart se referme.") if lang == "fr" else
+                                  ("INSEE publishes a debt of %s%% of GDP for the end of %s, against %s%% in that notification: the page keeps "
+                                   "the Eurostat series throughout, so that the decomposition stays consistent, and the gap may or may not "
+                                   "close at the next notification."))
+            X_["insee_phrase"] = X_["insee_phrase"] % ((X_["annee_fin"], X_["dette_insee_fin"], X_["dette_fin"]) if lang == "fr"
+                                                       else (X_["dette_insee_fin"], X_["annee_fin"], X_["dette_fin"]))
+        else:
+            X_["insee_phrase"] = ("L'INSEE publie pour fin %s la même dette que cette notification, %s\u00a0%% du PIB\u00a0; la page garde la "
+                                  "série d'Eurostat d'un bout à l'autre, pour que la décomposition reste cohérente." % (X_["annee_fin"], X_["dette_fin"])
+                                  if lang == "fr" else
+                                  "INSEE publishes the same debt for the end of %s as that notification, %s%% of GDP; the page keeps the "
+                                  "Eurostat series throughout, so that the decomposition stays consistent." % (X_["annee_fin"], X_["dette_fin"]))
         for k, v in EDITIONS_CS[lang].items():
             X_["cs_ed_" + k] = v
         # « point » accordé à la valeur affichée (même règle que ACCORD_POINTS)
@@ -896,8 +944,10 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
         ("« Ce qu'il faut retenir » : avant la bascule, le taux implicite dépasse « le plus souvent » la croissance nominale",
          sum(1 for r in rows if r["annee"] < bascule and lg.depasse(r["taux_implicite_pct"], r["croissance_nominale_pct"], 2)) * 2
          > sum(1 for r in rows if r["annee"] < bascule)),
-        ("« Ce qu'il faut retenir » : depuis la bascule, la seule année d'effet taux-croissance positif est 2020",
-         [r["annee"] for r in rows if r["annee"] >= bascule and r["effet_taux_croissance"] >= 0] == [2020]),
+        ("« Ce qu'il faut retenir » : depuis la bascule, la croissance l'emporte chaque année jusqu'à l'avant-dernière, sauf 2020 ; "
+         "la dernière année, le taux implicite repasse légèrement au-dessus (effet positif, moins de 0,5 point)",
+         [r["annee"] for r in rows if r["annee"] >= bascule and r["effet_taux_croissance"] >= 0] == [2020, last["annee"]]
+         and 0 < last["effet_taux_croissance"] < 0.5 and last["taux_implicite_pct"] > last["croissance_nominale_pct"]),
         ("« Ce qu'il faut retenir » : le taux implicite « remonte » (creux en 2019 ou après, dernière année au moins 0,5 point au-dessus)",
          lg.extremum(rows, lambda r: r["taux_implicite_pct"], 2, maxi=False)["annee"] >= 2019
          and last["taux_implicite_pct"] > min(r["taux_implicite_pct"] for r in rows) + 0.5),
@@ -944,12 +994,14 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
          "recettes remontent de plus d'un demi-point la dernière année : c'est elles qui retournent la conclusion",
          abs((dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["ofce"][1]]["depenses_hors_interets"])) < 0.1
          and dr[fen["tresor"][1]]["recettes"] - dr[fen["ofce"][1]]["recettes"] > 0.5),
-        ("OPTIMUM-15 : le retournement 2019-2025 tient a un ecart mince (moins d'un demi-point) entre hausse des depenses "
-         "hors interets et recul des recettes",
-         0 < (dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"])
-         + (dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"]) < 0.5),
+        # Jugé sur la valeur AFFICHÉE (arrondie au dixième), celle que le lecteur lit dans « ne l'emporte que de X point » :
+        # l'édition d'Eurostat du 21/10/2026 porte la marge de 0,3 à 0,5 (recettes 2025 révisées), 0,4999… en flottant.
+        ("OPTIMUM-15 : le retournement 2019-2025 tient a un ecart mince (un demi-point au plus, valeur affichee) entre hausse "
+         "des depenses hors interets et recul des recettes",
+         0 < round((dr[fen["tresor"][1]]["depenses_hors_interets"] - dr[fen["tresor"][0]]["depenses_hors_interets"])
+                   + (dr[fen["tresor"][1]]["recettes"] - dr[fen["tresor"][0]]["recettes"]), 1) <= 0.5),
         ("OPTIMUM-15 : l'INSEE publie pour la derniere fin d'annee une valeur voisine mais differente de celle d'Eurostat",
-         insee_fin is not None and 0 < abs(insee_fin - last["dette_pct_pib"]) <= 0.5),
+         insee_fin is not None and abs(insee_fin - last["dette_pct_pib"]) <= 0.5),   # égalité admise : jeton insee_phrase
         ("OPTIMUM-10 : « un déficit qui se réduit n'a pas disparu » — le solde primaire de la dernière année reste négatif",
          last["solde_primaire_pct_pib"] < 0),
         # --- Conjoncture ou structure (19/10/2026). Seuils écrits avant les phrases.

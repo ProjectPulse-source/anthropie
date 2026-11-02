@@ -1,22 +1,22 @@
-# relu le 2026-10-16 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-02 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de f605f9c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Pourquoi la dette publique augmente-t-elle ?
-Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,6 % du PIB : elle a doublé en part de la richesse produite.
-D'où viennent ces 57,7 points de PIB ?
+Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,7 % du PIB : elle a doublé en part de la richesse produite.
+D’où viennent ces 57,9 points de PIB ?
 Les intérêts font monter le ratio, la croissance du PIB nominal le fait baisser, et sur trente ans ces deux effets se compensent presque.
-L'essentiel de la hausse vient des déficits publics hors intérêts, dits primaires : 50,5 points sur 57,7.
+L’essentiel de la hausse vient des déficits publics hors intérêts, dits primaires : 50,5 points sur 57,9.
 Ce bilan cache deux périodes opposées, et il dit par où la dette a augmenté, pas pourquoi les déficits ont existé.
-Page mise à jour le 13 octobre 2026
+Page mise à jour le 2 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 13 octobre 2026 France, administrations publiques, séries Eurostat de 1995 à 2025.
+Données mises à jour le 2 novembre 2026 France, administrations publiques, séries Eurostat de 1995 à 2025.
 Télécharger : CSV · JSON · méthode
 D’où vient la hausse
 Décomposition cumulée de la variation du ratio dette/PIB, France, 1995-2025, en points de PIB (Eurostat).
 Bleu : le stock ; orange : ce qui le fait monter ; gris : ce qui le fait baisser.
 Le résultat en une phrase.
-Sur trente ans, l’effet net des intérêts et de la croissance du PIB nominal est faible (+1,2 point), mais il additionne deux périodes opposées, +16,9 points avant 2017 et −15,7 depuis : la hausse de la dette tient pour l’essentiel aux déficits primaires, 50,5 points sur 57,7.
+Sur trente ans, l’effet net des intérêts et de la croissance du PIB nominal est faible (+1,3 point), mais il additionne deux périodes opposées, +16,9 points avant 2017 et −15,6 depuis : la hausse de la dette tient pour l’essentiel aux déficits primaires, 50,5 points sur 57,9.
 C’est une décomposition comptable : elle dit par quel terme la dette a augmenté, pas pourquoi les déficits ont existé.
 Comment des intérêts payés peuvent-ils « s’annuler » ?
 Ils ne s’annulent pas : ils sont une charge réelle ; toutes choses égales par ailleurs, ils augmentent le besoin de financement et contribuent à accroître la dette.
@@ -38,7 +38,7 @@ Le taux implicite de la dette, c’est-à-dire le taux moyen auquel revient l’
 Le ratio gagne 32,7 points, dont +26,9 par les déficits primaires et +6,1 par l’effet taux–croissance.
 L’année 2009 compte à elle seule 14,2 points : le déficit primaire se creuse et le PIB recule, deux effets qui coïncident avec la crise financière.
 2020-2025 : la croissance nominale freine le ratio, les déficits le poussent.
-Le ratio gagne 17,4 points.
+Le ratio gagne 17,5 points.
 En 2020, il bondit de 16,7 points, avec la crise sanitaire.
 De 2021 à 2023, la forte croissance du PIB nominal, hausse des prix comprise, fait baisser le ratio : l’effet taux–croissance retire 16,8 points au ratio, plus que les déficits primaires n’en ajoutent (11,5).
 La part des prix dans cette croissance est l’objet de L’inflation a-t-elle allégé la dette ?
@@ -48,9 +48,9 @@ Après 1,25 % en 2020, il augmente légèrement en 2021 (1,31 %), bondit en 2022
 Ce saut ne vient pas seulement du renouvellement des titres aux taux nouveaux : en 2022, l’inflation a aussi fortement accru la charge comptabilisée des obligations de l’État indexées sur les prix, selon le rapport du Sénat sur les comptes de l’année.
 Les comptes présentés ici ne permettent pas de séparer la part de chaque mécanisme dans le taux implicite de l’ensemble des administrations publiques.
 Les comptes de 2025 restent révisables.
-Ceux de cette page sont les séries d’Eurostat mises à jour le 22/04/2026 pour la dette, avec la notification d’avril, et le 21/07/2026 pour les comptes.
-L’INSEE publie pour fin 2025 une dette de 115,7 % du PIB, contre 115,6 % dans cette notification : la page garde la série d’Eurostat d’un bout à l’autre, pour que la décomposition reste cohérente, et la notification suivante dira si l’écart se referme.
-Cette année-là, taux implicite (2,02 %) et croissance nominale (2,03 %) sont presque égaux, et l’effet taux–croissance est voisin de zéro : un écart aussi mince ne dit pas dans quel sens l’effet ira ensuite.
+Ceux de cette page sont les séries d’Eurostat mises à jour le 21/10/2026, pour la dette (avec la notification d’octobre) comme pour les comptes.
+L’INSEE publie pour fin 2025 la même dette que cette notification, 115,7 % du PIB ; la page garde la série d’Eurostat d’un bout à l’autre, pour que la décomposition reste cohérente.
+Cette année-là, taux implicite (1,99 %) et croissance nominale (1,90 %) sont presque égaux, et l’effet taux–croissance est voisin de zéro : un écart aussi mince ne dit pas dans quel sens l’effet ira ensuite.
 Sur les 30 années de la série, le solde primaire n’a été excédentaire que 4 fois.
 Ce décompte décrit une récurrence ; il ne dit pas si chacun de ces déficits était souhaitable, évitable ou conjoncturel.
 Trop de dépenses ou pas assez de recettes ?
@@ -60,7 +60,7 @@ Pour le décrire, il faut choisir deux années et comparer, entre elles, dépens
 Les séries d’Eurostat donnent alors des réponses différentes selon les années choisies.
 De 2017 à 2024, la période retenue par l’OFCE : les recettes publiques varient de −3,1 points de PIB, les dépenses hors intérêts de −0,9.
 Le recul des recettes domine.
-De 2019 à 2025, la période retenue par la direction générale du Trésor : les dépenses hors intérêts varient de +1,2 point, les recettes de −0,9.
+De 2019 à 2025, la période retenue par la direction générale du Trésor : les dépenses hors intérêts varient de +1,3 point, les recettes de −0,8.
 La hausse des dépenses domine.
 De 2019 à 2024, la fenêtre commune aux deux : les dépenses hors intérêts varient de +1,2 point, les recettes de −1,8.
 Le recul des recettes domine de nouveau.
@@ -70,30 +70,129 @@ Deux comparaisons exactes, sur des périodes différentes, peuvent donc conduire
 La page mesure un même indicateur d’Eurostat sur ces fenêtres ; elle ne rend pas équivalents les travaux de l’OFCE et du Trésor, qui diffèrent aussi par leurs définitions et leurs questions : devant l’un ou l’autre de ces travaux, il faut d’abord demander : « de quelle année à quelle année ? ».
 Deux fenêtres également exactes ne sont pas pour autant également pertinentes : une période se justifie par la question posée (l’effet de décisions prises depuis telle date, la situation d’avant une crise), non par le résultat qu’elle donne.
 Ce qui retourne la conclusion entre les deux fenêtres qui partent de 2019, ce sont les recettes.
-Les dépenses hors intérêts varient de la même quantité dans les deux fenêtres, à l’arrondi près ; les recettes, elles, remontent de 0,9 point de PIB en 2025.
-Sur 2019-2025, la hausse des dépenses ne l’emporte sur le recul des recettes que de 0,3 point : une révision des comptes de cet ordre suffirait à retourner le constat.
+Les dépenses hors intérêts varient de la même quantité dans les deux fenêtres, à l’arrondi près ; les recettes, elles, remontent de 1,0 point de PIB en 2025.
+Sur 2019-2025, la hausse des dépenses ne l’emporte sur le recul des recettes que de 0,5 point : une révision des comptes de cet ordre suffirait à retourner le constat.
 Le constat sur 2017-2024, qui s’arrête avant 2025, ne dépend pas de cette révision.
 C’est l’atténuation du recul des recettes, non un mouvement des dépenses, qui fait basculer leur poids relatif.
 Ces mouvements sont mesurés en part de PIB : ils peuvent venir du numérateur, du dénominateur, ou des deux.
 Et un déficit qui se réduit n’a pas disparu : en 2025, le solde primaire reste déficitaire et la dette continue de monter.
 Ces comparaisons, sur des comptes encore révisables, ne disent pas quelles décisions ont produit ces mouvements, ni ce qu’il faudrait corriger.
 Ce que l’OFCE et la direction générale du Trésor en concluent, et sur quels objets, est confronté plus bas.
+Conjoncture ou structure ?
+Un déficit peut tenir à la conjoncture : quand l’activité reste sous son niveau potentiel, les recettes fléchissent et certaines dépenses augmentent, puis le déficit se résorbe avec la reprise.
+Il peut aussi être structurel, et demeurer quand l’économie revient à son potentiel.
+Trois institutions estiment ce partage, chacune avec sa méthode : la Commission européenne, le FMI et l’OCDE.
+Solde primaire corrigé du cycle selon trois estimations, et solde primaire observé (Eurostat).
+Les zones grises marquent les deux périodes comparées.
+Le déficit d’après 2022 ne se résorberait pas avec la seule conjoncture.
+Corrigé du cycle, le solde primaire est plus bas sur 2022-2025 que sur 2015-2019 dans les trois estimations : de 1,9 point selon la Commission (−1,1 % puis −3,0 % du PIB potentiel), de 2,6 points selon le FMI (−0,5 % puis −3,1 %) et de 1,6 point selon l’OCDE (−1,8 % puis −3,4 %).
+Sur 2022-2025, la part conjoncturelle et ponctuelle du déficit n’est que de 0,23 point selon la Commission, et sa part conjoncturelle de 0,23 point selon le FMI.
+Ce sont trois estimations, et elles ne coïncident pas.
+La Commission et l’OCDE retirent aussi les mesures ponctuelles, le FMI non ; et chacune repose sur une estimation de la production potentielle, qui n’est pas une mesure et se révise.
+La page donne les trois valeurs, sans en faire la moyenne.
+Avant 2008, le solde corrigé du cycle était proche de l’équilibre.
+Seul le FMI remonte avant 2010.
+Son solde primaire corrigé du cycle vaut en moyenne −0,2 % du PIB potentiel sur 1996-2007, −2,1 % sur 2010-2014, −0,5 % sur 2015-2019, puis −3,1 % sur 2022-2025.
+Le déficit corrigé apparu après 2008 a été en partie résorbé ; celui d’après 2020 ne l’est pas à ce jour.
+Cette succession date les dégradations ; elle ne suffit pas à établir que les crises les ont produites.
+Par où : les recettes sur la période récente, les dépenses sur la longue.
+Les recettes et les dépenses hors intérêts corrigées du cycle que publie la Commission redonnent exactement son solde corrigé.
+De 2015-2019 à 2022-2025, ce solde baisse de 1,70 point : les recettes corrigées reculent de 1,62 point, les dépenses corrigées varient de +0,09 point.
+Depuis 1996-2007 en revanche, les dépenses corrigées ont augmenté de 3,9 points de PIB potentiel et les recettes de 0,9 : sur la longue période, la hausse des dépenses domine.
+Comme pour les fenêtres de l’OFCE et du Trésor plus haut, la réponse dépend des années comparées.
+Ce que ce partage ne dit pas.
+Une recette corrigée du cycle qui baisse mêle les baisses d’impôts décidées et le rendement spontané de l’impôt, qui peut croître moins vite que l’économie.
+Ces séries ne séparent pas les deux : elles disent où le déficit s’est creusé, et que la conjoncture ne l’explique pas, non quelles décisions l’ont creusé.
+Les valeurs année par année, les définitions et les éditions
+Année
+Commission, structurel
+FMI, corrigé du cycle
+OCDE, sous-jacent
+Observé (Eurostat)
+2015
+−1,0
+−0,5
+−2,1
+−1,9
+2016
+−1,0
+−0,3
+−1,7
+−1,9
+2017
+−1,4
+−0,7
+−2,3
+−1,6
+2018
+−1,0
+−0,1
+−1,4
+−0,6
+2019
+−1,1
+−0,9
+−1,6
+−0,9
+2020
+−3,3
+−4,7
+−2,8
+−7,7
+2021
+−4,1
+−3,9
+−4,3
+−5,2
+2022
+−2,7
+−2,4
+−2,9
+−2,8
+2023
+−3,3
+−3,5
+−4,0
+−3,5
+2024
+−3,5
+−3,8
+−4,0
+−3,7
+2025
+−2,5
+−2,9
+−2,9
+−2,9
+En % du PIB potentiel (en % du PIB pour le solde observé) ; un nombre négatif est un déficit.
+Trois définitions.
+Le solde primaire structurel de la Commission retire l’effet estimé du cycle et les mesures ponctuelles ; il n’est publié pour la France que depuis 2010.
+Le solde primaire sous-jacent de l’OCDE procède de même.
+Le solde primaire corrigé du cycle du FMI retire l’effet du cycle seulement.
+Les recettes et les dépenses corrigées du cycle sont celles de la Commission (série AMECO), dont la différence redonne, chaque année, son solde primaire corrigé du cycle.
+Pourquoi le solde observé d’Eurostat diffère de celui du FMI.
+Le solde primaire de cette page est calculé hors intérêts versés ; celui du FMI, hors intérêts nets, versés moins reçus.
+L’écart entre les deux égale donc les intérêts reçus par les administrations publiques : 0,37 point de PIB en moyenne sur 1996-2007 et 0,13 point sur 2022-2025, à quelques centièmes près.
+C’est une différence de définition, non de données.
+Éditions.
+Commission européenne, AMECO, printemps 2026 ; FMI, Moniteur des finances publiques d’octobre 2026 ; OCDE, Perspectives économiques n° 119.
+Les trois ont été publiées à des dates différentes et seront révisées.
 Comment le calcul fonctionne
 Chaque année, le ratio dette/PIB bouge sous l’effet de trois termes.
 L’effet taux–croissance : les intérêts de l’année accroissent la dette, quand la croissance du PIB nominal — croissance réelle et hausse des prix — fait baisser le ratio même sans remboursement ; leur solde est positif quand le taux implicite dépasse la croissance nominale, négatif dans le cas inverse.
 Le déficit primaire : l’écart entre dépenses et recettes publiques hors intérêts, qui en mesure l’ampleur, pas la cause.
 Les ajustements flux-stock : la dette qui bouge sans passer par le déficit (trésorerie mise en réserve, prêts et participations, écarts de valorisation), obtenue ici comme résidu.
 La cascade présente l’effet taux–croissance en ses deux composantes, intérêts et croissance : d’où ses quatre marches pour trois termes.
-L'identité exacte, terme à terme
-Ce qui fait bouger le ratio dette/PIB d'une année à l'autre
-l'effet taux–croissanceintérêts moins croissance du PIB nominal
+L’identité exacte, terme à terme
+Ce qui fait bouger le ratio dette/PIB d’une année à l’autre
+l’effet taux–croissanceintérêts moins croissance du PIB nominal
 +
 le déficit primairedépenses moins recettes, hors intérêts
 +
 les ajustements flux-stockce qui ne passe pas par le déficit
 =
 la variation du ratioen points de PIB
-Identité exacte : dt − dt−1 = (i − g) / (1 + g) × dt−1 − solde primairet + flux-stockt, avec d le ratio dette/PIB, i le taux implicite (intérêts de l'année / dette de fin d'année précédente) et g la croissance du PIB nominal.
+Identité exacte : dt − dt−1 = (i − g) / (1 + g) × dt−1 − solde primairet + flux-stockt, avec d le ratio dette/PIB, i le taux implicite (intérêts de l’année / dette de fin d’année précédente) et g la croissance du PIB nominal.
 Ce que cette décomposition ne dit pas
 Une décomposition comptable, non une explication causale.
 Elle dit par quel terme la dette a bougé ; elle ne dit pas pourquoi les déficits ont existé, ni s’ils étaient évitables, ni qui en porte la responsabilité.
@@ -106,7 +205,7 @@ Elle réduit la valeur réelle des créances nominales, et cette perte a des por
 Rien sur l’avenir.
 La suite dépend de l’écart entre le taux implicite et la croissance nominale, et du solde primaire : ce qu’il a fallu ailleurs pour que la dette baisse est l’objet de La dette publique peut-elle baisser ?
 Une dernière année révisable.
-Les comptes de 2025 sont ceux des séries d’Eurostat mises à jour le 22/04/2026 (dette) et le 21/07/2026 (comptes).
+Les comptes de 2025 sont ceux des séries d’Eurostat mises à jour le 21/10/2026 (dette et comptes).
 Une série qui commence en 1995.
 Les intérêts harmonisés d’Eurostat ne remontent pas plus loin ; la courbe longue de la dette, depuis 1978, est dans Combien coûte la dette publique ?
 Confrontation à la recherche : le poids des déficits primaires est retrouvé sur cinquante ans ; lire la quasi-annulation des intérêts et de la croissance comme une neutralité est mis en danger ; dépenses ou recettes : le diagnostic dépend de la période et de la comparaison retenues
@@ -126,7 +225,7 @@ Elle qualifie la période 2001-2007 de « relative stabilité » ; la série de 
 Mis en danger par.
 Toute lecture de la quasi-annulation des intérêts et de la croissance comme une neutralité.
 La coïncidence dépend du point de départ, à une dizaine de points près (Auclert, Philippon et Ragot), et l’écart entre taux et croissance a changé de signe en cours de période (Clavères).
-Les données de la page le confirment : l’effet taux-croissance a pesé +16,9 points avant 2017, −15,7 depuis.
+Les données de la page le confirment : l’effet taux-croissance a pesé +16,9 points avant 2017, −15,6 depuis.
 La Note du CAE, elle, interprète ce constat comptable comme résultant directement des choix budgétaires (« notre dette est la conséquence directe de nos choix budgétaires »), tout en jugant difficile d’estimer la part des crises, qu’une estimation de l’OFCE, citée par la Note, situe autour de la moitié de la hausse depuis 2007.
 Non établi.
 Lequel, des dépenses ou des recettes, a creusé les déficits récents.
@@ -145,40 +244,40 @@ Heyer, É., Plane, M., Ragot, X., Sampognaro, R. et Timbeau, X., « Quelles traj
 Revue de littérature vérifiée le 3 octobre 2026 : chaque référence citée a été lue en entier à cette date, dans la version indiquée.
 Synthèse
 Ce qu’il faut retenir
-En trente ans, la dette publique française a doublé en part de PIB, de 57,8 % à 115,6 %.
-Les intérêts l’ont poussée, mais sur l’ensemble de la période la croissance du PIB nominal en a effacé presque autant ; ce qui reste, dans la décomposition Eurostat utilisée ici, ce sont les déficits primaires, 88 % de la hausse : hors intérêts, les comptes publics n’ont été excédentaires que 4 années sur 30.
+En trente ans, la dette publique française a doublé en part de PIB, de 57,8 % à 115,7 %.
+Les intérêts l’ont poussée, mais sur l’ensemble de la période la croissance du PIB nominal en a effacé presque autant ; ce qui reste, dans la décomposition Eurostat utilisée ici, ce sont les déficits primaires, 87 % de la hausse : hors intérêts, les comptes publics n’ont été excédentaires que 4 années sur 30.
 Cette quasi-annulation est une compensation dans le temps, non une neutralité.
-Avant 2017, le taux implicite dépassait le plus souvent la croissance nominale, et l’effet taux-croissance a ajouté 16,9 points au ratio ; depuis, la croissance nominale l’emporte chaque année, sauf en 2020, quand le PIB a reculé, et l’effet a pesé −15,7 points.
-En 2025, selon des comptes encore révisables, taux implicite et croissance nominale sont presque égaux : tant qu’ils le restent, le sens d’évolution du ratio dépend du solde primaire, aux ajustements flux-stock près.
-Le taux implicite remonte depuis 2022 ; s’il repasse au-dessus de la croissance, le ratio montera davantage à solde primaire égal.
+Avant 2017, le taux implicite dépassait le plus souvent la croissance nominale, et l’effet taux-croissance a ajouté 16,9 points au ratio ; depuis, la croissance nominale l’emporte chaque année jusqu’en 2024, sauf en 2020, quand le PIB a reculé, et l’effet a pesé −15,6 points.
+En 2025, selon des comptes encore révisables, le taux implicite repasse légèrement au-dessus de la croissance nominale (1,99 % contre 1,90 %) : l’écart est trop mince pour dire qu’une nouvelle période commence.
+Tant que les deux restent aussi proches, le sens d’évolution du ratio dépend du solde primaire, aux ajustements flux-stock près ; si l’écart se confirme, le ratio montera davantage à solde primaire égal.
 Dépenses ou recettes : les comptes décrivent des mouvements, ils ne désignent pas de responsable, et leur réponse change avec les deux années que l’on compare.
 Ce qu’il a fallu ailleurs pour que la dette baisse est l’objet de La dette publique peut-elle baisser ?
 Questions fréquentes
 Pourquoi la dette publique française augmente-t-elle ?
-Sur 1995-2025, le ratio dette/PIB est passé de 57,8 % à 115,6 %.
-En décomposant chaque année sa variation, les intérêts l'ont poussé de 73,9 points et la croissance du PIB nominal l'a freiné de 72,8 : leur effet net n'est que de +1,2 point, mais il additionne deux périodes opposées.
-La hausse tient pour l'essentiel aux déficits primaires, l'écart entre dépenses et recettes publiques hors intérêts (50,5 points), et pour le reste aux ajustements flux-stock (+6,0).
-C'est une décomposition comptable : elle dit par quel terme la dette a augmenté, pas pourquoi les déficits ont existé.
+Sur 1995-2025, le ratio dette/PIB est passé de 57,8 % à 115,7 %.
+En décomposant chaque année sa variation, les intérêts l’ont poussé de 73,9 points et la croissance du PIB nominal l’a freiné de 72,6 : leur effet net n’est que de +1,3 point, mais il additionne deux périodes opposées.
+La hausse tient pour l’essentiel aux déficits primaires, l’écart entre dépenses et recettes publiques hors intérêts (50,5 points), et pour le reste aux ajustements flux-stock (+6,1).
+C’est une décomposition comptable : elle dit par quel terme la dette a augmenté, pas pourquoi les déficits ont existé.
 Les intérêts font-ils monter la dette ?
 Oui : ils sont une charge réelle, qui accroît le besoin de financement.
-Mais la croissance du PIB nominal fait baisser le ratio dette/PIB en agrandissant son dénominateur, et sur trente ans elle a presque compensé la contribution comptable des intérêts (73,9 points, contre 72,8 de baisse).
-Cette compensation est faite de deux périodes opposées : avant 2017, l'effet net a ajouté 16,9 points au ratio ; depuis, il en a retiré 15,7.
-En 2025, selon des comptes encore révisables, taux implicite et croissance nominale étaient presque égaux (2,02 % et 2,03 %).
+Mais la croissance du PIB nominal fait baisser le ratio dette/PIB en agrandissant son dénominateur, et sur trente ans elle a presque compensé la contribution comptable des intérêts (73,9 points, contre 72,6 de baisse).
+Cette compensation est faite de deux périodes opposées : avant 2017, l’effet net a ajouté 16,9 points au ratio ; depuis, il en a retiré 15,6.
+En 2025, selon des comptes encore révisables, taux implicite et croissance nominale étaient presque égaux (1,99 % et 1,90 %).
 La dette vient-elle de trop de dépenses ou de pas assez de recettes ?
-Ces comptes ne le tranchent pas : un déficit primaire est un écart, qui peut venir de l'une, de l'autre ou des deux.
-Sur les séries d'Eurostat, le diagnostic change avec les années comparées : de 2017 à 2024, les recettes publiques varient de −3,1 points de PIB et les dépenses hors intérêts de −0,9 ; de 2019 à 2025, les dépenses hors intérêts de +1,2 et les recettes de −0,9 ; de 2019 à 2024, les recettes de −1,8 et les dépenses hors intérêts de +1,2.
-L'année d'arrivée compte autant que l'année de départ.
-L'inflation fait-elle baisser la dette ?
-Elle peut faire baisser le ratio, en gonflant le PIB nominal plus vite que la charge d'intérêts.
+Ces comptes ne le tranchent pas : un déficit primaire est un écart, qui peut venir de l’une, de l’autre ou des deux.
+Sur les séries d’Eurostat, le diagnostic change avec les années comparées : de 2017 à 2024, les recettes publiques varient de −3,1 points de PIB et les dépenses hors intérêts de −0,9 ; de 2019 à 2025, les dépenses hors intérêts de +1,3 et les recettes de −0,8 ; de 2019 à 2024, les recettes de −1,8 et les dépenses hors intérêts de +1,2.
+L’année d’arrivée compte autant que l’année de départ.
+L’inflation fait-elle baisser la dette ?
+Elle peut faire baisser le ratio, en gonflant le PIB nominal plus vite que la charge d’intérêts.
 De 2021 à 2023, la croissance nominale — hausse des prix comprise — a produit un effet taux-croissance de −16,8 points, alors que les déficits primaires en ajoutaient 11,5 ; cette décomposition ne sépare pas la part des prix de celle de la croissance réelle.
-L'inflation ne le fait pas sans coût : elle réduit la valeur réelle des créances nominales, et elle renchérit les titres indexés sur l'inflation.
+L’inflation ne le fait pas sans coût : elle réduit la valeur réelle des créances nominales, et elle renchérit les titres indexés sur l’inflation.
 Un déficit primaire, est-ce trop de dépenses ?
-Pas nécessairement : c'est un écart entre dépenses et recettes hors intérêts, qui peut venir de dépenses en hausse, de recettes en baisse, ou d'une récession qui fait les deux à la fois.
-Ces données mesurent l'écart ; elles ne disent pas lequel de ses deux termes il faudrait corriger.
+Pas nécessairement : c’est un écart entre dépenses et recettes hors intérêts, qui peut venir de dépenses en hausse, de recettes en baisse, ou d’une récession qui fait les deux à la fois.
+Ces données mesurent l’écart ; elles ne disent pas lequel de ses deux termes il faudrait corriger.
 Dans le dossier dette publique
 Pour prolonger l’analyse
 Dette Publique : Qui paie vraiment ?
-La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
 Cette page montre par quels termes la dette a augmenté.
 Elle ne dit pas qui en supporte le coût, ni par quels canaux il se déplace — vers le contribuable, vers l’épargnant par l’inflation, vers des services publics dont la marge se resserre — selon les décisions prises pour l’ajuster.
 Le livre suit ces canaux un par un, chiffres officiels à l’appui, pour montrer dans quelles configurations chacun supporte un coût.
@@ -199,25 +298,33 @@ Charge d’indexation des titres de l’État en 2022 : Sénat, rapport sur le p
 La méthode de cette décomposition (l’identité, le témoin que forment les ratios publiés par Eurostat et l’erreur qu’il a rejetée) et son rapprochement avec trois lectures publiques de la même dette (l’audit citoyen de 2014, la Fondation iFRAP, la Cour des comptes) sont exposés dans le working paper AWP-09 — Ce que les comptes publics permettent d’établir sur le déplacement de la charge de la dette (DOI : 10.5281/zenodo.23143030, PDF en accès libre).
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
-Pourquoi la dette a doublé : de 57,8 % à 115,6 % du PIB, 1995-2025
-Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette tient pour l'essentiel aux déficits primaires, hors intérêts.
-Précaution d'interprétation.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Pourquoi la dette a doublé : de 57,8 % à 115,7 % du PIB, 1995-2025
+Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette tient pour l’essentiel aux déficits primaires, hors intérêts.
+Précaution d’interprétation.
 Contributions cumulées au ratio, en points de PIB : ni des sommes versées, ni des causes.
-Totaux calculés avant arrondi, d'où un dixième d'écart possible.
-Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026
+Totaux calculés avant arrondi, d’où un dixième d’écart possible.
+Eurostat gov_10dd_edpt1 (dette), gov_10a_main (B9, D41PAY), PIB de la notification, France, 1996-2025 ; mise à jour Eurostat du 21/10/2026
 Télécharger en PNG
 SVG
 Année par année : ce qui a fait monter ou baisser le ratio dette/PIB, 1996-2025
-Année par année, ce qui a poussé ou freiné le ratio ; en 2021-2023, la croissance nominale l'a fait baisser malgré les déficits.
-Précaution d'interprétation.
+Année par année, ce qui a poussé ou freiné le ratio ; en 2021-2023, la croissance nominale l’a fait baisser malgré les déficits.
+Précaution d’interprétation.
 Points de PIB par an ; solde primaire : un déficit compte en plus, un excédent en moins ; la somme des trois barres égale la variation (point noir), au centième près.
-Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mises à jour Eurostat du 22/04/2026 et du 21/07/2026
+Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mise à jour Eurostat du 21/10/2026
+Télécharger en PNG
+SVG
+Le déficit primaire corrigé du cycle, selon trois estimations, 1996-2025
+Corrigé du cycle, le déficit primaire d’après 2022 reste plus creusé qu’en 2015-2019 dans les trois estimations : la conjoncture ne l’explique pas.
+Précaution d’interprétation.
+Trois méthodes : la Commission et l’OCDE retirent aussi les mesures ponctuelles, le FMI non.
+Estimations de la production potentielle, non des mesures ; zones grises : 2015-2019 et 2022-2025.
+FMI, Moniteur des finances publiques d’octobre 2026 ; Commission européenne, AMECO, printemps 2026 ; OCDE, Perspectives économiques n° 119 ; Eurostat gov_10a_main, mise à jour du 21/10/2026
 Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Pourquoi la dette publique augmente-t-elle ? ».
-Données Eurostat, relevé du 13 octobre 2026. https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/
+Données Eurostat, relevé du 2 novembre 2026. https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/
 Copier la citation
 En trois phrases
 Cette page décompose la variation du ratio dette/PIB français, de 1995 à 2025, en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock.
@@ -229,10 +336,13 @@ Les données
 La décomposition annuelle de la variation du ratio dette/PIB, France, avec ses quatre termes, le taux implicite et la croissance nominale ; dépenses, recettes et solde en % du PIB ; le même contenu existe en CSV, une ligne par année.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat), sous leurs propres conditions.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
+Révisions
+2 novembre 2026 — Comptes d’Eurostat du 21 octobre 2026 : en 2025, le taux implicite repasse légèrement au-dessus de la croissance nominale ; « la croissance l’emporte chaque année depuis 2017, sauf en 2020 » devient « jusqu’en 2024 ».
+18 octobre 2026 — Ajout : section « Conjoncture ou structure ? », le déficit primaire corrigé du cycle selon la Commission, le FMI et l’OCDE, et sa décomposition en recettes et dépenses.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

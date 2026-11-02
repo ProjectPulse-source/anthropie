@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 742" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dam-t dam-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 725" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dam-t dam-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="dam-t">Chaque année, ce qui a poussé ou freiné le ratio dette/PIB</title><desc id="dam-d">Barres empilées par année, en points de PIB : en orange la contribution du solde primaire (déficit en plus, excédent en moins), en bleu l'effet net des taux et de la croissance, en gris les ajustements flux-stock ; le point noir est la variation effective du ratio. Les deux plus fortes hausses sont en 2009 (+14,2 points) et en 2020 (+16,7). De 2021 à 2023, l'effet taux-croissance retire 16,8 points au ratio, quand la croissance du PIB nominal, hausse des prix comprise, s'accélère.</desc>
-<rect width="300" height="742" fill="#ffffff"/>
+<rect width="300" height="725" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Chaque année, ce qui a poussé</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">ou freiné le ratio dette/PIB</text>
 <line x1="30" y1="300.0" x2="298" y2="300.0" stroke="#dcd8d3" stroke-width="0.6"/>
@@ -131,9 +131,9 @@
 <rect x="281.4" y="203.5" width="6.4" height="8.6" fill="#c9c5c0"/>
 <circle cx="284.6" cy="216.5" r="2.4" fill="#26262f"/>
 <rect x="290.3" y="218.5" width="6.4" height="21.5" fill="#eb6834"/>
-<rect x="290.3" y="240.0" width="6.4" height="0.1" fill="#184f95"/>
-<rect x="290.3" y="218.0" width="6.4" height="0.5" fill="#c9c5c0"/>
-<circle cx="293.5" cy="218.1" r="2.4" fill="#26262f"/>
+<rect x="290.3" y="217.8" width="6.4" height="0.7" fill="#184f95"/>
+<rect x="290.3" y="217.1" width="6.4" height="0.6" fill="#c9c5c0"/>
+<circle cx="293.5" cy="217.1" r="2.4" fill="#26262f"/>
 <rect x="0" y="340" width="14" height="14" fill="#eb6834"/>
 <text x="22" y="352" font-size="13.5" fill="#55524f">contribution du solde primaire</text>
 <rect x="0" y="362" width="14" height="14" fill="#184f95"/>
@@ -148,14 +148,13 @@
 <text x="0" y="515" font-size="15" font-weight="600" fill="#26262f">taux-croissance −16,8</text>
 <line x1="0" y1="533.0" x2="300" y2="533.0" stroke="#dcd8d3"/>
 <text x="0" y="554.0" font-size="13.5" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main</text>
-<text x="0" y="571.0" font-size="13.5" fill="#55524f">(B9, D41PAY), France, 1996-2025 ;</text>
-<text x="0" y="588.0" font-size="13.5" fill="#55524f">mises à jour Eurostat du 22/04/2026 et</text>
-<text x="0" y="605.0" font-size="13.5" fill="#55524f">du 21/07/2026</text>
-<text x="0" y="626.0" font-size="13.5" fill="#55524f">Points de PIB par an ; solde</text>
-<text x="0" y="643.0" font-size="13.5" fill="#55524f">primaire : un déficit compte en plus,</text>
-<text x="0" y="660.0" font-size="13.5" fill="#55524f">un excédent en moins ; la somme des</text>
-<text x="0" y="677.0" font-size="13.5" fill="#55524f">trois barres égale la variation (point</text>
-<text x="0" y="694.0" font-size="13.5" fill="#55524f">noir), au centième près.</text>
-<text x="0" y="715.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="732.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="571.0" font-size="13.5" fill="#55524f">(B9, D41PAY), France, 1996-2025 ; mise</text>
+<text x="0" y="588.0" font-size="13.5" fill="#55524f">à jour Eurostat du 21/10/2026</text>
+<text x="0" y="609.0" font-size="13.5" fill="#55524f">Points de PIB par an ; solde</text>
+<text x="0" y="626.0" font-size="13.5" fill="#55524f">primaire : un déficit compte en plus,</text>
+<text x="0" y="643.0" font-size="13.5" fill="#55524f">un excédent en moins ; la somme des</text>
+<text x="0" y="660.0" font-size="13.5" fill="#55524f">trois barres égale la variation (point</text>
+<text x="0" y="677.0" font-size="13.5" fill="#55524f">noir), au centième près.</text>
+<text x="0" y="698.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="715.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
 </svg>

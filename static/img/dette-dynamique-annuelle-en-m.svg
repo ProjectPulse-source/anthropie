@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 764" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dam-t dam-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 747" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dam-t dam-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="dam-t">Each year, what pushed the debt-to-GDP ratio up or held it back</title><desc id="dam-d">Stacked bars per year, in points of GDP: in orange the primary balance contribution (deficit as plus, surplus as minus), in blue the net effect of interest rates and growth, in grey stock-flow adjustments; the black dot is the actual change in the ratio. The two largest rises are in 2009 (+14.2 points) and 2020 (+16.7). From 2021 to 2023, the interest-growth effect takes 16.8 points off the ratio, as nominal GDP growth, price rises included, accelerates.</desc>
-<rect width="300" height="764" fill="#ffffff"/>
+<rect width="300" height="747" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Each year, what pushed the</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">debt-to-GDP ratio up or held</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">it back</text>
@@ -132,9 +132,9 @@
 <rect x="281.4" y="225.5" width="6.4" height="8.6" fill="#c9c5c0"/>
 <circle cx="284.6" cy="238.5" r="2.4" fill="#26262f"/>
 <rect x="290.3" y="240.5" width="6.4" height="21.5" fill="#eb6834"/>
-<rect x="290.3" y="262.0" width="6.4" height="0.1" fill="#184f95"/>
-<rect x="290.3" y="240.0" width="6.4" height="0.5" fill="#c9c5c0"/>
-<circle cx="293.5" cy="240.1" r="2.4" fill="#26262f"/>
+<rect x="290.3" y="239.8" width="6.4" height="0.7" fill="#184f95"/>
+<rect x="290.3" y="239.1" width="6.4" height="0.6" fill="#c9c5c0"/>
+<circle cx="293.5" cy="239.1" r="2.4" fill="#26262f"/>
 <rect x="0" y="362" width="14" height="14" fill="#eb6834"/>
 <text x="22" y="374" font-size="13.5" fill="#55524f">primary balance contribution</text>
 <rect x="0" y="384" width="14" height="14" fill="#184f95"/>
@@ -150,13 +150,12 @@
 <line x1="0" y1="555.0" x2="300" y2="555.0" stroke="#dcd8d3"/>
 <text x="0" y="576.0" font-size="13.5" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main</text>
 <text x="0" y="593.0" font-size="13.5" fill="#55524f">(B9, D41PAY), France, 1996-2025;</text>
-<text x="0" y="610.0" font-size="13.5" fill="#55524f">Eurostat releases of 22 April 2026 and</text>
-<text x="0" y="627.0" font-size="13.5" fill="#55524f">21 July 2026</text>
-<text x="0" y="648.0" font-size="13.5" fill="#55524f">Points of GDP per year; primary</text>
-<text x="0" y="665.0" font-size="13.5" fill="#55524f">balance: a deficit counts as plus, a</text>
-<text x="0" y="682.0" font-size="13.5" fill="#55524f">surplus as minus; the three bars add</text>
-<text x="0" y="699.0" font-size="13.5" fill="#55524f">up to the change (black dot), to</text>
-<text x="0" y="716.0" font-size="13.5" fill="#55524f">within a hundredth.</text>
-<text x="0" y="737.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="754.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="610.0" font-size="13.5" fill="#55524f">Eurostat release of 21 October 2026</text>
+<text x="0" y="631.0" font-size="13.5" fill="#55524f">Points of GDP per year; primary</text>
+<text x="0" y="648.0" font-size="13.5" fill="#55524f">balance: a deficit counts as plus, a</text>
+<text x="0" y="665.0" font-size="13.5" fill="#55524f">surplus as minus; the three bars add</text>
+<text x="0" y="682.0" font-size="13.5" fill="#55524f">up to the change (black dot), to</text>
+<text x="0" y="699.0" font-size="13.5" fill="#55524f">within a hundredth.</text>
+<text x="0" y="720.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="737.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
 </svg>

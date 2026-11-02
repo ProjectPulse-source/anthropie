@@ -240,16 +240,16 @@ F2_deficit_et_dette,ecart,2023,-5.4,Md EUR courants
 F2_deficit_et_dette,deficit,2024,170.2,Md EUR courants
 F2_deficit_et_dette,var_dette,2024,202.9,Md EUR courants
 F2_deficit_et_dette,ecart,2024,32.7,Md EUR courants
-F2_deficit_et_dette,deficit,2025,152.7,Md EUR courants
+F2_deficit_et_dette,deficit,2025,152.5,Md EUR courants
 F2_deficit_et_dette,var_dette,2025,154.0,Md EUR courants
-F2_deficit_et_dette,ecart,2025,1.3,Md EUR courants
-F16_seuil_3pct,dette_pct,,115.552,% ou Md EUR
-F16_seuil_3pct,g25,,2.016,% ou Md EUR
-F16_seuil_3pct,stab_g25,,2.284,% ou Md EUR
-F16_seuil_3pct,stab_g25b,,2.818,% ou Md EUR
-F16_seuil_3pct,stab_g3,,3.366,% ou Md EUR
-F16_seuil_3pct,g_seuil,,2.665,% ou Md EUR
-F16_seuil_3pct,euros_3pct,,89.833,% ou Md EUR
+F2_deficit_et_dette,ecart,2025,1.5,Md EUR courants
+F16_seuil_3pct,dette_pct,,115.682,% ou Md EUR
+F16_seuil_3pct,g25,,1.901,% ou Md EUR
+F16_seuil_3pct,stab_g25,,2.158,% ou Md EUR
+F16_seuil_3pct,stab_g25b,,2.822,% ou Md EUR
+F16_seuil_3pct,stab_g3,,3.369,% ou Md EUR
+F16_seuil_3pct,g_seuil,,2.662,% ou Md EUR
+F16_seuil_3pct,euros_3pct,,89.731,% ou Md EUR
 F16_seuil_3pct,dette_pct24,,112.635,% ou Md EUR
 F16_seuil_3pct,g24,,3.580,% ou Md EUR
 F16_seuil_3pct,g_seuil24,,2.736,% ou Md EUR
@@ -370,17 +370,17 @@ F6_fenetres,depenses,2017-2024,-0.7,points de PIB
 F6_fenetres,depenses_hors_interets,2017-2024,-0.9,points de PIB
 F6_fenetres,recettes,2017-2024,-3.1,points de PIB
 F6_fenetres,solde,2017-2024,-2.4,points de PIB
-F6_fenetres,depenses,2017-2025,-0.5,points de PIB
-F6_fenetres,depenses_hors_interets,2017-2025,-0.9,points de PIB
-F6_fenetres,recettes,2017-2025,-2.2,points de PIB
+F6_fenetres,depenses,2017-2025,-0.4,points de PIB
+F6_fenetres,depenses_hors_interets,2017-2025,-0.8,points de PIB
+F6_fenetres,recettes,2017-2025,-2.1,points de PIB
 F6_fenetres,solde,2017-2025,-1.7,points de PIB
 F6_fenetres,depenses,2019-2024,1.7,points de PIB
 F6_fenetres,depenses_hors_interets,2019-2024,1.2,points de PIB
 F6_fenetres,recettes,2019-2024,-1.8,points de PIB
 F6_fenetres,solde,2019-2024,-3.4,points de PIB
-F6_fenetres,depenses,2019-2025,1.9,points de PIB
-F6_fenetres,depenses_hors_interets,2019-2025,1.2,points de PIB
-F6_fenetres,recettes,2019-2025,-0.9,points de PIB
+F6_fenetres,depenses,2019-2025,2.0,points de PIB
+F6_fenetres,depenses_hors_interets,2019-2025,1.3,points de PIB
+F6_fenetres,recettes,2019-2025,-0.8,points de PIB
 F6_fenetres,solde,2019-2025,-2.7,points de PIB
 F6_fenetres_comptes_mai_2025,depenses,2017-2024,-0.5,points de PIB
 F6_fenetres_comptes_mai_2025,recettes,2017-2024,-2.9,points de PIB
@@ -406,7 +406,7 @@ F12_F13_hausse_dette,eur_macron_an,,137.4,Md EUR ou points de PIB
 F12_F13_hausse_dette,eur_hollande_an,,71.7,Md EUR ou points de PIB
 F5_par_heure,hausse_h,,20.9,M EUR par heure
 F5_par_heure,deficit24_h,,19.4,M EUR par heure
-F5_par_heure,prevu_h,,18.5,M EUR par heure
+F5_par_heure,prevu_h,,18.4,M EUR par heure
 F4_interets_enseignement,an,,2024.0,Md EUR ou %
 F4_interets_enseignement,int_apu,,60.1,Md EUR ou %
 F4_interets_enseignement,ens_apu,,148.6,Md EUR ou %
@@ -430,7 +430,7 @@ F3_cour_des_comptes,cour_pts,2025,2.3,Md EUR ou points de PIB
 F3_cour_des_comptes,cour_pts,2029,3.2,Md EUR ou points de PIB
 F3_cour_des_comptes,cour_pts,2031,3.5,Md EUR ou points de PIB
 F3_cour_des_comptes,cour_2024,,59.0,Md EUR
-F3_cour_des_comptes,surcroit_25,,59.2,Md EUR
+F3_cour_des_comptes,surcroit_25,,55.8,Md EUR
 F3_cour_des_comptes,pib29,,3343.8,Md EUR
 F3_cour_des_comptes,surcroit29_g2,,65.6,Md EUR
 F3_cour_des_comptes,surcroit29_g3,,97.4,Md EUR
@@ -662,13 +662,13 @@ hors_hemicycle_tests,dette_mdeur,H13,3595.50,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,hausse_depuis_election_2017,H13,1314.20,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,hausse_depuis_janvier_2017,H13,1405.00,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,points_pib_depuis_fin_2017,H13,20.20,"Md EUR, % du PIB ou points"
-hors_hemicycle_tests,manque_recettes_cumule_mdeur,H13,360.55,"Md EUR, % du PIB ou points"
-hors_hemicycle_tests,dette_pct_sans_manque,H13,103.51,"Md EUR, % du PIB ou points"
+hors_hemicycle_tests,manque_recettes_cumule_mdeur,H13,360.48,"Md EUR, % du PIB ou points"
+hors_hemicycle_tests,dette_pct_sans_manque,H13,103.63,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,dette_mdeur,H14,3535.90,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,hausse_depuis_election_2017,H14,1254.60,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,hausse_depuis_janvier_2017,H14,1345.40,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,points_pib_depuis_fin_2017,H14,18.70,"Md EUR, % du PIB ou points"
-hors_hemicycle_tests,manque_recettes_points_pib,H14,12.04,"Md EUR, % du PIB ou points"
+hors_hemicycle_tests,manque_recettes_points_pib,H14,12.05,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,dette_mdeur,H15,3595.50,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,hausse_depuis_election_2017,H15,1314.20,"Md EUR, % du PIB ou points"
 hors_hemicycle_tests,hausse_depuis_janvier_2017,H15,1405.00,"Md EUR, % du PIB ou points"
