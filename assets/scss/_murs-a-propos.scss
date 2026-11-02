@@ -54,8 +54,8 @@
 }
 
 .wall-tile__cover {
-  flex: 0 0 96px;
-  width: 96px;
+  flex: 0 0 120px;
+  width: 120px;   // +25 % (auteur, 02/11/2026)
   background: var(--color-bg-card);
   transform: rotateY(var(--book-emblem-rotation));
   box-shadow: 4px 4px 0 0 var(--color-accent-soft);
@@ -195,5 +195,5 @@
   .presse-wall .presse-tile__face .presse-tile__objet { font-size: 15px; }
 }
 @media (max-width: 420px) {
-  .wall-tile__cover { flex-basis: 78px; width: 78px; }
+  .wall-tile__cover { flex-basis: 98px; width: 98px; }
 }

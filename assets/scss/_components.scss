@@ -41,6 +41,17 @@
 }
 .site-header__nav a { color: var(--color-text-muted); text-decoration: none; transition: color 0.2s ease; }
 .site-header__nav a:hover, .site-header__nav a.is-active { color: var(--color-text); }
+// Onglet de la rubrique en cours (auteur, 02/11/2026, version 4 de la maquette) : filet posé sur le bord du bandeau.
+// `data-t` réserve la largeur du gras : le menu ne bouge pas d'une rubrique à l'autre.
+.site-header__nav > a { position: relative; text-align: center; }
+.site-header__nav > a::before {
+  content: attr(data-t); display: block; height: 0; overflow: hidden; visibility: hidden; font-weight: 600;
+}
+.site-header__nav > a.is-active { font-weight: 600; }
+.site-header__nav > a.is-active::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -22px; height: 3px; background: var(--color-accent);
+}
+.mobile-menu__nav a.is-active { border-left: 3px solid var(--color-accent); padding-left: 12px; font-weight: 600; }
 .primary-nav__lang {
   display: inline-flex; gap: 6px; opacity: 0.7;
   font-size: 12px; margin-left: 8px;

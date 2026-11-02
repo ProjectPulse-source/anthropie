@@ -5,6 +5,18 @@
 
 .ressources-index__intro { max-width: 42rem; margin-bottom: 1.5rem; }
 
+// Trois entrées par usage : Découvrir, Chercher, Réutiliser (auteur, 02/11/2026).
+.ressources-parcours { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0 0 1.75rem; }
+.ressources-parcours__entree {
+  display: flex; flex-direction: column; gap: 0.35rem; padding: 0.9rem 1rem;
+  background: var(--color-dossier-tint); border-left: 3px solid var(--color-accent); text-decoration: none;
+  &:hover, &:focus-visible { background: var(--color-dossier-tint-hover); }
+}
+.ressources-parcours__titre { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; line-height: 1.2; color: var(--color-text); }
+.ressources-parcours__texte { flex: 1; font-size: .93rem; line-height: 1.45; color: var(--color-text-muted); }
+.ressources-parcours__lien { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--color-accent); }
+@media (max-width: 760px) { .ressources-parcours { grid-template-columns: minmax(0, 1fr); } }
+
 // Sommaire : rangée de pastilles (composant `.pastilles`, _components.scss), flèche vers le bas pour des ancres.
 .ressources-index__sommaire { margin: 0 0 2.25rem; }
 .pastilles--ancres a::after { content: "\2193"; }

@@ -52,6 +52,14 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Onglet de rubrique, entrées de l'index, tuiles et couvertures
+
+Décisions de l'auteur. Menu : version 4 de la maquette (`D:\CONTRE_EXPERTISE\2026-11-02_MENU_ACTIF\MAQUETTE\`), filet sur le
+bord du bandeau, mot en gras sans décalage du menu, sous-pages comprises (`partials/menu-actif.html`), menu mobile aussi.
+Index `/ressources/` : trois entrées Découvrir, Chercher, Réutiliser (`parcours` en front matter, FR et EN). Tuiles de
+`/publications/` alignées sur le mur presse (164×107) ; couvertures d'`/a-propos/` +25 %. Sur téléphone, les tuiles de
+Publications restent à 86×58, pour laisser sa place au texte.
+
 ### 2026-11-02 — Vignette pour toute ressource, bloc Ressources réorganisé
 
 Demande de l'auteur. Toute ressource porte une vignette (`scripts/og_ressources_texte.py` : nuage de mots du glossaire,

@@ -1,0 +1,18 @@
+{{- /* menu-actif.html : URL de l'entrée du menu principal à marquer pour la page reçue, ou "" (auteur, 02/11/2026).
+       Les ressources vivent à la racine du site : c'est `ressource.bloc`, non la section, qui les rattache à « Ressources ».
+       La page dont l'URL est celle d'une entrée l'emporte (« Anthropie » est aussi une ressource). */ -}}
+{{- $p := . -}}
+{{- $cle := "" -}}
+{{- if in (slice "awp" "serie-awp") $p.Section }}{{ $cle = "serie-awp" -}}
+{{- else if eq $p.Section "publications" }}{{ $cle = "publications" -}}
+{{- else if eq $p.Section "livres" }}{{ $cle = cond (eq $p.Lang "en") "books" "livres" -}}
+{{- else if or $p.Params.ressource.bloc (in (slice "ressources" "enseignants" "glossaire" "premier-coup") $p.Section) }}{{ $cle = cond (eq $p.Lang "en") "resources" "ressources" -}}
+{{- end -}}
+{{- $actif := "" -}}
+{{- range site.Menus.main -}}
+  {{- if and $cle (in .URL (printf "/%s/" $cle)) }}{{ $actif = .URL }}{{ end -}}
+{{- end -}}
+{{- range site.Menus.main -}}
+  {{- if eq (.URL | relURL) $p.RelPermalink }}{{ $actif = .URL }}{{ end -}}
+{{- end -}}
+{{- return $actif -}}

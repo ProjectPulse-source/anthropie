@@ -6,6 +6,19 @@ description: "Les chiffres du débat public circulent souvent sans leur source n
 # `ressource.bloc` dans son front matter (layouts/ressources/list.html). Ce fichier ne porte
 # que l'ordre et l'intitulé des blocs. Un bloc inconnu arrête le build ; un bloc vide avertit.
 # Arbitrage : .claude/external-audits/ARBITRATIONS/PRO-20260921-105434_arbitrage_2026-09-28.md
+parcours:  # trois entrées en tête d'index, une par usage (auteur, 02/11/2026)
+  - titre: "Découvrir"
+    texte: "L'hypothèse de l'anthropie, sa définition et les notions qu'elle mobilise."
+    lien: "Lire la définition"
+    url: "/quest-ce-que-lanthropie/"
+  - titre: "Chercher"
+    texte: "Un chiffre ou une règle : dette, école, pouvoirs du président, repris aux séries et aux textes officiels."
+    lien: "Aller aux dossiers"
+    url: "#dette"
+  - titre: "Réutiliser"
+    texte: "Figures, données et citation prêtes à reprendre : les pages de données ont leur bloc « Réutiliser »."
+    lien: "Voir un exemple"
+    url: "/pourquoi-la-dette-publique-augmente/#reutiliser"
 blocs:
   - id: dette
     titre: "Dette publique"

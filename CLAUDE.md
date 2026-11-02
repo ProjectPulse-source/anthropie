@@ -8,7 +8,9 @@ Static site for **stephane-lalut.com** (Stéphane Lalut, économiste). Hugo Exte
 
 Section `awp` : quatre sorties par working paper — `single.html` plus **BibTeX / RIS / EndNote**, déclarées en `outputFormats` dans `hugo.toml`. L'URL `/awp/` redirige vers `/serie-awp/` par `aliases` ; les pages individuelles restent en `/awp/awp-01/`.
 
-Section `publications` : cartes via `partials/publication-card.html`, gabarit **160×107** (134×90 sur `/publications/`, auteur, 02/11/2026) que réemploie le mur presse de `/a-propos/` (`partials/presse-wall.html`) — une seule règle y sert donc les deux pages.
+Menu : la rubrique en cours se calcule dans `partials/menu-actif.html` (sous-pages comprises), onglet sur le bord du bandeau.
+
+Section `publications` : cartes via `partials/publication-card.html`, gabarit **160×107** (164×107 sur `/publications/` et le mur presse, auteur, 02/11/2026) que réemploie le mur presse de `/a-propos/` (`partials/presse-wall.html`) — une seule règle y sert donc les deux pages.
 
 ⚠ `assets/js/hero-flowfield.js` existe dans le dépôt mais n'est plus chargé (canvas supprimé lors du redesign home).
 

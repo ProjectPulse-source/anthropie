@@ -6,6 +6,19 @@ url: /en/resources/
 # Same mechanism as the French index: presence comes from each page's `ressource` block.
 # French-only pages appear here only when they declare `ressource.en_francais` (with `titre_en`),
 # and are labelled "in French".
+parcours:  # three entry points at the top of the index, one per use (author, 02/11/2026)
+  - titre: "Discover"
+    texte: "The anthropy hypothesis, its definition and the concepts it draws on."
+    lien: "Read the definition"
+    url: "/en/quest-ce-que-lanthropie/"
+  - titre: "Look up"
+    texte: "A figure or a rule: public debt and presidential powers, taken from official series and texts."
+    lien: "Go to the dossiers"
+    url: "#dette"
+  - titre: "Reuse"
+    texte: "Figures, data and citation ready to reuse: data pages have their own “Reuse” block."
+    lien: "See an example"
+    url: "/en/why-does-public-debt-rise/#reutiliser"
 blocs:
   - id: dette
     titre: "Public debt"

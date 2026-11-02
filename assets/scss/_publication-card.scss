@@ -196,16 +196,16 @@
 
 // Une entrée : petite tuile de revue, méta, titre vers l'article, chapô, thèmes, « Prolonge : », DOI.
 .pub-entree {
-  display: grid; grid-template-columns: 134px minmax(0, 1fr); gap: 0.25rem 1rem;
+  display: grid; grid-template-columns: 164px minmax(0, 1fr); gap: 0.25rem 1.1rem;
   padding: 0.9rem 0; border-bottom: 1px solid var(--color-rule-soft);
   scroll-margin-top: 80px; // l'en-tête est collant : une ancre #<slug> (mur presse) dégage l'entrée
 }
 .pub-entree__tuile { display: block; text-decoration: none; }
 .pub-entree .pub-thumb {
-  width: 134px; min-width: 134px; height: 90px; border-radius: 6px; padding: 7px 9px; gap: 4px;
-  .pub-thumb__label { font-size: 10px; letter-spacing: 0.14em; }
+  width: 164px; min-width: 164px; height: 107px; border-radius: 6px; padding: 8px 10px; gap: 5px; // même tuile que le mur presse de /a-propos/ (auteur, 02/11/2026)
+  .pub-thumb__label { font-size: 9.5px; letter-spacing: 0.14em; }
   .pub-thumb__name { font-size: 17px; }
-  .pub-thumb__rule { width: 26px; }
+  .pub-thumb__rule { width: 32px; }
 }
 .pub-entree__corps { display: grid; gap: 0.3rem; min-width: 0; }
 .pub-entree__meta { font-family: var(--font-sans); font-size: 12px; color: var(--color-text-subtle); margin: 0; }

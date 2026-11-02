@@ -50,6 +50,19 @@
 
   <div class="ressources-index__intro">{{ .Content }}</div>
 
+  {{- /* Trois entrées par usage (auteur, 02/11/2026) : texte et liens en front matter, `parcours`. */}}
+  {{- with .Params.parcours }}
+  <nav class="ressources-parcours" aria-label="{{ if $isEn }}Entry points{{ else }}Points d'entrée{{ end }}">
+    {{- range . }}
+    <a class="ressources-parcours__entree" href="{{ .url }}">
+      <span class="ressources-parcours__titre">{{ partial "fr-typo.html" .titre }}</span>
+      <span class="ressources-parcours__texte">{{ partial "fr-typo.html" .texte }}</span>
+      <span class="ressources-parcours__lien">{{ partial "fr-typo.html" .lien }}&nbsp;→</span>
+    </a>
+    {{- end }}
+  </nav>
+  {{- end }}
+
   {{- /* Sommaire en pastilles (règle des énumérations, 01/10/2026) : une rangée d'ancres, pas une phrase. */}}
   <nav class="pastilles pastilles--ancres ressources-index__sommaire" aria-label="{{ if $isEn }}Sections{{ else }}Blocs{{ end }}">
     <ul>{{- range $blocs }}<li{{ if .dossier }} class="is-dossier"{{ end }}><a href="#{{ .id }}">{{ if .dossier }}<span class="ressources-index__mot-dossier">{{ i18n "dossier_mot" | default "Dossier" }}</span>{{ partial "fr-typo.html" (.titre_barre | default .titre) }}{{ else }}{{ partial "fr-typo.html" .titre }}{{ end }}</a></li>{{ end -}}</ul>
