@@ -35,10 +35,10 @@
       <p class="oc-initiative">Une initiative culturelle proposée par votre {{ $structure }}, avec des livres financés par l'auteur.</p>
       <p class="oc-chapo">{{ partial "fr-typo.html" $p.intro }}</p>
       <p class="oc-mention">Sans paiement · Compte Amazon.fr nécessaire · Application Kindle gratuite</p>
-      {{- /* Les six couvertures dès l'en-tête, toutes de la même taille, dans l'ordre éditorial (auteur, 25/10 : « conserve
+      {{- /* Les six couvertures en éventail (maquette A, auteur, 02/11), toutes de la même taille ; ordre éditorial : le premier livre devant (auteur, 25/10 : « conserve
              exactement le modèle actuel et rajoute les livres ») ; décoratives, les cartes plus bas les nomment. */}}
       <div class="oc-tete__couvs" aria-hidden="true">
-        {{- range $p.ordre }}{{ partial "book-cover.html" (dict "slug" . "alt" "" "wrapClass" "oc-tete__couv" "sizes" "72px" "loading" "eager") }}{{ end -}}
+        {{- range $p.ordre }}{{ partial "book-cover.html" (dict "slug" . "alt" "" "wrapClass" "oc-tete__couv" "sizes" "(min-width: 1024px) 166px, (min-width: 860px) 134px, 32vw" "loading" "eager") }}{{ end -}}
       </div>
     </div>
   </header>
@@ -73,7 +73,7 @@
              du front matter reste celui de la lecture. */ -}}
       {{- if eq $i 0 }}<section class="oc-grille">{{ end }}
       <article class="ressources-book oc-livre oc-livre--carte" data-book="{{ $livre.Params.promo_slug }}">
-        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" "110px") }}</div>
+        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" "(min-width: 1024px) 150px, 110px") }}</div>
         <div class="oc-livre__corps">
           <p class="oc-theme">{{ $e.theme }}</p>
           <h3>{{ partial "fr-typo.html" $livre.Title }}</h3>

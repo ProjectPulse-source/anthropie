@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Pages `offre-culturelle` : livres en éventail, grille du site
+
+Décision de l'auteur : maquette A (`06_PROMOTION\PARTENARIATS\CSE\MAQUETTES_BANDEAU_2026-11-02\`) et prise en compte de
+la grille du jour, dont ces pages étaient restées à l'écart.
+
+- Bandeau : six couvertures de même taille chevauchées en éventail sur le fond nuit, sans socle ; le premier livre de
+  `ordre` au centre, au premier plan. Remplace la rangée sur socle clair du 25/10.
+- Grille : contenu sur 1 216 px, marges communes, texte à `--fs-body` (17 px, 18 px dès 1 024 px), textes secondaires
+  dérivés de cette variable ; couvertures des cartes à 150 px dès 1 024 px.
+- Défaut corrigé : `main ol, main ul` décalait les étapes et la chaîne de lecteurs par rapport au reste de la page.
+- Contrôle : build à 0 ; 8 pages à 320, 390, 768, 1024, 1280 et 1920 px (48 vues), compteur forcé car le guichet ne
+  répond pas au build local : 6 couvertures, 0 débordement, 0 erreur JS, blocs alignés à gauche ; `check-all --ci` à 0.
+- Coût déclaré : bandeau plus haut sur téléphone (651 px à 390 px), donc premier bouton plus bas.
+
 ### 2026-11-02 — Étiquette de format dans l'index des ressources
 
 Demande de l'auteur. Chaque carte de `/ressources/` porte une étiquette dérivée du premier `ressource.type`, sans champ neuf
@@ -103,7 +117,7 @@ maquette : `docs/ARBITRAGE_ERGONOMIE_2026-11-02.md`, `D:\CONTRE_EXPERTISE\2026-1
   (`--largeur-texte`), environ 121 signes par ligne contre 147 ; figures jusqu'à 960 px ; chapô à 810 px.
 - Texte à 18 px dès 1 024 px, 17 px en dessous, interligne 1,65 ; l'impression garde 16 px et 1,7.
 - Fond : un script du gabarit masque les ronds situés sous la grille. Sans JavaScript, ils restent.
-- Hors grille, déclaré : les 4 pages `offre-culturelle`, à gabarit propre.
+- Hors grille, déclaré : les 4 pages `offre-culturelle`, à gabarit propre (alignées le même jour, voir plus haut).
 
 ### 2026-11-02 — Typographie appliquée au site construit, FR et EN
 

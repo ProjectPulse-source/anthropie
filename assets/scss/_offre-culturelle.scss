@@ -10,7 +10,8 @@
   margin: 0;
   background: var(--color-bg);
   color: var(--color-text-body);
-  font: 16px/1.5 var(--font-sans);
+  // Grille du 02/11/2026 : mêmes corps, interligne et largeur que le reste du site (auteur, 02/11).
+  font: var(--fs-body)/var(--lh-body) var(--font-sans);
 }
 
 .oc {
@@ -18,12 +19,14 @@
   --oc-nuit: #1B2A4E;
   --oc-doux: #4a5263;
   --oc-trait: #e4e1d8;
+  --oc-t2: calc(var(--fs-body) - 2px);   // texte secondaire : 15 px, 16 px dès 1 024 px
+  --oc-t3: calc(var(--fs-body) - 3px);   // mentions : 14 px, 15 px dès 1 024 px
 
   img { display: block; max-width: 100%; height: auto; }
   a { color: var(--oc-bleu); }
 }
 
-.oc-wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+.oc-wrap { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--marge-main); box-sizing: border-box; }
 
 .oc-tete {
   background: var(--oc-nuit);
@@ -45,29 +48,37 @@
   letter-spacing: .08em; text-transform: uppercase; color: #c9d2e6;
 }
 .oc-titre {
-  font: 600 clamp(23px, 6vw, 36px)/1.15 var(--font-serif);
+  font: 600 clamp(23px, 6vw, 40px)/1.15 var(--font-serif);
   margin: 4px 0 6px; color: #fff;
 }
-.oc-chapo { margin: 0 0 6px; color: #e3e8f2; font-size: 15px; }
-.oc-mention { font-size: 13px; color: #c9d2e6; margin: 0; }
-// Bande des six couvertures (auteur, 25/10) : une rangée de couvertures égales, sous le texte sur téléphone, à droite au-delà
-// de 860 px ; aucune n'est mise en avant. Posée sur un socle clair (solution 2 retenue par l'auteur, 25/10) : couvertures
-// sombres et claires s'y lisent toutes, l'en-tête reste nuit.
+.oc-chapo { margin: 0 0 6px; color: #e3e8f2; font-size: var(--fs-body); }
+.oc-mention { font-size: var(--oc-t3); color: #c9d2e6; margin: 0; }
+// Éventail des six couvertures (maquette A retenue par l'auteur, 02/11/2026 ; remplace la rangée sur socle clair du 25/10) :
+// mêmes tailles, chevauchées, directement sur le bandeau nuit. L'ordre du DOM est celui du front matter : le premier livre,
+// choisi pour le public de la page, est au centre, au premier plan. Le liseré et le halo détachent les couvertures sombres.
 .oc-tete__couvs {
-  display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 14px 0 0; max-width: 460px;
-  background: linear-gradient(180deg, #fff 0, #eef2f8 100%); border-radius: 10px; padding: 12px 12px 14px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 12px 30px rgba(0, 0, 0, .35);
-  box-sizing: border-box;
-  // min-width : sans lui, la largeur intrinsèque de l'image (1000 px) élargit la colonne de la grille.
+  position: relative; isolation: isolate; width: 100%; max-width: 380px; aspect-ratio: 1 / .68; margin: 14px auto 2px;
+  &::before { content: ""; position: absolute; z-index: -1; inset: -4% 0; background: radial-gradient(closest-side, rgba(143, 170, 220, .28), transparent); }
+  .oc-tete__couv {
+    position: absolute; width: 32%; transform: rotate(var(--a)); transform-origin: 50% 100%; transition: transform .18s;
+    &:hover { transform: rotate(var(--a)) translateY(-7%); z-index: 9; }
+  }
   // Format 2:3 imposé : deux couvertures sont en 1000 × 1600 ; elles perdent 3 % en haut et en bas plutôt que de dépasser.
-  .oc-tete__couv { min-width: 0; }
-  img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 2px; box-shadow: 0 1px 2px rgba(10, 20, 45, .2), 0 6px 12px rgba(10, 20, 45, .22); }
+  img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .22), -3px 4px 12px rgba(5, 10, 25, .55); }
+  .oc-tete__couv:nth-child(1) { left: 30%; top: 9%;  z-index: 6; --a: -3deg; }
+  .oc-tete__couv:nth-child(2) { left: 38%; top: 9%;  z-index: 5; --a: 3deg; }
+  .oc-tete__couv:nth-child(3) { left: 21%; top: 12%; z-index: 4; --a: -9deg; }
+  .oc-tete__couv:nth-child(4) { left: 47%; top: 12%; z-index: 3; --a: 9deg; }
+  .oc-tete__couv:nth-child(5) { left: 12%; top: 17%; z-index: 2; --a: -15deg; }
+  .oc-tete__couv:nth-child(6) { left: 56%; top: 17%; z-index: 1; --a: 15deg; }
 }
+@media (prefers-reduced-motion: reduce) { .oc-tete__couvs .oc-tete__couv { transition: none; } }
 @media (min-width: 860px) {
   .oc-tete .oc-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 420px; column-gap: 32px; }
   .oc-tete .oc-wrap > * { grid-column: 1; }
-  .oc-tete .oc-wrap > .oc-tete__couvs { grid-column: 2; grid-row: 1 / span 6; align-self: center; margin: 0; gap: 10px; padding: 16px; }
+  .oc-tete .oc-wrap > .oc-tete__couvs { grid-column: 2; grid-row: 1 / span 6; align-self: center; margin: 0; max-width: none; }
 }
+@media (min-width: 1024px) { .oc-tete .oc-wrap { grid-template-columns: minmax(0, 1fr) 520px; column-gap: 40px; } }
 
 .oc-dispo {
   display: flex; justify-content: space-between; align-items: baseline;
@@ -80,14 +91,14 @@
   background: #fff4d6; color: #5a4400; border-radius: 8px;
   padding: 10px 14px; font-size: 14.5px; margin: 0 0 12px;
 }
-.oc-sec { font: 600 19px var(--font-serif); color: var(--oc-nuit); margin: 24px 0 10px; }
+.oc-sec { font: 600 calc(var(--fs-body) + 4px) var(--font-serif); color: var(--oc-nuit); margin: 24px 0 10px; }
 
 .oc-vitrine { display: grid; gap: 12px; }
 .oc-liste { background: #fff; border: 1px solid var(--oc-trait); border-radius: 10px; }
 
 .oc-livre {
-  h3 { font: 600 18px/1.25 var(--font-serif); margin: 2px 0 4px; }
-  .ressources-book__state { font-size: 13.5px; color: var(--oc-doux); margin: 0 0 4px; }
+  h3 { font: 600 calc(var(--fs-body) + 2px)/1.25 var(--font-serif); margin: 2px 0 4px; }
+  .ressources-book__state { font-size: var(--oc-t3); color: var(--oc-doux); margin: 0 0 4px; }
   .ressources-book__state:empty { display: none; }
 }
 .oc-livre--carte {
@@ -105,26 +116,26 @@
   .oc-btn { padding: 8px 12px; font-size: 14px; min-height: 40px; margin-top: 6px; }
 }
 .oc-theme {
-  font-size: 11.5px; font-weight: 600; letter-spacing: .05em;
+  font-size: 12.5px; font-weight: 600; letter-spacing: .05em;
   text-transform: uppercase; color: var(--oc-bleu); margin: 0;
 }
-.oc-q { font-style: italic; margin: 0 0 3px; font-size: 15px; }
-.oc-l { font-size: 14px; color: var(--oc-doux); margin: 0 0 10px; }
+.oc-q { font-style: italic; margin: 0 0 3px; font-size: var(--fs-body); line-height: 1.4; }
+.oc-l { font-size: var(--oc-t2); color: var(--oc-doux); margin: 0 0 10px; }
 
 .oc-btn {
   display: inline-block; background: var(--oc-bleu); color: #fff; border: 0; border-radius: 6px;
-  padding: 10px 14px; font: 600 15px var(--font-sans); cursor: pointer; min-height: 44px;
+  padding: 10px 14px; font: 600 var(--oc-t2) var(--font-sans); cursor: pointer; min-height: 44px;
   &:hover:not(:disabled), &:focus-visible { background: var(--oc-nuit); outline: 2px solid #9fb6dc; outline-offset: 2px; }
   &:disabled { background: #b8c2d3; cursor: default; }
 }
 
-.oc-aide { background: #eef3fa; border-radius: 8px; padding: 12px 14px; font-size: 14px; margin: 18px 0 0; }
+.oc-aide { background: #eef3fa; border-radius: 8px; padding: 12px 14px; font-size: var(--oc-t2); margin: 18px 0 0; }
 .oc-auteur {
-  font-size: 14px; color: var(--oc-doux);
+  font-size: var(--oc-t2); color: var(--oc-doux);
   border-top: 1px solid var(--oc-trait); margin-top: 20px; padding-top: 14px;
 }
 .oc-conditions {
-  font-size: 14px; color: var(--oc-doux); padding-bottom: 32px;
+  font-size: var(--oc-t2); color: var(--oc-doux); padding-bottom: 32px;
   ul { margin: 0; padding-left: 20px; }
   li { margin: 6px 0; }
   b { color: var(--color-text-body); }
@@ -170,11 +181,11 @@
 
 // Aperçu du livre avant le choix
 .oc-apercu {
-  margin: 0 0 10px; font-size: 14px;
-  summary { cursor: pointer; color: var(--oc-bleu); font-weight: 600; font-size: 14px; }
+  margin: 0 0 10px; font-size: var(--oc-t2);
+  summary { cursor: pointer; color: var(--oc-bleu); font-weight: 600; font-size: var(--oc-t2); }
   p { margin: 6px 0 0; color: var(--color-text-body); line-height: 1.5; }
   .oc-apercu__sous-titre { font-style: italic; }
-  .oc-apercu__meta { font-size: 13px; color: var(--oc-doux); }
+  .oc-apercu__meta { font-size: var(--oc-t3); color: var(--oc-doux); }
   // Colonne de 161 px à 320 px : « détail · 2 paragraphes ▾ » est insécable et sortait de la carte (mesuré : 4 px).
   .repli__action { font-size: 0.7rem; letter-spacing: 0; }
 }
@@ -186,7 +197,7 @@
   &[hidden] { display: none; }
 }
 .oc-compteur__n { margin: 0; font: 700 44px/1 var(--font-serif); color: var(--oc-bleu); }
-.oc-compteur__txt { margin: 0; font-size: 15px; line-height: 1.35; color: var(--color-text-body); }
+.oc-compteur__txt { margin: 0; font-size: var(--oc-t2); line-height: 1.35; color: var(--color-text-body); }
 .oc-compteur__jauge {
   grid-column: 1 / -1; height: 8px; margin-top: 8px; background: #e4e9f2; border-radius: 4px; overflow: hidden;
   span { display: block; height: 100%; width: 100%; background: var(--oc-bleu); transition: width .4s; }
@@ -203,18 +214,18 @@
   list-style: none; margin: 0; padding: 0; display: grid; gap: 8px;
   li {
     background: #fff; border: 1px solid var(--oc-trait); border-left: 4px solid var(--oc-bleu);
-    border-radius: 8px; padding: 10px 14px; font-size: 14.5px; line-height: 1.45;
+    border-radius: 8px; padding: 10px 14px; font-size: var(--oc-t2); line-height: 1.45;
   }
 }
 .oc-chaine .oc-auteur { border-top: 0; margin-top: 14px; padding-top: 0; }
 
 // Audit du 25/10 : qui finance / qui propose ; parcours en trois étapes avant les livres ; notes plus lisibles.
-.oc-initiative { margin: 2px 0 6px; font-size: 15px; font-weight: 600; color: #fff; }
+.oc-initiative { margin: 2px 0 6px; font-size: var(--fs-body); font-weight: 600; color: #fff; }
 .oc-etapes {
   ol { list-style: none; counter-reset: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   li {
     display: grid; grid-template-columns: 24px 1fr; column-gap: 12px; align-items: start;
-    padding: 9px 12px; background: #fff; border: 1px solid var(--oc-trait); border-radius: 10px; font-size: 14.5px;
+    padding: 9px 12px; background: #fff; border: 1px solid var(--oc-trait); border-radius: 10px; font-size: var(--oc-t2);
   }
 }
 .oc-etapes__n {
@@ -222,11 +233,11 @@
   font: 700 13px/24px var(--font-sans); text-align: center;
 }
 @media (min-width: 720px) { .oc-etapes ol { grid-template-columns: repeat(3, 1fr); } }
-.oc-note .ressources-book__rating { font-size: 14px; }
+.oc-note .ressources-book__rating { font-size: var(--oc-t3); }
 
 .oc-chaine__action { margin: 14px 0 0; a.oc-btn { text-decoration: none; } }
 
-// Six cartes égales : deux colonnes sur ordinateur, une sur téléphone ; couverture à gauche, 110 px (88 px téléphone).
+// Six cartes égales : deux colonnes sur ordinateur, une sur téléphone ; couverture à gauche, 150 px dès 1 024 px, 110 px, 88 px téléphone.
 // minmax(0, …) : une piste en 1fr ne descend pas sous le contenu de la carte (305 px mesurés, page débordante à 320 px).
 .oc-grille { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
 .oc-livre--carte { grid-template-columns: 88px minmax(0, 1fr); }
@@ -234,9 +245,12 @@
   .oc-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .oc-livre--carte { grid-template-columns: 110px minmax(0, 1fr); }
 }
+@media (min-width: 1024px) { .oc-livre--carte { grid-template-columns: 150px minmax(0, 1fr); gap: 16px; padding: 16px; } }
 // Bouton-lien : la couleur des liens de la page (.oc a) l'emportait, texte bleu sur fond bleu (mesuré le 25/10).
 .oc a.oc-btn, .oc a.oc-btn:hover, .oc a.oc-btn:focus-visible { color: #fff; }
 // L'exemption « main .… li { padding-left: 0 !important } » (_typography.scss) retire aussi le retrait voulu ici :
 // il se rétablit à une spécificité supérieure (mesuré le 25/10 : texte de la chaîne à 4 px du bord).
 .oc .oc-chaine__maillons li { padding-left: 14px !important; }
 .oc .oc-etapes li { padding-left: 12px !important; }
+// Même règle globale pour le retrait de la liste : « main ol, main ul » (!important) décalait étapes et chaîne de 1,6 em.
+.oc .oc-etapes ol, .oc .oc-chaine__maillons { margin: 0 !important; padding: 0 !important; }
