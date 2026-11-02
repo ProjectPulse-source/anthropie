@@ -52,6 +52,13 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-02 — Étiquette de format dans l'index des ressources
+
+Demande de l'auteur. Chaque carte de `/ressources/` porte une étiquette dérivée du premier `ressource.type`, sans champ neuf
+(Données, Explication, Droit et institutions, Notion, Corpus, Guide pratique ; FR et EN) ; `nature` garde la provenance, le
+doublon « Notion — » est retiré à l'affichage (`partials/ressource-format.html`, `ressource-format-seul.html`). Les cartes
+de discipline de « Pour enseigner » n'en portent pas : elles regroupent plusieurs pages.
+
 ### 2026-11-02 — Onglet de rubrique, entrées de l'index, tuiles et couvertures
 
 Décisions de l'auteur. Menu : version 4 de la maquette (`D:\CONTRE_EXPERTISE\2026-11-02_MENU_ACTIF\MAQUETTE\`), filet sur le

@@ -136,6 +136,12 @@ main .ressources-index__liste--dossier {
 .ressources-index__entree--vignette .ressources-index__texte { flex: 1; background: var(--color-dossier-tint); }
 .ressources-index__entree--vignette:hover .ressources-index__texte { background: var(--color-dossier-tint-hover); }
 
+// Étiquette de format, dérivée de `ressource.type` (auteur, 02/11/2026) ; la provenance suit, en petites capitales.
+.ressources-index__format {
+  display: inline-block; margin-right: 0.4rem; padding: 1px 8px; border-radius: 999px;
+  font-family: var(--font-sans); font-size: 11px; font-weight: 600; letter-spacing: 0; text-transform: none;
+  color: var(--color-accent); background: #fff; border: 1px solid var(--color-accent-soft);
+}
 .ressources-index__nature {
   font-size: .78rem; letter-spacing: .03em; text-transform: uppercase;
   color: var(--color-text-subtle); margin: 0;

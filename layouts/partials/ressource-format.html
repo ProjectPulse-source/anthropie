@@ -1,0 +1,20 @@
+{{- /* ressource-format.html : étiquette de format d'une ressource et sa provenance (auteur, 02/11/2026).
+       Entrée : dict { r (= .Params.ressource), nature (chaîne à afficher), isEn }. Le format se dérive du premier
+       `ressource.type`, sans champ neuf. Si `nature` commence par ce format (« Notion — … »), le doublon est retiré. */ -}}
+{{- $format := partial "ressource-format-seul.html" . -}}
+{{- $nature := .nature | default "" -}}
+{{- $bas := lower $nature -}}
+{{- $tete := printf "%s — " (lower $format) -}}
+{{- if and .isEn (hasPrefix $bas "notion — ") }}{{ $tete = "notion — " }}{{ end -}}
+{{- if and $format (hasPrefix $bas $tete) -}}
+  {{- $nature = substr $nature (strings.RuneCount $tete) -}}
+  {{- $nature = printf "%s%s" (substr $nature 0 1 | upper) (substr $nature 1) -}}
+{{- else if and $format (hasPrefix $bas (lower $format)) -}}
+  {{- $nature = "" -}}
+{{- end -}}
+{{- if or $format $nature -}}
+<p class="ressources-index__nature">
+  {{- with $format }}<span class="ressources-index__format">{{ . }}</span>{{ end -}}
+  {{- with $nature }} {{ partial "fr-typo.html" . }}{{ end -}}
+</p>
+{{- end -}}

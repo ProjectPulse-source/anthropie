@@ -7,7 +7,7 @@
 <aside class="ressources-index__encart{{ if not $vig }} ressources-index__encart--sans-image{{ end }}">
   {{- with $vig }}<a class="ressources-index__encart-image" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="/{{ . }}" alt="" width="720" height="378" loading="lazy"></a>{{ end }}
   <div class="ressources-index__encart-corps">
-    {{ with $r.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    {{ partial "ressource-format.html" (dict "r" $r "nature" $r.nature "isEn" .isEn) }}
     <h3><a href="{{ $p.RelPermalink }}">{{ partial "fr-typo.html" (or $r.intitule $p.Title) }}</a></h3>
     {{ with $p.Description }}<p class="ressources-index__desc">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $p.Params.isbn)) }}</p>{{ end }}
     <p><a class="btn btn--primary" href="{{ $p.RelPermalink }}">{{ with $r.bouton }}{{ partial "fr-typo.html" . }}{{ else }}{{ i18n "ressources_ouvrir" }}{{ end }}&nbsp;→</a></p>

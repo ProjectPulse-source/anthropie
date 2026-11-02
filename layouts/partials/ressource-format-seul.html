@@ -1,0 +1,15 @@
+{{- /* ressource-format-seul.html : nom du format dérivé de `ressource.type`, ou "". */ -}}
+{{- $noms := dict
+      "quantitatif" (slice "Données" "Data")
+      "explicatif-causal" (slice "Explication" "Explainer")
+      "juridique-institutionnel" (slice "Droit et institutions" "Law and institutions")
+      "notion" (slice "Notion" "Concept")
+      "corpus" (slice "Corpus" "Corpus")
+      "usage" (slice "Guide pratique" "Practical guide") -}}
+{{- $format := "" -}}
+{{- with .r.type -}}
+  {{- $t := . -}}
+  {{- if reflect.IsSlice . }}{{ $t = index . 0 }}{{ end -}}
+  {{- with index $noms $t }}{{ $format = index . (cond $.isEn 1 0) }}{{ end -}}
+{{- end -}}
+{{- return $format -}}

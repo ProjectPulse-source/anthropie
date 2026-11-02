@@ -14,11 +14,11 @@
   {{- with $vig }}<img class="ressources-index__vignette" src="/{{ . }}" alt="" width="720" height="378" loading="lazy">{{ end }}
   <div class="ressources-index__texte">
   {{- if .fr }}
-    <p class="ressources-index__nature">{{ with $r.nature_en }}{{ . }}{{ else }}{{ $r.nature }}{{ end }} · <span class="ressources-index__langue" lang="en">in French</span></p>
+    <p class="ressources-index__nature">{{ with partial "ressource-format-seul.html" (dict "r" $r "isEn" true) }}<span class="ressources-index__format">{{ . }}</span> {{ end }}{{ with $r.nature_en }}{{ . }}{{ else }}{{ $r.nature }}{{ end }} · <span class="ressources-index__langue" lang="en">in French</span></p>
     <h3><a href="{{ $p.Permalink }}" hreflang="fr">{{ $r.titre_en }}</a></h3>
     <p class="ressources-index__titre-fr" lang="fr">{{ partial "fr-typo.html" $p.Title }}</p>
   {{- else }}
-    {{ with $r.nature }}<p class="ressources-index__nature">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    {{ partial "ressource-format.html" (dict "r" $r "nature" $r.nature "isEn" (eq $p.Lang "en")) }}
     <h3><a href="{{ $p.RelPermalink }}">{{ partial "fr-typo.html" (or $r.intitule $p.Title) }}</a></h3>
     {{- /* desc-figures d'abord (01/10) : la description de /cout-de-la-dette-publique/ porte des jetons
            {dette.*} ; rendue brute, elle s'affichait « {dette.interets_mdeur} milliards » sur les deux index. */}}
