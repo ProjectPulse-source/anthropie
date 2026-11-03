@@ -69,12 +69,13 @@
 <text x="299.8" y="242.2" font-size="11" fill="#0A0A0E" text-anchor="start">Italie</text>
 <text x="104.8" y="131.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Luxembourg</text>
 <text x="104.8" y="131.8" font-size="11" fill="#0A0A0E" text-anchor="start">Luxembourg</text>
-<text x="202.9" y="143.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Hongrie</text>
-<text x="202.9" y="143.6" font-size="11" fill="#0A0A0E" text-anchor="end">Hongrie</text>
+<line x1="209.9" y1="139.6" x2="194.4" y2="139.6" stroke="#52514e" stroke-width="1"/>
+<text x="192.9" y="143.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Hongrie</text>
+<text x="192.9" y="143.6" font-size="11" fill="#0A0A0E" text-anchor="end">Hongrie</text>
 <text x="518.6" y="204.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Portugal</text>
 <text x="518.6" y="204.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Portugal</text>
-<text x="215.9" y="166.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Roumanie</text>
-<text x="215.9" y="166.7" font-size="11" fill="#0A0A0E" text-anchor="start">Roumanie</text>
+<text x="206.9" y="168.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Roumanie</text>
+<text x="206.9" y="168.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Roumanie</text>
 <text x="676.0" y="241.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Suède</text>
 <text x="676.0" y="241.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Suède</text>
 <text x="151.5" y="372.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Danemark</text>

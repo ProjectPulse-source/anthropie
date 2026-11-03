@@ -679,6 +679,63 @@ def filet(px, py, b, r=7, mini=16):
             % (px + (qx - px) * r / lg, py + (qy - py) * r / lg, qx - (qx - px) * 1.5 / lg, qy - (qy - py) * 1.5 / lg, INK2))
 
 
+def _croise(a, b, c, d) -> bool:
+    """Les segments ab et cd se coupent-ils (hors extrémités communes) ?"""
+    def o(p, q, r):
+        return (q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])
+    return o(a, b, c) * o(a, b, d) < 0 and o(c, d, a) * o(c, d, b) < 0
+
+
+def bout_a_bout(code, b, points, ecart=16) -> bool:
+    """Un autre point à hauteur du texte et collé à l'un de ses bouts : le nom se lit comme le sien, filet ou non
+    (03/11/2026 : « Bulgarie », relié à son carré, posé à gauche du point de l'Estonie)."""
+    return any(c != code and b[1] - 3 <= qy <= b[3] + 3 and 0 < max(b[0] - qx, qx - b[2], 0) <= ecart for c, qx, qy in points)
+
+
+def barre(b, segs, marge=0.0) -> bool:
+    """La boîte b est-elle traversée (ou frôlée à « marge » près) par l'un des segments ?"""
+    for (x1, y1, x2, y2) in segs:
+        n = int(math.hypot(x2 - x1, y2 - y1)) + 1
+        if any(b[0] - marge < x1 + (x2 - x1) * k / n < b[2] + marge and b[1] - marge < y1 + (y2 - y1) * k / n < b[3] + marge
+               for k in range(n + 1)):
+            return True
+    return False
+
+
+def filet_libre(px, py, b, code, points, boites, r=7, marge=10.5, liens=(), traits=()) -> list[str]:
+    """Conflits BLOQUANTS d'un filet : il passe à moins de 5 px du BORD d'un autre point (marge = rayon + 5), traverse un autre nom, croise un autre filet ou longe un
+    trait du graphique (pointillé, droite). Un filet qui égare l'oeil vers un autre pays ferait l'erreur qu'il doit
+    empêcher (03/11/2026 : filets des Pays-Bas et de l'Irlande croisés ; celui de la Croatie confondu avec le pointillé)."""
+    qx, qy = min(max(px, b[0]), b[2]), min(max(py, b[1] - 1), b[3])
+    lg = math.hypot(qx - px, qy - py)
+    if lg < 1:
+        return []
+    out = []
+    n = int(lg) + 1
+    pts = [(px + (qx - px) * k / n, py + (qy - py) * k / n) for k in range(n + 1) if lg * k / n >= r]
+    for c, cx, cy in points:
+        if c != code and any(math.hypot(cx - x, cy - y) < marge for x, y in pts):
+            out.append("filet frôle le point %s" % c)
+    for c, o in boites:
+        if any(o[0] - 1 < x < o[2] + 1 and o[1] - 1 < y < o[3] + 1 for x, y in pts):
+            out.append("filet traverse l'étiquette de %s" % c)
+    if any(_croise((px, py), (qx, qy), (l[0], l[1]), (l[2], l[3])) for l in liens):
+        out.append("filet croise un autre filet")
+
+    def pres(x, y, t):
+        vx, vy = t[2] - t[0], t[3] - t[1]
+        k = max(0.0, min(1.0, ((x - t[0]) * vx + (y - t[1]) * vy) / ((vx * vx + vy * vy) or 1)))
+        return math.hypot(x - t[0] - k * vx, y - t[1] - k * vy) < 3
+    if pts and any(sum(pres(x, y, t) for x, y in pts) > 0.3 * len(pts) for t in traits):
+        out.append("filet longe un trait")
+    # Le BOUT du filet ne se pose pas sur un trait (03/11/2026 : celui de Chypre finissait sur le pointillé
+    # Slovénie-Hongrie, que l'oeil remontait alors jusqu'au mauvais nom).
+    if any(math.hypot(qx - t[0] - k * (t[2] - t[0]), qy - t[1] - k * (t[3] - t[1])) < 6
+           for t in traits for k in [i / 50 for i in range(51)]):
+        out.append("bout du filet sur un trait")
+    return out
+
+
 def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, source, note, etiquettes, droites=None,
           jumeaux=(), ymin=0.0, fmt_y=None, lang="fr"):
     H = 440
@@ -693,9 +750,11 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
     e += axe_x(X0, X1, Y1, 0, xmax, pasx, lambda v: nb(v, 0) + pc, lx)
     by = {x["code"]: x for x in rows}
     traits = []  # segments dessinés (pointillés, droites), que l'anti-chevauchement des étiquettes doit éviter
+    pointilles = []  # les seuls pointillés des faux jumeaux : un nom facultatif ou éloigné ne s'y pose jamais
     for j in jumeaux:
         a, b = by[j["bas"]], by[j["haut"]]
         traits.append((sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b))))
+        pointilles.append(traits[-1])
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.5" stroke-dasharray="3 3"/>'
                  % (sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b)), MUTED))
     for (a, b, xa, xb, col) in (droites or []):
@@ -721,12 +780,21 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
                  # en fin de dictionnaire, ils ne changent la place d'aucune étiquette qui en trouvait une avant.
                  "d2": (14, 4, "start"), "g2": (-14, 4, "end"), "b3": (0, 27, "middle"), "h3": (0, -18, "middle"),
                  "bd2": (13, 21, "start"), "bg2": (-13, 21, "end")}
+    # Couronnes éloignées (03/11/2026, auteur : « nommer tous les pays possibles ; la règle, c'est que les libellés ne
+    # se mordent pas ») : le nom y est TOUJOURS relié à son point par un filet, qui ne doit frôler aucun autre point
+    # ni traverser aucun nom. Essayées après toutes les places proches.
+    LOIN = {"dL": (24, 4, "start"), "gL": (-24, 4, "end"), "hL": (0, -28, "middle"), "bL": (0, 37, "middle"),
+            "hdL": (18, -22, "start"), "hgL": (-18, -22, "end"), "bdL": (18, 32, "start"), "bgL": (-18, 32, "end"),
+            "dL2": (40, 4, "start"), "gL2": (-40, 4, "end"), "hL2": (0, -44, "middle"), "bL2": (0, 52, "middle"),
+            "hdL2": (30, -36, "start"), "hgL2": (-30, -36, "end"), "bdL2": (30, 46, "start"), "bgL2": (-30, 46, "end"),
+            "bL3": (0, 64, "middle"), "hdL3": (38, -46, "start"), "hgL3": (-38, -46, "end"), "dL3": (56, 4, "start"),
+            "gL3": (-56, 4, "end"), "bdL3": (38, 58, "start"), "bgL3": (-38, 58, "end")}
     noms = dict(etiquettes) if isinstance(etiquettes, dict) else {c: "h" for c in etiquettes}
     for j in jumeaux:
         noms.setdefault(j["bas"], "h")
         noms.setdefault(j["haut"], "h")
     points = [(x["code"], sx(fx(x)), sy(fy(x))) for x in rows]
-    boites, echecs = [], []
+    boites, echecs, liens = [], [], []
 
     def conflits(code, lib, b, px, py):
         """(bloquants, évitables)."""
@@ -753,8 +821,10 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
 
     # Nom FACULTATIF (préférence préfixée « ? », 03/11/2026 : nommer davantage de pays du nuage) : posé APRÈS les
     # obligatoires, seulement à une place sans aucun conflit (ni trait ni ambiguïté) ; sinon omis, et dit au journal.
+    # Les facultatifs dans l'ordre de la table d'appel (03/11/2026 : les Pays-Bas avant l'Irlande, dont le filet leur
+    # prenait la place).
     ordre = [x for x in rows if noms.get(x["code"]) and not noms[x["code"]].startswith("?")] \
-        + [x for x in rows if (noms.get(x["code"]) or "").startswith("?")]
+        + [by[c] for c, v in noms.items() if v.startswith("?") and c in by]
     for x in ordre:
         pref = noms[x["code"]]
         facultatif = pref.startswith("?")
@@ -766,35 +836,53 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
         lib = x[cle_nom]
         larg = largeur_texte(lib, TY_ANNOT) * (1.07 if x["code"] == "FR" else 1.0)
         essais = []
-        for pos in [pref] + [q for q in POSITIONS if q != pref]:
-            dx, dy, anc = POSITIONS[pos]
+        for pos in [pref] + [q for q in POSITIONS if q != pref] + list(LOIN):
+            loin = pos in LOIN
+            dx, dy, anc = (LOIN if loin else POSITIONS)[pos]
             gx = {"middle": px + dx - larg / 2, "end": px + dx - larg, "start": px + dx}[anc]
             b = (gx, py + dy - TY_ANNOT * 0.75, gx + larg, py + dy + 1)
             dur, trait = conflits(x["code"], lib, b, px, py)
+            # Un pointillé de faux jumeaux qui traverse un nom facultatif ou éloigné se lirait comme menant à lui
+            # (03/11/2026 : Slovaquie, Chypre ; Portugal sur téléphone).
+            if (facultatif or loin) and barre(b, pointilles, 3):
+                dur = dur + ["nom sur un pointillé"]
+            if loin:
+                dur = dur + filet_libre(px, py, b, x["code"], points, boites, liens=liens, traits=traits)
+                # Éloigné, le nom se rattache par son filet ; il ne doit pas pour autant toucher le point d'un autre
+                # pays (10 px), sinon le filet ne suffit plus. La règle d'ambiguïté des places proches, faite pour un
+                # nom collé à son point, ne s'applique pas ici.
+                if any(c != x["code"] and math.hypot(cx - min(max(cx, b[0]), b[2]), cy - min(max(cy, b[1]), b[3])) < 10
+                       for c, cx, cy in points) or bout_a_bout(x["code"], b, points):
+                    dur = dur + ["nom éloigné posé contre un autre point"]
             if fige and pos == pref and not dur:
                 trait = False
-            essais.append((dur, trait, dx, dy, anc, b))
-            if not dur and not trait:
+            # Rang : place proche nette 0 ; proche sous un trait (le liseré l'interrompt) 1 ; éloignée, reliée par un
+            # filet 2 ; proche mais voisine d'un autre point 3.
+            rg = 2 if loin else {False: 0, "trait": 1, "ambigu": 3}[trait]
+            essais.append((dur, rg, dx, dy, anc, b, loin))
+            if not dur and rg in (0, 2):
                 break
         libres = [t for t in essais if not t[0]]
         if facultatif:
-            # Un trait sous le nom est interrompu par le liseré (comme pour un obligatoire) ; une ambiguïté, jamais.
-            libres = [t for t in libres if t[1] != "ambigu"]
-            libres = [t for t in libres if not t[1]][:1] or libres[:1]
+            # Nom facultatif : jamais à une place proche où il se lirait comme celui d'un autre point.
+            libres = [t for t in libres if t[1] <= 2]
             if not libres:
-                log("  %s (%s) : %s sans place nette, non nomme" % (ident, lang, x["code"]))
+                log("  %s (%s) : %s sans place, non nomme" % (ident, lang, x["code"]))
                 continue
         if not libres:
             echecs += essais[0][0]
             continue
-        # Ordre de choix : place nette ; sinon un trait sous le nom (le liseré l'interrompt) ; sinon, en dernier, une
-        # place où un autre point est voisin -- toujours dans l'ordre des préférences.
-        _, mou, dx, dy, anc, b = min(libres, key=lambda t: {False: 0, "trait": 1, "ambigu": 2}[t[1]])  # brut-ok: rang de placement, pas une donnee
-        if mou:
-            log("  %s (%s) : %s pose malgre un conflit evitable (%s), a regarder au rendu" % (ident, lang, x["code"], mou))
-            # Nom éloigné de son point ET voisin d'un autre (Croatie, posée sous Chypre et l'Allemagne) : un filet
-            # le rattache à son point.
-            if mou == "ambigu" and filet(px, py, b):
+        _, rg, dx, dy, anc, b, loin = min(libres, key=lambda t: t[1])  # brut-ok: rang de placement, pas une donnee
+        if loin:
+            e.append(filet(px, py, b, mini=0))
+            qx, qy = min(max(px, b[0]), b[2]), min(max(py, b[1] - 1), b[3])
+            traits.append((px, py, qx, qy))
+            liens.append((px, py, qx, qy))
+        else:
+            if rg == 3:
+                log("  %s (%s) : %s pose pres d'un autre point, a regarder au rendu" % (ident, lang, x["code"]))
+            # Place proche mais à plus de 16 px du point (Croatie, figée sous le sien) : un filet court le rattache.
+            if filet(px, py, b):
                 e.append(filet(px, py, b))
         boites.append((x["code"], b))
         gras = ' font-weight="600"' if x["code"] == "FR" else ""
@@ -848,7 +936,7 @@ def transmission(rows, an, source, lang="fr"):
     # Extrêmes nommés (auteur, 04/10) : les deux écarts les plus hauts (LU, IE), le plus bas hors Danemark (BG) ;
     # RO nommé pour qu'on ne lui attribue pas l'étiquette de la Hongrie, sa voisine.
     etiq = {"FR": "h", "IT": "d", "DE": "d", "EL": "g", "HU": "g", "SE": "h", "PT": "h", "DK": "d",
-            "LU": "d", "IE": "h", "RO": "!bd", "BG": "d"}
+            "LU": "d", "IE": "h", "RO": "!b", "BG": "d"}
     # Contre-expertise PRO-20260930-061613 (P1) : repère conditionnel, jamais une prévision -- le <desc> lu par
     # les lecteurs d'écran ne doit pas affirmer plus que le texte visible.
     T = {"fr": ("Pression de refinancement : échéances et écart de taux, %s",
@@ -1017,15 +1105,18 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
     sx = lambda v: X0 + v / xmax * (X1 - X0)  # noqa: E731
     sy = lambda v: Y1 - (v - ymin) / (ymax - ymin) * (Y1 - Y0)  # noqa: E731
     v = ymin
+    graduations = []   # boîtes des graduations : un nom ne les recouvre pas (03/11/2026 : « Lituanie » sur « 4 % »)
     while v <= ymax + 1e-9:
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (X0, sy(v), X1, sy(v), AXIS if v == 0 else GRID))
         e.append(tm(X0 - 5, sy(v) + 5, fmt_y(v), MUTED, "end"))
+        graduations.append((X0 - 7 - largeur_texte(fmt_y(v), FSM), sy(v) + 5 - FSM * 0.75, X0 - 3, sy(v) + 7))
         v += pasy
     v = 0
     while v <= xmax + 1e-9:
         e.append(tm(sx(v), Y1 + 19, fmt_x(v), MUTED, "middle" if 0 < v < xmax else ("start" if v == 0 else "end")))
         v += pasx
     by = {x["code"]: x for x in rows}
+    traits_m = [(sx(fx(by[j["bas"]])), sy(fy(by[j["bas"]])), sx(fx(by[j["haut"]])), sy(fy(by[j["haut"]]))) for j in jumeaux]         + [(sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb)) for (a, b, xa, xb, _c) in (droites or [])]
     for j in jumeaux:
         a, b = by[j["bas"]], by[j["haut"]]
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.5" stroke-dasharray="3 3"/>'
@@ -1036,8 +1127,23 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
     pts = [(x["code"], sx(fx(x)), sy(fy(x))) for x in rows]
     for x in rows:
         e.append(marque(sx(fx(x)), sy(fy(x)), x["euro"], 4.2))
-    boites, echecs = [], []
-    for code in noms:
+    boites, echecs, segs = list(graduations), [], []
+    PROCHES = ((7, 5, "start"), (-7, 5, "end"), (0, -9, "middle"), (0, 19, "middle"), (6, -7, "start"),
+               (-6, -7, "end"), (6, 17, "start"), (-6, 17, "end"), (0, -14, "middle"), (0, 24, "middle"))
+    # Places éloignées, toujours reliées à leur point par un filet qui ne frôle aucun autre point ni ne traverse
+    # aucun nom (03/11/2026 : Slovénie ; puis, à la demande de l'auteur, nommer tous les pays possibles).
+    LOINS = ((14, 30, "start"), (-14, 30, "end"), (0, 34, "middle"), (14, -22, "start"), (-14, -22, "end"),
+             (20, 5, "start"), (-20, 5, "end"), (0, -26, "middle"),
+             (24, 42, "start"), (-24, 42, "end"), (0, 46, "middle"), (24, -32, "start"), (-24, -32, "end"),
+             (32, 5, "start"), (-32, 5, "end"), (0, -38, "middle"))
+
+    def coupe_seg(b):
+        return any(b[0] - 1 < x1 + (x2 - x1) * k / 20 < b[2] + 1 and b[1] - 1 < y1 + (y2 - y1) * k / 20 < b[3] + 1
+                   for (x1, y1, x2, y2) in segs for k in range(21))
+
+    # Noms préfixés « ? » : facultatifs, posés après les autres, omis s'il n'y a pas de place (dit au journal).
+    for code in [c for c in noms if not c.startswith("?")] + [c[1:] for c in noms if c.startswith("?")]:
+        facultatif = "?" + code in noms
         x = by.get(code)
         if not x:
             continue
@@ -1045,19 +1151,25 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
         lib = x[LOC[lang]["nom"]] + ((" " + valeurs[code]) if valeurs and code in valeurs else "")
         gras = valeurs and code in valeurs
         larg = largeur_texte(lib, FSM) * (1.08 if gras else 1.0)
-        ok, repli = None, None
-        for dx, dy, anc in ((7, 5, "start"), (-7, 5, "end"), (0, -9, "middle"), (0, 19, "middle"), (6, -7, "start"),
-                            (-6, -7, "end"), (6, 17, "start"), (-6, 17, "end"), (0, -14, "middle"), (0, 24, "middle"),
-                            # Replis éloignés, toujours reliés à leur point par un filet (03/11/2026, Slovénie).
-                            (14, 30, "start"), (-14, 30, "end"), (0, 34, "middle"), (14, -22, "start"), (-14, -22, "end")):
+        ok, repli, loin = None, None, False
+        for (dx, dy, anc), lo in [(p_, False) for p_ in PROCHES] + [(p_, True) for p_ in LOINS]:
             gx = {"start": px + dx, "end": px + dx - larg, "middle": px + dx - larg / 2}[anc]
             b = (gx, py + dy - FSM * 0.75, gx + larg, py + dy + 2)
             if b[0] < 0 or b[2] > WM or b[1] < Y0 - 4 or b[3] > Y1 + 2:
                 continue
             if any(c != code and b[0] - 4 < cx < b[2] + 4 and b[1] - 4 < cy < b[3] + 4 for c, cx, cy in pts):
                 continue
-            if any(b[0] < o[2] and o[0] < b[2] and b[1] < o[3] and o[1] < b[3] for o in boites):
+            # 2 px d'air entre deux noms (03/11/2026 : Tchéquie et Bulgarie empilés à 0,5 px sur téléphone).
+            if any(b[0] - 2 < o[2] and o[0] < b[2] + 2 and b[1] - 2 < o[3] and o[1] < b[3] + 2 for o in boites) or coupe_seg(b):
                 continue
+            if (facultatif or lo) and barre(b, traits_m[:len(jumeaux)], 3):
+                continue
+            if lo:
+                if filet_libre(px, py, b, code, pts, [("", o) for o in boites], 5.2, 9.2, liens=segs, traits=traits_m)                         or any(c != code and math.hypot(cx - min(max(cx, b[0]), b[2]), cy - min(max(cy, b[1]), b[3])) < 8
+                               for c, cx, cy in pts) or bout_a_bout(code, b, pts):
+                    continue
+                ok, loin = (dx, dy, anc, b), True
+                break
             # Même règle de rattachement qu'au bureau (03/11/2026 : « Slovénie 2,7 % » aligné sur l'Allemagne,
             # « France 4,2 % » accroché à la Finlande) : une place ambiguë ne sert qu'à défaut, avec un filet.
             if ambigu(code, b, px, py, pts):
@@ -1065,17 +1177,21 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
                 continue
             ok = (dx, dy, anc, b)
             break
-        if not ok and repli:
+        if not ok and repli and not facultatif:
             ok = repli
-            log("  %s (%s, telephone) : %s pose pres d'un autre point, relie par un filet" % (ident, lang, code))
+            log("  %s (%s, telephone) : %s pose pres d'un autre point" % (ident, lang, code))
             if filet(px, py, repli[3], 5.2, 6):
                 e.append(filet(px, py, repli[3], 5.2, 6))
         if not ok:
-            echecs.append(lib)
+            if facultatif:
+                log("  %s (%s, telephone) : %s sans place, non nomme" % (ident, lang, code))
+            else:
+                echecs.append(lib)
             continue
         dx, dy, anc, b = ok
-        if abs(dy) >= 22 and ok is not repli and filet(px, py, b, 5.2, 6):
-            e.append(filet(px, py, b, 5.2, 6))
+        if loin:
+            e.append(filet(px, py, b, 5.2, 0))
+            segs.append((px, py, min(max(px, b[0]), b[2]), min(max(py, b[1] - 1), b[3])))
         boites.append(b)
         e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" '
                  'text-anchor="%s"%s aria-hidden="true">%s</text>'
@@ -1546,7 +1662,7 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
             rows, lambda x: x["stock"], lambda x: x["charge"], 160, 10, 20, 2,
             T["c_lx"], T["c_ly"], "mc", T["c_titre"], T["c_desc"], T["src_eu"], T["c_note"],
             {"FR": "d", "IT": "h", "EL": "h", "DE": "b", "HU": "h", "RO": "h", "PL": "g", "SE": "b", "ES": "h",
-             "BE": "h", "PT": "h", "AT": "h", "SI": "d", "HR": "b",
+             "BE": "h", "PT": "h", "AT": "h", "SI": "d", "HR": "!b3",
              # Les deux moins endettés de chaque groupe (auteur, 04/10) : sans eux, le bas de l'échelle restait anonyme.
              "BG": "g", "DK": "g", "EE": "g", "LU": "g",
              # France à droite (03/11/2026) : centrée au-dessus, elle était à la hauteur du point de la Belgique.
@@ -1562,8 +1678,9 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
         "dette-monde-prix%s.svg" % suf: nuage(
             [x for x in rows if x["inflation"] is not None], lambda x: x["inflation"], lambda x: x["prix"], 14, 6, 2, 1,
             T["p_lx"], T["p_ly"], "mp", T["p_titre"], T["p_desc"], T["p_src"], T["p_note"],
-            {"FR": "h", "IT": "h", "DE": "!b2", "HU": "h", "RO": "h", "PL": "h", "SE": "d", "EE": "d", "LT": "d",
-             # Suède à droite de son carré (03/11/2026) : posée en bas à gauche, elle se lisait sous un point de la zone euro.
+            {"FR": "h", "IT": "h", "DE": "!bdL", "HU": "h", "RO": "h", "PL": "h", "SE": "!bL3", "EE": "d", "LT": "d",
+             # Suède et Allemagne reliées à leur point par deux filets qui divergent (03/11/2026) : posée en bas à gauche,
+             # la Suède se lisait sous un point de la zone euro ; deux filets parallèles menaient à deux noms empilés.
              "CZ": "h", "DK": "g", "BG": "d",
              # Les deux taux implicites les plus bas (auteur, 04/10 : nommer le bas de l'échelle).
              "LU": "g", "IE": "b"}, lang=lang),
@@ -1603,7 +1720,9 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
                    "gap under 10 percentage points)."}[lang], lang,
             # Noms seuls dans le nuage, valeurs dessous (03/11/2026 : « France 4,2 % », trop long pour sa place, touchait
             # le point de la Finlande ; même forme que le nuage des prix sur téléphone).
-            ["HU", "SI", "FR", "IT", "EL", "RO"], None, jumeaux=jum[:1],
+            ["HU", "SI", "FR", "IT", "EL", "RO"] + ["?" + c for c in ("DE", "ES", "PT", "BE", "PL", "NL", "AT", "FI", "SE",
+                                                                     "CZ", "BG", "HR", "SK", "MT", "LT", "LV", "IE",
+                                                                     "CY", "EE", "LU")], None, jumeaux=jum[:1],
             liste=[(c, P(by[c]["charge"])) for c in ("HU", "SI", "FR")],
             droites=[(stats["charge_stock_euro"]["ordonnee"], stats["charge_stock_euro"]["pente"],
                       stats["charge_stock_euro"]["stock_min"], stats["charge_stock_euro"]["stock_max"], COL_EURO),

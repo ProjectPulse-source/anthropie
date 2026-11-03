@@ -98,16 +98,23 @@
 <text x="190.3" y="363.8" font-size="11" fill="#0A0A0E" text-anchor="middle">Suède</text>
 <text x="212.3" y="289.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Tchéquie</text>
 <text x="212.3" y="289.6" font-size="11" fill="#0A0A0E" text-anchor="end">Tchéquie</text>
-<text x="194.0" y="306.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Lituanie</text>
-<text x="194.0" y="306.5" font-size="11" fill="#0A0A0E" text-anchor="end">Lituanie</text>
-<text x="230.8" y="267.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Malte</text>
-<text x="230.8" y="267.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Malte</text>
 <text x="235.4" y="350.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Pays-Bas</text>
 <text x="235.4" y="350.0" font-size="11" fill="#0A0A0E" text-anchor="start">Pays-Bas</text>
-<text x="282.8" y="262.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Slovaquie</text>
-<text x="282.8" y="262.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Slovaquie</text>
 <text x="391.3" y="294.3" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Finlande</text>
 <text x="391.3" y="294.3" font-size="11" fill="#0A0A0E" text-anchor="start">Finlande</text>
+<line x1="278.3" y1="266.6" x2="253.8" y2="238.1" stroke="#52514e" stroke-width="1"/>
+<text x="252.8" y="235.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Slovaquie</text>
+<text x="252.8" y="235.9" font-size="11" fill="#0A0A0E" text-anchor="end">Slovaquie</text>
+<text x="230.8" y="267.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Malte</text>
+<text x="230.8" y="267.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Malte</text>
+<line x1="206.0" y1="327.9" x2="230.6" y2="358.1" stroke="#52514e" stroke-width="1"/>
+<text x="231.6" y="368.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Irlande</text>
+<text x="231.6" y="368.5" font-size="11" fill="#0A0A0E" text-anchor="start">Irlande</text>
+<text x="194.0" y="306.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Lituanie</text>
+<text x="194.0" y="306.5" font-size="11" fill="#0A0A0E" text-anchor="end">Lituanie</text>
+<line x1="291.0" y1="296.7" x2="323.5" y2="258.2" stroke="#52514e" stroke-width="1"/>
+<text x="324.4" y="256.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Chypre</text>
+<text x="324.4" y="256.0" font-size="11" fill="#0A0A0E" text-anchor="start">Chypre</text>
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="457.0" font-size="11" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13,</text>
 <text class="pied-source" x="0" y="471.0" font-size="11" fill="#52514e">monnaie nationale</text>

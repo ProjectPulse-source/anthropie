@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-03 (suite) — Nuages : tous les pays nommables, « les libellés ne se mordent pas »
+
+Demande de l'auteur : nommer tous les pays qui peuvent l'être, bureau et téléphone, sans que les libellés se mordent ;
+corriger les restes. Deux contrôleurs indépendants (géométrie mesurée à la police réelle, relecture des rendus),
+recontrôle de l'état final : aucune erreur grave, chaque nom rattaché à son propre pays.
+
+- `update_dette_monde.py` : couronnes de places éloignées, le nom TOUJOURS relié à son point par un filet ; un filet ne
+  passe pas à moins de 5 px du bord d'un autre point, ne croise aucun filet, ne longe ni ne finit sur un trait ; un nom
+  éloigné ne touche pas un autre point (10 px) ni ne se pose bout à bout avec lui ; un nom facultatif ou éloigné n'est
+  jamais barré par un pointillé de faux jumeaux. Charge : 25 pays nommés sur 26 en FR (Lettonie sans place), 24 en EN
+  (Ireland, Netherlands) ; téléphone : 16 sur 26 (6 auparavant), graduations protégées, 2 px d'air entre noms.
+  Prix : Suède et Allemagne reliées par deux filets divergents ; transmission : Hongrie reliée, Roumanie sous son carré.
+- `pied_figure.py` (`coupe`, commun) : un signe « + » ou « − » seul ne finit plus une ligne (cascade téléphone).
+
 ### 2026-11-03 — Figures de `/enseignants/` : noms, rattachement, géométrie
 
 Demande de l'auteur : nommer d'autres pays du nuage « Même dette, coût différent », sans chevauchement, et vérifier

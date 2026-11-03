@@ -23,6 +23,8 @@ def coupe(s: str, n: int) -> list[str]:
     francaise est d'abord soudee a ce qui la precede."""
     s = re.sub(r" ([:;?!»%])", "\u00a0\\1", s)
     s = s.replace("« ", "«\u00a0").replace("> ", ">\u00a0")
+    # Un signe seul (« + fait monter, − fait baisser ») ne finit jamais une ligne (03/11/2026, cascade téléphone).
+    s = re.sub(r"(^| )([+\u2212]) ", "\\1\\2\u00a0", s)
     out, cur = [], ""
     for mot in [m for m in s.split(" ") if m]:
         if cur and len(cur) + 1 + len(mot) > n:
