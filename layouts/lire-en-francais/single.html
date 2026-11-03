@@ -15,7 +15,7 @@
       <p class="oc-surtitre">Lire en français · {{ $p.pays }}</p>
       <h1 class="oc-titre">Six livres en français{{ if $b }}, au prix plancher{{ else }}, offerts aux lecteurs d'Amazon.fr{{ end }}</h1>
       <p class="oc-initiative">Pour les Français et les francophones {{ $p.dans }}&nbsp;: histoire des idées, citations, longue histoire, inégalités, dette publique, pouvoirs du président.</p>
-      <p class="oc-chapo">{{ if $b }}L'auteur a fixé pour ces six essais le prix le plus bas qu'il puisse appliquer sur la boutique Kindle de votre pays{{ with $p.a_partir }}, à partir de {{ . }}{{ end }}. Si vous avez gardé un compte Amazon.fr, un exemplaire peut aussi vous être offert.{{ else }}L'auteur offre des exemplaires Kindle, déjà payés, aux lecteurs qui ont un compte Amazon.fr, dans la limite du stock.{{ end }}</p>
+      <p class="oc-chapo">{{ if $b }}L'auteur a fixé pour ces six essais le prix le plus bas qu'il puisse appliquer sur la boutique Kindle de votre pays{{ with $p.a_partir }}, à partir de {{ . }}{{ end }}. Si vous avez gardé un compte Amazon.fr, un exemplaire numérique prépayé vous est aussi offert.{{ else }}L'auteur offre des exemplaires Kindle, déjà payés, aux lecteurs qui ont un compte Amazon.fr, dans la limite du stock.{{ end }}</p>
       <p class="oc-mention">{{ if $b }}Amazon.{{ $b }} · {{ end }}Application Kindle gratuite, sans liseuse</p>
       <div class="oc-tete__couvs" aria-hidden="true">
         {{- range $ordre }}{{ partial "book-cover.html" (dict "slug" . "alt" "" "wrapClass" "oc-tete__couv" "sizes" "(min-width: 1024px) 166px, (min-width: 720px) 134px, 32vw" "loading" "eager") }}{{ end -}}
