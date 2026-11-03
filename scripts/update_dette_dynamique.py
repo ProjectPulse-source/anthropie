@@ -317,8 +317,8 @@ TXT = {
         "src_cs": "FMI, %s ; Commission européenne, %s ; OCDE, %s ; Eurostat gov_10a_main, mise à jour du %s",
         "note_cs": ("Trois méthodes : la Commission et l'OCDE retirent aussi les mesures ponctuelles, le FMI non. Estimations de la "
                     "production potentielle, non des mesures ; zones grises : %s et %s."),
-        "montre_cs": ("Corrigé du cycle, le déficit primaire d'après 2022 reste plus creusé qu'en 2015-2019 dans les trois estimations : "
-                      "la conjoncture ne l'explique pas."),
+        "montre_cs": ("Corrigé du cycle, le déficit primaire de 2022-2025 reste plus creusé qu'en 2015-2019 dans les trois estimations : "
+                      "la conjoncture ne suffit pas à l'expliquer."),
         "titre_cs_m": "Déficit primaire corrigé du cycle, trois estimations",
         "faits_cs_m": ("Commission : %s, puis %s", "FMI : %s, puis %s", "OCDE : %s, puis %s"),
         "unite_cs_m": "moyennes %s puis %s, en %% du PIB potentiel",
@@ -364,8 +364,8 @@ TXT = {
         "src_cs": "IMF, %s; European Commission, %s; OECD, %s; Eurostat gov_10a_main, release of %s",
         "note_cs": ("Three methods: the Commission and the OECD also remove one-off measures, the IMF does not. Estimates of "
                     "potential output, not measurements; grey bands: %s and %s."),
-        "montre_cs": ("Cyclically adjusted, the primary deficit after 2022 remains deeper than in 2015-2019 in all three estimates: "
-                      "the business cycle does not explain it."),
+        "montre_cs": ("Cyclically adjusted, the primary deficit of 2022-2025 remains deeper than in 2015-2019 in all three estimates: "
+                      "the business cycle alone does not explain it."),
         "titre_cs_m": "Cyclically adjusted primary deficit, three estimates",
         "faits_cs_m": ("Commission: %s, then %s", "IMF: %s, then %s", "OECD: %s, then %s"),
         "unite_cs_m": "averages %s then %s, as %% of potential GDP",

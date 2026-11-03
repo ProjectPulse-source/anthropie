@@ -20,7 +20,7 @@
    "id": "conjoncture",
    "fichier": "dette-dynamique-conjoncture",
    "titre": "Le déficit primaire corrigé du cycle, selon trois estimations, 1996-2025",
-   "montre": "Corrigé du cycle, le déficit primaire d'après 2022 reste plus creusé qu'en 2015-2019 dans les trois estimations : la conjoncture ne l'explique pas.",
+   "montre": "Corrigé du cycle, le déficit primaire de 2022-2025 reste plus creusé qu'en 2015-2019 dans les trois estimations : la conjoncture ne suffit pas à l'expliquer.",
    "source": "FMI, Moniteur des finances publiques d’octobre 2026 ; Commission européenne, AMECO, printemps 2026 ; OCDE, Perspectives économiques n° 119 ; Eurostat gov_10a_main, mise à jour du 21/10/2026",
    "precaution": "Trois méthodes : la Commission et l'OCDE retirent aussi les mesures ponctuelles, le FMI non. Estimations de la production potentielle, non des mesures ; zones grises : 2015-2019 et 2022-2025."
   }
@@ -46,7 +46,7 @@
    "id": "conjoncture",
    "fichier": "dette-dynamique-conjoncture-en",
    "titre": "The cyclically adjusted primary deficit, according to three estimates, 1996-2025",
-   "montre": "Cyclically adjusted, the primary deficit after 2022 remains deeper than in 2015-2019 in all three estimates: the business cycle does not explain it.",
+   "montre": "Cyclically adjusted, the primary deficit of 2022-2025 remains deeper than in 2015-2019 in all three estimates: the business cycle alone does not explain it.",
    "source": "IMF, Fiscal Monitor, October 2026; European Commission, AMECO, spring 2026; OECD, Economic Outlook No. 119; Eurostat gov_10a_main, release of 21 October 2026",
    "precaution": "Three methods: the Commission and the OECD also remove one-off measures, the IMF does not. Estimates of potential output, not measurements; grey bands: 2015-2019 and 2022-2025."
   }
