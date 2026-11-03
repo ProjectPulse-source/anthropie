@@ -3,6 +3,7 @@ title: "Six livres en français : Allemagne"
 pays: "Allemagne"
 boutique: "de"
 a_partir: "2,69 €"
+dans: "d'Allemagne"
 noindex: true
 _build:
   list: never

@@ -3,6 +3,7 @@ title: "Six livres en français : Mexique"
 pays: "Mexique"
 boutique: "com.mx"
 a_partir: ""
+dans: "du Mexique"
 noindex: true
 _build:
   list: never

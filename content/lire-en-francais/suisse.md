@@ -3,6 +3,7 @@ title: "Six livres en français : Suisse"
 pays: "Suisse"
 boutique: ""
 a_partir: ""
+dans: "de Suisse"
 noindex: true
 _build:
   list: never

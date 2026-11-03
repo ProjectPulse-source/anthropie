@@ -3,6 +3,7 @@ title: "Six livres en français : Italie"
 pays: "Italie"
 boutique: "it"
 a_partir: "2,69 €"
+dans: "d'Italie"
 noindex: true
 _build:
   list: never

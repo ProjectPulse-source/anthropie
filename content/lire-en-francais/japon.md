@@ -3,6 +3,7 @@ title: "Six livres en français : Japon"
 pays: "Japon"
 boutique: "co.jp"
 a_partir: ""
+dans: "du Japon"
 noindex: true
 _build:
   list: never

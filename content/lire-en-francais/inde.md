@@ -3,6 +3,7 @@ title: "Six livres en français : Inde"
 pays: "Inde"
 boutique: "in"
 a_partir: ""
+dans: "d'Inde"
 noindex: true
 _build:
   list: never

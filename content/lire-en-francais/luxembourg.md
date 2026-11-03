@@ -3,6 +3,7 @@ title: "Six livres en français : Luxembourg"
 pays: "Luxembourg"
 boutique: ""
 a_partir: ""
+dans: "du Luxembourg"
 noindex: true
 _build:
   list: never

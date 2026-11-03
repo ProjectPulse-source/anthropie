@@ -3,6 +3,7 @@ title: "Six livres en français : Canada"
 pays: "Canada"
 boutique: "ca"
 a_partir: "2,99 $ CA"
+dans: "du Canada"
 noindex: true
 _build:
   list: never

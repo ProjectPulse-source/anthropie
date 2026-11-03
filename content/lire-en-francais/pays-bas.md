@@ -3,6 +3,7 @@ title: "Six livres en français : Pays-Bas"
 pays: "Pays-Bas"
 boutique: "nl"
 a_partir: "2,69 €"
+dans: "des Pays-Bas"
 noindex: true
 _build:
   list: never

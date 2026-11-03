@@ -1,46 +1,82 @@
 {{ define "main" }}
-{{- /* Lire en français, page par pays (auteur, 03/11/2026) : les six livres en français au prix plancher de la boutique
-       Kindle du pays, et, pour qui a gardé un compte Amazon.fr, les exemplaires offerts. Page sur invitation : noindex,
-       hors listes. Liens Kindle construits depuis l'ASIN de `url_amazon_fr_kindle` de chaque fiche /livres/ (source
-       unique). Sans boutique (`boutique` vide : Belgique, Suisse, Luxembourg, Maroc), seuls les exemplaires offerts. */ -}}
+{{- /* Lire en français, page d'atterrissage par pays (auteur, 03/11/2026 : « sous forme de landing page, comme pour
+       d'autres opérations »). Reprend la présentation des pages d'offre culturelle (classes `oc-*`, mêmes données
+       éditoriales : data/offre_culturelle.toml) : bandeau, couvertures en éventail, deux accès, six cartes.
+       Deux accès : la boutique Kindle du pays au prix plancher (`boutique`, ASIN lu dans `url_amazon_fr_kindle` de
+       chaque fiche /livres/), et, pour un compte Amazon.fr, l'exemplaire offert de /ressources-offertes/<livre>/.
+       Sans boutique (Belgique, Suisse, Luxembourg, Maroc) : l'exemplaire offert seul. Page sur invitation : noindex. */ -}}
 {{- $p := .Params -}}
+{{- $b := $p.boutique -}}
 {{- $ordre := slice "lodyssee-des-idees" "livresque-des-mots" "anthropie-ordre-ici-dette-ailleurs" "la-societe-du-premier-coup" "dette-publique-qui-paie-vraiment" "un-president-peut-il-tenir-ses-promesses" -}}
-<article class="home-section ressources">
-  <header class="page-header">
-    <p class="ressources-eyebrow">Lire en français — {{ $p.pays }}</p>
-    <h1>{{ .Title }}</h1>
-    {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+{{- $edito := site.Data.offre_culturelle.livres -}}
+<div class="oc oc--pays">
+  <header class="oc-tete">
+    <div class="oc-wrap">
+      <p class="oc-surtitre">Lire en français · {{ $p.pays }}</p>
+      <h1 class="oc-titre">Six livres en français{{ if $b }}, au prix plancher{{ else }}, offerts aux lecteurs d'Amazon.fr{{ end }}</h1>
+      <p class="oc-initiative">Pour les Français et les francophones {{ $p.dans }}&nbsp;: histoire des idées, citations, longue histoire, inégalités, dette publique, pouvoirs du président.</p>
+      <p class="oc-chapo">{{ if $b }}L'auteur a fixé pour ces six essais le prix le plus bas qu'il puisse appliquer sur la boutique Kindle de votre pays{{ with $p.a_partir }}, à partir de {{ . }}{{ end }}. Si vous avez gardé un compte Amazon.fr, un exemplaire peut aussi vous être offert.{{ else }}L'auteur offre des exemplaires Kindle, déjà payés, aux lecteurs qui ont un compte Amazon.fr, dans la limite du stock.{{ end }}</p>
+      <p class="oc-mention">{{ if $b }}Amazon.{{ $b }} · {{ end }}Application Kindle gratuite, sans liseuse</p>
+      <div class="oc-tete__couvs" aria-hidden="true">
+        {{- range $ordre }}{{ partial "book-cover.html" (dict "slug" . "alt" "" "wrapClass" "oc-tete__couv" "sizes" "(min-width: 1024px) 166px, (min-width: 720px) 134px, 32vw" "loading" "eager") }}{{ end -}}
+      </div>
+    </div>
   </header>
 
-  {{- with $p.boutique }}
-  <section aria-labelledby="lef-boutique">
-    <h2 id="lef-boutique">Sur Amazon.{{ . }}, au prix plancher</h2>
-    <p>Les six livres en français, version Kindle, au prix le plus bas que nous puissions fixer sur cette boutique{{ with $p.a_partir }}, à partir de {{ . }}{{ end }}. Aucune liseuse n'est nécessaire&nbsp;: l'application Kindle gratuite suffit, sur téléphone, tablette ou ordinateur.</p>
-    <ul class="lef-livres">
-      {{- range $ordre }}
-      {{- $b := site.GetPage (printf "/livres/%s" .) -}}
-      {{- with $b }}
-      {{- $asin := index (findRE `B0[A-Z0-9]{8}` (.Params.url_amazon_fr_kindle | default "")) 0 -}}
-      <li class="lef-livre">
-        {{ partial "book-cover.html" (dict "slug" $b.File.ContentBaseName "alt" (printf "Couverture de %s" $b.Title) "wrapClass" "oc-couv" "sizes" "110px") }}
-        <div>
-          <h3>{{ $b.Title }}</h3>
-          {{ with $b.Params.subtitle }}<p>{{ . }}</p>{{ end }}
-          {{- if $asin }}<p><a class="ressources-btn" href="https://www.amazon.{{ $p.boutique }}/dp/{{ $asin }}" rel="noopener" target="_blank">Voir sur Amazon.{{ $p.boutique }}</a></p>{{ end }}
+  <main class="oc-wrap">
+    <section class="oc-etapes" aria-labelledby="oc-etapes-titre">
+      <h2 class="oc-sec" id="oc-etapes-titre">Deux façons de lire ces livres</h2>
+      <ol>
+        {{- if $b }}
+        <li><span class="oc-etapes__n" aria-hidden="true">1</span><span><b>Sur Amazon.{{ $b }}</b>&nbsp;: choisissez un livre ci-dessous et achetez-le au prix plancher&nbsp;; il s'ajoute à votre application Kindle.</span></li>
+        <li><span class="oc-etapes__n" aria-hidden="true">2</span><span><b>Avec un compte Amazon.fr</b>&nbsp;: un exemplaire peut vous être offert. Amazon peut refuser ce lien à un lecteur qui réside hors de France&nbsp;; la boutique de votre pays reste alors ouverte.</span></li>
+        {{- else }}
+        <li><span class="oc-etapes__n" aria-hidden="true">1</span><span><b>Choisissez un livre</b> ci-dessous, puis demandez votre exemplaire offert.</span></li>
+        <li><span class="oc-etapes__n" aria-hidden="true">2</span><span><b>Acceptez-le sur Amazon.fr</b>, déjà payé. Amazon peut refuser ce lien à un lecteur qui réside hors de France.</span></li>
+        {{- end }}
+      </ol>
+    </section>
+
+    <h2 class="oc-sec oc-sec--choix" id="oc-livres">Quel livre vous tente&nbsp;?</h2>
+    <section class="oc-grille">
+    {{- range $ordre -}}
+      {{- $slug := . -}}
+      {{- $livre := site.GetPage (printf "/livres/%s" $slug) -}}
+      {{- $e := index $edito $slug -}}
+      {{- $asin := index (findRE `B0[A-Z0-9]{8}` ($livre.Params.url_amazon_fr_kindle | default "")) 0 -}}
+      <article class="ressources-book oc-livre oc-livre--carte">
+        <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" "(min-width: 1024px) 150px, 110px") }}</div>
+        <div class="oc-livre__corps">
+          {{ with $e }}<p class="oc-theme">{{ .theme }}</p>{{ end }}
+          <h3>{{ partial "fr-typo.html" $livre.Title }}</h3>
+          <div class="oc-note">
+            {{- with $livre.Params.amazon_rating }}{{ $n := replace (printf "%.1f" .) "." "," -}}
+            <p class="ressources-book__rating" aria-label="Note moyenne {{ $n }} sur 5 sur Amazon.fr">
+              <span class="ressources-book__stars" aria-hidden="true">★</span><span class="ressources-book__rating-score">{{ $n }}/5</span><span class="ressources-book__rating-count"> sur&nbsp;Amazon.fr</span></p>
+            {{- end -}}
+          </div>
+          {{ with $e }}<p class="oc-q">{{ partial "fr-typo.html" .question }}</p>
+          <p class="oc-l">{{ partial "fr-typo.html" .raison }}</p>{{ end }}
+          {{- if and $b $asin }}
+          <div class="ressources-book__obtain">
+            <a class="ressources-btn oc-btn" href="https://www.amazon.{{ $b }}/dp/{{ $asin }}" target="_blank" rel="noopener">Voir sur Amazon</a>
+            <p class="ressources-btn-note"><a href="{{ printf "/ressources-offertes/%s/" $slug | relLangURL }}">Compte Amazon.fr&nbsp;: un exemplaire offert</a></p>
+          </div>
+          {{- else }}
+          <div class="ressources-book__obtain"><a class="ressources-btn oc-btn" href="{{ printf "/ressources-offertes/%s/" $slug | relLangURL }}">Recevoir ce livre</a></div>
+          {{- end }}
         </div>
-      </li>
-      {{- end }}
-      {{- end }}
-    </ul>
-  </section>
-  {{- end }}
+      </article>
+    {{- end }}
+    </section>
 
-  <section aria-labelledby="lef-fr">
-    <h2 id="lef-fr">{{ if $p.boutique }}Vous avez gardé un compte Amazon.fr&nbsp;?{{ else }}Avec un compte Amazon.fr{{ end }}</h2>
-    <p>Un exemplaire peut vous être offert, déjà payé, dans la limite du stock&nbsp;: choisissez le livre sur la page des livres offerts. Le lien demande un compte Amazon.fr, et Amazon peut le refuser à un lecteur qui réside hors de France{{ if $p.boutique }}&nbsp;; dans ce cas, la boutique de votre pays reste ouverte au prix plancher{{ end }}.</p>
-    <p><a class="ressources-btn ressources-btn--outline" href="{{ "/ressources-offertes/" | relLangURL }}">Les livres offerts</a></p>
-  </section>
-
-  <p class="ressources-note">Vous aimez l'un de ces livres&nbsp;? Faites-le connaître autour de vous&nbsp;: c'est ainsi qu'ils circulent.</p>
-</article>
+    <section class="oc-chaine">
+      <p class="oc-auteur"><b>L'auteur.</b> Stéphane Lalut est économiste et essayiste, chercheur indépendant. Il publie
+      dans des revues de sciences sociales et d'idées, <i>En attendant Nadeau</i>, <i>La Vie des idées</i>,
+      <i>Alternatives Économiques</i>, <i>Le Temps</i>, et met en ligne des dossiers de données sourcées sur la dette
+      publique, l'école et les institutions. <a href="{{ "/a-propos/" | relLangURL }}">Qui est l'auteur</a> ·
+      <a href="{{ "/publications/" | relLangURL }}">Ses publications</a></p>
+    </section>
+  </main>
+</div>
 {{ end }}

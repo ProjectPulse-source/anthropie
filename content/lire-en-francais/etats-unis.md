@@ -3,6 +3,7 @@ title: "Six livres en français : États-Unis"
 pays: "États-Unis"
 boutique: "com"
 a_partir: "2,99 $"
+dans: "des États-Unis"
 noindex: true
 _build:
   list: never

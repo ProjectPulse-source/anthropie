@@ -3,6 +3,7 @@ title: "Six livres en français : Royaume-Uni"
 pays: "Royaume-Uni"
 boutique: "co.uk"
 a_partir: "1,77 £"
+dans: "du Royaume-Uni"
 noindex: true
 _build:
   list: never
