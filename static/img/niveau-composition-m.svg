@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 739" role="img" font-variant-numeric="tabular-nums" aria-labelledby="niv-cm-t niv-cm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="niv-cm-t">PISA 2015-2025 : trois mesures de la baisse</title><desc id="niv-cm-d">Baisse du score moyen PISA de 2015 à 2025 : observée, à la répartition entre classes de 2015, puis à la composition de 2015 pour la classe, le sexe et la famille : mathématiques 35, 43, 36 points ; compréhension de l'écrit 43, 51, 44 points ; culture scientifique 12, 21, 13 points.</desc>
 <rect width="300" height="739" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">PISA 2015-2025 : trois mesures</text>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">PISA 2015-2025 : trois mesures</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">de la baisse</text>
 <rect x="0" y="74" width="14" height="14" fill="#8a8781"/>
 <text x="22" y="86" font-size="13.5" fill="#55524f">Baisse observée</text>
@@ -34,13 +34,13 @@
 <text x="52.2" y="506" font-size="15" font-weight="600" fill="#55524f">13</text>
 <line x1="0" y1="530.0" x2="300" y2="530.0" stroke="#dcd8d3"/>
 <text x="0" y="551.0" font-size="13.5" fill="#55524f">OCDE, bases PISA 2015 et 2025 (données</text>
-<text x="0" y="568.0" font-size="13.5" fill="#55524f">individuelles) ; calcul de l'auteur</text>
+<text x="0" y="568.0" font-size="13.5" fill="#55524f">individuelles) ; calcul de l'auteur</text>
 <text x="0" y="585.0" font-size="13.5" fill="#55524f">(valeurs plausibles, poids répliqués)</text>
 <text x="0" y="606.0" font-size="13.5" fill="#55524f">Baisse du score moyen, en points. Une</text>
 <text x="0" y="623.0" font-size="13.5" fill="#55524f">baisse observée et deux</text>
 <text x="0" y="640.0" font-size="13.5" fill="#55524f">standardisations descriptives, trois</text>
-<text x="0" y="657.0" font-size="13.5" fill="#55524f">questions : aucune n'est « la vraie</text>
-<text x="0" y="674.0" font-size="13.5" fill="#55524f">baisse », aucune ne mesure l'effet du</text>
+<text x="0" y="657.0" font-size="13.5" fill="#55524f">questions : aucune n'est « la vraie</text>
+<text x="0" y="674.0" font-size="13.5" fill="#55524f">baisse », aucune ne mesure l'effet du</text>
 <text x="0" y="691.0" font-size="13.5" fill="#55524f">redoublement.</text>
 <text x="0" y="712.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
 <text x="0" y="729.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>

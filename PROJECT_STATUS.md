@@ -52,6 +52,31 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-03 (fin) — Méthode des figures câblée ; renvoi visible aux dossiers depuis les pages d'enseignants
+
+Deux demandes de l'auteur. (1) « Méthodologie de vérification et d'optimisation des graphes enregistrée et câblée pour
+être systématiquement utilisée, rigueur et pas d'erreur. » (2) « Pour l'enseignant, il faut qu'il voie toutes les autres
+ressources sur la dette dans le dossier ; même principe, si pertinent, sur les autres ressources scolaires. »
+
+- `scripts/check-figures.py` (bloquant dans `check-all --ci`, avec son témoin) : textes qui se chevauchent, marque
+  recouverte, sortie du cadre, filets (départ, arrivée, autre marque frôlée, croisement), signe seul ou ponctuation haute
+  en bord de ligne ; chasses réelles des polices (`scripts/metriques_polices.json`, maximum Arial, Segoe UI, Roboto),
+  indépendantes de l'approximation des générateurs. Mesure des 247 SVG : 3 défauts réels corrigés dans leurs
+  générateurs (« ; CREDOC » en début de ligne, `update_langue_eleves.py` ; graduation « 12 000 » rognée,
+  `update_promesses_delais.py` ; note et titre anglais hors cadre, `update_promesses_mesurer.py`), 1 contact corrigé
+  (« point écarté », `generer_figures_qui_paie.py`), 2 faux positifs levés (pastilles numérotées, jambage).
+  **Exception déclarée** : `delais-admissions-m.svg` et `-en-m.svg` ne sont pas régénérés : `update_promesses_delais.py`
+  s'arrête sur sa garde T3 (la date du 02/11/2026 est passée ; la page doit être réécrite au passé sur preuve officielle
+  du démarrage de la consolidation). L'exception meurt d'elle-même quand la figure passe.
+- Cinq copies locales de `coupe()` ramenées à `pied_figure.coupe` (soudures des générateurs promesses reprises).
+- Skill `controle-figures` (`D:\PRO\.claude\skills\`), entrée `controle-figures` du registre d'activation
+  (ressource, site, livre, article, essai, tribune, fiche-synthese), CLAUDE.md du site (« Figures de données »), skill
+  `ressource-site`, mémoire et leçon transverse `task-types/figures-exactes-libelles-rattaches`.
+- Shortcode `dossier-lie` (encart « Le dossier complet », pages tirées du dépôt par `ressource.bloc`, questions puis
+  prolongements, lien vers l'index) : `/enseignants/` (dossier dette, 10 pages), `/enseignants/emc/` (promesses, 8),
+  `/enseignants/ecole-et-parcours/` (école, 3). Environnement : aucun dossier correspondant (exclusion déclarée). Les
+  pastilles de « Méthode et sources » ne se disent plus « les quatre pages du dossier ».
+
 ### 2026-11-03 (suite) — Nuages : tous les pays nommables, « les libellés ne se mordent pas »
 
 Demande de l'auteur : nommer tous les pays qui peuvent l'être, bureau et téléphone, sans que les libellés se mordent ;

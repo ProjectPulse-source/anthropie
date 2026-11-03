@@ -71,7 +71,7 @@
 <text x="78.5" y="737.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">18%</text>
 <line x1="0" y1="760.0" x2="300" y2="760.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="781.0" font-size="13.5" fill="#52514e">Insee, distributional national</text>
-<text class="pied-source" x="0" y="798.0" font-size="13.5" fill="#52514e">accounts 2023 (Insee Analyses no. 118,</text>
+<text class="pied-source" x="0" y="798.0" font-size="13.5" fill="#52514e">accounts 2023 (Insee Analyses no. 118,</text>
 <text class="pied-source" x="0" y="815.0" font-size="13.5" fill="#52514e">figure 2a)</text>
 <text class="pied-note" x="0" y="836.0" font-size="13.5" fill="#52514e">Averages per CU, the balance of one</text>
 <text class="pied-note" x="0" y="853.0" font-size="13.5" fill="#52514e">year; pensions and valued public</text>

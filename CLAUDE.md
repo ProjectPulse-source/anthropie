@@ -625,6 +625,14 @@ Trois points en tiennent lieu de rappel : **deux couleurs de données au maximum
 grandeur toujours de la même couleur ; **toute étiquette centrée sur le point qu'elle désigne** ;
 **le libellé d'une bande d'événement se pose sous elle, en deux lignes** — période, puis intitulé.
 
+**Vérification de toute figure créée ou modifiée — skill `controle-figures`** (auteur, 03/11/2026 : « enregistrée et
+câblée pour être systématiquement utilisée, rigueur et pas d'erreur ») : valeurs recalculées sur les coordonnées du SVG et
+contre la source ; **les libellés ne se mordent pas** et chacun désigne sans équivoque son point (filet sinon) ; toutes
+les versions (téléphone, langues) ; deux contrôleurs indépendants jusqu'à zéro défaut nouveau ; correction dans le
+générateur. Verrou : `scripts/check-figures.py`, bloquant dans `check-all --ci` (chevauchements, marque recouverte,
+cadre, filets, signe seul en bord de ligne ; chasses réelles des polices, `--temoin`). Coupure des lignes : un seul
+organe, `pied_figure.coupe` (cinq copies locales retirées le 03/11/2026).
+
 ⚠ **Une teinte nouvelle passe `validate_palette.js` avant d'être appliquée.** Le bleu marine du site
 (`#1B2A4E`) y échoue comme couleur de données : chroma trop faible, il lit gris. C'est ainsi que le
 bleu profond `#184f95` a été retenu — sur mesure, non par goût.

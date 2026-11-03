@@ -61,7 +61,7 @@
 <text x="42.0" y="510.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">receives 31.4 · pays 89.8</text>
 <line x1="0" y1="526.0" x2="300" y2="526.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="547.0" font-size="13.5" fill="#52514e">Insee, distributional national</text>
-<text class="pied-source" x="0" y="564.0" font-size="13.5" fill="#52514e">accounts 2023 (Insee Analyses no. 118,</text>
+<text class="pied-source" x="0" y="564.0" font-size="13.5" fill="#52514e">accounts 2023 (Insee Analyses no. 118,</text>
 <text class="pied-source" x="0" y="581.0" font-size="13.5" fill="#52514e">figure 1c)</text>
 <text class="pied-note" x="0" y="602.0" font-size="13.5" fill="#52514e">Imputation conventions; does not</text>
 <text class="pied-note" x="0" y="619.0" font-size="13.5" fill="#52514e">measure the incidence of the debt.</text>

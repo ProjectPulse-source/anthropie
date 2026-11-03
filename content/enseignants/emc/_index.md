@@ -53,6 +53,8 @@ ceux des pages de données du site, qui se mettent à jour avec leurs sources&nb
 change. Les questions demandent de constater, de calculer, de comparer ou d'expliquer une procédure&nbsp;; aucune ne
 demande de juger une institution ou de trancher une politique.
 
+{{< dossier-lie bloc="promesses" >}}
+
 <section class="fiche" id="fiche-loi">
 
 ### Terminale — Comment un texte devient-il une loi, et où peut-il s'arrêter&nbsp;? {#terminale-parcours-loi}

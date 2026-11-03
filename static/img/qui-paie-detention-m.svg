@@ -41,7 +41,7 @@
 <text x="0.0" y="600.0" font-size="13.5" fill="#898781" text-anchor="start">* dont la Banque de France : part non</text>
 <text x="0.0" y="618.0" font-size="13.5" fill="#898781" text-anchor="start">publiée par la source.</text>
 <line x1="0" y1="632.0" x2="300" y2="632.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="653.0" font-size="13.5" fill="#52514e">A : INSEE, Informations rapides n° 79</text>
+<text class="pied-source" x="0" y="653.0" font-size="13.5" fill="#52514e">A : INSEE, Informations rapides n° 79</text>
 <text class="pied-source" x="0" y="670.0" font-size="13.5" fill="#52514e">(27/03/2026) · B : Banque de France,</text>
 <text class="pied-source" x="0" y="687.0" font-size="13.5" fill="#52514e">via l'AFT</text>
 <text class="pied-note" x="0" y="708.0" font-size="13.5" fill="#52514e">Deux champs distincts. La détention ne</text>

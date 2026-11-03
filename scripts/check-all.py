@@ -79,6 +79,12 @@ HORS_RESEAU = [
     # regression rendrait ces commits muets, et une normalisation trop grossiere tairait une vraie donnee.
     ("releve des jeux (module commun)", "test_releve_jeu.py", []),
     ("lecture, rangs et octets des generateurs", "check-lecture-donnees.py", []),
+    # Figures (auteur, 03/11/2026 : « methodologie de verification des graphes cablee, rigueur et pas d'erreur ») : aucun
+    # libelle ne se mord, aucun ne recouvre une marque ni ne sort du cadre, aucun filet ne mene au mauvais point, aucun
+    # signe seul en fin de ligne. Bloquant : ces defauts passent tous en silence, sortie 0 ; ils ne se voyaient qu'a l'oeil
+    # (Autriche sur la Finlande, Croatie lue comme Chypre, « − » orphelin). Methode complete : skill controle-figures.
+    ("figures : libelles et filets (temoin)", "check-figures.py", ["--temoin"]),
+    ("figures : libelles et filets", "check-figures.py", []),
 ]
 LOCAL_DERIVES = [
     # La CI rend les PNG, mais par une etape NON BLOQUANTE : si l'installation

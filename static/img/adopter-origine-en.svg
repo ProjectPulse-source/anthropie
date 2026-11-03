@@ -43,7 +43,7 @@
 <text x="16.0" y="297.0" font-size="9.5" fill="#52514e" text-anchor="start">lower bound: origin established by both sources</text>
 <text x="550.0" y="297.0" font-size="9.5" fill="#52514e" text-anchor="start">* ongoing on 6 October 2026</text>
 <line x1="0" y1="326.0" x2="720" y2="326.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="341.0" font-size="11" fill="#52514e">National Assembly (open data, legislative files) and Senate (Dosleg database), 6 October 2026; Journal officiel</text>
+<text class="pied-source" x="0" y="341.0" font-size="11" fill="#52514e">National Assembly (open data, legislative files) and Senate (Dosleg database), 6 October 2026; Journal officiel</text>
 <text class="pied-note" x="0" y="355.0" font-size="11" fill="#52514e">Scope: laws promulgated, excluding laws authorising a treaty, finance and social security financing acts,</text>
 <text class="pied-note" x="0" y="369.0" font-size="11" fill="#52514e">institutional acts and constitutional acts. Origin at the initial tabling, not influence. All kinds: same count with</text>
 <text class="pied-note" x="0" y="383.0" font-size="11" fill="#52514e">institutional, finance and constitutional acts put back in, treaties still excluded.</text>

@@ -607,15 +607,9 @@ WM, FS_MIN = 300, 13.5
 LICENCE_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"  # l'URL de la page ne se coupe pas en 300 unités
 
 
-def coupe(s: str, n: int) -> list:
-    out, cur = [], ""
-    for mot in s.split():
-        if cur and len(cur) + 1 + len(mot) > n:
-            out.append(cur)
-            cur = mot
-        else:
-            cur = (cur + " " + mot).strip()
-    return out + ([cur] if cur else [])
+# Coupure des lignes : organe commun (03/11/2026, cinq copies locales ramenées à pied_figure.coupe ; l'une
+# rejetait « ; CREDOC » en début de ligne).
+coupe = pied_figure.coupe
 
 
 def tete_m(fid, titre, desc, h):

@@ -761,19 +761,9 @@ def fig_admissions(r: dict, A: dict) -> str:
 # ------------------------------------------------------------------ figures téléphone (phase B, 12/10/2026)
 # Composées pour 300 px de large, jamais rétrécies : police >= FS_MIN ; chaque valeur dessinée (classe « val ») doit
 # figurer dans la description de la version détaillée (parite_mobile). Patron : scripts/update_lycee_professeurs.py.
-def coupe(s, n):
-    """Coupe aux espaces ordinaires ; ponctuation haute, « n° » et nombre + unité soudés (règle typographique du site)."""
-    s = re.sub(r" ([:;?!»%])", "\u00a0\\1", s).replace("« ", "«\u00a0").replace("n° ", "n°\u00a0")
-    s = re.sub(r"(\d) (ans|years|places)\b", "\\1\u00a0\\2", s)
-    s = re.sub(r"\b(art\.|no\.) (\d)", "\\1\u00a0\\2", s)
-    out, cur = [], ""
-    for mot in s.split(" "):
-        if cur and len(cur) + 1 + len(mot) > n:
-            out.append(cur)
-            cur = mot
-        else:
-            cur = (cur + " " + mot).strip()
-    return out + ([cur] if cur else [])
+# Coupure des lignes : organe commun (03/11/2026, cinq copies locales ramenées à pied_figure.coupe ; l'une
+# rejetait « ; CREDOC » en début de ligne).
+coupe = pied_figure.coupe
 
 
 def tete_m(fid, titre, desc):
@@ -850,7 +840,7 @@ def fig_admissions_m(r, A, svg_d):
         e.append(txt(0, y + 12, ligne, FS_MIN, INK2))
         y += 12
     ans = list(range(1972, 2026))
-    X0, X1, TOP = 44, WM - 2, y + 44
+    X0, X1, TOP = 50, WM - 2, y + 44   # 50 : « 12 000 » rogne a gauche avec une police plus large (03/11/2026, R3)
     BAS = TOP + 180
     bw = (X1 - X0) / len(ans)
     X = lambda a: X0 + (a - 1972) * bw  # noqa: E731

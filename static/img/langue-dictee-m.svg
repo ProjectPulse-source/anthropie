@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 689" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-dm-t lan-dm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="lan-dm-t">La même dictée en CM2 : nombre moyen d'erreurs</title><desc id="lan-dm-d">Barres horizontales empilées, nombre moyen d'erreurs à la même dictée en CM2 : 1987 : 2,1 erreurs lexicales et 8,6 autres erreurs, 10,7 au total ; 2007 : 2,6 erreurs lexicales et 12,1 autres erreurs, 14,7 au total ; 2015 : 3 erreurs lexicales et 15 autres erreurs, 18 au total ; 2021 : 3 erreurs lexicales et 16,4 autres erreurs, 19,4 au total.</desc>
 <rect width="300" height="689" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">La même dictée en CM2 : nombre</text>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">La même dictée en CM2 : nombre</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">moyen d'erreurs</text>
 <rect x="0" y="66" width="14" height="14" fill="#184f95"/>
 <text x="22" y="78" font-size="13.5" fill="#55524f">Erreurs lexicales (orthographe</text>
@@ -31,11 +31,11 @@
 <text x="0" y="454" font-size="13.5" fill="#55524f">lexicales 3 · autres 16,4</text>
 <line x1="0" y1="480.0" x2="300" y2="480.0" stroke="#dcd8d3"/>
 <text x="0" y="501.0" font-size="13.5" fill="#55524f">DEPP, Note d'Information 22.37 (dictée</text>
-<text x="0" y="518.0" font-size="13.5" fill="#55524f">de 67 mots, 1987, 2007, 2015, 2021 ;</text>
-<text x="0" y="535.0" font-size="13.5" fill="#55524f">secteur public) ; NI 08.38 pour</text>
+<text x="0" y="518.0" font-size="13.5" fill="#55524f">de 67 mots, 1987, 2007, 2015, 2021 ;</text>
+<text x="0" y="535.0" font-size="13.5" fill="#55524f">secteur public) ; NI 08.38 pour</text>
 <text x="0" y="552.0" font-size="13.5" fill="#55524f">1987-2007</text>
-<text x="0" y="573.0" font-size="13.5" fill="#55524f">Erreurs lexicales : orthographe des</text>
-<text x="0" y="590.0" font-size="13.5" fill="#55524f">mots eux-mêmes. Autres erreurs :</text>
+<text x="0" y="573.0" font-size="13.5" fill="#55524f">Erreurs lexicales : orthographe des</text>
+<text x="0" y="590.0" font-size="13.5" fill="#55524f">mots eux-mêmes. Autres erreurs :</text>
 <text x="0" y="607.0" font-size="13.5" fill="#55524f">grammaire (accords, conjugaison),</text>
 <text x="0" y="624.0" font-size="13.5" fill="#55524f">ponctuation, oublis (total moins</text>
 <text x="0" y="641.0" font-size="13.5" fill="#55524f">lexicales).</text>

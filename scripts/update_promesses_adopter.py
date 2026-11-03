@@ -920,20 +920,9 @@ def fig_493(r: dict, A: dict) -> str:
 # ------------------------------------------------------------------ figures téléphone (phase B, 12/10/2026)
 # Composées pour 300 px de large, jamais rétrécies : police >= FS_MIN ; chaque valeur dessinée (classe « val ») doit
 # figurer dans la description de la version détaillée (parite_mobile). Patron : scripts/update_promesses_delais.py.
-def coupe(s, n):
-    """Coupe aux espaces ordinaires ; ponctuation haute, « n° » et nombre + unité soudés (règle typographique du site)."""
-    s = re.sub(r" ([:;?!»%])", "\u00a0\\1", s).replace("« ", "«\u00a0").replace("n° ", "n°\u00a0")
-    s = re.sub(r"\b(art\.|al\.|no\.|para\.) (\d)", "\\1\u00a0\\2", s)
-    s = re.sub(r"(\d) (January|February|March|April|May|June|July|August|September|October|November|December)\b",
-               "\\1\u00a0\\2", s)
-    out, cur = [], ""
-    for mot in s.split(" "):
-        if cur and len(cur) + 1 + len(mot) > n:
-            out.append(cur)
-            cur = mot
-        else:
-            cur = (cur + " " + mot).strip()
-    return out + ([cur] if cur else [])
+# Coupure des lignes : organe commun (03/11/2026, cinq copies locales ramenées à pied_figure.coupe ; l'une
+# rejetait « ; CREDOC » en début de ligne).
+coupe = pied_figure.coupe
 
 
 def tete_m(fid, titre, desc):

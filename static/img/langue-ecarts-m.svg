@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 747" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-em-t lan-em-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="lan-em-t">Fin de collège : pas de baisse significative en moyenne, une baisse significative en éducation prioritaire</title><desc id="lan-em-d">Score CEDRE en fin de collège, 2015 puis 2021 : Ensemble des élèves 250,0 puis 246,6, sans évolution significative ; Public hors éducation prioritaire 250,3 puis 247,3, sans évolution significative ; Éducation prioritaire 233,1 puis 225,3, baisse significative ; Privé 259,7 puis 260,4, sans évolution significative ; Filles 252,9 puis 252,6, sans évolution significative ; Garçons 247,1 puis 240,7, baisse significative.</desc>
 <rect width="300" height="747" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Fin de collège : pas de baisse</text>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Fin de collège : pas de baisse</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">significative en moyenne, une</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">baisse significative en</text>
 <text x="0" y="86" font-size="17" font-weight="600" fill="#26262f">éducation prioritaire</text>
@@ -51,9 +51,9 @@
 <text x="0" y="576.0" font-size="13.5" fill="#55524f">tableaux de données (CEDRE,</text>
 <text x="0" y="593.0" font-size="13.5" fill="#55524f">compétences langagières et littératie</text>
 <text x="0" y="610.0" font-size="13.5" fill="#55524f">en fin de collège)</text>
-<text x="0" y="631.0" font-size="13.5" fill="#55524f">Échelle fixée à 250 en 2015. Orange :</text>
-<text x="0" y="648.0" font-size="13.5" fill="#55524f">baisse significative selon la DEPP ;</text>
-<text x="0" y="665.0" font-size="13.5" fill="#55524f">gris : sans évolution significative.</text>
+<text x="0" y="631.0" font-size="13.5" fill="#55524f">Échelle fixée à 250 en 2015. Orange :</text>
+<text x="0" y="648.0" font-size="13.5" fill="#55524f">baisse significative selon la DEPP ;</text>
+<text x="0" y="665.0" font-size="13.5" fill="#55524f">gris : sans évolution significative.</text>
 <text x="0" y="682.0" font-size="13.5" fill="#55524f">Aucun test de l'évolution des écarts</text>
 <text x="0" y="699.0" font-size="13.5" fill="#55524f">entre groupes n'est publié.</text>
 <text x="0" y="720.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>

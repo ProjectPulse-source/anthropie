@@ -41,8 +41,8 @@
 <text x="0.0" y="600.0" font-size="13.5" fill="#898781" text-anchor="start">* including the Banque de France:</text>
 <text x="0.0" y="618.0" font-size="13.5" fill="#898781" text-anchor="start">share not published by the source.</text>
 <line x1="0" y1="632.0" x2="300" y2="632.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="653.0" font-size="13.5" fill="#52514e">A: INSEE, Informations rapides no. 79</text>
-<text class="pied-source" x="0" y="670.0" font-size="13.5" fill="#52514e">(27 March 2026) · B: Banque de France,</text>
+<text class="pied-source" x="0" y="653.0" font-size="13.5" fill="#52514e">A: INSEE, Informations rapides no. 79</text>
+<text class="pied-source" x="0" y="670.0" font-size="13.5" fill="#52514e">(27 March 2026) · B: Banque de France,</text>
 <text class="pied-source" x="0" y="687.0" font-size="13.5" fill="#52514e">via Agence France Trésor</text>
 <text class="pied-note" x="0" y="708.0" font-size="13.5" fill="#52514e">Two separate scopes. Holding</text>
 <text class="pied-note" x="0" y="725.0" font-size="13.5" fill="#52514e">securities does not measure the final</text>

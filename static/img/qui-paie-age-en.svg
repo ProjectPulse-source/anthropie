@@ -49,7 +49,7 @@
 <text x="566.0" y="294.5" font-size="10" fill="#898781" text-anchor="start">Above the bars:</text>
 <text x="566.0" y="307.5" font-size="10" fill="#898781" text-anchor="start">total transfers received</text>
 <line x1="0" y1="364.0" x2="720" y2="364.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="379.0" font-size="11" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1e) · groups by mean age</text>
+<text class="pied-source" x="0" y="379.0" font-size="11" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1e) · groups by mean age</text>
 <text class="pied-source" x="0" y="393.0" font-size="11" fill="#52514e">of the household's adults</text>
 <text class="pied-note" x="0" y="407.0" font-size="11" fill="#52514e">A snapshot of one year, not the balance sheet of a generation: retirement pensions are counted here as transfers</text>
 <text class="pied-note" x="0" y="421.0" font-size="11" fill="#52514e">received.</text>

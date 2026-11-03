@@ -1,0 +1,47 @@
+{{- /* dossier-lie.html — encart « Le dossier complet » d'une page d'usage (enseignants) vers le dossier de ressources
+       dont ses activités sont tirées.
+
+       {{< dossier-lie bloc="dette" >}}
+
+       Demande de l'auteur (03/11/2026) : « pour l'enseignant, il faut qu'il voie qu'il y a toutes les autres ressources sur
+       la dette dans le dossier — rends visible ce renvoi ; même principe, si pertinent, sur les autres ressources scolaires
+       vers les autres dossiers ». La page d'enseignant ne renvoyait qu'aux quatre pages d'où viennent ses figures, en pied
+       de page ; le dossier en compte dix.
+
+       LA PRÉSENCE VIENT DU DÉPÔT (règle de surface du site) : les pages listées sont celles qui déclarent
+       `ressource.bloc` égal au bloc demandé, dans la langue de la page, triées par `ressource.rang` ; les questions
+       d'abord, puis les prolongements (`ressource.prolongement`). Une page ajoutée au dossier apparaît ici sans rien
+       toucher. Titre et chapô : ceux du bloc dans content/ressources/_index.md. Libellé d'une page : `dossier_dette_titre`
+       pour un prolongement qui en a un, sinon son titre (une question, ce que cherche l'enseignant).
+       Échoue bruyamment sur un bloc inconnu ou vide : un encart vide passerait inaperçu à la relecture.
+       Masqué à l'impression (les fiches élèves s'impriment seules). */ -}}
+{{- $bloc := .Get "bloc" -}}
+{{- $page := .Page -}}
+{{- $def := dict -}}
+{{- with site.GetPage "/ressources" -}}{{- range .Params.blocs -}}{{- if eq .id $bloc -}}{{- $def = . -}}{{- end -}}{{- end -}}{{- end -}}
+{{- if not $def -}}{{ errorf "dossier-lie : bloc \"%s\" inconnu de content/ressources/_index.md (%s)" $bloc $page.File.Path }}{{- end -}}
+{{- $membres := where (where site.RegularPages "Lang" $page.Lang) "Params.ressource.bloc" $bloc -}}
+{{- $membres = $membres | append (where (where site.Sections "Lang" $page.Lang) "Params.ressource.bloc" $bloc) -}}
+{{- $membres = sort $membres "Params.ressource.rang" -}}
+{{- $questions := slice -}}{{- $prolong := slice -}}
+{{- range $membres -}}
+  {{- if .Params.ressource.prolongement -}}{{- $prolong = $prolong | append . -}}{{- else -}}{{- $questions = $questions | append . -}}{{- end -}}
+{{- end -}}
+{{- if not $membres -}}{{ errorf "dossier-lie : aucune page dans le bloc \"%s\" (%s)" $bloc $page.File.Path }}{{- end -}}
+{{- $mots := dict "1" "une" "2" "deux" "3" "trois" "4" "quatre" "5" "cinq" "6" "six" "7" "sept" "8" "huit" "9" "neuf" "10" "dix" "11" "onze" "12" "douze" -}}
+{{- $nq := len $questions -}}{{- $np := len $prolong -}}
+<aside class="dossier-lie" aria-labelledby="dossier-lie-{{ $bloc }}">
+  <p class="dossier-lie__surtitre">Le dossier complet, au-delà des activités</p>
+  <p class="dossier-lie__titre" id="dossier-lie-{{ $bloc }}">{{ partial "fr-typo.html" (printf "Dossier « %s » : %s %s%s" $def.titre (index $mots (string $nq) | default (string $nq)) (cond (gt $nq 1) "questions" "question") (cond (gt $np 0) (printf " et %s %s" (index $mots (string $np) | default (string $np)) (cond (gt $np 1) "prolongements" "prolongement")) "")) }}</p>
+  {{- with $def.chapo }}<p class="dossier-lie__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}
+  <nav class="pastilles" aria-label="Questions du dossier {{ $def.titre }}"><ul>
+    {{- range $questions }}<li><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a></li>{{ end -}}
+  </ul></nav>
+  {{- if $prolong }}
+  <p class="dossier-lie__sous">Prolongements</p>
+  <nav class="pastilles" aria-label="Prolongements du dossier {{ $def.titre }}"><ul>
+    {{- range $prolong }}<li><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" (.Params.dossier_dette_titre | default .Title) }}</a></li>{{ end -}}
+  </ul></nav>
+  {{- end }}
+  <p class="dossier-lie__action"><a class="btn btn--secondary" href="/ressources/#{{ $bloc }}">Voir le dossier dans l'index des ressources&nbsp;→</a></p>
+</aside>

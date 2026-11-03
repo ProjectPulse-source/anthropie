@@ -44,6 +44,8 @@ reprendre en citant la source&nbsp;; les séries brutes restent soumises aux con
 Les questions demandent de constater, de calculer, de comparer ou d'expliquer un mécanisme. Aucune ne demande de
 trancher une politique.
 
+{{< dossier-lie bloc="dette" >}}
+
 ## Dette publique, Première et Terminale {#dette-publique}
 
 Trois activités, du financement de l'État en Première aux politiques budgétaires européennes en Terminale, puis un
@@ -160,9 +162,9 @@ publique&nbsp;?](/qui-paie-la-dette-publique/)
 
 ### Méthode et sources {#methode}
 
-Toutes les figures viennent des quatre pages du dossier, qui en donnent la méthode, les limites et les sources&nbsp;:
+Les figures viennent de ces pages du dossier, qui en donnent la méthode, les limites et les sources&nbsp;:
 
-{{< pastilles label="Les quatre pages du dossier dette publique" >}}
+{{< pastilles label="Pages du dossier dette publique d'où viennent les figures" >}}
 - [Pourquoi la dette augmente](/pourquoi-la-dette-publique-augmente/)
 - [Combien elle coûte](/cout-de-la-dette-publique/)
 - [Qui paie](/qui-paie-la-dette-publique/)

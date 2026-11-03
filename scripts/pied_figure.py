@@ -23,6 +23,12 @@ def coupe(s: str, n: int) -> list[str]:
     francaise est d'abord soudee a ce qui la precede."""
     s = re.sub(r" ([:;?!»%])", "\u00a0\\1", s)
     s = s.replace("« ", "«\u00a0").replace("> ", ">\u00a0")
+    # Soudures reprises des copies locales des générateurs promesses (03/11/2026 : cinq copies de coupe() ramenées à
+    # cet organe ; l'une rejetait « ; CREDOC » en début de ligne) : « n° », abréviation + numéro, nombre + mois ou unité.
+    s = s.replace("n° ", "n°\u00a0")
+    s = re.sub(r"\b(art\.|al\.|no\.|para\.) (\d)", "\\1\u00a0\\2", s)
+    s = re.sub(r"(\d) (January|February|March|April|May|June|July|August|September|October|November|December|ans|years|places)\b",
+               "\\1\u00a0\\2", s)
     # Un signe seul (« + fait monter, − fait baisser ») ne finit jamais une ligne (03/11/2026, cascade téléphone).
     s = re.sub(r"(^| )([+\u2212]) ", "\\1\\2\u00a0", s)
     out, cur = [], ""

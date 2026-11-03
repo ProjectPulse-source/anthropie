@@ -1406,7 +1406,8 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
     # porter une affirmation à un chiffre que quatre millésimes démentent.
     c_.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="none" stroke="%s" stroke-width="1.6" '
               'stroke-dasharray="2 2"/>' % (X(0), YA(0.31), C2))
-    c_.append(txt(X(0) + 9, YA(0.31) + 4, S("point écarté", "point excluded"), TY_AXE - 1,
+    # +1 et non +4 (03/11/2026, check-figures R2) : le libellé touchait le point du 2e dixième, juste dessous.
+    c_.append(txt(X(0) + 9, YA(0.31) + 1, S("point écarté", "point excluded"), TY_AXE - 1,
                   MUTED))
     c_.append(txt(X(0), YA(p["enseignement"][0]) - 10, nb(p["enseignement"][0], 2) + pc,
                   TY_VALEUR, INK, "middle", weight="600"))

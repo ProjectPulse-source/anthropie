@@ -83,7 +83,7 @@
 <text x="46.0" y="372.0" font-size="10" fill="#898781" text-anchor="start">← 10 % les plus modestes</text>
 <text x="552.0" y="372.0" font-size="10" fill="#898781" text-anchor="end">10 % les plus aisés →</text>
 <line x1="0" y1="386.0" x2="720" y2="386.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="401.0" font-size="11" fill="#52514e">Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 1c) · France, euros par UC</text>
+<text class="pied-source" x="0" y="401.0" font-size="11" fill="#52514e">Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16/04/2026, figure 1c) · France, euros par UC</text>
 <text class="pied-note" x="0" y="415.0" font-size="11" fill="#52514e">Répartition avec conventions d'imputation ; ne mesure pas l'incidence spécifique de la dette.</text>
 <text class="pied-licence" x="0" y="429.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
 </svg>

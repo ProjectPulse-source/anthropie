@@ -46,7 +46,7 @@
 <circle cx="469.3" cy="255.9" r="3.4" fill="#eb6834"/>
 <circle cx="519.1" cy="225.3" r="3.4" fill="#eb6834"/>
 <circle cx="70.9" cy="279.7" r="3.4" fill="none" stroke="#eb6834" stroke-width="1.6" stroke-dasharray="2 2"/>
-<text x="79.9" y="283.7" font-size="10" fill="#898781" text-anchor="start">point excluded</text>
+<text x="79.9" y="280.7" font-size="10" fill="#898781" text-anchor="start">point excluded</text>
 <text x="70.9" y="110.4" font-size="15" fill="#2b2a28" text-anchor="middle" font-weight="600">2.75%</text>
 <text x="558.0" y="207.3" font-size="11" fill="#eb6834" text-anchor="start" font-weight="600">Taxes</text>
 <text x="558.0" y="220.3" font-size="10" fill="#898781" text-anchor="start">1.14% in D10</text>

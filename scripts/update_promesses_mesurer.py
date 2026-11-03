@@ -596,7 +596,7 @@ T = {
            "d2": "Two panels from 2018 to {an}, on the same scale: left, published category A; right, the series excluding RSA "
                  "recipients and young people in programmes. A band marks 2022 (new monthly updating form), a line 1 January 2025 "
                  "(full employment act). In the {fin}, {va} for published category A and {vh} excluding RSA.",
-           "p1": "Published category A", "p2": "Excluding RSA recipients and young people in programmes", "p2m": "Excluding RSA and youth programmes",
+           "p1": "Published category A", "p2": "Excluding RSA recipients and youth programmes", "p2m": "Excluding RSA and youth programmes",
            "r2022": "2022: form", "r2025": "2025: law",
            "ecart": "Both series jump in the first quarter of 2025 and fall back in the second (automatic updating, Jan.-Mar. 2025); their gap does not measure the effect of the reform.",
            "t3": "ILO unemployment and category A registrants in France, 2012-2025",
@@ -722,7 +722,10 @@ def fig_regle(r: dict) -> str:
     pw, gap, x0g = 300, 50, 56
     for k, (s, col, nom) in enumerate(((r["dares_a"], BLEU, L["p1"]), (r["dares_a_hors"], GRIS, L["p2"]))):
         _panneau(e, s, cles, vmin, vmax, x0g + k * (pw + gap), pw, 96, 300, col, nom, 11, k == 0, 2)
-    e.append(txt(0, 336, L["ecart"], 10, INK2))
+    # Deux lignes au plus (03/11/2026, check-figures R3 : la note anglaise, sur une ligne, sortait du cadre avec une police
+    # plus large que celle du rendu de controle).
+    for k, ligne in enumerate(pied_figure.coupe(L["ecart"], 118)[:2]):
+        e.append(txt(0, 332 + 12 * k, ligne, 10, INK2))
     return pied_figure.pied(e, H + 2, W, blocs_pied(L["src2"], L["note2"]), GRID)
 
 

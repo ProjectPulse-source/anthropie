@@ -36,7 +36,7 @@
 <text x="210.5" y="349.0" font-size="11" fill="#52514e" text-anchor="start">1,8 %</text>
 <text x="0.0" y="370.0" font-size="10" fill="#898781" text-anchor="start">* dont la Banque de France (programmes de l'Eurosystème) : part non publiée par la source.</text>
 <line x1="0" y1="390.0" x2="720" y2="390.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="405.0" font-size="11" fill="#52514e">A : INSEE, Informations rapides n° 79 (27/03/2026), dette de Maastricht par sous-secteur · B : Banque de France, via</text>
+<text class="pied-source" x="0" y="405.0" font-size="11" fill="#52514e">A : INSEE, Informations rapides n° 79 (27/03/2026), dette de Maastricht par sous-secteur · B : Banque de France, via</text>
 <text class="pied-source" x="0" y="419.0" font-size="11" fill="#52514e">l'AFT</text>
 <text class="pied-note" x="0" y="433.0" font-size="11" fill="#52514e">Deux champs distincts. A : valeur nominale ; B : valeur de marché. La détention ne mesure pas la charge finale.</text>
 <text class="pied-licence" x="0" y="447.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>

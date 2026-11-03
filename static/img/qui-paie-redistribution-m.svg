@@ -61,7 +61,7 @@
 <text x="42.0" y="506.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">reçoit 31,4 · verse 89,8</text>
 <line x1="0" y1="522.0" x2="300" y2="522.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="543.0" font-size="13.5" fill="#52514e">Insee, comptes nationaux distribués</text>
-<text class="pied-source" x="0" y="560.0" font-size="13.5" fill="#52514e">2023 (Insee Analyses n° 118, figure</text>
+<text class="pied-source" x="0" y="560.0" font-size="13.5" fill="#52514e">2023 (Insee Analyses n° 118, figure</text>
 <text class="pied-source" x="0" y="577.0" font-size="13.5" fill="#52514e">1c)</text>
 <text class="pied-note" x="0" y="598.0" font-size="13.5" fill="#52514e">Conventions d'imputation ; ne mesure</text>
 <text class="pied-note" x="0" y="615.0" font-size="13.5" fill="#52514e">pas l'incidence de la dette.</text>

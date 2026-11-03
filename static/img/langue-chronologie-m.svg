@@ -117,14 +117,14 @@
 <text x="198.0" y="882" font-size="13.5" fill="#96928f" text-anchor="middle">2020</text>
 <text x="278.0" y="882" font-size="13.5" fill="#96928f" text-anchor="middle">2025</text>
 <line x1="0" y1="902.0" x2="300" y2="902.0" stroke="#dcd8d3"/>
-<text x="0" y="923.0" font-size="13.5" fill="#55524f">DEPP (Notes d'Information) ; OCDE</text>
-<text x="0" y="940.0" font-size="13.5" fill="#55524f">(PISA 2025 ; 21st-Century Readers) ;</text>
-<text x="0" y="957.0" font-size="13.5" fill="#55524f">IEA (PIRLS) ; ministère de la Culture</text>
-<text x="0" y="974.0" font-size="13.5" fill="#55524f">; CREDOC</text>
-<text x="0" y="995.0" font-size="13.5" fill="#55524f">Chaque ligne a sa propre échelle ;</text>
-<text x="0" y="1012.0" font-size="13.5" fill="#55524f">seul le sens est montré. Plein : test</text>
-<text x="0" y="1029.0" font-size="13.5" fill="#55524f">publié (PISA 2000-2012 : test de</text>
-<text x="0" y="1046.0" font-size="13.5" fill="#55524f">l'auteur) ; tirets : sans test.</text>
+<text x="0" y="923.0" font-size="13.5" fill="#55524f">DEPP (Notes d'Information) ; OCDE</text>
+<text x="0" y="940.0" font-size="13.5" fill="#55524f">(PISA 2025 ; 21st-Century Readers) ;</text>
+<text x="0" y="957.0" font-size="13.5" fill="#55524f">IEA (PIRLS) ; ministère de la</text>
+<text x="0" y="974.0" font-size="13.5" fill="#55524f">Culture ; CREDOC</text>
+<text x="0" y="995.0" font-size="13.5" fill="#55524f">Chaque ligne a sa propre échelle ;</text>
+<text x="0" y="1012.0" font-size="13.5" fill="#55524f">seul le sens est montré. Plein : test</text>
+<text x="0" y="1029.0" font-size="13.5" fill="#55524f">publié (PISA 2000-2012 : test de</text>
+<text x="0" y="1046.0" font-size="13.5" fill="#55524f">l'auteur) ; tirets : sans test.</text>
 <text x="0" y="1067.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
 <text x="0" y="1084.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
 </svg>

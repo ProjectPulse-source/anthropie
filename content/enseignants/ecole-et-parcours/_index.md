@@ -40,6 +40,8 @@ quand la série change. Les figures et la compilation des données sont sous lic
 en citant la source&nbsp;; les questions demandent de constater, de calculer, de comparer ou d'expliquer un mécanisme,
 aucune ne demande de trancher une politique.
 
+{{< dossier-lie bloc="ecole" >}}
+
 <section class="fiche" id="fiche-acces">
 
 ### Terminale — Après le bac&nbsp;: les mêmes voies pour tous&nbsp;? {#terminale-apres-le-bac}
