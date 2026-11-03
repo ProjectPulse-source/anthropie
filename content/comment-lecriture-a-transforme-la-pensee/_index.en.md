@@ -36,6 +36,14 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long_en: "Writing and thought"
 ---
 
+<div class="resultat-phrase">
+
+**The result in one sentence.** Writing transformed the conditions of thought — keeping knowledge outside memory, classifying and comparing it before one's eyes, passing it on — printing amplified these possibilities and AI now makes it possible to delegate part of their processing; but having these means does not guarantee knowing how to use, understand or criticise them.
+
+</div>
+
+The page first reads the *Phaedrus*, tests its two objections against the history of writing, then sets them against the six criteria proposed in 2026 for judging dependence on AI.
+
 ## The two objections of the *Phaedrus* {#phaedrus-trial}
 
 In the *Phaedrus*, Socrates tells the myth of Theuth, the Egyptian god who presents writing to King Thamus as a remedy for memory and wisdom. The text then carries two objections, which are often confused and do not say the same thing.
@@ -45,27 +53,6 @@ In the *Phaedrus*, Socrates tells the myth of Theuth, the Egyptian god who prese
 **The second is Socrates's** (275d-e): a written text is like a painting, whose figures look alive and keep a solemn silence when questioned. Asked something, it always says the same thing. Once written, it drifts everywhere, among those who understand it as among those who have no business with it, not knowing to whom it should speak; ill-treated, it needs its father to defend it. The objection bears on the discourse itself: it does not answer questions, does not choose its reader and cannot defend itself alone. Socrates sets against it the discourse written with knowledge in the soul of the learner, which can defend itself and knows to whom it should speak (276a).
 
 Plato does not condemn writing for all that. Socrates accepts that one may write to build up a store of reminders, for oneself against forgetful old age and for those who follow the same path (276d). He describes properties of writing — it is mute, it does not choose its reader — but what he judges is use: writing serves those who already know, and deceives those who take it for knowledge. Jacques Derrida gave this passage, in 1968, a reading that has become classic (“Plato's Pharmacy”, collected in *Dissemination*, 1972): the *pharmakon* Theuth presents is both remedy and poison, and this ambivalence is not a balance of gains and losses, it is constitutive. Bernard Stiegler extended it to all technologies under the name of pharmacology.
-
-## Artificial intelligence tested against the *Phaedrus* {#digital-media-and-ai-the-third-shift}
-
-Writing, printing, the screen and artificial intelligence are not four objects of the same kind: a notation system, a reproduction process, an interface, a set of techniques that generate wordings and syntheses. Their **functions** can be compared — recording, reproducing, circulating, searching, generating — provided one says which is being compared. What generative AI adds is the automatic production, on simple request, of texts, summaries and assessments whose provenance and justifications are not always visible. Producing a wording is not yet exercising judgement; how much judgement one keeps depends on what one does with the answer — checking it, adopting it, delegating its validation — but also on the interface, the assessment rules and the institutions that make each of these steps easy or hard.
-
-Two researchers at the University of Cambridge, Yiran Du and Yijia Yuan, published in 2026 in the journal *AI & Society* a review of research on epistemic dependence on AI in learning. They argue that the question is not whether learners rely on AI, but whether that reliance preserves or displaces the work through which judgement develops, and they propose six criteria to tell productive reliance from harmful dependence. They do not cite Plato. Read alongside the *Phaedrus*, these six criteria do not all line up in the same way:
-
-| Criterion (Du and Yuan, 2026) | In the *Phaedrus* | What changes with AI |
-|---|---|---|
-| **Contestability**: being able to question, reject or revise the output | direct parallel: the written text, questioned, keeps silent and says the same thing (275d) | AI answers, as often as asked; answering an objection is not yet justifying the answer |
-| **Recoverability**: reconstructing the reasoning, not just reproducing the product | direct parallel: the appearance of wisdom (275a), against the discourse written in the soul of the learner (276a) | a successful product can be obtained without the reasoning being mastered |
-| **Transfer**: the capability persists when the tool is absent or the task changes | partial parallel: a remedy for reminding, not for memory (275a); Thamus says nothing of the new problem | it is tested by withdrawing the aid or changing the task |
-| **Distributed responsibility**: each answers in proportion to what they control | a neighbouring problem, not the same one: the written text needs its father to defend it (275e) | the pupil answers for a text whose tool the school imposes and whose workings the provider sets |
-| **Traceability**: tracing the sources, assumptions and transformations of a synthesis | the reverse: Socrates rebukes Phaedrus for asking who the speaker is and where he comes from, instead of judging only whether it is true (275b-c) | for whoever cannot judge an answer themselves, its provenance becomes the main way to check it |
-| **Epistemic plurality**: seeing disagreements and perspectives, rather than one answer presented as neutral | no direct counterpart: dialectic gathers and divides (265d-266b), it does not expose disagreements | a synthesis can hide behind a single voice sources that contradict one another |
-
-**This comparison is a reading, not a lineage.** The parallel between the *Phaedrus* and generative AI is not new: Eugène Loos and Jan Radicke set the representations of ChatGPT against the *Phaedrus*'s arguments against writing in 2024 (*AI and Ethics*); María Reyes Calderón and Francisco Herrera start in 2025 from the myth of Theuth to judge the use of chatbots in scientific writing (*Humanities and Social Sciences Communications*). What this page adds is narrower: setting the *Phaedrus*, line by line, against a six-criterion framework that owes it nothing, to see where they converge and where they part.
-
-Both texts share a refusal to condemn the tool as such: the *Phaedrus* accepts the reminders of those who already know, and the 2026 review writes that relying on a tool is not the problem as such. They do not look at the same thing, though: Plato describes properties of writing, Du and Yuan describe configurations — interfaces, assessment, institutions — without assuming that AI alone causes the effects they describe, or causes them uniformly.
-
-The last two rows of the table do not say that AI invents the problem of sources or of disagreement: compilations, florilegia and encyclopaedias raised it long before. Du and Yuan note themselves that web search was neither transparent nor neutral; but it exposed several documents and several authors, whereas a conversational synthesis can bring together claims of different provenance in a single answer, without showing the choices, exclusions and uncertainties that make it up. They draw a consequence teachers will recognise: the product can gain in surface quality while verification weakens, and the deficit becomes harder to see. The authors state that their criteria are not a measurement scale and call for empirical validation.
 
 ## Before writing: thinking with the voice {#before-writing-thinking-with-the-voice}
 
@@ -87,11 +74,40 @@ Printing was not born in Europe. The *Diamond Sutra*, a Buddhist text printed in
 
 In Mainz, in the mid-1450s, Gutenberg assembled a complete system — alloy, hand mould, oil-based ink, press — and the forty-two-line Bible came out in about one hundred and eighty copies. Printing multiplies copies of the same text and increases its relative stability: editions can be compared, scholars in different cities discuss the same text. The American historian Elizabeth Eisenstein made it an agent of change in early modern Europe (*The Printing Press as an Agent of Change*, 1979); the historian Adrian Johns objected that this stability did not come from the press alone: early editions were faulty, pirated, contested, and trust in print was slowly built by workshops, trade and institutions (*The Nature of the Book*, 1998).
 
+<details class="repli"><summary>The press alone made neither modern science nor public opinion</summary>
+
 The same gap separates the press from its most often cited effects. It encouraged the circulation and comparison of scientific results without being, on its own, the condition of modern science: mathematics, astronomy and observation existed before it. The Reformation offers, from the 1520s, a massive example of diffusion; but a widely circulated text does not on its own make a public opinion, and the history of the public sphere, since Jürgen Habermas (1962), places its formation in the seventeenth and eighteenth centuries, with its publics, its institutions and its places of discussion.
+
+</details>
 
 ## First uses do not predict later ones {#what-this-history-teaches}
 
 It is tempting to read the destiny of a technology's uses in its beginnings. The facts do not lend themselves to it. Surviving writing begins with accounts. The first printed works of Mainz are at once a Bible, letters of indulgence (1454-1455), Latin grammars and a calendar; the earliest complete surviving dated printed book is a Buddhist text. The Web, for its part, was proposed at CERN in 1989 by Tim Berners-Lee so that physicists could share their documents. The first uses of a technology therefore do not allow one to infer those that will prevail later.
+
+## Artificial intelligence tested against the *Phaedrus* {#digital-media-and-ai-the-third-shift}
+
+Writing, printing, the screen and artificial intelligence are not four objects of the same kind: a notation system, a reproduction process, an interface, a set of techniques that generate wordings and syntheses. Their **functions** can be compared — recording, reproducing, circulating, searching, generating — provided one says which is being compared. What generative AI adds is the automatic production, on simple request, of texts, summaries and assessments whose provenance and justifications are not always visible. Producing a wording is not yet exercising judgement; how much judgement one keeps depends on what one does with the answer — checking it, adopting it, delegating its validation — but also on the interface, the assessment rules and the institutions that make each of these steps easy or hard.
+
+Two researchers at the University of Cambridge, Yiran Du and Yijia Yuan, published in 2026 in the journal *AI & Society* a review of research on epistemic dependence on AI in learning. They argue that the question is not whether learners rely on AI, but whether that reliance preserves or displaces the work through which judgement develops, and they propose six criteria to tell productive reliance from harmful dependence. They do not cite Plato. Read alongside the *Phaedrus*, these six criteria do not all line up in the same way:
+
+| Criterion (Du and Yuan, 2026) | In the *Phaedrus* | What changes with AI |
+|---|---|---|
+| **Contestability**: being able to question, reject or revise the output | direct parallel: the written text, questioned, keeps silent and says the same thing (275d) | AI answers, as often as asked; answering an objection is not yet justifying the answer |
+| **Recoverability**: reconstructing the reasoning, not just reproducing the product | direct parallel: the appearance of wisdom (275a), against the discourse written in the soul of the learner (276a) | a successful product can be obtained without the reasoning being mastered |
+| **Transfer**: the capability persists when the tool is absent or the task changes | partial parallel: a remedy for reminding, not for memory (275a); Thamus says nothing of the new problem | it is tested by withdrawing the aid or changing the task |
+| **Distributed responsibility**: each answers in proportion to what they control | a neighbouring problem, not the same one: the written text needs its father to defend it (275e) | the pupil answers for a text whose tool the school imposes and whose workings the provider sets |
+| **Traceability**: tracing the sources, assumptions and transformations of a synthesis | the reverse: Socrates rebukes Phaedrus for asking who the speaker is and where he comes from, instead of judging only whether it is true (275b-c) | for whoever cannot judge an answer themselves, its provenance becomes the main way to check it |
+| **Epistemic plurality**: seeing disagreements and perspectives, rather than one answer presented as neutral | no direct counterpart: dialectic gathers and divides (265d-266b), it does not expose disagreements | a synthesis can hide behind a single voice sources that contradict one another |
+
+**This comparison is a reading, not a lineage.** The parallel between the *Phaedrus* and generative AI is not new: Eugène Loos and Jan Radicke set the representations of ChatGPT against the *Phaedrus*'s arguments against writing in 2024 (*AI and Ethics*); María Reyes Calderón and Francisco Herrera start in 2025 from the myth of Theuth to judge the use of chatbots in scientific writing (*Humanities and Social Sciences Communications*). What this page adds is narrower: setting the *Phaedrus*, line by line, against a six-criterion framework that owes it nothing, to see where they converge and where they part.
+
+<details class="repli"><summary>What the two texts share, and what AI does not invent</summary>
+
+Both texts share a refusal to condemn the tool as such: the *Phaedrus* accepts the reminders of those who already know, and the 2026 review writes that relying on a tool is not the problem as such. They do not look at the same thing, though: Plato describes properties of writing, Du and Yuan describe configurations — interfaces, assessment, institutions — without assuming that AI alone causes the effects they describe, or causes them uniformly.
+
+The last two rows of the table do not say that AI invents the problem of sources or of disagreement: compilations, florilegia and encyclopaedias raised it long before. Du and Yuan note themselves that web search was neither transparent nor neutral; but it exposed several documents and several authors, whereas a conversational synthesis can bring together claims of different provenance in a single answer, without showing the choices, exclusions and uncertainties that make it up. They draw a consequence teachers will recognise: the product can gain in surface quality while verification weakens, and the deficit becomes harder to see. The authors state that their criteria are not a measurement scale and call for empirical validation.
+
+</details>
 
 ## A grid for judging a technology {#grid}
 
@@ -105,7 +121,11 @@ Setting the two texts side by side yields five questions for examining a technol
 
 The grid does not say whether a tool is good or bad: it asks which operations must remain mastered for the aid to remain an aid. Hence this page's conclusion: a technology changes the way we think less through the operation it performs in our place than through the conditions under which it has us learn, practise, check and pass on that operation.
 
-**A lesson to test it**, offered to teachers who would like to try it in class: is having an answer the same as knowing how to answer?
+The mechanism is the same from one end of the page to the other: a technology makes an operation possible or more accessible; practices and institutions organise its use; some operations remain exercised, others are delegated; mastery depends on what one learns to reconstruct, check and justify. The works cited do not bring the same kind of evidence: Scribner and Cole observe, Eisenstein and Johns reconstruct a history, Du and Yuan propose criteria, and they do not defend a common thesis. Being autonomous, in this sense, does not mean doing without the tool: it means keeping, within the support one asks of it, the work through which judgement is formed.
+
+### A lesson to test it: is having an answer the same as knowing how to answer? {#lesson}
+
+It is offered to teachers who would like to try it in class.
 
 1. Hand out an AI-written answer to a philosophy question, with the sources it gives.
 2. Have students identify the thesis, reconstruct the arguments and check one decisive reference.
@@ -118,9 +138,13 @@ The lesson measures no effect of AI; it lets students experience the difference 
 
 Research hardly disputes that technologies of writing change what can be recorded, circulated and processed. It diverges on the cognitive reach of these changes and on how much is owed to the technology itself.
 
+<details class="repli"><summary>Three debates: what writing makes possible, what printing stabilises, what externalisation gains or loses</summary>
+
 - **What writing makes possible.** Jack Goody and Ian Watt (“The Consequences of Literacy”, 1963), then Goody alone (*The Domestication of the Savage Mind*, 1977), link writing to forms of thought; Scribner and Cole (1981) limit the thesis with the case of writing without school, and Brian Street (*Literacy in Theory and Practice*, 1984) criticises the “autonomous model” that attributes effects to writing independently of its uses. The Vai results weaken the strong version of a general transformation of the mind; they do not invalidate the idea that certain written forms favour specific operations.
 - **What printing stabilises.** Eisenstein (1979) against Johns (1998), brought face to face in the *American Historical Review* (vol. 107, no. 1, 2002): mechanical reproduction, or the practices that made print a reliable source. Neither denies the material transformation; they diverge on what made it effective.
 - **What externalisation gains or loses.** Derrida's reading of the *pharmakon* (1968) and Stiegler's pharmacology (*Ce qui fait que la vie vaut la peine d'être vécue*, 2010; in English *What Makes Life Worth Living*, 2013) think through the ambivalence of a technology; they do not measure its effects. Loos and Radicke (2024), then Calderón and Herrera (2025), have compared the *Phaedrus* with generative AI. Du and Yuan (2026) propose criteria for learning, which remain to be tested.
+
+</details>
 
 ## What this page does not say {#limits}
 
@@ -141,6 +165,5 @@ The book [*L'Odyssée des idées*](/livres/lodyssee-des-idees/) (in French; new 
 
 ## Further reading {#further-reading}
 
-- [*L'Odyssée des idées* — the book's page](/livres/lodyssee-des-idees/) (in French; 250 stopovers, seven threads, excerpt).
 - [Which general-knowledge book to give as a gift?](/offrir-un-livre-de-culture-generale/) (in French) — if the journey is meant for someone else.
 - [What is the anthropic loop?](/en/anthropic-loop/) — the author's hypothesis on cognitive externalisation.

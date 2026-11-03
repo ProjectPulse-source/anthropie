@@ -210,3 +210,22 @@ refonte. Relevés : J+30 et J+60. Une reprise est un résultat à observer, jama
 - Fonctions : accrocher (chapô), révéler (deux continuités, un renversement), expliquer (possible ≠ acquis ;
   stabilité de l'imprimé), éprouver (Scribner et Cole, Johns, critères sans équivalent, limites), transformer (grille).
 - Bloc qui n'apporte rien de neuf : aucun repéré ; « Une hypothèse de l'auteur » est court et séparé.
+
+### Architecture E4 (03/11/2026)
+
+- Constat : la page servie plaçait les critères de 2026 (section 2) avant l'épreuve par l'écriture et l'imprimé,
+  inversant le scénario 2 retenu le 31/10 ; aucune phrase-résultat, aucun repli de contenu, trois renvois au livre.
+- Trois maquettes (E1, E2, E3 : `D:\PRO\06_PROMOTION\MAQUETTES_ECRITURE_PENSEE_2026-11-03\`) ; contre-expertise
+  `PRO-20261103-190109`, réponse archivée (SHA-256 C9FD8B5A…), arbitrée (`ARBITRATIONS/PRO-20261103-190109_arbitrage.md`) :
+  E4 = E1 avec l'histoire avant le tableau. Appliquée le 03/11, FR et EN dans le même geste, sur demande de l'auteur.
+- Fait : section IA déplacée après « Les premiers usages » (ancres inchangées) ; phrase-résultat (formulation de
+  l'arbitrage, ramenée à une phrase) et annonce de l'ordre ; trois replis de développements secondaires (ce que les deux
+  textes partagent ; la presse sans la science ni l'opinion à elle seule ; les trois débats de la recherche) ; paragraphe
+  de mécanisme, avec les niveaux de preuve et l'autonomie ; intertitre de la séance (`#seance`, `#lesson`) ; puce de la
+  fiche du livre retirée de « Pour aller plus loin » (doublon de « La traversée complète »). Frise : abandonnée.
+- `lastmod` gardé au 01/11 : changement d'ordre et de présentation, aucun fait nouveau (le build l'exige d'ailleurs du
+  journal du 01/11).
+- Contrôles : `check-all --ci` 0 ; build 0 ; `typo_build` 0 ; liens 0 critique ; rendu et dates 0. Relecture des
+  phrases nouvelles FR et EN : faite (une phrase sans verbe corrigée). Instantanés refaits.
+- Point ouvert, décision de l'auteur : l'exemple du Web dans « Les premiers usages ne prédisent pas les suivants ».
+- Recette visuelle 320-1280 px : NON FAITE (quota au-dessus de 95 %) ; à faire sur la page servie.
