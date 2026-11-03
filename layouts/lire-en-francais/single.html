@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{- /* Lire en français, page par pays (auteur, 03/11/2026) : les six livres en français au prix plancher de la boutique
+       Kindle du pays, et, pour qui a gardé un compte Amazon.fr, les exemplaires offerts. Page sur invitation : noindex,
+       hors listes. Liens Kindle construits depuis l'ASIN de `url_amazon_fr_kindle` de chaque fiche /livres/ (source
+       unique). Sans boutique (`boutique` vide : Belgique, Suisse, Luxembourg, Maroc), seuls les exemplaires offerts. */ -}}
+{{- $p := .Params -}}
+{{- $ordre := slice "lodyssee-des-idees" "livresque-des-mots" "anthropie-ordre-ici-dette-ailleurs" "la-societe-du-premier-coup" "dette-publique-qui-paie-vraiment" "un-president-peut-il-tenir-ses-promesses" -}}
+<article class="home-section ressources">
+  <header class="page-header">
+    <p class="ressources-eyebrow">Lire en français — {{ $p.pays }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+  </header>
+
+  {{- with $p.boutique }}
+  <section aria-labelledby="lef-boutique">
+    <h2 id="lef-boutique">Sur Amazon.{{ . }}, au prix plancher</h2>
+    <p>Les six livres en français, version Kindle, au prix le plus bas que nous puissions fixer sur cette boutique{{ with $p.a_partir }}, à partir de {{ . }}{{ end }}. Aucune liseuse n'est nécessaire&nbsp;: l'application Kindle gratuite suffit, sur téléphone, tablette ou ordinateur.</p>
+    <ul class="lef-livres">
+      {{- range $ordre }}
+      {{- $b := site.GetPage (printf "/livres/%s" .) -}}
+      {{- with $b }}
+      {{- $asin := index (findRE `B0[A-Z0-9]{8}` (.Params.url_amazon_fr_kindle | default "")) 0 -}}
+      <li class="lef-livre">
+        {{ partial "book-cover.html" (dict "slug" $b.File.ContentBaseName "alt" (printf "Couverture de %s" $b.Title) "wrapClass" "oc-couv" "sizes" "110px") }}
+        <div>
+          <h3>{{ $b.Title }}</h3>
+          {{ with $b.Params.subtitle }}<p>{{ . }}</p>{{ end }}
+          {{- if $asin }}<p><a class="ressources-btn" href="https://www.amazon.{{ $p.boutique }}/dp/{{ $asin }}" rel="noopener" target="_blank">Voir sur Amazon.{{ $p.boutique }}</a></p>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  <section aria-labelledby="lef-fr">
+    <h2 id="lef-fr">{{ if $p.boutique }}Vous avez gardé un compte Amazon.fr&nbsp;?{{ else }}Avec un compte Amazon.fr{{ end }}</h2>
+    <p>Un exemplaire peut vous être offert, déjà payé, dans la limite du stock&nbsp;: choisissez le livre sur la page des livres offerts. Le lien ne fonctionne qu'avec un compte Amazon.fr.</p>
+    <p><a class="ressources-btn ressources-btn--outline" href="{{ "/ressources-offertes/" | relLangURL }}">Les livres offerts</a></p>
+  </section>
+
+  <p class="ressources-note">Vous aimez l'un de ces livres&nbsp;? Faites-le connaître autour de vous&nbsp;: c'est ainsi qu'ils circulent.</p>
+</article>
+{{ end }}
