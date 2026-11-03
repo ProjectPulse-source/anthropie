@@ -1,0 +1,50 @@
+{{- /* citation-entree.html — une entrée de corpus de citations, rendue en repli (page /citations-celebres-verifiees/).
+
+       Maquette D′ validée par l'auteur le 03/11/2026 (hybride B + C, arbitrage de la contre-expertise :
+       D:\PRO\06_PROMOTION\MAQUETTES_CITATIONS_VERIFIEES_2026-11-03\ARBITRAGE_CONTRE_EXPERTISE_MAQUETTES_2026-11-03.md).
+
+       {{< citation-entree id="hugo-…" statut="etablie" statut_texte="Établie" mecanisme="la forme se simplifie"
+             q=`«&nbsp;…&nbsp;»` decouverte=`…` ref=`« … » — Victor Hugo, …`
+             circule_lbl="Ce qui circule" circule=`…` ecrit_lbl="Ce que Hugo a écrit" ecrit=`…` >}}
+       - **Le texte**&nbsp;: …
+       - **Source**&nbsp;: …
+       - **Ce que l'écart change**&nbsp;: …
+       {{< /citation-entree >}}
+
+       Fermé : la citation, le statut EN TOUTES LETTRES (la couleur ne porte jamais seule l'information), le mouvement
+       de transmission s'il est justifié par l'entrée (facultatif : aucun mouvement n'est inventé), la découverte.
+       Ouvert : la confrontation en deux colonnes SEULEMENT si `ecrit` est donné (entrées à écart), puis la grille
+       uniforme du protocole corpus (le Markdown du bloc), le lien permanent et « Copier la référence ».
+       Le texte reste dans le HTML sans JavaScript (<details>). Ouverture par l'ancre et ligne « Lire le détail » :
+       static/js/replis-action.js, qui vise tout <details>. Copie : static/js/copy-citation.js (data-copy-target).
+       La référence copiée donne la forme ATTESTÉE et sa source, jamais la forme qui circule ; le lien de vérification
+       est calculé (permalien + ancre), jamais saisi. */ -}}
+{{- $id := .Get "id" -}}
+{{- $statut := .Get "statut" -}}
+{{- if not $id }}{{ errorf "citation-entree: id manquant (%s)" .Page.File.Path }}{{ end -}}
+{{- if not (in (slice "etablie" "variante" "non") $statut) }}{{ errorf "citation-entree %s: statut %q hors de etablie|variante|non" $id $statut }}{{ end -}}
+{{- range slice "q" "statut_texte" "decouverte" "ref" }}{{ if not ($.Get .) }}{{ errorf "citation-entree %s: parametre %s manquant" $id . }}{{ end }}{{ end -}}
+{{- if and (.Get "ecrit") (not (.Get "circule")) }}{{ errorf "citation-entree %s: ecrit sans circule" $id }}{{ end -}}
+{{- $corps := .Inner | .Page.RenderString -}}
+{{- if not (in $corps "<li>") }}{{ errorf "citation-entree %s: grille (liste Markdown) absente" $id }}{{ end -}}
+<details class="citation-entree citation-entree--{{ $statut }}" id="{{ $id }}">
+  <summary>
+    <span class="citation-entree__q">{{ .Get "q" | safeHTML }}</span>
+    <span class="citation-entree__meta"><span class="citation-entree__statut">{{ .Get "statut_texte" | safeHTML }}</span>{{ with .Get "mecanisme" }}<span class="citation-entree__sep"> · </span><span class="citation-entree__mecanisme">{{ . | safeHTML }}</span>{{ end }}</span>
+    <span class="citation-entree__decouverte">{{ .Get "decouverte" | safeHTML }}</span>
+  </summary>
+  <div class="citation-entree__corps">
+    {{- with .Get "ecrit" }}
+    <div class="citation-entree__duo">
+      <div><p class="citation-entree__lbl">{{ $.Get "circule_lbl" | default "Ce qui circule" | safeHTML }}</p><p class="citation-entree__circule">{{ $.Get "circule" | safeHTML }}</p></div>
+      <div><p class="citation-entree__lbl">{{ $.Get "ecrit_lbl" | default "Ce que l'auteur a écrit" | safeHTML }}</p><p class="citation-entree__ecrit">{{ . | safeHTML }}</p></div>
+    </div>
+    {{- end }}
+    {{ $corps }}
+    <div class="citation-entree__actions">
+      <button type="button" class="citation-entree__copier" data-copy-target="#{{ $id }}-ref" data-copy-feedback="Référence copiée">Copier la référence</button>
+      <a href="#{{ $id }}">Lien permanent</a>
+      <span class="citation-entree__ref" id="{{ $id }}-ref" hidden>{{ .Get "ref" | safeHTML }} Vérification : {{ .Page.Permalink }}#{{ $id }}</span>
+    </div>
+  </div>
+</details>

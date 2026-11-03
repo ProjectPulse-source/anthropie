@@ -138,10 +138,20 @@ main .awp-registre__ligne,
 main .home-reception__liste li,
 main .livres-commencer__ligne,
 main .oc-etapes li,
-main .oc-chaine__maillons li {
+main .oc-chaine__maillons li,
+main .citations-mouvements li,
+main .citation-entree__corps > ul > li {
   padding-left: 0 !important;
   margin-bottom: 0 !important;
 }
+// Grille d'une entrée de corpus et liste des mouvements (_citations.scss) : liste sans puce ni retrait.
+main .citations-mouvements ul,
+main .citation-entree__corps > ul {
+  padding-left: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+main .citation-entree__corps > ul > li { margin-bottom: 0.75em !important; }
 
 main li::marker {
   color: var(--color-text-faint);

@@ -163,3 +163,21 @@ circule, en citant une édition qui imprime l'autre. La page Hugo ne contient ni
   P1.1 à P1.7 acceptés, dont la lettre de Hall de 1939, lue dans *Modern Language Notes*, 1943. Régnier NON VÉRIFIÉ,
   remplacé par Quitard (1842). 25 retouches, contrôles relancés à 0, instantané refait.
 - Accord de l'auteur : demandé avec le diff.
+
+### Présentation des entrées — module `citation-entree` (03/11/2026)
+
+- Constat de l'auteur : la page servait vingt listes à puces, sans module. Trois maquettes (A fiches, B tableau et
+  replis, C confrontation), contre-expertise archivée (SHA-256 2a7c3efe…87ec) et arbitrée :
+  `D:\PRO\06_PROMOTION\MAQUETTES_CITATIONS_VERIFIEES_2026-11-03\ARBITRAGE_CONTRE_EXPERTISE_MAQUETTES_2026-11-03.md`.
+  Maquette D′ (hybride B + C) validée par l'auteur le 03/11/2026.
+- Fait : un repli par entrée (citation, statut en toutes lettres, mouvement de transmission seulement quand l'entrée
+  l'établit, découverte) ; confrontation en deux colonnes pour les sept entrées à écart ou à emprunt ; grille uniforme
+  inchangée (le texte des champs n'est pas touché, la ligne « Statut » passe dans le résumé) ; lien permanent et
+  « Copier la référence » (forme attestée et source, lien calculé). Quatre mouvements annoncés dans « Comment lire » ;
+  pastilles d'auteur. Ancres des vingt entrées inchangées.
+- Sans mouvement, déclaré : « Ouvrez une école » (la piste Jourdan n'est pas établie) et « Rien ne sert de courir ».
+- Contrôles : `check-all --ci` 0 ; build 0 ; `typo_build` 0 ; liens 0 critique ; rendu et dates 0. Relecture phrase à
+  phrase des phrases nouvelles : faite (deux défauts corrigés : statut et mouvement collés dans le texte extrait ;
+  définition de « l'auteur citait déjà » élargie). Instantané refait (432 phrases).
+- Recette visuelle 320-1280 px : NON FAITE (quota au-dessus de 95 %, pilotage du navigateur interdit) ; à faire sur
+  la page servie à la reprise.

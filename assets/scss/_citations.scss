@@ -1,0 +1,116 @@
+// _citations.scss — entrées d'un corpus de citations (shortcode citation-entree) et annonce des mouvements de
+// transmission (page /citations-celebres-verifiees/). Maquette D′ validée par l'auteur le 03/11/2026.
+// Styles limités à leurs classes : aucune règle globale (arbitrage de la contre-expertise, point 14).
+// Trois teintes de statut, nouvelles, toujours doublées du statut écrit en toutes lettres.
+
+.citation-entree {
+  --cit-ok: #2F6B4F;
+  --cit-var: #9A6A12;
+  --cit-non: #8A3B3B;
+  border-top: 1px solid var(--color-rule-soft);
+  scroll-margin-top: 5rem;
+
+  &:last-of-type { border-bottom: 1px solid var(--color-rule-soft); }
+
+  > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem 2.5rem 1rem 0;
+    position: relative;
+
+    &::-webkit-details-marker { display: none; }
+    &::after {
+      content: "+";
+      position: absolute; right: 0.25rem; top: 0.75rem;
+      font: 300 1.6rem/1 var(--font-sans);
+      color: var(--color-text-subtle);
+    }
+    &:focus-visible { outline: 2px solid var(--color-link); outline-offset: 2px; }
+  }
+  &[open] > summary::after { content: "\2212"; }
+
+  &__q {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.2rem; line-height: 1.35; font-weight: 500;
+    color: var(--color-text);
+  }
+  &__meta {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.9rem;
+    margin-top: 0.35rem;
+    font: 0.8rem/1.4 var(--font-sans);
+  }
+  &__statut {
+    font-weight: 600;
+    color: var(--cit-ok);
+    &::before { content: "\25CF\00A0"; font-size: 0.6rem; vertical-align: 0.1em; }
+  }
+  &--variante &__statut { color: var(--cit-var); }
+  &--non &__statut { color: var(--cit-non); }
+  // séparateur écrit dans le HTML : le texte extrait (lecteur d'écran, extrait) ne colle pas statut et mouvement
+  &__sep { color: var(--color-text-subtle); margin: 0 -0.4rem; }
+  &__mecanisme { color: var(--color-text-muted); }
+  &__decouverte {
+    display: block;
+    margin-top: 0.4rem;
+    font-family: var(--font-serif); font-size: 1rem; line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+
+  &__corps { padding: 0 0 1.4rem; }
+  // la grille uniforme du protocole corpus (liste Markdown du shortcode)
+  &__corps > ul { padding-left: 0; list-style: none; margin: 0; }
+  &__corps > ul > li { margin: 0 0 0.75rem; }
+
+  &__duo {
+    display: grid; grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--color-rule-soft); border-radius: 6px; overflow: hidden;
+    margin: 0.25rem 0 1.1rem;
+    background: var(--color-bg-elevated);
+    > div { padding: 0.85rem 1rem; }
+    > div:first-child { background: var(--color-bg-card); border-right: 1px solid var(--color-rule-soft); }
+    p { margin: 0; }
+    mark { background: rgba(227, 163, 45, 0.26); color: inherit; padding: 0 2px; border-radius: 2px; }
+  }
+  &__lbl {
+    margin: 0 0 0.35rem !important;
+    font: 600 0.68rem/1.4 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--color-text-subtle);
+  }
+  &__circule { font-size: 1.02rem; line-height: 1.45; color: var(--color-text-muted); }
+  &__ecrit { font-size: 1.02rem; line-height: 1.45; font-style: italic; color: var(--color-text); }
+
+  &__actions {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.1rem;
+    margin-top: 0.9rem;
+    font: 0.8rem var(--font-sans);
+    a { color: var(--color-text-subtle); text-decoration: none; }
+    a:hover { color: var(--color-link); }
+  }
+  &__copier {
+    font: 500 0.8rem var(--font-sans);
+    color: var(--color-accent); background: var(--color-bg-elevated);
+    border: 1px solid var(--color-rule-soft); border-radius: 4px;
+    padding: 0.3rem 0.7rem; cursor: pointer;
+    &:hover { border-color: var(--color-accent); }
+  }
+
+  @media (max-width: 620px) {
+    &__duo { grid-template-columns: 1fr; }
+    &__duo > div:first-child { border-right: 0; border-bottom: 1px solid var(--color-rule-soft); }
+    &__q { font-size: 1.12rem; }
+  }
+}
+
+// Les mouvements de transmission, annoncés avant le corpus (« Comment lire cette page »)
+.citations-mouvements {
+  margin: 0.9rem 0 1.4rem;
+  border-top: 1px solid var(--color-rule-soft);
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-rule-soft); margin: 0; }
+  strong { font-family: var(--font-sans); font-size: 0.92rem; font-weight: 600; color: var(--color-text); }
+}
+
+@media print {
+  .citation-entree__actions { display: none; }
+}
