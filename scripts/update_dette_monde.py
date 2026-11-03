@@ -650,6 +650,35 @@ def largeur_texte(s: str, taille: float) -> float:
     return sum(chasse(c) for c in s) * taille / 1000
 
 
+def ambigu(code, b, px, py, points) -> bool:
+    """Le nom posé dans la boîte b se lit-il comme celui d'un AUTRE point ? (03/11/2026 : « Autriche » posé au-dessus
+    du point de la Finlande ; sur téléphone, « Slovénie » aligné sur l'Allemagne.) Trois motifs : (1) nom au-dessus ou
+    au-dessous, et un autre point sous son étendue horizontale presque aussi près que le sien (à 2 px) ; (2) un autre
+    point à hauteur du texte, collé à l'un de ses bouts (16 px), comme l'est un nom posé à droite ou à gauche de son
+    point ; (3) un autre point nettement plus près du texte que le sien. Bureau et téléphone appellent la même règle."""
+    bord = lambda qx, qy: math.hypot(qx - min(max(qx, b[0]), b[2]), qy - min(max(qy, b[1]), b[3]))  # noqa: E731
+    d_b = bord(px, py)
+    lateral = b[1] <= py <= b[3]
+    for c, qx, qy in points:
+        if c == code:
+            continue
+        gap_v = max(b[1] - qy, qy - b[3], 0)
+        gap_h = max(b[0] - qx, qx - b[2], 0)
+        if (not lateral and b[0] - 1 <= qx <= b[2] + 1 and gap_v <= d_b + 2)                 or (b[1] - 3 <= qy <= b[3] + 3 and 0 < gap_h <= 16) or bord(qx, qy) < 0.7 * d_b:
+            return True
+    return False
+
+
+def filet(px, py, b, r=7, mini=16):
+    """Trait qui rattache un nom éloigné à son point, du bord du point au bord du texte ; vide s'il serait trop court."""
+    qx, qy = min(max(px, b[0]), b[2]), min(max(py, b[1] - 1), b[3])
+    lg = math.hypot(qx - px, qy - py)
+    if lg <= mini:
+        return ""
+    return ('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1"/>'
+            % (px + (qx - px) * r / lg, py + (qy - py) * r / lg, qx - (qx - px) * 1.5 / lg, qy - (qy - py) * 1.5 / lg, INK2))
+
+
 def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, source, note, etiquettes, droites=None,
           jumeaux=(), ymin=0.0, fmt_y=None, lang="fr"):
     H = 440
@@ -710,6 +739,8 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
         for c, o in boites:
             if b[0] < o[2] and o[0] < b[2] and b[1] < o[3] and o[1] < b[3]:
                 out.append("« %s » chevauche l'étiquette de %s" % (lib, c))
+        if ambigu(code, b, px, py, points):
+            return out, "ambigu"
         for (x1, y1, x2, y2) in traits:
             n = int(math.hypot(x2 - x1, y2 - y1)) + 1
             # Au ras de son propre point (12 px), un trait qui passe par ce point ne prête à aucune confusion :
@@ -717,13 +748,20 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
             if any(b[0] - 1 < x1 + (x2 - x1) * k / n < b[2] + 1 and b[1] - 1 < y1 + (y2 - y1) * k / n < b[3] + 1
                    and math.hypot(x1 + (x2 - x1) * k / n - px, y1 + (y2 - y1) * k / n - py) > 12
                    for k in range(n + 1)):
-                return out, True
+                return out, "trait"
         return out, False
 
-    for x in rows:
-        pref = noms.get(x["code"])
-        if not pref:
-            continue
+    # Nom FACULTATIF (préférence préfixée « ? », 03/11/2026 : nommer davantage de pays du nuage) : posé APRÈS les
+    # obligatoires, seulement à une place sans aucun conflit (ni trait ni ambiguïté) ; sinon omis, et dit au journal.
+    ordre = [x for x in rows if noms.get(x["code"]) and not noms[x["code"]].startswith("?")] \
+        + [x for x in rows if (noms.get(x["code"]) or "").startswith("?")]
+    for x in ordre:
+        pref = noms[x["code"]]
+        facultatif = pref.startswith("?")
+        # « ! » : place FIGÉE, jugée au rendu ; seuls les conflits bloquants l'écartent (03/11/2026 : la règle
+        # d'ambiguïté déplaçait « Roumanie » et « Germany » vers une place moins lisible que la leur).
+        fige = pref.startswith("!")
+        pref = pref.lstrip("?!")
         px, py = sx(fx(x)), sy(fy(x))
         lib = x[cle_nom]
         larg = largeur_texte(lib, TY_ANNOT) * (1.07 if x["code"] == "FR" else 1.0)
@@ -733,14 +771,31 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
             gx = {"middle": px + dx - larg / 2, "end": px + dx - larg, "start": px + dx}[anc]
             b = (gx, py + dy - TY_ANNOT * 0.75, gx + larg, py + dy + 1)
             dur, trait = conflits(x["code"], lib, b, px, py)
+            if fige and pos == pref and not dur:
+                trait = False
             essais.append((dur, trait, dx, dy, anc, b))
             if not dur and not trait:
                 break
         libres = [t for t in essais if not t[0]]
+        if facultatif:
+            # Un trait sous le nom est interrompu par le liseré (comme pour un obligatoire) ; une ambiguïté, jamais.
+            libres = [t for t in libres if t[1] != "ambigu"]
+            libres = [t for t in libres if not t[1]][:1] or libres[:1]
+            if not libres:
+                log("  %s (%s) : %s sans place nette, non nomme" % (ident, lang, x["code"]))
+                continue
         if not libres:
             echecs += essais[0][0]
             continue
-        _, _, dx, dy, anc, b = libres[-1] if not libres[-1][1] else libres[0]
+        # Ordre de choix : place nette ; sinon un trait sous le nom (le liseré l'interrompt) ; sinon, en dernier, une
+        # place où un autre point est voisin -- toujours dans l'ordre des préférences.
+        _, mou, dx, dy, anc, b = min(libres, key=lambda t: {False: 0, "trait": 1, "ambigu": 2}[t[1]])  # brut-ok: rang de placement, pas une donnee
+        if mou:
+            log("  %s (%s) : %s pose malgre un conflit evitable (%s), a regarder au rendu" % (ident, lang, x["code"], mou))
+            # Nom éloigné de son point ET voisin d'un autre (Croatie, posée sous Chypre et l'Allemagne) : un filet
+            # le rattache à son point.
+            if mou == "ambigu" and filet(px, py, b):
+                e.append(filet(px, py, b))
         boites.append((x["code"], b))
         gras = ' font-weight="600"' if x["code"] == "FR" else ""
         # Liseré : le même texte, contour blanc, dessous ; masqué aux lecteurs d'écran (sinon lu deux fois).
@@ -793,7 +848,7 @@ def transmission(rows, an, source, lang="fr"):
     # Extrêmes nommés (auteur, 04/10) : les deux écarts les plus hauts (LU, IE), le plus bas hors Danemark (BG) ;
     # RO nommé pour qu'on ne lui attribue pas l'étiquette de la Hongrie, sa voisine.
     etiq = {"FR": "h", "IT": "d", "DE": "d", "EL": "g", "HU": "g", "SE": "h", "PT": "h", "DK": "d",
-            "LU": "d", "IE": "h", "RO": "bd", "BG": "d"}
+            "LU": "d", "IE": "h", "RO": "!bd", "BG": "d"}
     # Contre-expertise PRO-20260930-061613 (P1) : repère conditionnel, jamais une prévision -- le <desc> lu par
     # les lecteurs d'écran ne doit pas affirmer plus que le texte visible.
     T = {"fr": ("Pression de refinancement : échéances et écart de taux, %s",
@@ -990,9 +1045,11 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
         lib = x[LOC[lang]["nom"]] + ((" " + valeurs[code]) if valeurs and code in valeurs else "")
         gras = valeurs and code in valeurs
         larg = largeur_texte(lib, FSM) * (1.08 if gras else 1.0)
-        ok = None
+        ok, repli = None, None
         for dx, dy, anc in ((7, 5, "start"), (-7, 5, "end"), (0, -9, "middle"), (0, 19, "middle"), (6, -7, "start"),
-                            (-6, -7, "end"), (6, 17, "start"), (-6, 17, "end")):
+                            (-6, -7, "end"), (6, 17, "start"), (-6, 17, "end"), (0, -14, "middle"), (0, 24, "middle"),
+                            # Replis éloignés, toujours reliés à leur point par un filet (03/11/2026, Slovénie).
+                            (14, 30, "start"), (-14, 30, "end"), (0, 34, "middle"), (14, -22, "start"), (-14, -22, "end")):
             gx = {"start": px + dx, "end": px + dx - larg, "middle": px + dx - larg / 2}[anc]
             b = (gx, py + dy - FSM * 0.75, gx + larg, py + dy + 2)
             if b[0] < 0 or b[2] > WM or b[1] < Y0 - 4 or b[3] > Y1 + 2:
@@ -1001,12 +1058,24 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
                 continue
             if any(b[0] < o[2] and o[0] < b[2] and b[1] < o[3] and o[1] < b[3] for o in boites):
                 continue
+            # Même règle de rattachement qu'au bureau (03/11/2026 : « Slovénie 2,7 % » aligné sur l'Allemagne,
+            # « France 4,2 % » accroché à la Finlande) : une place ambiguë ne sert qu'à défaut, avec un filet.
+            if ambigu(code, b, px, py, pts):
+                repli = repli or (dx, dy, anc, b)
+                continue
             ok = (dx, dy, anc, b)
             break
+        if not ok and repli:
+            ok = repli
+            log("  %s (%s, telephone) : %s pose pres d'un autre point, relie par un filet" % (ident, lang, code))
+            if filet(px, py, repli[3], 5.2, 6):
+                e.append(filet(px, py, repli[3], 5.2, 6))
         if not ok:
             echecs.append(lib)
             continue
         dx, dy, anc, b = ok
+        if abs(dy) >= 22 and ok is not repli and filet(px, py, b, 5.2, 6):
+            e.append(filet(px, py, b, 5.2, 6))
         boites.append(b)
         e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" '
                  'text-anchor="%s"%s aria-hidden="true">%s</text>'
@@ -1476,10 +1545,15 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
         "dette-monde-charge%s.svg" % suf: nuage(
             rows, lambda x: x["stock"], lambda x: x["charge"], 160, 10, 20, 2,
             T["c_lx"], T["c_ly"], "mc", T["c_titre"], T["c_desc"], T["src_eu"], T["c_note"],
-            {"FR": "h", "IT": "h", "EL": "h", "DE": "b", "HU": "h", "RO": "h", "PL": "g", "SE": "b", "ES": "h",
+            {"FR": "d", "IT": "h", "EL": "h", "DE": "b", "HU": "h", "RO": "h", "PL": "g", "SE": "b", "ES": "h",
              "BE": "h", "PT": "h", "AT": "h", "SI": "d", "HR": "b",
              # Les deux moins endettés de chaque groupe (auteur, 04/10) : sans eux, le bas de l'échelle restait anonyme.
-             "BG": "g", "DK": "g", "EE": "g", "LU": "g"},
+             "BG": "g", "DK": "g", "EE": "g", "LU": "g",
+             # France à droite (03/11/2026) : centrée au-dessus, elle était à la hauteur du point de la Belgique.
+             # Facultatifs (« ? ») : nommés là où une place nette existe (03/11/2026, page des enseignants : des
+             # points restaient anonymes, dont le seul pays hors zone euro sans nom).
+             "CZ": "?g", "NL": "?b", "FI": "?b", "SK": "?h", "MT": "?h", "IE": "?g", "LV": "?d", "LT": "?g",
+             "CY": "?b"},
             droites=[(stats["charge_stock_euro"]["ordonnee"], stats["charge_stock_euro"]["pente"],
                       stats["charge_stock_euro"]["stock_min"], stats["charge_stock_euro"]["stock_max"], COL_EURO),
                      (stats["charge_stock_hors"]["ordonnee"], stats["charge_stock_hors"]["pente"],
@@ -1488,7 +1562,8 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
         "dette-monde-prix%s.svg" % suf: nuage(
             [x for x in rows if x["inflation"] is not None], lambda x: x["inflation"], lambda x: x["prix"], 14, 6, 2, 1,
             T["p_lx"], T["p_ly"], "mp", T["p_titre"], T["p_desc"], T["p_src"], T["p_note"],
-            {"FR": "h", "IT": "h", "DE": "b2", "HU": "h", "RO": "h", "PL": "h", "SE": "bg", "EE": "d", "LT": "d",
+            {"FR": "h", "IT": "h", "DE": "!b2", "HU": "h", "RO": "h", "PL": "h", "SE": "d", "EE": "d", "LT": "d",
+             # Suède à droite de son carré (03/11/2026) : posée en bas à gauche, elle se lisait sous un point de la zone euro.
              "CZ": "h", "DK": "g", "BG": "d",
              # Les deux taux implicites les plus bas (auteur, 04/10 : nommer le bas de l'échelle).
              "LU": "g", "IE": "b"}, lang=lang),
@@ -1520,8 +1595,16 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
     sortie = {
         "dette-monde-charge%s-m.svg" % suf: nuage_m(
             rows, lambda x: x["stock"], lambda x: x["charge"], 160, 0, 10, 80, 2, lambda v: nb(v, 0) + pc, lambda v: nb(v, 0) + pc,
-            lx[0], ly[0], "mc-m", titres[0], D["dette-monde-charge%s.svg" % suf], T["src_eu"], T["c_note"], lang,
-            ["HU", "SI", "FR", "IT", "EL", "RO"], {c: P(by[c]["charge"]) for c in ("HU", "SI", "FR")}, jumeaux=jum[:1],
+            # Note propre au téléphone (03/11/2026) : une seule paire y est tracée, la note du bureau en annonçait trois.
+            lx[0], ly[0], "mc-m", titres[0], D["dette-monde-charge%s.svg" % suf], T["src_eu"],
+            {"fr": "Pointillés : la paire de faux jumeaux au plus grand écart d'intérêts rapportés aux recettes "
+                   "(plus proche voisin en stock, écart inférieur à 10 points).",
+             "en": "Dotted line: the look-alike pair with the largest gap in burden (nearest neighbour by debt stock, "
+                   "gap under 10 percentage points)."}[lang], lang,
+            # Noms seuls dans le nuage, valeurs dessous (03/11/2026 : « France 4,2 % », trop long pour sa place, touchait
+            # le point de la Finlande ; même forme que le nuage des prix sur téléphone).
+            ["HU", "SI", "FR", "IT", "EL", "RO"], None, jumeaux=jum[:1],
+            liste=[(c, P(by[c]["charge"])) for c in ("HU", "SI", "FR")],
             droites=[(stats["charge_stock_euro"]["ordonnee"], stats["charge_stock_euro"]["pente"],
                       stats["charge_stock_euro"]["stock_min"], stats["charge_stock_euro"]["stock_max"], COL_EURO),
                      (stats["charge_stock_hors"]["ordonnee"], stats["charge_stock_hors"]["pente"],
@@ -1544,6 +1627,13 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
              "en": "Gross stock, excluding public assets and liabilities outside debt."}[lang], titres[3], lang),
         "dette-monde-ecarts%s-m.svg" % suf: ecarts_figure_m(ecarts, an, D["dette-monde-ecarts%s.svg" % suf], lang),
     }
+    # Une seule paire de faux jumeaux est tracée sur téléphone : la description reprise du bureau se met au singulier.
+    k = "dette-monde-charge%s-m.svg" % suf
+    for pl, sg in (("Les pointillés relient les faux jumeaux désignés par la règle publiée",
+                    "Le pointillé relie la paire de faux jumeaux au plus grand écart, désignée par la règle publiée"),
+                   ("Dotted lines link the look-alike pairs picked out by the published rule",
+                    "The dotted line links the look-alike pair with the largest gap, picked out by the published rule")):
+        sortie[k] = sortie[k].replace(pl, sg)
     for nom, svg in sortie.items():
         d = D[nom.replace("-m.svg", ".svg")]
         ecarts_ = PF.parite(d, svg, FSM)

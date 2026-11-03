@@ -52,6 +52,27 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-03 — Figures de `/enseignants/` : noms, rattachement, géométrie
+
+Demande de l'auteur : nommer d'autres pays du nuage « Même dette, coût différent », sans chevauchement, et vérifier
+l'exactitude et la lisibilité de toutes les figures de la page ; trois contrôleurs indépendants (Eurostat et INSEE
+recalculés, rendus relus), recontrôle des versions finales.
+
+- `update_dette_monde.py` : noms facultatifs (« ? », posés seulement à une place nette) — Tchéquie, Malte, Lituanie,
+  Slovaquie, Finlande, Pays-Bas (23 pays nommés sur 26 en FR, 22 en EN, Netherlands sans place) ; règle d'ambiguïté
+  commune bureau/téléphone (`ambigu()`, un nom ne doit pas se lire comme celui d'un autre point) et filet de rattachement
+  (`filet()`, Croatie, Slovénie sur téléphone) ; places figées « ! » (Roumanie, Germany : nuages prix et transmission
+  identiques à HEAD) ; France à droite de son point ; téléphone : noms seuls, valeurs listées dessous, note et
+  description au singulier (une paire tracée).
+- `generer_figures_qui_paie.py` : l'interstice blanc de 2 px s'ajoutait à la valeur (piles et barres positives trop
+  hautes d'environ 1 000 € par UC, redistribution, solde net, âge) ; pris désormais sur le segment ; mention « total des
+  transferts reçus ».
+- Page : « l'effet des intérêts » (non « les intérêts versés », règle 15), 87 saisi remplacé par `part_deficits`,
+  légende en milliers d'euros.
+- Reste, déclaré : cascade téléphone, « − » orphelin en fin de sous-titre (`update_dette_dynamique.py`, en cours dans
+  une autre session) ; nuage des prix, « Suède » sous un point de la zone euro (antérieur, aucune place libre) ;
+  transmission, « Hongrie » au contact du carré roumain (antérieur).
+
 ### 2026-11-02 — Pages `offre-culturelle` : version téléphone
 
 Demande de l'auteur après audit de 40 vues en émulation tactile (320, 360, 390, 430 px, 844 px en paysage), pages entières.

@@ -952,8 +952,9 @@ def svg_redistribution(d: dict, lang: str = "fr") -> tuple[str, int]:
         fort = i == 9                      # ancrage : le dernier dixième
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="%s"/>'
                  % (x, y0 - h1, bw, h1, C1))
+        # Sommet de la pile = total reçu (le nombre imprimé au-dessus) : l'interstice blanc se prend sur le gris.
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
-                 % (x, y0 - h1 - 2 - h2, bw, h2, SEC))
+                 % (x, y0 - h1 - h2, bw, h2 - 2, SEC))
         hp = -prel[i] * k
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
                  % (x, y0 + 2, bw, hp - 2, C2))
@@ -969,9 +970,12 @@ def svg_redistribution(d: dict, lang: str = "fr") -> tuple[str, int]:
     h1, h2 = esp[9] * k, nat[9] * k
     c += etiquettes_directes(W - mr + 14, [
         (y0 - h1 / 2 + 4, C1, S("Prestations", "Benefits"), S("en espèces", "in cash")),
-        (y0 - h1 - 2 - h2 / 2 + 4, SEC) + ns["nat"],
+        (y0 - h1 - h2 / 2 + 3, SEC) + ns["nat"],
         (y0 + 2 + (-prel[9] * k) / 2 + 4, C2) + ns["prel"],
     ], top + 8, bas - 12)
+    # Ce que disent les nombres (03/11/2026 : celui du haut se prenait pour la valeur du seul segment gris).
+    c.append(txt(W - mr + 14, Y(-66), S("Au-dessus des barres :", "Above the bars:"), TY_AXE - 1, MUTED))
+    c.append(txt(W - mr + 14, Y(-66) + 13, S("total des transferts reçus", "total transfers received"), TY_AXE - 1, MUTED))
     c.append(txt(ml, bas + 32, S("← 10 % les plus modestes", "← least well-off 10%"),
                  TY_AXE - 1, MUTED))
     c.append(txt(W - mr, bas + 32, S("10 % les plus aisés →", "best-off 10% →"),
@@ -1054,7 +1058,9 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
         y0 = Y(0)
         haut = abs(v) * k
         col = C2 if v > 0 else C1
-        y = y0 - haut - 2 if v > 0 else y0 + 2
+        # Interstice de 2 px pris CÔTÉ AXE sur la barre, jamais ajouté à sa valeur : l'extrémité tombe sur la
+        # valeur (03/11/2026 : barres positives et piles remontées de 2 px, soit environ 1 000 € de trop à l'œil).
+        y = y0 - haut if v > 0 else y0 + 2
         fort = i == 9
         # Plancher de 2 px : un dixième presque équilibré (D7, −1,8) donnait une
         # barre d'un pixel, et la charte interdit d'attacher une valeur à une
@@ -1168,8 +1174,9 @@ def svg_age(d: dict, lang: str = "fr") -> tuple[str, int]:
         fort = i == dernier
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="%s"/>'
                  % (x, y0 - h1, bw, h1, C1))
+        # Sommet de la pile = total reçu (le nombre imprimé au-dessus) : l'interstice blanc se prend sur le gris.
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
-                 % (x, y0 - h1 - 2 - h2, bw, h2, SEC))
+                 % (x, y0 - h1 - h2, bw, h2 - 2, SEC))
         hp = -prel[i] * k
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
                  % (x, y0 + 2, bw, hp - 2, C2))
@@ -1184,9 +1191,12 @@ def svg_age(d: dict, lang: str = "fr") -> tuple[str, int]:
     c += etiquettes_directes(W - mr + 14, [
         (y0 - h1 / 2 + 4, C1, S("Prestations en espèces", "Cash benefits"),
          S("dont les retraites", "including pensions")),
-        (y0 - h1 - 2 - h2 / 2 + 4, SEC) + ns["nat"],
+        (y0 - h1 - h2 / 2 + 3, SEC) + ns["nat"],
         (y0 + 2 + (-prel[dernier] * k) / 2 + 4, C2) + ns["prel"],
     ], top + 8, bas - 12)
+    # Même mention que la figure par dixième (03/11/2026).
+    c.append(txt(W - mr + 14, Y(-28), S("Au-dessus des barres :", "Above the bars:"), TY_AXE - 1, MUTED))
+    c.append(txt(W - mr + 14, Y(-28) + 13, S("total des transferts reçus", "total transfers received"), TY_AXE - 1, MUTED))
     y = bas + 34
     h = int(y + 13 + 12 * 3 + 8)
     desc = (S("Barres par groupe d'âge du ménage, en 2023, en milliers d'euros par unité de "

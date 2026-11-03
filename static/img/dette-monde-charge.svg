@@ -73,8 +73,9 @@
 <text x="644.4" y="201.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Grèce</text>
 <text x="442.8" y="198.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Espagne</text>
 <text x="442.8" y="198.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Espagne</text>
-<text x="501.5" y="242.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" font-weight="600" aria-hidden="true">France</text>
-<text x="501.5" y="242.7" font-size="11" fill="#0A0A0E" text-anchor="middle" font-weight="600">France</text>
+<text x="510.5" y="255.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">France</text>
+<text x="510.5" y="255.7" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">France</text>
+<line x1="268.3" y1="298.5" x2="268.3" y2="307.8" stroke="#52514e" stroke-width="1"/>
 <text x="268.3" y="318.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Croatie</text>
 <text x="268.3" y="318.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Croatie</text>
 <text x="583.8" y="119.3" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Italie</text>
@@ -83,8 +84,8 @@
 <text x="148.5" y="368.1" font-size="11" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
 <text x="333.1" y="92.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Hongrie</text>
 <text x="333.1" y="92.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Hongrie</text>
-<text x="369.9" y="279.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Autriche</text>
-<text x="369.9" y="279.5" font-size="11" fill="#0A0A0E" text-anchor="start">Autriche</text>
+<text x="363.9" y="277.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Autriche</text>
+<text x="363.9" y="277.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Autriche</text>
 <text x="273.3" y="205.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Pologne</text>
 <text x="273.3" y="205.8" font-size="11" fill="#0A0A0E" text-anchor="start">Pologne</text>
 <text x="410.2" y="231.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Portugal</text>
@@ -95,6 +96,18 @@
 <text x="319.3" y="303.7" font-size="11" fill="#0A0A0E" text-anchor="start">Slovénie</text>
 <text x="190.3" y="363.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Suède</text>
 <text x="190.3" y="363.8" font-size="11" fill="#0A0A0E" text-anchor="middle">Suède</text>
+<text x="212.3" y="289.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Tchéquie</text>
+<text x="212.3" y="289.6" font-size="11" fill="#0A0A0E" text-anchor="end">Tchéquie</text>
+<text x="194.0" y="306.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Lituanie</text>
+<text x="194.0" y="306.5" font-size="11" fill="#0A0A0E" text-anchor="end">Lituanie</text>
+<text x="230.8" y="267.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Malte</text>
+<text x="230.8" y="267.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Malte</text>
+<text x="235.4" y="350.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Pays-Bas</text>
+<text x="235.4" y="350.0" font-size="11" fill="#0A0A0E" text-anchor="start">Pays-Bas</text>
+<text x="282.8" y="262.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Slovaquie</text>
+<text x="282.8" y="262.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Slovaquie</text>
+<text x="391.3" y="294.3" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Finlande</text>
+<text x="391.3" y="294.3" font-size="11" fill="#0A0A0E" text-anchor="start">Finlande</text>
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="457.0" font-size="11" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13,</text>
 <text class="pied-source" x="0" y="471.0" font-size="11" fill="#52514e">monnaie nationale</text>

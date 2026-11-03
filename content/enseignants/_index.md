@@ -73,13 +73,13 @@ augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#cascade)
 1. Relevez le ratio dette publique/PIB en {{< dyn-val "annee_depart" >}} et en {{< dyn-val "annee_fin" >}}. De combien de points a-t-il augmenté&nbsp;?
 2. Un **déficit primaire** est l'écart entre les dépenses et les recettes publiques, hors intérêts. Expliquez pourquoi un déficit fait augmenter la dette.
 3. Parmi les contributions représentées, laquelle explique l'essentiel de la hausse nette&nbsp;? Quelle part de la hausse représente-t-elle&nbsp;?
-4. Les intérêts versés ont poussé le ratio de {{< dyn-val "effet_interets" >}}&nbsp;points. Pourquoi ne suffisent-ils pas à expliquer la hausse&nbsp;?
+4. L'effet des intérêts a poussé le ratio de {{< dyn-val "effet_interets" >}}&nbsp;points. Pourquoi ne suffit-il pas à expliquer la hausse&nbsp;?
 
 <details class="repli fiche__corrige"><summary>Corrigé pour l'enseignant</summary>
 
 1. De {{< dyn-val "dette_depart" >}}&nbsp;% à {{< dyn-val "dette_fin" >}}&nbsp;% du PIB&nbsp;: une hausse de {{< dyn-val "hausse" >}}&nbsp;points.
 2. Un déficit crée un besoin de financement, couvert par l'emprunt&nbsp;: toutes choses égales par ailleurs, il augmente la dette. C'est le lien que fixe le programme entre solde budgétaire et emprunt. La variation exacte de la dette comprend aussi des ajustements flux-stock, qui ne passent pas par le déficit.
-3. Les déficits primaires&nbsp;: {{< dyn-val "deficits_primaires" >}}&nbsp;points sur {{< dyn-val "hausse" >}}, soit {{< dyn-val "part_deficits" >}}&nbsp;% de la hausse nette du ratio entre {{< dyn-val "annee_depart" >}} et {{< dyn-val "annee_fin" >}}, dans cette décomposition comptable — et non «&nbsp;87&nbsp;% de la dette&nbsp;».
+3. Les déficits primaires&nbsp;: {{< dyn-val "deficits_primaires" >}}&nbsp;points sur {{< dyn-val "hausse" >}}, soit {{< dyn-val "part_deficits" >}}&nbsp;% de la hausse nette du ratio entre {{< dyn-val "annee_depart" >}} et {{< dyn-val "annee_fin" >}}, dans cette décomposition comptable — et non «&nbsp;{{< dyn-val "part_deficits" >}}&nbsp;% de la dette&nbsp;».
 4. Parce que la croissance du PIB nominal a joué en sens inverse&nbsp;: elle a retiré {{< dyn-val "effet_croissance" >}}&nbsp;points au ratio, car une dette constante pèse moins dans un PIB qui grandit. Les deux effets se compensent presque (effet net {{< dyn-val "effet_net" >}}&nbsp;point). À faire remarquer&nbsp;: c'est une décomposition comptable, qui dit par quel terme la dette a monté, pas pourquoi les déficits ont existé.
 
 </details>
@@ -138,7 +138,7 @@ conceptions de la justice sociale, ni les débats sur leur efficacité et leur l
 **Durée**&nbsp;: 20&nbsp;minutes. **Support**&nbsp;: la figure ci-dessous, tirée de [Qui paie vraiment la dette
 publique&nbsp;?](/qui-paie-la-dette-publique/)
 
-{{< figure-svg fichier="qui-paie-redistribution" alt="Barres par dixième de niveau de vie : au-dessus de zéro, les transferts publics reçus ; sous zéro, les prélèvements versés, qui croissent fortement du premier au dernier dixième." >}}Prélèvements versés et transferts reçus par dixième de niveau de vie, moyenne de chaque dixième en euros par unité de consommation, {{< qp-val "cd_annee" >}} (INSEE, comptes nationaux distribués).{{< /figure-svg >}}
+{{< figure-svg fichier="qui-paie-redistribution" alt="Barres par dixième de niveau de vie : au-dessus de zéro, les transferts publics reçus ; sous zéro, les prélèvements versés, qui croissent fortement du premier au dernier dixième." >}}Prélèvements versés et transferts reçus par dixième de niveau de vie, moyenne de chaque dixième en milliers d'euros par unité de consommation, {{< qp-val "cd_annee" >}} (INSEE, comptes nationaux distribués).{{< /figure-svg >}}
 
 **Fiche élève**
 
