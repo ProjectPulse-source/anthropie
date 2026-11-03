@@ -1,0 +1,8 @@
+// Pages pays « Lire en français » (03/11/2026) : liste des six livres, couverture à largeur fixe à côté du texte.
+.lef-livres { list-style: none; padding: 0; margin: 1.25rem 0; display: grid; gap: 1.25rem; }
+.lef-livre { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 1rem; align-items: start; margin: 0; }
+.lef-livre::before { content: none; }
+.lef-livre .oc-couv, .lef-livre .oc-couv img { width: 96px; max-width: 96px; height: auto; display: block; }
+.lef-livre h3 { margin: 0 0 .35rem; font-size: 1.05rem; line-height: 1.3; }
+.lef-livre p { margin: 0 0 .5rem; }
+@media (min-width: 720px) { .lef-livre { grid-template-columns: 120px minmax(0, 1fr); } .lef-livre .oc-couv, .lef-livre .oc-couv img { width: 120px; max-width: 120px; } }
