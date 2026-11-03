@@ -37,7 +37,7 @@
 
   <section aria-labelledby="lef-fr">
     <h2 id="lef-fr">{{ if $p.boutique }}Vous avez gardé un compte Amazon.fr&nbsp;?{{ else }}Avec un compte Amazon.fr{{ end }}</h2>
-    <p>Un exemplaire peut vous être offert, déjà payé, dans la limite du stock&nbsp;: choisissez le livre sur la page des livres offerts. Le lien ne fonctionne qu'avec un compte Amazon.fr.</p>
+    <p>Un exemplaire peut vous être offert, déjà payé, dans la limite du stock&nbsp;: choisissez le livre sur la page des livres offerts. Le lien demande un compte Amazon.fr, et Amazon peut le refuser à un lecteur qui réside hors de France{{ if $p.boutique }}&nbsp;; dans ce cas, la boutique de votre pays reste ouverte au prix plancher{{ end }}.</p>
     <p><a class="ressources-btn ressources-btn--outline" href="{{ "/ressources-offertes/" | relLangURL }}">Les livres offerts</a></p>
   </section>
 
