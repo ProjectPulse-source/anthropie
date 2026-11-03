@@ -44,7 +44,7 @@
       {{- $livre := site.GetPage (printf "/livres/%s" $slug) -}}
       {{- $e := index $edito $slug -}}
       {{- $asin := index (findRE `B0[A-Z0-9]{8}` ($livre.Params.url_amazon_fr_kindle | default "")) 0 -}}
-      <article class="ressources-book oc-livre oc-livre--carte">
+      <article class="ressources-book oc-livre oc-livre--carte" id="{{ $slug }}">
         <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" "(min-width: 1024px) 150px, 110px") }}</div>
         <div class="oc-livre__corps">
           {{ with $e }}<p class="oc-theme">{{ .theme }}</p>{{ end }}
