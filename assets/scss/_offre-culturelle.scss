@@ -280,3 +280,6 @@
     .oc-btn { width: 100%; }
   }
 }
+
+// Pages pays : le lien du message ouvre la page sur la carte du livre ; elle doit s'arreter sous l'en-tete collant.
+.oc--pays .oc-livre--carte { scroll-margin-top: 5rem; }
