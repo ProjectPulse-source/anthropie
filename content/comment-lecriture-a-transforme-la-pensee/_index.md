@@ -81,7 +81,7 @@ Le même écart sépare la presse de ses effets les plus souvent cités. Elle a 
 
 ## Les premiers usages ne prédisent pas les suivants {#ce-que-cette-histoire-enseigne}
 
-On lit volontiers dans les débuts d'une technique le destin de ses usages. Les faits ne s'y prêtent pas. L'écriture conservée commence par des comptes. Les premiers imprimés de Mayence sont à la fois une Bible, des lettres d'indulgence (1454-1455), des grammaires latines et un calendrier&nbsp;; le plus ancien livre imprimé daté qui nous soit parvenu complet est un texte bouddhique. Le Web, lui, est proposé au CERN en 1989 par Tim Berners-Lee pour que des physiciens partagent leurs documents. On ne peut donc pas déduire des premiers usages d'une technique ceux qui prévaudront ensuite.
+On lit volontiers dans les débuts d'une technique le destin de ses usages. Les faits ne s'y prêtent pas. L'écriture conservée commence par des comptes. Les premiers imprimés de Mayence sont à la fois une Bible, des lettres d'indulgence (1454-1455), des grammaires latines et un calendrier&nbsp;; le plus ancien livre imprimé daté qui nous soit parvenu complet est un texte bouddhique. Le Web, lui, est proposé au CERN en 1989 par Tim Berners-Lee pour que des physiciens partagent leurs documents&nbsp;; ses usages se sont depuis étendus au commerce, à la presse et aux échanges entre particuliers. On ne peut donc pas déduire des premiers usages d'une technique ceux qui prévaudront ensuite.
 
 ## L'intelligence artificielle au crible du *Phèdre* {#le-numérique-et-lia-la-troisième-bascule}
 

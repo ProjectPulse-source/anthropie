@@ -82,7 +82,7 @@ The same gap separates the press from its most often cited effects. It encourage
 
 ## First uses do not predict later ones {#what-this-history-teaches}
 
-It is tempting to read the destiny of a technology's uses in its beginnings. The facts do not lend themselves to it. Surviving writing begins with accounts. The first printed works of Mainz are at once a Bible, letters of indulgence (1454-1455), Latin grammars and a calendar; the earliest complete surviving dated printed book is a Buddhist text. The Web, for its part, was proposed at CERN in 1989 by Tim Berners-Lee so that physicists could share their documents. The first uses of a technology therefore do not allow one to infer those that will prevail later.
+It is tempting to read the destiny of a technology's uses in its beginnings. The facts do not lend themselves to it. Surviving writing begins with accounts. The first printed works of Mainz are at once a Bible, letters of indulgence (1454-1455), Latin grammars and a calendar; the earliest complete surviving dated printed book is a Buddhist text. The Web, for its part, was proposed at CERN in 1989 by Tim Berners-Lee so that physicists could share their documents; its uses have since spread to commerce, the press and exchanges between private individuals. The first uses of a technology therefore do not allow one to infer those that will prevail later.
 
 ## Artificial intelligence tested against the *Phaedrus* {#digital-media-and-ai-the-third-shift}
 

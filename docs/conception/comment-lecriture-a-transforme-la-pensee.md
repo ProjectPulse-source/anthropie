@@ -227,7 +227,7 @@ refonte. Relevés : J+30 et J+60. Une reprise est un résultat à observer, jama
   journal du 01/11).
 - Contrôles : `check-all --ci` 0 ; build 0 ; `typo_build` 0 ; liens 0 critique ; rendu et dates 0. Relecture des
   phrases nouvelles FR et EN : faite (une phrase sans verbe corrigée). Instantanés refaits.
-- Point ouvert, décision de l'auteur : l'exemple du Web dans « Les premiers usages ne prédisent pas les suivants ».
+- Exemple du Web (« Les premiers usages ») : tranché le 03/11 sur délégation de l'auteur, pour la fluidité — gardé, contraste explicite (« ses usages se sont depuis étendus au commerce, à la presse et aux échanges entre particuliers »), FR et EN.
 - Recette visuelle : faite le 03/11/2026 sur la page servie (navigateur sans interface, script) — aucun débordement à
   320, 390, 768 et 1 280 px, replis fermés et ouverts (témoin positif : un bloc de 900 px injecté est détecté) ;
   arrivée par ancre : repli ouvert, titre à 80 px sous un en-tête collant de 58 à 62 px ; captures relues à 390 px.

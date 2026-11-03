@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /comment-lecriture-a-transforme-la-pensee/, build de 1270d17 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /comment-lecriture-a-transforme-la-pensee/, build de fc1aa8c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment l’écriture a-t-elle transformé la pensée ?
 Un élève obtient d’une intelligence artificielle une réponse juste.
@@ -60,7 +60,7 @@ On lit volontiers dans les débuts d’une technique le destin de ses usages.
 Les faits ne s’y prêtent pas.
 L’écriture conservée commence par des comptes.
 Les premiers imprimés de Mayence sont à la fois une Bible, des lettres d’indulgence (1454-1455), des grammaires latines et un calendrier ; le plus ancien livre imprimé daté qui nous soit parvenu complet est un texte bouddhique.
-Le Web, lui, est proposé au CERN en 1989 par Tim Berners-Lee pour que des physiciens partagent leurs documents.
+Le Web, lui, est proposé au CERN en 1989 par Tim Berners-Lee pour que des physiciens partagent leurs documents ; ses usages se sont depuis étendus au commerce, à la presse et aux échanges entre particuliers.
 On ne peut donc pas déduire des premiers usages d’une technique ceux qui prévaudront ensuite.
 L’intelligence artificielle au crible du Phèdre
 L’écriture, l’imprimerie, l’écran et l’intelligence artificielle ne sont pas quatre objets d’une même espèce : un système de notation, un procédé de reproduction, une interface, un ensemble de techniques qui génèrent des formulations et des synthèses.
