@@ -179,5 +179,6 @@ circule, en citant une édition qui imprime l'autre. La page Hugo ne contient ni
 - Contrôles : `check-all --ci` 0 ; build 0 ; `typo_build` 0 ; liens 0 critique ; rendu et dates 0. Relecture phrase à
   phrase des phrases nouvelles : faite (deux défauts corrigés : statut et mouvement collés dans le texte extrait ;
   définition de « l'auteur citait déjà » élargie). Instantané refait (432 phrases).
-- Recette visuelle 320-1280 px : NON FAITE (quota au-dessus de 95 %, pilotage du navigateur interdit) ; à faire sur
-  la page servie à la reprise.
+- Recette visuelle : faite le 03/11/2026 sur la page servie (navigateur sans interface, script) — aucun débordement à
+  320, 390, 768 et 1 280 px, replis fermés et ouverts (témoin positif : un bloc de 900 px injecté est détecté) ;
+  arrivée par ancre : repli ouvert, titre à 80 px sous un en-tête collant de 58 à 62 px ; captures relues à 390 px.
