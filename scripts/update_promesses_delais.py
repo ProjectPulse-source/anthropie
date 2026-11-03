@@ -46,8 +46,12 @@ Temporalité :
   T1  cohorte : la première quatrième année (2 novembre 2026, LUE dans l'instruction) tombe l'année de la rentrée
       d'application + (durée de l'internat − 1) ;
   T2  toute phrase qui porte la durée du cursus dit « depuis la première année » et l'année de la rentrée d'application ;
-  T3  le 2 novembre 2026 ne s'écrit que par jeton, dans une phrase qui le dit PRÉVU ; la date passée, le générateur
-      s'arrête (condition de mort de T3 : la page réécrite au passé, une fois le début constaté) ;
+  T3  le 2 novembre 2026 ne s'écrit que par jeton. Avant la date : dans une phrase qui le dit PRÉVU. La date passée
+      (03/11/2026, demande de l'auteur) : dans une phrase qui le dit PRÉVU AU PASSÉ (« devait », « date prévue par »,
+      « was scheduled », « planned by »), jamais au futur ; et AUCUNE phrase ne dit le début constaté (« a commencé »,
+      « has begun »…) tant qu'une source officielle qui le constate n'est pas archivée dans sources_delais/ et déclarée
+      dans PREUVE_DEBUT. Au 03/11/2026, sept communiqués d'ARS lus (du 12/10 au 02/11) l'annonçaient tous au futur ;
+      aucun ne le constatait : la page dit « devait » ;
   T4  « moins de quatre ans » (loi -> première année d'autonomie supervisée) et « près de cinq ans » (loi -> premiers
       diplômés au plus tôt) : inégalités STRICTES, sans quoi la phrase n'est pas écrite.
 D1 bis : citations retrouvées mot pour mot ; D1 ter : chaque nombre d'une traduction figure dans l'original.
@@ -360,10 +364,8 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     if an_reforme + (mg - 1) != debut.year:
         raise Arret("T1 : la premiere quatrieme annee (%d) ne tombe pas %d + %d ans apres la rentree d'application"
                     % (debut.year, an_reforme, mg - 1))
-    if S["aujourdhui"] >= debut:
-        raise Arret("T3 : le %s est passe : la date ecoulee ne prouve rien ; la mise a jour exige une preuve du demarrage "
-                    "effectif de la phase de consolidation (source officielle qui le constate), puis la page reecrite au "
-                    "passe (jeton debut_conso) et T3 retire" % debut)
+    # La date passée ne prouve rien : elle change seulement la forme exigée des phrases (T3, dans prose()).
+    S["passee"] = S["aujourdhui"] >= debut
     fin = debut.replace(year=debut.year + 1) - dt.timedelta(days=1)
     quatre = loi.replace(year=loi.year + 4)
     limite = loi.replace(year=loi.year + mandat)
@@ -540,6 +542,13 @@ Q2 = {  # jeton -> (portée, motif exigé)
     "rapport_baisse": ("phrase", r"pourvu|filled"), "admis_2016_2020": ("phrase", r"numerus clausus"),
 }
 T_PREVU = re.compile(r"\bprévu|\bdoit commencer|\bdevait commencer|\bscheduled|\bplanned|\bis (?:due|set) to", re.I)
+# Date passée (T3) : prévu AU PASSÉ, jamais au futur, et aucun début constaté sans preuve archivée (PREUVE_DEBUT).
+T_PREVU_PASSE = re.compile(r"\bdevait\b|\bétait prévu|\bprévue? par\b|\bwas (?:scheduled|planned|due)\b|\bplanned by\b", re.I)
+T_FUTUR = re.compile(r"\bdoit\b|\bdoivent\b|\bis (?:scheduled|due|set)\b|\bwill\b", re.I)
+# « qui l'ont commencé » (l'internat, à la rentrée 2023) n'est pas un constat du début de la quatrième année.
+T_CONSTAT = re.compile(r"(?<![lL]['’])\b(?:a|ont) (?:commencé|débuté|pris leurs fonctions)|\bha(?:s|ve) (?:begun|started)|\bbegan\b",
+                       re.I)
+PREUVE_DEBUT = None   # (fichier archivé dans sources_delais/, empreinte) d'une source officielle qui CONSTATE le début
 DATE_CLAIRE = re.compile(r"\b2\s*(?:&nbsp;|\u00a0)?\s*(?:novembre|November)\s*(?:&nbsp;|\u00a0)?\s*2026")
 
 
@@ -552,7 +561,7 @@ def phrases(texte: str):
             yield par, ph
 
 
-def prose(textes: dict, an_reforme: int) -> int:
+def prose(textes: dict, an_reforme: int, passee: bool = False) -> int:
     n = 0
     for nom, texte in textes.items():
         for par, ph in phrases(texte):
@@ -572,8 +581,15 @@ def prose(textes: dict, an_reforme: int) -> int:
             if "duree" in jetons and not ((str(an_reforme) in JETON.sub(" ", ph) or "an_reforme" in jetons)
                                           and re.search(r"première année|first year", JETON.sub(" ", ph), re.I)):
                 raise Arret("T2 %s : duree du cursus sans « premiere annee » ou sans la rentree %d : %s" % (nom, an_reforme, ph[:90]))
-            if "debut_conso" in jetons and not T_PREVU.search(ph):
+            if "debut_conso" in jetons and not passee and not T_PREVU.search(ph):
                 raise Arret("T3 %s : la date du jeton debut_conso n'est pas dite prevue : %s" % (nom, ph[:90]))
+            if "debut_conso" in jetons and passee and (not T_PREVU_PASSE.search(ph) or T_FUTUR.search(ph)):
+                raise Arret("T3 %s : date passee, la phrase doit la dire prevue AU PASSE (« devait », « date prevue par »), "
+                            "jamais au futur : %s" % (nom, ph[:90]))
+            if passee and PREUVE_DEBUT is None and T_CONSTAT.search(ph) and re.search(
+                    r"docteur|quatrième année|fourth year|consolidation|debut_conso", ph, re.I):
+                raise Arret("T3 %s : debut de la quatrieme annee dit constate sans source officielle archivee "
+                            "(PREUVE_DEBUT) : %s" % (nom, ph[:90]))
             if "fin_min" in jetons and not re.search(r"au plus tôt|pas avant|at the earliest|not before", ph, re.I):
                 raise Arret("T4 %s : fin du premier internat a quatre ans sans « au plus tot » : %s" % (nom, ph[:90]))
     return n
@@ -589,7 +605,7 @@ def textes_prose(S: dict) -> dict:
 
 def verifier(S: dict):
     r, g = calculer(S)
-    n = prose(textes_prose(S), r["an_reforme"])
+    n = prose(textes_prose(S), r["an_reforme"], S.get("passee", False))
     # le nombre de phrases relues n'entre pas dans le jeu publié : une retouche de prose ne doit pas réécrire les données
     log("prose : %d phrases relues (pages FR et EN avec front matter, carte, libelles des figures)" % n)
     g.append("Q1-Q2, T2-T4 : pages FR et EN avec front matter, carte, libelles des figures")
@@ -981,7 +997,10 @@ MUTATIONS = [  # (nom, mutation, garde qui DOIT arrêter)
     ("horloge demarree en deuxieme annee", _page("fr", "Former un généraliste prend au moins {del.duree} ans depuis l'admission, aux règles de 2023."), "T2"),
     ("inegalite stricte remplacee par une egalite (premiere phase de consolidation = loi + quatre ans jour pour jour)",
      _texte("instr", "dès le 2 novembre 2026", "dès le 23 décembre 2026"), "T4"),
-    ("date de la premiere phase de consolidation passee", lambda m: m.__setitem__("aujourdhui", dt.date(2026, 11, 2)), "T3"),
+    # Date passée (depuis le 03/11/2026, l'autotest tourne dans ce mode) : futur interdit, début constaté interdit sans preuve.
+    ("date passee, phrase restee au futur", _page("en", "The reform is scheduled to apply on {del.debut_conso}."), "T3"),
+    ("debut constate sans source archivee",
+     _page("fr", "La quatrième année a commencé le {del.debut_conso}, date prévue par l'instruction."), "T3"),
     ("date en clair dans la page", _page("fr", "La quatrième année commence le 2&nbsp;novembre 2026."), "T3"),
     ("date non dite prevue", _page("en", "The fourth year begins on {del.debut_conso}."), "T3"),
     ("admis presentes comme entrants (FR)", _page("fr", "En 2025, {del.admis_2025} étudiants commencent des études de médecine."), "Q1"),
@@ -1042,7 +1061,7 @@ def _main() -> int:
     LANG = "fr"
     nv = parite_mobile(figs)
     fi = fiches(figs, A, A_en)
-    n = prose({"fiches " + l: "\n".join(f["titre"] + "\n" + f["montre"] for f in v) for l, v in fi.items()}, r["an_reforme"])
+    n = prose({"fiches " + l: "\n".join(f["titre"] + "\n" + f["montre"] for f in v) for l, v in fi.items()}, r["an_reforme"], S.get("passee", False))
     g.append("parite des %d figures telephone (%d valeurs dessinees) ; Q1-Q2 sur les fiches Reutiliser"
              % (len([k for k in figs if k.endswith("-m.svg")]), nv))
     if "--check" in sys.argv[1:]:

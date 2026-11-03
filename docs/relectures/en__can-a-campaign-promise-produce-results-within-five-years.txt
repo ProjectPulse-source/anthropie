@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-03 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de 4e69b33 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can a campaign promise produce results within five years?
 The test case of training general practitioners in France.
@@ -6,7 +6,7 @@ A decision that raises the number of medical students does not reach its final r
 A general practitioner is trained in at least ten years from the first year, twice the length of a presidential term (rules applying since the 2023 academic year).
 Such a decision can still act sooner, because residents provide care under supervision during their training.
 And the number of students admitted does not depend on a single signature: the State sets a target, and each university votes its places.
-Page updated 12 October 2026
+Page updated 3 November 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 Suppose a decision is taken today to train more doctors.
@@ -122,13 +122,13 @@ The fourth year of general practice makes it possible to check this with exact d
 37), for students who enter residency at the start of the 2023 academic year.
 2 November 2026: the date planned by the instruction of 21 May 2026 for these residents to enter their fourth year, as docteurs juniors, “principalement en médecine ambulatoire” [our translation: “mainly in ambulatory medicine”].
 In autumn 2027 at the earliest: end of that year, since “À l’issue de cette quatrième année, la formation est validée par l’obtention du DES de médecine générale.” [our translation: “At the end of this fourth year, the training is validated by obtaining the DES in general practice.”]
-The reform created by the law of 23 December 2022 is scheduled to apply for the first time to the cohort concerned on 2 November 2026, when it enters a fourth year of residency with the status of docteur junior.
+The reform created by the law of 23 December 2022 was scheduled to apply for the first time to the cohort concerned on 2 November 2026, the date planned by the instruction of 21 May 2026, with its entry into a fourth year of residency with the status of docteur junior.
 This cohort’s diploma can be obtained in autumn 2027 at the earliest.
 This timetable establishes when the reform applies and when the new curriculum can be completed.
 It demonstrates neither additional consultations nor improved access to care.
 This reform must be distinguished from the decision to increase admissions, whose effects on the number of qualified doctors follow another chronology.
 Nor is the time a reform takes to apply the same thing as its effect on time: this one applies less than four years after the law, and it lengthens by one year the time needed to train a general practitioner.
-On 12 October 2026, the first of these years has not begun: the timetable is that of an implementing text, not an observed fact.
+This timetable is that of an implementing text: the regional health agencies announced the arrival of the first docteurs juniors, but this page does not treat their start as an observed fact until an official source records it.
 When will patients see the difference?
 No series on this page answers that.
 The statistical service of the French health ministry (DREES) wrote in 2021 that “ce levier ne peut affecter la situation démographique qu’avec un délai équivalent à la durée des études concernées”: “il faut ainsi compter de cinq à dix ans (respectivement pour le cas des sages-femmes et des médecins) pour qu’une politique axée sur ce levier ne commence à produire ses effets” [our translation: “this lever can only affect the demographic situation with a delay equivalent to the length of the studies concerned: it therefore takes five to ten years (respectively for midwives and doctors) for a policy based on this lever to begin to produce its effects”] (Les Dossiers de la DREES No.

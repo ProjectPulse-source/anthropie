@@ -52,6 +52,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-03 (garde T3) — « Délais » : la date du 2 novembre 2026 passée, page dite au passé, générateur débloqué
+
+Demande de l'auteur : régler le point en attente (`update_promesses_delais.py` arrêté par sa garde T3 depuis le
+02/11/2026). Preuve cherchée d'abord : sept communiqués d'ARS lus (Nouvelle-Aquitaine 02/11, Normandie 30/09,
+Auvergne-Rhône-Alpes 20/05, Île-de-France 12/10, Hauts-de-France 28/10, Occitanie 29/10 ; article de presse 28/10)
+annoncent tous l'arrivée des premiers docteurs juniors AU FUTUR ; aucune source officielle ne constate encore le début.
+Donc rien n'est écrit au passé composé.
+- Page FR et EN : « devait connaître une première application … le {debut_conso}, date prévue par l'instruction » ;
+  la phrase datée « Au 12 octobre 2026, … n'a pas commencé » remplacée par une phrase sans date (le calendrier est celui
+  d'un texte d'application ; la page ne tient pas le début pour un fait constaté tant qu'aucune source officielle ne le
+  constate). `lastmod` 2026-11-03 ; instantanés de relecture refaits après relecture du texte servi.
+- Garde T3 réécrite : date passée → phrase prévue AU PASSÉ, futur interdit, et début dit constaté interdit tant que
+  `PREUVE_DEBUT` (source officielle archivée) est vide ; deux mutations nouvelles vues mordre (futur restant, début
+  constaté sans source), seize autres inchangées.
+- Figures régénérées : « 12 000 » n'est plus rogné ; l'exception de `check-figures.py` est morte d'elle-même
+  (EXCEPTIONS vide).
+- Reste ouvert, nommé : quand une source officielle constatera le début (bilan ministériel, ARS), l'archiver dans
+  `scripts/sources_delais/`, la déclarer dans `PREUVE_DEBUT`, et dire le début au passé.
+
 ### 2026-11-03 (fin) — Méthode des figures câblée ; renvoi visible aux dossiers depuis les pages d'enseignants
 
 Deux demandes de l'auteur. (1) « Méthodologie de vérification et d'optimisation des graphes enregistrée et câblée pour

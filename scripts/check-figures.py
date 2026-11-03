@@ -171,11 +171,7 @@ def examiner(F: dict) -> tuple[list[str], list[str]]:
 
 # Exceptions DECLAREES : figure en defaut dont la correction est faite dans le generateur mais ne peut pas encore etre
 # regeneree. Chacune meurt d'elle-meme : si la figure passe, le controle echoue tant que la ligne n'est pas retiree.
-EXCEPTIONS = {
-    "delais-admissions-m.svg": "X0 porte a 50 dans update_promesses_delais.py (03/11/2026) ; generateur arrete par sa "
-                               "garde T3 (date du 02/11/2026 passee) : figure regeneree a la levee de la garde",
-    "delais-admissions-en-m.svg": "idem",
-}
+EXCEPTIONS: dict[str, str] = {}   # vide au 03/11/2026 (delais-admissions-m, FR et EN, regeneres apres la garde T3)
 
 
 def fichiers(args: list[str]) -> list[Path]:
