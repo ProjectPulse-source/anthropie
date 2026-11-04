@@ -70,6 +70,8 @@ Consumption, for its part, is counted in terawatt-hours (TWh). Dedicated-site da
 
 ## Does a reservation foretell consumption? {#timing}
 
+Between a reservation and consumption, each step carries its own uncertainty: the project has to be built and connected; once connected, it draws only part of the reserved capacity, and only after a ramp-up; finally, it is how long that capacity is drawn that makes the terawatt-hours consumed.
+
 Two readings of the reservation figure circulate. The first sees in it announced, and imminent, consumption: it is the reading that any conversion of reserved gigawatts into nuclear reactors or households assumes. The second sees an option on the grid, part of which will materialise slowly and part never: this is the reading of RTE, which grants these reservations and is preparing a reform of their queue. It is not neutral for all that: it also supports the case for that reform.
 
 The reservations themselves settle one point between them: timing. On {{< dtc-val "date_fig23" >}}, of the capacity reserved by data centres (measured on an RTE figure, to within 0.1 GW), {{< dtc-val "st_travaux" >}} GW was under construction, {{< dtc-val "st_2529" >}} GW signed for commissioning between 2025 and 2029, {{< dtc-val "st_2030" >}} GW for commissioning from 2030 and {{< dtc-val "st_suspendu" >}} GW suspended. More than half of the reserved capacity therefore targets 2030 or later. And since 2023, reservations totalling about {{< dtc-val "st_abandon" >}} GW have been abandoned, against {{< dtc-val "st_raccorde" >}} GW of projects actually connected. The {{< dtc-val "sites_rte" >}} data centres directly connected to RTE's grid total {{< dtc-val "rac_mw" >}} megawatts.

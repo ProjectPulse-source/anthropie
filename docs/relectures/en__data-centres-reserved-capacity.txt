@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /en/data-centres-reserved-capacity/, build de bc673b5 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /en/data-centres-reserved-capacity/, build de e93ea54 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Data centres: do reserved gigawatts foretell consumption?
 The figure that circulates is that of reservations: nearly 18 gigawatts in May 2026, against about 5 at end-2024.
@@ -22,6 +22,7 @@ Reserved grid connection capacity (GW) and electricity consumption (TWh per year
 The result in one sentence.
 In November 2025, data centres had reserved 14 GW of grid connection capacity with RTE, 7.6 GW of it for commissioning from 2030; those connected to RTE’s grid consumed nearly 1 TWh in 2025.
 Does a reservation foretell consumption?
+Between a reservation and consumption, each step carries its own uncertainty: the project has to be built and connected; once connected, it draws only part of the reserved capacity, and only after a ramp-up; finally, it is how long that capacity is drawn that makes the terawatt-hours consumed.
 Two readings of the reservation figure circulate.
 The first sees in it announced, and imminent, consumption: it is the reading that any conversion of reserved gigawatts into nuclear reactors or households assumes.
 The second sees an option on the grid, part of which will materialise slowly and part never: this is the reading of RTE, which grants these reservations and is preparing a reform of their queue.

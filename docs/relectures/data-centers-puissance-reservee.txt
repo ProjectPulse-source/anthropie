@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /data-centers-puissance-reservee/, build de bc673b5 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /data-centers-puissance-reservee/, build de e93ea54 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Data centers : les gigawatts réservés annoncent-ils la consommation ?
 Le chiffre qui circule est celui des réservations : près de 18 gigawatts en mai 2026, contre environ 5 fin 2024.
@@ -22,6 +22,7 @@ Puissance de raccordement réservée (GW) et consommation d’électricité (TWh
 Le résultat en une phrase.
 En novembre 2025, les data centers avaient réservé 14 GW de raccordement auprès de RTE, dont 7,6 GW pour une mise en service à partir de 2030 ; ceux raccordés au réseau de RTE ont consommé près de 1 TWh en 2025.
 Une réservation annonce-t-elle une consommation ?
+Entre une réservation et une consommation, chaque étape a son incertitude : le projet doit être construit et raccordé ; une fois raccordé, il n’appelle qu’une partie de la puissance réservée, et seulement après une montée en charge ; c’est enfin la durée pendant laquelle cette puissance est appelée qui fait les térawattheures consommés.
 Deux lectures du chiffre des réservations circulent.
 La première y voit une consommation annoncée, et prochaine : c’est elle que suppose toute conversion de gigawatts réservés en réacteurs nucléaires ou en foyers.
 La seconde y voit une option sur le réseau, dont une part se réalisera lentement et une autre jamais : c’est celle de RTE, qui attribue ces réservations et prépare la réforme de leur file d’attente.
