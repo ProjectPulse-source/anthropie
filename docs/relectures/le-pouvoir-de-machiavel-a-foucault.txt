@@ -1,16 +1,18 @@
-# relu le 2026-11-03 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
-À quoi tient l'obéissance ?
+# relu le 2026-11-04 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de fcfeb6e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+À quoi tient l’obéissance ?
 Le pouvoir, de Machiavel à Foucault
-La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l'attraction : de −1200 à 2012, les réponses à la question « pourquoi obéit-on ? » ne relèvent pas du même geste : faire obéir, faire reconnaître une autorité, organiser les choix possibles.
-La plupart rencontrent une limite qu'on peut nommer ; celle de la norme décrite par Foucault est plus difficile à localiser.
-Et trois formules célèbres du parcours ne sont pas ce qu'on croit, à commencer par « la fin justifie les moyens ».
-Page publiée le 1er novembre 2026
-Idées et méthode
+La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l’attraction : de −1200 à 2012, le parcours « Pouvoir » de L’Odyssée des idées répond en neuf étapes à la question « pourquoi obéit-on ? ».
+Et trois formules célèbres du parcours ne sont pas ce qu’on croit, à commencer par « la fin justifie les moyens ».
+Page mise à jour le 4 novembre 2026 · révisions
 « Qu’est-ce qui fait qu’un homme obéit à un autre ? » La question ouvre, dans L’Odyssée des idées, le parcours que le livre consacre au pouvoir : onze escales datées, de −1200 à 2012, et trois échos vers d’autres routes du livre.
 Cette page suit ce parcours.
 Chaque étape reçoit la même grille : l’idée, telle que le livre la résume ; le texte, cité dans sa langue d’origine avec son édition quand il a pu être lu ; la limite, le point où ce ressort de l’obéissance cède ; et l’escale du livre.
 Les textes ont été relus le 1er novembre 2026 ; les traductions sont celles de cette page.
+Le résultat en une phrase.
+Dans ce parcours, huit ressorts de l’obéissance font apparaître trois manières de faire agir — faire obéir, faire reconnaître une autorité, façonner les conduites — qui ne se succèdent pas : elles coexistent, et un même pouvoir peut user de plusieurs à la fois.
+faire obéir faire reconnaître une autorité façonner les conduites La couleur indique la manière que la page met en évidence dans chaque étape ; plusieurs peuvent se combiner.
 « Qu’ils me haïssent, pourvu qu’ils me craignent » : la crainte
+La crainte · faire obéir
 L’idée : la devise vient du théâtre.
 L’escale du livre est datée −1200, l’horizon mythique d’Atrée, qui servit à son frère la chair de ses enfants ; le vers, lui, est du poète latin Accius, dans son Atreus, au IIe siècle avant notre ère.
 Les Anciens la citent pour en marquer le danger, Cicéron dans le De Officiis, Sénèque dans le De Clementia ; Caligula, lui, aimait la répéter.
@@ -21,6 +23,7 @@ L’une mise sur la crainte, l’autre sur l’approbation.
 La limite : la crainte peut nourrir la haine, et la haine la contestation du pouvoir, jusqu’à rendre réelle la menace que le tyran voulait conjurer. « Qui peut tout doit tout craindre », fait dire Corneille dans Cinna.
 Dans le livre : escale « −1 200 · Le pouvoir et ses masques : La tyrannie, être craint plutôt qu’aimé ».
 1513 · Machiavel : craint, mais jamais haï
+La crainte · faire obéir
 L’idée : Machiavel écrit Le Prince en 1513, sans pouvoir : écarté au retour des Médicis, arrêté, torturé, relégué dans sa propriété de Sant’Andrea in Percussina.
 Le livre ne paraîtra qu’en 1532, après sa mort.
 Il annonce qu’il suivra la « vérité effective de la chose », non l’image qu’on s’en fait (chapitre XV), et veut le prince renard et lion : le renard pour reconnaître les pièges, le lion pour effrayer les loups (chapitre XVIII).
@@ -35,6 +38,7 @@ Il recommande de savoir s’écarter de la morale quand la conservation de l’�
 Ce n’est pas une permission générale de tout faire, et la portée morale de ce conseil reste discutée.
 Dans le livre : escale « 1513 · Machiavel : Le Prince et la vérité nue du pouvoir », qui suit aussi la lecture républicaine qu’en fera Rousseau.
 1651 · Hobbes : le loup et le Léviathan
+Le pacte · faire reconnaître une autorité
 L’idée : Hobbes écrit au milieu de la guerre civile anglaise.
 Sans pouvoir commun pour arbitrer, punir et garantir les promesses, les hommes vivent dans une guerre de chacun contre chacun — non une bataille permanente, mais l’absence de toute garantie.
 Ce n’est pas une méchanceté naturelle qui fait la guerre : Hobbes en compte trois causes, « Competition », « Diffidence », « Glory », qui poussent à attaquer pour le gain, pour la sécurité et pour la réputation (chapitre XIII).
@@ -48,6 +52,7 @@ La limite : le sujet ne peut être tenu de vouloir sa propre mort, et le droit d
 Le Léviathan repose sur la peur même qu’il apaise : ne pas mourir sous la main de l’autre.
 Dans le livre : escale « 1651 · Hobbes : l’homme, le loup et le Léviathan ».
 1655 · Louis XIV : « L’État, c’est moi », fausse comme citation
+Le corps du roi · faire obéir
 L’idée : le 13 avril 1655, un roi de seize ans vient au Parlement de Paris, au sortir de la Fronde, rappeler aux magistrats qu’il est le maître.
 La phrase qu’on lui prête ce jour-là, aucun témoignage contemporain solide ne la rapporte, et les registres du Parlement l’ignorent : les historiens y voient une invention tardive.
 Fausse comme citation, elle est vraie comme symptôme : elle ramasse l’absolutisme dans un seul corps.
@@ -62,6 +67,7 @@ Entre la phrase apocryphe de 1655 et celle que rapporte Dangeau en 1715, l’Ét
 Dans le livre : escale « 1655 · Louis XIV : l’État, le roi et la phrase apocryphe ».
 La même méthode, appliquée à vingt autres phrases célèbres : citations célèbres vérifiées.
 1789-1793 : la légitimité cesse de descendre du ciel
+Le peuple souverain · faire reconnaître une autorité
 L’idée : le 14 juillet 1789, la Bastille ne garde que sept prisonniers, et la foule y cherche la poudre.
 La réplique nocturne de Versailles — « C’est une révolte ? — Non, Sire, c’est une révolution » — vient d’une tradition qui en a poli les mots ; elle grave pourtant une frontière.
 Une révolte se réprime, une révolution déplace le sol.
@@ -74,6 +80,7 @@ La limite : une légitimité qui ne s’appuie que sur elle-même doit se prouve
 Elle ne peut plus venir du ciel, seulement des hommes : de leurs lois, de leurs votes, de leurs violences.
 Dans le livre : escales « 1789 · « C’est une révolution » : la nuit où bascule l’ancien monde » et « 1793 · Le procès du roi : juger Louis, tuer le sacré ».
 1850 · Au nom du peuple : le provisoire qui dure
+Le provisoire · faire reconnaître une autorité
 L’idée : la « dictature du prolétariat » n’est pas dans le Manifeste de 1848.
 Marx la nomme en 1850, à chaud, sur les défaites de 1848 et de 1849, et en fixe le sens en 1852 : un passage vers l’abolition des classes.
 Tout repose sur une hypothèse immense, qu’un pouvoir puisse être saisi pour organiser sa propre disparition.
@@ -85,6 +92,7 @@ Au XXe siècle, dans les régimes qui se réclamaient de cette perspective, l’
 Hannah Arendt distingue deux gestes qu’on confond : se libérer d’une oppression, et fonder la liberté.
 Dans le livre : escale « 1850 · Au nom du peuple, de l’idéologie et de la tyrannie ».
 1975 · Foucault : le pouvoir qui façonne
+La norme · façonner les conduites
 L’idée : Surveiller et punir s’ouvre sur deux textes.
 Le supplice de Damiens, en 1757, où la puissance du roi s’écrit sur un corps devant la foule ; et, quatre-vingt-un ans plus tard, le règlement de Léon Faucher pour la Maison des jeunes détenus de Paris, où rien ne saigne et où tout se compte.
 Entre les deux, la peine ne s’est pas seulement adoucie : elle a changé de cible.
@@ -100,6 +108,7 @@ Dès 1976, dans La Volonté de savoir, Foucault tient que là où il y a pouvoir
 Le livre note aussi la critique : on a reproché à Foucault de voir du contrôle là où des réformateurs voyaient aussi des progrès, et Surveiller et punir se lit comme une généalogie, non comme un procès-verbal.
 Dans le livre : escale « 1975 · Foucault : surveiller, punir, le pouvoir qui façonne ».
 1979 · Thatcher : la nécessité comme argument
+La nécessité · façonner les conduites
 L’idée : « There is no alternative » : sous ses variantes, la formule devient la grammaire d’un gouvernement.
 Sa force est de fermer la porte au moment même où elle prétend décrire le réel.
 Ce qui relevait du compromis social est présenté comme une entrave, ce qui relevait du conflit politique est rebaptisé adaptation.
@@ -110,6 +119,7 @@ Encore faut-il examiner, décision par décision, quelles options existaient et 
 Le bilan reste disputé : inflation maîtrisée et place financière de Londres d’un côté ; désindustrialisation, chômage massif au début des années 1980 et fractures territoriales de l’autre.
 Dans le livre : escale « 1979 · Margaret Thatcher : la nécessité comme arme politique ».
 2003-2012 : le pouvoir sans visage
+L’attraction et les conditions · façonner les conduites
 L’idée : trois manières d’influencer sans commander, qui ne fonctionnent pas de la même façon : des techniques qui organisent les choix, une attraction qui change les préférences, des contraintes financières qui pèsent sur les gouvernants.
 En 2003, B.
 J.
@@ -132,7 +142,7 @@ Panem et circenses : dans la dixième de ses Satires, au début du IIe siècle, 
 Le danger, dit le livre, naît à l’instant où ils tiennent lieu de participation (escale « 110 · Panem et circenses : nourrir, distraire, et faire de la mort un spectacle »).
 Ce que montre le parcours : trois manières de faire agir
 Ressort
-Manière d'agir
+Manière d’agir
 Ce qui fait obéir
 Où il cède, selon le livre
 La crainte (−1200, 1513)
@@ -145,30 +155,31 @@ la peur de la guerre de chacun contre chacun
 au droit de chacun de ne pas vouloir sa mort
 Le corps du roi (1655)
 faire obéir
-l'incarnation du pouvoir dans une personne
-à la mort du roi : « l'État demeurera toujours »
+l’incarnation du pouvoir dans une personne
+à la mort du roi : « l’État demeurera toujours »
 Le peuple souverain (1789-1793)
 faire reconnaître une autorité
-une légitimité venue d'en bas
+une légitimité venue d’en bas
 elle doit se prouver sans relâche
 Le provisoire (1850)
 faire reconnaître une autorité
 la promesse de disparaître
-le provisoire s'installe, faute de contre-pouvoirs
+le provisoire s’installe, faute de contre-pouvoirs
 La norme (1975)
-organiser les choix
+façonner les conduites
 la surveillance que chacun fait sienne
-le livre n'en nomme pas ; Foucault y place la résistance
+le livre n’en nomme pas ; Foucault y place la résistance
 La nécessité (1979)
-organiser les choix
-l'absence d'alternative proclamée
+façonner les conduites
+l’absence d’alternative proclamée
 les alternatives existaient
-L'attraction et les conditions (2003-2012)
-organiser les choix
-l'adhésion sans ordre donné
-l'adhésion peut se perdre
+L’attraction et les conditions (2003-2012)
+façonner les conduites
+l’adhésion sans ordre donné
+l’adhésion peut se perdre
 Lu de haut en bas, le tableau ne raconte pas la substitution d’un pouvoir à un autre.
-Il fait voir trois manières de faire agir les hommes — faire obéir, faire reconnaître une autorité, organiser les choix possibles —, qui coexistent, et dont un même pouvoir peut user à la fois.
+Il fait voir trois manières de faire agir les hommes — faire obéir, faire reconnaître une autorité, façonner les conduites —, qui coexistent, et dont un même pouvoir peut user à la fois.
+Ce ne sont pas trois explications concurrentes de l’obéissance : chez Hobbes, l’autorité qu’on reconnaît au souverain et la crainte de sa puissance vont ensemble.
 Les unes rencontrent une limite qu’on peut nommer : la crainte nourrit la haine, le corps du roi meurt, la légitimité doit se prouver.
 Les autres rendent leur limite moins apparente : une norme intériorisée ou une nécessité proclamée n’a plus besoin d’un ordre pour orienter les conduites.
 Aucune n’est pour autant sans résistance.
@@ -179,8 +190,8 @@ Le choix des étapes est celui du livre, onze escales et trois échos, et il n�
 Les résumés sont ceux du livre, qui en développe les nuances ; Surveiller et punir est résumé, non cité ; la formule « There is no alternative » est donnée d’après le livre, sans occurrence datée lue ici.
 Les trois manières de faire agir sont une grille de cette page, établie après sa contre-expertise ; le livre ne la formule pas sous cette forme.
 Suivre les idées dans le temps
-L'Odyssée des idées
-Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle
+L’Odyssée des idées
+Culture, philosophie et science — de l’aube de l’humanité à l’intelligence artificielle
 Cette page suit un parcours.
 L’Odyssée des idées en compte sept, qui relient ses 250 escales, des premiers signes à l’intelligence artificielle : le pouvoir y croise la liberté, l’argent, l’opinion et le sacré, et chaque escale y tient en quelques pages.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
@@ -190,22 +201,22 @@ Version papier : 36 € · Kindle : disponible
 Sommaire, extraits et recensions →
 Questions fréquentes
 Machiavel a-t-il écrit « la fin justifie les moyens » ?
-Non, la formule n'est pas dans Le Prince.
-Le contresens part du chapitre XVIII : dans les actions des princes, écrit Machiavel, « si guarda al fine » — on regarde au résultat — et « i mezzi saranno sempre giudicati onorevoli », les moyens seront toujours jugés honorables, par la foule qui juge sur l'apparence et sur l'issue.
-Le passage est aussi un conseil : que le prince songe à maintenir l'État, le résultat fera juger les moyens.
-Ce n'est pas une permission générale de tout faire, et sa portée morale reste discutée.
-D'où vient « l'homme est un loup pour l'homme » ?
+Non, la formule n’est pas dans Le Prince.
+Le contresens part du chapitre XVIII : dans les actions des princes, écrit Machiavel, « si guarda al fine » — on regarde au résultat — et « i mezzi saranno sempre giudicati onorevoli », les moyens seront toujours jugés honorables, par la foule qui juge sur l’apparence et sur l’issue.
+Le passage est aussi un conseil : que le prince songe à maintenir l’État, le résultat fera juger les moyens.
+Ce n’est pas une permission générale de tout faire, et sa portée morale reste discutée.
+D’où vient « l’homme est un loup pour l’homme » ?
 De Plaute, dans la comédie Asinaria (v.
-495) : « lupus est homo homini, non homo, quom qualis sit non novit », l'homme est un loup, non un homme, pour qui ne sait pas encore quel il est.
-Hobbes la reprend dans la dédicace du De Cive (1642), et non dans le Léviathan, en la dédoublant : l'homme est un dieu pour l'homme entre citoyens, un loup entre cités.
-Louis XIV a-t-il dit « L'État, c'est moi » ?
-Rien ne l'établit.
-On la lui prête devant le Parlement de Paris, le 13 avril 1655, mais aucun témoignage contemporain solide ne la rapporte et les registres du Parlement l'ignorent : les historiens y voient une invention tardive.
-Mourant, en 1715, il aurait dit l'inverse, selon un mémoire de Dangeau dont le texte diffère d'une autre version de la scène : « Je m'en vais, mais l'État demeurera toujours. »
-Qu'est-ce que la dictature du prolétariat chez Marx ?
+495) : « lupus est homo homini, non homo, quom qualis sit non novit », l’homme est un loup, non un homme, pour qui ne sait pas encore quel il est.
+Hobbes la reprend dans la dédicace du De Cive (1642), et non dans le Léviathan, en la dédoublant : l’homme est un dieu pour l’homme entre citoyens, un loup entre cités.
+Louis XIV a-t-il dit « L’État, c’est moi » ?
+Rien ne l’établit.
+On la lui prête devant le Parlement de Paris, le 13 avril 1655, mais aucun témoignage contemporain solide ne la rapporte et les registres du Parlement l’ignorent : les historiens y voient une invention tardive.
+Mourant, en 1715, il aurait dit l’inverse, selon un mémoire de Dangeau dont le texte diffère d’une autre version de la scène : « Je m’en vais, mais l’État demeurera toujours. »
+Qu’est-ce que la dictature du prolétariat chez Marx ?
 Un passage.
-Marx la nomme en 1850, dans Les Luttes de classes en France, comme le point de transit nécessaire vers l'abolition des différences de classe, et le redit en 1852 dans une lettre à Joseph Weydemeyer : cette dictature ne constitue que la transition vers l'abolition de toutes les classes.
-L'expression n'est pas dans le Manifeste de 1848.
+Marx la nomme en 1850, dans Les Luttes de classes en France, comme le point de transit nécessaire vers l’abolition des différences de classe, et le redit en 1852 dans une lettre à Joseph Weydemeyer : cette dictature ne constitue que la transition vers l’abolition de toutes les classes.
+L’expression n’est pas dans le Manifeste de 1848.
 Sources
 Textes, relus le 1er novembre 2026 : Suétone, Vie de Caligula, 30, et Vie de Tibère, 59 (The Latin Library) ; Machiavel, Il Principe, chapitres XV, XVII et XVIII (Wikisource) ; Plaute, Asinaria, v.
 495 (The Latin Library) ; Hobbes, Philosophicall Rudiments Concerning Government and Society (1651, traduction du De Cive), dédicace (Wikisource), et Leviathan, 1651, chapitre XIII (Project Gutenberg) ; Journal du marquis de Dangeau, éd.
@@ -214,6 +225,8 @@ XVI, p.
 128 (Internet Archive) ; Constitution du 3 septembre 1791 (Wikisource) ; Marx, Les Luttes de classes en France, 1850, chapitre III, et lettre à Joseph Weydemeyer du 5 mars 1852 (marxists.org, traduction anglaise) ; loi n° 2013-672 du 26 juillet 2013 (Légifrance).
 Les liens sont donnés à chaque étape.
 Le livre : Stéphane Lalut, L’Odyssée des idées, nouvelle édition 2026, parcours « Pouvoir » et escales citées à chaque étape.
+Révisions
+4 novembre 2026 — La troisième manière de faire agir s’appelle désormais « façonner les conduites », et non plus « organiser les choix » : la discipline décrite par Foucault agit sur les corps et les conduites, pas seulement sur les choix offerts (contre-expertise PRO-20261103-195836).
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

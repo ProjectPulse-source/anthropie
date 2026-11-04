@@ -1,0 +1,23 @@
+{{- /* etape.html — une étape d'un parcours d'idées en fiche (page /le-pouvoir-de-machiavel-a-foucault/).
+       Maquette P4 validée par l'auteur le 04/11/2026 (arbitrage PRO-20261103-195836).
+
+       {{< etape ressort="La crainte" maniere="obeir" >}}
+       - **L'idée**&nbsp;: …
+       - **Le texte**&nbsp;: …
+       - **La limite**&nbsp;: …
+       - **Dans le livre**&nbsp;: …
+       {{< /etape >}}
+
+       En tête : le ressort et la manière de faire agir que la page met en évidence dans l'étape, en toutes lettres (la
+       couleur ne porte jamais seule l'information) ; plusieurs manières peuvent se combiner, la légende de la carte le
+       dit. La grille du corpus reste le Markdown du bloc, entièrement visible (le texte est la preuve). */ -}}
+{{- $m := .Get "maniere" -}}
+{{- $lib := dict "obeir" "faire obéir" "reconnaitre" "faire reconnaître une autorité" "faconner" "façonner les conduites" -}}
+{{- if not (index $lib $m) }}{{ errorf "etape: maniere %q hors de obeir|reconnaitre|faconner (%s)" $m .Page.File.Path }}{{ end -}}
+{{- if not (.Get "ressort") }}{{ errorf "etape: ressort manquant (%s)" .Page.File.Path }}{{ end -}}
+{{- $corps := .Inner | .Page.RenderString -}}
+{{- if not (in $corps "<li>") }}{{ errorf "etape: grille (liste Markdown) absente (%s)" .Page.File.Path }}{{ end -}}
+<div class="etape-fiche etape-fiche--{{ $m }}">
+  <p class="etape-fiche__tete"><span class="etape-fiche__ressort">{{ .Get "ressort" | safeHTML }}</span><span class="etape-fiche__sep"> · </span><span class="etape-fiche__maniere">{{ index $lib $m }}</span></p>
+  {{ $corps }}
+</div>

@@ -1,0 +1,42 @@
+// _parcours.scss — fiches d'étape et carte d'un parcours d'idées (shortcode etape ; carte écrite dans la page).
+// Maquette P4 validée le 04/11/2026. Teintes reprises de la palette du site (aucune couleur nouvelle) ; la manière
+// d'agir est toujours écrite en toutes lettres.
+.etape-fiche, .parcours-carte a, .parcours-legende span {
+  --maniere: var(--color-accent);
+  &.etape-fiche--reconnaitre, &.m-reconnaitre { --maniere: var(--color-pivot); }
+  &.etape-fiche--faconner, &.m-faconner { --maniere: var(--color-text-subtle); }
+}
+.etape-fiche {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-soft);
+  border-left: 4px solid var(--maniere);
+  border-radius: 6px;
+  padding: 0.9rem 1.2rem 0.4rem;
+  margin: 0.6rem 0 1.6rem;
+  &__tete { margin: 0 0 0.7rem; font: 0.78rem/1.4 var(--font-sans); }
+  &__ressort { font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--maniere); }
+  &__sep { color: var(--color-text-subtle); }
+  &__maniere { color: var(--color-text-muted); }
+  @media (max-width: 600px) { padding: 0.8rem 0.9rem 0.3rem; }
+}
+.parcours-carte {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.45rem;
+  margin: 1rem 0 0.5rem;
+  a {
+    display: block; text-decoration: none; color: var(--color-text);
+    background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft);
+    border-top: 4px solid var(--maniere); border-radius: 4px;
+    padding: 0.5rem 0.65rem 0.6rem; font: 0.8rem/1.35 var(--font-sans);
+    &:hover { border-color: var(--maniere); }
+  }
+  b { display: block; font-weight: 600; color: var(--color-text-subtle); font-size: 0.75rem; }
+  strong { display: block; font-weight: 600; font-size: 0.86rem; margin-top: 0.15rem; }
+  em { display: block; font-style: normal; color: var(--color-text-muted); margin-top: 0.1rem; }
+  @media (max-width: 600px) { grid-template-columns: repeat(2, 1fr); }
+}
+.parcours-legende {
+  display: flex; flex-wrap: wrap; gap: 0.3rem 1.1rem; margin: 0.4rem 0 1.6rem;
+  font: 0.8rem/1.5 var(--font-sans); color: var(--color-text-muted);
+  span::before { content: ""; display: inline-block; width: 0.8rem; height: 0.25rem; background: var(--maniere); margin-right: 0.4rem; vertical-align: 0.2em; }
+  small { flex-basis: 100%; color: var(--color-text-subtle); font-size: 0.78rem; }
+}

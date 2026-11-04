@@ -152,3 +152,21 @@ Aucun des deux articles ne relie les réponses entre elles ni ne montre la limit
   (le premier contrôle avait lu une page UTF-16 comme UTF-8). Foucault et les résistances, conseil de Machiavel
   (chap. XVIII), trois causes de Hobbes, Hollande nommé, synthèse en trois manières de faire agir. « Bon plaisir » :
   point ouvert pour le livre. Contrôles relancés à 0, recette OK, instantané refait.
+
+### Présentation P4 (04/11/2026)
+
+- Constat : thèse (trois manières de faire agir) visible seulement au tableau final ; neuf étapes en listes identiques,
+  sans repère de date, de ressort ni de manière ; chapô surchargé.
+- Trois maquettes (P1 fiches, P2 carte, P3 regroupement : `D:\PRO\06_PROMOTION\MAQUETTES_POUVOIR_2026-11-03\`) ;
+  contre-expertise `PRO-20261103-195836`, réponse archivée (SHA-256 701B44D9…), arbitrée
+  (`ARBITRATIONS/PRO-20261103-195836_arbitrage.md`) : P4 = carte de P2 (neuf accès) + fiches de P1, ordre du livre.
+- Fait : chapô allégé ; phrase-résultat prudente ; carte de neuf accès (date, étape, ressort, couleur de la manière mise
+  en évidence) et légende (« plusieurs peuvent se combiner ») ; neuf fiches (shortcode `etape`), grille et textes
+  entièrement visibles ; « façonner les conduites » remplace « organiser les choix » (tableau, lecture ; journal du
+  04/11) ; phrase sur les niveaux d'analyse (Hobbes). Teintes de la palette du site, aucune nouvelle. Ancres inchangées.
+- Point ouvert : datation de « notre bon plaisir » (Larousse, fin de Louis XVI, rapporté par la page ; Mas-Latrie 1881
+  et Demante 1893, Empire et Restauration, avancés par la contre-expertise) — NON VÉRIFIÉ, sources à lire avant toute
+  retouche de l'écho.
+- Contrôles : `check-all --ci` 0 ; build 0 ; `typo_build` 0 ; liens 0 critique ; rendu et dates 0. Relecture des
+  phrases nouvelles : faite (libellés de la légende et de la carte collés dans le texte extrait : séparateurs posés).
+  Instantané refait.
