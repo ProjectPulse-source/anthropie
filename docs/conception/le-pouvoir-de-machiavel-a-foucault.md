@@ -170,3 +170,8 @@ Aucun des deux articles ne relie les réponses entre elles ni ne montre la limit
 - Contrôles : `check-all --ci` 0 ; build 0 ; `typo_build` 0 ; liens 0 critique ; rendu et dates 0. Relecture des
   phrases nouvelles : faite (libellés de la légende et de la carte collés dans le texte extrait : séparateurs posés).
   Instantané refait.
+- « Notre bon plaisir » (point ouvert du 04/11) : FERMÉ le 04/11. Persée : Mas-Latrie, BEC 1881 (bec_0373-6237_1881_num_42_1_447018) et
+  Demante, BEC 1893 (bec_0373-6237_1893_num_54_1_447731), lus dans l'extrait public (texte intégral réservé ; PDF refusé
+  au script). Demante rapporte qu'aucun acte imprimé avec « bon plaisir », confronté à l'original, n'y résiste
+  (l'original porte « Car tel est notre plaisir ») : ajouté à l'écho, journal du 04/11. La datation « Empire puis
+  Restauration » avancée par la contre-expertise n'est pas dans l'extrait lu : non écrite.

@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de fcfeb6e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 28e463d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 À quoi tient l’obéissance ?
 Le pouvoir, de Machiavel à Foucault
 La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l’attraction : de −1200 à 2012, le parcours « Pouvoir » de L’Odyssée des idées répond en neuf étapes à la question « pourquoi obéit-on ? ».
@@ -135,6 +135,7 @@ Trois échos
 Le parcours croise trois autres routes du livre.
 « Car tel est notre plaisir » : depuis une ordonnance de Louis XI du 31 octobre 1472, la clause ferme les actes royaux. « Plaisir » vient du latin placere, agréer : la clause ne dit pas un caprice, elle ferme la décision.
 La mémoire a retenu « notre bon plaisir », qui n’est pas la formule habituelle de la chancellerie : le livre la juge sans attestation sûre, le Larousse la fait apparaître dans les actes à la fin du règne de Louis XVI (actes non lus ici).
+Les chartistes ont confronté les imprimés aux originaux : en 1893, Auguste-Gabriel Demante rapporte qu’aucun acte imprimé avec « bon plaisir », confronté à l’original, n’y a résisté, l’original portant « Car tel est notre plaisir » (Bibliothèque de l’École des chartes, 1893, après Louis de Mas-Latrie, 1881).
 La formule de chancellerie est devenue, dans la mémoire, le symbole de l’arbitraire (escale « 1461 · Louis XI : l’universelle aragne et la puissance royale »).
 La Magna Carta : arrachée à Jean sans Terre par ses barons le 15 juin 1215, annulée par le pape quelques semaines plus tard, rééditée en 1216, 1217 et 1225.
 Sa trente-neuvième clause, dans la version de 1215, pose qu’aucun homme libre ne sera arrêté, emprisonné ou dépossédé si ce n’est par le jugement légal de ses pairs ou par la loi du pays : le roi ne peut pas tout faire (escale « 1215 · La Magna Carta : nul n’est au-dessus de la loi »).
@@ -226,6 +227,7 @@ XVI, p.
 Les liens sont donnés à chaque étape.
 Le livre : Stéphane Lalut, L’Odyssée des idées, nouvelle édition 2026, parcours « Pouvoir » et escales citées à chaque étape.
 Révisions
+4 novembre 2026 — « Notre bon plaisir » : ajout de la vérification des chartistes (Demante, 1893, après Mas-Latrie, 1881) : les actes imprimés avec « bon plaisir » ne résistent pas à la confrontation avec l’original, qui porte « Car tel est notre plaisir ».
 4 novembre 2026 — La troisième manière de faire agir s’appelle désormais « façonner les conduites », et non plus « organiser les choix » : la discipline décrite par Foucault agit sur les corps et les conduites, pas seulement sur les choix offerts (contre-expertise PRO-20261103-195836).
 Toutes les ressources : données, dossiers et repères →
 Transmettre
