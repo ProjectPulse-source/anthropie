@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /data-centers-puissance-reservee/, build de 32097a1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /data-centers-puissance-reservee/, build de 6e6be2d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Data centers : les gigawatts réservés annoncent-ils la consommation ?
 Le chiffre qui circule est celui des réservations : près de 18 gigawatts en mai 2026, contre environ 5 fin 2024.

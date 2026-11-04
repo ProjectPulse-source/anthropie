@@ -59,7 +59,7 @@ La consommation, elle, se compte en térawattheures (TWh). Les data centers sur 
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/data-centers-reserve-consomme-m.svg" width="300" height="1089">
+    <source media="(max-width: 600px)" srcset="/img/data-centers-reserve-consomme-m.svg" width="300" height="1125">
     <img src="/img/data-centers-reserve-consomme.svg" alt="Deux panneaux. En haut, la puissance de raccordement réservée par les data centers auprès de RTE : environ {{< dtc-val "res_fin2024" >}} GW fin 2024, {{< dtc-val "res_nov2025" >}} GW en novembre 2025, dont {{< dtc-val "st_avant2030" >}} GW pour une mise en service avant 2030 et {{< dtc-val "st_2030" >}} GW à partir de 2030, près de {{< dtc-val "res_mai2026" >}} GW en mai 2026 ; {{< dtc-val "rac_gw" >}} GW déjà raccordés au réseau de RTE. En bas, la consommation : {{< dtc-val "rpt_2024" >}} TWh en 2024 et près de {{< dtc-val "rpt_2025" >}} TWh en 2025 sur le réseau de RTE, {{< dtc-val "sd_bas" >}} à {{< dtc-val "sd_haut" >}} TWh estimés pour l'ensemble des sites dédiés en 2024, {{< dtc-val "l2030" >}} à {{< dtc-val "r2030" >}} TWh en 2030 et {{< dtc-val "l2035" >}} à {{< dtc-val "r2035" >}} TWh en 2035 dans les deux trajectoires de RTE." width="720" height="539" loading="lazy">
   </picture>
   <figcaption>Puissance de raccordement réservée (GW) et consommation d'électricité (TWh par an) des data centers, d'après RTE&nbsp;; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel 2025-2035.</figcaption>

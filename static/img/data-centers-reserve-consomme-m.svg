@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1089" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dtcm-t dtcm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1125" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dtcm-t dtcm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
 <title id="dtcm-t">Data centers : puissance réservée et électricité consommée</title><desc id="dtcm-d">Deux panneaux, deux grandeurs. Puissance de raccordement réservée par les data centers auprès de RTE : environ 5 GW fin 2024, 14 GW en novembre 2025 (dont 6,1 GW pour une mise en service avant 2030, 7,6 GW à partir de 2030 et 0,2 GW suspendus), près de 18 GW en mai 2026 ; 0,8 GW déjà raccordés au réseau de RTE (huit sites) ; environ 0,9 GW abandonnés depuis 2023. Consommation des data centers sur sites dédiés : 0,8 TWh en 2024 et près de 1 TWh en 2025 mesurés sur le réseau de RTE ; 4 à 5 TWh estimés pour l'ensemble en 2024 ; 10 à 15 TWh en 2030 et 21 à 32 TWh en 2035 dans les deux trajectoires de RTE.</desc>
-<rect width="300" height="1089" fill="#ffffff"/>
+<rect width="300" height="1125" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Data centers : puissance</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">réservée et électricité</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">consommée</text>
@@ -38,33 +38,35 @@
 <text x="0" y="622" font-size="13.5" fill="#26262f">2025, mesurée (réseau de RTE)</text>
 <rect x="0.0" y="628.0" width="5.4" height="12" fill="#eb6834"/>
 <text x="11.4" y="639" font-size="13.5" font-weight="600" fill="#eb6834">près de 1 TWh</text>
-<text x="0" y="668" font-size="13.5" fill="#26262f">2024, estimée par RTE (tous sites</text>
-<text x="0" y="686" font-size="13.5" fill="#26262f">dédiés)</text>
+<text x="0" y="668" font-size="13.5" fill="#26262f">2024, estimée par RTE</text>
+<text x="0" y="686" font-size="13.5" fill="#26262f">(tous sites dédiés)</text>
 <rect x="0.0" y="692.0" width="21.7" height="12" fill="#f5b89c"/>
 <rect x="21.7" y="692" width="5.4" height="11" fill="#ffffff" stroke="#eb6834" stroke-width="1"/>
 <text x="33.1" y="703" font-size="13.5" font-weight="600" fill="#eb6834">4 à 5 TWh</text>
 <text x="0" y="732" font-size="13.5" fill="#26262f">2030, deux trajectoires de RTE</text>
-<rect x="0.0" y="738.0" width="54.3" height="12" fill="#f5b89c"/>
-<rect x="54.3" y="738" width="27.1" height="11" fill="#ffffff" stroke="#eb6834" stroke-width="1"/>
-<text x="87.4" y="749" font-size="13.5" font-weight="600" fill="#eb6834">10 à 15 TWh</text>
-<text x="0" y="778" font-size="13.5" fill="#26262f">2035, deux trajectoires de RTE</text>
-<rect x="0.0" y="784.0" width="114.0" height="12" fill="#f5b89c"/>
-<rect x="114.0" y="784" width="59.7" height="11" fill="#ffffff" stroke="#eb6834" stroke-width="1"/>
-<text x="179.7" y="795" font-size="13.5" font-weight="600" fill="#eb6834">21 à 32 TWh</text>
-<line x1="0" y1="812.0" x2="300" y2="812.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="833.0" font-size="13.5" fill="#55524f">RTE : Bilan prévisionnel 2025-2035</text>
-<text class="pied-source" x="0" y="850.0" font-size="13.5" fill="#55524f">(déc. 2025), Bilan électrique 2025</text>
-<text class="pied-source" x="0" y="867.0" font-size="13.5" fill="#55524f">(févr. 2026), page « Les data centers</text>
-<text class="pied-source" x="0" y="884.0" font-size="13.5" fill="#55524f">en chiffres clés » (1er juin 2026) ;</text>
-<text class="pied-source" x="0" y="901.0" font-size="13.5" fill="#55524f">répartition de novembre 2025 mesurée</text>
-<text class="pied-source" x="0" y="918.0" font-size="13.5" fill="#55524f">sur la figure 2.3 du Bilan</text>
-<text class="pied-source" x="0" y="935.0" font-size="13.5" fill="#55524f">prévisionnel</text>
-<text class="pied-note" x="0" y="956.0" font-size="13.5" fill="#55524f">Une puissance réservée n'est ni une</text>
-<text class="pied-note" x="0" y="973.0" font-size="13.5" fill="#55524f">puissance appelée ni une</text>
-<text class="pied-note" x="0" y="990.0" font-size="13.5" fill="#55524f">consommation : les deux panneaux ne se</text>
-<text class="pied-note" x="0" y="1007.0" font-size="13.5" fill="#55524f">comparent pas, aucun rapport n'est</text>
-<text class="pied-note" x="0" y="1024.0" font-size="13.5" fill="#55524f">calculé entre eux. Trajectoires :</text>
-<text class="pied-note" x="0" y="1041.0" font-size="13.5" fill="#55524f">hypothèses de RTE, non des mesures.</text>
-<text class="pied-licence" x="0" y="1062.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
-<text class="pied-licence" x="0" y="1079.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
+<text x="0" y="750" font-size="13.5" fill="#26262f">(tous sites dédiés)</text>
+<rect x="0.0" y="756.0" width="54.3" height="12" fill="#f5b89c"/>
+<rect x="54.3" y="756" width="27.1" height="11" fill="#ffffff" stroke="#eb6834" stroke-width="1"/>
+<text x="87.4" y="767" font-size="13.5" font-weight="600" fill="#eb6834">10 à 15 TWh</text>
+<text x="0" y="796" font-size="13.5" fill="#26262f">2035, deux trajectoires de RTE</text>
+<text x="0" y="814" font-size="13.5" fill="#26262f">(tous sites dédiés)</text>
+<rect x="0.0" y="820.0" width="114.0" height="12" fill="#f5b89c"/>
+<rect x="114.0" y="820" width="59.7" height="11" fill="#ffffff" stroke="#eb6834" stroke-width="1"/>
+<text x="179.7" y="831" font-size="13.5" font-weight="600" fill="#eb6834">21 à 32 TWh</text>
+<line x1="0" y1="848.0" x2="300" y2="848.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="869.0" font-size="13.5" fill="#55524f">RTE : Bilan prévisionnel 2025-2035</text>
+<text class="pied-source" x="0" y="886.0" font-size="13.5" fill="#55524f">(déc. 2025), Bilan électrique 2025</text>
+<text class="pied-source" x="0" y="903.0" font-size="13.5" fill="#55524f">(févr. 2026), page « Les data centers</text>
+<text class="pied-source" x="0" y="920.0" font-size="13.5" fill="#55524f">en chiffres clés » (1er juin 2026) ;</text>
+<text class="pied-source" x="0" y="937.0" font-size="13.5" fill="#55524f">répartition de novembre 2025 mesurée</text>
+<text class="pied-source" x="0" y="954.0" font-size="13.5" fill="#55524f">sur la figure 2.3 du Bilan</text>
+<text class="pied-source" x="0" y="971.0" font-size="13.5" fill="#55524f">prévisionnel</text>
+<text class="pied-note" x="0" y="992.0" font-size="13.5" fill="#55524f">Une puissance réservée n'est ni une</text>
+<text class="pied-note" x="0" y="1009.0" font-size="13.5" fill="#55524f">puissance appelée ni une</text>
+<text class="pied-note" x="0" y="1026.0" font-size="13.5" fill="#55524f">consommation : les deux panneaux ne se</text>
+<text class="pied-note" x="0" y="1043.0" font-size="13.5" fill="#55524f">comparent pas, aucun rapport n'est</text>
+<text class="pied-note" x="0" y="1060.0" font-size="13.5" fill="#55524f">calculé entre eux. Trajectoires :</text>
+<text class="pied-note" x="0" y="1077.0" font-size="13.5" fill="#55524f">hypothèses de RTE, non des mesures.</text>
+<text class="pied-licence" x="0" y="1098.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 ·</text>
+<text class="pied-licence" x="0" y="1115.0" font-size="13.5" fill="#96928f">stephane-lalut.com</text>
 </svg>

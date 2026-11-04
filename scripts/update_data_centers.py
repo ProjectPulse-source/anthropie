@@ -420,8 +420,8 @@ TXT = {
                pb="Consommation d'électricité des data centers sur sites dédiés, en térawattheures par an (TWh)",
                fin2024="Fin 2024", nov2025="Novembre 2025", mai2026="Mai 2026", rac="Déjà raccordés au réseau de RTE ({sites_rte} sites)",
                avant="mise en service prévue avant 2030", apres="à partir de 2030", abandon="Suspendu (gris) : {st_suspendu} GW · abandonné depuis 2023 : environ {st_abandon} GW",
-               m24="2024, mesurée (réseau de RTE)", m25="2025, mesurée (réseau de RTE)", e24="2024, estimée par RTE (tous sites dédiés)",
-               t30="2030, deux trajectoires de RTE", t35="2035, deux trajectoires de RTE",
+               m24="2024, mesurée (réseau de RTE)", m25="2025, mesurée (réseau de RTE)", e24="2024, estimée par RTE (tous\u00a0sites\u00a0dédiés)",
+               t30="2030, deux trajectoires de RTE (tous\u00a0sites\u00a0dédiés)", t35="2035, deux trajectoires de RTE (tous\u00a0sites\u00a0dédiés)",
                v_fin2024="environ {res_fin2024} GW", v_nov2025="{res_nov2025} GW", v_mai2026="près de {res_mai2026} GW", v_rac="{rac_gw} GW",
                v_m24="{rpt_2024} TWh", v_m25="près de {rpt_2025} TWh", v_e24="{sd_bas} à {sd_haut} TWh", v_t30="{l2030} à {r2030} TWh", v_t35="{l2035} à {r2035} TWh",
                desc="Deux panneaux, deux grandeurs. Puissance de raccordement réservée par les data centers auprès de RTE : environ {res_fin2024} GW "
@@ -442,8 +442,8 @@ TXT = {
                pb="Electricity consumption of dedicated-site data centres, in terawatt-hours per year (TWh)",
                fin2024="End-2024", nov2025="November 2025", mai2026="May 2026", rac="Already connected to RTE's grid ({sites_rte} sites)",
                avant="commissioning planned before 2030", apres="from 2030", abandon="Suspended (grey): {st_suspendu} GW · abandoned since 2023: about {st_abandon} GW",
-               m24="2024, metered (RTE's grid)", m25="2025, metered (RTE's grid)", e24="2024, estimated by RTE (all dedicated sites)",
-               t30="2030, two RTE pathways", t35="2035, two RTE pathways",
+               m24="2024, metered (RTE's grid)", m25="2025, metered (RTE's grid)", e24="2024, estimated by RTE (all\u00a0dedicated\u00a0sites)",
+               t30="2030, two RTE pathways (all\u00a0dedicated\u00a0sites)", t35="2035, two RTE pathways (all\u00a0dedicated\u00a0sites)",
                v_fin2024="about {res_fin2024} GW", v_nov2025="{res_nov2025} GW", v_mai2026="nearly {res_mai2026} GW", v_rac="{rac_gw} GW",
                v_m24="{rpt_2024} TWh", v_m25="nearly {rpt_2025} TWh", v_e24="{sd_bas} to {sd_haut} TWh", v_t30="{l2030} to {r2030} TWh", v_t35="{l2035} to {r2035} TWh",
                desc="Two panels, two quantities. Grid connection capacity reserved by data centres with RTE: about {res_fin2024} GW at end-2024, "
