@@ -139,6 +139,7 @@ circule, en citant une édition qui imprime l'autre. La page Hugo ne contient ni
 - Panel avant / après : non fait (motif : page `corpus` sans démonstration ni architecture narrative à départager ; la
   contre-expertise de la page en tient lieu).
 - Contre-expertise de phase A : faite pour le programme (arbitrage `PRO-20261101-060949`), pas pour la page.
+- Encadré « En atelier » : fait le 04/11/2026 (demande de l'auteur, transmise par la session Promotion livres, pour les Alliances françaises et les écoles FLAM). Cinq entrées existantes, les trois statuts mêlés, aucune réponse dans l'encadré : chaque lien ouvre la fiche. Aucun chiffre ni statut nouveau ; pas de version anglaise (exclusion déjà déclarée).
 - Gardes vues mordre : sans objet (aucun chiffre calculé ; les décomptes 15 / 2 / 3 sont ceux des vingt entrées).
 - Figures téléphone : sans objet (pas de figure).
 - Relecture de langue : faite le 01/11/2026 (`check_langue.py` sur le texte servi : 11 signalements, tous dans des

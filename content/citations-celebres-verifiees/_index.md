@@ -36,6 +36,18 @@ onglet:  # barre du bloc (partials/barre-bloc.html, posée par le gabarit)
 
 Une citation célèbre se répète d'ordinaire sans son livre, sans sa page et souvent sans sa forme exacte. Cette page examine vingt citations célèbres prêtées à cinq auteurs, choisies pour ce qu'elles montrent de la façon dont un texte se transmet, se transforme ou change d'auteur, et les relit dans leurs œuvres, dans une édition qu'elle nomme, au passage qu'elle indique. Elle s'appuie sur la vérification des {{< stat "citations" "nbsp" >}} citations de [*Livresque des mots*](/livres/livresque-des-mots/), dont l'[édition 2026 a réexaminé le texte et la paternité](/livresque/methode-et-corpus/) une à une.
 
+<aside class="encadre" id="en-atelier">
+
+**En atelier&nbsp;: authentique, retouchée ou introuvable chez l'auteur&nbsp;?** Pour une séance en français, avec des adolescents ou des adultes, en 30 à 45&nbsp;minutes&nbsp;: choisir une citation, en discuter le sens, puis chercher son auteur. Chaque lien ouvre la fiche qui donne la réponse et sa source.
+
+1. «&nbsp;Je ne suis pas d'accord avec ce que vous dites, mais je me battrai jusqu'à la mort pour que vous ayez le droit de le dire&nbsp;», prêtée à Voltaire ([la réponse](#voltaire-je-me-battrai))
+2. «&nbsp;Ouvrez une école, vous fermerez une prison&nbsp;», prêtée à Victor Hugo ([la réponse](#hugo-ouvrez-une-ecole))
+3. «&nbsp;La raison du plus fort est toujours la meilleure&nbsp;», prêtée à La Fontaine ([la réponse](#la-fontaine-la-raison-du-plus-fort))
+4. «&nbsp;Les femmes sont comme les girouettes&nbsp;: elles se fixent quand elles se rouillent&nbsp;», prêtée à Voltaire ([la réponse](#voltaire-les-femmes-et-les-girouettes))
+5. «&nbsp;Que diable allait-il faire dans cette galère&nbsp;?&nbsp;», prêtée à Molière ([la réponse](#moliere-cette-galere))
+
+</aside>
+
 ## Comment lire cette page {#comment-lire}
 
 Chaque citation reçoit l'un de trois statuts&nbsp;:
