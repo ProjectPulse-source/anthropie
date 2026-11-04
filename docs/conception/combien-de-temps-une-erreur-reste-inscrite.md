@@ -173,3 +173,16 @@ pas les durées entre eux.
   « J'ai remboursé mon crédit : pourquoi suis-je encore fiché au FICP ? », « Un employeur peut-il voir une condamnation
   inscrite au casier judiciaire ? » ; `lastmod` 01/11 19 h ; ligne de la page ajoutée à `static/llms.txt` (Pages de
   référence). Contrôles à 0, instantané refait.
+
+### Frise des durées (04/11/2026)
+
+- Ajout d'une figure en tête de la section `#tableau` : les durées d'inscription, de six mois à quarante ans, sur une
+  échelle logarithmique (première conclusion de la page : « la durée d'une trace ne dit pas la gravité de l'erreur »).
+  Générateur `scripts/generer_frise_durees.py` ; source : le tableau de la page. Garde : chaque fragment de durée se lit
+  mot pour mot dans la cellule « Délai », et chaque valeur dessinée se lit dans ces fragments (témoins
+  `--mutation=texte` et `--mutation=marque`, vus mordre).
+- Un point par durée distincte (plein : délai ; creux : délai doublé en récidive, sur une seconde ligne) ; aucun trait,
+  qui ferait lire une plage. Note : démarche de la personne et déclaration d'un tiers distinguées, comme la page.
+- Skill `controle-figures` : `check-figures` 0 ; rendus relus ; deux contrôleurs indépendants (géométrie exacte à 0,1 %
+  près ; défauts de libellé, de coupure et de tracé corrigés : « criminelle ou correctionnelle », « 4e ou 5e classe »,
+  « sans incident », récidive) ; second passage sur l'état final.

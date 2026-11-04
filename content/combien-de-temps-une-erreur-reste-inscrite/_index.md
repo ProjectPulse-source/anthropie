@@ -43,6 +43,14 @@ Une dette se rembourse, une peine s'exécute, une maladie se soigne — qui n'es
 
 ## Le tableau&nbsp;: combien de temps, et qu'est-ce qui efface&nbsp;? {#tableau}
 
+<figure class="figure-ciseau">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/durees-inscription-m.svg" width="300" height="1331">
+    <img src="/img/durees-inscription.svg" alt="Frise des durées d'inscription, sur une échelle logarithmique de six mois à quarante ans : un point de permis, 6 mois ; tous les points, 2 ans sans infraction, 3 ans après un délit ou une contravention de 4e ou 5e classe ; malus d'assurance auto, 2 années sans sinistre ; incident de crédit au FICP, interdiction d'émettre des chèques et antécédent de cancer ou d'hépatite C pour l'assurance d'un prêt, 5 ans ; surendettement au FICP, la durée du plan, 7 ans au plus, 5 ans si le plan est exécuté sans incident ; casier, bulletin n° 2, réhabilitation après 3, 5 ou 10 ans selon la peine, doublés en récidive (6, 10 ou 20 ans) ; casier, bulletin n° 1, 40 ans sans nouvelle condamnation criminelle ou correctionnelle." width="720" height="677" loading="lazy">
+  </picture>
+  <figcaption>Durée pendant laquelle une trace reste inscrite, registre par registre (d'après le tableau ci-dessous et les textes qu'il cite).</figcaption>
+</figure>
+
 <div class="table-scroll">
 <table class="pouvoirs-table">
 <thead><tr><th>Registre</th><th>Ce que la règle fixe</th><th>Délai</th><th>Point de départ</th><th>Effacement anticipé, exceptions</th><th>Qui intervient</th></tr></thead>

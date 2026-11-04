@@ -1,17 +1,17 @@
-# relu le 2026-11-03 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 9d91116 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
-De six mois pour un point de permis à quarante ans pour le casier : la durée d'une inscription dépend du registre, et ce qui l'efface n'est pas toujours le temps.
-Les points du permis se récupèrent, le malus se résorbe et la réhabilitation légale s'acquiert sans démarche ; l'interdiction d'émettre des chèques cesse au bout de cinq ans, plus tôt si l'on régularise ; une condamnation n'est exclue du bulletin n° 2 que par le tribunal, dans le jugement ou sur requête ; la radiation d'une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur.
+De six mois pour un point de permis à quarante ans pour le casier : la durée d’une inscription dépend du registre, et ce qui l’efface n’est pas toujours le temps.
+Les points du permis se récupèrent, le malus se résorbe et la réhabilitation légale s’acquiert sans démarche ; l’interdiction d’émettre des chèques cesse au bout de cinq ans, plus tôt si l’on régularise ; une condamnation n’est exclue du bulletin n° 2 que par le tribunal, dans le jugement ou sur requête ; la radiation d’une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur.
 Et un même registre oublie à deux vitesses : un malus disparaît en deux ans, le bonus maximal en demande treize.
 Page publiée le 1er novembre 2026
-Données et droit
 Une dette se rembourse, une peine s’exécute, une maladie se soigne — qui n’est pas une erreur, mais laisse aussi une trace.
 Entre le moment où l’erreur est réparée et celui où elle cesse d’être lue par un banquier, un employeur ou un assureur, court un second délai, fixé par un texte.
 Cette page donne ce délai pour les principaux registres, d’après les textes lus sur Légifrance le 1er novembre 2026 dans leur version en vigueur.
 Elle décrit des règles générales ; elle ne remplace pas un conseil juridique, et chaque section renvoie au texte qui fait foi.
 Le tableau se lit registre par registre ; quatre situations courantes disent ensuite ce qu’il faut vérifier, et à qui s’adresser.
 Le tableau : combien de temps, et qu’est-ce qui efface ?
+Durée pendant laquelle une trace reste inscrite, registre par registre (d’après le tableau ci-dessous et les textes qu’il cite).
 Registre
 Ce que la règle fixe
 Délai
@@ -21,28 +21,28 @@ Qui intervient
 Fichier des incidents de crédit (FICP)
 une durée maximale de conservation
 5 ans
-l'enregistrement de l'incident par la Banque de France
+l’enregistrement de l’incident par la Banque de France
 le paiement intégral
-l'établissement, qui déclare le paiement
+l’établissement, qui déclare le paiement
 FICP, surendettement
 une durée maximale de conservation
 la durée du plan ou des mesures, 7 ans au plus ; 5 ans si le plan est exécuté sans incident ; 5 ans après un rétablissement personnel
 la signature du plan, la décision ou le jugement ; la décision ou la clôture pour le rétablissement personnel
 —
 aucune démarche individuelle
-Interdiction d'émettre des chèques
-une durée d'interdiction
+Interdiction d’émettre des chèques
+une durée d’interdiction
 5 ans
-l'injonction de la banque
+l’injonction de la banque
 la régularisation : payer le chèque ou constituer la provision
 la personne, qui justifie la régularisation ; puis la banque, qui avise la Banque de France
 Casier, bulletin n° 2
 un délai de réhabilitation légale
 3, 5 ou 10 ans selon la peine, doublés en récidive
-le paiement, l'exécution ou la prescription de la peine ; pour un sursis, la date où la condamnation est non avenue
-l'exclusion décidée par le tribunal, sauf pour les infractions de l'art.
+le paiement, l’exécution ou la prescription de la peine ; pour un sursis, la date où la condamnation est non avenue
+l’exclusion décidée par le tribunal, sauf pour les infractions de l’art.
 706-47 CPP
-aucune démarche pour la réhabilitation ; une requête pour l'exclusion
+aucune démarche pour la réhabilitation ; une requête pour l’exclusion
 Casier, bulletin n° 1
 un délai de retrait de la fiche
 40 ans sans nouvelle condamnation criminelle ou correctionnelle ; 3 ans pour une contravention, 4 si sa récidive constitue un délit
@@ -52,21 +52,21 @@ aucune démarche pour le retrait automatique
 Permis à points
 un délai de récupération des points
 2 ans sans infraction (3 ans après un délit ou une contravention de 4e ou 5e classe) ; 6 mois pour un point seul
-la dernière infraction établie (paiement de l'amende, condamnation définitive…)
+la dernière infraction établie (paiement de l’amende, condamnation définitive…)
 un stage par an ; règles propres au permis probatoire ; un permis à zéro point perd sa validité
 aucune démarche, sauf pour le stage
 Assurance auto, malus
 un plafond du coefficient
 après 2 années sans sinistre, coefficient ramené à 1 au plus
-l'échéance annuelle
-le bonus antérieur n'est pas rétabli
+l’échéance annuelle
+le bonus antérieur n’est pas rétabli
 aucune démarche
-Assurance d'un prêt, cancer ou hépatite C
-une interdiction de demander l'information
+Assurance d’un prêt, cancer ou hépatite C
+une interdiction de demander l’information
 5 ans
 la fin du protocole thérapeutique, sans rechute
-prêts couverts par la convention AERAS, assurance prenant fin avant 71 ans ; sans aucun questionnaire de santé jusqu'à 200 000 € remboursés avant 60 ans
-aucune démarche : l'antécédent n'a plus à être déclaré
+prêts couverts par la convention AERAS, assurance prenant fin avant 71 ans ; sans aucun questionnaire de santé jusqu’à 200 000 € remboursés avant 60 ans
+aucune démarche : l’antécédent n’a plus à être déclaré
 Ces délais ne mesurent pas la même chose : certains bornent la conservation d’une donnée, d’autres conditionnent une réhabilitation, une récupération de points ou l’interdiction de demander une information.
 Lu par la dernière colonne, le tableau montre aussi ce que les durées seules ne disent pas : une trace peut cesser avec le temps, par une démarche de la personne, par la déclaration d’un tiers, ou, comme on le verra, par la suppression d’une règle pour toute une catégorie.
 Quatre situations : ce qu’il faut vérifier, et qui agit
@@ -206,9 +206,9 @@ Elle résume des règles générales, avec leurs principales exceptions, sans co
 Elle ne couvre pas les fichiers tenus par des acteurs privés (assureurs, bailleurs, opérateurs), ni les fichiers de police.
 Le droit décrit est celui du 1er novembre 2026 : la nouvelle rédaction de l’article L.
 752-1 du Code de la consommation s’applique au 20 novembre 2026, et des versions de plusieurs articles du casier judiciaire sont déjà publiées pour le 1er janvier 2029.
-Ce qu'une erreur coûte, et à qui
+Ce qu’une erreur coûte, et à qui
 La Société du premier coup
-Pourquoi certains peuvent recommencer — et d'autres non
+Pourquoi certains peuvent recommencer — et d’autres non
 Cette page dit combien de temps une erreur reste inscrite.
 La Société du premier coup dit ce que ce temps coûte, et à qui : pourquoi deux personnes voisines en revenu n’ont pas le même avenir après un même faux pas, à travers un dossier de location, un barème d’assurance, un fichier d’incidents de paiement ou une affectation post-bac.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
@@ -218,47 +218,47 @@ Version papier : 13,90 € · Kindle : 5,99 €
 Sommaire, extraits et recensions →
 Questions fréquentes
 Combien de temps reste-t-on fiché au FICP de la Banque de France ?
-Cinq ans au plus pour un incident de remboursement d'un crédit, à compter de son enregistrement par la Banque de France (Code de la consommation, art.
+Cinq ans au plus pour un incident de remboursement d’un crédit, à compter de son enregistrement par la Banque de France (Code de la consommation, art.
 L.
 752-1).
-Le paiement intégral des sommes dues entraîne une radiation immédiate, dès que l'établissement le déclare.
+Le paiement intégral des sommes dues entraîne une radiation immédiate, dès que l’établissement le déclare.
 Le 20 novembre 2026, une nouvelle rédaction précise qui déclare le paiement quand le crédit a été cédé ; les contrats en cours à cette date restent régis par les règles antérieures, sauf exceptions.
-Pour un plan de surendettement, l'inscription dure le temps du plan, sans pouvoir excéder sept ans, et cinq ans s'il est exécuté sans incident ; cinq ans après un rétablissement personnel (art.
+Pour un plan de surendettement, l’inscription dure le temps du plan, sans pouvoir excéder sept ans, et cinq ans s’il est exécuté sans incident ; cinq ans après un rétablissement personnel (art.
 L.
 752-3).
-J'ai remboursé mon crédit : pourquoi suis-je encore fiché au FICP ?
-La radiation suit la déclaration du paiement intégral à la Banque de France, et cette déclaration revient à l'établissement qui a déclaré l'incident, non à la personne (Code de la consommation, art.
+J’ai remboursé mon crédit : pourquoi suis-je encore fiché au FICP ?
+La radiation suit la déclaration du paiement intégral à la Banque de France, et cette déclaration revient à l’établissement qui a déclaré l’incident, non à la personne (Code de la consommation, art.
 L.
 752-1).
-Si le crédit a été cédé, la rédaction en vigueur le 20 novembre 2026 en charge l'entreprise qui a repris la créance, ou le gestionnaire de crédits ; un contrat en cours à cette date reste régi par les règles antérieures, sauf exceptions.
-La personne peut demander à la Banque de France ce que contient le fichier, puis, si l'établissement ne fait pas la déclaration, saisir le médiateur de sa banque et la CNIL (Service-public, fiche F17608).
-L'inscription ne dépasse pas cinq ans.
+Si le crédit a été cédé, la rédaction en vigueur le 20 novembre 2026 en charge l’entreprise qui a repris la créance, ou le gestionnaire de crédits ; un contrat en cours à cette date reste régi par les règles antérieures, sauf exceptions.
+La personne peut demander à la Banque de France ce que contient le fichier, puis, si l’établissement ne fait pas la déclaration, saisir le médiateur de sa banque et la CNIL (Service-public, fiche F17608).
+L’inscription ne dépasse pas cinq ans.
 Un employeur peut-il voir une condamnation inscrite au casier judiciaire ?
-Le bulletin n° 2 est délivré aux administrations et, par leur intermédiaire, à certains employeurs, notamment pour des activités auprès de mineurs ; il ne parvient à l'employeur que s'il ne porte aucune mention (Service-public, fiche F14710).
-Une condamnation en sort par la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, ou par l'exclusion que décide le tribunal, dans le jugement ou plus tard sur requête de la personne (Code de procédure pénale, art.
+Le bulletin n° 2 est délivré aux administrations et, par leur intermédiaire, à certains employeurs, notamment pour des activités auprès de mineurs ; il ne parvient à l’employeur que s’il ne porte aucune mention (Service-public, fiche F14710).
+Une condamnation en sort par la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, ou par l’exclusion que décide le tribunal, dans le jugement ou plus tard sur requête de la personne (Code de procédure pénale, art.
 775-1).
 Comment une condamnation disparaît-elle du casier judiciaire ?
 De trois façons.
-La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation, après trois ans pour une amende, cinq ans pour une peine d'emprisonnement d'un an au plus, dix ans jusqu'à dix ans d'emprisonnement, délais doublés en récidive (Code pénal, art.
+La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation, après trois ans pour une amende, cinq ans pour une peine d’emprisonnement d’un an au plus, dix ans jusqu’à dix ans d’emprisonnement, délais doublés en récidive (Code pénal, art.
 133-13) : elle efface la condamnation des bulletins n° 2 et n° 3.
 Le tribunal peut aussi exclure la mention du bulletin n° 2, dans le jugement ou plus tard, sur requête (Code de procédure pénale, art.
 775-1), sauf pour certaines infractions, notamment sexuelles.
 Enfin, les fiches du bulletin n° 1 sont retirées après quarante ans sans nouvelle condamnation criminelle ou correctionnelle (art.
 769).
 Combien de temps faut-il pour récupérer ses points de permis ?
-Le permis retrouve tous ses points après deux ans sans nouvelle infraction entraînant un retrait, trois ans si l'une des infractions est un délit ou une contravention de quatrième ou de cinquième classe.
+Le permis retrouve tous ses points après deux ans sans nouvelle infraction entraînant un retrait, trois ans si l’une des infractions est un délit ou une contravention de quatrième ou de cinquième classe.
 Un point retiré seul est rendu après six mois sans nouvelle infraction.
 Un stage de sensibilisation permet de récupérer des points une fois par an (Code de la route, art.
 L.
 223-6).
-Ces règles valent pour un permis encore valide : à zéro point, il perd sa validité, et le délai probatoire d'un jeune conducteur a ses règles propres (art.
+Ces règles valent pour un permis encore valide : à zéro point, il perd sa validité, et le délai probatoire d’un jeune conducteur a ses règles propres (art.
 L.
 223-1).
 Combien de temps dure un malus en assurance auto ?
-Au plus deux ans : après deux années consécutives sans sinistre, le coefficient de réduction-majoration ne peut être supérieur à 1 (annexe à l'article A.
+Au plus deux ans : après deux années consécutives sans sinistre, le coefficient de réduction-majoration ne peut être supérieur à 1 (annexe à l’article A.
 121-1 du Code des assurances, art.
 5), sans que le bonus antérieur soit rétabli.
-Chaque sinistre responsable majore le coefficient de 25 %, jusqu'à 3,50 au plus.
+Chaque sinistre responsable majore le coefficient de 25 %, jusqu’à 3,50 au plus.
 Le bonus, lui, avance de 5 % par an : il faut treize ans sans sinistre pour atteindre le coefficient minimal de 0,50.
 Sources
 Textes, lus sur Légifrance le 1er novembre 2026 dans la version en vigueur à cette date : Code de la consommation, art.
