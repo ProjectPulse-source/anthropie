@@ -153,7 +153,9 @@ def examiner(F: dict) -> tuple[list[str], list[str]]:
     # R5
     for t in T:
         brut = t["t"].rstrip()
-        if re.search(r"(^|\s)[+\u2212\u2013]$", brut):
+        # « · » inclus (04/11/2026) : un séparateur ne finit jamais une ligne (règle de l'auteur : signe seul en FIN de ligne ;
+        # en début de ligne il n'est pas visé — 123 pieds de figure ainsi coupés, conformes à la règle)
+        if re.search(r"(^|\s)[+\u2212\u2013\u00b7]$", brut):
             defauts.append("R5 « %s » finit par un signe seul" % t["t"])
         if re.match(r"^[:;?!%]", t["t"].lstrip()):
             defauts.append("R5 « %s » commence par une ponctuation haute" % t["t"])
@@ -171,7 +173,44 @@ def examiner(F: dict) -> tuple[list[str], list[str]]:
 
 # Exceptions DECLAREES : figure en defaut dont la correction est faite dans le generateur mais ne peut pas encore etre
 # regeneree. Chacune meurt d'elle-meme : si la figure passe, le controle echoue tant que la ligne n'est pas retiree.
-EXCEPTIONS: dict[str, str] = {}   # vide au 03/11/2026 (delais-admissions-m, FR et EN, regeneres apres la garde T3)
+# Règle R5 étendue au « · » le 04/11/2026 : 36 figures, régénérées par leurs générateurs au fil de leurs mises à jour
+# (jamais en masse) ; chaque exception meurt d'elle-même quand sa figure passe.
+EXCEPTIONS: dict[str, str] = {
+    "ciseau-dette-interets-en-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "ciseau-dette-interets-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "collectivites-cascade-en-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "collectivites-cascade-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "collectivites-europe-en-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "collectivites-europe-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "collectivites-investissement-en-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "collectivites-investissement-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "collectivites-plf-en-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "collectivites-plf-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "dechets-volume-activite-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "decouplage-decomposition-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "delais-admissions-en.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "delais-cursus-en.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "dette-formules-grece-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "dette-formules-grille-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "dette-inflation-achats-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "dette-inflation-calendrier-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "imprevu-menages-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "langue-chronologie-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "langue-dictee-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "langue-ecarts-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "langue-plaisir-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "lycee-classes-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "lycee-concours-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "lycee-heures-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "niveau-baisse-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "niveau-composition-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "niveau-sommet-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "niveau-thermometres-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "qui-paie-mecanismes-en-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "qui-paie-mecanismes-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "qui-paie-redistribution-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+    "qui-paie-solde-net-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
+}
 
 
 def fichiers(args: list[str]) -> list[Path]:
@@ -198,6 +237,7 @@ def temoin(M: dict) -> int:
                '<line x1="50" y1="55" x2="90" y2="95" stroke="#52514e" stroke-width="1"/>'
                '<text x="92" y="100" font-size="11">Irlande</text>', "R4"),
         "R5": ('<text x="10" y="50" font-size="11">en points de PIB ; + fait monter, −</text>', "R5"),
+        "R5b": ('<text x="10" y="50" font-size="11">Calcul Stéphane Lalut, CC BY 4.0 ·</text>', "R5"),
     }
     ok = True
     for nom, (corps, attendu) in cas.items():

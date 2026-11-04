@@ -31,6 +31,9 @@ def coupe(s: str, n: int) -> list[str]:
                "\\1\u00a0\\2", s)
     # Un signe seul (« + fait monter, − fait baisser ») ne finit jamais une ligne (03/11/2026, cascade téléphone).
     s = re.sub(r"(^| )([+\u2212]) ", "\\1\\2\u00a0", s)
+    # Un séparateur « · » ne finit jamais une ligne (04/11/2026 : 36 pieds de figure coupés après lui, règle R5 de
+    # check-figures étendue) : soudé au mot qui le suit, il passe à la ligne avec lui.
+    s = s.replace("\u00b7 ", "\u00b7\u00a0")
     out, cur = [], ""
     for mot in [m for m in s.split(" ") if m]:
         if cur and len(cur) + 1 + len(mot) > n:
