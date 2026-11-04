@@ -52,6 +52,26 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-03/04 — Mise en forme des ressources (session « DESIGN PAR RESSOURCE »)
+
+Maquettes HTML, contre-expertise externe par page (réponses archivées et arbitrées), application, recette par script
+sur la page servie (320-1 280 px).
+- `/citations-celebres-verifiees/` : module `citation-entree` (repli par citation, statut, mouvement, confrontation,
+  « Copier la référence ») — 1270d17.
+- `/comment-lecriture-a-transforme-la-pensee/` (FR, EN) : architecture E4 (histoire avant les critères de 2026),
+  phrase-résultat, replis secondaires — b41b460, fcfeb6e (exemple du Web).
+- `/le-pouvoir-de-machiavel-a-foucault/` : carte de neuf accès, fiches d'étape (shortcode `etape`), « façonner les
+  conduites » (journal) — d135f39, 50964e9.
+- `/chercheur-independant/` (FR, EN) : phrase-résultat, outils en cartes, FAQ unifiée — 137f630.
+- FAQ : une seule source affichée et balisée sur 11 pages (FR, EN) — 10fe096, 75e3809 (dette-technologique).
+- `/que-peut-faire-un-president-promesse-par-promesse/` (FR, EN) : Q4, vocabulaire des zones unifié, séance du Sénat
+  du 11/06/2026 (journal) — a6becc2.
+Arbitrages : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261103-*` et `PRO-20261104-022048` ;
+`D:\PRO\06_PROMOTION\MAQUETTES_*_2026-11-0*\` ; révision de fond de la notion « dette technologique » :
+`D:\PRO\06_PROMOTION\REVISION_DETTE_TECHNOLOGIQUE_2026-11-04\`.
+Ouvert : page `data-centers-puissance-reservee` et son lien depuis `dette-technologique`, non commités, sans session
+propriétaire (trois sessions interrogées le 04/11) ; « notre bon plaisir » (Mas-Latrie 1881, Demante 1893) à lire.
+
 ### 2026-11-03 (garde T3) — « Délais » : la date du 2 novembre 2026 passée, page dite au passé, générateur débloqué
 
 Demande de l'auteur : régler le point en attente (`update_promesses_delais.py` arrêté par sa garde T3 depuis le
