@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /citations-celebres-verifiees/, build de c4e838b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /citations-celebres-verifiees/, build de bb1e3d1 ; une phrase par ligne (scripts/check-relecture.py)
 Citations célèbres : qu’ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ?
 Sur vingt citations célèbres qu’on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n’y ont pas été trouvées.
 Voltaire n’a pas écrit « je me battrai jusqu’à la mort pour que vous ayez le droit de le dire » : la phrase est d’une biographe anglaise, qui l’a reconnue pour sienne en 1939.
@@ -7,6 +7,14 @@ Page publiée le 1er novembre 2026
 Une citation célèbre se répète d’ordinaire sans son livre, sans sa page et souvent sans sa forme exacte.
 Cette page examine vingt citations célèbres prêtées à cinq auteurs, choisies pour ce qu’elles montrent de la façon dont un texte se transmet, se transforme ou change d’auteur, et les relit dans leurs œuvres, dans une édition qu’elle nomme, au passage qu’elle indique.
 Elle s’appuie sur la vérification des 4 656 citations de Livresque des mots, dont l’édition 2026 a réexaminé le texte et la paternité une à une.
+En atelier : authentique, retouchée ou introuvable chez l’auteur ?
+Pour une séance en français, avec des adolescents ou des adultes, en 30 à 45 minutes : choisir une citation, en discuter le sens, puis chercher son auteur.
+Chaque lien ouvre la fiche qui donne la réponse et sa source.
+« Je ne suis pas d’accord avec ce que vous dites, mais je me battrai jusqu’à la mort pour que vous ayez le droit de le dire », prêtée à Voltaire (la réponse)
+« Ouvrez une école, vous fermerez une prison », prêtée à Victor Hugo (la réponse)
+« La raison du plus fort est toujours la meilleure », prêtée à La Fontaine (la réponse)
+« Les femmes sont comme les girouettes : elles se fixent quand elles se rouillent », prêtée à Voltaire (la réponse)
+« Que diable allait-il faire dans cette galère ? », prêtée à Molière (la réponse)
 Comment lire cette page
 Chaque citation reçoit l’un de trois statuts :
 établie — la phrase se lit dans l’œuvre de l’auteur, sous cette forme, à la ponctuation ou à la graphie près (le texte cité garde celle de l’édition consultée, « alloit » chez Molière) ;
