@@ -22,7 +22,7 @@ faq:
   - question: "What did the National Assembly decide on 19 October 2026?"
     answer: "In plenary, on {coll.plf_vote_date}, it {coll.plf_vote_resume}; it raised the national DGF for {coll.plf_edition} to €{coll.plf_dgf_an} billion. These are first-reading votes: none of these decisions is final."
   - question: "Which measures could still affect my municipality in 2027?"
-    answer: "Those in the second part of the bill, which the National Assembly had not examined by {coll.plf_etat_au}: the spreading of the repayment of the sums placed in reserve in 2025 (DILICO; the 2026 one targets only inter-municipal bodies, departments and regions), the distribution of the DGF and a new grant for low-density rural municipalities. And any measure set aside that is reinstated before the final act."
+    answer: "Those in the second part of the bill, which the National Assembly had not examined in plenary by {coll.plf_etat_au}: the spreading of the repayment of the sums placed in reserve in 2025 (DILICO; the 2026 one targets only inter-municipal bodies, departments and regions), the distribution of the DGF and a new grant for low-density rural municipalities. And any measure set aside that is reinstated before the final act."
   - question: "Which figures can my municipality check now?"
     answer: "Its own accounts, not amounts for 2027: the sums it placed in reserve under DILICO in 2025, notified by order (municipalities do not contribute in 2026); the FCTVA it receives and the year of spending it relates to; its 2024 real operating revenue, the year that would have served as the base of the progressive contribution if it came back."
   - question: "When will my municipality know its amounts for 2027?"

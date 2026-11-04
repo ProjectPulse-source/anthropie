@@ -52,6 +52,26 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 — Budget 2027 : état de la procédure au 4 novembre ; générateur collectivités débloqué
+
+**Procédure** (`scripts/sources_collectivites/plf_votes.json`, `data/plf_procedure.json`, `data/sources_maj.json`) : le
+vote solennel sur la première partie prévu le 3 novembre n'a pas eu lieu (comptes rendus des 3 et 4 novembre archivés
+dans `06_PROMOTION/RECHERCHE_VOTRE_COMMUNE_2026-10-22/_SOURCES`, empreintes au `SHA256SUMS.txt`) ; étape suivante
+citée verbatim du compte rendu du 3 novembre (`etape_source`). **Article 84** : suppression adoptée en commission des
+finances le 28 octobre (amendement II-CF2778, page archivée), entrée `commission` du registre ; statut affiché
+« suppression adoptée en commission le 28 octobre 2026, séance à venir » (la séance discute le texte du Gouvernement,
+Constitution, art. 42), source citée dans la figure PLF. `verifier_plf_votes.py` relit aussi ces citations (témoin :
+date et citation altérées, arrêt). Échéances suivies : 05/11 (vote sur la première partie), 13/11 (mission RCT, art. 84).
+FAQ de `/budget-2027-votre-commune/` : « non examinées **en séance** » (FR, EN). Quatre pages relues sur le texte servi,
+instantanés refaits.
+
+**Défaut trouvé** : depuis `8ef0d00` (04/11), `pied_figure.coupe` soude « ·  » ; `pied_figure.lire` rendait cette
+soudure, la licence relue ne valait plus celle du générateur, et `update_dette_collectivites.py` s'arrêtait sur
+« pied illisible » sans rien écrire. `lire` défait la soudure ; huit générateurs à la même garde passent en `--check`.
+Les 16 figures collectivités régénérées : leurs huit exceptions « · en fin de ligne » de `check-figures.py` retirées
+(condition de mort atteinte). `check-all --reseau` à 0 (22 contrôles), build de production, `typo_build`,
+`check-rendu-ressources`, `check-relecture --strict`, `check-dates-build`, `audit-liens-build` à 0.
+
 ### 2026-11-04 — Accueil : trois axes animés (variante C') ; figures data centers et durées relues
 
 **Accueil** (`layouts/index.html`, `assets/scss/_home.scss`, `static/js/axes-anim.js`, appel dans `partials/head.html`) :

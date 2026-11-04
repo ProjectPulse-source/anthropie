@@ -1,78 +1,78 @@
-# relu le 2026-10-23 ; texte servi de /budget-2027-votre-commune/, build de 8b79e69 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /budget-2027-votre-commune/, build de 7e0657b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Budget 2027 : que sait-on réellement pour votre commune ?
-Le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
-35) et la contribution progressive à l'effort budgétaire (art.
-37), n'a pas adopté l'écrêtement de la TVA affectée (art.
-36) : trois des cinq mesures que le projet déposé destinait aux collectivités, dont les deux plus importantes en montant, sont écartées à ce stade, sans l'être définitivement.
-Peuvent encore concerner la commune l'étalement du DILICO, la répartition de la DGF et toute mesure qui reviendrait.
+Le 19 octobre 2026, l’Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
+35) et la contribution progressive à l’effort budgétaire (art.
+37), n’a pas adopté l’écrêtement de la TVA affectée (art.
+36) : trois des cinq mesures que le projet déposé destinait aux collectivités, dont les deux plus importantes en montant, sont écartées à ce stade, sans l’être définitivement.
+Peuvent encore concerner la commune l’étalement du DILICO, la répartition de la DGF et toute mesure qui reviendrait.
 Elle peut vérifier dès maintenant ses comptes de 2024, son FCTVA et ses sommes mises en réserve ; ses montants pour 2027 viendront de la loi votée, puis des notifications.
-Page publiée le 22 octobre 2026 · révisions
+Page mise à jour le 4 novembre 2026 · révisions
 Dossier dette publique
-Source · PLF 2027, état au 22 octobre 2026
+Source · PLF 2027, état au 4 novembre 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 L’essentiel pour votre commune
-État du projet de loi de finances pour 2027 au 22 octobre 2026 : aucune mesure n’est définitivement acquise ni définitivement écartée.
+État du projet de loi de finances pour 2027 au 4 novembre 2026 : aucune mesure n’est définitivement acquise ni définitivement écartée.
 Cette page est révisée à chaque étape qui modifie ces mesures ; ses révisions restent lisibles en pied de page.
-Qu'a décidé l'Assemblée nationale le 19 octobre 2026 ?
+Qu’a décidé l’Assemblée nationale le 19 octobre 2026 ?
 En séance, le 19 octobre 2026, elle a supprimé la baisse du taux du FCTVA (art.
-35) et la contribution progressive à l'effort budgétaire (art.
-37), n'a pas adopté l'écrêtement de la TVA affectée (art.
-36) ; elle a porté la DGF nationale pour 2027 à 27,9 milliards d'euros.
-Ce sont des votes en première lecture : aucune de ces décisions n'est définitive.
+35) et la contribution progressive à l’effort budgétaire (art.
+37), n’a pas adopté l’écrêtement de la TVA affectée (art.
+36) ; elle a porté la DGF nationale pour 2027 à 27,9 milliards d’euros.
+Ce sont des votes en première lecture : aucune de ces décisions n’est définitive.
 Quelles mesures pourraient encore concerner ma commune en 2027 ?
-Celles de la seconde partie du projet, que l'Assemblée n'avait pas examinées au 22 octobre 2026 : l'étalement du reversement des sommes mises en réserve en 2025 (DILICO ; celui de 2026 ne vise que les intercommunalités, les départements et les régions), la répartition de la DGF et une nouvelle dotation pour les communes rurales de faible densité.
-Et toute mesure écartée qui serait rétablie d'ici la loi définitive.
+Celles de la seconde partie du projet, que l’Assemblée n’avait pas examinées en séance au 4 novembre 2026 : l’étalement du reversement des sommes mises en réserve en 2025 (DILICO ; celui de 2026 ne vise que les intercommunalités, les départements et les régions), la répartition de la DGF et une nouvelle dotation pour les communes rurales de faible densité.
+Et toute mesure écartée qui serait rétablie d’ici la loi définitive.
 Quels chiffres ma commune peut-elle vérifier dès maintenant ?
-Ses propres comptes, pas des montants pour 2027 : les sommes qu'elle a mises en réserve au DILICO en 2025, notifiées par arrêté (les communes n'y contribuent pas en 2026) ; le FCTVA qu'elle perçoit et l'année des dépenses sur laquelle il porte ; ses recettes réelles de fonctionnement de 2024, exercice qui aurait servi d'assiette à la contribution progressive si elle revenait.
+Ses propres comptes, pas des montants pour 2027 : les sommes qu’elle a mises en réserve au DILICO en 2025, notifiées par arrêté (les communes n’y contribuent pas en 2026) ; le FCTVA qu’elle perçoit et l’année des dépenses sur laquelle il porte ; ses recettes réelles de fonctionnement de 2024, exercice qui aurait servi d’assiette à la contribution progressive si elle revenait.
 Quand ma commune connaîtra-t-elle ses montants pour 2027 ?
 Après le vote définitif de la loi de finances : le préfet communique alors le montant de chacune des dotations de la DGF, et les mesures nouvelles passent par leurs arrêtés ou décrets.
-Prochaine étape au 22 octobre 2026 : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre.
+Prochaine étape au 4 novembre 2026 : fin de l’examen de la première partie et vote sur son ensemble, annoncés en séance le 3 novembre pour le 4 au soir ou le 5 novembre (le vote solennel prévu le 3 novembre n’a pas eu lieu) ; puis seconde partie, dont l’article 84 ; délai de l’Assemblée : 17 novembre à minuit.
 Ce que le service financier doit retenir, vérifier et en faire
 Contribution progressive (art.
 37)
 supprimé en séance
-Ce qu'il faut retenir
+Ce qu’il faut retenir
 Un prélèvement envisagé sur les recettes fiscales, chaque mois, si la mesure revenait
-Ce que l'on peut vérifier dès maintenant
+Ce que l’on peut vérifier dès maintenant
 Les comptes de 2024 de la commune et de son intercommunalité ; une éventuelle exonération (rangs DSU et DSR)
-Pour préparer le budget 2027 → Ne pas l'inscrire comme une charge certaine ; la garder en scénario conditionnel.
+Pour préparer le budget 2027 → Ne pas l’inscrire comme une charge certaine ; la garder en scénario conditionnel.
 FCTVA (art.
 35)
 supprimé en séance
-Ce qu'il faut retenir
+Ce qu’il faut retenir
 La baisse envisagée pouvait toucher des investissements déjà réalisés
-Ce que l'on peut vérifier dès maintenant
-L'année des dépenses sur laquelle porte l'attribution, et la part des dépenses de transition écologique et de voirie
-Pour préparer le budget 2027 → Inscrire l'attribution au taux en vigueur ; la baisse, en scénario conditionnel.
+Ce que l’on peut vérifier dès maintenant
+L’année des dépenses sur laquelle porte l’attribution, et la part des dépenses de transition écologique et de voirie
+Pour préparer le budget 2027 → Inscrire l’attribution au taux en vigueur ; la baisse, en scénario conditionnel.
 DGF (art.
 34)
 adopté, modifié
-Ce qu'il faut retenir
+Ce qu’il faut retenir
 Une enveloppe nationale en hausse, sans garantie de hausse pour chaque commune
-Ce que l'on peut vérifier dès maintenant
+Ce que l’on peut vérifier dès maintenant
 La composition de la DGF de la commune : dotation forfaitaire, dotations de péréquation
 Pour préparer le budget 2027 → Ne pas lire la hausse nationale comme une recette garantie pour la commune.
 DILICO (art.
 84)
-non encore examiné
-Ce qu'il faut retenir
-Des restitutions qui seraient étalées jusqu'en 2031, sans changer leur total ; les communes ne sont concernées que par celui de 2025
-Ce que l'on peut vérifier dès maintenant
+supprimé en commission, séance à venir
+Ce qu’il faut retenir
+Des restitutions qui seraient étalées jusqu’en 2031, sans changer leur total ; les communes ne sont concernées que par celui de 2025
+Ce que l’on peut vérifier dès maintenant
 Le montant mis en réserve par la commune en 2025, notifié par arrêté ; pour 2026, celui de son intercommunalité
-Pour préparer le budget 2027 → Préparer l'échéancier des reversements du DILICO 2025, selon le droit actuel et selon le projet.
+Pour préparer le budget 2027 → Préparer l’échéancier des reversements du DILICO 2025, selon le droit actuel et selon le projet.
 TVA affectée (art.
 36)
 non adopté en séance
-Ce qu'il faut retenir
-Un écrêtement écarté à ce stade, d'effet différent selon les bénéficiaires
-Ce que l'on peut vérifier dès maintenant
+Ce qu’il faut retenir
+Un écrêtement écarté à ce stade, d’effet différent selon les bénéficiaires
+Ce que l’on peut vérifier dès maintenant
 Une fraction de TVA perçue par la commune, ou par son intercommunalité
-Pour préparer le budget 2027 → Inscrire la fraction selon les règles actuelles ; l'écrêtement n'est plus dans le texte à ce stade.
-Prochaine échéance : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre.
+Pour préparer le budget 2027 → Inscrire la fraction selon les règles actuelles ; l’écrêtement n’est plus dans le texte à ce stade.
+Prochaine échéance : fin de l’examen de la première partie et vote sur son ensemble, annoncés en séance le 3 novembre pour le 4 au soir ou le 5 novembre (le vote solennel prévu le 3 novembre n’a pas eu lieu) ; puis seconde partie, dont l’article 84 ; délai de l’Assemblée : 17 novembre à minuit.
 Chaque ligne est développée mesure par mesure, avec ce qu’il serait trompeur de chiffrer à ce stade.
 Budget 2027 : ce qui pourrait changer pour votre commune
-Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au 22 octobre 2026.
+Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au 4 novembre 2026.
 Une fiche pour préparer le budget 2027 et, s’il y a lieu, le débat d’orientation budgétaire.
 Votre commune : nom, département ou code Insee
 Voir la fiche
@@ -88,8 +88,8 @@ Montants du projet déposé : ils décrivent le cadrage initial, non l’état a
 Télécharger · Citer · Données
 Le résultat en une phrase.
 Le projet de loi de finances pour 2027 déposé prévoyait cinq mesures visant les collectivités, d’une somme arithmétique de 6,2 milliards d’euros ; le 19 octobre 2026, l’Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
-35) et la contribution progressive à l'effort budgétaire (art.
-37), n'a pas adopté l'écrêtement de la TVA affectée (art.
+35) et la contribution progressive à l’effort budgétaire (art.
+37), n’a pas adopté l’écrêtement de la TVA affectée (art.
 36), sans qu’aucune soit définitivement écartée.
 Cette somme décrivait le projet déposé ; elle ne mesurait pas un prélèvement net, et la page consacrée aux collectivités explique pourquoi elle coexistait avec une hausse prévue des ressources locales.
 Un article supprimé ou non adopté en séance ne figure plus dans le texte en discussion, mais il peut y revenir, par un amendement du Gouvernement ou au Sénat.
@@ -100,24 +100,24 @@ Texte
 Nature
 Montant, Md€
 Au Parlement
-Contribution progressive à l'effort budgétaire, prélevée sur les avances de fiscalité
+Contribution progressive à l’effort budgétaire, prélevée sur les avances de fiscalité
 article 37
 prélèvement sur les avances de fiscalité, institué pour 2027
 2,5
 art.
-37 supprimé par l'Assemblée nationale le 19 octobre 2026
+37 supprimé par l’Assemblée nationale le 19 octobre 2026
 Fonds de compensation pour la TVA : taux abaissé de 5 points, sauf dépenses vertes et voirie
 articles 35 et 41
-réduction d'un concours de l'État lié aux dépenses d'investissement éligibles
+réduction d’un concours de l’État lié aux dépenses d’investissement éligibles
 2,1
 art.
-35 supprimé par l'Assemblée nationale le 19 octobre 2026
-TVA affectée, hors régions : hausse annuelle réduite de l'inflation
+35 supprimé par l’Assemblée nationale le 19 octobre 2026
+TVA affectée, hors régions : hausse annuelle réduite de l’inflation
 article 36
 écrêtement de la progression de la TVA affectée, hors régions
 0,6
 art.
-36 non adopté par l'Assemblée nationale le 19 octobre 2026
+36 non adopté par l’Assemblée nationale le 19 octobre 2026
 Contributions de certains ministères aux collectivités
 crédits des missions
 réduction de contributions de certains ministères
@@ -127,9 +127,9 @@ Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au 
 article 84
 étalement du reversement ; montant total restitué inchangé
 0,3
-seconde partie, non examinée
+suppression adoptée en commission le 28 octobre 2026, séance à venir
 Montants pour 2027, tels que le projet déposé les prévoit (cadrage initial du débat).
-Dernière colonne : sort de l'article en séance, d'après le compte rendu officiel ; une disposition supprimée peut être rétablie d'ici la loi définitive.
+Dernière colonne : sort de l’article en séance, d’après le compte rendu officiel ; une disposition supprimée peut être rétablie d’ici la loi définitive.
 Sources : projet de loi de finances (exposés des motifs) pour les deux premières lignes ; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.
 Mesure par mesure
 La contribution progressive à l’effort budgétaire (article 37)
@@ -137,8 +137,8 @@ Ce que prévoyait le projet.
 Une contribution de 2,5 milliards d’euros pour 2027, due selon l’exposé des motifs par 40 % des communes et par les intercommunalités, à un taux de 0,5 % à 3 % des recettes réelles de fonctionnement de 2024, retraitées, et prélevée chaque mois sur les douzièmes de fiscalité : un effet de trésorerie dès la notification.
 Un fonds de soutien de 50 millions d’euros était prévu pour les communes contributrices en difficulté (article 87), dont le texte déposé renvoie encore à un « article X » : une référence non finalisée, et un fonds qui dépend du sort de la contribution.
 Ce qu’a décidé l’Assemblée.
-État au 22 octobre 2026 : art.
-37 supprimé par l'Assemblée nationale le 19 octobre 2026.
+État au 4 novembre 2026 : art.
+37 supprimé par l’Assemblée nationale le 19 octobre 2026.
 Si elle revenait, le montant de chaque collectivité serait fixé par un arrêté publié au Journal officiel.
 Ce que cela signifie pour une commune.
 Rien n’est dû en l’état du texte.
@@ -151,7 +151,7 @@ Plusieurs cabinets de conseil et associations d’élus l’ont simulé sur le t
 Entre 0,5 % et 3 % de l’assiette retraitée, c’est une comparaison statique, pas une prévision.
 Pour préparer le budget 2027.
 Ne pas inscrire la contribution comme une charge certaine ; la garder dans un scénario conditionnel, calculé sur l’assiette de 2024 retraitée, à réactiver si l’article revenait.
-Classement, taux, assiette et exonérations prévus par l'article 37
+Classement, taux, assiette et exonérations prévus par l’article 37
 Les communes sont classées selon un indice qui pondère à 75 % leur potentiel financier par habitant et à 25 % le revenu par habitant, chacun rapporté à la moyenne.
 Le taux va de 0,5 % pour le premier décile à 2 % pour le dixième, et 3 % pour les deux derniers centiles.
 Il s’applique aux recettes réelles de fonctionnement du budget principal constatées dans le compte financier unique de l’antépénultième exercice, soit 2024 pour une contribution due en 2027, minorées des atténuations de produits, des recettes exceptionnelles et du produit des mises à disposition de personnel facturées dans le cadre d’une mutualisation avec l’intercommunalité.
@@ -163,8 +163,8 @@ Ce que prévoyait le projet.
 Pour les attributions versées à compter du 1er janvier 2027, un taux ramené de 16,404 % à 11,404 %, soit 5 points de moins, sauf pour les dépenses liées à la transition écologique et à la voirie, maintenues à 16,404 %, et un rendement de 2,1 milliards d’euros.
 La liste des comptes ouvrant droit au taux maintenu relevait d’un arrêté à venir.
 Ce qu’a décidé l’Assemblée.
-État au 22 octobre 2026 : art.
-35 supprimé par l'Assemblée nationale le 19 octobre 2026.
+État au 4 novembre 2026 : art.
+35 supprimé par l’Assemblée nationale le 19 octobre 2026.
 Si la mesure revenait, l’arrêté fixant les comptes au taux maintenu dirait quelles dépenses en bénéficient.
 Ce que cela signifie pour une commune.
 La mesure portait sur les attributions versées, pas sur les dépenses engagées.
@@ -216,7 +216,7 @@ Total reçu
 270 000 € dans les deux cas
 270 000 € dans les deux cas
 Ce qu’a décidé l’Assemblée.
-État au 22 octobre 2026 : seconde partie, non examinée.
+État au 4 novembre 2026 : suppression adoptée en commission le 28 octobre 2026, séance à venir.
 Le projet prévoit un arrêté unique de reversement.
 Ce que cela signifie pour une commune.
 Seul le DILICO 2025 la concerne directement ; celui de 2026 touche, le cas échéant, son intercommunalité.
@@ -233,8 +233,8 @@ Ce que prévoyait le projet.
 Pour les fractions de TVA versées en remplacement d’impôts supprimés (articles 16 de la loi de finances pour 2020 et 55 de celle pour 2023), une progression annuelle diminuée de l’inflation hors tabac de l’année précédente, sans que le montant puisse baisser d’une année sur l’autre.
 Le Haut Conseil des finances publiques chiffrait l’écrêtement à 0,6 milliard d’euros pour l’ensemble des bénéficiaires.
 Ce qu’a décidé l’Assemblée.
-État au 22 octobre 2026 : art.
-36 non adopté par l'Assemblée nationale le 19 octobre 2026.
+État au 4 novembre 2026 : art.
+36 non adopté par l’Assemblée nationale le 19 octobre 2026.
 Les amendements qui supprimaient l’article avaient d’abord été rejetés ; c’est l’article amendé qui n’a pas été adopté.
 Ce que cela signifie pour une commune.
 Seules sont concernées les collectivités qui perçoivent une telle fraction ; si c’est l’intercommunalité, l’effet sur la commune passerait par leurs relations financières.
@@ -249,7 +249,7 @@ Dotation pour les communes rurales de faible densité (article 85, seconde parti
 Forfaits de post-stationnement (article 53, première partie, dont l’examen se poursuit) : 1,9 % des forfaits acquittés après l’émission d’un titre exécutoire reversés au budget de l’État, pour les titres émis à compter du 1er janvier 2027.
 Métropole du Grand Paris (article 40) : la prolongation du financement transitoire jusqu’en 2028 n’a pas été adoptée le 19 octobre 2026 ; les communes de la métropole sont concernées par l’intermédiaire de leur établissement public territorial.
 Quand la commune connaîtra-t-elle ses montants ?
-Au Parlement : suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre ; puis le Sénat, et l’adoption définitive.
+Au Parlement : fin de l’examen de la première partie et vote sur son ensemble, annoncés en séance le 3 novembre pour le 4 au soir ou le 5 novembre (le vote solennel prévu le 3 novembre n’a pas eu lieu) ; puis seconde partie, dont l’article 84 ; délai de l’Assemblée : 17 novembre à minuit ; puis le Sénat, et l’adoption définitive.
 Après la loi : les arrêtés et décrets qu’elle prévoit, puis les informations que le préfet communique aux maires, dont le montant de chacune des dotations de la DGF (article D.
 1612-1 du code).
 Le budget primitif doit être adopté avant le 15 avril.
@@ -278,40 +278,41 @@ Textes — Projet de loi de finances pour 2027, n° 3210, déposé le 1er octobr
 2336-3, relus sur Légifrance le 22 octobre 2026.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
-Projet de loi de finances pour 2027 : ce qu'il demandait aux collectivités, et ce qu'il en reste
-Le projet déposé prévoyait cinq mesures visant les collectivités, dont la somme arithmétique atteignait 6,2 milliards d'euros ; le 19 octobre 2026, l'Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
-35) et la contribution progressive à l'effort budgétaire (art.
-37), n'a pas adopté l'écrêtement de la TVA affectée (art.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Projet de loi de finances pour 2027 : ce qu’il demandait aux collectivités, et ce qu’il en reste
+Le projet déposé prévoyait cinq mesures visant les collectivités, dont la somme arithmétique atteignait 6,2 milliards d’euros ; le 19 octobre 2026, l’Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
+35) et la contribution progressive à l’effort budgétaire (art.
+37), n’a pas adopté l’écrêtement de la TVA affectée (art.
 36).
-Précaution d'interprétation.
+Précaution d’interprétation.
 Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : elle ne mesure pas un prélèvement net.
 Une disposition supprimée peut être rétablie avant la loi définitive.
-Projet de loi de finances pour 2027 (n° 3210) et avis n° 2026-5 du Haut Conseil des finances publiques ; état : Assemblée nationale, comptes rendus des séances du 19 octobre 2026.
-État au 22 octobre 2026.
+Projet de loi de finances pour 2027 (n° 3210) et avis n° 2026-5 du Haut Conseil des finances publiques ; état : Assemblée nationale, comptes rendus des séances du 19 octobre 2026 ; commission des finances, amendement II-CF2778 (art.
+84), 28 octobre 2026.
+État au 4 novembre 2026.
 Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Budget 2027 : que sait-on réellement pour votre commune ? ».
-Données Assemblée nationale, Haut Conseil des finances publiques et Légifrance, relevé du 22 octobre 2026. https://stephane-lalut.com/budget-2027-votre-commune/
+Données Assemblée nationale, Haut Conseil des finances publiques et Légifrance, relevé du 4 novembre 2026. https://stephane-lalut.com/budget-2027-votre-commune/
 Copier la citation
 En trois phrases
 Le projet de loi de finances pour 2027 déposé prévoyait cinq mesures visant les collectivités, d’une somme arithmétique de 6,2 milliards d’euros, qui ne mesure pas un prélèvement net.
 Le 19 octobre 2026, l’Assemblée nationale a supprimé la baisse du taux du FCTVA (art.
-35) et la contribution progressive à l'effort budgétaire (art.
-37), n'a pas adopté l'écrêtement de la TVA affectée (art.
+35) et la contribution progressive à l’effort budgétaire (art.
+37), n’a pas adopté l’écrêtement de la TVA affectée (art.
 36).
 Aucun montant communal ne se déduit d’un projet : il viendra de la loi votée, puis des arrêtés et notifications.
 Copier le résumé
 Les données
-Les montants des cinq mesures du projet déposé, l'état de chaque article au Parlement et la DGF adoptée par l'Assemblée nationale, dans le jeu « collectivités locales et finances publiques » ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Les montants des cinq mesures du projet déposé, l’état de chaque article au Parlement et la DGF adoptée par l’Assemblée nationale, dans le jeu « collectivités locales et finances publiques » ; le même contenu existe en CSV, en format long, lisible dans un tableur.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Assemblée nationale, Haut Conseil des finances publiques et Légifrance), sous leurs propres conditions.
-Prolonger l'analyse
+Prolonger l’analyse
 Dette Publique : Qui paie vraiment ?
-La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
 Cette page suit un texte en discussion ; le livre explique pourquoi les finances locales deviennent, d’un budget à l’autre, un levier de l’ajustement national, et qui en supporte le coût au bout de la chaîne.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
 Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
@@ -322,8 +323,8 @@ Révisions
 22 octobre 2026 — Correction : les communes ne contribuent pas au DILICO de 2026 (seulement les intercommunalités, les départements et les régions) ; chaque reversement va pour 10 % à la péréquation, la collectivité contributrice récupère 90 % de sa contribution.
 Exemple chiffré corrigé.
 22 octobre 2026 — Correction : la contribution progressive se serait assise sur les comptes de 2024 (antépénultième exercice), non de 2025 ; le reversement du DILICO 2025 porte sur les deux tiers restants, non sur le montant initial.
-Page réorganisée : l'essentiel en tête, le détail ensuite.
-22 octobre 2026 — Publication : état du texte après la séance de l'Assemblée nationale du 19 octobre 2026.
+Page réorganisée : l’essentiel en tête, le détail ensuite.
+22 octobre 2026 — Publication : état du texte après la séance de l’Assemblée nationale du 19 octobre 2026.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

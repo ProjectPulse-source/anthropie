@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-22",
+ "releve_le": "2026-11-04",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OFGL, Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/dette-publique-collectivites-locales/",
@@ -17,8 +17,8 @@
    },
    "pib": {
     "jeu": "nama_10_gdp",
-    "maj_source": "2026-10-21T23:00:00+0200",
-    "sha256": "8f9595d869f5ea53ecd37558edb4c9ed1572e2f6538b50558dff5a01e8ed9e2c"
+    "maj_source": "2026-10-22T23:00:00+0200",
+    "sha256": "077ef90635bc82148845d6e0f855d24943ac420af83b9392ac49975a6d68dec5"
    },
    "dette": {
     "jeu": "gov_10q_ggdebt",
@@ -32,7 +32,7 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-10-22T",
+    "maj_source": "2026-11-04T",
     "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
    },
    "notif": {
@@ -1099,10 +1099,10 @@
     "mesure_en": "Sums placed in reserve in 2025 and 2026 (DILICO): repaid over five years instead of three",
     "texte_en": "article 84",
     "nature_en": "repayment spread out; total amount returned unchanged",
-    "etat": "seconde partie, non examinée",
-    "etat_en": "second part, not yet examined",
-    "statut_court": "non encore examiné",
-    "statut_court_en": "not yet examined"
+    "etat": "suppression adoptée en commission le 28 octobre 2026, séance à venir",
+    "etat_en": "deletion adopted in committee on 28 October 2026, plenary to come",
+    "statut_court": "supprimé en commission, séance à venir",
+    "statut_court_en": "deleted in committee, plenary to come"
    }
   ],
   "plf_somme": 6.192,
@@ -1181,13 +1181,29 @@
   "plf_vote_dates": [
    "2026-10-19"
   ],
-  "plf_etat_au": "2026-10-22",
+  "plf_etat_au": "2026-11-04",
   "plf_statut_dgf": "adopté, modifié",
   "plf_statut_dgf_en": "adopted as amended",
-  "plf_etape_suivante": "suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre",
-  "plf_etape_suivante_en": "the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November",
+  "plf_etape_suivante": "fin de l'examen de la première partie et vote sur son ensemble, annoncés en séance le 3 novembre pour le 4 au soir ou le 5 novembre (le vote solennel prévu le 3 novembre n'a pas eu lieu) ; puis seconde partie, dont l'article 84 ; délai de l'Assemblée : 17 novembre à minuit",
+  "plf_etape_suivante_en": "end of the examination of the first part and vote on it as a whole, announced in plenary on 3 November for the evening of the 4th or for 5 November (the formal vote planned for 3 November did not take place); then the second part, including article 84; the Assembly's deadline: midnight on 17 November",
   "plf_dgf_an_m": 356.019258,
   "plf_dgf_an": 27.899281115,
+  "plf_commission": [
+   {
+    "article": 84,
+    "date": "2026-10-28",
+    "organe": "commission des finances",
+    "organe_en": "finance committee",
+    "statut": "suppression_adoptee",
+    "amendement": "II-CF2778",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3210C/CION_FIN/CF2778",
+    "sha256_html": "62149fa6ee05960622d7ccdd3d641c818255b6031fb972db9ed6391f59a3302d",
+    "citations": [
+     "ARTICLE 84 Supprimer cet article.",
+     "Adopté (mercredi 28 octobre 2026)"
+    ]
+   }
+  ],
   "plf_supprimes": [
    35,
    36,
@@ -1344,8 +1360,8 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1,7",
   "plf_vote_date": "19 octobre 2026",
-  "plf_etat_au": "22 octobre 2026",
-  "plf_etape_suivante": "suite de l'examen de la première partie du 27 octobre au 2 novembre 2026, vote solennel sur la première partie le 3 novembre",
+  "plf_etat_au": "4 novembre 2026",
+  "plf_etape_suivante": "fin de l'examen de la première partie et vote sur son ensemble, annoncés en séance le 3 novembre pour le 4 au soir ou le 5 novembre (le vote solennel prévu le 3 novembre n'a pas eu lieu) ; puis seconde partie, dont l'article 84 ; délai de l'Assemblée : 17 novembre à minuit",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27,9",
   "plf_vote_resume": "a supprimé la baisse du taux du FCTVA (art. 35) et la contribution progressive à l'effort budgétaire (art. 37), n'a pas adopté l'écrêtement de la TVA affectée (art. 36)",
@@ -1353,12 +1369,12 @@
   "plf_etat_fctva": "art. 35 supprimé par l'Assemblée nationale le 19 octobre 2026",
   "plf_etat_tva": "art. 36 non adopté par l'Assemblée nationale le 19 octobre 2026",
   "plf_etat_ministeres": "seconde partie, non examinée",
-  "plf_etat_dilico": "seconde partie, non examinée",
+  "plf_etat_dilico": "suppression adoptée en commission le 28 octobre 2026, séance à venir",
   "plf_statut_cpeb": "supprimé en séance",
   "plf_statut_fctva": "supprimé en séance",
   "plf_statut_tva": "non adopté en séance",
   "plf_statut_ministeres": "non encore examiné",
-  "plf_statut_dilico": "non encore examiné",
+  "plf_statut_dilico": "supprimé en commission, séance à venir",
   "plf_statut_dgf": "adopté, modifié",
   "plf_inv_n_pct": "4,0",
   "plf_inv_n1_pct": "4,2",
@@ -1573,8 +1589,8 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1.7",
   "plf_vote_date": "19 October 2026",
-  "plf_etat_au": "22 October 2026",
-  "plf_etape_suivante": "the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November",
+  "plf_etat_au": "4 November 2026",
+  "plf_etape_suivante": "end of the examination of the first part and vote on it as a whole, announced in plenary on 3 November for the evening of the 4th or for 5 November (the formal vote planned for 3 November did not take place); then the second part, including article 84; the Assembly's deadline: midnight on 17 November",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27.9",
   "plf_vote_resume": "deleted the cut in the FCTVA rate (art. 35) and the progressive contribution to the budgetary effort (art. 37), did not adopt the capping of assigned VAT (art. 36)",
@@ -1582,12 +1598,12 @@
   "plf_etat_fctva": "art. 35 deleted by the National Assembly on 19 October 2026",
   "plf_etat_tva": "art. 36 not adopted by the National Assembly on 19 October 2026",
   "plf_etat_ministeres": "second part, not yet examined",
-  "plf_etat_dilico": "second part, not yet examined",
+  "plf_etat_dilico": "deletion adopted in committee on 28 October 2026, plenary to come",
   "plf_statut_cpeb": "deleted in plenary",
   "plf_statut_fctva": "deleted in plenary",
   "plf_statut_tva": "not adopted in plenary",
   "plf_statut_ministeres": "not yet examined",
-  "plf_statut_dilico": "not yet examined",
+  "plf_statut_dilico": "deleted in committee, plenary to come",
   "plf_statut_dgf": "adopted as amended",
   "plf_inv_n_pct": "4.0",
   "plf_inv_n1_pct": "4.2",

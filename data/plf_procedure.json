@@ -1,6 +1,6 @@
 {
  "_role": "Frise « Où en est le texte » de la fiche de chaque commune (/budget-2027-votre-commune/#fiche, maquette v3, auteur 23/10/2026). Une entrée par étape de la procédure, état : fait | encours | prevu | possible. La date de dépôt et la prochaine échéance, écrite sous la frise, viennent du registre des votes (plf_depot, plf_etape_suivante de data/dette_collectivites.json) : rien à réécrire ici tant que l'étape ne change pas. À mettre à jour avec le registre des votes, à chaque échéance de data/sources_maj.json (source plf-2027-etat, un ticket par échéance passée) : passer l'étape achevée à « fait », la suivante à « encours », et `etat_au`.",
- "etat_au": "2026-10-23",
+ "etat_au": "2026-11-04",
  "etapes": [
   {
    "cle": "depot",

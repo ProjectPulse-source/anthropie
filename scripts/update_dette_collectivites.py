@@ -555,7 +555,7 @@ def plf_mesures() -> dict:
 
 
 PLF_VOTES = DON / "plf_votes.json"
-PLF_VOTES_SHA = "85287b20ee687db9b20dc64aea6577e21554fd7407f8d1603edd4de4954558d9"
+PLF_VOTES_SHA = "72bbcc55b232f994dfa52ca336e22c5067fa8093915286d43cc394e63ec17d17"
 # Etat du projet au Parlement (22/10/2026, arbitrage de l'auteur, piece 1807_Communes.txt) : chaque resultat est une
 # citation verbatim du compte rendu officiel, retrouvee par sources_collectivites/verifier_plf_votes.py dans le compte
 # rendu archive (empreinte dans plf_votes.json). Mesure -> article qui la porte ; None = credits de seconde partie.
@@ -591,7 +591,9 @@ STATUT = {"supprime": ("supprimé", "deleted"), "non_adopte": ("non adopté", "n
 STATUT_COURT = {"supprime": ("supprimé en séance", "deleted in plenary"),
                 "non_adopte": ("non adopté en séance", "not adopted in plenary"),
                 "adopte_modifie": ("adopté, modifié", "adopted as amended"), "adopte": ("adopté", "adopted"),
-                None: ("non encore examiné", "not yet examined")}
+                None: ("non encore examiné", "not yet examined"),
+                # 05/11/2026 : décision de commission seulement ; la séance discute le texte du Gouvernement (Const., art. 42).
+                "commission_suppression": ("supprimé en commission, séance à venir", "deleted in committee, plenary to come")}
 
 
 def date_fr(iso: str) -> str:
@@ -610,6 +612,7 @@ def plf_votes(r: dict) -> dict:
     if v["edition"] != r["plf_edition"]:
         fail("registre des votes : edition %s != projet de loi archive %s" % (v["edition"], r["plf_edition"]))
     arts = {a["article"]: a for a in v["articles"]}
+    cion = {c["article"]: c for c in v.get("commission", []) if c["statut"] == "suppression_adoptee"}
     dates = sorted({v["seances"][a["seance"]]["date"] for a in v["articles"]})
     for m in r["plf_mesures"]:
         a = arts.get(PLF_ARTICLE[m["cle"]])
@@ -618,9 +621,15 @@ def plf_votes(r: dict) -> dict:
             d = v["seances"][a["seance"]]["date"]
             m["etat"] = "art. %d %s par l'Assemblée nationale le %s" % (a["article"], fr, date_fr(d))
             m["etat_en"] = "art. %d %s by the National Assembly on %s" % (a["article"], en, date_en(date_fr(d)))
+        elif PLF_ARTICLE[m["cle"]] in cion:
+            # Commission seulement : la séance discute le texte du Gouvernement (Const., art. 42), d'où « séance à venir ».
+            c = cion[PLF_ARTICLE[m["cle"]]]
+            m["etat"] = "suppression adoptée en commission le %s, séance à venir" % date_fr(c["date"])
+            m["etat_en"] = "deletion adopted in committee on %s, plenary to come" % date_en(date_fr(c["date"]))
         else:
             m["etat"], m["etat_en"] = "seconde partie, non examinée", "second part, not yet examined"
-        m["statut_court"], m["statut_court_en"] = STATUT_COURT[a["statut"] if a else None]
+        m["statut_court"], m["statut_court_en"] = STATUT_COURT[a["statut"] if a else
+                                                               ("commission_suppression" if PLF_ARTICLE[m["cle"]] in cion else None)]
     hausse = re.search(r"de ([\d ]+) € à ([\d ]+) €", arts[34]["precision"])
     if not hausse:
         fail("registre des votes : montants de la DGF illisibles dans la precision de l'article 34")
@@ -632,6 +641,7 @@ def plf_votes(r: dict) -> dict:
             "plf_statut_dgf": dgf_court[0], "plf_statut_dgf_en": dgf_court[1],
             "plf_etape_suivante": v["etape_suivante"], "plf_etape_suivante_en": v["etape_suivante_en"],
             "plf_dgf_an_m": (ap - av) / 1e6, "plf_dgf_an": ap / 1e9,
+            "plf_commission": v.get("commission", []),
             "plf_supprimes": sorted(a["article"] for a in v["articles"] if a["statut"] in ("supprime", "non_adopte"))}
 
 
@@ -1639,7 +1649,7 @@ PLF_TXT = {
                     "Barres évidées : articles supprimés ou non adoptés par l'Assemblée nationale le {vote} ; barres "
                     "pleines : mesures non encore examinées. État au {etat}.",
                src="Projet de loi de finances pour {ed} (n° 3210) et avis n° 2026-5 du Haut Conseil des finances "
-                   "publiques ; état : Assemblée nationale, comptes rendus des séances du {vote}. État au {etat}.",
+                   "publiques ; état : Assemblée nationale, comptes rendus des séances du {vote}{cion}. État au {etat}.",
                note="Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : "
                     "elle ne mesure pas un prélèvement net. Une disposition supprimée peut être rétablie avant la loi "
                     "définitive.",
@@ -1655,7 +1665,7 @@ PLF_TXT = {
                     "bars: articles deleted or not adopted by the National Assembly on {vote}; solid bars: measures not "
                     "yet examined. State on {etat}.",
                src="Draft budget bill for {ed} (no. 3210) and opinion no. 2026-5 of the High Council of Public Finance; "
-                   "state: National Assembly, records of the sittings of {vote}. State on {etat}.",
+                   "state: National Assembly, records of the sittings of {vote}{cion}. State on {etat}.",
                note="Arithmetic sum of heterogeneous amounts, each assessed against the situation without the measure: it "
                     "does not measure a net levy. A deleted provision may be reinstated before the final act.",
                montre="The bill as tabled provided for five measures aimed at local authorities, whose arithmetic sum came "
@@ -1670,7 +1680,12 @@ def _plf_vals(r, A, lang):
                PLF_ARTICLE[m["cle"]] in r["plf_supprimes"], m["etat_en"] if L == "en" else m["etat"]) for m in ms]
     liste = ("; " if L == "en" else " ; ").join("%s %s" % (lib, v) for _, lib, v, *_ in lignes)
     V = dict(ed=r["plf_edition"], somme=A["plf_somme"], vote=A["plf_vote_date"], etat=A["plf_etat_au"],
-             resume=A["plf_vote_resume"], liste=liste)
+             resume=A["plf_vote_resume"], liste=liste,
+             # Décision de commission citée comme source de l'état qu'elle fonde (05/11/2026).
+             cion="".join(("; finance committee, amendment %s (art. %d), %s" if L == "en" else
+                           " ; commission des finances, amendement %s (art. %d), %s")
+                          % (c["amendement"], c["article"], date_en(date_fr(c["date"])) if L == "en" else date_fr(c["date"]))
+                          for c in r.get("plf_commission", [])))
     return lignes, V
 
 

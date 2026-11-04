@@ -1,4 +1,4 @@
-# relu le 2026-10-23 ; texte servi de /en/2027-budget-your-municipality/, build de 8b79e69 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/2027-budget-your-municipality/, build de 7e0657b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
@@ -7,12 +7,12 @@ On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art
 36): three of the five measures the bill as tabled aimed at local authorities, including the two largest by amount, are set aside at this stage, though not for good.
 Still able to affect the municipality: the spreading of DILICO repayments, the distribution of the DGF and any measure that comes back.
 It can check its 2024 accounts, its FCTVA and its sums placed in reserve now; its amounts for 2027 will come from the act as passed, then from notifications.
-Page published 22 October 2026 · revisions
+Page updated 4 November 2026 · revisions
 Public debt dossier
-Source · draft budget bill 2027, state on 22 October 2026
+Source · draft budget bill 2027, state on 4 November 2026
 ↓ Charts, data and citations to reuseReuse this page
 The essentials for your municipality
-State of the draft budget bill for 2027 on 22 October 2026: no measure is settled, and none has been set aside for good.
+State of the draft budget bill for 2027 on 4 November 2026: no measure is settled, and none has been set aside for good.
 This page is revised at each step that changes these measures; its revisions remain readable at the foot of the page.
 What did the National Assembly decide on 19 October 2026?
 In plenary, on 19 October 2026, it deleted the cut in the FCTVA rate (art.
@@ -21,13 +21,13 @@ In plenary, on 19 October 2026, it deleted the cut in the FCTVA rate (art.
 36); it raised the national DGF for 2027 to €27.9 billion.
 These are first-reading votes: none of these decisions is final.
 Which measures could still affect my municipality in 2027?
-Those in the second part of the bill, which the National Assembly had not examined by 22 October 2026: the spreading of the repayment of the sums placed in reserve in 2025 (DILICO; the 2026 one targets only inter-municipal bodies, departments and regions), the distribution of the DGF and a new grant for low-density rural municipalities.
+Those in the second part of the bill, which the National Assembly had not examined in plenary by 4 November 2026: the spreading of the repayment of the sums placed in reserve in 2025 (DILICO; the 2026 one targets only inter-municipal bodies, departments and regions), the distribution of the DGF and a new grant for low-density rural municipalities.
 And any measure set aside that is reinstated before the final act.
 Which figures can my municipality check now?
 Its own accounts, not amounts for 2027: the sums it placed in reserve under DILICO in 2025, notified by order (municipalities do not contribute in 2026); the FCTVA it receives and the year of spending it relates to; its 2024 real operating revenue, the year that would have served as the base of the progressive contribution if it came back.
 When will my municipality know its amounts for 2027?
 After the budget act is finally passed: the prefect then communicates the amount of each DGF grant, and new measures go through their orders or decrees.
-Next step on 22 October 2026: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November.
+Next step on 4 November 2026: end of the examination of the first part and vote on it as a whole, announced in plenary on 3 November for the evening of the 4th or for 5 November (the formal vote planned for 3 November did not take place); then the second part, including article 84; the Assembly’s deadline: midnight on 17 November.
 What finance departments should note, check and do
 Progressive contribution (art.
 37)
@@ -51,11 +51,11 @@ adopted as amended
 What to note
 A larger national envelope, with no guaranteed rise for each municipality
 What can be checked now
-The make-up of the municipality's DGF: lump-sum grant, equalisation grants
+The make-up of the municipality’s DGF: lump-sum grant, equalisation grants
 For the 2027 budget → Do not read the national rise as guaranteed revenue for the municipality.
 DILICO (art.
 84)
-not yet examined
+deleted in committee, plenary to come
 What to note
 Repayments that would be spread to 2031, their total unchanged; municipalities are concerned only by the 2025 one
 What can be checked now
@@ -69,10 +69,10 @@ A capping set aside at this stage, with effects that differ by recipient
 What can be checked now
 A share of VAT received by the municipality, or by its inter-municipal body
 For the 2027 budget → Enter the share under the current rules; the capping is no longer in the text at this stage.
-Next deadline: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November.
+Next deadline: end of the examination of the first part and vote on it as a whole, announced in plenary on 3 November for the evening of the 4th or for 5 November (the formal vote planned for 3 November did not take place); then the second part, including article 84; the Assembly’s deadline: midnight on 17 November.
 Each row is developed measure by measure, with what it would be misleading to quantify at this stage.
 2027 budget: what could change for your municipality
-The municipality’s official figures and the provisional status of each measure as of 22 October 2026.
+The municipality’s official figures and the provisional status of each measure as of 4 November 2026.
 A sheet to help prepare the 2027 budget and, where applicable, the budget policy debate.
 Your municipality: name, department or INSEE code
 See the sheet
@@ -127,7 +127,7 @@ Sums placed in reserve in 2025 and 2026 (DILICO): repaid over five years instead
 article 84
 repayment spread out; total amount returned unchanged
 0.3
-second part, not yet examined
+deletion adopted in committee on 28 October 2026, plenary to come
 Amounts for 2027, as provided for in the bill as tabled (initial framing of the debate).
 Last column: fate of the article in plenary, from the official record of the sitting; a deleted provision may be reinstated before the final act.
 Sources: draft budget bill (explanatory memoranda) for the first two rows; opinion of the High Council of Public Finance for the next three, which the text of the bill does not quantify.
@@ -137,7 +137,7 @@ What the bill provided for.
 A contribution of €2.5 billion for 2027, owed according to the explanatory memorandum by 40% of municipalities and by inter-municipal bodies, at a rate of 0.5% to 3% of 2024 real operating revenue, after deductions, and deducted every month from the monthly tax advances: a cash effect from notification onwards.
 A support fund of €50 million was planned for contributing municipalities in difficulty (article 87); the bill as tabled still refers to an “article X” there: an unfinished reference, and a fund that depends on the fate of the contribution.
 What the National Assembly decided.
-State on 22 October 2026: art.
+State on 4 November 2026: art.
 37 deleted by the National Assembly on 19 October 2026.
 Were it to come back, each authority’s amount would be set by an order published in the Journal officiel.
 What it means for a municipality.
@@ -163,7 +163,7 @@ What the bill provided for.
 For payments made from 1 January 2027, a rate cut from 16.404% to 11.404%, that is 5 percentage points lower, except for spending on the ecological transition and on roads, kept at 16.404%, and a yield of €2.1 billion.
 The list of accounts qualifying for the maintained rate was left to a forthcoming order.
 What the National Assembly decided.
-State on 22 October 2026: art.
+State on 4 November 2026: art.
 35 deleted by the National Assembly on 19 October 2026.
 Were the measure to come back, the order setting the accounts at the maintained rate would say which spending benefits.
 What it means for a municipality.
@@ -216,7 +216,7 @@ Total received
 €270,000 in both cases
 €270,000 in both cases
 What the National Assembly decided.
-State on 22 October 2026: second part, not yet examined.
+State on 4 November 2026: deletion adopted in committee on 28 October 2026, plenary to come.
 The bill provides for a single repayment order.
 What it means for a municipality.
 Only the 2025 DILICO concerns it directly; the 2026 one affects, where relevant, its inter-municipal body.
@@ -233,7 +233,7 @@ What the bill provided for.
 For the shares of VAT paid in place of abolished taxes (article 16 of the 2020 budget act and article 55 of the 2023 act), annual growth reduced by the previous year’s inflation excluding tobacco, without the amount being allowed to fall from one year to the next.
 The High Council of Public Finance put the capping at €0.6 billion for all recipients.
 What the National Assembly decided.
-State on 22 October 2026: art.
+State on 4 November 2026: art.
 36 not adopted by the National Assembly on 19 October 2026.
 The amendments deleting the article had first been rejected; it is the amended article that was not adopted.
 What it means for a municipality.
@@ -249,7 +249,7 @@ Grant for low-density rural municipalities (article 85, second part): €50 mill
 Post-parking charges (article 53, first part, whose examination continues): 1.9% of charges paid after an enforcement order is issued would go to the central government budget, for orders issued from 1 January 2027.
 Greater Paris Metropolis (article 40): the extension of the transitional financing arrangement to 2028 was not adopted on 19 October 2026; the metropolis’s municipalities are concerned through their territorial public body.
 When will the municipality know its amounts?
-In Parliament: the first part continues to be examined from 27 October to 2 November 2026, with a formal vote on the first part on 3 November; then the Senate, and final adoption.
+In Parliament: end of the examination of the first part and vote on it as a whole, announced in plenary on 3 November for the evening of the 4th or for 5 November (the formal vote planned for 3 November did not take place); then the second part, including article 84; the Assembly’s deadline: midnight on 17 November; then the Senate, and final adoption.
 After the act: the orders and decrees it provides for, then the information the prefect communicates to mayors, including the amount of each DGF grant (article D.
 1612-1 of the Code).
 The initial budget must be adopted before 15 April.
@@ -290,14 +290,15 @@ Arithmetic sum of heterogeneous amounts, each assessed against the situation wit
 A deleted provision may be reinstated before the final act.
 Draft budget bill for 2027 (no.
 3210) and opinion no.
-2026-5 of the High Council of Public Finance; state: National Assembly, records of the sittings of 19 October 2026.
-State on 22 October 2026.
+2026-5 of the High Council of Public Finance; state: National Assembly, records of the sittings of 19 October 2026; finance committee, amendment II-CF2778 (art.
+84), 28 October 2026.
+State on 4 November 2026.
 Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Budget 2027: what do we actually know for your municipality?”.
-National Assembly, High Council of Public Finance and Légifrance data, retrieved 22 October 2026. https://stephane-lalut.com/en/2027-budget-your-municipality/
+National Assembly, High Council of Public Finance and Légifrance data, retrieved 4 November 2026. https://stephane-lalut.com/en/2027-budget-your-municipality/
 Copy citation
 In three sentences
 The draft budget bill for 2027 as tabled provided for five measures aimed at local authorities, with an arithmetic sum of €6.2 billion, which does not measure a net levy.
@@ -313,7 +314,7 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (National Assembly, High Council of Public Finance and Légifrance), under their own terms.
-To take the analysis further Dette Publique : Qui paie vraiment ?, the author's book, in French: contents, excerpts and reviews →
+To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
 Revisions
 22 October 2026 — Correction: municipalities do not contribute to the 2026 DILICO (only inter-municipal bodies, departments and regions); 10% of each repayment goes to equalisation, so a contributing authority recovers 90% of its contribution.
 Worked example corrected.

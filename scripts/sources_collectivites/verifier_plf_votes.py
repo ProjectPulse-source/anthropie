@@ -36,7 +36,23 @@ def main():
             if m not in t:
                 sys.exit(f"ECHEC : art. {a['article']} : scrutin {a['pour']}-{a['contre']} introuvable")
         print(f"art. {a['article']} : {a['statut']} -- citation retrouvee" + (" + scrutin" if "pour" in a else ""))
-    print("OK : %d articles, toutes citations retrouvees" % len(v["articles"]))
+    # Etape annoncee en seance (05/11/2026) : la date de l'etape suivante se cite aussi.
+    if "etape_source" in v:
+        e = v["etape_source"]
+        if norm(e["citation"]) not in texte(par_sha[v["seances"][e["seance"]]["sha256_html"]]):
+            sys.exit(f"ECHEC : etape suivante : « {e['citation']} » introuvable dans {e['seance']}")
+        print("etape suivante -- citation retrouvee")
+    # Decisions de commission (05/11/2026) : citees sur la page de l'amendement archivee.
+    for c in v.get("commission", []):
+        if c["sha256_html"] not in par_sha:
+            sys.exit(f"ECHEC : amendement {c['amendement']} absent du dossier ou empreinte differente")
+        t = texte(par_sha[c["sha256_html"]])
+        for x in c["citations"]:
+            if norm(x) not in t:
+                sys.exit(f"ECHEC : art. {c['article']} ({c['amendement']}) : « {x} » introuvable")
+        print(f"art. {c['article']} : {c['statut']} en commission ({c['amendement']}) -- citations retrouvees")
+    print("OK : %d articles, %d decision(s) de commission, toutes citations retrouvees"
+          % (len(v["articles"]), len(v.get("commission", []))))
 
 
 if __name__ == "__main__":
