@@ -186,3 +186,36 @@ pas les durées entre eux.
 - Skill `controle-figures` : `check-figures` 0 ; rendus relus ; deux contrôleurs indépendants (géométrie exacte à 0,1 %
   près ; défauts de libellé, de coupure et de tracé corrigés : « criminelle ou correctionnelle », « 4e ou 5e classe »,
   « sans incident », récidive) ; second passage sur l'état final.
+- Troisième passage (04/11) : au bureau, un `[:2]` coupait en silence deux détails (surendettement, bulletin n° 1) →
+  troncature supprimée, hauteur de ligne selon le texte ; légende « point creux : délai du bulletin n° 2 doublé en
+  récidive » (le 4 ans du bulletin n° 1 est un délai propre) ; « 4ᵉ ou 5ᵉ », « 5ᵉ classe » et « au plus » soudés ; texte
+  alternatif : la condition « sans rechute » rattachée au seul prêt, coefficient du malus rétabli.
+- Quatrième passage (04/11) : « 7 ans au plus » soudé (téléphone) ; colonne des détails à 48 signes (« délit » seul) ;
+  « Même échelle logarithmique partout ». Écarté : une autre marque pour le 4 ans « récidive » du bulletin n° 1 (la
+  légende réserve le point creux au bulletin n° 2 ; le détail suit le tableau).
+- Cinquième passage (04/11), contrôle des conditions de portée : la frise et le texte alternatif donnaient à quatre délais
+  un champ plus large que le tableau et le texte → « hors permis probatoire » ; bulletin n° 2 : « emprisonnement de 10 ans
+  au plus », « sans nouvelle condamnation » (aussi au tableau, qui partageait le défaut) et report des effets de la
+  réhabilitation (tableau, colonne exceptions, et note) ; bulletin n° 1 : « hors faits imprescriptibles et condamnations
+  étrangères » ; AERAS : prêts couverts, assurance prenant fin avant 71 ans ; « point de permis retiré seul » ; « 2 années
+  consécutives ». Note : « chaque délai vaut dans les conditions du tableau ». Limite déclarée : la garde du générateur
+  confronte les nombres et la cellule « Délai », pas les conditions des autres colonnes ; le texte alternatif est écrit à
+  la main, hors de `desc()` : leur concordance est relue, non vérifiée par machine.
+- Sixième passage (04/11) : mes ajouts du cinquième étaient inexacts sur trois points, corrigés d'après le texte de la
+  page → bulletin n° 2 : chaque délai avec sa peine (3 ans amende ; 5 ans emprisonnement d'un an au plus ; 10 ans
+  emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus) et « sans nouvelle condamnation criminelle ou
+  correctionnelle » (aussi FAQ) ; report des effets : interdiction définitive, suivi socio-judiciaire, interdiction
+  d'activité au contact de mineurs (aussi parcours « embauche ») ; AERAS : délais plus courts que la convention « peut
+  fixer » ; stage de récupération de points dans la note ; malus « consécutives » au tableau. Point ouvert : la cellule
+  du bulletin n° 1 « retrait par le tribunal dans des cas limités » n'a pas d'appui dans le texte de la page (à sourcer
+  ou retirer après lecture du code de procédure pénale).
+- Septième passage (04/11), alignement sur le texte : bulletin n° 2 (amende ou jours-amende ; autre peine non privative de
+  liberté ; récidive légale) ; surendettement (ou une liquidation judiciaire) ; bulletin n° 1 (composition pénale) ; permis
+  (infraction entraînant un retrait de points) ; FAQ de la réhabilitation alignée sur l'art. 133-13. Point isolé du permis :
+  la condition « sans nouveau retrait de points dans l'intervalle » lue dans l'art. L. 223-6 (Légifrance, 04/11/2026,
+  empreinte 367cc959…) et portée au corps, au tableau, à la figure et au texte alternatif. Art. 133-16 relu (empreinte
+  d14294b4…) : report des effets conforme. Arrêt des passes : les deux dernières n'ont trouvé que des alignements de
+  formulation sur le texte, aucun défaut de mesure. Points ouverts : (1) « la réhabilitation efface la condamnation des
+  bulletins n° 2 et n° 3 » (FAQ) n'est appuyé par aucun article cité dans la page : lire l'art. 775 du code de procédure
+  pénale (hors du canal Légifrance de l'outil, à lire par le navigateur) puis citer ou retirer ; (2) cellule du bulletin
+  n° 1 « retrait par le tribunal dans des cas limités », sans appui dans le texte.

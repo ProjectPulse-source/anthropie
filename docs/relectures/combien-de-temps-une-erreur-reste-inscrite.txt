@@ -1,10 +1,10 @@
-# relu le 2026-11-04 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 9d91116 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 De six mois pour un point de permis à quarante ans pour le casier : la durée d’une inscription dépend du registre, et ce qui l’efface n’est pas toujours le temps.
 Les points du permis se récupèrent, le malus se résorbe et la réhabilitation légale s’acquiert sans démarche ; l’interdiction d’émettre des chèques cesse au bout de cinq ans, plus tôt si l’on régularise ; une condamnation n’est exclue du bulletin n° 2 que par le tribunal, dans le jugement ou sur requête ; la radiation d’une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur.
 Et un même registre oublie à deux vitesses : un malus disparaît en deux ans, le bonus maximal en demande treize.
-Page publiée le 1er novembre 2026
+Page mise à jour le 4 novembre 2026
 Une dette se rembourse, une peine s’exécute, une maladie se soigne — qui n’est pas une erreur, mais laisse aussi une trace.
 Entre le moment où l’erreur est réparée et celui où elle cesse d’être lue par un banquier, un employeur ou un assureur, court un second délai, fixé par un texte.
 Cette page donne ce délai pour les principaux registres, d’après les textes lus sur Légifrance le 1er novembre 2026 dans leur version en vigueur.
@@ -26,7 +26,7 @@ le paiement intégral
 l’établissement, qui déclare le paiement
 FICP, surendettement
 une durée maximale de conservation
-la durée du plan ou des mesures, 7 ans au plus ; 5 ans si le plan est exécuté sans incident ; 5 ans après un rétablissement personnel
+la durée du plan ou des mesures, 7 ans au plus ; 5 ans si le plan est exécuté sans incident ; 5 ans après un rétablissement personnel ou une liquidation judiciaire
 la signature du plan, la décision ou le jugement ; la décision ou la clôture pour le rétablissement personnel
 —
 aucune démarche individuelle
@@ -38,26 +38,26 @@ la régularisation : payer le chèque ou constituer la provision
 la personne, qui justifie la régularisation ; puis la banque, qui avise la Banque de France
 Casier, bulletin n° 2
 un délai de réhabilitation légale
-3, 5 ou 10 ans selon la peine, doublés en récidive
+3 ans (amende ou jours-amende), 5 ans (emprisonnement d’un an au plus ou autre peine non privative de liberté), 10 ans (emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus), sans nouvelle condamnation criminelle ou correctionnelle, doublés en récidive légale
 le paiement, l’exécution ou la prescription de la peine ; pour un sursis, la date où la condamnation est non avenue
 l’exclusion décidée par le tribunal, sauf pour les infractions de l’art.
-706-47 CPP
+706-47 CPP ; effets de la réhabilitation reportés en cas d’interdiction définitive, de suivi socio-judiciaire ou d’interdiction d’activité au contact de mineurs
 aucune démarche pour la réhabilitation ; une requête pour l’exclusion
 Casier, bulletin n° 1
 un délai de retrait de la fiche
-40 ans sans nouvelle condamnation criminelle ou correctionnelle ; 3 ans pour une contravention, 4 si sa récidive constitue un délit
+40 ans sans nouvelle condamnation criminelle ou correctionnelle ; 3 ans pour une contravention ou une composition pénale, 4 pour une contravention dont la récidive constitue un délit
 le prononcé de la condamnation, ou le jour où elle est devenue définitive
 hors délai de 40 ans : faits imprescriptibles, condamnations étrangères ; retrait par le tribunal dans des cas limités
 aucune démarche pour le retrait automatique
 Permis à points
 un délai de récupération des points
-2 ans sans infraction (3 ans après un délit ou une contravention de 4e ou 5e classe) ; 6 mois pour un point seul
+2 ans sans infraction entraînant un retrait de points (3 ans après un délit ou une contravention de 4e ou 5e classe) ; 6 mois pour un point seul, sans nouveau retrait de points
 la dernière infraction établie (paiement de l’amende, condamnation définitive…)
 un stage par an ; règles propres au permis probatoire ; un permis à zéro point perd sa validité
 aucune démarche, sauf pour le stage
 Assurance auto, malus
 un plafond du coefficient
-après 2 années sans sinistre, coefficient ramené à 1 au plus
+après 2 années consécutives sans sinistre, coefficient ramené à 1 au plus
 l’échéance annuelle
 le bonus antérieur n’est pas rétabli
 aucune démarche
@@ -82,7 +82,7 @@ Une condamnation pèse sur une embauche.
 Le premier point est le bulletin en cause.
 Le bulletin n° 2 est délivré aux administrations et, par leur intermédiaire, à certains employeurs, notamment pour des activités auprès de mineurs ; il ne parvient à l’employeur que s’il ne porte aucune mention.
 Deux voies en retirent une condamnation : la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, et l’exclusion, que le tribunal décide dans le jugement ou plus tard sur requête de la personne, sauf pour les infractions de l’article 706-47 du Code de procédure pénale.
-Ce qu’il faut vérifier : la peine prononcée et la date de son exécution, d’où court le délai de réhabilitation ; une interdiction définitive, ou d’activité au contact de mineurs, qui en retarde les effets (le détail).
+Ce qu’il faut vérifier : la peine prononcée et la date de son exécution, d’où court le délai de réhabilitation ; une interdiction définitive, un suivi socio-judiciaire ou une interdiction d’activité au contact de mineurs, qui en retarde les effets (le détail).
 Un jeune conducteur perd des points pendant le permis probatoire.
 Le délai probatoire dure trois ans, deux après un apprentissage anticipé de la conduite.
 Le permis y gagne des points chaque année, tant qu’aucune infraction ayant donné lieu à un retrait de points n’a été commise depuis son début : une seule suffit à arrêter ce gain, et la récupération de tous les points après deux ans sans infraction ne joue pas pendant ce délai (Code de la route, art.
@@ -144,7 +144,7 @@ Ce retrait de la fiche est un autre mécanisme que la réhabilitation et que l�
 769 ; Service-public, fiche F31802, vérifiée le 20 octobre 2025).
 Combien de temps faut-il pour récupérer ses points de permis ?
 Le permis retrouve son nombre maximal de points si son titulaire n’a pas commis, pendant deux ans, de nouvelle infraction entraînant un retrait de points ; le délai est de trois ans si l’une des infractions était un délit ou une contravention de quatrième ou de cinquième classe.
-Un point retiré seul est rendu au bout de six mois.
+Un point retiré seul est rendu au bout de six mois, si aucune infraction n’a entraîné un nouveau retrait de points dans l’intervalle.
 Un stage de sensibilisation à la sécurité routière permet de récupérer des points, une fois par an au plus.
 Les points retirés pour des contraventions des quatre premières classes sont aussi réattribués dix ans après la condamnation définitive ou le paiement de l’amende (Code de la route, art.
 L.
@@ -239,7 +239,7 @@ Une condamnation en sort par la réhabilitation légale, acquise sans démarche 
 775-1).
 Comment une condamnation disparaît-elle du casier judiciaire ?
 De trois façons.
-La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation, après trois ans pour une amende, cinq ans pour une peine d’emprisonnement d’un an au plus, dix ans jusqu’à dix ans d’emprisonnement, délais doublés en récidive (Code pénal, art.
+La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation criminelle ou correctionnelle, après trois ans pour une amende ou des jours-amende, cinq ans pour une peine d’emprisonnement d’un an au plus ou une autre peine non privative de liberté, dix ans pour un emprisonnement de dix ans au plus ou plusieurs totalisant cinq ans au plus, délais doublés en récidive légale (Code pénal, art.
 133-13) : elle efface la condamnation des bulletins n° 2 et n° 3.
 Le tribunal peut aussi exclure la mention du bulletin n° 2, dans le jugement ou plus tard, sur requête (Code de procédure pénale, art.
 775-1), sauf pour certaines infractions, notamment sexuelles.
