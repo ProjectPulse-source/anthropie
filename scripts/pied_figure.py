@@ -61,8 +61,11 @@ def pied(e: list[str], y0: float, largeur: int, blocs, filet: str) -> str:
 
 
 def lire(svg: str, classe: str) -> str:
-    """Texte d'un bloc du pied, lignes rejointes (fiches « Réutiliser »)."""
-    return " ".join(html.unescape(t) for t in re.findall(r'<text class="%s"[^>]*>(.*?)</text>' % classe, svg))
+    """Texte d'un bloc du pied, lignes rejointes (fiches « Réutiliser »). La soudure « ·  » de coupe() ne sert
+    que la coupure du SVG : elle se défait ici (05/11/2026 : depuis 8ef0d00, la licence relue ne valait plus celle du
+    générateur, et dix générateurs s'arrêtaient sur « pied illisible »)."""
+    return " ".join(html.unescape(t) for t in re.findall(r'<text class="%s"[^>]*>(.*?)</text>' % classe, svg)
+                    ).replace("· ", "· ")
 
 
 def hauteur(svg: str, largeur: int) -> str:
