@@ -16,6 +16,12 @@ faq:
     answer: "The externality is an accounting notion: an unbilled cost, which one imagines can be corrected by a price (tax, market). The notion of negative commons challenges this reading: a polluted soil or a power plant at the end of its life is not a price discrepancy but an installed material reality, which demands care, institutions and labour — not only a monetary internalisation."
   - question: "What is the link between negative commons and anthropy?"
     answer: "Negative commons are the anthropic transfer turned into matter: when a system displaces its disorder (waste, pollution, end-of-life infrastructures) and the receptacle accumulates, what remains is a shared negative inheritance. The working paper AWP-06 (Stéphane Lalut, 2026) ranks digital infrastructures — data centers, equipment to be dismantled — among candidate negative commons."
+  - question: "Are negative commons a pessimistic notion?"
+    answer: "No — it is a notion of action. It shifts attention from promises alone (building, innovating) to neglected gestures: maintaining, closing, dismantling, cleaning up. Whole trades, institutions and know-how rest on this \"care of remains\"."
+  - question: "Who introduced the notion?"
+    answer: "It stabilised around the work of Alexandre Monnin, Emmanuel Bonnet and Diego Landivar (Héritage et fermeture, 2021; article \"Les 'communs négatifs'\", journal Études, 2021 — both in French), in the field of the ecology of dismantling and of ecological redirection."
+  - question: "Where is it applied in the anthropic corpus?"
+    answer: "In AWP-06 (digital technology as a candidate negative common), in the glossary, and in the background of technological debt: a debt whose creditors are the generations that will inherit the equipment."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
   lignes:
     - t: "Definition"
@@ -103,11 +109,7 @@ The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](
 
 ## Frequently asked questions
 
-**Are negative commons a pessimistic notion?** No — it is a notion of **action**. It shifts attention from promises alone (building, innovating) to neglected gestures: maintaining, closing, dismantling, cleaning up. Whole trades, institutions and know-how rest on this "care of remains".
-
-**Who introduced the notion?** It stabilised around the work of Alexandre Monnin, Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture*, 2021; article "Les 'communs négatifs'", journal *Études*, 2021 — both in French), in the field of the ecology of dismantling and of ecological redirection.
-
-**Where is it applied in the anthropic corpus?** In [AWP-06](/en/awp/awp-06/) (digital technology as a candidate negative common), in the [glossary](/en/glossaire/#negative-commons), and in the background of [technological debt](/en/technological-debt/): a debt whose creditors are the generations that will inherit the equipment.
+{{< faq-visible >}}
 
 ## Further reading
 

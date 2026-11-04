@@ -18,6 +18,12 @@ faq:
     answer: "No — the size of the rebound varies by use, sector and period, and is the subject of an abundant literature. But it is structural, not anecdotal: ignoring the rebound systematically leads to overestimating the energy savings expected from efficiency policies. This is why serious scenarios distinguish efficiency from sufficiency."
   - question: "What is the link between the rebound effect and anthropy?"
     answer: "In the anthropic framework (Stéphane Lalut), the rebound effect is a case of boomerang effect: the efficiency gain produces a local order — less energy per unit — whose cost comes back as a global disorder — more total consumption. The analysis is developed in AWP-04, “Energy transition or entropic transfer?” (2026, DOI 10.5281/zenodo.19269244)."
+  - question: "Rebound effect, Jevons effect, Jevons paradox: are they the same thing?"
+    answer: "The rebound effect is the general phenomenon — any recovery of consumption that eats into an efficiency gain. We speak of the Jevons paradox (or effect) in the extreme case where the recovery exceeds the gain: total consumption rises. The short definition is in the glossary."
+  - question: "Does the rebound effect apply outside energy?"
+    answer: "Yes. The mechanism is observed wherever an efficiency gain lowers the cost of a use: transport time (speed gains lengthened distances rather than shortening journeys), digital technology (processor efficiency fed the explosion of uses), materials."
+  - question: "Can the rebound effect be \"corrected\"?"
+    answer: "It can be contained — by coupling efficiency with volume constraints — but not abolished by technology alone: it follows from prices, not from a consumer error. The first step is to count it, which the forecast assessments of efficiency policies still often omit."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
   lignes:
     - t: "Definition"
@@ -104,11 +110,7 @@ The practical consequence is known to serious energy scenarios: efficiency is ne
 
 ## Frequently asked questions
 
-**Rebound effect, Jevons effect, Jevons paradox: are they the same thing?** The rebound effect is the general phenomenon — any recovery of consumption that eats into an efficiency gain. We speak of the Jevons paradox (or effect) in the extreme case where the recovery exceeds the gain: total consumption rises. The short definition is in the [glossary](/en/glossaire/#jevons-effect).
-
-**Does the rebound effect apply outside energy?** Yes. The mechanism is observed wherever an efficiency gain lowers the cost of a use: transport time (speed gains lengthened distances rather than shortening journeys), digital technology (processor efficiency fed the explosion of uses), materials.
-
-**Can the rebound effect be "corrected"?** It can be contained — by coupling efficiency with volume constraints — but not abolished by technology alone: it follows from prices, not from a consumer error. The first step is to count it, which the forecast assessments of efficiency policies still often omit.
+{{< faq-visible >}}
 
 ## Further reading
 

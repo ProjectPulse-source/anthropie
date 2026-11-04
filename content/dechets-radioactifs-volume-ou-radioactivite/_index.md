@@ -110,6 +110,10 @@ Certains déchets ne figurent pas dans les bilans de l'Andra. Le principal ensem
 *ANTHROPIE — Ordre ici. Dette ailleurs* suit, sur la longue durée, ce que chaque ordre construit laisse derrière lui et à qui il en laisse la charge.
 {{< /appel-livre >}}
 
+## Questions fréquentes {#questions-frequentes}
+
+{{< faq-visible >}}
+
 ## Sources {#sources}
 
 - Andra, Inventaire national des matières et déchets radioactifs, [fichiers ouverts des déchets déclarés](https://www.data.gouv.fr/datasets/inventaire-national-des-matieres-et-dechets-radioactifs) (fin 2013 à fin {{< dr-val "an_vol" >}}), lus par script&nbsp;; calculs de l'auteur&nbsp;: parts par catégorie, variante d'activité, volumes situés dans les centres de stockage de l'Andra (repérés par le nom du site).

@@ -162,6 +162,10 @@ Le livre [*L'Odyssée des idées*](/livres/lodyssee-des-idees/) (nouvelle éditi
 
 > Aucune réponse définitive. Aucune doctrine close. Rien qu'une manière de ne pas laisser les mots dormir en paix. […] vingt-quatre siècles plus tard, il ne nous apprend pas quoi penser. Il nous empêche de croire trop vite que nous pensons.
 
+## Questions fréquentes {#questions-frequentes}
+
+{{< faq-visible >}}
+
 ## Pour aller plus loin {#pour-aller-plus-loin}
 
 - [Quel livre de culture générale offrir&nbsp;?](/offrir-un-livre-de-culture-generale/) — si la traversée est pour quelqu'un d'autre.

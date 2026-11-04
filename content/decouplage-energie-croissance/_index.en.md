@@ -144,6 +144,10 @@ On the observation, our figures agree with theirs: from 1971 to 2018, they write
 *ANTHROPY* follows, over the long run, what each order leaves behind it and on whom it leaves the burden.
 {{< /appel-livre >}}
 
+## Frequently asked questions {#faq}
+
+{{< faq-visible >}}
+
 ## Sources {#sources}
 
 - EIA (U.S. Energy Information Administration), [international data](https://www.eia.gov/international/data/world), bulk file `INTL.zip` read by script: total energy consumption, GDP at purchasing power parity, population. Measurement convention read from the same file (hydro, wind, solar and nuclear electricity generation and consumption). Author's calculations: logarithmic mean Divisia index decomposition.

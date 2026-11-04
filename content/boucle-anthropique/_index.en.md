@@ -21,6 +21,12 @@ faq:
     answer: "Nicholas Georgescu-Roegen (The Entropy Law and the Economic Process, 1971), founder of bioeconomics, guarantees that no economic process cancels disorder. The anthropic loop takes this result as background, not foundation: it imports no thermodynamics — its receptacles are social, territorial and attentional. The lesson retained is that of the closed system: there is no infinite elsewhere."
   - question: "Is the anthropic loop falsifiable?"
     answer: "That is the requirement AWP-07 sets for itself: an ex ante protocol requires naming the receptacle and the order of magnitude of the latency before the analysis, which disciplines both the claim that a displacement exists and the certification that a cost has been internalised. One case external to the corpus — asbestos — is coded in full to show how the grid is used, not to validate it."
+  - question: "Is the anthropic loop a metaphor?"
+    answer: "No: it is a conceptual state machine, with definitions, transition conditions and testable propositions. The short definition is in the glossary."
+  - question: "Where can the loop be observed?"
+    answer: "Wherever a local order rests on a saturating receptacle: public debt (a temporal transfer that can return as interest burden and budget constraints — AWP-03), the energy transition (externalised extraction, deferred waste, the rebound effect — AWP-04), digital infrastructures and attention (AWP-06)."
+  - question: "How does it relate to social reversibility?"
+    answer: "AWP-08 provides the loop's micro-institutional counterpart: the stratified price of failure distributes unequally the capacity to defer, mutualise or absorb the cost of a failure — displacement of disorder seen from the people who absorb it. See What is social reversibility?"
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
@@ -80,11 +86,7 @@ The formalisation — nine definitions, five states, three conditions, four form
 
 ## Frequently asked questions
 
-**Is the anthropic loop a metaphor?** No: it is a conceptual state machine, with definitions, transition conditions and testable propositions. The short definition is in the [glossary](/en/glossaire/#anthropic-loop).
-
-**Where can the loop be observed?** Wherever a local order rests on a saturating receptacle: public debt (a temporal transfer that can return as interest burden and budget constraints — [AWP-03](/en/awp/awp-03/)), the energy transition (externalised extraction, deferred waste, the rebound effect — [AWP-04](/en/awp/awp-04/)), digital infrastructures and attention ([AWP-06](/en/awp/awp-06/)).
-
-**How does it relate to social reversibility?** [AWP-08](/en/awp/awp-08/) provides the loop's micro-institutional counterpart: the stratified price of failure distributes unequally the capacity to defer, mutualise or absorb the cost of a failure — displacement of disorder seen from the people who absorb it. See [What is social reversibility?](/en/social-reversibility/)
+{{< faq-visible >}}
 
 ## Further reading
 

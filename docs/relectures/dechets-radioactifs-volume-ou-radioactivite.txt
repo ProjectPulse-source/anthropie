@@ -1,11 +1,10 @@
-# relu le 2026-11-03 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Déchets radioactifs : le volume dit-il le problème ?
 Les déchets radioactifs se comptent d’abord en mètres cubes : 1,89 million fin 2024.
 Mais le volume ne dit ni où est la radioactivité, ni ce qui reste sans solution.
 Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,1 % de la radioactivité déclarée ; leur stockage définitif est prévu à Bure (Cigéo), mais pas encore autorisé.
 Page publiée le 26 octobre 2026
-Données et droit
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données du : 26 octobre 2026 Andra, Inventaire national des matières et déchets radioactifs, fichiers ouverts (data.gouv.fr) : volume et radioactivité déclarée à fin 2021 (dernière édition qui déclare la radioactivité), volumes à fin 2024.
 Télécharger : CSV · JSON
@@ -77,6 +76,18 @@ Exemplaire numérique de consultation offert, sans contrepartie, dans la limite 
 Votre exemplaire, disponible immédiatement →
 Version papier : 36 € · Kindle : disponible
 Sommaire, extraits et recensions →
+Questions fréquentes
+Quelle part du volume des déchets radioactifs représentent les déchets de haute activité ?
+Fin 2021, dernière édition de l’inventaire qui déclare la radioactivité, les déchets de haute activité représentaient 0,25 % du volume des cinq catégories des bilans de l’Andra et 97,1 % de la radioactivité déclarée.
+Fin 2024, ils occupent 4 717 m³ en équivalent conditionné, 0,25 % du volume.
+Les déchets radioactifs les plus actifs sont-ils stockés ?
+Pas encore de façon définitive.
+Les déchets de haute activité et de moyenne activité à vie longue, qui concentrent 99,8 % de la radioactivité déclarée (fin 2021), sont entreposés sur leurs sites de production : leur stockage géologique profond, Cigéo, est prévu à Bure ; après l’enquête publique de 2026 et l’avis favorable de la commission d’enquête, l’autorisation de création reste à décider.
+Les déchets de faible et moyenne activité à vie courte et de très faible activité, plus de neuf dixièmes du volume, ont des stockages en service.
+D’où viennent ces chiffres ?
+Des fichiers ouverts de l’Inventaire national de l’Andra (déchets déclarés à fin 2024, et à fin 2021 pour l’activité), lus par un script qui s’arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases de la page.
+L’état des filières et les volumes de Malvési sont transcrits des publications de l’Andra (Les Essentiels 2026, lus le 26 octobre 2026).
+Les données sont téléchargeables en CSV et en JSON, sous licence CC BY 4.0.
 Sources
 Andra, Inventaire national des matières et déchets radioactifs, fichiers ouverts des déchets déclarés (fin 2013 à fin 2024), lus par script ; calculs de l’auteur : parts par catégorie, variante d’activité, volumes situés dans les centres de stockage de l’Andra (repérés par le nom du site).
 Andra, Inventaire national, Les Essentiels 2026 et page « Classification des déchets radioactifs et filières de gestion » : état des filières, volumes de Malvési et citations, lus le 26 octobre 2026.

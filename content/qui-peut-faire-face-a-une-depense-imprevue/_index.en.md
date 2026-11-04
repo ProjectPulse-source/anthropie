@@ -96,6 +96,10 @@ In the EU-27, {{< imp-val "ue_total" >}}% of people could not face an unexpected
 
 To go further: [*La Société du premier coup*](/livres/la-societe-du-premier-coup/) (**in French**) tells, through concrete cases, what a failure costs depending on the social position of the person who suffers it, and why some cannot afford to try.
 
+## Frequently asked questions {#faq}
+
+{{< faq-visible >}}
+
 ## Sources {#sources}
 
 - Eurostat, European Union Statistics on Income and Living Conditions (EU-SILC), dataset [ilc_mdes04](https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes04/default/table) ("Inability to face unexpected financial expenses"), retrieved through the dissemination API. Author's calculations: gaps between household compositions, annual ranges.

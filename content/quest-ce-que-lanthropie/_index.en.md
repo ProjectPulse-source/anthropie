@@ -241,3 +241,7 @@ Several pages extend the framework to its fields of application: [What is techno
 ## The book
 
 The framework presented on this page is developed in full in the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 pages): seven historical configurations, the complete conceptual apparatus, and its contemporary applications. For the application to public finance, see [*Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*](/livres/dette-publique-qui-paie-vraiment/) (in French).
+
+## Frequently asked questions {#faq}
+
+{{< faq-visible >}}

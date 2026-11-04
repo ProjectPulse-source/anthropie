@@ -20,6 +20,12 @@ faq:
     answer: "Nicholas Georgescu-Roegen (The Entropy Law and the Economic Process, 1971), fondateur de la bioéconomie, garantit qu'aucun processus économique n'annule le désordre. La boucle anthropique prend ce résultat comme arrière-plan, non comme fondement : elle n'importe pas la thermodynamique, ses réceptacles sont sociaux, territoriaux et attentionnels. La leçon retenue est celle du système clos : il n'y a pas d'ailleurs infini."
   - question: "La boucle anthropique est-elle falsifiable ?"
     answer: "C'est l'exigence que se donne AWP-07 : un protocole ex ante impose de nommer le réceptacle et l'ordre de grandeur de la latence avant l'analyse, ce qui discipline à la fois l'affirmation d'un déplacement et la certification d'une internalisation. Un cas externe au corpus, l'amiante, est codé de bout en bout pour montrer l'usage de la grille, non pour la valider."
+  - question: "La boucle anthropique est-elle une métaphore ?"
+    answer: "Non : c'est une machine à états conceptuelle, avec des définitions, des conditions de transition et des propositions testables. La définition courte est au glossaire."
+  - question: "Où la boucle s'observe-t-elle ?"
+    answer: "Partout où un ordre local repose sur un réceptacle qui sature : la dette publique (report temporel qui peut revenir en charge d'intérêts et en contraintes budgétaires — AWP-03), la transition énergétique (extraction externalisée, déchets reportés, effet rebond — AWP-04), les infrastructures numériques et l'attention (AWP-06)."
+  - question: "Quel rapport avec la réversibilité sociale ?"
+    answer: "AWP-08 donne la contrepartie micro-institutionnelle de la boucle : le tarif stratifié de l'échec répartit inégalement la capacité de différer, mutualiser ou absorber le coût d'un échec — c'est le déplacement du désordre vu depuis les personnes qui l'absorbent."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"
@@ -79,11 +85,7 @@ La formalisation — neuf définitions, cinq états, trois conditions, quatre fo
 
 ## Questions fréquentes
 
-**La boucle anthropique est-elle une métaphore&nbsp;?** Non&nbsp;: c'est une machine à états conceptuelle, avec des définitions, des conditions de transition et des propositions testables. La définition courte est au [glossaire](/glossaire/#boucle-anthropique).
-
-**Où la boucle s'observe-t-elle&nbsp;?** Partout où un ordre local repose sur un réceptacle qui sature&nbsp;: la dette publique (report temporel qui peut revenir en charge d'intérêts et en contraintes budgétaires — [AWP-03](/awp/awp-03/)), la transition énergétique (extraction externalisée, déchets reportés, [effet rebond](/effet-rebond/) — [AWP-04](/awp/awp-04/)), les infrastructures numériques et l'attention ([AWP-06](/awp/awp-06/)).
-
-**Quel rapport avec la réversibilité sociale&nbsp;?** [AWP-08](/awp/awp-08/) donne la contrepartie micro-institutionnelle de la boucle&nbsp;: le tarif stratifié de l'échec répartit inégalement la capacité de différer, mutualiser ou absorber le coût d'un échec — c'est le déplacement du désordre vu depuis les personnes qui l'absorbent.
+{{< faq-visible >}}
 
 ## Pour aller plus loin
 

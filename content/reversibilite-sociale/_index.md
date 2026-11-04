@@ -19,6 +19,12 @@ faq:
     answer: "C'est l'objet du programme ouvert par AWP-08 : une architecture de mesure (V = f(C, T, A)), quatre familles de propositions testables et un protocole d'identification sur deux terrains datés — la suppression de l'indicateur 040 du FIBEN par la Banque de France et le droit à l'oubli assurantiel de la loi Lemoine. C'est un cadre réfutable, pas encore un résultat empirique."
   - question: "Qui a proposé le concept de réversibilité sociale ?"
     answer: "Stéphane Lalut, économiste et chercheur indépendant, dans le working paper AWP-08 — « La réversibilité sociale comme dimension de l'inégalité » (2026, DOI 10.5281/zenodo.21506320), huitième des Anthropie Working Papers. Le concept prolonge le cadre anthropique : le tarif stratifié de l'échec est un mécanisme de distribution du désordre social."
+  - question: "La réversibilité sociale est-elle un synonyme de résilience ?"
+    answer: "Non. La résilience décrit une capacité psychologique individuelle à surmonter l'épreuve. La réversibilité sociale décrit une position structurelle — repli, tarif, réadmission — qui existe avant toute épreuve et indépendamment des dispositions psychologiques de la personne."
+  - question: "Est-ce mesurable ?"
+    answer: "C'est l'objet du programme ouvert par AWP-08 : une architecture de mesure (V = f(C, T, A)), quatre familles de propositions testables, un protocole d'identification sur deux terrains datés (suppression de l'indicateur 040 du FIBEN, droit à l'oubli de la loi Lemoine). Le papier se présente comme un cadre réfutable, non comme un résultat empirique."
+  - question: "Pourquoi « réversibilité » ?"
+    answer: "Parce que la question décisive est celle du retour : une erreur est réversible quand les options qu'elle ferme peuvent être récupérées. L'irréversibilité — la fermeture durable de l'avenir — est le vrai coût social de l'échec, et il est inégalement distribué."
 fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
   lignes:
     - t: "Définition"
@@ -120,11 +126,7 @@ C'est le lien avec le cadre général de l'[anthropie](/quest-ce-que-lanthropie/
 
 ## Questions fréquentes
 
-**La réversibilité sociale est-elle un synonyme de résilience&nbsp;?** Non. La résilience décrit une capacité psychologique individuelle à surmonter l'épreuve. La réversibilité sociale décrit une position structurelle — repli, tarif, réadmission — qui existe avant toute épreuve et indépendamment des dispositions psychologiques de la personne.
-
-**Est-ce mesurable&nbsp;?** C'est l'objet du programme ouvert par AWP-08&nbsp;: une architecture de mesure (*V = f(C, T, A)*), quatre familles de propositions testables, un protocole d'identification sur deux terrains datés (suppression de l'indicateur 040 du FIBEN, droit à l'oubli de la loi Lemoine). Le papier se présente comme un cadre réfutable, non comme un résultat empirique.
-
-**Pourquoi «&nbsp;réversibilité&nbsp;»&nbsp;?** Parce que la question décisive est celle du retour&nbsp;: une erreur est réversible quand les options qu'elle ferme peuvent être récupérées. L'irréversibilité — la fermeture durable de l'avenir — est le vrai coût social de l'échec, et il est inégalement distribué.
+{{< faq-visible >}}
 
 ## Pour aller plus loin
 

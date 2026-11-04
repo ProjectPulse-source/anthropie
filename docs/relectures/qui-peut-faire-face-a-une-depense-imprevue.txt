@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire face à une dépense imprévue ?
 Ne pas pouvoir faire face à une dépense imprévue, est-ce une affaire de pauvreté ?
@@ -6,9 +6,8 @@ En partie seulement.
 En France, en 2025, 65,9 % des personnes sous le seuil de pauvreté sont dans ce cas, et 21,6 % au-dessus.
 Mais au-dessus du seuil, la composition du foyer change tout : 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant.
 Page publiée le 26 octobre 2026
-Données et droit
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données du : 26 octobre 2026 Eurostat, enquête EU-SILC, jeu ilc_mdes04 : France et Union européenne à 27, séries complètes depuis le début de l'enquête ; écarts étudiés de 2015 à 2025.
+Données du : 26 octobre 2026 Eurostat, enquête EU-SILC, jeu ilc_mdes04 : France et Union européenne à 27, séries complètes depuis le début de l’enquête ; écarts étudiés de 2015 à 2025.
 Télécharger : CSV · JSON
 Qui ne pourrait pas faire face à une dépense imprévue ?
 En France, en 2025, 28,8 % des personnes vivent dans un ménage qui, selon ses propres déclarations, ne pourrait pas faire face, par ses seuls moyens, à une dépense imprévue de 1 000 € : près de trois sur dix.
@@ -62,13 +61,25 @@ Dans le working paper AWP-08, l’économiste Stéphane Lalut propose de lire la
 L’indicateur de cette page n’en mesure qu’une partie ; il ne dit rien du coût d’un échec ni de la possibilité de recommencer.
 Pour prolonger la question
 La Société du premier coup
-Pourquoi certains peuvent recommencer — et d'autres non
+Pourquoi certains peuvent recommencer — et d’autres non
 La Société du premier coup raconte, à partir de cas concrets, ce que coûte un échec selon la position sociale de celui qui le subit, et pourquoi certains ne peuvent pas se permettre d’essayer.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
 Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Votre exemplaire, disponible immédiatement →
 Version papier : 13,90 € · Kindle : 5,99 €
 Sommaire, extraits et recensions →
+Questions fréquentes
+Quelle part des Français ne pourrait pas faire face à une dépense imprévue ?
+En 2025, 28,8 % des personnes vivant en France déclarent que leur ménage ne pourrait pas faire face à une dépense imprévue (Eurostat, enquête EU-SILC).
+La part atteint 65,9 % sous le seuil de pauvreté et 21,6 % au-dessus.
+Les parents seuls sont-ils plus exposés, même sans être pauvres ?
+Oui, et c’est au-dessus du seuil de pauvreté que l’écart est le plus net : en 2025, 46,9 % des parents seuls au-dessus du seuil ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant, soit 28,3 points d’écart.
+Sans enfant, le même passage de deux adultes à un seul n’ajoute que 9,4 points.
+C’est une association : la série ne dit pas si l’écart tient à la composition du foyer ou à une position plus basse dans la tranche de revenu.
+D’où viennent ces chiffres ?
+De l’enquête européenne sur les revenus et les conditions de vie (EU-SILC), jeu ilc_mdes04 d’Eurostat (séries de 2003 à 2025), relevé par un script qui s’arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases de la page.
+Seul le montant de la question, 1 000 € en France, est transcrit d’une publication de l’Insee et vérifié pour chaque année d’enquête citée.
+Les données sont téléchargeables en CSV et en JSON, sous licence CC BY 4.0.
 Sources
 Eurostat, enquête européenne sur les revenus et les conditions de vie (EU-SILC), jeu ilc_mdes04 (« Incapacité à faire face à des dépenses financières imprévues »), relevé par l’API de diffusion.
 Calculs de l’auteur : écarts entre compositions de ménage, plages annuelles.
@@ -76,12 +87,12 @@ Montant de la question : Insee, communiqué de lancement de l’enquête SRCV du
 154 ; seuil de pauvreté d’une personne seule : Eurostat, jeu ilc_li01, relevé par le script.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Ne pas pouvoir faire face à une dépense imprévue : le revenu ne dit pas tout (France, 2025)
-Au-dessus du seuil de pauvreté, 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant : le revenu relatif ne dit pas tout de la capacité d'encaisser un choc.
-Précaution d'interprétation.
-Déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation ; montant de la dépense fixé par l'enquête.
-Association, non cause : la position dans la tranche de revenu n'est pas contrôlée.
+Au-dessus du seuil de pauvreté, 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant : le revenu relatif ne dit pas tout de la capacité d’encaisser un choc.
+Précaution d’interprétation.
+Déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation ; montant de la dépense fixé par l’enquête.
+Association, non cause : la position dans la tranche de revenu n’est pas contrôlée.
 Eurostat, enquête SILC (ilc_mdes04), en % des personnes
 Télécharger en PNG
 SVG
@@ -95,10 +106,10 @@ Quand il y a des enfants, l’écart entre foyers d’un et de deux adultes est 
 Le revenu relatif ne dit donc pas tout de la capacité d’encaisser un choc.
 Copier le résumé
 Les données
-La part des personnes incapables de faire face à une dépense imprévue, pour la France et l'Union européenne à 27, par composition du ménage et position par rapport au seuil de pauvreté, chaque année depuis le début de l'enquête ; le même contenu existe en CSV, au format long, avec les drapeaux d'Eurostat.
+La part des personnes incapables de faire face à une dépense imprévue, pour la France et l’Union européenne à 27, par composition du ménage et position par rapport au seuil de pauvreté, chaque année depuis le début de l’enquête ; le même contenu existe en CSV, au format long, avec les drapeaux d’Eurostat.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat (EU-SILC)), sous leurs propres conditions.
 Toutes les ressources : données, dossiers et repères →
 Transmettre

@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /comment-lecriture-a-transforme-la-pensee/, build de fc1aa8c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /comment-lecriture-a-transforme-la-pensee/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment l’écriture a-t-elle transformé la pensée ?
 Un élève obtient d’une intelligence artificielle une réponse juste.
@@ -153,6 +153,30 @@ Aucune réponse définitive.
 Aucune doctrine close.
 Rien qu’une manière de ne pas laisser les mots dormir en paix. […] vingt-quatre siècles plus tard, il ne nous apprend pas quoi penser.
 Il nous empêche de croire trop vite que nous pensons.
+Questions fréquentes
+Qu’est-ce que l’écriture a changé dans la pensée humaine ?
+Elle a rendu possibles la fixation durable des énoncés, leur relecture, leur réorganisation et leur comparaison, et donné une portée nouvelle aux listes et aux tableaux.
+L’anthropologue Jack Goody en a fait le cœur de sa « raison graphique ».
+Mais chez les Vaï du Liberia, dont une partie apprend à écrire hors de toute école, Sylvia Scribner et Michael Cole ont trouvé des compétences liées aux usages pratiqués, non des capacités générales de raisonnement logique.
+L’écriture offre des possibilités ; leur appropriation dépend des pratiques, de la formation et des contextes.
+Pourquoi Platon critiquait-il l’écriture ?
+Le Phèdre porte deux objections distinctes.
+Le roi Thamous (275a) dit que l’écriture est un remède du rappel, non de la mémoire, et qu’elle donnera aux élèves l’apparence du savoir plutôt que le savoir.
+Socrate ajoute (275d-e) qu’un écrit, comme une peinture, garde le silence quand on l’interroge, répète toujours la même chose, ne sait pas à qui il parle et a besoin de son auteur pour se défendre.
+Platon n’interdit pas l’écrit pour autant : il l’admet comme aide-mémoire pour soi et pour ceux qui suivent la même voie (276d).
+Ce qu’il juge, c’est l’usage qui prend l’écrit pour le savoir.
+Qu’est-ce que l’imprimerie a changé par rapport à l’écriture ?
+Elle multiplie les exemplaires d’un même texte et en accroît la stabilité relative : environ cent quatre-vingts exemplaires pour la Bible de Gutenberg, au milieu des années 1450.
+L’historienne Elizabeth Eisenstein y voit une condition de la circulation et de la confrontation des savoirs ; l’historien Adrian Johns a montré que cette stabilité dépendait aussi des ateliers, du commerce et des institutions, et qu’elle ne fut ni immédiate ni garantie.
+L’imprimerie a favorisé la science moderne sans en être à elle seule la condition.
+Elle n’est pas née en Europe : le Sūtra du Diamant, imprimé en Chine, est daté de 868.
+L’intelligence artificielle est-elle une bascule comparable à l’écriture ?
+La comparaison vaut si l’on compare des fonctions : l’écriture inscrit, l’imprimerie reproduit, l’IA générative produit sur demande des textes et des synthèses.
+Une revue de recherche de l’université de Cambridge (Du et Yuan, AI & Society, 2026) propose six critères pour distinguer une dépendance utile à l’IA d’une dépendance nuisible : pouvoir contester la réponse, reconstruire le raisonnement, garder la capacité sans l’outil, remonter aux sources, savoir qui répond de quoi, voir les désaccords.
+Confrontés au Phèdre de Platon, deux de ces critères prolongent directement ses objections, deux autres en déplacent la question, la traçabilité va à rebours de Socrate, qui jugeait un discours sur sa vérité et non sur sa provenance, et la visibilité des désaccords n’y a pas d’équivalent direct.
+Où cette traversée est-elle développée ?
+Dans L’Odyssée des idées de Stéphane Lalut (nouvelle édition 2026, 682 pages) : 250 escales des premiers signes à l’intelligence artificielle, reliées par sept fils de lecture présentés en cartes, dont celui des signes.
+L’écriture, Socrate, « le philosophe sans livre », et Gutenberg y ont chacun leur escale.
 Pour aller plus loin
 Quel livre de culture générale offrir ? — si la traversée est pour quelqu’un d’autre.
 Qu’est-ce que la boucle anthropique ? — l’hypothèse de l’auteur sur l’externalisation cognitive.

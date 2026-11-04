@@ -100,6 +100,10 @@ Dans l'Union européenne à&nbsp;27, {{< imp-val "ue_total" >}}&nbsp;% des perso
 *La Société du premier coup* raconte, à partir de cas concrets, ce que coûte un échec selon la position sociale de celui qui le subit, et pourquoi certains ne peuvent pas se permettre d'essayer.
 {{< /appel-livre >}}
 
+## Questions fréquentes {#questions-frequentes}
+
+{{< faq-visible >}}
+
 ## Sources {#sources}
 
 - Eurostat, enquête européenne sur les revenus et les conditions de vie (EU-SILC), jeu [ilc_mdes04](https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes04/default/table) («&nbsp;Incapacité à faire face à des dépenses financières imprévues&nbsp;»), relevé par l'API de diffusion. Calculs de l'auteur&nbsp;: écarts entre compositions de ménage, plages annuelles.

@@ -74,4 +74,9 @@ Le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici
 
 {{< canonical-definition >}}
 
+
+## Questions fréquentes {#questions-frequentes}
+
+{{< faq-visible >}}
+
 {{< consultation slug="anthropie-ordre-ici-dette-ailleurs" >}}

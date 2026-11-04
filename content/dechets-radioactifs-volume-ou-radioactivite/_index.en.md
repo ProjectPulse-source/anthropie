@@ -108,6 +108,10 @@ Some waste does not appear in Andra's balances. The main set is the historical u
 *ANTHROPY* follows, over the long run, what each order leaves behind it and on whom it leaves the burden.
 {{< /appel-livre >}}
 
+## Frequently asked questions {#faq}
+
+{{< faq-visible >}}
+
 ## Sources {#sources}
 
 - Andra, National Inventory of radioactive materials and waste, [open files of declared waste](https://www.data.gouv.fr/datasets/inventaire-national-des-matieres-et-dechets-radioactifs) (end-2013 to end-{{< dr-val "an_vol" >}}), read by script; author's calculations: shares by category, activity variant, volumes located in Andra's disposal facilities (identified by site name).

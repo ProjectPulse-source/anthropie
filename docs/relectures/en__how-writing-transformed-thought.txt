@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /en/how-writing-transformed-thought/, build de fc1aa8c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /en/how-writing-transformed-thought/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 How did writing transform thought?
 A pupil gets a correct answer from an artificial intelligence.
@@ -154,6 +154,30 @@ No definitive answer.
 No closed doctrine.
 Nothing but a way of not letting words sleep in peace. […] twenty-four centuries later, he does not teach us what to think.
 He stops us from believing too quickly that we are thinking.
+Frequently asked questions
+What did writing change in human thought?
+It made possible the durable fixing of statements, rereading them, rearranging them and comparing them, and gave new scope to lists and tables.
+The anthropologist Jack Goody made this the core of his work (The Domestication of the Savage Mind, 1977).
+But among the Vai of Liberia, some of whom learn to write entirely outside school, Sylvia Scribner and Michael Cole found skills tied to the uses practised, not general capacities for logical reasoning.
+Writing offers possibilities; how they are taken up depends on practices, training and context.
+Why did Plato criticise writing?
+The Phaedrus carries two distinct objections.
+King Thamus (275a) says that writing is a remedy for reminding, not for memory, and that it will give pupils the appearance of wisdom rather than wisdom.
+Socrates adds (275d-e) that a written text, like a painting, keeps silent when questioned, always says the same thing, does not know whom to address and needs its author to defend it.
+Plato does not ban writing for all that: he accepts it as a store of reminders for oneself and for those who follow the same path (276d).
+What he judges is the use that mistakes writing for knowledge.
+What did the printing press change compared with writing?
+It multiplies copies of the same text and increases its relative stability: about one hundred and eighty copies of the Gutenberg Bible, in the mid-1450s.
+The historian Elizabeth Eisenstein sees in it a condition for the circulation and comparison of knowledge; the historian Adrian Johns has shown that this stability also depended on workshops, trade and institutions, and that it was neither immediate nor guaranteed.
+Printing encouraged modern science without being, on its own, its condition.
+It was not born in Europe: the Diamond Sutra, printed in China, is dated 868.
+Is artificial intelligence a shift comparable to writing?
+The comparison holds if we compare functions: writing records, printing reproduces, generative AI produces texts and syntheses on request.
+A research review from the University of Cambridge (Du and Yuan, AI & Society, 2026) proposes six criteria to tell productive reliance on AI from harmful dependence: being able to contest the answer, reconstruct the reasoning, keep the capability without the tool, trace the sources, know who answers for what, and see disagreement.
+Set against Plato’s Phaedrus, two of these criteria directly extend its objections, two others displace the question, traceability runs counter to Socrates, who judged a discourse by its truth and not by its provenance, and the visibility of disagreement has no direct counterpart there.
+Where is this journey developed?
+In Stéphane Lalut’s L’Odyssée des idées (new 2026 edition, 682 pages; in French): 250 stopovers from the first signs to artificial intelligence, linked by seven reading threads presented as maps, among them the thread of signs.
+Writing, Socrates, “the philosopher without a book”, and Gutenberg each have their own stopover.
 Further reading
 Which general-knowledge book to give as a gift? (in French) — if the journey is meant for someone else.
 What is the anthropic loop? — the author’s hypothesis on cognitive externalisation.

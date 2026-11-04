@@ -15,6 +15,12 @@ faq:
     answer: "L'externalité est une notion comptable : un coût non facturé, qu'on imagine corrigible par un prix (taxe, marché). La notion de communs négatifs conteste cette lecture : un sol pollué ou une centrale en fin de vie ne sont pas des écarts de prix mais des réalités matérielles installées, qui exigent du soin, des institutions et du travail — pas seulement une internalisation monétaire."
   - question: "Quel est le lien entre communs négatifs et anthropie ?"
     answer: "Les communs négatifs sont le transfert anthropique devenu matière : quand un système déplace son désordre (déchets, pollutions, infrastructures en fin de vie) et que le réceptacle s'accumule, ce qui reste est un héritage négatif partagé. Le working paper AWP-06 (Stéphane Lalut, 2026) range les infrastructures numériques — data centers, équipements à démanteler — parmi les communs négatifs candidats."
+  - question: "Les communs négatifs sont-ils une notion pessimiste ?"
+    answer: "Non — c'est une notion d'action. Elle déplace l'attention des seules promesses (construire, innover) vers les gestes négligés : maintenir, refermer, démanteler, dépolluer. Des métiers, des institutions et des savoir-faire entiers tiennent dans ce « soin des restes »."
+  - question: "Qui a introduit la notion ?"
+    answer: "Elle s'est stabilisée autour des travaux d'Alexandre Monnin, Emmanuel Bonnet et Diego Landivar (Héritage et fermeture, 2021 ; article « Les \"communs négatifs\" », revue Études, 2021), dans le champ de l'écologie du démantèlement et de la redirection écologique."
+  - question: "Où la trouve-t-on appliquée dans le corpus anthropique ?"
+    answer: "Dans AWP-06 (le numérique comme commun négatif candidat), au glossaire, et en filigrane de la dette technologique : une dette dont les créanciers sont les générations qui hériteront des équipements."
 fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
   lignes:
     - t: "Définition"
@@ -102,11 +108,7 @@ Le working paper [AWP-06 — *Infrastructures numériques et dette technologique
 
 ## Questions fréquentes
 
-**Les communs négatifs sont-ils une notion pessimiste&nbsp;?** Non — c'est une notion d'**action**. Elle déplace l'attention des seules promesses (construire, innover) vers les gestes négligés&nbsp;: maintenir, refermer, démanteler, dépolluer. Des métiers, des institutions et des savoir-faire entiers tiennent dans ce «&nbsp;soin des restes&nbsp;».
-
-**Qui a introduit la notion&nbsp;?** Elle s'est stabilisée autour des travaux d'Alexandre Monnin, Emmanuel Bonnet et Diego Landivar (*Héritage et fermeture*, 2021&nbsp;; article «&nbsp;Les "communs négatifs"&nbsp;», revue *Études*, 2021), dans le champ de l'écologie du démantèlement et de la redirection écologique.
-
-**Où la trouve-t-on appliquée dans le corpus anthropique&nbsp;?** Dans [AWP-06](/awp/awp-06/) (le numérique comme commun négatif candidat), au [glossaire](/glossaire/#communs-negatifs), et en filigrane de la [dette technologique](/dette-technologique/)&nbsp;: une dette dont les créanciers sont les générations qui hériteront des équipements.
+{{< faq-visible >}}
 
 ## Pour aller plus loin
 

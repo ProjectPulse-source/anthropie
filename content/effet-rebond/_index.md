@@ -17,6 +17,12 @@ faq:
     answer: "Non — l'ampleur du rebond varie selon les usages, les secteurs et les périodes, et fait l'objet d'une littérature abondante. Mais il est structurel, pas anecdotique : ignorer le rebond conduit systématiquement à surestimer les économies d'énergie attendues des politiques d'efficacité. C'est pourquoi les scénarios sérieux distinguent efficacité et sobriété."
   - question: "Quel est le lien entre l'effet rebond et l'anthropie ?"
     answer: "Dans le cadre anthropique (Stéphane Lalut), l'effet rebond est un cas d'effet boomerang : le gain d'efficacité produit un ordre local — moins d'énergie par unité — dont le coût revient sous forme d'un désordre global — plus de consommation totale. L'analyse est développée dans AWP-04, « Transition énergétique ou transfert entropique ? » (2026, DOI 10.5281/zenodo.19269244)."
+  - question: "Effet rebond, effet Jevons, paradoxe de Jevons : est-ce la même chose ?"
+    answer: "L'effet rebond est le phénomène général — toute reprise de consommation qui rogne un gain d'efficacité. On parle de paradoxe (ou effet) de Jevons dans le cas extrême où la reprise dépasse le gain : la consommation totale augmente. La définition courte est au glossaire."
+  - question: "L'effet rebond vaut-il en dehors de l'énergie ?"
+    answer: "Oui. Le mécanisme s'observe partout où un gain d'efficacité abaisse le coût d'un usage : temps de transport (les gains de vitesse ont allongé les distances plutôt que raccourci les trajets), numérique (l'efficacité des processeurs a nourri l'explosion des usages), matériaux."
+  - question: "Peut-on « corriger » l'effet rebond ?"
+    answer: "On peut le contenir — en couplant l'efficacité à des contraintes de volume — mais pas l'abolir par la seule technique : il découle des prix, pas d'une erreur des consommateurs. Le premier pas est de le compter, ce que les bilans prévisionnels des politiques d'efficacité omettent encore souvent."
 fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
   lignes:
     - t: "Définition"
@@ -103,11 +109,7 @@ La conséquence pratique est connue des scénarios énergétiques sérieux&nbsp;
 
 ## Questions fréquentes
 
-**Effet rebond, effet Jevons, paradoxe de Jevons&nbsp;: est-ce la même chose&nbsp;?** L'effet rebond est le phénomène général — toute reprise de consommation qui rogne un gain d'efficacité. On parle de paradoxe (ou effet) de Jevons dans le cas extrême où la reprise dépasse le gain&nbsp;: la consommation totale augmente. La définition courte est au [glossaire](/glossaire/#effet-jevons).
-
-**L'effet rebond vaut-il en dehors de l'énergie&nbsp;?** Oui. Le mécanisme s'observe partout où un gain d'efficacité abaisse le coût d'un usage&nbsp;: temps de transport (les gains de vitesse ont allongé les distances plutôt que raccourci les trajets), numérique (l'efficacité des processeurs a nourri l'explosion des usages), matériaux.
-
-**Peut-on «&nbsp;corriger&nbsp;» l'effet rebond&nbsp;?** On peut le contenir — en couplant l'efficacité à des contraintes de volume — mais pas l'abolir par la seule technique&nbsp;: il découle des prix, pas d'une erreur des consommateurs. Le premier pas est de le compter, ce que les bilans prévisionnels des politiques d'efficacité omettent encore souvent.
+{{< faq-visible >}}
 
 ## Pour aller plus loin
 

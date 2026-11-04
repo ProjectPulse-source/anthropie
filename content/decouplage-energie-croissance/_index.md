@@ -146,6 +146,10 @@ Sur le constat, nos chiffres concordent avec le leur&nbsp;: de 1971 à 2018, éc
 *ANTHROPIE* suit, sur le temps long, ce que chaque ordre laisse derrière lui, et sur qui il en reporte la charge.
 {{< /appel-livre >}}
 
+## Questions fréquentes {#questions-frequentes}
+
+{{< faq-visible >}}
+
 ## Sources {#sources}
 
 - EIA (U.S. Energy Information Administration), [données internationales](https://www.eia.gov/international/data/world), fichier groupé `INTL.zip` lu par script&nbsp;: consommation totale d'énergie, PIB en parité de pouvoir d'achat, population. Convention de mesure relevée dans le même fichier (production et consommation d'électricité hydraulique, éolienne, solaire et nucléaire). Calculs de l'auteur&nbsp;: décomposition par l'indice de Divisia logarithmique moyen.

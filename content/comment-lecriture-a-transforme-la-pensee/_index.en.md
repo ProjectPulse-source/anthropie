@@ -163,6 +163,10 @@ The book [*L'Odyssée des idées*](/livres/lodyssee-des-idees/) (in French; new 
 
 > No definitive answer. No closed doctrine. Nothing but a way of not letting words sleep in peace. […] twenty-four centuries later, he does not teach us what to think. He stops us from believing too quickly that we are thinking.
 
+## Frequently asked questions {#faq}
+
+{{< faq-visible >}}
+
 ## Further reading {#further-reading}
 
 - [Which general-knowledge book to give as a gift?](/offrir-un-livre-de-culture-generale/) (in French) — if the journey is meant for someone else.

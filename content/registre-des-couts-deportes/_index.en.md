@@ -74,3 +74,7 @@ Another limit, assumed by the book: the Register's categories—economic, social
 ## Where this register comes from
 
 [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 pages) develops each milestone as a chapter, sums up each age in an "order created / disorder displaced" diagram, and draws the overall trajectory in its afterword; it points to this page through a QR code ("Going Further," p. 631). The Register condenses each chapter onto the common grid, in the author’s words; each milestone sits in the age of its chapter, with the page numbers of the 644-page edition. When the book is corrected, the Register follows: revisions are logged at the foot of the page. The working vocabulary of the framework is defined in the [glossary](/en/glossaire/)—not to be confused with the [coupled cost registers](/en/glossaire/#coupled-cost-registers) of AWP-06, a typology rather than a chronology. The French version is browsable at [Le Registre des coûts déportés](/registre-des-couts-deportes/).
+
+## Frequently asked questions {#faq}
+
+{{< faq-visible >}}
