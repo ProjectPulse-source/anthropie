@@ -107,6 +107,8 @@ Trois opérations transforment un coût d'infrastructure en dette&nbsp;:
 
 Les data centers rendent le mécanisme visible. Leur promesse est immatérielle — «&nbsp;le cloud&nbsp;» — mais leur réalité engage les quatre registres à la fois&nbsp;: une consommation d'électricité et d'eau contractualisée sur des décennies, des matériaux extraits ailleurs, des emprises foncières et des réseaux dimensionnés pour eux, et une captation de l'attention des usagers. Le débat public se concentre sur le «&nbsp;combien&nbsp;» (kilowattheures, mètres cubes)&nbsp;; la dette technologique pose l'autre question&nbsp;: **qui s'est engagé, pour combien de temps, et qui portera le coût si la promesse change&nbsp;?**
 
+Ce que représentent ces engagements sur le réseau électrique français, en chiffres&nbsp;: la page de données [Data centers&nbsp;: les gigawatts réservés annoncent-ils la consommation&nbsp;?](/data-centers-puissance-reservee/) distingue ce que les data centers réservent sur le réseau, ce qu'ils consomment et ce que RTE projette&nbsp;: une réservation de raccordement n'y est encore ni une consommation, ni un engagement irréversible.
+
 ## D'où vient le concept
 
 {{< canonical-definition >}}

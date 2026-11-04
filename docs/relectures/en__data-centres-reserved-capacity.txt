@@ -1,0 +1,127 @@
+# relu le 2026-11-04 ; texte servi de /en/data-centres-reserved-capacity/, build de bc673b5 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+Data centres: do reserved gigawatts foretell consumption?
+The figure that circulates is that of reservations: nearly 18 gigawatts in May 2026, against about 5 at end-2024.
+But reserved capacity is not consumption.
+More than half of the capacity reserved in November 2025 is for commissioning from 2030, other reservations have already been abandoned, and the data centres connected to the transmission grid consumed nearly 1 terawatt-hour in 2025.
+Page published 27 October 2026
+↓ Charts, data and citations to reuseReuse this page
+Data as of: 27 October 2026 RTE, Bilan prévisionnel 2025-2035 (December 2025), Bilan électrique 2025 (February 2026) and web page “Les data centers en chiffres clés” (updated 1 June 2026): values read in the text, breakdown by status measured on a figure.
+Download: CSV · JSON
+What is reserved, what is consumed
+In May 2026, according to RTE, France’s transmission system operator, data centres had reserved nearly 18 gigawatts (GW) of connection capacity on its grid, for about 80 projects.
+At end-2024, some forty projects totalled about 5 GW: in less than a year and a half, reserved capacity more than tripled.
+At end-November 2025, data centres held 14 GW of the roughly 30 GW of access rights granted by RTE to large projects, ahead of hydrogen (9.5 GW) and industry (6.5 GW).
+Consumption, for its part, is counted in terawatt-hours (TWh).
+Dedicated-site data centres connected to RTE’s transmission grid consumed 0.8 TWh in 2024 and nearly 1 TWh in 2025; those on the distribution grid run by Enedis, 3 TWh in 2024.
+RTE estimates all dedicated sites at 4 to 5 TWh in 2024, and 5 to 10 TWh including the in-house server rooms of companies and public bodies.
+Reserved capacity is not consumption.
+A reservation guarantees access to the grid; it says neither whether the site will be built, nor when, nor at what power it will run.
+The figure places the two quantities one above the other, each on its own scale, without relating one to the other.
+Reserved grid connection capacity (GW) and electricity consumption (TWh per year) of data centres, according to RTE; November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel 2025-2035.
+The result in one sentence.
+In November 2025, data centres had reserved 14 GW of grid connection capacity with RTE, 7.6 GW of it for commissioning from 2030; those connected to RTE’s grid consumed nearly 1 TWh in 2025.
+Does a reservation foretell consumption?
+Two readings of the reservation figure circulate.
+The first sees in it announced, and imminent, consumption: it is the reading that any conversion of reserved gigawatts into nuclear reactors or households assumes.
+The second sees an option on the grid, part of which will materialise slowly and part never: this is the reading of RTE, which grants these reservations and is preparing a reform of their queue.
+It is not neutral for all that: it also supports the case for that reform.
+The reservations themselves settle one point between them: timing.
+On 1 November 2025, of the capacity reserved by data centres (measured on an RTE figure, to within 0.1 GW), 1.0 GW was under construction, 5.1 GW signed for commissioning between 2025 and 2029, 7.6 GW for commissioning from 2030 and 0.2 GW suspended.
+More than half of the reserved capacity therefore targets 2030 or later.
+And since 2023, reservations totalling about 0.9 GW have been abandoned, against 0.4 GW of projects actually connected.
+The eight data centres directly connected to RTE’s grid total 800 megawatts.
+RTE gives three reasons for this gap between reservation and consumption.
+Some developers have secured grid access at several points for what are in fact similar projects.
+Sites ramp up slowly: according to the main operators, cited by RTE, it takes ten to fifteen years to reach about 80% of the capacity requested, because the very expensive servers are installed only as usage grows.
+Finally, the power drawn stays below the connection capacity: RTE observes that data centres connected to its grid for two to three years consume for now, on average, only 20% of the capacity they requested.
+This graph settles a question of timing, not of volume.
+It shows that reserved capacity translates into consumption neither immediately nor in full; it does not say what share will materialise by 2035.
+What RTE projects
+In its Bilan prévisionnel 2025-2035, RTE retains two pathways for the consumption of dedicated-site data centres: 10 to 15 TWh in 2030, 21 to 32 TWh in 2035.
+The higher one assumes that about 60% of the projects that requested a transmission-grid connection for commissioning before 2030 materialise (4.3 GW), and that these sites use on average 20% of their connection capacity by then; the lower one, a materialisation rate of about 30%.
+These are assumptions, not measurements.
+RTE itself gives the order of magnitude of what these assumptions set aside: if all the roughly 30 GW reserved by large projects, data centres, hydrogen and industry together, ran at full power all year, consumption would theoretically reach about 240 TWh, “a level out of all proportion” with its assumptions.
+RTE’s publications do not all give the same figures.
+Its web page “Les data centers en chiffres clés”, updated on 1 June 2026, attributes to the same Bilan prévisionnel a consumption of 15 to 20 TWh in 2030 and 23 to 28 TWh in 2035 “in a rapid decarbonisation pathway”, and a current consumption of about 10 TWh.
+The published document gives 15 and 32 TWh for that pathway, and 4 to 5 TWh in 2024 for dedicated sites.
+This page follows the published document; the web page does not explain the gap.
+Does a reservation already commit the public?
+Not irreversibly yet.
+At its holder’s request, a reservation can be suspended for one year, renewable once: the capacity remains guaranteed, but the financial and timing conditions may be revised.
+It can also be abandoned: this has happened to about 0.9 GW of data-centre reservations since 2023.
+What could commit the public durably lies elsewhere: in the grid infrastructure built to host these sites, and in how it is financed.
+This page does not measure it.
+RTE itself calls the current reservation system, based on “first come, first served”, “not very binding”, and notes that it can delay or block the connection of other projects; it has announced a reform based instead on “first ready, first served”.
+What these data do not say
+A single producer, and a stakeholder.
+All values come from RTE, which grants the reservations and is reforming their queue; distribution-grid consumption is taken from RTE, not read at Enedis.
+Two quantities that cannot be compared.
+Reserved capacity (GW) is neither power drawn nor consumption (TWh); no ratio is computed between them.
+The 20% rate cited above is RTE’s observation of sites connected for two to three years.
+A breakdown measured on a figure.
+The breakdown by status is read from figure 2.3 of the Bilan prévisionnel, to within 0.1 GW, as of 1 November 2025; the 14 GW total is dated end-November.
+The measured sum, 13.9 GW, matches it to within 0.1 GW.
+Pathways, not forecasts.
+They rest on assumed materialisation and utilisation rates.
+Neither water, nor land, nor grid costs are measured here.
+A reading by the author, not tested here.
+The economist Stéphane Lalut calls technological debt the cost of digital infrastructure converted into commitments that others will bear (working paper AWP-06).
+The figures on this page show that a grid connection reservation is not yet such a commitment; they do not measure those that would be.
+To take the question further
+ANTHROPY – A Big History of Civilization’s Hidden Costs
+Seven ages of history for a single hypothesis: disorder is never resolved, only displaced.
+ANTHROPY follows, over the long run, what each constructed order commits, and who bears the burden.
+$29.99paperback, 644 pagesKindle
+Buy the paperback — $29.99Kindle edition
+Contents, excerpts and reviews →
+Frequently asked questions
+How much grid capacity have data centres reserved in France?
+According to RTE, nearly 18 gigawatts in May 2026, for about 80 projects, against about 5 at end-2024.
+In November 2025, of 14 GW reserved, 7.6 GW was for commissioning from 2030, and reservations totalling about 0.9 GW had been abandoned since 2023.
+How much electricity do data centres consume in France?
+Dedicated-site data centres connected to RTE’s transmission grid consumed nearly 1 TWh in 2025, against 0.8 TWh in 2024; those on Enedis’s distribution grid, 3 TWh in 2024.
+RTE estimates all dedicated sites at 4 to 5 TWh in 2024, and its two pathways give 10 to 15 TWh in 2030.
+Where do these figures come from?
+From three RTE publications (Bilan prévisionnel 2025-2035, Bilan électrique 2025, web page “Les data centers en chiffres clés”), downloaded by a script that reads each value in the sentence that carries it, measures the breakdown by status on a figure of the Bilan prévisionnel, and stops if a figure no longer meets the conditions on which the page’s main sentences depend.
+The data can be downloaded as CSV and JSON, under a CC BY 4.0 licence.
+Sources
+RTE, Bilan prévisionnel 2025-2035, La consommation d’électricité (December 2025, in French): chapter 2.1.3 (reservations, reductions, theoretical consumption, suspension of reservations, connection reform) and 2.5 (data-centre consumption, pathways, assumptions); figure 2.3 (reservations by status, measured by script) and figure 2.10 (pathways).
+RTE, Bilan électrique 2025, principaux résultats (February 2026, in French): access rights by sector at end-November 2025, consumption of data centres connected to the transmission and distribution grids.
+RTE, “Les data centers en chiffres clés” (in French), page updated on 1 June 2026: reservations at end-2024 and in May 2026, connected sites, observed utilisation rate, ramp-up time, cited projections.
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Data centres: capacity reserved on the grid and electricity consumed
+In November 2025, data centres had reserved 14 GW with RTE, 7.6 GW of it for commissioning from 2030; those connected to RTE’s grid consumed nearly 1 TWh in 2025.
+Reading caveat.
+Reserved capacity is neither power drawn nor consumption: the two panels are not comparable, and no ratio is computed between them.
+Pathways: RTE’s assumptions, not measurements.
+RTE: Bilan prévisionnel 2025-2035 (Dec.
+2025), Bilan électrique 2025 (Feb.
+2026), web page “Les data centers en chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“Data centres: do reserved gigawatts foretell consumption?”.
+RTE data, retrieved 27 October 2026. https://stephane-lalut.com/en/data-centres-reserved-capacity/
+Copy citation
+In three sentences
+In November 2025, data centres had reserved 14 GW of grid connection capacity with RTE, 7.6 GW of it for commissioning from 2030, and reservations totalling about 0.9 GW had been abandoned since 2023.
+Those connected to RTE’s grid consumed nearly 1 TWh in 2025; RTE retains 10 to 15 TWh in 2030 for all dedicated sites.
+Copy summary
+The data
+Capacity reserved by data centres (end-2024, November 2025, May 2026), November 2025 breakdown by status, metered, estimated and projected consumption; for each value, its nature (read in the text or measured on the figure) and its source, as CSV in long format.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (RTE), under their own terms.
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link

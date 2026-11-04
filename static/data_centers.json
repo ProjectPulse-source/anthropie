@@ -1,0 +1,204 @@
+{
+ "releve_le": "2026-10-27",
+ "_licence": "CC BY 4.0 — calcul et mesures Stéphane Lalut ; source RTE",
+ "meta": {
+  "page": "https://stephane-lalut.com/data-centers-puissance-reservee/",
+  "licence": "CC BY 4.0",
+  "sources": {
+   "bp": {
+    "url": "https://assets.rte-france.com/prod/public/2025-12/2025-12-23-bilan-previsionnel-2025-consommation.pdf",
+    "titre": "RTE, Bilan prévisionnel 2025-2035, La consommation d'électricité (décembre 2025)",
+    "sha256": "da9540b6d7443ac59b8e08fd10f691b29f6e279025a805c8fe4be8d904187467"
+   },
+   "be": {
+    "url": "https://assets.rte-france.com/prod/public/2026-02/Bilan-electrique-2025-principaux-resultats.pdf",
+    "titre": "RTE, Bilan électrique 2025, principaux résultats (février 2026)",
+    "sha256": "eb662c7bf43eee4766d289a9e5af4a4a3a4543cc1916cc5efc44e368a9fe57ce"
+   },
+   "web": {
+    "url": "https://www.rte-france.com/bases-electricite/consommation-electricite/essor-data-centers-france",
+    "titre": "RTE, « Les data centers en chiffres clés » (page web)",
+    "mise_a_jour": "2026-06-01",
+    "publication": "2025-05-21"
+   }
+  },
+  "nature_des_valeurs": {
+   "lue dans le texte": "capturée par le script dans la phrase de la publication qui la porte",
+   "mesurée sur la figure": "lue par le script sur la géométrie vectorielle du PDF ; témoins : totaux écrits par RTE (figure 2.3), valeurs de 2035 écrites et étiquettes (figure 2.10)"
+  },
+  "date_repartition_par_statut": "2025-11-01",
+  "avertissement": "Une puissance de raccordement réservée n'est ni une puissance appelée ni une consommation ; aucun rapport n'est calculé entre GW et TWh."
+ },
+ "valeurs": {
+  "res_mai2026": 18.0,
+  "projets_2026": 80.0,
+  "res_fin2024": 5.0,
+  "sites_rte_l": "Huit",
+  "mw_rte": 800.0,
+  "util_obs": 20.0,
+  "montee": "dix à quinze ans",
+  "montee_pct": 80.0,
+  "web_conso": 10.0,
+  "w30_bas": 15.0,
+  "w30_haut": 20.0,
+  "w35_bas": 23.0,
+  "w35_haut": 28.0,
+  "tot_nov2025": 30.0,
+  "res_nov2025": 14.0,
+  "tot_h2": 9.5,
+  "tot_ind": 6.5,
+  "rpt_2025": 1.0,
+  "rpt_2024": 0.8,
+  "enedis_2024": 3.0,
+  "sd_bas": 4.0,
+  "sd_haut": 5.0,
+  "int_bas": 5.0,
+  "int_haut": 10.0,
+  "r2035": 32.0,
+  "l2035": 21.0,
+  "concret_r": 60.0,
+  "concret_r_gw": 4.3,
+  "concret_l": 30.0,
+  "util_2030": 20.0,
+  "theo_twh": 240.0,
+  "date_fig23": "1er novembre 2025"
+ },
+ "repartition_novembre_2025_gw": {
+  "raccorde_depuis_2023": 0.4,
+  "travaux": 1.0,
+  "signe_2025_2029": 5.1,
+  "signe_2030": 7.6,
+  "suspendu": 0.2,
+  "abandonne_depuis_2023": 0.9
+ },
+ "temoin_figure_2_3": {
+  "totaux_ecrits_gw": {
+   "centres_de_donnees": 14.0,
+   "hydrogene": 9.5,
+   "industrie": 6.5
+  },
+  "totaux_mesures_gw": {
+   "centres_de_donnees": 13.901119087812893,
+   "hydrogene": 9.500685569505281,
+   "industrie": 6.500693436758133
+  }
+ },
+ "trajectoires_twh": {
+  "2030": [
+   10.0,
+   15.0
+  ],
+  "2035": [
+   21.0,
+   32.0
+  ],
+  "traces_mesures": {
+   "lente": {
+    "2030": 10.411728453222427,
+    "2035": 21.332513038473436
+   },
+   "rapide": {
+    "2030": 14.911953845708778,
+    "2035": 31.68511805424445
+   }
+  }
+ },
+ "affichage": {
+  "res_fin2024": "5",
+  "res_nov2025": "14",
+  "res_mai2026": "18",
+  "projets_2026": "80",
+  "tot_nov2025": "30",
+  "tot_h2": "9,5",
+  "tot_ind": "6,5",
+  "rac_gw": "0,8",
+  "rac_mw": "800",
+  "sites_rte": "huit",
+  "util_obs": "20",
+  "util_2030": "20",
+  "montee_pct": "80",
+  "rpt_2024": "0,8",
+  "rpt_2025": "1",
+  "enedis_2024": "3",
+  "sd_bas": "4",
+  "sd_haut": "5",
+  "int_bas": "5",
+  "int_haut": "10",
+  "web_conso": "10",
+  "l2030": "10",
+  "r2030": "15",
+  "l2035": "21",
+  "r2035": "32",
+  "w30_bas": "15",
+  "w30_haut": "20",
+  "w35_bas": "23",
+  "w35_haut": "28",
+  "concret_r": "60",
+  "concret_l": "30",
+  "concret_r_gw": "4,3",
+  "theo_twh": "240",
+  "st_travaux": "1,0",
+  "st_2529": "5,1",
+  "st_2030": "7,6",
+  "st_suspendu": "0,2",
+  "st_abandon": "0,9",
+  "st_raccorde": "0,4",
+  "st_avant2030": "6,1",
+  "part_2030": "55",
+  "actif_dc": "13,9",
+  "date_web": "1er juin 2026",
+  "date_fig23": "1er novembre 2025",
+  "montee": "dix à quinze ans",
+  "pct": " %",
+  "deux_points": " : "
+ },
+ "affichage_en": {
+  "res_fin2024": "5",
+  "res_nov2025": "14",
+  "res_mai2026": "18",
+  "projets_2026": "80",
+  "tot_nov2025": "30",
+  "tot_h2": "9.5",
+  "tot_ind": "6.5",
+  "rac_gw": "0.8",
+  "rac_mw": "800",
+  "sites_rte": "eight",
+  "util_obs": "20",
+  "util_2030": "20",
+  "montee_pct": "80",
+  "rpt_2024": "0.8",
+  "rpt_2025": "1",
+  "enedis_2024": "3",
+  "sd_bas": "4",
+  "sd_haut": "5",
+  "int_bas": "5",
+  "int_haut": "10",
+  "web_conso": "10",
+  "l2030": "10",
+  "r2030": "15",
+  "l2035": "21",
+  "r2035": "32",
+  "w30_bas": "15",
+  "w30_haut": "20",
+  "w35_bas": "23",
+  "w35_haut": "28",
+  "concret_r": "60",
+  "concret_l": "30",
+  "concret_r_gw": "4.3",
+  "theo_twh": "240",
+  "st_travaux": "1.0",
+  "st_2529": "5.1",
+  "st_2030": "7.6",
+  "st_suspendu": "0.2",
+  "st_abandon": "0.9",
+  "st_raccorde": "0.4",
+  "st_avant2030": "6.1",
+  "part_2030": "55",
+  "actif_dc": "13.9",
+  "date_web": "1 June 2026",
+  "date_fig23": "1 November 2025",
+  "montee": "ten to fifteen years",
+  "pct": "%",
+  "deux_points": ": "
+ }
+}

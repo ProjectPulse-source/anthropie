@@ -578,6 +578,42 @@ FR (« détectée, non indexée »). 77 % des impressions des ressources (42 418
 - **Ouvert** : `update_dette_dynamique.py --check` refuse l'édition Eurostat du 21/10/2026 (garde de « Ce qu'il faut
   retenir » de `/pourquoi-la-dette-publique-augmente/`) ; jeu `dette_dynamique` au relevé du 18/10. Phrase à réécrire.
 
+### 2026-10-27 — G4 : page « Data centers : les gigawatts réservés annoncent-ils la consommation ? »
+
+Graphe G4 de l'arbitrage PRO-20261026-033434 (accepté avec modification, en file), lancé sur demande de l'auteur. Sa
+condition est remplie : les chiffres viennent de trois publications de RTE, lues et datées (Bilan prévisionnel 2025-2035,
+décembre 2025 ; Bilan électrique 2025, février 2026 ; page « Les data centers en chiffres clés », 1er juin 2026).
+- **Page** `/data-centers-puissance-reservee/` · `/en/data-centres-reserved-capacity/`, bloc « guides ». Deux panneaux,
+  les GW réservés et les TWh consommés ou projetés, sans aucun rapport calculé entre les deux.
+- **Constats.** Les réservations des data centers ont plus que triplé : environ 5 GW fin 2024, 14 GW en novembre 2025,
+  près de 18 GW en mai 2026. Sur les 14 GW de novembre 2025, 7,6 visent une mise en service à partir de 2030 et environ
+  0,9 GW a été abandonné depuis 2023. La consommation mesurée sur le réseau de transport est de 0,8 TWh en 2024 et de
+  près de 1 TWh en 2025. Les trajectoires de RTE vont de 10 à 15 TWh en 2030.
+- **Générateur** `scripts/update_data_centers.py`.
+  - Chaque valeur est lue par script dans la phrase qui la porte, une seule occurrence étant exigée.
+  - La répartition par statut est mesurée sur la géométrie de la figure 2.3. Le témoin, ce sont les trois totaux écrits
+    par RTE, retrouvés : 13,9 / 9,5 / 6,5 GW.
+  - Les trajectoires sont mesurées sur la figure 2.10. Le témoin, ce sont les étiquettes et les valeurs de 2035 écrites.
+  - 14 gardes et 13 mutations, chacune vue mordre. Rien n'est réécrit à sortie identique.
+- **Défaut trouvé et rendu impossible.** La première expression lisait le taux d'utilisation d'un autre secteur (60 %
+  au lieu de 20 %), sans erreur.
+- **Écart dit sur la page.** La page web de RTE attribue au Bilan prévisionnel 15 à 20 TWh en 2030 et 23 à 28 TWh en
+  2035 ; le PDF donne 15 et 32 TWh. La garde tombera si RTE aligne ses deux publications.
+- **Organes.**
+  - shortcode `dtc-val` et jetons `{dtc.*}` (`desc-figures.html`) ;
+  - carte et vignette (`og_data_centers.py`) ;
+  - workflow `dette-monde.yml` (`pymupdf` épinglé ; un arrêt avertit sans bloquer les autres jeux) ;
+  - `llms.txt` ;
+  - renvoi sans chiffre depuis `/dette-technologique/` (FR, EN).
+- **Contrôles.**
+  - `check-all --ci` à 0, build 0, `audit-liens-build` 0, rendu et dates conformes ;
+  - recette 12/12 ;
+  - LanguageTool FR et EN : faux positifs ;
+  - relecture phrase à phrase faite, avec quatre corrections (fiche, « Étapes ») ;
+  - instantanés de relecture FR et EN.
+- **Ouvert.** Contre-expertise de la page et test de compréhension : à décider par l'auteur. Le commit et la mise en
+  ligne attendent sa demande.
+
 ### 2026-10-26 (suite 7) — G2 : contre-expertise arbitrée et appliquée
 
 Réponse reçue hors navette (`Ressources++-02.txt`, SHA-256 `c1b8e19b…3362`, archivée avant lecture), arbitrage

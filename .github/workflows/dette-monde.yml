@@ -79,6 +79,12 @@ jobs:
           # Page « L'economie mondiale se decouple-t-elle de l'energie ? » (26/10/2026) : EIA (fichier groupe INTL.zip,
           # sans cle), temoin Energy Institute (depot owid/energy-data) et Banque mondiale ; annuelles, cadence hebdomadaire.
           python3 scripts/update_decouplage.py || echecs="$echecs decouplage"
+          # Page « Data centers : les gigawatts reserves annoncent-ils la consommation ? » (27/10/2026) : trois publications de
+          # RTE (deux PDF, une page web), relues a chaque passage. Une phrase reformulee par RTE arrete le script SANS rien
+          # ecrire : l'avertissement suffit (les donnees publiees restent celles du dernier releve), et l'echec ne doit pas
+          # bloquer la mise a jour des autres jeux de ce workflow.
+          python3 -m pip install --quiet pymupdf==1.25.2
+          python3 scripts/update_data_centers.py || echo "::warning::update_data_centers.py arrete : relire les publications de RTE (phrase ou figure changee)"
 
           echo "echecs=$echecs" >> "$GITHUB_OUTPUT"
           [ -z "$echecs" ] || echo "::warning::Jeux en echec :$echecs -- les autres sont publies"
@@ -108,6 +114,12 @@ jobs:
           else
             python3 -m pip install --quiet pillow==12.2.0
             python3 scripts/og_dechets_radioactifs.py
+          fi
+          if git diff --quiet -- data/data_centers.json; then
+            echo "Jeu data_centers inchange : carte non redessinee."
+          else
+            python3 -m pip install --quiet pillow==12.2.0
+            python3 scripts/og_data_centers.py
           fi
           if git diff --quiet -- data/decouplage.json; then
             echo "Jeu decouplage inchange : carte non redessinee."
@@ -178,7 +190,7 @@ jobs:
                   static/img/dette-generations-actifs-en.svg static/img/dette-generations-actifs-en.png \
                   static/img/dette-generations-detention-en.svg static/img/dette-generations-detention-en.png \
                   static/img/dette-generations-vieillissement-en.svg static/img/dette-generations-vieillissement-en.png \
-                  static/img/dette-generations-*-m.svg static/img/dette-generations-*-m.png                   data/menages_imprevu.json static/menages_imprevu.json static/menages_imprevu.csv data/figures_imprevu.json                   static/img/imprevu-menages*.svg static/img/imprevu-menages*.png                   static/images/og-imprevu-menages.jpg static/images/og-imprevu-menages-en.jpg                   static/images/vig-imprevu-menages.jpg static/images/vig-imprevu-menages-en.jpg                   data/dechets_radioactifs.json static/dechets_radioactifs.json static/dechets_radioactifs.csv data/figures_dechets.json                   static/img/dechets-volume-activite*.svg static/img/dechets-volume-activite*.png                   static/images/og-dechets-radioactifs.jpg static/images/og-dechets-radioactifs-en.jpg                   static/images/vig-dechets-radioactifs.jpg static/images/vig-dechets-radioactifs-en.jpg                   data/decouplage.json static/decouplage.json static/decouplage.csv data/figures_decouplage.json                   static/img/decouplage-decomposition*.svg static/img/decouplage-decomposition*.png                   static/images/og-decouplage.jpg static/images/og-decouplage-en.jpg                   static/images/vig-decouplage.jpg static/images/vig-decouplage-en.jpg
+                  static/img/dette-generations-*-m.svg static/img/dette-generations-*-m.png                   data/menages_imprevu.json static/menages_imprevu.json static/menages_imprevu.csv data/figures_imprevu.json                   static/img/imprevu-menages*.svg static/img/imprevu-menages*.png                   static/images/og-imprevu-menages.jpg static/images/og-imprevu-menages-en.jpg                   static/images/vig-imprevu-menages.jpg static/images/vig-imprevu-menages-en.jpg                   data/dechets_radioactifs.json static/dechets_radioactifs.json static/dechets_radioactifs.csv data/figures_dechets.json                   static/img/dechets-volume-activite*.svg static/img/dechets-volume-activite*.png                   static/images/og-dechets-radioactifs.jpg static/images/og-dechets-radioactifs-en.jpg                   static/images/vig-dechets-radioactifs.jpg static/images/vig-dechets-radioactifs-en.jpg                   data/decouplage.json static/decouplage.json static/decouplage.csv data/figures_decouplage.json                   static/img/decouplage-decomposition*.svg static/img/decouplage-decomposition*.png                   static/images/og-decouplage.jpg static/images/og-decouplage-en.jpg                   static/images/vig-decouplage.jpg static/images/vig-decouplage-en.jpg                   data/data_centers.json static/data_centers.json static/data_centers.csv data/figures_data_centers.json                   static/img/data-centers-reserve-consomme*.svg static/img/data-centers-reserve-consomme*.png                   static/images/og-data-centers.jpg static/images/og-data-centers-en.jpg                   static/images/vig-data-centers.jpg static/images/vig-data-centers-en.jpg
           git commit -m "data(dette-monde): Eurostat/OCDE/FMI/Banque mondiale du $(date -u +%Y-%m-%d)"
           pushed=0
           for attempt in 1 2 3; do

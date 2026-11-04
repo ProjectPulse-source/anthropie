@@ -108,6 +108,8 @@ Three operations turn an infrastructure cost into a debt:
 
 Data centers make the mechanism visible. Their promise is immaterial — "the cloud" — but their reality engages all four registers at once: electricity and water consumption contracted over decades, materials extracted elsewhere, land footprints and networks sized for them, and the capture of users' attention. Public debate focuses on "how much" (kilowatt-hours, cubic metres); technological debt poses the other question: **who has committed, for how long, and who will bear the cost if the promise changes?**
 
+What these commitments amount to on the French electricity grid, in figures: the data page [Data centres: do reserved gigawatts foretell consumption?](/en/data-centres-reserved-capacity/) separates what data centres reserve on the grid, what they consume and what RTE projects; a grid connection reservation is not yet consumption, nor an irreversible commitment.
+
 ## Where the concept comes from
 
 {{< canonical-definition >}}

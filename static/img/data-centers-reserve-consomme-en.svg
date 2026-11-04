@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 539" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dtc-t dtc-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="dtc-t">Data centres: capacity reserved on the grid and electricity consumed</title><desc id="dtc-d">Two panels, two quantities. Grid connection capacity reserved by data centres with RTE: about 5 GW at end-2024, 14 GW in November 2025 (of which 6.1 GW for commissioning before 2030, 7.6 GW from 2030 and 0.2 GW suspended), nearly 18 GW in May 2026; 0.8 GW already connected to RTE's grid (eight sites); about 0.9 GW abandoned since 2023. Consumption of dedicated-site data centres: 0.8 TWh in 2024 and nearly 1 TWh in 2025 metered on RTE's grid; 4 to 5 TWh estimated for all of them in 2024; 10 to 15 TWh in 2030 and 21 to 32 TWh in 2035 in RTE's two pathways.</desc>
+<rect width="720" height="539" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Data centres: capacity reserved on the grid and electricity consumed</text>
+<text x="0" y="50" font-size="12" font-weight="600" fill="#184f95">Grid connection capacity reserved with RTE, in gigawatts (GW)</text>
+<text x="0" y="81" font-size="11" fill="#26262f">End-2024</text>
+<rect x="250.0" y="68.0" width="82.5" height="18" fill="#184f95"/>
+<text x="338.5" y="81" font-size="11" font-weight="600" fill="#184f95">about 5 GW</text>
+<text x="0" y="115" font-size="11" fill="#26262f">November 2025</text>
+<rect x="250.0" y="102.0" width="100.7" height="18" fill="#184f95"/>
+<rect x="350.7" y="102.0" width="125.4" height="18" fill="#9db7da"/>
+<rect x="476.1" y="102.0" width="3.3" height="18" fill="#8a8781"/>
+<text x="485.4" y="115" font-size="11" font-weight="600" fill="#184f95">14 GW</text>
+<text x="0" y="149" font-size="11" fill="#26262f">May 2026</text>
+<rect x="250.0" y="136.0" width="297.0" height="18" fill="#184f95"/>
+<text x="553.0" y="149" font-size="11" font-weight="600" fill="#184f95">nearly 18 GW</text>
+<text x="0" y="183" font-size="11" fill="#26262f">Already connected to RTE's grid</text>
+<text x="0" y="195" font-size="11" fill="#26262f">(eight sites)</text>
+<rect x="250.0" y="170.0" width="13.2" height="18" fill="#8a8781"/>
+<text x="269.2" y="183" font-size="11" font-weight="600" fill="#55524f">0.8 GW</text>
+<rect x="250" y="204" width="10" height="10" fill="#184f95"/>
+<text x="264" y="213" font-size="11" fill="#55524f">commissioning planned before 2030: 6.1 GW</text>
+<rect x="509" y="204" width="10" height="10" fill="#9db7da"/>
+<text x="523" y="213" font-size="11" fill="#55524f">from 2030: 7.6 GW</text>
+<text x="250" y="230" font-size="11" fill="#55524f">Suspended (grey): 0.2 GW · abandoned since 2023: about 0.9 GW</text>
+<text x="0" y="268" font-size="12" font-weight="600" fill="#eb6834">Electricity consumption of dedicated-site data centres, in terawatt-hours per year (TWh)</text>
+<text x="0" y="299" font-size="11" fill="#26262f">2024, metered (RTE's grid)</text>
+<rect x="250.0" y="286.0" width="7.5" height="18" fill="#eb6834"/>
+<text x="263.5" y="299" font-size="11" font-weight="600" fill="#eb6834">0.8 TWh</text>
+<text x="0" y="333" font-size="11" fill="#26262f">2025, metered (RTE's grid)</text>
+<rect x="250.0" y="320.0" width="9.4" height="18" fill="#eb6834"/>
+<text x="265.4" y="333" font-size="11" font-weight="600" fill="#eb6834">nearly 1 TWh</text>
+<text x="0" y="367" font-size="11" fill="#26262f">2024, estimated by RTE (all</text>
+<text x="0" y="379" font-size="11" fill="#26262f">dedicated sites)</text>
+<rect x="250.0" y="354.0" width="37.7" height="18" fill="#f5b89c"/>
+<rect x="287.7" y="354" width="9.4" height="17" fill="#ffffff" stroke="#eb6834" stroke-width="1"/>
+<text x="303.1" y="367" font-size="11" font-weight="600" fill="#eb6834">4 to 5 TWh</text>
+<text x="0" y="401" font-size="11" fill="#26262f">2030, two RTE pathways</text>
+<rect x="250.0" y="388.0" width="94.3" height="18" fill="#f5b89c"/>
+<rect x="344.3" y="388" width="47.1" height="17" fill="#ffffff" stroke="#eb6834" stroke-width="1"/>
+<text x="397.4" y="401" font-size="11" font-weight="600" fill="#eb6834">10 to 15 TWh</text>
+<text x="0" y="435" font-size="11" fill="#26262f">2035, two RTE pathways</text>
+<rect x="250.0" y="422.0" width="198.0" height="18" fill="#f5b89c"/>
+<rect x="448.0" y="422" width="103.7" height="17" fill="#ffffff" stroke="#eb6834" stroke-width="1"/>
+<text x="557.7" y="435" font-size="11" font-weight="600" fill="#eb6834">21 to 32 TWh</text>
+<line x1="0" y1="460.0" x2="720" y2="460.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="475.0" font-size="11" fill="#55524f">RTE: Bilan prévisionnel 2025-2035 (Dec. 2025), Bilan électrique 2025 (Feb. 2026), web page “Les data centers en</text>
+<text class="pied-source" x="0" y="489.0" font-size="11" fill="#55524f">chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel</text>
+<text class="pied-note" x="0" y="503.0" font-size="11" fill="#55524f">Reserved capacity is neither power drawn nor consumption: the two panels are not comparable, and no ratio is computed</text>
+<text class="pied-note" x="0" y="517.0" font-size="11" fill="#55524f">between them. Pathways: RTE's assumptions, not measurements.</text>
+<text class="pied-licence" x="0" y="531.0" font-size="11" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/data-centres-reserved-capacity/</text>
+</svg>
