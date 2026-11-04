@@ -33,6 +33,7 @@ Sorties : data/ et static/data_centers.json, static/data_centers.csv, data/figur
 from __future__ import annotations
 
 import csv
+import gzip
 import hashlib
 import html
 import io
@@ -65,6 +66,9 @@ SOURCES = {
            "RTE, Bilan électrique 2025, principaux résultats (février 2026)"),
     "web": ("https://www.rte-france.com/bases-electricite/consommation-electricite/essor-data-centers-france",
             "RTE, « Les data centers en chiffres clés » (page web)"),
+    # contrôle indépendant de RTE (contre-expertise du 04/11/2026) : recensement du service statistique du ministère
+    "sdes": ("https://www.statistiques.developpement-durable.gouv.fr/la-consommation-delectricite-des-data-centers-en-2024",
+             "SDES, « La consommation d'électricité des data centers en 2024 »"),
 }
 N = r"(\d+(?:,\d+)?)"   # nombre français
 # Valeurs LUES DANS LE TEXTE : (clé, source, expression sur le texte normalisé ; chaque groupe nommé est une valeur).
@@ -90,6 +94,11 @@ TEXTES = [
     ("util_2030", "bp", r"hypothèse de taux moyen d'utilisation de la puissance de raccordement de (?P<util_2030>\d+) ?%\d* à cet horizon"),
     ("theorique", "bp", r"ron (?P<theo_twh>\d+) TWh, soit un niveau sans commune mesure"),
     ("date_figure", "bp", r"\(situation au (?P<date_fig23>1er novembre 2025)\)"),
+    ("sdes_recense", "sdes", r"En 2024, (?P<sdes_n>\d+) centres de données \(data centers\) consommant plus de 1 GWh par an ont été identifiés "
+                             r"en France métropolitaine\. Ils consomment au total près de (?P<sdes_twh>%s) TWh" % N),
+    ("sdes_total", "sdes", r"la consommation totale d'électricité des centres de données de France métropolitaine est estimée entre "
+                           r"(?P<sdes_bas>%s) et (?P<sdes_haut>%s) TWh, soit (?P<sdes_pct_bas>%s) à (?P<sdes_pct_haut>%s) ?%% de l'électricité "
+                           r"consommée en France" % (N, N, N, N)),
 ]
 STATUTS = ("raccorde_depuis_2023", "travaux", "signe_2025_2029", "signe_2030", "suspendu", "abandonne_depuis_2023")
 ACTIFS = ("travaux", "signe_2025_2029", "signe_2030", "suspendu")   # périmètre des « ~30 GW » (note 3 du Bilan prévisionnel)
@@ -131,7 +140,9 @@ def normalise(t: str) -> str:
 def telecharger(url: str) -> bytes:
     try:
         with urllib.request.urlopen(url, timeout=120) as r:
-            return r.read()
+            raw = r.read()
+        # le serveur du SDES envoie sa page compressée même sans en-tête Accept-Encoding (04/11/2026)
+        return gzip.decompress(raw) if raw[:2] == b"\x1f\x8b" else raw
     except Exception as exc:
         fail("source inaccessible %s : %s" % (url, exc))
 
@@ -147,7 +158,7 @@ def relever() -> tuple[dict, dict, dict]:
     raws, textes, docs = {}, {}, {}
     for k, (url, _) in SOURCES.items():
         raws[k] = telecharger(url)
-        if k == "web":
+        if k in ("web", "sdes"):
             textes[k] = normalise(texte_html(raws[k]))
         else:
             docs[k] = fitz.open(stream=raws[k], filetype="pdf")
@@ -162,6 +173,10 @@ def relever() -> tuple[dict, dict, dict]:
         fail("page web de RTE : dates de mise a jour et de publication introuvables")
     meta["web"]["mise_a_jour"] = "%s-%s-%s" % (m.group(3), m.group(2), m.group(1))
     meta["web"]["publication"] = "%s-%s-%s" % (m.group(6), m.group(5), m.group(4))
+    m = re.search(r"Publié le (\d\d)/(\d\d)/(20\d\d)", textes["sdes"])
+    if not m:
+        fail("page du SDES : date de publication introuvable")
+    meta["sdes"]["publication"] = "%s-%s-%s" % (m.group(3), m.group(2), m.group(1))
     return textes, docs, meta
 
 
@@ -312,6 +327,8 @@ def mutation(c: dict):
         v["w35_bas"], v["w35_haut"] = v["l2035"], v["r2035"]
     elif m == "raccorde":
         v["mw_rte"] = 1500.0
+    elif m == "sdes":         # le recensement du SDES ne recoupe plus l'estimation de RTE : « compatible » doit tomber
+        v["sdes_bas"], v["sdes_haut"] = 9.0, 12.0
     elif m is not None and m not in ("texte", "doublon"):   # appliquées au relevé (main)
         fail("mutation inconnue : %s" % m)
     return m
@@ -348,6 +365,8 @@ def gardes(c: dict) -> int:
       "« la page web de RTE donne d'autres valeurs que le PDF » : %s-%s et %s-%s contre %s-%s et %s-%s"
       % (v["w30_bas"], v["w30_haut"], v["w35_bas"], v["w35_haut"], lo30, hi30, v["l2035"], v["r2035"]))
     g(v["mw_rte"] / 1000 < v["res_fin2024"] / 4, "« les centres déjà raccordés au réseau de RTE : une fraction des réservations » : %.1f GW" % (v["mw_rte"] / 1000))
+    g(v["sdes_bas"] <= v["sd_haut"] and v["sdes_haut"] >= v["sd_bas"],
+      "« compatible avec l'ordre de grandeur de RTE » : SDES %s-%s TWh, RTE %s-%s TWh" % (v["sdes_bas"], v["sdes_haut"], v["sd_bas"], v["sd_haut"]))
     return n
 
 
@@ -378,6 +397,10 @@ def affichage(c: dict, meta: dict, lang: str) -> dict:
          "w30_bas": f(v["w30_bas"], 0), "w30_haut": f(v["w30_haut"], 0), "w35_bas": f(v["w35_bas"], 0), "w35_haut": f(v["w35_haut"], 0),
          "concret_r": f(v["concret_r"], 0), "concret_l": f(v["concret_l"], 0), "concret_r_gw": f(v["concret_r_gw"], 1),
          "theo_twh": f(v["theo_twh"], 0),
+         "sdes_n": f(v["sdes_n"], 0), "sdes_twh": f(v["sdes_twh"], 1), "sdes_bas": f(v["sdes_bas"], 1),
+         "sdes_haut": f(v["sdes_haut"], 1 if v["sdes_haut"] % 1 else 0), "sdes_pct_bas": f(v["sdes_pct_bas"], 1 if v["sdes_pct_bas"] % 1 else 0),
+         "sdes_pct_haut": f(v["sdes_pct_haut"], 1 if v["sdes_pct_haut"] % 1 else 0),
+         "date_sdes": date_longue(meta["sdes"]["publication"], lang),
          "st_travaux": f(st["travaux"], 1), "st_2529": f(st["signe_2025_2029"], 1), "st_2030": f(st["signe_2030"], 1),
          "st_suspendu": f(st["suspendu"], 1), "st_abandon": f(st["abandonne_depuis_2023"], 1), "st_raccorde": f(st["raccorde_depuis_2023"], 1),
          "st_avant2030": f(c["avant_2030"], 1), "part_2030": f(c["part_2030"], 0), "actif_dc": f(c["actif_dc"], 1),

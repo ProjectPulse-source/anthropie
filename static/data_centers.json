@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-27",
+ "releve_le": "2026-11-04",
  "_licence": "CC BY 4.0 — calcul et mesures Stéphane Lalut ; source RTE",
  "meta": {
   "page": "https://stephane-lalut.com/data-centers-puissance-reservee/",
@@ -20,6 +20,11 @@
     "titre": "RTE, « Les data centers en chiffres clés » (page web)",
     "mise_a_jour": "2026-06-01",
     "publication": "2025-05-21"
+   },
+   "sdes": {
+    "url": "https://www.statistiques.developpement-durable.gouv.fr/la-consommation-delectricite-des-data-centers-en-2024",
+    "titre": "SDES, « La consommation d'électricité des data centers en 2024 »",
+    "publication": "2026-07-02"
    }
   },
   "nature_des_valeurs": {
@@ -61,7 +66,13 @@
   "concret_l": 30.0,
   "util_2030": 20.0,
   "theo_twh": 240.0,
-  "date_fig23": "1er novembre 2025"
+  "date_fig23": "1er novembre 2025",
+  "sdes_n": 471.0,
+  "sdes_twh": 4.3,
+  "sdes_bas": 4.3,
+  "sdes_haut": 6.0,
+  "sdes_pct_bas": 1.0,
+  "sdes_pct_haut": 1.5
  },
  "repartition_novembre_2025_gw": {
   "raccorde_depuis_2023": 0.4,
@@ -137,6 +148,13 @@
   "concret_l": "30",
   "concret_r_gw": "4,3",
   "theo_twh": "240",
+  "sdes_n": "471",
+  "sdes_twh": "4,3",
+  "sdes_bas": "4,3",
+  "sdes_haut": "6",
+  "sdes_pct_bas": "1",
+  "sdes_pct_haut": "1,5",
+  "date_sdes": "2 juillet 2026",
   "st_travaux": "1,0",
   "st_2529": "5,1",
   "st_2030": "7,6",
@@ -186,6 +204,13 @@
   "concret_l": "30",
   "concret_r_gw": "4.3",
   "theo_twh": "240",
+  "sdes_n": "471",
+  "sdes_twh": "4.3",
+  "sdes_bas": "4.3",
+  "sdes_haut": "6",
+  "sdes_pct_bas": "1",
+  "sdes_pct_haut": "1.5",
+  "date_sdes": "2 July 2026",
   "st_travaux": "1.0",
   "st_2529": "5.1",
   "st_2030": "7.6",

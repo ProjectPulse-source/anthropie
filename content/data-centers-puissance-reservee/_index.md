@@ -9,7 +9,7 @@ og_image: "images/og-data-centers.jpg"
 og_image_alt: "Carte de partage : « Réservé n'est pas consommé » — puissance réservée par les data centers auprès de RTE et consommation des centres raccordés à son réseau (RTE)."
 # Page née de l'arbitrage PRO-20261026-033434 (graphe G4, page de faits distincte de la notion de dette technologique).
 # Fiche : docs/conception/data-centers-puissance-reservee.md. Aucun chiffre saisi : jetons {dtc.*} et shortcode dtc-val
-# (scripts/update_data_centers.py : valeurs lues dans le texte de trois publications de RTE, répartition mesurée sur une figure).
+# (scripts/update_data_centers.py : valeurs lues dans le texte de trois publications de RTE et du recensement du SDES, répartition mesurée sur une figure).
 donnees: [data_centers]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "data_centers"
@@ -25,6 +25,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolu
     - "https://assets.rte-france.com/prod/public/2025-12/2025-12-23-bilan-previsionnel-2025-consommation.pdf"
     - "https://assets.rte-france.com/prod/public/2026-02/Bilan-electrique-2025-principaux-resultats.pdf"
     - "https://www.rte-france.com/bases-electricite/consommation-electricite/essor-data-centers-france"
+    - "https://www.statistiques.developpement-durable.gouv.fr/la-consommation-delectricite-des-data-centers-en-2024"
   mots: ["data centers", "centres de données", "RTE", "raccordement", "puissance réservée", "consommation d'électricité", "intelligence artificielle", "Bilan prévisionnel", "file d'attente", "réseau électrique"]
   fichiers: ["data_centers.csv", "data_centers.json"]
 faq:
@@ -33,7 +34,7 @@ faq:
   - question: "Combien d'électricité consomment les data centers en France ?"
     answer: "Les data centers sur sites dédiés raccordés au réseau de transport de RTE ont consommé près de {dtc.rpt_2025} TWh en 2025, contre {dtc.rpt_2024} TWh en 2024 ; ceux du réseau de distribution d'Enedis, {dtc.enedis_2024} TWh en 2024. RTE estime l'ensemble des sites dédiés à {dtc.sd_bas} à {dtc.sd_haut} TWh en 2024, et ses deux trajectoires donnent {dtc.l2030} à {dtc.r2030} TWh en 2030."
   - question: "D'où viennent ces chiffres ?"
-    answer: "De trois publications de RTE (Bilan prévisionnel 2025-2035, Bilan électrique 2025, page « Les data centers en chiffres clés ») téléchargées par un script qui lit chaque valeur dans la phrase qui la porte, mesure la répartition par statut sur une figure du Bilan prévisionnel et s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases de la page. Les données sont téléchargeables en CSV et en JSON, sous licence CC BY 4.0."
+    answer: "De trois publications de RTE (Bilan prévisionnel 2025-2035, Bilan électrique 2025, page « Les data centers en chiffres clés ») et, comme contrôle indépendant, du recensement du SDES (juillet 2026), téléchargés par un script qui lit chaque valeur dans la phrase qui la porte, mesure la répartition par statut sur une figure du Bilan prévisionnel et s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases de la page. Les données sont téléchargeables en CSV et en JSON, sous licence CC BY 4.0."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   conception: "docs/conception/data-centers-puissance-reservee.md"  # fiche de conception (regle 12)
@@ -52,7 +53,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 En mai 2026, selon RTE, les data centers avaient réservé près de {{< dtc-val "res_mai2026" >}}&nbsp;gigawatts (GW) de capacité de raccordement à son réseau, pour environ {{< dtc-val "projets_2026" >}}&nbsp;projets. Fin 2024, une quarantaine de projets totalisaient environ {{< dtc-val "res_fin2024" >}}&nbsp;GW&nbsp;: en moins d'un an et demi, la puissance réservée a plus que triplé. Fin novembre 2025, les data centers détenaient {{< dtc-val "res_nov2025" >}}&nbsp;GW des quelque {{< dtc-val "tot_nov2025" >}}&nbsp;GW de droits d'accès attribués par RTE aux grands projets, devant l'hydrogène ({{< dtc-val "tot_h2" >}}&nbsp;GW) et l'industrie ({{< dtc-val "tot_ind" >}}&nbsp;GW).
 
-La consommation, elle, se compte en térawattheures (TWh). Les data centers sur sites dédiés raccordés au réseau de transport de RTE ont consommé {{< dtc-val "rpt_2024" >}}&nbsp;TWh en 2024 et près de {{< dtc-val "rpt_2025" >}}&nbsp;TWh en 2025&nbsp;; ceux du réseau de distribution d'Enedis, {{< dtc-val "enedis_2024" >}}&nbsp;TWh en 2024. RTE estime l'ensemble des sites dédiés à {{< dtc-val "sd_bas" >}} à {{< dtc-val "sd_haut" >}}&nbsp;TWh en 2024, et {{< dtc-val "int_bas" >}} à {{< dtc-val "int_haut" >}}&nbsp;TWh avec les salles informatiques internes des entreprises et des administrations.
+La consommation, elle, se compte en térawattheures (TWh). Les data centers sur sites dédiés raccordés au réseau de transport de RTE ont consommé {{< dtc-val "rpt_2024" >}}&nbsp;TWh en 2024 et près de {{< dtc-val "rpt_2025" >}}&nbsp;TWh en 2025&nbsp;; ceux du réseau de distribution d'Enedis, {{< dtc-val "enedis_2024" >}}&nbsp;TWh en 2024. RTE estime l'ensemble des sites dédiés à {{< dtc-val "sd_bas" >}} à {{< dtc-val "sd_haut" >}}&nbsp;TWh en 2024, et {{< dtc-val "int_bas" >}} à {{< dtc-val "int_haut" >}}&nbsp;TWh avec les salles informatiques internes des entreprises et des administrations. Le service statistique du ministère de la Transition écologique (SDES), qui recense les centres eux-mêmes, aboutit au même ordre de grandeur&nbsp;: {{< dtc-val "sdes_n" >}} centres consommant plus de 1&nbsp;GWh par an ont consommé près de {{< dtc-val "sdes_twh" >}}&nbsp;TWh en 2024, et l'ensemble est estimé entre {{< dtc-val "sdes_bas" >}} et {{< dtc-val "sdes_haut" >}}&nbsp;TWh. Les deux estimations ne portent pas exactement sur le même périmètre&nbsp;: elles se recoupent, sans se remplacer.
 
 **Une puissance réservée n'est pas une consommation.** Une réservation garantit un accès au réseau&nbsp;; elle ne dit ni si le site sera construit, ni quand, ni à quelle puissance il fonctionnera. La figure place les deux grandeurs l'une sous l'autre, chacune sur son échelle, sans les rapporter l'une à l'autre.
 
@@ -98,7 +99,7 @@ Ce qui pourrait engager durablement la collectivité se trouve ailleurs&nbsp;: d
 
 ## Ce que ces données ne disent pas {#limites}
 
-- **Un seul producteur, partie prenante.** Toutes les valeurs viennent de RTE, qui attribue les réservations et en réforme la file d'attente&nbsp;; la consommation du réseau de distribution est reprise de RTE, non lue chez Enedis.
+- **Un producteur principal, partie prenante.** Toutes les valeurs viennent de RTE, sauf le recensement du SDES, cité comme contrôle&nbsp;; RTE attribue les réservations et en réforme la file d'attente&nbsp;; la consommation du réseau de distribution est reprise de RTE, non lue chez Enedis.
 - **Deux grandeurs qui ne se comparent pas.** Une puissance réservée (GW) n'est ni une puissance appelée ni une consommation (TWh)&nbsp;; aucun rapport n'est calculé entre elles. Le taux de {{< dtc-val "util_obs" >}}&nbsp;% cité plus haut est une observation de RTE sur les sites raccordés depuis deux à trois ans.
 - **Une répartition mesurée sur une figure.** La répartition par statut est lue sur la figure 2.3 du Bilan prévisionnel, à 0,1&nbsp;GW près, au {{< dtc-val "date_fig23" >}}&nbsp;; le total de {{< dtc-val "res_nov2025" >}}&nbsp;GW est daté de fin novembre. La somme mesurée, {{< dtc-val "actif_dc" >}}&nbsp;GW, le retrouve à 0,1&nbsp;GW près.
 - **Des trajectoires, pas des prévisions.** Elles reposent sur des taux de concrétisation et d'utilisation supposés.
@@ -123,6 +124,7 @@ Ce qui pourrait engager durablement la collectivité se trouve ailleurs&nbsp;: d
 - RTE, [*Bilan prévisionnel 2025-2035, La consommation d'électricité*](https://assets.rte-france.com/prod/public/2025-12/2025-12-23-bilan-previsionnel-2025-consommation.pdf) (décembre 2025)&nbsp;: chapitre 2.1.3 (réservations, abattements, consommation théorique, suspension des réservations, réforme du raccordement) et 2.5 (consommation des centres de données, trajectoires, hypothèses)&nbsp;; figure 2.3 (répartition des réservations par statut, mesurée par script) et figure 2.10 (trajectoires).
 - RTE, [*Bilan électrique 2025, principaux résultats*](https://assets.rte-france.com/prod/public/2026-02/Bilan-electrique-2025-principaux-resultats.pdf) (février 2026)&nbsp;: droits d'accès par secteur fin novembre 2025, consommation des centres de données raccordés au réseau de transport et au réseau de distribution.
 - RTE, [«&nbsp;Les data centers en chiffres clés&nbsp;»](https://www.rte-france.com/bases-electricite/consommation-electricite/essor-data-centers-france), page mise à jour le {{< dtc-val "date_web" >}}&nbsp;: réservations de fin 2024 et de mai 2026, sites raccordés, taux d'utilisation observé, durée de montée en charge, projections citées.
+- SDES, [«&nbsp;La consommation d'électricité des data centers en 2024&nbsp;»](https://www.statistiques.developpement-durable.gouv.fr/la-consommation-delectricite-des-data-centers-en-2024) ({{< dtc-val "date_sdes" >}})&nbsp;: recensement des centres de plus de 1&nbsp;GWh et estimation de l'ensemble, contrôle indépendant de RTE.
 
 {{< reutiliser figures="figures_data_centers" jeu="data_centers" sources="RTE" donnees="Puissance réservée par les data centers (fin 2024, novembre 2025, mai 2026), répartition de novembre 2025 par statut, consommation mesurée, estimée et projetée ; pour chaque valeur, sa nature (lue dans le texte ou mesurée sur la figure) et sa source, en CSV au format long." >}}
 En novembre 2025, les data centers avaient réservé {{< dtc-val "res_nov2025" >}} GW de raccordement auprès de RTE, dont {{< dtc-val "st_2030" >}} GW pour une mise en service à partir de 2030, et des réservations totalisant environ {{< dtc-val "st_abandon" >}} GW avaient été abandonnées depuis 2023. Ceux raccordés au réseau de RTE ont consommé près de {{< dtc-val "rpt_2025" >}} TWh en 2025&nbsp;; RTE retient {{< dtc-val "l2030" >}} à {{< dtc-val "r2030" >}} TWh en 2030 pour l'ensemble des sites dédiés.
