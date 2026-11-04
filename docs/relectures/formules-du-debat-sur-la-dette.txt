@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /formules-du-debat-sur-la-dette/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /formules-du-debat-sur-la-dette/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que valent les formules du débat sur la dette ?
 Le 8 septembre 2025, à l’Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
@@ -114,6 +114,7 @@ La comparaison implicite entre les deux mandats dépend ensuite de l’unité : 
 Conclure : du chiffre à la décision
 « Mesurons bien la charge que nous laisserons à nos enfants et qui, chaque heure, augmente de 18 millions d’euros ! » (Paul Christophe, Horizons).
 Le chiffre est proche du déficit prévu pour 2025 (environ 18,4 millions par heure), pas de la hausse de la dette, qui est le mot de la phrase : 20,9 millions par heure, du premier trimestre 2024 au premier trimestre 2025.
+Dix-huit millions par heure font 5 000 euros par seconde : c’est le même chiffre que la formule de François Bayrou du 15 juillet 2025, « chaque seconde, la dette augmente de 5 000 euros », sous une autre unité, et le même écart avec la hausse mesurée.
 La conclusion pose une question que le chiffre horaire ne tranche pas : quels transferts nets entre générations résultent de la dette, de son remboursement et de ce qu’elle a financé ?
 Les générations suivantes héritent d’impôts à venir, mais aussi d’actifs publics et des titres eux-mêmes.
 Le refinancement ne supprime pas la contrainte : il en change le calendrier.

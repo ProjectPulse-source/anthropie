@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /en/public-debt-debate-claims/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /en/public-debt-debate-claims/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What are the claims of the French debt debate worth?
 On 8 September 2025, in the French National Assembly, every group invoked the figures on public debt.
@@ -116,6 +116,7 @@ The implied comparison between the two presidencies then depends on the unit: in
 Concluding: from the figure to the decision
 “Let us take full measure of the burden we shall leave to our children, which grows by €18m every hour!” (Paul Christophe, Horizons).
 The figure is close to the deficit planned for 2025 (about €18.4m an hour), not to the increase in debt, which is the word in the sentence: €20.9m an hour, from the first quarter of 2024 to the first quarter of 2025.
+Eighteen million an hour is €5,000 a second: the same figure as François Bayrou’s line of 15 July 2025, that debt grows by €5,000 every second, in another unit, with the same gap from the measured increase.
 The conclusion raises a question the hourly figure does not settle: what net transfers between generations result from the debt, its repayment and what it financed?
 Later generations inherit future taxes, but also public assets and the securities themselves.
 Refinancing does not remove the constraint: it changes its timing.

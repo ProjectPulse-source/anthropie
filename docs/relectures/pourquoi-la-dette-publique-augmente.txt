@@ -1,4 +1,4 @@
-# relu le 2026-11-02 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de f605f9c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Pourquoi la dette publique augmente-t-elle ?
 Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,7 % du PIB : elle a doublé en part de la richesse produite.
@@ -84,9 +84,9 @@ Il peut aussi être structurel, et demeurer quand l’économie revient à son p
 Trois institutions estiment ce partage, chacune avec sa méthode : la Commission européenne, le FMI et l’OCDE.
 Solde primaire corrigé du cycle selon trois estimations, et solde primaire observé (Eurostat).
 Les zones grises marquent les deux périodes comparées.
-Le déficit d’après 2022 ne se résorberait pas avec la seule conjoncture.
+Sur 2022-2025, le déficit ne se résorberait pas avec la seule conjoncture.
 Corrigé du cycle, le solde primaire est plus bas sur 2022-2025 que sur 2015-2019 dans les trois estimations : de 1,9 point selon la Commission (−1,1 % puis −3,0 % du PIB potentiel), de 2,6 points selon le FMI (−0,5 % puis −3,1 %) et de 1,6 point selon l’OCDE (−1,8 % puis −3,4 %).
-Sur 2022-2025, la part conjoncturelle et ponctuelle du déficit n’est que de 0,23 point selon la Commission, et sa part conjoncturelle de 0,23 point selon le FMI.
+Sur 2022-2025, la part conjoncturelle et ponctuelle du déficit n’est que de 0,23 point de PIB selon la Commission, et sa part conjoncturelle de 0,23 point de PIB selon le FMI.
 Ce sont trois estimations, et elles ne coïncident pas.
 La Commission et l’OCDE retirent aussi les mesures ponctuelles, le FMI non ; et chacune repose sur une estimation de la production potentielle, qui n’est pas une mesure et se révise.
 La page donne les trois valeurs, sans en faire la moyenne.
@@ -98,11 +98,12 @@ Cette succession date les dégradations ; elle ne suffit pas à établir que les
 Par où : les recettes sur la période récente, les dépenses sur la longue.
 Les recettes et les dépenses hors intérêts corrigées du cycle que publie la Commission redonnent exactement son solde corrigé.
 De 2015-2019 à 2022-2025, ce solde baisse de 1,70 point : les recettes corrigées reculent de 1,62 point, les dépenses corrigées varient de +0,09 point.
+Le solde structurel cité plus haut baisse de 1,9 point parce qu’il retire aussi les mesures ponctuelles, surtout présentes en 2019.
 Depuis 1996-2007 en revanche, les dépenses corrigées ont augmenté de 3,9 points de PIB potentiel et les recettes de 0,9 : sur la longue période, la hausse des dépenses domine.
 Comme pour les fenêtres de l’OFCE et du Trésor plus haut, la réponse dépend des années comparées.
 Ce que ce partage ne dit pas.
 Une recette corrigée du cycle qui baisse mêle les baisses d’impôts décidées et le rendement spontané de l’impôt, qui peut croître moins vite que l’économie.
-Ces séries ne séparent pas les deux : elles disent où le déficit s’est creusé, et que la conjoncture ne l’explique pas, non quelles décisions l’ont creusé.
+Ces séries ne séparent pas les deux : elles disent où le déficit s’est creusé, et que la conjoncture ne suffit pas à l’expliquer, non quelles décisions l’ont creusé.
 Les valeurs année par année, les définitions et les éditions
 Année
 Commission, structurel
@@ -173,7 +174,7 @@ Les recettes et les dépenses corrigées du cycle sont celles de la Commission (
 Pourquoi le solde observé d’Eurostat diffère de celui du FMI.
 Le solde primaire de cette page est calculé hors intérêts versés ; celui du FMI, hors intérêts nets, versés moins reçus.
 L’écart entre les deux égale donc les intérêts reçus par les administrations publiques : 0,37 point de PIB en moyenne sur 1996-2007 et 0,13 point sur 2022-2025, à quelques centièmes près.
-C’est une différence de définition, non de données.
+C’est pour l’essentiel une différence de définition.
 Éditions.
 Commission européenne, AMECO, printemps 2026 ; FMI, Moniteur des finances publiques d’octobre 2026 ; OCDE, Perspectives économiques n° 119.
 Les trois ont été publiées à des dates différentes et seront révisées.
@@ -315,7 +316,7 @@ Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025 ; mise à 
 Télécharger en PNG
 SVG
 Le déficit primaire corrigé du cycle, selon trois estimations, 1996-2025
-Corrigé du cycle, le déficit primaire d’après 2022 reste plus creusé qu’en 2015-2019 dans les trois estimations : la conjoncture ne l’explique pas.
+Corrigé du cycle, le déficit primaire de 2022-2025 reste plus creusé qu’en 2015-2019 dans les trois estimations : la conjoncture ne suffit pas à l’expliquer.
 Précaution d’interprétation.
 Trois méthodes : la Commission et l’OCDE retirent aussi les mesures ponctuelles, le FMI non.
 Estimations de la production potentielle, non des mesures ; zones grises : 2015-2019 et 2022-2025.

@@ -1,4 +1,4 @@
-# relu le 2026-11-02 ; texte servi de /en/why-does-public-debt-rise/, build de f605f9c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /en/why-does-public-debt-rise/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.7% of GDP: it doubled as a share of the wealth produced.
@@ -88,9 +88,9 @@ It can also be structural, and remain once the economy is back at its potential.
 Three institutions estimate this split, each with its own method: the European Commission, the IMF and the OECD.
 Cyclically adjusted primary balance according to three estimates, and observed primary balance (Eurostat).
 The grey bands mark the two periods compared.
-The deficit since 2022 would not disappear with the business cycle alone.
+Over 2022-2025, the deficit would not disappear with the business cycle alone.
 Cyclically adjusted, the primary balance is lower over 2022-2025 than over 2015-2019 in all three estimates: by 1.9 points according to the Commission (−1.1% then −3.0% of potential GDP), by 2.6 points according to the IMF (−0.5% then −3.1%) and by 1.6 points according to the OECD (−1.8% then −3.4%).
-Over 2022-2025, the cyclical and one-off part of the deficit is only 0.23 points according to the Commission, and its cyclical part 0.23 points according to the IMF.
+Over 2022-2025, the cyclical and one-off part of the deficit is only 0.23 points of GDP according to the Commission, and its cyclical part 0.23 points of GDP according to the IMF.
 These are three estimates, and they do not coincide.
 The Commission and the OECD also remove one-off measures, the IMF does not; and each relies on an estimate of potential output, which is not a measurement and gets revised.
 The page gives the three values, without averaging them.
@@ -102,11 +102,12 @@ This sequence dates the deteriorations; it is not enough to establish that the c
 Where: revenue over the recent period, spending over the long run.
 The cyclically adjusted revenue and non-interest spending published by the Commission add up exactly to its adjusted balance.
 From 2015-2019 to 2022-2025, that balance falls by 1.70 points: adjusted revenue falls by 1.62 points, adjusted spending changes by +0.09 points.
+The structural balance cited above falls by 1.9 points because it also removes one-off measures, present above all in 2019.
 Since 1996-2007, by contrast, adjusted spending has risen by 3.9 points of potential GDP and revenue by 0.9: over the long run, the rise in spending dominates.
 As with the OFCE and Treasury windows above, the answer depends on the years compared.
 What this split does not say.
 Cyclically adjusted revenue that falls mixes decided tax cuts and the spontaneous yield of taxes, which can grow more slowly than the economy.
-These series do not separate the two: they say where the deficit deepened, and that the business cycle does not explain it, not which decisions deepened it.
+These series do not separate the two: they say where the deficit deepened, and that the business cycle alone does not explain it, not which decisions deepened it.
 Year-by-year values, definitions and editions
 Year
 Commission, structural
@@ -177,7 +178,7 @@ Cyclically adjusted revenue and spending are the Commission’s (AMECO series), 
 Why Eurostat’s observed balance differs from the IMF’s.
 This page’s primary balance excludes interest paid; the IMF’s excludes net interest, paid minus received.
 The gap between the two is therefore the interest received by general government: 0.37 points of GDP on average over 1996-2007 and 0.13 points over 2022-2025, to within a few hundredths.
-It is a difference of definition, not of data.
+It is essentially a difference of definition.
 Editions.
 European Commission, AMECO, spring 2026; IMF, Fiscal Monitor, October 2026; OECD, Economic Outlook No.
 119.
@@ -313,7 +314,7 @@ Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025; Eurostat 
 Download PNG
 SVG
 The cyclically adjusted primary deficit, according to three estimates, 1996-2025
-Cyclically adjusted, the primary deficit after 2022 remains deeper than in 2015-2019 in all three estimates: the business cycle does not explain it.
+Cyclically adjusted, the primary deficit of 2022-2025 remains deeper than in 2015-2019 in all three estimates: the business cycle alone does not explain it.
 Reading caveat.
 Three methods: the Commission and the OECD also remove one-off measures, the IMF does not.
 Estimates of potential output, not measurements; grey bands: 2015-2019 and 2022-2025.
