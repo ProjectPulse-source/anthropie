@@ -140,3 +140,18 @@ page, liens entrants depuis le dossier. Pas de campagne de mesure des réponses 
   `check-rendu-ressources` sans écart sur la page.
 - Panel après, gate éditorial : non faits (page non pilote ; la contre-expertise de la page en tient lieu).
 - Contre-expertise de la page : faite (01/11/2026), PRO-20261101-063929, option B acceptée ; arbitrage écrit ; corrections appliquées FR et EN ; recomptage des chiffres emploi, sécurité, immigration dans le livre ; contrôles et recette relancés : 0 écart. Accord de l'auteur : à recueillir.
+
+### Présentation Q4 (04/11/2026)
+
+- Constat : deux vocabulaires pour les quatre zones (introduction / sections et tableau) ; grille écrite pour cinq
+  thèmes sur neuf ; conclusion (quatre familles de contraintes) en fin de page seulement.
+- Trois maquettes (`D:\PRO\06_PROMOTION\MAQUETTES_PRESIDENT_2026-11-04\`) ; contre-expertise `PRO-20261104-022048`
+  (réponse SHA-256 96CDE5D9…) puis contre-arbitrage (SHA-256 8b7f502b…), arbitrés
+  (`ARBITRATIONS/PRO-20261104-022048_arbitrage.md`) ; appliqué et mis en ligne le 04/11 (commit a6becc2), FR et EN.
+- Fait : vocabulaire de l'introduction partout (« À la main de l'exécutif », « Doit être voté », « Doit être négocié ou
+  partagé », « Hors de sa main ») ; zones en blocs (paragraphes existants pour cinq thèmes, résumé « d'après le
+  tableau » pour santé, école, dette, climat ; asymétrie conservée) ; phrase-résultat en deux temps ; Santé : séance du
+  Sénat du 11 juin 2026, dossier `ppl24-605` lu le 04/11, journal. Nœuds non mis en exergue (non autonomes hors de
+  leur paragraphe).
+- Contrôles : `check-all --ci` 0 ; build 0 ; `typo_build` 0 ; liens, rendu et dates 0 ; instantanés refaits. Recette
+  sur la page servie : 320, 390, 1 280 px, aucun défilement horizontal ; neuf blocs de zones ; FAQ 3/3.
