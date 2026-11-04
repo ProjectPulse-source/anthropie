@@ -1,10 +1,10 @@
-# relu le 2026-11-01 ; texte servi de /que-peut-faire-un-president-promesse-par-promesse/, build de 3284feb + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /que-peut-faire-un-president-promesse-par-promesse/, build de 10fe096 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Neuf promesses de campagne : que peut vraiment faire un président ?
 Un président peut-il augmenter les salaires, baisser les prix, faire embaucher, rendre le pays plus sûr, expulser davantage ?
-Il décide une partie de chaque promesse, presque jamais toute : le reste passe par un vote, une négociation, ou dépend d'acteurs qu'il ne commande pas.
-La frontière n'est pas au même endroit selon le thème.
-Page publiée le 1er novembre 2026
+Il décide une partie de chaque promesse, presque jamais toute : le reste passe par un vote, une négociation, ou dépend d’acteurs qu’il ne commande pas.
+La frontière n’est pas au même endroit selon le thème.
+Page mise à jour le 4 novembre 2026 · révisions
 Promesses présidentielles
 Aucun texte n’oblige un président à exécuter son programme : un programme de campagne n’est pas un acte juridique, et la Constitution confie au Gouvernement, non au président, le soin de déterminer et conduire « la politique de la Nation » (article 20).
 Une promesse présidentielle passe donc par une chaîne : le Gouvernement qui signe, la majorité qui vote, l’administration qui applique.
@@ -19,32 +19,41 @@ Partez du résultat annoncé : qui doit agir pour qu’il se produise, et lequel
 Remontez ensuite la chaîne jusqu’au premier acte que l’exécutif peut réellement décider.
 Le tableau des neuf promesses résume la carte, thème par thème.
 La carte ne dit pas si une promesse est souhaitable ; elle dit ce qui est faisable, par qui, et en combien de temps.
+Le résultat en une phrase.
+Un président peut engager une politique sans décider seul de toutes ses mesures ni en garantir les effets.
+Les neuf promesses examinées rencontrent des contraintes différentes, qui se combinent : décisions économiques décentralisées pour les salaires, les prix et l’emploi ; délais de formation et d’observation pour la santé et l’école ; décisions de juges et capacités d’exécution pour la sécurité et l’immigration ; trajectoires longues et engagements partagés pour la dette et le climat.
 Santé : un président peut-il faire revenir un médecin ?
 La première zone existe, mais sa plume appartient le plus souvent au directeur général de l’agence régionale de santé : c’est lui qui arrête, tous les deux ans, les zones où l’offre de soins est insuffisante (code de la santé publique, article L.
 1434-4).
 Réguler l’installation des médecins exige une loi : adoptée par l’Assemblée nationale le 7 mai 2025, une proposition de loi soumettait l’installation à autorisation ; la commission du Sénat en a fait, le 27 mai 2026, une obligation d’exercer à temps partiel en zone sous-dotée.
+L’examen en séance publique a commencé le 11 juin 2026 sans porter encore sur tous les articles (dossier législatif du Sénat, lu le 4 novembre 2026).
 Les objectifs de formation se partagent avec les universités.
 Reste le praticien, libre de s’installer ou non, et l’horloge du cursus : un étudiant entré en 2027 exercera autour de 2037.
+En résumé, d’après le tableau des neuf promesses :
+À la main de l’exécutif. zonage, permanence des soins, agrément des stages (arrêtés d’ARS)
+Doit être voté. régulation de l’installation, exonérations du cumul emploi-retraite
+Doit être négocié ou partagé. objectifs de formation (universités, avis conforme), aides à l’installation
+Hors de sa main. choix du praticien : s’installer, se salarier, accueillir un stagiaire
 La page Une promesse peut-elle produire ses effets en cinq ans ? détaille cette horloge et qui fixe le nombre d’étudiants admis ; elle ne traite pas la régulation de l’installation.
 Salaires : un président peut-il faire augmenter votre salaire ?
 Une promesse de faire augmenter les salaires du privé demande qu’un employeur verse davantage.
 L’exécutif ne fixe directement qu’un plancher, le Smic, qui monte déjà sans lui par une formule légale.
 Le nœud est un étage : presque tous ses instruments agissent entre le salaire et le compte, sur le revenu disponible, pas sur le montant du haut de la fiche de paie.
-Ce qu’il décide.
+À la main de l’exécutif.
 Le Gouvernement peut relever le Smic par décret au-delà de ce que produit la formule (article L3231-10 du code du travail) : c’est le « coup de pouce », dont le dernier date du 1ᵉʳ juillet 2012 selon le rapport 2025 du groupe d’experts sur le Smic.
 Il peut aussi avancer une revalorisation automatique, comme au 1ᵉʳ novembre 2024 : la décision portait alors sur la date, pas sur le montant.
 Le barème de la prime d’activité est fixé par décret (article L842-3 du code de la sécurité sociale), tout comme le taux des cotisations d’assurance vieillesse (article L241-3 du même code).
 Un arrêté du ministre chargé du travail peut enfin rendre une grille de branche obligatoire pour toute la branche (article L2261-15 du code du travail).
-Ce qu’il doit faire voter.
+Doit être voté.
 L’existence et l’assiette des cotisations relèvent de la loi, comme la prime d’activité elle-même et le barème de l’impôt sur le revenu, fixé chaque année par la loi de finances.
 Une indexation générale des salaires sur l’inflation aussi : l’article 34 de la Constitution réserve à la loi les principes fondamentaux du droit du travail.
 Il faut donc passer par la procédure législative, avec ses rapports de force et ses délais.
-Ce qu’il doit négocier.
+Doit être négocié ou partagé.
 Au-dessus du plancher, les minima de branche naissent d’une négociation : pour être étendue, une convention doit avoir été négociée et conclue en commission paritaire (article L2261-19 du code du travail).
 Le ministre peut engager l’extension (article L2261-24), en exclure les clauses contraires à la loi ou la refuser pour des motifs d’intérêt général (article L2261-25), sans pouvoir écrire un autre contenu à la place des partenaires sociaux.
 Il peut aussi engager la fusion de branches dont l’activité conventionnelle est trop faible (articles L2261-32 à L2261-34).
 Il agit sur le cadre qui négocie, pas sur ce que la grille écrit.
-Ce qui ne dépend pas de lui.
+Hors de sa main.
 Le salaire au-dessus du plancher reste fixé par l’employeur ou par la grille de branche.
 L’endroit où s’absorbe une hausse ne se décrète pas : marges, prix, productivité, emploi, heures, ou budget public si l’État compense ; lequel domine se mesure après.
 Et ces issues ne se valent pas pour le salarié : par l’emploi ou les heures, la contrepartie ne figure sur aucune fiche de paie.
@@ -61,21 +70,21 @@ Prix : un président peut-il faire baisser ce que vous payez ?
 Une promesse de faire baisser les prix demande le plus souvent de retrouver ceux d’avant : elle vise un niveau, quand l’inflation mesure un rythme.
 Entre 2021 et 2025, les prix à la consommation ont augmenté d’environ 14 % (cumul reconstitué par le livre depuis l’Insee), et aucun levier de l’exécutif ne ramène le panier entier à son point de 2021.
 Sur l’énergie, que le livre suit, le nœud est double : un même impôt change de maître selon le produit, et une baisse décidée doit encore atteindre le prix payé.
-Ce qu’il décide.
+À la main de l’exécutif.
 Le Gouvernement peut instituer par décret une remise sur le prix affiché : celle de 2022 (décret n° 2022-423 du 25 mars 2022) s’est vue à la pompe en une semaine, selon la Cour des comptes (mars 2024), mais c’est l’État qui paie, non le prix sous-jacent qui baisse.
 Il peut bloquer des prix sur motifs de crise, six mois au plus, par décret en Conseil d’État (article L.
 410-2 du code de commerce), et moduler l’accise par arrêté si une loi de finances l’y a habilité.
 Sur le tarif réglementé de l’électricité, proposé par la Commission de régulation de l’énergie (CRE), les ministres peuvent seulement s’opposer dans les trois mois (article L.
 337-4 du code de l’énergie) : empêcher, non écrire.
-Ce qu’il doit faire voter.
+Doit être voté.
 La TVA et le niveau de l’accise se fixent en loi de finances, avec une majorité.
 La liste européenne des taux réduits (annexe III de la directive (UE) 2022/542 du Conseil du 5 avril 2022) permet un taux réduit sur l’électricité sans échéance, sur le gaz jusqu’au 1ᵉʳ janvier 2030.
 Le tarif réglementé étant calculé hors taxes, passer de 20 à 5,5 % retirerait environ 12 % de la facture type, 130 euros par an sur 1 072 au 1ᵉʳ août 2026 (calcul du livre sur la facture publiée par la CRE en juillet 2026), si rien d’autre ne bouge.
-Ce qu’il doit négocier.
+Doit être négocié ou partagé.
 Un taux réduit sur les carburants et le fioul n’est conforme au droit de l’Union que si la liste européenne les accueille, et elle ne se modifie qu’à l’unanimité du Conseil (article 113 du traité sur le fonctionnement de l’Union européenne).
 Sa dernière révision a pris quatre ans et deux mois, et elle fait disparaître les taux réduits sur les combustibles fossiles au plus tard le 1ᵉʳ janvier 2030.
 Un Parlement peut voter le taux sans attendre, comme l’Espagne et la Pologne en mars 2026 ; il perd alors la sécurité juridique de ce qu’il a voté.
-Ce qui ne dépend pas de lui.
+Hors de sa main.
 Les prix de gros, le prix négocié en rayon et le niveau déjà atteint.
 La répercussion d’une baisse de taxe dépend des vendeurs, de la concurrence et de la structure du marché : après la baisse de TVA de 2009 dans la restauration, les prix ont reculé d’environ 2 % quand une répercussion intégrale aurait donné près de 10 % (Insee, 2014).
 Ce que le livre ajoute.
@@ -87,23 +96,28 @@ La première zone est ici la plus garnie : les programmes se fixent par arrêté
 Les postes et la revalorisation se revotent chaque année en loi de finances ; la formation des maîtres se partage avec les universités.
 Le reste échappe : le candidat qui ne se présente pas au concours, l’enseignant dans sa classe, la famille, la natalité d’hier, qui retirerait 125 400 élèves au premier degré dès la rentrée 2026 selon les projections de la Depp d’avril 2026.
 Presque tout s’y décide vite ; presque rien ne s’y prouve dans le temps d’un mandat.
+En résumé, d’après le tableau des neuf promesses :
+À la main de l’exécutif. programmes (arrêté), organisation du collège (décret), redoublement, évaluations nationales
+Doit être voté. postes et crédits, revalorisation, loi de programmation
+Doit être négocié ou partagé. formation des maîtres (universités et INSPE), privé sous contrat
+Hors de sa main. candidats au concours, enseignant en classe, familles, natalité passée
 La page Le niveau des élèves baisse-t-il ? confronte PISA, TIMSS et PIRLS ; elle traite le constat, pas les pouvoirs du président.
 Emploi : un président peut-il faire embaucher ?
 Une promesse d’emploi demande que des embauches s’ajoutent à celles qui auraient eu lieu sans elle.
 Or l’embauche salariée privée porte la signature d’un employeur, et aucun acte public ne signe à sa place.
 Le nœud se situe là : l’État règle largement les conditions de l’embauche, il ne signe pas le contrat, et il devra encore prouver qu’un résultat chiffré lui revient.
-Ce qu’il décide.
+À la main de l’exécutif.
 Le Gouvernement règle par décret le prix du travail près du SMIC : le décret n° 2025-887 du 4 septembre 2025 refond, au 1er janvier 2026, les réductions et exonérations de cotisations patronales applicables à ce niveau.
 Les aides à l’embauche d’un apprenti se fixent aussi par décret, et leur barème a changé trois fois en trois ans, dont deux fois par les décrets n° 2025-174 du 22 février 2025 et n° 2026-168 du 6 mars 2026.
 Les sanctions des demandeurs d’emploi relèvent du décret n° 2025-478 du 30 mai 2025, dont le Conseil d’État a rejeté les recours en septembre 2026.
 Si la négociation de l’assurance-chômage échoue, un décret dit « de carence » fixe la règle en dernier ressort.
 Chacun de ces actes s’applique à la date qu’il fixe, et aucun ne signe un contrat.
-Ce qu’il doit faire voter.
+Doit être voté.
 La structure des allègements de cotisations passe chaque année par la loi de financement, et les budgets des aides par la loi de finances.
 Le droit du contrat et du licenciement relève de la loi ou des ordonnances.
 L’accompagnement des demandeurs repose sur la loi « plein emploi » de 2023, déployée par vagues : depuis janvier 2025, les allocataires du RSA, parmi d’autres publics, sont inscrits d’office à France Travail.
 Une refonte du code du travail suppose une loi, donc une majorité.
-Ce qu’il doit négocier.
+Doit être négocié ou partagé.
 Les règles de l’indemnisation ne viennent pas du Parlement : une convention des partenaires sociaux les fixe, que l’État cadre puis agrée.
 La convention du 15 novembre 2024 court jusqu’au 31 décembre 2028, et deux avenants l’avaient déjà modifiée à la mi-2026, dont l’avenant n° 2 agréé par arrêté du 19 juin 2026.
 Une convention de branche peut être rendue obligatoire par arrêté du ministre chargé du travail, après avis motivé de la Commission nationale de la négociation collective, de l’emploi et de la formation professionnelle (code du travail, article L.
@@ -112,7 +126,7 @@ En cas de carence persistante des organisations, le ministre peut rendre obligat
 2261-17) ; il fixe alors le cadre d’un secteur entier, jamais une embauche.
 La région est chargée de la politique régionale d’accès à la formation professionnelle des jeunes et des adultes à la recherche d’un emploi, sans préjudice des compétences de l’État (article L.
 6121-1), et les opérateurs comme les partenaires sociaux y prennent part.
-Ce qui ne dépend pas de lui.
+Hors de sa main.
 La signature appartient à l’employeur.
 Le Conseil constitutionnel a jugé en 1988 que l’employeur, « responsable de l’entreprise, doit pouvoir, en conséquence, choisir ses collaborateurs » (décision n° 88-244 DC du 20 juillet 1988, considérant 22), sans en faire une liberté sans limites.
 Le candidat accepte le poste, ou le refuse.
@@ -128,7 +142,7 @@ Sécurité : un président peut-il rendre le pays plus sûr ?
 Policiers, gendarmes, magistrats et prisons appartiennent à l’État : la sécurité paraît le domaine où il est le plus chez lui.
 Une promesse de rendre le pays plus sûr demande pourtant trois choses distinctes : changer la règle, faire produire la chaîne pénale, faire reculer la délinquance.
 Le nœud est au centre de la chaîne, chez un juge que l’État emploie sans le commander, et à son bout, dans des comportements qu’aucun acte public ne commande.
-Ce qu’il décide.
+À la main de l’exécutif.
 L’exécutif fixe la doctrine et le déploiement des forces : la police nationale « relève de l’autorité du ministre de l’intérieur » (code de la sécurité intérieure, art.
 L.
 411-1), et le préfet dirige police et gendarmerie pour l’ordre public (art.
@@ -138,17 +152,17 @@ Le garde des sceaux adresse au parquet des instructions générales, mais « auc
 30).
 Ces leviers partent vite, avec des agents longs à former : vingt-quatre mois de formation pour un gardien de la paix (arrêté du 2 mai 2022, art.
 1er).
-Ce qu’il doit faire voter.
+Doit être voté.
 L’échelle des peines relève de la loi : les peines planchers des récidivistes, créées par la loi n° 2007-1198 du 10 août 2007, ont été abrogées par l’article 7 de la loi n° 2014-896 du 15 août 2014.
 Crédits, postes et places passent par la loi de finances et par deux lois de programmation qui expirent en 2027 : celle de l’intérieur (loi n° 2023-22 du 24 janvier 2023), qui porte les crédits du ministère d’environ 20,8 milliards d’euros en 2022 à 25,4 milliards en 2027, et celle de la justice (loi n° 2023-1059 du 20 novembre 2023), qui programme 1 500 magistrats supplémentaires.
-Ce qu’il doit partager, sans pouvoir le commander.
+Doit être partagé, sans pouvoir être commandé.
 L’exécutif organise les moyens de la justice, mais le juge du siège statue en toute indépendance : payé par l’État, il est inamovible (Constitution, art.
 64) et ne reçoit pas d’affectation nouvelle sans son consentement (ordonnance n° 58-1270, art.
 4) ; c’est lui qui individualise chaque peine.
 Les aménagements de peine se décident « par ordonnance ou jugement motivé » du juge de l’application des peines (code de procédure pénale, art.
 712-4).
 Construire des prisons passe par le foncier, les collectivités et le juge administratif.
-Ce qui ne dépend pas de lui.
+Hors de sa main.
 Le délinquant potentiel que la peine doit dissuader, et la récidive, qui n’a pas de calendrier.
 La mesure elle-même dépend d’un choix privé : en 2023, selon l’enquête de victimation du SSMSI, service statistique du ministère de l’Intérieur (édition 2024), un peu plus d’une victime de cambriolage abouti sur deux a porté plainte, une sur six pour un vol de vélo.
 Davantage de plaintes peut faire monter le chiffre enregistré pendant que le phénomène baisse.
@@ -165,25 +179,30 @@ Changer l’âge suppose un vote ; la réforme de 2023 et sa suspension (loi n°
 Les régimes complémentaires se négocient entre partenaires sociaux.
 Échappent les hypothèses de toute trajectoire, les départs effectifs, la masse salariale et le prix auquel les prêteurs prêtent.
 Or un coût se juge contre une trajectoire datée, et la Cour des comptes constatait en juin 2026 que celle du Gouvernement remontait à janvier 2025.
+En résumé, d’après le tableau des neuf promesses :
+À la main de l’exécutif. taux des cotisations vieillesse (décret)
+Doit être voté. âge et durée de cotisation, véhicule de loi, forfait social
+Doit être négocié ou partagé. taux des régimes complémentaires (accord des partenaires sociaux)
+Hors de sa main. hypothèses de trajectoire, départs effectifs, masse salariale, taux d’emprunt
 La page Pourquoi la dette publique augmente-t-elle ? décompose la hausse de la dette ; elle décrit l’héritage, non le pouvoir présidentiel.
 Immigration : que peut décider un président seul ?
 Une promesse d’expulsions ne demande pas que des décisions soient prises : en France, en 2024, selon Eurostat, 128 740 ressortissants de pays tiers étaient visés par une telle décision, plus du quart du total de l’Union.
 Elle demande que davantage de décisions débouchent effectivement sur un éloignement.
 Le nœud est là : prononcer n’est pas éloigner, et entre les deux s’interposent des capacités, un juge et, dans certains dossiers, la signature d’un autre État.
-Ce qu’il décide.
+À la main de l’exécutif.
 L’exécutif peut donner aux préfets, par circulaire, des instructions sur l’application du cadre existant, celui de l’article L.
 611-1 du code de l’entrée et du séjour des étrangers et du droit d’asile, où l’autorité administrative « peut » obliger un étranger à quitter le territoire.
 Il décide aussi du placement en rétention, à effet immédiat, mais dans la limite des places existantes : environ deux mille, selon une note de contrôle de la commission des lois de l’Assemblée nationale de juin 2025.
-Ce qu’il doit faire voter.
+Doit être voté.
 Les places passent par le budget, et leur délai ne se comprime pas : la cible de trois mille, d’abord fixée à 2027, est portée à 2029 par les documents du budget pour 2026.
 La durée maximale de rétention, les conditions d’expulsion et les incriminations pénales relèvent de la loi.
 Encore faut-il atteindre l’ordre du jour : sur trente-huit propositions de loi relatives à l’immigration retenues par le livre entre l’été 2024 et la fin d’août 2026, trente n’ont pas dépassé le renvoi en commission ; les deux devenues lois sont les seules où le Gouvernement avait engagé la procédure accélérée.
-Ce qu’il doit négocier.
+Doit être négocié ou partagé.
 Sans document de voyage reconnu, l’éloignement exige un laissez-passer consulaire que seul le pays d’origine délivre, « expression de la souveraineté d’un État » selon la même note.
 Contre un refus, la France garde le refus de visas de l’article 47 de la loi du 26 janvier 2024, levier de négociation et non pouvoir de contraindre ; la conditionnalité de l’aide au développement, prévue au même article, est tombée, sans lien avec le texte, devant la décision n° 2023-863 DC du Conseil constitutionnel.
 L’accord franco-algérien du 27 décembre 1968 ne se modifie pas d’un côté.
 L’obligation de décider vient aussi de l’Union : l’article 6 de la directive 2008/115/CE impose en principe une décision de retour à l’encontre de tout ressortissant d’un pays tiers en séjour irrégulier, sous réserve des exceptions prévues à ses paragraphes 2 à 5.
-Ce qui ne dépend pas de lui.
+Hors de sa main.
 Les tribunaux administratifs ont annulé 18 % des obligations de quitter le territoire qui leur étaient présentées en 2022, selon la Cour des comptes (rapport de janvier 2024).
 Le juge judiciaire intervient quand l’administration veut prolonger la rétention : entre 2018 et 2022, selon le même rapport, 58 % des libérations avant éloignement ont résulté de ses décisions, « souvent en raison d’une impasse dans la délivrance de laissez-passer consulaires », contre 6 % pour les juridictions administratives et 32 % pour les préfectures.
 Restent la personne, qui doit être retrouvée, et sa coopération pour établir son identité.
@@ -199,28 +218,33 @@ Les budgets carbone sont fixés par décret (code de l’environnement, article 
 Le droit européen fixe un autre objectif, sur un autre périmètre et une autre année de référence : pour les secteurs que couvre le règlement (UE) 2023/857, une baisse de 47,5 % par rapport à 2005 au lieu de 37 %, qui ne s’abaisse pas à Paris.
 Échappent les secteurs qui émettent, les émissions importées et le puits forestier.
 Le pouvoir de fixer la trajectoire est concentré ; celui de la produire est dispersé.
+En résumé, d’après le tableau des neuf promesses :
+À la main de l’exécutif. budgets carbone et stratégie nationale bas-carbone (décret)
+Doit être voté. cap de 2030 et neutralité 2050 (code de l’énergie)
+Doit être négocié ou partagé. objectif européen de 47,5 %, collectivités qui « prennent en compte » la stratégie
+Hors de sa main. secteurs émetteurs, émissions importées, puits de carbone
 La page Enseigner l’empreinte carbone en SES montre pourquoi émissions françaises et empreinte carbone donnent deux totaux, choix de compteur qu’une promesse climatique doit trancher ; elle ne traite pas des pouvoirs du président.
 Le tableau des neuf promesses
 Une ligne par thème, les quatre zones en colonnes.
 Chaque case résume la section correspondante ci-dessus ; la démonstration complète, promesse écrite à l’appui, est dans le chapitre du livre.
 Thème
-Ce qu'il décide
-Ce qu'il doit faire voter
-Ce qu'il doit négocier
-Ce qui ne dépend pas de lui
+À la main de l’exécutif
+Doit être voté
+Doit être négocié ou partagé
+Hors de sa main
 Santé
-zonage, permanence des soins, agrément des stages (arrêtés d'ARS)
-régulation de l'installation, exonérations du cumul emploi-retraite
-objectifs de formation (universités, avis conforme), aides à l'installation
-choix du praticien : s'installer, se salarier, accueillir un stagiaire
+zonage, permanence des soins, agrément des stages (arrêtés d’ARS)
+régulation de l’installation, exonérations du cumul emploi-retraite
+objectifs de formation (universités, avis conforme), aides à l’installation
+choix du praticien : s’installer, se salarier, accueillir un stagiaire
 Salaires
-coup de pouce au Smic, date de revalorisation, prime d'activité, extension
+coup de pouce au Smic, date de revalorisation, prime d’activité, extension
 cotisations, impôt sur le revenu, indexation générale des salaires
 minima de branche, écrits par les partenaires sociaux
-salaire au-dessus du plancher, absorption d'une hausse, prix
+salaire au-dessus du plancher, absorption d’une hausse, prix
 Prix
 remise par décret, blocage de crise, accise sur habilitation
-TVA de l'électricité et du gaz, niveau de l'accise
+TVA de l’électricité et du gaz, niveau de l’accise
 taux réduit conforme sur carburants et fioul : unanimité des Vingt-Sept
 prix de gros, répercussion par les vendeurs, niveau déjà atteint
 École
@@ -231,8 +255,8 @@ candidats au concours, enseignant en classe, familles, natalité passée
 Emploi
 prix du travail près du SMIC, aides, sanctions, décret de carence
 allègements, budgets des aides, droit du contrat, accompagnement des demandeurs
-convention d'assurance-chômage, extension des branches, formation avec les régions
-signature de l'employeur, choix du candidat, conjoncture, démographie, appariement
+convention d’assurance-chômage, extension des branches, formation avec les régions
+signature de l’employeur, choix du candidat, conjoncture, démographie, appariement
 Sécurité
 doctrine et déploiement des forces, instructions générales au parquet
 échelle des peines, crédits, postes, places ; programmations expirant en 2027
@@ -242,15 +266,15 @@ Dette (retraites)
 taux des cotisations vieillesse (décret)
 âge et durée de cotisation, véhicule de loi, forfait social
 taux des régimes complémentaires (accord des partenaires sociaux)
-hypothèses de trajectoire, départs effectifs, masse salariale, taux d'emprunt
+hypothèses de trajectoire, départs effectifs, masse salariale, taux d’emprunt
 Immigration
 Circulaire aux préfets, placement en rétention dans les places existantes
-Places de rétention, durée maximale, conditions d'expulsion, incriminations pénales
+Places de rétention, durée maximale, conditions d’expulsion, incriminations pénales
 Laissez-passer consulaire, accord franco-algérien de 1968, directive retour
 Juges administratif et judiciaire, personne retrouvée, sa coopération
 Climat
 budgets carbone et stratégie nationale bas-carbone (décret)
-cap de 2030 et neutralité 2050 (code de l'énergie)
+cap de 2030 et neutralité 2050 (code de l’énergie)
 objectif européen de 47,5 %, collectivités qui « prennent en compte » la stratégie
 secteurs émetteurs, émissions importées, puits de carbone
 Lu en colonnes, le tableau montre que les neuf promesses ne butent pas sur le même obstacle : salaires, prix et emploi dépendent surtout de décisions économiques décentralisées ; santé et école, de délais de formation et d’observation ; sécurité et immigration, de décisions de juges et de capacités d’exécution ; dette et climat, de trajectoires longues et d’engagements partagés.
@@ -258,9 +282,9 @@ Ce que cette page ne dit pas
 Elle résume, thème par thème, ce que le livre établit : elle ne refait pas l’examen des promesses déjà formulées, chiffres et votes à l’appui, qui fait le cœur de chaque chapitre.
 Elle n’évalue aucun candidat, ne donne aucun conseil de vote et ne dit pas si une promesse est souhaitable.
 Le droit cité est celui que le livre a lu dans sa version en vigueur à l’été 2026 ; une loi ou un décret postérieurs peuvent déplacer une frontière entre les zones.
-Suivre chaque promesse jusqu'au point où le pouvoir de décider ne suffit plus
+Suivre chaque promesse jusqu’au point où le pouvoir de décider ne suffit plus
 Un président peut-il tenir ses promesses ?
-Ce qu'il peut vraiment décider — et ce qui lui échappe
+Ce qu’il peut vraiment décider — et ce qui lui échappe
 Cette page trace la frontière entre les zones, thème par thème.
 Le livre suit, pour chacun, une promesse déjà écrite, datée et signée, jusqu’au point précis où le résultat échappe à celui qui la porte, et finit sur les questions à lui poser, dans l’ordre.
 Près de 300 entrées documentaires, aucun conseil de vote.
@@ -271,14 +295,14 @@ Version papier : 19,90 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →
 Questions fréquentes
 Un président peut-il augmenter le Smic ?
-Oui, par décret : le Gouvernement peut relever le Smic au-delà de la revalorisation automatique (code du travail, article L3231-10), ce qu'on appelle un coup de pouce.
-Au-dessus du Smic, les salaires du privé sont fixés par les employeurs et les grilles de branche, que l'État peut étendre mais pas écrire.
-Un président peut-il baisser la TVA sur l'énergie ?
+Oui, par décret : le Gouvernement peut relever le Smic au-delà de la revalorisation automatique (code du travail, article L3231-10), ce qu’on appelle un coup de pouce.
+Au-dessus du Smic, les salaires du privé sont fixés par les employeurs et les grilles de branche, que l’État peut étendre mais pas écrire.
+Un président peut-il baisser la TVA sur l’énergie ?
 Il doit la faire voter en loi de finances.
-Le droit européen permet un taux réduit sur l'électricité, et sur le gaz jusqu'au 1er janvier 2030, mais pas sur les carburants : la liste européenne ne se modifie qu'à l'unanimité des Vingt-Sept (traité sur le fonctionnement de l'Union européenne, article 113).
-Un président peut-il augmenter le nombre d'expulsions ?
+Le droit européen permet un taux réduit sur l’électricité, et sur le gaz jusqu’au 1er janvier 2030, mais pas sur les carburants : la liste européenne ne se modifie qu’à l’unanimité des Vingt-Sept (traité sur le fonctionnement de l’Union européenne, article 113).
+Un président peut-il augmenter le nombre d’expulsions ?
 Il peut donner des instructions aux préfets et placer en rétention dans la limite des places existantes.
-Mais une expulsion exige souvent un laissez-passer que seul le pays d'origine délivre, et les juges administratif et judiciaire contrôlent les décisions et la rétention.
+Mais une expulsion exige souvent un laissez-passer que seul le pays d’origine délivre, et les juges administratif et judiciaire contrôlent les décisions et la rétention.
 Sources
 Les textes cités sont ceux que le livre Un président peut-il tenir ses promesses ?
 (Stéphane Lalut, septembre 2026) a lus dans leur version en vigueur à l’été 2026 ; son appareil de sources, chapitre par chapitre, donne pour chacun la version consultée et les études citées.
@@ -304,6 +328,8 @@ Immigration : code de l’entrée et du séjour des étrangers et du droit d’a
 Climat : code de l’énergie, article L.
 100-4 ; code de l’environnement, article L.
 222-1 A ; décret n° 2026-636 du 16 juillet 2026 ; règlement (UE) 2023/857, annexe I.
+Révisions
+4 novembre 2026 — Santé : la proposition de loi sur l’installation des médecins a commencé à être examinée en séance publique au Sénat le 11 juin 2026, sans que tous ses articles le soient encore (dossier législatif du Sénat).
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp
