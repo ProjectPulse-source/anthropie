@@ -207,12 +207,13 @@
 {{- if lt (len $acces) 3 }}{{ warnf "accueil : %d acces ressources seulement (%s)" (len $acces) .Lang }}{{ end -}}
 <section class="home-section home-ressources" aria-labelledby="home-ressources-titre">
   <h2 id="home-ressources-titre">{{ if eq .Lang "en" }}Public questions, documented{{ else }}Des questions publiques, documentées{{ end }}</h2>
-  <p class="section-intro">{{ if eq .Lang "en" }}Public debt, presidential powers, local government, data centres: enquiries into public questions, with their sources, their limits and reusable data, and the documented register of displaced costs. They can be read independently of the author's hypothesis.{{ else }}Dette, école, pouvoirs du président, collectivités, data centers : des enquêtes sur des questions publiques, avec leurs sources, leurs limites et des données à réutiliser, et le registre documenté des coûts déportés. Elles se consultent indépendamment de l'hypothèse de l'auteur.{{ end }}</p>
+  <p class="section-intro">{{ if eq .Lang "en" }}Public debt, presidential powers, local government, data centres: enquiries into public questions, with their sources, their limits and reusable data. They can be read independently of the author's hypothesis; the Register of Offloaded Costs is the documentary apparatus of his book <em>ANTHROPY</em>.{{ else }}Dette, école, pouvoirs du président, collectivités, data centers : des enquêtes sur des questions publiques, avec leurs sources, leurs limites et des données à réutiliser. Elles se consultent indépendamment de l'hypothèse de l'auteur ; le Registre des coûts déportés, lui, est l'appareil documentaire de son livre <em>ANTHROPIE</em>.{{ end }}</p>
   <ul class="ressources-index__liste home-ressources__liste">
     {{- range sort $acces "Params.ressource.accueil" }}
       {{- partial "ressource-entree.html" (dict "page" . "r" .Params.ressource "fr" false "vignette" true "sansDesc" true) -}}
     {{- end }}
   </ul>
+  {{- if eq .Lang "fr" }}<p class="home-enseigner"><a href="/enseignants/">Pour enseigner : activités, figures et données prêtes pour la classe&nbsp;→</a></p>{{ end }}
   <p class="home-tout"><a href="{{ if eq .Lang "en" }}/en/resources/{{ else }}/ressources/{{ end }}">{{ if eq .Lang "en" }}All resources&nbsp;→{{ else }}Toutes les ressources&nbsp;→{{ end }}</a></p>
 </section>
 
@@ -220,7 +221,7 @@
 <section class="frontiere-contemporaine">
   <div class="frontiere-contemporaine__inner">
     <p class="frontiere-contemporaine__eyebrow">
-      {{ if eq .Lang "en" }}A contemporary frontier{{ else }}Une frontière contemporaine{{ end }}
+      {{ if eq .Lang "en" }}The three axes combined: the digital case{{ else }}Les trois axes croisés : le numérique{{ end }}
     </p>
     <h2 class="frontiere-contemporaine__title">
       {{ if eq .Lang "en" }}Attention as receptacle{{ else }}L'attention comme réceptacle{{ end }}
@@ -339,9 +340,9 @@
   {{- end }}
   <p class="section-intro">
     {{ if eq .Lang "en" }}
-      Published and reviewed in <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> and other intellectual press outlets.
+      The author's articles and reviews have appeared in <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> and other intellectual press outlets.
     {{ else }}
-      Publié et recensé dans <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> et d'autres revues de la presse intellectuelle.
+      Articles et recensions de l'auteur publiés dans <em>Alternatives Économiques</em>, <em>La Vie des idées</em>, <em>En attendant Nadeau</em>, <em>Terrestres</em>, <em>Nonfiction</em>, <em>Le Temps</em> et d'autres revues de la presse intellectuelle.
     {{ end }}
   </p>
   <p class="home-tout"><a href="{{ "/publications/" | relLangURL }}">{{ if eq .Lang "en" }}All publications&nbsp;→{{ else }}Toutes les publications&nbsp;→{{ end }}</a></p>
