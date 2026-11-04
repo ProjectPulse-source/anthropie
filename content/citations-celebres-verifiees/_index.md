@@ -36,16 +36,18 @@ onglet:  # barre du bloc (partials/barre-bloc.html, posée par le gabarit)
 
 Une citation célèbre se répète d'ordinaire sans son livre, sans sa page et souvent sans sa forme exacte. Cette page examine vingt citations célèbres prêtées à cinq auteurs, choisies pour ce qu'elles montrent de la façon dont un texte se transmet, se transforme ou change d'auteur, et les relit dans leurs œuvres, dans une édition qu'elle nomme, au passage qu'elle indique. Elle s'appuie sur la vérification des {{< stat "citations" "nbsp" >}} citations de [*Livresque des mots*](/livres/livresque-des-mots/), dont l'[édition 2026 a réexaminé le texte et la paternité](/livresque/methode-et-corpus/) une à une.
 
-<aside class="encadre" id="en-atelier">
-
-**En atelier&nbsp;: authentique, retouchée ou introuvable chez l'auteur&nbsp;?** Pour une séance en français, avec des adolescents ou des adultes, en 30 à 45&nbsp;minutes&nbsp;: choisir une citation, en discuter le sens, puis chercher son auteur. Chaque lien ouvre la fiche qui donne la réponse et sa source.
-
-1. «&nbsp;Je ne suis pas d'accord avec ce que vous dites, mais je me battrai jusqu'à la mort pour que vous ayez le droit de le dire&nbsp;», prêtée à Voltaire ([la réponse](#voltaire-je-me-battrai))
-2. «&nbsp;Ouvrez une école, vous fermerez une prison&nbsp;», prêtée à Victor Hugo ([la réponse](#hugo-ouvrez-une-ecole))
-3. «&nbsp;La raison du plus fort est toujours la meilleure&nbsp;», prêtée à La Fontaine ([la réponse](#la-fontaine-la-raison-du-plus-fort))
-4. «&nbsp;Les femmes sont comme les girouettes&nbsp;: elles se fixent quand elles se rouillent&nbsp;», prêtée à Voltaire ([la réponse](#voltaire-les-femmes-et-les-girouettes))
-5. «&nbsp;Que diable allait-il faire dans cette galère&nbsp;?&nbsp;», prêtée à Molière ([la réponse](#moliere-cette-galere))
-
+<aside class="atelier" id="en-atelier" aria-labelledby="atelier-titre">
+<p class="atelier__surtitre">En atelier</p>
+<p class="atelier__titre" id="atelier-titre">Authentique, retouchée ou introuvable chez l'auteur&nbsp;?</p>
+<p class="atelier__usage"><b>Public</b>&nbsp;: adolescents ou adultes, en français · <b>Durée</b>&nbsp;: 30 à 45&nbsp;minutes · <b>Déroulé</b>&nbsp;: choisir une citation, en discuter le sens, puis chercher son auteur.</p>
+<ol class="atelier__liste">
+<li><span class="atelier__citation">«&nbsp;Je ne suis pas d'accord avec ce que vous dites, mais je me battrai jusqu'à la mort pour que vous ayez le droit de le dire&nbsp;»</span><span class="atelier__auteur">prêtée à Voltaire</span><a class="atelier__reponse" href="#voltaire-je-me-battrai">Voir la réponse</a></li>
+<li><span class="atelier__citation">«&nbsp;Ouvrez une école, vous fermerez une prison&nbsp;»</span><span class="atelier__auteur">prêtée à Victor Hugo</span><a class="atelier__reponse" href="#hugo-ouvrez-une-ecole">Voir la réponse</a></li>
+<li><span class="atelier__citation">«&nbsp;La raison du plus fort est toujours la meilleure&nbsp;»</span><span class="atelier__auteur">prêtée à La Fontaine</span><a class="atelier__reponse" href="#la-fontaine-la-raison-du-plus-fort">Voir la réponse</a></li>
+<li><span class="atelier__citation">«&nbsp;Les femmes sont comme les girouettes&nbsp;: elles se fixent quand elles se rouillent&nbsp;»</span><span class="atelier__auteur">prêtée à Voltaire</span><a class="atelier__reponse" href="#voltaire-les-femmes-et-les-girouettes">Voir la réponse</a></li>
+<li><span class="atelier__citation">«&nbsp;Que diable allait-il faire dans cette galère&nbsp;?&nbsp;»</span><span class="atelier__auteur">prêtée à Molière</span><a class="atelier__reponse" href="#moliere-cette-galere">Voir la réponse</a></li>
+</ol>
+<p class="atelier__note">Chaque bouton ouvre la fiche de la citation, avec sa réponse et sa source.</p>
 </aside>
 
 ## Comment lire cette page {#comment-lire}
