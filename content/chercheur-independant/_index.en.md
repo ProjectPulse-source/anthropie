@@ -16,6 +16,12 @@ faq:
     answer: "The same requirements as anywhere, applied even more strictly: a dated, versioned text with a DOI, verifiable sources, stable definitions, explicit criteria for refutation, and clean metadata (identifiers, keywords, abstracts) that allow academic search engines to index the work. The absence of an affiliation withholds credit a priori — method has to take its place."
   - question: "Is independent research taken seriously by the academic field?"
     answer: "Structurally, it occupies a margin — and this marginality is no accident, according to the working paper AWP-05: the field maintains its order by relegating to its margins the questions that are too cross-disciplinary, the non-conforming formats, the atypical postures. Open infrastructures reduce the cost of this marginality (publishing, being cited, existing academically) without abolishing its logic."
+  - question: "Does one need a doctorate to publish research?"
+    answer: "No: none of these tools (DOI, ORCID, preprints, indexing) requires a degree, and journals judge the text. A doctorate confers entry credit and a network; it is not a condition of publication."
+  - question: "Can an independent researcher be cited by academic research?"
+    answer: "Yes, as long as the work is citable (DOI, dates, stable versions) and findable (metadata, indexing). Citation does not require an affiliation — it requires a clean reference."
+  - question: "Why choose this position rather than the university?"
+    answer: "Sometimes by choice — freedom of questions, formats and pace — and sometimes because of the structure of the field itself, which offers few places and reserves them for standardised profiles. The working paper AWP-05 argues that both answers are true at once: the margin is both endured and fertile — it is where the questions the centre cannot process end up."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "reperes"
@@ -29,9 +35,17 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 An independent researcher is a researcher who conducts and publishes work **without institutional affiliation** — no post, no laboratory, no academic funding. The interesting question is not the status: it is **how this work becomes citable, verifiable and open to discussion** without the credit a priori that an institution confers. This page answers in two steps: the concrete infrastructure, then the analysis of the position itself.
 
+<div class="resultat-phrase">
+
+**The result in one sentence.** Publishing without an institution is now well equipped — DOIs, an ORCID identifier, preprints, indexing, journals — but the equipment does not manufacture recognition: without credit a priori, it is method that carries the burden of proof.
+
+</div>
+
 ## The infrastructure: publishing outside the walls, a user's guide
 
 What was impossible twenty years ago is now well equipped. An independent researcher's minimal toolkit:
+
+<div class="outils-grille">
 
 1. **One DOI per text** — an open repository such as [Zenodo](https://zenodo.org) (operated by CERN) assigns each working paper a permanent identifier, a verifiable publication date and version control. This is the difference between a published text and a file on a website: the DOI makes the work **citable**.
 2. **A researcher identity** — [ORCID](https://orcid.org) provides a unique identifier, independent of any institution, that links works to their author in academic databases.
@@ -39,16 +53,22 @@ What was impossible twenty years ago is now well equipped. An independent resear
 4. **Academic indexing** — clean metadata (titles, abstracts, keywords, classification codes) lets Google Scholar and other engines discover and link the work.
 5. **Journals remain open** — most journals judge submissions on the text; an independent researcher's article follows the same review process as any other.
 
+</div>
+
 None of this manufactures recognition — it comes, as for any researcher, through citation and discussion. But the infrastructure abolishes the old entry barrier: **a rigorous piece of work can no longer be prevented from existing publicly**.
 
 ## What the absence of an institution demands in return
 
 Without credit a priori, method has to carry the whole burden of proof. In practice:
 
+<div class="exigences-liste">
+
 - **dated, versioned texts with DOIs** — so that every claim has a stable source;
 - **canonical definitions** — a fixed vocabulary, reused identically from one text to the next;
 - **explicit criteria for refutation** — stating what, if observed, would invalidate the hypothesis;
 - **an organised corpus** — a numbered series rather than scattered texts, so that the work can be cited as a programme.
+
+</div>
 
 This is the protocol followed by the series of [*Anthropie Working Papers*](/en/serie-awp/): nine numbered working papers, each with a Zenodo DOI, French and English versions cross-linked, stable definitions and refutation conditions — the corpus that serves as the concrete case for this page.
 
@@ -64,11 +84,7 @@ This page is written from the position it describes. Stéphane Lalut, an economi
 
 ## Frequently asked questions
 
-**Does one need a doctorate to publish research?** No — none of the tools above requires a degree, and journals judge the text. A doctorate confers entry credit and a network; it is not a condition of publication.
-
-**Can an independent researcher be cited by academic research?** Yes, as long as the work is citable (DOI, dates, stable versions) and findable (metadata, indexing). Citation does not require an affiliation — it requires a clean reference.
-
-**Why choose this position rather than the university?** Sometimes by choice — freedom of questions, formats and pace — and sometimes because of the structure of the field itself, which offers few places and reserves them for standardised profiles. [AWP-05](/en/awp/awp-05/) argues that both answers are true at once: the margin is both endured and fertile — it is where the questions the centre cannot process end up.
+{{< faq-visible >}}
 
 ## Further reading
 

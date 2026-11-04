@@ -147,6 +147,8 @@ main .citation-entree__corps > ul > li {
 // Grille d'une entrée de corpus et liste des mouvements (_citations.scss) : liste sans puce ni retrait.
 main .citations-mouvements ul,
 main .etape-fiche > ul,
+main .outils-grille > ol,
+main .exigences-liste > ul,
 main .citation-entree__corps > ul {
   padding-left: 0 !important;
   margin: 0 !important;
@@ -154,6 +156,7 @@ main .citation-entree__corps > ul {
 }
 main .citation-entree__corps > ul > li,
 main .etape-fiche > ul > li { margin-bottom: 0.75em !important; padding-left: 0 !important; }
+main .outils-grille > ol > li { margin-bottom: 0 !important; padding-left: 3rem !important; }
 
 main li::marker {
   color: var(--color-text-faint);

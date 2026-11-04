@@ -15,6 +15,12 @@ faq:
     answer: "Les mêmes exigences que partout, appliquées plus strictement encore : un texte daté et versionné avec DOI, des sources vérifiables, des définitions stables, des critères de réfutation explicites, et des métadonnées propres (identifiants, mots-clés, résumés) qui permettent aux moteurs académiques d'indexer le travail. L'absence d'affiliation prive du crédit a priori — la méthode doit le remplacer."
   - question: "La recherche indépendante est-elle prise au sérieux par le champ académique ?"
     answer: "Structurellement, elle occupe une marge — et cette marginalité n'est pas un accident, analyse le working paper AWP-05 : le champ maintient son ordre en reléguant vers ses marges les questions trop transversales, les formats non conformes, les postures atypiques. Les infrastructures ouvertes réduisent le coût de cette marginalité (publier, être cité, exister académiquement) sans en abolir la logique."
+  - question: "Faut-il un doctorat pour publier de la recherche ?"
+    answer: "Non : aucun de ces outils (DOI, ORCID, préprints, indexation) n'exige de diplôme, et les revues jugent le texte. Le doctorat confère un crédit d'entrée et un réseau ; il ne conditionne pas la publication."
+  - question: "Un chercheur indépendant peut-il être cité par la recherche académique ?"
+    answer: "Oui, dès lors que ses travaux sont citables (DOI, dates, versions stables) et trouvables (métadonnées, indexation). La citation ne demande pas d'affiliation — elle demande une référence propre."
+  - question: "Pourquoi choisir cette position plutôt que l'université ?"
+    answer: "Parfois par choix — liberté de questions, de formats, de rythme —, parfois par la structure du champ elle-même, qui offre peu de places et les réserve à des profils normés. Le working paper AWP-05 soutient que les deux réponses sont vraies en même temps : la marge est à la fois subie et féconde — c'est là que vont les questions que le centre ne peut pas traiter."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["usage"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "reperes"
@@ -28,9 +34,17 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 Un chercheur indépendant est un chercheur qui conduit et publie des travaux **sans affiliation institutionnelle** — ni poste, ni laboratoire, ni financement académique. La question intéressante n'est pas le statut&nbsp;: c'est **comment ce travail devient citable, vérifiable et discutable** sans le crédit a priori que confère une institution. Cette page répond en deux temps&nbsp;: l'infrastructure concrète, puis l'analyse de la position elle-même.
 
+<div class="resultat-phrase">
+
+**Le résultat en une phrase.** Publier sans institution est aujourd'hui outillé — DOI, identifiant ORCID, préprints, indexation, revues —, mais l'outillage ne fabrique pas la reconnaissance&nbsp;: sans crédit a priori, c'est la méthode qui porte la charge de la preuve.
+
+</div>
+
 ## L'infrastructure&nbsp;: publier hors les murs, mode d'emploi
 
 Ce qui était impossible il y a vingt ans est aujourd'hui outillé. La boîte à outils minimale d'un chercheur indépendant&nbsp;:
+
+<div class="outils-grille">
 
 1. **Un DOI par texte** — un dépôt ouvert comme [Zenodo](https://zenodo.org) (opéré par le CERN) attribue à chaque working paper un identifiant permanent, une date certaine et un versionnage. C'est la différence entre un texte publié et un fichier sur un site&nbsp;: le DOI rend le travail **citable**.
 2. **Une identité de chercheur** — [ORCID](https://orcid.org) fournit un identifiant unique, indépendant de toute institution, qui relie les travaux à leur auteur dans les bases académiques.
@@ -38,16 +52,22 @@ Ce qui était impossible il y a vingt ans est aujourd'hui outillé. La boîte à
 4. **L'indexation académique** — des métadonnées propres (titres, résumés, mots-clés, codes de classification) permettent à Google Scholar et aux moteurs de découvrir et relier les travaux.
 5. **Les revues restent ouvertes** — la plupart des revues jugent les soumissions sur le texte&nbsp;; un article de chercheur indépendant y suit le même circuit de relecture que les autres.
 
+</div>
+
 Rien de tout cela ne fabrique la reconnaissance — elle passe, comme pour tout chercheur, par la citation et la discussion. Mais l'infrastructure abolit l'ancien verrou d'entrée&nbsp;: **on ne peut plus empêcher un travail rigoureux d'exister publiquement**.
 
 ## Ce que l'absence d'institution exige en retour
 
 Sans crédit a priori, la méthode doit porter toute la charge de la preuve. En pratique&nbsp;:
 
+<div class="exigences-liste">
+
 - **des textes datés, versionnés, à DOI** — pour que chaque affirmation ait une source stable&nbsp;;
 - **des définitions canoniques** — un vocabulaire fixé, réutilisé à l'identique de texte en texte&nbsp;;
 - **des critères de réfutation explicites** — dire ce qui, si on l'observait, invaliderait l'hypothèse&nbsp;;
 - **un corpus organisé** — une série numérotée plutôt que des textes épars, pour que le travail se cite comme un programme.
+
+</div>
 
 C'est le protocole suivi par la série des [*Anthropie Working Papers*](/serie-awp/)&nbsp;: neuf working papers numérotés, chacun avec DOI Zenodo, versions française et anglaise croisées, définitions stables et conditions de réfutation — le corpus qui sert de cas concret à cette page.
 
@@ -63,11 +83,7 @@ Cette page est écrite depuis la position qu'elle décrit. Stéphane Lalut, éco
 
 ## Questions fréquentes
 
-**Faut-il un doctorat pour publier de la recherche&nbsp;?** Non — aucun des outils ci-dessus n'exige de diplôme, et les revues jugent le texte. Le doctorat confère un crédit d'entrée et un réseau&nbsp;; il ne conditionne pas la publication.
-
-**Un chercheur indépendant peut-il être cité par la recherche académique&nbsp;?** Oui, dès lors que ses travaux sont citables (DOI, dates, versions stables) et trouvables (métadonnées, indexation). La citation ne demande pas d'affiliation — elle demande une référence propre.
-
-**Pourquoi choisir cette position plutôt que l'université&nbsp;?** Parfois par choix — liberté de questions, de formats, de rythme —, parfois par la structure du champ elle-même, qui offre peu de places et les réserve à des profils normés. [AWP-05](/awp/awp-05/) soutient que les deux réponses sont vraies en même temps&nbsp;: la marge est à la fois subie et féconde — c'est là que vont les questions que le centre ne peut pas traiter.
+{{< faq-visible >}}
 
 ## Pour aller plus loin
 

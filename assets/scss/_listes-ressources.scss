@@ -1,0 +1,25 @@
+// _listes-ressources.scss — listes-composants des pages de ressource sans module propre (04/11/2026).
+// .outils-grille : une liste numérotée d'outils rendue en cartes ; .exigences-liste : une liste de contrôle.
+// Exemptions de la règle « main li » : _typography.scss.
+.outils-grille > ol {
+  counter-reset: outil;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.6rem;
+  > li {
+    counter-increment: outil; list-style: none;
+    background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-radius: 6px;
+    padding: 0.8rem 1rem 0.9rem 3rem; position: relative; font-size: 0.95rem;
+    &::before {
+      content: counter(outil); position: absolute; left: 0.9rem; top: 0.85rem;
+      width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--color-dossier-tint);
+      color: var(--color-accent); font: 600 0.8rem/1.5rem var(--font-sans); text-align: center;
+    }
+  }
+}
+.exigences-liste > ul {
+  border-top: 1px solid var(--color-rule-soft);
+  > li {
+    list-style: none; padding: 0.55rem 0 0.55rem 1.8rem !important; margin: 0 !important;
+    border-bottom: 1px solid var(--color-rule-soft); position: relative;
+    &::before { content: "\2713"; position: absolute; left: 0.2rem; top: 0.55rem; color: var(--color-accent); font: 600 1rem var(--font-sans); }
+  }
+}
