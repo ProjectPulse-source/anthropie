@@ -283,12 +283,19 @@ def main() -> int:
     for p in fs:
         d, s = examiner(lire(p.read_text(encoding="utf-8"), M))
         if p.name in EXCEPTIONS and not args:
-            if d:
+            # L'exception n'excuse QUE sa classe (« · » en fin de ligne d'un pied, R5) ; tout autre défaut de la figure
+            # reste bloquant (04/11/2026 : elle excusait auparavant n'importe quel défaut). Devenue sans objet, elle est
+            # signalée sans bloquer : un workflow de données qui régénère la figure avec l'organe corrigé ne doit pas
+            # s'arrêter pour une ligne de liste à retirer (rien n'est masqué : il ne reste aucun défaut de la classe).
+            point = [x for x in d if x.startswith("R5 ") and re.search("·\\s*»", x)]
+            autres = [x for x in d if x not in point]
+            if point:
                 print("%s : exception declaree (%s)" % (p.name, EXCEPTIONS[p.name]))
+            else:
+                print("%s : exception sans objet -- a retirer de check-figures.py (non bloquant)" % p.name)
+            if not autres:
                 continue
-            n_def += 1
-            print("%s : passe desormais -- retirer son exception de check-figures.py" % p.name)
-            continue
+            d = autres
         if d:
             n_def += 1
             print("%s : %d defaut(s)" % (p.name, len(d)))
