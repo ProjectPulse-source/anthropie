@@ -45,7 +45,7 @@
 <text x="557.7" y="435" font-size="11" font-weight="600" fill="#eb6834">21 to 32 TWh</text>
 <line x1="0" y1="460.0" x2="720" y2="460.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="475.0" font-size="11" fill="#55524f">RTE: Bilan prévisionnel 2025-2035 (Dec. 2025), Bilan électrique 2025 (Feb. 2026), web page “Les data centers en</text>
-<text class="pied-source" x="0" y="489.0" font-size="11" fill="#55524f">chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel</text>
+<text class="pied-source" x="0" y="489.0" font-size="11" fill="#55524f">chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel</text>
 <text class="pied-note" x="0" y="503.0" font-size="11" fill="#55524f">Reserved capacity is neither power drawn nor consumption: the two panels are not comparable, and no ratio is computed</text>
 <text class="pied-note" x="0" y="517.0" font-size="11" fill="#55524f">between them. Pathways: RTE's assumptions, not measurements.</text>
 <text class="pied-licence" x="0" y="531.0" font-size="11" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/data-centres-reserved-capacity/</text>

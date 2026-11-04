@@ -50,7 +50,7 @@
 <text x="383.8" y="82" font-size="11" fill="#fff" stroke="#fff" stroke-width="4" stroke-linejoin="round" aria-hidden="true">Grèce : 21,0 points en 2012 ; ▲ hors échelle</text>
 <text x="383.8" y="82" font-size="11" fill="#184f95">Grèce : 21,0 points en 2012 ; ▲ hors échelle</text>
 <line x1="0" y1="402.0" x2="720" y2="402.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="417.0" font-size="11" fill="#52514e">Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)</text>
-<text class="pied-note" x="0" y="431.0" font-size="11" fill="#52514e">Taux de marché à 10 ans, non le taux implicite du stock. Comparateurs, non groupe de contrôle.</text>
+<text class="pied-source" x="0" y="417.0" font-size="11" fill="#52514e">Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)</text>
+<text class="pied-note" x="0" y="431.0" font-size="11" fill="#52514e">Taux de marché à 10 ans, non le taux implicite du stock. Comparateurs, non groupe de contrôle.</text>
 <text class="pied-licence" x="0" y="445.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
 </svg>

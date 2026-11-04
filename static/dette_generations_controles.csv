@@ -37,9 +37,9 @@ BCE GFS / Eurostat gov_10dd_ggd,FR,2021,non_residents,53.196700,53.200000,-0.003
 BCE GFS / Eurostat gov_10dd_ggd,FR,2022,banque_centrale,25.159100,25.200000,-0.040900,0.15,% du PIB,conforme,
 BCE GFS / Eurostat gov_10dd_ggd,FR,2022,non_residents,54.049300,54.100000,-0.050700,0.15,% du PIB,conforme,
 BCE GFS / Eurostat gov_10dd_ggd,FR,2023,banque_centrale,23.324400,23.300000,0.024400,0.15,% du PIB,conforme,
-BCE GFS / Eurostat gov_10dd_ggd,FR,2023,non_residents,56.286900,56.100000,0.186900,0.15,% du PIB,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-06-05, reference 2026-11-02) ; ecart publie, calcul poursuivi"
+BCE GFS / Eurostat gov_10dd_ggd,FR,2023,non_residents,56.286900,56.100000,0.186900,0.15,% du PIB,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-06-05, reference 2026-11-04) ; ecart publie, calcul poursuivi"
 BCE GFS / Eurostat gov_10dd_ggd,FR,2024,banque_centrale,21.690400,21.700000,-0.009600,0.15,% du PIB,conforme,
-BCE GFS / Eurostat gov_10dd_ggd,FR,2024,non_residents,59.689300,59.200000,0.489300,0.15,% du PIB,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-06-05, reference 2026-11-02) ; ecart publie, calcul poursuivi"
+BCE GFS / Eurostat gov_10dd_ggd,FR,2024,non_residents,59.689300,59.200000,0.489300,0.15,% du PIB,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-06-05, reference 2026-11-04) ; ecart publie, calcul poursuivi"
 BCE GFS / Eurostat gov_10dd_ggd,FR,2025,banque_centrale,19.121000,19.100000,0.021000,0.15,% du PIB,conforme,
 BCE GFS / Eurostat gov_10dd_ggd,FR,2025,non_residents,62.870200,62.800000,0.070200,0.15,% du PIB,conforme,
 Eurostat / Insee 8.204,FR,1995,N1N,727099.000000,727099.000000,0.000000,1000,M EUR,conforme,

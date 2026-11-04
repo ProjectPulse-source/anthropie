@@ -22,7 +22,7 @@
    "titre": "France : le solde primaire observé et celui qui aurait stabilisé la dette",
    "montre": "Le solde primaire qui stabilise la dette change chaque année avec les taux et la croissance ; le solde observé est resté le plus souvent en dessous.",
    "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin d'année précédente, hors autres ajustements (flux-stock). Un repère comptable de l'année, non un objectif."
+   "precaution": "En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin d'année précédente, hors autres ajustements (flux-stock). Un repère comptable de l'année, non un objectif."
   },
   {
    "id": "zone-euro",
@@ -56,7 +56,7 @@
    "titre": "France: the observed primary balance and the one that would have stabilised the debt",
    "montre": "The primary balance that stabilises the debt changes every year with interest rates and growth; the observed balance mostly stayed below it.",
    "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "In % of GDP; stabilising balance = (implicit interest rate − nominal growth) / (1 + growth) × debt-to-GDP ratio at the end of the previous year, excluding other adjustments (stock-flow). An accounting marker for the year, not a target."
+   "precaution": "In % of GDP; stabilising balance = (implicit interest rate − nominal growth) / (1 + growth) × debt-to-GDP ratio at the end of the previous year, excluding other adjustments (stock-flow). An accounting marker for the year, not a target."
   },
   {
    "id": "zone-euro",

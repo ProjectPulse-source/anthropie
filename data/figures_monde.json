@@ -21,8 +21,8 @@
    "fichier": "dette-monde-transmission",
    "titre": "Pression de refinancement : échéances et écart de taux, 2025",
    "montre": "La part de la dette qui arrive à échéance et l'écart entre taux de marché et taux implicite : un repère de pression sur le coût moyen, non une prévision.",
-   "source": "Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), 2025",
-   "precaution": "Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles. Repère, non prévision."
+   "source": "Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), 2025",
+   "precaution": "Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles. Repère, non prévision."
   },
   {
    "id": "stock",
@@ -37,8 +37,8 @@
    "fichier": "dette-monde-ecarts",
    "titre": "Trente ans d'écarts de taux avec l'Allemagne, 1995-2025",
    "montre": "Convergence avant l'euro, Suède comprise ; décrochage des membres fragiles en 2012, puis resserrement : trente ans d'écarts avec l'Allemagne, pays restés hors de l'euro en comparateurs.",
-   "source": "Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)",
-   "precaution": "Taux de marché à 10 ans, non le taux implicite du stock. Comparateurs, non groupe de contrôle."
+   "source": "Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)",
+   "precaution": "Taux de marché à 10 ans, non le taux implicite du stock. Comparateurs, non groupe de contrôle."
   }
  ],
  "en": [
