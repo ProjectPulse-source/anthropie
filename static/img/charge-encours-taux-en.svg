@@ -45,7 +45,7 @@
 <text x="632.0" y="221.1" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">+5.6</text>
 <text x="632.0" y="308.0" font-size="11" fill="#898781" text-anchor="middle">2025</text>
 <line x1="0" y1="334.0" x2="720" y2="334.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="349.0" font-size="11" fill="#52514e">Computed on Eurostat (gov_10a_main, D41PAY) and INSEE (Maastricht debt at 31 December) series, 2020-2025</text>
+<text class="pied-source" x="0" y="349.0" font-size="11" fill="#52514e">Computed on Eurostat (gov_10a_main, D41PAY) and INSEE (Maastricht debt at 31 December) series, 2020-2025</text>
 <text class="pied-note" x="0" y="363.0" font-size="11" fill="#52514e">Accounting decomposition, debt stock / implicit rate (midpoint contributions, computed each year and then added up).</text>
 <text class="pied-note" x="0" y="377.0" font-size="11" fill="#52514e">The implicit-rate part mixes refinancing, the composition of the debt and the indexation of inflation-linked bonds: on</text>
 <text class="pied-note" x="0" y="391.0" font-size="11" fill="#52514e">its own, it does not measure the effect of market rates.</text>

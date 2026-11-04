@@ -25,8 +25,8 @@
 <circle cx="464.7" cy="273.0" r="3.5" fill="#52514e"/>
 <text x="464.7" y="291.0" font-size="11" fill="#52514e" text-anchor="middle">-0,1 % en 2020</text>
 <line x1="0" y1="364.0" x2="720" y2="364.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="379.0" font-size="11" fill="#52514e">Eurostat irt_lt_mcby_a (taux à 10 ans) · taux implicite : Eurostat gov_10a_main et INSEE, 1996-2025</text>
-<text class="pied-note" x="0" y="393.0" font-size="11" fill="#52514e">Le taux à 10 ans est un indicateur de référence, non le coût effectif des émissions ; le taux implicite, coût moyen de</text>
+<text class="pied-source" x="0" y="379.0" font-size="11" fill="#52514e">Eurostat irt_lt_mcby_a (taux à 10 ans) · taux implicite : Eurostat gov_10a_main et INSEE, 1996-2025</text>
+<text class="pied-note" x="0" y="393.0" font-size="11" fill="#52514e">Le taux à 10 ans est un indicateur de référence, non le coût effectif des émissions ; le taux implicite, coût moyen de</text>
 <text class="pied-note" x="0" y="407.0" font-size="11" fill="#52514e">tout le stock, ne suit les taux de marché qu'au fil des renouvellements, et inclut l'indexation des titres indexés sur</text>
 <text class="pied-note" x="0" y="421.0" font-size="11" fill="#52514e">l'inflation.</text>
 <text class="pied-licence" x="0" y="435.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>

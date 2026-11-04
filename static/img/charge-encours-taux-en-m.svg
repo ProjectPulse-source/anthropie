@@ -34,7 +34,7 @@
 <line x1="0" y1="430.0" x2="300" y2="430.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="451.0" font-size="13.5" fill="#52514e">Computed on Eurostat (gov_10a_main,</text>
 <text class="pied-source" x="0" y="468.0" font-size="13.5" fill="#52514e">D41PAY) and INSEE (Maastricht debt at</text>
-<text class="pied-source" x="0" y="485.0" font-size="13.5" fill="#52514e">31 December) series, 2020-2025</text>
+<text class="pied-source" x="0" y="485.0" font-size="13.5" fill="#52514e">31 December) series, 2020-2025</text>
 <text class="pied-note" x="0" y="506.0" font-size="13.5" fill="#52514e">Accounting decomposition, debt stock /</text>
 <text class="pied-note" x="0" y="523.0" font-size="13.5" fill="#52514e">implicit rate (midpoint contributions,</text>
 <text class="pied-note" x="0" y="540.0" font-size="13.5" fill="#52514e">computed each year and then added up).</text>
