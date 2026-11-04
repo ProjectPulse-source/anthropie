@@ -44,13 +44,32 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 > **À lire avant** : toute intervention sur le site, technique 
 > ou éditoriale. Décrit l'état architectural, les doctrines 
 > en place, les chantiers en cours et les chantiers reportés.
-> Dernière mise à jour : 2026-09-13.
+> Dernière mise à jour : 2026-11-04.
 > **Règle de fraîcheur** : l'état écrit suit l'acte — toute session qui
 > exécute met à jour ce log ET les statuts des registres/backlogs touchés
 > dans la même session. Un statut périmé vaut défaut : il provoque la
 > re-exécution de l'acquis ou l'abandon de travaux crus « déjà faits ».
 
 ## 0. Log chronologique
+
+### 2026-11-04 — Publication : « Gouverner sans être contredit » (En attendant Nadeau n° 254)
+
+Recension de Rainer Mühlhoff, *Intelligence artificielle & nouveau fascisme* (trad. Pierre Deshusses,
+Agone, coll. « Contre-feux », 208 p.), parue le 03/11. Fiche `content/publications/en-attendant-nadeau-muhlhoff.md`
+selon `docs/CHECKLIST_AJOUT_PUBLICATION.md` (logo, noindex, hors sitemap).
+
+**Fil remontant** : `related: [awp-06, awp-08]` — base matérielle et politique de l'IA (AWP-06) ;
+réversibilité des décisions et inégale capacité de recours (AWP-08), cœur de l'objection de la
+recension. `related_book: anthropie-ordre-ici-dette-ailleurs`, comme la fiche Welgryn.
+
+**Registres** : `data/works.yaml` v1.25 (`art-ean-muhlhoff-2026-11`, total 43 → 44) ;
+`data/intent_matrix.yaml` v1.6 ; `presse_objets` FR/EN (« IA et démocratie » / « AI and democracy »).
+`static/llms.txt` inchangé (EaN déjà énuméré).
+
+**Preuves** : `hugo --minify` vert ; carte sur `/publications/`, `/en/publications/`, `/awp/awp-06/`,
+`/awp/awp-08/` ; tuile du mur presse FR et EN ; `&lt;em&gt;` absent ; fiche absente des sitemaps ;
+`check-all.py --reseau` : tout vert sauf `maj_sources.py` (retard `plf-2027-etat`, revue due le
+03/11, sans lien avec cet ajout) ; `audit_works` 0 échec.
 
 ### 2026-11-03/04 — Mise en forme des ressources (session « DESIGN PAR RESSOURCE »)
 

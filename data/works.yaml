@@ -21,12 +21,16 @@
 # =============================================================================
 
 meta:
-  registry_version: "1.24"
-  last_updated: "2026-10-04"
+  registry_version: "1.25"
+  last_updated: "2026-11-04"
   maintainer: "Stéphane Lalut"
-  total_works: 43
+  total_works: 44
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_25: |
+      Ajout recension Lalut (2026-11-03) — En attendant Nadeau n° 254, « Gouverner sans être
+      contredit », sur Rainer Mühlhoff, Intelligence artificielle & nouveau fascisme (Agone, 2026).
+      Fil remontant : AWP-06, AWP-08, livre ANTHROPIE. total_works 43 → 44.
     v1_24: |
       AWP-09 édition anglaise publiée (2026-10-04) : DOI 10.5281/zenodo.23145963, isDerivedFrom FR / isSourceOf
       posés, communauté acceptée ; fiche /en/awp/awp-09/ passe sur le PDF anglais. Aucun ajout d'œuvre ; total_works inchangé.
@@ -991,6 +995,21 @@ works:
       en: "Fifteen minutes of comfort beside an intubated patient, then three separate data systems to log them. Allison Pugh names this work of seeing the other person <em>connective labor</em>, and shows that scripts and metrics wear it down long before automation arrives. What goes unmeasured does not vanish: it is shifted onto the people who do this work and onto those they care for, until human connection becomes a luxury good."
     related_works: [awp-01, awp-06]
     notes: "Compte rendu CR26023 (proposé 11/04/2026, accepté 04/06/2026 sans remaniement ; éditrice Anne Bertrand). Sociologie du travail vol. 68 n° 2 (avril-juin 2026, Varia), mis en ligne le 09/09/2026 selon le bloc « Pour citer » ; les balises DC/citation de la page portent 2026-09-10. DOI 10.4000/16rju déposé chez Crossref le 2026-09-11 à 18:54 UTC, auteur rattaché à son ORCID ; il résout vers la page de consultation. La notice ne porte que l'année : la date du bloc « Pour citer » est gardée. Licence CC BY-NC-ND 4.0 : le post-print éditeur peut aller en archive ouverte institutionnelle, JAMAIS sur une plateforme commerciale (Academia, Mendeley, ResearchGate, SSRN) ; l'éditrice demande de renvoyer vers la page de consultation plutôt que vers le PDF. Site, ORCID et Wikidata pointent donc https://journals.openedition.org/sdt/50224, jamais /sdt/pdf/50224. Message de l'éditrice archivé : D:/PRO/08_ARTICLES/SOCIOLOGIE DU TRAVAIL/Tire_a_part_CR26023_2026-09.txt. Fiche site content/publications/sociologie-du-travail-pugh.md ; related_book anthropie-ordre-ici-dette-ailleurs."
+
+  - id: art-ean-muhlhoff-2026-11
+    type: article
+    status: published
+    canonical_title: { fr: "Gouverner sans être contredit" }
+    publication_date: "2026-11-03"
+    publisher: "En attendant Nadeau"
+    publisher_type: "revue"
+    source_type: "Revue"
+    url: "https://www.en-attendant-nadeau.fr/2026/11/03/gouverner-sans-etre-contredit-muhlhoff/"
+    chapo:
+      fr: "Une agence pour l'emploi peut examiner chaque dossier, ou parier sur la décision la moins contestée. Dans <em>Intelligence artificielle & nouveau fascisme</em> (Agone, trad. Pierre Deshusses), Rainer Mühlhoff montre comment l'IA fait de la vérité une valeur procédurale. Mais des recours peuvent coexister des années avec une injustice massive, l'affaire néerlandaise des allocations de garde d'enfants l'a montré : le danger commence quand une société perd les moyens de savoir qu'elle se trompe."
+      en: "An employment agency can examine every file, or bet on the decision least likely to be challenged. In <em>Intelligence artificielle & nouveau fascisme</em> (Agone), Rainer Mühlhoff shows how AI turns truth into a procedural value. Yet appeal rights can coexist for years with massive injustice, as the Dutch childcare benefits scandal showed: the danger begins when a society loses the means to know it is wrong."
+    related_works: [awp-06, awp-08]
+    notes: "Recension de Rainer Mühlhoff, Intelligence artificielle & nouveau fascisme, trad. de l'allemand par Pierre Deshusses (Agone, coll. « Contre-feux », 208 p., 15 €). Parue le 03/11/2026 (n° 254). Slug URL : gouverner-sans-etre-contredit-muhlhoff. Fiche site content/publications/en-attendant-nadeau-muhlhoff.md ; related_book anthropie-ordre-ici-dette-ailleurs."
 
   # ===========================================================================
   # ARTICLES ACCEPTÉS — EN ATTENTE DE PUBLICATION (le champ status fait foi)
