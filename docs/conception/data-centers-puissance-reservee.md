@@ -165,3 +165,13 @@ sur la réforme du raccordement). Diagnostics : vues, citations. État initial :
 - Renvoi depuis `/dette-technologique/` (FR, EN) : fait, sans chiffre (la notion ne porte aucun qualificatif que le
   générateur ne garde pas).
 - Accord de l'auteur : demande « lance le graphe G4 » (27/10/2026) ; publication sur sa demande.
+
+### Révisions du 04/11/2026 (après publication)
+
+- Chaîne réservation → consommation en une phrase (section `#calendrier`).
+- SDES (publication du 02/07/2026, lue à la source) : quatrième source du générateur, garde « même ordre de grandeur »
+  vue mordre (`--mutation=sdes`) ; réponse « d'où viennent ces chiffres » et limite « un seul producteur » rendues exactes.
+- Figure : périmètre écrit sur chaque ligne de consommation ; légende rattachée à « En novembre 2025 » (le bleu foncé
+  faisait lire les totaux 2024 et 2026 comme « avant 2030 ») ; « déjà raccordés » en contour (le gris désignait aussi
+  « suspendu ») ; légende de la fourchette ; nombre et unité insécables ; séparateurs jamais seuls en bord de ligne.
+  Skill `controle-figures` : deux contrôleurs indépendants, second passage sur l'état final.

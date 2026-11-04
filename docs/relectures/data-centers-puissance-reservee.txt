@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /data-centers-puissance-reservee/, build de 6e6be2d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /data-centers-puissance-reservee/, build de 9d91116 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Data centers : les gigawatts réservés annoncent-ils la consommation ?
 Le chiffre qui circule est celui des réservations : près de 18 gigawatts en mai 2026, contre environ 5 fin 2024.
@@ -107,7 +107,7 @@ Une puissance réservée n’est ni une puissance appelée ni une consommation :
 Trajectoires : hypothèses de RTE, non des mesures.
 RTE : Bilan prévisionnel 2025-2035 (déc.
 2025), Bilan électrique 2025 (févr.
-2026), page « Les data centers en chiffres clés » (1er juin 2026) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel
+2026), page « Les data centers en chiffres clés » (1er juin 2026) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel.
 Télécharger en PNG
 SVG
 Citer cette page

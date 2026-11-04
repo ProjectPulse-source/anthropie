@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /en/data-centres-reserved-capacity/, build de 6e6be2d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /en/data-centres-reserved-capacity/, build de 9d91116 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Data centres: do reserved gigawatts foretell consumption?
 The figure that circulates is that of reservations: nearly 18 gigawatts in May 2026, against about 5 at end-2024.
@@ -103,7 +103,7 @@ Reserved capacity is neither power drawn nor consumption: the two panels are not
 Pathways: RTE’s assumptions, not measurements.
 RTE: Bilan prévisionnel 2025-2035 (Dec.
 2025), Bilan électrique 2025 (Feb.
-2026), web page “Les data centers en chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel
+2026), web page “Les data centers en chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel.
 Download PNG
 SVG
 Cite this page

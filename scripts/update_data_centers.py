@@ -110,8 +110,8 @@ FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, BLEU_CLAIR, ORANGE, ORANGE_CLAIR, GRIS = "#184f95", "#9db7da", "#eb6834", "#f5b89c", "#8a8781"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
 SUFFIXE = {"fr": "", "en": "-en"}
-LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_FR, "en": "Computed by Stéphane Lalut, CC BY 4.0 · " + PAGE_EN}
-LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
+LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0\u00a0· " + PAGE_FR, "en": "Computed by Stéphane Lalut, CC BY 4.0\u00a0· " + PAGE_EN}
+LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0\u00a0· stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0\u00a0· stephane-lalut.com"}
 
 
 def log(msg: str) -> None:
@@ -419,8 +419,9 @@ TXT = {
                pa="Puissance de raccordement réservée auprès de RTE, en gigawatts (GW)",
                pb="Consommation d'électricité des data centers sur sites dédiés, en térawattheures par an (TWh)",
                fin2024="Fin 2024", nov2025="Novembre 2025", mai2026="Mai 2026", rac="Déjà raccordés au réseau de RTE ({sites_rte} sites)",
-               avant="mise en service prévue avant 2030", apres="à partir de 2030", abandon="Suspendu (gris) : {st_suspendu} GW · abandonné depuis 2023 : environ {st_abandon} GW",
+               avant="mise en service prévue avant 2030", apres="à partir de 2030", abandon="Suspendu (gris) : {st_suspendu} GW ; abandonné depuis 2023 : environ {st_abandon} GW",
                m24="2024, mesurée (réseau de RTE)", m25="2025, mesurée (réseau de RTE)", e24="2024, estimée par RTE (tous\u00a0sites\u00a0dédiés)",
+               leg="En novembre 2025" + " :", fourchette="Plein : bas de la fourchette ; contour : jusqu'au haut.",
                t30="2030, deux trajectoires de RTE (tous\u00a0sites\u00a0dédiés)", t35="2035, deux trajectoires de RTE (tous\u00a0sites\u00a0dédiés)",
                v_fin2024="environ {res_fin2024} GW", v_nov2025="{res_nov2025} GW", v_mai2026="près de {res_mai2026} GW", v_rac="{rac_gw} GW",
                v_m24="{rpt_2024} TWh", v_m25="près de {rpt_2025} TWh", v_e24="{sd_bas} à {sd_haut} TWh", v_t30="{l2030} à {r2030} TWh", v_t35="{l2035} à {r2035} TWh",
@@ -431,7 +432,7 @@ TXT = {
                     "{rpt_2025} TWh en 2025 mesurés sur le réseau de RTE ; {sd_bas} à {sd_haut} TWh estimés pour l'ensemble en 2024 ; "
                     "{l2030} à {r2030} TWh en 2030 et {l2035} à {r2035} TWh en 2035 dans les deux trajectoires de RTE.",
                source="RTE : Bilan prévisionnel 2025-2035 (déc. 2025), Bilan électrique 2025 (févr. 2026), page « Les data centers en chiffres clés » "
-                      "({date_web}) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel",
+                      "({date_web}) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel.",
                note="Une puissance réservée n'est ni une puissance appelée ni une consommation : les deux panneaux ne se comparent pas, "
                     "aucun rapport n'est calculé entre eux. Trajectoires : hypothèses de RTE, non des mesures.",
                montre="En novembre 2025, les data centers avaient réservé {res_nov2025} GW auprès de RTE, dont {st_2030} GW pour une mise en "
@@ -441,8 +442,9 @@ TXT = {
                pa="Grid connection capacity reserved with RTE, in gigawatts (GW)",
                pb="Electricity consumption of dedicated-site data centres, in terawatt-hours per year (TWh)",
                fin2024="End-2024", nov2025="November 2025", mai2026="May 2026", rac="Already connected to RTE's grid ({sites_rte} sites)",
-               avant="commissioning planned before 2030", apres="from 2030", abandon="Suspended (grey): {st_suspendu} GW · abandoned since 2023: about {st_abandon} GW",
+               avant="commissioning planned before 2030", apres="from 2030", abandon="Suspended (grey): {st_suspendu} GW; abandoned since 2023: about {st_abandon} GW",
                m24="2024, metered (RTE's grid)", m25="2025, metered (RTE's grid)", e24="2024, estimated by RTE (all\u00a0dedicated\u00a0sites)",
+               leg="In November 2025:", fourchette="Solid: low end of the range; outline: up to the high end.",
                t30="2030, two RTE pathways (all\u00a0dedicated\u00a0sites)", t35="2035, two RTE pathways (all\u00a0dedicated\u00a0sites)",
                v_fin2024="about {res_fin2024} GW", v_nov2025="{res_nov2025} GW", v_mai2026="nearly {res_mai2026} GW", v_rac="{rac_gw} GW",
                v_m24="{rpt_2024} TWh", v_m25="nearly {rpt_2025} TWh", v_e24="{sd_bas} to {sd_haut} TWh", v_t30="{l2030} to {r2030} TWh", v_t35="{l2035} to {r2035} TWh",
@@ -453,7 +455,7 @@ TXT = {
                     "metered on RTE's grid; {sd_bas} to {sd_haut} TWh estimated for all of them in 2024; {l2030} to {r2030} TWh in 2030 and "
                     "{l2035} to {r2035} TWh in 2035 in RTE's two pathways.",
                source="RTE: Bilan prévisionnel 2025-2035 (Dec. 2025), Bilan électrique 2025 (Feb. 2026), web page “Les data centers en chiffres clés” "
-                      "({date_web}); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel",
+                      "({date_web}); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel.",
                note="Reserved capacity is neither power drawn nor consumption: the two panels are not comparable, and no ratio is computed "
                     "between them. Pathways: RTE's assumptions, not measurements.",
                montre="In November 2025, data centres had reserved {res_nov2025} GW with RTE, {st_2030} GW of it for commissioning from 2030; "
@@ -466,7 +468,8 @@ def esc(s: str) -> str:
 
 
 def t_(lang, Aff):
-    return {k: v.format(**Aff) for k, v in TXT[lang].items()}
+    # nombre et unité insécables (règle du site, « quel que soit le support ») : pied_figure.coupe ne soude pas GW ni TWh
+    return {k: re.sub(r"(\d) (GW|TWh|MW|GWh)\b", "\\1\u00a0\\2", v.format(**Aff)) for k, v in TXT[lang].items()}
 
 
 def _barre(e, x0, y, larg, vmax, segments, h=18):
@@ -474,7 +477,11 @@ def _barre(e, x0, y, larg, vmax, segments, h=18):
     x = x0
     for val, col in segments:
         w = max(larg * val / vmax, 1.5)
-        e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="%s"/>' % (x, y, w, h, col))
+        if col is None:   # contour seul : « déjà raccordés », distinct du gris de « suspendu » (contrôleurs du 04/11/2026)
+            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="#ffffff" stroke="%s" stroke-width="1.4"/>'
+                     % (x + 0.7, y + 0.7, max(w - 1.4, 1), h - 1.4, BLEU))
+        else:
+            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="%s"/>' % (x, y, w, h, col))
         x += w
     return x
 
@@ -496,17 +503,18 @@ def fig(c, Aff, lang):
     lignes = [(t["fin2024"], [(v["res_fin2024"], BLEU)], t["v_fin2024"]),
               (t["nov2025"], [(c["avant_2030"], BLEU), (st["signe_2030"], BLEU_CLAIR), (st["suspendu"], GRIS)], t["v_nov2025"]),
               (t["mai2026"], [(v["res_mai2026"], BLEU)], t["v_mai2026"]),
-              (t["rac"], [(v["mw_rte"] / 1000, GRIS)], t["v_rac"])]
+              (t["rac"], [(v["mw_rte"] / 1000, None)], t["v_rac"])]
     for i, (lib, segs, val) in enumerate(lignes):
         yy = y + 18 + 34 * i
         for j, l in enumerate(pied_figure.coupe(lib, 36)):
             e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (xl, yy + 13 + 12 * j, INK, esc(l)))
         xf = _barre(e, x0, yy, larg, vmax, segs)
         e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xf + 6, yy + 13, BLEU if segs[0][1] == BLEU else INK2, esc(val)))
-    yy = y + 18 + 34 * len(lignes)
-    # légende du découpage de novembre 2025
+    yy = y + 18 + 34 * len(lignes) + 12   # +12 : l'intitulé de la légende ne se lit pas comme une suite du libellé « raccordés »
+    # légende du découpage de novembre 2025, rattachée à sa barre par son intitulé
+    e.append('<text x="%d" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xl, yy + 9, INK2, esc(t["leg"])))
     lx = x0
-    for col, lib in ((BLEU, t["avant"] + Aff["deux_points"] + Aff["st_avant2030"] + " GW"), (BLEU_CLAIR, t["apres"] + Aff["deux_points"] + Aff["st_2030"] + " GW")):
+    for col, lib in ((BLEU, t["avant"] + Aff["deux_points"] + Aff["st_avant2030"] + "\u00a0GW"), (BLEU_CLAIR, t["apres"] + Aff["deux_points"] + Aff["st_2030"] + "\u00a0GW")):
         e.append('<rect x="%d" y="%d" width="10" height="10" fill="%s"/>' % (lx, yy, col))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (lx + 14, yy + 9, INK2, esc(lib)))
         lx += 14 + int(5.6 * len(lib)) + 16
@@ -533,6 +541,8 @@ def fig(c, Aff, lang):
             xf = _barre(e, x0, yy, larg, vmax, segs)
         e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xf + 6, yy + 13, ORANGE, esc(val)))
     yy = y + 18 + 34 * len(lignes)
+    e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x0, yy + 6, INK2, esc(t["fourchette"])))
+    yy += 18
     return pied_figure.pied(e, yy + 4, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                           (LICENCES[lang], MUTED, "pied-licence")], GRID)
 
@@ -553,7 +563,7 @@ def fig_m(c, Aff, lang, svg_d):
             y += 18
             e.append('<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y, FS_MIN, col, esc(l)))
         for lib, segs, val, fourchette in lignes:
-            coul = INK2 if segs[0][1] == GRIS else col
+            coul = INK2 if segs[0][1] in (GRIS, None) else col
             y += 10
             for l in pied_figure.coupe(lib, 36):
                 y += 18
@@ -574,8 +584,11 @@ def fig_m(c, Aff, lang, svg_d):
         (t["fin2024"], [(v["res_fin2024"], BLEU)], t["v_fin2024"], False),
         (t["nov2025"], [(c["avant_2030"], BLEU), (st["signe_2030"], BLEU_CLAIR), (st["suspendu"], GRIS)], t["v_nov2025"], False),
         (t["mai2026"], [(v["res_mai2026"], BLEU)], t["v_mai2026"], False),
-        (t["rac"], [(v["mw_rte"] / 1000, GRIS)], t["v_rac"], False)])
-    for col, lib in ((BLEU, t["avant"] + Aff["deux_points"] + Aff["st_avant2030"] + " GW"), (BLEU_CLAIR, t["apres"] + Aff["deux_points"] + Aff["st_2030"] + " GW"),
+        (t["rac"], [(v["mw_rte"] / 1000, None)], t["v_rac"], False)])
+    y += 8
+    e.append('<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y + 18, FS_MIN, INK2, esc(t["leg"])))
+    y += 18
+    for col, lib in ((BLEU, t["avant"] + Aff["deux_points"] + Aff["st_avant2030"] + "\u00a0GW"), (BLEU_CLAIR, t["apres"] + Aff["deux_points"] + Aff["st_2030"] + "\u00a0GW"),
                      (None, t["abandon"])):
         lignes = pied_figure.coupe(lib, 32)
         y += 8
@@ -590,7 +603,10 @@ def fig_m(c, Aff, lang, svg_d):
         (t["e24"], [(v["sd_bas"], ORANGE_CLAIR), (v["sd_haut"] - v["sd_bas"], ORANGE_CLAIR)], t["v_e24"], True),
         (t["t30"], [(lo30, ORANGE_CLAIR), (hi30 - lo30, ORANGE_CLAIR)], t["v_t30"], True),
         (t["t35"], [(v["l2035"], ORANGE_CLAIR), (v["r2035"] - v["l2035"], ORANGE_CLAIR)], t["v_t35"], True)])
-    return pied_figure.pied_mobile(e, y + 16, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
+    for l in pied_figure.coupe(t["fourchette"], 36):
+        y += 18
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y + 6, FS_MIN, INK2, esc(l)))
+    return pied_figure.pied_mobile(e, y + 22, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                                (LICENCES_M[lang], MUTED, "pied-licence")], GRID)
 
 
