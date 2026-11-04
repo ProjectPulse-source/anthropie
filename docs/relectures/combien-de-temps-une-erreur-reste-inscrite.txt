@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-04 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de b89c4e4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 De six mois pour un point de permis à quarante ans pour le casier : la durée d’une inscription dépend du registre, et ce qui l’efface n’est pas toujours le temps.
@@ -47,7 +47,8 @@ Casier, bulletin n° 1
 un délai de retrait de la fiche
 40 ans sans nouvelle condamnation criminelle ou correctionnelle ; 3 ans pour une contravention ou une composition pénale, 4 pour une contravention dont la récidive constitue un délit
 le prononcé de la condamnation, ou le jour où elle est devenue définitive
-hors délai de 40 ans : faits imprescriptibles, condamnations étrangères ; retrait par le tribunal dans des cas limités
+hors délai de 40 ans : faits imprescriptibles, condamnations étrangères ; retrait plus tôt si la juridiction qui prononce une réhabilitation judiciaire en ordonne la suppression (art.
+769, 8°)
 aucune démarche pour le retrait automatique
 Permis à points
 un délai de récupération des points
@@ -134,12 +135,16 @@ Ces délais sont doublés en cas de récidive légale (Code pénal, art.
 133-13, version en vigueur jusqu’au 31 décembre 2028).
 La réhabilitation efface les incapacités et déchéances ; elle ne produit ses effets qu’au bout de quarante ans si une interdiction définitive a été prononcée, et seulement à la fin de la mesure pour un suivi socio-judiciaire ou une interdiction d’activité au contact de mineurs (art.
 133-16).
+Une condamnation réhabilitée ne figure plus au bulletin n° 2 (code de procédure pénale, art.
+775, 5°), ni donc au bulletin n° 3, qui ne relève que les condamnations non exclues du bulletin n° 2 (art.
+777).
 L’exclusion du bulletin n° 2 peut être décidée par le tribunal, dans le jugement ou plus tard sur requête de la personne ; elle emporte relèvement des interdictions qui résultaient de la condamnation.
 Elle n’est pas ouverte aux personnes condamnées pour les infractions de l’article 706-47 du Code de procédure pénale, notamment sexuelles.
 Depuis le 20 août 2026, elle s’applique aussi aux amendes forfaitaires délictuelles (Code de procédure pénale, art.
 775-1).
 Le casier lui-même perd ses fiches de condamnation quarante ans après leur prononcé, sans nouvelle condamnation criminelle ou correctionnelle, sauf pour les faits imprescriptibles et les condamnations prononcées par une juridiction étrangère, qui ont leurs propres règles.
 Les contraventions en sortent trois ans après la condamnation définitive, quatre si leur récidive constitue un délit, et les compositions pénales après trois ans.
+La fiche peut aussi être retirée plus tôt, lorsque la juridiction qui prononce une réhabilitation judiciaire en ordonne expressément la suppression.
 Ce retrait de la fiche est un autre mécanisme que la réhabilitation et que l’exclusion du bulletin n° 2 (art.
 769 ; Service-public, fiche F31802, vérifiée le 20 octobre 2025).
 Combien de temps faut-il pour récupérer ses points de permis ?
@@ -240,7 +245,8 @@ Une condamnation en sort par la réhabilitation légale, acquise sans démarche 
 Comment une condamnation disparaît-elle du casier judiciaire ?
 De trois façons.
 La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation criminelle ou correctionnelle, après trois ans pour une amende ou des jours-amende, cinq ans pour une peine d’emprisonnement d’un an au plus ou une autre peine non privative de liberté, dix ans pour un emprisonnement de dix ans au plus ou plusieurs totalisant cinq ans au plus, délais doublés en récidive légale (Code pénal, art.
-133-13) : elle efface la condamnation des bulletins n° 2 et n° 3.
+133-13) : elle efface la condamnation des bulletins n° 2 et n° 3 (Code de procédure pénale, art.
+775 et 777).
 Le tribunal peut aussi exclure la mention du bulletin n° 2, dans le jugement ou plus tard, sur requête (Code de procédure pénale, art.
 775-1), sauf pour certaines infractions, notamment sexuelles.
 Enfin, les fiches du bulletin n° 1 sont retirées après quarante ans sans nouvelle condamnation criminelle ou correctionnelle (art.

@@ -219,3 +219,9 @@ pas les durées entre eux.
   bulletins n° 2 et n° 3 » (FAQ) n'est appuyé par aucun article cité dans la page : lire l'art. 775 du code de procédure
   pénale (hors du canal Légifrance de l'outil, à lire par le navigateur) puis citer ou retirer ; (2) cellule du bulletin
   n° 1 « retrait par le tribunal dans des cas limités », sans appui dans le texte.
+- Points ouverts clos (04/11, textes lus sur Légifrance, version en vigueur) : art. 775 CPP (LEGIARTI000054724764,
+  empreinte 1902deac…, 5° : condamnation réhabilitée exclue du bulletin n° 2) et art. 777 (LEGIARTI000046705997,
+  585210f2… : le bulletin n° 3 ne relève que les condamnations non exclues du n° 2) → phrase et liens ajoutés au corps,
+  articles cités dans la FAQ. Art. 769 (8°, empreinte 8a1dccbd…) : la cellule « retrait par le tribunal dans des cas
+  limités » devient « retrait plus tôt si la juridiction qui prononce une réhabilitation judiciaire en ordonne la
+  suppression », phrase correspondante au corps. Aucun point ouvert restant sur cette page.
