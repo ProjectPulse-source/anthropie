@@ -5,7 +5,10 @@ og_image_alt: "Share card: “Technological debt” and its diagram"
 url: /en/technological-debt/
 description: "Technological debt is the cost of digital infrastructures — energy, matter, territory, attention — turned into debt by mechanisms of commitment. Not to be confused with the “technical debt” of software engineering."
 date: 2026-07-04
-lastmod: 2026-10-26
+lastmod: 2026-11-04
+journal:  # révisions qui changent la lecture de la page
+  - date: 2026-11-04
+    texte: "Three wordings aligned with AWP-06 and with what the page demonstrates: attention is no longer presented as \"the economy that finances the whole\"; cooling water belongs to matter; the shift from one register to the others becomes what the grid must establish case by case."
 og_title: "What is technological debt? — definition and sources — S. Lalut"
 faq:
   - question: "What is the difference between technological debt and technical debt?"
@@ -25,7 +28,7 @@ fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the pa
     - t: "Not to be confused with"
       d: "The *technical* debt of software engineering: design compromises accumulated in a program, a property of code rather than of the economic system."
     - t: "Example"
-      d: "Data centers: electricity and water contracted for decades, materials extracted elsewhere, land take, an attention economy that finances the whole."
+      d: "Data centers: electricity and water contracted for decades, materials extracted elsewhere, land take, the capture of users' attention."
     - t: "Nature of the debt"
       d: "Not only financial: part of it is literally so (guarantees, long-term contracts); the rest is made of non-monetary commitments — territories assigned, irreversible choices, captured attention."
     - t: "Anthropic reading"
@@ -46,14 +49,14 @@ schemas:  # mechanism diagram (notion-schema shortcode)
         fleche: "across four coupled registers"
       - titre: "The coupled cost registers (AWP-06)"
         boites:
-          - {t: "Energy", d: "Electricity and water under contract", ton: "cout"}
-          - {t: "Matter", d: "Materials extracted elsewhere", ton: "cout"}
+          - {t: "Energy", d: "Electricity under contract for decades", ton: "cout"}
+          - {t: "Matter", d: "Materials extracted elsewhere, cooling water", ton: "cout"}
           - {t: "Territory", d: "Land take, networks sized for them", ton: "cout"}
-          - {t: "Attention", d: "The economy that finances the whole", ton: "cout"}
+          - {t: "Attention", d: "Cognitive capture, dependence on interfaces", ton: "cout"}
         fleche: "borne by those who did not sign"
       - boites:
           - {t: "Who bears it", d: "The public budgets that guarantee, the territories that host, the generations that will inherit the equipment, the users whose attention is captured", ton: "cout"}
-    note: "The registers do not add up: they are coupled. Reducing one often shifts the load toward the other three."
+    note: "The registers do not add up: they are coupled. Reducing one can shift the load toward the others: establishing this, case by case, is what the grid is for."
 comparaisons:  # boundary between neighbouring notions (notion-comparaison shortcode)
   frontiere:
     titre: "Technical debt, technological debt"
@@ -99,11 +102,11 @@ Three operations turn an infrastructure cost into a debt:
 2. **Guarantee** — public schemes that alter the risk profile of private investment to make it attractive to institutional capital (the *derisking* described by Daniela Gabor): if the bet fails, the public bears the cost.
 3. **Irreversibilisation** — once the network is built, the territory equipped, the uses installed, going back costs more than continuing: yesterday's choice becomes tomorrow's constraint.
 
-[AWP-06](/en/awp/awp-06/) proposes a testable grid of **four coupled cost registers** — energy, matter, territory, attention. These registers do not add up: they couple. Reducing one often shifts the burden to the other three.
+[AWP-06](/en/awp/awp-06/) proposes a testable grid of **four coupled cost registers** — energy, matter, territory, attention. These registers do not add up: they couple. Reducing one can shift the burden to the others: establishing this, case by case, is what the grid is for.
 
 ## The case of data centers
 
-Data centers make the mechanism visible. Their promise is immaterial — "the cloud" — but their reality engages all four registers at once: electricity and water consumption contracted over decades, materials extracted elsewhere, land footprints and networks sized for them, and an attention economy that funds the whole. Public debate focuses on "how much" (kilowatt-hours, cubic metres); technological debt poses the other question: **who has committed, for how long, and who will bear the cost if the promise changes?**
+Data centers make the mechanism visible. Their promise is immaterial — "the cloud" — but their reality engages all four registers at once: electricity and water consumption contracted over decades, materials extracted elsewhere, land footprints and networks sized for them, and the capture of users' attention. Public debate focuses on "how much" (kilowatt-hours, cubic metres); technological debt poses the other question: **who has committed, for how long, and who will bear the cost if the promise changes?**
 
 ## Where the concept comes from
 

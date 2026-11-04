@@ -4,7 +4,10 @@ og_image: "images/og-notion-dette-techno.jpg"
 og_image_alt: "Carte de partage : « La dette technologique » et son schéma"
 description: "La dette technologique désigne le coût des infrastructures numériques — énergie, matière, territoire, attention — transformé en dette par des mécanismes d'engagement. À ne pas confondre avec la « dette technique » du génie logiciel."
 date: 2026-07-04
-lastmod: 2026-10-26
+lastmod: 2026-11-04
+journal:  # révisions qui changent la lecture de la page
+  - date: 2026-11-04
+    texte: "Trois formulations alignées sur AWP-06 et sur ce que la page démontre : l'attention n'est plus présentée comme « l'économie qui finance l'ensemble » ; l'eau de refroidissement relève de la matière ; le déplacement d'un registre vers les autres devient ce que la grille doit établir cas par cas."
 og_title: "Qu'est-ce que la dette technologique ? — définition et sources — S. Lalut"
 faq:
   - question: "Quelle est la différence entre dette technologique et dette technique ?"
@@ -24,7 +27,7 @@ fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la
     - t: "À ne pas confondre"
       d: "La dette *technique* du génie logiciel&nbsp;: des compromis de conception accumulés dans un programme, une propriété du code et non du système économique."
     - t: "Exemple"
-      d: "Les data centers&nbsp;: électricité et eau contractualisées sur des décennies, matériaux extraits ailleurs, emprises foncières, économie de l'attention qui finance l'ensemble."
+      d: "Les data centers&nbsp;: électricité et eau contractualisées sur des décennies, matériaux extraits ailleurs, emprises foncières, captation de l'attention des usagers."
     - t: "Nature de la dette"
       d: "Pas seulement financière&nbsp;: une partie l'est littéralement (garanties, contrats de long terme)&nbsp;; le reste est fait d'engagements non monétaires — territoires affectés, choix irréversibles, attention captée."
     - t: "Lecture anthropique"
@@ -45,14 +48,14 @@ schemas:  # schéma de mécanisme (shortcode notion-schema)
         fleche: "sur quatre registres couplés"
       - titre: "Les registres de coûts couplés (AWP-06)"
         boites:
-          - {t: "Énergie", d: "Électricité et eau contractualisées", ton: "cout"}
-          - {t: "Matière", d: "Matériaux extraits ailleurs", ton: "cout"}
+          - {t: "Énergie", d: "Électricité contractualisée sur des décennies", ton: "cout"}
+          - {t: "Matière", d: "Matériaux extraits ailleurs, eau de refroidissement", ton: "cout"}
           - {t: "Territoire", d: "Emprises foncières, réseaux dimensionnés", ton: "cout"}
-          - {t: "Attention", d: "L'économie qui finance l'ensemble", ton: "cout"}
+          - {t: "Attention", d: "Captation cognitive, dépendance aux interfaces", ton: "cout"}
         fleche: "portée par ceux qui n'ont pas signé"
       - boites:
           - {t: "Qui la porte", d: "Les budgets publics qui garantissent, les territoires qui accueillent, les générations qui hériteront des équipements, les utilisateurs dont l'attention est captée", ton: "cout"}
-    note: "Les registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un déplace souvent la charge vers les trois autres."
+    note: "Les registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un peut déplacer la charge vers les autres&nbsp;: c'est ce que la grille demande d'établir, cas par cas."
 comparaisons:  # frontière entre notions voisines (shortcode notion-comparaison)
   frontiere:
     titre: "Dette technique, dette technologique"
@@ -98,11 +101,11 @@ Trois opérations transforment un coût d'infrastructure en dette&nbsp;:
 2. **La garantie** — dispositifs publics qui altèrent le profil de risque de l'investissement privé pour le rendre attractif aux capitaux institutionnels (le *derisking* décrit par Daniela Gabor)&nbsp;: si le pari échoue, la collectivité paie.
 3. **L'irréversibilisation** — une fois le réseau construit, le territoire équipé, les usages installés, revenir en arrière coûte plus cher que continuer&nbsp;: le choix d'hier devient la contrainte de demain.
 
-[AWP-06](/awp/awp-06/) propose une grille testable de **quatre registres de coûts couplés** — énergie, matière, territoire, attention. Ces registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un déplace souvent la charge vers les trois autres.
+[AWP-06](/awp/awp-06/) propose une grille testable de **quatre registres de coûts couplés** — énergie, matière, territoire, attention. Ces registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un peut déplacer la charge vers les autres&nbsp;: c'est ce que la grille demande d'établir, cas par cas.
 
 ## Le cas des data centers
 
-Les data centers rendent le mécanisme visible. Leur promesse est immatérielle — «&nbsp;le cloud&nbsp;» — mais leur réalité engage les quatre registres à la fois&nbsp;: une consommation d'électricité et d'eau contractualisée sur des décennies, des matériaux extraits ailleurs, des emprises foncières et des réseaux dimensionnés pour eux, et une économie de l'attention qui finance l'ensemble. Le débat public se concentre sur le «&nbsp;combien&nbsp;» (kilowattheures, mètres cubes)&nbsp;; la dette technologique pose l'autre question&nbsp;: **qui s'est engagé, pour combien de temps, et qui portera le coût si la promesse change&nbsp;?**
+Les data centers rendent le mécanisme visible. Leur promesse est immatérielle — «&nbsp;le cloud&nbsp;» — mais leur réalité engage les quatre registres à la fois&nbsp;: une consommation d'électricité et d'eau contractualisée sur des décennies, des matériaux extraits ailleurs, des emprises foncières et des réseaux dimensionnés pour eux, et une captation de l'attention des usagers. Le débat public se concentre sur le «&nbsp;combien&nbsp;» (kilowattheures, mètres cubes)&nbsp;; la dette technologique pose l'autre question&nbsp;: **qui s'est engagé, pour combien de temps, et qui portera le coût si la promesse change&nbsp;?**
 
 ## D'où vient le concept
 
