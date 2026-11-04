@@ -113,11 +113,7 @@ Technological debt is the application of this hypothesis to digital infrastructu
 
 ## Frequently asked questions
 
-**What is the difference between technological debt and technical debt?** Technical debt is a software-engineering notion — design compromises accumulated in a program. Technological debt is an economic and political mechanism: the cost of digital infrastructures turned into debt by long-term commitments. One is a property of code, the other of the economic system.
-
-**Is it a debt in the financial sense?** Not only. Part of it literally is (guarantees, long-term contracts); the rest is made of non-monetary commitments — assigned territories, irreversible choices, captured attention. It is a debt in the anthropic sense: a disorder deferred toward the future.
-
-**Who bears it?** Those who did not sign: the public budgets that guarantee, the territories that host, the generations that will inherit the equipment, the users whose attention is the fourth register.
+{{< faq-visible >}}
 
 ## Further reading
 

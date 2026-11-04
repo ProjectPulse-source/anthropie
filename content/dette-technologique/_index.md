@@ -112,11 +112,7 @@ La dette technologique est l'application de cette hypothèse aux infrastructures
 
 ## Questions fréquentes
 
-**Quelle est la différence entre dette technologique et dette technique&nbsp;?** La dette technique est une notion de génie logiciel — des compromis de conception accumulés dans un programme. La dette technologique est un mécanisme économique et politique&nbsp;: le coût des infrastructures numériques transformé en dette par des engagements de long terme. L'une est une propriété du code, l'autre du système économique.
-
-**Est-ce une dette au sens financier&nbsp;?** Pas seulement. Une partie l'est littéralement (garanties, contrats de long terme)&nbsp;; le reste est fait d'engagements non monétaires — territoires affectés, choix irréversibles, attention captée. C'est une dette au sens anthropique&nbsp;: un désordre reporté vers l'avenir.
-
-**Qui la porte&nbsp;?** Ceux qui n'ont pas signé&nbsp;: les budgets publics qui garantissent, les territoires qui accueillent, les générations qui hériteront des équipements, les utilisateurs dont l'attention est le quatrième registre.
+{{< faq-visible >}}
 
 ## Pour aller plus loin
 
