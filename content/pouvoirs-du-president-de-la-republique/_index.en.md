@@ -39,6 +39,7 @@ faq:
   - question: "Who sets taxes in France: the president, the Government or Parliament?"
     answer: "Article 34 reserves to statute law \"the base, rates and methods of collection of all types of taxes\" (English translation published by the Conseil constitutionnel). A tax promise therefore goes through Parliament, but not always through a vote on the text: on a finance bill, the Prime Minister may, after deliberation by the Council of Ministers, make its passing an issue of a vote of confidence, and the bill is considered passed unless a resolution of no-confidence is carried (article 49, paragraph 3); if Parliament fails to reach a decision within the time limit set by article 47, the provisions of the bill may be brought into force by ordinance. In none of these cases is the president's signature enough."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
+  accueil: 3  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"
   bloc: "promesses"

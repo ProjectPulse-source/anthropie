@@ -29,6 +29,7 @@ journal:
   - date: 2026-10-25
     texte: "Périmètre dit en tête (165 des 168 jalons, les trois absents nommés) ; le Registre n'est plus présenté comme l'épilogue du livre, qui le résume en schémas et y renvoie par un QR code ; jalon « Templiers » aligné sur l'édition corrigée du livre (le Temple a moins légué ses méthodes à l'administration royale qu'une leçon)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 6  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["corpus", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"   # le cadre d'analyse de l'auteur (arbitrage PRO-20261025-225715)
   rang: 70
@@ -36,7 +37,6 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   appareil_de: "anthropie-ordre-ici-dette-ailleurs"   # ligne d'appartenance (partials/ressource-appartenance.html)
   livres: ["anthropie-ordre-ici-dette-ailleurs"]      # « Ressources et données du livre » sur la fiche du livre
   conception: "docs/conception/registre-des-couts-deportes.md"  # fiche de conception (regle 12), ecrite le 26/10/2026
-  accueil: 3
 ---
 
 Le Registre des coûts déportés est l'**appareil documentaire** du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025)&nbsp;: le livre raconte l'histoire longue en 168 jalons, des premiers outils de pierre (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains, et le Registre pose à chacun les deux mêmes questions&nbsp;: **quel ordre cette innovation a-t-elle créé, et quelle dette a-t-elle déportée** — vers d'autres lieux, d'autres temps ou d'autres groupes sociaux&nbsp;? La version en ligne, ci-dessous, est en consultation libre&nbsp;; elle compte les 168 jalons du livre.

@@ -33,6 +33,7 @@ faq:
   - question: "Qui fixe les impôts : le président, le Gouvernement ou le Parlement ?"
     answer: "L'article 34 réserve à la loi « l'assiette, le taux et les modalités de recouvrement des impositions de toutes natures ». Une promesse fiscale passe donc par le Parlement, mais pas toujours par un vote sur le texte : sur un projet de loi de finances, le Premier ministre peut, après délibération du Conseil des ministres, engager la responsabilité du Gouvernement, et le projet est considéré comme adopté si aucune motion de censure n'est votée (article 49, alinéa 3) ; si le Parlement ne s'est pas prononcé dans le délai que fixe l'article 47, les dispositions du projet peuvent être mises en vigueur par ordonnance. Dans aucun de ces cas la signature du président ne suffit."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 3  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["juridique-institutionnel"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"
   bloc: "promesses"

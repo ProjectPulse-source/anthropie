@@ -25,13 +25,13 @@ faq:
   - question: "La hausse des intérêts a-t-elle déjà fait baisser les dépenses de santé ou d'éducation ?"
     answer: "Pas dans les agrégats observés : en euros, les dépenses publiques de santé ({dette.sante_mdeur} milliards d'euros en {dette.equiv_annee}) et d'enseignement ({dette.education_mdeur} milliards) ont continué de croître ; en part du PIB, elles sont au-dessus de 2019, un peu sous leur pic de la crise sanitaire, quand le PIB s'est contracté. Cela ne veut pas dire qu'il n'y a pas eu d'éviction : un budget qui passe de 100 à 105 au lieu de 110 n'a pas baissé, et a pourtant subi une éviction. Ces séries ne permettent ni d'attribuer leur trajectoire à la dette, ni d'exclure qu'elles auraient été plus élevées sans la contrainte d'intérêts. Ce qu'elles établissent : une charge plus élevée augmente le besoin de financement à politiques inchangées, et ses conséquences sur les dépenses, les prélèvements et le déficit dépendent ensuite des arbitrages ; qui absorbera l'ajustement est l'objet de la page « Qui paie vraiment la dette publique ? »."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 1  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   livres: ["dette-publique-qui-paie-vraiment"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
   nature: "Séries officielles (INSEE, Eurostat) et calculs de l'auteur"
-  accueil: 1
 ---
 
 {{< dossier-dette volet="1" >}}

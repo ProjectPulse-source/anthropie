@@ -1,6 +1,7 @@
 ---
 title: "What is anthropy? Principles of a hypothesis"
 awp_number: "AWP-01"
+accueil_awp: true  # repère montré sur l'accueil, avec le dernier paru (04/11/2026)
 date: 2026-04-05
 lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false

@@ -32,6 +32,7 @@ journal:
   - date: 2026-10-25
     texte: "Scope stated at the top (165 of the 168 milestones, the three missing ones named); the Register is no longer presented as the book’s epilogue—the book sums it up in diagrams and points to it through a QR code; the Templars milestone aligned with the corrected edition of the book (the Temple left the royal administration a lesson more than its methods)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 6  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["corpus", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"   # the author's analytical framework (PRO-20261025-225715)
   rang: 70
@@ -39,7 +40,6 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   appareil_de: "anthropie-ordre-ici-dette-ailleurs"
   livres: ["anthropie-ordre-ici-dette-ailleurs"]
   conception: "docs/conception/registre-des-couts-deportes.md"  # fiche de conception (regle 12), ecrite le 26/10/2026
-  accueil: 2
 ---
 
 The Register of Offloaded Costs is the **documentary apparatus** of the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/): the book tells deep history in 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, and the Register asks each of them the same two questions: **what order did this innovation create, and what debt did it displace**—toward other places, other times, or other social groups? The English version, below, is freely browsable; it holds all 168 milestones of the book.

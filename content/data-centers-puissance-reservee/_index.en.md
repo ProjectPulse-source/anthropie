@@ -34,6 +34,7 @@ faq:
   - question: "Where do these figures come from?"
     answer: "From three RTE publications (Bilan prévisionnel 2025-2035, Bilan électrique 2025, web page “Les data centers en chiffres clés”) and, as an independent check, the SDES census (July 2026), downloaded by a script that reads each value in the sentence that carries it, measures the breakdown by status on a figure of the Bilan prévisionnel, and stops if a figure no longer meets the conditions on which the page's main sentences depend. The data can be downloaded as CSV and JSON, under a CC BY 4.0 licence."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 5  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   conception: "docs/conception/data-centers-puissance-reservee.md"  # fiche de conception (regle 12)
   refonte: "2026-10-27"  # page de données nouvelle : née refondue (relecture attestée du jour)

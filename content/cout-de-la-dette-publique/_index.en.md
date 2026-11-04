@@ -26,13 +26,13 @@ faq:
   - question: "Has the rise in interest already cut health or education spending?"
     answer: "Not in the observed aggregates: in euros, public spending on health ({dette.sante_mdeur} billion euros in {dette.equiv_annee}) and education ({dette.education_mdeur} billion) kept rising; as a share of GDP, both are above 2019, slightly below their pandemic peak, when GDP contracted. That does not mean there was no crowding out: a budget that goes from 100 to 105 instead of 110 has not fallen, and has still been crowded out. These series allow neither an attribution of their path to the debt, nor a conclusion that they would not have been higher without the interest constraint. What they do establish: a higher burden raises the borrowing requirement under unchanged policies, and its consequences for spending, taxes and the deficit then depend on the choices made; who will absorb the adjustment is the subject of the page “Who really pays for public debt?”."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 1  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "dette"
   livres: ["dette-publique-qui-paie-vraiment"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 10
   nature: "Official series (INSEE, Eurostat) and the author's calculations"
-  accueil: 1
 ---
 
 {{< dossier-dette volet="1" >}}

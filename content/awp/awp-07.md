@@ -2,6 +2,7 @@
 title: "La boucle anthropique"
 subtitle: "déplacement, saturation, retour — formaliser un mécanisme, de Kapp à Stiegler"
 awp_number: "AWP-07"
+accueil_awp: true  # repère montré sur l'accueil, avec le dernier paru (04/11/2026)
 date: 2026-07-05
 draft: false
 outputs:

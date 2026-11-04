@@ -50,6 +50,7 @@ faq:
   - question: "Why does a fall in investment not mean a fall in total spending?"
     answer: "From {coll.ep_a0} to {coll.ep_a1}, local government investment fell by {coll.ep_inv_mde}, but its other spending rose by {coll.ep_autres_dep_mde}: total spending remained almost flat in euros ({coll.ep_te_mde_s}). Relative to GDP, which grew by {coll.pib_croiss_pct}% over the period, it nevertheless fell by {coll.ep_te_pt}. A fall in a ratio does not prove a fall in spending in euros."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 4  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # phase B de la refonte (méthode OPTIMUM-26)
   bloc: "dette"

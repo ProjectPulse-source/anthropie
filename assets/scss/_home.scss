@@ -419,3 +419,33 @@ main .home-reception__liste { list-style: none; padding: 0 !important; margin: 0
 }
 .home-reception__revue { font-family: var(--font-sans); font-size: 12px; color: var(--color-text-subtle); white-space: nowrap; }
 @media (max-width: 600px) { .home-reception__liste li { grid-template-columns: minmax(0, 1fr); } }
+
+// ── Le livre du cadre (maquette du 04/11/2026) : un encart sobre entre les trois axes et les questions publiques ──
+.home-livre-cadre {
+  max-width: var(--container-max); margin: 0 auto 3.5rem; padding: 0 var(--marge-colonne);
+  display: flex; gap: 1.5rem; align-items: center;
+}
+.home-livre-cadre__couv { flex: 0 0 96px; }
+.home-livre-cadre__cover { width: 96px; height: auto; display: block; box-shadow: 0 2px 8px rgba(0, 0, 0, .12); }
+.home-livre-cadre__sur { font-family: var(--font-sans); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #6a675f; margin: 0 0 4px; }
+.home-livre-cadre__titre { font-family: var(--font-serif); font-size: 1.35rem; margin: 0; }
+.home-livre-cadre__titre a { color: var(--color-text); text-decoration: none; }
+.home-livre-cadre__phrase { font-family: var(--font-serif); font-size: var(--fs-small); color: var(--color-text-body); margin: 4px 0 6px; }
+.home-livre-cadre__lien { font-family: var(--font-sans); font-size: 14px; margin: 0; }
+@media (max-width: 600px) {
+  .home-livre-cadre { gap: 1rem; align-items: flex-start; }
+  .home-livre-cadre__couv { flex-basis: 72px; }
+  .home-livre-cadre__cover { width: 72px; }
+}
+
+// ── Questions publiques au téléphone (maquette du 04/11/2026) : six cartes empilées faisaient 2 500 px ; une rangée
+// défilante (82 % de largeur, la carte suivante visible au bord) les ramène à la hauteur d'une carte. Défilement interne
+// à la liste : la page ne déborde pas.
+@media (max-width: 600px) {
+  .home-ressources__liste {
+    display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 82%;
+    gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    padding-bottom: 10px; margin-bottom: 0.5rem;
+  }
+  .home-ressources__liste > li { scroll-snap-align: start; }
+}

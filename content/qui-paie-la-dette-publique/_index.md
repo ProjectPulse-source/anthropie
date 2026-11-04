@@ -41,7 +41,6 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["dette-publique-qui-paie-vraiment"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 20
   nature: "Analyse, appuyée sur des données publiques"
-  accueil: 2
 ---
 
 {{< dossier-dette volet="2" >}}

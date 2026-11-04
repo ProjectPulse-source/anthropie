@@ -53,6 +53,7 @@ faq:
   - question: "La baisse vient-elle du recrutement des professeurs ?"
     answer: "Les données publiques ne permettent pas de le dire : aucune ne relie un enseignant aux résultats de ses élèves, ni ne mesure le niveau de formation des recrutés. Elles montrent seulement que le nombre de candidats présents par admis au CAPES externe a diminué de {niv.p1_min} % à {niv.p1_max} % entre 2010-2012 et 2023-2025 selon la discipline, et que la part des contractuels parmi les enseignants du second degré public est passée de {niv.contr_0} % en {niv.contr_a0} à {niv.contr_1} % en {niv.contr_a1}."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 2  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
   bloc: "ecole"

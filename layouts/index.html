@@ -178,6 +178,44 @@
   </a></p>
 </section>
 
+{{/* ══════════ Le livre du cadre (maquette du 04/11/2026, arbitrage PRO-20261104-181823, M4) ══════════
+     Un seul livre, comme prolongement du cadre qu'on vient de lire ; titre, sous-titre et couverture lus dans la fiche ;
+     ni prix ni note (sobriété commerciale, invariant de l'arbitrage). */}}
+{{- with site.GetPage "/livres/anthropie-ordre-ici-dette-ailleurs" }}
+<section class="home-livre-cadre" aria-labelledby="home-livre-cadre-titre">
+  <a class="home-livre-cadre__couv" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+    {{- partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" "" "wrapClass" "home-livre-cadre__cover-wrap" "class" "home-livre-cadre__cover" "sizes" "120px") -}}
+  </a>
+  <div class="home-livre-cadre__texte">
+    <p class="home-livre-cadre__sur">{{ if eq $.Lang "en" }}The book that develops the framework{{ else }}Le livre qui déploie le cadre{{ end }}</p>
+    <h2 id="home-livre-cadre-titre" class="home-livre-cadre__titre"><a href="{{ .RelPermalink }}">{{ partial "fr-typo.html" .Title }}</a></h2>
+    {{- with .Params.subtitle }}<p class="home-livre-cadre__phrase">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    <p class="home-livre-cadre__lien"><a href="{{ .RelPermalink }}">{{ if eq $.Lang "en" }}Discover the book&nbsp;→{{ else }}Découvrir le livre&nbsp;→{{ end }}</a></p>
+  </div>
+</section>
+{{- end }}
+
+
+{{/* ══════════ Section 3 — Suivre les coûts (arbitrage PRO-20260921-105434 pour la présence) ══════════
+     Accès directs tirés des pages qui déclarent `ressource.accueil` (ordre = valeur), dans la langue
+     courante ; jamais une liste recopiée. Moins de trois accès : le build avertit. Même carte que
+     l'index /ressources/ (partial ressource-entree : vignette des pages de données, teinte), sans la
+     description. Titre : « L'hypothèse à l'épreuve » écarté — il présenterait des ressources de données
+     neutres comme des preuves de la thèse (arbitrage ENTRANTE_2026-10-01_Design_site, point 3). */}}
+{{- $acces := slice -}}
+{{- range where site.Pages "Params.ressource.accueil" "!=" nil }}{{ $acces = $acces | append . }}{{ end -}}
+{{- if lt (len $acces) 3 }}{{ warnf "accueil : %d acces ressources seulement (%s)" (len $acces) .Lang }}{{ end -}}
+<section class="home-section home-ressources" aria-labelledby="home-ressources-titre">
+  <h2 id="home-ressources-titre">{{ if eq .Lang "en" }}Public questions, documented{{ else }}Des questions publiques, documentées{{ end }}</h2>
+  <p class="section-intro">{{ if eq .Lang "en" }}Public debt, presidential powers, local government, data centres: enquiries into public questions, with their sources, their limits and reusable data, and the documented register of displaced costs. They can be read independently of the author's hypothesis.{{ else }}Dette, école, pouvoirs du président, collectivités, data centers : des enquêtes sur des questions publiques, avec leurs sources, leurs limites et des données à réutiliser, et le registre documenté des coûts déportés. Elles se consultent indépendamment de l'hypothèse de l'auteur.{{ end }}</p>
+  <ul class="ressources-index__liste home-ressources__liste">
+    {{- range sort $acces "Params.ressource.accueil" }}
+      {{- partial "ressource-entree.html" (dict "page" . "r" .Params.ressource "fr" false "vignette" true "sansDesc" true) -}}
+    {{- end }}
+  </ul>
+  <p class="home-tout"><a href="{{ if eq .Lang "en" }}/en/resources/{{ else }}/ressources/{{ end }}">{{ if eq .Lang "en" }}All resources&nbsp;→{{ else }}Toutes les ressources&nbsp;→{{ end }}</a></p>
+</section>
+
 {{/* ══════════ Section 2 bis — Frontière contemporaine ══════════ */}}
 <section class="frontiere-contemporaine">
   <div class="frontiere-contemporaine__inner">
@@ -198,26 +236,6 @@
       {{ if eq .Lang "en" }}Read AWP-06 — Digital Infrastructures and Technological Debt →{{ else }}Lire AWP-06 — Infrastructures numériques et dette technologique →{{ end }}
     </a>
   </div>
-</section>
-
-{{/* ══════════ Section 3 — Suivre les coûts (arbitrage PRO-20260921-105434 pour la présence) ══════════
-     Accès directs tirés des pages qui déclarent `ressource.accueil` (ordre = valeur), dans la langue
-     courante ; jamais une liste recopiée. Moins de trois accès : le build avertit. Même carte que
-     l'index /ressources/ (partial ressource-entree : vignette des pages de données, teinte), sans la
-     description. Titre : « L'hypothèse à l'épreuve » écarté — il présenterait des ressources de données
-     neutres comme des preuves de la thèse (arbitrage ENTRANTE_2026-10-01_Design_site, point 3). */}}
-{{- $acces := slice -}}
-{{- range where site.Pages "Params.ressource.accueil" "!=" nil }}{{ $acces = $acces | append . }}{{ end -}}
-{{- if lt (len $acces) 3 }}{{ warnf "accueil : %d acces ressources seulement (%s)" (len $acces) .Lang }}{{ end -}}
-<section class="home-section home-ressources" aria-labelledby="home-ressources-titre">
-  <h2 id="home-ressources-titre">{{ if eq .Lang "en" }}Following the costs{{ else }}Suivre les coûts{{ end }}</h2>
-  <p class="section-intro">{{ if eq .Lang "en" }}Measuring their weight, identifying who bears them, tracing when they appear: public debt in official series, and the documented register of displaced costs.{{ else }}Mesurer leur poids, identifier qui les supporte, suivre leur apparition dans le temps&nbsp;: la dette publique en séries officielles et le registre documenté des coûts déportés.{{ end }}</p>
-  <ul class="ressources-index__liste home-ressources__liste">
-    {{- range sort $acces "Params.ressource.accueil" }}
-      {{- partial "ressource-entree.html" (dict "page" . "r" .Params.ressource "fr" false "vignette" true "sansDesc" true) -}}
-    {{- end }}
-  </ul>
-  <p class="home-tout"><a href="{{ if eq .Lang "en" }}/en/resources/{{ else }}/ressources/{{ end }}">{{ if eq .Lang "en" }}All resources&nbsp;→{{ else }}Toutes les ressources&nbsp;→{{ end }}</a></p>
 </section>
 
 {{/* ══════════ Section 4 — Série AWP : une vedette, puis le registre ══════════
@@ -255,9 +273,9 @@
   </article>
   {{- end }}
 
-  {{- $reste := after 1 $awps }}
+  {{- $reste := where (after 1 $awps) "Params.accueil_awp" true }}{{/* repères déclarés dans les fiches (04/11/2026) */}}
   {{- with $reste }}
-  <p class="home-sous">{{ if eq $.Lang "en" }}The series{{ else }}La série{{ end }} — {{ strings.TrimPrefix "AWP-" (index (last 1 .) 0).Params.awp_number }}{{ if eq $.Lang "en" }} to {{ else }} à {{ end }}{{ strings.TrimPrefix "AWP-" (index . 0).Params.awp_number }}</p>
+  <p class="home-sous">{{ if eq $.Lang "en" }}Landmarks in the series{{ else }}Repères dans la série{{ end }}</p>
   <ul class="awp-registre">
     {{- range . }}
     <li class="awp-registre__ligne">
@@ -270,7 +288,7 @@
   </ul>
   {{- end }}
 
-  <p class="home-tout"><a href="{{ "/serie-awp/" | relLangURL }}">{{ if eq .Lang "en" }}The series and its abstracts&nbsp;→{{ else }}La série et ses résumés&nbsp;→{{ end }}</a></p>
+  <p class="home-tout"><a href="{{ "/serie-awp/" | relLangURL }}">{{ if eq .Lang "en" }}All {{ len $awps }} working papers and their abstracts&nbsp;→{{ else }}Les {{ len $awps }} working papers et leurs résumés&nbsp;→{{ end }}</a></p>
 </section>
 
 {{/* ══════════ Section 5 — Les livres ══════════

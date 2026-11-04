@@ -51,6 +51,7 @@ faq:
   - question: "Pourquoi un recul de l'investissement ne signifie-t-il pas une baisse des dépenses totales ?"
     answer: "De {coll.ep_a0} à {coll.ep_a1}, l'investissement des administrations publiques locales recule de {coll.ep_inv_mde}, mais leurs autres dépenses augmentent de {coll.ep_autres_dep_mde} : leurs dépenses totales restent presque stables en euros ({coll.ep_te_mde_s}). Rapportées au PIB, qui augmente de {coll.pib_croiss_pct} % sur la période, elles reculent pourtant de {coll.ep_te_pt}. La baisse d'un ratio ne prouve pas une baisse de la dépense en euros."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  accueil: 4  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # phase B de la refonte (méthode OPTIMUM-26) ; relecture attestée par docs/relectures/
   bloc: "dette"
