@@ -172,6 +172,17 @@ sur la réforme du raccordement). Diagnostics : vues, citations. État initial :
 - SDES (publication du 02/07/2026, lue à la source) : quatrième source du générateur, garde « même ordre de grandeur »
   vue mordre (`--mutation=sdes`) ; réponse « d'où viennent ces chiffres » et limite « un seul producteur » rendues exactes.
 - Figure : périmètre écrit sur chaque ligne de consommation ; légende rattachée à « En novembre 2025 » (le bleu foncé
-  faisait lire les totaux 2024 et 2026 comme « avant 2030 ») ; « déjà raccordés » en contour (le gris désignait aussi
-  « suspendu ») ; légende de la fourchette ; nombre et unité insécables ; séparateurs jamais seuls en bord de ligne.
+  faisait lire les totaux 2024 et 2026 comme « avant 2030 ») ; « déjà raccordés » distinct du gris de « suspendu » (contour
+  d'abord, puis plein anthracite : totaux hachurés, chaque marque un seul sens) ; légende de la fourchette ; nombre et unité insécables ; séparateurs jamais seuls en bord de ligne.
   Skill `controle-figures` : deux contrôleurs indépendants, second passage sur l'état final.
+- Troisième passage des contrôleurs (04/11) : 14 GW tracés à 13,9 (répartition mesurée) → somme écrite au pied par jeton
+  (`actif_dc`) ; segment « suspendu » de 3 px → légende « trait gris en bout de barre » ; « environ 0,9 GW », « about
+  0.9 GW », « 1 June 2026 » soudés, « 1ᵉʳ juin » ; contour des fourchettes aligné sur le plein (1 px) ; texte alternatif :
+  sites raccordés, suspendu, abandonné. Écartés : teinte non grise pour « déjà raccordés » (ligne à libellé propre) ; date
+  de la figure 2.3 (lue dans le Bilan prévisionnel par le générateur ; « fin novembre » est celle du Bilan électrique).
+- Quatrième passage (04/11) : légende des hachures sortie du bloc « En novembre 2025 » ; « déjà raccordés » daté (« en juin
+  2026 », jeton `mois_web`, page RTE du 1ᵉʳ juin ; distinct des 0,4 GW raccordés depuis 2023) dans la figure, son desc et
+  le texte alternatif ; « avant 2030 » soudé ; texte alternatif : « trajectoires de décarbonation lente et rapide de RTE »
+  (le Bilan prévisionnel, p. 11, étudie aussi une trajectoire de stagnation, en test de sensibilité : « les deux
+  trajectoires » était inexact). Écartés : légende de l'orange foncé (libellés « mesurée ») ; largeur minimale du segment
+  « suspendu » au téléphone (elle fausserait la valeur ; la légende le désigne).

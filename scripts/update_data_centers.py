@@ -109,9 +109,17 @@ WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, BLEU_CLAIR, ORANGE, ORANGE_CLAIR, GRIS = "#184f95", "#9db7da", "#eb6834", "#f5b89c", "#8a8781"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+ANTHR = INK2   # « déjà raccordés » : plein anthracite, distinct du gris clair de « suspendu » (contrôleurs du 04/11/2026)
+
+
+def hachures(ident: str) -> str:
+    """Motif des totaux non ventilés (fin 2024, mai 2026) : le bleu plein ne désigne plus que la part « avant 2030 »."""
+    return ('<defs><pattern id="%s" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+            '<rect width="5" height="5" fill="#ffffff"/><line x1="0" y1="0" x2="0" y2="5" stroke="%s" stroke-width="2.4"/>'
+            '</pattern></defs>' % (ident, BLEU))
 SUFFIXE = {"fr": "", "en": "-en"}
 LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0\u00a0· " + PAGE_FR, "en": "Computed by Stéphane Lalut, CC BY 4.0\u00a0· " + PAGE_EN}
-LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0\u00a0· stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0\u00a0· stephane-lalut.com"}
+LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC\u00a0BY\u00a04.0, stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC\u00a0BY\u00a04.0, stephane-lalut.com"}
 
 
 def log(msg: str) -> None:
@@ -405,6 +413,7 @@ def affichage(c: dict, meta: dict, lang: str) -> dict:
          "st_suspendu": f(st["suspendu"], 1), "st_abandon": f(st["abandonne_depuis_2023"], 1), "st_raccorde": f(st["raccorde_depuis_2023"], 1),
          "st_avant2030": f(c["avant_2030"], 1), "part_2030": f(c["part_2030"], 0), "actif_dc": f(c["actif_dc"], 1),
          "date_web": date_longue(meta["web"]["mise_a_jour"], lang),
+         "mois_web": date_longue(meta["web"]["mise_a_jour"], lang).split(" ", 1)[1].replace(" ", "\u00a0"),
          "date_fig23": "1 November 2025" if lang == "en" else "1er novembre 2025",
          "montee": v["montee"] if lang == "fr" else {"dix à quinze ans": "ten to fifteen years"}.get(v["montee"]) or fail("traduction : %s" % v["montee"])}
     A["pct"] = "%" if lang == "en" else " %"
@@ -418,8 +427,9 @@ TXT = {
                titre_m="Data centers : puissance réservée et électricité consommée",
                pa="Puissance de raccordement réservée auprès de RTE, en gigawatts (GW)",
                pb="Consommation d'électricité des data centers sur sites dédiés, en térawattheures par an (TWh)",
-               fin2024="Fin 2024", nov2025="Novembre 2025", mai2026="Mai 2026", rac="Déjà raccordés au réseau de RTE ({sites_rte} sites)",
-               avant="mise en service prévue avant 2030", apres="à partir de 2030", abandon="Suspendu (gris) : {st_suspendu} GW ; abandonné depuis 2023 : environ {st_abandon} GW",
+               fin2024="Fin 2024", nov2025="Novembre 2025", mai2026="Mai 2026", rac="Déjà raccordés au réseau de RTE en\u00a0{mois_web} ({sites_rte} sites, puissance cumulée)",
+               avant="mise en service prévue avant 2030", apres="à partir de 2030", abandon="Suspendu (trait gris en bout de barre) : {st_suspendu} GW ; abandonné depuis 2023 : environ {st_abandon} GW",
+               total="Fin 2024 et mai 2026 : total, sans répartition",
                m24="2024, mesurée (réseau de RTE)", m25="2025, mesurée (réseau de RTE)", e24="2024, estimée par RTE (tous\u00a0sites\u00a0dédiés)",
                leg="En novembre 2025" + " :", fourchette="Plein : bas de la fourchette ; contour : jusqu'au haut.",
                t30="2030, deux trajectoires de RTE (tous\u00a0sites\u00a0dédiés)", t35="2035, deux trajectoires de RTE (tous\u00a0sites\u00a0dédiés)",
@@ -427,12 +437,12 @@ TXT = {
                v_m24="{rpt_2024} TWh", v_m25="près de {rpt_2025} TWh", v_e24="{sd_bas} à {sd_haut} TWh", v_t30="{l2030} à {r2030} TWh", v_t35="{l2035} à {r2035} TWh",
                desc="Deux panneaux, deux grandeurs. Puissance de raccordement réservée par les data centers auprès de RTE : environ {res_fin2024} GW "
                     "fin 2024, {res_nov2025} GW en novembre 2025 (dont {st_avant2030} GW pour une mise en service avant 2030, {st_2030} GW à partir "
-                    "de 2030 et {st_suspendu} GW suspendus), près de {res_mai2026} GW en mai 2026 ; {rac_gw} GW déjà raccordés au réseau de RTE ({sites_rte} sites) ; environ "
+                    "de 2030 et {st_suspendu} GW suspendus), près de {res_mai2026} GW en mai 2026 ; {rac_gw} GW déjà raccordés au réseau de RTE en {mois_web} ({sites_rte} sites) ; environ "
                     "{st_abandon} GW abandonnés depuis 2023. Consommation des data centers sur sites dédiés : {rpt_2024} TWh en 2024 et près de "
                     "{rpt_2025} TWh en 2025 mesurés sur le réseau de RTE ; {sd_bas} à {sd_haut} TWh estimés pour l'ensemble en 2024 ; "
                     "{l2030} à {r2030} TWh en 2030 et {l2035} à {r2035} TWh en 2035 dans les deux trajectoires de RTE.",
                source="RTE : Bilan prévisionnel 2025-2035 (déc. 2025), Bilan électrique 2025 (févr. 2026), page « Les data centers en chiffres clés » "
-                      "({date_web}) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel.",
+                      "({date_web}) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel (somme : {actif_dc} GW).",
                note="Une puissance réservée n'est ni une puissance appelée ni une consommation : les deux panneaux ne se comparent pas, "
                     "aucun rapport n'est calculé entre eux. Trajectoires : hypothèses de RTE, non des mesures.",
                montre="En novembre 2025, les data centers avaient réservé {res_nov2025} GW auprès de RTE, dont {st_2030} GW pour une mise en "
@@ -441,8 +451,9 @@ TXT = {
                titre_m="Data centres: reserved capacity and electricity consumed",
                pa="Grid connection capacity reserved with RTE, in gigawatts (GW)",
                pb="Electricity consumption of dedicated-site data centres, in terawatt-hours per year (TWh)",
-               fin2024="End-2024", nov2025="November 2025", mai2026="May 2026", rac="Already connected to RTE's grid ({sites_rte} sites)",
-               avant="commissioning planned before 2030", apres="from 2030", abandon="Suspended (grey): {st_suspendu} GW; abandoned since 2023: about {st_abandon} GW",
+               fin2024="End-2024", nov2025="November 2025", mai2026="May 2026", rac="Already connected to RTE's grid in\u00a0{mois_web} ({sites_rte} sites, combined capacity)",
+               avant="commissioning planned before 2030", apres="from 2030", abandon="Suspended (grey end tick): {st_suspendu} GW; abandoned since 2023: about {st_abandon} GW",
+               total="End-2024 and May 2026: total, not broken down",
                m24="2024, metered (RTE's grid)", m25="2025, metered (RTE's grid)", e24="2024, estimated by RTE (all\u00a0dedicated\u00a0sites)",
                leg="In November 2025:", fourchette="Solid: low end of the range; outline: up to the high end.",
                t30="2030, two RTE pathways (all\u00a0dedicated\u00a0sites)", t35="2035, two RTE pathways (all\u00a0dedicated\u00a0sites)",
@@ -450,12 +461,12 @@ TXT = {
                v_m24="{rpt_2024} TWh", v_m25="nearly {rpt_2025} TWh", v_e24="{sd_bas} to {sd_haut} TWh", v_t30="{l2030} to {r2030} TWh", v_t35="{l2035} to {r2035} TWh",
                desc="Two panels, two quantities. Grid connection capacity reserved by data centres with RTE: about {res_fin2024} GW at end-2024, "
                     "{res_nov2025} GW in November 2025 (of which {st_avant2030} GW for commissioning before 2030, {st_2030} GW from 2030 and {st_suspendu} GW suspended), "
-                    "nearly {res_mai2026} GW in May 2026; {rac_gw} GW already connected to RTE's grid ({sites_rte} sites); about {st_abandon} GW "
+                    "nearly {res_mai2026} GW in May 2026; {rac_gw} GW already connected to RTE's grid in {mois_web} ({sites_rte} sites); about {st_abandon} GW "
                     "abandoned since 2023. Consumption of dedicated-site data centres: {rpt_2024} TWh in 2024 and nearly {rpt_2025} TWh in 2025 "
                     "metered on RTE's grid; {sd_bas} to {sd_haut} TWh estimated for all of them in 2024; {l2030} to {r2030} TWh in 2030 and "
                     "{l2035} to {r2035} TWh in 2035 in RTE's two pathways.",
                source="RTE: Bilan prévisionnel 2025-2035 (Dec. 2025), Bilan électrique 2025 (Feb. 2026), web page “Les data centers en chiffres clés” "
-                      "({date_web}); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel.",
+                      "({date_web}); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel (sum: {actif_dc} GW).",
                note="Reserved capacity is neither power drawn nor consumption: the two panels are not comparable, and no ratio is computed "
                     "between them. Pathways: RTE's assumptions, not measurements.",
                montre="In November 2025, data centres had reserved {res_nov2025} GW with RTE, {st_2030} GW of it for commissioning from 2030; "
@@ -469,7 +480,14 @@ def esc(s: str) -> str:
 
 def t_(lang, Aff):
     # nombre et unité insécables (règle du site, « quel que soit le support ») : pied_figure.coupe ne soude pas GW ni TWh
-    return {k: re.sub(r"(\d) (GW|TWh|MW|GWh)\b", "\\1\u00a0\\2", v.format(**Aff)) for k, v in TXT[lang].items()}
+    # « environ 0,9 GW » et les dates (« 1 June 2026 ») ne se coupent pas non plus ; « 1er » en exposant (1ᵉʳ), comme la page.
+    def soude(v):
+        v = re.sub(r"(\d) (GW|TWh|MW|GWh)\b", "\\1\u00a0\\2", v)
+        v = re.sub(r"\b(environ|près de|about|nearly) (\d)", "\\1\u00a0\\2", v)
+        v = re.sub(r"\b(avant|before) (\d{4})\b", "\\1\u00a0\\2", v)
+        v = re.sub(r"\b1er ", "1ᵉʳ\u00a0", v)
+        return re.sub(r"\b(\d{1,2}) (%s) (\d{4})" % "|".join(MOIS["en"]), "\\1\u00a0\\2\u00a0\\3", v)
+    return {k: soude(v.format(**Aff)) for k, v in TXT[lang].items()}
 
 
 def _barre(e, x0, y, larg, vmax, segments, h=18):
@@ -477,9 +495,8 @@ def _barre(e, x0, y, larg, vmax, segments, h=18):
     x = x0
     for val, col in segments:
         w = max(larg * val / vmax, 1.5)
-        if col is None:   # contour seul : « déjà raccordés », distinct du gris de « suspendu » (contrôleurs du 04/11/2026)
-            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="#ffffff" stroke="%s" stroke-width="1.4"/>'
-                     % (x + 0.7, y + 0.7, max(w - 1.4, 1), h - 1.4, BLEU))
+        if col.startswith("url("):
+            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="%s" stroke="%s" stroke-width="1"/>' % (x, y, w, h, col, BLEU))
         else:
             e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="%s"/>' % (x, y, w, h, col))
         x += w
@@ -494,31 +511,39 @@ def fig(c, Aff, lang):
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
          'aria-labelledby="dtc-t dtc-d" font-family="%s">' % (W, FONT),
          '<title id="dtc-t">%s</title><desc id="dtc-d">%s</desc>' % (esc(t["titre"]), esc(t["desc"])),
-         '<rect width="%d" height="0" fill="#ffffff"/>' % W,
+         '<rect width="%d" height="0" fill="#ffffff"/>' % W, hachures("dtc-hach"),
          '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(t["titre"]))]
     # panneau A : gigawatts réservés
     y = 50
     e.append('<text x="0" y="%d" font-size="12" font-weight="600" fill="%s">%s</text>' % (y, BLEU, esc(t["pa"])))
     vmax = 20.0
-    lignes = [(t["fin2024"], [(v["res_fin2024"], BLEU)], t["v_fin2024"]),
+    H = "url(#dtc-hach)"
+    lignes = [(t["fin2024"], [(v["res_fin2024"], H)], t["v_fin2024"]),
               (t["nov2025"], [(c["avant_2030"], BLEU), (st["signe_2030"], BLEU_CLAIR), (st["suspendu"], GRIS)], t["v_nov2025"]),
-              (t["mai2026"], [(v["res_mai2026"], BLEU)], t["v_mai2026"]),
-              (t["rac"], [(v["mw_rte"] / 1000, None)], t["v_rac"])]
+              (t["mai2026"], [(v["res_mai2026"], H)], t["v_mai2026"]),
+              (t["rac"], [(v["mw_rte"] / 1000, ANTHR)], t["v_rac"])]
     for i, (lib, segs, val) in enumerate(lignes):
         yy = y + 18 + 34 * i
         for j, l in enumerate(pied_figure.coupe(lib, 36)):
             e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (xl, yy + 13 + 12 * j, INK, esc(l)))
         xf = _barre(e, x0, yy, larg, vmax, segs)
-        e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xf + 6, yy + 13, BLEU if segs[0][1] == BLEU else INK2, esc(val)))
+        e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xf + 6, yy + 13, INK2 if segs[0][1] == ANTHR else BLEU, esc(val)))
     yy = y + 18 + 34 * len(lignes) + 12   # +12 : l'intitulé de la légende ne se lit pas comme une suite du libellé « raccordés »
-    # légende du découpage de novembre 2025, rattachée à sa barre par son intitulé
+    # hachures d'abord (fin 2024, mai 2026), puis le découpage de novembre 2025 sous son intitulé (contrôleur du 04/11/2026)
+    e.append('<rect x="%d" y="%d" width="10" height="10" fill="url(#dtc-hach)" stroke="%s" stroke-width="1"/>' % (x0, yy, BLEU))
+    e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x0 + 14, yy + 9, INK2, esc(t["total"])))
+    yy += 30
     e.append('<text x="%d" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xl, yy + 9, INK2, esc(t["leg"])))
     lx = x0
     for col, lib in ((BLEU, t["avant"] + Aff["deux_points"] + Aff["st_avant2030"] + "\u00a0GW"), (BLEU_CLAIR, t["apres"] + Aff["deux_points"] + Aff["st_2030"] + "\u00a0GW")):
         e.append('<rect x="%d" y="%d" width="10" height="10" fill="%s"/>' % (lx, yy, col))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (lx + 14, yy + 9, INK2, esc(lib)))
         lx += 14 + int(5.6 * len(lib)) + 16
-    e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x0, yy + 26, INK2, esc(t["abandon"])))
+    # deux lignes : d'un seul tenant, la ligne finissait à 719,8 px sur 720 avec Inter (contrôleur du 04/11/2026)
+    ab = re.split(r"(?<=;)\s+", t["abandon"])   # coupée au point-virgule : une clause par ligne
+    for j, l in enumerate(ab):
+        e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x0, yy + 26 + 14 * j, INK2, esc(l)))
+    yy += 1 + 14 * (len(ab) - 1)
     # panneau B : térawattheures consommés ou projetés
     y = yy + 64
     e.append('<text x="0" y="%d" font-size="12" font-weight="600" fill="%s">%s</text>' % (y, ORANGE, esc(t["pb"])))
@@ -529,18 +554,20 @@ def fig(c, Aff, lang):
               (t["t30"], [(lo30, ORANGE_CLAIR), (hi30 - lo30, ORANGE_CLAIR)], t["v_t30"]),
               (t["t35"], [(v["l2035"], ORANGE_CLAIR), (v["r2035"] - v["l2035"], ORANGE_CLAIR)], t["v_t35"])]
     for i, (lib, segs, val) in enumerate(lignes):
-        yy = y + 18 + 34 * i
+        yy = y + 18 + 34 * i + (14 if i >= 2 else 0)   # deux périmètres : les mesures (réseau de RTE), puis tous sites dédiés
+        if i == 2:
+            e.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (yy - 9, x0 + larg, yy - 9, GRID))
         for j, l in enumerate(pied_figure.coupe(lib, 36)):
             e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (xl, yy + 13 + 12 * j, INK, esc(l)))
         if len(segs) == 2:       # fourchette : la borne basse en plein clair, l'écart hachuré par un contour
             xa = _barre(e, x0, yy, larg, vmax, segs[:1])
             wb = max(larg * segs[1][0] / vmax, 1.5)
-            e.append('<rect x="%.1f" y="%d" width="%.1f" height="17" fill="#ffffff" stroke="%s" stroke-width="1"/>' % (xa, yy, wb, ORANGE))
+            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="17" fill="#ffffff" stroke="%s" stroke-width="1"/>' % (xa, yy + 0.5, wb, ORANGE))
             xf = xa + wb
         else:
             xf = _barre(e, x0, yy, larg, vmax, segs)
         e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xf + 6, yy + 13, ORANGE, esc(val)))
-    yy = y + 18 + 34 * len(lignes)
+    yy = y + 18 + 34 * len(lignes) + 14
     e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x0, yy + 6, INK2, esc(t["fourchette"])))
     yy += 18
     return pied_figure.pied(e, yy + 4, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
@@ -556,15 +583,20 @@ def fig_m(c, Aff, lang, svg_d):
     v, st = c["v"], c["statuts"]
     lo30, hi30 = sorted(c["f210"]["etiquettes_2030"])
     e, y = pied_figure.tete_mobile("dtcm", t["titre_m"], desc_de(svg_d), INK, FONT)
+    e.append(hachures("dtcm-hach"))
+    H = "url(#dtcm-hach)"
 
     def panneau(y, titre, col, vmax, lignes):
         y += 14
         for l in pied_figure.coupe(titre, 34):
             y += 18
             e.append('<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y, FS_MIN, col, esc(l)))
-        for lib, segs, val, fourchette in lignes:
-            coul = INK2 if segs[0][1] in (GRIS, None) else col
+        for k, (lib, segs, val, fourchette) in enumerate(lignes):
+            coul = INK2 if segs[0][1] in (GRIS, ANTHR) else col
             y += 10
+            if col == ORANGE and k == 2:   # second périmètre : tous sites dédiés
+                y += 8
+                e.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (y, 300, y, GRID))
             for l in pied_figure.coupe(lib, 36):
                 y += 18
                 e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK, esc(l)))
@@ -572,7 +604,7 @@ def fig_m(c, Aff, lang, svg_d):
             if fourchette:
                 xa = _barre(e, 0, y, 190, vmax, segs[:1], 12)
                 wb = max(190 * segs[1][0] / vmax, 1.5)
-                e.append('<rect x="%.1f" y="%d" width="%.1f" height="11" fill="#ffffff" stroke="%s" stroke-width="1"/>' % (xa, y, wb, ORANGE))
+                e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="11" fill="#ffffff" stroke="%s" stroke-width="1"/>' % (xa, y + 0.5, wb, ORANGE))
                 xf = xa + wb
             else:
                 xf = _barre(e, 0, y, 190, vmax, segs, 12)
@@ -581,11 +613,17 @@ def fig_m(c, Aff, lang, svg_d):
         return y
 
     y = panneau(y, t["pa"], BLEU, 20.0, [
-        (t["fin2024"], [(v["res_fin2024"], BLEU)], t["v_fin2024"], False),
+        (t["fin2024"], [(v["res_fin2024"], H)], t["v_fin2024"], False),
         (t["nov2025"], [(c["avant_2030"], BLEU), (st["signe_2030"], BLEU_CLAIR), (st["suspendu"], GRIS)], t["v_nov2025"], False),
-        (t["mai2026"], [(v["res_mai2026"], BLEU)], t["v_mai2026"], False),
-        (t["rac"], [(v["mw_rte"] / 1000, None)], t["v_rac"], False)])
+        (t["mai2026"], [(v["res_mai2026"], H)], t["v_mai2026"], False),
+        (t["rac"], [(v["mw_rte"] / 1000, ANTHR)], t["v_rac"], False)])
     y += 8
+    for k, l in enumerate(pied_figure.coupe(t["total"], 32)):   # hachures d'abord, hors du bloc « En novembre 2025 »
+        y += 18
+        if k == 0:
+            e.append('<rect x="0" y="%d" width="11" height="11" fill="%s" stroke="%s" stroke-width="1"/>' % (y - 10, H, BLEU))
+        e.append('<text x="16" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
+    y += 14
     e.append('<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y + 18, FS_MIN, INK2, esc(t["leg"])))
     y += 18
     for col, lib in ((BLEU, t["avant"] + Aff["deux_points"] + Aff["st_avant2030"] + "\u00a0GW"), (BLEU_CLAIR, t["apres"] + Aff["deux_points"] + Aff["st_2030"] + "\u00a0GW"),
@@ -595,7 +633,8 @@ def fig_m(c, Aff, lang, svg_d):
         for k, l in enumerate(lignes):
             y += 18
             if col and k == 0:
-                e.append('<rect x="0" y="%d" width="11" height="11" fill="%s"/>' % (y - 10, col))
+                liser = ' stroke="%s" stroke-width="1"' % BLEU if col.startswith("url(") else ""
+                e.append('<rect x="0" y="%d" width="11" height="11" fill="%s"%s/>' % (y - 10, col, liser))
             e.append('<text x="%d" y="%d" font-size="%s" fill="%s">%s</text>' % (16 if col else 0, y, FS_MIN, INK2, esc(l)))
     y = panneau(y + 10, t["pb"], ORANGE, 35.0, [
         (t["m24"], [(v["rpt_2024"], ORANGE)], t["v_m24"], False),
