@@ -157,20 +157,89 @@
   align-items: center;
 }
 
-.axes-node__sphere {
-  width: 100%;
-  max-width: 270px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background: var(--color-bg-card);
-  border: 1.5px solid var(--color-accent);
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+
+// ── Trois axes animés (variante C', 04/11/2026) ──
+.axes-c { display: flex; flex-direction: column; }
+.axes-c__scene { width: 100%; height: auto; display: block; margin: 0 0 0.5rem; overflow: visible; }
+.axes-c__legende { order: 1; font-family: var(--font-sans); font-size: 14px; color: var(--color-text-muted, #3A3A40); text-align: center; margin: 0 0 1.5rem; }
+.axes-c .axis-grid { order: 2; }
+.axes-c__sphere { fill: var(--color-bg-card); stroke: var(--color-accent); stroke-width: 1.5; }
+.axes-c__ordre-cadre { fill: #fff; stroke: var(--color-accent); stroke-width: 1.5; }
+.axes-c__ordre-titre { font-family: var(--font-sans); font-size: 17px; font-weight: 600; fill: var(--color-accent); }
+.axes-c__ordre-sous { font-family: var(--font-sans); font-size: 13px; fill: #3A3A40; }
+.axes-c__lab { font-family: var(--font-sans); font-size: 19px; font-weight: 500; fill: var(--color-accent); }
+.axes-c__q { font-family: var(--font-sans); font-size: 14px; font-weight: 600; fill: #eb6834; }
+.axes-c__dir { font-family: var(--font-sans); font-size: 14px; fill: var(--color-accent); }
+.axes-c__eti { font-family: var(--font-sans); font-size: 11px; font-weight: 500; fill: #6a675f; }
+.axes-c__pole { fill: none; stroke: var(--color-accent); stroke-width: 1.2; }
+.axes-c__plein { fill: var(--color-accent); }
+.axes-c__fil { fill: none; stroke: #b9b4a8; }
+.axes-c__lien { fill: none; stroke: #b9b4a8; stroke-width: 1.2; stroke-dasharray: 3 6; }
+.axes-c__charge { fill: #eb6834; }   // orange des coûts, charte des figures
+// État final (sans script, sans mouvement) : charges arrivées, pâlies en s'éloignant de l'ordre local
+.axes-c__part { offset-distance: 100%; opacity: 0.45; }
+.axes-c__int { transform: translate(var(--dx), var(--dy)); }
+.axes-c__deploie { transform-box: fill-box; transform-origin: center; }
+.axes-c__deploie-1 { --ox: 367px; --oy: -230px; }
+.axes-c__deploie-2 { --ox: 0px; --oy: -230px; }
+.axes-c__deploie-3 { --ox: -367px; --oy: -230px; }
+// Hors écran, avant la séquence
+.axes-c.is-attente .axes-c__deploie, .axes-c.is-attente .axes-c__part, .axes-c.is-attente .axes-c__int,
+.axes-c.is-attente .axes-c__legende { opacity: 0; }
+// La séquence (~5 s, une fois)
+.axes-c.is-jouer .axes-c__deploie { animation: axes-deploie 1s cubic-bezier(.3, .7, .3, 1) both; }
+.axes-c.is-jouer .axes-c__deploie-1 { animation-delay: .4s; }
+.axes-c.is-jouer .axes-c__deploie-2 { animation-delay: .6s; }
+.axes-c.is-jouer .axes-c__deploie-3 { animation-delay: .8s; }
+.axes-c.is-jouer .axes-c__part { animation: axes-part 1.4s ease-in-out both; }
+.axes-c.is-jouer .axes-c__part-1 { animation-delay: 1.5s; }
+.axes-c.is-jouer .axes-c__part-2 { animation-delay: 1.9s; }
+.axes-c.is-jouer .axes-c__part-3 { animation-delay: 2.3s; }
+.axes-c.is-jouer .axes-c__int { animation: axes-int 1.3s cubic-bezier(.45, 0, .35, 1) both; }
+.axes-c.is-jouer .axes-c__int-1 { animation-delay: 3s; }
+.axes-c.is-jouer .axes-c__int-2 { animation-delay: 3.4s; }
+.axes-c.is-jouer .axes-c__int-3 { animation-delay: 3.8s; }
+.axes-c.is-jouer .axes-c__legende { animation: axes-apparait .8s ease both; animation-delay: 4.6s; }
+@keyframes axes-deploie { from { transform: translate(var(--ox), var(--oy)) scale(.35); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes axes-part { 0% { offset-distance: 0%; opacity: 0; } 10% { opacity: 1; } 100% { offset-distance: 100%; opacity: .45; } }
+@keyframes axes-int { from { transform: translate(0, 0); opacity: 0; } 15% { opacity: 1; } to { transform: translate(var(--dx), var(--dy)); opacity: 1; } }
+@keyframes axes-apparait { from { opacity: 0; } to { opacity: 1; } }
+// Bureau : les libellés sont dans la scène ; leur texte HTML reste pour les lecteurs d'écran et les moteurs
+.axes-node__mini { display: none; }
+@media (min-width: 1001px) {
+  .axes-node__tete, .axes-c__ordre {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+}
+.axes-node__question { font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: #eb6834; margin: 2px 0 0; }
+// Téléphone et tablette (≤ 1 000 px : au-delà de cette réduction, les étiquettes de la scène tomberaient sous 8 px) :
+// une colonne ; l'ordre local en tête, chaque axe en carte (mini-sphère, libellés, texte)
+@media (max-width: 1000px) {
+  .axes-c__scene { display: none; }
+  .axes-c .axis-grid { grid-template-columns: 1fr; }
+  .axes-c__legende { order: 3; margin: 1.25rem 0 0; }
+  .axes-c__ordre { border: 1.5px solid var(--color-accent); border-radius: 10px; background: #fff; text-align: center; padding: 10px 12px; margin: 0 0 6px; font-family: var(--font-sans); }
+  .axes-c__ordre strong { display: block; color: var(--color-accent); font-size: 17px; font-weight: 600; }
+  .axes-c__ordre span { font-size: 13px; color: #3A3A40; }
+  .axes-c .axis-grid { gap: 0; margin-bottom: 0; }
+  .axes-c .axes-node { display: grid; grid-template-columns: 104px 1fr; column-gap: 14px; align-items: start; position: relative; padding-top: 30px; }
+  .axes-c .axes-node::before { content: ""; position: absolute; left: 52px; top: 0; height: 26px; border-left: 1.2px dashed #b9b4a8; }
+  .axes-node__mini { display: block; width: 104px; height: 104px; grid-row: 1 / span 2; }
+  .axes-node__tete { grid-column: 2; }
+  .axes-c .axes-node__body { grid-column: 2; margin-top: 8px; }
+  .axes-c__eti--mini { display: none; }   // à 104 px elles débordent ; le texte voisin dit déjà le sens
+  .axes-node__mini * { vector-effect: non-scaling-stroke; }   // traits à l'épaisseur du bureau malgré la réduction
+  .axes-c.is-attente .axes-node { opacity: 0; }
+  .axes-c.is-jouer .axes-node { animation: axes-carte .8s cubic-bezier(.3, .7, .3, 1) both; }
+  .axes-c.is-jouer .axes-node--temporel { animation-delay: .7s; }
+  .axes-c.is-jouer .axes-node--social { animation-delay: 1.4s; }
+  .axes-c.is-jouer .axes-node--spatial .axes-c__int { animation-delay: 1s; }
+  .axes-c.is-jouer .axes-node--temporel .axes-c__int { animation-delay: 1.7s; }
+  .axes-c.is-jouer .axes-node--social .axes-c__int { animation-delay: 2.4s; }
+  @keyframes axes-carte { from { transform: translateY(-14px); opacity: 0; } to { transform: none; opacity: 1; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .axes-c *, .axes-c .axes-node { animation: none !important; }
 }
 
 .axes-node__label {

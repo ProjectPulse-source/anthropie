@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-04 — Accueil : trois axes animés (variante C') ; figures data centers et durées relues
+
+**Accueil** (`layouts/index.html`, `assets/scss/_home.scss`, `static/js/axes-anim.js`, appel dans `partials/head.html`) :
+tout part d'« un ordre local » ; les trois sphères se déploient depuis lui, une charge part de lui vers chacune (trois
+départs, jamais de relais entre axes, aucune boucle : la boucle anthropique suit) et pâlit en s'éloignant ; dans chaque
+sphère, le déplacement propre à l'axe. Une séquence d'environ 5 s quand la section entre à l'écran, puis image fixe
+(WCAG 2.2.2) ; sans script ou en mouvement réduit, l'image finale. Au-delà de 1 000 px, scène SVG décorative (libellés
+HTML gardés pour les lecteurs d'écran) ; jusqu'à 1 000 px, une colonne de cartes. Arbitrage :
+`06_PROMOTION/REVISION_AMELIORATION-06_2026-11-04/` (variantes A et B écartées). Rendu vérifié FR et EN à 390, 820,
+1 024, 1 280 et 1 440 px, mouvement réduit compris, sans débordement.
+
+**Figures** : data centers (quatre passes de contrôleurs) et frise des durées de `/combien-de-temps-une-erreur-reste-inscrite/`
+(troncature supprimée ; portée de chaque délai alignée sur les textes cités, art. L. 223-6 C. route et 133-16 C. pén.
+relus). Organe `pied_figure.coupe` : « · » soudé au mot suivant (R5). Points ouverts : art. 775 CPP (FAQ, effet de la
+réhabilitation sur les bulletins n° 2 et 3), cellule « retrait par le tribunal » du bulletin n° 1.
+
 ### 2026-11-04 — Publication : « Gouverner sans être contredit » (En attendant Nadeau n° 254)
 
 Recension de Rainer Mühlhoff, *Intelligence artificielle & nouveau fascisme* (trad. Pierre Deshusses,

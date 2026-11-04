@@ -100,6 +100,7 @@
      l'auteur du 23/10 : les replis posés par un gabarit ou par un script ne sont pas dans .Content, la condition
      d'avant les manquait). Contrôle : scripts/check-replis.py. */}}
 <script src="{{ partial "js-url.html" "replis-action.js" }}" defer></script>
+{{ if .IsHome }}<script src="{{ partial "js-url.html" "axes-anim.js" }}" defer></script>{{ end }}
 
 <!-- CSS -->
 {{- /* EMPREINTE sur le nom du fichier : sans elle, /css/style.css reste en cache

@@ -79,30 +79,83 @@
     {{ end }}
   </p>
 
+  {{/* Trois axes animés (variante C', arbitrage Amélioration-06 du 04/11/2026,
+       06_PROMOTION/REVISION_AMELIORATION-06_2026-11-04/) : tout part d'un ordre local ; les sphères se déploient depuis
+       lui, une charge part de lui vers chacune (trois départs indépendants, jamais de relais entre axes, aucune boucle :
+       la boucle anthropique suit) et pâlit en s'éloignant ; dans chaque sphère, le déplacement propre à l'axe. Une seule
+       séquence d'environ 5 s quand la section entre à l'écran (static/js/axes-anim.js), puis image fixe ; sans script ou
+       si l'appareil réduit les animations, l'image finale. SVG décoratif (aria-hidden) : les libellés restent en HTML. */}}
+  {{- $en := eq .Lang "en" }}
+  <div class="axes-c" data-axes-anim>
+    <svg class="axes-c__scene" viewBox="0 0 1100 420" aria-hidden="true" focusable="false">
+      <path class="axes-c__lien" d="M 520 104 C 420 150, 260 140, 183 186"/>
+      <path class="axes-c__lien" d="M 550 104 C 550 140, 550 150, 550 186"/>
+      <path class="axes-c__lien" d="M 580 104 C 680 150, 840 140, 917 186"/>
+      <rect class="axes-c__ordre-cadre" x="390" y="30" width="320" height="74" rx="12"/>
+      <text class="axes-c__ordre-titre" x="550" y="62" text-anchor="middle">{{ if $en }}A local order{{ else }}Un ordre local{{ end }}</text>
+      <text class="axes-c__ordre-sous" x="550" y="85" text-anchor="middle">{{ if $en }}a visible benefit; costs to be located{{ else }}un bénéfice visible ; des coûts à situer{{ end }}</text>
+      <circle class="axes-c__charge axes-c__part axes-c__part-1" cx="0" cy="0" r="6" style="offset-path:path('M 520 104 C 420 150, 260 140, 183 186')"/>
+      <circle class="axes-c__charge axes-c__part axes-c__part-2" cx="0" cy="0" r="6" style="offset-path:path('M 550 104 C 550 140, 550 150, 550 186')"/>
+      <circle class="axes-c__charge axes-c__part axes-c__part-3" cx="0" cy="0" r="6" style="offset-path:path('M 580 104 C 680 150, 840 140, 917 186')"/>
+      <g class="axes-c__deploie axes-c__deploie-1"><g transform="translate(183 296)">
+        <circle class="axes-c__sphere" cx="0" cy="0" r="112"/>
+        <text class="axes-c__lab" x="0" y="-60" text-anchor="middle">Spatial</text>
+        <text class="axes-c__q" x="0" y="-39" text-anchor="middle">{{ if $en }}Where?{{ else }}Où ?{{ end }}</text>
+        <text class="axes-c__dir" x="0" y="-20" text-anchor="middle">{{ if $en }}Centre → periphery{{ else }}Centre → périphérie{{ end }}</text>
+        <circle class="axes-c__pole" cx="0" cy="26" r="7"/><circle class="axes-c__fil" cx="0" cy="26" r="40" stroke-dasharray="2 5"/>
+        <circle class="axes-c__charge axes-c__int axes-c__int-1" cx="0" cy="26" r="4.5" style="--dx:-37px;--dy:14px"/><circle class="axes-c__charge axes-c__int axes-c__int-2" cx="0" cy="26" r="4.5" style="--dx:37px;--dy:14px"/><circle class="axes-c__charge axes-c__int axes-c__int-3" cx="0" cy="26" r="4.5" style="--dx:0px;--dy:40px"/>
+      </g></g>
+      <g class="axes-c__deploie axes-c__deploie-2"><g transform="translate(550 296)">
+        <circle class="axes-c__sphere" cx="0" cy="0" r="112"/>
+        <text class="axes-c__lab" x="0" y="-60" text-anchor="middle">{{ if $en }}Temporal{{ else }}Temporel{{ end }}</text>
+        <text class="axes-c__q" x="0" y="-39" text-anchor="middle">{{ if $en }}When?{{ else }}Quand ?{{ end }}</text>
+        <text class="axes-c__dir" x="0" y="-20" text-anchor="middle">{{ if $en }}Present → future{{ else }}Présent → futur{{ end }}</text>
+        <line class="axes-c__fil" x1="-58" y1="49" x2="58" y2="49"/><line class="axes-c__pole" x1="-44" y1="43" x2="-44" y2="55"/><text class="axes-c__eti" x="-44" y="70" text-anchor="middle">{{ if $en }}today{{ else }}aujourd'hui{{ end }}</text><text class="axes-c__eti" x="44" y="70" text-anchor="middle">{{ if $en }}later{{ else }}plus tard{{ end }}</text>
+        <circle class="axes-c__charge axes-c__int axes-c__int-1" cx="-44" cy="39" r="4.5" style="--dx:88px;--dy:0px"/><circle class="axes-c__charge axes-c__int axes-c__int-2" cx="-44" cy="27" r="4.5" style="--dx:88px;--dy:0px"/><circle class="axes-c__charge axes-c__int axes-c__int-3" cx="-44" cy="15" r="4.5" style="--dx:88px;--dy:0px"/>
+      </g></g>
+      <g class="axes-c__deploie axes-c__deploie-3"><g transform="translate(917 296)">
+        <circle class="axes-c__sphere" cx="0" cy="0" r="112"/>
+        <text class="axes-c__lab" x="0" y="-60" text-anchor="middle">Social</text>
+        <text class="axes-c__q" x="0" y="-39" text-anchor="middle">{{ if $en }}Who?{{ else }}Qui ?{{ end }}</text>
+        <text class="axes-c__dir" x="0" y="-20" text-anchor="middle">{{ if $en }}Mobile → captive{{ else }}Mobiles → captifs{{ end }}</text>
+        <circle class="axes-c__pole" cx="-47" cy="22" r="6"/><circle class="axes-c__pole" cx="-31" cy="10" r="6"/><circle class="axes-c__pole" cx="-41" cy="40" r="6"/><circle class="axes-c__plein" cx="39" cy="42" r="6"/><circle class="axes-c__plein" cx="55" cy="42" r="6"/><circle class="axes-c__plein" cx="47" cy="27" r="6"/><text class="axes-c__eti" x="-39" y="66" text-anchor="middle">{{ if $en }}mobile{{ else }}mobiles{{ end }}</text><text class="axes-c__eti" x="47" y="66" text-anchor="middle">{{ if $en }}captive{{ else }}captifs{{ end }}</text>
+        <circle class="axes-c__charge axes-c__int axes-c__int-1" cx="-31" cy="10" r="4" style="--dx:78px;--dy:17px"/><circle class="axes-c__charge axes-c__int axes-c__int-2" cx="-47" cy="22" r="4" style="--dx:86px;--dy:20px"/><circle class="axes-c__charge axes-c__int axes-c__int-3" cx="-41" cy="40" r="4" style="--dx:96px;--dy:2px"/>
+      </g></g>
+    </svg>
+    <p class="axes-c__ordre"><strong>{{ if $en }}A local order{{ else }}Un ordre local{{ end }}</strong> <span>{{ if $en }}a visible benefit; costs to be located{{ else }}un bénéfice visible ; des coûts à situer{{ end }}</span></p>
+    <p class="axes-c__legende">{{ if $en }}These three axes are not mutually exclusive: a single decision can shift a cost across space, over time and onto other groups, with no set order of succession.{{ else }}Ces trois axes ne s'excluent pas : une même décision peut déplacer un coût dans l'espace, dans le temps et vers d'autres groupes, sans ordre de succession.{{ end }}</p>
   <div class="axis-grid">
-    <div class="axes-node">
-      <div class="axes-node__sphere">
-        <p class="axes-node__label">{{ if eq .Lang "en" }}Spatial{{ else }}Spatial{{ end }}</p>
-        <p class="axes-node__direction">{{ if eq .Lang "en" }}Centre → periphery{{ else }}Centre → périphérie{{ end }}</p>
+    <div class="axes-node axes-node--spatial">
+      <svg class="axes-node__mini" viewBox="-60 -60 120 120" aria-hidden="true" focusable="false"><g transform="scale(.5)"><circle class="axes-c__sphere" cx="0" cy="0" r="112"/><g transform="translate(0 -42) scale(1.35)"><circle class="axes-c__pole" cx="0" cy="26" r="7"/><circle class="axes-c__fil" cx="0" cy="26" r="40" stroke-dasharray="2 5"/><circle class="axes-c__charge axes-c__int axes-c__int-1" cx="0" cy="26" r="4.5" style="--dx:-37px;--dy:14px"/><circle class="axes-c__charge axes-c__int axes-c__int-2" cx="0" cy="26" r="4.5" style="--dx:37px;--dy:14px"/><circle class="axes-c__charge axes-c__int axes-c__int-3" cx="0" cy="26" r="4.5" style="--dx:0px;--dy:40px"/></g></g></svg>
+      <div class="axes-node__tete">
+        <p class="axes-node__label">Spatial</p>
+        <p class="axes-node__question">{{ if $en }}Where?{{ else }}Où ?{{ end }}</p>
+        <p class="axes-node__direction">{{ if $en }}Centre → periphery{{ else }}Centre → périphérie{{ end }}</p>
       </div>
       <p class="axes-node__body">{{ if eq .Lang "en" }}Local order is achieved by externalizing costs to other territories: extraction, waste, heat, pollution pushed beyond the visible perimeter.{{ else }}L'ordre local s'acquiert au prix d'une externalisation vers d'autres territoires&nbsp;: métropoles, zones de consommation, centres de décision d'un côté&nbsp;; extraction, déchets, chaleur, pollutions de l'autre.{{ end }}</p>
     </div>
 
-    <div class="axes-node">
-      <div class="axes-node__sphere">
-        <p class="axes-node__label">{{ if eq .Lang "en" }}Temporal{{ else }}Temporel{{ end }}</p>
-        <p class="axes-node__direction">{{ if eq .Lang "en" }}Present → future{{ else }}Présent → futur{{ end }}</p>
+    <div class="axes-node axes-node--temporel">
+      <svg class="axes-node__mini" viewBox="-60 -60 120 120" aria-hidden="true" focusable="false"><g transform="scale(.5)"><circle class="axes-c__sphere" cx="0" cy="0" r="112"/><g transform="translate(0 -42) scale(1.35)"><line class="axes-c__fil" x1="-58" y1="49" x2="58" y2="49"/><line class="axes-c__pole" x1="-44" y1="43" x2="-44" y2="55"/><text class="axes-c__eti axes-c__eti--mini" x="-44" y="70" text-anchor="middle">{{ if $en }}today{{ else }}aujourd'hui{{ end }}</text><text class="axes-c__eti axes-c__eti--mini" x="44" y="70" text-anchor="middle">{{ if $en }}later{{ else }}plus tard{{ end }}</text><circle class="axes-c__charge axes-c__int axes-c__int-1" cx="-44" cy="39" r="4.5" style="--dx:88px;--dy:0px"/><circle class="axes-c__charge axes-c__int axes-c__int-2" cx="-44" cy="27" r="4.5" style="--dx:88px;--dy:0px"/><circle class="axes-c__charge axes-c__int axes-c__int-3" cx="-44" cy="15" r="4.5" style="--dx:88px;--dy:0px"/></g></g></svg>
+      <div class="axes-node__tete">
+        <p class="axes-node__label">{{ if $en }}Temporal{{ else }}Temporel{{ end }}</p>
+        <p class="axes-node__question">{{ if $en }}When?{{ else }}Quand ?{{ end }}</p>
+        <p class="axes-node__direction">{{ if $en }}Present → future{{ else }}Présent → futur{{ end }}</p>
       </div>
       <p class="axes-node__body">{{ if eq .Lang "en" }}The present consumes, the future compensates. Public debt, climate debt, nuclear waste and technological debt extend today's costs toward generations that had no say.{{ else }}Le présent consomme, le futur compense. Dette publique, dette climatique, déchets nucléaires ou dette technologique prolongent aujourd'hui leurs coûts vers des générations qui n'ont pas décidé.{{ end }}</p>
     </div>
 
-    <div class="axes-node">
-      <div class="axes-node__sphere">
+    <div class="axes-node axes-node--social">
+      <svg class="axes-node__mini" viewBox="-60 -60 120 120" aria-hidden="true" focusable="false"><g transform="scale(.5)"><circle class="axes-c__sphere" cx="0" cy="0" r="112"/><g transform="translate(0 -42) scale(1.35)"><circle class="axes-c__pole" cx="-47" cy="22" r="6"/><circle class="axes-c__pole" cx="-31" cy="10" r="6"/><circle class="axes-c__pole" cx="-41" cy="40" r="6"/><circle class="axes-c__plein" cx="39" cy="42" r="6"/><circle class="axes-c__plein" cx="55" cy="42" r="6"/><circle class="axes-c__plein" cx="47" cy="27" r="6"/><text class="axes-c__eti axes-c__eti--mini" x="-39" y="66" text-anchor="middle">{{ if $en }}mobile{{ else }}mobiles{{ end }}</text><text class="axes-c__eti axes-c__eti--mini" x="47" y="66" text-anchor="middle">{{ if $en }}captive{{ else }}captifs{{ end }}</text><circle class="axes-c__charge axes-c__int axes-c__int-1" cx="-31" cy="10" r="4" style="--dx:78px;--dy:17px"/><circle class="axes-c__charge axes-c__int axes-c__int-2" cx="-47" cy="22" r="4" style="--dx:86px;--dy:20px"/><circle class="axes-c__charge axes-c__int axes-c__int-3" cx="-41" cy="40" r="4" style="--dx:96px;--dy:2px"/></g></g></svg>
+      <div class="axes-node__tete">
         <p class="axes-node__label">Social</p>
-        <p class="axes-node__direction">{{ if eq .Lang "en" }}Mobile → captive{{ else }}Mobiles → captifs{{ end }}</p>
+        <p class="axes-node__question">{{ if $en }}Who?{{ else }}Qui ?{{ end }}</p>
+        <p class="axes-node__direction">{{ if $en }}Mobile → captive{{ else }}Mobiles → captifs{{ end }}</p>
       </div>
       <p class="axes-node__body">{{ if eq .Lang "en" }}Those with financial, legal or residential mobility transfer burdens more easily toward those who cannot refuse them: users, precarious workers, taxpayers, subcontracted labour, relegated groups.{{ else }}Ceux qui disposent de mobilité financière, juridique ou résidentielle transfèrent plus facilement les charges vers ceux qui ne peuvent pas les refuser&nbsp;: usagers, précaires, contribuables, travailleurs sous-traités, groupes relégués.{{ end }}</p>
     </div>
+  </div>
+  </div>
   </div>
 
   {{/* Prolongement des trois axes vers la boucle (contre-expertise jessop-12, 30/10/2026) : ou va la charge, puis ce
