@@ -57,6 +57,10 @@ blocs:
         bouton: "Ouvrir le dossier EMC"
       - id: "litterature"
         titre: "Littérature"
+        court: "Littérature"
+        nature: "Français — Première"
+        desc: "Chaque activité part de textes vérifiés dans leurs œuvres et se prolonge en fiche élève imprimable, avec son corrigé."
+        bouton: "Ouvrir le dossier Littérature"
       - id: "philosophie"
         titre: "Philosophie"
   - id: promesses
