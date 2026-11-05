@@ -67,6 +67,14 @@ MOIS = {"fr": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
         "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]}
 
 
+
+def per_trim(per: str, lang: str) -> str:
+    """'2025-Q4' -> 'fin 2025' / 'at the end of 2025' ; autre trimestre -> 'au 2e trimestre 2026' / 'in Q2 2026'."""
+    an, q = per.split("-Q")
+    if q == "4":
+        return ("fin " if lang == "fr" else "at the end of ") + an
+    return ("au %se trimestre %s" % (q, an)) if lang == "fr" else ("in Q%s %s" % (q, an))
+
 def log(msg: str) -> None:
     print(msg.encode("ascii", "replace").decode("ascii"))
 
@@ -619,7 +627,7 @@ def affichage_hh(hh, lang):
          "hh_rec17": n1(hh["rec17"]), "hh_rec_c": n1(hh["rec_c"]), "hh_rec_pt": lg.points(hh["rec17"] - hh["rec_c"], 1, lang),
          "hh_solde_c": n1(-hh["solde_c"]), "hh_sans": n1(-hh["solde_c"] - (hh["rec17"] - hh["rec_c"])),
          "hh_manque": n0(hh["manque"]), "hh_sans_pct": n0(hh["dette_sans_pct"]), "hh_manque_pts": lg.points(hh["manque_pts"], 0, lang),
-         "hh_nr_etat": n1(hh["nr_etat"]), "hh_nr_apu": n1(hh["nr_apu"]), "hh_a_det": str(hh["a_det"]),
+         "hh_nr_etat": n1(hh["nr_etat"]), "hh_nr_etat_per": per_trim(hh["nr_etat_per"], lang), "hh_nr_apu": n1(hh["nr_apu"]), "hh_a_det": str(hh["a_det"]),
          "hh_cor_pct": lg.points(hh["cor_pct"], 2, lang), "hh_cor_md": n0(hh["cor_mdeur"]), "hh_cor_an": str(hh["cor_an"])}
     a["hh_pts_h14"] = lg.points(hh["pts_17"]["H14"], 1, lang)
     a["hh_n_page"] = str(len(hh["enonces"]))
@@ -684,8 +692,8 @@ VERDICTS_HH = {
             "en": "“At least 400”: not established. The calculation at a constant revenue share gives €{hh_manque}bn before interest and effects on activity, and can neither establish nor refute the bound; “close to 100%”: consistent ({hh_sans_pct}%)"},
     "H14": {"fr": "Hausse exacte ({hh_pts_h14} de fin 2017 au premier trimestre 2026) ; attribution non établie : le calcul à part de recettes constante donne environ {hh_manque_pts}, et il n'isole pas l'effet des mesures fiscales",
             "en": "The rise is accurate ({hh_pts_h14} from the end of 2017 to the first quarter of 2026); the attribution is not established: the calculation at a constant revenue share gives about {hh_manque_pts}, and does not isolate the effect of tax measures"},
-    "H15": {"fr": "Exact pour la dette négociable de l'État ({hh_nr_etat} % fin 2025), inexact pour celle de toutes les administrations ({hh_nr_apu} %)",
-            "en": "Accurate for the State's negotiable debt ({hh_nr_etat}% at the end of 2025), inaccurate for general government debt as a whole ({hh_nr_apu}%)"},
+    "H15": {"fr": "Exact pour la dette négociable de l'État ({hh_nr_etat} % {hh_nr_etat_per}), inexact pour celle de toutes les administrations ({hh_nr_apu} %)",
+            "en": "Accurate for the State's negotiable debt ({hh_nr_etat}% {hh_nr_etat_per}), inaccurate for general government debt as a whole ({hh_nr_apu}%)"},
     "H16": {"fr": "Incompatible avec la mesure du Conseil d'orientation des retraites (besoin de financement de {hh_cor_pct} de PIB en {hh_cor_an}, environ {hh_cor_md} milliards) ; d'autres présentations comptent les contributions d'équilibre de l'État employeur, et le texte ne dit pas laquelle il retient : verdict suspendu à cette définition",
             "en": "Incompatible with the measure of the Conseil d'orientation des retraites, the official pensions advisory council (a financing need of {hh_cor_pct} of GDP in {hh_cor_an}, about €{hh_cor_md}bn); other presentations count the State's balancing contributions as employer, and the text does not say which it uses: the verdict depends on that definition"},
     "H17": {"fr": "Exact : déficit de {hh_solde_c} % en {hh_an_c}, au-dessus de 3 % chaque année depuis 2020",
