@@ -39,7 +39,7 @@
 <text x="242.9" y="383.8" font-size="13.5" font-weight="600" fill="#eb6834" text-anchor="middle">1,3 %</text>
 <line x1="0" y1="436.0" x2="300" y2="436.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="457.0" font-size="13.5" fill="#52514e">INSEE, dette de Maastricht (T2 2026)</text>
-<text class="pied-source" x="0" y="474.0" font-size="13.5" fill="#52514e">·  Eurostat gov_10a_main, intérêts</text>
+<text class="pied-source" x="0" y="474.0" font-size="13.5" fill="#52514e">· Eurostat gov_10a_main, intérêts</text>
 <text class="pied-source" x="0" y="491.0" font-size="13.5" fill="#52514e">D41PAY (2025)</text>
 <text class="pied-note" x="0" y="512.0" font-size="13.5" fill="#52514e">Deux échelles distinctes, une même</text>
 <text class="pied-note" x="0" y="529.0" font-size="13.5" fill="#52514e">unité : le % du PIB.</text>

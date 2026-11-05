@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/public-debt-future-generations/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/public-debt-future-generations/, build de 8c492ff + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -11,7 +11,7 @@ Page updated 5 November 2026 · revisions
 Public debt dossier
 Data · Eurostat and ECB 2025 · projections 2026
 ↓ Charts, data and citations to reuseReuse this page
-Data last updated 1 November 2026 General government, Eurostat, Insee and ECB series from 1995 to 2025; European Commission and COR, projections.
+Data last updated 5 November 2026 General government, Eurostat, Insee and ECB series from 1995 to 2025; European Commission and COR, projections.
 Download: CSV · JSON · method
 What deficits corresponded to in the accounts
 Borrowing to build a school, a road or a network leaves capital as well as a debt.
@@ -250,7 +250,7 @@ Holders year by year, and the scope of central-government securities
 The non-resident share peaked at 57.1% in 2014.
 The Banque de France held 1.7% of the debt in 1995; since 2016, it has held more than a tenth of it, and the growth of its holdings has offset the decline of other residents, from 40.8% in 2014 to 29.1% in 2025.
 In 2025, it held 6.1 points less than in 2022.
-On the narrower scope of central-government marketable securities, at market value, the Banque de France describes the same movement: 56.0% held by non-residents at end-2025, a trough of 47.5% in 2021, at the height of central bank purchases, and 57.5% in the first quarter of 2026 according to Agence France Trésor, the French debt management office.
+On the narrower scope of central-government marketable securities, at market value, the Banque de France describes the same movement: 56.0% held by non-residents at end-2025, a trough of 47.5% in 2021, at the height of central bank purchases, and 59.7% in the second quarter of 2026 according to Agence France Trésor, the French debt management office.
 The general government series is at nominal value, the series for central-government marketable securities at market value: their levels cannot be compared point by point.
 What holdings statistics do not establish.
 They show where creditors are registered, not who bears the charge.
@@ -435,7 +435,8 @@ Asset stocks are valued at current prices: their changes mix flows and revaluati
 Holdings.
 ECB, government finance statistics (GFS): Maastricht debt of general government by counterpart area (rest of the world, residents) and holding sector (central bank).
 Checks: non-residents and residents add up to total debt each year; over the common years, the values equal those of Eurostat (gov_10dd_ggd), reported by the same administration, except, within the Banque de France revision window, a vintage gap listed in the checks file.
-Scope witness: Banque de France, series DET.Q.FR.1315.F33000.M.Z9.8.F, on Webstat (share of central-government marketable securities held by non-residents, at market value, end of quarter; file from the series’ public page, latest observation published on 7 April 2026, archived with its hash); latest observation: chart from Agence France Trésor (source Banque de France), read on 3 October 2026 with the image’s hash, and checked against Webstat over the common period.
+Scope witness: Banque de France, series DET.Q.FR.1315.F33000.M.Z9.8.F, on Webstat (share of central-government marketable securities held by non-residents, at market value, end of quarter; file from the series’ public page, latest observation published on 7 April 2026, archived with its hash); latest observations: charts from Agence France Trésor (source Banque de France), read no later than 5 November 2026 with the hash of their image.
+The reading is checked against Webstat over the common period; the most recent value, read on the breakdown of securities by holder group, has no period in common with Webstat and rests only on its archived capture.
 The script stops if the two series cease to converge, or if Webstat publishes a period that the reading no longer goes beyond.
 S2 indicator.
 European Commission, Debt Sustainability Monitor 2025, country tables (file of the edition, archived with its hash): the components used are those of the spreadsheet; table 3.2 of the report prints the initial position as the difference between S2 and the second term, hence 3.1 instead of 3.0 for France.
@@ -483,7 +484,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Is public debt a burden on future generations?”.
-Eurostat, Insee, ECB, European Commission, COR data, retrieved 1 November 2026. https://stephane-lalut.com/en/public-debt-future-generations/
+Eurostat, Insee, ECB, European Commission, COR data, retrieved 5 November 2026. https://stephane-lalut.com/en/public-debt-future-generations/
 Copy citation
 In three sentences
 From 1996 to 2025, 18% of French general government net borrowing corresponded, in the accounts, to a net increase in its recorded assets, and 66% to current spending not covered by current revenue; the share in assets went from 32% (1996-2005) to 10% (2016-2025).

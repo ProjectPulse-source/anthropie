@@ -2,6 +2,7 @@
 date: 2026-04-15  # premier commit de la page (git log --follow)
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction: the “Anthropic loop” entry now gives the AWP-07 definition (five states, from displacement to bifurcation); the return toward cognition becomes one case of it, specific to the digital metaprogramme."}
   - {date: 2026-11-05, texte: "Corrections: Jevons effect (extreme case of the rebound effect), boomerang effect (credit to Ulrich Beck, balance not asserted), registers of debt (a possible displacement, to be established case by case)."}
 title: "Glossary"
 og_title: "Glossary — the concepts, defined and sourced — S. Lalut"
@@ -131,8 +132,8 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 </div>
 
 <div class="glossaire-entry" id="anthropic-loop">
-<dt>Anthropic loop (anthropic return)</dt>
-<dd>The return of displaced disorder toward the very capacity that made displacement possible: cognition. Cognitive externalisation — the tool, writing, then digital devices — extended transfers across space, time, and the social; in saturated form, disorder returns toward the concrete holds of cognition — captured attention, delegated judgement. Not a fourth axis of transfer, but a return. The complete loop — displacement, accumulation, saturation, return, re-displacement — is presented on the page <a href="/en/anthropic-loop/">What is the anthropic loop?</a> and formalised in <a href="/en/awp/awp-07/">AWP-07</a>. See also <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a> and <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
+<dt>Anthropic loop</dt>
+<dd>A sequence of five conditional states describing what becomes of the disorder a social system makes others bear: displacement toward a receptacle (E1), accumulation (E2), saturation (E3), a possible return toward the emitting system (E4), bifurcation (E5) — new displacement, reconfiguration or partial collapse. No passage is compulsory. Formalised in <a href="/en/awp/awp-07/">AWP-07</a> and presented on the page <a href="/en/anthropic-loop/">What is the anthropic loop?</a>. In the digital metaprogramme, the return can target the very capacity that made displacement possible, cognition: captured attention, delegated judgement. It is then a return, not a fourth axis of transfer. See also <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a> and <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="epistemic-order">

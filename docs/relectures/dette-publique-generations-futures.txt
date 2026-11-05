@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /dette-publique-generations-futures/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /dette-publique-generations-futures/, build de 8c492ff + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d’autres équipements.
@@ -11,7 +11,7 @@ Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat et BCE 2025 · projections 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 1er novembre 2026 Administrations publiques, séries Eurostat, Insee et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
+Données mises à jour le 5 novembre 2026 Administrations publiques, séries Eurostat, Insee et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
 Télécharger : CSV · JSON · méthode
 À quoi les déficits ont correspondu dans les comptes
 Emprunter pour construire une école, une route ou un réseau laisse un capital en même temps qu’une dette.
@@ -250,7 +250,7 @@ Les détenteurs année par année, et le champ des titres de l’État
 La part des non-résidents a culminé à 57,1 % en 2014.
 La Banque de France détenait 1,7 % de la dette en 1995 ; depuis 2016, elle en détient plus du dixième, et la progression de ses avoirs a compensé le recul des autres résidents, passés de 40,8 % en 2014 à 29,1 % en 2025.
 En 2025, elle en détenait 6,1 points de moins qu’en 2022.
-Sur le seul champ des titres négociables de l’État, en valeur de marché, la Banque de France décrit le même mouvement : 56,0 % de non-résidents fin 2025, un creux à 47,5 % en 2021, au plus fort des achats de la banque centrale, et 57,5 % au premier trimestre 2026 selon l’Agence France Trésor.
+Sur le seul champ des titres négociables de l’État, en valeur de marché, la Banque de France décrit le même mouvement : 56,0 % de non-résidents fin 2025, un creux à 47,5 % en 2021, au plus fort des achats de la banque centrale, et 59,7 % au deuxième trimestre 2026 selon l’Agence France Trésor.
 La série des administrations publiques est en valeur nominale, celle des titres négociables de l’État en valeur de marché : leurs niveaux ne se comparent pas point par point.
 Ce que la statistique de détention n’établit pas.
 Elle dit où sont enregistrés les créanciers, non qui porte la charge.
@@ -444,7 +444,8 @@ Les stocks d’actifs sont évalués aux prix courants : leurs variations mêlen
 Détention.
 BCE, statistiques de finances publiques (GFS) : dette de Maastricht des administrations publiques par zone de contrepartie (reste du monde, résidents) et secteur détenteur (banque centrale).
 Contrôles : non-résidents et résidents égalent la dette totale chaque année ; sur les années communes, les valeurs égalent celles d’Eurostat (gov_10dd_ggd), déclarées par la même administration, sauf, dans la fenêtre de révision de la Banque de France, un écart de millésime publié dans le fichier des contrôles.
-Témoin de périmètre : Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F, sur Webstat (part des titres négociables de l’État détenue par des non-résidents, en valeur de marché, fin de trimestre ; fichier de la page publique de la série, dernière observation publiée le 7 avril 2026, archivé avec son empreinte) ; dernière observation : graphique de l’Agence France Trésor (source Banque de France), relevé le 3 octobre 2026 avec l’empreinte de l’image, et contrôlé contre Webstat sur la période commune.
+Témoin de périmètre : Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F, sur Webstat (part des titres négociables de l’État détenue par des non-résidents, en valeur de marché, fin de trimestre ; fichier de la page publique de la série, dernière observation publiée le 7 avril 2026, archivé avec son empreinte) ; dernières observations : graphiques de l’Agence France Trésor (source Banque de France), relevés au plus tard le 5 novembre 2026 avec l’empreinte de leur image.
+Le relevé est contrôlé contre Webstat sur la période commune ; la valeur la plus récente, lue sur la répartition des titres par groupe de porteurs, n’a pas de période commune avec Webstat et ne repose que sur sa capture archivée.
 Le script s’arrête si les deux séries cessent de converger, ou si Webstat publie une période que le relevé ne dépasse plus.
 Indicateur S2.
 Commission européenne, Debt Sustainability Monitor 2025, tableaux par pays (fichier de l’édition, archivé avec son empreinte) : les composantes reprises sont celles du tableur ; le tableau 3.2 du rapport imprime la position initiale comme la différence entre S2 et le second terme, d’où 3,1 au lieu de 3,0 pour la France.
@@ -491,7 +492,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « La dette publique est-elle un fardeau pour les générations futures ? ».
-Données Eurostat, Insee, BCE, Commission européenne, COR, relevé du 1er novembre 2026. https://stephane-lalut.com/dette-publique-generations-futures/
+Données Eurostat, Insee, BCE, Commission européenne, COR, relevé du 5 novembre 2026. https://stephane-lalut.com/dette-publique-generations-futures/
 Copier la citation
 En trois phrases
 De 1996 à 2025, 18 % du besoin de financement des administrations publiques françaises a correspondu, dans les comptes, à un accroissement net de leurs actifs comptabilisés, et 66 % à des dépenses courantes non couvertes par les recettes courantes ; la part en actifs est passée de 32 % (1996-2005) à 10 % (2016-2025).

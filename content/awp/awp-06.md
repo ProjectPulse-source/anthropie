@@ -3,7 +3,7 @@ title: "Infrastructures numériques et dette technologique"
 subtitle: "data centers, IA et déplacement du désordre"
 awp_number: "AWP-06"
 date: 2026-05-07
-lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML
@@ -62,7 +62,7 @@ L'apport central d'AWP-06 est une grille testable des quatre registres de coûts
 - **Territoire** — emprise foncière, captation des réseaux locaux, intégration aux infrastructures publiques
 - **Attention** — captation cognitive des usagers, dépendance aux interfaces, externalisation du jugement
 
-Ces quatre registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un déplace souvent vers les trois autres.
+Ces quatre registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un peut déplacer la charge vers les trois autres&nbsp;: c'est ce que la grille demande d'établir, cas par cas.
 
 ## Du coût à la dette par engagement, garantie, irréversibilisation
 

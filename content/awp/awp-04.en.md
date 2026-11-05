@@ -2,6 +2,7 @@
 title: "Energy transition or entropic transfer?"
 awp_number: "AWP-04"
 date: 2026-04-06
+lastmod: 2026-11-05
 draft: false
 outputs:
   - HTML
@@ -19,7 +20,7 @@ faq:
   - question: "Does the energy transition reduce social entropy?"
     answer: "The framework of anthropy suggests it displaces it more than it reduces it: mining externalised to the Global South, deferred technological waste, rebound effects on consumption."
   - question: "What is the Jevons effect in this context?"
-    answer: "The Jevons effect shows that improving energy efficiency tends to increase total consumption — an example of an anthropic boomerang effect where local order is built at the cost of global disorder."
+    answer: "It is the extreme case of the rebound effect: part of an energy-efficiency gain is taken back by increased use, and when the take-back exceeds the gain, total consumption rises — an example of an anthropic boomerang effect where local order is built at the cost of global disorder."
 pdf_url: "https://zenodo.org/records/19439921/files/AWP-04_Energy_Transition_or_Anthtopic_Transfer_EN.pdf"
 language: "en"
 publication_date: "2026-04-06"
@@ -51,7 +52,7 @@ Externalised extraction transfers the environmental and social cost of "clean" e
 
 Deferred waste transfers costs temporally. Renewable infrastructures have limited lifespans — panels, batteries, turbines — and their recycling remains largely unresolved. Disorder is deferred to the decades ahead.
 
-The rebound effect (Jevons paradox) constitutes an anthropic boomerang effect: the improvement of energy efficiency, instead of reducing consumption, tends to increase it. The efficiency gain produces local order (less energy per unit) but generates global disorder (more total consumption).
+The rebound effect can constitute an anthropic boomerang effect: part of an energy-efficiency gain is taken back by increased use, and when the take-back exceeds the gain, total consumption rises (Jevons paradox). The efficiency gain then produces local order (less energy per unit) and global disorder (more total consumption).
 
 ## Beyond binary opposition
 

@@ -2,6 +2,7 @@
 date: 2026-04-02  # premier commit de la page (git log --follow)
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction : l'entrée « Boucle anthropique » donne désormais la définition d'AWP-07 (cinq états, du déplacement à la bifurcation) ; le retour vers la cognition en devient un cas, propre au métaprogramme numérique."}
   - {date: 2026-11-05, texte: "Corrections : effet Jevons (cas extrême de l'effet rebond), effet boomerang (crédit à Ulrich Beck, bilan non affirmé), registres de la dette (un déplacement possible, à établir cas par cas)."}
 title: "Glossaire"
 og_title: "Glossaire — les notions, définies et sourcées — S. Lalut"
@@ -131,8 +132,8 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 </div>
 
 <div class="glossaire-entry" id="boucle-anthropique">
-<dt>Boucle anthropique (retour anthropique)</dt>
-<dd>Retour du désordre déplacé vers la capacité qui avait rendu le déplacement possible&nbsp;: la cognition. L'extériorisation cognitive — l'outil, l'écriture, puis les dispositifs numériques — a permis d'étendre les transferts dans l'espace, le temps et le social&nbsp;; sous forme saturée, le désordre revient vers les prises concrètes de la cognition — attention captée, jugement délégué. Il ne s'agit pas d'un quatrième axe de transfert, mais d'un retour. La boucle complète — déplacement, accumulation, saturation, retour, re-déplacement — est présentée sur la page <a href="/boucle-anthropique/">Qu'est-ce que la boucle anthropique&nbsp;?</a> et formalisée dans <a href="/awp/awp-07/">AWP-07</a>. Voir aussi <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a> et <a href="/awp/awp-06/">AWP-06</a>.</dd>
+<dt>Boucle anthropique</dt>
+<dd>Suite de cinq états conditionnels qui décrit ce que devient le désordre qu'un système social fait supporter ailleurs&nbsp;: déplacement vers un réceptacle (E1), accumulation (E2), saturation (E3), retour possible vers le système émetteur (E4), bifurcation (E5) — nouveau déplacement, reconfiguration ou effondrement partiel. Aucun passage n'est obligé. Formalisée dans <a href="/awp/awp-07/">AWP-07</a> et présentée sur la page <a href="/boucle-anthropique/">Qu'est-ce que la boucle anthropique&nbsp;?</a>. Dans le métaprogramme numérique, le retour peut viser la capacité même qui avait rendu le déplacement possible, la cognition&nbsp;: attention captée, jugement délégué. C'est alors un retour, non un quatrième axe de transfert. Voir aussi <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a> et <a href="/awp/awp-06/">AWP-06</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="ordre-epistemique">

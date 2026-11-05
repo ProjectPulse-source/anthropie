@@ -2,6 +2,7 @@
 title: "Transition énergétique ou transfert entropique ?"
 awp_number: "AWP-04"
 date: 2026-03-10
+lastmod: 2026-11-05
 draft: false
 outputs:
   - HTML
@@ -19,7 +20,7 @@ faq:
   - question: "La transition énergétique réduit-elle l'entropie sociale ?"
     answer: "Le cadre anthropique suggère qu'elle la déplace davantage qu'elle ne la réduit : extraction minière externalisée vers les pays du Sud, déchets technologiques reportés, effet rebond sur la consommation."
   - question: "Qu'est-ce que l'effet Jevons dans ce contexte ?"
-    answer: "L'effet Jevons montre que l'amélioration de l'efficacité énergétique tend à augmenter la consommation totale — un exemple d'effet boomerang anthropique où l'ordre local se construit au prix d'un désordre global."
+    answer: "C'est le cas extrême de l'effet rebond : une partie du gain d'efficacité énergétique est reprise par une hausse de l'usage, et quand la reprise dépasse le gain, la consommation totale augmente — un exemple d'effet boomerang anthropique où l'ordre local se construit au prix d'un désordre global."
 pdf_url: "https://zenodo.org/records/19269244/files/AWP-04_transition_energetique.pdf"
 language: "fr"
 publication_date: "2026-03-10"
@@ -50,7 +51,7 @@ L'extraction externalisée transfère le coût environnemental et social de la p
 
 Les déchets reportés transfèrent le coût temporellement. Les infrastructures renouvelables ont une durée de vie limitée — panneaux, batteries, éoliennes — et leur recyclage demeure largement non résolu. Le désordre est reporté vers les décennies à venir.
 
-L'[effet rebond (paradoxe de Jevons)](/effet-rebond/) constitue un effet boomerang anthropique&nbsp;: l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation, tend à l'augmenter. Le gain d'efficacité produit un ordre local (moins d'énergie par unité) mais génère un désordre global (plus de consommation totale).
+L'[effet rebond](/effet-rebond/) peut constituer un effet boomerang anthropique&nbsp;: une partie du gain d'efficacité énergétique est reprise par une hausse de l'usage, et quand la reprise dépasse le gain, la consommation totale augmente (paradoxe de Jevons). Le gain d'efficacité produit alors un ordre local (moins d'énergie par unité) et un désordre global (plus de consommation totale).
 
 ## Au-delà de l'opposition binaire
 

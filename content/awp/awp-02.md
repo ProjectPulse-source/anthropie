@@ -2,7 +2,7 @@
 title: "3,3 millions d'années en un principe"
 awp_number: "AWP-02"
 date: 2026-02-15
-lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML
@@ -20,7 +20,7 @@ faq:
   - question: "Qu'est-ce que la saturation anthropique ?"
     answer: "La saturation désigne l'état d'un espace de déportation quand le coût marginal du transfert excède le bénéfice, ou quand le désordre déporté revient au système émetteur sous forme d'effet boomerang."
   - question: "Comment l'anthropie se distingue-t-elle de l'Anthropocène ?"
-    answer: "L'Anthropocène désigne une ère géologique (Crutzen, 2000). L'anthropie désigne un mécanisme institutionnel qui précède l'Anthropocène de millions d'années et en éclaire la dynamique."
+    answer: "L'Anthropocène désigne une époque géologique proposée (Crutzen, 2000), que l'Union internationale des sciences géologiques a refusé en 2024 d'inscrire comme unité formelle de l'échelle des temps ; le terme reste un concept descriptif reconnu. L'anthropie désigne un mécanisme institutionnel qui précède l'Anthropocène de millions d'années et en éclaire la dynamique."
 pdf_url: "https://zenodo.org/records/23807981/files/AWP-02_anthropie_longue_duree.pdf"
 language: "fr"
 publication_date: "2026-02-15"
@@ -52,4 +52,4 @@ La saturation n'est pas un état terminal. Elle désigne un seuil à partir duqu
 
 ## Anthropie et Anthropocène
 
-Ce working paper distingue l'anthropie de l'Anthropocène. L'Anthropocène désigne une ère géologique marquée par l'empreinte humaine sur les systèmes terrestres. L'anthropie désigne un mécanisme institutionnel qui précède l'Anthropocène de millions d'années et en éclaire la dynamique profonde&nbsp;: l'Anthropocène peut se lire comme l'état de saturation planétaire des espaces de déportation.
+Ce working paper distingue l'anthropie de l'Anthropocène. L'Anthropocène désigne une époque géologique proposée, marquée par l'empreinte humaine sur les systèmes terrestres&nbsp;; l'Union internationale des sciences géologiques a refusé en 2024 d'en faire une unité formelle de l'échelle des temps, et le terme reste un concept descriptif reconnu. L'anthropie désigne un mécanisme institutionnel qui précède l'Anthropocène de millions d'années et en éclaire la dynamique profonde&nbsp;: l'Anthropocène peut se lire comme l'état de saturation planétaire des espaces de déportation.

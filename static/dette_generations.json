@@ -1,8 +1,8 @@
 {
- "releve_le": "2026-11-01",
+ "releve_le": "2026-11-05",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Insee, BCE, Commission européenne, COR",
  "meta": {
-  "releve_le": "2026-11-01",
+  "releve_le": "2026-11-05",
   "page": "https://stephane-lalut.com/dette-publique-generations-futures/",
   "licence": "CC BY 4.0",
   "perimetre": "administrations publiques (S.13), SEC 2010, monnaie nationale, PIB de la notification de déficit et de dette",
@@ -43,11 +43,11 @@
     "sha256": "03cb97886d1d969d00b73472bc4fd94ecfa727b0b6d062d8b63b3bcfec7a71c4"
    },
    "aft": {
-    "fichier": "aft_non_residents_releve_2026T1.json",
+    "fichier": "aft_non_residents_releve_2026T2.json",
     "lib": "Agence France Trésor, d'après la Banque de France",
     "producteur": "Agence France Trésor, page « Principaux chiffres », graphique des non-résidents (source Banque de France)",
     "url": "https://www.aft.gouv.fr/fr/principaux-chiffres-dette",
-    "sha256": "8d88e81ae9abcf01d379e31453e16c49fa4a3e4660c03db67fba20ca35b67b38"
+    "sha256": "626dd4a82818b7e8ccb745ca94e50dade0ec7e58aa8f9ce8834aa0404f3bd704"
    }
   },
   "definitions": {
@@ -3658,10 +3658,10 @@
   "valeur_dernier": 56.0,
   "maj": "2026-04-07",
   "releve": {
-   "periode": "2026-Q1",
-   "valeur": 57.5,
-   "lu_le": "2026-10-03",
-   "image_sha256": "a813be6b03b1c2bde753a73f24781147e7f73a98e1d8e450e72430f9ec753999"
+   "periode": "2026-Q2",
+   "valeur": 59.7,
+   "lu_le": "2026-11-05",
+   "image_sha256": "c49ae3747d54761d40af52a96e18c2979e8ccea5e375d599cf5e34e0e8916289"
   }
  },
  "controles": {
@@ -3796,9 +3796,9 @@
   "etat_min_annee": "2021",
   "etat_maj": "7 avril 2026",
   "etat_lib": "Banque de France, série DET.Q.FR.1315.F33000.M.Z9.8.F",
-  "etat_der": "57,5",
-  "etat_der_trim": "premier trimestre 2026",
-  "etat_der_lu": "3 octobre 2026",
+  "etat_der": "59,7",
+  "etat_der_trim": "deuxième trimestre 2026",
+  "etat_der_lu": "5 novembre 2026",
   "h_at": "66",
   "h_be": "63",
   "h_bg": "50",
@@ -4005,9 +4005,9 @@
   "etat_min_annee": "2021",
   "etat_maj": "7 April 2026",
   "etat_lib": "Banque de France, series DET.Q.FR.1315.F33000.M.Z9.8.F",
-  "etat_der": "57.5",
-  "etat_der_trim": "first quarter of 2026",
-  "etat_der_lu": "3 October 2026",
+  "etat_der": "59.7",
+  "etat_der_trim": "second quarter of 2026",
+  "etat_der_lu": "5 November 2026",
   "h_at": "66",
   "h_be": "63",
   "h_bg": "50",

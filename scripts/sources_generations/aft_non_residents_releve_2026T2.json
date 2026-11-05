@@ -1,0 +1,17 @@
+{
+ "objet": "Part des non-résidents dans l'encours des titres de dette négociable de l'État, en % de la valeur de marché (source : Banque de France)",
+ "page": "https://www.aft.gouv.fr/fr/principaux-chiffres-dette",
+ "image": "graphique « Répartition des titres de la dette négociable de l'État par groupe de porteurs au 2ème trimestre 2026 », page publique rendue par navigateur",
+ "image_sha256": "c49ae3747d54761d40af52a96e18c2979e8ccea5e375d599cf5e34e0e8916289",
+ "capture": "scripts/sources/aft_detenteurs_titres_etat_T2-2026_capture_2026-11-05.png",
+ "lu_le": "2026-11-05",
+ "mode": "lecture des étiquettes des graphiques de l'AFT, page publique rendue par navigateur (les fichiers ne sont pas servis aux scripts : règle constante, changement de canal)",
+ "observations": {"2025-Q4": 56.07, "2026-Q1": 57.50, "2026-Q2": 59.7},
+ "provenance": {
+  "2025-Q4": "graphique « 2_non resident.PNG » de l'AFT (SHA-256 a813be6b03b1c2bde753a73f24781147e7f73a98e1d8e450e72430f9ec753999, modifié le 16/07/2026 ; relu le 05/11/2026 : même taille, 6 671 octets, même date de modification, mêmes étiquettes, toujours arrêté au 1er trimestre 2026)",
+  "2026-Q1": "même graphique",
+  "2026-Q2": "graphique par groupe de porteurs au 2e trimestre 2026, capture archivée (SHA-256 ci-dessus) ; une décimale, comme l'étiquette"
+ },
+ "remplace": "aft_non_residents_releve_2026T1.json (relevé du 03/10/2026, observations 2025-Q4 et 2026-Q1, reprises ici)",
+ "controle": "2025-Q4 doit égaler la série Webstat DET.Q.FR.1315.F33000.M.Z9.8.F à 0,1 point près (garde du générateur)"
+}

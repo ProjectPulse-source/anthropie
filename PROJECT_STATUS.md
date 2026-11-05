@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (soir) — Décisions de l'auteur sur les erreurs restantes : notices AWP, glossaire, Premier coup, non-résidents, ciseau
+
+- Notices AWP (site seulement, pas de v2 Zenodo, décision de l'auteur) : AWP-02 « ère géologique » → époque proposée, refusée comme unité formelle par l'IUGS en 2024 ; AWP-04 effet rebond (reprise d'une partie du gain, hausse seulement quand elle le dépasse) ; AWP-06 « peut déplacer… c'est ce que la grille demande d'établir ». FR et EN, `lastmod` 2026-11-05.
+- Glossaire : « Boucle anthropique » = définition d'AWP-07 (cinq états), le retour vers la cognition en devient un cas ; journal FR et EN.
+- `/premier-coup/` : errata du livre publiés (version 1.2) ; bulletin n° 2 précisé d'après l'art. 776 du CPP (administrations et organismes désignés ; employeur pour une activité auprès de mineurs : seulement s'il est vierge) — la formule du matin (« s'il ne porte aucune mention, à certains employeurs ») était trop étroite. Livre corrigé côté PRO (sources, broché, EPUB), téléversement par l'auteur.
+- `generations-futures` : part des non-résidents au T2 2026 (59,7 %, graphique AFT par groupe de porteurs, capture archivée) ; relevé `aft_non_residents_releve_2026T2.json` (remplace celui du T1, observations reprises, garde Webstat sur 2025-Q4 conservée) ; phrase de méthode réécrite (la valeur la plus récente ne repose que sur sa capture). Générateur : BCE en 503, gardes de texte passées hors ligne (`--hors-ligne --check`, 776).
+- `pied_figure.coupe` : espaces multiples après « · » soudés (« (Q2 2026)  ·  Eurostat ») ; ciseau et taux régénérés, PNG du coût remis à jour (`check-png-dette` 28/28) ; plus aucune exception dans `check-figures.py`.
+- Contrôles : `check-all --ci` 0, build, dates, rendu, liens, relecture stricte 0 (4 instantanés refaits).
+
 ### 2026-11-05 (matin) — Points de forme restants de la passe transversale (FR et EN)
 
 - `/qui-peut-faire-adopter-une-loi/` : le chapô donne le périmètre du « neuf sur dix » (propositions de loi ordinaires déposées en premier lieu à l'Assemblée, trois législatures closes, 2012-2024), FR et EN ; instantanés de relecture refaits.

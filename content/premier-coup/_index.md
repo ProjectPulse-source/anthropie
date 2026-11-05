@@ -5,6 +5,7 @@ lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Corrections : « Un chez-soi d'abord » renvoie à Tinland et al., Epidemiology and Psychiatric Sciences, 2020 ; le seuil européen des minima sociaux vient de la CNAF (2020) : 24 des 28 pays ouvrent leur minimum à la majorité, quatre fixent un âge plus élevé (France et Luxembourg 25 ans, Espagne 23, Chypre 28)."}
   - {date: 2026-11-05, texte: "Le répertoire n'est pas une annexe du livre : le livre l'annonce à part (« Pour prolonger ») et cette page le publie. Version 1.1 de la page."}
+  - {date: 2026-11-05, texte: "Errata du livre publiés (chapitre 2 et note du casier), texte du livre corrigé le même jour. Précision : le bulletin n° 2 est délivré aux administrations et aux organismes désignés par la loi ou un décret ; seul l'employeur qui recrute pour une activité auprès de mineurs le reçoit à condition qu'il soit vierge (art. 776). Version 1.2 de la page."}
   - {date: 2026-11-05, texte: "Corrections : délais de réhabilitation (art. 133-13 du code pénal) et sorties du bulletin n° 2 (art. 775 et 775-1 du code de procédure pénale) ; bulletin n° 2 délivré à certains employeurs seulement s'il est vierge ; loi RSA du 1er décembre 2008, en vigueur le 1er juin 2009 ; emploi accompagné : chances accrues d'environ deux tiers (risque relatif 1,63)."}
 og_title: "La Société du premier coup — sources et compléments du livre — S. Lalut"
 description: "Le compagnon documentaire de La Société du premier coup (Stéphane Lalut, 2026) : le Répertoire des leviers et des pistes, les repères chiffrés du livre avec leurs sources primaires et leur qualification probatoire, les mises à jour et les errata."
@@ -219,7 +220,7 @@ Parmi les enfants de cadres entrés dans le supérieur, **13&nbsp;%** en ressort
 
 Le minimum social français reste fermé avant 25&nbsp;ans hors charge de famille. **24 des 28 pays de l'Union de 2020**, Royaume-Uni compris, ouvrent le leur dès la majorité&nbsp;; les quatre autres fixent un âge plus élevé&nbsp;: 25&nbsp;ans en France et au Luxembourg, 23 en Espagne, 28 à Chypre.
 
-- **Millésime**&nbsp;: 2020 · **Publication**&nbsp;: CNAF (Catherine Collombet *et al.*), *Les minima sociaux au sein de l'Union européenne*, décembre 2020. Le livre cite «&nbsp;DREES, *Un panorama des minima sociaux en Europe*, juin 2023&nbsp;», référence introuvable&nbsp;: l'édition 2023 du panorama de la DREES sur les minima sociaux ne compare pas les pays européens.
+- **Millésime**&nbsp;: 2020 · **Publication**&nbsp;: CNAF (Catherine Collombet *et al.*), *Les minima sociaux au sein de l'Union européenne*, décembre 2020. Les exemplaires produits avant la mise en ligne du texte corrigé citent «&nbsp;DREES, *Un panorama des minima sociaux en Europe*, juin 2023&nbsp;», référence introuvable (l'édition 2023 du panorama de la DREES sur les minima sociaux ne compare pas les pays européens)&nbsp;; le texte corrigé cite la CNAF.
 - **Généalogie**&nbsp;: RMI, loi du 1ᵉʳ décembre 1988 — seuil repris par le RSA, loi du 1ᵉʳ décembre 2008, en vigueur le 1ᵉʳ juin 2009
 - **Qualification**&nbsp;: comparaison institutionnelle · **Réserve**&nbsp;: le montant est parfois réduit pour les plus jeunes
 - **Dans le livre**&nbsp;: chapitre&nbsp;2
@@ -271,9 +272,9 @@ Plus de **2,14&nbsp;millions** de personnes inscrites au fichier national des in
 
 ### Le casier judiciaire {#casier}
 
-**543&nbsp;900 condamnations** inscrites en une année. Le bulletin n°&nbsp;2 est délivré aux administrations et, s'il ne porte aucune mention, à certains employeurs&nbsp;; la réhabilitation intervient au bout de 3, 5 ou 10&nbsp;ans selon la peine — délais doublés en récidive.
+**543&nbsp;900 condamnations** inscrites en une année. Le bulletin n°&nbsp;2 est délivré aux administrations et aux organismes que désignent la loi ou un décret&nbsp;; un employeur qui recrute pour une activité auprès de mineurs ne le reçoit que s'il ne porte aucune mention&nbsp;; la réhabilitation intervient au bout de 3, 5 ou 10&nbsp;ans selon la peine — délais doublés en récidive.
 
-- **Millésime**&nbsp;: 2023 · **Textes**&nbsp;: Code pénal, art.&nbsp;133-13 (délais de réhabilitation)&nbsp;; Code de procédure pénale, art.&nbsp;775 (sorties du B2) et 775-1 (exclusion par le tribunal)
+- **Millésime**&nbsp;: 2023 · **Textes**&nbsp;: Code pénal, art.&nbsp;133-13 (délais de réhabilitation)&nbsp;; Code de procédure pénale, art.&nbsp;775 (sorties du B2), 775-1 (exclusion par le tribunal) et 776 (destinataires du B2)
 - **Texte par texte, et qui intervient**&nbsp;: [comment une condamnation sort du casier](/combien-de-temps-une-erreur-reste-inscrite/#casier)
 - **Qualification**&nbsp;: donnée administrative + règle de droit
 - **Dans le livre**&nbsp;: chapitre&nbsp;5
@@ -326,15 +327,18 @@ Environ **22&nbsp;700 places** dans près de **1&nbsp;000 structures**. Le plan 
 
 ## Versions, mises à jour et errata {#versions}
 
-- **Version de cette page**&nbsp;: 1.1
+- **Version de cette page**&nbsp;: 1.2
 - **Dernière mise à jour**&nbsp;: 5 novembre 2026 (corrections listées dans «&nbsp;Révisions&nbsp;», en pied de page)
 - **Auteur**&nbsp;: Stéphane Lalut
 
-**Errata du livre**&nbsp;: aucun à ce jour.
+**Errata du livre**&nbsp;: corrections portées au texte le 5&nbsp;novembre 2026, valables pour les exemplaires et fichiers Kindle produits après leur mise en ligne par Amazon.
+
+- Chapitre&nbsp;2, seuil des 25&nbsp;ans&nbsp;: «&nbsp;la France était, en 2023, à peu près seule&nbsp;» devient «&nbsp;la France était, en 2020, l'une des quatre exceptions&nbsp;»&nbsp;; la note&nbsp;12 cite la CNAF (décembre 2020) au lieu d'une référence de la DREES introuvable, et la note&nbsp;11 date la loi RSA du 1ᵉʳ&nbsp;décembre 2008, en vigueur le 1ᵉʳ&nbsp;juin 2009.
+- Chapitre&nbsp;5, note&nbsp;3 (casier)&nbsp;: délais de réhabilitation au code pénal, art.&nbsp;133-13 (la note citait l'art.&nbsp;775-1 du code de procédure pénale)&nbsp;; destinataires du bulletin n°&nbsp;2, art.&nbsp;776.
 
 **Citation recommandée de cette page**&nbsp;:
 
-> Stéphane Lalut, «&nbsp;*La Société du premier coup* — sources, compléments et mises à jour&nbsp;», stephane-lalut.com/premier-coup, version&nbsp;1.1, 5 novembre 2026.
+> Stéphane Lalut, «&nbsp;*La Société du premier coup* — sources, compléments et mises à jour&nbsp;», stephane-lalut.com/premier-coup, version&nbsp;1.2, 5 novembre 2026.
 
 ## Le cadre, la recherche, le livre
 

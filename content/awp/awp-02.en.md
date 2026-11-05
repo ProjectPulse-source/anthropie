@@ -2,7 +2,7 @@
 title: "3.3 million years in one principle"
 awp_number: "AWP-02"
 date: 2026-04-06
-lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML
@@ -20,7 +20,7 @@ faq:
   - question: "What is anthropic saturation?"
     answer: "Saturation designates the state of a space of deportation when the marginal cost of transfer exceeds the benefit, or when the displaced disorder returns to the emitting system as a boomerang effect."
   - question: "How does anthropy differ from the Anthropocene?"
-    answer: "The Anthropocene designates a geological era (Crutzen, 2000). Anthropy designates an institutional mechanism that precedes the Anthropocene by millions of years and illuminates its dynamics."
+    answer: "The Anthropocene designates a proposed geological epoch (Crutzen, 2000), which the International Union of Geological Sciences declined in 2024 to adopt as a formal unit of the geologic time scale; the term remains a recognised descriptive concept. Anthropy designates an institutional mechanism that precedes the Anthropocene by millions of years and illuminates its dynamics."
 pdf_url: "https://zenodo.org/records/23807982/files/AWP-02_anthropy_longue_duree_EN.pdf"
 language: "en"
 publication_date: "2026-04-06"
@@ -53,4 +53,4 @@ Saturation is not a terminal state. It designates a threshold beyond which trans
 
 ## Anthropy and the Anthropocene
 
-This working paper distinguishes anthropy from the Anthropocene. The Anthropocene designates a geological era marked by the human footprint on terrestrial systems. Anthropy designates an institutional mechanism that precedes the Anthropocene by millions of years and illuminates its deep dynamics: the Anthropocene can be read as the state of planetary saturation of spaces of deportation.
+This working paper distinguishes anthropy from the Anthropocene. The Anthropocene designates a proposed geological epoch marked by the human footprint on terrestrial systems; in 2024 the International Union of Geological Sciences declined to make it a formal unit of the geologic time scale, and the term remains a recognised descriptive concept. Anthropy designates an institutional mechanism that precedes the Anthropocene by millions of years and illuminates its deep dynamics: the Anthropocene can be read as the state of planetary saturation of spaces of deportation.

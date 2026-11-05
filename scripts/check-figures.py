@@ -174,9 +174,8 @@ def examiner(F: dict) -> tuple[list[str], list[str]]:
 # Exceptions DECLAREES : figure en defaut dont la correction est faite dans le generateur mais ne peut pas encore etre
 # regeneree. Chacune meurt d'elle-meme : si la figure passe, le controle echoue tant que la ligne n'est pas retiree.
 # Règle R5 étendue au « · » le 04/11/2026 : 36 figures, régénérées par leurs générateurs au fil de leurs mises à jour
-# (jamais en masse) ; chaque exception meurt d'elle-même quand sa figure passe. Au 05/11/2026, il n'en reste qu'une.
+# (jamais en masse) ; chaque exception meurt d'elle-même quand sa figure passe. Toutes passées le 05/11/2026 (la dernière, le ciseau, après la soudure des espaces multiples dans l'organe).
 EXCEPTIONS: dict[str, str] = {
-    "ciseau-dette-interets-en-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), page sous mesure jusqu'au 16/12/2026 (seule l'exactitude s'y corrige), régénérée à la prochaine mise à jour de ses données",
 }
 
 

@@ -33,7 +33,9 @@ def coupe(s: str, n: int) -> list[str]:
     s = re.sub(r"(^| )([+\u2212]) ", "\\1\\2\u00a0", s)
     # Un séparateur « · » ne finit jamais une ligne (04/11/2026 : 36 pieds de figure coupés après lui, règle R5 de
     # check-figures étendue) : soudé au mot qui le suit, il passe à la ligne avec lui.
-    s = s.replace("\u00b7 ", "\u00b7\u00a0")
+    # Espaces multiples apr\u00e8s le \u00ab \u00b7 \u00bb (\u00ab (T2 2026)  \u00b7  Eurostat \u00bb, source du ciseau, 05/11/2026) : seule la premi\u00e8re
+    # devenait ins\u00e9cable et la ligne se coupait encore apr\u00e8s le s\u00e9parateur.
+    s = re.sub("\u00b7 +", "\u00b7\u00a0", s)
     out, cur = [], ""
     for mot in [m for m in s.split(" ") if m]:
         if cur and len(cur) + 1 + len(mot) > n:

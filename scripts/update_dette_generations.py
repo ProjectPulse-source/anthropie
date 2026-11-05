@@ -179,7 +179,7 @@ SOURCES = {
                 lib_en="Insee, table 8.204 (30 July 2026)",
                 producteur="Insee, comptes nationaux annuels (base 2020), compte de patrimoine des administrations publiques (S13), corrigé le 30/07/2026",
                 url="https://www.insee.fr/fr/statistiques/8988859", publie="2026-07-30"),
-    "aft": dict(fichier="aft_non_residents_releve_2026T1.json", lib="Agence France Trésor, d'après la Banque de France",
+    "aft": dict(fichier="aft_non_residents_releve_2026T2.json", lib="Agence France Trésor, d'après la Banque de France",
                 producteur="Agence France Trésor, page « Principaux chiffres », graphique des non-résidents (source Banque de France)",
                 url="https://www.aft.gouv.fr/fr/principaux-chiffres-dette"),
 }

@@ -50,7 +50,7 @@
 <circle cx="574.4" cy="402.6" r="3.5" fill="#eb6834"/>
 <text x="574.4" y="420.6" font-size="12" font-weight="400" fill="#52514e" text-anchor="middle">1,3 % en 2020</text>
 <line x1="0" y1="484.0" x2="720" y2="484.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="499.0" font-size="11" fill="#52514e">INSEE, dette de Maastricht (T2 2026) · Eurostat gov_10a_main, intérêts D41PAY (2025)</text>
+<text class="pied-source" x="0" y="499.0" font-size="11" fill="#52514e">INSEE, dette de Maastricht (T2 2026) · Eurostat gov_10a_main, intérêts D41PAY (2025)</text>
 <text class="pied-note" x="0" y="513.0" font-size="11" fill="#52514e">Deux échelles distinctes, une même unité : le % du PIB.</text>
 <text class="pied-licence" x="0" y="527.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
 </svg>

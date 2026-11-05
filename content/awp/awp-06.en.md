@@ -3,7 +3,7 @@ title: "Digital Infrastructures and Technological Debt"
 subtitle: "Data Centers, AI, and the Displacement of Disorder"
 awp_number: "AWP-06"
 date: 2026-05-07
-lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML
@@ -60,7 +60,7 @@ AWP-06's central contribution is a testable grid of four coupled cost registers 
 - **Territory** — land footprint, capture of local networks, integration with public infrastructure
 - **Attention** — cognitive capture of users, dependence on interfaces, outsourcing of judgement
 
-These four registers do not add up: they couple. Reducing one often displaces toward the three others.
+These four registers do not add up: they couple. Reducing one can shift the burden to the three others: establishing this, case by case, is what the grid is for.
 
 ## From cost to debt through commitment, guarantee, irreversibility
 
