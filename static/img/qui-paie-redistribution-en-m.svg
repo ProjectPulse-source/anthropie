@@ -53,7 +53,7 @@
 <rect x="228.6" y="406.0" width="39.7" height="13" fill="#184f95"/>
 <rect x="268.3" y="406.0" width="27.7" height="13" fill="#898781"/>
 <line x1="228.6" y1="204.0" x2="228.6" y2="428.0" stroke="#52514e" stroke-width="1.2"/>
-<text x="0.0" y="444.0" font-size="13.5" fill="#898781" text-anchor="start">D1: least well-off 10% · D10: best-off</text>
+<text x="0.0" y="444.0" font-size="13.5" fill="#898781" text-anchor="start">D1: least well-off 10% · D10: best-off</text>
 <text x="0.0" y="462.0" font-size="13.5" fill="#898781" text-anchor="start">10%</text>
 <text x="0.0" y="488.0" font-size="13.5" fill="#52514e" text-anchor="start">D1</text>
 <text x="42.0" y="488.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">receives 27.1 · pays 6.4</text>
@@ -66,5 +66,5 @@
 <text class="pied-note" x="0" y="602.0" font-size="13.5" fill="#52514e">Imputation conventions; does not</text>
 <text class="pied-note" x="0" y="619.0" font-size="13.5" fill="#52514e">measure the incidence of the debt.</text>
 <text class="pied-licence" x="0" y="640.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="657.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="657.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

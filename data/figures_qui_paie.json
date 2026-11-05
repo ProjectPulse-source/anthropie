@@ -5,7 +5,7 @@
    "fichier": "qui-paie-detention",
    "titre": "Qui emprunte ? Qui détient les titres de l'État ?",
    "montre": "Les administrations qui empruntent, puis les porteurs des titres de l'État : deux champs distincts, sans lien de proportion.",
-   "source": "INSEE, IR n° 79 (27/03/2026), fin 2025  ·  Banque de France via l'AFT, 1er trimestre 2026",
+   "source": "INSEE, dette trimestrielle de Maastricht par sous-secteur (29/09/2026), fin juin 2026  ·  Banque de France via l'AFT, 2e trimestre 2026",
    "precaution": "A : valeur nominale ; B : valeur de marché. La détention ne mesure pas la charge finale."
   },
   {
@@ -55,7 +55,7 @@
    "fichier": "qui-paie-detention-en",
    "titre": "Who borrows? Who holds French government securities?",
    "montre": "The levels of government that borrow, then the holders of central-government securities: two separate scopes, with no proportional link.",
-   "source": "INSEE, IR no. 79 (27 March 2026), end of 2025  ·  Banque de France via Agence France Trésor (French Treasury agency), Q1 2026",
+   "source": "INSEE, quarterly Maastricht debt by subsector (29 September 2026), end of June 2026  ·  Banque de France via Agence France Trésor (French Treasury agency), Q2 2026",
    "precaution": "A: nominal value; B: market value. Holding securities does not measure the final burden."
   },
   {

@@ -5,7 +5,7 @@ og_title: "Avons-nous tous le même droit à l'erreur ? — deux activités de S
 og_image: "images/og-parcours-licence.jpg"   # scripts/og_enseignants.py ; vignette vig-parcours-licence.jpg lue par /ressources/
 og_image_alt: "Cinq barres empilées : devenir des bacheliers un an après une première année de licence, selon l'origine sociale."
 date: 2026-10-02
-lastmod: 2026-10-02
+lastmod: 2026-11-05
 date_suit: [parcours_licence, acces_superieur]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Second thème de la couche enseignants : UNE PAGE PAR THÈME (auteur, 02/10/2026 ; arbitrage
 # .claude/external-audits/ARBITRATIONS/ENTRANTE_2026-10-02_Enseignants_Structure_arbitrage.md). Navigation « École et
@@ -51,7 +51,7 @@ aucune ne demande de trancher une politique.
 **Programme.** Chapitre «&nbsp;Quelle est l'action de l'École sur les destins individuels et sur l'évolution de la
 société&nbsp;?&nbsp;» — «&nbsp;comprendre l'évolution, depuis les années 1950, des principaux indicateurs mesurant
 l'accès à l'école et à l'enseignement supérieur (taux de scolarisation, taux d'accès à un diplôme ou à un type de
-formation) en distinguant les processus de massification et de démocratisation&nbsp;» (Éduscol).
+formation) en distinguant les processus de massification et de démocratisation&nbsp;» (Éduscol). Ce chapitre reste au programme, mais il ne figure pas parmi les questions évaluables à l'épreuve écrite de spécialité (note de service du 11&nbsp;septembre 2026, BO spécial n°&nbsp;4 du 17&nbsp;septembre 2026, annexe&nbsp;I, à compter de la session 2027).
 
 **Du programme au document.** Le programme demande une évolution depuis les années 1950&nbsp;; la figure donne une
 seule année, celle des bacheliers {{< acces-val "annee" >}}. Elle porte sur l'accès à un type de formation, pour les
@@ -103,7 +103,7 @@ ministère de l'Enseignement supérieur (SIES).
 **Programme.** Chapitre «&nbsp;Quelle est l'action de l'École sur les destins individuels et sur l'évolution de la
 société&nbsp;?&nbsp;» — «&nbsp;Comprendre la multiplicité des facteurs d'inégalités de réussite scolaire (notamment,
 rôle de l'École, rôle du capital culturel et des investissements familiaux, socialisation selon le genre, effets des
-stratégies des ménages) dans la construction des trajectoires individuelles de formation&nbsp;» (Éduscol).
+stratégies des ménages) dans la construction des trajectoires individuelles de formation&nbsp;» (Éduscol). Même chapitre, même statut&nbsp;: au programme, hors des questions évaluables à l'épreuve écrite de spécialité à compter de la session 2027.
 
 **Du programme au document.** Le programme porte sur l'École dans son ensemble&nbsp;; la figure suit les bacheliers
 entrés en première année de licence à l'université. Elle ne décrit pas les parcours de tous les entrants dans

@@ -5,7 +5,7 @@ og_title: "Enseigner la dette publique en SES — trois activités prêtes pour 
 og_image: "images/og-dette-dynamique.jpg"
 og_image_alt: "La dette publique française décomposée depuis 1995 : la figure d'où part l'activité de Première."
 date: 2026-09-30
-lastmod: 2026-10-02
+lastmod: 2026-11-05
 date_suit: [dette_dynamique, dette_monde, qui_paie_donnees]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Adresse du dossier SES (auteur, 03/10/2026) : renvoi vers cette page, qui garde l'adresse des courriels et des ancres.
 aliases: ["/enseignants/ses/"]
@@ -100,7 +100,7 @@ augmente-t-elle&nbsp;?](/pourquoi-la-dette-publique-augmente/#cascade)
 
 **Programme.** Chapitre «&nbsp;Quelles politiques économiques dans le cadre européen&nbsp;?&nbsp;» — la politique budgétaire
 est «&nbsp;du ressort de chaque pays membre mais contrainte par les traités européens&nbsp;» (Éduscol). La ressource
-d'accompagnement du chapitre pose la question de la soutenabilité de la dette et rappelle la valeur de référence de 60&nbsp;% du PIB.
+d'accompagnement du chapitre pose la question de la soutenabilité de la dette et rappelle la valeur de référence de 60&nbsp;% du PIB. Ce chapitre fait partie des neuf questions évaluables à l'épreuve écrite de spécialité (note de service du 11&nbsp;septembre 2026, BO spécial n°&nbsp;4 du 17&nbsp;septembre 2026, annexe&nbsp;I, à compter de la session 2027).
 
 **Durée**&nbsp;: 20&nbsp;minutes. **Support**&nbsp;: le nuage de points ci-dessous, tiré de [Dette publique&nbsp;: pourquoi
 100&nbsp;% du PIB ne pèse pas partout de la même façon](/dette-publique-comparaison-internationale/#meme-dette)
@@ -137,7 +137,7 @@ d'accompagnement du chapitre pose la question de la soutenabilité de la dette e
 
 **Lien au programme.** Chapitre de Terminale sur la justice sociale&nbsp;: l'activité porte sur les instruments de
 l'action publique — prélèvements, prestations et services collectifs. Elle n'aborde pas à elle seule les différentes
-conceptions de la justice sociale, ni les débats sur leur efficacité et leur légitimité.
+conceptions de la justice sociale, ni les débats sur leur efficacité et leur légitimité. Le chapitre sur la justice sociale reste au programme, mais il ne figure pas parmi les questions évaluables à l'épreuve écrite de spécialité (note de service du 11&nbsp;septembre 2026, BO spécial n°&nbsp;4 du 17&nbsp;septembre 2026, annexe&nbsp;I, à compter de la session 2027).
 
 **Durée**&nbsp;: 20&nbsp;minutes. **Support**&nbsp;: la figure ci-dessous, tirée de [Qui paie vraiment la dette
 publique&nbsp;?](/qui-paie-la-dette-publique/)

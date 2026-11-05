@@ -189,9 +189,13 @@ def periode_en(p: str) -> str:
     le français dans une page anglaise."""
     import re
     m = re.fullmatch(r"fin (\d{4})", p)
+    if m:
+        return "end of " + m.group(1)
+    MOIS_EN = {"mars": "March", "juin": "June", "septembre": "September", "décembre": "December"}
+    m = re.fullmatch(r"fin (mars|juin|septembre|décembre) (\d{4})", p)
     if not m:
         fail("période %r : aucune forme anglaise connue" % p)
-    return "end of " + m.group(1)
+    return "end of %s %s" % (MOIS_EN[m.group(1)], m.group(2))
 
 
 def trimestre_en(p: str) -> str:
@@ -277,6 +281,50 @@ def entete(h: float, ident: str, titre: str, desc: str) -> list[str]:
 
 
 # ------------------------------------------------------------------ données
+DETENTION_SITE = REPO / "data" / "qui_paie_detention_site.json"
+
+
+def total_txt_livre(reg: dict) -> str:
+    return reg["grandeurs"]["dette_fin_annee_mdeur"]["valeur_imprimee"]
+
+
+def lire_detention_site() -> dict:
+    """Sources propres de la page pour « Qui emprunte ? » et « Qui détient les titres de l'État ? » (auteur, 05/11/2026,
+    option 2 de l'audit des ressources : la page suit les dernières données publiées, le livre garde les siennes).
+    A : LU dans l'extrait SDMX de l'INSEE archivé (empreinte vérifiée) ; témoin : la somme des quatre sous-secteurs
+    retrouve le total publié à l'arrondi. B : transcrit du graphique de l'AFT (image), capture archivée (empreinte
+    vérifiée) ; les cinq parts publiées au dixième somment à 100 à 0,25 près (cinq arrondis), pas davantage."""
+    import re
+    j = json.loads(DETENTION_SITE.read_text(encoding="utf-8"))
+    A, B = j["A_sous_secteurs"], j["B_detenteurs_titres_etat"]
+    for chemin, empreinte in ((A["fichier"], A["sha256"]), (B["capture"], B["capture_sha256"])):
+        if hashlib.sha256((REPO / chemin).read_bytes()).hexdigest() != empreinte:
+            fail("pièce de %s modifiée (%s) : relire la source, puis l'empreinte" % (DETENTION_SITE.name, chemin))
+    xml = (REPO / A["fichier"]).read_text(encoding="utf-8")
+    val = {}
+    for serie in re.findall(r"<Series [^>]*>.*?</Series>", xml, re.S):
+        idb = re.search(r'IDBANK="(\d+)"', serie).group(1)
+        obs = re.search(r'TIME_PERIOD="%s" OBS_VALUE="([0-9.]+)"' % A["periode_sdmx"], serie)
+        if obs:
+            val[idb] = float(obs.group(1))
+    manque = [x for x in [A["total_idbank"]] + [s_["idbank"] for s_ in A["sous_secteurs"]] if x not in val]
+    if manque:
+        fail("extrait INSEE : séries absentes pour %s : %s" % (A["periode_sdmx"], manque))
+    total = val[A["total_idbank"]]
+    ss = [{"libelle": s_["libelle"], "mdeur": round(val[s_["idbank"]])} for s_ in A["sous_secteurs"]]
+    if abs(sum(val[s_["idbank"]] for s_ in A["sous_secteurs"]) - total) > 0.5:
+        fail("extrait INSEE : la somme des sous-secteurs ne retrouve pas le total publié")
+    det = B["valeurs"]
+    if abs(sum(d["pct"] for d in det) - 100) > 0.25:
+        fail("détenteurs : les parts publiées ne somment pas à 100 à l'arrondi près")
+    total_txt = ("%.1f" % total).replace(".", ",")
+    total_txt = (total_txt[:-5] + NBSP + total_txt[-5:]) if total >= 1000 else total_txt
+    return {"ss": ss, "det": det, "total": total, "total_txt": total_txt, "periode_a": A["periode"],
+            "det_periode": B["periode"], "releve_le": j["releve_le"],
+            "sources": ["Sources : %s." % A["source"],
+                        "Détenteurs : titres négociables de l'État, valeur de marché, %s (Banque de France, via AFT)." % B["periode"]]}
+
+
 def lire_registre() -> dict:
     try:
         import yaml
@@ -312,8 +360,12 @@ def lire_registre() -> dict:
     foyers = float(str(ff["valeur_imprimee"]).replace(",", "."))
     if not 30 < foyers < 50:
         fail("foyers fiscaux hors plage plausible : %s millions" % foyers)
+    site = lire_detention_site()
+    ss, det, total, total_txt = site["ss"], site["det"], site["total"], site["total_txt"]
     return {"ss": ss, "det": det, "total": total, "total_txt": total_txt,
-            "periode_a": periode_a, "sources": info["sources"], "det_periode": per[0],
+            "periode_a": site["periode_a"], "sources": site["sources"], "det_periode": site["det_periode"],
+            "livre": {"total_txt": total_txt_livre(reg), "periode": periode_a, "etat_mdeur": next(
+                s_["mdeur"] for s_ in info["sous_secteurs"] if s_["libelle"] == "État")},
             "foyers": {"millions": foyers, "periode": ff["periode"],
                        "periode_en": ff.get("periode_en", ""),
                        "source": ff["source_citee"], "url": ff.get("url_source", "")},
@@ -675,7 +727,8 @@ def releve_le() -> str:
     def cle(s):
         j, m, a = s.split(" ")
         return (int(a), MOIS_FR.index(m), int(j))
-    return max((SOURCES_RELEVEES_LE, PIECES_RELEVEES_LE), key=cle)  # brut-ok: date la plus recente
+    site = json.loads(DETENTION_SITE.read_text(encoding="utf-8"))["releve_le"]
+    return max((SOURCES_RELEVEES_LE, PIECES_RELEVEES_LE, site), key=cle)  # brut-ok: date la plus recente
 
 
 def lire_pieces() -> dict:
@@ -891,9 +944,9 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
                                "Who borrows? Who holds French government securities?"), desc)
     e += corps
     return pied_qp(e, y, [
-        (S("A : INSEE, Informations rapides n° 79 (27/03/2026), dette de Maastricht par "
-           "sous-secteur · B : Banque de France, via l'AFT",
-           "A: INSEE, Informations rapides no. 79 (27 March 2026), Maastricht debt by subsector "
+        (S("A : INSEE, dette trimestrielle de Maastricht par sous-secteur (mise à jour du 29/09/2026) "
+           "· B : Banque de France, via l'AFT",
+           "A: INSEE, quarterly Maastricht debt by subsector (updated 29 September 2026) "
            "· B: Banque de France, via Agence France Trésor (French Treasury agency)"), INK2),
         (S("Deux champs distincts. A : valeur nominale ; B : valeur de marché. "
            "La détention ne mesure pas la charge finale.",
@@ -1615,8 +1668,8 @@ def svg_detention_m(r: dict, lang: str, svg_d: str) -> str:
     y = lignes_m(e, y + 4, S("* dont la Banque de France : part non publiée par la source.",
                              "* including the Banque de France: share not published by the source."))
     return pied_m(e, y + 14, [
-        (S("A : INSEE, Informations rapides n° 79 (27/03/2026) · B : Banque de France, via l'AFT",
-           "A: INSEE, Informations rapides no. 79 (27 March 2026) · B: Banque de France, via Agence France "
+        (S("A : INSEE, dette de Maastricht par sous-secteur (29/09/2026) · B : Banque de France, via l'AFT",
+           "A: INSEE, Maastricht debt by subsector (29 September 2026) · B: Banque de France, via Agence France "
            "Trésor"), INK2),
         (S("Deux champs distincts. La détention ne mesure pas la charge finale.",
            "Two separate scopes. Holding securities does not measure the final burden."), INK2),
@@ -2051,6 +2104,10 @@ def affichage(r: dict, d: dict, c: dict, lang: str = "fr") -> dict:
         # D9 : l'espace des milliers devient insécable, comme dans tous les autres montants de la page.
         "total_mdeur": _S(r["total_txt"].replace(" ", NBSP), en(r["total"], 1)),
         "periode_a": _S(r["periode_a"], periode_en(r["periode_a"])),
+        # ce que le livre imprime (registre du livre, comptes de fin 2025) : la page dit l'écart (option 2, 05/11/2026)
+        "livre_total_mdeur": _S(r["livre"]["total_txt"].replace(" ", NBSP), en(float(r["livre"]["total_txt"].replace(" ", "").replace(NBSP, "").replace(",", ".")), 1)),
+        "livre_etat_mdeur": _S(fr(r["livre"]["etat_mdeur"]), en(r["livre"]["etat_mdeur"], 0)),
+        "livre_periode": _S(r["livre"]["periode"], periode_en(r["livre"]["periode"])),
         "etat_mdeur": fr(ss["État"]), "etat_pct": fr(etat_pct),
         "nonres_pct": fr(nonres, 1), "bafs_pct": fr(bafs, 1),
         "autres_fr_pct": fr(det["Autres (français)"], 1),
@@ -2120,7 +2177,7 @@ def main() -> int:
          "titre": "Qui emprunte ? Qui détient les titres de l'État ?",
          "montre": "Les administrations qui empruntent, puis les porteurs des titres de l'État : "
                    "deux champs distincts, sans lien de proportion.",
-         "source": "INSEE, IR n° 79 (27/03/2026), %s  ·  Banque de France via l'AFT, "
+         "source": "INSEE, dette trimestrielle de Maastricht par sous-secteur (29/09/2026), %s  ·  Banque de France via l'AFT, "
                    "%s" % (r["periode_a"], r["det_periode"]),
          "precaution": "A : valeur nominale ; B : valeur de marché. La détention ne mesure pas "
                        "la charge finale."},
@@ -2171,7 +2228,7 @@ def main() -> int:
          "titre": "Who borrows? Who holds French government securities?",
          "montre": "The levels of government that borrow, then the holders of central-government "
                    "securities: two separate scopes, with no proportional link.",
-         "source": "INSEE, IR no. 79 (27 March 2026), %s  ·  Banque de France via Agence "
+         "source": "INSEE, quarterly Maastricht debt by subsector (29 September 2026), %s  ·  Banque de France via Agence "
                    "France Trésor (French Treasury agency), %s" % (periode_en(r["periode_a"]),
                                                                   trimestre_en(r["det_periode"])),
          "precaution": "A: nominal value; B: market value. Holding securities does not measure "

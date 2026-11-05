@@ -4,7 +4,7 @@
 <text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">Un même effort de 10 milliards</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">d'euros : qui le supporterait,</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#2b2a28">selon la décision prise ?</text>
-<text x="0.0" y="108.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">A · Montant imputé, en % du revenu</text>
+<text x="0.0" y="108.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">A · Montant imputé, en % du revenu</text>
 <text x="0.0" y="126.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">disponible du dixième</text>
 <text x="0.0" y="144.0" font-size="13.5" fill="#898781" text-anchor="start">Au prorata des montants existants,</text>
 <text x="0.0" y="162.0" font-size="13.5" fill="#898781" text-anchor="start">2023</text>
@@ -68,10 +68,10 @@
 <text x="0.0" y="529.0" font-size="13.5" fill="#898781" text-anchor="start">○ point des impôts écarté au 1er</text>
 <text x="0.0" y="547.0" font-size="13.5" fill="#898781" text-anchor="start">dixième (motif au pied)</text>
 <line x1="0" y1="561.0" x2="300" y2="561.0" stroke="#c3c2b7"/>
-<text x="0.0" y="585.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">B · De combien le choix change</text>
+<text x="0.0" y="585.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">B · De combien le choix change</text>
 <text x="0.0" y="603.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">l'effort d'un même dixième</text>
 <text x="0.0" y="621.0" font-size="13.5" fill="#898781" text-anchor="start">Décision la plus lourde ÷ la plus</text>
-<text x="0.0" y="639.0" font-size="13.5" fill="#898781" text-anchor="start">légère · 1 : aucun écart</text>
+<text x="0.0" y="639.0" font-size="13.5" fill="#898781" text-anchor="start">légère · 1 : aucun écart</text>
 <rect x="191.6" y="643.0" width="55.1" height="140.0" fill="#f0efe9"/>
 <rect x="32.0" y="713.5" width="16" height="69.5" rx="2" fill="#898781"/>
 <rect x="59.6" y="679.0" width="16" height="104.0" rx="2" fill="#898781"/>
@@ -106,5 +106,5 @@
 <text class="pied-note" x="0" y="1042.0" font-size="13.5" fill="#52514e">1er dixième porte « ≥ », borne</text>
 <text class="pied-note" x="0" y="1059.0" font-size="13.5" fill="#52514e">inférieure calculée sur deux leviers.</text>
 <text class="pied-licence" x="0" y="1080.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1097.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="1097.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

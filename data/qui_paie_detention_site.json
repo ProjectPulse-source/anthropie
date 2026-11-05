@@ -1,0 +1,34 @@
+{
+ "_avertissement": "Sources PROPRES de la page /qui-paie-la-dette-publique/ pour les deux panneaux « Qui emprunte ? » et « Qui détient les titres de l'État ? » (décision de l'auteur, 05/11/2026, option 2 de l'audit des ressources) : la page suit les dernières données publiées ; le livre, arrêté sur les comptes de fin 2025, garde les siennes (registre du livre, inchangé). A est LU par le générateur dans l'extrait SDMX archivé ; B est TRANSCRIT depuis le graphique de l'AFT (image seulement, le site refuse les scripts), vérifié contre la capture archivée.",
+ "releve_le": "5 novembre 2026",
+ "A_sous_secteurs": {
+  "fichier": "scripts/sources/insee_bdm_dette_maastricht_soussecteurs_2026-11-05.xml",
+  "sha256": "afa559ee1ce9cf483d6f91043f12ea0bdc808c07a92e487b028391c024b46cd8",
+  "periode_sdmx": "2026-Q2",
+  "periode": "fin juin 2026",
+  "total_idbank": "010777616",
+  "sous_secteurs": [
+   {"libelle": "État", "idbank": "010777610"},
+   {"libelle": "Sécurité sociale", "idbank": "010777625"},
+   {"libelle": "Collectivités", "idbank": "010777626"},
+   {"libelle": "Autres", "idbank": "010777613", "_note": "organismes divers d'administration centrale (ODAC)"}
+  ],
+  "source": "INSEE, dette trimestrielle des administrations publiques au sens de Maastricht, par sous-secteur (Banque de données macroéconomiques, séries 010777610, 010777613, 010777625, 010777626 ; total 010777616), mise à jour du 29 septembre 2026, valeur nominale"
+ },
+ "B_detenteurs_titres_etat": {
+  "periode": "2e trimestre 2026",
+  "unite": "% des titres négociables de l'État, valeur de marché",
+  "source": "Banque de France, via l'Agence France Trésor, « Principaux chiffres » (graphique « Répartition des titres de la dette négociable de l'État par groupe de porteurs au 2ème trimestre 2026 »)",
+  "page": "https://www.aft.gouv.fr/fr/principaux-chiffres-dette",
+  "canal": "navigateur (403 aux scripts), lu le 2026-11-05",
+  "capture": "scripts/sources/aft_detenteurs_titres_etat_T2-2026_capture_2026-11-05.png",
+  "capture_sha256": "c49ae3747d54761d40af52a96e18c2979e8ccea5e375d599cf5e34e0e8916289",
+  "valeurs": [
+   {"libelle": "Non-résidents", "pct": 59.7},
+   {"libelle": "Autres (français)", "pct": 18.7},
+   {"libelle": "Établissements de crédit français", "pct": 10.5},
+   {"libelle": "Assureurs français", "pct": 9.2},
+   {"libelle": "OPCVM français", "pct": 2.0}
+  ]
+ }
+}

@@ -1,43 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 455" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-det-t qp-det-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-det-t">Qui emprunte ? Qui détient les titres de l'État ?</title>
-<desc id="qp-det-d">Deux panneaux séparés, sans lien de proportion entre eux. A, en valeur nominale : État 2 823 Md€ (82 %); Sécurité sociale 293 Md€ (8 %); Collectivités 276 Md€ (8 %); Autres 69 Md€ (2 %), sur 3 460,5 Md€, fin 2025. B, en valeur de marché, porteurs des titres négociables de l'État au 1er trimestre 2026 : Non-résidents 57,5 %; Autres porteurs résidents 20,6 %; Banques résidentes 10,5 %; Assureurs résidents 9,6 %; Fonds (OPCVM) résidents 1,8 %.</desc>
+<desc id="qp-det-d">Deux panneaux séparés, sans lien de proportion entre eux. A, en valeur nominale : État 2 942 Md€ (82 %); Sécurité sociale 309 Md€ (9 %); Collectivités 275 Md€ (8 %); Autres 69 Md€ (2 %), sur 3 595,5 Md€, fin juin 2026. B, en valeur de marché, porteurs des titres négociables de l'État au 2e trimestre 2026 : Non-résidents 59,7 %; Autres porteurs résidents 18,7 %; Banques résidentes 10,5 %; Assureurs résidents 9,2 %; Fonds (OPCVM) résidents 2,0 %.</desc>
 <text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Qui emprunte ? Qui détient les titres de l'État ? Deux questions, deux champs</text>
-<text x="0.0" y="50.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">A · Qui emprunte ? Contribution des administrations à la dette publique, fin 2025</text>
-<text x="0.0" y="66.0" font-size="11" fill="#898781" text-anchor="start">Valeur nominale, en milliards d'euros · total 3 460,5 Md€</text>
+<text x="0.0" y="50.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">A · Qui emprunte ? Contribution des administrations à la dette publique, fin juin 2026</text>
+<text x="0.0" y="66.0" font-size="11" fill="#898781" text-anchor="start">Valeur nominale, en milliards d'euros · total 3 595,5 Md€</text>
 <text x="180.0" y="95.0" font-size="11" fill="#52514e" text-anchor="end">État</text>
 <rect x="190" y="84.0" width="400.0" height="14" rx="3" fill="#184f95"/>
-<text x="598.0" y="95.0" font-size="12" fill="#184f95" text-anchor="start" font-weight="600">2 823 Md€ · 82 %</text>
+<text x="598.0" y="95.0" font-size="12" fill="#184f95" text-anchor="start" font-weight="600">2 942 Md€ · 82 %</text>
 <text x="180.0" y="117.0" font-size="11" fill="#52514e" text-anchor="end">Sécurité sociale</text>
-<rect x="190" y="106.0" width="41.5" height="14" rx="3" fill="#184f95"/>
-<text x="239.5" y="117.0" font-size="11" fill="#52514e" text-anchor="start">293 Md€ · 8 %</text>
+<rect x="190" y="106.0" width="42.0" height="14" rx="3" fill="#184f95"/>
+<text x="240.0" y="117.0" font-size="11" fill="#52514e" text-anchor="start">309 Md€ · 9 %</text>
 <text x="180.0" y="139.0" font-size="11" fill="#52514e" text-anchor="end">Collectivités</text>
-<rect x="190" y="128.0" width="39.1" height="14" rx="3" fill="#184f95"/>
-<text x="237.1" y="139.0" font-size="11" fill="#52514e" text-anchor="start">276 Md€ · 8 %</text>
+<rect x="190" y="128.0" width="37.4" height="14" rx="3" fill="#184f95"/>
+<text x="235.4" y="139.0" font-size="11" fill="#52514e" text-anchor="start">275 Md€ · 8 %</text>
 <text x="180.0" y="161.0" font-size="11" fill="#52514e" text-anchor="end">Autres</text>
-<rect x="190" y="150.0" width="9.8" height="14" rx="3" fill="#184f95"/>
-<text x="207.8" y="161.0" font-size="11" fill="#52514e" text-anchor="start">69 Md€ · 2 %</text>
+<rect x="190" y="150.0" width="9.4" height="14" rx="3" fill="#184f95"/>
+<text x="207.4" y="161.0" font-size="11" fill="#52514e" text-anchor="start">69 Md€ · 2 %</text>
 <line x1="0" y1="188.0" x2="720" y2="188.0" stroke="#c3c2b7" stroke-width="1"/>
-<text x="0.0" y="216.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">B · Qui détient les titres négociables de l'État ? 1er trimestre 2026</text>
+<text x="0.0" y="216.0" font-size="12" fill="#2b2a28" text-anchor="start" font-weight="600">B · Qui détient les titres négociables de l'État ? 2e trimestre 2026</text>
 <text x="0.0" y="232.0" font-size="11" fill="#898781" text-anchor="start">Valeur de marché, en % · classement par résidence du détenteur, non par nationalité</text>
 <text x="180.0" y="261.0" font-size="11" fill="#52514e" text-anchor="end">Non-résidents</text>
 <rect x="190" y="250.0" width="400.0" height="14" rx="3" fill="#eb6834"/>
-<text x="598.0" y="261.0" font-size="12" fill="#eb6834" text-anchor="start" font-weight="600">57,5 %</text>
+<text x="598.0" y="261.0" font-size="12" fill="#eb6834" text-anchor="start" font-weight="600">59,7 %</text>
 <text x="180.0" y="283.0" font-size="11" fill="#52514e" text-anchor="end">Autres porteurs résidents *</text>
-<rect x="190" y="272.0" width="143.3" height="14" rx="3" fill="#eb6834"/>
-<text x="341.3" y="283.0" font-size="11" fill="#52514e" text-anchor="start">20,6 %</text>
+<rect x="190" y="272.0" width="125.3" height="14" rx="3" fill="#eb6834"/>
+<text x="323.3" y="283.0" font-size="11" fill="#52514e" text-anchor="start">18,7 %</text>
 <text x="180.0" y="305.0" font-size="11" fill="#52514e" text-anchor="end">Banques résidentes</text>
-<rect x="190" y="294.0" width="73.0" height="14" rx="3" fill="#eb6834"/>
-<text x="271.0" y="305.0" font-size="11" fill="#52514e" text-anchor="start">10,5 %</text>
+<rect x="190" y="294.0" width="70.4" height="14" rx="3" fill="#eb6834"/>
+<text x="268.4" y="305.0" font-size="11" fill="#52514e" text-anchor="start">10,5 %</text>
 <text x="180.0" y="327.0" font-size="11" fill="#52514e" text-anchor="end">Assureurs résidents</text>
-<rect x="190" y="316.0" width="66.8" height="14" rx="3" fill="#eb6834"/>
-<text x="264.8" y="327.0" font-size="11" fill="#52514e" text-anchor="start">9,6 %</text>
+<rect x="190" y="316.0" width="61.6" height="14" rx="3" fill="#eb6834"/>
+<text x="259.6" y="327.0" font-size="11" fill="#52514e" text-anchor="start">9,2 %</text>
 <text x="180.0" y="349.0" font-size="11" fill="#52514e" text-anchor="end">Fonds (OPCVM) résidents</text>
-<rect x="190" y="338.0" width="12.5" height="14" rx="3" fill="#eb6834"/>
-<text x="210.5" y="349.0" font-size="11" fill="#52514e" text-anchor="start">1,8 %</text>
+<rect x="190" y="338.0" width="13.4" height="14" rx="3" fill="#eb6834"/>
+<text x="211.4" y="349.0" font-size="11" fill="#52514e" text-anchor="start">2,0 %</text>
 <text x="0.0" y="370.0" font-size="10" fill="#898781" text-anchor="start">* dont la Banque de France (programmes de l'Eurosystème) : part non publiée par la source.</text>
 <line x1="0" y1="390.0" x2="720" y2="390.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="405.0" font-size="11" fill="#52514e">A : INSEE, Informations rapides n° 79 (27/03/2026), dette de Maastricht par sous-secteur · B : Banque de France, via</text>
+<text class="pied-source" x="0" y="405.0" font-size="11" fill="#52514e">A : INSEE, dette trimestrielle de Maastricht par sous-secteur (mise à jour du 29/09/2026) · B : Banque de France, via</text>
 <text class="pied-source" x="0" y="419.0" font-size="11" fill="#52514e">l'AFT</text>
 <text class="pied-note" x="0" y="433.0" font-size="11" fill="#52514e">Deux champs distincts. A : valeur nominale ; B : valeur de marché. La détention ne mesure pas la charge finale.</text>
-<text class="pied-licence" x="0" y="447.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
+<text class="pied-licence" x="0" y="447.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
 </svg>

@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (fin) — P1 restants : session 2027 du bac (enseignants), « qui paie » sur ses propres sources
+
+- `/enseignants/` et `/enseignants/ecole-et-parcours/` : statut au bac 2027 sous chaque bloc « Programme » — chapitres École et
+  justice sociale hors des questions évaluables, cadre européen évaluable. Source primaire lue : annexe I de la note de
+  service du 11/09/2026 (BO spécial n° 4 du 17/09/2026), archivée `scripts/sources_enseignants/` (SHA-256 `732ff988…`).
+- `/qui-paie-la-dette-publique/` : **option 2 de l'auteur** — la page quitte le registre du livre pour ses deux panneaux de
+  détention (`data/qui_paie_detention_site.json`) : A LU dans l'extrait SDMX INSEE archivé (`scripts/sources/insee_bdm_…xml`,
+  fin juin 2026 : État 2 942 sur 3 595,5 ; témoin : somme des sous-secteurs = total) ; B transcrit du graphique AFT (T2 2026 :
+  59,7 % de non-résidents), capture archivée. Tolérance de somme 0,25 (cinq arrondis publiés au dixième). Le registre du livre
+  reste lu (foyers fiscaux) et la page dit ce qu'imprime le livre (2 823 sur 3 460,5, fin 2025). Sources en dur du pied des
+  figures corrigées (« Informations rapides n° 79 ») — trouvé au rendu. Journal, instantanés FR/EN.
+- **Reste** : titres indexés de l'AFT au 30/09 (Bulletin n° 437 refusé aux scripts, texte non extractible au navigateur ;
+  l'auteur le télécharge) — tant qu'il manque, la page coût garde la paire cohérente de fin août.
+
 ### 2026-11-05 (suite) — P1 de l'audit : échantillon PISA, figures téléphone d'« École et parcours »
 
 - `/le-niveau-des-eleves-baisse-t-il/` : 79 / 56 / 17 % venaient des effectifs BRUTS de l'échantillon (`echantillon_classes`),

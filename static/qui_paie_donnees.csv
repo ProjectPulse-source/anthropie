@@ -109,12 +109,12 @@ exposition_effort_10_mdeur,D7,rapport_decision_la_plus_lourde_la_plus_legere,1.4
 exposition_effort_10_mdeur,D8,rapport_decision_la_plus_lourde_la_plus_legere,1.41,rapport,2023,"Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)"
 exposition_effort_10_mdeur,D9,rapport_decision_la_plus_lourde_la_plus_legere,1.92,rapport,2023,"Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)"
 exposition_effort_10_mdeur,D10,rapport_decision_la_plus_lourde_la_plus_legere,5.5,rapport,2023,"Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020)"
-dette_par_administration,État,encours,2823,"milliards d'euros, valeur nominale",fin 2025,INSEE
-dette_par_administration,Sécurité sociale,encours,293,"milliards d'euros, valeur nominale",fin 2025,INSEE
-dette_par_administration,Collectivités,encours,276,"milliards d'euros, valeur nominale",fin 2025,INSEE
-dette_par_administration,Autres,encours,69,"milliards d'euros, valeur nominale",fin 2025,INSEE
-detenteurs_titres_etat,Non-résidents,part,57.5,"% des titres négociables de l'État, valeur de marché",1er trimestre 2026,Banque de France via l'Agence France Trésor
-detenteurs_titres_etat,Autres (français),part,20.6,"% des titres négociables de l'État, valeur de marché",1er trimestre 2026,Banque de France via l'Agence France Trésor
-detenteurs_titres_etat,Établissements de crédit français,part,10.5,"% des titres négociables de l'État, valeur de marché",1er trimestre 2026,Banque de France via l'Agence France Trésor
-detenteurs_titres_etat,Assureurs français,part,9.6,"% des titres négociables de l'État, valeur de marché",1er trimestre 2026,Banque de France via l'Agence France Trésor
-detenteurs_titres_etat,OPCVM français,part,1.8,"% des titres négociables de l'État, valeur de marché",1er trimestre 2026,Banque de France via l'Agence France Trésor
+dette_par_administration,État,encours,2942,"milliards d'euros, valeur nominale",fin juin 2026,INSEE
+dette_par_administration,Sécurité sociale,encours,309,"milliards d'euros, valeur nominale",fin juin 2026,INSEE
+dette_par_administration,Collectivités,encours,275,"milliards d'euros, valeur nominale",fin juin 2026,INSEE
+dette_par_administration,Autres,encours,69,"milliards d'euros, valeur nominale",fin juin 2026,INSEE
+detenteurs_titres_etat,Non-résidents,part,59.7,"% des titres négociables de l'État, valeur de marché",2e trimestre 2026,Banque de France via l'Agence France Trésor
+detenteurs_titres_etat,Autres (français),part,18.7,"% des titres négociables de l'État, valeur de marché",2e trimestre 2026,Banque de France via l'Agence France Trésor
+detenteurs_titres_etat,Établissements de crédit français,part,10.5,"% des titres négociables de l'État, valeur de marché",2e trimestre 2026,Banque de France via l'Agence France Trésor
+detenteurs_titres_etat,Assureurs français,part,9.2,"% des titres négociables de l'État, valeur de marché",2e trimestre 2026,Banque de France via l'Agence France Trésor
+detenteurs_titres_etat,OPCVM français,part,2.0,"% des titres négociables de l'État, valeur de marché",2e trimestre 2026,Banque de France via l'Agence France Trésor

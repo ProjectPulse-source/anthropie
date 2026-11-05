@@ -17,6 +17,7 @@
   "dette-publique-generations-futures/_index.md": "2026-10-31",
   "dette-publique-peut-elle-baisser/_index.en.md": "2026-11-05",
   "dette-publique-peut-elle-baisser/_index.md": "2026-11-05",
+  "enseignants/_index.md": "2026-11-05",
   "formules-du-debat-sur-la-dette/_index.en.md": "2026-11-02",
   "formules-du-debat-sur-la-dette/_index.md": "2026-11-02",
   "inflation-et-dette-publique/_index.en.md": "2026-11-05",
@@ -24,6 +25,8 @@
   "le-niveau-des-eleves-baisse-t-il/_index.md": "2026-11-05",
   "les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/_index.md": "2026-11-05",
   "manque-t-il-des-professeurs/_index.md": "2026-11-05",
+  "qui-paie-la-dette-publique/_index.en.md": "2026-11-05",
+  "qui-paie-la-dette-publique/_index.md": "2026-11-05",
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": "2026-10-26",
   "qui-peut-faire-face-a-une-depense-imprevue/_index.md": "2026-10-26"
  },
@@ -81,6 +84,9 @@
    "2026-10-18",
    "2026-11-05"
   ],
+  "enseignants/_index.md": [
+   "2026-11-05"
+  ],
   "formules-du-debat-sur-la-dette/_index.en.md": [
    "2026-11-02"
   ],
@@ -116,6 +122,12 @@
   ],
   "pourquoi-la-dette-publique-augmente/_index.md": [
    "2026-10-18"
+  ],
+  "qui-paie-la-dette-publique/_index.en.md": [
+   "2026-11-05"
+  ],
+  "qui-paie-la-dette-publique/_index.md": [
+   "2026-11-05"
   ],
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": [
    "2026-10-26"

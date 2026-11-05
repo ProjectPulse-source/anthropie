@@ -4,7 +4,7 @@
 <text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">Prélèvements et transferts</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">publics par âge du ménage,</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#2b2a28">2023</text>
-<text x="0.0" y="108.0" font-size="13.5" fill="#898781" text-anchor="start">Milliers d'euros par UC · âge moyen</text>
+<text x="0.0" y="108.0" font-size="13.5" fill="#898781" text-anchor="start">Milliers d'euros par UC · âge moyen</text>
 <text x="0.0" y="126.0" font-size="13.5" fill="#898781" text-anchor="start">des adultes du ménage</text>
 <rect x="0" y="138.0" width="12" height="12" fill="#eb6834"/>
 <text x="18.0" y="148.0" font-size="13.5" fill="#52514e" text-anchor="start">Prélèvements versés (à gauche)</text>
@@ -44,5 +44,5 @@
 <text class="pied-note" x="0" y="571.0" font-size="13.5" fill="#52514e">Photographie d'une année, non le bilan</text>
 <text class="pied-note" x="0" y="588.0" font-size="13.5" fill="#52514e">d'une génération.</text>
 <text class="pied-licence" x="0" y="609.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="626.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="626.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>
