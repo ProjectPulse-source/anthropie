@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /dette-publique-generations-futures/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /dette-publique-generations-futures/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d’autres équipements.
@@ -43,7 +43,7 @@ Les comptes ne disent pas pourquoi la part investie a baissé, mais ils permette
 L’investissement net des administrations publiques, investissement moins usure du capital (formation brute de capital fixe moins consommation de capital fixe), est passé de 0,75 point de PIB par an en moyenne sur 2006-2015 à 0,32 point sur 2016-2025.
 Sur ces deux périodes, les administrations locales comptent pour 0,24 point des 0,43 point de recul, soit 56 % ; les autres administrations, administration centrale et sécurité sociale, pour le reste.
 Cette répartition dépend des années comparées (détail ci-dessous).
-La baisse n’a pas été régulière : l’investissement net local atteint son point bas en 2016, à 0,03 point de PIB, quand l’investissement brut des collectivités couvrait à peine l’usure estimée de leur capital.
+La baisse n’a pas été régulière : l’investissement net local atteint son point bas en 2016, à 0,03 point de PIB, quand l’investissement brut des administrations locales couvrait à peine l’usure estimée de leur capital.
 Il retrouve 0,47 point en 2024, puis 0,48 point en 2025.
 Le creux de 2016 intervient deux ans après les élections municipales de 2014, pendant la baisse des transferts reçus par les administrations locales : la page Les collectivités locales sont-elles une variable d’ajustement ? montre que la comparaison avec les cycles précédents affaiblit l’explication par le seul calendrier municipal, sans permettre d’isoler l’effet des transferts ou des dotations.
 La part locale du recul selon les années comparées

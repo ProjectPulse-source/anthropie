@@ -18,8 +18,8 @@ SGG relu dans la page rendue archivée ; série du Sénat : « + 4 points » et 
 Sources (scripts/sources_appliquer/) : extraits bruts du baromètre de l'application des lois (Assemblée nationale,
 LexImpact ; données DILA), constitués par extraire_sources.py ; texte des pages citées des rapports du Sénat, avec
 l'empreinte de chaque document ; registre de concordance ; articles de la Constitution et du code civil (Légifrance, API
-PISTE) ; relevé de la page rendue du bilan du SGG au 31/12/2025 (Légifrance refuse les scripts : page lue dans Chrome le
-12/10/2026, lignes recopiées et vérifiées par l'empreinte que le navigateur a calculée sur le texte rendu) ; quatre
+PISTE) ; relevé de la page rendue du bilan du SGG au 30/06/2026 (Légifrance refuse les scripts : page lue dans Chrome le
+05/11/2026, lignes recopiées et vérifiées par l'empreinte que le navigateur a calculée sur le texte rendu) ; quatre
 décisions du Conseil d'État (ArianeWeb, pages publiques, 12/10/2026). Le générateur ne lit rien en direct.
 
 Gardes (toutes ARRÊTENT, rien n'est écrit) :
@@ -173,15 +173,17 @@ PRINCIPE_NOYAU = ("comporte non seulement le droit mais aussi l'obligation de pr
                   "qu'implique nécessairement l'application de la loi, hors le cas où le respect d'engagements internationaux "
                   "de la France y ferait obstacle")
 
-# Bilan du SGG au 31/12/2025 : Légifrance refuse les scripts (403). Page rendue dans Chrome le 12/10/2026 ; douze lignes
-# de document.body.innerText (21, 25, 27, 29, 33, 100, 102, 104, 106, 110, 116, 135) jointes par « \n » ; empreinte
+# Bilan du SGG au 30/06/2026 : Légifrance refuse les scripts (403). Page rendue dans Chrome le 05/11/2026 ; douze lignes
+# de document.body.innerText (21, 23, 25, 27, 33, 100, 130, 132, 134, 140, 147, 182) jointes par « \n » ; empreinte
 # calculée DANS LE NAVIGATEUR sur ces lignes, puis comparée à celle du fichier recopié : identiques. Empreinte du texte
-# rendu entier, pour mémoire : PAGE_SGG_SHA.
-SGG_FICHIER = "sgg_bilan_31-12-2025_page_rendue.txt"
-SGG_SHA = "3232dcae236eb2d06794a0d785aff4f80dacba93ba3bd19f60c03041a7a78cd7"
-PAGE_SGG_SHA = "c5cda67497c80af9be853ab8d71a3a1c5bb238d2150278969b39a79a89d2c030"
-SGG_URL = ("https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/legislatif-et-reglementaire/application-des-lois/"
-           "bilan-semestriel-au-31-decembre-2025")
+# rendu entier, pour mémoire : PAGE_SGG_SHA. Le relevé précédent (bilan au 31/12/2025, lu le 12/10/2026) reste archivé.
+# ⚠ Pour la XVIe législature, le texte de la page reprend la date du bilan précédent (« au 31 décembre 2025 ») alors que
+# ses chiffres ont changé (1 088 mesures et 87 % au 31/12/2025 ; 1 086 et 91 % ici) : la page le dit, au contact du taux.
+SGG_FICHIER = "sgg_bilan_30-06-2026_page_rendue.txt"
+SGG_SHA = "801a2800257c184e15bba2677e2024412fcb55f9a077c01d77e1b6b7dc1fdb1f"
+PAGE_SGG_SHA = "ce32242c46c83496cec7db79d276bc12548af3e1e43f3c62e30e3a2d3f2275c0"
+SGG_URL = "https://www.legifrance.gouv.fr/contenu/menu/bilan-semestriel-au-30-juin-2026"
+SGG_DATE = ("30 juin 2026", "30 June 2026", "30/06/2026")
 
 # Notre traduction des citations françaises hors Constitution ; chaque nombre doit figurer dans l'original (garde A7 bis).
 TR = {
@@ -231,8 +233,8 @@ TR = {
                     "laws promulgated and three months more for the regulations adopted.",
     "cit_sgg16_def": "shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 "
                      "and 9 June 2024, call for implementing decrees.",
-    "cit_sgg17_def": "shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July "
-                     "2024 and 30 June 2025, call for implementing decrees or orders.",
+    "cit_sgg17_def": "shows the implementation rate at 30 June 2026 of the laws which, among those promulgated between 18 July "
+                     "2024 and 31 December 2025, call for implementing decrees or orders.",
     "cit_ce_principe": "The exercise of regulatory power entails not only the right but also the obligation to take, within a "
                        "reasonable time, the measures that the application of the law necessarily implies, except where "
                        "compliance with France's international commitments would prevent it.",
@@ -357,11 +359,11 @@ CITATIONS = {  # clé -> (page archivée, citation exacte) ; affichées par jeto
     "cit_2021_62": ("r21-658|3", "En incluant les mesures d'application prises mais non prévues, ce taux est de 63 % (62 % pour l'année précédente)"),
     "cit_six_mois": ("r11-323|11", "cette année, pour la première fois, afin de ne mesurer le nombre de mesures réglementaires prises qu'à l'expiration du délai de six mois que s'impose à lui-même le Gouvernement, la période retenue comprend trois mois de moins pour les lois promulguées retenues et trois mois de plus pour les mesures réglementaires prises."),
 }
-CIT_SGG = {  # lignes du relevé de la page rendue du bilan du SGG au 31/12/2025
+CIT_SGG = {  # lignes du relevé de la page rendue du bilan du SGG au 30/06/2026
     "sgg16_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application.",
-    "sgg17_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d'application.",
-    "sgg16_total": "Total général 1088 948 140 87%",
-    "sgg17_total": "Total général 320 177 143 55%",
+    "sgg17_def": "fait apparaître le taux d'application au 30 juin 2026 des lois qui, parmi celles promulguées entre le 18 juillet 2024 et le 31 décembre 2025, appellent des décrets ou des arrêtés d'application.",
+    "sgg16_total": "Total général 1086 993 93 91%",
+    "sgg17_total": "Total général 518 345 173 67%",
     "sgg_2025_138": "Loi n° 2025-138 du 17 février 2025 pour améliorer la prise en charge de la sclérose latérale amyotrophique et d'autres maladies évolutives graves 1 0 1 0%",
 }
 
@@ -716,7 +718,7 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         raise Arret("A6 : cas 2025-138 : le barometre ne la porte plus « sans objet » avec un arrete, ou la loi n'est plus "
                     "« sans mesure a prendre » : texte a revoir")
     g.append("A6 : 2025-138 : %d mesure(s) « sans objet » portant un arrete au barometre, loi sans mesure a prendre ; "
-             "en attente au SGG (31/12/2025)" % len(cas))
+             "en attente au SGG (bilan au %s)" % (len(cas), SGG_DATE[2]))
     tot = collections.Counter()
     for s in SESSIONS:
         tot.update(cl[s])
@@ -791,7 +793,7 @@ def affichage(r: dict) -> dict:
     A.update({
         "releve": RELEVE,
         "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au "
-                     "31/12/2025, page relue le 12/10/2026 ; décisions du Conseil d'État lues le 12/10/2026",
+                     "30/06/2026, page lue le 05/11/2026 ; décisions du Conseil d'État lues le 12/10/2026",
     })
     for k, cle in (("senat_1819", "cit_senat_1819"), ("sgg_1819", "cit_sgg_1819")):
         m = re.search(r"(\d+(?:,\d+)?) %", r["citations"][cle])
@@ -813,7 +815,7 @@ def affichage_en(r: dict, A_fr: dict) -> dict:
     A.update({
         "releve": "5 October 2026",
         "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General "
-                     "Secretariat of the Government report at 31 December 2025, page reread on 12 October 2026; Conseil "
+                     "Secretariat of the Government report at 30 June 2026, page read on 5 November 2026; Conseil "
                      "d'État decisions read on 12 October 2026",
     })
     for k in ("senat_1819", "sgg_1819"):
@@ -853,10 +855,11 @@ def _tableaux(r: dict, lang: str) -> dict:
         serie.insert(17, [REVISION[0], "60 % (rapport suivant ; variante non établie)", SEGMENTS[5], REVISION[2].split("|")[0]])
         taux = [["Secrétariat général du Gouvernement, bilan semestriel, XVIe législature",
                  "lois votées du 1er juillet 2022 au 9 juin 2024 qui appellent des décrets d'application",
-                 "décrets (%s mesures)" % nb(g["sgg16"]["mesures"]), "31 décembre 2025", "%d %%" % g["sgg16"]["taux"]],
+                 "décrets (%s mesures)" % nb(g["sgg16"]["mesures"]),
+                 "bilan du %s (le texte de la page dit « au 31 décembre 2025 »)" % SGG_DATE[0], "%d %%" % g["sgg16"]["taux"]],
                 ["Secrétariat général du Gouvernement, bilan semestriel, XVIIe législature",
-                 "lois publiées du 18 juillet 2024 au 30 juin 2025 qui appellent des décrets ou des arrêtés d'application",
-                 "décrets ou arrêtés (%s mesures)" % nb(g["sgg17"]["mesures"]), "31 décembre 2025", "%d %%" % g["sgg17"]["taux"]],
+                 "lois promulguées du 18 juillet 2024 au 31 décembre 2025 qui appellent des décrets ou des arrêtés d'application",
+                 "décrets ou arrêtés (%s mesures)" % nb(g["sgg17"]["mesures"]), SGG_DATE[0], "%d %%" % g["sgg17"]["taux"]],
                 ["Sénat, rapport sur la session 2024-2025", "lois de la session 2024-2025 (1er octobre au 30 septembre)",
                  "mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026", "31 mars 2026",
                  "%d %%" % r["plus4"][0]]]
@@ -876,10 +879,11 @@ def _tableaux(r: dict, lang: str) -> dict:
     serie.insert(17, [REVISION[0], "60% (following report; variant not established)", SEGMENTS_EN[5], REVISION[2].split("|")[0]])
     taux = [["General Secretariat of the Government, half-yearly report, 16th legislature",
              "laws passed from 1 July 2022 to 9 June 2024 that call for implementing decrees",
-             "decrees (%s measures)" % nb(g["sgg16"]["mesures"]), "31 December 2025", "%d%%" % g["sgg16"]["taux"]],
+             "decrees (%s measures)" % nb(g["sgg16"]["mesures"]),
+             "report of %s (the page text says \"at 31 December 2025\")" % SGG_DATE[1], "%d%%" % g["sgg16"]["taux"]],
             ["General Secretariat of the Government, half-yearly report, 17th legislature",
-             "laws published from 18 July 2024 to 30 June 2025 that call for implementing decrees or orders",
-             "decrees or orders (%s measures)" % nb(g["sgg17"]["mesures"]), "31 December 2025", "%d%%" % g["sgg17"]["taux"]],
+             "laws promulgated from 18 July 2024 to 31 December 2025 that call for implementing decrees or orders",
+             "decrees or orders (%s measures)" % nb(g["sgg17"]["mesures"]), SGG_DATE[1], "%d%%" % g["sgg17"]["taux"]],
             ["Senate, report on the 2024-2025 session", "laws of the 2024-2025 session (1 October to 30 September)",
              "planned measures, excluding optional measures and measures deferred beyond 31 March 2026", "31 March 2026",
              "%d%%" % r["plus4"][0]]]
@@ -1342,7 +1346,7 @@ def csv_texte(r: dict) -> str:
         w.writerow(["taux_senat", s, "segment_%d" % seg, v, "%", "Senat, %s" % pg.replace("|", " p. ")])
     w.writerow(["taux_senat", REVISION[0], "segment_5_rapport_suivant", REVISION[1], "%", "Senat, %s" % REVISION[2].replace("|", " p. ")])
     for k, leg in (("sgg16", "XVIe legislature, decrets"), ("sgg17", "XVIIe legislature, decrets ou arretes")):
-        w.writerow(["taux_sgg", leg, "taux_au_31-12-2025", r["sgg"][k]["taux"], "%", "SGG, bilan semestriel au 31/12/2025"])
+        w.writerow(["taux_sgg", leg, "taux_bilan_30-06-2026", r["sgg"][k]["taux"], "%", "SGG, bilan semestriel au %s" % SGG_DATE[2]])
     return buf.getvalue()
 
 
@@ -1400,7 +1404,7 @@ def autotest(S: dict) -> list[str]:
                 return
 
     def sgg_altere(m):  # le relevé du SGG modifié après coup : l'empreinte du navigateur ne tient plus (A7)
-        m["sgg_sha"] = hashlib.sha256(m["sgg"].replace("87%", "88%").encode("utf-8")).hexdigest()
+        m["sgg_sha"] = hashlib.sha256(m["sgg"].replace("91%", "92%").encode("utf-8")).hexdigest()
 
     def plus4(m):  # le taux 2023-2024 hors différées à 63 % dans la page ET dans le script : A7 passe, A9 mord
         k = "r24-710|3"
@@ -1550,21 +1554,21 @@ def _main() -> int:
     fi = fiches(figs, A, A_en)
     csvt = csv_texte(r)
     payload = {
-        "releve_le": "2026-10-12",
+        "releve_le": "2026-11-05",
         "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (données DILA), Sénat, "
                     "Secrétariat général du Gouvernement, Légifrance, Conseil d'État",
         "meta": {"page": "https://" + PAGE_URL,
                  "protocole": "fiches de preuve v2, volet Appliquer, E1 à E3 ; phase B de la refonte du 12/10/2026",
                  "dates": "baromètre : version du 05/10/2026 ; rapports du Sénat : pages lues le 06/10/2026 (deux pages ajoutées le "
-                          "12/10/2026) ; bilan du SGG au 31/12/2025 : page rendue relue le 12/10/2026 ; décisions du Conseil d'État : "
+                          "12/10/2026) ; bilan du SGG au 30/06/2026 : page rendue lue le 05/11/2026 ; décisions du Conseil d'État : "
                           "lues le 12/10/2026 ; releve_le = date de la dernière lecture d'une source",
                  "sources": {"barometre": S["tetes"], "code_civil_art1": S["cciv"]["id"],
                              "constitution": {k: S["const"][k]["id"] for k in ("art10", "art13", "art21_exec", "art22", "art61")},
                              "senat_pages": {k: v["sha256_document"] for k, v in S["pages"].items()},
-                             "sgg_bilan_31_12_2025": {"url": SGG_URL, "releve": SGG_FICHIER, "sha256_releve": SGG_SHA,
-                                                      "sha256_texte_rendu_entier": PAGE_SGG_SHA,
-                                                      "canal": "page rendue dans Chrome le 12/10/2026 (Légifrance refuse les "
-                                                               "scripts) ; empreinte des lignes relevées calculée dans le navigateur"},
+                             "sgg_bilan": {"date": SGG_DATE[2], "url": SGG_URL, "releve": SGG_FICHIER, "sha256_releve": SGG_SHA,
+                                           "sha256_texte_rendu_entier": PAGE_SGG_SHA,
+                                           "canal": "page rendue dans Chrome le 05/11/2026 (Légifrance refuse les "
+                                                    "scripts) ; empreinte des lignes relevées calculée dans le navigateur"},
                              "conseil_etat": {num: {"fichier": f, "sha256": h,
                                                     "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/%s/%s"
                                                            % (re.search(r"(\d{4}-\d\d-\d\d)", f).group(1), num)}
@@ -1592,7 +1596,7 @@ def _main() -> int:
                    "sans_objet_avec_acte": r["obs_acte"], "sans_objet_filtre_large": r["obs_large"],
                    "sans_objet_ecartes": r["ecartes"], "sans_objet_tri": r["tri"], "regles_tri": dict(TRI),
                    "attente_mention_differe": r["differ_A"], "attente_differe_sans_date_prevue": r["differ_sans_date"],
-                   "attente_sans_date_prevue": r["A_sans_date"], "sgg_31_12_2025": r["sgg"],
+                   "attente_sans_date_prevue": r["A_sans_date"], "sgg_bilan_30_06_2026": r["sgg"],
                    "senat_2024_2025_plus4": {"taux": r["plus4"][0], "taux_2023_2024_hors_differees": r["plus4"][1],
                                              "points": r["plus4"][2], "taux_2023_2024_serie": r["plus4"][3]}},
         "serie_senat": [{"session": s, "valeur": v, "document": pg, "citation": norm(c), "segment": seg,

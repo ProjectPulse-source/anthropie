@@ -7,6 +7,7 @@ description: "Negative commons designate what we inherit collectively without ha
 date: 2026-07-26
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Clarification: the article \"Les communs négatifs\" in the journal Études (2021) is by Alexandre Monnin alone."}
   - {date: 2026-11-05, texte: "Correction: it is Alexandre Monnin who ranks digital technologies among the candidate negative commons; AWP-06 takes up his proposal, under conditions. The externality belongs to economic analysis, not to accounting."}
 og_title: "What are negative commons? — definition and sources — S. Lalut"
 faq:
@@ -21,7 +22,7 @@ faq:
   - question: "Are negative commons a pessimistic notion?"
     answer: "No — it is a notion of action. It shifts attention from promises alone (building, innovating) to neglected gestures: maintaining, closing, dismantling, cleaning up. Whole trades, institutions and know-how rest on this \"care of remains\"."
   - question: "Who introduced the notion?"
-    answer: "It stabilised around the work of Alexandre Monnin, Emmanuel Bonnet and Diego Landivar (Héritage et fermeture, 2021; article \"Les 'communs négatifs'\", journal Études, 2021 — both in French), in the field of the ecology of dismantling and of ecological redirection."
+    answer: "It stabilised around the work of Alexandre Monnin, Emmanuel Bonnet and Diego Landivar (Héritage et fermeture, 2021, by the three authors; article \"Les ‘communs négatifs’\" by Alexandre Monnin, journal Études, 2021 — both in French), in the field of the ecology of dismantling and of ecological redirection."
   - question: "Where is it applied in the anthropic corpus?"
     answer: "In AWP-06 (digital technology as a candidate negative common), in the glossary, and in the background of technological debt: a debt whose creditors are the generations that will inherit the equipment."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact

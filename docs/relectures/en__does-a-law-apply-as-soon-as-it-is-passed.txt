@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Does a French law apply as soon as it is passed?
 Not by the vote alone.
@@ -223,7 +223,7 @@ Of the 448 “not applicable” observations, there remain the 95 that begin wit
 For the laws of 2024-2025, they number 91.
 The three observations that begin with “Décret non pris” (decree not adopted), with no reference to an instrument, are not counted among them.
 For law no.
-2025-138, the observation reads “Arrêté du 5 février 2026” (an arrêté is a ministerial order), and the Government’s report at 31 December 2025 counts its measure as pending: the two sources describe two states, on two dates, and do not contradict each other.
+2025-138, the observation reads “Arrêté du 5 février 2026” (an arrêté is a ministerial order), and the Government’s report at 30 June 2026 still counts its measure as pending: the two sources describe two states, on two dates, and do not contradict each other.
 What was checked, and how
 The measures are those of the barometer of the application of laws, published by the National Assembly and LexImpact from DILA’s implementation schedules, in its version of 5 October 2026.
 A measure counts as published if its status is “applied” and an instrument is identified; “applied” without an identified instrument gives an incomplete status.
@@ -355,8 +355,9 @@ Since 2024, methods brought closer.
 The Senate’s 2026 report says so: “Depuis le 1er janvier 2024, le SGG contrôle la parution des arrêtés sous réserve qu’ils aient été expressément prévus par une disposition législative.” [our translation: “Since 1 January 2024, the SGG has checked the publication of ministerial orders provided that they were expressly provided for by a legislative provision.”] For the Senate itself, “il a été décidé, pour la session 2024-2025, de ne plus prendre en compte les mesures différées au-delà du 31 mars 2026” [our translation: “it was decided, for the 2024-2025 session, no longer to take into account measures deferred beyond 31 March 2026”].
 It adds: “En dépit de la convergence des méthodes, certaines divergences demeurent quant à l’appréciation de l’effectivité de l’application de certaines lois entre le Sénat et le SGG.” [our translation: “Despite the convergence of methods, some divergences remain between the Senate and the SGG as to the assessment of whether certain laws are effectively applied.”]
 The rates published today.
-At 31 December 2025, the Government’s half-yearly report on the 16th legislature “fait apparaître le taux d’application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d’application.” [our translation: “shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 and 9 June 2024, call for implementing decrees.”] It gives a rate of 87%, over 1,088 measures.
-The report on the 17th legislature “fait apparaître le taux d’application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d’application.” [our translation: “shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July 2024 and 30 June 2025, call for implementing decrees or orders.”] It gives 55%, over 320 measures.
+The Government’s half-yearly report at 30 June 2026 covers two legislatures.
+For the 16th, its text “fait apparaître le taux d’application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d’application.” [our translation: “shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 and 9 June 2024, call for implementing decrees.”] That date is the one of the previous report, although the figures have changed since (1,088 measures and 87% at 31 December 2025): the report gives a rate of 91%, over 1,086 measures.
+For the 17th legislature, its text “fait apparaître le taux d’application au 30 juin 2026 des lois qui, parmi celles promulguées entre le 18 juillet 2024 et le 31 décembre 2025, appellent des décrets ou des arrêtés d’application.” [our translation: “shows the implementation rate at 30 June 2026 of the laws which, among those promulgated between 18 July 2024 and 31 December 2025, call for implementing decrees or orders.”] It gives 67%, over 518 measures.
 The Senate publishes 66% for the 2024-2025 session.
 These three rates cover neither the same laws, nor the same measures, nor the same date: the table below sets them out by definition, it does not rank them.
 An implementation rate can only be interpreted with its scope, its cut-off date and its counting rules.
@@ -368,14 +369,14 @@ Data as at
 Published rate
 General Secretariat of the Government, half-yearly report, 16th legislature
 laws passed from 1 July 2022 to 9 June 2024 that call for implementing decrees
-decrees (1,088 measures)
-31 December 2025
-87%
+decrees (1,086 measures)
+report of 30 June 2026 (the page text says “at 31 December 2025”)
+91%
 General Secretariat of the Government, half-yearly report, 17th legislature
-laws published from 18 July 2024 to 30 June 2025 that call for implementing decrees or orders
-decrees or orders (320 measures)
-31 December 2025
-55%
+laws promulgated from 18 July 2024 to 31 December 2025 that call for implementing decrees or orders
+decrees or orders (518 measures)
+30 June 2026
+67%
 Senate, report on the 2024-2025 session
 laws of the 2024-2025 session (1 October to 30 September)
 planned measures, excluding optional measures and measures deferred beyond 31 March 2026
@@ -517,7 +518,7 @@ Of the 5,398 measures listed for these laws, 567 were pending.
 A pending measure is not necessarily late.
 What is the implementation rate of laws in France?
 It depends on counting conventions.
-At 31 December 2025, the General Secretariat of the Government publishes 87% for the laws of the 16th legislature, decrees only, and 55% for those of the 17th, decrees or orders; the Senate publishes 66% for the 2024-2025 session, at 31 March 2026.
+In its report at 30 June 2026, the General Secretariat of the Government publishes 91% for the laws of the 16th legislature, decrees only, and 67% for those of the 17th, decrees or orders; the Senate publishes 66% for the 2024-2025 session, at 31 March 2026.
 These rates cover neither the same laws, nor the same measures, nor the same date: they cannot be ranked.
 Is one law in two left unapplied?
 On 5 October 2026, according to the barometer, 130 of the 399 laws promulgated from October 2017 to September 2025, excluding treaties, still had at least one measure classified as pending.
@@ -527,7 +528,7 @@ A phrase like “one law in two” may come from this second count, from a rate 
 Sources
 Barometer of the application of laws, National Assembly and LexImpact, from DILA’s implementation schedules: files of laws and of measures, version of 5 October 2026.
 French Senate, annual reports on the application of laws from 2011 to 2026, summaries and press releases from 2003 to 2011 (in French); the document and page of each value and each quotation are given in the dataset.
-General Secretariat of the Government, half-yearly report on the application of laws at 31 December 2025, read on Légifrance through a browser (in French).
+General Secretariat of the Government, half-yearly report on the application of laws at 30 June 2026, read on Légifrance through a browser on 5 November 2026 (in French).
 Conseil d’État, decisions of 27 July 2005 (no.
 261694), 29 June 2011 (no.
 343188), 21 January 2021 (no.
@@ -582,7 +583,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Does a French law apply as soon as it is passed?”.
-National Assembly and LexImpact (DILA data), French Senate, General Secretariat of the Government, Conseil d’État, Légifrance data, retrieved 5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General Secretariat of the Government report at 31 December 2025, page reread on 12 October 2026; Conseil d’État decisions read on 12 October 2026. https://stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/
+National Assembly and LexImpact (DILA data), French Senate, General Secretariat of the Government, Conseil d’État, Légifrance data, retrieved 5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General Secretariat of the Government report at 30 June 2026, page read on 5 November 2026; Conseil d’État decisions read on 12 October 2026. https://stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/
 Copy citation
 In three sentences
 On 5 October 2026, according to the barometer of the application of laws, 130 of the 399 laws promulgated in France from October 2017 to September 2025, excluding treaties, were still waiting for at least one measure; 124 had received all of them and 144 were classified as having no measure to take.
@@ -596,6 +597,8 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (National Assembly and LexImpact (DILA data), French Senate, General Secretariat of the Government, Conseil d’État, Légifrance), under their own terms.
 Revisions
+5 November 2026 — Update: Government half-yearly report at 30 June 2026 (16th legislature: 91% of 1,086 measures; 17th: 67% of 518 measures, laws promulgated up to 31 December 2025).
+For the 16th, the text of this report repeats the date of the previous one, which the page points out.
 5 November 2026 — Correction: the sentence “Toutefois…” belongs to the first paragraph of Article 1 of the Civil Code; the urgent procedure forms the second.
 All resources: data, explainers and reference material →
 Share

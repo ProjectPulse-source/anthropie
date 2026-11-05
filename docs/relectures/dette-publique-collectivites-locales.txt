@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /dette-publique-collectivites-locales/, build de 7e0657b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /dette-publique-collectivites-locales/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Les collectivités locales sont-elles une variable d’ajustement des finances publiques ?
 La dette des collectivités ne permet pas de trancher : la règle d’équilibre de leurs budgets leur interdit d’emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu’une contrainte venue de l’État se lit dans leurs recettes et leurs dépenses.
@@ -477,6 +477,7 @@ Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat, OFGL et Légifrance), sous leurs propres conditions.
 Révisions
+4 novembre 2026 — État du projet de loi de finances pour 2027 : l’article 84 (étalement du reversement du DILICO) a été supprimé en commission des finances le 28 octobre 2026, avant son examen en séance.
 22 octobre 2026 — Projet de loi de finances pour 2027 : état du texte après la séance de l’Assemblée nationale du 19 octobre 2026 (articles 35 et 37 supprimés, article 36 non adopté, DGF relevée).
 Les montants du projet déposé restent présentés, comme cadrage initial du débat.
 18 octobre 2026 — Ajout : renvoi vers la part des administrations locales dans le recul de l’investissement net de l’ensemble des administrations publiques.

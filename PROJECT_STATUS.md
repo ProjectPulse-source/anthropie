@@ -52,6 +52,37 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (fin de nuit) — Points non vérifiés de la passe transversale : vérifiés à la source et corrigés (FR et EN)
+
+Chaque défaut a été relu par moi dans la source primaire (Légifrance par navigateur ou API, JO, Dares, RTE, Energy Institute,
+Crossref, Internet Archive), et croisé avec une seconde source quand il y en avait une. Pièces dans le dossier de travail de la session.
+- **Données** :
+  - Dares T3 2026 (`--relever`, catégorie A 3 353 400, concordant avec la Dreets PACA) ; `revoir_avant` ramené au 29/01/2027,
+    après la prochaine parution (l'ancienne date du 12/01 laissait le retard muet trois mois) ;
+  - bilan du SGG au 30/06/2026 : nouveau relevé de la page rendue, empreinte du navigateur = empreinte du fichier, 91 % et 67 % ;
+    la page signale que le texte du SGG reprend pour la XVIe la date du bilan précédent ; `releve_le` au 05/11.
+- **ONDPS** : l'arrêté du 16/10/2026 (JORF du 20/10) fixe pour la médecine un seuil minimal de 61 230 ; bornes 2021 (48 850-54 160)
+  transcrites ; garde D6 ter (ONDPS = arrêté) vue mordre.
+- **Comparaison internationale** : rang des recettes compté sur les 26 pays publiés (jeton `union_recettes` ; Danemark non publié
+  en 2024-2025, 51,0 % en 2023). **Générations** : « collectivités » → « administrations locales » (S1313).
+- **Découplage** : valeur de contrôle de l'édition 2026 (592,18 EJ), liée à son édition (garde vue mordre) ; « le site refuse les
+  lectures automatiques » retiré.
+- **RTE** : la page oppose aussi les 5 à 10 TWh, centres de données internes compris, aux 10 TWh de la page web.
+- **Juridique** :
+  - casier : point de départ de la composition pénale (CPP 769, 6°), ancien droit à l'oubli (10 ans, 5 avant 18 ans) et sources complétées ;
+  - Premier coup : Tinland 2020 (EPS), CNAF 2020 pour les 24 sur 28 (la référence « DREES, juin 2023 » du livre est introuvable),
+    répertoire publié à part et non en annexe, version 1.1.
+- **Histoire des idées** :
+  - Hugo, p. 430 (et non la vue 446) ;
+  - « Car tel est notre plaisir » : aucune ordonnance du 31/10/1472 établie (clause lue dès le début du règne, Isambert t. X ; Mas-Latrie
+    n'a pas trouvé « bon plaisir » sous Louis XVI) ;
+  - Leibniz relu (Raspe 1765, Gerhardt) ;
+  - article d'*Études* : Monnin seul (Crossref).
+- **Forme** : journaux du 04/11 (collectivités, budget des communes) ; FAQ en double retirée (réversibilité) ; « impossible il y a
+  vingt ans » → ORCID 2012, Zenodo 2013.
+- Correctif commun du pied (insécable après « · ») non propagé aux figures dont les données n'ont pas changé : figures restaurées
+  (dette monde, découplage, appliquer, délais, deux de mesurer). Exception encore déclarée, à traiter en une fois.
+
 ### 2026-11-05 (nuit) — Lot G1 de la passe transversale vérifié à la source et corrigé (3 pages, FR seul)
 
 - **Citations célèbres** : bilan par auteur recompté sur `AUDIT_CITATIONS_COMPLET.csv`, graphies d'un même auteur réunies

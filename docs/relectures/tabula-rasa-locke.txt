@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /tabula-rasa-locke/, build de 393c9a3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /tabula-rasa-locke/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 La tabula rasa : Locke a-t-il vraiment parlé d’une page blanche ?
 Pas dans son livre : en 1690, l’Essai dit « white paper », papier blanc.
 Locke connaît pourtant la formule latine : il l’emploie dans le résumé de son livre paru en 1688.
@@ -136,7 +136,8 @@ Thomas d’Aquin, Somme théologique, I, q.
 Aristote, De l’âme, III, 4, 430a1.
 Comment ces citations ont été vérifiées
 Chaque citation a été relue le 17 octobre 2026 dans le texte d’époque ou son fac-similé : l’Essai de Locke dans l’édition de 1690, la traduction de Coste dans l’édition de 1735, la préface des Nouveaux Essais dans l’édition Flammarion de 1921, la Somme dans le texte latin du Corpus Thomisticum.
-La maxime complétée par Leibniz (« nisi ipse intellectus ») est citée d’après deux sources concordantes, sans relecture de l’édition d’époque.
+La maxime complétée par Leibniz (« nisi ipse intellectus ») a été relue le 5 novembre 2026 dans l’édition originale de Raspe (Œuvres philosophiques, 1765) et dans celle de Gerhardt (Die philosophischen Schriften, t.
+V, 1882).
 La date de parution des Deux Traités (fin 1689, page de titre 1690) suit l’usage établi des bibliographies de Locke.
 Révisions
 5 novembre 2026 — Correction : Locke emploie lui-même la formule latine, dans le résumé de l’Essai qu’il a rédigé et que la Bibliothèque universelle a publié en français en 1688 (« the mind is at first rasa tabula ») ; c’est dans l’Essai de 1690 qu’il ne l’emploie pas.

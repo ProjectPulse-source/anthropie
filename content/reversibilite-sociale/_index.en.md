@@ -24,8 +24,6 @@ faq:
     answer: "Stéphane Lalut, economist and independent researcher, in the working paper AWP-08 — Social Reversibility as a Dimension of Inequality (2026, DOI 10.5281/zenodo.21507249), eighth of the Anthropie Working Papers. The concept extends the framework of anthropy: the stratified price of failure is a mechanism of social disorder distribution."
   - question: "Is social reversibility a synonym for resilience?"
     answer: "No. Resilience describes an individual psychological capacity to overcome hardship. Social reversibility describes a structural position — fallback, price, readmission — that exists before any hardship and independently of a person's psychological dispositions."
-  - question: "Is it measurable?"
-    answer: "That is the programme opened by AWP-08: a measurement architecture (V = f(C, T, A)), four families of testable propositions, an identification protocol on two dated institutional reforms (the FIBEN 040 removal, the Lemoine Act's right-to-be-forgotten). The paper presents itself as a refutable framework, not an empirical result."
   - question: "Why \"reversibility\"?"
     answer: "Because the decisive question is that of return: an error is reversible when the options it closes can be recovered. Irreversibility — the lasting closure of one's future — is the true social cost of failure, and it is unequally distributed."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact

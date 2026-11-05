@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/public-debt-international-comparison/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/public-debt-international-comparison/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 In 2025, at almost equal debt levels, Hungary devotes 8.8% of its public revenue to interest; Slovenia, 2.7%.
@@ -38,7 +38,7 @@ France: two readings of the same burden
 Depending on the measure, France looks better or worse placed.
 In 2025, interest on its debt amounts to 2.20% of GDP and 4.2% of public revenue.
 Relative to revenue, it is lower than in six countries that are nonetheless less indebted (Romania, Poland, Hungary, Portugal, Spain, Belgium); relative to GDP, it puts France in eighth place in the Union, and only five less indebted countries rank above it (Romania, Poland, Hungary, Spain, Belgium).
-The gap between the two readings comes from French public revenue, which amounts to 52.2% of GDP, the second highest share in the Union.
+The gap between the two readings comes from French public revenue, which amounts to 52.2% of GDP, the second highest share among the 26 EU countries whose 2025 revenue Eurostat publishes.
 Changing the denominator changes France’s relative position, not the amount of interest it pays.
 High revenue mechanically lowers the ratio of interest to revenue; on its own, it says neither whether more could be levied nor which spending the interest displaces.
 The first ratio measures the burden relative to the wealth produced; the second, the share of public resources absorbed by interest.
@@ -554,7 +554,7 @@ Frequently asked questions
 Is France more indebted than other countries?
 More than most: at the end of 2025, its public debt stands at 115.7% of GDP, the third highest in the European Union after Greece and Italy (Eurostat, Maastricht debt).
 But the level of the debt does not say what it costs: in 2025, France devoted 4.2% of its public revenue to interest, less than six countries that are nonetheless less indebted (Romania, Poland, Hungary, Portugal, Spain, Belgium).
-Relative to GDP, its interest (2.20%) puts it in eighth place, and only five less indebted countries rank above it: its public revenue, the second highest in the Union, makes the first measure more favourable without changing the amount paid.
+Relative to GDP, its interest (2.20%) puts it in eighth place, and only five less indebted countries rank above it: its public revenue, the second highest among the 26 EU countries whose 2025 revenue Eurostat publishes, makes the first measure more favourable without changing the amount paid.
 Does France pay more to service its debt than its neighbours?
 Not systematically.
 In 2025, its implicit interest rate — the year’s interest divided by debt at the end of 2024 — is 1.99%, slightly below the simple average of euro-area countries (2.2%): some countries pay less, notably Germany (1.82%), others more.
@@ -639,6 +639,7 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, OECD, IMF and World Bank), under their own terms.
 Revisions
+5 November 2026 — Clarification: the rank of French public revenue (second share of GDP) only counts the countries whose revenue for the year Eurostat publishes; Denmark, which does not publish it yet, is not included.
 5 November 2026 — Clarification: the gap in interest burden between the two countries with similar debt is arithmetically due mostly to the price paid on the debt; the page does not attribute it to a cause.
 2 November 2026 — Eurostat accounts of 21 October 2026: Denmark, whose 2025 revenue Eurostat no longer publishes, leaves the interest-to-revenue scatter and stays in the table, the debt ranking and the refinancing indicator.
 Relative to GDP, interest puts France back in eighth place in the Union, no longer tied with Belgium, and five less indebted countries rank above it.

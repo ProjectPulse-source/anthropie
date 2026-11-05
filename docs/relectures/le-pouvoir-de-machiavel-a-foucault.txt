@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 393c9a3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 À quoi tient l’obéissance ?
 Le pouvoir, de Machiavel à Foucault
 La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l’attraction : de −1200 à 2012, le parcours « Pouvoir » de L’Odyssée des idées répond en neuf étapes à la question « pourquoi obéit-on ? ».
@@ -134,8 +134,10 @@ Le livre en tire une leçon pour le vote : « On élit un président ; on n’é
 Dans le livre : escales « 2003 · Technologies persuasives : quand l’outil conduit nos choix » et « 2012 · Le pouvoir sans visage ».
 Trois échos
 Le parcours croise trois autres routes du livre.
-« Car tel est notre plaisir » : depuis une ordonnance de Louis XI du 31 octobre 1472, la clause ferme les actes royaux. « Plaisir » vient du latin placere, agréer : la clause ne dit pas un caprice, elle ferme la décision.
-La mémoire a retenu « notre bon plaisir », qui n’est pas la formule habituelle de la chancellerie : le livre la juge sans attestation sûre, le Larousse la fait apparaître dans les actes à la fin du règne de Louis XVI (actes non lus ici).
+« Car tel est notre plaisir » : la clause ferme les actes royaux dès le règne de Louis XI.
+Le livre écrit « dès 1472 » ; on la lit déjà dans des lettres des premières années du règne (Isambert, Recueil général des anciennes lois françaises, t.
+X), et rien n’établit qu’un acte l’ait instituée. « Plaisir » vient du latin placere, agréer : la clause ne dit pas un caprice, elle ferme la décision.
+La mémoire a retenu « notre bon plaisir », qui n’est pas la formule habituelle de la chancellerie : le livre la juge sans attestation sûre, le Larousse la fait apparaître dans les actes à la fin du règne de Louis XVI, mais Louis de Mas-Latrie, qui a dépouillé les recueils d’édits et d’ordonnances de ce règne, ne l’y a pas trouvée.
 Les chartistes ont confronté les imprimés aux originaux : en 1893, Auguste-Gabriel Demante rapporte qu’aucun acte imprimé avec « bon plaisir », confronté à l’original, n’y a résisté, l’original portant « Car tel est notre plaisir » (Bibliothèque de l’École des chartes, 1893, après Louis de Mas-Latrie, 1881).
 La formule de chancellerie est devenue, dans la mémoire, le symbole de l’arbitraire (escale « 1461 · Louis XI : l’universelle aragne et la puissance royale »).
 La Magna Carta : arrachée à Jean sans Terre par ses barons le 15 juin 1215, annulée par le pape quelques semaines plus tard, rééditée en 1216, 1217 et 1225.
@@ -220,7 +222,8 @@ Un passage.
 Marx la nomme en 1850, dans Les Luttes de classes en France, comme le point de transit nécessaire vers l’abolition des différences de classe, et le redit en 1852 dans une lettre à Joseph Weydemeyer : cette dictature ne constitue que la transition vers l’abolition de toutes les classes.
 L’expression n’est pas dans le Manifeste de 1848.
 Sources
-Textes, relus le 1er novembre 2026 : Suétone, Vie de Caligula, 30, et Vie de Tibère, 59 (The Latin Library) ; Machiavel, Il Principe, chapitres XV, XVII et XVIII (Wikisource), et pour la phrase « Facci dunque » du chapitre XVIII, l’édition critique de Giuseppe Lisio (Florence, Sansoni, 1899, texte et apparat, Internet Archive) et l’édition de Luigi Firpo (Turin, Einaudi, 1972, Liber Liber), relues le 5 novembre 2026 ; Saint-Just, discours du 13 novembre 1792 (Archives parlementaires, t.
+Textes, relus le 1er novembre 2026 : Suétone, Vie de Caligula, 30, et Vie de Tibère, 59 (The Latin Library) ; Machiavel, Il Principe, chapitres XV, XVII et XVIII (Wikisource), et pour la phrase « Facci dunque » du chapitre XVIII, l’édition critique de Giuseppe Lisio (Florence, Sansoni, 1899, texte et apparat, Internet Archive) et l’édition de Luigi Firpo (Turin, Einaudi, 1972, Liber Liber), relues le 5 novembre 2026 ; Isambert et al., Recueil général des anciennes lois françaises, t.
+X, règne de Louis XI (Internet Archive, lu le 5 novembre 2026) ; Saint-Just, discours du 13 novembre 1792 (Archives parlementaires, t.
 53, séance du 13 novembre 1792, relu le 5 novembre 2026) ; Plaute, Asinaria, v.
 495 (The Latin Library) ; Hobbes, Philosophicall Rudiments Concerning Government and Society (1651, traduction du De Cive), dédicace (Wikisource), et Leviathan, 1651, chapitre XIII (Project Gutenberg) ; Journal du marquis de Dangeau, éd.
 Soulié et al., t.
@@ -229,6 +232,7 @@ XVI, p.
 Les liens sont donnés à chaque étape.
 Le livre : Stéphane Lalut, L’Odyssée des idées, nouvelle édition 2026, parcours « Pouvoir » et escales citées à chaque étape.
 Révisions
+5 novembre 2026 — « Car tel est notre plaisir » : rien n’établit qu’une ordonnance du 31 octobre 1472 ait institué la clause, que l’on lit dès les premières années du règne de Louis XI ; Mas-Latrie (1881) n’a pas trouvé « bon plaisir » dans les édits du règne de Louis XVI.
 5 novembre 2026 — Deux corrections.
 Machiavel, Le Prince, chapitre XVIII : le conseil se lit « di vincere e mantenere lo stato », vaincre et maintenir l’État, dans les éditions critiques ; la leçon « vivere », vivre, du texte courant est tenue par Lisio pour une faute de copie.
 Saint-Just soutient qu’on ne peut régner innocemment dès son discours du 13 novembre 1792, avant l’ouverture du procès en décembre.

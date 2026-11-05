@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/2027-budget-your-municipality/, build de 7e0657b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/2027-budget-your-municipality/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 On 19 October 2026, the National Assembly deleted the cut in the FCTVA rate (art.
@@ -316,6 +316,7 @@ Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (National Assembly, High Council of Public Finance and Légifrance), under their own terms.
 To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
 Revisions
+4 November 2026 — State of the 2027 finance bill: article 84 (spreading the DILICO repayment) was deleted by the finance committee on 28 October 2026, before its examination in the chamber.
 22 October 2026 — Correction: municipalities do not contribute to the 2026 DILICO (only inter-municipal bodies, departments and regions); 10% of each repayment goes to equalisation, so a contributing authority recovers 90% of its contribution.
 Worked example corrected.
 22 October 2026 — Correction: the progressive contribution would have been based on the 2024 accounts (third preceding year), not 2025; the repayment of the 2025 DILICO concerns the remaining two thirds, not the initial amount.

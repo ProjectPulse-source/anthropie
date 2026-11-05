@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/public-debt-future-generations/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/public-debt-future-generations/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -43,7 +43,7 @@ The accounts do not say why the invested share fell, but they do locate the decl
 General government net investment, investment minus wear and tear on capital (gross fixed capital formation minus consumption of fixed capital), fell from 0.75 points of GDP a year on average over 2006-2015 to 0.32 points over 2016-2025.
 Over these two periods, local government accounts for 0.24 points out of a decline of 0.43 points, or 56%; the other government bodies, central government and social security, for the rest.
 This split depends on the years compared (details below).
-The decline was not steady: local net investment reached its low point in 2016, at 0.03 points of GDP, when local authorities’ gross investment barely covered the estimated wear and tear on their capital.
+The decline was not steady: local net investment reached its low point in 2016, at 0.03 points of GDP, when local government gross investment barely covered the estimated wear and tear on its capital.
 It was back at 0.47 points in 2024, then 0.48 points in 2025.
 The 2016 trough came two years after the 2014 municipal elections, while the transfers received by local government were falling: the page Local authorities: the adjustment variable? shows that the comparison with earlier cycles weakens the explanation by the municipal calendar alone, without isolating the effect of transfers or grants.
 The local share of the decline depending on the years compared

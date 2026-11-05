@@ -15,6 +15,7 @@ og_image_alt: "Share card: “Local adjustment, outside the debt” — local go
 donnees: [dette_collectivites]
 date_suit: [dette_generations]  # figure linked from « Générations futures » (gen-val inv_loc_part, 18/10/2026)
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-04, texte: "State of the 2027 finance bill: article 84 (spreading the DILICO repayment) was deleted by the finance committee on 28 October 2026, before its examination in the chamber."}
   - {date: 2026-10-22, texte: "Correction: the progressive contribution would have been based on revenue of the third preceding year (2024 for 2027), not of the year before last."}
   - {date: 2026-10-22, texte: "Draft budget bill for 2027: state of the text after the National Assembly sitting of 19 October 2026 (articles 35 and 37 deleted, article 36 not adopted, DGF raised). The amounts of the bill as tabled are still presented, as the initial framing of the debate."}
   - {date: 2026-10-18, texte: "Addition: link to the local government share of the decline in net investment by general government as a whole."}

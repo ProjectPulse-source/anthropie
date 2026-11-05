@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /une-loi-votee-s-applique-t-elle-tout-de-suite/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /une-loi-votee-s-applique-t-elle-tout-de-suite/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Une loi votée s’applique-t-elle tout de suite ?
 Pas du seul fait du vote.
@@ -216,7 +216,7 @@ Ce tri reprend ce qu’écrit le producteur ; il ne reclasse aucune mesure.
 Restent, parmi les 448 observations « sans objet », les 95 qui commencent par la référence d’un arrêté ou d’un décret.
 Pour les lois de 2024-2025, elles sont 91.
 Les trois observations qui commencent par « Décret non pris », sans référence d’acte, n’y sont pas comptées.
-Pour la loi n° 2025-138, l’observation porte « Arrêté du 5 février 2026 », et le bilan du Gouvernement au 31 décembre 2025 compte sa mesure comme en attente : les deux sources décrivent deux états, à deux dates, et ne se contredisent pas.
+Pour la loi n° 2025-138, l’observation porte « Arrêté du 5 février 2026 », et le bilan du Gouvernement au 30 juin 2026 compte encore sa mesure comme en attente : les deux sources décrivent deux états, à deux dates, et ne se contredisent pas.
 Ce qui a été vérifié, et comment
 Les mesures sont celles du baromètre de l’application des lois, publié par l’Assemblée nationale et LexImpact à partir des échéanciers de la DILA, dans sa version du 05/10/2026.
 Une mesure compte comme publiée si son état est « appliqué » et qu’un acte est identifié ; « appliqué » sans acte identifié donne un statut incomplet.
@@ -337,8 +337,9 @@ Depuis 2024, des méthodes rapprochées.
 Le rapport du Sénat de 2026 l’écrit : « Depuis le 1er janvier 2024, le SGG contrôle la parution des arrêtés sous réserve qu’ils aient été expressément prévus par une disposition législative. » Pour le Sénat lui-même, « il a été décidé, pour la session 2024-2025, de ne plus prendre en compte les mesures différées au-delà du 31 mars 2026 ».
 Il ajoute : « En dépit de la convergence des méthodes, certaines divergences demeurent quant à l’appréciation de l’effectivité de l’application de certaines lois entre le Sénat et le SGG. »
 Les taux publiés aujourd’hui.
-Au 31 décembre 2025, le bilan semestriel du Gouvernement sur la XVIe législature « fait apparaître le taux d’application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d’application. » Il donne un taux de 87 %, sur 1 088 mesures.
-Celui de la XVIIe législature « fait apparaître le taux d’application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d’application. » Il donne 55 %, sur 320 mesures.
+Le bilan semestriel du Gouvernement au 30 juin 2026 couvre deux législatures.
+Pour la XVIe, son texte « fait apparaître le taux d’application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d’application. » Cette date est celle du bilan précédent, alors que les chiffres ont changé depuis (1 088 mesures et 87 % au 31 décembre 2025) : le bilan donne un taux de 91 %, sur 1 086 mesures.
+Pour la XVIIe, son texte « fait apparaître le taux d’application au 30 juin 2026 des lois qui, parmi celles promulguées entre le 18 juillet 2024 et le 31 décembre 2025, appellent des décrets ou des arrêtés d’application. » Il donne 67 %, sur 518 mesures.
 Le Sénat publie 66 % pour la session 2024-2025.
 Ces trois taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date : le tableau ci-dessous les range par définition, il ne les classe pas.
 Un taux d’application n’est interprétable qu’avec son périmètre, sa date d’arrêté et ses règles de comptage.
@@ -350,14 +351,14 @@ Données arrêtées au
 Taux publié
 Secrétariat général du Gouvernement, bilan semestriel, XVIe législature
 lois votées du 1er juillet 2022 au 9 juin 2024 qui appellent des décrets d’application
-décrets (1 088 mesures)
-31 décembre 2025
-87 %
+décrets (1 086 mesures)
+bilan du 30 juin 2026 (le texte de la page dit « au 31 décembre 2025 »)
+91 %
 Secrétariat général du Gouvernement, bilan semestriel, XVIIe législature
-lois publiées du 18 juillet 2024 au 30 juin 2025 qui appellent des décrets ou des arrêtés d’application
-décrets ou arrêtés (320 mesures)
-31 décembre 2025
-55 %
+lois promulguées du 18 juillet 2024 au 31 décembre 2025 qui appellent des décrets ou des arrêtés d’application
+décrets ou arrêtés (518 mesures)
+30 juin 2026
+67 %
 Sénat, rapport sur la session 2024-2025
 lois de la session 2024-2025 (1er octobre au 30 septembre)
 mesures prévues, non éventuelles et non différées au-delà du 31 mars 2026
@@ -508,7 +509,7 @@ Sur les 5 398 mesures recensées pour ces lois, 567 étaient en attente.
 Une mesure en attente n’est pas forcément en retard.
 Quel est le taux d’application des lois ?
 Il dépend des conventions de calcul.
-Au 31 décembre 2025, le Secrétariat général du Gouvernement publie 87 % pour les lois de la XVIe législature, décrets seuls, et 55 % pour celles de la XVIIe, décrets ou arrêtés ; le Sénat publie 66 % pour la session 2024-2025, au 31 mars 2026.
+Dans son bilan au 30 juin 2026, le Secrétariat général du Gouvernement publie 91 % pour les lois de la XVIe législature, décrets seuls, et 67 % pour celles de la XVIIe, décrets ou arrêtés ; le Sénat publie 66 % pour la session 2024-2025, au 31 mars 2026.
 Ces taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date : ils ne se classent pas.
 Une loi sur deux n’est-elle pas appliquée ?
 Au 05/10/2026, selon le baromètre, 130 des 399 lois promulguées d’octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente ».
@@ -518,7 +519,7 @@ Une formule comme « une loi sur deux » peut venir de ce second compte, d’un 
 Sources
 Baromètre de l’application des lois, Assemblée nationale et LexImpact, à partir des échéanciers de la DILA : fichiers des lois et des mesures, version du 05/10/2026.
 Sénat, rapports annuels sur l’application des lois de 2011 à 2026, synthèses et communiqués de 2003 à 2011 ; le document et la page de chaque valeur et de chaque citation sont donnés dans le jeu de données.
-Secrétariat général du Gouvernement, bilan semestriel de l’application des lois au 31 décembre 2025, lu sur Légifrance par navigateur.
+Secrétariat général du Gouvernement, bilan semestriel de l’application des lois au 30 juin 2026, lu sur Légifrance par navigateur le 5 novembre 2026.
 Conseil d’État, décisions du 27 juillet 2005 (n° 261694), du 29 juin 2011 (n° 343188), du 21 janvier 2021 (n° 429956) et du 27 mai 2021 (n° 441660), lues sur ArianeWeb.
 Constitution, art.
 10, 13, 21, 22 et 61, et code civil, art.
@@ -568,7 +569,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Une loi votée s’applique-t-elle tout de suite ? ».
-Données Assemblée nationale et LexImpact (données DILA), Sénat, SGG, Conseil d’État, Légifrance, relevé du 05/10/2026 (baromètre de l’application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 31/12/2025, page relue le 12/10/2026 ; décisions du Conseil d’État lues le 12/10/2026. https://stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/
+Données Assemblée nationale et LexImpact (données DILA), Sénat, SGG, Conseil d’État, Légifrance, relevé du 05/10/2026 (baromètre de l’application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 30/06/2026, page lue le 05/11/2026 ; décisions du Conseil d’État lues le 12/10/2026. https://stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/
 Copier la citation
 En trois phrases
 Au 05/10/2026, selon le baromètre de l’application des lois, 130 des 399 lois promulguées d’octobre 2017 à septembre 2025, hors conventions, attendaient encore au moins une mesure ; 124 les avaient toutes reçues et 144 étaient classées sans mesure à prendre.
@@ -582,6 +583,8 @@ Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Assemblée nationale et LexImpact (données DILA), Sénat, SGG, Conseil d’État, Légifrance), sous leurs propres conditions.
 Révisions
+5 novembre 2026 — Mise à jour : bilan semestriel du Gouvernement au 30 juin 2026 (XVIe législature : 91 % sur 1 086 mesures ; XVIIe : 67 % sur 518 mesures, lois promulguées jusqu’au 31 décembre 2025).
+Pour la XVIe, le texte de ce bilan reprend la date du précédent, ce que la page signale.
 5 novembre 2026 — Correction : la phrase « Toutefois… » appartient au premier alinéa de l’article 1er du code civil ; la voie d’urgence forme le second.
 Toutes les ressources : données, dossiers et repères →
 Transmettre

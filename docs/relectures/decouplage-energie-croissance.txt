@@ -1,10 +1,10 @@
-# relu le 2026-11-04 ; texte servi de /decouplage-energie-croissance/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /decouplage-energie-croissance/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L’économie mondiale se découple-t-elle de l’énergie ?
 L’économie mondiale consomme de moins en moins d’énergie pour chaque unité de richesse produite : 28,5 % de moins en 2024 qu’en 2000.
 Sa consommation d’énergie, elle, a augmenté de 58 % sur la même période.
 La baisse de l’intensité énergétique a freiné la hausse ; elle ne l’a pas renversée.
-Page publiée le 26 octobre 2026 · révisions
+Page mise à jour le 5 novembre 2026 · révisions
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données du : 26 octobre 2026 EIA, données internationales : consommation d’énergie primaire, PIB en parité de pouvoir d’achat à prix constants et population, monde et Union européenne, de 1980 à 2024.
 Télécharger : CSV · JSON
@@ -151,7 +151,7 @@ EIA (U.S.
 Energy Information Administration), données internationales, fichier groupé INTL.zip lu par script : consommation totale d’énergie, PIB en parité de pouvoir d’achat, population.
 Convention de mesure relevée dans le même fichier (production et consommation d’électricité hydraulique, éolienne, solaire et nucléaire).
 Calculs de l’auteur : décomposition par l’indice de Divisia logarithmique moyen.
-Energy Institute, Statistical Review of World Energy, édition 2026, offre totale d’énergie (méthode du contenu physique), lue dans le jeu de données d’Our World in Data (owid_energy), le site de l’Energy Institute refusant les lectures automatiques ; le total mondial de 2024 est contrôlé contre celui que publie l’édition 2025 (592,22 exajoules), valeur transcrite du rapport.
+Energy Institute, Statistical Review of World Energy, édition 2026, offre totale d’énergie (méthode du contenu physique), lue dans le jeu de données d’Our World in Data (owid_energy) ; le total mondial de 2024 est contrôlé contre celui que publie le rapport de l’édition 2026 (592,18 exajoules), valeur transcrite du rapport.
 Banque mondiale, PIB à prix constants en parité de pouvoir d’achat et aux taux de change de marché, et population.
 Eurostat, consommation d’énergie primaire (indicateur de la directive sur l’efficacité énergétique), Union européenne à 27.
 Paul E.

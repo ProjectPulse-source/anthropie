@@ -1,10 +1,10 @@
-# relu le 2026-11-04 ; texte servi de /en/data-centres-reserved-capacity/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/data-centres-reserved-capacity/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Data centres: do reserved gigawatts foretell consumption?
 The figure that circulates is that of reservations: nearly 18 gigawatts in May 2026, against about 5 at end-2024.
 But reserved capacity is not consumption.
 More than half of the capacity reserved in November 2025 is for commissioning from 2030, other reservations have already been abandoned, and the data centres connected to the transmission grid consumed nearly 1 terawatt-hour in 2025.
-Page updated 4 November 2026
+Page updated 5 November 2026 · revisions
 ↓ Charts, data and citations to reuseReuse this page
 Data as of: 4 November 2026 RTE, Bilan prévisionnel 2025-2035 (December 2025), Bilan électrique 2025 (February 2026) and web page “Les data centers en chiffres clés” (updated 1 June 2026): values read in the text, breakdown by status measured on a figure.
 Download: CSV · JSON
@@ -47,8 +47,9 @@ These are assumptions, not measurements.
 RTE itself gives the order of magnitude of what these assumptions set aside: if all the roughly 30 GW reserved by large projects, data centres, hydrogen and industry together, ran at full power all year, consumption would theoretically reach about 240 TWh, “a level out of all proportion” with its assumptions.
 RTE’s publications do not all give the same figures.
 Its web page “Les data centers en chiffres clés”, updated on 1 June 2026, attributes to the same Bilan prévisionnel a consumption of 15 to 20 TWh in 2030 and 23 to 28 TWh in 2035 “in a rapid decarbonisation pathway”, and a current consumption of about 10 TWh.
-The published document gives 15 and 32 TWh for that pathway, and 4 to 5 TWh in 2024 for dedicated sites.
-This page follows the published document; the web page does not explain the gap.
+The published document gives 15 and 32 TWh for that pathway; for 2024, it gives 4 to 5 TWh for dedicated sites, and 5 to 10 TWh when in-house data centres are added.
+The web page does not say whether its 10 TWh covers dedicated sites only or in-house data centres as well, and does not explain the gap between the pathways.
+This page follows the published document.
 Does a reservation already commit the public?
 Not irreversibly yet.
 At its holder’s request, a reservation can be suspended for one year, renewable once: the capacity remains guaranteed, but the financial and timing conditions may be revised.
@@ -121,6 +122,8 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (RTE), under their own terms.
+Revisions
+5 November 2026 — Clarification: next to the 10 TWh of RTE’s web page, the Bilan prévisionnel also gives 5 to 10 TWh in 2024 including in-house data centres; the web page does not state its scope.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

@@ -1414,6 +1414,14 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         A["n_plus_ipib_mots"] = L["mots"](len(plus_ipib))
         A["plus_ipib"] = ", ".join(x[nom] for x in plus_ipib)
         A["fr_rang_recettes"] = L["ordinal"](rang_rec)
+        # Le rang des recettes ne compte que les pays dont Eurostat publie les recettes : un pays partiel (Danemark,
+        # recettes 2025 non publiées) pourrait devancer la France. Le périmètre se dit au contact du rang (05/11/2026).
+        if L is LOC["fr"]:
+            A["union_recettes"] = ("des %s pays de l'Union dont Eurostat publie les recettes de %s" % (L["mots"](len(rows)), an)
+                                   if PARTIELS else "de l'Union")
+        else:
+            A["union_recettes"] = ("among the %s EU countries whose %s revenue Eurostat publishes" % (L["mots"](len(rows)), an)
+                                   if PARTIELS else "in the Union")
         # Décomposition des faux jumeaux (identité vérifiée : produit = rapport des charges).
         A["j_f_stock"], A["j_f_prix"], A["j_f_rec"] = nb(f_stock, 2), nb(f_prix, 2), nb(f_rec, 2)
         # Les deux droites : rapport des pentes.

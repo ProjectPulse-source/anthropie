@@ -5,6 +5,7 @@ chapo: "Pas du seul fait du vote. Une fois la loi promulguée et publiée, celle
 date: 2026-10-06
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Mise à jour : bilan semestriel du Gouvernement au 30 juin 2026 (XVIe législature : 91 % sur 1 086 mesures ; XVIIe : 67 % sur 518 mesures, lois promulguées jusqu'au 31 décembre 2025). Pour la XVIe, le texte de ce bilan reprend la date du précédent, ce que la page signale."}
   - {date: 2026-11-05, texte: "Correction : la phrase « Toutefois… » appartient au premier alinéa de l'article 1er du code civil ; la voie d'urgence forme le second."}
 donnees: [promesses_appliquer]
 og_title: "Une loi votée s'applique-t-elle tout de suite ? — les mesures d'application en attente — S. Lalut"
@@ -13,7 +14,7 @@ og_image_alt: "Carte de partage : le nombre de mesures d'application encore atte
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "promesses_appliquer"
   nom: "Mesures d'application des lois promulguées de 2017 à 2025, statut des lois, lois d'application directe et taux publiés par le Sénat et le Gouvernement"
-  description: "Statut, loi par loi, des lois promulguées du 1er octobre 2017 au 30 septembre 2025, hors conventions, et état de leurs mesures d'application au 5 octobre 2026 (baromètre de l'application des lois, Assemblée nationale et LexImpact, données DILA) ; tri des observations « sans objet » par règles écrites ; lois d'application directe par session selon le baromètre et selon le Sénat, rapprochées loi par loi ; taux d'application publiés par le Sénat de 2002-2003 à 2024-2025, par segment de définition, et par le Secrétariat général du Gouvernement au 31 décembre 2025."
+  description: "Statut, loi par loi, des lois promulguées du 1er octobre 2017 au 30 septembre 2025, hors conventions, et état de leurs mesures d'application au 5 octobre 2026 (baromètre de l'application des lois, Assemblée nationale et LexImpact, données DILA) ; tri des observations « sans objet » par règles écrites ; lois d'application directe par session selon le baromètre et selon le Sénat, rapprochées loi par loi ; taux d'application publiés par le Sénat de 2002-2003 à 2024-2025, par segment de définition, et par le Secrétariat général du Gouvernement dans son bilan au 30 juin 2026."
   couverture_temporelle: "2002/2026"
   couverture_spatiale: "France"
   variables:
@@ -35,7 +36,7 @@ faq:
   - question: "Combien de lois attendent encore une mesure d'application ?"
     answer: "Au {app.releve}, selon le baromètre de l'application des lois, {app.L_att} des {app.nlois} lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; {app.L_tout} avaient reçu toutes leurs mesures, {app.L_dir} étaient classées sans mesure à prendre et une n'avait pas d'échéancier. Sur les {app.nmes} mesures recensées pour ces lois, {app.A} étaient en attente. Une mesure en attente n'est pas forcément en retard."
   - question: "Quel est le taux d'application des lois ?"
-    answer: "Il dépend des conventions de calcul. Au 31 décembre 2025, le Secrétariat général du Gouvernement publie {app.sgg16_taux} pour les lois de la XVIe législature, décrets seuls, et {app.sgg17_taux} pour celles de la XVIIe, décrets ou arrêtés ; le Sénat publie {app.s2425} pour la session 2024-2025, au 31 mars 2026. Ces taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date : ils ne se classent pas."
+    answer: "Il dépend des conventions de calcul. Dans son bilan au 30 juin 2026, le Secrétariat général du Gouvernement publie {app.sgg16_taux} pour les lois de la XVIe législature, décrets seuls, et {app.sgg17_taux} pour celles de la XVIIe, décrets ou arrêtés ; le Sénat publie {app.s2425} pour la session 2024-2025, au 31 mars 2026. Ces taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date : ils ne se classent pas."
   - question: "Une loi sur deux n'est-elle pas appliquée ?"
     answer: "Au {app.releve}, selon le baromètre, {app.L_att} des {app.nlois} lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente ». Rapportées aux {app.L_mes} lois dont l'échéancier comportait au moins une mesure à prendre, en attente ou prise, elles en forment {app.L_att_pct_mes}, environ une sur deux : c'est un rapport entre deux catégories du baromètre à la date du relevé, non la part des lois en attente parmi celles qui prévoyaient une mesure. Cela ne signifie ni que ces lois étaient entièrement inapplicables, ni que chacune de ces mesures était en retard. Une formule comme « une loi sur deux » peut venir de ce second compte, d'un taux par mesure, d'une seule session ou d'une autre date : avant de la reprendre, il faut savoir ce qu'elle compte, à quelle date et sur quelles lois."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
@@ -119,7 +120,7 @@ Au {{< app-val "releve" >}}, sur les {{< app-val "nmes" >}} mesures recensées p
 
 **«&nbsp;Sans objet&nbsp;» est une étiquette, pas une preuve.** Le producteur range {{< app-val "S" >}} mesures sous cette étiquette et en donne le motif en observation. Triées par règles écrites, ces observations disent le plus souvent que la mesure est déjà appliquée par un texte existant ({{< app-val "tri_deja" >}}), que sa base légale a été abrogée, réécrite ou privée de son renvoi à un décret ({{< app-val "tri_base" >}}), ou qu'aucune mesure n'est nécessaire ({{< app-val "tri_aucune" >}})&nbsp;; {{< app-val "tri_event" >}} portent sur des mesures éventuelles non utilisées, {{< app-val "tri_nonprise" >}} disent qu'un décret n'a pas été pris, et {{< app-val "tri_indet" >}} restent indéterminées, faute de relever d'une seule règle. Ce tri reprend ce qu'écrit le producteur&nbsp;; il ne reclasse aucune mesure.
 
-Restent, parmi les {{< app-val "S" >}} observations «&nbsp;sans objet&nbsp;», les {{< app-val "tri_acte" >}} qui commencent par la référence d'un arrêté ou d'un décret. Pour les lois de 2024-2025, elles sont {{< app-val "obs_acte_2425" >}}. Les {{< app-val "obs_ecartes" >}} observations qui commencent par «&nbsp;Décret non pris&nbsp;», sans référence d'acte, n'y sont pas comptées. Pour la loi n°&nbsp;2025-138, l'observation porte «&nbsp;{{< app-val "cas_2025_138" >}}&nbsp;», et le bilan du Gouvernement au 31&nbsp;décembre 2025 compte sa mesure comme en attente&nbsp;: les deux sources décrivent deux états, à deux dates, et ne se contredisent pas.
+Restent, parmi les {{< app-val "S" >}} observations «&nbsp;sans objet&nbsp;», les {{< app-val "tri_acte" >}} qui commencent par la référence d'un arrêté ou d'un décret. Pour les lois de 2024-2025, elles sont {{< app-val "obs_acte_2425" >}}. Les {{< app-val "obs_ecartes" >}} observations qui commencent par «&nbsp;Décret non pris&nbsp;», sans référence d'acte, n'y sont pas comptées. Pour la loi n°&nbsp;2025-138, l'observation porte «&nbsp;{{< app-val "cas_2025_138" >}}&nbsp;», et le bilan du Gouvernement au 30&nbsp;juin 2026 compte encore sa mesure comme en attente&nbsp;: les deux sources décrivent deux états, à deux dates, et ne se contredisent pas.
 
 <details class="repli"><summary>Ce qui a été vérifié, et comment</summary>
 
@@ -197,7 +198,7 @@ En 2019, il en donnait les raisons&nbsp;: «&nbsp;{{< app-val "cit_diverge" >}}&
 
 **Depuis 2024, des méthodes rapprochées.** Le rapport du Sénat de 2026 l'écrit&nbsp;: «&nbsp;{{< app-val "cit_802_arretes" >}}&nbsp;» Pour le Sénat lui-même, «&nbsp;{{< app-val "cit_802_differees" >}}&nbsp;». Il ajoute&nbsp;: «&nbsp;{{< app-val "cit_802_appreciation" >}}&nbsp;»
 
-**Les taux publiés aujourd'hui.** Au 31&nbsp;décembre 2025, le bilan semestriel du Gouvernement sur la XVI<sup>e</sup>&nbsp;législature «&nbsp;{{< app-val "cit_sgg16_def" >}}&nbsp;» Il donne un taux de {{< app-val "sgg16_taux" >}}, sur {{< app-val "sgg16_n" >}} mesures. Celui de la XVII<sup>e</sup>&nbsp;législature «&nbsp;{{< app-val "cit_sgg17_def" >}}&nbsp;» Il donne {{< app-val "sgg17_taux" >}}, sur {{< app-val "sgg17_n" >}} mesures. Le Sénat publie {{< app-val "s2425" >}} pour la session 2024-2025. Ces trois taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date&nbsp;: le tableau ci-dessous les range par définition, il ne les classe pas. Un taux d'application n'est interprétable qu'avec son périmètre, sa date d'arrêté et ses règles de comptage.
+**Les taux publiés aujourd'hui.** Le bilan semestriel du Gouvernement au 30&nbsp;juin 2026 couvre deux législatures. Pour la XVI<sup>e</sup>, son texte «&nbsp;{{< app-val "cit_sgg16_def" >}}&nbsp;» Cette date est celle du bilan précédent, alors que les chiffres ont changé depuis (1&nbsp;088&nbsp;mesures et 87&nbsp;% au 31&nbsp;décembre 2025)&nbsp;: le bilan donne un taux de {{< app-val "sgg16_taux" >}}, sur {{< app-val "sgg16_n" >}} mesures. Pour la XVII<sup>e</sup>, son texte «&nbsp;{{< app-val "cit_sgg17_def" >}}&nbsp;» Il donne {{< app-val "sgg17_taux" >}}, sur {{< app-val "sgg17_n" >}} mesures. Le Sénat publie {{< app-val "s2425" >}} pour la session 2024-2025. Ces trois taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date&nbsp;: le tableau ci-dessous les range par définition, il ne les classe pas. Un taux d'application n'est interprétable qu'avec son périmètre, sa date d'arrêté et ses règles de comptage.
 
 {{< app-tableau "taux" "La définition de chaque taux" >}}
 
@@ -243,7 +244,7 @@ Cette page compte ce qu'une loi attend encore après son vote. Le livre suit neu
 
 **Sénat**, rapports annuels sur l'application des lois de 2011 à 2026, synthèses et communiqués de 2003 à 2011&nbsp;; le document et la page de chaque valeur et de chaque citation sont donnés dans le jeu de données.
 
-**Secrétariat général du Gouvernement**, bilan semestriel de l'application des lois au 31&nbsp;décembre 2025, lu sur Légifrance par navigateur.
+**Secrétariat général du Gouvernement**, bilan semestriel de l'application des lois au 30&nbsp;juin 2026, lu sur Légifrance par navigateur le 5&nbsp;novembre 2026.
 
 **Conseil d'État**, décisions du 27&nbsp;juillet 2005 (n°&nbsp;261694), du 29&nbsp;juin 2011 (n°&nbsp;343188), du 21&nbsp;janvier 2021 (n°&nbsp;429956) et du 27&nbsp;mai 2021 (n°&nbsp;441660), lues sur ArianeWeb.
 

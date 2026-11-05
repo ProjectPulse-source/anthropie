@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/local-government-debt/, build de 7e0657b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/local-government-debt/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
 Local authorities’ debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.
@@ -473,6 +473,7 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, OFGL and Légifrance), under their own terms.
 Revisions
+4 November 2026 — State of the 2027 finance bill: article 84 (spreading the DILICO repayment) was deleted by the finance committee on 28 October 2026, before its examination in the chamber.
 22 October 2026 — Correction: the progressive contribution would have been based on revenue of the third preceding year (2024 for 2027), not of the year before last.
 22 October 2026 — Draft budget bill for 2027: state of the text after the National Assembly sitting of 19 October 2026 (articles 35 and 37 deleted, article 36 not adopted, DGF raised).
 The amounts of the bill as tabled are still presented, as the initial framing of the debate.

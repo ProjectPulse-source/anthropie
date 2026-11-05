@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-12",
+ "releve_le": "2026-11-05",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Insee (Insee Références 2026), Dares-France Travail",
  "meta": {
   "page": "https://stephane-lalut.com/comment-savoir-si-une-promesse-est-tenue/",
@@ -11,11 +11,11 @@
    },
    "dares": {
     "url": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_defm_stock_france_cvs_trim/exports/csv?use_labels=true",
-    "sha256": "c9e95526e6172c4f6ec7802e6cb0ea50888b218614d303d0bcdf73b9c5d3c022",
+    "sha256": "042d53e2e81932823e36efa42b150c28d44e975e3046201feef2a45a2b653d89",
     "metadonnees": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_defm_stock_france_cvs_trim",
-    "mise_a_jour": "2026-07-28"
+    "mise_a_jour": "2026-10-28"
    },
-   "releve_fige": "2026-10-12 (scripts/sources_mesurer/SHA256SUMS)"
+   "releve_fige": "2026-11-05 (scripts/sources_mesurer/SHA256SUMS)"
   },
   "definitions": {
    "chomeur_bit": "« une personne âgée de 15 ans ou plus sans emploi, disponible pour en occuper un dans les quinze jours et qui a activement cherché un emploi dans le mois précédent (ou en a trouvé un qui commence dans moins de trois mois) » (Insee, ECRT 2026, dossier 1)",
@@ -73,7 +73,7 @@
   "M3 : recoupement partiel (commun 1427, BIT hors A 863, A hors BIT 1466 milliers)",
   "M4 : les trois ensembles restitues egalent la figure 8 imprimee",
   "M5 (coherence algebrique, non temoin) : 49 et 62 % retrouves",
-  "M6 : series Dares A (1996-T1-2026-T2) et A hors RSA (2018-T1-2026-T2)",
+  "M6 : series Dares A (1996-T1-2026-T3) et A hors RSA (2018-T1-2026-T3)",
   "M9 : les deux series montent au 1er trimestre 2025 et reculent au 2e (A +261200 / -167700 ; hors RSA +100300 / -74500)",
   "M8 : serie longue 2012-2025 ; ecarts 2012, 2019, 2020, 2021, 2024 et variations 2025 egaux au texte de l'Insee",
   "M7 : 23 citations et 4 preuves retrouvees mot pour mot ; 3 nombres lus dans les sources ; traductions controlees",
@@ -279,7 +279,8 @@
    "2025-T3": 3284000,
    "2025-T4": 3333800,
    "2026-T1": 3295100,
-   "2026-T2": 3323000
+   "2026-T2": 3323000,
+   "2026-T3": 3353400
   },
   "inscrits_A_hors_RSA_et_jeunes_en_parcours": {
    "2018-T1": 2888200,
@@ -315,7 +316,8 @@
    "2025-T3": 2421600,
    "2025-T4": 2483100,
    "2026-T1": 2437200,
-   "2026-T2": 2435300
+   "2026-T2": 2435300,
+   "2026-T3": 2442600
   }
  },
  "series_longues_insee": {
@@ -386,8 +388,8 @@
   "a_hors_halo": "503 000",
   "a_emploi": "236 000",
   "a_sans_emploi": "1,23 million",
-  "dares_fin": "2e trimestre 2026",
-  "dares_a_fin": "3,32 millions",
+  "dares_fin": "3e trimestre 2026",
+  "dares_a_fin": "3,35 millions",
   "dares_a_hors_fin": "2,44 millions",
   "dares_a_2024t4": "3,13 millions",
   "dares_a_hors_2024t4": "2,38 millions",
@@ -400,8 +402,8 @@
   "ecart_2021": "1,2 million",
   "ecart_2024": "0,7 million",
   "ecart_2025": "0,9 million",
-  "dares_a_var": "194 000",
-  "dares_a_hors_var": "56 900",
+  "dares_a_var": "224 400",
+  "dares_a_hors_var": "64 200",
   "dares_a_t1_2025": "+261 200",
   "dares_a_t2_2025": "−167 700",
   "dares_hors_t1_2025": "+100 300",
@@ -429,7 +431,7 @@
   "cit_asp_suspend": "la labellisation de ces séries pour la période restant à courir entre le 1er janvier 2025 et le 20 mai 2026",
   "cit_asp_attente": "dans l’attente d’être à même d’envisager un processus de labellisation des nouvelles séries, lorsque le régime pérenne sera atteint",
   "cit_dares_label": "a suspendu, à partir du 1er janvier 2025, la labellisation des séries statistiques sur les demandeurs d'emploi produites par France Travail et la Dares",
-  "releve_le": "12/10/2026 (séries Dares mises à jour le 28/07/2026, jusqu'au 2e trimestre 2026 ; Insee, édition du 02/07/2026)"
+  "releve_le": "05/11/2026 (séries Dares mises à jour le 28/10/2026, jusqu'au 3e trimestre 2026 ; Insee, édition du 02/07/2026)"
  },
  "affichage_en": {
   "commun": "1.43 million",
@@ -448,8 +450,8 @@
   "a_hors_halo": "503,000",
   "a_emploi": "236,000",
   "a_sans_emploi": "1.23 million",
-  "dares_fin": "second quarter of 2026",
-  "dares_a_fin": "3.32 million",
+  "dares_fin": "third quarter of 2026",
+  "dares_a_fin": "3.35 million",
   "dares_a_hors_fin": "2.44 million",
   "dares_a_2024t4": "3.13 million",
   "dares_a_hors_2024t4": "2.38 million",
@@ -462,8 +464,8 @@
   "ecart_2021": "1.2 million",
   "ecart_2024": "0.7 million",
   "ecart_2025": "0.9 million",
-  "dares_a_var": "194,000",
-  "dares_a_hors_var": "56,900",
+  "dares_a_var": "224,400",
+  "dares_a_hors_var": "64,200",
   "dares_a_t1_2025": "+261,200",
   "dares_a_t2_2025": "−167,700",
   "dares_hors_t1_2025": "+100,300",
@@ -491,6 +493,6 @@
   "cit_asp_suspend": "the label of these series for the period remaining between 1 January 2025 and 20 May 2026",
   "cit_asp_attente": "until it is in a position to consider a labelling process for the new series, once the permanent regime has been reached",
   "cit_dares_label": "suspended, from 1 January 2025, the label of the statistical series on jobseekers produced by France Travail and the Dares",
-  "releve_le": "2026-10-12 (Dares series updated on 2026-07-28, up to the second quarter of 2026; Insee, edition of 2 July 2026)"
+  "releve_le": "2026-11-05 (Dares series updated on 2026-10-28, up to the third quarter of 2026; Insee, edition of 2 July 2026)"
  }
 }

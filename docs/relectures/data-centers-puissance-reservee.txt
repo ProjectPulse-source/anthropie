@@ -1,10 +1,10 @@
-# relu le 2026-11-04 ; texte servi de /data-centers-puissance-reservee/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /data-centers-puissance-reservee/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Data centers : les gigawatts réservés annoncent-ils la consommation ?
 Le chiffre qui circule est celui des réservations : près de 18 gigawatts en mai 2026, contre environ 5 fin 2024.
 Mais une puissance réservée n’est pas une consommation.
 Plus de la moitié de la puissance réservée en novembre 2025 vise une mise en service à partir de 2030, d’autres réservations ont déjà été abandonnées, et les data centers raccordés au réseau de transport ont consommé près de 1 térawattheure en 2025.
-Page mise à jour le 4 novembre 2026
+Page mise à jour le 5 novembre 2026 · révisions
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données du : 4 novembre 2026 RTE, Bilan prévisionnel 2025-2035 (décembre 2025), Bilan électrique 2025 (février 2026) et page « Les data centers en chiffres clés » (mise à jour du 1er juin 2026) : valeurs lues dans le texte, répartition par statut mesurée sur une figure.
 Télécharger : CSV · JSON
@@ -47,8 +47,9 @@ Ce sont des hypothèses, non des mesures.
 RTE donne lui-même l’ordre de grandeur de ce que ces hypothèses écartent : si l’ensemble des quelque 30 GW réservés par les grands projets, data centers, hydrogène et industrie confondus, fonctionnait à pleine puissance toute l’année, la consommation atteindrait théoriquement environ 240 TWh, « un niveau sans commune mesure » avec ses hypothèses.
 Les publications de RTE ne donnent pas toutes les mêmes chiffres.
 Sa page « Les data centers en chiffres clés », mise à jour le 1er juin 2026, attribue au même Bilan prévisionnel une consommation de 15 à 20 TWh en 2030 et de 23 à 28 TWh en 2035 « dans une trajectoire de décarbonation rapide », et une consommation actuelle d’environ 10 TWh.
-Le document publié donne 15 et 32 TWh pour cette trajectoire, et 4 à 5 TWh en 2024 pour les sites dédiés.
-Cette page suit le document publié ; la page web n’explique pas l’écart.
+Le document publié donne 15 et 32 TWh pour cette trajectoire ; pour 2024, il donne 4 à 5 TWh pour les sites dédiés, et 5 à 10 TWh en y ajoutant les centres de données internes.
+La page web ne dit pas si ses 10 TWh couvrent les seuls sites dédiés ou aussi les centres internes, et n’explique pas l’écart entre les trajectoires.
+Cette page suit le document publié.
 Une réservation engage-t-elle déjà la collectivité ?
 Pas encore de façon irréversible.
 À la demande de son titulaire, une réservation peut être suspendue un an, reconductible une fois : la puissance reste garantie, mais les conditions financières et de délai peuvent être revues.
@@ -124,6 +125,8 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (RTE), sous leurs propres conditions.
+Révisions
+5 novembre 2026 — Précision : face aux 10 TWh de la page web de RTE, le Bilan prévisionnel donne aussi 5 à 10 TWh en 2024 en incluant les centres de données internes ; la page web ne précise pas son périmètre.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

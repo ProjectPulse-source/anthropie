@@ -45,7 +45,7 @@ An independent researcher is a researcher who conducts and publishes work **with
 
 ## The infrastructure: publishing outside the walls, a user's guide
 
-What was impossible twenty years ago is now well equipped. An independent researcher's minimal toolkit:
+Some of the tools below did not exist twenty years ago: ORCID dates from 2012, Zenodo from 2013. An independent researcher's minimal toolkit:
 
 <div class="outils-grille">
 

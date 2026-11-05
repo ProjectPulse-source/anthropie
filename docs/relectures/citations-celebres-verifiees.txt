@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /citations-celebres-verifiees/, build de 393c9a3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /citations-celebres-verifiees/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Citations célèbres : qu’ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ?
 Sur vingt citations célèbres qu’on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n’y ont pas été trouvées.
 Voltaire n’a pas écrit « je me battrai jusqu’à la mort pour que vous ayez le droit de le dire » : la phrase est d’une biographe anglaise, qui l’a reconnue pour sienne en 1939.
@@ -44,7 +44,7 @@ Ce que Hugo a écrit
 Le texte : « Si l’on n’est plus que mille, eh bien, j’en suis !
 Si même / Ils ne sont plus que cent, je brave encor Sylla ; / S’il en demeure dix, je serai le dixième ; / Et s’il n’en reste qu’un, je serai celui-là ! »
 Source : Les Châtiments (1853), « Ultima verba », dernière strophe, datée « Jersey, 2 décembre 1852 » ; édition Hetzel, 1880, p.
-446 (fac-similé, Wikisource).
+430 (fac-similé, Wikisource).
 Ce que l’écart change : le dernier vers est exact.
 C’est le premier de la strophe qui circule retouché, « S’il n’en est plus que mille », calqué sur les deux derniers.
 Hugo écrit « Si l’on » : un an jour pour jour après le coup d’État, il compte les proscrits qui refusent l’Empire et se range parmi eux avant de se dire le dernier.
@@ -52,7 +52,7 @@ Copier la référence
 Lien permanent
 « Et s’il n’en reste qu’un, je serai celui-là ! » — Victor Hugo, Les Châtiments (1853), « Ultima verba », dernière strophe ; éd.
 Hetzel, 1880, p.
-446.
+430.
 Vérification : https://stephane-lalut.com/citations-celebres-verifiees/#hugo-s-il-n-en-reste-qu-un
 « C’est de l’enfer des pauvres qu’est fait le paradis des riches »
 Établie · la phrase change d’auteur (prêtée à Condorcet)
@@ -433,6 +433,8 @@ Quitard, Dictionnaire étymologique, historique et anecdotique des proverbes, 18
 Vérification de Livresque des mots : méthode et corpus de l’édition 2026.
 Sur un mot qui a changé d’auteur : la tabula rasa de Locke.
 Révisions
+5 novembre 2026 — Hugo, « Ultima verba » : la dernière strophe se lit p.
+430 de l’édition Hetzel de 1880 (446 est le numéro de la vue du fac-similé).
 5 novembre 2026 — Correction du bilan par auteur de la vérification de Livresque des mots : les graphies d’un même auteur sont désormais réunies.
 Molière : 41 citations retrouvées sur 44, et non 16 sur 16 ; Voltaire : 32 sur 51, et non 17 sur 29.
 La Fontaine et Hugo ne changent pas.

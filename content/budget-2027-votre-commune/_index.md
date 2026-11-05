@@ -17,6 +17,7 @@ og_image_alt: "Carte de partage : « Budget 2027 : ce qu'il en reste » — les 
 donnees: [dette_collectivites, budget_communes]
 dossier_source: "plf"   # barre du dossier : source = état du projet au Parlement (shortcode dossier-dette)
 journal:
+  - {date: 2026-11-04, texte: "État du projet de loi de finances pour 2027 : l'article 84 (étalement du reversement du DILICO) a été supprimé en commission des finances le 28 octobre 2026, avant son examen en séance."}
   - {date: 2026-10-22, texte: "Correction : les communes ne contribuent pas au DILICO de 2026 (seulement les intercommunalités, les départements et les régions) ; chaque reversement va pour 10 % à la péréquation, la collectivité contributrice récupère 90 % de sa contribution. Exemple chiffré corrigé."}
   - {date: 2026-10-22, texte: "Correction : la contribution progressive se serait assise sur les comptes de 2024 (antépénultième exercice), non de 2025 ; le reversement du DILICO 2025 porte sur les deux tiers restants, non sur le montant initial. Page réorganisée : l'essentiel en tête, le détail ensuite."}
   - {date: 2026-10-22, texte: "Publication : état du texte après la séance de l'Assemblée nationale du 19 octobre 2026."}

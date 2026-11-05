@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de 4e69b33 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can a campaign promise produce results within five years?
 The test case of training general practitioners in France.
@@ -6,7 +6,7 @@ A decision that raises the number of medical students does not reach its final r
 A general practitioner is trained in at least ten years from the first year, twice the length of a presidential term (rules applying since the 2023 academic year).
 Such a decision can still act sooner, because residents provide care under supervision during their training.
 And the number of students admitted does not depend on a single signature: the State sets a target, and each university votes its places.
-Page updated 3 November 2026
+Page updated 5 November 2026 · revisions
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 Suppose a decision is taken today to train more doctors.
@@ -68,10 +68,10 @@ From 2010 to 2020: “Les ministres chargés de l’enseignement supérieur et d
 From 1 September 2020 to 29 December 2023: “Ces objectifs pluriannuels, qui tiennent compte des capacités de formation et des besoins de santé du territoire, sont arrêtés par l’université sur avis conforme de l’agence régionale de santé ou des agences régionales de santé concernées.” [our translation: “These multi-year objectives, which take into account training capacities and the health needs of the territory, are set by the university on the binding opinion of the regional health agency or agencies concerned.”]
 Since 29 June 2025: “Ces objectifs pluriannuels, qui tiennent compte des besoins de santé du territoire en priorité, puis des capacités de formation, sont arrêtés par l’université sur avis conforme des conseils territoriaux de santé concernés et de l’agence régionale de santé ou des agences régionales de santé concernées.” [our translation: “These multi-year objectives, which take into account the health needs of the territory as a priority, then training capacities, are set by the university on the binding opinion of the territorial health councils concerned and of the regional health agency or agencies concerned.”]
 What this division has produced, the ONDPS measures.
-For 2021-2025, the national target set by the State was 51,505 doctors to be trained (order of 13 September 2021, according to the ONDPS).
+For 2021-2025, the national target set by the State was 51,505 doctors to be trained, between a minimum of 48,850 and a maximum of 54,160 (order of 13 September 2021).
 Universities admitted 55,078 students over these five years, to the second year of the first cycle or, through an alternative-entry route, to the third.
 In 2025, they admitted 11,133 for 11,277 places of intake capacity.
-The ONDPS concludes: “Les capacités d’accueil ont été quasiment saturées sur la période.” [our translation: “Intake capacities were almost saturated over the period.”] It also reports a forecast by the medical schools, not an observation of the new academic year: “Pour la rentrée 2026, les UFR n’anticipent pas d’augmentation de capacités d’accueil (0% d’augmentation).” [our translation: “For the 2026 academic year, the medical schools do not anticipate any increase in intake capacities (0% increase).”] The targets for 2026-2030 are being prepared: on 3 July 2025, the ministers launched the “travaux préparatoires à la conférence nationale qui devra proposer les objectifs nationaux pluriannuels” [our translation: “preparatory work for the national conference that is to propose the national multi-year objectives”] (ONDPS).
+The ONDPS concludes: “Les capacités d’accueil ont été quasiment saturées sur la période.” [our translation: “Intake capacities were almost saturated over the period.”] It also reports a forecast by the medical schools, not an observation of the new academic year: “Pour la rentrée 2026, les UFR n’anticipent pas d’augmentation de capacités d’accueil (0% d’augmentation).” [our translation: “For the 2026 academic year, the medical schools do not anticipate any increase in intake capacities (0% increase).”] For 2026-2030, the order of 16 October 2026, published in the Journal officiel of 20 October, sets for medicine a minimum of 61,230 professionals to be trained, with no maximum; on 3 July 2025 the ministers had launched the “travaux préparatoires à la conférence nationale qui devra proposer les objectifs nationaux pluriannuels” [our translation: “preparatory work for the national conference that is to propose the national multi-year objectives”] (ONDPS).
 Raising the national target, which the ministers set by order, is one of the State’s levers.
 But actually increasing admissions also requires suitable university capacities, possibly additional resources and, depending on the decisions envisaged, a change in the legal framework.
 Places, for their part, are voted university by university; at the national level, admissions already fill them.
@@ -242,6 +242,9 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Légifrance, Conseil constitutionnel, Bulletin officiel, DREES and ONDPS), under their own terms.
+Revisions
+5 November 2026 — Update: the 2026-2030 targets are no longer “being prepared”: the order of 16 October 2026 sets for medicine a minimum of 61,230 professionals to be trained.
+The 2021-2025 target (51,505) is now given with its bounds, read in the 2021 order.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

@@ -17,6 +17,7 @@ og_image_alt: "Carte de partage : « L'ajustement local, hors de la dette » —
 donnees: [dette_collectivites]
 date_suit: [dette_generations]  # renvoi chiffré vers « Générations futures » (gen-val inv_loc_part, 18/10/2026)
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-04, texte: "État du projet de loi de finances pour 2027 : l'article 84 (étalement du reversement du DILICO) a été supprimé en commission des finances le 28 octobre 2026, avant son examen en séance."}
   - {date: 2026-10-22, texte: "Projet de loi de finances pour 2027 : état du texte après la séance de l'Assemblée nationale du 19 octobre 2026 (articles 35 et 37 supprimés, article 36 non adopté, DGF relevée). Les montants du projet déposé restent présentés, comme cadrage initial du débat."}
   - {date: 2026-10-18, texte: "Ajout : renvoi vers la part des administrations locales dans le recul de l'investissement net de l'ensemble des administrations publiques."}
   - {date: 2026-10-16, texte: "Correction : rapportée au PIB, la dépense des administrations locales culmine en 2009 et en 2013, à égalité à la précision affichée, et non en 2009 seulement."}

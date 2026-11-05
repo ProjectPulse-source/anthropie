@@ -1,10 +1,10 @@
 {
- "releve_le": "2026-10-12",
+ "releve_le": "2026-11-05",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (données DILA), Sénat, Secrétariat général du Gouvernement, Légifrance, Conseil d'État",
  "meta": {
   "page": "https://stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/",
   "protocole": "fiches de preuve v2, volet Appliquer, E1 à E3 ; phase B de la refonte du 12/10/2026",
-  "dates": "baromètre : version du 05/10/2026 ; rapports du Sénat : pages lues le 06/10/2026 (deux pages ajoutées le 12/10/2026) ; bilan du SGG au 31/12/2025 : page rendue relue le 12/10/2026 ; décisions du Conseil d'État : lues le 12/10/2026 ; releve_le = date de la dernière lecture d'une source",
+  "dates": "baromètre : version du 05/10/2026 ; rapports du Sénat : pages lues le 06/10/2026 (deux pages ajoutées le 12/10/2026) ; bilan du SGG au 30/06/2026 : page rendue lue le 05/11/2026 ; décisions du Conseil d'État : lues le 12/10/2026 ; releve_le = date de la dernière lecture d'une source",
   "sources": {
    "barometre": [
     "# source: https://barometre.assemblee-nationale.fr/barometre_application_lois_assemblee.csv ; version du 05/10/2026 ; sha256 5a79d54f9fec5cd7366a2dabb7ccb3d0a444b317f29d36531d9015dcb52692b8 ; 2059 lois au fichier complet ; extrait : lois publiees du 01/10/2017 au 30/09/2025 (553)",
@@ -48,12 +48,13 @@
     "r22-636|3": "1eefa0e5a017a56e7597801f3282d8325e98310a5142cbaac8ed842e591050f3",
     "r23-624|3": "a87f9eff690f11ab77ca415327096dc408c7eee23116550048f87bc8788fcc72"
    },
-   "sgg_bilan_31_12_2025": {
-    "url": "https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/legislatif-et-reglementaire/application-des-lois/bilan-semestriel-au-31-decembre-2025",
-    "releve": "sgg_bilan_31-12-2025_page_rendue.txt",
-    "sha256_releve": "3232dcae236eb2d06794a0d785aff4f80dacba93ba3bd19f60c03041a7a78cd7",
-    "sha256_texte_rendu_entier": "c5cda67497c80af9be853ab8d71a3a1c5bb238d2150278969b39a79a89d2c030",
-    "canal": "page rendue dans Chrome le 12/10/2026 (Légifrance refuse les scripts) ; empreinte des lignes relevées calculée dans le navigateur"
+   "sgg_bilan": {
+    "date": "30/06/2026",
+    "url": "https://www.legifrance.gouv.fr/contenu/menu/bilan-semestriel-au-30-juin-2026",
+    "releve": "sgg_bilan_30-06-2026_page_rendue.txt",
+    "sha256_releve": "801a2800257c184e15bba2677e2024412fcb55f9a077c01d77e1b6b7dc1fdb1f",
+    "sha256_texte_rendu_entier": "ce32242c46c83496cec7db79d276bc12548af3e1e43f3c62e30e3a2d3f2275c0",
+    "canal": "page rendue dans Chrome le 05/11/2026 (Légifrance refuse les scripts) ; empreinte des lignes relevées calculée dans le navigateur"
    },
    "conseil_etat": {
     "343188": {
@@ -103,7 +104,7 @@
   "A5 bis : « sans objet » commencant par un acte : 98 = 95 references + 3 ecartes a motif nomme ; tri : 448 = 405 classes + 43 indetermines",
   "A8 : statut des lois : chaque loi dans un seul des quatre statuts, somme = champ par session ; 2024-2025 : 56 lois dans les deux sources",
   "A8 bis : 130 lois en attente sur 254 classees avec au moins une mesure a prendre, en attente ou prise (51.2 %), « environ une sur deux »",
-  "A6 : 2025-138 : 1 mesure(s) « sans objet » portant un arrete au barometre, loi sans mesure a prendre ; en attente au SGG (31/12/2025)",
+  "A6 : 2025-138 : 1 mesure(s) « sans objet » portant un arrete au barometre, loi sans mesure a prendre ; en attente au SGG (bilan au 30/06/2026)",
   "A9 : « + 4 points » = 66 - 62 (2023-2024 hors mesures differees), et non 66 - 59",
   "Figures : 8 versions telephone a parite avec la version detaillee (FR et EN) ; temoin : valeur faussee vue"
  ],
@@ -336,18 +337,18 @@
   },
   "attente_differe_sans_date_prevue": 75,
   "attente_sans_date_prevue": 525,
-  "sgg_31_12_2025": {
+  "sgg_bilan_30_06_2026": {
    "sgg16": {
-    "mesures": 1088,
-    "recues": 948,
-    "attente": 140,
-    "taux": 87
+    "mesures": 1086,
+    "recues": 993,
+    "attente": 93,
+    "taux": 91
    },
    "sgg17": {
-    "mesures": 320,
-    "recues": 177,
-    "attente": 143,
-    "taux": 55
+    "mesures": 518,
+    "recues": 345,
+    "attente": 173,
+    "taux": 67
    }
   },
   "senat_2024_2025_plus4": {
@@ -937,16 +938,16 @@
     [
      "Secrétariat général du Gouvernement, bilan semestriel, XVIe législature",
      "lois votées du 1er juillet 2022 au 9 juin 2024 qui appellent des décrets d'application",
-     "décrets (1 088 mesures)",
-     "31 décembre 2025",
-     "87 %"
+     "décrets (1 086 mesures)",
+     "bilan du 30 juin 2026 (le texte de la page dit « au 31 décembre 2025 »)",
+     "91 %"
     ],
     [
      "Secrétariat général du Gouvernement, bilan semestriel, XVIIe législature",
-     "lois publiées du 18 juillet 2024 au 30 juin 2025 qui appellent des décrets ou des arrêtés d'application",
-     "décrets ou arrêtés (320 mesures)",
-     "31 décembre 2025",
-     "55 %"
+     "lois promulguées du 18 juillet 2024 au 31 décembre 2025 qui appellent des décrets ou des arrêtés d'application",
+     "décrets ou arrêtés (518 mesures)",
+     "30 juin 2026",
+     "67 %"
     ],
     [
      "Sénat, rapport sur la session 2024-2025",
@@ -1354,16 +1355,16 @@
     [
      "General Secretariat of the Government, half-yearly report, 16th legislature",
      "laws passed from 1 July 2022 to 9 June 2024 that call for implementing decrees",
-     "decrees (1,088 measures)",
-     "31 December 2025",
-     "87%"
+     "decrees (1,086 measures)",
+     "report of 30 June 2026 (the page text says \"at 31 December 2025\")",
+     "91%"
     ],
     [
      "General Secretariat of the Government, half-yearly report, 17th legislature",
-     "laws published from 18 July 2024 to 30 June 2025 that call for implementing decrees or orders",
-     "decrees or orders (320 measures)",
-     "31 December 2025",
-     "55%"
+     "laws promulgated from 18 July 2024 to 31 December 2025 that call for implementing decrees or orders",
+     "decrees or orders (518 measures)",
+     "30 June 2026",
+     "67%"
     ],
     [
      "Senate, report on the 2024-2025 session",
@@ -1429,10 +1430,10 @@
   "nsessions": "huit",
   "nautres": "sept",
   "nsegments": "six",
-  "sgg16_taux": "87 %",
-  "sgg17_taux": "55 %",
-  "sgg16_n": "1 088",
-  "sgg17_n": "320",
+  "sgg16_taux": "91 %",
+  "sgg17_taux": "67 %",
+  "sgg16_n": "1 086",
+  "sgg17_n": "518",
   "s1718_hd": "86 %",
   "sgg1718": "85 %",
   "plus4": "4",
@@ -1440,7 +1441,7 @@
   "s2324": "59 %",
   "s2425": "66 %",
   "releve": "05/10/2026",
-  "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 31/12/2025, page relue le 12/10/2026 ; décisions du Conseil d'État lues le 12/10/2026",
+  "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 30/06/2026, page lue le 05/11/2026 ; décisions du Conseil d'État lues le 12/10/2026",
   "senat_1819": "72 %",
   "sgg_1819": "82,4 %",
   "cit_sgg_1718": "Au 31 mars 2019, ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
@@ -1488,7 +1489,7 @@
   "cit_art13": "Le Président de la République signe les ordonnances et les décrets délibérés en Conseil des ministres.",
   "cit_art22": "Les actes du Premier ministre sont contresignés, le cas échéant, par les ministres chargés de leur exécution.",
   "cit_sgg16_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application.",
-  "cit_sgg17_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d'application.",
+  "cit_sgg17_def": "fait apparaître le taux d'application au 30 juin 2026 des lois qui, parmi celles promulguées entre le 18 juillet 2024 et le 31 décembre 2025, appellent des décrets ou des arrêtés d'application.",
   "cit_cciv_tr": "However, provisions whose implementation requires implementing measures do not enter into force until those measures themselves enter into force.",
   "cit_cciv_urg_tr": "In case of urgency, laws whose promulgation decree so prescribes enter into force on their publication",
   "cit_sgg_1718_tr": "On 31 March 2019, these 28 laws called for 461 implementing regulations and we adopted 393 of them, an implementation rate of 85%",
@@ -1516,7 +1517,7 @@
   "cit_2021_62_tr": "Including implementing measures adopted but not planned, this rate is 63% (62% for the previous year)",
   "cit_six_mois_tr": "this year, for the first time, in order to measure the number of regulations adopted only at the end of the six-month period the Government sets itself, the period used includes three months fewer for the laws promulgated and three months more for the regulations adopted.",
   "cit_sgg16_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 and 9 June 2024, call for implementing decrees.",
-  "cit_sgg17_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July 2024 and 30 June 2025, call for implementing decrees or orders.",
+  "cit_sgg17_def_tr": "shows the implementation rate at 30 June 2026 of the laws which, among those promulgated between 18 July 2024 and 31 December 2025, call for implementing decrees or orders.",
   "cit_ce_principe_tr": "The exercise of regulatory power entails not only the right but also the obligation to take, within a reasonable time, the measures that the application of the law necessarily implies, except where compliance with France's international commitments would prevent it.",
   "cit_ce_arrete_tr": "Where a decree adopted for the application of a law itself refers to a ministerial order the determination of certain measures necessary for that application, that order must also be issued within a reasonable time.",
   "cit_ce_precision_tr": "these provisions are not precise enough to allow their entry into force in the absence of the implementing decree, whose adoption they moreover provide for",
@@ -1581,10 +1582,10 @@
   "nsessions": "eight",
   "nautres": "seven",
   "nsegments": "six",
-  "sgg16_taux": "87%",
-  "sgg17_taux": "55%",
-  "sgg16_n": "1,088",
-  "sgg17_n": "320",
+  "sgg16_taux": "91%",
+  "sgg17_taux": "67%",
+  "sgg16_n": "1,086",
+  "sgg17_n": "518",
   "s1718_hd": "86%",
   "sgg1718": "85%",
   "plus4": "4",
@@ -1592,7 +1593,7 @@
   "s2324": "59%",
   "s2425": "66%",
   "releve": "5 October 2026",
-  "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General Secretariat of the Government report at 31 December 2025, page reread on 12 October 2026; Conseil d'État decisions read on 12 October 2026",
+  "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General Secretariat of the Government report at 30 June 2026, page read on 5 November 2026; Conseil d'État decisions read on 12 October 2026",
   "senat_1819": "72%",
   "sgg_1819": "82.4%",
   "cit_sgg_1718": "Au 31 mars 2019, ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
@@ -1631,7 +1632,7 @@
   "cit_cciv": "Toutefois, l'entrée en vigueur de celles de leurs dispositions dont l'exécution nécessite des mesures d'application est reportée à la date d'entrée en vigueur de ces mesures.",
   "cit_cciv_urg": "En cas d'urgence, entrent en vigueur dès leur publication les lois dont le décret de promulgation le prescrit",
   "cit_sgg16_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles votées entre le 1er juillet 2022 et le 9 juin 2024, appellent des décrets d'application.",
-  "cit_sgg17_def": "fait apparaître le taux d'application au 31 décembre 2025 des lois qui, parmi celles publiées entre le 18 juillet 2024 et le 30 juin 2025, appellent des décrets ou des arrêtés d'application.",
+  "cit_sgg17_def": "fait apparaître le taux d'application au 30 juin 2026 des lois qui, parmi celles promulguées entre le 18 juillet 2024 et le 31 décembre 2025, appellent des décrets ou des arrêtés d'application.",
   "cit_cciv_tr": "However, provisions whose implementation requires implementing measures do not enter into force until those measures themselves enter into force.",
   "cit_cciv_urg_tr": "In case of urgency, laws whose promulgation decree so prescribes enter into force on their publication",
   "cit_sgg_1718_tr": "On 31 March 2019, these 28 laws called for 461 implementing regulations and we adopted 393 of them, an implementation rate of 85%",
@@ -1659,7 +1660,7 @@
   "cit_2021_62_tr": "Including implementing measures adopted but not planned, this rate is 63% (62% for the previous year)",
   "cit_six_mois_tr": "this year, for the first time, in order to measure the number of regulations adopted only at the end of the six-month period the Government sets itself, the period used includes three months fewer for the laws promulgated and three months more for the regulations adopted.",
   "cit_sgg16_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those passed between 1 July 2022 and 9 June 2024, call for implementing decrees.",
-  "cit_sgg17_def_tr": "shows the implementation rate at 31 December 2025 of the laws which, among those published between 18 July 2024 and 30 June 2025, call for implementing decrees or orders.",
+  "cit_sgg17_def_tr": "shows the implementation rate at 30 June 2026 of the laws which, among those promulgated between 18 July 2024 and 31 December 2025, call for implementing decrees or orders.",
   "cit_ce_principe_tr": "The exercise of regulatory power entails not only the right but also the obligation to take, within a reasonable time, the measures that the application of the law necessarily implies, except where compliance with France's international commitments would prevent it.",
   "cit_ce_arrete_tr": "Where a decree adopted for the application of a law itself refers to a ministerial order the determination of certain measures necessary for that application, that order must also be issued within a reasonable time.",
   "cit_ce_precision_tr": "these provisions are not precise enough to allow their entry into force in the absence of the implementing decree, whose adoption they moreover provide for",

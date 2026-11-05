@@ -60,10 +60,12 @@ EIA_BULK = "https://api.eia.gov/bulk/INTL.zip"
 OWID = "https://catalog.ourworldindata.org/energy/owid_energy/owid_energy.csv"
 OWID_CODEBOOK = "https://catalog.ourworldindata.org/energy/owid_energy/owid_energy.codebook.csv"
 OWID_COL = "total_energy_twh"
-# Total mondial publié par l'Energy Institute (Statistical Review of World Energy 2025, « Total energy supply », Total World,
-# 2024 : 592,22 EJ ; méthode du contenu physique adoptée en 2025, p. 69). Valeur TRANSCRITE (le site de l'EI refuse les
-# scripts ; PDF lu le 26/10/2026) : elle qualifie la provenance du témoin et n'entre dans aucun calcul publié.
-EI_PUBLIE = (2024, 592.22)
+# Total mondial publié par l'Energy Institute (Statistical Review of World Energy 2026, « Total energy supply », Total World,
+# 2024 : 592,18 EJ, p. 23 du rapport ; méthode du contenu physique). Valeur TRANSCRITE (rapport PDF lu le 05/11/2026 ;
+# l'édition 2025 donnait 592,22, lue le 26/10/2026) : elle qualifie la provenance du témoin et n'entre dans aucun calcul
+# publié. Elle porte son édition : si Our World in Data passe à une autre édition, la garde s'arrête et la valeur se relit.
+EI_PUBLIE = (2024, 592.18)
+EI_PUBLIE_ED = 2026
 EUROSTAT = ("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_eff"
             "?geo=EU27_2020&nrg_bal=PEC_EED&unit=MTOE&format=JSON&lang=fr")
 AN_ES = 2005                                  # première année de l'indicateur d'Eurostat
@@ -309,6 +311,9 @@ def gardes(c: dict) -> int:
       "convention EIA de %d a %d (hydro et eolien %.0f-%.0f Btu/kWh, solaire %.0f la derniere annee, nucleaire des %.0f) : "
       "la phrase sur la frontiere deviendrait fausse"
       % (c["an_conv0"], c["an_conv"], c["btu_hydro_min"], c["btu_hydro_max"], c["btu_sol"], c["btu_nuc_min"]))
+    g(c["edition_ei"] == EI_PUBLIE_ED,
+      "edition du temoin (%s) differente de celle de la valeur transcrite (%d) : relire le total dans le rapport"
+      % (c["edition_ei"], EI_PUBLIE_ED))
     g(abs(c["ei_owid"] / EI_PUBLIE[1] - 1) < 0.005,
       "provenance du temoin : %.2f EJ en %d contre %.2f publies par l'Energy Institute" % (c["ei_owid"], EI_PUBLIE[0], EI_PUBLIE[1]))
     T = c["T"]
@@ -350,7 +355,7 @@ def affichage(c: dict, lang: str) -> dict:
          "m_dy_pct": f(c["M"][DEBUT]["dY_pct"]), "an_es": str(AN_ES),
          "es_eia_pct": f(-c["ue_es"]["EIA"]), "es_ei_pct": f(-c["ue_es"]["EI"]), "es_es_pct": f(-c["ue_es"]["Eurostat"]),
          "es_ej": ej(c["es_ej"] * 1e6), "btu_sol": f(c["btu_sol"], 0),
-         "ei_publie": f(EI_PUBLIE[1], 2), "an_ei_publie": str(EI_PUBLIE[0]),
+         "ei_publie": f(EI_PUBLIE[1], 2), "an_ei_publie": str(EI_PUBLIE[0]), "ei_publie_ed": str(EI_PUBLIE_ED),
          "btu_hydro": f(c["btu_hydro"], 0), "btu_nuc": f(round(c["btu_nuc"], -2), 0), "an_conv0": str(c["an_conv0"]),
          "btu_nuc_min": f(round(c["btu_nuc_min"], -2), 0), "btu_nuc_max": f(round(c["btu_nuc_max"], -2), 0),
          "poussee_ej": ej(W_["pop"] + W_["rev"]), "lmoy_ej": ej(L(W_["E0"], W_["E1"])),

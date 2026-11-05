@@ -1,9 +1,9 @@
 # Releve fige du volet Mesurer (scripts/update_promesses_mesurer.py). Le generateur ne lit QUE ces fichiers et verifie
 # leur empreinte (garde M0) ; --relever relit les sources en direct et reecrit ce fichier (geste explicite, jamais sous --check).
-# releve: 2026-10-12 (Insee xlsx, CSV et metadonnees Dares relus en direct ce jour : octets identiques a l'archive du 07/10)
+# releve: 2026-11-05 (sources en direct relues par --relever)
 0b899cec53a8a68d058987e87fcdc3108b56f5d85cb48bbad61d74f547160f82  ECRT2026-D1.xlsx
-c9e95526e6172c4f6ec7802e6cb0ea50888b218614d303d0bcdf73b9c5d3c022  dares_defm_stock_france_cvs_trim.csv
-b26f9704dcd746147479f96fe3bd09a01947b1f5307ffcc60e7065c9ccc0731a  dares_defm_stock_france_cvs_trim_meta.json
+042d53e2e81932823e36efa42b150c28d44e975e3046201feef2a45a2b653d89  dares_defm_stock_france_cvs_trim.csv
+4805e1d4bb753b9c558da3e7dbc22ac48e3262d59989ceee26c7e45cb668c418  dares_defm_stock_france_cvs_trim_meta.json
 24240ff9771f74e560fd1103a22c7e9cd263a328a52b098099d66c5c75ed87cf  insee_ecrt2026_d1_texte.txt
 45f29dbf4f2cba377291c4f13cd829552ffd04881cc415cf365dbb4131832cbd  insee_ve2026_encadre5_extrait.txt
 6898da1b3ef979af1e04b9fd53289ac33e4ded62bb51a982a033598de6f9808a  insee_ir192_2026-08-07_extrait.txt

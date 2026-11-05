@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de 4e69b33 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Une promesse peut-elle produire ses effets en cinq ans ?
 Le cas-test de la formation des médecins généralistes.
@@ -6,7 +6,7 @@ Une décision qui augmente le nombre d’étudiants n’atteint pas son résulta
 Un généraliste se forme en au moins dix ans depuis la première année, deux fois la durée d’un mandat présidentiel (règles applicables depuis la rentrée 2023).
 Une telle décision peut pourtant agir avant, car les internes soignent sous supervision pendant leur formation.
 Et le nombre d’étudiants admis ne dépend pas d’une seule signature : l’État fixe un objectif, chaque université vote ses places.
-Page mise à jour le 3 novembre 2026
+Page mise à jour le 5 novembre 2026 · révisions
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 On décide aujourd’hui de former davantage de médecins.
@@ -63,10 +63,10 @@ De 2010 à 2020 : « Les ministres chargés de l’enseignement supérieur et de
 Du 1er septembre 2020 au 29 décembre 2023 : « Ces objectifs pluriannuels, qui tiennent compte des capacités de formation et des besoins de santé du territoire, sont arrêtés par l’université sur avis conforme de l’agence régionale de santé ou des agences régionales de santé concernées. »
 Depuis le 29 juin 2025 : « Ces objectifs pluriannuels, qui tiennent compte des besoins de santé du territoire en priorité, puis des capacités de formation, sont arrêtés par l’université sur avis conforme des conseils territoriaux de santé concernés et de l’agence régionale de santé ou des agences régionales de santé concernées. »
 Ce que ce partage a produit, l’ONDPS le mesure.
-Pour 2021-2025, l’objectif national fixé par l’État était de 51 505 médecins à former (arrêté du 13 septembre 2021, selon l’ONDPS).
+Pour 2021-2025, l’objectif national fixé par l’État était de 51 505 médecins à former, entre un seuil minimal de 48 850 et un seuil maximal de 54 160 (arrêté du 13 septembre 2021).
 Les universités ont admis 55 078 étudiants sur ces cinq ans, en deuxième année du premier cycle ou, par une passerelle, en troisième.
 En 2025, elles en ont admis 11 133 pour 11 277 places de capacité d’accueil.
-L’ONDPS en conclut : « Les capacités d’accueil ont été quasiment saturées sur la période. » Il rapporte aussi une prévision des UFR, non un constat de la rentrée : « Pour la rentrée 2026, les UFR n’anticipent pas d’augmentation de capacités d’accueil (0 % d’augmentation). » Les objectifs de 2026-2030 sont en préparation : le 3 juillet 2025, les ministres ont lancé les « travaux préparatoires à la conférence nationale qui devra proposer les objectifs nationaux pluriannuels » (ONDPS).
+L’ONDPS en conclut : « Les capacités d’accueil ont été quasiment saturées sur la période. » Il rapporte aussi une prévision des UFR, non un constat de la rentrée : « Pour la rentrée 2026, les UFR n’anticipent pas d’augmentation de capacités d’accueil (0 % d’augmentation). » Pour 2026-2030, l’arrêté du 16 octobre 2026, publié au Journal officiel du 20 octobre, fixe pour la médecine un seuil minimal de 61 230 professionnels à former, sans seuil maximal ; les ministres avaient lancé le 3 juillet 2025 les « travaux préparatoires à la conférence nationale qui devra proposer les objectifs nationaux pluriannuels » (ONDPS).
 Relever l’objectif national, que fixent les ministres par arrêté, est l’un des leviers de l’État.
 Mais augmenter effectivement les admissions suppose aussi des capacités universitaires adaptées, éventuellement des moyens supplémentaires et, selon les décisions envisagées, une évolution du cadre juridique.
 Les places, elles, se votent université par université ; à l’échelle nationale, les admissions les remplissent déjà.
@@ -237,6 +237,9 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Légifrance, Bulletin officiel santé, DREES et ONDPS), sous leurs propres conditions.
+Révisions
+5 novembre 2026 — Mise à jour : les objectifs de 2026-2030 ne sont plus « en préparation » : l’arrêté du 16 octobre 2026 fixe pour la médecine un seuil minimal de 61 230 professionnels à former.
+L’objectif de 2021-2025 (51 505) est désormais donné avec ses bornes, lues dans l’arrêté de 2021.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

@@ -44,7 +44,7 @@ Un chercheur indépendant est un chercheur qui conduit et publie des travaux **s
 
 ## L'infrastructure&nbsp;: publier hors les murs, mode d'emploi
 
-Ce qui était impossible il y a vingt ans est aujourd'hui outillé. La boîte à outils minimale d'un chercheur indépendant&nbsp;:
+Une partie des outils qui suivent n'existait pas il y a vingt ans&nbsp;: ORCID date de 2012, Zenodo de 2013. La boîte à outils minimale d'un chercheur indépendant&nbsp;:
 
 <div class="outils-grille">
 

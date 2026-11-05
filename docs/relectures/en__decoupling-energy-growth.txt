@@ -1,10 +1,10 @@
-# relu le 2026-11-04 ; texte servi de /en/decoupling-energy-growth/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/decoupling-energy-growth/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is the world economy decoupling from energy?
 The world economy uses less and less energy for each unit of wealth it produces: 28.5% less in 2024 than in 2000.
 Its energy consumption, meanwhile, rose by 58% over the same period.
 Falling energy intensity slowed the rise; it did not reverse it.
-Page published 26 October 2026 · revisions
+Page updated 5 November 2026 · revisions
 ↓ Charts, data and citations to reuseReuse this page
 Data as of: 26 October 2026 EIA, international data: primary energy consumption, GDP at purchasing power parity in constant prices and population, world and European Union, 1980 to 2024.
 Download: CSV · JSON
@@ -148,7 +148,7 @@ EIA (U.S.
 Energy Information Administration), international data, bulk file INTL.zip read by script: total energy consumption, GDP at purchasing power parity, population.
 Measurement convention read from the same file (hydro, wind, solar and nuclear electricity generation and consumption).
 Author’s calculations: logarithmic mean Divisia index decomposition.
-Energy Institute, Statistical Review of World Energy, 2026 edition, total energy supply (physical energy content method), read in Our World in Data’s dataset (owid_energy), as the Energy Institute’s site refuses automated reads; the 2024 world total is checked against the one published in the 2025 edition (592.22 exajoules), a value transcribed from the report.
+Energy Institute, Statistical Review of World Energy, 2026 edition, total energy supply (physical energy content method), read in Our World in Data’s dataset (owid_energy); the 2024 world total is checked against the one published in the report of the 2026 edition (592.18 exajoules), a value transcribed from the report.
 World Bank, GDP in constant prices at purchasing power parity and at market exchange rates, and population.
 Eurostat, primary energy consumption (Energy Efficiency Directive indicator), EU-27.
 Paul E.

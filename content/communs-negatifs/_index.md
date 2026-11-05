@@ -6,6 +6,7 @@ description: "Les communs négatifs désignent ce dont nous héritons collective
 date: 2026-07-26
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Précision : l'article « Les communs négatifs » de la revue Études (2021) est d'Alexandre Monnin seul."}
   - {date: 2026-11-05, texte: "Correction : c'est Alexandre Monnin qui range les technologies numériques parmi les communs négatifs candidats ; AWP-06 reprend sa proposition, sous conditions. L'externalité relève de l'analyse économique, non de la comptabilité."}
 og_title: "Qu'est-ce que les communs négatifs ? — définition et sources — S. Lalut"
 faq:
@@ -20,7 +21,7 @@ faq:
   - question: "Les communs négatifs sont-ils une notion pessimiste ?"
     answer: "Non — c'est une notion d'action. Elle déplace l'attention des seules promesses (construire, innover) vers les gestes négligés : maintenir, refermer, démanteler, dépolluer. Des métiers, des institutions et des savoir-faire entiers tiennent dans ce « soin des restes »."
   - question: "Qui a introduit la notion ?"
-    answer: "Elle s'est stabilisée autour des travaux d'Alexandre Monnin, Emmanuel Bonnet et Diego Landivar (Héritage et fermeture, 2021 ; article « Les \"communs négatifs\" », revue Études, 2021), dans le champ de l'écologie du démantèlement et de la redirection écologique."
+    answer: "Elle s'est stabilisée autour des travaux d'Alexandre Monnin, Emmanuel Bonnet et Diego Landivar (Héritage et fermeture, 2021, des trois auteurs ; article « Les \"communs négatifs\" » d'Alexandre Monnin, revue Études, 2021), dans le champ de l'écologie du démantèlement et de la redirection écologique."
   - question: "Où la trouve-t-on appliquée dans le corpus anthropique ?"
     answer: "Dans AWP-06 (le numérique comme commun négatif candidat), au glossaire, et en filigrane de la dette technologique : une dette dont les créanciers sont les générations qui hériteront des équipements."
 fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau

@@ -7,6 +7,7 @@ chapo: "Sur vingt citations célèbres qu'on leur prête, quinze se lisent dans 
 date: 2026-11-01T06:00:00+01:00  # heure de Paris : une date nue se lit minuit UTC
 lastmod: 2026-11-05T12:00:00+01:00
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Hugo, « Ultima verba » : la dernière strophe se lit p. 430 de l'édition Hetzel de 1880 (446 est le numéro de la vue du fac-similé)."}
   - date: 2026-11-05
     texte: "Correction du bilan par auteur de la vérification de Livresque des mots : les graphies d'un même auteur sont désormais réunies. Molière : 41 citations retrouvées sur 44, et non 16 sur 16 ; Voltaire : 32 sur 51, et non 17 sur 29. La Fontaine et Hugo ne changent pas."
 og_title: "Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ? — S. Lalut"
@@ -96,9 +97,9 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     circule=`«&nbsp;<mark>S'il n'en est plus que mille</mark>… et s'il n'en reste qu'un, je serai celui-là&nbsp;»`
     ecrit_lbl=`Ce que Hugo a écrit`
     ecrit=`«&nbsp;<mark>Si l'on n'est plus que mille</mark>, eh bien, j'en suis&nbsp;! […] Et s'il n'en reste qu'un, je serai celui-là&nbsp;!&nbsp;»`
-    ref=`« Et s'il n'en reste qu'un, je serai celui-là ! » — Victor Hugo, Les Châtiments (1853), « Ultima verba », dernière strophe ; éd. Hetzel, 1880, p. 446.` >}}
+    ref=`« Et s'il n'en reste qu'un, je serai celui-là ! » — Victor Hugo, Les Châtiments (1853), « Ultima verba », dernière strophe ; éd. Hetzel, 1880, p. 430.` >}}
 - **Le texte**&nbsp;: «&nbsp;Si l'on n'est plus que mille, eh bien, j'en suis&nbsp;! Si même / Ils ne sont plus que cent, je brave encor Sylla&nbsp;; / S'il en demeure dix, je serai le dixième&nbsp;; / Et s'il n'en reste qu'un, je serai celui-là&nbsp;!&nbsp;»
-- **Source**&nbsp;: *Les Châtiments* (1853), «&nbsp;Ultima verba&nbsp;», dernière strophe, datée «&nbsp;Jersey, 2 décembre 1852&nbsp;»&nbsp;; édition Hetzel, 1880, p.&nbsp;446 ([fac-similé, Wikisource](https://fr.wikisource.org/wiki/Page:Hugo_-_Les_Ch%C3%A2timents_(Hetzel,_1880).djvu/446)).
+- **Source**&nbsp;: *Les Châtiments* (1853), «&nbsp;Ultima verba&nbsp;», dernière strophe, datée «&nbsp;Jersey, 2 décembre 1852&nbsp;»&nbsp;; édition Hetzel, 1880, p.&nbsp;430 ([fac-similé, Wikisource](https://fr.wikisource.org/wiki/Page:Hugo_-_Les_Ch%C3%A2timents_(Hetzel,_1880).djvu/446)).
 - **Ce que l'écart change**&nbsp;: le dernier vers est exact. C'est le premier de la strophe qui circule retouché, «&nbsp;S'il n'en est plus que mille&nbsp;», calqué sur les deux derniers. Hugo écrit «&nbsp;Si l'on&nbsp;»&nbsp;: un an jour pour jour après le coup d'État, il compte les proscrits qui refusent l'Empire et se range parmi eux avant de se dire le dernier.
 {{< /citation-entree >}}
 

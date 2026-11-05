@@ -392,6 +392,12 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
             raise Arret("D5 : somme DREES %s != total ONDPS (ecart %d)" % (per, ecarts[per]))
     g.append("D5 : DREES = ONDPS sur 2001-2015 ; ecart publie 2016-2020 : %+d" % ecarts["2016-2020"])
     o = S["ondps"]
+    # Témoin croisé : l'objectif 2021-2025 que l'ONDPS rapporte est celui de l'arrêté lu au Journal officiel.
+    if ARRETES_ONP["2021"]["central"] != o["onp_2021_2025"]:
+        raise Arret("D6 ter : ONP 2021-2025 de l'ONDPS (%d) != objectif de l'arrete du 13/09/2021 (%d)"
+                    % (o["onp_2021_2025"], ARRETES_ONP["2021"]["central"]))
+    if not ARRETES_ONP["2021"]["min"] < ARRETES_ONP["2021"]["central"] < ARRETES_ONP["2021"]["max"]:
+        raise Arret("D6 ter : bornes de l'arrete de 2021 incoherentes")
     if S["pdf_sha"] != o["sha256_pdf"]:
         raise Arret("D6 : le PDF n'est pas celui de la transcription")
     if sum(o["admis_medecine"].values()) != o["total_admis_2021_2025"]:
@@ -514,6 +520,8 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "places_2020": n(r["dd76"][2020]), "rapport_baisse": n(r["dd76"][1972] / r["dd76"][r["amin"]], 1),
         "admis_2025": n(o["admis_medecine"]["2025"]), "capacites_2025": n(o["capacites_2025"]),
         "admis_2021_2025": n(o["total_admis_2021_2025"]), "onp": n(o["onp_2021_2025"]),
+        "onp_min": n(ARRETES_ONP["2021"]["min"]), "onp_max": n(ARRETES_ONP["2021"]["max"]),
+        "onp_2630_min": n(ARRETES_ONP["2026"]["min"]),
         "admis_2016_2020": n(q["2016-2020"]),
         "hausse_quinquennale": n(100 * (o["total_admis_2021_2025"] / q["2016-2020"] - 1), 0),
         "hausse_drees": n(100 * (o["total_admis_2021_2025"] / (q["2016-2020"] + r["ecarts"]["2016-2020"]) - 1), 0),
@@ -524,6 +532,16 @@ def affichage(r: dict, lang: str = "fr") -> dict:
                      ("12 October 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; "
                       "DREES, 2 July 2026; ONDPS, 19 December 2025)"),
     }
+
+
+# Objectifs nationaux pluriannuels (médecine), valeurs TRANSCRITES des arrêtés, lus sur Légifrance par navigateur le
+# 05/11/2026 (Légifrance refuse les scripts) : arrêté du 13/09/2021 (JORFTEXT000044053576, JORF n° 0217 du 17/09/2021),
+# art. 2, 1° : « est défini à 51 505 et encadré par un seuil minimal d'évolution fixé à 48 850 et un seuil maximal
+# d'évolution fixé à 54 160 » ; arrêté du 16/10/2026 (JORFTEXT000054999264, NOR SFHH2618848A, JORF n° 0245 du
+# 20/10/2026), art. 2, 1° : « Pour la médecine, il est défini à un seuil minimal de 61 230 » (total de l'annexe I : 61 230),
+# sans seuil maximal. Garde D6 ter : l'objectif 2021-2025 égale celui que transcrit la note de l'ONDPS.
+ARRETES_ONP = {"2021": {"central": 51505, "min": 48850, "max": 54160},
+               "2026": {"min": 61230}}
 
 
 # ------------------------------------------------------------------ gardes de prose (qualification Q, temporalité T)

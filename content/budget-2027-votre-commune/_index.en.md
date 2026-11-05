@@ -15,6 +15,7 @@ og_image_alt: "Share card: “Budget 2027: what is left of it” — the five me
 donnees: [dette_collectivites, budget_communes]
 dossier_source: "plf"
 journal:
+  - {date: 2026-11-04, texte: "State of the 2027 finance bill: article 84 (spreading the DILICO repayment) was deleted by the finance committee on 28 October 2026, before its examination in the chamber."}
   - {date: 2026-10-22, texte: "Correction: municipalities do not contribute to the 2026 DILICO (only inter-municipal bodies, departments and regions); 10% of each repayment goes to equalisation, so a contributing authority recovers 90% of its contribution. Worked example corrected."}
   - {date: 2026-10-22, texte: "Correction: the progressive contribution would have been based on the 2024 accounts (third preceding year), not 2025; the repayment of the 2025 DILICO concerns the remaining two thirds, not the initial amount. Page reorganised: the essentials first, the detail after."}
   - {date: 2026-10-22, texte: "Publication: state of the text after the National Assembly sitting of 19 October 2026."}

@@ -128,6 +128,6 @@ Cette page suit un seul mot, d'Aristote à Leibniz. *L'Odyssée des idées* repl
 
 <details class="repli"><summary>Comment ces citations ont été vérifiées</summary>
 
-Chaque citation a été relue le 17&nbsp;octobre 2026 dans le texte d'époque ou son fac-similé&nbsp;: l'*Essai* de Locke dans l'édition de 1690, la traduction de Coste dans l'édition de 1735, la préface des *Nouveaux Essais* dans l'édition Flammarion de 1921, la *Somme* dans le texte latin du *Corpus Thomisticum*. La maxime complétée par Leibniz («&nbsp;*nisi ipse intellectus*&nbsp;») est citée d'après deux sources concordantes, sans relecture de l'édition d'époque. La date de parution des *Deux Traités* (fin 1689, page de titre 1690) suit l'usage établi des bibliographies de Locke.
+Chaque citation a été relue le 17&nbsp;octobre 2026 dans le texte d'époque ou son fac-similé&nbsp;: l'*Essai* de Locke dans l'édition de 1690, la traduction de Coste dans l'édition de 1735, la préface des *Nouveaux Essais* dans l'édition Flammarion de 1921, la *Somme* dans le texte latin du *Corpus Thomisticum*. La maxime complétée par Leibniz («&nbsp;*nisi ipse intellectus*&nbsp;») a été relue le 5&nbsp;novembre 2026 dans l'édition originale de Raspe (*Œuvres philosophiques*, 1765) et dans celle de Gerhardt (*Die philosophischen Schriften*, t.&nbsp;V, 1882). La date de parution des *Deux Traités* (fin 1689, page de titre 1690) suit l'usage établi des bibliographies de Locke.
 
 </details>

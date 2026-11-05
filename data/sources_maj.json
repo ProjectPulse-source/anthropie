@@ -195,7 +195,7 @@
    "objet": "Chômage au sens du BIT, demandeurs d'emploi",
    "mode": "manuel", "pages": ["/comment-savoir-si-une-promesse-est-tenue/", "/en/how-can-we-tell-whether-a-promise-was-kept/"],
    "generateurs": ["update_promesses_mesurer.py"], "jeu": "data/promesses_mesurer.json",
-   "cadence": "calendaire (séries trimestrielles)", "nature": "calendaire (séries trimestrielles)", "revoir_avant": "2027-01-12"
+   "cadence": "calendaire (séries trimestrielles)", "nature": "calendaire (séries trimestrielles)", "revoir_avant": "2027-01-29"
   },
   {
    "id": "promesses-referendum", "producteur": "Conseil constitutionnel, DILA",

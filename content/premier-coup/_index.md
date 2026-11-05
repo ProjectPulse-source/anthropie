@@ -3,6 +3,8 @@ title: "La Société du premier coup — sources, compléments et mises à jour"
 date: 2026-07-29
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Corrections : « Un chez-soi d'abord » renvoie à Tinland et al., Epidemiology and Psychiatric Sciences, 2020 ; le seuil européen des minima sociaux vient de la CNAF (2020) : 24 des 28 pays ouvrent leur minimum à la majorité, quatre fixent un âge plus élevé (France et Luxembourg 25 ans, Espagne 23, Chypre 28)."}
+  - {date: 2026-11-05, texte: "Le répertoire n'est pas une annexe du livre : le livre l'annonce à part (« Pour prolonger ») et cette page le publie. Version 1.1 de la page."}
   - {date: 2026-11-05, texte: "Corrections : délais de réhabilitation (art. 133-13 du code pénal) et sorties du bulletin n° 2 (art. 775 et 775-1 du code de procédure pénale) ; bulletin n° 2 délivré à certains employeurs seulement s'il est vierge ; loi RSA du 1er décembre 2008, en vigueur le 1er juin 2009 ; emploi accompagné : chances accrues d'environ deux tiers (risque relatif 1,63)."}
 og_title: "La Société du premier coup — sources et compléments du livre — S. Lalut"
 description: "Le compagnon documentaire de La Société du premier coup (Stéphane Lalut, 2026) : le Répertoire des leviers et des pistes, les repères chiffrés du livre avec leurs sources primaires et leur qualification probatoire, les mises à jour et les errata."
@@ -99,7 +101,7 @@ Les pistes qui précèdent sont consignées comme objets à instruire&nbsp;: auc
 
 ### Notes et sources du répertoire
 
-*Notes de l'annexe documentaire placée après la conclusion. Chaque entrée porte le double statut du répertoire&nbsp;: existence (proposé, légiféré, expérimenté ou déployé) et preuve (non évalué, descriptif, avec comparaison ou causal). Partie I&nbsp;: ce que la littérature documente. Partie II&nbsp;: ce que l'on pourrait tenter — l'inféré.*
+*Notes du répertoire, que le livre annonce à part («&nbsp;Pour prolonger&nbsp;») et dont cette page est le domicile. Chaque entrée porte le double statut du répertoire&nbsp;: existence (proposé, légiféré, expérimenté ou déployé) et preuve (non évalué, descriptif, avec comparaison ou causal). Partie I&nbsp;: ce que la littérature documente. Partie II&nbsp;: ce que l'on pourrait tenter — l'inféré.*
 
 **Partie I — ce que la littérature documente**
 
@@ -133,7 +135,7 @@ Les pistes qui précèdent sont consignées comme objets à instruire&nbsp;: auc
 
 15. **«&nbsp;la proposition de services de base universels — garantir des services essentiels gratuits plutôt qu'un revenu — reste ce qu'elle dit être&nbsp;: une proposition, chiffrée par ses auteurs, évaluée par personne&nbsp;»** → Royaume-Uni, Institute for Global Prosperity, UCL, *Social Prosperity for the Future: A Proposal for Universal Basic Services*, 2017 (auteurs Portes, Reed & Percy)&nbsp;; Anna Coote & Andrew Percy, *The Case for Universal Basic Services*, Polity, 2020. Statut&nbsp;: proposé (normatif), jamais mis en œuvre à l'échelle «&nbsp;UBS&nbsp;». Les chiffres de coût sont des estimations des auteurs.
 
-16. **«&nbsp;Un chez-soi d'abord, l'adaptation française du Housing First, a fait l'objet d'un essai randomisé sur plus de sept cents personnes sans abri atteintes de troubles psychiques sévères, dans quatre villes&nbsp;; stabilise durablement dans le logement et réduit l'hospitalisation — effet causal net&nbsp;; il ne guérit pas&nbsp;; le rétablissement subjectif ne diffère pas&nbsp;»** → Tinland et al., *BMC Public Health*, 2021&nbsp;; Loubière et al., *Epidemiology and Psychiatric Sciences*, 2022&nbsp;: essai randomisé 1:1, 703 participants, Paris/Marseille/Toulouse/Lille, inclusions 2011-2014, suivi de 2 ans (étendu à 4). Effet causal net sur le maintien dans le logement et la réduction des jours d'hospitalisation&nbsp;; pas de différence significative sur le rétablissement subjectif. Statut&nbsp;: évalué (causal, essai randomisé multi-sites).
+16. **«&nbsp;Un chez-soi d'abord, l'adaptation française du Housing First, a fait l'objet d'un essai randomisé sur plus de sept cents personnes sans abri atteintes de troubles psychiques sévères, dans quatre villes&nbsp;; stabilise durablement dans le logement et réduit l'hospitalisation — effet causal net&nbsp;; il ne guérit pas&nbsp;; le rétablissement subjectif ne diffère pas&nbsp;»** → Tinland et al., *Epidemiology and Psychiatric Sciences*, 2020, 29, e169&nbsp;; Loubière et al., *Epidemiology and Psychiatric Sciences*, 2022&nbsp;: essai randomisé 1:1, 703 participants, Paris/Marseille/Toulouse/Lille, inclusions 2011-2014, suivi de 2 ans (étendu à 4). Effet causal net sur le maintien dans le logement et la réduction des jours d'hospitalisation&nbsp;; pas de différence significative sur le rétablissement subjectif. Statut&nbsp;: évalué (causal, essai randomisé multi-sites).
 
 17. **«&nbsp;Le soutien à l'emploi dit IPS — placer d'abord en emploi ordinaire, accompagner ensuite&nbsp;; la pièce la plus robuste&nbsp;: une méta-analyse de vingt-cinq essais randomisés montre qu'il augmente d'environ deux tiers les chances d'emploi compétitif (risque relatif 1,63)&nbsp;; l'effet prouvé porte sur l'emploi, pas sur le bien-être&nbsp;»** → Frederick & VanderWeele, *PLoS ONE*, 2019&nbsp;: méta-analyse de 25 essais randomisés (emploi compétitif&nbsp;: risque relatif 1,63, IC 1,46-1,82). Statut&nbsp;: évalué (causal, méta-analyse d'essais randomisés). Effets non professionnels (qualité de vie, santé mentale) non significatifs.
 
@@ -215,9 +217,9 @@ Parmi les enfants de cadres entrés dans le supérieur, **13&nbsp;%** en ressort
 
 ### Le seuil des 25 ans, et la France en Europe {#seuil-25-ans}
 
-Le minimum social français reste fermé avant 25&nbsp;ans hors charge de famille. **24 des 28 pays de l'Union** ouvrent le leur dès la majorité&nbsp;; **seuls la France et le Luxembourg** excluent par l'âge dès 25&nbsp;ans.
+Le minimum social français reste fermé avant 25&nbsp;ans hors charge de famille. **24 des 28 pays de l'Union de 2020**, Royaume-Uni compris, ouvrent le leur dès la majorité&nbsp;; les quatre autres fixent un âge plus élevé&nbsp;: 25&nbsp;ans en France et au Luxembourg, 23 en Espagne, 28 à Chypre.
 
-- **Millésime**&nbsp;: 2023 · **Publication**&nbsp;: DREES, *Un panorama des minima sociaux en Europe*, juin 2023
+- **Millésime**&nbsp;: 2020 · **Publication**&nbsp;: CNAF (Catherine Collombet *et al.*), *Les minima sociaux au sein de l'Union européenne*, décembre 2020. Le livre cite «&nbsp;DREES, *Un panorama des minima sociaux en Europe*, juin 2023&nbsp;», référence introuvable&nbsp;: l'édition 2023 du panorama de la DREES sur les minima sociaux ne compare pas les pays européens.
 - **Généalogie**&nbsp;: RMI, loi du 1ᵉʳ décembre 1988 — seuil repris par le RSA, loi du 1ᵉʳ décembre 2008, en vigueur le 1ᵉʳ juin 2009
 - **Qualification**&nbsp;: comparaison institutionnelle · **Réserve**&nbsp;: le montant est parfois réduit pour les plus jeunes
 - **Dans le livre**&nbsp;: chapitre&nbsp;2
@@ -324,15 +326,15 @@ Environ **22&nbsp;700 places** dans près de **1&nbsp;000 structures**. Le plan 
 
 ## Versions, mises à jour et errata {#versions}
 
-- **Version de cette page**&nbsp;: 1.0
-- **Dernière mise à jour**&nbsp;: 29 juillet 2026
+- **Version de cette page**&nbsp;: 1.1
+- **Dernière mise à jour**&nbsp;: 5 novembre 2026 (corrections listées dans «&nbsp;Révisions&nbsp;», en pied de page)
 - **Auteur**&nbsp;: Stéphane Lalut
 
 **Errata du livre**&nbsp;: aucun à ce jour.
 
 **Citation recommandée de cette page**&nbsp;:
 
-> Stéphane Lalut, «&nbsp;*La Société du premier coup* — sources, compléments et mises à jour&nbsp;», stephane-lalut.com/premier-coup, version&nbsp;1.0, 29 juillet 2026.
+> Stéphane Lalut, «&nbsp;*La Société du premier coup* — sources, compléments et mises à jour&nbsp;», stephane-lalut.com/premier-coup, version&nbsp;1.1, 5 novembre 2026.
 
 ## Le cadre, la recherche, le livre
 

@@ -4,7 +4,9 @@ url: /en/data-centres-reserved-capacity/
 description: "In November 2025, data centres had reserved {dtc.res_nov2025} GW of grid connection capacity with RTE, {dtc.st_2030} GW of it for commissioning from 2030; those connected to RTE's grid consumed nearly {dtc.rpt_2025} TWh in 2025. Reserved capacity, timing, abandonments and consumption in France, from RTE's publications."
 chapo: "The figure that circulates is that of reservations: nearly {dtc.res_mai2026} gigawatts in May 2026, against about {dtc.res_fin2024} at end-2024. But reserved capacity is not consumption. More than half of the capacity reserved in November 2025 is for commissioning from 2030, other reservations have already been abandoned, and the data centres connected to the transmission grid consumed nearly {dtc.rpt_2025} terawatt-hour in 2025."
 date: 2026-10-27
-lastmod: 2026-10-27
+lastmod: 2026-11-05
+journal:  # revisions that change how the page reads
+  - {date: 2026-11-05, texte: "Clarification: next to the 10 TWh of RTE's web page, the Bilan prévisionnel also gives 5 to 10 TWh in 2024 including in-house data centres; the web page does not state its scope."}
 og_title: "Data centres: do reserved gigawatts foretell consumption? — S. Lalut"
 og_image: "images/og-data-centers-en.jpg"
 og_image_alt: "Share card: “Reserved is not consumed” — capacity reserved by data centres with RTE and consumption of the centres connected to its grid (RTE)."
@@ -88,7 +90,7 @@ In its Bilan prévisionnel 2025-2035, RTE retains two pathways for the consumpti
 
 RTE itself gives the order of magnitude of what these assumptions set aside: if all the roughly {{< dtc-val "tot_nov2025" >}} GW reserved by large projects, data centres, hydrogen and industry together, ran at full power all year, consumption would theoretically reach about {{< dtc-val "theo_twh" >}} TWh, “a level out of all proportion” with its assumptions.
 
-RTE's publications do not all give the same figures. Its web page “Les data centers en chiffres clés”, updated on {{< dtc-val "date_web" >}}, attributes to the same Bilan prévisionnel a consumption of {{< dtc-val "w30_bas" >}} to {{< dtc-val "w30_haut" >}} TWh in 2030 and {{< dtc-val "w35_bas" >}} to {{< dtc-val "w35_haut" >}} TWh in 2035 “in a rapid decarbonisation pathway”, and a current consumption of about {{< dtc-val "web_conso" >}} TWh. The published document gives {{< dtc-val "r2030" >}} and {{< dtc-val "r2035" >}} TWh for that pathway, and {{< dtc-val "sd_bas" >}} to {{< dtc-val "sd_haut" >}} TWh in 2024 for dedicated sites. This page follows the published document; the web page does not explain the gap.
+RTE's publications do not all give the same figures. Its web page “Les data centers en chiffres clés”, updated on {{< dtc-val "date_web" >}}, attributes to the same Bilan prévisionnel a consumption of {{< dtc-val "w30_bas" >}} to {{< dtc-val "w30_haut" >}} TWh in 2030 and {{< dtc-val "w35_bas" >}} to {{< dtc-val "w35_haut" >}} TWh in 2035 “in a rapid decarbonisation pathway”, and a current consumption of about {{< dtc-val "web_conso" >}} TWh. The published document gives {{< dtc-val "r2030" >}} and {{< dtc-val "r2035" >}} TWh for that pathway; for 2024, it gives {{< dtc-val "sd_bas" >}} to {{< dtc-val "sd_haut" >}} TWh for dedicated sites, and {{< dtc-val "int_bas" >}} to {{< dtc-val "int_haut" >}} TWh when in-house data centres are added. The web page does not say whether its {{< dtc-val "web_conso" >}} TWh covers dedicated sites only or in-house data centres as well, and does not explain the gap between the pathways. This page follows the published document.
 
 ## Does a reservation already commit the public? {#commitment}
 

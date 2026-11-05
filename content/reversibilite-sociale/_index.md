@@ -23,8 +23,6 @@ faq:
     answer: "Stéphane Lalut, économiste et chercheur indépendant, dans le working paper AWP-08 — « La réversibilité sociale comme dimension de l'inégalité » (2026, DOI 10.5281/zenodo.21506320), huitième des Anthropie Working Papers. Le concept prolonge le cadre anthropique : le tarif stratifié de l'échec est un mécanisme de distribution du désordre social."
   - question: "La réversibilité sociale est-elle un synonyme de résilience ?"
     answer: "Non. La résilience décrit une capacité psychologique individuelle à surmonter l'épreuve. La réversibilité sociale décrit une position structurelle — repli, tarif, réadmission — qui existe avant toute épreuve et indépendamment des dispositions psychologiques de la personne."
-  - question: "Est-ce mesurable ?"
-    answer: "C'est l'objet du programme ouvert par AWP-08 : une architecture de mesure (V = f(C, T, A)), quatre familles de propositions testables, un protocole d'identification sur deux terrains datés (suppression de l'indicateur 040 du FIBEN, droit à l'oubli de la loi Lemoine). Le papier se présente comme un cadre réfutable, non comme un résultat empirique."
   - question: "Pourquoi « réversibilité » ?"
     answer: "Parce que la question décisive est celle du retour : une erreur est réversible quand les options qu'elle ferme peuvent être récupérées. L'irréversibilité — la fermeture durable de l'avenir — est le vrai coût social de l'échec, et il est inégalement distribué."
 fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
