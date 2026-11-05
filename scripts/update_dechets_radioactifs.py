@@ -189,10 +189,12 @@ def calcul(ans: dict) -> dict:
     # comparaison SYNCHRONE (contre-expertise PRO-20261026-045248, P6) : volume et activité au même millésime
     pv_a = {c: 100 * ans[ya]["vol"][c] / tot5(ya) for c in CATS}
     def pa(y):
-        t = sum(ans[y]["act"].values())
+        # Audit du 05/11/2026 : la figure et la FAQ annoncent « cinq catégories des bilans » ; le dénominateur prenait
+        # toute l'activité déclarée, hors-bilan compris. Dénominateur aligné sur le périmètre annoncé, comme pour le volume.
+        t = sum(ans[y]["act"].get(c, 0.0) for c in CATS)
         return {c: 100 * ans[y]["act"].get(c, 0.0) / t for c in CATS}
     # variante : volumes sans activité déclarée crédités de l'activité moyenne de leur catégorie (même année)
-    aj = {c: (ans[ya]["act"][c] * ans[ya]["vol"][c] / ans[ya]["vol_declare"][c]) for c in ans[ya]["act"] if ans[ya]["vol_declare"].get(c)}
+    aj = {c: (ans[ya]["act"][c] * ans[ya]["vol"][c] / ans[ya]["vol_declare"][c]) for c in ans[ya]["act"] if c in CATS and ans[ya]["vol_declare"].get(c)}
     taj = sum(aj.values())
     hb = {y: a["vol"].get("HORS_BILAN", 0.0) for y, a in ans.items()}
     an_hb = min((y for y, v in hb.items() if v > 1e6), default=None)

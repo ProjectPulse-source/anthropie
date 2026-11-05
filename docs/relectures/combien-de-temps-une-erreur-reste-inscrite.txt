@@ -1,10 +1,10 @@
-# relu le 2026-11-04 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de b89c4e4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 De six mois pour un point de permis à quarante ans pour le casier : la durée d’une inscription dépend du registre, et ce qui l’efface n’est pas toujours le temps.
-Les points du permis se récupèrent, le malus se résorbe et la réhabilitation légale s’acquiert sans démarche ; l’interdiction d’émettre des chèques cesse au bout de cinq ans, plus tôt si l’on régularise ; une condamnation n’est exclue du bulletin n° 2 que par le tribunal, dans le jugement ou sur requête ; la radiation d’une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur.
+Les points du permis se récupèrent, le malus se résorbe et la réhabilitation légale s’acquiert sans démarche ; l’interdiction d’émettre des chèques cesse au bout de cinq ans, plus tôt si l’on régularise ; une condamnation quitte d’elle-même le bulletin n° 2 dans plusieurs cas (sursis devenu non avenu, certaines peines au bout de cinq ans), sinon par la réhabilitation ou par décision du tribunal ; la radiation d’une inscription au fichier bancaire après remboursement dépend de la déclaration du prêteur.
 Et un même registre oublie à deux vitesses : un malus disparaît en deux ans, le bonus maximal en demande treize.
-Page mise à jour le 4 novembre 2026
+Page mise à jour le 5 novembre 2026 · révisions
 Une dette se rembourse, une peine s’exécute, une maladie se soigne — qui n’est pas une erreur, mais laisse aussi une trace.
 Entre le moment où l’erreur est réparée et celui où elle cesse d’être lue par un banquier, un employeur ou un assureur, court un second délai, fixé par un texte.
 Cette page donne ce délai pour les principaux registres, d’après les textes lus sur Légifrance le 1er novembre 2026 dans leur version en vigueur.
@@ -82,7 +82,8 @@ L’inscription ne dépasse pas, de toute façon, cinq ans (le détail).
 Une condamnation pèse sur une embauche.
 Le premier point est le bulletin en cause.
 Le bulletin n° 2 est délivré aux administrations et, par leur intermédiaire, à certains employeurs, notamment pour des activités auprès de mineurs ; il ne parvient à l’employeur que s’il ne porte aucune mention.
-Deux voies en retirent une condamnation : la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, et l’exclusion, que le tribunal décide dans le jugement ou plus tard sur requête de la personne, sauf pour les infractions de l’article 706-47 du Code de procédure pénale.
+Plusieurs voies en retirent une condamnation : des sorties automatiques (sursis devenu non avenu, certaines peines au bout de cinq ans, amendes forfaitaires délictuelles trois ans après leur paiement : Code de procédure pénale, art.
+775), la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, et l’exclusion, que le tribunal décide dans le jugement ou plus tard sur requête de la personne, sauf pour les infractions de l’article 706-47 du Code de procédure pénale.
 Ce qu’il faut vérifier : la peine prononcée et la date de son exécution, d’où court le délai de réhabilitation ; une interdiction définitive, un suivi socio-judiciaire ou une interdiction d’activité au contact de mineurs, qui en retarde les effets (le détail).
 Un jeune conducteur perd des points pendant le permis probatoire.
 Le délai probatoire dure trois ans, deux après un apprentissage anticipé de la conduite.
@@ -138,6 +139,10 @@ La réhabilitation efface les incapacités et déchéances ; elle ne produit ses
 Une condamnation réhabilitée ne figure plus au bulletin n° 2 (code de procédure pénale, art.
 775, 5°), ni donc au bulletin n° 3, qui ne relève que les condamnations non exclues du bulletin n° 2 (art.
 777).
+Les sorties automatiques du bulletin n° 2.
+Sans démarche ni décision, n’y figurent pas, ou plus, les condamnations pour contravention, les condamnations avec sursis devenues non avenues, les peines des articles 131-5 à 131-11 du code pénal prononcées sans sursis cinq ans après être devenues définitives (trois ans pour des jours-amende, sauf interdiction plus longue), et les amendes forfaitaires délictuelles trois ans après leur paiement (Code de procédure pénale, art.
+775, version en vigueur depuis le 20 août 2026).
+Pour une condamnation avec sursis, la mention demeure toutefois pendant la durée de la mesure en cas de suivi socio-judiciaire, d’interdiction d’une activité au contact habituel de mineurs, ou d’interdiction, incapacité ou déchéance prononcée à titre définitif.
 L’exclusion du bulletin n° 2 peut être décidée par le tribunal, dans le jugement ou plus tard sur requête de la personne ; elle emporte relèvement des interdictions qui résultaient de la condamnation.
 Elle n’est pas ouverte aux personnes condamnées pour les infractions de l’article 706-47 du Code de procédure pénale, notamment sexuelles.
 Depuis le 20 août 2026, elle s’applique aussi aux amendes forfaitaires délictuelles (Code de procédure pénale, art.
@@ -171,7 +176,7 @@ Chaque année sans sinistre réduit le coefficient de 5 %, jusqu’à 0,50 au mi
 L’assureur, lui, garde la mémoire : le relevé d’informations, remis à la résiliation du contrat ou sur demande, et que le nouvel assureur reçoit, porte les sinistres des cinq dernières périodes annuelles (art.
 12 et 13).
 La première fois a aussi son prix.
-Un conducteur qui a son permis depuis moins de trois ans, ou qui ne peut justifier de trois ans d’assurance, peut se voir appliquer une surprime jusqu’à 100 % de la prime de référence, 50 % après une conduite accompagnée ; elle est réduite de moitié après chaque année sans sinistre responsable (Code des assurances, art.
+Un conducteur qui a son permis depuis moins de trois ans, ou qui ne peut justifier de trois ans d’assurance, peut se voir appliquer une surprime jusqu’à 100 % de la prime de référence, 50 % après une conduite accompagnée ; elle diminue, après chaque année sans sinistre responsable, de la moitié de son taux initial, et disparaît donc en deux ans (Code des assurances, art.
 A.
 121-1-1).
 L’absence de passé coûte, comme l’erreur.
@@ -240,15 +245,19 @@ La personne peut demander à la Banque de France ce que contient le fichier, pui
 L’inscription ne dépasse pas cinq ans.
 Un employeur peut-il voir une condamnation inscrite au casier judiciaire ?
 Le bulletin n° 2 est délivré aux administrations et, par leur intermédiaire, à certains employeurs, notamment pour des activités auprès de mineurs ; il ne parvient à l’employeur que s’il ne porte aucune mention (Service-public, fiche F14710).
-Une condamnation en sort par la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, ou par l’exclusion que décide le tribunal, dans le jugement ou plus tard sur requête de la personne (Code de procédure pénale, art.
+Une condamnation en sort d’elle-même dans plusieurs cas : condamnation avec sursis devenue non avenue, peines des articles 131-5 à 131-11 du code pénal prononcées sans sursis au bout de cinq ans (trois ans pour des jours-amende), amendes forfaitaires délictuelles trois ans après leur paiement (Code de procédure pénale, art.
+775).
+Sinon, elle en sort par la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, ou par l’exclusion que décide le tribunal, dans le jugement ou plus tard sur requête de la personne (art.
 775-1).
 Comment une condamnation disparaît-elle du casier judiciaire ?
-De trois façons.
+De plusieurs façons.
 La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation criminelle ou correctionnelle, après trois ans pour une amende ou des jours-amende, cinq ans pour une peine d’emprisonnement d’un an au plus ou une autre peine non privative de liberté, dix ans pour un emprisonnement de dix ans au plus ou plusieurs totalisant cinq ans au plus, délais doublés en récidive légale (Code pénal, art.
 133-13) : elle efface la condamnation des bulletins n° 2 et n° 3 (Code de procédure pénale, art.
 775 et 777).
 Le tribunal peut aussi exclure la mention du bulletin n° 2, dans le jugement ou plus tard, sur requête (Code de procédure pénale, art.
 775-1), sauf pour certaines infractions, notamment sexuelles.
+Certaines condamnations quittent en outre le bulletin n° 2 sans démarche : sursis devenu non avenu, peines des articles 131-5 à 131-11 du code pénal au bout de cinq ans, amendes forfaitaires délictuelles trois ans après leur paiement (Code de procédure pénale, art.
+775).
 Enfin, les fiches du bulletin n° 1 sont retirées après quarante ans sans nouvelle condamnation criminelle ou correctionnelle (art.
 769).
 Combien de temps faut-il pour récupérer ses points de permis ?
@@ -287,6 +296,9 @@ L.
 Les liens sont donnés à chaque section.
 Fiches officielles : Service-public (Direction de l’information légale et administrative), F14710 (bulletins du casier), F31802 (effacement d’une condamnation), F2655 (bonus-malus), F17608 (FICP : consultation, radiation, recours), R17121 (téléservice Mes points permis).
 Le livre : Stéphane Lalut, La Société du premier coup, chapitres 5 (« La trace : ce qui reste inscrit ») et 8 (« Les erreurs qui disparaissent ») ; repères chiffrés et répertoire des pistes.
+Révisions
+5 novembre 2026 — Correction : certaines condamnations sortent du bulletin n° 2 sans démarche (art.
+775 du code de procédure pénale : sursis devenu non avenu, peines alternatives, amendes forfaitaires délictuelles) ; la surprime d’un conducteur novice baisse chaque année de la moitié de son taux initial et disparaît donc en deux ans.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

@@ -7,6 +7,8 @@
   "cout-de-la-dette-publique/_index.md": "2026-11-05",
   "data-centers-puissance-reservee/_index.en.md": "2026-11-04",
   "data-centers-puissance-reservee/_index.md": "2026-11-04",
+  "dechets-radioactifs-volume-ou-radioactivite/_index.en.md": "2026-11-05",
+  "dechets-radioactifs-volume-ou-radioactivite/_index.md": "2026-11-05",
   "decouplage-energie-croissance/_index.en.md": "2026-10-26",
   "decouplage-energie-croissance/_index.md": "2026-10-26",
   "dette-publique-collectivites-locales/_index.en.md": "2026-10-18",
@@ -18,6 +20,7 @@
   "dette-publique-peut-elle-baisser/_index.en.md": "2026-11-05",
   "dette-publique-peut-elle-baisser/_index.md": "2026-11-05",
   "enseignants/_index.md": "2026-11-05",
+  "enseignants/environnement/_index.md": "2026-11-05",
   "formules-du-debat-sur-la-dette/_index.en.md": "2026-11-02",
   "formules-du-debat-sur-la-dette/_index.md": "2026-11-02",
   "inflation-et-dette-publique/_index.en.md": "2026-11-05",
@@ -27,8 +30,8 @@
   "manque-t-il-des-professeurs/_index.md": "2026-11-05",
   "qui-paie-la-dette-publique/_index.en.md": "2026-11-05",
   "qui-paie-la-dette-publique/_index.md": "2026-11-05",
-  "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": "2026-10-26",
-  "qui-peut-faire-face-a-une-depense-imprevue/_index.md": "2026-10-26"
+  "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": "2026-11-05",
+  "qui-peut-faire-face-a-une-depense-imprevue/_index.md": "2026-11-05"
  },
  "formes": {
   "enseignants/_index.md": "2026-10-27",
@@ -53,6 +56,12 @@
   ],
   "data-centers-puissance-reservee/_index.md": [
    "2026-11-04"
+  ],
+  "dechets-radioactifs-volume-ou-radioactivite/_index.en.md": [
+   "2026-11-05"
+  ],
+  "dechets-radioactifs-volume-ou-radioactivite/_index.md": [
+   "2026-11-05"
   ],
   "decouplage-energie-croissance/_index.en.md": [
    "2026-10-26"
@@ -84,7 +93,13 @@
    "2026-10-18",
    "2026-11-05"
   ],
+  "dette-technologique/_index.en.md": [
+   "2026-11-04"
+  ],
   "enseignants/_index.md": [
+   "2026-11-05"
+  ],
+  "enseignants/environnement/_index.md": [
    "2026-11-05"
   ],
   "formules-du-debat-sur-la-dette/_index.en.md": [
@@ -123,6 +138,12 @@
   "pourquoi-la-dette-publique-augmente/_index.md": [
    "2026-10-18"
   ],
+  "que-peut-faire-un-president-promesse-par-promesse/_index.en.md": [
+   "2026-11-04"
+  ],
+  "que-peut-faire-un-president-promesse-par-promesse/_index.md": [
+   "2026-11-04"
+  ],
   "qui-paie-la-dette-publique/_index.en.md": [
    "2026-11-05"
   ],
@@ -130,10 +151,12 @@
    "2026-11-05"
   ],
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": [
-   "2026-10-26"
+   "2026-10-26",
+   "2026-11-05"
   ],
   "qui-peut-faire-face-a-une-depense-imprevue/_index.md": [
-   "2026-10-26"
+   "2026-10-26",
+   "2026-11-05"
   ],
   "registre-des-couts-deportes/_index.en.md": [
    "2026-10-25",

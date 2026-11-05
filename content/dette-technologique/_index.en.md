@@ -5,7 +5,7 @@ og_image_alt: "Share card: “Technological debt” and its diagram"
 url: /en/technological-debt/
 description: "Technological debt is the cost of digital infrastructures — energy, matter, territory, attention — turned into debt by mechanisms of commitment. Not to be confused with the “technical debt” of software engineering."
 date: 2026-07-04
-lastmod: 2026-11-04
+lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
   - date: 2026-11-04
     texte: "Three wordings aligned with AWP-06 and with what the page demonstrates: attention is no longer presented as \"the economy that finances the whole\"; cooling water belongs to matter; the shift from one register to the others becomes what the grid must establish case by case."
@@ -18,7 +18,7 @@ faq:
   - question: "Who bears technological debt?"
     answer: "Those who did not sign the commitments: the public budgets that guarantee, the territories that host the infrastructures and their energy and water needs, the generations that will inherit the equipment and its maintenance or dismantling costs, and the users whose attention is the fourth register of cost."
   - question: "Where is the concept formalised?"
-    answer: "In AWP-06, “Digital Infrastructures and Technological Debt” (Stéphane Lalut, 2026, DOI 10.5281/zenodo.20025421), sixth of the Anthropy Working Papers, and in the book ANTHROPY – A Big History of Civilization's Hidden Costs, which deploys the general framework."
+    answer: "In AWP-06, “Digital Infrastructures and Technological Debt” (Stéphane Lalut, 2026, DOI 10.5281/zenodo.20077993), sixth of the Anthropie Working Papers, and in the book ANTHROPY – A Big History of Civilization's Hidden Costs, which deploys the general framework."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
   lignes:
     - t: "Definition"
@@ -122,6 +122,6 @@ Technological debt is the application of this hypothesis to digital infrastructu
 
 ## Further reading
 
-- [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) — the working paper that formalises the concept (DOI: 10.5281/zenodo.20025421, open-access PDF).
+- [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) — the working paper that formalises the concept (DOI: 10.5281/zenodo.20077993, open-access PDF).
 - The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 p.) deploys the complete framework of which technological debt is one of the applications.
 - [What is anthropy?](/en/quest-ce-que-lanthropie/) — the page of the general concept.

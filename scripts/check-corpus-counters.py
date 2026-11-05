@@ -135,8 +135,12 @@ PATTERNS = [
         r"\b(deux|trois|quatre|cinq|six)\s+ouvrages?\s+publi",
         re.IGNORECASE,
     ), "fr_word", "livre"),
+    # « published books » n'est propre au corpus que dans une phrase qui nomme le cadre (/a-propos/) :
+    # /chercheur-independant/ compte tout le catalogue (« six published books », 05/11/2026), vrai
+    # et accuse a tort. Ancre : « anthrop » (anthropy, anthropic) plus tot dans la meme phrase,
+    # motif consommant ; temoin : « five » mis a la place de « four » sur /a-propos/ est signale.
     (re.compile(
-        r"\b(two|three|four|five|six)\s+published\s+books?\b",
+        r"anthrop[^.]{0,250}?\b(two|three|four|five|six)\s+published\s+books?\b",
         re.IGNORECASE,
     ), "en_word", "livre"),
 ]

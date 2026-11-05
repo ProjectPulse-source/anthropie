@@ -4,7 +4,7 @@ url: /en/public-debt-future-generations/
 description: "Since {gen.a0}, only {gen.part_k}% of French public deficits have corresponded, in the accounts, to a net increase in recorded public assets ({gen.d3_part}% over {gen.d3_lib}). The page also tests “we owe it to ourselves” and “the real burden will come from ageing”, without calculating a bill for each generation. Eurostat, ECB and European Commission series recalculated and checked."
 chapo: "A debt can leave the next generations a charge, but also schools, roads and other equipment. What do the French accounts show? From {gen.a0} to {gen.fin}, only {gen.part_k}% of public deficits corresponded to new public assets (equipment, buildings, land), after wear and tear; that share fell to {gen.d3_part}% over {gen.d3_lib}. The human capital that education or health may leave behind is not counted: the figure says what deficits corresponded to, not what they produced. Two other arguments deserve scrutiny: “we owe the debt to ourselves” and “the real burden will come from ageing”. Three tests put them to the proof, without claiming to calculate each generation’s bill."
 date: 2026-07-24
-lastmod: 2026-10-11
+lastmod: 2026-11-05
 og_title: "Is public debt a burden on future generations? — S. Lalut"
 og_image: "images/og-dette-generations-en.jpg"
 og_image_alt: "Share card: “What did thirty years of deficits correspond to?” — France, share of public deficits that corresponded, in the accounts, to assets, by decade, and the rest to uncovered current spending."
@@ -13,6 +13,7 @@ og_image_alt: "Share card: “What did thirty years of deficits correspond to?�
 # (scripts/update_dette_generations.py), whose guards cover both languages, text guards included (phase B, 11/10/2026).
 donnees: [dette_generations]
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-05, texte: "Correction: the values by item (pensions, health, long-term care, education) are contributions to the second term of the S2 indicator, not changes in spending in points of GDP."}
   - {date: 2026-10-31, texte: "Revision of general government net worth: the Banque de France financial accounts, updated in October 2026 for 2023 to 2025 and taken up by Eurostat, mainly revalue the equity held by government; net worth at the end of 2025 moves from 25.0% to 27.1% of GDP. Insee's July balance sheet, which does not yet include it, becomes a check. The decomposition of deficits, based on flows, does not depend on it (counter-review of 31 October)."}
   - {date: 2026-10-18, texte: "Addition: where the decline in net investment took place, local government and other government bodies, with its 2016 low point and the local share of the decline depending on the years compared (counter-review of 18 October)."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved at build time
@@ -181,7 +182,7 @@ The COR, for its part, projects pension spending rising as a share of GDP, where
 
 S2 is the permanent improvement in the structural primary balance (the balance excluding interest, adjusted for the economic cycle), made in {{< gen-val "s2_an" >}}, that would stabilise the debt over an infinite horizon. Unlike the S1 indicator, which targets {{< gen-val "s1_cible" >}}% of GDP by {{< gen-val "s1_horizon" >}}, it sets neither the level at which the debt stabilises nor the date. The initial budgetary position is the gap between the starting structural balance and the one that would stabilise the ratio.
 
-The effect of future changes in age-related spending is small because it nets out opposite movements. The Commission projects pension spending falling as a share of GDP ({{< gen-val "pen_pt" >}}), net of the taxes and contributions paid by pensioners, with the 2023 reform applied; health spending ({{< gen-val "sante_pt" >}}) and long-term care spending ({{< gen-val "dep_pt" >}}) rise; education spending falls ({{< gen-val "edu_pt" >}}).
+The effect of future changes in age-related spending is small because it nets out opposite movements. In S2, the contribution of pensions is negative ({{< gen-val "pen_pt" >}}), net of the taxes and contributions paid by pensioners, with the 2023 reform applied; those of health ({{< gen-val "sante_pt" >}}) and long-term care ({{< gen-val "dep_pt" >}}) are positive; that of education is negative ({{< gen-val "edu_pt" >}}). These contributions add up to the second term of S2.
 
 </details>
 

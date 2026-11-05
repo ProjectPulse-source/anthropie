@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /en/public-debt-future-generations/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/public-debt-future-generations/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -7,7 +7,7 @@ From 1996 to 2025, only 18% of public deficits corresponded to new public assets
 The human capital that education or health may leave behind is not counted: the figure says what deficits corresponded to, not what they produced.
 Two other arguments deserve scrutiny: “we owe the debt to ourselves” and “the real burden will come from ageing”.
 Three tests put them to the proof, without claiming to calculate each generation’s bill.
-Page updated 1 November 2026 · revisions
+Page updated 5 November 2026 · revisions
 Public debt dossier
 Data · Eurostat and ECB 2025 · projections 2026
 ↓ Charts, data and citations to reuseReuse this page
@@ -275,7 +275,8 @@ S2 is the permanent improvement in the structural primary balance (the balance e
 Unlike the S1 indicator, which targets 60% of GDP by 2070, it sets neither the level at which the debt stabilises nor the date.
 The initial budgetary position is the gap between the starting structural balance and the one that would stabilise the ratio.
 The effect of future changes in age-related spending is small because it nets out opposite movements.
-The Commission projects pension spending falling as a share of GDP (−0.5 points), net of the taxes and contributions paid by pensioners, with the 2023 reform applied; health spending (+0.6 points) and long-term care spending (+0.6 points) rise; education spending falls (−0.6 points).
+In S2, the contribution of pensions is negative (−0.5 points), net of the taxes and contributions paid by pensioners, with the 2023 reform applied; those of health (+0.6 points) and long-term care (+0.6 points) are positive; that of education is negative (−0.6 points).
+These contributions add up to the second term of S2.
 Commission and COR: two projections, two sets of assumptions
 Who is speaking matters here.
 The Commission is the institution that enforces the European fiscal rules.
@@ -418,7 +419,7 @@ These series cannot put a figure on a bill per child: that would require knowing
 A debt is rolled over without any particular generation repaying all of it; it may call for future tax or spending adjustments, weigh on capital accumulation, or come with assets and services from which those who follow will benefit.
 Its weight also depends on the gap between the interest rate the government pays and the growth of the economy.
 In the public debt dossier
-To take the analysis further Dette Publique : Qui paie vraiment ?, the author's book, in French: contents, excerpts and reviews →
+To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
 Where these figures come from
 Uses of net borrowing.
 Eurostat, general government (S.13), ESA 2010 accounts, in national currency (gov_10a_main): net lending or borrowing (B9), net saving (B8N), gross fixed capital formation (P51G), consumption of fixed capital (P51C), acquisitions less disposals of non-produced assets (NP), changes in inventories (P52_P53), capital transfers paid and received (D9), of which investment grants paid (D92).
@@ -471,11 +472,11 @@ ECB, government finance statistics (GFS): Maastricht debt of general government 
 Download PNG
 SVG
 France: the adjustment that would stabilise the debt (S2 indicator) and its two components
-According to the Commission's S2 indicator, the adjustment that would stabilise French debt mainly reflects the initial budgetary position, which includes current pension spending; the effect of future changes in age-related spending is small in the baseline scenario and much larger in the risk scenario.
+According to the Commission’s S2 indicator, the adjustment that would stabilise French debt mainly reflects the initial budgetary position, which includes current pension spending; the effect of future changes in age-related spending is small in the baseline scenario and much larger in the risk scenario.
 Reading caveat.
 Current pension spending is in the initial position; the second term measures only the projected change in age-related spending.
 The previous edition is another set of projections, not an observed change.
-Projections conditional on the Commission's assumptions (2024 Ageing Report, 2023 pension reform applied).
+Projections conditional on the Commission’s assumptions (2024 Ageing Report, 2023 pension reform applied).
 European Commission, Debt Sustainability Monitor 2025, country tables: S2 indicator and its two components, France
 Download PNG
 SVG
@@ -496,8 +497,9 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, Insee, ECB, European Commission, COR), under their own terms.
 Revisions
+5 November 2026 — Correction: the values by item (pensions, health, long-term care, education) are contributions to the second term of the S2 indicator, not changes in spending in points of GDP.
 31 October 2026 — Revision of general government net worth: the Banque de France financial accounts, updated in October 2026 for 2023 to 2025 and taken up by Eurostat, mainly revalue the equity held by government; net worth at the end of 2025 moves from 25.0% to 27.1% of GDP.
-Insee's July balance sheet, which does not yet include it, becomes a check.
+Insee’s July balance sheet, which does not yet include it, becomes a check.
 The decomposition of deficits, based on flows, does not depend on it (counter-review of 31 October).
 18 October 2026 — Addition: where the decline in net investment took place, local government and other government bodies, with its 2016 low point and the local share of the decline depending on the years compared (counter-review of 18 October).
 All resources: data, explainers and reference material →

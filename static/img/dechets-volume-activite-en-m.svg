@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 871" role="img" font-variant-numeric="tabular-nums" aria-labelledby="drm-t drm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="drm-t">Radioactive waste: volume does not show where the radioactivity is</title><desc id="drm-d">For each category, share of the volume of radioactive waste and share of its declared radioactivity, end-2021 (latest edition declaring activity), and disposal route. HA: 0.25% of volume, 97.1% of radioactivity. MA-VL: 2.2%, 2.7%. FA-VL: 5.9%, 0.01%. FMA-VC: 55.7%, 0.12%. TFA: 35.9%, &lt; 0.01%.</desc>
+<title id="drm-t">Radioactive waste: volume does not show where the radioactivity is</title><desc id="drm-d">For each category, share of the volume of radioactive waste and share of its declared radioactivity, end-2021 (latest edition declaring activity), and disposal route. HA: 0.25% of volume, 97.2% of radioactivity. MA-VL: 2.2%, 2.7%. FA-VL: 5.9%, 0.01%. FMA-VC: 55.7%, 0.12%. TFA: 35.9%, &lt; 0.01%.</desc>
 <rect width="300" height="871" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Radioactive waste: volume does</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">not show where the</text>
@@ -7,8 +7,8 @@
 <text x="0" y="120" font-size="15" font-weight="600" fill="#26262f">High-level (HA)</text>
 <rect x="0" y="130" width="1.5" height="12" fill="#8a8781"/>
 <text x="7.5" y="140" font-size="13.5" font-weight="600" fill="#26262f">0.25% volume</text>
-<rect x="0" y="150" width="145.7" height="12" fill="#eb6834"/>
-<text x="151.7" y="160" font-size="13.5" font-weight="600" fill="#eb6834">97.1% radioactivity</text>
+<rect x="0" y="150" width="145.8" height="12" fill="#eb6834"/>
+<text x="151.8" y="160" font-size="13.5" font-weight="600" fill="#eb6834">97.2% radioactivity</text>
 <text x="0" y="178" font-size="13.5" fill="#55524f">deep geological disposal planned</text>
 <text x="0" y="196" font-size="13.5" fill="#55524f">(Cigéo)</text>
 <text x="0" y="226" font-size="15" font-weight="600" fill="#26262f">Intermediate-level, long-lived</text>
@@ -51,5 +51,5 @@
 <text class="pied-note" x="0" y="806.0" font-size="13.5" fill="#55524f">neither health risk nor management</text>
 <text class="pied-note" x="0" y="823.0" font-size="13.5" fill="#55524f">cost.</text>
 <text class="pied-licence" x="0" y="844.0" font-size="13.5" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="861.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="861.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
 </svg>

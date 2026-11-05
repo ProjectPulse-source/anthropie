@@ -1,11 +1,11 @@
-# relu le 2026-11-04 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire face à une dépense imprévue ?
 Ne pas pouvoir faire face à une dépense imprévue, est-ce une affaire de pauvreté ?
 En partie seulement.
 En France, en 2025, 65,9 % des personnes sous le seuil de pauvreté sont dans ce cas, et 21,6 % au-dessus.
-Mais au-dessus du seuil, la composition du foyer change tout : 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant.
-Page publiée le 26 octobre 2026
+Mais au-dessus du seuil, la composition du foyer sépare nettement les situations : 46,9 % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre 18,6 % des couples avec un enfant.
+Page mise à jour le 5 novembre 2026 · révisions
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données du : 26 octobre 2026 Eurostat, enquête EU-SILC, jeu ilc_mdes04 : France et Union européenne à 27, séries complètes depuis le début de l’enquête ; écarts étudiés de 2015 à 2025.
 Télécharger : CSV · JSON
@@ -22,7 +22,7 @@ Deux explications, un test
 On pourrait croire que tout se joue sur le revenu : être au-dessus ou en dessous du seuil de pauvreté.
 Si c’était le cas, deux foyers situés du même côté du seuil devraient avoir des parts voisines.
 Le test compare des foyers qui diffèrent d’abord par une chose : un adulte de plus ou de moins.
-Avec un enfant, passer de deux adultes à un seul ajoute 28,3 points au-dessus du seuil en 2025, et de 21 à 30 points chaque année depuis 2015.
+Avec un enfant, passer de deux adultes à un seul ajoute 28,3 points au-dessus du seuil en 2025, et de 20 à 30 points chaque année depuis 2015.
 Sans enfant, le même passage n’ajoute que 9,4 points (de 9 à 13 points sur la même période).
 Le nombre d’enfants ne suffit pas à expliquer l’écart.
 La statistique compte comme « parent seul » tout adulte seul avec un enfant ou plus ; face aux couples avec deux enfants, l’écart reste de 29,3 points.
@@ -35,7 +35,7 @@ Une troisième explication reste possible : au-dessus du seuil, les parents seul
 Le jeu d’Eurostat ne détaille pas la position dans la tranche de revenu ; il ne permet donc pas de séparer ce que pèse la composition du foyer de ce que pèse cette position.
 Le même constat dans l’Union européenne
 Dans l’Union européenne à 27, 29,2 % des personnes ne pourraient pas faire face à une dépense imprévue en 2025.
-Au-dessus du seuil de pauvreté, le passage de deux adultes à un seul ajoute 22,8 points avec un enfant (de 20 à 24 points depuis 2015), contre 10,1 points sans enfant (de 10 à 11).
+Au-dessus du seuil de pauvreté, le passage de deux adultes à un seul ajoute 22,8 points avec un enfant (de 19 à 25 points depuis 2015), contre 10,1 points sans enfant (de 9 à 11).
 Le constat n’est pas propre à la France.
 Ce que ces données ne disent pas
 Une déclaration, pas un compte en banque.
@@ -111,6 +111,8 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat (EU-SILC)), sous leurs propres conditions.
+Révisions
+5 novembre 2026 — Correction : les fourchettes de taux sont arrondies vers l’extérieur (borne basse à l’unité inférieure, borne haute à l’unité supérieure), pour contenir toutes les valeurs qu’elles résument.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

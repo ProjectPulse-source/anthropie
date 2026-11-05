@@ -3,9 +3,11 @@ title: "What is the rebound effect (Jevons paradox)?"
 og_image: "images/og-notion-rebond-en.jpg"
 og_image_alt: "Share card: “The rebound effect” and its diagram"
 url: /en/rebound-effect/
-description: "The rebound effect is the mechanism by which improved energy efficiency, instead of reducing total consumption, tends to increase it. Described by William Stanley Jevons in 1865, it remains the blind spot of efficiency policies."
+description: "The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use; when the take-back exceeds the gain, total consumption rises. Described by William Stanley Jevons in 1865, it remains the blind spot of efficiency policies."
 date: 2026-07-24
-lastmod: 2026-10-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Corrected definition: the rebound effect takes back part of the efficiency gain; total consumption rises only when the take-back exceeds the gain (Jevons paradox)."}
 og_title: "The rebound effect (Jevons paradox) — definition and sources — S. Lalut"
 faq:
   - question: "What is the rebound effect?"
@@ -17,7 +19,7 @@ faq:
   - question: "Does the rebound effect cancel every efficiency gain?"
     answer: "No — the size of the rebound varies by use, sector and period, and is the subject of an abundant literature. But it is structural, not anecdotal: ignoring the rebound systematically leads to overestimating the energy savings expected from efficiency policies. This is why serious scenarios distinguish efficiency from sufficiency."
   - question: "What is the link between the rebound effect and anthropy?"
-    answer: "In the anthropic framework (Stéphane Lalut), the rebound effect is a case of boomerang effect: the efficiency gain produces a local order — less energy per unit — whose cost comes back as a global disorder — more total consumption. The analysis is developed in AWP-04, “Energy transition or entropic transfer?” (2026, DOI 10.5281/zenodo.19269244)."
+    answer: "In the anthropic framework (Stéphane Lalut), the rebound effect is a case of boomerang effect: the efficiency gain produces a local order — less energy per unit — whose cost comes back as a global disorder — smaller savings than expected, or even more total consumption. The analysis is developed in AWP-04, “Energy transition or entropic transfer?” (2026, DOI 10.5281/zenodo.19269244)."
   - question: "Rebound effect, Jevons effect, Jevons paradox: are they the same thing?"
     answer: "The rebound effect is the general phenomenon — any recovery of consumption that eats into an efficiency gain. We speak of the Jevons paradox (or effect) in the extreme case where the recovery exceeds the gain: total consumption rises. The short definition is in the glossary."
   - question: "Does the rebound effect apply outside energy?"
@@ -27,7 +29,7 @@ faq:
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
   lignes:
     - t: "Definition"
-      d: "The mechanism by which an energy-efficiency gain, instead of reducing total consumption, tends to increase it: what becomes more efficient becomes cheaper, hence more used."
+      d: "The mechanism by which part of an energy-efficiency gain is taken back by increased use: what becomes more efficient becomes cheaper, hence more used. When the take-back exceeds the gain, total consumption rises (Jevons paradox)."
     - t: "Origin"
       d: "William Stanley Jevons, *The Coal Question* (1865), on steam engines; generalised by energy economics (the Khazzoom-Brookes postulate, 1980s)."
     - t: "Not to be confused with"
@@ -37,7 +39,7 @@ fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the pa
     - t: "Limit"
       d: "Its size varies by use, sector and period: it does not cancel every efficiency gain, but ignoring it leads to overestimating the expected savings."
     - t: "Anthropic reading"
-      d: "A [boomerang effect](/en/glossaire/#boomerang-effect): the local order (less energy per unit) comes back as global disorder (more total consumption). Analysis developed in [AWP-04](/en/awp/awp-04/)."
+      d: "A [boomerang effect](/en/glossaire/#boomerang-effect): the local order (less energy per unit) comes back as global disorder (smaller savings than expected, or even more total consumption). Analysis developed in [AWP-04](/en/awp/awp-04/)."
       anthropie: true
 schemas:  # mechanism diagram (notion-schema shortcode)
   mecanisme:
@@ -70,7 +72,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long_en: "Rebound effect"
 ---
 
-The rebound effect is the mechanism by which improved energy efficiency, instead of reducing total energy consumption, tends to increase it: what becomes more efficient becomes cheaper, hence more used. Described by the economist William Stanley Jevons as early as 1865, it remains the blind spot of most energy-efficiency policies.
+The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use: what becomes more efficient becomes cheaper, hence more used. When the take-back exceeds the gain, total energy consumption rises instead of falling: this is the Jevons paradox. Described by the economist William Stanley Jevons as early as 1865, it remains the blind spot of most energy-efficiency policies.
 
 {{< notion-fiche >}}
 
@@ -98,7 +100,7 @@ The rebound effect is not a behavioural anomaly that better information would co
 
 ## The anthropic reading: a boomerang effect
 
-The anthropic framework of the economist Stéphane Lalut proposes to read the rebound effect as a case of [boomerang effect](/en/glossaire/#boomerang-effect): the efficiency gain produces a **local order** — less energy per unit produced, an improving balance sheet — whose cost comes back as a **global disorder** — more total consumption, more extraction, more waste.
+The anthropic framework of the economist Stéphane Lalut proposes to read the rebound effect as a case of [boomerang effect](/en/glossaire/#boomerang-effect): the efficiency gain produces a **local order** — less energy per unit produced, an improving balance sheet — whose cost comes back as a **global disorder** — smaller savings than expected and, when the take-back exceeds the gain, more total consumption, more extraction, more waste.
 
 This reading is developed in [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/) (2026), which places the rebound among three transfer mechanisms at work in the energy transition: extraction externalised toward lithium- and cobalt-producing countries, technological waste deferred to the coming decades, and the unaccounted rebound effect. What the three have in common: the disorder the transition claims to eliminate is not resolved, it is **displaced** — in space, in time, or by the detour of volumes.
 

@@ -5,12 +5,12 @@ og_image_alt: "Share card: “The anthropic loop” and its diagram"
 url: /en/anthropic-loop/
 description: "The anthropic loop follows, through five conditional states, what becomes of a displaced cost: displacement, accumulation, saturation, return, bifurcation. It extends K. William Kapp's cost-shifting and is distinct from Bernard Stiegler's neganthropy — and from the AI company Anthropic."
 date: 2026-07-24
-lastmod: 2026-10-30
+lastmod: 2026-11-05
 date_suit: [dette_dynamique]  # “Over time, and up close” box of the Debt button (partials/figures/boucle-dette-echelles.html)
 og_title: "What is the anthropic loop? — definition, origins and sources — S. Lalut"
 faq:
   - question: "What is the anthropic loop?"
-    answer: "The anthropic loop follows, through five conditional states, what becomes of the disorder a social system makes others bear: displacement toward a receptacle (E1), accumulation (E2), saturation (E3), a possible return toward the emitting system (E4), bifurcation (E5) — new displacement, reconfiguration or partial collapse. No passage is compulsory. It is formalised by economist Stéphane Lalut in AWP-07 (2026, DOI 10.5281/zenodo.21200286). When an iteration ends in a new displacement, the path does not return to its starting point: it is a spiral."
+    answer: "The anthropic loop follows, through five conditional states, what becomes of the disorder a social system makes others bear: displacement toward a receptacle (E1), accumulation (E2), saturation (E3), a possible return toward the emitting system (E4), bifurcation (E5) — new displacement, reconfiguration or partial collapse. No passage is compulsory. It is formalised by economist Stéphane Lalut in AWP-07 (2026, DOI 10.5281/zenodo.21200288). When an iteration ends in a new displacement, the path does not return to its starting point: it is a spiral."
   - question: "Is the anthropic loop related to Anthropic, the AI company?"
     answer: "No. Anthropic is an American artificial-intelligence company, and its engineering vocabulary (agent loops, 'loop engineering') is unrelated. The anthropic loop is a social-science concept: the cycle through which social systems displace disorder, saturate their receptacles and face its return. Only the Greek root ánthrōpos is shared."
   - question: "What is the link between the anthropic loop and K. William Kapp's cost-shifting?"

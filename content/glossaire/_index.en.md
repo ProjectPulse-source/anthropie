@@ -1,6 +1,8 @@
 ---
 date: 2026-04-15  # premier commit de la page (git log --follow)
-lastmod: 2026-10-26  # derniere modification de fond (entree « Registre des couts deportes » : 168 jalons sur 168 en ligne, 26/10/2026)
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Corrections: Jevons effect (extreme case of the rebound effect), boomerang effect (credit to Ulrich Beck, balance not asserted), registers of debt (a possible displacement, to be established case by case)."}
 title: "Glossary"
 og_title: "Glossary — the concepts, defined and sourced — S. Lalut"
 description: "Key terms of the anthropic framework."
@@ -115,12 +117,12 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="boomerang-effect">
 <dt>Boomerang effect</dt>
-<dd>The second criterion of saturation: displaced disorder returns to the emitting system in a form often more costly than the initial disorder. Climate change is its planetary illustration: the disorder exported into the atmosphere over two centuries of industrialisation returns as costs that exceed the benefits of the original export. See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
+<dd>The second criterion of saturation: displaced disorder returns to the emitting system in a form often more costly than the initial disorder. Climate change is its planetary illustration: the disorder exported into the atmosphere over two centuries of industrialisation returns as costs that the original export had not counted. The notion of the boomerang effect comes from Ulrich Beck (<em>Risk Society</em>, 1986). See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="jevons-effect">
 <dt>Jevons effect (Jevons paradox)</dt>
-<dd>Improving the efficiency of a resource tends to increase its total consumption rather than reduce it. An example of the anthropic boomerang effect. The efficiency gain does not resolve disorder: it shifts the saturation threshold, opening new transfer spaces and accelerating overall consumption. See <a href="/en/awp/awp-04/">AWP-04</a>.</dd>
+<dd>The extreme case of the rebound effect: increased use takes back more than the efficiency gain, and total consumption of the resource rises instead of falling (Jevons, <em>The Coal Question</em>, 1865). An example of the anthropic boomerang effect. The efficiency gain does not resolve disorder: it shifts the saturation threshold, opening new transfer spaces and accelerating overall consumption. See <a href="/en/awp/awp-04/">AWP-04</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="metaprogramme">
@@ -170,7 +172,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="coupled-cost-registers">
 <dt>Coupled cost registers</dt>
-<dd>AWP-06's central contribution: a testable grid of four registers — energy, matter, territory, attention — showing how digital infrastructure simultaneously displaces disorder along several irreducible axes. These registers do not add up: they couple. Reducing one often displaces toward the three others. See <a href="/en/awp/awp-06/">AWP-06</a>. Not to be confused with the <em>Register of Offloaded Costs</em>, which is a chronology rather than a typology.</dd>
+<dd>AWP-06's central contribution: a testable grid of four registers — energy, matter, territory, attention — for examining how digital infrastructure may simultaneously displace disorder along several irreducible axes. These registers do not add up: they couple. Reducing one may shift the burden onto the others: that is what the grid asks to be established, case by case. See <a href="/en/awp/awp-06/">AWP-06</a>. Not to be confused with the <em>Register of Offloaded Costs</em>, which is a chronology rather than a typology.</dd>
 </div>
 
 <div class="glossaire-entry" id="register-of-offloaded-costs">

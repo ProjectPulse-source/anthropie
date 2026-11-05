@@ -1,11 +1,11 @@
-# relu le 2026-10-16 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What can France decide in the European Union?
 What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules.
 Where the Union has competence, the Commission proposes and France votes with the other governments in the Council: under qualified majority, it can be outvoted; under unanimity, its single vote against can block.
 In the public votes of the Council on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times.
 These votes record its position at the last moment, not what it obtained in the negotiation that precedes them.
-Page updated 12 October 2026
+Page updated 5 November 2026 · revisions
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 The figure is surprising: across all the public votes recorded, France has almost never opposed a European law in the Council.
@@ -36,7 +36,7 @@ The TEU sets the rule: “competences not conferred upon the Union in the Treati
 4(1)).
 The principle of conferral: “the Union shall act only within the limits of the competences conferred upon it by the Member States in the Treaties to attain the objectives set out therein” (art.
 5(2)).
-In the areas of support, coordination and supplement, the Union’s legally binding acts “shall not entail harmonisation of Member States' laws or regulations” (TFEU, art.
+In the areas of support, coordination and supplement, the Union’s legally binding acts “shall not entail harmonisation of Member States’ laws or regulations” (TFEU, art.
 2(5)).
 Sincere cooperation: “The Member States shall take any appropriate measure, general or particular, to ensure fulfilment of the obligations arising out of the Treaties or resulting from the acts of the institutions of the Union” (TEU, art.
 4(3)).
@@ -158,7 +158,9 @@ The votes on this page are those of the Council of the European Union.
 What the proposal changes for France.
 Once the proposal has been tabled, the Council may amend it only unanimously, except in the cases the Treaty lists (conciliation with the European Parliament, budgetary and financial procedures); the Commission, for its part, may alter its proposal as long as the Council has not acted (TFEU, art.
 293).
-Outside these exceptions, the rule works both ways: the other Member States cannot rewrite the proposal in the Council without France’s agreement, and a majority of Member States, France included, is not enough to rewrite it either.
+Outside these exceptions, the Council cannot itself amend the proposal against France’s vote, and a majority of Member States, France included, is not enough to amend it either.
+The text can still change without France’s agreement: the Commission may alter its proposal, and the Council adopts by qualified majority the Parliament’s first-reading position, or its second-reading amendments when the Commission supports them (TFEU, art.
+294).
 The articles quoted, word for word
 The Commission’s initiative: “Union legislative acts may only be adopted on the basis of a Commission proposal, except where the Treaties provide otherwise” (TEU, art.
 17(2)); the article describing the ordinary legislative procedure opens thus: “The Commission shall submit a proposal to the European Parliament and the Council” (TFEU, art.
@@ -233,7 +235,7 @@ Social policy
 art.
 153(2)
 both, depending on the measure
-The Union's own resources
+The Union’s own resources
 art.
 311, al.
 3
@@ -264,7 +266,7 @@ But under qualified majority, its abstention does not help to reach the favourab
 Each row of the table links to the result published by the Council and to the act in the Official Journal, dated after the vote, once signed.
 The acts on which France did not vote in favour
 Date of the vote
-France's vote
+France’s vote
 Act
 Count in the Council
 Published act
@@ -300,7 +302,7 @@ none (vote later than the SWP dataset)
 Council result · EUR-Lex
 23 February 2026
 against
-Regulation on the 'safe third country' concept
+Regulation on the 'safe third country’ concept
 23 in favour, 3 against, 0 abstentions, 1 not taking part
 Regulation (EU) 2026/463 of 24 February 2026
 none (vote later than the SWP dataset)
@@ -315,7 +317,7 @@ These bars show votes, not balances of power.
 Votes against and abstentions of each Member State in the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026.
 The United Kingdom appears only until its withdrawal, Croatia since its accession in 2013, and Denmark and Ireland do not take part in some acts: these raw counts are not a ranking of influence.
 Download · Cite · Data
-Each Member State's votes in a table
+Each Member State’s votes in a table
 Member State
 Against
 Abstention
@@ -491,13 +493,13 @@ That amounts to 11 directives out of 1,022.
 The Commission also counts the directives it considers incorrectly transposed, on the basis of its infringement proceedings: this is the conformity deficit, at 1.5% for France.
 The EU average is 1.1%, and the opening of infringement proceedings does not itself establish a breach found by the Court.
 The Commission places France among the nine Member States that combine a high transposition deficit and a high conformity deficit.
-These values come from a single edition of the scoreboard.
-They do not say whether France’s delay is growing or shrinking.
+France’s delay is growing.
+The same edition of the scoreboard places France among the Member States whose deficit shows a “worrying rise” compared with the previous edition (“France and Hungary (120%)”), and among those whose average transposition delay lengthens the most (+3.2 months).
 How these values were recorded, and the target set
 The Commission publishes these values only in an interactive table, with no file: they were recorded from an archived screenshot, and the EU averages checked against the Commission’s text.
 The European Council set a transposition deficit target of 1% in 2007.
 The Commission lowered it to 0.5% (Single Market Act of 2011, Communication of March 2023).
-France's transposition indicators
+France’s transposition indicators
 Indicator, as at 30 November 2025
 France
 EU average
@@ -542,7 +544,7 @@ It does not relate votes against and abstentions to the number of votes in which
 It counts neither acts of the Commission, nor decisions of the European Central Bank, nor judgments of the Court of Justice, nor Council votes on non-legislative acts, such as decisions on signing a trade agreement: the January 2026 decisions on signing the agreement between the Union and Mercosur, adopted by written procedure, fall outside the record, whatever each Member State’s vote.
 It reads the Treaties in force, without case law.
 The votes stand as at 1 October 2026, transposition as at 30 November 2025.
-Changing the European rules Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
+Changing the European rules Un président peut-il tenir ses promesses?, the author’s book, in French: contents, excerpts and reviews →
 Frequently asked questions
 Can France block a European law?
 That depends on the voting rule the Treaty sets for the area.
@@ -551,13 +553,13 @@ Where the Treaty requires unanimity, for example for indirect taxation (article 
 How many times has France voted against a European law?
 In the public votes of the Council of the European Union on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times.
 The texts it voted against were adopted by qualified majority.
-In the same record, Germany voted against 32 times and the Netherlands 41 times; these raw counts do not measure a Member State's influence.
+In the same record, Germany voted against 32 times and the Netherlands 41 times; these raw counts do not measure a Member State’s influence.
 Does France transpose EU directives on time?
-According to the European Commission's Single Market Scoreboard, as at 30 November 2025, 1.1% of Single Market directives whose deadline had passed had not been transposed in France, the same as the EU average.
-The Commission's target is 0.5%.
+According to the European Commission’s Single Market Scoreboard, as at 30 November 2025, 1.1% of Single Market directives whose deadline had passed had not been transposed in France, the same as the EU average.
+The Commission’s target is 0.5%.
 The directives it considers incorrectly transposed, on the basis of its infringement proceedings, amounted to 1.5% for France.
 The EU average was 1.1%.
-These values come from a single edition of the scoreboard.
+According to the same edition, France’s deficit rose by 120% compared with the previous edition.
 Sources
 Treaty on European Union, consolidated version, Official Journal of the European Union C 202 of 7 June 2016 (EUR-Lex), art.
 4, 5, 15, 16 and 17.
@@ -595,11 +597,14 @@ Where the Union has competence, the Commission proposes, and the Council votes m
 In the public votes of the Council on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times; a vote in favour does not say what it obtained or gave up in the negotiation.
 Copy summary
 The data
-The votes against, abstentions and non-participation of each Member State in the Council, the five acts on which France did not vote in favour with their count and references, the TFEU legal bases by decision rule and France's transposition indicators; the same content exists in CSV, long format, readable in a spreadsheet.
+The votes against, abstentions and non-participation of each Member State in the Council, the five acts on which France did not vote in favour with their count and references, the TFEU legal bases by decision rule and France’s transposition indicators; the same content exists in CSV, long format, readable in a spreadsheet.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (TEU and TFEU, Council of the EU, Official Journal, SWP / GESIS and European Commission), under their own terms.
+Revisions
+5 November 2026 — Addition: according to the same edition of the scoreboard, France’s transposition deficit rose by 120% and its average delay by 3.2 months.
+Clarification: the Council cannot amend a proposal on its own against France, but the text can change without its agreement.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

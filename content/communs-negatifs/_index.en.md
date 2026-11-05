@@ -5,7 +5,9 @@ og_image_alt: "Share card: “Negative commons” and its diagram"
 url: /en/negative-commons/
 description: "Negative commons designate what we inherit collectively without having chosen it: waste, polluted soils, power plants to be dismantled, obsolete infrastructures. A notion developed by Alexandre Monnin, Emmanuel Bonnet and Diego Landivar — and an anthropic reading of these legacies."
 date: 2026-07-26
-lastmod: 2026-10-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction: it is Alexandre Monnin who ranks digital technologies among the candidate negative commons; AWP-06 takes up his proposal, under conditions. The externality belongs to economic analysis, not to accounting."}
 og_title: "What are negative commons? — definition and sources — S. Lalut"
 faq:
   - question: "What is a negative common?"
@@ -13,9 +15,9 @@ faq:
   - question: "What is the difference between negative commons and commons (Ostrom)?"
     answer: "Elinor Ostrom's commons are positive resources — pastures, irrigation, knowledge — managed collectively so that they last. Negative commons invert the figure: they are not goods we want to preserve but realities we inherit and nobody wants — which must nonetheless be maintained, monitored or dismantled collectively, sometimes over generations."
   - question: "What is the difference between negative commons and externalities?"
-    answer: "The externality is an accounting notion: an unbilled cost, which one imagines can be corrected by a price (tax, market). The notion of negative commons challenges this reading: a polluted soil or a power plant at the end of its life is not a price discrepancy but an installed material reality, which demands care, institutions and labour — not only a monetary internalisation."
+    answer: "The externality is a notion of economic analysis: an unbilled cost, which one imagines can be corrected by a price (tax, market). The notion of negative commons challenges this reading: a polluted soil or a power plant at the end of its life is not a price discrepancy but an installed material reality, which demands care, institutions and labour — not only a monetary internalisation."
   - question: "What is the link between negative commons and anthropy?"
-    answer: "Negative commons are the anthropic transfer turned into matter: when a system displaces its disorder (waste, pollution, end-of-life infrastructures) and the receptacle accumulates, what remains is a shared negative inheritance. The working paper AWP-06 (Stéphane Lalut, 2026) ranks digital infrastructures — data centers, equipment to be dismantled — among candidate negative commons."
+    answer: "In the anthropic framework (Stéphane Lalut), negative commons can be read as the anthropic transfer turned into matter: when a system displaces its disorder (waste, pollution, end-of-life infrastructures) and the receptacle accumulates, what remains is a shared negative inheritance. Taking up Alexandre Monnin's proposal, the working paper AWP-06 (Stéphane Lalut, 2026) analyses some digital infrastructures — data centers, equipment to be dismantled — as candidate negative commons, under conditions."
   - question: "Are negative commons a pessimistic notion?"
     answer: "No — it is a notion of action. It shifts attention from promises alone (building, innovating) to neglected gestures: maintaining, closing, dismantling, cleaning up. Whole trades, institutions and know-how rest on this \"care of remains\"."
   - question: "Who introduced the notion?"
@@ -105,7 +107,7 @@ What such a legacy amounts to, in figures, for French radioactive waste: the dat
 
 ## The coming textbook case: digital technology
 
-The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) (2026) ranks digital technologies among the **candidate negative commons**: data centers sized for decades, short-lived equipment with unresolved recycling, networks whose dismantling will cost more than anyone has provisioned. Digital technology presents itself as immaterial; its remains will be very material — and shared. To think the cloud in negative commons is to ask today the question that polluted soils taught us too late: who will inherit the infrastructure, and who will take care of it?
+The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) (2026) takes up Alexandre Monnin's proposal, which ranks digital technologies among the **candidate negative commons**; it analyses some digital infrastructures — data centers sized for decades, mining supply chains, short-cycle devices — as candidates under conditions (lasting dependence, displaced costs, irreversibility), not as negative commons by principle. Digital technology presents itself as immaterial; its remains will be very material — and shared. To think the cloud in negative commons is to ask today the question that polluted soils taught us too late: who will inherit the infrastructure, and who will take care of it?
 
 ## Frequently asked questions
 
@@ -113,6 +115,6 @@ The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](
 
 ## Further reading
 
-- [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) (DOI: 10.5281/zenodo.20025421, open-access PDF) — where digital technology joins the candidate negative commons.
+- [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) (DOI: 10.5281/zenodo.20077993, open-access PDF) — which takes up, under conditions, the proposal to rank digital technology among the candidate negative commons.
 - [What is technological debt?](/en/technological-debt/) and [What is the anthropic loop?](/en/anthropic-loop/) — the neighbouring pages of the framework.
 - The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 p.) — the general framework, of which negative commons are one of the meeting points with the ecology of dismantling.

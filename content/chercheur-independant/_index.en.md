@@ -5,7 +5,9 @@ og_image_alt: "Share card: “Independent researcher”"
 url: /en/independent-researcher/
 description: "How does an independent researcher publish citable work without a university affiliation? DOIs, preprints, academic identifiers, methodological requirements — the concrete infrastructure, and an analysis of this position within the academic field."
 date: 2026-07-26
-lastmod: 2026-07-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Corrections: six published books, not four; the texts on Mediapart are posts on the author's blog in the Club de Mediapart, not press articles; DOI of the English version of AWP-05."}
 og_title: "Independent researcher: publishing outside an institution — guide — S. Lalut"
 faq:
   - question: "What is an independent researcher?"
@@ -80,7 +82,7 @@ On this reading, the independent researcher's marginality is neither a personal 
 
 ## The concrete case
 
-This page is written from the position it describes. Stéphane Lalut, an economist by training, works as an independent researcher and essayist: nine working papers with DOIs ([AWP series](/en/serie-awp/)), four published books, and articles and reviews in *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps*, *Mediapart* or *La Grande Conversation* ([publications](/publications/) — in French). Public identifiers: [ORCID](https://orcid.org/0009-0002-1794-4895), [Google Scholar](https://scholar.google.com/citations?user=J4NqzwSfrHAC), [Zenodo community](https://zenodo.org/communities/anthropie-working-papers). Full background on the [About](/en/a-propos/) page.
+This page is written from the position it describes. Stéphane Lalut, an economist by training, works as an independent researcher and essayist: nine working papers with DOIs ([AWP series](/en/serie-awp/)), six published books, and articles and reviews in *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps* or *La Grande Conversation*, as well as posts on his blog at the *Mediapart* Club ([publications](/publications/) — in French). Public identifiers: [ORCID](https://orcid.org/0009-0002-1794-4895), [Google Scholar](https://scholar.google.com/citations?user=J4NqzwSfrHAC), [Zenodo community](https://zenodo.org/communities/anthropie-working-papers). Full background on the [About](/en/a-propos/) page.
 
 ## Frequently asked questions
 
@@ -88,6 +90,6 @@ This page is written from the position it describes. Stéphane Lalut, an economi
 
 ## Further reading
 
-- [AWP-05 — *Thinking outside the walls: notes on independent research*](/en/awp/awp-05/) (DOI: 10.5281/zenodo.19269487, open-access PDF) — the full analysis of the position.
+- [AWP-05 — *Thinking outside the walls: notes on independent research*](/en/awp/awp-05/) (DOI: 10.5281/zenodo.19440866, open-access PDF) — the full analysis of the position.
 - [The Anthropie Working Papers series](/en/serie-awp/) — the corpus that applies this method.
 - [About](/en/a-propos/) — the author's background, and [What is anthropy?](/en/quest-ce-que-lanthropie/) — the general framework.

@@ -1,22 +1,22 @@
-# relu le 2026-11-04 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Radioactive waste: does volume tell the problem?
 Radioactive waste is first counted in cubic metres: 1.89 million at end-2024.
 But volume says neither where the radioactivity is nor what remains unresolved.
-At end-2021, high-level waste made up 0.25% of the volume and 97.1% of the declared radioactivity; its final disposal is planned at Bure (Cigéo), but not yet licensed.
-Page published 26 October 2026
+At end-2021, high-level waste made up 0.25% of the volume and 97.2% of the declared radioactivity; its final disposal is planned at Bure (Cigéo), but not yet licensed.
+Page updated 5 November 2026
 ↓ Charts, data and citations to reuseReuse this page
 Data as of: 26 October 2026 Andra, National Inventory of radioactive materials and waste, open files (data.gouv.fr): volume and declared radioactivity at end-2021 (latest edition declaring radioactivity), volumes at end-2024.
 Download: CSV · JSON
 Where is the radioactivity?
 At end-2021, the latest year in which Andra’s inventory declares the radioactivity of each category, France held 1.76 million cubic metres of radioactive waste in the five categories of its balances, in conditioned equivalent.
 Over nine tenths of this volume (91.7%) was low- and intermediate-level short-lived waste and very-low-level waste: it carried 0.12% of the declared radioactivity.
-High-level waste, for its part, made up 0.25% of the volume, a few thousandths, and 97.1% of the radioactivity; together with long-lived intermediate-level waste, 99.8%.
+High-level waste, for its part, made up 0.25% of the volume, a few thousandths, and 97.2% of the radioactivity; together with long-lived intermediate-level waste, 99.9%.
 The categories that hold most of the declared radioactivity are therefore not those that take up the most volume, and they do not fall under the same management routes.
 Their radioactivity does not, on its own, measure their dangerousness or the risk to which the population is exposed.
 Volume in conditioned equivalent and declared radioactivity, in becquerels, for the same year; disposal routes according to Andra (National Inventory, open data; Les Essentiels 2026).
 The result in one sentence.
-In France, at end-2021, high-level waste made up 0.25% of the volume of radioactive waste and 97.1% of its declared radioactivity; its final disposal, planned at Bure (Cigéo), is not yet licensed.
+In France, at end-2021, high-level waste made up 0.25% of the volume of radioactive waste and 97.2% of its declared radioactivity; its final disposal, planned at Bure (Cigéo), is not yet licensed.
 Volume has kept growing since: 1.89 million cubic metres at end-2024, including 4,717 m³ of high-level waste, still 0.25% of the total.
 Radioactivity is declared only at the inventory’s editions.
 What the chart shows, and what it does not
@@ -27,9 +27,9 @@ The chart shows that the two measures give very different hierarchies: by volume
 It also shows that the three long-lived categories (high-level, intermediate- and low-level long-lived) have no final disposal route in operation yet, including low-level long-lived waste, which is barely radioactive.
 This reflects management constraints linked in particular to half-life, activity level and the properties of the waste; it does not allow the situation to be attributed to lifespan alone.
 The inventory declares radioactivity at its editions: five files record it (2013, 2014, 2015, 2016 and 2021).
-In each, high-level waste accounts for between 84.7 and 97.1% of the recorded radioactivity, and high-level together with long-lived intermediate-level waste for at least 99.7%.
+In each, high-level waste accounts for between 84.7 and 97.2% of the recorded radioactivity, and high-level together with long-lived intermediate-level waste for at least 99.8%.
 The available data do not, without further harmonisation, explain the variation from one edition to the next.
-Part of the volume has no declared radioactivity; assuming it has the average activity of its category, an unverified assumption, the share of high-level waste would be 96.7%.
+Part of the volume has no declared radioactivity; assuming it has the average activity of its category, an unverified assumption, the share of high-level waste would be 96.8%.
 What the chart does not show.
 The becquerel measures a number of decays per second.
 It does not directly measure the dose received, the toxicity of a radionuclide, health risk, or the difficulty or cost of management.
@@ -74,11 +74,11 @@ Buy the paperback — $29.99Kindle edition
 Contents, excerpts and reviews →
 Frequently asked questions
 What share of the volume of radioactive waste is high-level waste?
-At end-2021, the latest edition of the inventory declaring radioactivity, high-level waste accounted for 0.25% of the volume of the five categories in Andra’s balances and 97.1% of the declared radioactivity.
+At end-2021, the latest edition of the inventory declaring radioactivity, high-level waste accounted for 0.25% of the volume of the five categories in Andra’s balances and 97.2% of the declared radioactivity.
 At end-2024, it takes up 4,717 m³ in conditioned equivalent, 0.25% of the volume.
 Is the most radioactive waste disposed of?
 Not yet in final form.
-High-level and long-lived intermediate-level waste, which together hold 99.8% of the declared radioactivity (end-2021), is stored on its production sites: its deep geological disposal, Cigéo, is planned at Bure; after the 2026 public inquiry and the inquiry commission’s favourable opinion, the creation licence is still to be decided.
+High-level and long-lived intermediate-level waste, which together hold 99.9% of the declared radioactivity (end-2021), is stored on its production sites: its deep geological disposal, Cigéo, is planned at Bure; after the 2026 public inquiry and the inquiry commission’s favourable opinion, the creation licence is still to be decided.
 Low- and intermediate-level short-lived waste and very-low-level waste, over nine tenths of the volume, have disposal facilities in operation.
 Where do these figures come from?
 From the open files of Andra’s National Inventory (waste declared at end-2024, and at end-2021 for activity), read by a script that stops if a figure no longer meets the conditions on which the page’s main sentences depend.
@@ -95,7 +95,7 @@ Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
 Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
 Radioactive waste: volume does not show where the radioactivity is
-At end-2021, high-level waste made up 0.25% of the volume and 97.1% of the declared radioactivity; its final disposal is planned.
+At end-2021, high-level waste made up 0.25% of the volume and 97.2% of the declared radioactivity; its final disposal is planned.
 Reading caveat.
 Volume in conditioned equivalent and declared radioactivity, five categories of Andra’s balances, same year.
 Radioactivity alone measures neither health risk nor management cost.
@@ -108,7 +108,7 @@ Lalut, Stéphane (2026).
 Andra (National Inventory) data, retrieved 26 October 2026. https://stephane-lalut.com/en/radioactive-waste-volume-or-radioactivity/
 Copy citation
 In three sentences
-In France, at end-2021, high-level waste made up 0.25% of the volume of radioactive waste and 97.1% of its declared radioactivity.
+In France, at end-2021, high-level waste made up 0.25% of the volume of radioactive waste and 97.2% of its declared radioactivity.
 Long-lived waste has no final disposal route in operation yet: disposal of high-level and long-lived intermediate-level waste is planned at Bure (Cigéo), not yet licensed.
 Volume, for its part, is carried mostly by categories that have a disposal facility in operation.
 Copy summary

@@ -5,7 +5,9 @@ og_image_alt: "Share card: “Social reversibility” and its diagram"
 url: /en/social-reversibility/
 description: "Social reversibility is the capacity, assessed before an attempt, to withstand its possible failure without a lasting closure of one's future. Neither a stock nor a flow: a third dimension of inequality — what one can afford to fail."
 date: 2026-07-24
-lastmod: 2026-10-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Corrections: indicator 040 of the FIBEN file was removed in 2013 (decree no. 2013-799), not in 2021; the Lemoine law (2022) shortened the right-to-be-forgotten period to five years, it did not create it."}
 og_title: "What is social reversibility? — definition and sources — S. Lalut"
 faq:
   - question: "What is social reversibility?"
@@ -95,7 +97,7 @@ Two people with identical incomes do not stand in the same relation to risk. One
 
 The pivot of the framework is the **trace**: the memory institutions keep of a failure, and the readmission regime it governs.
 
-A payment incident, a business default, a recorded flag do not disappear with the event: they are written down — files, histories, scores — and condition future access to credit, insurance, housing, sometimes employment. Institutions choose how long they remember. In the United States, bankruptcy law is explicitly built around a *fresh start*, and the Fair Credit Reporting Act caps how long most negative items may remain on a credit report. France has recently shortened two of its own memories: in 2021 the Banque de France removed the 040 indicator from its FIBEN file, which for three years had flagged directors who had been through a judicial liquidation; and the Lemoine Act (2022) created an insurance right-to-be-forgotten, barring the declaration of a past cancer beyond a set delay. In each case, a society decided to *shorten the memory of failure* — that is, to increase the reversibility of those it concerned.
+A payment incident, a business default, a recorded flag do not disappear with the event: they are written down — files, histories, scores — and condition future access to credit, insurance, housing, sometimes employment. Institutions choose how long they remember. In the United States, bankruptcy law is explicitly built around a *fresh start*, and the Fair Credit Reporting Act caps how long most negative items may remain on a credit report. France has shortened two of its own memories: a 2013 decree (no. 2013-799) removed the 040 indicator from the Banque de France's FIBEN file, which for three years had flagged directors who had been through a judicial liquidation; and the Lemoine Act (2022) cut to five years the waiting period of the insurance right to be forgotten, after which the insurer may no longer collect information on a cured cancer. In each case, a society decided to *shorten the memory of failure* — that is, to increase the reversibility of those it concerned.
 
 ## Bouncing back: structure, not just psychology
 

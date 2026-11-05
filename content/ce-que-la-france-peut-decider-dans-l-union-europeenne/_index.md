@@ -3,7 +3,9 @@ title: "Que peut décider la France dans l'Union européenne ?"
 description: "Ce que la France décide seule, ce qu'elle décide avec les autres États et ce qu'elle peut empêcher : le traité sur l'Union européenne et le TFUE cités mot pour mot, la règle de vote au Conseil, les votes publics de la France du {ue.debut} au {ue.fin} ({ue.fr_c} contre, {ue.fr_a} abstentions), chacun relié au résultat publié par le Conseil et à l'acte paru au Journal officiel, et la transposition des directives au {ue.tr_date}. Données ouvertes."
 chapo: "Ce que les traités n'ont pas attribué à l'Union reste aux États : la France y décide seule, en respectant les règles communes. Là où l'Union est compétente, la Commission propose et la France vote avec les autres gouvernements au Conseil : à la majorité qualifiée, elle peut être mise en minorité ; à l'unanimité, son seul vote contre peut bloquer. Sur les votes publics du Conseil sur des actes législatifs, du {ue.debut} au {ue.fin}, la France a voté contre {ue.fr_contre} et s'est abstenue {ue.fr_abst}. Ces votes disent sa position au dernier moment, non ce qu'elle a obtenu dans la négociation qui les précède."
 date: 2026-10-06
-lastmod: 2026-10-12
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Ajout : selon la même édition du tableau d'affichage, le déficit de transposition de la France a augmenté de 120 % et sa durée moyenne de retard de 3,2 mois. Précision : le Conseil ne peut amender seul une proposition contre la France, mais le texte peut changer sans son accord."}
 donnees: [promesses_europe]
 og_title: "Que peut décider la France dans l'Union européenne ? — compétences, règles de vote et votes de la France au Conseil — S. Lalut"
 og_image: "images/og-europe-promesse.jpg"
@@ -35,7 +37,7 @@ faq:
   - question: "Combien de fois la France a-t-elle voté contre une loi européenne ?"
     answer: "Sur les votes publics du Conseil de l'Union européenne sur des actes législatifs, du {ue.debut} au {ue.fin}, la France a voté contre {ue.fr_contre} et s'est abstenue {ue.fr_abst}. Les textes contre lesquels elle a voté ont été adoptés à la majorité qualifiée. Sur le même relevé, l'Allemagne a voté contre {ue.de_c} fois et les Pays-Bas {ue.nl_c} fois ; ces comptes bruts ne mesurent pas l'influence d'un État."
   - question: "La France transpose-t-elle les directives européennes à temps ?"
-    answer: "Selon le tableau d'affichage du marché unique de la Commission, au {ue.tr_date}, {ue.tr_def} % des directives du marché unique dont l'échéance était passée n'étaient pas transposées en France, comme en moyenne dans l'Union. La Commission vise 0,5 %. Les directives qu'elle tient pour mal transposées, d'après ses procédures d'infraction, représentaient {ue.tr_conf} % pour la France. La moyenne de l'Union était de {ue.tr_conf_ue} %. Ces valeurs viennent d'une seule édition du tableau d'affichage."
+    answer: "Selon le tableau d'affichage du marché unique de la Commission, au {ue.tr_date}, {ue.tr_def} % des directives du marché unique dont l'échéance était passée n'étaient pas transposées en France, comme en moyenne dans l'Union. La Commission vise 0,5 %. Les directives qu'elle tient pour mal transposées, d'après ses procédures d'infraction, représentaient {ue.tr_conf} % pour la France. La moyenne de l'Union était de {ue.tr_conf_ue} %. Selon la même édition, le déficit de la France a augmenté de 120 % par rapport à l'édition précédente."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["juridique-institutionnel", "quantitatif"]  # protocoles de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-12"
@@ -100,7 +102,7 @@ Là où l'Union est compétente, trois pouvoirs se distinguent.
 
 **Adopter** revient, dans la procédure législative ordinaire, au Parlement européen et au Conseil de l'Union européenne. Deux institutions portent un nom voisin&nbsp;: au Conseil de l'Union européenne siège un ministre de chaque État, selon le sujet traité (agriculture, finances, environnement…)&nbsp;; au Conseil européen siègent les chefs d'État ou de gouvernement, qui fixent les orientations générales et ne votent pas les lois (TUE, art.&nbsp;15, §&nbsp;1&nbsp;: «&nbsp;{{< ue-val "cit_tue15" >}}&nbsp;»). Les votes de cette page sont ceux du Conseil de l'Union européenne.
 
-**Ce que la proposition change pour la France.** Une fois la proposition déposée, le Conseil ne peut l'amender qu'à l'unanimité, sauf dans les cas que le traité énumère (conciliation avec le Parlement européen, procédures budgétaires et financières)&nbsp;; la Commission, elle, peut modifier sa proposition tant que le Conseil n'a pas statué (TFUE, art.&nbsp;293). Hors ces exceptions, la règle joue dans les deux sens&nbsp;: les autres États ne peuvent pas réécrire la proposition au Conseil sans l'accord de la France, et une majorité d'États, la France comprise, ne suffit pas non plus à la réécrire.
+**Ce que la proposition change pour la France.** Une fois la proposition déposée, le Conseil ne peut l'amender qu'à l'unanimité, sauf dans les cas que le traité énumère (conciliation avec le Parlement européen, procédures budgétaires et financières)&nbsp;; la Commission, elle, peut modifier sa proposition tant que le Conseil n'a pas statué (TFUE, art.&nbsp;293). Hors ces exceptions, le Conseil ne peut pas amender lui-même la proposition contre le vote de la France, et une majorité d'États, la France comprise, ne suffit pas non plus à l'amender. Le texte peut pourtant changer sans son accord&nbsp;: la Commission peut modifier sa proposition, et le Conseil adopte à la majorité qualifiée la position du Parlement en première lecture, ou ses amendements en deuxième lecture quand la Commission les soutient (TFUE, art.&nbsp;294).
 
 <details class="repli"><summary>Les articles cités, mot pour mot</summary>
 
@@ -184,7 +186,7 @@ Après le vote, la France doit appliquer ce qui a été adopté, qu'elle l'ait v
 
 Au {{< ue-val "tr_date" >}}, ce déficit était de {{< ue-val "tr_def" >}}&nbsp;% en France, la même valeur que la moyenne de l'Union. Cela représente {{< ue-val "tr_retard" >}}&nbsp;directives sur {{< ue-val "tr_dues" >}}. La Commission compte aussi les directives qu'elle tient pour mal transposées, d'après ses procédures d'infraction&nbsp;: c'est le déficit de conformité, de {{< ue-val "tr_conf" >}}&nbsp;% pour la France. La moyenne de l'Union est de {{< ue-val "tr_conf_ue" >}}&nbsp;%, et une procédure engagée n'est pas un manquement constaté par la Cour. La Commission range la France parmi les {{< ue-val "tr_double" >}}&nbsp;États qui cumulent un déficit de transposition élevé et un déficit de conformité élevé.
 
-**Ces valeurs viennent d'une seule édition du tableau d'affichage.** Elles ne disent pas si le retard de la France augmente ou diminue.
+**Le retard de la France augmente.** La même édition du tableau d'affichage range la France parmi les États dont le déficit progresse de façon «&nbsp;préoccupante&nbsp;» par rapport à l'édition précédente («&nbsp;<span lang="en">France and Hungary (120%)</span>&nbsp;»), et parmi ceux dont la durée moyenne de retard s'allonge le plus (+3,2&nbsp;mois).
 
 <details class="repli"><summary>Comment ces valeurs ont été relevées, et l'objectif fixé</summary>
 

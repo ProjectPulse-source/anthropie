@@ -3,7 +3,7 @@ title: "La dette publique est-elle un fardeau pour les générations futures ?"
 description: "Depuis {gen.a0}, {gen.part_k} % seulement des déficits publics français ont correspondu, dans les comptes, à un accroissement net des actifs publics comptabilisés ({gen.d3_part} % sur {gen.d3_lib}). La page éprouve aussi « on se la doit à nous-mêmes » et « le véritable fardeau viendra du vieillissement », sans calculer de facture par génération. Séries Eurostat, BCE et Commission européenne recalculées et contrôlées."
 chapo: "Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d'autres équipements. Que montrent les comptes français ? De {gen.a0} à {gen.fin}, {gen.part_k} % seulement des déficits publics ont correspondu à des actifs publics nouveaux (équipements, bâtiments, terrains), usure déduite ; cette part est tombée à {gen.d3_part} % sur {gen.d3_lib}. Le capital humain que peuvent laisser l'enseignement ou la santé n'y figure pas : ce chiffre dit à quoi les déficits ont correspondu, non ce qu'ils ont produit. Deux autres arguments méritent examen : « nous nous devons la dette à nous-mêmes » et « le véritable fardeau viendra du vieillissement ». Trois tests les éprouvent, sans prétendre calculer la facture de chaque génération."
 date: 2026-07-24
-lastmod: 2026-10-11
+lastmod: 2026-11-05
 og_title: "La dette est-elle un fardeau pour les générations futures ? — S. Lalut"
 og_image: "images/og-dette-generations.jpg"
 og_image_alt: "Carte de partage : « À quoi ont correspondu trente ans de déficits ? » — France, part des déficits publics qui a correspondu, dans les comptes, à des actifs, par décennie, et le reste à des dépenses courantes non couvertes."
@@ -16,6 +16,7 @@ og_image_alt: "Carte de partage : « À quoi ont correspondu trente ans de défi
 # Aucun chiffre saisi : jetons {gen.*} et shortcodes gen-val / gen-tableau (scripts/update_dette_generations.py).
 donnees: [dette_generations]
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-05, texte: "Correction : les valeurs par poste (pensions, santé, dépendance, éducation) sont des contributions au second terme de l'indicateur S2, non des variations de dépense en points de PIB."}
   - {date: 2026-10-31, texte: "Révision du patrimoine des administrations publiques : les comptes financiers de la Banque de France, actualisés en octobre 2026 pour 2023 à 2025 et repris par Eurostat, réévaluent surtout les actions détenues par les administrations ; le patrimoine net de fin 2025 passe de 25,0 % à 27,1 % du PIB. Le compte de l'Insee de juillet, qui ne l'intègre pas encore, devient un témoin. La décomposition des déficits, fondée sur les flux, n'en dépend pas (contre-expertise du 31/10)."}
   - {date: 2026-10-18, texte: "Ajout : où le recul de l'investissement net s'est produit, administrations locales et autres administrations, avec son point bas de 2016 et la part locale du recul selon les années comparées (contre-expertise du 18/10)."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
@@ -186,7 +187,7 @@ Le COR projette, lui, une dépense de retraite en hausse dans le PIB, là où la
 
 S2 est l'amélioration permanente du solde primaire structurel (le solde hors intérêts, corrigé de la conjoncture), engagée en {{< gen-val "s2_an" >}}, qui stabiliserait la dette sur un horizon infini. À la différence de l'indicateur S1, qui vise {{< gen-val "s1_cible" >}}&nbsp;% du PIB en {{< gen-val "s1_horizon" >}}, il ne fixe ni le niveau auquel la dette se stabilise ni la date. La position budgétaire de départ est l'écart entre le solde structurel de départ et celui qui stabiliserait le ratio.
 
-L'effet des variations futures des dépenses liées à l'âge est faible parce qu'il additionne des mouvements contraires. La Commission projette une dépense de pensions en baisse dans le PIB ({{< gen-val "pen_pt" >}}), nette des impôts et cotisations payés par les retraités, réforme de 2023 appliquée&nbsp;; la dépense de santé ({{< gen-val "sante_pt" >}}) et celle de dépendance ({{< gen-val "dep_pt" >}}) augmentent&nbsp;; celle d'éducation baisse ({{< gen-val "edu_pt" >}}).
+L'effet des variations futures des dépenses liées à l'âge est faible parce qu'il additionne des mouvements contraires. Dans S2, la contribution des pensions est négative ({{< gen-val "pen_pt" >}}), nette des impôts et cotisations payés par les retraités, réforme de 2023 appliquée&nbsp;; celles de la santé ({{< gen-val "sante_pt" >}}) et de la dépendance ({{< gen-val "dep_pt" >}}) sont positives&nbsp;; celle de l'éducation est négative ({{< gen-val "edu_pt" >}}). Ces contributions s'additionnent pour donner le second terme de S2.
 
 </details>
 

@@ -1,11 +1,11 @@
-# relu le 2026-11-04 ; texte servi de /en/who-can-cope-with-an-unexpected-expense/, build de 137f630 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/who-can-cope-with-an-unexpected-expense/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who can cope with an unexpected expense?
 Is being unable to face an unexpected expense a matter of poverty?
 Only in part.
 In France, in 2025, 65.9% of people below the poverty threshold are in this situation, and 21.6% above it.
-But above the threshold, household composition changes everything: 46.9% of single parents could not face an unexpected expense, against 18.6% of couples with one child.
-Page published 26 October 2026
+But above the threshold, household composition sharply separates situations: 46.9% of single parents could not face an unexpected expense, against 18.6% of couples with one child.
+Page updated 5 November 2026 · revisions
 ↓ Charts, data and citations to reuseReuse this page
 Data as of: 26 October 2026 Eurostat, EU-SILC survey, dataset ilc_mdes04: France and the EU-27, full series since the start of the survey; gaps studied from 2015 to 2025.
 Download: CSV · JSON
@@ -22,7 +22,7 @@ Two explanations, one test
 One might think that everything turns on income: being above or below the poverty threshold.
 If so, two households on the same side of the threshold should show similar shares.
 The test compares households that differ first of all in one thing: one adult more or less.
-With one child, moving from two adults to one adds 28.3 points above the threshold in 2025, and between 21 and 30 points every year since 2015.
+With one child, moving from two adults to one adds 28.3 points above the threshold in 2025, and between 20 and 30 points every year since 2015.
 Without children, the same move adds only 9.4 points (between 9 and 13 points over the same period).
 The number of children is not enough to explain the gap.
 The statistics count as a “single parent” any single adult with one child or more; against couples with two children, the gap remains 29.3 points.
@@ -35,7 +35,7 @@ A third explanation remains possible: above the threshold, single parents might 
 The Eurostat dataset does not detail position within the income band, so it cannot separate what household composition weighs from what that position weighs.
 The same finding across the European Union
 In the EU-27, 29.2% of people could not face an unexpected expense in 2025.
-Above the poverty threshold, moving from two adults to one adds 22.8 points with one child (between 20 and 24 points since 2015), against 10.1 points without children (between 10 and 11).
+Above the poverty threshold, moving from two adults to one adds 22.8 points with one child (between 19 and 25 points since 2015), against 10.1 points without children (between 9 and 11).
 The finding is not specific to France.
 What these data do not say
 A statement, not a bank balance.
@@ -104,6 +104,8 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat (EU-SILC)), under their own terms.
+Revisions
+5 November 2026 — Correction: the ranges of rates are rounded outwards (lower bound down, upper bound up), so that they contain every value they summarise.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

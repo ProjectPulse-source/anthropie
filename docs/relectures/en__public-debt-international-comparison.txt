@@ -1,9 +1,9 @@
-# relu le 2026-11-02 ; texte servi de /en/public-debt-international-comparison/, build de 8aa15f6 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/public-debt-international-comparison/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 In 2025, at almost equal debt levels, Hungary devotes 8.8% of its public revenue to interest; Slovenia, 2.7%.
 The stock alone therefore cannot measure what a public debt weighs: one must also look at its average interest cost, the revenue available to service it, and the weight of old borrowing in what it costs today.
-Page updated 2 November 2026 · revisions
+Page updated 5 November 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -629,7 +629,7 @@ Eurostat, OECD, IMF and World Bank data, retrieved 2 November 2026. https://step
 Copy citation
 In three sentences
 This page compares what a public debt represents: its stock, its average interest cost and the revenue that services it, then the weight of old borrowing in what it costs today.
-In the European Union in 2025, two countries with similar debt can devote shares of their revenue to interest that differ by a factor of 3.2, mainly because the price of their debt differs, and that price has no linear relationship with the level of debt.
+In the European Union in 2025, two countries with similar debt can devote shares of their revenue to interest that differ by a factor of 3.2; between Hungary and Slovenia, most of the gap comes arithmetically from the price paid on the debt, and that price has no linear relationship with the level of debt.
 These relationships describe one year and associations, not causes; they do not measure the risk of a crisis.
 Copy summary
 The data
@@ -639,6 +639,7 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, OECD, IMF and World Bank), under their own terms.
 Revisions
+5 November 2026 — Clarification: the gap in interest burden between the two countries with similar debt is arithmetically due mostly to the price paid on the debt; the page does not attribute it to a cause.
 2 November 2026 — Eurostat accounts of 21 October 2026: Denmark, whose 2025 revenue Eurostat no longer publishes, leaves the interest-to-revenue scatter and stays in the table, the debt ranking and the refinancing indicator.
 Relative to GDP, interest puts France back in eighth place in the Union, no longer tied with Belgium, and five less indebted countries rank above it.
 16 October 2026 — Correction: as a share of GDP, interest puts France seventh in the Union, tied with Belgium, not eighth; four less indebted countries exceed it, not five.

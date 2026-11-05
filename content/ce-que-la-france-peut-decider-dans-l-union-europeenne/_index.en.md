@@ -4,7 +4,9 @@ url: /en/what-can-france-decide-in-the-european-union/
 description: "What France decides alone, what it decides with the other Member States and what it can prevent: the Treaty on European Union and the TFEU quoted word for word, the voting rule in the Council, France's public votes from {ue.debut} to {ue.fin} ({ue.fr_c} against, {ue.fr_a} abstentions), each linked to the result published by the Council and to the act in the Official Journal, and the transposition of directives as at {ue.tr_date}. Open data."
 chapo: "What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules. Where the Union has competence, the Commission proposes and France votes with the other governments in the Council: under qualified majority, it can be outvoted; under unanimity, its single vote against can block. In the public votes of the Council on legislative acts, from {ue.debut} to {ue.fin}, France voted against {ue.fr_contre} and abstained {ue.fr_abst}. These votes record its position at the last moment, not what it obtained in the negotiation that precedes them."
 date: 2026-10-06
-lastmod: 2026-10-12
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Addition: according to the same edition of the scoreboard, France's transposition deficit rose by 120% and its average delay by 3.2 months. Clarification: the Council cannot amend a proposal on its own against France, but the text can change without its agreement."}
 # English version of the "Europe" further topic of the "Presidential promises" dossier (FR:
 # content/ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.md). Same tokens, same keys: values come from the
 # affichage_en block of data/promesses_europe.json (scripts/update_promesses_europe.py). The Treaties are quoted in their
@@ -40,7 +42,7 @@ faq:
   - question: "How many times has France voted against a European law?"
     answer: "In the public votes of the Council of the European Union on legislative acts, from {ue.debut} to {ue.fin}, France voted against {ue.fr_contre} and abstained {ue.fr_abst}. The texts it voted against were adopted by qualified majority. In the same record, Germany voted against {ue.de_c} times and the Netherlands {ue.nl_c} times; these raw counts do not measure a Member State's influence."
   - question: "Does France transpose EU directives on time?"
-    answer: "According to the European Commission's Single Market Scoreboard, as at {ue.tr_date}, {ue.tr_def}% of Single Market directives whose deadline had passed had not been transposed in France, the same as the EU average. The Commission's target is 0.5%. The directives it considers incorrectly transposed, on the basis of its infringement proceedings, amounted to {ue.tr_conf}% for France. The EU average was {ue.tr_conf_ue}%. These values come from a single edition of the scoreboard."
+    answer: "According to the European Commission's Single Market Scoreboard, as at {ue.tr_date}, {ue.tr_def}% of Single Market directives whose deadline had passed had not been transposed in France, the same as the EU average. The Commission's target is 0.5%. The directives it considers incorrectly transposed, on the basis of its infringement proceedings, amounted to {ue.tr_conf}% for France. The EU average was {ue.tr_conf_ue}%. According to the same edition, France's deficit rose by 120% compared with the previous edition."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
   type: ["juridique-institutionnel", "quantitatif"]  # protocoles de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-12"
@@ -105,7 +107,7 @@ Where the Union has competence, three powers are distinct.
 
 **Adopting** belongs, under the ordinary legislative procedure, to the European Parliament and to the Council of the European Union. Two institutions have similar names: in the Council of the European Union sits one minister from each Member State, depending on the subject (agriculture, finance, environment…); in the European Council sit the Heads of State or Government, who set the general political directions and do not vote on laws (TEU, art. 15(1): "{{< ue-val "cit_tue15" >}}"). The votes on this page are those of the Council of the European Union.
 
-**What the proposal changes for France.** Once the proposal has been tabled, the Council may amend it only unanimously, except in the cases the Treaty lists (conciliation with the European Parliament, budgetary and financial procedures); the Commission, for its part, may alter its proposal as long as the Council has not acted (TFEU, art. 293). Outside these exceptions, the rule works both ways: the other Member States cannot rewrite the proposal in the Council without France's agreement, and a majority of Member States, France included, is not enough to rewrite it either.
+**What the proposal changes for France.** Once the proposal has been tabled, the Council may amend it only unanimously, except in the cases the Treaty lists (conciliation with the European Parliament, budgetary and financial procedures); the Commission, for its part, may alter its proposal as long as the Council has not acted (TFEU, art. 293). Outside these exceptions, the Council cannot itself amend the proposal against France's vote, and a majority of Member States, France included, is not enough to amend it either. The text can still change without France's agreement: the Commission may alter its proposal, and the Council adopts by qualified majority the Parliament's first-reading position, or its second-reading amendments when the Commission supports them (TFEU, art. 294).
 
 <details class="repli"><summary>The articles quoted, word for word</summary>
 
@@ -189,7 +191,7 @@ After the vote, France must apply what has been adopted, whether or not it voted
 
 As at {{< ue-val "tr_date" >}}, this deficit stood at {{< ue-val "tr_def" >}}% in France, the same value as the EU average. That amounts to {{< ue-val "tr_retard" >}} directives out of {{< ue-val "tr_dues" >}}. The Commission also counts the directives it considers incorrectly transposed, on the basis of its infringement proceedings: this is the conformity deficit, at {{< ue-val "tr_conf" >}}% for France. The EU average is {{< ue-val "tr_conf_ue" >}}%, and the opening of infringement proceedings does not itself establish a breach found by the Court. The Commission places France among the {{< ue-val "tr_double" >}} Member States that combine a high transposition deficit and a high conformity deficit.
 
-**These values come from a single edition of the scoreboard.** They do not say whether France's delay is growing or shrinking.
+**France's delay is growing.** The same edition of the scoreboard places France among the Member States whose deficit shows a "worrying rise" compared with the previous edition ("France and Hungary (120%)"), and among those whose average transposition delay lengthens the most (+3.2 months).
 
 <details class="repli"><summary>How these values were recorded, and the target set</summary>
 

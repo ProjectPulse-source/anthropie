@@ -1,6 +1,8 @@
 ---
 date: 2026-04-02  # premier commit de la page (git log --follow)
-lastmod: 2026-10-26  # derniere modification de fond (entree « Registre des couts deportes » : 168 jalons sur 168 en ligne, 26/10/2026)
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Corrections : effet Jevons (cas extrême de l'effet rebond), effet boomerang (crédit à Ulrich Beck, bilan non affirmé), registres de la dette (un déplacement possible, à établir cas par cas)."}
 title: "Glossaire"
 og_title: "Glossaire — les notions, définies et sourcées — S. Lalut"
 description: "Glossaire des termes clés du cadre anthropique."
@@ -115,12 +117,12 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="effet-boomerang">
 <dt>Effet boomerang</dt>
-<dd>Second critère de saturation&nbsp;: le désordre déporté revient au système émetteur sous une forme souvent plus coûteuse que le désordre initial. Le changement climatique en est l'illustration planétaire&nbsp;: le désordre exporté dans l'atmosphère pendant deux siècles d'industrialisation revient sous forme de coûts qui excèdent les bénéfices de l'exportation originelle. Voir <a href="/awp/awp-02/">AWP-02</a>.</dd>
+<dd>Second critère de saturation&nbsp;: le désordre déporté revient au système émetteur sous une forme souvent plus coûteuse que le désordre initial. Le changement climatique en est l'illustration planétaire&nbsp;: le désordre exporté dans l'atmosphère pendant deux siècles d'industrialisation revient sous forme de coûts que l'exportation originelle n'avait pas comptés. La notion d'effet boomerang vient d'Ulrich Beck (<em>La Société du risque</em>, 1986). Voir <a href="/awp/awp-02/">AWP-02</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="effet-jevons">
 <dt>Effet Jevons (paradoxe de Jevons)</dt>
-<dd>L'amélioration de l'efficacité d'une ressource tend à augmenter sa consommation totale plutôt qu'à la réduire. Exemple d'effet boomerang anthropique. Le gain d'efficacité ne résout pas le désordre&nbsp;: il déplace le seuil de saturation, ce qui ouvre de nouveaux espaces de transfert et accélère la consommation globale. Voir la page <a href="/effet-rebond/">Qu'est-ce que l'effet rebond&nbsp;?</a> et <a href="/awp/awp-04/">AWP-04</a>.</dd>
+<dd>Cas extrême de l'effet rebond&nbsp;: la hausse de l'usage reprend plus que le gain d'efficacité, et la consommation totale de la ressource augmente au lieu de baisser (Jevons, <em>The Coal Question</em>, 1865). Exemple d'effet boomerang anthropique. Le gain d'efficacité ne résout pas le désordre&nbsp;: il déplace le seuil de saturation, ce qui ouvre de nouveaux espaces de transfert et accélère la consommation globale. Voir la page <a href="/effet-rebond/">Qu'est-ce que l'effet rebond&nbsp;?</a> et <a href="/awp/awp-04/">AWP-04</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="metaprogramme">
@@ -170,7 +172,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="registres-de-couts-couples">
 <dt>Registres de coûts couplés</dt>
-<dd>Apport central d'AWP-06&nbsp;: grille testable des quatre registres&nbsp;— énergie, matière, territoire, attention&nbsp;— qui montre comment l'infrastructure numérique déplace simultanément le désordre selon plusieurs axes irréductibles. Ces registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un déplace souvent vers les trois autres. Voir <a href="/awp/awp-06/">AWP-06</a>. À ne pas confondre avec le <em>Registre des coûts déportés</em>, qui est une chronologie et non une typologie.</dd>
+<dd>Apport central d'AWP-06&nbsp;: grille testable des quatre registres&nbsp;— énergie, matière, territoire, attention&nbsp;— qui permet d'examiner comment l'infrastructure numérique peut déplacer simultanément le désordre selon plusieurs axes irréductibles. Ces registres ne s'additionnent pas&nbsp;: ils se couplent. Réduire l'un peut déplacer la charge vers les autres&nbsp;: c'est ce que la grille demande d'établir, cas par cas. Voir <a href="/awp/awp-06/">AWP-06</a>. À ne pas confondre avec le <em>Registre des coûts déportés</em>, qui est une chronologie et non une typologie.</dd>
 </div>
 
 <div class="glossaire-entry" id="registre-des-couts-deportes">

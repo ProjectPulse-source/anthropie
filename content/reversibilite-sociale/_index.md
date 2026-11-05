@@ -4,13 +4,15 @@ og_image: "images/og-notion-reversibilite.jpg"
 og_image_alt: "Carte de partage : « La réversibilité sociale » et son schéma"
 description: "La réversibilité sociale est la capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de son avenir. Ni un stock ni un flux : une troisième dimension de l'inégalité — ce qu'on peut se permettre de rater."
 date: 2026-07-24
-lastmod: 2026-10-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Corrections : l'indicateur 040 du fichier FIBEN a été supprimé en 2013 (décret n° 2013-799), non en 2021 ; la loi Lemoine (2022) a ramené à cinq ans le délai du droit à l'oubli, qu'elle n'a pas créé ; le droit à l'erreur vaut devant toutes les administrations, pas seulement en matière fiscale."}
 og_title: "Qu'est-ce que la réversibilité sociale ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que la réversibilité sociale ?"
     answer: "La capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Ni un stock (comme le patrimoine), ni un flux (comme la mobilité) : un profil conditionnel d'options récupérables. Le concept est formalisé par l'économiste Stéphane Lalut dans AWP-08 (2026, DOI 10.5281/zenodo.21506320)."
   - question: "Quelle est la différence entre la réversibilité sociale et le droit à l'erreur de la loi ESSOC ?"
-    answer: "Le droit à l'erreur de la loi ESSOC (2018) est un dispositif administratif : un usager de bonne foi qui se trompe dans une déclaration peut rectifier sans sanction. La réversibilité sociale est un concept d'analyse : elle mesure ce que coûte réellement un échec — professionnel, entrepreneurial, financier — selon la capacité de repli de la personne, la trace que les institutions gardent de l'échec et les conditions de réadmission. L'un est une règle fiscale, l'autre une dimension de l'inégalité."
+    answer: "Le droit à l'erreur de la loi ESSOC (2018) est un dispositif administratif : un usager de bonne foi qui se trompe dans une déclaration peut rectifier sans sanction. La réversibilité sociale est un concept d'analyse : elle mesure ce que coûte réellement un échec — professionnel, entrepreneurial, financier — selon la capacité de repli de la personne, la trace que les institutions gardent de l'échec et les conditions de réadmission. L'un est une règle de procédure administrative, l'autre une dimension de l'inégalité."
   - question: "De quoi dépend la capacité à rebondir après un échec ?"
     answer: "De trois composantes qui se combinent : la capacité de repli (tenir l'intervalle après la chute — épargne, entourage, filet institutionnel), le tarif institutionnel de l'échec (ce que coûte, en droit et en pratique, un échec inscrit quelque part) et l'environnement d'accès (les conditions de réadmission). L'hypothèse centrale d'AWP-08 est leur complémentarité : un repli solide ne protège pas si la trace de l'échec verrouille la réadmission, et une réadmission ouverte ne protège personne qui ne peut pas tenir l'intervalle."
   - question: "Pourquoi la seconde chance n'est-elle pas la même pour tous ?"
@@ -100,7 +102,7 @@ Le sens que construit la réversibilité sociale est plus large&nbsp;: un droit 
 
 Le pivot du cadre est la **trace**&nbsp;: la mémoire que les institutions gardent d'un échec, et le régime de réadmission qu'elle gouverne.
 
-Un incident de paiement, un défaut d'entreprise, un signalement ne disparaissent pas avec l'événement&nbsp;: ils s'inscrivent — fichiers, historiques, scores — et conditionnent l'accès futur au crédit, à l'assurance, au logement, parfois à l'emploi. Deux dispositifs français récents montrent que cette mémoire est un choix institutionnel, pas une fatalité&nbsp;: la Banque de France a supprimé en 2021 l'indicateur 040 du fichier FIBEN, qui signalait pendant trois ans les dirigeants ayant connu une liquidation judiciaire&nbsp;; et la loi Lemoine (2022) a instauré un droit à l'oubli assurantiel, qui interdit de déclarer un ancien cancer au-delà d'un délai fixé. Dans les deux cas, une société a décidé de *raccourcir la mémoire de l'échec* — c'est-à-dire d'augmenter la réversibilité de ceux qu'elle concernait.
+Un incident de paiement, un défaut d'entreprise, un signalement ne disparaissent pas avec l'événement&nbsp;: ils s'inscrivent — fichiers, historiques, scores — et conditionnent l'accès futur au crédit, à l'assurance, au logement, parfois à l'emploi. Deux décisions françaises montrent que cette mémoire est un choix institutionnel, pas une fatalité&nbsp;: un décret de 2013 (n°&nbsp;2013-799) a supprimé l'indicateur 040 du fichier FIBEN de la Banque de France, qui signalait pendant trois ans les dirigeants ayant connu une liquidation judiciaire&nbsp;; et la loi Lemoine (2022) a ramené à cinq ans le délai du droit à l'oubli assurantiel, au-delà duquel l'assureur ne peut plus recueillir d'information sur un cancer guéri. Dans les deux cas, une société a décidé de *raccourcir la mémoire de l'échec* — c'est-à-dire d'augmenter la réversibilité de ceux qu'elle concernait.
 
 ## Rebondir après un échec&nbsp;: une question de structure, pas seulement de psychologie
 

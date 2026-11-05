@@ -25,6 +25,7 @@ import csv
 import html
 import io
 import json
+import math
 import re
 import sys
 import urllib.request
@@ -251,6 +252,10 @@ def gardes(c: dict) -> int:
 # ------------------------------------------------------------------ affichage (mêmes clés, deux langues)
 def affichage(c: dict, lang: str) -> dict:
     f = lambda v, d=1: lg.nombre(v, d, lang)  # noqa: E731
+    # Audit du 05/11/2026 : une plage « de 21 à 30 » ne contenait pas son minimum (20,8). Bornes arrondies VERS
+    # L'EXTÉRIEUR : la plage affichée contient toujours toutes les valeurs de la série.
+    bas = lambda v: lg.nombre(math.floor(v), 0, lang)  # noqa: E731
+    haut = lambda v: lg.nombre(math.ceil(v), 0, lang)  # noqa: E731
     pts = lambda v, d=1: lg.points(v, d, lang)  # noqa: E731
     y, ans = c["y"], range(DEBUT, c["y"] + 1)
     A = {"annee": str(y), "debut": str(DEBUT),
@@ -258,14 +263,14 @@ def affichage(c: dict, lang: str) -> dict:
          "ratio": f(c["ps_dessus"] / c["c1_dessus"]),
          "ecart_enf": pts(c["g_enf"][y]), "ecart_sans": pts(c["g_sans"][y]), "ecart_enf2": pts(c["g_enf2"][y]),
          "ecart_enf_dessous": pts(c["g_enf_dessous"][y]),
-         "plage_enf_bas": f(min(c["g_enf"][a] for a in ans), 0), "plage_enf_haut": f(max(c["g_enf"][a] for a in ans), 0),
-         "plage_sans_bas": f(min(c["g_sans"][a] for a in ans), 0), "plage_sans_haut": f(max(c["g_sans"][a] for a in ans), 0),
-         "plage_dessous_bas": f(min(c["g_enf_dessous"][a] for a in ans), 0), "plage_dessous_haut": f(max(c["g_enf_dessous"][a] for a in ans), 0),
+         "plage_enf_bas": bas(min(c["g_enf"][a] for a in ans)), "plage_enf_haut": haut(max(c["g_enf"][a] for a in ans)),
+         "plage_sans_bas": bas(min(c["g_sans"][a] for a in ans)), "plage_sans_haut": haut(max(c["g_sans"][a] for a in ans)),
+         "plage_dessous_bas": bas(min(c["g_enf_dessous"][a] for a in ans)), "plage_dessous_haut": haut(max(c["g_enf_dessous"][a] for a in ans)),
          "ue_total": f(c["ue_total"]), "ue_ecart_enf": pts(c["ue_g_enf"][y]), "ue_ecart_sans": pts(c["ue_g_sans"][y]),
-         "ue_plage_enf_bas": f(min(c["ue_g_enf"][a] for a in ans), 0), "ue_plage_enf_haut": f(max(c["ue_g_enf"][a] for a in ans), 0),
+         "ue_plage_enf_bas": bas(min(c["ue_g_enf"][a] for a in ans)), "ue_plage_enf_haut": haut(max(c["ue_g_enf"][a] for a in ans)),
          "montant_question": f(MONTANT_FR, 0), "douzieme": f(c["douzieme"], 0), "annee_seuil": str(y - 2),
          "ruptures_fr": lg.enumere([str(a) for a in c["ruptures_fr"]], lang),
-         "ue_plage_sans_bas": f(min(c["ue_g_sans"][a] for a in ans), 0), "ue_plage_sans_haut": f(max(c["ue_g_sans"][a] for a in ans), 0)}
+         "ue_plage_sans_bas": bas(min(c["ue_g_sans"][a] for a in ans)), "ue_plage_sans_haut": haut(max(c["ue_g_sans"][a] for a in ans))}
     for p in ("", "ue_"):
         for nom in ("ps", "c1", "c2", "seul", "c0"):
             for cote in ("dessus", "dessous"):

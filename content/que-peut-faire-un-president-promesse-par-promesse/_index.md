@@ -5,8 +5,9 @@ og_image_alt: "Carte de partage : « Neuf promesses de campagne »"
 description: "Santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat : pour chaque promesse, ce qu'un président peut décider, ce qu'il doit faire voter, ce qu'il doit négocier et ce qui ne dépend pas de lui, d'après la grille du livre Un président peut-il tenir ses promesses ?"
 chapo: "Un président peut-il augmenter les salaires, baisser les prix, faire embaucher, rendre le pays plus sûr, expulser davantage ? Il décide une partie de chaque promesse, presque jamais toute : le reste passe par un vote, une négociation, ou dépend d'acteurs qu'il ne commande pas. La frontière n'est pas au même endroit selon le thème."
 date: 2026-11-01T05:00:00+01:00
-lastmod: 2026-11-04T09:00:00+01:00
+lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction : un étudiant entré en médecine en 2027 ne pourra achever son cursus de médecine générale qu'en 2037 au plus tôt."}
   - date: 2026-11-04
     texte: "Santé : la proposition de loi sur l'installation des médecins a commencé à être examinée en séance publique au Sénat le 11 juin 2026, sans que tous ses articles le soient encore (dossier législatif du Sénat)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
@@ -41,7 +42,7 @@ Aucun texte n'oblige un président à exécuter son programme&nbsp;: un programm
 
 ## Santé&nbsp;: un président peut-il faire revenir un médecin&nbsp;? {#sante}
 
-La première zone existe, mais sa plume appartient le plus souvent au directeur général de l'agence régionale de santé&nbsp;: c'est lui qui arrête, tous les deux ans, les zones où l'offre de soins est insuffisante (code de la santé publique, article L.&nbsp;1434-4). Réguler l'installation des médecins exige une loi&nbsp;: adoptée par l'Assemblée nationale le 7&nbsp;mai 2025, une proposition de loi soumettait l'installation à autorisation&nbsp;; la commission du Sénat en a fait, le 27&nbsp;mai 2026, une obligation d'exercer à temps partiel en zone sous-dotée. L'examen en séance publique a commencé le 11&nbsp;juin 2026 sans porter encore sur tous les articles (dossier législatif du Sénat, lu le 4&nbsp;novembre 2026). Les objectifs de formation se partagent avec les universités. Reste le praticien, libre de s'installer ou non, et l'horloge du cursus&nbsp;: un étudiant entré en 2027 exercera autour de 2037.
+La première zone existe, mais sa plume appartient le plus souvent au directeur général de l'agence régionale de santé&nbsp;: c'est lui qui arrête, tous les deux ans, les zones où l'offre de soins est insuffisante (code de la santé publique, article L.&nbsp;1434-4). Réguler l'installation des médecins exige une loi&nbsp;: adoptée par l'Assemblée nationale le 7&nbsp;mai 2025, une proposition de loi soumettait l'installation à autorisation&nbsp;; la commission du Sénat en a fait, le 27&nbsp;mai 2026, une obligation d'exercer à temps partiel en zone sous-dotée. L'examen en séance publique a commencé le 11&nbsp;juin 2026 sans porter encore sur tous les articles (dossier législatif du Sénat, lu le 4&nbsp;novembre 2026). Les objectifs de formation se partagent avec les universités. Reste le praticien, libre de s'installer ou non, et l'horloge du cursus&nbsp;: un étudiant entré en 2027 ne pourra achever son cursus de médecine générale qu'en 2037 au plus tôt.
 
 *En résumé, d'après le [tableau des neuf promesses](#tableau)&nbsp;:*
 

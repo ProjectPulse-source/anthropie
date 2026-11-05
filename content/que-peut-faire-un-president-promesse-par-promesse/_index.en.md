@@ -6,8 +6,9 @@ url: /en/what-can-a-president-do-promise-by-promise/
 description: "Health, wages, prices, schools, jobs, security, debt, immigration, climate: for each promise, what a French president can decide, what he must get voted, what he must negotiate and what does not depend on him, according to the grid of the book Un président peut-il tenir ses promesses ? (in French)."
 chapo: "Can a president raise wages, lower prices, get people hired, make the country safer, deport more people? He decides part of each promise, almost never all of it: the rest goes through a vote, a negotiation, or depends on actors he does not command. The boundary does not fall in the same place from one theme to another."
 date: 2026-11-01T05:00:00+01:00
-lastmod: 2026-11-04T09:00:00+01:00
+lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction: a student entering medical school in 2027 cannot complete general-practice training before 2037 at the earliest."}
   - date: 2026-11-04
     texte: "Health: the bill on doctors' installation began to be debated in the Senate chamber on 11 June 2026, without all its articles having yet been examined (Senate legislative file)."
 # English version of the "nine promises" tab of the "Presidential promises" dossier
@@ -46,7 +47,7 @@ No text obliges a president to carry out his programme: a campaign programme is 
 
 ## Health: can a president bring a doctor back? {#sante}
 
-The first zone exists, but the pen usually belongs to the director general of the regional health agency: he is the one who sets, every two years, the zones where the provision of care is insufficient (Public Health Code, article L. 1434-4). Regulating where doctors set up practice requires a statute: passed by the National Assembly on 7 May 2025, a private member's bill made setting up subject to authorisation; on 27 May 2026, the Senate committee turned it into an obligation to practise part-time in an under-served zone. Debate in the Senate chamber began on 11 June 2026 without yet covering all the articles (Senate legislative file, read on 4 November 2026). Training targets are shared with the universities. That leaves the practitioner, free to set up or not, and the clock of the curriculum: a student who starts in 2027 will practise around 2037.
+The first zone exists, but the pen usually belongs to the director general of the regional health agency: he is the one who sets, every two years, the zones where the provision of care is insufficient (Public Health Code, article L. 1434-4). Regulating where doctors set up practice requires a statute: passed by the National Assembly on 7 May 2025, a private member's bill made setting up subject to authorisation; on 27 May 2026, the Senate committee turned it into an obligation to practise part-time in an under-served zone. Debate in the Senate chamber began on 11 June 2026 without yet covering all the articles (Senate legislative file, read on 4 November 2026). Training targets are shared with the universities. That leaves the practitioner, free to set up or not, and the clock of the curriculum: a student who starts in 2027 cannot complete general-practice training before 2037 at the earliest.
 
 *In short, from the [table of the nine promises](#tableau):*
 

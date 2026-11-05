@@ -1,10 +1,10 @@
-# relu le 2026-11-04 ; texte servi de /que-peut-faire-un-president-promesse-par-promesse/, build de 10fe096 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /que-peut-faire-un-president-promesse-par-promesse/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Neuf promesses de campagne : que peut vraiment faire un président ?
 Un président peut-il augmenter les salaires, baisser les prix, faire embaucher, rendre le pays plus sûr, expulser davantage ?
 Il décide une partie de chaque promesse, presque jamais toute : le reste passe par un vote, une négociation, ou dépend d’acteurs qu’il ne commande pas.
 La frontière n’est pas au même endroit selon le thème.
-Page mise à jour le 4 novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026 · révisions
 Promesses présidentielles
 Aucun texte n’oblige un président à exécuter son programme : un programme de campagne n’est pas un acte juridique, et la Constitution confie au Gouvernement, non au président, le soin de déterminer et conduire « la politique de la Nation » (article 20).
 Une promesse présidentielle passe donc par une chaîne : le Gouvernement qui signe, la majorité qui vote, l’administration qui applique.
@@ -28,7 +28,7 @@ La première zone existe, mais sa plume appartient le plus souvent au directeur 
 Réguler l’installation des médecins exige une loi : adoptée par l’Assemblée nationale le 7 mai 2025, une proposition de loi soumettait l’installation à autorisation ; la commission du Sénat en a fait, le 27 mai 2026, une obligation d’exercer à temps partiel en zone sous-dotée.
 L’examen en séance publique a commencé le 11 juin 2026 sans porter encore sur tous les articles (dossier législatif du Sénat, lu le 4 novembre 2026).
 Les objectifs de formation se partagent avec les universités.
-Reste le praticien, libre de s’installer ou non, et l’horloge du cursus : un étudiant entré en 2027 exercera autour de 2037.
+Reste le praticien, libre de s’installer ou non, et l’horloge du cursus : un étudiant entré en 2027 ne pourra achever son cursus de médecine générale qu’en 2037 au plus tôt.
 En résumé, d’après le tableau des neuf promesses :
 À la main de l’exécutif. zonage, permanence des soins, agrément des stages (arrêtés d’ARS)
 Doit être voté. régulation de l’installation, exonérations du cumul emploi-retraite
@@ -329,6 +329,7 @@ Climat : code de l’énergie, article L.
 100-4 ; code de l’environnement, article L.
 222-1 A ; décret n° 2026-636 du 16 juillet 2026 ; règlement (UE) 2023/857, annexe I.
 Révisions
+5 novembre 2026 — Correction : un étudiant entré en médecine en 2027 ne pourra achever son cursus de médecine générale qu’en 2037 au plus tôt.
 4 novembre 2026 — Santé : la proposition de loi sur l’installation des médecins a commencé à être examinée en séance publique au Sénat le 11 juin 2026, sans que tous ses articles le soient encore (dossier législatif du Sénat).
 Toutes les ressources : données, dossiers et repères →
 Transmettre

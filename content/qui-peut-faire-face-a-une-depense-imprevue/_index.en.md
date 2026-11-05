@@ -2,9 +2,11 @@
 title: "Who can cope with an unexpected expense?"
 url: /en/who-can-cope-with-an-unexpected-expense/
 description: "In France, {imp.total}% of people could not face an unexpected expense ({imp.annee}, Eurostat). Income is not the whole story: above the poverty threshold, {imp.ps_dessus}% of single parents are in this situation, against {imp.c1_dessus}% of couples with one child."
-chapo: "Is being unable to face an unexpected expense a matter of poverty? Only in part. In France, in {imp.annee}, {imp.dessous}% of people below the poverty threshold are in this situation, and {imp.dessus}% above it. But above the threshold, household composition changes everything: {imp.ps_dessus}% of single parents could not face an unexpected expense, against {imp.c1_dessus}% of couples with one child."
+chapo: "Is being unable to face an unexpected expense a matter of poverty? Only in part. In France, in {imp.annee}, {imp.dessous}% of people below the poverty threshold are in this situation, and {imp.dessus}% above it. But above the threshold, household composition sharply separates situations: {imp.ps_dessus}% of single parents could not face an unexpected expense, against {imp.c1_dessus}% of couples with one child."
 date: 2026-10-26
-lastmod: 2026-10-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction: the ranges of rates are rounded outwards (lower bound down, upper bound up), so that they contain every value they summarise."}
 og_title: "Who can cope with an unexpected expense? — S. Lalut"
 og_image: "images/og-imprevu-menages-en.jpg"
 og_image_alt: "Share card: “Income is not the whole story” — share of people who could not face an unexpected expense, above the poverty threshold: single parents and couples with one child, France (Eurostat, EU-SILC)."

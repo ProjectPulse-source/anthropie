@@ -4,7 +4,9 @@ og_image: "images/og-texte-chercheur.jpg"
 og_image_alt: "Carte de partage : « Chercheur indépendant »"
 description: "Comment un chercheur indépendant publie-t-il des travaux citables sans affiliation universitaire ? DOI, préprints, identifiants académiques, exigences de méthode — l'infrastructure concrète, et l'analyse de cette position dans le champ académique."
 date: 2026-07-26
-lastmod: 2026-07-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Corrections : six livres publiés, non quatre ; les textes parus sur Mediapart sont des billets du blog de l'auteur au Club de Mediapart, non des articles de presse."}
 og_title: "Chercheur indépendant : publier hors institution — guide — S. Lalut"
 faq:
   - question: "Qu'est-ce qu'un chercheur indépendant ?"
@@ -79,7 +81,7 @@ Dans cette lecture, la marginalité du chercheur indépendant n'est ni un échec
 
 ## Le cas concret
 
-Cette page est écrite depuis la position qu'elle décrit. Stéphane Lalut, économiste de formation, travaille comme chercheur indépendant et essayiste&nbsp;: neuf working papers à DOI ([série AWP](/serie-awp/)), quatre livres publiés, des articles et recensions dans *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps*, *Mediapart* ou *La Grande Conversation* ([publications](/publications/)). Identifiants publics&nbsp;: [ORCID](https://orcid.org/0009-0002-1794-4895), [Google Scholar](https://scholar.google.com/citations?user=J4NqzwSfrHAC), [communauté Zenodo](https://zenodo.org/communities/anthropie-working-papers). Parcours complet sur la page [À propos](/a-propos/).
+Cette page est écrite depuis la position qu'elle décrit. Stéphane Lalut, économiste de formation, travaille comme chercheur indépendant et essayiste&nbsp;: neuf working papers à DOI ([série AWP](/serie-awp/)), six livres publiés, des articles et recensions dans *Alternatives Économiques*, *La Vie des Idées*, *En attendant Nadeau*, *Terrestres*, *Nonfiction*, *Le Temps* ou *La Grande Conversation*, ainsi que des billets sur son blog au Club de *Mediapart* ([publications](/publications/)). Identifiants publics&nbsp;: [ORCID](https://orcid.org/0009-0002-1794-4895), [Google Scholar](https://scholar.google.com/citations?user=J4NqzwSfrHAC), [communauté Zenodo](https://zenodo.org/communities/anthropie-working-papers). Parcours complet sur la page [À propos](/a-propos/).
 
 ## Questions fréquentes
 

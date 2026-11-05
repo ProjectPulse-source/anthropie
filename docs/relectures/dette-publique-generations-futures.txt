@@ -1,13 +1,13 @@
-# relu le 2026-11-03 ; texte servi de /dette-publique-generations-futures/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /dette-publique-generations-futures/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
-Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d'autres équipements.
+Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d’autres équipements.
 Que montrent les comptes français ?
 De 1996 à 2025, 18 % seulement des déficits publics ont correspondu à des actifs publics nouveaux (équipements, bâtiments, terrains), usure déduite ; cette part est tombée à 10 % sur 2016-2025.
-Le capital humain que peuvent laisser l'enseignement ou la santé n'y figure pas : ce chiffre dit à quoi les déficits ont correspondu, non ce qu'ils ont produit.
+Le capital humain que peuvent laisser l’enseignement ou la santé n’y figure pas : ce chiffre dit à quoi les déficits ont correspondu, non ce qu’ils ont produit.
 Deux autres arguments méritent examen : « nous nous devons la dette à nous-mêmes » et « le véritable fardeau viendra du vieillissement ».
 Trois tests les éprouvent, sans prétendre calculer la facture de chaque génération.
-Page mise à jour le 1er novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat et BCE 2025 · projections 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -17,7 +17,7 @@ Télécharger : CSV · JSON · méthode
 Emprunter pour construire une école, une route ou un réseau laisse un capital en même temps qu’une dette.
 C’est un argument essentiel pour en apprécier le poids sur les générations futures : encore faut-il savoir ce qui a été acquis et ce que cela apportera.
 Les comptes nationaux répondent à la première question.
-Part du besoin de financement des administrations publiques françaises qui a correspondu à des actifs, à des transferts en capital et à des dépenses courantes non couvertes, par décennie (Eurostat, calcul de l'auteur).
+Part du besoin de financement des administrations publiques françaises qui a correspondu à des actifs, à des transferts en capital et à des dépenses courantes non couvertes, par décennie (Eurostat, calcul de l’auteur).
 Le résultat en une phrase.
 De 1996 à 2025, 18 % seulement des déficits publics français ont correspondu à un accroissement net des actifs publics comptabilisés, et 66 %, près des deux tiers, à des dépenses courantes que les recettes courantes ne couvraient pas ; la part en actifs est tombée de 32 % sur 1996-2005 à 10 % sur 2016-2025.
 C’est une lecture comptable : elle dit à quoi les déficits ont correspondu, non ce qu’ils ont produit.
@@ -221,8 +221,8 @@ Slovaquie
 0,7
 1,7
 95,7
-Points de PIB cumulés de 2001 à 2025 ; actifs : investissement moins usure du capital, terrains et stocks ; un besoin de financement négatif désigne des excédents cumulés (« sans objet ») ; « au-delà du besoin » : les acquisitions nettes d'actifs dépassent le besoin de financement, la différence correspondant à une épargne publique positive.
-Source : Eurostat, calcul de l'auteur.
+Points de PIB cumulés de 2001 à 2025 ; actifs : investissement moins usure du capital, terrains et stocks ; un besoin de financement négatif désigne des excédents cumulés (« sans objet ») ; « au-delà du besoin » : les acquisitions nettes d’actifs dépassent le besoin de financement, la différence correspondant à une épargne publique positive.
+Source : Eurostat, calcul de l’auteur.
 La Bulgarie, l’Estonie, la Finlande, le Luxembourg et la Suède, dont le besoin cumulé est resté sous ce seuil ou négatif, ne se comparent pas sur ce ratio.
 Le Danemark ne figure pas dans ce tableau : les comptes annuels des administrations publiques d’Eurostat ne donnent ni son besoin de financement ni son épargne nette pour 2024 et 2025.
 Le bilan des administrations publiques : un complément, non une preuve
@@ -264,7 +264,7 @@ Pour stabiliser sa dette à long terme, la France devrait ainsi, selon les hypot
 Sur ces 3,1 points, 3,0 points correspondent à la position budgétaire de départ, c’est-à-dire à l’écart entre le budget actuel et celui qui stabiliserait la dette, et 0,1 point à l’effet des variations futures des dépenses liées à l’âge (retraites, santé, dépendance, éducation), que la Commission nomme « coût du vieillissement ».
 Un faible effet de l’évolution future ne dit pas que les retraites coûtent peu.
 La dépense de retraite actuelle, 14,1 % du PIB en 2025 en dépense brute selon le Conseil d’orientation des retraites (COR), est déjà comptée dans la position de départ ; le second terme ne mesure que son évolution projetée, ajoutée à celle des autres dépenses liées à l’âge.
-Ajustement qui stabiliserait la dette française (indicateur S2), partagé entre la position budgétaire de départ et l'effet des variations futures des dépenses liées à l'âge, selon la Commission européenne (trois scénarios et édition précédente).
+Ajustement qui stabiliserait la dette française (indicateur S2), partagé entre la position budgétaire de départ et l’effet des variations futures des dépenses liées à l’âge, selon la Commission européenne (trois scénarios et édition précédente).
 Le résultat dépend des hypothèses.
 Dans le scénario de risque où la Commission retient des dépenses de santé et de dépendance plus fortes, l’effet des variations futures des dépenses liées à l’âge atteint 2,4 points, contre 0,1 point dans le scénario de base ; S2 y atteint 5,4 points.
 La position de départ y reste pourtant le premier terme, comme dans le scénario d’une productivité plus faible.
@@ -275,7 +275,8 @@ S2 est l’amélioration permanente du solde primaire structurel (le solde hors 
 À la différence de l’indicateur S1, qui vise 60 % du PIB en 2070, il ne fixe ni le niveau auquel la dette se stabilise ni la date.
 La position budgétaire de départ est l’écart entre le solde structurel de départ et celui qui stabiliserait le ratio.
 L’effet des variations futures des dépenses liées à l’âge est faible parce qu’il additionne des mouvements contraires.
-La Commission projette une dépense de pensions en baisse dans le PIB (−0,5 point), nette des impôts et cotisations payés par les retraités, réforme de 2023 appliquée ; la dépense de santé (+0,6 point) et celle de dépendance (+0,6 point) augmentent ; celle d’éducation baisse (−0,6 point).
+Dans S2, la contribution des pensions est négative (−0,5 point), nette des impôts et cotisations payés par les retraités, réforme de 2023 appliquée ; celles de la santé (+0,6 point) et de la dépendance (+0,6 point) sont positives ; celle de l’éducation est négative (−0,6 point).
+Ces contributions s’additionnent pour donner le second terme de S2.
 Commission et COR : deux projections, deux jeux d’hypothèses
 Qui parle compte ici.
 La Commission est l’institution qui fait appliquer les règles budgétaires européennes.
@@ -341,7 +342,7 @@ La troisième proposition est une hypothèse réfutable, non un résultat de cet
 Elle se teste sur des réformes précises, avec des groupes définis d’avance ; elle serait affaiblie par un ajustement portant surtout sur d’autres groupes, ou par des compensations accordées aux perdants.
 Elle est formalisée dans l’AWP-03 ; l’AWP-09 confronte cette lecture aux comptes publics, sans établir la charge finale de chaque génération.
 Reste la question que ces comptes laissent ouverte : ceux qui devront supporter les conséquences des décisions d’aujourd’hui disposeront-ils des mêmes possibilités de choix, d’adaptation et de protection que ceux qui en ont bénéficié ?
-Confrontation à la recherche : le critère de l'usage et le recul de l'investissement sont retrouvés ; lire la détention par des résidents comme une absence de fardeau, ou la composition des déficits comme une mesure de la charge entre générations, est mis en danger
+Confrontation à la recherche : le critère de l’usage et le recul de l’investissement sont retrouvés ; lire la détention par des résidents comme une absence de fardeau, ou la composition des déficits comme une mesure de la charge entre générations, est mis en danger
 Mesuré ici.
 Les emplois du besoin de financement des administrations publiques françaises et européennes, le patrimoine des administrations, la détention de la dette par secteur, sur les séries d’Eurostat, de l’Insee et de la BCE ; la décomposition de l’indicateur S2, reprise de la Commission.
 Aucun des textes lus ne calcule ces grandeurs sur ces sources et ces périodes : elles se valident par reproduction.
@@ -398,28 +399,28 @@ Pour juger ce que la dette laisse aux générations futures, connaître son mont
 Questions fréquentes
 La dette publique pèse-t-elle sur les générations futures ?
 Elle leur laisse une charge, et ce qui a été acquis en même temps ; aucune statistique ne mesure à elle seule le solde des deux.
-En France, de 1996 à 2025, 18 % des déficits publics ont correspondu, dans les comptes, à un accroissement net des actifs publics comptabilisés, 16 % à des transferts en capital vers d'autres secteurs et 66 % à des dépenses courantes que les recettes courantes ne couvraient pas.
-C'est une composition comptable : elle ne mesure ni ce que chaque génération paiera, ni ce que les dépenses courantes, en éducation ou en santé, ont produit.
+En France, de 1996 à 2025, 18 % des déficits publics ont correspondu, dans les comptes, à un accroissement net des actifs publics comptabilisés, 16 % à des transferts en capital vers d’autres secteurs et 66 % à des dépenses courantes que les recettes courantes ne couvraient pas.
+C’est une composition comptable : elle ne mesure ni ce que chaque génération paiera, ni ce que les dépenses courantes, en éducation ou en santé, ont produit.
 Une dette contractée pour investir pèse-t-elle moins ?
-Elle laisse un capital en même temps qu'une charge : c'est pourquoi l'usage est un critère pertinent, qui ne dit pas pour autant ce que rapportent les dépenses.
+Elle laisse un capital en même temps qu’une charge : c’est pourquoi l’usage est un critère pertinent, qui ne dit pas pour autant ce que rapportent les dépenses.
 En France, la part des déficits qui a correspondu, dans les comptes, à un accroissement net des actifs publics est passée de 32 % (1996-2005) à 19 % (2006-2015), puis à 10 % (2016-2025).
 Ces parts ne mesurent ni la rentabilité des dépenses ni leur utilité pour les générations futures.
 « On se la doit à nous-mêmes » : est-ce vrai pour la France ?
-En 2025, 45,7 % de la dette des administrations publiques était enregistrée comme détenue par des résidents et 54,3 % par des non-résidents (BCE) : l'hypothèse d'une dette entièrement détenue dans le pays ne décrit pas la France.
+En 2025, 45,7 % de la dette des administrations publiques était enregistrée comme détenue par des résidents et 54,3 % par des non-résidents (BCE) : l’hypothèse d’une dette entièrement détenue dans le pays ne décrit pas la France.
 Cette statistique dit la résidence des détenteurs enregistrés, non le fardeau : elle ne mesure ni la charge nette laissée aux générations suivantes, ni la position extérieure nette du pays.
-Et une dette détenue dans le pays n'est pas indolore pour autant.
+Et une dette détenue dans le pays n’est pas indolore pour autant.
 Les retraites sont-elles le vrai fardeau ?
-L'indicateur S2 de la Commission européenne ne répond pas à cette question sous cette forme.
-Il évalue à 3,1 points de PIB l'ajustement permanent qui stabiliserait la dette française, dont 3,0 pour la position budgétaire de départ, qui contient la dépense de retraite actuelle, et 0,1 pour l'évolution future des dépenses liées à l'âge (Debt Sustainability Monitor 2025).
-Ce faible second terme ne dit pas que les retraites coûtent peu ; et le Conseil d'orientation des retraites projette une dépense de retraite en hausse, là où la Commission retient une baisse.
+L’indicateur S2 de la Commission européenne ne répond pas à cette question sous cette forme.
+Il évalue à 3,1 points de PIB l’ajustement permanent qui stabiliserait la dette française, dont 3,0 pour la position budgétaire de départ, qui contient la dépense de retraite actuelle, et 0,1 pour l’évolution future des dépenses liées à l’âge (Debt Sustainability Monitor 2025).
+Ce faible second terme ne dit pas que les retraites coûtent peu ; et le Conseil d’orientation des retraites projette une dépense de retraite en hausse, là où la Commission retient une baisse.
 Que paieront concrètement les générations futures ?
 Ces séries ne permettent pas de chiffrer une facture par enfant : il faudrait connaître les politiques à venir.
-Une dette se renouvelle sans qu'une génération précise la rembourse en entier ; elle peut appeler des ajustements futurs d'impôts ou de dépenses, peser sur l'accumulation de capital, ou s'accompagner d'actifs et de services dont bénéficieront les suivants.
-Son poids dépend aussi de l'écart entre le taux d'intérêt que paie l'État et la croissance de l'économie.
+Une dette se renouvelle sans qu’une génération précise la rembourse en entier ; elle peut appeler des ajustements futurs d’impôts ou de dépenses, peser sur l’accumulation de capital, ou s’accompagner d’actifs et de services dont bénéficieront les suivants.
+Son poids dépend aussi de l’écart entre le taux d’intérêt que paie l’État et la croissance de l’économie.
 Dans le dossier dette publique
 Pour prolonger l’analyse
 Dette Publique : Qui paie vraiment ?
-La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
 Cette page met trois arguments à l’épreuve des comptes : ce à quoi les déficits ont correspondu, qui détient la dette, et quel ajustement la stabiliserait selon la Commission.
 Reste à savoir qui, dans chaque génération, portera cet ajustement : le contribuable, l’usager des services publics, l’épargnant par l’inflation, le créancier par une restructuration ?
 Le livre prolonge cette analyse, chiffres officiels à l’appui, en examinant ces choix et leurs conséquences.
@@ -460,30 +461,30 @@ Les chiffres des études citées sont repris tels qu’elles les publient.
 Les arguments ont été mis à l’épreuve avant l’écriture de la page, selon un protocole fixé avant le calcul.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 France : à quoi ont correspondu les déficits publics
 Depuis trente ans, la part des déficits français qui a correspondu, dans les comptes, à un accroissement net des actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes que les recettes courantes ne couvraient pas.
-Ces parts ne mesurent ni la rentabilité ni l'utilité des dépenses.
-Précaution d'interprétation.
-Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit.
-Ces parts ne mesurent ni la rentabilité des dépenses ni leur utilité pour les générations futures ; l'éducation n'y est pas un actif.
+Ces parts ne mesurent ni la rentabilité ni l’utilité des dépenses.
+Précaution d’interprétation.
+Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu’ils ont produit.
+Ces parts ne mesurent ni la rentabilité des dépenses ni leur utilité pour les générations futures ; l’éducation n’y est pas un actif.
 Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (PIB), administrations publiques, France, 1996-2025
 Télécharger en PNG
 SVG
 Qui détient la dette publique française
-La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le début des années 2000 ; les achats de la Banque de France l'ont fait reculer, le reflux de ses avoirs la fait remonter.
-C'est la résidence des détenteurs enregistrés, non une mesure du fardeau.
-Précaution d'interprétation.
-Résidence du détenteur enregistré (fonds, dépositaire), non de l'épargnant final ; valeur nominale.
-La part des non-résidents ne mesure pas, à elle seule, le transfert net de richesse vers l'étranger.
+La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le début des années 2000 ; les achats de la Banque de France l’ont fait reculer, le reflux de ses avoirs la fait remonter.
+C’est la résidence des détenteurs enregistrés, non une mesure du fardeau.
+Précaution d’interprétation.
+Résidence du détenteur enregistré (fonds, dépositaire), non de l’épargnant final ; valeur nominale.
+La part des non-résidents ne mesure pas, à elle seule, le transfert net de richesse vers l’étranger.
 BCE, statistiques de finances publiques (GFS) : dette de Maastricht des administrations publiques par secteur détenteur, France, 1995-2025
 Télécharger en PNG
 SVG
-France : l'ajustement qui stabiliserait la dette (indicateur S2) et ses deux composantes
-Selon l'indicateur S2 de la Commission, l'ajustement qui stabiliserait la dette française correspond surtout à la position budgétaire de départ, où figure la dépense de retraite actuelle ; l'effet des variations futures des dépenses liées à l'âge y est faible dans le scénario de base, nettement plus fort dans le scénario de risque.
-Précaution d'interprétation.
-La dépense actuelle de retraite est dans la position de départ ; le second terme ne mesure que l'évolution projetée des dépenses liées à l'âge.
-L'édition précédente est un autre jeu de projections, non une évolution observée.
+France : l’ajustement qui stabiliserait la dette (indicateur S2) et ses deux composantes
+Selon l’indicateur S2 de la Commission, l’ajustement qui stabiliserait la dette française correspond surtout à la position budgétaire de départ, où figure la dépense de retraite actuelle ; l’effet des variations futures des dépenses liées à l’âge y est faible dans le scénario de base, nettement plus fort dans le scénario de risque.
+Précaution d’interprétation.
+La dépense actuelle de retraite est dans la position de départ ; le second terme ne mesure que l’évolution projetée des dépenses liées à l’âge.
+L’édition précédente est un autre jeu de projections, non une évolution observée.
 Projections conditionnelles aux hypothèses de la Commission (Ageing Report 2024, réforme des retraites de 2023 appliquée).
 Commission européenne, Debt Sustainability Monitor 2025, tableaux par pays : indicateur S2 et ses deux composantes, France
 Télécharger en PNG
@@ -498,16 +499,17 @@ C’est une lecture comptable, non une attribution causale : ces parts ne mesure
 En 2025, 54,3 % de la dette publique était enregistrée au nom de non-résidents, ce qui dit la résidence des détenteurs, non le fardeau.
 Copier le résumé
 Les données
-Les emplois du besoin de financement des administrations publiques (France par décennie, pays de l'Union en cumul), le patrimoine des administrations publiques, la détention de la dette par secteur et l'indicateur S2 de la Commission ; le même contenu existe en CSV, au format long.
+Les emplois du besoin de financement des administrations publiques (France par décennie, pays de l’Union en cumul), le patrimoine des administrations publiques, la détention de la dette par secteur et l’indicateur S2 de la Commission ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat, Insee, BCE, Commission européenne, COR), sous leurs propres conditions.
 Révisions
+5 novembre 2026 — Correction : les valeurs par poste (pensions, santé, dépendance, éducation) sont des contributions au second terme de l’indicateur S2, non des variations de dépense en points de PIB.
 31 octobre 2026 — Révision du patrimoine des administrations publiques : les comptes financiers de la Banque de France, actualisés en octobre 2026 pour 2023 à 2025 et repris par Eurostat, réévaluent surtout les actions détenues par les administrations ; le patrimoine net de fin 2025 passe de 25,0 % à 27,1 % du PIB.
-Le compte de l'Insee de juillet, qui ne l'intègre pas encore, devient un témoin.
-La décomposition des déficits, fondée sur les flux, n'en dépend pas (contre-expertise du 31/10).
-18 octobre 2026 — Ajout : où le recul de l'investissement net s'est produit, administrations locales et autres administrations, avec son point bas de 2016 et la part locale du recul selon les années comparées (contre-expertise du 18/10).
+Le compte de l’Insee de juillet, qui ne l’intègre pas encore, devient un témoin.
+La décomposition des déficits, fondée sur les flux, n’en dépend pas (contre-expertise du 31/10).
+18 octobre 2026 — Ajout : où le recul de l’investissement net s’est produit, administrations locales et autres administrations, avec son point bas de 2016 et la part locale du recul selon les années comparées (contre-expertise du 18/10).
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

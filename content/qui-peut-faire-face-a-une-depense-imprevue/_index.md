@@ -1,9 +1,11 @@
 ---
 title: "Qui peut faire face à une dépense imprévue ?"
 description: "En France, {imp.total} % des personnes ne pourraient pas faire face à une dépense imprévue ({imp.annee}, Eurostat). Le revenu ne dit pas tout : au-dessus du seuil de pauvreté, {imp.ps_dessus} % des parents seuls sont dans ce cas, contre {imp.c1_dessus} % des couples avec un enfant."
-chapo: "Ne pas pouvoir faire face à une dépense imprévue, est-ce une affaire de pauvreté ? En partie seulement. En France, en {imp.annee}, {imp.dessous} % des personnes sous le seuil de pauvreté sont dans ce cas, et {imp.dessus} % au-dessus. Mais au-dessus du seuil, la composition du foyer change tout : {imp.ps_dessus} % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre {imp.c1_dessus} % des couples avec un enfant."
+chapo: "Ne pas pouvoir faire face à une dépense imprévue, est-ce une affaire de pauvreté ? En partie seulement. En France, en {imp.annee}, {imp.dessous} % des personnes sous le seuil de pauvreté sont dans ce cas, et {imp.dessus} % au-dessus. Mais au-dessus du seuil, la composition du foyer sépare nettement les situations : {imp.ps_dessus} % des parents seuls ne pourraient pas faire face à une dépense imprévue, contre {imp.c1_dessus} % des couples avec un enfant."
 date: 2026-10-26
-lastmod: 2026-10-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction : les fourchettes de taux sont arrondies vers l'extérieur (borne basse à l'unité inférieure, borne haute à l'unité supérieure), pour contenir toutes les valeurs qu'elles résument."}
 og_title: "Qui peut faire face à une dépense imprévue ? — S. Lalut"
 og_image: "images/og-imprevu-menages.jpg"
 og_image_alt: "Carte de partage : « Le revenu ne dit pas tout » — part des personnes qui ne pourraient pas faire face à une dépense imprévue, au-dessus du seuil de pauvreté : parents seuls et couples avec un enfant, France (Eurostat, EU-SILC)."

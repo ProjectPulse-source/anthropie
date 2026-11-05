@@ -52,6 +52,27 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (soir) — Passe transversale des 32 ressources : erreurs d'exactitude confirmées corrigées
+
+Fiches : `D:\PRO\06_PROMOTION\AUDIT_RESSOURCES_2026-11-05\PASSE_TRANSVERSALE\FICHES\` (A à F, G2 ; chaque défaut vérifié à la source).
+- **Droit** : FIBEN 040 supprimé en 2013 (décret 2013-799), loi Lemoine (délai ramené à cinq ans), ESSOC hors du seul fiscal
+  (réversibilité) ; code civil art. 1er, alinéas renumérotés (application des lois) ; TFUE 293/294 et retard de transposition
+  +120 % / +3,2 mois (Union européenne) ; sorties automatiques du bulletin n° 2 (CPP 775, lu au 05/11) et surprime novice
+  (A. 121-1-1) sur la page casier, FAQ « de trois façons » comprise ; textes, RSA 2008, IPS RR 1,63 (*Premier coup*) ; cursus 2037.
+- **Notions** : effet rebond (définition ≠ Jevons, 6 occurrences/langue), glossaire (Jevons, boomerang + Beck, registres
+  « peut déplacer »), communs négatifs (Monnin, sous conditions, FAQ en lecture, analyse économique) ; DOI anglais AWP-05/06/07,
+  « Anthropie Working Papers » ; chercheur indépendant (six livres, billets du Club de *Mediapart*).
+- **Générateurs** : empreinte (pic importé, `lg.extremum`, gardes « au même niveau » et « après un pic » vues mordre) ;
+  imprévu (fourchettes arrondies vers l'extérieur, `floor`/`ceil`) ; déchets (part de la haute activité sur les cinq catégories,
+  97,1 → 97,2 % ; `releve_le` remis au 26/10, aucune donnée nouvelle) ; générations (contributions S2, garde de somme vue
+  mordre) ; comparaison (« surtout parce que » → « tient arithmétiquement »).
+- **`check-corpus-counters.py`** : le motif anglais « N published books » exige « anthrop » plus tôt dans la phrase (accusait
+  à tort « six published books », catalogue complet) ; témoin : « five » sur `/a-propos/` signalé.
+- Journaux et `lastmod` 05/11 ; historique des dates (04/11 : promesses, dette technologique EN) ; 15 instantanés relus.
+- **Hors lot, déclaré** : glossaire « boucle anthropique » (décision de l'auteur) ; ONDPS (JO non relu) ; Dares T3, RTE (NV) ;
+  lot G1 non vérifié ; non-résidents 57,5/56,0 (données) ; plages des déchets au dixième ; quatre cartes `budget-2027-commune`
+  modifiées hors de ce lot, laissées hors commit.
+
 ### 2026-11-05 (fin) — P1 restants : session 2027 du bac (enseignants), « qui paie » sur ses propres sources
 
 - `/enseignants/` et `/enseignants/ecole-et-parcours/` : statut au bac 2027 sous chaque bloc « Programme » — chapitres École et

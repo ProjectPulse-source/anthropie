@@ -175,7 +175,11 @@ def affichage(j: dict) -> tuple[dict, list[str]]:
          "emissions_hab": fr(a1["emissions_hab"]), "empreinte_hab": fr(a1["empreinte_hab"]),
          "evol_emissions": ent(abs(e_em)), "evol_empreinte": ent(abs(e_emp)), "evol_importee": ent(abs(e_imp)),
          "evol_interieure": ent(abs(e_int)),
-         "emissions_depart": ent(a0["emissions"]), "empreinte_depart": ent(a0["empreinte"]), "importee_depart": ent(a0["importee"])}
+         "emissions_depart": ent(a0["emissions"]), "empreinte_depart": ent(a0["empreinte"]), "importee_depart": ent(a0["importee"]),
+         # Audit du 05/11/2026 : « presque stables » entre deux bornes masquait un pic (417 Mt en 2008) ; la prose dit
+         # désormais « presque au même niveau qu'en <départ>, après un pic » : le pic est lu dans la série, jamais saisi.
+         "importee_pic": ent(lg.extremum(s, lambda x: x["importee"], 0)["importee"]),
+         "importee_pic_annee": str(lg.extremum(s, lambda x: x["importee"], 0)["annee"])}
     gardes = [
         ("l'empreinte dépasse les émissions françaises", lg.depasse(d["empreinte"], d["emissions"], 0)),
         ("les émissions importées pour la demande française dépassent « nettement » la production exportée (plus du double)",
@@ -186,7 +190,9 @@ def affichage(j: dict) -> tuple[dict, list[str]]:
          and abs((d["empreinte"] - d["emissions"]) - d["importee"]) > 50),
         ("depuis %d, les émissions françaises ont baissé plus vite que l'empreinte (au moins cinq points d'écart)" % a0["annee"],
          e_em < 0 and e_emp < 0 and e_emp - e_em > 5),
-        ("les émissions importées sont « presque stables » depuis %d (moins de 5 %% de variation)" % a0["annee"], abs(e_imp) < 5),
+        ("les émissions importées sont « presque au même niveau » qu'en %d (moins de 5 %% de variation)" % a0["annee"], abs(e_imp) < 5),
+        ("« après un pic » : la série passe nettement au-dessus de ses deux bornes (plus de 20 %)",
+         lg.extremum(s, lambda x: x["importee"], 0)["importee"] > 1.2 * max(a0["importee"], a1["importee"])),
         ("la composante intérieure de l'empreinte, ménages compris, a baissé « d'un tiers environ » (entre 28 et 40 %)", -40 < e_int < -28),
         ("les signes écrits dans le corrigé : émissions, empreinte et composante intérieure en baisse, importations en hausse",
          e_em < 0 and e_emp < 0 and e_int < 0 and e_imp > 0),

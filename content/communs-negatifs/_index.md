@@ -4,7 +4,9 @@ og_image: "images/og-notion-communs.jpg"
 og_image_alt: "Carte de partage : « Les communs négatifs » et son schéma"
 description: "Les communs négatifs désignent ce dont nous héritons collectivement sans l'avoir choisi : déchets, sols pollués, centrales à démanteler, infrastructures obsolètes. Notion développée par Alexandre Monnin, Emmanuel Bonnet et Diego Landivar — et lecture anthropique de ces héritages."
 date: 2026-07-26
-lastmod: 2026-10-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction : c'est Alexandre Monnin qui range les technologies numériques parmi les communs négatifs candidats ; AWP-06 reprend sa proposition, sous conditions. L'externalité relève de l'analyse économique, non de la comptabilité."}
 og_title: "Qu'est-ce que les communs négatifs ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce qu'un commun négatif ?"
@@ -12,9 +14,9 @@ faq:
   - question: "Quelle est la différence entre communs négatifs et communs (Ostrom) ?"
     answer: "Les communs d'Elinor Ostrom sont des ressources positives — pâturages, irrigation, savoirs — gérées collectivement pour durer. Les communs négatifs inversent la figure : ce ne sont pas des biens qu'on veut préserver mais des réalités dont on hérite et dont personne ne veut — qu'il faut pourtant maintenir, surveiller ou démanteler collectivement, parfois sur des générations."
   - question: "Quelle est la différence entre communs négatifs et externalités ?"
-    answer: "L'externalité est une notion comptable : un coût non facturé, qu'on imagine corrigible par un prix (taxe, marché). La notion de communs négatifs conteste cette lecture : un sol pollué ou une centrale en fin de vie ne sont pas des écarts de prix mais des réalités matérielles installées, qui exigent du soin, des institutions et du travail — pas seulement une internalisation monétaire."
+    answer: "L'externalité est une notion de l'analyse économique : un coût non facturé, qu'on imagine corrigible par un prix (taxe, marché). La notion de communs négatifs conteste cette lecture : un sol pollué ou une centrale en fin de vie ne sont pas des écarts de prix mais des réalités matérielles installées, qui exigent du soin, des institutions et du travail — pas seulement une internalisation monétaire."
   - question: "Quel est le lien entre communs négatifs et anthropie ?"
-    answer: "Les communs négatifs sont le transfert anthropique devenu matière : quand un système déplace son désordre (déchets, pollutions, infrastructures en fin de vie) et que le réceptacle s'accumule, ce qui reste est un héritage négatif partagé. Le working paper AWP-06 (Stéphane Lalut, 2026) range les infrastructures numériques — data centers, équipements à démanteler — parmi les communs négatifs candidats."
+    answer: "Dans le cadre anthropique (Stéphane Lalut), les communs négatifs se lisent comme le transfert anthropique devenu matière : quand un système déplace son désordre (déchets, pollutions, infrastructures en fin de vie) et que le réceptacle s'accumule, ce qui reste est un héritage négatif partagé. Reprenant la proposition d'Alexandre Monnin, le working paper AWP-06 (Stéphane Lalut, 2026) analyse certaines infrastructures numériques — data centers, équipements à démanteler — comme des communs négatifs candidats, sous conditions."
   - question: "Les communs négatifs sont-ils une notion pessimiste ?"
     answer: "Non — c'est une notion d'action. Elle déplace l'attention des seules promesses (construire, innover) vers les gestes négligés : maintenir, refermer, démanteler, dépolluer. Des métiers, des institutions et des savoir-faire entiers tiennent dans ce « soin des restes »."
   - question: "Qui a introduit la notion ?"
@@ -104,7 +106,7 @@ Ce que représente un tel héritage, en chiffres, pour les déchets radioactifs 
 
 ## Le cas d'école qui vient&nbsp;: le numérique
 
-Le working paper [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (2026) range les technologies numériques parmi les **communs négatifs candidats**&nbsp;: data centers dimensionnés pour des décennies, équipements à durée de vie courte et à recyclage non résolu, réseaux dont le démantèlement coûtera plus que personne ne l'a provisionné. Le numérique se présente comme immatériel&nbsp;; ses restes seront très matériels — et partagés. Penser le cloud en communs négatifs, c'est poser aujourd'hui la question que les sols pollués nous ont apprise trop tard&nbsp;: qui héritera de l'infrastructure, et qui en prendra soin&nbsp;?
+Le working paper [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (2026) reprend la proposition d'Alexandre Monnin, qui range les technologies numériques parmi les **communs négatifs candidats**&nbsp;; il analyse certaines infrastructures numériques — data centers dimensionnés pour des décennies, chaînes d'approvisionnement minières, terminaux à cycle court — comme candidates sous conditions (dépendance durable, coûts déplacés, irréversibilité), non comme des communs négatifs par principe. Le numérique se présente comme immatériel&nbsp;; ses restes seront très matériels — et partagés. Penser le cloud en communs négatifs, c'est poser aujourd'hui la question que les sols pollués nous ont apprise trop tard&nbsp;: qui héritera de l'infrastructure, et qui en prendra soin&nbsp;?
 
 ## Questions fréquentes
 
@@ -112,7 +114,7 @@ Le working paper [AWP-06 — *Infrastructures numériques et dette technologique
 
 ## Pour aller plus loin
 
-- [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (DOI&nbsp;: 10.5281/zenodo.20025421, PDF en accès libre) — où le numérique rejoint les communs négatifs candidats.
+- [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (DOI&nbsp;: 10.5281/zenodo.20025421, PDF en accès libre) — qui reprend, sous conditions, la proposition de ranger le numérique parmi les communs négatifs candidats.
 - [Qu'est-ce que la dette technologique&nbsp;?](/dette-technologique/) et [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) — les pages voisines du cadre.
 - Le livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025, 630 p.) — le cadre général dont les communs négatifs sont l'un des points de rencontre avec l'écologie du démantèlement.
 

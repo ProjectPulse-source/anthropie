@@ -2,9 +2,11 @@
 title: "Qu'est-ce que l'effet rebond (paradoxe de Jevons) ?"
 og_image: "images/og-notion-rebond.jpg"
 og_image_alt: "Carte de partage : « L’effet rebond » et son schéma"
-description: "L'effet rebond désigne le mécanisme par lequel l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation totale, tend à l'augmenter. Décrit par William Stanley Jevons en 1865, il reste le point aveugle des politiques d'efficacité."
+description: "L'effet rebond désigne le mécanisme par lequel une partie du gain d'efficacité énergétique est reprise par une hausse de l'usage ; quand la reprise dépasse le gain, la consommation totale augmente. Décrit par William Stanley Jevons en 1865, il reste le point aveugle des politiques d'efficacité."
 date: 2026-07-24
-lastmod: 2026-10-26
+lastmod: 2026-11-05
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Correction de la définition : l'effet rebond reprend une partie du gain d'efficacité ; la consommation totale n'augmente que lorsque la reprise dépasse le gain (paradoxe de Jevons)."}
 og_title: "L'effet rebond (paradoxe de Jevons) — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que l'effet rebond ?"
@@ -16,7 +18,7 @@ faq:
   - question: "L'effet rebond annule-t-il tout gain d'efficacité ?"
     answer: "Non — l'ampleur du rebond varie selon les usages, les secteurs et les périodes, et fait l'objet d'une littérature abondante. Mais il est structurel, pas anecdotique : ignorer le rebond conduit systématiquement à surestimer les économies d'énergie attendues des politiques d'efficacité. C'est pourquoi les scénarios sérieux distinguent efficacité et sobriété."
   - question: "Quel est le lien entre l'effet rebond et l'anthropie ?"
-    answer: "Dans le cadre anthropique (Stéphane Lalut), l'effet rebond est un cas d'effet boomerang : le gain d'efficacité produit un ordre local — moins d'énergie par unité — dont le coût revient sous forme d'un désordre global — plus de consommation totale. L'analyse est développée dans AWP-04, « Transition énergétique ou transfert entropique ? » (2026, DOI 10.5281/zenodo.19269244)."
+    answer: "Dans le cadre anthropique (Stéphane Lalut), l'effet rebond est un cas d'effet boomerang : le gain d'efficacité produit un ordre local — moins d'énergie par unité — dont le coût revient sous forme d'un désordre global — moins d'économies que prévu, voire plus de consommation totale. L'analyse est développée dans AWP-04, « Transition énergétique ou transfert entropique ? » (2026, DOI 10.5281/zenodo.19269244)."
   - question: "Effet rebond, effet Jevons, paradoxe de Jevons : est-ce la même chose ?"
     answer: "L'effet rebond est le phénomène général — toute reprise de consommation qui rogne un gain d'efficacité. On parle de paradoxe (ou effet) de Jevons dans le cas extrême où la reprise dépasse le gain : la consommation totale augmente. La définition courte est au glossaire."
   - question: "L'effet rebond vaut-il en dehors de l'énergie ?"
@@ -26,7 +28,7 @@ faq:
 fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
   lignes:
     - t: "Définition"
-      d: "Mécanisme par lequel un gain d'efficacité énergétique, au lieu de réduire la consommation totale, tend à l'augmenter&nbsp;: ce qui devient plus efficace devient moins cher, donc plus utilisé."
+      d: "Mécanisme par lequel une partie d'un gain d'efficacité énergétique est reprise par une hausse de l'usage&nbsp;: ce qui devient plus efficace devient moins cher, donc plus utilisé. Quand la reprise dépasse le gain, la consommation totale augmente (paradoxe de Jevons)."
     - t: "Origine"
       d: "William Stanley Jevons, *The Coal Question* (1865), à propos des machines à vapeur&nbsp;; généralisé par l'économie de l'énergie (postulat de Khazzoom-Brookes, années 1980)."
     - t: "À ne pas confondre"
@@ -36,7 +38,7 @@ fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la
     - t: "Limite"
       d: "Son ampleur varie selon les usages, les secteurs et les périodes&nbsp;: il n'annule pas tout gain d'efficacité, mais l'ignorer conduit à surestimer les économies attendues."
     - t: "Lecture anthropique"
-      d: "Un [effet boomerang](/glossaire/#effet-boomerang)&nbsp;: l'ordre local (moins d'énergie par unité) revient en désordre global (plus de consommation totale). Analyse développée dans [AWP-04](/awp/awp-04/)."
+      d: "Un [effet boomerang](/glossaire/#effet-boomerang)&nbsp;: l'ordre local (moins d'énergie par unité) revient en désordre global (moins d'économies que prévu, voire plus de consommation totale). Analyse développée dans [AWP-04](/awp/awp-04/)."
       anthropie: true
 schemas:  # schéma de mécanisme (shortcode notion-schema)
   mecanisme:
@@ -69,7 +71,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long_en: "Rebound effect"
 ---
 
-L'effet rebond est le mécanisme par lequel l'amélioration de l'efficacité énergétique, au lieu de réduire la consommation totale d'énergie, tend à l'augmenter&nbsp;: ce qui devient plus efficace devient moins cher, donc plus utilisé. Décrit par l'économiste William Stanley Jevons dès 1865, il reste le point aveugle de la plupart des politiques d'efficacité énergétique.
+L'effet rebond est le mécanisme par lequel une partie du gain d'efficacité énergétique est reprise par une hausse de l'usage&nbsp;: ce qui devient plus efficace devient moins cher, donc plus utilisé. Quand la reprise dépasse le gain, la consommation totale d'énergie augmente au lieu de baisser&nbsp;: c'est le paradoxe de Jevons. Décrit par l'économiste William Stanley Jevons dès 1865, il reste le point aveugle de la plupart des politiques d'efficacité énergétique.
 
 {{< notion-fiche >}}
 
@@ -97,7 +99,7 @@ L'effet rebond n'est pas une anomalie comportementale qu'une meilleure informati
 
 ## La lecture anthropique&nbsp;: un effet boomerang
 
-Le cadre anthropique de l'économiste Stéphane Lalut propose de lire l'effet rebond comme un cas d'[effet boomerang](/glossaire/#effet-boomerang)&nbsp;: le gain d'efficacité produit un **ordre local** — moins d'énergie par unité produite, un bilan qui s'améliore — dont le coût revient sous forme d'un **désordre global** — plus de consommation totale, plus d'extraction, plus de déchets.
+Le cadre anthropique de l'économiste Stéphane Lalut propose de lire l'effet rebond comme un cas d'[effet boomerang](/glossaire/#effet-boomerang)&nbsp;: le gain d'efficacité produit un **ordre local** — moins d'énergie par unité produite, un bilan qui s'améliore — dont le coût revient sous forme d'un **désordre global** — moins d'économies que prévu, et, quand la reprise dépasse le gain, plus de consommation totale, plus d'extraction, plus de déchets.
 
 Cette lecture est développée dans [AWP-04 — *Transition énergétique ou transfert entropique&nbsp;?*](/awp/awp-04/) (2026), qui replace le rebond parmi trois mécanismes de transfert à l'œuvre dans la transition énergétique&nbsp;: l'extraction externalisée vers les pays producteurs de lithium et de cobalt, les déchets technologiques reportés vers les décennies à venir, et l'effet rebond non comptabilisé. Le point commun des trois&nbsp;: le désordre que la transition prétend éliminer n'est pas résolu, il est **déplacé** — dans l'espace, dans le temps, ou par le détour des volumes.
 

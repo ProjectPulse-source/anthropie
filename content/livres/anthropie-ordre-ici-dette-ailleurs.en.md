@@ -2,7 +2,7 @@
 title: "ANTHROPY – A Big History of Civilization's Hidden Costs"
 subtitle: "Seven ages of history for a single hypothesis: disorder is never resolved, only displaced."
 date: 2026-07-21  # date de publication de l'édition anglaise (mise en vente KDP)
-lastmod: 2026-11-01
+lastmod: 2026-11-05
 description: "The foundational work on the anthropic framework. Across 644 pages, ANTHROPY develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Order here. Debt elsewhere."
 isbn: "978-2-958634-75-9"
 currency: "USD"
@@ -68,7 +68,7 @@ The framework's definition and its operative vocabulary are set out on the [What
 
 ## Who is it for? {#who-is-it-for}
 
-For the essay reader looking for an overall reading grid — political economy, deep history, ecology — rather than topical commentary. No technical prerequisite: the conceptual apparatus is built step by step. Readers of the *Anthropy Working Papers* will find here the complete framework from which each paper develops a theorem or an application.
+For the essay reader looking for an overall reading grid — political economy, deep history, ecology — rather than topical commentary. No technical prerequisite: the conceptual apparatus is built step by step. Readers of the *Anthropie Working Papers* will find here the complete framework from which each paper develops a theorem or an application.
 
 **What need does it serve?** The book helps you:
 

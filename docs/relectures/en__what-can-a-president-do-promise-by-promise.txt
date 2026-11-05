@@ -1,10 +1,10 @@
-# relu le 2026-11-04 ; texte servi de /en/what-can-a-president-do-promise-by-promise/, build de 10fe096 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/what-can-a-president-do-promise-by-promise/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Nine campaign promises: what can a president really do?
 Can a president raise wages, lower prices, get people hired, make the country safer, deport more people?
 He decides part of each promise, almost never all of it: the rest goes through a vote, a negotiation, or depends on actors he does not command.
 The boundary does not fall in the same place from one theme to another.
-Page updated 4 November 2026 · revisions
+Page updated 5 November 2026 · revisions
 Presidential promises
 No text obliges a president to carry out his programme: a campaign programme is not a legal act, and the Constitution entrusts the Government, not the president, with determining and conducting “the policy of the Nation” (article 20).
 A presidential promise therefore passes through a chain: the Government that signs, the majority that votes, the administration that applies.
@@ -28,7 +28,7 @@ The first zone exists, but the pen usually belongs to the director general of th
 Regulating where doctors set up practice requires a statute: passed by the National Assembly on 7 May 2025, a private member’s bill made setting up subject to authorisation; on 27 May 2026, the Senate committee turned it into an obligation to practise part-time in an under-served zone.
 Debate in the Senate chamber began on 11 June 2026 without yet covering all the articles (Senate legislative file, read on 4 November 2026).
 Training targets are shared with the universities.
-That leaves the practitioner, free to set up or not, and the clock of the curriculum: a student who starts in 2027 will practise around 2037.
+That leaves the practitioner, free to set up or not, and the clock of the curriculum: a student who starts in 2027 cannot complete general-practice training before 2037 at the earliest.
 In short, from the table of the nine promises:
 In the executive’s hands. zoning, out-of-hours care, approval of training placements (regional health agency orders)
 Must be voted. regulation of where doctors set up, exemptions for combining work and pension
@@ -359,6 +359,7 @@ Climate: Energy Code, article L.
 222-1 A; decree no.
 2026-636 of 16 July 2026; Regulation (EU) 2023/857, Annex I.
 Revisions
+5 November 2026 — Correction: a student entering medical school in 2027 cannot complete general-practice training before 2037 at the earliest.
 4 November 2026 — Health: the bill on doctors’ installation began to be debated in the Senate chamber on 11 June 2026, without all its articles having yet been examined (Senate legislative file).
 All resources: data, explainers and reference material →
 Share

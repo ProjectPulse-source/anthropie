@@ -1,9 +1,9 @@
-# relu le 2026-11-02 ; texte servi de /dette-publique-comparaison-internationale/, build de 8aa15f6 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /dette-publique-comparaison-internationale/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
 En 2025, à dette presque égale, la Hongrie consacre 8,8 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
 Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut regarder aussi son prix, les recettes disponibles pour la servir, et le poids des emprunts anciens dans ce qu’elle coûte aujourd’hui.
-Page mise à jour le 2 novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -635,7 +635,7 @@ Données Eurostat, OCDE, FMI et Banque mondiale, relevé du 2 novembre 2026. htt
 Copier la citation
 En trois phrases
 Cette page compare ce que représente une dette publique : son stock, son prix et les recettes qui la servent, puis le poids des emprunts anciens dans ce qu’elle coûte aujourd’hui.
-Dans l’Union européenne en 2025, deux pays de dette voisine peuvent consacrer aux intérêts des parts de leurs recettes qui vont de 1 à 3,2, surtout parce que le prix de leur dette diffère, et ce prix n’a pas de lien linéaire avec son niveau.
+Dans l’Union européenne en 2025, deux pays de dette voisine peuvent consacrer aux intérêts des parts de leurs recettes qui vont de 1 à 3,2 ; entre la Hongrie et la Slovénie, l’essentiel de l’écart tient arithmétiquement au prix payé sur la dette, et ce prix n’a pas de lien linéaire avec son niveau.
 Ces relations décrivent une année et des associations, non des causes ; elles ne mesurent pas le risque de crise.
 Copier le résumé
 Les données
@@ -647,6 +647,7 @@ Les séries brutes appartiennent à leurs producteurs (Eurostat, OCDE, FMI et Ba
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
 Révisions
+5 novembre 2026 — Précision : l’écart de charge entre les deux pays de dette voisine tient arithmétiquement, pour l’essentiel, au prix payé sur la dette ; la page ne l’attribue pas à une cause.
 2 novembre 2026 — Comptes d’Eurostat du 21 octobre 2026 : le Danemark, dont Eurostat ne publie plus les recettes de 2025, sort du nuage des intérêts rapportés aux recettes et reste dans le tableau, le classement de la dette et l’indicateur de refinancement.
 Rapportés au PIB, les intérêts replacent la France au huitième rang de l’Union, sans égalité avec la Belgique, et cinq pays moins endettés la dépassent.
 16 octobre 2026 — Correction : rapportés au PIB, les intérêts placent la France au septième rang de l’Union, à égalité avec la Belgique, et non au huitième ; quatre pays moins endettés la dépassent, et non cinq.
