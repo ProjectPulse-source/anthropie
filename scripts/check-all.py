@@ -78,6 +78,9 @@ HORS_RESEAU = [
     # reecrivait jeu, figures et PNG a chaque passage du robot (3 commits sur 13 du 25/09 au 18/10). Bloquant : une
     # regression rendrait ces commits muets, et une normalisation trop grossiere tairait une vraie donnee.
     ("releve des jeux (module commun)", "test_releve_jeu.py", []),
+    # Veille du projet de loi de finances (auteur, 05/11/2026 : « surveillance et mise a jour automatisee ») : l'extracteur
+    # publie seul un etat juridique ; une formule mal lue ne doit jamais devenir une entree. Meurt avec veille_plf.py.
+    ("veille du projet de loi de finances (extracteur)", "sources_collectivites/test_veille_plf.py", []),
     ("lecture, rangs et octets des generateurs", "check-lecture-donnees.py", []),
     # Figures (auteur, 03/11/2026 : « methodologie de verification des graphes cablee, rigueur et pas d'erreur ») : aucun
     # libelle ne se mord, aucun ne recouvre une marque ni ne sort du cadre, aucun filet ne mene au mauvais point, aucun

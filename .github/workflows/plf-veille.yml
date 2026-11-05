@@ -1,0 +1,138 @@
+name: Veille du projet de loi de finances (etat au Parlement)
+
+# Decision de l'auteur (05/11/2026) : « pour la mise a jour des donnees du site il faut une surveillance et une mise a
+# jour automatisee ». Lit les comptes rendus de seance de l'Assemblee nationale, integre seul tout resultat ecrit dans
+# la formule officielle pour un article suivi (citation verbatim, texte du compte rendu archive dans le depot et relu
+# par verifier_plf_votes.py), regenere les pages collectivites et publie. Le reste devient un ticket.
+# Condition de mort : veille_plf.py ne fait plus rien quand plf_votes.json porte "termine": true (loi de finances
+# promulguee) ; ce fichier se retire dans le meme commit que ce drapeau.
+
+on:
+  schedule:
+    - cron: '30 6 * * *'     # 07:30 a Paris : seances de la veille au soir
+    - cron: '30 12 * * *'    # 13:30 a Paris
+    - cron: '30 19 * * *'    # 20:30 a Paris
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+env:
+  HUGO_VERSION: 0.147.0
+
+concurrency:
+  group: plf-veille
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04   # epingle -- voir docs/MIGRATION_RUNNER_UBUNTU26.md
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+      sha: ${{ steps.push.outputs.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Temoin positif de l'extracteur (decisions du 19/10 retrouvees) et essais
+        run: |
+          python3 scripts/sources_collectivites/test_veille_plf.py
+          python3 scripts/sources_collectivites/veille_plf.py temoin
+
+      - name: Lire les seances nouvelles et integrer les resultats sans ambiguite
+        run: python3 scripts/sources_collectivites/veille_plf.py integrer | tee "${{ runner.temp }}/veille.txt"
+
+      - name: Detecter un changement du registre
+        id: diff
+        run: |
+          if git diff --quiet -- scripts/sources_collectivites/plf_votes.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; echo "Registre inchange."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"; git diff --stat
+          fi
+
+      - name: Relire les citations, sceller le registre, regenerer les pages
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          python3 scripts/sources_collectivites/verifier_plf_votes.py
+          python3 - <<'PY'
+          import hashlib, re
+          from pathlib import Path
+          h = hashlib.sha256(Path("scripts/sources_collectivites/plf_votes.json").read_bytes()).hexdigest()
+          p = Path("scripts/update_dette_collectivites.py"); s = p.read_text(encoding="utf-8")
+          s2 = re.sub(r'PLF_VOTES_SHA = "[0-9a-f]{64}"', 'PLF_VOTES_SHA = "%s"' % h, s, count=1)
+          assert s2 != s or h in s
+          p.write_text(s2, encoding="utf-8")
+          print("Empreinte du registre :", h)
+          PY
+          mkdir -p ~/.local/share/fonts && cp scripts/polices/Inter-*.ttf ~/.local/share/fonts/ && fc-cache -f
+          python3 -m pip install --quiet cairosvg==2.9.0 pillow==12.2.0
+          python3 scripts/update_dette_collectivites.py
+          python3 scripts/og_dossier_dette.py --collectivites
+          python3 scripts/check-all.py --ci
+          wget -q -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo --minify
+
+      - name: Publier sur main
+        id: push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/sources_collectivites/plf_votes.json scripts/sources_collectivites/comptes_rendus \
+                  scripts/update_dette_collectivites.py data/dette_collectivites.json data/figures_collectivites.json data/figures_plf_communes.json static/dette_collectivites.json static/dette_collectivites.csv \
+                  'static/img/collectivites-*' 'static/images/og-collectivites*' 'static/images/vig-collectivites*' 'static/images/og-budget-2027-commune*' 'static/images/vig-budget-2027-commune*'
+          git commit -m "data(plf): etat du projet de loi de finances au $(python3 -c "import json;print(json.load(open('scripts/sources_collectivites/plf_votes.json'))['etat_au'])") (veille automatique)"
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then pushed=1; break; fi
+            git pull --rebase origin main || true
+            sleep $((attempt * 5))
+          done
+          if [ "$pushed" = 0 ]; then echo "::error::Push impossible -- etat NON publie"; exit 1; fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Un ticket par fait a qualifier a la main
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const fs = require('fs');
+            const lignes = fs.readFileSync('${{ runner.temp }}/veille.txt', 'utf8').split('\n').filter(l => l.startsWith('VEILLE\t'));
+            if (!lignes.length) { core.info('Veille PLF : rien a qualifier a la main.'); return; }
+            const tous = await github.paginate(github.rest.issues.listForRepo, { owner: context.repo.owner, repo: context.repo.repo, state: 'all', per_page: 100 });
+            const vus = new Set(tous.map(i => i.title));
+            for (const l of lignes) {
+              const [, titre, detail] = l.split('\t');
+              if (vus.has(titre)) { core.info('Deja signale : ' + titre); continue; }
+              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title: titre,
+                body: detail + '\n\nVeille automatique du projet de loi de finances : ce fait ne s integre pas seul. ' +
+                  'Le qualifier dans scripts/sources_collectivites/plf_votes.json (citation verbatim), puis verifier_plf_votes.py.' });
+            }
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      issues: write
+    uses: ./.github/workflows/hugo.yml
+    with:
+      ref: ${{ needs.update.outputs.sha }}
+
+  alerte:
+    needs: [update, deploy]
+    if: ${{ !cancelled() }}
+    permissions:
+      issues: write
+    uses: ./.github/workflows/ticket-flux.yml
+    with:
+      titre: 'Veille du projet de loi de finances : echec du workflow'
+      resultat: ${{ (needs.update.result == 'failure' || needs.deploy.result == 'failure') && 'failure' || 'success' }}
+      corps: "La veille du projet de loi de finances a echoue (temoin, lecture de l Assemblee, verification des citations, garde du generateur, controles ou push). Repli : `python scripts/sources_collectivites/veille_plf.py integrer` en local, puis verifier_plf_votes.py et update_dette_collectivites.py."

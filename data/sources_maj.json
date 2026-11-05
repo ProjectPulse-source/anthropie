@@ -262,7 +262,7 @@
   ],
   "jeu": "scripts/sources_collectivites/plf_votes.json",
   "date_cle": "etat_au",
-  "cadence": "à chaque étape de la procédure parlementaire",
+  "cadence": "à chaque étape de la procédure parlementaire ; veille automatique trois fois par jour (plf-veille.yml, veille_plf.py), qui intègre seule les résultats en formule officielle ; les échéances ci-dessous restent le filet de péremption",
   "nature": "juridique (procédure parlementaire) : registre des votes à compléter (citation verbatim du compte rendu, verifier_plf_votes.py) et frise de la fiche (data/plf_procedure.json)",
   "echeances": [
    {"date": "2026-11-03", "etape": "vote solennel sur la première partie prévu le mardi 3 novembre (page de l'Assemblée lue le 23/10/2026) : non tenu, la discussion de la première partie se poursuivait (compte rendu du 3 novembre, registre relu le 05/11/2026)"},
