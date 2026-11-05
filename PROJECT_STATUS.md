@@ -63,8 +63,10 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
   59,7 % de non-résidents), capture archivée. Tolérance de somme 0,25 (cinq arrondis publiés au dixième). Le registre du livre
   reste lu (foyers fiscaux) et la page dit ce qu'imprime le livre (2 823 sur 3 460,5, fin 2025). Sources en dur du pied des
   figures corrigées (« Informations rapides n° 79 ») — trouvé au rendu. Journal, instantanés FR/EN.
-- **Reste** : titres indexés de l'AFT au 30/09 (Bulletin n° 437 refusé aux scripts, texte non extractible au navigateur ;
-  l'auteur le télécharge) — tant qu'il manque, la page coût garde la paire cohérente de fin août.
+- **AFT, fin septembre 2026** (même jour, Bulletin n° 437 téléchargé par l'auteur, archivé `scripts/sources_dette/` avec son
+  empreinte) : 2 896 Md€ dont 317 indexés, 8 ans et 158 jours, court terme 218 / 129 jours. Témoin : les colonnes fin 2025 et
+  fin août du même tableau retrouvent les valeurs déjà au jeu. ⚠ La page web « Encours au 30 septembre » de l'AFT (2 921,1 Md€,
+  8 ans et 139 jours) suit une AUTRE convention : non mélangée ; la contre-expertise et l'agent la citaient comme confirmation.
 
 ### 2026-11-05 (suite) — P1 de l'audit : échantillon PISA, figures téléphone d'« École et parcours »
 

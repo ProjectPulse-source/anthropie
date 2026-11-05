@@ -1,27 +1,31 @@
 {
  "_avertissement": "Valeurs PUBLIÉES par l'Agence France Trésor, saisies à la main après lecture à la source. Le site de l'AFT refuse les scripts (403, relevé le 2026-10-11) : lecture par le navigateur, règle constante « anti-robot → changement de canal ». Chaque valeur porte sa date ; la page l'affiche. À relire à chaque mise à jour de la trajectoire du projet de loi de finances (data/trajectoire_plf.json), au plus tard.",
  "source": {
-  "publication": "Agence France Trésor, « Principaux chiffres » (tableau repris du Bulletin mensuel)",
-  "page": "https://www.aft.gouv.fr/fr/principaux-chiffres-dette",
-  "canal": "navigateur (403 aux scripts)",
-  "lu_le": "2026-10-11"
+  "publication": "Agence France Trésor, Bulletin mensuel n° 437 (octobre 2026, daté du 12/10/2026), tableau de l'encours de la dette négociable, colonne « Fin Septembre 2026 » (en date de règlement)",
+  "page": "https://www.aft.gouv.fr/files/medias-aft/7_Publications/7.2_BM/437_Bulletin%20mensuel%20octobre%202026.pdf",
+  "piece": "scripts/sources_dette/AFT_Bulletin_mensuel_437_octobre_2026.pdf",
+  "sha256": "2092c2bb3650d72703d93e340b726c83e3bd6a8f930aff255a06a39e3372be9e",
+  "canal": "PDF téléchargé par l'auteur (403 aux scripts), lu par pypdf le 2026-11-05",
+  "lu_le": "2026-11-05",
+  "temoin": "les colonnes « Fin 2025 » (8 ans et 184 jours) et « Fin Août 2026 » (2 904, dont 314 indexés, 8 ans et 142 jours, court terme 219 et 124 jours) du même tableau retrouvent les valeurs relevées auparavant",
+  "_convention": "Le tableau du bulletin (2 896 Md€, 8 ans et 158 jours) ne suit pas la même convention que la page « Encours de la dette négociable au 30 septembre 2026 » du site de l'AFT (2 921,1 Md€, 8 ans et 139 jours) : la page du site retient la convention du bulletin, la seule qui donne aussi l'encours des titres indexés. Les deux ne se mélangent pas."
  },
  "perimetre": "Dette négociable de l'État (et non l'ensemble des administrations publiques)",
  "date": {
-  "fr": "fin août 2026",
-  "en": "end of August 2026",
-  "iso": "2026-08-31"
+  "fr": "fin septembre 2026",
+  "en": "end of September 2026",
+  "iso": "2026-09-30"
  },
- "encours_mdeur": 2904,
- "titres_indexes_mdeur": 314,
+ "encours_mdeur": 2896,
+ "titres_indexes_mdeur": 317,
  "duree_vie_moyenne": {
   "ans": 8,
-  "jours": 142
+  "jours": 158
  },
  "duree_vie_moyenne_fin_2025": {
   "ans": 8,
   "jours": 184
  },
- "court_terme_mdeur": 219,
- "duree_vie_moyenne_court_terme_jours": 124
+ "court_terme_mdeur": 218,
+ "duree_vie_moyenne_court_terme_jours": 129
 }

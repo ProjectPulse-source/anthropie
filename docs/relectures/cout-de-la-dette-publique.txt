@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /cout-de-la-dette-publique/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /cout-de-la-dette-publique/, build de 8f3b3c9 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Combien coûte la dette publique ?
 En 2025, les administrations publiques doivent 65,7 milliards d’euros d’intérêts, 4,2 % de leurs recettes : 121 % de plus qu’au creux de 2020.
@@ -59,9 +59,9 @@ Les titres indexés transmettent l’inflation à la charge l’année même ; l
 L’un et l’autre se lisent dans les mêmes intérêts, et ces séries ne les séparent pas.
 Trois repères mesurent ces deux transmissions.
 Ils portent sur la dette de l’État, alors que la charge de cette page couvre l’ensemble des administrations publiques, et disent l’ordre de grandeur du retard, pas son calendrier exact.
-La durée de vie moyenne de la dette négociable de l’État : 8 ans et 142 jours à fin août 2026 (Agence France Trésor).
+La durée de vie moyenne de la dette négociable de l’État : 8 ans et 158 jours à fin septembre 2026 (Agence France Trésor).
 Elle ne signifie pas qu’il faut attendre 8 ans : une partie des titres arrive à échéance chaque année, et les titres de court terme se renouvellent en quelques mois.
-Les titres indexés sur l’inflation : 314 milliards sur 2 904 à la même date, soit 10,8 %.
+Les titres indexés sur l’inflation : 317 milliards sur 2 896 à la même date, soit 10,9 %.
 Leur charge suit les prix sans attendre leur remboursement : selon le Gouvernement, cité par le Haut Conseil des finances publiques, un point d’inflation de plus ajoute environ 3 milliards à la charge la même année.
 La sensibilité aux taux : selon la même source, une hausse permanente d’un point de tous les taux ajouterait 3,4 milliards à la charge la première année et 8,1 la deuxième, puis davantage au fil des renouvellements.
 C’est un scénario de sensibilité, non une prévision.
@@ -235,7 +235,7 @@ La charge d’intérêts retenue est la série D41PAY, enregistrée en droits co
 Valeurs saisies.
 Les prévisions du Gouvernement pour 2026 et 2027 et sa sensibilité aux taux et à l’inflation sont lues dans l’avis du Haut Conseil des finances publiques sur les projets de lois de finances pour 2027 (paragraphes 113, 115 et 116), qui les rapporte ; l’avis est archivé avec son empreinte.
 Elles ne sont pas soustraites de l’observation d’Eurostat : la valeur 2025 sous-jacente aux prévisions n’est pas publiée, et rien ne la rattache à la série utilisée ici.
-La durée de vie moyenne et les titres indexés de la dette négociable de l’État sont ceux que publie l’Agence France Trésor pour fin août 2026.
+La durée de vie moyenne et les titres indexés de la dette négociable de l’État sont ceux que publie l’Agence France Trésor dans son Bulletin mensuel, en date de règlement, pour fin septembre 2026.
 Les séries officielles sont réinterrogées chaque semaine ; la date du relevé ne change que lorsqu’une publication modifie un chiffre.
 Les données consolidées sont publiées en accès libre : dette_officielle.json, sous licence CC BY 4.0 — réutilisation libre, y compris commerciale, à la seule condition de citer la source.
 Les séries brutes appartiennent à l’INSEE et à Eurostat ; ce qui est mis sous licence ici, c’est la compilation : l’assemblage des séries, les grandeurs dérivées (taux implicite, décomposition, ratios, équivalences à millésime unique) et leur mise en cohérence.

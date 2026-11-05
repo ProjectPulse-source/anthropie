@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/cost-of-french-public-debt/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/cost-of-french-public-debt/, build de 8f3b3c9 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What does French public debt actually cost?
 In 2025, French general government owes 65.7 billion euros of interest, 4.2% of its revenue, and 121% more, in euros, than at the 2020 trough.
@@ -62,9 +62,9 @@ Inflation-linked bonds pass inflation on to the burden within the year; the rene
 Both show up in the same interest figures, and these series do not separate them.
 Three benchmarks measure these two channels.
 They concern the State’s debt, while the burden on this page covers general government as a whole, and give the order of magnitude of the lag, not its exact timetable.
-The average maturity of the State’s negotiable debt: 8 years and 142 days at the end of August 2026 (Agence France Trésor).
+The average maturity of the State’s negotiable debt: 8 years and 158 days at the end of September 2026 (Agence France Trésor).
 It does not mean waiting 8 years: part of the securities mature every year, and short-term bills are renewed within months.
-Inflation-linked bonds: 314 billion out of 2,904 at the same date, or 10.8%.
+Inflation-linked bonds: 317 billion out of 2,896 at the same date, or 10.9%.
 Their cost follows prices without waiting for repayment: according to the Government, as reported by the Haut Conseil des finances publiques, one more point of inflation adds about 3 billion to the burden in the same year.
 Sensitivity to rates: according to the same source, a permanent one-point rise in all rates would add 3.4 billion to the burden in the first year and 8.1 in the second, then more as securities are renewed.
 This is a sensitivity scenario, not a forecast.
@@ -223,7 +223,7 @@ The interest burden used here is the D41PAY series, recorded on an accrual basis
 Values entered by hand.
 The Government’s forecasts for 2026 and 2027 and its sensitivity to rates and inflation are read in the opinion of the Haut Conseil des finances publiques on the 2027 budget bills (paragraphs 113, 115 and 116), which reports them; the opinion is archived with its fingerprint.
 They are not subtracted from the Eurostat observation: the 2025 value underlying the forecasts is not published, and nothing ties it to the series used here.
-The average maturity and the inflation-linked bonds of the State’s negotiable debt are those published by the Agence France Trésor for the end of August 2026.
+The average maturity and the inflation-linked bonds of the State’s negotiable debt are those published by the Agence France Trésor in its monthly bulletin, on a settlement-date basis, for the end of September 2026.
 The official series are re-queried every week; the retrieval date changes only when a release changes a figure.
 The consolidated data is published openly as dette_officielle.json under a CC BY 4.0 licence — free reuse, including commercial use, on the single condition that the source is cited.
 The raw series belong to INSEE and Eurostat; what is licensed here is the compilation: the assembly of series, the derived quantities (implicit rate, decomposition, ratios, single-vintage equivalences) and their reconciliation.
