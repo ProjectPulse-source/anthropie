@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (suite) — P1 de l'audit : échantillon PISA, figures téléphone d'« École et parcours »
+
+- `/le-niveau-des-eleves-baisse-t-il/` : 79 / 56 / 17 % venaient des effectifs BRUTS de l'échantillon (`echantillon_classes`),
+  la phrase portait sur la population ; parts PONDÉRÉES de la DEPP (NI 26-39, fig. 10, déjà dans l'extrait) : 91 / 65 / 23 %.
+  Garde « au moins 85 % » vue mordre (`--mutation=lycee`) ; journal ; instantané de relecture.
+- `/enseignants/ecole-et-parcours/` : versions téléphone des deux figures (`-m.svg` + `.png`), un organe pour les deux
+  générateurs (`generer_parcours_licence.barres_mobile`, cartouche commun `cartouche()`), pied commun, police ≥ 13,5.
+  48 valeurs relues contre le jeu (28 + 20), ensemble licence = Note Flash n° 29 ; `check-figures` a mordu sur l'adresse
+  sortie du cadre (corrigé : domaine seul en téléphone) ; marge droite mesurée au rendu (17 et 25 unités) ; recette 320-1600 OK.
+  Reste : pied commun des figures détaillées (inventaire de `check-rendu`, page non refondue).
+- **Non fait, motif** : AFT fin septembre (encours 2 921,1 Md€ et 8 ans 139 jours LUS au navigateur le 05/11 ; titres
+  indexés au 30/09 dans le Bulletin n° 437, PDF, téléchargement à autoriser) ; détenteurs T2 2026 (59,7 % de non-résidents,
+  lus) et dette par administration : la page lit le registre du LIVRE (`REGISTRE_DONNEES.yaml`) — mise à jour = arbitrage
+  de l'auteur ; enseignants, session 2027 : note de service vue (BO spécial n° 4, 17/09/2026), annexe I en PDF à lire.
+
 ### 2026-11-05 — Corrections P0 de l'audit des ressources (exactitude, 7 pages, FR et EN)
 
 Audit et arbitrage : `D:\PRO_PROMOTION\AUDIT_RESSOURCES_2026-11-05\` (`SCAN.md`, `FICHES\`, `ARBITRAGE_CORRECTION_2026-11-05.md`,

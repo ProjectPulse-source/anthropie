@@ -76,6 +76,7 @@ COULEUR = {"univ": (gl.BLEU, "#ffffff"), "cpge": (gl.ORANGE, gl.INK), "sts": (gl
 LIBELLE = {"univ": ("Université", "(dont IUT)"), "cpge": ("Classes", "prépa."), "sts": ("Sections de", "technicien sup."),
            "autres": ("Autres", "formations")}
 fail, log, fr, esc = gl.fail, gl.log, gl.fr, gl.esc
+barres_mobile, INK2, MUTED = gl.barres_mobile, gl.INK2, gl.MUTED   # version téléphone (05/11/2026)
 
 
 def nombre(s: str) -> float:
@@ -275,7 +276,16 @@ def figure(a: dict, A: dict) -> str:
             x += w
     y0 = H + 4 - 12 * (NB_CART - 3)
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, gl.GRID))
-    cart = [("MESRE-SIES, État de l'enseignement supérieur, de la recherche et de l'innovation en France %s, tableau 13.03 ; France "
+    cart = cartouche(a, A)
+    for k, (txt, col) in enumerate(cart):
+        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(txt)))
+    e.append("</svg>")
+    return "\n".join(e)
+
+
+def cartouche(a: dict, A: dict) -> list:
+    """Source, notes et licence : un seul texte pour la figure détaillée et sa version téléphone (05/11/2026)."""
+    return [("MESRE-SIES, État de l'enseignement supérieur, de la recherche et de l'innovation en France %s, tableau 13.03 ; France "
              "métropolitaine et DROM" % a["edition"], gl.INK2),
             ("Champ : bacheliers %s inscrits dans le supérieur à la rentrée suivante ; ceux qui ne poursuivent pas n'y figurent pas. "
              "STS : apprentissage compris." % A["annee"], gl.INK2),
@@ -285,11 +295,16 @@ def figure(a: dict, A: dict) -> str:
              "admissions, que ce tableau ne croise pas.", gl.INK2),
             ("Taux arrondis : leur somme peut différer de 100 %. Catégories dans l'ordre de la source, sans hiérarchie.", gl.INK2),
             ("Figure Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, gl.MUTED)]
-    assert len(cart) == NB_CART
-    for k, (txt, col) in enumerate(cart):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(txt)))
-    e.append("</svg>")
-    return "\n".join(e)
+
+
+def figure_m(a: dict, A: dict) -> str:
+    """Version téléphone de la figure (audit des ressources du 05/11/2026)."""
+    cart = cartouche(a, A)
+    lignes = [(lib, a["origines"][cle], False) for cle, lib, _ in ORIGINES] + [("Ensemble (origine renseignée)", a["ensemble_renseigne"], True)]
+    noms = {"univ": "Université", "cpge": "Classes prépa.", "sts": "STS", "autres": "Autres"}
+    blocs = [(cart[0][0], INK2, "pied-source"), (" ".join(t for t, _ in cart[1:-1]), INK2, "pied-note"), (cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), MUTED, "pied-licence")]   # l'adresse complète sortait du cadre de 300 (check-figures R3)
+    return barres_mobile('asm', "Après le bac : où s'inscrivent les nouveaux bacheliers, selon l'origine sociale", "Version téléphone : valeurs du tableau qui suit la figure.",
+                         "Nouveaux bacheliers %s inscrits dans le supérieur, par filière, en %% de chaque catégorie." % A["annee"], lignes, [k for k, _ in DEST], COULEUR, noms, blocs)
 
 
 def csv_texte(annees: list[dict]) -> str:
@@ -323,6 +338,7 @@ def main() -> int:
         log("--check : temoins et gardes passes (%d cles d'affichage), rien ecrit." % len(A))
         return 0
     svg = figure(a, A)
+    svg_m = figure_m(a, A)
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0 pour la compilation et la figure ; données MESRE-SIES",
                         "champ": "nouveaux bacheliers inscrits dans l'enseignement supérieur à la rentrée suivant le baccalauréat, France métropolitaine et DROM",
                         "source": "MESRE-DGESIP/DGRI-SIES, L'état de l'Enseignement supérieur, de la Recherche et de l'Innovation en France, fiche 13 (tableau 13.03) et fiche 09 (tableaux 09.03 et 09.04)",
@@ -345,6 +361,7 @@ def main() -> int:
             if ancien and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(payload, sort_keys=True, ensure_ascii=False) \
                     and (OUT_IMG / (FIGURE + ".svg")).exists() and (OUT_IMG / (FIGURE + ".svg")).read_text(encoding="utf-8") == svg \
                     and (OUT_IMG / (FIGURE + ".png")).exists() and OUT_STATIC.exists() \
+                    and (OUT_IMG / (FIGURE + "-m.svg")).exists() and (OUT_IMG / (FIGURE + "-m.svg")).read_text(encoding="utf-8") == svg_m \
                     and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte([a, t]):
                 log("Donnees et figure identiques : rien ecrit (releve_le conserve : %s)." % ancien)
                 return 0
@@ -359,6 +376,9 @@ def main() -> int:
     import cairosvg
     (OUT_IMG / (FIGURE + ".svg")).write_text(svg, encoding="utf-8", newline="\n")
     cairosvg.svg2png(url=str(OUT_IMG / (FIGURE + ".svg")), write_to=str(OUT_IMG / (FIGURE + ".png")), output_width=1440,
+                     background_color="white")
+    (OUT_IMG / (FIGURE + "-m.svg")).write_text(svg_m, encoding="utf-8", newline="\n")
+    cairosvg.svg2png(url=str(OUT_IMG / (FIGURE + "-m.svg")), write_to=str(OUT_IMG / (FIGURE + "-m.png")), output_width=900,
                      background_color="white")
     log("Ecrit : data/ et static/acces_superieur.json, static/acces_superieur.csv, static/img/%s.svg + .png" % FIGURE)
     return 0

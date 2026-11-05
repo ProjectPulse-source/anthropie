@@ -107,8 +107,12 @@ def calcul(X):
     gen = {(g["evaluation"], g["domaine"]): g for g in X["depp_generations"]}
     return dict(
         P=P, X=X,
-        lycee=part("CAP 1 an", "Seconde pro", "Seconde GT", "Première GT"),
-        seconde_gt=part("Seconde GT"), seconde_pro=part("Seconde pro"),
+        # Audit du 05/11/2026 : ces parts venaient des EFFECTIFS BRUTS de l'echantillon (56 / 17 / 79 %), alors que la
+        # page en tire « PISA parle bien de l'entree au lycee » -- une phrase sur la POPULATION representee. Parts
+        # PONDEREES de la DEPP (NI 26-39, figure 10 : 64,9 / 23,2 / 2,7 / 9,0), deja dans l'extrait et seules lues ici.
+        lycee=sum(X["p2_composition_sciences"]["parts_2025"][k] for k in ("b_seconde_gt", "c_seconde_pro_cap", "d_premiere")),
+        seconde_gt=X["p2_composition_sciences"]["parts_2025"]["b_seconde_gt"],
+        seconde_pro=X["p2_composition_sciences"]["parts_2025"]["c_seconde_pro_cap"],
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
         p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
         t3=X["p3_timss_pisa_maths"], t4=X["p4_timss_pisa_facteurs"], p5=X["p5_donnees_individuelles"],
@@ -132,7 +136,7 @@ def mutation(c):
     elif m == "seconde":      # le test de seconde baisserait aussi en mathématiques
         c["sec"] = json.loads(json.dumps(c["sec"]))
         c["sec"]["GT maths"]["2024"] = c["sec"]["GT maths"]["2021"] - 3
-    elif m == "lycee":        # moins de sept élèves sur dix de l'échantillon PISA au lycée
+    elif m == "lycee":        # moins de sept jeunes de 15 ans sur dix au lycée
         c["lycee"] = 65.0
     elif m == "recrutement":  # la sélectivité aurait monté en anglais
         c["p1"] = json.loads(json.dumps(c["p1"]))
@@ -378,7 +382,7 @@ def gardes(c):
               for p in ("P90", "P50") for q in "1234"),
       "mesures comparables : le sommet et la médiane « reculent aussi dans chaque quart »")
     # échantillon : « près de huit sur dix au lycée »
-    g(75 <= c["lycee"] < 82, "« près de huit élèves sur dix au lycée »")
+    g(c["lycee"] >= 85, "« PISA parle bien de l'entrée au lycée » : au moins 85 % des jeunes de 15 ans représentés sont au lycée")
     g(c["seconde_gt"] > 50, "« plus de la moitié en seconde générale et technologique »")
     # N4 : sens contraire en mathématiques, même sens en français ; DEPP : idem en standardisé
     sec = c["sec"]
@@ -1066,7 +1070,7 @@ def main() -> int:
     if m:
         fail("mutation %s : aucune garde n'a mordu" % m)
     A = affichage(c)
-    log("PISA 2015-2025 : lecture -%s, maths -%s (%se/%s), sciences -%s ; lycee %s %% de l'echantillon"
+    log("PISA 2015-2025 : lecture -%s, maths -%s (%se/%s), sciences -%s ; lycee %s %% des jeunes de 15 ans representes"
         % (A["lect_v15"], A["math_v15"], A["math_rang"], A["n_ocde"], A["sci_v15"], A["lycee"]))
     if check:
         log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))

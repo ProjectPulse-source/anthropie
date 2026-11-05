@@ -363,7 +363,16 @@ def figure(c: dict, A: dict) -> str:
             x += w
     y0 = H + 4 - 36
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    cart = [("MESRE-SIES, %s, tableaux nationaux, feuille « Devenir cohorte %s » (SISE, SCOLARITE, SIFA)" % (c["note"], A["cohorte"]), INK2),
+    cart = cartouche(c, A)
+    for k, (txt, col) in enumerate(cart):
+        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(txt)))
+    e.append("</svg>")
+    return "\n".join(e)
+
+
+def cartouche(c: dict, A: dict) -> list:
+    """Source, notes et licence : un seul texte pour la figure détaillée et sa version téléphone (05/11/2026)."""
+    return [("MESRE-SIES, %s, tableaux nationaux, feuille « Devenir cohorte %s » (SISE, SCOLARITE, SIFA)" % (c["note"], A["cohorte"]), INK2),
             ("Passés : inscrits en 2ᵉ ou 3ᵉ année de licence, ou entrés en études de santé depuis une licence accès santé. "
              "Recommencent : changements de discipline compris.", INK2),
             ("Non retrouvés : absents des fichiers d'inscription (« sortie de l'enseignement supérieur » pour le SIES) ; "
@@ -373,10 +382,59 @@ def figure(c: dict, A: dict) -> str:
             ("Taux arrondis : leur somme peut différer de 100 %%. Origine non renseignée (%s %% des inscrits) : pas de barre, "
              "comprise dans l'ensemble." % A["non_reponse_part"], INK2),
             ("Figure Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, MUTED)]
-    for k, (txt, col) in enumerate(cart):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(txt)))
-    e.append("</svg>")
-    return "\n".join(e)
+
+
+def figure_m(c: dict, A: dict) -> str:
+    """Version téléphone de la figure (audit des ressources du 05/11/2026)."""
+    cart = cartouche(c, A)
+    lignes = [(lib, c["origines"][cle]["taux_publies"], False) for cle, lib in ORIGINES] + [("Ensemble", c["ensemble"]["taux_publies"], True)]
+    noms = {"passage": "Passés", "redoublement": "Recommencent", "reorientation": "Réorientés", "sortie": "Non retrouvés"}
+    blocs = [(cart[0][0], INK2, "pied-source"), (" ".join(t for t, _ in cart[1:-1]), INK2, "pied-note"), (cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), MUTED, "pied-licence")]   # l'adresse complète sortait du cadre de 300 (check-figures R3)
+    return barres_mobile('plm', "Un an après une première année de licence : quatre devenirs, selon l'origine sociale", "Version téléphone : valeurs du tableau qui suit la figure.",
+                         "Bacheliers %s entrés en 1ʳᵉ année de licence : situation à la rentrée %s, en %% des inscrits." % (A["cohorte"], A["annee_devenir"]), lignes, ISSUES, COULEUR, noms, blocs)
+
+
+def barres_mobile(ident: str, titre: str, desc: str, sous_titre: str, lignes, ordre, couleurs, noms, blocs) -> str:
+    """Version téléphone (300 de large, police 13,5 au moins) d'une figure de barres empilées à 100 %.
+
+    Audit des ressources du 05/11/2026 : les deux figures de /enseignants/ecole-et-parcours/ n'avaient pas de version
+    téléphone (valeurs à ~5,5 px affichés à 390 px). Une fonction pour les deux générateurs (une règle, un organe).
+    Chaque ligne : intitulé, barre pleine largeur SANS valeur dedans (un segment de 4 % n'en loge aucune), puis les
+    valeurs NOMMÉES, chacune précédée d'une pastille de la couleur de son segment, sur deux colonnes.
+    lignes : [(intitule, {cle: valeur}, gras)] ; ordre : clés dans l'ordre des segments ; noms : {cle: nom court}.
+    blocs : [(texte, couleur, classe)] du pied commun (pied_figure.pied_mobile)."""
+    import pied_figure as pf
+    e, y = pf.tete_mobile(ident, titre, desc, INK, FONT)
+    for l in pf.coupe(sous_titre, 38):
+        y += 17
+        e.append('<text x="0" y="%.1f" font-size="13.5" fill="%s">%s</text>' % (y, INK2, esc(l)))
+    y += 10
+    L = pf.LARGEUR_M
+    for intitule, d, gras in lignes:
+        if gras:
+            e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.8"/>' % (y + 4, L, y + 4, GRID))
+            y += 8
+        for l in pf.coupe(intitule, 34):
+            y += 18
+            e.append('<text x="0" y="%.1f" font-size="14"%s fill="%s">%s</text>'
+                     % (y, ' font-weight="600"' if gras else "", INK, esc(l)))
+        y += 6
+        total = sum(d[k] for k in ordre)
+        x = 0.0
+        for k in ordre:
+            w = L * d[k] / total
+            e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="18" fill="%s" stroke="#ffffff" stroke-width="1"/>'
+                     % (x, y, w, couleurs[k][0]))
+            x += w
+        y += 18
+        for i, k in enumerate(ordre):
+            col, rang = i % 2, i // 2
+            xi, yi = 132 * col, y + 20 + 19 * rang   # 150 : « Recommencent 20,3 » touchait le bord (rendu du 05/11)
+            e.append('<rect x="%d" y="%.1f" width="10" height="10" fill="%s"/>' % (xi, yi - 10, couleurs[k][0]))
+            e.append('<text x="%d" y="%.1f" font-size="13.5" fill="%s">%s <tspan font-weight="600">%s</tspan></text>'
+                     % (xi + 15, yi, INK, esc(noms[k]), esc(fr(d[k]))))
+        y += 20 + 19 * ((len(ordre) + 1) // 2) + 4
+    return pf.pied_mobile(e, y + 6, blocs, GRID)
 
 
 def csv_texte(cohortes: dict[int, dict]) -> str:
@@ -415,6 +473,7 @@ def main() -> int:
         log("--check : temoins et gardes passes (%d cles d'affichage), rien ecrit." % len(A))
         return 0
     svg = figure(cohortes[der], A)
+    svg_m = figure_m(cohortes[der], A)
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0 pour la compilation et la figure ; données MESRE-SIES",
                         "champ": "néo-bacheliers inscrits pour la première fois en première année de licence, universités et établissements assimilés, France entière",
                         "source": "MESRE-SIES, Notes Flash « Parcours et réussite en licence », tableaux nationaux (SISE, SCOLARITE, SIFA)",
@@ -439,6 +498,7 @@ def main() -> int:
             if ancien and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(payload, sort_keys=True, ensure_ascii=False) \
                     and (OUT_IMG / (FIGURE + ".svg")).exists() and (OUT_IMG / (FIGURE + ".svg")).read_text(encoding="utf-8") == svg \
                     and (OUT_IMG / (FIGURE + ".png")).exists() and OUT_STATIC.exists() \
+                    and (OUT_IMG / (FIGURE + "-m.svg")).exists() and (OUT_IMG / (FIGURE + "-m.svg")).read_text(encoding="utf-8") == svg_m \
                     and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(cohortes):
                 log("Donnees et figure identiques : rien ecrit (releve_le conserve : %s)." % ancien)
                 return 0
@@ -453,6 +513,9 @@ def main() -> int:
     import cairosvg
     (OUT_IMG / (FIGURE + ".svg")).write_text(svg, encoding="utf-8", newline="\n")
     cairosvg.svg2png(url=str(OUT_IMG / (FIGURE + ".svg")), write_to=str(OUT_IMG / (FIGURE + ".png")), output_width=1440,
+                     background_color="white")
+    (OUT_IMG / (FIGURE + "-m.svg")).write_text(svg_m, encoding="utf-8", newline="\n")
+    cairosvg.svg2png(url=str(OUT_IMG / (FIGURE + "-m.svg")), write_to=str(OUT_IMG / (FIGURE + "-m.png")), output_width=900,
                      background_color="white")
     log("Ecrit : data/ et static/parcours_licence.json, static/parcours_licence.csv, static/img/%s.svg + .png" % FIGURE)
     return 0
