@@ -58,8 +58,6 @@ presse_objets:
   terrestres-sous-le-cloud-la-fournaise: "Data centres"
   nonfiction-fressoz: "Energy transition"
   en-attendant-nadeau-christophers: "Profit and transition"
-  mediapart-budget-2026: "Budget 2026"
-  mediapart-maprimerenov: "MaPrimeRénov'"
 ---
 
 Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and four published books. He is also the author of two further books, devoted to the history of ideas and to literature.
@@ -67,8 +65,6 @@ Stéphane Lalut is an economist, independent researcher and essayist. He develop
 {{< identifiants >}}
 
 {{< reperes-auteur >}}
-
-European marketing management, public-sector consulting, international entrepreneurship: that path came before the research and the writing. It explains the method — analytical rigour, and close attention to the concrete mechanisms by which a cost changes hands.
 
 <div class="apropos-tete"><h2 id="author" class="apropos-tete__titre section-title">Author</h2><p class="apropos-tete__phrase">The books of the anthropic corpus, then the other works.</p></div>
 

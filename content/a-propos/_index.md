@@ -70,8 +70,6 @@ presse_objets:
   terrestres-sous-le-cloud-la-fournaise: "Data centers"
   nonfiction-fressoz: "Transition énergétique"
   en-attendant-nadeau-christophers: "Profit et transition"
-  mediapart-budget-2026: "Budget 2026"
-  mediapart-maprimerenov: "MaPrimeRénov'"
 ---
 
 Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et quatre ouvrages publiés. Il est par ailleurs l'auteur de deux autres livres, consacrés à l'histoire des idées et à la littérature.
@@ -79,8 +77,6 @@ Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il dévelo
 {{< identifiants >}}
 
 {{< reperes-auteur >}}
-
-Direction marketing européenne, conseil au secteur public, entrepreneuriat international&nbsp;: ce parcours a précédé la recherche et l'écriture. Il en explique la méthode — rigueur analytique et attention aux mécanismes concrets par lesquels un coût change de porteur.
 
 <div class="apropos-tete"><h2 id="auteur" class="apropos-tete__titre section-title">Auteur</h2><p class="apropos-tete__phrase">Les livres du corpus anthropique, puis les autres ouvrages.</p></div>
 

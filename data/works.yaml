@@ -790,9 +790,9 @@ works:
     status: published
     canonical_title: { fr: "MaPrimeRénov' : l'arrêt faute de budget. Les ménages modestes font les frais du gel" }
     publication_date: "2026-01-12"
-    publisher: "Mediapart"
+    publisher: "Club de Mediapart"
     publisher_type: "journal_blog"
-    source_type: "Journal"
+    source_type: "Blog"
     url: "https://blogs.mediapart.fr/stephane-lalut/blog/120126/maprimerenov-l-arret-faute-de-budget-les-menages-modestes-font-les-frais-du-gel"
     chapo:
       fr: "Quand l'État gèle MaPrimeRénov', ce sont les ménages modestes qui paient la facture. Le coût de la rénovation ne disparaît pas : il change de porteur."
@@ -804,9 +804,9 @@ works:
     status: published
     canonical_title: { fr: "Budget 2026 : la dette commande, les territoires patientent" }
     publication_date: "2026-01-15"
-    publisher: "Mediapart"
+    publisher: "Club de Mediapart"
     publisher_type: "journal_blog"
-    source_type: "Journal"
+    source_type: "Blog"
     url: "https://blogs.mediapart.fr/stephane-lalut/blog/150126/budget-2026-la-dette-commande-les-territoires-patientent"
     chapo:
       fr: "La contrainte budgétaire de l'État ne disparaît pas : elle se déplace vers les collectivités territoriales, qui absorbent les coupes en silence."

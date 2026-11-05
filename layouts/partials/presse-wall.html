@@ -24,6 +24,8 @@
        toujours le site FR, comme le fait layouts/publications/list.html. */ -}}
 {{- $frSite := index site.Sites 0 -}}
 {{- $pubs := where $frSite.RegularPages "Type" "publications" -}}
+{{- /* Un billet de blog n'est pas un texte de revue ou de presse (règle de l'auteur, 16/08/2026) : hors du mur, présent sur /publications/. */ -}}
+{{- $pubs = where $pubs "Params.source_type" "!=" "Blog" -}}
 <div class="presse-wall">
   {{- range $i, $p := $pubs.ByDate.Reverse -}}
     {{- $slug := $p.File.ContentBaseName -}}

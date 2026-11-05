@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (nuit) — Page « À propos » : passage du parcours retiré ; billets du Club de Mediapart requalifiés
+
+- `/a-propos/` FR et EN : paragraphe « Direction marketing européenne… » retiré (décision de l'auteur).
+- Les deux textes « Mediapart » sont des billets du blog de l'auteur (`blogs.mediapart.fr`) : fiches `revue: "Club de Mediapart"`,
+  `source_type: "Blog"` ; registre `works.yaml` aligné ; le mur « revues et presse » et le compteur « revues et journaux »
+  (12 → 11) les excluent (`presse-wall.html`, `reperes-auteur.html`) ; JSON-LD `BlogPosting` ; `llms.txt` et appel de la
+  page collectivités FR et EN corrigés. Règle de l'auteur du 16/08 : un billet de blog ne se présente pas comme de la presse.
+- Contrôles : `check-all --ci` 0, build, `check-fiches-registre` 0 divergence, liens 0.
+
 ### 2026-11-05 (soir) — Décisions de l'auteur sur les erreurs restantes : notices AWP, glossaire, Premier coup, non-résidents, ciseau
 
 - Notices AWP (site seulement, pas de v2 Zenodo, décision de l'auteur) : AWP-02 « ère géologique » → époque proposée, refusée comme unité formelle par l'IUGS en 2024 ; AWP-04 effet rebond (reprise d'une partie du gain, hausse seulement quand elle le dépasse) ; AWP-06 « peut déplacer… c'est ce que la grille demande d'établir ». FR et EN, `lastmod` 2026-11-05.

@@ -9,7 +9,7 @@
 {{- $frSite := index site.Sites 0 -}}
 {{- $pubs := where $frSite.RegularPages "Type" "publications" -}}
 {{- $revues := slice -}}
-{{- range $pubs }}{{ with .Params.revue }}{{ if not (in $revues .) }}{{ $revues = $revues | append . }}{{ end }}{{ end }}{{ end -}}
+{{- range (where $pubs "Params.source_type" "!=" "Blog") }}{{ with .Params.revue }}{{ if not (in $revues .) }}{{ $revues = $revues | append . }}{{ end }}{{ end }}{{ end -}}
 <div class="reperes-auteur">
   <p><b>{{ $awp }}</b><span>{{ if $isEn }}working papers with a DOI{{ else }}working papers à DOI{{ end }}</span></p>
   <p><b>{{ len $livres }}</b><span>{{ if $isEn }}books, {{ $corpus }} in the anthropic corpus{{ else }}livres, dont {{ $corpus }} du corpus{{ end }}</span></p>
