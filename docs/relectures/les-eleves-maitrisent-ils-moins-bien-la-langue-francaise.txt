@@ -1,17 +1,17 @@
-# relu le 2026-10-23 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 0a84b95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les élèves maîtrisent-ils moins bien la langue française ?
-Pas d'un bloc.
-À la même dictée de CM2, les élèves faisaient 10,7 erreurs en 1987 et 19,4 en 2021 ; mais sur ces 8,7 erreurs supplémentaires, 0,9 seulement portent sur l'orthographe des mots eux-mêmes.
+Pas d’un bloc.
+À la même dictée de CM2, les élèves faisaient 10,7 erreurs en 1987 et 19,4 en 2021 ; mais sur ces 8,7 erreurs supplémentaires, 0,9 seulement portent sur l’orthographe des mots eux-mêmes.
 Que mesure-t-on réellement quand on dit que les élèves maîtrisent moins bien la langue ?
-Page mise à jour le 10 octobre 2026
+Page mise à jour le 5 novembre 2026 · révisions
 École, lycée et université
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 9 octobre 2026 DEPP : Notes d'Information 98.39, 08.38, 16.20, 22.28, 22.29, 22.37, 25.66, 26.21, 26.22 ; OCDE : PISA 2025, 21st-Century Readers ; IEA : PIRLS ; ministère de la Culture ; CREDOC.
+Données mises à jour le 9 octobre 2026 DEPP : Notes d’Information 98.39, 08.38, 16.20, 22.28, 22.29, 22.37, 25.66, 26.21, 26.22 ; OCDE : PISA 2025, 21st-Century Readers ; IEA : PIRLS ; ministère de la Culture ; CREDOC.
 Télécharger : CSV · JSON · méthode
 Les élèves font-ils plus de fautes qu’avant ?
 Oui.
 La mesure en est une même dictée de 67 mots, donnée à des élèves de CM2 du secteur public en 1987, 2007, 2015 et 2021.
-Nombre moyen d'erreurs à la même dictée de 67 mots, élèves de CM2 du public (DEPP, Note d'Information 22.37).
+Nombre moyen d’erreurs à la même dictée de 67 mots, élèves de CM2 du public (DEPP, Note d’Information 22.37).
 Le résultat en une phrase.
 La hausse des fautes ne vient pas surtout de l’orthographe des mots : les « autres erreurs » en portent l’essentiel, et leur détail grammatical n’est connu que pour 1987-2007.
 De 1987 à 2021, ce qui est établi.
@@ -46,7 +46,7 @@ La frise les détaille : la couleur donne le sens observé, le trait plein une �
 Sens de chaque intervalle pour onze mesures de la langue des élèves, chacune dans sa propre échelle (DEPP, OCDE, IEA, ministère de la Culture, CREDOC).
 Le repère est celui de la généralisation du smartphone : 22 % des 12-17 ans en étaient équipés en 2011, 55 % en 2013, première année où ils sont plus de la moitié (CREDOC).
 Avant cette date, les résultats à la dictée de CM2 avaient déjà reculé.
-Aux mêmes épreuves de lecture, les élèves de CM2 n’ont pas évolué significativement de 1987 à 1997, puis ont perdu 0,37 écart-type de 1997 à 2007 (l’écart-type mesure l’écart habituel des scores à la moyenne).
+Aux mêmes épreuves de lecture, les élèves de CM2 n’ont pas évolué significativement de 1987 à 1997, puis ont perdu 0,34 écart-type de 1997 à 2007 (l’écart-type mesure l’écart habituel des scores à la moyenne).
 À 15 ans, le temps de lecture pour le plaisir est passé de 3,8 à 3,3 heures par semaine entre 2000 et 2009, une baisse significative selon l’OCDE, qui estime ces heures à partir des classes de réponse des élèves.
 Ces trois reculs sont antérieurs à la généralisation du smartphone : elle ne peut donc pas en être la seule cause.
 La chronologie ne dit rien, en revanche, des premiers usages du smartphone, des autres écrans, ni de ce qui a pu s’ajouter ensuite.
@@ -78,7 +78,7 @@ Deux choses reculent l’une après l’autre : d’abord le temps de lecture, e
 Le temps de lecture pour le plaisir à 15 ans, estimé par l’OCDE à partir des classes de réponse, a baissé significativement de 2000 à 2009 (3,8 puis 3,3 heures par semaine), puis n’a plus évolué significativement (3,5 en 2018).
 Le goût a reculé ensuite : l’indice de plaisir de lire, construit pour être comparable de 2009 à 2018, baisse significativement, et la part des élèves qui disent ne lire que s’ils y sont obligés passe de 34 % à 43 %.
 Chez les 15-24 ans, la lecture assidue de livres reculait déjà de 1988 à 2008 : 25 % lisaient vingt livres ou plus dans l’année, puis 16 %.
-Part des élèves qui déclarent ne pas lire pour leur plaisir, selon la classe, septembre 2023 (DEPP, Note d'Information 25.66).
+Part des élèves qui déclarent ne pas lire pour leur plaisir, selon la classe, septembre 2023 (DEPP, Note d’Information 25.66).
 Le résultat en une phrase.
 En 2023, 12 % des élèves de sixième déclarent ne pas lire pour leur plaisir ; ils sont 32 % en seconde générale et technologique et près de la moitié en seconde professionnelle.
 Cette enquête de la DEPP, menée auprès de tous les élèves de quatre niveaux (la seconde est distinguée selon la voie), compare des élèves différents la même année : elle décrit un écart entre les âges et les filières, pas une évolution.
@@ -97,7 +97,8 @@ Et le verdict change selon la tranche où on les classe : s’ils passaient tous
 Autrement dit, tout dépend de ce que déclareraient les élèves qui ne répondent pas, et les données ne permettent pas de le savoir : l’évolution reste indéterminée.
 Ces non-répondants ont par ailleurs des scores de lecture très inférieurs aux autres (381 points en 2025, contre 480) : un fait sur ce groupe, qui ne renseigne pas sur son temps d’écran.
 Et 2022 suit de peu la crise sanitaire.
-De 2022 à 2025, la baisse du score de lecture est significative chez les élèves qui déclarent le plus de numérique de loisir (−21 points entre trois et cinq heures, −21 au-delà), et pas chez ceux qui en déclarent peu.
+De 2022 à 2025, la baisse du score de lecture est significative chez les élèves qui déclarent le plus de numérique de loisir les jours de classe (−21 points entre trois et cinq heures, −21 au-delà), et pas chez ceux qui en déclarent peu.
+Le week-end, seule la tranche au-delà de cinq heures baisse significativement (−22 points).
 Ces groupes ne réunissent pas les mêmes élèves d’une enquête à l’autre, et leur composition comme leur taux de réponse ont pu changer : c’est une description, pas une mesure d’effet du numérique.
 L’OCDE elle-même écrit que la montée du temps d’écran et le recul de la lecture pour le plaisir ont coïncidé avec des résultats plus faibles, et que ses données n’établissent pas de lien direct.
 Confrontation à la recherche.
@@ -115,7 +116,7 @@ Rien n’établit que les deux constats portent sur le même indicateur.
 Aucune des séries de cette page ne départage d’ailleurs les explications en présence : programmes, temps d’enseignement du français, pratiques de lecture, écrans, composition des classes, crise sanitaire.
 Si les données ne désignent pas de cause, une moyenne nationale dit-elle au moins quels élèves reculent ?
 Les écarts se creusent-ils ?
-Score en fin de collège, 2015 et 2021, selon le secteur et le sexe (DEPP, CEDRE compétences langagières et littératie, Note d'Information 22.29).
+Score en fin de collège, 2015 et 2021, selon le secteur et le sexe (DEPP, CEDRE compétences langagières et littératie, Note d’Information 22.29).
 Pas de façon démontrée ; mais la moyenne cache des trajectoires différentes, et c’est là que les évaluations françaises sont les plus nettes.
 En fin de collège, le score CEDRE de l’ensemble des élèves n’évolue pas significativement de 2015 à 2021.
 Pourtant, celui de l’éducation prioritaire baisse significativement (233 puis 225), comme celui des garçons (247 puis 241).
@@ -141,7 +142,7 @@ Un corpus composé au hasard des catalogues changerait de nature d’une décenn
 Répondre demanderait d’abord de recenser les manuels de français, puis de tirer au sort des ouvrages en nombre suffisant.
 En ordre de grandeur, il en faut déjà 16 par période et par niveau pour déceler entre deux périodes un écart d’un écart-type, et 63 pour un écart deux fois plus petit (comparaison de deux moyennes, test à 5 %, puissance de 80 %, avant toute stratification).
 C’est un travail d’équipe de recherche, avec l’accès des bibliothèques qui conservent ces manuels.
-Pourquoi l'échantillon manque, ce que le droit permet, et le cas du Club des Cinq
+Pourquoi l’échantillon manque, ce que le droit permet, et le cas du Club des Cinq
 Les catalogues.
 La base Emmanuelle de la bibliothèque Diderot (ENS de Lyon), qui recense les manuels scolaires publiés en France depuis 1789, couvre 8 disciplines, des langues anciennes à la géographie, mais pas le français, dont la saisie est annoncée en cours ; interrogée le 10 octobre 2026, elle ne contient pas la méthode Daniel et Valérie.
 Le catalogue de la BnF, lui, ne signale pas les manuels comme tels, et une recherche par le titre ne retrouve pas les mêmes livres selon les époques.
@@ -177,32 +178,32 @@ Cette hausse s’est engagée avant la généralisation du smartphone, comme le 
 Quant au vocabulaire, que la question vise d’abord, aucune série publique recensée ne le suit.
 Là où le diagnostic est le plus souvent proclamé, la mesure manque ; là où elle existe, elle oblige à le préciser : quelles compétences reculent, chez quels élèves, et depuis quand.
 Questions fréquentes
-Les élèves font-ils plus de fautes qu'avant ?
+Les élèves font-ils plus de fautes qu’avant ?
 Oui.
 À la même dictée de CM2, les élèves faisaient 10,7 erreurs en moyenne en 1987, 14,7 en 2007, 18 en 2015 et 19,4 en 2021 ; la hausse de 1987 à 2007 est significative selon la DEPP, et elle est deux fois moins forte de 2015 à 2021 que de 2007 à 2015.
-Sur les 8,7 erreurs supplémentaires, 0,9 portent sur l'orthographe des mots eux-mêmes (2,1 erreurs lexicales en 1987, 3 en 2021) ; les autres erreurs passent de 8,6 à 16,4.
+Sur les 8,7 erreurs supplémentaires, 0,9 portent sur l’orthographe des mots eux-mêmes (2,1 erreurs lexicales en 1987, 3 en 2021) ; les autres erreurs passent de 8,6 à 16,4.
 La DEPP ne détaille ces autres erreurs que pour 1987 et 2007 : la hausse y est grammaticale pour 3,7 erreurs sur 4,0, accords et conjugaison surtout.
-Les jeunes n'utilisent-ils plus que 400 mots ?
-Ce chiffre ne repose sur aucune étude retrouvée, et il ne dit pas ce qu'il compte : mots employés, reconnus, compris en contexte.
-Parmi les sources publiques françaises recensées, aucune série ne permet de suivre l'évolution du vocabulaire des élèves : l'évaluation CEDRE publie un score unique de maîtrise de la langue, le test de lexique de sixième change de questions d'une année à l'autre, et celui de seconde n'existe qu'en voie professionnelle, depuis 2025.
+Les jeunes n’utilisent-ils plus que 400 mots ?
+Ce chiffre ne repose sur aucune étude retrouvée, et il ne dit pas ce qu’il compte : mots employés, reconnus, compris en contexte.
+Parmi les sources publiques françaises recensées, aucune série ne permet de suivre l’évolution du vocabulaire des élèves : l’évaluation CEDRE publie un score unique de maîtrise de la langue, le test de lexique de sixième change de questions d’une année à l’autre, et celui de seconde n’existe qu’en voie professionnelle, depuis 2025.
 Les écrans expliquent-ils la baisse de la lecture ?
 Les données ne permettent pas de le dire.
-Plusieurs reculs sont antérieurs à la généralisation du smartphone chez les adolescents (plus de la moitié des 12-17 ans en sont équipés en 2013) : l'orthographe à la dictée de 1987 à 2007, la lecture en CM2 de 1997 à 2007, le temps de lecture pour le plaisir à 15 ans de 2000 à 2009.
+Plusieurs reculs sont antérieurs à la généralisation du smartphone chez les adolescents (plus de la moitié des 12-17 ans en sont équipés en 2013) : l’orthographe à la dictée de 1987 à 2007, la lecture en CM2 de 1997 à 2007, le temps de lecture pour le plaisir à 15 ans de 2000 à 2009.
 Cette chronologie exclut seulement que la généralisation du smartphone soit la seule cause de ces reculs ; elle ne dit rien de ses premiers usages ni des autres écrans.
-Entre 2022 et 2025, l'évolution du numérique de loisir des jeunes de 15 ans reste indéterminée : la part qui ne répond plus à la question a presque doublé, et le verdict change selon la tranche où l'on classe ces non-répondants.
+Entre 2022 et 2025, l’évolution du numérique de loisir des jeunes de 15 ans reste indéterminée : la part qui ne répond plus à la question a presque doublé, et le verdict change selon la tranche où l’on classe ces non-répondants.
 Les élèves lisent-ils moins pour leur plaisir ?
-À 15 ans, le temps de lecture pour le plaisir, estimé par l'OCDE à partir des réponses des élèves, a baissé significativement de 2000 à 2009 (3,8 puis 3,3 heures par semaine), sans évolution significative ensuite ; l'indice de plaisir de lire de l'OCDE a baissé significativement de 2009 à 2018, et la part des élèves qui ne lisent que s'ils y sont obligés est passée de 34 % à 43 %.
+À 15 ans, le temps de lecture pour le plaisir, estimé par l’OCDE à partir des réponses des élèves, a baissé significativement de 2000 à 2009 (3,8 puis 3,3 heures par semaine), sans évolution significative ensuite ; l’indice de plaisir de lire de l’OCDE a baissé significativement de 2009 à 2018, et la part des élèves qui ne lisent que s’ils y sont obligés est passée de 34 % à 43 %.
 En 2023, 12 % des élèves de sixième déclarent ne pas lire pour leur plaisir, 32 % en seconde générale et technologique et 49 % en seconde professionnelle.
 Le niveau en français baisse-t-il à tous les âges ?
 Les évaluations ne disent pas toutes la même chose.
 PISA, à 15 ans, recule depuis 2012 (505 points en 2012, 456 en 2025).
-Sur des périodes qui recouvrent en partie cette baisse, PIRLS en CM1 et CEDRE en fin de collège ne montrent pas d'évolution significative, CEDRE en fin d'école progresse significativement, et l'évaluation de début de sixième reste au-dessus de 2017.
-Ces enquêtes ne mesurent ni les mêmes compétences ni les mêmes élèves, et aucune ne suit les mêmes élèves d'un âge à l'autre : elles ne permettent pas de dire à quel âge un recul commencerait.
+Sur des périodes qui recouvrent en partie cette baisse, PIRLS en CM1 et CEDRE en fin de collège ne montrent pas d’évolution significative, CEDRE en fin d’école progresse significativement, et l’évaluation de début de sixième reste au-dessus de 2017.
+Ces enquêtes ne mesurent ni les mêmes compétences ni les mêmes élèves, et aucune ne suit les mêmes élèves d’un âge à l’autre : elles ne permettent pas de dire à quel âge un recul commencerait.
 Les manuels de lecture se sont-ils simplifiés ?
-Personne ne peut le dire aujourd'hui pour la France : aucune mesure publiée n'a été retrouvée, et il manque la liste des manuels publiés d'où tirer un échantillon.
+Personne ne peut le dire aujourd’hui pour la France : aucune mesure publiée n’a été retrouvée, et il manque la liste des manuels publiés d’où tirer un échantillon.
 La base Emmanuelle, qui recense les manuels scolaires depuis 1789, ne couvre pas encore le français, et le catalogue de la BnF ne signale pas les manuels comme tels : une recherche par le titre manque toutes les notices des méthodes Daniel et Valérie et Rémi et Colette, des années 1970, et retrouve en partie Taoki, des années 2010.
-Les textes encore protégés ne peuvent en outre être analysés automatiquement qu'à défaut d'opposition de leurs ayants droit.
-Et si l'on rouvrait les livres par les mots ?
+Les textes encore protégés ne peuvent en outre être analysés automatiquement qu’à défaut d’opposition de leurs ayants droit.
+Et si l’on rouvrait les livres par les mots ?
 Livresque des mots
 Anthologie inédite & éclectique de citations
 Cette page montre que le temps passé à lire pour le plaisir recule avant la généralisation du smartphone, que le goût de lire recule ensuite, et qu’aucune des séries publiques recensées ne suit le vocabulaire des élèves.
@@ -244,38 +245,38 @@ Le plan a été soumis à une contre-analyse externe, puis un protocole a été 
 Toutes les valeurs ont été lues deux fois, par deux extracteurs indépendants ; ce contrôle a détecté l’erreur qu’on y avait introduite volontairement.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
-La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement
-Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne baisse significativement qu'après 2012, quand PIRLS et CEDRE ne reculent pas significativement sur des périodes qui recouvrent en partie cette baisse.
-Précaution d'interprétation.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+La langue des élèves : quand chaque mesure recule, progresse ou n’évolue pas significativement
+Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne baisse significativement qu’après 2012, quand PIRLS et CEDRE ne reculent pas significativement sur des périodes qui recouvrent en partie cette baisse.
+Précaution d’interprétation.
 Chaque ligne a sa propre échelle ; seul le sens est montré.
-Plein : test publié (PISA 2000-2012 : test de l'auteur) ; tirets : sans test.
-DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC
+Plein : test publié (PISA 2000-2012 : test de l’auteur) ; tirets : sans test.
+DEPP (Notes d’Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC
 Télécharger en PNG
 SVG
-La même dictée en CM2 : nombre moyen d'erreurs
-De 1987 à 2021, l'orthographe des mots eux-mêmes ne compte que pour un dixième environ de la hausse des erreurs ; les autres erreurs ont presque doublé.
-Le détail par type d'erreur n'existe que pour 1987-2007 : la hausse y est surtout grammaticale.
-Précaution d'interprétation.
+La même dictée en CM2 : nombre moyen d’erreurs
+De 1987 à 2021, l’orthographe des mots eux-mêmes ne compte que pour un dixième environ de la hausse des erreurs ; les autres erreurs ont presque doublé.
+Le détail par type d’erreur n’existe que pour 1987-2007 : la hausse y est surtout grammaticale.
+Précaution d’interprétation.
 Erreurs lexicales : orthographe des mots eux-mêmes.
 Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales).
-DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007
+DEPP, Note d’Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007
 Télécharger en PNG
 SVG
 Élèves qui déclarent ne pas lire pour leur plaisir, selon la classe (2023)
-Dans l'enquête de 2023, la part des élèves qui ne lisent pas pour leur plaisir est plus élevée en seconde qu'en sixième, et atteint près de la moitié en seconde professionnelle : des élèves différents la même année, pas une évolution.
-Précaution d'interprétation.
-Une seule enquête : l'écart entre classes compare des élèves différents la même année, ce n'est pas une évolution dans le temps.
-DEPP, Note d'Information 25.66, figure 1.1 web (questionnaires des évaluations nationales, septembre 2023)
+Dans l’enquête de 2023, la part des élèves qui ne lisent pas pour leur plaisir est plus élevée en seconde qu’en sixième, et atteint près de la moitié en seconde professionnelle : des élèves différents la même année, pas une évolution.
+Précaution d’interprétation.
+Une seule enquête : l’écart entre classes compare des élèves différents la même année, ce n’est pas une évolution dans le temps.
+DEPP, Note d’Information 25.66, figure 1.1 web (questionnaires des évaluations nationales, septembre 2023)
 Télécharger en PNG
 SVG
-Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si
-En fin de collège, le score de l'ensemble des élèves n'évolue pas significativement de 2015 à 2021, quand celui de l'éducation prioritaire et celui des garçons baissent significativement ; l'évolution des écarts entre groupes n'est pas testée.
-Précaution d'interprétation.
+Fin de collège : la moyenne ne baisse pas significativement, l’éducation prioritaire si
+En fin de collège, le score de l’ensemble des élèves n’évolue pas significativement de 2015 à 2021, quand celui de l’éducation prioritaire et celui des garçons baissent significativement ; l’évolution des écarts entre groupes n’est pas testée.
+Précaution d’interprétation.
 Échelle fixée à 250 en 2015.
 Orange : baisse significative selon la DEPP ; gris : sans évolution significative.
-Aucun test de l'évolution des écarts entre groupes n'est publié.
-DEPP, Note d'Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)
+Aucun test de l’évolution des écarts entre groupes n’est publié.
+DEPP, Note d’Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)
 Télécharger en PNG
 SVG
 Citer cette page
@@ -288,11 +289,14 @@ Plusieurs reculs étaient déjà engagés avant la généralisation du smartphon
 Aucune des séries publiques recensées ne permet de suivre l’évolution du vocabulaire des élèves.
 Copier le résumé
 Les données
-Dictée de CM2 1987-2021 (total et erreurs lexicales), lecture en CM2 1987-2007, CEDRE fin d'école et fin de collège, PIRLS, évaluation de sixième et maîtrise par domaine, test de seconde, PISA compréhension de l'écrit 2000-2025, temps de lecture et plaisir de lire, lecteurs de 15-24 ans, smartphone des 12-17 ans, pratiques de lecture 2023, numérique de loisir dans PISA 2022 et 2025 ; le même contenu existe en CSV, au format long.
+Dictée de CM2 1987-2021 (total et erreurs lexicales), lecture en CM2 1987-2007, CEDRE fin d’école et fin de collège, PIRLS, évaluation de sixième et maîtrise par domaine, test de seconde, PISA compréhension de l’écrit 2000-2025, temps de lecture et plaisir de lire, lecteurs de 15-24 ans, smartphone des 12-17 ans, pratiques de lecture 2023, numérique de loisir dans PISA 2022 et 2025 ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (DEPP, OCDE (PISA), IEA (PIRLS), ministère de la Culture, CREDOC), sous leurs propres conditions.
+Révisions
+5 novembre 2026 — Correction : la baisse de la lecture en CM2 de 1997 à 2007 vaut 0,34 écart-type (0,37 était l’écart de 2007 à 1987).
+Le recul du score PISA des gros utilisateurs de numérique de loisir vaut pour les jours de classe ; le week-end, seule la tranche au-delà de cinq heures baisse significativement.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

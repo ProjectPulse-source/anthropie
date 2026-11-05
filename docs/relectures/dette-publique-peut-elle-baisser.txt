@@ -1,10 +1,10 @@
-# relu le 2026-11-02 ; texte servi de /dette-publique-peut-elle-baisser/, build de 8aa15f6 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /dette-publique-peut-elle-baisser/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
-Oui : ce qui peut baisser, c'est le poids de la dette dans le PIB, même quand son montant augmente.
-Au Portugal, la dette publique est passée de 235 à 275 milliards d'euros de fin 2015 à fin 2025, et son poids de 131,0 % à 89,2 % du PIB.
-En France, il a augmenté de 18,7 points sur la même période : les administrations ont dépensé plus qu'elles n'encaissaient, même sans compter les intérêts, et ce déficit a pesé plus lourd que l'aide des taux et de la croissance.
-Page mise à jour le 2 novembre 2026 · révisions
+Oui : ce qui peut baisser, c’est le poids de la dette dans le PIB, même quand son montant augmente.
+Au Portugal, la dette publique est passée de 235 à 275 milliards d’euros de fin 2015 à fin 2025, et son poids de 131,0 % à 89,2 % du PIB.
+En France, il a augmenté de 18,7 points sur la même période : les administrations ont dépensé plus qu’elles n’encaissaient, même sans compter les intérêts, et ce déficit a pesé plus lourd que l’aide des taux et de la croissance.
+Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -74,10 +74,10 @@ Mais sa dette, 182 % du PIB en moyenne, la plus élevée du groupe, démultiplie
 Une partie de la dette grecque est due à ses partenaires européens depuis les programmes d’aide ; ces séries ne séparent pas le taux de ces prêts de celui du reste de la dette.
 Plus la dette de départ est élevée, plus un même écart entre taux et croissance amplifie la variation du ratio, à la baisse comme à la hausse.
 Les autres pays du groupe.
-En France, le ratio a augmenté de 18,7 points, la plus forte hausse du groupe, avec le déficit primaire moyen le plus élevé (−3,1 % du PIB) ; le ratio est resté à peu près stable pour l'Espagne, l'Italie et la Belgique, en déficit primaire moyen, malgré un effet des taux et de la croissance favorable.
+En France, le ratio a augmenté de 18,7 points, la plus forte hausse du groupe, avec le déficit primaire moyen le plus élevé (−3,1 % du PIB) ; le ratio est resté à peu près stable pour l’Espagne, l’Italie et la Belgique, en déficit primaire moyen, malgré un effet des taux et de la croissance favorable.
 Le Portugal, Chypre et la Grèce ont bénéficié de financements officiels de leurs partenaires européens et du FMI, l’Espagne d’une aide à la recapitalisation de ses banques (calendrier dans le repli ci-dessous).
 Sept pays sur une décennie ne font pas une régularité générale.
-Les sept pays, terme par terme, taux par taux, et les programmes d'aide
+Les sept pays, terme par terme, taux par taux, et les programmes d’aide
 Pays
 Dette fin 2015
 Dette fin 2025
@@ -217,14 +217,14 @@ France
 1,9
 −1,4
 Moyennes annuelles sur 2016-2025 : dette en % du PIB au début de chaque année ; taux et croissance en % par an.
-Volume : volumes chaînés des comptes nationaux ; prix : (1 + croissance nominale) / (1 + croissance en volume) − 1, année par année ; les deux moyennes ne s'additionnent pas exactement.
+Volume : volumes chaînés des comptes nationaux ; prix : (1 + croissance nominale) / (1 + croissance en volume) − 1, année par année ; les deux moyennes ne s’additionnent pas exactement.
 Source : Eurostat.
-Le ratio est resté à peu près stable pour l'Espagne, l'Italie et la Belgique (−2,0 à +2,4 points), en déficit primaire moyen, malgré un effet des taux et de la croissance favorable.
+Le ratio est resté à peu près stable pour l’Espagne, l’Italie et la Belgique (−2,0 à +2,4 points), en déficit primaire moyen, malgré un effet des taux et de la croissance favorable.
 En Belgique, les contributions des taux et de la croissance et du solde primaire totalisent −6,6 points ; les autres ajustements en ajoutent 9,0, portant la variation à +2,4 points.
 Ces pays n’ont pas été financés dans les mêmes conditions.
 Le Portugal (de 2011 à mi-2014), Chypre (d’avril 2013 à mars 2016) et la Grèce (de mai 2010 à août 2018, dernier programme, financé par le Mécanisme européen de stabilité, d’août 2015 à août 2018) ont bénéficié de financements officiels de leurs partenaires européens et du FMI ; l’Espagne a reçu, de juillet 2012 à janvier 2014, une aide à la recapitalisation de ses banques (Commission européenne ; Mécanisme européen de stabilité).
 La restructuration de la dette grecque, en 2012, précède la décennie étudiée.
-Abaisser le seuil à 80 % fait entrer dans le groupe l'Autriche, la Croatie et la Slovénie.
+Abaisser le seuil à 80 % fait entrer dans le groupe l’Autriche, la Croatie et la Slovénie.
 Quel solde stabiliserait la dette ?
 Une année donnée, et hors autres ajustements, le ratio ne bouge pas si le solde primaire compense exactement l’effet des taux et de la croissance de l’année.
 Ce solde, dit stabilisant, est la courbe grise ; le solde réellement observé est la courbe orange.
@@ -248,7 +248,7 @@ Stabiliser le ratio et le faire baisser sont deux objectifs distincts.
 Un montant d’ajustement se lit avec son objectif, son horizon et ses hypothèses ; le repère calculé ici pour 2025 vaut pour cette année-là et ne permet pas d’évaluer les estimations pluriannuelles des institutions.
 Dans la zone euro, ce qui distingue la France
 Le même calcul, mené sur les membres actuels de la zone euro, sépare ce que l’écart au repère, à lui seul, confond : le taux payé sur la dette, la croissance de l’économie et le solde primaire.
-Sur 2016-2025, les 21 pays sont comparés ; aucun n'est écarté par le contrôle : chaque année de chaque pays retrouve les ratios publiés par Eurostat à la marge d'arrondi près.
+Sur 2016-2025, les 21 pays sont comparés ; aucun n’est écarté par le contrôle : chaque année de chaque pays retrouve les ratios publiés par Eurostat à la marge d’arrondi près.
 Taux implicite, croissance nominale et solde primaire, moyennes annuelles 2016-2025, pays de la zone euro (Eurostat, calcul de l’auteur).
 Un taux implicite parmi les plus bas.
 En moyenne sur 2016-2025, les administrations publiques françaises ont payé des intérêts égaux à 1,74 % de leur dette, contre une médiane de 2,10 % ; seuls cinq des pays comparés ont eu un taux implicite moins élevé.
@@ -270,10 +270,10 @@ Ce témoin ne sert pas au calcul, sans en être tout à fait indépendant : la C
 L’OCDE, qui estime elle-même ce potentiel, donne aussi à la France le solde structurel le plus bas des pays qu’elle couvre sur la période ; le FMI, dont l’indicateur corrige le cycle sans retirer les mesures ponctuelles, la place à égalité avec la Finlande et la Slovaquie.
 Le rang structurel dépend donc de l’estimation retenue ; celui du solde observé n’en dépend pas.
 Le repère s’est abaissé, pas le solde.
-Sur les cinq dernières années (2021-2025), une forte croissance nominale, reprise après 2020 puis hausse des prix, a abaissé le repère de tous les pays sauf l'Irlande par rapport aux cinq années d’avant 2020 : la France n’est plus, en moyenne, sous le sien (+0,1 point), et cinq pays ont un écart plus défavorable.
+Sur les cinq dernières années (2021-2025), une forte croissance nominale, reprise après 2020 puis hausse des prix, a abaissé le repère de tous les pays sauf l’Irlande par rapport aux cinq années d’avant 2020 : la France n’est plus, en moyenne, sous le sien (+0,1 point), et cinq pays ont un écart plus défavorable.
 Son solde primaire reste pourtant le plus bas des pays comparés, et son solde structurel parmi les deux plus bas.
 Sur les cinq années qui ont précédé 2020, la France était le seul pays de la zone euro dont le solde primaire moyen restait sous le repère.
-La France dans la zone euro selon la période retenue, et ce que l'écart moyen n'ajoute pas
+La France dans la zone euro selon la période retenue, et ce que l’écart moyen n’ajoute pas
 Période
 Pays comparés
 Solde primaire (rang du plus bas)
@@ -332,14 +332,14 @@ Les diagnostics de soutenabilité que publient les institutions reposent sur des
 Trente ans de fenêtres européennes
 Soldes primaires et baisses du ratio : les périodes européennes de dix ans
 La comparaison ci-dessus ne porte que sur une décennie.
-Pour la replacer dans un ensemble plus large, la même décomposition a été appliquée à toutes les fenêtres de dix ans des 27 pays aujourd’hui membres de l’Union, depuis 1996 : 537 fenêtres, qui se recouvrent, ne sont donc pas autant d’expériences indépendantes et contiennent la décennie déjà comparée.
+Pour la replacer dans un ensemble plus large, la même décomposition a été appliquée à toutes les fenêtres de dix ans des 27 pays aujourd’hui membres de l’Union, depuis 1996 : 537 fenêtres retenues (18 écartées, voir la méthode), qui se recouvrent, ne sont donc pas autant d’expériences indépendantes et contiennent la décennie déjà comparée.
 C’est un contexte, non une contre-épreuve.
 Parmi les 78 fenêtres où la dette de départ dépassait 90 % du PIB :
-solde primaire moyen négatif : 35 fenêtres, dans six pays (la Belgique, la Grèce, l'Espagne, la France, l'Italie et le Portugal).
+solde primaire moyen négatif : 35 fenêtres, dans six pays (la Belgique, la Grèce, l’Espagne, la France, l’Italie et le Portugal).
 Le ratio baisse dans six d’entre elles, jamais de 15 points ;
 solde primaire moyen de 0 à moins de 2 % du PIB : 30 fenêtres, dans cinq pays.
 Le ratio baisse dans dix d’entre elles, de 15 points ou plus dans huit ;
-solde primaire moyen d’au moins 2 % du PIB : treize fenêtres, dans trois pays seulement (la Belgique, Chypre et l'Italie).
+solde primaire moyen d’au moins 2 % du PIB : treize fenêtres, dans trois pays seulement (la Belgique, Chypre et l’Italie).
 Le ratio baisse dans les treize, de 15 points ou plus dans sept.
 Ces fréquences décrivent des périodes passées, dans quelques pays.
 Elles ne donnent ni un seuil d’excédent à atteindre, ni une probabilité de réussite : les fenêtres à fort excédent commencent pour la plupart avant 2003.
@@ -357,11 +357,11 @@ Qui supporte un ajustement est l’objet de Qui paie vraiment la dette publique 
 Périmètre de comparaison.
 Les 27 pays aujourd’hui membres de l’Union, depuis 1996 ; rien avant, rien hors de l’Union.
 Le groupe comparé dépend du seuil de dette et de la décennie retenus.
-Cinq années-pays sur 803 sont écartées par le contrôle décrit plus bas.
+Cinq années-pays sur 803 sont écartées : Eurostat n’en publie pas le ratio qu’exige le contrôle décrit plus bas.
 Portée dans le temps.
 La page décrit trente années observées.
 Les trajectoires que prévoient le Gouvernement, la Commission européenne ou le FMI sont des scénarios conditionnels, que ces données ne permettent ni de confirmer ni d’écarter.
-Confrontation à la recherche : le solde stabilisant, la distinction entre stabiliser et faire baisser et le rôle du solde primaire dans les écarts entre pays de la zone euro sont retrouvés ; lire l'écart nul de la dernière année comme un état durable, ou l'excédent comme le seul ressort des baisses, est mis en danger
+Confrontation à la recherche : le solde stabilisant, la distinction entre stabiliser et faire baisser et le rôle du solde primaire dans les écarts entre pays de la zone euro sont retrouvés ; lire l’écart nul de la dernière année comme un état durable, ou l’excédent comme le seul ressort des baisses, est mis en danger
 Mesuré ici.
 La décomposition par décennie du ratio français, le solde stabilisant année par année, la comparaison des pays de l’Union dont la dette dépassait 90 % du PIB et celle des membres de la zone euro sur cinq périodes, qui sépare taux implicite, croissance nominale, repère et solde primaire, sur les séries d’Eurostat, avec pour témoin le solde primaire structurel de la Commission européenne, et ceux de l’OCDE et du FMI pour le rang structurel.
 Aucun des textes lus ne calcule ces grandeurs sur cette source et ces périodes : elles se valident par reproduction.
@@ -436,20 +436,20 @@ Ce repère change chaque année avec les taux et la croissance ; à ce niveau de
 Aucune des combinaisons observées n’est une recette transposable : ces comparaisons ne disent ni quelle politique produirait une baisse, ni à quel prix, ni qui le paierait.
 Ce dernier point est l’objet de Qui paie vraiment la dette publique ?
 Questions fréquentes
-La croissance et l'inflation suffisent-elles à faire baisser la dette ?
-Elles allègent le ratio quand la croissance nominale dépasse le taux d'intérêt payé sur la dette, et ce sont elles qui ont le plus fait reculer le ratio dans les trois pays de l'Union où il a nettement baissé, parmi ceux dont la dette dépassait 90 % du PIB fin 2015 : environ deux fois plus que leurs excédents primaires.
-Mais l'effet varie fortement d'une année à l'autre : en France, il a retiré 16,8 points au ratio en 2021-2023 et compté pour +6,1 points en 2020.
-Dans ce groupe, aucun pays resté en déficit primaire moyen n'a vu son ratio baisser de 15 points ; la Slovénie, sous le seuil, l'a fait.
+La croissance et l’inflation suffisent-elles à faire baisser la dette ?
+Elles allègent le ratio quand la croissance nominale dépasse le taux d’intérêt payé sur la dette, et ce sont elles qui ont le plus fait reculer le ratio dans les trois pays de l’Union où il a nettement baissé, parmi ceux dont la dette dépassait 90 % du PIB fin 2015 : environ deux fois plus que leurs excédents primaires.
+Mais l’effet varie fortement d’une année à l’autre : en France, il a retiré 16,8 points au ratio en 2021-2023 et compté pour +6,1 points en 2020.
+Dans ce groupe, aucun pays resté en déficit primaire moyen n’a vu son ratio baisser de 15 points ; la Slovénie, sous le seuil, l’a fait.
 La France a-t-elle déjà dégagé un excédent primaire ?
 Quatre fois depuis 1996, de 1998 à 2001, au plus 1,65 % du PIB (Eurostat).
 Depuis, le solde primaire des administrations publiques est resté déficitaire chaque année.
 Un excédent primaire fait-il toujours baisser la dette ?
 Il contribue à réduire le ratio, mais la variation finale dépend aussi des taux, de la croissance et des autres ajustements : en France, le solde a atteint le repère de stabilisation hors ajustements en 1998 et 2007 sans que le ratio baisse.
-Dans les fenêtres de dix ans des 27 pays aujourd'hui membres de l'Union où la dette de départ dépassait 90 % du PIB, le ratio a baissé d'au moins 15 points dans huit des 30 fenêtres à solde primaire moyen de 0 à moins de 2 % et dans sept des treize à solde d'au moins 2 %, mais dans aucune des 35 à solde primaire moyen négatif ; ces fenêtres se recouvrent et viennent de quelques pays.
+Dans les fenêtres de dix ans des 27 pays aujourd’hui membres de l’Union où la dette de départ dépassait 90 % du PIB, le ratio a baissé d’au moins 15 points dans huit des 30 fenêtres à solde primaire moyen de 0 à moins de 2 % et dans sept des treize à solde d’au moins 2 %, mais dans aucune des 35 à solde primaire moyen négatif ; ces fenêtres se recouvrent et viennent de quelques pays.
 Dans le dossier dette publique
 Pour prolonger l’analyse
 Dette Publique : Qui paie vraiment ?
-La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
 Cette page décompose la hausse du ratio de dette français et les baisses observées ailleurs.
 Faire baisser ce ratio peut déplacer des coûts.
 Qui les supporte : le contribuable, l’usager des services publics, l’épargnant par l’inflation, le créancier par une restructuration ?
@@ -468,44 +468,45 @@ Les variations et totaux sont calculés avant arrondi : les nombres affichés pe
 Solde primaire structurel : Commission européenne, base AMECO, série UBLGBPS (solde des administrations publiques hors intérêts, corrigé du cycle et des mesures ponctuelles, en % du PIB potentiel), édition de printemps 2026, extrait archivé avec son empreinte ; il sert de témoin et n’entre dans aucun calcul.
 Mêmes réserves pour les deux autres témoins du rang structurel : OCDE, Perspectives économiques n° 119, série NLGXQU (solde primaire sous-jacent, hors cycle et mesures ponctuelles, en % du PIB potentiel, membres de la zone euro qui sont membres de l’OCDE) ; FMI, Moniteur des finances publiques d’octobre 2026, série GGCBP_G01_PGDP_PT (solde primaire corrigé du cycle seulement, en % du PIB potentiel).
 Contrôle : pour chaque pays et chaque année, le ratio de dette et le solde primaire calculés sont comparés à ceux qu’Eurostat publie en pourcentage du PIB, que le calcul n’utilise pas.
-Au-delà de 0,11 point d’écart, l’année est écartée et comptée (cinq sur 803, listées dans le fichier JSON) ; pour la France et les pays comparés, le script s’arrête.
-Une fenêtre qui contient une année de croissance nominale supérieure à 35 % (hyperinflation, rupture de série) est écartée.
+Au-delà de 0,11 point d’écart, l’année est écartée ; une année dont Eurostat ne publie pas le ratio ne peut pas être contrôlée et l’est aussi.
+Avec les comptes actuels, cinq années-pays sur 803 sont écartées, toutes faute de ratio publié (liste et motif dans le fichier JSON) ; pour la France et les pays comparés, le script s’arrête.
+Une fenêtre qui contient une année de croissance nominale supérieure à 35 % (hyperinflation, rupture de série) est écartée : 18 le sont.
 Les pays comparés à la France sont désignés par une règle, non choisis : dette supérieure à 90 % du PIB à la fin de 2015 ; le même calcul est refait à 80 et à 100 %.
 Les chiffres calculés sur les séries d’Eurostat viennent tous du même script, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
 Les chiffres attribués à la direction générale du Trésor, au Conseil d’analyse économique et à l’OFCE sont repris tels qu’ils les publient.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 France : ce qui a fait monter ou baisser le poids de la dette, décennie par décennie
-De décennie en décennie, le terme qui fait monter la dette française change ; sur la dernière, taux et croissance l'ont fait baisser et les déficits primaires l'ont fait monter davantage.
-Précaution d'interprétation.
+De décennie en décennie, le terme qui fait monter la dette française change ; sur la dernière, taux et croissance l’ont fait baisser et les déficits primaires l’ont fait monter davantage.
+Précaution d’interprétation.
 Décomposition comptable, non causale : les trois termes ne sont pas indépendants.
 Variation calculée sur les valeurs non arrondies ; la somme des contributions affichées peut différer de 0,1 point.
 Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025
 Télécharger en PNG
 SVG
 Sept pays à plus de 90 % de dette fin 2015 : ce qui a fait bouger leur ratio en dix ans
-Parmi les pays partis d'une dette au moins aussi élevée, l'effet des taux et de la croissance a fait baisser le ratio partout ; là où le ratio a nettement baissé, il a pesé environ deux fois plus que les excédents primaires.
-Précaution d'interprétation.
+Parmi les pays partis d’une dette au moins aussi élevée, l’effet des taux et de la croissance a fait baisser le ratio partout ; là où le ratio a nettement baissé, il a pesé environ deux fois plus que les excédents primaires.
+Précaution d’interprétation.
 Grèce, Chypre et Portugal ont reçu des financements officiels (2010-2018).
-Comparaison comptable : elle n'attribue la baisse à aucune politique.
+Comparaison comptable : elle n’attribue la baisse à aucune politique.
 Variation calculée sur les valeurs non arrondies ; la somme des contributions affichées peut différer de 0,1 point.
 Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), 2016-2025 ; pays triés par variation du ratio
 Télécharger en PNG
 SVG
 France : le solde primaire observé et celui qui aurait stabilisé la dette
 Le solde primaire qui stabilise la dette change chaque année avec les taux et la croissance ; le solde observé est resté le plus souvent en dessous.
-Précaution d'interprétation.
-En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin d'année précédente, hors autres ajustements (flux-stock).
-Un repère comptable de l'année, non un objectif.
+Précaution d’interprétation.
+En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin d’année précédente, hors autres ajustements (flux-stock).
+Un repère comptable de l’année, non un objectif.
 Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025
 Télécharger en PNG
 SVG
 Zone euro, 2016-2025 : taux, croissance et solde primaire de la France
 Dans la zone euro, la France paie un taux implicite parmi les plus bas ; ce qui la distingue est une croissance nominale parmi les plus faibles et le solde primaire le plus bas.
-Précaution d'interprétation.
-Comparaison comptable : elle ne dit ni si l'écart vient des dépenses ou des recettes, ni quel ajustement serait souhaitable.
-Taux implicite = intérêts payés / dette de fin d'année précédente.
+Précaution d’interprétation.
+Comparaison comptable : elle ne dit ni si l’écart vient des dépenses ou des recettes, ni quel ajustement serait souhaitable.
+Taux implicite = intérêts payés / dette de fin d’année précédente.
 Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), 2016-2025
 Télécharger en PNG
 SVG
@@ -519,15 +520,17 @@ Parmi les sept pays de l’Union dont la dette dépassait 90 % du PIB fin 2015, 
 C’est une décomposition comptable, non une attribution causale.
 Copier le résumé
 Les données
-La décomposition par décennie du ratio dette/PIB français, le solde primaire observé et le solde stabilisant hors autres ajustements année par année, la même décomposition pour les pays de l'Union dont la dette dépassait 90 % du PIB, et les moyennes des pays de la zone euro (solde primaire, solde stabilisant, taux implicite, croissance nominale, solde structurel AMECO) ; le même contenu existe en CSV, au format long.
+La décomposition par décennie du ratio dette/PIB français, le solde primaire observé et le solde stabilisant hors autres ajustements année par année, la même décomposition pour les pays de l’Union dont la dette dépassait 90 % du PIB, et les moyennes des pays de la zone euro (solde primaire, solde stabilisant, taux implicite, croissance nominale, solde structurel AMECO) ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat et Commission européenne (AMECO)), sous leurs propres conditions.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
 Révisions
-2 novembre 2026 — Comptes d'Eurostat du 21 octobre 2026 : aucun pays de la zone euro n'est plus écarté par le contrôle ; la Finlande, revenue dans la comparaison, a eu une croissance nominale plus faible que la France, qui passe au deuxième rang ; sur cinq ans, le repère s'est abaissé partout sauf en Irlande.
+5 novembre 2026 — Correction : les années-pays écartées du contrôle l’étaient toutes faute de ratio publié par Eurostat, non pour un écart au-delà de la tolérance comme le disait la page ; les fenêtres écartées pour croissance nominale supérieure à 35 % sont désormais comptées.
+Précision : avec les comptes du 21 octobre, l’année 2025 porte à 16 le nombre d’années où le taux implicite a dépassé la croissance nominale (15 au 16 octobre).
+2 novembre 2026 — Comptes d’Eurostat du 21 octobre 2026 : aucun pays de la zone euro n’est plus écarté par le contrôle ; la Finlande, revenue dans la comparaison, a eu une croissance nominale plus faible que la France, qui passe au deuxième rang ; sur cinq ans, le repère s’est abaissé partout sauf en Irlande.
 16 octobre 2026 — Correction : le taux implicite a dépassé la croissance nominale 15 années, et non 16 ; la comparaison se fait désormais à la précision affichée.
 Toutes les ressources : données, dossiers et repères →
 Transmettre

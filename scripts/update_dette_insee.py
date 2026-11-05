@@ -123,7 +123,10 @@ def lire_trajectoire() -> dict:
                "page": t["source"]["page"],
                "lu_le": t["source"]["lu_le"],
                "sensibilite": t["sensibilite"], "hausse_vs_2025": float(t["hausse_vs_2025"]["plus_de_mdeur"]),
-               "ecart_lfi": float(t["ecart_lfi_n"]["mdeur"])}
+               "ecart_lfi": float(t["ecart_lfi_n"]["mdeur"]),
+               # Base 2025 PUBLIEE par l'avis (tableau 10, arrondie a l'unite) : l'audit du 05/11/2026 a trouve la
+               # page affirmant le contraire (« l'avis ne publie pas cette base »).
+               "base_2025_publiee": float(t["base_2025_tableau10"]["mdeur"])}
     except Exception as exc:                       # noqa: BLE001
         arret("trajectoire du projet de loi de finances illisible (%s) : %s" % (TRAJECTOIRE.name, exc))
     return out
@@ -1231,7 +1234,7 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
                   "milliards en %s.",
           "desc_prev": " Deux cercles évidés, non reliés à la courbe, portent la prévision du Gouvernement dans le "
                        "projet de loi de finances pour %d : %s milliards en %d, %s en %d. Une prévision, non "
-                       "une observation, sur une base 2025 que l'avis ne publie pas.",
+                       "une observation, dans des conventions que l'avis dit mêlées : à ne pas soustraire de la courbe.",
           "etiq_prev": "prévision PLF %d",
           "src_prev": " ; cercles évidés : prévision du Gouvernement, projet de loi de finances pour %d (avis du HCFP, § 115)"}
          if lang == "fr" else
@@ -1241,8 +1244,8 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
           "desc": "One curve in billion euros, from %s to %s. Interest due falls to its trough "
                   "in %s (%s billion), then climbs steeply to %s billion in %s.",
           "desc_prev": " Two open circles, not joined to the curve, show the Government's forecast in the %d budget "
-                       "bill: %s billion in %d, %s in %d. A forecast, not an observation, on a 2025 base the "
-                       "opinion does not publish.",
+                       "bill: %s billion in %d, %s in %d. A forecast, not an observation, in conventions the "
+                       "opinion calls mixed: not to be subtracted from the curve.",
           "etiq_prev": "%d budget forecast",
           "src_prev": "; open circles: Government forecast, %d budget bill (HCFP opinion, para. 115)"})
     ans = sorted(int(a) for a in interets_md)
@@ -2101,6 +2104,14 @@ def main() -> int:
     # a deux series non reconciliees ; la notification d'octobre (65,7) l'a dementi. La prose dit desormais la
     # borne seule, vraie dans les deux cas ; la garde verifie que la borne reste une base plausible.
     base_gouv_max = trajectoire_lue["charge_md"][trajectoire_lue["edition"]] - trajectoire_lue["hausse_vs_2025"]
+    # 05/11/2026 (audit) : l'avis PUBLIE la base 2025 (tableau 10, 66, arrondie). La prose dit « arrondie a N,
+    # compatible avec les X d'Eurostat » : compatible = l'observe d'Eurostat s'arrondit a la valeur publiee.
+    b25 = trajectoire_lue["base_2025_publiee"]
+    prose("2025" in d41_mdeur and abs(d41_mdeur["2025"] - b25) <= 0.5,
+          "la base 2025 publiee par l'avis (%s) est compatible, a l'arrondi, avec Eurostat" % b25)
+    # Chapo et « Est-ce beaucoup ? » : « en euros courants, la charge de <derniere annee> est la plus elevee depuis 1995 ».
+    prose(min(d41_mdeur) == "1995" and lg.extremum(d41_mdeur, lambda y: d41_mdeur[y], 1) == max(d41_mdeur),
+          "en euros courants, la derniere charge observee est la plus elevee de la serie depuis 1995")
     prose(0 < base_gouv_max < trajectoire_lue["charge_md"][trajectoire_lue["edition"]],
           "« plus de 25 Md EUR par rapport a 2025 » borne la base 2025 du Gouvernement")
     niv_prev = [y for y in d41_pib if d41_pib[y] >= trajectoire_lue["charge_pct"][trajectoire_lue["edition"]]]
@@ -2262,6 +2273,7 @@ def main() -> int:
             # prevision et sensibilite (HCFP, § 115-116)
             "prev_hausse_plus_de_mdeur": nb(trajectoire["hausse_vs_2025"], 0),
             "prev_base_2025_max_mdeur": nb(trajectoire["charge_md"][trajectoire["edition"]] - trajectoire["hausse_vs_2025"], 0),
+            "prev_base_2025_mdeur": nb(trajectoire["base_2025_publiee"], 0),
             "prev_charge_n_pct_niveau": an_niv_prev,
             "sens_taux_an1_mdeur": nb(sens["taux_1pt_premiere_annee_mdeur"]),
             "sens_taux_an2_mdeur": nb(sens["taux_1pt_deuxieme_annee_mdeur"]),

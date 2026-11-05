@@ -2,7 +2,8 @@
 title: "Qu'est-ce que l'anthropie ?"
 og_image: "images/og-notion-anthropie.jpg"
 og_image_alt: "Carte de partage : « Qu’est-ce que l’anthropie ? » et son schéma"
-lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+date: 2026-04-03  # premiere mise en ligne possible sur stephane-lalut.com (CNAME acf728c, 03/04/2026) ; premiere capture publique Wayback le 16/04/2026 (audit du 05/11/2026)
+lastmod: 2026-11-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
@@ -10,7 +11,7 @@ faq:
   - question: "Quelle est la différence entre anthropie et entropie ?"
     answer: "L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne un mécanisme social et institutionnel : la manière dont des systèmes humains produisent de l'ordre local en déplaçant le désordre hors du périmètre visible."
   - question: "Quelle est la différence entre anthropie et Anthropocène ?"
-    answer: "L'Anthropocène nomme une ère géologique — la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre. L'une est une marque, l'autre est un mécanisme — et le mécanisme précède la marque."
+    answer: "L'Anthropocène désigne une époque géologique proposée — la trace que les sociétés humaines impriment dans la stratigraphie de la planète ; l'Union internationale des sciences géologiques a refusé en 2024 d'en faire une unité formelle de l'échelle des temps, le terme restant un concept descriptif reconnu. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre. L'une est une marque, l'autre est un mécanisme — et le mécanisme précède la marque."
   - question: "Quelle est la différence entre l'anthropie et le principe anthropique ?"
     answer: "Aucune filiation : seul le radical grec est commun. Le principe anthropique est une thèse de cosmologie (Brandon Carter, 1973-1974) selon laquelle l'univers que nous observons est nécessairement compatible avec l'existence d'observateurs. L'anthropie, au sens de Stéphane Lalut, est un mécanisme social — le déplacement du désordre par les systèmes humains — et ne porte aucune affirmation sur l'univers physique."
   - question: "Quelle est la différence entre anthropie et anthropologie ?"
@@ -24,7 +25,7 @@ faq:
   - question: "Qu'est-ce que la discipline du regard ?"
     answer: "C'est la posture analytique proposée par l'anthropie : devant tout ordre stable, demander où s'écoule le désordre. Elle conduit à interroger les zones d'ombre de la stabilité apparente."
   - question: "Comment l'anthropie s'applique-t-elle à la dette publique ?"
-    answer: "La dette publique déplace le coût du désordre présent vers les générations futures et les groupes sociaux les moins capables de s'y soustraire. C'est un transfert temporel et social classique au sens anthropique."
+    answer: "La dette publique peut déplacer des charges entre périodes et entre groupes sociaux. Ce déplacement n'est ni automatique ni nécessairement défavorable aux générations futures : il dépend de l'usage de l'emprunt, de ses bénéficiaires et de la répartition des charges et des actifs. L'anthropie en fait une hypothèse à examiner, non une conséquence établie de tout endettement : le working paper AWP-03 la formule, l'AWP-09 la confronte aux comptes publics, et la page « La dette publique est-elle un fardeau pour les générations futures ? » en présente l'examen."
   - question: "Quelles sont les limites du concept d'anthropie ?"
     answer: "L'anthropie se présente comme une hypothèse de travail, non comme une théorie achevée. Trois limites sont assumées : elle prolonge des traditions existantes (externalités, cost-shifting de K. W. Kapp) dont elle unifie les cas ; sa généralité exige des critères observables — coût marginal croissant, effet boomerang — pour rester réfutable ; et son apport tient moins à la découverte du transfert qu'à sa stabilisation opératoire (définition canonique, vocabulaire, critères, corpus daté)."
   - question: "Qui a développé le cadre anthropique ?"
@@ -60,6 +61,8 @@ frontiere:
     - texte: "Apporter une réponse unique : il fournit une manière de poser les questions avec plus de netteté."
       ancre: "quelques-domaines-dapplication"
       section: "Domaines d'application"
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-05, texte: "Correction : la réponse sur la dette publique présentait comme un fait ce que le site traite comme une hypothèse ; elle dit désormais que le déplacement de charges n'est ni automatique ni nécessairement défavorable, et où l'hypothèse est examinée. L'Anthropocène est une époque géologique proposée, non retenue comme unité formelle en 2024. La date de publication affichée était fausse (première mise en ligne : avril 2026)."}
 ressource:  # index /ressources/ : en tête du cadre d'analyse (arbitrage PRO-20261025-225715, 25/10/2026) ; garde son entrée de menu
   type: ["notion"]
   bloc: "notions"
@@ -136,7 +139,7 @@ Le terme ne vaut donc pas comme métaphore décorative, mais comme hypothèse an
 <details class="notion" id="anthropie-et-anthropocène"><summary><span class="notion__avec">Anthropocène</span><span class="notion__pr">L'anthropie ne se confond pas avec l'Anthropocène.</span></summary>
 <div class="notion__suite">
 
-L'Anthropocène nomme une ère géologique&nbsp;: la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'anthropie nomme un mécanisme social&nbsp;: la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre — vers d'autres lieux, vers d'autres temps, vers d'autres groupes.
+L'Anthropocène désigne une époque géologique proposée&nbsp;: la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'Union internationale des sciences géologiques a refusé en 2024 d'en faire une unité formelle de l'échelle des temps&nbsp;; le terme reste un concept descriptif reconnu. L'anthropie nomme un mécanisme social&nbsp;: la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre — vers d'autres lieux, vers d'autres temps, vers d'autres groupes.
 
 L'une est une marque&nbsp;; l'autre est un mécanisme. Et le mécanisme précède la marque&nbsp;: l'anthropie peut se lire dès les premiers programmes techniques de l'espèce, sur une profondeur de 3,3 millions d'années, bien avant l'industrialisation qui rend la trace géologique visible. Elle n'invalide donc pas l'Anthropocène. Elle en éclaire la dynamique institutionnelle, en montrant par quels transferts les sociétés en sont venues à laisser une telle trace.
 

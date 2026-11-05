@@ -830,7 +830,9 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
             A["cs_%s_avant" % nom], A["cs_%s_apres" % nom] = nb(M(cle, "avant")), nb(M(cle, "apres"))
             A["cs_%s_saut" % nom] = nb(abs(M(cle, "apres") - M(cle, "avant")))
         A["cs_fmi_long"], A["cs_fmi_crise"] = nb(M("fmi_ca", "long")), nb(M("fmi_ca", "crise"))
-        A["cs_ce_conj"] = nb(abs(M("obs", "apres") - M("ce_st", "apres")), 2)
+        # cs_ce_conj retire le 05/11/2026 (audit) : il rapprochait le solde observe d'Eurostat et le solde structurel
+        # AMECO (deux editions, PIB et PIB potentiel) et la page l'attribuait a la Commission. Pas d'extrait AMECO
+        # du solde observe dans le depot : aucun calcul homogene possible, chiffre retire de la prose.
         A["cs_fmi_conj"] = nb(abs(M("fmi_obs", "apres") - M("fmi_ca", "apres")), 2)
         A["cs_rec"] = nb(abs(M("ce_rec", "apres") - M("ce_rec", "avant")), 2)
         A["cs_dep"] = sg(M("ce_dep", "apres") - M("ce_dep", "avant"), 2)
@@ -897,7 +899,7 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
         for k, v in EDITIONS_CS[lang].items():
             X_["cs_ed_" + k] = v
         # « point » accordé à la valeur affichée (même règle que ACCORD_POINTS)
-        for k in ("cs_ce_saut", "cs_fmi_saut", "cs_ocde_saut", "cs_rec", "cs_ca_saut", "cs_ce_conj", "cs_fmi_conj"):
+        for k in ("cs_ce_saut", "cs_fmi_saut", "cs_ocde_saut", "cs_rec", "cs_ca_saut", "cs_fmi_conj"):
             v = abs(float(X_[k].replace(",", "." if lang == "fr" else "")))
             X_[k + "_pt"] = X_[k] + ("\u00a0" if lang == "fr" else " ") + (("point" if v < 2 else "points") if lang == "fr" else ("point" if v == 1 else "points"))
         # Relecture de langue du 11/10/2026. (1) Après un verbe qui porte déjà le sens (« a ajouté », « a retiré »), la

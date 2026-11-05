@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /en/why-does-public-debt-rise/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/why-does-public-debt-rise/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.7% of GDP: it doubled as a share of the wealth produced.
@@ -6,7 +6,7 @@ Where do these 57.9 points of GDP come from?
 Interest pushes the ratio up, nominal GDP growth pulls it down, and over thirty years the two almost offset each other.
 Most of the rise comes from public deficits excluding interest, known as primary deficits: 50.5 points out of 57.9.
 This balance hides two opposite periods, and it shows which terms drove the debt up, not why the deficits existed.
-Page updated 2 November 2026 · revisions
+Page updated 5 November 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -44,7 +44,7 @@ The year 2009 alone accounts for 14.2 points: the primary deficit widens and GDP
 The ratio gains 17.5 points.
 In 2020 it jumps by 16.7 points, with the pandemic.
 From 2021 to 2023, strong nominal GDP growth, price rises included, brings the ratio down: the interest-growth effect takes 16.8 points off the ratio, more than primary deficits add (11.5).
-The share of prices in that growth is the subject of the French page L’inflation a-t-elle allégé la dette?
+The share of prices in that growth is the subject of the page Did inflation really ease France’s debt burden?
 Since 2024, the ratio has been rising again.
 The implicit interest rate has been rising since its low of 2020, mostly through a jump in 2022.
 After 1.25% in 2020, it edges up in 2021 (1.31%), jumps in 2022 (1.80%), then rises more slowly.
@@ -90,7 +90,7 @@ Cyclically adjusted primary balance according to three estimates, and observed p
 The grey bands mark the two periods compared.
 Over 2022-2025, the deficit would not disappear with the business cycle alone.
 Cyclically adjusted, the primary balance is lower over 2022-2025 than over 2015-2019 in all three estimates: by 1.9 points according to the Commission (−1.1% then −3.0% of potential GDP), by 2.6 points according to the IMF (−0.5% then −3.1%) and by 1.6 points according to the OECD (−1.8% then −3.4%).
-Over 2022-2025, the cyclical and one-off part of the deficit is only 0.23 points of GDP according to the Commission, and its cyclical part 0.23 points of GDP according to the IMF.
+Over 2022-2025, the cyclical part of the deficit is only 0.23 points of GDP according to the IMF, which publishes the observed and the cyclically adjusted balance in the same edition.
 These are three estimates, and they do not coincide.
 The Commission and the OECD also remove one-off measures, the IMF does not; and each relies on an estimate of potential output, which is not a measurement and gets revised.
 The page gives the three values, without averaging them.
@@ -340,6 +340,8 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat), under their own terms.
 Revisions
+5 November 2026 — Correction: the page attributed to the Commission a “cyclical and one-off part” of the deficit that it computed itself, by setting Eurostat’s observed balance against the Commission’s structural balance (two editions, two denominators).
+That figure is withdrawn; only the IMF’s, drawn from a single edition, remains.
 2 November 2026 — Eurostat accounts of 21 October 2026: in 2025, the implicit rate moves slightly back above nominal growth; “nominal growth has prevailed every year since 2017, except 2020” becomes “up to 2024”.
 18 October 2026 — Addition: section “Business cycle or structure?”, the cyclically adjusted primary deficit according to the Commission, the IMF and the OECD, and its breakdown into revenue and spending.
 All resources: data, explainers and reference material →

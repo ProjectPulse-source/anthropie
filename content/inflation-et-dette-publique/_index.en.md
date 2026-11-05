@@ -14,6 +14,7 @@ og_image_alt: "Share card: “Inflation eroded legacy debt” — cumulative rea
 # government / central-government (not State); legacy debt; real value; €Xbn in 2020 euros; en dash in year ranges.
 donnees: [dette_inflation, dette_dynamique]
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-05, texte: "Correction: the range of early-2021 forecasts now reads 144 to 172 billion, bounds that contain the computed values (144.1 and 171.5); it was rounded to 145-170 without saying so. The sentence on the fall in the ratio in 2021-2023 no longer presents primary deficits as its cause: it says they added 11.5 points to it."}
   - {date: 2026-10-16, texte: "Correction: the gap due to central bank purchases peaks from April to July 2022, four months tied at the displayed precision, not in May 2022."}
 dataset:
   jeu: "dette_inflation"
@@ -164,7 +165,7 @@ These measures are not added to or subtracted from one another: no combination o
 
 ## Why this is not the debt-to-GDP figure {#ratio}
 
-The debt series page ["Why does public debt rise?"](/en/why-does-public-debt-rise/) attributes to the interest-growth effect a contribution of −{{< dyn-val "effet_2021_2023" >}} percentage points of GDP to the change in the debt ratio in 2021–2023. That is not the observed fall in the ratio: it fell by only {{< dyn-val "recul_2021_2023" >}} points, mainly because primary deficits pushed it {{< dyn-val "deficits_2021_2023" >}} points the other way. And the {{< infl-val "pts_pib" >}}% of 2020 GDP on this page is not a {{< infl-val "pts_pib" >}}-point fall in the ratio: the first figure responds to all nominal GDP growth, expected inflation included, for all of general government; the second counts only the unexpected part of inflation, on the payments already promised by the central government. Bringing them together would require a decomposition that is not made here.
+The debt series page ["Why does public debt rise?"](/en/why-does-public-debt-rise/) attributes to the interest-growth effect a contribution of −{{< dyn-val "effet_2021_2023" >}} percentage points of GDP to the change in the debt ratio in 2021–2023. That is not the observed fall in the ratio: it fell by only {{< dyn-val "recul_2021_2023" >}} points; primary deficits added {{< dyn-val "deficits_2021_2023" >}} points to it. And the {{< infl-val "pts_pib" >}}% of 2020 GDP on this page is not a {{< infl-val "pts_pib" >}}-point fall in the ratio: the first figure responds to all nominal GDP growth, expected inflation included, for all of general government; the second counts only the unexpected part of inflation, on the payments already promised by the central government. Bringing them together would require a decomposition that is not made here.
 
 ## What moves the number {#sensibilite}
 

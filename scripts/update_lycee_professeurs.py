@@ -157,7 +157,7 @@ def calcul(X):
         es_toutes=next(d["es"] for d in X["v4"]["es_disciplines"] if d["discipline"] == "Toutes disciplines"),
         e4=e4, e4_nom=e4_nom, e4_prix=e4_prix, e4_reel=e4_reel, e4_el=e4_el, e4_par_el=e4_par_el, p_dern=p_dern,
         e5=e5, e5_f=e5["rcd_2024"] / e5["rcd_2022"], e9=e9,
-        sd=X["d4"]["second_degre"], releve=X["releve_le"],
+        sd=X["d4"]["second_degre"], ms=X["d4"]["ni2614_meme_champ"], releve=X["releve_le"],
         e1=X["enonces"]["e1"],
         detail={"2024": X["d2"]["detail_2024"], "2025": X["d2"]["detail_2025"]},
         # Phase B de la refonte (10/10/2026) : candidats et postes des concours externes, motifs de fermeture du lycée.
@@ -391,6 +391,13 @@ def gardes(c):
     g(all(p_[a] < 75 for a in p_ if a >= 2022), "« physique-chimie : sous trois postes sur quatre depuis 2022 »")
     # E6 : base publiée à l'unité (R9) -- l'écart réel tient entre deux bornes
     g(c["sd"]["total"]["2022-2023"] + 0.5 - c["sd"]["total"]["2024-2025"] < 3, "E6 : « même la borne haute de la baisse reste sous 3 points »")
+    # Audit du 05/11/2026 : la NI 26-14 compare sur le MEME champ (hors Mayotte) : 2023-2024 recalcule -> 2024-2025, hausse
+    # attribuee par la DEPP aux fermetures. La prose dit « a augmenté de X point, du fait des fermetures (de A à B %) ».
+    ms = c["ms"]
+    g(ms["total"]["2024-2025"] > ms["total"]["2023-2024"] and ms["fermeture"]["2024-2025"] > ms["fermeture"]["2023-2024"]
+      and abs((ms["total"]["2024-2025"] - ms["total"]["2023-2024"]) - (ms["fermeture"]["2024-2025"] - ms["fermeture"]["2023-2024"])) < 0.15,
+      "NI 26-14 : « la part a augmenté, et la hausse tient aux fermetures »")
+    g(ms["total"]["2024-2025"] - ms["total"]["2023-2024"] < 2, "NI 26-14 : « point » au singulier dans la prose")
     # Classes
     g(min(c["ed_depuis20"]) > c["ed_max_avant"], "« depuis 2020, au-dessus de tout niveau de 1994-2015 »")
     g(min(c["ed_depuis20"]) >= 30, "« plus de 30 élèves depuis 2020 »")
@@ -462,6 +469,8 @@ def affichage(c):
         "sd_total": nb(c["h4"]["Ensemble"]["total"]), "sd_nr": nb(c["h4"]["Ensemble"]["non_remplacement"]),
         "sd_total22": nb(c["sd"]["total"]["2022-2023"], 0), "sd_var": nb(c["sd"]["total"]["2024-2025"] - c["sd"]["total"]["2022-2023"]),
         "sd_indiv22": nb(c["sd"]["individuelles"]["2022-2023"]), "sd_indiv24": nb(c["sd"]["individuelles"]["2024-2025"]),
+        "ms_total23": nb(c["ms"]["total"]["2023-2024"]), "ms_hausse": nb(c["ms"]["total"]["2024-2025"] - c["ms"]["total"]["2023-2024"]),
+        "ms_ferm23": nb(c["ms"]["fermeture"]["2023-2024"]), "ms_ferm24": nb(c["ms"]["fermeture"]["2024-2025"]),
         # classes
         "ed": nb(c["ed"][c["ed_dern"]]), "ed_an": str(c["ed_dern"]), "ed_max_avant": nb(c["ed_max_avant"]),
         "ed_an_max_avant": str(c["ed_an_max_avant"]), "ed_2021": nb(c["ed"][2021]), "ed_1994": nb(c["ed"][1994]),

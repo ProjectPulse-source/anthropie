@@ -2,7 +2,8 @@
 title: "What is anthropy?"
 og_image: "images/og-notion-anthropie-en.jpg"
 og_image_alt: "Share card: “What is anthropy?” and its diagram"
-lastmod: 2026-10-30  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+date: 2026-04-03  # first possible publication on stephane-lalut.com (CNAME acf728c, 03/04/2026); first public Wayback capture 16/04/2026 (audit of 05/11/2026)
+lastmod: 2026-11-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
 # /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
@@ -23,7 +24,7 @@ faq:
   - question: "What is the difference between anthropy and entropy?"
     answer: "Entropy belongs to physics and thermodynamics. Anthropy designates a social and institutional mechanism: the way in which human systems produce local order by displacing disorder outside the visible perimeter."
   - question: "What is the difference between anthropy and the Anthropocene?"
-    answer: "The Anthropocene names a geological epoch — the trace human societies leave in the planet's stratigraphy. Anthropy names a social mechanism: the way those societies produce their local orders by displacing disorder. One is a mark, the other a mechanism — and the mechanism precedes the mark."
+    answer: "The Anthropocene refers to a proposed geological epoch — the trace human societies leave in the planet's stratigraphy; in 2024 the International Union of Geological Sciences declined to make it a formal unit of the geologic time scale, while the term remains a recognised descriptive concept. Anthropy names a social mechanism: the way those societies produce their local orders by displacing disorder. One is a mark, the other a mechanism — and the mechanism precedes the mark."
   - question: "What is the difference between anthropy and the anthropic principle?"
     answer: "No lineage — only the Greek root is shared. The anthropic principle is a cosmological thesis (Brandon Carter, 1973-1974) holding that the universe we observe is necessarily compatible with the existence of observers. Anthropy, in Stéphane Lalut's sense, is a social mechanism — the displacement of disorder by human systems — and makes no claim about the physical universe."
   - question: "Did Stéphane Lalut coin the word anthropy?"
@@ -39,7 +40,7 @@ faq:
   - question: "What is the discipline of attention?"
     answer: "It is the analytical posture proposed by the framework of anthropy: whenever confronted with a stable order, ask where disorder is displaced. It leads us to interrogate the shadow zones of apparent stability."
   - question: "How does anthropy apply to public debt?"
-    answer: "Public debt displaces the cost of present disorder toward future generations and social groups least able to escape it. It is a classic temporal and social transfer in the anthropic sense."
+    answer: "Public debt can shift burdens between periods and between social groups. This shift is neither automatic nor necessarily unfavourable to future generations: it depends on what the borrowing finances, who benefits, and how burdens and assets are distributed. Anthropy treats it as a hypothesis to be examined, not as an established consequence of all borrowing: working paper AWP-03 states it, AWP-09 tests it against the public accounts, and the page “Is public debt a burden on future generations?” sets out that examination."
   - question: "What are the limits of the concept of anthropy?"
     answer: "Anthropy presents itself as a working hypothesis, not a finished theory. Three limits are acknowledged: it extends existing traditions (externalities, K. W. Kapp's cost-shifting) whose cases it unifies; its generality requires observable criteria — rising marginal cost, boomerang effect — to remain falsifiable; and its contribution lies less in discovering transfer than in stabilising it operationally (canonical definition, vocabulary, criteria, dated corpus)."
   - question: "How does anthropy differ from cost-shifting (K. W. Kapp)?"
@@ -74,6 +75,8 @@ frontiere:
     - texte: "To provide a single answer: it offers a clearer way of asking the questions."
       ancre: "some-domains-of-application"
       section: "Domains of application"
+journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-05, texte: "Correction: the answer on public debt presented as a fact what the site treats as a hypothesis; it now says that the shift of burdens is neither automatic nor necessarily unfavourable, and where the hypothesis is examined. The Anthropocene is a proposed geological epoch, not adopted as a formal unit in 2024. The displayed publication date was wrong (first online: April 2026)."}
 ressource:  # /en/resources/ index: head of the analytical framework (PRO-20261025-225715); keeps its menu entry
   type: ["notion"]
   bloc: "notions"
@@ -150,7 +153,7 @@ The term therefore does not function as a decorative metaphor, but as an analyti
 <details class="notion" id="anthropy-and-the-anthropocene"><summary><span class="notion__avec">the Anthropocene</span><span class="notion__pr">Anthropy is not the Anthropocene.</span></summary>
 <div class="notion__suite">
 
-The Anthropocene names a geological epoch: the imprint that human societies leave in the planet's stratigraphy. Anthropy names a social mechanism: the way these societies produce their local orders by displacing disorder — toward other places, other times, other groups.
+The Anthropocene refers to a proposed geological epoch: the imprint that human societies leave in the planet's stratigraphy. In 2024 the International Union of Geological Sciences declined to make it a formal unit of the geologic time scale; the term remains a recognised descriptive concept. Anthropy names a social mechanism: the way these societies produce their local orders by displacing disorder — toward other places, other times, other groups.
 
 One is a mark; the other is a mechanism. And the mechanism precedes the mark: anthropy can be traced as far back as the earliest technical programs of the species, across a 3.3-million-year depth, well before industrialization made the geological trace visible. It does not invalidate the Anthropocene. It clarifies its institutional dynamic, by showing through which transfers societies came to leave such a trace.
 

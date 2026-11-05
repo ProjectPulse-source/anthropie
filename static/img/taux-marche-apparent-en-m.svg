@@ -25,8 +25,8 @@
 <text x="300" y="336" font-size="15" font-weight="600" fill="#eb6834" text-anchor="end">2.0%</text>
 <line x1="0" y1="362.0" x2="300" y2="362.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="383.0" font-size="13.5" fill="#52514e">Eurostat irt_lt_mcby_a (10-year yield)</text>
-<text class="pied-source" x="0" y="400.0" font-size="13.5" fill="#52514e">· implicit rate: Eurostat gov_10a_main</text>
-<text class="pied-source" x="0" y="417.0" font-size="13.5" fill="#52514e">and INSEE, 1996-2025</text>
+<text class="pied-source" x="0" y="400.0" font-size="13.5" fill="#52514e">·  implicit rate: Eurostat</text>
+<text class="pied-source" x="0" y="417.0" font-size="13.5" fill="#52514e">gov_10a_main and INSEE, 1996-2025</text>
 <text class="pied-note" x="0" y="438.0" font-size="13.5" fill="#52514e">The 10-year yield is a reference</text>
 <text class="pied-note" x="0" y="455.0" font-size="13.5" fill="#52514e">indicator, not the actual cost of</text>
 <text class="pied-note" x="0" y="472.0" font-size="13.5" fill="#52514e">issuance; the implicit rate, the</text>
@@ -35,5 +35,5 @@
 <text class="pied-note" x="0" y="523.0" font-size="13.5" fill="#52514e">renewed, and includes the indexation</text>
 <text class="pied-note" x="0" y="540.0" font-size="13.5" fill="#52514e">of inflation-linked bonds.</text>
 <text class="pied-licence" x="0" y="561.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="578.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="578.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

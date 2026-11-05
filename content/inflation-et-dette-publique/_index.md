@@ -15,6 +15,7 @@ og_image_alt: "Carte de partage : « L'inflation a érodé la vieille dette » �
 # dans scripts/sources_inflation_dette/) ; chiffres du volet 1 par dyn-val (scripts/update_dette_dynamique.py).
 donnees: [dette_inflation, dette_dynamique]
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-05, texte: "Correction : la plage des prévisions de début 2021 s'écrit désormais de 144 à 172 milliards, bornes qui contiennent les valeurs calculées (144,1 et 171,5) ; elle était arrondie à 145-170 sans le dire. La phrase sur le recul du ratio en 2021-2023 ne présente plus les déficits primaires comme sa cause : elle dit qu'ils y ont ajouté 11,5 points."}
   - {date: 2026-10-16, texte: "Correction : l'écart dû aux achats de la banque centrale culmine d'avril à juillet 2022, quatre mois à égalité à la précision affichée, et non en mai 2022."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dette_inflation"
@@ -169,7 +170,7 @@ Ces mesures ne s'additionnent pas et ne se retranchent pas les unes des autres&n
 
 ## Pourquoi ce n'est pas le chiffre du ratio dette/PIB {#ratio}
 
-Le volet du dossier [«&nbsp;Pourquoi la dette publique augmente-t-elle&nbsp;?&nbsp;»](/pourquoi-la-dette-publique-augmente/) attribue à l'effet des taux et de la croissance une contribution de −{{< dyn-val "effet_2021_2023" >}}&nbsp;points de PIB à la variation du ratio de dette en 2021-2023. Ce n'est pas la baisse observée du ratio&nbsp;: il n'a reculé que de {{< dyn-val "recul_2021_2023" >}}&nbsp;points, surtout parce que les déficits primaires l'ont poussé de {{< dyn-val "deficits_2021_2023" >}}&nbsp;points dans l'autre sens. Et les {{< infl-val "pts_pib" >}}&nbsp;% du PIB de 2020 de cette page ne sont pas {{< infl-val "pts_pib" >}}&nbsp;points de baisse du ratio&nbsp;: le premier chiffre réagit à toute la croissance du PIB nominal, inflation prévue comprise, pour toutes les administrations publiques&nbsp;; le second ne retient que la part non prévue de l'inflation, sur les seuls paiements déjà promis par l'État. Les rapprocher demanderait une décomposition qui n'est pas faite ici.
+Le volet du dossier [«&nbsp;Pourquoi la dette publique augmente-t-elle&nbsp;?&nbsp;»](/pourquoi-la-dette-publique-augmente/) attribue à l'effet des taux et de la croissance une contribution de −{{< dyn-val "effet_2021_2023" >}}&nbsp;points de PIB à la variation du ratio de dette en 2021-2023. Ce n'est pas la baisse observée du ratio&nbsp;: il n'a reculé que de {{< dyn-val "recul_2021_2023" >}}&nbsp;points&nbsp;; les déficits primaires y ont ajouté {{< dyn-val "deficits_2021_2023" >}}&nbsp;points. Et les {{< infl-val "pts_pib" >}}&nbsp;% du PIB de 2020 de cette page ne sont pas {{< infl-val "pts_pib" >}}&nbsp;points de baisse du ratio&nbsp;: le premier chiffre réagit à toute la croissance du PIB nominal, inflation prévue comprise, pour toutes les administrations publiques&nbsp;; le second ne retient que la part non prévue de l'inflation, sur les seuls paiements déjà promis par l'État. Les rapprocher demanderait une décomposition qui n'est pas faite ici.
 
 ## Ce qui fait varier le chiffre {#sensibilite}
 

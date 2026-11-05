@@ -20,7 +20,7 @@
  "charge_interets_mdeur": {
   "_statut": "PUBLIÉ pour 2026 et 2027",
   "_emplacement": "§ 115, p. 38 : « une charge d'intérêts de 79,2 Md€ » en 2026 ; « 2,9 points de PIB (soit 91 Md€ courants) en 2027 »",
-  "_perimetre": "Charge d'intérêts des administrations publiques en comptabilité nationale, prévision du Gouvernement. À ne PAS soustraire d'une observation d'Eurostat : l'avis écrit « en hausse de plus de 25 Md€ par rapport à 2025 », ce qui borne la base 2025 du Gouvernement sous 66 Md€ sans la publier. La série D41PAY d'Eurostat donnait 66,6 jusqu'au 20/10/2026, 65,7 depuis la notification d'octobre (21/10/2026) : la borne a été d'abord démentie, puis respectée, et l'égalité des deux bases n'est établie dans aucun cas. L'écart se documente, il ne se corrige pas (règle 13 du modèle de ressource).",
+  "_perimetre": "Charge d'intérêts des administrations publiques en comptabilité nationale, prévision du Gouvernement. À ne PAS soustraire d'une observation d'Eurostat : l'avis écrit « en hausse de plus de 25 Md€ par rapport à 2025 », ce qui borne la base 2025 du Gouvernement sous 66 Md€. Correction du 05/11/2026 (audit des ressources) : l'avis PUBLIE cette base, arrondie, dans son tableau 10 (66 Md€ ; bloc base_2025_tableau10), dans un tableau schématique qui mêle comptabilité nationale et budgétaire. La série D41PAY d'Eurostat donne 65,7 depuis la notification d'octobre (21/10/2026), compatible à l'arrondi ; 66,6 auparavant. L'écart se documente, il ne se corrige pas (règle 13 du modèle de ressource).",
   "2026": 79.2,
   "2027": 91.0
  },
@@ -66,7 +66,13 @@
   "_statut": "PUBLIÉ, § 115, p. 38, relu le 2026-10-11",
   "plus_de_mdeur": 25.0,
   "libelle": "« en hausse de plus de 25 Md€ par rapport à 2025 »",
-  "_usage": "Cité sous le nom du Haut Conseil, jamais recalculé contre Eurostat : 91 − 25 = 66 borne la base 2025 du Gouvernement, que l'avis ne publie pas (jeton prev_base_2025_max_mdeur, garde du générateur)."
+  "_usage": "Cité sous le nom du Haut Conseil, jamais recalculé contre Eurostat : 91 − 25 = 66 borne la base 2025 du Gouvernement (jeton prev_base_2025_max_mdeur). L'avis publie aussi cette base, arrondie : bloc base_2025_tableau10."
+ },
+ "base_2025_tableau10": {
+  "_statut": "PUBLIÉ, arrondi à l'unité, relu le 2026-11-05 dans le PDF archivé (scripts/sources_dette/Avis_HCFP_2026-5_PLF-PLFSS_2027.pdf, SHA-256 cf02528c…)",
+  "_emplacement": "Tableau 10, p. 26 du PDF : « Charge d'intérêts des administrations publiques 66 79 14 21% 28% 91 12 15% 30% » (colonnes 2025, 2026, écart…, 2027)",
+  "_methodologie": "Selon l'avis, tableau « réalisé à des fins de compréhension schématique », qui mêle conventions de comptabilité nationale et budgétaire : à citer comme arrondi, jamais à soustraire d'Eurostat.",
+  "mdeur": 66
  },
  "ecart_lfi_n": {
   "_statut": "PUBLIÉ, § 115, p. 38, relu le 2026-10-11",

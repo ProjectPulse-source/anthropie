@@ -1,11 +1,11 @@
-# relu le 2026-10-21 ; texte servi de /cout-de-la-dette-publique/, build de 8a1a8a7 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /cout-de-la-dette-publique/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Combien coûte la dette publique ?
-En 2025, les administrations publiques doivent 65,7 milliards d'euros d'intérêts, 4,2 % de leurs recettes : 121 % de plus qu'au creux de 2020.
-La remontée est rapide, mais le niveau n'est pas inédit : en part du PIB, la charge retrouve celui de 2014 et reste sous celui de 1995.
-Pendant vingt-cinq ans, la dette a doublé en part de PIB tandis que sa facture baissait.
-Cette page explique pourquoi, d'où vient la remontée, et pourquoi elle peut durer même si la dette cesse d'augmenter.
-Page mise à jour le 21 octobre 2026 · révisions
+En 2025, les administrations publiques doivent 65,7 milliards d’euros d’intérêts, 4,2 % de leurs recettes : 121 % de plus qu’au creux de 2020.
+La remontée est rapide, mais le niveau n’est pas inédit : en part du PIB, la charge retrouve celui de 2014 et reste sous celui de 1995.
+Pendant vingt-cinq ans, la dette a doublé en part de PIB tandis que sa charge, mesurée de même, baissait ; en euros courants, en revanche, celle de 2025 est la plus élevée depuis 1995.
+Cette page explique pourquoi, d’où vient la remontée, et pourquoi elle peut durer même si la dette cesse d’augmenter.
+Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
 Données · INSEE T2 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -20,12 +20,12 @@ Le résultat en une phrase.
 De 1995 à 2020, la dette est passée de 57,8 % à plus de 100 % du PIB pendant que sa charge d’intérêts tombait de 3,5 % à 1,3 % du PIB : la baisse du coût moyen du stock compensait la hausse de l’encours.
 Depuis, les deux forces jouent de nouveau dans le même sens.
 Ce qui fait la facture
-l'encoursla dette accumulée, sans cesse refinancée
+l’encoursla dette accumulée, sans cesse refinancée
 ×
 son coût moyenle taux implicite
 =
-la charge d'intérêtsdue chaque année
-L'encours grossit avec les déficits ; le coût moyen ne suit les taux de marché qu'au fil des renouvellements de titres.
+la charge d’intérêtsdue chaque année
+L’encours grossit avec les déficits ; le coût moyen ne suit les taux de marché qu’au fil des renouvellements de titres.
 Le taux implicite est le rapport entre les intérêts d’une année et l’encours de dette à la fin de l’année précédente.
 C’est un indicateur du coût moyen du stock, non le taux auquel la France emprunte aujourd’hui.
 Pendant vingt-cinq ans, sa baisse a compensé la hausse de l’encours : c’est pourquoi doubler la dette n’a pas doublé la facture.
@@ -76,14 +76,14 @@ En part du PIB, la charge est passée de 1,3 % en 2020 à 2,2 % en 2025.
 La charge de 2025 retrouve ainsi, en part du PIB, son niveau de 2014 ; en part des recettes publiques (4,2 %), celui de 2013.
 En 1995, elle pesait 3,5 % du PIB et 6,8 % des recettes.
 Mais depuis le creux de 2020, elle a augmenté de 121 % en euros, et de 78 % depuis 2019 : les deux bases mènent à la même conclusion.
-Les deux constats tiennent ensemble, et répondent aussi bien à « la dette ne coûte presque rien » qu’à « jamais la dette n’a coûté aussi cher ».
-Eurostat, intérêts dus par les administrations publiques, en euros courants non corrigés de l’inflation ; cercles évidés : prévision du Gouvernement, sur une base 2025 que l’avis du Haut Conseil ne publie pas.
+Les deux constats tiennent ensemble et répondent à « la dette ne coûte presque rien » comme à « jamais la dette n’a coûté aussi cher » : en euros courants, la charge de 2025 est bien la plus élevée depuis 1995 ; en part du PIB et des recettes, elle ne l’est pas.
+Eurostat, intérêts dus par les administrations publiques, en euros courants non corrigés de l’inflation ; cercles évidés : prévision du Gouvernement, à ne pas soustraire de la courbe observée.
 Télécharger · Citer · Données
 Brute, puis nette.
 Les administrations perçoivent aussi des intérêts : 3,5 milliards en 2025.
 Le solde entre intérêts dus et intérêts reçus est de 62,2 milliards, en hausse de 112 % depuis 2020 : la conclusion ne change pas.
 Ce solde n’est pas un « coût économique net » de la dette ; il ne retranche que les intérêts perçus.
-Environ 1 600 € d'intérêts par foyer fiscal : une division arithmétique, ni un impôt dû ni la répartition réelle de la charge
+Environ 1 600 € d’intérêts par foyer fiscal : une division arithmétique, ni un impôt dû ni la répartition réelle de la charge
 À l’échelle d’un foyer.
 Rapportée aux 41 millions de foyers fiscaux (revenus 2023, déclaration 2024, DGFiP), la charge d’intérêts de 2025 représente environ 1 600 € par foyer.
 C’est une division uniforme théorique de la charge totale : ce montant n’est pas un impôt dû par chaque foyer, et il ne dit pas qui la supporte — ménages, entreprises et non-résidents contribuent aux recettes publiques dans des proportions que ce calcul ignore.
@@ -99,17 +99,17 @@ Télécharger · Citer · Données
 Depuis le creux de 2020, la charge progresse plus vite que chacune des neuf autres grandes fonctions de dépense : +102 %, contre +59 % pour la plus rapide d’entre elles (logement et équipements collectifs).
 La dixième, les services publics généraux, contient les intérêts eux-mêmes.
 Sur l’ensemble de la période, c’était l’inverse : la baisse des taux allégeait la facture pendant que la dépense publique progressait.
-Précaution : ces équivalences comparent des masses, pas des causes — aucun euro d'intérêts n'est réputé pris à la santé, à l'école ou à la justice
+Précaution : ces équivalences comparent des masses, pas des causes — aucun euro d’intérêts n’est réputé pris à la santé, à l’école ou à la justice
 Les intérêts sont une nature de dépense, les postes comparés des fonctions.
 Ce n’est pas le même découpage — les intérêts figurent d’ailleurs dans la fonction « services publics généraux » — et la comparaison ne dit pas qu’un euro d’intérêts a été pris à l’un de ces budgets : elle donne un ordre de grandeur, un poids rapporté à la ressource publique.
 Quel stock cette facture rémunère-t-elle ?
 Cette facture rémunère un stock : l’encours accumulé, le chiffre que l’on cite le plus souvent.
 Sa formation (ce qu’il doit aux déficits, aux intérêts et à la croissance) est l’objet du premier volet du dossier, Pourquoi la dette publique augmente-t-elle ?
 Dette publique française — dernière donnée officielle
-3 595,5 milliards d'euros soit 119,0 % du PIB, au T2 2026.
-Simulation non officielle, au rythme de l'an passé, pour aujourd'hui :
+3 595,5 milliards d’euros soit 119,0 % du PIB, au T2 2026.
+Simulation non officielle, au rythme de l’an passé, pour aujourd’hui :
 —
-Ordre de grandeur mécanique, extrapolé depuis la publication INSEE du T2 2026 au rythme observé sur un an (+5,2 % l'an), et arrondi au milliard — ni une observation, ni une prévision, ni la dette d'aujourd'hui.
+Ordre de grandeur mécanique, extrapolé depuis la publication INSEE du T2 2026 au rythme observé sur un an (+5,2 % l’an), et arrondi au milliard — ni une observation, ni une prévision, ni la dette d’aujourd’hui.
 21,6 %du PIB en 1978, avant le décrochage
 × 5,5le ratio dette/PIB, multiplié depuis 1978
 jamaisrevenue à son niveau de dix ans plus tôt
@@ -147,12 +147,12 @@ Le Haut Conseil, que la loi charge d’apprécier le réalisme de ces prévision
 Il relève aussi que la charge prévue pour 2026 dépasse de 4,5 Md€ celle de la loi de finances initiale, essentiellement à cause des obligations indexées sur les prix : l’indexation ne joue pas qu’en 2022.
 Ces prévisions ne prolongent pas la courbe observée.
 Le Haut Conseil écrit que la charge de 2027 serait « en hausse de plus de 25 Md€ par rapport à 2025 ».
-L’avis ne publie pas cette base 2025 ; il la situe seulement sous 66 milliards, et rien n’établit qu’elle coïncide avec les 65,7 milliards d’Eurostat.
+L’avis donne pour 2025 une charge arrondie à 66 milliards (tableau 10), compatible avec les 65,7 milliards d’Eurostat ; ce tableau, schématique, mêle conventions de comptabilité nationale et budgétaire.
 Sur les figures, la prévision est faite de cercles évidés, non reliés à la courbe, et aucune hausse entre l’observé et le prévu ne se calcule par soustraction.
 Ce que les données ne montrent pas
 Les dépenses observées de santé et d’enseignement n’ont pas baissé.
 En euros, elles ont continué de croître.
-En part du PIB, elles sont au-dessus de 2019 (santé : 8,1 % puis 8,9 % en 2024 ; enseignement : 5,0 % puis 5,1 %), un peu sous leur pic de la crise sanitaire (9,4 % en 2021 pour la santé), quand le PIB s’est contracté.
+En part du PIB, elles sont au-dessus de 2019 (santé : 8,1 % puis 8,9 % en 2024 ; enseignement : 5,0 % puis 5,1 %), un peu sous leur pic de la crise sanitaire (9,4 % en 2021 pour la santé, 5,2 % en 2020 pour l’enseignement).
 Quiconque affirme que la dette a « déjà fait baisser » ces budgets dit plus que les données.
 Mais l’inverse ne se déduit pas davantage : ces séries ne permettent ni d’attribuer leur trajectoire à la dette, ni d’exclure qu’elles auraient été plus élevées sans la contrainte d’intérêts.
 Un budget qui passe de 100 à 105 au lieu de 110 n’a pas baissé, et a pourtant subi une éviction.
@@ -189,32 +189,32 @@ La ventilation des dépenses par fonction paraissant avec près de deux ans de r
 Les deux années sont dites, jamais mélangées.
 Questions fréquentes
 Combien la dette publique coûte-t-elle chaque année à la France ?
-La mesure la plus directe est la charge d'intérêts des administrations publiques : 65,7 milliards d'euros en 2025, soit 2,2 % du PIB et 4,2 % des recettes publiques (Eurostat, série D41PAY, intérêts comptés quand ils sont dus).
-C'est 121 % de plus qu'au creux de 2020, et 78 % de plus qu'en 2019.
-Le niveau n'est pas inédit : en part du PIB, la charge retrouve celui de 2014, en part des recettes celui de 2013, et reste sous celui de 1995 (3,5 % du PIB).
+La mesure la plus directe est la charge d’intérêts des administrations publiques : 65,7 milliards d’euros en 2025, soit 2,2 % du PIB et 4,2 % des recettes publiques (Eurostat, série D41PAY, intérêts comptés quand ils sont dus).
+C’est 121 % de plus qu’au creux de 2020, et 78 % de plus qu’en 2019.
+Le niveau n’est pas inédit : en part du PIB, la charge retrouve celui de 2014, en part des recettes celui de 2013, et reste sous celui de 1995 (3,5 % du PIB).
 Nette des intérêts que les administrations reçoivent, elle vaut 62,2 milliards.
 Quel est le montant de la dette publique française ?
-3 595,5 milliards d'euros au T2 2026, soit 119,0 % du PIB (INSEE, dette de Maastricht des administrations publiques).
+3 595,5 milliards d’euros au T2 2026, soit 119,0 % du PIB (INSEE, dette de Maastricht des administrations publiques).
 Sur la série INSEE disponible (depuis 1995), le maximum du ratio dette/PIB est atteint au T2 2026 (119,0 %).
 Pourquoi la charge de la dette augmente-t-elle si vite ?
 Parce que deux termes montent ensemble : la quantité de dette et son coût moyen, le taux implicite.
-De 2020 à 2025, la charge augmente de 36,0 milliards d'euros ; en décomposition comptable, 15,1 tiennent à la hausse de l'encours et 20,9 à celle du taux implicite (depuis 2019, avant la crise sanitaire, le partage s'inverse : 16,1 pour l'encours, 12,7 pour le taux).
-Le taux implicite a fait l'essentiel de son chemin en 2022, l'année où l'inflation a aussi renchéri la charge des titres indexés de l'État (les séries ne mesurent pas la part de l'indexation) ; depuis, c'est la hausse de l'encours qui pèse le plus.
-Cette décomposition ne mesure pas l'effet des taux de marché : la part du taux implicite mêle refinancement, composition de la dette et indexation.
+De 2020 à 2025, la charge augmente de 36,0 milliards d’euros ; en décomposition comptable, 15,1 tiennent à la hausse de l’encours et 20,9 à celle du taux implicite (depuis 2019, avant la crise sanitaire, le partage s’inverse : 16,1 pour l’encours, 12,7 pour le taux).
+Le taux implicite a fait l’essentiel de son chemin en 2022, l’année où l’inflation a aussi renchéri la charge des titres indexés de l’État (les séries ne mesurent pas la part de l’indexation) ; depuis, c’est la hausse de l’encours qui pèse le plus.
+Cette décomposition ne mesure pas l’effet des taux de marché : la part du taux implicite mêle refinancement, composition de la dette et indexation.
 La charge de la dette dépasse-t-elle le budget de la justice ?
-En 2024, dernier millésime où toutes les séries sont comparables, les intérêts (60,1 milliards d'euros) se situent entre le poste « ordre et sécurité publics » (52,1 milliards, qu'ils dépassent) et l'enseignement (148,6 milliards), loin de la santé (261,2 milliards).
+En 2024, dernier millésime où toutes les séries sont comparables, les intérêts (60,1 milliards d’euros) se situent entre le poste « ordre et sécurité publics » (52,1 milliards, qu’ils dépassent) et l’enseignement (148,6 milliards), loin de la santé (261,2 milliards).
 Les tribunaux, au sens de la classification européenne COFOG (poste GF0303, et non le budget total de la mission Justice), représentent 8,3 milliards.
-Ces comparaisons disent un ordre de grandeur : aucun euro d'intérêts n'est réputé pris à l'un de ces postes.
-La hausse des intérêts a-t-elle déjà fait baisser les dépenses de santé ou d'éducation ?
-Pas dans les agrégats observés : en euros, les dépenses publiques de santé (261,2 milliards d'euros en 2024) et d'enseignement (148,6 milliards) ont continué de croître ; en part du PIB, elles sont au-dessus de 2019, un peu sous leur pic de la crise sanitaire, quand le PIB s'est contracté.
-Cela ne veut pas dire qu'il n'y a pas eu d'éviction : un budget qui passe de 100 à 105 au lieu de 110 n'a pas baissé, et a pourtant subi une éviction.
-Ces séries ne permettent ni d'attribuer leur trajectoire à la dette, ni d'exclure qu'elles auraient été plus élevées sans la contrainte d'intérêts.
-Ce qu'elles établissent : une charge plus élevée augmente le besoin de financement à politiques inchangées, et ses conséquences sur les dépenses, les prélèvements et le déficit dépendent ensuite des arbitrages ; qui absorbera l'ajustement est l'objet de la page « Qui paie vraiment la dette publique ? ».
+Ces comparaisons disent un ordre de grandeur : aucun euro d’intérêts n’est réputé pris à l’un de ces postes.
+La hausse des intérêts a-t-elle déjà fait baisser les dépenses de santé ou d’éducation ?
+Pas dans les agrégats observés : en euros, les dépenses publiques de santé (261,2 milliards d’euros en 2024) et d’enseignement (148,6 milliards) ont continué de croître ; en part du PIB, elles sont au-dessus de 2019, un peu sous leur pic de 2020-2021.
+Cela ne veut pas dire qu’il n’y a pas eu d’éviction : un budget qui passe de 100 à 105 au lieu de 110 n’a pas baissé, et a pourtant subi une éviction.
+Ces séries ne permettent ni d’attribuer leur trajectoire à la dette, ni d’exclure qu’elles auraient été plus élevées sans la contrainte d’intérêts.
+Ce qu’elles établissent : une charge plus élevée augmente le besoin de financement à politiques inchangées, et ses conséquences sur les dépenses, les prélèvements et le déficit dépendent ensuite des arbitrages ; qui absorbera l’ajustement est l’objet de la page « Qui paie vraiment la dette publique ? ».
 Reste une question que ces chiffres ne tranchent pas : qui supporte in fine cette charge, et une partie de son coût est-elle déplacée vers d’autres ?
 C’est l’objet de la page suivante.
 Pour prolonger l’analyse
 Dette Publique : Qui paie vraiment ?
-La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
 Cette page chiffre la facture.
 Elle ne dit pas qui la règle — et c’est là que tout se joue : une dette ne s’efface pas, et son coût peut se déplacer — vers le contribuable, vers l’épargnant par l’inflation, vers des services publics dont la marge se resserre, vers ceux qui ne votent pas encore — selon les décisions prises pour l’ajuster.
 Le livre suit ces canaux un par un, chiffres officiels à l’appui, et conduit aux scénarios 2025-2035.
@@ -228,7 +228,7 @@ D’où viennent ces chiffres
 Les valeurs de cette page sont dérivées automatiquement des séries de l’INSEE et d’Eurostat, réinterrogées chaque semaine ; dernier relevé ayant fait bouger une valeur : 21/10/2026.
 Trois familles de valeurs sont conservées dans le dépôt, avec leur source et leur date : les ratios de 1978 à 1994, transcrits d’un tableau de l’INSEE (leur raccord, l’année 1995, est contrôlé contre la série vivante à chaque exécution) ; et, saisies à la main, les prévisions du Gouvernement et les repères de l’Agence France Trésor.
 Données en accès libre : dette_officielle.json, licence CC BY 4.0.
-Séries INSEE et Eurostat, intérêts en droits constatés, taux implicite sur la dette de fin d'année précédente, valeurs saisies datées ; compilation sous licence CC BY 4.0
+Séries INSEE et Eurostat, intérêts en droits constatés, taux implicite sur la dette de fin d’année précédente, valeurs saisies datées ; compilation sous licence CC BY 4.0
 Valeurs dérivées automatiquement des sources officielles : dette de Maastricht trimestrielle de l’INSEE (séries 010777616 — encours en milliards d’euros — et 010777608 — % du PIB) ; intérêts dus (D41PAY), intérêts reçus (D41REC) et recettes totales (TR) des administrations publiques (Eurostat, gov_10a_main) ; dépenses par fonction COFOG, dont les dix grandes fonctions (Eurostat, gov_10a_exp) ; taux à 10 ans (Eurostat, irt_lt_mcby_a).
 Le taux implicite est calculé comme intérêts de l’année rapportés à l’encours de fin d’année précédente ; la décomposition partage la variation de la charge entre encours et taux implicite, par contributions à mi-chemin.
 La charge d’intérêts retenue est la série D41PAY, enregistrée en droits constatés — rattachée à l’année où les intérêts sont dus, non à la date de paiement, ce qui y fait entrer l’indexation des titres indexés dès qu’elle est acquise — et portant sur le même ensemble, toutes administrations publiques, que les recettes auxquelles elle est rapportée ; les comptes de l’INSEE présentent les intérêts hors correction SIFIM (services d’intermédiation financière indirectement mesurés) et affichent, pour la même année, un montant légèrement différent : deux conventions voisines, non deux mesures contradictoires.
@@ -242,54 +242,54 @@ Les séries brutes appartiennent à l’INSEE et à Eurostat ; ce qui est mis so
 Le compteur animé de la page est une extrapolation mécanique entre deux publications trimestrielles — jamais une donnée.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
-D'où vient la hausse de la charge d'intérêts : encours ou taux implicite, 2020-2025
-Ce qui, dans la hausse de la charge, tient à la hausse de l'encours et ce qui tient à celle du taux implicite, année par année.
-Précaution d'interprétation.
-Décomposition comptable encours / taux implicite : la part du taux implicite mêle refinancement, composition de la dette et indexation ; elle ne mesure pas à elle seule l'effet des taux de marché.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+D’où vient la hausse de la charge d’intérêts : encours ou taux implicite, 2020-2025
+Ce qui, dans la hausse de la charge, tient à la hausse de l’encours et ce qui tient à celle du taux implicite, année par année.
+Précaution d’interprétation.
+Décomposition comptable encours / taux implicite : la part du taux implicite mêle refinancement, composition de la dette et indexation ; elle ne mesure pas à elle seule l’effet des taux de marché.
 Calcul sur séries Eurostat (gov_10a_main, D41PAY) et INSEE (dette au 31 décembre), 2020-2025
 Télécharger en PNG
 SVG
-Le ciseau : encours et charge d'intérêts, 1995-T2 2026
-L'encours double en part de PIB pendant que la charge d'intérêts baisse jusqu'à son point bas, puis remonte, surtout à partir de 2022.
-Précaution d'interprétation.
+Le ciseau : encours et charge d’intérêts, 1995-T2 2026
+L’encours double en part de PIB pendant que la charge d’intérêts baisse jusqu’à son point bas, puis remonte, surtout à partir de 2022.
+Précaution d’interprétation.
 Deux échelles distinctes, une même unité : le % du PIB.
 INSEE, dette de Maastricht (T2 2026) · Eurostat gov_10a_main, intérêts D41PAY (2025)
 Télécharger en PNG
 SVG
 Le taux implicite, 1996-2025
 Le coût moyen du stock : il baisse pendant vingt-cinq ans, puis remonte depuis son point bas, surtout par un saut en 2022.
-Précaution d'interprétation.
-Taux implicite = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour.
+Précaution d’interprétation.
+Taux implicite = intérêts de l’année / encours au 31 décembre précédent, non le taux d’emprunt du jour.
 Calcul sur séries Eurostat (gov_10a_main) et INSEE, 1996-2025
 Télécharger en PNG
 SVG
 La dette depuis 1978, en % du PIB
-La dette monte par paliers, chacun installé par une crise ; dans la série observée, le ratio n'est jamais revenu à son niveau de dix ans auparavant.
-Précaution d'interprétation.
-Dette au sens de Maastricht, toutes administrations publiques. « > 80 % » : première fin d'année au-delà du seuil ; en trimestriel, il peut être franchi plus tôt.
+La dette monte par paliers, chacun installé par une crise ; dans la série observée, le ratio n’est jamais revenu à son niveau de dix ans auparavant.
+Précaution d’interprétation.
+Dette au sens de Maastricht, toutes administrations publiques. « > 80 % » : première fin d’année au-delà du seuil ; en trimestriel, il peut être franchi plus tôt.
 INSEE, dette de Maastricht, 1978-T2 2026
 Télécharger en PNG
 SVG
 Taux de marché et coût moyen du stock, 1996-2025
 Le coût moyen du stock suit le taux à 10 ans avec des années de retard : il descend moins bas, et remonte moins vite.
-Précaution d'interprétation.
-Le taux à 10 ans est un indicateur de référence, non le coût effectif des émissions ; le taux implicite, coût moyen de tout le stock, ne suit les taux de marché qu'au fil des renouvellements, et inclut l'indexation des titres indexés sur l'inflation.
+Précaution d’interprétation.
+Le taux à 10 ans est un indicateur de référence, non le coût effectif des émissions ; le taux implicite, coût moyen de tout le stock, ne suit les taux de marché qu’au fil des renouvellements, et inclut l’indexation des titres indexés sur l’inflation.
 Eurostat irt_lt_mcby_a (taux à 10 ans) · taux implicite : Eurostat gov_10a_main et INSEE, 1996-2025
 Télécharger en PNG
 SVG
-La charge d'intérêts en milliards d'euros, 1995-2025
+La charge d’intérêts en milliards d’euros, 1995-2025
 Ce que la dette coûte en euros, et non en part de PIB : le creux, puis la remontée.
-Précaution d'interprétation.
-Milliards d'euros courants, non corrigés de l'inflation.
-Cercles évidés : prévision du Gouvernement, dont la base 2025 n'est pas publiée ; aucune variation ne se lit entre l'observé et le prévu.
+Précaution d’interprétation.
+Milliards d’euros courants, non corrigés de l’inflation.
+Cercles évidés : prévision du Gouvernement, dont la base 2025 n’est pas publiée ; aucune variation ne se lit entre l’observé et le prévu.
 Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), 1995-2025
 Télécharger en PNG
 SVG
-La charge d'intérêts face aux grands budgets, 1995-2024
-La charge d'intérêts est longtemps restée sous le poste « ordre et sécurité » ; elle est repassée au-dessus.
-Précaution d'interprétation.
-Les intérêts sont une nature de dépense, les trois autres des fonctions : ce n'est pas le même découpage, et aucun transfert n'est établi de l'un vers l'autre.
+La charge d’intérêts face aux grands budgets, 1995-2024
+La charge d’intérêts est longtemps restée sous le poste « ordre et sécurité » ; elle est repassée au-dessus.
+Précaution d’interprétation.
+Les intérêts sont une nature de dépense, les trois autres des fonctions : ce n’est pas le même découpage, et aucun transfert n’est établi de l’un vers l’autre.
 Eurostat : intérêts dus (gov_10a_main, D41PAY) et dépenses des administrations par fonction (gov_10a_exp, COFOG), 1995-2024
 Télécharger en PNG
 SVG
@@ -306,13 +306,16 @@ Les données
 Séries consolidées et grandeurs dérivées : taux implicite, ratios, équivalences à millésime unique.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (INSEE et Eurostat), sous leurs propres conditions.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
 L’anthropie est l’hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu’ils ne le résolvent.
 Révisions
-21 octobre 2026 — Correction : après la révision de la charge d'intérêts 2025 par Eurostat (notification d'octobre), la page ne conclut plus que la base 2025 de la prévision du Gouvernement diffère de la série d'Eurostat ; l'avis ne publie pas cette base, il la situe seulement sous un plafond.
+5 novembre 2026 — Correction : l’avis du Haut Conseil publie bien la base 2025 de la prévision (66 milliards, arrondie, tableau 10), compatible avec la série d’Eurostat ; la page disait le contraire.
+Le chapô précise que la charge a baissé en part du PIB, et qu’en euros courants celle de 2025 est la plus élevée depuis 1995.
+Le pic de 2021 des dépenses de santé ne tient pas à une contraction du PIB, qui a rebondi cette année-là.
+21 octobre 2026 — Correction : après la révision de la charge d’intérêts 2025 par Eurostat (notification d’octobre), la page ne conclut plus que la base 2025 de la prévision du Gouvernement diffère de la série d’Eurostat ; l’avis ne publie pas cette base, il la situe seulement sous un plafond.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

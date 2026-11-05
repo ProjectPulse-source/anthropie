@@ -33,6 +33,7 @@ import hashlib
 import html
 import io
 import json
+import math
 import re
 import sys
 from datetime import datetime, timezone
@@ -311,7 +312,9 @@ def affichage(c, lang):
     return {
         "t": str(arr5(c["T"])), "t_exact": f(c["T"], 1), "t_annuel": f(c["T_annuel"], 1), "pts_pib": f(c["pts_pib"], 1),
         "gap23": f(c["gap23"], 1),
-        "a_bas": str(arr5(c["A_r0"][0])), "a_haut": str(arr5(c["A_r0"][1])),
+        # Audit du 05/11/2026 : arr5 donnait « 145 à 170 » pour 144,1 et 171,5 -- une plage qui ne contenait pas ses
+        # propres valeurs. Bornes arrondies VERS L'EXTERIEUR a l'unite : la plage affichee contient toujours la plage calculee.
+        "a_bas": str(int(math.floor(c["A_r0"][0]))), "a_haut": str(int(math.ceil(c["A_r0"][1]))),
         "a_tout_bas": str(arr5(c["A_tout"][0])), "a_tout_haut": str(arr5(c["A_tout"][1])),
         "spf": f(A[k_spf]["r=0%"], 1), "bdf": f(A[k_bdf]["r=0%"], 1), "ce_aut": f(A[k_ceA]["r=0%"], 1), "ce_hiv": f(A[k_ceH]["r=0%"], 1),
         "b_fr": f(c["B"]["point mort France 10 ans au 31/12/2020 (0,861, plat)"], 1),

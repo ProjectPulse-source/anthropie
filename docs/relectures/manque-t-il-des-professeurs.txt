@@ -1,16 +1,16 @@
-# relu le 2026-10-23 ; texte servi de /manque-t-il-des-professeurs/, build de 0a84b95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /manque-t-il-des-professeurs/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Manque-t-il des professeurs au lycée ?
-Au lycée général et technologique public, 10,4 % des heures de cours prévues n'ont pas été assurées en 2024-2025, une sur dix.
-Sur ces 10,4 points, les absences individuelles d'enseignants non remplacées en représentent 3,9 ; les fermetures d'établissement, les enseignants mobilisés par les examens ou les commissions et leur formation, 6,6.
-Ce chiffre ne compte pas les professeurs qui manquent : aucune statistique publique ne mesure l'écart entre les enseignants nécessaires et ceux qui sont en poste.
+Au lycée général et technologique public, 10,4 % des heures de cours prévues n’ont pas été assurées en 2024-2025, une sur dix.
+Sur ces 10,4 points, les absences individuelles d’enseignants non remplacées en représentent 3,9 ; les fermetures d’établissement, les enseignants mobilisés par les examens ou les commissions et leur formation, 6,6.
+Ce chiffre ne compte pas les professeurs qui manquent : aucune statistique publique ne mesure l’écart entre les enseignants nécessaires et ceux qui sont en poste.
 Cours non assurés, postes non pourvus, classes chargées : trois mesures, qui ne disent pas la même chose.
-Page mise à jour le 10 octobre 2026
+Page mise à jour le 5 novembre 2026 · révisions
 École, lycée et université
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 10 octobre 2026 DEPP : Repères et références statistiques 2026, Notes d'Information 26-14, 25-36, 26-38 et 26-42 ; ministère, résultats des concours 2026 ; OCDE, dépense par élève (2012-2023) ; énoncés relus à leur source.
+Données mises à jour le 10 octobre 2026 DEPP : Repères et références statistiques 2026, Notes d’Information 26-14, 25-36, 26-38 et 26-42 ; ministère, résultats des concours 2026 ; OCDE, dépense par élève (2012-2023) ; énoncés relus à leur source.
 Télécharger : CSV · JSON · méthode
 Une heure de cours sur dix n’a pas lieu : pourquoi ?
-Heures d'enseignement prévues et non assurées, par motif, dans les établissements publics du second degré, 2024-2025 (DEPP, Note d'Information 26-14).
+Heures d’enseignement prévues et non assurées, par motif, dans les établissements publics du second degré, 2024-2025 (DEPP, Note d’Information 26-14).
 Le résultat en une phrase.
 Au lycée général et technologique public, 10,4 % des heures de cours prévues n’ont pas eu lieu en 2024-2025, une sur dix ; les absences individuelles d’enseignants non remplacées en représentent 3,9 points, les trois autres motifs réunis 6,6 points.
 Le chiffre circule : « 10 % d’heures non assurées dans les lycées ».
@@ -76,7 +76,7 @@ Un taux de couverture ne mesure pas le besoin.
 Il rapporte les admis aux postes offerts, que fixe le budget ; il peut monter sans que l’on sache combien d’enseignants seraient nécessaires.
 Les concours disent combien on recrute ; les classes disent comment les élèves se répartissent entre les enseignants en poste.
 Les classes sont-elles plus chargées qu’avant ?
-Nombre moyen d'élèves par division, formations générales et technologiques en lycée, public et privé sous contrat (DEPP).
+Nombre moyen d’élèves par division, formations générales et technologiques en lycée, public et privé sous contrat (DEPP).
 Oui en moyenne : 30,2 élèves par classe en 2025, et plus de 30 chaque année depuis 2020, un niveau jamais atteint de 1994 à 2015 (au plus 29,4 en 2015).
 La hausse s’est faite entre 2016 et 2020 ; la moyenne, qui compte toutes les classes, est stable depuis.
 Deux classes sur trois comptent 30 élèves ou plus (67,5 %, contre 60,9 % en 2015).
@@ -92,7 +92,7 @@ Non.
 En comptant les cours en groupe, un enseignant de lycée général et technologique public a en moyenne devant lui, par heure de cours, en métropole, de 25,1 élèves dans l’académie de Paris à 22,2 en Corse ; 19,3 en Guyane.
 Un écart de 2,9 élèves par heure de cours entre les académies extrêmes de métropole.
 Cet écart décrit l’encadrement, pas les cours perdus, que la statistique publique ne ventile pas par académie.
-Le Premier ministre a demandé aux recteurs un premier bilan des absences longues et des postes non pourvus pour le 16 octobre 2026 ; sa publication n’est pas annoncée.
+Le Premier ministre avait demandé aux recteurs un premier bilan des absences longues et des postes non pourvus pour le 16 octobre 2026.
 Les moyens ont-ils suivi le nombre d’élèves ?
 Pas sur vingt ans.
 Entre 2005 et 2025, les lycées généraux et technologiques ont gagné 6,1 % d’élèves et perdu 1,3 % de leurs classes ; les heures d’enseignement par élève sont passées de 1,41 à 1,32 par semaine (6 % de moins), la baisse s’étant faite entre 2010 et 2015 (1,41 puis 1,33).
@@ -163,6 +163,7 @@ De 4,5 % à 11,7 % : multiplié par 2,6, sur une base 2022-2023 que la Cour juge
 Ministère, réponse au Sénat (2025) : « une baisse de 3 points du taux d’heures non assurées depuis 2022-2023 ».
 Enquête de la DEPP : de 11 % (publié à l’unité) à 9,8 %, une baisse comprise entre 0,7 et 1,7 point.
 La réponse tire ses 3 points du suivi du remplacement de courte durée, sans en publier la méthode : les deux évolutions ne se comparent pas directement.
+Sur un même champ (hors Mayotte, l’année 2023-2024 recalculée), la DEPP observe ensuite une remontée : de 9,1 % à 9,8 % des heures, soit 0,7 point de plus, qu’elle attribue à un plus grand nombre de jours de fermeture des établissements (de 1,7 % à 2,3 % des heures).
 Le SNES-FSU avance aussi un nombre de postes perdus au CAPES externe 2026 ; la DEPP n’a pas encore publié cette session, et le chiffre n’est pas vérifiable aujourd’hui.
 Ce que ces données ne disent pas
 Le besoin d’enseignants : aucune série publique ne le mesure.
@@ -172,7 +173,7 @@ Les territoires : les heures non assurées ne sont publiées ni par académie ni
 La rentrée 2026 : les chiffres s’arrêtent à la rentrée 2025 pour les classes et à 2024-2025 pour les cours perdus ; la session 2026 des concours n’est connue que par le ministère.
 Les causes : ces séries se juxtaposent, elles ne disent pas pourquoi les classes ont grossi, pourquoi les candidats aux concours sont moins nombreux ou pourquoi certains concours scientifiques ne se remplissent pas.
 Le vécu des élèves : la qualité des cours, ce qui remplace un cours non assuré, la charge de travail, les conditions matérielles ne sont pas dans ces chiffres.
-La consultation nationale des lycéens, ouverte jusqu’au 23 octobre 2026, en recueille une partie.
+La consultation nationale des lycéens, close le 23 octobre 2026, en a recueilli une partie.
 L’enquête sur les heures non assurées est déclarative et faite sur un échantillon d’établissements publics ; les grèves y sont comptées parmi les absences individuelles.
 Synthèse
 Ce qu’il faut retenir
@@ -183,31 +184,31 @@ Les classes : plus de 30 élèves en moyenne depuis 2020, mais moins de classes 
 Aucune de ces mesures ne compte les professeurs qui manquent, et aucune, seule, ne permet de répondre oui ou non.
 Questions fréquentes
 Manque-t-il des professeurs au lycée ?
-Aucune statistique publique ne mesure le besoin d'enseignants : on ne peut donc pas dire combien il en manque.
+Aucune statistique publique ne mesure le besoin d’enseignants : on ne peut donc pas dire combien il en manque.
 Trois mesures disent chacune autre chose.
-Les cours : 10,4 % des heures prévues n'ont pas été assurées au lycée général et technologique public en 2024-2025, dont 3,9 points pour absences individuelles non remplacées.
+Les cours : 10,4 % des heures prévues n’ont pas été assurées au lycée général et technologique public en 2024-2025, dont 3,9 points pour absences individuelles non remplacées.
 Le recrutement : les CAPES de mathématiques et de physique-chimie ont pourvu moins de quatre postes sur cinq de 2023 à 2025 (71,4 % et 73,7 % en 2025) ; en 2026, avec deux concours et davantage de postes, 93,1 % et 97,8 %, un résultat qui ne prolonge pas la série.
 Les classes : 30,2 élèves en moyenne en 2025.
-Les enseignants en charge des formations générales et technologiques du lycée, public et privé, sont 118 582 en 2025, 4,0 % de moins qu'en 2017 ; ce sont des enseignants en poste, pas des postes budgétaires.
-Combien d'heures de cours sont perdues au lycée ?
-En 2024-2025, 10,4 % des heures prévues n'ont pas été assurées dans les lycées généraux et technologiques publics : 3,9 points pour absences individuelles des enseignants non remplacées (maladie, congés, grèves), 1,9 pour des enseignants mobilisés par les examens ou les commissions, 3,3 pour la fermeture de l'établissement, presque entièrement pour les examens, et 1,4 pour la formation continue (DEPP).
-Les écarts entre établissements sont grands : 3 % d'heures non assurées en moyenne dans les 10 % d'établissements publics du second degré les moins touchés, 19 % dans les 10 % les plus touchés.
+Les enseignants en charge des formations générales et technologiques du lycée, public et privé, sont 118 582 en 2025, 4,0 % de moins qu’en 2017 ; ce sont des enseignants en poste, pas des postes budgétaires.
+Combien d’heures de cours sont perdues au lycée ?
+En 2024-2025, 10,4 % des heures prévues n’ont pas été assurées dans les lycées généraux et technologiques publics : 3,9 points pour absences individuelles des enseignants non remplacées (maladie, congés, grèves), 1,9 pour des enseignants mobilisés par les examens ou les commissions, 3,3 pour la fermeture de l’établissement, presque entièrement pour les examens, et 1,4 pour la formation continue (DEPP).
+Les écarts entre établissements sont grands : 3 % d’heures non assurées en moyenne dans les 10 % d’établissements publics du second degré les moins touchés, 19 % dans les 10 % les plus touchés.
 Pourquoi les lycées ferment-ils pendant les examens ?
 En 2024-2025, un lycée général et technologique public a été fermé 6,3 jours en moyenne, dont 5,8 pour les examens et leur préparation (DEPP).
-L'enquête compte ces journées ; elle ne dit pas ce qui, dans l'organisation des examens, impose de fermer, ni quelle part en serait évitable.
-Les concours d'enseignants manquent-ils de candidats ?
-Ils en comptent deux fois moins par poste : aux concours externes d'enseignants du second degré public, 80 222 candidats se sont présentés en 2005 et 28 570 en 2025, soit 6,0 puis 3,0 candidats par poste offert (DEPP).
+L’enquête compte ces journées ; elle ne dit pas ce qui, dans l’organisation des examens, impose de fermer, ni quelle part en serait évitable.
+Les concours d’enseignants manquent-ils de candidats ?
+Ils en comptent deux fois moins par poste : aux concours externes d’enseignants du second degré public, 80 222 candidats se sont présentés en 2005 et 28 570 en 2025, soit 6,0 puis 3,0 candidats par poste offert (DEPP).
 Moins de candidats ne dit pas, à lui seul, combien de postes restent vacants : la part des postes pourvus varie selon la discipline.
 Les classes de lycée sont-elles surchargées ?
-Le mot n'a pas de seuil officiel.
-Les classes du lycée général et technologique comptent 30,2 élèves en moyenne en 2025, plus qu'en aucune année de 1994 à 2015 ; deux sur trois ont 30 élèves ou plus.
-Près d'un lycéen du public sur quatre (23,6 %) est dans une classe de 35 ou plus, mais la part des classes de 35 et plus est plus faible qu'en 2015 (19,9 % contre 22,5 %).
+Le mot n’a pas de seuil officiel.
+Les classes du lycée général et technologique comptent 30,2 élèves en moyenne en 2025, plus qu’en aucune année de 1994 à 2015 ; deux sur trois ont 30 élèves ou plus.
+Près d’un lycéen du public sur quatre (23,6 %) est dans une classe de 35 ou plus, mais la part des classes de 35 et plus est plus faible qu’en 2015 (19,9 % contre 22,5 %).
 La France dépense-t-elle peu pour ses lycéens ?
-Pas en comparaison internationale : selon l'OCDE, la dépense publique par élève du lycée général dépasse l'agrégat de l'OCDE de 36 % en 2023 ; elle le dépasse chaque année depuis 2012 ; la DEPP, sur l'ensemble du second cycle et toutes sources de financement, trouve 27,7 % de plus que la moyenne de l'OCDE.
-C'est une autre question que l'évolution dans le temps : la dépense par lycéen général et technologique, en euros constants, était en 2024 inférieure de 8 % à son niveau de 2010 (DEPP) ; les comptes provisoires l'estiment à 13 200 € en 2025.
+Pas en comparaison internationale : selon l’OCDE, la dépense publique par élève du lycée général dépasse l’agrégat de l’OCDE de 36 % en 2023 ; elle le dépasse chaque année depuis 2012 ; la DEPP, sur l’ensemble du second cycle et toutes sources de financement, trouve 27,7 % de plus que la moyenne de l’OCDE.
+C’est une autre question que l’évolution dans le temps : la dépense par lycéen général et technologique, en euros constants, était en 2024 inférieure de 8 % à son niveau de 2010 (DEPP) ; les comptes provisoires l’estiment à 13 200 € en 2025.
 Après un premier échec, qui peut recommencer ?
 La Société du premier coup
-Pourquoi certains peuvent recommencer — et d'autres non
+Pourquoi certains peuvent recommencer — et d’autres non
 Cette page mesure les moyens du lycée.
 La question qui vient ensuite est celle des parcours : quand un élève échoue une première fois, à un examen, une orientation, une première année d’études, qui peut réellement recommencer, et à quel coût selon son milieu ?
 Le livre montre que cette possibilité de recommencer n’est pas également distribuée.
@@ -248,30 +249,30 @@ Le protocole a été écrit et soumis à une contre-expertise externe avant le p
 La page publiée a reçu une seconde contre-expertise, qui a fait ajouter les résultats des concours 2026, la dépense de 2025 et les écarts entre établissements, et préciser plusieurs formulations ; sa refonte d’octobre 2026, une troisième, qui a fait corriger le périmètre de plusieurs chiffres et séparer la session 2026 de la série des concours.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
-Une heure de cours sur dix n'a pas lieu au lycée : pourquoi ?
-Au lycée général et technologique public, en 2024-2025, les absences individuelles d'enseignants non remplacées pèsent moins que les trois autres motifs réunis : fermetures (presque toutes pour les examens), enseignants mobilisés par les examens ou les commissions, formation ; au collège, les deux parts s'équilibrent.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Une heure de cours sur dix n’a pas lieu au lycée : pourquoi ?
+Au lycée général et technologique public, en 2024-2025, les absences individuelles d’enseignants non remplacées pèsent moins que les trois autres motifs réunis : fermetures (presque toutes pour les examens), enseignants mobilisés par les examens ou les commissions, formation ; au collège, les deux parts s’équilibrent.
 Une seule année publiée au dixième.
-Précaution d'interprétation.
+Précaution d’interprétation.
 En % des heures prévues.
 Examens, formation : enseignants absents eux aussi.
 Individuelles : maladie, congés, grèves.
 Enquête par échantillon, une année.
-DEPP, enquête sur le temps d'enseignement non assuré (Note d'Information 26-14), établissements publics, 2024-2025
+DEPP, enquête sur le temps d’enseignement non assuré (Note d’Information 26-14), établissements publics, 2024-2025
 Télécharger en PNG
 SVG
 Élèves par classe au lycée général et technologique, 1994-2025
 Depuis 2020, les classes de lycée GT comptent plus de 30 élèves en moyenne, un niveau jamais atteint de 1994 à 2015 ; la moyenne est stable depuis.
-Précaution d'interprétation.
-Nombre moyen d'élèves par division (classe entière).
+Précaution d’interprétation.
+Nombre moyen d’élèves par division (classe entière).
 Devant un professeur, les élèves sont moins nombreux : une partie des heures se fait en groupe.
 DEPP, Repères et références statistiques 2026, fiches 2.05 et 2.06 (public et privé sous contrat)
 Télécharger en PNG
 SVG
-Part des postes pourvus aux concours externes d'enseignants, 2008-2025 et 2026
+Part des postes pourvus aux concours externes d’enseignants, 2008-2025 et 2026
 De 2023 à 2025, les CAPES de mathématiques et de physique-chimie sont restés sous quatre postes pourvus sur cinq.
 En 2026, deux concours (bac+3 et bac+5) et davantage de postes : plus de neuf sur dix pourvus, un résultat qui ne prolonge pas la série et ne mesure pas le besoin.
-Précaution d'interprétation.
+Précaution d’interprétation.
 Admis rapportés aux postes offerts ; ne mesure pas le besoin.
 2026 : deux concours (bac+3, bac+5), hors série.
 DEPP, RERS 2026, fiches 9.27 et 9.28 (concours externes, public) ; 2026 : ministère, résultats par concours
@@ -279,7 +280,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Manque-t-il des professeurs au lycée ? ».
-Données DEPP, ministère de l'Éducation nationale, OCDE, Cour des comptes, Sénat, relevé du 10 octobre 2026. https://stephane-lalut.com/manque-t-il-des-professeurs/
+Données DEPP, ministère de l’Éducation nationale, OCDE, Cour des comptes, Sénat, relevé du 10 octobre 2026. https://stephane-lalut.com/manque-t-il-des-professeurs/
 Copier la citation
 En trois phrases
 Au lycée général et technologique public, 10,4 % des heures de cours prévues n’ont pas eu lieu en 2024-2025 : 3,9 points pour absences individuelles des enseignants non remplacées, 6,6 pour les trois autres motifs : les fermetures, surtout pendant les examens, la mobilisation des enseignants pour les examens, et leur formation.
@@ -288,11 +289,14 @@ Les classes comptent 30,2 élèves en moyenne en 2025 ; la dépense par lycéen 
 Aucune statistique publique ne mesure le besoin d’enseignants.
 Copier le résumé
 Les données
-Heures non assurées par motif et par type d'établissement, jours de fermeture, élèves par classe depuis 1994, distribution et taille vécue, élèves par cours selon la discipline, heures en groupe, candidats et postes des concours externes, couverture des concours, contractuels, dépense par lycéen, comparaison OCDE, élèves par cours par académie ; le même contenu existe en CSV, au format long.
+Heures non assurées par motif et par type d’établissement, jours de fermeture, élèves par classe depuis 1994, distribution et taille vécue, élèves par cours selon la discipline, heures en groupe, candidats et postes des concours externes, couverture des concours, contractuels, dépense par lycéen, comparaison OCDE, élèves par cours par académie ; le même contenu existe en CSV, au format long.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
-Les séries brutes appartiennent à leurs producteurs (DEPP, ministère de l'Éducation nationale, OCDE, Cour des comptes, Sénat), sous leurs propres conditions.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (DEPP, ministère de l’Éducation nationale, OCDE, Cour des comptes, Sénat), sous leurs propres conditions.
+Révisions
+5 novembre 2026 — Ajout : sur un même champ (hors Mayotte), la DEPP observe une remontée des heures non assurées de 9,1 % en 2023-2024 à 9,8 % en 2024-2025, qu’elle attribue à davantage de jours de fermeture (NI 26-14) ; la page ne le disait pas.
+Deux échéances d’octobre, désormais passées, sont écrites au passé.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

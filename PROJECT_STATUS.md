@@ -52,6 +52,28 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 — Corrections P0 de l'audit des ressources (exactitude, 7 pages, FR et EN)
+
+Audit et arbitrage : `D:\PRO_PROMOTION\AUDIT_RESSOURCES_2026-11-05\` (`SCAN.md`, `FICHES\`, `ARBITRAGE_CORRECTION_2026-11-05.md`,
+commit du dépôt PRO `faca73da`). Corrections de fond seulement ; la forme du dossier dette attend la fin de la mesure (16/12).
+- `/quest-ce-que-lanthropie/` : FAQ dette (hypothèse, non fait ; renvoi AWP-03, AWP-09, page générations) ; Anthropocène
+  « époque géologique proposée », rejet IUGS 2024 ; `date: 2026-04-03` (première mise en ligne possible, Wayback 16/04) — la
+  page affichait « publiée le 30 octobre ». Gabarit propre : section Révisions posée (et sur `premier-coup`, même manque).
+- Coût : l'avis du HCFP **publie** la base 2025 (tableau 10, 66 Md€) — jeu `trajectoire_plf.json`, jeton `prev_base_2025_mdeur`,
+  garde « compatible » vue mordre (68) ; chapô : charge en part du PIB, record en euros courants (garde `lg.extremum`) ;
+  « refute » → « answer » ; pic santé 2021 sans « contraction du PIB ».
+- Pourquoi : 0,23 « selon la Commission » retiré (calcul maison, deux éditions et deux dénominateurs ; jeton supprimé) ;
+  EN : lien vers la page inflation anglaise (menait à la française).
+- Peut-elle baisser : motif réel des 5 années écartées (ratio publié absent), 18 fenêtres écartées dites ; garde vue mordre ;
+  journal du « 16 années ».
+- Inflation : plage 144-172 (bornes arrondies vers l'extérieur ; 145-170 ne contenait pas 144,1-171,5) ; plus de « surtout parce que ».
+- Langue : 0,34 écart-type de 1997 à 2007 (0,37 = écart à 1987) ; écrans : jours de classe, week-end distingué (garde vue mordre).
+- Professeurs : constat NI 26-14 sur le même champ (9,1 → 9,8 %, fermetures 1,7 → 2,3), lu dans la pièce par `extrait.py`
+  (dossier de recherche, `RELEVE_PIECES` : le relevé ne bouge plus sans pièce nouvelle) ; garde vue mordre ; deux échéances au passé.
+- Contrôles : `check-all --ci` 0, build + `typo_build` 0, rendu, dates, liens 0, relecture 10 instantanés, figures 249/0 ;
+  exception `ciseau-dette-interets-m` retirée (sans objet). Non commité : 4 cartes `budget-2027-commune` régénérées par
+  `og_dossier_dette.py`, hors périmètre.
+
 ### 2026-11-05 — Budget 2027 : état de la procédure au 4 novembre ; générateur collectivités débloqué
 
 **Procédure** (`scripts/sources_collectivites/plf_votes.json`, `data/plf_procedure.json`, `data/sources_maj.json`) : le

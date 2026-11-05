@@ -1015,6 +1015,18 @@
     "2024-2025": 9.8
    }
   },
+  "ni2614_meme_champ": {
+   "champ": "second degré public, France hors Mayotte ; 2023-2024 recalculé par la DEPP (NI 26-14, figure 1, note 1)",
+   "total": {
+    "2023-2024": 9.1,
+    "2024-2025": 9.8
+   },
+   "fermeture": {
+    "2023-2024": 1.7,
+    "2024-2025": 2.3
+   },
+   "attribution_depp": "hausse due à un plus grand nombre de jours de fermeture (NI 26-14, résumé)"
+  },
   "deciles": {
    "champ": "second degré public, France hors Mayotte, 2024-2025 (NI 26-14, figure 4 web), entiers",
    "moins": {

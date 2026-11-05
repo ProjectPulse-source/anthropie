@@ -132,6 +132,9 @@ def milliers(v: float) -> str:
     return "{:,}".format(int(round(v))).replace(",", " ")
 
 
+EXCLUSIONS: dict = {}   # rempli a la construction de la conservation, lu par gardes() (audit du 05/11/2026)
+
+
 def lettres(n: int) -> str:
     return LETTRES[n] if 0 <= n < len(LETTRES) else str(n)
 
@@ -451,6 +454,10 @@ def calcul():
     if len(defi) + len(mid) + len(exc) != len(hautes):
         fail("repli europeen : les trois classes ne couvrent pas toutes les fenetres")
     cons = dict(annees_pays_calculables=calculables, retenues=sum(len(v) for v in R.values()), ecartees=len(ecartes), detail_ecartees=ecartes)
+    # Audit du 05/11/2026 : la prose disait ces annees ecartees « au-dela de 0,11 point d'ecart » alors que toutes
+    # l'etaient faute de ratio publie. La prose dit desormais le motif ; la garde « exclusions » le verifie.
+    # Compteurs hors du jeu publie (sinon releve_jeu y verrait une donnee nouvelle et avancerait le releve).
+    EXCLUSIONS.update(sans_ratio=sum(1 for e in ecartes if e["motif"] == "ratio publié absent"), total=len(ecartes))
     europe["sensibilite_seuil"] = sensibilite
     return fin, dec, annees, cmp_, europe, cons, R
 
@@ -576,7 +583,7 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     A["s100_n"] = lettres(len(s100))
     # Europe, repli
     h = europe["haute_dette"]
-    A["eu_pays"] = str(europe["pays"]); A["eu_fenetres"] = str(europe["fenetres"]); A["eu_premiere"] = str(europe["premiere"])
+    A["eu_pays"] = str(europe["pays"]); A["eu_fenetres"] = str(europe["fenetres"]); A["eu_premiere"] = str(europe["premiere"]); A["eu_fenetres_ecartees"] = str(europe["fenetres_ecartees_pib"])
     A["eu_def_n"] = str(h["deficit"]["n"]); A["eu_def_fb"] = lettres(h["deficit"]["fortes_baisses"]) if h["deficit"]["fortes_baisses"] else aucune()
     A["eu_def_baisses"] = lettres(h["deficit"]["baisses"]); A["eu_def_pays_n"] = lettres(len(h["deficit"]["pays"]))
     A["eu_def_pays"] = enumere([art(p) for p in h["deficit"]["pays"]])
@@ -602,6 +609,11 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("dernière décennie : l'effet taux-croissance fait BAISSER le ratio (de plus de 10 points)", d3["taux_croissance"] < -10),
         ("dernière décennie : les déficits primaires ajoutent plus que l'effet taux-croissance ne retire", d3["deficits_primaires"] > -d3["taux_croissance"]),
         ("dernière décennie : la dette monte", d3["variation"] > 0),
+        # --- méthode : « N années-pays … toutes faute de ratio publié » (audit du 05/11/2026)
+        ("exclusions : toutes les années-pays écartées le sont faute de ratio publié, et elles sont plusieurs",
+         EXCLUSIONS["total"] >= 2 and EXCLUSIONS["sans_ratio"] == EXCLUSIONS["total"]),
+        ("exclusions : des fenêtres sont écartées pour croissance nominale > 35 % (prose : « N écartées »)",
+         europe["fenetres_ecartees_pib"] >= 2),
         ("dernière décennie : aucune année d'excédent primaire", d3["annees_excedent"] == 0),
         ("dernière décennie : les déficits primaires font plus que toute la hausse", lg.depasse(d3["deficits_primaires"], d3["variation"], 1)),
         # --- les deux décennies précédentes

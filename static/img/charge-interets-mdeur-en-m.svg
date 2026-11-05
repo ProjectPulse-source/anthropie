@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 582" role="img" font-variant-numeric="tabular-nums" aria-labelledby="chm-t chm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="chm-t">Interest due in billion euros, 1995-2025</title><desc id="chm-d">One curve in billion euros, from 1995 to 2025. Interest due falls to its trough in 2020 (29.7 billion), then climbs steeply to 65.7 billion in 2025. Two open circles, not joined to the curve, show the Government's forecast in the 2027 budget bill: 79.2 billion in 2026, 91 in 2027. A forecast, not an observation, on a 2025 base the opinion does not publish.</desc>
+<title id="chm-t">Interest due in billion euros, 1995-2025</title><desc id="chm-d">One curve in billion euros, from 1995 to 2025. Interest due falls to its trough in 2020 (29.7 billion), then climbs steeply to 65.7 billion in 2025. Two open circles, not joined to the curve, show the Government's forecast in the 2027 budget bill: 79.2 billion in 2026, 91 in 2027. A forecast, not an observation, in conventions the opinion calls mixed: not to be subtracted from the curve.</desc>
 <rect width="300" height="582" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Interest due in billion euros,</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">1995-2025</text>
@@ -39,5 +39,5 @@
 <text class="pied-note" x="0" y="517.0" font-size="13.5" fill="#52514e">read between the observed and the</text>
 <text class="pied-note" x="0" y="534.0" font-size="13.5" fill="#52514e">forecast values.</text>
 <text class="pied-licence" x="0" y="555.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="572.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="572.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

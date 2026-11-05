@@ -1,11 +1,11 @@
-# relu le 2026-10-21 ; texte servi de /en/cost-of-french-public-debt/, build de 8a1a8a7 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/cost-of-french-public-debt/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What does French public debt actually cost?
 In 2025, French general government owes 65.7 billion euros of interest, 4.2% of its revenue, and 121% more, in euros, than at the 2020 trough.
 The rise is fast, but the level is not unprecedented: as a share of GDP, the burden is back to its 2014 level and remains below its 1995 level.
-For twenty-five years the debt doubled as a share of GDP while its bill fell.
+For twenty-five years the debt doubled as a share of GDP while its burden, measured the same way, fell; in current euros, however, the 2025 burden is the highest since 1995.
 This page explains why, where the rise comes from, and why it can last even if the debt stops growing.
-Page updated 21 October 2026 · revisions
+Page updated 5 November 2026 · revisions
 Public debt dossier
 Data · INSEE Q2 2026
 ↓ Charts, data and citations to reuseReuse this page
@@ -79,8 +79,8 @@ As a share of GDP, the burden went from 1.3% in 2020 to 2.2% in 2025.
 The 2025 burden is thus back, as a share of GDP, to its 2014 level; as a share of public revenue (4.2%), to its 2013 level.
 In 1995 it amounted to 3.5% of GDP and 6.8% of revenue.
 But since the 2020 trough it has risen by 121% in euros, and by 78% since 2019: both baselines lead to the same conclusion.
-The two findings hold together, and refute both “the debt costs almost nothing” and “debt has never cost so much”.
-Eurostat, interest due by general government, at current prices not adjusted for inflation; open circles: Government forecast, on a 2025 base that the Haut Conseil’s opinion does not publish.
+The two findings hold together and answer both “the debt costs almost nothing” and “debt has never cost so much”: in current euros, the 2025 burden is indeed the highest since 1995; as a share of GDP and of revenue, it is not.
+Eurostat, interest due by general government, at current prices not adjusted for inflation; open circles: Government forecast, not to be subtracted from the observed curve.
 Download · Cite · Data
 Gross, then net.
 General government also receives interest: 3.5 billion in 2025.
@@ -147,17 +147,17 @@ The Haut Conseil, the independent fiscal council charged by law with assessing h
 It also notes that the burden forecast for 2026 exceeds the initial budget act by 4.5 billion euros, mainly because of inflation-linked bonds: indexation is not only a 2022 story.
 These forecasts do not extend the observed curve.
 The Haut Conseil writes that the 2027 burden would be “more than 25 billion euros higher than in 2025”.
-The opinion does not publish that 2025 base; it only places it below 66 billion, and nothing establishes that it matches Eurostat’s 65.7 billion.
+The opinion gives a 2025 burden rounded to 66 billion (table 10), consistent with Eurostat’s 65.7 billion; that table is schematic and mixes national-accounts and budgetary conventions.
 On the charts, the forecast is drawn as open circles, not joined to the curve, and no rise between observed and forecast values is computed by subtraction.
 What the data does not show
 Observed health and education spending has not fallen.
 In euros, both kept rising.
-As a share of GDP, both are above 2019 (health: 8.1% then 8.9% in 2024; education: 5.0% then 5.1%), slightly below their pandemic peak (9.4% in 2021 for health), when GDP contracted.
+As a share of GDP, both are above 2019 (health: 8.1% then 8.9% in 2024; education: 5.0% then 5.1%), slightly below their pandemic peak (9.4% in 2021 for health, 5.2% in 2020 for education).
 Anyone claiming that debt has “already cut” those budgets is saying more than the data does.
 But the reverse does not follow either: these series allow neither an attribution of their path to the debt, nor a conclusion that they would not have been higher without the interest constraint.
 A budget that goes from 100 to 105 instead of 110 has not fallen, and has still been crowded out.
 No counterfactual, no causal claim — in either direction.
-Rising budgets, services under strain: a plausible explanation (labour costs, Baumol's cost disease, growing needs) that these series do not demonstrate
+Rising budgets, services under strain: a plausible explanation (labour costs, Baumol’s cost disease, growing needs) that these series do not demonstrate
 Hence an apparent paradox: if budgets rise, why do hospitals, schools and courts seem starved?
 The most common explanation — plausible, but not demonstrated by the series on this page — rests on two standard mechanisms.
 Public services rely heavily on human labour: their costs track wages, not the productivity gains of machines (Baumol’s cost disease, a standard result in the economics of services — its magnitude varies by sector).
@@ -192,26 +192,26 @@ The most direct measure is the interest burden of general government: 65.7 billi
 That is 121% more than at the 2020 trough, and 78% more than in 2019.
 The level is not unprecedented: as a share of GDP, the burden is back to its 2014 level, as a share of revenue to its 2013 level, and it remains below its 1995 level (3.5% of GDP).
 Net of the interest general government receives, it comes to 62.2 billion.
-How large is France's public debt?
+How large is France’s public debt?
 3,595.5 billion euros in Q2 2026, or 119.0% of GDP (INSEE, Maastricht debt of general government).
 Over the INSEE series available since 1995, the highest debt-to-GDP ratio is reached in Q2 2026 (119.0%).
 Why is the interest burden rising so fast?
 Because two terms are rising together: the amount of debt and its average cost, the implicit interest rate.
 From 2020 to 2025, the burden rises by 36.0 billion euros; in an accounting decomposition, 15.1 come from the larger debt stock and 20.9 from the higher implicit rate (since 2019, before the pandemic, the split reverses: 16.1 from the stock, 12.7 from the rate).
-The implicit rate made most of its move in 2022, the year inflation also raised the cost of the State's inflation-linked bonds (the series do not measure indexation's share); since then, the larger stock has weighed most.
+The implicit rate made most of its move in 2022, the year inflation also raised the cost of the State’s inflation-linked bonds (the series do not measure indexation’s share); since then, the larger stock has weighed most.
 This decomposition does not measure the effect of market rates: the implicit-rate part mixes refinancing, the composition of the debt and indexation.
 Does the interest burden exceed the justice budget?
 In 2024, the most recent year for which all series are comparable, interest (60.1 billion euros) sits between public order and safety (52.1 billion, which it exceeds) and education (148.6 billion), far below health (261.2 billion).
 The law courts alone, in the sense of the European COFOG classification (item GF0303, not the whole Justice ministry budget), account for 8.3 billion.
 These comparisons convey scale: no euro of interest is deemed to have been taken from any of these items.
 Has the rise in interest already cut health or education spending?
-Not in the observed aggregates: in euros, public spending on health (261.2 billion euros in 2024) and education (148.6 billion) kept rising; as a share of GDP, both are above 2019, slightly below their pandemic peak, when GDP contracted.
+Not in the observed aggregates: in euros, public spending on health (261.2 billion euros in 2024) and education (148.6 billion) kept rising; as a share of GDP, both are above 2019, slightly below their 2020-2021 peak.
 That does not mean there was no crowding out: a budget that goes from 100 to 105 instead of 110 has not fallen, and has still been crowded out.
 These series allow neither an attribution of their path to the debt, nor a conclusion that they would not have been higher without the interest constraint.
 What they do establish: a higher burden raises the borrowing requirement under unchanged policies, and its consequences for spending, taxes and the deficit then depend on the choices made; who will absorb the adjustment is the subject of the page “Who really pays for public debt?”.
 Which leaves a question these figures do not settle: who ultimately bears this burden, and is part of its cost shifted onto others?
 That is the subject of the next page.
-To take the analysis further Dette Publique : Qui paie vraiment ?, the author's book, in French: contents, excerpts and reviews →
+To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
 Where these figures come from
 The figures on this page are derived automatically from INSEE and Eurostat series, re-queried every week; last retrieval that changed a value: 21 October 2026.
 Three sets of values are stored in the repository, each with its source and date: the 1978-1994 ratios, transcribed from an INSEE table (their junction year, 1995, is checked against the live series at every run); and, entered by hand, the Government’s forecasts and the Agence France Trésor benchmarks.
@@ -228,7 +228,7 @@ The official series are re-queried every week; the retrieval date changes only w
 The consolidated data is published openly as dette_officielle.json under a CC BY 4.0 licence — free reuse, including commercial use, on the single condition that the source is cited.
 The raw series belong to INSEE and Eurostat; what is licensed here is the compilation: the assembly of series, the derived quantities (implicit rate, decomposition, ratios, single-vintage equivalences) and their reconciliation.
 The framework used to interpret these figures is set out in What is anthropy? and in the book ANTHROPY — A Big History of Civilization’s Hidden Costs.
-The book-length treatment of French public debt, Dette Publique : Qui paie vraiment ?, exists in French only.
+The book-length treatment of French public debt, Dette Publique: Qui paie vraiment?, exists in French only.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
 Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
@@ -249,14 +249,14 @@ SVG
 The implicit interest rate, 1996-2025
 The average cost of the stock: falling for twenty-five years, then rising from its low, mostly through a jump in 2022.
 Reading caveat.
-Implicit rate = a year's interest / debt outstanding at the end of the previous year, not today's borrowing rate.
+Implicit rate = a year’s interest / debt outstanding at the end of the previous year, not today’s borrowing rate.
 Computed on Eurostat (gov_10a_main) and INSEE series, 1996-2025
 Download PNG
 SVG
 Debt since 1978, as a % of GDP
 Debt climbs in steps, each set by a crisis; in the observed series, the ratio has never returned to its level of ten years earlier.
 Reading caveat.
-Maastricht debt, general government. "> 80%": first year-end above the threshold; in quarterly data it may be crossed earlier.
+Maastricht debt, general government. “> 80%”: first year-end above the threshold; in quarterly data it may be crossed earlier.
 INSEE, Maastricht debt, 1978-Q2 2026
 Download PNG
 SVG
@@ -300,7 +300,10 @@ Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (INSEE and Eurostat), under their own terms.
 Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
 Revisions
-21 October 2026 — Correction: after Eurostat revised the 2025 interest burden (October notification), the page no longer concludes that the 2025 base of the Government's forecast differs from the Eurostat series; the opinion does not publish that base, it only places it below a ceiling.
+5 November 2026 — Correction: the Haut Conseil’s opinion does publish the 2025 base of the forecast (66 billion, rounded, table 10), consistent with the Eurostat series; the page said the opposite.
+The standfirst now states that the burden fell as a share of GDP, and that in current euros the 2025 burden is the highest since 1995.
+The 2021 peak in health spending was not due to a contraction of GDP, which rebounded that year.
+21 October 2026 — Correction: after Eurostat revised the 2025 interest burden (October notification), the page no longer concludes that the 2025 base of the Government’s forecast differs from the Eurostat series; the opinion does not publish that base, it only places it below a ceiling.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

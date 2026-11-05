@@ -56,6 +56,8 @@
     {{ .Content }}
   </div>
 
+  {{- if .Params.ressource }}{{ partial "page-revisions.html" . }}{{ end }}
+
   {{- partial "ressource-retour.html" . -}}
   {{- partial "transmettre.html" . -}}
 </div>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 616" role="img" font-variant-numeric="tabular-nums" aria-labelledby="chm-t chm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="chm-t">La charge d'intérêts en milliards d'euros, 1995-2025</title><desc id="chm-d">Une courbe en milliards d'euros courants, de 1995 à 2025. La charge d'intérêts descend jusqu'au creux de 2020 (29,7 milliards), puis remonte fortement pour atteindre 65,7 milliards en 2025. Deux cercles évidés, non reliés à la courbe, portent la prévision du Gouvernement dans le projet de loi de finances pour 2027 : 79,2 milliards en 2026, 91 en 2027. Une prévision, non une observation, sur une base 2025 que l'avis ne publie pas.</desc>
+<title id="chm-t">La charge d'intérêts en milliards d'euros, 1995-2025</title><desc id="chm-d">Une courbe en milliards d'euros courants, de 1995 à 2025. La charge d'intérêts descend jusqu'au creux de 2020 (29,7 milliards), puis remonte fortement pour atteindre 65,7 milliards en 2025. Deux cercles évidés, non reliés à la courbe, portent la prévision du Gouvernement dans le projet de loi de finances pour 2027 : 79,2 milliards en 2026, 91 en 2027. Une prévision, non une observation, dans des conventions que l'avis dit mêlées : à ne pas soustraire de la courbe.</desc>
 <rect width="300" height="616" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">La charge d'intérêts en</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">milliards d'euros, 1995-2025</text>
@@ -41,5 +41,5 @@
 <text class="pied-note" x="0" y="551.0" font-size="13.5" fill="#52514e">aucune variation ne se lit entre</text>
 <text class="pied-note" x="0" y="568.0" font-size="13.5" fill="#52514e">l'observé et le prévu.</text>
 <text class="pied-licence" x="0" y="589.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="606.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="606.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

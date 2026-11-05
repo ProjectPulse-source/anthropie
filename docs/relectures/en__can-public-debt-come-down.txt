@@ -1,10 +1,10 @@
-# relu le 2026-11-02 ; texte servi de /en/can-public-debt-come-down/, build de 8aa15f6 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/can-public-debt-come-down/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
 In Portugal, public debt went from 235 to 275 billion euros from end-2015 to end-2025, and its weight from 131.0% to 89.2% of GDP.
 In France, it rose by 18.7 points over the same period: general government spent more than it took in, even leaving interest aside, and that deficit weighed more than the help from interest rates and growth.
-Page updated 2 November 2026 · revisions
+Page updated 5 November 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -332,7 +332,7 @@ The sustainability assessments that institutions publish rest on conditional pro
 Thirty years of European windows
 Primary balances and falls in the ratio: European ten-year periods
 The comparison above covers a single decade.
-To place it in a wider set, the same decomposition was applied to every ten-year window of the 27 current EU members, since 1996: 537 windows, which overlap, are therefore not as many independent experiments, and include the decade already compared.
+To place it in a wider set, the same decomposition was applied to every ten-year window of the 27 current EU members, since 1996: 537 windows retained (18 excluded, see the method), which overlap, are therefore not as many independent experiments, and include the decade already compared.
 This is context, not a counter-test.
 Among the 78 windows where starting debt exceeded 90% of GDP:
 negative average primary balance: 35 windows, in six countries (Belgium, Greece, Spain, France, Italy and Portugal).
@@ -357,11 +357,11 @@ Who bears an adjustment is the subject of Who really pays for public debt?
 Scope of comparison.
 The 27 current EU members, since 1996; nothing before, nothing outside the Union.
 The group compared depends on the debt threshold and the decade chosen.
-Five country-years out of 803 are excluded by the check described below.
+Five country-years out of 803 are excluded: Eurostat publishes no ratio for them, which the check described below requires.
 Reach in time.
 The page describes thirty observed years.
 The paths forecast by the Government, the European Commission or the IMF are conditional scenarios, which these data can neither confirm nor rule out.
-Tested against the research literature: the stabilising balance, the distinction between stabilising and reducing and the role of the primary balance in the gaps between euro-area countries are found again; reading the last year's zero gap as a lasting state, or the surplus as the only driver of falls, is challenged
+Tested against the research literature: the stabilising balance, the distinction between stabilising and reducing and the role of the primary balance in the gaps between euro-area countries are found again; reading the last year’s zero gap as a lasting state, or the surplus as the only driver of falls, is challenged
 Measured here.
 The decade-by-decade decomposition of the French ratio, the stabilising balance year by year, the comparison of EU countries whose debt exceeded 90% of GDP and that of euro-area members over five periods, which separates implicit rate, nominal growth, marker and primary balance, on Eurostat series, checked against the European Commission’s structural primary balance, and against those of the OECD and the IMF for the structural ranking.
 None of the texts read calculates these quantities on this source and these periods: they are validated by reproduction.
@@ -424,7 +424,7 @@ Ecalle, F., “Les finances publiques des pays de la zone euro de 2019 à 2025�
 Heimberger, P., “Public debt and r-g risks in advanced economies: Eurozone versus stand-alone”, Journal of International Money and Finance, vol.
 136, article 102877, September 2023.
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., “Quelles trajectoires pour les finances publiques de la France ?” [What paths for France’s public finances?], Blog de l’OFCE, 2025 (in French).
-French Treasury (Direction générale du Trésor), “Finances publiques : une situation dégradée, un redressement nécessaire” [Public finances: a deteriorated situation, a necessary recovery], Trésor-Éco, no.
+French Treasury (Direction générale du Trésor), “Finances publiques: une situation dégradée, un redressement nécessaire” [Public finances: a deteriorated situation, a necessary recovery], Trésor-Éco, no.
 403, September 2026 (in French).
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., “Quelles trajectoires pour les finances publiques de la France ?” [What paths for France’s public finances?], OFCE working paper no.
 13, July 2025 (in French).
@@ -456,7 +456,7 @@ Does a primary surplus always bring debt down?
 It helps reduce the ratio, but the final change also depends on interest rates, growth and other adjustments: in France, the balance reached the stabilising benchmark excluding adjustments in 1998 and 2007 without the ratio falling.
 In the ten-year windows of the 27 current EU members where starting debt exceeded 90% of GDP, the ratio fell by at least 15 points in none of the 35 windows with a negative average primary balance, in eight of the 30 with a balance from 0 to under 2%, in seven of the thirteen with a balance of at least 2%; these windows overlap and come from a few countries.
 In the public debt dossier
-To take the analysis further Dette Publique : Qui paie vraiment ?, the author's book, in French: contents, excerpts and reviews →
+To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
 Where these figures come from
 Eurostat, general government (S.13), ESA 2010 accounts, in national currency: Maastricht debt and nominal GDP as published with the deficit and debt notification (gov_10dd_edpt1), interest paid and net lending or borrowing (gov_10a_main, D41PAY and B9); GDP in volume (nama_10_gdp, chain-linked volumes), to split nominal growth into volume and prices.
 The primary balance is the general government balance plus interest paid.
@@ -467,8 +467,9 @@ Structural primary balance: European Commission, AMECO database, series UBLGBPS 
 The same applies to the two other checks on the structural ranking: OECD, Economic Outlook No.
 119, series NLGXQU (underlying primary balance, excluding the cycle and one-off measures, in % of potential GDP, euro-area members that belong to the OECD); IMF, Fiscal Monitor, October 2026, series GGCBP_G01_PGDP_PT (cyclically adjusted primary balance only, in % of potential GDP).
 Check: for each country and each year, the calculated debt ratio and primary balance are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use.
-Beyond a gap of 0.11 points, the year is excluded and counted (five out of 803, listed in the JSON file); for France and the compared countries, the script stops.
-A window containing a year of nominal growth above 35% (hyperinflation, series break) is excluded.
+Beyond a gap of 0.11 points, the year is excluded; a year for which Eurostat publishes no ratio cannot be checked and is excluded too.
+With the current accounts, five country-years out of 803 are excluded, all for lack of a published ratio (list and reason in the JSON file); for France and the compared countries, the script stops.
+A window containing a year of nominal growth above 35% (hyperinflation, series break) is excluded: 18 are.
 The countries compared with France are designated by a rule, not chosen: debt above 90% of GDP at end-2015; the same calculation is redone at 80% and 100%.
 The figures computed from Eurostat series all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
 Figures attributed to the French Treasury, the Conseil d’analyse économique and the OFCE are given as they publish them.
@@ -500,7 +501,7 @@ An accounting marker for the year, not a target.
 Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-2025
 Download PNG
 SVG
-Euro area, 2016-2025: France's interest rate, growth and primary balance
+Euro area, 2016-2025: France’s interest rate, growth and primary balance
 In the euro area, France pays one of the lowest implicit interest rates; what sets it apart is among the weakest nominal growth and the lowest primary balance.
 Reading caveat.
 An accounting comparison: it says neither whether the gap comes from spending or revenue, nor which adjustment would be desirable.
@@ -525,6 +526,8 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat and European Commission (AMECO)), under their own terms.
 Revisions
+5 November 2026 — Correction: the country-years excluded from the check were all excluded because Eurostat publishes no ratio for them, not because of a gap beyond the tolerance as the page said; the windows excluded for nominal growth above 35% are now counted.
+Clarification: with the accounts of 21 October, the year 2025 brings to 16 the number of years in which the implicit rate exceeded nominal growth (15 as of 16 October).
 2 November 2026 — Eurostat accounts of 21 October 2026: no euro-area country is set aside by the check any longer; Finland, back in the comparison, had weaker nominal growth than France, which moves to second place; over five years, the marker came down everywhere except Ireland.
 16 October 2026 — Correction: the implicit interest rate exceeded nominal growth in 15 years, not 16; the comparison is now made at the displayed precision.
 All resources: data, explainers and reference material →

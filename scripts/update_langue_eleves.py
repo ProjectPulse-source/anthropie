@@ -302,6 +302,9 @@ def gardes(c):
     b = c["q5"]["b"]
     g(b["3_a_5h"]["baisse_sig"] and b["plus_de_5h"]["baisse_sig"] and not b["aucune_ou_1h"]["baisse_sig"] and not b["1_a_3h"]["baisse_sig"],
       "PISA : la baisse 2022-2025 est significative chez ceux qui déclarent le plus d'écran, pas chez les autres")
+    bw = c["q6"]["b"]
+    g(bw["plus_de_5h"]["baisse_sig"] and not bw["3_a_5h"]["baisse_sig"],
+      "PISA, week-end : « seule la tranche au-delà de cinq heures baisse significativement »")
     return n[0]
 
 
@@ -320,6 +323,9 @@ def affichage(c):
     A["peu87"], A["peu21"] = nb(dic["deux_erreurs_ou_moins"]["1987"]), nb(dic["deux_erreurs_ou_moins"]["2021"])
     A["bcp87"], A["bcp21"] = nb(dic["vingt_cinq_ou_plus"]["1987"]), nb(dic["vingt_cinq_ou_plus"]["2021"])
     A["lcm2_07"] = nb(-lc["score"]["2007"], 2)
+    # Audit du 05/11/2026 : la page ecrivait « ont perdu {lcm2_07} ecart-type de 1997 a 2007 » ; lcm2_07 est l'ecart a
+    # 1987 (0,37). La perte de 1997 a 2007 est score[1997] - score[2007] (0,34).
+    A["lcm2_97_07"] = nb(lc["score"]["1997"] - lc["score"]["2007"], 2)
     A["smart_seuil"] = str(c["seuil"])
     A["smart11"], A["smart13"] = nb(c["sm"][2011], 0), nb(c["sm"][c["seuil"]], 0)
     s = P["score"]
@@ -364,6 +370,10 @@ def affichage(c):
     A["nrs25"], A["reps25"] = nb(a5["2025"]["lecture_non_repondants"][0], 0), nb(a5["2025"]["lecture_repondants"][0], 0)
     b = c["q5"]["b"]
     A["d35"], A["d5p"] = nb(-b["3_a_5h"]["variation"], 0), nb(-b["plus_de_5h"]["variation"], 0)
+    # Audit du 05/11/2026 : d35 et d5p valent pour les JOURS DE CLASSE (Q05) ; le week-end (Q06), la tranche 3-5 h ne
+    # baisse pas significativement, seule la tranche au-dela de 5 h baisse. La prose le dit desormais.
+    bw = c["q6"]["b"]
+    A["w5p"] = nb(-bw["plus_de_5h"]["variation"], 0)
     em, tb = c["tx"]["emmanuelle"], c["tx"]["temoins_bnf"]
     A["emma_ndisc"], A["emma_notices"] = nb(len(em["disciplines_saisies"]), 0), nb(em["notices_base"], 0)
     A["dv_cat"], A["dv_r1"] = nb(tb["daniel et valérie"]["catalogue"], 0), nb(tb["daniel et valérie"]["r1"], 0)

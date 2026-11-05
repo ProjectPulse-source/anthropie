@@ -6,7 +6,7 @@ og_title: "Pourquoi la dette publique augmente-t-elle ?"
 og_image: "images/og-dette-dynamique.jpg"
 og_image_alt: "Carte de partage : « Pourquoi la dette a doublé » — cascade de la dette française en points de PIB, de 1995 à 2025 : intérêts, croissance nominale, déficits primaires, ajustements flux-stock."
 date: 2026-09-30
-lastmod: 2026-10-18
+lastmod: 2026-11-05
 # Volet 1 du dossier dette (arbitrage PRO-20260930-092814, option E). Créé le 30/09/2026 sur décision de l'auteur,
 # qui lève pour cette page le gel des nouveaux ensembles jusqu'au 25/10 (feuille de route GEO). Test décisif passé :
 # la décomposition se referme exactement (résidu flux-stock = témoin comptable), scripts/update_dette_dynamique.py.
@@ -14,6 +14,7 @@ lastmod: 2026-10-18
 # REFONTE_PILOTE\DETTE\PHASE_A_ARBITRAGE_POURQUOI_AUGMENTE.md). Bilingue : toute correction se reporte dans _index.en.md.
 donnees: [dette_dynamique]
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-05, texte: "Correction : la page attribuait à la Commission une « part conjoncturelle et ponctuelle » du déficit qu'elle calculait elle-même, en rapprochant le solde observé d'Eurostat et le solde structurel de la Commission (deux éditions, deux dénominateurs). Ce chiffre est retiré ; seul reste celui du FMI, tiré d'une même édition."}
   - {date: 2026-11-02, texte: "Comptes d'Eurostat du 21 octobre 2026 : en 2025, le taux implicite repasse légèrement au-dessus de la croissance nominale ; « la croissance l'emporte chaque année depuis 2017, sauf en 2020 » devient « jusqu'en 2024 »."}
   - {date: 2026-10-18, texte: "Ajout : section « Conjoncture ou structure ? », le déficit primaire corrigé du cycle selon la Commission, le FMI et l'OCDE, et sa décomposition en recettes et dépenses."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
@@ -129,7 +130,7 @@ Un déficit peut tenir à la conjoncture&nbsp;: quand l'activité reste sous son
   <figcaption>Solde primaire corrigé du cycle selon trois estimations, et solde primaire observé (Eurostat). Les zones grises marquent les deux périodes comparées.</figcaption>
 </figure>
 
-**Sur {{< dyn-val "cs_apres_lib" >}}, le déficit ne se résorberait pas avec la seule conjoncture.** Corrigé du cycle, le solde primaire est plus bas sur {{< dyn-val "cs_apres_lib" >}} que sur {{< dyn-val "cs_avant_lib" >}} dans les trois estimations&nbsp;: de {{< dyn-val "cs_ce_saut_pt" >}} selon la Commission ({{< dyn-val "cs_ce_avant" >}}&nbsp;% puis {{< dyn-val "cs_ce_apres" >}}&nbsp;% du PIB potentiel), de {{< dyn-val "cs_fmi_saut_pt" >}} selon le FMI ({{< dyn-val "cs_fmi_avant" >}}&nbsp;% puis {{< dyn-val "cs_fmi_apres" >}}&nbsp;%) et de {{< dyn-val "cs_ocde_saut_pt" >}} selon l'OCDE ({{< dyn-val "cs_ocde_avant" >}}&nbsp;% puis {{< dyn-val "cs_ocde_apres" >}}&nbsp;%). Sur {{< dyn-val "cs_apres_lib" >}}, la part conjoncturelle et ponctuelle du déficit n'est que de {{< dyn-val "cs_ce_conj_pt" >}} de PIB selon la Commission, et sa part conjoncturelle de {{< dyn-val "cs_fmi_conj_pt" >}} de PIB selon le FMI.
+**Sur {{< dyn-val "cs_apres_lib" >}}, le déficit ne se résorberait pas avec la seule conjoncture.** Corrigé du cycle, le solde primaire est plus bas sur {{< dyn-val "cs_apres_lib" >}} que sur {{< dyn-val "cs_avant_lib" >}} dans les trois estimations&nbsp;: de {{< dyn-val "cs_ce_saut_pt" >}} selon la Commission ({{< dyn-val "cs_ce_avant" >}}&nbsp;% puis {{< dyn-val "cs_ce_apres" >}}&nbsp;% du PIB potentiel), de {{< dyn-val "cs_fmi_saut_pt" >}} selon le FMI ({{< dyn-val "cs_fmi_avant" >}}&nbsp;% puis {{< dyn-val "cs_fmi_apres" >}}&nbsp;%) et de {{< dyn-val "cs_ocde_saut_pt" >}} selon l'OCDE ({{< dyn-val "cs_ocde_avant" >}}&nbsp;% puis {{< dyn-val "cs_ocde_apres" >}}&nbsp;%). Sur {{< dyn-val "cs_apres_lib" >}}, la part conjoncturelle du déficit n'est que de {{< dyn-val "cs_fmi_conj_pt" >}} de PIB selon le FMI, qui publie dans la même édition le solde observé et le solde corrigé du cycle.
 
 **Ce sont trois estimations, et elles ne coïncident pas.** La Commission et l'OCDE retirent aussi les mesures ponctuelles, le FMI non&nbsp;; et chacune repose sur une estimation de la production potentielle, qui n'est pas une mesure et se révise. La page donne les trois valeurs, sans en faire la moyenne.
 

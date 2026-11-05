@@ -177,7 +177,6 @@ def examiner(F: dict) -> tuple[list[str], list[str]]:
 # (jamais en masse) ; chaque exception meurt d'elle-même quand sa figure passe.
 EXCEPTIONS: dict[str, str] = {
     "ciseau-dette-interets-en-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
-    "ciseau-dette-interets-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
     "dechets-volume-activite-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
     "decouplage-decomposition-m.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",
     "delais-admissions-en.svg": "« · » en fin de ligne du pied : organe corrigé (pied_figure.coupe, 04/11/2026), passera à la prochaine régénération",

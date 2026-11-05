@@ -3,6 +3,8 @@
  "pages": {
   "budget-2027-votre-commune/_index.en.md": "2026-10-22",
   "budget-2027-votre-commune/_index.md": "2026-10-22",
+  "cout-de-la-dette-publique/_index.en.md": "2026-11-05",
+  "cout-de-la-dette-publique/_index.md": "2026-11-05",
   "data-centers-puissance-reservee/_index.en.md": "2026-11-04",
   "data-centers-puissance-reservee/_index.md": "2026-11-04",
   "decouplage-energie-croissance/_index.en.md": "2026-10-26",
@@ -13,13 +15,15 @@
   "dette-publique-comparaison-internationale/_index.md": "2026-10-16",
   "dette-publique-generations-futures/_index.en.md": "2026-10-31",
   "dette-publique-generations-futures/_index.md": "2026-10-31",
-  "dette-publique-peut-elle-baisser/_index.en.md": "2026-10-18",
-  "dette-publique-peut-elle-baisser/_index.md": "2026-10-18",
+  "dette-publique-peut-elle-baisser/_index.en.md": "2026-11-05",
+  "dette-publique-peut-elle-baisser/_index.md": "2026-11-05",
   "formules-du-debat-sur-la-dette/_index.en.md": "2026-11-02",
   "formules-du-debat-sur-la-dette/_index.md": "2026-11-02",
-  "inflation-et-dette-publique/_index.en.md": "2026-10-16",
-  "inflation-et-dette-publique/_index.md": "2026-10-16",
+  "inflation-et-dette-publique/_index.en.md": "2026-11-05",
+  "inflation-et-dette-publique/_index.md": "2026-11-05",
   "le-niveau-des-eleves-baisse-t-il/_index.md": "2026-10-16",
+  "les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/_index.md": "2026-11-05",
+  "manque-t-il-des-professeurs/_index.md": "2026-11-05",
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": "2026-10-26",
   "qui-peut-faire-face-a-une-depense-imprevue/_index.md": "2026-10-26"
  },
@@ -34,6 +38,12 @@
   ],
   "budget-2027-votre-commune/_index.md": [
    "2026-10-22"
+  ],
+  "cout-de-la-dette-publique/_index.en.md": [
+   "2026-11-05"
+  ],
+  "cout-de-la-dette-publique/_index.md": [
+   "2026-11-05"
   ],
   "data-centers-puissance-reservee/_index.en.md": [
    "2026-11-04"
@@ -63,6 +73,14 @@
    "2026-10-18",
    "2026-10-31"
   ],
+  "dette-publique-peut-elle-baisser/_index.en.md": [
+   "2026-10-18",
+   "2026-11-05"
+  ],
+  "dette-publique-peut-elle-baisser/_index.md": [
+   "2026-10-18",
+   "2026-11-05"
+  ],
   "formules-du-debat-sur-la-dette/_index.en.md": [
    "2026-11-02"
   ],
@@ -74,6 +92,26 @@
   ],
   "glossaire/_index.md": [
    "2026-10-25"
+  ],
+  "inflation-et-dette-publique/_index.en.md": [
+   "2026-10-16",
+   "2026-11-05"
+  ],
+  "inflation-et-dette-publique/_index.md": [
+   "2026-10-16",
+   "2026-11-05"
+  ],
+  "les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/_index.md": [
+   "2026-11-05"
+  ],
+  "manque-t-il-des-professeurs/_index.md": [
+   "2026-11-05"
+  ],
+  "pourquoi-la-dette-publique-augmente/_index.en.md": [
+   "2026-10-18"
+  ],
+  "pourquoi-la-dette-publique-augmente/_index.md": [
+   "2026-10-18"
   ],
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": [
    "2026-10-26"

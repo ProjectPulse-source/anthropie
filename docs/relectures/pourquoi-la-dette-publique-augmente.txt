@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Pourquoi la dette publique augmente-t-elle ?
 Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,7 % du PIB : elle a doublé en part de la richesse produite.
@@ -6,7 +6,7 @@ D’où viennent ces 57,9 points de PIB ?
 Les intérêts font monter le ratio, la croissance du PIB nominal le fait baisser, et sur trente ans ces deux effets se compensent presque.
 L’essentiel de la hausse vient des déficits publics hors intérêts, dits primaires : 50,5 points sur 57,9.
 Ce bilan cache deux périodes opposées, et il dit par où la dette a augmenté, pas pourquoi les déficits ont existé.
-Page mise à jour le 2 novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -86,7 +86,7 @@ Solde primaire corrigé du cycle selon trois estimations, et solde primaire obse
 Les zones grises marquent les deux périodes comparées.
 Sur 2022-2025, le déficit ne se résorberait pas avec la seule conjoncture.
 Corrigé du cycle, le solde primaire est plus bas sur 2022-2025 que sur 2015-2019 dans les trois estimations : de 1,9 point selon la Commission (−1,1 % puis −3,0 % du PIB potentiel), de 2,6 points selon le FMI (−0,5 % puis −3,1 %) et de 1,6 point selon l’OCDE (−1,8 % puis −3,4 %).
-Sur 2022-2025, la part conjoncturelle et ponctuelle du déficit n’est que de 0,23 point de PIB selon la Commission, et sa part conjoncturelle de 0,23 point de PIB selon le FMI.
+Sur 2022-2025, la part conjoncturelle du déficit n’est que de 0,23 point de PIB selon le FMI, qui publie dans la même édition le solde observé et le solde corrigé du cycle.
 Ce sont trois estimations, et elles ne coïncident pas.
 La Commission et l’OCDE retirent aussi les mesures ponctuelles, le FMI non ; et chacune repose sur une estimation de la production potentielle, qui n’est pas une mesure et se révise.
 La page donne les trois valeurs, sans en faire la moyenne.
@@ -342,6 +342,8 @@ Les séries brutes appartiennent à leurs producteurs (Eurostat), sous leurs pro
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
 Révisions
+5 novembre 2026 — Correction : la page attribuait à la Commission une « part conjoncturelle et ponctuelle » du déficit qu’elle calculait elle-même, en rapprochant le solde observé d’Eurostat et le solde structurel de la Commission (deux éditions, deux dénominateurs).
+Ce chiffre est retiré ; seul reste celui du FMI, tiré d’une même édition.
 2 novembre 2026 — Comptes d’Eurostat du 21 octobre 2026 : en 2025, le taux implicite repasse légèrement au-dessus de la croissance nominale ; « la croissance l’emporte chaque année depuis 2017, sauf en 2020 » devient « jusqu’en 2024 ».
 18 octobre 2026 — Ajout : section « Conjoncture ou structure ? », le déficit primaire corrigé du cycle selon la Commission, le FMI et l’OCDE, et sa décomposition en recettes et dépenses.
 Toutes les ressources : données, dossiers et repères →

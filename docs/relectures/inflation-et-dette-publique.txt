@@ -1,4 +1,4 @@
-# relu le 2026-11-03 ; texte servi de /inflation-et-dette-publique/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /inflation-et-dette-publique/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L’inflation a-t-elle vraiment allégé la dette française ?
 L’État a-t-il gagné 150 milliards grâce à l’inflation ?
@@ -6,7 +6,7 @@ Pas sous la forme d’une recette.
 L’inflation de 2021-2023, plus forte que prévu, a réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020.
 Cet allègement se réalise au fil des paiements, jusqu’en 2066 : un cinquième seulement fin 2023.
 Il ne prouve pas un gain budgétaire net équivalent.
-Page mise à jour le 2 novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
 Données · AFT, Eurostat, BCE 2020-2023
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -22,7 +22,7 @@ Fin 2023, les prix étaient plus élevés de 10,8 % que dans le premier monde, e
 Chaque paiement promis est converti en euros de 2020 avec le niveau des prix de sa date, dans l’un et l’autre monde ; l’écart entre les deux valeurs, additionné sur tous les paiements, donne l’érosion.
 Somme non actualisée des écarts de valeur réelle, en milliards d’euros de 2020, pas de la dette effacée (calcul de l’auteur ; AFT, Eurostat, BCE).
 Le résultat en une phrase.
-L’écart entre l’inflation réalisée en 2021-2023 et celle anticipée début 2021 réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette négociable de l’État à taux fixe existant fin 2020, sans actualisation, soit environ 6,5 % du PIB de 2020 ; selon la prévision retenue parmi celles publiées début 2021, de 145 à 170 milliards.
+L’écart entre l’inflation réalisée en 2021-2023 et celle anticipée début 2021 réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette négociable de l’État à taux fixe existant fin 2020, sans actualisation, soit environ 6,5 % du PIB de 2020 ; selon la prévision retenue parmi celles publiées début 2021, de 144 à 172 milliards.
 D’autres travaux trouvent davantage : Pallotti et al. obtiennent pour les administrations publiques françaises un montant 2,33 fois plus élevé, avec un périmètre, une valorisation et un choc d’inflation différents.
 La confrontation à la recherche, plus bas, explique la majeure partie de cet écart, sans le réconcilier entièrement.
 Ce chiffre ne dit pas que la dette a diminué de 150 milliards : les montants dus restent les mêmes en euros.
@@ -118,11 +118,11 @@ le portage cumulé des seuls titres publics français détenus, 2016-2025
 le résultat ordinaire de la Banque de France, tout son bilan, 2023-2025
 Pourquoi ce n’est pas le chiffre du ratio dette/PIB
 Le volet du dossier « Pourquoi la dette publique augmente-t-elle ? » attribue à l’effet des taux et de la croissance une contribution de −16,8 points de PIB à la variation du ratio de dette en 2021-2023.
-Ce n’est pas la baisse observée du ratio : il n’a reculé que de 5,4 points, surtout parce que les déficits primaires l’ont poussé de 11,5 points dans l’autre sens.
+Ce n’est pas la baisse observée du ratio : il n’a reculé que de 5,4 points ; les déficits primaires y ont ajouté 11,5 points.
 Et les 6,5 % du PIB de 2020 de cette page ne sont pas 6,5 points de baisse du ratio : le premier chiffre réagit à toute la croissance du PIB nominal, inflation prévue comprise, pour toutes les administrations publiques ; le second ne retient que la part non prévue de l’inflation, sur les seuls paiements déjà promis par l’État.
 Les rapprocher demanderait une décomposition qui n’est pas faite ici.
 Ce qui fait varier le chiffre
-La plage publiée, de 145 à 170 milliards, vient de la prévision de départ.
+La plage publiée, de 144 à 172 milliards, vient de la prévision de départ.
 La référence, l’enquête de la BCE, n’a pas été choisie pour son niveau : c’est la seule des quatre prévisions qui couvre tout l’horizon des paiements, et les trois prévisions propres à la France encadrent son résultat.
 Les points morts de marché et l’actualisation l’élargissent ; le calendrier des prix explique l’écart avec le calcul en moyennes annuelles.
 Unité de mesure, prévisions, points morts, actualisation et calendrier des prix
@@ -199,7 +199,7 @@ Ce que l’on ne sait pas : qui a finalement supporté la perte, et quelle part 
 Questions fréquentes
 L’État a-t-il gagné de l’argent grâce à l’inflation de 2021-2023 ?
 Pas sous la forme d’une recette.
-La surprise d’inflation a réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020 (de 145 à 170 selon la prévision de départ).
+La surprise d’inflation a réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020 (de 144 à 172 selon la prévision de départ).
 C’est un avantage brut, étalé jusqu’en 2066, pas la preuve d’un gain budgétaire net : refinancement, recettes et dépenses suivent d’autres mécanismes.
 Les épargnants ont-ils perdu ce que la dette a perdu en valeur réelle ?
 On ne peut pas le chiffrer.
@@ -289,7 +289,7 @@ Lalut, Stéphane (2026). « L’inflation a-t-elle vraiment allégé la dette fr
 Données AFT, Eurostat, BCE, Banque de France, Commission européenne, relevé du 8 octobre 2026. https://stephane-lalut.com/inflation-et-dette-publique/
 Copier la citation
 En trois phrases
-Dans le contrefactuel de cette page, l’écart entre l’inflation réalisée en 2021-2023 et celle anticipée début 2021 réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020 (de 145 à 170 selon la prévision retenue) ; environ 55 % se matérialise d’ici fin 2027.
+Dans le contrefactuel de cette page, l’écart entre l’inflation réalisée en 2021-2023 et celle anticipée début 2021 réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020 (de 144 à 172 selon la prévision retenue) ; environ 55 % se matérialise d’ici fin 2027.
 C’est un avantage brut pour l’État, pas la preuve d’un gain budgétaire net équivalent.
 Copier le résumé
 Les données
@@ -299,6 +299,8 @@ Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (AFT, Eurostat, BCE, Banque de France, Commission européenne), sous leurs propres conditions.
 Révisions
+5 novembre 2026 — Correction : la plage des prévisions de début 2021 s’écrit désormais de 144 à 172 milliards, bornes qui contiennent les valeurs calculées (144,1 et 171,5) ; elle était arrondie à 145-170 sans le dire.
+La phrase sur le recul du ratio en 2021-2023 ne présente plus les déficits primaires comme sa cause : elle dit qu’ils y ont ajouté 11,5 points.
 16 octobre 2026 — Correction : l’écart dû aux achats de la banque centrale culmine d’avril à juillet 2022, quatre mois à égalité à la précision affichée, et non en mai 2022.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
