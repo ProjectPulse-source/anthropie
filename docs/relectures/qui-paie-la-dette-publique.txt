@@ -1,7 +1,7 @@
-# relu le 2026-11-05 ; texte servi de /qui-paie-la-dette-publique/, build de b120c81 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /qui-paie-la-dette-publique/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
-Sur les comptes distribués de l’Insee de 2023, un même effort de 10 milliards d’euros ne tombe pas sur les mêmes ménages selon la décision prise : par l’enseignement, il pèse surtout sur les plus modestes, par l’impôt sur les plus aisés.
+Sur les comptes distribués de l’Insee de 2023, un même effort de 10 milliards d’euros ne tombe pas sur les mêmes ménages selon la décision prise : par l’enseignement, il pèse surtout sur les plus modestes (2,75 % du revenu des 10 % les plus modestes, 0,21 % de celui des plus aisés), par l’impôt sur les plus aisés (jusqu’à 1,14 % pour le dernier dixième).
 Qui paie la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir.
 Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
@@ -39,7 +39,7 @@ Pour le 7e ou 8e dixième, un peu au-dessus du milieu, l’effort moyen changera
 Pour les 10 % les plus aisés, elle coûterait 5,5 fois la plus légère, et au moins autant pour les 10 % les plus modestes : aux deux bouts de l’échelle, le choix du levier décide presque tout.
 Ces dixièmes ne supporteraient pas moins d’effort ; simplement, changer de levier y modifierait moins leur exposition moyenne, qui ne dit pas la situation de chacun des ménages qui les composent.
 La convergence se retrouve dans les quatre millésimes 2020-2023 — qui partagent conventions et structures, et ne sont donc pas des réplications indépendantes —, et elle ne vaut que pour ces trois leviers ainsi répartis.
-Trois épreuves du creux aux 7e et 8e dixièmes, et les limites de l’exercice
+Le creux aux 7e et 8e dixièmes mis à l’épreuve, et les limites de l’exercice
 En vingtièmes.
 Découpée en vingt groupes au lieu de dix, la population place encore le minimum dans la zone des 7e et 8e dixièmes : au 14e ou 15e vingtième selon l’année.
 Le creux ne vient donc pas du regroupement par dixièmes.

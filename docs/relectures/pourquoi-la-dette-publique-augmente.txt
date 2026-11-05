@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Pourquoi la dette publique augmente-t-elle ?
 Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,7 % du PIB : elle a doublé en part de la richesse produite.
@@ -215,7 +215,7 @@ La décomposition annuelle du ratio français de 1995 à 2025, sur les séries d
 Aucun des textes lus ne décompose cette fenêtre avec cette source : la mesure se valide par reproduction, non par citation.
 Cohérent avec.
 L’audit citoyen de 2014 attribuait une large part de la hausse de la dette de 1980 à 2012 à l’effet des taux d’intérêt.
-Les deux analyses ne portent ni sur les mêmes bornes, ni nécessairement sur le même contrefactuel ; sur une fenêtre qui s’arrête avant le milieu des années 2010, l’effet taux–croissance pèse fortement ici aussi avant 2017.
+Les deux analyses ne portent ni sur les mêmes bornes, ni nécessairement sur le même contrefactuel ; ici aussi, l’effet taux–croissance pèse fortement à la hausse sur les années antérieures à 2017, qui couvrent la fin de leur période.
 La confrontation de leurs méthodes est exposée dans le working paper AWP-09.
 Sur 1970-2023, avec les comptes de l’Insee et une base historique, Auclert, Philippon et Ragot trouvent que les déficits primaires et les ajustements flux-stock représentent 88 points d’une hausse de près de 90 (de 21 % à 110 % du PIB), et un effet « boule de neige » proche de zéro en moyenne : même identité, autre période, autre source, et un déficit primaire qui inclut les ajustements que la page isole.
 Clavères, à la direction générale du Trésor, retrouve la même chronologie des signes : le taux apparent de la dette passe au-dessus de la croissance nominale dans le courant des années 1980, et la croissance repasse au-dessus à partir de 2016.

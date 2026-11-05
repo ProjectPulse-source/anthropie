@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-02",
+ "releve_le": "2026-11-05",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce",
  "meta": {
   "page": "https://stephane-lalut.com/formules-du-debat-sur-la-dette/",
@@ -37,7 +37,7 @@
    "niveau": "mesurer",
    "texte": "« 3 % de déficit, seuil à partir duquel la dette n'augmente plus »",
    "orateur": "F. Bayrou",
-   "question_posee": "En euros, inexact : un déficit de 3 % ajoute 89,7 Md€ par an",
+   "question_posee": "En euros, inexact : un déficit de 3 % ajoute 90 Md€ par an",
    "autre_question": "En % du PIB, exact si la croissance nominale dépasse environ 2,74 % : 3,58 % en 2024, 1,90 % en 2025 (connu après)",
    "conclusion": "Condition décisive non dite"
   },
@@ -1892,7 +1892,7 @@
   "f16_stab": "2,16",
   "f16_stab3": "3,37",
   "f16_seuil": "2,66",
-  "f16_eur": "89,7",
+  "f16_eur": "90",
   "f16_dette24": "112,6",
   "f16_g24": "3,58",
   "f16_seuil24": "2,74",
@@ -2186,7 +2186,7 @@
   "f16_stab": "2.16",
   "f16_stab3": "3.37",
   "f16_seuil": "2.66",
-  "f16_eur": "89.7",
+  "f16_eur": "90",
   "f16_dette24": "112.6",
   "f16_g24": "3.58",
   "f16_seuil24": "2.74",

@@ -2,7 +2,7 @@
 title: "Who really pays for public debt?"
 url: /en/who-really-pays-public-debt/
 description: "Who pays for public debt? Holding it is not paying for it: taxes, spending and inflation do not spread the adjustment across the same groups. Official French data."
-chapo: "In INSEE's {qp.cd_annee} distributional accounts, the same €{qp.exp_effort} billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off. Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it."
+chapo: "In INSEE's {qp.cd_annee} distributional accounts, the same €{qp.exp_effort} billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off ({qp.exp_ens_d1}% of the income of the poorest 10%, {qp.exp_ens_d10}% of that of the richest); through taxes, on the best-off (up to {qp.exp_fisc_d10}% for the top decile). Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it."
 date: 2026-09-30
 lastmod: 2026-10-11
 donnees: [dette_officielle, qui_paie_donnees]
@@ -79,7 +79,7 @@ The population is ranked from the least to the most well-off, then cut into ten 
 
 **In the middle of the scale, the choice of lever matters least.** For the {{< qp-val "exp_creux_zone_mots" >}} decile, a little above the middle, the average burden would change little from one decision to another: the heaviest would cost {{< qp-val "exp_ecart_creux" >}} times the lightest there. For the richest 10%, it would cost {{< qp-val "exp_ecart_d10" >}} times the lightest, and at least as much for the poorest 10%: at both ends of the scale, the choice of lever decides almost everything. These deciles would not bear less of the adjustment; changing the lever would simply alter their average exposure less, which does not describe the situation of each household in them. The convergence appears in all four vintages {{< qp-val "exp_millesimes" >}} (which share conventions and structures, and are therefore not independent replications), and it holds only for these three levers distributed in this way.
 
-<details class="repli"><summary>Three tests of the trough in {{< qp-val "exp_creux_zone" >}}, and the limits of the exercise</summary>
+<details class="repli"><summary>The trough in {{< qp-val "exp_creux_zone" >}} put to the test, and the limits of the exercise</summary>
 
 **In twentiles.** With the population split into twenty groups instead of ten, the minimum still falls in the {{< qp-val "exp_creux_zone" >}} zone: in the {{< qp-val "exp_t1_rangs" >}} twentile depending on the year. The trough does not come from grouping by deciles.
 

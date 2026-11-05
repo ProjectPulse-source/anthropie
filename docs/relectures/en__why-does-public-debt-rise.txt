@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/why-does-public-debt-rise/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/why-does-public-debt-rise/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.7% of GDP: it doubled as a share of the wealth produced.
@@ -220,7 +220,7 @@ The annual decomposition of the French ratio from 1995 to 2025, on Eurostat seri
 None of the texts read decomposes this window with this source: the measurement is validated by reproduction, not by citation.
 Consistent with.
 The 2014 citizens’ audit attributed a large share of the rise in the debt from 1980 to 2012 to the effect of interest rates.
-The two analyses share neither the same end points nor necessarily the same counterfactual; over a window that ends before the mid-2010s, the interest-growth effect weighs heavily here too before 2017.
+The two analyses share neither the same end points nor necessarily the same counterfactual; here too, the interest-growth effect weighs heavily upwards in the years before 2017, which cover the end of their period.
 The comparison of their methods is set out in the working paper AWP-09.
 Over 1970-2023, using INSEE accounts and a historical database, Auclert, Philippon and Ragot find that primary deficits and stock-flow adjustments account for 88 points of a rise of nearly 90 (from 21% to 110% of GDP), and a “snowball” effect close to zero on average: the same identity, another period, another source, and a primary deficit that includes the adjustments this page isolates.
 Clavères, at the French Treasury, finds the same sequence of signs: the effective interest rate on the debt moves above nominal growth in the course of the 1980s, and growth moves back above it from 2016.

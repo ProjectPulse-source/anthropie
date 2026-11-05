@@ -1,7 +1,7 @@
 ---
 title: "Qui paie vraiment la dette publique ?"
 description: "Qui paie la dette publique ? Détenir n'est pas payer : impôts, dépenses et inflation ne répartissent pas l'effort entre les mêmes groupes. Données officielles."
-chapo: "Sur les comptes distribués de l'Insee de {qp.cd_annee}, un même effort de {qp.exp_effort} milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes, par l'impôt sur les plus aisés. Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
+chapo: "Sur les comptes distribués de l'Insee de {qp.cd_annee}, un même effort de {qp.exp_effort} milliards d'euros ne tombe pas sur les mêmes ménages selon la décision prise : par l'enseignement, il pèse surtout sur les plus modestes ({qp.exp_ens_d1} % du revenu des 10 % les plus modestes, {qp.exp_ens_d10} % de celui des plus aisés), par l'impôt sur les plus aisés (jusqu'à {qp.exp_fisc_d10} % pour le dernier dixième). Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
 date: 2026-07-04
 lastmod: 2026-10-11
 donnees: [dette_officielle, qui_paie_donnees]
@@ -73,7 +73,7 @@ La population est rangée du plus modeste au plus aisé, puis coupée en dix gro
 
 **Au milieu de l'échelle, le choix du levier compte le moins.** Pour le {{< qp-val "exp_creux_zone_mots" >}}&nbsp;dixième, un peu au-dessus du milieu, l'effort moyen changerait peu d'une décision à l'autre&nbsp;: la plus lourde y coûterait {{< qp-val "exp_ecart_creux" >}}&nbsp;fois la plus légère. Pour les 10&nbsp;% les plus aisés, elle coûterait {{< qp-val "exp_ecart_d10" >}}&nbsp;fois la plus légère, et au moins autant pour les 10&nbsp;% les plus modestes&nbsp;: aux deux bouts de l'échelle, le choix du levier décide presque tout. Ces dixièmes ne supporteraient pas moins d'effort&nbsp;; simplement, changer de levier y modifierait moins leur exposition moyenne, qui ne dit pas la situation de chacun des ménages qui les composent. La convergence se retrouve dans les quatre millésimes {{< qp-val "exp_millesimes" >}} — qui partagent conventions et structures, et ne sont donc pas des réplications indépendantes —, et elle ne vaut que pour ces trois leviers ainsi répartis.
 
-<details class="repli"><summary>Trois épreuves du creux aux {{< qp-val "exp_creux_zone" >}}, et les limites de l'exercice</summary>
+<details class="repli"><summary>Le creux aux {{< qp-val "exp_creux_zone" >}} mis à l'épreuve, et les limites de l'exercice</summary>
 
 **En vingtièmes.** Découpée en vingt groupes au lieu de dix, la population place encore le minimum dans la zone des {{< qp-val "exp_creux_zone" >}}&nbsp;: au {{< qp-val "exp_t1_rangs" >}} vingtième selon l'année. Le creux ne vient donc pas du regroupement par dixièmes.
 

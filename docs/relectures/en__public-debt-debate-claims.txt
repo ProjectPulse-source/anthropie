@@ -1,4 +1,4 @@
-# relu le 2026-11-04 ; texte servi de /en/public-debt-debate-claims/, build de d0ce784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/public-debt-debate-claims/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What are the claims of the French debt debate worth?
 On 8 September 2025, in the French National Assembly, every group invoked the figures on public debt.
@@ -6,11 +6,11 @@ Many amounts withstand checking.
 But changing the date, the scope or the unit is often enough to get another answer, and measuring a change is enough neither to identify its cause nor to justify a decision.
 Eleven cases, tested against the data available that day, show how the same figure can support different conclusions, not all of them demonstrated.
 The campaign texts of the candidates for the 2027 presidential election, put through the same tests, run into the same measurement difficulties.
-Page published 2 November 2026
+Page updated 5 November 2026
 Public debt dossier
 Updated · 11/2026
 ↓ Charts, data and citations to reuseReuse this page
-Computed: 2 November 2026 Full record of the sitting of 8 September 2025 (French National Assembly); general government accounts (Insee, Eurostat); ten-year yields (Eurostat, Banque de France, Bank of Greece); Court of Audit, Government, Senate.
+Computed: 5 November 2026 Full record of the sitting of 8 September 2025 (French National Assembly); general government accounts (Insee, Eurostat); ten-year yields (Eurostat, Banque de France, Bank of Greece); Court of Audit, Government, Senate.
 Download: CSV · JSON · method
 More money for interest than for education?
 On 15 July 2025, the French government sent Parliament its spending ceilings for the following year.
@@ -49,7 +49,7 @@ In 2020, debt rose by €70bn more than the deficit, because the government buil
 Over thirty years the cumulative totals come close (€2,649bn of deficits, €2,758bn of extra debt), but gaps in opposite directions that cancel out do not make an equality.
 “Reaching in 2029 the threshold of a 3% public deficit, the threshold at which debt stops rising” (François Bayrou).
 The sentence says “debt” without saying which, and its two readings give two verdicts.
-In euros it is inaccurate: a deficit of 3% of GDP adds about €89.7bn a year.
+In euros it is inaccurate: a deficit of 3% of GDP adds about €90bn a year.
 As a share of GDP, the ratio stabilises when the deficit equals the debt ratio times nominal growth, divided by one plus that growth.
 With the 2024 ratio, the last year known on the day of the debate (112.6%), and no gap between deficit and debt increase, 3% is enough if nominal growth exceeds about 2.74%.
 It had done so in 2024 (3.58%): on the day, the sentence therefore held for the ratio, under that condition.
@@ -67,7 +67,7 @@ Monthly averages (Eurostat); the dotted line marks the debate.
 A market price gives the current cost of borrowing, not the relative soundness of two countries.
 France moved above Greece in August 2025, as a monthly average.
 Greece moved above it again from March to May 2026.
-Over 2025 as a whole, the two countries borrowed at almost the same spread over Germany: 0.76 points for France, 0.77 for Greece.
+Over 2025 as a whole, the two countries borrowed at almost the same spread over Germany: as an average of monthly spreads, 0.76 points for France, 0.77 for Greece.
 The same fact is true one month and false another: everything depends on the date of measurement.
 As for the implied conclusion, “we have reached the point where…”, an interest rate gives the price lenders ask at that moment: it does not measure the debt, the rating or the holder structure, which set the two countries apart.
 “It is not the rise in public spending, which has stayed stable since 2017, that has widened the deficit, but the fall in revenue” (Cyrielle Chatelain, Écologiste et social).
@@ -388,7 +388,7 @@ On 4 September, the Bank of Greece, using the same measure for both countries, g
 France had moved above in August 2025, as a monthly average; Greece moved above it again from March to May 2026.
 The market price alone does not show that one country is weaker than the other.
 Does a 3% deficit stop debt from rising?
-Not in euros: a 3% deficit adds about €89.7bn a year.
+Not in euros: a 3% deficit adds about €90bn a year.
 As a share of GDP, it stabilises the ratio only if nominal growth exceeds a threshold, about 2.74% with the 2024 ratio and no gap between deficit and debt increase.
 Growth exceeded that threshold in 2024 (3.58%), not in 2025 (1.90%, known after the debate).
 In July 2025 the French Court of Audit warned that getting back below 3% would not, on its own, be enough to ensure debt sustainability.
@@ -466,7 +466,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “What are the claims of the French debt debate worth?”.
-French National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece data, retrieved 2 November 2026. https://stephane-lalut.com/en/public-debt-debate-claims/
+French National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece data, retrieved 5 November 2026. https://stephane-lalut.com/en/public-debt-debate-claims/
 Copy citation
 In three sentences
 Of eleven numerical cases from the French National Assembly debate of 8 September 2025, many amounts withstand checking, but the verdict often changes with the date, unit, scope or year.

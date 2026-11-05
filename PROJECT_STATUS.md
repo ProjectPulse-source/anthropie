@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (nuit) — Reprise de forme du dossier dette (P2 de l'audit) — commitée, NON poussée : contre-expertise d'abord
+
+- « Peut-elle baisser » : FAQ « excédent primaire » sur 1998 (jeton `exc_hausse`, arrêt si vide ; 2007 était en déficit primaire) ;
+  bornes « fin 1995 » (jeton `d1_avant`) ; repli « Mis en danger par » (1 100 mots) en six paragraphes ; Fipeco daté (avril 2026) ; journal.
+- « Coût » : chapô « …de leurs recettes, et X % de plus, en euros, qu'au creux… » (les deux-points reliaient deux chiffres sans lien).
+- « Pourquoi » : bornes contradictoires du bloc « Cohérent avec » levées, FR et EN.
+- « Qui paie » : chapô chiffré (2,75 % / 0,21 % / 1,14 %, jetons existants) ; repli renommé « Le creux… mis à l'épreuve ».
+- « Formules » : « environ 90 milliards » (ordre de grandeur arrondi, le PIB de l'année ne fait pas le verdict) ; « en moyenne des
+  écarts mensuels » (0,76/0,77 contre 0,78 de la série annuelle) ; hauteurs de la grille téléphone réalignées.
+- Non fait, posé à la contre-expertise : redites structurelles du gabarit (chapô, résultat, retenir, FAQ, en trois phrases),
+  simulateur absent en anglais, FAQ inflation FR 4 / EN 3 (question sur le livre français, exclusion à déclarer).
+- Contrôles : `check-all --ci` 0, build, dates, rendu, liens, relecture stricte 0 (10 instantanés) ; gardes des générateurs
+  baisse (92), dynamique, insee, formules passées.
+
 ### 2026-11-05 (nuit) — Page « À propos » : passage du parcours retiré ; billets du Club de Mediapart requalifiés
 
 - `/a-propos/` FR et EN : paragraphe « Direction marketing européenne… » retiré (décision de l'auteur).

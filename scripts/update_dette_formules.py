@@ -555,7 +555,7 @@ def affichage(c, lang):
         "f2_an0": str(f2["an0"]), "f2_an1": str(f2["an1"]), "f2_ecart_cumul": n0(abs(f2["somme_var"] / f2["somme_def"] - 1) * 100),
         "f2_2020": n0(next(x["ecart"] for x in f2["annees"] if x["annee"] == 2020)),
         "f16_dette": n1(f16["dette_pct"]), "f16_g25": n2(f16["g25"]), "f16_stab": n2(f16["stab_g25"]), "f16_stab3": n2(f16["stab_g3"]),
-        "f16_seuil": n2(f16["g_seuil"]), "f16_eur": n1(f16["euros_3pct"]),
+        "f16_seuil": n2(f16["g_seuil"]), "f16_eur": n0(round(f16["euros_3pct"], -1)),  # ordre de grandeur arrondi : le PIB de l'année ne fait pas le verdict (audit du 05/11/2026)
         "f16_dette24": n1(f16["dette_pct24"]), "f16_g24": n2(f16["g24"]), "f16_seuil24": n2(f16["g_seuil24"]),
         "f8_aout_fr": n2(f8["fr"]["2025-08"]), "f8_aout_el": n2(f8["el"]["2025-08"]),
         "f8_sept_fr": n2(f8["fr"]["2025-09"]), "f8_sept_el": n2(f8["el"]["2025-09"]),

@@ -474,6 +474,7 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
         A[p + "def"] = signe(f["deficits_primaires"]); A[p + "def_abs"] = fr(abs(f["deficits_primaires"]))
         A[p + "sfa"] = signe(f["flux_stock"]); A[p + "sfa_abs"] = fr(abs(f["flux_stock"]))
         A[p + "dette_deb"] = fr(f["dette_depart"]); A[p + "dette_fin"] = fr(f["dette_fin"])
+        A[p + "avant"] = str(f["debut"] - 1)   # dette_depart = fin de l'année qui précède la décennie (audit du 05/11/2026)
         A[p + "pb_moyen"] = signe(f["solde_primaire_moyen"], 2)
         A[p + "exc"] = lettres(f["annees_excedent"])
         A[p + "interets"] = fr(f["interets"]); A[p + "croissance"] = fr(-f["croissance"])
@@ -569,6 +570,12 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     # Années où le solde atteint le repère sans que le ratio baisse (B4)
     sh = [r["annee"] for r in annees if r["ecart"] >= 0 and r["variation"] > 0]
     A["suff_hausse"] = enumere([str(a) for a in sh]) if sh else ""
+    # Années d'EXCÉDENT primaire où le ratio monte quand même (FAQ « excédent primaire », audit du 05/11/2026 : 2007, citée
+    # jusque-là, était en déficit primaire). Vide = la réponse de la FAQ n'a plus d'exemple : arrêt, la phrase est à réécrire.
+    eh = [r["annee"] for r in annees if r["solde_primaire"] > 0 and r["variation"] > 0]
+    if not eh:
+        fail("FAQ excedent primaire : aucune annee d'excedent primaire sans baisse du ratio ; reecrire la reponse")
+    A["exc_hausse"] = enumere([str(a) for a in eh])
     A["suff_baisse_n"] = lettres(sum(1 for r in annees if r["ecart"] >= 0 and r["variation"] < 0))  # ENTRANTE 03/10, point 4
     # Sensibilité du groupe au seuil (B3)
     s80, s100 = europe["sensibilite_seuil"]["80"], europe["sensibilite_seuil"]["100"]

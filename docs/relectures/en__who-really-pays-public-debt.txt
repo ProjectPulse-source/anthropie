@@ -1,7 +1,7 @@
-# relu le 2026-11-05 ; texte servi de /en/who-really-pays-public-debt/, build de b120c81 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/who-really-pays-public-debt/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
-In INSEE’s 2023 distributional accounts, the same €10 billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off; through taxes, on the best-off.
+In INSEE’s 2023 distributional accounts, the same €10 billion adjustment falls on different households depending on the decision taken: through education, it weighs mostly on the least well-off (2.75% of the income of the poorest 10%, 0.21% of that of the richest); through taxes, on the best-off (up to 1.14% for the top decile).
 Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it.
 Page updated 5 November 2026 · revisions
 Public debt dossier
@@ -43,7 +43,7 @@ For the 7th or 8th decile, a little above the middle, the average burden would c
 For the richest 10%, it would cost 5.5 times the lightest, and at least as much for the poorest 10%: at both ends of the scale, the choice of lever decides almost everything.
 These deciles would not bear less of the adjustment; changing the lever would simply alter their average exposure less, which does not describe the situation of each household in them.
 The convergence appears in all four vintages 2020-2023 (which share conventions and structures, and are therefore not independent replications), and it holds only for these three levers distributed in this way.
-Three tests of the trough in D7-D8, and the limits of the exercise
+The trough in D7-D8 put to the test, and the limits of the exercise
 In twentiles.
 With the population split into twenty groups instead of ten, the minimum still falls in the D7-D8 zone: in the 14th or 15th twentile depending on the year.
 The trough does not come from grouping by deciles.

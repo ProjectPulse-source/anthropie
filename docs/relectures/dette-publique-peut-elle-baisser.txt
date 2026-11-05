@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /dette-publique-peut-elle-baisser/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /dette-publique-peut-elle-baisser/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
 Oui : ce qui peut baisser, c’est le poids de la dette dans le PIB, même quand son montant augmente.
@@ -29,10 +29,10 @@ Le résultat en une phrase.
 De 2016 à 2025, les déficits primaires ont ajouté 30,6 points au ratio de dette français, l’effet des taux et de la croissance, concentré en 2021-2023, en a retiré 15,0, et les autres ajustements en ont ajouté 3,1 : le bilan est une hausse de 18,7 points.
 C’est une décomposition comptable : elle dit par quel terme la dette a bougé, pas pourquoi les déficits ont existé.
 Les deux décennies précédentes.
-De 1996 à 2015, le ratio passe de 57,8 % à 97,0 % du PIB : l’effet des taux et de la croissance pousse d’abord le ratio à la hausse, le budget hors intérêts restant proche de l’équilibre, puis les déficits primaires prennent le dessus, avec la crise financière de 2008-2009.
+De fin 1995 à fin 2015, le ratio passe de 57,8 % à 97,0 % du PIB : l’effet des taux et de la croissance pousse d’abord le ratio à la hausse, le budget hors intérêts restant proche de l’équilibre, puis les déficits primaires prennent le dessus, avec la crise financière de 2008-2009.
 Les deux décennies précédentes, terme par terme
 1996-2005 : les taux et la croissance poussent à la hausse.
-Le ratio passe de 57,8 % à 68,2 % du PIB.
+Le ratio passe de 57,8 % du PIB fin 1995 à 68,2 % fin 2005.
 L’effet des taux et de la croissance ajoute 8,4 points ; le solde primaire, excédentaire quatre années sur dix, en retire 2,5.
 2006-2015 : les deux termes poussent ensemble.
 Le ratio gagne 28,8 points, la plus forte hausse des trois décennies : 22,4 par les déficits primaires, 7,8 par l’effet des taux et de la croissance.
@@ -398,7 +398,7 @@ Renouveler au taux à 10 ans de juillet 2025 les 900 milliards d’euros de titr
 Son modèle suppose en outre un taux apparent inférieur à la croissance nominale à partir de 2026.
 Enfin, la Note du CAE avance qu’il serait difficile de laisser la dette dépasser 125 % du PIB sans risquer une forte hausse des taux, et le Focus retient 130 % comme plafond de son modèle, le niveau de la Grèce en 2009 : le premier chiffre est motivé par l’observation de quelques cas européens, le second est un paramètre choisi ; aucun n’est un seuil estimé, ce qui laisse intacte la phrase de la page selon laquelle aucun niveau de dette, à lui seul, ne tranche la question.
 La troisième tirerait du solde primaire le plus bas des pays comparés que la France « dépense trop » ou « ne prélève pas assez ».
-Dans la comparaison de François Ecalle (Fipeco), ses dépenses et ses recettes publiques sont toutes deux les deuxièmes de la zone euro en 2025, à 57,2 % et 52,1 % du PIB ; de 2019 à 2025, ses recettes ont baissé de 0,9 point quand celles de l’ensemble de la zone augmentaient de 0,4 point, et ses dépenses ont augmenté de 1,9 point, contre 2,8 dans la zone.
+Dans la comparaison de François Ecalle (Fipeco, avril 2026), ses dépenses et ses recettes publiques sont toutes deux les deuxièmes de la zone euro en 2025, à 57,2 % et 52,1 % du PIB ; de 2019 à 2025, ses recettes ont baissé de 0,9 point quand celles de l’ensemble de la zone augmentaient de 0,4 point, et ses dépenses ont augmenté de 1,9 point, contre 2,8 dans la zone.
 Le solde primaire ne dit pas laquelle des deux moitiés il faudrait corriger.
 Non établi.
 Le montant de l’effort.
@@ -444,7 +444,7 @@ La France a-t-elle déjà dégagé un excédent primaire ?
 Quatre fois depuis 1996, de 1998 à 2001, au plus 1,65 % du PIB (Eurostat).
 Depuis, le solde primaire des administrations publiques est resté déficitaire chaque année.
 Un excédent primaire fait-il toujours baisser la dette ?
-Il contribue à réduire le ratio, mais la variation finale dépend aussi des taux, de la croissance et des autres ajustements : en France, le solde a atteint le repère de stabilisation hors ajustements en 1998 et 2007 sans que le ratio baisse.
+Il contribue à réduire le ratio, mais la variation finale dépend aussi des taux, de la croissance et des autres ajustements : en France, en 1998, le solde primaire était excédentaire, et même au-dessus du repère de stabilisation hors ajustements, sans que le ratio baisse.
 Dans les fenêtres de dix ans des 27 pays aujourd’hui membres de l’Union où la dette de départ dépassait 90 % du PIB, le ratio a baissé d’au moins 15 points dans huit des 30 fenêtres à solde primaire moyen de 0 à moins de 2 % et dans sept des treize à solde d’au moins 2 %, mais dans aucune des 35 à solde primaire moyen négatif ; ces fenêtres se recouvrent et viennent de quelques pays.
 Dans le dossier dette publique
 Pour prolonger l’analyse
@@ -528,6 +528,8 @@ Les séries brutes appartiennent à leurs producteurs (Eurostat et Commission eu
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
 Révisions
+5 novembre 2026 — Précision : la réponse « Un excédent primaire fait-il toujours baisser la dette ? » citait 2007, une année de déficit primaire ; elle cite désormais 1998, année d’excédent primaire où le ratio a pourtant augmenté.
+Les bornes des deux décennies sont dites en fin d’année (57,8 % fin 1995).
 5 novembre 2026 — Correction : les années-pays écartées du contrôle l’étaient toutes faute de ratio publié par Eurostat, non pour un écart au-delà de la tolérance comme le disait la page ; les fenêtres écartées pour croissance nominale supérieure à 35 % sont désormais comptées.
 Précision : avec les comptes du 21 octobre, l’année 2025 porte à 16 le nombre d’années où le taux implicite a dépassé la croissance nominale (15 au 16 octobre).
 2 novembre 2026 — Comptes d’Eurostat du 21 octobre 2026 : aucun pays de la zone euro n’est plus écarté par le contrôle ; la Finlande, revenue dans la comparaison, a eu une croissance nominale plus faible que la France, qui passe au deuxième rang ; sur cinq ans, le repère s’est abaissé partout sauf en Irlande.

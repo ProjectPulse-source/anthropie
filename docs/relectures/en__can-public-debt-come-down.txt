@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/can-public-debt-come-down/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /en/can-public-debt-come-down/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
@@ -29,10 +29,10 @@ The finding in one sentence.
 From 2016 to 2025, primary deficits added 30.6 points to the French debt ratio, the interest-growth effect, concentrated in 2021-2023, took off 15.0, and other adjustments added 3.1: the net result is a rise of 18.7 points.
 This is an accounting decomposition: it says through which term the debt moved, not why the deficits existed.
 The two previous decades.
-From 1996 to 2015, the ratio goes from 57.8% to 97.0% of GDP: the interest-growth effect first pushes the ratio up, with the budget excluding interest close to balance, then primary deficits take over, with the 2008-2009 financial crisis.
+From end-1995 to end-2015, the ratio goes from 57.8% to 97.0% of GDP: the interest-growth effect first pushes the ratio up, with the budget excluding interest close to balance, then primary deficits take over, with the 2008-2009 financial crisis.
 The two previous decades, term by term
 1996-2005: interest and growth push upwards.
-The ratio goes from 57.8% to 68.2% of GDP.
+The ratio goes from 57.8% of GDP at end-1995 to 68.2% at end-2005.
 The interest-growth effect adds 8.4 points; the primary balance, in surplus four years out of ten, takes off 2.5.
 2006-2015: both terms push together.
 The ratio gains 28.8 points, the largest rise of the three decades: 22.4 from primary deficits, 7.8 from the interest-growth effect.
@@ -400,7 +400,7 @@ Refinancing at the July 2025 10-year rate the 900 billion euros of bonds maturin
 Its model also assumes an effective interest rate below nominal growth from 2026.
 Finally, the CAE note argues that it would be hard to let debt exceed 125% of GDP without risking a sharp rise in interest rates, and the Focus uses 130% as the ceiling of its model, Greece’s level in 2009: the first figure is motivated by the observation of a few European cases, the second is a chosen parameter; neither is an estimated threshold, which leaves intact the page’s statement that no level of debt, on its own, settles the question.
 The third would infer from the lowest primary balance of the countries compared that France “spends too much” or “does not levy enough”.
-In François Ecalle’s comparison (Fipeco), its public spending and revenue are both the second highest in the euro area in 2025, at 57.2% and 52.1% of GDP; from 2019 to 2025, its revenue fell by 0.9 points while those of the euro area as a whole rose by 0.4 points, and its spending rose by 1.9 points, against 2.8 in the area.
+In François Ecalle’s comparison (Fipeco, April 2026), its public spending and revenue are both the second highest in the euro area in 2025, at 57.2% and 52.1% of GDP; from 2019 to 2025, its revenue fell by 0.9 points while those of the euro area as a whole rose by 0.4 points, and its spending rose by 1.9 points, against 2.8 in the area.
 The primary balance does not say which of the two halves would need correcting.
 Not established.
 The size of the effort.
@@ -453,7 +453,7 @@ Has France ever run a primary surplus?
 Four times since 1996, from 1998 to 2001, at most 1.65% of GDP (Eurostat).
 Since then, the general government primary balance has been in deficit every year.
 Does a primary surplus always bring debt down?
-It helps reduce the ratio, but the final change also depends on interest rates, growth and other adjustments: in France, the balance reached the stabilising benchmark excluding adjustments in 1998 and 2007 without the ratio falling.
+It helps reduce the ratio, but the final change also depends on interest rates, growth and other adjustments: in France, in 1998, the primary balance was in surplus, and even above the stabilising benchmark excluding adjustments, without the ratio falling.
 In the ten-year windows of the 27 current EU members where starting debt exceeded 90% of GDP, the ratio fell by at least 15 points in none of the 35 windows with a negative average primary balance, in eight of the 30 with a balance from 0 to under 2%, in seven of the thirteen with a balance of at least 2%; these windows overlap and come from a few countries.
 In the public debt dossier
 To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
@@ -526,6 +526,8 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat and European Commission (AMECO)), under their own terms.
 Revisions
+5 November 2026 — Clarification: the answer to “Does a primary surplus always bring debt down?” cited 2007, a year of primary deficit; it now cites 1998, a year of primary surplus in which the ratio nonetheless rose.
+The bounds of the two decades are given at year-end (57.8% at end-1995).
 5 November 2026 — Correction: the country-years excluded from the check were all excluded because Eurostat publishes no ratio for them, not because of a gap beyond the tolerance as the page said; the windows excluded for nominal growth above 35% are now counted.
 Clarification: with the accounts of 21 October, the year 2025 brings to 16 the number of years in which the implicit rate exceeded nominal growth (15 as of 16 October).
 2 November 2026 — Eurostat accounts of 21 October 2026: no euro-area country is set aside by the check any longer; Finland, back in the comparison, had weaker nominal growth than France, which moves to second place; over five years, the marker came down everywhere except Ireland.
