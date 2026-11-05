@@ -64,3 +64,7 @@ It does not consist in abstractly denouncing the disorder of the world. It aims 
 ## Anthropy and entropy
 
 Anthropy is not to be confused with thermodynamic entropy. The term does not function as a physical metaphor: it designates a properly social and institutional mechanism. Entropy belongs to physics. Anthropy belongs to the analysis of social structures and their mechanisms of stabilisation through externalisation.
+
+{{< appel-livre slug="anthropie-ordre-ici-dette-ailleurs" sur="The book that develops the hypothesis" avis="non" >}}
+This paper sets out the principles. The book follows the hypothesis across seven ages of history, through economics, public finance and epistemology, and asks of each stable order where its disorder went.
+{{< /appel-livre >}}

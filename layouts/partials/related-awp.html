@@ -22,7 +22,9 @@
     {{- end -}}
   </ul>
 
-  {{- with $current.Params.related_book -}}
+  {{- /* Une page qui porte déjà le bloc {{< appel-livre >}} (AWP-01, essai E1 du 04/11/2026) ne répète pas le même livre
+         en une ligne juste en dessous. */ -}}
+  {{- with and (not ($current.HasShortcode "appel-livre")) $current.Params.related_book -}}
     {{- $book := $current.Site.GetPage (printf "/livres/%s" .) -}}
     {{- with $book -}}
     <p class="related-awp__book">

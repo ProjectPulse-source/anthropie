@@ -63,3 +63,7 @@ Elle ne constitue pas une dénonciation abstraite du désordre du monde. Elle vi
 ## Anthropie et entropie
 
 L'anthropie ne se confond pas avec l'entropie thermodynamique. Le terme ne vaut pas comme métaphore physique&nbsp;: il désigne un mécanisme proprement social et institutionnel. L'entropie relève de la physique. L'anthropie relève de l'analyse des structures sociales et de leurs mécanismes de stabilisation par externalisation.
+
+{{< appel-livre slug="anthropie-ordre-ici-dette-ailleurs" sur="Le livre qui déploie l'hypothèse" avis="non" >}}
+Ce texte pose les principes. Le livre suit l'hypothèse sur sept âges de l'histoire, à travers l'économie, les finances publiques et l'épistémologie, et demande à chaque ordre stable où s'est écoulé son désordre.
+{{< /appel-livre >}}
