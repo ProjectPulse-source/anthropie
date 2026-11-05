@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (nuit) — Lot G1 de la passe transversale vérifié à la source et corrigé (3 pages, FR seul)
+
+- **Citations célèbres** : bilan par auteur recompté sur `AUDIT_CITATIONS_COMPLET.csv`, graphies d'un même auteur réunies
+  (les anciens comptes ne retenaient que le libellé exact, témoin : 16/36/78/29 retrouvés à l'identique par ce filtre) :
+  Molière 41/44 (et non 16/16, « toutes »), Voltaire 32/51 (et non 17/29) ; La Fontaine 33/36 et Hugo 55/78 inchangés.
+- **Tabula rasa** : Locke emploie la formule dans le résumé de l'*Essai* publié en 1688 (« the mind is at first rasa tabula »,
+  lu dans Lord King, *Life and Letters*, 1858, p. 365, Internet Archive) ; la page disait « qui ne l'emploie pas ». Chapô,
+  description, FAQ, résultat en une phrase, conclusion repris (« pas dans son livre »). Coste et Locke à Oates chez les Masham
+  (DNB, notice Coste, lue), et non « chez Locke ». Non relus par moi, laissés hors page : *Essays on the Law of Nature* (1664,
+  « rasae tabulae »), *Drafts A et B* (1671).
+- **Pouvoir** : *Il Principe* XVIII, « di vincere e mantenere lo stato » (Lisio 1899, texte et apparat lus ; Firpo 1972,
+  Liber Liber, lu) au lieu de la vulgate « conto di vivere » ; Saint-Just, « on ne peut point régner innocemment », discours
+  du 13/11/1792 (AP t. 53, lu), et non pendant le procès de décembre.
+- Journaux et `lastmod` 05/11 ; historique du 04/11 pour la page pouvoir ; 3 instantanés relus.
+
 ### 2026-11-05 (soir) — Passe transversale des 32 ressources : erreurs d'exactitude confirmées corrigées
 
 Fiches : `D:\PRO\06_PROMOTION\AUDIT_RESSOURCES_2026-11-05\PASSE_TRANSVERSALE\FICHES\` (A à F, G2 ; chaque défaut vérifié à la source).

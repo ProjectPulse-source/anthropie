@@ -1,9 +1,9 @@
-# relu le 2026-11-04 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 28e463d + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 393c9a3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 À quoi tient l’obéissance ?
 Le pouvoir, de Machiavel à Foucault
 La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l’attraction : de −1200 à 2012, le parcours « Pouvoir » de L’Odyssée des idées répond en neuf étapes à la question « pourquoi obéit-on ? ».
 Et trois formules célèbres du parcours ne sont pas ce qu’on croit, à commencer par « la fin justifie les moyens ».
-Page mise à jour le 4 novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026 · révisions
 « Qu’est-ce qui fait qu’un homme obéit à un autre ? » La question ouvre, dans L’Odyssée des idées, le parcours que le livre consacre au pouvoir : onze escales datées, de −1200 à 2012, et trois échos vers d’autres routes du livre.
 Cette page suit ce parcours.
 Chaque étape reçoit la même grille : l’idée, telle que le livre la résume ; le texte, cité dans sa langue d’origine avec son édition quand il a pu être lu ; la limite, le point où ce ressort de l’obéissance cède ; et l’escale du livre.
@@ -33,8 +33,9 @@ La limite : elle est dans la phrase même.
 La cruauté inutile, la rapacité, l’atteinte aux biens et aux femmes des sujets font passer de la crainte à la haine, que la crainte ne contrôle plus.
 Machiavel n’a pas écrit que la fin justifie les moyens.
 Le contresens part du chapitre XVIII : dans les actions des princes, « si guarda al fine », on regarde au résultat, et « i mezzi saranno sempre giudicati onorevoli », les moyens seront toujours jugés honorables — par la foule, qui juge sur l’apparence et sur l’issue (Wikisource).
-Le passage n’est pas seulement descriptif : il s’ouvre sur un conseil, « Facci adunque un Principe conto di vivere e mantenere lo Stato », qu’un prince se soucie donc de vivre et de maintenir l’État.
-Il recommande de savoir s’écarter de la morale quand la conservation de l’État l’exige, et constate que le résultat fera juger les moyens.
+Le passage n’est pas seulement descriptif : il s’ouvre sur un conseil, « Facci dunque uno principe di vincere e mantenere lo stato », qu’un prince fasse donc en sorte de vaincre et de maintenir l’État.
+C’est la leçon des éditions critiques (Lisio, 1899 ; Firpo, 1972) ; le texte courant, que reprend Wikisource, porte « conto di vivere », de vivre : selon Lisio, « vivere » est une faute de copie, transmise par le manuscrit et l’édition de 1532.
+Machiavel recommande de savoir s’écarter de la morale quand la conservation de l’État l’exige, et constate que le résultat fera juger les moyens.
 Ce n’est pas une permission générale de tout faire, et la portée morale de ce conseil reste discutée.
 Dans le livre : escale « 1513 · Machiavel : Le Prince et la vérité nue du pouvoir », qui suit aussi la lecture républicaine qu’en fera Rousseau.
 1651 · Hobbes : le loup et le Léviathan
@@ -71,7 +72,7 @@ Le peuple souverain · faire reconnaître une autorité
 L’idée : le 14 juillet 1789, la Bastille ne garde que sept prisonniers, et la foule y cherche la poudre.
 La réplique nocturne de Versailles — « C’est une révolte ? — Non, Sire, c’est une révolution » — vient d’une tradition qui en a poli les mots ; elle grave pourtant une frontière.
 Une révolte se réprime, une révolution déplace le sol.
-En décembre 1792, la Convention juge « Louis Capet », et Saint-Just soutient qu’on ne peut régner innocemment.
+Dès le 13 novembre 1792, dans le débat sur le jugement du roi, Saint-Just soutient devant la Convention qu’on ne peut régner innocemment ; en décembre, elle juge « Louis Capet ».
 Le roi est exécuté le 21 janvier 1793.
 Le texte : « La personne du roi est inviolable et sacrée », disait la Constitution du 3 septembre 1791 (titre III, chapitre II, section 1, article 2 ; Wikisource).
 Les avocats de Louis plaident ce texte ; la Convention répond depuis l’acte du 10 août 1792, qui a renversé l’ordre dont il relevait.
@@ -204,7 +205,7 @@ Questions fréquentes
 Machiavel a-t-il écrit « la fin justifie les moyens » ?
 Non, la formule n’est pas dans Le Prince.
 Le contresens part du chapitre XVIII : dans les actions des princes, écrit Machiavel, « si guarda al fine » — on regarde au résultat — et « i mezzi saranno sempre giudicati onorevoli », les moyens seront toujours jugés honorables, par la foule qui juge sur l’apparence et sur l’issue.
-Le passage est aussi un conseil : que le prince songe à maintenir l’État, le résultat fera juger les moyens.
+Le passage est aussi un conseil : que le prince fasse en sorte de vaincre et de maintenir l’État, le résultat fera juger les moyens.
 Ce n’est pas une permission générale de tout faire, et sa portée morale reste discutée.
 D’où vient « l’homme est un loup pour l’homme » ?
 De Plaute, dans la comédie Asinaria (v.
@@ -219,7 +220,8 @@ Un passage.
 Marx la nomme en 1850, dans Les Luttes de classes en France, comme le point de transit nécessaire vers l’abolition des différences de classe, et le redit en 1852 dans une lettre à Joseph Weydemeyer : cette dictature ne constitue que la transition vers l’abolition de toutes les classes.
 L’expression n’est pas dans le Manifeste de 1848.
 Sources
-Textes, relus le 1er novembre 2026 : Suétone, Vie de Caligula, 30, et Vie de Tibère, 59 (The Latin Library) ; Machiavel, Il Principe, chapitres XV, XVII et XVIII (Wikisource) ; Plaute, Asinaria, v.
+Textes, relus le 1er novembre 2026 : Suétone, Vie de Caligula, 30, et Vie de Tibère, 59 (The Latin Library) ; Machiavel, Il Principe, chapitres XV, XVII et XVIII (Wikisource), et pour la phrase « Facci dunque » du chapitre XVIII, l’édition critique de Giuseppe Lisio (Florence, Sansoni, 1899, texte et apparat, Internet Archive) et l’édition de Luigi Firpo (Turin, Einaudi, 1972, Liber Liber), relues le 5 novembre 2026 ; Saint-Just, discours du 13 novembre 1792 (Archives parlementaires, t.
+53, séance du 13 novembre 1792, relu le 5 novembre 2026) ; Plaute, Asinaria, v.
 495 (The Latin Library) ; Hobbes, Philosophicall Rudiments Concerning Government and Society (1651, traduction du De Cive), dédicace (Wikisource), et Leviathan, 1651, chapitre XIII (Project Gutenberg) ; Journal du marquis de Dangeau, éd.
 Soulié et al., t.
 XVI, p.
@@ -227,6 +229,9 @@ XVI, p.
 Les liens sont donnés à chaque étape.
 Le livre : Stéphane Lalut, L’Odyssée des idées, nouvelle édition 2026, parcours « Pouvoir » et escales citées à chaque étape.
 Révisions
+5 novembre 2026 — Deux corrections.
+Machiavel, Le Prince, chapitre XVIII : le conseil se lit « di vincere e mantenere lo stato », vaincre et maintenir l’État, dans les éditions critiques ; la leçon « vivere », vivre, du texte courant est tenue par Lisio pour une faute de copie.
+Saint-Just soutient qu’on ne peut régner innocemment dès son discours du 13 novembre 1792, avant l’ouverture du procès en décembre.
 4 novembre 2026 — « Notre bon plaisir » : ajout de la vérification des chartistes (Demante, 1893, après Mas-Latrie, 1881) : les actes imprimés avec « bon plaisir » ne résistent pas à la confrontation avec l’original, qui porte « Car tel est notre plaisir ».
 4 novembre 2026 — La troisième manière de faire agir s’appelle désormais « façonner les conduites », et non plus « organiser les choix » : la discipline décrite par Foucault agit sur les corps et les conduites, pas seulement sur les choix offerts (contre-expertise PRO-20261103-195836).
 Toutes les ressources : données, dossiers et repères →

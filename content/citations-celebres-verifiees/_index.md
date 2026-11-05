@@ -5,7 +5,10 @@ og_image_alt: "Carte de partage : « Citations célèbres vérifiées »"
 description: "Vingt citations célèbres prêtées à Victor Hugo, Voltaire, Molière, La Fontaine et Oscar Wilde, relues dans leurs œuvres : le texte exact, l'édition, le passage. Quinze sont établies, deux circulent retouchées, trois n'ont pas été trouvées chez l'auteur qu'on leur prête."
 chapo: "Sur vingt citations célèbres qu'on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n'y ont pas été trouvées. Voltaire n'a pas écrit « je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » : la phrase est d'une biographe anglaise, qui l'a reconnue pour sienne en 1939. Et souvent, l'auteur citait déjà quelqu'un d'autre."
 date: 2026-11-01T06:00:00+01:00  # heure de Paris : une date nue se lit minuit UTC
-lastmod: 2026-11-01T06:00:00+01:00
+lastmod: 2026-11-05T12:00:00+01:00
+journal:  # révisions qui changent la lecture de la page
+  - date: 2026-11-05
+    texte: "Correction du bilan par auteur de la vérification de Livresque des mots : les graphies d'un même auteur sont désormais réunies. Molière : 41 citations retrouvées sur 44, et non 16 sur 16 ; Voltaire : 32 sur 51, et non 17 sur 29. La Fontaine et Hugo ne changent pas."
 og_title: "Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ? — S. Lalut"
 # Programme « sujets → livres », arbitrage PRO-20261101-060949, point 3. Chaque citation relue au texte le 01/11/2026
 # (Wikisource, Internet Archive, Project Gutenberg) ; fiche de conception docs/conception/citations-celebres-verifiees.md.
@@ -368,7 +371,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 
 Les trois mouvements se cumulent souvent. Un auteur reprend une formule ancienne, la circulation la simplifie, puis l'attache à un nom plus célèbre&nbsp;: à chaque étape, l'autorité du nom remplace un peu plus la preuve du texte. Une citation qui quitte son œuvre change parfois de mots, parfois d'auteur, et toujours de contexte.
 
-La vérification des citations de *Livresque des mots* va dans le même sens pour ces cinq auteurs. Chez Molière, les citations du recueil ont toutes été retrouvées dans le texte, exactes ou à une variante près (16 sur 16)&nbsp;; chez La Fontaine, presque toutes (33 sur 36)&nbsp;; chez Hugo, sept sur dix (55 sur 78)&nbsp;; chez Voltaire, un peu plus d'une sur deux (17 sur 29). Ces différences décrivent les citations que le recueil avait réunies&nbsp;; elles ne mesurent ni la fiabilité des attributions à chaque auteur, ni la fréquence des erreurs dans les citations qui circulent. Le genre des œuvres, le vers, l'apprentissage scolaire ou le choix initial des citations peuvent y jouer, et rien ici ne permet de faire la part de chacun.
+La vérification des citations de *Livresque des mots* va dans le même sens pour ces cinq auteurs. Chez Molière, presque toutes les citations vérifiées ont été retrouvées dans le texte, exactes ou à une variante près (41 sur 44)&nbsp;; chez La Fontaine aussi (33 sur 36)&nbsp;; chez Hugo, sept sur dix (55 sur 78)&nbsp;; chez Voltaire, un peu plus de six sur dix (32 sur 51). Ces différences décrivent les citations que le recueil avait réunies&nbsp;; elles ne mesurent ni la fiabilité des attributions à chaque auteur, ni la fréquence des erreurs dans les citations qui circulent. Le genre des œuvres, le vers, l'apprentissage scolaire ou le choix initial des citations peuvent y jouer, et rien ici ne permet de faire la part de chacun.
 
 ## Vérifier une citation soi-même&nbsp;: quatre questions {#verifier-une-citation}
 

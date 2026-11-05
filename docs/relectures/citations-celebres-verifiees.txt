@@ -1,9 +1,9 @@
-# relu le 2026-11-04 ; texte servi de /citations-celebres-verifiees/, build de b7a0089 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-05 ; texte servi de /citations-celebres-verifiees/, build de 393c9a3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Citations célèbres : qu’ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ?
 Sur vingt citations célèbres qu’on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n’y ont pas été trouvées.
 Voltaire n’a pas écrit « je me battrai jusqu’à la mort pour que vous ayez le droit de le dire » : la phrase est d’une biographe anglaise, qui l’a reconnue pour sienne en 1939.
 Et souvent, l’auteur citait déjà quelqu’un d’autre.
-Page publiée le 1er novembre 2026
+Page mise à jour le 5 novembre 2026 · révisions
 Une citation célèbre se répète d’ordinaire sans son livre, sans sa page et souvent sans sa forme exacte.
 Cette page examine vingt citations célèbres prêtées à cinq auteurs, choisies pour ce qu’elles montrent de la façon dont un texte se transmet, se transforme ou change d’auteur, et les relit dans leurs œuvres, dans une édition qu’elle nomme, au passage qu’elle indique.
 Elle s’appuie sur la vérification des 4 656 citations de Livresque des mots, dont l’édition 2026 a réexaminé le texte et la paternité une à une.
@@ -369,7 +369,7 @@ Les trois mouvements se cumulent souvent.
 Un auteur reprend une formule ancienne, la circulation la simplifie, puis l’attache à un nom plus célèbre : à chaque étape, l’autorité du nom remplace un peu plus la preuve du texte.
 Une citation qui quitte son œuvre change parfois de mots, parfois d’auteur, et toujours de contexte.
 La vérification des citations de Livresque des mots va dans le même sens pour ces cinq auteurs.
-Chez Molière, les citations du recueil ont toutes été retrouvées dans le texte, exactes ou à une variante près (16 sur 16) ; chez La Fontaine, presque toutes (33 sur 36) ; chez Hugo, sept sur dix (55 sur 78) ; chez Voltaire, un peu plus d’une sur deux (17 sur 29).
+Chez Molière, presque toutes les citations vérifiées ont été retrouvées dans le texte, exactes ou à une variante près (41 sur 44) ; chez La Fontaine aussi (33 sur 36) ; chez Hugo, sept sur dix (55 sur 78) ; chez Voltaire, un peu plus de six sur dix (32 sur 51).
 Ces différences décrivent les citations que le recueil avait réunies ; elles ne mesurent ni la fiabilité des attributions à chaque auteur, ni la fréquence des erreurs dans les citations qui circulent.
 Le genre des œuvres, le vers, l’apprentissage scolaire ou le choix initial des citations peuvent y jouer, et rien ici ne permet de faire la part de chacun.
 Vérifier une citation soi-même : quatre questions
@@ -432,6 +432,10 @@ Tallentyre (Evelyn Beatrice Hall), The Friends of Voltaire, Londres, John Murray
 Quitard, Dictionnaire étymologique, historique et anecdotique des proverbes, 1842, article « aider » ; Quote Investigator, « Be Yourself; Everyone Else Is Already Taken », 20 janvier 2014 (quoteinvestigator.com).
 Vérification de Livresque des mots : méthode et corpus de l’édition 2026.
 Sur un mot qui a changé d’auteur : la tabula rasa de Locke.
+Révisions
+5 novembre 2026 — Correction du bilan par auteur de la vérification de Livresque des mots : les graphies d’un même auteur sont désormais réunies.
+Molière : 41 citations retrouvées sur 44, et non 16 sur 16 ; Voltaire : 32 sur 51, et non 17 sur 29.
+La Fontaine et Hugo ne changent pas.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

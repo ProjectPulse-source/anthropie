@@ -1,13 +1,13 @@
-# relu le 2026-11-03 ; texte servi de /tabula-rasa-locke/, build de 680d016 ; une phrase par ligne (scripts/check-relecture.py)
-La tabula rasa : Locke a-t-il vraiment parlé d'une page blanche ?
-Non : en 1690, Locke écrit « white paper », papier blanc.
-L'image de la tablette vient d'Aristote, la formule latine de ses commentateurs médiévaux, et en français elle est entrée dans le texte de Locke par sa traduction.
+# relu le 2026-11-05 ; texte servi de /tabula-rasa-locke/, build de 393c9a3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+La tabula rasa : Locke a-t-il vraiment parlé d’une page blanche ?
+Pas dans son livre : en 1690, l’Essai dit « white paper », papier blanc.
+Locke connaît pourtant la formule latine : il l’emploie dans le résumé de son livre paru en 1688.
+L’image de la tablette vient d’Aristote, la formule latine de ses commentateurs médiévaux, et en français elle est entrée dans le texte de l’Essai par sa traduction.
 Leibniz lui oppose un marbre veiné.
-Ce que la formule fait dire de trop tient en une phrase : l'esprit naît vide d'idées, il ne naît pas inerte.
-Page publiée le 17 octobre 2026
-Idées et méthode
+Ce que la formule fait dire de trop tient en une phrase : l’esprit naît vide d’idées, il ne naît pas inerte.
+Page mise à jour le 5 novembre 2026 · révisions
 On prête à John Locke l’idée que l’esprit naît comme une tabula rasa, une page blanche.
-Locke a donné à cette idée sa forme moderne ; la formule, elle, n’est pas de lui.
+Locke a donné à cette idée sa forme moderne ; la formule, elle, ne vient pas de lui, et il ne l’a pas gardée dans son livre.
 Suivre ce déplacement d’un mot, c’est voir comment une idée se fixe sous un nom qui n’est pas celui de son auteur, puis comment elle est contestée.
 Que veut dire tabula rasa ?
 Une tablette prête à recevoir l’écriture
@@ -20,18 +20,20 @@ Au XIIIe siècle, Thomas d’Aquin écrit, en citant Aristote, que l’intellect
 2).
 La formule existe donc quatre siècles avant Locke.
 Locke a-t-il écrit « tabula rasa » ?
-Non : « white paper »
+Pas dans son livre : « white paper »
 Pas dans l’Essai sur l’entendement humain de 1690.
 Au livre II, chapitre I, § 2, Locke propose de se représenter l’esprit comme « white Paper, void of all Characters, without any Ideas » : un papier blanc, vide de tout caractère, sans aucune idée.
 Et à la question de savoir comment ce papier se remplit, il répond d’un mot : « From Experience ».
-La formule latine lui a été attribuée ensuite.
-En français, elle a même pris place dans son texte.
-Les lecteurs du XVIIIe siècle lisent l’Essai dans la traduction de Pierre Coste, parue dès 1700 et préparée auprès de Locke, chez qui Coste vivait.
+La formule latine ne lui est pourtant pas étrangère.
+Dans le résumé de l’Essai qu’il rédige lui-même, et que la Bibliothèque universelle publie en français en 1688, avant le livre, il écrit avoir voulu prouver « that the mind is at first rasa tabula », que l’esprit est d’abord une table rase.
+Dans l’Essai, il lui préfère l’image ordinaire.
+En français, la formule savante a même pris place dans le texte du livre.
+Les lecteurs du XVIIIe siècle lisent l’Essai dans la traduction de Pierre Coste, parue dès 1700 et préparée auprès de Locke : depuis 1697, Coste était le précepteur du fils de Sir Francis et Lady Masham, à Oates, où Locke résidait.
 L’édition de 1735, la seule relue pour cette page, porte à cet endroit « une Table rase », avec en note « Tabula rasa ».
 Là où l’original anglais emploie une image ordinaire, la feuille blanche, la traduction choisit l’image savante.
-Un lecteur français qui cite « la table rase de Locke » cite donc la traduction, faite auprès de Locke, et non les mots de Locke.
+Un lecteur français qui cite « la table rase de Locke » cite donc la traduction, faite auprès de Locke, et non les mots que Locke a gardés dans son livre.
 Le résultat en une phrase.
-Locke a écrit « white paper » ; « table rase » est le mot de sa traduction française, et tabula rasa celui d’une tradition qui remonte à Aristote.
+Dans son Essai, Locke a écrit « white paper » ; « table rase » est le mot de sa traduction française, et tabula rasa, la formule d’une tradition qui remonte à Aristote, ne paraît chez lui que dans le résumé qu’il a donné de son livre.
 Les deux textes, côte à côte
 Texte
 Locke, 1690 (livre II, chap.
@@ -74,8 +76,8 @@ L’une est un programme, l’autre une hypothèse sur l’origine des idées.
 Les confondre fait de Locke un révolutionnaire de la page blanche, alors que son geste est de demander d’où vient chaque idée avant de l’accepter.
 Ce que cette histoire montre : un mot n’appartient pas toujours à son auteur
 Une formule voyage plus vite que les textes.
-Tabula rasa est née d’une image d’Aristote, a pris son latin chez les commentateurs médiévaux, a été rattachée à Locke qui ne l’emploie pas, et c’est sous ce nom que Leibniz la combat.
-Le mot n’a jamais été tout à fait celui de l’auteur à qui on le prête.
+Tabula rasa est née d’une image d’Aristote, a pris son latin chez les commentateurs médiévaux, a été rattachée à Locke, qui l’emploie dans le résumé de son livre mais pas dans le livre, et c’est sous ce nom que Leibniz la combat.
+Le mot n’a jamais été tout à fait celui de l’auteur à qui on le prête : Locke l’avait reçu d’une tradition, et l’avait écarté de son Essai.
 C’est souvent ainsi que les idées circulent : attachées à un nom propre, résumées par une formule, et contestées sous cette forme.
 À la même époque, Locke mène une autre critique, celle d’un pouvoir fondé sur le droit divin et sur la naissance : les Deux Traités du gouvernement paraissent à la fin de 1689, datés de 1690.
 Ce second versant de sa pensée, le gouvernement par consentement, relève d’une autre enquête que la théorie de la connaissance.
@@ -85,8 +87,8 @@ Elle ne retrace pas le chemin de la formule entre Thomas d’Aquin et Locke : qu
 De la traduction de Coste, elle n’a lu que l’édition de 1735.
 Elle n’aborde ni la psychologie ni les sciences cognitives d’aujourd’hui, qui ont repris la question de l’inné à d’autres frais.
 Suivre les idées dans le temps
-L'Odyssée des idées
-Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle
+L’Odyssée des idées
+Culture, philosophie et science — de l’aube de l’humanité à l’intelligence artificielle
 Cette page suit un seul mot, d’Aristote à Leibniz.
 L’Odyssée des idées replace Locke dans le temps long, entre Hobbes et Rousseau, et sa notice « 1690 · Locke : la page blanche et le gouvernement par consentement » réunit les deux versants de sa pensée, la connaissance et le pouvoir, parmi 250 escales de l’histoire des idées.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
@@ -96,25 +98,26 @@ Version papier : 36 € · Kindle : disponible
 Sommaire, extraits et recensions →
 Questions fréquentes
 Que signifie tabula rasa ?
-Littéralement, une « tablette raclée » : la tablette de cire des Anciens, lissée pour qu'on puisse y écrire à nouveau.
-En philosophie, l'expression désigne un esprit qui ne contient, à la naissance, aucune idée déjà inscrite et qui reçoit tout de l'expérience.
-L'image remonte à Aristote, qui compare l'intellect à une tablette sur laquelle rien n'est encore écrit (De l'âme, III, 4) ; la formule latine se lit chez Thomas d'Aquin au XIIIᵉ siècle.
+Littéralement, une « tablette raclée » : la tablette de cire des Anciens, lissée pour qu’on puisse y écrire à nouveau.
+En philosophie, l’expression désigne un esprit qui ne contient, à la naissance, aucune idée déjà inscrite et qui reçoit tout de l’expérience.
+L’image remonte à Aristote, qui compare l’intellect à une tablette sur laquelle rien n’est encore écrit (De l’âme, III, 4) ; la formule latine se lit chez Thomas d’Aquin au XIIIᵉ siècle.
 Locke a-t-il écrit « tabula rasa » ?
-Non, pas dans l'Essai sur l'entendement humain de 1690.
+Pas dans l’Essai sur l’entendement humain de 1690.
 Locke y écrit : « Let us then suppose the Mind to be, as we say, white Paper, void of all Characters, without any Ideas » (livre II, chapitre I, § 2).
-En français, la formule est entrée dans son texte par la traduction de Pierre Coste, parue dès 1700 et préparée auprès de Locke : l'édition de 1735 écrit « une Table rase, vuide de tous caractéres », avec « Tabula rasa » en note.
-D'où viennent nos idées selon Locke ?
-De l'expérience, sous deux formes.
+Il emploie pourtant la formule latine dans le résumé de l’Essai qu’il a lui-même rédigé, publié en français en 1688 : « the mind is at first rasa tabula ».
+En français, la formule est entrée dans son texte par la traduction de Pierre Coste, parue dès 1700 et préparée auprès de Locke : l’édition de 1735 écrit « une Table rase, vuide de tous caractéres », avec « Tabula rasa » en note.
+D’où viennent nos idées selon Locke ?
+De l’expérience, sous deux formes.
 La sensation, par laquelle les objets extérieurs nous donnent les couleurs, les sons, le chaud, le dur.
-Et la réflexion, par laquelle l'esprit perçoit ses propres opérations : percevoir, penser, douter, croire, vouloir.
-Locke nie les idées innées, pas les facultés : l'esprit naît vide d'idées, non dépourvu de pouvoirs.
+Et la réflexion, par laquelle l’esprit perçoit ses propres opérations : percevoir, penser, douter, croire, vouloir.
+Locke nie les idées innées, pas les facultés : l’esprit naît vide d’idées, non dépourvu de pouvoirs.
 Que répond Leibniz à la tabula rasa ?
-Dans les Nouveaux Essais sur l'entendement humain, écrits contre Locke vers 1704 et publiés en 1765, Leibniz préfère à la tablette vide l'image d'un bloc de marbre veiné : les veines disposent la pierre à une figure plutôt qu'à une autre.
-Il reconnaît le rôle indispensable de l'expérience, mais refuse qu'elle suffise à expliquer les vérités nécessaires.
-À la maxime « rien n'est dans l'intellect qui n'ait d'abord été dans les sens », il ajoute : « excipe : nisi ipse intellectus », sauf l'intellect lui-même.
+Dans les Nouveaux Essais sur l’entendement humain, écrits contre Locke vers 1704 et publiés en 1765, Leibniz préfère à la tablette vide l’image d’un bloc de marbre veiné : les veines disposent la pierre à une figure plutôt qu’à une autre.
+Il reconnaît le rôle indispensable de l’expérience, mais refuse qu’elle suffise à expliquer les vérités nécessaires.
+À la maxime « rien n’est dans l’intellect qui n’ait d’abord été dans les sens », il ajoute : « excipe : nisi ipse intellectus », sauf l’intellect lui-même.
 Faire table rase et tabula rasa, est-ce la même chose ?
-Non. « Faire table rase », en français courant, c'est effacer ce qui existait pour repartir de zéro, comme dans le vers de L'Internationale « Du passé faisons table rase ».
-La tabula rasa des philosophes décrit l'état de l'esprit avant toute expérience.
+Non. « Faire table rase », en français courant, c’est effacer ce qui existait pour repartir de zéro, comme dans le vers de L’Internationale « Du passé faisons table rase ».
+La tabula rasa des philosophes décrit l’état de l’esprit avant toute expérience.
 La première est un geste, la seconde un point de départ.
 Sources
 John Locke, An Essay Concerning Humane Understanding, Londres, 1690, livre II, chapitre I, § 2 et § 4 (texte de 1690, Wikisource).
@@ -124,6 +127,9 @@ G.
 W.
 Leibniz, Nouveaux Essais sur l’entendement humain, écrits vers 1704, publiés en 1765, préface (éd.
 Flammarion, 1921, Wikisource) et livre II, chapitre 1, § 2.
+John Locke, résumé de l’Essai, manuscrit publié par Lord King, The Life and Letters of John Locke, nouvelle édition, Londres, Bohn, 1858, p.
+365 (texte, Internet Archive) ; traduit par Jean Le Clerc dans la Bibliothèque universelle et historique, 1688.
+Sur Coste et Locke à Oates : Dictionary of National Biography, notice « Coste, Pierre » (Wikisource).
 Thomas d’Aquin, Somme théologique, I, q.
 79, a.
 2 (texte latin, Corpus Thomisticum).
@@ -132,6 +138,9 @@ Comment ces citations ont été vérifiées
 Chaque citation a été relue le 17 octobre 2026 dans le texte d’époque ou son fac-similé : l’Essai de Locke dans l’édition de 1690, la traduction de Coste dans l’édition de 1735, la préface des Nouveaux Essais dans l’édition Flammarion de 1921, la Somme dans le texte latin du Corpus Thomisticum.
 La maxime complétée par Leibniz (« nisi ipse intellectus ») est citée d’après deux sources concordantes, sans relecture de l’édition d’époque.
 La date de parution des Deux Traités (fin 1689, page de titre 1690) suit l’usage établi des bibliographies de Locke.
+Révisions
+5 novembre 2026 — Correction : Locke emploie lui-même la formule latine, dans le résumé de l’Essai qu’il a rédigé et que la Bibliothèque universelle a publié en français en 1688 (« the mind is at first rasa tabula ») ; c’est dans l’Essai de 1690 qu’il ne l’emploie pas.
+Coste ne vivait pas chez Locke : tous deux logeaient chez les Masham, à Oates.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp
