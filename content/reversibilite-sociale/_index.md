@@ -6,6 +6,7 @@ description: "La réversibilité sociale est la capacité, évaluée avant une t
 date: 2026-07-24
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-05, texte: "Ajout : le témoin américain (fresh start du droit des faillites, Fair Credit Reporting Act), que la version anglaise donnait déjà."}
   - {date: 2026-11-05, texte: "Corrections : l'indicateur 040 du fichier FIBEN a été supprimé en 2013 (décret n° 2013-799), non en 2021 ; la loi Lemoine (2022) a ramené à cinq ans le délai du droit à l'oubli, qu'elle n'a pas créé ; le droit à l'erreur vaut devant toutes les administrations, pas seulement en matière fiscale."}
 og_title: "Qu'est-ce que la réversibilité sociale ? — définition et sources — S. Lalut"
 faq:
@@ -100,7 +101,7 @@ Le sens que construit la réversibilité sociale est plus large&nbsp;: un droit 
 
 Le pivot du cadre est la **trace**&nbsp;: la mémoire que les institutions gardent d'un échec, et le régime de réadmission qu'elle gouverne.
 
-Un incident de paiement, un défaut d'entreprise, un signalement ne disparaissent pas avec l'événement&nbsp;: ils s'inscrivent — fichiers, historiques, scores — et conditionnent l'accès futur au crédit, à l'assurance, au logement, parfois à l'emploi. Deux décisions françaises montrent que cette mémoire est un choix institutionnel, pas une fatalité&nbsp;: un décret de 2013 (n°&nbsp;2013-799) a supprimé l'indicateur 040 du fichier FIBEN de la Banque de France, qui signalait pendant trois ans les dirigeants ayant connu une liquidation judiciaire&nbsp;; et la loi Lemoine (2022) a ramené à cinq ans le délai du droit à l'oubli assurantiel, au-delà duquel l'assureur ne peut plus recueillir d'information sur un cancer guéri. Dans les deux cas, une société a décidé de *raccourcir la mémoire de l'échec* — c'est-à-dire d'augmenter la réversibilité de ceux qu'elle concernait.
+Un incident de paiement, un défaut d'entreprise, un signalement ne disparaissent pas avec l'événement&nbsp;: ils s'inscrivent — fichiers, historiques, scores — et conditionnent l'accès futur au crédit, à l'assurance, au logement, parfois à l'emploi. Cette mémoire est un choix institutionnel, pas une fatalité. Aux États-Unis, le droit des faillites est explicitement construit autour d'un *fresh start*, un nouveau départ, et le Fair Credit Reporting Act limite la durée pendant laquelle la plupart des informations négatives peuvent figurer dans un rapport de crédit. La France a raccourci deux de ses propres mémoires&nbsp;: un décret de 2013 (n°&nbsp;2013-799) a supprimé l'indicateur 040 du fichier FIBEN de la Banque de France, qui signalait pendant trois ans les dirigeants ayant connu une liquidation judiciaire&nbsp;; et la loi Lemoine (2022) a ramené à cinq ans le délai du droit à l'oubli assurantiel, au-delà duquel l'assureur ne peut plus recueillir d'information sur un cancer guéri. Dans les deux cas, une société a décidé de *raccourcir la mémoire de l'échec* — c'est-à-dire d'augmenter la réversibilité de ceux qu'elle concernait.
 
 ## Rebondir après un échec&nbsp;: une question de structure, pas seulement de psychologie
 

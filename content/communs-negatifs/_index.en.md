@@ -7,7 +7,7 @@ description: "Negative commons designate what we inherit collectively without ha
 date: 2026-07-26
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
-  - {date: 2026-11-05, texte: "Clarification: the article \"Les communs négatifs\" in the journal Études (2021) is by Alexandre Monnin alone."}
+  - {date: 2026-11-05, texte: "Clarification: the article \"Les ‘communs négatifs’\" in the journal Études (2021) is by Alexandre Monnin alone."}
   - {date: 2026-11-05, texte: "Correction: it is Alexandre Monnin who ranks digital technologies among the candidate negative commons; AWP-06 takes up his proposal, under conditions. The externality belongs to economic analysis, not to accounting."}
 og_title: "What are negative commons? — definition and sources — S. Lalut"
 faq:

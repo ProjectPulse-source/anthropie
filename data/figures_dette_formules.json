@@ -23,8 +23,8 @@
    "fichier": "dette-formules-grille-en",
    "titre": "Eleven claims from 8 September 2025: what the figures settle, and what they do not",
    "montre": "For most claims, the verdict depends on the question asked: the date, unit, scope or year chosen. None of the conclusions drawn is demonstrated by the figure.",
-   "source": "French National Assembly (record of 8 September 2025); Insee; Eurostat; Court of Audit; Government; Senate; Banque de France; Bank of Greece; author's calculation",
-   "precaution": "Data available on 8 September 2025: public accounts as published at that date for spending, revenue and debt, revised version elsewhere; forecasts published after the debate are excluded from the verdicts. Round numbers judged at the stated precision (tolerance grid). A case study of one debate, not a sample of the debate."
+   "source": "French National Assembly (record of 8 September 2025); Insee; Eurostat; Court of Audit; Government; Senate; Banque de France; Bank of Greece; author's calculation",
+   "precaution": "Data available on 8 September 2025: public accounts as published at that date for spending, revenue and debt, revised version elsewhere; forecasts published after the debate are excluded from the verdicts. Round numbers judged at the stated precision (tolerance grid). A case study of one debate, not a sample of the debate."
   },
   {
    "id": "grece",
@@ -32,7 +32,7 @@
    "titre": "Ten-year yields: France above or below Greece, month by month",
    "montre": "France borrows at higher rates than Greece from summer 2025: the claim is accurate for the month of the debate, and would not have been six months earlier.",
    "source": "Eurostat, long-term government bond yields, monthly averages (irt_lt_mcby_m); author's calculation",
-   "precaution": "Monthly averages. On 8 September 2025, France borrowed at ten years at 3.49% (Banque de France) and Greece at 3.34% (Bank of Greece); on the 4th, a like-for-like measure gave 3.50% against 3.44%. A market price gives the current cost of borrowing, not the relative soundness of two countries."
+   "precaution": "Monthly averages. On 8 September 2025, France borrowed at ten years at 3.49% (Banque de France) and Greece at 3.34% (Bank of Greece); on the 4th, a like-for-like measure gave 3.50% against 3.44%. A market price gives the current cost of borrowing, not the relative soundness of two countries."
   }
  ]
 }

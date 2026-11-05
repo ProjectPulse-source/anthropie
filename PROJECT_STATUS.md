@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-05 (matin) — Points de forme restants de la passe transversale (FR et EN)
+
+- `/qui-peut-faire-adopter-une-loi/` : le chapô donne le périmètre du « neuf sur dix » (propositions de loi ordinaires déposées en premier lieu à l'Assemblée, trois législatures closes, 2012-2024), FR et EN ; instantanés de relecture refaits.
+- `/reversibilite-sociale/` : la version française reçoit le témoin américain (fresh start, Fair Credit Reporting Act) que l'anglaise donnait ; journal. Exclusion déclarée : la section ESSOC reste française (ambiguïté propre au mot « droit à l'erreur » en français).
+- `/en/anthropic-loop/` : question de FAQ sur la néguanthropie de Stiegler ajoutée. Exclusion déclarée : la question « Anthropic, l'entreprise » reste anglaise.
+- `/communs-negatifs/` : guillemets imbriqués du titre de Monnin, « Les “communs négatifs” » (FR) et “Les ‘communs négatifs’” (EN).
+- Pieds des figures : `decouplage-decomposition`, `delais-admissions`, `delais-cursus`, `dette-formules-grece`, `dette-formules-grille` régénérés (aucune donnée changée, seules insécables et coupures du pied) ; 24 exceptions mortes retirées de `check-figures.py`. Reste `ciseau-dette-interets-en-m.svg` (page coût, sous mesure jusqu'au 16/12).
+- Contrôles : `check-all --ci` à 0, build, `check-figures` 251 SVG 0 défaut, dates, rendu, liens, relecture stricte.
+
 ### 2026-11-05 (fin de nuit) — Points non vérifiés de la passe transversale : vérifiés à la source et corrigés (FR et EN)
 
 Chaque défaut a été relu par moi dans la source primaire (Légifrance par navigateur ou API, JO, Dares, RTE, Energy Institute,
