@@ -4,8 +4,9 @@ url: /en/does-a-law-apply-as-soon-as-it-is-passed/
 description: "From the vote to the last measure: the steps between a law passed in France and its application, how many of the laws promulgated since 2017 still wait for a decree or an order, what the Conseil d'État requires of the Government, and why the French Senate and Government publish different implementation rates. Open data."
 chapo: "Not by the vote alone. Once the law has been promulgated and published, those of its provisions whose implementation requires decrees or ministerial orders wait for these measures. On {app.releve}, according to the barometer of the application of laws, {app.L_att} of the {app.nlois} laws promulgated from October 2017 to September 2025, excluding treaties (laws authorising the ratification or approval of an international agreement, or accession to one), were still waiting for at least one measure; {app.L_tout} had received all of them and {app.L_dir} were classified as having no measure to take. A pending measure is not necessarily late, but the Government is not free to wait indefinitely: the Conseil d'État requires it to act within a reasonable time, and a refusal to adopt a measure that is due can be brought before the administrative courts, which can annul it and order the measure to be adopted."
 date: 2026-10-06
-lastmod: 2026-11-05
+lastmod: 2026-11-06
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-06, texte: "Addition: pending laws by the National Assembly committee to which they were referred; an order with a penalty payment (Conseil d'État, 27 September 2023)."}
   - {date: 2026-11-05, texte: "Update: Government half-yearly report at 30 June 2026 (16th legislature: 91% of 1,086 measures; 17th: 67% of 518 measures, laws promulgated up to 31 December 2025). For the 16th, the text of this report repeats the date of the previous one, which the page points out."}
   - {date: 2026-11-05, texte: "Correction: the sentence \"Toutefois…\" belongs to the first paragraph of Article 1 of the Civil Code; the urgent procedure forms the second."}
 # English version of tab 3 of the "Presidential promises" dossier (FR: content/une-loi-votee-s-applique-t-elle-tout-de-suite/_index.md).
@@ -108,6 +109,8 @@ The Civil Code does not cover every provision that announces a decree: it covers
 
 **What these two shares do not say.** They say neither that these {{< app-val "L_att" >}} laws were wholly inapplicable, nor that each of their pending measures was late. A law may apply for the most part while waiting for a decree on one point, and the law itself may defer a measure. The planned date is missing for {{< app-val "A_sans_date" >}} of the {{< app-val "A" >}} pending measures: without a date, the page cannot say whether a measure is late. Age does not settle everything: for the 2017-2018 session, the oldest, {{< app-val "L_att_1718" >}} laws out of {{< app-val "L_N_1718" >}} are still waiting for at least one measure.
 
+**Which texts are these?** For each law, the barometer gives the National Assembly committee to which it was referred. The {{< app-val "L_att" >}} pending laws come mainly from four committees: {{< app-val "com1" >}} ({{< app-val "com1_n" >}} laws), {{< app-val "com2" >}} ({{< app-val "com2_n" >}}), {{< app-val "com3" >}} ({{< app-val "com3_n" >}}) and {{< app-val "com4" >}} ({{< app-val "com4_n" >}}). With {{< app-val "com_m_n" >}} of the {{< app-val "A" >}} pending measures, the {{< app-val "com_m" >}} Committee accounts for the largest share. The committee indicates the field of the law, not the ministry responsible for issuing the measures.
+
 **The Senate as a check.** The Senate, for its part, counts "fully applicable" laws: those directly applicable and those that have received all the planned measures. For the 2024-2025 session, it writes: «&nbsp;{{< app-val "cit_802_36" >}}&nbsp;» [our translation: "{{< app-val "cit_802_36_tr" >}}"] It adds: «&nbsp;{{< app-val "cit_802_detail" >}}&nbsp;» [our translation: "{{< app-val "cit_802_detail_tr" >}}"] The barometer also counts {{< app-val "s25_N" >}} laws for this session. On {{< app-val "releve" >}}, these same two categories cover {{< app-val "s25_dirtout" >}} of them: {{< app-val "s25_dir" >}} with no measure to take and {{< app-val "s25_tout" >}} whose measures have all been taken. These are two findings, on two dates, by two producers that do not classify laws in the same way: they neither add up nor confirm each other, and nothing establishes that the laws counted on each side are the same.
 
 ## How many implementing measures are still pending? {#mesures-en-attente}
@@ -182,6 +185,8 @@ A planned measure is not always due. In 2011, about an order provided for by a d
 
 </details>
 
+**The order may come with a penalty payment.** On 27 September 2023, the Conseil d'État ordered the Government to adopt the decree provided for by article 477-1 of the Civil Code, which stems from the «&nbsp;{{< app-val "cit_ce_loi2015" >}}&nbsp;» [our translation: "{{< app-val "cit_ce_loi2015_tr" >}}"], and decided: «&nbsp;{{< app-val "cit_ce_astreinte" >}}&nbsp;» [our translation: "{{< app-val "cit_ce_astreinte_tr" >}}"], if compliance within the set time limit is not shown (no. 471646).
+
 **What these decisions do not say.** They lay down a rule and settle cases; they say neither how many refusals are brought before the courts nor what becomes of the orders issued, and no data read here measures it. Nor does the barometer's "pending" status say whether a measure is due, or whether the reasonable time has been exceeded.
 
 ## Why do the French Senate and Government publish different rates? {#taux-publies}
@@ -252,7 +257,7 @@ This page counts what a law still waits for after the vote. The book follows nin
 
 **General Secretariat of the Government**, half-yearly report on the application of laws at 30 June 2026, read on Légifrance through a browser on 5 November 2026 (in French).
 
-**Conseil d'État**, decisions of 27 July 2005 (no. 261694), 29 June 2011 (no. 343188), 21 January 2021 (no. 429956) and 27 May 2021 (no. 441660), read on ArianeWeb (in French).
+**Conseil d'État**, decisions of 27 July 2005 (no. 261694), 29 June 2011 (no. 343188), 21 January 2021 (no. 429956), 27 May 2021 (no. 441660) and 27 September 2023 (no. 471646), read on ArianeWeb (in French).
 
 **Constitution**, arts. 10, 13, 21, 22 and 61, quoted in the English translation published by the Conseil constitutionnel; **Civil Code**, art. 1, read on Légifrance (API).
 

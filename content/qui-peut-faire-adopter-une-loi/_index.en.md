@@ -4,12 +4,14 @@ url: /en/who-can-get-a-law-passed-in-france/
 description: "Tabling a bill, bringing it to the floor, having the final say: the French Constitution shares these keys between the Government, members of Parliament and the two Houses. It gives Parliament the passing of statutes, and three situations must be distinguished (article 49.3, budget ordinances, referendum). The origin of the laws promulgated since 2012, matched law by law between the National Assembly, the Senate and the Journal officiel, the fate of private members' bills, and the uses of article 49, paragraph 3. Open data."
 chapo: "Do laws mostly come from the Government? Since the 15th legislature (2017-2022; a legislature is the term of the National Assembly), most ordinary laws promulgated in France, excluding treaties, have arisen from a bill tabled by a deputy or a senator; for the 15th, narrowly (at least {ado.Pmin15} laws out of {ado.N15}). This result depends on what is counted: adding the laws with a procedure of their own (the State and social security budgets, laws that supplement or amend the Constitution), the parliamentary majority only appears with the 16th (2022-2024). Yet in each of the three completed legislatures (2012-2024), about {ado.Zdix} in ten ordinary private members' bills tabled first in the National Assembly were not debated in plenary before the legislature ended. The two findings fit together because getting a law passed takes several keys, which the Constitution shares out: the Prime Minister and members of Parliament can table bills, but the Government has priorities on the agenda and alone can ask the National Assembly to reach a final decision. The passing of statutes belongs to Parliament, and three situations must be distinguished: the passing of a bill at one stage without the National Assembly voting on it (article 49, paragraph 3), the bringing into force of budget provisions by ordinance without a statute passed by vote (articles 47 and 47-1), and the passing of a law by referendum (article 11)."
 date: 2026-10-06
-lastmod: 2026-10-12
+lastmod: 2026-11-06
 # English version of tab 2 of the "Presidential promises" dossier (FR: content/qui-peut-faire-adopter-une-loi/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/promesses_adopter.json
 # (scripts/update_promesses_adopter.py), whose guards cover both languages. The Constitution is quoted in the English
 # translation published by the Conseil constitutionnel, checked word for word; other French texts are quoted in French,
 # followed by our translation.
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-06, texte: "Correction: the page said the National Assembly allows no offset for expenditure; according to its sheet no. 52, its Bureau accepts one when a private member's bill is tabled, article 40 remaining applicable afterwards."}
 donnees: [promesses_adopter]
 og_title: "Who can get a law passed in France? The origin of laws, bills never debated in plenary, the agenda and article 49.3 — S. Lalut"
 og_image: "images/og-adopter-promesse-en.jpg"
@@ -34,7 +36,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   apropos: "electoral promises and French political institutions"
 faq:
   - question: "Who can propose a law in France?"
-    answer: "Under article 39 of the Constitution, \"{ado.cit_art39}\" (English translation published by the Conseil constitutionnel). A text from the Government is a government bill (projet de loi); one from a deputy or a senator is a private member's bill (proposition de loi). In the scope studied ({ado.champ}), {ado.P16} of the {ado.N16} laws promulgated during the 16th legislature arose from a private member's bill, {ado.G16} from a government bill. A private member's bill is, however, not admissible if it creates or increases public expenditure, nor if it reduces public revenue without offsetting the loss by another revenue (article 40, as the National Assembly applies it)."
+    answer: "Under article 39 of the Constitution, \"{ado.cit_art39}\" (English translation published by the Conseil constitutionnel). A text from the Government is a government bill (projet de loi); one from a deputy or a senator is a private member's bill (proposition de loi). In the scope studied ({ado.champ}), {ado.P16} of the {ado.N16} laws promulgated during the 16th legislature arose from a private member's bill, {ado.G16} from a government bill. A private member's bill is, however, not admissible if it creates or increases public expenditure, nor if it reduces public revenue without offsetting the loss by another revenue (article 40); when the bill is tabled, the National Assembly accepts that expenditure be offset, article 40 remaining applicable afterwards."
   - question: "Can a law be passed in France without Parliament voting on its text?"
     answer: "Three situations must be distinguished: making the passing of a bill an issue of a vote of confidence, which has the bill considered passed at one stage without the deputies voting on it, unless a motion of no confidence is carried (articles 49, paragraph 3, and 50); bringing a budget into force by ordinance if Parliament has not reached a decision within the time limits, without a statute passed by vote (articles 47 and 47-1); passing a law by referendum (article 11)."
 ressource:  # index /en/resources/ (layouts/ressources/list.html)
@@ -124,7 +126,7 @@ These figures count the bills tabled in the Assembly's open data. Its statistica
 
 Each House, first: under article 48, "{{< ado-val "cit_art48a" >}}" The same article reserves two sitting weeks out of four for the Government, for the texts and debates it asks to have placed on the agenda, in the order it sets. It also gives it priority, at its request, for certain texts, including the State and social security budget bills. And it guarantees one sitting day a month to opposition and minority groups.
 
-The agenda is therefore shared, and priority on the agenda does not guarantee that a text will be passed. Another rule limits what members of Parliament can propose: their bills and amendments are not admissible where their enactment would reduce public revenue, or create or increase public expenditure (art. 40). The National Assembly allows no offset for expenditure, but allows a loss of revenue offset by another revenue (the "gage"). The data on this page do not say which of these filters set aside a given bill: they contain neither the decisions to place bills on the agenda nor the rulings of inadmissibility.
+The agenda is therefore shared, and priority on the agenda does not guarantee that a text will be passed. Another rule limits what members of Parliament can propose: their bills and amendments are not admissible where their enactment would reduce public revenue, or create or increase public expenditure (art. 40). According to the National Assembly, article 40 forbids offsetting expenditure, but allows a loss of revenue to be offset by another revenue (the "gage"). When a private member's bill is tabled, however, its Bureau accepts that expenditure be offset; article 40 can then be raised against the text at any point in the debate. The data on this page do not say which of these filters set aside a given bill: they contain neither the decisions to place bills on the agenda nor the rulings of inadmissibility.
 
 <details class="repli"><summary>The wording of articles 48 and 40</summary>
 
@@ -132,7 +134,7 @@ Article 48, paragraph 2: "{{< ado-val "cit_art48" >}}" Paragraph 3: "{{< ado-val
 
 Article 40: "{{< ado-val "cit_art40" >}}"
 
-According to the National Assembly's summary sheet no. 52 (September 2023), on "public revenue", in the plural: «&nbsp;{{< ado-val "cit_fiche52" >}}&nbsp;» [our translation: "{{< ado-val "cit_fiche52_tr" >}}"]. On "public expenditure", in the singular ("une charge publique" in the French text): «&nbsp;{{< ado-val "cit_fiche52b" >}}&nbsp;» [our translation: "{{< ado-val "cit_fiche52b_tr" >}}"].
+According to the National Assembly's summary sheet no. 52 (September 2023), on "public revenue", in the plural: «&nbsp;{{< ado-val "cit_fiche52" >}}&nbsp;» [our translation: "{{< ado-val "cit_fiche52_tr" >}}"]. On "public expenditure", in the singular ("une charge publique" in the French text): «&nbsp;{{< ado-val "cit_fiche52b" >}}&nbsp;» [our translation: "{{< ado-val "cit_fiche52b_tr" >}}"]. On the tabling of private members' bills, it adds: «&nbsp;{{< ado-val "cit_fiche52c" >}}&nbsp;» [our translation: "{{< ado-val "cit_fiche52c_tr" >}}"] According to the same sheet, the Government or any deputy can then raise article 40 at any time (article 89 of the Assembly's Rules of Procedure).
 
 </details>
 
@@ -200,7 +202,7 @@ The uses are read in the National Assembly's legislative files, and counted twic
 
 Three questions are enough to place a promise of a law, without assuming anything about its content.
 
-1. **Who will table the text?** The Government or a member of Parliament. A bill or an amendment from a member of Parliament cannot create or increase public expenditure, and a loss of revenue must be offset by another revenue (art. 40, as the National Assembly applies it); this rule does not cover the Government's texts.
+1. **Who will table the text?** The Government or a member of Parliament. A bill or an amendment from a member of Parliament cannot create or increase public expenditure, and a loss of revenue must be offset by another revenue (art. 40); when a bill is tabled, the National Assembly nevertheless accepts that expenditure be offset, article 40 remaining applicable afterwards; this rule does not cover the Government's texts.
 2. **Who will put it on the agenda?** The Government in its priority weeks, a House in its own, an opposition or minority group on its monthly day (art. 48).
 3. **Who will have the final say?** Agreement between the two Houses; failing that, the National Assembly, if the Government asks it to (art. 45); or a use of article 49.3, at the risk of a no-confidence vote (arts. 49 and 50).
 

@@ -30,8 +30,12 @@
   "manque-t-il-des-professeurs/_index.md": "2026-11-05",
   "qui-paie-la-dette-publique/_index.en.md": "2026-11-05",
   "qui-paie-la-dette-publique/_index.md": "2026-11-05",
+  "qui-peut-faire-adopter-une-loi/_index.en.md": "2026-11-06",
+  "qui-peut-faire-adopter-une-loi/_index.md": "2026-11-06",
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": "2026-11-05",
   "qui-peut-faire-face-a-une-depense-imprevue/_index.md": "2026-11-05",
+  "une-loi-votee-s-applique-t-elle-tout-de-suite/_index.en.md": "2026-11-06",
+  "une-loi-votee-s-applique-t-elle-tout-de-suite/_index.md": "2026-11-06",
   "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/_index.en.md": "2026-11-05",
   "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/_index.md": "2026-11-05"
  },
@@ -167,6 +171,12 @@
   "qui-paie-la-dette-publique/_index.md": [
    "2026-11-05"
   ],
+  "qui-peut-faire-adopter-une-loi/_index.en.md": [
+   "2026-11-06"
+  ],
+  "qui-peut-faire-adopter-une-loi/_index.md": [
+   "2026-11-06"
+  ],
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": [
    "2026-10-26",
    "2026-11-05"
@@ -182,6 +192,12 @@
   "registre-des-couts-deportes/_index.md": [
    "2026-10-25",
    "2026-10-26"
+  ],
+  "une-loi-votee-s-applique-t-elle-tout-de-suite/_index.en.md": [
+   "2026-11-06"
+  ],
+  "une-loi-votee-s-applique-t-elle-tout-de-suite/_index.md": [
+   "2026-11-06"
   ],
   "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/_index.en.md": [
    "2026-11-05"

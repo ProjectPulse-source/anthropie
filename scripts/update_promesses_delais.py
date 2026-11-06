@@ -82,6 +82,7 @@ sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
 sys.path.insert(0, str(ROOT / "scripts"))
 import constitution_en as cen  # noqa: E402
 import langue_generee as lg  # noqa: E402  -- nombres et lettres (organe commun)
+import temoin_parite  # noqa: E402  -- témoin positif de la parité téléphone (organe commun)
 import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
 import pied_figure  # noqa: E402  -- pied commun des figures détaillées
 
@@ -1238,6 +1239,10 @@ def _main() -> int:
         figs["delais-admissions%s-m.svg" % suf] = fig_admissions_m(r, AA, figs["delais-admissions%s.svg" % suf])
     LANG = "fr"
     nv = parite_mobile(figs)
+    try:  # témoin positif de la parité (organe commun, 06/11/2026)
+        temoin_parite.exercer(parite_mobile, figs, log)
+    except RuntimeError as e:
+        raise Arret(str(e))
     fi = fiches(figs, A, A_en)
     n = prose({"fiches " + l: "\n".join(f["titre"] + "\n" + f["montre"] for f in v) for l, v in fi.items()}, r["an_reforme"], S.get("passee", False))
     g.append("parite des %d figures telephone (%d valeurs dessinees) ; Q1-Q2 sur les fiches Reutiliser"

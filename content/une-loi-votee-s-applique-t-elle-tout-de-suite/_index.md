@@ -3,8 +3,9 @@ title: "Une loi votée s'applique-t-elle tout de suite ?"
 description: "Du vote à la dernière mesure : les étapes qui séparent une loi votée de son application, combien des lois promulguées depuis 2017 attendent encore un décret ou un arrêté, ce que le Conseil d'État exige du Gouvernement, et pourquoi le Sénat et le Gouvernement publient des taux d'application différents. Données ouvertes."
 chapo: "Pas du seul fait du vote. Une fois la loi promulguée et publiée, celles de ses dispositions dont l'exécution nécessite des décrets ou des arrêtés attendent ces mesures. Au {app.releve}, selon le baromètre de l'application des lois, {app.L_att} des {app.nlois} lois promulguées d'octobre 2017 à septembre 2025, hors conventions (lois qui autorisent la ratification ou l'approbation d'un accord international, ou l'adhésion à un tel accord), attendaient encore au moins une mesure ; {app.L_tout} les avaient toutes reçues et {app.L_dir} étaient classées sans mesure à prendre. Une mesure en attente n'est pas forcément en retard, mais le Gouvernement n'est pas libre d'attendre indéfiniment : le Conseil d'État exige qu'il agisse « dans un délai raisonnable », et le refus de prendre une mesure due peut être porté devant le juge administratif, qui peut l'annuler et ordonner de la prendre."
 date: 2026-10-06
-lastmod: 2026-11-05
+lastmod: 2026-11-06
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-06, texte: "Ajout : répartition des lois en attente selon la commission de l'Assemblée saisie au fond ; injonction assortie d'une astreinte (Conseil d'État, 27 septembre 2023)."}
   - {date: 2026-11-05, texte: "Mise à jour : bilan semestriel du Gouvernement au 30 juin 2026 (XVIe législature : 91 % sur 1 086 mesures ; XVIIe : 67 % sur 518 mesures, lois promulguées jusqu'au 31 décembre 2025). Pour la XVIe, le texte de ce bilan reprend la date du précédent, ce que la page signale."}
   - {date: 2026-11-05, texte: "Correction : la phrase « Toutefois… » appartient au premier alinéa de l'article 1er du code civil ; la voie d'urgence forme le second."}
 donnees: [promesses_appliquer]
@@ -102,6 +103,8 @@ Le code civil ne vise pas toute disposition qui annonce un décret&nbsp;: il vis
 
 **Ce que ces deux parts ne disent pas.** Elles ne disent ni que ces {{< app-val "L_att" >}} lois étaient entièrement inapplicables, ni que chacune de leurs mesures en attente était en retard. Une loi peut s'appliquer pour l'essentiel en attendant un décret sur un point, et la loi elle-même peut différer une mesure. La date prévue manque pour {{< app-val "A_sans_date" >}} des {{< app-val "A" >}} mesures en attente&nbsp;: faute de date, la page ne dit pas si une mesure est en retard. L'ancienneté ne règle pas tout&nbsp;: pour la session 2017-2018, la plus ancienne, {{< app-val "L_att_1718" >}} lois sur {{< app-val "L_N_1718" >}} attendent encore au moins une mesure.
 
+**De quels textes s'agit-il&nbsp;?** Le baromètre indique, pour chaque loi, la commission de l'Assemblée nationale saisie au fond. Les {{< app-val "L_att" >}} lois en attente relèvent surtout de quatre commissions&nbsp;: celles {{< app-val "com1" >}} ({{< app-val "com1_n" >}} lois), {{< app-val "com2" >}} ({{< app-val "com2_n" >}}), {{< app-val "com3" >}} ({{< app-val "com3_n" >}}) et {{< app-val "com4" >}} ({{< app-val "com4_n" >}}). Avec {{< app-val "com_m_n" >}} des {{< app-val "A" >}} mesures en attente, la commission {{< app-val "com_m" >}} en porte la plus grande part. La commission saisie indique le domaine du texte, non le ministère chargé de prendre les mesures.
+
 **Le témoin du Sénat.** Le Sénat compte, lui, les lois «&nbsp;entièrement applicables&nbsp;»&nbsp;: celles d'application directe et celles qui ont reçu toutes les mesures prévues. Pour la session 2024-2025, il écrit&nbsp;: «&nbsp;{{< app-val "cit_802_36" >}}&nbsp;» Il précise&nbsp;: «&nbsp;{{< app-val "cit_802_detail" >}}&nbsp;» Le baromètre compte lui aussi {{< app-val "s25_N" >}} lois pour cette session. Au {{< app-val "releve" >}}, ces deux mêmes catégories y réunissent {{< app-val "s25_dirtout" >}} lois&nbsp;: {{< app-val "s25_dir" >}} sans mesure à prendre et {{< app-val "s25_tout" >}} dont toutes les mesures sont prises. Ce sont deux constats, à deux dates, par deux producteurs qui ne classent pas les lois de la même façon&nbsp;: ils ne s'additionnent ni ne se confirment, et rien n'établit que les lois comptées de part et d'autre soient les mêmes.
 
 ## Combien de mesures d'application attendent encore&nbsp;? {#mesures-en-attente}
@@ -176,6 +179,8 @@ Une mesure prévue n'est pas toujours due. En 2011, à propos d'un arrêté pré
 
 </details>
 
+**L'injonction peut être assortie d'une astreinte.** Le 27&nbsp;septembre 2023, le Conseil d'État a enjoint au Gouvernement de prendre le décret prévu par l'article&nbsp;477-1 du code civil, issu de la {{< app-val "cit_ce_loi2015" >}}, et a décidé&nbsp;: «&nbsp;{{< app-val "cit_ce_astreinte" >}}&nbsp;», si l'exécution n'est pas justifiée dans le délai fixé (n°&nbsp;471646).
+
 **Ce que ces décisions ne disent pas.** Elles posent une règle et tranchent des cas&nbsp;; elles ne disent ni combien de refus sont portés devant le juge, ni ce que deviennent les injonctions, et aucune donnée lue ici ne le mesure. Le statut «&nbsp;en attente&nbsp;» du baromètre ne dit pas non plus si une mesure est due, ni si le délai raisonnable est dépassé.
 
 ## Pourquoi le Sénat et le Gouvernement publient-ils des taux différents&nbsp;? {#taux-publies}
@@ -246,7 +251,7 @@ Cette page compte ce qu'une loi attend encore après son vote. Le livre suit neu
 
 **Secrétariat général du Gouvernement**, bilan semestriel de l'application des lois au 30&nbsp;juin 2026, lu sur Légifrance par navigateur le 5&nbsp;novembre 2026.
 
-**Conseil d'État**, décisions du 27&nbsp;juillet 2005 (n°&nbsp;261694), du 29&nbsp;juin 2011 (n°&nbsp;343188), du 21&nbsp;janvier 2021 (n°&nbsp;429956) et du 27&nbsp;mai 2021 (n°&nbsp;441660), lues sur ArianeWeb.
+**Conseil d'État**, décisions du 27&nbsp;juillet 2005 (n°&nbsp;261694), du 29&nbsp;juin 2011 (n°&nbsp;343188), du 21&nbsp;janvier 2021 (n°&nbsp;429956), du 27&nbsp;mai 2021 (n°&nbsp;441660) et du 27&nbsp;septembre 2023 (n°&nbsp;471646), lues sur ArianeWeb.
 
 **Constitution**, art.&nbsp;10, 13, 21, 22 et 61, et **code civil**, art.&nbsp;1er, lus sur Légifrance (API).
 

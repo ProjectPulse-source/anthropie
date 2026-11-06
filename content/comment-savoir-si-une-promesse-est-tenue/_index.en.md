@@ -4,12 +4,14 @@ url: /en/how-can-we-tell-whether-a-promise-was-kept/
 description: "Judging \"bringing unemployment down\" in France: ILO unemployment and category A registrants at France Travail do not count the same people, and the rule for counting registrants changed in 2022, late 2024 and 2025. Insee estimate, Dares series, open data."
 chapo: "Two accurate figures can tell two different stories. In 2024, according to Insee, only {mes.p_a}% of category A registrants at France Travail are unemployed in the sense of the International Labour Organization (ILO). And the rule for counting registrants changed in 2022, at the end of 2024 and in 2025, sometimes downwards, sometimes upwards. To judge a promise on unemployment, four questions: by which indicator, since when, has the rule stayed the same, what share can be attributed."
 date: 2026-10-06
-lastmod: 2026-10-12
+lastmod: 2026-11-06
 # English version of tab 5 of the "Presidential promises" dossier (FR: content/comment-savoir-si-une-promesse-est-tenue/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/promesses_mesurer.json
 # (scripts/update_promesses_mesurer.py), whose guards cover both languages. French texts are quoted in our translation
 # (the French originals are in the French page and in the JSON); the numbers of each translation are checked against
 # the original (guard M7).
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-06, texte: "Clarification: the Labour Code leaves the arrangements for the monthly renewal of registration to a ministerial order (art. L5411-2)."}
 donnees: [promesses_mesurer]
 og_title: "How can we tell whether a promise was kept? Two measures of unemployment in France, two populations — S. Lalut"
 og_image: "images/og-mesurer-promesse-en.jpg"
@@ -125,7 +127,7 @@ No, and not only in 2025. For registrants, the counting rule has changed several
 | April 2025 | Automatic updating restricted to first-time registrations | **Down** in the second quarter (Dares) |
 | June 2025 | New sanctions regime | Fewer removals from the register (Dares, Insee) |
 
-The updating form, by which registrants declare their activity each month, is France Travail's, according to Insee; the documents read do not say who decided its changes of 2022 and 2024. Automatic registration comes from the full employment act of 18 December 2023, passed by Parliament. On the survey side, the ILO unemployment series was rebuilt after the redesign of the Labour Force Survey in 2021.
+The updating form, by which registrants declare their activity each month, is France Travail's, according to Insee. The Labour Code now leaves the arrangements for this monthly renewal to a joint order of the ministers responsible for employment and solidarity (art. L5411-2); the documents read do not say who decided the changes to the form in 2022 and 2024. Automatic registration comes from the full employment act of 18 December 2023, passed by Parliament. On the survey side, the ILO unemployment series was rebuilt after the redesign of the Labour Force Survey in 2021.
 
 <details class="repli"><summary>What the sources say, date by date</summary>
 
@@ -208,6 +210,8 @@ This page shows that a promise cannot be judged without choosing its indicator a
 {{< faq-visible >}}
 
 ## Sources {#sources}
+
+**Labour Code**, art. L5411-2 (renewal of registration on the list of jobseekers), version in force since 1 January 2025, read on Légifrance (API) on 6 November 2026 (in French).
 
 **Insee**, *Emploi, chômage, revenus du travail* [Employment, unemployment, labour income], Insee Références, 2026 edition (published 2 July 2026): dossier 1, figures 1, 2 and 8, definitions, boxes and sources (Dares-Insee-France Travail matching of the Historical Statistical File and the Labour Force Survey); overview, box 5. *Informations rapides* No. 192, 7 August 2026 (in French).
 

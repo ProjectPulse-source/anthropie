@@ -48,7 +48,7 @@
   "limites": "l'origine formelle n'observe ni l'influence du Gouvernement sur une proposition, ni les amendements ; les dépôts extraits ne concordent pas texte par texte avec les bulletins de l'Assemblée : E1 est publié sur la borne du pire cas ; les lois sont rattachées à la législature de promulgation, les propositions à celle de leur dépôt"
  },
  "gardes": [
-  "B1 : 24 citations de la Constitution (FR Legifrance, EN Conseil constitutionnel), 5 des temoins, retrouvees mot pour mot",
+  "B1 : 24 citations de la Constitution (FR Legifrance, EN Conseil constitutionnel), 6 des temoins, retrouvees mot pour mot",
   "B6 : 1085 lois = 596 du champ + 485 exclues (traite 365, finances_fss 62, organique 57, constitutionnelle 1) + 4 entre deux legislatures",
   "B2 : origine concordante AN/Dosleg ; champ XIV 98/214, XV 103-108/202, XVI 55/83, XVII 78/97 ; toutes natures hors traites XIV 110/260, XV 114/249, XVI 55/95, XVII 85/112 ; 4 lois entre deux legislatures",
   "B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 30/51 = 58.8 %",
@@ -907,6 +907,7 @@
   "cit_senat_origine": "Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, contre 58 % en 2023-2024",
   "cit_fiche52": "L'emploi du pluriel a pour effet d'autoriser la compensation d'une perte de recettes par l'augmentation d'une autre recette.",
   "cit_fiche52b": "la création ou l'aggravation d'une charge ne peut être gagée",
+  "cit_fiche52c": "Conformément à une tradition établie, le Bureau veille néanmoins à ne pas restreindre excessivement l'initiative parlementaire. À ce titre, il admet par exemple qu'une charge puisse être compensée.",
   "censure_date": "2 décembre 2024",
   "censure_texte": "projet de loi de financement de la sécurité sociale pour 2025",
   "censure_etape": "texte de la commission mixte paritaire",
@@ -914,7 +915,8 @@
   "cit_censure_tr": "The first motion tabled was carried by the required qualified majority",
   "cit_senat_origine_tr": "Over the session, 80% of the laws adopted (45 out of 56) originated as private members' bills, against 58% in 2023-2024",
   "cit_fiche52_tr": "The use of the plural has the effect of allowing a loss of revenue to be offset by an increase in another revenue.",
-  "cit_fiche52b_tr": "the creation or increase of a charge cannot be offset"
+  "cit_fiche52b_tr": "the creation or increase of a charge cannot be offset",
+  "cit_fiche52c_tr": "In accordance with an established tradition, the Bureau nevertheless takes care not to restrict parliamentary initiative excessively. For example, it accepts that a charge may be offset."
  },
  "affichage_en": {
   "releve": "6 October 2026",
@@ -1079,6 +1081,7 @@
   "cit_senat_origine": "Sur la session, 80 % des lois adoptées (45 sur 56) sont d'origine parlementaire, contre 58 % en 2023-2024",
   "cit_fiche52": "L'emploi du pluriel a pour effet d'autoriser la compensation d'une perte de recettes par l'augmentation d'une autre recette.",
   "cit_fiche52b": "la création ou l'aggravation d'une charge ne peut être gagée",
+  "cit_fiche52c": "Conformément à une tradition établie, le Bureau veille néanmoins à ne pas restreindre excessivement l'initiative parlementaire. À ce titre, il admet par exemple qu'une charge puisse être compensée.",
   "censure_date": "2 December 2024",
   "censure_texte": "the Social Security Financing Bill for 2025",
   "censure_etape": "joint committee text",
@@ -1086,6 +1089,7 @@
   "cit_censure_tr": "The first motion tabled was carried by the required qualified majority",
   "cit_senat_origine_tr": "Over the session, 80% of the laws adopted (45 out of 56) originated as private members' bills, against 58% in 2023-2024",
   "cit_fiche52_tr": "The use of the plural has the effect of allowing a loss of revenue to be offset by an increase in another revenue.",
-  "cit_fiche52b_tr": "the creation or increase of a charge cannot be offset"
+  "cit_fiche52b_tr": "the creation or increase of a charge cannot be offset",
+  "cit_fiche52c_tr": "In accordance with an established tradition, the Bureau nevertheless takes care not to restrict parliamentary initiative excessively. For example, it accepts that a charge may be offset."
  }
 }

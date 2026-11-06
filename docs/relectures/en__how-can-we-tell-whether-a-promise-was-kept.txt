@@ -1,11 +1,11 @@
-# relu le 2026-11-05 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 1dca530 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 How can we tell whether a promise was kept?
 Two accurate figures can tell two different stories.
 In 2024, according to Insee, only 49% of category A registrants at France Travail are unemployed in the sense of the International Labour Organization (ILO).
 And the rule for counting registrants changed in 2022, at the end of 2024 and in 2025, sometimes downwards, sometimes upwards.
 To judge a promise on unemployment, four questions: by which indicator, since when, has the rule stayed the same, what share can be attributed.
-Page updated 5 November 2026
+Page updated 6 November 2026 · revisions
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 When a candidate promises to “bring unemployment down”, we think we know what we will look at five years later: the unemployment figure.
@@ -92,7 +92,9 @@ Down in the second quarter (Dares)
 June 2025
 New sanctions regime
 Fewer removals from the register (Dares, Insee)
-The updating form, by which registrants declare their activity each month, is France Travail’s, according to Insee; the documents read do not say who decided its changes of 2022 and 2024.
+The updating form, by which registrants declare their activity each month, is France Travail’s, according to Insee.
+The Labour Code now leaves the arrangements for this monthly renewal to a joint order of the ministers responsible for employment and solidarity (art.
+L5411-2); the documents read do not say who decided the changes to the form in 2022 and 2024.
 Automatic registration comes from the full employment act of 18 December 2023, passed by Parliament.
 On the survey side, the ILO unemployment series was rebuilt after the redesign of the Labour Force Survey in 2021.
 What the sources say, date by date
@@ -185,12 +187,12 @@ What this page does not say
 It does not say which of the two measures is the right one: one describes people’s situation, the other their registration.
 It measures the effect of no policy, including the full employment act.
 The cross-tabulation is an Insee estimate for the 2024 average: it describes neither 2025 nor 2026, which the matching does not cover.
-Judging a promise to the end Un président peut-il tenir ses promesses?, the author’s book, in French: contents, excerpts and reviews →
+Judging a promise to the end Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
 Frequently asked questions
 What is the difference between ILO unemployment and category A registrants in France?
 They are two definitions.
-According to Insee, an unemployed person in the ILO sense is “a person aged 15 or over without a job, available to take one within fifteen days and who has actively looked for a job in the previous month (or has found one starting within three months)” (our translation); this is measured by the Labour Force Survey.
-Category A at France Travail groups “people who did no work during the month and are required to look for work” (our translation); it is an administrative register.
+According to Insee, an unemployed person in the ILO sense is "a person aged 15 or over without a job, available to take one within fifteen days and who has actively looked for a job in the previous month (or has found one starting within three months)" (our translation); this is measured by the Labour Force Survey.
+Category A at France Travail groups "people who did no work during the month and are required to look for work" (our translation); it is an administrative register.
 For 2024, Insee estimates that 49% of category A registrants are unemployed in the ILO sense and that 62% of the people unemployed under the ILO definition are registered in category A.
 Why did the number of category A registrants change in 2025?
 For several reasons at once, according to the Dares.
@@ -201,6 +203,8 @@ How should a promise to reduce unemployment be judged?
 By setting in advance the indicator (ILO unemployment or category A registrants) and the point of comparison (the starting date and value), by checking that the measurement rule has not changed between the two dates, and then by asking what share of the change can honestly be attributed to the decisions of whoever made the promise.
 An observed change is not enough either to establish its cause or to rule it out.
 Sources
+Labour Code, art.
+L5411-2 (renewal of registration on the list of jobseekers), version in force since 1 January 2025, read on Légifrance (API) on 6 November 2026 (in French).
 Insee, Emploi, chômage, revenus du travail [Employment, unemployment, labour income], Insee Références, 2026 edition (published 2 July 2026): dossier 1, figures 1, 2 and 8, definitions, boxes and sources (Dares-Insee-France Travail matching of the Historical Statistical File and the Labour Force Survey); overview, box 5.
 Informations rapides No.
 192, 7 August 2026 (in French).
@@ -236,7 +240,7 @@ Reading caveat.
 Scope and period differ from the 2024 cross-tabulation figure.
 Series not labelled since 1 Jan.
 2025 (2021 label suspended by the ASP, which ran until 20 May 2026).
-Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA’ since 2018)
+Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)
 Download PNG
 SVG
 ILO unemployment and category A registrants in France, 2012-2025
@@ -263,6 +267,9 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Insee and Dares), under their own terms.
+Revisions
+6 November 2026 — Clarification: the Labour Code leaves the arrangements for the monthly renewal of registration to a ministerial order (art.
+L5411-2).
 All resources: data, explainers and reference material →
 Share
 WhatsApp

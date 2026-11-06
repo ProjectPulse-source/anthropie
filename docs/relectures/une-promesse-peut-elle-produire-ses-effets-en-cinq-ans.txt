@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de 8b2e374 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de 1dca530 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Une promesse peut-elle produire ses effets en cinq ans ?
 Le cas-test de la formation des médecins généralistes.
@@ -247,6 +247,7 @@ Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale
 Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Légifrance, Bulletin officiel santé, DREES et ONDPS), sous leurs propres conditions.
 Révisions
+6 novembre 2026 — Ajout : postes d'internat ouverts par spécialité (arrêtés de 2024 à 2026), second levier de l'État ; postes ouverts, non pourvus.
 5 novembre 2026 — Mise à jour : les objectifs de 2026-2030 ne sont plus « en préparation » : l'arrêté du 16 octobre 2026 fixe pour la médecine un seuil minimal de 61 230 professionnels à former.
 L'objectif de 2021-2025 (51 505) est désormais donné avec ses bornes, lues dans l'arrêté de 2021.
 Toutes les ressources : données, dossiers et repères →
