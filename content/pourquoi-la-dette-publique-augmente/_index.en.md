@@ -32,6 +32,9 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   sources:
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
+    - "https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en"
+    - "https://www.imf.org/external/datamapper/datasets/FM"
+    - "https://data-explorer.oecd.org/"
   mots: ["public debt", "France", "primary deficit", "snowball effect", "implicit interest rate", "nominal growth", "public spending", "public revenue", "Eurostat"]
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
   citation: ["https://doi.org/10.5281/zenodo.23145963"]  # AWP-09 (English edition): method and benchmark of this decomposition

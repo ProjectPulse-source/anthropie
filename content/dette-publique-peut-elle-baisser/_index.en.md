@@ -32,6 +32,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   sources:
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
+    - "https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en"
   mots: ["public debt", "France", "primary surplus", "stabilising primary balance", "implicit interest rate", "nominal growth", "debt reduction", "Eurostat"]
   fichiers: ["dette_baisse.csv", "dette_baisse.json"]
 faq:

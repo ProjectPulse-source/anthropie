@@ -33,6 +33,9 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   sources:
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
+    - "https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en"
+    - "https://www.imf.org/external/datamapper/datasets/FM"
+    - "https://data-explorer.oecd.org/"
   mots: ["dette publique", "France", "déficit primaire", "effet boule de neige", "taux implicite", "croissance nominale", "dépenses publiques", "recettes publiques", "Eurostat"]
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
   citation: ["https://doi.org/10.5281/zenodo.23143030"]  # AWP-09 : méthode et témoin de cette décomposition
