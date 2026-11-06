@@ -181,6 +181,8 @@ Le dispositif de lissage des recettes fiscales a mis en réserve, en 2025, une p
 
 **Où en est le texte.** État au {{< coll-val "plf_etat_au" >}}&nbsp;: {{< coll-val "plf_etat_dilico" >}}. Au Sénat, les amendements sur cette mission se déposent jusqu'au {{< coll-val "plf_senat_amdt" >}} à 11&nbsp;heures. Le projet prévoit un arrêté unique de reversement.
 
+**Le report, commune par commune.** Appliqué aux montants des arrêtés publiés, l'écart de 2027 entre le droit actuel et le projet est détaillé par commune, département et circonscription dans un tableur, avec la méthode, les limites et un lien vers la fiche de chaque commune&nbsp;: [télécharger le fichier Excel](/dilico_article84_communes.xlsx) (268&nbsp;Ko, calculs du 23&nbsp;octobre 2026).
+
 **Ce que cela signifie pour une commune.** Seul le DILICO 2025 la concerne directement&nbsp;; celui de 2026 touche, le cas échéant, son intercommunalité. Pour une commune contributrice en 2025, le total restitué ne change pas&nbsp;; ses versements annuels baissent et s'étalent jusqu'en 2031, ce qui pèse sur sa trésorerie et, si l'inflation se poursuit, sur la valeur réelle des sommes restituées.
 
 **Ce que le service financier peut vérifier dès maintenant.** Le montant mis en réserve par la commune en 2025, notifié par arrêté, et ce qu'elle a déjà reçu en 2026&nbsp;; pour 2026, la contribution éventuelle de son intercommunalité. Avec ces montants, le calcul ci-dessus est exact, si le texte est voté tel quel.

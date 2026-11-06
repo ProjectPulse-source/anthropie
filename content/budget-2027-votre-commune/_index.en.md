@@ -177,6 +177,8 @@ The tax revenue smoothing mechanism placed in reserve, in 2025, part of the reve
 
 **Where the text stands.** State on {{< coll-val "plf_etat_au" >}}: {{< coll-val "plf_etat_dilico" >}}. In the Senate, amendments on this mission may be tabled until 11 a.m. on {{< coll-val "plf_senat_amdt" >}}. The bill provides for a single repayment order.
 
+**The deferral, municipality by municipality.** Applied to the amounts in the published orders, the 2027 gap between current law and the bill is broken down by municipality, department and constituency in a spreadsheet, with the method, the limits and a link to each municipality's sheet: [download the Excel file, in French](/dilico_article84_communes.xlsx) (268 KB, calculations of 23 October 2026).
+
 **What it means for a municipality.** Only the 2025 DILICO concerns it directly; the 2026 one affects, where relevant, its inter-municipal body. For a municipality that contributed in 2025, the total returned does not change; its annual payments fall and are spread to 2031, which weighs on its cash flow and, if inflation continues, on the real value of the sums returned.
 
 **What finance departments can check now.** The amount the municipality placed in reserve in 2025, notified by order, and what it already received in 2026; for 2026, any contribution by its inter-municipal body. With these amounts, the calculation above is exact, if the text is passed as it stands.
