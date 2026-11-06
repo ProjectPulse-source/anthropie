@@ -1121,7 +1121,7 @@ def main() -> int:
     # figs et fiches couvrent les figures et fiches anglaises. Un paquet ancien sans affichage_en diffère : il est réécrit.
     # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
     payload = rj.normalise(payload)
-    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Commission européenne (AMECO), FMI, OCDE"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
+    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Commission européenne (AMECO), FMI, OCDE ; les valeurs du FMI ne sont pas couvertes par la licence CC BY : ce producteur soumet leur réutilisation commerciale à autorisation"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))

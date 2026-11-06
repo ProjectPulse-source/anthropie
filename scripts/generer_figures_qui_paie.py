@@ -2290,7 +2290,7 @@ def main() -> int:
     donnees = {
         "_licence": ("Compilation Stéphane Lalut, CC BY 4.0 (assemblage, grandeurs dérivées, mise "
                      "en cohérence). Données d'origine : INSEE (Licence Ouverte Etalab), "
-                     "Banque de France via l'Agence France Trésor, sous leurs propres conditions."),
+                     "Banque de France via l'Agence France Trésor, sous leurs propres conditions ; les valeurs de l'AFT ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale."),
         "_genere_le": date.today().isoformat(),
         "affichage": aff,
         "affichage_en": aff_en,

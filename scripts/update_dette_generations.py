@@ -1748,7 +1748,7 @@ def main() -> int:
     releve = payload["meta"]["releve_le"]
     # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
     payload = rj.normalise(payload)
-    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Insee, BCE, Commission européenne, COR"
+    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Insee, BCE, Commission européenne, COR, AFT ; les valeurs de l'AFT ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale"
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))

@@ -771,7 +771,7 @@ def main() -> int:
         except (ValueError, KeyError):
             pass
     payload = {"releve_le": releve or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-               "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources AFT, Eurostat, BCE, Banque de France, Commission européenne", **payload}
+               "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources AFT, Eurostat, BCE, Banque de France, Commission européenne ; les valeurs de l'AFT ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale", **payload}
     txt = json.dumps(payload, ensure_ascii=False, indent=1)
     OUT_DATA.write_text(txt, encoding="utf-8")
     OUT_STATIC.write_text(txt, encoding="utf-8")
