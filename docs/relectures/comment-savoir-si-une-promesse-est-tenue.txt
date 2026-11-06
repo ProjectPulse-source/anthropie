@@ -1,11 +1,11 @@
-# relu le 2026-11-05 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 1dca530 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment savoir si une promesse est tenue ?
 Deux chiffres exacts peuvent raconter deux histoires différentes.
-En 2024, selon l’Insee, 49 % seulement des inscrits en catégorie A à France Travail sont chômeurs au sens du Bureau international du travail (BIT).
+En 2024, selon l'Insee, 49 % seulement des inscrits en catégorie A à France Travail sont chômeurs au sens du Bureau international du travail (BIT).
 Et la règle qui compte les inscrits a changé en 2022, à la fin de 2024 et en 2025, tantôt à la baisse, tantôt à la hausse.
 Pour juger une promesse sur le chômage, quatre questions : selon quel indicateur, depuis quand, la règle est-elle restée la même, quelle part attribuer.
-Page mise à jour le 5 novembre 2026
+Page mise à jour le 6 novembre 2026 · révisions
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Quand un candidat promet de « faire baisser le chômage », on croit savoir ce que l’on regardera cinq ans plus tard : le chiffre du chômage.
@@ -91,7 +91,9 @@ Baisse au 2e trimestre (Dares)
 Juin 2025
 Nouveau régime des sanctions
 Moins de radiations des listes (Dares, Insee)
-Le formulaire d’actualisation, par lequel les inscrits déclarent chaque mois leur activité, est celui de France Travail, selon l’Insee ; les documents lus ne disent pas qui a décidé ses changements de 2022 et de 2024.
+Le formulaire d’actualisation, par lequel les inscrits déclarent chaque mois leur activité, est celui de France Travail, selon l’Insee.
+Le code du travail renvoie aujourd’hui les modalités de ce renouvellement mensuel à un arrêté conjoint des ministres chargés de l’emploi et des solidarités (art.
+L5411-2) ; les documents lus ne disent pas qui a décidé les changements du formulaire en 2022 et en 2024.
 L’inscription d’office vient de la loi du 18 décembre 2023 pour le plein emploi, votée par le Parlement.
 Côté enquête, la série du chômage au sens du BIT a été reconstruite après la rénovation de l’enquête Emploi en 2021.
 Ce que disent les sources, date par date
@@ -101,7 +103,7 @@ La réforme de l’assurance chômage, appliquée de novembre 2019 à décembre 
 L’enquête Emploi est rénovée ; pour le statut au sens du BIT, « des pondérations rétropolées ont été utilisées pour corriger au mieux l’impact de ces changements » (Insee).
 La série du chômage au sens du BIT est donc, elle aussi, reconstruite.
 2022.
-Un nouveau formulaire d’actualisation mensuelle, qui enregistre mieux les heures travaillées, a selon la Dares « un impact pérenne à la baisse sur le nombre d’inscrits en catégorie A » : elle l’estime à environ 105 000 inscrits en moins en catégorie A entre janvier et novembre 2022, reclassés pour l’essentiel en catégories B et C.
+Un nouveau formulaire d’actualisation mensuelle, qui enregistre mieux les heures travaillées, a selon la Dares « un impact pérenne à la baisse sur le nombre d'inscrits en catégorie A » : elle l’estime à environ 105 000 inscrits en moins en catégorie A entre janvier et novembre 2022, reclassés pour l’essentiel en catégories B et C.
 Octobre-novembre 2024.
 Le formulaire change de nouveau, cette fois à la hausse : « entre octobre et novembre 2024, une évolution dans le formulaire d’actualisation a conduit à augmenter le nombre de demandeurs d’emploi en catégorie A », d’environ 36 000 personnes au niveau national au 4e trimestre 2024 (Dares et France Travail, publication trimestrielle reprise par la Dreets de Normandie).
 Janvier 2025.
@@ -152,7 +154,7 @@ Le délibéré de l’Autorité, en citations
 La labellisation des séries d’inscrits « avait été renouvelée et étendue le 21 mai 2021 pour une période de cinq ans ».
 La décision du 14 novembre 2024 est de suspendre « la labellisation de ces séries pour la période restant à courir entre le 1er janvier 2025 et le 20 mai 2026 ».
 L’Autorité demande aussi un suivi publié des reclassements entre catégories, et s’en tient depuis à un suivi régulier, « dans l’attente d’être à même d’envisager un processus de labellisation des nouvelles séries, lorsque le régime pérenne sera atteint ».
-Au 28 juillet 2026, les métadonnées de la Dares indiquent toujours que l’Autorité « a suspendu, à partir du 1er janvier 2025, la labellisation des séries statistiques sur les demandeurs d’emploi produites par France Travail et la Dares ».
+Au 28 juillet 2026, les métadonnées de la Dares indiquent toujours que l’Autorité « a suspendu, à partir du 1er janvier 2025, la labellisation des séries statistiques sur les demandeurs d'emploi produites par France Travail et la Dares ».
 Le motif écrit tient à la stabilité et à l’interprétation des séries pendant la mise en place de la loi.
 Quelle part attribuer ?
 Contribution, effet, et ce que les sources en disent
@@ -183,9 +185,9 @@ Ce que cette page ne dit pas
 Elle ne dit pas laquelle des deux mesures est la bonne : l’une décrit la situation des personnes, l’autre leur inscription.
 Elle ne mesure l’effet d’aucune politique, ni celui de la loi pour le plein emploi.
 Le croisement est une estimation de l’Insee pour la moyenne de 2024 : il ne décrit ni 2025 ni 2026, que l’appariement ne couvre pas.
-Juger une promesse jusqu’au bout
+Juger une promesse jusqu'au bout
 Un président peut-il tenir ses promesses ?
-Ce qu’il peut vraiment décider — et ce qui lui échappe
+Ce qu'il peut vraiment décider — et ce qui lui échappe
 Cette page montre qu’on ne juge pas une promesse sans choisir son indicateur ni vérifier sa règle.
 Le livre applique ces questions, et les quatre qui les précèdent — ce qui est promis exactement, qui peut le décider, avec le consentement de qui, dans quel délai —, à neuf promesses écrites, datées et signées, dont une sur l’emploi.
 Il ne donne aucun conseil de vote.
@@ -197,18 +199,20 @@ Sommaire, extraits et recensions →
 Questions fréquentes
 Quelle est la différence entre le chômage au sens du BIT et les inscrits en catégorie A ?
 Ce sont deux définitions.
-Selon l’Insee, un chômeur au sens du BIT est « une personne âgée de 15 ans ou plus sans emploi, disponible pour en occuper un dans les quinze jours et qui a activement cherché un emploi dans le mois précédent (ou en a trouvé un qui commence dans moins de trois mois) » ; il est mesuré par l’enquête Emploi.
-La catégorie A de France Travail regroupe « les personnes sans activité au cours du mois et tenues de rechercher un emploi » ; c’est un registre administratif.
-En 2024, l’Insee estime que 49 % des inscrits en catégorie A sont chômeurs au sens du BIT et que 62 % des chômeurs au sens du BIT sont inscrits en catégorie A.
-Pourquoi le nombre d’inscrits en catégorie A a-t-il changé en 2025 ?
+Selon l'Insee, un chômeur au sens du BIT est « une personne âgée de 15 ans ou plus sans emploi, disponible pour en occuper un dans les quinze jours et qui a activement cherché un emploi dans le mois précédent (ou en a trouvé un qui commence dans moins de trois mois) » ; il est mesuré par l'enquête Emploi.
+La catégorie A de France Travail regroupe « les personnes sans activité au cours du mois et tenues de rechercher un emploi » ; c'est un registre administratif.
+En 2024, l'Insee estime que 49 % des inscrits en catégorie A sont chômeurs au sens du BIT et que 62 % des chômeurs au sens du BIT sont inscrits en catégorie A.
+Pourquoi le nombre d'inscrits en catégorie A a-t-il changé en 2025 ?
 Pour plusieurs raisons à la fois, selon la Dares.
-Depuis janvier 2025, la loi pour le plein emploi du 18 décembre 2023 prévoit l’inscription d’office de plusieurs publics à France Travail ; la Dares cite les demandeurs et bénéficiaires du RSA, les jeunes suivis par les missions locales et les personnes handicapées suivies par Cap emploi ; de janvier à mars 2025, les nouveaux inscrits sans droit à une allocation de France Travail ont été actualisés automatiquement, donc classés en catégorie A ; en juin 2025, le régime des sanctions a changé.
-La règle avait déjà changé en 2022 et à la fin de 2024, avec deux versions du formulaire d’actualisation.
-L’Autorité de la statistique publique a suspendu la labellisation de ces séries à partir du 1er janvier 2025.
+Depuis janvier 2025, la loi pour le plein emploi du 18 décembre 2023 prévoit l'inscription d'office de plusieurs publics à France Travail ; la Dares cite les demandeurs et bénéficiaires du RSA, les jeunes suivis par les missions locales et les personnes handicapées suivies par Cap emploi ; de janvier à mars 2025, les nouveaux inscrits sans droit à une allocation de France Travail ont été actualisés automatiquement, donc classés en catégorie A ; en juin 2025, le régime des sanctions a changé.
+La règle avait déjà changé en 2022 et à la fin de 2024, avec deux versions du formulaire d'actualisation.
+L'Autorité de la statistique publique a suspendu la labellisation de ces séries à partir du 1er janvier 2025.
 Comment juger une promesse de baisse du chômage ?
-En fixant d’avance l’indicateur (chômage au sens du BIT ou inscrits en catégorie A) et le point de comparaison (la date et la valeur de départ), en vérifiant que la règle de mesure n’a pas changé entre les deux dates, puis en se demandant quelle part de l’évolution peut honnêtement être attribuée aux décisions de celui qui a promis.
-Une évolution observée ne suffit ni à établir sa cause, ni à l’exclure.
+En fixant d'avance l'indicateur (chômage au sens du BIT ou inscrits en catégorie A) et le point de comparaison (la date et la valeur de départ), en vérifiant que la règle de mesure n'a pas changé entre les deux dates, puis en se demandant quelle part de l'évolution peut honnêtement être attribuée aux décisions de celui qui a promis.
+Une évolution observée ne suffit ni à établir sa cause, ni à l'exclure.
 Sources
+Code du travail, art.
+L5411-2 (renouvellement de l’inscription sur la liste des demandeurs d’emploi), version en vigueur depuis le 1er janvier 2025, lu sur Légifrance (API) le 6 novembre 2026.
 Insee, Emploi, chômage, revenus du travail, Insee Références, édition 2026 (publiée le 2 juillet 2026) : dossier 1, figures 1, 2 et 8, définitions, encadrés et sources (appariement Dares-Insee-France Travail du Fichier historique statistique et de l’enquête Emploi) ; Vue d’ensemble, encadré 5.
 Informations rapides n° 192, 7 août 2026.
 Dares et France Travail, inscrits à France Travail, stock trimestriel, France, données CVS-CJO, et métadonnées du jeu (mises à jour le 28 juillet 2026) : changements de procédure de 2022 et de 2025, catégories F et G, série hors bénéficiaires du RSA et hors jeunes en parcours.
@@ -226,27 +230,27 @@ Les chiffres, les passages cités, les contrôles et les figures sont produits p
 Les données Dares sont celles de la mise à jour du 28 juillet 2026 ; une publication postérieure n’entre qu’après un nouveau relevé.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Chômeurs au sens du BIT et inscrits en catégorie A, 2024
-En 2024, selon l’estimation de l’Insee, environ 1,43 million de personnes sont à la fois chômeurs au sens du BIT et inscrites en catégorie A ; environ 1,47 million d’inscrits en catégorie A ne sont pas chômeurs au sens du BIT, et 863 000 chômeurs au sens du BIT ne sont pas inscrits en catégorie A.
-Précaution d’interprétation.
-Estimation de l’Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes ; marge d’enquête non publiée.
+En 2024, selon l'estimation de l'Insee, environ 1,43 million de personnes sont à la fois chômeurs au sens du BIT et inscrites en catégorie A ; environ 1,47 million d'inscrits en catégorie A ne sont pas chômeurs au sens du BIT, et 863 000 chômeurs au sens du BIT ne sont pas inscrits en catégorie A.
+Précaution d'interprétation.
+Estimation de l'Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes ; marge d'enquête non publiée.
 Insee Références, Emploi, chômage, revenus du travail, éd.
 2026, dossier 1, figures 2 et 8 (appariement Dares-Insee-France Travail)
 Télécharger en PNG
 SVG
 Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours
-Les deux séries d’inscrits en catégorie A portent les changements de règles : formulaire d’actualisation en 2022, inscription d’office et actualisation automatique en 2025.
-Elles décrivent deux populations, et leur écart ne mesure pas l’effet de la réforme.
-Précaution d’interprétation.
+Les deux séries d'inscrits en catégorie A portent les changements de règles : formulaire d'actualisation en 2022, inscription d'office et actualisation automatique en 2025.
+Elles décrivent deux populations, et leur écart ne mesure pas l'effet de la réforme.
+Précaution d'interprétation.
 Champ et période différents de la figure du croisement 2024.
-Séries non labellisées depuis le 01/01/2025 (label de 2021 suspendu par l’ASP, qui courait jusqu’au 20/05/2026).
+Séries non labellisées depuis le 01/01/2025 (label de 2021 suspendu par l'ASP, qui courait jusqu'au 20/05/2026).
 Dares et France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)
 Télécharger en PNG
 SVG
 Chômeurs au sens du BIT et inscrits en catégorie A, 2012-2025
-De 2012 à 2025, l’écart entre inscrits en catégorie A et chômeurs au sens du BIT passe de 0,3 million en 2012 à 1,1 million en 2019, 1,2 million en 2021 et 0,7 million en 2024, selon les moyennes annuelles publiées par l’Insee ; les règles d’inscription et l’enquête ont changé dans l’intervalle.
-Précaution d’interprétation.
+De 2012 à 2025, l'écart entre inscrits en catégorie A et chômeurs au sens du BIT passe de 0,3 million en 2012 à 1,1 million en 2019, 1,2 million en 2021 et 0,7 million en 2024, selon les moyennes annuelles publiées par l'Insee ; les règles d'inscription et l'enquête ont changé dans l'intervalle.
+Précaution d'interprétation.
 Moyennes annuelles publiées, en millions, France hors Mayotte, 15-64 ans.
 Repères : Insee (1, 2) et Dares (3, 4).
 Insee Références, Emploi, chômage, revenus du travail, éd.
@@ -255,7 +259,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Comment savoir si une promesse est tenue ? ».
-Données Insee et Dares, relevé du 05/11/2026 (séries Dares mises à jour le 28/10/2026, jusqu’au 3e trimestre 2026 ; Insee, édition du 02/07/2026). https://stephane-lalut.com/comment-savoir-si-une-promesse-est-tenue/
+Données Insee et Dares, relevé du 05/11/2026 (séries Dares mises à jour le 28/10/2026, jusqu'au 3e trimestre 2026 ; Insee, édition du 02/07/2026). https://stephane-lalut.com/comment-savoir-si-une-promesse-est-tenue/
 Copier la citation
 En trois phrases
 Pour juger une promesse sur le chômage, il faut d’abord choisir son chiffre : en 2024, selon l’estimation de l’Insee, 49 % seulement des inscrits en catégorie A sont chômeurs au sens du BIT.
@@ -263,11 +267,14 @@ Il faut ensuite vérifier la règle : le comptage des inscrits a changé en 2022
 Une contribution n’est pas un effet, et une évolution observée ne dit pas sa cause.
 Copier le résumé
 Les données
-Le croisement 2024 du statut au sens du BIT et de la catégorie d’inscription (24 cases et totaux, en milliers), les séries trimestrielles des inscrits en catégorie A avec et sans les publics inscrits d’office, et les moyennes annuelles 2012-2025 des deux mesures ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Le croisement 2024 du statut au sens du BIT et de la catégorie d'inscription (24 cases et totaux, en milliers), les séries trimestrielles des inscrits en catégorie A avec et sans les publics inscrits d'office, et les moyennes annuelles 2012-2025 des deux mesures ; le même contenu existe en CSV, en format long, lisible dans un tableur.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Insee et Dares), sous leurs propres conditions.
+Révisions
+6 novembre 2026 — Précision : le code du travail renvoie à un arrêté des ministres les modalités du renouvellement mensuel de l'inscription (art.
+L5411-2).
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

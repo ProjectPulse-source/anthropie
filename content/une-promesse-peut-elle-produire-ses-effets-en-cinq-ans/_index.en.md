@@ -4,8 +4,9 @@ url: /en/can-a-campaign-promise-produce-results-within-five-years/
 description: "How long does it take to train a general practitioner in France, who decides how many students are admitted, and what changes before the diploma? The length of the curriculum written in the texts, compared with the presidential term; students admitted to the second year of the French medical curriculum since 1972. Open data."
 chapo: "The test case of training general practitioners in France. A decision that raises the number of medical students does not reach its final result within the term that takes it. A general practitioner is trained in at least {del.duree} years from the first year, {del.nfois} the length of a presidential term (rules applying since the {del.an_reforme} academic year). Such a decision can still act sooner, because residents provide care under supervision during their training. And the number of students admitted does not depend on a single signature: the State sets a target, and each university votes its places."
 date: 2026-10-06
-lastmod: 2026-11-05
+lastmod: 2026-11-06
 journal:  # revisions that change how the page reads
+  - {date: 2026-11-06, texte: "Addition: residency posts opened by specialty (orders of 2024 to 2026), a second lever of the State; open posts, not filled ones."}
   - {date: 2026-11-05, texte: "Update: the 2026-2030 targets are no longer \"being prepared\": the order of 16 October 2026 sets for medicine a minimum of 61,230 professionals to be trained. The 2021-2025 target (51,505) is now given with its bounds, read in the 2021 order."}
 # English version of tab 4 of the "Presidential promises" dossier (FR: content/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/promesses_delais.json

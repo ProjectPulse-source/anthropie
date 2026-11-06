@@ -76,6 +76,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
 import constitution_en as cen  # noqa: E402
 import langue_generee as lg  # noqa: E402  -- nombres et lettres (organe commun)
+import temoin_parite  # noqa: E402  -- témoin positif de la parité téléphone (organe commun)
 import pied_figure  # noqa: E402  -- pied commun des figures détaillées
 
 ARRETE = "2026-10-05"
@@ -1203,6 +1204,10 @@ def _main() -> int:
         figs["referendum-rip%s-m.svg" % suf] = fig_rip_m(S, r, AA, R, figs["referendum-rip%s.svg" % suf])
     LANG = "fr"
     nv = parite_mobile(figs)
+    try:  # témoin positif de la parité (organe commun, 06/11/2026)
+        temoin_parite.exercer(parite_mobile, figs, log)
+    except RuntimeError as e:
+        raise Arret(str(e))
     g.append("parite des 4 figures telephone (%d valeurs dessinees retrouvees dans la version detaillee)" % nv)
     fi = fiches(figs, A, E)
     t, te = tableaux(R, S)

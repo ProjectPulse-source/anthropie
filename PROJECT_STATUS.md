@@ -52,6 +52,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-06 (suite) — Promesses : points ouverts page par page traités (§ 2 de la fiche de reprise) — commité, NON poussé
+
+- **Adopter** : correction d'une affirmation publiée (art. 40) : « l'Assemblée n'admet aucune compensation d'une charge » ;
+  la fiche n° 52 dit que le Bureau l'admet au dépôt d'une proposition de loi (citation `cit_fiche52c`, vérifiée mot pour mot),
+  FR, EN, FAQ, journal. Six conditions jamais vues mordre le sont désormais (cinq mutations et le témoin de parité) ; la
+  garde B3 plantait sur son propre message (« % » non échappé) : réparée, la classe a été recherchée dans tous les
+  générateurs (sans autre cas, sur les messages d'une ligne).
+- **Appliquer** : lois en attente par commission de l'Assemblée saisie au fond (gardes C0-C3, trois mutations vues
+  mordre, C1 déclarée conservation et non témoin) ; recoupé par un calcul indépendant (34/33/22/16 ; 198 des 567 mesures) ;
+  injonction avec astreinte (CE, 27/09/2023, n° 471646, archivée, deux citations vérifiées).
+- **Mesurer** : cadre légal du renouvellement mensuel (C. trav., art. L5411-2, lu par l'API Légifrance).
+- **Organe commun** `scripts/temoin_parite.py` : témoin positif des gardes de parité téléphone (Adopter, Délais,
+  Référendum). **Point ouvert nommé** : `update_langue_eleves.py`, `update_lycee_professeurs.py`, `update_niveau_eleves.py`
+  (dossier École) ont une garde de parité sans témoin, de forme différente : à outiller dans leur session.
+- Figures d'Adopter, d'Appliquer et de Mesurer régénérées : seule l'espace insécable du pied commun (« · », « 5 October »)
+  change, organe modifié par une autre session sans régénération.
+- Contrôles : `check-all --ci` 0, build 0, liens 0, rendu conforme, dates 0, langue 0, relecture et instantanés (8 pages),
+  recette 320-1 600 OK.
+
 ### 2026-11-06 — Délais : postes d'internat par spécialité (second levier de l'État) — commité, NON poussé
 
 - Demande de l'auteur. Section « Qui décide du nombre d'étudiants admis ? » de `/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/`

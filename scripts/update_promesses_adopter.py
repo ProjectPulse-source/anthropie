@@ -78,6 +78,7 @@ sys.path.insert(0, str(ROOT / "scripts" / "sources_promesses_en"))
 sys.path.insert(0, str(ROOT / "scripts"))
 import constitution_en as cen  # noqa: E402
 import langue_generee as lg  # noqa: E402  -- nombres et lettres (organe commun)
+import temoin_parite  # noqa: E402  -- témoin positif de la parité téléphone (organe commun)
 import pied_figure  # noqa: E402  -- pied commun des figures détaillées
 
 SRC = ROOT / "scripts" / "sources_adopter"
@@ -255,6 +256,8 @@ TEMOINS_TR = {
                          "2023-2024",
     "cit_fiche52": "The use of the plural has the effect of allowing a loss of revenue to be offset by an increase in another revenue.",
     "cit_fiche52b": "the creation or increase of a charge cannot be offset",
+    "cit_fiche52c": "In accordance with an established tradition, the Bureau nevertheless takes care not to restrict "
+                    "parliamentary initiative excessively. For example, it accepts that a charge may be offset.",
 }
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 MOIS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
@@ -270,6 +273,10 @@ TEMOINS = {
     "cit_fiche52": ("fiche52", "L'emploi du pluriel a pour effet d'autoriser la compensation d'une perte de recettes par "
                     "l'augmentation d'une autre recette."),
     "cit_fiche52b": ("fiche52", "la création ou l'aggravation d'une charge ne peut être gagée"),
+    # 06/11/2026 : la page disait « l'Assemblée nationale n'admet aucune compensation d'une charge », que la même fiche
+    # contredit pour les propositions de loi au dépôt (section I.1.a) ; la nuance est citée, vérifiée mot pour mot.
+    "cit_fiche52c": ("fiche52", "Conformément à une tradition établie, le Bureau veille néanmoins à ne pas restreindre "
+                     "excessivement l'initiative parlementaire. À ce titre, il admet par exemple qu'une charge puisse être compensée."),
 }
 # Catégorie de l'art. 49, al. 3 : projet de loi de finances ou de financement de la sécurité sociale (rectificatives
 # comprises) ; la loi de programmation des finances publiques relève de « un autre projet » (PRO-20261006-144558, P4).
@@ -440,7 +447,7 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         raise Arret("B3 : 2024-2025 : %d/%d contre 45 sur 56 publies par le Senat" % (ses["2024-2025"]["P"], ses["2024-2025"]["N"]))
     p2324 = 100 * ses["2023-2024"]["P"] / ses["2023-2024"]["N"]
     if not (int(p2324) == 58 and round(p2324) != 58):  # phrase : « le Sénat écrit 58 % ; arrondi, le tableau donne 59 % »
-        raise Arret("B3 : 2023-2024 : %.1f %% : « 58 % a l'unite inferieure, autre valeur a l'arrondi » faux" % p2324)
+        raise Arret("B3 : 2023-2024 : %.1f %% : « 58 %% a l'unite inferieure, autre valeur a l'arrondi » faux" % p2324)
     g.append("B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 %d/%d = %.1f %%"
              % (ses["2023-2024"]["P"], ses["2023-2024"]["N"], p2324))
 
@@ -1209,7 +1216,54 @@ def autotest(S: dict) -> list[str]:
             r0[0]["ppl_an_premiere_lecture"] = str(int(r0[0]["ppl_an_premiere_lecture"]) - (tot - (ext - e_cible)))
         return f
 
+    def parlementaire(r):
+        for k in ("origine", "origine_AN", "origine_Dosleg"):
+            if r[k]:
+                r[k] = "parlementaire AN"
+
+    def de_peu(m):  # 06/11/2026 : XVe portée nettement au-dessus de la moitié (« de peu » doit tomber)
+        n = 0
+        for r in m["lois"]:
+            if r["legislature"] == "15" and r["nature"] == "ordinaire" and r["origine"] == "gouvernement" and n < 40:
+                parlementaire(r)
+                n += 1
+
+    def session_2324(m):  # une loi parlementaire de 2023-2024 passée au Gouvernement (58/59 doit tomber)
+        for r in m["lois"]:
+            if (r["nature"] == "ordinaire" and r["legislature"] not in ("", HORS)
+                    and session(r["date_promulgation"]) == "2023-2024" and r["origine"] != "gouvernement"):
+                for k in ("origine", "origine_AN", "origine_Dosleg"):
+                    if r[k]:
+                        r[k] = "gouvernement"
+                return
+
+    def traite(m):  # une loi autorisant un traité rendue parlementaire
+        for r in m["lois"]:
+            if r["nature"] == "traite":
+                parlementaire(r)
+                return
+
+    def entre_deux(m):  # une loi promulguée entre deux législatures rendue gouvernementale
+        for r in m["lois"]:
+            if r["legislature"] == HORS:
+                for k in ("origine", "origine_AN", "origine_Dosleg"):
+                    if r[k]:
+                        r[k] = "gouvernement"
+                return
+
+    def fin_xv(m):  # une loi financière de la XVe rattachée au dossier d'un texte engagé (49.3) de la XVIe
+        engage = next(r["dossier_texte"] for r in m["eng"] if r["legislature"] == "16")
+        for r in m["lois"]:
+            if r["legislature"] == "15" and r["nature"] == "finances_fss":
+                r["dossiers_AN"] = (r["dossiers_AN"] + "|" + engage).strip("|")
+                return
+
     for nom, mut, pref, motif in (
+            ("XVe nettement majoritaire", de_peu, "B2", "de peu"),
+            ("2023-2024 : une loi parlementaire passee au Gouvernement", session_2324, "B3", "unite inferieure"),
+            ("traite d'origine parlementaire", traite, "B2", "traite"),
+            ("loi entre deux legislatures gouvernementale", entre_deux, "B2", "entre deux legislatures"),
+            ("loi financiere de la XVe engagee", fin_xv, "B7", "XIVe ou la XVe"),
             ("origine changee dans une source", origine, "B2", "origine AN"),
             ("loi 2024-2025 retiree", retire, "B3", "session 2024-2025"),
             ("engagement XVIe retire", engagement, "B4", "fiche n"),
@@ -1264,6 +1318,10 @@ def _main() -> int:
         figs["adopter-493%s-m.svg" % suf] = fig_493_m(r, AA, figs["adopter-493%s.svg" % suf])
     LANG = "fr"
     nv = parite_mobile(figs)
+    try:  # témoin positif de la parité (organe commun, 06/11/2026)
+        temoin_parite.exercer(parite_mobile, figs, log)
+    except RuntimeError as e:
+        raise Arret(str(e))
     fi = fiches(figs, A, A_en)
     g.append("parite des %d figures telephone (%d valeurs dessinees)" % (len([k for k in figs if k.endswith("-m.svg")]), nv))
     if "--check" in sys.argv[1:]:

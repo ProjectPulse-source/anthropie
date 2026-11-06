@@ -3,8 +3,9 @@ title: "Une promesse peut-elle produire ses effets en cinq ans ?"
 description: "Combien de temps faut-il pour former un médecin généraliste, qui décide du nombre d'étudiants admis, et qu'est-ce qui change avant le diplôme ? La durée du cursus écrite dans les textes, comparée au mandat présidentiel ; les étudiants admis en deuxième année du cursus de médecine depuis 1972. Données ouvertes."
 chapo: "Le cas-test de la formation des médecins généralistes. Une décision qui augmente le nombre d'étudiants n'atteint pas son résultat final dans le mandat qui la prend. Un généraliste se forme en au moins {del.duree} ans depuis la première année, {del.nfois} la durée d'un mandat présidentiel (règles applicables depuis la rentrée {del.an_reforme}). Une telle décision peut pourtant agir avant, car les internes soignent sous supervision pendant leur formation. Et le nombre d'étudiants admis ne dépend pas d'une seule signature : l'État fixe un objectif, chaque université vote ses places."
 date: 2026-10-06
-lastmod: 2026-11-05
+lastmod: 2026-11-06
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-06, texte: "Ajout : postes d'internat ouverts par spécialité (arrêtés de 2024 à 2026), second levier de l'État ; postes ouverts, non pourvus."}
   - {date: 2026-11-05, texte: "Mise à jour : les objectifs de 2026-2030 ne sont plus « en préparation » : l'arrêté du 16 octobre 2026 fixe pour la médecine un seuil minimal de 61 230 professionnels à former. L'objectif de 2021-2025 (51 505) est désormais donné avec ses bornes, lues dans l'arrêté de 2021."}
 donnees: [promesses_delais]
 og_title: "Une promesse peut-elle produire ses effets en cinq ans ? — le cas-test de la formation des médecins — S. Lalut"

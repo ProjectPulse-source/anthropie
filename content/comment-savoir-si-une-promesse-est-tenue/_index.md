@@ -3,7 +3,9 @@ title: "Comment savoir si une promesse est tenue ?"
 description: "Juger « faire baisser le chômage » : chômage au sens du BIT et inscrits en catégorie A à France Travail ne comptent pas les mêmes personnes, et la règle de comptage des inscrits a changé en 2022, fin 2024 et 2025. Estimation Insee, séries Dares, données ouvertes."
 chapo: "Deux chiffres exacts peuvent raconter deux histoires différentes. En 2024, selon l'Insee, {mes.p_a} % seulement des inscrits en catégorie A à France Travail sont chômeurs au sens du Bureau international du travail (BIT). Et la règle qui compte les inscrits a changé en 2022, à la fin de 2024 et en 2025, tantôt à la baisse, tantôt à la hausse. Pour juger une promesse sur le chômage, quatre questions : selon quel indicateur, depuis quand, la règle est-elle restée la même, quelle part attribuer."
 date: 2026-10-05
-lastmod: 2026-10-12
+lastmod: 2026-11-06
+journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-06, texte: "Précision : le code du travail renvoie à un arrêté des ministres les modalités du renouvellement mensuel de l'inscription (art. L5411-2)."}
 donnees: [promesses_mesurer]
 og_title: "Comment savoir si une promesse est tenue ? — deux mesures du chômage, deux populations — S. Lalut"
 og_image: "images/og-mesurer-promesse.jpg"
@@ -119,7 +121,7 @@ Non, et pas seulement en 2025. Pour les inscrits, la règle de comptage a chang�
 | Avril 2025 | Actualisation automatique réservée aux premières inscriptions | **Baisse** au 2e&nbsp;trimestre (Dares) |
 | Juin 2025 | Nouveau régime des sanctions | Moins de radiations des listes (Dares, Insee) |
 
-Le formulaire d'actualisation, par lequel les inscrits déclarent chaque mois leur activité, est celui de France Travail, selon l'Insee&nbsp;; les documents lus ne disent pas qui a décidé ses changements de 2022 et de 2024. L'inscription d'office vient de la loi du 18&nbsp;décembre 2023 pour le plein emploi, votée par le Parlement. Côté enquête, la série du chômage au sens du BIT a été reconstruite après la rénovation de l'enquête Emploi en 2021.
+Le formulaire d'actualisation, par lequel les inscrits déclarent chaque mois leur activité, est celui de France Travail, selon l'Insee. Le code du travail renvoie aujourd'hui les modalités de ce renouvellement mensuel à un arrêté conjoint des ministres chargés de l'emploi et des solidarités (art.&nbsp;L5411-2)&nbsp;; les documents lus ne disent pas qui a décidé les changements du formulaire en 2022 et en 2024. L'inscription d'office vient de la loi du 18&nbsp;décembre 2023 pour le plein emploi, votée par le Parlement. Côté enquête, la série du chômage au sens du BIT a été reconstruite après la rénovation de l'enquête Emploi en 2021.
 
 <details class="repli"><summary>Ce que disent les sources, date par date</summary>
 
@@ -202,6 +204,8 @@ Cette page montre qu'on ne juge pas une promesse sans choisir son indicateur ni 
 {{< faq-visible >}}
 
 ## Sources {#sources}
+
+**Code du travail**, art.&nbsp;L5411-2 (renouvellement de l'inscription sur la liste des demandeurs d'emploi), version en vigueur depuis le 1er&nbsp;janvier 2025, lu sur Légifrance (API) le 6&nbsp;novembre 2026.
 
 **Insee**, *Emploi, chômage, revenus du travail*, Insee Références, édition 2026 (publiée le 2&nbsp;juillet 2026)&nbsp;: dossier&nbsp;1, figures&nbsp;1, 2 et 8, définitions, encadrés et sources (appariement Dares-Insee-France Travail du Fichier historique statistique et de l'enquête Emploi)&nbsp;; Vue d'ensemble, encadré&nbsp;5. *Informations rapides* n°&nbsp;192, 7&nbsp;août 2026.
 

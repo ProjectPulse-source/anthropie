@@ -152,7 +152,9 @@ CONV_TITRE = re.compile(r"autorisant (?:la ratification|l['’]approbation|l['�
 CE = {"343188": ("ce_decision_2011-06-29_343188.html", "db9594c1b2025c48c76d0cc0c1d37277a39af68b7d097f33f5b93ef9c9d0a68d"),
       "429956": ("ce_decision_2021-01-21_429956.html", "07af6831a01ad03493fa0bba76695253f0e4758db1ff9f5dc0cffbccc32b3e0c"),
       "261694": ("ce_decision_2005-07-27_261694.html", "bb38e40ec0126fa4d1ed65887da3726f35f1eab6b3a89150917e6ec06593e498"),
-      "441660": ("ce_decision_2021-05-27_441660.html", "621baccd9513b80a9a392983d95ad0c9fb4f046f2c32279be19ac0387bc711d5")}
+      "441660": ("ce_decision_2021-05-27_441660.html", "621baccd9513b80a9a392983d95ad0c9fb4f046f2c32279be19ac0387bc711d5"),
+      # 06/11/2026 : injonction assortie d'une astreinte (ArianeWeb, lue le 06/11/2026)
+      "471646": ("ce_decision_2023-09-27_471646.html", "4103942bcc98006d7868599021f41458ac9fffd3b119c1ae026494f71b540ffd")}
 PRINCIPE = ("L'exercice du pouvoir réglementaire comporte non seulement le droit mais aussi l'obligation de prendre dans un délai "
             "raisonnable les mesures qu'implique nécessairement l'application de la loi, hors le cas où le respect "
             "d'engagements internationaux de la France y ferait obstacle.")
@@ -165,6 +167,8 @@ CIT_CE = {  # clé -> (décision, citation exacte)
     "cit_ce_reparation": ("261694", "les préjudices qui résultent du retard mis à prendre, au-delà d'un délai raisonnable, un décret nécessaire à l'application d'une loi ouvrent droit à réparation"),
     "cit_ce_nature": ("261694", "eu égard à la nature des mesures à prendre"),
     "cit_ce_exhaustif": ("343188", "l'article R. 1243-4 fixe de façon exhaustive et précise le contenu du dossier de demande d'autorisation"),
+    "cit_ce_astreinte": ("471646", "Une astreinte de deux cent euros par jour est prononcée à l'encontre de l'Etat"),
+    "cit_ce_loi2015": ("471646", "loi n° 2015-1776 du 28 décembre 2015 relative à l'adaptation de la société au vieillissement"),
     "cit_ce_pas_tenu": ("343188", "le ministre chargé de la santé n'était pas tenu de prendre l'arrêté prévu par ce dernier article"),
 }
 PRINCIPE_DANS = ("343188", "429956", "441660")  # la page dit la formule reprise en 2011 et en 2021
@@ -244,6 +248,8 @@ TR = {
     "cit_ce_precision": "these provisions are not precise enough to allow their entry into force in the absence of the "
                         "implementing decree, whose adoption they moreover provide for",
     "cit_ce_injonction": "to order the Prime Minister to adopt this decree within six months of notification of this decision",
+    "cit_ce_astreinte": "A penalty payment of two hundred euros per day is imposed on the State",
+    "cit_ce_loi2015": "Law no. 2015-1776 of 28 December 2015 on the adaptation of society to ageing",
     "cit_ce_arrete_injonction": "to order the Keeper of the Seals, Minister of Justice, to adopt the order provided for by "
                                 "article 9 of the decree of 29 June 2020 within three months",
     "cit_ce_reparation": "the losses resulting from the delay in adopting, beyond a reasonable time, a decree necessary for the "
@@ -483,6 +489,21 @@ def verifier_ce(S: dict) -> dict:
 
 
 # ------------------------------------------------------------------ calcul et gardes
+# Commissions permanentes de l'Assemblée nationale (libellé du baromètre -> nom court FR, EN) ; « speciale » regroupe les
+# commissions spéciales, une par loi. Toute autre valeur arrête (C0).
+COMMISSIONS = {
+    "lois": ("Commission des lois constitutionnelles", "des lois", "Law"),
+    "sociales": ("Commission des affaires sociales", "des affaires sociales", "Social Affairs"),
+    "economiques": ("Commission des affaires économiques", "des affaires économiques", "Economic Affairs"),
+    "finances": ("Commission des finances", "des finances", "Finance"),
+    "developpement": ("Commission du développement durable", "du développement durable", "Sustainable Development"),
+    "culturelles": ("Commission des affaires culturelles", "des affaires culturelles", "Cultural Affairs and Education"),
+    "defense": ("Commission de la défense", "de la défense", "Defence"),
+    "etrangeres": ("Commission des affaires étrangères", "des affaires étrangères", "Foreign Affairs"),
+    "speciale": ("Commission spéciale", "spéciales", "special"),
+}
+
+
 def calculer(S: dict) -> tuple[dict, list[str]]:
     g = []
     cc = S["cciv"]["texte"]
@@ -524,6 +545,7 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     iD, iT, iJ, iConv, iDir, iSE = 0, 1, 2, h.index("Loi autorisant la ratification d'accords internationaux"), \
         h.index("Loi d'application directe"), h.index("Loi sans échéancier")
     iNa, iNapp = h.index("Nombre de mesures à appliquer"), h.index("Nombre de mesures appliquées")
+    iCom = h.index("Libellé de la commission de l'Assemblée saisie au fond")
     champ, ecartees = {}, collections.Counter()
     entree = collections.Counter()
     for l in L[1:]:
@@ -533,7 +555,7 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
             ecartees[s] += 1
             continue
         champ[l[iJ]] = {"session": s, "directe": l[iDir] == "oui", "sans_ech": l[iSE] == "oui", "na": int(l[iNa]),
-                        "napp": int(l[iNapp]), "titre": l[iT]}
+                        "napp": int(l[iNapp]), "titre": l[iT], "com": l[iCom].strip()}
     N = collections.Counter(v["session"] for v in champ.values())
     for s in SESSIONS:
         if entree[s] != N[s] + ecartees[s]:
@@ -734,7 +756,36 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         raise Arret("A9 : « + %d points » : %d - %d ; taux 2023-2024 de la serie %g" % (p4, v66, v62, v59))
     g.append("A9 : « + %d points » = %d - %d (2023-2024 hors mesures differees), et non %d - %g" % (p4, v66, v62, v66, v59))
 
-    r = {"lignes": lignes, "ct": ct, "ndesacc": ndesacc, "nregistre": len(reg), "conventions": sum(ecartees.values()),
+    # --- C0-C3 (06/11/2026, question de deux lecteurs : « de quoi parlent les lois en attente ? ») : commission de
+    # l'Assemblée saisie au fond, telle que le baromètre la donne pour chaque loi ; le domaine du texte, non un thème
+    # inventé ni le ministère chargé des mesures.
+    com_l, com_m = collections.Counter(), collections.Counter()
+    for j, stt in statut_loi.items():
+        if stt != "attente":
+            continue
+        c = champ[j]["com"]
+        cle = next((k for k, (debut, _f, _e) in COMMISSIONS.items() if c.startswith(debut)), None)
+        if cle is None:
+            raise Arret("C0 : commission saisie au fond inconnue ou absente pour %s : %r" % (rj[j]["num_loi"], c))
+        com_l[cle] += 1
+        com_m[cle] += par_loi[j]["en attente d'application"]
+    # C1 : conservation. Pour les lois, identité par construction ; pour les mesures, deux chemins du même fichier. Elle ne
+    # témoigne de rien d'indépendant (aucune mutation propre) : elle empêche une perte silencieuse au regroupement.
+    if sum(com_l.values()) != l_att or sum(com_m.values()) != tot["A"]:
+        raise Arret("C1 : commissions : %d lois et %d mesures, contre %d lois en attente et %d mesures en attente"
+                    % (sum(com_l.values()), sum(com_m.values()), l_att, tot["A"]))
+    rang = sorted(com_l, key=lambda k: -com_l[k])  # brut-ok: comptes entiers, rang publié avec ses valeurs
+    top = rang[:4]
+    if "speciale" in top or 2 * sum(com_l[k] for k in top) <= l_att or (len(rang) > 4 and com_l[rang[3]] == com_l[rang[4]]):
+        raise Arret("C2 : « relevent surtout de quatre commissions » faux ou ambigu : %s" % [(k, com_l[k]) for k in rang])
+    rm = sorted(com_m, key=lambda k: -com_m[k])  # brut-ok: comptes entiers
+    if rm[0] == "speciale" or com_m[rm[0]] == com_m[rm[1]]:
+        raise Arret("C3 : « en porte la plus grande part » faux ou partage : %s" % [(k, com_m[k]) for k in rm[:3]])
+    g.append("C0-C3 : %d lois en attente par commission saisie au fond (%s) ; %d mesures, plus grande part : %s (%d)"
+             % (l_att, ", ".join("%s %d" % (k, com_l[k]) for k in rang), tot["A"], rm[0], com_m[rm[0]]))
+
+    r = {"com": {"lois": dict(com_l), "mesures": dict(com_m), "rang": rang, "rang_mesures": rm},
+         "lignes": lignes, "ct": ct, "ndesacc": ndesacc, "nregistre": len(reg), "conventions": sum(ecartees.values()),
          "cl": {s: dict(cl[s]) for s in SESSIONS}, "tot": dict(tot), "nmes": nmes, "obs_acte": dict(obs_acte),
          "obs_large": obs_large, "ecartes": ecartes, "tri": dict(tri), "nS": nS,
          "differ_A": dict(differ_A), "differ_sans_date": differ_sans_date, "A_sans_date": A_sans_date,
@@ -755,6 +806,10 @@ def _cles_communes(r: dict, lang: str) -> dict:
         tst.update(st[s])
     tri = collections.Counter(r["tri"])
     return {
+        **{"com%d" % (i + 1): COMMISSIONS[k][1 if lang == "fr" else 2] for i, k in enumerate(r["com"]["rang"][:4])},
+        **{"com%d_n" % (i + 1): nb(r["com"]["lois"][k]) for i, k in enumerate(r["com"]["rang"][:4])},
+        "com_m": COMMISSIONS[r["com"]["rang_mesures"][0]][1 if lang == "fr" else 2],
+        "com_m_n": nb(r["com"]["mesures"][r["com"]["rang_mesures"][0]]),
         "nmes": nb(r["nmes"]), "P": nb(t.get("P", 0)), "A": nb(t.get("A", 0)), "S": nb(t.get("S", 0)), "U": nb(t.get("U", 0)),
         "A_pct": nb(100 * t.get("A", 0) / r["nmes"], 1),
         "A_1718": nb(cl["2017-2018"].get("A", 0)), "N_1718": nb(sum(cl["2017-2018"].values())),
@@ -1347,6 +1402,11 @@ def csv_texte(r: dict) -> str:
     w.writerow(["taux_senat", REVISION[0], "segment_5_rapport_suivant", REVISION[1], "%", "Senat, %s" % REVISION[2].replace("|", " p. ")])
     for k, leg in (("sgg16", "XVIe legislature, decrets"), ("sgg17", "XVIIe legislature, decrets ou arretes")):
         w.writerow(["taux_sgg", leg, "taux_bilan_30-06-2026", r["sgg"][k]["taux"], "%", "SGG, bilan semestriel au %s" % SGG_DATE[2]])
+    for k in r["com"]["rang"]:
+        w.writerow(["lois_en_attente_par_commission", "2017-2025", COMMISSIONS[k][0], r["com"]["lois"][k], "lois",
+                    "Barometre de l'application des lois, commission de l'Assemblee saisie au fond"])
+        w.writerow(["mesures_en_attente_par_commission", "2017-2025", COMMISSIONS[k][0], r["com"]["mesures"][k], "mesures",
+                    "Barometre de l'application des lois, commission de l'Assemblee saisie au fond"])
     return buf.getvalue()
 
 
@@ -1437,8 +1497,49 @@ def autotest(S: dict) -> list[str]:
     def paraphrase(m):  # l'al. 1 de l'art. 61 ne mentionne plus les lois organiques : la paraphrase de la page tombe (A1)
         m["const"]["art61"] = dict(m["const"]["art61"], texte=m["const"]["art61"]["texte"].replace("Les lois organiques, ", ""))
 
+    iCom = hl.index("Libellé de la commission de l'Assemblée saisie au fond")
+
+    def attente_par_loi(m):
+        iE = hm.index("État")
+        c = collections.Counter(l[1] for l in m["mesures"][1:] if l[iE] == "en attente d'application")
+        return {l[2]: (l, c[l[2]]) for l in m["lois"][1:] if c[l[2]]}
+
+    def com_inconnue(m):  # une loi en attente sans commission reconnue (C0)
+        l, _ = next(iter(attente_par_loi(m).values()))
+        l[iCom] = "Commission inconnue"
+
+    def speciales(m):  # vingt lois en attente passées en commission spéciale : elle entre dans les quatre premières (C2)
+        for l, _ in list(attente_par_loi(m).values())[:20]:
+            l[iCom] = "Commission spéciale chargée d'un essai"
+
+    def egalite_mesures(m):  # des lois des affaires sociales déplacées jusqu'à égaliser deux commissions en mesures (C3)
+        ap = attente_par_loi(m)
+        def nom(l):
+            return next(k for k, (d, _f, _e) in COMMISSIONS.items() if l[iCom].strip().startswith(d))
+        tot = collections.Counter()
+        for l, n in ap.values():
+            tot[nom(l)] += n
+        soc = [(l, n) for l, n in ap.values() if nom(l) == "sociales"]
+        for cible in [k for k in tot if k not in ("sociales", "speciale")]:
+            if (tot["sociales"] - tot[cible]) % 2:
+                continue
+            s = (tot["sociales"] - tot[cible]) // 2
+            atteint = {0: []}
+            for i, (l, n) in enumerate(soc):
+                for v, chemin in list(atteint.items()):
+                    if v + n <= s and v + n not in atteint:
+                        atteint[v + n] = chemin + [i]
+            if s in atteint:
+                texte = next(d for k, (d, _f, _e) in COMMISSIONS.items() if k == cible)
+                for i in atteint[s]:
+                    soc[i][0][iCom] = texte
+                return
+        raise Arret("autotest : egalite de mesures introuvable")
+
     sauve_cit, sauve_tr = dict(CITATIONS), dict(TR)
-    for nom, mut, pref in (("2017-1754 reclassee directe", reclasse, "A3"), ("convention reintegree", convention, "A2"),
+    for nom, mut, pref in (("commission inconnue", com_inconnue, "C0"), ("commission speciale dans les quatre premieres", speciales, "C2"),
+                           ("deux commissions a egalite de mesures", egalite_mesures, "C3"),
+                           ("2017-1754 reclassee directe", reclasse, "A3"), ("convention reintegree", convention, "A2"),
                            ("mesure appliquee -> en attente", attente, "A5"), ("citation SGG alteree", citation, "A7"),
                            ("2018-2019 sous la moitie", sous_moitie, "A4"),
                            ("loi en attente et sans echeancier", sans_echeancier, "A8"),
