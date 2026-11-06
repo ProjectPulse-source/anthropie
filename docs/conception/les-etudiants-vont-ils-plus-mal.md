@@ -247,7 +247,17 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
 - Texte, version 1 : fait le 06/11/2026 —
   `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\REDACTION\PAGE_v1_2026-11-06.md` (nombres encore saisis,
   table d'origine de chaque valeur en fin de fichier ; EnCLASS 2024 et SIES n° 19 à relire à la source avant jeton).
-- Générateur, jetons, gardes, figures : non fait.
+- Sources relues dans leur document original : fait le 06/11/2026 — EnCLASS 2024 (PDF du 02/06/2026), BEH 2023 n° 2 et
+  BEH 2025 n° 14 (PDF), Insee « Dépenses d'éducation » (tableur, compte de l'éducation), archivés avec empreintes dans
+  `_SOURCES/brut_2026-11-06/` du dossier de recherche. Page DREES du 11/05/2026 : défi anti-robot au script, non
+  contourné ; canal changé : ses trois chiffres recalculés sur le jeu DREES archivé (482, 222, 369 retrouvés). Le SIES
+  répond 503 : sa dépense par filière est lue dans le tableur Insee, même source (Depp). Corrections au texte : dépense
+  en recul depuis 2009 et non 2014 ; « 369 en 2024 » de l'arbitrage 06 → 2025.
+- Générateur, jetons, gardes : fait le 06/11/2026 — `scripts/update_malaise_etudiant.py` (27 gardes, six mutations vues
+  mordre chacune sur sa propre garde ; une garde a refusé une phrase du texte v1, réécrite), extrait figé
+  `scripts/sources_malaise_etudiant/` (SHA256SUMS), sorties `data/` et `static/malaise_etudiant.json`,
+  `static/malaise_etudiant.csv` ; shortcode `etu-val`.
+- Figures (signature, téléphone, PNG), page Hugo, carte de partage et vignette : non fait.
 - Panel avant : non fait (page nouvelle dont la réception décide du choix d'architecture : à faire sur les scénarios).
 - Gardes vues mordre : non fait (générateur à écrire).
 - Figures téléphone : non fait.
