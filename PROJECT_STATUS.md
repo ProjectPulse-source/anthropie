@@ -52,6 +52,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-06 (matin) — Budget 2027 : le texte rejeté par l'Assemblée (4/11), le Sénat examine le texte initial
+
+- Le site affichait depuis le 5/11 « art. 84 supprimé en commission, séance à venir » et les votes du 19/10 comme l'état du
+  texte, alors que l'Assemblée avait rejeté le projet le 4/11 (ticket de veille n° 59, ouvert le 6/11 à 0 h 28 :
+  « première partie non adoptée, conséquences à écrire à la main »). Registre des votes, générateur, frise, figure,
+  cartes de partage, pages `/budget-2027-votre-commune/` et `/dette-publique-collectivites-locales/` (FR, EN) et
+  échéances du registre des sources (Sénat : 20/11, 28-29/11, 2/12, 9/12) mis à jour. Détail : fiche de conception.
+- Branche `plf-rejet-0611` tirée d'`origin/main` (le `main` local porte `8b2e374`, dette, non poussé exprès).
+
+
 ### 2026-11-06 (suite) — Promesses : points ouverts page par page traités (§ 2 de la fiche de reprise) — poussé seul (cherry-pick sur origin/main ; `8b2e374`, dette, reste local)
 
 - **Adopter** : correction d'une affirmation publiée (art. 40) : « l'Assemblée n'admet aucune compensation d'une charge » ;

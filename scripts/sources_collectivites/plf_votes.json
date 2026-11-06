@@ -1,41 +1,177 @@
 {
- "_role": "Etat du projet de loi de finances au Parlement, article par article, pour la page collectivites. Chaque resultat est une citation VERBATIM du compte rendu officiel de la seance ; le compte rendu est archive hors depot (06_PROMOTION/RECHERCHE_VOTRE_COMMUNE_2026-10-22/_SOURCES, SHA256SUMS.txt) et chaque citation y a ete retrouvee par verifier_plf_votes.py le jour de l'ecriture. Une decision de commission (amendement adopte) entre dans `commission`, citee sur la page de l'amendement archivee : en premiere lecture, la seance discute le texte du Gouvernement (Constitution, art. 42), la decision de commission n'y vaut que si la seance la reprend. A completer a chaque etape (27/10-2/11, vote solennel du 3/11, Senat, CMP, loi promulguee) : une etape = une entree datee, jamais une ecrasee.",
+ "_role": "Etat du projet de loi de finances au Parlement, article par article, pour la page collectivites. Chaque resultat est une citation VERBATIM du compte rendu officiel de la seance ; le compte rendu est archive hors depot (06_PROMOTION/RECHERCHE_VOTRE_COMMUNE_2026-10-22/_SOURCES, SHA256SUMS.txt) et chaque citation y a ete retrouvee par verifier_plf_votes.py le jour de l'ecriture. Une decision de commission (amendement adopte) entre dans `commission`, citee sur la page de l'amendement archivee : en premiere lecture, la seance discute le texte du Gouvernement (Constitution, art. 42), la decision de commission n'y vaut que si la seance la reprend. A completer a chaque etape (27/10-2/11, vote solennel du 3/11, Senat, CMP, loi promulguee) : une etape = une entree datee, jamais une ecrasee. 06/11/2026 : texte rejeté par l'Assemblée le 4/11 (`texte_rejete`) ; les entrées `articles` et `commission` restent comme historique, sans effet sur le texte transmis au Sénat ; calendrier du Sénat dans `senat` (ordre du jour archivé).",
  "edition": 2027,
- "etat_au": "2026-11-04",
- "etape_suivante": "fin de l'examen de la première partie et vote sur son ensemble, annoncés en séance le 3 novembre pour le 4 au soir ou le 5 novembre (le vote solennel prévu le 3 novembre n'a pas eu lieu) ; puis seconde partie, dont l'article 84 ; délai de l'Assemblée : 17 novembre à minuit",
- "etape_suivante_en": "end of the examination of the first part and vote on it as a whole, announced in plenary on 3 November for the evening of the 4th or for 5 November (the formal vote planned for 3 November did not take place); then the second part, including article 84; the Assembly's deadline: midnight on 17 November",
- "etape_source": {"seance": "AN-2026-11-03-1", "citation": "Si nous accélérons, nous pouvons terminer demain soir ; sinon, ce sera jeudi matin."},
+ "etat_au": "2026-11-05",
+ "etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
+ "etape_suivante_en": "examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December",
+ "etape_source": {
+  "seance": "SENAT-ODJ-2026-11-05",
+  "citation": "Mercredi 2 décembre 2026 À 10 h 30, l'après-midi, le soir et la nuit Sous réserve de sa transmission, projet de loi de finances pour 2027"
+ },
  "seances": {
-  "AN-2026-10-19-1": {"date": "2026-10-19", "assemblee": "Assemblée nationale", "seance": "première séance du lundi 19 octobre 2026",
-                      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-19-octobre-2026",
-                      "sha256_html": "51db7a51666d27bedea2d2d9d9347d4f8ad7d25c074780fc1fa8b954745638f5"},
-  "AN-2026-10-19-2": {"date": "2026-10-19", "assemblee": "Assemblée nationale", "seance": "deuxième séance du lundi 19 octobre 2026",
-                      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/deuxieme-seance-du-lundi-19-octobre-2026",
-                      "sha256_html": "273c9f54432da7426cc95f050ff6436af318fd96b7dec0dc5ecd967f3ea25b0a"},
-  "AN-2026-11-03-1": {"date": "2026-11-03", "assemblee": "Assemblée nationale", "seance": "première séance du mardi 3 novembre 2026",
-                      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mardi-03-novembre-2026",
-                      "sha256_html": "0940e44b4fd0b4e004431c6b997f20f1dbb835b978bee6b48334099b09659fee"}
+  "AN-2026-10-19-1": {
+   "date": "2026-10-19",
+   "assemblee": "Assemblée nationale",
+   "seance": "première séance du lundi 19 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-19-octobre-2026",
+   "sha256_html": "51db7a51666d27bedea2d2d9d9347d4f8ad7d25c074780fc1fa8b954745638f5"
+  },
+  "AN-2026-10-19-2": {
+   "date": "2026-10-19",
+   "assemblee": "Assemblée nationale",
+   "seance": "deuxième séance du lundi 19 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/deuxieme-seance-du-lundi-19-octobre-2026",
+   "sha256_html": "273c9f54432da7426cc95f050ff6436af318fd96b7dec0dc5ecd967f3ea25b0a"
+  },
+  "AN-2026-11-03-1": {
+   "date": "2026-11-03",
+   "assemblee": "Assemblée nationale",
+   "seance": "première séance du mardi 3 novembre 2026",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mardi-03-novembre-2026",
+   "sha256_html": "0940e44b4fd0b4e004431c6b997f20f1dbb835b978bee6b48334099b09659fee"
+  },
+  "AN-2026-11-04-2": {
+   "date": "2026-11-04",
+   "assemblee": "Assemblée nationale",
+   "seance": "deuxième séance du mercredi 4 novembre 2026",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/deuxieme-seance-du-mercredi-04-novembre-2026",
+   "sha256_html": "a90e74d840ea02eb1a487176d8d9e441d4b73b885d8e12fb3f4db7fa456cebce",
+   "texte": "comptes_rendus/AN-2026-11-04-2.txt",
+   "sha256_texte": "ab8fdcb2e35dda5a725518e9ec6e0324a11ee4f51a6b172d0001fb4fb4990dd7"
+  },
+  "SENAT-ODJ-2026-11-05": {
+   "date": "2026-11-05",
+   "assemblee": "Sénat",
+   "seance": "ordre du jour de la séance publique, page mise à jour le 5 novembre 2026 à 19 h 28",
+   "url": "https://www.senat.fr/ordre-du-jour/ordre-du-jour.html",
+   "sha256_html": "80d84572f4887f0add33321c6bcd7fe60a0a411de2b09031ce75d259cc83e741",
+   "texte": "comptes_rendus/SENAT-ODJ-2026-11-05.txt",
+   "sha256_texte": "ccd1e3cdd0ee0e5dc212c1c2debca869b257d6fa7907e4f2ac1200f2c3768cc0"
+  }
  },
  "articles": [
-  {"article": 34, "seance": "AN-2026-10-19-1", "statut": "adopte_modifie", "citation": "(L’article 34, amendé, est adopté.)",
+  {
+   "article": 34,
+   "seance": "AN-2026-10-19-1",
+   "statut": "adopte_modifie",
+   "citation": "(L’article 34, amendé, est adopté.)",
    "precision": "montant de la DGF pour 2027 porté de 27 543 261 857 € à 27 899 281 115 € (amendements identiques n° 11, 1169, 3367 et 3913), soit +356 019 258 € ; un montant pour 2027, pas une règle d'indexation",
    "precision_en": "DGF for 2027 raised from €27,543,261,857 to €27,899,281,115 (identical amendments nos. 11, 1169, 3367 and 3913), i.e. +€356,019,258; an amount for 2027, not an indexation rule",
-   "citations_complementaires": ["11, 1169, 3367 et 3913 sont adoptés"]},
-  {"article": 35, "seance": "AN-2026-10-19-1", "statut": "supprime", "citation": "en conséquence, l’article 35 est supprimé", "pour": 125, "contre": 16},
-  {"article": 36, "seance": "AN-2026-10-19-1", "statut": "non_adopte", "citation": "(L’article 36, amendé, n’est pas adopté.)",
+   "citations_complementaires": [
+    "11, 1169, 3367 et 3913 sont adoptés"
+   ]
+  },
+  {
+   "article": 35,
+   "seance": "AN-2026-10-19-1",
+   "statut": "supprime",
+   "citation": "en conséquence, l’article 35 est supprimé",
+   "pour": 125,
+   "contre": 16
+  },
+  {
+   "article": 36,
+   "seance": "AN-2026-10-19-1",
+   "statut": "non_adopte",
+   "citation": "(L’article 36, amendé, n’est pas adopté.)",
    "precision": "les amendements de suppression avaient d'abord été rejetés (51 voix pour, 69 contre) ; l'article amendé n'a ensuite pas été adopté",
    "precision_en": "the amendments deleting it had first been rejected (51 for, 69 against); the amended article was then not adopted",
-   "citations_complementaires": ["20, 437, 1163, 2641, 3165, 3253 et 3757 ne sont pas adoptés"]},
-  {"article": 37, "seance": "AN-2026-10-19-2", "statut": "supprime", "citation": "en conséquence, l’article 37 est supprimé.", "pour": 125, "contre": 33},
-  {"article": 39, "seance": "AN-2026-10-19-2", "statut": "supprime", "citation": "en conséquence, l’article 39 est supprimé"},
-  {"article": 40, "seance": "AN-2026-10-19-2", "statut": "non_adopte", "citation": "(L’article 40, amendé, n’est pas adopté.)", "pour": 61, "contre": 79},
-  {"article": 41, "seance": "AN-2026-10-19-2", "statut": "adopte_modifie", "citation": "(L’article 41, amendé, est adopté.)"}
+   "citations_complementaires": [
+    "20, 437, 1163, 2641, 3165, 3253 et 3757 ne sont pas adoptés"
+   ]
+  },
+  {
+   "article": 37,
+   "seance": "AN-2026-10-19-2",
+   "statut": "supprime",
+   "citation": "en conséquence, l’article 37 est supprimé.",
+   "pour": 125,
+   "contre": 33
+  },
+  {
+   "article": 39,
+   "seance": "AN-2026-10-19-2",
+   "statut": "supprime",
+   "citation": "en conséquence, l’article 39 est supprimé"
+  },
+  {
+   "article": 40,
+   "seance": "AN-2026-10-19-2",
+   "statut": "non_adopte",
+   "citation": "(L’article 40, amendé, n’est pas adopté.)",
+   "pour": 61,
+   "contre": 79
+  },
+  {
+   "article": 41,
+   "seance": "AN-2026-10-19-2",
+   "statut": "adopte_modifie",
+   "citation": "(L’article 41, amendé, est adopté.)"
+  }
  ],
  "commission": [
-  {"article": 84, "date": "2026-10-28", "organe": "commission des finances", "organe_en": "finance committee", "statut": "suppression_adoptee",
-   "amendement": "II-CF2778", "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3210C/CION_FIN/CF2778",
+  {
+   "article": 84,
+   "date": "2026-10-28",
+   "organe": "commission des finances",
+   "organe_en": "finance committee",
+   "statut": "suppression_adoptee",
+   "amendement": "II-CF2778",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3210C/CION_FIN/CF2778",
    "sha256_html": "62149fa6ee05960622d7ccdd3d641c818255b6031fb972db9ed6391f59a3302d",
-   "citations": ["ARTICLE 84 Supprimer cet article.", "Adopté (mercredi 28 octobre 2026)"]}
+   "citations": [
+    "ARTICLE 84 Supprimer cet article.",
+    "Adopté (mercredi 28 octobre 2026)"
+   ]
+  }
  ],
- "non_examines": {"84": "seconde partie, non examinée en séance (suppression adoptée en commission : voir `commission`)", "credits": "crédits des missions (seconde partie), non examinés"}
+ "non_examines": {
+  "84": "seconde partie, non examinée en séance par l'Assemblée, qui a rejeté le texte le 4 novembre ; la suppression votée en commission le 28 octobre tombe avec lui : le Sénat examine l'article 84 du texte initial le 2 décembre",
+  "credits": "crédits des missions (seconde partie), non examinés"
+ },
+ "etapes": [
+  {
+   "etape": "premiere_partie_rejetee",
+   "seance": "AN-2026-11-04-2",
+   "citation": "(L’ensemble de la première partie du projet de loi de finances pour 2027 n’est pas adopté.)",
+   "pour": 0,
+   "contre": 458
+  },
+  {
+   "etape": "texte_rejete_assemblee",
+   "seance": "AN-2026-11-04-2",
+   "citation": "L’Assemblée n’ayant pas adopté sa première partie, l’ensemble du projet de loi de finances pour 2027 est considéré comme rejeté."
+  },
+  {
+   "etape": "senat_calendrier",
+   "seance": "SENAT-ODJ-2026-11-05",
+   "citation": "Vendredi 20 novembre 2026 À 9 h 30 Sous réserve de sa transmission, projet de loi de finances pour 2027"
+  },
+  {
+   "etape": "senat_article_84",
+   "seance": "SENAT-ODJ-2026-11-05",
+   "citation": "Mercredi 2 décembre 2026 À 10 h 30, l'après-midi, le soir et la nuit Sous réserve de sa transmission, projet de loi de finances pour 2027"
+  },
+  {
+   "etape": "senat_mission_rct",
+   "seance": "SENAT-ODJ-2026-11-05",
+   "citation": "Relations avec les collectivités territoriales (+ articles 83 à 87)"
+  }
+ ],
+ "texte_rejete": {
+  "date": "2026-11-04",
+  "seance": "AN-2026-11-04-2",
+  "pour": 0,
+  "contre": 458,
+  "note": "Rejet de la première partie, donc de l'ensemble (LOLF, art. 42) : les votes de l'Assemblée sur les articles tombent avec le texte ; le Sénat examine le texte initial du Gouvernement (n° 3210)."
+ },
+ "senat": {
+  "source": "SENAT-ODJ-2026-11-05",
+  "debut": "2026-11-20",
+  "premiere_partie_fin": "2026-11-28",
+  "mission_rct": "2026-12-02",
+  "amendements_rct": "2026-11-27",
+  "vote_ensemble": "2026-12-09",
+  "texte": "projet de loi de finances pour 2027 (A.N., n° 3210), sous réserve de sa transmission"
+ }
 }
