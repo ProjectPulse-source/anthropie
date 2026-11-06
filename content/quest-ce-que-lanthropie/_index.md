@@ -3,11 +3,11 @@ title: "Qu'est-ce que l'anthropie ?"
 og_image: "images/og-notion-anthropie.jpg"
 og_image_alt: "Carte de partage : « Qu’est-ce que l’anthropie ? » et son schéma"
 date: 2026-04-03  # premiere mise en ligne possible sur stephane-lalut.com (CNAME acf728c, 03/04/2026) ; premiere capture publique Wayback le 16/04/2026 (audit du 05/11/2026)
-lastmod: 2026-11-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
-description: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
+lastmod: 2026-11-06  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+description: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
-    answer: "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement."
+    answer: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement."
   - question: "Quelle est la différence entre anthropie et entropie ?"
     answer: "L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne un mécanisme social et institutionnel : la manière dont des systèmes humains produisent de l'ordre local en déplaçant le désordre hors du périmètre visible."
   - question: "Quelle est la différence entre anthropie et Anthropocène ?"
@@ -153,6 +153,17 @@ Voir [AWP-02 — *3,3 millions d'années en un principe*](https://stephane-lalut
 Le principe anthropique relève de la cosmologie. Présenté par le physicien Brandon Carter lors d'un symposium en 1973, puis publié en 1974, il énonce que nos observations de l'univers sont nécessairement compatibles avec l'existence d'observateurs capables de les faire&nbsp;: les constantes physiques sont telles que nous les mesurons parce que, dans le cas contraire, nul ne serait là pour les mesurer.
 
 L'anthropie, elle, ne dit rien de l'univers ni de ses constantes. Elle désigne un mécanisme social et institutionnel&nbsp;: la manière dont les sociétés humaines produisent un ordre local en déplaçant le désordre. La proximité n'est que lexicale — l'un et l'autre dérivent du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;» —, sans aucune filiation conceptuelle.
+
+</div></details>
+
+<details class="notion" id="anthropie-et-anthropique"><summary><span class="notion__avec">anthropique</span><span class="notion__pr">Un adjectif courant, et un emploi propre au cadre de l'anthropie.</span></summary>
+<div class="notion__suite">
+
+Selon le Wiktionnaire, «&nbsp;anthropique&nbsp;» signifie «&nbsp;qui est en rapport avec l'espèce humaine&nbsp;» et, en particulier, «&nbsp;qui a une origine humaine&nbsp;». Le Larousse le définit notamment comme «&nbsp;dû à l'activité humaine&nbsp;»&nbsp;: on parle ainsi d'un réchauffement d'origine anthropique, d'une pollution anthropique ou de pressions anthropiques sur un milieu.
+
+Sur ce site, l'adjectif est aussi employé en référence à l'anthropie&nbsp;: le *cadre anthropique*, le *transfert anthropique* et la *boucle anthropique* renvoient à l'hypothèse selon laquelle les systèmes sociaux produisent de l'ordre local en déplaçant leur désordre vers d'autres lieux, d'autres temps ou d'autres groupes. Les deux emplois ne se confondent pas. Une pollution d'origine anthropique peut être étudiée dans ce cadre&nbsp;; sa seule origine humaine ne suffit pas à établir qu'un tel déplacement a eu lieu.
+
+Le *principe anthropique* de la cosmologie est une notion distincte, relative aux conditions qui permettent l'existence d'observateurs dans l'Univers. Il ne se confond ni avec l'origine humaine d'un phénomène, ni avec l'anthropie (voir le bloc précédent).
 
 </div></details>
 

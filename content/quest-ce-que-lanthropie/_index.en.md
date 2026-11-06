@@ -3,7 +3,7 @@ title: "What is anthropy?"
 og_image: "images/og-notion-anthropie-en.jpg"
 og_image_alt: "Share card: “What is anthropy?” and its diagram"
 date: 2026-04-03  # first possible publication on stephane-lalut.com (CNAME acf728c, 03/04/2026); first public Wayback capture 16/04/2026 (audit of 05/11/2026)
-lastmod: 2026-11-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-06  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
 # /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
@@ -17,10 +17,10 @@ aliases: ["/en/what-is-anthropy/", "/what-is-anthropy/"]
 # grappe definitionnelle de cette page sur 3 mois au 13/09 : 12 987 impressions,
 # 41 clics, 0,32 %. Regle de lecture ecrite d'avance dans PROJECT_STATUS.md.
 # NE PAS reverter sans lire cette entree : ce champ porte une mesure en cours.
-description: "Anthropy: the hypothesis that social systems produce order locally by displacing disorder elsewhere, not by resolving it. Social science, not physics."
+description: "Anthropy is the hypothesis, developed by economist Stéphane Lalut in ANTHROPIE (2025; English edition ANTHROPY, 2026), that social systems produce order locally by displacing disorder elsewhere rather than resolving it."
 faq:
   - question: "What is anthropy in social science?"
-    answer: "Anthropy is the hypothesis that social systems displace disorder rather than resolve it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially."
+    answer: "Anthropy is the hypothesis, developed by economist Stéphane Lalut in ANTHROPIE (2025; English edition ANTHROPY, 2026), that social systems produce order locally by displacing disorder elsewhere rather than resolving it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially."
   - question: "What is the difference between anthropy and entropy?"
     answer: "Entropy belongs to physics and thermodynamics. Anthropy designates a social and institutional mechanism: the way in which human systems produce local order by displacing disorder outside the visible perimeter."
   - question: "What is the difference between anthropy and the Anthropocene?"
@@ -47,7 +47,7 @@ faq:
     answer: "Kapp's cost-shifting tradition showed as early as 1950 that shifting costs onto third parties is systemic rather than accidental. Anthropy embraces this lineage and extends it: it unifies spatial, temporal, and social displacement into a single mechanism, adds saturation criteria (rising marginal cost, boomerang effect), and focuses on the mediations that keep the transfer invisible."
   - question: "Who developed the framework of anthropy?"
     answer: "Stéphane Lalut, economist, independent researcher and essayist, proposed the framework of anthropy in 2025 in the book ANTHROPIE — Ordre ici. Dette ailleurs, then formalised it from 2026 onwards in a series of working papers published on Zenodo under the label Anthropie Working Papers (AWP)."
-proposee_par: "The hypothesis was proposed by the economist Stéphane Lalut (in the book *ANTHROPIE*, 2025) and formalised in the *Anthropie Working Papers* (2026)."
+proposee_par: "The hypothesis was proposed by the economist Stéphane Lalut (in the book *ANTHROPIE*, 2025; English edition *ANTHROPY*, 2026) and formalised in the *Anthropie Working Papers* (2026)."
 frontiere:
   affirme:
     - texte: "Every observable order in a social system implies disorder exported elsewhere: to other places, other times, or other social groups."
