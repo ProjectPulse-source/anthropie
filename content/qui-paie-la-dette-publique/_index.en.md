@@ -25,7 +25,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved
   sources:
     - "https://www.insee.fr/fr/statistiques/8974371"
     - "https://www.insee.fr/fr/statistiques/8574663"
-    - "https://www.aft.gouv.fr/"
+    - "https://www.insee.fr/fr/statistiques/serie/010777616"
+    - "https://www.aft.gouv.fr/fr/principaux-chiffres-dette"
   mots: ["public debt", "redistribution", "distributional national accounts", "INSEE", "who pays for public debt", "holders of public debt"]
   fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]
 faq:

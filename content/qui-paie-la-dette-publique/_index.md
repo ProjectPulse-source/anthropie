@@ -22,7 +22,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolu
   sources:
     - "https://www.insee.fr/fr/statistiques/8974371"
     - "https://www.insee.fr/fr/statistiques/8574663"
-    - "https://www.aft.gouv.fr/"
+    - "https://www.insee.fr/fr/statistiques/serie/010777616"
+    - "https://www.aft.gouv.fr/fr/principaux-chiffres-dette"
   mots: ["dette publique", "redistribution", "comptes nationaux distribués", "Insee", "qui paie la dette", "détenteurs de la dette"]
   fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]
 faq:
