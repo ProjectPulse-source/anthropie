@@ -15,7 +15,7 @@
       {{ with $book.Params.url_amazon_fr }}<a href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">Amazon.fr</a>{{ end }}
       {{ with $book.Params.url_amazon_es }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es</a>{{ end }}
       {{ with $book.Params.url_amazon_ca }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca</a>{{ end }}
-      {{ with $book.Params.url_amazon_com }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com</a>{{ end }}
+      {{ with $book.Params.url_amazon_com }}<a href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">Amazon.com</a>{{ end }}
       {{ with $book.Params.url_amazon_uk }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.co.uk</a>{{ end }}
       {{ with $book.Params.url_amazon_de }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.de</a>{{ end }}
       {{ with $book.Params.url_amazon_it }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.it</a>{{ end }}

@@ -1,0 +1,19 @@
+# Amazon Attribution, campagne « Site stephane-lalut.com - COM » (ID 578602550721653646, entite US ENTITY2W6T2K39VJN78).
+# ASIN amazon.com -> identifiant maas du groupe. Registre : reports/attribution/BALISES_COM_2026-08-15.md ; relu dans la
+# console le 06/11/2026 (12/12 identiques). Cree le 15/08, jamais branche jusqu'au 06/11 : les liens amazon.com du site
+# partaient sans balise (0 clic mesure). Lu par layouts/partials/amazon-href.html (liens de clic seulement, jamais le JSON-LD).
+# Condition de mort : un livre retire de la vente -> retirer sa ligne ; campagne close -> retirer le fichier et sa branche du partial.
+"2958634728": "maas_adg_D34BBFAAB7AFBAD1439006FC5DFD2D4E_afap_abs"  # COM-anthropie-broche
+"B0FQ9PG246": "maas_adg_B62B5A858299F9BA74F58BB22C57A2A5_afap_abs"  # COM-anthropie-kindle
+"2958634752": "maas_adg_2F8938E1E45F373AEFF693F8110BB7F0_afap_abs"  # COM-anthropy-broche
+"B0H9QMR1CN": "maas_adg_AE3335830816AB04C92D879FBF24662F_afap_abs"  # COM-anthropy-kindle
+"2958634736": "maas_adg_67F4E769890DB1C4DC2CD240794D3C82_afap_abs"  # COM-dette-broche
+"B0FWW2HPZP": "maas_adg_012FF29F4ED3589F42D2970F0A263C70_afap_abs"  # COM-dette-kindle
+"2958634701": "maas_adg_E3FB0EBE81F5BDA3855690C540ED0752_afap_abs"  # COM-livresque-broche
+"B0CW994YWH": "maas_adg_4E2E939C7E9CA5295B20094CED114738_afap_abs"  # COM-livresque-kindle
+"2958634744": "maas_adg_851F8180408B99E5D7B90FB0DB62EC29_afap_abs"  # COM-odyssee-broche
+"B0CVXQSLBQ": "maas_adg_BA4051FECF19343AF58AA26A80306CBF_afap_abs"  # COM-odyssee-kindle
+"2958634760": "maas_adg_4F431FDF55E681E203C5624FE5BF1103_afap_abs"  # COM-premiercoup-broche
+"B0H1619K7W": "maas_adg_0630FF2805504120211A370867D2DA34_afap_abs"  # COM-premiercoup-kindle
+"2958634787": "maas_adg_57207A3AFCAA684DDD774EB50255C0CA_afap_abs"  # COM-promesses-broche (cree le 06/11/2026)
+"B0HK1ZYW7C": "maas_adg_3D34D71A4F625922119F32168AC19579_afap_abs"  # COM-promesses-kindle (cree le 06/11/2026)

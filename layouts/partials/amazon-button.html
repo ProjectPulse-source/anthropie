@@ -35,8 +35,8 @@
       {{ with $page.Params.url_amazon_es_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es · Kindle</a>{{ end }}
       {{ with $page.Params.url_amazon_ca }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca · Broché</a>{{ end }}
       {{ with $page.Params.url_amazon_ca_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca · Kindle</a>{{ end }}
-      {{ with $page.Params.url_amazon_com }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com · Broché</a>{{ end }}
-      {{ with $page.Params.url_amazon_com_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.com · Kindle</a>{{ end }}
+      {{ with $page.Params.url_amazon_com }}<a href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">Amazon.com · Broché</a>{{ end }}
+      {{ with $page.Params.url_amazon_com_kindle }}<a href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">Amazon.com · Kindle</a>{{ end }}
       {{ with $page.Params.url_amazon_uk }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.co.uk · Broché</a>{{ end }}
       {{ with $page.Params.url_amazon_uk_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.co.uk · Kindle</a>{{ end }}
       {{ with $page.Params.url_amazon_de }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.de · Broché</a>{{ end }}

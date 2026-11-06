@@ -52,6 +52,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-06 — Amazon Attribution amazon.com branchée sur le site — poussée le 06/11 sur demande de l'auteur
+
+Campagne « Site stephane-lalut.com - COM » créée le 15/08 (12 groupes), jamais branchée : les liens amazon.com partaient
+sans balise (0 clic mesuré en trois mois). `data/attribution_com.yaml` (14 ASIN, dont les 2 groupes COM-promesses créés
+dans la console le 06/11) ; `layouts/partials/amazon-href.html` choisit la table du marché (fr ou com) ; les gabarits qui
+écrivaient l'URL amazon.com en dur passent par le partial (`amazon-button`, `amazon-buttons`, `amazon-dropdown`,
+`lire-en-francais/single`). Mesuré sur le build : 68 liens amazon.com balisés sur 14 ASIN, 0 non balisé, JSON-LD sans
+balise, autres marchés inchangés, `check-all --ci` 0. Registre : `reports/attribution/BALISES_COM_2026-08-15.md` (§ 06/11).
+Lecture au 16/12 avec le relevé GEO (clics, vues, achats attribués à 14 jours).
+
 ### 2026-11-06 — Dossier dette : contre-expertise PRO-20261105-193614 appliquée (C1-C8, R, N1, D1-D3) — commité (`ef32658`), poussé le 06/11 sur demande de l'auteur
 
 Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261105-193614_arbitrage.md`. Reprend le commit `8b2e374`.

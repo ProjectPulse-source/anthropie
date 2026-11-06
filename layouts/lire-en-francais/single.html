@@ -59,7 +59,7 @@
           <p class="oc-l">{{ partial "fr-typo.html" .raison }}</p>{{ end }}
           {{- if and $b $asin }}
           <div class="ressources-book__obtain">
-            <a class="ressources-btn oc-btn" href="https://www.amazon.{{ $b }}/dp/{{ $asin }}" target="_blank" rel="noopener">Voir sur Amazon</a>
+            <a class="ressources-btn oc-btn" href="{{ partial "amazon-href.html" (printf "https://www.amazon.%s/dp/%s" $b $asin) }}" target="_blank" rel="noopener">Voir sur Amazon</a>
             <p class="ressources-btn-note"><a href="{{ printf "/ressources-offertes/%s/" $slug | relLangURL }}">Compte Amazon.fr&nbsp;: un exemplaire offert</a></p>
           </div>
           {{- else }}
