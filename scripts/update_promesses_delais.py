@@ -113,6 +113,18 @@ ART37 = "loi_2022-1616_art37_JORFARTI000046791824.xml"
 INSTR = "instruction_DGOS_DGESIP_2026-44_SFHH2607068J.pdf"
 INSTR_SHA = "8abb0ce9982b814bcf9aba6d3d72d3d3eac13205d01430250b2a292bbef7ad7b"
 INSTR_URL = "https://bulletins-officiels.social.gouv.fr/sites/textes-officiels/files/2026-05/SFHH2607068J.pdf"
+# Postes d'internat (06/11/2026, demande de l'auteur) : arrêtés annuels fixant le nombre d'étudiants de troisième cycle
+# susceptibles d'être affectés, par spécialité et par subdivision. Extraits du JO électronique authentifié téléchargés
+# par l'auteur sur Légifrance le 20/10/2026 (Légifrance refuse les scripts) ; colonnes LUES par position (P1).
+# année -> (fichier, empreinte, NOR, référence, année universitaire attendue dans le texte)
+POSTES = {
+    "2024": ("joe_20240709_0162_0051.pdf", "af991a269b2123869ee2662d085ab5014fbb7f4e0d295d249b496d6f100495c8", "TSSH2419050A",
+             "arrêté du 7 juillet 2024, JORF n° 0162 du 9 juillet 2024, texte 51 (JORFTEXT000049908586)", "2024-2025"),
+    "2025": ("joe_20250731_0176_0036.pdf", "92a8cd27486c25f6edb2fc0cc89c351031c9474bda6e96448d94a06961d865f6", "TSSH2522208A",
+             "arrêté du 30 juillet 2025, JORF n° 0176 du 31 juillet 2025, texte 36 (JORFTEXT000052009293)", "2025-2026"),
+    "2026": ("joe_20260805_0181_0015.pdf", "d067350756f90ceec9e35b62381e371e0594a700280fa7dd0991e678edf0749b", "SFHH2621473A",
+             "arrêté du 4 août 2026, JORF n° 0181 du 5 août 2026, texte 15 (JORFTEXT000054618874)", "2026-2027")}
+N_CHU = 28  # lignes de CHU par tableau (« Dont Corse » est un sous-total de Marseille, exclu)
 MOTS = {"un": 1, "deux": 2, "trois": 3, "quatre": 4, "cinq": 5, "six": 6, "sept": 7, "huit": 8, "neuf": 9, "dix": 10}
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
@@ -279,10 +291,104 @@ def lire() -> dict:
                      "sha": re.search(r"SHA-256 du PDF d'origine : ([0-9a-f]{64})", ext).group(1)}
     rpps = list(csv.reader(l for l in (SRC / "drees_rpps_lieu_diplome_extrait.csv").read_text(encoding="utf-8").splitlines()
                            if not l.startswith("#")))
+    postes = {}
+    for an, (fic, sha, nor, ref, univ) in POSTES.items():
+        b = (SRC / fic).read_bytes()
+        if hashlib.sha256(b).hexdigest() != sha:
+            raise Arret("P0 : %s : empreinte differente de celle qui a ete lue" % fic)
+        doc = fitz.open(stream=b, filetype="pdf")
+        texte = norm(" ".join(p.get_text() for p in doc))
+        if nor not in texte or ("au titre de l'année universitaire %s" % univ) not in texte.replace("’", "'"):
+            raise Arret("P0 : %s : NOR %s ou annee universitaire %s absents du texte" % (fic, nor, univ))
+        postes[an] = [{"annexe2": "ANNEXE II" in p.get_text(), "mots": [tuple(w[:5]) for w in p.get_text("words")]} for p in doc]
+    for an, v in POSTES.items():
+        t["postes_%s" % an] = {"id": v[3], "sha": v[1], "texte": ""}
     pages = {"fr": PAGE_FR.read_text(encoding="utf-8"), "en": PAGE_EN.read_text(encoding="utf-8"),
              "og": OG.read_text(encoding="utf-8")}
     return {"textes": t, "dd76": serie, "ondps": ondps, "pdf_sha": t["ondps"]["sha"], "texte_pdf": texte_pdf,
-            "rpps": rpps, "pages": pages, "aujourdhui": dt.date.today(), "libelles": copy.deepcopy(T)}
+            "rpps": rpps, "pages": pages, "aujourdhui": dt.date.today(), "libelles": copy.deepcopy(T), "postes": postes}
+
+
+# ------------------------------------------------------------------ postes d'internat (lecture par position, P1)
+def colonne_postes(pages: list, entete) -> dict:
+    """Une colonne des annexes, lue par POSITION (tableaux imprimés en paysage : une colonne = une hauteur y, une ligne
+    = une abscisse x). `entete(mots)` rend le mot d'en-tête de la colonne sur la page, ou None. Pour chaque annexe :
+    nombre de CHU lus, leur somme et le total publié. Un nombre à espace de milliers est fait de plusieurs mots d'une même
+    ligne : ils sont regroupés. La ligne « Dont Corse » (sous-total de Marseille) est exclue de la somme."""
+    out, cum, n, annexe = {}, 0, 0, "I"
+    for p in pages:
+        if p["annexe2"] and annexe == "I":
+            annexe, cum, n = "II", 0, 0
+        W = p["mots"]
+        h = entete(W)
+        if h is None:
+            continue
+        gy = (h[1] + h[3]) / 2
+        libelles = [w for w in W if w[1] > 500]
+        lib = lambda x: " ".join(l[4] for l in libelles if abs(l[0] - x) < 3)  # noqa: E731
+        tots = [w for w in libelles if w[4] in ("TOTAL", "Total") and w[0] > h[2]]
+        tx = min(t[0] for t in tots) if tots else 1e9
+        lignes = {}
+        for w in W:
+            if re.fullmatch(r"\d+", w[4]) and w[1] < 500 and abs((w[1] + w[3]) / 2 - gy) < 20 and w[0] > h[2]:
+                lignes.setdefault(round(w[0] / 3), []).append(w)
+        for ws in lignes.values():
+            ws.sort(key=lambda w: -w[1])
+            v, x = int("".join(w[4] for w in ws)), ws[0][0]
+            if abs(x - tx) < 3:
+                out[annexe] = {"chu": n, "somme": cum, "total": v}
+            elif x < tx - 2 and not lib(x).startswith("Dont"):
+                cum += v
+                n += 1
+        if tots:
+            cum, n = 0, 0
+    return out
+
+
+def entete_mg(W):
+    """« Médecine générale » : « générale » (ou « rale », en-tête coupé « géné-rale » en 2025) à la hauteur d'un « Médecine »."""
+    meds = [w for w in W if re.fullmatch(r"(?i)m.decine", w[4])]
+    for g in W:
+        if re.fullmatch(r"(?i)g.n.rale|rale", g[4]) and g[1] < 500 and any(
+                abs((m[1] + m[3]) / 2 - (g[1] + g[3]) / 2) < 12 and 0 < g[0] - m[0] < 20 for m in meds):
+            return g
+    return None
+
+
+def entete_total(W):
+    return next((w for w in W if re.fullmatch(r"G.N.RAL", w[4]) and w[1] < 500), None)
+
+
+def postes_internat(S: dict, g: list) -> dict:
+    """P1 : dans chaque annexe de chaque arrêté, 28 CHU lus et leur somme = total publié (médecine générale et total
+    général). P2 : la part de la médecine générale ne progresse pas de la première à la dernière année, à la précision
+    affichée (la prose dit « ne progresse pas »). P3 : postes de médecine générale et total en hausse chaque année (la
+    prose dit « hausse »)."""
+    res = {}
+    for an, pages in S["postes"].items():
+        lu = {}
+        for col, ent in (("mg", entete_mg), ("tot", entete_total)):
+            c = colonne_postes(pages, ent)
+            for ax in ("I", "II"):
+                x = c.get(ax)
+                if not x or x["chu"] != N_CHU or x["somme"] != x["total"]:
+                    raise Arret("P1 : arrete %s, annexe %s, colonne %s : %s (attendu %d CHU, somme = total publie)"
+                                % (an, ax, col, x, N_CHU))
+                lu["%s_%s" % (col, ax)] = x["total"]
+        lu["mg"], lu["tot"] = lu["mg_I"] + lu["mg_II"], lu["tot_I"] + lu["tot_II"]
+        lu["part"] = 100 * lu["mg"] / lu["tot"]
+        res[an] = lu
+    ans = sorted(res)
+    if round(res[ans[-1]]["part"], 1) > round(res[ans[0]]["part"], 1):
+        raise Arret("P2 : la part de la medecine generale progresse (%.1f -> %.1f %%) : « ne progresse pas » serait faux"
+                    % (res[ans[0]]["part"], res[ans[-1]]["part"]))
+    for a, b in zip(ans, ans[1:]):
+        if not (res[b]["mg"] > res[a]["mg"] and res[b]["tot"] > res[a]["tot"]):
+            raise Arret("P3 : postes ouverts %s -> %s non en hausse (medecine generale %d -> %d, total %d -> %d)"
+                        % (a, b, res[a]["mg"], res[b]["mg"], res[a]["tot"], res[b]["tot"]))
+    g.append("P0-P3 : postes d'internat %s, %d CHU par annexe, somme = total publie ; medecine generale %s ; part %.1f -> %.1f %%"
+             % ("/".join(ans), N_CHU, " -> ".join(str(res[a]["mg"]) for a in ans), res[ans[0]]["part"], res[ans[-1]]["part"]))
+    return res
 
 
 # ------------------------------------------------------------------ calcul et gardes de valeur et de temps
@@ -428,7 +534,14 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     if not p26 > p12:
         raise Arret("D7 : part des diplomes a l'etranger non croissante")
     g.append("D7 : diplome a l'etranger %.1f %% (2012) -> %.1f %% (2026), stock" % (p12, p26))
-    r = {"s1": s1, "s2": s2, "mg": mg, "duree": duree, "duree_adm": duree_adm, "mandat": mandat, "nmax": nmax, "dd76": d,
+    postes = postes_internat(S, g)
+    # P4 : « agit dans le mandat » et « plus tôt que l'objectif national » (paragraphe des postes d'internat). Elle ne peut
+    # pas mordre seule (aucune mutation propre) : duree_adm = 5 + mg par construction (D1), et un internat égal au mandat
+    # ferait d'abord échouer D3 (rapport non entier). Elle rend explicite la condition dont dépend la phrase.
+    if not (mg < mandat and mg < duree_adm):
+        raise Arret("P4 : internat (%d ans) non plus court que le mandat (%d) et que le cursus depuis l'admission (%d)"
+                    % (mg, mandat, duree_adm))
+    r = {"postes": postes, "s1": s1, "s2": s2, "mg": mg, "duree": duree, "duree_adm": duree_adm, "mandat": mandat, "nmax": nmax, "dd76": d,
          "amin": amin, "ecarts": ecarts, "ondps": o, "etr12": int(etr[i12]), "tot12": int(tot[i12]), "etr26": int(etr[i26]),
          "tot26": int(tot[i26]), "p12": p12, "p26": p26, "an_reforme": an_reforme, "loi": loi, "debut": debut, "fin": fin,
          "lois631": lois, "versions631": {k: (T[k]["debut"], T[k]["fin"]) for k in LEGI if k.startswith("L631-1")}}
@@ -526,11 +639,16 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "hausse_quinquennale": n(100 * (o["total_admis_2021_2025"] / q["2016-2020"] - 1), 0),
         "hausse_drees": n(100 * (o["total_admis_2021_2025"] / (q["2016-2020"] + r["ecarts"]["2016-2020"]) - 1), 0),
         "ecart_2016_2020": n(abs(r["ecarts"]["2016-2020"])),
+        **{"pg_%s_%s" % (k, an[2:]): n(v) if k != "part" else n(v, 1)
+           for an, P in r["postes"].items() for k, v in P.items() if k in ("mg", "tot", "part")},
+        **{"pg_an_%s" % an[2:]: POSTES[an][4] for an in POSTES},
+        "pg_hausse_mg": n(r["postes"][max(POSTES)]["mg"] - r["postes"][min(POSTES)]["mg"]),
+        "pg_internat": lg.lettres(r["mg"], lang),
         "etr_p12": n(r["p12"], 1), "etr_p26": n(r["p26"], 1), "etr_26": n(r["etr26"]), "tot_26": n(r["tot26"]),
-        "releve_le": ("12/10/2026 (textes lus sur Légifrance les 05, 06, 11 et 12/10/2026 ; instruction du 21 mai 2026 ; DREES, "
-                      "2 juillet 2026 ; ONDPS, 19 décembre 2025)") if lang == "fr" else
-                     ("12 October 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; "
-                      "DREES, 2 July 2026; ONDPS, 19 December 2025)"),
+        "releve_le": ("06/11/2026 (textes lus sur Légifrance les 05, 06, 11 et 12/10/2026 ; instruction du 21 mai 2026 ; DREES, "
+                      "2 juillet 2026 ; ONDPS, 19 décembre 2025 ; arrêtés de postes d'internat, JO de 2024 à 2026)") if lang == "fr" else
+                     ("6 November 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; "
+                      "DREES, 2 July 2026; ONDPS, 19 December 2025; orders on residency posts, Journal officiel 2024 to 2026)"),
     }
 
 
@@ -555,7 +673,10 @@ Q1 = [re.compile(x, re.I) for x in (
     r"\badmitted\s+to\s+(?:the\s+)?first\s+year(?!\s+of\s+the\s+second\s+cycle)")]
 Q2 = {  # jeton -> (portée, motif exigé)
     "admis_2025": ("paragraphe", r"deuxième année|second year"), "admis_2021_2025": ("paragraphe", r"deuxième année|second year"),
-    "capacites_2025": ("phrase", r"capacit"), "onp": ("phrase", r"objectif|target"),
+    "capacites_2025": ("phrase", r"capacit"),
+    **{"pg_%s_%s" % (k, a): ("phrase", r"ouvert|open") for k in ("mg", "tot") for a in ("24", "25", "26")},
+    "pg_hausse_mg": ("phrase", r"ouvert|open"),
+    **{"pg_part_%s" % a: ("phrase", r"\bpart\b|share") for a in ("24", "25", "26")}, "onp": ("phrase", r"objectif|target"),
     "places_1972": ("phrase", r"pourvu|filled"), "places_min": ("phrase", r"pourvu|filled"),
     "rapport_baisse": ("phrase", r"pourvu|filled"), "admis_2016_2020": ("phrase", r"numerus clausus"),
 }
@@ -977,6 +1098,11 @@ def csv_texte(r: dict) -> str:
     w.writerow(["medecins_actifs_ensemble", 2012, r["tot12"], "médecins", "DREES RPPS, 1er janvier"])
     w.writerow(["medecins_actifs_diplome_etranger", 2026, r["etr26"], "médecins", "DREES RPPS, 1er janvier"])
     w.writerow(["medecins_actifs_ensemble", 2026, r["tot26"], "médecins", "DREES RPPS, 1er janvier"])
+    for an, P in sorted(r["postes"].items()):
+        src = POSTES[an][3]
+        for k, lib in (("mg_I", "postes_ouverts_medecine_generale_hors_cesp"), ("mg_II", "postes_ouverts_medecine_generale_cesp"),
+                       ("mg", "postes_ouverts_medecine_generale"), ("tot", "postes_ouverts_toutes_specialites")):
+            w.writerow([lib, POSTES[an][4], P[k], "postes", src])
     for k, v in (("cursus_mg_premier_cycle_semestres", r["s1"]), ("cursus_mg_deuxieme_cycle_semestres", r["s2"]),
                  ("cursus_mg_troisieme_cycle_annees", r["mg"]), ("mandat_presidentiel_annees", r["mandat"]),
                  ("rapport_cursus_mandat", r["nmax"])):
@@ -994,6 +1120,36 @@ def _page(lang, quoi):
 def _ondps(cle, v, sous=None):
     def f(m):
         (m["ondps"][sous] if sous else m["ondps"])[cle] = v
+    return f
+
+
+def _poste(an, col, delta, total_aussi=False):
+    """Ajoute `delta` à la première valeur de CHU de la colonne (et, si demandé, au total publié de son annexe I)."""
+    def f(m):
+        for p in m["postes"][an]:
+            h = (entete_mg if col == "mg" else entete_total)(p["mots"])
+            if h is None or p["annexe2"]:
+                continue
+            gy = (h[1] + h[3]) / 2
+            col_mots = [i for i, w in enumerate(p["mots"]) if re.fullmatch(r"\d+", w[4]) and w[1] < 500
+                        and abs((w[1] + w[3]) / 2 - gy) < 20 and w[0] > h[2]]
+            tot = [w for w in p["mots"] if w[1] > 500 and w[4] in ("TOTAL", "Total")]
+            if total_aussi and not tot:
+                continue
+            if total_aussi:
+                # ligne de total : le mot des unités (le plus bas, un total à espace de milliers en a deux) ; et le CHU de
+                # plus grande valeur de la même page, pour que P1 tienne et que seule la garde visée morde
+                tx = min(w[0] for w in tot)
+                i = min((j for j in col_mots if abs(p["mots"][j][0] - tx) < 3), key=lambda j: p["mots"][j][1])  # brut-ok: autotest, choix du mot a muter (position), rien de publie
+                j = max((j for j in col_mots if p["mots"][j][0] < tx - 2), key=lambda j: int(p["mots"][j][4]))  # brut-ok: autotest, CHU a muter, rien de publie
+                for k in (i, j):
+                    v = p["mots"][k]
+                    p["mots"][k] = v[:4] + (str(int(v[4]) + delta),)
+            else:
+                w = p["mots"][col_mots[0]]
+                p["mots"][col_mots[0]] = w[:4] + (str(int(w[4]) + delta),)
+            return
+        raise Arret("autotest : colonne %s introuvable dans l'arrete %s" % (col, an))
     return f
 
 
@@ -1026,6 +1182,10 @@ MUTATIONS = [  # (nom, mutation, garde qui DOIT arrêter)
     ("titre de figure ambigu", lambda m: m["libelles"]["fr"].__setitem__("t2", "Admissions en études de médecine, 1972-2025"), "Q1"),
     ("admis sans niveau", _page("fr", "En 2025, {del.admis_2025} étudiants ont été admis."), "Q2"),
     ("capacites appelees places", _page("fr", "Il y avait {del.capacites_2025} places en 2025."), "Q2"),
+    ("valeur d'un CHU alteree dans l'arrete de 2025", _poste("2025", "mg", 1), "P1"),
+    ("part de la medecine generale en hausse (CHU et total releves ensemble)", _poste("2026", "mg", 1000, total_aussi=True), "P2"),
+    ("postes de medecine generale 2025 au-dessus de 2026 (CHU et total releves ensemble)", _poste("2025", "mg", 500, total_aussi=True), "P3"),
+    ("postes ouverts appeles pourvus", _page("fr", "En 2026, {del.pg_mg_26} postes de médecine générale ont été pourvus."), "Q2"),
 ]
 
 
@@ -1091,7 +1251,7 @@ def _main() -> int:
     csvt = csv_texte(r)
     T_ = S["textes"]
     payload = {
-        "releve_le": "2026-10-12",
+        "releve_le": "2026-11-06",
         "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Légifrance (DILA), DREES, ONDPS, Bulletin officiel santé",
         "meta": {"page": "https://" + PAGE_URL, "protocole": "fiches de preuve v2, volet Délais, E1 à E3 ; refonte du 12/10/2026",
                  "textes": {k: {"id": v["id"], "sha256": v["sha"]} for k, v in T_.items()},
@@ -1117,14 +1277,21 @@ def _main() -> int:
                                         "et la moyenne annuelle de 8 700 places imprimées dans le texte",
                      "diplome_etranger": "médecins actifs au 1er janvier dont le diplôme a été obtenu à l'étranger : un "
                                          "stock, pas un flux d'arrivées ; le lieu du diplôme ne dit pas la nationalité",
+                     "postes_internat_ouverts": "postes OUVERTS par les arrêtés annuels aux étudiants qui entrent en "
+                                                "troisième cycle (internat), par spécialité : annexe I hors contrat "
+                                                "d'engagement de service public (CESP), annexe II CESP ; ce ne sont pas des "
+                                                "postes pourvus ; lus par position dans les extraits du JO authentifiés, "
+                                                "somme des 28 CHU égale au total publié",
                      "debut_consolidation": "date PRÉVUE par l'instruction du 21 mai 2026 (document non opposable), non "
                                             "constatée au relevé"},
                  "ecart_documente": {"2016-2020": "la somme des valeurs DREES dépasse de %d le total imprimé par l'ONDPS ; "
                                                   "non expliqué (la valeur 2020 de la DREES porte un astérisque sans légende "
                                                   "trouvée) ; publié, non corrigé" % r["ecarts"]["2016-2020"]}},
         "gardes": g,
-        "calcul": {k: v for k, v in r.items() if k not in ("dd76", "ondps", "lois631", "versions631")},
-        "series": {"places_pourvues": r["dd76"], "admis_2021_2025": r["ondps"]["admis_medecine"]},
+        "calcul": {k: v for k, v in r.items() if k not in ("dd76", "ondps", "lois631", "versions631", "postes")},
+        "series": {"places_pourvues": r["dd76"], "admis_2021_2025": r["ondps"]["admis_medecine"],
+                   "postes_internat_ouverts": {POSTES[a][4]: {k: v for k, v in P.items() if k != "part"}
+                                               for a, P in sorted(r["postes"].items())}},
         "affichage": A,
         "affichage_en": A_en,
     }
