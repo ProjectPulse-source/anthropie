@@ -19,7 +19,7 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
   nom: "Why French public debt rises: a decomposition of the change in the debt-to-GDP ratio"
-  description: "Annual decomposition, from {dyn.annee_depart} to {dyn.annee_fin}, of the change in the debt-to-GDP ratio of French general government into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments; spending, revenue and balance as a share of GDP; ratios checked against those published by Eurostat. Eurostat series, no value entered by hand."
+  description: "Annual decomposition, from {dyn.annee_depart} to {dyn.annee_fin}, of the change in the debt-to-GDP ratio of French general government into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments; spending, revenue and balance as a share of GDP; cyclically adjusted primary balance according to the European Commission (AMECO, with its cyclically adjusted revenue and spending), the IMF and the OECD; ratios checked against those published by Eurostat. Producers' series, no value entered by hand."
   couverture_temporelle: "{dyn.annee_depart}/{dyn.annee_fin}"
   couverture_spatiale: "France"
   variables:

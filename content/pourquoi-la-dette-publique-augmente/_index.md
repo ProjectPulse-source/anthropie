@@ -20,7 +20,7 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
   nom: "Pourquoi la dette publique française augmente : décomposition de la variation du ratio dette/PIB"
-  description: "Décomposition annuelle, de {dyn.annee_depart} à {dyn.annee_fin}, de la variation du ratio dette/PIB des administrations publiques françaises en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock ; dépenses, recettes et solde en % du PIB ; ratios contrôlés contre ceux que publie Eurostat. Séries Eurostat, aucune valeur saisie à la main."
+  description: "Décomposition annuelle, de {dyn.annee_depart} à {dyn.annee_fin}, de la variation du ratio dette/PIB des administrations publiques françaises en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock ; dépenses, recettes et solde en % du PIB ; solde primaire corrigé du cycle selon la Commission européenne (AMECO, avec ses recettes et dépenses corrigées), le FMI et l'OCDE ; ratios contrôlés contre ceux que publie Eurostat. Séries des producteurs, aucune valeur saisie à la main."
   couverture_temporelle: "{dyn.annee_depart}/{dyn.annee_fin}"
   couverture_spatiale: "France"
   variables:
