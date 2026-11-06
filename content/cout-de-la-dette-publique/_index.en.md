@@ -1,8 +1,10 @@
 ---
+# Ecart FR/EN declare (D1, arbitrage PRO-20261105-193614, 06/11/2026) : le compteur de la dette de la version francaise
+# (simulation non officielle, extrapolee de la derniere donnee de l'Insee) n'est pas repris ici ; il n'est pas necessaire au raisonnement.
 title: "What does French public debt actually cost?"
 url: /en/cost-of-french-public-debt/
 description: "What does French public debt cost? {dette.interets_mdeur} billion euros of interest in {dette.interets_annee}, {dette.interets_sur_recettes_pct}% of public revenue: a fast rise, to a level already seen in {dette.niv_pib_annee}. Where the rise comes from, and why it can last."
-chapo: "In {dette.interets_annee}, French general government owes {dette.interets_mdeur} billion euros of interest, {dette.interets_sur_recettes_pct}% of its revenue, and {dette.interets_hausse_pct}% more, in euros, than at the {dette.interets_creux_annee} trough. The rise is fast, but the level is not unprecedented: as a share of GDP, the burden is back to its {dette.niv_pib_annee} level and remains below its 1995 level. For twenty-five years the debt doubled as a share of GDP while its burden, measured the same way, fell; in current euros, however, the {dette.interets_annee} burden is the highest since 1995. This page explains why, where the rise comes from, and why it can last even if the debt stops growing."
+chapo: "In {dette.interets_annee}, French general government interest expenditure amounts to {dette.interets_mdeur} billion euros, or {dette.interets_sur_recettes_pct}% of its revenue. It has risen by {dette.interets_hausse_pct}% in current euros since its {dette.interets_creux_annee} trough. The rise is fast, but the level is not unprecedented: as a share of GDP, the burden is back to its {dette.niv_pib_annee} level and remains below its 1995 level. For twenty-five years the debt doubled as a share of GDP while its burden, measured the same way, fell; in current euros, however, the {dette.interets_annee} burden is the highest since 1995. This page explains why, where the rise comes from, and why it can last even if the debt stops growing."
 date: 2026-08-17
 lastmod: 2026-10-11
 donnees: [dette_officielle, qui_paie_donnees]

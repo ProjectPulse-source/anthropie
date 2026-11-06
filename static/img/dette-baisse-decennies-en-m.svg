@@ -12,7 +12,7 @@
 <text x="0" y="164.0" font-size="13.5" fill="#96928f">years</text>
 <line x1="0" y1="176.0" x2="300" y2="176.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="198.0" font-size="15" font-weight="600" fill="#26262f">1996-2005: +10.4 points</text>
-<text x="0" y="216.0" font-size="13.5" fill="#184f95">57.8 → 68.2% of GDP</text>
+<text x="0" y="216.0" font-size="13.5" fill="#184f95">57.8% end-1995 → 68.2% end-2005</text>
 <line x1="192.0" y1="224.0" x2="192.0" y2="284.0" stroke="#8f8a84" stroke-width="1.2"/>
 <text x="0" y="237.0" font-size="13.5" fill="#55524f">Interest and growth</text>
 <rect x="192.0" y="226.0" width="21.9" height="14" fill="#eb6834"/>
@@ -25,7 +25,7 @@
 <text x="207.4" y="279.0" font-size="13.5" fill="#26262f" text-anchor="start">+4.4</text>
 <line x1="0" y1="299.0" x2="300" y2="299.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="321.0" font-size="15" font-weight="600" fill="#26262f">2006-2015: +28.8 points</text>
-<text x="0" y="339.0" font-size="13.5" fill="#184f95">68.2 → 97.0% of GDP</text>
+<text x="0" y="339.0" font-size="13.5" fill="#184f95">68.2% end-2005 → 97.0% end-2015</text>
 <line x1="192.0" y1="347.0" x2="192.0" y2="407.0" stroke="#8f8a84" stroke-width="1.2"/>
 <text x="0" y="360.0" font-size="13.5" fill="#55524f">Interest and growth</text>
 <rect x="192.0" y="349.0" width="20.4" height="14" fill="#eb6834"/>
@@ -38,7 +38,7 @@
 <text x="184.2" y="402.0" font-size="13.5" fill="#26262f" text-anchor="end">−1.5</text>
 <line x1="0" y1="422.0" x2="300" y2="422.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="444.0" font-size="15" font-weight="600" fill="#26262f">2016-2025: +18.7 points</text>
-<text x="0" y="462.0" font-size="13.5" fill="#184f95">97.0 → 115.7% of GDP</text>
+<text x="0" y="462.0" font-size="13.5" fill="#184f95">97.0% end-2015 → 115.7% end-2025</text>
 <line x1="192.0" y1="470.0" x2="192.0" y2="530.0" stroke="#8f8a84" stroke-width="1.2"/>
 <text x="0" y="483.0" font-size="13.5" fill="#55524f">Interest and growth</text>
 <rect x="153.0" y="472.0" width="39.0" height="14" fill="#8a8781"/>

@@ -1,10 +1,10 @@
-# relu le 2026-11-05 ; texte servi de /dette-publique-peut-elle-baisser/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /dette-publique-peut-elle-baisser/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
 Oui : ce qui peut baisser, c’est le poids de la dette dans le PIB, même quand son montant augmente.
 Au Portugal, la dette publique est passée de 235 à 275 milliards d’euros de fin 2015 à fin 2025, et son poids de 131,0 % à 89,2 % du PIB.
 En France, il a augmenté de 18,7 points sur la même période : les administrations ont dépensé plus qu’elles n’encaissaient, même sans compter les intérêts, et ce déficit a pesé plus lourd que l’aide des taux et de la croissance.
-Page mise à jour le 5 novembre 2026 · révisions
+Page mise à jour le 6 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -443,8 +443,10 @@ Dans ce groupe, aucun pays resté en déficit primaire moyen n’a vu son ratio 
 La France a-t-elle déjà dégagé un excédent primaire ?
 Quatre fois depuis 1996, de 1998 à 2001, au plus 1,65 % du PIB (Eurostat).
 Depuis, le solde primaire des administrations publiques est resté déficitaire chaque année.
-Un excédent primaire fait-il toujours baisser la dette ?
-Il contribue à réduire le ratio, mais la variation finale dépend aussi des taux, de la croissance et des autres ajustements : en France, en 1998, le solde primaire était excédentaire, et même au-dessus du repère de stabilisation hors ajustements, sans que le ratio baisse.
+Un excédent primaire suffit-il à faire baisser le ratio dette/PIB ?
+Non.
+En 1998, la France a dégagé un excédent primaire de 0,99 % du PIB, supérieur au solde qui aurait stabilisé le ratio hors ajustements (0,78 %) ; le ratio dette/PIB a pourtant augmenté de 0,12 point.
+Le solde stabilisant tient déjà compte des taux et de la croissance : ce sont les autres ajustements de la dette, hors déficit, qui l’ont fait monter.
 Dans les fenêtres de dix ans des 27 pays aujourd’hui membres de l’Union où la dette de départ dépassait 90 % du PIB, le ratio a baissé d’au moins 15 points dans huit des 30 fenêtres à solde primaire moyen de 0 à moins de 2 % et dans sept des treize à solde d’au moins 2 %, mais dans aucune des 35 à solde primaire moyen négatif ; ces fenêtres se recouvrent et viennent de quelques pays.
 Dans le dossier dette publique
 Pour prolonger l’analyse

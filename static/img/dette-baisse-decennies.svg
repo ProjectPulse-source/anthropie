@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 291" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bd-t bd-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 333" role="img" font-variant-numeric="tabular-nums" aria-labelledby="bd-t bd-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="bd-t">France : ce qui a fait monter ou baisser le poids de la dette, décennie par décennie</title><desc id="bd-d">Pour chaque décennie, en points de PIB cumulés sur dix ans : effet des taux et de la croissance, contribution du solde primaire, autres ajustements, et leur somme, la variation du ratio de dette. 1996-2005 : +8,4, −2,5, +4,4 ; variation +10,4. 2006-2015 : +7,8, +22,4, −1,5 ; variation +28,8. 2016-2025 : −15,0, +30,6, +3,1 ; variation +18,7. Sur la dernière décennie, l'effet des taux et de la croissance fait baisser le ratio et les déficits primaires le font monter davantage.</desc>
-<rect width="720" height="291" fill="#ffffff"/>
+<rect width="720" height="333" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">France : ce qui a fait monter ou baisser le poids de la dette, décennie par décennie</text>
 <rect x="0" y="36" width="10" height="10" fill="#eb6834"/>
 <text x="14" y="45" font-size="11" fill="#55524f">fait monter le ratio</text>
@@ -13,12 +13,13 @@
 <text x="363.8" y="88" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">Solde primaire</text>
 <text x="506.2" y="88" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">Autres ajustements</text>
 <text x="648.8" y="88" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">Variation du ratio</text>
-<line x1="200.8" y1="96" x2="200.8" y2="216" stroke="#8f8a84" stroke-width="1.2"/>
-<line x1="343.3" y1="96" x2="343.3" y2="216" stroke="#8f8a84" stroke-width="1.2"/>
-<line x1="485.8" y1="96" x2="485.8" y2="216" stroke="#8f8a84" stroke-width="1.2"/>
-<line x1="628.3" y1="96" x2="628.3" y2="216" stroke="#8f8a84" stroke-width="1.2"/>
+<line x1="200.8" y1="96" x2="200.8" y2="258" stroke="#8f8a84" stroke-width="1.2"/>
+<line x1="343.3" y1="96" x2="343.3" y2="258" stroke="#8f8a84" stroke-width="1.2"/>
+<line x1="485.8" y1="96" x2="485.8" y2="258" stroke="#8f8a84" stroke-width="1.2"/>
+<line x1="628.3" y1="96" x2="628.3" y2="258" stroke="#8f8a84" stroke-width="1.2"/>
 <text x="0" y="113" font-size="12.5" font-weight="600" fill="#26262f">1996-2005</text>
-<text x="0" y="128" font-size="11" fill="#184f95">57,8 → 68,2 % du PIB</text>
+<text x="0" y="128" font-size="11" fill="#184f95">57,8 % fin 1995 →</text>
+<text x="0" y="142" font-size="11" fill="#184f95">68,2 % fin 2005</text>
 <rect x="200.8" y="106" width="17.2" height="16" fill="#eb6834"/>
 <text x="222.1" y="118" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+8,4</text>
 <rect x="338.3" y="106" width="5.0" height="16" fill="#8a8781"/>
@@ -27,31 +28,33 @@
 <text x="498.8" y="118" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+4,4</text>
 <rect x="628.3" y="106" width="21.2" height="16" fill="#184f95"/>
 <text x="653.5" y="118" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+10,4</text>
-<line x1="0" y1="136.0" x2="720" y2="136.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="0" y="153" font-size="12.5" font-weight="600" fill="#26262f">2006-2015</text>
-<text x="0" y="168" font-size="11" fill="#184f95">68,2 → 97,0 % du PIB</text>
-<rect x="200.8" y="146" width="16.0" height="16" fill="#eb6834"/>
-<text x="220.9" y="158" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+7,8</text>
-<rect x="343.3" y="146" width="45.7" height="16" fill="#eb6834"/>
-<text x="393.1" y="158" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+22,4</text>
-<rect x="482.9" y="146" width="3.0" height="16" fill="#8a8781"/>
-<text x="478.9" y="158" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">−1,5</text>
-<rect x="628.3" y="146" width="58.8" height="16" fill="#184f95"/>
-<text x="624.3" y="158" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">+28,8</text>
-<line x1="0" y1="176.0" x2="720" y2="176.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="0" y="193" font-size="12.5" font-weight="600" fill="#26262f">2016-2025</text>
-<text x="0" y="208" font-size="11" fill="#184f95">97,0 → 115,7 % du PIB</text>
-<rect x="170.2" y="186" width="30.6" height="16" fill="#8a8781"/>
-<text x="204.8" y="198" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">−15,0</text>
-<rect x="343.3" y="186" width="62.5" height="16" fill="#eb6834"/>
-<text x="339.3" y="198" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">+30,6</text>
-<rect x="485.8" y="186" width="6.3" height="16" fill="#eb6834"/>
-<text x="496.2" y="198" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+3,1</text>
-<rect x="628.3" y="186" width="38.2" height="16" fill="#184f95"/>
-<text x="670.5" y="198" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+18,7</text>
-<line x1="0" y1="226.0" x2="720" y2="226.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="241.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025</text>
-<text class="pied-note" x="0" y="255.0" font-size="11" fill="#55524f">Décomposition comptable, non causale : les trois termes ne sont pas indépendants. Variation calculée sur les valeurs</text>
-<text class="pied-note" x="0" y="269.0" font-size="11" fill="#55524f">non arrondies ; la somme des contributions affichées peut différer de 0,1 point.</text>
-<text class="pied-licence" x="0" y="283.0" font-size="11" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-peut-elle-baisser/</text>
+<line x1="0" y1="150.0" x2="720" y2="150.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="167" font-size="12.5" font-weight="600" fill="#26262f">2006-2015</text>
+<text x="0" y="182" font-size="11" fill="#184f95">68,2 % fin 2005 →</text>
+<text x="0" y="196" font-size="11" fill="#184f95">97,0 % fin 2015</text>
+<rect x="200.8" y="160" width="16.0" height="16" fill="#eb6834"/>
+<text x="220.9" y="172" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+7,8</text>
+<rect x="343.3" y="160" width="45.7" height="16" fill="#eb6834"/>
+<text x="393.1" y="172" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+22,4</text>
+<rect x="482.9" y="160" width="3.0" height="16" fill="#8a8781"/>
+<text x="478.9" y="172" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">−1,5</text>
+<rect x="628.3" y="160" width="58.8" height="16" fill="#184f95"/>
+<text x="624.3" y="172" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">+28,8</text>
+<line x1="0" y1="204.0" x2="720" y2="204.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="0" y="221" font-size="12.5" font-weight="600" fill="#26262f">2016-2025</text>
+<text x="0" y="236" font-size="11" fill="#184f95">97,0 % fin 2015 →</text>
+<text x="0" y="250" font-size="11" fill="#184f95">115,7 % fin 2025</text>
+<rect x="170.2" y="214" width="30.6" height="16" fill="#8a8781"/>
+<text x="204.8" y="226" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">−15,0</text>
+<rect x="343.3" y="214" width="62.5" height="16" fill="#eb6834"/>
+<text x="339.3" y="226" font-size="11" font-weight="600" fill="#26262f" text-anchor="end">+30,6</text>
+<rect x="485.8" y="214" width="6.3" height="16" fill="#eb6834"/>
+<text x="496.2" y="226" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+3,1</text>
+<rect x="628.3" y="214" width="38.2" height="16" fill="#184f95"/>
+<text x="670.5" y="226" font-size="11" font-weight="600" fill="#26262f" text-anchor="start">+18,7</text>
+<line x1="0" y1="268.0" x2="720" y2="268.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="283.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025</text>
+<text class="pied-note" x="0" y="297.0" font-size="11" fill="#55524f">Décomposition comptable, non causale : les trois termes ne sont pas indépendants. Variation calculée sur les valeurs</text>
+<text class="pied-note" x="0" y="311.0" font-size="11" fill="#55524f">non arrondies ; la somme des contributions affichées peut différer de 0,1 point.</text>
+<text class="pied-licence" x="0" y="325.0" font-size="11" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-peut-elle-baisser/</text>
 </svg>

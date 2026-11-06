@@ -52,6 +52,31 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-06 — Dossier dette : contre-expertise PRO-20261105-193614 appliquée (C1-C8, R, N1, D1-D3) — NON commité, NON poussé
+
+Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261105-193614_arbitrage.md`. Reprend le commit `8b2e374`.
+- C1 « Peut-elle baisser », FAQ : « Un excédent primaire suffit-il à faire baisser le ratio dette/PIB ? Non. » chiffrée sur
+  1998 (jetons `exc_hausse_un/_pb/_stab/_var/_var_pt`, deux gardes : solde ≥ stabilisant, excédent > stabilisant ; vue mordre).
+- C2 figure des décennies : « 57,8 % fin 1995 → 68,2 % fin 2005 » (`sous_dec`), sur deux lignes quand la colonne est trop
+  étroite (`multiples`, rangée de 54) : la première version mordait la barre −15,0, vue sur le PNG, que `check-figures` ne voyait pas.
+- C4 « Coût » : « la charge d'intérêts … s'élève à … soit … de leurs recettes. Elle a augmenté de … % en euros courants … ».
+- C5 « Pourquoi », « Cohérent avec » : comparaison chiffrée sur la période commune avec l'audit citoyen (fin 1995 → fin 2012) :
+  effet taux-croissance 14,7 sur 33,9, premier terme (jetons `cit_*`, `AUDIT_CITOYEN_FIN = 2012`, garde vue mordre à 2025).
+- R + N1 « Pourquoi » : chapô = thèse et chiffre déterminant ; résultat = ce que la cascade montre (intérêts ≈ croissance,
+  deux périodes, flux-stock) ; retenir sans redire le doublement ; « En trois phrases » nomme les quatre termes (jetons
+  `flux_stock_nb`, `effet_net_nb`, garde « tous positifs ») ; FAQ « Pourquoi la dette augmente-t-elle ? » retirée (elle
+  reproduisait le chapô ; la question « intérêts » couvrait déjà celle que proposait le contradicteur). FR et EN.
+- C6 « Qui paie » : chapô sans pourcentages, « effort budgétaire simulé » ; « Dans cette simulation, » au paragraphe de la figure.
+- C7 « Formules » : 3 % sur le PIB de 2024 (dernier connu le jour du débat ; 88,1 → « environ 90 ») ; « besoin de financement
+  … qui s'ajoute à la dette aux ajustements flux-stock près » (texte, FAQ, tableau) ; hauteurs de grille 2723 / 2614.
+- C8 : « l'écart de rendement de leurs obligations souveraines à dix ans … presque identique ».
+- D1, D2 : écarts déclarés en commentaire d'en-tête des pages anglaises (pas de registre central des choix de traduction).
+- D3 mesuré : 1,8 à 2,0 écrans à 360-390 px ; non modifié (variation dans chaque intitulé, pays triés, échelle commune).
+- N2 : questions et chapôs des cinq pages relus ; les réponses distinguent déjà dette en euros et ratio. Rien d'autre.
+- Contrôles : gardes baisse, dynamique, formules passées ; `check-figures` 0 ; `check-all --ci` 0 ; build + `typo_build` 0 ;
+  rendu, dates, liens 0 ; relecture phrase à phrase du texte servi (10 pages) puis 10 instantanés ; `dates-affichage --ecrire`
+  (4 pages, fond). Non fait : recette visuelle 390 px dans un navigateur (seules les figures ont été vues).
+
 ### 2026-11-06 (suite) — Promesses : points ouverts page par page traités (§ 2 de la fiche de reprise) — commité, NON poussé
 
 - **Adopter** : correction d'une affirmation publiée (art. 40) : « l'Assemblée n'admet aucune compensation d'une charge » ;

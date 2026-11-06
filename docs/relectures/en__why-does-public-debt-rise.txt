@@ -1,12 +1,10 @@
-# relu le 2026-11-05 ; texte servi de /en/why-does-public-debt-rise/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /en/why-does-public-debt-rise/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.7% of GDP: it doubled as a share of the wealth produced.
-Where do these 57.9 points of GDP come from?
-Interest pushes the ratio up, nominal GDP growth pulls it down, and over thirty years the two almost offset each other.
-Most of the rise comes from public deficits excluding interest, known as primary deficits: 50.5 points out of 57.9.
-This balance hides two opposite periods, and it shows which terms drove the debt up, not why the deficits existed.
-Page updated 5 November 2026 · revisions
+Of these 57.9 points of GDP, public deficits excluding interest, known as primary deficits, contributed 50.5.
+This balance shows which terms drove the debt up, not why the deficits existed.
+Page updated 6 November 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -19,8 +17,7 @@ Where the rise comes from
 Cumulative decomposition of the change in the debt-to-GDP ratio, France, 1995-2025, in points of GDP (Eurostat).
 Blue: the stock; orange: what pushes it up; grey: what pulls it down.
 The result in one sentence.
-Over thirty years, the net effect of interest and nominal GDP growth is small (+1.3 points), but it is the sum of two opposite periods, +16.9 points before 2017 and −15.6 since: the rise in the debt comes mostly from primary deficits, 50.5 points out of 57.9.
-This is an accounting decomposition: it identifies which accounting components contributed to the increase, not why the deficits existed.
+Interest (73.9 points) and nominal GDP growth (−72.6) almost offset each other: their net effect is only +1.3 points over thirty years, but it is the sum of two opposite periods, +16.9 points before 2017 and −15.6 since; stock-flow adjustments, which do not go through the deficit, add 6.1 points.
 How can interest that is paid “cancel out”?
 It does not: it is a real charge; other things being equal, it raises the borrowing requirement and adds to the debt.
 But the page measures a ratio, debt relative to the wealth produced in the year, and that wealth grows too.
@@ -220,7 +217,7 @@ The annual decomposition of the French ratio from 1995 to 2025, on Eurostat seri
 None of the texts read decomposes this window with this source: the measurement is validated by reproduction, not by citation.
 Consistent with.
 The 2014 citizens’ audit attributed a large share of the rise in the debt from 1980 to 2012 to the effect of interest rates.
-The two analyses share neither the same end points nor necessarily the same counterfactual; here too, the interest-growth effect weighs heavily upwards in the years before 2017, which cover the end of their period.
+The two analyses share neither the same end points nor necessarily the same counterfactual; but over their common period, from end-1995 to end-2012, the interest-growth effect is, here too, the largest term in the rise: 14.7 points out of 33.9, ahead of primary deficits (13.1) and stock-flow adjustments (6.2).
 The comparison of their methods is set out in the working paper AWP-09.
 Over 1970-2023, using INSEE accounts and a historical database, Auclert, Philippon and Ragot find that primary deficits and stock-flow adjustments account for 88 points of a rise of nearly 90 (from 21% to 110% of GDP), and a “snowball” effect close to zero on average: the same identity, another period, another source, and a primary deficit that includes the adjustments this page isolates.
 Clavères, at the French Treasury, finds the same sequence of signs: the effective interest rate on the debt moves above nominal growth in the course of the 1980s, and growth moves back above it from 2016.
@@ -254,8 +251,8 @@ Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., “Quelles tra
 Literature review checked on 3 October 2026: every reference cited was read in full on that date, in the version indicated.
 Summary
 What to take away
-In thirty years, French public debt doubled as a share of GDP, from 57.8% to 115.7%.
-Interest pushed it up, but over the whole period nominal GDP growth erased almost as much; what remains, in the Eurostat decomposition used here, is primary deficits, 87% of the rise: excluding interest, the public accounts were in surplus in only 4 years out of 30.
+Once interest and growth have almost offset each other, what remains in the Eurostat decomposition used here is primary deficits, 87% of the rise: excluding interest, the public accounts were in surplus in only 4 years out of 30.
+These figures separate the terms of the rise, not the reasons for budget decisions.
 This near-cancellation is an offset over time, not neutrality.
 Before 2017, the implicit interest rate usually exceeded nominal growth, and the interest-growth effect added 16.9 points to the ratio; since then, nominal growth has prevailed every year up to 2024, except 2020, when GDP fell, and the effect has contributed −15.6 points.
 In 2025, on accounts still subject to revision, the implicit rate moves slightly back above nominal growth (1.99% against 1.90%): the gap is too thin to say that a new period is starting.
@@ -263,11 +260,6 @@ As long as the two stay this close, the direction in which the ratio moves is se
 Spending or revenue: the accounts describe movements, they do not designate anyone responsible, and their answer changes with the two years being compared.
 What it took elsewhere for debt to come down is the subject of Can public debt come down?
 Frequently asked questions
-Why does French public debt rise?
-Over 1995-2025, the debt-to-GDP ratio went from 57.8% to 115.7%.
-Decomposing its change year by year, interest pushed it up by 73.9 points and nominal GDP growth held it back by 72.6: their net effect is only +1.3 points, but it is the sum of two opposite periods.
-The rise comes mostly from primary deficits, the gap between public spending and revenue excluding interest (50.5 points), and for the rest from stock-flow adjustments (+6.1).
-This is an accounting decomposition: it identifies which accounting components contributed to the increase, not why the deficits existed.
 Does interest make the debt rise?
 Yes: it is a real charge, which adds to the borrowing requirement.
 But nominal GDP growth lowers the debt-to-GDP ratio by enlarging its denominator, and over thirty years it almost offset the accounting contribution of interest (73.9 points, against 72.6 of reduction).
@@ -328,10 +320,9 @@ Lalut, Stéphane (2026).
 Eurostat data, retrieved 2 November 2026. https://stephane-lalut.com/en/why-does-public-debt-rise/
 Copy citation
 In three sentences
-This page decomposes the change in the French debt-to-GDP ratio, from 1995 to 2025, into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments.
-Over the period, interest and nominal growth almost cancelled out, in two opposite periods, and the rise comes mostly from primary deficits, excluding interest.
-Spending or revenue: the accounts’ answer changes with the two years compared.
-This is an accounting decomposition, not a causal attribution: it does not say why the deficits existed.
+From end-1995 to end-2025, the French debt-to-GDP ratio went from 57.8% to 115.7%.
+Of these 57.9 points, primary deficits contributed 50.5, stock-flow adjustments 6.1 and the net effect of interest and nominal growth 1.3, made of two opposite periods.
+This is an accounting decomposition, not a causal attribution: it does not say why the deficits existed, and the answer to “spending or revenue” changes with the two years compared.
 Copy summary
 The data
 The annual decomposition of the change in the debt-to-GDP ratio, France, with its four terms, the implicit interest rate and nominal growth; spending, revenue and balance as a share of GDP; the same content is available as CSV, one row per year.

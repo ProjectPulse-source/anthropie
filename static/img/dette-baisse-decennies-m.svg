@@ -11,7 +11,7 @@
 <text x="0" y="145.0" font-size="13.5" fill="#96928f">En points de PIB cumulés sur dix ans</text>
 <line x1="0" y1="157.0" x2="300" y2="157.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="179.0" font-size="15" font-weight="600" fill="#26262f">1996-2005 : +10,4 points</text>
-<text x="0" y="197.0" font-size="13.5" fill="#184f95">57,8 → 68,2 % du PIB</text>
+<text x="0" y="197.0" font-size="13.5" fill="#184f95">57,8 % fin 1995 → 68,2 % fin 2005</text>
 <line x1="192.0" y1="205.0" x2="192.0" y2="265.0" stroke="#8f8a84" stroke-width="1.2"/>
 <text x="0" y="218.0" font-size="13.5" fill="#55524f">Taux et croissance</text>
 <rect x="192.0" y="207.0" width="21.9" height="14" fill="#eb6834"/>
@@ -24,7 +24,7 @@
 <text x="207.4" y="260.0" font-size="13.5" fill="#26262f" text-anchor="start">+4,4</text>
 <line x1="0" y1="280.0" x2="300" y2="280.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="302.0" font-size="15" font-weight="600" fill="#26262f">2006-2015 : +28,8 points</text>
-<text x="0" y="320.0" font-size="13.5" fill="#184f95">68,2 → 97,0 % du PIB</text>
+<text x="0" y="320.0" font-size="13.5" fill="#184f95">68,2 % fin 2005 → 97,0 % fin 2015</text>
 <line x1="192.0" y1="328.0" x2="192.0" y2="388.0" stroke="#8f8a84" stroke-width="1.2"/>
 <text x="0" y="341.0" font-size="13.5" fill="#55524f">Taux et croissance</text>
 <rect x="192.0" y="330.0" width="20.4" height="14" fill="#eb6834"/>
@@ -37,7 +37,7 @@
 <text x="184.2" y="383.0" font-size="13.5" fill="#26262f" text-anchor="end">−1,5</text>
 <line x1="0" y1="403.0" x2="300" y2="403.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="425.0" font-size="15" font-weight="600" fill="#26262f">2016-2025 : +18,7 points</text>
-<text x="0" y="443.0" font-size="13.5" fill="#184f95">97,0 → 115,7 % du PIB</text>
+<text x="0" y="443.0" font-size="13.5" fill="#184f95">97,0 % fin 2015 → 115,7 % fin 2025</text>
 <line x1="192.0" y1="451.0" x2="192.0" y2="511.0" stroke="#8f8a84" stroke-width="1.2"/>
 <text x="0" y="464.0" font-size="13.5" fill="#55524f">Taux et croissance</text>
 <rect x="153.0" y="453.0" width="39.0" height="14" fill="#8a8781"/>

@@ -576,6 +576,17 @@ def affichage(fin, dec, annees, cmp_, europe, cons):
     if not eh:
         fail("FAQ excedent primaire : aucune annee d'excedent primaire sans baisse du ratio ; reecrire la reponse")
     A["exc_hausse"] = enumere([str(a) for a in eh])
+    # Chiffres de la réponse (contre-expertise PRO-20261105-193614, C1, 06/11/2026) : la première de ces années, son solde
+    # primaire, le solde qui aurait stabilisé le ratio hors ajustements, et la hausse du ratio. La réponse dit « supérieur
+    # au solde stabilisant » : garde, sinon la démonstration (même au-dessus du repère, le ratio monte) tombe.
+    e0 = next(r for r in annees if r["annee"] == eh[0])
+    if e0["ecart"] < 0:
+        fail("FAQ excedent primaire : en %d le solde primaire n'atteint plus le solde stabilisant ; reecrire la reponse" % eh[0])
+    A["exc_hausse_un"] = str(eh[0]); A["exc_hausse_pb"] = fr(e0["solde_primaire"], 2)
+    A["exc_hausse_stab"] = fr(e0["solde_stabilisant"], 2); A["exc_hausse_var"] = fr(e0["variation"], 2)
+    A["exc_hausse_var_pt"] = lg.point(e0["variation"], 2, LANG)
+    if e0["solde_primaire"] <= e0["solde_stabilisant"]:
+        fail("FAQ excedent primaire : l'excedent de %d n'est plus superieur au solde stabilisant" % eh[0])
     A["suff_baisse_n"] = lettres(sum(1 for r in annees if r["ecart"] >= 0 and r["variation"] < 0))  # ENTRANTE 03/10, point 4
     # Sensibilité du groupe au seuil (B3)
     s80, s100 = europe["sensibilite_seuil"]["80"], europe["sensibilite_seuil"]["100"]
@@ -954,6 +965,7 @@ TXT = {
   cols=["Taux et croissance", "Solde primaire", "Autres ajustements", "Variation du ratio"],
   unite="En points de PIB cumulés sur dix ans",
   points=" points", sous="%s → %s %% du PIB",
+  sous_dec="%s %% fin %d → %s %% fin %d",  # bornes en fin d'année (contre-expertise PRO-20261105-193614, C2)
   dec_titre="France : ce qui a fait monter ou baisser le poids de la dette, décennie par décennie",
   dec_desc=("Pour chaque décennie, en points de PIB cumulés sur dix ans : effet des taux et de la croissance, contribution du solde "
             "primaire, autres ajustements, et leur somme, la variation du ratio de dette. %s : %s, %s, %s ; variation %s. %s : %s, %s, %s ; "
@@ -996,6 +1008,7 @@ TXT = {
   cols=["Interest and growth", "Primary balance", "Other adjustments", "Change in the ratio"],
   unite="In points of GDP cumulated over ten years",
   points=" points", sous="%s → %s%% of GDP",
+  sous_dec="%s%% end-%d → %s%% end-%d",
   dec_titre="France: what pushed the weight of debt up or down, decade by decade",
   dec_desc=("For each decade, in points of GDP cumulated over ten years: effect of interest rates and growth, contribution of the primary "
             "balance, other adjustments, and their sum, the change in the debt ratio. %s: %s, %s, %s; change %s. %s: %s, %s, %s; "
@@ -1119,6 +1132,11 @@ def multiples(ident, titre, desc, lignes, source, note, pas=10):
     legende(e, [(ORANGE, T["monte"]), (GRIS, T["baisse"]), (BLEU, T["var_leg"])])
     e.append('<text x="0" y="64" font-size="11" fill="%s">%s</text>' % (MUTED, esc(T["unite"])))
     LAB, pad, RH, Y0 = 150, 10, 40, 100
+    # Sous-libellé trop long pour la colonne (bornes « fin 1995 → fin 2005 », C2 du 06/11/2026) : deux lignes, coupées
+    # après la flèche, et une rangée plus haute ; une ligne sinon (pays). Mesure : texte en 11 px ~ 6,1 unités par signe.
+    deux = any(len(sous) * 6.1 > LAB - 8 for _, sous, _ in lignes)
+    if deux:
+        RH = 54
     CW = (W - LAB) / 4
     vmin, vmax = bornes([v for _, _, vs in lignes for v in vs], pas)
     for j, col in enumerate(T["cols"]):
@@ -1134,7 +1152,12 @@ def multiples(ident, titre, desc, lignes, source, note, pas=10):
         if k:
             e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (y - 4, W, y - 4, GRID))
         e.append('<text x="0" y="%d" font-size="12.5" font-weight="600" fill="%s">%s</text>' % (y + 13, INK, esc(lib)))
-        e.append('<text x="0" y="%d" font-size="11" fill="%s">%s</text>' % (y + 28, BLEU, esc(sous)))
+        if deux and " → " in sous:
+            s1, s2 = sous.split(" → ", 1)
+            e.append('<text x="0" y="%d" font-size="11" fill="%s">%s →</text>' % (y + 28, BLEU, esc(s1)))
+            e.append('<text x="0" y="%d" font-size="11" fill="%s">%s</text>' % (y + 42, BLEU, esc(s2)))
+        else:
+            e.append('<text x="0" y="%d" font-size="11" fill="%s">%s</text>' % (y + 28, BLEU, esc(sous)))
         for j, v in enumerate(vs):
             x0c = LAB + j * CW
             X = lambda v, x0c=x0c: x0c + pad + (v - vmin) / (vmax - vmin) * (CW - 2 * pad)  # noqa: E731
@@ -1187,7 +1210,7 @@ def multiples_m(ident, titre, svg_d, lignes, source, note, pas=10):
 
 def lignes_dec(dec, A):
     T = TXT[LANG]
-    return [(A["d%d_lib" % k], T["sous"] % (A["d%d_dette_deb" % k], A["d%d_dette_fin" % k]),
+    return [(A["d%d_lib" % k], T["sous_dec"] % (A["d%d_dette_deb" % k], f["debut"] - 1, A["d%d_dette_fin" % k], f["fin"]),
              [f["taux_croissance"], f["deficits_primaires"], f["flux_stock"], f["variation"]]) for k, f in enumerate(dec, 1)]
 
 

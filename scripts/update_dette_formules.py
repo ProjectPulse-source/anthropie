@@ -195,7 +195,7 @@ def calcul(off, dyn, taux, solde, inv, doc):
     d24 = ratio[2024]
     g24 = (pib[2024] / pib[2023] - 1) * 100
     c["F16"] = {"dette_pct": d25, "g25": g25, "stab_g25": stab(d25, g25), "stab_g25b": stab(d25, 2.5), "stab_g3": stab(d25, 3.0),
-                "g_seuil": 300 / (d25 - 3), "euros_3pct": 0.03 * pib[2025],
+                "g_seuil": 300 / (d25 - 3), "euros_3pct": 0.03 * pib[2024],  # PIB de 2024, dernier connu le 08/09/2025 (C7, 06/11/2026)
                 "dette_pct24": d24, "g24": g24, "g_seuil24": 300 / (d24 - 3), "stab_g24": stab(d24, g24)}
 
     # F8 : rendements à dix ans, mensuels (Eurostat) et au jour (Banque de France, Banque de Grèce)
@@ -415,7 +415,7 @@ def gardes(c):
     g(f16["g25"] < f16["g_seuil"], "F16 « la croissance nominale de 2025 est restée sous le seuil qui stabilise le ratio à 3 % »")
     g(f16["g24"] > f16["g_seuil24"], "F16 à la date « en 2024, dernière année connue, la croissance dépassait le seuil »")
     g(f16["stab_g25"] < 3 < f16["stab_g3"], "F16 : à 2025, le déficit stabilisant est sous 3 % ; à 3 % de croissance, au-dessus")
-    g(80 < f16["euros_3pct"] < 100, "F16 « un déficit de 3 % ajoute environ 90 milliards par an »")
+    g(80 < f16["euros_3pct"] < 100, "F16 « un besoin de financement d'environ 90 milliards par an »")
     f8 = c["F8"]
     g(f8["ecart"][f8["m_aout"]] > 0 and f8["ecart"][f8["m_sept"]] > 0, "F8 « France au-dessus de la Grèce en août et en septembre 2025 »")
     for d in f8["bog"]:
@@ -759,10 +759,10 @@ LIGNES = [
                "Cumulated {f2_an0}–{f2_an1}: €{f2_def}bn against €{f2_var}bn, close", "A finding, no inference")}),
     ("mesurer", "F16", {
         "fr": ("« 3 % de déficit, seuil à partir duquel la dette n'augmente plus »", "F. Bayrou",
-               "En euros, inexact : un déficit de 3 % ajoute {f16_eur} Md€ par an",
+               "En euros, inexact : un déficit de 3 % emprunte environ {f16_eur} Md€ par an",
                "En % du PIB, exact si la croissance nominale dépasse environ {f16_seuil24} % : {f16_g24} % en 2024, {f16_g25} % en 2025 (connu après)", "Condition décisive non dite"),
         "en": ("“A 3% deficit, the threshold at which debt stops rising”", "F. Bayrou",
-               "In euros, inaccurate: a 3% deficit adds €{f16_eur}bn a year",
+               "In euros, inaccurate: a 3% deficit borrows about €{f16_eur}bn a year",
                "As a share of GDP, accurate if nominal growth exceeds about {f16_seuil24}%: {f16_g24}% in 2024, {f16_g25}% in 2025 (known later)", "Decisive condition left unsaid")}),
     ("mesurer", "F8", {
         "fr": ("« La France s'endette à des taux supérieurs à ceux de la Grèce »", "L. Wauquiez",

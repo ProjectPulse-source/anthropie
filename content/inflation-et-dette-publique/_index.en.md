@@ -1,4 +1,6 @@
 ---
+# Ecart FR/EN declare (D2, arbitrage PRO-20261105-193614, 06/11/2026) : la question de FAQ sur le livre de l'auteur, publie en
+# francais seulement, n'est pas reprise ; la parite porte sur les raisonnements et les preuves, non sur le nombre de questions.
 title: "Did inflation really ease France's debt burden?"
 url: /en/inflation-and-french-public-debt/
 description: "The 2021–2023 inflation surprise reduced the real value of payments promised on France's end-2020 fixed-rate marketable government debt by about €{infl.t}bn in 2020 euros. The government did not pocket that money: the erosion is spread over payments until {infl.fin}, and it is not an identifiable net fiscal gain. Computed line by line on the AFT's outstanding debt and the monthly HICP."

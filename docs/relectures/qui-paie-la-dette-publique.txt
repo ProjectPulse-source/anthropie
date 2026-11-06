@@ -1,7 +1,7 @@
-# relu le 2026-11-05 ; texte servi de /qui-paie-la-dette-publique/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /qui-paie-la-dette-publique/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
-Sur les comptes distribués de l’Insee de 2023, un même effort de 10 milliards d’euros ne tombe pas sur les mêmes ménages selon la décision prise : par l’enseignement, il pèse surtout sur les plus modestes (2,75 % du revenu des 10 % les plus modestes, 0,21 % de celui des plus aisés), par l’impôt sur les plus aisés (jusqu’à 1,14 % pour le dernier dixième).
+Pour un même effort budgétaire simulé de 10 milliards d’euros, sur les comptes distribués de l’Insee de 2023, la répartition de la charge dépend de l’instrument choisi : un ajustement par l’enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l’impôt sur le revenu et le patrimoine davantage sur les ménages aisés.
 Qui paie la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir.
 Page mise à jour le 5 novembre 2026 · révisions
 Dossier dette publique
@@ -25,7 +25,7 @@ Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de 
 Profil d’exposition comptable, non une simulation.
 Télécharger · Citer · Données
 Le classement s’inverse d’une décision à l’autre.
-Une réduction des dépenses d’enseignement représenterait 2,75 % du revenu des 10 % les plus modestes et 0,21 % de celui des plus aisés ; une hausse des impôts sur les revenus et le patrimoine ferait l’inverse, jusqu’à 1,14 % pour le dernier dixième.
+Dans cette simulation, une réduction des dépenses d’enseignement représenterait 2,75 % du revenu des 10 % les plus modestes et 0,21 % de celui des plus aisés ; une hausse des impôts sur les revenus et le patrimoine ferait l’inverse, jusqu’à 1,14 % pour le dernier dixième.
 Le contraste ne vient pas seulement de ce que les petits revenus sont plus petits : en euros, la moitié la moins aisée supporterait 57,8 % de la coupe d’enseignement contre 14,6 % de l’effort fiscal.
 Une baisse des pensions se tiendrait dans une bande étroite, de 0,43 à 0,78 %, sans épargner aucun groupe en particulier.
 Et « l’impôt » n’a pas un seul profil : une hausse des taxes sur les produits, comme la TVA, répartie de même, pèserait elle aussi davantage sur les plus modestes en part de leur revenu, 1,14 % contre 0,43 % pour les plus aisés.

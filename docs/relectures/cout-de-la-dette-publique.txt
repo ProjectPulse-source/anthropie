@@ -1,7 +1,8 @@
-# relu le 2026-11-05 ; texte servi de /cout-de-la-dette-publique/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /cout-de-la-dette-publique/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Combien coûte la dette publique ?
-En 2025, les administrations publiques doivent 65,7 milliards d’euros d’intérêts, 4,2 % de leurs recettes, et 121 % de plus, en euros, qu’au creux de 2020.
+En 2025, la charge d’intérêts des administrations publiques s’élève à 65,7 milliards d’euros, soit 4,2 % de leurs recettes.
+Elle a augmenté de 121 % en euros courants depuis son creux de 2020.
 La remontée est rapide, mais le niveau n’est pas inédit : en part du PIB, la charge retrouve celui de 2014 et reste sous celui de 1995.
 Pendant vingt-cinq ans, la dette a doublé en part de PIB tandis que sa charge, mesurée de même, baissait ; en euros courants, en revanche, celle de 2025 est la plus élevée depuis 1995.
 Cette page explique pourquoi, d’où vient la remontée, et pourquoi elle peut durer même si la dette cesse d’augmenter.

@@ -58,6 +58,7 @@ PAGE_URL = "stephane-lalut.com/pourquoi-la-dette-publique-augmente/"
 # front matter de la page .en.md le jour où elle est créée (même forme que /en/cost-of-french-public-debt/).
 PAGE_URL_EN = "stephane-lalut.com/en/why-does-public-debt-rise/"
 PERIODES = [(1996, 2007, "1996-2007"), (2008, 2019, "2008-2019"), (2020, None, "2020-%s")]
+AUDIT_CITOYEN_FIN = 2012   # dernière année étudiée par l'audit citoyen de la dette publique (2014), étude citée
 TOL_TEMOIN = 0.11   # ratios publiés à une décimale ; le solde primaire additionne deux arrondis
 
 W = 720
@@ -768,7 +769,9 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
              "hausse": nb(total["variation"]), "effet_interets": nb(total["effet_interets"]),
              "effet_croissance": nb(-total["effet_croissance"]), "effet_net": sg(total["effet_taux_croissance"]),
              "deficits_primaires": nb(total["contribution_solde_primaire"]), "flux_stock": sg(total["flux_stock"]),
-             "part_deficits": nb(100 * total["contribution_solde_primaire"] / total["variation"], 0)}
+             "part_deficits": nb(100 * total["contribution_solde_primaire"] / total["variation"], 0),
+             # Résumé « En trois phrases » (R et N1, 06/11/2026) : les quatre termes sans signe, la prose dit « apportent » (garde)
+             "flux_stock_nb": nb(total["flux_stock"]), "effet_net_nb": nb(total["effet_taux_croissance"])}
         for (a, b, lib), t in zip(PERIODES, per):
             k = "p%d" % (PERIODES.index((a, b, lib)) + 1)  # brut-ok: numero d'une periode dans une liste fixe
             A[k + "_lib"] = lib if b else lib % last["annee"]
@@ -797,6 +800,15 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
         A["tc_avant"] = sg(sum(r["effet_taux_croissance"] for r in rows if r["annee"] < bascule))
         A["tc_apres"] = sg(sum(r["effet_taux_croissance"] for r in rows if r["annee"] >= bascule))
         A["tc_fin_neg"] = str(last["annee"] - 1)   # dernière année où la croissance l'emporte (garde ci-dessous)
+        # Contre-expertise PRO-20261105-193614 (C5, 06/11/2026) : l'audit citoyen de 2014 couvre 1980-2012 (fin de
+        # son étude, écrite en clair : ce n'est pas une donnée) ; sur la période commune, de fin a0 à fin 2012, on
+        # compare nos termes. La page dit que l'effet taux-croissance y est le PREMIER terme : garde plus bas.
+        cit = [r for r in rows if r["annee"] <= AUDIT_CITOYEN_FIN]
+        A["cit_fin"] = str(AUDIT_CITOYEN_FIN)
+        A["cit_hausse"] = nb(sum(r["variation"] for r in cit))
+        A["cit_tc"] = nb(sum(r["effet_taux_croissance"] for r in cit))
+        A["cit_def"] = nb(sum(r["contribution_solde_primaire"] for r in cit))
+        A["cit_sfa"] = nb(sum(r["flux_stock"] for r in cit))
         # Troisième tour (Trésor-Éco n° 403) : « relative stabilité » 2001-2007 éprouvée ; fenêtres OFCE et DG Trésor.
         A["dette_2001"], A["dette_2007"] = nb(by[2001]["dette_pct_pib"]), nb(by[2007]["dette_pct_pib"])
         for k, (d0, d1) in fen.items():
@@ -862,6 +874,15 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
         fail("« Ce qu'il faut retenir » : plus de periode finale ou l'effet taux-croissance est negatif chaque annee (bascule %s)" % bascule)
 
     A, A_en = bloc(*NB["fr"]), bloc(*NB["en"])
+    if not (total["flux_stock"] > 0 and total["effet_taux_croissance"] > 0 and total["contribution_solde_primaire"] > 0):
+        fail("Resume : un des termes de la hausse n'est plus positif ; la phrase « en apportent » est a reecrire")
+    # Garde C5 (06/11/2026) : « l'effet taux-croissance est ici aussi le premier terme de la hausse » sur la période commune
+    # avec l'audit citoyen, à la précision affichée ; et la hausse doit en être une.
+    cit = [r for r in rows if r["annee"] <= AUDIT_CITOYEN_FIN]
+    tc_c, def_c, sfa_c = (sum(r[k] for r in cit) for k in ("effet_taux_croissance", "contribution_solde_primaire", "flux_stock"))
+    if not (lg.depasse(tc_c, def_c, 1) and lg.depasse(tc_c, sfa_c, 1) and sum(r["variation"] for r in cit) > 0):
+        fail("« Cohérent avec » : l'effet taux-croissance n'est plus le premier terme de la hausse jusqu'en %d (tc %.2f, deficits %.2f, flux %.2f)"
+             % (AUDIT_CITOYEN_FIN, tc_c, def_c, sfa_c))
     for X_, lang in ((A, "fr"), (A_en, "en")):
         X_["millesime_dette"], X_["millesime_comptes"] = millesime("gov_10dd_edpt1", lang), millesime("gov_10a_main", lang)
         # Notification lue (02/11/2026) : avril d'avril à septembre, octobre sinon ; « avec la notification d'avril » était écrit

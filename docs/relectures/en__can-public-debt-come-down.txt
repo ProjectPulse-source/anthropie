@@ -1,10 +1,10 @@
-# relu le 2026-11-05 ; texte servi de /en/can-public-debt-come-down/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /en/can-public-debt-come-down/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes: what can fall is the weight of debt in GDP, even while its amount rises.
 In Portugal, public debt went from 235 to 275 billion euros from end-2015 to end-2025, and its weight from 131.0% to 89.2% of GDP.
 In France, it rose by 18.7 points over the same period: general government spent more than it took in, even leaving interest aside, and that deficit weighed more than the help from interest rates and growth.
-Page updated 5 November 2026 · revisions
+Page updated 6 November 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -452,8 +452,10 @@ In this group, no country that stayed in average primary deficit saw its ratio f
 Has France ever run a primary surplus?
 Four times since 1996, from 1998 to 2001, at most 1.65% of GDP (Eurostat).
 Since then, the general government primary balance has been in deficit every year.
-Does a primary surplus always bring debt down?
-It helps reduce the ratio, but the final change also depends on interest rates, growth and other adjustments: in France, in 1998, the primary balance was in surplus, and even above the stabilising benchmark excluding adjustments, without the ratio falling.
+Is a primary surplus enough to bring the debt-to-GDP ratio down?
+No.
+In 1998, France ran a primary surplus of 0.99% of GDP, above the balance that would have stabilised the ratio excluding adjustments (0.78%); the debt-to-GDP ratio nonetheless rose by 0.12 points.
+The stabilising balance already accounts for interest rates and growth: it was the other adjustments to the debt, outside the deficit, that pushed it up.
 In the ten-year windows of the 27 current EU members where starting debt exceeded 90% of GDP, the ratio fell by at least 15 points in none of the 35 windows with a negative average primary balance, in eight of the 30 with a balance from 0 to under 2%, in seven of the thirteen with a balance of at least 2%; these windows overlap and come from a few countries.
 In the public debt dossier
 To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →

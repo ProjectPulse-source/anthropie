@@ -1,12 +1,10 @@
-# relu le 2026-11-05 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Pourquoi la dette publique augmente-t-elle ?
 Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,7 % du PIB : elle a doublé en part de la richesse produite.
-D’où viennent ces 57,9 points de PIB ?
-Les intérêts font monter le ratio, la croissance du PIB nominal le fait baisser, et sur trente ans ces deux effets se compensent presque.
-L’essentiel de la hausse vient des déficits publics hors intérêts, dits primaires : 50,5 points sur 57,9.
-Ce bilan cache deux périodes opposées, et il dit par où la dette a augmenté, pas pourquoi les déficits ont existé.
-Page mise à jour le 5 novembre 2026 · révisions
+Sur ces 57,9 points de PIB, les déficits publics hors intérêts, dits primaires, en apportent 50,5.
+Ce bilan dit par où la dette a augmenté, pas pourquoi les déficits ont existé.
+Page mise à jour le 6 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -16,8 +14,7 @@ D’où vient la hausse
 Décomposition cumulée de la variation du ratio dette/PIB, France, 1995-2025, en points de PIB (Eurostat).
 Bleu : le stock ; orange : ce qui le fait monter ; gris : ce qui le fait baisser.
 Le résultat en une phrase.
-Sur trente ans, l’effet net des intérêts et de la croissance du PIB nominal est faible (+1,3 point), mais il additionne deux périodes opposées, +16,9 points avant 2017 et −15,6 depuis : la hausse de la dette tient pour l’essentiel aux déficits primaires, 50,5 points sur 57,9.
-C’est une décomposition comptable : elle dit par quel terme la dette a augmenté, pas pourquoi les déficits ont existé.
+Les intérêts (73,9 points) et la croissance du PIB nominal (−72,6) se compensent presque : leur effet net n’est que de +1,3 point sur trente ans, mais il additionne deux périodes opposées, +16,9 points avant 2017 et −15,6 depuis ; les ajustements flux-stock, ce qui ne passe pas par le déficit, ajoutent 6,1 points.
 Comment des intérêts payés peuvent-ils « s’annuler » ?
 Ils ne s’annulent pas : ils sont une charge réelle ; toutes choses égales par ailleurs, ils augmentent le besoin de financement et contribuent à accroître la dette.
 Mais la page mesure un ratio, la dette rapportée à la richesse produite dans l’année, et cette richesse grossit elle aussi.
@@ -215,7 +212,7 @@ La décomposition annuelle du ratio français de 1995 à 2025, sur les séries d
 Aucun des textes lus ne décompose cette fenêtre avec cette source : la mesure se valide par reproduction, non par citation.
 Cohérent avec.
 L’audit citoyen de 2014 attribuait une large part de la hausse de la dette de 1980 à 2012 à l’effet des taux d’intérêt.
-Les deux analyses ne portent ni sur les mêmes bornes, ni nécessairement sur le même contrefactuel ; ici aussi, l’effet taux–croissance pèse fortement à la hausse sur les années antérieures à 2017, qui couvrent la fin de leur période.
+Les deux analyses ne portent ni sur les mêmes bornes, ni nécessairement sur le même contrefactuel ; mais sur leur période commune, de fin 1995 à fin 2012, l’effet taux–croissance est ici aussi le premier terme de la hausse : 14,7 points sur 33,9, devant les déficits primaires (13,1) et les ajustements flux-stock (6,2).
 La confrontation de leurs méthodes est exposée dans le working paper AWP-09.
 Sur 1970-2023, avec les comptes de l’Insee et une base historique, Auclert, Philippon et Ragot trouvent que les déficits primaires et les ajustements flux-stock représentent 88 points d’une hausse de près de 90 (de 21 % à 110 % du PIB), et un effet « boule de neige » proche de zéro en moyenne : même identité, autre période, autre source, et un déficit primaire qui inclut les ajustements que la page isole.
 Clavères, à la direction générale du Trésor, retrouve la même chronologie des signes : le taux apparent de la dette passe au-dessus de la croissance nominale dans le courant des années 1980, et la croissance repasse au-dessus à partir de 2016.
@@ -245,8 +242,8 @@ Heyer, É., Plane, M., Ragot, X., Sampognaro, R. et Timbeau, X., « Quelles traj
 Revue de littérature vérifiée le 3 octobre 2026 : chaque référence citée a été lue en entier à cette date, dans la version indiquée.
 Synthèse
 Ce qu’il faut retenir
-En trente ans, la dette publique française a doublé en part de PIB, de 57,8 % à 115,7 %.
-Les intérêts l’ont poussée, mais sur l’ensemble de la période la croissance du PIB nominal en a effacé presque autant ; ce qui reste, dans la décomposition Eurostat utilisée ici, ce sont les déficits primaires, 87 % de la hausse : hors intérêts, les comptes publics n’ont été excédentaires que 4 années sur 30.
+Une fois les intérêts et la croissance presque compensés, ce qui reste dans la décomposition Eurostat utilisée ici, ce sont les déficits primaires, 87 % de la hausse : hors intérêts, les comptes publics n’ont été excédentaires que 4 années sur 30.
+Ces chiffres distinguent les termes de la hausse, pas les motifs des décisions budgétaires.
 Cette quasi-annulation est une compensation dans le temps, non une neutralité.
 Avant 2017, le taux implicite dépassait le plus souvent la croissance nominale, et l’effet taux-croissance a ajouté 16,9 points au ratio ; depuis, la croissance nominale l’emporte chaque année jusqu’en 2024, sauf en 2020, quand le PIB a reculé, et l’effet a pesé −15,6 points.
 En 2025, selon des comptes encore révisables, le taux implicite repasse légèrement au-dessus de la croissance nominale (1,99 % contre 1,90 %) : l’écart est trop mince pour dire qu’une nouvelle période commence.
@@ -254,11 +251,6 @@ Tant que les deux restent aussi proches, le sens d’évolution du ratio dépend
 Dépenses ou recettes : les comptes décrivent des mouvements, ils ne désignent pas de responsable, et leur réponse change avec les deux années que l’on compare.
 Ce qu’il a fallu ailleurs pour que la dette baisse est l’objet de La dette publique peut-elle baisser ?
 Questions fréquentes
-Pourquoi la dette publique française augmente-t-elle ?
-Sur 1995-2025, le ratio dette/PIB est passé de 57,8 % à 115,7 %.
-En décomposant chaque année sa variation, les intérêts l’ont poussé de 73,9 points et la croissance du PIB nominal l’a freiné de 72,6 : leur effet net n’est que de +1,3 point, mais il additionne deux périodes opposées.
-La hausse tient pour l’essentiel aux déficits primaires, l’écart entre dépenses et recettes publiques hors intérêts (50,5 points), et pour le reste aux ajustements flux-stock (+6,1).
-C’est une décomposition comptable : elle dit par quel terme la dette a augmenté, pas pourquoi les déficits ont existé.
 Les intérêts font-ils monter la dette ?
 Oui : ils sont une charge réelle, qui accroît le besoin de financement.
 Mais la croissance du PIB nominal fait baisser le ratio dette/PIB en agrandissant son dénominateur, et sur trente ans elle a presque compensé la contribution comptable des intérêts (73,9 points, contre 72,6 de baisse).
@@ -328,10 +320,9 @@ Lalut, Stéphane (2026). « Pourquoi la dette publique augmente-t-elle ? ».
 Données Eurostat, relevé du 2 novembre 2026. https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/
 Copier la citation
 En trois phrases
-Cette page décompose la variation du ratio dette/PIB français, de 1995 à 2025, en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock.
-Sur la période, intérêts et croissance nominale se sont presque annulés, en deux périodes opposées, et la hausse tient pour l’essentiel aux déficits primaires, hors intérêts.
-Dépenses ou recettes : la réponse des comptes change avec les deux années comparées.
-C’est une décomposition comptable, non une attribution causale : elle ne dit pas pourquoi les déficits ont existé.
+De fin 1995 à fin 2025, le ratio dette/PIB français est passé de 57,8 % à 115,7 %.
+Sur ces 57,9 points, les déficits primaires en apportent 50,5, les ajustements flux-stock 6,1 et l’effet net des intérêts et de la croissance nominale 1,3, fait de deux périodes opposées.
+C’est une décomposition comptable, non une attribution causale : elle ne dit pas pourquoi les déficits ont existé, et la réponse « dépenses ou recettes » change avec les deux années comparées.
 Copier le résumé
 Les données
 La décomposition annuelle de la variation du ratio dette/PIB, France, avec ses quatre termes, le taux implicite et la croissance nominale ; dépenses, recettes et solde en % du PIB ; le même contenu existe en CSV, une ligne par année.

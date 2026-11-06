@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /formules-du-debat-sur-la-dette/, build de 23357c0 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /formules-du-debat-sur-la-dette/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que valent les formules du débat sur la dette ?
 Le 8 septembre 2025, à l’Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
@@ -6,11 +6,11 @@ Beaucoup de montants résistent à la vérification.
 Mais il suffit souvent de changer la date, le périmètre ou l’unité pour obtenir une autre réponse, et mesurer une évolution ne suffit ni à en désigner la cause ni à justifier une décision.
 Onze cas, confrontés aux données disponibles ce jour-là, montrent comment un même chiffre peut soutenir des conclusions différentes, sans que toutes soient démontrées.
 Les textes de campagne des candidats à l’élection présidentielle de 2027, passés aux mêmes tests, rencontrent les mêmes difficultés de mesure.
-Page mise à jour le 5 novembre 2026
+Page mise à jour le 6 novembre 2026
 Dossier dette publique
 Mise à jour · 11/2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Calcul du : 5 novembre 2026 Compte rendu intégral de la séance du 8 septembre 2025 (Assemblée nationale) ; comptes des administrations publiques (Insee, Eurostat) ; taux à dix ans (Eurostat, Banque de France, Banque de Grèce) ; Cour des comptes, Gouvernement, Sénat.
+Calcul du : 6 novembre 2026 Compte rendu intégral de la séance du 8 septembre 2025 (Assemblée nationale) ; comptes des administrations publiques (Insee, Eurostat) ; taux à dix ans (Eurostat, Banque de France, Banque de Grèce) ; Cour des comptes, Gouvernement, Sénat.
 Télécharger : CSV · JSON · méthode
 Plus d’argent pour les intérêts que pour l’éducation ?
 Le 15 juillet 2025, le gouvernement présente au Parlement le plafond des dépenses de l’année suivante.
@@ -49,7 +49,7 @@ En 2020, la dette a augmenté de 70 milliards de plus que le déficit, parce que
 Sur trente ans, les cumuls se rapprochent (2 649 milliards de déficits, 2 758 de dette en plus), mais des écarts de sens contraire qui se compensent ne font pas une égalité.
 « Atteindre en 2029 le seuil de 3 % de déficit public, seuil à partir duquel la dette n’augmente plus » (François Bayrou).
 La phrase dit « la dette » sans préciser laquelle, et ses deux lectures donnent deux verdicts.
-En euros, elle est inexacte : un déficit de 3 % du PIB ajoute environ 90 milliards par an.
+En euros, elle est inexacte : un déficit de 3 % du PIB est un besoin de financement d’environ 90 milliards par an (PIB de 2024, dernière année connue le jour de la séance, dans l’édition actuelle des comptes), qui s’ajoute à la dette aux ajustements flux-stock près.
 En pourcentage du PIB, le ratio se stabilise quand le déficit égale le ratio de dette multiplié par la croissance nominale, divisé par un plus cette croissance.
 Avec le ratio de 2024, dernière année connue le jour de la séance (112,6 %), et sans écart entre déficit et hausse de la dette, 3 % suffisent si la croissance nominale dépasse environ 2,74 %.
 Ce seuil était franchi en 2024 (3,58 %) : à la date, la phrase tenait donc pour le ratio, sous cette condition.
@@ -67,7 +67,7 @@ Moyennes mensuelles (Eurostat) ; la ligne pointillée marque la séance.
 Un prix de marché dit le coût d’emprunt du moment, pas la solidité relative de deux pays.
 La France est passée au-dessus de la Grèce en août 2025, en moyenne mensuelle.
 La Grèce l’a de nouveau dépassée de mars à mai 2026.
-Sur toute l’année 2025, les deux pays ont emprunté avec presque le même écart sur l’Allemagne : en moyenne des écarts mensuels, 0,76 point pour la France, 0,77 pour la Grèce.
+En 2025, l’écart de rendement de leurs obligations souveraines à dix ans avec l’Allemagne était presque identique : en moyenne des écarts mensuels, 0,76 point pour la France, 0,77 pour la Grèce.
 Le même fait est vrai un mois et faux un autre : tout dépend de la date de la mesure.
 Quant à la conclusion implicite, « nous en sommes au point où… », un taux d’intérêt dit le prix demandé par les prêteurs à ce moment : il ne mesure ni la dette, ni la notation, ni la structure des détenteurs, qui distinguent les deux pays.
 « Ce n’est pas l’augmentation des dépenses publiques, restées stables depuis 2017, qui a creusé le déficit, mais la baisse des recettes » (Cyrielle Chatelain, Écologiste et social).
@@ -386,7 +386,7 @@ Le 4 septembre, la Banque de Grèce, avec la même mesure pour les deux pays, do
 La France était passée au-dessus en août 2025, en moyenne mensuelle ; la Grèce l’a de nouveau dépassée de mars à mai 2026.
 Le prix du marché ne dit pas, à lui seul, qu’un pays est plus fragile que l’autre.
 Un déficit de 3 % arrête-t-il la hausse de la dette ?
-Pas en euros : un déficit de 3 % ajoute environ 90 milliards d’euros par an.
+Pas en euros : un déficit de 3 % représente un besoin de financement d’environ 90 milliards d’euros par an, qui s’ajoute à la dette aux ajustements flux-stock près.
 En pourcentage du PIB, il stabilise le ratio seulement si la croissance nominale dépasse un seuil, environ 2,74 % avec le ratio de 2024, sans écart entre déficit et hausse de la dette.
 La croissance a dépassé ce seuil en 2024 (3,58 %), pas en 2025 (1,90 %, connu après la séance).
 En juillet 2025, la Cour des comptes avertissait que revenir sous 3 % ne suffirait pas, à lui seul, à garantir la soutenabilité de la dette.
@@ -468,7 +468,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Que valent les formules du débat sur la dette ? ».
-Données Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce, relevé du 5 novembre 2026. https://stephane-lalut.com/formules-du-debat-sur-la-dette/
+Données Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce, relevé du 6 novembre 2026. https://stephane-lalut.com/formules-du-debat-sur-la-dette/
 Copier la citation
 En trois phrases
 Sur onze cas chiffrés de la séance de l’Assemblée nationale du 8 septembre 2025, beaucoup de montants résistent à la vérification, mais le verdict change souvent avec la date, l’unité, le périmètre ou l’année.
