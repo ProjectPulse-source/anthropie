@@ -205,17 +205,20 @@
 
 .fig-actions {
   // Marge basse : sans elle, la ligne colle au paragraphe qui suit la figure
-  // (constate sur la page en ligne le 2026-09-21).
-  margin: 0.35rem 0 1.4rem;
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  color: var(--color-text-subtle);
+  // (constate sur la page en ligne le 2026-09-21). Trois boutons au contour du
+  // site depuis le 06/11/2026 (auteur : les liens soulignes etaient « trop discrets ») ;
+  // double selecteur : il l'emporte sur le style des liens du corps de texte.
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.6rem 0 1.6rem;
 
-  a {
+  a.btn {
+    padding: 8px 18px;
+    border-width: 1px;
+    font-size: 14px;
+    text-decoration: none;
     color: var(--color-accent);
-    text-decoration: underline;
-    text-decoration-color: var(--color-accent-rule);
-    text-underline-offset: 2px;
   }
 }
 
