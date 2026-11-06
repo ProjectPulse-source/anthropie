@@ -52,6 +52,14 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-06 (soir) — Définition : section « anthropique » (M1) et auteur nommé dans la phrase reprise (M2) — poussé le 06/11 sur demande de l'auteur
+
+Arbitrages PRO-20261106-082226 (texte) et PRO-20261106-182729 (calendrier du quatrième trimestre). Commit `3d48b29` sur
+`origin/main` (report local `5ecb2d8`), déploiement 42263577602 vert, texte servi vérifié (section, description FR et EN,
+édition anglaise *ANTHROPY* citée en anglais). **Mesure du maillage du 17/10 close au 05/11** ; le 16/12 devient un bilan
+descriptif. Suites datées : M3 (*ANTHROPY* sur les pages anglaises de la dette, page par page, après vérification du
+contenu) du 16 au 20/11 ; M4 (lien de l'AWP-01) au 05/01/2027. Fiche D0 : `06_PROMOTION/FEUILLE_DE_ROUTE_GEO_RESSOURCES.md`.
+
 ### 2026-11-06 — Amazon Attribution amazon.com branchée sur le site — poussée le 06/11 sur demande de l'auteur
 
 Campagne « Site stephane-lalut.com - COM » créée le 15/08 (12 groupes), jamais branchée : les liens amazon.com partaient
