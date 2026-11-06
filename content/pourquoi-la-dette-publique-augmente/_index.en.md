@@ -22,6 +22,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   description: "Annual decomposition, from {dyn.annee_depart} to {dyn.annee_fin}, of the change in the debt-to-GDP ratio of French general government into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments; spending, revenue and balance as a share of GDP; cyclically adjusted primary balance according to the European Commission (AMECO, with its cyclically adjusted revenue and spending), the IMF and the OECD; ratios checked against those published by Eurostat. Producers' series, no value entered by hand."
   couverture_temporelle: "{dyn.annee_depart}/{dyn.annee_fin}"
   couverture_spatiale: "France"
+  doi: "10.5281/zenodo.23995830"  # Zenodo concept DOI (always the latest version), published 6 November 2026; deposit = these files minus the IMF series (commercial reuse subject to authorisation)
   variables:
     - {nom: "Change in the debt-to-GDP ratio", unite: "points of GDP"}
     - {nom: "Interest effect", unite: "points of GDP", description: "accounting contribution to the ratio, not an amount paid"}

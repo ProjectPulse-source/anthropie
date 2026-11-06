@@ -23,6 +23,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   description: "Décomposition annuelle, de {dyn.annee_depart} à {dyn.annee_fin}, de la variation du ratio dette/PIB des administrations publiques françaises en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock ; dépenses, recettes et solde en % du PIB ; solde primaire corrigé du cycle selon la Commission européenne (AMECO, avec ses recettes et dépenses corrigées), le FMI et l'OCDE ; ratios contrôlés contre ceux que publie Eurostat. Séries des producteurs, aucune valeur saisie à la main."
   couverture_temporelle: "{dyn.annee_depart}/{dyn.annee_fin}"
   couverture_spatiale: "France"
+  doi: "10.5281/zenodo.23995830"  # DOI de concept Zenodo (toujours la dernière version), publié le 06/11/2026 ; dépôt = ces fichiers moins les séries du FMI (réutilisation commerciale soumise à autorisation)
   variables:
     - {nom: "Variation du ratio dette/PIB", unite: "points de PIB"}
     - {nom: "Effet des intérêts", unite: "points de PIB", description: "contribution comptable au ratio, non somme versée"}
