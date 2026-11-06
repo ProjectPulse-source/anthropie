@@ -129,8 +129,25 @@ tombe.
 
 ### Pouvoir discriminant
 
-Champ ajouté au gabarit le 26/10/2026 (arbitrage PRO-20261026-033434), après l'ouverture de cette fiche : à écrire
-avant la publication de la page, par la session qui la conduit.
+Écrit le 06/11/2026, avec la version 1 du texte.
+
+- **Explications rivales réellement soutenues** : (a) un effet propre aux études (moyens, précarité, isolement,
+  examens) ; (b) la composition (les étudiants sont plus jeunes et plus souvent des femmes, qui déclarent et
+  subissent davantage la dégradation) ; (c) une dégradation commune à la génération, présente avant le supérieur.
+- **Témoins qui les départagent en ne changeant qu'une variable** : les non-étudiants du même âge et du même sexe
+  (seul témoin qui départage a de b et c : **non publié**, demandé à Santé publique France le 27/10/2026) ; les
+  lycéens (même génération, avant le supérieur : départage a de c sur le calendrier) ; les hommes du même âge (même
+  statut, autre sexe : mesure le poids de b).
+- **Surprise informative** : la hausse commence au milieu des années 2010, avant le covid et avant l'université, et
+  se concentre sur les jeunes femmes ; le statut d'étudiant, que le récit met au centre, est la seule variable
+  qu'aucune série publiée ne permet d'isoler.
+- **Explications départagées** : écartées — la hausse purement déclarative (soins, hospitalisations et suicides la
+  confirment), le covid comme origine (inflexion antérieure), l'inflation comme cause de la hausse de 2017-2021 ;
+  non départagées — a contre c. La page le dit dans la section « Que reste-t-il de spécifiquement étudiant ? ».
+- **Robustesse montrée par une variante calculée** : coudes compatibles 2015-2017 pour les femmes de 18-24 ans
+  (quatre variantes) ; simulation de composition de 0,57 à 0,71 point selon le champ et l'alignement des années.
+- **Levier ou risque éclairé** : cibler les jeunes femmes dès le lycée ; juger les mesures universitaires sur leurs
+  effets, l'origine d'un trouble ne désignant pas le lieu du remède.
 
 ### Limite
 
@@ -221,10 +238,16 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   (ventilation « étudiants » à vérifier). Extraction non faite.
 - Test décisif : non fait (écart des variations non publié ; demande à Santé publique France en attente de l'auteur) ;
   test du scénario 3 (méthodologies des séries non déclaratives) : non fait.
-- Scénarios d'architecture : non fait — trois à écrire : 1, les sept séquences de la pièce 01 (paradoxe, premier
-  témoin, deuxième témoin, avant la crise sanitaire, ce que les études ajoutent, réponses qui fonctionnent, frontière),
-  six maillons en tableau de confrontation ; 2, « deux témoins » ; 3, « trois instruments » (déclarer, soigner, agir),
-  si son test passe.
+- Scénarios d'architecture : fait — scénario 1 retenu par les arbitrages des pièces 03 et 06 (progression en cinq
+  questions, quatre résultats de la démonstration publique, six maillons en tableau de confrontation) ; le scénario 3
+  (« trois instruments ») y entre comme première section, son test étant passé (séries DREES depuis 2012). Scénario 2
+  non retenu : ses deux témoins sont repris aux sections 3 et 5.
+- Test décisif, mise à jour : demande envoyée par l'auteur à Santé publique France le 27/10/2026 (consignée dans la
+  base de contacts le 06/11) ; pas de réponse au 06/11. Le texte est écrit pour tenir sans elle (section 5).
+- Texte, version 1 : fait le 06/11/2026 —
+  `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\REDACTION\PAGE_v1_2026-11-06.md` (nombres encore saisis,
+  table d'origine de chaque valeur en fin de fichier ; EnCLASS 2024 et SIES n° 19 à relire à la source avant jeton).
+- Générateur, jetons, gardes, figures : non fait.
 - Panel avant : non fait (page nouvelle dont la réception décide du choix d'architecture : à faire sur les scénarios).
 - Gardes vues mordre : non fait (générateur à écrire).
 - Figures téléphone : non fait.
