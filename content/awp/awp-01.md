@@ -40,7 +40,7 @@ related_book: "anthropie-ordre-ici-dette-ailleurs"
 
 {{< canonical-definition >}}
 
-Plus précisément&nbsp;: tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur pose les principes du cadre anthropique.
+Plus précisément&nbsp;: tout ordre social local se construit en exportant son désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. Ce texte fondateur pose les principes du [cadre anthropique](/quest-ce-que-lanthropie/#anthropie-et-anthropique).
 
 ## Le point de départ
 
