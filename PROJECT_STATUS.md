@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-06 — Délais : postes d'internat par spécialité (second levier de l'État) — poussé seul
+
+- Demande de l'auteur. Section « Qui décide du nombre d'étudiants admis ? » de `/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/`
+  (FR et EN) : postes de médecine générale ouverts 3 221 → 3 593 → 4 070 (2024-2027), total 7 974 → 10 260, part stable
+  (40,4 → 39,7 %) ; postes ouverts, non pourvus (aucune source officielle lue ne dit combien restent vacants).
+- `update_promesses_delais.py` : trois extraits authentifiés du JO archivés dans `scripts/sources_delais/` (téléchargés par
+  l'auteur, Légifrance refuse les scripts) ; colonnes LUES par position ; gardes P0 (empreinte, NOR, année), P1 (28 CHU,
+  somme = total publié), P2 (« ne progresse pas »), P3 (« hausse »), P4 (« plus tôt », impliquée par D1 et D3), Q2 (postes
+  dits « ouverts ») ; quatre mutations nouvelles vues mordre. `releve_le` 2026-11-06 ; CSV et JSON étendus ; figures inchangées.
+- Contrôles : `check-all --ci` 0, build 0, audit des liens 0, rendu et dates conformes, linter de langue 0 (FR, EN), relecture
+  phrase à phrase, instantanés refaits, recette 320-1 600 px OK. Chantier : `D:\PRO_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\CAS_INTEGRE\`.
+- Poussé seul, par cherry-pick sur `origin/main` dans un arbre séparé, à la demande de l'auteur : `8b2e374` (dette), retenu
+  par sa session jusqu'à contre-expertise, reste local et non poussé.
+
 ### 2026-11-05 (nuit) — Page « À propos » : passage du parcours retiré ; billets du Club de Mediapart requalifiés
 
 - `/a-propos/` FR et EN : paragraphe « Direction marketing européenne… » retiré (décision de l'auteur).

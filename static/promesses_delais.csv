@@ -57,6 +57,18 @@ medecins_actifs_diplome_etranger,2012,14163,médecins,"DREES RPPS, 1er janvier"
 medecins_actifs_ensemble,2012,215930,médecins,"DREES RPPS, 1er janvier"
 medecins_actifs_diplome_etranger,2026,27464,médecins,"DREES RPPS, 1er janvier"
 medecins_actifs_ensemble,2026,242185,médecins,"DREES RPPS, 1er janvier"
+postes_ouverts_medecine_generale_hors_cesp,2024-2025,2963,postes,"arrêté du 7 juillet 2024, JORF n° 0162 du 9 juillet 2024, texte 51 (JORFTEXT000049908586)"
+postes_ouverts_medecine_generale_cesp,2024-2025,258,postes,"arrêté du 7 juillet 2024, JORF n° 0162 du 9 juillet 2024, texte 51 (JORFTEXT000049908586)"
+postes_ouverts_medecine_generale,2024-2025,3221,postes,"arrêté du 7 juillet 2024, JORF n° 0162 du 9 juillet 2024, texte 51 (JORFTEXT000049908586)"
+postes_ouverts_toutes_specialites,2024-2025,7974,postes,"arrêté du 7 juillet 2024, JORF n° 0162 du 9 juillet 2024, texte 51 (JORFTEXT000049908586)"
+postes_ouverts_medecine_generale_hors_cesp,2025-2026,3314,postes,"arrêté du 30 juillet 2025, JORF n° 0176 du 31 juillet 2025, texte 36 (JORFTEXT000052009293)"
+postes_ouverts_medecine_generale_cesp,2025-2026,279,postes,"arrêté du 30 juillet 2025, JORF n° 0176 du 31 juillet 2025, texte 36 (JORFTEXT000052009293)"
+postes_ouverts_medecine_generale,2025-2026,3593,postes,"arrêté du 30 juillet 2025, JORF n° 0176 du 31 juillet 2025, texte 36 (JORFTEXT000052009293)"
+postes_ouverts_toutes_specialites,2025-2026,8919,postes,"arrêté du 30 juillet 2025, JORF n° 0176 du 31 juillet 2025, texte 36 (JORFTEXT000052009293)"
+postes_ouverts_medecine_generale_hors_cesp,2026-2027,3758,postes,"arrêté du 4 août 2026, JORF n° 0181 du 5 août 2026, texte 15 (JORFTEXT000054618874)"
+postes_ouverts_medecine_generale_cesp,2026-2027,312,postes,"arrêté du 4 août 2026, JORF n° 0181 du 5 août 2026, texte 15 (JORFTEXT000054618874)"
+postes_ouverts_medecine_generale,2026-2027,4070,postes,"arrêté du 4 août 2026, JORF n° 0181 du 5 août 2026, texte 15 (JORFTEXT000054618874)"
+postes_ouverts_toutes_specialites,2026-2027,10260,postes,"arrêté du 4 août 2026, JORF n° 0181 du 5 août 2026, texte 15 (JORFTEXT000054618874)"
 cursus_mg_premier_cycle_semestres,,6,,texte en vigueur (Légifrance)
 cursus_mg_deuxieme_cycle_semestres,,6,,texte en vigueur (Légifrance)
 cursus_mg_troisieme_cycle_annees,,4,,texte en vigueur (Légifrance)

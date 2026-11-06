@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-12",
+ "releve_le": "2026-11-06",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Légifrance (DILA), DREES, ONDPS, Bulletin officiel santé",
  "meta": {
   "page": "https://stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/",
@@ -60,6 +60,18 @@
    "dd76_pdf": {
     "id": "drees_DD76_2021.pdf, page 5 (extrait archivé)",
     "sha256": "8ca17d6661cb7ae742cf71e4dd043ca8ead9c72ee8127cbaddb4b101c47e6ed4"
+   },
+   "postes_2024": {
+    "id": "arrêté du 7 juillet 2024, JORF n° 0162 du 9 juillet 2024, texte 51 (JORFTEXT000049908586)",
+    "sha256": "af991a269b2123869ee2662d085ab5014fbb7f4e0d295d249b496d6f100495c8"
+   },
+   "postes_2025": {
+    "id": "arrêté du 30 juillet 2025, JORF n° 0176 du 31 juillet 2025, texte 36 (JORFTEXT000052009293)",
+    "sha256": "92a8cd27486c25f6edb2fc0cc89c351031c9474bda6e96448d94a06961d865f6"
+   },
+   "postes_2026": {
+    "id": "arrêté du 4 août 2026, JORF n° 0181 du 5 août 2026, texte 15 (JORFTEXT000054618874)",
+    "sha256": "d067350756f90ceec9e35b62381e371e0594a700280fa7dd0991e678edf0749b"
    }
   },
   "definitions": {
@@ -71,6 +83,7 @@
    "onp": "objectif national pluriannuel de professionnels à former, fixé par l'État pour 2021-2025 (arrêté du 13 septembre 2021, selon l'ONDPS) ; un nombre à former, ni des admis ni des diplômés",
    "total_2016_2020": "somme sur 5 ans du numerus clausus total, passerelles comprises (ONDPS, note 6) ; lu sur l'image de la figure 2, relu le 12/10/2026, contrôlé par la hausse de 27 % et la moyenne annuelle de 8 700 places imprimées dans le texte",
    "diplome_etranger": "médecins actifs au 1er janvier dont le diplôme a été obtenu à l'étranger : un stock, pas un flux d'arrivées ; le lieu du diplôme ne dit pas la nationalité",
+   "postes_internat_ouverts": "postes OUVERTS par les arrêtés annuels aux étudiants qui entrent en troisième cycle (internat), par spécialité : annexe I hors contrat d'engagement de service public (CESP), annexe II CESP ; ce ne sont pas des postes pourvus ; lus par position dans les extraits du JO authentifiés, somme des 28 CHU égale au total publié",
    "debut_consolidation": "date PRÉVUE par l'instruction du 21 mai 2026 (document non opposable), non constatée au relevé"
   },
   "ecart_documente": {
@@ -87,6 +100,7 @@
   "D5 : DREES = ONDPS sur 2001-2015 ; ecart publie 2016-2020 : +101",
   "D6 : admis 2021-2025 (55078), capacites 2025, ONP (51505) controles par la somme et par le texte du PDF ; D6 bis : total 2016-2020 (43518) compatible avec « 27 % » et « 8 700 places »",
   "D7 : diplome a l'etranger 6.6 % (2012) -> 11.3 % (2026), stock",
+  "P0-P3 : postes d'internat 2024/2025/2026, 28 CHU par annexe, somme = total publie ; medecine generale 3221 -> 3593 -> 4070 ; part 40.4 -> 39.7 %",
   "Q1-Q2, T2-T4 : pages FR et EN avec front matter, carte, libelles des figures",
   "D1 bis : 36 citations des textes retrouvees mot pour mot ; D1 ter : 35 traductions, nombres controles",
   "parite des 4 figures telephone (16 valeurs dessinees) ; Q1-Q2 sur les fiches Reutiliser"
@@ -175,6 +189,32 @@
    "2023": 10882,
    "2024": 10947,
    "2025": 11133
+  },
+  "postes_internat_ouverts": {
+   "2024-2025": {
+    "mg_I": 2963,
+    "mg_II": 258,
+    "tot_I": 7689,
+    "tot_II": 285,
+    "mg": 3221,
+    "tot": 7974
+   },
+   "2025-2026": {
+    "mg_I": 3314,
+    "mg_II": 279,
+    "tot_I": 8607,
+    "tot_II": 312,
+    "mg": 3593,
+    "tot": 8919
+   },
+   "2026-2027": {
+    "mg_I": 3758,
+    "mg_II": 312,
+    "tot_I": 9914,
+    "tot_II": 346,
+    "mg": 4070,
+    "tot": 10260
+   }
   }
  },
  "affichage": {
@@ -216,11 +256,25 @@
   "hausse_quinquennale": "27",
   "hausse_drees": "26",
   "ecart_2016_2020": "101",
+  "pg_mg_24": "3 221",
+  "pg_tot_24": "7 974",
+  "pg_part_24": "40,4",
+  "pg_mg_25": "3 593",
+  "pg_tot_25": "8 919",
+  "pg_part_25": "40,3",
+  "pg_mg_26": "4 070",
+  "pg_tot_26": "10 260",
+  "pg_part_26": "39,7",
+  "pg_an_24": "2024-2025",
+  "pg_an_25": "2025-2026",
+  "pg_an_26": "2026-2027",
+  "pg_hausse_mg": "849",
+  "pg_internat": "quatre",
   "etr_p12": "6,6",
   "etr_p26": "11,3",
   "etr_26": "27 464",
   "tot_26": "242 185",
-  "releve_le": "12/10/2026 (textes lus sur Légifrance les 05, 06, 11 et 12/10/2026 ; instruction du 21 mai 2026 ; DREES, 2 juillet 2026 ; ONDPS, 19 décembre 2025)",
+  "releve_le": "06/11/2026 (textes lus sur Légifrance les 05, 06, 11 et 12/10/2026 ; instruction du 21 mai 2026 ; DREES, 2 juillet 2026 ; ONDPS, 19 décembre 2025 ; arrêtés de postes d'internat, JO de 2024 à 2026)",
   "cit_cycle1": "Le diplôme de formation générale en sciences médicales sanctionne le premier cycle ; il comprend six semestres de formation",
   "cit_cycle2": "Le diplôme de formation approfondie en sciences médicales, défini au présent arrêté, sanctionne le deuxième cycle ; il comprend six semestres de formation",
   "cit_mg": "qui, pour la spécialité de médecine générale, est d'une durée de quatre années",
@@ -333,11 +387,25 @@
   "hausse_quinquennale": "27",
   "hausse_drees": "26",
   "ecart_2016_2020": "101",
+  "pg_mg_24": "3,221",
+  "pg_tot_24": "7,974",
+  "pg_part_24": "40.4",
+  "pg_mg_25": "3,593",
+  "pg_tot_25": "8,919",
+  "pg_part_25": "40.3",
+  "pg_mg_26": "4,070",
+  "pg_tot_26": "10,260",
+  "pg_part_26": "39.7",
+  "pg_an_24": "2024-2025",
+  "pg_an_25": "2025-2026",
+  "pg_an_26": "2026-2027",
+  "pg_hausse_mg": "849",
+  "pg_internat": "four",
   "etr_p12": "6.6",
   "etr_p26": "11.3",
   "etr_26": "27,464",
   "tot_26": "242,185",
-  "releve_le": "12 October 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; DREES, 2 July 2026; ONDPS, 19 December 2025)",
+  "releve_le": "6 November 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; DREES, 2 July 2026; ONDPS, 19 December 2025; orders on residency posts, Journal officiel 2024 to 2026)",
   "cit_cycle1": "Le diplôme de formation générale en sciences médicales sanctionne le premier cycle ; il comprend six semestres de formation",
   "cit_cycle2": "Le diplôme de formation approfondie en sciences médicales, défini au présent arrêté, sanctionne le deuxième cycle ; il comprend six semestres de formation",
   "cit_mg": "qui, pour la spécialité de médecine générale, est d'une durée de quatre années",
