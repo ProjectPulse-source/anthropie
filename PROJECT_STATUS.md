@@ -52,7 +52,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-06 — Dossier dette : contre-expertise PRO-20261105-193614 appliquée (C1-C8, R, N1, D1-D3) — NON commité, NON poussé
+### 2026-11-06 — Dossier dette : contre-expertise PRO-20261105-193614 appliquée (C1-C8, R, N1, D1-D3) — commité (`ef32658`), poussé le 06/11 sur demande de l'auteur
 
 Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261105-193614_arbitrage.md`. Reprend le commit `8b2e374`.
 - C1 « Peut-elle baisser », FAQ : « Un excédent primaire suffit-il à faire baisser le ratio dette/PIB ? Non. » chiffrée sur
@@ -77,7 +77,17 @@ Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261105-193614_arb
   rendu, dates, liens 0 ; relecture phrase à phrase du texte servi (10 pages) puis 10 instantanés ; `dates-affichage --ecrire`
   (4 pages, fond). Non fait : recette visuelle 390 px dans un navigateur (seules les figures ont été vues).
 
-### 2026-11-06 (suite) — Promesses : points ouverts page par page traités (§ 2 de la fiche de reprise) — commité, NON poussé
+### 2026-11-06 (matin) — Budget 2027 : le texte rejeté par l'Assemblée (4/11), le Sénat examine le texte initial
+
+- Le site affichait depuis le 5/11 « art. 84 supprimé en commission, séance à venir » et les votes du 19/10 comme l'état du
+  texte, alors que l'Assemblée avait rejeté le projet le 4/11 (ticket de veille n° 59, ouvert le 6/11 à 0 h 28 :
+  « première partie non adoptée, conséquences à écrire à la main »). Registre des votes, générateur, frise, figure,
+  cartes de partage, pages `/budget-2027-votre-commune/` et `/dette-publique-collectivites-locales/` (FR, EN) et
+  échéances du registre des sources (Sénat : 20/11, 28-29/11, 2/12, 9/12) mis à jour. Détail : fiche de conception.
+- Branche `plf-rejet-0611` tirée d'`origin/main` (le `main` local porte `8b2e374`, dette, non poussé exprès).
+
+
+### 2026-11-06 (suite) — Promesses : points ouverts page par page traités (§ 2 de la fiche de reprise) — poussé seul (cherry-pick sur origin/main ; `8b2e374`, dette, reste local)
 
 - **Adopter** : correction d'une affirmation publiée (art. 40) : « l'Assemblée n'admet aucune compensation d'une charge » ;
   la fiche n° 52 dit que le Bureau l'admet au dépôt d'une proposition de loi (citation `cit_fiche52c`, vérifiée mot pour mot),
@@ -96,7 +106,7 @@ Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261105-193614_arb
 - Contrôles : `check-all --ci` 0, build 0, liens 0, rendu conforme, dates 0, langue 0, relecture et instantanés (8 pages),
   recette 320-1 600 OK.
 
-### 2026-11-06 — Délais : postes d'internat par spécialité (second levier de l'État) — commité, NON poussé
+### 2026-11-06 — Délais : postes d'internat par spécialité (second levier de l'État) — poussé seul
 
 - Demande de l'auteur. Section « Qui décide du nombre d'étudiants admis ? » de `/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/`
   (FR et EN) : postes de médecine générale ouverts 3 221 → 3 593 → 4 070 (2024-2027), total 7 974 → 10 260, part stable
@@ -107,9 +117,10 @@ Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261105-193614_arb
   dits « ouverts ») ; quatre mutations nouvelles vues mordre. `releve_le` 2026-11-06 ; CSV et JSON étendus ; figures inchangées.
 - Contrôles : `check-all --ci` 0, build 0, audit des liens 0, rendu et dates conformes, linter de langue 0 (FR, EN), relecture
   phrase à phrase, instantanés refaits, recette 320-1 600 px OK. Chantier : `D:\PRO_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\CAS_INTEGRE\`.
-- **Non poussé** : `main` porte aussi `8b2e374` (dette), retenu par sa session jusqu'à contre-expertise.
+- Poussé seul, par cherry-pick sur `origin/main` dans un arbre séparé, à la demande de l'auteur : `8b2e374` (dette), retenu
+  par sa session jusqu'à contre-expertise, reste local et non poussé.
 
-### 2026-11-05 (nuit) — Reprise de forme du dossier dette (P2 de l'audit) — commitée, NON poussée : contre-expertise d'abord
+### 2026-11-05 (nuit) — Reprise de forme du dossier dette (P2 de l'audit) — commitée ; poussée le 06/11 avec ef32658, après contre-expertise (PRO-20261105-193614)
 
 - « Peut-elle baisser » : FAQ « excédent primaire » sur 1998 (jeton `exc_hausse`, arrêt si vide ; 2007 était en déficit primaire) ;
   bornes « fin 1995 » (jeton `d1_avant`) ; repli « Mis en danger par » (1 100 mots) en six paragraphes ; Fipeco daté (avril 2026) ; journal.

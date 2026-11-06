@@ -38,6 +38,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolu
   sources:
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=fr"
     - "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
+    - "https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en"
   mots: ["dette publique", "France", "excédent primaire", "solde primaire stabilisant", "taux implicite", "croissance nominale", "désendettement", "Eurostat"]
   fichiers: ["dette_baisse.csv", "dette_baisse.json"]
 faq:

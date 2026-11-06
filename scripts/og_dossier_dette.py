@@ -624,10 +624,16 @@ def figure_plf_mini(d: ImageDraw.ImageDraw, mesures: list, retires: set, lang: s
         v = ("%.1f" % m["md"]) if lang == "en" else ("%.1f" % m["md"]).replace(".", ",")
         d.text((x0 + w + 12, y + 2), v, font=font("inter", 22, 600), fill=(10, 10, 14))
     en = lang == "en"
-    d.text((x0, top + 5 * pas + 8), "€ billion, bill as tabled; hollow: deleted" if en
-           else "Md€, projet déposé ; évidé : supprimé", font=font("inter", 17, 400), fill=URL_GREY)
-    d.text((x0, top + 5 * pas + 30), "or not adopted in plenary" if en
-           else "ou non adopté en séance", font=font("inter", 17, 400), fill=URL_GREY)
+    if retires:
+        d.text((x0, top + 5 * pas + 8), "€ billion, bill as tabled; hollow: deleted" if en
+               else "Md€, projet déposé ; évidé : supprimé", font=font("inter", 17, 400), fill=URL_GREY)
+        d.text((x0, top + 5 * pas + 30), "or not adopted in plenary" if en
+               else "ou non adopté en séance", font=font("inter", 17, 400), fill=URL_GREY)
+    else:  # texte rejeté par l'Assemblée (06/11/2026) : les cinq mesures dans le texte transmis au Sénat
+        d.text((x0, top + 5 * pas + 8), "€ billion, bill as tabled; all in the" if en
+               else "Md€, projet déposé ; toutes dans le", font=font("inter", 17, 400), fill=URL_GREY)
+        d.text((x0, top + 5 * pas + 30), "bill sent to the Senate" if en
+               else "texte transmis au Sénat", font=font("inter", 17, 400), fill=URL_GREY)
 
 
 def carte_plf_communes() -> None:
@@ -641,10 +647,31 @@ def carte_plf_communes() -> None:
     c, A, E = j["calcul"], j["affichage"], j.get("affichage_en")
     art = {"cpeb": 37, "fctva": 35, "tva": 36, "ministeres": None, "dilico": 84}
     retires = {m["cle"] for m in c["plf_mesures"] if art[m["cle"]] in c["plf_supprimes"]}
-    if len(retires) != 3 or len(c["plf_mesures"]) != 5:
-        fail("carte budget 2027 : « trois mesures sur cinq » n'est plus vrai dans les données")
     if not E:
         fail("carte budget 2027 EN : bloc affichage_en absent")
+    if c.get("plf_rejet"):
+        # 06/11/2026 : texte rejeté par l'Assemblée ; garde de l'accroche « les cinq mesures reviennent au Sénat ».
+        if retires or len(c["plf_mesures"]) != 5 or c.get("plf_rejet_pour") != 0:
+            fail("carte budget 2027 : « texte rejeté, cinq mesures au Sénat » n'est plus vrai dans les données")
+        carte("og-budget-2027-commune.jpg",
+              ["Budget 2027 :", "tout revient au Sénat"],
+              "Texte rejeté par l'Assemblée nationale : le Sénat examine les cinq mesures visant les collectivités.",
+              "PLF %s · état au %s" % (A["plf_edition"], A["plf_etat_au"]),
+              "stephane-lalut.com/budget-2027-votre-commune/",
+              lambda d: figure_plf_mini(d, c["plf_mesures"], retires),
+              [(C2, "Projet déposé : %s Md€ (somme arithmétique)" % A["plf_somme"]),
+               (URL_GREY, "Rejet le %s ; Sénat dès le %s" % (A["plf_rejet_date"].rsplit(" ", 1)[0], A["plf_senat_debut"].rsplit(" ", 1)[0]))])
+        carte("og-budget-2027-commune-en.jpg",
+              ["Budget 2027:", "all back to the Senate"],
+              "Bill rejected by the National Assembly: the Senate examines all five measures aimed at local authorities.",
+              "Draft budget bill %s · state on %s" % (E["plf_edition"], E["plf_etat_au"]),
+              "stephane-lalut.com/en/2027-budget-your-municipality/",
+              lambda d: figure_plf_mini(d, c["plf_mesures"], retires, "en"),
+              [(C2, "Bill as tabled: €%s bn (arithmetic sum)" % E["plf_somme"]),
+               (URL_GREY, "Rejected on %s; Senate from %s" % (E["plf_rejet_date"].rsplit(" ", 1)[0], E["plf_senat_debut"].rsplit(" ", 1)[0]))])
+        return
+    if len(retires) != 3 or len(c["plf_mesures"]) != 5:
+        fail("carte budget 2027 : « trois mesures sur cinq » n'est plus vrai dans les données")
     carte("og-budget-2027-commune.jpg",
           ["Budget 2027 :", "ce qu'il en reste"],
           "Trois des cinq mesures visant les collectivités écartées en séance.",

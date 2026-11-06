@@ -66,6 +66,12 @@ def main():
     for e in v.get("etapes", []):
         if e["seance"] not in hors and norm(e["citation"]) not in textes[e["seance"]]:
             sys.exit(f"ECHEC : etape {e['etape']} : « {e['citation']} » introuvable dans {e['seance']}")
+        # 06/11/2026 : le scrutin d'une etape (rejet de la premiere partie, 0 pour, 458 contre) se relit comme celui d'un article.
+        if "pour" in e and e["seance"] not in hors and \
+                f"Pour l’adoption {e['pour']} Contre {e['contre']}" not in textes[e["seance"]]:
+            sys.exit(f"ECHEC : etape {e['etape']} : scrutin {e['pour']}-{e['contre']} introuvable")
+        if e["seance"] not in hors:
+            print(f"etape {e['etape']} -- citation retrouvee" + (" + scrutin" if "pour" in e else ""))
     # Decisions de commission (05/11/2026) : citees sur la page de l'amendement archivee (hors depot).
     for c in v.get("commission", []):
         if d is None:

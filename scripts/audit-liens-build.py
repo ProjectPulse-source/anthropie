@@ -30,7 +30,7 @@ BASE = "https://stephane-lalut.com"
 args = [a for a in sys.argv[1:] if not a.startswith("--")]
 BUILD = args[0] if args else "public"
 OUT = sys.argv[sys.argv.index("--json") + 1] if "--json" in sys.argv else None
-FICHIER = re.compile(r"\.(jpg|jpeg|png|svg|pdf|json|csv|xml|txt|bib|ris|enw|webp|ico|js|css|mp3|zip|woff2?)$", re.I)
+FICHIER = re.compile(r"\.(jpg|jpeg|png|svg|pdf|json|csv|xml|txt|bib|ris|enw|webp|ico|js|css|mp3|zip|xlsx|xls|ods|docx|woff2?)$", re.I)
 MENTION_FR = re.compile(r"\b(in French|French only|French edition|en français)\b", re.I)
 
 if not os.path.isdir(BUILD):

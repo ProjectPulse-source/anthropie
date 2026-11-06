@@ -555,7 +555,7 @@ def plf_mesures() -> dict:
 
 
 PLF_VOTES = DON / "plf_votes.json"
-PLF_VOTES_SHA = "72bbcc55b232f994dfa52ca336e22c5067fa8093915286d43cc394e63ec17d17"
+PLF_VOTES_SHA = "71adcd6b0af9f0671a0248bc8d0df839e690c2b15e35c48850d69ca7ab383246"  # 06/11/2026 : rejet du texte, calendrier du Senat
 # Etat du projet au Parlement (22/10/2026, arbitrage de l'auteur, piece 1807_Communes.txt) : chaque resultat est une
 # citation verbatim du compte rendu officiel, retrouvee par sources_collectivites/verifier_plf_votes.py dans le compte
 # rendu archive (empreinte dans plf_votes.json). Mesure -> article qui la porte ; None = credits de seconde partie.
@@ -574,10 +574,14 @@ def plf_resume(r: dict, lang: str) -> str:
              if a["article"] in PLF_LIB and a["statut"] == st]
         return (", ".join(x[:-1]) + et + x[-1]) if len(x) > 1 else (x[0] if x else "")
     sup, rej = liste("supprime"), liste("non_adopte")
+    # Texte rejeté le 4/11/2026 : les votes sur les articles deviennent l'histoire d'une lecture sans texte adopté.
+    pqp = bool(r.get("plf_rejet"))
     if L:
-        parts = [p_ for p_ in (sup and "deleted " + sup, rej and "did not adopt " + rej) if p_]
+        parts = [p_ for p_ in (sup and ("had deleted " if pqp else "deleted ") + sup,
+                               rej and ("had not adopted " if pqp else "did not adopt ") + rej) if p_]
     else:
-        parts = [p_ for p_ in (sup and "a supprimé " + sup, rej and "n'a pas adopté " + rej) if p_]
+        parts = [p_ for p_ in (sup and ("avait supprimé " if pqp else "a supprimé ") + sup,
+                               rej and ("n'avait pas adopté " if pqp else "n'a pas adopté ") + rej) if p_]
     if not parts:
         fail("registre des votes : aucune mesure supprimee ni rejetee -- la phrase de synthese de la page ne tient plus")
     return ", ".join(parts)
@@ -593,7 +597,9 @@ STATUT_COURT = {"supprime": ("supprimé en séance", "deleted in plenary"),
                 "adopte_modifie": ("adopté, modifié", "adopted as amended"), "adopte": ("adopté", "adopted"),
                 None: ("non encore examiné", "not yet examined"),
                 # 05/11/2026 : décision de commission seulement ; la séance discute le texte du Gouvernement (Const., art. 42).
-                "commission_suppression": ("supprimé en commission, séance à venir", "deleted in committee, plenary to come")}
+                "commission_suppression": ("supprimé en commission, séance à venir", "deleted in committee, plenary to come"),
+                # 06/11/2026 : texte rejeté par l'Assemblée le 4/11 ; le Sénat examine le texte initial du Gouvernement.
+                "senat": ("texte initial, au Sénat", "initial text, before the Senate")}
 
 
 def date_fr(iso: str) -> str:
@@ -613,6 +619,9 @@ def plf_votes(r: dict) -> dict:
         fail("registre des votes : edition %s != projet de loi archive %s" % (v["edition"], r["plf_edition"]))
     arts = {a["article"]: a for a in v["articles"]}
     cion = {c["article"]: c for c in v.get("commission", []) if c["statut"] == "suppression_adoptee"}
+    rejet, sen = v.get("texte_rejete"), v.get("senat")
+    if rejet and not sen:
+        fail("registre des votes : texte rejete sans calendrier du Senat (cle `senat`)")
     dates = sorted({v["seances"][a["seance"]]["date"] for a in v["articles"]})
     for m in r["plf_mesures"]:
         a = arts.get(PLF_ARTICLE[m["cle"]])
@@ -630,19 +639,59 @@ def plf_votes(r: dict) -> dict:
             m["etat"], m["etat_en"] = "seconde partie, non examinée", "second part, not yet examined"
         m["statut_court"], m["statut_court_en"] = STATUT_COURT[a["statut"] if a else
                                                                ("commission_suppression" if PLF_ARTICLE[m["cle"]] in cion else None)]
+        if rejet:
+            # Le rejet de la première partie emporte le texte (LOLF, art. 42) : chaque vote de l'Assemblée devient un
+            # antécédent ; la mesure est dans le texte transmis au Sénat, à la date que donne son ordre du jour.
+            n_ = PLF_ARTICLE[m["cle"]]
+            if a:
+                d_ = v["seances"][a["seance"]]["date"]
+                hist = "art. %d %s en séance le %s" % (a["article"], STATUT[a["statut"]][0], date_fr(d_))
+                hist_en = "art. %d %s in plenary on %s" % (a["article"], STATUT[a["statut"]][1], date_en(date_fr(d_)))
+            elif n_ in cion:
+                hist = "art. %d supprimé en commission le %s" % (n_, date_fr(cion[n_]["date"]))
+                hist_en = "art. %d deleted in committee on %s" % (n_, date_en(date_fr(cion[n_]["date"])))
+            else:
+                hist, hist_en = "seconde partie, non examinée", "second part, not examined"
+            if n_ == 84:
+                quand = ", examen le %s" % date_fr(sen["mission_rct"])
+                quand_en = ", examined on %s" % date_en(date_fr(sen["mission_rct"]))
+            else:
+                quand, quand_en = "", ""
+            if a or n_ in cion:
+                m["etat"] = ("dans le texte transmis au Sénat%s ; à l'Assemblée, %s, avant le rejet de l'ensemble du texte le %s"
+                             % (quand, hist, date_fr(rejet["date"])))
+                m["etat_en"] = ("in the bill sent to the Senate%s; in the Assembly, %s, before the whole bill was rejected on %s"
+                                % (quand_en, hist_en, date_en(date_fr(rejet["date"]))))
+            else:
+                m["etat"] = ("dans le texte transmis au Sénat%s ; seconde partie, que l'Assemblée n'a pas examinée avant de "
+                             "rejeter l'ensemble du texte le %s" % (quand, date_fr(rejet["date"])))
+                m["etat_en"] = ("in the bill sent to the Senate%s; second part, which the Assembly did not examine before "
+                                "rejecting the whole bill on %s" % (quand_en, date_en(date_fr(rejet["date"]))))
+            m["etat_fig"] = "texte transmis au Sénat%s ; Assemblée : %s" % (quand, hist)
+            m["etat_fig_en"] = "bill sent to the Senate%s; Assembly: %s" % (quand_en, hist_en)
+            m["statut_court"], m["statut_court_en"] = STATUT_COURT["senat"]
     hausse = re.search(r"de ([\d ]+) € à ([\d ]+) €", arts[34]["precision"])
     if not hausse:
         fail("registre des votes : montants de la DGF illisibles dans la precision de l'article 34")
     av, ap = (int(x.replace(" ", "")) for x in hausse.groups())
     if abs(av / 1e9 - r["plf_dgf"]) > 1e-6:
         fail("registre des votes : DGF initiale de l'article 34 != montant lu dans le projet archive")
-    dgf_court = STATUT_COURT[arts[34]["statut"]]
-    return {"plf_votes": v["articles"], "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
+    dgf_court = STATUT_COURT["senat" if rejet else arts[34]["statut"]]
+    supp_an = sorted(a["article"] for a in v["articles"] if a["statut"] in ("supprime", "non_adopte"))
+    extra = {}
+    if rejet:
+        e_ = next(x for x in v["etapes"] if x["etape"] == "premiere_partie_rejetee")
+        extra = {"plf_rejet": rejet["date"], "plf_rejet_contre": e_["contre"], "plf_rejet_pour": e_["pour"],
+                 "plf_senat_debut": sen["debut"], "plf_senat_rct": sen["mission_rct"],
+                 "plf_senat_amdt": sen["amendements_rct"], "plf_senat_vote": sen["vote_ensemble"]}
+    return {**extra, "plf_votes": v["articles"], "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
             "plf_statut_dgf": dgf_court[0], "plf_statut_dgf_en": dgf_court[1],
             "plf_etape_suivante": v["etape_suivante"], "plf_etape_suivante_en": v["etape_suivante_en"],
             "plf_dgf_an_m": (ap - av) / 1e6, "plf_dgf_an": ap / 1e9,
             "plf_commission": v.get("commission", []),
-            "plf_supprimes": sorted(a["article"] for a in v["articles"] if a["statut"] in ("supprime", "non_adopte"))}
+            # Mesures retirées du texte EN DISCUSSION : aucune après le rejet (le Sénat examine le texte initial) ;
+            # celles que l'Assemblée avait écartées restent dans plf_supprimes_an (historique, gardes de prose).
+            "plf_supprimes": [] if rejet else supp_an, "plf_supprimes_an": supp_an}
 
 
 def calculer(J: Jeu) -> tuple[dict, list[dict]]:
@@ -993,11 +1042,13 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         ("projet de loi de finances : « augmenter de X alors que la somme arithmétique des mesures atteint Y » (Y > X > 0 ; "
          "leur différence n'est jamais présentée comme un montant prélevé : garde de prose)",
          r["plf_somme"] > r["plf_ressources_md"] > 0),
-        ("état du texte (chapô de /budget-2027-votre-commune/) : « trois des cinq mesures », supprimées ou non adoptées",
-         len(r["plf_mesures"]) == 5 and sum(PLF_ARTICLE[m_["cle"]] in r["plf_supprimes"] for m_ in r["plf_mesures"]) == 3),
+        ("état du texte (chapô de /budget-2027-votre-commune/) : l'Assemblée « avait écarté trois des cinq mesures »",
+         len(r["plf_mesures"]) == 5 and sum(PLF_ARTICLE[m_["cle"]] in r["plf_supprimes_an"] for m_ in r["plf_mesures"]) == 3),
         ("état du texte (même chapô) : « dont les deux plus importantes en montant » parmi elles",
-         all(PLF_ARTICLE[m_["cle"]] in r["plf_supprimes"]
+         all(PLF_ARTICLE[m_["cle"]] in r["plf_supprimes_an"]
              for m_ in sorted(r["plf_mesures"], key=lambda x: -x["md"])[:2])),
+        ("état du texte (chapô, 06/11/2026) : « texte rejeté », « les cinq mesures sont dans le texte transmis au Sénat »",
+         bool(r.get("plf_rejet")) and r["plf_supprimes"] == [] and r.get("plf_rejet_pour") == 0),
         ("projet de loi de finances : somme arithmétique des cinq montants = somme des lignes du tableau",
          abs(r["plf_somme"] - sum(m_["md"] for m_ in r["plf_mesures"])) < 1e-9 and len(r["plf_mesures"]) == 5),
         ("projet de loi de finances : la somme affichée égale la somme des montants affichés (arrondis au dixième)",
@@ -1062,6 +1113,13 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "plf_etape_suivante": r["plf_etape_suivante_en"] if lang == "en" else r["plf_etape_suivante"],
         "plf_dgf_an_m": fr1(r["plf_dgf_an_m"], 0), "plf_dgf_an": fr1(r["plf_dgf_an"]),
         "plf_vote_resume": plf_resume(r, lang),
+        **({"plf_rejet_date": date_en(date_fr(r["plf_rejet"])) if lang == "en" else date_fr(r["plf_rejet"]),
+            "plf_rejet_contre": str(r["plf_rejet_contre"]), "plf_rejet_pour": str(r["plf_rejet_pour"]),
+            "plf_senat_debut": date_en(date_fr(r["plf_senat_debut"])) if lang == "en" else date_fr(r["plf_senat_debut"]),
+            "plf_senat_rct": date_en(date_fr(r["plf_senat_rct"])) if lang == "en" else date_fr(r["plf_senat_rct"]),
+            "plf_senat_amdt": date_en(date_fr(r["plf_senat_amdt"])) if lang == "en" else date_fr(r["plf_senat_amdt"]),
+            "plf_senat_vote": date_en(date_fr(r["plf_senat_vote"])) if lang == "en" else date_fr(r["plf_senat_vote"])}
+           if r.get("plf_rejet") else {}),
         **{"plf_etat_" + m_["cle"]: (m_["etat_en"] if lang == "en" else m_["etat"]) for m_ in r["plf_mesures"]},
         **{"plf_statut_" + m_["cle"]: (m_["statut_court_en"] if lang == "en" else m_["statut_court"]) for m_ in r["plf_mesures"]},
         "plf_statut_dgf": r["plf_statut_dgf_en"] if lang == "en" else r["plf_statut_dgf"],
@@ -1673,14 +1731,57 @@ PLF_TXT = {
 }
 
 
+# Texte rejeté par l'Assemblée (06/11/2026) : les cinq mesures sont dans le texte transmis au Sénat ; les votes de
+# l'Assemblée ne se lisent plus dans les barres (toutes pleines) mais dans la description et la note.
+PLF_TXT_REJET = {
+    "fr": dict(PLF_TXT["fr"],
+               titre="Projet de loi de finances pour {ed} : ce qu'il demande aux collectivités, dans le texte transmis au Sénat",
+               titre_m="Projet de loi de finances pour {ed} : ce qu'il demande aux collectivités",
+               leg_reste="dans le texte transmis au Sénat", leg_m_reste="En orange : dans le texte transmis au Sénat",
+               desc="Montants pour {ed} des cinq mesures du projet de loi de finances déposé visant les collectivités, en "
+                    "milliards d'euros : {liste}. Leur somme arithmétique, {somme}, ne mesure pas un prélèvement net. "
+                    "L'Assemblée nationale {resume} le {vote}, puis a rejeté l'ensemble du texte le {rejet} : les cinq "
+                    "mesures figurent dans le texte transmis au Sénat. État au {etat}.",
+               src="Projet de loi de finances pour {ed} (n° 3210) et avis n° 2026-5 du Haut Conseil des finances "
+                   "publiques ; état : Assemblée nationale, comptes rendus des séances du {vote} et du {rejet}{cion} ; "
+                   "Sénat, ordre du jour. État au {etat}.",
+               note="Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : "
+                    "elle ne mesure pas un prélèvement net. Le Sénat peut modifier chaque mesure avant la loi définitive.",
+               montre="Le projet déposé prévoyait cinq mesures visant les collectivités, dont la somme arithmétique "
+                      "atteignait {somme} milliards d'euros ; l'Assemblée nationale {resume}, puis a rejeté l'ensemble du "
+                      "texte le {rejet} : les cinq mesures figurent dans le texte transmis au Sénat."),
+    "en": dict(PLF_TXT["en"],
+               titre="Draft budget bill for {ed}: what it asks of local authorities, in the bill sent to the Senate",
+               titre_m="Draft budget bill for {ed}: what it asks of local authorities",
+               leg_reste="in the bill sent to the Senate", leg_m_reste="In orange: in the bill sent to the Senate",
+               desc="Amounts for {ed} of the five measures of the draft budget bill as tabled aimed at local authorities, "
+                    "in billions of euros: {liste}. Their arithmetic sum, {somme}, does not measure a net levy. The "
+                    "National Assembly {resume} on {vote}, then rejected the whole bill on {rejet}: all five measures are "
+                    "in the bill sent to the Senate. State on {etat}.",
+               src="Draft budget bill for {ed} (no. 3210) and opinion no. 2026-5 of the High Council of Public Finance; "
+                   "state: National Assembly, records of the sittings of {vote} and {rejet}{cion}; Senate, agenda. "
+                   "State on {etat}.",
+               note="Arithmetic sum of heterogeneous amounts, each assessed against the situation without the measure: it "
+                    "does not measure a net levy. The Senate may amend each measure before the final act.",
+               montre="The bill as tabled provided for five measures aimed at local authorities, whose arithmetic sum came "
+                      "to €{somme} billion; the National Assembly {resume}, then rejected the whole bill on {rejet}: all "
+                      "five measures are in the bill sent to the Senate."),
+}
+
+
+def _plf_txt(r, lang):
+    return (PLF_TXT_REJET if r.get("plf_rejet") else PLF_TXT)[lang]
+
+
 def _plf_vals(r, A, lang):
     L = "en" if lang == "en" else "fr"
     ms = sorted(r["plf_mesures"], key=lambda m: -m["md"])
     lignes = [(m["cle"], PLF_LIB_FIG[L][m["cle"]], lg.nombre(m["md"], 1, L), m["md"],
-               PLF_ARTICLE[m["cle"]] in r["plf_supprimes"], m["etat_en"] if L == "en" else m["etat"]) for m in ms]
+               PLF_ARTICLE[m["cle"]] in r["plf_supprimes"],
+               m.get("etat_fig_en", m["etat_en"]) if L == "en" else m.get("etat_fig", m["etat"])) for m in ms]
     liste = ("; " if L == "en" else " ; ").join("%s %s" % (lib, v) for _, lib, v, *_ in lignes)
     V = dict(ed=r["plf_edition"], somme=A["plf_somme"], vote=A["plf_vote_date"], etat=A["plf_etat_au"],
-             resume=A["plf_vote_resume"], liste=liste,
+             resume=A["plf_vote_resume"], liste=liste, rejet=A.get("plf_rejet_date", ""),
              # Décision de commission citée comme source de l'état qu'elle fonde (05/11/2026).
              cion="".join(("; finance committee, amendment %s (art. %d), %s" if L == "en" else
                            " ; commission des finances, amendement %s (art. %d), %s")
@@ -1698,15 +1799,19 @@ def _pied_plf(e, y0, t, lang, mobile=False):
 
 
 def fig_plf(r: dict, A: dict, lang: str = "fr") -> str:
-    T = PLF_TXT[lang]
+    T = _plf_txt(r, lang)
     lignes, V = _plf_vals(r, A, lang)
     H = 66 + 46 * len(lignes) + 20
     e = entete(H, "cp", T["titre"].format(**V), T["desc"].format(**V))
-    # legende : deux pastilles, dans l'ordre de lecture
-    e.append('<rect x="0" y="34" width="14" height="10" fill="#ffffff" stroke="%s" stroke-width="1.6" stroke-dasharray="3 2"/>' % ORANGE)
-    e.append(txt(20, 43, T["leg_retire"], TY_ANNOT, INK2))
-    e.append('<rect x="250" y="34" width="14" height="10" fill="%s"/>' % ORANGE)
-    e.append(txt(270, 43, T["leg_reste"], TY_ANNOT, INK2))
+    # legende : deux pastilles, dans l'ordre de lecture ; une seule quand aucune barre n'est evidee (texte rejete)
+    if any(l_[4] for l_ in lignes):
+        e.append('<rect x="0" y="34" width="14" height="10" fill="#ffffff" stroke="%s" stroke-width="1.6" stroke-dasharray="3 2"/>' % ORANGE)
+        e.append(txt(20, 43, T["leg_retire"], TY_ANNOT, INK2))
+        e.append('<rect x="250" y="34" width="14" height="10" fill="%s"/>' % ORANGE)
+        e.append(txt(270, 43, T["leg_reste"], TY_ANNOT, INK2))
+    else:
+        e.append('<rect x="0" y="34" width="14" height="10" fill="%s"/>' % ORANGE)
+        e.append(txt(20, 43, T["leg_reste"], TY_ANNOT, INK2))
     e.append(txt(W, 43, T["unite"], TY_AXE, MUTED, "end"))
     x0, larg = 300, 320
     vmax = max(l_[3] for l_ in lignes)
@@ -1726,13 +1831,13 @@ def fig_plf(r: dict, A: dict, lang: str = "fr") -> str:
 
 
 def fig_plf_m(r: dict, A: dict, lang: str, svg_d: str) -> str:
-    T = PLF_TXT[lang]
+    T = _plf_txt(r, lang)
     lignes, V = _plf_vals(r, A, lang)
     e, y = pied_figure.tete_mobile("cpm", T["titre_m"].format(**V), desc_de(svg_d), INK, FONT)
     for l_ in pied_figure.coupe(T["unite"], 38):
         y += 19
         e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, MUTED, esc(l_)))
-    for lib_, col in ((T["leg_m_retire"], MUTED), (T["leg_m_reste"], ORANGE)):
+    for lib_, col in (((T["leg_m_retire"], MUTED),) if any(l_[4] for l_ in lignes) else ()) + ((T["leg_m_reste"], ORANGE),):
         for l_ in pied_figure.coupe(lib_, 38):
             y += 19
             e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(l_)))
@@ -1765,7 +1870,7 @@ def fiches_plf(figs: dict, A: dict, A_en: dict, r: dict) -> dict:
         if not src or lic != LIC_PLF[lang]:
             fail("fiche %s : pied illisible dans le SVG" % fichier)
         _, V = _plf_vals(r, Aff, lang)
-        res[lang] = [dict(id="plf", fichier=fichier, titre=titre, montre=PLF_TXT[lang]["montre"].format(**V),
+        res[lang] = [dict(id="plf", fichier=fichier, titre=titre, montre=_plf_txt(r, lang)["montre"].format(**V),
                           source=src, precaution=note)]
     return res
 
@@ -1863,7 +1968,9 @@ def csv_texte(r: dict) -> str:
     w.writerow(["projet_loi_finances_dgf", "FR", r["plf_edition"], "%.3f" % r["plf_dgf"], "Md EUR",
                 "projet de loi de finances pour %d, article 34 (projet depose)" % r["plf_edition"]])
     w.writerow(["dgf_adoptee_assemblee_premiere_lecture", "FR", r["plf_edition"], "%.3f" % r["plf_dgf_an"], "Md EUR",
-                "Assemblee nationale, %s, article 34 amende (texte non definitif)" % r["plf_vote_dates"][-1]])
+                "Assemblee nationale, %s, article 34 amende (texte non definitif)" % r["plf_vote_dates"][-1]
+                + ("; vote tombe avec le rejet du texte le %s, le Senat examine le montant initial" % r["plf_rejet"]
+                   if r.get("plf_rejet") else "")])
     # Refonte du 11/10/2026 : la decomposition 2013-2017 dans les deux unites (contribution de chaque poste a la variation
     # du solde ; pour une depense, l'inverse de sa variation). Lignes AJOUTEES ; les lignes precedentes sont inchangees.
     cles = ["transferts_recus", "impots", "autres_recettes", "investissement", "autres_depenses"]

@@ -266,10 +266,11 @@
   "nature": "juridique (procédure parlementaire) : registre des votes à compléter (citation verbatim du compte rendu, verifier_plf_votes.py) et frise de la fiche (data/plf_procedure.json)",
   "echeances": [
    {"date": "2026-11-03", "etape": "vote solennel sur la première partie prévu le mardi 3 novembre (page de l'Assemblée lue le 23/10/2026) : non tenu, la discussion de la première partie se poursuivait (compte rendu du 3 novembre, registre relu le 05/11/2026)"},
-   {"date": "2026-11-05", "etape": "vote sur l'ensemble de la première partie, annoncé en séance le 3 novembre pour le 4 au soir ou le 5 novembre (compte rendu de la première séance du 3 novembre)"},
-   {"date": "2026-11-13", "etape": "examen en séance de la mission « Relations avec les collectivités territoriales » et de l'article 84, dont la commission des finances a adopté la suppression le 28 octobre (calendrier initial, JORF du 11/10/2026)"},
-   {"date": "2026-11-17", "etape": "vote solennel sur l'ensemble prévu et expiration du délai de 40 jours de l'Assemblée, mardi 17 novembre à minuit (Direction de la séance, organisation de la discussion budgétaire du 29/09/2026, annexe 1 : point de départ des délais le vendredi 9 octobre ; Constitution, art. 47)"},
-   {"date": "2026-12-02", "etape": "délai de quinze jours du Sénat s'il est saisi à l'expiration des 40 jours (Constitution, art. 47) : date conditionnelle, à recalculer sur la saisine effective"},
+   {"date": "2026-11-05", "etape": "vote sur l'ensemble de la première partie, annoncé en séance le 3 novembre pour le 4 au soir ou le 5 novembre (compte rendu de la première séance du 3 novembre) ; tenu le 4 novembre : première partie non adoptée (0 pour, 458 contre), texte rejeté (registre relu le 06/11/2026)"},
+   {"date": "2026-11-20", "etape": "début de l'examen par le Sénat du texte initial, sous réserve de sa transmission (ordre du jour du Sénat, page du 5 novembre archivée) : vérifier la transmission et le numéro du texte au Sénat"},
+   {"date": "2026-11-29", "etape": "vote du Sénat sur la première partie, prévu le samedi 28 novembre (éventuellement le 29) : registre des votes (Sénat) et statuts des articles 34 à 37"},
+   {"date": "2026-12-03", "etape": "Sénat : mission « Relations avec les collectivités territoriales » et article 84, le mercredi 2 décembre ; amendements jusqu'au 27 novembre à 11 heures"},
+   {"date": "2026-12-10", "etape": "Sénat : vote sur l'ensemble, le mercredi 9 décembre ; puis commission mixte paritaire éventuelle"},
    {"date": "2026-12-17", "etape": "expiration du délai de 70 jours, jeudi 17 décembre à minuit (même annexe ; mise en vigueur possible par ordonnance)"},
    {"date": "2026-12-31", "etape": "loi de finances promulguée en principe ; fiche et lots de courriels à revoir sur le texte définitif"}
   ]

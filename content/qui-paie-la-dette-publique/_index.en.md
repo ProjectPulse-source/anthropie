@@ -17,6 +17,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved
   description: "Compilation derived from official series: public debt by government subsector (INSEE) and holders of French central-government marketable debt securities (Banque de France via Agence France Trésor); taxes, contributions and public transfers by standard-of-living decile and by age, distributional national accounts 2023 (INSEE); exposure of each decile to the same €{qp.exp_effort} billion adjustment under three decisions (taxes, pensions, education), an accounting profile, not a simulation, with its robustness tests."
   couverture_temporelle: "2020/2026"
   couverture_spatiale: "France"
+  doi: "10.5281/zenodo.23993493"  # Zenodo concept DOI (always the latest version), published 6 November 2026; deposit = these files minus the 5 AFT shares (non-commercial terms)
   variables:
     - {nom: "Taxes, contributions and public transfers by standard-of-living decile", unite: "euros per consumption unit"}
     - {nom: "Share of people who are net beneficiaries", unite: "% of people"}
@@ -25,7 +26,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved
   sources:
     - "https://www.insee.fr/fr/statistiques/8974371"
     - "https://www.insee.fr/fr/statistiques/8574663"
-    - "https://www.aft.gouv.fr/"
+    - "https://www.insee.fr/fr/statistiques/serie/010777616"
+    - "https://www.aft.gouv.fr/fr/principaux-chiffres-dette"
   mots: ["public debt", "redistribution", "distributional national accounts", "INSEE", "who pays for public debt", "holders of public debt"]
   fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]
 faq:

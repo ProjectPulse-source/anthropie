@@ -14,6 +14,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolu
   description: "Compilation dérivée des séries officielles : dette publique par administration (INSEE) et détenteurs des titres négociables de l'État (Banque de France via l'Agence France Trésor) ; prélèvements et transferts publics par dixième de niveau de vie et par âge, comptes nationaux distribués 2023 (Insee) ; exposition des dixièmes à un même effort de {qp.exp_effort} milliards d'euros selon trois décisions — impôts, pensions, enseignement —, profil comptable et non simulation, avec ses tests de robustesse."
   couverture_temporelle: "2020/2026"
   couverture_spatiale: "France"
+  doi: "10.5281/zenodo.23993493"  # DOI de concept Zenodo (toujours la dernière version), publié le 06/11/2026 ; dépôt = ces fichiers moins les 5 parts de l'AFT (conditions non commerciales)
   variables:
     - {nom: "Prélèvements et transferts publics par dixième de niveau de vie", unite: "euros par unité de consommation"}
     - {nom: "Part des personnes bénéficiaires nettes", unite: "% des personnes"}
@@ -22,7 +23,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolu
   sources:
     - "https://www.insee.fr/fr/statistiques/8974371"
     - "https://www.insee.fr/fr/statistiques/8574663"
-    - "https://www.aft.gouv.fr/"
+    - "https://www.insee.fr/fr/statistiques/serie/010777616"
+    - "https://www.aft.gouv.fr/fr/principaux-chiffres-dette"
   mots: ["dette publique", "redistribution", "comptes nationaux distribués", "Insee", "qui paie la dette", "détenteurs de la dette"]
   fichiers: ["qui_paie_donnees.csv", "qui_paie_donnees.json"]
 faq:

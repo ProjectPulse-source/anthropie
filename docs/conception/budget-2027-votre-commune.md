@@ -213,3 +213,15 @@ une section de `/budget-2027-votre-commune/` (`#fiche`), non une page neuve — 
     (débat d'orientation budgétaire « s'il y a lieu ») ; accord de « an » / « year » sur la valeur affichée ;
   - non fait — contre-expertise de la fiche intégrée seule (motif : la pièce 12 a validé l'architecture ; à proposer à
     l'auteur si une décision en dépend) ; panel (même motif qu'au 22/10).
+- **Mise à jour d'état, 06/11/2026 : texte rejeté par l'Assemblée le 4/11.** Compte rendu de la deuxième séance du
+  4 novembre (scrutin sur la première partie : 0 pour, 458 contre ; « l'ensemble du projet de loi de finances pour 2027
+  est considéré comme rejeté »), LOLF art. 42 relu sur Légifrance, ordre du jour du Sénat (page du 5/11) archivés et cités
+  au registre des votes (`texte_rejete`, `senat`, étapes ; vérificateur étendu au scrutin d'une étape, vu mordre).
+  Générateur : chaque mesure « dans le texte transmis au Sénat », votes de l'Assemblée en historique (plus-que-parfait),
+  figure à cinq barres pleines, gardes réécrites (« texte rejeté, cinq mesures au Sénat », vue mordre) ; frise
+  (Assemblée faite, Sénat en cours) ; carte de partage « tout revient au Sénat ». Pages FR et EN (chapô, FAQ, résultat,
+  « Où en est le texte », limites, sources) et page collectivités. Étapes :
+  - fait — check-all --ci, build (code 0), liens, dates, rendu des pages touchées, LanguageTool FR et EN sur le texte
+    servi (faux positifs), relecture phrase à phrase des phrases changées, instantanés de relecture refaits ;
+  - non fait — contre-expertise et panel (motif : mise à jour d'état sur sources primaires citées mot pour mot ; aucune
+    lecture nouvelle des données) ; recette 320-1280 (motif : aucun changement de gabarit, figure aux mêmes dimensions).
