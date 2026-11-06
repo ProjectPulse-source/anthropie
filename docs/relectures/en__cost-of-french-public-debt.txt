@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /en/cost-of-french-public-debt/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /en/cost-of-french-public-debt/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What does French public debt actually cost?
 In 2025, French general government interest expenditure amounts to 65.7 billion euros, or 4.2% of its revenue.
@@ -18,7 +18,7 @@ It is a gross burden, for general government as a whole (central government, loc
 The scissors effect: twenty-five years of offset, then the turn
 Public debt (Q2 2026: 119.0% of GDP, INSEE, quarterly) and the interest burden of general government (2025: 2.2% of GDP, Eurostat, annual).
 Two separate scales, one shared unit: percent of GDP.
-Download · Cite · Data
+DownloadCiteData
 From 1995 to the turn of the 2020s the two curves open like a pair of scissors, until the interest burden bottoms out in 2020 (29.7 billion euros).
 The result in one sentence.
 From 1995 to 2020, the debt rose from 57.8% to over 100% of GDP while its interest burden fell from 3.5% to 1.3% of GDP: the falling average cost of the stock offset the rising stock.
@@ -36,7 +36,7 @@ For twenty-five years its fall offset the rising stock: that is why doubling the
 Where has the rise since the trough come from: the debt stock or the implicit rate?
 Accounting decomposition of the annual change in the interest burden between the rise in the debt stock (blue) and in the implicit rate (orange), in billion euros; the black dot is the change.
 Computed on Eurostat and INSEE series.
-Download · Cite · Data
+DownloadCiteData
 From 2020 to 2025, the interest burden rises by 36.0 billion euros.
 Since it is the product of the stock and the implicit rate, its rise splits into two parts: 15.1 billion come from the larger stock, 20.9 from the higher implicit rate, or 58% of the rise.
 That second figure measures the rise in the average cost of the stock, not the effect of market rates: it is an accounting split, which says how much each term weighed, not why the average cost rose.
@@ -54,7 +54,7 @@ Its rise mixes three possible causes: securities renewed at higher rates, a diff
 The indexation amounts published for the State cannot be added to this calculation, which covers general government as a whole.
 Why do market rates not pass through at once?
 The 10-year yield, an annual average and a reference indicator of borrowing conditions (not the actual cost of issuance), and the implicit rate, the average cost of the whole stock, on the same scale — Eurostat irt_lt_mcby_a and gov_10a_main, INSEE.
-Download · Cite · Data
+DownloadCiteData
 A given year’s interest pays for securities issued at different dates, at different rates.
 The implicit rate therefore follows market rates only as securities are renewed: it went from about 6.5% in 1996 to 1.2% in 2020, not as low as the 10-year rate, and has climbed back only to 2.0% in 2025, when the 10-year rate stands at 3.3%: a security renewed at that rate costs more than the stock’s average.
 As long as old securities, issued at low rates, mature and are renewed at higher ones, the average cost can keep rising even if market rates settle.
@@ -73,7 +73,7 @@ The implicit rate alone, from 1996 to 2025: a twenty-five-year fall, a low in 20
 Implicit interest rate: a year’s interest divided by the debt outstanding on 31 December of the previous year — computed from Eurostat (gov_10a_main) and INSEE series.
 The apparent cost Eurostat publishes uses the year’s average debt instead.
 The full series is in dette_officielle.json.
-Download · Cite · Data
+DownloadCiteData
 Is that a lot?
 The level is not unprecedented; the rise is fast.
 As a share of GDP, the burden went from 1.3% in 2020 to 2.2% in 2025.
@@ -82,7 +82,7 @@ In 1995 it amounted to 3.5% of GDP and 6.8% of revenue.
 But since the 2020 trough it has risen by 121% in euros, and by 78% since 2019: both baselines lead to the same conclusion.
 The two findings hold together and answer both “the debt costs almost nothing” and “debt has never cost so much”: in current euros, the 2025 burden is indeed the highest since 1995; as a share of GDP and of revenue, it is not.
 Eurostat, interest due by general government, at current prices not adjusted for inflation; open circles: Government forecast, not to be subtracted from the observed curve.
-Download · Cite · Data
+DownloadCiteData
 Gross, then net.
 General government also receives interest: 3.5 billion in 2025.
 The balance between interest due and interest received is 62.2 billion, up 112% since 2020: the conclusion does not change.
@@ -99,7 +99,7 @@ It remains far below health (GF07, 261.2 billion), of which it represents about 
 Against the law courts alone (GF0303, 8.3 billion, not the whole Justice ministry budget), the interest burden is about 7.2 times larger.
 Eurostat, interest due and general government expenditure by function.
 Every series stops at the same vintage.
-Download · Cite · Data
+DownloadCiteData
 Since the 2020 trough, the burden has risen faster than each of the nine other main functions of spending: +102%, against +59% for the fastest of them (housing and community amenities).
 The tenth, general public services, contains interest itself.
 Over the whole period it was the other way round: falling rates lightened the bill while public spending rose.
@@ -115,7 +115,7 @@ French public debt — latest official figure
 × 5.5the debt-to-GDP ratio, multiplied since 1978
 neverback to its level of ten years earlier
 Source: INSEE, Maastricht debt of general government (series 010777616 and 010777608; annual series at 31 December since 1978, national accounts base 2020) · series retrieved 21 October 2026 · raw data (JSON).
-Download · Cite · Data
+DownloadCiteData
 Since 1978, French public debt has gone from 21.6% to 119.0% of GDP, multiplied by 5.5.
 It climbs in steps: the main jumps coincide with crises, then the persistence of deficits prevents the step from being undone; in the observed series, the ratio has never returned to its level of ten years earlier.
 On INSEE’s quarterly series, available since 1995, the highest ratio is reached in Q2 2026 (119.0%).
@@ -213,6 +213,13 @@ What they do establish: a higher burden raises the borrowing requirement under u
 Which leaves a question these figures do not settle: who ultimately bears this burden, and is part of its cost shifted onto others?
 That is the subject of the next page.
 To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
+The same question over the long run
+ANTHROPY – A Big History of Civilization’s Hidden Costs
+Seven ages of history for a single hypothesis: disorder is never resolved, only displaced.
+Who ends up paying is the question ANTHROPY follows across seven ages of history: where costs run off, who settles the bill, and for how long.
+$29.99paperback, 644 pagesKindle
+Buy the paperback — $29.99Kindle edition
+Contents, excerpts and reviews →
 Where these figures come from
 The figures on this page are derived automatically from INSEE and Eurostat series, re-queried every week; last retrieval that changed a value: 21 October 2026.
 Three sets of values are stored in the repository, each with its source and date: the 1978-1994 ratios, transcribed from an INSEE table (their junction year, 1995, is checked against the live series at every run); and, entered by hand, the Government’s forecasts and the Agence France Trésor benchmarks.

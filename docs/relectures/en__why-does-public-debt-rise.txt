@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /en/why-does-public-debt-rise/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /en/why-does-public-debt-rise/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.7% of GDP: it doubled as a share of the wealth produced.
@@ -278,6 +278,14 @@ Not necessarily: it is a gap between spending and revenue excluding interest, wh
 These data measure the gap; they do not say which of its two terms should be corrected.
 In the public debt dossier
 To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
+The same question over the long run
+ANTHROPY – A Big History of Civilization’s Hidden Costs
+Seven ages of history for a single hypothesis: disorder is never resolved, only displaced.
+This page breaks down the rise since 1995 in accounting terms.
+ANTHROPY takes the long view: how crises, from the 2008 bank bailouts to the pandemic, ended up on public balance sheets, and who then carried them.
+$29.99paperback, 644 pagesKindle
+Buy the paperback — $29.99Kindle edition
+Contents, excerpts and reviews →
 Where these figures come from
 Eurostat, general government (S.13), national accounts ESA 2010, in national currency: Maastricht debt (gov_10dd_edpt1), interest due (gov_10a_main, D41PAY, recorded on an accrual basis), net lending or borrowing (B9), nominal GDP as published with the deficit and debt notification (gov_10dd_edpt1, B1GQ); spending (TE), revenue (TR) and balance as a share of GDP as Eurostat publishes them (gov_10a_main).
 The primary balance is the general government balance plus interest (D41PAY).

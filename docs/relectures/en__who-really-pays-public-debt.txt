@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /en/who-really-pays-public-debt/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /en/who-really-pays-public-debt/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
 For the same simulated budgetary effort of €10 billion, in INSEE’s 2023 distributional accounts, how the burden is shared depends on the instrument chosen: an adjustment through education weighs proportionally more on low-income households, an adjustment through taxes on income and wealth more on well-off households.
@@ -26,7 +26,7 @@ It is neither a forecast nor a measure under consideration: no behaviour and no 
 It is the current structure of these items, made comparable from one decision to another.
 INSEE, distributional national accounts, table CND.101 (standard-of-living twentiles, 2020-2023, base 2020); 2023 vintage.
 An accounting exposure profile, not a simulation.
-Download · Cite · Data
+DownloadCiteData
 The ranking reverses from one decision to another.
 In this simulation, a cut in education spending would represent 2.75% of the income of the poorest 10% and 0.21% of that of the richest; a rise in taxes on income and wealth would do the opposite, up to 1.14% for the top decile.
 The contrast does not come only from the lower deciles’ smaller incomes: in euros, the less well-off half would bear 57.8% of the cut in education spending, against 14.6% of the tax increase.
@@ -72,7 +72,7 @@ And “who pays” is always said relative to another decision: borrowing less w
 Two distinct scopes: A at nominal value (INSEE), B at market value (Banque de France, via Agence France Trésor).
 The values come from the same register as the figure on p.
 101 of the book.
-Download · Cite · Data
+DownloadCiteData
 Who borrows, who holds.
 Central government accounts for most of the public debt: 2,942 billion euros out of 3,595.5, or 82% (end of June 2026).
 In Q2 2026, its marketable securities were held 59.7% by non-residents; resident banks, insurers and funds together held 21.7%; the other resident holders, 18.7%, include the Banque de France, whose share the source does not publish.
@@ -97,7 +97,7 @@ INSEE’s distributional national accounts allocate, for 2023, taxes, contributi
 Amounts are expressed per consumption unit (CU), the unit that makes households of different sizes comparable: a single person counts as 1 CU, a couple with two children under 14 as 2.1.
 INSEE, distributional national accounts 2023 (Insee Analyses no.
 118, 16 April 2026, figure 1c), in euros per consumption unit.
-Download · Cite · Data
+DownloadCiteData
 The values as a table (euros per consumption unit, 2023)
 Decile
 Taxes and contributions
@@ -161,7 +161,7 @@ The figures on this page show current transfers, before that adjustment.
 The balance does not imply that the beneficiaries of redistribution “created” this debt, nor that their position says who will repay it.
 INSEE, distributional national accounts 2023 (figure 2a).
 Two units, two panels: euros per consumption unit, then share of people.
-Download · Cite · Data
+DownloadCiteData
 Net contributors, net beneficiaries.
 On average per CU, transfers received exceed taxes and contributions in each of the first seven deciles (by €20,800 per CU in the first), and the balance tips at decile D8: in the last three, it is the reverse, and the top decile pays in, on average, €58,400 per CU more than it receives.
 A group average does not describe its members.
@@ -179,7 +179,7 @@ And this balance describes redistribution as a whole, not the specific effect of
 By household age: a snapshot of the year, not a lifetime balance
 INSEE, distributional national accounts 2023 (figure 1e).
 Groups by average age of the adults in the household.
-Download · Cite · Data
+DownloadCiteData
 In 2023, under these conventions, households whose adults are on average 65 or over receive €47,800 per consumption unit in transfers — of which €28,700 in cash benefits, pensions included — and pay €14,600 in taxes and contributions, against €33,800 for households aged 50 to 64.
 Pensions partly correspond to entitlements earned over a career, counted here as current benefits; a household’s age is not the retirement status of each of its members, and a high amount of imputed health care also reflects greater needs.
 This snapshot designates no payer of tomorrow.
@@ -189,7 +189,7 @@ The first two belong to ordinary budget adjustment, decided every year: taxes an
 The third is not decided alone: unanticipated inflation reduces the real value of claims already issued and shifts part of the burden onto their holders and onto poorly indexed incomes.
 The fourth is an extreme case: restructuring imposes a first-round loss on the holders of the securities, who may pass it on to their shareholders, policyholders or savers.
 A diagram of possible mechanisms: no relative weight or causal effect is measured in it.
-Download · Cite · Data
+DownloadCiteData
 Refinancing, for its part, renews a maturity on the terms of the day: it can lighten or increase the burden, without designating who will bear it.
 And set against these costs is what the debt financed: services, benefits and investment benefit households today and tomorrow, and an analysis that counted only the costs would describe only half of the balance sheet.
 Why only unanticipated inflation transfers the burden, and what works in the opposite direction
@@ -312,6 +312,14 @@ Repaying the whole stock is therefore a largely theoretical hypothesis.
 The operative question is what happens while the debt is continuously rolled over: who bears the interest, which budgets carry the adjustments, who inherits the obligations and what they financed.
 Refinancing renews a maturity on the terms of the day: it can lighten or increase the burden, and on its own it does not identify who will bear it.
 This analysis is developed in the book Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
+The same question over the long run
+ANTHROPY – A Big History of Civilization’s Hidden Costs
+Seven ages of history for a single hypothesis: disorder is never resolved, only displaced.
+ANTHROPY follows this question across seven ages of history: who settles the bill when an order displaces its costs — the taxpayer, the saver, future generations.
+Sovereign debt appears there as a ledger in which a society records where and when it projects its burdens.
+$29.99paperback, 644 pagesKindle
+Buy the paperback — $29.99Kindle edition
+Contents, excerpts and reviews →
 Where these figures come from
 Redistribution by decile and by age: Mathias André, Alexis Barrau and Thomas Renaud (INSEE), “Revenus des ménages élargis à l’ensemble de l’économie en 2023”, Insee Analyses no.
 118, 16 April 2026 (figures 1c, 1e and 2a), in French.

@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/inflation-and-french-public-debt/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /en/inflation-and-french-public-debt/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Did inflation really ease France’s debt burden?
 Did the French government gain €150bn from inflation?
@@ -211,6 +211,13 @@ The Banque de France paid for its bond purchases with bank reserves, remunerated
 At end-2022, a lasting one-percentage-point rise across the whole yield curve would have raised the first-year interest bill by €7.6bn for the government and the Banque de France together, against €2.75bn for central-government marketable debt alone; over five years the ratio falls to 1.3.
 It measures an exposure, neither a forecast nor the cost of QE.
 To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
+The same question over the long run
+ANTHROPY – A Big History of Civilization’s Hidden Costs
+Seven ages of history for a single hypothesis: disorder is never resolved, only displaced.
+ANTHROPY follows inflation as one of the ways part of a bill gets settled: eroding the holdings of rentiers in the 1970s, then settling part of the pandemic support, and asks who bears the cost each time.
+$29.99paperback, 644 pagesKindle
+Buy the paperback — $29.99Kindle edition
+Contents, excerpts and reviews →
 Where these numbers come from
 Debt.
 Agence France Trésor, Rapport d’activité 2020, central-government marketable debt outstanding at 31 December 2020, line by line: fixed-rate OATs (face value, coupon, maturity date) and BTFs.

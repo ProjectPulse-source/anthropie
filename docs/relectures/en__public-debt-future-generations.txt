@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /en/public-debt-future-generations/, build de 8c492ff + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-06 ; texte servi de /en/public-debt-future-generations/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -420,6 +420,13 @@ A debt is rolled over without any particular generation repaying all of it; it m
 Its weight also depends on the gap between the interest rate the government pays and the growth of the economy.
 In the public debt dossier
 To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
+The same question over the long run
+ANTHROPY – A Big History of Civilization’s Hidden Costs
+Seven ages of history for a single hypothesis: disorder is never resolved, only displaced.
+ANTHROPY reads sovereign debt over the long run, from the financial revolution of 1694 to the bailouts of 2008, as one of the ways a State funds its present by mortgaging the future, and asks who, in each age, bears the deferred cost.
+$29.99paperback, 644 pagesKindle
+Buy the paperback — $29.99Kindle edition
+Contents, excerpts and reviews →
 Where these figures come from
 Uses of net borrowing.
 Eurostat, general government (S.13), ESA 2010 accounts, in national currency (gov_10a_main): net lending or borrowing (B9), net saving (B8N), gross fixed capital formation (P51G), consumption of fixed capital (P51C), acquisitions less disposals of non-produced assets (NP), changes in inventories (P52_P53), capital transfers paid and received (D9), of which investment grants paid (D92).

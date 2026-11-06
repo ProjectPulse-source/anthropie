@@ -212,6 +212,10 @@ Which leaves a question these figures do not settle: who ultimately bears this b
 This page prices the bill. It does not say who settles it — and that is where everything is decided: a debt is never cancelled, and its cost can be shifted — onto the taxpayer, onto the saver through inflation, onto public services whose resources are squeezed, onto those who cannot yet vote — depending on the decisions taken to adjust it. The book follows each of these channels in turn, on official figures, and ends in scenarios for 2025-2035. By the end you will recognise which one is unfolding.
 {{< /appel-livre >}}
 
+{{< appel-livre slug="anthropie-ordre-ici-dette-ailleurs" sur="The same question over the long run" avis="non" >}}
+Who ends up paying is the question *ANTHROPY* follows across seven ages of history: where costs run off, who settles the bill, and for how long.
+{{< /appel-livre >}}
+
 ## Where these figures come from
 
 The figures on this page are **derived automatically from INSEE and Eurostat series**, re-queried every week; last retrieval that changed a value: {{< dette-val "releve_le" >}}. Three sets of values are stored in the repository, each with its source and date: the 1978-1994 ratios, transcribed from an INSEE table (their junction year, 1995, is checked against the live series at every run); and, entered by hand, the Government's forecasts and the Agence France Trésor benchmarks. Open data: [dette_officielle.json](/dette_officielle.json), CC BY 4.0 licence.

@@ -291,6 +291,10 @@ To judge what debt leaves to future generations, knowing its amount is not enoug
 This page puts three arguments to the test of the accounts: what deficits corresponded to, who holds the debt, and what adjustment would stabilise it according to the Commission. It remains to be seen who, within each generation, will bear that adjustment: the taxpayer, the user of public services, the saver through inflation, the creditor through a restructuring? The book, *Dette Publique&nbsp;: Qui paie vraiment&nbsp;?* (in French), takes this analysis further, with official figures, by examining these choices and their consequences.
 {{< /appel-livre >}}
 
+{{< appel-livre slug="anthropie-ordre-ici-dette-ailleurs" sur="The same question over the long run" avis="non" >}}
+*ANTHROPY* reads sovereign debt over the long run, from the financial revolution of 1694 to the bailouts of 2008, as one of the ways a State funds its present by mortgaging the future, and asks who, in each age, bears the deferred cost.
+{{< /appel-livre >}}
+
 ## Where these figures come from {#sources}
 
 **Uses of net borrowing.** Eurostat, general government (S.13), ESA 2010 accounts, in national currency (`gov_10a_main`): net lending or borrowing (B9), net saving (B8N), gross fixed capital formation (P51G), consumption of fixed capital (P51C), acquisitions less disposals of non-produced assets (NP), changes in inventories (P52_P53), capital transfers paid and received (D9), of which investment grants paid (D92). Each year, net borrowing = net dissaving + net acquisitions of assets + net capital transfers; the identity is checked year by year, to within 0.05 points. Ratios are calculated on the GDP published with the deficit and debt notification (`gov_10dd_edpt1`) and cumulated by period in points of GDP; the share in assets calculated in current euros gives {{< gen-val "part_k_eur" >}}%, against {{< gen-val "part_k" >}}% in points of GDP. Excluding land and inventories, net investment alone represents {{< gen-val "part_n" >}}% of net borrowing.

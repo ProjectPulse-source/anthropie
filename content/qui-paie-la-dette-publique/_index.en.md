@@ -288,6 +288,10 @@ No statistic says, on its own, who ultimately bears the burden of French debt: t
 This page sets out the method: one answer per decision, creditors traced as far as the data allow, and what would need to be observed to reach a conclusion. The book applies it to the French case — the transfer over time, creditors, public services — and extends it with scenarios for 2025-2035. The book exists in French only.
 {{< /appel-livre >}}
 
+{{< appel-livre slug="anthropie-ordre-ici-dette-ailleurs" sur="The same question over the long run" avis="non" >}}
+*ANTHROPY* follows this question across seven ages of history: who settles the bill when an order displaces its costs — the taxpayer, the saver, future generations. Sovereign debt appears there as a ledger in which a society records where and when it projects its burdens.
+{{< /appel-livre >}}
+
 ## Where these figures come from {#sources}
 
 - **Redistribution by decile and by age**: Mathias André, Alexis Barrau and Thomas Renaud (INSEE), "Revenus des ménages élargis à l'ensemble de l'économie en 2023", *Insee Analyses* [no. 118](https://www.insee.fr/fr/statistiques/8974371), 16 April 2026 (figures 1c, 1e and 2a), in French.

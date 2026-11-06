@@ -237,6 +237,10 @@ What we do not know: who ultimately bore the loss, and how much of the rise in r
 This page measures how much real value the 2021–2023 inflation took from legacy government debt, and what cannot be concluded from it. Inflation is only one of the possible payers of the debt: the taxpayer, the user of public services and the creditor are others. The book examines those choices and their consequences, on official figures.
 {{< /appel-livre >}}
 
+{{< appel-livre slug="anthropie-ordre-ici-dette-ailleurs" sur="The same question over the long run" avis="non" >}}
+*ANTHROPY* follows inflation as one of the ways part of a bill gets settled: eroding the holdings of rentiers in the 1970s, then settling part of the pandemic support, and asks who bears the cost each time.
+{{< /appel-livre >}}
+
 ## Where these numbers come from {#sources}
 
 **Debt.** Agence France Trésor, [*Rapport d'activité 2020*](https://www.aft.gouv.fr/en/annual-reports), central-government marketable debt outstanding at 31 December 2020, line by line: fixed-rate OATs (face value, coupon, maturity date) and BTFs. Each coupon is paid on the anniversary of the maturity date, principal at maturity; end-2020 BTFs are spread over the twelve months of 2021.
