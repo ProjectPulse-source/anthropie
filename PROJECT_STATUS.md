@@ -66,6 +66,9 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - **Libellés à 11 px** du mur des livres (`auteur-wall__label`, `wall-tile__meta`, `wall-tile__lang`) → 12 px.
 - **Pastilles** (`.pastilles a`, toutes pages) : 44 px de haut sous 600 px (36 avant).
 - Contrôles : hugo 0, typo 0, liens 0, check-all 0 (3 insécables corrigées par `check-typo-fr.py --corriger`).
+- **Audit-16 arbitré** (`D:\PRO_PROMOTION\A_PROPOS_2026-11-07\ARBITRAGE_AUDIT-16_2026-11-07.md`) : recensions
+  distinguées des articles de recherche, définition canonique (espace, temps, groupes), question finale sur le coût
+  déplacé ; prémisse « Président hors corpus » rejetée (page relue : quatre livres au corpus).
 
 ### 2026-11-07 (nuit, fin bis) — Accueil : derniers textes sous 12 px portés à 12 px
 

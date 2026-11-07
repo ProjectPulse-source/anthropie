@@ -60,9 +60,9 @@ presse_objets:
   en-attendant-nadeau-christophers: "Profit and transition"
 ---
 
-Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy — the hypothesis that social systems displace disorder rather than resolve it — through a series of working papers and four published books; he is also the author of two further books, devoted to the history of ideas and to literature.
+Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy: the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups. The framework runs through a series of working papers and four of his six books; the other two are devoted to the history of ideas and to literature.
 
-He writes for research journals such as *Sociologie du travail* and the *Revue Française de Socio-Économie*, and for the French-language intellectual press, from *En attendant Nadeau* to *La Vie des idées*. His reviews and articles there test current scholarship and debates, from labour to debt and from energy to artificial intelligence, against the question that runs through his own work: who absorbs the cost?
+His reviews and articles appear in social science journals such as *Sociologie du travail* and the *Revue française de socio-économie*, and in the French-language intellectual press, from *En attendant Nadeau* to *La Vie des idées*. From work to debt, from energy to artificial intelligence, he asks the same question: when a system appears to solve a problem, what cost does it displace, and onto whom?
 
 {{< identifiants >}}
 
