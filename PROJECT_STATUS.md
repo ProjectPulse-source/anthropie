@@ -52,6 +52,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (midi) — Audit des ressources (reprise) et Audit-19 : corrections 1 à 5c (commits f1570d4, be7c58f, 1836e0d)
+
+Audit : `D:\PRO_PROMOTION\AUDIT_RESSOURCES_2026-11-07\` (`SCAN.md`, `REPRISES_1_A_5_AUTOPORTANT.md`,
+`ARBITRAGE_AUDIT-19_2026-11-07.md`).
+- **Budget 2027 et collectivités (FR/EN)** : le projet n'est pas transmis au Sénat (ordre du jour du 07/11 : « Sous
+  réserve de sa transmission ») ; « texte transmis » → « texte initial attendu au Sénat », présent → futur ; organe unique
+  `senat_attendu()` dans `update_dette_collectivites.py` (bascule seule quand le registre des votes ne porte plus la
+  réserve) ; cartes de partage ; tableur DILICO (2 cellules ; générateur dans `06_PROMOTION\CAMPAGNES\…\_TRAVAIL`, copie
+  de l'avant `tableau_national.py.avant-0711`) ; journal : suppression en commission sans effet sur le texte discuté
+  (Constitution, art. 42, al. 2). Générateur lancé via `truststore` (certificat intermédiaire absent chez data.ofgl.fr ;
+  `SSL_CERT_FILE` ne suffit pas). Dates de fond 22/10 et 06/11 consignées à l'historique de `dates_affichage.json`.
+- **Coût** : réserve de licence AFT (page, `_licence`). **Générations** : note de méthode (T1-T2 2026 lus sur l'AFT,
+  témoin Webstat T4 2025, série lue le 07/11). **Formules** : « emprunte » → « représente ».
+- **Définition** : FAQ Kapp FR, exclusion EN de la section « anthropique » écrite, « held since 2022 », redite, pronoms.
+  **Registre** : coquilles, `refonte: 2026-11-07`, instantanés.
+- **Non fait, décision de l'auteur** : postes d'internat 2023 (arrêté du 31/07/2023 à télécharger ; garde P3 et prose à
+  réécrire). Contrôles : hugo 0, typo 0, liens 0, check-all 0, relecture CI 0 ; instantanés refaits sur les seules pages
+  touchées (les phrases changées par la session dette restent à sa relecture).
+
 ### 2026-11-07 (fin de matinée) — Registre des coûts déportés : maquette C+ en production (Audit-18)
 
 - **Page FR et EN** : exemple du Feu juste après l'introduction (`registre-exemple tri="-1500000"`, ordre créé et dette
