@@ -759,10 +759,10 @@ LIGNES = [
                "Cumulated {f2_an0}–{f2_an1}: €{f2_def}bn against €{f2_var}bn, close", "A finding, no inference")}),
     ("mesurer", "F16", {
         "fr": ("« 3 % de déficit, seuil à partir duquel la dette n'augmente plus »", "F. Bayrou",
-               "En euros, inexact : un déficit de 3 % emprunte environ {f16_eur} Md€ par an",
+               "En euros, inexact : un déficit de 3 % représente environ {f16_eur} Md€ par an",
                "En % du PIB, exact si la croissance nominale dépasse environ {f16_seuil24} % : {f16_g24} % en 2024, {f16_g25} % en 2025 (connu après)", "Condition décisive non dite"),
         "en": ("“A 3% deficit, the threshold at which debt stops rising”", "F. Bayrou",
-               "In euros, inaccurate: a 3% deficit borrows about €{f16_eur}bn a year",
+               "In euros, inaccurate: a 3% deficit amounts to about €{f16_eur}bn a year",
                "As a share of GDP, accurate if nominal growth exceeds about {f16_seuil24}%: {f16_g24}% in 2024, {f16_g25}% in 2025 (known later)", "Decisive condition left unsaid")}),
     ("mesurer", "F8", {
         "fr": ("« La France s'endette à des taux supérieurs à ceux de la Grèce »", "L. Wauquiez",

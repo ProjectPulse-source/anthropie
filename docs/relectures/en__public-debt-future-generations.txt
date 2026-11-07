@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /en/public-debt-future-generations/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-07 ; texte servi de /en/public-debt-future-generations/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -7,7 +7,7 @@ From 1996 to 2025, only 18% of public deficits corresponded to new public assets
 The human capital that education or health may leave behind is not counted: the figure says what deficits corresponded to, not what they produced.
 Two other arguments deserve scrutiny: “we owe the debt to ourselves” and “the real burden will come from ageing”.
 Three tests put them to the proof, without claiming to calculate each generation’s bill.
-Page updated 5 November 2026 · revisions
+Page updated 7 November 2026 · revisions
 Public debt dossier
 Data · Eurostat and ECB 2025 · projections 2026
 ↓ Charts, data and citations to reuseReuse this page
@@ -455,7 +455,7 @@ COR, annual report of June 2026, data from the summary, baseline scenario; Agirc
 Check: for each country and each year, the calculated ratios are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use.
 Beyond a gap of 0.11 points, the year is excluded and counted (0 out of 835); for France, the script stops.
 The computed figures all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
-Only the latest non-resident share, read on the Agence France Trésor chart, is transcribed by hand; the reading for the previous quarter is checked against Webstat.
+The non-resident shares for the first and second quarters of 2026 are read by hand from the Agence France Trésor charts; the latest observation in the Banque de France’s Webstat series (consulted on 7 November 2026) is for the fourth quarter of 2025, which serves as the check.
 Figures from the studies cited are given as they publish them.
 The arguments were tested before the page was written, following a protocol set before the calculation.
 Reusing this page
@@ -491,7 +491,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Is public debt a burden on future generations?”.
-Eurostat, Insee, ECB, European Commission, COR data, retrieved 5 November 2026. https://stephane-lalut.com/en/public-debt-future-generations/
+Eurostat, Insee, ECB, European Commission, COR and AFT data, retrieved 5 November 2026. https://stephane-lalut.com/en/public-debt-future-generations/
 Copy citation
 In three sentences
 From 1996 to 2025, 18% of French general government net borrowing corresponded, in the accounts, to a net increase in its recorded assets, and 66% to current spending not covered by current revenue; the share in assets went from 32% (1996-2005) to 10% (2016-2025).
@@ -503,8 +503,10 @@ The uses of general government net borrowing (France by decade, EU countries cum
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
-The raw series belong to their producers (Eurostat, Insee, ECB, European Commission, COR), under their own terms.
+The raw series belong to their producers (Eurostat, Insee, ECB, European Commission, COR and AFT), under their own terms.
+Values taken from Agence France Trésor (AFT), in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
 Revisions
+7 November 2026 — Correction to the method note: the non-resident shares for the first and second quarters of 2026 (57.5%, read on 3 October; 59.7%, read on 5 November) come from the Agence France Trésor charts; the check against Webstat bears on the fourth quarter of 2025, the latest observation in that series on 7 November.
 5 November 2026 — Correction: the values by item (pensions, health, long-term care, education) are contributions to the second term of the S2 indicator, not changes in spending in points of GDP.
 31 October 2026 — Revision of general government net worth: the Banque de France financial accounts, updated in October 2026 for 2023 to 2025 and taken up by Eurostat, mainly revalue the equity held by government; net worth at the end of 2025 moves from 25.0% to 27.1% of GDP.
 Insee’s July balance sheet, which does not yet include it, becomes a check.

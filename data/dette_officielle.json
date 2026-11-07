@@ -1,6 +1,6 @@
 {
  "_avertissement": "Fichier GÉNÉRÉ par scripts/update_dette_insee.py — ne pas éditer à la main.",
- "_licence": "Compilation sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : réutilisation libre, y compris commerciale, à condition de citer Stéphane Lalut, https://stephane-lalut.com/cout-de-la-dette-publique/. La licence porte sur la COMPILATION (assemblage des séries, grandeurs dérivées, mise en cohérence) ; les séries brutes restent celles de l'INSEE et d'Eurostat, sous leurs propres conditions.",
+ "_licence": "Compilation sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : réutilisation libre, y compris commerciale, à condition de citer Stéphane Lalut, https://stephane-lalut.com/cout-de-la-dette-publique/. La licence porte sur la COMPILATION (assemblage des séries, grandeurs dérivées, mise en cohérence) ; les séries brutes restent celles de l'INSEE, d'Eurostat et de l'Agence France Trésor (AFT), sous leurs propres conditions ; les valeurs reprises de l'AFT ne sont pas couvertes par la licence CC BY : ce producteur en réserve la réutilisation à des fins non commerciales (audit des ressources, 07/11/2026).",
  "releve_le": "2026-10-21",
  "affichage": {
   "dette_periode": "T2 2026",

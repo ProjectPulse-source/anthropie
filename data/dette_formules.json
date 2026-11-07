@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-06",
+ "releve_le": "2026-11-07",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce",
  "meta": {
   "page": "https://stephane-lalut.com/formules-du-debat-sur-la-dette/",
@@ -8,7 +8,7 @@
   "millesime": {
    "dette_trimestrielle": "2026-Q2",
    "officielle": "2026-10-21",
-   "dynamique": "2026-11-02"
+   "dynamique": "2026-11-07"
   },
   "eurostat_maj": "2026-10-13T11:00:00+0200",
   "transcrit": "valeurs documentaires transcrites de documents publiés, avec page, extrait et empreinte de la pièce archivée (scripts/sources_dette_formules/documentaires.json)"
@@ -37,7 +37,7 @@
    "niveau": "mesurer",
    "texte": "« 3 % de déficit, seuil à partir duquel la dette n'augmente plus »",
    "orateur": "F. Bayrou",
-   "question_posee": "En euros, inexact : un déficit de 3 % emprunte environ 90 Md€ par an",
+   "question_posee": "En euros, inexact : un déficit de 3 % représente environ 90 Md€ par an",
    "autre_question": "En % du PIB, exact si la croissance nominale dépasse environ 2,74 % : 3,58 % en 2024, 1,90 % en 2025 (connu après)",
    "conclusion": "Condition décisive non dite"
   },

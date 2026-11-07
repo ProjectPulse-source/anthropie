@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /en/public-debt-debate-claims/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-07 ; texte servi de /en/public-debt-debate-claims/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What are the claims of the French debt debate worth?
 On 8 September 2025, in the French National Assembly, every group invoked the figures on public debt.
@@ -6,11 +6,11 @@ Many amounts withstand checking.
 But changing the date, the scope or the unit is often enough to get another answer, and measuring a change is enough neither to identify its cause nor to justify a decision.
 Eleven cases, tested against the data available that day, show how the same figure can support different conclusions, not all of them demonstrated.
 The campaign texts of the candidates for the 2027 presidential election, put through the same tests, run into the same measurement difficulties.
-Page updated 6 November 2026
+Page updated 7 November 2026
 Public debt dossier
 Updated · 11/2026
 ↓ Charts, data and citations to reuseReuse this page
-Computed: 6 November 2026 Full record of the sitting of 8 September 2025 (French National Assembly); general government accounts (Insee, Eurostat); ten-year yields (Eurostat, Banque de France, Bank of Greece); Court of Audit, Government, Senate.
+Computed: 7 November 2026 Full record of the sitting of 8 September 2025 (French National Assembly); general government accounts (Insee, Eurostat); ten-year yields (Eurostat, Banque de France, Bank of Greece); Court of Audit, Government, Senate.
 Download: CSV · JSON · method
 More money for interest than for education?
 On 15 July 2025, the French government sent Parliament its spending ceilings for the following year.
@@ -466,7 +466,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “What are the claims of the French debt debate worth?”.
-French National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece data, retrieved 6 November 2026. https://stephane-lalut.com/en/public-debt-debate-claims/
+French National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece data, retrieved 7 November 2026. https://stephane-lalut.com/en/public-debt-debate-claims/
 Copy citation
 In three sentences
 Of eleven numerical cases from the French National Assembly debate of 8 September 2025, many amounts withstand checking, but the verdict often changes with the date, unit, scope or year.

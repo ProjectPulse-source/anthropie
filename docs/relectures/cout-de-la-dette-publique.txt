@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /cout-de-la-dette-publique/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-07 ; texte servi de /cout-de-la-dette-publique/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Combien coûte la dette publique ?
 En 2025, la charge d’intérêts des administrations publiques s’élève à 65,7 milliards d’euros, soit 4,2 % de leurs recettes.
@@ -15,7 +15,7 @@ C’est une charge brute, pour l’ensemble des administrations publiques (État
 Le ciseau : vingt-cinq ans de compensation, puis le retournement
 Dette publique (T2 2026 : 119,0 % du PIB, INSEE, trimestriel) et charge d’intérêts des administrations publiques (2025 : 2,2 % du PIB, Eurostat, annuel).
 Deux échelles distinctes, une même unité : le pourcentage du PIB.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 De 1995 au tournant des années 2020, les deux courbes évoluent en ciseaux, jusqu’au creux de la charge d’intérêts en 2020 (29,7 Md€).
 Le résultat en une phrase.
 De 1995 à 2020, la dette est passée de 57,8 % à plus de 100 % du PIB pendant que sa charge d’intérêts tombait de 3,5 % à 1,3 % du PIB : la baisse du coût moyen du stock compensait la hausse de l’encours.
@@ -33,7 +33,7 @@ Pendant vingt-cinq ans, sa baisse a compensé la hausse de l’encours : c’est
 D’où vient la hausse depuis le creux : de l’encours ou du taux implicite ?
 Décomposition comptable de la variation annuelle de la charge d’intérêts entre la hausse de l’encours (bleu) et celle du taux implicite (orange), en milliards d’euros ; le point noir est la variation.
 Calcul sur séries Eurostat et INSEE.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 De 2020 à 2025, la charge d’intérêts augmente de 36,0 milliards d’euros.
 Puisqu’elle est le produit de l’encours et du taux implicite, sa hausse se décompose en deux parts : 15,1 milliards tiennent à la hausse de l’encours, 20,9 à celle du taux implicite, soit 58 % de la hausse.
 Ce second chiffre mesure la hausse du coût moyen du stock, non l’effet des taux de marché : c’est un découpage comptable, qui dit combien chaque terme a pesé, pas pourquoi le coût moyen a augmenté.
@@ -51,7 +51,7 @@ Sa hausse mêle trois causes possibles : des titres renouvelés à des taux plus
 Les montants d’indexation publiés pour l’État ne s’ajoutent pas à ce calcul, qui porte sur l’ensemble des administrations publiques.
 Pourquoi les taux de marché ne se transmettent-ils pas tout de suite ?
 Le taux à 10 ans, moyenne annuelle et indicateur de référence des conditions d’emprunt (non le coût effectif des émissions), et le taux implicite, coût moyen de tout le stock, sur la même échelle — Eurostat irt_lt_mcby_a et gov_10a_main, INSEE.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 La charge d’une année rémunère des titres émis à des dates différentes, à des taux différents.
 Le taux implicite ne suit donc les taux de marché qu’au fil des renouvellements : il est passé d’environ 6,5 % en 1996 à 1,2 % en 2020, moins bas que le taux à 10 ans, et ne remonte qu’à 2,0 % en 2025, quand le taux à 10 ans est à 3,3 % : un titre renouvelé à ce taux coûte plus que la moyenne du stock.
 Tant que des titres anciens, émis à bas taux, arrivent à échéance et se renouvellent plus cher, le coût moyen peut continuer de monter, même si les taux de marché se stabilisent.
@@ -70,7 +70,7 @@ Le taux implicite seul, de 1996 à 2025 : baisse sur vingt-cinq ans, point bas e
 Taux implicite : intérêts d’une année rapportés à l’encours au 31 décembre précédent — calcul sur séries Eurostat (gov_10a_main) et INSEE.
 Le coût apparent que publie Eurostat retient, lui, l’encours moyen de l’année.
 La série complète est dans dette_officielle.json.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Est-ce beaucoup ?
 Le niveau n’est pas inédit ; la remontée est rapide.
 En part du PIB, la charge est passée de 1,3 % en 2020 à 2,2 % en 2025.
@@ -79,7 +79,7 @@ En 1995, elle pesait 3,5 % du PIB et 6,8 % des recettes.
 Mais depuis le creux de 2020, elle a augmenté de 121 % en euros, et de 78 % depuis 2019 : les deux bases mènent à la même conclusion.
 Les deux constats tiennent ensemble et répondent à « la dette ne coûte presque rien » comme à « jamais la dette n’a coûté aussi cher » : en euros courants, la charge de 2025 est bien la plus élevée depuis 1995 ; en part du PIB et des recettes, elle ne l’est pas.
 Eurostat, intérêts dus par les administrations publiques, en euros courants non corrigés de l’inflation ; cercles évidés : prévision du Gouvernement, à ne pas soustraire de la courbe observée.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Brute, puis nette.
 Les administrations perçoivent aussi des intérêts : 3,5 milliards en 2025.
 Le solde entre intérêts dus et intérêts reçus est de 62,2 milliards, en hausse de 112 % depuis 2020 : la conclusion ne change pas.
@@ -96,7 +96,7 @@ Ils restent loin de la santé (GF07, 261,2 Md€), dont ils représentent enviro
 Face aux tribunaux seuls (GF0303, 8,3 Md€, et non le budget total de la mission Justice), la charge d’intérêts pèse environ 7,2 fois plus.
 Eurostat, intérêts dus et dépenses des administrations par fonction.
 Toutes les séries s’arrêtent au même millésime.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Depuis le creux de 2020, la charge progresse plus vite que chacune des neuf autres grandes fonctions de dépense : +102 %, contre +59 % pour la plus rapide d’entre elles (logement et équipements collectifs).
 La dixième, les services publics généraux, contient les intérêts eux-mêmes.
 Sur l’ensemble de la période, c’était l’inverse : la baisse des taux allégeait la facture pendant que la dépense publique progressait.
@@ -115,7 +115,7 @@ Ordre de grandeur mécanique, extrapolé depuis la publication INSEE du T2 2026 
 × 5,5le ratio dette/PIB, multiplié depuis 1978
 jamaisrevenue à son niveau de dix ans plus tôt
 Source : INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608 ; série annuelle au 31 décembre depuis 1978, comptes nationaux base 2020) · séries relevées le 21/10/2026 · données brutes (JSON).
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Depuis 1978, la dette publique est passée de 21,6 % à 119,0 % du PIB, multipliée par 5,5.
 Elle monte par paliers : les principaux sauts coïncident avec les crises, puis la persistance des déficits empêche d’effacer le palier atteint ; dans la série observée, le ratio n’est jamais revenu à son niveau de dix ans auparavant.
 Sur la série trimestrielle de l’INSEE, disponible depuis 1995, le maximum du ratio est atteint au T2 2026 (119,0 %).
@@ -296,7 +296,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Combien coûte la dette publique ? ».
-Données INSEE et Eurostat, relevé du 21/10/2026. https://stephane-lalut.com/cout-de-la-dette-publique/
+Données INSEE, Eurostat et AFT, relevé du 21/10/2026. https://stephane-lalut.com/cout-de-la-dette-publique/
 Copier la citation
 En trois phrases
 Cette page mesure ce que la dette publique coûte chaque année — la charge d’intérêts, 65,7 milliards d’euros en 2025 — et non le montant de l’encours.
@@ -308,7 +308,8 @@ Séries consolidées et grandeurs dérivées : taux implicite, ratios, équivale
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
-Les séries brutes appartiennent à leurs producteurs (INSEE et Eurostat), sous leurs propres conditions.
+Les séries brutes appartiennent à leurs producteurs (INSEE, Eurostat et AFT), sous leurs propres conditions.
+Les valeurs reprises de l’AFT, dans les fichiers comme dans les graphiques, ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
 L’anthropie est l’hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu’ils ne le résolvent.

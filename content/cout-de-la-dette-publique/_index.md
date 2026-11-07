@@ -239,7 +239,7 @@ Les séries officielles sont réinterrogées chaque semaine&nbsp;; la date du re
 
 </details>
 
-{{< reutiliser figures="figures_dette" jeu="dette_officielle" sources="INSEE et Eurostat" >}}
+{{< reutiliser figures="figures_dette" jeu="dette_officielle" sources="INSEE, Eurostat et AFT" reserve="de l'AFT" >}}
 Cette page mesure ce que la dette publique coûte chaque année — la charge d'intérêts, {{< dette-val "interets_mdeur" >}}&nbsp;milliards d'euros en {{< dette-val "interets_annee" >}} — et non le montant de l'encours. Elle montre pourquoi un encours deux fois plus lourd n'a pas doublé la facture, décompose la remontée depuis {{< dette-val "dec_a0" >}} entre la hausse de l'encours et celle du taux implicite (décomposition comptable, non mesure de l'effet des taux de marché), situe le niveau atteint dans la série longue et explique pourquoi la facture peut continuer de monter alors même que la dette cesse d'augmenter. Elle compare des masses à périmètre et millésime identiques, sans établir qu'un euro d'intérêts ait été retiré à un autre budget.
 {{< /reutiliser >}}
 

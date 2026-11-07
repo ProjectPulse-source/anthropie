@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /en/cost-of-french-public-debt/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-07 ; texte servi de /en/cost-of-french-public-debt/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What does French public debt actually cost?
 In 2025, French general government interest expenditure amounts to 65.7 billion euros, or 4.2% of its revenue.
@@ -293,7 +293,7 @@ SVG
 Cite this page
 Lalut, Stéphane (2026).
 “What does French public debt actually cost?”.
-INSEE and Eurostat data, retrieved 21 October 2026. https://stephane-lalut.com/en/cost-of-french-public-debt/
+INSEE, Eurostat and AFT data, retrieved 21 October 2026. https://stephane-lalut.com/en/cost-of-french-public-debt/
 Copy citation
 In three sentences
 This page measures what public debt costs each year — the interest burden, 65.7 billion euros in 2025 — rather than the size of the stock.
@@ -305,7 +305,8 @@ Consolidated series and derived quantities: implicit rate, ratios, single-vintag
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
-The raw series belong to their producers (INSEE and Eurostat), under their own terms.
+The raw series belong to their producers (INSEE, Eurostat and AFT), under their own terms.
+Values taken from Agence France Trésor (AFT), in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
 Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
 Revisions
 5 November 2026 — Correction: the Haut Conseil’s opinion does publish the 2025 base of the forecast (66 billion, rounded, table 10), consistent with the Eurostat series; the page said the opposite.

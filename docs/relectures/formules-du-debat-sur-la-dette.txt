@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /formules-du-debat-sur-la-dette/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-07 ; texte servi de /formules-du-debat-sur-la-dette/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que valent les formules du débat sur la dette ?
 Le 8 septembre 2025, à l’Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
@@ -6,11 +6,11 @@ Beaucoup de montants résistent à la vérification.
 Mais il suffit souvent de changer la date, le périmètre ou l’unité pour obtenir une autre réponse, et mesurer une évolution ne suffit ni à en désigner la cause ni à justifier une décision.
 Onze cas, confrontés aux données disponibles ce jour-là, montrent comment un même chiffre peut soutenir des conclusions différentes, sans que toutes soient démontrées.
 Les textes de campagne des candidats à l’élection présidentielle de 2027, passés aux mêmes tests, rencontrent les mêmes difficultés de mesure.
-Page mise à jour le 6 novembre 2026
+Page mise à jour le 7 novembre 2026
 Dossier dette publique
 Mise à jour · 11/2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Calcul du : 6 novembre 2026 Compte rendu intégral de la séance du 8 septembre 2025 (Assemblée nationale) ; comptes des administrations publiques (Insee, Eurostat) ; taux à dix ans (Eurostat, Banque de France, Banque de Grèce) ; Cour des comptes, Gouvernement, Sénat.
+Calcul du : 7 novembre 2026 Compte rendu intégral de la séance du 8 septembre 2025 (Assemblée nationale) ; comptes des administrations publiques (Insee, Eurostat) ; taux à dix ans (Eurostat, Banque de France, Banque de Grèce) ; Cour des comptes, Gouvernement, Sénat.
 Télécharger : CSV · JSON · méthode
 Plus d’argent pour les intérêts que pour l’éducation ?
 Le 15 juillet 2025, le gouvernement présente au Parlement le plafond des dépenses de l’année suivante.
@@ -468,7 +468,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Que valent les formules du débat sur la dette ? ».
-Données Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce, relevé du 6 novembre 2026. https://stephane-lalut.com/formules-du-debat-sur-la-dette/
+Données Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce, relevé du 7 novembre 2026. https://stephane-lalut.com/formules-du-debat-sur-la-dette/
 Copier la citation
 En trois phrases
 Sur onze cas chiffrés de la séance de l’Assemblée nationale du 8 septembre 2025, beaucoup de montants résistent à la vérification, mais le verdict change souvent avec la date, l’unité, le périmètre ou l’année.

@@ -232,7 +232,7 @@ The official series are re-queried every week; the retrieval date changes only w
 
 The framework used to interpret these figures is set out in [What is anthropy?](/en/quest-ce-que-lanthropie/) and in the book [*ANTHROPY — A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/). The book-length treatment of French public debt, *Dette Publique&nbsp;: Qui paie vraiment&nbsp;?*, exists in French only.
 
-{{< reutiliser figures="figures_dette" jeu="dette_officielle" sources="INSEE and Eurostat" >}}
+{{< reutiliser figures="figures_dette" jeu="dette_officielle" sources="INSEE, Eurostat and AFT" reserve="Agence France Trésor (AFT)" >}}
 This page measures what public debt costs each year — the interest burden, {{< dette-val "interets_mdeur" >}} billion euros in {{< dette-val "interets_annee" >}} — rather than the size of the stock. It shows why a stock twice as heavy did not double the bill, breaks down the rise since {{< dette-val "dec_a0" >}} between the larger stock and the higher implicit rate (an accounting decomposition, not a measure of the effect of market rates), places the level reached in the long series and explains why the bill can keep rising even as the debt stops growing. It compares magnitudes on one scope and one vintage, without establishing that a euro of interest was taken from another budget.
 {{< /reutiliser >}}
 

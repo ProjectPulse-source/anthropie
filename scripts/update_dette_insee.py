@@ -2316,8 +2316,12 @@ def main() -> int:
                      "https://stephane-lalut.com/cout-de-la-dette-publique/. "
                      "La licence porte sur la COMPILATION (assemblage des "
                      "séries, grandeurs dérivées, mise en cohérence) ; les "
-                     "séries brutes restent celles de l'INSEE et d'Eurostat, "
-                     "sous leurs propres conditions."),
+                     "séries brutes restent celles de l'INSEE, d'Eurostat et "
+                     "de l'Agence France Trésor (AFT), sous leurs propres "
+                     "conditions ; les valeurs reprises de l'AFT ne sont pas "
+                     "couvertes par la licence CC BY : ce producteur en réserve "
+                     "la réutilisation à des fins non commerciales (audit des "
+                     "ressources, 07/11/2026)."),
         "releve_le": now_iso,
         "affichage": affichage,
         "affichage_en": affichage_en,

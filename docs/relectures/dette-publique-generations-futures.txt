@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /dette-publique-generations-futures/, build de 8c492ff + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-07 ; texte servi de /dette-publique-generations-futures/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d’autres équipements.
@@ -7,7 +7,7 @@ De 1996 à 2025, 18 % seulement des déficits publics ont correspondu à des act
 Le capital humain que peuvent laisser l’enseignement ou la santé n’y figure pas : ce chiffre dit à quoi les déficits ont correspondu, non ce qu’ils ont produit.
 Deux autres arguments méritent examen : « nous nous devons la dette à nous-mêmes » et « le véritable fardeau viendra du vieillissement ».
 Trois tests les éprouvent, sans prétendre calculer la facture de chaque génération.
-Page mise à jour le 5 novembre 2026 · révisions
+Page mise à jour le 7 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat et BCE 2025 · projections 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -457,7 +457,7 @@ COR, rapport annuel de juin 2026, données de la synthèse, scénario de référ
 Contrôle : pour chaque pays et chaque année, les ratios calculés sont comparés à ceux qu’Eurostat publie en pourcentage du PIB, que le calcul n’utilise pas.
 Au-delà de 0,11 point d’écart, l’année est écartée et comptée (0 sur 835) ; pour la France, le script s’arrête.
 Les chiffres calculés viennent tous du même script, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
-Seule la dernière part des non-résidents, lue sur le graphique de l’Agence France Trésor, est transcrite à la main ; le relevé du trimestre précédent est contrôlé contre Webstat.
+Les parts des non-résidents des premier et deuxième trimestres 2026 sont relevées à la main sur les graphiques de l’Agence France Trésor ; la dernière observation de la série Webstat de la Banque de France (consultée le 7 novembre 2026) est celle du quatrième trimestre 2025, qui sert de point de contrôle.
 Les chiffres des études citées sont repris tels qu’elles les publient.
 Les arguments ont été mis à l’épreuve avant l’écriture de la page, selon un protocole fixé avant le calcul.
 Réutiliser cette page
@@ -492,7 +492,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « La dette publique est-elle un fardeau pour les générations futures ? ».
-Données Eurostat, Insee, BCE, Commission européenne, COR, relevé du 5 novembre 2026. https://stephane-lalut.com/dette-publique-generations-futures/
+Données Eurostat, Insee, BCE, Commission européenne, COR et AFT, relevé du 5 novembre 2026. https://stephane-lalut.com/dette-publique-generations-futures/
 Copier la citation
 En trois phrases
 De 1996 à 2025, 18 % du besoin de financement des administrations publiques françaises a correspondu, dans les comptes, à un accroissement net de leurs actifs comptabilisés, et 66 % à des dépenses courantes non couvertes par les recettes courantes ; la part en actifs est passée de 32 % (1996-2005) à 10 % (2016-2025).
@@ -504,8 +504,10 @@ Les emplois du besoin de financement des administrations publiques (France par d
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
-Les séries brutes appartiennent à leurs producteurs (Eurostat, Insee, BCE, Commission européenne, COR), sous leurs propres conditions.
+Les séries brutes appartiennent à leurs producteurs (Eurostat, Insee, BCE, Commission européenne, COR et AFT), sous leurs propres conditions.
+Les valeurs reprises de l’AFT, dans les fichiers comme dans les graphiques, ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale.
 Révisions
+7 novembre 2026 — Correction de la note de méthode : les parts des non-résidents des premier et deuxième trimestres 2026 (57,5 %, relevé le 3 octobre ; 59,7 %, relevé le 5 novembre) sont lues sur les graphiques de l’Agence France Trésor ; le contrôle contre Webstat porte sur le quatrième trimestre 2025, dernière observation de cette série au 7 novembre.
 5 novembre 2026 — Correction : les valeurs par poste (pensions, santé, dépendance, éducation) sont des contributions au second terme de l’indicateur S2, non des variations de dépense en points de PIB.
 31 octobre 2026 — Révision du patrimoine des administrations publiques : les comptes financiers de la Banque de France, actualisés en octobre 2026 pour 2023 à 2025 et repris par Eurostat, réévaluent surtout les actions détenues par les administrations ; le patrimoine net de fin 2025 passe de 25,0 % à 27,1 % du PIB.
 Le compte de l’Insee de juillet, qui ne l’intègre pas encore, devient un témoin.
