@@ -804,6 +804,7 @@ main .pastilles ul {
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 .pastilles a::after { content: "\2192"; color: var(--color-pivot); }
+@media (max-width: 600px) { .pastilles a { min-height: 44px; } } // cible tactile (07/11/2026)
 .pastilles a:hover { border-color: var(--color-accent); background: var(--color-accent-faint); }
 .pastilles a:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
 @media print {

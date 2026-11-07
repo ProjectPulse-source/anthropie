@@ -72,7 +72,9 @@ presse_objets:
   en-attendant-nadeau-christophers: "Profit et transition"
 ---
 
-Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et quatre ouvrages publiés. Il est par ailleurs l'auteur de deux autres livres, consacrés à l'histoire des idées et à la littérature.
+Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique — l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans une série de working papers et quatre ouvrages publiés&nbsp;; il est aussi l'auteur de deux autres livres, consacrés à l'histoire des idées et à la littérature.
+
+Il écrit pour des revues de recherche, comme *Sociologie du travail* et la *Revue Française de Socio-Économie*, et pour la presse intellectuelle, d'*En attendant Nadeau* à *La Vie des idées*. Ses recensions et ses articles y confrontent les travaux et les débats du moment, du travail à la dette, de l'énergie à l'intelligence artificielle, à la question qui traverse les siens&nbsp;: qui en absorbe le coût&nbsp;?
 
 {{< identifiants >}}
 

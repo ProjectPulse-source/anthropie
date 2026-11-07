@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (matin) — À propos : doublon d'ouverture retiré, revues dans la présentation, textes à 12 px
+
+- **Doublon** : le chapô (description) répétait la première phrase du texte ; il n'est plus affiché
+  (`layouts/a-propos/list.html`), la description reste en meta.
+- **Présentation (FR et EN)** : second paragraphe, demandé par l'auteur — revues de recherche (*Sociologie du travail*,
+  *RFSE*) et presse intellectuelle (*En attendant Nadeau*, *La Vie des idées*), et le mécanisme : les recensions
+  confrontent les travaux du moment à la question « qui en absorbe le coût ? ». Revues et thèmes relus sur
+  `content/publications/`.
+- **Mur presse** : nom de la revue 9,5 → 12 px, interlettrage 0,14 → 0,06 em, navy plus contrasté ; même tuile sur
+  `/publications/` (propagé). Deux colonnes jusqu'à 320 px : mur 1 142 px au lieu de ~2 400, page 7 539 px au lieu
+  de 8 655. Aucun texte hors de sa tuile à 320, 390, 1280 (témoin : libellé forcé à 30 px → 26 débordements vus).
+- **Libellés à 11 px** du mur des livres (`auteur-wall__label`, `wall-tile__meta`, `wall-tile__lang`) → 12 px.
+- **Pastilles** (`.pastilles a`, toutes pages) : 44 px de haut sous 600 px (36 avant).
+- Contrôles : hugo 0, typo 0, liens 0, check-all 0 (3 insécables corrigées par `check-typo-fr.py --corriger`).
+
 ### 2026-11-07 (nuit, fin bis) — Accueil : derniers textes sous 12 px portés à 12 px
 
 Point 4 de la revue de l'accueil (auteur). Surtitre « Les trois axes croisés » 10 → 12 px (variable --fs-micro non modifiée) ;

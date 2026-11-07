@@ -16,7 +16,7 @@
 
 .auteur-wall__label {
   font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
+  font-size: 12px; // 11 → 12 px (auteur, 07/11/2026 : aucun texte sous 12 px)
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--color-text-subtle);
@@ -85,7 +85,7 @@
   display: block;
   margin-top: 5px;
   font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
+  font-size: 12px; // 11 → 12 px (auteur, 07/11/2026 : aucun texte sous 12 px)
   color: var(--color-text-faint);
 }
 
@@ -93,7 +93,7 @@
   display: block;
   margin-top: 6px;
   font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
+  font-size: 12px; // 11 → 12 px (auteur, 07/11/2026 : aucun texte sous 12 px)
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-text-subtle);
@@ -146,11 +146,15 @@
   box-shadow: 0 10px 22px rgba(15, 15, 18, 0.16);
 }
 
+// Le nom de la revue porte la crédibilité de la tuile : 12 px (9,5 avant, auteur 07/11/2026), interlettrage
+// resserré pour que les noms longs (« Revue Française de Socio-Économie ») tiennent dans la tuile.
 .presse-wall .pub-thumb__label {
   text-align: center;
-  font-size: 9.5px;
-  letter-spacing: 0.14em;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
 }
+.presse-wall .pub-thumb--logo--navy .pub-thumb__label { color: rgba(250, 250, 246, 0.82); }
 .presse-wall .presse-tile__face .presse-tile__objet {
   font-size: 17px;
   line-height: 1.15;
@@ -193,6 +197,12 @@
   .auteur-wall__grid { grid-template-columns: 1fr; }
   .presse-wall { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 9px; }
   .presse-wall .presse-tile__face .presse-tile__objet { font-size: 15px; }
+}
+// Deux colonnes jusqu'à 320 px (une seule colonne faisait ~2 400 px de défilement).
+@media (max-width: 400px) {
+  .presse-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .presse-wall .presse-tile__face { padding: 8px 8px; }
+  .presse-wall .presse-tile__face .presse-tile__objet { font-size: 14.5px; }
 }
 @media (max-width: 420px) {
   .wall-tile__cover { flex-basis: 98px; width: 98px; }

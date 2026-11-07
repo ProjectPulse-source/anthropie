@@ -203,7 +203,7 @@
 .pub-entree__tuile { display: block; text-decoration: none; }
 .pub-entree .pub-thumb {
   width: 164px; min-width: 164px; height: 107px; border-radius: 6px; padding: 8px 10px; gap: 5px; // même tuile que le mur presse de /a-propos/ (auteur, 02/11/2026)
-  .pub-thumb__label { font-size: 9.5px; letter-spacing: 0.14em; }
+  .pub-thumb__label { font-size: 12px; line-height: 1.2; letter-spacing: 0.06em; text-align: center; } // = mur presse (07/11/2026)
   .pub-thumb__name { font-size: 17px; }
   .pub-thumb__rule { width: 32px; }
 }
