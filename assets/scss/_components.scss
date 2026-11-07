@@ -150,9 +150,11 @@
 
   .site-header__burger {
     display: flex; flex-direction: column; justify-content: space-between;
-    width: 28px; height: 22px;
+    // Cible tactile 44 x 44 (07/11/2026 ; 28 x 22 avant) : l'icône garde 28 x 22 dans le remplissage, la marge négative
+    // garde son alignement à droite.
+    width: 44px; height: 44px; box-sizing: border-box; padding: 11px 8px; margin: -11px -8px -11px 0;
     background: none; border: none; cursor: pointer;
-    padding: 0; z-index: 210; position: relative;
+    z-index: 210; position: relative;
 
     span {
       display: block; width: 100%; height: 2px;
@@ -590,6 +592,98 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   color: var(--color-text-subtle); text-transform: uppercase; letter-spacing: 0.04em;
 }
 .registre__pages { font-size: 12px; color: var(--color-text-subtle); } // 10 → 12 px (07/11/2026)
+
+// ----- Registre : maquette C+ (Audit-18, auteur 07/11/2026) -----
+// Exemple en tête (ordre créé et dette déportée côte à côte), frise des sept âges, recherche et filtres, jalon ouvert sur
+// deux colonnes. Couleur de la dette : l'orange « flux » de la charte des figures (#c2410c), assombri pour le texte.
+.registre-exemple {
+  background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-radius: 6px;
+  padding: 16px 20px 12px; margin: 1.6rem 0 0;
+}
+.registre-exemple__kick {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-text-subtle); margin: 0 0 6px;
+}
+.registre-exemple__date { white-space: nowrap; }
+.home-section h3.registre-exemple__titre { font-family: var(--font-serif); font-size: 24px; font-weight: 400; line-height: 1.25; margin: 0 0 12px; padding: 0; border: 0; }
+.registre-deux { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+.registre-deux > div { border-top: 3px solid var(--color-accent); padding-top: 8px; }
+.registre-deux > .registre-deux__dette { border-top-color: #9a3a0c; }
+.registre-deux p { margin: 0; color: var(--color-text-muted); }
+.registre-deux .registre-deux__label {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-accent); margin: 0 0 4px;
+}
+.registre-deux__dette .registre-deux__label { color: #9a3a0c; }
+.registre-exemple .registre__categories, .registre-exemple .registre__pages { margin: 10px 0 0; }
+.registre-exemple__livre {
+  display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; align-items: center;
+  margin: 16px 0 0; padding: 14px 0 2px; border-top: 1px solid var(--color-rule-soft);
+}
+.registre-exemple__couv img { display: block; width: 72px; height: auto; box-shadow: 0 6px 16px -8px rgba(15, 27, 54, 0.5); }
+.registre-exemple__livre p { margin: 0 0 4px; }
+.registre-exemple__livre-sous { color: var(--color-text-muted); font-size: 16px; }
+.registre-exemple__livre-lien {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font-family: var(--font-sans); font-size: 14px; font-weight: 500; color: var(--color-accent);
+}
+@media (max-width: 600px) { .registre-deux { grid-template-columns: 1fr; } }
+@media (max-width: 360px) {
+  .registre-exemple__livre { grid-template-columns: 48px minmax(0, 1fr); gap: 12px; }
+  .registre-exemple__couv img { width: 48px; }
+}
+
+.registre-frise { margin: 2rem 0 0; }
+.registre-frise__sous { font-family: var(--font-sans); font-size: 13px; line-height: 1.45; color: var(--color-text-subtle); max-width: 640px; }
+main .registre-frise__liste { list-style: none; padding: 0 !important; margin: 0 !important; display: grid; gap: 6px; }
+main .registre-frise__liste li { padding: 0 !important; margin: 0 !important; }
+main .registre-frise__liste li::before { content: none !important; }
+.registre-frise__age {
+  display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); align-items: center; gap: 4px 18px;
+  min-height: 44px; padding: 4px 6px; border-radius: 4px; text-decoration: none;
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.25; color: var(--color-text);
+}
+.registre-frise__age:hover, .registre-frise__age[aria-current] { background: var(--color-accent-faint); }
+.registre-frise__age:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
+.registre-frise__nom b { display: block; font-weight: 600; color: var(--color-accent); font-size: 13px; }
+.registre-frise__nom > span { display: block; }
+.registre-frise__nom .registre-frise__per { font-size: 12px; color: var(--color-text-subtle); }
+// Le nombre suit le bout de sa barre (contrôleur de rendu, 07/11/2026 : en colonne, le « 7 » de l'âge 2 était à 725 px
+// de sa barre). La piste réserve 40 px à droite : la plus longue barre (100 %) y laisse la place de son nombre.
+.registre-frise__piste { display: flex; align-items: center; min-width: 0; padding-right: 40px; }
+.registre-frise__barre { display: block; flex: none; height: 16px; background: #184f95; border-radius: 2px; }
+.registre-frise__age[aria-current] .registre-frise__barre { background: #9a3a0c; }
+.registre-frise__n { flex: none; margin-left: 6px; font-weight: 600; }
+@media (max-width: 720px) {
+  .registre-frise__age { grid-template-columns: minmax(0, 1fr); }
+}
+
+.registre-filtres { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 4px; padding: 10px 0; background: var(--color-bg); }
+.registre-filtres .registre__compte { flex: 1 1 100%; margin: 0; }
+.registre-filtres[hidden] { display: none; }
+.registre-filtres__q, .registre-filtres__cat {
+  font-family: var(--font-sans); font-size: 15px; min-height: 44px; padding: 8px 10px; min-width: 0;
+  border: 1px solid var(--color-rule-medium); border-radius: 4px; background: var(--color-bg-elevated); color: var(--color-text);
+}
+.registre-filtres__q { flex: 1 1 200px; }
+.registre-filtres__cat { flex: 0 1 230px; }
+.registre-filtres__ody { display: flex; align-items: center; gap: 8px; min-height: 44px; font-family: var(--font-sans); font-size: 14px; color: var(--color-text-muted); cursor: pointer; }
+.registre-filtres__ody input { width: 20px; height: 20px; flex: none; margin: 0; }
+@media (max-width: 600px) { .registre-filtres__q, .registre-filtres__cat { flex-basis: 100%; } }
+@media (min-width: 761px) {
+  .registre-filtres { position: sticky; top: 66px; z-index: 5; border-bottom: 1px solid var(--color-rule-soft); }
+}
+.registre__raz {
+  display: inline-flex; align-items: center; margin: 4px 0 0 12px; vertical-align: middle;
+  font-family: var(--font-sans); font-size: 13px; font-weight: 500; min-height: 44px; padding: 0 14px; cursor: pointer;
+  border: 1px solid var(--color-accent-soft); border-radius: 999px; background: var(--color-bg-elevated); color: var(--color-accent);
+}
+.registre__vide { font-family: var(--font-sans); color: var(--color-text-subtle); padding: 1rem 0; }
+.registre__jalon[hidden], .registre__age[hidden] { display: none; }
+@media (min-width: 761px) {
+  .registre__jalon[open] .registre__corps { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
+  .registre__jalon[open] .registre__corps > :not(:nth-child(-n+2)) { grid-column: 1 / -1; }
+}
 
 // ----- FAQ -----
 .faq-section { margin-top: 3rem; }

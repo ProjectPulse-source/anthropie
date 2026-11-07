@@ -9,25 +9,40 @@
 {{- if not $reg -}}
   {{- errorf "registre-ages : fichier data absent pour la langue %s" .Page.Lang -}}
 {{- end -}}
-<div class="registre">
+<div class="registre" data-total="{{ len $reg.jalons }}">
+  {{- /* Recherche et filtres (maquette C+, Audit-18, 07/11/2026) : rendus cachés, révélés par static/js/registre.js ;
+         sans script, la page reste la liste complète. Catégories et escales comptées au build. */ -}}
+  {{- $cats := dict -}}
+  {{- range $reg.jalons }}{{ range .categories }}{{ $cats = merge $cats (dict . (add (index $cats . | default 0) 1)) }}{{ end }}{{ end -}}
+  {{- $catl := slice -}}
+  {{- range $k, $v := $cats }}{{ $catl = $catl | append (dict "c" $k "n" $v) }}{{ end -}}
+  {{- $ody := len (where $reg.jalons "odyssee" "!=" nil) -}}
+  <div class="registre-filtres" hidden>
+    <input class="registre-filtres__q" type="search" placeholder="{{ if $isEn }}Search (e.g. money){{ else }}Chercher (ex.&nbsp;: monnaie){{ end }}" aria-label="{{ if $isEn }}Search a milestone{{ else }}Chercher un jalon{{ end }}">
+    <select class="registre-filtres__cat" aria-label="{{ if $isEn }}Category of the transfer{{ else }}Catégorie du transfert{{ end }}">
+      <option value="">{{ if $isEn }}All categories{{ else }}Toutes les catégories{{ end }}</option>
+      {{- range sort (sort $catl "c") "n" "desc" }}<option value="{{ .c }}">{{ .c }} ({{ .n }})</option>{{ end }}
+    </select>
+    <label class="registre-filtres__ody"><input type="checkbox"><span>{{ if $isEn }}With a stop in <em>L’Odyssée des idées</em> ({{ $ody }}){{ else }}Avec une escale de <em>L’Odyssée des idées</em>&nbsp;({{ $ody }}){{ end }}</span></label>
+  </div>
   {{- /* Complet (26/10/2026 : les trois jalons absents ajoutés) : le compte dit « les N jalons du livre » ; s'il
          redevient partiel, il dit « N des M ». */ -}}
   {{- $complet := eq (len $reg.jalons) (int $reg._meta.jalons_livre) -}}  {{- /* int : un nombre lu dans un JSON est un flottant pour Hugo */ -}}
   {{- if $isEn }}
-  <p class="registre__compte">{{ if $complet }}All {{ len $reg.jalons }} milestones of the book{{ else }}Online: {{ len $reg.jalons }} of the {{ $reg._meta.jalons_livre }} milestones in the book{{ end }}—each on the same grid: <strong>Order created</strong>, <strong>Debt displaced</strong>, categories of the transfer.</p>
+  <p class="registre__compte" aria-live="polite">{{ if $complet }}All {{ len $reg.jalons }} milestones of the book{{ else }}Online: {{ len $reg.jalons }} of the {{ $reg._meta.jalons_livre }} milestones in the book{{ end }}—each on the same grid: <strong>Order created</strong>, <strong>Debt displaced</strong>, categories of the transfer.</p>
   {{- else }}
-  <p class="registre__compte">{{ if $complet }}Les {{ len $reg.jalons }} jalons du livre{{ else }}En ligne&nbsp;: {{ len $reg.jalons }} jalons des {{ $reg._meta.jalons_livre }} que compte le livre{{ end }} — chacun sur la même grille&nbsp;: <strong>ordre créé</strong>, <strong>dette déportée</strong>, catégories du transfert.</p>
+  <p class="registre__compte" aria-live="polite">{{ if $complet }}Les {{ len $reg.jalons }} jalons du livre{{ else }}En ligne&nbsp;: {{ len $reg.jalons }} jalons des {{ $reg._meta.jalons_livre }} que compte le livre{{ end }} — chacun sur la même grille&nbsp;: <strong>ordre créé</strong>, <strong>dette déportée</strong>, catégories du transfert.</p>
   {{- end }}
   {{- range $age := $reg.ages }}
   {{- $jalons := where $reg.jalons "age" $age.num }}
-  <section class="registre__age">
+  <section class="registre__age" data-age="{{ $age.num }}">
     {{- if $isEn }}
     <h2 id="age-{{ $age.num }}">Age {{ $age.num }}—{{ $age.titre }} <span class="registre__periode">({{ $age.periode }})</span></h2>
     {{- else }}
     <h2 id="age-{{ $age.num }}">Âge {{ $age.num }} — {{ $age.titre }} <span class="registre__periode">({{ $age.periode }})</span></h2>
     {{- end }}
     {{- range $j := $jalons }}
-    <details class="registre__jalon" id="{{ $j.ancre | default (anchorize $j.titre) }}">
+    <details class="registre__jalon" data-cats="{{ delimit $j.categories "|" }}"{{ with $j.odyssee }} data-ody{{ end }} id="{{ $j.ancre | default (anchorize $j.titre) }}">
       <summary><span class="registre__date">{{ $j.date }}</span> <span class="registre__titre">{{ $j.titre }}</span></summary>
       <div class="registre__corps">
         {{- if $isEn }}
@@ -53,4 +68,6 @@
     {{- end }}
   </section>
   {{- end }}
+  <p class="registre__vide" hidden>{{ if $isEn }}No milestone matches these criteria.{{ else }}Aucun jalon ne répond à ces critères.{{ end }}</p>
 </div>
+<script src="{{ partial "js-url.html" "registre.js" }}" defer></script>

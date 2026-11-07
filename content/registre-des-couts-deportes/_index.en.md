@@ -45,6 +45,8 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 The Register of Offloaded Costs is the **documentary apparatus** of the book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/): the book tells deep history in 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, and the Register asks each of them the same two questions: **what order did this innovation create, and what debt did it displace**—toward other places, other times, or other social groups? The English version, below, is freely browsable; it holds all 168 milestones of the book.
 
+{{< registre-exemple tri="-1500000" >}}
+
 ## How to read a milestone
 
 Each entry applies the grid of the anthropic hypothesis—[social systems displace disorder rather than resolve it](/en/quest-ce-que-lanthropie/):
@@ -56,15 +58,17 @@ Each entry applies the grid of the anthropic hypothesis—[social systems displa
 
 The Register does not tell the story of progress: it keeps its **accounts**. What other narratives present as solutions appears here as displacements—every solution incurs a debt, and history is the sequence of these transfers.
 
+{{< registre-frise >}}
+
+## The Register
+
+{{< registre-ages >}}
+
 ## The trajectory: from the spatial to the cognitive
 
 Read end to end, the chronology draws a migration that the book's afterword sums up. In **ages 1 to 3**, order displaces disorder **spatially**: the dead beyond the village, waste beyond the city, "barbarians" beyond the empire. In **ages 4 and 5**, **socially**: onto serfs, onto colonies, onto labouring classes. In **ages 6 and 7**, **temporally and cognitively**: onto future generations (climate), onto attention (algorithms). Each time a receptacle saturates, the escape reinvents itself elsewhere—more abstract, more distant, less politicizable.
 
 This dynamic—displacement, accumulation, saturation, return—is formalized in [AWP-07, *The Anthropic Loop*](/en/awp/awp-07/); the deep-history reading of the Register is the object of [AWP-02, *3.3 Million Years in One Principle*](/en/awp/awp-02/).
-
-## The Register
-
-{{< registre-ages >}}
 
 ## What the Register does not say
 

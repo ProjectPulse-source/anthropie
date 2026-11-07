@@ -1,0 +1,33 @@
+{{- /* {{< registre-exemple tri="-1500000" >}} — un jalon du Registre en exemple, ordre créé et dette déportée côte à côte,
+       puis le livre (maquette C+, arbitrage Audit-18, auteur 07/11/2026). Le jalon est lu dans
+       data/registre_couts_deportes{_en}.json par sa clé `tri` (identique dans les deux langues) : aucun texte recopié.
+       Le bloc du livre tire titre, sous-titre et couverture de la fiche du livre dans la langue de la page. */ -}}
+{{- $isEn := eq .Page.Lang "en" -}}
+{{- $reg := cond $isEn site.Data.registre_couts_deportes_en site.Data.registre_couts_deportes -}}
+{{- $tri := int (.Get "tri") -}}
+{{- $j := dict -}}
+{{- range $reg.jalons }}{{ if eq (int .tri) $tri }}{{ $j = . }}{{ end }}{{ end -}}
+{{- if not $j.titre -}}{{- errorf "registre-exemple : aucun jalon de tri %d (%s)" $tri .Page.Lang -}}{{- end -}}
+{{- $slug := "anthropie-ordre-ici-dette-ailleurs" -}}
+{{- $livre := .Page.Site.GetPage (printf "/livres/%s" $slug) -}}
+{{- if not $livre -}}{{- errorf "registre-exemple : fiche %s introuvable (%s)" $slug .Page.Lang -}}{{- end -}}
+<section class="registre-exemple" aria-label="{{ if $isEn }}One milestone as an example{{ else }}Un jalon en exemple{{ end }}">
+  <p class="registre-exemple__kick">{{ if $isEn }}One milestone, the two questions{{ else }}Un jalon, les deux questions{{ end }} · <span class="registre-exemple__date">{{ $j.date }}</span></p>
+  <h3 class="registre-exemple__titre">{{ $j.titre }}</h3>
+  <div class="registre-deux">
+    <div class="registre-deux__ordre"><p class="registre-deux__label">{{ if $isEn }}Order created{{ else }}Ordre créé{{ end }}</p><p>{{ $j.ordre }}</p></div>
+    <div class="registre-deux__dette"><p class="registre-deux__label">{{ if $isEn }}Debt displaced{{ else }}Dette déportée{{ end }}</p><p>{{ $j.dette }}</p></div>
+  </div>
+  <p class="registre__categories">{{ delimit $j.categories " · " }}</p>
+  {{- with $j.pages }}
+  <p class="registre__pages">{{ if $isEn }}<em>Anthropy</em>, {{ if in . "-" }}pp.{{ else }}p.{{ end }}&nbsp;{{ replace . "-" "–" }}{{ else }}<em>Anthropie</em>, p.&nbsp;{{ replace . "-" "‑" }}{{ end }}</p>
+  {{- end }}
+  <div class="registre-exemple__livre">
+    {{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "%s" $livre.Title) "wrapClass" "registre-exemple__couv" "sizes" "72px" "lang" .Page.Lang) }}
+    <div>
+      <p class="registre-exemple__livre-titre"><a href="{{ $livre.RelPermalink }}"><em>{{ $livre.Title }}</em></a></p>
+      {{- with $livre.Params.subtitle }}<p class="registre-exemple__livre-sous">{{ partial "fr-typo.html" . }}</p>{{ end }}
+      <a class="registre-exemple__livre-lien" href="{{ $livre.RelPermalink }}">{{ if $isEn }}Discover the book ›{{ else }}Découvrir le livre ›{{ end }}</a>
+    </div>
+  </div>
+</section>

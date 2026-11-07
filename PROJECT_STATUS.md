@@ -52,6 +52,27 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (fin de matinée) — Registre des coûts déportés : maquette C+ en production (Audit-18)
+
+- **Page FR et EN** : exemple du Feu juste après l'introduction (`registre-exemple tri="-1500000"`, ordre créé et dette
+  déportée côte à côte, texte lu dans les données, livre tiré de sa fiche) ; légende inchangée ; frise « Sept âges,
+  168 jalons » (`registre-frise`, barres HTML comptées au build, chaque barre lien vers son âge) ; recherche, catégorie
+  et escales de *L'Odyssée* (`registre-ages` + `static/js/registre.js`, filtres cachés sans script) ; jalon ouvert sur
+  deux colonnes au-dessus de 760 px ; « La trajectoire » après le registre.
+- **Figure (skill controle-figures)** : nombres et longueurs recalculés depuis les JSON (8, 7, 34, 20, 24, 29, 46 ;
+  largeurs à 0,1 % près), FR et EN. Deux contrôleurs indépendants : données (aucune erreur ; recherche aveugle à ’ − et
+  aux insécables, pluriel anglais, légende fausse sans script → corrigés) ; rendu (filtre actif invisible dans la barre
+  collante, nombre à 725 px de sa barre, frise écrasée de 600 à 720 px, encart du livre à 320 px, focus, placeholder →
+  corrigés ; bouton menu 28 × 22 au téléphone, **commun au site** → 44 × 44). Non retenus, motivés : signe moins des dates
+  (posé par `typo_build.py` au déploiement), compteurs globaux du menu des catégories.
+- Second passage du contrôleur de rendu : aucun défaut bloquant ni gênant ; deux cosmétiques corrigés (en-tête du
+  téléphone regrossi à 77 px par le bouton de 44 px → marges négatives, 58 px rétablis, coin du bouton toujours actif ;
+  « 3300000 » trouve « 3 300 000 »). Limite déclarée : barre de filtres collante de 121 px sur ordinateur quand un filtre
+  est actif (le filtre doit rester visible).
+- Mesures : aucun texte sous 12 px, aucune cible sous 44 px au téléphone, aucun débordement à 320, 390, 650, 1 024,
+  1 280 px ; filtres vérifiés contre les données (Écologique 17, escales 68, âge 3 : 34, « monnaie » 2).
+- Contrôles : hugo 0, typo 0, liens 0, check-all 0, rendu des ressources 0.
+
 ### 2026-11-07 (matinée) — Registre des coûts déportés : corrections immédiates, chapôs en double sur dix pages
 
 - **Chapô en double** (description répétée par le premier paragraphe) : drapeau `sans_chapo: true` lu par

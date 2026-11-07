@@ -1,0 +1,22 @@
+{{- /* {{< registre-frise >}} — répartition des jalons du Registre entre les sept âges (maquette C+, Audit-18, 07/11/2026).
+       Figure de barres HTML : longueur = nombre de jalons de l'âge / plus grand nombre, compté au build dans
+       data/registre_couts_deportes{_en}.json (rien de recopié). Chaque barre est un lien vers l'âge (#age-N) ; avec le
+       script static/js/registre.js, le clic filtre le registre sur cet âge. Contrôle : skill controle-figures. */ -}}
+{{- $isEn := eq .Page.Lang "en" -}}
+{{- $reg := cond $isEn site.Data.registre_couts_deportes_en site.Data.registre_couts_deportes -}}
+{{- $max := 0 -}}
+{{- range $reg.ages }}{{ $n := len (where $reg.jalons "age" .num) }}{{ if gt $n $max }}{{ $max = $n }}{{ end }}{{ end -}}
+{{- if eq $max 0 }}{{ errorf "registre-frise : aucun jalon (%s)" .Page.Lang }}{{ end -}}
+<section class="registre-frise" aria-labelledby="sept-ages">
+  <h2 id="sept-ages">{{ if $isEn }}Seven ages, {{ len $reg.jalons }} milestones{{ else }}Sept âges, {{ len $reg.jalons }} jalons{{ end }}</h2>
+  <p class="registre-frise__sous">{{ if $isEn }}How the book’s milestones are spread across its seven ages: a choice in the writing of the book, not a measure of how much each period matters. <span data-js="Choose an age to filter the Register to it.">Choose an age to go to its milestones.</span>{{ else }}Répartition des jalons du livre entre ses sept âges&nbsp;: un choix d’écriture du livre, non une mesure de l’importance des périodes. <span data-js="Choisir un âge filtre le registre sur cet âge.">Choisir un âge mène à ses jalons.</span>{{ end }}</p>
+  <ol class="registre-frise__liste">
+    {{- range $reg.ages }}
+    {{- $n := len (where $reg.jalons "age" .num) }}
+    <li><a class="registre-frise__age" href="#age-{{ .num }}" data-age="{{ .num }}" aria-label="{{ if $isEn }}Age {{ .num }}, {{ .titre }}, {{ $n }} milestones{{ else }}Âge {{ .num }}, {{ .titre }}, {{ $n }} jalons{{ end }}">
+      <span class="registre-frise__nom"><b>{{ if $isEn }}Age{{ else }}Âge{{ end }} {{ .num }}</b><span>{{ .titre }}</span><span class="registre-frise__per">{{ .periode }}</span></span>
+      <span class="registre-frise__piste" aria-hidden="true"><span class="registre-frise__barre" style="width:{{ printf "%.1f" (mul 100.0 (div (float $n) (float $max))) }}%"></span><span class="registre-frise__n">{{ $n }}</span></span>
+    </a></li>
+    {{- end }}
+  </ol>
+</section>

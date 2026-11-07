@@ -42,6 +42,8 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 Le Registre des coûts déportés est l'**appareil documentaire** du livre [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (2025)&nbsp;: le livre raconte l'histoire longue en 168 jalons, des premiers outils de pierre (≈&nbsp;−3,3&nbsp;millions d'années) aux algorithmes contemporains, et le Registre pose à chacun les deux mêmes questions&nbsp;: **quel ordre cette innovation a-t-elle créé, et quelle dette a-t-elle déportée** — vers d'autres lieux, d'autres temps ou d'autres groupes sociaux&nbsp;? La version en ligne, ci-dessous, est en consultation libre&nbsp;; elle compte les 168 jalons du livre.
 
+{{< registre-exemple tri="-1500000" >}}
+
 ## Comment lire un jalon
 
 Chaque entrée applique la grille de l'hypothèse anthropique — [les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent](/quest-ce-que-lanthropie/)&nbsp;:
@@ -53,15 +55,17 @@ Chaque entrée applique la grille de l'hypothèse anthropique — [les systèmes
 
 Le Registre ne raconte pas l'histoire du progrès&nbsp;: il en tient la **comptabilité**. Ce que d'autres récits présentent comme des solutions y apparaît comme des déplacements — chaque solution contracte une dette, et l'histoire est la suite de ces transferts.
 
+{{< registre-frise >}}
+
+## Le Registre
+
+{{< registre-ages >}}
+
 ## La trajectoire&nbsp;: du spatial au cognitif
 
 Lue d'un bout à l'autre, la chronologie dessine une migration que la postface du livre résume ainsi. Aux **âges 1 à 3**, l'ordre déplace le désordre **spatialement**&nbsp;: les morts hors du village, les déchets hors de la cité, les «&nbsp;barbares&nbsp;» hors de l'empire. Aux **âges 4 et 5**, il le déplace **socialement**&nbsp;: sur les serfs, sur les colonies, sur les classes laborieuses. Aux **âges 6 et 7**, **temporellement et cognitivement**&nbsp;: sur les générations futures (climat), sur l'attention (algorithmes). À chaque saturation d'un espace de déportation, la fuite s'invente ailleurs — plus abstrait, plus lointain, moins politisable.
 
 Cette dynamique — déplacement, accumulation, saturation, retour — est formalisée dans [AWP-07 — *La boucle anthropique*](/awp/awp-07/)&nbsp;; la lecture du Registre en longue durée est l'objet d'[AWP-02 — *3,3 millions d'années en un principe*](/awp/awp-02/).
-
-## Le Registre
-
-{{< registre-ages >}}
 
 ## Ce que le Registre ne dit pas
 
