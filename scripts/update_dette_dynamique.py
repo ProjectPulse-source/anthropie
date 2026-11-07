@@ -266,12 +266,14 @@ def moy_cs(cs, cle, fen, fin):
 # l'identité de la Cour des comptes, PO(t) = PO(t-1) + évolution spontanée + mesures nouvelles, soit en taux de PO :
 #     Δτ = τ(t-1)·(s − g)/(1 + g) + MN/PIB    (effet d'élasticité + effet des mesures ; CICE porté à part).
 # Note de recherche : docs/confrontation-recherche/TEST_MESURES_RECETTES_2017-2025.md. Deux conventions comptables :
-# Eurostat compte les recettes AVANT crédits d'impôt et range les crédits payables (PTC) en dépense ; l'INSEE et la Cour
-# comptent des PO NETS des crédits. Bouclage : TR = PO nets + PTC + recettes hors PO.
-# Témoins BLOQUANTS : (1) la décomposition 2017-2022 de la Cour (mesures −2,0, élasticité +2,3), à 0,3 point ;
+# Eurostat compte les recettes AVANT crédits d'impôt restituables, ajoutés aux recettes selon la chronique des recettes de
+# l'INSEE (PTC) ; l'INSEE et la Cour comptent des PO NETS des crédits. Bouclage : TR = PO nets + PTC + écart de rapprochement.
+# Témoins BLOQUANTS : (1) la décomposition 2017-2022 de la Cour de juillet 2024, base 2020 (mesures −1,9, spontané +1,6), à
+# la convention de la Cour (cumul en euros rapporté au PIB de 2022), à 0,15 point ;
 # (2) le bouclage annuel sur le taux de PO publié par l'INSEE (base 2020), à 0,3 point chaque année et 0,15 sur chaque
 # sous-période ; (3) la transcription : somme 2018-2023 des mesures hors CICE à 2 Md€ des « 62 Md€ » de la Cour ;
-# (4) les recettes hors PO (TR − PO − PTC) restent entre 6,5 et 9 points de PIB chaque année.
+# (4) l'écart de rapprochement (TR − PO − PTC) reste entre 6,5 et 9 points de PIB chaque année ; (5) PTC suit à 0,3 Md€
+# près la chronique des recettes de crédits d'impôt de l'INSEE (fiche base 2020, mars 2024).
 PIECES_PO = {"cour": "cour_mesures_po_2016-2025.csv", "insee": "insee_taux_po_2014-2025.csv", "reperes": "cour_reperes_po.csv",
              "credits": "insee_credits_impot_base2020.csv"}
 
@@ -372,7 +374,7 @@ VALEURS_SANS_SIGNE = ("tc_avant", "tc_apres", "rec_fin",
                       "p1_hausse", "p2_hausse", "p3_hausse", "p1_taux_croissance")   # « gagne », « ajoute » (motif de check-rendu, 11/10)
 ACCORD_POINTS = ("effet_net", "ofce_rec", "ofce_dep", "tresor_dep_hi", "croise_dep_hi", "croise_dep", "rec_fin",
                  "mn_ptc", "mn_po", "mn_tr", "mn_dep", "mn_dep_nette", "mn_mes_abs", "mn_el_abs", "mn_el_2324", "mn_mes_24fin",
-                 "mn_ec_max", "mn_tempo_pt")
+                 "mn_ec_max", "mn_tempo_pt", "mn_hors_po")
 
 
 def agreger(rows, a0, a1):

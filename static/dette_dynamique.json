@@ -1407,7 +1407,8 @@
   "mn_el_2324_pt": "points",
   "mn_mes_24fin_pt": "point",
   "mn_ec_max_pt": "point",
-  "mn_tempo_pt_pt": "point"
+  "mn_tempo_pt_pt": "point",
+  "mn_hors_po_pt": "point"
  },
  "affichage_en": {
   "annee_depart": "1995",
@@ -1632,6 +1633,7 @@
   "mn_el_2324_pt": "points",
   "mn_mes_24fin_pt": "points",
   "mn_ec_max_pt": "points",
-  "mn_tempo_pt_pt": "points"
+  "mn_tempo_pt_pt": "points",
+  "mn_hors_po_pt": "points"
  }
 }
