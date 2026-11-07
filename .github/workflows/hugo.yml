@@ -151,6 +151,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
+        # Plafond porte de 10 a 30 min (07/11/2026) : la synchronisation de Pages, d'ordinaire < 1 min, a pris
+        # 4 a 10 min le 06-07/11 et quatre deploiements de suite ont expire a 10,2 min alors que le build etait vert.
+        with:
+          timeout: 1800000
 
       # Le build valide ne suffit pas : la meme topologie doit etre observee sur le site SERVI
       # (arbitrage ENTRANTE_2026-09-30_Architecture_Dette-02, F). Apres deploiement, donc un echec
