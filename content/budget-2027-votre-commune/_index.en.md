@@ -67,7 +67,7 @@ dossier_dette_role: "draft budget bill, state of the text"
 
 ## The essentials for your municipality {#essentials}
 
-*State of the draft budget bill for {{< coll-val "plf_edition" >}} on {{< coll-val "plf_etat_au" >}}: no measure is settled, and none has been set aside for good. This page is revised at each step that changes these measures; its revisions remain readable at the foot of the page.*
+*State of the draft budget bill for {{< coll-val "plf_edition" >}} on {{< coll-val "plf_etat_au" >}}: no measure is settled, and none has been set aside for good. This page is revised at each step that changes these measures.*
 
 {{< faq-visible >}}
 

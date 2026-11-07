@@ -564,9 +564,9 @@ Dossier : `D:\PRO\06_PROMOTION\GEO_FRAICHEUR_2026-10-16\` (état des lieux, deux
   autres lisent leur date dans la source ; collectivités garde son critère (grandeurs publiées). `dates-affichage.py`
   refuse un relevé avancé à données identiques (bloquant, témoin 3).
 - **Journal** (`journal: [{date, texte}]`) : écrit à la main, seulement pour une révision qui change la lecture
-  (correction d'une valeur publiée, conclusion modifiée) ; jamais tiré des commits. Affiché en PIED de page (section
-  « Révisions », `data-nosnippet`, `partials/page-revisions.html`) avec un lien discret depuis la date : jamais sous le
-  chapô, où l'ancienne valeur prendrait la place du constat.
+  (correction d'une valeur publiée, conclusion modifiée) ; jamais tiré des commits. **Registre interne, JAMAIS affiché**
+  (auteur, 07/11/2026 : « cela n'intéresse pas le lecteur, c'est une information pour nous ») : ni section « Révisions »,
+  ni lien depuis la date, ni phrase qui y renvoie. `page-date.html` continue d'exiger qu'une entrée tombe un jour de fond.
 - **Période près du chiffre** : tout bloc citable chiffré (chapô, résultat en une phrase, réponse de FAQ) porte une
   période ; le bandeau des données dit « Données mises à jour le » (`releve_le` ne bouge que si une donnée change),
   jamais « Relevé du » ni « Mise à jour ».

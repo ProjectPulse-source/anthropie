@@ -71,7 +71,7 @@ dossier_dette_role_en: "draft budget bill, state of the text"
 
 ## L'essentiel pour votre commune {#essentiel}
 
-*État du projet de loi de finances pour {{< coll-val "plf_edition" >}} au {{< coll-val "plf_etat_au" >}}&nbsp;: aucune mesure n'est définitivement acquise ni définitivement écartée. Cette page est révisée à chaque étape qui modifie ces mesures&nbsp;; ses révisions restent lisibles en pied de page.*
+*État du projet de loi de finances pour {{< coll-val "plf_edition" >}} au {{< coll-val "plf_etat_au" >}}&nbsp;: aucune mesure n'est définitivement acquise ni définitivement écartée. Cette page est révisée à chaque étape qui modifie ces mesures.*
 
 {{< faq-visible >}}
 

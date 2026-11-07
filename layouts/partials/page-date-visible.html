@@ -15,10 +15,6 @@
 {{- $lib := cond $maj (cond $en "Page updated" "Page mise à jour le") (cond $en "Page published" "Page publiée le") -}}
 {{- $quand := cond $maj $d.mod (cond $d.pub.IsZero $d.mod $d.pub) -}}
 <p class="page-header__date">{{ $lib }} <time datetime="{{ $quand.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" $quand "fmt" $fmt "en" $en) }}</time>
-{{- /* Journal des révisions (P2) : en PIED de page (partials/page-revisions.html), jamais sous le chapô -- contre-expertise
-       du 16/10 : une ancienne valeur en tête déplace l'attention vers l'erreur et peut être reprise à la place du constat.
-       Ici, un lien discret seulement. */ -}}
-{{- with $p.Params.journal -}}{{ " · " }}<a href="#revisions">{{ cond $en "revisions" "révisions" }}</a>{{- end -}}
 {{- with $p.Params.textes_lus -}}
   {{- $jeu := index site.Data . -}}
   {{- if not $jeu -}}{{- errorf "page-date-visible: textes_lus %q sans fichier de données (%s)" . $p.File.Path -}}{{- end -}}
