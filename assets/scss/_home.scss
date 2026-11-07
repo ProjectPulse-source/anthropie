@@ -50,7 +50,7 @@
 
 .credibility-strip {
   font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
+  font-size: 12px;   // 11 px jusqu'au 07/11/2026
   letter-spacing: 0.04em;
   color: var(--color-text-faint);
 
@@ -282,7 +282,7 @@
 
 .frontiere-contemporaine__eyebrow {
   font-family: var(--font-sans);
-  font-size: var(--fs-micro);
+  font-size: 12px;   // 10 px (--fs-micro) jusqu'au 07/11/2026 : texte le plus petit de l'accueil
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-text-faint);
@@ -474,4 +474,9 @@ main .home-reception__liste { list-style: none; padding: 0 !important; margin: 0
 @media (max-width: 600px) {
   .home-hero .hero-main .hero__h1 { font-size: 1.9rem; margin-bottom: 1rem; }
   .home-hero .hero-main .eyebrow { font-size: 12px; letter-spacing: 0.1em; margin-bottom: 0.6rem; }
+}
+
+// Identifiants (ORCID, Scholar…) au téléphone : des liens de ~15 px de haut ; cibles tactiles de 44 px (07/11/2026).
+@media (max-width: 600px) {
+  .credibility-strip a { display: inline-flex; align-items: center; min-height: 44px; }
 }

@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (nuit, fin bis) — Accueil : derniers textes sous 12 px portés à 12 px
+
+Point 4 de la revue de l'accueil (auteur). Surtitre « Les trois axes croisés » 10 → 12 px (variable --fs-micro non modifiée) ;
+identifiants (ORCID, Scholar…) 11 → 12 px, et cibles de 44 px au téléphone (liens de ~15 px de haut) ; pastille de nature des
+ressources 11 → 12 px (vaut aussi pour /ressources/) ; pastille EN/FR du bandeau de langue 11 → 12 px (toutes pages traduites).
+Laissé, déclaré : « aujourd'hui » à 11 px dans la figure des axes (texte du dessin, arbitré le 04/11). Mesures 320/390/1280 sur
+/, /en/, /ressources/, une page traduite : tout à 12 px, aucun débordement de page (les éléments hors écran de /ressources/
+et du dossier dette sont dans leurs bandes défilantes voulues, témoin pris). Contrôles : build 0, typo 0, liens 0, check-all 0.
+
 ### 2026-11-07 (nuit, fin) — Accueil : maquette retenue de l'Audit-10 en production ; note Amazon à 12 px ; garde du gabarit Livres — poussé sur demande de l'auteur
 
 Maquette retenue validée par l'auteur (`D:\PRO_PROMOTION\MAQUETTES_ACCUEIL_2026-11-07\`, `ARBITRAGE_AUDIT-10_2026-11-07.md`,
