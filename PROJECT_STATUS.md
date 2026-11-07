@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (suite) — B+ porté sur toutes les fiches livres ; commit Zemmour poussé
+
+Demande de l'auteur (« toutes les modifs ne sont pas passées sur les fiches, notamment la partie extrait »). Sur les cinq
+autres fiches françaises et *ANTHROPY* (EN), balisage seul, aucun mot changé hors trois retouches annoncées (intitulé
+« Pour qui, pour quel besoin ? » à ancre inchangée ; « Le livre sert à » en étiquette ; ligne « offrir la version Kindle »
+retirée, portée par la marge) — témoin : suites de mots comparées avant/après hors balisage, seuls ces écarts (plus « Partie — »
+dans les titres du parcours de *Dette publique*, porté par la pastille). Extrait en carte (citation en romain, source en
+étiquette), « Pour qui » en deux encadrés, sommaires à filets et numéros (`.book-sommaire`), parcours en deux parties pour
+*Dette publique* (interlude en sous-ligne), citations de *Livresque* en cartes (`.book-citations`), première phrase en
+accroche, surtitre pour *ANTHROPIE* FR/EN et *Dette publique* (axes du cadre). Non porté, déclaré : extrait « voix » et figure
+des colonnes (propres à *Premier coup*, choix de texte dans chaque manuscrit). Contrôles : build 0, `typo_build` 0,
+`audit-liens-build` 0, `check-all --ci` 0 ; recette 390 et 1280 px des sept fiches. Commit Zemmour (`732219e` local)
+poussé le même jour en `098a0af` sur demande de l'auteur ; la branche locale reste à réconcilier (fichiers dette modifiés
+localement par une autre session et par un commit en ligne : `git reset --keep` s'est arrêté sans rien toucher).
+
 ### 2026-11-07 — Fiches livres : maquette B+ v2 en production (gabarit des six fiches) — commit `b04ff95` poussé le 07/11 sur demande de l'auteur, déploiement 42321338006 vert, page servie vérifiée (navigateur à l'ancienne version en cache compris)
 
 Maquette validée par l'auteur le 07/11 après deux arbitrages (`D:\PRO_PROMOTION\MAQUETTES_PREMIER_COUP_2026-11-07\`,

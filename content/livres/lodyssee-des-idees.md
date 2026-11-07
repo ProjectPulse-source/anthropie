@@ -71,6 +71,8 @@ Chaque fait repose sur des sources vérifiées&nbsp;; là où le savoir hésite,
 
 On peut lire ce livre page après page, comme une traversée chronologique. On peut aussi l'ouvrir librement, au gré d'une date, d'un nom, d'une formule. On peut enfin le parcourir par **sept grands chemins**, où les renvois font surgir échos, ruptures et filiations souterraines&nbsp;:
 
+<div class="book-sommaire">
+
 1. Les signes
 2. Le pouvoir
 3. L'argent
@@ -79,15 +81,23 @@ On peut lire ce livre page après page, comme une traversée chronologique. On p
 6. L'opinion
 7. La condition humaine
 
+</div>
+
 682 pages, deux index (des noms et des notions), une bibliographie de cœur, sept cartes. Pour qui veut comprendre le monde sans renoncer à penser.
 
 Le premier de ces chemins — «&nbsp;Les signes&nbsp;» — a sa traversée sur le site&nbsp;: [Comment l'écriture a-t-elle transformé la pensée&nbsp;?](/comment-lecriture-a-transforme-la-pensee/)
 
-## Pour qui&nbsp;? {#pour-qui}
+## Pour qui, pour quel besoin&nbsp;? {#pour-qui}
+
+<div class="book-enbref">
+<div>
+<p class="book-enbref__t">Pour qui</p>
 
 Pour le lecteur curieux — de philosophie, de sciences, d'histoire — qui préfère un récit continu aux manuels à fiches&nbsp;; pour l'étudiant qui veut relier ce que les disciplines séparent&nbsp;; et pour qui cherche un livre à offrir&nbsp;: une fresque qui s'offre autant qu'elle se garde.
 
-**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+</div>
+<div>
+<p class="book-enbref__t">Le livre sert à</p>
 
 - comprendre d'où vient une idée — la démocratie, la monnaie, l'État, la liberté — et ce qu'elle est devenue, en 250 escales datées des premiers signes à l'intelligence artificielle&nbsp;;
 - relier ce que les disciplines séparent, à travers sept parcours&nbsp;: signes, sacré, pouvoir, liberté, argent, opinion, condition humaine ([le parcours du pouvoir, en ligne](/le-pouvoir-de-machiavel-a-foucault/))&nbsp;;
@@ -95,11 +105,17 @@ Pour le lecteur curieux — de philosophie, de sciences, d'histoire — qui pré
 
 **Ce qu'il n'est pas**&nbsp;: un manuel à fiches ni un dictionnaire. C'est un récit continu, qu'on peut aussi lire par parcours ou ouvrir à une escale.
 
+</div>
+</div>
+
 ## Extrait
 
-La chute de l'escale «&nbsp;−399 · Socrate&nbsp;: le philosophe sans livre&nbsp;»&nbsp;:
+<div class="book-extrait">
+<p class="book-extrait__src">La chute de l'escale «&nbsp;−399 · Socrate&nbsp;: le philosophe sans livre&nbsp;»</p>
 
 > Aucune réponse définitive. Aucune doctrine close. Rien qu'une manière de ne pas laisser les mots dormir en paix. Socrate n'a pas légué une vérité comme on lègue un bien&nbsp;; il a légué une inquiétude. Et c'est peut-être dans ce refus de conclure que tient sa victoire&nbsp;: vingt-quatre siècles plus tard, il ne nous apprend pas quoi penser. Il nous empêche de croire trop vite que nous pensons.
+
+</div>
 
 Chaque escale suit ce fil&nbsp;: une scène, une bascule, une chute.
 

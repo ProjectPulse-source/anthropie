@@ -55,17 +55,26 @@ Le pari&nbsp;: que le voisinage des phrases produit du sens là où le classemen
 
 Ce que cherche cette anthologie n'est pas la commodité de la consultation thématique. C'est la résonance — la rencontre qui n'aurait pas dû avoir lieu et qui éclaire.
 
-## Pour qui&nbsp;? {#pour-qui}
+## Pour qui, pour quel besoin&nbsp;? {#pour-qui}
+
+<div class="book-enbref">
+<div>
+<p class="book-enbref__t">Pour qui</p>
 
 Pour l'amoureux de la langue et des formules, le lecteur qui aime ouvrir un livre au hasard — et pour le cadeau&nbsp;: une anthologie sans ordre imposé se prête naturellement à être offerte.
 
-**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+</div>
+<div>
+<p class="book-enbref__t">Le livre sert à</p>
 
 - citer juste&nbsp;: pour l'édition 2026, le texte et la paternité de chaque citation ont été réexaminés, et la ligne d'auteur dit quand la paternité reste discutée ([la méthode, et vingt cas célèbres](/citations-celebres-verifiees/))&nbsp;;
 - retrouver une citation et son auteur, par l'index des auteurs de l'édition brochée ou par la recherche de la version Kindle&nbsp;;
 - trouver une formule pour un discours, une dédicace ou une carte, ou simplement lire au hasard.
 
 **Ce qu'il n'est pas**&nbsp;: un dictionnaire thématique. Les citations ne sont pas classées&nbsp;; on y entre par l'index, par la recherche ou par le hasard.
+
+</div>
+</div>
 
 ## Sans classement, à lire comme un roman
 
@@ -76,6 +85,8 @@ Pour l'amoureux de la langue et des formules, le lecteur qui aime ouvrir un livr
 Un objet littéraire qui se prête au cadeau&nbsp;: à qui et pourquoi, sur la page [Offrir un livre de culture générale](/offrir-un-livre-de-culture-generale/). En version Kindle, le cadeau passe par un lien prépayé — [mode d'emploi](/offrir-un-livre-kindle/).
 
 ## Au fil des pages
+
+<div class="book-citations">
 
 > Esclaves maintenant de plaisirs corrupteurs, / Que leur faut-il&nbsp;? du pain et des gladiateurs.
 >
@@ -100,6 +111,8 @@ Un objet littéraire qui se prête au cadeau&nbsp;: à qui et pourquoi, sur la p
 > Quelques-uns donnent sans compter&nbsp;; le reste compte sans donner.
 >
 > — Albert Brie
+
+</div>
 
 ---
 

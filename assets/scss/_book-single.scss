@@ -469,7 +469,8 @@
 // Sommaire en parcours
 .book-parcours {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: column;          // autant de colonnes que de parties (deux ou trois)
+  grid-auto-columns: minmax(0, 1fr);
   margin: 1.25rem 0 0.5rem;
 }
 
@@ -537,7 +538,7 @@ ol.book-parcours__ch {
 }
 
 @media (max-width: 767px) {
-  .book-parcours { grid-template-columns: minmax(0, 1fr); }
+  .book-parcours { grid-auto-flow: row; grid-template-columns: minmax(0, 1fr); }
   .book-parcours__etape { padding: 0 0 1.1rem; }
   .book-parcours__pt::after { display: none; }
 }
@@ -702,4 +703,107 @@ a.book-barre__btn {
 
 @media (prefers-reduced-motion: reduce) {
   .book-barre { transition: none; }
+}
+
+/* ---------------------------------------------------------------------------
+   B+ porté sur toutes les fiches (07/11/2026) : extrait en carte, sommaire à filets,
+   citations en cartes, accroche. Balisage écrit dans le contenu de chaque fiche.
+   --------------------------------------------------------------------------- */
+
+// Accroche : la première phrase du corps quand la fiche n'a pas de champ `accroche`
+.book-single__main > p:first-child {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--color-text);
+}
+
+// La citation d'un extrait, dans sa carte : ni filet ni italique, le texte du livre en romain
+.book-extrait {
+  blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    color: var(--color-text-body);
+  }
+  blockquote p {
+    font-family: var(--font-serif);
+    font-size: 1.12rem;
+    line-height: 1.62;
+    font-style: normal;
+    margin: 0 0 0.9rem;
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+}
+
+// Sous-ligne d'un chapitre dans le parcours (interlude)
+.book-parcours__sous {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
+
+// Sommaire et parcours de lecture : liste à filets, numéros d'accent (même dessin que le parcours)
+.book-sommaire ol {
+  list-style: none;
+  counter-reset: som;
+  margin: 1rem 0 0.5rem;
+  padding: 0;
+
+  li {
+    counter-increment: som;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.45;
+    padding: 0.5rem 0;
+    margin: 0;
+    border-top: 1px solid var(--color-rule-ghost);
+  }
+  li:last-child { border-bottom: 1px solid var(--color-rule-ghost); }
+  li::before {
+    content: counter(som);
+    position: absolute;
+    left: 0;
+    top: 0.62rem;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+}
+// Le retrait qui réserve la place du numéro : plus fort que « main li » (!important, _typography.scss)
+main .book-sommaire ol > li { padding-left: 2rem !important; }
+
+// Citations en cartes (Livresque des mots, « Au fil des pages »)
+.book-citations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+
+  blockquote {
+    margin: 0;
+    padding: 1.1rem 1.2rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-rule-soft);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 6px 6px 0;
+    font-style: normal;
+    color: var(--color-text-body);
+  }
+  blockquote p {
+    font-family: var(--font-serif);
+    font-size: 1.02rem;
+    line-height: 1.5;
+    font-style: normal;
+    margin: 0 0 0.6rem;
+  }
+  blockquote p:last-child {
+    font-family: var(--font-sans);
+    font-size: var(--fs-small);
+    color: var(--color-text-subtle);
+    margin: 0;
+  }
 }

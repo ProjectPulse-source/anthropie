@@ -77,11 +77,17 @@ Ce que la grille permet tient en deux temps. **Avant l'élection**&nbsp;: distin
 
 Elle est mise à l'épreuve sur neuf promesses écrites, datées et signées — santé, salaires, prix, école, emploi, sécurité, dette, immigration, climat. Chacune est suivie jusqu'au point précis où son résultat échappe à celui qui la porte&nbsp;: une majorité à convaincre, un acteur à faire consentir, une règle européenne, une capacité à construire, une horloge qu'aucun décret n'accélère.
 
-## Pour qui&nbsp;? {#pour-qui}
+## Pour qui, pour quel besoin&nbsp;? {#pour-qui}
+
+<div class="book-enbref">
+<div>
+<p class="book-enbref__t">Pour qui</p>
 
 Pour l'électeur qui veut savoir, avant de voter, ce qu'une promesse exigerait pour devenir un résultat&nbsp;; pour le journaliste et l'enseignant qui cherchent une méthode d'examen plutôt qu'un verdict&nbsp;; pour le lecteur d'essais politiques que les bilans en «&nbsp;tenue&nbsp;/ non tenue&nbsp;» laissent insatisfait. Aucun prérequis juridique&nbsp;: les textes cités sont expliqués là où ils servent, et chaque fait avancé porte sa source.
 
-**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+</div>
+<div>
+<p class="book-enbref__t">Le livre sert à</p>
 
 - savoir, avant de voter, ce qu'une promesse exigerait pour devenir un résultat&nbsp;;
 - distinguer, après l'élection, celui qui n'a pas pu, celui qui n'a pas essayé et celui qui revendique un résultat qu'il n'a peut-être pas causé&nbsp;;
@@ -89,15 +95,21 @@ Pour l'électeur qui veut savoir, avant de voter, ce qu'une promesse exigerait p
 
 **Ce qu'il n'est pas**&nbsp;: un conseil de vote. Aucune promesse n'y est déclarée bonne ou mauvaise, aucun candidat n'y est jugé sincère ou menteur&nbsp;: le jugement reste au lecteur.
 
+</div>
+</div>
+
 ## Extrait
 
-De l'ouverture, «&nbsp;Ce que dit le texte, et que la campagne ne dit pas&nbsp;»&nbsp;:
+<div class="book-extrait">
+<p class="book-extrait__src">De l'ouverture, «&nbsp;Ce que dit le texte, et que la campagne ne dit pas&nbsp;»</p>
 
 > **Quel texte oblige un président à exécuter son programme&nbsp;?**
 >
 > **Aucun.** Un programme de campagne n'est pas un acte juridique&nbsp;: notre droit ne lui donne pas la force d'un contrat. […] La formule «&nbsp;détermine et conduit la politique de la Nation&nbsp;» n'appartient pas au président. Elle appartient au **Gouvernement**.
 >
 > Revenons à la salle. Nous avons applaudi un programme en pensant élire celui qui l'appliquerait. Rien, dans ce que nous venons de lire, ne le prévoit.
+
+</div>
 
 ## Formats
 
@@ -111,6 +123,8 @@ Une ouverture, neuf promesses, un chapitre européen, une clôture.
 
 ### Les neuf promesses
 
+<div class="book-sommaire">
+
 1. Santé
 2. Salaires
 3. Prix
@@ -120,6 +134,8 @@ Une ouverture, neuf promesses, un chapitre européen, une clôture.
 7. Dette
 8. Immigration
 9. Climat
+
+</div>
 
 ### La règle qui s'écrit ailleurs
 

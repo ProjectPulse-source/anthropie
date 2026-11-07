@@ -30,6 +30,7 @@ url_amazon_de_kindle: "https://www.amazon.de/dp/B0H9QMR1CN"
 url_amazon_fr_kindle: "https://www.amazon.fr/dp/B0H9QMR1CN"
 url_amazon_es_kindle: "https://www.amazon.es/dp/B0H9QMR1CN"
 url_amazon_it_kindle: "https://www.amazon.it/dp/B0H9QMR1CN"
+surtitre: "Essay · All three axes of the framework, over the long run"
 faq:
   - question: "What does \"Order here. Debt elsewhere.\" mean?"
     answer: "The subtitle condenses the book's hypothesis: every local order — a clean city, a working network, a balanced budget — is financed by disorder displaced elsewhere, toward other places, other times, or other social groups. It is an accounting, not a denunciation of order."
@@ -66,17 +67,26 @@ The order we observe around us — in institutions, territories, economies — i
 
 The framework's definition and its operative vocabulary are set out on the [What is anthropy?](/en/quest-ce-que-lanthropie/) page and in the [glossary](/en/glossaire/).
 
-## Who is it for? {#who-is-it-for}
+## Who is it for, and for what need? {#who-is-it-for}
+
+<div class="book-enbref">
+<div>
+<p class="book-enbref__t">Who it is for</p>
 
 For the essay reader looking for an overall reading grid — political economy, deep history, ecology — rather than topical commentary. No technical prerequisite: the conceptual apparatus is built step by step. Readers of the *Anthropie Working Papers* will find here the complete framework from which each paper develops a theorem or an application.
 
-**What need does it serve?** The book helps you:
+</div>
+<div>
+<p class="book-enbref__t">The book helps you</p>
 
 - understand why a local order — a clean city, a working network, a balanced budget — often has a cost elsewhere, later or for others, a hypothesis followed across seven ages of history;
 - connect deep history, economics, public finance and ecology through a single grid;
 - trace a specific subject — public debt, the energy transition, research — back to the framework that links it to the others.
 
 **What it is not**: an intervention essay on current affairs. It is a hypothesis developed over 644 pages, which the reader can put to the test; its application to deep history is detailed milestone by milestone in the [Register of Offloaded Costs](/en/register-of-offloaded-costs/).
+
+</div>
+</div>
 
 ## What does "Order here. Debt elsewhere." mean? {#what-does-order-here-debt-elsewhere-mean}
 
@@ -90,6 +100,8 @@ The subtitle condenses the book's hypothesis. The common misreading takes it for
 
 The book traverses **seven historical Ages** — from the mastery of fire to contemporary algorithms — to show how each civilization displaced its disorder toward a spatial, temporal or social elsewhere.
 
+<div class="book-sommaire">
+
 1. *Freedom under constraint* — preface
 2. Age 1 — Foundational Programs (≈ −3.3 M → ≈ −45,000)
 3. Age 2 — The Neolithic Trap (≈ −10,000 → ≈ −1,046)
@@ -99,5 +111,7 @@ The book traverses **seven historical Ages** — from the mastery of fire to con
 7. Age 6 — Industrialization and Nation-States (1789 → 1905)
 8. Age 7 — The Contemporary Metaprogram (1905 → 2024)
 9. *Constraint into freedom* — epilogue; *Going further*, which points to the [*Register of Offloaded Costs*](/en/register-of-offloaded-costs/) through a QR code; *Afterword: the anthropy of anthropy*
+
+</div>
 
 *ANTHROPY lays out the framework whose theorems and applications are developed by the Anthropy Working Papers series.*

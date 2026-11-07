@@ -47,6 +47,7 @@ reviews:
 # FAQ book-scoped uniquement (doctrine GEO-04) : la question « qui paie la dette
 # publique ? » est la propriété exclusive de la page pont /qui-paie-la-dette-publique/
 # (cannibalisation démontrée, red team GEO-04) — ne jamais l'ajouter ici.
+surtitre: "Essai · Axes temporel et social du cadre anthropique"
 faq:
   - question: "Que contient Dette Publique : Qui paie vraiment ?"
     answer: "Deux temps : la mécanique du transfert anthropique appliquée aux finances publiques françaises — avec les cas Grèce, Japon, États-Unis, Norvège et Chine —, puis quatre scénarios prospectifs pour la décennie 2025-2035. Le livre déplace la question du « combien » (montants, ratios, soutenabilité) vers le « qui » : vers quels groupes et quelles générations le coût est transféré, et par quels mécanismes ce transfert devient invisible."
@@ -82,11 +83,17 @@ La dette publique est habituellement discutée en termes de montants, de ratios 
 
 En appliquant le cadre anthropique aux finances publiques françaises, Stéphane Lalut soutient que la dette fonctionne comme un dispositif de transfert temporel et social&nbsp;: elle reporte le coût du désordre présent vers ceux qui n'ont pas voix au chapitre. En ligne, les rôles, les canaux et leurs conditions&nbsp;: [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) Le cadre général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/).
 
-## Pour qui&nbsp;? {#pour-qui}
+## Pour qui, pour quel besoin&nbsp;? {#pour-qui}
+
+<div class="book-enbref">
+<div>
+<p class="book-enbref__t">Pour qui</p>
 
 Pour le citoyen qui veut comprendre le débat budgétaire au-delà des ratios, l'étudiant en économie ou en science politique, et le lecteur de presse économique. Aucun prérequis&nbsp;: les mécanismes sont exposés à partir de cas concrets — France, Grèce, Japon, Norvège, Chine.
 
-**Pour quel besoin&nbsp;?** Le livre sert à&nbsp;:
+</div>
+<div>
+<p class="book-enbref__t">Le livre sert à</p>
 
 - savoir qui supporte réellement le coût de la dette publique, au-delà des montants et des ratios&nbsp;;
 - comprendre par quels mécanismes ce coût passe d'un groupe social ou d'une génération à l'autre, et pourquoi il devient invisible dans le débat public&nbsp;;
@@ -94,9 +101,13 @@ Pour le citoyen qui veut comprendre le débat budgétaire au-delà des ratios, l
 
 **Ce qu'il n'est pas**&nbsp;: un manuel neutre de finances publiques. C'est un essai qui défend une thèse&nbsp;; les séries officielles, recalculées et mises à jour, sont dans le [dossier dette publique](/pourquoi-la-dette-publique-augmente/) du site, qui sépare les constats de leur interprétation.
 
+</div>
+</div>
+
 ## Extrait
 
-Du chapitre 7, «&nbsp;Une dette, trois visages — les créanciers invisibles&nbsp;»&nbsp;:
+<div class="book-extrait">
+<p class="book-extrait__src">Du chapitre 7, «&nbsp;Une dette, trois visages — les créanciers invisibles&nbsp;»</p>
 
 > La dette publique française de 3 460 milliards n'est pas un bloc monolithique. Elle se divise en trois réalités aux destins opposés.
 >
@@ -106,32 +117,16 @@ Du chapitre 7, «&nbsp;Une dette, trois visages — les créanciers invisibles&n
 >
 > La dette sociale (293 milliards, 8%) finance hôpitaux et Sécurité sociale, avec un profil mixte entre les deux.
 
-*Pour offrir la version Kindle par lien prépayé&nbsp;: [mode d'emploi](/offrir-un-livre-kindle/).*
+</div>
 
 ## Sommaire
 
 Le livre se construit en deux temps&nbsp;: d'abord la **mécanique du transfert** anthropique appliquée aux finances publiques françaises, puis quatre **scénarios prospectifs** pour la décennie 2025-2035.
 
-### Partie I — La mécanique du transfert
-
-1. L'Ordre apparent — généalogie d'une machine
-2. Le Mécanisme anthropique — le grand transfert
-3. L'Engrenage français — les cadeaux fiscaux non compensés
-4. Les Architectes — ni complot, ni hasard
-5. Trois laboratoires — Grèce, Japon, USA
-   — *Interlude&nbsp;: La preuve par la Norvège*
-6. Le Méta-laboratoire chinois — l'anthropie autoritaire
-7. Une dette, trois visages — les créanciers invisibles
-8. La Dette écologique — le créancier ultime
-9. L'Anatomie du discours
-10. Accepter l'inacceptable — la fabrique du consentement
-
-### Partie II — Les scénarios du possible
-
-11. Scénario continuité — le rail sans bifurcation
-12. Scénario réforme européenne — la transformation négociée
-13. Les trois voies de rupture — quand l'Europe dit non
-14. Scénario accélération technologique — le joker productiviste
+<div class="book-parcours">
+<div class="book-parcours__etape"><div class="book-parcours__pt"><i>I</i></div><h3 class="book-parcours__titre" id="partie-i">La mécanique du transfert</h3><ol class="book-parcours__ch"><li><b>1</b>L'Ordre apparent — généalogie d'une machine</li><li><b>2</b>Le Mécanisme anthropique — le grand transfert</li><li><b>3</b>L'Engrenage français — les cadeaux fiscaux non compensés</li><li><b>4</b>Les Architectes — ni complot, ni hasard</li><li><b>5</b>Trois laboratoires — Grèce, Japon, USA<br><span class="book-parcours__sous">— <em>Interlude&nbsp;: La preuve par la Norvège</em></span></li><li><b>6</b>Le Méta-laboratoire chinois — l'anthropie autoritaire</li><li><b>7</b>Une dette, trois visages — les créanciers invisibles</li><li><b>8</b>La Dette écologique — le créancier ultime</li><li><b>9</b>L'Anatomie du discours</li><li><b>10</b>Accepter l'inacceptable — la fabrique du consentement</li></ol></div>
+<div class="book-parcours__etape"><div class="book-parcours__pt"><i>II</i></div><h3 class="book-parcours__titre" id="partie-ii">Les scénarios du possible</h3><ol class="book-parcours__ch"><li><b>11</b>Scénario continuité — le rail sans bifurcation</li><li><b>12</b>Scénario réforme européenne — la transformation négociée</li><li><b>13</b>Les trois voies de rupture — quand l'Europe dit non</li><li><b>14</b>Scénario accélération technologique — le joker productiviste</li></ol></div>
+</div>
 
 *Conclusion&nbsp;: Le choix démocratique du désordre*
 

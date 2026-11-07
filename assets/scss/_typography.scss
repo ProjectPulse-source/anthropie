@@ -142,7 +142,8 @@ main .oc-chaine__maillons li,
 main .citations-mouvements li,
 main .citation-entree__corps > ul > li,
 main .book-parcours__ch li,
-main .book-others__list--grille > li {
+main .book-others__list--grille > li,
+main .book-sommaire li {
   padding-left: 0 !important;
   margin-bottom: 0 !important;
 }
@@ -153,7 +154,8 @@ main .outils-grille > ol,
 main .exigences-liste > ul,
 main .citation-entree__corps > ul,
 main ol.book-parcours__ch,
-main .book-others__list--grille {
+main .book-others__list--grille,
+main .book-sommaire ol {
   padding-left: 0 !important;
   margin: 0 !important;
   list-style: none !important;
