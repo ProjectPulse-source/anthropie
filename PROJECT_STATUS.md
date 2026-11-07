@@ -52,7 +52,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-07 — Fiches livres : maquette B+ v2 en production (gabarit des six fiches) — commité, NON poussé
+### 2026-11-07 — Fiches livres : maquette B+ v2 en production (gabarit des six fiches) — commit `b04ff95` poussé le 07/11 sur demande de l'auteur, déploiement 42321338006 vert, page servie vérifiée (navigateur à l'ancienne version en cache compris)
 
 Maquette validée par l'auteur le 07/11 après deux arbitrages (`D:\PRO_PROMOTION\MAQUETTES_PREMIER_COUP_2026-11-07\`,
 `ARBITRAGE_AUDIT-05_2026-11-07.md` : Audit-05 et Audit-07, pièces archivées avec SHA-256). **Gabarit commun**
