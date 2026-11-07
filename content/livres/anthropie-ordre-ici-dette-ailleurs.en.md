@@ -100,6 +100,15 @@ For the essay reader looking for an overall reading grid — political economy, 
 
 The subtitle condenses the book's hypothesis. The common misreading takes it for a denunciation of order, or a slogan about public debt. The formula says something else — an accounting: every local order (a clean city, a working network, a balanced budget) is financed by disorder displaced elsewhere, toward other places, other times, or other social groups. "Here" and "elsewhere" are not fixed locations: they are the two ends of a transfer, which the book follows across seven historical ages.
 
+## Excerpt
+
+<div class="book-extrait">
+<p class="book-extrait__src">The opening of the preface, “Freedom under constraint”</p>
+
+> At dawn, the building breathes—no, pants—like a beast curled up in its sleep. A warm breath escapes from the grates and rises in plumes above the snow, then dissolves into it. Inside: rows of machines with their metronomic purr, flickering diodes, dry, carefully controlled air, and that continuous hum, a motionless ocean, a frozen tide. A technician examines a manifold, lays his palm on a pipe: under the skin he feels the pulse of a heat diverted from its original purpose, a quiet trickle of energy. Outside, a few hundred meters away, no more, that same heat slips away, reaching children’s bedrooms through the network of radiators. Farther on, a barge works its way up the canal, slow, stubborn, hauling waste toward the incinerator whose steam will feed the same network. Then the obvious asserts itself, stark: here, local order holds—and only holds—by displacement.
+
+</div>
+
 ## How it reads
 
 630 pages in the original — 644 in this English edition — that take the time to unfold each historical age. The book assumes that choice: it is a complete framework, not an intervention essay. Early readers of the work have compared its scope to the great syntheses of Jared Diamond and Yuval Noah Harari. Reviews of the related work are gathered on the [Publications](/en/publications/) page.
