@@ -68,6 +68,7 @@ extrait_voix:
   source: "Âge 2 · « −3 200 Cunéiforme : graver pour durer »"
   paragraphes:
     - "Uruk, entrepôt du temple d'Inanna. Un comptable incline son calame de roseau. Angle, pression : le bout rond s'enfonce dans l'argile. Cinq empreintes, un signe tracé : cinq moutons. Geste d'inventaire ; bascule de monde. Non que le signe représente l'animal : il le remplace ; et, surtout, il reste quand la laine se déchire et que la bête meurt. La chose passe, la marque tient. […]"
+  ligne: "La chose passe, la marque tient."
   chute: "Qui paie ?"
 ---
 

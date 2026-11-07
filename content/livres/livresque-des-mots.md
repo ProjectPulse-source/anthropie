@@ -54,6 +54,8 @@ extrait_voix:
     - "Elle était revenue de bien des choses ce qui ne l'empêchait pas d'y retourner.<br><span class=\"book-voix__auteur\">— Natalie Clifford Barney</span>"
     - "Ce n'est pas que je sache bien employer mon temps mais c'est que je sais bien le perdre et soit dit sans me vanter c'est peut-être la première de toutes les sciences.<br><span class=\"book-voix__auteur\">— Duchesse de Choiseul</span>"
     - "Le regret qu'ont les hommes du mauvais emploi du temps qu'ils ont déjà vécu, ne les conduit pas toujours à faire de celui qui leur reste à vivre un meilleur usage.<br><span class=\"book-voix__auteur\">— Jean de La Bruyère</span>"
+  ligne: "Elle était revenue de bien des choses ce qui ne l'empêchait pas d'y retourner."
+  ligne_auteur: "Natalie Clifford Barney, dans le livre"
   chute: "Si vous ne voyez pas la couture, c'est qu'elle est réussie."
 ---
 

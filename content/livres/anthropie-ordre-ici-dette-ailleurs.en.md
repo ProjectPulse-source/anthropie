@@ -61,6 +61,7 @@ extrait_voix:
   source: "Age 2 · “3,200 BCE Cuneiform: Carved to Last”"
   paragraphes:
     - "Uruk, storehouse of the temple of Inanna. An accountant tilts his reed stylus. Angle, pressure: the round tip sinks into the clay. Five impressions, one traced sign: five sheep. An inventory move; the tipping of a world. Not that the sign represents the animal: it replaces it—and, above all, it remains when the wool tears and the beast dies. The thing passes; the mark holds. […]"
+  ligne: "The thing passes; the mark holds."
   chute: "Who pays?"
 ---
 

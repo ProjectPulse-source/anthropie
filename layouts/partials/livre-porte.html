@@ -1,0 +1,48 @@
+{{- /* livre-porte.html — carte d'un livre sur /livres/ (maquette L2+, validée par l'auteur le 07/11/2026 ;
+       06_PROMOTION/MAQUETTES_PAGE_LIVRES_2026-11-07, arbitrage Audit-08). Remplace partials/livre-carte.html.
+
+       Ordre de lecture : la QUESTION du lecteur (porte), la couverture, le titre, une ligne, la VOIX du livre,
+       le prix, puis deux chemins — « Découvrir le livre » (fiche) d'abord, « Acheter » ensuite.
+       Entrée : dict { page (fiche), porte (entrée de `commencer` de l'index, ou nil), isEn (langue de la PAGE),
+       large (bool : carte en largeur, autres ouvrages) }.
+
+       Rien n'est recopié : question et ligne viennent de l'index (table indexée par slug) ; la voix vient de
+       `extrait_voix` de la fiche (`ligne` si la phrase de carte diffère de la chute, sinon `chute`), texte déjà
+       vérifié verbatim contre la dernière édition ; la note passe par preuve-sociale (règle unique liste/fiche) ;
+       le lien d'achat par amazon-href (balise Attribution). */ -}}
+{{- $p := .page -}}
+{{- $isEn := .isEn -}}
+{{- $porte := .porte -}}
+{{- $repli := and $isEn (eq $p.Lang "fr") -}}
+{{- $v := $p.Params.extrait_voix -}}
+{{- $ligne := "" -}}{{- $auteur := "" -}}
+{{- with $v }}{{ $ligne = .ligne | default .chute }}{{ $auteur = .ligne_auteur }}{{ end -}}
+{{- $broche := cond $isEn (or $p.Params.url_amazon_com $p.Params.url_amazon_fr) (or $p.Params.url_amazon_fr $p.Params.url_amazon_com) -}}
+{{- $kindle := cond $isEn (or $p.Params.url_amazon_com_kindle $p.Params.url_amazon_fr_kindle) (or $p.Params.url_amazon_fr_kindle $p.Params.url_amazon_com_kindle) -}}
+{{- $achat := $broche | default $kindle -}}
+{{- $price := "" -}}
+{{- with $p.Params.price -}}{{- $cur := $p.Params.currency | default "EUR" -}}{{- $price = cond (eq $cur "USD") (printf "$%s" .) (printf "%s&nbsp;€" (cond $isEn . (replace . "." ","))) -}}{{- end -}}
+<article class="livre-porte{{ if .large }} livre-porte--large{{ end }}"{{ if $repli }} lang="fr"{{ end }}>
+  {{- with $porte }}{{ with .pour }}<p class="livre-porte__question"{{ if $repli }} lang="en"{{ end }}>{{ partial "fr-typo.html" . }}</p>{{ end }}{{ end }}
+  <a class="livre-porte__couv" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    {{- partial "book-cover.html" (dict "slug" $p.File.ContentBaseName "alt" "" "wrapClass" "livre-porte__cover-wrap" "class" "livre-porte__cover" "sizes" "160px" "lang" $p.Lang) -}}
+  </a>
+  <div class="livre-porte__corps">
+    <h3 class="livre-porte__titre"><a href="{{ $p.RelPermalink }}"{{ if $repli }} hreflang="fr"{{ end }}>{{ partial "fr-typo.html" $p.Title }}</a></h3>
+    {{- $st := "" -}}{{- with $porte }}{{ $st = .pourquoi }}{{ end -}}
+    {{- with ($st | default $p.Params.subtitle) }}<p class="livre-porte__st"{{ if and $repli $st }} lang="en"{{ end }}>{{ partial "fr-typo.html" . }}</p>{{ end }}
+    {{- $en := eq $p.Lang "en" -}}
+    {{- with $ligne }}<p class="livre-porte__voix">{{ if $en }}“{{ . }}”{{ else }}«&nbsp;{{ partial "fr-typo.html" . }}&nbsp;»{{ end }}{{ with $auteur }}<span class="livre-porte__voix-auteur">{{ partial "fr-typo.html" . }}</span>{{ end }}</p>{{ end }}
+    <div class="livre-porte__infos">
+      {{- with $price }}<span class="livre-porte__prix">{{ . | safeHTML }}<small>{{ if $isEn }}paperback{{ else }}broché{{ end }}{{ with $p.Params.pages }} · {{ . }}&nbsp;p.{{ end }}{{ if $repli }} · <span lang="en">in French</span>{{ end }}</small></span>{{ end }}
+      {{- if not $isEn }}{{ partial "preuve-sociale.html" $p }}{{ end }}
+    </div>
+    {{- range $p.Translations }}
+    <p class="livre-porte__autre-edition">{{ if eq .Lang "en" }}Aussi en anglais&nbsp;: {{ else }}Also in French: {{ end }}<a href="{{ .RelPermalink }}" hreflang="{{ .Lang }}"><i>{{ .Title }}</i></a></p>
+    {{- end }}
+    <div class="livre-porte__actions">
+      <a class="livre-porte__btn livre-porte__btn--fiche" href="{{ $p.RelPermalink }}"{{ if $repli }} hreflang="fr"{{ end }}>{{ if $isEn }}Discover the book{{ else }}Découvrir le livre{{ end }}</a>
+      {{- with $achat }}<a class="livre-porte__btn livre-porte__btn--achat" href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">{{ if $isEn }}Buy{{ else }}Acheter{{ end }}</a>{{ end }}
+    </div>
+  </div>
+</article>

@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (nuit) — Page /livres/ refaite selon la maquette L2+ (FR et EN) — commité sur `livres-l2plus`, en attente du push
+
+Maquette L2+ retenue par l'auteur après arbitrage de l'Audit-08 (`D:\PRO_PROMOTION\MAQUETTES_PAGE_LIVRES_2026-11-07\`,
+pièce archivée avec SHA-256 ; Audit-09 = doublon octet pour octet d'Audit-08). Six portes, une par livre, formulées par la
+question du lecteur (`commencer` de l'index, FR et EN, étendu aux six livres, ordre éditorial conservé) ; voix du livre
+tirée de `extrait_voix` de la fiche (`ligne` facultative ajoutée à ANTHROPIE FR/EN, Président, Livresque ; sinon la chute) ;
+prix, note (preuve-sociale, règle unique), « Découvrir le livre » puis « Acheter » (amazon-href, balise Attribution). Le
+texte du corpus passe en bas (« Le projet »), un `chapo` éditorial remplace la description en tête (la description reste
+pour les métadonnées). Retirés dans le même geste : `partials/livre-carte.html`, ses styles et ceux de l'ancien « Par où
+commencer », son exemption de liste. Porte d'ANTHROPIE corrigée contre l'audit (contresens sur la thèse). Contrôles : build
+0, typo_build 0, audit-liens-build 0, check-all --ci 0 ; JSON-LD ItemList dans l'ordre visible ; voix servies verbatim ;
+recette 390/768/1280 FR et EN (aucun débordement, aucun bouton coupé, aucun id en double).
+
 ### 2026-11-07 (soir) — Extrait « voix » sur chaque fiche livre — commité sur `fiches-extrait-voix`, en attente du push
 
 Demande de l'auteur (« fais l'extrait voix livre par livre »). Un passage par livre, choisi dans le fichier de la DERNIÈRE

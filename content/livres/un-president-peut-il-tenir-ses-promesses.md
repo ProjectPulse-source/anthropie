@@ -68,6 +68,7 @@ extrait_voix:
   paragraphes:
     - "Vous cherchez un médecin. Le premier cabinet ne prend plus de nouveaux patients. Le deuxième propose une date si lointaine que vous la notez sans y croire. Au troisième, un répondeur. […] Compter les médecins ne dit pas combien d'entre eux reçoivent en ville, ni combien de fois. Et c'est cela que vous cherchez, un jeudi après-midi, le téléphone à la main."
     - "Quand il n'y a personne à appeler, le problème change de forme : on attend, on renonce ou l'on va à l'hôpital — trois issues possibles, et le nombre de médecins n'en enregistre aucune. […]"
+  ligne: "Vous cherchez un médecin. […] Au troisième, un répondeur."
   chute: "Un médecin libéral s'installe où il veut."
 ---
 

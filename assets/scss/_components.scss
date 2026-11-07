@@ -805,7 +805,7 @@ main .pastilles ul {
   .pastilles a::after { content: none; }
 }
 
-// ----- Page /livres/ (variante B, 01/10/2026) : le fondateur en grand, puis des cartes de même taille -----
+// ----- Page /livres/ (maquette L2+, auteur, 07/11/2026 ; arbitrage Audit-08) : six portes d'entrée -----
 // Spécificité (0,4,1) : la règle commune `.home-section h2:not(.page-header__title):not(.section-title)` (0,3,1,
 // _page-common.scss) en faisait un grand titre à filet (28 px, mesuré le 01/10).
 .home-section h2.livres-sous:not(.page-header__title):not(.section-title) {
@@ -814,64 +814,82 @@ main .pastilles ul {
   color: var(--color-accent); margin: 2.5rem 0 1rem; border: 0; padding: 0;
 }
 .livres-groupe { margin-bottom: 1rem; }
+.livres-note { font-family: var(--font-sans); font-size: var(--fs-small); color: var(--color-text-subtle); margin: 0.75rem 0 0; }
+.livres-projet { max-width: 720px; color: var(--color-text-muted); }
 
-// Par où commencer : liste à filets (la règle `main ul` impose retrait et marges en !important)
-main .livres-commencer__liste { list-style: none; padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--color-rule-soft); }
-.livres-commencer__ligne {
-  display: grid; grid-template-columns: 15rem minmax(0, 1fr) auto; gap: 0.15rem 1rem; align-items: baseline;
-  padding: 0.6rem 0; border-bottom: 1px solid var(--color-rule-soft);
-}
-.livres-commencer__pour { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); }
-.livres-commencer__titre { font-size: 1.02rem; }
-.livres-commencer__pourquoi { font-size: var(--fs-small); color: var(--color-text-muted); text-align: right; }
-@media (max-width: 720px) {
-  .livres-commencer__ligne { grid-template-columns: minmax(0, 1fr); }
-  .livres-commencer__pourquoi { text-align: left; }
+// Grille : quatre portes (corpus), puis deux cartes en largeur (autres ouvrages)
+.livres-portes { display: grid; gap: 1.1rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.livres-portes--larges { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 980px) {
+  .livres-portes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .livres-portes--larges { grid-template-columns: minmax(0, 1fr); }
 }
 
-// Carte livre : couverture, axe, titre, accroche, pages, note, achat. Carte entière cliquable.
-.livres-grille { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(#{unquote("min(100%, 18rem)")}, 1fr)); margin-top: 1rem; }
-.livre-carte {
-  position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.9rem; align-content: start;
-  background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); padding: 1rem;
-  transition: border-color 0.2s ease;
+// Carte : question (bandeau), couverture, titre, ligne, voix, prix et note, deux chemins
+.livre-porte {
+  display: flex; flex-direction: column; min-width: 0;
+  background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-radius: 10px; overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.livre-carte:hover { border-color: var(--color-accent-soft); }
-.livre-carte__couv { display: block; max-width: 150px; text-decoration: none; }
-.livre-carte__cover-wrap { display: block; }
-.livre-carte__cover {
+.livre-porte:hover { border-color: var(--color-accent-soft); box-shadow: 0 14px 28px -20px rgba(15, 27, 54, 0.5); }
+.livre-porte__question {
+  margin: 0; padding: 0.75rem 1rem; min-height: 3.9em; display: flex; align-items: center;
+  background: var(--color-accent); color: #fff;
+  font-family: var(--font-sans); font-size: 13.5px; font-weight: 500; line-height: 1.35;
+}
+.livre-porte__couv {
+  display: block; padding: 1.1rem 1.1rem 0; text-align: center; text-decoration: none;
+  background: linear-gradient(180deg, var(--color-dossier-tint), var(--color-bg-elevated));
+}
+.livre-porte__cover-wrap { display: block; width: 50%; max-width: 150px; margin: 0 auto; }
+.livre-porte__cover {
   display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover;
-  box-shadow: 0 3px 12px rgba(15, 15, 18, 0.15); transition: transform 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 12px 26px -12px rgba(15, 27, 54, 0.45); transition: transform 0.2s ease;
 }
-.livre-carte:hover .livre-carte__cover { transform: translateY(-2px); }
-.livre-carte__corps { display: grid; gap: 0.35rem; align-content: start; min-width: 0; }
-.livre-carte__axe {
-  justify-self: start; margin: 0; padding: 3px 9px; border-radius: 999px;
-  font-family: var(--font-sans); font-size: 11.5px; font-weight: 600;
-  color: var(--color-accent); background: var(--color-dossier-tint);
+.livre-porte:hover .livre-porte__cover { transform: translateY(-2px); }
+.livre-porte__corps { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; padding: 1rem 1.1rem 1.1rem; min-width: 0; }
+.livre-porte__titre { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; line-height: 1.22; margin: 0; }
+.livre-porte__titre a { color: var(--color-text); text-decoration: none; }
+.livre-porte__titre a:hover { color: var(--color-accent); }
+.livre-porte__st { font-family: var(--font-sans); font-size: var(--fs-small); line-height: 1.45; color: var(--color-text-muted); margin: 0; }
+.livre-porte__voix { font-family: var(--font-serif); font-style: italic; font-size: 1rem; line-height: 1.35; color: var(--color-accent); margin: 0; }
+.livre-porte__voix-auteur { display: block; font-family: var(--font-sans); font-style: normal; font-size: 12.5px; color: var(--color-text-subtle); margin-top: 0.2rem; }
+.livre-porte__infos {
+  margin-top: auto; padding-top: 0.6rem; border-top: 1px solid var(--color-rule-ghost);
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.3rem 0.6rem;
 }
-.livre-carte__titre { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; line-height: 1.3; margin: 0; }
-.livre-carte__titre a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
-.livre-carte__st { font-size: var(--fs-small); color: var(--color-text-muted); line-height: 1.45; margin: 0; }
-.livre-carte__desc { max-width: 60ch; margin: 0.25rem 0 0; }
-.livre-carte__meta { font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.04em; color: var(--color-text-subtle); margin: 0; }
-// Note et nouveauté (partial preuve-sociale, centrées sur /ressources-offertes/) : alignées sur le texte ici.
-.livre-carte .ressources-book__rating, .livre-carte .ressources-book__novelty { justify-content: flex-start; margin: 0.15rem 0 0; }
-.livre-carte .ressources-book__rating-date { text-align: left; }
-// Achat et lien d'édition au-dessus du calque cliquable.
-.livre-carte .amazon-buy, .livre-carte__autre-edition { position: relative; z-index: 2; }
-.livre-carte .amazon-buy { width: 220px; max-width: 100%; margin-top: 0.5rem; }
-.livre-carte__autre-edition { font-size: var(--fs-small); color: var(--color-text-muted); margin: 0.4rem 0 0; }
+.livre-porte__prix { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--color-text); }
+.livre-porte__prix small { font-size: 12px; font-weight: 400; color: var(--color-text-subtle); margin-left: 0.3rem; }
+// Note et nouveauté (partial preuve-sociale, centrées sur /ressources-offertes/) : alignées ici, en petit.
+.livre-porte .ressources-book__rating, .livre-porte .ressources-book__novelty { justify-content: flex-start; margin: 0; font-size: 12.5px; }
+.livre-porte .ressources-book__rating-date { text-align: left; }
+.livre-porte__autre-edition { font-size: var(--fs-small); color: var(--color-text-muted); margin: 0.2rem 0 0; }
+.livre-porte__actions { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+a.livre-porte__btn {
+  flex: 1; text-align: center; white-space: nowrap; text-decoration: none; border-radius: 4px;
+  font-family: var(--font-sans); font-size: 13px; font-weight: 500; line-height: 1; padding: 0.65rem 0.4rem;
+}
+a.livre-porte__btn--fiche { flex: 1.7; background: #1A3A5C; color: #fff; }
+a.livre-porte__btn--fiche:hover { background: var(--color-accent-hover); color: #fff; }
+a.livre-porte__btn--achat { background: var(--color-bg-elevated); color: var(--color-accent); border: 1px solid var(--color-accent-soft); }
+a.livre-porte__btn--achat:hover { border-color: var(--color-accent); }
 
-// Le livre fondateur : couverture à côté du texte, filet bleu.
-.livre-carte--grande { grid-template-columns: 200px minmax(0, 1fr); gap: 1.75rem; padding: 1.5rem; border-left: 3px solid var(--color-accent); }
-.livre-carte--grande .livre-carte__couv { max-width: none; }
-.livre-carte--grande .livre-carte__titre { font-size: clamp(1.4rem, 2.6vw, 1.75rem); }
-@media (max-width: 640px) {
-  .livre-carte--grande { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1rem; }
-  .livre-carte--grande .livre-carte__couv { max-width: 160px; }
+// Autres ouvrages : la même carte, en largeur (couverture à gauche)
+.livre-porte--large { display: grid; grid-template-columns: 150px minmax(0, 1fr); grid-template-rows: auto 1fr; }
+.livre-porte--large .livre-porte__question { grid-column: 1 / -1; min-height: 0; }
+.livre-porte--large .livre-porte__couv { padding: 1.1rem 0 1.1rem 1.1rem; background: none; }
+.livre-porte--large .livre-porte__cover-wrap { width: 100%; }
+
+// Téléphone : une colonne, couverture réduite à gauche du texte
+@media (max-width: 560px) {
+  .livres-portes, .livres-portes--larges { grid-template-columns: minmax(0, 1fr); }
+  .livre-porte, .livre-porte--large { display: grid; grid-template-columns: 96px minmax(0, 1fr); grid-template-rows: auto 1fr; }
+  .livre-porte__question { grid-column: 1 / -1; min-height: 0; }
+  .livre-porte__couv, .livre-porte--large .livre-porte__couv { padding: 0.9rem 0 0.9rem 0.9rem; background: none; }
+  .livre-porte__cover-wrap { width: 100%; }
+  .livre-porte__corps { padding: 0.9rem; }
 }
-@media (prefers-reduced-motion: reduce) { .livre-carte__cover { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .livre-porte, .livre-porte__cover { transition: none; } }
 
 // ----- Page « Qu'est-ce que l'anthropie ? » (variante B, 01/10/2026) -----
 // La phrase : définition canonique (partial single-source) et « proposée par ».

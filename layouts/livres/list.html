@@ -3,50 +3,38 @@
 <article class="home-section">
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
-    {{ with .Description }}
-    <p class="page-header__lede">{{ . }}</p>
+    {{ with (.Params.chapo | default .Description) }}
+    <p class="page-header__lede">{{ partial "fr-typo.html" . }}</p>
     {{ end }}
   </header>
 
-  <div class="article__body">
-    {{ .Content }}
-  </div>
-
-  {{/* Page refaite le 01/10/2026 (variante B retenue par l'auteur) : le fondateur en grand, puis le reste du
-       corpus et les autres ouvrages en cartes de même taille (consigne de l'auteur), achat dans la carte.
-       Fusion FR/EN sans doublon (fiche native de la langue, sinon repli FR), triée par weight. Corpus =
-       `serie: "anthropie"`, même champ que l'accueil et la page À propos. */}}
+  {{/* Page refaite le 07/11/2026 (maquette L2+ retenue par l'auteur ; arbitrage Audit-08,
+       06_PROMOTION/MAQUETTES_PAGE_LIVRES_2026-11-07) : six portes d'entrée, une par livre, formulées par la question
+       du lecteur ; voix du livre ; prix ; « Découvrir le livre » puis « Acheter ». Fusion FR/EN sans doublon (fiche
+       native de la langue, sinon repli FR). Ordre ÉDITORIAL : celui de `commencer` (front matter de l'index, indexé
+       par slug). La présence vient du dépôt : un livre absent de `commencer` s'affiche quand même, à la suite, et le
+       build l'avertit. Corpus = `serie: "anthropie"`, même champ que l'accueil et la page À propos. */}}
   {{- $livres := partial "livres-merged.html" . -}}
-  {{- $corpus := where $livres "Params.serie" "anthropie" -}}
-  {{- $autres := where $livres "Params.serie" "!=" "anthropie" -}}
-
-  {{- /* « Par où commencer ? » : chaque ligne nomme un livre par son slug (front matter de l'index) ; titre et
-         lien viennent de la fiche. Un slug inconnu arrête le build : une ligne sans livre ne doit pas partir. */ -}}
-  {{- with .Params.commencer }}
-  <section class="livres-commencer" aria-labelledby="livres-commencer-titre">
-    <h2 id="livres-commencer-titre" class="livres-sous">{{ if $isEn }}Where to start?{{ else }}Par où commencer&nbsp;?{{ end }}</h2>
-    <ul class="livres-commencer__liste">
-      {{- range . }}
-      {{- $slug := .livre -}}
-      {{- $fiche := "" -}}
-      {{- range $livres }}{{ if eq .File.ContentBaseName $slug }}{{ $fiche = . }}{{ end }}{{ end -}}
-      {{- if not $fiche }}{{ errorf "livres : « Par où commencer » cite %q, aucune fiche livre de ce nom (%s)" $slug $.File.Path }}{{ end }}
-      <li class="livres-commencer__ligne">
-        <span class="livres-commencer__pour">{{ partial "fr-typo.html" .pour }}</span>
-        <a class="livres-commencer__titre" href="{{ $fiche.RelPermalink }}"{{ if ne $fiche.Lang $.Lang }} hreflang="{{ $fiche.Lang }}" lang="{{ $fiche.Lang }}"{{ end }}>{{ partial "fr-typo.html" $fiche.Title }}</a>
-        <span class="livres-commencer__pourquoi">{{ partial "fr-typo.html" .pourquoi }}</span>
-      </li>
-      {{- end }}
-    </ul>
-  </section>
+  {{- $ordre := slice -}}
+  {{- range .Params.commencer }}
+    {{- $e := . -}}{{- $f := "" -}}
+    {{- range $livres }}{{ if eq .File.ContentBaseName $e.livre }}{{ $f = . }}{{ end }}{{ end -}}
+    {{- if not $f }}{{ errorf "livres : `commencer` cite %q, aucune fiche livre de ce nom (%s)" $e.livre $.File.Path }}{{ end -}}
+    {{- $ordre = $ordre | append (dict "page" $f "porte" $e) -}}
   {{- end }}
+  {{- range $livres }}
+    {{- $slug := .File.ContentBaseName -}}{{- $vu := false -}}
+    {{- range $.Params.commencer }}{{ if eq .livre $slug }}{{ $vu = true }}{{ end }}{{ end -}}
+    {{- if not $vu }}{{ warnf "livres : %q absent de `commencer` (%s) — affiché sans porte" $slug $.File.Path }}{{ $ordre = $ordre | append (dict "page" . "porte" nil) }}{{ end -}}
+  {{- end }}
+  {{- $corpus := slice -}}{{- $autres := slice -}}
+  {{- range $ordre }}{{ if eq .page.Params.serie "anthropie" }}{{ $corpus = $corpus | append . }}{{ else }}{{ $autres = $autres | append . }}{{ end }}{{ end -}}
 
   {{- with $corpus }}
   <section class="livres-groupe" aria-labelledby="livres-corpus-titre">
     <h2 id="livres-corpus-titre" class="livres-sous">{{ if $isEn }}The anthropic corpus{{ else }}Le corpus anthropique{{ end }}</h2>
-    {{ partial "livre-carte.html" (dict "page" (index . 0) "grande" true "isEn" $isEn) }}
-    <div class="livres-grille">
-      {{- range after 1 . }}{{ partial "livre-carte.html" (dict "page" . "grande" false "isEn" $isEn) }}{{ end }}
+    <div class="livres-portes">
+      {{- range . }}{{ partial "livre-porte.html" (dict "page" .page "porte" .porte "isEn" $isEn "large" false) }}{{ end }}
     </div>
   </section>
   {{- end }}
@@ -54,11 +42,19 @@
   {{- with $autres }}
   <section class="livres-groupe" aria-labelledby="livres-autres-titre">
     <h2 id="livres-autres-titre" class="livres-sous">{{ if $isEn }}Other works{{ else }}Autres ouvrages{{ end }}</h2>
-    <div class="livres-grille">
-      {{- range . }}{{ partial "livre-carte.html" (dict "page" . "grande" false "isEn" $isEn) }}{{ end }}
+    <div class="livres-portes livres-portes--larges">
+      {{- range . }}{{ partial "livre-porte.html" (dict "page" .page "porte" .porte "isEn" $isEn "large" true) }}{{ end }}
     </div>
   </section>
   {{- end }}
+  <p class="livres-note">{{ if $isEn }}Formats and other Amazon marketplaces on each book's page.{{ else }}Formats et autres pays sur la fiche de chaque livre.{{ end }}</p>
+
+  <section class="livres-groupe" aria-labelledby="livres-projet-titre">
+    <h2 id="livres-projet-titre" class="livres-sous">{{ if $isEn }}The project{{ else }}Le projet{{ end }}</h2>
+    <div class="article__body livres-projet">
+      {{ .Content }}
+    </div>
+  </section>
 
   <div class="page-exit">
     <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">
@@ -67,20 +63,12 @@
   </div>
 </article>
 
-{{/* Schema.org ItemList des ouvrages — ordre aligné sur la liste visible (corpus par poids, puis autres-ouvrages) */}}
+{{/* Schema.org ItemList des ouvrages — ordre aligné sur la liste visible (ordre de `commencer` : corpus, puis autres ouvrages) */}}
 {{- $items := slice -}}
 {{- $pos := 0 -}}
-{{- range $livres -}}
-  {{- if eq .Params.serie "anthropie" -}}
-    {{- $pos = add $pos 1 -}}
-    {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .Title "url" .Permalink)) -}}
-  {{- end -}}
-{{- end -}}
-{{- range $livres -}}
-  {{- if ne .Params.serie "anthropie" -}}
-    {{- $pos = add $pos 1 -}}
-    {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .Title "url" .Permalink)) -}}
-  {{- end -}}
+{{- range (append $autres $corpus) -}}
+  {{- $pos = add $pos 1 -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "item" (dict "@type" "Book" "name" .page.Title "url" .page.Permalink)) -}}
 {{- end -}}
 {{- $itemList := dict
     "@context" "https://schema.org"
