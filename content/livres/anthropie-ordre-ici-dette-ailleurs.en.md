@@ -55,6 +55,13 @@ related_awp:
     awp: "awp-05"
   - chapter: "Digital infrastructures and technological debt"
     awp: "awp-06"
+# Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
+# mot pour mot contre la source : édition révisée de 644 p. (en vente), 02_FABRIQUE/chaine-broche/08-PDF/complet_en/pdf_complet_source.html.
+extrait_voix:
+  source: "Age 2 · “3,200 BCE Cuneiform: Carved to Last”"
+  paragraphes:
+    - "Uruk, storehouse of the temple of Inanna. An accountant tilts his reed stylus. Angle, pressure: the round tip sinks into the clay. Five impressions, one traced sign: five sheep. An inventory move; the tipping of a world. Not that the sign represents the animal: it replaces it—and, above all, it remains when the wool tears and the beast dies. The thing passes; the mark holds. […]"
+  chute: "Who pays?"
 ---
 
 The foundational work of the anthropic framework.

@@ -45,6 +45,16 @@ faq:
   - question: "À qui offrir Livresque des mots ?"
     answer: "À l'amoureux de la langue et des formules, à l'écrivain en quête de compagnie, au lecteur qui aime ouvrir un livre au hasard. Une anthologie sans ordre imposé se prête naturellement au cadeau ; en version Kindle, le cadeau passe par un lien prépayé (mode d'emploi sur la page Offrir un livre Kindle)."
 lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
+# Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
+# mot pour mot contre la source : broché HTML de l'édition 2026 (03-BROCHE-PDF, WEASY-2026-10-04-ED2026) ; quatre citations contiguës, confirmées par l'audit.
+extrait_voix:
+  source: "Quatre citations consécutives de l'édition 2026 · en exergue, l'avertissement du livre"
+  paragraphes:
+    - "La meilleure manière d'être revenu de bien des choses, c'est de n'y être jamais allé.<br><span class=\"book-voix__auteur\">— Louise-Victorine Ackermann</span>"
+    - "Elle était revenue de bien des choses ce qui ne l'empêchait pas d'y retourner.<br><span class=\"book-voix__auteur\">— Natalie Clifford Barney</span>"
+    - "Ce n'est pas que je sache bien employer mon temps mais c'est que je sais bien le perdre et soit dit sans me vanter c'est peut-être la première de toutes les sciences.<br><span class=\"book-voix__auteur\">— Duchesse de Choiseul</span>"
+    - "Le regret qu'ont les hommes du mauvais emploi du temps qu'ils ont déjà vécu, ne les conduit pas toujours à faire de celui qui leur reste à vivre un meilleur usage.<br><span class=\"book-voix__auteur\">— Jean de La Bruyère</span>"
+  chute: "Si vous ne voyez pas la couture, c'est qu'elle est réussie."
 ---
 
 Une anthologie qui refuse l'ordre alphabétique.

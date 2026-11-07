@@ -61,6 +61,14 @@ faq:
   - question: "Sur quelles sources l'enquête repose-t-elle ?"
     answer: "290 entrées sourcées : Constitution, Légifrance, comptes rendus de l'Assemblée nationale et du Sénat, décisions du Conseil constitutionnel, statistique publique. Lorsque les pièces ne permettent pas de conclure, le livre le dit au lieu de trancher."
 lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
+# Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
+# mot pour mot contre la source : EPUB de la mise à jour du 28/09/2026 (en vente), 03_LIVRABLES/KDP_MAJ_2026-09-28 ; coupe sur les chiffres ; aucune promesse nommée.
+extrait_voix:
+  source: "Chapitre 1 · « Un président peut-il faire revenir un médecin près de chez vous ? »"
+  paragraphes:
+    - "Vous cherchez un médecin. Le premier cabinet ne prend plus de nouveaux patients. Le deuxième propose une date si lointaine que vous la notez sans y croire. Au troisième, un répondeur. […] Compter les médecins ne dit pas combien d'entre eux reçoivent en ville, ni combien de fois. Et c'est cela que vous cherchez, un jeudi après-midi, le téléphone à la main."
+    - "Quand il n'y a personne à appeler, le problème change de forme : on attend, on renonce ou l'on va à l'hôpital — trois issues possibles, et le nombre de médecins n'en enregistre aucune. […]"
+  chute: "Un médecin libéral s'installe où il veut."
 ---
 
 Un président peut décider sans que rien ne se fasse. Il peut faire sans obtenir. Il peut obtenir sans avoir causé.

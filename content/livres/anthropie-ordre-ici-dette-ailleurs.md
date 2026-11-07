@@ -62,6 +62,13 @@ related_awp:
     awp: "awp-05"
   - chapter: "Infrastructures numériques et dette technologique"
     awp: "awp-06"
+# Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
+# mot pour mot contre la source : manuscrit de la génération n+47 (630 p., en vente), AUDIT_EXACTITUDE/navettes/retour_cloture/ANTHROPIE_FINALE_FR.html.
+extrait_voix:
+  source: "Âge 2 · « −3 200 Cunéiforme : graver pour durer »"
+  paragraphes:
+    - "Uruk, entrepôt du temple d'Inanna. Un comptable incline son calame de roseau. Angle, pression : le bout rond s'enfonce dans l'argile. Cinq empreintes, un signe tracé : cinq moutons. Geste d'inventaire ; bascule de monde. Non que le signe représente l'animal : il le remplace ; et, surtout, il reste quand la laine se déchire et que la bête meurt. La chose passe, la marque tient. […]"
+  chute: "Qui paie ?"
 ---
 
 L'ouvrage fondateur du cadre anthropique.

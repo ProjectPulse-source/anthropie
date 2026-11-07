@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (soir) — Extrait « voix » sur chaque fiche livre — commité sur `fiches-extrait-voix`, en attente du push
+
+Demande de l'auteur (« fais l'extrait voix livre par livre »). Un passage par livre, choisi dans le fichier de la DERNIÈRE
+édition en vente (cinq agents de lecture, puis choix et contrôle par la session) : ANTHROPIE et ANTHROPY, comptable d'Uruk
+(Cunéiforme), chute « Qui paie ? » / « Who pays? » (n+47 630 p. ; révision 644 p.) ; Dette publique, Marie et le tableur
+(chap. 2, édition du 17/10, coupe sur les chiffres, « Marie est une figure composite » dans l'étiquette) ; Président, la
+recherche d'un médecin (chap. 1, EPUB du 28/09, aucune promesse ni candidat nommés ; chapitre Climat écarté pour la
+neutralité) ; Odyssée, l'atelier de Gutenberg ; Livresque, quatre citations CONTIGUËS confirmées par l'audit 2026
+(Ackermann, Barney, Choiseul, La Bruyère), chute = avertissement du livre, nommé dans l'étiquette. Ordre du livre jamais
+inversé (une chute est prise après le passage ou dans une coupe signalée). Témoins : chaque segment retrouvé verbatim dans
+la source (témoin altéré détecté) ; texte SERVI après typo_build recontrôlé contre les sources ; contiguïté de la suite
+Livresque. Contrôles : build 0, typo_build 0, audit-liens-build 0, check-all --ci 0 ; recette 390/1280 des sept fiches.
+
 ### 2026-11-07 (suite) — B+ porté sur toutes les fiches livres ; commit Zemmour poussé
 
 Demande de l'auteur (« toutes les modifs ne sont pas passées sur les fiches, notamment la partie extrait »). Sur les cinq

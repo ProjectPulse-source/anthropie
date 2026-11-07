@@ -807,3 +807,12 @@ main .book-sommaire ol > li { padding-left: 2rem !important; }
     margin: 0;
   }
 }
+
+// Ligne d'auteur d'une citation dans l'extrait « voix » (Livresque des mots : la voix d'une anthologie est sa suite)
+.book-voix__auteur {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-text-subtle);
+}

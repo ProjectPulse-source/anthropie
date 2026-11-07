@@ -69,6 +69,16 @@ related_awp:
   - label: "Infrastructures numériques et dette technologique"
     awp: "awp-06"
 lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
+# Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
+# mot pour mot contre la source : EPUB de l'édition du 17/10/2026 (en vente), 03_LIVRABLES/Dette_Publique_KINDLE_edition-20261017.epub ; coupe sur les chiffres.
+extrait_voix:
+  source: "Chapitre 2 · « Le mécanisme anthropique — Le grand transfert » · Marie est une figure composite"
+  paragraphes:
+    - "Le directeur du Budget ne hait pas Marie. […] Un tableur Excel. Une cellule rouge qui doit passer au vert."
+    - "Le crime est parfait : personne n'appuie sur la gâchette, mais Marie s'épuise quand même."
+    - "La nuit du 14 mars 2024, elle court d'une chambre à l'autre pendant douze heures sans interruption. Un homme de 73 ans sonne pendant vingt minutes. Il tente d'aller aux toilettes seul, tombe. Fracture du col du fémur."
+    - "Vingt minutes d'attente se transforment en six mois de rééducation, parfois en perte d'autonomie définitive. Mais sur le tableur du directeur, le ratio s'est amélioré. Les agences sont satisfaites. […]"
+  chute: "L'ordre des chiffres, le désordre des vies."
 ---
 
 Application du cadre anthropique à la dette publique française.

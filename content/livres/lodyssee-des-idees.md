@@ -53,6 +53,13 @@ faq:
   - question: "L'Odyssée des idées est-elle eurocentrée ?"
     answer: "Le livre assume son point d'ancrage : la traversée suit principalement la tradition européenne — et singulièrement française — parce que c'est de là que l'auteur lit le monde, et il ne prétend pas à une histoire universelle des idées. Mais la fresque n'est pas fermée : Bouddha, Confucius et Sun Tzu, l'islam classique qui invente et transmet (Al-Khwârizmî, Avicenne, Averroès, Ibn Khaldoun, le zéro venu de l'Inde), Gandhi, Senghor, Mandela ou le rêve chinois comptent parmi les 250 escales. Surtout, la question elle-même est posée dans le livre : Valladolid demande qui compte comme un homme, Lévi-Strauss tend au lecteur « le barbare et son miroir », Ferry expose l'école qui libère et l'empire qui domine. Un regard situé, qui se sait situé — c'est le parti pris."
 lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
+# Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
+# mot pour mot contre la source : MANUSCRIT_COMPLET.md, identique au livrable en vente (commit 2bf70c6).
+extrait_voix:
+  source: "Escale « v. 1454 · Gutenberg : la pensée rendue reproductible »"
+  paragraphes:
+    - "Dans un atelier de Mayence, vers 1454, une feuille sort d'une presse, puis une autre, puis une centaine d'autres — et toutes portent le même texte, avec une régularité qu'aucune main de copiste ne pouvait promettre. C'est là, dans cette répétition laborieuse, presque ingrate, que tout se joue. Pendant des siècles, copier un texte fut un acte de patience et de trahison mêlées : le copiste se fatigue, saute une ligne, corrige ce qu'il croit être une faute et en introduit une vraie, glisse parfois sa propre théologie dans la marge. Le savoir voyageait ainsi, déformé de main en main, comme une rumeur lente. Ce que Johannes Gutenberg fait sortir de sa presse n'est pas seulement un livre plus rapide à produire. C'est un texte qui dérive moins. […]"
+  chute: "L'encre de Gutenberg ne distingue pas le théorème de la haine."
 ---
 
 Une traversée de l'histoire des idées, des premiers signes à l'intelligence artificielle. Nouvelle édition entièrement recomposée (2026)&nbsp;: 250 escales, sept chemins de lecture, 682 pages.
