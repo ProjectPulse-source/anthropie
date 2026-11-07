@@ -1,0 +1,18 @@
+# INSEE, « Taux de prelevements obligatoires rapportes au produit interieur brut », comptes nationaux annuels base 2020,
+# en % du PIB, hors cotisations sociales imputees et credits d'impot (PO nets des credits d'impot), y compris PO verses a l'UE.
+# Extrait de econ-fin-pub-prelev-oblig.xlsx (https://www.insee.fr/fr/statistiques/2381412, telecharge le 2026-11-06,
+# SHA-256 1934fdb263eadb55146d066cd9da2949dd74231c6ede28145e812f0f2f1b7020, copie : insee_taux_po_1959_2025.xlsx), arrondi a 3 decimales.
+# 2024 semi-definitif, 2025 provisoire.
+annee,taux_po,dont_ue
+2014,44.626,0.095
+2015,44.497,0.139
+2016,44.570,0.162
+2017,45.300,0.177
+2018,44.886,0.195
+2019,43.958,0.191
+2020,44.293,0.218
+2021,44.195,0.218
+2022,45.044,0.289
+2023,43.154,0.232
+2024,42.723,0.089
+2025,43.632,0.096

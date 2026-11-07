@@ -260,13 +260,119 @@ def moy_cs(cs, cle, fen, fin):
     return sum(cs[a][cle] for a in range(a0, a1 + 1)) / (a1 - a0 + 1)
 
 
+# ------------------------------------------------------------------ baisses d'impôts ou recettes spontanées (06/11/2026)
+# Engagement de la correspondance du 20/10/2026 (objection de M. Zemmour : des baisses structurelles de recettes, masquées
+# jusqu'en 2023). Test : rapporter le recul des recettes corrigées du cycle entre FEN_CS « avant » et « apres » à
+# l'identité de la Cour des comptes, PO(t) = PO(t-1) + évolution spontanée + mesures nouvelles, soit en taux de PO :
+#     Δτ = τ(t-1)·(s − g)/(1 + g) + MN/PIB    (effet d'élasticité + effet des mesures ; CICE porté à part).
+# Note de recherche : docs/confrontation-recherche/TEST_MESURES_RECETTES_2017-2025.md. Deux conventions comptables :
+# Eurostat compte les recettes AVANT crédits d'impôt et range les crédits payables (PTC) en dépense ; l'INSEE et la Cour
+# comptent des PO NETS des crédits. Bouclage : TR = PO nets + PTC + recettes hors PO.
+# Témoins BLOQUANTS : (1) la décomposition 2017-2022 de la Cour (mesures −2,0, élasticité +2,3), à 0,3 point ;
+# (2) le bouclage annuel sur le taux de PO publié par l'INSEE (base 2020), à 0,3 point chaque année et 0,15 sur chaque
+# sous-période ; (3) la transcription : somme 2018-2023 des mesures hors CICE à 2 Md€ des « 62 Md€ » de la Cour ;
+# (4) les recettes hors PO (TR − PO − PTC) restent entre 6,5 et 9 points de PIB chaque année.
+PIECES_PO = {"cour": "cour_mesures_po_2016-2025.csv", "insee": "insee_taux_po_2014-2025.csv", "reperes": "cour_reperes_po.csv",
+             "credits": "insee_credits_impot_base2020.csv"}
+
+
+def _csv_piece(nom):
+    return list(csv.DictReader(l for l in piece_cs(nom).decode("utf-8").splitlines() if not l.startswith("#")))
+
+
+def prelevements(fin):
+    Y = eurostat("gov_10dd_edpt1", na_item="B1GQ", sector="S1", unit="MIO_NAC")
+    s = {k: eurostat("gov_10a_main", na_item=k, sector="S13", unit="PC_GDP") for k in ("TR", "PTC", "TE", "D41PAY")}
+    po, ue = {}, {}
+    for r in _csv_piece(PIECES_PO["insee"]):
+        po[int(r["annee"])], ue[int(r["annee"])] = float(r["taux_po"]), float(r["dont_ue"])
+    rep = {r["cle"]: float(r["valeur"]) for r in _csv_piece(PIECES_PO["reperes"])}
+    ci = {int(r["annee"]): (float(r["depenses_mdeur"]), float(r["recettes_mdeur"])) for r in _csv_piece(PIECES_PO["credits"])}
+    ptc_md = eurostat("gov_10a_main", na_item="PTC", sector="S13", unit="MIO_NAC")
+    mn, cice, el, mn_md = {}, {}, {}, {}
+    for r in _csv_piece(PIECES_PO["cour"]):
+        a = int(r["annee"])
+        pib = Y[a] / 1000
+        v = float(r["mesures_hors_cice"])
+        mn[a] = v if r["unite"] == "pt_pib" else v / pib * 100
+        mn_md[a] = v * pib / 100 if r["unite"] == "pt_pib" else v
+        cice[a] = float(r["cice_mdeur"]) / pib * 100 if r["cice_mdeur"] else 0.0
+        g = float(r["croissance_pib_valeur_pct"])
+        sp = float(r["croissance_spontanee_pct"]) if r["croissance_spontanee_pct"] else float(r["elasticite"]) * g
+        el[a] = po[a - 1] / 100 * (sp - g) / (100 + g) * 100
+    a0, a1 = FEN_CS["avant"][0], fin
+    if any(a not in mn for a in range(a0 + 1, a1 + 1)) or any(a not in po or a not in s["TR"] or a not in s["PTC"] for a in range(a0, a1 + 1)):
+        fail("prelevements : piece de la Cour, taux de PO de l'INSEE ou serie Eurostat incomplets jusqu'en %d (completer la piece)" % a1)
+    if "--mutation=prelevements" in sys.argv:   # témoin positif : une mesure de 2021 transcrite deux fois
+        mn[2021] *= 2
+    ec = {a: (po[a] - po[a - 1]) - mn[a] - cice[a] - el[a] for a in range(a0 + 1, a1 + 1)}
+
+    def cumul(x):
+        c, o = 0.0, {a0: 0.0}
+        for a in range(a0 + 1, a1 + 1):
+            c += x[a]
+            o[a] = c
+        return o
+
+    C = {"mesures": cumul(mn), "cice": cumul(cice), "elasticite": cumul(el), "ecart": cumul(ec)}
+    av, ap = FEN_CS["avant"], (FEN_CS["apres"][0], fin)
+    fen = lambda d: sum(d[a] for a in range(ap[0], ap[1] + 1)) / (ap[1] - ap[0] + 1) - sum(d[a] for a in range(av[0], av[1] + 1)) / (av[1] - av[0] + 1)
+    hors_po = {a: s["TR"][a] - po[a] - s["PTC"][a] for a in range(a0, a1 + 1)}
+    dep_prim_nette = {a: s["TE"][a] - s["D41PAY"][a] - s["PTC"][a] for a in range(a0, a1 + 1)}
+    dep_prim = {a: s["TE"][a] - s["D41PAY"][a] for a in range(a0, a1 + 1)}
+    R = dict(fen_mesures=fen(C["mesures"]), fen_cice=fen(C["cice"]), fen_elasticite=fen(C["elasticite"]), fen_ecart=fen(C["ecart"]),
+             fen_po=fen(po), fen_ue=fen(ue), fen_tr=fen(s["TR"]), fen_ptc=fen(s["PTC"]), fen_hors_po=fen(hors_po),
+             fen_dep_prim=fen(dep_prim), fen_dep_prim_nette=fen(dep_prim_nette),
+             t_mesures=C["mesures"][2022] - C["mesures"][2017], t_elasticite=C["elasticite"][2022] - C["elasticite"][2017],
+             # Convention de la Cour (contre-expertise du 07/11/2026) : cumul des mesures en euros, rapporte au PIB de 2022 ;
+             # l'evolution spontanee est alors ce qui reste de la variation observee du taux.
+             tc_mesures=sum(mn_md[a] for a in range(2018, 2023)) / (Y[2022] / 1000) * 100,
+             tc_spontane=(po[2022] - po[2017]) - sum(mn_md[a] for a in range(2018, 2023)) / (Y[2022] / 1000) * 100,
+             # PTC d'Eurostat suit la chronique des RECETTES de credits d'impot de l'INSEE (annee ou ils s'imputent), pas
+             # celle des depenses (annee du fait generateur, base 2020) ; decalage moyen des deux chroniques sur la periode avant.
+             ci_ecart_ptc_rec=max(abs(ptc_md[a] / 1000 - ci[a][1]) for a in ci if a in ptc_md and a >= 2015),
+             ci_ecart_ptc_dep_2019=abs(ptc_md[2019] / 1000 - ci[2019][0]),
+             ci_decalage_avant=sum((ci[a][0] - ci[a][1]) / (Y[a] / 1000) * 100 for a in range(av[0], av[1] + 1)) / (av[1] - av[0] + 1),
+             el_2023_2024=el[2023] + el[2024], mesures_2024_fin=sum(mn[a] + cice[a] for a in range(2024, fin + 1)),
+             cumul_mesures_2023=C["mesures"][2023], cumul_mesures_fin=C["mesures"][fin],
+             somme_md_2018_2023=sum(mn_md[a] for a in range(2018, 2024)),
+             temporaires_pt=rep["hausses_temporaires_2025"] / (Y[2025] / 1000) * 100,
+             ec_max=max(abs(v) for v in ec.values()), ec_17_22=sum(ec[a] for a in range(2018, 2023)),
+             ec_22_fin=sum(ec[a] for a in range(2023, fin + 1)), hors_po_min=min(hors_po.values()), hors_po_max=max(hors_po.values()),
+             ptc_avant=sum(s["PTC"][a] for a in range(av[0], av[1] + 1)) / (av[1] - av[0] + 1),
+             ptc_apres=sum(s["PTC"][a] for a in range(ap[0], ap[1] + 1)) / (ap[1] - ap[0] + 1),
+             rep=rep, fin=fin,
+             annees={a: dict(taux_po_insee=po[a], mesures=mn[a], cice=cice[a], elasticite=el[a], ecart_bouclage=ec[a],
+                             cumul_mesures=C["mesures"][a], cumul_elasticite=C["elasticite"][a], recettes_hors_po=hors_po[a],
+                             credits_impot_payables=s["PTC"][a]) for a in range(a0 + 1, a1 + 1)})
+    # Temoin 1 : la Cour en base 2020 (juillet 2024), a sa convention ; arrondi de son graphique (0,05) plus 0,1.
+    if abs(R["tc_mesures"] - rep["temoin_mesures_2017_2022"]) > 0.15 or abs(R["tc_spontane"] - rep["temoin_spontane_2017_2022"]) > 0.15:
+        fail("prelevements : 2017-2022 a la convention de la Cour, mesures %.2f et spontane %.2f, loin de la Cour (%.1f et %.1f) (temoin 1)"
+             % (R["tc_mesures"], R["tc_spontane"], rep["temoin_mesures_2017_2022"], rep["temoin_spontane_2017_2022"]))
+    # Temoin 5 : la serie PTC retiree des recettes est la chronique des recettes de credits d'impot (INSEE), non celle des
+    # depenses ; sinon « PO nets = TR - PTC - reste » ne tiendrait pas (2019 : 36,2 contre 18,3 Md EUR).
+    if R["ci_ecart_ptc_rec"] > 0.3 or R["ci_ecart_ptc_dep_2019"] < 10 or abs(R["ci_decalage_avant"]) > 0.15:
+        fail("prelevements : PTC ne suit plus les recettes de credits d'impot de l'INSEE (ecart max %.1f Md EUR ; 2019, ecart aux depenses %.1f ; "
+             "decalage moyen avant %.2f point) (temoin 5)" % (R["ci_ecart_ptc_rec"], R["ci_ecart_ptc_dep_2019"], R["ci_decalage_avant"]))
+    if R["ec_max"] > 0.3 or abs(R["ec_17_22"]) > 0.15 or abs(R["ec_22_fin"]) > 0.15:
+        fail("prelevements : identite non bouclee sur le taux de PO de l'INSEE (ecart annuel max %.2f, 2017-2022 %.2f, 2022-%d %.2f) (temoin 2)"
+             % (R["ec_max"], R["ec_17_22"], fin, R["ec_22_fin"]))
+    if abs(R["somme_md_2018_2023"] + 62) > 2:
+        fail("prelevements : mesures 2018-2023 %.1f Md EUR, loin des 62 Md EUR de la Cour (temoin 3)" % R["somme_md_2018_2023"])
+    if R["hors_po_min"] < 6.5 or R["hors_po_max"] > 9:
+        fail("prelevements : recettes hors PO hors bornes (%.2f a %.2f) : TR, PO et PTC ne bouclent plus (temoin 4)" % (R["hors_po_min"], R["hors_po_max"]))
+    return R
+
+
 # Fenêtres des deux lectures institutionnelles du creusement récent du déficit (None = dernière année publiée).
 FENETRES_DEFICIT = {"ofce": (2017, 2024), "tresor": (2019, None)}
 # Clés d'affichage dérivées (relecture de langue du 11/10/2026) : <clé>_abs, la valeur sans signe après un verbe de sens ;
 # <clé>_pt, « point » ou « points » accordé à la valeur affichée.
 VALEURS_SANS_SIGNE = ("tc_avant", "tc_apres", "rec_fin",
                       "p1_hausse", "p2_hausse", "p3_hausse", "p1_taux_croissance")   # « gagne », « ajoute » (motif de check-rendu, 11/10)
-ACCORD_POINTS = ("effet_net", "ofce_rec", "ofce_dep", "tresor_dep_hi", "croise_dep_hi", "croise_dep", "rec_fin")
+ACCORD_POINTS = ("effet_net", "ofce_rec", "ofce_dep", "tresor_dep_hi", "croise_dep_hi", "croise_dep", "rec_fin",
+                 "mn_ptc", "mn_po", "mn_tr", "mn_dep", "mn_dep_nette", "mn_mes_abs", "mn_el_abs", "mn_el_2324", "mn_mes_24fin",
+                 "mn_ec_max", "mn_tempo_pt")
 
 
 def agreger(rows, a0, a1):
@@ -754,7 +860,7 @@ def dette_insee_fin(annee: int):
         return None
 
 
-def affichage(a0, d_depart, rows, total, per, dr, cs):
+def affichage(a0, d_depart, rows, total, per, dr, cs, po):
     """Rend (affichage, affichage_en) : deux présentations d'un seul corps de valeurs, puis les gardes (une passe,
     numérique, valable pour les deux langues)."""
     last = rows[-1]
@@ -856,6 +962,31 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
             A["cs_%d_ce" % a], A["cs_%d_fmi" % a] = nb(cs[a]["ce_st"]), nb(cs[a]["fmi_ca"])
             A["cs_%d_ocde" % a], A["cs_%d_obs" % a] = nb(cs[a]["ocde"]), nb(cs[a]["obs"])
         A["cs_tab_fin"] = str(fin_)
+        # Baisses d'impôts ou recettes qui ralentissent (06/11/2026) : valeurs de prelevements(), gardes plus bas.
+        P = po
+        A["mn_ptc_avant"], A["mn_ptc_apres"] = nb(P["ptc_avant"]), nb(P["ptc_apres"])
+        for k, v in (("mn_ptc", P["fen_ptc"]), ("mn_po", P["fen_po"]), ("mn_tr", P["fen_tr"]), ("mn_dep", P["fen_dep_prim"]),
+                     ("mn_dep_nette", P["fen_dep_prim_nette"]), ("mn_mes_abs", P["fen_mesures"]), ("mn_el_abs", P["fen_elasticite"]),
+                     ("mn_el_2324", P["el_2023_2024"]), ("mn_mes_24fin", P["mesures_2024_fin"]), ("mn_ec_max", P["ec_max"]),
+                     ("mn_tempo_pt", P["temporaires_pt"])):
+            A[k] = nb(abs(v))   # sans signe : la prose porte le sens (« reculent de », « retirent ») ; gardes plus bas
+        A["mn_hors_po"] = sg(P["fen_hors_po"], 2)
+        A["mn_ec_max"] = nb(P["ec_max"], 2)   # « ne dépasse pas » : au dixième, 0,214 s'affichait 0,2
+        # Tableau au centième : au dixième, ses termes arrondis ne redonnaient pas le total affiché (−0,9 contre −1,0)
+        for k, v in (("mn_po_sg", P["fen_po"]), ("mn_mes", P["fen_mesures"]), ("mn_cice", P["fen_cice"]), ("mn_el", P["fen_elasticite"]),
+                     ("mn_ecart", P["fen_ecart"])):
+            A[k] = sg(v, 2)
+        for k, v in (("mn_t_mes", P["t_mesures"]), ("mn_t_el", P["t_elasticite"]),
+                     ("mn_c_mes", P["rep"]["temoin_mesures_2017_2022"]), ("mn_c_sp", P["rep"]["temoin_spontane_2017_2022"]),
+                     ("mn_tc_mes", P["tc_mesures"]), ("mn_tc_sp", P["tc_spontane"]),
+                     ("mn_cum_2023", P["cumul_mesures_2023"]), ("mn_cum_fin", P["cumul_mesures_fin"])):
+            A[k] = sg(v)
+        for k, c in (("mn_th", "baisse_taxe_habitation_2017_2022"), ("mn_is", "baisse_is_2017_2022"),
+                     ("mn_ip", "baisse_impots_production_2017_2022"), ("mn_ir", "baisse_bareme_ir_2017_2022"),
+                     ("mn_tempo_md", "hausses_temporaires_2025"), ("mn_fru", "fru_2024"), ("mn_24_hors_ue", "mesures_2024_hors_ue")):
+            A[k] = nb(abs(P["rep"][c]))
+        A["mn_po2017"], A["mn_po2022"] = nb(P["annees"][2017]["taux_po_insee"]), nb(P["annees"][2022]["taux_po_insee"])
+        A["mn_fin"] = str(P["fin"])
         return A
 
     fen = {k: (d0, d1 or last["annee"]) for k, (d0, d1) in FENETRES_DEFICIT.items()}
@@ -1050,6 +1181,31 @@ def affichage(a0, d_depart, rows, total, per, dr, cs):
         ("2009 et 2020 : les deux plus fortes hausses de la série",
          sorted(rows, key=lambda r: -r["variation"])[0]["annee"] in (2009, 2020) and sorted(rows, key=lambda r: -r["variation"])[1]["annee"] in (2009, 2020)),
     ]
+    # --- Baisses d'impôts ou recettes qui ralentissent (06/11/2026). Seuils écrits avant les phrases.
+    P = po
+    d_ce_rec = moy_cs(cs, "ce_rec", FEN_CS["apres"], last["annee"]) - moy_cs(cs, "ce_rec", FEN_CS["avant"], last["annee"])
+    affirmations += [
+        ("mesures : « plus d'un tiers du recul des recettes » tient aux crédits d'impôt versés (entre un tiers et la moitié)",
+         P["fen_ptc"] < 0 and 1 / 3 < P["fen_ptc"] / P["fen_tr"] < 1 / 2),
+        ("mesures : « recettes, corrigées du cycle ou non » reculent d'autant (écart < 0,1 entre Eurostat et AMECO)", abs(P["fen_tr"] - d_ce_rec) < 0.1),
+        ("mesures : « le reste, écart de rapprochement entre ces séries, varie de » (moins de 0,1 point)", abs(P["fen_hors_po"]) < 0.1),
+        ("mesures : PO nets en recul, moindre d'au moins 0,3 point que celui des recettes totales", P["fen_tr"] + 0.3 < P["fen_po"] < 0),
+        ("mesures : dépenses primaires en hausse, plus fortes d'au moins 0,3 point nettes des crédits d'impôt",
+         0 < P["fen_dep_prim"] and P["fen_dep_prim_nette"] > P["fen_dep_prim"] + 0.3),
+        ("mesures : le tableau boucle à l'affichage (somme des termes arrondis au centième = total, à 0,01 près)",
+         abs(sum(round(P[k], 2) for k in ("fen_mesures", "fen_cice", "fen_elasticite", "fen_ecart")) - round(P["fen_po"], 2)) <= 0.011),
+        ("mesures : « près du double du recul observé » (rapport entre 1,6 et 2,4)", 1.6 < P["fen_mesures"] / P["fen_po"] < 2.4),
+        ("mesures : l'élasticité « en compense encore » (plus d'un demi-point)", P["fen_elasticite"] > 0.5),
+        ("mesures : mesures, CICE et élasticité « laissent un écart de bouclage » (moins de 30 % du recul net)",
+         (P["fen_mesures"] + P["fen_cice"] + P["fen_elasticite"]) / P["fen_po"] > 0.7),
+        ("mesures : 2017-2022, compensation « presque exacte » (écart < 0,3) et taux de PO de 2022 proche de 2017 (< 0,5)",
+         abs(P["t_mesures"] + P["t_elasticite"]) < 0.3 and abs(P["annees"][2022]["taux_po_insee"] - P["annees"][2017]["taux_po_insee"]) < 0.5),
+        ("mesures : l'élasticité « se retourne et retire » plus de 1,5 point en 2023 et 2024", P["el_2023_2024"] < -1.5),
+        ("mesures : depuis 2024, les mesures « changent de sens » chaque année et rendent plus d'un demi-point",
+         P["mesures_2024_fin"] > 0.5 and all(P["annees"][a]["mesures"] + P["annees"][a]["cice"] > 0 for a in range(2024, P["fin"] + 1))),
+        ("mesures : le cumul « passe de » 2023 à la fin en remontant d'au moins un demi-point, et reste négatif",
+         P["cumul_mesures_2023"] + 0.5 < P["cumul_mesures_fin"] < 0),
+    ]
     faux = [nom for nom, ok in affirmations if not ok]
     if faux:
         fail("la page affirme ce que les donnees ne soutiennent plus : " + " ; ".join(faux))
@@ -1069,7 +1225,8 @@ def main() -> int:
     per = [agreger(rows, a, b or rows[-1]["annee"]) for a, b, _ in PERIODES]
     dr = depenses_recettes()
     cs = conjoncture(rows)
-    aff, aff_en = affichage(a0, d_depart, rows, total, per, dr, cs)
+    po = prelevements(rows[-1]["annee"])
+    aff, aff_en = affichage(a0, d_depart, rows, total, per, dr, cs, po)
     log("Decomposition %d-%d : hausse %.1f = interets %.1f + croissance %.1f + deficits primaires %.1f + flux-stock %.1f"
         % (rows[0]["annee"], rows[-1]["annee"], total["variation"], total["effet_interets"], total["effet_croissance"],
            total["contribution_solde_primaire"], total["flux_stock"]))
@@ -1114,6 +1271,17 @@ def main() -> int:
                    "ocde": "solde primaire sous-jacent, OCDE (NLGXQU), depuis 2010", "int_recus": "intérêts reçus, Eurostat D41REC, % du PIB"},
                    "pieces": {k: dict(fichier=v, sha256=hashlib.sha256((SOURCES_DETTE / v).read_bytes()).hexdigest()) for k, v in PIECES_CS.items()},
                    "annees": {str(k): v for k, v in cs.items()}},
+               "prelevements_obligatoires": {"definitions": {
+                   "taux_po_insee": "taux de prélèvements obligatoires nets des crédits d'impôt, INSEE base 2020, % du PIB",
+                   "mesures": "mesures nouvelles hors CICE, Cour des comptes, en points de PIB de l'année",
+                   "cice": "effet de la transformation du CICE (année double de 2019, puis contrecoups), points de PIB",
+                   "elasticite": "τ(t-1)·(s-g)/(1+g) : effet de la croissance spontanée des PO plus ou moins rapide que le PIB",
+                   "ecart_bouclage": "variation observée du taux de l'INSEE moins mesures, CICE et élasticité",
+                   "recettes_hors_po": "écart de rapprochement : recettes totales Eurostat (TR) moins PO nets (INSEE) moins crédits d'impôt restituables (PTC)",
+                   "credits_impot_payables": "Eurostat gov_10a_main PTC, % du PIB : crédits d'impôt restituables ajoutés aux impôts, à 0,3 Md€ près la chronique des recettes de l'INSEE (base 2020), non celle des dépenses, enregistrées l'année du fait générateur"},
+                   "pieces": {k: dict(fichier=v, sha256=hashlib.sha256((SOURCES_DETTE / v).read_bytes()).hexdigest()) for k, v in PIECES_PO.items()},
+                   "fenetres": {k: v for k, v in po.items() if k.startswith("fen_")},
+                   "annees": {str(k): v for k, v in po["annees"].items()}},
                "affichage": aff, "affichage_en": aff_en}
     releve = payload["meta"]["releve_le"]
     # « Rien écrit à données identiques » : l'empreinte compare le paquet ENTIER, donc affichage_en compris (aucun
@@ -1121,7 +1289,7 @@ def main() -> int:
     # figs et fiches couvrent les figures et fiches anglaises. Un paquet ancien sans affichage_en diffère : il est réécrit.
     # Bruit de calcul au 15e chiffre : le jeu se compare et s'écrit normalisé (organe commun releve_jeu.normalise, 19/10/2026).
     payload = rj.normalise(payload)
-    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Commission européenne (AMECO), FMI, OCDE ; les valeurs du FMI ne sont pas couvertes par la licence CC BY : ce producteur soumet leur réutilisation commerciale à autorisation"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
+    licence = "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, Commission européenne (AMECO), FMI, OCDE, INSEE, Cour des comptes ; les valeurs du FMI ne sont pas couvertes par la licence CC BY : ce producteur soumet leur réutilisation commerciale à autorisation"   # nomme les sources : un changement s'écrit (rj.sans_licence, 18/10/2026)
     if OUT_DATA.exists():
         try:
             prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))

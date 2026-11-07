@@ -1,0 +1,15 @@
+# INSEE, « L'enregistrement des credits d'impot en base 2020 », mars 2024, tableau 4-1, p. 4 (piece archivee :
+# insee_credits_impot_base2020_2024-03.pdf, SHA-256 0c0ae45c5c37ac088ec3319b358d94fa55e3f75eb9aadf1d4835011545674d39 ;
+# https://www.insee.fr/fr/statistiques/documentation/credit_impot_B2020_mars_20240322.pdf, telecharge le 2026-11-07).
+# TRANSCRIT a la main et VERIFIE contre la piece le 07/11/2026. Md EUR, base 2020. depenses = credits d'impot
+# restituables enregistres en depense, l'annee du fait generateur ; recettes = montants ajoutes aux recettes fiscales au
+# titre de ces credits, l'annee ou ils s'imputent (« l'enregistrement des recettes n'est pas modifie », p. 2).
+annee,depenses_mdeur,recettes_mdeur
+2013,28.1,14.0
+2014,34.1,21.7
+2015,34.8,27.0
+2016,33.3,26.3
+2017,39.8,29.1
+2018,37.3,36.7
+2019,18.3,36.2
+2020,16.5,26.4

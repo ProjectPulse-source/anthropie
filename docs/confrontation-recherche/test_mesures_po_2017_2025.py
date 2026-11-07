@@ -21,21 +21,28 @@ MN = {2016: -4.0,   # ed. 2017 p. 39 T6
       2021: -15.3,  # ed. 2022 p. 36 T7
       2022: -9.4,   # ed. 2023 p. 30 T1
       2023: -10.7,  # ed. 2024 T1, « mesures ayant un impact » sur le deficit
-      2024: 6.5,    # ed. 2025 p. 31, hausses affectant le solde public
+      2024: 2.2,    # ed. 2026 p. 27 T1 : 3,2 au total, dont CICE +1,0 (ci-dessous) et fonds de resolution unique -3,9
+                    # (PO verse a l'UE, neutre sur le solde public ; mesures affectant le solde : 7,1)
       2025: 23.0}   # ed. 2026 p. 28
 MN_PT = {t: v / PIB[t] * 100 for t, v in MN.items()}
 MN_PT[2017] = 0.2   # ed. 2018 p. 29, en points de PIB, surtaxe exceptionnelle d'IS comprise
-CICE = {2019: -20.1, 2020: 14.4, 2021: 0.5, 2022: 1.7, 2023: 4.4, 2024: 1.0}  # ed. 2022 T1 et T7, 2023 T1 (note), 2024 T1, 2025 note 21
+CICE = {2019: -20.1, 2020: 14.4, 2021: 0.5, 2022: 1.7, 2023: 4.4, 2024: 1.0}  # ed. 2022 T1 et T7, 2023 T1 (note), 2024 T1, 2025 p. 31 note 21
 CICE_PT = {t: v / PIB[t] * 100 for t, v in CICE.items()}
 # (croissance spontanee %, croissance du PIB en valeur %), dernier millesime
 SG = {2016: (2.0, 1.6), 2017: (3.9, 2.8), 2018: (2.9, 2.9), 2019: (3.4, 3.1), 2020: (-4.5, -5.2),  # ed. 2022 p. 33 T5
       2021: (9.6, 8.0),            # ed. 2023 p. 27
       2022: (1.4 * 5.8, 5.8),      # ed. 2024 (elasticite 1,4, base 2020) ; PIB : ed. 2025 T12
-      2023: (2.8, 6.5), 2024: (2.1, 3.3),  # ed. 2025 p. 29 T8
+      2023: (2.8, 6.5),  # ed. 2025 p. 29 T8
+      2024: (2.3, 3.6),  # ed. 2026 p. 27 T1
       2025: (2.2, 1.9)}            # ed. 2026 p. 27 T1
-TAU = {2016: 44.4, 2017: 44.6, 2018: 45.1, 2019: 44.8, 2020: 44.1, 2021: 44.4, 2022: 44.3, 2023: 45.0, 2024: 43.2,
-       2025: 42.7}  # taux de PO de l'annee precedente (editions 2017 a 2026, bases 2014 puis 2020)
-E = {t: TAU[t] / 100 * (s - g) / (100 + g) * 100 for t, (s, g) in SG.items()}
+# Taux de PO, serie unique : Insee, comptes nationaux annuels base 2020 (hors cotisations imputees et credits d'impot,
+# PO verses a l'UE compris) ; econ-fin-pub-prelev-oblig.xlsx, insee.fr/fr/statistiques/2381412, telecharge le 06/11/2026,
+# archive pieces_lues/insee_taux_po_1959_2025.xlsx, SHA-256 1934fdb263eadb55146d066cd9da2949dd74231c6ede28145e812f0f2f1b7020.
+PO_INSEE = {2014: 44.626, 2015: 44.497, 2016: 44.570, 2017: 45.300, 2018: 44.886, 2019: 43.958, 2020: 44.293,
+            2021: 44.195, 2022: 45.044, 2023: 43.154, 2024: 42.723, 2025: 43.632}
+PO_UE = {2015: 0.139, 2016: 0.162, 2017: 0.177, 2018: 0.195, 2019: 0.191, 2020: 0.218, 2021: 0.218, 2022: 0.289,
+         2023: 0.232, 2024: 0.089, 2025: 0.096}  # dont au profit de l'Union europeenne, meme fichier
+E = {t: PO_INSEE[t - 1] / 100 * (s - g) / (100 + g) * 100 for t, (s, g) in SG.items()}
 ANS = range(2015, 2026)
 
 
@@ -74,3 +81,20 @@ dpo = moy(tot, 2022, 2025) - moy(tot, 2015, 2019)
 drec = moy(R, 2022, 2025) - moy(R, 2015, 2019)
 print("  total identite PO  %6.2f" % dpo)
 print("  recettes corrigees du cycle (Commission, AMECO) %6.2f ; reste non explique %6.2f" % (drec, drec - dpo))
+
+
+# --- Temoin de bouclage : observe = mesures + CICE + elasticite + ecart, annee par annee, en base 2020
+print("\nBouclage annuel sur le taux de PO de l'Insee (points)")
+print("annee  observe  MN    CICE  elast  ecart")
+ec = {2015: 0.0}
+for t in range(2016, 2026):
+    obs = PO_INSEE[t] - PO_INSEE[t - 1]
+    ec[t] = obs - MN_PT.get(t, 0) - CICE_PT.get(t, 0) - E[t]
+    print("%d  %6.2f %6.2f %6.2f %6.2f %6.2f" % (t, obs, MN_PT.get(t, 0), CICE_PT.get(t, 0), E[t], ec[t]))
+for a, b in ((2017, 2022), (2022, 2025)):
+    print("  %d->%d : observe %.2f, calcul %.2f, ecart %.2f" % (
+        a, b, PO_INSEE[b] - PO_INSEE[a], tot[b] - tot[a], sum(ec[t] for t in range(a + 1, b + 1))))
+dpo_obs = moy(PO_INSEE, 2022, 2025) - moy(PO_INSEE, 2015, 2019)
+print("\nEntre les fenetres : taux de PO observe %.2f (dont part UE %.2f) ; identite %.2f ; ecart de bouclage %.2f"
+      % (dpo_obs, moy(PO_UE, 2022, 2025) - moy(PO_UE, 2015, 2019), dpo, dpo_obs - dpo))
+print("Recettes corrigees moins PO observes (hors PO, correction du cycle, PIB potentiel) : %.2f" % (drec - dpo_obs))

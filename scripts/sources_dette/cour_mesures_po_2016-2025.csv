@@ -1,0 +1,19 @@
+# Cour des comptes, « La situation et les perspectives des finances publiques » (editions 2017 a 2026), decomposition de
+# l'evolution des prelevements obligatoires (PO, nets des credits d'impot) : PO(t) = PO(t-1) + evolution spontanee + mesures nouvelles.
+# TRANSCRITE a la main et VERIFIEE contre les pieces archivees (D:\PRO\06_PROMOTION\RECHERCHE_SOLUTIONS_DETTE_2026-10-02\pieces_lues\
+# cc_rspfp2017.pdf a cc_rspfp2026.pdf, SHA-256 dans docs/confrontation-recherche/TEST_MESURES_RECETTES_2017-2025.md), le 06/11/2026.
+# Regle : pour chaque annee, le DERNIER millesime publie par la Cour. Mesures en concept PO (UE comprise), hors effet de la
+# transformation du CICE, porte a part (annee double de 2019 et contrecoups). Unite : Md EUR, sauf 2017, publie en points de PIB.
+# Croissance spontanee : en %, ou a defaut l'elasticite publiee (2022). Controle de transcription : somme 2018-2023 des mesures
+# hors CICE = -63,1 Md EUR, contre 62 Md EUR pour la Cour (edition 2024, p. 35).
+annee,mesures_hors_cice,unite,cice_mdeur,croissance_spontanee_pct,elasticite,croissance_pib_valeur_pct,source
+2016,-4.0,mdeur,,2.0,,1.6,"ed. 2017 p. 39 tableau 6 ; croissance : ed. 2022 p. 33 tableau 5"
+2017,0.2,pt_pib,,3.9,,2.8,"ed. 2018 p. 29 (surtaxe exceptionnelle d'IS comprise) ; croissance : ed. 2022 p. 33 tableau 5"
+2018,-9.4,mdeur,,2.9,,2.9,"ed. 2022 p. 25 tableau 1 (dont -4,8 contrecoup de la surtaxe d'IS de 2017) ; croissance : ed. 2022 p. 33 tableau 5"
+2019,-9.1,mdeur,-20.1,3.4,,3.1,"ed. 2022 p. 25 tableau 1 ; croissance : ed. 2022 p. 33 tableau 5"
+2020,-9.2,mdeur,14.4,-4.5,,-5.2,"ed. 2022 p. 36 tableau 7 ; croissance : ed. 2022 p. 33 tableau 5"
+2021,-15.3,mdeur,0.5,9.6,,8.0,"ed. 2022 p. 36 tableau 7 ; croissance : ed. 2023 p. 27"
+2022,-9.4,mdeur,1.7,,1.4,5.8,"ed. 2023 p. 30 tableau 1 ; elasticite : ed. 2024 (base 2020) ; PIB : ed. 2025 tableau 12"
+2023,-10.7,mdeur,4.4,2.8,,6.5,"ed. 2024 tableau 1 (total -6,3 en PO, CICE +4,4 compris) ; croissance : ed. 2025 p. 29 tableau 8"
+2024,2.2,mdeur,1.0,2.3,,3.6,"ed. 2026 p. 27 tableau 1 : 3,2 au total, dont CICE +1,0 (ed. 2025 p. 31 note 21) et fonds de resolution unique -3,9"
+2025,23.0,mdeur,,2.2,,1.9,"ed. 2026 p. 27 tableau 1"

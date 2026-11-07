@@ -749,6 +749,17 @@ def gardes(fin, dec, annees, cmp_, europe, haut, bas, exc_ans):
         ("dette de départ élevée, excédent moyen d'au moins 2 % : la dette baisse dans toutes les fenêtres", h["excedent_2"]["baisses"] == h["excedent_2"]["n"] and h["excedent_2"]["n"] >= 5),
         ("dette de départ élevée, excédent d'au moins 2 % : quatre pays au plus (le texte dit « quelques pays »)", len(h["excedent_2"]["pays"]) <= 4),
     ]
+    # Confrontation de #soutenable (06/11/2026) : « la Cour des comptes fait le même calcul pour 2025 et trouve, à
+    # l'arrondi, les mêmes valeurs » (juin 2026, p. 46, tableau n° 8 ; pièce transcrite cour_reperes_po.csv). Vaut tant
+    # que la dernière année est 2025 ; au-delà, la phrase se réécrit.
+    sums = {l.split()[1].lstrip("*"): l.split()[0] for l in (SOURCES_DETTE / "SHA256SUMS").read_text(encoding="utf-8").splitlines() if l.strip()}
+    b = (SOURCES_DETTE / "cour_reperes_po.csv").read_bytes()
+    if sums.get("cour_reperes_po.csv") != hashlib.sha256(b).hexdigest():
+        fail("piece cour_reperes_po.csv : empreinte differente de SHA256SUMS ; relire la piece")
+    cour = {r["cle"]: float(r["valeur"]) for r in csv.DictReader(l for l in b.decode("utf-8").splitlines() if not l.startswith("#"))}
+    G.append(("confrontation : pour %d, la Cour trouve à l'arrondi le même solde stabilisant, le même solde primaire et le même écart" % last["annee"],
+              last["annee"] == 2025 and round(last["solde_stabilisant"], 1) == cour["cour_2025_solde_stabilisant"]
+              and round(last["solde_primaire"], 1) == cour["cour_2025_solde_primaire"] and round(abs(last["ecart"]), 1) == cour["cour_2025_ecart"]))
     if "--mutation-garde" in sys.argv:   # témoin positif : inverser le signe de l'effet taux-croissance de la dernière décennie
         G[0] = (G[0][0], -d3["taux_croissance"] < -10)
     faux = [nom for nom, ok in G if not ok]
