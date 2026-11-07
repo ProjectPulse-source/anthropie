@@ -1,0 +1,19 @@
+{{- /* Barre d'achat compacte de la fiche livre, TÉLÉPHONE seulement (Audit-07 : « le lecteur ne doit jamais
+       perdre de vue que cette lecture peut se poursuivre dans un livre »). Sur ordinateur, la marge collante
+       joue ce rôle : la barre y est masquée par la feuille de style. Visible quand ni la marge d'achat
+       (#book-actions) ni le second appel (#book-appel) ne sont à l'écran : static/js/book-barre.js.
+       Entrée : dict "page" "price". Sans script, la barre reste cachée (aucune perte : la marge et l'appel suffisent). */ -}}
+{{- $p := .page -}}
+{{- $isEn := eq $p.Lang "en" -}}
+{{- $broche := cond $isEn (or $p.Params.url_amazon_com $p.Params.url_amazon_fr) (or $p.Params.url_amazon_fr $p.Params.url_amazon_com) -}}
+{{- $kindle := cond $isEn (or $p.Params.url_amazon_com_kindle $p.Params.url_amazon_fr_kindle) (or $p.Params.url_amazon_fr_kindle $p.Params.url_amazon_com_kindle) -}}
+{{- $cible := $broche | default $kindle -}}
+{{- with $cible -}}
+<div class="book-barre" data-book-barre aria-hidden="true">
+  {{- with partial "book-cover-resource.html" (dict "slug" $p.File.ContentBaseName "lang" $p.Lang) }}
+  <img class="book-barre__cover" src="{{ (.Resize "100x q82").RelPermalink }}" alt="" width="46" height="{{ div (mul 46 .Height) .Width }}" loading="lazy">
+  {{- end }}
+  <p class="book-barre__titre">{{ partial "fr-typo.html" $p.Title }}</p>
+  <a class="book-barre__btn" href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer" tabindex="-1">{{ if $isEn }}Buy{{ else }}Acheter{{ end }}{{ if and $broche $.price }} — {{ $.price | safeHTML }}{{ end }}</a>
+</div>
+{{- end -}}

@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 — Fiches livres : maquette B+ v2 en production (gabarit des six fiches) — commité, NON poussé
+
+Maquette validée par l'auteur le 07/11 après deux arbitrages (`D:\PRO_PROMOTION\MAQUETTES_PREMIER_COUP_2026-11-07\`,
+`ARBITRAGE_AUDIT-05_2026-11-07.md` : Audit-05 et Audit-07, pièces archivées avec SHA-256). **Gabarit commun**
+(`layouts/livres/single.html`) : titre avant la couverture sur téléphone (la marge se dissout dans la grille), marge d'achat
+collante dès 768 px et jusqu'au bas de la page, second appel à l'achat (`partials/book-appel.html`), barre d'achat compacte
+téléphone (`partials/book-barre.html`, `static/js/book-barre.js`), prolongements en cartes après l'achat (le bloc « Dans les
+Working Papers » y est fondu : `partials/book-related-awp.html` retiré), « Du même auteur » en grille. Champs facultatifs
+nouveaux : `surtitre`, `accroche`, `extrait_voix` (rendus seulement s'ils existent), `type` dans `ressources_livre`.
+**Premier coup** : extrait du prologue verbatim (coupé avant la statistique), extrait du conducteur aligné sur le manuscrit
+révisé (« surprime : »), colonnes de hauteur égale, « presque jamais » du livre à la place de « Aucune ne dit », parcours en
+trois parties ; sections « Formats » et « Pour prolonger » retirées (achat et Kindle offert dans la marge ; prolongements en
+cartes ; aucun lien entrant vers leurs ancres). **Écart déclaré** : FAQ ouverte et non repliée (règle des `<details>` du
+23/10, `check-replis.py`). Contrôles : build 0, `typo_build` 0, `audit-liens-build` 0, `check-all --ci` 0 ; recette 390 et
+1280 px des sept fiches (six FR + ANTHROPY EN) : aucun débordement, aucun identifiant en double, achat dans le premier écran.
+
 ### 2026-11-06 (soir) — Définition : section « anthropique » (M1) et auteur nommé dans la phrase reprise (M2) — poussé le 06/11 sur demande de l'auteur
 
 Arbitrages PRO-20261106-082226 (texte) et PRO-20261106-182729 (calendrier du quatrième trimestre). Commit `3d48b29` sur

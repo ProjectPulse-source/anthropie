@@ -1,0 +1,34 @@
+{{- /* Second appel à l'achat de la fiche livre (maquette B+, Audit-05 P1 ; couverture maintenue sur
+       téléphone, Audit-07) : l'envie naît après l'extrait ou le sommaire, l'achat doit être là sans
+       remonter la page. Entrée : dict "page" (la fiche) "price" (prix déjà formaté, peut être vide).
+       Rien de nouveau dans les données : couverture, pages, formats et marchés viennent du front matter. */ -}}
+{{- $p := .page -}}
+{{- $isEn := eq $p.Lang "en" -}}
+{{- $broche := cond $isEn (or $p.Params.url_amazon_com $p.Params.url_amazon_fr) (or $p.Params.url_amazon_fr $p.Params.url_amazon_com) -}}
+{{- $kindle := cond $isEn (or $p.Params.url_amazon_com_kindle $p.Params.url_amazon_fr_kindle) (or $p.Params.url_amazon_fr_kindle $p.Params.url_amazon_com_kindle) -}}
+{{- if or $broche $kindle -}}
+{{- $marches := 0 -}}
+{{- range slice "fr" "com" "uk" "de" "es" "it" "ca" -}}
+  {{- if or (index $p.Params (printf "url_amazon_%s" .)) (index $p.Params (printf "url_amazon_%s_kindle" .)) }}{{ $marches = add $marches 1 }}{{ end -}}
+{{- end -}}
+{{- $formats := slice -}}
+{{- if $broche }}{{ $formats = $formats | append (cond $isEn "paperback" "broché") }}{{ end -}}
+{{- if $kindle }}{{ $formats = $formats | append "Kindle" }}{{ end -}}
+<aside class="book-appel" id="book-appel" aria-label="{{ if $isEn }}Get the book{{ else }}Se procurer le livre{{ end }}">
+  {{- with partial "book-cover-resource.html" (dict "slug" $p.File.ContentBaseName "lang" $p.Lang) }}
+  <img class="book-appel__cover" src="{{ (.Resize "160x q82").RelPermalink }}" alt="" width="72" height="{{ div (mul 72 .Height) .Width }}" loading="lazy">
+  {{- end }}
+  <div class="book-appel__txt">
+    <p class="book-appel__titre">{{ partial "fr-typo.html" $p.Title }}</p>
+    <p class="book-appel__meta">
+      {{- with $p.Params.pages }}{{ . }} pages · {{ end -}}
+      {{- delimit $formats (cond $isEn " and " " et ") -}}
+      {{- if gt $marches 1 }} · {{ if $isEn }}{{ $marches }} Amazon marketplaces{{ else }}{{ $marches }} marchés Amazon{{ end }}{{ end -}}
+    </p>
+  </div>
+  <div class="book-appel__actions">
+    {{ with $broche }}<a class="book-appel__btn book-appel__btn--primary" href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">{{ if $isEn }}Buy the paperback{{ else }}Acheter le broché{{ end }}{{ with $.price }} — {{ . | safeHTML }}{{ end }}</a>{{ end }}
+    {{ with $kindle }}<a class="book-appel__btn" href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">{{ if $isEn }}Kindle edition{{ else }}Édition Kindle{{ end }}</a>{{ end }}
+  </div>
+</aside>
+{{- end -}}

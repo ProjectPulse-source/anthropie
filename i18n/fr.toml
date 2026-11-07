@@ -19,11 +19,14 @@ other = "Prolonge :"
 [awp_in_press]
 other = "Dans la presse"
 
-[book_related_awp]
-other = "Dans les Working Papers"
-
 [book_resources]
 other = "Ressources et données du livre"
+
+[book_resources_titre]
+other = "Le livre continue en ligne, en accès libre"
+
+[book_resources_intro]
+other = "Sources, compléments et données ouvertes accompagnent le livre ; ils ne le remplacent pas."
 
 [book_same_author]
 other = "Du même auteur"

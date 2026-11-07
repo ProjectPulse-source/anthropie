@@ -1,26 +1,92 @@
 {{ define "main" }}
+{{- /* FICHE LIVRE — maquette B+ v2 validée par l'auteur le 07/11/2026
+       (06_PROMOTION/MAQUETTES_PREMIER_COUP_2026-11-07, arbitrages Audit-05 et Audit-07).
+       Parcours : comprendre (accroche, extrait) → désirer (argument, sommaire) → agir (second appel).
+       Le livre reste visible à chaque étape : marge d'achat collante sur ordinateur, barre compacte
+       sur téléphone (partials/book-barre.html). Blocs propres à un livre = champs facultatifs du
+       front matter (surtitre, accroche, extrait_voix) : rien déclaré, rien affiché. */ -}}
+{{- $isEn := eq .Lang "en" -}}
+{{- $price := "" -}}
+{{- with .Params.price -}}{{- $cur := $.Params.currency | default "EUR" -}}{{- $price = cond (eq $cur "USD") (printf "$%s" .) (printf "%s&nbsp;€" (cond $isEn . (replace . "." ","))) -}}{{- end -}}
 <article class="home-section">
   <div class="book-single">
-    <div class="book-single__main content-narrow content-reading">
+    <header class="book-single__head content-narrow">
+      {{ with .Params.surtitre }}<p class="book-single__kicker">{{ partial "fr-typo.html" . }}</p>{{ end }}
       <h1>{{ partial "fr-typo.html" .Title }}</h1>
       {{- /* Sous-titre éditorial, même idiome que les AWP (titre médian : H1 court +
-             sous-titre). La carte /livres/ l'affichait déjà, la fiche non : pour un livre
-             dont le sous-titre porte l'argument, c'était la surface la plus lue qui le
-             perdait. Rendu si le champ existe — anthropie et dette n'en ont pas. */ -}}
+             sous-titre). Rendu si le champ existe — anthropie et dette n'en ont pas. */ -}}
       {{ with .Params.subtitle }}<p class="book-single__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
-      {{ with .Params.isbn }}<p class="livre-card__isbn">ISBN&nbsp;: {{ . }}</p>{{ end }}
+      {{ with .Params.accroche }}<p class="book-single__accroche">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    </header>
+
+    <div class="book-single__main content-narrow content-reading">
+      {{- /* La voix du livre : une scène, verbatim, coupée sans chiffre détaché de sa note
+             (leçon du module A+ « La voix » ; arbitrage Audit-05). */ -}}
+      {{ with .Params.extrait_voix }}
+      <figure class="book-voix">
+        <figcaption class="book-voix__src">{{ partial "fr-typo.html" .source }}</figcaption>
+        <blockquote>
+          {{ range .paragraphes }}<p>{{ partial "fr-typo.html" . }}</p>{{ end }}
+          {{ with .chute }}<p class="book-voix__chute">{{ partial "fr-typo.html" . }}</p>{{ end }}
+        </blockquote>
+      </figure>
+      {{ end }}
 
       {{ .Content }}
 
       {{ partial "book-reviews.html" . }}
 
-      {{- /* FAQ visible (même gabarit que les AWP) — le JSON-LD FAQPage est émis par
-             head.html dès que faq[] existe. Réponses passées par desc-figures :
-             les chiffres canoniques s'écrivent {citations}/{auteurs}/{siecles}
-             (source unique data/works.yaml corpus_stats), jamais en dur. */ -}}
+      {{ partial "book-appel.html" (dict "page" . "price" $price) }}
+
+      {{- /* Prolongements du livre — après le second appel à l'achat (Audit-05, P5) : ils rassurent et
+             prolongent, ils ne concurrencent pas l'achat. Présence par le dépôt, éditorial par le front matter :
+             liste ressources_livre (label, url, note et type facultatifs), puis les pages qui déclarent prolonger
+             ce livre (`ressource.livres`, arbitrage PRO-20261025-225715 : « un livre regroupe ses prolongements »),
+             ordre : appareil du livre, blocs de l'index, `ressource.rang` ; une page déjà listée n'est pas répétée.
+             Les working papers liés (`related_awp`) ferment la grille, sous le type « Working paper ». */ -}}
+      {{- $slug := .File.ContentBaseName -}}
+      {{- $items := slice -}}
+      {{- range .Params.ressources_livre }}{{ $items = $items | append (dict "url" .url "label" .label "note" .note "type" .type) }}{{ end -}}
+      {{- $assoc := where site.Pages "Params.ressource.livres" "intersect" (slice $slug) -}}
+      {{- $ordre := where $assoc "Params.ressource.appareil_de" $slug -}}
+      {{- with site.GetPage "/ressources" -}}
+        {{- range .Params.blocs }}{{ $ordre = $ordre | append (sort (where $assoc "Params.ressource.bloc" .id) "Params.ressource.rang") }}{{ end -}}
+      {{- end -}}
+      {{- range $ordre -}}
+        {{- $url := .RelPermalink -}}{{- $deja := false -}}
+        {{- range $items }}{{ if eq .url $url }}{{ $deja = true }}{{ end }}{{ end -}}
+        {{- if not $deja }}{{ $items = $items | append (dict "url" $url "label" (.Params.ressource.intitule | default .Title) "note" .Params.ressource.nature "type" "") }}{{ end -}}
+      {{- end -}}
+      {{- range .Params.related_awp -}}
+        {{- $awp := . -}}
+        {{- with site.GetPage (printf "/awp/%s" $awp.awp) -}}
+          {{- $items = $items | append (dict "url" .RelPermalink "label" (printf "%s%s" (upper $awp.awp) (cond (isset $awp "label") (printf " — %s" $awp.label) "")) "note" ($awp.chapter | default "") "type" "Working paper") -}}
+        {{- end -}}
+      {{- end -}}
+      {{ with $items }}
+      <section class="book-prolonger">
+        <p class="book-single__kicker">{{ i18n "book_resources" }}</p>
+          <h2 id="prolonger">{{ i18n "book_resources_titre" }}</h2>
+          <p class="book-prolonger__intro">{{ i18n "book_resources_intro" }}</p>
+        <div class="book-prolonger__grille">
+          {{ range . }}
+          <a class="book-carte" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>
+            {{ with .type }}<span class="book-carte__type">{{ . }}</span>{{ end }}
+            <strong class="book-carte__titre">{{ partial "fr-typo.html" .label }}</strong>
+            {{ with .note }}<span class="book-carte__note">{{ partial "fr-typo.html" . }}</span>{{ end }}
+          </a>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+      {{- /* FAQ visible (même gabarit que les AWP) — le JSON-LD FAQPage est émis par head.html dès que faq[] existe.
+             Ouverte, non repliée : la maquette B+ la repliait, mais tout <details> reçoit « Lire le détail · N paragraphes »
+             (règle constante de l'auteur du 23/10/2026, check-replis.py) — sous chaque question, ce serait du bruit.
+             Réponses passées par desc-figures (chiffres canoniques). */ -}}
       {{ if .Params.faq }}
-      <section class="faq-section">
-        <h2>{{ i18n "faq_title" }}</h2>
+      <section class="faq-section book-faq">
+        <h2 id="questions">{{ i18n "faq_title" }}</h2>
         {{ range .Params.faq }}
           <div class="faq-item">
             <h3 class="faq-question">{{ .question }}</h3>
@@ -29,90 +95,51 @@
         {{ end }}
       </section>
       {{ end }}
+
+      {{- /* Du même auteur — maillage livre↔livre généré depuis la section (GEO-04 lot 1, item 4). */ -}}
+      {{- $others := slice -}}
+      {{- range (where site.RegularPages "Type" "livres").ByWeight -}}
+        {{- if ne .Permalink $.Permalink -}}{{- $others = $others | append . -}}{{- end -}}
+      {{- end -}}
+      {{ if $others }}
+      <section class="book-others">
+        <h2 id="du-meme-auteur">{{ i18n "book_same_author" }}</h2>
+        <ul class="book-others__list book-others__list--grille">
+          {{ range $others }}
+          <li class="book-others__item">
+            {{/* fr-typo sur le sous-titre aussi : rendu brut, il échappait ses &nbsp; en &amp;nbsp; visibles (20/09). */}}
+            <a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a>{{ with .Params.subtitle }}<span class="book-others__subtitle">{{ partial "fr-typo.html" . }}</span>{{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
     </div>
 
-    <aside class="book-single__sidebar">
+    <aside class="book-single__sidebar" aria-label="{{ if $isEn }}The book{{ else }}Le livre{{ end }}">
       {{ partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" (printf "Couverture — %s" .Title) "wrapClass" "book-single__cover" "sizes" "180px" "lang" .Lang) }}
-      <div class="book-single__actions">
+      <div class="book-single__actions" id="book-actions">
+        <p class="book-single__fiche-titre">{{ partial "fr-typo.html" .Title }}</p>
         {{- /* Prix visible (broché). Doit refléter le schema.org Offer pour rester conforme.
-               Devise selon .Params.currency (défaut EUR) : USD -> $NN, sinon NN&nbsp;€.
-               `price` est stocké au format schema.org (séparateur décimal = point, ex. "13.90") :
-               l'affichage en euros passe donc en virgule hors anglais, sans toucher au JSON-LD. */ -}}
-        {{ with .Params.price }}{{ $cur := $.Params.currency | default "EUR" }}<p class="book-single__price">{{ if eq $cur "USD" }}${{ . }}{{ else }}{{ if eq $.Lang "en" }}{{ . }}{{ else }}{{ replace . "." "," }}{{ end }}&nbsp;€{{ end }}<span class="book-single__price-note">{{ if eq $.Lang "en" }}Paperback{{ else }}Broché{{ end }}</span></p>{{ end }}
+               `price` est stocké au format schema.org (point décimal) : virgule hors anglais à l'affichage. */ -}}
+        {{ with $price }}<p class="book-single__price">{{ . | safeHTML }}<span class="book-single__price-note">{{ if $isEn }}Paperback{{ else }}Broché{{ end }}{{ with $.Params.pages }} · {{ . }}&nbsp;p.{{ end }}</span></p>{{ end }}
         {{- partial "transmettre.html" . -}}
-        {{- /* Un livre peut n'exister qu'en Kindle — c'est le cas pendant une PRÉCOMMANDE,
-               où la page du broché n'est pas encore ouverte (Promesses 2027, 20/09/2026).
-               La condition portait sur le seul broché : le bloc entier disparaissait, donc
-               aucun bouton d'achat alors que le Kindle était commandable. */ -}}
+        {{- /* Un livre peut n'exister qu'en Kindle — PRÉCOMMANDE (Promesses 2027, 20/09/2026) :
+               la condition porte sur le broché OU le Kindle, sinon aucun bouton d'achat. */ -}}
         {{ if or .Params.url_amazon_fr .Params.url_amazon_com .Params.url_amazon_fr_kindle .Params.url_amazon_com_kindle }}
           {{- partial "amazon-button.html" . -}}
         {{ end }}
+        <p class="book-single__fiche-meta">
+          {{- with .Params.isbn }}ISBN&nbsp;{{ . }}{{ end -}}
+          {{- if and (not $isEn) (or .Params.url_amazon_fr_kindle .Params.url_amazon_com_kindle) }}<br><a href="/offrir-un-livre-kindle/">Offrir la version Kindle</a>{{ end -}}
+        </p>
       </div>
     </aside>
   </div>
 
-  {{- /* Ressources et données du livre — présence par le dépôt, éditorial par
-         le front matter : liste ressources_livre (label, url, note facultative).
-         Rien déclaré = rien affiché ; même idiome que subtitle/price/reviews.
-         Placé AVANT les Working Papers : demande auteur 15/08 (« plus en
-         évidence » — c'est le prolongement vivant du livre).
-         RÉCIPROCITÉ (arbitrage PRO-20261025-225715, 25/10/2026 : « un livre regroupe ses prolongements ») : s'y ajoutent
-         les pages qui déclarent prolonger ce livre (`ressource.livres`, relation éditoriale déclarée par la ressource,
-         jamais déduite d'un lien ou d'un appel au livre). Ordre : l'appareil du livre (`ressource.appareil_de`), puis
-         les blocs dans l'ordre de l'index, puis `ressource.rang`. Une page déjà dans ressources_livre n'est pas répétée :
-         la liste manuelle garde ses notes, qui disent ce qu'aucune métadonnée ne dit (le QR code imprimé…). */ -}}
-  {{- $slug := .File.ContentBaseName -}}
-  {{- $items := slice -}}
-  {{- range .Params.ressources_livre }}{{ $items = $items | append (dict "url" .url "label" .label "note" .note) }}{{ end -}}
-  {{- $assoc := where site.Pages "Params.ressource.livres" "intersect" (slice $slug) -}}
-  {{- $ordre := where $assoc "Params.ressource.appareil_de" $slug -}}
-  {{- with site.GetPage "/ressources" -}}
-    {{- range .Params.blocs }}{{ $ordre = $ordre | append (sort (where $assoc "Params.ressource.bloc" .id) "Params.ressource.rang") }}{{ end -}}
-  {{- end -}}
-  {{- range $ordre -}}
-    {{- $url := .RelPermalink -}}{{- $deja := false -}}
-    {{- range $items }}{{ if eq .url $url }}{{ $deja = true }}{{ end }}{{ end -}}
-    {{- if not $deja }}{{ $items = $items | append (dict "url" $url "label" (.Params.ressource.intitule | default .Title) "note" .Params.ressource.nature) }}{{ end -}}
-  {{- end -}}
-  {{ with $items }}
-  <section class="book-others">
-    <h2 class="book-others__title">{{ i18n "book_resources" }}</h2>
-    <ul class="book-others__list">
-      {{ range . }}
-      <li class="book-others__item">
-        <a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}><strong>{{ partial "fr-typo.html" .label }}</strong></a>{{ with .note }}<span class="book-others__subtitle"> — {{ partial "fr-typo.html" . }}</span>{{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  {{ partial "book-related-awp.html" . }}
-
-  {{- /* Du même auteur — maillage livre↔livre généré depuis la section
-         (GEO-04 lot 1, item 4). Aucune donnée nouvelle : titres + sous-titres
-         des autres fiches. */ -}}
-  {{- $others := slice -}}
-  {{- range (where site.RegularPages "Type" "livres").ByWeight -}}
-    {{- if ne .Permalink $.Permalink -}}{{- $others = $others | append . -}}{{- end -}}
-  {{- end -}}
-  {{ if $others }}
-  <section class="book-others">
-    <h2 class="book-others__title">{{ i18n "book_same_author" }}</h2>
-    <ul class="book-others__list">
-      {{ range $others }}
-      <li class="book-others__item">
-        {{/* fr-typo sur le sous-titre aussi, comme le fait la ligne jumelle
-             plus haut pour `.note` : rendu brut, il echappait ses &nbsp; en
-             &amp;nbsp; VISIBLES au lecteur, sur cinq fiches (mesure du
-             2026-09-20). Le partial termine par safeHTML. */}}
-        <a href="{{ .Permalink }}">{{ partial "fr-typo.html" .Title }}</a>{{ with .Params.subtitle }}<span class="book-others__subtitle"> — {{ partial "fr-typo.html" . }}</span>{{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
+  {{ partial "book-barre.html" (dict "page" . "price" $price) }}
 </article>
+<script src="{{ partial "js-url.html" "book-barre.js" }}" defer></script>
 
 <!-- Schema.org Book -->
 {{- $authorUrls := slice -}}

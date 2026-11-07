@@ -8,6 +8,8 @@ Static site for **stephane-lalut.com** (Stéphane Lalut, économiste). Hugo Exte
 
 Section `awp` : quatre sorties par working paper — `single.html` plus **BibTeX / RIS / EndNote**, déclarées en `outputFormats` dans `hugo.toml`. L'URL `/awp/` redirige vers `/serie-awp/` par `aliases` ; les pages individuelles restent en `/awp/awp-01/`.
 
+Fiche livre (`livres/single.html`, maquette B+ v2 validée le 07/11/2026) : le livre reste visible à chaque étape — marge d'achat collante sur ordinateur, barre compacte sur téléphone (`partials/book-barre.html` + `static/js/book-barre.js`, cachée quand la marge ou le second appel `partials/book-appel.html` est à l'écran). Blocs propres à un livre par champs facultatifs (`surtitre`, `accroche`, `extrait_voix`) ; un composant HTML du corps (`book-parcours`, `book-colonnes`…) qui est une liste s'inscrit aux exemptions de `main li` dans `_typography.scss`.
+
 Menu : la rubrique en cours se calcule dans `partials/menu-actif.html` (sous-pages comprises), onglet sur le bord du bandeau.
 
 Section `publications` : cartes via `partials/publication-card.html`, gabarit **160×107** (164×107 sur `/publications/` et le mur presse, auteur, 02/11/2026) que réemploie le mur presse de `/a-propos/` (`partials/presse-wall.html`) — une seule règle y sert donc les deux pages.
