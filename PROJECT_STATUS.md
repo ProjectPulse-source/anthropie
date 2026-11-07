@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (après-midi) — Promesse en cinq ans : postes d'internat de 2023-2024 en témoin de série longue (Audit-19, point 5d)
+
+- **Source** : arrêté du 31/07/2023 (JORF n° 0179 du 4 août 2023, texte 32, JORFTEXT000047931748), modifié le 23/08 et le
+  14/09/2023. Texte des trois arrêtés par l'API Légifrance (PISTE, `consult/jorf`, réponses archivées sous leur empreinte) ;
+  tableaux des annexes publiés en IMAGES : PDF authentifié enregistré au navigateur (script refusé, 403), valeurs lues à
+  l'œil (`scripts/sources_delais/postes_internat_2023_releve.json`) — médecine générale 3 645 + 213, totaux 9 232 + 252 ;
+  modificatifs : −2 en médecine générale (annexe II), +1 au total (annexe I) → **3 856 sur 9 485**.
+- **Générateur** (`update_promesses_delais.py`) : P5 (empreinte du PDF, 28 CHU = total imprimé dans chaque annexe, effet des
+  modificatifs retrouvé dans leur texte ; témoin : une valeur altérée arrête le générateur) ; P6 (2023 au-dessus de 2024,
+  la part ne progresse pas depuis 2023) ; P3 inchangée sur 2024-2026 ; jetons `pg_*_23`, hausse depuis les deux points de
+  départ (849, +26,4 % depuis 2024 ; 214, +5,5 % depuis 2023).
+- **Page FR/EN** : 2023 dernière année des épreuves classantes nationales, 2024 année creuse, « les deux régimes d'accès ne
+  se comparent pas terme à terme » ; journal du 07/11 ; date de fond classée (`dates-affichage.py --ecrire`).
+- Contrôles : hugo 0, typo 0, liens 0, relecture 0 (instantanés FR/EN refaits), check-all 0.
+
 ### 2026-11-07 (midi) — Audit des ressources (reprise) et Audit-19 : corrections 1 à 5c (commits f1570d4, be7c58f, 1836e0d)
 
 Audit : `D:\PRO_PROMOTION\AUDIT_RESSOURCES_2026-11-07\` (`SCAN.md`, `REPRISES_1_A_5_AUTOPORTANT.md`,

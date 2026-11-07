@@ -1,0 +1,32 @@
+{
+ "objet": "Postes d'internat de l'année universitaire 2023-2024 (dernière année des épreuves classantes nationales) : médecine générale et total, annexes I (hors contrat d'engagement de service public) et II (CESP)",
+ "texte": "arrêté du 31 juillet 2023, JORF n° 0179 du 4 août 2023, texte 32 (JORFTEXT000047931748, NOR SPRH2321272A)",
+ "pdf": "joe_20230804_0179_0032.pdf",
+ "pdf_sha256": "0320d7412bb1a6eaa826b9ac45d608925bdf723436f3d150e5a8abd7412f4744",
+ "pdf_canal": "extrait du Journal officiel électronique authentifié, enregistré depuis la page Légifrance au navigateur le 07/11/2026 (le téléchargement par script est refusé, HTTP 403)",
+ "mode": "Tableaux des annexes publiés en IMAGES (aucune couche texte) : valeurs lues à l'oeil sur le rendu des pages 5 (annexe I, colonne « Médecine générale »), 7 (annexe I, « TOTAL GENERAL ») et 8 (annexe II, tableau tourné), le 07/11/2026. Témoin : la somme des 28 CHU lus égale le total imprimé.",
+ "annexe_I": {
+  "mg_chu": [70, 85, 108, 158, 87, 82, 93, 103, 115, 134, 135, 76, 119, 98, 213, 539, 101, 119, 158, 66, 115, 143, 153, 75, 116, 117, 195, 72],
+  "mg_total_imprime": 3645,
+  "total_general_imprime": 9232
+ },
+ "annexe_II": {
+  "mg_chu": [17, 4, 5, 2, 3, 3, 4, 4, 6, 8, 4, 9, 10, 6, 7, 58, 4, 5, 7, 1, 2, 5, 10, 2, 6, 2, 12, 7],
+  "mg_total_imprime": 213,
+  "total_general_imprime": 252
+ },
+ "modificatifs": [
+  {"texte": "arrêté du 23 août 2023, JORF n° 0196 du 25 août 2023 (JORFTEXT000047996093)",
+   "reponse_api": "legifrance_cf7ce34993936a848cbb7404fd44db49b074b9d8cff8a62b4e64c8b875022d12.json",
+   "effet": {"mg_II": -2, "total_II": 0},
+   "lecture": "annexe II : Dijon, médecine d'urgence 0 -> 1, médecine générale 4 -> 3 ; Caen, médecine générale 4 -> 3, psychiatrie 0 -> 1"},
+  {"texte": "arrêté du 14 septembre 2023, JORF n° 0216 du 17 septembre 2023 (JORFTEXT000048080096)",
+   "reponse_api": "legifrance_0d014f7775324b9fae8a3bdb9c9836cb384593c23f907152759618128cad65d4.json",
+   "effet": {"mg_I": 0, "total_I": 1},
+   "lecture": "annexe I : biologie médicale, Rennes 3 -> 4 ; total général 9 232 -> 9 233"}
+ ],
+ "reponse_api_texte": "legifrance_a758f407910312836d0d08d91d3df9dfc2b73850b2563c1c9213bc16ba726374.json",
+ "lu_le": "2026-11-07",
+ "annee_universitaire": "2023-2024",
+ "regime": "épreuves classantes nationales (dernière année avant la réforme de l'accès au troisième cycle, appliquée à partir de 2024)"
+}

@@ -360,6 +360,69 @@ def entete_total(W):
     return next((w for w in W if re.fullmatch(r"G.N.RAL", w[4]) and w[1] < 500), None)
 
 
+# 07/11/2026 (Audit-19) : 2023-2024, dernière année des épreuves classantes nationales, en témoin de série longue. Les tableaux
+# de l'arrêté du 31/07/2023 sont des IMAGES dans le JO : valeurs lues à l'oeil (postes_internat_2023_releve.json), contrôlées
+# ici par empreinte du PDF, somme des 28 CHU = total imprimé, et effet des deux modificatifs lu dans le texte de l'API.
+RELEVE_2023 = "postes_internat_2023_releve.json"
+
+
+def _contenus(o):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k == "content" and isinstance(v, str):
+                yield v
+            else:
+                yield from _contenus(v)
+    elif isinstance(o, list):
+        for x in o:
+            yield from _contenus(x)
+
+
+def postes_2023(g: list) -> dict:
+    """P5 : relevé de 2023-2024 (lu sur les images du JO) : empreinte du PDF, sommes des 28 CHU = totaux imprimés, effet des
+    modificatifs du 23/08 et du 14/09/2023 retrouvé dans leur texte (API Légifrance archivée)."""
+    import re as _re
+    R = json.loads((SRC / RELEVE_2023).read_text(encoding="utf-8"))
+    if hashlib.sha256((SRC / R["pdf"]).read_bytes()).hexdigest() != R["pdf_sha256"]:
+        raise Arret("P5 : %s : empreinte differente de celle qui a ete lue" % R["pdf"])
+    for ax in ("annexe_I", "annexe_II"):
+        a = R[ax]
+        if len(a["mg_chu"]) != N_CHU or sum(a["mg_chu"]) != a["mg_total_imprime"]:
+            raise Arret("P5 : 2023, %s : %d CHU lus, somme %d != total imprime %d"
+                        % (ax, len(a["mg_chu"]), sum(a["mg_chu"]), a["mg_total_imprime"]))
+    txt = {}
+    for m in R["modificatifs"]:
+        f = SRC / m["reponse_api"]
+        b = f.read_bytes()
+        if not f.name.endswith(hashlib.sha256(b).hexdigest() + ".json"):
+            raise Arret("P5 : %s : nom != empreinte" % f.name)
+        txt[m["texte"]] = _re.sub(r"\s+", " ", " ".join(_contenus(json.loads(b))))
+    t23 = next(v for k, v in txt.items() if "23 août 2023" in k)
+    t14 = next(v for k, v in txt.items() if "14 septembre 2023" in k)
+    mg_moins = len(_re.findall(r"« Médecine générale », la référence : « 4 » est remplacée par la référence : « 3 »", t23))
+    if mg_moins != 2:
+        raise Arret("P5 : modificatif du 23/08/2023 : %d baisse(s) de la medecine generale lue(s), 2 attendues" % mg_moins)
+    if "« 9 232 » pour la ligne : « Total » est remplacée par la référence : « 9 233 »" not in t14:
+        raise Arret("P5 : modificatif du 14/09/2023 : total general 9 232 -> 9 233 introuvable")
+    eff = {"mg_I": 0, "mg_II": 0, "total_I": 0, "total_II": 0}
+    for m in R["modificatifs"]:
+        for k, v in m["effet"].items():
+            eff[k] += v
+    if eff["mg_II"] != -mg_moins or eff["total_I"] != 1:
+        raise Arret("P5 : effets declares des modificatifs != effets lus dans leur texte")
+    mg = R["annexe_I"]["mg_total_imprime"] + eff["mg_I"] + R["annexe_II"]["mg_total_imprime"] + eff["mg_II"]
+    tot = (R["annexe_I"]["total_general_imprime"] + eff["total_I"] + R["annexe_II"]["total_general_imprime"]
+           + eff["total_II"])
+    g.append("P5 : postes d'internat 2023-2024 (images du JO lues, %d CHU par annexe, sommes = totaux imprimes ; "
+             "modificatifs du 23/08 et du 14/09/2023 appliques) : medecine generale %d, total %d" % (N_CHU, mg, tot))
+    mg_I = R["annexe_I"]["mg_total_imprime"] + eff["mg_I"]
+    mg_II = R["annexe_II"]["mg_total_imprime"] + eff["mg_II"]
+    return {"mg": mg, "tot": tot, "part": 100 * mg / tot, "mg_I": mg_I, "mg_II": mg_II,
+            "tot_I": R["annexe_I"]["total_general_imprime"] + eff["total_I"],
+            "tot_II": R["annexe_II"]["total_general_imprime"] + eff["total_II"],
+            "_ref": R["texte"] + ", modifié les 23 août et 14 septembre 2023", "_univ": R["annee_universitaire"]}
+
+
 def postes_internat(S: dict, g: list) -> dict:
     """P1 : dans chaque annexe de chaque arrêté, 28 CHU lus et leur somme = total publié (médecine générale et total
     général). P2 : la part de la médecine générale ne progresse pas de la première à la dernière année, à la précision
@@ -384,11 +447,21 @@ def postes_internat(S: dict, g: list) -> dict:
         raise Arret("P2 : la part de la medecine generale progresse (%.1f -> %.1f %%) : « ne progresse pas » serait faux"
                     % (res[ans[0]]["part"], res[ans[-1]]["part"]))
     for a, b in zip(ans, ans[1:]):
+        # P3 porte sur les années de la réforme (arrêtés lus par position) ; 2023 est un témoin d'avant (P6).
         if not (res[b]["mg"] > res[a]["mg"] and res[b]["tot"] > res[a]["tot"]):
             raise Arret("P3 : postes ouverts %s -> %s non en hausse (medecine generale %d -> %d, total %d -> %d)"
                         % (a, b, res[a]["mg"], res[b]["mg"], res[a]["tot"], res[b]["tot"]))
     g.append("P0-P3 : postes d'internat %s, %d CHU par annexe, somme = total publie ; medecine generale %s ; part %.1f -> %.1f %%"
              % ("/".join(ans), N_CHU, " -> ".join(str(res[a]["mg"]) for a in ans), res[ans[0]]["part"], res[ans[-1]]["part"]))
+    # P6 (07/11/2026, Audit-19) : la prose dit que 2024 est une année creuse et que la hausse dépend du point de départ ;
+    # elle dit aussi que la part de la médecine générale ne progresse pas depuis 2023.
+    r23 = postes_2023(g)
+    if not (r23["mg"] > res[ans[0]]["mg"] and r23["tot"] > res[ans[0]]["tot"]):
+        raise Arret("P6 : 2023 n'est plus au-dessus de %s (medecine generale %d -> %d, total %d -> %d) : « annee creuse » serait faux"
+                    % (ans[0], r23["mg"], res[ans[0]]["mg"], r23["tot"], res[ans[0]]["tot"]))
+    if round(res[ans[-1]]["part"], 1) > round(r23["part"], 1):
+        raise Arret("P6 : la part de la medecine generale progresse depuis 2023 (%.1f -> %.1f %%)" % (r23["part"], res[ans[-1]]["part"]))
+    res["2023"] = r23
     return res
 
 
@@ -642,14 +715,17 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "ecart_2016_2020": n(abs(r["ecarts"]["2016-2020"])),
         **{"pg_%s_%s" % (k, an[2:]): n(v) if k != "part" else n(v, 1)
            for an, P in r["postes"].items() for k, v in P.items() if k in ("mg", "tot", "part")},
-        **{"pg_an_%s" % an[2:]: POSTES[an][4] for an in POSTES},
+        **{"pg_an_%s" % an[2:]: POSTES[an][4] for an in POSTES}, "pg_an_23": "2023-2024",
         "pg_hausse_mg": n(r["postes"][max(POSTES)]["mg"] - r["postes"][min(POSTES)]["mg"]),
+        "pg_hausse_mg_23": n(r["postes"][max(POSTES)]["mg"] - r["postes"]["2023"]["mg"]),
+        "pg_hausse_mg_pct": n(100 * (r["postes"][max(POSTES)]["mg"] / r["postes"][min(POSTES)]["mg"] - 1), 1),
+        "pg_hausse_mg_23_pct": n(100 * (r["postes"][max(POSTES)]["mg"] / r["postes"]["2023"]["mg"] - 1), 1),
         "pg_internat": lg.lettres(r["mg"], lang),
         "etr_p12": n(r["p12"], 1), "etr_p26": n(r["p26"], 1), "etr_26": n(r["etr26"]), "tot_26": n(r["tot26"]),
         "releve_le": ("06/11/2026 (textes lus sur Légifrance les 05, 06, 11 et 12/10/2026 ; instruction du 21 mai 2026 ; DREES, "
-                      "2 juillet 2026 ; ONDPS, 19 décembre 2025 ; arrêtés de postes d'internat, JO de 2024 à 2026)") if lang == "fr" else
+                      "2 juillet 2026 ; ONDPS, 19 décembre 2025 ; arrêtés de postes d'internat, JO de 2023 à 2026, ceux de 2023 lus le 07/11/2026)") if lang == "fr" else
                      ("6 November 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; "
-                      "DREES, 2 July 2026; ONDPS, 19 December 2025; orders on residency posts, Journal officiel 2024 to 2026)"),
+                      "DREES, 2 July 2026; ONDPS, 19 December 2025; orders on residency posts, Journal officiel 2023 to 2026, those of 2023 read on 7 November 2026)"),
     }
 
 
@@ -1100,10 +1176,11 @@ def csv_texte(r: dict) -> str:
     w.writerow(["medecins_actifs_diplome_etranger", 2026, r["etr26"], "médecins", "DREES RPPS, 1er janvier"])
     w.writerow(["medecins_actifs_ensemble", 2026, r["tot26"], "médecins", "DREES RPPS, 1er janvier"])
     for an, P in sorted(r["postes"].items()):
-        src = POSTES[an][3]
+        src = POSTES[an][3] if an in POSTES else P["_ref"]
+        univ = POSTES[an][4] if an in POSTES else P["_univ"]
         for k, lib in (("mg_I", "postes_ouverts_medecine_generale_hors_cesp"), ("mg_II", "postes_ouverts_medecine_generale_cesp"),
                        ("mg", "postes_ouverts_medecine_generale"), ("tot", "postes_ouverts_toutes_specialites")):
-            w.writerow([lib, POSTES[an][4], P[k], "postes", src])
+            w.writerow([lib, univ, P[k], "postes", src])
     for k, v in (("cursus_mg_premier_cycle_semestres", r["s1"]), ("cursus_mg_deuxieme_cycle_semestres", r["s2"]),
                  ("cursus_mg_troisieme_cycle_annees", r["mg"]), ("mandat_presidentiel_annees", r["mandat"]),
                  ("rapport_cursus_mandat", r["nmax"])):
@@ -1295,7 +1372,8 @@ def _main() -> int:
         "gardes": g,
         "calcul": {k: v for k, v in r.items() if k not in ("dd76", "ondps", "lois631", "versions631", "postes")},
         "series": {"places_pourvues": r["dd76"], "admis_2021_2025": r["ondps"]["admis_medecine"],
-                   "postes_internat_ouverts": {POSTES[a][4]: {k: v for k, v in P.items() if k != "part"}
+                   "postes_internat_ouverts": {(POSTES[a][4] if a in POSTES else P["_univ"]): {k: v for k, v in P.items()
+                                                                                     if k != "part" and not k.startswith("_")}
                                                for a, P in sorted(r["postes"].items())}},
         "affichage": A,
         "affichage_en": A_en,
