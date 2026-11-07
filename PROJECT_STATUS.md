@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (matinée) — Registre des coûts déportés : corrections immédiates, chapôs en double sur dix pages
+
+- **Chapô en double** (description répétée par le premier paragraphe) : drapeau `sans_chapo: true` lu par
+  `layouts/_default/list.html` ; posé sur le Registre et quatre notions (communs négatifs, réversibilité sociale, effet
+  rebond, dette technologique), FR et EN, après vérification que chaque chapô n'apportait rien d'absent du corps.
+  Détecteur sur le build (huit premiers mots du chapô = ceux du premier paragraphe) : 8 doublons avant (Registre FR
+  repéré à l'œil, témoin), 0 après ; chapôs 87 → 77, la description reste en meta.
+- **Textes à 12 px** : catégories et pagination des jalons (10), ligne « Lire le détail » de tous les replis du site
+  (11,84), surtitre de l'encadré du livre (11). **Cibles 44 px** au téléphone : sommaire replié (28), bouton
+  « Transmettre » (34). Mesuré à 320 et 390 px, jalons ouverts : aucun texte sous 12 px, aucune cible sous 44.
+- Contrôles : hugo 0, typo 0, liens 0, check-all 0.
+
 ### 2026-11-07 (matin) — À propos : doublon d'ouverture retiré, revues dans la présentation, textes à 12 px
 
 - **Doublon** : le chapô (description) répétait la première phrase du texte ; il n'est plus affiché

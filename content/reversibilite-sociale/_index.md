@@ -3,6 +3,7 @@ title: "Qu'est-ce que la réversibilité sociale ?"
 og_image: "images/og-notion-reversibilite.jpg"
 og_image_alt: "Carte de partage : « La réversibilité sociale » et son schéma"
 description: "La réversibilité sociale est la capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de son avenir. Ni un stock ni un flux : une troisième dimension de l'inégalité — ce qu'on peut se permettre de rater."
+sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page

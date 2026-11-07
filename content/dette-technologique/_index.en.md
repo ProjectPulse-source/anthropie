@@ -4,6 +4,7 @@ og_image: "images/og-notion-dette-techno-en.jpg"
 og_image_alt: "Share card: “Technological debt” and its diagram"
 url: /en/technological-debt/
 description: "Technological debt is the cost of digital infrastructures — energy, matter, territory, attention — turned into debt by mechanisms of commitment. Not to be confused with the “technical debt” of software engineering."
+sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-04
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page

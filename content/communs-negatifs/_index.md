@@ -3,6 +3,7 @@ title: "Qu'est-ce que les communs négatifs ?"
 og_image: "images/og-notion-communs.jpg"
 og_image_alt: "Carte de partage : « Les communs négatifs » et son schéma"
 description: "Les communs négatifs désignent ce dont nous héritons collectivement sans l'avoir choisi : déchets, sols pollués, centrales à démanteler, infrastructures obsolètes. Notion développée par Alexandre Monnin, Emmanuel Bonnet et Diego Landivar — et lecture anthropique de ces héritages."
+sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-26
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page

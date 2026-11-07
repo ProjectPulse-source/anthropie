@@ -133,7 +133,7 @@ main .dette-monde-table--monde thead th:last-child { text-align: left !important
 // cadre .repli ou non (règle constante de l'auteur, 23/10/2026) : son style ne dépend donc plus de la classe .repli.
 .repli__action {
   display: block; margin-top: 0.35rem;
-  font-family: var(--font-sans); font-size: 0.74rem; font-weight: 600; line-height: 1.4;
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600; line-height: 1.4; // 11,84 → 12 px (07/11/2026)
   letter-spacing: 0.06em; text-transform: uppercase; color: #184f95;
 }
 .repli__ouvert { display: none; }

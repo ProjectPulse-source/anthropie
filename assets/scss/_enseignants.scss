@@ -79,7 +79,7 @@
 .exemplaire .exemplaire__corps { display: grid; gap: 12px; min-width: 0; }
 .exemplaire .exemplaire__corps p { margin: 0; }
 .exemplaire .exemplaire__surtitre {
-  font-family: var(--font-sans); font-size: var(--fs-tiny);
+  font-family: var(--font-sans); font-size: 12px; // 11 → 12 px (07/11/2026)
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--color-text-subtle); margin: 0 0 6px;
 }

@@ -4,7 +4,9 @@
   {{ if not (in (slice "awp" "serie-awp") .Section) }}
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
-    {{ with .Params.chapo | default .Description }}
+    {{- /* `sans_chapo: true` (07/11/2026) : la page ouvre sur un premier paragraphe qui dit déjà ce que dirait la description ;
+           celle-ci reste en meta. Posé page par page, après vérification que le chapô n'apporte rien d'absent du corps. */ -}}
+    {{ with and (not .Params.sans_chapo) (.Params.chapo | default .Description) }}
     {{- /* Même chaîne que la meta description : jetons de chiffres ({dette.*}, {qp.*}, {monde.*})
            résolus, puis typographie française. Rendu brut jusqu'au 29/09 : un jeton y aurait
            été affiché tel quel au lecteur, et les insécables manquaient (règle du site).

@@ -4,6 +4,7 @@ og_image: "images/og-notion-rebond-en.jpg"
 og_image_alt: "Share card: “The rebound effect” and its diagram"
 url: /en/rebound-effect/
 description: "The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use; when the take-back exceeds the gain, total consumption rises. Described by William Stanley Jevons in 1865, it remains the blind spot of efficiency policies."
+sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
 lastmod: 2026-11-05
 journal:  # révisions qui changent la lecture de la page
