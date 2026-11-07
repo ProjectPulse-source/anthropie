@@ -3,7 +3,7 @@ title: "What is anthropy?"
 og_image: "images/og-notion-anthropie-en.jpg"
 og_image_alt: "Share card: “What is anthropy?” and its diagram"
 date: 2026-04-03  # first possible publication on stephane-lalut.com (CNAME acf728c, 03/04/2026); first public Wayback capture 16/04/2026 (audit of 05/11/2026)
-lastmod: 2026-11-06  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-07  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
 # /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
@@ -30,7 +30,7 @@ faq:
   - question: "Did Stéphane Lalut coin the word anthropy?"
     answer: "No. The word derives from the Greek ánthrōpos and belongs to an old lexical family (philanthropy, misanthropy); it has had scattered earlier uses, most often by proximity with entropy. Stéphane Lalut does not invent the word: he proposes a specific conceptual use of it — the hypothesis that social systems produce local order by displacing their disorder — stabilised as an operational hypothesis in social science (book ANTHROPIE, 2025; AWP series, 2026)."
   - question: "Is anthropy related to the Anthropy gathering in the UK?"
-    answer: "No. In English, Anthropy is also the name of a British national gathering of leaders held annually since 2022. Anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder — only the word is shared."
+    answer: "No. In English, Anthropy is also the name of a British national gathering of leaders held since 2022. Anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder — only the word is shared."
   - question: "What is the difference between anthropy and anthropology?"
     answer: "Anthropology is a discipline — the science of human societies; economic anthropology studies their modes of production and exchange. Anthropy is not a discipline but a hypothesis in social science: social systems produce local order by displacing their disorder. Only the Greek root ánthrōpos is shared."
   - question: "Is anthropy related to the AI company Anthropic?"
@@ -75,7 +75,13 @@ frontiere:
     - texte: "To provide a single answer: it offers a clearer way of asking the questions."
       ancre: "some-domains-of-application"
       section: "Domains of application"
+# Section « anthropie et anthropique » (FR, 06/11/2026) : SANS ÉQUIVALENT ANGLAIS, exclusion déclarée
+# (Audit-19, 07/11/2026). En anglais, « anthropic » et « anthropogenic » sont deux mots distincts : l'ambiguïté
+# française (adjectif courant d'origine humaine / emploi propre au cadre) ne se pose pas ; la page anglaise traite
+# déjà le principe anthropique (FAQ) et l'homonyme britannique « Anthropy ». À rouvrir si une requête anglophone le demande.
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-07, texte: "Correction: the British Anthropy gathering has been held since 2022, not every year (editions in 2022, 2023, 2025 and 2026)."}
+  - {date: 2026-11-06, texte: "Addition: the author is named in the quoted definition."}
   - {date: 2026-11-05, texte: "Correction: the answer on public debt presented as a fact what the site treats as a hypothesis; it now says that the shift of burdens is neither automatic nor necessarily unfavourable, and where the hypothesis is examined. The Anthropocene is a proposed geological epoch, not adopted as a formal unit in 2024. The displayed publication date was wrong (first online: April 2026)."}
 ressource:  # /en/resources/ index: head of the analytical framework (PRO-20261025-225715); keeps its menu entry
   type: ["notion"]
@@ -189,7 +195,7 @@ Anthropology is a discipline: the science of human societies, their practices an
 
 </div></details>
 
-<details class="notion" id="anthropy-and-the-british-gathering-of-the-same-name"><summary><span class="notion__avec">the British gathering of the same name</span><span class="notion__pr">In English, "Anthropy" is also the name of a British national gathering of leaders held annually since 2022. There is no connection: the gathering is an event; anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder. Only the word is shared.</span></summary>
+<details class="notion" id="anthropy-and-the-british-gathering-of-the-same-name"><summary><span class="notion__avec">the British gathering of the same name</span><span class="notion__pr">In English, "Anthropy" is also the name of a British national gathering of leaders held since 2022. There is no connection: the gathering is an event; anthropy in Stéphane Lalut's sense is an analytical hypothesis about how social systems displace disorder. Only the word is shared.</span></summary>
 <div class="notion__suite">
 
 </div></details>

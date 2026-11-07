@@ -30,6 +30,7 @@ journal:
   - date: 2026-10-25
     texte: "Périmètre dit en tête (165 des 168 jalons, les trois absents nommés) ; le Registre n'est plus présenté comme l'épilogue du livre, qui le résume en schémas et y renvoie par un QR code ; jalon « Templiers » aligné sur l'édition corrigée du livre (le Temple a moins légué ses méthodes à l'administration royale qu'une leçon)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  refonte: 2026-11-07  # maquette C+ (Audit-18), relue et contrôlée le 07/11/2026
   accueil: 6  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["corpus", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"   # le cadre d'analyse de l'auteur (arbitrage PRO-20261025-225715)

@@ -33,6 +33,7 @@ journal:
   - date: 2026-10-25
     texte: "Scope stated at the top (165 of the 168 milestones, the three missing ones named); the Register is no longer presented as the book’s epilogue—the book sums it up in diagrams and points to it through a QR code; the Templars milestone aligned with the corrected edition of the book (the Temple left the royal administration a lesson more than its methods)."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
+  refonte: 2026-11-07  # maquette C+ (Audit-18), relue et contrôlée le 07/11/2026
   accueil: 6  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["corpus", "notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   bloc: "notions"   # the author's analytical framework (PRO-20261025-225715)

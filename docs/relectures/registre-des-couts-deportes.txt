@@ -1,0 +1,1625 @@
+# relu le 2026-11-07 ; texte servi de /registre-des-couts-deportes/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Le Registre des coûts déportés
+Page mise à jour le 1er novembre 2026 · révisions
+Le Registre des coûts déportés est l’appareil documentaire du livre ANTHROPIE – Ordre ici.
+Dette ailleurs (2025) : le livre raconte l’histoire longue en 168 jalons, des premiers outils de pierre (≈ −3,3 millions d’années) aux algorithmes contemporains, et le Registre pose à chacun les deux mêmes questions : quel ordre cette innovation a-t-elle créé, et quelle dette a-t-elle déportée — vers d’autres lieux, d’autres temps ou d’autres groupes sociaux ?
+La version en ligne, ci-dessous, est en consultation libre ; elle compte les 168 jalons du livre.
+Un jalon, les deux questions · ≈ −1 500 000
+Feu — voler la foudre, allumer le monde
+Ordre créé
+Centre social sécurisé, digestion externalisée par la cuisson, allongement du temps utile en repoussant la nuit.
+Dette déportée
+Dette énergétique permanente envers le combustible ; coûts sanitaires (fumée) ; premier regard extractif sur la nature.
+Énergétique · Social · Écologique
+Anthropie, p.
+27‑31
+ANTHROPIE – Ordre ici.
+Dette ailleurs
+Sept âges d’histoire pour une seule hypothèse : le désordre ne se résout pas, il se déplace.
+Découvrir le livre ›
+Comment lire un jalon
+Chaque entrée applique la grille de l’hypothèse anthropique — les systèmes sociaux déplacent le désordre plutôt qu’ils ne le résolvent :
+Ordre créé — ce que l’innovation stabilise : sécurité alimentaire, mémoire écrite, confiance monétaire, coordination à distance ;
+Dette déportée — le coût que cet ordre déplace hors de son périmètre visible : dépendance matérielle, exclusion sociale, charge reportée sur les générations suivantes ;
+Catégories — la nature du transfert : énergétique, sociale, cognitive, politique, écologique, symbolique…
+L’idée dans son histoire — pour 68 jalons, l’escale de L’Odyssée des idées qui traite la même idée, le même penseur ou le même événement : le Registre en tient le coût déporté, l’escale en raconte l’histoire.
+Le Registre ne raconte pas l’histoire du progrès : il en tient la comptabilité.
+Ce que d’autres récits présentent comme des solutions y apparaît comme des déplacements — chaque solution contracte une dette, et l’histoire est la suite de ces transferts.
+Sept âges, 168 jalons
+Répartition des jalons du livre entre ses sept âges : un choix d’écriture du livre, non une mesure de l’importance des périodes.
+Choisir un âge mène à ses jalons.
+Âge 1Les programmes fondateurs≈ −3,3 millions d’années → ≈ −45 000
+8
+Âge 2Le piège néolithique≈ −10 000 → ≈ −1 046
+7
+Âge 3Les systèmes d’exploitation antiques≈ −900 → 312
+34
+Âge 4Les réseaux : routes, relais, relais de pouvoir486 → 1494
+20
+Âge 5La machine-État moderne1513 → 1784
+24
+Âge 6L’industrialisation et les nations1789 → 1905
+29
+Âge 7Le métaprogramme contemporain1905 → 2024
+46
+Le Registre
+Toutes les catégoriesPolitique (88)Social (87)Cognitif (56)Économique (51)Symbolique (31)Technique (31)Philosophique (21)Écologique (17)Moral (17)Violence symbolique (17)Géopolitique (14)Juridique (13)Énergétique (12)Inégalités (11)Temporel (11)Spatial (9)Culturel (8)Mémoriel (3)Administratif (2)Global (1)Psychique (1)
+Avec une escale de L’Odyssée des idées (68)
+Les 168 jalons du livre — chacun sur la même grille : ordre créé, dette déportée, catégories du transfert.
+Âge 1 — Les programmes fondateurs (≈ −3,3 millions d’années → ≈ −45 000)
+≈ −3 300 000 Premiers outils — mémoire externe
+Ordre créé.
+Externalisation de la mémoire et de l’intention dans des artefacts durables, créant un savoir transmissible indépendant du porteur.
+Dette déportée.
+Dépendance aux matériaux et aux savoir-faire ; conversion d’un coût cognitif en coût thermodynamique pour l’extraction et le façonnage.
+Technique · Énergétique · Cognitif
+Anthropie, p.
+23‑27
+≈ −1 500 000 Feu — voler la foudre, allumer le monde
+Ordre créé.
+Centre social sécurisé, digestion externalisée par la cuisson, allongement du temps utile en repoussant la nuit.
+Dette déportée.
+Dette énergétique permanente envers le combustible ; coûts sanitaires (fumée) ; premier regard extractif sur la nature.
+Énergétique · Social · Écologique
+Anthropie, p.
+27‑31
+≈ −400 000 Mort — l’archive des vivants
+Ordre créé.
+Invention du temps long, de la mémoire collective et des lignages ; la sépulture fonde le territoire et légitime le pouvoir.
+Dette déportée.
+Coût matériel et énergétique colossal des rituels funéraires ; espace soustrait aux vivants ; pétrification des inégalités sociales post-mortem.
+Symbolique · Social · Spatial
+Anthropie, p.
+31‑35
+≈ −400 000 Langage — le souffle fait monde
+Ordre créé.
+Coordination sociale à grande échelle, transmission de savoirs complexes, capacité à penser l’abstrait (passé, futur, hypothèses).
+Dette déportée.
+Coût d’entretien des conventions (grammaire) ; enfermement dans des catégories de pensée ; exclusion par le verbe (tabous).
+Cognitif · Social · Symbolique
+Anthropie, p.
+35‑39
+≈ −300 000 Homo sapiens — visage-interface
+Ordre créé.
+Interface de reconnaissance sociale à haute fréquence, qui a pu accélérer la coordination et instaurer des protocoles de confiance non-verbaux.
+Dette déportée.
+Coût métabolique du traitement de l’information faciale ; infrastructures futures de contrôle (biométrie) basées sur la surveillance du visage.
+Social · Politique · Technique
+Anthropie, p.
+39‑43
+≈ −120 000 Commerce — le lien qui divise
+Ordre créé.
+Circulations de parures et de pigments entre groupes, fondées sur des conventions de valeur partagées, qui réduisent l’incertitude locale.
+Dette déportée.
+Formalisation des inégalités par l’accumulation de biens symboliques ; coût de la logistique ; division entre ceux qui partagent le code et les autres.
+Économique · Social · Spatial
+Anthropie, p.
+43‑47
+≈ −70 000 Religion — l’invisible en partage
+Ordre créé.
+Cohésion sociale au-delà de la parenté par la gestion ritualisée de l’angoisse et un calendrier sacré partagé.
+Dette déportée.
+Coût matériel des offrandes et des lieux réservés au rite ; temps soustrait à la subsistance ; division entre ceux qui partagent le rite et ceux qui s’en écartent.
+L’idée dans son histoire.
+Escale « −70 000 · La religion, représentation de l’âme humaine » de L’Odyssée des idées.
+Symbolique · Social · Économique
+Anthropie, p.
+47‑50
+≈ −45 000 Art pariétal — esprit sur roche
+Ordre créé.
+Mémoire externe symbolique durable, qui fixe des images, des mains et des signes récurrents et où l’attention apprend à se réfléchir elle-même.
+Dette déportée.
+Coût énergétique et physique pour produire les œuvres dans des lieux reculés (pigments, éclairage, risques) ; fixation de codes de représentation qui cadrent la perception du monde.
+Cognitif · Symbolique · Énergétique
+Anthropie, p.
+50‑57
+Âge 2 — Le piège néolithique (≈ −10 000 → ≈ −1 046)
+≈ −10 000 Néolithique — le piège civilisationnel
+Ordre créé.
+Sécurité alimentaire par le surplus, sédentarisation, explosion démographique.
+Dette déportée.
+Asservissement à la terre et au labeur ; hiérarchies sociales fondées sur le stockage ; dette agricole envers les sols et le climat.
+Social · Écologique · Économique
+Anthropie, p.
+57‑61
+≈ −5 000 La roue — l’éternel retour mécanique
+Ordre créé.
+Efficacité logistique, libération du dos pour le transport de charges, tour du potier où la répétition mécanique engendre la variation formelle.
+Dette déportée.
+Obligation de créer et maintenir des infrastructures (routes) ; enfermement dans la logique mécanique et ses coûts d’entretien.
+Technique · Spatial · Énergétique
+Anthropie, p.
+61‑64
+≈ −3 500 Uruk — rassembler pour diviser
+Ordre créé.
+Spécialisation des tâches, gestion centralisée des flux (eau, grain, rations, tablettes, sceaux), prévisibilité par la concentration urbaine.
+Dette déportée.
+Stratification sociale qui sature vite ; perte de polymorphie ; fragilité accrue face aux contagions ; chaque couche d’ordre ajoute une couche de coût (corvées, prélèvements, registres).
+Social · Politique · Spatial
+Anthropie, p.
+64‑66
+≈ −3 200 Cunéiforme — graver pour durer
+Ordre créé.
+Mémoire administrative durable, loi écrite et publique, comptes écrits (rations, dettes, contrats) qui réduisent l’incertitude locale.
+Dette déportée.
+Un corps de scribes au monopole relatif de l’interface monde-signe, payé en années de subsistance ; exclusion des illettrés ; perte de granularité ; économie entière de preuves, d’archives et de corvées.
+Cognitif · Social · Politique
+Anthropie, p.
+67‑69
+≈ −2 000 Panthéons & royaumes — croire pour obéir
+Ordre créé.
+Légitimation divine du pouvoir temporel, synchronisation de l’empire par un calendrier rituel commun.
+Dette déportée.
+Coût matériel des temples et des sacrifices, porté par les campagnes ; légitimité du pouvoir suspendue à l’approvisionnement du rite ; dette logistique des offrandes.
+Symbolique · Politique · Économique
+Anthropie, p.
+70‑72
+≈ −1 200 La Tyrannie — gouverner le temps
+Ordre créé.
+Accélération et netteté de la décision en court-circuitant les délibérations.
+Dette déportée.
+Dissolution des garanties et démobilisation des citoyens ; contestation décalée plutôt que supprimée ; entretien perpétuel de l’ordre (gardes, réparations, prélèvements) ; dette de temps prélevée sur les citoyens.
+L’idée dans son histoire.
+Escale « −1 200 · Le pouvoir et ses masques : La tyrannie, être craint plutôt qu’aimé » de L’Odyssée des idées.
+Politique · Temporel · Social
+Anthropie, p.
+72‑75
+≈ −1 046 Zhou — mandat céleste, ordre du monde
+Ordre créé.
+Contrat de légitimité conditionnelle (« Mandat du Ciel »), liant le pouvoir à la performance visible (prospérité, ordre).
+Dette déportée.
+Gouvernance par l’anxiété (peur de perdre le mandat) ; coût des rituels et inspections pour prouver la vertu ; dette de performance permanente.
+Symbolique · Politique · Social
+Anthropie, p.
+75‑83
+Âge 3 — Les systèmes d’exploitation antiques (≈ −900 → 312)
+≈ −900 Olmèques — glyphes de pouvoir
+Ordre créé.
+Souveraineté inscrite dans la pierre : emblèmes, têtes colossales, places orientées sur le soleil et calendrier fixent qui gouverne et quand, plus durablement que la voix.
+Dette déportée.
+La lisibilité du centre s’achète à la périphérie : basalte tiré sur des dizaines de kilomètres, forêts abattues, épaules et rations de maïs, ateliers et échanges lointains ; même l’effacement des signes, au déclin, a son prix.
+Politique · Symbolique · Écologique
+Anthropie, p.
+83‑86
+≈ −800 Odyssée — la grammaire du retour
+Ordre créé.
+Une technologie du retour : la mètis, la reconnaissance par paliers et l’hospitalité réglée (xénia) rétablissent un foyer sans fracasser le présent.
+Dette déportée.
+Le retour se paie ailleurs : compagnons perdus, hôtes punis, bêtes sacrifiées, veilles de Pénélope et des serviteurs ; le massacre des prétendants déporte le désordre dans la cité, jusqu’à l’intervention d’Athéna.
+Social · Moral · Temporel
+Anthropie, p.
+86‑88
+≈ −776 Olympie — la guerre jouée pour ne plus la faire
+Ordre créé.
+Sublimation du conflit en compétition réglée ; trêve sacrée permettant la circulation panhellénique.
+Dette déportée.
+Coût des infrastructures et des sacrifices rituels ; exclusion structurelle (femmes mariées, « barbares ») ; dette physique sur les corps des athlètes.
+Social · Politique · Économique
+Anthropie, p.
+88‑91
+≈ −753 Rome — fondation fratricide, destin suicidaire
+Ordre créé.
+Paix civique interne garantie par une frontière sacrée (pomoerium) qui définit un dedans et un dehors.
+Dette déportée.
+Externalisation permanente de la violence vers l’extérieur (conquête) ou son retour périodique à l’intérieur (guerres civiles), reproduisant le meurtre fondateur.
+Politique · Spatial · Symbolique
+Anthropie, p.
+91‑95
+≈ −650 Monnaie — confiance frappée au sceau du doute
+Ordre créé.
+Confiance portable et anonyme, fluidifiant les échanges à grande distance en compressant le rituel de la pesée.
+Dette déportée.
+Coût de la garantie (extraction minière, police des faux) ; abstraction de la valeur, permettant des crises financières et une dévaluation de la confiance.
+L’idée dans son histoire.
+Escale « −650 · La Monnaie : un équilibre fragile entre confiance et pouvoir » de L’Odyssée des idées.
+Économique · Technique · Social
+Anthropie, p.
+95‑97
+≈ −563 Bouddha — le plein qui se vide
+Ordre créé.
+Protocole de libération de la souffrance par la « désadhérence » aux désirs ; ordre mental et discipline intérieure.
+Dette déportée.
+Soutien matériel de la communauté monastique (saṃgha) par le laïcat ; dette de temps et de ressources (aumônes, entretien) pour financer la paix intérieure des moines.
+L’idée dans son histoire.
+Escale « v. −528 · Le Bouddha : les Quatre Nobles Vérités, une voie sans dieu créateur » de L’Odyssée des idées.
+Cognitif · Social · Économique
+Anthropie, p.
+98‑100
+≈ −551 Confucius — la révolution immobile
+Ordre créé.
+Ordre social fondé sur l’exemplarité des gestes (li) et des rôles, se propageant par imitation plutôt que par décret.
+Dette déportée.
+Coût en temps et en attention pour l’apprentissage et le maintien des rites ; financement des « modèles » par la communauté (heures volées au champ, décennies d’étude pour les examens impériaux, familles qui nourrissent un fils improductif).
+L’idée dans son histoire.
+Escale « v. −500 · Confucius : l’ordre par les rites et la réciprocité » de L’Odyssée des idées.
+Social · Symbolique · Cognitif
+Anthropie, p.
+100‑102
+≈ −534 Tragédie — l’invention du théâtre social
+Ordre créé.
+Espace public pour la mise en scène et la métabolisation des conflits insolubles (loi/famille, État/individu).
+Dette déportée.
+Coût matériel et financier des représentations (chorégie) ; temps civique soustrait à la production pour permettre la catharsis collective.
+Social · Politique · Économique
+Anthropie, p.
+102‑105
+≈ −508 Démocratie — le pouvoir de tous, la peur de chacun
+Ordre créé.
+Pouvoir partagé entre citoyens par la loi commune (isonomie), le tirage au sort et la délibération publique.
+Dette déportée.
+Exclusion structurelle des femmes, métèques et esclaves ; financement de la citoyenneté par l’empire (tributs) et le travail servile (mines du Laurion).
+L’idée dans son histoire.
+Escale « −508/−507 · Clisthène : la démocratie redécoupée » de L’Odyssée des idées.
+Politique · Social · Inégalités
+Anthropie, p.
+105‑108
+≈ −500 Pythagore — le rêve mathématique d’un monde ordonné
+Ordre créé.
+Un cosmos intelligible, régi par des rapports numériques et des harmonies mathématiques.
+Dette déportée.
+Exclusion de l’incommensurable (l’irrationnel) ; coût matériel de l’abstraction (écoles, instruments, temps libéré) ; risque de tyrannie de la norme.
+L’idée dans son histoire.
+Escale « −530 · Pythagore : l’harmonie des nombres et la mélodie de l’univers » de L’Odyssée des idées.
+Cognitif · Philosophique · Social
+Anthropie, p.
+108‑111
+≈ −500 Héraclite et Parménide — le fleuve contre la sphère
+Ordre créé.
+Deux visions fondatrices de la métaphysique occidentale : le monde comme flux permanent (Héraclite) ou comme être éternel et immuable (Parménide).
+Dette déportée.
+Coût matériel de la pensée (temps, écoles, scribes) ; dette cognitive pour les générations suivantes, contraintes de naviguer dans cette tension conceptuelle.
+Philosophique · Cognitif
+Anthropie, p.
+111‑113
+≈ −500 Sun Tzu — l’art du combat sans combat
+Ordre créé.
+Victoire par la configuration stratégique et la manipulation de l’information, en évitant l’affrontement direct.
+Dette déportée.
+Paix sans confiance ; généralisation de la méfiance et de la manipulation comme mode de relation ; coût du renseignement et de l’espionnage.
+L’idée dans son histoire.
+Escale « −500 · Sun Tzu : maître de la guerre ou l’art de vaincre sans combattre » de L’Odyssée des idées.
+Politique · Cognitif · Symbolique
+Anthropie, p.
+114‑116
+≈ −480 Thermopyles/Salamine — l’Occident s’invente en inventant l’Orient
+Ordre créé.
+Récit fondateur d’une identité « occidentale » (libre, mesurée) face à un « Orient » caricaturé (servile, démesuré).
+Dette déportée.
+Financement de la démocratie navale athénienne par l’esclavage (mines du Laurion) ; dette de violence symbolique envers les Perses.
+Symbolique · Politique · Violence symbolique
+Anthropie, p.
+117‑120
+≈ −460 Leucippe — vide plein, plénitude vide
+Ordre créé.
+Une physique du mouvement rendue possible par l’introduction du vide comme principe opératoire, expliquant le changement par réarrangement d’atomes.
+Dette déportée.
+Coût social de la pensée matérialiste (accusations d’impiété) ; dette matérielle des écoles philosophiques (temps, mécénat).
+L’idée dans son histoire.
+Escale « −430 · Leucippe : à la découverte de l’invisible nature du monde » de L’Odyssée des idées.
+Philosophique · Cognitif · Social
+Anthropie, p.
+120‑123
+≈ −450 Alcibiade — comprendre pour trahir
+Ordre créé.
+Efficacité stratégique absolue par une intelligence liquide, capable de s’adapter à tous les systèmes pour les manipuler de l’intérieur.
+Dette déportée.
+Dissolution de la confiance et de la loyauté ; les gains tactiques d’un camp se paient en désordre systémique pour tous les autres (guerres prolongées, alliances brisées).
+Politique · Social · Moral
+Anthropie, p.
+123‑125
+≈ −441 Sophocle — loi du cœur contre cœur de la loi
+Ordre créé.
+Espace théâtral pour la mise en scène de la tension irréductible entre la norme impersonnelle de la cité et la loi non écrite de la conscience et de la famille.
+Dette déportée.
+Coût matériel de la représentation (chorégie, payée par les riches citoyens désignés) ; temps civique immobilisé pour permettre la catharsis collective, payé en présence par les citoyens eux-mêmes (journées soustraites à l’atelier et au chantier) et par la caisse publique.
+L’idée dans son histoire.
+Escale « −442 · Sophocle, l’âme a ses lois que la loi ne connaît pas » de L’Odyssée des idées.
+Social · Politique · Symbolique
+Anthropie, p.
+126‑128
+≈ −427 Sophistes — vendre la vérité, acheter le doute
+Ordre créé.
+Démocratisation de la compétence rhétorique, transformant la parole en technique achetable et non plus en privilège de naissance.
+Dette déportée.
+Dévaluation de la confiance sociale, la vérité devient une marchandise ; coût institutionnel (multiplication des procès) et cognitif (scepticisme généralisé).
+Cognitif · Social · Économique
+Anthropie, p.
+128‑131
+≈ −415 Thucydide — répéter pour ne pas recommencer
+Ordre créé.
+Une mémoire opératoire de l’histoire, fondée sur la recherche des causes et la logique des rapports de force, pour déminer le futur.
+Dette déportée.
+Coût matériel de l’enquête (financée par ses mines) ; dette morale d’un savoir qui, en exposant la brutalité du réel (« les forts font ce qu’ils peuvent »), peut inoculer un froid durable.
+L’idée dans son histoire.
+Escale « −415 · Thucydide : l’histoire est un perpétuel recommencement » de L’Odyssée des idées.
+Cognitif · Politique · Moral
+Anthropie, p.
+131‑133
+≈ −400 Calliclès — le droit du plus fort, la loi des plus faibles
+Ordre créé.
+Légitimation « naturelle » de la domination et de la maximisation des désirs (pleonexia) par une élite.
+Dette déportée.
+L’ordre du fort déplace son désordre sur les autres : artisans, vignerons, rameurs, tisserandes paient pour qu’une poignée « croisse » ; il se finance par l’épuisement et l’invisibilité des débiteurs (heures non payées, solidarités cassées).
+L’idée dans son histoire.
+Escale « v. −390 · Calliclès : la loi est l’arme des faibles » de L’Odyssée des idées.
+Social · Politique · Violence symbolique
+Anthropie, p.
+133‑136
+≈ −399 Épicurisme — le bonheur par soustraction
+Ordre créé.
+Paix intérieure (ataraxie) par la limitation des désirs et l’élimination des peurs (des dieux, de la mort).
+Dette déportée.
+Le « vis caché » de la communauté épicurienne est subventionné par l’ordre et le travail de la cité qu’elle fuit ; dette de participation civique.
+Cognitif · Social · Philosophique
+Anthropie, p.
+136‑139
+≈ −399 Socrate — le doute en service public
+Ordre créé.
+Hygiène civique par la mise à l’épreuve systématique des savoirs apparents ; la cohérence devient le critère du discours juste.
+Dette déportée.
+Friction sociale constante, coût en temps pour la cité ; la dette ultime est payée par sa propre vie pour préserver l’intégrité de la loi.
+L’idée dans son histoire.
+Escale « −399 · Socrate : le philosophe sans livre » de L’Odyssée des idées.
+Cognitif · Politique · Moral
+Anthropie, p.
+139‑141
+≈ −384 Platon — bâtir l’idéal, habiter l’impossible
+Ordre créé.
+Une architecture de la connaissance et de la cité juste, fondée sur des formes idéales qui servent d’étalon pour juger le réel.
+Dette déportée.
+Le coût de la formation des « gardiens » est porté par la classe des producteurs ; l’ordre idéal exige la censure, le « noble mensonge » et l’exclusion des poètes.
+L’idée dans son histoire.
+Escale « v. −375 · La cité idéale de Platon : un modèle politique et moral » de L’Odyssée des idées.
+Philosophique · Politique · Social
+Anthropie, p.
+142‑145
+≈ −335 Aristote — l’excès mesuré, la mesure excessive
+Ordre créé.
+Un système de classification universel (catégories, causes) qui rend le monde intelligible et gouvernable par la mesure et la prudence (phronèsis).
+Dette déportée.
+Le savoir classificatoire, en devenant norme, exclut et pathologise les « écarts » ; la mesure devient instrument de normalisation.
+L’idée dans son histoire.
+Escale « −335 · Aristote, ou le philosophe qui partait du réel » de L’Odyssée des idées.
+Cognitif · Social · Violence symbolique
+Anthropie, p.
+145‑147
+≈ −334 Alexandre — l’ivresse de l’infini
+Ordre créé.
+Unification d’un espace immense par la vitesse de la conquête, créant un premier espace culturel « hellénistique ».
+Dette déportée.
+Destruction des ordres politiques et administratifs perses ; coût humain et logistique de la campagne militaire ; dette de légitimité auprès de ses propres troupes.
+Politique · Spatial · Économique
+Anthropie, p.
+148‑151
+≈ −330 Diogène — le rien qui juge tout
+Ordre créé.
+Souveraineté individuelle par le dépouillement radical et le refus des conventions.
+Dette déportée.
+Sa liberté est subventionnée par le surplus et la tolérance de la cité qu’il méprise (aumônes, sécurité) ; dette de participation aux charges communes.
+L’idée dans son histoire.
+Escale « v. −336/−335 · Diogène, une vie de chien, une pensée sans maître » de L’Odyssée des idées.
+Social · Philosophique · Économique
+Anthropie, p.
+151‑154
+≈ −300 Euclide — la démocratie géométrique
+Ordre créé.
+Un régime de preuve universel où l’autorité se gagne par la démonstration, accessible à tous indépendamment du statut social.
+Dette déportée.
+L’égalité formelle de l’accès à la preuve masque une inégalité réelle d’accès au temps et à l’éducation nécessaires pour la maîtriser.
+L’idée dans son histoire.
+Escale « −300 · Euclide : aux origines de la géométrie » de L’Odyssée des idées.
+Cognitif · Social · Politique
+Anthropie, p.
+154‑157
+≈ −250 Archimède — point fixe pour monde mobile
+Ordre créé.
+Maîtrise mécanique du monde par l’application de principes (levier, poussée) qui permettent de démultiplier la force humaine.
+Dette déportée.
+Coût matériel et humain des machines (bois, métal, ateliers) et de leur financement par un pouvoir politique (le roi Hiéron II).
+Technique · Énergétique · Économique
+Anthropie, p.
+157‑161
+≈ −220 Qin — l’empire forgé dans l’uniformité totalitaire
+Ordre créé.
+Unité impériale par la standardisation radicale (écriture, monnaie, mesures, écartement d’essieux).
+Dette déportée.
+Destruction des cultures et savoirs locaux (« autodafé des livres ») ; coût humain colossal des grands travaux (muraille, canaux) ; violence d’État comme principe de gouvernement.
+Politique · Culturel · Social
+Anthropie, p.
+161‑164
+≈ −49 Le Rubicon — quand la vitesse assassine la loi
+Ordre créé.
+Prise de pouvoir fulgurante qui ouvre la guerre civile, où la rapidité du fait accompli remplace la délibération : la loi n’est plus un mur, mais une lenteur.
+Dette déportée.
+Assassinat de la légalité républicaine ; coût humain et économique des campagnes militaires ; dette de légitimité soldée par la dictature.
+Politique · Temporel · Juridique
+Anthropie, p.
+164‑167
+≈ −7 à −4 Jésus-Christ — la force de la faiblesse
+Ordre créé.
+Une communauté fondée sur l’inversion des valeurs (pauvreté, pardon), sapant de l’intérieur la logique de puissance de l’Empire.
+Dette déportée.
+Coût du martyre, la violence de l’État étant absorbée par les corps des croyants ; dette d’organisation pour les communautés (entraide, aumônes).
+L’idée dans son histoire.
+Escale « v. −6/−4 · Jésus-Christ : fils de Dieu ? » de L’Odyssée des idées.
+Symbolique · Social · Politique
+Anthropie, p.
+167‑170
+105 Papier (Han) — écrire l’État
+Ordre créé.
+Fluidification de l’administration, créant un « État liquide » capable de se souvenir, de se diffuser et de se réviser à bas coût.
+Dette déportée.
+Coût écologique de la production (eau, fibres) ; explosion de la bureaucratie ; surveillance accrue ; dette de temps pour les scribes et les administrateurs.
+Technique · Politique · Écologique
+Anthropie, p.
+170‑174
+110 Juvenal — nourrir le ventre, affamer l’esprit
+Ordre créé.
+Paix sociale par la distribution de nourriture (panem) et de divertissement (circenses), occupant les corps et l’attention du peuple.
+Dette déportée.
+Atrophie de la citoyenneté, transformée en clientèle passive ; coût logistique et financier colossal pour maintenir les flux de blé et les jeux.
+L’idée dans son histoire.
+Escale « 110 · *Panem et circenses* : nourrir, distraire, et faire de la mort un spectacle » de L’Odyssée des idées.
+Politique · Social · Cognitif
+Anthropie, p.
+174‑176
+135 Stoïcisme — vouloir ne rien vouloir
+Ordre créé.
+Citadelle intérieure imprenable, liberté par la maîtrise des jugements et la discipline du désir.
+Dette déportée.
+Coût en corps de l’invulnérabilité face au pouvoir (martyrs stoïciens, dette réglée en sang civil) ; l’otium nécessaire à cette ascèse est financé par le travail d’autrui (esclaves, secrétaires, intendants).
+Cognitif · Social · Philosophique
+Anthropie, p.
+177‑180
+312 Constantin — sauver l’empire en tuant ses dieux
+Ordre créé.
+Unification de l’empire sous un seul symbole (la croix), créant une nouvelle infrastructure de loyauté.
+Dette déportée.
+Démantèlement progressif des ordres et de l’économie païens (temples, sacerdoces) ; coût de la construction du nouvel appareil ecclésiastique ; le conflit se déplace vers les hérésies.
+L’idée dans son histoire.
+Escale « 312 · Il suffira d’un signe pour Constantin et le christianisme » de L’Odyssée des idées.
+Politique · Symbolique · Économique
+Anthropie, p.
+180‑188
+Âge 4 — Les réseaux : routes, relais, relais de pouvoir (486 → 1494)
+486 Clovis — la chimie du Sacre
+Ordre créé.
+Transmutation de la force guerrière en légitimité divine durable ; le sacre institue un corps politique immortel qui survit au corps physique du roi.
+Dette déportée.
+Coût de l’appareil ecclésiastique (dotations, basiliques, exemptions fiscales) reporté sur les finances publiques et les propriétaires laïcs.
+L’idée dans son histoire.
+Escale « v.
+496 · Clovis : catholicisme et stratégie royale » de L’Odyssée des idées.
+Symbolique · Politique · Économique
+Anthropie, p.
+188‑191
+529 Saint Benoît — l’ordre qui libère
+Ordre créé.
+Cadre de vie stable et productif (ora et labora) qui transforme le temps par la discipline de la Règle, libérant l’énergie spirituelle et matérielle.
+Dette déportée.
+Soutien matériel du monastère par des dons, des rentes et le travail de laïcs dépendants (familia) ; dette écologique sur les terres exploitées (peaux pour parchemins).
+Social · Économique · Temporel
+Anthropie, p.
+191‑193
+632 Coran — l’algorithme de la transcendance
+Ordre créé.
+Protocole social et spirituel unifié (prières, zakāt) qui synchronise un réseau décentralisé de croyants et crée une communauté (Umma).
+Dette déportée.
+Coût de l’établissement d’un consensus (standardisation par ʿUthmān : codices privés brûlés, rancunes, grief des insurgés de 656) qui déplace le désordre vers la politique ; coût de la conformité pour la société (temps, ressources).
+Symbolique · Social · Politique
+Anthropie, p.
+193‑196
+850 Poudre & salpêtre — la chimie du pouvoir (Chine)
+Ordre créé.
+Nivellement des hiérarchies militaires traditionnelles (« démocratie balistique ») ; la recette chimique l’emporte sur la naissance.
+Dette déportée.
+Industrialisation de la mort, coût écologique de la production (salpêtre, charbon) ; la régulation de la violence devient plus coûteuse et centralisée.
+Technique · Énergétique · Politique
+Anthropie, p.
+197‑200
+980/1126 Avicenne et Averroès — l’Islam passeur d’Aristote
+Ordre créé.
+Transmission et enrichissement de la philosophie et de la science grecques, créant une infrastructure conceptuelle pour le futur intellectuel européen.
+Dette déportée.
+Coût matériel de la traduction et de la copie (papier, scribes, bibliothèques) financé par les pouvoirs islamiques ; l’Occident héritera du savoir en effaçant souvent la signature du passeur.
+L’idée dans son histoire.
+Escale « v.
+1020 · Avicenne : la médecine, l’âme et l’existence » de L’Odyssée des idées.
+Cognitif · Culturel · Économique
+Anthropie, p.
+200‑203
+1066 Hastings — l’alchimie du bâtard
+Ordre créé.
+Transformation d’une conquête violente en État administratif centralisé (Domesday Book) et en ordre juridique durable (common law).
+Dette déportée.
+Expropriation massive de l’élite anglo-saxonne ; coût humain de la répression (Harrying of the North) ; violence symbolique par l’imposition de la langue et des lois normandes.
+Politique · Social · Violence symbolique
+Anthropie, p.
+204‑206
+1150 Tolède — traduire pour transformer
+Ordre créé.
+Infrastructure de « compatibilité cognitive » qui rend les savoirs grecs, arabes et juifs interopérables et disponibles pour l’Occident latin.
+Dette déportée.
+Coût matériel de l’atelier de traduction (mécénat, parchemins, salaires) ; la transformation des concepts importe des cadres de pensée qui reconfigurent durablement la culture latine.
+Cognitif · Technique · Culturel
+Anthropie, p.
+206‑211
+1200 Université de Paris — la forge des disputes
+Ordre créé.
+Production de la vérité par la confrontation réglée (disputatio), créant une autorité intellectuelle autonome face au pouvoir politique et religieux.
+Dette déportée.
+Coût social de l’entretien d’une population étudiante improductive ; dette matérielle (collèges, livres) ; exclusion de ceux qui ne maîtrisent pas le code scolastique.
+Cognitif · Social · Économique
+Anthropie, p.
+211‑214
+1209 Albigeois — la mécanique de la pureté
+Ordre créé.
+Unité doctrinale de la chrétienté par l’éradication de l’hérésie cathare ; invention de l’Inquisition comme procédure de contrôle des consciences.
+Dette déportée.
+Violence physique et symbolique (massacres, bûchers) ; écosystème culturel blessé (l’occitan perd ses cours et ses mécènes) ; dette morale d’une orthodoxie imposée par la terreur.
+Symbolique · Politique · Violence symbolique
+Anthropie, p.
+214‑217
+1215 Magna Carta — la couronne sous contrat
+Ordre créé.
+Limitation du pouvoir royal par un contrat écrit, instaurant la prévisibilité de la loi (due process) et un droit de résistance.
+Dette déportée.
+Coût d’un appareil judiciaire permanent ; friction procédurale comme nouvelle forme de conflit ; la paix interne se paie parfois d’une violence exportée aux marges.
+L’idée dans son histoire.
+Escale « 1215 · La Magna Carta : nul n’est au-dessus de la loi » de L’Odyssée des idées.
+Juridique · Politique · Social
+Anthropie, p.
+217‑220
+1272 Thomas d’Aquin — l’architecte des compatibilités
+Ordre créé.
+Synthèse intellectuelle qui rend compatibles la raison aristotélicienne et la foi chrétienne, créant une architecture de la connaissance durable.
+Dette déportée.
+Coût institutionnel (querelles universitaires, querelle des mendiants, condamnations de 1277) ; le conflit est reporté dans des clauses techniques où fleuriront Ockham et les nominalistes ; la clarté se paie en exclusions conceptuelles.
+L’idée dans son histoire.
+Escale « 1270 · Thomas d’Aquin : la foi et la raison tenues ensemble » de L’Odyssée des idées.
+Philosophique · Cognitif · Symbolique
+Anthropie, p.
+221‑224
+1302 Dante — le tribunal des tercets
+Ordre créé.
+Juridiction poétique supérieure au politique, qui juge l’Histoire et assigne à chacun sa place dans une cosmologie morale.
+Dette déportée.
+Standardisation d’une langue nationale (le toscan) au détriment des dialectes ; dette matérielle de la production et diffusion de l’œuvre (mécénat, copistes).
+L’idée dans son histoire.
+Escale « 1321 · Dante : l’Enfer comme forme de la faute » de L’Odyssée des idées.
+Symbolique · Culturel · Cognitif
+Anthropie, p.
+227‑230
+1314 Templiers — transformer le crédo en crédit
+Ordre créé.
+Réseau financier transnational où la confiance religieuse fait voyager l’argent, et pas seulement le métal (lettres, comptes, sceaux) : des comptes adossés à un vœu.
+Dette déportée.
+Un réseau de confiance qui tient registre hors du prince vit à sa merci : la couronne, qui compte déjà par son propre Trésor, détruit l’ordre et en sort payée ; la confiance passe du vœu au registre du prince.
+Économique · Politique · Technique
+Anthropie, p.
+224‑227
+1325 Tombouctou — l’encre dans le sable
+Ordre créé.
+Pôle intellectuel majeur fondé sur une économie du savoir (le livre s’échange contre de l’or et devient capital social) et une résilience distribuée (bibliothèques privées).
+Dette déportée.
+Coût élevé de l’importation de la matière première (papier) ; la conservation dans un milieu hostile exige une ingénierie et un investissement constants.
+Cognitif · Économique · Technique
+Anthropie, p.
+231‑234
+1377 Ibn Khaldoun — le cycle des empires
+Ordre créé.
+Modèle cyclique de l’histoire qui rend intelligible la montée et la chute des dynasties par la force de cohésion sociale ('asabiyya).
+Dette déportée.
+Chaque phase du cycle a son addition : sang et manque à la conquête, charges fixes à l’apogée, mercenaires, tributs et rançons au déclin ; le cycle est une dette de sang et de ressources payée à chaque transition.
+L’idée dans son histoire.
+Escale « 1377 · Ibn Khaldoun : la science des empires qui meurent » de L’Odyssée des idées.
+Politique · Philosophique · Social
+Anthropie, p.
+234‑237
+1429 Jeanne — le peuple avant le peuple
+Ordre créé.
+Relégitimation de la monarchie française par un court-circuit charismatique qui transcende les médiations institutionnelles (Église, noblesse).
+Dette déportée.
+Coût financier et militaire des campagnes ; désordre institutionnel pour les pouvoirs établis ; la dette ultime est payée par sa propre vie au bûcher.
+L’idée dans son histoire.
+Escale « 1429-1431 · Jeanne d’Arc : faire un roi, puis l’archive d’une conscience » de L’Odyssée des idées.
+Symbolique · Politique · Social
+Anthropie, p.
+238‑241
+1435 Alberti — cadrer le monde, construire l’œil
+Ordre créé.
+Un espace visuel rationalisé, mesurable et reproductible par la perspective, qui transforme la peinture en « fenêtre ouverte ».
+Dette déportée.
+L’œil est contraint à un point de vue unique et immobile ; le cadre exclut le hors-champ ; la maîtrise du visible se paie d’une perte de latéralité et de vision périphérique.
+Cognitif · Technique · Symbolique
+Anthropie, p.
+241‑244
+1454 Gutenberg — multiplier la parole, redistribuer l’autorité
+Ordre créé.
+Reproductibilité exacte du texte : caractères mobiles, encre grasse et presse à vis rendent les exemplaires identiques, font chuter le prix du livre et rendent possibles la citation vérifiable et la critique commune.
+Dette déportée.
+Fin de l’autorité unique : la dispute s’emballe jusqu’aux guerres de religion ; dialectes relégués par les langues imprimées, calomnie industrialisée comme la preuve, rente captée par le financeur plutôt que par l’inventeur.
+L’idée dans son histoire.
+Escale « v.
+1454 · Gutenberg : la pensée rendue reproductible » de L’Odyssée des idées.
+Cognitif · Politique · Culturel
+Anthropie, p.
+244‑247
+1492 Nouveaux mondes — découvrir, compter, conquérir
+Ordre créé.
+Unification planétaire, création d’un système-monde euro-centré par la cartographie, la comptabilité et la puissance militaire.
+Dette déportée.
+Effondrement des populations amérindiennes (épidémies, guerre, travail forcé), encomienda et mita de Potosí, pillage de l’argent des Andes ; dette humaine et morale.
+Spatial · Économique · Violence symbolique
+Anthropie, p.
+248‑250
+1494 Pacioli — compter double, voir juste
+Ordre créé.
+Transparence et confiance dans les échanges commerciaux par la comptabilité en partie double, qui rend la richesse relationnelle et vérifiable.
+Dette déportée.
+Les vies et les coûts non monétaires sont invisibilisés dans les bilans ; la forme comptable peut masquer l’inégalité et la fraude ; la clarté a un coût bureaucratique.
+Économique · Cognitif · Technique
+Anthropie, p.
+250‑257
+Âge 5 — La machine-État moderne (1513 → 1784)
+1513 Machiavel — vertu du vice, morale de la force
+Ordre créé.
+Stabilité et pérennité de l’État par une technologie de la décision (virtù) qui juge les actes à leurs conséquences publiques, non à leur morale privée.
+Dette déportée.
+Dette morale d’une cruauté devenue instrument de gouvernement ; coût humain et économique des « nécessités » payé par les populations civiles.
+L’idée dans son histoire.
+Escale « 1513 · Machiavel : Le Prince et la vérité nue du pouvoir » de L’Odyssée des idées.
+Politique · Moral · Social
+Anthropie, p.
+257‑260
+1516 Érasme — corriger pour croire
+Ordre créé.
+Rétablissement d’une vérité textuelle (Nouveau Testament) par la méthode philologique (ad fontes), fondant la critique moderne.
+Dette déportée.
+La remise en cause de la Vulgate fissure l’autorité de l’Église et livre, sans appeler à la rupture, l’un des outils qui rendent la Réforme possible ; les guerres de religion qui s’ensuivent montrent que le même texte, stabilisé, peut nourrir des orthodoxies rivales.
+Cognitif · Symbolique · Politique
+Anthropie, p.
+260‑263
+1517 Luther — la blockchain de la conscience
+Ordre créé.
+Décentralisation de l’accès au salut (sola fide, sola scriptura), la conscience individuelle devenant le validateur de la foi, sans intermédiaire ecclésial.
+Dette déportée.
+Fragmentation de la chrétienté, guerres de religion ; le coût de l’ordre confessionnel est payé en conflits armés et en divisions politiques durables.
+Symbolique · Politique · Social
+Anthropie, p.
+263‑266
+1543 Copernic — décentrer le ciel, recadrer la terre
+Ordre créé.
+Cohérence géométrique et prédictive de l’univers en plaçant le Soleil au centre, fondant une nouvelle physique céleste.
+Dette déportée.
+Désordre théologique et social en destituant l’homme de sa place centrale ; coût institutionnel des conflits avec l’Église (procès de Galilée).
+L’idée dans son histoire.
+Escale « 1543 · Copernic : la Terre déchue de son centre » de L’Odyssée des idées.
+Cognitif · Symbolique · Politique
+Anthropie, p.
+266‑269
+1576 La Boétie — le peuple tyran de lui-même
+Ordre créé.
+Diagnostic de la servitude comme produit d’un consentement actif, fondant la possibilité d’une libération par le simple refus de servir.
+Dette déportée.
+Le texte déplace la responsabilité de la tyrannie du tyran vers le peuple lui-même, créant une dette de lucidité et de courage civique.
+L’idée dans son histoire.
+Escale « 1576 · La Boétie : la servitude volontaire » de L’Odyssée des idées.
+Politique · Cognitif · Moral
+Anthropie, p.
+269‑272
+1600 Compagnies des Indes — l’invention de l’entreprise-monde
+Ordre créé.
+Réseau commercial planétaire, financé par un capital liquide et anonyme (actions), doté de prérogatives régaliennes (lever des troupes, négocier des traités).
+Dette déportée.
+Violence structurelle (massacre de Banda), monocultures forcées, écocides inauguraux et externalisation des risques sur les populations colonisées.
+Économique · Géopolitique · Écologique
+Anthropie, p.
+272‑275
+1609 Galilée — faire tomber le ciel pour élever l’esprit
+Ordre créé.
+Une technologie de l’objectivité où la preuve est produite par l’instrument (la lunette) et devient reproductible et vérifiable par tous.
+Dette déportée.
+Le désordre est transféré de la cosmologie vers l’institution ecclésiastique, provoquant des conflits d’autorité et des procès (condamnation de 1633).
+L’idée dans son histoire.
+Escale « 1610 · Galilée : le ciel rouvert, et le procès qui voulut le refermer » de L’Odyssée des idées.
+Cognitif · Technique · Politique
+Anthropie, p.
+275‑278
+1625 Grotius — le fondateur du meurtre réglementé
+Ordre créé.
+Un droit commun entre les nations, fondé sur la raison naturelle, qui encadre la guerre (jus ad bellum, jus in bello) et la rend procédurale.
+Dette déportée.
+En « civilisant » la guerre, on la rend gouvernable et donc durable ; l’ordre juridique légitime la violence sous conditions, au détriment des populations civiles qui en paient le coût.
+Juridique · Politique · Moral
+Anthropie, p.
+278‑280
+1637 Descartes — doute fondateur, certitude abyssale
+Ordre créé.
+Un protocole d’audit de la pensée (Discours de la méthode) qui fonde la certitude sur l’évidence individuelle (cogito) et non sur l’autorité extérieure.
+Dette déportée.
+Fracture entre l’âme et le corps (res cogitans/extensa), reléguant le sensible ; dette ontologique et médicale qui traitera le corps comme une machine.
+L’idée dans son histoire.
+Escale « 1637 · Descartes : le premier sol » de L’Odyssée des idées.
+Philosophique · Cognitif · Social
+Anthropie, p.
+281‑283
+1648 Westphalie — l’art de coexister en s’ignorant
+Ordre créé.
+Paix par la séparation ; la souveraineté territoriale et la non-ingérence deviennent les principes d’un ordre international fondé sur l’équilibre des puissances.
+Dette déportée.
+La paix européenne se paie par le gel des aspirations des peuples et la sanctuarisation des « tyrannies domestiques » à l’intérieur des frontières.
+Géopolitique · Politique · Social
+Anthropie, p.
+284‑286
+1651 Hobbes — le monstre qui nous sauve de nous-mêmes
+Ordre créé.
+Sécurité absolue par l’aliénation totale des libertés individuelles à un souverain artificiel (le Léviathan) qui met fin à la « guerre de tous contre tous ».
+Dette déportée.
+La peur devient le fondement du politique ; la question « qui protège du protecteur ? » reste ouverte quand le Léviathan devient totalitaire, le monstre se retournant alors contre ses créateurs.
+L’idée dans son histoire.
+Escale « 1651 · Hobbes : l’homme, le loup et le Léviathan » de L’Odyssée des idées.
+Politique · Social · Philosophique
+Anthropie, p.
+286‑290
+1661 Raison d’État — le crime légitime
+Ordre créé.
+L’État fiscal-militaire, machine centralisée qui rationalise l’impôt (Colbert) et la force (Louvois) pour maximiser la puissance du royaume.
+Dette déportée.
+Pression fiscale écrasante sur le peuple ; la gloire de l’État se finance par la misère organisée des campagnes et les guerres perpétuelles.
+Politique · Économique · Social
+Anthropie, p.
+290‑294
+1687 Newton — la pomme qui tuerait Dieu
+Ordre créé.
+Un univers unifié par des lois mathématiques universelles (gravitation), rendant le cosmos prévisible et calculable.
+Dette déportée.
+Le monde-horloge n’a plus besoin de l’hypothèse divine pour fonctionner ; le désordre est déplacé de la physique vers la métaphysique (désenchantement du monde).
+L’idée dans son histoire.
+Escale « 1687 · Newton : la pomme, la Lune et la loi unique » de L’Odyssée des idées.
+Cognitif · Philosophique · Symbolique
+Anthropie, p.
+297‑300
+1689 Locke — obéir pour être libre
+Ordre créé.
+Un gouvernement légitime fondé sur le consentement et la garantie des droits naturels (vie, liberté, propriété), avec un droit de résistance inscrit.
+Dette déportée.
+La liberté politique en métropole est financée par la servitude économique en colonie (esclavage, expropriation des terres).
+L’idée dans son histoire.
+Escale « 1690 · Locke : la page blanche et le gouvernement par consentement » de L’Odyssée des idées.
+Politique · Économique · Inégalités
+Anthropie, p.
+294‑297
+1748 Montesquieu — diviser pour unir
+Ordre créé.
+Liberté politique par la séparation des pouvoirs (législatif, exécutif, judiciaire), où « le pouvoir arrête le pouvoir ».
+Dette déportée.
+La liberté se paie d’une « inefficacité calculée » ; la friction institutionnelle et la lenteur procédurale deviennent le coût de la protection contre l’arbitraire.
+L’idée dans son histoire.
+Escale « 1748 · Montesquieu : du regard oblique à l’architecture des pouvoirs » de L’Odyssée des idées.
+Politique · Juridique · Temporel
+Anthropie, p.
+300‑303
+1748 Hume — le séisme de la causalité
+Ordre créé.
+Lucidité sceptique en révélant que la causalité n’est pas une loi du monde mais une habitude de notre esprit.
+Dette déportée.
+L’ordre des certitudes s’effondre, remplacé par un ordre de probabilités qui exige un coût constant de vérification, de réplication et d’entretien du doute.
+Cognitif · Philosophique · Social
+Anthropie, p.
+303‑307
+1755 Voltaire — rien n’est si sûr que le doute
+Ordre créé.
+Un espace public critique où l’opinion, armée par la raison et la publicité (l’affaire Calas), peut juger et corriger les abus du pouvoir.
+Dette déportée.
+En sapant les autorités traditionnelles sans bâtir d’institutions de remplacement, la critique libère des forces que la raison seule ne peut contenir, risquant la démagogie.
+L’idée dans son histoire.
+Escale « 1759 · Voltaire : cultiver son jardin, ou la sagesse du réel » de L’Odyssée des idées.
+Cognitif · Politique · Social
+Anthropie, p.
+307‑309
+1758 Physiocrates — le sang et la sève de la richesse
+Ordre créé.
+Une macro-modélisation pionnière (le Tableau économique), voyant l’économie comme un organisme dont la richesse provient de la terre.
+Dette déportée.
+L’ordre libéralisé des flux (libre circulation du grain) déplace le désordre sur les prix, provoquant des émeutes de la faim (« guerre des farines »).
+Économique · Politique · Social
+Anthropie, p.
+310‑312
+1759 Encyclopédie — ordonner le savoir, bouleverser le pouvoir
+Ordre créé.
+Démocratisation et unification du savoir par l’ordre alphabétique et les renvois critiques, rendant les secrets du pouvoir et des métiers transparents.
+Dette déportée.
+L’abondance d’information non hiérarchisée déplace le désordre vers l’interprétation ; la critique de l’autorité peut mener à sa dissolution et à l’instabilité.
+Cognitif · Politique · Technique
+Anthropie, p.
+312‑316
+1762 Rousseau — le feu sous la cendre démocratique
+Ordre créé.
+Légitimité fondée sur la « volonté générale » ; la liberté civile consiste à obéir à la loi qu’on s’est soi-même donnée.
+Dette déportée.
+L’ordre du commun se paie en contraintes sur l’individu (impôt, service militaire) ; brandie comme un absolu, la volonté générale peut justifier la Terreur.
+L’idée dans son histoire.
+Escale « 1762 · Rousseau : de l’état de nature à l’état civil » de L’Odyssée des idées.
+Politique · Social · Philosophique
+Anthropie, p.
+316‑319
+1762 L’assurance — le code du risque
+Ordre créé.
+Mutualisation du risque, transformant le futur incertain en probabilités calculables et en primes payables.
+Dette déportée.
+Création de nouvelles exclusions (« inassurables ») ; dette morale de la surveillance (aléa moral) ; quand le risque privé déborde, la dette se reporte sur le contribuable (AIG, 2008).
+Économique · Social · Technique
+Anthropie, p.
+319‑322
+1776 Adam Smith — la main invisible guide aveugle
+Ordre créé.
+Coordination des intérêts égoïstes par le mécanisme anonyme du marché, produisant la richesse par la division du travail.
+Dette déportée.
+Abrutissement et aliénation de l’ouvrier spécialisé ; externalisation des coûts sociaux et écologiques que le prix n’intègre pas.
+L’idée dans son histoire.
+Escale « 1776 · Adam Smith : la main invisible et les limites du marché » de L’Odyssée des idées.
+Économique · Social · Cognitif
+Anthropie, p.
+322‑325
+1776 Amérique — l’évangile du profit
+Ordre créé.
+Une république fondée sur la « poursuite du bonheur », où la réussite économique devient un signe d’élection et un devoir civique.
+Dette déportée.
+Le profit est sanctifié au prix de l’esclavage, de l’expropriation des peuples autochtones et de la création d’une dette sociale et raciale structurelle.
+Économique · Social · Inégalités
+Anthropie, p.
+325‑329
+1784 Kant — l’horloger de Königsberg démonte l’Histoire
+Ordre créé.
+Une philosophie de l’histoire où l’« insociable sociabilité » des hommes les pousse, à leur insu, vers une paix perpétuelle par le droit.
+Dette déportée.
+Le progrès se paie par le conflit et la souffrance des générations présentes ; l’ordre futur se finance par le désordre et la violence actuels.
+L’idée dans son histoire.
+Escale « 1784 · Kant : la raison contre le trône, le droit contre la discorde » de L’Odyssée des idées.
+Philosophique · Politique · Temporel
+Anthropie, p.
+329‑337
+Âge 6 — L’industrialisation et les nations (1789 → 1905)
+1789 Révolution — le théâtre qui dévore ses acteurs
+Ordre créé.
+Souveraineté nationale, égalité civile proclamée et invention d’une politique-spectacle où le peuple devient acteur public.
+Dette déportée.
+Instabilité institutionnelle chronique ; la Terreur et les guerres civiles comme coût de la refondation ; la violence devient l’arbitre du débat politique.
+Politique · Social · Violence symbolique
+Anthropie, p.
+338‑341
+1789 Droits de l’homme — la transcendance sans Dieu
+Ordre créé.
+Principes universels (liberté, égalité) devenant une norme supérieure à l’État, fondant un droit de résistance.
+Dette déportée.
+L’universalité proclamée trébuche sur ses exclusions (femmes, esclaves, pauvres écartés par le suffrage censitaire) ; la clause de l’« utilité commune » permet de rebaptiser un privilège en utilité, et l’algorithme reconduit aujourd’hui les hiérarchies.
+L’idée dans son histoire.
+Escale « 1789 · La Déclaration des droits de l’homme : le fondement sans fond » de L’Odyssée des idées.
+Inégalités · Violence symbolique · Juridique
+Anthropie, p.
+341‑344
+1791 La guillotine — l’égalité dans la mort
+Ordre créé.
+Standardisation « égale » et rationalisation de la peine capitale, transformant le supplice en procédure administrative.
+Dette déportée.
+Possibilité technique d’une mort industrialisée ; déresponsabilisation du bourreau devenu opérateur ; banalisation du meurtre d’État.
+L’idée dans son histoire.
+Escale « 1792 · La guillotine : l’égalité jusque dans la mort » de L’Odyssée des idées.
+Politique · Moral · Technique
+Anthropie, p.
+344‑347
+1791-1804 Haïti — la liberté contre ses inventeurs
+Ordre créé.
+Première république noire issue d’une révolte d’esclaves victorieuse, universalisant concrètement les Droits de l’homme.
+Dette déportée.
+Paiement d’une indemnité écrasante aux anciens colons ; isolement diplomatique et étranglement économique durable du pays par les puissances esclavagistes.
+Économique · Inégalités · Géopolitique
+Anthropie, p.
+347‑352
+1792 Olympe de Gouges — l’universel décapité
+Ordre créé.
+Exigence d’extension de l’universel aux femmes, rendant visible la contradiction d’une liberté exclusivement masculine.
+Dette déportée.
+Répression violente ; invisibilisation durable des femmes de la sphère politique par la loi (Code civil) et la coutume.
+L’idée dans son histoire.
+Escale « 1791 · Olympe de Gouges : l’universel pris au mot » de L’Odyssée des idées.
+Inégalités · Violence symbolique · Juridique
+Anthropie, p.
+352‑355
+1792 L’Amour Romantique — le cœur code d’exclusion
+Ordre créé.
+Légitimation du choix individuel et de l’intimité comme fondement du couple, contre l’arrangement social.
+Dette déportée.
+Invisibilisation de la charge mentale et domestique (souvent féminine) ; dettes de temps, de soins et d’opportunités ; marchandisation de l’intimité par les plateformes.
+Social · Inégalités · Cognitif
+Anthropie, p.
+355‑358
+1792 Le Nationalisme — la fraternité armée
+Ordre créé.
+Cohésion sociale et capacité de mobilisation de masse (conscription, impôt) fondées sur une appartenance commune imaginée.
+Dette déportée.
+Exclusion et suspicion envers les minorités et l’étranger (xénophobie) ; sacralisation des frontières menant aux guerres totales.
+Politique · Social · Violence symbolique
+Anthropie, p.
+358‑361
+1793 Terreur — la machine à purifier les âmes
+Ordre créé.
+Centralisation radicale du pouvoir et discipline révolutionnaire pour sauver la République face aux menaces internes et externes.
+Dette déportée.
+Paranoïa institutionnalisée, purges et exécutions de masse ; la vertu devient un prétexte à l’élimination physique des opposants.
+L’idée dans son histoire.
+Escale « 1793 · La Terreur : quand la Révolution se dévore » de L’Odyssée des idées.
+Politique · Moral · Social
+Anthropie, p.
+362‑365
+1804 Code civil — coder la société
+Ordre créé.
+Unification du droit, sécurité des contrats et de la propriété, fondant la prévisibilité de l’économie bourgeoise.
+Dette déportée.
+Institutionnalisation du patriarcat (incapacité civile de la femme mariée) et de l’inégalité de filiation ; rigidification des statuts sociaux.
+L’idée dans son histoire.
+Escale « 1802 · Le sacre de l’ordre : la Légion d’honneur et le Code civil » de L’Odyssée des idées.
+Juridique · Inégalités · Violence symbolique
+Anthropie, p.
+365‑369
+1814 Vienne — le bal des cyniques éclairés
+Ordre créé.
+Stabilité géopolitique en Europe pour un siècle (« Concert européen ») par un équilibre des puissances négocié.
+Dette déportée.
+Étouffement des aspirations nationales et libérales des peuples ; légitimation de la répression au nom de l’ordre dynastique.
+Géopolitique · Politique · Social
+Anthropie, p.
+369‑372
+1824 La thermodynamique — l’entropie du programme terminal
+Ordre créé.
+Lois universelles de l’énergie permettant une optimisation sans précédent des machines et de l’industrie.
+Dette déportée.
+Conscience de la dégradation inéluctable de l’énergie (entropie) ; fin de l’illusion du progrès perpétuel ; tribut thermique permanent : pertes des moteurs, des centrales et des data centers, facture qui s’impute ailleurs.
+Énergétique · Écologique · Philosophique
+Anthropie, p.
+372‑375
+1833-1865 L’abolition de l’esclavage — l’humain proclamé
+Ordre créé.
+Reconnaissance juridique de la personne humaine pour des millions d’individus, fin du statut de « bien meuble ».
+Dette déportée.
+Indemnisation des propriétaires d’esclaves (et non des victimes) ; persistance du racisme structurel et de régimes de travail forcé déguisés.
+L’idée dans son histoire.
+Escale « 1848 · Abolir l’esclavage : la morale, le capital et le travail libre » de L’Odyssée des idées.
+Inégalités · Économique · Violence symbolique
+Anthropie, p.
+376‑379
+1835 Tocqueville — le prophète aristocrate de nos servitudes
+Ordre créé.
+Diagnostic lucide de la démocratie, de ses forces (égalité) et de ses risques (tyrannie de la majorité, despotisme doux).
+Dette déportée.
+L’égalité ouvre deux pentes : l’indépendance, qui peut tourner à l’anarchie, et la tutelle douce, qui mène à l’infantilisation et à la lassitude du vouloir ; la démocratie sait aussi éliminer « dans les formes » (esclavage, Indiens), comme Tocqueville le relève lui-même.
+L’idée dans son histoire.
+Escale « 1840 · Tocqueville : la démocratie et le despotisme doux » de L’Odyssée des idées.
+Cognitif · Social · Violence symbolique
+Anthropie, p.
+379‑382
+1835 Télégraphe — l’humanité câblée
+Ordre créé.
+Communication instantanée à grande distance, synchronisation des marchés, des empires et des horloges.
+Dette déportée.
+Tyrannie de l’urgence et de l’obligation de répondre, perte de profondeur et du droit à la lenteur ; coût humain des opérateurs (nerfs, nuits blanches) ; petites catastrophes de la vitesse, comme la dépêche d’Ems mal lue.
+Temporel · Cognitif · Technique
+Anthropie, p.
+383‑386
+1848 Printemps 48 — l’échec simultané des peuples
+Ordre créé.
+Diffusion continentale des idées démocratiques, nationales et sociales ; apprentissage de la mobilisation politique.
+Dette déportée.
+Répression coordonnée des empires (la Russie écrase la Hongrie, l’Autriche reprend Vienne et Prague, la France étouffe Rome) ; en juin, la République tire sur des républicains et la bourgeoisie choisit l’ordre contre la liberté ; l’échec vaccine l’Europe contre l’illusion d’un renversement d’un seul coup et diffère les réussites (suffrage, droits sociaux, nations).
+Politique · Social · Géopolitique
+Anthropie, p.
+386‑390
+1853-1870 Haussmann — l’ordre dans la pierre
+Ordre créé.
+Fluidité de la circulation, hygiène publique (égouts, aération), monumentalité impériale.
+Dette déportée.
+Ségrégation sociale par l’expulsion des classes populaires vers les périphéries ; destruction du tissu social ancien ; fortunes bâties sur les expropriations (Pereire, Rothschild) ; ville rendue maîtrisable par la troupe, retournée en 1871 en « autoroute de répression ».
+Spatial · Social · Inégalités
+Anthropie, p.
+390‑393
+1854 L’Hygiénisme — le corps sous contrat sanitaire
+Ordre créé.
+Santé publique : eau sûre, égouts, asepsie, vaccination, qui expliquent sans doute une part majeure de la baisse de la mortalité (espérance de vie mondiale d’environ 32 ans vers 1900, près de 73 ans en 2019).
+Dette déportée.
+Biopolitique : contrôle social et normatif des corps ; stigmatisation des classes jugées « dangereuses » ; dette immunitaire (hypothèse hygiéniste).
+Social · Politique · Violence symbolique
+Anthropie, p.
+393‑396
+1859 Darwin — le hasard qui ordonne
+Ordre créé.
+Explication matérialiste et unifiée de la diversité du vivant par la sélection naturelle.
+Dette déportée.
+Fin du dessein divin et de la place centrale de l’homme ; instrumentalisation en « darwinisme social » pour justifier les inégalités et l’impérialisme.
+Philosophique · Moral · Violence symbolique
+Anthropie, p.
+397‑400
+1862 L’entreprise — créature juridique immortelle
+Ordre créé.
+Accumulation de capital à long terme par la personnalité morale et la responsabilité limitée.
+Dette déportée.
+Profits privatisés, coûts socialisés : quand l’aventure tourne mal, le passif déborde vers la communauté (salariés, voisins, rivière en aval) ; externalités sociales et écologiques à rendre facturables ; pouvoir économique concentré (plateformes, marges, optimisation fiscale) que la régulation et la gouvernance cherchent à encadrer.
+Économique · Écologique · Juridique
+Anthropie, p.
+400‑403
+1867 Le Capital — le vampire aux équations
+Ordre créé.
+Grammaire critique du capitalisme, dévoilant le mécanisme de l’exploitation (plus-value) ; outil d’organisation pour le mouvement ouvrier.
+Dette déportée.
+Coûts que l’accumulation déplace sur le travail (surtravail, armée industrielle de réserve) et sur la nature (CO₂, déforestation, sixième extinction) ; la baisse tendancielle du taux de profit reste contestée (Okishio, 1961), sans que la question de ces coûts en dépende.
+L’idée dans son histoire.
+Escale « 1867 · Marx : le capital et l’extraction du travail vivant » de L’Odyssée des idées.
+Cognitif · Politique · Économique
+Anthropie, p.
+404‑407
+1868 Meiji — devenir l’autre pour rester soi
+Ordre créé.
+Modernisation accélérée, État central puissant, souveraineté nationale préservée face à l’Occident.
+Dette déportée.
+Autoritarisme, militarisme et expansionnisme impérial ; destruction des structures sociales traditionnelles (samouraïs) ; coût humain de l’industrialisation forcée.
+Politique · Social · Géopolitique
+Anthropie, p.
+407‑410
+1871 La Commune — la révolution qui invente son vocabulaire
+Ordre créé.
+Expérimentation d’un autogouvernement démocratique direct (mandats révocables, autogestion).
+Dette déportée.
+Guerre civile et répression extrême (« Semaine sanglante » : cours prévôtales, quelque 43 000 arrestations, vingt mille morts peut-être) ; un vocabulaire neuf qui aura coûté tant de vies : la ville perdue, la langue gagnée.
+L’idée dans son histoire.
+Escale « 1870 · La République dans le sang : Sedan, la Commune » de L’Odyssée des idées.
+Politique · Social · Mémoriel
+Anthropie, p.
+411‑414
+1882 L’école de Ferry — la machine à formater les âmes
+Ordre créé.
+Unité nationale par l’instruction obligatoire, la laïcité et une langue commune.
+Dette déportée.
+Éradication des idiomes régionaux (le « signal », une « pédagogie d’éradication ») ; formatage d’un récit national qui a contribué à rendre possibles la mobilisation de masse et l’acceptation du sacrifice en 14-18 ; histoire de France enseignée aux colonies, « double aliénation ».
+L’idée dans son histoire.
+Escale « 1885 · Ferry : l’école qui libère, l’empire qui domine » de L’Odyssée des idées.
+Culturel · Politique · Violence symbolique
+Anthropie, p.
+414‑417
+1882 L’Électricité — la dette de lumière
+Ordre créé.
+Repoussement de la nuit, création d’un réseau nerveux planétaire, synchronisation du temps et des activités.
+Dette déportée.
+Dette envers la nature (extraction, pollution), les générations futures (maintenance, déchets) et la physique (pertes systémiques).
+Énergétique · Écologique · Temporel
+Anthropie, p.
+417‑420
+1884-1885 Berlin — le monde découpé à la règle
+Ordre créé.
+Stabilité géopolitique en Europe par le partage réglementé de l’Afrique ; sanctuarisation des sphères d’influence coloniales.
+Dette déportée.
+Création de frontières artificielles (« géométrie homicide ») qui divisent des peuples et en enferment d’autres, programmant des conflits futurs sur le continent africain.
+Géopolitique · Social · Spatial
+Anthropie, p.
+420‑422
+1887 Nietzsche — l’homme-dynamite
+Ordre créé.
+Lucidité par la « transmutation de toutes les valeurs » ; diagnostic de la « mort de Dieu » et de la morale du ressentiment.
+Dette déportée.
+Vide métaphysique comblé par des absolus de substitution (Nation, Race, Classe) ; la « faute » (Schuld) se déplace de la théologie vers la politique et l’économie.
+L’idée dans son histoire.
+Escale « 1882 · Nietzsche : Dieu est mort, l’homme reste à créer » de L’Odyssée des idées.
+Moral · Philosophique · Politique
+Anthropie, p.
+422‑425
+1894-1906 L’Affaire Dreyfus — la République face à son miroir brisé
+Ordre créé.
+Réaffirmation de l’État de droit contre la raison d’État ; invention de la figure de l’intellectuel engagé ; clarification du paysage politique.
+Dette déportée.
+Fracture profonde de la société française ; légitimation et organisation d’un antisémitisme et d’un nationalisme de combat.
+L’idée dans son histoire.
+Escale « 1898 · « J’accuse » : Dreyfus et la naissance de l’intellectuel » de L’Odyssée des idées.
+Social · Politique · Moral
+Anthropie, p.
+425‑428
+1900 Freud — l’inconscient comme scène
+Ordre créé.
+Intelligibilité de la psyché par la cartographie de l’inconscient ; méthode thérapeutique (talking cure) qui donne un sens aux symptômes.
+Dette déportée.
+L’ordre d’une défense (symptôme) déplace le désordre d’une pulsion ; la conscience est dépossédée de sa maîtrise ; dette psychique gérée mais jamais annulée.
+Cognitif · Psychique · Social
+Anthropie, p.
+428‑431
+1905 La séparation des Églises et de l’État — la fille aînée s’émancipe
+Ordre créé.
+Neutralité de l’État, paix civile par la privatisation de la foi, garantie de la liberté de conscience et de culte.
+Dette déportée.
+Dette laïque : l’État devient garant et arbitre de la coexistence des cultes, avec des coûts d’entretien (patrimoine) et de régulation (procédures) permanents.
+Juridique · Politique · Administratif
+Anthropie, p.
+431‑440
+Âge 7 — Le métaprogramme contemporain (1905 → 2024)
+1905-1915 Einstein — temps élastique, espace courbe
+Ordre créé.
+Unification de l’espace, du temps, de la matière et de l’énergie sous des lois physiques invariantes.
+Dette déportée.
+Dette nucléaire (E=mc² : chaleur, radiations, déchets à demi-vie longue) ; coût des infrastructures qui maintiennent un temps global (corrections GPS, satellites à remplacer, débris orbitaux) ; dette relativiste envers la nature, les générations et la physique.
+L’idée dans son histoire.
+Escale « 1905 · Einstein : l’équation et le monde » de L’Odyssée des idées.
+Cognitif · Énergétique · Technique
+Anthropie, p.
+440‑443
+1914-1918 Guerre totale — la machine à broyer l’humain
+Ordre créé.
+Mobilisation intégrale de la société (usines, capitaux, esprits) pour une efficacité militaire maximale.
+Dette déportée.
+Dette humaine (millions de morts), psychique (shell shock), écologique (zones rouges) et politique (traités qui programment la guerre suivante).
+Social · Écologique · Politique
+Anthropie, p.
+443‑446
+1917 Révolution d’Octobre — le paradis accouche du goulag
+Ordre créé.
+Imposition d’un ordre socialiste par un parti d’avant-garde, centralisation de l’économie et de l’État.
+Dette déportée.
+Coût humain de la terreur, des famines organisées et du Goulag ; la promesse d’égalité se paie en servitude généralisée et en pénurie.
+Politique · Social · Économique
+Anthropie, p.
+446‑450
+1922-1928 Lippmann & Bernays — le consentement qui s’ignore
+Ordre créé.
+Ingénierie de l’opinion publique, rendant les masses gouvernables et les désirs prévisibles pour le marché.
+Dette déportée.
+Dette épistémique (un pseudo-environnement remplace l’environnement, la méfiance s’accumule), dette attentionnelle (fatigue décisionnelle, polarisation, indignation chronique) et dette sociale (coûts externalisés sur les exclus du récit : cancers tabagiques, régimes renversés, institutions discréditées).
+L’idée dans son histoire.
+Escale « 1922 · La fabrique du consentement » de L’Odyssée des idées.
+Cognitif · Politique · Social
+Anthropie, p.
+450‑454
+1925-1927 Quanta — un monde qui joue aux dés
+Ordre créé.
+Une description probabiliste du réel fondamental qui permet une maîtrise technique sans précédent (transistors, lasers).
+Dette déportée.
+Fin du déterminisme classique ; dette d’interprétation philosophique permanente ; coût énergétique des infrastructures pour maîtriser l’infiniment petit.
+Philosophique · Énergétique · Technique
+Anthropie, p.
+454‑457
+1928 Pénicilline — le corps sous contrat algorithmique
+Ordre créé.
+Victoire administrée contre les infections bactériennes, baisse drastique de la mortalité, sécurité chirurgicale.
+Dette déportée.
+Dette biologique de l’antibiorésistance ; désordre déplacé vers la gouvernance des données (captation, rançongiciels), l’économie (rentes, prix) et l’angoisse (auto-mesure, sur-diagnostics).
+L’idée dans son histoire.
+Escale « 1928 · La pénicilline : une découverte hasardeuse, une révolution médicale » de L’Odyssée des idées.
+Écologique · Social · Technique
+Anthropie, p.
+458‑460
+1936 Front populaire — prendre les symboles, céder l’essentiel
+Ordre créé.
+Conquête de droits sociaux majeurs (congés payés, 40 heures), dignité ouvrière reconnue.
+Dette déportée.
+Désordre économique (inflation, fuite des capitaux) ; dette morale de la non-intervention en Espagne.
+L’idée dans son histoire.
+Escale « 1936 · Le Front populaire : l’été où le travail réclama sa part » de L’Odyssée des idées.
+Social · Économique · Politique
+Anthropie, p.
+460‑464
+1936-1944 Industrie culturelle vs service public — la guerre des récits
+Ordre créé.
+Standardisation des formats culturels pour l’industrie, création d’un espace civique commun pour le service public.
+Dette déportée.
+L’industrie culturelle déplace le désordre dans les esprits (conformisme, passivité) ; le service public le déplace dans la politique (pressions, élitisme).
+Cognitif · Culturel · Politique
+Anthropie, p.
+465‑468
+1938 Munich — diplomatie du désastre
+Ordre créé.
+Une paix immédiate et illusoire par la concession face à la force.
+Dette déportée.
+La guerre est reportée dans le temps et amplifiée ; le coût est déplacé sur la nation sacrifiée (Tchécoslovaquie) et les générations futures.
+L’idée dans son histoire.
+Escale « 1938 · L’apaisement et sa faillite : de Munich à Prague » de L’Odyssée des idées.
+Géopolitique · Temporel · Moral
+Anthropie, p.
+468‑472
+1940 18 juin — le verbe qui fonde l’État fantôme
+Ordre créé.
+Continuité de la légitimité française par la force d’un acte de parole, créant un État sans territoire.
+Dette déportée.
+Le coût de cet ordre symbolique est payé en vies par la Résistance et les FFL, et par les destructions subies pour la Libération.
+Symbolique · Politique · Social
+Anthropie, p.
+472‑476
+1940-1945 Churchill — l’orateur qui parlait l’empire à mort
+Ordre créé.
+Cohésion nationale face à la défaite imminente, transformant la parole en arme stratégique.
+Dette déportée.
+L’effort de guerre est payé par la liquidation de l’Empire britannique et une dette financière colossale envers les États-Unis.
+L’idée dans son histoire.
+Escale « 1940 · Churchill : la vérité pour seule arme » de L’Odyssée des idées.
+Symbolique · Géopolitique · Économique
+Anthropie, p.
+476‑479
+1945 Hiroshima/Nagasaki — création contre créateur
+Ordre créé.
+Fin accélérée de la guerre, instauration d’un ordre de dissuasion nucléaire (la « paix » par la terreur).
+Dette déportée.
+Dette humaine et écologique sur les villes détruites ; dette morale et psychique d’une humanité capable de s’auto-anéantir.
+Technique · Politique · Moral
+Anthropie, p.
+479‑482
+1945 Sécurité sociale — le soin devient droit
+Ordre créé.
+Solidarité obligatoire qui mutualise les risques de la vie (maladie, vieillesse) et dé-marchandise le soin.
+Dette déportée.
+Dette intergénérationnelle (actifs payant pour les retraités) et dette financière (déficits) gérées par un appareil bureaucratique.
+L’idée dans son histoire.
+Escale « 1945 · Sécurité sociale : la solidarité instituée » de L’Odyssée des idées.
+Social · Économique · Administratif
+Anthropie, p.
+482‑486
+1947 Exodus — la mémoire en concurrence
+Ordre créé.
+Légitimation morale et politique de la création d’Israël par la mise en scène de la souffrance des rescapés de la Shoah.
+Dette déportée.
+Le désordre est transféré sur le peuple palestinien (Nakba) ; la concurrence des mémoires installe un conflit identitaire insoluble.
+L’idée dans son histoire.
+Escale « 1947 · Exodus : le bateau qui força le monde à regarder » de L’Odyssée des idées.
+Symbolique · Géopolitique · Mémoriel
+Anthropie, p.
+486‑491
+1948 La Déclaration universelle — la dignité en articles
+Ordre créé.
+Une norme morale universelle qui rend la violation des droits humains visible et illégitime.
+Dette déportée.
+Le texte crée une dette de conformité permanente pour tous les États ; le désordre est déplacé de la force brute vers la justification et la procédure.
+Juridique · Moral · Politique
+Anthropie, p.
+491‑495
+1948 Shannon — tuer le sens, faire naître l’information
+Ordre créé.
+Une théorie mathématique de la communication qui permet une transmission de données quasi sans erreur et fonde l’ère numérique.
+Dette déportée.
+Le sens est évacué du processus ; l’ordre syntaxique se paie d’un désordre sémantique (surcharge informationnelle, perte de contexte).
+L’idée dans son histoire.
+Escale « 1949 · Shannon : l’information sans le sens » de L’Odyssée des idées.
+Technique · Cognitif · Philosophique
+Anthropie, p.
+495‑498
+1953 ADN — décoder pour recoder
+Ordre créé.
+Compréhension du code génétique, ouvrant la voie à l’ingénierie du vivant.
+Dette déportée.
+Dette éthique (eugénisme 2.0), écologique (OGM) et sociale (inégalités biologiques) ; la précision génétique crée un chaos normatif.
+Technique · Écologique · Moral
+Anthropie, p.
+498‑502
+1957 Marché commun — l’union qui divise
+Ordre créé.
+Paix par l’intégration économique, création d’un marché unifié.
+Dette déportée.
+Le conflit politique est déplacé vers la norme technocratique ; la souveraineté populaire est érodée au profit d’une gouvernance à distance.
+Économique · Politique · Juridique
+Anthropie, p.
+502‑505
+1958 Ve République — démocratiser la monarchie
+Ordre créé.
+Stabilité exécutive par la concentration du pouvoir présidentiel.
+Dette déportée.
+Affaiblissement du Parlement et des corps intermédiaires ; le désordre démocratique est déplacé vers l’abstention ou la rue.
+Politique · Social
+Anthropie, p.
+505‑507
+1958-1988 Climat — mesurer pour ignorer
+Ordre créé.
+Un corpus de preuves scientifiques de plus en plus précis sur le réchauffement climatique.
+Dette déportée.
+La connaissance exacte devient parfois l’alibi de l’inaction politique ; la dette carbone s’accumule, transférant le chaos physique sur les générations futures.
+Cognitif · Temporel · Écologique
+Anthropie, p.
+507‑510
+1960 Afrique — l’an II des indépendances
+Ordre créé.
+Ordre des drapeaux et des hymnes nationaux, indépendance politique formelle.
+Dette déportée.
+Persistance des structures de dépendance économique et politique (néo-colonialisme) ; l’arbitraire des frontières déplace le désordre à l’intérieur des nouveaux États.
+Géopolitique · Économique · Politique
+Anthropie, p.
+511‑514
+1960 Pilule — le temps fertile domestiqué
+Ordre créé.
+Maîtrise individuelle du calendrier de la fertilité, dissociation de la sexualité et de la reproduction.
+Dette déportée.
+La charge contraceptive (sanitaire, mentale) est massivement reportée sur les femmes ; dette de recherche sur la contraception masculine.
+Social · Technique · Inégalités
+Anthropie, p.
+515‑518
+1962 Décoloniser — la nation au miroir
+Ordre créé.
+Multiplication des États-nations souverains.
+Dette déportée.
+Les anciennes métropoles et les nouveaux États sont confrontés à des crises identitaires ; le refoulé colonial revient en miroir (immigration, racisme, guerres civiles).
+Symbolique · Social · Mémoriel
+Anthropie, p.
+519‑523
+1967 Debord — le spectacle ou l’hypnose marchande
+Ordre créé.
+Diagnostic de la société où les rapports sociaux sont médiatisés par les images.
+Dette déportée.
+Le spectacle colonise l’imaginaire et la vie vécue ; l’ordre de la consommation déplace le désordre dans l’aliénation et la passivité.
+Cognitif · Social · Symbolique
+Anthropie, p.
+523‑527
+1968 Mai 68 — jouir sans entraves, entraver sans jouir
+Ordre créé.
+Libération des mœurs et critique radicale de l’autorité.
+Dette déportée.
+Le refus du pouvoir politique laisse le capitalisme récupérer la critique pour en faire un argument marketing ; la liberté culturelle se paie d’une précarisation économique.
+L’idée dans son histoire.
+Escale « 1968 · Mai 68 : l’imagination au pouvoir contre l’ordre sans imagination » de L’Odyssée des idées.
+Culturel · Social · Économique
+Anthropie, p.
+527‑531
+1969 Apollo 11 — l’humanité hors d’elle-même
+Ordre créé.
+Prouesse technique et symbolique absolue, démonstration de la puissance humaine.
+Dette déportée.
+Coût financier colossal qui déplace les priorités terrestres (social, pauvreté) ; dette écologique de la course à l’espace (débris).
+L’idée dans son histoire.
+Escale « 1969 · Apollo 11 : décrocher la Lune, revenir vers la Terre » de L’Odyssée des idées.
+Technique · Symbolique · Économique
+Anthropie, p.
+531‑535
+1971 Microprocesseur — l’invisible qui commande
+Ordre créé.
+Puissance de calcul universelle et miniaturisée, fondant l’automatisation et la société de l’information.
+Dette déportée.
+Dette écologique (déchets électroniques), sociale (obsolescence des métiers) et stratégique (vulnérabilité des systèmes).
+Technique · Économique · Écologique
+Anthropie, p.
+535‑538
+1971 Le dollar-roi — la richesse sans valeur
+Ordre créé.
+Fin de la convertibilité en or, créant un système monétaire flexible fondé sur la confiance dans le dollar.
+Dette déportée.
+Les États-Unis exportent leur inflation et financent leurs déficits par le reste du monde ; dette de stabilité pour les pays de la périphérie.
+L’idée dans son histoire.
+Escale « 1971 · Le dollar : le privilège exorbitant et son crépuscule annoncé » de L’Odyssée des idées.
+Économique · Géopolitique
+Anthropie, p.
+539‑542
+1974 Kahneman — la raison qui déraisonne
+Ordre créé.
+Cartographie de nos biais cognitifs, révélant une architecture prévisible de l’irrationalité humaine.
+Dette déportée.
+Ce savoir devient un outil de manipulation (nudge), déplaçant le désordre de nos erreurs vers une servitude consentie face à des « architectures de choix ».
+Cognitif · Politique · Économique
+Anthropie, p.
+543‑546
+1979 Bourdieu — l’ordre du goût, le goût de l’ordre
+Ordre créé.
+Dévoilement des mécanismes de la « distinction », où le goût sert de marqueur de classe.
+Dette déportée.
+La lucidité sociologique devient elle-même un capital culturel, créant une nouvelle forme de distinction par la critique de la distinction.
+L’idée dans son histoire.
+Escale « 1979 · Bourdieu : comment nos goûts révèlent notre position sociale » de L’Odyssée des idées.
+Social · Cognitif · Violence symbolique
+Anthropie, p.
+546‑548
+1979-1980 Néolibéralisme — il y a du dollar dans l’air
+Ordre créé.
+Stabilité monétaire, discipline de marché, libération des flux de capitaux.
+Dette déportée.
+Le désordre est déplacé sur le social (chômage de masse, inégalités), l’écologique (dérégulation) et le politique (perte de souveraineté).
+Économique · Social · Politique
+Anthropie, p.
+548‑552
+1989-1991 Internet — le centre partout, nulle part
+Ordre créé.
+Connexion planétaire, accès décentralisé à l’information.
+Dette déportée.
+Fragmentation cognitive (surcharge), surveillance généralisée ; l’ordre de la connexion déplace le désordre vers l’attention et la vie privée.
+Technique · Cognitif · Social
+Anthropie, p.
+556‑561
+1991 URSS — l’empire qui s’est suicidé en voulant se soigner
+Ordre créé.
+Fin de la Guerre froide, libération des nations captives de l’empire soviétique.
+Dette déportée.
+Chaos économique et social post-effondrement (thérapie de choc, hyperinflation, « prêts contre actions ») ; le désordre politique se déplace vers des conflits régionaux (Crimée et Donbass en 2014, invasion de 2022) et une Russie qui se tient par l’ordre autoritaire, la rente pétrolière et la nostalgie.
+L’idée dans son histoire.
+Escale « 1991 · L’effondrement de l’URSS : le réformateur et le fossoyeur » de L’Odyssée des idées.
+Géopolitique · Politique · Social
+Anthropie, p.
+553‑556
+1995 Exoplanètes — miroirs sans visage
+Ordre créé.
+Connaissance de milliers d’autres mondes, décentrant radicalement notre place dans l’univers.
+Dette déportée.
+Coût financier et énergétique de l’observation ; dette orbitale (débris spatiaux) ; le paradoxe de Fermi s’aiguise, créant un désordre existentiel.
+Cognitif · Écologique · Philosophique
+Anthropie, p.
+561‑564
+1995 Flux cérébral — abîmes perdus vs surface captive
+Ordre créé.
+Économie de l’attention qui optimise la captation des flux de conscience.
+Dette déportée.
+Assèchement mental collectif, perte de la capacité de concentration profonde ; la dette cognitive se paie en fatigue et en superficialité.
+Cognitif · Économique · Social
+Anthropie, p.
+564‑568
+2000 Anthropocène — la puissance qui suicide
+Ordre créé.
+Une puissance humaine devenue force géologique, capable de modeler la planète.
+Dette déportée.
+La dette est totale : climatique, écologique, biosphérique ; l’ordre industriel déplace le désordre sur l’ensemble du système-Terre, menaçant sa propre survie.
+Écologique · Énergétique · Global
+Anthropie, p.
+569‑572
+2001 11 Septembre — la chute de l’empire
+Ordre créé.
+Un appareil sécuritaire global pour prévenir la menace terroriste.
+Dette déportée.
+Érosion des libertés civiles, guerres sans fin, autorité morale diminuée ; la sécurité promise se paie d’une insécurité généralisée.
+Politique · Juridique · Géopolitique
+Anthropie, p.
+572‑574
+2008 Crise financière — cathédrale de verre, foi fissurée
+Ordre créé.
+Sauvetage du système financier mondial par une intervention massive des États et des banques centrales.
+Dette déportée.
+La socialisation des pertes privées se paie en dette publique et en austérité pour les populations ; la confiance dans les élites est durablement brisée.
+L’idée dans son histoire.
+Escale « 2008 · La crise des subprimes : la dette privée socialisée » de L’Odyssée des idées.
+Économique · Politique · Social
+Anthropie, p.
+574‑578
+2009 Bitcoin — la confiance change d’adresse
+Ordre créé.
+Réseau de confiance décentralisé, sans intermédiaire, fondé sur une règle algorithmique.
+Dette déportée.
+Dette énergétique de la « preuve de travail » ; volatilité extrême ; la confiance est déplacée du politique vers un code dont la gouvernance reste un enjeu.
+Technique · Énergétique · Économique
+Anthropie, p.
+578‑582
+2012 CRISPR — gènes découpés, humanité réécrite
+Ordre créé.
+Précision chirurgicale dans l’édition du génome, promesse de guérison.
+Dette déportée.
+Dette éthique (eugénisme 2.0), sociale (inégalités biologiques), et écologique (forçage génétique) ; le chaos normatif est déplacé sur les générations futures.
+Technique · Moral · Écologique
+Anthropie, p.
+582‑586
+2013 Algorithmes — prédire sans voir, gouverner sans nom
+Ordre créé.
+Prédiction et optimisation des comportements à grande échelle.
+Dette déportée.
+Servitude algorithmique, opacité des décisions, pétrification du passé dans les modèles prédictifs ; la liberté devient la capacité de dévier de la trajectoire calculée.
+Cognitif · Politique · Technique
+Anthropie, p.
+586‑590
+2015 Accord de Paris — du mou dans le dur
+Ordre créé.
+Unanimité diplomatique, cadre procédural universel pour l’action climatique.
+Dette déportée.
+L’ordre procédural déplace le désordre physique (émissions réelles) sur le futur et sur les pays du Sud ; la dette climatique continue de croître.
+Politique · Écologique · Temporel
+Anthropie, p.
+591‑595
+2016 RGPD — les droits de l’impuissant
+Ordre créé.
+Cadre juridique pour la protection des données personnelles, créant des droits pour les citoyens.
+Dette déportée.
+Dette cognitive pour les utilisateurs (fatigue du consentement) et bureaucratique pour les PME ; l’ordre formel valide une architecture d’extraction.
+Juridique · Cognitif · Économique
+Anthropie, p.
+595‑599
+2020 Covid-19 — stress-test du monde
+Ordre créé.
+Protection sanitaire par le contrôle social (confinement, passe sanitaire).
+Dette déportée.
+Désordre économique (dette publique), social (inégalités), psychique (santé mentale) et éducatif (pertes d’apprentissage) massivement déporté.
+Social · Économique · Politique
+Anthropie, p.
+600‑605
+2022 Psittacisme 2.0 — le perroquet parle aux perroquets
+Ordre créé.
+Automatisation de la production de langage et d’images, gain de productivité.
+Dette déportée.
+Dette de vérification (hallucinations), dette sociale (tâches remplacées, reconversion renvoyée à l’individu) et dette cognitive (atrophie du jugement) ; valeur concentrée au détriment des créateurs dont les œuvres servent de corpus.
+Cognitif · Économique · Technique
+Anthropie, p.
+605‑608
+2024 L’État sans peuple, le peuple sans État
+Ordre créé.
+Ordre des marchés financiers globaux, liquidité et efficacité des flux de capitaux.
+Dette déportée.
+Perte de souveraineté des États démocratiques ; le désordre est déplacé vers les peuples (austérité, précarité) pour garantir la stabilité des actifs.
+Politique · Économique · Social
+Anthropie, p.
+609‑613
+Aucun jalon ne répond à ces critères.
+La trajectoire : du spatial au cognitif
+Lue d’un bout à l’autre, la chronologie dessine une migration que la postface du livre résume ainsi.
+Aux âges 1 à 3, l’ordre déplace le désordre spatialement : les morts hors du village, les déchets hors de la cité, les « barbares » hors de l’empire.
+Aux âges 4 et 5, il le déplace socialement : sur les serfs, sur les colonies, sur les classes laborieuses.
+Aux âges 6 et 7, temporellement et cognitivement : sur les générations futures (climat), sur l’attention (algorithmes).
+À chaque saturation d’un espace de déportation, la fuite s’invente ailleurs — plus abstrait, plus lointain, moins politisable.
+Cette dynamique — déplacement, accumulation, saturation, retour — est formalisée dans AWP-07 — La boucle anthropique ; la lecture du Registre en longue durée est l’objet d’AWP-02 — 3,3 millions d’années en un principe.
+Ce que le Registre ne dit pas
+Le Registre montre où vont les dettes ; il ne montre pas comment elles reviennent.
+Or elles reviennent — métamorphosées : le CO₂ en canicules, l’exploitation coloniale en migrations, l’attention captée en dépendances.
+Ce retour est précisément l’objet de la boucle anthropique, formalisée dans AWP-07.
+Autre limite, assumée par le livre : les catégories du Registre — économique, social, politique — sont elles-mêmes des outils d’analyse qui découpent le réel, et ce découpage peut servir la déportation qu’il décrit : séparer l’économique du social permet de déplacer les coûts de l’un vers l’autre.
+Le Registre recense ; il ne prétend pas trancher ce que chaque transfert avait d’évitable.
+D’où vient ce registre
+Le livre ANTHROPIE – Ordre ici.
+Dette ailleurs (2025, 630 pages) déploie chaque jalon en chapitre, résume chaque âge par un schéma « ordre créé / désordre déporté » et tire la trajectoire d’ensemble dans sa postface ; il renvoie à cette page par un QR code (« Pour aller plus loin », p.
+619).
+Le Registre condense chaque chapitre sur la grille commune, dans les termes de l’auteur ; chaque jalon y est rangé dans l’âge de son chapitre, avec la pagination de l’édition de 630 pages.
+Quand le livre est corrigé, le Registre suit : les révisions sont consignées en pied de page.
+Le vocabulaire du cadre est défini au glossaire — à ne pas confondre avec les registres de coûts couplés d’AWP-06, qui sont une typologie et non une chronologie.
+L’anthropie est l’hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu’ils ne le résolvent.
+Questions fréquentes
+Qu’est-ce que le Registre des coûts déportés ?
+Le Registre des coûts déportés est l’appareil documentaire du livre ANTHROPIE – Ordre ici.
+Dette ailleurs (Stéphane Lalut, 2025).
+Le livre raconte l’histoire longue en 168 jalons, des premiers outils (≈ −3,3 millions d’années) aux algorithmes contemporains ; le Registre ramène chaque jalon à la même grille : l’ordre créé par une innovation et la dette déportée — le désordre déplacé vers d’autres lieux, d’autres temps ou d’autres groupes.
+Le livre y renvoie par un QR code ; les 168 jalons sont en consultation libre sur cette page.
+Quels sont les sept âges de l’anthropie ?
+Le livre ANTHROPIE organise l’histoire longue en sept âges : 1.
+Les programmes fondateurs (8 jalons, ≈ −3,3 millions d’années → ≈ −45 000) ; 2.
+Le piège néolithique (7, ≈ −10 000 → ≈ −1 046) ; 3.
+Les systèmes d’exploitation antiques (34, ≈ −900 → 312) ; 4.
+Les réseaux : routes, relais, relais de pouvoir (20, 486 → 1494) ; 5.
+La machine-État moderne (24, 1513 → 1784) ; 6.
+L’industrialisation et les nations (29, 1789 → 1905) ; 7.
+Le métaprogramme contemporain (46, 1905 → 2024).
+Le livre ne fixe pas de bornes à ses âges : chacun se définit par ses chapitres, et le Registre range chaque jalon dans l’âge de son chapitre.
+Que signifient « ordre créé » et « dette déportée » ?
+C’est la grille de lecture de chaque jalon du Registre.
+L’« ordre créé » décrit ce qu’une innovation stabilise — sécurité alimentaire, mémoire écrite, confiance monétaire, coordination à distance.
+La « dette déportée » décrit le coût que cet ordre déplace hors de son périmètre visible : vers d’autres lieux, d’autres temps ou d’autres groupes sociaux.
+Des catégories (énergétique, sociale, cognitive, politique…) précisent la nature du transfert.
+La grille applique l’hypothèse anthropique : l’ordre ne se crée pas, il se paie ailleurs.
+Quel est le plus ancien transfert documenté par le Registre ?
+Les premiers outils de pierre, vers −3,3 millions d’années.
+Ordre créé : l’externalisation de la mémoire et de l’intention dans des artefacts durables, qui rend le savoir transmissible indépendamment de son porteur.
+Dette déportée : la dépendance aux matériaux et aux savoir-faire, et la conversion d’un coût cognitif en coût thermodynamique pour l’extraction et le façonnage.
+Le déplacement du désordre précède donc de très loin l’industrialisation.
+Comment le déplacement du désordre a-t-il évolué au fil des sept âges ?
+La postface du livre dégage une trajectoire nette.
+Âges 1 à 3 : l’ordre déplace le désordre spatialement — les morts hors du village, les déchets hors de la cité, les « barbares » hors de l’empire.
+Âges 4 et 5 : socialement — sur les serfs, les colonies, les classes laborieuses.
+Âges 6 et 7 : temporellement et cognitivement — sur les générations futures (climat), sur l’attention (algorithmes).
+À chaque saturation d’un espace de déportation, la fuite s’invente ailleurs : plus abstrait, plus lointain, moins politisable.
+Le Registre des coûts déportés est-il la même chose que les registres de coûts couplés ?
+Non.
+Le Registre des coûts déportés est l’appareil documentaire du livre ANTHROPIE : une chronologie des jalons historiques du livre.
+Les registres de coûts couplés sont un apport théorique d’AWP-06 : la grille des quatre registres — énergie, matière, territoire, attention — selon lesquels l’infrastructure numérique déplace simultanément le désordre.
+L’un est une chronologie, l’autre une typologie ; seul le mot « registre » est commun.
+Où trouver le Registre des coûts déportés complet ?
+Sur cette page, en consultation libre : les 168 jalons du livre ANTHROPIE – Ordre ici.
+Dette ailleurs (2025, 630 pages).
+Le livre déploie chaque jalon en chapitre, résume chaque âge par un schéma « ordre créé / désordre déporté » et tire la trajectoire d’ensemble dans sa postface.
+Le livre renvoie à cette page par un QR code (« Pour aller plus loin », p.
+619).
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire de consultation
+Un exemplaire numérique de consultation de ANTHROPIE – Ordre ici.
+Dette ailleurs vous est offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
+Aucune recension ni aucune citation n’est demandée.
+Votre exemplaire, disponible immédiatement →
+Révisions
+1er novembre 2026 — Pour 68 jalons, une ligne « L’idée dans son histoire » renvoie à l’escale de L’Odyssée des idées qui traite la même idée, le même penseur ou le même événement ; chaque paire vérifiée sur le texte du livre, aucune entrée du Registre réécrite.
+26 octobre 2026 — Les trois jalons absents ajoutés (Olmèques, Odyssée, Gutenberg), rédigés sur le texte du livre : le Registre compte désormais les 168 jalons.
+Les 165 autres entrées relues contre l’édition corrigée ; 41 réalignées là où elles contredisaient le livre, affirmaient plus que lui ou lui prêtaient un fait qu’il ne porte pas (par exemple : le Rubicon ouvre la guerre civile, il ne la clôt pas ; l’hygiène explique « sans doute une part majeure » de la baisse de la mortalité, non toute).
+Le même jour, chaque jalon rangé dans l’âge de son chapitre (vingt changeaient d’âge : Clovis, les jalons de 1789 à 1793, ceux de 1905 à 1945) et pourvu de sa pagination ; relecture contre l’édition anglaise, qui a fait corriger quatorze entrées françaises de plus là où elles durcissaient le livre (par exemple : Érasme livre « l’un des outils » de la Réforme, non ses outils).
+25 octobre 2026 — Périmètre dit en tête (165 des 168 jalons, les trois absents nommés) ; le Registre n’est plus présenté comme l’épilogue du livre, qui le résume en schémas et y renvoie par un QR code ; jalon « Templiers » aligné sur l’édition corrigée du livre (le Temple a moins légué ses méthodes à l’administration royale qu’une leçon).
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

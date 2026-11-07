@@ -1,0 +1,1614 @@
+# relu le 2026-11-07 ; texte servi de /en/register-of-offloaded-costs/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+The Register of Offloaded Costs
+Page updated 1 November 2026 · revisions
+The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY – A Big History of Civilization’s Hidden Costs: the book tells deep history in 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, and the Register asks each of them the same two questions: what order did this innovation create, and what debt did it displace—toward other places, other times, or other social groups?
+The English version, below, is freely browsable; it holds all 168 milestones of the book.
+One milestone, the two questions · ≈ −1,500,000
+Fire—stealing lightning, setting the world alight
+Order created
+A secured social center, digestion externalized through cooking, useful hours extended by pushing back the night.
+Debt displaced
+A permanent energy debt owed to fuel; health costs (smoke); the first extractive gaze upon nature.
+Energetic · Social · Ecological
+Anthropy, pp.
+28–32
+ANTHROPY – A Big History of Civilization’s Hidden Costs
+Seven ages of history for a single hypothesis: disorder is never resolved, only displaced.
+Discover the book ›
+How to read a milestone
+Each entry applies the grid of the anthropic hypothesis—social systems displace disorder rather than resolve it:
+Order created—the visible, immediate benefit, the structure gained: food security, written memory, monetary trust, coordination at a distance;
+Debt displaced—the invisible cost that this order moves out of its visible perimeter: material dependence, social exclusion, charges passed on to later generations;
+Categories—the nature of the transfer: energetic, social, cognitive, political, ecological, symbolic…
+The idea in its history—for 68 milestones, the stop in L’Odyssée des idées (in French) that deals with the same idea, thinker or event: the Register keeps the account of its displaced cost, the stop tells its history.
+The Register does not tell the story of progress: it keeps its accounts.
+What other narratives present as solutions appears here as displacements—every solution incurs a debt, and history is the sequence of these transfers.
+Seven ages, 168 milestones
+How the book’s milestones are spread across its seven ages: a choice in the writing of the book, not a measure of how much each period matters.
+Choose an age to go to its milestones.
+Age 1Foundational Programs≈ −3.3 million years → ≈ −45,000
+8
+Age 2The Neolithic Trap≈ −10,000 → ≈ −1,046
+7
+Age 3The Extractive Empires≈ −900 → 312
+34
+Age 4The Networks—Routes, Relays, Relays of Power486 → 1494
+20
+Age 5The Modern State-machine1513 → 1784
+24
+Age 6Industrialization and Nation-States1789 → 1905
+29
+Age 7The Contemporary Metaprogram1905 → 2024
+46
+The Register
+All categoriesPolitical (88)Social (87)Cognitive (56)Economic (51)Symbolic (31)Technical (31)Philosophical (21)Ecological (17)Moral (17)Symbolic violence (17)Geopolitical (14)Legal (13)Energetic (12)Inequalities (11)Temporal (11)Spatial (9)Cultural (8)Memory (3)Administrative (2)Global (1)Psychological (1)
+With a stop in L’Odyssée des idées (68)
+All 168 milestones of the book—each on the same grid: Order created, Debt displaced, categories of the transfer.
+Age 1—Foundational Programs (≈ −3.3 million years → ≈ −45,000)
+≈ −3,300,000 First tools—external memory
+Order created.
+Memory and intention externalized into durable artifacts, creating transmissible knowledge independent of its bearer.
+Debt displaced.
+Dependence on materials and know-how; a cognitive cost converted into a thermodynamic cost of extraction and shaping.
+Technical · Energetic · Cognitive
+Anthropy, pp.
+24–28
+≈ −1,500,000 Fire—stealing lightning, setting the world alight
+Order created.
+A secured social center, digestion externalized through cooking, useful hours extended by pushing back the night.
+Debt displaced.
+A permanent energy debt owed to fuel; health costs (smoke); the first extractive gaze upon nature.
+Energetic · Social · Ecological
+Anthropy, pp.
+28–32
+≈ −400,000 Death—the archive of the living
+Order created.
+The invention of the long term, of collective memory, and of lineages; burial founds territory and legitimizes power.
+Debt displaced.
+The colossal material and energy cost of funerary rites; space taken from the living; social inequalities petrified beyond death.
+Symbolic · Social · Spatial
+Anthropy, pp.
+32–36
+≈ −400,000 Language—breath makes a world
+Order created.
+Large-scale social coordination, transmission of complex knowledge, the capacity for abstract thought (past, future, hypotheses).
+Debt displaced.
+The upkeep cost of conventions (grammar); confinement within categories of thought; exclusion through the word (taboos).
+Cognitive · Social · Symbolic
+Anthropy, pp.
+36–39
+≈ −300,000 Homo sapiens—the face-interface
+Order created.
+A high-frequency interface of social recognition, which may have accelerated coordination and set up nonverbal protocols of trust.
+Debt displaced.
+The metabolic cost of processing facial information; future infrastructures of control (biometrics) built on the surveillance of faces.
+Social · Political · Technical
+Anthropy, pp.
+40–43
+≈ −120,000 Commerce—the bond that divides
+Order created.
+Circulation of ornaments and pigments between groups, founded on shared conventions of value, which reduce local uncertainty.
+Debt displaced.
+Inequalities formalized through the accumulation of symbolic goods; the cost of logistics; division between those who share the code and everyone else.
+Economic · Social · Spatial
+Anthropy, pp.
+43–47
+≈ −70,000 Religion—the invisible, shared
+Order created.
+Social cohesion beyond kinship through the ritualized management of anxiety and a shared sacred calendar.
+Debt displaced.
+The material cost of offerings and of places set aside for ritual; time taken from subsistence; a division between those who share the rite and those who stand apart from it.
+The idea in its history.
+Stop “−70 000 · La religion, représentation de l’âme humaine” in L’Odyssée des idées (in French).
+Symbolic · Social · Economic
+Anthropy, pp.
+48–51
+≈ −45,000 Cave art—mind on rock
+Order created.
+A durable external symbolic memory that fixes images, hands, and recurring signs, where attention learns to reflect on itself.
+Debt displaced.
+The energy and physical cost of producing the works in remote places (pigments, lighting, danger); representational codes fixed in ways that frame how the world is perceived.
+Cognitive · Symbolic · Energetic
+Anthropy, pp.
+51–54
+Age 2—The Neolithic Trap (≈ −10,000 → ≈ −1,046)
+≈ −10,000 The Neolithic—the civilizational trap
+Order created.
+Food security through surplus, sedentarization, population explosion.
+Debt displaced.
+Bondage to land and labor; social hierarchies founded on storage; an agricultural debt owed to soils and climate.
+Social · Ecological · Economic
+Anthropy, pp.
+58–62
+≈ −5,000 The wheel—the eternal mechanical return
+Order created.
+Logistical efficiency, the back freed from carrying loads, and the potter’s wheel, where mechanical repetition gives rise to variation of form.
+Debt displaced.
+The obligation to build and maintain infrastructure (roads); confinement within mechanical logic and its upkeep costs.
+Technical · Spatial · Energetic
+Anthropy, pp.
+62–65
+≈ −3,500 Uruk—gathering to divide
+Order created.
+Specialization of tasks, centralized management of flows (water, grain, rations, tablets, seals), predictability through urban concentration.
+Debt displaced.
+Social stratification that saturates quickly; loss of polymorphy; heightened vulnerability to contagion; each layer of order adds a layer of cost (corvées, levies, registers).
+Social · Political · Spatial
+Anthropy, pp.
+65–67
+≈ −3,200 Cuneiform—carved to last
+Order created.
+Durable administrative memory, written and public law, written accounts (rations, debts, contracts) that reduce local uncertainty.
+Debt displaced.
+A body of scribes holding a relative monopoly over the world-to-sign interface, paid for in years of subsistence; exclusion of the illiterate; loss of granularity; an entire economy of proofs, archives, and corvées.
+Cognitive · Social · Political
+Anthropy, pp.
+68–70
+≈ −2,000 Pantheons & kingdoms—believing to obey
+Order created.
+Divine legitimation of temporal power, the empire synchronized by a shared ritual calendar.
+Debt displaced.
+The material cost of temples and sacrifices, borne by the countryside; the legitimacy of power hanging on the supply of the rite; the logistical debt of offerings.
+Symbolic · Political · Economic
+Anthropy, pp.
+71–73
+≈ −1,200 Tyranny—governing time
+Order created.
+Acceleration and sharpness in decision-making by short-circuiting deliberation.
+Debt displaced.
+Guarantees dissolved and citizens demobilized; dissent postponed rather than suppressed; the perpetual upkeep of order (guards, repairs, levies); a debt of time levied on citizens.
+The idea in its history.
+Stop “−1 200 · Le pouvoir et ses masques: La tyrannie, être craint plutôt qu’aimé” in L’Odyssée des idées (in French).
+Political · Temporal · Social
+Anthropy, pp.
+73–76
+≈ −1,046 Zhou—Mandate of Heaven, order of the world
+Order created.
+A contract of conditional legitimacy (the “Mandate of Heaven”), binding power to visible performance (prosperity, order).
+Debt displaced.
+Governance through anxiety (the fear of losing the mandate); the cost of rituals and inspections to prove virtue; a permanent performance debt.
+Symbolic · Political · Social
+Anthropy, pp.
+77–80
+Age 3—The Extractive Empires (≈ −900 → 312)
+≈ −900 The Olmecs—glyphs of power
+Order created.
+Sovereignty inscribed in stone: emblems, colossal heads, sun-aligned plazas, and the calendar fix who rules and when, more durably than the voice.
+Debt displaced.
+Legibility at the center is bought at the periphery: basalt hauled over dozens of kilometers, felled forests, shoulders and maize rations, workshops and distant exchanges; even erasing the signs, in decline, has its price.
+Political · Symbolic · Ecological
+Anthropy, pp.
+84–87
+≈ −800 The Odyssey—the grammar of return
+Order created.
+A technology of return: metis, recognition in stages, and regulated hospitality (xenia) restore a home without shattering the present.
+Debt displaced.
+The return is paid for elsewhere: lost companions, punished hosts, sacrificed animals, the vigils of Penelope and the servants; the slaughter of the suitors displaces disorder into the city, until Athena intervenes.
+Social · Moral · Temporal
+Anthropy, pp.
+87–89
+≈ −776 Olympia—war played so it need not be fought
+Order created.
+Conflict sublimated into regulated competition; a sacred truce allowing Panhellenic circulation.
+Debt displaced.
+The cost of infrastructure and ritual sacrifices; structural exclusion (married women, “barbarians”); a physical debt levied on athletes’ bodies.
+Social · Political · Economic
+Anthropy, pp.
+90–92
+≈ −753 Rome—fratricidal founding, suicidal destiny
+Order created.
+Internal civic peace guaranteed by a sacred boundary (the pomerium) that defines an inside and an outside.
+Debt displaced.
+Violence permanently externalized outward (conquest) or returning periodically within (civil wars), reenacting the founding murder.
+Political · Spatial · Symbolic
+Anthropy, pp.
+93–96
+≈ −650 Coinage—trust struck with the seal of doubt
+Order created.
+Portable, anonymous trust, easing long-distance exchange by compressing the ritual of weighing.
+Debt displaced.
+The cost of the guarantee (mining, policing counterfeits); value abstracted, enabling financial crises and a devaluation of trust.
+The idea in its history.
+Stop “−650 · La Monnaie: un équilibre fragile entre confiance et pouvoir” in L’Odyssée des idées (in French).
+Economic · Technical · Social
+Anthropy, pp.
+96–99
+≈ −563 Buddha—the fullness that empties itself
+Order created.
+A protocol for release from suffering through “un-clinging” from desires; mental order and inner discipline.
+Debt displaced.
+Material support of the monastic community (the Sangha) by the laity; a debt of time and resources (alms, upkeep) to finance the monks’ inner peace.
+The idea in its history.
+Stop “v. −528 · Le Bouddha: les Quatre Nobles Vérités, une voie sans dieu créateur” in L’Odyssée des idées (in French).
+Cognitive · Social · Economic
+Anthropy, pp.
+99–101
+≈ −551 Confucius—the motionless revolution
+Order created.
+A social order founded on the exemplarity of gestures (li) and roles, spreading by imitation rather than by decree.
+Debt displaced.
+The cost in time and attention of learning and maintaining the rites; the community’s funding of its “models” (hours stolen from the field, decades of study for the imperial examinations, families feeding an unproductive son).
+The idea in its history.
+Stop “v. −500 · Confucius: l’ordre par les rites et la réciprocité” in L’Odyssée des idées (in French).
+Social · Symbolic · Cognitive
+Anthropy, pp.
+102–104
+≈ −534 Tragedy—the invention of social theater
+Order created.
+A public space for staging and metabolizing insoluble conflicts (law versus family, State versus individual).
+Debt displaced.
+The material and financial cost of performances (the choregia); civic time taken from production to allow collective catharsis.
+Social · Political · Economic
+Anthropy, pp.
+104–106
+≈ −508 Democracy—the power of all, the fear of each
+Order created.
+Power shared among citizens through common law (isonomia), sortition, and public deliberation.
+Debt displaced.
+Structural exclusion of women, metics, and slaves; citizenship financed by empire (tribute) and servile labor (the Laurion mines).
+The idea in its history.
+Stop “−508/−507 · Clisthène: la démocratie redécoupée” in L’Odyssée des idées (in French).
+Political · Social · Inequalities
+Anthropy, pp.
+106–109
+≈ −500 Pythagoras—the mathematical dream of an ordered world
+Order created.
+An intelligible cosmos, governed by numerical ratios and mathematical harmonies.
+Debt displaced.
+Exclusion of the incommensurable (the irrational); the material cost of abstraction (schools, instruments, freed time); the risk of a tyranny of the norm.
+The idea in its history.
+Stop “−530 · Pythagore: l’harmonie des nombres et la mélodie de l’univers” in L’Odyssée des idées (in French).
+Cognitive · Philosophical · Social
+Anthropy, pp.
+109–112
+≈ −500 Heraclitus and Parmenides—the river against the sphere
+Order created.
+Two founding visions of Western metaphysics: the world as permanent flux (Heraclitus) or as eternal, unchanging being (Parmenides).
+Debt displaced.
+The material cost of thought (time, schools, scribes); a cognitive debt for later generations, forced to navigate this conceptual tension.
+Philosophical · Cognitive
+Anthropy, pp.
+112–115
+≈ −500 Sun Tzu—the art of fighting without fighting
+Order created.
+Victory through strategic configuration and the manipulation of information, avoiding direct confrontation.
+Debt displaced.
+Peace without trust; mistrust and manipulation generalized as a mode of relation; the cost of intelligence and espionage.
+The idea in its history.
+Stop “−500 · Sun Tzu: maître de la guerre ou l’art de vaincre sans combattre” in L’Odyssée des idées (in French).
+Political · Cognitive · Symbolic
+Anthropy, pp.
+115–118
+≈ −480 Thermopylae/Salamis—the West invents itself by inventing the East
+Order created.
+A founding narrative of a “Western” identity (free, measured) set against a caricatured “East” (servile, excessive).
+Debt displaced.
+Athenian naval democracy financed by slavery (the Laurion mines); a debt of symbolic violence toward the Persians.
+Symbolic · Political · Symbolic violence
+Anthropy, pp.
+118–121
+≈ −460 Leucippus—full void, empty plenitude
+Order created.
+A physics of motion made possible by introducing the void as an operative principle, explaining change as the rearrangement of atoms.
+Debt displaced.
+The social cost of materialist thought (accusations of impiety); the material debt of philosophical schools (time, patronage).
+The idea in its history.
+Stop “−430 · Leucippe: à la découverte de l’invisible nature du monde” in L’Odyssée des idées (in French).
+Philosophical · Cognitive · Social
+Anthropy, pp.
+122–124
+≈ −450 Alcibiades—to understand in order to betray
+Order created.
+Absolute strategic effectiveness through a liquid intelligence, able to adapt to every system in order to manipulate it from within.
+Debt displaced.
+Trust and loyalty dissolved; one side’s tactical gains are paid for in systemic disorder for all the others (prolonged wars, broken alliances).
+Political · Social · Moral
+Anthropy, pp.
+125–127
+≈ −441 Sophocles—the law of the heart against the heart of the law
+Order created.
+A theatrical space for staging the irreducible tension between the impersonal norm of the city and the unwritten law of conscience and family.
+Debt displaced.
+The material cost of performance (the choregia, paid by the wealthy citizens designated for it); civic time immobilized for collective catharsis, paid in attendance by the citizens themselves (days taken from workshop and building site) and by the public treasury.
+The idea in its history.
+Stop “−442 · Sophocle, l’âme a ses lois que la loi ne connaît pas” in L’Odyssée des idées (in French).
+Social · Political · Symbolic
+Anthropy, pp.
+127–130
+≈ −427 The Sophists—selling truth, buying doubt
+Order created.
+Rhetorical skill democratized, turning speech into a purchasable technique rather than a privilege of birth.
+Debt displaced.
+Social trust devalued as truth becomes a commodity; institutional costs (a proliferation of lawsuits) and cognitive costs (generalized skepticism).
+Cognitive · Social · Economic
+Anthropy, pp.
+130–132
+≈ −415 Thucydides—repeating so as not to begin again
+Order created.
+An operative memory of history, founded on the search for causes and the logic of power relations, to defuse the future.
+Debt displaced.
+The material cost of the inquiry (financed by his mines); the moral debt of a knowledge that, by exposing the brutality of the real (“the strong do what they can”), can inject a lasting chill.
+The idea in its history.
+Stop “−415 · Thucydide: l’histoire est un perpétuel recommencement” in L’Odyssée des idées (in French).
+Cognitive · Political · Moral
+Anthropy, pp.
+133–135
+≈ −400 Callicles—the right of the strongest, the law of the weakest
+Order created.
+A “natural” legitimation of domination and of the maximization of desires (pleonexia) by an elite.
+Debt displaced.
+The order of the strong displaces its disorder onto others: craftsmen, vine-growers, rowers, weavers pay so that a handful may “grow”; it is financed by the exhaustion and invisibility of its debtors (unpaid hours, broken solidarities).
+The idea in its history.
+Stop “v. −390 · Calliclès: la loi est l’arme des faibles” in L’Odyssée des idées (in French).
+Social · Political · Symbolic violence
+Anthropy, pp.
+135–138
+≈ −399 Epicureanism—happiness by subtraction
+Order created.
+Inner peace (ataraxia) through the limitation of desires and the elimination of fears (of the gods, of death).
+Debt displaced.
+The Epicurean community’s “live hidden” is subsidized by the order and labor of the city it flees; a debt of civic participation.
+Cognitive · Social · Philosophical
+Anthropy, pp.
+138–140
+≈ −399 Socrates—doubt as a public service
+Order created.
+Civic hygiene through the systematic testing of apparent knowledge; coherence becomes the criterion of just discourse.
+Debt displaced.
+Constant social friction, a cost in time for the city; the ultimate debt is paid with his own life to preserve the integrity of the law.
+The idea in its history.
+Stop “−399 · Socrate: le philosophe sans livre” in L’Odyssée des idées (in French).
+Cognitive · Political · Moral
+Anthropy, pp.
+141–143
+≈ −384 Plato—building the ideal, inhabiting the impossible
+Order created.
+An architecture of knowledge and of the just city, founded on ideal forms that serve as the standard for judging the real.
+Debt displaced.
+The cost of training the “guardians” is borne by the producing class; the ideal order demands censorship, the “noble lie,” and the banishment of the poets.
+The idea in its history.
+Stop “v. −375 · La cité idéale de Platon: un modèle politique et moral” in L’Odyssée des idées (in French).
+Philosophical · Political · Social
+Anthropy, pp.
+144–147
+≈ −335 Aristotle—measured excess, excessive measure
+Order created.
+A universal system of classification (categories, causes) that makes the world intelligible and governable through measure and prudence (phronesis).
+Debt displaced.
+Classificatory knowledge, once it becomes a norm, excludes and pathologizes “deviations”; measure becomes an instrument of normalization.
+The idea in its history.
+Stop “−335 · Aristote, ou le philosophe qui partait du réel” in L’Odyssée des idées (in French).
+Cognitive · Social · Symbolic violence
+Anthropy, pp.
+147–150
+≈ −334 Alexander—the intoxication of the infinite
+Order created.
+An immense space unified by the speed of conquest, creating a “Hellenistic” cultural space.
+Debt displaced.
+Persian political and administrative orders destroyed; the human and logistical cost of the military campaign; a debt of legitimacy owed to his own troops.
+Political · Spatial · Economic
+Anthropy, pp.
+150–153
+≈ −330 Diogenes—the nothing that judges everything
+Order created.
+Individual sovereignty through radical renunciation and the refusal of conventions.
+Debt displaced.
+His freedom is subsidized by the surplus and tolerance of the city he despises (alms, safety); a debt of participation in the common burdens.
+The idea in its history.
+Stop “v. −336/−335 · Diogène, une vie de chien, une pensée sans maître” in L’Odyssée des idées (in French).
+Social · Philosophical · Economic
+Anthropy, pp.
+154–156
+≈ −300 Euclid—geometric democracy
+Order created.
+A universal regime of proof in which authority is earned by demonstration, accessible to all regardless of social status.
+Debt displaced.
+The formal equality of access to proof masks a real inequality of access to the time and education needed to master it.
+The idea in its history.
+Stop “−300 · Euclide: aux origines de la géométrie” in L’Odyssée des idées (in French).
+Cognitive · Social · Political
+Anthropy, pp.
+157–160
+≈ −250 Archimedes—a fixed point for a moving world
+Order created.
+Mechanical mastery of the world through the application of principles (the lever, buoyancy) that multiply human force.
+Debt displaced.
+The material and human cost of the machines (wood, metal, workshops) and of their financing by a political power (King Hiero II).
+Technical · Energetic · Economic
+Anthropy, pp.
+160–163
+≈ −220 Qin—the empire forged in totalitarian uniformity
+Order created.
+Imperial unity through radical standardization (writing, currency, measures, axle widths).
+Debt displaced.
+Local cultures and knowledge destroyed (the “burning of the books”); the colossal human cost of the great public works (wall, canals); State violence as a principle of government.
+Political · Cultural · Social
+Anthropy, pp.
+163–166
+≈ −49 The Rubicon—when speed murders the law
+Order created.
+A lightning seizure of power that opens the civil war, where the speed of the fait accompli replaces deliberation: the law is no longer a wall, only a delay.
+Debt displaced.
+Republican legality assassinated; the human and economic cost of the military campaigns; a debt of legitimacy settled by dictatorship.
+Political · Temporal · Legal
+Anthropy, pp.
+167–169
+≈ −7 to −4 Jesus Christ—the strength of weakness
+Order created.
+A community founded on the inversion of values (poverty, forgiveness), undermining the Empire’s logic of power from within.
+Debt displaced.
+The cost of martyrdom, the State’s violence being absorbed by the bodies of believers; an organizational debt for the communities (mutual aid, alms).
+The idea in its history.
+Stop “v. −6/−4 · Jésus-Christ: fils de Dieu?” in L’Odyssée des idées (in French).
+Symbolic · Social · Political
+Anthropy, pp.
+170–172
+105 Paper (Han)—writing the State
+Order created.
+Administration made fluid, creating a “liquid State” able to remember, circulate, and revise itself at low cost.
+Debt displaced.
+The ecological cost of production (water, fibers); an explosion of bureaucracy; increased surveillance; a debt of time for scribes and administrators.
+Technical · Political · Ecological
+Anthropy, pp.
+173–177
+110 Juvenal—feed the belly, starve the mind
+Order created.
+Social peace through the distribution of food (panem) and entertainment (circenses), occupying the people’s bodies and attention.
+Debt displaced.
+Citizenship atrophied into a passive clientele; the colossal logistical and financial cost of maintaining the grain flows and the games.
+The idea in its history.
+Stop “110 · *Panem et circenses*: nourrir, distraire, et faire de la mort un spectacle” in L’Odyssée des idées (in French).
+Political · Social · Cognitive
+Anthropy, pp.
+177–179
+135 Stoicism—willing to will nothing
+Order created.
+An impregnable inner citadel, freedom through the mastery of judgments and the discipline of desire.
+Debt displaced.
+The bodily cost of invulnerability to power (Stoic martyrs, a debt settled in civic blood); the otium this asceticism requires is financed by the labor of others (slaves, secretaries, stewards).
+Cognitive · Social · Philosophical
+Anthropy, pp.
+179–182
+312 Constantine—saving the empire by killing its gods
+Order created.
+The empire unified under a single symbol (the cross), creating a new infrastructure of loyalty.
+Debt displaced.
+Pagan orders and economies gradually dismantled (temples, priesthoods); the cost of building the new ecclesiastical apparatus; conflict displaced onto heresies.
+The idea in its history.
+Stop “312 · Il suffira d’un signe pour Constantin et le christianisme” in L’Odyssée des idées (in French).
+Political · Symbolic · Economic
+Anthropy, pp.
+183–187
+Age 4—The Networks—Routes, Relays, Relays of Power (486 → 1494)
+486 Clovis—the chemistry of the anointing
+Order created.
+Warrior force transmuted into durable divine legitimacy; the anointing institutes an immortal political body that outlives the king’s physical body.
+Debt displaced.
+The cost of the ecclesiastical apparatus (endowments, basilicas, tax exemptions) shifted onto public finances and lay landowners.
+The idea in its history.
+Stop “v.
+496 · Clovis: catholicisme et stratégie royale” in L’Odyssée des idées (in French).
+Symbolic · Political · Economic
+Anthropy, pp.
+193–195
+529 Saint Benedict—the order that frees
+Order created.
+A stable, productive framework for living (ora et labora) that transforms time through the discipline of the Rule, releasing spiritual and material energy.
+Debt displaced.
+Material support of the monastery through gifts, rents, and the labor of dependent laypeople (familia); an ecological debt on the lands worked (hides for parchment).
+Social · Economic · Temporal
+Anthropy, pp.
+196–198
+632 The Quran—the algorithm of transcendence
+Order created.
+A unified social and spiritual protocol (prayers, zakāt) that synchronizes a decentralized network of believers and creates a community (the Umma).
+Debt displaced.
+The cost of establishing a consensus (standardization under ʿUthmān: private codices burned, grudges, a grievance of the insurgents of 656) that displaces disorder toward politics; the cost of conformity for society (time, resources).
+Symbolic · Social · Political
+Anthropy, pp.
+198–201
+850 Powder & saltpeter—the chemistry of power (China)
+Order created.
+Traditional military hierarchies leveled (“ballistic democracy”); the chemical recipe prevails over birth.
+Debt displaced.
+Death industrialized, the ecological cost of production (saltpeter, charcoal); regulating violence becomes more costly and more centralized.
+Technical · Energetic · Political
+Anthropy, pp.
+201–204
+980/1126 Avicenna and Averroes—Islam, the bearer of Aristotle
+Order created.
+Greek philosophy and science transmitted and enriched, creating a conceptual infrastructure for Europe’s intellectual future.
+Debt displaced.
+The material cost of translation and copying (paper, scribes, libraries) financed by Islamic powers; the West would inherit the knowledge while often erasing the bearer’s signature.
+The idea in its history.
+Stop “v.
+1020 · Avicenne: la médecine, l’âme et l’existence” in L’Odyssée des idées (in French).
+Cognitive · Cultural · Economic
+Anthropy, pp.
+205–208
+1066 Hastings—the alchemy of the bastard
+Order created.
+A violent conquest transformed into a centralized administrative State (the Domesday Book) and a durable legal order (common law).
+Debt displaced.
+Massive expropriation of the Anglo-Saxon elite; the human cost of repression (the Harrying of the North); symbolic violence through the imposition of Norman language and law.
+Political · Social · Symbolic violence
+Anthropy, pp.
+208–211
+1150 Toledo—translating to transform
+Order created.
+An infrastructure of “cognitive compatibility” that makes Greek, Arabic, and Jewish knowledge interoperable and available to the Latin West.
+Debt displaced.
+The material cost of the translation workshop (patronage, parchment, wages); the transformation of concepts imports frameworks of thought that lastingly reconfigure Latin culture.
+Cognitive · Technical · Cultural
+Anthropy, pp.
+211–215
+1200 The University of Paris—the forge of disputations
+Order created.
+Truth produced through regulated confrontation (the disputatio), creating an autonomous intellectual authority set against political and religious power.
+Debt displaced.
+The social cost of maintaining an unproductive student population; a material debt (colleges, books); exclusion of those who do not master the scholastic code.
+Cognitive · Social · Economic
+Anthropy, pp.
+216–219
+1209 The Albigensians—the machinery of purity
+Order created.
+Doctrinal unity of Christendom through the eradication of the Cathar heresy; the invention of the Inquisition as a procedure for controlling consciences.
+Debt displaced.
+Physical and symbolic violence (massacres, pyres); a cultural ecosystem wounded (Occitan loses its courts and patrons); the moral debt of an orthodoxy imposed by terror.
+Symbolic · Political · Symbolic violence
+Anthropy, pp.
+219–222
+1215 Magna Carta—the crown under contract
+Order created.
+Royal power limited by a written contract, establishing the predictability of law (due process) and a right of resistance.
+Debt displaced.
+The cost of a permanent judicial apparatus; procedural friction as a new form of conflict; internal peace sometimes paid for with violence exported to the margins.
+The idea in its history.
+Stop “1215 · La Magna Carta: nul n’est au-dessus de la loi” in L’Odyssée des idées (in French).
+Legal · Political · Social
+Anthropy, pp.
+222–226
+1272 Thomas Aquinas—the architect of compatibilities
+Order created.
+An intellectual synthesis that makes Aristotelian reason and Christian faith compatible, creating a durable architecture of knowledge.
+Debt displaced.
+Institutional cost (university quarrels, the quarrel over the mendicant orders, the condemnations of 1277); conflict is deferred into technical clauses where Ockham and the nominalists will flourish; clarity is paid for in conceptual exclusions.
+The idea in its history.
+Stop “1270 · Thomas d’Aquin: la foi et la raison tenues ensemble” in L’Odyssée des idées (in French).
+Philosophical · Cognitive · Symbolic
+Anthropy, pp.
+226–229
+1302 Dante—the tribunal of the tercets
+Order created.
+A poetic jurisdiction above the political, judging History and assigning each person their place within a moral cosmology.
+Debt displaced.
+A national language standardized (Tuscan) at the expense of the dialects; the material debt of producing and circulating the work (patronage, copyists).
+The idea in its history.
+Stop “1321 · Dante: l’Enfer comme forme de la faute” in L’Odyssée des idées (in French).
+Symbolic · Cultural · Cognitive
+Anthropy, pp.
+233–236
+1314 The Templars—turning creed into credit
+Order created.
+A transnational financial network in which religious trust makes money travel, and not only metal (letters, accounts, seals): accounts backed by a vow.
+Debt displaced.
+A network of trust that keeps its records beyond the prince’s control lives at his mercy: the crown, already keeping its own accounts through its Treasury, destroys the order and comes out paid; trust moves from the vow to the prince’s register.
+Economic · Political · Technical
+Anthropy, pp.
+229–233
+1325 Timbuktu—ink in the sand
+Order created.
+A major intellectual center founded on an economy of knowledge (the book is exchanged for gold and becomes social capital) and on distributed resilience (private libraries).
+Debt displaced.
+The high cost of importing the raw material (paper); preservation in a hostile environment demands constant engineering and investment.
+Cognitive · Economic · Technical
+Anthropy, pp.
+236–239
+1377 Ibn Khaldun—the cycle of empires
+Order created.
+A cyclical model of history that makes the rise and fall of dynasties intelligible through the force of social cohesion (’asabiyya).
+Debt displaced.
+Each phase of the cycle has its bill: blood and want at the conquest, fixed charges at the peak, mercenaries, tributes, and ransoms in decline; the cycle is a debt of blood and resources paid at every transition.
+The idea in its history.
+Stop “1377 · Ibn Khaldoun: la science des empires qui meurent” in L’Odyssée des idées (in French).
+Political · Philosophical · Social
+Anthropy, pp.
+240–243
+1429 Joan—the people before the people
+Order created.
+The French monarchy re-legitimized by a charismatic short-circuit that transcends institutional mediations (Church, nobility).
+Debt displaced.
+The financial and military cost of the campaigns; institutional disorder for the established powers; the ultimate debt paid with her own life at the stake.
+The idea in its history.
+Stop “1429-1431 · Jeanne d’Arc: faire un roi, puis l’archive d’une conscience” in L’Odyssée des idées (in French).
+Symbolic · Political · Social
+Anthropy, pp.
+243–246
+1435 Alberti—framing the world, building the eye
+Order created.
+A rationalized visual space, measurable and reproducible through perspective, turning painting into “an open window.”
+Debt displaced.
+The eye is constrained to a single, motionless point of view; the frame excludes what lies outside it; mastery of the visible is paid for by a loss of laterality and of peripheral vision.
+Cognitive · Technical · Symbolic
+Anthropy, pp.
+247–249
+1454 Gutenberg—multiplying the word, redistributing authority
+Order created.
+Exact reproducibility of the text: movable type, oil-based ink, and the screw press make copies identical, bring down the price of books, and make verifiable citation and shared criticism possible.
+Debt displaced.
+The end of single authority: dispute escalates into the wars of religion; dialects sidelined by printed languages, slander industrialized along with proof, the rent captured by the financier rather than the inventor.
+The idea in its history.
+Stop “v.
+1454 · Gutenberg: la pensée rendue reproductible” in L’Odyssée des idées (in French).
+Cognitive · Political · Cultural
+Anthropy, pp.
+250–253
+1492 New worlds—discover, count, conquer
+Order created.
+Planetary unification, the creation of a Euro-centered world-system through cartography, accounting, and military power.
+Debt displaced.
+The collapse of Amerindian populations (epidemics, war, forced labor), the encomienda and the mita of Potosí, the plunder of Andean silver; a human and moral debt.
+Spatial · Economic · Symbolic violence
+Anthropy, pp.
+254–256
+1494 Pacioli—counting double, seeing true
+Order created.
+Transparency and trust in commercial exchange through double-entry bookkeeping, which makes wealth relational and verifiable.
+Debt displaced.
+Lives and non-monetary costs rendered invisible in the balance sheets; the accounting form can mask inequality and fraud; clarity has a bureaucratic cost.
+Economic · Cognitive · Technical
+Anthropy, pp.
+257–260
+Age 5—The Modern State-machine (1513 → 1784)
+1513 Machiavelli—the virtue of vice, the morality of force
+Order created.
+Stability and permanence of the State through a technology of decision (virtù) that judges acts by their public consequences, not their private morality.
+Debt displaced.
+The moral debt of cruelty turned into an instrument of government; the human and economic cost of “necessities” paid by civilian populations.
+The idea in its history.
+Stop “1513 · Machiavel: Le Prince et la vérité nue du pouvoir” in L’Odyssée des idées (in French).
+Political · Moral · Social
+Anthropy, pp.
+264–267
+1516 Erasmus—correct to believe
+Order created.
+A textual truth restored (the New Testament) through philological method (ad fontes), founding modern criticism.
+Debt displaced.
+Questioning the Vulgate cracks the Church’s authority and supplies, without calling for rupture, one of the tools that make the Reformation possible; the wars of religion that follow show that the same text, stabilized, can feed rival orthodoxies.
+Cognitive · Symbolic · Political
+Anthropy, pp.
+267–270
+1517 Luther—the blockchain of conscience
+Order created.
+Access to salvation decentralized (sola fide, sola scriptura), the individual conscience becoming the validator of faith, without an ecclesial intermediary.
+Debt displaced.
+Christendom fragmented, wars of religion; the cost of confessional order is paid in armed conflict and lasting political divisions.
+Symbolic · Political · Social
+Anthropy, pp.
+270–273
+1543 Copernicus—decentering the sky, reframing the earth
+Order created.
+Geometric and predictive coherence of the universe by placing the Sun at the center, founding a new celestial physics.
+Debt displaced.
+Theological and social disorder as man is unseated from his central place; the institutional cost of conflicts with the Church (Galileo’s trial).
+The idea in its history.
+Stop “1543 · Copernic: la Terre déchue de son centre” in L’Odyssée des idées (in French).
+Cognitive · Symbolic · Political
+Anthropy, pp.
+274–276
+1576 La Boétie—the people, tyrant of itself
+Order created.
+Servitude diagnosed as the product of active consent, founding the possibility of liberation through the simple refusal to serve.
+Debt displaced.
+The text shifts responsibility for tyranny from the tyrant to the people themselves, creating a debt of lucidity and civic courage.
+The idea in its history.
+Stop “1576 · La Boétie: la servitude volontaire” in L’Odyssée des idées (in French).
+Political · Cognitive · Moral
+Anthropy, pp.
+277–279
+1600 The India companies—the invention of the world-company
+Order created.
+A planetary commercial network, financed by liquid, anonymous capital (shares), endowed with sovereign prerogatives (to raise troops, to negotiate treaties).
+Debt displaced.
+Structural violence (the Banda massacre), forced monocultures, founding ecocides, and risks externalized onto colonized populations.
+Economic · Geopolitical · Ecological
+Anthropy, pp.
+280–283
+1609 Galileo—bringing down the sky to raise the mind
+Order created.
+A technology of objectivity in which proof is produced by the instrument (the telescope) and becomes reproducible and verifiable by all.
+Debt displaced.
+Disorder transferred from cosmology to the ecclesiastical institution, provoking conflicts of authority and trials (the condemnation of 1633).
+The idea in its history.
+Stop “1610 · Galilée: le ciel rouvert, et le procès qui voulut le refermer” in L’Odyssée des idées (in French).
+Cognitive · Technical · Political
+Anthropy, pp.
+283–286
+1625 Grotius—the founder of regulated murder
+Order created.
+A common law among nations, founded on natural reason, which frames war (jus ad bellum, jus in bello) and makes it procedural.
+Debt displaced.
+Once “civilized,” war becomes governable and therefore lasting; the legal order legitimizes violence under conditions, at the expense of the civilian populations who pay its cost.
+Legal · Political · Moral
+Anthropy, pp.
+286–288
+1637 Descartes—founding doubt, abyssal certainty
+Order created.
+An audit protocol for thought (the Discourse on Method) that grounds certainty in individual self-evidence (the cogito) rather than external authority.
+Debt displaced.
+A fracture between soul and body (res cogitans/res extensa), relegating the sensible; an ontological and medical debt that would treat the body as a machine.
+The idea in its history.
+Stop “1637 · Descartes: le premier sol” in L’Odyssée des idées (in French).
+Philosophical · Cognitive · Social
+Anthropy, pp.
+289–291
+1648 Westphalia—the art of coexisting by ignoring one another
+Order created.
+Peace through separation; territorial sovereignty and noninterference become the principles of an international order founded on the balance of power.
+Debt displaced.
+European peace is paid for by freezing the aspirations of peoples and by making “domestic tyrannies” untouchable within borders.
+Geopolitical · Political · Social
+Anthropy, pp.
+292–294
+1651 Hobbes—the monster that saves us from ourselves
+Order created.
+Absolute security through the total alienation of individual liberties to an artificial sovereign (the Leviathan) who ends the “war of all against all.”
+Debt displaced.
+Fear becomes the foundation of politics; the question “who protects us from the protector?” remains open when the Leviathan turns totalitarian, the monster then turning against its creators.
+The idea in its history.
+Stop “1651 · Hobbes: l’homme, le loup et le Léviathan” in L’Odyssée des idées (in French).
+Political · Social · Philosophical
+Anthropy, pp.
+295–298
+1661 Reason of State—the legitimate crime
+Order created.
+The fiscal-military State, a centralized machine that rationalizes taxation (Colbert) and force (Louvois) to maximize the kingdom’s power.
+Debt displaced.
+Crushing fiscal pressure on the people; the State’s glory is financed by the organized misery of the countryside and by perpetual wars.
+Political · Economic · Social
+Anthropy, pp.
+298–302
+1687 Newton—the apple that would kill God
+Order created.
+A universe unified by universal mathematical laws (gravitation), making the cosmos predictable and calculable.
+Debt displaced.
+The clockwork world no longer needs the divine hypothesis in order to run; disorder is displaced from physics into metaphysics (the disenchantment of the world).
+The idea in its history.
+Stop “1687 · Newton: la pomme, la Lune et la loi unique” in L’Odyssée des idées (in French).
+Cognitive · Philosophical · Symbolic
+Anthropy, pp.
+305–308
+1689 Locke—obey to be free
+Order created.
+Legitimate government founded on consent and the guarantee of natural rights (life, liberty, property), with a right of resistance built in.
+Debt displaced.
+Political liberty in the metropole is financed by economic servitude in the colonies (slavery, expropriation of lands).
+The idea in its history.
+Stop “1690 · Locke: la page blanche et le gouvernement par consentement” in L’Odyssée des idées (in French).
+Political · Economic · Inequalities
+Anthropy, pp.
+302–305
+1748 Montesquieu—divide to unite
+Order created.
+Political liberty through the separation of powers (legislative, executive, judicial), where “power checks power.”
+Debt displaced.
+Liberty is paid for with a “calculated inefficiency”; institutional friction and procedural slowness become the cost of protection against the arbitrary.
+The idea in its history.
+Stop “1748 · Montesquieu: du regard oblique à l’architecture des pouvoirs” in L’Odyssée des idées (in French).
+Political · Legal · Temporal
+Anthropy, pp.
+309–311
+1748 Hume—the earthquake of causality
+Order created.
+Skeptical lucidity in revealing that causality is not a law of the world but a habit of our minds.
+Debt displaced.
+The order of certainties collapses, replaced by an order of probabilities that demands a constant cost of verification, replication, and the upkeep of doubt.
+Cognitive · Philosophical · Social
+Anthropy, pp.
+311–315
+1755 Voltaire—nothing is more certain than doubt
+Order created.
+A critical public sphere in which opinion, armed with reason and publicity (the Calas affair), can judge and correct the abuses of power.
+Debt displaced.
+By undermining traditional authorities without building replacement institutions, critique releases forces that reason alone cannot contain, risking demagoguery.
+The idea in its history.
+Stop “1759 · Voltaire: cultiver son jardin, ou la sagesse du réel” in L’Odyssée des idées (in French).
+Cognitive · Political · Social
+Anthropy, pp.
+315–318
+1758 The Physiocrats—the blood and sap of wealth
+Order created.
+A pioneering macroeconomic model (the Economic Table), seeing the economy as an organism whose wealth springs from the land.
+Debt displaced.
+The liberalized order of flows (free circulation of grain) displaces disorder onto prices, provoking food riots (the “Flour War”).
+Economic · Political · Social
+Anthropy, pp.
+318–320
+1759 The Encyclopédie—to order knowledge, to overturn power
+Order created.
+Knowledge democratized and unified through alphabetical order and critical cross-references, making the secrets of power and of the trades transparent.
+Debt displaced.
+An abundance of information without hierarchy displaces disorder onto interpretation; the critique of authority can lead to its dissolution and to instability.
+Cognitive · Political · Technical
+Anthropy, pp.
+321–324
+1762 Rousseau—fire beneath the democratic ashes
+Order created.
+Legitimacy founded on the “general will”; civil liberty consists in obeying the law one has given oneself.
+Debt displaced.
+The order of the common is paid for in constraints on the individual (taxation, military service); brandished as an absolute, the general will can justify the Terror.
+The idea in its history.
+Stop “1762 · Rousseau: de l’état de nature à l’état civil” in L’Odyssée des idées (in French).
+Political · Social · Philosophical
+Anthropy, pp.
+324–327
+1762 Insurance—the code of risk
+Order created.
+Risk mutualized, transforming an uncertain future into calculable probabilities and payable premiums.
+Debt displaced.
+New exclusions (the “uninsurable”); the moral debt of surveillance (moral hazard); when private risk overflows, the debt falls back on the taxpayer (AIG, 2008).
+Economic · Social · Technical
+Anthropy, pp.
+327–331
+1776 Adam Smith—the invisible hand guides blindly
+Order created.
+Selfish interests coordinated by the anonymous mechanism of the market, producing wealth through the division of labor.
+Debt displaced.
+The stultification and alienation of the specialized worker; social and ecological costs externalized, unaccounted for in the price.
+The idea in its history.
+Stop “1776 · Adam Smith: la main invisible et les limites du marché” in L’Odyssée des idées (in French).
+Economic · Social · Cognitive
+Anthropy, pp.
+331–333
+1776 America—the gospel of profit
+Order created.
+A republic founded on the “pursuit of happiness,” where economic success becomes a sign of election and a civic duty.
+Debt displaced.
+Profit is sanctified at the price of slavery, the expropriation of indigenous peoples, and the creation of a structural social and racial debt.
+Economic · Social · Inequalities
+Anthropy, pp.
+334–337
+1784 Kant—the clockmaker of Königsberg takes History apart
+Order created.
+A philosophy of history in which men’s “unsocial sociability” drives them, unknowingly, toward perpetual peace through law.
+Debt displaced.
+Progress is paid for by the conflict and suffering of present generations; the future order is financed by present disorder and violence.
+The idea in its history.
+Stop “1784 · Kant: la raison contre le trône, le droit contre la discorde” in L’Odyssée des idées (in French).
+Philosophical · Political · Temporal
+Anthropy, pp.
+338–342
+Age 6—Industrialization and Nation-States (1789 → 1905)
+1789 Revolution—the theater that devours its actors
+Order created.
+National sovereignty, civil equality proclaimed, and the invention of politics-as-spectacle in which the people become a public actor.
+Debt displaced.
+Chronic institutional instability; the Terror and civil wars as the cost of refounding; violence becomes the arbiter of political debate.
+Political · Social · Symbolic violence
+Anthropy, pp.
+347–350
+1789 The Rights of Man—transcendence without God
+Order created.
+Universal principles (liberty, equality) becoming a norm above the State, founding a right of resistance.
+Debt displaced.
+Proclaimed universality stumbles over its exclusions (women, slaves, the poor shut out by property-based suffrage); the “common utility” clause allows a privilege to be renamed a utility, and the algorithm today reproduces hierarchies.
+The idea in its history.
+Stop “1789 · La Déclaration des droits de l’homme: le fondement sans fond” in L’Odyssée des idées (in French).
+Inequalities · Symbolic violence · Legal
+Anthropy, pp.
+350–353
+1791 The guillotine—equality in death
+Order created.
+An “equal,” rationalized standardization of capital punishment, turning public torture into administrative procedure.
+Debt displaced.
+The technical possibility of industrialized death; the executioner’s responsibility dissolved into that of an operator; State murder made banal.
+The idea in its history.
+Stop “1792 · La guillotine: l’égalité jusque dans la mort” in L’Odyssée des idées (in French).
+Political · Moral · Technical
+Anthropy, pp.
+354–357
+1791–1804 Haiti—freedom against its inventors
+Order created.
+The first Black republic born of a victorious slave revolt, giving the Rights of Man concrete universality.
+Debt displaced.
+A crushing indemnity paid to the former colonists; diplomatic isolation and the country’s lasting economic strangulation by the slaveholding powers.
+Economic · Inequalities · Geopolitical
+Anthropy, pp.
+357–362
+1792 Olympe de Gouges—the universal beheaded
+Order created.
+The demand that the universal be extended to women, exposing the contradiction of an exclusively male liberty.
+Debt displaced.
+Violent repression; women lastingly erased from the political sphere by law (the Civil Code) and by custom.
+The idea in its history.
+Stop “1791 · Olympe de Gouges: l’universel pris au mot” in L’Odyssée des idées (in French).
+Inequalities · Symbolic violence · Legal
+Anthropy, pp.
+362–365
+1792 Romantic love—the heart as a code of exclusion
+Order created.
+Individual choice and intimacy legitimized as the foundation of the couple, against the socially arranged match.
+Debt displaced.
+The mental and domestic load made invisible (often borne by women); debts of time, care, and opportunity; intimacy commodified by platforms.
+Social · Inequalities · Cognitive
+Anthropy, pp.
+365–367
+1792 Nationalism—armed brotherhood
+Order created.
+Social cohesion and a capacity for mass mobilization (conscription, taxation) founded on an imagined common belonging.
+Debt displaced.
+Exclusion and suspicion toward minorities and the foreigner (xenophobia); borders sacralized, leading to total wars.
+Political · Social · Symbolic violence
+Anthropy, pp.
+368–371
+1793 The Terror—the machine for purifying souls
+Order created.
+Radical centralization of power and revolutionary discipline to save the Republic from internal and external threats.
+Debt displaced.
+Institutionalized paranoia, purges, and mass executions; virtue becomes a pretext for the physical elimination of opponents.
+The idea in its history.
+Stop “1793 · La Terreur: quand la Révolution se dévore” in L’Odyssée des idées (in French).
+Political · Moral · Social
+Anthropy, pp.
+371–375
+1804 The Civil Code—coding society
+Order created.
+Law unified, contracts and property secured, founding the predictability of the bourgeois economy.
+Debt displaced.
+Patriarchy institutionalized (the married woman’s civil incapacity) along with unequal filiation; social statuses rigidified.
+The idea in its history.
+Stop “1802 · Le sacre de l’ordre: la Légion d’honneur et le Code civil” in L’Odyssée des idées (in French).
+Legal · Inequalities · Symbolic violence
+Anthropy, pp.
+375–378
+1814 Vienna—the ball of the enlightened cynics
+Order created.
+A century of geopolitical stability in Europe (the “Concert of Europe”) through a negotiated balance of power.
+Debt displaced.
+The national and liberal aspirations of peoples smothered; repression legitimized in the name of dynastic order.
+Geopolitical · Political · Social
+Anthropy, pp.
+379–382
+1824 Thermodynamics—the entropy of the terminal program
+Order created.
+Universal laws of energy allowing an unprecedented optimization of machines and industry.
+Debt displaced.
+Awareness of the inescapable degradation of energy (entropy); the end of the illusion of perpetual progress; a permanent thermal tribute: losses from engines, power plants, and data centers, a bill charged elsewhere.
+Energetic · Ecological · Philosophical
+Anthropy, pp.
+382–385
+1833–1865 The abolition of slavery—humanity proclaimed
+Order created.
+Legal recognition of human personhood for millions of individuals, the end of “chattel” status.
+Debt displaced.
+Compensation paid to slave owners (not to the victims); the persistence of structural racism and of disguised regimes of forced labor.
+The idea in its history.
+Stop “1848 · Abolir l’esclavage: la morale, le capital et le travail libre” in L’Odyssée des idées (in French).
+Inequalities · Economic · Symbolic violence
+Anthropy, pp.
+385–389
+1835 Tocqueville—the aristocratic prophet of our servitudes
+Order created.
+A lucid diagnosis of democracy, of its strengths (equality) and its risks (tyranny of the majority, soft despotism).
+Debt displaced.
+Equality opens two slopes: independence, which can turn into anarchy, and gentle tutelage, which leads to infantilization and weariness of the will; democracy also knows how to eliminate “within the proper forms” (slavery, the Indians), as Tocqueville himself points out.
+The idea in its history.
+Stop “1840 · Tocqueville: la démocratie et le despotisme doux” in L’Odyssée des idées (in French).
+Cognitive · Social · Symbolic violence
+Anthropy, pp.
+389–392
+1835 The telegraph—humanity wired
+Order created.
+Instant long-distance communication, the synchronization of markets, empires, and clocks.
+Debt displaced.
+The tyranny of urgency and of the obligation to reply, the loss of depth and of the right to slowness; the human cost borne by operators (nerves, sleepless nights); the small catastrophes of speed, such as the misread Ems dispatch.
+Temporal · Cognitive · Technical
+Anthropy, pp.
+393–396
+1848 Spring of Nations—the simultaneous failure of peoples
+Order created.
+Continental diffusion of democratic, national, and social ideas; an apprenticeship in political mobilization.
+Debt displaced.
+Coordinated repression by the empires (Russia crushes Hungary, Austria retakes Vienna and Prague, France stifles Rome); in June the Republic fires on republicans and the bourgeoisie chooses order over liberty; failure inoculates Europe against the illusion of an overthrow at one stroke and defers the successes (suffrage, social rights, nations).
+Political · Social · Geopolitical
+Anthropy, pp.
+396–400
+1853–1870 Haussmann—order in stone
+Order created.
+Fluid circulation, public hygiene (sewers, ventilation), imperial monumentality.
+Debt displaced.
+Social segregation through the expulsion of the working classes to the outskirts; destruction of the old social fabric; fortunes built on expropriations (Pereire, Rothschild); a city made controllable by troops, turned in 1871 into a “highway of repression”.
+Spatial · Social · Inequalities
+Anthropy, pp.
+401–403
+1854 Hygienism—the body under a public-health contract
+Order created.
+Public health: safe water, sewers, asepsis, vaccination, which probably account for a major part of the fall in mortality (world life expectancy of about 32 years around 1900, nearly 73 years in 2019).
+Debt displaced.
+Biopolitics: social and normative control of bodies; stigmatization of the classes deemed “dangerous”; an immune debt (the hygiene hypothesis).
+Social · Political · Symbolic violence
+Anthropy, pp.
+404–407
+1859 Darwin—the chance that orders
+Order created.
+A unified, materialist explanation of the diversity of life through natural selection.
+Debt displaced.
+The end of divine design and of man’s central place; the theory instrumentalized as “social Darwinism” to justify inequalities and imperialism.
+Philosophical · Moral · Symbolic violence
+Anthropy, pp.
+407–410
+1862 The corporation—an immortal juridical creature
+Order created.
+Long-term capital accumulation through legal personhood and limited liability.
+Debt displaced.
+Profits privatized, costs socialized: when the venture goes wrong, liabilities spill over onto the community (employees, neighbors, the river downstream); social and ecological externalities still to be made billable; concentrated economic power (platforms, margins, tax optimization) that regulation and governance seek to rein in.
+Economic · Ecological · Legal
+Anthropy, pp.
+410–414
+1867 Capital—the vampire of the equations
+Order created.
+A critical grammar of capitalism, unveiling the mechanism of exploitation (surplus value); an organizing tool for the workers’ movement.
+Debt displaced.
+Costs that accumulation displaces onto labor (surplus labor, the industrial reserve army) and onto nature (CO₂, deforestation, the sixth extinction); the tendency of the rate of profit to fall remains contested (Okishio, 1961), though the question of these costs does not depend on it.
+The idea in its history.
+Stop “1867 · Marx: le capital et l’extraction du travail vivant” in L’Odyssée des idées (in French).
+Cognitive · Political · Economic
+Anthropy, pp.
+414–418
+1868 Meiji—becoming the other to remain oneself
+Order created.
+Accelerated modernization, a powerful central State, national sovereignty preserved in the face of the West.
+Debt displaced.
+Authoritarianism, militarism, and imperial expansionism; traditional social structures destroyed (the samurai); the human cost of forced industrialization.
+Political · Social · Geopolitical
+Anthropy, pp.
+418–421
+1871 The Commune—the revolution that invents its vocabulary
+Order created.
+An experiment in direct democratic self-government (recallable mandates, self-management).
+Debt displaced.
+Civil war and extreme repression (the “Bloody Week”: provost courts, some 43,000 arrests, perhaps twenty thousand dead); a new vocabulary that cost so many lives: the city lost, the language won.
+The idea in its history.
+Stop “1870 · La République dans le sang: Sedan, la Commune” in L’Odyssée des idées (in French).
+Political · Social · Memory
+Anthropy, pp.
+421–424
+1882 Ferry’s school—the machine for formatting souls
+Order created.
+National unity through compulsory schooling, secularism, and a common language.
+Debt displaced.
+Regional languages eradicated (the “signal”, a “pedagogy of eradication”); a national narrative instilled that helped make possible mass mobilization and the acceptance of sacrifice in 1914-18; the history of France taught in the colonies, a “double alienation”.
+The idea in its history.
+Stop “1885 · Ferry: l’école qui libère, l’empire qui domine” in L’Odyssée des idées (in French).
+Cultural · Political · Symbolic violence
+Anthropy, pp.
+425–428
+1882 Electricity—the debt of light
+Order created.
+The night pushed back, a planetary nervous system created, time and activities synchronized.
+Debt displaced.
+A debt owed to nature (extraction, pollution), to future generations (maintenance, waste), and to physics (systemic losses).
+Energetic · Ecological · Temporal
+Anthropy, pp.
+428–431
+1884–1885 Berlin—carving up the world with a ruler
+Order created.
+Geopolitical stability in Europe through the regulated partition of Africa; colonial spheres of influence made inviolable.
+Debt displaced.
+Artificial borders created (a “homicidal geometry”) that divide some peoples and confine others, programming future conflicts on the African continent.
+Geopolitical · Social · Spatial
+Anthropy, pp.
+431–433
+1887 Nietzsche—the man-dynamite
+Order created.
+Lucidity through the “transvaluation of all values”; the diagnosis of the “death of God” and of the morality of ressentiment.
+Debt displaced.
+A metaphysical void filled by substitute absolutes (Nation, Race, Class); “guilt” (Schuld) is displaced from theology into politics and economics.
+The idea in its history.
+Stop “1882 · Nietzsche: Dieu est mort, l’homme reste à créer” in L’Odyssée des idées (in French).
+Moral · Philosophical · Political
+Anthropy, pp.
+433–436
+1894–1906 The Dreyfus Affair—the Republic before its shattered mirror
+Order created.
+The rule of law reaffirmed against reason of State; the invention of the engaged intellectual; a clarification of the political landscape.
+Debt displaced.
+A deep fracture in French society; a militant antisemitism and nationalism legitimized and organized.
+The idea in its history.
+Stop “1898 · “J’accuse”: Dreyfus et la naissance de l’intellectuel” in L’Odyssée des idées (in French).
+Social · Political · Moral
+Anthropy, pp.
+436–439
+1900 Freud—the unconscious as a stage
+Order created.
+The psyche made intelligible through the mapping of the unconscious; a therapeutic method (the talking cure) that gives symptoms a meaning.
+Debt displaced.
+The order of a defense (the symptom) displaces the disorder of a drive; consciousness is dispossessed of its mastery; a psychic debt managed but never canceled.
+Cognitive · Psychological · Social
+Anthropy, pp.
+439–443
+1905 The separation of the Churches and the State—the eldest daughter emancipates herself
+Order created.
+State neutrality, civil peace through the privatization of faith, freedom of conscience and worship guaranteed.
+Debt displaced.
+A secular debt: the State becomes guarantor and arbiter of the coexistence of faiths, with permanent costs of upkeep (church buildings) and regulation (procedures).
+Legal · Political · Administrative
+Anthropy, pp.
+443–447
+Age 7—The Contemporary Metaprogram (1905 → 2024)
+1905–1915 Einstein—elastic time, curved space
+Order created.
+Space, time, matter, and energy unified under invariant physical laws.
+Debt displaced.
+Nuclear debt (E=mc²: heat, radiation, long-lived waste); the cost of the infrastructure that maintains a global time (GPS corrections, satellites to replace, orbital debris); a relativistic debt toward nature, generations, and physics.
+The idea in its history.
+Stop “1905 · Einstein: l’équation et le monde” in L’Odyssée des idées (in French).
+Cognitive · Energetic · Technical
+Anthropy, pp.
+453–456
+1914–1918 Total war—the machine for grinding down the human
+Order created.
+Society mobilized in full (factories, capital, minds) for maximum military efficiency.
+Debt displaced.
+A human debt (millions dead), a psychic one (shell shock), an ecological one (the red zones), and a political one (treaties that program the next war).
+Social · Ecological · Political
+Anthropy, pp.
+457–459
+1917 The October Revolution—paradise gives birth to the Gulag
+Order created.
+A socialist order imposed by a vanguard party, the economy and the State centralized.
+Debt displaced.
+The human cost of terror, organized famines, and the Gulag; the promise of equality is paid for in generalized servitude and shortages.
+Political · Social · Economic
+Anthropy, pp.
+459–463
+1922–1928 Lippmann & Bernays—the consent that does not know itself
+Order created.
+The engineering of public opinion, making the masses governable and desires predictable for the market.
+Debt displaced.
+Epistemic debt (a pseudo-environment replaces the environment, distrust accumulates), attentional debt (decision fatigue, polarization, chronic outrage), and social debt (costs externalized onto those left out of the story: tobacco cancers, overthrown regimes, discredited institutions).
+The idea in its history.
+Stop “1922 · La fabrique du consentement” in L’Odyssée des idées (in French).
+Cognitive · Political · Social
+Anthropy, pp.
+464–467
+1925–1927 Quanta—a world that plays dice
+Order created.
+A probabilistic description of fundamental reality that allows unprecedented technical mastery (transistors, lasers).
+Debt displaced.
+The end of classical determinism; a permanent debt of philosophical interpretation; the energy cost of the infrastructures for mastering the infinitely small.
+Philosophical · Energetic · Technical
+Anthropy, pp.
+468–471
+1928 Penicillin—the body under an algorithmic contract
+Order created.
+An administered victory over bacterial infections, a drastic drop in mortality, surgical safety.
+Debt displaced.
+The biological debt of antibiotic resistance; disorder displaced toward data governance (capture, ransomware), the economy (rents, prices), and anxiety (self-tracking, overdiagnosis).
+The idea in its history.
+Stop “1928 · La pénicilline: une découverte hasardeuse, une révolution médicale” in L’Odyssée des idées (in French).
+Ecological · Social · Technical
+Anthropy, pp.
+471–474
+1936 The Popular Front—seizing the symbols, surrendering the substance
+Order created.
+Major social rights won (paid vacations, the 40-hour week), workers’ dignity recognized.
+Debt displaced.
+Economic disorder (inflation, capital flight); the moral debt of nonintervention in Spain.
+The idea in its history.
+Stop “1936 · Le Front populaire: l’été où le travail réclama sa part” in L’Odyssée des idées (in French).
+Social · Economic · Political
+Anthropy, pp.
+474–478
+1936–1944 Culture industry vs. public service—Frankfurt & the BBC, the war of narratives
+Order created.
+Cultural formats standardized for industry, a common civic space created by public broadcasting.
+Debt displaced.
+The culture industry displaces disorder into minds (conformism, passivity); public broadcasting displaces it into politics (pressures, elitism).
+Cognitive · Cultural · Political
+Anthropy, pp.
+478–482
+1938 Munich—the diplomacy of disaster
+Order created.
+An immediate and illusory peace through concession in the face of force.
+Debt displaced.
+War deferred and amplified; the cost is displaced onto the sacrificed nation (Czechoslovakia) and future generations.
+The idea in its history.
+Stop “1938 · L’apaisement et sa faillite: de Munich à Prague” in L’Odyssée des idées (in French).
+Geopolitical · Temporal · Moral
+Anthropy, pp.
+482–485
+1940 June 18—the Word that founds a phantom State
+Order created.
+The continuity of French legitimacy through the force of a speech act, creating a State without territory.
+Debt displaced.
+The cost of this symbolic order is paid in lives by the Resistance and the Free French, and in the destruction endured for the Liberation.
+Symbolic · Political · Social
+Anthropy, pp.
+485–489
+1940–1945 Churchill—the orator who spoke the empire to death
+Order created.
+National cohesion in the face of imminent defeat, speech transformed into a strategic weapon.
+Debt displaced.
+The war effort is paid for by the liquidation of the British Empire and a colossal financial debt to the United States.
+The idea in its history.
+Stop “1940 · Churchill: la vérité pour seule arme” in L’Odyssée des idées (in French).
+Symbolic · Geopolitical · Economic
+Anthropy, pp.
+490–492
+1945 Hiroshima/Nagasaki—creation against creator
+Order created.
+The war’s accelerated end, the establishment of an order of nuclear deterrence (“peace” through terror).
+Debt displaced.
+A human and ecological debt on the destroyed cities; the moral and psychic debt of a humanity capable of annihilating itself.
+Technical · Political · Moral
+Anthropy, pp.
+493–496
+1945 La Sécurité sociale—care becomes a right
+Order created.
+Compulsory solidarity that mutualizes life’s risks (illness, old age) and decommodifies care.
+Debt displaced.
+An intergenerational debt (workers paying for retirees) and a financial debt (deficits) managed by a bureaucratic apparatus.
+The idea in its history.
+Stop “1945 · Sécurité sociale: la solidarité instituée” in L’Odyssée des idées (in French).
+Social · Economic · Administrative
+Anthropy, pp.
+496–500
+1947 Exodus—memory in competition
+Order created.
+Moral and political legitimation of the creation of Israel through the staging of the suffering of Shoah survivors.
+Debt displaced.
+Disorder transferred onto the Palestinian people (the Nakba); the competition of memories entrenches an insoluble conflict of identities.
+The idea in its history.
+Stop “1947 · Exodus: le bateau qui força le monde à regarder” in L’Odyssée des idées (in French).
+Symbolic · Geopolitical · Memory
+Anthropy, pp.
+501–505
+1948 The Universal Declaration—dignity in articles
+Order created.
+A universal moral norm that makes the violation of human rights visible and illegitimate.
+Debt displaced.
+The text creates a permanent compliance debt for all States; disorder is displaced from brute force into justification and procedure.
+Legal · Moral · Political
+Anthropy, pp.
+505–509
+1948 Shannon—killing meaning, giving birth to information
+Order created.
+A mathematical theory of communication that allows near error-free data transmission and founds the digital era.
+Debt displaced.
+Meaning is evacuated from the process; syntactic order is paid for with semantic disorder (information overload, loss of context).
+The idea in its history.
+Stop “1949 · Shannon: l’information sans le sens” in L’Odyssée des idées (in French).
+Technical · Cognitive · Philosophical
+Anthropy, pp.
+509–512
+1953 DNA—decoding to recode
+Order created.
+The genetic code understood, opening the way to the engineering of life.
+Debt displaced.
+An ethical debt (eugenics 2.0), an ecological one (GMOs), and a social one (biological inequalities); genetic precision creates normative chaos.
+Technical · Ecological · Moral
+Anthropy, pp.
+513–516
+1957 The Common Market—the union that divides
+Order created.
+Peace through economic integration, the creation of a unified market.
+Debt displaced.
+Political conflict displaced into technocratic norms; popular sovereignty eroded in favor of governance at a distance.
+Economic · Political · Legal
+Anthropy, pp.
+516–519
+1958 The Fifth Republic—democratizing the monarchy
+Order created.
+Executive stability through the concentration of presidential power.
+Debt displaced.
+Parliament and intermediate bodies weakened; democratic disorder displaced into abstention or the street.
+Political · Social
+Anthropy, pp.
+519–521
+1958–1988 Climate—measuring in order to ignore
+Order created.
+An ever more precise body of scientific evidence on global warming.
+Debt displaced.
+Exact knowledge sometimes becomes the alibi for political inaction; the carbon debt accumulates, shifting physical chaos onto future generations.
+Cognitive · Temporal · Ecological
+Anthropy, pp.
+522–525
+1960 Africa—Year Two of the independences
+Order created.
+An order of flags and national anthems, formal political independence.
+Debt displaced.
+Structures of economic and political dependence persist (neo-colonialism); the arbitrariness of borders displaces disorder within the new States.
+Geopolitical · Economic · Political
+Anthropy, pp.
+525–529
+1960 The pill—the fertile span domesticated
+Order created.
+Individual mastery of the fertility calendar, sexuality dissociated from reproduction.
+Debt displaced.
+The contraceptive load (health-related, mental) is overwhelmingly shifted onto women; a debt of research into male contraception.
+Social · Technical · Inequalities
+Anthropy, pp.
+529–533
+1962 Decolonizing—the nation in the mirror
+Order created.
+A multiplication of sovereign nation-states.
+Debt displaced.
+Former metropoles and new States alike face crises of identity; the colonial repressed returns, mirrored (immigration, racism, civil wars).
+Symbolic · Social · Memory
+Anthropy, pp.
+533–537
+1967 Debord—the spectacle, or commodity hypnosis
+Order created.
+The diagnosis of a society in which social relations are mediated by images.
+Debt displaced.
+The spectacle colonizes the imaginary and lived life; the order of consumption displaces disorder into alienation and passivity.
+Cognitive · Social · Symbolic
+Anthropy, pp.
+537–541
+1968 May 68—pleasure without restraint, restraint without pleasure
+Order created.
+A liberation of mores and a radical critique of authority.
+Debt displaced.
+The refusal of political power lets capitalism co-opt the critique and turn it into a marketing argument; cultural freedom is paid for with economic precarity.
+The idea in its history.
+Stop “1968 · Mai 68: l’imagination au pouvoir contre l’ordre sans imagination” in L’Odyssée des idées (in French).
+Cultural · Social · Economic
+Anthropy, pp.
+541–545
+1969 Apollo 11—humanity beside itself
+Order created.
+A supreme technical and symbolic feat, a demonstration of human power.
+Debt displaced.
+A colossal financial cost that displaces earthly priorities (the social, poverty); the ecological debt of the space race (debris).
+The idea in its history.
+Stop “1969 · Apollo 11: décrocher la Lune, revenir vers la Terre” in L’Odyssée des idées (in French).
+Technical · Symbolic · Economic
+Anthropy, pp.
+545–549
+1971 Microprocessor—the invisible that commands
+Order created.
+Universal, miniaturized computing power, founding automation and the information society.
+Debt displaced.
+An ecological debt (electronic waste), a social one (obsolete trades), and a strategic one (the vulnerability of systems).
+Technical · Economic · Ecological
+Anthropy, pp.
+549–553
+1971 King Dollar—wealth without value
+Order created.
+The end of gold convertibility, creating a flexible monetary system founded on trust in the dollar.
+Debt displaced.
+The United States exports its inflation and has its deficits financed by the rest of the world; a stability debt for the countries of the periphery.
+The idea in its history.
+Stop “1971 · Le dollar: le privilège exorbitant et son crépuscule annoncé” in L’Odyssée des idées (in French).
+Economic · Geopolitical
+Anthropy, pp.
+553–556
+1974 Kahneman—the reason that unreasons
+Order created.
+A map of our cognitive biases, revealing a predictable architecture of human irrationality.
+Debt displaced.
+This knowledge becomes a tool of manipulation (the nudge), displacing the disorder of our errors into a voluntary servitude to “choice architectures.”
+Cognitive · Political · Economic
+Anthropy, pp.
+557–560
+1979 Bourdieu—the order of taste, the taste for order
+Order created.
+The mechanisms of “distinction” unveiled, where taste serves as a class marker.
+Debt displaced.
+Sociological lucidity itself becomes cultural capital, creating a new form of distinction through the critique of distinction.
+The idea in its history.
+Stop “1979 · Bourdieu: comment nos goûts révèlent notre position sociale” in L’Odyssée des idées (in French).
+Social · Cognitive · Symbolic violence
+Anthropy, pp.
+560–562
+1979–1980 Neoliberalism—there is dollar in the air
+Order created.
+Monetary stability, market discipline, the liberation of capital flows.
+Debt displaced.
+Disorder is displaced onto the social (mass unemployment, inequalities), the ecological (deregulation), and the political (loss of sovereignty).
+Economic · Social · Political
+Anthropy, pp.
+562–567
+1989–1991 The internet—the center everywhere, nowhere
+Order created.
+Planetary connection, decentralized access to information.
+Debt displaced.
+Cognitive fragmentation (overload), mass surveillance; the order of connection displaces disorder onto attention and privacy.
+Technical · Cognitive · Social
+Anthropy, pp.
+570–575
+1991 The USSR—the empire that killed itself trying to cure itself
+Order created.
+The end of the Cold War, the liberation of the nations held captive by the Soviet empire.
+Debt displaced.
+Economic and social chaos after the collapse (shock therapy, hyperinflation, “loans-for-shares”); political disorder shifts toward regional conflicts (Crimea and the Donbas in 2014, the 2022 invasion) and a Russia held together by authoritarian order, oil rent, and nostalgia.
+The idea in its history.
+Stop “1991 · L’effondrement de l’URSS: le réformateur et le fossoyeur” in L’Odyssée des idées (in French).
+Geopolitical · Political · Social
+Anthropy, pp.
+567–570
+1995 Exoplanets—mirrors without a face
+Order created.
+Knowledge of thousands of other worlds, radically decentering our place in the universe.
+Debt displaced.
+The financial and energy cost of observation; an orbital debt (space debris); the Fermi paradox sharpens, creating existential disorder.
+Cognitive · Ecological · Philosophical
+Anthropy, pp.
+576–579
+1995 Brain flux—lost depths vs. captive surface
+Order created.
+An attention economy that optimizes the capture of streams of consciousness.
+Debt displaced.
+A collective mental desiccation, the loss of deep concentration; the cognitive debt is paid in fatigue and superficiality.
+Cognitive · Economic · Social
+Anthropy, pp.
+579–583
+2000 Anthropocene—the power that kills itself
+Order created.
+A human power become geological force, capable of shaping the planet.
+Debt displaced.
+The debt is total: climatic, ecological, biospheric; the industrial order displaces disorder onto the whole Earth system, threatening its own survival.
+Ecological · Energetic · Global
+Anthropy, pp.
+583–586
+2001 September 11—the fall of the empire
+Order created.
+A global security apparatus to forestall the terrorist threat.
+Debt displaced.
+Civil liberties eroded, endless wars, moral authority diminished; the promised security is paid for with generalized insecurity.
+Political · Legal · Geopolitical
+Anthropy, pp.
+586–588
+2008 The financial crisis—glass cathedral, cracked faith
+Order created.
+The world financial system rescued by massive intervention from States and central banks.
+Debt displaced.
+The socialization of private losses is paid for in public debt and austerity for entire populations; trust in the elites is lastingly broken.
+The idea in its history.
+Stop “2008 · La crise des subprimes: la dette privée socialisée” in L’Odyssée des idées (in French).
+Economic · Political · Social
+Anthropy, pp.
+588–592
+2009 Bitcoin—trust changes address
+Order created.
+A decentralized network of trust, with no intermediaries, founded on an algorithmic rule.
+Debt displaced.
+The energy debt of “proof of work”; extreme volatility; trust is displaced from the political onto a code whose governance remains contested.
+Technical · Energetic · Economic
+Anthropy, pp.
+593–596
+2012 CRISPR—genes cut, humanity rewritten
+Order created.
+Surgical precision in genome editing, the promise of cures.
+Debt displaced.
+An ethical debt (eugenics 2.0), a social one (biological inequalities), and an ecological one (gene drives); normative chaos displaced onto future generations.
+Technical · Moral · Ecological
+Anthropy, pp.
+597–600
+2013 Algorithms—predicting without seeing, governing without a name
+Order created.
+Prediction and optimization of behavior at scale.
+Debt displaced.
+Algorithmic servitude, opaque decisions, the past petrified in predictive models; freedom becomes the capacity to deviate from the computed trajectory.
+Cognitive · Political · Technical
+Anthropy, pp.
+600–604
+2015 Paris Agreement—slack in the hard wall
+Order created.
+Diplomatic unanimity, a universal procedural framework for climate action.
+Debt displaced.
+Procedural order displaces physical disorder (real emissions) onto the future and onto the global South; the climate debt keeps growing.
+Political · Ecological · Temporal
+Anthropy, pp.
+604–609
+2016 The GDPR—the rights of the powerless
+Order created.
+A legal framework for the protection of personal data, creating rights for citizens.
+Debt displaced.
+A cognitive debt for users (consent fatigue) and a bureaucratic one for small and medium-sized firms; the formal order validates an architecture of extraction.
+Legal · Cognitive · Economic
+Anthropy, pp.
+609–613
+2020 Covid-19—stress test of the world
+Order created.
+Health protection through social control (lockdowns, health passes).
+Debt displaced.
+Economic disorder (public debt), social disorder (inequalities), psychic disorder (mental health), and educational disorder (learning losses), offloaded wholesale.
+Social · Economic · Political
+Anthropy, pp.
+613–618
+2022 Psittacism 2.0—the parrot speaks to parrots
+Order created.
+The production of language and images automated, productivity gained.
+Debt displaced.
+A debt of verification (hallucinations), a social debt (tasks replaced, retraining left to the individual), and a cognitive debt (atrophy of judgment); value concentrated at the expense of the creators whose works serve as the corpus.
+Cognitive · Economic · Technical
+Anthropy, pp.
+618–622
+2024 The State without a people, the people without a State
+Order created.
+The order of global financial markets, liquidity and efficiency of capital flows.
+Debt displaced.
+Democratic States lose sovereignty; disorder is displaced onto peoples (austerity, precarity) to guarantee the stability of assets.
+Political · Economic · Social
+Anthropy, pp.
+622–626
+No milestone matches these criteria.
+The trajectory: from the spatial to the cognitive
+Read end to end, the chronology draws a migration that the book’s afterword sums up.
+In ages 1 to 3, order displaces disorder spatially: the dead beyond the village, waste beyond the city, “barbarians” beyond the empire.
+In ages 4 and 5, socially: onto serfs, onto colonies, onto labouring classes.
+In ages 6 and 7, temporally and cognitively: onto future generations (climate), onto attention (algorithms).
+Each time a receptacle saturates, the escape reinvents itself elsewhere—more abstract, more distant, less politicizable.
+This dynamic—displacement, accumulation, saturation, return—is formalized in AWP-07, The Anthropic Loop; the deep-history reading of the Register is the object of AWP-02, 3.3 Million Years in One Principle.
+What the Register does not say
+The Register shows where the debts go; it does not show how they come back.
+Yet they do come back—metamorphosed: CO₂ as heatwaves, colonial extraction as migrations, captured attention as dependencies.
+That return is precisely the object of the anthropic loop, formalized in AWP-07.
+Another limit, assumed by the book: the Register’s categories—economic, social, political—are themselves analytical tools that carve up reality, and that carving can serve the very displacement it describes: separating the economic from the social makes it possible to move costs from one to the other.
+The Register records; it does not claim to settle what part of each transfer was avoidable.
+Where this register comes from
+ANTHROPY – A Big History of Civilization’s Hidden Costs (2026, 644 pages) develops each milestone as a chapter, sums up each age in an “order created / disorder displaced” diagram, and draws the overall trajectory in its afterword; it points to this page through a QR code (“Going Further,” p.
+631).
+The Register condenses each chapter onto the common grid, in the author’s words; each milestone sits in the age of its chapter, with the page numbers of the 644-page edition.
+When the book is corrected, the Register follows: revisions are logged at the foot of the page.
+The working vocabulary of the framework is defined in the glossary—not to be confused with the coupled cost registers of AWP-06, a typology rather than a chronology.
+The French version is browsable at Le Registre des coûts déportés.
+Frequently asked questions
+What is the Register of Offloaded Costs?
+The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY – A Big History of Civilization’s Hidden Costs (Stéphane Lalut, English edition 2026; French original ANTHROPIE, 2025): the book tells deep history in 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, and the Register brings each milestone down to the same grid: the Order created by an innovation and the Debt displaced—the disorder moved toward other places, other times, or other groups.
+The book points to it through a QR code; all 168 milestones are freely browsable on this page.
+What are the seven ages of anthropy?
+The book organizes deep history into seven ages: 1.
+Foundational Programs (8 milestones, ≈ 3.3 million years ago → ≈ 45,000 BCE); 2.
+The Neolithic Trap (7, ≈ 10,000 → ≈ 1046 BCE); 3.
+The Extractive Empires (34, ≈ 900 BCE → 312 CE); 4.
+The Networks—Routes, Relays, Relays of Power (20, 486 → 1494); 5.
+The Modern State-machine (24, 1513 → 1784); 6.
+Industrialization and Nation-States (29, 1789 → 1905); 7.
+The Contemporary Metaprogram (46, 1905 → 2024).
+The book sets no boundaries for its ages: each is defined by its chapters, and the Register places each milestone in the age of its chapter.
+What do “Order created” and “Debt displaced” mean?
+It is the reading grid of every milestone in the Register.
+The “Order created” is the visible, immediate benefit, the structure gained—food security, written memory, monetary trust, coordination at a distance.
+The “Debt displaced” is the invisible cost, exported in time, in space, or onto other groups.
+Categories (energetic, social, cognitive, political…) specify the nature of each transfer.
+The grid applies the anthropic hypothesis: order is not created, it is paid for elsewhere.
+What is the oldest transfer documented in the Register?
+The first stone tools, around 3.3 million years ago.
+Order created: memory and intention externalized into durable artifacts, creating transmissible knowledge independent of its bearer.
+Debt displaced: dependence on materials and know-how, a cognitive cost converted into a thermodynamic cost of extraction and shaping.
+The displacement of disorder therefore precedes industrialization by a very long way.
+How has the displacement of disorder evolved across the seven ages?
+The book’s afterword draws a clear trajectory.
+Ages 1 to 3: order displaces disorder spatially—the dead beyond the village, waste beyond the city, “barbarians” beyond the empire.
+Ages 4 and 5: socially—onto serfs, colonies, labouring classes.
+Ages 6 and 7: temporally and cognitively—onto future generations (climate), onto attention (algorithms).
+Each time a receptacle saturates, the escape reinvents itself elsewhere: more abstract, more distant, less politicizable.
+Is the Register of Offloaded Costs the same thing as the coupled cost registers?
+No.
+The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY: a chronology of the book’s historical milestones.
+The coupled cost registers are a theoretical contribution of AWP-06: the grid of four registers—energy, matter, territory, attention—along which digital infrastructure simultaneously displaces disorder.
+One is a chronology, the other a typology; only the word “register” is shared.
+Where can I read the full Register of Offloaded Costs?
+On this page, freely browsable and anchored entry by entry: all 168 milestones of ANTHROPY – A Big History of Civilization’s Hidden Costs (2026, 644 pages).
+The book develops each milestone as a chapter, sums up each age in an “order created / disorder displaced” diagram, and draws the overall trajectory in its afterword.
+The book points to this page through a QR code (“Going Further”, p.
+631).
+The French version is browsable at /registre-des-couts-deportes/.
+Revisions
+1 November 2026 — For 68 milestones, a line “The idea in its history” points to the stop in L’Odyssée des idées (in French) that deals with the same idea, thinker or event; each pair checked against the text of the book, no entry of the Register rewritten.
+26 October 2026 — The three missing milestones added (the Olmecs, the Odyssey, Gutenberg), written from the book’s text: the Register now holds all 168 milestones.
+The other 165 entries checked against the corrected edition; 41 realigned where they contradicted the book, claimed more than it does, or attributed to it a fact it does not contain (for example: crossing the Rubicon opens the civil war rather than ending it; hygiene “probably” accounts for a major part of the fall in mortality, not all of it).
+The same day, each milestone placed in the age of its chapter (twenty changed age: Clovis, the milestones from 1789 to 1793, those from 1905 to 1945) and given its page numbers; all entries read against the English edition (644 pages): fifty-one titles aligned on the book’s chapter titles, twenty entries corrected (for example: Erasmus supplies “one of the tools” of the Reformation, not its tools).
+25 October 2026 — Scope stated at the top (165 of the 168 milestones, the three missing ones named); the Register is no longer presented as the book’s epilogue—the book sums it up in diagrams and points to it through a QR code; the Templars milestone aligned with the corrected edition of the book (the Temple left the royal administration a lesson more than its methods).
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link

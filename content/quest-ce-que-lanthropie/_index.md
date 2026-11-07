@@ -3,7 +3,7 @@ title: "Qu'est-ce que l'anthropie ?"
 og_image: "images/og-notion-anthropie.jpg"
 og_image_alt: "Carte de partage : « Qu’est-ce que l’anthropie ? » et son schéma"
 date: 2026-04-03  # premiere mise en ligne possible sur stephane-lalut.com (CNAME acf728c, 03/04/2026) ; premiere capture publique Wayback le 16/04/2026 (audit du 05/11/2026)
-lastmod: 2026-11-06  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-07  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
@@ -28,6 +28,8 @@ faq:
     answer: "La dette publique peut déplacer des charges entre périodes et entre groupes sociaux. Ce déplacement n'est ni automatique ni nécessairement défavorable aux générations futures : il dépend de l'usage de l'emprunt, de ses bénéficiaires et de la répartition des charges et des actifs. L'anthropie en fait une hypothèse à examiner, non une conséquence établie de tout endettement : le working paper AWP-03 la formule, l'AWP-09 la confronte aux comptes publics, et la page « La dette publique est-elle un fardeau pour les générations futures ? » en présente l'examen."
   - question: "Quelles sont les limites du concept d'anthropie ?"
     answer: "L'anthropie se présente comme une hypothèse de travail, non comme une théorie achevée. Trois limites sont assumées : elle prolonge des traditions existantes (externalités, cost-shifting de K. W. Kapp) dont elle unifie les cas ; sa généralité exige des critères observables — coût marginal croissant, effet boomerang — pour rester réfutable ; et son apport tient moins à la découverte du transfert qu'à sa stabilisation opératoire (définition canonique, vocabulaire, critères, corpus daté)."
+  - question: "En quoi l'anthropie se distingue-t-elle du cost-shifting de K. W. Kapp ?"
+    answer: "La tradition du cost-shifting de K. W. Kapp a montré dès 1950 que le report des coûts sur des tiers est systémique plutôt qu'accidentel. L'anthropie reprend cette filiation et la prolonge : elle réunit les déplacements dans l'espace, dans le temps et entre groupes sociaux en un seul mécanisme, ajoute des critères de saturation (coût marginal croissant, effet boomerang) et s'attache aux médiations qui rendent le transfert invisible. La section « Objections et limites » développe la comparaison."
   - question: "Qui a développé le cadre anthropique ?"
     answer: "Stéphane Lalut, économiste, chercheur indépendant et essayiste, a proposé le cadre anthropique en 2025 dans le livre ANTHROPIE — Ordre ici. Dette ailleurs, puis l'a formalisé à partir de 2026 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
 # En-tête de la page (auteur, 01/10/2026, variante B) : la phrase « proposée par » (déplacée de la section Définition,
@@ -45,7 +47,7 @@ frontiere:
     - texte: "Le désordre déplacé peut s'accumuler, saturer et revenir : déplacement, accumulation, saturation, retour, bifurcation."
       ancre: "les-trois-axes-de-transfert"
       section: "Les trois axes"
-    - texte: "Il se donne des critères observables — coût marginal croissant du transfert, effet boomerang — pour dire quand un espace de déportation sature."
+    - texte: "Elle se donne des critères observables — coût marginal croissant du transfert, effet boomerang — pour dire quand un espace de déportation sature."
       ancre: "objections-et-limites"
       section: "Objections et limites"
   naffirme:
@@ -58,10 +60,12 @@ frontiere:
     - texte: "Se confondre avec l'entropie de la physique, ni être une métaphore décorative."
       ancre: "anthropie-et-entropie"
       section: "Notions voisines"
-    - texte: "Apporter une réponse unique : il fournit une manière de poser les questions avec plus de netteté."
+    - texte: "Apporter une réponse unique : elle fournit une manière de poser les questions avec plus de netteté."
       ancre: "quelques-domaines-dapplication"
       section: "Domaines d'application"
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-07, texte: "Ajout : une réponse sur ce qui distingue l'anthropie du cost-shifting de K. W. Kapp, jusqu'ici dans la seule version anglaise."}
+  - {date: 2026-11-06, texte: "Ajout : une section sur l'adjectif « anthropique », entre son sens courant (d'origine humaine) et son emploi propre au cadre ; l'auteur est nommé dans la définition reprise."}
   - {date: 2026-11-05, texte: "Correction : la réponse sur la dette publique présentait comme un fait ce que le site traite comme une hypothèse ; elle dit désormais que le déplacement de charges n'est ni automatique ni nécessairement défavorable, et où l'hypothèse est examinée. L'Anthropocène est une époque géologique proposée, non retenue comme unité formelle en 2024. La date de publication affichée était fausse (première mise en ligne : avril 2026)."}
 ressource:  # index /ressources/ : en tête du cadre d'analyse (arbitrage PRO-20261025-225715, 25/10/2026) ; garde son entrée de menu
   type: ["notion"]
@@ -163,7 +167,7 @@ Selon le Wiktionnaire, «&nbsp;anthropique&nbsp;» signifie «&nbsp;qui est en r
 
 Sur ce site, l'adjectif est aussi employé en référence à l'anthropie&nbsp;: le *cadre anthropique*, le *transfert anthropique* et la *boucle anthropique* renvoient à l'hypothèse selon laquelle les systèmes sociaux produisent de l'ordre local en déplaçant leur désordre vers d'autres lieux, d'autres temps ou d'autres groupes. Les deux emplois ne se confondent pas. Une pollution d'origine anthropique peut être étudiée dans ce cadre&nbsp;; sa seule origine humaine ne suffit pas à établir qu'un tel déplacement a eu lieu.
 
-Le *principe anthropique* de la cosmologie est une notion distincte, relative aux conditions qui permettent l'existence d'observateurs dans l'Univers. Il ne se confond ni avec l'origine humaine d'un phénomène, ni avec l'anthropie (voir le bloc précédent).
+Le *principe anthropique* de la cosmologie est une autre notion (voir le bloc précédent).
 
 </div></details>
 
