@@ -853,7 +853,8 @@ main .pastilles ul {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 12px 26px -12px rgba(15, 27, 54, 0.45); transition: transform 0.2s ease;
 }
 .livre-porte:hover .livre-porte__cover { transform: translateY(-2px); }
-.livre-porte__corps { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; padding: 1rem 1.1rem 1.1rem; min-width: 0; }
+.livre-porte__corps { display: flex; flex-direction: column; gap: 0.45rem; flex: 1; padding: 1rem 1.1rem 0.6rem; min-width: 0; }
+.livre-porte__pied { padding: 0 1.1rem 1.1rem; display: flex; flex-direction: column; gap: 0.45rem; }
 .livre-porte__titre { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; line-height: 1.22; margin: 0; }
 .livre-porte__titre a { color: var(--color-text); text-decoration: none; }
 .livre-porte__titre a:hover { color: var(--color-accent); }
@@ -861,13 +862,19 @@ main .pastilles ul {
 .livre-porte__voix { font-family: var(--font-serif); font-style: italic; font-size: 1rem; line-height: 1.35; color: var(--color-accent); margin: 0; }
 .livre-porte__voix-auteur { display: block; font-family: var(--font-sans); font-style: normal; font-size: 12.5px; color: var(--color-text-subtle); margin-top: 0.2rem; }
 .livre-porte__infos {
-  margin-top: auto; padding-top: 0.6rem; border-top: 1px solid var(--color-rule-ghost);
+  padding-top: 0.6rem; border-top: 1px solid var(--color-rule-ghost);
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.3rem 0.6rem;
 }
 .livre-porte__prix { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--color-text); }
 .livre-porte__prix small { font-size: 12px; font-weight: 400; color: var(--color-text-subtle); margin-left: 0.3rem; }
 // Note et nouveauté (partial preuve-sociale, centrées sur /ressources-offertes/) : alignées ici, en petit.
 .livre-porte .ressources-book__rating, .livre-porte .ressources-book__novelty { justify-content: flex-start; margin: 0; font-size: 12.5px; }
+// La note coule comme du texte : en flex, chaque morceau (étoile, note, nombre, « sur Amazon.fr ») passait seul à la
+// ligne dans une carte étroite — six lignes à 320 px (mesuré le 07/11/2026).
+.livre-porte .ressources-book__rating { display: block; }
+.livre-porte .ressources-book__rating > * + * { margin-left: 0.3em; }
+// Note et date sous le prix, sur toute la largeur de la carte (à côté du prix, elles n'avaient que la moitié).
+.livre-porte__infos > .ressources-book__rating, .livre-porte__infos > .ressources-book__rating-date { flex-basis: 100%; }
 .livre-porte .ressources-book__rating-date { text-align: left; }
 .livre-porte__autre-edition { font-size: var(--fs-small); color: var(--color-text-muted); margin: 0.2rem 0 0; }
 .livre-porte__actions { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
@@ -881,19 +888,24 @@ a.livre-porte__btn--achat { background: var(--color-bg-elevated); color: var(--c
 a.livre-porte__btn--achat:hover { border-color: var(--color-accent); }
 
 // Autres ouvrages : la même carte, en largeur (couverture à gauche)
-.livre-porte--large { display: grid; grid-template-columns: 150px minmax(0, 1fr); grid-template-rows: auto 1fr; }
+.livre-porte--large { display: grid; grid-template-columns: 150px minmax(0, 1fr); grid-template-rows: auto 1fr auto; }
+.livre-porte--large .livre-porte__couv { grid-row: 2 / span 2; }
 .livre-porte--large .livre-porte__question { grid-column: 1 / -1; min-height: 0; }
 .livre-porte--large .livre-porte__couv { padding: 1.1rem 0 1.1rem 1.1rem; background: none; }
 .livre-porte--large .livre-porte__cover-wrap { width: 100%; }
+.livre-porte--large .livre-porte__corps { grid-column: 2; }
+.livre-porte--large .livre-porte__pied { grid-column: 2; }
 
 // Téléphone : une colonne, couverture réduite à gauche du texte
 @media (max-width: 560px) {
   .livres-portes, .livres-portes--larges { grid-template-columns: minmax(0, 1fr); }
-  .livre-porte, .livre-porte--large { display: grid; grid-template-columns: 96px minmax(0, 1fr); grid-template-rows: auto 1fr; }
+  .livre-porte, .livre-porte--large { display: grid; grid-template-columns: 96px minmax(0, 1fr); grid-template-rows: auto auto auto; }
+  .livre-porte--large .livre-porte__couv { grid-row: auto; }
   .livre-porte__question { grid-column: 1 / -1; min-height: 0; }
   .livre-porte__couv, .livre-porte--large .livre-porte__couv { padding: 0.9rem 0 0.9rem 0.9rem; background: none; }
   .livre-porte__cover-wrap { width: 100%; }
-  .livre-porte__corps { padding: 0.9rem; }
+  .livre-porte__corps, .livre-porte--large .livre-porte__corps { padding: 0.9rem 0.9rem 0.4rem; grid-column: 2; }
+  .livre-porte__pied, .livre-porte--large .livre-porte__pied { grid-column: 1 / -1; padding: 0 0.9rem 0.9rem; }
 }
 @media (prefers-reduced-motion: reduce) { .livre-porte, .livre-porte__cover { transition: none; } }
 // Téléphone (audit du 07/11/2026) : à 320 px les deux boutons côte à côte débordaient ; empilés, 44 px de haut.

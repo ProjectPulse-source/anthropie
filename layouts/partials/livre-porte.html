@@ -33,6 +33,10 @@
     {{- with ($st | default $p.Params.subtitle) }}<p class="livre-porte__st"{{ if and $repli $st }} lang="en"{{ end }}>{{ partial "fr-typo.html" . }}</p>{{ end }}
     {{- $en := eq $p.Lang "en" -}}
     {{- with $ligne }}<p class="livre-porte__voix">{{ if $en }}“{{ . }}”{{ else }}«&nbsp;{{ partial "fr-typo.html" . }}&nbsp;»{{ end }}{{ with $auteur }}<span class="livre-porte__voix-auteur">{{ partial "fr-typo.html" . }}</span>{{ end }}</p>{{ end }}
+  </div>
+  {{- /* Pied de carte hors du corps : sur téléphone il passe sous la couverture, sur toute la largeur (audit du 07/11/2026 :
+         dans la colonne de texte, la note s'étalait sur quatre à six lignes à 320 px). */}}
+  <div class="livre-porte__pied">
     <div class="livre-porte__infos">
       {{- with $price }}<span class="livre-porte__prix">{{ . | safeHTML }}<small>{{ if $isEn }}paperback{{ else }}broché{{ end }}{{ with $p.Params.pages }} · {{ . }}&nbsp;p.{{ end }}{{ if $repli }} · <span lang="en">in French</span>{{ end }}</small></span>{{ end }}
       {{- if not $isEn }}{{ partial "preuve-sociale.html" $p }}{{ end }}

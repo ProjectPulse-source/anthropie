@@ -180,7 +180,7 @@
   margin: 2px 0 0;
   text-align: center;
   font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
+  font-size: 12px;   // 11 px (--fs-tiny) jusqu'au 07/11/2026 : la ligne qui rend la note vraie était la moins lisible
   color: var(--color-text-subtle);
 }
 
@@ -195,7 +195,7 @@
 }
 .ressources-book__novelty-badge {
   font-family: var(--font-sans);
-  font-size: var(--fs-tiny);
+  font-size: 12px;   // aligné sur les étiquettes des pages livres (audit téléphone, 07/11/2026)
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-weight: 600;
