@@ -815,7 +815,13 @@ main .pastilles ul {
 }
 .livres-groupe { margin-bottom: 1rem; }
 .livres-note { font-family: var(--font-sans); font-size: var(--fs-small); color: var(--color-text-subtle); margin: 0.75rem 0 0; }
-.livres-projet { max-width: 720px; color: var(--color-text-muted); }
+// « Le projet » : toute la largeur de la page, en deux colonnes sur ordinateur (une ligne pleine largeur ferait
+// ~170 caractères) ; une colonne sous 900 px. Demande de l'auteur, 07/11/2026.
+.livres-projet { color: var(--color-text-muted); }
+@media (min-width: 900px) {
+  .livres-projet { column-count: 2; column-gap: 3rem; }
+  .livres-projet > p:first-child { margin-top: 0; }
+}
 
 // Grille : quatre portes (corpus), puis deux cartes en largeur (autres ouvrages)
 .livres-portes { display: grid; gap: 1.1rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
