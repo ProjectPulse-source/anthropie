@@ -27,10 +27,13 @@ def barres(d, j: dict, lang: str = "fr") -> None:
     fl, fv = og.font("inter", 18, 500), og.font("inter", 22, 600)
     d.text((x0, 112), "Above the poverty threshold, France " + an if lang == "en" else "Au-dessus du seuil de pauvreté, France " + an,
            font=og.font("inter", 17, 400), fill=og.GREY)
+    # unité statistique (Audit-20/21, 07/11/2026) : des personnes, classées par le type de foyer où elles vivent
+    d.text((x0, 134), "% of people, by type of household" if lang == "en" else "En % des personnes, selon le type de foyer",
+           font=og.font("inter", 17, 400), fill=og.GREY)
     pct = "%" if lang == "en" else " %"
     for i, (cle, lib_fr, lib_en, col) in enumerate((("A2", "Couple sans enfant", "Couple, no children", GRIS_CLAIR),
-                                                     ("A2_DCH1", "Couple avec un enfant", "Couple, one child", og.SEC),
-                                                     ("A1_DCH", "Parent seul", "Single parent", og.C2))):
+                                                     ("A2_DCH1", "Deux adultes, un enfant", "Two adults, one child", og.SEC),
+                                                     ("A1_DCH", "Foyer monoparental", "Single-parent household", og.C2))):
         y = 160 + 92 * i
         v = s[cle][an]
         d.text((x0, y), lib_en if lang == "en" else lib_fr, font=fl, fill=og.INK)
@@ -51,18 +54,18 @@ def main() -> int:
     A, E = j["affichage"], j["affichage_en"]
     og.carte("og-imprevu-menages-en.jpg",
              ["Income is not", "the whole story"],
-             "Above the poverty line, %s%% of single parents could not face an unexpected expense." % E["ps_dessus"],
+             "Above the poverty line, %s%% of people in single-parent households could not face an unexpected expense." % E["ps_dessus"],
              "Eurostat, EU-SILC (ilc_mdes04), France %s · CC BY 4.0" % an,
              "stephane-lalut.com/en/who-can-cope-with-an-unexpected-expense/",
              lambda d: barres(d, j, "en"),
-             [(og.C2, "Single parent: %s%%" % E["ps_dessus"]), (og.SEC, "Couple, one child: %s%%" % E["c1_dessus"])])
+             [(og.C2, "Single-parent household: %s%%" % E["ps_dessus"]), (og.SEC, "Two adults, one child: %s%%" % E["c1_dessus"])])
     og.carte("og-imprevu-menages.jpg",
              ["Le revenu", "ne dit pas tout"],
-             "Au-dessus du seuil de pauvreté, %s %% des parents seuls ne pourraient pas faire face à une dépense imprévue." % A["ps_dessus"],
+             "Au-dessus du seuil de pauvreté : %s %% des personnes en foyer monoparental ne pourraient pas payer un imprévu." % A["ps_dessus"],
              "Eurostat, EU-SILC (ilc_mdes04), France %s · CC BY 4.0" % an,
              "stephane-lalut.com/qui-peut-faire-face-a-une-depense-imprevue/",
              lambda d: barres(d, j),
-             [(og.C2, "Parent seul : %s %%" % A["ps_dessus"]), (og.SEC, "Couple avec un enfant : %s %%" % A["c1_dessus"])])
+             [(og.C2, "Foyer monoparental : %s %%" % A["ps_dessus"]), (og.SEC, "Deux adultes, un enfant : %s %%" % A["c1_dessus"])])
     return 0
 
 

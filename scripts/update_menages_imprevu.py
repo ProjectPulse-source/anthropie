@@ -283,7 +283,9 @@ TXT = {
     "fr": dict(
         titre="Ne pas pouvoir faire face à une dépense imprévue : le revenu ne dit pas tout (France, {annee})",
         titre_m="Faire face à une dépense imprévue : le revenu ne dit pas tout (France, {annee})",
-        desc="Part des personnes qui ne pourraient pas faire face à une dépense imprévue, France, {annee}. Au-dessus du seuil de "
+        unite="Part des personnes qui ne pourraient pas y faire face, selon le type de foyer où elles vivent",
+        desc="Part des personnes qui ne pourraient pas faire face à une dépense imprévue, selon le type de foyer où elles vivent, "
+             "France, {annee}. Au-dessus du seuil de "
              "pauvreté : couple sans enfant {c0_dessus} %, adulte seul {seul_dessus} %, couple avec un enfant {c1_dessus} %, parent seul "
              "{ps_dessus} %. En dessous du seuil : couple sans enfant {c0_dessous} %, adulte seul {seul_dessous} %, couple avec un enfant "
              "{c1_dessous} %, parent seul {ps_dessous} %.",
@@ -293,12 +295,15 @@ TXT = {
         source="Eurostat, enquête SILC (ilc_mdes04), en % des personnes",
         note="Déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation ; montant de la dépense fixé par "
              "l'enquête. Association, non cause : la position dans la tranche de revenu n'est pas contrôlée.",
-        montre="Au-dessus du seuil de pauvreté, {ps_dessus} % des parents seuls ne pourraient pas faire face à une dépense imprévue, "
-               "contre {c1_dessus} % des couples avec un enfant : le revenu relatif ne dit pas tout de la capacité d'encaisser un choc."),
+        montre="Au-dessus du seuil de pauvreté, {ps_dessus} % des personnes vivant dans un foyer monoparental ne pourraient pas faire "
+               "face à une dépense imprévue, contre {c1_dessus} % de celles vivant dans un foyer de deux adultes avec un enfant : le revenu "
+               "relatif ne dit pas tout de la capacité d'encaisser un choc."),
     "en": dict(
         titre="Unable to face an unexpected expense: income is not the whole story (France, {annee})",
         titre_m="Facing an unexpected expense: income is not the whole story (France, {annee})",
-        desc="Share of people who could not face an unexpected expense, France, {annee}. Above the poverty threshold: couple without "
+        unite="Share of people who could not face it, by the type of household they live in",
+        desc="Share of people who could not face an unexpected expense, by the type of household they live in, France, {annee}. "
+             "Above the poverty threshold: couple without "
              "children {c0_dessus}%, single adult {seul_dessus}%, couple with one child {c1_dessus}%, single parent {ps_dessus}%. Below "
              "the threshold: couple without children {c0_dessous}%, single adult {seul_dessous}%, couple with one child {c1_dessous}%, "
              "single parent {ps_dessous}%.",
@@ -308,8 +313,9 @@ TXT = {
         source="Eurostat, EU-SILC (ilc_mdes04), % of people",
         note="Self-reported; poverty threshold: 60% of median equivalised income; expense amount set by the survey. "
              "Association, not cause: position within the income band is not controlled.",
-        montre="Above the poverty threshold, {ps_dessus}% of single parents could not face an unexpected expense, against "
-               "{c1_dessus}% of couples with one child: relative income does not tell the whole story about coping with a shock."),
+        montre="Above the poverty threshold, {ps_dessus}% of people in single-parent households could not face an unexpected expense, "
+               "against {c1_dessus}% of people in two-adult households with one child: relative income does not tell the whole story "
+               "about coping with a shock."),
 }
 CLES = ("c0", "seul", "c1", "ps")
 COUL = {"c0": GRIS_CLAIR, "seul": GRIS_CLAIR, "c1": GRIS, "ps": ORANGE}
@@ -331,8 +337,11 @@ def fig(c: dict, Aff: dict, lang: str) -> str:
          'aria-labelledby="imp-t imp-d" font-family="%s">' % (W, h + 52, FONT),
          '<title id="imp-t">%s</title><desc id="imp-d">%s</desc>' % (esc(t["titre"]), esc(t["desc"])),
          '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, h + 52)]
-    for k, l in enumerate(pied_figure.coupe(t["titre"], 96)):
+    lt = pied_figure.coupe(t["titre"], 96)
+    for k, l in enumerate(lt):
         e.append('<text x="0" y="%d" font-size="14" font-weight="600" fill="%s">%s</text>' % (18 + 18 * k, INK, esc(l)))
+    # unité statistique (Audit-20/21, 07/11/2026) : des personnes, classées par le type de foyer où elles vivent
+    e.append('<text x="0" y="%d" font-size="12" fill="%s">%s</text>' % (18 + 18 * len(lt), INK2, esc(t["unite"])))
     top = 70
     for p, (cote, x0) in enumerate((("dessus", 0), ("dessous", 372))):
         e.append('<text x="%d" y="%d" font-size="12" font-weight="600" fill="%s">%s</text>' % (x0, top, INK2, esc(t[cote])))
@@ -365,6 +374,9 @@ def fig_m(c: dict, Aff: dict, lang: str, svg_d: str) -> str:
     t = txt(lang, Aff)
     pct = "%" if lang == "en" else " %"
     e, y = pied_figure.tete_mobile("impm", t["titre_m"], desc_de(svg_d), INK, FONT)
+    for k, l in enumerate(pied_figure.coupe(t["unite"], 36)):   # unité statistique, comme la version détaillée
+        y += 18 if k else 2
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
     y += 16
     for cote in ("dessus", "dessous"):
         y += 8
