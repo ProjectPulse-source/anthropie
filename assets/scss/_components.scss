@@ -96,6 +96,12 @@
 .lang-alt__link em { font-style: italic; }
 .lang-alt__link:hover { color: var(--color-pivot); }
 .lang-alt__link:hover .lang-alt__tag { color: var(--color-pivot); }
+// Téléphone (Audit-10, 07/11/2026) : une ligne courte « EN · English version » — le menu offre déjà « English — cette page ».
+@media (max-width: 600px) {
+  .lang-alt { margin-bottom: 0.25rem; }
+  .lang-alt__long { display: none; }
+  .lang-alt__link { min-height: 44px; }
+}
 @media (max-width: 767px) {
   .lang-alt { padding: 0 1.25rem; margin-bottom: 1.25rem; }
 }

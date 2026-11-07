@@ -7,7 +7,7 @@ description: "Les ouvrages de Stéphane Lalut : la série anthropique et autres 
 chapo: "Six livres, qui se lisent chacun indépendamment. Partez de la question qui vous occupe."
 commencer:
   - livre: "anthropie-ordre-ici-dette-ailleurs"
-    pour: "Comprendre où va le désordre que nos sociétés déplacent"
+    pour: "Comment nos sociétés produisent-elles de l'ordre, et à quel prix ?"  # Audit-10, 07/11/2026
   - livre: "dette-publique-qui-paie-vraiment"
     pour: "Comprendre qui supporte réellement le coût de la dette"
     pourquoi: "Le coût suivi canal par canal."

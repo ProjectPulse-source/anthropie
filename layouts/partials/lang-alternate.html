@@ -17,8 +17,8 @@
 <div class="lang-alt">
   <a class="lang-alt__link" href="{{ .Permalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">
     <span class="lang-alt__tag">{{ upper .Lang }}</span>
-    {{- if eq .Lang "en" }}<span class="lang-alt__text">Cette page existe aussi en anglais&nbsp;— <em>English version</em></span>
-    {{- else if eq .Lang "fr" }}<span class="lang-alt__text">This page is also available in French&nbsp;— <em>version française</em></span>
+    {{- if eq .Lang "en" }}<span class="lang-alt__text"><span class="lang-alt__long">Cette page existe aussi en anglais&nbsp;— </span><em>English version</em></span>
+    {{- else if eq .Lang "fr" }}<span class="lang-alt__text"><span class="lang-alt__long">This page is also available in French&nbsp;— </span><em>version française</em></span>
     {{- else }}<span class="lang-alt__text">{{ .Language.LanguageName }}</span>{{ end }}
   </a>
 </div>

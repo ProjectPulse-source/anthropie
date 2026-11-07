@@ -8,6 +8,15 @@
     {{ end }}
   </header>
 
+  {{- /* Garde (07/11/2026) : ce gabarit sert aussi, par le choix de gabarit de Hugo, une page qui n'est PAS dans la section
+         `livres` (/livresque/methode-et-corpus/). Sans garde, elle s'ouvrait sur les six portes et son contenu passait
+         en bas sous « Le projet ». Hors de la section : en-tête et contenu seulement, contenu d'abord. */ -}}
+  {{- $corpus := slice -}}{{- $autres := slice -}}
+  {{- if ne .Section "livres" }}
+  <div class="article__body">
+    {{ .Content }}
+  </div>
+  {{- else }}
   {{/* Page refaite le 07/11/2026 (maquette L2+ retenue par l'auteur ; arbitrage Audit-08,
        06_PROMOTION/MAQUETTES_PAGE_LIVRES_2026-11-07) : six portes d'entrée, une par livre, formulées par la question
        du lecteur ; voix du livre ; prix ; « Découvrir le livre » puis « Acheter ». Fusion FR/EN sans doublon (fiche
@@ -27,7 +36,7 @@
     {{- range $.Params.commencer }}{{ if eq .livre $slug }}{{ $vu = true }}{{ end }}{{ end -}}
     {{- if not $vu }}{{ warnf "livres : %q absent de `commencer` (%s) — affiché sans porte" $slug $.File.Path }}{{ $ordre = $ordre | append (dict "page" . "porte" nil) }}{{ end -}}
   {{- end }}
-  {{- $corpus := slice -}}{{- $autres := slice -}}
+  {{- $corpus = slice -}}{{- $autres = slice -}}
   {{- range $ordre }}{{ if eq .page.Params.serie "anthropie" }}{{ $corpus = $corpus | append . }}{{ else }}{{ $autres = $autres | append . }}{{ end }}{{ end -}}
 
   {{- with $corpus }}
@@ -56,6 +65,7 @@
     </div>
   </section>
 
+  {{- end }}
   <div class="page-exit">
     <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">
       {{ if $isEn }}View the Working Papers →{{ else }}Voir la série AWP →{{ end }}
@@ -64,6 +74,7 @@
 </article>
 
 {{/* Schema.org ItemList des ouvrages — ordre aligné sur la liste visible (ordre de `commencer` : corpus, puis autres ouvrages) */}}
+{{- if eq .Section "livres" -}}
 {{- $items := slice -}}
 {{- $pos := 0 -}}
 {{- range (append $autres $corpus) -}}
@@ -78,4 +89,5 @@
 <script type="application/ld+json">
 {{ $itemList | jsonify (dict "indent" "  ") | safeJS }}
 </script>
+{{- end -}}
 {{ end }}

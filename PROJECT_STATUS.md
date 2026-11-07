@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (nuit, fin) — Accueil : maquette retenue de l'Audit-10 en production ; note Amazon à 12 px ; garde du gabarit Livres — poussé sur demande de l'auteur
+
+Maquette retenue validée par l'auteur (`D:\PRO_PROMOTION\MAQUETTES_ACCUEIL_2026-11-07\`, `ARBITRAGE_AUDIT-10_2026-11-07.md`,
+pièce archivée avec SHA-256). **Hero au téléphone** : la définition, puis les boutons, puis la présentation du site (copie de la
+seconde phrase affichée sur téléphone seulement ; ordinateur inchangé) ; titre et surtitre resserrés ; bouton principal à
+645 px à 320 et 585 px à 390 (908 et 763 avant). **Ressources au téléphone** : liste compacte (vignette 88 px, nature et
+provenance, titre) au lieu du carrousel du 04/11 ; l'appareil d'ANTHROPIE (Registre) distingué par une étiquette. **Livres** :
+bande des portes, même liste `commencer` que /livres/ (jamais une copie), sans bouton d'achat (décision D2) ; glissement
+signalé au téléphone. **Porte d'ANTHROPIE** : « Comment nos sociétés produisent-elles de l'ordre, et à quel prix ? » (FR/EN, vaut
+aussi pour /livres/). **Bandeau de langue** : une ligne « EN · English version » au téléphone, toutes pages. **Défaut corrigé**
+au passage : /livresque/methode-et-corpus/ empruntait le gabarit Livres et, depuis L2+, s'ouvrait sur six portes avec son
+contenu relégué sous « Le projet » — garde `.Section == "livres"`, contenu d'abord, sans ItemList. Le commit de la note
+Amazon (`be47878`) part avec. Contrôles : build 0, typo_build 0, audit-liens 0, check-all --ci 0, compteurs 0 ; recette 320,
+390, 768, 1280 px sur /, /en/, /livres/, /livresque/methode-et-corpus/ (aucun débordement ni texte hors conteneur, cibles ≥ 44 px).
+
 ### 2026-11-07 (nuit, suite) — Audit téléphone des pages livres (320 à 414 px) et corrections ; « Le projet » pleine largeur
 
 Question de l'auteur (« pour toute modification, as-tu vérifié la compatibilité totale au format téléphone ? »). Réponse :

@@ -12,13 +12,12 @@
       <span class="hero__lead">{{ .Params.hero_lead | safeHTML }}</span>
       <span class="hero__statement">{{ .Params.hero_statement | safeHTML }}</span>
     </h1>
-    <p class="hero__lede">
-      {{ if eq .Lang "en" }}
-        Anthropy is the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups. This site gathers a research corpus devoted to testing this hypothesis: nine <em>Anthropy Working Papers</em>, four books in the corpus, publications and resources designed to be read, cited and discussed.
-      {{ else }}
-        L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent&nbsp;: dans l'espace, dans le temps, ou entre groupes sociaux. Ce site rassemble un corpus de recherche qui la met à l'épreuve&nbsp;: neuf <em>Anthropie Working Papers</em>, quatre livres du corpus, des publications et des ressources conçues pour être lues, citées et discutées.
-      {{ end }}
-    </p>
+    {{- /* Téléphone (maquette retenue, Audit-10, 07/11/2026) : la définition, puis les boutons, puis la présentation du site.
+           Sur ordinateur, le paragraphe reste entier avant les boutons : la seconde phrase y est montrée dans le paragraphe,
+           et sa copie sous les boutons n'apparaît que sur téléphone (une seule des deux est affichée à la fois). */ -}}
+    {{- $def := cond (eq .Lang "en") "Anthropy is the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups." "L'anthropie est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent&nbsp;: dans l'espace, dans le temps, ou entre groupes sociaux." -}}
+    {{- $siteTxt := cond (eq .Lang "en") "This site gathers a research corpus devoted to testing this hypothesis: nine <em>Anthropy Working Papers</em>, four books in the corpus, publications and resources designed to be read, cited and discussed." "Ce site rassemble un corpus de recherche qui la met à l'épreuve&nbsp;: neuf <em>Anthropie Working Papers</em>, quatre livres du corpus, des publications et des ressources conçues pour être lues, citées et discutées." -}}
+    <p class="hero__lede">{{ $def | safeHTML }}<span class="hero__lede-site"> {{ $siteTxt | safeHTML }}</span></p>
     <div class="hero__cta-group">
       <a href="{{ "/quest-ce-que-lanthropie/" | relLangURL }}" class="btn btn--primary">
         {{ if eq .Lang "en" }}What is anthropy?{{ else }}Qu'est-ce que l'anthropie&nbsp;?{{ end }}
@@ -27,6 +26,7 @@
         {{ if eq .Lang "en" }}Discover the Working Papers{{ else }}Découvrir la série AWP{{ end }}
       </a>
     </div>
+    <p class="hero__lede-suite">{{ $siteTxt | safeHTML }}</p>
     <div class="credibility-strip">
       {{ $visibleKeys := slice "orcid" "googleScholar" "zenodoCommunity" "openalex" "wikidata" }}
       {{ $sameAs := site.Data.author.author.sameAs }}
@@ -210,6 +210,9 @@
   <p class="section-intro">{{ if eq .Lang "en" }}Public debt, presidential powers, local government, data centres: enquiries into public questions, with their sources, their limits and reusable data. They can be read independently of the author's hypothesis; the Register of Offloaded Costs is the documentary apparatus of his book <em>ANTHROPY</em>.{{ else }}Dette, école, pouvoirs du président, collectivités, data centers : des enquêtes sur des questions publiques, avec leurs sources, leurs limites et des données à réutiliser. Elles se consultent indépendamment de l'hypothèse de l'auteur ; le Registre des coûts déportés, lui, est l'appareil documentaire de son livre <em>ANTHROPIE</em>.{{ end }}</p>
   <ul class="ressources-index__liste home-ressources__liste">
     {{- range sort $acces "Params.ressource.accueil" }}
+      {{- /* L'appareil documentaire d'un livre (Registre) se distingue des enquêtes indépendantes (Audit-10, P2b) :
+             étiquette visible sur téléphone, où la liste est verticale ; masquée sur ordinateur (grille). */ -}}
+      {{- with .Params.ressource.appareil_de }}{{ with site.GetPage (printf "/livres/%s" .) }}<li class="home-ressources__sep" aria-hidden="true">{{ if eq $.Lang "en" }}Apparatus of{{ else }}Appareil d'{{ end }}<i>{{ (index (split .Title " ") 0) }}</i></li>{{ end }}{{ end -}}
       {{- partial "ressource-entree.html" (dict "page" . "r" .Params.ressource "fr" false "vignette" true "sansDesc" true) -}}
     {{- end }}
   </ul>
@@ -293,34 +296,38 @@
 </section>
 
 {{/* ══════════ Section 5 — Les livres ══════════
-     « Le corpus » contenait des livres que le site classe hors corpus : la section s'appelle « Les livres ».
-     Corpus anthropique = fiches `serie: "anthropie"` (même champ que la page À propos), dans l'ordre de leur
-     `weight` ; les autres livres viennent ensuite, plus petits. Ni bouton ni lien d'achat : la couverture et
-     le titre mènent à la fiche, qui porte les boutons (décision de l'auteur D2, 01/10/2026). */}}
+     Bande des portes (maquette retenue, Audit-10, 07/11/2026) : une couverture par livre, avec la question de sa porte —
+     la MÊME liste `commencer` que /livres/ (front matter de l'index Livres, ordre éditorial), jamais une copie. La présence
+     vient du dépôt : un livre absent de `commencer` s'affiche quand même, à la suite, et le build l'avertit.
+     Ni bouton ni lien d'achat : la couverture et le titre mènent à la fiche (décision de l'auteur D2, 01/10/2026). */}}
+{{- $idxLivres := site.GetPage "/livres" -}}
 {{- $livres := partial "livres-merged.html" . -}}
-{{- $corpus := where $livres "Params.serie" "anthropie" -}}
-{{- $autres := where $livres "Params.serie" "!=" "anthropie" -}}
+{{- $portes := slice -}}
+{{- with $idxLivres }}{{ range .Params.commencer }}
+  {{- $e := . -}}{{- $f := "" -}}
+  {{- range $livres }}{{ if eq .File.ContentBaseName $e.livre }}{{ $f = . }}{{ end }}{{ end -}}
+  {{- with $f }}{{ $portes = $portes | append (dict "page" . "q" $e.pour) }}{{ end -}}
+{{ end }}{{ end -}}
+{{- range $livres }}
+  {{- $slug := .File.ContentBaseName -}}{{- $vu := false -}}
+  {{- range $portes }}{{ if eq .page.File.ContentBaseName $slug }}{{ $vu = true }}{{ end }}{{ end -}}
+  {{- if not $vu }}{{ warnf "accueil : %q absent de `commencer` de l'index Livres — affiché sans question" $slug }}{{ $portes = $portes | append (dict "page" . "q" "") }}{{ end -}}
+{{- end }}
 <section class="home-section home-livres" aria-labelledby="home-livres-titre">
   <h2 id="home-livres-titre">{{ if eq .Lang "en" }}Books{{ else }}Les livres{{ end }}</h2>
-  {{- range $groupe := slice (dict "livres" $corpus "fr" "Le corpus anthropique" "en" "The anthropic corpus" "cls" "corpus")
-                             (dict "livres" $autres "fr" "Autres ouvrages" "en" "Other works" "cls" "autres") }}
-  {{- with $groupe.livres }}
-  <p class="home-sous">{{ if eq $.Lang "en" }}{{ $groupe.en }}{{ else }}{{ $groupe.fr }}{{ end }}</p>
-  <div class="home-livres__grille home-livres__grille--{{ $groupe.cls }}">
-    {{- range . }}
-    <article class="home-livre"{{ if ne .Lang $.Lang }} lang="{{ .Lang }}"{{ end }}>
-      <a class="home-livre__couv" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
-        {{- partial "book-cover.html" (dict "slug" .File.ContentBaseName "alt" "" "wrapClass" "home-livre__cover-wrap" "class" "home-livre__cover" "sizes" "(max-width: 680px) 45vw, 220px" "lang" .Lang) -}}
-      </a>
-      <h3 class="home-livre__titre"><a href="{{ .RelPermalink }}"{{ if ne .Lang $.Lang }} hreflang="{{ .Lang }}"{{ end }}>{{ partial "fr-typo.html" .Title }}</a></h3>
-      {{- if and (eq $groupe.cls "corpus") .Params.subtitle }}<p class="home-livre__phrase">{{ partial "fr-typo.html" .Params.subtitle }}</p>{{ end }}
-      {{- if and (eq $.Lang "en") (eq .Lang "fr") }}<p class="home-livre__langue" lang="en">In French</p>{{ end }}
-    </article>
+  {{- with $idxLivres }}{{ with .Params.chapo }}<p class="home-livres__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}{{ end }}
+  <div class="home-livres__bande">
+    {{- range $portes }}{{ $p := .page }}
+    <a class="home-porte" href="{{ $p.RelPermalink }}"{{ if ne $p.Lang $.Lang }} hreflang="{{ $p.Lang }}"{{ end }}>
+      {{- with .q }}<span class="home-porte__q">{{ partial "fr-typo.html" . }}</span>{{ end }}
+      {{- partial "book-cover.html" (dict "slug" $p.File.ContentBaseName "alt" "" "wrapClass" "home-porte__cover-wrap" "class" "home-porte__cover" "sizes" "(max-width: 600px) 46vw, 180px" "lang" $p.Lang) -}}
+      <span class="home-porte__titre"{{ if ne $p.Lang $.Lang }} lang="{{ $p.Lang }}"{{ end }}>{{ partial "fr-typo.html" $p.Title }}</span>
+      {{- if and (eq $.Lang "en") (eq $p.Lang "fr") }}<span class="home-livre__langue">In French</span>{{ end }}
+    </a>
     {{- end }}
   </div>
-  {{- end }}
-  {{- end }}
-  <p class="home-tout"><a href="{{ "/livres/" | relLangURL }}">{{ if eq .Lang "en" }}All books&nbsp;→{{ else }}Tous les livres&nbsp;→{{ end }}</a></p>
+  <p class="home-livres__glisser">{{ if eq .Lang "en" }}Swipe to see all the books{{ else }}Faites glisser pour voir tous les livres{{ end }}</p>
+  <p class="home-tout"><a href="{{ "/livres/" | relLangURL }}">{{ if eq .Lang "en" }}See all the books and choose&nbsp;→{{ else }}Voir tous les livres et choisir&nbsp;→{{ end }}</a></p>
 </section>
 
 {{/* ══════════ Section 6 — Réception ══════════

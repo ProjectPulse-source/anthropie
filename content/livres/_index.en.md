@@ -8,7 +8,7 @@ aliases:
 chapo: "Six books, each readable on its own. Start from the question on your mind."
 commencer:
   - livre: "anthropie-ordre-ici-dette-ailleurs"
-    pour: "Understand where the disorder our societies displace ends up"
+    pour: "How do our societies produce order — and at what cost?"  # Audit-10, 07/11/2026
   - livre: "dette-publique-qui-paie-vraiment"
     pour: "Understand who really bears the cost of public debt"
     pourquoi: "The cost traced channel by channel."

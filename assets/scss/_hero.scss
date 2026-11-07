@@ -130,3 +130,15 @@
   font-family: var(--font-serif); font-size: 13px;
   line-height: 1.35; color: var(--color-text-body);
 }
+
+// Téléphone (maquette retenue, Audit-10, 07/11/2026) : la définition, puis les boutons, puis la présentation du site.
+// Une seule des deux copies de la seconde phrase est affichée à la fois (display: none la retire aussi des lecteurs d'écran).
+.hero__lede-suite { display: none; }
+@media (max-width: 600px) {
+  .hero__lede { margin-bottom: 1.25rem; }
+  .hero__lede-site { display: none; }
+  .hero__lede-suite {
+    display: block; font-family: var(--font-serif); font-size: 1rem; line-height: 1.6;
+    color: var(--color-text-muted); margin: 1.25rem 0 1rem;
+  }
+}

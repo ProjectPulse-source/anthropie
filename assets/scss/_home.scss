@@ -390,26 +390,29 @@ main .awp-registre { list-style: none; padding: 0 !important; margin: 0 !importa
 }
 
 // Livres : quatre couvertures du corpus, les autres au moins 20 % plus petites.
-.home-livres__grille { display: grid; gap: 1.5rem 1.25rem; }
-// Tous les livres à la même taille (auteur, 02/11/2026) : deux rangées, une seule grille.
-.home-livres__grille--corpus, .home-livres__grille--autres { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-@media (max-width: 760px) {
-  .home-livres__grille--corpus, .home-livres__grille--autres { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-.home-livre { display: grid; gap: 0.4rem; align-content: start; min-width: 0; }
-.home-livre__couv { display: block; text-decoration: none; }
-@media (min-width: 761px) { .home-livre__cover-wrap { width: 80%; } } // couvertures réduites de 20 % (auteur, 02/11/2026)
-.home-livre__cover-wrap { display: block; }
-.home-livre__cover {
-  display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover;
-  box-shadow: 0 3px 14px rgba(15, 15, 18, 0.16);
-  transition: transform 0.2s ease;
-}
-.home-livre__couv:hover .home-livre__cover { transform: translateY(-2px); }
-.home-livre__titre { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 500; line-height: 1.3; margin: 0.4rem 0 0; }
-.home-livre__phrase { font-size: var(--fs-small); color: var(--color-text-muted); line-height: 1.45; margin: 0; }
+// ── Les livres (maquette retenue, Audit-10, 07/11/2026) : une rangée de portes — question, couverture, titre.
+.home-livres__chapo { font-family: var(--font-serif); font-size: 1.05rem; color: var(--color-text-muted); margin: 0 0 1.25rem; max-width: 46em; }
+.home-livres__bande { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.1rem; }
+.home-porte { display: flex; flex-direction: column; gap: 0.5rem; text-decoration: none; color: var(--color-text-body); min-width: 0; }
+.home-porte__q { font-family: var(--font-sans); font-size: 12.5px; font-weight: 500; line-height: 1.35; color: var(--color-accent); min-height: 3.4em; }
+.home-porte__cover-wrap { display: block; }
+.home-porte__cover { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; box-shadow: 0 3px 12px rgba(15, 15, 18, 0.15); transition: transform 0.2s ease; }
+.home-porte:hover .home-porte__cover { transform: translateY(-3px); }
+.home-porte__titre { font-family: var(--font-serif); font-size: 1rem; font-weight: 500; line-height: 1.25; color: var(--color-text); }
+.home-porte:hover .home-porte__titre { color: var(--color-accent); }
 .home-livre__langue { font-family: var(--font-sans); font-size: 12px; font-style: italic; color: var(--color-text-subtle); margin: 0; }
-@media (prefers-reduced-motion: reduce) { .home-livre__cover { transition: none; } }
+.home-livres__glisser { display: none; }
+@media (max-width: 980px) { .home-livres__bande { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  // une rangée qui glisse ; à 42 % de la largeur, la troisième couverture dépasse (mesuré à 390 px)
+  .home-livres__bande {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 42%;
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; padding-bottom: 10px;
+  }
+  .home-porte { scroll-snap-align: start; }
+  .home-livres__glisser { display: block; font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); margin: 0.25rem 0 0; }
+}
+@media (prefers-reduced-motion: reduce) { .home-porte__cover { transition: none; } }
 
 // Réception : une liste à filets, puis la phrase des revues.
 main .home-reception__liste { list-style: none; padding: 0 !important; margin: 0 0 1.25rem !important; border-top: 1px solid var(--color-rule-soft); }
@@ -438,15 +441,37 @@ main .home-reception__liste { list-style: none; padding: 0 !important; margin: 0
   .home-livre-cadre__cover { width: 72px; }
 }
 
-// ── Questions publiques au téléphone (maquette du 04/11/2026) : six cartes empilées faisaient 2 500 px ; une rangée
-// défilante (82 % de largeur, la carte suivante visible au bord) les ramène à la hauteur d'une carte. Défilement interne
-// à la liste : la page ne déborde pas.
+// ── Questions publiques au téléphone. 04/11/2026 : six cartes empilées faisaient 2 500 px, d'où une rangée défilante.
+// 07/11/2026 (maquette retenue, Audit-10, P2-B) : liste compacte — vignette de 88 px à gauche, nature, provenance et titre
+// à droite ; les six questions se voient en défilant normalement (~1 000 px à 390 px), sans geste horizontal.
+.home-ressources__sep { display: none; }
 @media (max-width: 600px) {
-  .home-ressources__liste {
-    display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 82%;
-    gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
-    padding-bottom: 10px; margin-bottom: 0.5rem;
+  .home-ressources .home-ressources__liste { display: flex; flex-direction: column; gap: 8px; overflow: visible; padding: 0; margin-bottom: 0.5rem; }
+  .home-ressources .ressources-index__entree--vignette {
+    display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 12px; align-items: center;
+    padding: 8px; min-height: 44px; border-radius: 6px;
   }
-  .home-ressources__liste > li { scroll-snap-align: start; }
+  .home-ressources .ressources-index__entree--vignette .ressources-index__vignette { width: 88px; height: auto; margin: 0; border: 1px solid var(--color-rule-ghost); }
+  .home-ressources .ressources-index__entree--vignette .ressources-index__texte { padding: 0; min-width: 0; }
+  // spécificité (0,3,1) et plus : la règle des titres de section `.home-section h3:not([class])` l'emportait (21 px)
+  .home-section.home-ressources .ressources-index__entree--vignette h3,
+  .home-section.home-ressources .ressources-index__entree--vignette h3 a { font-size: 16px; line-height: 1.28; margin: 2px 0 0; }
+  .home-section.home-ressources .ressources-index__entree--vignette .ressources-index__nature {
+    font-family: var(--font-sans); font-size: 12px; line-height: 1.35; text-transform: none; letter-spacing: 0; margin: 0;
+  }
+  .home-ressources__sep {
+    display: block; font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--color-text-subtle); margin: 8px 0 0;
+  }
+  .home-ressources__sep i { font-style: italic; text-transform: none; }
+  .home-ressources__sep + .ressources-index__entree { border-style: dashed; }
+  .home-ressources .home-enseigner a, .home-ressources .home-tout a, .home-livres .home-tout a { display: inline-flex; align-items: center; min-height: 44px; }
 }
 .home-enseigner { font-family: var(--font-sans); font-size: 15px; margin: 0.75rem 0 0.25rem; }
+
+// Hero au téléphone (maquette retenue, Audit-10, 07/11/2026) : même resserrement que la maquette, pour qu'à 320 px le
+// bouton principal tienne dans le premier écran. Ici (après la règle du hero de ce fichier) et à spécificité (0,3,0).
+@media (max-width: 600px) {
+  .home-hero .hero-main .hero__h1 { font-size: 1.9rem; margin-bottom: 1rem; }
+  .home-hero .hero-main .eyebrow { font-size: 12px; letter-spacing: 0.1em; margin-bottom: 0.6rem; }
+}
