@@ -62,7 +62,7 @@ presse_objets:
 
 Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy: the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups. The framework runs through a series of working papers and four of his six books; the other two are devoted to the history of ideas and to literature.
 
-His reviews and articles appear in social science journals such as *Sociologie du travail* and the *Revue française de socio-économie*, and in the French-language intellectual press, from *En attendant Nadeau* to *La Vie des idées*. From work to debt, from energy to artificial intelligence, he asks the same question: when a system appears to solve a problem, what cost does it displace, and onto whom?
+His reviews and articles appear in social science journals such as *Sociologie du travail* and the *Revue française de socio-économie*, and in the French-language intellectual press, from *En attendant Nadeau* to *La Vie des idées*. From work to debt, from energy to artificial intelligence, he asks the same question: when a system appears to solve a problem, what costs may it displace, and onto whom?
 
 {{< identifiants >}}
 

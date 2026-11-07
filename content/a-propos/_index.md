@@ -74,7 +74,7 @@ presse_objets:
 
 Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent&nbsp;: dans l'espace, dans le temps, ou entre groupes sociaux. Ce cadre structure une série de working papers et quatre de ses six livres&nbsp;; les deux autres sont consacrés à l'histoire des idées et à la littérature.
 
-Ses recensions et ses articles paraissent dans des revues de sciences sociales, comme *Sociologie du travail* et la *Revue française de socio-économie*, et dans la presse intellectuelle, d'*En attendant Nadeau* à *La Vie des idées*. Du travail à la dette, de l'énergie à l'intelligence artificielle, il y pose la même question&nbsp;: quand un système paraît résoudre un problème, quel coût déplace-t-il, et sur qui&nbsp;?
+Ses recensions et ses articles paraissent dans des revues de sciences sociales, comme *Sociologie du travail* et la *Revue française de socio-économie*, et dans la presse intellectuelle, d'*En attendant Nadeau* à *La Vie des idées*. Du travail à la dette, de l'énergie à l'intelligence artificielle, il y pose la même question&nbsp;: quand un système paraît résoudre un problème, quels coûts peut-il déplacer, et sur qui&nbsp;?
 
 {{< identifiants >}}
 

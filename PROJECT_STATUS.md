@@ -69,6 +69,8 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - **Audit-16 arbitré** (`D:\PRO_PROMOTION\A_PROPOS_2026-11-07\ARBITRAGE_AUDIT-16_2026-11-07.md`) : recensions
   distinguées des articles de recherche, définition canonique (espace, temps, groupes), question finale sur le coût
   déplacé ; prémisse « Président hors corpus » rejetée (page relue : quatre livres au corpus).
+- **Audit-17** (contre-arbitrage) : question finale au conditionnel de l'hypothèse — « quels coûts peut-il déplacer,
+  et sur qui ? » (EN « what costs may it displace ») : le cadre se présente comme hypothèse, pas comme résultat.
 
 ### 2026-11-07 (nuit, fin bis) — Accueil : derniers textes sous 12 px portés à 12 px
 
