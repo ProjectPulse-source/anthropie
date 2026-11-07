@@ -1,21 +1,21 @@
-# relu le 2026-11-06 ; texte servi de /dette-publique-collectivites-locales/, build de 1fac44f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-07 ; texte servi de /dette-publique-collectivites-locales/, build de a74d487 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
-Les collectivités locales sont-elles une variable d'ajustement des finances publiques ?
-La dette des collectivités ne permet pas de trancher : la règle d'équilibre de leurs budgets leur interdit d'emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu'une contrainte venue de l'État se lit dans leurs recettes et leurs dépenses.
+Les collectivités locales sont-elles une variable d’ajustement des finances publiques ?
+La dette des collectivités ne permet pas de trancher : la règle d’équilibre de leurs budgets leur interdit d’emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu’une contrainte venue de l’État se lit dans leurs recettes et leurs dépenses.
 De 2013 à 2017, les administrations publiques locales ont amélioré leur solde de 9,7 milliards d’euros.
 Leurs dépenses totales sont restées presque stables en euros courants, tandis que les recettes fiscales progressaient et que les transferts reçus reculaient.
-Rapportées au PIB, leurs dépenses ont diminué de 0,82 point, dont 0,50 point pour l'investissement.
-Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d'attribuer le recul de l'investissement à la baisse des dotations.
-Page mise à jour le 6 novembre 2026 · révisions
+Rapportées au PIB, leurs dépenses ont diminué de 0,82 point, dont 0,50 point pour l’investissement.
+Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d’attribuer le recul de l’investissement à la baisse des dotations.
+Page mise à jour le 7 novembre 2026 · révisions
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Projet de loi de finances pour 2027, état au 5 novembre 2026.
 L’Assemblée nationale a rejeté le texte le 4 novembre 2026 ; ses votes sur les articles tombent avec lui (le 19 octobre 2026, elle avait supprimé la baisse du taux du FCTVA (art.
-35) et la contribution progressive à l'effort budgétaire (art.
-37), n'avait pas adopté l'écrêtement de la TVA affectée (art.
+35) et la contribution progressive à l’effort budgétaire (art.
+37), n’avait pas adopté l’écrêtement de la TVA affectée (art.
 36), et avait porté la DGF pour 2027 à 27,9 milliards d’euros).
-La procédure n’est pas achevée : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre.
+La procédure n’est pas achevée : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l’article 84 le 2 décembre, puis vote sur l’ensemble le 9 décembre.
 Les montants du projet déposé restent présentés plus bas comme le cadrage initial du débat → mesures et état du texte.
 Ce que cela change pour une commune, mesure par mesure : Budget 2027 : que sait-on réellement pour votre commune ?
 Comment une contrainte peut-elle ne pas apparaître dans la dette ?
@@ -28,7 +28,7 @@ Investissement des administrations publiques locales (formation brute de capital
 Ces transferts comprennent ceux de la sécurité sociale : ce ne sont pas les seules dotations de l’État.
 Le pic de 2010 est ponctuel : l’État compense cette année-là la suppression de la taxe professionnelle, réforme « neutre sur le solde des administrations publiques locales » selon l’Insee (mai 2011).
 La série comparable des transferts s’arrête en 2017 : en 2018 puis en 2021, des dotations sont remplacées par des fractions de TVA, comptées en impôts, un reclassement qui ne dit pas, à lui seul, si les ressources ont augmenté ou baissé (détail).
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Le résultat en une phrase.
 De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; après les élections municipales de 2014, le recul de l’investissement est 2,8 fois plus marqué que le plus fort des reculs qui ont suivi celles de 2001, 2008 et 2020.
 Ces chiffres, comme tous les résultats statistiques de cette page, portent sur les administrations publiques locales, au sens de la comptabilité nationale : les collectivités territoriales, mais aussi les syndicats intercommunaux et d’autres organismes publics locaux.
@@ -100,7 +100,7 @@ Ce n’est pas le total des économies cumulées sur les quatre exercices, qui a
 Variation du solde des administrations publiques locales entre 2013 et 2017, décomposée en cinq postes, en milliards d’euros courants (à gauche) et en points de PIB (à droite).
 Chaque valeur est la contribution du poste à la variation du solde : pour une dépense, l’inverse de sa variation, si bien qu’une dépense en baisse améliore le solde.
 Le PIB nominal augmente de 8,1 % sur la période : c’est ce dénominateur qui sépare les deux lectures.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Les deux lectures sont exactes et ne racontent pas la même chose.
 En euros courants, les recettes augmentent de 10,9 milliards d’euros, les impôts à eux seuls de 18,2 milliards, quand les transferts reçus reculent de 8,9 milliards ; les dépenses totales passent de 249,6 à 250,8 milliards.
 Le solde se redresse ainsi de 9,7 milliards d’euros (0,45 point de PIB), par le côté des recettes.
@@ -183,7 +183,7 @@ Depuis 2018, l’Observatoire des finances et de la gestion publique locales (OF
 Deux mouvements y apparaissent, invisibles dans l’agrégat.
 L’épargne brute des départements, c’est-à-dire leurs recettes de fonctionnement moins leurs dépenses de fonctionnement, tombe de 13,2 milliards d’euros en 2022 à 5,7 en 2024, avant de remonter à 8,0 en 2025 ; ses causes (droits de mutation, allocations de solidarité) relèvent de séries que cette page ne porte pas.
 Les dépenses d’équipement des communes passent de 20,0 milliards en 2020 à 30,1 en 2025 (+51 %), à l’approche des municipales de 2026.
-Les quatre catégories de collectivités, de 2021 à 2025 : concours de l'État, épargne brute, équipement, dette
+Les quatre catégories de collectivités, de 2021 à 2025 : concours de l’État, épargne brute, équipement, dette
 Catégorie, 2021 → 2025
 Concours de l’État
 Épargne brute
@@ -225,7 +225,7 @@ Ailleurs en Europe : une même dette, des architectures opposées
 Les comparaisons se font ici par périmètre statistique, non par compétences exercées.
 La France et l’Italie, où les régions sont classées parmi les administrations locales, forment la comparaison principale ; l’Allemagne et l’Espagne, dont la dette territoriale additionne celle des Länder ou des communautés autonomes et celle des collectivités locales, servent de contrepoints.
 Dette des administrations territoriales en % du PIB, quatrième trimestre de chaque année, et part détenue par l’administration centrale, publiée depuis 2020 (indiquée sous chaque pays).
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 En Espagne, la dette territoriale passe de 9,2 % du PIB en 2000 à 21,4 % en 2025, portée par les communautés autonomes, pendant que l’investissement territorial perd 64 %.
 Mais cette dette ne mesure pas un report de contrainte vers le bas : en 2025, 12,6 points de PIB sur 21,4, soit 59 %, sont détenus par l’État central lui-même, notamment par le Fondo de Liquidez Autonómico, créé en 2012, par lequel l’État prête aux communautés autonomes (Real Decreto-ley 21/2012, articles 9 et 14).
 La part équivalente est de 26 % en Italie, de 1 % en France et de 1 % en Allemagne.
@@ -279,10 +279,10 @@ En Allemagne et en Espagne, la dette territoriale additionne donc les deux éche
 En Espagne, la loi organique 2/2012 affecte en outre les excédents de chaque niveau d’administration à la réduction de son endettement net (article 32).
 Que demande le projet de loi de finances aux collectivités ?
 État du texte au 5 novembre 2026 : projet de loi de finances pour 2027, déposé le 1er octobre 2026, rejeté par l’Assemblée nationale le 4 novembre 2026 ; le 19 octobre 2026, celle-ci avait supprimé la baisse du taux du FCTVA (art.
-35) et la contribution progressive à l'effort budgétaire (art.
-37), n'avait pas adopté l'écrêtement de la TVA affectée (art.
+35) et la contribution progressive à l’effort budgétaire (art.
+37), n’avait pas adopté l’écrêtement de la TVA affectée (art.
 36), votes tombés avec le texte.
-La procédure n’est pas achevée : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre.
+La procédure n’est pas achevée : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l’article 84 le 2 décembre, puis vote sur l’ensemble le 9 décembre.
 Le Sénat peut modifier chaque mesure d’ici la loi définitive.
 Les montants ci-dessous sont ceux du projet déposé : le cadrage initial du débat, pas le bilan du texte en discussion.
 Mesure du projet de loi de finances pour 2027, tel que déposé
@@ -290,40 +290,40 @@ Texte
 Nature
 Montant, Md€
 Au Parlement
-Contribution progressive à l'effort budgétaire, prélevée sur les avances de fiscalité
+Contribution progressive à l’effort budgétaire, prélevée sur les avances de fiscalité
 article 37
 prélèvement sur les avances de fiscalité, institué pour 2027
 2,5
-dans le texte transmis au Sénat ; à l'Assemblée, art.
-37 supprimé en séance le 19 octobre 2026, avant le rejet de l'ensemble du texte le 4 novembre 2026
+dans le texte initial attendu au Sénat ; à l’Assemblée, art.
+37 supprimé en séance le 19 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026
 Fonds de compensation pour la TVA : taux abaissé de 5 points, sauf dépenses vertes et voirie
 articles 35 et 41
-réduction d'un concours de l'État lié aux dépenses d'investissement éligibles
+réduction d’un concours de l’État lié aux dépenses d’investissement éligibles
 2,1
-dans le texte transmis au Sénat ; à l'Assemblée, art.
-35 supprimé en séance le 19 octobre 2026, avant le rejet de l'ensemble du texte le 4 novembre 2026
-TVA affectée, hors régions : hausse annuelle réduite de l'inflation
+dans le texte initial attendu au Sénat ; à l’Assemblée, art.
+35 supprimé en séance le 19 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026
+TVA affectée, hors régions : hausse annuelle réduite de l’inflation
 article 36
 écrêtement de la progression de la TVA affectée, hors régions
 0,6
-dans le texte transmis au Sénat ; à l'Assemblée, art.
-36 non adopté en séance le 19 octobre 2026, avant le rejet de l'ensemble du texte le 4 novembre 2026
+dans le texte initial attendu au Sénat ; à l’Assemblée, art.
+36 non adopté en séance le 19 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026
 Contributions de certains ministères aux collectivités
 crédits des missions
 réduction de contributions de certains ministères
 0,7
-dans le texte transmis au Sénat ; seconde partie, que l'Assemblée n'a pas examinée avant de rejeter l'ensemble du texte le 4 novembre 2026
+dans le texte initial attendu au Sénat ; seconde partie, que l’Assemblée n’a pas examinée avant de rejeter l’ensemble du texte le 4 novembre 2026
 Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au lieu de trois
 article 84
 étalement du reversement ; montant total restitué inchangé
 0,3
-dans le texte transmis au Sénat, examen le 2 décembre 2026 ; à l'Assemblée, art.
-84 supprimé en commission le 28 octobre 2026, avant le rejet de l'ensemble du texte le 4 novembre 2026
+dans le texte initial attendu au Sénat, examen prévu le 2 décembre 2026 ; à l’Assemblée, art.
+84 supprimé en commission le 28 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026
 Montants pour 2027, tels que le projet déposé les prévoit (cadrage initial du débat).
-Dernière colonne : sort de l'article en séance, d'après le compte rendu officiel ; une disposition supprimée peut être rétablie d'ici la loi définitive.
+Dernière colonne : sort de l’article en séance, d’après le compte rendu officiel ; une disposition supprimée peut être rétablie d’ici la loi définitive.
 Sources : projet de loi de finances (exposés des motifs) pour les deux premières lignes ; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.
 Le projet déposé ne baissait pas la DGF : il prévoyait 150 millions d’euros d’abondements nouveaux et, compte tenu des mesures de périmètre, une hausse de son montant nominal de 137 millions, à 27,5 milliards.
-L’Assemblée l’avait portée à 27,9 milliards (+356 millions), un vote tombé avec le rejet du texte : le Sénat examine le montant initial.
+L’Assemblée l’avait portée à 27,9 milliards (+356 millions), un vote tombé avec le rejet du texte : le Sénat doit examiner le montant initial.
 Dans le projet déposé, la mise à contribution passait par les cinq canaux du tableau et, pour les régions, par la suppression d’une fraction d’accises sur les énergies de 157 millions d’euros (article 39).
 Le Haut Conseil des finances publiques réunit ces mesures dans un même paquet de modération des recettes des collectivités.
 Dans le projet déposé, comment les ressources des collectivités pouvaient-elles augmenter de 5 milliards d’euros, alors que la somme arithmétique de ses mesures atteignait 6,2 milliards ?
@@ -358,7 +358,7 @@ Ce qui est décidé : dotations, impôts transférés, règles de dépense, moda
 Ce qui s’observe : recettes, dépenses, investissement, épargne, solde et dette, dans les comptes nationaux et les comptes de gestion.
 Ce qui est finalement supporté : les effets sur les contribuables, les usagers, les services et les équipements, que ces données ne mesurent pas.
 Cette page documente des décisions et des évolutions comptables concomitantes ; elle ne démontre pas la transmission des unes aux autres et ne mesure pas ce qui est finalement supporté.
-Le schéma d'analyse : une chaîne en quatre maillons
+Le schéma d’analyse : une chaîne en quatre maillons
 Entre ce qui est décidé et ce qui est supporté, une chaîne en quatre maillons décrit les mécanismes possibles.
 C’est un schéma d’analyse, non une causalité démontrée sur chaque maillon :
 décision nationale : dotation réduite, recette encadrée, règle de dépense ;
@@ -366,7 +366,7 @@ contrainte territoriale : moins de ressources, ou moins de liberté d’arbitrag
 réponse budgétaire locale : fiscalité, fonctionnement, épargne, investissement, emprunt ;
 incidence finale : services, équipements, contribuables, usagers, territoires.
 Les décisions relèvent du premier maillon, les évolutions comptables du troisième ; le quatrième n’est pas mesuré ici.
-Hypothèse de recherche, non testée ici : qui supporte finalement l'ajustement ?
+Hypothèse de recherche, non testée ici : qui supporte finalement l’ajustement ?
 Les comptes ne permettent pas de savoir si l’ajustement est finalement supporté par les contribuables, les usagers, les agents publics, les fournisseurs, les propriétaires fonciers ou les ménages qui dépendent des services locaux.
 L’anthropie, cadre d’analyse proposé par l’auteur, formule l’hypothèse que certains coûts sont plus difficiles à éviter pour les ménages les moins mobiles : un ménage qui dépend du logement social, des transports publics et des équipements de proximité subit plus directement une hausse de tarif ou une fermeture qu’un ménage qui peut changer de commune.
 Cette page ne la teste pas ; elle se vérifierait décision par décision, et serait affaiblie par des ajustements portant surtout sur les ménages aisés ou compensés par des tarifs sociaux.
@@ -382,28 +382,28 @@ Les ressources reçues de l’État (DGF et autres concours) : leur évolution e
 Les recettes fiscales : en séparant les impôts dont la collectivité vote le taux des fractions d’impôts nationaux qu’elle reçoit.
 L’épargne brute : les recettes de fonctionnement moins les dépenses de fonctionnement ; avec les autres ressources propres, elle doit couvrir le remboursement du capital de la dette.
 Les dépenses d’investissement : en euros et rapportées aux recettes, en tenant compte du cycle municipal.
-Pour 2027, trois mesures du projet déposé visaient directement ces lignes : la contribution progressive, la baisse du taux du fonds de compensation et l’écrêtement des fractions de TVA, toutes trois dans le texte transmis au Sénat après le rejet du projet par l’Assemblée le 4 novembre 2026.
+Pour 2027, trois mesures du projet déposé visaient directement ces lignes : la contribution progressive, la baisse du taux du fonds de compensation et l’écrêtement des fractions de TVA, toutes trois dans le texte initial attendu au Sénat après le rejet du projet par l’Assemblée le 4 novembre 2026.
 Si la contribution progressive était adoptée, l’assujettissement se vérifierait dans les critères de l’article 37 du projet (critères, taux, exonérations), puis, une fois la loi votée, dans l’arrêté publié au Journal officiel qui devait fixer le montant prélevé sur chaque collectivité.
-L’étalement des sommes mises en réserve (dans le texte transmis au Sénat, examen le 2 décembre 2026 ; à l'Assemblée, art.
-84 supprimé en commission le 28 octobre 2026, avant le rejet de l'ensemble du texte le 4 novembre 2026) ne concerne que les collectivités qui y ont contribué en 2025 ou en 2026.
+L’étalement des sommes mises en réserve (dans le texte initial attendu au Sénat, examen prévu le 2 décembre 2026 ; à l’Assemblée, art.
+84 supprimé en commission le 28 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026) ne concerne que les collectivités qui y ont contribué en 2025 ou en 2026.
 Questions fréquentes
 Comment savoir si ma collectivité est concernée par le projet de loi de finances ?
 Dans le projet déposé le 1er octobre 2026, la contribution progressive visait 40 % des communes, 60 % des départements et les intercommunalités de métropole, selon les critères de son article 37, et le montant prélevé sur chaque collectivité devait être fixé par un arrêté publié au Journal officiel.
-État de cet article : dans le texte transmis au Sénat ; à l'Assemblée, art.
-37 supprimé en séance le 19 octobre 2026, avant le rejet de l'ensemble du texte le 4 novembre 2026 ; la procédure n'est pas achevée.
+État de cet article : dans le texte initial attendu au Sénat ; à l’Assemblée, art.
+37 supprimé en séance le 19 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026 ; la procédure n’est pas achevée.
 Les montants nationaux ne donnent aucun montant individuel.
 Comment interpréter la hausse de la fiscalité locale ?
-De 2013 à 2017, les impôts des administrations publiques locales augmentent de 18,2 milliards d’euros, davantage que les transferts reçus ne baissent (8,9 milliards d’euros) ; rapportés au PIB, ils n'en compensent qu'une partie (0,39 point contre 0,64 point).
-Depuis 2018, une partie des recettes fiscales provient d'un reclassement : des dotations ou des impôts supprimés sont remplacés par des fractions de TVA, et ce changement de classement ne dit pas, à lui seul, si les ressources disponibles augmentent ou baissent.
-Ces comptes ne séparent pas l'effet des taux votés de celui des bases.
-Pourquoi un recul de l'investissement ne signifie-t-il pas une baisse des dépenses totales ?
-De 2013 à 2017, l'investissement des administrations publiques locales recule de 7,5 milliards d’euros, mais leurs autres dépenses augmentent de 8,7 milliards d’euros : leurs dépenses totales restent presque stables en euros (+1,2 milliard d’euros).
+De 2013 à 2017, les impôts des administrations publiques locales augmentent de 18,2 milliards d’euros, davantage que les transferts reçus ne baissent (8,9 milliards d’euros) ; rapportés au PIB, ils n’en compensent qu’une partie (0,39 point contre 0,64 point).
+Depuis 2018, une partie des recettes fiscales provient d’un reclassement : des dotations ou des impôts supprimés sont remplacés par des fractions de TVA, et ce changement de classement ne dit pas, à lui seul, si les ressources disponibles augmentent ou baissent.
+Ces comptes ne séparent pas l’effet des taux votés de celui des bases.
+Pourquoi un recul de l’investissement ne signifie-t-il pas une baisse des dépenses totales ?
+De 2013 à 2017, l’investissement des administrations publiques locales recule de 7,5 milliards d’euros, mais leurs autres dépenses augmentent de 8,7 milliards d’euros : leurs dépenses totales restent presque stables en euros (+1,2 milliard d’euros).
 Rapportées au PIB, qui augmente de 8,1 % sur la période, elles reculent pourtant de 0,82 point.
-La baisse d'un ratio ne prouve pas une baisse de la dépense en euros.
+La baisse d’un ratio ne prouve pas une baisse de la dépense en euros.
 Dans le dossier dette publique
-Prolonger l'analyse
+Prolonger l’analyse
 Dette Publique : Qui paie vraiment ?
-La question n'est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
 Cette page montre par où passe l’ajustement des finances locales ; elle ne dit pas qui, au bout de la chaîne, en supporte le coût.
 Le livre suit ce déplacement canal par canal — contribuable, usager, services publics, générations qui ne votent pas encore —, chiffres officiels à l’appui.
 L’analyse est aussi développée dans deux articles de l’auteur, « La commune, variable d’ajustement de la République ? » (Revue Projet, 2026) et « Budget 2026 : la dette commande, les territoires patientent » (blog de l’auteur au Club de Mediapart, 2026).
@@ -429,40 +429,40 @@ Le partage du reversement du DILICO, tiré de l’article 186 de la loi de finan
 Télécharger les données (licence CC BY 4.0) : CSV, en format long, lisible dans un tableur ; JSON, avec les calculs, les définitions et le compte rendu des gardes.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l'image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Investissement des administrations locales et transferts reçus, France, en % du PIB
-De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; la série comparable des transferts s'arrête en 2017.
-Précaution d'interprétation.
-Transferts reçus : de l'État et de la sécurité sociale, toutes dotations confondues ; ce n'est pas la DGF.
+De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; la série comparable des transferts s’arrête en 2017.
+Précaution d’interprétation.
+Transferts reçus : de l’État et de la sécurité sociale, toutes dotations confondues ; ce n’est pas la DGF.
 Série comparable arrêtée en 2017 : en 2018 puis en 2021, des dotations sont remplacées par des fractions de TVA, comptées en impôts.
 Ce reclassement change la catégorie de la recette ; il ne dit pas, à lui seul, si les ressources ont augmenté ou baissé.
 Eurostat gov_10a_main, administrations publiques locales (S1313) : investissement P51G, transferts courants reçus D73REC ; France.
-Données relevées le 6 novembre 2026.
+Données relevées le 7 novembre 2026.
 Télécharger en PNG
 SVG
 Solde des administrations locales, 2013-2017 : la même variation, en euros et en points de PIB
-De 2013 à 2017, le solde des administrations publiques locales s'améliore de 9,7 milliards d’euros (0,45 point de PIB).
-Leurs dépenses totales restent presque stables en euros courants (+1,2 milliard d’euros) ; rapportées au PIB, elles diminuent de 0,82 point, dont 0,50 point pour l'investissement, pendant que les recettes fiscales progressent et que les transferts reçus reculent.
-Ces évolutions sont concomitantes ; elles n'attribuent pas le recul de l'investissement à la baisse des dotations.
-Précaution d'interprétation.
-Barres : contribution de chaque poste à la variation du solde ; pour une dépense, l'inverse de sa variation.
+De 2013 à 2017, le solde des administrations publiques locales s’améliore de 9,7 milliards d’euros (0,45 point de PIB).
+Leurs dépenses totales restent presque stables en euros courants (+1,2 milliard d’euros) ; rapportées au PIB, elles diminuent de 0,82 point, dont 0,50 point pour l’investissement, pendant que les recettes fiscales progressent et que les transferts reçus reculent.
+Ces évolutions sont concomitantes ; elles n’attribuent pas le recul de l’investissement à la baisse des dotations.
+Précaution d’interprétation.
+Barres : contribution de chaque poste à la variation du solde ; pour une dépense, l’inverse de sa variation.
 Les autres dépenses augmentent de 8,7 milliards d’euros (barre négative) et reculent de 0,32 point de PIB (barre positive) : le PIB nominal augmente de 8,1 %.
-Lecture comptable : les postes reconstituent le solde ; ils ne disent pas ce qui l'a décidé.
+Lecture comptable : les postes reconstituent le solde ; ils ne disent pas ce qui l’a décidé.
 Eurostat gov_10a_main, administrations publiques locales (S1313), France ; points calculés sur le PIB des mêmes comptes.
-Données relevées le 6 novembre 2026.
+Données relevées le 7 novembre 2026.
 Télécharger en PNG
 SVG
 Dette des administrations territoriales et part détenue par l’État central, en % du PIB
-Une même dette territoriale peut recouvrir des architectures opposées : en Espagne, 59 % en est détenue par l'État central ; en France, 1 %.
-Précaution d'interprétation.
-Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312).
+Une même dette territoriale peut recouvrir des architectures opposées : en Espagne, 59 % en est détenue par l’État central ; en France, 1 %.
+Précaution d’interprétation.
+Périmètre statistique, non compétences : la France et l’Italie n’ont pas d’échelon d’États fédérés (S1312).
 Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (secteur détenteur S1311), S1312 + S1313, en % du PIB.
-Données relevées le 6 novembre 2026.
+Données relevées le 7 novembre 2026.
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Les collectivités locales sont-elles une variable d'ajustement des finances publiques ? ».
-Données Eurostat, OFGL et Légifrance, relevé du 6 novembre 2026. https://stephane-lalut.com/dette-publique-collectivites-locales/
+Lalut, Stéphane (2026). « Les collectivités locales sont-elles une variable d’ajustement des finances publiques ? ».
+Données Eurostat, OFGL et Légifrance, relevé du 7 novembre 2026. https://stephane-lalut.com/dette-publique-collectivites-locales/
 Copier la citation
 En trois phrases
 La dette des collectivités, encadrée par la règle d’équilibre réel, ne suffit pas à dire si une contrainte venue de l’État a pesé sur elles : cette contrainte se lit dans leurs recettes et leurs dépenses.
@@ -470,17 +470,20 @@ De 2013 à 2017, les administrations publiques locales améliorent leur solde de
 Ces évolutions sont concomitantes et ne suffisent pas à attribuer le recul de l’investissement à la baisse des dotations ; ailleurs, la contrainte prend d’autres formes, comme en Espagne, où l’État central détient plus de la moitié de la dette territoriale.
 Copier le résumé
 Les données
-Les séries par pays et par catégorie de collectivités, la DGF votée, la décomposition 2013-2017 en milliards d'euros et en points de PIB, les mesures du projet de loi de finances et le compte rendu des contrôles ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Les séries par pays et par catégorie de collectivités, la DGF votée, la décomposition 2013-2017 en milliards d’euros et en points de PIB, les mesures du projet de loi de finances et le compte rendu des contrôles ; le même contenu existe en CSV, en format long, lisible dans un tableur.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
-Texte soumis au droit d'auteur — citation courte libre, reproduction intégrale sur demande.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat, OFGL et Légifrance), sous leurs propres conditions.
 Révisions
-6 novembre 2026 — État du projet de loi de finances pour 2027 : l'Assemblée nationale a rejeté le texte le 4 novembre 2026 ; ses votes sur les articles tombent avec lui, et le Sénat examine le texte initial du Gouvernement à partir du 20 novembre.
-4 novembre 2026 — État du projet de loi de finances pour 2027 : l'article 84 (étalement du reversement du DILICO) a été supprimé en commission des finances le 28 octobre 2026, avant son examen en séance.
-22 octobre 2026 — Projet de loi de finances pour 2027 : état du texte après la séance de l'Assemblée nationale du 19 octobre 2026 (articles 35 et 37 supprimés, article 36 non adopté, DGF relevée).
+7 novembre 2026 — Correction : le projet n’est pas encore transmis au Sénat, dont l’ordre du jour porte « sous réserve de sa transmission » ; « texte transmis au Sénat » devient « texte initial attendu au Sénat », et l’examen y est dit à venir (à partir du 20 novembre).
+La suppression de l’article 84 votée en commission n’avait pas modifié le texte discuté en séance (Constitution, art.
+42).
+6 novembre 2026 — État du projet de loi de finances pour 2027 : l’Assemblée nationale a rejeté le texte le 4 novembre 2026 ; ses votes sur les articles tombent avec lui, et le Sénat doit examiner le texte initial du Gouvernement à partir du 20 novembre.
+4 novembre 2026 — État du projet de loi de finances pour 2027 : l’article 84 (étalement du reversement du DILICO) a été supprimé en commission des finances le 28 octobre 2026, avant son examen en séance.
+22 octobre 2026 — Projet de loi de finances pour 2027 : état du texte après la séance de l’Assemblée nationale du 19 octobre 2026 (articles 35 et 37 supprimés, article 36 non adopté, DGF relevée).
 Les montants du projet déposé restent présentés, comme cadrage initial du débat.
-18 octobre 2026 — Ajout : renvoi vers la part des administrations locales dans le recul de l'investissement net de l'ensemble des administrations publiques.
+18 octobre 2026 — Ajout : renvoi vers la part des administrations locales dans le recul de l’investissement net de l’ensemble des administrations publiques.
 16 octobre 2026 — Correction : rapportée au PIB, la dépense des administrations locales culmine en 2009 et en 2013, à égalité à la précision affichée, et non en 2009 seulement.
 Toutes les ressources : données, dossiers et repères →
 Transmettre

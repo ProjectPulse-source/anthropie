@@ -53,11 +53,13 @@
  "historique": {
   "budget-2027-votre-commune/_index.en.md": [
    "2026-10-22",
-   "2026-11-04"
+   "2026-11-04",
+   "2026-11-06"
   ],
   "budget-2027-votre-commune/_index.md": [
    "2026-10-22",
-   "2026-11-04"
+   "2026-11-04",
+   "2026-11-06"
   ],
   "cout-de-la-dette-publique/_index.en.md": [
    "2026-11-05"
@@ -88,12 +90,16 @@
   "dette-publique-collectivites-locales/_index.en.md": [
    "2026-10-16",
    "2026-10-18",
-   "2026-11-04"
+   "2026-10-22",
+   "2026-11-04",
+   "2026-11-06"
   ],
   "dette-publique-collectivites-locales/_index.md": [
    "2026-10-16",
    "2026-10-18",
-   "2026-11-04"
+   "2026-10-22",
+   "2026-11-04",
+   "2026-11-06"
   ],
   "dette-publique-comparaison-internationale/_index.en.md": [
    "2026-10-16",

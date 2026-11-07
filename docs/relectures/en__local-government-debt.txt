@@ -1,12 +1,12 @@
-# relu le 2026-11-06 ; texte servi de /en/local-government-debt/, build de 1fac44f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-07 ; texte servi de /en/local-government-debt/, build de a74d487 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
-Local authorities' debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.
+Local authorities’ debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.
 From 2013 to 2017, local government improved its balance by €9.7 billion.
 Its total spending remained almost flat in current euros, while tax revenue rose and transfers received fell.
 Relative to GDP, its spending fell by 0.82 points, of which 0.50 points for investment.
 These movements are concomitant; on their own, they do not allow the fall in investment to be attributed to the grant cuts.
-Page updated 6 November 2026 · revisions
+Page updated 7 November 2026 · revisions
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -15,7 +15,7 @@ The National Assembly rejected the bill on 4 November 2026; its votes on the art
 35) and the progressive contribution to the budgetary effort (art.
 37), had not adopted the capping of assigned VAT (art.
 36), and had raised the DGF for 2027 to €27.9 billion).
-The procedure is not over: examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
+The procedure is not over: examination by the Senate, subject to its transmission, of the Government’s initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
 The amounts of the bill as tabled are still presented below, as the initial framing of the debate → measures and state of the text.
 What it changes for a municipality, measure by measure: Budget 2027: what do we actually know for your municipality?
 How can a constraint fail to show up in the debt?
@@ -28,7 +28,7 @@ Investment by local government (gross fixed capital formation) and current trans
 These transfers include those from social security: they are not just central government grants.
 The 2010 peak is a one-off: that year the State compensated for the abolition of the business tax (taxe professionnelle), a reform “neutral for the balance of local government” according to Insee (May 2011, our translation).
 The comparable transfer series stops in 2017: in 2018 and again in 2021, some grants were replaced by shares of VAT, counted as taxes, a reclassification that does not, on its own, say whether resources rose or fell (details).
-Download · Cite · Data
+DownloadCiteData
 The finding in one sentence.
 From 2013 to 2017, the transfers received by local government fell by €8.9 billion (0.64 points of GDP) and its investment by €7.5 billion (0.50 points); after the 2014 municipal elections, the fall in investment was 2.8 times as large as the largest of the falls that followed those of 2001, 2008 and 2020.
 These figures, like all the statistical results on this page, concern local government in the national-accounts sense: local authorities, but also inter-municipal syndicates and other local public bodies.
@@ -101,7 +101,7 @@ This is not the total of the savings accumulated over the four years, which woul
 Change in the local government balance between 2013 and 2017, broken down into five items, in billions of current euros (left) and in points of GDP (right).
 Each value is the item’s contribution to the change in the balance: for spending, the opposite of its change, so that lower spending improves the balance.
 Nominal GDP grew by 8.1% over the period: this denominator is what separates the two readings.
-Download · Cite · Data
+DownloadCiteData
 Both readings are correct, and they do not tell the same story.
 In current euros, revenue rose by €10.9 billion, taxes alone by €18.2 billion, while transfers received fell by €8.9 billion; total spending went from €249.6 billion to €250.8 billion.
 The balance thus improved by €9.7 billion (0.45 points of GDP), on the revenue side.
@@ -226,7 +226,7 @@ Elsewhere in Europe: the same debt, opposite architectures
 Comparisons here are made by statistical scope, not by responsibilities exercised.
 France and Italy, where regions are classified in local government, form the main comparison; Germany and Spain, whose subnational debt adds that of the Länder or autonomous communities to that of local authorities, serve as counterpoints.
 Subnational government debt (state and local government, S1312 + S1313) in % of GDP, fourth quarter of each year, and the share held by central government, published since 2020 (shown under each country).
-Download · Cite · Data
+DownloadCiteData
 In Spain, subnational debt went from 9.2% of GDP in 2000 to 21.4% in 2025, driven by the autonomous communities, while subnational investment fell by 64%.
 But this debt does not measure a constraint passed downwards: in 2025, 12.6 points of GDP out of 21.4, or 59%, were held by the central State itself, notably through the Fondo de Liquidez Autonómico, created in 2012, through which the State lends to the autonomous communities (Real Decreto-ley 21/2012, articles 9 and 14).
 The equivalent share is 26% in Italy, 1% in France and 1% in Germany.
@@ -283,7 +283,7 @@ State of the text on 5 November 2026: draft budget bill for 2027 (projet de loi 
 35) and the progressive contribution to the budgetary effort (art.
 37), had not adopted the capping of assigned VAT (art.
 36), votes that fell with the bill.
-The procedure is not over: examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
+The procedure is not over: examination by the Senate, subject to its transmission, of the Government’s initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
 The Senate may amend each measure before the final act.
 The amounts below are those of the bill as tabled: the initial framing of the debate, not the balance of the text under discussion.
 Measure in the 2027 draft budget bill as tabled
@@ -295,36 +295,36 @@ Progressive contribution to the budgetary effort, levied on tax advances
 article 37
 levy on tax advances, introduced for 2027
 2.5
-in the bill sent to the Senate; in the Assembly, art.
+in the initial bill due before the Senate; in the Assembly, art.
 37 deleted in plenary on 19 October 2026, before the whole bill was rejected on 4 November 2026
 VAT compensation fund: rate cut by 5 percentage points, except green spending and roads
 articles 35 and 41
 cut in a central government grant tied to eligible investment spending
 2.1
-in the bill sent to the Senate; in the Assembly, art.
+in the initial bill due before the Senate; in the Assembly, art.
 35 deleted in plenary on 19 October 2026, before the whole bill was rejected on 4 November 2026
 Assigned VAT, excluding regions: annual increase reduced by inflation
 article 36
 capping of the growth of assigned VAT, excluding regions
 0.6
-in the bill sent to the Senate; in the Assembly, art.
+in the initial bill due before the Senate; in the Assembly, art.
 36 not adopted in plenary on 19 October 2026, before the whole bill was rejected on 4 November 2026
 Contributions of certain ministries to local authorities
 appropriations under State budget missions
 cut in contributions from certain ministries
 0.7
-in the bill sent to the Senate; second part, which the Assembly did not examine before rejecting the whole bill on 4 November 2026
+in the initial bill due before the Senate; second part, which the Assembly did not examine before rejecting the whole bill on 4 November 2026
 Sums placed in reserve in 2025 and 2026 (DILICO): repaid over five years instead of three
 article 84
 repayment spread out; total amount returned unchanged
 0.3
-in the bill sent to the Senate, examined on 2 December 2026; in the Assembly, art.
+in the initial bill due before the Senate, examination scheduled for 2 December 2026; in the Assembly, art.
 84 deleted in committee on 28 October 2026, before the whole bill was rejected on 4 November 2026
 Amounts for 2027, as provided for in the bill as tabled (initial framing of the debate).
 Last column: fate of the article in plenary, from the official record of the sitting; a deleted provision may be reinstated before the final act.
 Sources: draft budget bill (explanatory memoranda) for the first two rows; opinion of the High Council of Public Finance for the next three, which the text of the bill does not quantify.
 The bill as tabled did not cut the DGF: it provided for €150 million of new increases and, taking scope changes into account, a rise in its nominal amount of €137 million, to €27.5 billion.
-The National Assembly had raised it to €27.9 billion (+€356 million), a vote that fell with the bill’s rejection: the Senate examines the initial amount.
+The National Assembly had raised it to €27.9 billion (+€356 million), a vote that fell with the bill’s rejection: the Senate is due to examine the initial amount.
 In the bill as tabled, the contribution required from local authorities went through the five channels in the table and, for the regions, through the removal of a share of excise duties on energy worth €157 million (article 39).
 The High Council of Public Finance (Haut Conseil des finances publiques) groups these measures in a single package moderating local authority revenue.
 In the bill as tabled, how could local authorities’ resources rise by €5 billion when the arithmetic sum of its measures came to €6.2 billion?
@@ -383,14 +383,14 @@ Resources received from the State (DGF and other grants): how they change in eur
 Tax revenue: separating the taxes whose rate the authority votes from the shares of national taxes it receives.
 Gross savings: operating revenue minus operating spending; together with other own resources, it must cover repayment of debt principal.
 Investment spending: in euros and relative to revenue, taking the municipal cycle into account.
-For 2027, three measures of the bill as tabled bore directly on these lines: the progressive contribution, the cut in the compensation fund’s rate and the capping of the shares of VAT, all three in the bill sent to the Senate after the National Assembly rejected it on 4 November 2026.
+For 2027, three measures of the bill as tabled bore directly on these lines: the progressive contribution, the cut in the compensation fund’s rate and the capping of the shares of VAT, all three in the initial bill due before the Senate after the National Assembly rejected it on 4 November 2026.
 Were the progressive contribution adopted, liability would be checked against the criteria of article 37 of the bill (criteria, rates, exemptions), then, once the act is passed, in the ministerial order published in the Journal officiel which was to set the amount levied on each authority.
-The spreading of the sums placed in reserve (in the bill sent to the Senate, examined on 2 December 2026; in the Assembly, art.
+The spreading of the sums placed in reserve (in the initial bill due before the Senate, examination scheduled for 2 December 2026; in the Assembly, art.
 84 deleted in committee on 28 October 2026, before the whole bill was rejected on 4 November 2026) concerns only the authorities that contributed to them in 2025 or 2026.
 Frequently asked questions
 How can I tell whether my local authority is affected by the draft budget bill?
 In the bill tabled on 1 October 2026, the progressive contribution targeted 40% of municipalities, 60% of departments and the inter-municipal groupings of metropolitan France, under the criteria of its article 37, and the amount levied on each authority was to be set by a ministerial order published in the Journal officiel.
-Status of that article: in the bill sent to the Senate; in the Assembly, art.
+Status of that article: in the initial bill due before the Senate; in the Assembly, art.
 37 deleted in plenary on 19 October 2026, before the whole bill was rejected on 4 November 2026; the procedure is not over.
 The national amounts give no individual amount.
 How should the rise in local taxation be read?
@@ -402,7 +402,7 @@ From 2013 to 2017, local government investment fell by €7.5 billion, but its o
 Relative to GDP, which grew by 8.1% over the period, it nevertheless fell by 0.82 points.
 A fall in a ratio does not prove a fall in spending in euros.
 In the public debt dossier
-To take the analysis further Dette Publique : Qui paie vraiment ?, the author's book, in French: contents, excerpts and reviews →
+To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
 Where these figures come from
 National accounts — Eurostat, general government by subsector, ESA 2010: annual accounts (gov_10a_main: gross fixed capital formation P51G, current transfers received D73REC, taxes D2, D5 and D91, revenue TR, expenditure TE, balance B9), quarterly debt (gov_10q_ggdebt), debt by holding sector (gov_10dd_ggd), nominal GDP and debt from the notification (gov_10dd_edpt1), GDP from the national accounts as a check on the denominator (nama_10_gdp).
 The points of GDP in the waterfall are computed on the GDP of the same annual accounts; the GDP growth quoted is that of the notification.
@@ -432,7 +432,7 @@ Transfers received: from central government and social security, all grants toge
 Comparable series stops in 2017: in 2018 and again in 2021, some grants were replaced by shares of VAT, counted as taxes.
 This reclassification changes the category of the revenue; on its own, it does not say whether resources rose or fell.
 Eurostat gov_10a_main, local government (S1313): investment P51G, current transfers received D73REC; France.
-Data retrieved on 6 November 2026.
+Data retrieved on 7 November 2026.
 Download PNG
 SVG
 Local government balance, 2013-2017: the same change, in euros and in percentage points of GDP
@@ -440,11 +440,11 @@ From 2013 to 2017, the local government balance improved by €9.7 billion (0.45
 Total spending stayed almost flat in current euros (+€1.2 billion); relative to GDP, it fell by 0.82 points, of which 0.50 points for investment, while tax revenue rose and transfers received fell.
 These movements are concomitant; they do not attribute the fall in investment to the grant cuts.
 Reading caveat.
-Bars: each item's contribution to the change in the balance; for spending, the opposite of its change.
+Bars: each item’s contribution to the change in the balance; for spending, the opposite of its change.
 Other spending rose by €8.7 billion (negative bar) and fell by 0.32 percentage points of GDP (positive bar): nominal GDP rose by 8.1%.
 An accounting reading: the items add up to the balance; they do not say what decided it.
 Eurostat gov_10a_main, local government (S1313), France; percentage points computed on the GDP of the same accounts.
-Data retrieved on 6 November 2026.
+Data retrieved on 7 November 2026.
 Download PNG
 SVG
 Subnational government debt and the share held by central government, in % of GDP
@@ -452,13 +452,13 @@ The same subnational debt can conceal opposite architectures: in Spain, 59% of i
 Reading caveat.
 Statistical scope, not responsibilities: France and Italy have no state-government tier (S1312).
 Eurostat gov_10q_ggdebt (4th quarter) and gov_10dd_ggd (holding sector S1311), S1312 + S1313, in % of GDP.
-Data retrieved on 6 November 2026.
+Data retrieved on 7 November 2026.
 Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
 “Are local authorities the adjustment variable of public finances?”.
-Eurostat, OFGL and Légifrance data, retrieved 6 November 2026. https://stephane-lalut.com/en/local-government-debt/
+Eurostat, OFGL and Légifrance data, retrieved 7 November 2026. https://stephane-lalut.com/en/local-government-debt/
 Copy citation
 In three sentences
 Local authorities’ debt, restricted by the balanced-budget rule, is not enough to say whether a constraint from central government weighed on them: the constraint shows up in their revenue and spending.
@@ -472,7 +472,10 @@ Data and charts CC BY 4.0 — free reuse, including commercial, with attribution
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, OFGL and Légifrance), under their own terms.
 Revisions
-6 November 2026 — State of the 2027 finance bill: the National Assembly rejected the bill on 4 November 2026; its votes on the articles fall with it, and the Senate examines the Government's initial bill from 20 November.
+7 November 2026 — Correction: the bill has not yet been sent to the Senate, whose agenda reads “subject to its transmission”; “bill sent to the Senate” becomes “initial bill due before the Senate”, and the examination there is described as upcoming (from 20 November).
+The deletion of article 84 voted in committee had not changed the text debated in plenary (Constitution, art.
+42).
+6 November 2026 — State of the 2027 finance bill: the National Assembly rejected the bill on 4 November 2026; its votes on the articles fall with it, and the Senate is due to examine the Government’s initial bill from 20 November.
 4 November 2026 — State of the 2027 finance bill: article 84 (spreading the DILICO repayment) was deleted by the finance committee on 28 October 2026, before its examination in the chamber.
 22 October 2026 — Correction: the progressive contribution would have been based on revenue of the third preceding year (2024 for 2027), not of the year before last.
 22 October 2026 — Draft budget bill for 2027: state of the text after the National Assembly sitting of 19 October 2026 (articles 35 and 37 deleted, article 36 not adopted, DGF raised).

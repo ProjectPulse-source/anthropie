@@ -602,6 +602,34 @@ STATUT_COURT = {"supprime": ("supprimé en séance", "deleted in plenary"),
                 "senat": ("texte initial, au Sénat", "initial text, before the Senate")}
 
 
+# 07/11/2026 (audit des ressources, Audit-19) : tant que l'ordre du jour du Sénat porte « sous réserve de sa
+# transmission » (cle `senat.texte` du registre des votes), le texte n'est pas « transmis » : il est « attendu ». Un seul
+# organe pour toutes les chaînes produites (états, statuts courts, titres et descriptions des figures).
+SENAT_ATTENDU = [
+    ("dans le texte transmis au Sénat", "dans le texte initial attendu au Sénat"),
+    ("texte transmis au Sénat", "texte initial attendu au Sénat"),
+    ("texte initial, au Sénat", "texte initial, attendu au Sénat"),
+    (", examen le ", ", examen prévu le "),
+    ("in the bill sent to the Senate", "in the initial bill due before the Senate"),
+    ("bill sent to the Senate", "initial bill due before the Senate"),
+    ("initial text, before the Senate", "initial text, due before the Senate"),
+    (", examined on ", ", examination scheduled for "),
+]
+
+
+def senat_attendu(v: dict) -> bool:
+    sen = v.get("senat") or {}
+    return "sous réserve de sa transmission" in sen.get("texte", "")
+
+
+def senat_txt(x, attendu: bool):
+    if not attendu or not isinstance(x, str):
+        return x
+    for avant, apres in SENAT_ATTENDU:
+        x = x.replace(avant, apres)
+    return x
+
+
 def date_fr(iso: str) -> str:
     a, m, j = (int(x) for x in iso.split("-"))
     return ("1er" if j == 1 else str(j)) + "\u00a0" + MOIS_FR[m - 1] + "\u00a0" + str(a)
@@ -670,18 +698,21 @@ def plf_votes(r: dict) -> dict:
             m["etat_fig"] = "texte transmis au Sénat%s ; Assemblée : %s" % (quand, hist)
             m["etat_fig_en"] = "bill sent to the Senate%s; Assembly: %s" % (quand_en, hist_en)
             m["statut_court"], m["statut_court_en"] = STATUT_COURT["senat"]
+            att = senat_attendu(v)
+            for k in ("etat", "etat_en", "etat_fig", "etat_fig_en", "statut_court", "statut_court_en"):
+                m[k] = senat_txt(m[k], att)
     hausse = re.search(r"de ([\d ]+) € à ([\d ]+) €", arts[34]["precision"])
     if not hausse:
         fail("registre des votes : montants de la DGF illisibles dans la precision de l'article 34")
     av, ap = (int(x.replace(" ", "")) for x in hausse.groups())
     if abs(av / 1e9 - r["plf_dgf"]) > 1e-6:
         fail("registre des votes : DGF initiale de l'article 34 != montant lu dans le projet archive")
-    dgf_court = STATUT_COURT["senat" if rejet else arts[34]["statut"]]
+    dgf_court = tuple(senat_txt(x, rejet and senat_attendu(v)) for x in STATUT_COURT["senat" if rejet else arts[34]["statut"]])
     supp_an = sorted(a["article"] for a in v["articles"] if a["statut"] in ("supprime", "non_adopte"))
     extra = {}
     if rejet:
         e_ = next(x for x in v["etapes"] if x["etape"] == "premiere_partie_rejetee")
-        extra = {"plf_rejet": rejet["date"], "plf_rejet_contre": e_["contre"], "plf_rejet_pour": e_["pour"],
+        extra = {"plf_senat_attendu": senat_attendu(v), "plf_rejet": rejet["date"], "plf_rejet_contre": e_["contre"], "plf_rejet_pour": e_["pour"],
                  "plf_senat_debut": sen["debut"], "plf_senat_rct": sen["mission_rct"],
                  "plf_senat_amdt": sen["amendements_rct"], "plf_senat_vote": sen["vote_ensemble"]}
     return {**extra, "plf_votes": v["articles"], "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
@@ -1770,7 +1801,8 @@ PLF_TXT_REJET = {
 
 
 def _plf_txt(r, lang):
-    return (PLF_TXT_REJET if r.get("plf_rejet") else PLF_TXT)[lang]
+    T = (PLF_TXT_REJET if r.get("plf_rejet") else PLF_TXT)[lang]
+    return {k: senat_txt(x, bool(r.get("plf_senat_attendu"))) for k, x in T.items()}
 
 
 def _plf_vals(r, A, lang):
@@ -1969,7 +2001,7 @@ def csv_texte(r: dict) -> str:
                 "projet de loi de finances pour %d, article 34 (projet depose)" % r["plf_edition"]])
     w.writerow(["dgf_adoptee_assemblee_premiere_lecture", "FR", r["plf_edition"], "%.3f" % r["plf_dgf_an"], "Md EUR",
                 "Assemblee nationale, %s, article 34 amende (texte non definitif)" % r["plf_vote_dates"][-1]
-                + ("; vote tombe avec le rejet du texte le %s, le Senat examine le montant initial" % r["plf_rejet"]
+                + ("; vote tombe avec le rejet du texte le %s, le Senat doit examiner le montant initial" % r["plf_rejet"]
                    if r.get("plf_rejet") else "")])
     # Refonte du 11/10/2026 : la decomposition 2013-2017 dans les deux unites (contribution de chaque poste a la variation
     # du solde ; pour une depense, l'inverse de sa variation). Lignes AJOUTEES ; les lignes precedentes sont inchangees.
