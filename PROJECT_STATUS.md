@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-07 (nuit, suite) — Audit téléphone des pages livres (320 à 414 px) et corrections ; « Le projet » pleine largeur
+
+Question de l'auteur (« pour toute modification, as-tu vérifié la compatibilité totale au format téléphone ? »). Réponse :
+pas complètement — 390 px seulement, sans 320 px, ni cibles tactiles, ni recouvrement par la barre fixe. Audit des neuf pages
+(six fiches FR, ANTHROPY, /livres/ FR et EN) à 320, 360, 375, 390 et 414 px : quatre défauts trouvés et corrigés —
+(1) /livres/ à 320 px : « Acheter » débordait (boutons empilés sous 375 px) ; (2) cibles tactiles sous 44 px (boutons des
+cartes 36, « Autres pays & formats » 27, « Transmettre » 34 : hauteur minimale 44 sur téléphone, affichage des composants
+partagés inchangé) ; (3) la barre d'achat fixe recouvrait le pied de page (réserve de 76 px posée par book-barre.js) ;
+(4) étiquettes à 11 px passées à 12 px ; et, vu sur capture, (5) sous 375 px le titre empiétait sous la couverture
+(« ANTHROPIE », « promesses ? », « recommencer ») : couverture 72 px, titre resserré, césure. Témoin : le contrôle de
+recouvrement avait mordu avant correction (recouvre=true). Non traité, déclaré : note et badge « Nouveauté » à 11 px
+(partial preuve-sociale, partagé avec /ressources-offertes/). « Le projet » de /livres/ : pleine largeur, deux colonnes dès
+900 px (demande de l'auteur). Contrôles : build 0, typo_build 0, audit-liens 0, check-all --ci 0.
+
 ### 2026-11-07 (nuit) — Page /livres/ refaite selon la maquette L2+ (FR et EN) — commité sur `livres-l2plus`, en attente du push
 
 Maquette L2+ retenue par l'auteur après arbitrage de l'Audit-08 (`D:\PRO_PROMOTION\MAQUETTES_PAGE_LIVRES_2026-11-07\`,

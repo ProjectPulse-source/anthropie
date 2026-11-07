@@ -896,6 +896,9 @@ a.livre-porte__btn--achat:hover { border-color: var(--color-accent); }
   .livre-porte__corps { padding: 0.9rem; }
 }
 @media (prefers-reduced-motion: reduce) { .livre-porte, .livre-porte__cover { transition: none; } }
+// Téléphone (audit du 07/11/2026) : à 320 px les deux boutons côte à côte débordaient ; empilés, 44 px de haut.
+@media (max-width: 767px) { a.livre-porte__btn { min-height: 44px; display: flex; align-items: center; justify-content: center; } }
+@media (max-width: 374px) { .livre-porte__actions { flex-direction: column; } }
 
 // ----- Page « Qu'est-ce que l'anthropie ? » (variante B, 01/10/2026) -----
 // La phrase : définition canonique (partial single-source) et « proposée par ».

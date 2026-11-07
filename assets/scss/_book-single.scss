@@ -816,3 +816,31 @@ main .book-sommaire ol > li { padding-left: 2rem !important; }
   font-size: var(--fs-small);
   color: var(--color-text-subtle);
 }
+
+/* ---------------------------------------------------------------------------
+   Téléphone — audit du 07/11/2026 (320 et 390 px, toutes les fiches) : zones à toucher d'au moins 44 px,
+   étiquettes à 12 px, et la barre d'achat fixe ne recouvre plus le bas de page.
+   --------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  body.avec-book-barre { padding-bottom: 76px; }   // classe posée par book-barre.js
+  .book-single__actions .amazon-cta,
+  .book-single__actions .amazon-more,
+  .book-single__actions .transmettre__button { min-height: 44px; }   // composants partagés : hauteur seule, affichage inchangé
+  a.book-appel__btn { min-height: 44px; display: flex; align-items: center; justify-content: center; }
+  a.book-barre__btn { min-height: 44px; display: inline-flex; align-items: center; }
+  .book-single__kicker,
+  .book-voix__src,
+  .book-extrait__src,
+  .book-carte__type,
+  .book-single__fiche-meta { font-size: 12px; }
+}
+
+// Très petits écrans (< 375 px) : à 320 px la colonne du titre ne faisait que 151 px ; « ANTHROPIE », « promesses ? »
+// (point lié par une insécable) et « recommencer » passaient sous la couverture. Couverture réduite, titre resserré, césure.
+@media (max-width: 374px) {
+  .book-single { grid-template-columns: minmax(0, 1fr) 72px; gap: 1rem 0.8rem; }
+  .book-single__cover { max-width: 72px; }
+  .book-single__head h1 { font-size: 1.6rem; }
+  .book-single__subtitle { font-size: 1.05rem; }
+  .book-single__head h1, .book-single__subtitle { hyphens: auto; overflow-wrap: break-word; }
+}

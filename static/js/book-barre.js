@@ -3,7 +3,10 @@
    jamais deux appels à l'achat à l'écran en même temps. Sur ordinateur, la feuille de style la masque. */
 (function () {
   var barre = document.querySelector('[data-book-barre]');
-  if (!barre || !('IntersectionObserver' in window)) return;
+  if (!barre) return;
+  // Réserve la hauteur de la barre en bas de page (téléphone) : sans elle, la barre recouvre le pied de page.
+  document.body.classList.add('avec-book-barre');
+  if (!('IntersectionObserver' in window)) return;
   var lien = barre.querySelector('a');
   var cibles = ['book-actions', 'book-appel']
     .map(function (id) { return document.getElementById(id); })
