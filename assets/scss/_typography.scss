@@ -252,6 +252,13 @@ main table td:nth-child(2) { width: 32%; }
 main table th:nth-child(3),
 main table td:nth-child(3) { width: 50%; }
 
+// 08/11/2026 (recette de /les-etudiants-vont-ils-plus-mal/, puis mesure de tout le site, CSS chargée) : sous
+// `table-layout: fixed`, les 18 + 32 + 50 % ci-dessus prennent toute la largeur ; dans un tableau de quatre colonnes
+// ou plus, les colonnes suivantes tombaient a 0 px et leur texte sortait de la page des 1024 px (11 tableaux, dix
+// pages en ligne FR et EN). Ces largeurs ne valent que jusqu'a trois colonnes ; au-dela, colonnes egales.
+main table tr > :first-child:nth-last-child(n+4),
+main table tr > :first-child:nth-last-child(n+4) ~ * { width: auto; }
+
 // =====================================================================
 // Tableaux responsive — bascule cartes sur mobile
 // =====================================================================
