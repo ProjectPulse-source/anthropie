@@ -6,8 +6,9 @@ url: /en/social-reversibility/
 description: "Social reversibility is the capacity, assessed before an attempt, to withstand its possible failure without a lasting closure of one's future. Neither a stock nor a flow: a third dimension of inequality — what one can afford to fail."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
-lastmod: 2026-11-16
+lastmod: 2026-11-19
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-19, texte: "AWP-08 version 1.1: measuring the notion draws on published work (the average effect of removing indicator 040 has been estimated); complementarity becomes a prediction to test, not a finding about second-chance policies."}
   - {date: 2026-11-05, texte: "Corrections: indicator 040 of the FIBEN file was removed in 2013 (decree no. 2013-799), not in 2021; the Lemoine law (2022) shortened the right-to-be-forgotten period to five years, it did not create it."}
   - {date: 2026-11-16, texte: "Source review: the failure of second-chance policies is presented as a prediction of the framework, to be tested, not as a fact; right to err stated exactly; resilience compared in the psychological sense used here."}
 og_title: "What is social reversibility? — definition and sources — S. Lalut"
@@ -21,7 +22,7 @@ faq:
   - question: "Why is the second chance not the same for everyone?"
     answer: "Because, according to AWP-08, the price of failure is stratified: two people with similar incomes can face very different futures depending on whether their error is erased or durably recorded in an institutional memory — payment-incident files, default histories, credit records. That inequality appears neither in income statistics nor in mobility statistics."
   - question: "Can social reversibility be measured?"
-    answer: "That is the programme opened by AWP-08: a measurement architecture (V = f(C, T, A)), four families of testable propositions and an identification protocol on two dated French institutional reforms — the removal of the 040 indicator from the Banque de France's FIBEN file and the insurance right-to-be-forgotten of the Lemoine Act. It is a refutable framework, not yet an empirical result."
+    answer: "That is the programme opened by AWP-08: a measurement architecture (V = f(C, T, A)), four families of testable propositions and a refutability matrix. Published studies have already estimated the average effect of some erasures, including the removal of the 040 indicator from the Banque de France's FIBEN file; what AWP-08 adds for testing, notably on the insurance right-to-be-forgotten of the Lemoine Act, is the complementarity between fallback and trace. It is a refutable framework, not yet an empirical result."
   - question: "Who proposed the concept of social reversibility?"
     answer: "Stéphane Lalut, economist and independent researcher, in the working paper AWP-08 — Social Reversibility as a Dimension of Inequality (2026, DOI 10.5281/zenodo.21507249), eighth of the Anthropie Working Papers. The concept extends the framework of anthropy: the stratified price of failure is a mechanism of social disorder distribution."
   - question: "Is social reversibility a synonym for resilience?"
@@ -39,7 +40,7 @@ fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the pa
     - t: "Example"
       d: "Two people with identical incomes: one can attempt a business, a fallback exists; for the other, the same failure triggers the gears — overdraft, negative records, housing."
     - t: "Limit"
-      d: "A refutable framework, not an empirical result: AWP-08 proposes a measurement architecture and an identification protocol on two dated settings."
+      d: "A refutable framework, not an empirical result: AWP-08 proposes a measurement architecture and a refutability matrix, confronted with settings already studied."
     - t: "Anthropic reading"
       d: "The cost of failure does not disappear: it is displaced and distributed, unequally. The stratified price of failure distributes social disorder."
       anthropie: true
@@ -111,7 +112,7 @@ The framework of AWP-08 names them. Bouncing back requires:
 2. **a bearable price of failure** (T) — what failure costs in law and in practice, including the trace it leaves;
 3. **a readmission environment** (A) — doors that reopen: employers, lenders, institutions willing to consider a marked file.
 
-The framework's own hypothesis is the **complementarity** of fallback and trace: the effect of the one depends on the level of the other; readmission extends it, outside the core that AWP-08 puts to the test. On this hypothesis, when the trace shuts a door all-or-nothing, a solid fallback does not reopen it; the other way round, erasing the trace protects no one who cannot hold out through the interval. The framework draws from it a prediction, which its protocols must test: a second-chance policy acting on a single component — psychological support without the safety net, or record-clearing without the fallback — would have little effect.
+The framework's own hypothesis is the **complementarity** of fallback and trace: the effect of the one depends on the level of the other; readmission extends it, outside the core that AWP-08 puts to the test. On this hypothesis, when the trace shuts a door all-or-nothing, a solid fallback does not reopen it; the other way round, erasing the trace protects no one who cannot hold out through the interval. The framework draws from it a prediction, which its protocols must test: a second-chance policy acting on a single component — psychological support without the safety net, or record-clearing without the fallback — would have little effect. Research is beginning to test this: erasing a record sometimes has a clear average effect (the removal of indicator 040, according to Cahn, Girotti and Landier, 2021), sometimes none on average employment (criminal record expungement in the United States, according to Agan and co-authors, 2026).
 
 Public statistics mostly measure fallback capacity, and only in part: the financial capacity to absorb a shock. The trace appears there only through the headcounts of the banking files published by the Banque de France, and its duration can be read in the law. The data page [Who can cope with an unexpected expense?](/en/who-can-cope-with-an-unexpected-expense/) shows that this capacity varies sharply with household composition, including above the poverty threshold.
 

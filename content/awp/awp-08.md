@@ -9,7 +9,7 @@ outputs:
   - BibTeX
   - RIS
   - EndNote
-description: "L'inégalité se mesure en stocks (revenu, patrimoine) et en flux (mobilité), presque jamais par ce qu'une personne peut se permettre de rater sans fermer durablement son avenir. Ce working paper construit la réversibilité sociale comme troisième dimension de l'inégalité : la capacité, évaluée avant une tentative, de supporter son échec. Il en propose une définition, une architecture de mesure, quatre familles de propositions testables et un protocole d'identification. Cadre réfutable, non résultat empirique. Prolonge le programme anthropique (AWP-01, AWP-07)."
+description: "L'inégalité se mesure en stocks (revenu, patrimoine) et en flux (mobilité) ; ces mesures saisissent mal ce qu'une personne peut se permettre de rater sans fermer durablement son avenir. Ce working paper construit la réversibilité sociale comme troisième dimension de l'inégalité : la capacité, évaluée avant une tentative, de supporter son échec. Il en propose une définition, une architecture de mesure, quatre familles de propositions testables et une matrice de réfutabilité. Cadre réfutable, non résultat empirique. Prolonge le programme anthropique (AWP-01, AWP-07)."
 doi_zenodo: "10.5281/zenodo.21506320"
 wikidata_qid: "Q140680750"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/21506320"
@@ -26,6 +26,7 @@ faq:
 pdf_url: "https://zenodo.org/records/21506320/files/AWP-08_reversibilite_sociale.pdf"
 language: "fr"
 publication_date: "2026-07-23"
+lastmod: 2026-11-08
 translation:
   doi: "10.5281/zenodo.21507249"
   url: "/en/awp/awp-08/"
@@ -46,7 +47,7 @@ La réversibilité sociale est la capacité, évaluée *avant* une tentative, de
 
 ## Trois objets que la littérature confond
 
-L'appareil sépare trois objets souvent agrégés&nbsp;: le tarif institutionnel de l'échec (T) — ce que coûte, en droit et en pratique, un échec inscrit quelque part —, la capacité individuelle de repli (C) — tenir l'intervalle après la chute — et l'environnement d'accès (A). Leur combinaison donne la réversibilité effective, *V = f(C, T, A)*. L'hypothèse propre du cadre est la complémentarité&nbsp;: l'effet d'une composante dépend du niveau de l'autre. Un repli solide ne vaut que si la trace de l'échec ne verrouille pas la réadmission&nbsp;; et une réadmission ouverte ne protège personne qui ne peut pas tenir l'intervalle.
+L'appareil sépare trois objets souvent agrégés&nbsp;: le tarif institutionnel de l'échec (T) — ce que coûte, en droit et en pratique, un échec inscrit quelque part —, la capacité individuelle de repli (C) — tenir l'intervalle après la chute — et l'environnement d'accès (A). Leur combinaison donne la réversibilité effective, *V = f(C, T, A)*. La proposition propre du cadre est leur complémentarité, dont le signe se prédit et se réfute terrain par terrain&nbsp;: un repli solide ne vaut que si la trace de l'échec ne verrouille pas la réadmission&nbsp;; et une réadmission ouverte ne protège personne qui ne peut pas tenir l'intervalle.
 
 ## Mémoire institutionnelle et réadmission
 
@@ -54,6 +55,6 @@ Le pivot du cadre est la trace&nbsp;: la mémoire que les institutions gardent d
 
 ## Falsifiabilité&nbsp;: un cadre, pas une découverte
 
-Quatre familles de propositions pré-spécifiées découlent de la définition&nbsp;; l'hypothèse distinctive — la complémentarité entre repli et trace — reçoit une spécification testable et un protocole d'identification sur deux terrains datés&nbsp;: la suppression de l'indicateur 040 du FIBEN (noyau strict) et la loi Lemoine sur le droit à l'oubli assurantiel (cercle étendu). La contribution est un cadre mesurable et réfutable, non une découverte empirique.
+Quatre familles de propositions pré-spécifiées découlent de la définition&nbsp;; des travaux montrent déjà que l'effet de l'effacement d'une trace varie selon les ressources des personnes. La complémentarité entre repli et trace reçoit ici une spécification testable et une matrice de réfutabilité. La suppression de l'indicateur 040 du FIBEN, dont l'effet moyen est déjà estimé (Cahn, Girotti & Landier, 2021), sert de cas de confrontation du noyau strict&nbsp;; la loi Lemoine sur le droit à l'oubli assurantiel, de terrain prospectif du cercle étendu. La contribution est un cadre mesurable et réfutable, non une découverte empirique. La version 1.1 (novembre 2026) situe le cadre dans cette littérature et en resserre la revendication.
 
 Une présentation accessible du concept est disponible sur la page [Qu'est-ce que la réversibilité sociale&nbsp;?](/reversibilite-sociale/). Le concept général est présenté sur la page [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/)&nbsp;; l'aller du désordre est posé par [AWP-01](/awp/awp-01/) et sa boucle formalisée par [AWP-07](/awp/awp-07/). AWP-08 en donne la contrepartie micro-institutionnelle&nbsp;: le tarif stratifié de l'échec est un mécanisme de distribution du désordre social.

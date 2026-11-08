@@ -5,8 +5,9 @@ og_image_alt: "Carte de partage : « La réversibilité sociale » et son schém
 description: "La réversibilité sociale est la capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de son avenir. Ni un stock ni un flux : une troisième dimension de l'inégalité — ce qu'on peut se permettre de rater."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
-lastmod: 2026-11-16
+lastmod: 2026-11-19
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-19, texte: "AWP-08 version 1.1 : la mesure de la notion s'adosse à des travaux déjà publiés (l'effet moyen de la suppression de l'indicateur 040 est estimé) ; la complémentarité devient une prédiction à éprouver, non un constat sur les politiques de seconde chance."}
   - {date: 2026-11-05, texte: "Ajout : le témoin américain (fresh start du droit des faillites, Fair Credit Reporting Act), que la version anglaise donnait déjà."}
   - {date: 2026-11-05, texte: "Corrections : l'indicateur 040 du fichier FIBEN a été supprimé en 2013 (décret n° 2013-799), non en 2021 ; la loi Lemoine (2022) a ramené à cinq ans le délai du droit à l'oubli, qu'elle n'a pas créé ; le droit à l'erreur vaut devant toutes les administrations, pas seulement en matière fiscale."}
   - {date: 2026-11-16, texte: "Relecture des sources : l'échec des politiques de la seconde chance est présenté comme une prédiction du cadre, à tester, non comme un fait ; droit à l'erreur exact (première méconnaissance de bonne foi d'une règle ou erreur matérielle de déclaration) ; résilience comparée au sens psychologique retenu ici."}
@@ -21,7 +22,7 @@ faq:
   - question: "Pourquoi la seconde chance n'est-elle pas la même pour tous ?"
     answer: "Parce que, selon AWP-08, le tarif de l'échec est stratifié : deux personnes voisines en revenu peuvent avoir des avenirs très différents selon que leur erreur s'efface ou s'inscrit durablement dans une mémoire institutionnelle — fichier d'incidents de paiement, historique de défaut, signalement. Cette inégalité-là n'apparaît ni dans les statistiques de revenu, ni dans celles de mobilité."
   - question: "La réversibilité sociale se mesure-t-elle ?"
-    answer: "C'est l'objet du programme ouvert par AWP-08 : une architecture de mesure (V = f(C, T, A)), quatre familles de propositions testables et un protocole d'identification sur deux terrains datés — la suppression par décret, en 2013, de l'indicateur 040 du fichier FIBEN de la Banque de France et le droit à l'oubli assurantiel de la loi Lemoine. C'est un cadre réfutable, pas encore un résultat empirique."
+    answer: "C'est l'objet du programme ouvert par AWP-08 : une architecture de mesure (V = f(C, T, A)), quatre familles de propositions testables et une matrice de réfutabilité. Des travaux publiés ont déjà estimé l'effet moyen de certains effacements, dont la suppression par décret, en 2013, de l'indicateur 040 du fichier FIBEN de la Banque de France ; ce qu'AWP-08 ajoute à éprouver, notamment sur le droit à l'oubli assurantiel de la loi Lemoine, est la complémentarité entre repli et trace. C'est un cadre réfutable, pas encore un résultat empirique."
   - question: "Qui a proposé le concept de réversibilité sociale ?"
     answer: "Stéphane Lalut, économiste et chercheur indépendant, dans le working paper AWP-08 — « La réversibilité sociale comme dimension de l'inégalité » (2026, DOI 10.5281/zenodo.21506320), huitième des Anthropie Working Papers. Le concept prolonge le cadre anthropique : le tarif stratifié de l'échec est un mécanisme de distribution du désordre social."
   - question: "La réversibilité sociale est-elle un synonyme de résilience ?"
@@ -39,7 +40,7 @@ fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la
     - t: "Exemple"
       d: "Deux personnes au même revenu&nbsp;: l'une peut tenter une création d'entreprise, un repli existe&nbsp;; pour l'autre, le même échec enclenche l'engrenage — découvert, fichage, logement."
     - t: "Limite"
-      d: "Un cadre réfutable, non un résultat empirique&nbsp;: AWP-08 propose une architecture de mesure et un protocole d'identification sur deux terrains datés."
+      d: "Un cadre réfutable, non un résultat empirique&nbsp;: AWP-08 propose une architecture de mesure et une matrice de réfutabilité, confrontée à des terrains déjà étudiés."
     - t: "Lecture anthropique"
       d: "Le coût de l'échec ne disparaît pas&nbsp;: il est déplacé et réparti, inégalement. Le tarif stratifié de l'échec distribue le désordre social."
       anthropie: true
@@ -117,7 +118,7 @@ Le cadre d'AWP-08 les nomme. Rebondir exige&nbsp;:
 2. **un tarif d'échec supportable** (T) — ce que l'échec coûte en droit et en pratique, y compris la trace qu'il laisse&nbsp;;
 3. **un environnement de réadmission** (A) — des portes qui se rouvrent&nbsp;: employeurs, prêteurs, institutions qui acceptent un dossier marqué.
 
-L'hypothèse propre du cadre est la **complémentarité** du repli et de la trace&nbsp;: l'effet de l'un dépend du niveau de l'autre&nbsp;; la réadmission en est un prolongement, hors du noyau qu'AWP-08 soumet au test. Selon cette hypothèse, quand la trace ferme une porte en tout-ou-rien, un repli solide ne la rouvre pas&nbsp;; dans l'autre sens, effacer la trace ne protège personne qui ne peut pas tenir l'intervalle. Le cadre en tire une prédiction, que ses protocoles doivent tester&nbsp;: une politique de la seconde chance qui n'agit que sur une composante — l'accompagnement psychologique sans le filet, ou l'effacement de la trace sans le repli — produirait peu d'effet.
+L'hypothèse propre du cadre est la **complémentarité** du repli et de la trace&nbsp;: l'effet de l'un dépend du niveau de l'autre&nbsp;; la réadmission en est un prolongement, hors du noyau qu'AWP-08 soumet au test. Selon cette hypothèse, quand la trace ferme une porte en tout-ou-rien, un repli solide ne la rouvre pas&nbsp;; dans l'autre sens, effacer la trace ne protège personne qui ne peut pas tenir l'intervalle. Le cadre en tire une prédiction, que ses protocoles doivent tester&nbsp;: une politique de la seconde chance qui n'agit que sur une composante — l'accompagnement psychologique sans le filet, ou l'effacement de la trace sans le repli — produirait peu d'effet. La recherche commence à l'éprouver&nbsp;: l'effacement d'une trace a parfois un effet net en moyenne (la suppression de l'indicateur 040, selon Cahn, Girotti et Landier, 2021), parfois aucun sur l'emploi moyen (l'effacement des casiers judiciaires aux États-Unis, selon Agan et ses coauteurs, 2026).
 
 La statistique publique mesure surtout la capacité de repli, et en partie seulement&nbsp;: la capacité financière d'encaisser un choc. La trace n'y apparaît qu'à travers les effectifs des fichiers bancaires que publie la Banque de France, et sa durée se lit dans le droit. La page de données [Qui peut faire face à une dépense imprévue&nbsp;?](/qui-peut-faire-face-a-une-depense-imprevue/) montre que cette capacité varie fortement selon la composition du foyer, y compris au-dessus du seuil de pauvreté.
 
