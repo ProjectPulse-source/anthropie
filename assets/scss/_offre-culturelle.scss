@@ -236,7 +236,12 @@
   width: 24px; height: 24px; border-radius: 50%; background: var(--oc-bleu); color: #fff;
   font: 700 13px/24px var(--font-sans); text-align: center;
 }
-@media (min-width: 720px) { .oc-etapes ol { grid-template-columns: repeat(3, 1fr); } }
+// Une piste par étape : les pages pays en ont deux, l'offre culturelle trois ; trois pistes pour deux étapes laissaient
+// un tiers vide à droite (relevé du 08/11/2026).
+@media (min-width: 720px) {
+  .oc-etapes ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .oc-etapes ol:has(> li:nth-child(2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 .oc-note .ressources-book__rating { font-size: var(--oc-t3); }
 
 .oc-chaine__action { margin: 14px 0 0; a.oc-btn { text-decoration: none; } }

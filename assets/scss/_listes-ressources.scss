@@ -4,6 +4,14 @@
 .outils-grille > ol {
   counter-reset: outil;
   display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.6rem;
+  // Cinq cartes : 3 + 2 sur toute la largeur, au lieu de 4 + une orpheline (relevé du 08/11/2026).
+  @media (min-width: 1000px) {
+    &:has(> li:nth-child(5):last-child) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      > li { grid-column: span 2; }
+      > li:nth-child(n+4) { grid-column: span 3; }
+    }
+  }
   > li {
     counter-increment: outil; list-style: none;
     background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-radius: 6px;

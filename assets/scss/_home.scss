@@ -276,8 +276,9 @@
   padding: 0 var(--marge-colonne) 1rem;         // padding-bottom : rythme intra-section (compense l'absence de <p> autour du link inline)
 }
 
+// 08/11/2026 : plus de plafond à 720 px ; le texte prend la largeur des autres introductions de l'accueil (section-intro).
 .frontiere-contemporaine__inner {
-  max-width: 720px;
+  max-width: none;
 }
 
 .frontiere-contemporaine__eyebrow {
