@@ -2,7 +2,7 @@
 <title id="etu-h-t">Jeunes hospitalisés pour un geste auto-infligé, 2012-2025</title><desc id="etu-h-d">Deux courbes, de 2012 à 2025, du nombre de patients hospitalisés pour un geste auto-infligé pour 100 000 habitants. Femmes de 18 à 24 ans : 235,8 en 2012, 200,3 en 2014, 206,7 en 2017, 234,5 en 2019, 359,7 en 2025, soit +53 % depuis 2019. Hommes de 18 à 24 ans : 142,7 en 2012, 120,0 en 2017, 130,2 en 2019, 149,5 en 2025, soit +15 % depuis 2019.</desc>
 <rect width="720" height="389" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Jeunes hospitalisés pour un geste auto-infligé, 2012-2025</text>
-<text x="0" y="37" font-size="11" fill="#55524f">Patients hospitalisés dans l'année, pour 100 000 habitants de 18 à 24 ans du même sexe</text>
+<text x="0" y="37" font-size="11" fill="#55524f">Patients hospitalisés dans l'année, pour 100 000 habitants de 18 à 24 ans du même sexe, étudiants ou non</text>
 <line x1="44" y1="280.0" x2="540" y2="280.0" stroke="#dcd8d3" stroke-width="1"/>
 <text x="38" y="283.5" font-size="10" fill="#96928f" text-anchor="end">0</text>
 <line x1="44" y1="226.0" x2="540" y2="226.0" stroke="#dcd8d3" stroke-width="0.6"/>

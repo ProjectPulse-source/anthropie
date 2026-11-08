@@ -42,7 +42,7 @@ faq:
   - question: "Les étudiants vont-ils plus mal que les autres jeunes ?"
     answer: "Aucune statistique nationale ne permet encore de le dire. De 2017 à 2021, la part des étudiants déclarant un épisode dépressif dans l'année est passée de {etu.etu_2017} % à {etu.etu_2021} %, la plus forte hausse parmi les situations professionnelles publiées par Santé publique France ({etu.h_etu}, contre {etu.h_chom} chez les chômeurs et {etu.h_actifs} chez les actifs occupés). Mais ces groupes n'ont ni le même âge ni la même composition par sexe, et aucune statistique nationale ne compare l'évolution des étudiants à celle des non-étudiants du même âge et du même sexe. Une enquête en ligne menée au printemps 2020 (CONFINS) a trouvé chez les étudiants un risque de symptômes dépressifs plus élevé que chez les non-étudiants après ajustement, sur un échantillon non représentatif et à un seul moment."
   - question: "La santé mentale des jeunes s'est-elle vraiment dégradée, ou en parle-t-on davantage ?"
-    answer: "Elle s'est dégradée : des indicateurs qui enregistrent des actes, et non des réponses à un questionnaire, vont dans le même sens. De 2019 à {etu.hosp_der}, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de {etu.hosp_f_var} % (DREES) ; la part des femmes de 20 à 24 ans traitées par antidépresseurs ou régulateurs de l'humeur est passée de {etu.ad_f_2017} % en 2017 à {etu.ad_f_2024} % en 2024 (Assurance maladie). Une partie de la hausse des déclarations peut toutefois tenir à une parole plus libre."
+    answer: "Elle s'est dégradée : des indicateurs qui enregistrent des actes, et non des réponses à un questionnaire, vont dans le même sens. De 2019 à {etu.hosp_der}, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de {etu.hosp_f_var} % (DREES) ; la part des femmes de 20 à 24 ans traitées par antidépresseurs ou régulateurs de l'humeur, hors pathologie psychiatrique repérée, est passée de {etu.ad_f_2017} % en 2017 à {etu.ad_f_2024} % en 2024 (Assurance maladie). Une partie de la hausse des déclarations peut toutefois tenir à une parole plus libre."
   - question: "Les jeunes femmes sont-elles plus touchées ?"
     answer: "Oui, dans toutes les sources. Chez les 18-24 ans, l'épisode dépressif déclaré est passé de {etu.f1824_2017} % à {etu.f1824_2021} % chez les femmes entre 2017 et 2021, de {etu.h1824_2017} % à {etu.h1824_2021} % chez les hommes. Le taux de jeunes femmes hospitalisées pour un geste auto-infligé a augmenté de {etu.hosp_f_var} % de 2019 à {etu.hosp_der}, celui des jeunes hommes de {etu.hosp_h_var} %. Au lycée, {etu.lyc_f_2024} % des filles présentent un risque important de dépression en 2024, contre {etu.lyc_g_2024} % des garçons (EnCLASS)."
   - question: "Le malaise des étudiants vient-il du covid ?"
@@ -82,6 +82,8 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 </div>
 
 Le chiffre qui a installé l'idée d'un «&nbsp;malaise étudiant&nbsp;» vient du Baromètre santé de Santé publique France&nbsp;: en 2021, {{< etu-val "etu_2021" >}}&nbsp;% des étudiants déclarent un épisode dépressif caractérisé au cours des douze derniers mois, contre {{< etu-val "etu_2017" >}}&nbsp;% en 2017 et {{< etu-val "etu_2010" >}}&nbsp;% en 2010. Dans aucune autre situation professionnelle la hausse n'est aussi forte&nbsp;: {{< etu-val "h_etu" >}} chez les étudiants, {{< etu-val "h_chom" >}} chez les chômeurs, {{< etu-val "h_actifs" >}} chez les actifs occupés.
+
+Ce classement ne dit pas que les étudiants se dégradent plus que les autres jeunes. Chez l'ensemble des 18-24&nbsp;ans, étudiants compris, la part passe de {{< etu-val "t1824_2017" >}}&nbsp;% en 2017 à {{< etu-val "t1824_2021" >}}&nbsp;% en 2021 ({{< etu-val "t1824_hausse" >}})&nbsp;: une hausse plus forte, pour un niveau du même ordre en 2021 ({{< etu-val "etu_2021" >}}&nbsp;% chez les étudiants). Les deux groupes se recouvrent et n'ont pas les mêmes âges&nbsp;: on ne peut pas en conclure que les jeunes non étudiants vont plus mal, seulement que la «&nbsp;plus forte hausse&nbsp;» des étudiants ne vaut que parmi les situations professionnelles.
 
 Un questionnaire mesure ce que l'on déclare. Or déclarer plus n'est pas forcément souffrir plus&nbsp;: la parole sur la santé mentale s'est libérée, et une partie de la hausse peut en venir. Pour savoir si quelque chose a changé au-delà des mots, il faut des indicateurs d'une autre nature, qui enregistrent des actes plutôt que des réponses.
 
@@ -150,7 +152,9 @@ Ces associations ne font pas une cause. La précarité peut entraîner la détre
 
 ## Que reste-t-il de spécifiquement étudiant&nbsp;? {#specifiquement-etudiant}
 
-**C'est la question du titre, et aucune statistique nationale publiée n'y répond encore.**
+**C'est la question du titre, et, à notre connaissance, aucune statistique nationale publiée n'y répond encore.**
+
+Elle en contient deux&nbsp;: un niveau (les étudiants souffrent-ils davantage que les jeunes du même âge et du même sexe&nbsp;?) et une évolution (leur situation s'est-elle davantage dégradée&nbsp;?). CONFINS donne un indice sur le niveau, au printemps 2020 et sur un échantillon en ligne&nbsp;; aucune série ne mesure l'évolution à composition comparable.
 
 La hausse de la dépression déclarée chez les étudiants est la plus forte parmi les situations professionnelles publiées, mais elle compare des groupes qui n'ont ni le même âge ni la même composition&nbsp;: les étudiants sont jeunes et majoritairement des femmes, les actifs occupés ont de 18 à 75&nbsp;ans. Les auteurs du Baromètre le signalent eux-mêmes. Pour savoir ce que les études ajoutent, il faudrait comparer l'évolution des étudiants à celle des jeunes non étudiants **du même âge et du même sexe**. Cette comparaison n'a pas été publiée à l'échelle nationale&nbsp;: CONFINS, la seule étude citée ici qui compare étudiants et non-étudiants après ajustement, porte sur un échantillon en ligne et sur un seul moment, le printemps 2020. Nous avons demandé cette comparaison à Santé publique France.
 
@@ -183,11 +187,11 @@ Six explications reviennent souvent dans le débat, empilées en un même récit
 | Cause invoquée | Ce qui concorde | Ce qui l'affaiblit ou l'affaiblirait | Ce que l'on peut dire |
 |---|---|---|---|
 | Massification sans moyens | dépense par étudiant en recul depuis 2009 | une dégradation comparable chez les jeunes qui n'étudient pas affaiblirait une explication exclusivement universitaire, sans exclure une contribution des conditions d'études | une transformation documentée, dont la contribution au malaise n'est pas mesurée |
-| Réformes des études | — | — | les indicateurs retenus ici ne permettent pas d'évaluer leur contribution |
-| Smartphone et réseaux sociaux | dégradation visible au lycée, plus forte chez les filles | les restrictions scolaires du téléphone ne s'accompagnent pas d'un meilleur bien-être (étude SMART Schools, 2025)&nbsp;: une politique évaluée, pas les usages | un effet possible de certaines pratiques, non un facteur établi |
+| Réformes des études | non examiné ici | non examiné ici | les indicateurs retenus ici ne permettent pas d'évaluer leur contribution |
+| Smartphone et réseaux sociaux | dégradation visible au lycée, plus forte chez les filles | dans une étude observationnelle anglaise, les établissements qui restreignent le téléphone n'ont pas un meilleur bien-être moyen (SMART Schools, 2025)&nbsp;: une politique évaluée, pas les usages | un effet possible de certaines pratiques, non un facteur établi |
 | Covid et confinement | accélération après 2020&nbsp;; risque plus élevé chez les étudiants en 2020 (CONFINS) | la hausse commence au milieu des années 2010 | pas l'origine&nbsp;; un rôle d'accélérateur plausible, non mesuré |
 | Inflation et logement | précarité associée à la détresse | la forte inflation date de 2022, après la hausse de 2017-2021 | la forte inflation de 2022 ne peut pas expliquer la hausse mesurée jusqu'en 2021&nbsp;; le logement et les difficultés financières antérieures ne sont pas mesurés ici |
-| Absence de perspectives | — | — | non mesuré par ces sources |
+| Absence de perspectives | non examiné ici | non examiné ici | non mesuré par ces sources |
 | Malaise de génération (contre-récit) | dégradation aussi chez les autres jeunes, lycéens compris | un écart propre aux étudiants à âge et sexe égaux | plausible, non démontré&nbsp;; la comparaison manquante les départagera |
 
 ## Juger les politiques sur leurs effets {#juger-les-politiques}
@@ -213,7 +217,7 @@ Une souffrance qui touche toute une génération n'interdit pas d'agir à l'univ
 {{< faq-visible >}}
 
 {{< appel-livre slug="la-societe-du-premier-coup" sur="Ce qu'une année ratée coûte dépend de qui la rate" avis="non" >}}
-Cette page mesure une souffrance&nbsp;; elle ne dit pas ce que coûte, pour un étudiant, un échec d'études. Le livre compte combien de tentatives une trajectoire autorise réellement, et montre que la possibilité de recommencer n'est pas également distribuée.
+Cette page mesure une souffrance&nbsp;; elle ne dit pas ce que coûte, pour un étudiant, un échec d'études. Un échec n'a pas le même coût selon qu'on peut recommencer ou non&nbsp;: pourquoi certains disposent-ils de plusieurs chances quand d'autres jouent leur avenir dès la première tentative&nbsp;? C'est cette inégalité qu'explore le livre.
 {{< /appel-livre >}}
 
 ## D'où viennent ces chiffres {#sources}

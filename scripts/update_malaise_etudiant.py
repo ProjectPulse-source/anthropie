@@ -20,7 +20,7 @@ recherche). Rendez-vous de rattrapage : juin 2027 (série DREES 2026, cartograph
 — relancer les extractions puis outils/extrait.py, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : statistique et débat français, comme les pages voisines du bloc).
 
-Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond|soinsplat|vagues]
+Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond|soinsplat|vagues|classe|niveau]
 Sorties : data/ et static/malaise_etudiant.json, static/malaise_etudiant.csv, data/figures_etudiants.json,
 static/img/etudiants-hospit.svg et -m.svg (version téléphone), avec leurs PNG
 """
@@ -54,7 +54,7 @@ PAGE_URL = "stephane-lalut.com/les-etudiants-vont-ils-plus-mal/"
 LICENCE = ("CC BY 4.0 — calcul Stéphane Lalut ; sources Santé publique France (BEH, EnCLASS), DREES, Assurance maladie, "
            "Eurostat (CépiDc-Inserm), Insee (compte de l'éducation, Depp)")
 MUTATIONS = ("etudiants", "calendrier", "suicides", "depense", "composition", "lyceens", "adolescentes", "arrondi", "niveau2012",
-             "trajectoires", "covid", "traitements", "filles", "hommes2017", "plat", "formule", "filles1019", "premierehausse", "plafond", "soinsplat", "vagues")
+             "trajectoires", "covid", "traitements", "filles", "hommes2017", "plat", "formule", "filles1019", "premierehausse", "plafond", "soinsplat", "vagues", "classe", "niveau")
 
 
 def log(msg: str) -> None:
@@ -121,6 +121,7 @@ def calcul(X: dict) -> dict:
     c["etu"] = b["etudiants"]
     c["hausse"] = b["hausse_2017_2021"]
     c["f1824"], c["h1824"] = b["f18_24"], b["h18_24"]
+    c["t1824"] = b["t18_24"]
     c["hosp"] = h
     c["antidep"] = a
     tf, tm = s["taux_20_24"]["F"], s["taux_20_24"]["M"]
@@ -190,6 +191,11 @@ def mutation(c: dict) -> str:
         c["antidep"] = dict(c["antidep"], **{"tous sexes": dict(c["antidep"]["tous sexes"], **{"2015": 0.80})})
     elif m == "formule":        # chiffre de la simulation que la formule publiée ne redonne pas
         c["comp"] = dict(c["comp"], simulation_pts=0.70)
+    elif m == "classe":         # étudiants +9,5 (2017 abaissé, 2021 inchangé) : « une hausse plus forte » chez les 18-24 ans faux
+        c["etu"] = dict(c["etu"], **{"2017": c["etu"]["2021"] - 9.5})
+        c["hausse"] = dict(c["hausse"], etudiants=9.5)
+    elif m == "niveau":         # 18-24 ans décalés de +3 points (hausse +9,1 gardée) : « niveau du même ordre » faux
+        c["t1824"] = {k: x + 3.0 for k, x in c["t1824"].items()}
     elif m == "soinsplat":      # femmes déjà en hausse en 2016 : « à peu près plate de 2015 à 2017 » faux (figure soins)
         c["antidep"] = dict(c["antidep"], femmes=dict(c["antidep"]["femmes"], **{"2016": 1.32}))
     elif m == "vagues":         # lycéennes en baisse en 2022 : « augmente à chaque enquête » faux (figure lycée)
@@ -223,6 +229,11 @@ def gardes(c: dict) -> int:
       "la plus forte hausse de toutes les situations publiees")
     g(e["2010"] < e["2017"] < e["2021"], "la hausse precede le covid, qui l'accelere")
     g(e["2021"] - e["2017"] > e["2017"] - e["2010"], "accelere apres 2017")
+    t18 = c["t1824"]
+    g(abs(t18["2021"] - t18["2017"] - 9.1) < 0.05, "18-24 ans : niveaux 2017 et 2021 coherents avec la hausse publiee (+9,1)")
+    g(t18["2021"] - t18["2017"] > e["2021"] - e["2017"],
+      "ensemble des 18-24 ans : une hausse plus forte que celle des etudiants (2017-2021)")
+    g(abs(t18["2021"] - e["2021"]) < 1.5, "2021 : niveau des etudiants du meme ordre que celui des 18-24 ans")
     # Section 1 -- ce qu'on soigne
     ad = c["antidep"]
     g(ad["femmes"]["2017"] < ad["femmes"]["2021"] < ad["femmes"]["2024"], "antidepresseurs des jeunes femmes en hausse continue 2017-2021-2024")
@@ -331,6 +342,8 @@ def affichage(c: dict) -> dict:
         "h_etu": lg.points(hz["etudiants"], signe_=True), "h_chom": lg.points(hz["chomeurs"], signe_=True),
         "h_actifs": lg.points(hz["actifs_occupes"], signe_=True),
         "f1824_2017": n(c["f1824"]["2017"]), "f1824_2021": n(c["f1824"]["2021"]),
+        "t1824_2017": n(c["t1824"]["2017"]), "t1824_2021": n(c["t1824"]["2021"]),
+        "t1824_hausse": lg.points(c["t1824"]["2021"] - c["t1824"]["2017"], signe_=True),
         "h1824_2017": n(c["h1824"]["2017"]), "h1824_2021": n(c["h1824"]["2021"]),
         "f1824_hausse": lg.points(c["f1824"]["2021"] - c["f1824"]["2017"], signe_=True),
         "h1824_hausse": lg.points(c["h1824"]["2021"] - c["h1824"]["2017"], signe_=True),
@@ -390,7 +403,7 @@ LIC_FIG_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"
 FIG = {
     "hospit": dict(
         titre="Jeunes hospitalisés pour un geste auto-infligé, 2012-{der}",
-        sous_titre="Patients hospitalisés dans l'année, pour 100 000 habitants de 18 à 24 ans du même sexe",
+        sous_titre="Patients hospitalisés dans l'année, pour 100 000 habitants de 18 à 24 ans du même sexe, étudiants ou non",
         source="DREES, patients hospitalisés pour geste auto-infligé depuis 2012 (PMSI, médecine, chirurgie, obstétrique) ; "
                "taux recalculés à partir des effectifs par âge détaillé",
         note="Geste auto-infligé : tentative de suicide ou automutilation. Ces séries ne distinguent pas les étudiants des "
@@ -498,7 +511,7 @@ def fig_hospit_m(c: dict, A: dict, svg_d: str) -> str:
     e, y = pied_figure.tete_mobile("etu-hm", t["titre"], html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_d).group(1)),
                                    INK, FONT)
     for k, l in enumerate(pied_figure.coupe("Patients hospitalisés dans l'année, pour 100 000 habitants de 18 à 24 ans "
-                                            "du même sexe", 38)):
+                                            "du même sexe, étudiants ou non", 38)):
         y += 18 if k else 0  # tete_mobile rend déjà la ligne de base suivante
         e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
     X0, X1, VMAX = 34, 292, 400
