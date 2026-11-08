@@ -386,5 +386,11 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   années 2010 » hors de « En trois phrases » (texte antérieur arbitré, il vise les adolescentes). Relecture phrase à
   phrase du texte servi, puis des phrases changées après chaque passe ; instantané refait (297 phrases).
   `check-all --ci` 0 ; build, `typo_build`, liens, rendu, dates : 0 ; recette 320-1 600 px ok, « Ressources » comprise.
-  **Non fait** : panel « après » et nouvelle contre-expertise externe de la version corrigée (correction ciblée, deux
-  contrôleurs indépendants à la place) ; push (ordre de l'auteur).
+  Contre-expertise externe de la version corrigée faite (pièce `Etudiant-04`, SHA-256 `793f80ce…`, paquet autoportant
+  `PAQUET_CONTRE_EXPERTISE_PAGE_03_2026-11-08.md`) : « publiable après corrections », 2 P0 (deux cellules du tableau des
+  causes agrégeaient en « non-étudiants » deux groupes estimés séparément), 3 P1 (composition sur vagues réunies ;
+  Macalli et al. 2021, CONFINS sur trois vagues, lu au résumé et ajouté, une affirmation non vérifiée écartée ; CIDI-SF
+  et PHQ-9 distingués), 2 P2 — tous appliqués (arbitrage `ARBITRAGE_PAGE_05_2026-11-08.md`) ; garde et mutation
+  `macalli`, 54 gardes ; relecture de toutes les mentions des non-étudiants dans le texte servi ; une inversion de sens
+  introduite en réécrivant, trouvée à la relecture et corrigée. check-all 0, build 0, recette ok, instantané refait
+  (298 phrases). **Non fait** : panel « après » (correction ciblée) ; push (ordre de l'auteur).

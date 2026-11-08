@@ -66,7 +66,10 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - Deux contrôleurs indépendants : 3 bloquants au premier (dont « écart non testé » présenté comme moindre hausse,
   et l'absence de mesure ajustée du niveau, contredite par le tableau 3 de Husky), 0 bloquant au second ; leurs points
   « à corriger » appliqués. `check-all --ci` 0, build et contrôles du build 0, recette 320-1 600 px ok, instantané de
-  relecture refait (297 phrases). **Non poussé** : attend l'ordre de l'auteur.
+  relecture refait (297 phrases).
+- Contre-expertise externe de la version corrigée (`Etudiant-04`) : publiable après corrections ; 2 P0 (agrégation de
+  deux groupes en « non-étudiants » dans le tableau des causes), 3 P1, 2 P2 appliqués ; Macalli et al. 2021 ajouté ;
+  54 gardes ; contrôles 0, recette ok, instantané 298 phrases. **Non poussé** : attend l'ordre de l'auteur.
 
 ### 2026-11-08 (matin) — Aucun texte servi sous 12 px : variables et tailles en dur portées à 12 px
 

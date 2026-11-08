@@ -411,6 +411,20 @@
      1.67
     ]
    }
+  },
+  "macalli2021": {
+   "source": "Macalli, Texier, Schück, Côté, Tzourio, Scientific Reports 2021, DOI 10.1038/s41598-021-00471-8 ; CONFINS, 3 783 participants, trois vagues de mars 2020 à janvier 2021, échantillon en ligne non représentatif",
+   "categorie": "citee",
+   "symptomes_depressifs_premier_confinement": [
+    1.59,
+    1.22,
+    2.08
+   ],
+   "symptomes_depressifs_second_confinement": [
+    1.8,
+    1.04,
+    3.12
+   ]
   }
  },
  "affichage": {
@@ -494,6 +508,8 @@
   "mel_or": "1,29",
   "mel_ic_bas": "1,05",
   "mel_ic_haut": "1,60",
+  "mac_c1": "1,59",
+  "mac_c2": "1,80",
   "mel_or_h": "1,33",
   "mel_or_f": "1,19",
   "hk_aor_etu": "1,4",

@@ -1,7 +1,7 @@
-# relu le 2026-11-08 ; texte servi de /les-etudiants-vont-ils-plus-mal/, build de 6f57086 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-08 ; texte servi de /les-etudiants-vont-ils-plus-mal/, build de e88309f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les étudiants vont-ils plus mal que les autres jeunes ?
 La dépression déclarée a fortement augmenté chez les étudiants de 2017 à 2021, et les traitements comme le taux de jeunes hospitalisés pour un geste auto-infligé confirment une dégradation réelle dans cette classe d’âge.
-Mais cette dégradation touche d’abord les jeunes femmes, commence avant l’université et avant le covid, et elle n’est pas propre aux étudiants : dans la comparaison publiée par situation d’activité (18-25 ans), la hausse estimée est plus forte chez les jeunes en emploi ou sans emploi ni formation, sans que l’écart soit testé.
+Mais cette dégradation touche d’abord les jeunes femmes, commence avant l’université et avant le covid, et elle ne se limite pas aux étudiants : dans la comparaison publiée par situation d’activité (18-25 ans), la hausse estimée est plus forte chez les jeunes en emploi ou sans emploi ni formation, sans que l’écart soit testé.
 Page publiée le 8 novembre 2026
 École, lycée et université
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -84,7 +84,8 @@ L’isolement.
 Le premier confinement a frappé particulièrement les étudiants : dans l’étude CONFINS, menée en ligne au printemps 2020, ils présentaient plus souvent des symptômes dépressifs que les non-étudiants après ajustement (rapport de cotes 1,58).
 Ces associations ne font pas une cause.
 La précarité peut entraîner la détresse ; la détresse peut aussi faire échouer ou abandonner les études, et ceux qui vont le plus mal sortent alors de la population observée.
-CONFINS ne représente pas l’ensemble des jeunes et ne couvre qu’un moment, le premier confinement.
+CONFINS ne représente pas l’ensemble des jeunes, et cette analyse ne couvre qu’un moment, le premier confinement.
+Une autre analyse de la même enquête, sur trois vagues de mars 2020 à janvier 2021, trouve les étudiants plus souvent atteints de symptômes dépressifs que les non-étudiants, surtout pendant les deux confinements (rapports de cotes 1,59 puis 1,80) ; ses auteurs y voient un effet plus fort des restrictions sur les étudiants, lecture qu’un échantillon en ligne non représentatif ne permet ni d’étendre à l’ensemble des jeunes, ni de traduire en part de la dégradation nationale.
 Enfin, la dépense par étudiant recule depuis 2009, et la dépression déclarée des étudiants monte déjà de 10,1 % en 2010 à 13,3 % en 2017 : les deux calendriers se recouvrent.
 Le taux de jeunes femmes hospitalisées, qui compte toutes les jeunes femmes, étudiantes ou non, ne remonte en revanche qu’à partir de 2018.
 Le calendrier ne permet donc ni d’établir ni d’écarter un lien.
@@ -92,8 +93,8 @@ Que reste-t-il de spécifiquement étudiant ?
 C’est la question du titre, et elle en contient deux : un niveau (les étudiants souffrent-ils davantage que les autres jeunes ?) et une évolution (leur situation s’est-elle davantage dégradée ?).
 Des comparaisons nationales existent, mais elles ne répondent pas toutes à la même question.
 Sur le niveau, les comparaisons nationales placent les étudiants au-dessus des jeunes en emploi, et au-dessous des jeunes sans emploi.
-Sur les Baromètres santé de 2005 à 2021 réunis, chez les 18-25 ans, la dépression est plus fréquente chez les étudiants que chez les jeunes en emploi, à âge, sexe, vague, revenu, région et mode de vie égaux (rapport de cotes 1,4, intervalle de confiance de 1,1 à 1,7), et plus encore chez les jeunes sans emploi ni formation (1,9) ; ces « étudiants » comprennent les élèves du secondaire.
-Dans l’analyse de la cohorte EPICOV limitée aux 18-30 ans (2020-2021, échantillon représentatif), les étudiants sont plus souvent déprimés que les jeunes en emploi après ajustement (rapport de cotes 1,29, de 1,05 à 1,60) ; l’association est significative chez les hommes (1,33), pas chez les femmes (1,19), sans que les auteurs établissent une différence entre les deux.
+Sur les Baromètres santé de 2005 à 2021 réunis, chez les 18-25 ans, l’épisode dépressif caractérisé (questionnaire CIDI-SF) est plus fréquent chez les étudiants que chez les jeunes en emploi, à âge, sexe, vague, revenu, région et mode de vie égaux (rapport de cotes 1,4, intervalle de confiance de 1,1 à 1,7), et plus encore chez les jeunes sans emploi ni formation (1,9) ; ces « étudiants » comprennent les élèves du secondaire.
+Dans l’analyse de la cohorte EPICOV limitée aux 18-30 ans (2020-2021, échantillon représentatif), les étudiants présentent plus souvent des symptômes dépressifs (questionnaire PHQ-9) que les jeunes en emploi après ajustement (rapport de cotes 1,29, de 1,05 à 1,60) ; l’association est significative chez les hommes (1,33), pas chez les femmes (1,19), sans que les auteurs établissent une différence entre les deux.
 CONFINS, en ligne au printemps 2020, va dans le même sens.
 En 2005, une enquête menée dans quatre régions ne trouvait pas de différence significative de dépression majeure entre étudiants du supérieur, élèves et apprentis, jeunes actifs et jeunes sans emploi ni formation de 18 à 24 ans.
 Sur l’évolution, la comparaison publiée ne confirme pas le récit courant.
@@ -109,9 +110,9 @@ Or la dépression déclarée a progressé plus vite chez les jeunes femmes.
 Supposons qu’à chaque date, étudiants et non-étudiants du même sexe déclarent un épisode dépressif dans la même proportion : la seule différence de composition rendrait alors, de 2017 à 2021, la hausse des étudiants supérieure d’environ 0,6 point à celle des non-étudiants.
 C’est une simulation, pas une mesure : elle décrit l’effet de la composition dans ce scénario et ne dit pas quelle part de l’écart réel tient au sexe.
 La comparaison publiée ne se lit pas directement avec cet étalon, qui porte sur l’ensemble des non-étudiants.
-Les étudiants de Husky et coauteurs sont plus souvent des femmes que les jeunes en emploi, toutes vagues réunies (50,7 % contre 44,0 %) : la composition par sexe pousserait leur hausse au-dessus de celle de ces jeunes, et l’estimation publiée la place pourtant au-dessous.
-Face aux jeunes sans emploi ni formation, plus souvent des femmes encore (55,0 %), la composition joue au contraire dans le sens de l’écart observé.
-C’est un indice, pas une mesure : l’écart n’est pas testé, et l’âge n’est pas égalisé.
+Les étudiants de cette comparaison sont plus souvent des femmes que les jeunes en emploi, et moins que les jeunes sans emploi ni formation (50,7 %, 44,0 % et 55,0 %, toutes vagues de 2005 à 2021 réunies).
+Si ces proportions étaient restées stables, la composition par sexe aurait joué dans le sens d’une hausse plus forte des étudiants face aux jeunes en emploi, alors que l’estimation publiée place leur hausse au-dessous de celle de ces jeunes, et dans le sens de l’écart observé face aux jeunes sans emploi ni formation.
+Ces proportions portent sur toutes les vagues : elles ne permettent pas d’estimer cet effet pour la seule période 2017-2021, et l’écart entre les hausses n’est pas testé.
 Comment lire une comparaison des étudiants et des non-étudiants : les deux étalons
 La simulation sert d’étalon à une seule comparaison, celle des étudiants et des non-étudiants de 18 à 24 ans, sexes confondus :
 Si, chez les 18-24 ans et sexes confondus, l’écart de hausse 2017-2021 entre étudiants et non-étudiants est…
@@ -137,7 +138,7 @@ Ce qui l’affaiblit ou l’affaiblirait
 Ce que l’on peut dire
 Massification sans moyens
 dépense par étudiant en recul depuis 2009
-chez les 18-25 ans, la hausse estimée de 2017 à 2021 est plus forte chez les jeunes qui n’étudient pas que chez les étudiants (écart non testé) : ce résultat n’appuie pas une explication exclusivement universitaire, sans exclure une contribution des conditions d’études
+chez les 18-25 ans, les hausses estimées de 2017 à 2021 sont plus fortes, chacune, chez les jeunes en emploi et chez les jeunes sans emploi ni formation que chez les étudiants (écarts non testés) : ce résultat n’appuie pas une explication exclusivement universitaire, sans exclure une contribution des conditions d’études
 une transformation documentée, dont la contribution au malaise n’est pas mesurée
 Réformes des études
 non examiné ici
@@ -148,7 +149,7 @@ dégradation visible au lycée, plus forte chez les filles
 dans une étude observationnelle anglaise, les établissements qui restreignent le téléphone n’ont pas un meilleur bien-être moyen (SMART Schools, 2025) : une politique évaluée, pas les usages
 un effet possible de certaines pratiques, non un facteur établi
 Covid et confinement
-accélération après 2020 ; risque plus élevé chez les étudiants en 2020-2021 (CONFINS, EPICOV)
+accélération après 2020 ; symptômes dépressifs plus fréquents chez les étudiants en 2020-2021, surtout pendant les confinements (CONFINS, EPICOV)
 la hausse commence au milieu des années 2010
 pas l’origine ; un rôle d’accélérateur plausible, non mesuré
 Inflation et logement
@@ -160,14 +161,14 @@ non examiné ici
 non examiné ici
 non mesuré par ces sources
 Malaise de génération (contre-récit)
-dégradation aussi chez les autres jeunes, lycéens compris ; hausse estimée plus faible chez les étudiants de 18 à 25 ans que chez les autres jeunes (2017-2021, écart non testé)
+dégradation aussi chez les autres jeunes, lycéens compris ; dans la comparaison publiée par situation d’activité, hausse estimée des étudiants de 18 à 25 ans inférieure à celles des jeunes en emploi et des jeunes sans emploi ni formation (2017-2021, écarts non testés)
 un écart propre aux étudiants à âge et sexe égaux
 plausible, non démontré ; une comparaison à âge et sexe égaux éclairerait le récit et le contre-récit, sans les départager à elle seule
 Juger les politiques sur leurs effets
 Une souffrance qui touche toute une génération n’interdit pas d’agir à l’université, où se trouvent une partie de ces jeunes et des services capables de les recevoir.
 Mais l’utilité d’une mesure ne se déduit pas de l’origine du trouble : repas à 1 €, aide psychologique, restrictions du téléphone se jugent sur leurs effets mesurés, question distincte de celle que traite cette page.
 Ce que ces données ne disent pas
-Nous n’avons trouvé aucune comparaison publiée de l’évolution à âge et sexe égaux, avec un test de l’écart entre étudiants et non-étudiants.
+Nous n’avons trouvé aucune comparaison nationale publiée de l’évolution qui ajuste à la fois l’âge et le sexe et teste l’écart entre étudiants et non-étudiants (recherche du 8 novembre 2026).
 Celle qui existe, par situation d’activité chez les 18-25 ans, est descriptive.
 Les séries de soins et d’hospitalisation ignorent le statut d’étudiant, et les suicides comptés à partir de 2018 ne se comparent pas à ceux d’avant : un nouveau certificat de décès a amélioré le recueil cette année-là.
 Le Baromètre santé de 2024 ne se compare pas à celui de 2021 (changement de méthode) : la série déclarative s’arrête en 2021.
@@ -182,7 +183,7 @@ Les étudiants vont-ils plus mal que les autres jeunes ?
 Cela dépend des jeunes auxquels on les compare, et de la question posée.
 De 2017 à 2021, la part des étudiants déclarant un épisode dépressif dans l’année est passée de 13,3 % à 20,3 %, la plus forte hausse parmi les situations professionnelles publiées par Santé publique France (+7,0 points), mais ces groupes n’ont ni le même âge ni la même composition par sexe.
 Chez les 18-25 ans, la hausse estimée est plus faible chez les étudiants (+8,2 points) que chez les jeunes en emploi (+10,4 points) et ceux sans emploi ni formation (+14,7 points), sans test de l’écart entre ces hausses (Husky et coauteurs, 2023).
-En niveau, après ajustement, les étudiants sont plus souvent déprimés que les jeunes en emploi, sur les Baromètres santé de 2005 à 2021 comme dans l’enquête EPICOV de 2020-2021.
+En niveau, après ajustement, les étudiants déclarent plus souvent un épisode dépressif que les jeunes en emploi sur les Baromètres santé de 2005 à 2021, et présentent plus souvent des symptômes dépressifs dans l’enquête EPICOV de 2020-2021.
 Nous n’avons trouvé aucune analyse nationale publiée qui compare l’évolution des étudiants et des autres jeunes à âge et sexe égaux.
 La santé mentale des jeunes s’est-elle vraiment dégradée, ou en parle-t-on davantage ?
 Elle s’est dégradée : des indicateurs qui enregistrent des actes, et non des réponses à un questionnaire, vont dans le même sens.
@@ -237,7 +238,7 @@ Husky, Léon, du Roscoät et Vasiliadis (Journal of Affective Disorders, 2023, t
 Melchior et coauteurs (Frontiers in Public Health, 2022) : cohorte EPICOV, échantillon national représentatif, 18-30 ans, 2020-2021 (questionnaire PHQ-9), modèles ajustés et pondérés, référence : jeunes en emploi, participants ayant un trouble psychique antérieur exclus.
 Kovess-Masfety et coauteurs (BMC Psychology, 2016) : enquête téléphonique de 2005 dans quatre régions, 18-24 ans, quatre groupes (étudiants du supérieur, élèves et apprentis, actifs, ni en emploi ni en formation), analyses par sexe.
 Études citées.
-CONFINS (BMJ Open, 2021), enquête en ligne pendant le premier confinement (questionnaire PHQ-9), sans représentativité nationale ; Lamer et coauteurs (BMC Medicine, 2024), délivrances de psychotropes en pharmacie de 2015 à 2022 par âge et par sexe ; Observatoire national du suicide, 6e rapport (février 2025) ; étude SMART Schools (2025), sur les politiques scolaires de restriction du téléphone.
+CONFINS (BMJ Open, 2021), enquête en ligne pendant le premier confinement (questionnaire PHQ-9), sans représentativité nationale, et Macalli et coauteurs (Scientific Reports, 2021), même enquête, trois vagues de mars 2020 à janvier 2021 ; Lamer et coauteurs (BMC Medicine, 2024), délivrances de psychotropes en pharmacie de 2015 à 2022 par âge et par sexe ; Observatoire national du suicide, 6e rapport (février 2025) ; étude SMART Schools (2025), sur les politiques scolaires de restriction du téléphone.
 Les chiffres de cette page sont de trois sortes.
 La plupart sont lus par un script dans les données publiées (DREES, Assurance maladie, Eurostat, Insee), dont les extractions sont archivées avec leurs empreintes ; les taux de la DREES sont recalculés par le script qui produit les données de la page.
 Ceux de Santé publique France sont transcrits des bulletins et vérifiés, lors de l’extraction, par la présence de leur phrase dans le document archivé, sauf le niveau des étudiants en 2017, lu sur une figure du bulletin et contrôlé, à l’arrondi près, par l’écart que le bulletin publie ; ceux de Husky et coauteurs le sont de même dans l’article archivé.
@@ -280,7 +281,7 @@ Copier la citation
 En trois phrases
 De 2017 à 2021, la hausse estimée de la dépression déclarée a été plus forte chez les étudiants que dans les autres situations professionnelles analysées par Santé publique France ; chez les 18-25 ans, la hausse estimée est toutefois plus faible chez eux que chez les jeunes en emploi ou sans emploi ni formation (écart non testé).
 Des indicateurs non déclaratifs confirment une dégradation chez les jeunes, qui touche d’abord les jeunes femmes, commence avant le covid et apparaît dès le lycée.
-Une dégradation observée chez les étudiants n’est donc pas une dégradation qui leur serait propre ; ce que les études ajoutent à son évolution ne se mesurera qu’à âge et sexe égaux, et nous n’avons trouvé aucune analyse nationale publiée qui le fasse.
+La dégradation observée chez les étudiants touche aussi d’autres jeunes ; l’existence et l’ampleur d’une dégradation propre aux études restent à établir, à âge et sexe égaux, et nous n’avons trouvé aucune analyse nationale publiée qui le fasse.
 Copier le résumé
 Les données
 Épisode dépressif déclaré par situation professionnelle, chez les 18-24 ans par sexe et chez les 18-25 ans par situation d’activité (Husky et al., 2023), patients hospitalisés pour geste auto-infligé par âge et par sexe depuis 2012, traitements antidépresseurs ou régulateurs de l’humeur des 20-24 ans, suicides des 20-24 ans, risque de dépression des lycéens, dépense par étudiant, composition par sexe des 18-24 ans ; le même contenu existe en CSV, au format long.

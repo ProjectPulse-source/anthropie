@@ -20,7 +20,7 @@ recherche). Rendez-vous de rattrapage : juin 2027 (série DREES 2026, cartograph
 — relancer les extractions puis outils/extrait.py, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : statistique et débat français, comme les pages voisines du bloc).
 
-Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond|soinsplat|vagues|classe|niveau|husky|melchior|compositionhk]
+Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond|soinsplat|vagues|classe|niveau|husky|melchior|compositionhk|macalli]
 Sorties : data/ et static/malaise_etudiant.json, static/malaise_etudiant.csv, data/figures_etudiants.json,
 static/img/etudiants-hospit.svg et -m.svg (version téléphone), avec leurs PNG
 """
@@ -55,7 +55,7 @@ LICENCE = ("CC BY 4.0 — calcul Stéphane Lalut ; sources Santé publique Franc
            "Eurostat (CépiDc-Inserm), Insee (compte de l'éducation, Depp)")
 MUTATIONS = ("etudiants", "calendrier", "suicides", "depense", "composition", "lyceens", "adolescentes", "arrondi", "niveau2012",
              "trajectoires", "covid", "traitements", "filles", "hommes2017", "plat", "formule", "filles1019", "premierehausse", "plafond", "soinsplat", "vagues", "classe", "niveau",
-             "husky", "melchior", "compositionhk")
+             "husky", "melchior", "compositionhk", "macalli")
 
 
 def log(msg: str) -> None:
@@ -227,6 +227,10 @@ def mutation(c: dict) -> str:
         c["mel"] = dict(c["mel"], ic95=[0.95, 1.60])
     elif m == "compositionhk":  # étudiants moins souvent des femmes que les jeunes en emploi : « la composition pousserait » faux
         c["hk_pf"] = dict(c["hk_pf"], etudiants=40.0)
+    elif m == "macalli":        # second confinement non significatif : « pendant les deux confinements » faux
+        X2 = dict(c["X"])
+        X2["macalli2021"] = dict(X2["macalli2021"], symptomes_depressifs_second_confinement=[1.80, 0.95, 3.12])
+        c["X"] = X2
     elif m == "lyceens":        # risque de 2024 sous 2022 : « continue de croître » faux
         c["enc"] = dict(c["enc"], risque_depression_lyceens=dict(c["enc"]["risque_depression_lyceens"], **{"2024": 15.0}))
     return m
@@ -356,6 +360,9 @@ def gardes(c: dict) -> int:
       "Melchior : etudiants plus souvent deprimes que les jeunes en emploi apres ajustement (intervalle au-dessus de 1)")
     g(mel["par_sexe"]["hommes"][1] > 1 and mel["par_sexe"]["femmes"][1] <= 1,
       "Melchior : association significative chez les hommes, pas chez les femmes")
+    mc = c["X"]["macalli2021"]
+    g(mc["symptomes_depressifs_premier_confinement"][1] > 1 and mc["symptomes_depressifs_second_confinement"][1] > 1,
+      "Macalli : etudiants plus souvent atteints de symptomes depressifs pendant les deux confinements (intervalles au-dessus de 1)")
     pa = cp["par_annee"]
     D = {a: pa[a]["ecart_pts"] / 100 * (c["f1824"][a] - c["h1824"][a]) for a in ("2017", "2021")}
     g(all(abs(D[a] - pa[a]["D_pts"]) < 0.01 for a in D) and abs(D["2021"] - D["2017"] - cp["simulation_pts"]) < 0.01,
@@ -427,6 +434,8 @@ def affichage(c: dict) -> dict:
         "hk_t_h": lg.points(c["hk_t"], signe_=True),
         "mel_or": n(c["mel"]["rapport_de_cotes_etudiants"], 2),
         "mel_ic_bas": n(c["mel"]["ic95"][0], 2), "mel_ic_haut": n(c["mel"]["ic95"][1], 2),
+        "mac_c1": n(c["X"]["macalli2021"]["symptomes_depressifs_premier_confinement"][0], 2),
+        "mac_c2": n(c["X"]["macalli2021"]["symptomes_depressifs_second_confinement"][0], 2),
         "mel_or_h": n(c["mel"]["par_sexe"]["hommes"][0], 2), "mel_or_f": n(c["mel"]["par_sexe"]["femmes"][0], 2),
         "hk_aor_etu": n(c["hk_aor"]["etudiants"][0]), "hk_aor_etu_bas": n(c["hk_aor"]["etudiants"][1]),
         "hk_aor_etu_haut": n(c["hk_aor"]["etudiants"][2]),
@@ -804,6 +813,10 @@ def csv_texte(c: dict) -> str:
     w.writerow(["depression_etudiants_vs_jeunes_en_emploi_18_30", "rapport_de_cotes_ajuste", "2020-2021",
                 mel["rapport_de_cotes_etudiants"], "rapport de cotes (IC 95 %% %s-%s)" % tuple(mel["ic95"]), mel["categorie"],
                 mel["source"]])
+    mc = X["macalli2021"]
+    for k in ("symptomes_depressifs_premier_confinement", "symptomes_depressifs_second_confinement"):
+        w.writerow(["symptomes_depressifs_etudiants_vs_non_etudiants_confins", k, "2020-2021", mc[k][0],
+                    "rapport de cotes (IC 95 %% %s-%s)" % tuple(mc[k][1:]), mc["categorie"], mc["source"]])
     h = X["drees_hospit"]
     for nom in ("f18_24", "h18_24", "f15_17", "t15_17", "f25_44", "f10_19", "f10_29"):
         for k, v in sorted(h[nom].items()):
