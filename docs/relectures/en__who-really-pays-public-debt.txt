@@ -1,9 +1,9 @@
-# relu le 2026-11-06 ; texte servi de /en/who-really-pays-public-debt/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-08 ; texte servi de /en/who-really-pays-public-debt/, build de 911b2e1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
-For the same simulated budgetary effort of €10 billion, in INSEE’s 2023 distributional accounts, how the burden is shared depends on the instrument chosen: an adjustment through education weighs proportionally more on low-income households, an adjustment through taxes on income and wealth more on well-off households.
+The same budgetary effort of €10 billion, allocated using INSEE’s 2023 distributional accounts (an accounting profile at constant structure, not a simulation of its effects), falls on different households depending on the instrument chosen: an adjustment through education weighs proportionally more on low-income households, an adjustment through taxes on income and wealth more on well-off households.
 Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it.
-Page updated 5 November 2026 · revisions
+Page updated 8 November 2026
 Public debt dossier
 Updated · 11/2026
 ↓ Charts, data and citations to reuseReuse this page
@@ -25,10 +25,10 @@ The tax considered is the distributional accounts’ category of “taxes on inc
 It is neither a forecast nor a measure under consideration: no behaviour and no feedback effect enter it.
 It is the current structure of these items, made comparable from one decision to another.
 INSEE, distributional national accounts, table CND.101 (standard-of-living twentiles, 2020-2023, base 2020); 2023 vintage.
-An accounting exposure profile, not a simulation.
+Accounting profile at constant structure, without modelling behavioural responses or feedback effects.
 DownloadCiteData
 The ranking reverses from one decision to another.
-In this simulation, a cut in education spending would represent 2.75% of the income of the poorest 10% and 0.21% of that of the richest; a rise in taxes on income and wealth would do the opposite, up to 1.14% for the top decile.
+In this accounting profile, a cut in education spending would represent 2.75% of the income of the poorest 10% and 0.21% of that of the richest; a rise in taxes on income and wealth would do the opposite, up to 1.14% for the top decile.
 The contrast does not come only from the lower deciles’ smaller incomes: in euros, the less well-off half would bear 57.8% of the cut in education spending, against 14.6% of the tax increase.
 A cut in pensions would stay within a narrow band, from 0.43 to 0.78%, sparing no group in particular.
 And “taxes” do not have a single profile: a rise in taxes on products, such as VAT, distributed in the same way, would also weigh more on the least well-off as a share of their income, 1.14% against 0.43% for the best-off.
@@ -406,9 +406,7 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (INSEE and Banque de France via Agence France Trésor), under their own terms.
-Revisions
-5 November 2026 — Update: debt by level of government now uses the accounts for end of June 2026 (INSEE, 29 September), and holdings of central-government securities Q2 2026 (Banque de France, via Agence France Trésor: 59.7% non-residents, against 57.5% in Q1).
-The page now follows the latest published data; the book keeps those for end of 2025.
+Values taken from Agence France Trésor (AFT), in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

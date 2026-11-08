@@ -2,7 +2,7 @@
 title: "Who really pays for public debt?"
 url: /en/who-really-pays-public-debt/
 description: "Who pays for public debt? Holding it is not paying for it: taxes, spending and inflation do not spread the adjustment across the same groups. Official French data."
-chapo: "The same budgetary effort of €{qp.exp_effort} billion, allocated using INSEE's {qp.cd_annee} distributional accounts (an accounting profile at constant structure, not a simulation of its effects), does not fall on the same households whatever the instrument chosen: an adjustment through education weighs proportionally more on low-income households, an adjustment through taxes on income and wealth more on well-off households. Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it."
+chapo: "The same budgetary effort of €{qp.exp_effort} billion, allocated using INSEE's {qp.cd_annee} distributional accounts (an accounting profile at constant structure, not a simulation of its effects), falls on different households depending on the instrument chosen: an adjustment through education weighs proportionally more on low-income households, an adjustment through taxes on income and wealth more on well-off households. Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it."
 date: 2026-09-30
 lastmod: 2026-11-08
 donnees: [dette_officielle, qui_paie_donnees]

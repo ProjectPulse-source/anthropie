@@ -1,7 +1,7 @@
 ---
 title: "Qui paie vraiment la dette publique ?"
 description: "Qui paie la dette publique ? Détenir n'est pas payer : impôts, dépenses et inflation ne répartissent pas l'effort entre les mêmes groupes. Données officielles."
-chapo: "Un même effort budgétaire de {qp.exp_effort} milliards d'euros, réparti selon les comptes distribués de l'Insee de {qp.cd_annee} (un profil comptable à structure constante, non une simulation de ses effets), ne pèse pas sur les mêmes ménages selon l'instrument choisi : un ajustement par l'enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l'impôt sur le revenu et le patrimoine davantage sur les ménages aisés. Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
+chapo: "Un même effort budgétaire de {qp.exp_effort} milliards d'euros, réparti selon les comptes distribués de l'Insee de {qp.cd_annee} (un profil comptable à structure constante, non une simulation de ses effets), n'atteint pas les mêmes ménages selon l'instrument choisi : un ajustement par l'enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l'impôt sur le revenu et le patrimoine davantage sur les ménages aisés. Qui paie la dette publique dépend de ce qu'elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir."
 date: 2026-07-04
 lastmod: 2026-11-08
 donnees: [dette_officielle, qui_paie_donnees]

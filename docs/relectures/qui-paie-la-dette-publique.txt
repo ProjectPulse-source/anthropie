@@ -1,9 +1,9 @@
-# relu le 2026-11-06 ; texte servi de /qui-paie-la-dette-publique/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-08 ; texte servi de /qui-paie-la-dette-publique/, build de 911b2e1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
-Pour un même effort budgétaire simulé de 10 milliards d’euros, sur les comptes distribués de l’Insee de 2023, la répartition de la charge dépend de l’instrument choisi : un ajustement par l’enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l’impôt sur le revenu et le patrimoine davantage sur les ménages aisés.
+Un même effort budgétaire de 10 milliards d’euros, réparti selon les comptes distribués de l’Insee de 2023 (un profil comptable à structure constante, non une simulation de ses effets), n’atteint pas les mêmes ménages selon l’instrument choisi : un ajustement par l’enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l’impôt sur le revenu et le patrimoine davantage sur les ménages aisés.
 Qui paie la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir.
-Page mise à jour le 5 novembre 2026 · révisions
+Page mise à jour le 8 novembre 2026
 Dossier dette publique
 Mise à jour · 11/2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -22,10 +22,10 @@ L’impôt retenu est la catégorie des comptes distribués « impôts sur les r
 Ce n’est ni une prévision ni une mesure envisagée : aucun comportement, aucun effet en retour n’y entre.
 C’est la structure actuelle des postes, rendue comparable d’une décision à l’autre.
 Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020) ; millésime 2023.
-Profil d’exposition comptable, non une simulation.
-Télécharger · Citer · Données
+Profil comptable à structure constante, sans modélisation des comportements ni des effets en retour.
+TéléchargerCiterDonnées
 Le classement s’inverse d’une décision à l’autre.
-Dans cette simulation, une réduction des dépenses d’enseignement représenterait 2,75 % du revenu des 10 % les plus modestes et 0,21 % de celui des plus aisés ; une hausse des impôts sur les revenus et le patrimoine ferait l’inverse, jusqu’à 1,14 % pour le dernier dixième.
+Dans ce profil comptable, une réduction des dépenses d’enseignement représenterait 2,75 % du revenu des 10 % les plus modestes et 0,21 % de celui des plus aisés ; une hausse des impôts sur les revenus et le patrimoine ferait l’inverse, jusqu’à 1,14 % pour le dernier dixième.
 Le contraste ne vient pas seulement de ce que les petits revenus sont plus petits : en euros, la moitié la moins aisée supporterait 57,8 % de la coupe d’enseignement contre 14,6 % de l’effort fiscal.
 Une baisse des pensions se tiendrait dans une bande étroite, de 0,43 à 0,78 %, sans épargner aucun groupe en particulier.
 Et « l’impôt » n’a pas un seul profil : une hausse des taxes sur les produits, comme la TVA, répartie de même, pèserait elle aussi davantage sur les plus modestes en part de leur revenu, 1,14 % contre 0,43 % pour les plus aisés.
@@ -68,7 +68,7 @@ Et « qui paie » se dit toujours par rapport à une autre décision : moins emp
 Deux champs distincts : A en valeur nominale (INSEE), B en valeur de marché (Banque de France, via l’Agence France Trésor).
 Les valeurs viennent du même registre que la figure de la p.
 101 du livre.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Qui emprunte, qui détient.
 L’État porte l’essentiel de la dette publique : 2 942 milliards d’euros sur 3 595,5, soit 82 %, fin juin 2026.
 Au 2e trimestre 2026, ses titres négociables sont détenus à 59,7 % par des non-résidents ; banques, assureurs et fonds résidents en portent ensemble 21,7 % ; les autres porteurs résidents, 18,7 %, comprennent la Banque de France, dont la source ne publie pas la part.
@@ -90,7 +90,7 @@ Qui contribue, qui reçoit aujourd’hui
 Les comptes nationaux distribués de l’Insee répartissent, pour 2023, prélèvements et transferts publics entre les dixièmes de niveau de vie — la population rangée du plus modeste au plus aisé, puis coupée en dix parts d’effectif égal.
 Les montants y sont exprimés par unité de consommation (UC), l’unité qui rend comparables des ménages de tailles différentes : une personne seule compte 1 UC, un couple avec deux enfants de moins de 14 ans, 2,1.
 Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16 avril 2026, figure 1c), en euros par unité de consommation.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Les valeurs en tableau (euros par unité de consommation, 2023)
 Dixième
 Prélèvements
@@ -154,7 +154,7 @@ Les figures de cette page présentent les transferts courants, avant ce retraite
 Le solde n’implique pas que les bénéficiaires de la redistribution aient « créé » cette dette, ni que leur position dise qui la remboursera.
 Insee, comptes nationaux distribués 2023 (figure 2a).
 Deux unités, deux panneaux : euros par unité de consommation, puis part de personnes.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Qui verse net, qui reçoit net.
 En moyenne par UC, les transferts reçus dépassent les prélèvements dans chacun des sept premiers dixièmes — de 20 800 € par UC dans le premier —, et le solde bascule au 8e dixième : dans les trois derniers, c’est l’inverse, et le dernier dixième verse en moyenne 58 400 € par UC de plus qu’il ne reçoit.
 Une moyenne de groupe ne décrit pas ses membres.
@@ -172,7 +172,7 @@ Et ce solde décrit la redistribution dans son ensemble, pas l’effet propre de
 Par âge du ménage : une photographie de l’année, non un bilan de vie
 Insee, comptes nationaux distribués 2023 (figure 1e).
 Groupes d’âge moyen des adultes du ménage.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 En 2023, selon ces conventions, les ménages dont l’âge moyen des adultes atteint 65 ans ou plus reçoivent 47 800 € de transferts par unité de consommation — dont 28 700 € de prestations en espèces, pensions comprises — et versent 14 600 € de prélèvements, contre 33 800 € pour les ménages de 50 à 64 ans.
 Les pensions correspondent pour une part à des droits acquis au cours de la carrière, ici comptés comme prestations courantes ; l’âge du ménage n’est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés.
 Cette photographie ne désigne aucun payeur de demain.
@@ -182,7 +182,7 @@ Les deux premiers relèvent de l’ajustement budgétaire ordinaire, décidé ch
 Le troisième ne se décide pas seul : l’inflation non anticipée réduit la valeur réelle des créances déjà émises et reporte une partie de la charge sur leurs détenteurs et sur les revenus mal indexés.
 Le quatrième est un cas extrême : la restructuration impose une perte de premier rang aux porteurs des titres, qui peuvent la répercuter sur leurs actionnaires, assurés ou épargnants.
 Schéma de mécanismes possibles : aucun poids relatif ni effet causal n’y est mesuré.
-Télécharger · Citer · Données
+TéléchargerCiterDonnées
 Le refinancement, lui, renouvelle une échéance aux conditions du moment : il peut alléger ou alourdir la charge, sans désigner qui la supportera.
 Et en face de ces coûts se trouve ce que la dette a financé : services, prestations et investissements profitent à des ménages aujourd’hui et demain, et une analyse qui ne compterait que les coûts ne décrirait que la moitié du bilan.
 Pourquoi seule l’inflation non anticipée transfère la charge, et ce qui joue en sens inverse
@@ -392,11 +392,9 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Insee et Banque de France via l’AFT), sous leurs propres conditions.
+Les valeurs reprises de l’AFT, dans les fichiers comme dans les graphiques, ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
-Révisions
-5 novembre 2026 — Mise à jour : la dette par administration passe aux comptes de fin juin 2026 (INSEE, 29 septembre) et la détention des titres de l’État au 2e trimestre 2026 (Banque de France, via l’AFT : 59,7 % de non-résidents, contre 57,5 % au 1er trimestre).
-La page suit désormais les dernières données publiées ; le livre garde celles de fin 2025.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp
