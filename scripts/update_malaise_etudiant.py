@@ -20,7 +20,7 @@ recherche). Rendez-vous de rattrapage : juin 2027 (série DREES 2026, cartograph
 — relancer les extractions puis outils/extrait.py, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : statistique et débat français, comme les pages voisines du bloc).
 
-Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond|soinsplat|vagues|classe|niveau]
+Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond|soinsplat|vagues|classe|niveau|husky|melchior|compositionhk]
 Sorties : data/ et static/malaise_etudiant.json, static/malaise_etudiant.csv, data/figures_etudiants.json,
 static/img/etudiants-hospit.svg et -m.svg (version téléphone), avec leurs PNG
 """
@@ -54,7 +54,8 @@ PAGE_URL = "stephane-lalut.com/les-etudiants-vont-ils-plus-mal/"
 LICENCE = ("CC BY 4.0 — calcul Stéphane Lalut ; sources Santé publique France (BEH, EnCLASS), DREES, Assurance maladie, "
            "Eurostat (CépiDc-Inserm), Insee (compte de l'éducation, Depp)")
 MUTATIONS = ("etudiants", "calendrier", "suicides", "depense", "composition", "lyceens", "adolescentes", "arrondi", "niveau2012",
-             "trajectoires", "covid", "traitements", "filles", "hommes2017", "plat", "formule", "filles1019", "premierehausse", "plafond", "soinsplat", "vagues", "classe", "niveau")
+             "trajectoires", "covid", "traitements", "filles", "hommes2017", "plat", "formule", "filles1019", "premierehausse", "plafond", "soinsplat", "vagues", "classe", "niveau",
+             "husky", "melchior", "compositionhk")
 
 
 def log(msg: str) -> None:
@@ -132,6 +133,17 @@ def calcul(X: dict) -> dict:
     n = s["deces_f20_24_survenus_en_france"]
     c["n23"], c["n24"] = n["2023"], n["2024"]
     c["n_sd"] = math.sqrt(c["n23"] + c["n24"])  # écart type d'une différence de deux comptages de Poisson
+    # 08/11/2026 (arbitrages PAGE_03 et PAGE_04) : la comparaison publiée de l'évolution par situation d'activité
+    # (Husky et al. 2023, 18-25 ans) et la comparaison de niveau ajustée (Melchior et al. 2022, EPICOV).
+    hk = X["husky2023"]
+    c["hk"] = {g_: hk[k] for g_, k in (("etu", "etudiants_18_25"), ("emp", "en_emploi_18_25"),
+                                         ("neet", "ni_emploi_ni_etudes_ni_formation_18_25"))}
+    c["hk_h"] = {g_: s_["2021"] - s_["2017"] for g_, s_ in c["hk"].items()}
+    c["hk_t"] = hk["ensemble_18_25_hausse_2017_2021"]
+    c["hk_test"] = hk["test_ecart_entre_hausses"]
+    c["hk_aor"], c["hk_pf"] = hk["rapport_cotes_ajuste"], hk["part_femmes_pct"]
+    c["hk_eleves"] = hk["etudiants_comprennent_eleves_du_secondaire"]
+    c["mel"] = X["melchior2022"]
     c["enc"] = X["enclass2024"]
     c["dep"] = X["depense"]
     c["comp"] = X["composition"]
@@ -208,6 +220,13 @@ def mutation(c: dict) -> str:
     elif m == "premierehausse": # lycéens : quatre points de 2018 à 2022, « environ deux points » faux
         r = c["enc"]["risque_depression_lyceens"]
         c["enc"] = dict(c["enc"], risque_depression_lyceens=dict(r, **{"2018": r["2022"] - 4.0}))
+    elif m == "husky":          # étudiants de 18-25 ans à +11 points : « la hausse la plus faible des trois groupes » faux
+        hk = dict(c["hk"], etu=dict(c["hk"]["etu"], **{"2021": c["hk"]["etu"]["2017"] + 11.0}))
+        c["hk"], c["hk_h"] = hk, {g_: s_["2021"] - s_["2017"] for g_, s_ in hk.items()}
+    elif m == "melchior":       # intervalle qui contient 1 : « plus souvent déprimés, après ajustement » faux
+        c["mel"] = dict(c["mel"], ic95=[0.95, 1.60])
+    elif m == "compositionhk":  # étudiants moins souvent des femmes que les jeunes en emploi : « la composition pousserait » faux
+        c["hk_pf"] = dict(c["hk_pf"], etudiants=40.0)
     elif m == "lyceens":        # risque de 2024 sous 2022 : « continue de croître » faux
         c["enc"] = dict(c["enc"], risque_depression_lyceens=dict(c["enc"]["risque_depression_lyceens"], **{"2024": 15.0}))
     return m
@@ -317,6 +336,26 @@ def gardes(c: dict) -> int:
       "part des femmes plus elevee chez les etudiants, ecart qui s'elargit")
     g(0.5 <= cp["simulation_pts"] < 0.75, "environ 0,6 point")
     g(cp["sensibilite_pts"]["min"] <= cp["simulation_pts"] <= cp["sensibilite_pts"]["max"], "simulation dans sa plage de sensibilite")
+    # Section 5 -- comparaisons publiées (08/11/2026, Husky et al. 2023 ; Melchior et al. 2022)
+    hk, hh = c["hk"], c["hk_h"]
+    g(hh["etu"] < hh["emp"] < hh["neet"],
+      "Husky 2017-2021 : hausse des etudiants la plus faible des trois groupes, puis en emploi, puis sans emploi ni formation")
+    g(c["hk_test"] is False, "hausses comparees descriptivement : l'article ne teste pas l'ecart entre elles")
+    g(abs(c["hk_t"] - (t18["2021"] - t18["2017"])) < 1.0,
+      "hausse des 18-25 ans (Husky) du meme ordre que celle des 18-24 ans (BEH)")
+    aor = c["hk_aor"]
+    g(1 < aor["etudiants"][1] and aor["etudiants"][0] < aor["ni_emploi_ni_etudes_ni_formation"][0],
+      "Husky, niveau ajuste : etudiants au-dessus des jeunes en emploi (intervalle au-dessus de 1), sous les jeunes sans emploi ni formation")
+    pf = c["hk_pf"]
+    g(pf["en_emploi"] < pf["etudiants"] < pf["ni_emploi_ni_etudes_ni_formation"] and hh["etu"] < hh["emp"],
+      "composition : etudiants plus souvent des femmes que les jeunes en emploi (elle pousserait leur hausse au-dessus) "
+      "et moins que les jeunes sans emploi ni formation ; estimation publiee des etudiants sous celle des jeunes en emploi")
+    g(c["hk_eleves"] is True, "les etudiants de l'article comprennent les eleves du secondaire")
+    mel = c["mel"]
+    g(mel["rapport_de_cotes_etudiants"] > 1 and mel["ic95"][0] > 1,
+      "Melchior : etudiants plus souvent deprimes que les jeunes en emploi apres ajustement (intervalle au-dessus de 1)")
+    g(mel["par_sexe"]["hommes"][1] > 1 and mel["par_sexe"]["femmes"][1] <= 1,
+      "Melchior : association significative chez les hommes, pas chez les femmes")
     pa = cp["par_annee"]
     D = {a: pa[a]["ecart_pts"] / 100 * (c["f1824"][a] - c["h1824"][a]) for a in ("2017", "2021")}
     g(all(abs(D[a] - pa[a]["D_pts"]) < 0.01 for a in D) and abs(D["2021"] - D["2017"] - cp["simulation_pts"]) < 0.01,
@@ -379,6 +418,21 @@ def affichage(c: dict) -> dict:
         "comp_sim": lg.points(cp["simulation_pts"]),
         "comp_min": n(cp["sensibilite_pts"]["min"], 2), "comp_max": n(cp["sensibilite_pts"]["max"], 2),
         "confins_or": n(c["X"]["confins"]["rapport_de_cotes_etudiants"], 2),
+        "hk_etu_2017": n(c["hk"]["etu"]["2017"]), "hk_etu_2021": n(c["hk"]["etu"]["2021"]),
+        "hk_emp_2017": n(c["hk"]["emp"]["2017"]), "hk_emp_2021": n(c["hk"]["emp"]["2021"]),
+        "hk_neet_2017": n(c["hk"]["neet"]["2017"]), "hk_neet_2021": n(c["hk"]["neet"]["2021"]),
+        "hk_etu_h": lg.points(arrondi(c["hk_h"]["etu"], 1), signe_=True),
+        "hk_emp_h": lg.points(arrondi(c["hk_h"]["emp"], 1), signe_=True),
+        "hk_neet_h": lg.points(arrondi(c["hk_h"]["neet"], 1), signe_=True),
+        "hk_t_h": lg.points(c["hk_t"], signe_=True),
+        "mel_or": n(c["mel"]["rapport_de_cotes_etudiants"], 2),
+        "mel_ic_bas": n(c["mel"]["ic95"][0], 2), "mel_ic_haut": n(c["mel"]["ic95"][1], 2),
+        "mel_or_h": n(c["mel"]["par_sexe"]["hommes"][0], 2), "mel_or_f": n(c["mel"]["par_sexe"]["femmes"][0], 2),
+        "hk_aor_etu": n(c["hk_aor"]["etudiants"][0]), "hk_aor_etu_bas": n(c["hk_aor"]["etudiants"][1]),
+        "hk_aor_etu_haut": n(c["hk_aor"]["etudiants"][2]),
+        "hk_aor_neet": n(c["hk_aor"]["ni_emploi_ni_etudes_ni_formation"][0]), "hk_aor_f": n(c["hk_aor"]["femmes"][0]),
+        "hk_pf_emp": n(c["hk_pf"]["en_emploi"]), "hk_pf_etu": n(c["hk_pf"]["etudiants"]),
+        "hk_pf_neet": n(c["hk_pf"]["ni_emploi_ni_etudes_ni_formation"]),
     }
     # Le lecteur refait la variation à partir des deux taux affichés : il doit retrouver celle qui est imprimée.
     for s_, cle in (("f18_24", "hosp_f"), ("h18_24", "hosp_h")):
@@ -742,6 +796,14 @@ def csv_texte(c: dict) -> str:
             w.writerow(["episode_depressif_declare", nom, k, v, "%", b["categorie"], b["source"]])
     for k, v in b["hausse_2017_2021"].items():
         w.writerow(["episode_depressif_hausse_2017_2021", k, "2017-2021", v, "points", b["categorie"], b["source"]])
+    hk = X["husky2023"]
+    for nom in ("etudiants_18_25", "en_emploi_18_25", "ni_emploi_ni_etudes_ni_formation_18_25"):
+        for k, v in sorted(hk[nom].items()):
+            w.writerow(["episode_depressif_declare_18_25_husky2023", nom, k, v, "%", hk["categorie"], hk["source"]])
+    mel = X["melchior2022"]
+    w.writerow(["depression_etudiants_vs_jeunes_en_emploi_18_30", "rapport_de_cotes_ajuste", "2020-2021",
+                mel["rapport_de_cotes_etudiants"], "rapport de cotes (IC 95 %% %s-%s)" % tuple(mel["ic95"]), mel["categorie"],
+                mel["source"]])
     h = X["drees_hospit"]
     for nom in ("f18_24", "h18_24", "f15_17", "t15_17", "f25_44", "f10_19", "f10_29"):
         for k, v in sorted(h[nom].items()):

@@ -72,8 +72,14 @@ Ni l'un ni l'autre ne tient tel quel. Trois niveaux d'énoncé gouvernent la ré
   étudiants, il passe de 10,1 % (2010) à 13,3 % (2017) puis 20,3 % (2021) : la hausse précède le covid, qui l'accélère ;
 - **descriptivement établi** : la hausse ponctuelle est la plus forte chez les étudiants (+7 points, contre +5,3 chez
   les chômeurs et +4,4 chez les actifs occupés ; BEH 2023 n° 2, 18-75 ans, groupes de structures d'âge différentes) ;
-- **non établi** : que cette progression excède celle de jeunes non étudiants comparables, et que l'excédent tienne aux
-  conditions d'études. Les auteurs du BEH le disent eux-mêmes ; l'étude CONFINS (*BMJ Open*, 2021 ; en ligne, premier
+- **descriptivement établi, ajouté le 08/11/2026** (arbitrages PAGE_03 et PAGE_04) : chez les 18-25 ans du Baromètre
+  santé, de 2017 à 2021, la hausse est la plus faible chez les étudiants (12,8 → 21,0 %), devant les jeunes en emploi
+  (7,3 → 17,7 %) et ceux sans emploi ni formation (14,1 → 28,8 %) — Husky et al. 2023, écart non testé ; en niveau, les
+  étudiants sont plus souvent déprimés que les jeunes en emploi après ajustement (EPICOV, 18-30 ans, 2020-2021, Melchior
+  et al. 2022, rapport de cotes 1,29). La version publiée le 08/11 au matin omettait ces deux études : elle déclarait
+  absente une comparaison nationale qui existait ;
+- **non établi** : que cette progression diffère de celle de jeunes non étudiants à âge et sexe égaux (aucune analyse
+  nationale publiée trouvée, recherche du 08/11/2026), et qu'un écart tienne aux conditions d'études. Les auteurs du BEH le disent eux-mêmes ; l'étude CONFINS (*BMJ Open*, 2021 ; en ligne, premier
   confinement, PHQ-9) trouve un risque plus élevé chez les étudiants après ajustement (rapport de cotes 1,58), sans
   représentativité nationale.
 Deux témoins déplacent la question : les enquêtes ne détectent pas d'augmentation significative des états anxieux sur
@@ -356,3 +362,29 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   page : après l'arbitrage de la contre-expertise (paquet
   `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\PAQUET_CONTRE_EXPERTISE_PAGE_2026-11-08.md`, navette
   à lancer par l'auteur : lancement refusé à la session par le classifieur du mode auto).
+- **Correction du 08/11/2026 après publication** (alerte du radar de diffusion ETUDIANTS-2026-11 ; pièces `Etudiant-02`,
+  SHA-256 `eb53aae4…`, et `Etudiant-03`, `0eb37119…`, archivées avant lecture ; arbitrages
+  `ARBITRAGE_PAGE_03_2026-11-08.md` et `ARBITRAGE_PAGE_04_2026-11-08.md` du dossier de recherche) : la page déclarait
+  qu'aucune comparaison nationale publiée ne répondait à la question du titre ; Husky et al. 2023 (texte intégral HAL,
+  archivé) publie l'évolution 2017-2021 des 18-25 ans par situation d'activité, Melchior et al. 2022 une comparaison de
+  niveau ajustée. Recherche bibliographique consignée (Europe PMC, HAL ; dossier de recherche,
+  `RECHERCHE_BIBLIO_2026-11-08.md`), Kovess-Masfety et al. 2016 lu chez l'éditeur, Lamer et al. 2024 lu en texte
+  intégral (discussion). Fait : extrait (bloc `husky2023`, phrases exigées dans l'article archivé, témoin vu mordre ;
+  `melchior2022` cité), six gardes et deux mutations (`husky`, `melchior`) vues mordre, 51 gardes ; section
+  `#specifiquement-etudiant` réécrite (niveau / évolution / ce qui reste à établir) ; chapô, description (notice de
+  « Ressources »), résultat en une phrase, FAQ, tableau des six causes, limites, sources, « En trois phrases »,
+  `static/llms.txt` ; journal interne. Ancres inchangées.
+  Contrôle indépendant en deux passages : au premier, 3 bloquants (« ne se limite pas aux étudiants » appuyé sur une
+  série qui ne connaît pas le statut ; « n'est pas la plus forte » tiré d'un écart non testé ; « aucune série ne mesure »
+  l'écart de niveau, alors que le tableau 3 de Husky donne un rapport de cotes ajusté de 1,4) et 6 à corriger (dont les
+  élèves du secondaire comptés parmi les « étudiants » de Husky, la composition par sexe qui joue en sens opposé face aux
+  jeunes en emploi et face aux NEET, Melchior non significatif chez les femmes) — tous appliqués, extrait complété
+  (rapports de cotes ajustés, parts de femmes, définition), trois gardes et une mutation (`compositionhk`) ajoutées,
+  53 gardes ; au second, 0 bloquant, 8 à corriger (dont classement du bulletin traité comme celui de Husky, « écarts
+  non testés » ; covariables du modèle ; incertitude des hausses ; méthode : seul le niveau 2017 est lu sur la figure)
+  appliqués ; écartés avec motif : artefacts d'extraction du texte (n° 20, rendu vérifié par la recette), « milieu des
+  années 2010 » hors de « En trois phrases » (texte antérieur arbitré, il vise les adolescentes). Relecture phrase à
+  phrase du texte servi, puis des phrases changées après chaque passe ; instantané refait (297 phrases).
+  `check-all --ci` 0 ; build, `typo_build`, liens, rendu, dates : 0 ; recette 320-1 600 px ok, « Ressources » comprise.
+  **Non fait** : panel « après » et nouvelle contre-expertise externe de la version corrigée (correction ciblée, deux
+  contrôleurs indépendants à la place) ; push (ordre de l'auteur).

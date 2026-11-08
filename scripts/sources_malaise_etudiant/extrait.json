@@ -1,5 +1,5 @@
 {
- "version": "2026-11-06",
+ "version": "2026-11-08",
  "beh2023": {
   "source": "BEH 2023 n° 2 (Léon, du Roscoät, Beck, 14/02/2023), texte et figure 3, 18-75 ans, France métropolitaine",
   "fichier": "beh_2023_2_1.pdf",
@@ -27,6 +27,49 @@
   "t18_24": {
    "2017": 11.7,
    "2021": 20.8
+  }
+ },
+ "husky2023": {
+  "source": "Husky, Léon, du Roscoät, Vasiliadis, Journal of Affective Disorders 342 (2023) 192-200, DOI 10.1016/j.jad.2023.09.019 ; Baromètre santé 2005, 2010, 2017, 2021, 18-25 ans, France métropolitaine, épisode dépressif caractérisé (CIDI-SF) ; texte intégral HAL hal-04583212, § 3.3",
+  "fichier": "husky_2023_jad_hal-04583212.pdf",
+  "sha256": "12f474971fa892be5f958bbf6d936e3b8d5c4b2bdcf1c2cc86cf2f20c1db026b",
+  "categorie": "transcrite_verifiee",
+  "etudiants_18_25": {
+   "2017": 12.8,
+   "2021": 21.0
+  },
+  "en_emploi_18_25": {
+   "2017": 7.3,
+   "2021": 17.7
+  },
+  "ni_emploi_ni_etudes_ni_formation_18_25": {
+   "2017": 14.1,
+   "2021": 28.8
+  },
+  "ensemble_18_25_hausse_2017_2021": 9.6,
+  "test_ecart_entre_hausses": false,
+  "etudiants_comprennent_eleves_du_secondaire": true,
+  "part_femmes_pct": {
+   "en_emploi": 44.0,
+   "etudiants": 50.7,
+   "ni_emploi_ni_etudes_ni_formation": 55.0
+  },
+  "rapport_cotes_ajuste": {
+   "etudiants": [
+    1.4,
+    1.1,
+    1.7
+   ],
+   "ni_emploi_ni_etudes_ni_formation": [
+    1.9,
+    1.5,
+    2.5
+   ],
+   "femmes": [
+    1.9,
+    1.6,
+    2.3
+   ]
   }
  },
  "beh2025": {
@@ -337,5 +380,26 @@
   "source": "Wathelet et al., BMJ Open 2021 (CONFINS), premier confinement, en ligne, PHQ-9",
   "categorie": "citee",
   "rapport_de_cotes_etudiants": 1.58
+ },
+ "melchior2022": {
+  "source": "Melchior et al., Frontiers in Public Health 2022, DOI 10.3389/fpubh.2022.904665 ; cohorte EPICOV, échantillon national représentatif, 18-30 ans, 2020-2021, PHQ-9, modèles ajustés et pondérés ; référence : jeunes en emploi",
+  "categorie": "citee",
+  "rapport_de_cotes_etudiants": 1.29,
+  "ic95": [
+   1.05,
+   1.6
+  ],
+  "par_sexe": {
+   "hommes": [
+    1.33,
+    1.01,
+    1.76
+   ],
+   "femmes": [
+    1.19,
+    0.85,
+    1.67
+   ]
+  }
  }
 }

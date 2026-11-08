@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-08 (journée) — Page étudiants corrigée : deux études omises intégrées (Husky 2023, Melchior 2022)
+
+- Alerte du radar de diffusion ETUDIANTS-2026-11 : la page déclarait qu'aucune comparaison nationale publiée ne
+  répondait à sa question ; Husky et al. 2023 (Baromètres 2005-2021, 18-25 ans, par situation d'activité ; texte
+  intégral HAL, archivé dans `scripts/sources_malaise_etudiant/`) et Melchior et al. 2022 (EPICOV, niveau ajusté)
+  existaient. Pièces `Etudiant-02` et `Etudiant-03` arbitrées (dossier de recherche, `ARBITRAGE_PAGE_03/04`).
+- Extrait : bloc `husky2023` (valeurs, rapports de cotes ajustés, part des femmes, définition des étudiants ; phrases
+  exigées dans l'article archivé, témoin vu mordre), `melchior2022` cité. Générateur : 53 gardes, mutations `husky`,
+  `melchior`, `compositionhk` vues mordre. Section `#specifiquement-etudiant` réécrite (niveau / évolution / ce qui
+  reste à établir), chapô, description (notice de « Ressources »), résultat en une phrase, FAQ, six causes, limites,
+  sources, « En trois phrases », `static/llms.txt`. Ancres inchangées.
+- Deux contrôleurs indépendants : 3 bloquants au premier (dont « écart non testé » présenté comme moindre hausse,
+  et l'absence de mesure ajustée du niveau, contredite par le tableau 3 de Husky), 0 bloquant au second ; leurs points
+  « à corriger » appliqués. `check-all --ci` 0, build et contrôles du build 0, recette 320-1 600 px ok, instantané de
+  relecture refait (297 phrases). **Non poussé** : attend l'ordre de l'auteur.
+
 ### 2026-11-08 (matin) — Aucun texte servi sous 12 px : variables et tailles en dur portées à 12 px
 
 - **Inventaire mesuré** (185 pages construites, CSS chargée, 1 280 et 390 px) : 1 233 textes visibles sous 12 px au
