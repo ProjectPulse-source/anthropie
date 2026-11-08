@@ -2,10 +2,8 @@
 title: "Les étudiants vont-ils plus mal que les autres jeunes ?"
 description: "Dépression déclarée, traitements, patients hospitalisés, suicides : ce que les séries officielles disent de la santé mentale des étudiants et des autres jeunes. De 2019 à {etu.hosp_der}, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de {etu.hosp_f_var} %, celui des jeunes hommes de {etu.hosp_h_var} % ; chez les étudiants, l'épisode dépressif déclaré est passé de {etu.etu_2017} % à {etu.etu_2021} % de 2017 à 2021. Aucune statistique nationale publiée ne compare encore l'évolution des étudiants à celle des autres jeunes du même âge et du même sexe. Données Santé publique France, DREES, Assurance maladie, Eurostat, Insee, recalculées."
 chapo: "La dépression déclarée a fortement augmenté chez les étudiants de 2017 à 2021, et les traitements comme le taux de jeunes hospitalisés pour un geste auto-infligé confirment une dégradation réelle dans cette classe d'âge. Mais cette dégradation touche d'abord les jeunes femmes, commence avant l'université et avant le covid, et aucune statistique nationale publiée ne compare encore l'évolution des étudiants à celle des autres jeunes du même âge et du même sexe."
-date: 2026-11-06
-lastmod: 2026-11-06
-# Brouillon jusqu'à la relecture phrase à phrase du texte servi (ressource.refonte posée alors) ; build local : --buildDrafts.
-draft: true
+date: 2026-11-08
+lastmod: 2026-11-08
 og_title: "Les étudiants vont-ils plus mal que les autres jeunes ? Dépression, soins, hôpital — S. Lalut"
 og_image: "images/og-etudiants-mal.jpg"
 og_image_alt: "Carte de partage : « Les étudiants vont-ils plus mal que les autres jeunes ? » — deux courbes depuis 2012 : le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé, en baisse jusqu'en 2014, à peu près plat jusqu'en 2017, puis en forte hausse, et celui des jeunes hommes, qui remonte après 2017, plus modérément."
@@ -52,6 +50,7 @@ faq:
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["explicatif-causal", "quantitatif"]  # protocoles de la page (CLAUDE.md du site, « Production des ressources »)
   conception: "docs/conception/les-etudiants-vont-ils-plus-mal.md"  # fiche de conception (regle 12)
+  refonte: "2026-11-08"  # page de données nouvelle : née refondue (relecture phrase à phrase et contre-expertise du 08/11)
   bloc: "ecole"
   livres: ["la-societe-du-premier-coup"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 30

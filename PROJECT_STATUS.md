@@ -66,7 +66,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
   (`b862cad`), recette 320-1 600 ok, panel « après » (cinq lecteurs, 14/15 en compréhension, trois corrections dont
   l'objection du lecteur hostile sur le calendrier des moyens, `84d3154`), gate éditorial sans P0, 41 gardes et 20
   mutations. Décisions de l'auteur : publier sans attendre Santé publique France (relance vers le 27/11) ; découverte
-  acceptée. Reste : contre-expertise de la page (paquet prêt, navette à lancer par l'auteur), puis publication.
+  acceptée. Contre-expertise reçue et arbitrée (multi-angles, 15 points sur 18 retenus ; deux bloquants nés des corrections, trouvés par un relecteur indépendant et corrigés) ; **page publiée le 08/11** (draft retiré, refonte et instantané de relecture, ligne dans llms.txt).
 
 ### 2026-11-07 (après-midi) — Promesse en cinq ans : postes d'internat de 2023-2024 en témoin de série longue (Audit-19, point 5d)
 

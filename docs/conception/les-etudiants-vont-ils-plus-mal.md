@@ -337,8 +337,9 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   « environ 0,6 point » (valeur centrale 0,63, plage donnée en méthode), temps « étaient… sont » (dernière année au
   présent), point final de la ligne de source de la figure (convention du pied commun). Deux affirmations nouvelles
   gardées et vues mordre (voir « Gardes vues mordre »).
-- Instantané de relecture : non fait — à prendre au moment où `ressource.refonte` est posé et `draft` retiré, c'est-à-dire
-  à la publication (retirer `draft` plus tôt exposerait la page au premier push, d'où qu'il vienne).
+- Instantané de relecture : fait le 08/11/2026 à la publication — `draft` retiré, `ressource.refonte: "2026-11-08"`,
+  `docs/relectures/les-etudiants-vont-ils-plus-mal.txt` (246 phrases, build `--minify` + `typo_build`). Contrôles du
+  workflow sur ce build : tous à 0 ; recette de la version finale ok de 320 à 1 600 px ; ligne ajoutée à `static/llms.txt`.
 - Contre-expertise de la page : faite et arbitrée le 08/11/2026 — pièce `Etudiants_Page-01` (SHA-256 `fa39ff3e…`, archivée
   avant lecture), verdict « publiable après corrections » ; arbitrage multi-angles
   `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\ARBITRAGE_PAGE_01_2026-11-08.md` : 18 points, 15 retenus
