@@ -836,6 +836,53 @@ def carte_niveau() -> None:
           [(C2, "France, 2015-2025 : −%s points en maths" % A["math_v15"]), ((170, 166, 160), "Médiane des pays de l'OCDE : −%s" % A["math_med"])])
 
 
+def figure_etudiants_mini(d: ImageDraw.ImageDraw, f: dict, h: dict) -> None:
+    """Ressource « Les étudiants vont-ils plus mal que les autres jeunes ? » (06/11/2026) : la figure signature réduite —
+    patients hospitalisés pour geste auto-infligé, 18-24 ans, femmes (orange) et hommes (bleu), depuis 2012."""
+    x0, x1, top, bas, vmax = 660, 1126, 110, 400, 400.0
+    ans = sorted(int(a) for a in f)
+
+    def X(a):
+        return x0 + (x1 - x0) * (a - ans[0]) / (ans[-1] - ans[0])
+
+    def Y(v):
+        return bas - (bas - top) * v / vmax
+
+    for g in range(0, 401, 100):
+        d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=2 if g == 0 else 1)
+    for serie, col in ((h, C1), (f, C2)):
+        d.line([(X(a), Y(serie[str(a)])) for a in ans], fill=col, width=5, joint="curve")
+        cx, cy = X(ans[-1]), Y(serie[str(ans[-1])])
+        d.ellipse([cx - 8, cy - 8, cx + 8, cy + 8], fill=col)
+    fa = font("inter", 18, 500)
+    d.text((x0, bas + 14), str(ans[0]), font=fa, fill=URL_GREY)
+    d.text((x1 - 44, bas + 14), str(ans[-1]), font=fa, fill=URL_GREY)
+    d.text((x0, bas + 40), "Hospitalisés pour un geste auto-infligé, 18-24 ans,", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "pour 100 000 habitants du même sexe", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_etudiants() -> None:
+    """Ressource « Les étudiants vont-ils plus mal que les autres jeunes ? » (06/11/2026). Chiffres lus dans le jeu publié ;
+    le contraste annoncé (hausse des jeunes femmes plus forte que celle des jeunes hommes) est contrôlé ici. Français seulement."""
+    p = ROOT / "data" / "malaise_etudiant.json"
+    if not p.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_malaise_etudiant.py d'abord" % p)
+    j = json.loads(p.read_text(encoding="utf-8"))
+    A, H = j["affichage"], j["extrait"]["drees_hospit"]
+    f, h = H["f18_24"], H["h18_24"]
+    der = A["hosp_der"]
+    if not (f[der] / f["2019"] - 1 > 2 * max(h[der] / h["2019"] - 1, 0.001)):   # même seuil que la garde du générateur
+        fail("carte étudiants : le contraste annoncé n'est plus vrai dans les données")
+    carte("og-etudiants-mal.jpg",
+          ["Les étudiants vont-ils", "plus mal que les autres ?"],
+          "Taux de jeunes femmes hospitalisées pour un geste auto-infligé : +%s %% depuis 2019." % A["hosp_f_var"],
+          "DREES · calcul de l'auteur · CC BY 4.0",
+          "stephane-lalut.com/les-etudiants-vont-ils-plus-mal/",
+          lambda d: figure_etudiants_mini(d, f, h),
+          [(C2, "Femmes de 18-24 ans : %s en 2019, %s en %s" % (A["hosp_f_2019"], A["hosp_f_der"], der)),
+           (C1, "Hommes de 18-24 ans : %s en 2019, %s en %s" % (A["hosp_h_2019"], A["hosp_h_der"], der))])
+
+
 def figure_langue_mini(d: ImageDraw.ImageDraw, A: dict, X: dict) -> None:
     """Ressource « Les élèves maîtrisent-ils moins bien la langue française ? » (09/10/2026) : même dictée de CM2, erreurs
     lexicales (bleu) et autres erreurs (orange), 1987-2021."""
@@ -893,6 +940,9 @@ def main() -> int:
     if "--niveau" in sys.argv[1:]:
         carte_niveau()
         return 0
+    if "--etudiants" in sys.argv[1:]:
+        carte_etudiants()
+        return 0
     if "--monde" in sys.argv[1:]:
         carte_monde()
         carte_dynamique()
@@ -909,6 +959,7 @@ def main() -> int:
     carte_lycee()
     carte_niveau()
     carte_langue()
+    carte_etudiants()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):
