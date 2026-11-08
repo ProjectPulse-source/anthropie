@@ -88,6 +88,10 @@ HORS_RESEAU = [
     # (Autriche sur la Finlande, Croatie lue comme Chypre, « − » orphelin). Methode complete : skill controle-figures.
     ("figures : libelles et filets (temoin)", "check-figures.py", ["--temoin"]),
     ("figures : libelles et filets", "check-figures.py", []),
+    # 2026-11-08 : aucun texte servi sous 12 px. Regle ecrite le 06/11, et pourtant 1 233 textes visibles sous 12 px au
+    # bureau sur 185 pages (deux variables et 29 tailles en dur) : une regle de forme non controlee derive. Lit la source.
+    ("taille de texte (temoin)", "check-taille-texte.py", ["--temoin"]),
+    ("taille de texte", "check-taille-texte.py", []),
 ]
 LOCAL_DERIVES = [
     # La CI rend les PNG, mais par une etape NON BLOQUANTE : si l'installation
