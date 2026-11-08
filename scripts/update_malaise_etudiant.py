@@ -20,7 +20,7 @@ recherche). Rendez-vous de rattrapage : juin 2027 (série DREES 2026, cartograph
 — relancer les extractions puis outils/extrait.py, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : statistique et débat français, comme les pages voisines du bloc).
 
-Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|ecart|plat|formule|filles1019|premierehausse|plafond]
+Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond]
 Sorties : data/ et static/malaise_etudiant.json, static/malaise_etudiant.csv, data/figures_etudiants.json,
 static/img/etudiants-hospit.svg et -m.svg (version téléphone), avec leurs PNG
 """
@@ -54,7 +54,7 @@ PAGE_URL = "stephane-lalut.com/les-etudiants-vont-ils-plus-mal/"
 LICENCE = ("CC BY 4.0 — calcul Stéphane Lalut ; sources Santé publique France (BEH, EnCLASS), DREES, Assurance maladie, "
            "Eurostat (CépiDc-Inserm), Insee (compte de l'éducation, Depp)")
 MUTATIONS = ("etudiants", "calendrier", "suicides", "depense", "composition", "lyceens", "adolescentes", "arrondi", "niveau2012",
-             "trajectoires", "covid", "traitements", "filles", "hommes2017", "ecart", "plat", "formule", "filles1019", "premierehausse", "plafond")
+             "trajectoires", "covid", "traitements", "filles", "hommes2017", "plat", "formule", "filles1019", "premierehausse", "plafond")
 
 
 def log(msg: str) -> None:
@@ -186,8 +186,6 @@ def mutation(c: dict) -> str:
         c["enc"] = dict(c["enc"], risque_depression_lyceens_garcons=dict(c["enc"]["risque_depression_lyceens_garcons"], **{"2018": 3.0}))
     elif m == "hommes2017":     # jeunes hommes très bas en 2017 : « remontent après 2017, mais beaucoup moins » faux
         c["hosp"] = dict(c["hosp"], h18_24=dict(c["hosp"]["h18_24"], **{"2017": 70.0}))
-    elif m == "ecart":          # étudiants loin devant les autres situations : « bien plus que les étudiants des autres » faux
-        c["hausse"] = dict(c["hausse"], chomeurs=2.0, actifs_occupes=2.0)
     elif m == "plat":           # antidépresseurs déjà en hausse de 2015 à 2017 : « la hausse commence dès 2018 » faux
         c["antidep"] = dict(c["antidep"], **{"tous sexes": dict(c["antidep"]["tous sexes"], **{"2015": 0.80})})
     elif m == "formule":        # chiffre de la simulation que la formule publiée ne redonne pas
@@ -240,9 +238,8 @@ def gardes(c: dict) -> int:
     f17, h17 = hf["f18_24"], hf["h18_24"]
     g(f17[str(c["der"])] / f17["2017"] - 1 > 2 * (h17[str(c["der"])] / h17["2017"] - 1),
       "jeunes hommes : remontent aussi apres 2017, mais beaucoup moins")
-    g(c["f1824"]["2021"] - c["f1824"]["2017"] - (c["h1824"]["2021"] - c["h1824"]["2017"])
-      > 2 * (hz["etudiants"] - max(v for k, v in hz.items() if k != "etudiants")),
-      "l'ecart femmes-hommes, bien plus que l'ecart etudiants-autres")
+    # 08/11/2026 : garde « l'ecart femmes-hommes, bien plus que l'ecart etudiants-autres » retiree avec sa phrase
+    # (contre-expertise de la page, P0.4 : l'ecart etudiants-autres comparait des situations d'ages differents).
     var = lambda s_: hf[s_][str(c["der"])] / hf[s_]["2019"] - 1  # noqa: E731
     g(min(var("f15_17"), var("f18_24")) > max(var("h18_24"), var("f25_44")),
       "la trajectoire la plus marquee est celle des adolescentes et des jeunes femmes (depuis 2019)")
