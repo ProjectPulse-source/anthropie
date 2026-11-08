@@ -257,10 +257,54 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   mordre chacune sur sa propre garde ; une garde a refusé une phrase du texte v1, réécrite), extrait figé
   `scripts/sources_malaise_etudiant/` (SHA256SUMS), sorties `data/` et `static/malaise_etudiant.json`,
   `static/malaise_etudiant.csv` ; shortcode `etu-val`.
-- Figures (signature, téléphone, PNG), page Hugo, carte de partage et vignette : non fait.
+- Figure signature (SVG et PNG, bureau 720 et téléphone 300) : faite le 06/11/2026 — `static/img/etudiants-hospit.svg` et
+  `-m.svg`, dessinées par le générateur (patients hospitalisés pour geste auto-infligé, 18-24 ans, femmes et hommes,
+  2012-2025) ; parité téléphone contrôlée, hauteurs déclarées dans la page contrôlées, `check-figures.py` à 0, rendu
+  regardé. Contrôleurs indépendants de la skill `controle-figures` : voir la ligne suivante.
+- Page Hugo : écrite le 06/11/2026, **en brouillon** (`draft: true`) jusqu'à la relecture phrase à phrase du texte
+  servi ; jetons `etu-val` et `{etu.*}` partout ; modèle de ressource conforme (essai hors brouillon, 46/46). Deux
+  puces de la section 2 réécrites avec leur garde (filles de 15-17 ans, jeunes hommes : la v1 n'en avait pas) ; garde
+  de la note de la figure (2020) et de « une centaine par an » ; mutation `adolescentes` ajoutée, mutation `suicides`
+  resserrée pour mordre sur sa propre garde (sept mutations, chacune sur la sienne). Deux références écrites de mémoire
+  (auteurs de CONFINS et de SMART Schools) retirées : non retrouvées par le vérificateur de références.
+- Carte de partage et vignette : faites le 06/11/2026 (`og_dossier_dette.py --etudiants`, contraste contrôlé).
+- Contrôleurs indépendants de la figure (skill `controle-figures`) : premier passage le 07/11/2026, deux contrôleurs
+  en lecture seule (géométrie et données ; lecture du rendu). Valeurs justes (28 sommets à 0,1 près, archive DREES et
+  API publique relues sans le générateur). Corrigé dans le générateur : arrondi au pair de `lg.nombre` (234,5 affiché
+  234, d'où 360/234 = +54 % contre +53 % imprimé ; arrondi commercial `arrondi()` et garde « la variation se refait à
+  partir des taux affichés ») ; 2019 repérée sur l'axe du téléphone, points et valeurs de 2019 ; liseré blanc sous les
+  valeurs que coupait une ligne de grille (« 130 » bureau, « 360 » et « 150 » téléphone) ; sous-titre téléphone complet
+  (patients, non séjours) ; blanc sous le titre ; texte alternatif de la carte saisi à la main et faux (« plat jusqu'en
+  2017 », « presque stable ») réécrit sans chiffre, sous gardes ; « le résultat en une phrase » complété (la hausse ne
+  dépasse le niveau de 2012 qu'à partir de 2021, garde). Trois mutations ajoutées (`arrondi`, `niveau2012`, `hommes`),
+  dix au total, chacune sur sa propre garde. Écartés, motif : séparateur « · » en début de ligne du pied téléphone
+  (règle du site du 04/11) ; espacement source/note du pied bureau et légende du téléphone (organe commun, pratique du
+  site). Points ouverts hors de cette page : `langue_generee.nombre` arrondit au pair pour tous les générateurs ;
+  `check-figures.py` ne voit pas un texte posé sur une ligne de grille ou une courbe. Second passage (07/11) : il a
+  trouvé que ma correction d'arrondi était un DOUBLE arrondi (extrait stocké au dixième, 234,46 → 234,5 → 235 ; 149,48 →
+  150) : le générateur recalcule désormais les taux depuis l'archive DREES (`drees_exact`, valeurs exactes, extrait
+  devenu témoin à 0,05, témoin de la publication du 11/05/2026 repris de l'outil d'extraction), taux des 18-24 ans
+  affichés au dixième (234,5 → 359,7 : +53 % retrouvé par le lecteur) ; « 130 » posé au-dessus du point sur les deux
+  versions ; FAQ, puces et texte alternatif de la carte : « taux de jeunes femmes hospitalisées » (patients) au lieu de
+  « les hospitalisations » (séjours : +72 % et non +53 %). Troisième passage : aucun nombre faux ; double arrondi
+  latent (stockage au centième) retiré ; quatre qualificatifs non gardés (« la plus marquée », « accélération après
+  2020 », « même contraste sur les traitements », « plus forte chez les filles ») gardés, chacun avec sa mutation (13
+  au total, 37 gardes) ; phrase de méthode ramenée à ce que fait le script ; « patients hospitalisés » dans la note du
+  pied. Quatrième passage (07/11) : **figure sans défaut nouveau** (nombres, liserés, parité, carte : critère d'arrêt de
+  la skill atteint). Relecture élargie à la page, douze constats vérifiés puis corrigés : formule de la simulation
+  publiée fausse (elle ne redonnait pas 0,63 ; écrite en différence 2021 − 2017, garde qui la recalcule) ; « recule
+  depuis » et incise sur les effectifs sans donnée → « n'a plus retrouvé ce niveau » ; niveau 2018 des lycéens dérivé
+  d'un écart arrondi retiré (2022 → 2024, « environ deux points depuis 2018 ») ; « dès le collège » sans donnée retiré ;
+  chapô (« de 2017 à 2021 », « jeunes hospitalisés ») ; valeurs des hommes citées pour « même contraste » ; phrases de
+  méthode ramenées à ce que fait le script (niveaux lus sur figure déclarés) ; carte : « Taux de jeunes femmes
+  hospitalisées ». Gardes ajoutées : creux de 2014, hommes depuis 2017, écart femmes-hommes contre étudiants-autres,
+  plat des antidépresseurs 2015-2017, formule. 17 mutations, chacune sur la garde de sa phrase ; 39 gardes. Restent
+  comme limites déclarées : valeurs du Baromètre 2023 lues sur figure (non extractibles du PDF), sources Eurostat,
+  Assurance maladie et Insee non relues par le contrôleur depuis leurs archives.
 - Panel avant : non fait (page nouvelle dont la réception décide du choix d'architecture : à faire sur les scénarios).
-- Gardes vues mordre : non fait (générateur à écrire).
-- Figures téléphone : non fait.
+- Gardes vues mordre : fait le 06/11/2026 (sept mutations, chacune sur sa propre garde ; 32 gardes) ; le 07/11/2026,
+  dix-sept mutations, 39 gardes et une garde de lecture des variations.
+- Figures téléphone : fait le 06/11/2026 (`etudiants-hospit-m.svg`).
 - Relecture de langue : non fait.
 - Recette 320-1280 (`recette.py`) : non fait.
 - Panel après : non fait.
