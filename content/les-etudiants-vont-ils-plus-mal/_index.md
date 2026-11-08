@@ -77,7 +77,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** De 2019 à {{< etu-val "hosp_der" >}}, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de {{< etu-val "hosp_f_var" >}}&nbsp;%, celui des jeunes hommes de {{< etu-val "hosp_h_var" >}}&nbsp;%&nbsp;: la dégradation est réelle, touche d'abord les jeunes femmes, commence avant le covid, puis s'accentue&nbsp;; chez les étudiants, la dépression déclarée est passée de {{< etu-val "etu_2017" >}}&nbsp;% à {{< etu-val "etu_2021" >}}&nbsp;% de 2017 à 2021, la plus forte hausse parmi les situations professionnelles publiées, mais **la comparaison qui trancherait n'est pas encore publiée&nbsp;: l'évolution, sur la même période, des jeunes non étudiants du même âge et du même sexe.**
+**Le résultat en une phrase.** De 2019 à {{< etu-val "hosp_der" >}}, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de {{< etu-val "hosp_f_var" >}}&nbsp;%, celui des jeunes hommes de {{< etu-val "hosp_h_var" >}}&nbsp;%&nbsp;: la dégradation, engagée avant le covid, touche d'abord les jeunes femmes, mais **aucune statistique nationale ne compare encore l'évolution des étudiants à celle des autres jeunes du même âge et du même sexe.**
 
 </div>
 
@@ -90,6 +90,14 @@ Trois d'entre eux vont dans le même sens chez les jeunes adultes.
 - **Ce que l'on soigne.** La part des jeunes femmes de 20 à 24 ans traitées par antidépresseurs ou régulateurs de l'humeur, hors pathologie psychiatrique repérée, passe de {{< etu-val "ad_f_2017" >}}&nbsp;% en 2017 à {{< etu-val "ad_f_2021" >}}&nbsp;% en 2021 puis à {{< etu-val "ad_f_2024" >}}&nbsp;% en 2024 (Assurance maladie). Pour l'ensemble des 20-24 ans, la hausse commence dès 2018, avant le covid.
 - **Ce qui conduit à l'hôpital.** Les jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé (tentative de suicide, automutilation) étaient {{< etu-val "hosp_f_2019" >}} pour 100&nbsp;000 en 2019&nbsp;; elles sont {{< etu-val "hosp_f_der" >}} en {{< etu-val "hosp_der" >}}, soit {{< etu-val "hosp_f_var" >}}&nbsp;% de plus (DREES).
 - **Ce qui est irréversible.** Les suicides de jeunes femmes de 20 à 24 ans restent rares, une centaine par an, mais leur taux a augmenté de {{< etu-val "sf_var" >}}&nbsp;% entre 2018-2019 et 2021-2023 (de {{< etu-val "sf_avant" >}} à {{< etu-val "sf_apres" >}} pour 100&nbsp;000). Celui des hommes du même âge est resté à peu près stable ({{< etu-val "sm_var" >}}&nbsp;%). En 2024, {{< etu-val "s_n24" >}}&nbsp;décès contre {{< etu-val "s_n23" >}} l'année précédente&nbsp;: le niveau élevé se maintient, sans nouvelle hausse établie.
+
+<figure class="figure-ciseau">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/etudiants-soins-m.svg" width="300" height="735">
+    <img src="/img/etudiants-soins.svg" alt="Deux courbes de 2015 à 2024, part des 20-24 ans traités par antidépresseurs ou régulateurs de l'humeur, hors pathologie psychiatrique repérée, en pourcentage : femmes {{< etu-val "ad_f_2015" >}} en 2015, {{< etu-val "ad_f_2017" >}} en 2017, {{< etu-val "ad_f_2021" >}} en 2021, {{< etu-val "ad_f_2024" >}} en 2024 ; hommes {{< etu-val "ad_h_2015" >}} en 2015, {{< etu-val "ad_h_2017" >}} en 2017, {{< etu-val "ad_h_2021" >}} en 2021, {{< etu-val "ad_h_2024" >}} en 2024." width="720" height="389" loading="lazy">
+  </picture>
+  <figcaption>Traitements par antidépresseurs ou régulateurs de l'humeur, 20-24 ans, par sexe (Assurance maladie).</figcaption>
+</figure>
 
 **Ces séries ne distinguent pas les étudiants des autres jeunes.** Elles établissent qu'une dégradation réelle touche la tranche d'âge des étudiants&nbsp;; elles ne disent rien de leur situation propre.
 
@@ -120,6 +128,14 @@ Chez les 15-17 ans, tous sexes confondus, le taux de patients hospitalisés pour
 
 Les enquêtes auprès des lycéens disent la même chose sous une autre forme. La part des lycéens qui présentent un risque important de dépression passe de {{< etu-val "lyc_2022" >}}&nbsp;% en 2022 à {{< etu-val "lyc_2024" >}}&nbsp;% en 2024, après une première hausse d'environ deux points entre 2018 et 2022&nbsp;; chez les lycéennes, de {{< etu-val "lyc_f_2018" >}}&nbsp;% en 2018 à {{< etu-val "lyc_f_2024" >}}&nbsp;% en 2024, contre {{< etu-val "lyc_g_2024" >}}&nbsp;% chez les garçons en 2024 (Santé publique France, EnCLASS). Ce risque continue de croître alors que le bien-être déclaré remonte par rapport à 2022 ({{< etu-val "be_lycee" >}} au lycée)&nbsp;: là encore, le «&nbsp;malaise&nbsp;» n'est pas une grandeur unique.
 
+<figure class="figure-ciseau">
+  <picture>
+    <source media="(max-width: 600px)" srcset="/img/etudiants-lycee-m.svg" width="300" height="665">
+    <img src="/img/etudiants-lycee.svg" alt="Deux séries reliées en tirets, enquêtes de 2018, 2022 et 2024, part des lycéens présentant un risque important de dépression, en pourcentage : lycéennes {{< etu-val "lyc_f_2018" >}} en 2018, {{< etu-val "lyc_f_2022" >}} en 2022, {{< etu-val "lyc_f_2024" >}} en 2024 ; lycéens (garçons) {{< etu-val "lyc_g_2018" >}} en 2018, {{< etu-val "lyc_g_2022" >}} en 2022, {{< etu-val "lyc_g_2024" >}} en 2024." width="720" height="375" loading="lazy">
+  </picture>
+  <figcaption>Risque important de dépression des lycéens, par sexe (Santé publique France, EnCLASS).</figcaption>
+</figure>
+
 Une détresse qui précède l'université ne disculpe pas l'université. Les études peuvent l'aggraver, la révéler ou l'atténuer, et ce que l'on observe chez les étudiants mêle ce qu'ils apportent de leur adolescence à ce que les études y ajoutent. Mais l'origine d'un trouble ne désigne pas le lieu du remède&nbsp;: un service de santé universitaire peut être utile pour une souffrance née au lycée.
 
 ## Les conditions sociales et d'études modifient-elles le risque&nbsp;? {#conditions-sociales-et-d-etudes}
@@ -144,7 +160,11 @@ On peut au moins estimer ce que produirait le seul écart de composition par sex
 
 Parmi les 18-24 ans, la part des femmes est plus élevée chez les étudiants que chez les non-étudiants&nbsp;: de {{< etu-val "comp_ecart_2017" >}} en 2017, de {{< etu-val "comp_ecart_2021" >}} en 2021 (Eurostat). Or la dépression déclarée a progressé plus vite chez les jeunes femmes. Supposons qu'à chaque date, étudiants et non-étudiants du même sexe déclarent un épisode dépressif dans la même proportion&nbsp;: la seule différence de composition rendrait alors, de 2017 à 2021, la hausse des étudiants supérieure d'environ **{{< etu-val "comp_sim" >}}** à celle des non-étudiants.
 
-C'est une simulation, pas une mesure&nbsp;: elle décrit l'effet de la composition dans ce scénario et ne dit pas quelle part de l'écart réel tient au sexe. Elle sert d'étalon à une seule comparaison, celle des étudiants et des non-étudiants **de 18 à 24 ans, sexes confondus**&nbsp;:
+C'est une simulation, pas une mesure&nbsp;: elle décrit l'effet de la composition dans ce scénario et ne dit pas quelle part de l'écart réel tient au sexe.
+
+<details class="repli"><summary>Comment lire la comparaison, quand elle sera publiée&nbsp;: les deux étalons</summary>
+
+Elle sert d'étalon à une seule comparaison, celle des étudiants et des non-étudiants **de 18 à 24 ans, sexes confondus**&nbsp;:
 
 | Si, chez les 18-24 ans et sexes confondus, l'écart de hausse 2017-2021 entre étudiants et non-étudiants est… | … on pourra dire |
 |---|---|
@@ -153,6 +173,8 @@ C'est une simulation, pas une mesure&nbsp;: elle décrit l'effet de la compositi
 | inférieur ou négatif | d'autres différences jouent en sens inverse |
 
 À âge **et** sexe égaux, la composition par sexe est neutralisée par construction&nbsp;: l'étalon devient zéro. Un écart positif ou négatif y serait une association avec le fait d'étudier, qui ne prouverait pas que l'université en soit la cause&nbsp;; un écart proche de zéro signifierait seulement qu'aucune différence nette n'apparaît. Dans l'une et l'autre comparaison, l'écart observé se lira avec son intervalle de confiance&nbsp;: sur des sous-échantillons d'enquête, l'incertitude d'une différence de hausses peut être du même ordre que ces étalons. Même ajustée, une comparaison entre étudiants et non-étudiants reste descriptive&nbsp;: les deux groupes ne sont pas tirés au hasard, et une absence d'écart ne disculperait pas l'université, puisque ses effets protecteurs et ses effets néfastes peuvent se compenser.
+
+</details>
 
 ## Les six causes du récit courant, à l'épreuve {#six-causes-a-l-epreuve}
 
@@ -196,13 +218,17 @@ Cette page mesure une souffrance&nbsp;; elle ne dit pas ce que coûte, pour un �
 
 ## D'où viennent ces chiffres {#sources}
 
+Santé publique France (Baromètre santé, EnCLASS), DREES, Assurance maladie, Eurostat (CépiDc-Inserm) et Insee (compte de l'éducation de la Depp)&nbsp;: chaque série, son champ, ses ruptures et la manière dont la page la reprend sont détaillés ci-dessous.
+
+<details class="repli"><summary>Le détail des sources et de la méthode</summary>
+
 **Dépression et anxiété déclarées.** Santé publique France, Baromètre santé&nbsp;: [BEH 2023 n°&nbsp;2](https://beh.santepubliquefrance.fr/beh/2023/2/pdf/2023_2_1.pdf) (Léon, du Roscoät, Beck), épisode dépressif caractérisé au cours des douze derniers mois (questionnaire CIDI-SF), 18-75&nbsp;ans, 2017 et 2021, par situation professionnelle et par sexe et âge&nbsp;; les niveaux des étudiants en 2010 et en 2017 sont lus sur la figure&nbsp;3&nbsp;; celui de 2017 est contrôlé par l'écart que publie le texte, pas celui de 2010. États anxieux&nbsp;: [BEH 2025 n°&nbsp;14](https://beh.santepubliquefrance.fr/beh/2025/14/pdf/2025_14.pdf) (échelle HAD). Le Baromètre de 2024, dont la méthode a changé, n'est pas comparé à celui de 2021.
 
 **Lycéens.** Santé publique France, [EnCLASS 2024](https://www.santepubliquefrance.fr/sites/default/files/cadic_files/documents/spf00006678.pdf) (*Le point sur*, 2&nbsp;juin 2026)&nbsp;: risque important de dépression des lycéens, 2018, 2022 et 2024, par sexe, et bien-être déclaré.
 
 **Patients hospitalisés.** DREES, patients hospitalisés pour geste auto-infligé depuis 2012 (PMSI, médecine, chirurgie, obstétrique, donc ni les passages aux urgences sans hospitalisation, ni les séjours en psychiatrie)&nbsp;: taux recalculés pour chaque classe d'âge à partir des effectifs et des populations par âge détaillé. Témoin&nbsp;: les trois chiffres de la publication de la DREES du 11&nbsp;mai 2026 (filles de 10 à 19&nbsp;ans en 2025, femmes de 10 à 29&nbsp;ans en 2012 et en 2025), retrouvés à l'unité.
 
-**Traitements.** Assurance maladie, cartographie des pathologies et des dépenses (effectifs)&nbsp;: traitements antidépresseurs ou régulateurs de l'humeur, hors pathologies psychiatriques repérées, 20-24&nbsp;ans, par sexe.
+**Traitements.** Assurance maladie, cartographie des pathologies et des dépenses (effectifs)&nbsp;: traitements antidépresseurs et régulateurs de l'humeur dits «&nbsp;hors pathologies&nbsp;» (au moins trois délivrances&nbsp;; sont exclues les personnes ayant un diagnostic psychiatrique repéré par une hospitalisation ou une affection de longue durée récente, selon la méthode de l'Assurance maladie), 20-24&nbsp;ans, par sexe.
 
 **Suicides.** Eurostat, causes de décès (CépiDc-Inserm)&nbsp;: taux de décès par suicide des 20-24&nbsp;ans résidant en France, par sexe, moyennes 2018-2019 et 2021-2023 (2018&nbsp;: nouveau certificat de décès)&nbsp;; décès de jeunes femmes de 20 à 24&nbsp;ans survenus en France, 2023 et 2024, un décompte distinct qui ne prolonge pas les taux. «&nbsp;Sans nouvelle hausse établie&nbsp;»&nbsp;: l'écart entre 2023 et 2024 reste inférieur à deux fois l'écart type d'une différence de deux comptages.
 
@@ -213,6 +239,8 @@ Cette page mesure une souffrance&nbsp;; elle ne dit pas ce que coûte, pour un �
 **Études citées.** CONFINS (*BMJ Open*, 2021), enquête en ligne pendant le premier confinement (questionnaire PHQ-9), sans représentativité nationale&nbsp;; Observatoire national du suicide, 6<sup>e</sup>&nbsp;rapport (février 2025)&nbsp;; étude SMART Schools (2025), sur les politiques scolaires de restriction du téléphone.
 
 Les chiffres de cette page sont de trois sortes. La plupart sont **lus par un script** dans les données publiées (DREES, Assurance maladie, Eurostat, Insee), dont les extractions sont archivées avec leurs empreintes&nbsp;; les taux de la DREES sont recalculés par le script qui produit les données de la page. Ceux de Santé publique France sont **transcrits** des bulletins et vérifiés, lors de l'extraction, par la présence de leur phrase dans le document archivé, sauf les niveaux des étudiants en 2010 et 2017, lus sur une figure du bulletin (celui de 2017 contrôlé par l'écart que le bulletin publie). Le rapport de cotes de CONFINS est **cité**. Le script qui produit les données de la page s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases.
+
+</details>
 
 {{< reutiliser figures="figures_etudiants" jeu="malaise_etudiant" sources="Santé publique France, DREES, Assurance maladie, Eurostat et CépiDc-Inserm, Insee et Depp" donnees="Épisode dépressif déclaré par situation professionnelle et chez les 18-24 ans par sexe, patients hospitalisés pour geste auto-infligé par âge et par sexe depuis 2012, traitements antidépresseurs ou régulateurs de l'humeur des 20-24 ans, suicides des 20-24 ans, risque de dépression des lycéens, dépense par étudiant, composition par sexe des 18-24 ans ; le même contenu existe en CSV, au format long." >}}
 De 2017 à 2021, la dépression déclarée a augmenté chez les étudiants plus que dans toute autre situation professionnelle publiée. Des indicateurs non déclaratifs confirment une dégradation chez les jeunes, qui touche d'abord les jeunes femmes, commence au milieu des années 2010 et apparaît dès le lycée. La comparaison avec les jeunes non étudiants du même âge et du même sexe, qui dirait ce que les études ajoutent, n'est pas publiée à l'échelle nationale.

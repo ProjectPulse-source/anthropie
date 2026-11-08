@@ -20,7 +20,7 @@ recherche). Rendez-vous de rattrapage : juin 2027 (série DREES 2026, cartograph
 — relancer les extractions puis outils/extrait.py, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : statistique et débat français, comme les pages voisines du bloc).
 
-Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond]
+Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|plat|formule|filles1019|premierehausse|plafond|soinsplat|vagues]
 Sorties : data/ et static/malaise_etudiant.json, static/malaise_etudiant.csv, data/figures_etudiants.json,
 static/img/etudiants-hospit.svg et -m.svg (version téléphone), avec leurs PNG
 """
@@ -54,7 +54,7 @@ PAGE_URL = "stephane-lalut.com/les-etudiants-vont-ils-plus-mal/"
 LICENCE = ("CC BY 4.0 — calcul Stéphane Lalut ; sources Santé publique France (BEH, EnCLASS), DREES, Assurance maladie, "
            "Eurostat (CépiDc-Inserm), Insee (compte de l'éducation, Depp)")
 MUTATIONS = ("etudiants", "calendrier", "suicides", "depense", "composition", "lyceens", "adolescentes", "arrondi", "niveau2012",
-             "trajectoires", "covid", "traitements", "filles", "hommes2017", "plat", "formule", "filles1019", "premierehausse", "plafond")
+             "trajectoires", "covid", "traitements", "filles", "hommes2017", "plat", "formule", "filles1019", "premierehausse", "plafond", "soinsplat", "vagues")
 
 
 def log(msg: str) -> None:
@@ -190,6 +190,11 @@ def mutation(c: dict) -> str:
         c["antidep"] = dict(c["antidep"], **{"tous sexes": dict(c["antidep"]["tous sexes"], **{"2015": 0.80})})
     elif m == "formule":        # chiffre de la simulation que la formule publiée ne redonne pas
         c["comp"] = dict(c["comp"], simulation_pts=0.70)
+    elif m == "soinsplat":      # femmes déjà en hausse en 2016 : « à peu près plate de 2015 à 2017 » faux (figure soins)
+        c["antidep"] = dict(c["antidep"], femmes=dict(c["antidep"]["femmes"], **{"2016": 1.32}))
+    elif m == "vagues":         # lycéennes en baisse en 2022 : « augmente à chaque enquête » faux (figure lycée)
+        r = c["enc"]["risque_depression_lyceennes"]
+        c["enc"] = dict(c["enc"], risque_depression_lyceennes=dict(r, **{"2022": r["2018"] - 1.0}))
     elif m == "plafond":        # jeunes femmes en hausse des 2016 : « ne remonte qu'a partir de 2018 » faux
         c["hosp"] = dict(c["hosp"], f18_24=dict(c["hosp"]["f18_24"], **{"2016": 216.0}))
     elif m == "filles1019":     # filles de 10-19 ans sous les jeunes femmes de 18-24 ans en 2025 : « davantage » faux
@@ -221,6 +226,10 @@ def gardes(c: dict) -> int:
     # Section 1 -- ce qu'on soigne
     ad = c["antidep"]
     g(ad["femmes"]["2017"] < ad["femmes"]["2021"] < ad["femmes"]["2024"], "antidepresseurs des jeunes femmes en hausse continue 2017-2021-2024")
+    adf = ad["femmes"]
+    plat = [adf[str(a)] for a in range(2015, 2018)]
+    g((max(plat) - min(plat)) / min(plat) < 0.05 and all(adf[str(a)] > adf["2017"] for a in range(2018, 2025)),
+      "figure soins : courbe des femmes a peu pres stable de 2015 a 2017 (moins de 5 %), au-dessus de 2017 chaque annee depuis 2018")
     ts = ad["tous sexes"]
     g(ts["2017"] < ts["2018"] < ts["2019"] and (max(ts[str(a)] for a in range(2015, 2018)) - min(ts[str(a)] for a in range(2015, 2018)))
       / min(ts[str(a)] for a in range(2015, 2018)) < 0.05, "la hausse commence des 2018, avant le covid (plat de 2015 a 2017)")
@@ -283,6 +292,7 @@ def gardes(c: dict) -> int:
       "lyceennes : plus du double des lyceens")
     lf, lgc = en["risque_depression_lyceennes"], en["risque_depression_lyceens_garcons"]
     g(lf["2024"] - lf["2018"] > lgc["2024"] - lgc["2018"], "smartphone : degradation plus forte chez les filles")
+    g(lf["2018"] < lf["2022"] < lf["2024"], "figure lycee : chez les filles, la part augmente a chaque enquete depuis 2018")
     g(min(en["bien_etre_hausse_2022_2024_pts"].values()) > 0, "le bien-etre declare remonte par rapport a 2022")
     # Section 4 -- moyens
     d = c["dep"]["superieur_euros_constants_2024"]
@@ -326,6 +336,8 @@ def affichage(c: dict) -> dict:
         "h1824_hausse": lg.points(c["h1824"]["2021"] - c["h1824"]["2017"], signe_=True),
         "ad_f_2017": n(ad["femmes"]["2017"], 2), "ad_f_2021": n(ad["femmes"]["2021"], 2), "ad_f_2024": n(ad["femmes"]["2024"], 2),
         "ad_h_2017": n(ad["hommes"]["2017"], 2), "ad_h_2024": n(ad["hommes"]["2024"], 2),
+        "ad_f_2015": n(ad["femmes"]["2015"], 2), "ad_h_2015": n(ad["hommes"]["2015"], 2),
+        "ad_h_2021": n(ad["hommes"]["2021"], 2),
         "hosp_der": der,
         # Taux des 18-24 ans au dixième : à l'unité, 360 / 234 donnait +54 % au lecteur pour +53,4 % (garde ci-dessous).
         "hosp_f_2012": n(hf["f18_24"]["2012"]), "hosp_f_2017": n(hf["f18_24"]["2017"]),
@@ -342,6 +354,9 @@ def affichage(c: dict) -> dict:
         "lyc_2024": n(en["risque_depression_lyceens"]["2024"]),
         "lyc_f_2018": n(en["risque_depression_lyceennes"]["2018"]), "lyc_f_2024": n(en["risque_depression_lyceennes"]["2024"]),
         "lyc_g_2024": n(en["risque_depression_lyceens_garcons"]["2024"]),
+        "lyc_f_2022": n(en["risque_depression_lyceennes"]["2022"]),
+        "lyc_g_2018": n(en["risque_depression_lyceens_garcons"]["2018"]),
+        "lyc_g_2022": n(en["risque_depression_lyceens_garcons"]["2022"]),
         "be_college": lg.points(en["bien_etre_hausse_2022_2024_pts"]["college"], 0, signe_=True),
         "be_lycee": lg.points(en["bien_etre_hausse_2022_2024_pts"]["lycee"], 0, signe_=True),
         "dep_2009": n(d["2009"], 0), "dep_2024": n(d["2024"], 0),
@@ -384,6 +399,27 @@ FIG = {
                "de {hosp_f_var} %, celui des jeunes hommes du même âge de {hosp_h_var} %. La courbe des femmes, à peu près "
                "plate de 2014 à 2017, monte dès 2018, avant l'épidémie de covid, et ne dépasse son niveau de 2012 qu'à partir "
                "de 2021."),
+    "soins": dict(
+        titre="Jeunes traités par antidépresseurs ou régulateurs de l'humeur, 2015-2024",
+        sous_titre="Part des 20-24 ans du même sexe traités, hors pathologie psychiatrique repérée, en %",
+        source="Assurance maladie, cartographie des pathologies et des dépenses : traitements antidépresseurs et "
+               "régulateurs de l'humeur « hors pathologies »",
+        note="C'est-à-dire sans diagnostic psychiatrique repéré par une hospitalisation ou une "
+             "affection de longue durée récente. Ces séries ne distinguent pas les étudiants des autres jeunes.",
+        montre="De 2017 à 2024, la part des femmes de 20 à 24 ans traitées par antidépresseurs ou régulateurs de "
+               "l'humeur est passée de {ad_f_2017} % à {ad_f_2024} %, celle des hommes du même âge de {ad_h_2017} % à "
+               "{ad_h_2024} %. La courbe des femmes, à peu près stable de 2015 à 2017, est en hausse chaque année depuis "
+               "2018, avant l'épidémie de covid."),
+    "lycee": dict(
+        titre="Lycéens présentant un risque important de dépression, 2018-2024",
+        sous_titre="Part des lycéens de chaque sexe, en %",
+        source="Santé publique France, enquête EnCLASS 2024 (Le point sur, 2 juin 2026), lycéens",
+        note="Risque important : au moins 7 symptômes sur les 10 de l'ADRS, échelle de repérage de la dépression "
+             "de l'adolescent. Trois enquêtes (2018, 2022, 2024), reliées en tirets, auprès d'élèves différents "
+             "à chaque fois.",
+        montre="En 2024, {lyc_f_2024} % des lycéennes présentent un risque important de dépression, plus du double "
+               "des lycéens ({lyc_g_2024} %) ; chez les filles, la part augmente à chaque enquête depuis 2018 "
+               "({lyc_f_2018} %)."),
 }
 
 
@@ -501,21 +537,183 @@ def fig_hospit_m(c: dict, A: dict, svg_d: str) -> str:
                                                (LIC_FIG_M, MUTED, "pied-licence")], GRID)
 
 
+def textes(cle: str, A: dict) -> dict:
+    return {k: v.format(der=A["hosp_der"], **A) for k, v in FIG[cle].items()}
+
+
+def desc_soins(A: dict) -> str:
+    return ("Deux courbes, de 2015 à 2024, de la part des 20-24 ans traités par antidépresseurs ou régulateurs de l'humeur, "
+            "hors pathologie psychiatrique repérée, en %%. Femmes : %s en 2015, %s en 2017, %s en 2021, %s en 2024. "
+            "Hommes : %s en 2015, %s en 2017, %s en 2021, %s en 2024."
+            % (A["ad_f_2015"], A["ad_f_2017"], A["ad_f_2021"], A["ad_f_2024"],
+               A["ad_h_2015"], A["ad_h_2017"], A["ad_h_2021"], A["ad_h_2024"]))
+
+
+def desc_lycee(A: dict) -> str:
+    return ("Deux séries, enquêtes de 2018, 2022 et 2024, de la part des lycéens présentant un risque important de "
+            "dépression, en %%. Lycéennes : %s en 2018, %s en 2022, %s en 2024. Lycéens (garçons) : %s en 2018, %s en "
+            "2022, %s en 2024."
+            % (A["lyc_f_2018"], A["lyc_f_2022"], A["lyc_f_2024"], A["lyc_g_2018"], A["lyc_g_2022"], A["lyc_g_2024"]))
+
+
+def courbes(ident: str, t: dict, desc: str, series, vmax: float, pas: float, etiquettes, terminaux,
+            tirets: bool = False) -> str:
+    """Figure détaillée (720) à deux courbes, sur le modèle de fig_hospit. series : [(valeurs par année, couleur)] ;
+    etiquettes : [(année, valeur, couleur, texte)] posées au-dessus du point ; terminaux : [(valeur, couleur, gros, nom)]
+    à droite du dernier point."""
+    ans = sorted({int(a) for s, _ in series for a in s})
+    a0, a1 = ans[0], ans[-1]
+    X0, X1, TOP, BAS = 44, 540, 64, 280
+    X = lambda a: X0 + (X1 - X0) * (a - a0) / (a1 - a0)
+    Y = lambda v: BAS - (BAS - TOP) * v / vmax
+    if max(max(s.values()) for s, _ in series) > vmax * 0.95:
+        fail("figure %s : une valeur depasse l'echelle (%s)" % (ident, vmax))
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="%s-t %s-d" font-family="%s">' % (W, ident, ident, esc(FONT)),
+         '<title id="%s-t">%s</title><desc id="%s-d">%s</desc>' % (ident, esc(t["titre"]), ident, esc(desc)),
+         '<rect width="%d" height="0" fill="#ffffff"/>' % W,
+         '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(t["titre"])),
+         '<text x="0" y="37" font-size="11" fill="%s">%s</text>' % (INK2, esc(t["sous_titre"]))]
+    n = int(round(vmax / pas))
+    for k in range(n + 1):
+        gv = k * pas
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>'
+                 % (X0, Y(gv), X1, Y(gv), GRID, 1 if k == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>'
+                 % (X0 - 6, Y(gv) + 3.5, MUTED, lg.nombre(gv, 0)))
+    for a in ans:
+        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 15, MUTED, a))
+    trait = ' stroke-dasharray="6 4"' if tirets else ""
+    for serie, col in series:
+        pts = sorted(int(a) for a in serie)
+        d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(serie[str(a)])) for k, a in enumerate(pts))
+        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"%s/>' % (d, col, trait))
+        for a in pts:
+            e.append('<circle cx="%.1f" cy="%.1f" r="%s" fill="%s"/>' % (X(a), Y(serie[str(a)]), 3.6 if tirets else 2.8, col))
+    for a, v, col, txt, *pos in etiquettes:
+        # « dessous » : valeur sous le point (première année, au bord de l'axe : au-dessus, elle mordait sur les
+        # graduations « 10 » et « 20 », check-figures du 08/11/2026).
+        e.append(valeur(X(a), Y(v) + 18 if pos and pos[0] == "dessous" else Y(v) - 9, 11, col, txt))
+    for v, col, gros, nom in terminaux:
+        y = Y(v)
+        if gros:
+            e.append('<text x="%d" y="%.1f" font-size="16" font-weight="600" fill="%s">%s</text>' % (X1 + 12, y + 5, col, esc(gros)))
+            e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 12, y + 21, col, esc(nom)))
+        else:
+            e.append('<text x="%d" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (X1 + 12, y + 4, col, esc(nom)))
+    return pied_figure.pied(e, BAS + 30, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
+                                             (LIC_FIG, MUTED, "pied-licence")], GRID)
+
+
+def courbes_m(ident: str, t: dict, svg_d: str, series, vmax: float, pas: float, ans_axe, etiquettes, legende,
+              tirets: bool = False) -> str:
+    """Version téléphone (300) de courbes(). etiquettes : [(année, valeur, couleur, texte, taille, gras, ancre)] ;
+    legende : [(couleur, nom, ligne de valeurs)]."""
+    ans = sorted({int(a) for s, _ in series for a in s})
+    a0, a1 = ans[0], ans[-1]
+    e, y = pied_figure.tete_mobile(ident, t["titre"], html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_d).group(1)),
+                                   INK, FONT)
+    for k, l in enumerate(pied_figure.coupe(t["sous_titre"], 38)):
+        y += 18 if k else 0
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
+    X0, X1 = 34, 292
+    TOP = y + 30
+    BAS = TOP + 200
+    X = lambda a: X0 + (X1 - X0) * (a - a0) / (a1 - a0)
+    Y = lambda v: BAS - (BAS - TOP) * v / vmax
+    n = int(round(vmax / pas))
+    for k in range(n + 1):
+        gv = k * pas
+        e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>'
+                 % (X0, Y(gv), X1, Y(gv), GRID, 1 if k == 0 else 0.6))
+        e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%s</text>'
+                 % (X0 - 4, Y(gv) + 4.5, FS_MIN, MUTED, lg.nombre(gv, 0)))
+    for a in ans_axe:
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%d</text>'
+                 % (X(a), BAS + 18, FS_MIN, MUTED, "start" if a == a0 else "end" if a == a1 else "middle", a))
+    trait = ' stroke-dasharray="6 4"' if tirets else ""
+    for serie, col in series:
+        pts = sorted(int(a) for a in serie)
+        d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(serie[str(a)])) for k, a in enumerate(pts))
+        e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" stroke-linejoin="round"%s/>' % (d, col, trait))
+    for a, v, col, txt, taille, gras, ancre, *pos in etiquettes:
+        e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="%s"/>' % (X(a), Y(v), col))
+        # « dessous » : au-dessus du premier point, la valeur se collait à la graduation (« 20 18,0 » lu « 2018,0 »,
+        # rendu regardé le 08/11/2026 ; check-figures ne le voyait pas, les deux textes ne se chevauchant pas).
+        e.append(valeur(X(a), Y(v) + 22 if pos and pos[0] == "dessous" else Y(v) - 10, taille, col, txt, ancre, gras))
+    y = BAS + 30
+    for col, nom, ligne in legende:
+        y += 26
+        e.append('<rect x="0" y="%d" width="14" height="4" fill="%s"/>' % (y - 6, col))
+        e.append('<text x="22" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(nom)))
+        y += 21
+        e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(ligne)))
+    return pied_figure.pied_mobile(e, y + 16, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
+                                               (LIC_FIG_M, MUTED, "pied-licence")], GRID)
+
+
+def fig_soins(c: dict, A: dict) -> tuple:
+    t = textes("soins", A)
+    f = {a: v for a, v in c["antidep"]["femmes"].items()}
+    h = {a: v for a, v in c["antidep"]["hommes"].items()}
+    series = [(h, BLEU), (f, ORANGE)]
+    d = courbes("etu-s", t, desc_soins(A), series, 3.0, 1.0,
+                [(2017, f["2017"], ORANGE, A["ad_f_2017"]), (2017, h["2017"], BLEU, A["ad_h_2017"])],
+                [(f["2024"], ORANGE, A["ad_f_2024"], "femmes de 20 à 24 ans"),
+                 (h["2024"], BLEU, A["ad_h_2024"], "hommes de 20 à 24 ans")])
+    m = courbes_m("etu-sm", t, d, series, 3.0, 1.0, (2015, 2017, 2024),
+                  [(2017, f["2017"], ORANGE, A["ad_f_2017"], FS_MIN, False, "middle"),
+                   (2017, h["2017"], BLEU, A["ad_h_2017"], FS_MIN, False, "middle"),
+                   (2024, f["2024"], ORANGE, A["ad_f_2024"], 16, True, "end"),
+                   (2024, h["2024"], BLEU, A["ad_h_2024"], 16, True, "end")],
+                  [(ORANGE, "Femmes de 20 à 24 ans", "2017 : %s · 2024 : %s" % (A["ad_f_2017"], A["ad_f_2024"])),
+                   (BLEU, "Hommes de 20 à 24 ans", "2017 : %s · 2024 : %s" % (A["ad_h_2017"], A["ad_h_2024"]))])
+    return d, m
+
+
+def fig_lycee(c: dict, A: dict) -> tuple:
+    t = textes("lycee", A)
+    en = c["enc"]
+    f, g_ = en["risque_depression_lyceennes"], en["risque_depression_lyceens_garcons"]
+    series = [(g_, BLEU), (f, ORANGE)]
+    cles = (("2018", "lyc_f_2018", "lyc_g_2018"), ("2022", "lyc_f_2022", "lyc_g_2022"), ("2024", "lyc_f_2024", "lyc_g_2024"))
+    etq = []
+    for a, kf, kg in cles:
+        etq += [(int(a), f[a], ORANGE, A[kf]), (int(a), g_[a], BLEU, A[kg])]
+    etq_d = [(a, v, col, txt, "dessous") if a == 2018 else (a, v, col, txt) for a, v, col, txt in etq]
+    d = courbes("etu-l", t, desc_lycee(A), series, 30.0, 10.0, etq_d,
+                [(f["2024"], ORANGE, None, "lycéennes"), (g_["2024"], BLEU, None, "lycéens (garçons)")], tirets=True)
+    etq_m = [(a, v, col, txt, FS_MIN, False, "start", "dessous") if a == 2018
+             else (a, v, col, txt, FS_MIN, False, "end" if a == 2024 else "middle") for a, v, col, txt in etq]
+    m = courbes_m("etu-lm", t, d, series, 30.0, 10.0, (2018, 2022, 2024), etq_m,
+                  [(ORANGE, "Lycéennes", "2018 : %s · 2022 : %s · 2024 : %s" % (A["lyc_f_2018"], A["lyc_f_2022"], A["lyc_f_2024"])),
+                   (BLEU, "Lycéens (garçons)", "2018 : %s · 2022 : %s · 2024 : %s" % (A["lyc_g_2018"], A["lyc_g_2022"], A["lyc_g_2024"]))],
+                  tirets=True)
+    return d, m
+
+
+
 def figures(c: dict, A: dict) -> dict:
     d = fig_hospit(c, A)
     figs = {"etudiants-hospit.svg": d, "etudiants-hospit-m.svg": fig_hospit_m(c, A, d)}
-    ecarts = pied_figure.parite(d, figs["etudiants-hospit-m.svg"], FS_MIN, (BLEU, ORANGE))
-    if ecarts:
-        fail("parite mobile : " + " ; ".join(ecarts))
+    figs["etudiants-soins.svg"], figs["etudiants-soins-m.svg"] = fig_soins(c, A)
+    figs["etudiants-lycee.svg"], figs["etudiants-lycee-m.svg"] = fig_lycee(c, A)
+    for nom in ("hospit", "soins", "lycee"):
+        ecarts = pied_figure.parite(figs["etudiants-%s.svg" % nom], figs["etudiants-%s-m.svg" % nom], FS_MIN, (BLEU, ORANGE))
+        if ecarts:
+            fail("parite mobile (%s) : " % nom + " ; ".join(ecarts))
     return figs
 
 
 def fiches(figs: dict, A: dict) -> dict:
-    svg = figs["etudiants-hospit.svg"]
-    return {"fr": [dict(id="hospit", fichier="etudiants-hospit",
+    out = []
+    for nom in ("hospit", "soins", "lycee"):
+        svg = figs["etudiants-%s.svg" % nom]
+        out.append(dict(id=nom, fichier="etudiants-%s" % nom,
                         titre=html.unescape(re.search(r"<title[^>]*>(.*?)</title>", svg).group(1)),
-                        montre=textes_fig(A)["montre"],
-                        source=pied_figure.lire(svg, "pied-source"), precaution=pied_figure.lire(svg, "pied-note"))]}
+                        montre=textes(nom, A)["montre"],
+                        source=pied_figure.lire(svg, "pied-source"), precaution=pied_figure.lire(svg, "pied-note")))
+    return {"fr": out}
 
 
 def csv_texte(c: dict) -> str:

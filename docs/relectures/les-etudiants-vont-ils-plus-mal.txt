@@ -1,4 +1,4 @@
-# relu le 2026-11-08 ; texte servi de /les-etudiants-vont-ils-plus-mal/, build de 6d7f6ce + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-08 ; texte servi de /les-etudiants-vont-ils-plus-mal/, build de b8dee1f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les étudiants vont-ils plus mal que les autres jeunes ?
 La dépression déclarée a fortement augmenté chez les étudiants de 2017 à 2021, et les traitements comme le taux de jeunes hospitalisés pour un geste auto-infligé confirment une dégradation réelle dans cette classe d’âge.
 Mais cette dégradation touche d’abord les jeunes femmes, commence avant l’université et avant le covid, et aucune statistique nationale publiée ne compare encore l’évolution des étudiants à celle des autres jeunes du même âge et du même sexe.
@@ -10,7 +10,7 @@ Télécharger : CSV · JSON · méthode
 Le malaise déclaré est-il confirmé par les soins ?
 Patients hospitalisés pour un geste auto-infligé, 18-24 ans, par sexe (DREES, calcul de l’auteur).
 Le résultat en une phrase.
-De 2019 à 2025, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de 53 %, celui des jeunes hommes de 15 % : la dégradation est réelle, touche d’abord les jeunes femmes, commence avant le covid, puis s’accentue ; chez les étudiants, la dépression déclarée est passée de 13,3 % à 20,3 % de 2017 à 2021, la plus forte hausse parmi les situations professionnelles publiées, mais la comparaison qui trancherait n’est pas encore publiée : l’évolution, sur la même période, des jeunes non étudiants du même âge et du même sexe.
+De 2019 à 2025, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de 53 %, celui des jeunes hommes de 15 % : la dégradation, engagée avant le covid, touche d’abord les jeunes femmes, mais aucune statistique nationale ne compare encore l’évolution des étudiants à celle des autres jeunes du même âge et du même sexe.
 Le chiffre qui a installé l’idée d’un « malaise étudiant » vient du Baromètre santé de Santé publique France : en 2021, 20,3 % des étudiants déclarent un épisode dépressif caractérisé au cours des douze derniers mois, contre 13,3 % en 2017 et 10,1 % en 2010.
 Dans aucune autre situation professionnelle la hausse n’est aussi forte : +7,0 points chez les étudiants, +5,3 points chez les chômeurs, +4,4 points chez les actifs occupés.
 Un questionnaire mesure ce que l’on déclare.
@@ -26,6 +26,7 @@ Ce qui est irréversible.
 Les suicides de jeunes femmes de 20 à 24 ans restent rares, une centaine par an, mais leur taux a augmenté de 39 % entre 2018-2019 et 2021-2023 (de 3,30 à 4,59 pour 100 000).
 Celui des hommes du même âge est resté à peu près stable (+3 %).
 En 2024, 100 décès contre 93 l’année précédente : le niveau élevé se maintient, sans nouvelle hausse établie.
+Traitements par antidépresseurs ou régulateurs de l’humeur, 20-24 ans, par sexe (Assurance maladie).
 Ces séries ne distinguent pas les étudiants des autres jeunes.
 Elles établissent qu’une dégradation réelle touche la tranche d’âge des étudiants ; elles ne disent rien de leur situation propre.
 Elles laissent aussi une part d’incertitude.
@@ -57,6 +58,7 @@ En 2025, la DREES compte 482 patientes hospitalisées pour 100 000 filles de 10 
 Les enquêtes auprès des lycéens disent la même chose sous une autre forme.
 La part des lycéens qui présentent un risque important de dépression passe de 15,4 % en 2022 à 18,9 % en 2024, après une première hausse d’environ deux points entre 2018 et 2022 ; chez les lycéennes, de 18,0 % en 2018 à 25,7 % en 2024, contre 11,7 % chez les garçons en 2024 (Santé publique France, EnCLASS).
 Ce risque continue de croître alors que le bien-être déclaré remonte par rapport à 2022 (+12 points au lycée) : là encore, le « malaise » n’est pas une grandeur unique.
+Risque important de dépression des lycéens, par sexe (Santé publique France, EnCLASS).
 Une détresse qui précède l’université ne disculpe pas l’université.
 Les études peuvent l’aggraver, la révéler ou l’atténuer, et ce que l’on observe chez les étudiants mêle ce qu’ils apportent de leur adolescence à ce que les études y ajoutent.
 Mais l’origine d’un trouble ne désigne pas le lieu du remède : un service de santé universitaire peut être utile pour une souffrance née au lycée.
@@ -88,6 +90,7 @@ Parmi les 18-24 ans, la part des femmes est plus élevée chez les étudiants qu
 Or la dépression déclarée a progressé plus vite chez les jeunes femmes.
 Supposons qu’à chaque date, étudiants et non-étudiants du même sexe déclarent un épisode dépressif dans la même proportion : la seule différence de composition rendrait alors, de 2017 à 2021, la hausse des étudiants supérieure d’environ 0,6 point à celle des non-étudiants.
 C’est une simulation, pas une mesure : elle décrit l’effet de la composition dans ce scénario et ne dit pas quelle part de l’écart réel tient au sexe.
+Comment lire la comparaison, quand elle sera publiée : les deux étalons
 Elle sert d’étalon à une seule comparaison, celle des étudiants et des non-étudiants de 18 à 24 ans, sexes confondus :
 Si, chez les 18-24 ans et sexes confondus, l’écart de hausse 2017-2021 entre étudiants et non-étudiants est…
 … on pourra dire
@@ -181,6 +184,8 @@ Votre exemplaire, disponible immédiatement →
 Version papier : 13,90 € · Kindle : 5,99 €
 Sommaire, extraits et recensions →
 D’où viennent ces chiffres
+Santé publique France (Baromètre santé, EnCLASS), DREES, Assurance maladie, Eurostat (CépiDc-Inserm) et Insee (compte de l’éducation de la Depp) : chaque série, son champ, ses ruptures et la manière dont la page la reprend sont détaillés ci-dessous.
+Le détail des sources et de la méthode
 Dépression et anxiété déclarées.
 Santé publique France, Baromètre santé : BEH 2023 n° 2 (Léon, du Roscoät, Beck), épisode dépressif caractérisé au cours des douze derniers mois (questionnaire CIDI-SF), 18-75 ans, 2017 et 2021, par situation professionnelle et par sexe et âge ; les niveaux des étudiants en 2010 et en 2017 sont lus sur la figure 3 ; celui de 2017 est contrôlé par l’écart que publie le texte, pas celui de 2010.
 États anxieux : BEH 2025 n° 14 (échelle HAD).
@@ -191,7 +196,7 @@ Patients hospitalisés.
 DREES, patients hospitalisés pour geste auto-infligé depuis 2012 (PMSI, médecine, chirurgie, obstétrique, donc ni les passages aux urgences sans hospitalisation, ni les séjours en psychiatrie) : taux recalculés pour chaque classe d’âge à partir des effectifs et des populations par âge détaillé.
 Témoin : les trois chiffres de la publication de la DREES du 11 mai 2026 (filles de 10 à 19 ans en 2025, femmes de 10 à 29 ans en 2012 et en 2025), retrouvés à l’unité.
 Traitements.
-Assurance maladie, cartographie des pathologies et des dépenses (effectifs) : traitements antidépresseurs ou régulateurs de l’humeur, hors pathologies psychiatriques repérées, 20-24 ans, par sexe.
+Assurance maladie, cartographie des pathologies et des dépenses (effectifs) : traitements antidépresseurs et régulateurs de l’humeur dits « hors pathologies » (au moins trois délivrances ; sont exclues les personnes ayant un diagnostic psychiatrique repéré par une hospitalisation ou une affection de longue durée récente, selon la méthode de l’Assurance maladie), 20-24 ans, par sexe.
 Suicides.
 Eurostat, causes de décès (CépiDc-Inserm) : taux de décès par suicide des 20-24 ans résidant en France, par sexe, moyennes 2018-2019 et 2021-2023 (2018 : nouveau certificat de décès) ; décès de jeunes femmes de 20 à 24 ans survenus en France, 2023 et 2024, un décompte distinct qui ne prolonge pas les taux. « Sans nouvelle hausse établie » : l’écart entre 2023 et 2024 reste inférieur à deux fois l’écart type d’une différence de deux comptages.
 Dépense par étudiant.
@@ -220,6 +225,23 @@ Geste auto-infligé : tentative de suicide ou automutilation.
 Ces séries ne distinguent pas les étudiants des autres jeunes.
 2020 : moins de patients hospitalisés pendant l’épidémie de covid.
 DREES, patients hospitalisés pour geste auto-infligé depuis 2012 (PMSI, médecine, chirurgie, obstétrique) ; taux recalculés à partir des effectifs par âge détaillé
+Télécharger en PNG
+SVG
+Jeunes traités par antidépresseurs ou régulateurs de l’humeur, 2015-2024
+De 2017 à 2024, la part des femmes de 20 à 24 ans traitées par antidépresseurs ou régulateurs de l’humeur est passée de 1,24 % à 2,78 %, celle des hommes du même âge de 0,70 % à 1,10 %.
+La courbe des femmes, à peu près stable de 2015 à 2017, est en hausse chaque année depuis 2018, avant l’épidémie de covid.
+Précaution d’interprétation.
+C’est-à-dire sans diagnostic psychiatrique repéré par une hospitalisation ou une affection de longue durée récente.
+Ces séries ne distinguent pas les étudiants des autres jeunes.
+Assurance maladie, cartographie des pathologies et des dépenses : traitements antidépresseurs et régulateurs de l’humeur « hors pathologies »
+Télécharger en PNG
+SVG
+Lycéens présentant un risque important de dépression, 2018-2024
+En 2024, 25,7 % des lycéennes présentent un risque important de dépression, plus du double des lycéens (11,7 %) ; chez les filles, la part augmente à chaque enquête depuis 2018 (18,0 %).
+Précaution d’interprétation.
+Risque important : au moins 7 symptômes sur les 10 de l’ADRS, échelle de repérage de la dépression de l’adolescent.
+Trois enquêtes (2018, 2022, 2024), reliées en tirets, auprès d’élèves différents à chaque fois.
+Santé publique France, enquête EnCLASS 2024 (Le point sur, 2 juin 2026), lycéens
 Télécharger en PNG
 SVG
 Citer cette page

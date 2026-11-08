@@ -7,6 +7,22 @@
    "montre": "De 2019 à 2025, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de 53 %, celui des jeunes hommes du même âge de 15 %. La courbe des femmes, à peu près plate de 2014 à 2017, monte dès 2018, avant l'épidémie de covid, et ne dépasse son niveau de 2012 qu'à partir de 2021.",
    "source": "DREES, patients hospitalisés pour geste auto-infligé depuis 2012 (PMSI, médecine, chirurgie, obstétrique) ; taux recalculés à partir des effectifs par âge détaillé",
    "precaution": "Geste auto-infligé : tentative de suicide ou automutilation. Ces séries ne distinguent pas les étudiants des autres jeunes. 2020 : moins de patients hospitalisés pendant l'épidémie de covid."
+  },
+  {
+   "id": "soins",
+   "fichier": "etudiants-soins",
+   "titre": "Jeunes traités par antidépresseurs ou régulateurs de l'humeur, 2015-2024",
+   "montre": "De 2017 à 2024, la part des femmes de 20 à 24 ans traitées par antidépresseurs ou régulateurs de l'humeur est passée de 1,24 % à 2,78 %, celle des hommes du même âge de 0,70 % à 1,10 %. La courbe des femmes, à peu près stable de 2015 à 2017, est en hausse chaque année depuis 2018, avant l'épidémie de covid.",
+   "source": "Assurance maladie, cartographie des pathologies et des dépenses : traitements antidépresseurs et régulateurs de l'humeur « hors pathologies »",
+   "precaution": "C'est-à-dire sans diagnostic psychiatrique repéré par une hospitalisation ou une affection de longue durée récente. Ces séries ne distinguent pas les étudiants des autres jeunes."
+  },
+  {
+   "id": "lycee",
+   "fichier": "etudiants-lycee",
+   "titre": "Lycéens présentant un risque important de dépression, 2018-2024",
+   "montre": "En 2024, 25,7 % des lycéennes présentent un risque important de dépression, plus du double des lycéens (11,7 %) ; chez les filles, la part augmente à chaque enquête depuis 2018 (18,0 %).",
+   "source": "Santé publique France, enquête EnCLASS 2024 (Le point sur, 2 juin 2026), lycéens",
+   "precaution": "Risque important : au moins 7 symptômes sur les 10 de l'ADRS, échelle de repérage de la dépression de l'adolescent. Trois enquêtes (2018, 2022, 2024), reliées en tirets, auprès d'élèves différents à chaque fois."
   }
  ]
 }

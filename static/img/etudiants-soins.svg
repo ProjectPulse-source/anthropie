@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 389" role="img" font-variant-numeric="tabular-nums" aria-labelledby="etu-s-t etu-s-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="etu-s-t">Jeunes traités par antidépresseurs ou régulateurs de l'humeur, 2015-2024</title><desc id="etu-s-d">Deux courbes, de 2015 à 2024, de la part des 20-24 ans traités par antidépresseurs ou régulateurs de l'humeur, hors pathologie psychiatrique repérée, en %. Femmes : 1,20 en 2015, 1,24 en 2017, 1,93 en 2021, 2,78 en 2024. Hommes : 0,69 en 2015, 0,70 en 2017, 0,81 en 2021, 1,10 en 2024.</desc>
+<rect width="720" height="389" fill="#ffffff"/>
+<text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Jeunes traités par antidépresseurs ou régulateurs de l'humeur, 2015-2024</text>
+<text x="0" y="37" font-size="11" fill="#55524f">Part des 20-24 ans du même sexe traités, hors pathologie psychiatrique repérée, en %</text>
+<line x1="44" y1="280.0" x2="540" y2="280.0" stroke="#dcd8d3" stroke-width="1"/>
+<text x="38" y="283.5" font-size="10" fill="#96928f" text-anchor="end">0</text>
+<line x1="44" y1="208.0" x2="540" y2="208.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="38" y="211.5" font-size="10" fill="#96928f" text-anchor="end">1</text>
+<line x1="44" y1="136.0" x2="540" y2="136.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="38" y="139.5" font-size="10" fill="#96928f" text-anchor="end">2</text>
+<line x1="44" y1="64.0" x2="540" y2="64.0" stroke="#dcd8d3" stroke-width="0.6"/>
+<text x="38" y="67.5" font-size="10" fill="#96928f" text-anchor="end">3</text>
+<text x="44.0" y="295" font-size="10" fill="#96928f" text-anchor="middle">2015</text>
+<text x="99.1" y="295" font-size="10" fill="#96928f" text-anchor="middle">2016</text>
+<text x="154.2" y="295" font-size="10" fill="#96928f" text-anchor="middle">2017</text>
+<text x="209.3" y="295" font-size="10" fill="#96928f" text-anchor="middle">2018</text>
+<text x="264.4" y="295" font-size="10" fill="#96928f" text-anchor="middle">2019</text>
+<text x="319.6" y="295" font-size="10" fill="#96928f" text-anchor="middle">2020</text>
+<text x="374.7" y="295" font-size="10" fill="#96928f" text-anchor="middle">2021</text>
+<text x="429.8" y="295" font-size="10" fill="#96928f" text-anchor="middle">2022</text>
+<text x="484.9" y="295" font-size="10" fill="#96928f" text-anchor="middle">2023</text>
+<text x="540.0" y="295" font-size="10" fill="#96928f" text-anchor="middle">2024</text>
+<path d="M44.0,230.3 L99.1,231.0 L154.2,229.6 L209.3,227.4 L264.4,225.3 L319.6,223.1 L374.7,221.7 L429.8,214.5 L484.9,206.6 L540.0,200.8" fill="none" stroke="#184f95" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="44.0" cy="230.3" r="2.8" fill="#184f95"/>
+<circle cx="99.1" cy="231.0" r="2.8" fill="#184f95"/>
+<circle cx="154.2" cy="229.6" r="2.8" fill="#184f95"/>
+<circle cx="209.3" cy="227.4" r="2.8" fill="#184f95"/>
+<circle cx="264.4" cy="225.3" r="2.8" fill="#184f95"/>
+<circle cx="319.6" cy="223.1" r="2.8" fill="#184f95"/>
+<circle cx="374.7" cy="221.7" r="2.8" fill="#184f95"/>
+<circle cx="429.8" cy="214.5" r="2.8" fill="#184f95"/>
+<circle cx="484.9" cy="206.6" r="2.8" fill="#184f95"/>
+<circle cx="540.0" cy="200.8" r="2.8" fill="#184f95"/>
+<path d="M44.0,193.6 L99.1,194.3 L154.2,190.7 L209.3,185.7 L264.4,180.6 L319.6,167.0 L374.7,141.0 L429.8,114.4 L484.9,90.6 L540.0,79.8" fill="none" stroke="#eb6834" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="44.0" cy="193.6" r="2.8" fill="#eb6834"/>
+<circle cx="99.1" cy="194.3" r="2.8" fill="#eb6834"/>
+<circle cx="154.2" cy="190.7" r="2.8" fill="#eb6834"/>
+<circle cx="209.3" cy="185.7" r="2.8" fill="#eb6834"/>
+<circle cx="264.4" cy="180.6" r="2.8" fill="#eb6834"/>
+<circle cx="319.6" cy="167.0" r="2.8" fill="#eb6834"/>
+<circle cx="374.7" cy="141.0" r="2.8" fill="#eb6834"/>
+<circle cx="429.8" cy="114.4" r="2.8" fill="#eb6834"/>
+<circle cx="484.9" cy="90.6" r="2.8" fill="#eb6834"/>
+<circle cx="540.0" cy="79.8" r="2.8" fill="#eb6834"/>
+<text aria-hidden="true" x="154.2" y="181.7" font-size="11" text-anchor="middle" fill="#ffffff" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">1,24</text><text x="154.2" y="181.7" font-size="11" text-anchor="middle" fill="#eb6834">1,24</text>
+<text aria-hidden="true" x="154.2" y="220.6" font-size="11" text-anchor="middle" fill="#ffffff" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">0,70</text><text x="154.2" y="220.6" font-size="11" text-anchor="middle" fill="#184f95">0,70</text>
+<text x="552" y="84.8" font-size="16" font-weight="600" fill="#eb6834">2,78</text>
+<text x="552" y="100.8" font-size="11" fill="#eb6834">femmes de 20 à 24 ans</text>
+<text x="552" y="205.8" font-size="16" font-weight="600" fill="#184f95">1,10</text>
+<text x="552" y="221.8" font-size="11" fill="#184f95">hommes de 20 à 24 ans</text>
+<line x1="0" y1="310.0" x2="720" y2="310.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="325.0" font-size="11" fill="#55524f">Assurance maladie, cartographie des pathologies et des dépenses : traitements antidépresseurs et régulateurs de</text>
+<text class="pied-source" x="0" y="339.0" font-size="11" fill="#55524f">l'humeur « hors pathologies »</text>
+<text class="pied-note" x="0" y="353.0" font-size="11" fill="#55524f">C'est-à-dire sans diagnostic psychiatrique repéré par une hospitalisation ou une affection de longue durée récente.</text>
+<text class="pied-note" x="0" y="367.0" font-size="11" fill="#55524f">Ces séries ne distinguent pas les étudiants des autres jeunes.</text>
+<text class="pied-licence" x="0" y="381.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, licence CC BY 4.0 · stephane-lalut.com/les-etudiants-vont-ils-plus-mal/</text>
+</svg>
