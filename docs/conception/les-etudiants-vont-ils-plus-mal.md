@@ -303,14 +303,28 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   Assurance maladie et Insee non relues par le contrôleur depuis leurs archives.
 - Panel avant : non fait (page nouvelle dont la réception décide du choix d'architecture : à faire sur les scénarios).
 - Gardes vues mordre : fait le 06/11/2026 (sept mutations, chacune sur sa propre garde ; 32 gardes) ; le 07/11/2026,
-  dix-sept mutations, 39 gardes et une garde de lecture des variations.
+  dix-sept mutations, 39 gardes et une garde de lecture des variations ; le 08/11/2026, dix-neuf mutations, 41 gardes
+  (filles de 10-19 ans au-dessus des jeunes femmes en 2025 ; première hausse des lycéens d'environ deux points).
 - Figures téléphone : fait le 06/11/2026 (`etudiants-hospit-m.svg`).
-- Relecture de langue : non fait.
+- Relecture de langue : fait le 08/11/2026 (`check_langue.py` sur le texte servi : 9 signalements, tous faux positifs —
+  « a augmenté », titre *Le point sur*, collage de blocs à l'extraction).
 - Recette 320-1280 (`recette.py`) : non fait.
 - Panel après : non fait.
 - Gate éditorial : non fait.
-- Relecture phrase à phrase : non fait (FR seulement, exclusion déclarée de l'EN).
-- Instantané de relecture : non fait.
+- Relecture phrase à phrase : fait le 08/11/2026 (FR seulement, exclusion déclarée de l'EN). Correcteur indépendant sur
+  les 241 phrases servies (build `--minify` + `typo_build`), 60 constats tranchés un à un ; retenus et corrigés : le
+  « résultat en une phrase » qui en comptait deux, le résumé « en trois phrases » qui en comptait deux, une phrase en
+  double dans la fiche de la figure (générateur), les six causes qui se lisaient cinq, « ayant connu » au lieu de
+  « déclarant », « mesurer » une simulation, « lycéens » pour les seuls garçons, deux accords (« qui comptent », « lus »),
+  « départagera » sans complément, l'intertitre « Hospitalisations », le signe de la variation des suicides masculins
+  (jeton `sm_var` signé), la ligne « significatif à âge et sexe égaux » sortie du tableau, le logement déclaré non mesuré,
+  la phrase de méthode qui disait contrôlé le niveau 2010 des étudiants (seul 2017 l'est, par la garde de cohérence avec
+  l'écart publié) ; « le calendrier ne relie pas » ramené à « ne suggère pas de lien direct ». Écartés avec motif :
+  « environ 0,6 point » (valeur centrale 0,63, plage donnée en méthode), temps « étaient… sont » (dernière année au
+  présent), point final de la ligne de source de la figure (convention du pied commun). Deux affirmations nouvelles
+  gardées et vues mordre (voir « Gardes vues mordre »).
+- Instantané de relecture : non fait — à prendre au moment où `ressource.refonte` est posé et `draft` retiré, c'est-à-dire
+  à la publication (retirer `draft` plus tôt exposerait la page au premier push, d'où qu'il vienne).
 - Contre-expertise de la page : non faite.
 - Accord de l'auteur : non donné — deux décisions en attente : demander ou non la tabulation à Santé publique France ou
   l'accès aux microdonnées ; accepter que la découverte principale contredise la note reçue.
