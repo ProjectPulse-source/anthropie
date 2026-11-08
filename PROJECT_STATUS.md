@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-08 (nuit) — Page étudiants : panel, recette, gate ; tableaux de quatre colonnes réparés sur dix pages en ligne
+
+- **Défaut en ligne, toutes pages** (`2092d45`) : sous `table-layout: fixed`, les largeurs 18/32/50 % de `main table`
+  (`_typography.scss`) prenaient toute la largeur ; dans un tableau de quatre colonnes ou plus, les suivantes tombaient à
+  0 px dès 1 024 px (11 tableaux, dix pages FR et EN : qui paie, formules, pourquoi la dette augmente, promesse,
+  découplage…). Trouvé par la recette de la page étudiants, mesuré CSS chargée sur build propre puis sur le site en
+  ligne ; largeurs réservées aux tableaux de trois colonnes au plus. Servi et remesuré après déploiement (run
+  42436407312) : colonnes égales, aucun défilement. ⚠ Une mesure ad hoc sur un build servi à un autre port que celui
+  de sa construction mesure la page SANS CSS : c'est ce qui a fait déclarer le défaut « fausse alerte » par une autre
+  session.
+- **Page `/les-etudiants-vont-ils-plus-mal/`** (brouillon, 404 en ligne) : relecture phrase à phrase commitée
+  (`b862cad`), recette 320-1 600 ok, panel « après » (cinq lecteurs, 14/15 en compréhension, trois corrections dont
+  l'objection du lecteur hostile sur le calendrier des moyens, `84d3154`), gate éditorial sans P0, 41 gardes et 20
+  mutations. Décisions de l'auteur : publier sans attendre Santé publique France (relance vers le 27/11) ; découverte
+  acceptée. Reste : contre-expertise de la page (paquet prêt, navette à lancer par l'auteur), puis publication.
+
 ### 2026-11-07 (après-midi) — Promesse en cinq ans : postes d'internat de 2023-2024 en témoin de série longue (Audit-19, point 5d)
 
 - **Source** : arrêté du 31/07/2023 (JORF n° 0179 du 4 août 2023, texte 32, JORFTEXT000047931748), modifié le 23/08 et le
