@@ -194,7 +194,7 @@ refonte. Relevés : J+30 et J+60. Une reprise est un résultat à observer, jama
 - Push et attestation de la version servie : faits le 01/11 — commits `d9eab9d` et `e4ea114`, déploiement 41257479382
   (build, relecture, deploy : success) ; en ligne, FR « Page mise à jour le 1er novembre 2026 », EN « 1 November 2026 »,
   tableau et travaux antérieurs présents ; `/serie-awp/` affiche « 1er février 2026 ».
-- Fiche D0 : inscrite le 01/11 dans `D:\PRO_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` (réexamen au plus tard le
+- Fiche D0 : inscrite le 01/11 dans `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` (réexamen au plus tard le
   31/12/2026, et avant toute campagne vers APPEP, ACIREPh, APPLS).
 
 ## Gate éditorial (01/11/2026, jugement de la session, après la seconde contre-expertise)

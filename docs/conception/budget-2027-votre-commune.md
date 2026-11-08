@@ -193,7 +193,7 @@ une section de `/budget-2027-votre-commune/` (`#fiche`), non une page neuve — 
   - fait — cache (23/10, constat de l'auteur : v3 invisible chez lui) : les dix scripts portent une empreinte de contenu
     (`partials/js-url.html`, `?v=` = 12 premiers caractères du SHA-256), vue changer sur mutation ; script absent = arrêt ;
   - fait — contre-expertise PRO-20261023-024713 (pièce `0255_Communes-13`, arbitrage dans
-    `D:\PRO_PROMOTION\RECHERCHE_VOTRE_COMMUNE_2026-10-22\ARBITRAGE_1924_COMMUNES-01.md`) : titre tiré de la DGF
+    `D:\PRO\06_PROMOTION\RECHERCHE_VOTRE_COMMUNE_2026-10-22\ARBITRAGE_1924_COMMUNES-01.md`) : titre tiré de la DGF
     sans question suggérant un effet du projet (pièce `0304_Communes-14` : « en 2025, la DGF représente 21,0 % des recettes de fonctionnement, contre 11,7 % pour la médiane des communes de même taille ») ; coût de trésorerie du
     report dit sans montant ; contrôle de bout en bout de la version servie (profil de navigateur ayant l'ancien script en
     cache) ;

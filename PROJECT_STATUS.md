@@ -85,7 +85,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ### 2026-11-07 (midi) — Audit des ressources (reprise) et Audit-19 : corrections 1 à 5c (commits f1570d4, be7c58f, 1836e0d)
 
-Audit : `D:\PRO_PROMOTION\AUDIT_RESSOURCES_2026-11-07\` (`SCAN.md`, `REPRISES_1_A_5_AUTOPORTANT.md`,
+Audit : `D:\PRO\06_PROMOTION\AUDIT_RESSOURCES_2026-11-07\` (`SCAN.md`, `REPRISES_1_A_5_AUTOPORTANT.md`,
 `ARBITRAGE_AUDIT-19_2026-11-07.md`).
 - **Budget 2027 et collectivités (FR/EN)** : le projet n'est pas transmis au Sénat (ordre du jour du 07/11 : « Sous
   réserve de sa transmission ») ; « texte transmis » → « texte initial attendu au Sénat », présent → futur ; organe unique
@@ -149,7 +149,7 @@ Audit : `D:\PRO_PROMOTION\AUDIT_RESSOURCES_2026-11-07\` (`SCAN.md`, `REPRISES_1
 - **Libellés à 11 px** du mur des livres (`auteur-wall__label`, `wall-tile__meta`, `wall-tile__lang`) → 12 px.
 - **Pastilles** (`.pastilles a`, toutes pages) : 44 px de haut sous 600 px (36 avant).
 - Contrôles : hugo 0, typo 0, liens 0, check-all 0 (3 insécables corrigées par `check-typo-fr.py --corriger`).
-- **Audit-16 arbitré** (`D:\PRO_PROMOTION\A_PROPOS_2026-11-07\ARBITRAGE_AUDIT-16_2026-11-07.md`) : recensions
+- **Audit-16 arbitré** (`D:\PRO\06_PROMOTION\A_PROPOS_2026-11-07\ARBITRAGE_AUDIT-16_2026-11-07.md`) : recensions
   distinguées des articles de recherche, définition canonique (espace, temps, groupes), question finale sur le coût
   déplacé ; prémisse « Président hors corpus » rejetée (page relue : quatre livres au corpus).
 - **Audit-17** (contre-arbitrage) : question finale au conditionnel de l'hypothèse — « quels coûts peut-il déplacer,
@@ -166,7 +166,7 @@ et du dossier dette sont dans leurs bandes défilantes voulues, témoin pris). C
 
 ### 2026-11-07 (nuit, fin) — Accueil : maquette retenue de l'Audit-10 en production ; note Amazon à 12 px ; garde du gabarit Livres — poussé sur demande de l'auteur
 
-Maquette retenue validée par l'auteur (`D:\PRO_PROMOTION\MAQUETTES_ACCUEIL_2026-11-07\`, `ARBITRAGE_AUDIT-10_2026-11-07.md`,
+Maquette retenue validée par l'auteur (`D:\PRO\06_PROMOTION\MAQUETTES_ACCUEIL_2026-11-07\`, `ARBITRAGE_AUDIT-10_2026-11-07.md`,
 pièce archivée avec SHA-256). **Hero au téléphone** : la définition, puis les boutons, puis la présentation du site (copie de la
 seconde phrase affichée sur téléphone seulement ; ordinateur inchangé) ; titre et surtitre resserrés ; bouton principal à
 645 px à 320 et 585 px à 390 (908 et 763 avant). **Ressources au téléphone** : liste compacte (vignette 88 px, nature et
@@ -195,7 +195,7 @@ recouvrement avait mordu avant correction (recouvre=true). Non traité, déclar�
 
 ### 2026-11-07 (nuit) — Page /livres/ refaite selon la maquette L2+ (FR et EN) — commité sur `livres-l2plus`, en attente du push
 
-Maquette L2+ retenue par l'auteur après arbitrage de l'Audit-08 (`D:\PRO_PROMOTION\MAQUETTES_PAGE_LIVRES_2026-11-07\`,
+Maquette L2+ retenue par l'auteur après arbitrage de l'Audit-08 (`D:\PRO\06_PROMOTION\MAQUETTES_PAGE_LIVRES_2026-11-07\`,
 pièce archivée avec SHA-256 ; Audit-09 = doublon octet pour octet d'Audit-08). Six portes, une par livre, formulées par la
 question du lecteur (`commencer` de l'index, FR et EN, étendu aux six livres, ordre éditorial conservé) ; voix du livre
 tirée de `extrait_voix` de la fiche (`ligne` facultative ajoutée à ANTHROPIE FR/EN, Président, Livresque ; sinon la chute) ;
@@ -236,7 +236,7 @@ localement par une autre session et par un commit en ligne : `git reset --keep` 
 
 ### 2026-11-07 — Fiches livres : maquette B+ v2 en production (gabarit des six fiches) — commit `b04ff95` poussé le 07/11 sur demande de l'auteur, déploiement 42321338006 vert, page servie vérifiée (navigateur à l'ancienne version en cache compris)
 
-Maquette validée par l'auteur le 07/11 après deux arbitrages (`D:\PRO_PROMOTION\MAQUETTES_PREMIER_COUP_2026-11-07\`,
+Maquette validée par l'auteur le 07/11 après deux arbitrages (`D:\PRO\06_PROMOTION\MAQUETTES_PREMIER_COUP_2026-11-07\`,
 `ARBITRAGE_AUDIT-05_2026-11-07.md` : Audit-05 et Audit-07, pièces archivées avec SHA-256). **Gabarit commun**
 (`layouts/livres/single.html`) : titre avant la couverture sur téléphone (la marge se dissout dans la grille), marge d'achat
 collante dès 768 px et jusqu'au bas de la page, second appel à l'achat (`partials/book-appel.html`), barre d'achat compacte
@@ -332,7 +332,7 @@ Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\PRO-20261105-193614_arb
   somme = total publié), P2 (« ne progresse pas »), P3 (« hausse »), P4 (« plus tôt », impliquée par D1 et D3), Q2 (postes
   dits « ouverts ») ; quatre mutations nouvelles vues mordre. `releve_le` 2026-11-06 ; CSV et JSON étendus ; figures inchangées.
 - Contrôles : `check-all --ci` 0, build 0, audit des liens 0, rendu et dates conformes, linter de langue 0 (FR, EN), relecture
-  phrase à phrase, instantanés refaits, recette 320-1 600 px OK. Chantier : `D:\PRO_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\CAS_INTEGRE\`.
+  phrase à phrase, instantanés refaits, recette 320-1 600 px OK. Chantier : `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\CAS_INTEGRE\`.
 - Poussé seul, par cherry-pick sur `origin/main` dans un arbre séparé, à la demande de l'auteur : `8b2e374` (dette), retenu
   par sa session jusqu'à contre-expertise, reste local et non poussé.
 
@@ -477,7 +477,7 @@ Fiches : `D:\PRO\06_PROMOTION\AUDIT_RESSOURCES_2026-11-05\PASSE_TRANSVERSALE\FIC
 
 ### 2026-11-05 — Corrections P0 de l'audit des ressources (exactitude, 7 pages, FR et EN)
 
-Audit et arbitrage : `D:\PRO_PROMOTION\AUDIT_RESSOURCES_2026-11-05\` (`SCAN.md`, `FICHES\`, `ARBITRAGE_CORRECTION_2026-11-05.md`,
+Audit et arbitrage : `D:\PRO\06_PROMOTION\AUDIT_RESSOURCES_2026-11-05\` (`SCAN.md`, `FICHES\`, `ARBITRAGE_CORRECTION_2026-11-05.md`,
 commit du dépôt PRO `faca73da`). Corrections de fond seulement ; la forme du dossier dette attend la fin de la mesure (16/12).
 - `/quest-ce-que-lanthropie/` : FAQ dette (hypothèse, non fait ; renvoi AWP-03, AWP-09, page générations) ; Anthropocène
   « époque géologique proposée », rejet IUGS 2024 ; `date: 2026-04-03` (première mise en ligne possible, Wayback 16/04) — la
@@ -1208,7 +1208,7 @@ alignés sur le livre (ancres figées, `ancre`), 20 corrections EN et 14 report�
 périodes recalculées, FAQ et fiche du livre corrigées ; pagination de chaque entrée (protocole `corpus`) ; marge de
 défilement des entrées ; fiche de conception (après coup, page non refondue) et règle 12 étendue à toute fiche déclarée
 (témoin vu mordre). Build 0, check-all 0, liens 0, dates 61/61, recette 8/8. Trace :
-`D:\PRO_PROMOTION\ARCHITECTURE_RESSOURCES_2026-10-25\FIDELITE_REGISTRE\EDITION_ANGLAISE\`. Ouvert : guillemets
+`D:\PRO\06_PROMOTION\ARCHITECTURE_RESSOURCES_2026-10-25\FIDELITE_REGISTRE\EDITION_ANGLAISE\`. Ouvert : guillemets
 français dans 25 autres pages anglaises (surtout les promesses : citations de textes français, à trancher page par page).
 
 ### 2026-10-26 (suite) — Registre complet (168/168) et réaligné sur l'édition corrigée ; recette 320-1280 px ; EN LIGNE (`c4e3740`, déploiement vert, version servie attestée FR et EN : « Les 168 jalons du livre » / « All 168 milestones of the book », Gutenberg, Rubicon qui ouvre la guerre civile, Templiers « et pas seulement le métal », nom court du livre dans la ligne d’appartenance)
