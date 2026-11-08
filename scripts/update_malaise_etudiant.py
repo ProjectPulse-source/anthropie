@@ -20,7 +20,7 @@ recherche). Rendez-vous de rattrapage : juin 2027 (série DREES 2026, cartograph
 — relancer les extractions puis outils/extrait.py, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : statistique et débat français, comme les pages voisines du bloc).
 
-Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|ecart|plat|formule|filles1019|premierehausse]
+Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|ecart|plat|formule|filles1019|premierehausse|plafond]
 Sorties : data/ et static/malaise_etudiant.json, static/malaise_etudiant.csv, data/figures_etudiants.json,
 static/img/etudiants-hospit.svg et -m.svg (version téléphone), avec leurs PNG
 """
@@ -54,7 +54,7 @@ PAGE_URL = "stephane-lalut.com/les-etudiants-vont-ils-plus-mal/"
 LICENCE = ("CC BY 4.0 — calcul Stéphane Lalut ; sources Santé publique France (BEH, EnCLASS), DREES, Assurance maladie, "
            "Eurostat (CépiDc-Inserm), Insee (compte de l'éducation, Depp)")
 MUTATIONS = ("etudiants", "calendrier", "suicides", "depense", "composition", "lyceens", "adolescentes", "arrondi", "niveau2012",
-             "trajectoires", "covid", "traitements", "filles", "hommes2017", "ecart", "plat", "formule", "filles1019", "premierehausse")
+             "trajectoires", "covid", "traitements", "filles", "hommes2017", "ecart", "plat", "formule", "filles1019", "premierehausse", "plafond")
 
 
 def log(msg: str) -> None:
@@ -192,6 +192,8 @@ def mutation(c: dict) -> str:
         c["antidep"] = dict(c["antidep"], **{"tous sexes": dict(c["antidep"]["tous sexes"], **{"2015": 0.80})})
     elif m == "formule":        # chiffre de la simulation que la formule publiée ne redonne pas
         c["comp"] = dict(c["comp"], simulation_pts=0.70)
+    elif m == "plafond":        # jeunes femmes en hausse des 2016 : « ne remonte qu'a partir de 2018 » faux
+        c["hosp"] = dict(c["hosp"], f18_24=dict(c["hosp"]["f18_24"], **{"2016": 216.0}))
     elif m == "filles1019":     # filles de 10-19 ans sous les jeunes femmes de 18-24 ans en 2025 : « davantage » faux
         c["hosp"] = dict(c["hosp"], f10_19=dict(c["hosp"]["f10_19"], **{"2025": 300.0}))
     elif m == "premierehausse": # lycéens : quatre points de 2018 à 2022, « environ deux points » faux
@@ -255,7 +257,7 @@ def gardes(c: dict) -> int:
     g(all(f[str(a)] < f["2012"] for a in range(2013, 2021)) and all(f[str(a)] > f["2012"] for a in range(2021, c["der"] + 1)),
       "la hausse ne porte le taux au-dela de son niveau de 2012 qu'a partir de 2021")
     pal = [f[str(a)] for a in range(2014, 2018)]
-    g((max(pal) - min(pal)) / min(pal) < 0.05, "plafonnent jusqu'en 2017")
+    g((max(pal) - min(pal)) / min(pal) < 0.05, "plafonnent jusqu'en 2017 (ne remonte qu'a partir de 2018, page : calendrier des moyens)")
     g(all(f[str(a)] > f["2017"] for a in range(2018, c["der"] + 1) if a != 2020) and f[str(c["der"])] > f["2018"],
       "puis montent")
     f1517 = hf["f15_17"]

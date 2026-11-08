@@ -78,7 +78,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** De 2019 à {{< etu-val "hosp_der" >}}, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de {{< etu-val "hosp_f_var" >}}&nbsp;%, celui des jeunes hommes de {{< etu-val "hosp_h_var" >}}&nbsp;%&nbsp;: la dégradation est réelle et touche d'abord les jeunes femmes, dont le taux, en hausse dès avant le covid, ne dépasse son niveau de 2012 qu'à partir de 2021&nbsp;; chez les étudiants, la dépression déclarée est passée de {{< etu-val "etu_2017" >}}&nbsp;% à {{< etu-val "etu_2021" >}}&nbsp;% de 2017 à 2021, la plus forte hausse parmi les situations professionnelles publiées, mais **personne n'a encore publié la comparaison qui trancherait&nbsp;: avec les jeunes non étudiants du même âge et du même sexe.**
+**Le résultat en une phrase.** De 2019 à {{< etu-val "hosp_der" >}}, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de {{< etu-val "hosp_f_var" >}}&nbsp;%, celui des jeunes hommes de {{< etu-val "hosp_h_var" >}}&nbsp;%&nbsp;: la dégradation est réelle, touche d'abord les jeunes femmes et commence avant le covid&nbsp;; chez les étudiants, la dépression déclarée est passée de {{< etu-val "etu_2017" >}}&nbsp;% à {{< etu-val "etu_2021" >}}&nbsp;% de 2017 à 2021, la plus forte hausse parmi les situations professionnelles publiées, mais **personne n'a encore publié la comparaison qui trancherait&nbsp;: avec les jeunes non étudiants du même âge et du même sexe.**
 
 </div>
 
@@ -131,7 +131,7 @@ Plusieurs conditions d'études se sont dégradées, et certaines sont associées
 - **L'argent.** Dans les enquêtes de l'Observatoire de la vie étudiante, les difficultés financières vont de pair avec une détresse plus fréquente.
 - **L'isolement.** Le premier confinement a frappé particulièrement les étudiants&nbsp;: dans l'étude CONFINS, menée en ligne au printemps 2020, leur risque de symptômes dépressifs était plus élevé que celui des non-étudiants après ajustement (rapport de cotes {{< etu-val "confins_or" >}}).
 
-Ces associations ne font pas une cause. La précarité peut entraîner la détresse&nbsp;; la détresse peut aussi faire échouer ou abandonner les études, et ceux qui vont le plus mal sortent alors de la population observée. CONFINS ne représente pas l'ensemble des jeunes et ne couvre qu'un moment, le premier confinement. Enfin, la baisse des moyens par étudiant commence en 2009, plusieurs années avant l'inflexion des taux de jeunes hospitalisés, lesquels comptent d'ailleurs tous les jeunes, étudiants ou non&nbsp;: le calendrier ne suggère pas de lien direct.
+Ces associations ne font pas une cause. La précarité peut entraîner la détresse&nbsp;; la détresse peut aussi faire échouer ou abandonner les études, et ceux qui vont le plus mal sortent alors de la population observée. CONFINS ne représente pas l'ensemble des jeunes et ne couvre qu'un moment, le premier confinement. Enfin, la dépense par étudiant recule depuis 2009, et la dépression déclarée des étudiants monte déjà de {{< etu-val "etu_2010" >}}&nbsp;% en 2010 à {{< etu-val "etu_2017" >}}&nbsp;% en 2017&nbsp;: les deux calendriers se recouvrent. Le taux de jeunes femmes hospitalisées, qui compte toutes les jeunes femmes, étudiantes ou non, ne remonte en revanche qu'à partir de 2018. Le calendrier ne permet donc ni d'établir ni d'écarter un lien.
 
 ## Que reste-t-il de spécifiquement étudiant&nbsp;? {#specifiquement-etudiant}
 
@@ -143,7 +143,7 @@ La hausse de la dépression déclarée chez les étudiants est la plus forte par
 
 On peut au moins estimer ce que produirait le seul écart de composition par sexe.
 
-Parmi les 18-24 ans, la part des femmes est plus élevée chez les étudiants que chez les non-étudiants&nbsp;: de {{< etu-val "comp_ecart_2017" >}} en 2017, de {{< etu-val "comp_ecart_2021" >}} en 2021 (Eurostat). Or la dépression déclarée a progressé plus vite chez les jeunes femmes. Si étudiants et non-étudiants du même sexe avaient connu exactement la même évolution, la seule différence de composition aurait creusé l'écart entre les deux groupes d'environ **{{< etu-val "comp_sim" >}}** de 2017 à 2021.
+Parmi les 18-24 ans, la part des femmes est plus élevée chez les étudiants que chez les non-étudiants&nbsp;: de {{< etu-val "comp_ecart_2017" >}} en 2017, de {{< etu-val "comp_ecart_2021" >}} en 2021 (Eurostat). Or la dépression déclarée a progressé plus vite chez les jeunes femmes. Si étudiants et non-étudiants du même sexe avaient connu exactement la même évolution, la seule différence de composition aurait rendu, de 2017 à 2021, la hausse des étudiants supérieure d'environ **{{< etu-val "comp_sim" >}}** à celle des non-étudiants.
 
 C'est une simulation, pas une mesure. Elle dit ce que l'on devrait observer si le statut d'étudiant n'avait aucun effet, à sexe égal&nbsp;; elle ne dit pas ce que l'on observe. Quand la comparaison à âge et sexe égaux sera disponible, elle se lira ainsi&nbsp;:
 
