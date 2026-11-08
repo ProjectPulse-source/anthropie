@@ -20,7 +20,7 @@ recherche). Rendez-vous de rattrapage : juin 2027 (série DREES 2026, cartograph
 — relancer les extractions puis outils/extrait.py, recopier l'extrait et son empreinte, relancer ce script.
 Page en français seulement (exclusion déclarée : statistique et débat français, comme les pages voisines du bloc).
 
-Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|ecart|plat|formule]
+Usage : python scripts/update_malaise_etudiant.py [--check] [--mutation=etudiants|calendrier|suicides|depense|composition|lyceens|adolescentes|arrondi|niveau2012|trajectoires|covid|traitements|filles|hommes2017|ecart|plat|formule|filles1019|premierehausse]
 Sorties : data/ et static/malaise_etudiant.json, static/malaise_etudiant.csv, data/figures_etudiants.json,
 static/img/etudiants-hospit.svg et -m.svg (version téléphone), avec leurs PNG
 """
@@ -54,7 +54,7 @@ PAGE_URL = "stephane-lalut.com/les-etudiants-vont-ils-plus-mal/"
 LICENCE = ("CC BY 4.0 — calcul Stéphane Lalut ; sources Santé publique France (BEH, EnCLASS), DREES, Assurance maladie, "
            "Eurostat (CépiDc-Inserm), Insee (compte de l'éducation, Depp)")
 MUTATIONS = ("etudiants", "calendrier", "suicides", "depense", "composition", "lyceens", "adolescentes", "arrondi", "niveau2012",
-             "trajectoires", "covid", "traitements", "filles", "hommes2017", "ecart", "plat", "formule")
+             "trajectoires", "covid", "traitements", "filles", "hommes2017", "ecart", "plat", "formule", "filles1019", "premierehausse")
 
 
 def log(msg: str) -> None:
@@ -192,6 +192,11 @@ def mutation(c: dict) -> str:
         c["antidep"] = dict(c["antidep"], **{"tous sexes": dict(c["antidep"]["tous sexes"], **{"2015": 0.80})})
     elif m == "formule":        # chiffre de la simulation que la formule publiée ne redonne pas
         c["comp"] = dict(c["comp"], simulation_pts=0.70)
+    elif m == "filles1019":     # filles de 10-19 ans sous les jeunes femmes de 18-24 ans en 2025 : « davantage » faux
+        c["hosp"] = dict(c["hosp"], f10_19=dict(c["hosp"]["f10_19"], **{"2025": 300.0}))
+    elif m == "premierehausse": # lycéens : quatre points de 2018 à 2022, « environ deux points » faux
+        r = c["enc"]["risque_depression_lyceens"]
+        c["enc"] = dict(c["enc"], risque_depression_lyceens=dict(r, **{"2018": r["2022"] - 4.0}))
     elif m == "lyceens":        # risque de 2024 sous 2022 : « continue de croître » faux
         c["enc"] = dict(c["enc"], risque_depression_lyceens=dict(c["enc"]["risque_depression_lyceens"], **{"2024": 15.0}))
     return m
@@ -272,6 +277,9 @@ def gardes(c: dict) -> int:
     en = c["enc"]
     r = en["risque_depression_lyceens"]
     g(r["2018"] < r["2022"] < r["2024"], "le risque de depression des lyceens continue de croitre")
+    g(1.5 <= r["2022"] - r["2018"] < 2.5, "lyceens : premiere hausse d'environ deux points entre 2018 et 2022")
+    g(hf["f10_19"]["2025"] > hf["f18_24"]["2025"],
+      "filles de 10-19 ans en 2025 : davantage que les jeunes femmes de 18-24 ans la meme annee")
     g(lg.depasse(en["risque_depression_lyceennes"]["2024"], 2 * en["risque_depression_lyceens_garcons"]["2024"]),
       "lyceennes : plus du double des lyceens")
     lf, lgc = en["risque_depression_lyceennes"], en["risque_depression_lyceens_garcons"]
@@ -328,7 +336,7 @@ def affichage(c: dict) -> dict:
         "hosp_f_var": n(c["f_var"], 0), "hosp_h_var": n(c["m_var"], 0),
         "hosp_t1517_2019": n(hf["t15_17"]["2019"], 0), "hosp_t1517_der": n(hf["t15_17"][der], 0),
         "hosp_f1019_2025": n(hf["f10_19"]["2025"], 0),
-        "sf_avant": n(c["sf_avant"], 2), "sf_apres": n(c["sf_apres"], 2), "sf_var": n(c["sf_var"], 0), "sm_var": n(c["sm_var"], 0),
+        "sf_avant": n(c["sf_avant"], 2), "sf_apres": n(c["sf_apres"], 2), "sf_var": n(c["sf_var"], 0), "sm_var": lg.signe(arrondi(c["sm_var"], 0), 0),
         "s_n23": n(c["n23"], 0), "s_n24": n(c["n24"], 0),
         "anx_etu_2021": n(c["X"]["beh2025"]["anxiete_etudiants_2021"]),
         "lyc_2022": n(en["risque_depression_lyceens"]["2022"]),
@@ -376,8 +384,7 @@ FIG = {
         montre="De 2019 à {der}, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté "
                "de {hosp_f_var} %, celui des jeunes hommes du même âge de {hosp_h_var} %. La courbe des femmes, à peu près "
                "plate de 2014 à 2017, monte dès 2018, avant l'épidémie de covid, et ne dépasse son niveau de 2012 qu'à partir "
-               "de 2021. Ces séries ne distinguent pas les étudiants "
-               "des autres jeunes."),
+               "de 2021."),
 }
 
 
