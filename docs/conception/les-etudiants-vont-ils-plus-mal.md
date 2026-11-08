@@ -322,7 +322,7 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   incertaine suit un abandon déclaré) ; trois constats retenus et corrigés (`84d3154`) : calendrier des moyens présenté
   d'un seul côté (objection du lecteur hostile), « l'écart entre quoi et quoi » de la simulation, résultat en une phrase
   allégé ; cinq écartés avec motif. Réactions et décisions :
-  `D:\PRO_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\REDACTION\PANEL_APRES_ET_GATE_2026-11-08.md`.
+  `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\REDACTION\PANEL_APRES_ET_GATE_2026-11-08.md`.
 - Gate éditorial : fait le 08/11/2026 (même fichier) — exactitude, accroche, progression, originalité, valeur finale
   tenues ; clarté partielle (décrochage du lecteur hors-cible à la section 2, assumé) ; aucun P0, P1 traité.
 - Relecture phrase à phrase : fait le 08/11/2026 (FR seulement, exclusion déclarée de l'EN). Correcteur indépendant sur
@@ -339,10 +339,17 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   gardées et vues mordre (voir « Gardes vues mordre »).
 - Instantané de relecture : non fait — à prendre au moment où `ressource.refonte` est posé et `draft` retiré, c'est-à-dire
   à la publication (retirer `draft` plus tôt exposerait la page au premier push, d'où qu'il vienne).
-- Contre-expertise de la page : non faite.
+- Contre-expertise de la page : faite et arbitrée le 08/11/2026 — pièce `Etudiants_Page-01` (SHA-256 `fa39ff3e…`, archivée
+  avant lecture), verdict « publiable après corrections » ; arbitrage multi-angles
+  `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\ARBITRAGE_PAGE_01_2026-11-08.md` : 18 points, 15 retenus
+  (dont « aucune statistique nationale », hypothèse et étalon de la simulation, écart femmes-hommes non comparable à un
+  écart étudiant non mesuré, inflation, libellé des traitements, covid, SMART Schools), 2 rejetés avec motif ; garde
+  `ecart` retirée avec sa phrase (40 gardes, 19 mutations vues mordre). Contrôle indépendant des corrections en deux
+  passages : 2 bloquants nés des corrections trouvés puis corrigés, zéro défaut nouveau au second.
+- Fiche D0 : inscrite le 08/11/2026 dans `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md`.
 - Décisions de l'auteur (08/11/2026) : (a) publier sans attendre la tabulation de Santé publique France, relance vers le
   27/11/2026 avec le lien de la page publiée ; microdonnées non demandées pour l'instant (à réexaminer sans réponse) ;
   (b) découverte principale acceptée telle quelle, bien qu'elle contredise la note reçue le 23/10. Publication de la
   page : après l'arbitrage de la contre-expertise (paquet
-  `D:\PRO_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\PAQUET_CONTRE_EXPERTISE_PAGE_2026-11-08.md`, navette
+  `D:\PRO\06_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\PAQUET_CONTRE_EXPERTISE_PAGE_2026-11-08.md`, navette
   à lancer par l'auteur : lancement refusé à la session par le classifieur du mode auto).
