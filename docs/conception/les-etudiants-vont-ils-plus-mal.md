@@ -301,16 +301,30 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   plat des antidépresseurs 2015-2017, formule. 17 mutations, chacune sur la garde de sa phrase ; 39 gardes. Restent
   comme limites déclarées : valeurs du Baromètre 2023 lues sur figure (non extractibles du PDF), sources Eurostat,
   Assurance maladie et Insee non relues par le contrôleur depuis leurs archives.
-- Panel avant : non fait (page nouvelle dont la réception décide du choix d'architecture : à faire sur les scénarios).
+- Panel avant : non fait, motif : architecture arbitrée par les pièces 03 et 06 avant l'écriture, texte écrit et relu à la
+  reprise du 08/11 ; un panel sur des scénarios tranchés ne changerait aucune décision. Pas de comparaison avant / après.
 - Gardes vues mordre : fait le 06/11/2026 (sept mutations, chacune sur sa propre garde ; 32 gardes) ; le 07/11/2026,
   dix-sept mutations, 39 gardes et une garde de lecture des variations ; le 08/11/2026, dix-neuf mutations, 41 gardes
-  (filles de 10-19 ans au-dessus des jeunes femmes en 2025 ; première hausse des lycéens d'environ deux points).
+  (filles de 10-19 ans au-dessus des jeunes femmes en 2025 ; première hausse des lycéens d'environ deux points) ; puis
+  vingt mutations : `plafond`, la garde du plateau 2014-2017 (« ne remonte qu'à partir de 2018 ») vue mordre (`84d3154`).
 - Figures téléphone : fait le 06/11/2026 (`etudiants-hospit-m.svg`).
 - Relecture de langue : fait le 08/11/2026 (`check_langue.py` sur le texte servi : 9 signalements, tous faux positifs —
   « a augmenté », titre *Le point sur*, collage de blocs à l'extraction).
-- Recette 320-1280 (`recette.py`) : non fait.
-- Panel après : non fait.
-- Gate éditorial : non fait.
+- Recette 320-1280 (`recette.py`) : fait le 08/11/2026 — premier passage : tableau des six causes à quatre colonnes,
+  4e colonne à 0 px dès 1 024 px ; défaut de l'organe commun (`_typography.scss`, 18/32/50 % sous `table-layout: fixed`),
+  confirmé sur deux pages en ligne et sur un build propre, présent sur onze tableaux de dix pages publiées FR et EN ;
+  corrigé pour tout le site (`2092d45`), onze tableaux remesurés. Second passage : ok à 320, 390, 768, 1 024, 1 280 et
+  1 600 px, figure téléphone servie sous 600 px, 19 ancres sous l'en-tête. Relevé complémentaire d'une autre session
+  (RESSOURCES EDUCATION, lecture seule) : en-têtes collants 58 + 81 px au téléphone ; cibles sous 44 px seulement dans
+  des composants communs (pied de site, titre du livre d'`appel-livre`) ; « · stephane-lalut.com » en début de ligne du
+  pied de figure téléphone (pied commun, limite connue).
+- Panel après : fait le 08/11/2026 — cinq lecteurs isolés, consigne copiée mot pour mot ; compréhension 14/15 (la seule
+  incertaine suit un abandon déclaré) ; trois constats retenus et corrigés (`84d3154`) : calendrier des moyens présenté
+  d'un seul côté (objection du lecteur hostile), « l'écart entre quoi et quoi » de la simulation, résultat en une phrase
+  allégé ; cinq écartés avec motif. Réactions et décisions :
+  `D:\PRO_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\REDACTION\PANEL_APRES_ET_GATE_2026-11-08.md`.
+- Gate éditorial : fait le 08/11/2026 (même fichier) — exactitude, accroche, progression, originalité, valeur finale
+  tenues ; clarté partielle (décrochage du lecteur hors-cible à la section 2, assumé) ; aucun P0, P1 traité.
 - Relecture phrase à phrase : fait le 08/11/2026 (FR seulement, exclusion déclarée de l'EN). Correcteur indépendant sur
   les 241 phrases servies (build `--minify` + `typo_build`), 60 constats tranchés un à un ; retenus et corrigés : le
   « résultat en une phrase » qui en comptait deux, le résumé « en trois phrases » qui en comptait deux, une phrase en
