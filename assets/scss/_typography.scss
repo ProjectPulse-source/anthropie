@@ -285,7 +285,10 @@ main table tr > :first-child:nth-last-child(n+4) ~ * { width: auto; }
     background: rgba(255, 255, 255, 0.6);
   }
 
-  main td {
+  // 08/11/2026 : « main tbody td » ajouté — sans lui, `main tbody td:first-child` (bureau, plus spécifique, !important)
+  // gardait la première colonne des cartes en 11 px au téléphone (mesuré sur la page étudiants ; toute page à tableau simple).
+  main td,
+  main tbody td {
     border: none !important;
     padding: 6px 0 !important;
     white-space: normal !important;
