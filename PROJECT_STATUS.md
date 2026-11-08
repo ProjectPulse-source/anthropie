@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-08 (matin) — Aucun texte servi sous 12 px : variables et tailles en dur portées à 12 px
+
+- **Inventaire mesuré** (185 pages construites, CSS chargée, 1 280 et 390 px) : 1 233 textes visibles sous 12 px au
+  bureau, 903 au téléphone, une quarantaine de composants (mentions légales du pied, « Réutiliser », onglets de dossier,
+  encadré du livre, tableaux, DOI, fiche livre…). Cause : `--fs-tiny` (11 px), `--fs-micro` (10 px) et 29 tailles en dur.
+- **Correction** : les deux variables et les tailles en dur à 12 px (0,75 rem), 31 lignes dans 9 fichiers. Exclus, motif :
+  puce décorative des citations (glyphe), étiquettes d'axe d'un SVG de l'accueil (règles des figures), feuille
+  d'impression (points). **Après : 2 occurrences**, un « e » d'ordinal en exposant (typographie normale).
+- **Mise en page, avant contre après** (185 pages, 320, 390 et 1 280 px) : aucun débordement nouveau ; barres de dossier
+  et barres collantes +1 px, sans passage à la ligne ; en-têtes inchangés ; une source de barre collante de plus tronquée
+  par des points de suspension à 320 px (`/budget-2027-votre-commune/`), comme le veut la règle du 11/10 (source entière
+  dans l'infobulle et la section des sources). Recette 320-1 600 sur deux pages témoins (dossier dette FR et EN,
+  étudiants) : OK. ⚠ Une mesure faite sur un port autre que celui du build lit la page sans CSS (faux « 178
+  débordements » le jour même, mesure refaite).
+
 ### 2026-11-08 (nuit) — Page étudiants : panel, recette, gate ; tableaux de quatre colonnes réparés sur dix pages en ligne
 
 - **Défaut en ligne, toutes pages** (`2092d45`) : sous `table-layout: fixed`, les largeurs 18/32/50 % de `main table`

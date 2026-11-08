@@ -58,8 +58,8 @@
   --fs-h3: 18px;
   --fs-body: 17px;           // 18 px dès 1 024 px (_layout.scss)
   --fs-small: 14px;
-  --fs-tiny: 11px;
-  --fs-micro: 10px;
+  --fs-tiny: 12px;   // 11 px avant le 08/11/2026 : aucun texte servi sous 12 px
+  --fs-micro: 12px;  // 10 px avant le 08/11/2026 : idem
   --lh-tight: 1.06;
   --lh-body: 1.65;
 

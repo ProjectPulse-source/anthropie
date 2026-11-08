@@ -88,7 +88,7 @@
 .reutiliser__source {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   line-height: 1.4;
   color: var(--color-text-subtle);
 }
@@ -148,7 +148,7 @@
   max-width: 72ch;
   margin: 1.25rem 0 0;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.75rem;
   line-height: 1.55;
   color: var(--color-text-subtle);
 
@@ -334,7 +334,7 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 .dossier-dette__onglet b, .dossier-dette__role { white-space: nowrap; }  // libellé court : téléphone seulement (voir plus bas)
 .dossier-dette__role {
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: var(--color-text-subtle);
 }
 // Date de mise à jour : rouge, discrète mais immanquable ; son libellé diffère
@@ -384,7 +384,7 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   // Libellé court : 3 onglets longs demandaient 332 px pour 286 disponibles (mesure du 30/09).
   .dossier-dette__long { display: none; }
   .dossier-dette__court { display: inline; }
-  .dossier-dette__titre { font-size: 0.72rem; padding: 0.18rem 0.45rem; }
+  .dossier-dette__titre { font-size: 0.75rem; padding: 0.18rem 0.45rem; }
   .dossier-dette__maj { font-size: 0.78rem; }
 }
 
@@ -458,7 +458,7 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   }
   .dossier-dette__panneau-titre {
     grid-column: 1 / -1; margin: 0;
-    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
     color: var(--color-text-subtle);
   }
   .dossier-dette__prolongement {
@@ -501,8 +501,8 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
   }
 }
 @media (max-width: 1120px) {
-  .dossier-entete .dossier-dette__titre { font-size: 0.72rem; padding: 0.18rem 0.45rem; }
-  .dossier-entete__source { font-size: 0.74rem; }
+  .dossier-entete .dossier-dette__titre { font-size: 0.75rem; padding: 0.18rem 0.45rem; }
+  .dossier-entete__source { font-size: 0.75rem; }
 }
 // Téléphone (mesure du 11/10/2026) : sur une ligne, la source la plus longue (« Données · Eurostat et BCE 2025 ·
 // projections… », générations futures) débordait de 47 px à 320 px (34 px en anglais). Passée à la ligne, elle portait

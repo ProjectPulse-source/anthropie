@@ -236,7 +236,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 .site-footer__legal {
   max-width: calc(var(--container-max) - 64px); margin: 32px auto 0;
   padding-top: 24px; border-top: 1px solid var(--color-rule-ghost);
-  font-size: 11px; color: var(--color-text-faint);
+  font-size: 12px; color: var(--color-text-faint);
   p { margin: 0; }
 }
 
@@ -849,7 +849,7 @@ main .registre-frise__liste li::before { content: none !important; }
 .companion-banner__body { flex: 1 1 auto; min-width: 0; }
 .companion-banner__eyebrow {
   margin: 0 0 .35rem;
-  font-size: .74rem;
+  font-size: 0.75rem;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--muted, #6b6560);
@@ -1021,7 +1021,7 @@ a.livre-porte__btn--achat:hover { border-color: var(--color-accent); }
   background: var(--color-bg-elevated); border-left: 3px solid var(--color-accent);
   box-shadow: 0 0 0 1px var(--color-accent-soft);
 }
-.anthropie-phrase__eyebrow { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-subtle); margin: 0; }
+.anthropie-phrase__eyebrow { font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-subtle); margin: 0; }
 .anthropie-phrase .canonical-definition { font-family: var(--font-serif); font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.35; color: var(--color-text); margin: 0; }
 .anthropie-phrase__qui { font-size: var(--fs-small); color: var(--color-text-muted); margin: 0; }
 
@@ -1040,7 +1040,7 @@ main .anthropie-frontiere__liste { list-style: none; padding: 0 !important; marg
 .anthropie-frontiere__col--non .anthropie-frontiere__ligne::before { content: "\00D7"; position: absolute; left: -1.1em; color: var(--color-text-subtle); }
 main .anthropie-frontiere__ligne { padding-left: 1.5em !important; margin-bottom: 0 !important; }
 .anthropie-frontiere__ligne::before { left: 0 !important; }
-.anthropie-frontiere__src { font-family: var(--font-sans); font-size: 11.5px; white-space: nowrap; }
+.anthropie-frontiere__src { font-family: var(--font-sans); font-size: 12px; white-space: nowrap; }
 @media (max-width: 680px) {
   .anthropie-frontiere__cols { grid-template-columns: minmax(0, 1fr); }
   .anthropie-frontiere__col, .anthropie-frontiere__col + .anthropie-frontiere__col { padding: 0.8rem 0; border-left: 0; }

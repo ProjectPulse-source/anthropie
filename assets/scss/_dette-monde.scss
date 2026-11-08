@@ -172,7 +172,7 @@ details > summary:hover .repli__action, details > summary:focus-visible .repli__
   // Surtitre « Synthèse » (auteur, 10/10/2026), écrit dans la source : lu par tous ; le même mot sur les pages anglaises, par décision de l'auteur.
   p.retenir__surtitre {
     margin: 0 0 0.5em;
-    font-family: var(--font-mono); font-size: 11px; line-height: 1.4;
+    font-family: var(--font-mono); font-size: 12px; line-height: 1.4;
     letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-pivot);
   }
   @media (max-width: 520px) {
@@ -189,7 +189,7 @@ details > summary:hover .repli__action, details > summary:focus-visible .repli__
   &::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--color-accent); }
   p { margin: 0; }
   p.atelier__surtitre {
-    margin: 0 0 0.45em; font-family: var(--font-mono); font-size: 11px; line-height: 1.4;
+    margin: 0 0 0.45em; font-family: var(--font-mono); font-size: 12px; line-height: 1.4;
     letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-pivot);
   }
   p.atelier__titre { font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.25; color: var(--color-text); margin-bottom: 0.45em; }
@@ -311,7 +311,7 @@ a.atelier__reponse {
 .fiche-commune { margin: 1rem 0 1.4rem; }
 h2.fiche-commune__titre::before {
   content: attr(data-etiquette); display: block; margin-bottom: 0.4rem;
-  font-family: var(--font-sans); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+  font-family: var(--font-sans); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase;
   color: var(--color-text-subtle);
 }
 .fiche-commune__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -372,7 +372,7 @@ h2.fiche-commune__titre::before {
   padding: 1.1rem 1.4rem; border-bottom: 1px solid var(--color-rule-medium);
   h4 { margin: 0 0 0.6rem; font-family: var(--font-serif); font-weight: 400; font-size: 1.2rem; line-height: 1.3; }
 }
-.fiche-commune__num { font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-subtle); margin-bottom: 0.5rem !important; }
+.fiche-commune__num { font-weight: 500; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-subtle); margin-bottom: 0.5rem !important; }
 .fiche-commune__bloc:has(.fiche-commune__frise) .fiche-commune__num { color: #c4511f; }
 .fiche-commune__reponse {
   border-left: 4px solid #eb6834; background: rgba(235, 104, 52, 0.06); padding: 0.9rem 1.1rem;
@@ -386,7 +386,7 @@ h2.fiche-commune__titre::before {
   display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1.2fr); gap: 0.8rem;
   padding: 0.55rem 0; border-bottom: 1px solid var(--color-rule-medium);
 }
-.fiche-commune__mtete { font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-subtle); }
+.fiche-commune__mtete { font-weight: 500; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-subtle); }
 .fiche-commune__mnom {
   font-weight: 600;
   span { display: block; font-weight: 400; font-size: 0.82rem; color: var(--color-text-subtle); }
@@ -398,8 +398,8 @@ h2.fiche-commune__titre::before {
 }
 .fiche-commune__cols { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.5rem; height: 7rem; align-items: end; }
 .fiche-commune__col { display: flex; flex-direction: column; justify-content: flex-end; height: 100%; text-align: center; }
-.fiche-commune__v { font-size: 0.72rem; color: var(--color-text-subtle); margin-bottom: 2px; white-space: nowrap; }
-.fiche-commune__an { font-size: 0.72rem; color: var(--color-text-subtle); border-top: 1px solid var(--color-rule-medium); padding-top: 2px; }
+.fiche-commune__v { font-size: 0.75rem; color: var(--color-text-subtle); margin-bottom: 2px; white-space: nowrap; }
+.fiche-commune__an { font-size: 0.75rem; color: var(--color-text-subtle); border-top: 1px solid var(--color-rule-medium); padding-top: 2px; }
 .fiche-commune__barre {
   min-height: 1px;
   &.actuel { background: #c8ccd4; }
@@ -413,7 +413,7 @@ h2.fiche-commune__titre::before {
   > span:first-child { font-weight: 600; }
 }
 .fiche-commune__ctete {
-  font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-subtle);
+  font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-subtle);
   > span:first-child { font-weight: 500; }
 }
 .fiche-commune__afaire {
@@ -425,7 +425,7 @@ h2.fiche-commune__titre::before {
   display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem;
   border-top: 1px solid var(--color-rule-medium); border-bottom: 1px solid var(--color-rule-medium); padding: 0.8rem 0;
 }
-.fiche-commune__klib { font-weight: 500; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-subtle); }
+.fiche-commune__klib { font-weight: 500; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-subtle); }
 .fiche-commune__kv { font-family: var(--font-serif); font-size: 1.55rem; line-height: 1.2; margin-top: 0.2rem !important; }
 .fiche-commune__km { font-size: 0.78rem; line-height: 1.4; color: var(--color-text-subtle); margin-top: 0.2rem !important; }
 .fiche-commune__repli {
@@ -459,14 +459,14 @@ h2.fiche-commune__titre::before {
   .fiche-commune__mtete { display: none; }
   .fiche-commune__mrow { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
   .fiche-commune__mrow > span[data-col]::before {
-    content: attr(data-col); display: block; font-weight: 500; font-size: 0.7rem; letter-spacing: 0.06em;
+    content: attr(data-col); display: block; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.06em;
     text-transform: uppercase; color: var(--color-text-subtle);
   }
   .fiche-commune__rangee { display: none; }
   .fiche-commune__cal { display: block; }
   .fiche-commune__kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fiche-commune__saisie input[type="search"] { padding: 0.7rem 0.6rem; font-size: 0.95rem; }
-  .fiche-commune__saisie button { padding: 0 0.7rem; font-size: 0.72rem; }
+  .fiche-commune__saisie button { padding: 0 0.7rem; font-size: 0.75rem; }
   .fiche-commune__actions button, .fiche-commune__actions a { margin: 0 0.9rem 0 0; }
   .fiche-commune__frise { grid-template-columns: minmax(0, 1fr); text-align: left; }
   .fiche-commune__frise li { padding: 0 0 0.5rem 1.4rem; }
