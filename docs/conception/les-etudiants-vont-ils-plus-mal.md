@@ -340,5 +340,9 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
 - Instantané de relecture : non fait — à prendre au moment où `ressource.refonte` est posé et `draft` retiré, c'est-à-dire
   à la publication (retirer `draft` plus tôt exposerait la page au premier push, d'où qu'il vienne).
 - Contre-expertise de la page : non faite.
-- Accord de l'auteur : non donné — deux décisions en attente : demander ou non la tabulation à Santé publique France ou
-  l'accès aux microdonnées ; accepter que la découverte principale contredise la note reçue.
+- Décisions de l'auteur (08/11/2026) : (a) publier sans attendre la tabulation de Santé publique France, relance vers le
+  27/11/2026 avec le lien de la page publiée ; microdonnées non demandées pour l'instant (à réexaminer sans réponse) ;
+  (b) découverte principale acceptée telle quelle, bien qu'elle contredise la note reçue le 23/10. Publication de la
+  page : après l'arbitrage de la contre-expertise (paquet
+  `D:\PRO_PROMOTION\RECHERCHE_MALAISE_ETUDIANT_2026-10-23\PAQUET_CONTRE_EXPERTISE_PAGE_2026-11-08.md`, navette
+  à lancer par l'auteur : lancement refusé à la session par le classifieur du mode auto).
