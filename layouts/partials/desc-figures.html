@@ -172,6 +172,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{lyc." -}}{{- errorf "desc-figures: placeholder {lyc.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Ressource « Les étudiants vont-ils plus mal que les autres jeunes ? » : placeholders {etu.<cle>}, depuis
+       data/malaise_etudiant.json (bloc affichage, scripts/update_malaise_etudiant.py). Français seulement (exclusion déclarée). */ -}}
+{{- with site.Data.malaise_etudiant -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{etu.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{etu." -}}{{- errorf "desc-figures: placeholder {etu.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Ressource « Le niveau des élèves baisse-t-il ? » : placeholders {niv.<cle>}, depuis data/niveau_eleves.json
        (bloc affichage, scripts/update_niveau_eleves.py). Français seulement (exclusion déclarée). */ -}}
 {{- with site.Data.niveau_eleves -}}
