@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /en/who-really-pays-public-debt/, build de 0c0ecfc + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /en/who-really-pays-public-debt/, build de a8c3678 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
 The same budgetary effort of €10 billion, allocated using INSEE’s 2023 distributional accounts (an accounting profile at constant structure, not a simulation of its effects), falls on different households depending on the instrument chosen: an adjustment through education weighs proportionally more on low-income households, an adjustment through taxes on income and wealth more on well-off households.
@@ -380,6 +380,12 @@ Each security that matures is repaid, but the debt as a whole is refinanced: the
 Repaying the whole stock is therefore a largely theoretical hypothesis.
 The operative question is what happens while the debt is continuously rolled over: who bears the interest, which budgets carry the adjustments, who inherits the obligations and what they financed.
 Refinancing renews a maturity on the terms of the day: it can lighten or increase the burden, and on its own it does not identify who will bear it.
+Can France get out of the public debt spiral?
+Rolling over loans does not, by itself, condemn debt to grow.
+Its weight rises when the deficit excluding interest persists and when the rate paid exceeds the economy’s growth; it can grow heavier still if lenders demand higher rates, or if adjustments weaken growth.
+It is not inevitable: several European countries have reduced their ratio.
+But the ways out are not equivalent: cutting the deficit, raising growth, lowering the cost of financing or cancelling part of the debt shift the burden to different groups, taxpayers, recipients of public spending, savers or banks.
+A cancellation reduces the stock without removing what rebuilds it.
 This analysis is developed in the book Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
 The same question over the long run
 ANTHROPY – A Big History of Civilization’s Hidden Costs
