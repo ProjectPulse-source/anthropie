@@ -1,4 +1,4 @@
-# relu le 2026-11-05 ; texte servi de /inflation-et-dette-publique/, build de 6d1a13a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /inflation-et-dette-publique/, build de 038893c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L’inflation a-t-elle vraiment allégé la dette française ?
 L’État a-t-il gagné 150 milliards grâce à l’inflation ?
@@ -6,7 +6,7 @@ Pas sous la forme d’une recette.
 L’inflation de 2021-2023, plus forte que prévu, a réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020.
 Cet allègement se réalise au fil des paiements, jusqu’en 2066 : un cinquième seulement fin 2023.
 Il ne prouve pas un gain budgétaire net équivalent.
-Page mise à jour le 5 novembre 2026 · révisions
+Page mise à jour le 7 novembre 2026
 Dossier dette publique
 Données · AFT, Eurostat, BCE 2020-2023
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -116,6 +116,8 @@ la sensibilité de la première année à un point de taux en plus, fin 2022, en
 le portage cumulé des seuls titres publics français détenus, 2016-2025
 −30,3 Md€
 le résultat ordinaire de la Banque de France, tout son bilan, 2023-2025
+Ce mécanisme commande aussi ce que changerait une annulation des titres détenus par la Banque de France, proposée pour la campagne de 2027 : les réserves qui les ont payés resteraient.
+La page « Qui paie » en tire les conséquences, et qui les supporterait.
 Pourquoi ce n’est pas le chiffre du ratio dette/PIB
 Le volet du dossier « Pourquoi la dette publique augmente-t-elle ? » attribue à l’effet des taux et de la croissance une contribution de −16,8 points de PIB à la variation du ratio de dette en 2021-2023.
 Ce n’est pas la baisse observée du ratio : il n’a reculé que de 5,4 points ; les déficits primaires y ont ajouté 11,5 points.
@@ -298,10 +300,7 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (AFT, Eurostat, BCE, Banque de France, Commission européenne), sous leurs propres conditions.
-Révisions
-5 novembre 2026 — Correction : la plage des prévisions de début 2021 s’écrit désormais de 144 à 172 milliards, bornes qui contiennent les valeurs calculées (144,1 et 171,5) ; elle était arrondie à 145-170 sans le dire.
-La phrase sur le recul du ratio en 2021-2023 ne présente plus les déficits primaires comme sa cause : elle dit qu’ils y ont ajouté 11,5 points.
-16 octobre 2026 — Correction : l’écart dû aux achats de la banque centrale culmine d’avril à juillet 2022, quatre mois à égalité à la précision affichée, et non en mai 2022.
+Les valeurs reprises de l’AFT, dans les fichiers comme dans les graphiques, ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

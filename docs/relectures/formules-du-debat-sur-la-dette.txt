@@ -1,4 +1,4 @@
-# relu le 2026-11-07 ; texte servi de /formules-du-debat-sur-la-dette/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /formules-du-debat-sur-la-dette/, build de 038893c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que valent les formules du débat sur la dette ?
 Le 8 septembre 2025, à l’Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
@@ -145,7 +145,7 @@ Ses députés, eux, parlent dans la séance de septembre 2025.
 Le relevé suit la règle de la séance : 352 énoncés sur la dette chez 21 candidats, codés par deux agents automatiques du même modèle de langage, dont l’un sans le nom du candidat, puis arbitrés par un troisième.
 Parmi eux, 71 portent un chiffre vérifiable ; tous ont été testés, chacun à la date de son texte et sur les données publiées à cette date.
 Un seul énoncé nie explicitement la contrainte.
-Sur les 352, 62 l’admettent en refusant la politique qu’on en déduit (du type : la dette existe, mais…), 43 la présentent comme une nécessité qui ferme le choix, 10 contestent l’usage de l’alarme, 4 appellent à annuler une part de la dette (dont 3 chez Jean-Luc Mélenchon, à propos des titres détenus par la Banque centrale européenne) ; les 232 autres ne prennent position sur aucun de ces registres (constats, mesures).
+Sur les 352, 62 l’admettent en refusant la politique qu’on en déduit (du type : la dette existe, mais…), 43 la présentent comme une nécessité qui ferme le choix, 10 contestent l’usage de l’alarme, 4 appellent à annuler une part de la dette (dont 3 chez Jean-Luc Mélenchon, à propos des titres détenus par la Banque centrale européenne, une proposition dont la page « Qui paie » examine ce qu’elle déplacerait) ; les 232 autres ne prennent position sur aucun de ces registres (constats, mesures).
 Ces comptes ne mesurent pas l’adhésion des candidats à la contrainte : ils disent comment leurs textes l’emploient.
 Le registre de la contrainte reconnue est le plus fréquent chez Jean-Luc Mélenchon (20 énoncés), François Ruffin (13), Marine Tondelier (10) et Florian Philippot (9), partisan de la sortie de l’Union européenne : un même usage de l’argument, qui ne dit rien d’une convergence des programmes.
 La nécessité vient d’abord de Gabriel Attal (13) ; on la trouve aussi chez Jean-François Legendre (6), David Lisnard (5) et François Ruffin (7), dont les textes emploient les deux registres.

@@ -168,6 +168,8 @@ Ces mesures ne s'additionnent pas et ne se retranchent pas les unes des autres&n
 
 </details>
 
+Ce mécanisme commande aussi ce que changerait une annulation des titres détenus par la Banque de France, proposée pour la campagne de 2027&nbsp;: les réserves qui les ont payés resteraient. La page «&nbsp;Qui paie&nbsp;» en tire [les conséquences, et qui les supporterait](/qui-paie-la-dette-publique/#annuler-banque-de-france).
+
 ## Pourquoi ce n'est pas le chiffre du ratio dette/PIB {#ratio}
 
 Le volet du dossier [«&nbsp;Pourquoi la dette publique augmente-t-elle&nbsp;?&nbsp;»](/pourquoi-la-dette-publique-augmente/) attribue à l'effet des taux et de la croissance une contribution de −{{< dyn-val "effet_2021_2023" >}}&nbsp;points de PIB à la variation du ratio de dette en 2021-2023. Ce n'est pas la baisse observée du ratio&nbsp;: il n'a reculé que de {{< dyn-val "recul_2021_2023" >}}&nbsp;points&nbsp;; les déficits primaires y ont ajouté {{< dyn-val "deficits_2021_2023" >}}&nbsp;points. Et les {{< infl-val "pts_pib" >}}&nbsp;% du PIB de 2020 de cette page ne sont pas {{< infl-val "pts_pib" >}}&nbsp;points de baisse du ratio&nbsp;: le premier chiffre réagit à toute la croissance du PIB nominal, inflation prévue comprise, pour toutes les administrations publiques&nbsp;; le second ne retient que la part non prévue de l'inflation, sur les seuls paiements déjà promis par l'État. Les rapprocher demanderait une décomposition qui n'est pas faite ici.

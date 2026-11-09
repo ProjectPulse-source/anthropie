@@ -1,4 +1,4 @@
-# relu le 2026-11-07 ; texte servi de /en/public-debt-debate-claims/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /en/public-debt-debate-claims/, build de 038893c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What are the claims of the French debt debate worth?
 On 8 September 2025, in the French National Assembly, every group invoked the figures on public debt.
@@ -147,7 +147,7 @@ Its members of the Assembly, for their part, speak in the September 2025 debate.
 Collection follows the rule used for the debate: 352 statements about debt from 21 candidates, coded by two automated agents of the same language model, one of them without the candidate’s name, then arbitrated by a third.
 Of these, 71 carry a checkable figure; all were tested, each at the date of its text and on the data published at that date.
 Only one statement explicitly denies the constraint.
-Of the 352, 62 accept the constraint while rejecting the policy derived from it (of the type: the debt exists, but…), 43 present it as a necessity that closes the choice, 10 contest the use of alarm, 4 call for cancelling part of the debt (including 3 from Jean-Luc Mélenchon, about the securities held by the European Central Bank); the other 232 take no position in any of these registers (findings, measures).
+Of the 352, 62 accept the constraint while rejecting the policy derived from it (of the type: the debt exists, but…), 43 present it as a necessity that closes the choice, 10 contest the use of alarm, 4 call for cancelling part of the debt (including 3 from Jean-Luc Mélenchon, about the securities held by the European Central Bank, a proposal whose effects are examined in who would pay for it); the other 232 take no position in any of these registers (findings, measures).
 These counts do not measure the candidates’ acceptance of the constraint: they show how their texts use it.
 The register of the acknowledged constraint is the most frequent for Jean-Luc Mélenchon (20 statements), François Ruffin (13), Marine Tondelier (10) and Florian Philippot (9), who advocates leaving the European Union: a shared use of the argument, which says nothing of a convergence of programmes.
 Necessity comes first from Gabriel Attal (13); it also appears with Jean-François Legendre (6), David Lisnard (5) and François Ruffin (7), whose texts use both registers.

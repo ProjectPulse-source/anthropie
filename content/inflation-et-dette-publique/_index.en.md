@@ -165,6 +165,8 @@ These measures are not added to or subtracted from one another: no combination o
 
 </details>
 
+The same mechanism governs what a cancellation of the bonds held by the Banque de France, proposed for the 2027 campaign, would change: the reserves that paid for them would remain. The "Who pays" page draws [the consequences, and who would bear them](/en/who-really-pays-public-debt/#annuler-banque-de-france).
+
 ## Why this is not the debt-to-GDP figure {#ratio}
 
 The debt series page ["Why does public debt rise?"](/en/why-does-public-debt-rise/) attributes to the interest-growth effect a contribution of −{{< dyn-val "effet_2021_2023" >}} percentage points of GDP to the change in the debt ratio in 2021–2023. That is not the observed fall in the ratio: it fell by only {{< dyn-val "recul_2021_2023" >}} points; primary deficits added {{< dyn-val "deficits_2021_2023" >}} points to it. And the {{< infl-val "pts_pib" >}}% of 2020 GDP on this page is not a {{< infl-val "pts_pib" >}}-point fall in the ratio: the first figure responds to all nominal GDP growth, expected inflation included, for all of general government; the second counts only the unexpected part of inflation, on the payments already promised by the central government. Bringing them together would require a decomposition that is not made here.

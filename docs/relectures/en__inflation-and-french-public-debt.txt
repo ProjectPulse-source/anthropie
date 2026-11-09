@@ -1,4 +1,4 @@
-# relu le 2026-11-06 ; texte servi de /en/inflation-and-french-public-debt/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /en/inflation-and-french-public-debt/, build de 038893c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Did inflation really ease France’s debt burden?
 Did the French government gain €150bn from inflation?
@@ -6,7 +6,7 @@ Not as revenue.
 The 2021–2023 inflation surprise reduced the real value of the payments promised on France’s end-2020 fixed-rate marketable government debt by about €150bn in 2020 euros.
 That relief materialises as payments fall due, until 2066: only a fifth of it by end-2023.
 It does not prove an equivalent net fiscal gain.
-Page updated 5 November 2026 · revisions
+Page updated 7 November 2026
 Public debt dossier
 Data · AFT, Eurostat, ECB 2020-2023
 ↓ Charts, data and citations to reuseReuse this page
@@ -116,6 +116,8 @@ first-year sensitivity to one more point on rates, at end-2022, in a scenario
 the cumulative carry on French public-sector securities held, 2016–2025
 −€30.3bn
 the Banque de France’s ordinary result, whole balance sheet, 2023–2025
+The same mechanism governs what a cancellation of the bonds held by the Banque de France, proposed for the 2027 campaign, would change: the reserves that paid for them would remain.
+The “Who pays” page draws the consequences, and who would bear them.
 Why this is not the debt-to-GDP figure
 The debt series page “Why does public debt rise?” attributes to the interest-growth effect a contribution of −16.8 percentage points of GDP to the change in the debt ratio in 2021–2023.
 That is not the observed fall in the ratio: it fell by only 5.4 points; primary deficits added 11.5 points to it.
@@ -292,10 +294,7 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (AFT, Eurostat, ECB, Banque de France, European Commission), under their own terms.
-Revisions
-5 November 2026 — Correction: the range of early-2021 forecasts now reads 144 to 172 billion, bounds that contain the computed values (144.1 and 171.5); it was rounded to 145-170 without saying so.
-The sentence on the fall in the ratio in 2021-2023 no longer presents primary deficits as its cause: it says they added 11.5 points to it.
-16 October 2026 — Correction: the gap due to central bank purchases peaks from April to July 2022, four months tied at the displayed precision, not in May 2022.
+Values taken from Agence France Trésor (AFT), in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
 All resources: data, explainers and reference material →
 Share
 WhatsApp
