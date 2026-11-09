@@ -4,8 +4,9 @@ url: /en/who-really-pays-public-debt/
 description: "Who pays for public debt? Holding it is not paying for it: taxes, spending and inflation do not spread the adjustment across the same groups. Official French data."
 chapo: "The same budgetary effort of €{qp.exp_effort} billion, allocated using INSEE's {qp.cd_annee} distributional accounts (an accounting profile at constant structure, not a simulation of its effects), falls on different households depending on the instrument chosen: an adjustment through education weighs proportionally more on low-income households, an adjustment through taxes on income and wealth more on well-off households. Who pays for public debt depends on what it finances, how it is financed and the adjustments chosen to service it."
 date: 2026-09-30
-lastmod: 2026-11-08
+lastmod: 2026-11-09
 donnees: [dette_officielle, qui_paie_donnees]
+date_suit: [annulation_bdf]  # section #annuler-banque-de-france (scripts/update_annulation_bdf.py)
 og_title: "Who really pays for public debt? — what the data show — S. Lalut"
 og_image: "images/og-qui-paie-dette-en.jpg"
 og_image_alt: "Share card: “Same adjustment, different payers” — the same €10 billion adjustment, as a % of the income of each standard-of-living decile, under three decisions: cutting education, raising taxes, cutting pensions (INSEE, 2023)."
@@ -46,6 +47,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   accueil: 2  # ordre sur l'accueil (maquette du 04/11/2026, arbitrage PRO-20261104-181823)
   type: ["quantitatif"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-11"  # date de la relecture attestée ; absente = page pas encore refondue
+  conception: "docs/conception/annuler-dette-banque-de-france.md"  # section #annuler-banque-de-france (09/11/2026)
   bloc: "dette"
   livres: ["dette-publique-qui-paie-vraiment"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 20
@@ -119,6 +121,40 @@ Four questions are often confused: who borrows, who finances and receives the in
 **Financing is not gaining.** The creditor advanced the funds: interest pays for that advance, for time and for risk. Its real return takes account of inflation and of changes in the security's value, and its advantage over another investment is measured at a comparable horizon and risk. "We owe it to ourselves" is therefore only partly true, and does not say which of "us" receive and which finance.
 
 The published breakdown classifies holders by **residence**, not nationality: a "non-resident" can be a foreign fund managing the savings of French households, and a French household can hold government securities without knowing it, through its assurance-vie policy. The Banque de France statistic on the long-term securities of general government as a whole covers a different scope from Agence France Trésor's, which is limited to central government's marketable securities: the two shares are not interchangeable.
+
+</details>
+
+## Cancelling the debt held by the Banque de France: who would pay? {#annuler-banque-de-france}
+
+In August 2026, Jean-Luc Mélenchon revived a proposal first made in 2020 at the Institut Rousseau: cancelling the government bonds held by the Banque de France. Its supporters argue that no private holder would suffer a loss, since these bonds have already been bought back; their critics dispute that it would cost the community nothing. Olivier Blanchard considers the operation has no effect: the State would save interest but lose as much in profits passed on by its central bank (as reported by Euronews, 27 August 2026). Christine Lagarde, President of the ECB, replied on 10 September that cancellation of debt "is covered under Article 123" of the Treaty, and that anything going against it "would be a pure violation of the Treaty". To weigh these readings, we first need to see how the State borrows, and where the Banque de France sits in that circuit.
+
+{{< figure-svg fichier="schema-emprunt-etat-en" alt="Two-part diagram. The path of a bond: the Agence France Trésor sells government bonds to primary dealers, who keep them or resell them to investors; from 2015 to 2022 (net purchases), the Banque de France bought some on that market, never from the State itself, paying with reserves credited to the seller's bank. Interest paid each year: the State pays it to every holder, the Banque de France included; the Banque de France pays the ECB deposit rate on reserves placed in its deposit facility, and passes profits on to the State depending on its results." >}}The path of a government bond, then the interest paid each year, and to whom. The numbers refer to the steps described under the diagram.{{< /figure-svg >}}
+
+**What cancellation would erase.** The Banque de France reports holding {{< annul-val "e" >}} billion euros of public debt bought for the Eurosystem on {{< annul-val "date_e" >}}, at amortised cost, against {{< annul-val "e0" >}} on {{< annul-val "date_e0" >}}: the amount falls at each maturity, because repaid bonds are no longer replaced. Relative to GDP, this amount represents about {{< annul-val "pts" >}} percentage points. The actual fall in Maastricht debt would depend on which French bonds were cancelled and on their nominal value, which this figure does not give, and would require the operation to be allowed and recognised by European statistics.
+
+**What it would not erase.** The Banque de France paid for these bonds in central bank money: reserves credited to banks (step 4 of the diagram). Cancelling the bonds does not remove these reserves. Their cost depends on the remuneration rules: reserves that banks place in the Eurosystem deposit facility earn {{< annul-val "dfr" >}}% since {{< annul-val "date_dfr" >}}, while minimum reserves are no longer remunerated and excess reserves left on current accounts are not. When it bought the bonds, the Banque de France exchanged reserves for government bonds; cancellation would make that exchange permanent.
+
+**Two paths.** Without cancellation, each bond that matures is repaid, if need be by new borrowing on the market; other things being equal, that repayment removes the same amount of reserves. With cancellation, the State no longer has that amount to repay or refinance, but the reserves remain. As long as a bond is running, the interest the State would stop paying is income the Banque de France would lose, even if the two effects do not necessarily hit the budget in the same year: what it passes on to the State depends on its results.
+
+**A simulation, not an observed saving.** At maturity, the gap depends on the rate at which the State would have refinanced and on the cost of the reserves kept. Suppose each euro that matures is refinanced over ten years, and that cancellation keeps one euro of reserves paid at the deposit rate instead. In 2025, the State borrowed over ten years at {{< annul-val "m25" >}}% on average and the deposit rate was {{< annul-val "d25" >}}%: the differential would amount to a gain of about {{< annul-val "e100_25" >}} {{< annul-val "u100_25" >}} a year per 100 billion concerned, or {{< annul-val "flux25" >}} billion if all {{< annul-val "e" >}} billion were. In 2023 and 2024 the sign was the opposite: the deposit rate ({{< annul-val "d23" >}} then {{< annul-val "d24" >}}%) exceeded the ten-year rate ({{< annul-val "m23" >}} then {{< annul-val "m24" >}}%), a loss of {{< annul-val "e100_23" >}} then {{< annul-val "e100_24" >}} {{< annul-val "u100_24" >}} a year per 100 billion. **The result can therefore change sign: cancellation guarantees neither a saving nor a loss.** These figures are neither a forecast nor an achieved saving: they apply each year's rates to the June 2026 amount, while the State also borrows at shorter maturities.
+
+**Who would bear the burden.** Cancellation would change how burdens and income are shared between the State, the Banque de France, banks and, possibly, their customers; the result would depend on the rules for remunerating reserves and on the monetary instruments used.
+
+| Scenario | Who bears the burden | Consequence |
+|---|---|---|
+| No cancellation | The State pays the interest and repays the bonds, if need be by new borrowing; the Banque de France bears the cost of reserves until maturity | Flows follow maturities, rates and the Banque de France's results |
+| Cancellation, nothing else changes | The State no longer pays this interest or repays these bonds; the Banque de France loses this income and keeps the reserves | The result for the whole depends on the gap between the refinancing avoided and the cost of reserves |
+| Cancellation and lower remuneration of reserves, as the Institut Rousseau proposes | Banks lose part of the interest they would have received; the effect on their customers and shareholders depends on their behaviour | A saving for the public sector, matched by a redistribution |
+| Cancellation, then recapitalisation of the Banque de France by the State | The State transfers resources to its central bank | The apparent gain is offset, partly or fully |
+| Cancellation and a lastingly too accommodative monetary policy | The community, through inflation | A conditional risk, not an automatic consequence (objection by John Cochrane, *The Grumpy Economist*, 24 August 2026) |
+
+**What each side gets right.** Supporters of cancellation are right on one point: no private holder would lose. So is Olivier Blanchard, as long as the bonds are running: what the State would stop paying, the Banque de France would stop receiving. But debt disappearing from the State's accounts does not make its cost disappear for the community, and reserves that remain do not rule out any saving. Cancellation can change the official amount of debt, how burdens are shared and when; it guarantees neither a saving nor the absence of a cost.
+
+**Law and statistics.** Article 123 of the Treaty forbids the ECB and national central banks to lend to governments and to buy their bonds directly from them. It does not name cancellation: linking cancellation to it is the ECB's reading, which the Institut Rousseau disputes by invoking the purpose of the rule, and the Court of Justice of the EU has not ruled. In national accounts, a cancellation agreed between the Banque de France and the State would be recorded as a capital transfer from one to the other (ESA 2010, point 4.165 f): it could improve the measured public balance once, without bringing in a single euro of cash. A refusal to pay decided by the State alone would not be recorded, and the debt would remain due. We found no Eurostat decision on this case.
+
+<details class="repli"><summary>What this comparison does not say</summary>
+
+The State and the Banque de France taken together are an analytical perimeter, not an official statistic: the Banque de France is not part of general government, and the State does not answer for its liabilities. The year's average deposit rate approximates the cost of reserves without measuring it bond by bond, and the link between a cancelled bond and a euro of reserves kept is a simplification: reserves also depend on operations across the whole euro area, and the Eurosystem has other ways than selling bonds to drain liquidity. In the public sector purchase programmes, {{< annul-val "partage" >}}% of purchases are subject to risk sharing across the Eurosystem; that share does not apply directly to the French bonds held by the Banque de France alone. The Banque de France's results do not depend only on its bonds and reserves: in 2025, an exceptional operation on its gold made them positive. Finally, neither the effect on market rates, nor the effect on confidence, nor the risk of inflation can be quantified with these data.
 
 </details>
 

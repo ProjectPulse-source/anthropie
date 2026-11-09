@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-09 — « Qui paie » : section « Annuler la dette détenue par la Banque de France : qui paierait ? » (non publiée)
+
+- Origine : vidéo BLAST du 08/11/2026 (analyse : `D:\PRO\06_PROMOTION\RECHERCHE_VIDEO_BLAST_DETTE_ILLEGITIME_2026-11-09\`) ;
+  fiche `docs/conception/annuler-dette-banque-de-france.md`. Deux contre-expertises arbitrées : PRO-20261109-025514
+  (raisonnement : comparer deux trajectoires, non deux bilans) et PRO-20261109-041205 (section construite : publier après
+  corrections, toutes acceptées ; calculs refaits, exacts).
+- `scripts/update_annulation_bdf.py` → `data/annulation_bdf.json`, shortcode `annul-val` ; lit l'extrait figé du portage,
+  la dette officielle, la série quotidienne du taux de dépôt (BCE) ; encours APP + PEPP transcrits et vérifiés contre le
+  communiqué archivé (`scripts/sources_annulation_bdf/`, SHA256SUMS). Six gardes et témoins (dont : taux de dépôt moyen
+  2025 = taux de référence de l'extrait), six mutations arrêtées. Correction en cours de route : pour 2023-2024, le taux
+  de référence de l'extrait était celui des opérations principales de refinancement ; le calcul prend le taux de dépôt.
+- Schéma « Comment l'État emprunte, et qui reçoit les intérêts » (`scripts/generer_schema_emprunt_etat.py`, FR, EN,
+  bureau, téléphone) ; deux contrôleurs indépendants, corrections appliquées ; check-figures 0.
+- Contrôles : check-all --ci 0, build, typo_build, rendu, dates, liens ; LanguageTool FR 0 ; recette 320-1600 OK ;
+  relecture phrase à phrase et instantanés. Reste : panel, gate éditorial, raccords, accord de l'auteur, publication.
+
 ### 2026-11-09 — Nuage « Prix de la dette et inflation » : chaque pays nommé (agrandissement de la zone dense)
 
 - Demande de l'auteur : « tous les points du graphe n'ont pas leur pays ». Seize pays de la zone euro dans environ

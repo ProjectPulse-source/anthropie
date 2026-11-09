@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1915" role="img" font-variant-numeric="tabular-nums" aria-labelledby="sem-t sem-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="sem-t">Comment l'État emprunte, et qui reçoit les intérêts</title><desc id="sem-d">Schéma en deux volets. Premier volet, le chemin d'un titre : l'Agence France Trésor vend les titres de l'État aux enchères à des banques agréées, les spécialistes en valeurs du Trésor ; elles les revendent aux investisseurs, en France et à l'étranger ; de 2015 à 2022 (achats nets), la Banque de France en a acheté sur ce marché, jamais directement à l'État, en payant avec des réserves créditées aux banques. Second volet, ce que l'État paie chaque année : les coupons, à chaque détenteur, Banque de France comprise ; la Banque de France paie de son côté les réserves placées par les banques, au taux de dépôt de la BCE, et reverse ses bénéfices à l'État selon ses résultats. À l'échéance, l'État rembourse chaque titre avec sa trésorerie ou un nouvel emprunt.</desc>
+<rect width="300" height="1915" fill="#ffffff"/>
+<defs><marker id="fb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#184f95"/></marker><marker id="fo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker><marker id="fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#898781"/></marker></defs>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Comment l'État emprunte, et</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">qui reçoit les intérêts</text>
+<text x="0" y="82.0" font-size="13.5" font-weight="600" fill="#184f95">1. Le chemin d'un titre</text>
+<rect x="35.0" y="94.0" width="230.0" height="58.0" rx="6" fill="#f6f5f1" stroke="#e1e0d9"/>
+<text x="150.0" y="119.5" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">L'État</text>
+<text x="150.0" y="135.6" font-size="12" text-anchor="middle" fill="#52514e">Agence France Trésor</text>
+<rect x="35.0" y="186.0" width="230.0" height="58.0" rx="6" fill="#f6f5f1" stroke="#e1e0d9"/>
+<text x="150.0" y="203.6" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">Spécialistes en valeurs du</text>
+<text x="150.0" y="219.6" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">Trésor</text>
+<text x="150.0" y="235.6" font-size="12" text-anchor="middle" fill="#52514e">banques agréées</text>
+<rect x="35.0" y="278.0" width="230.0" height="58.0" rx="6" fill="#f6f5f1" stroke="#e1e0d9"/>
+<text x="150.0" y="295.6" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">Investisseurs</text>
+<text x="150.0" y="311.6" font-size="12" text-anchor="middle" fill="#52514e">assureurs, banques, fonds,</text>
+<text x="150.0" y="327.6" font-size="12" text-anchor="middle" fill="#52514e">en France et à l'étranger</text>
+<rect x="35.0" y="370.0" width="230.0" height="58.0" rx="6" fill="#f6f5f1" stroke="#e1e0d9"/>
+<text x="150.0" y="395.6" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">Banque de France</text>
+<text x="150.0" y="411.6" font-size="12" text-anchor="middle" fill="#52514e">pour l'Eurosystème</text>
+<path d="M150.0,155.0 L150.0,183.0" fill="none" stroke="#184f95" stroke-width="2" marker-end="url(#fb)"/>
+<circle cx="172.0" cy="169.0" r="9" fill="#184f95"/>
+<text x="172.0" y="173.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">1</text>
+<path d="M150.0,247.0 L150.0,275.0" fill="none" stroke="#184f95" stroke-width="2" marker-end="url(#fb)"/>
+<circle cx="172.0" cy="261.0" r="9" fill="#184f95"/>
+<text x="172.0" y="265.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">2</text>
+<path d="M150.0,339.0 L150.0,367.0" fill="none" stroke="#184f95" stroke-width="2" marker-end="url(#fb)"/>
+<circle cx="172.0" cy="353.0" r="9" fill="#184f95"/>
+<text x="172.0" y="357.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">3</text>
+<path d="M268.0,399.0 L287.0,399.0 L287.0,307.0 L268.0,307.0" fill="none" stroke="#898781" stroke-width="2" marker-end="url(#fg)"/>
+<circle cx="287.0" cy="353.0" r="9" fill="#898781"/>
+<text x="287.0" y="357.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">4</text>
+<circle cx="9.0" cy="452.0" r="9" fill="#184f95"/>
+<text x="9.0" y="456.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">1</text>
+<text x="26.0" y="456.0" font-size="13.5" fill="#0A0A0E">L'Agence France Trésor vend</text>
+<text x="26.0" y="473.0" font-size="13.5" fill="#0A0A0E">les titres de l'État, pour</text>
+<text x="26.0" y="490.0" font-size="13.5" fill="#0A0A0E">l'essentiel aux enchères</text>
+<text x="26.0" y="507.0" font-size="13.5" fill="#0A0A0E">(adjudication). Seuls les</text>
+<text x="26.0" y="524.0" font-size="13.5" fill="#0A0A0E">spécialistes en valeurs du</text>
+<text x="26.0" y="541.0" font-size="13.5" fill="#0A0A0E">Trésor y achètent : l'État</text>
+<text x="26.0" y="558.0" font-size="13.5" fill="#0A0A0E">reçoit leur argent, c'est</text>
+<text x="26.0" y="575.0" font-size="13.5" fill="#0A0A0E">l'emprunt.</text>
+<circle cx="9.0" cy="594.0" r="9" fill="#184f95"/>
+<text x="9.0" y="598.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">2</text>
+<text x="26.0" y="598.0" font-size="13.5" fill="#0A0A0E">Ils les gardent ou les</text>
+<text x="26.0" y="615.0" font-size="13.5" fill="#0A0A0E">revendent aux investisseurs,</text>
+<text x="26.0" y="632.0" font-size="13.5" fill="#0A0A0E">sur le marché « secondaire ».</text>
+<circle cx="9.0" cy="651.0" r="9" fill="#184f95"/>
+<text x="9.0" y="655.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">3</text>
+<text x="26.0" y="655.0" font-size="13.5" fill="#0A0A0E">De 2015 à 2022 (achats nets),</text>
+<text x="26.0" y="672.0" font-size="13.5" fill="#0A0A0E">la Banque de France en a</text>
+<text x="26.0" y="689.0" font-size="13.5" fill="#0A0A0E">acheté sur ce marché pour</text>
+<text x="26.0" y="706.0" font-size="13.5" fill="#0A0A0E">l'Eurosystème (les banques</text>
+<text x="26.0" y="723.0" font-size="13.5" fill="#0A0A0E">centrales de la zone euro),</text>
+<text x="26.0" y="740.0" font-size="13.5" fill="#0A0A0E">puis a remplacé les titres</text>
+<text x="26.0" y="757.0" font-size="13.5" fill="#0A0A0E">échus jusqu'en juillet 2023 ou</text>
+<text x="26.0" y="774.0" font-size="13.5" fill="#0A0A0E">fin 2024 selon le programme ;</text>
+<text x="26.0" y="791.0" font-size="13.5" fill="#0A0A0E">jamais à l'État lui-même : le</text>
+<text x="26.0" y="808.0" font-size="13.5" fill="#0A0A0E">traité européen l'interdit</text>
+<text x="26.0" y="825.0" font-size="13.5" fill="#0A0A0E">(article 123).</text>
+<circle cx="9.0" cy="844.0" r="9" fill="#898781"/>
+<text x="9.0" y="848.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">4</text>
+<text x="26.0" y="848.0" font-size="13.5" fill="#0A0A0E">Elle les a payés en monnaie de</text>
+<text x="26.0" y="865.0" font-size="13.5" fill="#0A0A0E">banque centrale, créée pour</text>
+<text x="26.0" y="882.0" font-size="13.5" fill="#0A0A0E">l'achat : des réserves</text>
+<text x="26.0" y="899.0" font-size="13.5" fill="#0A0A0E">créditées à la banque du</text>
+<text x="26.0" y="916.0" font-size="13.5" fill="#0A0A0E">vendeur.</text>
+<text x="0" y="957.0" font-size="13.5" font-weight="600" fill="#eb6834">2. Les intérêts payés, et à qui</text>
+<rect x="35.0" y="969.0" width="230.0" height="58.0" rx="6" fill="#f6f5f1" stroke="#e1e0d9"/>
+<text x="150.0" y="994.5" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">L'État</text>
+<text x="150.0" y="1010.5" font-size="12" text-anchor="middle" fill="#52514e">Agence France Trésor</text>
+<rect x="35.0" y="1061.0" width="230.0" height="58.0" rx="6" fill="#f6f5f1" stroke="#e1e0d9"/>
+<text x="150.0" y="1078.5" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">Investisseurs</text>
+<text x="150.0" y="1094.5" font-size="12" text-anchor="middle" fill="#52514e">assureurs, banques, fonds,</text>
+<text x="150.0" y="1110.5" font-size="12" text-anchor="middle" fill="#52514e">en France et à l'étranger</text>
+<rect x="35.0" y="1153.0" width="230.0" height="58.0" rx="6" fill="#f6f5f1" stroke="#e1e0d9"/>
+<text x="150.0" y="1178.5" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">Banque de France</text>
+<text x="150.0" y="1194.5" font-size="12" text-anchor="middle" fill="#52514e">pour l'Eurosystème</text>
+<rect x="35.0" y="1245.0" width="230.0" height="58.0" rx="6" fill="#f6f5f1" stroke="#e1e0d9"/>
+<text x="150.0" y="1270.5" font-size="13" text-anchor="middle" fill="#0A0A0E" font-weight="600">Banques</text>
+<text x="150.0" y="1286.5" font-size="12" text-anchor="middle" fill="#52514e">qui détiennent les réserves</text>
+<path d="M150.0,1030.0 L150.0,1058.0" fill="none" stroke="#eb6834" stroke-width="2" marker-end="url(#fo)"/>
+<circle cx="172.0" cy="1044.0" r="9" fill="#eb6834"/>
+<text x="172.0" y="1048.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">5</text>
+<path d="M32.0,998.0 L13.0,998.0 L13.0,1182.0 L32.0,1182.0" fill="none" stroke="#eb6834" stroke-width="2" marker-end="url(#fo)"/>
+<circle cx="13.0" cy="1090.0" r="9" fill="#eb6834"/>
+<text x="13.0" y="1094.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">5</text>
+<path d="M150.0,1214.0 L150.0,1242.0" fill="none" stroke="#eb6834" stroke-width="2" marker-end="url(#fo)"/>
+<circle cx="172.0" cy="1228.0" r="9" fill="#eb6834"/>
+<text x="172.0" y="1232.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">6</text>
+<path d="M268.0,1182.0 L287.0,1182.0 L287.0,998.0 L268.0,998.0" fill="none" stroke="#898781" stroke-width="2" marker-end="url(#fg)"/>
+<circle cx="287.0" cy="1090.0" r="9" fill="#898781"/>
+<text x="287.0" y="1094.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">7</text>
+<circle cx="9.0" cy="1327.0" r="9" fill="#eb6834"/>
+<text x="9.0" y="1331.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">5</text>
+<text x="26.0" y="1331.0" font-size="13.5" fill="#0A0A0E">Chaque année, l'État paie les</text>
+<text x="26.0" y="1348.0" font-size="13.5" fill="#0A0A0E">intérêts de ses titres à</text>
+<text x="26.0" y="1365.0" font-size="13.5" fill="#0A0A0E">chaque détenteur, Banque de</text>
+<text x="26.0" y="1382.0" font-size="13.5" fill="#0A0A0E">France comprise. À l'échéance,</text>
+<text x="26.0" y="1399.0" font-size="13.5" fill="#0A0A0E">il rembourse le titre avec sa</text>
+<text x="26.0" y="1416.0" font-size="13.5" fill="#0A0A0E">trésorerie ou un nouvel</text>
+<text x="26.0" y="1433.0" font-size="13.5" fill="#0A0A0E">emprunt : retour en 1.</text>
+<circle cx="9.0" cy="1452.0" r="9" fill="#eb6834"/>
+<text x="9.0" y="1456.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">6</text>
+<text x="26.0" y="1456.0" font-size="13.5" fill="#0A0A0E">La Banque de France rémunère</text>
+<text x="26.0" y="1473.0" font-size="13.5" fill="#0A0A0E">au taux de dépôt de la BCE les</text>
+<text x="26.0" y="1490.0" font-size="13.5" fill="#0A0A0E">réserves placées à sa facilité</text>
+<text x="26.0" y="1507.0" font-size="13.5" fill="#0A0A0E">de dépôt (les réserves</text>
+<text x="26.0" y="1524.0" font-size="13.5" fill="#0A0A0E">obligatoires ne sont plus</text>
+<text x="26.0" y="1541.0" font-size="13.5" fill="#0A0A0E">rémunérées depuis septembre</text>
+<text x="26.0" y="1558.0" font-size="13.5" fill="#0A0A0E">2023).</text>
+<circle cx="9.0" cy="1577.0" r="9" fill="#898781"/>
+<text x="9.0" y="1581.0" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">7</text>
+<text x="26.0" y="1581.0" font-size="13.5" fill="#0A0A0E">Selon ses résultats, elle</text>
+<text x="26.0" y="1598.0" font-size="13.5" fill="#0A0A0E">reverse à l'État un impôt et</text>
+<text x="26.0" y="1615.0" font-size="13.5" fill="#0A0A0E">un dividende. Quand les</text>
+<text x="26.0" y="1632.0" font-size="13.5" fill="#0A0A0E">réserves lui coûtent plus que</text>
+<text x="26.0" y="1649.0" font-size="13.5" fill="#0A0A0E">ses titres ne rapportent, ses</text>
+<text x="26.0" y="1666.0" font-size="13.5" fill="#0A0A0E">résultats baissent : elle n'a</text>
+<text x="26.0" y="1683.0" font-size="13.5" fill="#0A0A0E">versé aucun dividende au titre</text>
+<text x="26.0" y="1700.0" font-size="13.5" fill="#0A0A0E">des exercices 2022 à 2025.</text>
+<line x1="0" y1="1723.0" x2="300" y2="1723.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="1744.0" font-size="13.5" fill="#52514e">Schéma de l'auteur ; Agence France</text>
+<text class="pied-source" x="0" y="1761.0" font-size="13.5" fill="#52514e">Trésor, Banque de France (comptes</text>
+<text class="pied-source" x="0" y="1778.0" font-size="13.5" fill="#52514e">annuels), BCE, traité sur le</text>
+<text class="pied-source" x="0" y="1795.0" font-size="13.5" fill="#52514e">fonctionnement de l'UE (art. 123).</text>
+<text class="pied-note" x="0" y="1816.0" font-size="13.5" fill="#52514e">Schéma simplifié : l'État n'est qu'une</text>
+<text class="pied-note" x="0" y="1833.0" font-size="13.5" fill="#52514e">partie des administrations publiques,</text>
+<text class="pied-note" x="0" y="1850.0" font-size="13.5" fill="#52514e">et la Banque de France n'en fait pas</text>
+<text class="pied-note" x="0" y="1867.0" font-size="13.5" fill="#52514e">partie.</text>
+<text class="pied-licence" x="0" y="1888.0" font-size="13.5" fill="#898781">Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1905.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+</svg>

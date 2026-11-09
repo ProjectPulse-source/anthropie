@@ -1,0 +1,30 @@
+{
+ "_usage": "Valeurs TRANSCRITES, vérifiées par update_annulation_bdf.py contre le texte du PDF archivé (SHA256SUMS). Le taux de dépôt n'est pas transcrit : il est lu dans dfr_2024_2026.csv (BCE, série FM.D.U2.EUR.4F.KR.DFR.LEV).",
+ "verifie_le": "2026-11-09",
+ "encours_recent": {
+  "valeur_mdeur": 488,
+  "texte_source": "488 Mds€",
+  "date_fr": "30 juin 2026",
+  "date_en": "30 June 2026",
+  "source": "Banque de France, communiqué « Précisions sur le programme de détention de la dette publique par la Banque de France », Paris, 12 septembre 2026 : dette publique détenue au titre de l'APP et du PEPP, en coût amorti",
+  "fichier": "CP_BDF_Dette_120926.pdf"
+ },
+ "encours_fin_annee": {
+  "valeur_mdeur": 546,
+  "texte_source": "546 Mds€",
+  "date_fr": "31 décembre 2025",
+  "date_en": "31 December 2025",
+  "source": "même communiqué",
+  "fichier": "CP_BDF_Dette_120926.pdf"
+ },
+ "partage_risques": {
+  "valeur_pct": 20,
+  "source": "BCE, FAQ du PEPP (Q6) : « 20% of public sector asset purchases under the PEPP are subject to risk sharing » ; même règle pour le PSPP (décision (UE) 2020/188, art. 6 ; communiqué du 22/01/2015)"
+ },
+ "sans_dividende": {
+  "de": 2022,
+  "a": 2025,
+  "source": "Banque de France, communiqués sur les comptes 2022 (bénéfice affecté au fonds pour risques généraux), 2023 (résultat nul), 2024 (perte, report à nouveau) ; Comprendre les comptes 2025 (bénéfice affecté à la réserve et au report à nouveau)",
+  "fichier": "Comprendre-les-comptes-2025.pdf"
+ }
+}
