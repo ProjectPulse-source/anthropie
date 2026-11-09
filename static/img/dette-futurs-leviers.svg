@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 486" role="img" font-variant-numeric="tabular-nums" aria-labelledby="futurs-leviers-t futurs-leviers-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="futurs-leviers-t">Dette publique en 2035 : ce que changent le solde, les taux et la croissance</title><desc id="futurs-leviers-d">Effet en 2035 sur le ratio dette/PIB, en points de PIB, par rapport à la référence de la Commission. Orange : la dette augmente ; gris : elle baisse ; contour pointillé : calcul comptable. Solde primaire supérieur d'un point de PIB chaque année, de 2028 à 2035 : −8,2 ; taux de marché plus bas de 0,2 point (hypothèse d'un financement commun) : −1,0 ; taux de marché plus hauts de 1 point : +5,5 ; croissance nominale plus forte de 0,5 point par an : −5,7 ; croissance nominale plus faible de 0,5 point par an : +5,9.</desc>
-<rect width="720" height="486" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 478" role="img" font-variant-numeric="tabular-nums" aria-labelledby="futurs-leviers-t futurs-leviers-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="futurs-leviers-t">Dette publique en 2035 : ce que changent le solde, les taux et la croissance</title><desc id="futurs-leviers-d">Effet en 2035 sur le ratio dette/PIB, en points de PIB, par rapport à la référence de la Commission. Orange : la dette augmente ; gris : elle baisse ; contour pointillé : calcul comptable. Solde primaire supérieur d'un point de PIB chaque année, de 2028 à 2035 : −8,2 ; taux de marché plus bas de 0,2 point : −1,0 ; taux de marché plus hauts de 1 point : +5,5 ; croissance nominale plus forte de 0,5 point par an : −5,7 ; croissance nominale plus faible de 0,5 point par an : +5,9.</desc>
+<rect width="720" height="478" fill="#ffffff"/>
 <text x="0.0" y="22.0" font-size="17" font-weight="600" text-anchor="start" fill="#1a1a1a">Dette publique en 2035 : ce que changent le solde, les taux et la croissance</text>
 <text x="0.0" y="44.0" font-size="13" font-weight="400" text-anchor="start" fill="#52514e">Effet en 2035 sur le ratio dette/PIB, en points de PIB, par rapport à la référence de la Commission</text>
 <text x="0.0" y="62.0" font-size="13" font-weight="400" text-anchor="start" fill="#52514e">Orange : la dette augmente ; gris : elle baisse ; contour pointillé : calcul comptable.</text>
-<line x1="400.0" x2="400.0" y1="76" y2="373" stroke="#e6e5e1"/>
-<line x1="475.0" x2="475.0" y1="76" y2="373" stroke="#e6e5e1"/>
-<line x1="550.0" x2="550.0" y1="76" y2="373" stroke="#9a9994"/>
-<line x1="625.0" x2="625.0" y1="76" y2="373" stroke="#e6e5e1"/>
-<line x1="700.0" x2="700.0" y1="76" y2="373" stroke="#e6e5e1"/>
+<line x1="400.0" x2="400.0" y1="76" y2="365" stroke="#e6e5e1"/>
+<line x1="475.0" x2="475.0" y1="76" y2="365" stroke="#e6e5e1"/>
+<line x1="550.0" x2="550.0" y1="76" y2="365" stroke="#9a9994"/>
+<line x1="625.0" x2="625.0" y1="76" y2="365" stroke="#e6e5e1"/>
+<line x1="700.0" x2="700.0" y1="76" y2="365" stroke="#e6e5e1"/>
 <text x="0.0" y="94.0" font-size="13" font-weight="600" text-anchor="start" fill="#1a1a1a">Solde primaire</text>
 <text x="0.0" y="116.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Solde primaire supérieur d'un point de PIB chaque année,</text>
 <text x="0.0" y="131.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">de 2028 à 2035</text>
@@ -16,29 +16,28 @@
 <text x="0.0" y="146.0" font-size="12" font-weight="400" text-anchor="start" fill="#52514e">Calcul comptable, hors effets sur la croissance et les taux</text>
 <text x="433.7" y="120.0" font-size="13" font-weight="600" text-anchor="start" fill="#1a1a1a">−8,2</text>
 <text x="0.0" y="181.0" font-size="13" font-weight="600" text-anchor="start" fill="#1a1a1a">Conditions de financement</text>
-<text x="0.0" y="203.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Taux de marché plus bas de 0,2 point (hypothèse d'un</text>
-<text x="0.0" y="218.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">financement commun)</text>
+<text x="0.0" y="203.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Taux de marché plus bas de 0,2 point</text>
 <rect x="534.5" y="193.0" width="15.5" height="18" fill="#8a8984"/>
 <text x="528.5" y="207.0" font-size="13" font-weight="600" text-anchor="end" fill="#1a1a1a">−1,0</text>
-<text x="0.0" y="245.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Taux de marché plus hauts de 1 point</text>
-<rect x="550.0" y="235.0" width="82.4" height="18" fill="#eb6834"/>
-<text x="638.4" y="249.0" font-size="13" font-weight="600" text-anchor="start" fill="#eb6834">+5,5</text>
-<text x="0.0" y="287.0" font-size="13" font-weight="600" text-anchor="start" fill="#1a1a1a">Activité économique</text>
-<text x="0.0" y="309.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Croissance nominale plus forte de 0,5 point par an</text>
-<rect x="465.0" y="299.0" width="85.0" height="18" fill="#8a8984"/>
-<text x="459.0" y="313.0" font-size="13" font-weight="600" text-anchor="end" fill="#1a1a1a">−5,7</text>
-<text x="0.0" y="343.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Croissance nominale plus faible de 0,5 point par an</text>
-<rect x="550.0" y="333.0" width="89.2" height="18" fill="#eb6834"/>
-<text x="645.2" y="347.0" font-size="13" font-weight="600" text-anchor="start" fill="#eb6834">+5,9</text>
-<text x="400.0" y="391.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">−10</text>
-<text x="475.0" y="391.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">−5</text>
-<text x="550.0" y="391.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">0</text>
-<text x="625.0" y="391.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">+5</text>
-<text x="700.0" y="391.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">+10</text>
-<line x1="0" y1="407.0" x2="720" y2="407.0" stroke="#d8d6d0"/>
-<text class="pied-source" x="0" y="422.0" font-size="11" fill="#52514e">Calculs de l'auteur à partir de la référence de la Commission européenne (Debt Sustainability Monitor 2025, fiche</text>
-<text class="pied-source" x="0" y="436.0" font-size="11" fill="#52514e">France), moteur testé contre la Commission et contre la sensibilité publiée par l'AFT.</text>
-<text class="pied-note" x="0" y="450.0" font-size="11" fill="#52514e">Sensibilités : un seul paramètre modifié à la fois, les autres inchangés ; ni prévisions, ni évaluations complètes de</text>
-<text class="pied-note" x="0" y="464.0" font-size="11" fill="#52514e">politiques, ni classement coût-bénéfice.</text>
-<text class="pied-licence" x="0" y="478.0" font-size="11" fill="#52514e">Graphique : Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-quels-futurs/</text>
+<text x="0.0" y="237.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Taux de marché plus hauts de 1 point</text>
+<rect x="550.0" y="227.0" width="82.4" height="18" fill="#eb6834"/>
+<text x="638.4" y="241.0" font-size="13" font-weight="600" text-anchor="start" fill="#eb6834">+5,5</text>
+<text x="0.0" y="279.0" font-size="13" font-weight="600" text-anchor="start" fill="#1a1a1a">Activité économique</text>
+<text x="0.0" y="301.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Croissance nominale plus forte de 0,5 point par an</text>
+<rect x="465.0" y="291.0" width="85.0" height="18" fill="#8a8984"/>
+<text x="459.0" y="305.0" font-size="13" font-weight="600" text-anchor="end" fill="#1a1a1a">−5,7</text>
+<text x="0.0" y="335.0" font-size="12" font-weight="400" text-anchor="start" fill="#1a1a1a">Croissance nominale plus faible de 0,5 point par an</text>
+<rect x="550.0" y="325.0" width="89.2" height="18" fill="#eb6834"/>
+<text x="645.2" y="339.0" font-size="13" font-weight="600" text-anchor="start" fill="#eb6834">+5,9</text>
+<text x="400.0" y="383.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">−10</text>
+<text x="475.0" y="383.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">−5</text>
+<text x="550.0" y="383.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">0</text>
+<text x="625.0" y="383.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">+5</text>
+<text x="700.0" y="383.0" font-size="12" font-weight="400" text-anchor="middle" fill="#52514e">+10</text>
+<line x1="0" y1="399.0" x2="720" y2="399.0" stroke="#d8d6d0"/>
+<text class="pied-source" x="0" y="414.0" font-size="11" fill="#52514e">Calculs de l'auteur à partir de la référence de la Commission européenne (Debt Sustainability Monitor 2025, fiche</text>
+<text class="pied-source" x="0" y="428.0" font-size="11" fill="#52514e">France), moteur testé contre la Commission et contre la sensibilité publiée par l'AFT.</text>
+<text class="pied-note" x="0" y="442.0" font-size="11" fill="#52514e">Sensibilités : un seul paramètre modifié à la fois, les autres inchangés ; ni prévisions, ni évaluations complètes de</text>
+<text class="pied-note" x="0" y="456.0" font-size="11" fill="#52514e">politiques, ni classement coût-bénéfice.</text>
+<text class="pied-licence" x="0" y="470.0" font-size="11" fill="#52514e">Graphique : Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-quels-futurs/</text>
 </svg>

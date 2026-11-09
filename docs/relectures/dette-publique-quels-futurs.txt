@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /dette-publique-quels-futurs/, build de 43ad0eb + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-10 ; texte servi de /dette-publique-quels-futurs/, build de fde159c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Peut-on changer les règles du jeu de la dette publique ?
 Oui, mais sans effet automatique : selon son mécanisme et ses conditions, une même opération peut réduire la dette, déplacer des charges ou des risques vers d’autres, ou l’aggraver.
@@ -9,6 +9,16 @@ Données · Commission DSM 2025, PLF 2027
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données mises à jour le 9 novembre 2026 Projections de la Commission européenne publiées le 12 février 2026, prévisions du projet de loi de finances pour 2027.
 Télécharger : CSV · JSON · matrice (CSV) · méthode
+Trois questions pour examiner chaque opération.
+Une dette peut disparaître d’un bilan sans que disparaissent les obligations, les coûts ou les risques qui lui étaient attachés ; une réforme peut aussi produire un gain réel.
+Pour distinguer les deux, chaque opération examinée ici passe par les mêmes questions.
+Quel effet ?
+Réduire le ratio de dette, alléger les intérêts ou transférer une obligation ne produisent pas le même résultat.
+Qui décide ?
+Selon l’opération : le Gouvernement et le Parlement, sous surveillance européenne, ou l’accord du Conseil de l’Union, de la banque centrale, de chacun des États membres ou des créanciers.
+Qui paie ?
+Les contribuables visés, les détenteurs de titres et leurs épargnants, d’autres États ou les années suivantes.
+Les neuf opérations, en trois familles →
 Où mène la trajectoire actuelle ?
 Trois sortes de chiffres circulent sur l’avenir de la dette, et ils ne disent pas la même chose.
 La Commission européenne projette la dette à politique inchangée : sans mesure nouvelle, ce que deviendrait le ratio avec les seules décisions déjà prises.
@@ -18,9 +28,12 @@ Sa référence sert ici d’étalon commun parce qu’elle est publiée, datée 
 Le Gouvernement publie des engagements, en octobre 2024 dans son plan budgétaire et structurel à moyen terme, et des prévisions, en 2026 dans le rapport sur la dette annexé au projet de loi de finances pour 2027 : elles supposent des mesures qui ne sont pas toutes votées.
 Cette page ajoute la troisième sorte, des sensibilités : ce que changerait un seul paramètre, sur la référence de la Commission.
 Dette publique de la France, en % du PIB : distribution des trajectoires simulées par la Commission européenne (centiles 10 à 90), trajectoire à politique inchangée, prévision du PLF 2027 et engagement d’octobre 2024.
+Ces trajectoires ne partent pas du même point en 2025 et ne supposent pas les mêmes politiques.
 Le résultat en une phrase.
-À politique inchangée, la Commission projette une dette de 126,5 % du PIB en 2030, contre 116,3 % en 2025, et juge à 95 % la probabilité que la dette de 2030 dépasse celle de 2025 ; la prévision du Gouvernement, 120,9 %, se place dans la moitié basse de son éventail, vers le 20e centile (environ 20 % des trajectoires simulées finissent plus bas) ; mais la comparaison rapproche deux exercices aux politiques, aux points de départ et aux hypothèses économiques différents, et ne mesure ni l’effet propre des décisions du Gouvernement ni leur probabilité de réussite.
+À politique inchangée, la Commission projette une dette de 126,5 % du PIB en 2030, contre 116,3 % en 2025, et juge à 95 % la probabilité que la dette de 2030 dépasse celle de 2025.
 Lire l’éventail.
+La prévision du Gouvernement, 120,9 %, se place dans la moitié basse de cet éventail, vers le 20e centile : environ 20 % des trajectoires simulées finissent plus bas.
+Les deux exercices n’ont toutefois ni les mêmes politiques, ni les mêmes points de départ, ni les mêmes hypothèses économiques : ce rang ne mesure ni l’effet propre des décisions du Gouvernement ni leur probabilité de réussite.
 Si l’économie connaît des à-coups de croissance, de taux et de budget semblables à ceux que la France a déjà connus, la dette de 2030 se situerait, dans 80 % des simulations de la Commission, entre 118,1 % et 136,2 % du PIB, un écart de 18,1 points : ce sont les bandes de la figure, que la Commission calcule jusqu’en 2030.
 Ces probabilités, celles du modèle de la Commission, supposent l’absence de mesures nouvelles.
 Elles ne mesurent pas la probabilité qu’un gouvernement tienne ses engagements, et cette page n’en attribue aucune à un choix politique.
@@ -62,7 +75,10 @@ Les propositions du débat promettent souvent d’alléger la dette autrement qu
 Les neuf opérations ci-dessous sont examinées une à une avec la même grille : ce qu’elles changent, leur effet quand il se calcule, qui les décide, et l’issue provisoire (contrainte réduite, déplacée vers d’autres, aggravée, ou dépendante de conditions nommées).
 Chaque ligne porte le statut de ce qu’elle affirme : un texte lu, un calcul, un résultat établi ailleurs sur ce site, une déduction, ou ce qui n’est pas établi.
 Le droit applicable, la répartition des coûts et la robustesse se déplient sous chaque fiche ; le tableau complet se télécharge (CSV).
-1 Ajuster le solde primaire
+Le budget
+1
+Ajuster le solde primaire
+Issue provisoire · contrainte réduite Contrainte réduite comptablement, sous condition des effets sur l’activité, non mesurés ; l’effort pèse sur ceux que vise l’instrument choisi.
 Ce qui change déduit
 Le flux : dépenses et recettes, chaque année.
 Effet calcul
@@ -73,8 +89,6 @@ Le Gouvernement propose et exécute ; le Parlement vote les lois de finances et 
 Sous surveillance européenne : trajectoire de dépenses nettes recommandée par le Conseil (règlement 2024/1263, art.
 17 et 22) et procédure pour déficit excessif (art.
 126 TFUE).
-Issue provisoire contrainte réduite
-Contrainte réduite comptablement, sous condition des effets sur l’activité, non mesurés ; l’effort pèse sur ceux que vise l’instrument choisi.
 Droit, qui gagne et qui paie, robustesse, sources
 Droit applicable texte lu
 À droit constant.
@@ -85,7 +99,38 @@ Non déterminée : l’effet d’un choc de taux sur l’effort requis n’est p
 Sources
 Règlement (UE) 2024/1263 ; TFUE, art.
 126 ; moteur de la page, calé sur la Commission (DSM 2025)
-2 Allonger la période d’ajustement
+2
+Un impôt sur les grands patrimoines
+Issue provisoire · selon les conditions Contrainte réduite comptablement si le rendement recouvrable se confirme ; dépendante de l’assiette effective.
+Ce qui change déduit
+Le flux : les recettes.
+Effet texte lu
+Rendement non établi : les estimations publiées divergent fortement selon l’assiette retenue, les impôts déjà acquittés et les réactions supposées des contribuables, et aucune ne mesure une recette observée.
+Un point de PIB de recettes aurait l’effet calculé pour le solde primaire.
+Qui décide texte lu
+Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l’ancien ISF avec un plafonnement (décision 2012-662 DC) sans valider d’avance un impôt plancher sur une autre assiette.
+Adopté par l’Assemblée en février 2025, rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.
+Estimations publiées, droit, qui gagne et qui paie, robustesse, sources
+Les estimations publiées texte lu
+Aucun chiffre central.
+Pour l’impôt plancher de 2 % au-delà de 100 M€, l’administration fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre 3,5 et 5,5 Md€ après effets de comportement (méthode non examinée ici).
+Les autres estimations ne portent pas sur les mêmes conventions : mécanique, 19,4 Md€ (Observatoire européen de la fiscalité, dirigé par Gabriel Zucman, qui propose l’impôt) ; en déduisant l’impôt sur les sociétés déjà payé, ce qui change aussi la conception de l’impôt, de 5,5 à 1,25 Md€ (Institut de l’entreprise, financé par de grandes entreprises) ; avec les réactions des contribuables, un paramètre tiré d’études scandinaves (54 centimes perdus par optimisation et 20 par départ, pour un euro prélevé, cités par le Conseil d’analyse économique, qui juge l’exil modeste en France).
+Repère : l’ISF rapportait 4,2 Md€ en 2017.
+Droit applicable texte lu
+À droit constant ; l’art.
+63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités, notamment une taxe à la sortie ; aucun jugement de compatibilité ici.
+L’avis du Conseil d’État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n’a pas été lu.
+Qui gagne, qui paie déduit
+Transfert redistributif porté par les patrimoines visés, selon leurs comportements ; une troisième position (OFCE, 2026) critique le patrimoine comme assiette et propose d’imposer le revenu.
+Robustesse non déterminée
+Non déterminée.
+Sources
+EU Tax Observatory (mars 2025) ; Assemblée nationale, rapport n° 930 (février 2025) ; Sénat, rapport n° 689 (juin 2025) ; Sénat, rapport n° 760 (juin 2026) ; CAE, Focus n° 118 (juillet 2025) ; Institut de l’entreprise (juin 2026) ; OFCE, document de travail 2026-6 ; France Stratégie, comité d’évaluation, avis 2023 ; Conseil constitutionnel, 2012-662 DC ; TFUE, art.
+63
+Les règles et le financement européens
+3
+Allonger la période d’ajustement
+Issue provisoire · selon les conditions Dépendante du contenu des réformes et de la croissance : ni économie garantie, ni simple report à montant constant.
 Ce qui change déduit
 Le calendrier de l’ajustement ; son coût cumulé peut aussi changer.
 Effet non établi
@@ -93,8 +138,6 @@ Non chiffré : l’allongement porte sur la trajectoire de dépenses fixée par 
 Qui décide texte lu
 Le Conseil, qui approuve l’ensemble de réformes et d’investissements justifiant la prolongation (règlement 2024/1263, art.
 14 et 17) ; la France l’a demandée dans son plan d’octobre 2024.
-Issue provisoire selon les conditions
-Dépendante du contenu des réformes et de la croissance : ni économie garantie, ni simple report à montant constant.
 Droit, qui gagne et qui paie, robustesse, sources
 Droit applicable texte lu
 À droit constant : quatre ans, prolongeables de trois (art.
@@ -107,19 +150,21 @@ Robustesse non déterminée
 Exposition potentielle prolongée aux conditions de refinancement, non quantifiée : maturités, taux, soldes et croissance évoluent en même temps.
 Sources
 Règlement (UE) 2024/1263 ; Plan budgétaire et structurel à moyen terme 2025-2029 (octobre 2024)
-3 Une règle d’or pour l’investissement
+4
+Une règle d’or pour l’investissement
+Issue provisoire · selon les conditions Dépendante du rendement de l’investissement et de son financement : production, rendement budgétaire et dette sont trois effets distincts.
 Ce qui change déduit
 Le traitement de l’investissement dans les règles ; la dette augmente s’il est emprunté.
 Effet calcul
 Un point de PIB d’investissement emprunté chaque année de 2028 à 2035, sans effet sur la croissance, relève la dette de 8,2 points en 2035.
-L’effet net dépend du rendement : le personnel du FMI (2014, dix-sept économies avancées, 1985-2013) estime qu’un point d’investissement public relève la production de 0,4 % l’année même et de 1,5 % à quatre ans, la baisse du ratio de dette (0,9 point) n’étant significative qu’à court terme, sous conditions ; le personnel de la Commission (2024, modèle calibré sur l’Allemagne) trouve qu’un surcroît d’investissement non compensé relève durablement le ratio.
-Résultats conditionnels, non transposables tels quels à la France de 2028-2035.
+Le calcul comptable ne mesure pas les effets économiques de l’investissement : les résultats publiés divergent selon son rendement, son financement et les hypothèses retenues.
 Qui décide texte lu
 Selon la variante : exclure certaines dépenses du pilotage des dépenses nettes passe par une modification du règlement (procédure législative ordinaire) ; une flexibilité pour l’investissement est possible selon les modalités ; exclure l’investissement du déficit de référence touche le protocole n° 12, que seul le Conseil à l’unanimité peut remplacer (art.
 126 § 14 TFUE).
-Issue provisoire selon les conditions
-Dépendante du rendement de l’investissement et de son financement : production, rendement budgétaire et dette sont trois effets distincts.
-Droit, qui gagne et qui paie, robustesse, sources
+Estimations publiées, droit, qui gagne et qui paie, robustesse, sources
+Les estimations publiées texte lu
+Le personnel du FMI (2014, dix-sept économies avancées, 1985-2013) estime qu’un point d’investissement public relève la production de 0,4 % l’année même et de 1,5 % à quatre ans, la baisse du ratio de dette (0,9 point) n’étant significative qu’à court terme, sous conditions ; le personnel de la Commission (2024, modèle calibré sur l’Allemagne) trouve qu’un surcroît d’investissement non compensé relève durablement le ratio.
+Résultats conditionnels, non transposables tels quels à la France de 2028-2035.
 Droit applicable texte lu
 Le protocole n° 12 définit le déficit comme « le besoin net de financement » et l’investissement comme « la formation brute de capital fixe » ; le traité demande déjà à la Commission d’examiner si le déficit excède l’investissement (art.
 126 § 3), comme critère de son rapport, non comme exemption.
@@ -131,7 +176,9 @@ Sources
 Protocole n° 12 ; TFUE, art.
 126 ; Règlement (UE) 2024/1263 ; FMI, WEO octobre 2014, ch.
 3 ; Commission européenne, Discussion Paper 204 (2024)
-4 Un emprunt européen commun ponctuel
+5
+Un emprunt européen commun ponctuel
+Issue provisoire · selon les conditions Dépendante de la part en prêts et en dépenses et du coût effectif.
 Ce qui change déduit
 Le financement de certains projets et la répartition des obligations de remboursement.
 Effet non établi
@@ -141,8 +188,6 @@ Qui décide texte lu
 Décision sur les ressources propres : le Conseil à l’unanimité, puis l’approbation de chaque État (art.
 311 TFUE) ; base de crise possible (art.
 122).
-Issue provisoire selon les conditions
-Dépendante de la part en prêts et en dépenses et du coût effectif.
 Droit, qui gagne et qui paie, robustesse, sources
 Droit applicable texte lu
 Possible sans révision des traités, comme en 2020, dans des bornes : un montant plafonné, « à la seule fin » de la crise, aucun emprunt net après 2026, remboursement au plus tard en 2058 (décision 2020/2053, art.
@@ -156,20 +201,24 @@ Sources
 TFUE, art.
 122 et 311 ; Décision (UE, Euratom) 2020/2053, art.
 5
-5 Une mutualisation durable
+6
+Une mutualisation durable
+Issue provisoire · selon les conditions Dépendante de l’instrument : aucune issue unique.
 Ce qui change déduit
 Selon l’instrument : le taux, le porteur du risque ou la dette elle-même.
 Effet non établi
 Non estimé.
 Qui décide texte lu
-Selon l’instrument : émission commune pour des dépenses européennes (voie de l’art.
-311) ; assistance conditionnelle du mécanisme de stabilité, « si cela est indispensable » et sous « stricte conditionnalité » (art.
-136 § 3) ; garanties mutuelles pour un projet spécifique (exception de l’art.
-125) ; prise en charge générale et permanente des dettes existantes, qui se heurte à l’art.
+Selon l’instrument :
+émission commune pour des dépenses européennes (voie de l’art.
+311) ;
+assistance conditionnelle du mécanisme de stabilité, « si cela est indispensable » et sous « stricte conditionnalité » (art.
+136 § 3) ;
+garanties mutuelles pour un projet spécifique (exception de l’art.
+125) ;
+prise en charge générale et permanente des dettes existantes, qui se heurte à l’art.
 125 et pourrait nécessiter une révision des traités (art.
 48 TUE).
-Issue provisoire selon les conditions
-Dépendante de l’instrument : aucune issue unique.
 Droit, qui gagne et qui paie, robustesse, sources
 Droit applicable texte lu
 L’arrêt Pringle (C-370/12, 2012) lit l’art.
@@ -183,7 +232,10 @@ Sources
 TFUE, art.
 125, 136 et 311 ; TUE, art.
 48 ; CJUE, Pringle, C-370/12, 27 novembre 2012
-6 Convertir ou annuler les titres détenus par l’Eurosystème
+Les engagements existants et la monnaie
+7
+Convertir ou annuler les titres détenus par l’Eurosystème
+Issue provisoire · selon les conditions Économie nette non acquise ; effets dépendants du dispositif et des conditions monétaires.
 Ce qui change déduit
 Selon l’opération.
 Une conversion en titres perpétuels sans coupon qui garde la valeur nominale ne réduit pas nécessairement la dette au sens du traité ; une annulation qui éteint la créance s’examine à part, avec sa contrepartie comptable et son effet sur le déficit.
@@ -193,8 +245,6 @@ Effet comptable brut et économie nette s’évaluent séparément : l’économ
 Qui décide texte lu
 Les autorités compétentes de l’Eurosystème et, selon l’opération, l’État débiteur ; ni la BCE ni une banque centrale nationale ne peuvent « solliciter ni accepter des instructions » des gouvernements (art.
 130 TFUE) : en l’état des traités, l’État ne peut pas imposer l’opération.
-Issue provisoire selon les conditions
-Économie nette non acquise ; effets dépendants du dispositif et des conditions monétaires.
 Droit, qui gagne et qui paie, robustesse, sources
 Droit applicable texte lu
 Art.
@@ -206,7 +256,9 @@ Calculée dans la section du site consacrée à l’annulation (sensibilité à 
 Sources
 TFUE, art.
 123 et 130 ; Protocole n° 12 ; SEC 2010, règlement (UE) 549/2013, annexe A, § 5.89-5.96 ; Qui paie la dette publique ? (section « Annuler la dette détenue par la Banque de France »)
-7 Une restructuration négociée de la dette de l’État
+8
+Une restructuration négociée de la dette de l’État
+Issue provisoire · contrainte déplacée Déplacée vers les créanciers et ceux qui portent leurs pertes, avec un risque d’aggravation par les taux.
 Ce qui change déduit
 Le stock, une fois.
 Effet non établi
@@ -220,8 +272,6 @@ D.
 213-25-12 et D.
 213-25-13) : pour une ligne, un quorum des deux tiers du principal en circulation, puis les trois quarts du principal présent ou représenté pour une modification substantielle ; pour plusieurs lignes, les trois quarts au total et plus des deux tiers sur chaque ligne.
 Le vote agrégé unique des deux tiers attend l’entrée en vigueur de l’accord modifiant le traité du mécanisme européen de stabilité.
-Issue provisoire contrainte déplacée
-Déplacée vers les créanciers et ceux qui portent leurs pertes, avec un risque d’aggravation par les taux.
 Droit, qui gagne et qui paie, robustesse, sources
 Droit applicable calcul
 À droit constant pour les seuls titres couverts.
@@ -239,43 +289,17 @@ L.
 213-25-1, D.
 213-25-12, D.
 213-25-13 ; Décret n° 2025-1413 du 29 décembre 2025 ; Agence France Trésor, fiches des lignes (relevé)
-8 Un impôt sur les grands patrimoines
-Ce qui change déduit
-Le flux : les recettes.
-Effet texte lu
-Rendement non établi, et aucun chiffre central.
-Pour l’impôt plancher de 2 % au-delà de 100 M€, l’administration fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre 3,5 et 5,5 Md€ après effets de comportement (méthode non examinée ici).
-Les autres estimations ne portent pas sur les mêmes conventions : mécanique, 19,4 Md€ (Observatoire européen de la fiscalité, dirigé par Gabriel Zucman, qui propose l’impôt) ; en déduisant l’impôt sur les sociétés déjà payé, ce qui change aussi la conception de l’impôt, de 5,5 à 1,25 Md€ (Institut de l’entreprise, financé par de grandes entreprises) ; avec les réactions des contribuables, un paramètre tiré d’études scandinaves (54 centimes perdus par optimisation et 20 par départ, pour un euro prélevé, cités par le Conseil d’analyse économique, qui juge l’exil modeste en France).
-Aucune estimation ne mesure une recette observée.
-Repère : l’ISF rapportait 4,2 Md€ en 2017.
-Un point de PIB de recettes aurait l’effet calculé pour le solde primaire.
-Qui décide texte lu
-Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l’ancien ISF avec un plafonnement (décision 2012-662 DC) sans valider d’avance un impôt plancher sur une autre assiette.
-Adopté par l’Assemblée en février 2025, rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.
-Issue provisoire selon les conditions
-Contrainte réduite comptablement si le rendement recouvrable se confirme ; dépendante de l’assiette effective.
-Droit, qui gagne et qui paie, robustesse, sources
-Droit applicable texte lu
-À droit constant ; l’art.
-63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités, notamment une taxe à la sortie ; aucun jugement de compatibilité ici.
-L’avis du Conseil d’État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n’a pas été lu.
-Qui gagne, qui paie déduit
-Transfert redistributif porté par les patrimoines visés, selon leurs comportements ; une troisième position (OFCE, 2026) critique le patrimoine comme assiette et propose d’imposer le revenu.
-Robustesse non déterminée
-Non déterminée.
-Sources
-EU Tax Observatory (mars 2025) ; Assemblée nationale, rapport n° 930 (février 2025) ; Sénat, rapport n° 689 (juin 2025) ; Sénat, rapport n° 760 (juin 2026) ; CAE, Focus n° 118 (juillet 2025) ; Institut de l’entreprise (juin 2026) ; OFCE, document de travail 2026-6 ; France Stratégie, comité d’évaluation, avis 2023 ; Conseil constitutionnel, 2012-662 DC ; TFUE, art.
-63
-9 Sortir de l’euro et redénominer la dette
+9
+Sortir de l’euro et redénominer la dette
+Issue provisoire · non déterminée Non déterminée avec les sources examinées : une limite de connaissance, non un scénario déclaré impossible.
 Ce qui change déduit
 La monnaie de la dette, le change, l’inflation, les taux.
 Effet non établi
 Non simulé.
+Le résultat dépendrait de questions que les sources examinées ne tranchent pas : sous quel droit chaque titre est émis, lesquels pourraient être redénominés, quel effet le change aurait sur les bilans et sur les taux.
 Qui décide texte lu
 Non déterminé : le seul départ prévu par les traités est le retrait de l’Union (art.
 50 TUE : selon les règles constitutionnelles de l’État, accord conclu par le Conseil à la majorité qualifiée, traités inapplicables deux ans après la notification à défaut d’accord) ; l’absence de procédure propre à la zone euro dans les textes lus ne vaut pas conclusion.
-Issue provisoire non déterminée
-Non déterminée avec les sources examinées : une limite de connaissance, non un scénario déclaré impossible.
 Droit, qui gagne et qui paie, robustesse, sources
 Droit applicable non établi
 Redénomination : droit applicable aux titres, engagements externes, bilans privés, change et contentieux, à distinguer ; non établi.
@@ -294,6 +318,20 @@ Opérations prises une à une : aucune combinaison testée.
 Faisabilité juridique et acceptabilité politique sont deux questions distinctes.
 Une obligation transférée n’est pas une dette disparue ; le détenteur d’un titre n’est pas forcément celui qui porte une perte.
 Ce que la matrice fait apparaître
+Cinq distinctions pour comprendre ces opérations.
+Les quatre canaux disent par où passe l’effet sur la dette ; ces distinctions disent ce qu’il faut séparer pour juger chaque opération.
+Ce que l’opération modifie
+Ce qu’il faut distinguer
+Le flux budgétaire
+l’effort de chaque année et sur qui il porte
+Les règles européennes
+la souplesse accordée et l’effet économique
+Le financement commun
+le coût de l’emprunt et le transfert du risque
+Les titres existants
+la baisse du stock comptable et le coût économique net
+La monnaie
+la redénomination, le change et les engagements juridiques
 Une même réforme peut réduire la dette mesurée, déplacer des charges, modifier les risques ou produire des effets opposés, selon les conditions de sa mise en œuvre.
 Sur les neuf opérations, aucune ne se classe une fois pour toutes : la plupart dépendent d’une condition que la grille nomme, le rendement d’un investissement, le coût effectif d’un emprunt commun, la réaction des créanciers ou des contribuables.
 Modifier les règles de la dette ne revient pas à choisir entre payer et ne pas payer : chaque opération modifie un ensemble de droits, d’obligations, de risques et de capacités.

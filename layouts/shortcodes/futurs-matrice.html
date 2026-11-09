@@ -10,28 +10,40 @@
 {{- $en := eq .Page.Lang "en" -}}
 {{- $M := index $j.matrice (cond $en "en" "fr") -}}
 {{- if not $M -}}{{ errorf "futurs-matrice: matrice.%s absente (%s)" (cond $en "en" "fr") .Page.File.Path }}{{- end -}}
-{{- $T := cond $en (dict "statut" "Source" "analyse" "Law, who gains and who pays, robustness, sources" "sources" "Sources") (dict "statut" "Statut" "analyse" "Droit, qui gagne et qui paie, robustesse, sources" "sources" "Sources") -}}
+{{- $T := cond $en (dict "statut" "Source" "analyse" "Law, who gains and who pays, robustness, sources" "detail" "Published estimates, law, who gains and who pays, robustness, sources" "sources" "Sources") (dict "statut" "Statut" "analyse" "Droit, qui gagne et qui paie, robustesse, sources" "detail" "Estimations publiées, droit, qui gagne et qui paie, robustesse, sources" "sources" "Sources") -}}
 <div class="futurs-matrice">
+{{- /* Familles en H3, opérations en H4 (arbitrage Dette-13) ; l'ordre des opérations garde chaque famille contiguë
+       (garde du module). En tête de fiche, l'issue provisoire, libellé et code en style neutre, le même pour toutes. */ -}}
+{{- $famille := "" -}}
 {{- range $i, $o := $M.operations }}
+{{- if ne $o.famille $famille }}{{ $famille = $o.famille }}
+<h3 class="futurs-famille" id="famille-{{ $o.famille }}">{{ partial "fr-typo.html" (index $M.familles $o.famille) }}</h3>
+{{- end }}
+{{- $is := $o.champs.issue }}
 <article class="futurs-op" id="op-{{ replace $o.cle "_" "-" }}">
-<h3 class="futurs-op__titre"><span class="futurs-op__num">{{ add $i 1 }}</span> {{ partial "fr-typo.html" $o.titre }}</h3>
+<div class="futurs-op__tete">
+<span class="futurs-op__num" aria-hidden="true">{{ add $i 1 }}</span>
+<h4 class="futurs-op__titre">{{ partial "fr-typo.html" $o.titre }}</h4>
+<p class="futurs-op__issue"><span class="futurs-op__issue-lib">{{ $is.libelle }} · {{ $is.code_libelle }}</span> {{ partial "fr-typo.html" $is.texte }}</p>
+</div>
 <dl class="futurs-op__fiche">
-{{- range $c := slice "ce_qui_change" "effet" "qui_decide" "issue" }}
+{{- range $c := slice "ce_qui_change" "effet" "qui_decide" }}
 {{- $ch := index $o.champs $c }}
-<div class="futurs-op__ligne futurs-op__ligne--{{ $c }}">
-<dt>{{ $ch.libelle }}{{ with $ch.statut_libelle }} <span class="futurs-statut" title="{{ $T.statut }}">{{ . }}</span>{{ end }}{{ if eq $c "issue" }} <span class="futurs-issue futurs-issue--{{ $ch.code }}">{{ $ch.code_libelle }}</span>{{ end }}</dt>
-<dd>{{ partial "fr-typo.html" $ch.texte }}</dd>
+<div class="futurs-op__ligne">
+<dt>{{ $ch.libelle }} <span class="futurs-statut" title="{{ $T.statut }}">{{ $ch.statut_libelle }}</span></dt>
+<dd>{{ if $ch.items }}{{ partial "fr-typo.html" $ch.intro }}<ul>{{ range $ch.items }}<li>{{ partial "fr-typo.html" . }}</li>{{ end }}</ul>{{ else }}{{ partial "fr-typo.html" $ch.texte }}{{ end }}</dd>
 </div>
 {{- end }}
 </dl>
-<details class="repli"><summary>{{ $T.analyse }}</summary>
+<details class="repli"><summary>{{ cond (isset $o.champs "detail") $T.detail $T.analyse }}</summary>
 <dl class="futurs-op__analyse">
-{{- range $c := slice "droit" "repartition" "robustesse" }}
-{{- $ch := index $o.champs $c }}
+{{- range $c := slice "detail" "droit" "repartition" "robustesse" }}
+{{- with index $o.champs $c }}
 <div class="futurs-op__ligne">
-<dt>{{ $ch.libelle }} {{ if eq $c "robustesse" }}<span class="futurs-issue">{{ $ch.code_libelle }}</span>{{ else }}<span class="futurs-statut">{{ $ch.statut_libelle }}</span>{{ end }}</dt>
-<dd>{{ partial "fr-typo.html" $ch.texte }}</dd>
+<dt>{{ .libelle }} {{ if eq $c "robustesse" }}<span class="futurs-statut">{{ .code_libelle }}</span>{{ else }}<span class="futurs-statut">{{ .statut_libelle }}</span>{{ end }}</dt>
+<dd>{{ partial "fr-typo.html" .texte }}</dd>
 </div>
+{{- end }}
 {{- end }}
 <div class="futurs-op__ligne"><dt>{{ $T.sources }}</dt><dd>{{ partial "fr-typo.html" (delimit $o.sources " ; ") }}</dd></div>
 </dl>

@@ -52,19 +52,31 @@ ressource:
 
 <p class="donnees-ligne"><span class="badge-donnees">Data updated on {{< futurs-val "date_donnees" >}}</span> European Commission projections published on {{< futurs-val "dsm_publie" >}}, forecasts of the 2027 draft budget. Download: <a href="/dette_futurs.csv">CSV</a> · <a href="/dette_futurs.json">JSON</a> · <a href="/dette_futurs_matrice.csv">matrix (CSV)</a> · <a href="#sources">method</a></p>
 
+<div class="futurs-carte">
+
+**Three questions to examine each operation.** A debt can disappear from a balance sheet while the obligations, costs or risks attached to it remain; a reform can also produce a real gain. To tell the two apart, each operation examined here goes through the same questions.
+
+- **What effect?** Reducing the debt ratio, easing interest payments or transferring an obligation do not produce the same result.
+- **Who decides?** Depending on the operation: the Government and Parliament, under European surveillance, or the agreement of the Council of the Union, the central bank, each Member State or creditors.
+- **Who pays?** The taxpayers targeted, holders of securities and their savers, other States or later years.
+
+[The nine operations, in three families →](#matrice)
+
+</div>
+
 ## Where does the current path lead? {#trajectoire}
 
 Three kinds of figures circulate about the future of debt, and they do not say the same thing. The European Commission projects debt **with unchanged policy**: with no new measure, what the ratio would become with only the decisions already taken. It is neither a forecast nor the most likely scenario, as the Commission itself writes. The Commission is not an outside observer: it oversees compliance with the European fiscal rules. Its baseline serves here as a common yardstick because it is published, dated and reproducible, not on any claim to neutrality. The Government publishes **commitments**, in October 2024 in its medium-term fiscal-structural plan, and **forecasts**, in 2026 in the debt report annexed to the 2027 draft budget: they assume measures not all of which have been passed. This page adds the third kind, **sensitivities**: what a single parameter would change, on the Commission's baseline.
 
-{{< figure-svg fichier="dette-futurs-eventail-en" alt="Fan of projections of French public debt from 2025 to 2030: three nested bands, from the 10th to the 90th, the 20th to the 80th and the 40th to the 60th percentile, the Commission's unchanged-policy path rising through the middle, the Government's forecast rising until 2028 then falling back towards the lower part of the fan, and the October 2024 commitment, lower still." >}}French public debt, % of GDP: distribution of the paths simulated by the European Commission (10th to 90th percentiles), unchanged-policy path, 2027 draft budget forecast and October 2024 commitment.{{< /figure-svg >}}
+{{< figure-svg fichier="dette-futurs-eventail-en" alt="Fan of projections of French public debt from 2025 to 2030: three nested bands, from the 10th to the 90th, the 20th to the 80th and the 40th to the 60th percentile, the Commission's unchanged-policy path rising through the middle, the Government's forecast rising until 2028 then falling back towards the lower part of the fan, and the October 2024 commitment, lower still." >}}French public debt, % of GDP: distribution of the paths simulated by the European Commission (10th to 90th percentiles), unchanged-policy path, 2027 draft budget forecast and October 2024 commitment. These paths do not start from the same point in 2025 and do not assume the same policies.{{< /figure-svg >}}
 
 <div class="resultat-phrase">
 
-**The result in one sentence.** With unchanged policy, the Commission projects debt at {{< futurs-val "ref_2030" >}}% of GDP in 2030, against {{< futurs-val "ref_2025" >}}% in 2025, and puts at {{< futurs-val "proba_2030_pct" >}}% the probability that debt in 2030 exceeds its 2025 level; the Government's forecast, {{< futurs-val "plf_2030" >}}%, sits in the lower half of its fan, around the {{< futurs-val "plf_2030_c_niv_ord" >}} percentile (about {{< futurs-val "plf_2030_c_niv" >}}% of the simulated paths end lower); but the comparison brings together exercises based on different policies, starting points and economic assumptions, and measures neither the specific effect of the Government's decisions nor their probability of success.
+**The result in one sentence.** With unchanged policy, the Commission projects debt at {{< futurs-val "ref_2030" >}}% of GDP in 2030, against {{< futurs-val "ref_2025" >}}% in 2025, and puts at {{< futurs-val "proba_2030_pct" >}}% the probability that debt in 2030 exceeds its 2025 level.
 
 </div>
 
-**Reading the fan.** If the economy goes through growth, interest-rate and budget swings similar to those France has already experienced, debt in 2030 would lie, in 80% of the Commission's simulations, between {{< futurs-val "p10_2030" >}}% and {{< futurs-val "p90_2030" >}}% of GDP, a gap of {{< futurs-val "ecart_p90_p10" >}} points: these are the chart's bands, which the Commission calculates up to 2030. These probabilities come from the Commission's model and assume no new measures. They do not measure the probability that a government keeps its commitments, and this page attributes none to a political choice. Beyond 2030 the Commission no longer publishes a fan: its unchanged-policy projection reaches {{< futurs-val "ref_2035" >}}% in 2035.
+**Reading the fan.** The Government's forecast, {{< futurs-val "plf_2030" >}}%, sits in the lower half of this fan, around the {{< futurs-val "plf_2030_c_niv_ord" >}} percentile: about {{< futurs-val "plf_2030_c_niv" >}}% of the simulated paths end lower. The two exercises, however, rest on different policies, starting points and economic assumptions: this rank measures neither the specific effect of the Government's decisions nor their probability of success. If the economy goes through growth, interest-rate and budget swings similar to those France has already experienced, debt in 2030 would lie, in 80% of the Commission's simulations, between {{< futurs-val "p10_2030" >}}% and {{< futurs-val "p90_2030" >}}% of GDP, a gap of {{< futurs-val "ecart_p90_p10" >}} points: these are the chart's bands, which the Commission calculates up to 2030. These probabilities come from the Commission's model and assume no new measures. They do not measure the probability that a government keeps its commitments, and this page attributes none to a political choice. Beyond 2030 the Commission no longer publishes a fan: its unchanged-policy projection reaches {{< futurs-val "ref_2035" >}}% in 2035.
 
 **The 2024 commitment, the 2026 forecast.** In October 2024 the Government committed to debt of {{< futurs-val "psmt_2027" >}}% of GDP in 2027; in 2026 it forecasts {{< futurs-val "plf_2027" >}}%, {{< futurs-val "ecart_promesse_2027" >}} points more, two years after the commitment.
 
@@ -101,6 +113,16 @@ Proposals in the debate often promise to ease the debt other than through fiscal
 {{< futurs-matrice >}}
 
 ## What the matrix brings out {#constats}
+
+**Five distinctions for understanding these operations.** The four channels say how the effect on debt travels; these distinctions say what must be kept apart to judge each operation.
+
+| What the operation changes | What must be distinguished |
+|---|---|
+| The budget flow | the effort each year and whom it falls on |
+| European rules | the flexibility granted and the economic effect |
+| Joint financing | the cost of borrowing and the transfer of risk |
+| Existing securities | the fall in the accounting stock and the net economic cost |
+| The currency | redenomination, the exchange rate and legal commitments |
 
 **The same reform can reduce measured debt, shift burdens, change risks or produce opposite effects, depending on how it is implemented.** Of the {{< futurs-val "n_operations" >}} operations, none can be classified once and for all: most depend on a condition the grid names, the return on an investment, the actual cost of joint borrowing, the reaction of creditors or taxpayers. Changing the rules of debt does not amount to choosing between paying and not paying: each operation changes a set of rights, obligations, risks and capacities.
 

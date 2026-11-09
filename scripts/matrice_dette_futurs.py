@@ -38,18 +38,32 @@ AFT_PIECE = "aft_lignes_2026-11-09.csv"
 AFT_DATE = {"fr": "9 novembre 2026", "en": "9 November 2026"}
 CHAMPS = ("ce_qui_change", "effet", "qui_decide", "droit", "repartition", "robustesse", "issue")
 FICHE = ("ce_qui_change", "effet", "qui_decide", "issue")          # fiche courte (option C)
+# Champ facultatif du repli (arbitrage Dette-13, 09/11/2026) : les estimations et études publiées, chiffres, méthodes et
+# auteurs ; le premier niveau (« effet ») garde le fait du désaccord et sa nature, jamais une estimation privilégiée.
+OPTIONNELS = ("detail",)
+# Familles d'opérations (arbitrages Dette-12 et Dette-13) : titres H3 de la matrice, dans cet ordre ; chaque opération en
+# déclare une, et l'ordre des opérations les garde contiguës.
+FAMILLES = {
+    "budget": {"fr": "Le budget", "en": "The budget"},
+    "europe": {"fr": "Les règles et le financement européens", "en": "European rules and financing"},
+    "engagements": {"fr": "Les engagements existants et la monnaie", "en": "Existing commitments and the currency"},
+}
+ORDRE = ["solde", "impot_patrimoines", "allongement", "regle_or", "emprunt_commun", "mutualisation", "eurosysteme",
+         "restructuration", "sortie_euro"]
 STATUTS = {"lu", "calc", "site", "infere", "non_etabli"}
 ISSUES = {"reduite", "deplacee", "aggravee", "conditionnelle", "non_determinee"}
 ROBUSTESSES = {"calculee", "mecanisme_documente", "non_determinee"}
 LIBELLES = {
     "fr": {"ce_qui_change": "Ce qui change", "effet": "Effet", "qui_decide": "Qui décide", "droit": "Droit applicable",
            "repartition": "Qui gagne, qui paie", "robustesse": "Robustesse", "issue": "Issue provisoire",
+           "detail": "Les estimations publiées",
            "lu": "texte lu", "calc": "calcul", "site": "établi sur le site", "infere": "déduit", "non_etabli": "non établi",
            "reduite": "contrainte réduite", "deplacee": "contrainte déplacée", "aggravee": "contrainte aggravée",
            "conditionnelle": "selon les conditions", "non_determinee": "non déterminée",
            "calculee": "calculée", "mecanisme_documente": "mécanisme documenté"},
     "en": {"ce_qui_change": "What changes", "effet": "Effect", "qui_decide": "Who decides", "droit": "Applicable law",
            "repartition": "Who gains, who pays", "robustesse": "Robustness", "issue": "Provisional outcome",
+           "detail": "Published estimates",
            "lu": "text read", "calc": "calculation", "site": "established on this site", "infere": "inferred",
            "non_etabli": "not established", "reduite": "constraint reduced", "deplacee": "constraint shifted",
            "aggravee": "constraint aggravated", "conditionnelle": "depends on conditions", "non_determinee": "not determined",
@@ -169,9 +183,14 @@ def construire(R: dict, piece, mut: dict | None = None) -> dict:
     if "ajout" in mut:
         src["operations"][0]["effet"]["fr"] += mut["ajout"]
     ops = src.get("operations") or []
-    if [o["cle"] for o in ops] != ["solde", "allongement", "regle_or", "emprunt_commun", "mutualisation", "eurosysteme",
-                                   "restructuration", "impot_patrimoines", "sortie_euro"]:
+    if [o["cle"] for o in ops] != ORDRE:
         fail("liste ou ordre des operations modifie : %s" % [o.get("cle") for o in ops])
+    fam = [o.get("famille") for o in ops]
+    if any(f not in FAMILLES for f in fam):
+        fail("famille absente ou inconnue : %s" % fam)
+    vues = [f for i, f in enumerate(fam) if i == 0 or f != fam[i - 1]]
+    if vues != list(FAMILLES):
+        fail("familles non contigues ou hors de leur ordre : %s" % vues)
     A = aft(piece, mut.get("ecarts"))
     out = {"aft": {k: (round(v, 3) if isinstance(v, float) else v) for k, v in A.items()},
            "valeurs_transcrites": src["valeurs"], "fr": {}, "en": {}}
@@ -186,8 +205,8 @@ def construire(R: dict, piece, mut: dict | None = None) -> dict:
             srcs = o["sources"] if lang == "fr" else o.get("sources_en")
             if not srcs or len(srcs) != len(o["sources"]):
                 fail("%s : sources_en absente ou de longueur differente de sources" % o["cle"])
-            e = {"cle": o["cle"], "titre": o["titre"][lang], "sources": srcs, "champs": {}}
-            for c in CHAMPS:
+            e = {"cle": o["cle"], "titre": o["titre"][lang], "famille": o["famille"], "sources": srcs, "champs": {}}
+            for c in CHAMPS + tuple(k for k in OPTIONNELS if k in o):
                 ch = o.get(c)
                 if not isinstance(ch, dict) or not ch.get("fr") or not ch.get("en"):
                     fail("%s.%s absent ou incomplet" % (o["cle"], c))
@@ -199,22 +218,32 @@ def construire(R: dict, piece, mut: dict | None = None) -> dict:
                     fail("%s.issue : code %r" % (o["cle"], code))
                 if c == "robustesse" and code not in ROBUSTESSES:
                     fail("%s.robustesse : code %r" % (o["cle"], code))
-                texte = resoudre(ch[lang], J, "%s.%s.%s" % (o["cle"], c, lang))
-                e["champs"][c] = {"libelle": L[c], "texte": texte, "fiche": c in FICHE,
+                # Un texte peut être une liste (variantes d'un instrument) : premier élément = phrase d'entrée, les
+                # suivants = éléments de la liste ; le CSV reçoit la phrase entière.
+                brut = ch[lang]
+                if isinstance(brut, list):
+                    if len(brut) < 3 or not all(isinstance(x, str) for x in brut):
+                        fail("%s.%s.%s : liste trop courte ou non textuelle" % (o["cle"], c, lang))
+                    morceaux = [resoudre(x, J, "%s.%s.%s" % (o["cle"], c, lang)) for x in brut]
+                    items, texte = morceaux[1:], morceaux[0] + " " + " ".join(morceaux[1:])
+                else:
+                    items, texte = None, resoudre(brut, J, "%s.%s.%s" % (o["cle"], c, lang))
+                e["champs"][c] = {"libelle": L[c], "texte": texte, "fiche": c in FICHE, "intro": morceaux[0] if items else None,
+                                  "items": items,
                                   "statut": statut if c != "issue" else None,
                                   "statut_libelle": L[statut] if c != "issue" else None,
                                   "code": code, "code_libelle": L[code] if code else None}
                 lignes_csv.append([o["cle"], o["titre"][lang], c, L[c], lang, statut or "", code or "", texte,
-                                   " ; ".join(srcs)])
+                                   " ; ".join(srcs), FAMILLES[o["famille"]][lang]])
             liste.append(e)
-        out[lang] = {"operations": liste,
+        out[lang] = {"operations": liste, "familles": {k: v[lang] for k, v in FAMILLES.items()},
                      "transversale": {"titre": src["transversale"]["titre"][lang],
                                       "texte": resoudre(src["transversale"][lang], J, "transversale." + lang)},
                      "limites": resoudre(src["limites"][lang], J, "limites." + lang)}
         lignes_csv.append(["croissance", src["transversale"]["titre"][lang], "transversale", "", lang,
-                           src["transversale"]["statut"], "", out[lang]["transversale"]["texte"], ""])
+                           src["transversale"]["statut"], "", out[lang]["transversale"]["texte"], "", ""])
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
-    w.writerow(["operation", "titre", "dimension", "libelle", "langue", "statut_source", "code", "texte", "sources"])
+    w.writerow(["operation", "titre", "dimension", "libelle", "langue", "statut_source", "code", "texte", "sources", "famille"])
     w.writerows(lignes_csv)
     return {"matrice": out, "csv": buf.getvalue()}

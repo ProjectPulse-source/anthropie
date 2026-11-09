@@ -56,19 +56,31 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 <p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< futurs-val "date_donnees" >}}</span> Projections de la Commission européenne publiées le {{< futurs-val "dsm_publie" >}}, prévisions du projet de loi de finances pour 2027. Télécharger&nbsp;: <a href="/dette_futurs.csv">CSV</a> · <a href="/dette_futurs.json">JSON</a> · <a href="/dette_futurs_matrice.csv">matrice (CSV)</a> · <a href="#sources">méthode</a></p>
 
+<div class="futurs-carte">
+
+**Trois questions pour examiner chaque opération.** Une dette peut disparaître d'un bilan sans que disparaissent les obligations, les coûts ou les risques qui lui étaient attachés&nbsp;; une réforme peut aussi produire un gain réel. Pour distinguer les deux, chaque opération examinée ici passe par les mêmes questions.
+
+- **Quel effet&nbsp;?** Réduire le ratio de dette, alléger les intérêts ou transférer une obligation ne produisent pas le même résultat.
+- **Qui décide&nbsp;?** Selon l'opération&nbsp;: le Gouvernement et le Parlement, sous surveillance européenne, ou l'accord du Conseil de l'Union, de la banque centrale, de chacun des États membres ou des créanciers.
+- **Qui paie&nbsp;?** Les contribuables visés, les détenteurs de titres et leurs épargnants, d'autres États ou les années suivantes.
+
+[Les neuf opérations, en trois familles&nbsp;→](#matrice)
+
+</div>
+
 ## Où mène la trajectoire actuelle&nbsp;? {#trajectoire}
 
 Trois sortes de chiffres circulent sur l'avenir de la dette, et ils ne disent pas la même chose. La Commission européenne projette la dette **à politique inchangée**&nbsp;: sans mesure nouvelle, ce que deviendrait le ratio avec les seules décisions déjà prises. Ce n'est ni une prévision ni le scénario le plus probable, elle l'écrit elle-même. La Commission n'est pas un observateur extérieur&nbsp;: elle veille au respect des règles budgétaires européennes. Sa référence sert ici d'étalon commun parce qu'elle est publiée, datée et reproductible, non parce qu'elle serait neutre. Le Gouvernement publie des **engagements**, en octobre 2024 dans son plan budgétaire et structurel à moyen terme, et des **prévisions**, en 2026 dans le rapport sur la dette annexé au projet de loi de finances pour 2027&nbsp;: elles supposent des mesures qui ne sont pas toutes votées. Cette page ajoute la troisième sorte, des **sensibilités**&nbsp;: ce que changerait un seul paramètre, sur la référence de la Commission.
 
-{{< figure-svg fichier="dette-futurs-eventail" alt="Éventail des projections de la dette publique française de 2025 à 2030 : trois bandes emboîtées, du 10e au 90e, du 20e au 80e et du 40e au 60e centile, la trajectoire à politique inchangée de la Commission qui monte au centre, la prévision du Gouvernement qui monte jusqu'en 2028 puis redescend vers le bas de l'éventail, et l'engagement d'octobre 2024, plus bas." >}}Dette publique de la France, en&nbsp;% du PIB&nbsp;: distribution des trajectoires simulées par la Commission européenne (centiles 10 à 90), trajectoire à politique inchangée, prévision du PLF 2027 et engagement d'octobre 2024.{{< /figure-svg >}}
+{{< figure-svg fichier="dette-futurs-eventail" alt="Éventail des projections de la dette publique française de 2025 à 2030 : trois bandes emboîtées, du 10e au 90e, du 20e au 80e et du 40e au 60e centile, la trajectoire à politique inchangée de la Commission qui monte au centre, la prévision du Gouvernement qui monte jusqu'en 2028 puis redescend vers le bas de l'éventail, et l'engagement d'octobre 2024, plus bas." >}}Dette publique de la France, en&nbsp;% du PIB&nbsp;: distribution des trajectoires simulées par la Commission européenne (centiles 10 à 90), trajectoire à politique inchangée, prévision du PLF 2027 et engagement d'octobre 2024. Ces trajectoires ne partent pas du même point en 2025 et ne supposent pas les mêmes politiques.{{< /figure-svg >}}
 
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** À politique inchangée, la Commission projette une dette de {{< futurs-val "ref_2030" >}}&nbsp;% du PIB en 2030, contre {{< futurs-val "ref_2025" >}}&nbsp;% en 2025, et juge à {{< futurs-val "proba_2030_pct" >}}&nbsp;% la probabilité que la dette de 2030 dépasse celle de 2025&nbsp;; la prévision du Gouvernement, {{< futurs-val "plf_2030" >}}&nbsp;%, se place dans la moitié basse de son éventail, vers le {{< futurs-val "plf_2030_c_niv" >}}<sup>e</sup>&nbsp;centile (environ {{< futurs-val "plf_2030_c_niv" >}}&nbsp;% des trajectoires simulées finissent plus bas)&nbsp;; mais la comparaison rapproche deux exercices aux politiques, aux points de départ et aux hypothèses économiques différents, et ne mesure ni l'effet propre des décisions du Gouvernement ni leur probabilité de réussite.
+**Le résultat en une phrase.** À politique inchangée, la Commission projette une dette de {{< futurs-val "ref_2030" >}}&nbsp;% du PIB en 2030, contre {{< futurs-val "ref_2025" >}}&nbsp;% en 2025, et juge à {{< futurs-val "proba_2030_pct" >}}&nbsp;% la probabilité que la dette de 2030 dépasse celle de 2025.
 
 </div>
 
-**Lire l'éventail.** Si l'économie connaît des à-coups de croissance, de taux et de budget semblables à ceux que la France a déjà connus, la dette de 2030 se situerait, dans 80&nbsp;% des simulations de la Commission, entre {{< futurs-val "p10_2030" >}}&nbsp;% et {{< futurs-val "p90_2030" >}}&nbsp;% du PIB, un écart de {{< futurs-val "ecart_p90_p10" >}} points&nbsp;: ce sont les bandes de la figure, que la Commission calcule jusqu'en 2030. Ces probabilités, celles du modèle de la Commission, supposent l'absence de mesures nouvelles. Elles ne mesurent pas la probabilité qu'un gouvernement tienne ses engagements, et cette page n'en attribue aucune à un choix politique. Au-delà de 2030, la Commission ne publie plus d'éventail&nbsp;: sa projection à politique inchangée atteint {{< futurs-val "ref_2035" >}}&nbsp;% en 2035.
+**Lire l'éventail.** La prévision du Gouvernement, {{< futurs-val "plf_2030" >}}&nbsp;%, se place dans la moitié basse de cet éventail, vers le {{< futurs-val "plf_2030_c_niv" >}}<sup>e</sup>&nbsp;centile&nbsp;: environ {{< futurs-val "plf_2030_c_niv" >}}&nbsp;% des trajectoires simulées finissent plus bas. Les deux exercices n'ont toutefois ni les mêmes politiques, ni les mêmes points de départ, ni les mêmes hypothèses économiques&nbsp;: ce rang ne mesure ni l'effet propre des décisions du Gouvernement ni leur probabilité de réussite. Si l'économie connaît des à-coups de croissance, de taux et de budget semblables à ceux que la France a déjà connus, la dette de 2030 se situerait, dans 80&nbsp;% des simulations de la Commission, entre {{< futurs-val "p10_2030" >}}&nbsp;% et {{< futurs-val "p90_2030" >}}&nbsp;% du PIB, un écart de {{< futurs-val "ecart_p90_p10" >}} points&nbsp;: ce sont les bandes de la figure, que la Commission calcule jusqu'en 2030. Ces probabilités, celles du modèle de la Commission, supposent l'absence de mesures nouvelles. Elles ne mesurent pas la probabilité qu'un gouvernement tienne ses engagements, et cette page n'en attribue aucune à un choix politique. Au-delà de 2030, la Commission ne publie plus d'éventail&nbsp;: sa projection à politique inchangée atteint {{< futurs-val "ref_2035" >}}&nbsp;% en 2035.
 
 **Engagement de 2024, prévision de 2026.** En octobre 2024, le Gouvernement s'engageait sur une dette de {{< futurs-val "psmt_2027" >}}&nbsp;% du PIB en 2027&nbsp;; en 2026, il en prévoit {{< futurs-val "plf_2027" >}}&nbsp;%, {{< futurs-val "ecart_promesse_2027" >}} points de plus, deux ans après l'engagement.
 
@@ -105,6 +117,16 @@ Les propositions du débat promettent souvent d'alléger la dette autrement que 
 {{< futurs-matrice >}}
 
 ## Ce que la matrice fait apparaître {#constats}
+
+**Cinq distinctions pour comprendre ces opérations.** Les quatre canaux disent par où passe l'effet sur la dette&nbsp;; ces distinctions disent ce qu'il faut séparer pour juger chaque opération.
+
+| Ce que l'opération modifie | Ce qu'il faut distinguer |
+|---|---|
+| Le flux budgétaire | l'effort de chaque année et sur qui il porte |
+| Les règles européennes | la souplesse accordée et l'effet économique |
+| Le financement commun | le coût de l'emprunt et le transfert du risque |
+| Les titres existants | la baisse du stock comptable et le coût économique net |
+| La monnaie | la redénomination, le change et les engagements juridiques |
 
 **Une même réforme peut réduire la dette mesurée, déplacer des charges, modifier les risques ou produire des effets opposés, selon les conditions de sa mise en œuvre.** Sur les {{< futurs-val "n_operations" >}} opérations, aucune ne se classe une fois pour toutes&nbsp;: la plupart dépendent d'une condition que la grille nomme, le rendement d'un investissement, le coût effectif d'un emprunt commun, la réaction des créanciers ou des contribuables. Modifier les règles de la dette ne revient pas à choisir entre payer et ne pas payer&nbsp;: chaque opération modifie un ensemble de droits, d'obligations, de risques et de capacités.
 

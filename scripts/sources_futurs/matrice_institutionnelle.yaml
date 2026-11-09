@@ -31,6 +31,7 @@ valeurs:
 operations:
 
 - cle: solde
+  famille: budget
   titre: {fr: "Ajuster le solde primaire", en: "Adjusting the primary balance"}
   ce_qui_change:
     statut: infere
@@ -79,7 +80,86 @@ operations:
   sources: ["Règlement (UE) 2024/1263", "TFUE, art. 126", "moteur de la page, calé sur la Commission (DSM 2025)"]
   sources_en: ["Regulation (EU) 2024/1263", "TFEU, Art. 126", "this page's engine, calibrated on the Commission (DSM 2025)"]
 
+- cle: impot_patrimoines
+  famille: budget
+  titre: {fr: "Un impôt sur les grands patrimoines", en: "A tax on very large fortunes"}
+  ce_qui_change:
+    statut: infere
+    fr: "Le flux : les recettes."
+    en: "The flow: revenue."
+  effet:
+    statut: lu
+    fr: >-
+      Rendement non établi : les estimations publiées divergent fortement selon l'assiette retenue, les impôts déjà acquittés
+      et les réactions supposées des contribuables, et aucune ne mesure une recette observée. Un point de PIB de recettes
+      aurait l'effet calculé pour le solde primaire.
+    en: >-
+      Yield not established: published estimates diverge sharply with the base chosen, the taxes already paid and the
+      assumed responses of taxpayers, and none measures observed revenue. One point of GDP of revenue would have the effect
+      calculated for the primary balance.
+  detail:
+    statut: lu
+    fr: >-
+      Aucun chiffre central. Pour l'impôt plancher de {v.zucman_taux} % au-delà de {v.zucman_seuil} M€, l'administration
+      fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la
+      direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre {v.dgt_bas} et
+      {v.dgt_haut} Md€ après effets de comportement (méthode non examinée ici). Les autres estimations ne portent pas sur les
+      mêmes conventions : mécanique, {v.zucman_mecanique} Md€ (Observatoire européen de la fiscalité, dirigé par Gabriel
+      Zucman, qui propose l'impôt) ; en déduisant l'impôt sur les sociétés déjà payé, ce qui change aussi la conception de
+      l'impôt, de {v.ide_82} à {v.ide_100} Md€ (Institut de l'entreprise, financé par de grandes entreprises) ; avec les
+      réactions des contribuables, un paramètre tiré d'études scandinaves ({v.cae_optimisation} centimes perdus par
+      optimisation et {v.cae_depart} par départ, pour un euro prélevé, cités par le Conseil d'analyse économique, qui juge
+      l'exil modeste en France). Repère : l'ISF rapportait {v.isf_2017} Md€ en 2017.
+    en: >-
+      No central figure. For the {v.zucman_taux}% minimum tax above €{v.zucman_seuil} million, the tax administration said in
+      February 2025 that it could not simulate it; in June 2026, a Senate report cites a note from the Treasury directorate,
+      sent to its finance committee, estimating it at €{v.dgt_bas} to €{v.dgt_haut} billion after behavioural effects
+      (method not examined here). The other estimates rest on different conventions: mechanical, €{v.zucman_mecanique}
+      billion (EU Tax Observatory, directed by Gabriel Zucman, who proposes the tax); deducting corporate tax already paid,
+      which also changes the tax's design, from €{v.ide_82} to €{v.ide_100} billion (Institut de l'entreprise, funded by
+      large companies); with taxpayer responses, a parameter taken from Scandinavian studies ({v.cae_optimisation} cents
+      lost to avoidance and {v.cae_depart} to departures, per euro levied, cited by the Conseil d'analyse économique, which
+      finds emigration modest in France). Benchmark: the former wealth tax raised €{v.isf_2017} billion in 2017.
+  qui_decide:
+    statut: lu
+    fr: >-
+      Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l'ancien ISF avec un plafonnement (décision
+      2012-662 DC) sans valider d'avance un impôt plancher sur une autre assiette. Adopté par l'Assemblée en février 2025,
+      rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.
+    en: >-
+      Parliament, under review by the Constitutional Council, which accepted the former wealth tax with a cap (decision
+      2012-662 DC) without validating in advance a minimum tax on a different base. Passed by the National Assembly in
+      February 2025, rejected by the Senate in June 2025, rejected in the 2026 budget act.
+  droit:
+    statut: lu
+    fr: >-
+      À droit constant ; l'art. 63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités,
+      notamment une taxe à la sortie ; aucun jugement de compatibilité ici. L'avis du Conseil d'État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n'a pas été lu.
+    en: >-
+      Under current law; Art. 63 TFEU prohibits restrictions on capital movements and frames the design, notably an exit tax;
+      no compatibility judgment is made here. The Conseil d'État's opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read.
+  repartition:
+    statut: infere
+    fr: >-
+      Transfert redistributif porté par les patrimoines visés, selon leurs comportements ; une troisième position (OFCE, 2026)
+      critique le patrimoine comme assiette et propose d'imposer le revenu.
+    en: >-
+      A redistributive transfer borne by the targeted fortunes, depending on their behaviour; a third position (OFCE, 2026)
+      questions wealth as the base and proposes taxing income instead.
+  robustesse:
+    code: non_determinee
+    statut: non_etabli
+    fr: "Non déterminée."
+    en: "Not determined."
+  issue:
+    code: conditionnelle
+    fr: "Contrainte réduite comptablement si le rendement recouvrable se confirme ; dépendante de l'assiette effective."
+    en: "Constraint reduced in accounting terms if the recoverable yield is confirmed; depends on the actual base."
+  sources: ["EU Tax Observatory (mars 2025)", "Assemblée nationale, rapport n° 930 (février 2025)", "Sénat, rapport n° 689 (juin 2025)", "Sénat, rapport n° 760 (juin 2026)", "CAE, Focus n° 118 (juillet 2025)", "Institut de l'entreprise (juin 2026)", "OFCE, document de travail 2026-6", "France Stratégie, comité d'évaluation, avis 2023", "Conseil constitutionnel, 2012-662 DC", "TFUE, art. 63"]
+  sources_en: ["EU Tax Observatory (March 2025)", "National Assembly, report No 930 (February 2025)", "Senate, report No 689 (June 2025)", "Senate, report No 760 (June 2026)", "CAE, Focus No 118 (July 2025)", "Institut de l'entreprise (June 2026)", "OFCE, working paper 2026-6", "France Stratégie, evaluation committee, opinion 2023", "Constitutional Council, 2012-662 DC", "TFEU, Art. 63"]
+
 - cle: allongement
+  famille: europe
   titre: {fr: "Allonger la période d'ajustement", en: "Extending the adjustment period"}
   ce_qui_change:
     statut: infere
@@ -126,6 +206,7 @@ operations:
   sources_en: ["Regulation (EU) 2024/1263", "Medium-term fiscal-structural plan 2025-2029 (October 2024)"]
 
 - cle: regle_or
+  famille: europe
   titre: {fr: "Une règle d'or pour l'investissement", en: "A golden rule for investment"}
   ce_qui_change:
     statut: infere
@@ -135,19 +216,26 @@ operations:
     statut: calc
     fr: >-
       Un point de PIB d'investissement emprunté chaque année de 2028 à 2035, sans effet sur la croissance, relève la dette de
-      {invest_2035_pts} en 2035. L'effet net dépend du rendement : le personnel du FMI (2014, dix-sept économies avancées,
-      1985-2013) estime qu'un point d'investissement public relève la production de {v.fmi_prod_an0} % l'année même et de
-      {v.fmi_prod_an4} % à quatre ans, la baisse du ratio de dette ({v.fmi_dette_ct_pts}) n'étant significative qu'à court
-      terme, sous conditions ; le personnel de la Commission (2024, modèle calibré sur l'Allemagne) trouve qu'un surcroît
-      d'investissement non compensé relève durablement le ratio. Résultats conditionnels, non transposables tels quels à la
-      France de 2028-2035.
+      {invest_2035_pts} en 2035. Le calcul comptable ne mesure pas les effets économiques de l'investissement : les résultats
+      publiés divergent selon son rendement, son financement et les hypothèses retenues.
     en: >-
       One point of GDP of borrowed investment every year from 2028 to 2035, with no effect on growth, raises debt by
-      {invest_2035_pts} in 2035. The net effect depends on returns: IMF staff (2014, seventeen advanced economies,
-      1985-2013) estimate that one point of public investment raises output by {v.fmi_prod_an0}% in the same year and by
-      {v.fmi_prod_an4}% after four years, the fall in the debt ratio ({v.fmi_dette_ct_pts}) being significant only in the
-      short run, under conditions; Commission staff (2024, model calibrated on Germany) find that an uncompensated rise in
-      investment lastingly raises the ratio. Conditional results, not directly transferable to France in 2028-2035.
+      {invest_2035_pts} in 2035. The accounting calculation does not measure the economic effects of investment: published
+      results diverge with its return, its financing and the assumptions made.
+  detail:
+    statut: lu
+    fr: >-
+      Le personnel du FMI (2014, dix-sept économies avancées, 1985-2013) estime qu'un point d'investissement public relève la
+      production de {v.fmi_prod_an0} % l'année même et de {v.fmi_prod_an4} % à quatre ans, la baisse du ratio de dette
+      ({v.fmi_dette_ct_pts}) n'étant significative qu'à court terme, sous conditions ; le personnel de la Commission (2024,
+      modèle calibré sur l'Allemagne) trouve qu'un surcroît d'investissement non compensé relève durablement le ratio.
+      Résultats conditionnels, non transposables tels quels à la France de 2028-2035.
+    en: >-
+      IMF staff (2014, seventeen advanced economies, 1985-2013) estimate that one point of public investment raises output by
+      {v.fmi_prod_an0}% in the same year and by {v.fmi_prod_an4}% after four years, the fall in the debt ratio
+      ({v.fmi_dette_ct_pts}) being significant only in the short run, under conditions; Commission staff (2024, model
+      calibrated on Germany) find that an uncompensated rise in investment lastingly raises the ratio. Conditional results,
+      not directly transferable to France in 2028-2035.
   qui_decide:
     statut: lu
     fr: >-
@@ -191,6 +279,7 @@ operations:
   sources_en: ["Protocol No 12", "TFEU, Art. 126", "Regulation (EU) 2024/1263", "IMF, World Economic Outlook, October 2014, ch. 3", "European Commission, Discussion Paper 204 (2024)"]
 
 - cle: emprunt_commun
+  famille: europe
   titre: {fr: "Un emprunt européen commun ponctuel", en: "A one-off joint European borrowing"}
   ce_qui_change:
     statut: infere
@@ -242,6 +331,7 @@ operations:
   sources_en: ["TFEU, Art. 122 and 311", "Decision (EU, Euratom) 2020/2053, Art. 5"]
 
 - cle: mutualisation
+  famille: europe
   titre: {fr: "Une mutualisation durable", en: "Lasting debt mutualisation"}
   ce_qui_change:
     statut: infere
@@ -253,16 +343,18 @@ operations:
     en: "Not estimated."
   qui_decide:
     statut: lu
-    fr: >-
-      Selon l'instrument : émission commune pour des dépenses européennes (voie de l'art. 311) ; assistance conditionnelle du
-      mécanisme de stabilité, « si cela est indispensable » et sous « stricte conditionnalité » (art. 136 § 3) ; garanties
-      mutuelles pour un projet spécifique (exception de l'art. 125) ; prise en charge générale et permanente des dettes
-      existantes, qui se heurte à l'art. 125 et pourrait nécessiter une révision des traités (art. 48 TUE).
-    en: >-
-      Depending on the instrument: joint issuance for European spending (Art. 311 route); conditional assistance from the
-      stability mechanism, "if indispensable" and under "strict conditionality" (Art. 136(3)); mutual guarantees for a
-      specific project (Art. 125 exception); a general and permanent takeover of existing debts, which runs into Art. 125 and
-      could require Treaty change (Art. 48 TEU).
+    fr:
+      - "Selon l'instrument :"
+      - "émission commune pour des dépenses européennes (voie de l'art. 311) ;"
+      - "assistance conditionnelle du mécanisme de stabilité, « si cela est indispensable » et sous « stricte conditionnalité » (art. 136 § 3) ;"
+      - "garanties mutuelles pour un projet spécifique (exception de l'art. 125) ;"
+      - "prise en charge générale et permanente des dettes existantes, qui se heurte à l'art. 125 et pourrait nécessiter une révision des traités (art. 48 TUE)."
+    en:
+      - "Depending on the instrument:"
+      - "joint issuance for European spending (Art. 311 route);"
+      - "conditional assistance from the stability mechanism, \"if indispensable\" and under \"strict conditionality\" (Art. 136(3));"
+      - "mutual guarantees for a specific project (Art. 125 exception);"
+      - "a general and permanent takeover of existing debts, which runs into Art. 125 and could require Treaty change (Art. 48 TEU)."
   droit:
     statut: lu
     fr: >-
@@ -292,6 +384,7 @@ operations:
   sources_en: ["TFEU, Art. 125, 136 and 311", "TEU, Art. 48", "CJEU, Pringle, C-370/12, 27 November 2012"]
 
 - cle: eurosysteme
+  famille: engagements
   titre: {fr: "Convertir ou annuler les titres détenus par l'Eurosystème", en: "Converting or cancelling bonds held by the Eurosystem"}
   ce_qui_change:
     statut: infere
@@ -353,6 +446,7 @@ operations:
   sources_en: ["TFEU, Art. 123 and 130", "Protocol No 12", "ESA 2010, Regulation (EU) 549/2013, Annex A, § 5.89-5.96", "Who really pays public debt? (section \"Cancelling the debt held by the Banque de France\")"]
 
 - cle: restructuration
+  famille: engagements
   titre: {fr: "Une restructuration négociée de la dette de l'État", en: "A negotiated restructuring of State debt"}
   ce_qui_change:
     statut: infere
@@ -416,72 +510,8 @@ operations:
   sources: ["Code monétaire et financier, art. L. 213-22-1, D. 213-25-1, D. 213-25-12, D. 213-25-13", "Décret n° 2025-1413 du 29 décembre 2025", "Agence France Trésor, fiches des lignes (relevé)"]
   sources_en: ["Monetary and Financial Code, Art. L. 213-22-1, D. 213-25-1, D. 213-25-12, D. 213-25-13", "Decree No 2025-1413 of 29 December 2025", "Agence France Trésor, bond line sheets (record)"]
 
-- cle: impot_patrimoines
-  titre: {fr: "Un impôt sur les grands patrimoines", en: "A tax on very large fortunes"}
-  ce_qui_change:
-    statut: infere
-    fr: "Le flux : les recettes."
-    en: "The flow: revenue."
-  effet:
-    statut: lu
-    fr: >-
-      Rendement non établi, et aucun chiffre central. Pour l'impôt plancher de {v.zucman_taux} % au-delà de {v.zucman_seuil} M€, l'administration fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre {v.dgt_bas} et {v.dgt_haut} Md€ après effets de comportement (méthode non examinée ici). Les autres estimations
-      ne portent pas sur les mêmes conventions : mécanique, {v.zucman_mecanique} Md€ (Observatoire européen de la fiscalité, dirigé par
-      Gabriel Zucman, qui propose l'impôt) ; en déduisant l'impôt sur les sociétés déjà payé, ce qui change aussi la conception de l'impôt, de
-      {v.ide_82} à {v.ide_100} Md€ (Institut de l'entreprise, financé par de grandes entreprises) ; avec les réactions des
-      contribuables, un paramètre tiré d'études scandinaves ({v.cae_optimisation} centimes perdus par optimisation et
-      {v.cae_depart} par départ, pour un euro prélevé, cités par le Conseil d'analyse économique, qui juge l'exil modeste en
-      France). Aucune estimation ne mesure une recette observée. Repère : l'ISF rapportait {v.isf_2017} Md€ en 2017. Un point
-      de PIB de recettes aurait l'effet calculé pour le solde primaire.
-    en: >-
-      Yield not established, and no central figure. For the {v.zucman_taux}% minimum tax above €{v.zucman_seuil} million, the
-      tax administration said in February 2025 that it could not simulate it; in June 2026, a Senate report cites a note from the Treasury directorate, sent to its finance committee, estimating it at €{v.dgt_bas} to €{v.dgt_haut} billion after behavioural effects (method not examined here). The other estimates rest on different
-      conventions: mechanical, €{v.zucman_mecanique} billion (EU Tax Observatory, directed by Gabriel Zucman, who proposes the tax); deducting
-      corporate tax already paid, which also changes the tax's design, from €{v.ide_82} to €{v.ide_100} billion (Institut de
-      l'entreprise, funded by large companies); with taxpayer responses, a parameter taken from Scandinavian studies
-      ({v.cae_optimisation} cents lost to avoidance and {v.cae_depart} to departures, per euro levied, cited by the Conseil
-      d'analyse économique, which finds emigration modest in France). No estimate measures observed revenue. Benchmark: the
-      former wealth tax raised €{v.isf_2017} billion in 2017. One point of GDP of revenue would have the effect calculated for
-      the primary balance.
-  qui_decide:
-    statut: lu
-    fr: >-
-      Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l'ancien ISF avec un plafonnement (décision
-      2012-662 DC) sans valider d'avance un impôt plancher sur une autre assiette. Adopté par l'Assemblée en février 2025,
-      rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.
-    en: >-
-      Parliament, under review by the Constitutional Council, which accepted the former wealth tax with a cap (decision
-      2012-662 DC) without validating in advance a minimum tax on a different base. Passed by the National Assembly in
-      February 2025, rejected by the Senate in June 2025, rejected in the 2026 budget act.
-  droit:
-    statut: lu
-    fr: >-
-      À droit constant ; l'art. 63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités,
-      notamment une taxe à la sortie ; aucun jugement de compatibilité ici. L'avis du Conseil d'État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n'a pas été lu.
-    en: >-
-      Under current law; Art. 63 TFEU prohibits restrictions on capital movements and frames the design, notably an exit tax;
-      no compatibility judgment is made here. The Conseil d'État's opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read.
-  repartition:
-    statut: infere
-    fr: >-
-      Transfert redistributif porté par les patrimoines visés, selon leurs comportements ; une troisième position (OFCE, 2026)
-      critique le patrimoine comme assiette et propose d'imposer le revenu.
-    en: >-
-      A redistributive transfer borne by the targeted fortunes, depending on their behaviour; a third position (OFCE, 2026)
-      questions wealth as the base and proposes taxing income instead.
-  robustesse:
-    code: non_determinee
-    statut: non_etabli
-    fr: "Non déterminée."
-    en: "Not determined."
-  issue:
-    code: conditionnelle
-    fr: "Contrainte réduite comptablement si le rendement recouvrable se confirme ; dépendante de l'assiette effective."
-    en: "Constraint reduced in accounting terms if the recoverable yield is confirmed; depends on the actual base."
-  sources: ["EU Tax Observatory (mars 2025)", "Assemblée nationale, rapport n° 930 (février 2025)", "Sénat, rapport n° 689 (juin 2025)", "Sénat, rapport n° 760 (juin 2026)", "CAE, Focus n° 118 (juillet 2025)", "Institut de l'entreprise (juin 2026)", "OFCE, document de travail 2026-6", "France Stratégie, comité d'évaluation, avis 2023", "Conseil constitutionnel, 2012-662 DC", "TFUE, art. 63"]
-  sources_en: ["EU Tax Observatory (March 2025)", "National Assembly, report No 930 (February 2025)", "Senate, report No 689 (June 2025)", "Senate, report No 760 (June 2026)", "CAE, Focus No 118 (July 2025)", "Institut de l'entreprise (June 2026)", "OFCE, working paper 2026-6", "France Stratégie, evaluation committee, opinion 2023", "Constitutional Council, 2012-662 DC", "TFEU, Art. 63"]
-
 - cle: sortie_euro
+  famille: engagements
   titre: {fr: "Sortir de l'euro et redénominer la dette", en: "Leaving the euro and redenominating debt"}
   ce_qui_change:
     statut: infere
@@ -489,8 +519,12 @@ operations:
     en: "The currency of the debt, the exchange rate, inflation, interest rates."
   effet:
     statut: non_etabli
-    fr: "Non simulé."
-    en: "Not simulated."
+    fr: >-
+      Non simulé. Le résultat dépendrait de questions que les sources examinées ne tranchent pas : sous quel droit chaque
+      titre est émis, lesquels pourraient être redénominés, quel effet le change aurait sur les bilans et sur les taux.
+    en: >-
+      Not simulated. The outcome would depend on questions the sources examined do not settle: under which law each security
+      is issued, which ones could be redenominated, what the exchange rate would do to balance sheets and interest rates.
   qui_decide:
     statut: lu
     fr: >-

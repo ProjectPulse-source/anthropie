@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 969" role="img" font-variant-numeric="tabular-nums" aria-labelledby="futurs-leviers-m-t futurs-leviers-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="futurs-leviers-m-t">Public debt in 2035: how far the primary balance, interest rates and growth move it</title><desc id="futurs-leviers-m-d">Effect on the debt-to-GDP ratio in 2035, in percentage points of GDP, relative to the Commission's baseline. Orange: debt rises; grey: debt falls; dotted outline: accounting calculation. Primary balance 1 percentage point of GDP higher every year, from 2028 to 2035: −8.2; market rates 0.2 percentage point lower (common funding assumption): −1.0; market rates 1 percentage point higher: +5.5; nominal growth 0.5 percentage point higher each year: −5.7; nominal growth 0.5 percentage point lower each year: +5.9.</desc>
+<title id="futurs-leviers-m-t">Public debt in 2035: how far the primary balance, interest rates and growth move it</title><desc id="futurs-leviers-m-d">Effect on the debt-to-GDP ratio in 2035, in percentage points of GDP, relative to the Commission's baseline. Orange: debt rises; grey: debt falls; dotted outline: accounting calculation. Primary balance 1 percentage point of GDP higher every year, from 2028 to 2035: −8.2; market rates 0.2 percentage point lower: −1.0; market rates 1 percentage point higher: +5.5; nominal growth 0.5 percentage point higher each year: −5.7; nominal growth 0.5 percentage point lower each year: +5.9.</desc>
 <rect width="300" height="969" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#1a1a1a">Public debt in 2035: how far</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#1a1a1a">the primary balance, interest</text>
@@ -21,7 +21,7 @@
 <text x="60.4" y="342.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#1a1a1a">−8.2</text>
 <text x="0.0" y="378.0" font-size="15" font-weight="600" text-anchor="start" fill="#1a1a1a">Financing conditions</text>
 <text x="0.0" y="403.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">Market rates 0.2 percentage point</text>
-<text x="0.0" y="421.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">lower (common funding assumption)</text>
+<text x="0.0" y="421.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">lower</text>
 <line x1="160.0" x2="160.0" y1="428.0" y2="450.0" stroke="#9a9994"/>
 <rect x="148.0" y="431.0" width="12.0" height="16" fill="#8a8984"/>
 <text x="143.0" y="444.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#1a1a1a">−1.0</text>

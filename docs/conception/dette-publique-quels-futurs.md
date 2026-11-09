@@ -456,6 +456,27 @@ Générateur envisagé : `scripts/update_dette_futurs.py`, jeu `dette_futurs` ; 
   débat » FR/EN (seule phrase changée) ; non réécrits pour « Peut-elle baisser ? » : onze des douze phrases changées y
   viennent d'une autre session (Cour des comptes), relecture à faire par elle (alerte non bloquante).
 - Fiche D0 : ÉCRITE dans `06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` (09/11/2026, avant publication).
+- Publication : `d92acb8` poussé le 09/11/2026 ; déploiement Pages réussi par le commit vide `fde159c` après trois échecs
+  côté GitHub ; version servie attestée (texte, CSV et PNG identiques, SVG identiques en nombres et en textes).
+- Pièces Dette-12 (revue éditoriale de la page publiée, `de1ff828…7331`) et Dette-13 (avis sur la maquette,
+  `f09a7b9d…2006`) : ARBITRÉES (`ARBITRATIONS\ENTRANTE_2026-11-09_Dette-12_arbitrage.md` et `…Dette-13…`), maquette
+  `06_PROMOTION\RECHERCHE_QUELS_FUTURS_DETTE_2026-11-09\MAQUETTE_DETTE-12_2026-11-09.html`. APPLIQUÉ (FR et EN) :
+  - carte d'entrée « Trois questions pour examiner chaque opération » ;
+  - « Le résultat en une phrase » ramené à une phrase, le rang du Gouvernement et sa réserve passés en tête de « Lire
+    l'éventail » ;
+  - légende de l'éventail : les points de départ différents ;
+  - figure des leviers : parenthèse « financement commun » retirée, quatre versions régénérées, `check-figures` à 0,
+    rendus regardés ;
+  - matrice : trois familles en H3 et opérations en H4 (impôt passé en 2, ancres inchangées, garde des familles vue
+    mordre), issue provisoire en tête de fiche au style neutre, statuts plus contrastés ;
+  - premier niveau de l'impôt et de la règle d'or : le fait du désaccord et sa nature, les estimations et études dans le
+    repli, sous le champ nouveau « Les estimations publiées » ;
+  - mutualisation : quatre instruments en liste ; sortie de l'euro : les questions qui décideraient ;
+  - tableau « Cinq distinctions pour comprendre ces opérations » ;
+  - contrôles : `check-all --ci` 0, témoins 5/5, build, `typo_build` 0, rendu, dates, liens ; recette à 1280 et 390 px
+    (FR, EN, aucun débordement) ; phrases modifiées relues sur le texte servi ; instantanés réécrits.
+
+  Le chantier éditorial est clos (Dette-13, point 9).
 - Gardes vues mordre, figures téléphone, relecture de langue, recette 320-1600, panel après, gate éditorial, relecture
   phrase à phrase FR et EN, instantané de relecture, contre-expertise de la page, accord de l'auteur : non fait (phase B,
   après l'arbitrage).
