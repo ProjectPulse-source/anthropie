@@ -1,0 +1,408 @@
+# relu le 2026-11-09 ; texte servi de /en/public-debt-what-futures/, build de 43ad0eb + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+FRThis page is also available in French — version française
+Can the rules of the public debt game be changed?
+Yes, but with no automatic effect: depending on its mechanism and conditions, the same operation can reduce debt, shift burdens or risks onto others, or worsen it.
+With unchanged policy, the European Commission projects French public debt at 126.5% of GDP in 2030 and 140.8% in 2035; changing the rules of the game alters that path only through the budget balance, interest rates, growth or the stock of debt, and the nine ways of doing so examined here do not involve the same decision-makers or the same agreements.
+Page published 9 November 2026
+Public debt dossier
+Data · Commission DSM 2025, draft budget 2027
+↓ Charts, data and citations to reuseReuse this page
+Data updated on 9 November 2026 European Commission projections published on 12 February 2026, forecasts of the 2027 draft budget.
+Download: CSV · JSON · matrix (CSV) · method
+Where does the current path lead?
+Three kinds of figures circulate about the future of debt, and they do not say the same thing.
+The European Commission projects debt with unchanged policy: with no new measure, what the ratio would become with only the decisions already taken.
+It is neither a forecast nor the most likely scenario, as the Commission itself writes.
+The Commission is not an outside observer: it oversees compliance with the European fiscal rules.
+Its baseline serves here as a common yardstick because it is published, dated and reproducible, not on any claim to neutrality.
+The Government publishes commitments, in October 2024 in its medium-term fiscal-structural plan, and forecasts, in 2026 in the debt report annexed to the 2027 draft budget: they assume measures not all of which have been passed.
+This page adds the third kind, sensitivities: what a single parameter would change, on the Commission’s baseline.
+French public debt, % of GDP: distribution of the paths simulated by the European Commission (10th to 90th percentiles), unchanged-policy path, 2027 draft budget forecast and October 2024 commitment.
+The result in one sentence.
+With unchanged policy, the Commission projects debt at 126.5% of GDP in 2030, against 116.3% in 2025, and puts at 95% the probability that debt in 2030 exceeds its 2025 level; the Government’s forecast, 120.9%, sits in the lower half of its fan, around the 20th percentile (about 20% of the simulated paths end lower); but the comparison brings together exercises based on different policies, starting points and economic assumptions, and measures neither the specific effect of the Government’s decisions nor their probability of success.
+Reading the fan.
+If the economy goes through growth, interest-rate and budget swings similar to those France has already experienced, debt in 2030 would lie, in 80% of the Commission’s simulations, between 118.1% and 136.2% of GDP, a gap of 18.1 points: these are the chart’s bands, which the Commission calculates up to 2030.
+These probabilities come from the Commission’s model and assume no new measures.
+They do not measure the probability that a government keeps its commitments, and this page attributes none to a political choice.
+Beyond 2030 the Commission no longer publishes a fan: its unchanged-policy projection reaches 140.8% in 2035.
+The 2024 commitment, the 2026 forecast.
+In October 2024 the Government committed to debt of 116.5% of GDP in 2027; in 2026 it forecasts 121.7%, 5.2 points more, two years after the commitment.
+Where these paths sit within the Commission’s fan
+Placed within the Commission’s fan, the 2024 commitment for 2029, 115.8%, falls below the 10th percentile in level.
+But it started lower: the three paths do not start from the same point in 2025 (116.3% for the Commission, 115.7% in the 2027 draft budget, 114.7% in the 2024 plan).
+Measured as a change since 2025, the same commitment sits around the 12th percentile, and the 2027 draft budget’s forecast for 2030 around the 24th.
+A path’s rank in the fan therefore also depends on its starting point.
+What the balance, interest rates and growth change
+A debt path moves only through four channels: the primary balance, that is revenue minus spending excluding interest, the interest rate paid on the debt, nominal GDP growth, and operations on the stock of debt itself.
+Any reform, including a change of rule, acts on the path only through them.
+The chart applies a single change at a time to the Commission’s baseline.
+Gap in public debt in 2035 relative to the European Commission’s baseline, in points of GDP, one parameter changed at a time (author’s calculations on the Debt Sustainability Monitor 2025 baseline).
+The balance.
+A primary balance 1 percentage point of GDP higher every year from 2028 to 2035 would lower debt by 3.0 points in 2030 and by 8.2 points in 2035.
+It is an accounting calculation: it assumes the adjustment neither slows growth nor changes interest rates, which it would partly do.
+One point of GDP of borrowed investment every year, with no effect on growth, would do the opposite: 8.2 points more.
+Interest rates.
+Market rates 0.2 percentage point (twenty basis points) lower on all new public borrowing would lower debt by 1.0 point in 2035 and the interest bill by about €8.1 billion that year; ten basis points lower, by 0.5 points.
+A rise of one point would raise it by 5.5 points, and the interest bill by about €44.6 billion.
+The effect is slow: a market rate first affects only short-term debt and the securities issued during the year, then the rest as it is rolled over.
+Growth.
+Half a point of extra nominal growth every year would lower debt by 5.7 points in 2035; half a point less would raise it by 5.9 points.
+Growth is not a decision: it is an assumption, which modulates all the others.
+It works together with the interest rate: by the simple arithmetic of debt, with a zero primary balance and no stock-flow adjustments, the ratio rises when the average interest rate on the debt exceeds nominal growth and falls in the opposite case; a primary deficit or stock-flow adjustments can nevertheless reverse that result.
+Technical progress enters growth as one possible driver; this page assigns it no separately quantified effect.
+These bars are not to be compared as equivalent efforts: a point of primary balance is a budgetary effort to be renewed every year, whereas an interest rate or growth cannot be decreed.
+They give the order of magnitude of each channel, not what a policy would cost or yield.
+How these sensitivities are calculated, and what they were tested against
+The calculation follows the debt dynamics described by the Commission in the annex to its Debt Sustainability Monitor: short-term debt follows the market rate within the year, long-term debt only as it is rolled over; a balance shock passes through a fiscal multiplier and a cyclical component, except in the accounting calculations, where both are zero.
+Before writing the page, the calculation was checked against two variants published by the Commission (a rise in the gap between interest and growth, a financial crisis): it reproduces them within tolerances written in advance, and a deliberate error in the pass-through of rates makes it fail.
+It was also checked against the sensitivity published by the Agence France Trésor for a one-point rise in all rates: €8.1 billion of interest in the second year, €19.2 billion in the fifth, which the calculation finds within a few per cent; the first year (€3.4 billion) it does not, because of the issuance calendar: rate effects are therefore read only from the second year.
+No outside benchmark exists for a lasting balance shock: hence the accounting calculation.
+Changing the rules: who decides, who pays?
+Proposals in the debate often promise to ease the debt other than through fiscal adjustment.
+The nine operations below are examined one by one with the same grid: what they change, their effect when it can be calculated, who decides them, and the provisional outcome (a constraint reduced, shifted onto others, aggravated, or dependent on named conditions).
+Each line carries the status of what it states: a text read, a calculation, a result established elsewhere on this site, an inference, or what is not established.
+Applicable law, the distribution of costs and robustness unfold under each card; the complete table can be downloaded (CSV).
+1 Adjusting the primary balance
+What changes inferred
+The flow: spending and revenue, every year.
+Effect calculation
+A primary balance 1 percentage point of GDP higher every year from 2028 to 2035 lowers debt by 8.2 points in 2035.
+A conditional accounting calculation: the adjustment is assumed to affect neither growth nor interest rates.
+Who decides text read
+The Government proposes and implements; Parliament votes the finance and social security financing acts; part of spending lies with local authorities and social security funds.
+Under European surveillance: the net expenditure path recommended by the Council (Regulation 2024/1263, Art.
+17 and 22) and the excessive deficit procedure (Art.
+126 TFEU).
+Provisional outcome constraint reduced
+Constraint reduced in accounting terms, subject to effects on activity that are not measured; borne by those the chosen instrument targets.
+Law, who gains and who pays, robustness, sources
+Applicable law text read
+Under current law.
+Who gains, who pays established on this site
+It depends on the instrument: the same effort does not fall on the same households whether it goes through schools, income tax, pensions or VAT.
+Robustness not determined
+Not determined: the effect of an interest-rate shock on the required effort is not calculated.
+Sources
+Regulation (EU) 2024/1263; TFEU, Art.
+126; this page’s engine, calibrated on the Commission (DSM 2025)
+2 Extending the adjustment period
+What changes inferred
+The timing of the adjustment; its cumulative cost may also change.
+Effect not established
+Not quantified: the extension applies to the expenditure path set by the European regulation; the Commission baseline used here does not contain that path, so its effect on debt cannot be derived from it.
+Who decides text read
+The Council, which approves the set of reforms and investments underpinning the extension (Regulation 2024/1263, Art.
+14 and 17); France requested it in its October 2024 plan.
+Provisional outcome depends on conditions
+Depends on the content of the reforms and on growth: neither a guaranteed saving nor a mere postponement of the same amount.
+Law, who gains and who pays, robustness, sources
+Applicable law text read
+Under current law: four years, extendable by three (Art.
+2(8) and Art.
+14); safeguards in Art.
+7 and 8.
+Who gains, who pays not established
+Not established.
+Robustness not determined
+Potentially prolonged exposure to refinancing conditions, not quantified: maturities, rates, balances and growth move together.
+Sources
+Regulation (EU) 2024/1263; Medium-term fiscal-structural plan 2025-2029 (October 2024)
+3 A golden rule for investment
+What changes inferred
+How investment is treated by the rules; debt rises if it is borrowed.
+Effect calculation
+One point of GDP of borrowed investment every year from 2028 to 2035, with no effect on growth, raises debt by 8.2 points in 2035.
+The net effect depends on returns: IMF staff (2014, seventeen advanced economies, 1985-2013) estimate that one point of public investment raises output by 0.4% in the same year and by 1.5% after four years, the fall in the debt ratio (0.9 points) being significant only in the short run, under conditions; Commission staff (2024, model calibrated on Germany) find that an uncompensated rise in investment lastingly raises the ratio.
+Conditional results, not directly transferable to France in 2028-2035.
+Who decides text read
+Depending on the variant: excluding some spending from net expenditure monitoring requires amending the regulation (ordinary legislative procedure); flexibility for investment is possible depending on its terms; excluding investment from the reference deficit touches Protocol No 12, which only the Council acting unanimously can replace (Art.
+126(14) TFEU).
+Provisional outcome depends on conditions
+Depends on the return on investment and on its financing: output, fiscal return and debt are three distinct effects.
+Law, who gains and who pays, robustness, sources
+Applicable law text read
+Protocol No 12 defines the deficit as “net borrowing” and investment as “gross fixed capital formation”; the Treaty already asks the Commission to examine whether the deficit exceeds investment (Art.
+126(3)), as a criterion of its report, not as an exemption.
+Who gains, who pays inferred
+Towards later years if the fiscal return is below the cost of financing; a positive social return is not necessarily a sufficient fiscal return.
+Robustness documented mechanism
+Higher debt, more exposed to rates, as long as the return is not secured.
+Sources
+Protocol No 12; TFEU, Art.
+126; Regulation (EU) 2024/1263; IMF, World Economic Outlook, October 2014, ch.
+3; European Commission, Discussion Paper 204 (2024)
+4 A one-off joint European borrowing
+What changes inferred
+The financing of certain projects and who must repay.
+Effect not established
+Not estimated.
+As an order of magnitude only, an interest-rate assumption rather than an estimate of the instrument: market rates twenty basis points lower on all new public borrowing would lower debt by 1.0 point in 2035.
+Who decides text read
+Own-resources decision: the Council acting unanimously, then approval by each Member State (Art.
+311 TFEU); a crisis legal basis is possible (Art.
+122).
+Provisional outcome depends on conditions
+Depends on the split between loans and spending and on the actual cost.
+Law, who gains and who pays, robustness, sources
+Applicable law text read
+Possible without Treaty change, as in 2020, within limits: a capped amount, “exclusively” for the crisis, no net borrowing after 2026, repayment by 2058 at the latest (Decision 2020/2053, Art.
+5).
+Who gains, who pays text read
+Funds lent to a State remain its liability; the part spent is repaid by the EU budget, hence by its contributors.
+A transferred obligation is not a debt that has disappeared.
+Robustness not determined
+Not determined.
+Sources
+TFEU, Art.
+122 and 311; Decision (EU, Euratom) 2020/2053, Art.
+5
+5 Lasting debt mutualisation
+What changes inferred
+Depending on the instrument: the rate, who bears the risk, or the debt itself.
+Effect not established
+Not estimated.
+Who decides text read
+Depending on the instrument: joint issuance for European spending (Art.
+311 route); conditional assistance from the stability mechanism, “if indispensable” and under “strict conditionality” (Art.
+136(3)); mutual guarantees for a specific project (Art.
+125 exception); a general and permanent takeover of existing debts, which runs into Art.
+125 and could require Treaty change (Art.
+48 TEU).
+Provisional outcome depends on conditions
+Depends on the instrument: no single outcome.
+Law, who gains and who pays, robustness, sources
+Applicable law text read
+The Pringle judgment (C-370/12, 2012) reads Art.
+125: it does not prohibit “any form of financial assistance”, but assistance that weakens the incentive for sound budgetary policy, and it allows assistance to a State that remains responsible for its commitments to its creditors.
+The article thus permits some forms of conditional assistance and strictly limits taking over another State’s commitments; compatibility depends on the instrument.
+Who gains, who pays not established
+A transfer of risk between States, of variable size, not established.
+Robustness not determined
+Not determined.
+Sources
+TFEU, Art.
+125, 136 and 311; TEU, Art.
+48; CJEU, Pringle, C-370/12, 27 November 2012
+6 Converting or cancelling bonds held by the Eurosystem
+What changes inferred
+It depends on the operation.
+Converting into zero-coupon perpetual bonds that keep their face value does not necessarily reduce debt as defined by the Treaty; a cancellation that extinguishes the claim must be examined separately, with its accounting counterpart and its effect on the deficit.
+Effect established on this site
+The Banque de France held €546 billion of French government securities at 31 December 2025.
+The gross accounting effect and the net saving are assessed separately: the net saving depends on the gap between the interest paid on bank reserves and the State’s refinancing cost, and is not secured.
+Who decides text read
+The competent Eurosystem authorities and, depending on the operation, the debtor State; neither the ECB nor a national central bank may “seek or take instructions” from governments (Art.
+130 TFEU): under the current Treaties, the State cannot impose the operation.
+Provisional outcome depends on conditions
+Net saving not secured; effects depend on the scheme and on monetary conditions.
+Law, who gains and who pays, robustness, sources
+Applicable law text read
+Art.
+123 TFEU prohibits credit to public bodies and the “direct purchase” of their debt instruments; Protocol No 12 counts debt “at nominal value”; ESA 2010 classifies perpetual securities as debt securities, but how a security with neither coupon nor repayment right should be classified is not settled by the texts read.
+Who gains, who pays established on this site
+The cost of remunerated reserves remains; who bears it changes with the scheme: the market, the central bank and hence the State as shareholder, or banks.
+Robustness calculated
+Calculated in the site’s section on cancellation (sensitivity to the interest paid on reserves).
+Sources
+TFEU, Art.
+123 and 130; Protocol No 12; ESA 2010, Regulation (EU) 549/2013, Annex A, § 5.89-5.96; Who really pays public debt? (section “Cancelling the debt held by the Banque de France”)
+7 A negotiated restructuring of State debt
+What changes inferred
+The stock, once.
+Effect not established
+Mechanical only, outside the charts; counterparts not quantified.
+Who decides text read
+The State, with holders’ consent expressed in principal amounts, not headcount (collective action clauses, Art.
+L.
+213-22-1 of the Monetary and Financial Code).
+Thresholds in force (Art.
+D.
+213-25-12 and D.
+213-25-13): for one line, a quorum of two thirds of the outstanding principal, then three quarters of the principal present or represented for a substantial change; across several lines, three quarters in aggregate and more than two thirds per line.
+The single-limb two-thirds vote awaits the entry into force of the agreement amending the European Stability Mechanism Treaty.
+Provisional outcome constraint shifted
+Shifted onto creditors and those who bear their losses, with a risk of aggravation through interest rates.
+Law, who gains and who pays, robustness, sources
+Applicable law calculation
+Under current law for covered securities only.
+According to our reconstruction from the AFT line sheets (9 November 2026), 86.3% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€2,282 billion of €2,645 billion) belongs to lines created since 2013, to which the clause regime applies in principle; 13 older lines (€362 billion, maturing up to 2060) are excluded; securities of one year or less (€216 billion) fall outside its scope.
+Clauses ease a collective modification; they guarantee neither its adoption nor its feasibility.
+Who gains, who pays established on this site
+Losses for holders; non-residents held 59.7% of State negotiable debt in the second quarter of 2026.
+Holding a security says neither who the final beneficiary is nor who bears the loss: an insurer spreads it across shareholders, reserves and, depending on contracts, policyholders.
+Robustness documented mechanism
+A risk premium on subsequent issuance, not quantified.
+Sources
+Monetary and Financial Code, Art.
+L.
+213-22-1, D.
+213-25-1, D.
+213-25-12, D.
+213-25-13; Decree No 2025-1413 of 29 December 2025; Agence France Trésor, bond line sheets (record)
+8 A tax on very large fortunes
+What changes inferred
+The flow: revenue.
+Effect text read
+Yield not established, and no central figure.
+For the 2% minimum tax above €100 million, the tax administration said in February 2025 that it could not simulate it; in June 2026, a Senate report cites a note from the Treasury directorate, sent to its finance committee, estimating it at €3.5 to €5.5 billion after behavioural effects (method not examined here).
+The other estimates rest on different conventions: mechanical, €19.4 billion (EU Tax Observatory, directed by Gabriel Zucman, who proposes the tax); deducting corporate tax already paid, which also changes the tax’s design, from €5.5 to €1.25 billion (Institut de l’entreprise, funded by large companies); with taxpayer responses, a parameter taken from Scandinavian studies (54 cents lost to avoidance and 20 to departures, per euro levied, cited by the Conseil d’analyse économique, which finds emigration modest in France).
+No estimate measures observed revenue.
+Benchmark: the former wealth tax raised €4.2 billion in 2017.
+One point of GDP of revenue would have the effect calculated for the primary balance.
+Who decides text read
+Parliament, under review by the Constitutional Council, which accepted the former wealth tax with a cap (decision 2012-662 DC) without validating in advance a minimum tax on a different base.
+Passed by the National Assembly in February 2025, rejected by the Senate in June 2025, rejected in the 2026 budget act.
+Provisional outcome depends on conditions
+Constraint reduced in accounting terms if the recoverable yield is confirmed; depends on the actual base.
+Law, who gains and who pays, robustness, sources
+Applicable law text read
+Under current law; Art.
+63 TFEU prohibits restrictions on capital movements and frames the design, notably an exit tax; no compatibility judgment is made here.
+The Conseil d’État’s opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read.
+Who gains, who pays inferred
+A redistributive transfer borne by the targeted fortunes, depending on their behaviour; a third position (OFCE, 2026) questions wealth as the base and proposes taxing income instead.
+Robustness not determined
+Not determined.
+Sources
+EU Tax Observatory (March 2025); National Assembly, report No 930 (February 2025); Senate, report No 689 (June 2025); Senate, report No 760 (June 2026); CAE, Focus No 118 (July 2025); Institut de l’entreprise (June 2026); OFCE, working paper 2026-6; France Stratégie, evaluation committee, opinion 2023; Constitutional Council, 2012-662 DC; TFEU, Art.
+63
+9 Leaving the euro and redenominating debt
+What changes inferred
+The currency of the debt, the exchange rate, inflation, interest rates.
+Effect not established
+Not simulated.
+Who decides text read
+Not determined: the only departure the Treaties provide for is withdrawal from the Union (Art.
+50 TEU: in line with the State’s constitutional requirements, an agreement concluded by the Council by qualified majority, Treaties ceasing to apply two years after notification failing agreement); the absence of a euro-area-specific procedure in the texts read is not a conclusion.
+Provisional outcome not determined
+Not determined with the sources examined: a limit of knowledge, not a scenario declared impossible.
+Law, who gains and who pays, robustness, sources
+Applicable law not established
+Redenomination: law governing the securities, external commitments, private balance sheets, exchange rate and litigation, to be distinguished; not established.
+Who gains, who pays not established
+Not established.
+Robustness not determined
+Not determined.
+Sources
+TEU, Art.
+50
+Cross-cutting variable: growth.
+A calculation assumption, not a decision, whose effect is quantified above with the other levers.
+It modulates every row: the return on an investment, the cost of a loan and the yield of a tax all depend on it.
+Technology enters as a possible driver, with no separately quantified effect.
+Operations are taken one at a time: no combination is tested.
+Legal feasibility and political acceptability are two distinct questions.
+A transferred obligation is not a debt that has disappeared; the holder of a security is not necessarily the one who bears a loss.
+What the matrix brings out
+The same reform can reduce measured debt, shift burdens, change risks or produce opposite effects, depending on how it is implemented.
+Of the nine operations, none can be classified once and for all: most depend on a condition the grid names, the return on an investment, the actual cost of joint borrowing, the reaction of creditors or taxpayers.
+Changing the rules of debt does not amount to choosing between paying and not paying: each operation changes a set of rights, obligations, risks and capacities.
+Changing the rules can also change who decides.
+Some operations lie mainly with French institutions, under European surveillance; others require the agreement of the Council of the Union, the central bank, each Member State or creditors.
+The possibility of acting depends as much on these agreements as on the economic result sought.
+Each card says who bears the cost (targeted taxpayers, bondholders and their savers, other States, later years) under “Who gains, who pays”, in its fold-out.
+The economic size of a reform says nothing about its legal difficulty.
+Excluding some spending from European monitoring of net expenditure requires amending a regulation, by qualified majority; joint borrowing, even capped, requires unanimity and the approval of each State; changing the definition of the reference deficit, unanimity in the Council.
+European law distinguishes three things the debate conflates: flexibility in fiscal paths (extending the adjustment, treating investment), European borrowing (lending to a State or spending for the Union), and taking over another State’s commitments, which the Treaties strictly limit.
+These are not three variants of the same reform.
+What these projections do not say
+Projection, forecast, sensitivity.
+The Commission’s baseline is a conditional unchanged-policy projection, not a forecast of the most likely outcome.
+The Government’s paths are forecasts, resting on economic assumptions and on measures some of which have yet to be enacted.
+The sensitivities change one parameter at a time.
+None of these figures is certain.
+One lever at a time.
+The sensitivities and the matrix take operations one by one; no combination is calculated, whereas joint borrowing and a golden rule, or a restructuring and subsequent interest rates, interact.
+A ratio does not measure welfare.
+Spending can raise the ratio and improve public assets or avoid a future cost; a sale can lower it without making anyone richer.
+A gap in points of GDP is not an amount paid.
+Feasible is not acceptable.
+The matrix examines the known legal conditions, the agreements required and what remains to be established; it does not say what a majority would accept.
+What remains to be read.
+The statistical classification of an interest-free perpetual security, the Eurosystem’s texts on a conversion, the creation orders of three index-linked bond lines, Article 65 of the Treaty on exceptions to the free movement of capital and the Conseil d’État’s opinion on a differential wealth tax (2025) have not been read: the cards concerned say so.
+The author’s hypothesis, separate from the findings.
+The findings above stand without it.
+The author reads them in the light of anthropy, which the author defines as follows:
+Anthropy is the hypothesis that social systems displace disorder rather than resolve it.
+Applied to debt, this hypothesis asks whether a transformation of the debt system can reduce the constraint without transferring it elsewhere: to other taxpayers, other creditors, other States or other years.
+The matrix does not demonstrate it; it provides, operation by operation, the elements that would allow it to be tested.
+Summary
+Key points
+With unchanged policy, the European Commission projects French public debt at 126.5% of GDP in 2030 and 140.8% in 2035; the Government’s forecast for 2030, 120.9%, assumes new measures.
+A path changes only through the primary balance, interest rates, growth or the stock.
+On the Commission’s baseline, a primary balance one percentage point of GDP higher every year from 2028 to 2035 would lower the debt ratio by 8.2 points in 2035; nominal growth half a point higher every year, by 5.7 points; market rates twenty basis points lower, by 1.0 point.
+These are conditional sensitivities, not the guaranteed effects of a policy.
+Changing the rules of the game spares none of these channels: depending on the operation, it can change the powers and agreements required, and reduce debt, shift its burden or worsen it.
+The matrix of nine operations says so for each, with the status of every statement.
+Frequently asked questions
+What will French public debt be in 2030?
+Nobody knows: the available figures are conditional projections.
+With unchanged policy, the European Commission projects 126.5% of GDP in 2030; under shocks comparable to past ones, in 80% of the Commission’s simulations debt would be between 118.1% and 136.2%.
+The Government forecasts 120.9% in the 2027 draft budget, a path that assumes new measures.
+Would cancelling the debt held by the Banque de France reduce debt?
+A cancellation that extinguishes the claim would lower measured debt; converting into interest-free perpetual bonds that keep their face value would not necessarily do so.
+In both cases the net saving is not secured: the cost of bank reserves, remunerated by the central bank, remains and changes hands.
+And, under the current Treaties, the State cannot impose the operation: neither the ECB nor the Banque de France may take instructions from a government.
+Would a restructuring of French debt be legal?
+Government securities of more than one year created since 2013 carry collective action clauses: the State can change their terms with qualified majorities of holders, counted in principal; for a substantial change to a single line, three quarters of the principal present or represented, provided that two thirds of the outstanding principal are present or represented, with other rules across several lines (Art.
+D.
+213-25-12 and D.
+213-25-13 of the Monetary and Financial Code).
+According to our reconstruction from the Agence France Trésor’s line sheets, 86.3% of the non-indexed nominal outstanding of bonds belongs to these lines.
+The clauses make a change possible; they guarantee neither creditors’ consent nor the absence of higher interest rates afterwards.
+In the public debt dossier
+The four scenarios, told over ten years Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
+Where these figures come from
+European Commission, Debt Sustainability Monitor 2025 (Institutional Paper 332, published on 12 February 2026), France country fiche: unchanged-policy path, deterministic variants and stochastic distribution, read from the fiche’s spreadsheet, archived with its hash.
+Government: medium-term fiscal-structural plan 2025-2029 (October 2024) and the report on general government debt annexed to the 2027 draft budget, read from the archived documents.
+Agence France Trésor: sensitivity of the interest bill to a rise in rates, and the bond line sheets (nominal outstanding and creation order), read on 9 November 2026.
+Legal texts read on EUR-Lex and Légifrance: Treaties, Protocol No 12, Regulation (EU) 2024/1263, Decision 2020/2053, Monetary and Financial Code, the Court of Justice’s Pringle judgment; they are cited in each card.
+The Commission’s and the Government’s paths are read by the script from the archived sources; the sensitivities are calculated by the same script, on the Commission’s baseline; the share of lines subject to collective action clauses is recalculated from the archived record of the Agence France Trésor’s line sheets.
+Figures attributed to other authors in the matrix (International Monetary Fund, EU Tax Observatory, Institut de l’entreprise, Conseil d’analyse économique, France Stratégie’s evaluation committee) are transcribed from their publications, checked against the archived documents.
+The script stops if a data point no longer meets the conditions on which the page’s main sentences depend; their wording is subject to editorial review.
+Reusing this page
+The charts, the data and a ready-made citation, under an open licence.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Public debt in 2030: several futures, under which assumptions?
+Where the current path leads according to the European Commission, with unchanged policy and under historical shocks, and where the paths announced by the Government in 2024 and 2026 stand.
+Reading caveat.
+Beyond 2030, outside the fan: the Commission’s unchanged-policy projection for 2035 is 140.8% of GDP, with no new measures after 2026.
+The bands are conditional projections based on historical economic shocks; they do not predict future decisions or their consequences.
+Bands, from lightest to darkest: 10th to 90th, 20th to 80th and 40th to 60th percentiles of the paths simulated by the Commission (8, 6 and 2 in 10).
+The three paths rest on different assumptions and starting points.
+Starting points in 2025: Commission 116.3% (February 2026 release), 2027 draft budget 115.7% (October 2026), 2024 commitment 114.7% (October 2024); the commitment gives no figure for 2026.
+Sources: European Commission, Debt Sustainability Monitor 2025 (France country fiche); French government, medium-term fiscal-structural plan (October 2024) and debt report annexed to the 2027 draft budget.
+Download PNG
+SVG
+Public debt in 2035: how far the primary balance, interest rates and growth move it
+What a primary balance one point of GDP higher, a few tenths of a point of interest rates or half a point of growth would each change in 2035, on the Commission’s baseline.
+Reading caveat.
+Sensitivities: one parameter changed at a time, the others unchanged.
+These are not forecasts, full policy assessments or a cost-benefit ranking.
+Author’s calculations based on the European Commission’s baseline (Debt Sustainability Monitor 2025, France country fiche), engine tested against the Commission and against the sensitivity published by the French Treasury (AFT).
+Download PNG
+SVG
+Cite this page
+Lalut, Stéphane (2026).
+“Can the rules of the public debt game be changed?”.
+European Commission, French Government and Agence France Trésor data, retrieved 9 November 2026. https://stephane-lalut.com/en/public-debt-what-futures/
+Copy citation
+In three sentences
+With unchanged policy, the European Commission projects French public debt at 126.5% of GDP in 2030 and 140.8% in 2035; the Government’s forecast for 2030 (120.9%) sits in the lower half of the fan of its projections.
+A path changes only through the primary balance, interest rates, growth or the stock; depending on the operation, changing the rules of the game can change the powers and agreements required, and reduce debt, shift its burden or worsen it.
+The Commission’s baseline is an unchanged-policy projection, the Government’s path a forecast that assumes new measures, the levers sensitivities: none of these figures is certain.
+Copy summary
+The data
+The European Commission’s unchanged-policy path, variants and stochastic distribution for France, the Government’s commitments and forecasts, and the sensitivities calculated on the Commission’s baseline; the complete institutional matrix is a second CSV file.
+Download JSON CSV
+Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
+Text under copyright — short quotation free, full reproduction on request.
+The raw series belong to their producers (European Commission, French Government and Agence France Trésor), under their own terms.
+All resources: data, explainers and reference material →
+Share
+WhatsApp
+Bluesky
+LinkedIn
+X
+Email
+Copy link

@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /formules-du-debat-sur-la-dette/, build de 038893c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /formules-du-debat-sur-la-dette/, build de 43ad0eb + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que valent les formules du débat sur la dette ?
 Le 8 septembre 2025, à l’Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
@@ -133,7 +133,7 @@ Contester une politique au nom de laquelle on invoque la dette n’est pas nier 
 Ces registres ne sont pas symétriques.
 Reconnaître une contrainte, juger de son degré de nécessité et en faire un usage politique sont trois choses différentes, que les deux camps mêlent chacun à sa manière.
 Dans cette séance, les registres suivent davantage la position occupée (gouverner ou s’opposer) qu’une opposition simple entre droite et gauche ; il faudrait d’autres configurations pour le vérifier.
-La page sur la baisse de la dette montre ce que d’autres pays ont fait de cette contrainte.
+La page sur la baisse de la dette montre ce que d’autres pays ont fait de cette contrainte, et le volet sur les règles du jeu ce que changeraient les propositions qui veulent la modifier, et qui devrait en décider.
 Hors de l’hémicycle : les candidats de 2027
 Les formations sans député n’ont pas la parole le 8 septembre, et les candidats à la présidentielle n’y parlent pas en leur nom.
 Pour étendre l’enquête aux courants absents de la séance, le même protocole a été appliqué à un autre corpus : les textes d’engagement publiés en 2026 par les candidats déclarés à l’élection présidentielle de 2027 (programmes, projets, livrets, mesures) et, pour ceux qui n’en avaient pas encore publié, leur dernier texte officiel (déclaration de la présidentielle de 2022, profession de foi des européennes de 2024).

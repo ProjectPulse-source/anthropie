@@ -266,7 +266,7 @@ In France, over the same decade, interest and growth took {{< baisse-val "d3_tc_
 
 In {{< baisse-val "annee_fin" >}}, the implicit interest rate and nominal growth were almost equal: the observed primary balance was {{< baisse-val "ecart_dernier" >}} points of GDP, about {{< baisse-val "ecart_md" >}} billion euros, below the marker that would have stabilised the ratio that year, excluding other adjustments. This marker changes every year with interest rates and growth; at this level of debt, one point of gap between interest rate and growth shifts it by about {{< baisse-val "sens_pt" >}} points of GDP, in either direction.
 
-None of the combinations observed is a transferable recipe: these comparisons say neither which policy would bring about a fall, nor at what price, nor who would pay it. That last point is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/)
+None of the combinations observed is a transferable recipe: these comparisons say neither which policy would bring about a fall, nor at what price, nor who would pay it. That last point is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/) What the balance, interest rates, growth or a change of rules would change here by 2035, and who would have to decide it, is the subject of [Can the rules of the public debt game be changed?](/en/public-debt-what-futures/)
 
 </div>
 
@@ -281,6 +281,7 @@ None of the combinations observed is a transferable recipe: these comparisons sa
 - [What does French public debt actually cost?](/en/cost-of-french-public-debt/)
 - [Who really pays for public debt?](/en/who-really-pays-public-debt/)
 - [And elsewhere?](/en/public-debt-international-comparison/)
+- [Can the rules be changed?](/en/public-debt-what-futures/)
 {{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="To take the analysis further" avis="non" >}}

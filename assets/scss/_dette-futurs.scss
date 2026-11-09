@@ -1,0 +1,31 @@
+// Matrice institutionnelle du volet « Quels futurs ? » (layouts/shortcodes/futurs-matrice.html).
+// Une fiche par opération : titre numéroté, quatre lignes (ce qui change, effet, qui décide, issue), analyse en repli.
+.futurs-matrice { margin: 1.5rem 0 2rem; }
+.futurs-op {
+  border-top: 1px solid var(--color-rule-medium);
+  padding: 1.1rem 0 0.6rem;
+  &__titre { font-size: 1.15rem; margin: 0 0 0.6rem; scroll-margin-top: 7rem; }
+  &__num {
+    display: inline-block; min-width: 1.6em; font-family: var(--font-sans); font-weight: 600;
+    color: var(--color-text-subtle);
+  }
+  &__fiche, &__analyse { margin: 0; }
+  &__ligne {
+    display: grid; grid-template-columns: 11rem 1fr; gap: 0 1rem; padding: 0.35rem 0;
+    dt { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; color: var(--color-text); }
+    dd { margin: 0; color: var(--color-text-body); }
+    @media (max-width: 600px) { grid-template-columns: 1fr; dt { margin-bottom: 0.15rem; } }
+  }
+  &__ligne--issue dd { font-weight: 500; }
+}
+.futurs-op { scroll-margin-top: 7rem; }
+.futurs-statut, .futurs-issue {
+  display: inline-block; font-family: var(--font-sans); font-size: 0.75rem; font-weight: 500; line-height: 1.4;
+  padding: 0 0.4em; border: 1px solid var(--color-rule-medium); border-radius: 3px; color: var(--color-text-subtle);
+  white-space: nowrap;
+}
+.futurs-issue { border-color: var(--color-accent); color: var(--color-accent); }
+.futurs-matrice__transversale, .futurs-matrice__limites {
+  border-top: 1px solid var(--color-rule-medium); padding-top: 0.9rem; margin-top: 0.4rem;
+}
+.futurs-matrice__limites { color: var(--color-text-subtle); font-size: 0.95rem; }

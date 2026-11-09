@@ -495,6 +495,80 @@ def carte_generations() -> None:
            (C2, "Uncovered current spending")])
 
 
+def figure_eventail_mini(d: ImageDraw.ImageDraw, j: dict, lang: str = "fr") -> None:
+    """Volet « Quels futurs ? » (09/11/2026) : la figure signature réduite — éventail de la Commission (centiles 10-90 et
+    40-60), trajectoire à politique inchangée (bleu) et prévision du PLF 2027 (orange), 2025-2030. Lu dans
+    data/dette_futurs.json."""
+    st, base = j["reference"]["distribution"], j["reference"]["politique_inchangee"]
+    plf = j["gouvernement"]["prevision_plf2027"]["dette"]
+    ans = list(range(2025, 2031))
+    x0, x1, top, bas = 660, 1126, 100, 424
+    vmin, vmax = 110, 140
+
+    def X(a):
+        return x0 + (x1 - x0) * (a - ans[0]) / (ans[-1] - ans[0])
+
+    def Y(v):
+        return bas - (bas - top) * (v - vmin) / (vmax - vmin)
+
+    for g in range(vmin, vmax + 1, 10):
+        d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=1)
+        d.text((x0 - 44, Y(g) - 11), "%d" % g, font=font("inter", 16, 400), fill=URL_GREY)
+    for lo, hi, col in (("p10", "p90", (214, 226, 241)), ("p40", "p60", (164, 190, 224))):
+        poly = [(X(a), Y(st[lo][str(a)])) for a in ans] + [(X(a), Y(st[hi][str(a)])) for a in reversed(ans)]
+        d.polygon(poly, fill=col)
+    d.line([(X(a), Y(base[str(a)])) for a in ans], fill=C1, width=4)
+    pts = [(X(a), Y(plf[str(a)])) for a in ans]
+    # Prévision en tirets, comme la figure de la page (charte : une prévision se dessine en pointillés).
+    for (xa, ya), (xb, yb) in zip(pts, pts[1:]):
+        lg_ = ((xb - xa) ** 2 + (yb - ya) ** 2) ** 0.5
+        t = 0.0
+        while t < lg_:
+            t2 = min(t + 14, lg_)
+            d.line([(xa + (xb - xa) * t / lg_, ya + (yb - ya) * t / lg_),
+                    (xa + (xb - xa) * t2 / lg_, ya + (yb - ya) * t2 / lg_)], fill=C2, width=3)
+            t += 20
+    for x, y in pts:
+        d.ellipse([x - 5, y - 5, x + 5, y + 5], fill=C2)
+    fa = font("inter", 18, 500)
+    for a in (2025, 2030):
+        d.text((X(a) - fa.getlength(str(a)) / 2, bas + 14), str(a), font=fa, fill=URL_GREY)
+    en = lang == "en"
+    d.text((x0, bas + 40), "French public debt, % of GDP: Commission fan" if en
+           else "Dette publique, % du PIB : éventail de la Commission", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 62), "(10th-90th centiles), Government forecast" if en
+           else "(centiles 10 à 90), prévision du Gouvernement", font=font("inter", 17, 400), fill=URL_GREY)
+
+
+def carte_futurs() -> None:
+    """Volet 6 « Quels futurs ? » (09/11/2026). Le contraste annoncé (la prévision du Gouvernement pour 2030 sous la
+    trajectoire à politique inchangée et dans l'éventail, au-dessus du 10e centile) est contrôlé ici."""
+    f = ROOT / "data" / "dette_futurs.json"
+    if not f.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_dette_futurs.py d'abord" % f)
+    j = json.loads(f.read_text(encoding="utf-8"))
+    st, base = j["reference"]["distribution"], j["reference"]["politique_inchangee"]
+    plf = j["gouvernement"]["prevision_plf2027"]["dette"]["2030"]
+    if not (st["p10"]["2030"] < plf < base["2030"]):
+        fail("carte futurs : la prevision 2030 n'est plus entre le 10e centile et la reference")
+    for lang, nom, titre, url in (("fr", "og-dette-futurs.jpg", ["Dette publique :", "quels futurs ?"],
+                                   "stephane-lalut.com/dette-publique-quels-futurs/"),
+                                  ("en", "og-dette-futurs-en.jpg", ["Public debt:", "what futures?"],
+                                   "stephane-lalut.com/en/public-debt-what-futures/")):
+        A = j["affichage" if lang == "fr" else "affichage_en"]
+        if lang == "fr":
+            acc = "Commission : %s %% du PIB en 2030 à politique inchangée ; Gouvernement : %s %%." % (A["ref_2030"], A["plf_2030"])
+            src = "Commission européenne (DSM 2025), PLF 2027 · CC BY 4.0"
+            cle = [(C1, "Politique inchangée : %s %% en 2030" % A["ref_2030"]), (C2, "PLF 2027 : %s %%" % A["plf_2030"]),
+                   ((164, 190, 224), "Centiles 10-90 : %s-%s %%" % (A["p10_2030"], A["p90_2030"]))]
+        else:
+            acc = "Commission: %s%% of GDP in 2030 with unchanged policy; Government: %s%%." % (A["ref_2030"], A["plf_2030"])
+            src = "European Commission (DSM 2025), draft budget 2027 · CC BY 4.0"
+            cle = [(C1, "Unchanged policy: %s%% in 2030" % A["ref_2030"]), (C2, "Draft budget 2027: %s%%" % A["plf_2030"]),
+                   ((164, 190, 224), "10th-90th centiles: %s-%s%%" % (A["p10_2030"], A["p90_2030"]))]
+        carte(nom, titre, acc, src, url, lambda d, lang=lang: figure_eventail_mini(d, j, lang), cle)
+
+
 def carte_monde() -> None:
     """Volet 3, comparaison internationale (avis du 30/09 : l'aperçu doit montrer la découverte de la page).
     Tout vient de data/dette_monde.json : la paire de faux jumeaux (règle publiée), et les chaînes
@@ -943,6 +1017,9 @@ def main() -> int:
     if "--etudiants" in sys.argv[1:]:
         carte_etudiants()
         return 0
+    if "--futurs" in sys.argv[1:]:
+        carte_futurs()
+        return 0
     if "--monde" in sys.argv[1:]:
         carte_monde()
         carte_dynamique()
@@ -955,6 +1032,7 @@ def main() -> int:
     carte_collectivites()
     carte_plf_communes()
     carte_generations()
+    carte_futurs()
     carte_inflation()
     carte_lycee()
     carte_niveau()

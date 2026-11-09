@@ -1,0 +1,416 @@
+# relu le 2026-11-09 ; texte servi de /dette-publique-quels-futurs/, build de 43ad0eb + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+ENCette page existe aussi en anglais — English version
+Peut-on changer les règles du jeu de la dette publique ?
+Oui, mais sans effet automatique : selon son mécanisme et ses conditions, une même opération peut réduire la dette, déplacer des charges ou des risques vers d’autres, ou l’aggraver.
+À politique inchangée, la Commission européenne projette une dette publique française de 126,5 % du PIB en 2030 et de 140,8 % en 2035 ; changer les règles du jeu ne modifie cette trajectoire qu’en passant par le solde budgétaire, les taux, la croissance ou le stock de dette, et les neuf façons de le faire examinées ici ne relèvent ni des mêmes décideurs ni des mêmes accords.
+Page publiée le 9 novembre 2026
+Dossier dette publique
+Données · Commission DSM 2025, PLF 2027
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Données mises à jour le 9 novembre 2026 Projections de la Commission européenne publiées le 12 février 2026, prévisions du projet de loi de finances pour 2027.
+Télécharger : CSV · JSON · matrice (CSV) · méthode
+Où mène la trajectoire actuelle ?
+Trois sortes de chiffres circulent sur l’avenir de la dette, et ils ne disent pas la même chose.
+La Commission européenne projette la dette à politique inchangée : sans mesure nouvelle, ce que deviendrait le ratio avec les seules décisions déjà prises.
+Ce n’est ni une prévision ni le scénario le plus probable, elle l’écrit elle-même.
+La Commission n’est pas un observateur extérieur : elle veille au respect des règles budgétaires européennes.
+Sa référence sert ici d’étalon commun parce qu’elle est publiée, datée et reproductible, non parce qu’elle serait neutre.
+Le Gouvernement publie des engagements, en octobre 2024 dans son plan budgétaire et structurel à moyen terme, et des prévisions, en 2026 dans le rapport sur la dette annexé au projet de loi de finances pour 2027 : elles supposent des mesures qui ne sont pas toutes votées.
+Cette page ajoute la troisième sorte, des sensibilités : ce que changerait un seul paramètre, sur la référence de la Commission.
+Dette publique de la France, en % du PIB : distribution des trajectoires simulées par la Commission européenne (centiles 10 à 90), trajectoire à politique inchangée, prévision du PLF 2027 et engagement d’octobre 2024.
+Le résultat en une phrase.
+À politique inchangée, la Commission projette une dette de 126,5 % du PIB en 2030, contre 116,3 % en 2025, et juge à 95 % la probabilité que la dette de 2030 dépasse celle de 2025 ; la prévision du Gouvernement, 120,9 %, se place dans la moitié basse de son éventail, vers le 20e centile (environ 20 % des trajectoires simulées finissent plus bas) ; mais la comparaison rapproche deux exercices aux politiques, aux points de départ et aux hypothèses économiques différents, et ne mesure ni l’effet propre des décisions du Gouvernement ni leur probabilité de réussite.
+Lire l’éventail.
+Si l’économie connaît des à-coups de croissance, de taux et de budget semblables à ceux que la France a déjà connus, la dette de 2030 se situerait, dans 80 % des simulations de la Commission, entre 118,1 % et 136,2 % du PIB, un écart de 18,1 points : ce sont les bandes de la figure, que la Commission calcule jusqu’en 2030.
+Ces probabilités, celles du modèle de la Commission, supposent l’absence de mesures nouvelles.
+Elles ne mesurent pas la probabilité qu’un gouvernement tienne ses engagements, et cette page n’en attribue aucune à un choix politique.
+Au-delà de 2030, la Commission ne publie plus d’éventail : sa projection à politique inchangée atteint 140,8 % en 2035.
+Engagement de 2024, prévision de 2026.
+En octobre 2024, le Gouvernement s’engageait sur une dette de 116,5 % du PIB en 2027 ; en 2026, il en prévoit 121,7 %, 5,2 points de plus, deux ans après l’engagement.
+Où se placent ces trajectoires dans l’éventail de la Commission
+Placé dans l’éventail de la Commission, l’engagement de 2024 pour 2029, 115,8 %, tombe sous le 10e centile en niveau.
+Mais il partait de plus bas : les trois trajectoires ne partent pas du même point en 2025 (116,3 % pour la Commission, 115,7 % dans le PLF 2027, 114,7 % dans le plan de 2024).
+Mesuré en variation depuis 2025, le même engagement se place vers le 12e centile, et la prévision du PLF 2027 pour 2030 vers le 24e.
+Le rang d’une trajectoire dans l’éventail dépend donc aussi de son point de départ.
+Ce que changent le solde, les taux et la croissance
+Une trajectoire de dette ne bouge que par quatre canaux : le solde primaire, c’est-à-dire les recettes moins les dépenses hors intérêts, le taux d’intérêt payé sur la dette, la croissance du PIB nominal, et les opérations sur le stock de dette lui-même.
+Toute réforme, y compris un changement de règle, n’agit sur la trajectoire qu’à travers eux.
+La figure applique à la référence de la Commission un seul changement à la fois.
+Écart de dette publique en 2035 par rapport à la référence de la Commission européenne, en points de PIB, un paramètre modifié à la fois (calculs de l’auteur sur la référence du Debt Sustainability Monitor 2025).
+Le solde.
+Un solde primaire supérieur d’un point de PIB chaque année de 2028 à 2035 abaisserait la dette de 3,0 points en 2030 et de 8,2 points en 2035.
+C’est un calcul comptable : il suppose que l’ajustement ne freine pas la croissance et ne change pas les taux, ce qu’il ferait en partie.
+Un point de PIB d’investissement emprunté chaque année, sans effet sur la croissance, ferait l’inverse : 8,2 points de plus.
+Les taux.
+Des taux de marché plus bas de 0,2 point (vingt points de base) sur tous les nouveaux emprunts publics abaisseraient la dette de 1,0 point en 2035 et la charge d’intérêts d’environ 8,1 milliards d’euros cette année-là ; de dix points de base, de 0,5 point.
+Une hausse d’un point la relèverait de 5,5 points, et la charge d’intérêts d’environ 44,6 milliards.
+L’effet est lent : un taux de marché ne touche d’abord que la dette à court terme et les titres émis dans l’année, puis le reste à mesure qu’il est renouvelé.
+La croissance.
+Un demi-point de croissance nominale de plus chaque année abaisserait la dette de 5,7 points en 2035 ; un demi-point de moins la relèverait de 5,9 points.
+La croissance n’est pas une décision : c’est une hypothèse, qui module toutes les autres.
+Elle joue avec le taux : par simple arithmétique de la dette, à solde primaire nul et hors ajustements flux-stock, le ratio monte quand le taux d’intérêt moyen de la dette dépasse la croissance nominale et baisse dans le cas inverse ; un déficit primaire ou des ajustements flux-stock peuvent toutefois inverser ce résultat.
+Le progrès technique entre dans la croissance comme l’un de ses déterminants possibles ; cette page ne lui attribue aucun effet propre chiffré.
+Ces barres ne se comparent pas comme des efforts équivalents : un point de solde primaire est un effort budgétaire à renouveler chaque année, alors qu’un taux ou une croissance ne se décrètent pas.
+Elles disent l’ordre de grandeur de chaque canal, non ce qu’une politique coûterait ni ce qu’elle rapporterait.
+Comment ces sensibilités sont calculées, et contre quoi elles ont été testées
+Le calcul reprend la dynamique de la dette décrite par la Commission dans l’annexe de son Debt Sustainability Monitor : la dette à court terme suit le taux de marché dans l’année, la dette à long terme seulement à mesure qu’elle est renouvelée ; un choc de solde passe par un multiplicateur budgétaire et une composante conjoncturelle, sauf dans les calculs comptables, où l’un et l’autre sont nuls.
+Avant d’écrire la page, le calcul a été confronté à deux variantes que publie la Commission (une hausse de l’écart entre taux et croissance, une crise financière) : il les reproduit dans les tolérances écrites d’avance, et une erreur volontaire sur la transmission des taux le fait échouer.
+Il a aussi été confronté à la sensibilité que publie l’Agence France Trésor pour une hausse d’un point de tous les taux : 8,1 milliards d’euros d’intérêts la deuxième année, 19,2 la cinquième, que le calcul retrouve à quelques pour cent près ; la première année (3,4 milliards), non, à cause du calendrier des émissions : les effets de taux ne sont donc lus qu’à partir de la deuxième année.
+Aucun témoin extérieur n’existe pour un choc de solde durable : d’où le calcul comptable.
+Changer les règles : qui décide, qui paie ?
+Les propositions du débat promettent souvent d’alléger la dette autrement que par l’ajustement budgétaire.
+Les neuf opérations ci-dessous sont examinées une à une avec la même grille : ce qu’elles changent, leur effet quand il se calcule, qui les décide, et l’issue provisoire (contrainte réduite, déplacée vers d’autres, aggravée, ou dépendante de conditions nommées).
+Chaque ligne porte le statut de ce qu’elle affirme : un texte lu, un calcul, un résultat établi ailleurs sur ce site, une déduction, ou ce qui n’est pas établi.
+Le droit applicable, la répartition des coûts et la robustesse se déplient sous chaque fiche ; le tableau complet se télécharge (CSV).
+1 Ajuster le solde primaire
+Ce qui change déduit
+Le flux : dépenses et recettes, chaque année.
+Effet calcul
+Un solde primaire supérieur d’un point de PIB chaque année de 2028 à 2035 abaisse la dette de 8,2 points en 2035.
+Calcul comptable conditionnel : l’ajustement y est supposé sans effet sur la croissance ni sur les taux.
+Qui décide texte lu
+Le Gouvernement propose et exécute ; le Parlement vote les lois de finances et de financement de la sécurité sociale ; une partie des dépenses relève des collectivités et des régimes sociaux.
+Sous surveillance européenne : trajectoire de dépenses nettes recommandée par le Conseil (règlement 2024/1263, art.
+17 et 22) et procédure pour déficit excessif (art.
+126 TFUE).
+Issue provisoire contrainte réduite
+Contrainte réduite comptablement, sous condition des effets sur l’activité, non mesurés ; l’effort pèse sur ceux que vise l’instrument choisi.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable texte lu
+À droit constant.
+Qui gagne, qui paie établi sur le site
+La charge dépend de l’instrument : un même effort ne pèse pas sur les mêmes ménages selon qu’il passe par l’école, l’impôt sur le revenu, les pensions ou la TVA.
+Robustesse non déterminée
+Non déterminée : l’effet d’un choc de taux sur l’effort requis n’est pas calculé.
+Sources
+Règlement (UE) 2024/1263 ; TFUE, art.
+126 ; moteur de la page, calé sur la Commission (DSM 2025)
+2 Allonger la période d’ajustement
+Ce qui change déduit
+Le calendrier de l’ajustement ; son coût cumulé peut aussi changer.
+Effet non établi
+Non chiffré : l’allongement porte sur la trajectoire de dépenses fixée par le règlement européen ; la référence de la Commission utilisée ici ne contient pas cette trajectoire, et ne permet donc pas d’en déduire l’effet sur la dette.
+Qui décide texte lu
+Le Conseil, qui approuve l’ensemble de réformes et d’investissements justifiant la prolongation (règlement 2024/1263, art.
+14 et 17) ; la France l’a demandée dans son plan d’octobre 2024.
+Issue provisoire selon les conditions
+Dépendante du contenu des réformes et de la croissance : ni économie garantie, ni simple report à montant constant.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable texte lu
+À droit constant : quatre ans, prolongeables de trois (art.
+2 § 8 et art.
+14) ; sauvegardes des art.
+7 et 8.
+Qui gagne, qui paie non établi
+Non établi.
+Robustesse non déterminée
+Exposition potentielle prolongée aux conditions de refinancement, non quantifiée : maturités, taux, soldes et croissance évoluent en même temps.
+Sources
+Règlement (UE) 2024/1263 ; Plan budgétaire et structurel à moyen terme 2025-2029 (octobre 2024)
+3 Une règle d’or pour l’investissement
+Ce qui change déduit
+Le traitement de l’investissement dans les règles ; la dette augmente s’il est emprunté.
+Effet calcul
+Un point de PIB d’investissement emprunté chaque année de 2028 à 2035, sans effet sur la croissance, relève la dette de 8,2 points en 2035.
+L’effet net dépend du rendement : le personnel du FMI (2014, dix-sept économies avancées, 1985-2013) estime qu’un point d’investissement public relève la production de 0,4 % l’année même et de 1,5 % à quatre ans, la baisse du ratio de dette (0,9 point) n’étant significative qu’à court terme, sous conditions ; le personnel de la Commission (2024, modèle calibré sur l’Allemagne) trouve qu’un surcroît d’investissement non compensé relève durablement le ratio.
+Résultats conditionnels, non transposables tels quels à la France de 2028-2035.
+Qui décide texte lu
+Selon la variante : exclure certaines dépenses du pilotage des dépenses nettes passe par une modification du règlement (procédure législative ordinaire) ; une flexibilité pour l’investissement est possible selon les modalités ; exclure l’investissement du déficit de référence touche le protocole n° 12, que seul le Conseil à l’unanimité peut remplacer (art.
+126 § 14 TFUE).
+Issue provisoire selon les conditions
+Dépendante du rendement de l’investissement et de son financement : production, rendement budgétaire et dette sont trois effets distincts.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable texte lu
+Le protocole n° 12 définit le déficit comme « le besoin net de financement » et l’investissement comme « la formation brute de capital fixe » ; le traité demande déjà à la Commission d’examiner si le déficit excède l’investissement (art.
+126 § 3), comme critère de son rapport, non comme exemption.
+Qui gagne, qui paie déduit
+Vers les années suivantes si le rendement budgétaire est inférieur au coût du financement ; un rendement social positif n’est pas forcément un rendement budgétaire suffisant.
+Robustesse mécanisme documenté
+Dette plus élevée, plus exposée aux taux, tant que le rendement n’est pas acquis.
+Sources
+Protocole n° 12 ; TFUE, art.
+126 ; Règlement (UE) 2024/1263 ; FMI, WEO octobre 2014, ch.
+3 ; Commission européenne, Discussion Paper 204 (2024)
+4 Un emprunt européen commun ponctuel
+Ce qui change déduit
+Le financement de certains projets et la répartition des obligations de remboursement.
+Effet non établi
+Non estimé.
+Pour ordre de grandeur seulement, une hypothèse de taux, et non une estimation de l’instrument : des taux de marché plus bas de vingt points de base sur tous les nouveaux emprunts publics abaisseraient la dette de 1,0 point en 2035.
+Qui décide texte lu
+Décision sur les ressources propres : le Conseil à l’unanimité, puis l’approbation de chaque État (art.
+311 TFUE) ; base de crise possible (art.
+122).
+Issue provisoire selon les conditions
+Dépendante de la part en prêts et en dépenses et du coût effectif.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable texte lu
+Possible sans révision des traités, comme en 2020, dans des bornes : un montant plafonné, « à la seule fin » de la crise, aucun emprunt net après 2026, remboursement au plus tard en 2058 (décision 2020/2053, art.
+5).
+Qui gagne, qui paie texte lu
+Les fonds prêtés à un État restent à sa charge ; la part dépensée est remboursée par le budget de l’Union, donc par ses contributeurs.
+Une obligation transférée n’est pas une dette disparue.
+Robustesse non déterminée
+Non déterminée.
+Sources
+TFUE, art.
+122 et 311 ; Décision (UE, Euratom) 2020/2053, art.
+5
+5 Une mutualisation durable
+Ce qui change déduit
+Selon l’instrument : le taux, le porteur du risque ou la dette elle-même.
+Effet non établi
+Non estimé.
+Qui décide texte lu
+Selon l’instrument : émission commune pour des dépenses européennes (voie de l’art.
+311) ; assistance conditionnelle du mécanisme de stabilité, « si cela est indispensable » et sous « stricte conditionnalité » (art.
+136 § 3) ; garanties mutuelles pour un projet spécifique (exception de l’art.
+125) ; prise en charge générale et permanente des dettes existantes, qui se heurte à l’art.
+125 et pourrait nécessiter une révision des traités (art.
+48 TUE).
+Issue provisoire selon les conditions
+Dépendante de l’instrument : aucune issue unique.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable texte lu
+L’arrêt Pringle (C-370/12, 2012) lit l’art.
+125 : il n’interdit pas « toute forme d’assistance financière », mais celle qui affaiblit l’incitation à une politique budgétaire saine, et admet l’assistance à un État qui reste responsable de ses engagements envers ses créanciers.
+L’article permet donc certaines formes d’assistance conditionnelle et encadre strictement la prise en charge des engagements d’un autre État ; la compatibilité dépend de l’instrument.
+Qui gagne, qui paie non établi
+Transfert de risque entre États, d’ampleur variable, non établie.
+Robustesse non déterminée
+Non déterminée.
+Sources
+TFUE, art.
+125, 136 et 311 ; TUE, art.
+48 ; CJUE, Pringle, C-370/12, 27 novembre 2012
+6 Convertir ou annuler les titres détenus par l’Eurosystème
+Ce qui change déduit
+Selon l’opération.
+Une conversion en titres perpétuels sans coupon qui garde la valeur nominale ne réduit pas nécessairement la dette au sens du traité ; une annulation qui éteint la créance s’examine à part, avec sa contrepartie comptable et son effet sur le déficit.
+Effet établi sur le site
+La Banque de France détenait 546 Md€ de titres publics français au 31 décembre 2025.
+Effet comptable brut et économie nette s’évaluent séparément : l’économie nette dépend de l’écart entre la rémunération des réserves des banques et le coût de refinancement de l’État, et n’est pas acquise.
+Qui décide texte lu
+Les autorités compétentes de l’Eurosystème et, selon l’opération, l’État débiteur ; ni la BCE ni une banque centrale nationale ne peuvent « solliciter ni accepter des instructions » des gouvernements (art.
+130 TFUE) : en l’état des traités, l’État ne peut pas imposer l’opération.
+Issue provisoire selon les conditions
+Économie nette non acquise ; effets dépendants du dispositif et des conditions monétaires.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable texte lu
+Art.
+123 TFUE : interdiction du crédit aux administrations et de l’« acquisition directe » de leurs titres ; le protocole n° 12 compte la dette « à leur valeur nominale » ; le SEC 2010 classe les titres perpétuels parmi les titres de créance, mais la qualification d’un titre sans coupon ni droit de remboursement n’est pas tranchée par les textes lus.
+Qui gagne, qui paie établi sur le site
+Le coût des réserves rémunérées demeure ; il change de porteur selon le schéma : marché, banque centrale donc État actionnaire, banques.
+Robustesse calculée
+Calculée dans la section du site consacrée à l’annulation (sensibilité à la rémunération des réserves).
+Sources
+TFUE, art.
+123 et 130 ; Protocole n° 12 ; SEC 2010, règlement (UE) 549/2013, annexe A, § 5.89-5.96 ; Qui paie la dette publique ? (section « Annuler la dette détenue par la Banque de France »)
+7 Une restructuration négociée de la dette de l’État
+Ce qui change déduit
+Le stock, une fois.
+Effet non établi
+Mécanique seule, hors des figures ; contreparties non chiffrées.
+Qui décide texte lu
+L’État, avec l’accord des détenteurs exprimé en montants de principal, non en nombre de personnes (clauses d’action collective, art.
+L.
+213-22-1 du code monétaire et financier).
+Seuils en vigueur (art.
+D.
+213-25-12 et D.
+213-25-13) : pour une ligne, un quorum des deux tiers du principal en circulation, puis les trois quarts du principal présent ou représenté pour une modification substantielle ; pour plusieurs lignes, les trois quarts au total et plus des deux tiers sur chaque ligne.
+Le vote agrégé unique des deux tiers attend l’entrée en vigueur de l’accord modifiant le traité du mécanisme européen de stabilité.
+Issue provisoire contrainte déplacée
+Déplacée vers les créanciers et ceux qui portent leurs pertes, avec un risque d’aggravation par les taux.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable calcul
+À droit constant pour les seuls titres couverts.
+Selon notre reconstitution des fiches de l’AFT (9 novembre 2026), 86,3 % de l’encours nominal non indexé des OAT, OATi et OAT€i (2 282 Md€ sur 2 645) relève de lignes créées depuis 2013, auxquelles s’applique en principe le régime des clauses ; 13 lignes plus anciennes (362 Md€, échéances jusqu’en 2060) en sont exclues ; les titres à un an au plus (216 Md€) sont hors champ.
+Des clauses facilitent une modification collective ; elles n’en garantissent ni l’adoption ni la faisabilité.
+Qui gagne, qui paie établi sur le site
+Pertes des détenteurs ; les non-résidents détenaient 59,7 % de la dette négociable de l’État au 2e trimestre 2026.
+Détenir un titre ne dit ni le bénéficiaire final ni qui porte la perte : un assureur la répartit entre actionnaires, réserves et, selon les contrats, assurés.
+Robustesse mécanisme documenté
+Prime de risque sur les émissions suivantes, non chiffrée.
+Sources
+Code monétaire et financier, art.
+L.
+213-22-1, D.
+213-25-1, D.
+213-25-12, D.
+213-25-13 ; Décret n° 2025-1413 du 29 décembre 2025 ; Agence France Trésor, fiches des lignes (relevé)
+8 Un impôt sur les grands patrimoines
+Ce qui change déduit
+Le flux : les recettes.
+Effet texte lu
+Rendement non établi, et aucun chiffre central.
+Pour l’impôt plancher de 2 % au-delà de 100 M€, l’administration fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre 3,5 et 5,5 Md€ après effets de comportement (méthode non examinée ici).
+Les autres estimations ne portent pas sur les mêmes conventions : mécanique, 19,4 Md€ (Observatoire européen de la fiscalité, dirigé par Gabriel Zucman, qui propose l’impôt) ; en déduisant l’impôt sur les sociétés déjà payé, ce qui change aussi la conception de l’impôt, de 5,5 à 1,25 Md€ (Institut de l’entreprise, financé par de grandes entreprises) ; avec les réactions des contribuables, un paramètre tiré d’études scandinaves (54 centimes perdus par optimisation et 20 par départ, pour un euro prélevé, cités par le Conseil d’analyse économique, qui juge l’exil modeste en France).
+Aucune estimation ne mesure une recette observée.
+Repère : l’ISF rapportait 4,2 Md€ en 2017.
+Un point de PIB de recettes aurait l’effet calculé pour le solde primaire.
+Qui décide texte lu
+Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l’ancien ISF avec un plafonnement (décision 2012-662 DC) sans valider d’avance un impôt plancher sur une autre assiette.
+Adopté par l’Assemblée en février 2025, rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.
+Issue provisoire selon les conditions
+Contrainte réduite comptablement si le rendement recouvrable se confirme ; dépendante de l’assiette effective.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable texte lu
+À droit constant ; l’art.
+63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités, notamment une taxe à la sortie ; aucun jugement de compatibilité ici.
+L’avis du Conseil d’État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n’a pas été lu.
+Qui gagne, qui paie déduit
+Transfert redistributif porté par les patrimoines visés, selon leurs comportements ; une troisième position (OFCE, 2026) critique le patrimoine comme assiette et propose d’imposer le revenu.
+Robustesse non déterminée
+Non déterminée.
+Sources
+EU Tax Observatory (mars 2025) ; Assemblée nationale, rapport n° 930 (février 2025) ; Sénat, rapport n° 689 (juin 2025) ; Sénat, rapport n° 760 (juin 2026) ; CAE, Focus n° 118 (juillet 2025) ; Institut de l’entreprise (juin 2026) ; OFCE, document de travail 2026-6 ; France Stratégie, comité d’évaluation, avis 2023 ; Conseil constitutionnel, 2012-662 DC ; TFUE, art.
+63
+9 Sortir de l’euro et redénominer la dette
+Ce qui change déduit
+La monnaie de la dette, le change, l’inflation, les taux.
+Effet non établi
+Non simulé.
+Qui décide texte lu
+Non déterminé : le seul départ prévu par les traités est le retrait de l’Union (art.
+50 TUE : selon les règles constitutionnelles de l’État, accord conclu par le Conseil à la majorité qualifiée, traités inapplicables deux ans après la notification à défaut d’accord) ; l’absence de procédure propre à la zone euro dans les textes lus ne vaut pas conclusion.
+Issue provisoire non déterminée
+Non déterminée avec les sources examinées : une limite de connaissance, non un scénario déclaré impossible.
+Droit, qui gagne et qui paie, robustesse, sources
+Droit applicable non établi
+Redénomination : droit applicable aux titres, engagements externes, bilans privés, change et contentieux, à distinguer ; non établi.
+Qui gagne, qui paie non établi
+Non établi.
+Robustesse non déterminée
+Non déterminée.
+Sources
+TUE, art.
+50
+Variable transversale : la croissance.
+Une hypothèse de calcul, pas une décision, dont l’effet est chiffré plus haut avec les autres leviers.
+Elle module chaque ligne : le rendement d’un investissement, le coût d’un emprunt, la recette d’un impôt en dépendent.
+La technologie y entre comme un déterminant possible, sans effet propre chiffré.
+Opérations prises une à une : aucune combinaison testée.
+Faisabilité juridique et acceptabilité politique sont deux questions distinctes.
+Une obligation transférée n’est pas une dette disparue ; le détenteur d’un titre n’est pas forcément celui qui porte une perte.
+Ce que la matrice fait apparaître
+Une même réforme peut réduire la dette mesurée, déplacer des charges, modifier les risques ou produire des effets opposés, selon les conditions de sa mise en œuvre.
+Sur les neuf opérations, aucune ne se classe une fois pour toutes : la plupart dépendent d’une condition que la grille nomme, le rendement d’un investissement, le coût effectif d’un emprunt commun, la réaction des créanciers ou des contribuables.
+Modifier les règles de la dette ne revient pas à choisir entre payer et ne pas payer : chaque opération modifie un ensemble de droits, d’obligations, de risques et de capacités.
+Changer les règles peut aussi changer qui décide.
+Certaines opérations relèvent principalement des institutions françaises, sous surveillance européenne ; d’autres exigent l’accord du Conseil de l’Union, de la banque centrale, de chacun des États membres ou des créanciers.
+La possibilité d’agir dépend autant de ces accords que du résultat économique recherché.
+Sur qui retombe le coût (contribuables visés, détenteurs de titres et leurs épargnants, autres États, années suivantes), chaque fiche le dit sous « Qui gagne, qui paie », dans son repli.
+L’ampleur économique d’une réforme ne dit pas sa difficulté juridique.
+Exclure certaines dépenses du suivi européen des dépenses nettes passe par une modification de règlement, à la majorité qualifiée ; un emprunt commun, même borné, par l’unanimité et l’approbation de chaque État ; changer la définition du déficit de référence, par l’unanimité du Conseil.
+Le droit européen distingue trois choses que le débat confond : la souplesse des trajectoires budgétaires (allonger l’ajustement, traiter l’investissement), l’emprunt européen (prêter à un État ou dépenser pour l’Union), et la prise en charge des engagements d’un autre État, que les traités encadrent strictement.
+Ce ne sont pas trois variantes d’une même réforme.
+Ce que ces projections ne disent pas
+Projection, prévision, sensibilité.
+La référence de la Commission est une projection conditionnelle à politique inchangée, non une prévision du scénario le plus probable.
+Les trajectoires du Gouvernement sont des prévisions, qui reposent sur des hypothèses économiques et sur des mesures dont certaines restent à adopter.
+Les sensibilités changent un paramètre à la fois.
+Aucun de ces chiffres n’est une certitude.
+Un levier à la fois.
+Les sensibilités et la matrice prennent les opérations une à une ; aucune combinaison n’est calculée, alors qu’un emprunt commun et une règle d’or, ou une restructuration et les taux suivants, interagissent.
+Un ratio ne mesure pas le bien-être.
+Une dépense peut alourdir le ratio et améliorer le patrimoine public ou éviter un coût futur ; une cession peut l’alléger sans enrichir personne.
+Un écart en points de PIB n’est pas un montant versé.
+Faisable n’est pas acceptable.
+La matrice examine les conditions juridiques connues, les accords nécessaires et ce qui reste à établir ; elle ne dit pas ce qu’une majorité accepterait.
+Ce qui reste à lire.
+La qualification statistique d’un titre perpétuel sans intérêt, les textes de l’Eurosystème sur une conversion, les arrêtés de création de trois lignes d’obligations indexées, l’article 65 du traité sur les exceptions à la libre circulation des capitaux et l’avis du Conseil d’État sur une imposition différentielle du patrimoine (2025) n’ont pas été lus : les fiches concernées le disent.
+L’hypothèse de l’auteur, distincte des constats.
+Les constats ci-dessus valent sans elle.
+L’auteur les lit à la lumière de l’anthropie, qu’il définit ainsi :
+L’anthropie est l’hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu’ils ne le résolvent.
+Appliquée à la dette, cette hypothèse demande si une transformation du système d’endettement peut réduire la contrainte sans la transférer ailleurs : vers d’autres contribuables, d’autres créanciers, d’autres États ou d’autres années.
+La matrice ne la démontre pas ; elle fournit, opération par opération, les éléments qui permettraient de l’éprouver.
+Synthèse
+Ce qu’il faut retenir
+À politique inchangée, la Commission européenne projette une dette publique française de 126,5 % du PIB en 2030 et 140,8 % en 2035 ; la prévision du Gouvernement pour 2030, 120,9 %, suppose des mesures nouvelles.
+Une trajectoire ne change que par le solde primaire, les taux, la croissance ou le stock.
+Sur la référence de la Commission, un solde primaire supérieur d’un point de PIB chaque année de 2028 à 2035 réduirait le ratio de dette de 8,2 points en 2035 ; une croissance nominale supérieure d’un demi-point par an, de 5,7 points ; des taux de marché inférieurs de vingt points de base, de 1,0 point.
+Ce sont des sensibilités conditionnelles, non les effets garantis d’une politique.
+Changer les règles du jeu ne dispense d’aucun de ces canaux : selon l’opération, cela peut modifier les compétences et les accords nécessaires, et réduire la dette, en déplacer la charge ou l’aggraver.
+La matrice des neuf opérations le dit pour chacune, avec le statut de chaque affirmation.
+Questions fréquentes
+Quelle sera la dette publique française en 2030 ?
+Personne ne le sait : les chiffres disponibles sont des projections conditionnelles.
+À politique inchangée, la Commission européenne projette 126,5 % du PIB en 2030 ; sous des chocs comparables à ceux du passé, dans 80 % des simulations de la Commission la dette serait entre 118,1 % et 136,2 %.
+Le Gouvernement prévoit 120,9 % dans le projet de loi de finances pour 2027, une trajectoire qui suppose des mesures nouvelles.
+Annuler la dette détenue par la Banque de France ferait-il baisser la dette ?
+Une annulation qui éteint la créance baisserait la dette mesurée ; une conversion en titres perpétuels sans intérêt qui garde la valeur nominale ne la baisserait pas nécessairement.
+Dans les deux cas, l’économie nette n’est pas acquise : le coût des réserves des banques, rémunérées par la banque centrale, demeure et change de porteur.
+Et, en l’état des traités, l’État ne peut pas imposer l’opération : ni la BCE ni la Banque de France ne peuvent recevoir d’instructions d’un gouvernement.
+Une restructuration de la dette française serait-elle légale ?
+Les titres d’État de plus d’un an créés depuis 2013 portent des clauses d’action collective : l’État peut modifier leurs conditions avec des majorités qualifiées de détenteurs, comptées en principal ; pour une modification substantielle d’une seule ligne, les trois quarts du principal présent ou représenté, à condition que les deux tiers du principal en circulation soient présents ou représentés, et d’autres règles pour plusieurs lignes (art.
+D.
+213-25-12 et D.
+213-25-13 du code monétaire et financier).
+Selon notre reconstitution des fiches de l’Agence France Trésor, 86,3 % de l’encours nominal non indexé des obligations relève de ces lignes.
+Ces clauses rendent une modification possible ; elles ne garantissent ni l’accord des créanciers ni l’absence de hausse des taux ensuite.
+Dans le dossier dette publique
+Les quatre scénarios, racontés sur dix ans
+Dette Publique : Qui paie vraiment ?
+La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
+Cette page pose côte à côte, sur une même référence, ce que changent les règles du jeu de la dette et qui en porte le coût.
+Le livre raconte quatre futurs possibles d’ici 2035, de la continuité à la rupture, et ce que chacun ferait peser sur les ménages, les épargnants et les créanciers.
+Ses ordres de grandeur reposent sur ses propres hypothèses, différentes de la référence de la Commission utilisée ici.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
+Votre exemplaire, disponible immédiatement →
+Version papier : 19 € · Kindle : 9,99 €
+Sommaire, extraits et recensions →
+D’où viennent ces chiffres
+Commission européenne, Debt Sustainability Monitor 2025 (Institutional Paper 332, publié le 12 février 2026), fiche France : trajectoire à politique inchangée, variantes déterministes et distribution stochastique, lues dans le tableur de la fiche, archivé avec son empreinte.
+Gouvernement : plan budgétaire et structurel à moyen terme 2025-2029 (octobre 2024) et rapport sur la dette des administrations publiques annexé au projet de loi de finances pour 2027, lus dans les documents archivés.
+Agence France Trésor : sensibilité de la charge d’intérêts à une hausse des taux, et fiches des lignes d’obligations (encours nominal et arrêté de création), relevées le 9 novembre 2026.
+Textes juridiques lus sur EUR-Lex et Légifrance : traités, protocole n° 12, règlement (UE) 2024/1263, décision 2020/2053, code monétaire et financier, arrêt Pringle de la Cour de justice ; ils sont cités dans chaque fiche.
+Les trajectoires de la Commission et du Gouvernement sont lues par le script dans les sources archivées ; les sensibilités sont calculées par le même script, sur la référence de la Commission ; la part des lignes soumises aux clauses d’action collective est recalculée sur le relevé archivé des fiches de l’Agence France Trésor.
+Les chiffres attribués à d’autres auteurs dans la matrice (Fonds monétaire international, Observatoire européen de la fiscalité, Institut de l’entreprise, Conseil d’analyse économique, comité d’évaluation de France Stratégie) sont transcrits de leurs publications, vérifiées contre les pièces archivées.
+Le script s’arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases de la page ; leur formulation fait l’objet d’une relecture éditoriale.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+La dette publique en 2030 : plusieurs futurs, sous quelles hypothèses ?
+Où mène la trajectoire actuelle selon la Commission européenne, à politique inchangée et sous des chocs historiques, et où se placent les trajectoires annoncées par le Gouvernement en 2024 et en 2026.
+Précaution d’interprétation.
+Au-delà de 2030, hors de l’éventail : projection à politique inchangée de la Commission en 2035, 140,8 % du PIB, sans nouvelles mesures après 2026.
+Les bandes sont des projections conditionnelles fondées sur des chocs économiques historiques ; elles ne prédisent ni les décisions futures ni leurs conséquences.
+Bandes, de la plus claire à la plus foncée : du 10e au 90e, du 20e au 80e et du 40e au 60e centile des trajectoires simulées par la Commission (8, 6 et 2 sur 10).
+Les trois trajectoires reposent sur des hypothèses et des points de départ différents.
+Départs en 2025 : Commission 116,3 % (février 2026), PLF 2027 115,7 % (octobre 2026), engagement de 2024 114,7 % (octobre 2024) ; l’engagement ne donne pas de valeur pour 2026.
+Sources : Commission européenne, Debt Sustainability Monitor 2025 (fiche France) ; Gouvernement, plan budgétaire et structurel à moyen terme (octobre 2024) et rapport sur la dette annexé au PLF 2027.
+Télécharger en PNG
+SVG
+Dette publique en 2035 : ce que changent le solde, les taux et la croissance
+Ce que changeraient en 2035, un à la fois, un solde primaire supérieur d’un point de PIB, quelques dixièmes de point de taux ou un demi-point de croissance, sur la référence de la Commission.
+Précaution d’interprétation.
+Sensibilités : un seul paramètre modifié à la fois, les autres inchangés ; ni prévisions, ni évaluations complètes de politiques, ni classement coût-bénéfice.
+Calculs de l’auteur à partir de la référence de la Commission européenne (Debt Sustainability Monitor 2025, fiche France), moteur testé contre la Commission et contre la sensibilité publiée par l’AFT.
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Peut-on changer les règles du jeu de la dette publique ? ».
+Données Commission européenne, Gouvernement et Agence France Trésor, relevé du 9 novembre 2026. https://stephane-lalut.com/dette-publique-quels-futurs/
+Copier la citation
+En trois phrases
+À politique inchangée, la Commission européenne projette une dette publique française de 126,5 % du PIB en 2030 et de 140,8 % en 2035 ; la prévision du Gouvernement pour 2030 (120,9 %) se place dans la moitié basse de l’éventail de ses projections.
+Une trajectoire ne change que par le solde primaire, les taux, la croissance ou le stock ; selon l’opération, changer les règles du jeu peut modifier les compétences et les accords nécessaires, et réduire la dette, en déplacer la charge ou l’aggraver.
+La référence de la Commission est une projection à politique inchangée, la trajectoire du Gouvernement une prévision qui suppose des mesures nouvelles, les leviers des sensibilités : aucun de ces chiffres n’est une certitude.
+Copier le résumé
+Les données
+La trajectoire à politique inchangée, les variantes et la distribution stochastique de la Commission européenne pour la France, les engagements et prévisions du Gouvernement, les sensibilités calculées sur la référence de la Commission ; la matrice institutionnelle complète est un second fichier CSV.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (Commission européenne, Gouvernement et Agence France Trésor), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

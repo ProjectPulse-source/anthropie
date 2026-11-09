@@ -5,6 +5,7 @@
        {{< dossier-dette volet="2" >}}             « Qui paie ? »                 (FR et EN)
        {{< dossier-dette volet="3" >}}             « Qu'en est-il ailleurs ? »    (FR et EN)
        {{< dossier-dette volet="baisse" >}}        « Peut-elle baisser ? »        (FR et EN depuis le 03/10/2026)
+       {{< dossier-dette volet="futurs" >}}        « Quels futurs ? »             (FR et EN, 09/11/2026)
        {{< dossier-dette volet="prolongement" >}}  une page de prolongement (« collectivites » : ancien nom, accepté)
 
        COMPOSITION (maquettes et trois avis arbitrés : 06_PROMOTION\MAQUETTES_BARRE_DOSSIER_DETTE_2026-10-03\,
@@ -35,7 +36,7 @@
        Échoue bruyamment sur un volet inconnu. */ -}}
 {{- $v := .Get "volet" -}}
 {{- if eq $v "collectivites" }}{{ $v = "prolongement" }}{{ end -}}
-{{- if not (in (slice "hausse" "1" "2" "3" "baisse" "prolongement") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2, 3, baisse, prolongement ou collectivites) dans %s" $v .Page.File.Path }}{{- end -}}
+{{- if not (in (slice "hausse" "1" "2" "3" "baisse" "futurs" "prolongement") $v) -}}{{ errorf "dossier-dette: volet \"%s\" inconnu (attendu hausse, 1, 2, 3, baisse, futurs, prolongement ou collectivites) dans %s" $v .Page.File.Path }}{{- end -}}
 {{- $en := eq .Page.Lang "en" -}}
 {{- $page := .Page -}}
 {{- $src := "" -}}
@@ -55,6 +56,12 @@
   {{- with site.Data.dette_baisse -}}
     {{- $src = printf "%s · Eurostat %s" $donnees .affichage.annee_fin -}}
     {{- $srcTitre = cond $en "Latest year of the Eurostat data on this page — the vintage of the DATA, not the date the text was reviewed" "Dernière année des données Eurostat de cette page — c'est le millésime des DONNÉES, non la date de relecture du texte" -}}
+  {{- end -}}
+{{- else if eq $v "futurs" -}}
+  {{- /* Volet 6 (09/11/2026) : projections de la Commission (DSM 2025) et prévisions du Gouvernement (PLF 2027). */ -}}
+  {{- with site.Data.dette_futurs -}}
+    {{- $src = printf "%s · %s" $donnees (cond $en "Commission DSM 2025, draft budget 2027" "Commission DSM 2025, PLF 2027") -}}
+    {{- $srcTitre = cond $en "Editions of the projections on this page: the Commission's Debt Sustainability Monitor 2025 (published February 2026) and the debt report annexed to the 2027 draft budget — vintages of the DATA, not the date the text was reviewed" "Éditions des projections de cette page : Debt Sustainability Monitor 2025 de la Commission (publié en février 2026) et rapport sur la dette annexé au PLF 2027 — millésimes des DONNÉES, non date de relecture du texte" -}}
   {{- end -}}
 {{- else if eq $v "3" -}}
   {{- with site.Data.dette_monde -}}
@@ -89,14 +96,14 @@
   {{- $src = printf "%s · %s" (cond $en "Updated" "Mise à jour") ((partial "page-date.html" .Page).mod.Format "01/2006") -}}
   {{- $srcTitre = cond $en "Last editorial update of this page. Data vintages are given next to each figure." "Mise à jour éditoriale de la page. Les millésimes des données sont indiqués auprès de chaque figure." -}}
 {{- end -}}
-{{- /* Les cinq questions : data/dossier_dette.yaml, source unique partagée avec la bande de l'index /ressources/. */ -}}
+{{- /* Les six questions : data/dossier_dette.yaml, source unique partagée avec la bande de l'index /ressources/. */ -}}
 {{- $L := cond $en "en" "fr" -}}
 {{- $items := slice -}}
 {{- range site.Data.dossier_dette.volets -}}
   {{- $items = $items | append (dict "n" .volet "url" (index .url $L) "titre" (index .titre $L) "court" (index .court $L)
         "nom" (index .nom $L) "role" (index .role $L)) -}}
 {{- end -}}
-{{- if ne (len $items) 5 }}{{ errorf "dossier-dette : data/dossier_dette.yaml doit porter les cinq volets (%d lus)" (len $items) }}{{ end -}}
+{{- if ne (len $items) 6 }}{{ errorf "dossier-dette : data/dossier_dette.yaml doit porter les six volets (%d lus)" (len $items) }}{{ end -}}
 {{- /* Prolongements : ceux de la langue de la page ; une page anglaise sans prolongement anglais montre ceux de la page
        française, marqués « in French » et hreflang="fr" (miroir de la barre demandé par l'auteur, 03/10/2026). */ -}}
 {{- /* 07/10/2026 (première page anglaise de prolongement, /en/local-government-debt/) : sur une page anglaise, la
@@ -137,6 +144,6 @@
 {{- end -}}
 {{- partial "dossier-barre.html" (dict "page" .Page "titre" (cond $en "Public debt dossier" "Dossier dette publique")
       "titre_url" (cond $en "/en/resources/#dette" "/ressources/#dette")
-      "titre_aide" (cond $en "Overview of the dossier: the five questions and the further topics" "Vue d'ensemble du dossier : les cinq questions et les prolongements")
+      "titre_aide" (cond $en "Overview of the dossier: the six questions and the further topics" "Vue d'ensemble du dossier : les six questions et les prolongements")
       "src" $src "srcTitre" $srcTitre "label" (cond $en "Public debt dossier" "Dossier dette publique")
       "items" $onglets "panneau" $panneau) -}}

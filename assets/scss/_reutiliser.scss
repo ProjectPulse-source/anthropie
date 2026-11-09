@@ -397,6 +397,10 @@ a.dossier-dette__onglet:focus-visible { outline: 2px solid var(--color-pivot); o
 //   « Prolongements ». Sur le site construit, rangée naturelle de 936 px : 56 px de réserve dans 992 px (mesure du
 //   03/10 ; la maquette donnait 884 px, polices et marges du site diffèrent).
 // - Bascule vers les libellés courts AVANT saturation : sous 968 px de barre (réserve < 32 px), requête de conteneur.
+// - Six questions depuis le 09/11/2026 (« Quels futurs ? ») : rangée naturelle de 1 064 px, mesurée sur le serveur local.
+//   Le seuil commun (968 px) sert toutes les barres de dossier et n'a pas été relevé ; pour la barre de la dette, c'est
+//   le script de partials/dossier-barre.html (classe is-court) qui bascule dès que les libellés longs débordent :
+//   vérifié à 1 100 px (longs), 1 050, 1 000 et 970 px (courts), sans débordement.
 // ---------------------------------------------------------------------------------------------------------------
 .sr-only {
   position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;

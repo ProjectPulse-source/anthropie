@@ -1,4 +1,4 @@
-# Les cinq questions du dossier dette publique, dans l'ordre de la barre (06/10/2026). Source UNIQUE de leurs libellés :
+# Les six questions du dossier dette publique (la sixième, « Quels futurs ? », ajoutée le 09/11/2026), dans l'ordre de la barre. Source UNIQUE de leurs libellés :
 # lue par la barre des pages (layouts/shortcodes/dossier-dette.html) et par la bande du dossier dans l'index /ressources/
 # (layouts/ressources/list.html, `bande_donnees: dossier_dette`). Avant, les libellés n'existaient que dans le shortcode ;
 # l'index en aurait porté une copie, qui aurait dérivé.
@@ -35,3 +35,9 @@ volets:
     court: { fr: "Baisse", en: "Down" }
     nom: { fr: "la dette publique peut-elle baisser ?", en: "can public debt come down?" }
     role: { fr: "conditions", en: "conditions" }
+  - volet: futurs
+    url: { fr: "/dette-publique-quels-futurs/", en: "/en/public-debt-what-futures/" }
+    titre: { fr: "Quels futurs ?", en: "What futures?" }
+    court: { fr: "Futurs", en: "Futures" }
+    nom: { fr: "peut-on changer les règles du jeu de la dette publique ?", en: "can the rules of the public debt game be changed?" }
+    role: { fr: "scénarios", en: "scenarios" }

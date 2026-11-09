@@ -1,0 +1,1801 @@
+{
+ "releve_le": "2026-11-09",
+ "_licence": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-quels-futurs/",
+ "meta": {
+  "releve_le": "2026-11-09",
+  "page": "https://stephane-lalut.com/dette-publique-quels-futurs/",
+  "licence": "CC BY 4.0",
+  "sources": [
+   "Commission européenne, Debt Sustainability Monitor 2025 (12/02/2026), fiche France",
+   "Rapport sur la dette des administrations publiques, annexe au PLF 2027",
+   "Plan budgétaire et structurel à moyen terme 2025-2029 (23/10/2024)"
+  ]
+ },
+ "reference": {
+  "politique_inchangee": {
+   "2024": 113.197784424,
+   "2025": 116.329246521,
+   "2026": 118.069000244,
+   "2027": 120.014167786,
+   "2028": 122.196403503,
+   "2029": 124.221336365,
+   "2030": 126.516151428,
+   "2031": 129.062774658,
+   "2032": 131.720596313,
+   "2033": 134.512619019,
+   "2034": 137.556594849,
+   "2035": 140.808258057,
+   "2036": 144.020141602
+  },
+  "variantes": {
+   "historical_spb": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 118.069000244,
+    "2027": 120.010093689,
+    "2028": 122.244628906,
+    "2029": 124.598594666,
+    "2030": 127.21105957,
+    "2031": 129.99508667,
+    "2032": 132.87727356,
+    "2033": 135.880630493,
+    "2034": 139.173446655,
+    "2035": 142.678695679,
+    "2036": 146.145706177
+   },
+   "financial_stress": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 118.641021729,
+    "2027": 120.888290405,
+    "2028": 123.343772888,
+    "2029": 125.616744995,
+    "2030": 128.139526367,
+    "2031": 130.896118164,
+    "2032": 133.746322632,
+    "2033": 136.715332031,
+    "2034": 139.922943115,
+    "2035": 143.327438354,
+    "2036": 146.67817688
+   },
+   "lower_spb": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 118.053787231,
+    "2027": 119.831344604,
+    "2028": 122.509407043,
+    "2029": 125.244613647,
+    "2030": 128.173828125,
+    "2031": 131.242111206,
+    "2032": 134.428665161,
+    "2033": 137.75718689,
+    "2034": 141.3462677,
+    "2035": 145.153640747,
+    "2036": 148.924377441
+   },
+   "adverse_rg": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 118.758003235,
+    "2027": 121.459861755,
+    "2028": 124.467674255,
+    "2029": 127.389259338,
+    "2030": 130.656219482,
+    "2031": 134.251449585,
+    "2032": 138.030807495,
+    "2033": 142.019683838,
+    "2034": 146.338973999,
+    "2035": 150.95211792,
+    "2036": 155.59387207
+   }
+  },
+  "distribution": {
+   "p10": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 113.936264738,
+    "2027": 114.794636727,
+    "2028": 115.943337699,
+    "2029": 116.903396658,
+    "2030": 118.119238171
+   },
+   "p20": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 115.284696602,
+    "2027": 116.353177777,
+    "2028": 117.822332096,
+    "2029": 119.18881604,
+    "2030": 120.848944198
+   },
+   "p40": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 117.030683551,
+    "2027": 118.632242223,
+    "2028": 120.694600342,
+    "2029": 122.46985208,
+    "2030": 124.583080045
+   },
+   "p60": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 118.597505702,
+    "2027": 120.748942289,
+    "2028": 123.258010959,
+    "2029": 125.493091953,
+    "2030": 128.019587927
+   },
+   "p80": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 120.637998732,
+    "2027": 123.598478813,
+    "2028": 126.52432134,
+    "2029": 129.457201296,
+    "2030": 132.479079401
+   },
+   "p90": {
+    "2024": 113.197784424,
+    "2025": 116.329246521,
+    "2026": 122.584391362,
+    "2027": 126.081166247,
+    "2028": 129.552951487,
+    "2029": 132.683135634,
+    "2030": 136.235730052
+   }
+  },
+  "probabilite_2030_au_dessus_de_2025": 0.9462,
+  "ecart_p90_p10_2030": 18.1164918813
+ },
+ "gouvernement": {
+  "prevision_plf2027": {
+   "dette": {
+    "2024": 112.6,
+    "2025": 115.7,
+    "2026": 119.3,
+    "2027": 121.7,
+    "2028": 122.4,
+    "2029": 121.9,
+    "2030": 120.9
+   },
+   "solde": {
+    "2024": -5.8,
+    "2025": -5.1,
+    "2026": -5.4,
+    "2027": -5.0,
+    "2028": -3.9,
+    "2029": -2.8,
+    "2030": -2.4
+   }
+  },
+  "engagement_psmt_2024": {
+   "2023": 109.9,
+   "2024": 112.9,
+   "2025": 114.7,
+   "2027": 116.5,
+   "2028": 116.1,
+   "2029": 115.8
+  },
+  "sensibilite_aft_100pb_md": {
+   "1": 3.4,
+   "2": 8.1,
+   "5": 19.2
+  },
+  "part_apuc_2027": 0.8431
+ },
+ "positionnement": {
+  "plf2027_2030": {
+   "valeur": 120.9,
+   "variation": 5.2,
+   "centile_niveau": 20.2734544437,
+   "centile_variation": 23.6436934858,
+   "sous_p10_niveau": false,
+   "sous_p10_variation": false,
+   "depend_du_point_de_depart": false
+  },
+  "psmt_2029": {
+   "valeur": 115.8,
+   "variation": 1.1,
+   "centile_niveau": null,
+   "centile_variation": 12.3008900115,
+   "sous_p10_niveau": true,
+   "sous_p10_variation": false,
+   "depend_du_point_de_depart": true
+  }
+ },
+ "sensibilites": {
+  "taux_moins_10pb": {
+   "dette_2030": -0.143,
+   "dette_2035": -0.516,
+   "interets_md_2028": -1.0,
+   "interets_md_2035": -4.0
+  },
+  "taux_moins_20pb": {
+   "dette_2030": -0.286,
+   "dette_2035": -1.03,
+   "interets_md_2028": -2.1,
+   "interets_md_2035": -8.1
+  },
+  "taux_plus_100pb": {
+   "dette_2030": 1.46,
+   "dette_2035": 5.494,
+   "interets_md_2028": 10.4,
+   "interets_md_2035": 44.6
+  },
+  "croissance_plus_05": {
+   "dette_2030": -2.37,
+   "dette_2035": -5.666,
+   "interets_md_2028": -0.5,
+   "interets_md_2035": -7.1
+  },
+  "croissance_moins_05": {
+   "dette_2030": 2.429,
+   "dette_2035": 5.947,
+   "interets_md_2028": 0.5,
+   "interets_md_2035": 7.4
+  },
+  "solde_plus_1_comptable": {
+   "annees": 8,
+   "dette_2030": -3.003,
+   "dette_2035": -8.155
+  },
+  "investissement_emprunte_1pt_comptable": {
+   "annees": 8,
+   "dette_2030": 3.003,
+   "dette_2035": 8.155
+  }
+ },
+ "temoin_aft_moteur_md": {
+  "2": 8.8,
+  "5": 19.06
+ },
+ "matrice": {
+  "aft": {
+   "cac_md": 2282.244,
+   "sans_cac_md": 362.4,
+   "oat_md": 2644.644,
+   "cac_part": 86.297,
+   "sans_cac_n": 13,
+   "sans_cac_fin": 2060,
+   "btf_md": 215.68,
+   "ecarts_declares_md": 42.898
+  },
+  "valeurs_transcrites": {
+   "zucman_mecanique": {
+    "valeur": 19.4,
+    "unite": "Md€",
+    "source": "EU Tax Observatory (Parrinello, Varaschin, Zucman), mars 2025, tableau 1, p. 4",
+    "piece_sha256": "c578b166f38fab108079f58c3649d854f66dd097891374836b83d1bcfdd94e13"
+   },
+   "ide_82": {
+    "valeur": 5.5,
+    "unite": "Md€",
+    "source": "Institut de l'entreprise, La taxe Zucman, juin 2026, p. 2 et 15 (déduction de 82 % de l'IS)",
+    "piece_sha256": "dced22ce7785f1ce1005bacac488f137b818221bcb1021611f1c3ec6f0d366b2"
+   },
+   "ide_100": {
+    "valeur": 1.25,
+    "unite": "Md€",
+    "source": "Institut de l'entreprise, La taxe Zucman, juin 2026, p. 15 (déduction totale de l'IS)",
+    "piece_sha256": "dced22ce7785f1ce1005bacac488f137b818221bcb1021611f1c3ec6f0d366b2",
+    "decimales": 2
+   },
+   "cae_optimisation": {
+    "valeur": 54,
+    "unite": "centimes",
+    "source": "CAE, Focus n° 118, juillet 2025, p. 16 (études scandinaves)",
+    "piece_sha256": "bfb2b7a752cfaea8e390a91bb088c0e955f63eca5a0846607dc81bd03668bc18",
+    "decimales": 0
+   },
+   "cae_depart": {
+    "valeur": 20,
+    "unite": "centimes",
+    "source": "CAE, Focus n° 118, juillet 2025, p. 16 (études scandinaves)",
+    "piece_sha256": "bfb2b7a752cfaea8e390a91bb088c0e955f63eca5a0846607dc81bd03668bc18",
+    "decimales": 0
+   },
+   "dgt_bas": {
+    "valeur": 3.5,
+    "unite": "Md€",
+    "source": "Sénat, rapport d'information n° 760 (2025-2026), Imposition des hauts patrimoines, 17 juin 2026 : note de la direction générale du Trésor à la commission des finances, rendement après effets de comportement",
+    "piece_sha256": "42802bfbad021b2096133551810a0d881654ea36e089594c7e07f09e29510081"
+   },
+   "dgt_haut": {
+    "valeur": 5.5,
+    "unite": "Md€",
+    "source": "Sénat, rapport d'information n° 760 (2025-2026), 17 juin 2026 (même passage)",
+    "piece_sha256": "42802bfbad021b2096133551810a0d881654ea36e089594c7e07f09e29510081"
+   },
+   "isf_2017": {
+    "valeur": 4.2,
+    "unite": "Md€",
+    "source": "Comité d'évaluation des réformes de la fiscalité du capital (France Stratégie), avis, octobre 2023, p. 12",
+    "piece_sha256": "eb326f493ed9a255060af5ae10750359a0722d30406bed36c56157fedff578d0"
+   },
+   "zucman_taux": {
+    "valeur": 2,
+    "unite": "%",
+    "source": "Proposition de loi n° 768 (AN, 7 janvier 2025), exposé des motifs : taux de l'impôt plancher",
+    "piece_sha256": "1a20b6c11e75f49edde31e30d5c80cea1c548fc99785b6497d1fdc22609ce45a",
+    "decimales": 0
+   },
+   "zucman_seuil": {
+    "valeur": 100,
+    "unite": "M€",
+    "source": "Proposition de loi n° 768 (AN, 7 janvier 2025), article unique (art. 885 A du CGI) : seuil de patrimoine",
+    "piece_sha256": "1a20b6c11e75f49edde31e30d5c80cea1c548fc99785b6497d1fdc22609ce45a",
+    "decimales": 0
+   },
+   "fmi_prod_an0": {
+    "valeur": 0.4,
+    "unite": "%",
+    "source": "FMI, World Economic Outlook, octobre 2014, ch. 3, p. 82",
+    "piece_sha256": "00676874685f9153afe0d5aa5733e2de8d2ae7a7053a3c8587cbdb86a3f433b2"
+   },
+   "fmi_prod_an4": {
+    "valeur": 1.5,
+    "unite": "%",
+    "source": "FMI, World Economic Outlook, octobre 2014, ch. 3, p. 82",
+    "piece_sha256": "00676874685f9153afe0d5aa5733e2de8d2ae7a7053a3c8587cbdb86a3f433b2"
+   },
+   "fmi_dette_ct": {
+    "valeur": 0.9,
+    "unite": "point",
+    "source": "FMI, World Economic Outlook, octobre 2014, ch. 3, p. 82",
+    "piece_sha256": "00676874685f9153afe0d5aa5733e2de8d2ae7a7053a3c8587cbdb86a3f433b2"
+   }
+  },
+  "fr": {
+   "operations": [
+    {
+     "cle": "solde",
+     "titre": "Ajuster le solde primaire",
+     "sources": [
+      "Règlement (UE) 2024/1263",
+      "TFUE, art. 126",
+      "moteur de la page, calé sur la Commission (DSM 2025)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "Le flux : dépenses et recettes, chaque année.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "Un solde primaire supérieur d'un point de PIB chaque année de 2028 à 2035 abaisse la dette de 8,2 points en 2035. Calcul comptable conditionnel : l'ajustement y est supposé sans effet sur la croissance ni sur les taux.",
+       "fiche": true,
+       "statut": "calc",
+       "statut_libelle": "calcul",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "Le Gouvernement propose et exécute ; le Parlement vote les lois de finances et de financement de la sécurité sociale ; une partie des dépenses relève des collectivités et des régimes sociaux. Sous surveillance européenne : trajectoire de dépenses nettes recommandée par le Conseil (règlement 2024/1263, art. 17 et 22) et procédure pour déficit excessif (art. 126 TFUE).",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "À droit constant.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "La charge dépend de l'instrument : un même effort ne pèse pas sur les mêmes ménages selon qu'il passe par l'école, l'impôt sur le revenu, les pensions ou la TVA.",
+       "fiche": false,
+       "statut": "site",
+       "statut_libelle": "établi sur le site",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Non déterminée : l'effet d'un choc de taux sur l'effort requis n'est pas calculé.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": "non_determinee",
+       "code_libelle": "non déterminée"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Contrainte réduite comptablement, sous condition des effets sur l'activité, non mesurés ; l'effort pèse sur ceux que vise l'instrument choisi.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "reduite",
+       "code_libelle": "contrainte réduite"
+      }
+     }
+    },
+    {
+     "cle": "allongement",
+     "titre": "Allonger la période d'ajustement",
+     "sources": [
+      "Règlement (UE) 2024/1263",
+      "Plan budgétaire et structurel à moyen terme 2025-2029 (octobre 2024)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "Le calendrier de l'ajustement ; son coût cumulé peut aussi changer.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "Non chiffré : l'allongement porte sur la trajectoire de dépenses fixée par le règlement européen ; la référence de la Commission utilisée ici ne contient pas cette trajectoire, et ne permet donc pas d'en déduire l'effet sur la dette.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "Le Conseil, qui approuve l'ensemble de réformes et d'investissements justifiant la prolongation (règlement 2024/1263, art. 14 et 17) ; la France l'a demandée dans son plan d'octobre 2024.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "À droit constant : quatre ans, prolongeables de trois (art. 2 § 8 et art. 14) ; sauvegardes des art. 7 et 8.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "Non établi.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Exposition potentielle prolongée aux conditions de refinancement, non quantifiée : maturités, taux, soldes et croissance évoluent en même temps.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": "non_determinee",
+       "code_libelle": "non déterminée"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Dépendante du contenu des réformes et de la croissance : ni économie garantie, ni simple report à montant constant.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "selon les conditions"
+      }
+     }
+    },
+    {
+     "cle": "regle_or",
+     "titre": "Une règle d'or pour l'investissement",
+     "sources": [
+      "Protocole n° 12",
+      "TFUE, art. 126",
+      "Règlement (UE) 2024/1263",
+      "FMI, WEO octobre 2014, ch. 3",
+      "Commission européenne, Discussion Paper 204 (2024)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "Le traitement de l'investissement dans les règles ; la dette augmente s'il est emprunté.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "Un point de PIB d'investissement emprunté chaque année de 2028 à 2035, sans effet sur la croissance, relève la dette de 8,2 points en 2035. L'effet net dépend du rendement : le personnel du FMI (2014, dix-sept économies avancées, 1985-2013) estime qu'un point d'investissement public relève la production de 0,4 % l'année même et de 1,5 % à quatre ans, la baisse du ratio de dette (0,9 point) n'étant significative qu'à court terme, sous conditions ; le personnel de la Commission (2024, modèle calibré sur l'Allemagne) trouve qu'un surcroît d'investissement non compensé relève durablement le ratio. Résultats conditionnels, non transposables tels quels à la France de 2028-2035.",
+       "fiche": true,
+       "statut": "calc",
+       "statut_libelle": "calcul",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "Selon la variante : exclure certaines dépenses du pilotage des dépenses nettes passe par une modification du règlement (procédure législative ordinaire) ; une flexibilité pour l'investissement est possible selon les modalités ; exclure l'investissement du déficit de référence touche le protocole n° 12, que seul le Conseil à l'unanimité peut remplacer (art. 126 § 14 TFUE).",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "Le protocole n° 12 définit le déficit comme « le besoin net de financement » et l'investissement comme « la formation brute de capital fixe » ; le traité demande déjà à la Commission d'examiner si le déficit excède l'investissement (art. 126 § 3), comme critère de son rapport, non comme exemption.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "Vers les années suivantes si le rendement budgétaire est inférieur au coût du financement ; un rendement social positif n'est pas forcément un rendement budgétaire suffisant.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Dette plus élevée, plus exposée aux taux, tant que le rendement n'est pas acquis.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": "mecanisme_documente",
+       "code_libelle": "mécanisme documenté"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Dépendante du rendement de l'investissement et de son financement : production, rendement budgétaire et dette sont trois effets distincts.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "selon les conditions"
+      }
+     }
+    },
+    {
+     "cle": "emprunt_commun",
+     "titre": "Un emprunt européen commun ponctuel",
+     "sources": [
+      "TFUE, art. 122 et 311",
+      "Décision (UE, Euratom) 2020/2053, art. 5"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "Le financement de certains projets et la répartition des obligations de remboursement.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "Non estimé. Pour ordre de grandeur seulement, une hypothèse de taux, et non une estimation de l'instrument : des taux de marché plus bas de vingt points de base sur tous les nouveaux emprunts publics abaisseraient la dette de 1,0 point en 2035.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "Décision sur les ressources propres : le Conseil à l'unanimité, puis l'approbation de chaque État (art. 311 TFUE) ; base de crise possible (art. 122).",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "Possible sans révision des traités, comme en 2020, dans des bornes : un montant plafonné, « à la seule fin » de la crise, aucun emprunt net après 2026, remboursement au plus tard en 2058 (décision 2020/2053, art. 5).",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "Les fonds prêtés à un État restent à sa charge ; la part dépensée est remboursée par le budget de l'Union, donc par ses contributeurs. Une obligation transférée n'est pas une dette disparue.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Non déterminée.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": "non_determinee",
+       "code_libelle": "non déterminée"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Dépendante de la part en prêts et en dépenses et du coût effectif.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "selon les conditions"
+      }
+     }
+    },
+    {
+     "cle": "mutualisation",
+     "titre": "Une mutualisation durable",
+     "sources": [
+      "TFUE, art. 125, 136 et 311",
+      "TUE, art. 48",
+      "CJUE, Pringle, C-370/12, 27 novembre 2012"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "Selon l'instrument : le taux, le porteur du risque ou la dette elle-même.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "Non estimé.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "Selon l'instrument : émission commune pour des dépenses européennes (voie de l'art. 311) ; assistance conditionnelle du mécanisme de stabilité, « si cela est indispensable » et sous « stricte conditionnalité » (art. 136 § 3) ; garanties mutuelles pour un projet spécifique (exception de l'art. 125) ; prise en charge générale et permanente des dettes existantes, qui se heurte à l'art. 125 et pourrait nécessiter une révision des traités (art. 48 TUE).",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "L'arrêt Pringle (C-370/12, 2012) lit l'art. 125 : il n'interdit pas « toute forme d'assistance financière », mais celle qui affaiblit l'incitation à une politique budgétaire saine, et admet l'assistance à un État qui reste responsable de ses engagements envers ses créanciers. L'article permet donc certaines formes d'assistance conditionnelle et encadre strictement la prise en charge des engagements d'un autre État ; la compatibilité dépend de l'instrument.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "Transfert de risque entre États, d'ampleur variable, non établie.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Non déterminée.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": "non_determinee",
+       "code_libelle": "non déterminée"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Dépendante de l'instrument : aucune issue unique.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "selon les conditions"
+      }
+     }
+    },
+    {
+     "cle": "eurosysteme",
+     "titre": "Convertir ou annuler les titres détenus par l'Eurosystème",
+     "sources": [
+      "TFUE, art. 123 et 130",
+      "Protocole n° 12",
+      "SEC 2010, règlement (UE) 549/2013, annexe A, § 5.89-5.96",
+      "Qui paie la dette publique ? (section « Annuler la dette détenue par la Banque de France »)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "Selon l'opération. Une conversion en titres perpétuels sans coupon qui garde la valeur nominale ne réduit pas nécessairement la dette au sens du traité ; une annulation qui éteint la créance s'examine à part, avec sa contrepartie comptable et son effet sur le déficit.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "La Banque de France détenait 546 Md€ de titres publics français au 31 décembre 2025. Effet comptable brut et économie nette s'évaluent séparément : l'économie nette dépend de l'écart entre la rémunération des réserves des banques et le coût de refinancement de l'État, et n'est pas acquise.",
+       "fiche": true,
+       "statut": "site",
+       "statut_libelle": "établi sur le site",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "Les autorités compétentes de l'Eurosystème et, selon l'opération, l'État débiteur ; ni la BCE ni une banque centrale nationale ne peuvent « solliciter ni accepter des instructions » des gouvernements (art. 130 TFUE) : en l'état des traités, l'État ne peut pas imposer l'opération.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "Art. 123 TFUE : interdiction du crédit aux administrations et de l'« acquisition directe » de leurs titres ; le protocole n° 12 compte la dette « à leur valeur nominale » ; le SEC 2010 classe les titres perpétuels parmi les titres de créance, mais la qualification d'un titre sans coupon ni droit de remboursement n'est pas tranchée par les textes lus.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "Le coût des réserves rémunérées demeure ; il change de porteur selon le schéma : marché, banque centrale donc État actionnaire, banques.",
+       "fiche": false,
+       "statut": "site",
+       "statut_libelle": "établi sur le site",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Calculée dans la section du site consacrée à l'annulation (sensibilité à la rémunération des réserves).",
+       "fiche": false,
+       "statut": "site",
+       "statut_libelle": "établi sur le site",
+       "code": "calculee",
+       "code_libelle": "calculée"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Économie nette non acquise ; effets dépendants du dispositif et des conditions monétaires.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "selon les conditions"
+      }
+     }
+    },
+    {
+     "cle": "restructuration",
+     "titre": "Une restructuration négociée de la dette de l'État",
+     "sources": [
+      "Code monétaire et financier, art. L. 213-22-1, D. 213-25-1, D. 213-25-12, D. 213-25-13",
+      "Décret n° 2025-1413 du 29 décembre 2025",
+      "Agence France Trésor, fiches des lignes (relevé)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "Le stock, une fois.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "Mécanique seule, hors des figures ; contreparties non chiffrées.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "L'État, avec l'accord des détenteurs exprimé en montants de principal, non en nombre de personnes (clauses d'action collective, art. L. 213-22-1 du code monétaire et financier). Seuils en vigueur (art. D. 213-25-12 et D. 213-25-13) : pour une ligne, un quorum des deux tiers du principal en circulation, puis les trois quarts du principal présent ou représenté pour une modification substantielle ; pour plusieurs lignes, les trois quarts au total et plus des deux tiers sur chaque ligne. Le vote agrégé unique des deux tiers attend l'entrée en vigueur de l'accord modifiant le traité du mécanisme européen de stabilité.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "À droit constant pour les seuls titres couverts. Selon notre reconstitution des fiches de l'AFT (9 novembre 2026), 86,3 % de l'encours nominal non indexé des OAT, OATi et OAT€i (2 282 Md€ sur 2 645) relève de lignes créées depuis 2013, auxquelles s'applique en principe le régime des clauses ; 13 lignes plus anciennes (362 Md€, échéances jusqu'en 2060) en sont exclues ; les titres à un an au plus (216 Md€) sont hors champ. Des clauses facilitent une modification collective ; elles n'en garantissent ni l'adoption ni la faisabilité.",
+       "fiche": false,
+       "statut": "calc",
+       "statut_libelle": "calcul",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "Pertes des détenteurs ; les non-résidents détenaient 59,7 % de la dette négociable de l'État au 2e trimestre 2026. Détenir un titre ne dit ni le bénéficiaire final ni qui porte la perte : un assureur la répartit entre actionnaires, réserves et, selon les contrats, assurés.",
+       "fiche": false,
+       "statut": "site",
+       "statut_libelle": "établi sur le site",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Prime de risque sur les émissions suivantes, non chiffrée.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": "mecanisme_documente",
+       "code_libelle": "mécanisme documenté"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Déplacée vers les créanciers et ceux qui portent leurs pertes, avec un risque d'aggravation par les taux.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "deplacee",
+       "code_libelle": "contrainte déplacée"
+      }
+     }
+    },
+    {
+     "cle": "impot_patrimoines",
+     "titre": "Un impôt sur les grands patrimoines",
+     "sources": [
+      "EU Tax Observatory (mars 2025)",
+      "Assemblée nationale, rapport n° 930 (février 2025)",
+      "Sénat, rapport n° 689 (juin 2025)",
+      "Sénat, rapport n° 760 (juin 2026)",
+      "CAE, Focus n° 118 (juillet 2025)",
+      "Institut de l'entreprise (juin 2026)",
+      "OFCE, document de travail 2026-6",
+      "France Stratégie, comité d'évaluation, avis 2023",
+      "Conseil constitutionnel, 2012-662 DC",
+      "TFUE, art. 63"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "Le flux : les recettes.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "Rendement non établi, et aucun chiffre central. Pour l'impôt plancher de 2 % au-delà de 100 M€, l'administration fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre 3,5 et 5,5 Md€ après effets de comportement (méthode non examinée ici). Les autres estimations ne portent pas sur les mêmes conventions : mécanique, 19,4 Md€ (Observatoire européen de la fiscalité, dirigé par Gabriel Zucman, qui propose l'impôt) ; en déduisant l'impôt sur les sociétés déjà payé, ce qui change aussi la conception de l'impôt, de 5,5 à 1,25 Md€ (Institut de l'entreprise, financé par de grandes entreprises) ; avec les réactions des contribuables, un paramètre tiré d'études scandinaves (54 centimes perdus par optimisation et 20 par départ, pour un euro prélevé, cités par le Conseil d'analyse économique, qui juge l'exil modeste en France). Aucune estimation ne mesure une recette observée. Repère : l'ISF rapportait 4,2 Md€ en 2017. Un point de PIB de recettes aurait l'effet calculé pour le solde primaire.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l'ancien ISF avec un plafonnement (décision 2012-662 DC) sans valider d'avance un impôt plancher sur une autre assiette. Adopté par l'Assemblée en février 2025, rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "À droit constant ; l'art. 63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités, notamment une taxe à la sortie ; aucun jugement de compatibilité ici. L'avis du Conseil d'État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n'a pas été lu.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "Transfert redistributif porté par les patrimoines visés, selon leurs comportements ; une troisième position (OFCE, 2026) critique le patrimoine comme assiette et propose d'imposer le revenu.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Non déterminée.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": "non_determinee",
+       "code_libelle": "non déterminée"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Contrainte réduite comptablement si le rendement recouvrable se confirme ; dépendante de l'assiette effective.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "selon les conditions"
+      }
+     }
+    },
+    {
+     "cle": "sortie_euro",
+     "titre": "Sortir de l'euro et redénominer la dette",
+     "sources": [
+      "TUE, art. 50"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "Ce qui change",
+       "texte": "La monnaie de la dette, le change, l'inflation, les taux.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "déduit",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effet",
+       "texte": "Non simulé.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Qui décide",
+       "texte": "Non déterminé : le seul départ prévu par les traités est le retrait de l'Union (art. 50 TUE : selon les règles constitutionnelles de l'État, accord conclu par le Conseil à la majorité qualifiée, traités inapplicables deux ans après la notification à défaut d'accord) ; l'absence de procédure propre à la zone euro dans les textes lus ne vaut pas conclusion.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "texte lu",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Droit applicable",
+       "texte": "Redénomination : droit applicable aux titres, engagements externes, bilans privés, change et contentieux, à distinguer ; non établi.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Qui gagne, qui paie",
+       "texte": "Non établi.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustesse",
+       "texte": "Non déterminée.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "non établi",
+       "code": "non_determinee",
+       "code_libelle": "non déterminée"
+      },
+      "issue": {
+       "libelle": "Issue provisoire",
+       "texte": "Non déterminée avec les sources examinées : une limite de connaissance, non un scénario déclaré impossible.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "non_determinee",
+       "code_libelle": "non déterminée"
+      }
+     }
+    }
+   ],
+   "transversale": {
+    "titre": "Variable transversale : la croissance",
+    "texte": "Une hypothèse de calcul, pas une décision, dont l'effet est chiffré plus haut avec les autres leviers. Elle module chaque ligne : le rendement d'un investissement, le coût d'un emprunt, la recette d'un impôt en dépendent. La technologie y entre comme un déterminant possible, sans effet propre chiffré."
+   },
+   "limites": "Opérations prises une à une : aucune combinaison testée. Faisabilité juridique et acceptabilité politique sont deux questions distinctes. Une obligation transférée n'est pas une dette disparue ; le détenteur d'un titre n'est pas forcément celui qui porte une perte."
+  },
+  "en": {
+   "operations": [
+    {
+     "cle": "solde",
+     "titre": "Adjusting the primary balance",
+     "sources": [
+      "Regulation (EU) 2024/1263",
+      "TFEU, Art. 126",
+      "this page's engine, calibrated on the Commission (DSM 2025)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "The flow: spending and revenue, every year.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "A primary balance 1 percentage point of GDP higher every year from 2028 to 2035 lowers debt by 8.2 points in 2035. A conditional accounting calculation: the adjustment is assumed to affect neither growth nor interest rates.",
+       "fiche": true,
+       "statut": "calc",
+       "statut_libelle": "calculation",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "The Government proposes and implements; Parliament votes the finance and social security financing acts; part of spending lies with local authorities and social security funds. Under European surveillance: the net expenditure path recommended by the Council (Regulation 2024/1263, Art. 17 and 22) and the excessive deficit procedure (Art. 126 TFEU).",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "Under current law.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "It depends on the instrument: the same effort does not fall on the same households whether it goes through schools, income tax, pensions or VAT.",
+       "fiche": false,
+       "statut": "site",
+       "statut_libelle": "established on this site",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "Not determined: the effect of an interest-rate shock on the required effort is not calculated.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": "non_determinee",
+       "code_libelle": "not determined"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Constraint reduced in accounting terms, subject to effects on activity that are not measured; borne by those the chosen instrument targets.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "reduite",
+       "code_libelle": "constraint reduced"
+      }
+     }
+    },
+    {
+     "cle": "allongement",
+     "titre": "Extending the adjustment period",
+     "sources": [
+      "Regulation (EU) 2024/1263",
+      "Medium-term fiscal-structural plan 2025-2029 (October 2024)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "The timing of the adjustment; its cumulative cost may also change.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "Not quantified: the extension applies to the expenditure path set by the European regulation; the Commission baseline used here does not contain that path, so its effect on debt cannot be derived from it.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "The Council, which approves the set of reforms and investments underpinning the extension (Regulation 2024/1263, Art. 14 and 17); France requested it in its October 2024 plan.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "Under current law: four years, extendable by three (Art. 2(8) and Art. 14); safeguards in Art. 7 and 8.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "Not established.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "Potentially prolonged exposure to refinancing conditions, not quantified: maturities, rates, balances and growth move together.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": "non_determinee",
+       "code_libelle": "not determined"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Depends on the content of the reforms and on growth: neither a guaranteed saving nor a mere postponement of the same amount.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "depends on conditions"
+      }
+     }
+    },
+    {
+     "cle": "regle_or",
+     "titre": "A golden rule for investment",
+     "sources": [
+      "Protocol No 12",
+      "TFEU, Art. 126",
+      "Regulation (EU) 2024/1263",
+      "IMF, World Economic Outlook, October 2014, ch. 3",
+      "European Commission, Discussion Paper 204 (2024)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "How investment is treated by the rules; debt rises if it is borrowed.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "One point of GDP of borrowed investment every year from 2028 to 2035, with no effect on growth, raises debt by 8.2 points in 2035. The net effect depends on returns: IMF staff (2014, seventeen advanced economies, 1985-2013) estimate that one point of public investment raises output by 0.4% in the same year and by 1.5% after four years, the fall in the debt ratio (0.9 points) being significant only in the short run, under conditions; Commission staff (2024, model calibrated on Germany) find that an uncompensated rise in investment lastingly raises the ratio. Conditional results, not directly transferable to France in 2028-2035.",
+       "fiche": true,
+       "statut": "calc",
+       "statut_libelle": "calculation",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "Depending on the variant: excluding some spending from net expenditure monitoring requires amending the regulation (ordinary legislative procedure); flexibility for investment is possible depending on its terms; excluding investment from the reference deficit touches Protocol No 12, which only the Council acting unanimously can replace (Art. 126(14) TFEU).",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "Protocol No 12 defines the deficit as \"net borrowing\" and investment as \"gross fixed capital formation\"; the Treaty already asks the Commission to examine whether the deficit exceeds investment (Art. 126(3)), as a criterion of its report, not as an exemption.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "Towards later years if the fiscal return is below the cost of financing; a positive social return is not necessarily a sufficient fiscal return.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "Higher debt, more exposed to rates, as long as the return is not secured.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": "mecanisme_documente",
+       "code_libelle": "documented mechanism"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Depends on the return on investment and on its financing: output, fiscal return and debt are three distinct effects.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "depends on conditions"
+      }
+     }
+    },
+    {
+     "cle": "emprunt_commun",
+     "titre": "A one-off joint European borrowing",
+     "sources": [
+      "TFEU, Art. 122 and 311",
+      "Decision (EU, Euratom) 2020/2053, Art. 5"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "The financing of certain projects and who must repay.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "Not estimated. As an order of magnitude only, an interest-rate assumption rather than an estimate of the instrument: market rates twenty basis points lower on all new public borrowing would lower debt by 1.0 point in 2035.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "Own-resources decision: the Council acting unanimously, then approval by each Member State (Art. 311 TFEU); a crisis legal basis is possible (Art. 122).",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "Possible without Treaty change, as in 2020, within limits: a capped amount, \"exclusively\" for the crisis, no net borrowing after 2026, repayment by 2058 at the latest (Decision 2020/2053, Art. 5).",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "Funds lent to a State remain its liability; the part spent is repaid by the EU budget, hence by its contributors. A transferred obligation is not a debt that has disappeared.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "Not determined.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": "non_determinee",
+       "code_libelle": "not determined"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Depends on the split between loans and spending and on the actual cost.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "depends on conditions"
+      }
+     }
+    },
+    {
+     "cle": "mutualisation",
+     "titre": "Lasting debt mutualisation",
+     "sources": [
+      "TFEU, Art. 125, 136 and 311",
+      "TEU, Art. 48",
+      "CJEU, Pringle, C-370/12, 27 November 2012"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "Depending on the instrument: the rate, who bears the risk, or the debt itself.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "Not estimated.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "Depending on the instrument: joint issuance for European spending (Art. 311 route); conditional assistance from the stability mechanism, \"if indispensable\" and under \"strict conditionality\" (Art. 136(3)); mutual guarantees for a specific project (Art. 125 exception); a general and permanent takeover of existing debts, which runs into Art. 125 and could require Treaty change (Art. 48 TEU).",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "The Pringle judgment (C-370/12, 2012) reads Art. 125: it does not prohibit \"any form of financial assistance\", but assistance that weakens the incentive for sound budgetary policy, and it allows assistance to a State that remains responsible for its commitments to its creditors. The article thus permits some forms of conditional assistance and strictly limits taking over another State's commitments; compatibility depends on the instrument.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "A transfer of risk between States, of variable size, not established.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "Not determined.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": "non_determinee",
+       "code_libelle": "not determined"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Depends on the instrument: no single outcome.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "depends on conditions"
+      }
+     }
+    },
+    {
+     "cle": "eurosysteme",
+     "titre": "Converting or cancelling bonds held by the Eurosystem",
+     "sources": [
+      "TFEU, Art. 123 and 130",
+      "Protocol No 12",
+      "ESA 2010, Regulation (EU) 549/2013, Annex A, § 5.89-5.96",
+      "Who really pays public debt? (section \"Cancelling the debt held by the Banque de France\")"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "It depends on the operation. Converting into zero-coupon perpetual bonds that keep their face value does not necessarily reduce debt as defined by the Treaty; a cancellation that extinguishes the claim must be examined separately, with its accounting counterpart and its effect on the deficit.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "The Banque de France held €546 billion of French government securities at 31 December 2025. The gross accounting effect and the net saving are assessed separately: the net saving depends on the gap between the interest paid on bank reserves and the State's refinancing cost, and is not secured.",
+       "fiche": true,
+       "statut": "site",
+       "statut_libelle": "established on this site",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "The competent Eurosystem authorities and, depending on the operation, the debtor State; neither the ECB nor a national central bank may \"seek or take instructions\" from governments (Art. 130 TFEU): under the current Treaties, the State cannot impose the operation.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "Art. 123 TFEU prohibits credit to public bodies and the \"direct purchase\" of their debt instruments; Protocol No 12 counts debt \"at nominal value\"; ESA 2010 classifies perpetual securities as debt securities, but how a security with neither coupon nor repayment right should be classified is not settled by the texts read.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "The cost of remunerated reserves remains; who bears it changes with the scheme: the market, the central bank and hence the State as shareholder, or banks.",
+       "fiche": false,
+       "statut": "site",
+       "statut_libelle": "established on this site",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "Calculated in the site's section on cancellation (sensitivity to the interest paid on reserves).",
+       "fiche": false,
+       "statut": "site",
+       "statut_libelle": "established on this site",
+       "code": "calculee",
+       "code_libelle": "calculated"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Net saving not secured; effects depend on the scheme and on monetary conditions.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "depends on conditions"
+      }
+     }
+    },
+    {
+     "cle": "restructuration",
+     "titre": "A negotiated restructuring of State debt",
+     "sources": [
+      "Monetary and Financial Code, Art. L. 213-22-1, D. 213-25-1, D. 213-25-12, D. 213-25-13",
+      "Decree No 2025-1413 of 29 December 2025",
+      "Agence France Trésor, bond line sheets (record)"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "The stock, once.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "Mechanical only, outside the charts; counterparts not quantified.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "The State, with holders' consent expressed in principal amounts, not headcount (collective action clauses, Art. L. 213-22-1 of the Monetary and Financial Code). Thresholds in force (Art. D. 213-25-12 and D. 213-25-13): for one line, a quorum of two thirds of the outstanding principal, then three quarters of the principal present or represented for a substantial change; across several lines, three quarters in aggregate and more than two thirds per line. The single-limb two-thirds vote awaits the entry into force of the agreement amending the European Stability Mechanism Treaty.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "Under current law for covered securities only. According to our reconstruction from the AFT line sheets (9 November 2026), 86.3% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€2,282 billion of €2,645 billion) belongs to lines created since 2013, to which the clause regime applies in principle; 13 older lines (€362 billion, maturing up to 2060) are excluded; securities of one year or less (€216 billion) fall outside its scope. Clauses ease a collective modification; they guarantee neither its adoption nor its feasibility.",
+       "fiche": false,
+       "statut": "calc",
+       "statut_libelle": "calculation",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "Losses for holders; non-residents held 59.7% of State negotiable debt in the second quarter of 2026. Holding a security says neither who the final beneficiary is nor who bears the loss: an insurer spreads it across shareholders, reserves and, depending on contracts, policyholders.",
+       "fiche": false,
+       "statut": "site",
+       "statut_libelle": "established on this site",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "A risk premium on subsequent issuance, not quantified.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": "mecanisme_documente",
+       "code_libelle": "documented mechanism"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Shifted onto creditors and those who bear their losses, with a risk of aggravation through interest rates.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "deplacee",
+       "code_libelle": "constraint shifted"
+      }
+     }
+    },
+    {
+     "cle": "impot_patrimoines",
+     "titre": "A tax on very large fortunes",
+     "sources": [
+      "EU Tax Observatory (March 2025)",
+      "National Assembly, report No 930 (February 2025)",
+      "Senate, report No 689 (June 2025)",
+      "Senate, report No 760 (June 2026)",
+      "CAE, Focus No 118 (July 2025)",
+      "Institut de l'entreprise (June 2026)",
+      "OFCE, working paper 2026-6",
+      "France Stratégie, evaluation committee, opinion 2023",
+      "Constitutional Council, 2012-662 DC",
+      "TFEU, Art. 63"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "The flow: revenue.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "Yield not established, and no central figure. For the 2% minimum tax above €100 million, the tax administration said in February 2025 that it could not simulate it; in June 2026, a Senate report cites a note from the Treasury directorate, sent to its finance committee, estimating it at €3.5 to €5.5 billion after behavioural effects (method not examined here). The other estimates rest on different conventions: mechanical, €19.4 billion (EU Tax Observatory, directed by Gabriel Zucman, who proposes the tax); deducting corporate tax already paid, which also changes the tax's design, from €5.5 to €1.25 billion (Institut de l'entreprise, funded by large companies); with taxpayer responses, a parameter taken from Scandinavian studies (54 cents lost to avoidance and 20 to departures, per euro levied, cited by the Conseil d'analyse économique, which finds emigration modest in France). No estimate measures observed revenue. Benchmark: the former wealth tax raised €4.2 billion in 2017. One point of GDP of revenue would have the effect calculated for the primary balance.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "Parliament, under review by the Constitutional Council, which accepted the former wealth tax with a cap (decision 2012-662 DC) without validating in advance a minimum tax on a different base. Passed by the National Assembly in February 2025, rejected by the Senate in June 2025, rejected in the 2026 budget act.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "Under current law; Art. 63 TFEU prohibits restrictions on capital movements and frames the design, notably an exit tax; no compatibility judgment is made here. The Conseil d'État's opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read.",
+       "fiche": false,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "A redistributive transfer borne by the targeted fortunes, depending on their behaviour; a third position (OFCE, 2026) questions wealth as the base and proposes taxing income instead.",
+       "fiche": false,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "Not determined.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": "non_determinee",
+       "code_libelle": "not determined"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Constraint reduced in accounting terms if the recoverable yield is confirmed; depends on the actual base.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "conditionnelle",
+       "code_libelle": "depends on conditions"
+      }
+     }
+    },
+    {
+     "cle": "sortie_euro",
+     "titre": "Leaving the euro and redenominating debt",
+     "sources": [
+      "TEU, Art. 50"
+     ],
+     "champs": {
+      "ce_qui_change": {
+       "libelle": "What changes",
+       "texte": "The currency of the debt, the exchange rate, inflation, interest rates.",
+       "fiche": true,
+       "statut": "infere",
+       "statut_libelle": "inferred",
+       "code": null,
+       "code_libelle": null
+      },
+      "effet": {
+       "libelle": "Effect",
+       "texte": "Not simulated.",
+       "fiche": true,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "qui_decide": {
+       "libelle": "Who decides",
+       "texte": "Not determined: the only departure the Treaties provide for is withdrawal from the Union (Art. 50 TEU: in line with the State's constitutional requirements, an agreement concluded by the Council by qualified majority, Treaties ceasing to apply two years after notification failing agreement); the absence of a euro-area-specific procedure in the texts read is not a conclusion.",
+       "fiche": true,
+       "statut": "lu",
+       "statut_libelle": "text read",
+       "code": null,
+       "code_libelle": null
+      },
+      "droit": {
+       "libelle": "Applicable law",
+       "texte": "Redenomination: law governing the securities, external commitments, private balance sheets, exchange rate and litigation, to be distinguished; not established.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "repartition": {
+       "libelle": "Who gains, who pays",
+       "texte": "Not established.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": null,
+       "code_libelle": null
+      },
+      "robustesse": {
+       "libelle": "Robustness",
+       "texte": "Not determined.",
+       "fiche": false,
+       "statut": "non_etabli",
+       "statut_libelle": "not established",
+       "code": "non_determinee",
+       "code_libelle": "not determined"
+      },
+      "issue": {
+       "libelle": "Provisional outcome",
+       "texte": "Not determined with the sources examined: a limit of knowledge, not a scenario declared impossible.",
+       "fiche": true,
+       "statut": null,
+       "statut_libelle": null,
+       "code": "non_determinee",
+       "code_libelle": "not determined"
+      }
+     }
+    }
+   ],
+   "transversale": {
+    "titre": "Cross-cutting variable: growth",
+    "texte": "A calculation assumption, not a decision, whose effect is quantified above with the other levers. It modulates every row: the return on an investment, the cost of a loan and the yield of a tax all depend on it. Technology enters as a possible driver, with no separately quantified effect."
+   },
+   "limites": "Operations are taken one at a time: no combination is tested. Legal feasibility and political acceptability are two distinct questions. A transferred obligation is not a debt that has disappeared; the holder of a security is not necessarily the one who bears a loss."
+  }
+ },
+ "affichage": {
+  "dsm_publie": "12 février 2026",
+  "ref_2036": "144,0",
+  "plf_2025": "115,7",
+  "plf_2030_var": "5,2",
+  "plf_2030_c_niv": "20",
+  "plf_2030_c_var": "24",
+  "psmt_2025": "114,7",
+  "psmt_2029_var": "1,1",
+  "psmt_2029_c_var": "12",
+  "taux10_2035_pts": "0,5 point",
+  "taux20_2035_pts": "1,0 point",
+  "taux20_int_2035": "8,1",
+  "taux100_2035_pts": "5,5 points",
+  "taux100_int_2035": "44,6",
+  "croiss_plus_2035_pts": "5,7 points",
+  "croiss_moins_2035_pts": "5,9 points",
+  "solde_2030_pts": "3,0 points",
+  "solde_2035_pts": "8,2 points",
+  "invest_2035_pts": "8,2 points",
+  "aft_an1": "3,4",
+  "n_operations": "neuf",
+  "n_operations_maj": "Neuf",
+  "cac_part": "86,3",
+  "ref_2025": "116,3",
+  "ref_2030": "126,5",
+  "ref_2035": "140,8",
+  "proba_2030_pct": "95",
+  "p10_2030": "118,1",
+  "p90_2030": "136,2",
+  "ecart_p90_p10": "18,1",
+  "plf_2027": "121,7",
+  "plf_2028": "122,4",
+  "plf_2030": "120,9",
+  "psmt_2027": "116,5",
+  "psmt_2029": "115,8",
+  "ecart_promesse_2027": "5,2",
+  "plf_2030_centile_variation": "24",
+  "aft_an5": "19,2",
+  "aft_an2": "8,1",
+  "eurobonds_20pb_2035": "1,0",
+  "croissance_05_2035": "6"
+ },
+ "affichage_en": {
+  "dsm_publie": "12 February 2026",
+  "ref_2036": "144.0",
+  "plf_2025": "115.7",
+  "plf_2030_var": "5.2",
+  "plf_2030_c_niv": "20",
+  "plf_2030_c_var": "24",
+  "psmt_2025": "114.7",
+  "psmt_2029_var": "1.1",
+  "psmt_2029_c_var": "12",
+  "taux10_2035_pts": "0.5 points",
+  "taux20_2035_pts": "1.0 point",
+  "taux20_int_2035": "8.1",
+  "taux100_2035_pts": "5.5 points",
+  "taux100_int_2035": "44.6",
+  "croiss_plus_2035_pts": "5.7 points",
+  "croiss_moins_2035_pts": "5.9 points",
+  "solde_2030_pts": "3.0 points",
+  "solde_2035_pts": "8.2 points",
+  "invest_2035_pts": "8.2 points",
+  "aft_an1": "3.4",
+  "n_operations": "nine",
+  "n_operations_maj": "Nine",
+  "cac_part": "86.3",
+  "plf_2030_c_niv_ord": "20th",
+  "plf_2030_c_var_ord": "24th",
+  "psmt_2029_c_var_ord": "12th",
+  "ref_2025": "116.3",
+  "ref_2030": "126.5",
+  "ref_2035": "140.8",
+  "proba_2030_pct": "95",
+  "p10_2030": "118.1",
+  "p90_2030": "136.2",
+  "ecart_p90_p10": "18.1",
+  "plf_2027": "121.7",
+  "plf_2028": "122.4",
+  "plf_2030": "120.9",
+  "psmt_2027": "116.5",
+  "psmt_2029": "115.8",
+  "ecart_promesse_2027": "5.2",
+  "plf_2030_centile_variation": "24",
+  "aft_an5": "19.2",
+  "aft_an2": "8.1",
+  "eurobonds_20pb_2035": "1.0",
+  "croissance_05_2035": "6"
+ }
+}

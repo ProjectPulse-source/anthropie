@@ -271,7 +271,7 @@ En France, sur la même décennie, les taux et la croissance ont retiré {{< bai
 
 En {{< baisse-val "annee_fin" >}}, taux implicite et croissance nominale étaient presque égaux&nbsp;: le solde primaire observé était inférieur de {{< baisse-val "ecart_dernier" >}} points de PIB, environ {{< baisse-val "ecart_md" >}} milliards d'euros, au repère qui aurait stabilisé le ratio cette année-là, hors autres ajustements. Ce repère change chaque année avec les taux et la croissance&nbsp;; à ce niveau de dette, un point d'écart entre taux et croissance le déplace d'environ {{< baisse-val "sens_pt" >}} point de PIB, dans un sens comme dans l'autre.
 
-Aucune des combinaisons observées n'est une recette transposable&nbsp;: ces comparaisons ne disent ni quelle politique produirait une baisse, ni à quel prix, ni qui le paierait. Ce dernier point est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
+Aucune des combinaisons observées n'est une recette transposable&nbsp;: ces comparaisons ne disent ni quelle politique produirait une baisse, ni à quel prix, ni qui le paierait. Ce dernier point est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/) Ce que changeraient ici, d'ici 2035, le solde, les taux, la croissance ou une modification des règles, et qui devrait en décider, est l'objet de [Peut-on changer les règles du jeu de la dette publique&nbsp;?](/dette-publique-quels-futurs/)
 
 </div>
 
@@ -286,6 +286,7 @@ Aucune des combinaisons observées n'est une recette transposable&nbsp;: ces com
 - [Combien coûte la dette publique&nbsp;?](/cout-de-la-dette-publique/)
 - [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
 - [Et ailleurs&nbsp;?](/dette-publique-comparaison-internationale/)
+- [Peut-on changer les règles du jeu&nbsp;?](/dette-publique-quels-futurs/)
 {{< /pastilles >}}
 
 {{< appel-livre slug="dette-publique-qui-paie-vraiment" sur="Pour prolonger l’analyse" avis="non" >}}

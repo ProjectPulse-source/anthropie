@@ -1,0 +1,547 @@
+# Matrice institutionnelle du volet « Quels futurs ? » — SOURCE (écrite à la main, sans aucun montant saisi).
+# Lue par scripts/update_dette_futurs.py, qui résout les jetons {…}, contrôle la structure et écrit le bloc « matrice » de
+# data/dette_futurs.json et le tableau complet static/dette_futurs_matrice.csv. Ne pas éditer ces sorties.
+#
+# Matière : D:\PRO\06_PROMOTION\RECHERCHE_QUELS_FUTURS_DETTE_2026-11-09\MATRICE_INSTITUTIONNELLE.md (v4) et
+# NOTE_LECTURES_P0.md ; arbitrages PRO-20261109-095636 et PRO-20261109-104650.
+#
+# Règles (contrôlées par le générateur, arrêt sinon) :
+#  - chaque opération a les sept champs, en FR et en EN, et un statut par champ ;
+#  - statuts : lu | calc | site | infere | non_etabli ; issue : reduite | deplacee | aggravee | conditionnelle |
+#    non_determinee ; robustesse : calculee | mecanisme_documente | non_determinee ;
+#  - aucun montant, pourcentage ou nombre de points écrit en clair dans un texte : uniquement des jetons {…}.
+#    Jetons disponibles : ceux du générateur (calculs, AFT, jeux du site) et ceux du bloc « valeurs » ci-dessous ;
+#  - un « valeurs » est une donnée TRANSCRITE d'une source lue, vérifiée contre la pièce archivée (empreinte) hors dépôt.
+
+valeurs:
+  zucman_mecanique: {valeur: 19.4, unite: "Md€", source: "EU Tax Observatory (Parrinello, Varaschin, Zucman), mars 2025, tableau 1, p. 4", piece_sha256: "c578b166f38fab108079f58c3649d854f66dd097891374836b83d1bcfdd94e13"}
+  ide_82: {valeur: 5.5, unite: "Md€", source: "Institut de l'entreprise, La taxe Zucman, juin 2026, p. 2 et 15 (déduction de 82 % de l'IS)", piece_sha256: "dced22ce7785f1ce1005bacac488f137b818221bcb1021611f1c3ec6f0d366b2"}
+  ide_100: {valeur: 1.25, unite: "Md€", source: "Institut de l'entreprise, La taxe Zucman, juin 2026, p. 15 (déduction totale de l'IS)", piece_sha256: "dced22ce7785f1ce1005bacac488f137b818221bcb1021611f1c3ec6f0d366b2", decimales: 2}
+  cae_optimisation: {valeur: 54, unite: "centimes", source: "CAE, Focus n° 118, juillet 2025, p. 16 (études scandinaves)", piece_sha256: "bfb2b7a752cfaea8e390a91bb088c0e955f63eca5a0846607dc81bd03668bc18", decimales: 0}
+  cae_depart: {valeur: 20, unite: "centimes", source: "CAE, Focus n° 118, juillet 2025, p. 16 (études scandinaves)", piece_sha256: "bfb2b7a752cfaea8e390a91bb088c0e955f63eca5a0846607dc81bd03668bc18", decimales: 0}
+  dgt_bas: {valeur: 3.5, unite: "Md€", source: "Sénat, rapport d'information n° 760 (2025-2026), Imposition des hauts patrimoines, 17 juin 2026 : note de la direction générale du Trésor à la commission des finances, rendement après effets de comportement", piece_sha256: "42802bfbad021b2096133551810a0d881654ea36e089594c7e07f09e29510081"}
+  dgt_haut: {valeur: 5.5, unite: "Md€", source: "Sénat, rapport d'information n° 760 (2025-2026), 17 juin 2026 (même passage)", piece_sha256: "42802bfbad021b2096133551810a0d881654ea36e089594c7e07f09e29510081"}
+  isf_2017: {valeur: 4.2, unite: "Md€", source: "Comité d'évaluation des réformes de la fiscalité du capital (France Stratégie), avis, octobre 2023, p. 12", piece_sha256: "eb326f493ed9a255060af5ae10750359a0722d30406bed36c56157fedff578d0"}
+  zucman_taux: {valeur: 2, unite: "%", source: "Proposition de loi n° 768 (AN, 7 janvier 2025), exposé des motifs : taux de l'impôt plancher", piece_sha256: "1a20b6c11e75f49edde31e30d5c80cea1c548fc99785b6497d1fdc22609ce45a", decimales: 0}
+  zucman_seuil: {valeur: 100, unite: "M€", source: "Proposition de loi n° 768 (AN, 7 janvier 2025), article unique (art. 885 A du CGI) : seuil de patrimoine", piece_sha256: "1a20b6c11e75f49edde31e30d5c80cea1c548fc99785b6497d1fdc22609ce45a", decimales: 0}
+  fmi_prod_an0: {valeur: 0.4, unite: "%", source: "FMI, World Economic Outlook, octobre 2014, ch. 3, p. 82", piece_sha256: "00676874685f9153afe0d5aa5733e2de8d2ae7a7053a3c8587cbdb86a3f433b2"}
+  fmi_prod_an4: {valeur: 1.5, unite: "%", source: "FMI, World Economic Outlook, octobre 2014, ch. 3, p. 82", piece_sha256: "00676874685f9153afe0d5aa5733e2de8d2ae7a7053a3c8587cbdb86a3f433b2"}
+  fmi_dette_ct: {valeur: 0.9, unite: "point", source: "FMI, World Economic Outlook, octobre 2014, ch. 3, p. 82", piece_sha256: "00676874685f9153afe0d5aa5733e2de8d2ae7a7053a3c8587cbdb86a3f433b2"}
+
+operations:
+
+- cle: solde
+  titre: {fr: "Ajuster le solde primaire", en: "Adjusting the primary balance"}
+  ce_qui_change:
+    statut: infere
+    fr: "Le flux : dépenses et recettes, chaque année."
+    en: "The flow: spending and revenue, every year."
+  effet:
+    statut: calc
+    fr: >-
+      Un solde primaire supérieur d'un point de PIB chaque année de 2028 à 2035 abaisse la dette de {solde_2035_pts} en 2035.
+      Calcul comptable conditionnel : l'ajustement y est supposé sans effet sur la croissance ni sur les taux.
+    en: >-
+      A primary balance 1 percentage point of GDP higher every year from 2028 to 2035 lowers debt by {solde_2035_pts} in 2035.
+      A conditional accounting calculation: the adjustment is assumed to affect neither growth nor interest rates.
+  qui_decide:
+    statut: lu
+    fr: >-
+      Le Gouvernement propose et exécute ; le Parlement vote les lois de finances et de financement de la sécurité sociale ;
+      une partie des dépenses relève des collectivités et des régimes sociaux. Sous surveillance européenne : trajectoire de
+      dépenses nettes recommandée par le Conseil (règlement 2024/1263, art. 17 et 22) et procédure pour déficit excessif
+      (art. 126 TFUE).
+    en: >-
+      The Government proposes and implements; Parliament votes the finance and social security financing acts; part of
+      spending lies with local authorities and social security funds. Under European surveillance: the net expenditure path
+      recommended by the Council (Regulation 2024/1263, Art. 17 and 22) and the excessive deficit procedure (Art. 126 TFEU).
+  droit:
+    statut: lu
+    fr: "À droit constant."
+    en: "Under current law."
+  repartition:
+    statut: site
+    fr: >-
+      La charge dépend de l'instrument : un même effort ne pèse pas sur les mêmes ménages selon qu'il passe par l'école, l'impôt
+      sur le revenu, les pensions ou la TVA.
+    en: >-
+      It depends on the instrument: the same effort does not fall on the same households whether it goes through schools,
+      income tax, pensions or VAT.
+  robustesse:
+    code: non_determinee
+    statut: non_etabli
+    fr: "Non déterminée : l'effet d'un choc de taux sur l'effort requis n'est pas calculé."
+    en: "Not determined: the effect of an interest-rate shock on the required effort is not calculated."
+  issue:
+    code: reduite
+    fr: "Contrainte réduite comptablement, sous condition des effets sur l'activité, non mesurés ; l'effort pèse sur ceux que vise l'instrument choisi."
+    en: "Constraint reduced in accounting terms, subject to effects on activity that are not measured; borne by those the chosen instrument targets."
+  sources: ["Règlement (UE) 2024/1263", "TFUE, art. 126", "moteur de la page, calé sur la Commission (DSM 2025)"]
+  sources_en: ["Regulation (EU) 2024/1263", "TFEU, Art. 126", "this page's engine, calibrated on the Commission (DSM 2025)"]
+
+- cle: allongement
+  titre: {fr: "Allonger la période d'ajustement", en: "Extending the adjustment period"}
+  ce_qui_change:
+    statut: infere
+    fr: "Le calendrier de l'ajustement ; son coût cumulé peut aussi changer."
+    en: "The timing of the adjustment; its cumulative cost may also change."
+  effet:
+    statut: non_etabli
+    fr: >-
+      Non chiffré : l'allongement porte sur la trajectoire de dépenses fixée par le règlement européen ; la référence de la
+      Commission utilisée ici ne contient pas cette trajectoire, et ne permet donc pas d'en déduire l'effet sur la dette.
+    en: >-
+      Not quantified: the extension applies to the expenditure path set by the European regulation; the Commission
+      baseline used here does not contain that path, so its effect on debt cannot be derived from it.
+  qui_decide:
+    statut: lu
+    fr: >-
+      Le Conseil, qui approuve l'ensemble de réformes et d'investissements justifiant la prolongation (règlement 2024/1263,
+      art. 14 et 17) ; la France l'a demandée dans son plan d'octobre 2024.
+    en: >-
+      The Council, which approves the set of reforms and investments underpinning the extension (Regulation 2024/1263,
+      Art. 14 and 17); France requested it in its October 2024 plan.
+  droit:
+    statut: lu
+    fr: "À droit constant : quatre ans, prolongeables de trois (art. 2 § 8 et art. 14) ; sauvegardes des art. 7 et 8."
+    en: "Under current law: four years, extendable by three (Art. 2(8) and Art. 14); safeguards in Art. 7 and 8."
+  repartition:
+    statut: non_etabli
+    fr: "Non établi."
+    en: "Not established."
+  robustesse:
+    code: non_determinee
+    statut: infere
+    fr: >-
+      Exposition potentielle prolongée aux conditions de refinancement, non quantifiée : maturités, taux, soldes et croissance
+      évoluent en même temps.
+    en: >-
+      Potentially prolonged exposure to refinancing conditions, not quantified: maturities, rates, balances and growth move
+      together.
+  issue:
+    code: conditionnelle
+    fr: "Dépendante du contenu des réformes et de la croissance : ni économie garantie, ni simple report à montant constant."
+    en: "Depends on the content of the reforms and on growth: neither a guaranteed saving nor a mere postponement of the same amount."
+  sources: ["Règlement (UE) 2024/1263", "Plan budgétaire et structurel à moyen terme 2025-2029 (octobre 2024)"]
+  sources_en: ["Regulation (EU) 2024/1263", "Medium-term fiscal-structural plan 2025-2029 (October 2024)"]
+
+- cle: regle_or
+  titre: {fr: "Une règle d'or pour l'investissement", en: "A golden rule for investment"}
+  ce_qui_change:
+    statut: infere
+    fr: "Le traitement de l'investissement dans les règles ; la dette augmente s'il est emprunté."
+    en: "How investment is treated by the rules; debt rises if it is borrowed."
+  effet:
+    statut: calc
+    fr: >-
+      Un point de PIB d'investissement emprunté chaque année de 2028 à 2035, sans effet sur la croissance, relève la dette de
+      {invest_2035_pts} en 2035. L'effet net dépend du rendement : le personnel du FMI (2014, dix-sept économies avancées,
+      1985-2013) estime qu'un point d'investissement public relève la production de {v.fmi_prod_an0} % l'année même et de
+      {v.fmi_prod_an4} % à quatre ans, la baisse du ratio de dette ({v.fmi_dette_ct_pts}) n'étant significative qu'à court
+      terme, sous conditions ; le personnel de la Commission (2024, modèle calibré sur l'Allemagne) trouve qu'un surcroît
+      d'investissement non compensé relève durablement le ratio. Résultats conditionnels, non transposables tels quels à la
+      France de 2028-2035.
+    en: >-
+      One point of GDP of borrowed investment every year from 2028 to 2035, with no effect on growth, raises debt by
+      {invest_2035_pts} in 2035. The net effect depends on returns: IMF staff (2014, seventeen advanced economies,
+      1985-2013) estimate that one point of public investment raises output by {v.fmi_prod_an0}% in the same year and by
+      {v.fmi_prod_an4}% after four years, the fall in the debt ratio ({v.fmi_dette_ct_pts}) being significant only in the
+      short run, under conditions; Commission staff (2024, model calibrated on Germany) find that an uncompensated rise in
+      investment lastingly raises the ratio. Conditional results, not directly transferable to France in 2028-2035.
+  qui_decide:
+    statut: lu
+    fr: >-
+      Selon la variante : exclure certaines dépenses du pilotage des dépenses nettes passe par une modification du règlement
+      (procédure législative ordinaire) ; une flexibilité pour l'investissement est possible selon les modalités ; exclure
+      l'investissement du déficit de référence touche le protocole n° 12, que seul le Conseil à l'unanimité peut remplacer
+      (art. 126 § 14 TFUE).
+    en: >-
+      Depending on the variant: excluding some spending from net expenditure monitoring requires amending the regulation
+      (ordinary legislative procedure); flexibility for investment is possible depending on its terms; excluding investment
+      from the reference deficit touches Protocol No 12, which only the Council acting unanimously can replace
+      (Art. 126(14) TFEU).
+  droit:
+    statut: lu
+    fr: >-
+      Le protocole n° 12 définit le déficit comme « le besoin net de financement » et l'investissement comme « la formation
+      brute de capital fixe » ; le traité demande déjà à la Commission d'examiner si le déficit excède l'investissement
+      (art. 126 § 3), comme critère de son rapport, non comme exemption.
+    en: >-
+      Protocol No 12 defines the deficit as "net borrowing" and investment as "gross fixed capital formation"; the Treaty
+      already asks the Commission to examine whether the deficit exceeds investment (Art. 126(3)), as a criterion of its
+      report, not as an exemption.
+  repartition:
+    statut: infere
+    fr: >-
+      Vers les années suivantes si le rendement budgétaire est inférieur au coût du financement ; un rendement social positif
+      n'est pas forcément un rendement budgétaire suffisant.
+    en: >-
+      Towards later years if the fiscal return is below the cost of financing; a positive social return is not necessarily a
+      sufficient fiscal return.
+  robustesse:
+    code: mecanisme_documente
+    statut: infere
+    fr: "Dette plus élevée, plus exposée aux taux, tant que le rendement n'est pas acquis."
+    en: "Higher debt, more exposed to rates, as long as the return is not secured."
+  issue:
+    code: conditionnelle
+    fr: "Dépendante du rendement de l'investissement et de son financement : production, rendement budgétaire et dette sont trois effets distincts."
+    en: "Depends on the return on investment and on its financing: output, fiscal return and debt are three distinct effects."
+  sources: ["Protocole n° 12", "TFUE, art. 126", "Règlement (UE) 2024/1263", "FMI, WEO octobre 2014, ch. 3", "Commission européenne, Discussion Paper 204 (2024)"]
+  sources_en: ["Protocol No 12", "TFEU, Art. 126", "Regulation (EU) 2024/1263", "IMF, World Economic Outlook, October 2014, ch. 3", "European Commission, Discussion Paper 204 (2024)"]
+
+- cle: emprunt_commun
+  titre: {fr: "Un emprunt européen commun ponctuel", en: "A one-off joint European borrowing"}
+  ce_qui_change:
+    statut: infere
+    fr: "Le financement de certains projets et la répartition des obligations de remboursement."
+    en: "The financing of certain projects and who must repay."
+  effet:
+    statut: non_etabli
+    fr: >-
+      Non estimé. Pour ordre de grandeur seulement, une hypothèse de taux, et non une estimation de l'instrument : des taux
+      de marché plus bas de vingt points de base sur tous les nouveaux emprunts publics abaisseraient la dette de
+      {taux20_2035_pts} en 2035.
+    en: >-
+      Not estimated. As an order of magnitude only, an interest-rate assumption rather than an estimate of the instrument:
+      market rates twenty basis points lower on all new public borrowing would lower debt by {taux20_2035_pts} in 2035.
+  qui_decide:
+    statut: lu
+    fr: >-
+      Décision sur les ressources propres : le Conseil à l'unanimité, puis l'approbation de chaque État (art. 311 TFUE) ;
+      base de crise possible (art. 122).
+    en: >-
+      Own-resources decision: the Council acting unanimously, then approval by each Member State (Art. 311 TFEU); a crisis
+      legal basis is possible (Art. 122).
+  droit:
+    statut: lu
+    fr: >-
+      Possible sans révision des traités, comme en 2020, dans des bornes : un montant plafonné, « à la seule fin » de la crise,
+      aucun emprunt net après 2026, remboursement au plus tard en 2058 (décision 2020/2053, art. 5).
+    en: >-
+      Possible without Treaty change, as in 2020, within limits: a capped amount, "exclusively" for the crisis, no net
+      borrowing after 2026, repayment by 2058 at the latest (Decision 2020/2053, Art. 5).
+  repartition:
+    statut: lu
+    fr: >-
+      Les fonds prêtés à un État restent à sa charge ; la part dépensée est remboursée par le budget de l'Union, donc par ses
+      contributeurs. Une obligation transférée n'est pas une dette disparue.
+    en: >-
+      Funds lent to a State remain its liability; the part spent is repaid by the EU budget, hence by its contributors. A
+      transferred obligation is not a debt that has disappeared.
+  robustesse:
+    code: non_determinee
+    statut: non_etabli
+    fr: "Non déterminée."
+    en: "Not determined."
+  issue:
+    code: conditionnelle
+    fr: "Dépendante de la part en prêts et en dépenses et du coût effectif."
+    en: "Depends on the split between loans and spending and on the actual cost."
+  sources: ["TFUE, art. 122 et 311", "Décision (UE, Euratom) 2020/2053, art. 5"]
+  sources_en: ["TFEU, Art. 122 and 311", "Decision (EU, Euratom) 2020/2053, Art. 5"]
+
+- cle: mutualisation
+  titre: {fr: "Une mutualisation durable", en: "Lasting debt mutualisation"}
+  ce_qui_change:
+    statut: infere
+    fr: "Selon l'instrument : le taux, le porteur du risque ou la dette elle-même."
+    en: "Depending on the instrument: the rate, who bears the risk, or the debt itself."
+  effet:
+    statut: non_etabli
+    fr: "Non estimé."
+    en: "Not estimated."
+  qui_decide:
+    statut: lu
+    fr: >-
+      Selon l'instrument : émission commune pour des dépenses européennes (voie de l'art. 311) ; assistance conditionnelle du
+      mécanisme de stabilité, « si cela est indispensable » et sous « stricte conditionnalité » (art. 136 § 3) ; garanties
+      mutuelles pour un projet spécifique (exception de l'art. 125) ; prise en charge générale et permanente des dettes
+      existantes, qui se heurte à l'art. 125 et pourrait nécessiter une révision des traités (art. 48 TUE).
+    en: >-
+      Depending on the instrument: joint issuance for European spending (Art. 311 route); conditional assistance from the
+      stability mechanism, "if indispensable" and under "strict conditionality" (Art. 136(3)); mutual guarantees for a
+      specific project (Art. 125 exception); a general and permanent takeover of existing debts, which runs into Art. 125 and
+      could require Treaty change (Art. 48 TEU).
+  droit:
+    statut: lu
+    fr: >-
+      L'arrêt Pringle (C-370/12, 2012) lit l'art. 125 : il n'interdit pas « toute forme d'assistance financière », mais celle
+      qui affaiblit l'incitation à une politique budgétaire saine, et admet l'assistance à un État qui reste responsable de
+      ses engagements envers ses créanciers. L'article permet donc certaines formes d'assistance conditionnelle et encadre
+      strictement la prise en charge des engagements d'un autre État ; la compatibilité dépend de l'instrument.
+    en: >-
+      The Pringle judgment (C-370/12, 2012) reads Art. 125: it does not prohibit "any form of financial assistance", but
+      assistance that weakens the incentive for sound budgetary policy, and it allows assistance to a State that remains
+      responsible for its commitments to its creditors. The article thus permits some forms of conditional assistance and
+      strictly limits taking over another State's commitments; compatibility depends on the instrument.
+  repartition:
+    statut: non_etabli
+    fr: "Transfert de risque entre États, d'ampleur variable, non établie."
+    en: "A transfer of risk between States, of variable size, not established."
+  robustesse:
+    code: non_determinee
+    statut: non_etabli
+    fr: "Non déterminée."
+    en: "Not determined."
+  issue:
+    code: conditionnelle
+    fr: "Dépendante de l'instrument : aucune issue unique."
+    en: "Depends on the instrument: no single outcome."
+  sources: ["TFUE, art. 125, 136 et 311", "TUE, art. 48", "CJUE, Pringle, C-370/12, 27 novembre 2012"]
+  sources_en: ["TFEU, Art. 125, 136 and 311", "TEU, Art. 48", "CJEU, Pringle, C-370/12, 27 November 2012"]
+
+- cle: eurosysteme
+  titre: {fr: "Convertir ou annuler les titres détenus par l'Eurosystème", en: "Converting or cancelling bonds held by the Eurosystem"}
+  ce_qui_change:
+    statut: infere
+    fr: >-
+      Selon l'opération. Une conversion en titres perpétuels sans coupon qui garde la valeur nominale ne réduit pas
+      nécessairement la dette au sens du traité ; une annulation qui éteint la créance s'examine à part, avec sa contrepartie
+      comptable et son effet sur le déficit.
+    en: >-
+      It depends on the operation. Converting into zero-coupon perpetual bonds that keep their face value does not necessarily
+      reduce debt as defined by the Treaty; a cancellation that extinguishes the claim must be examined separately, with its
+      accounting counterpart and its effect on the deficit.
+  effet:
+    statut: site
+    fr: >-
+      La Banque de France détenait {bdf_md} Md€ de titres publics français au {bdf_date}. Effet comptable brut et économie
+      nette s'évaluent séparément : l'économie nette dépend de l'écart entre la rémunération des réserves des banques et le
+      coût de refinancement de l'État, et n'est pas acquise.
+    en: >-
+      The Banque de France held €{bdf_md} billion of French government securities at {bdf_date}. The gross accounting effect
+      and the net saving are assessed separately: the net saving depends on the gap between the interest paid on bank
+      reserves and the State's refinancing cost, and is not secured.
+  qui_decide:
+    statut: lu
+    fr: >-
+      Les autorités compétentes de l'Eurosystème et, selon l'opération, l'État débiteur ; ni la BCE ni une banque centrale
+      nationale ne peuvent « solliciter ni accepter des instructions » des gouvernements (art. 130 TFUE) : en l'état des
+      traités, l'État ne peut pas imposer l'opération.
+    en: >-
+      The competent Eurosystem authorities and, depending on the operation, the debtor State; neither the ECB nor a national
+      central bank may "seek or take instructions" from governments (Art. 130 TFEU): under the current Treaties, the State cannot impose the operation.
+  droit:
+    statut: lu
+    fr: >-
+      Art. 123 TFUE : interdiction du crédit aux administrations et de l'« acquisition directe » de leurs titres ; le
+      protocole n° 12 compte la dette « à leur valeur nominale » ; le SEC 2010 classe les titres perpétuels parmi les titres
+      de créance, mais la qualification d'un titre sans coupon ni droit de remboursement n'est pas tranchée par les textes lus.
+    en: >-
+      Art. 123 TFEU prohibits credit to public bodies and the "direct purchase" of their debt instruments; Protocol No 12
+      counts debt "at nominal value"; ESA 2010 classifies perpetual securities as debt securities, but how a security with
+      neither coupon nor repayment right should be classified is not settled by the texts read.
+  repartition:
+    statut: site
+    fr: >-
+      Le coût des réserves rémunérées demeure ; il change de porteur selon le schéma : marché, banque centrale donc État
+      actionnaire, banques.
+    en: >-
+      The cost of remunerated reserves remains; who bears it changes with the scheme: the market, the central bank and hence
+      the State as shareholder, or banks.
+  robustesse:
+    code: calculee
+    statut: site
+    fr: "Calculée dans la section du site consacrée à l'annulation (sensibilité à la rémunération des réserves)."
+    en: "Calculated in the site's section on cancellation (sensitivity to the interest paid on reserves)."
+  issue:
+    code: conditionnelle
+    fr: "Économie nette non acquise ; effets dépendants du dispositif et des conditions monétaires."
+    en: "Net saving not secured; effects depend on the scheme and on monetary conditions."
+  sources: ["TFUE, art. 123 et 130", "Protocole n° 12", "SEC 2010, règlement (UE) 549/2013, annexe A, § 5.89-5.96", "Qui paie la dette publique ? (section « Annuler la dette détenue par la Banque de France »)"]
+  sources_en: ["TFEU, Art. 123 and 130", "Protocol No 12", "ESA 2010, Regulation (EU) 549/2013, Annex A, § 5.89-5.96", "Who really pays public debt? (section \"Cancelling the debt held by the Banque de France\")"]
+
+- cle: restructuration
+  titre: {fr: "Une restructuration négociée de la dette de l'État", en: "A negotiated restructuring of State debt"}
+  ce_qui_change:
+    statut: infere
+    fr: "Le stock, une fois."
+    en: "The stock, once."
+  effet:
+    statut: non_etabli
+    fr: "Mécanique seule, hors des figures ; contreparties non chiffrées."
+    en: "Mechanical only, outside the charts; counterparts not quantified."
+  qui_decide:
+    statut: lu
+    fr: >-
+      L'État, avec l'accord des détenteurs exprimé en montants de principal, non en nombre de personnes (clauses d'action
+      collective, art. L. 213-22-1 du code monétaire et financier). Seuils en vigueur (art. D. 213-25-12 et D. 213-25-13) :
+      pour une ligne, un quorum des deux tiers du principal en circulation, puis les trois quarts du principal présent ou
+      représenté pour une modification substantielle ; pour plusieurs lignes, les
+      trois quarts au total et plus des deux tiers sur chaque ligne. Le vote agrégé unique des deux tiers attend l'entrée en
+      vigueur de l'accord modifiant le traité du mécanisme européen de stabilité.
+    en: >-
+      The State, with holders' consent expressed in principal amounts, not headcount (collective action clauses, Art. L.
+      213-22-1 of the Monetary and Financial Code). Thresholds in force (Art. D. 213-25-12 and D. 213-25-13): for one
+      line, a quorum of two thirds of the outstanding principal, then three quarters of the principal present or represented
+      for a substantial change; across several lines, three quarters in aggregate and
+      more than two thirds per line. The single-limb two-thirds vote awaits the entry into force of the agreement amending
+      the European Stability Mechanism Treaty.
+  droit:
+    statut: calc
+    fr: >-
+      À droit constant pour les seuls titres couverts. Selon notre reconstitution des fiches de l'AFT ({aft_date}),
+      {cac_part} % de l'encours nominal non indexé des OAT, OATi et OAT€i ({cac_md} Md€ sur {oat_md}) relève de lignes
+      créées depuis 2013, auxquelles s'applique en principe le régime des clauses ; {sans_cac_n} lignes plus anciennes
+      ({sans_cac_md} Md€, échéances jusqu'en {sans_cac_fin}) en sont exclues ; les titres à un an au plus ({btf_md} Md€)
+      sont hors champ. Des clauses facilitent une modification collective ; elles n'en garantissent ni l'adoption ni la
+      faisabilité.
+    en: >-
+      Under current law for covered securities only. According to our reconstruction from the AFT line sheets ({aft_date}),
+      {cac_part}% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€{cac_md} billion of €{oat_md} billion)
+      belongs to lines created since 2013, to which the clause regime applies in principle; {sans_cac_n} older lines
+      (€{sans_cac_md} billion, maturing up to {sans_cac_fin}) are excluded; securities of one year or less (€{btf_md}
+      billion) fall outside its scope. Clauses ease a collective modification; they guarantee neither its adoption nor its
+      feasibility.
+  repartition:
+    statut: site
+    fr: >-
+      Pertes des détenteurs ; les non-résidents détenaient {nonres_pct} % de la dette négociable de l'État {nonres_periode}.
+      Détenir un titre ne dit ni le bénéficiaire final ni qui porte la perte : un assureur la répartit entre actionnaires,
+      réserves et, selon les contrats, assurés.
+    en: >-
+      Losses for holders; non-residents held {nonres_pct}% of State negotiable debt {nonres_periode}. Holding a security
+      says neither who the final beneficiary is nor who bears the loss: an insurer spreads it across shareholders, reserves
+      and, depending on contracts, policyholders.
+  robustesse:
+    code: mecanisme_documente
+    statut: infere
+    fr: "Prime de risque sur les émissions suivantes, non chiffrée."
+    en: "A risk premium on subsequent issuance, not quantified."
+  issue:
+    code: deplacee
+    fr: "Déplacée vers les créanciers et ceux qui portent leurs pertes, avec un risque d'aggravation par les taux."
+    en: "Shifted onto creditors and those who bear their losses, with a risk of aggravation through interest rates."
+  sources: ["Code monétaire et financier, art. L. 213-22-1, D. 213-25-1, D. 213-25-12, D. 213-25-13", "Décret n° 2025-1413 du 29 décembre 2025", "Agence France Trésor, fiches des lignes (relevé)"]
+  sources_en: ["Monetary and Financial Code, Art. L. 213-22-1, D. 213-25-1, D. 213-25-12, D. 213-25-13", "Decree No 2025-1413 of 29 December 2025", "Agence France Trésor, bond line sheets (record)"]
+
+- cle: impot_patrimoines
+  titre: {fr: "Un impôt sur les grands patrimoines", en: "A tax on very large fortunes"}
+  ce_qui_change:
+    statut: infere
+    fr: "Le flux : les recettes."
+    en: "The flow: revenue."
+  effet:
+    statut: lu
+    fr: >-
+      Rendement non établi, et aucun chiffre central. Pour l'impôt plancher de {v.zucman_taux} % au-delà de {v.zucman_seuil} M€, l'administration fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre {v.dgt_bas} et {v.dgt_haut} Md€ après effets de comportement (méthode non examinée ici). Les autres estimations
+      ne portent pas sur les mêmes conventions : mécanique, {v.zucman_mecanique} Md€ (Observatoire européen de la fiscalité, dirigé par
+      Gabriel Zucman, qui propose l'impôt) ; en déduisant l'impôt sur les sociétés déjà payé, ce qui change aussi la conception de l'impôt, de
+      {v.ide_82} à {v.ide_100} Md€ (Institut de l'entreprise, financé par de grandes entreprises) ; avec les réactions des
+      contribuables, un paramètre tiré d'études scandinaves ({v.cae_optimisation} centimes perdus par optimisation et
+      {v.cae_depart} par départ, pour un euro prélevé, cités par le Conseil d'analyse économique, qui juge l'exil modeste en
+      France). Aucune estimation ne mesure une recette observée. Repère : l'ISF rapportait {v.isf_2017} Md€ en 2017. Un point
+      de PIB de recettes aurait l'effet calculé pour le solde primaire.
+    en: >-
+      Yield not established, and no central figure. For the {v.zucman_taux}% minimum tax above €{v.zucman_seuil} million, the
+      tax administration said in February 2025 that it could not simulate it; in June 2026, a Senate report cites a note from the Treasury directorate, sent to its finance committee, estimating it at €{v.dgt_bas} to €{v.dgt_haut} billion after behavioural effects (method not examined here). The other estimates rest on different
+      conventions: mechanical, €{v.zucman_mecanique} billion (EU Tax Observatory, directed by Gabriel Zucman, who proposes the tax); deducting
+      corporate tax already paid, which also changes the tax's design, from €{v.ide_82} to €{v.ide_100} billion (Institut de
+      l'entreprise, funded by large companies); with taxpayer responses, a parameter taken from Scandinavian studies
+      ({v.cae_optimisation} cents lost to avoidance and {v.cae_depart} to departures, per euro levied, cited by the Conseil
+      d'analyse économique, which finds emigration modest in France). No estimate measures observed revenue. Benchmark: the
+      former wealth tax raised €{v.isf_2017} billion in 2017. One point of GDP of revenue would have the effect calculated for
+      the primary balance.
+  qui_decide:
+    statut: lu
+    fr: >-
+      Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l'ancien ISF avec un plafonnement (décision
+      2012-662 DC) sans valider d'avance un impôt plancher sur une autre assiette. Adopté par l'Assemblée en février 2025,
+      rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.
+    en: >-
+      Parliament, under review by the Constitutional Council, which accepted the former wealth tax with a cap (decision
+      2012-662 DC) without validating in advance a minimum tax on a different base. Passed by the National Assembly in
+      February 2025, rejected by the Senate in June 2025, rejected in the 2026 budget act.
+  droit:
+    statut: lu
+    fr: >-
+      À droit constant ; l'art. 63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités,
+      notamment une taxe à la sortie ; aucun jugement de compatibilité ici. L'avis du Conseil d'État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n'a pas été lu.
+    en: >-
+      Under current law; Art. 63 TFEU prohibits restrictions on capital movements and frames the design, notably an exit tax;
+      no compatibility judgment is made here. The Conseil d'État's opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read.
+  repartition:
+    statut: infere
+    fr: >-
+      Transfert redistributif porté par les patrimoines visés, selon leurs comportements ; une troisième position (OFCE, 2026)
+      critique le patrimoine comme assiette et propose d'imposer le revenu.
+    en: >-
+      A redistributive transfer borne by the targeted fortunes, depending on their behaviour; a third position (OFCE, 2026)
+      questions wealth as the base and proposes taxing income instead.
+  robustesse:
+    code: non_determinee
+    statut: non_etabli
+    fr: "Non déterminée."
+    en: "Not determined."
+  issue:
+    code: conditionnelle
+    fr: "Contrainte réduite comptablement si le rendement recouvrable se confirme ; dépendante de l'assiette effective."
+    en: "Constraint reduced in accounting terms if the recoverable yield is confirmed; depends on the actual base."
+  sources: ["EU Tax Observatory (mars 2025)", "Assemblée nationale, rapport n° 930 (février 2025)", "Sénat, rapport n° 689 (juin 2025)", "Sénat, rapport n° 760 (juin 2026)", "CAE, Focus n° 118 (juillet 2025)", "Institut de l'entreprise (juin 2026)", "OFCE, document de travail 2026-6", "France Stratégie, comité d'évaluation, avis 2023", "Conseil constitutionnel, 2012-662 DC", "TFUE, art. 63"]
+  sources_en: ["EU Tax Observatory (March 2025)", "National Assembly, report No 930 (February 2025)", "Senate, report No 689 (June 2025)", "Senate, report No 760 (June 2026)", "CAE, Focus No 118 (July 2025)", "Institut de l'entreprise (June 2026)", "OFCE, working paper 2026-6", "France Stratégie, evaluation committee, opinion 2023", "Constitutional Council, 2012-662 DC", "TFEU, Art. 63"]
+
+- cle: sortie_euro
+  titre: {fr: "Sortir de l'euro et redénominer la dette", en: "Leaving the euro and redenominating debt"}
+  ce_qui_change:
+    statut: infere
+    fr: "La monnaie de la dette, le change, l'inflation, les taux."
+    en: "The currency of the debt, the exchange rate, inflation, interest rates."
+  effet:
+    statut: non_etabli
+    fr: "Non simulé."
+    en: "Not simulated."
+  qui_decide:
+    statut: lu
+    fr: >-
+      Non déterminé : le seul départ prévu par les traités est le retrait de l'Union (art. 50 TUE : selon les règles
+      constitutionnelles de l'État, accord conclu par le Conseil à la majorité qualifiée, traités inapplicables deux ans
+      après la notification à défaut d'accord) ; l'absence de procédure propre à la zone euro dans les textes lus ne vaut
+      pas conclusion.
+    en: >-
+      Not determined: the only departure the Treaties provide for is withdrawal from the Union (Art. 50 TEU: in line with
+      the State's constitutional requirements, an agreement concluded by the Council by qualified majority, Treaties ceasing
+      to apply two years after notification failing agreement); the absence of a euro-area-specific procedure in the texts
+      read is not a conclusion.
+  droit:
+    statut: non_etabli
+    fr: "Redénomination : droit applicable aux titres, engagements externes, bilans privés, change et contentieux, à distinguer ; non établi."
+    en: "Redenomination: law governing the securities, external commitments, private balance sheets, exchange rate and litigation, to be distinguished; not established."
+  repartition:
+    statut: non_etabli
+    fr: "Non établi."
+    en: "Not established."
+  robustesse:
+    code: non_determinee
+    statut: non_etabli
+    fr: "Non déterminée."
+    en: "Not determined."
+  issue:
+    code: non_determinee
+    fr: "Non déterminée avec les sources examinées : une limite de connaissance, non un scénario déclaré impossible."
+    en: "Not determined with the sources examined: a limit of knowledge, not a scenario declared impossible."
+  sources: ["TUE, art. 50"]
+  sources_en: ["TEU, Art. 50"]
+
+transversale:
+  cle: croissance
+  titre: {fr: "Variable transversale : la croissance", en: "Cross-cutting variable: growth"}
+  statut: calc
+  fr: >-
+    Une hypothèse de calcul, pas une décision, dont l'effet est chiffré plus haut avec les autres leviers. Elle module
+    chaque ligne : le rendement d'un investissement, le coût d'un emprunt, la recette d'un impôt en dépendent. La technologie
+    y entre comme un déterminant possible, sans effet propre chiffré.
+  en: >-
+    A calculation assumption, not a decision, whose effect is quantified above with the other levers. It modulates every
+    row: the return on an investment, the cost of a loan and the yield of a tax all depend on it. Technology enters as a
+    possible driver, with no separately quantified effect.
+
+limites:
+  fr: >-
+    Opérations prises une à une : aucune combinaison testée. Faisabilité juridique et acceptabilité politique sont deux
+    questions distinctes. Une obligation transférée n'est pas une dette disparue ; le détenteur d'un titre n'est pas
+    forcément celui qui porte une perte.
+  en: >-
+    Operations are taken one at a time: no combination is tested. Legal feasibility and political acceptability are two
+    distinct questions. A transferred obligation is not a debt that has disappeared; the holder of a security is not
+    necessarily the one who bears a loss.

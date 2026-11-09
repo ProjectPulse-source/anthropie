@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /en/public-debt-debate-claims/, build de 038893c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /en/public-debt-debate-claims/, build de 43ad0eb + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What are the claims of the French debt debate worth?
 On 8 September 2025, in the French National Assembly, every group invoked the figures on public debt.
@@ -135,7 +135,7 @@ Contesting a policy in whose name debt is invoked is not denying the constraint.
 These registers are not symmetrical.
 Recognising a constraint, judging how binding it is and using it politically are three different things, which each camp mixes in its own way.
 In this debate, the registers follow the position held (governing or opposing) more than a simple left-right divide; other configurations would be needed to confirm it.
-The page on bringing debt down shows what other countries did with that constraint.
+The page on bringing debt down shows what other countries did with that constraint, and the page on the rules of the game what the proposals to change it would change, and who would have to decide.
 Outside the Assembly: the 2027 candidates
 Parties without members of the Assembly have no voice on 8 September, and candidates for the presidency do not speak there in their own name.
 To extend the inquiry to the currents absent from the debate, the same protocol was applied to another corpus: the commitment texts published in 2026 by the declared candidates for the 2027 presidential election (programmes, projects, booklets, measures) and, for those who had not yet published any, their latest official text (2022 presidential declaration, 2024 European election address).

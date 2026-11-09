@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 956" role="img" font-variant-numeric="tabular-nums" aria-labelledby="futurs-eventail-m-t futurs-eventail-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="futurs-eventail-m-t">Public debt in 2030: several futures, under which assumptions?</title><desc id="futurs-eventail-m-d">Fan of debt paths simulated by the European Commission, 2025 to 2030: in 2030, 10th percentile 118.1%, 90th percentile 136.2%; Commission baseline 126.5% in 2030 and 140.8% in 2035; 2027 draft budget forecast: 120.9% in 2030; October 2024 commitment: 115.8% in 2029. Bands, from lightest to darkest: 10th to 90th, 20th to 80th and 40th to 60th percentiles of the paths simulated by the Commission (8, 6 and 2 in 10). Starting points in 2025: Commission 116.3%, 2027 draft budget 115.7%, 2024 commitment 114.7%.</desc>
+<rect width="300" height="956" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#1a1a1a">Public debt in 2030: several</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#1a1a1a">futures, under which</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#1a1a1a">assumptions?</text>
+<text x="0.0" y="90.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">French public debt, % of GDP</text>
+<line x1="48" x2="292" y1="327.6" y2="327.6" stroke="#e6e5e1"/>
+<text x="33.0" y="332.6" font-size="13.5" font-weight="400" text-anchor="end" fill="#52514e">115</text>
+<line x1="48" x2="292" y1="281.6" y2="281.6" stroke="#e6e5e1"/>
+<text x="33.0" y="286.6" font-size="13.5" font-weight="400" text-anchor="end" fill="#52514e">120</text>
+<line x1="48" x2="292" y1="235.6" y2="235.6" stroke="#e6e5e1"/>
+<text x="33.0" y="240.6" font-size="13.5" font-weight="400" text-anchor="end" fill="#52514e">125</text>
+<line x1="48" x2="292" y1="189.6" y2="189.6" stroke="#e6e5e1"/>
+<text x="33.0" y="194.6" font-size="13.5" font-weight="400" text-anchor="end" fill="#52514e">130</text>
+<line x1="48" x2="292" y1="143.6" y2="143.6" stroke="#e6e5e1"/>
+<text x="33.0" y="148.6" font-size="13.5" font-weight="400" text-anchor="end" fill="#52514e">135</text>
+<line x1="48.0" x2="48.0" y1="346.0" y2="351.0" stroke="#52514e"/>
+<line x1="96.8" x2="96.8" y1="346.0" y2="351.0" stroke="#52514e"/>
+<line x1="145.6" x2="145.6" y1="346.0" y2="351.0" stroke="#52514e"/>
+<line x1="194.4" x2="194.4" y1="346.0" y2="351.0" stroke="#52514e"/>
+<line x1="243.2" x2="243.2" y1="346.0" y2="351.0" stroke="#52514e"/>
+<line x1="292.0" x2="292.0" y1="346.0" y2="351.0" stroke="#52514e"/>
+<text x="48.0" y="366.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">2025</text>
+<text x="194.4" y="366.0" font-size="13.5" font-weight="400" text-anchor="middle" fill="#52514e">2028</text>
+<text x="292.0" y="366.0" font-size="13.5" font-weight="400" text-anchor="end" fill="#52514e">2030</text>
+<polygon points="48.0,315.4 96.8,257.8 145.6,225.7 194.4,193.7 243.2,164.9 292.0,132.2 292.0,298.9 243.2,310.1 194.4,318.9 145.6,329.5 96.8,337.4 48.0,315.4" fill="#184f95" fill-opacity="0.13" stroke="none"/>
+<polygon points="48.0,315.4 96.8,275.7 145.6,248.5 194.4,221.6 243.2,194.6 292.0,166.8 292.0,273.8 243.2,289.1 194.4,301.6 145.6,315.2 96.8,325.0 48.0,315.4" fill="#184f95" fill-opacity="0.18" stroke="none"/>
+<polygon points="48.0,315.4 96.8,294.5 145.6,274.7 194.4,251.6 243.2,231.1 292.0,207.8 292.0,239.4 243.2,258.9 194.4,275.2 145.6,294.2 96.8,308.9 48.0,315.4" fill="#184f95" fill-opacity="0.28" stroke="none"/>
+<polyline points="48.0,315.4 96.8,299.4 145.6,281.5 194.4,261.4 243.2,242.8 292.0,221.7" fill="none" stroke="#184f95" stroke-width="2.5" stroke-dasharray="6 4"/>
+<polyline points="48.0,321.2 96.8,288.0 145.6,266.0 194.4,259.5 243.2,264.1 292.0,273.3" fill="none" stroke="#eb6834" stroke-width="2.5" stroke-dasharray="10 4"/>
+<circle cx="48.0" cy="321.2" r="3" fill="#eb6834"/>
+<circle cx="96.8" cy="288.0" r="3" fill="#eb6834"/>
+<circle cx="145.6" cy="266.0" r="3" fill="#eb6834"/>
+<circle cx="194.4" cy="259.5" r="3" fill="#eb6834"/>
+<circle cx="243.2" cy="264.1" r="3" fill="#eb6834"/>
+<circle cx="292.0" cy="273.3" r="3" fill="#eb6834"/>
+<polyline points="48.0,330.4 145.6,313.8 194.4,317.5 243.2,320.2" fill="none" stroke="#b8703f" stroke-width="1.5" stroke-dasharray="2 4"/>
+<circle cx="48.0" cy="330.4" r="2.5" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
+<circle cx="145.6" cy="313.8" r="2.5" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
+<circle cx="194.4" cy="317.5" r="2.5" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
+<circle cx="243.2" cy="320.2" r="2.5" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
+<text x="0.0" y="394.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">90th percentile (2030)</text>
+<text x="300.0" y="394.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#52514e">136.2%</text>
+<line x1="0" x2="22" y1="415.0" y2="415.0" stroke="#184f95" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="30.0" y="420.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#184f95">Commission, unchanged</text>
+<text x="30.0" y="438.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#184f95">policy (2030), no new</text>
+<text x="30.0" y="456.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#184f95">measures after 2026</text>
+<text x="300.0" y="420.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#184f95">126.5%</text>
+<line x1="0" x2="22" y1="477.0" y2="477.0" stroke="#eb6834" stroke-width="2.5" stroke-dasharray="10 4"/>
+<text x="30.0" y="482.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#eb6834">2027 draft budget forecast</text>
+<text x="30.0" y="500.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#eb6834">(2030)</text>
+<text x="300.0" y="482.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#eb6834">120.9%</text>
+<text x="0.0" y="526.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">10th percentile (2030)</text>
+<text x="300.0" y="526.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#52514e">118.1%</text>
+<line x1="0" x2="22" y1="547.0" y2="547.0" stroke="#b8703f" stroke-width="1.5" stroke-dasharray="2 4"/>
+<text x="30.0" y="552.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8703f">October 2024 commitment</text>
+<text x="30.0" y="570.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8703f">(2029)</text>
+<text x="300.0" y="552.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#b8703f">115.8%</text>
+<text x="30.0" y="596.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">Commission, unchanged</text>
+<text x="30.0" y="614.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">policy (2035, off the</text>
+<text x="30.0" y="632.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">chart)</text>
+<text x="300.0" y="596.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#184f95">140.8%</text>
+<line x1="0" y1="662.0" x2="300" y2="662.0" stroke="#d8d6d0"/>
+<text class="pied-source" x="0" y="683.0" font-size="13.5" fill="#52514e">Sources: European Commission</text>
+<text class="pied-source" x="0" y="700.0" font-size="13.5" fill="#52514e">(DSM 2025); French government (October</text>
+<text class="pied-source" x="0" y="717.0" font-size="13.5" fill="#52514e">2024 plan, 2027 draft budget).</text>
+<text class="pied-note" x="0" y="738.0" font-size="13.5" fill="#52514e">The bands are conditional projections</text>
+<text class="pied-note" x="0" y="755.0" font-size="13.5" fill="#52514e">based on historical shocks, not</text>
+<text class="pied-note" x="0" y="772.0" font-size="13.5" fill="#52514e">forecasts. Bands, from lightest to</text>
+<text class="pied-note" x="0" y="789.0" font-size="13.5" fill="#52514e">darkest: 10th to 90th, 20th to 80th</text>
+<text class="pied-note" x="0" y="806.0" font-size="13.5" fill="#52514e">and 40th to 60th percentiles of the</text>
+<text class="pied-note" x="0" y="823.0" font-size="13.5" fill="#52514e">paths simulated by the Commission (8,</text>
+<text class="pied-note" x="0" y="840.0" font-size="13.5" fill="#52514e">6 and 2 in 10). Starting points in</text>
+<text class="pied-note" x="0" y="857.0" font-size="13.5" fill="#52514e">2025: Commission 116.3%, 2027 draft</text>
+<text class="pied-note" x="0" y="874.0" font-size="13.5" fill="#52514e">budget 115.7%, 2024 commitment 114.7%;</text>
+<text class="pied-note" x="0" y="891.0" font-size="13.5" fill="#52514e">the commitment gives no figure for</text>
+<text class="pied-note" x="0" y="908.0" font-size="13.5" fill="#52514e">2026.</text>
+<text class="pied-licence" x="0" y="929.0" font-size="13.5" fill="#52514e">Chart: Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="946.0" font-size="13.5" fill="#52514e">· stephane-lalut.com</text>
+</svg>

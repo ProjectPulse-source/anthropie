@@ -130,7 +130,7 @@ An independent institution supplies accurate figures, and a speaker draws from t
 - **The opposition plays down the constraint or disputes its use**, in {{< form-val "inv_neg" >}} statements. Most do not dispute the figures: they dispute the use of alarm (“you use the debt to frighten the French”). Contesting a policy in whose name debt is invoked is not denying the constraint.
 - “If we do nothing…” is a phrase of the government and its supporters ({{< form-val "inv_cond" >}} statements); it never appears in the opposition.
 
-These registers are not symmetrical. Recognising a constraint, judging how binding it is and using it politically are three different things, which each camp mixes in its own way. In this debate, the registers follow the position held (governing or opposing) more than a simple left-right divide; other configurations would be needed to confirm it. The [page on bringing debt down](/en/can-public-debt-come-down/) shows what other countries did with that constraint.
+These registers are not symmetrical. Recognising a constraint, judging how binding it is and using it politically are three different things, which each camp mixes in its own way. In this debate, the registers follow the position held (governing or opposing) more than a simple left-right divide; other configurations would be needed to confirm it. The [page on bringing debt down](/en/can-public-debt-come-down/) shows what other countries did with that constraint, and the [page on the rules of the game](/en/public-debt-what-futures/) what the proposals to change it would change, and who would have to decide.
 
 ## Outside the Assembly: the 2027 candidates {#hors-hemicycle}
 

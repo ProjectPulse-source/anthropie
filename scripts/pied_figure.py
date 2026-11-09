@@ -29,6 +29,15 @@ def coupe(s: str, n: int) -> list[str]:
     s = re.sub(r"\b(art\.|al\.|no\.|para\.) (\d)", "\\1\u00a0\\2", s)
     s = re.sub(r"(\d) (January|February|March|April|May|June|July|August|September|October|November|December|ans|years|places)\b",
                "\\1\u00a0\\2", s)
+    # Nombre + « point(s) », « pb », « basis points », et mois français (09/11/2026, contrôleurs des figures « Quels
+    # futurs ? » : « 1 / point », « 20 basis / points », « d'octobre / 2024 »).
+    s = re.sub(r"(\d) (points?|pb|percentage|basis)\b", "\\1\u00a0\\2", s)
+    s = re.sub(r"\b(basis|percentage) (points?)\b", "\\1\u00a0\\2", s)
+    s = re.sub(r"\b(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre) (\d{4})\b",
+               "\\1\u00a0\\2", s)
+    # Sigle + année et année + nom qu'elle qualifie (« DSM / 2025 », « 2027 / draft budget », « 2024 / commitment »).
+    s = re.sub(r"\b(DSM|PLF|PSMT|PLFSS|LFI|LFSS) (\d{4})\b", "\\1\u00a0\\2", s)
+    s = re.sub(r"\b(\d{4}) (draft|commitment|plan|budget)\b", "\\1\u00a0\\2", s)
     # Un signe seul (« + fait monter, − fait baisser ») ne finit jamais une ligne (03/11/2026, cascade téléphone).
     s = re.sub(r"(^| )([+\u2212]) ", "\\1\\2\u00a0", s)
     # Un séparateur « · » ne finit jamais une ligne (04/11/2026 : 36 pieds de figure coupés après lui, règle R5 de
