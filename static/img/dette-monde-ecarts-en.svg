@@ -52,5 +52,5 @@
 <line x1="0" y1="402.0" x2="720" y2="402.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="417.0" font-size="11" fill="#52514e">Eurostat irt_lt_mcby_a (10-year convergence yields on government bonds)</text>
 <text class="pied-note" x="0" y="431.0" font-size="11" fill="#52514e">10-year market yields, not the implicit interest rate on the stock. Comparators, not a control group.</text>
-<text class="pied-licence" x="0" y="445.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
+<text class="pied-licence" x="0" y="445.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
 </svg>

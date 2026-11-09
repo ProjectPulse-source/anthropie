@@ -14,7 +14,15 @@
    "titre": "Prix de la dette et inflation récente : l'Europe en 2025",
    "montre": "Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, beaucoup moins. La Suède, hors euro, paie comme l'Allemagne.",
    "source": "Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, 2025",
-   "precaution": "Relation descriptive sur une année, non causale."
+   "precaution": "Relation descriptive sur une année, non causale. Cadre en tirets : zone agrandie dans le graphique suivant."
+  },
+  {
+   "id": "prix-zoom",
+   "fichier": "dette-monde-prix-zoom",
+   "titre": "Zone dense agrandie : inflation de 3,5 à 7,0 %",
+   "montre": "La zone dense du graphique précédent, agrandie : chaque pays qui s'y trouve est nommé, mêmes données.",
+   "source": "Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, 2025",
+   "precaution": "Mêmes données que le graphique précédent, échelles agrandies. Relation descriptive, non causale."
   },
   {
    "id": "transmission",
@@ -56,7 +64,15 @@
    "titre": "Average interest cost and recent inflation: Europe in 2025",
    "montre": "Outside the euro area, the implicit interest rate is closely associated with recent inflation; within the euro area, much less so. Sweden, outside the euro, pays about the same as Germany.",
    "source": "Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, 2025",
-   "precaution": "Descriptive relationship over one year, not causal."
+   "precaution": "Descriptive relationship over one year, not causal. Dashed box: area enlarged in the next chart."
+  },
+  {
+   "id": "prix-zoom",
+   "fichier": "dette-monde-prix-zoom-en",
+   "titre": "Close-up of the dense area: inflation from 3.5 to 7.0%",
+   "montre": "The dense area of the previous chart, enlarged: every country in it is named, same data.",
+   "source": "Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, 2025",
+   "precaution": "Same data as the previous chart, enlarged scales. Descriptive relationship, not causal."
   },
   {
    "id": "transmission",

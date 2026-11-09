@@ -1,9 +1,9 @@
-# relu le 2026-11-05 ; texte servi de /dette-publique-comparaison-internationale/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /dette-publique-comparaison-internationale/, build de 606940b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
 En 2025, à dette presque égale, la Hongrie consacre 8,8 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
 Le stock ne suffit donc pas à mesurer ce que pèse une dette publique : il faut regarder aussi son prix, les recettes disponibles pour la servir, et le poids des emprunts anciens dans ce qu’elle coûte aujourd’hui.
-Page mise à jour le 5 novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -246,6 +246,7 @@ non
 Prix de la dette et inflation récente
 Taux implicite de la dette (2025) et inflation moyenne des trois années précédentes (indice des prix harmonisé, Eurostat).
 Relation descriptive sur une année.
+La zone en tirets du graphique précédent, agrandie : mêmes données, chaque pays nommé.
 Hors de la zone euro, le taux implicite est étroitement associé à l’inflation récente (R² = 0,60) ; dans la zone euro, beaucoup moins (R² = 0,13) : les pays baltes ont connu une forte inflation sans payer cher.
 L’appartenance monétaire ne suffit pas pour autant : la Suède, hors de l’euro, paie 1,89 %, comme l’Allemagne.
 Ces données décrivent une année et des pays ; elles ne disent ni que l’euro rend la dette moins chère, ni l’inverse.
@@ -603,6 +604,15 @@ Hors de la zone euro, le taux implicite est étroitement associé à l’inflati
 La Suède, hors euro, paie comme l’Allemagne.
 Précaution d’interprétation.
 Relation descriptive sur une année, non causale.
+Cadre en tirets : zone agrandie dans le graphique suivant.
+Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, 2025
+Télécharger en PNG
+SVG
+Zone dense agrandie : inflation de 3,5 à 7,0 %
+La zone dense du graphique précédent, agrandie : chaque pays qui s’y trouve est nommé, mêmes données.
+Précaution d’interprétation.
+Mêmes données que le graphique précédent, échelles agrandies.
+Relation descriptive, non causale.
 Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, 2025
 Télécharger en PNG
 SVG
@@ -644,14 +654,9 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (Eurostat, OCDE, FMI et Banque mondiale), sous leurs propres conditions.
+Les valeurs reprises du FMI, dans les fichiers comme dans les graphiques, ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
-Révisions
-5 novembre 2026 — Précision : le rang des recettes publiques françaises (deuxième part du PIB) ne compte que les pays dont Eurostat publie les recettes de l’année ; le Danemark, qui ne les publie pas encore, n’y entre pas.
-5 novembre 2026 — Précision : l’écart de charge entre les deux pays de dette voisine tient arithmétiquement, pour l’essentiel, au prix payé sur la dette ; la page ne l’attribue pas à une cause.
-2 novembre 2026 — Comptes d’Eurostat du 21 octobre 2026 : le Danemark, dont Eurostat ne publie plus les recettes de 2025, sort du nuage des intérêts rapportés aux recettes et reste dans le tableau, le classement de la dette et l’indicateur de refinancement.
-Rapportés au PIB, les intérêts replacent la France au huitième rang de l’Union, sans égalité avec la Belgique, et cinq pays moins endettés la dépassent.
-16 octobre 2026 — Correction : rapportés au PIB, les intérêts placent la France au septième rang de l’Union, à égalité avec la Belgique, et non au huitième ; quatre pays moins endettés la dépassent, et non cinq.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

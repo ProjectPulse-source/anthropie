@@ -1,9 +1,9 @@
-# relu le 2026-11-05 ; texte servi de /en/public-debt-international-comparison/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /en/public-debt-international-comparison/, build de 606940b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 In 2025, at almost equal debt levels, Hungary devotes 8.8% of its public revenue to interest; Slovenia, 2.7%.
 The stock alone therefore cannot measure what a public debt weighs: one must also look at its average interest cost, the revenue available to service it, and the weight of old borrowing in what it costs today.
-Page updated 5 November 2026 · revisions
+Page updated 5 November 2026
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
@@ -248,6 +248,7 @@ no
 Average interest cost and recent inflation
 Implicit interest rate on the debt (2025) and average inflation over the three previous years (harmonised index of consumer prices, Eurostat).
 Descriptive relationship over one year.
+The dashed area of the previous chart, enlarged: same data, every country named.
 Outside the euro area, the implicit interest rate is closely associated with recent inflation (R² = 0.60); within the euro area, much less so (R² = 0.13): the Baltic states saw high inflation without paying much.
 Monetary membership is not enough either: Sweden, outside the euro, pays 1.89%, like Germany.
 These data describe one year and a set of countries; they say neither that the euro makes debt cheaper nor the opposite.
@@ -596,6 +597,15 @@ Outside the euro area, the implicit interest rate is closely associated with rec
 Sweden, outside the euro, pays about the same as Germany.
 Reading caveat.
 Descriptive relationship over one year, not causal.
+Dashed box: area enlarged in the next chart.
+Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, 2025
+Download PNG
+SVG
+Close-up of the dense area: inflation from 3.5 to 7.0%
+The dense area of the previous chart, enlarged: every country in it is named, same data.
+Reading caveat.
+Same data as the previous chart, enlarged scales.
+Descriptive relationship, not causal.
 Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, 2025
 Download PNG
 SVG
@@ -638,12 +648,7 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (Eurostat, OECD, IMF and World Bank), under their own terms.
-Revisions
-5 November 2026 — Clarification: the rank of French public revenue (second share of GDP) only counts the countries whose revenue for the year Eurostat publishes; Denmark, which does not publish it yet, is not included.
-5 November 2026 — Clarification: the gap in interest burden between the two countries with similar debt is arithmetically due mostly to the price paid on the debt; the page does not attribute it to a cause.
-2 November 2026 — Eurostat accounts of 21 October 2026: Denmark, whose 2025 revenue Eurostat no longer publishes, leaves the interest-to-revenue scatter and stays in the table, the debt ranking and the refinancing indicator.
-Relative to GDP, interest puts France back in eighth place in the Union, no longer tied with Belgium, and five less indebted countries rank above it.
-16 October 2026 — Correction: as a share of GDP, interest puts France seventh in the Union, tied with Belgium, not eighth; four less indebted countries exceed it, not five.
+Values taken from the IMF, in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

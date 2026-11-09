@@ -141,6 +141,8 @@ TOL_RATIO = 0.11  # témoin de la variation du ratio : deux ratios publiés à u
 PAGE_URL_EN = "stephane-lalut.com/en/public-debt-international-comparison/"
 AVANCES = ["USA", "JPN", "GBR", "CAN", "CHE", "NOR", "FRA"]
 EMERGENTS = ["CHN", "IND", "BRA", "ZAF"]
+NOMMES: dict = {}  # (ident, langue) -> codes nommés par nuage() ; sert la garde « aucun point muet » (09/11/2026)
+ZOOM: dict = {}  # langue -> cadre et codes de l'agrandissement du nuage des prix
 
 
 def log(msg: str) -> None:
@@ -737,19 +739,26 @@ def filet_libre(px, py, b, code, points, boites, r=7, marge=10.5, liens=(), trai
 
 
 def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, source, note, etiquettes, droites=None,
-          jumeaux=(), ymin=0.0, fmt_y=None, lang="fr"):
+          jumeaux=(), ymin=0.0, fmt_y=None, lang="fr", xmin=0.0, fmt_x=None, cadre=None):
+    """cadre : (x_a, x_b, y_a, y_b) en unités des données, zone agrandie dans une figure voisine, tracée en tirets.
+    Les codes effectivement nommés sont consignés dans NOMMES[(ident, lang)] (09/11/2026 : aucun point muet)."""
     H = 440
     nb, pc, cle_nom = LOC[lang]["nb"], LIB_FIG[lang]["pc"], LOC[lang]["nom"]
     X0, X1, Y0, Y1 = 58, W - 20, 64, H - 52
-    sx = lambda v: X0 + v / xmax * (X1 - X0)  # noqa: E731
+    sx = lambda v: X0 + (v - xmin) / (xmax - xmin) * (X1 - X0)  # noqa: E731
     sy = lambda v: Y1 - (v - ymin) / (ymax - ymin) * (Y1 - Y0)  # noqa: E731
     e = entete(H, ident, titre, desc)
     e.append('<text x="0" y="18" font-size="%d" font-weight="600" fill="%s">%s</text>' % (TY_TITRE, INK, esc(titre)))
     e += legende(W - 250, 18, lang)
     e += grille_y(X0, X1, Y0, Y1, ymin, ymax, pasy, fmt_y or (lambda v: nb(v, 0) + pc), ly)
-    e += axe_x(X0, X1, Y1, 0, xmax, pasx, lambda v: nb(v, 0) + pc, lx)
+    e += axe_x(X0, X1, Y1, xmin, xmax, pasx, fmt_x or (lambda v: nb(v, 0) + pc), lx)
     by = {x["code"]: x for x in rows}
     traits = []  # segments dessinés (pointillés, droites), que l'anti-chevauchement des étiquettes doit éviter
+    if cadre:
+        ca, cb, cc, cd = sx(cadre[0]), sx(cadre[1]), sy(cadre[2]), sy(cadre[3])
+        e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="none" stroke="%s" stroke-width="1" '
+                 'stroke-dasharray="4 3"/>' % (ca, cd, cb - ca, cc - cd, MUTED))
+        traits += [(ca, cc, cb, cc), (ca, cd, cb, cd), (ca, cc, ca, cd), (cb, cc, cb, cd)]
     pointilles = []  # les seuls pointillés des faux jumeaux : un nom facultatif ou éloigné ne s'y pose jamais
     for j in jumeaux:
         a, b = by[j["bas"]], by[j["haut"]]
@@ -885,6 +894,7 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
             if filet(px, py, b):
                 e.append(filet(px, py, b))
         boites.append((x["code"], b))
+        NOMMES.setdefault((ident, lang), set()).add(x["code"])
         gras = ' font-weight="600"' if x["code"] == "FR" else ""
         # Liseré : le même texte, contour blanc, dessous ; masqué aux lecteurs d'écran (sinon lu deux fois).
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="#fff" stroke="#fff" stroke-width="3" '
@@ -1095,14 +1105,15 @@ def pied_m(e: list[str], y: float, source: str, note: str, lang: str) -> str:
 
 
 def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, ident, titre, svg_d, source, note, lang,
-            noms, valeurs=None, jumeaux=(), droites=None, liste=None, x0=40):
-    """liste : [(code, valeur)] dits SOUS la figure quand leurs points sont trop serrés pour être nommés dedans."""
+            noms, valeurs=None, jumeaux=(), droites=None, liste=None, x0=40, xmin=0.0, cadre=None, liste_titre=None, hauteur=230, dire_muets=False):
+    """liste : [(code, valeur)] dits SOUS la figure quand leurs points sont trop serrés pour être nommés dedans.
+    xmin, cadre : comme nuage() (agrandissement du nuage des prix, 09/11/2026)."""
     e, y = PF.tete_mobile(ident, titre, desc_de(svg_d), INK, FONT)
     y = legende_m(e, y + 4, lang)
     y = lignes_m(e, y + 4, ly)
     X0, X1, Y0 = x0, WM - 8, y + 14
-    Y1 = Y0 + 230
-    sx = lambda v: X0 + v / xmax * (X1 - X0)  # noqa: E731
+    Y1 = Y0 + hauteur
+    sx = lambda v: X0 + (v - xmin) / (xmax - xmin) * (X1 - X0)  # noqa: E731
     sy = lambda v: Y1 - (v - ymin) / (ymax - ymin) * (Y1 - Y0)  # noqa: E731
     v = ymin
     graduations = []   # boîtes des graduations : un nom ne les recouvre pas (03/11/2026 : « Lituanie » sur « 4 % »)
@@ -1111,9 +1122,9 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
         e.append(tm(X0 - 5, sy(v) + 5, fmt_y(v), MUTED, "end"))
         graduations.append((X0 - 7 - largeur_texte(fmt_y(v), FSM), sy(v) + 5 - FSM * 0.75, X0 - 3, sy(v) + 7))
         v += pasy
-    v = 0
+    v = xmin
     while v <= xmax + 1e-9:
-        e.append(tm(sx(v), Y1 + 19, fmt_x(v), MUTED, "middle" if 0 < v < xmax else ("start" if v == 0 else "end")))
+        e.append(tm(sx(v), Y1 + 19, fmt_x(v), MUTED, "middle" if xmin < v < xmax else ("start" if v == xmin else "end")))
         v += pasx
     by = {x["code"]: x for x in rows}
     traits_m = [(sx(fx(by[j["bas"]])), sy(fy(by[j["bas"]])), sx(fx(by[j["haut"]])), sy(fy(by[j["haut"]]))) for j in jumeaux]         + [(sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb)) for (a, b, xa, xb, _c) in (droites or [])]
@@ -1124,10 +1135,16 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
     for (a, b, xa, xb, col) in (droites or []):
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2" opacity="0.7"/>'
                  % (sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb), col))
+    if cadre:
+        ca, cb, cc, cd = sx(cadre[0]), sx(cadre[1]), sy(cadre[2]), sy(cadre[3])
+        e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="none" stroke="%s" stroke-width="1" '
+                 'stroke-dasharray="4 3"/>' % (ca, cd, cb - ca, cc - cd, MUTED))
+        traits_m += [(ca, cc, cb, cc), (ca, cd, cb, cd), (ca, cc, ca, cd), (cb, cc, cb, cd)]
     pts = [(x["code"], sx(fx(x)), sy(fy(x))) for x in rows]
     for x in rows:
         e.append(marque(sx(fx(x)), sy(fy(x)), x["euro"], 4.2))
     boites, echecs, segs = list(graduations), [], []
+    nommes_m = set()
     PROCHES = ((7, 5, "start"), (-7, 5, "end"), (0, -9, "middle"), (0, 19, "middle"), (6, -7, "start"),
                (-6, -7, "end"), (6, 17, "start"), (-6, 17, "end"), (0, -14, "middle"), (0, 24, "middle"))
     # Places éloignées, toujours reliées à leur point par un filet qui ne frôle aucun autre point ni ne traverse
@@ -1193,13 +1210,26 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
             e.append(filet(px, py, b, 5.2, 0))
             segs.append((px, py, min(max(px, b[0]), b[2]), min(max(py, b[1] - 1), b[3])))
         boites.append(b)
+        nommes_m.add(code)
         e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" '
                  'text-anchor="%s"%s aria-hidden="true">%s</text>'
                  % (px + dx, py + dy, FSM, anc, ' font-weight="600"' if gras else "", esc(lib)))
         e.append(tm(px + dx, py + dy, lib, INK, anc, "600" if gras else None))
     if echecs:
         fail("%s (%s, téléphone) : aucune position libre pour %s" % (ident, lang, ", ".join(echecs)))
+    if dire_muets:
+        # Pays sans nom faute de place, dits dans le pied (09/11/2026, contrôle du rendu : sur téléphone, trois points
+        # serrés pour un seul nom, et deux pays identifiables nulle part).
+        muets_m = [by[c][LOC[lang]["nom"]] for c in [k.lstrip("?") for k in noms] if c in by and c not in nommes_m]
+        if muets_m:
+            note = note + {"fr": " Sans nom faute de place : %s.", "en": " Not named for lack of space: %s."}[lang] % (
+                LOC[lang]["liste"](muets_m))
     y = lignes_m(e, Y1 + 26, lx)
+    # Intitulé de la liste (09/11/2026, contrôle du rendu) : posée sous le titre de l'axe horizontal, une liste sans
+    # intitulé se lisait comme des valeurs de cet axe (des inflations), alors qu'elle donne celles de l'axe vertical.
+    if liste and liste_titre:
+        y += 26
+        e.append(tm(0, y, liste_titre, INK, weight="600"))
     for code, val in (liste or []):
         x = by[code]
         y += 22
@@ -1547,6 +1577,8 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
             ("prix", "dette-monde-prix",
              "Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, "
              "beaucoup moins. La Suède, hors euro, paie comme l'Allemagne."),
+            ("prix-zoom", "dette-monde-prix-zoom",
+             "La zone dense du graphique précédent, agrandie : chaque pays qui s'y trouve est nommé, mêmes données."),
             ("transmission", "dette-monde-transmission",
              "La part de la dette qui arrive à échéance et l'écart entre taux de marché et taux implicite : un repère de "
              "pression sur le coût moyen, non une prévision."),
@@ -1563,6 +1595,8 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
             ("prix", "dette-monde-prix-en",
              "Outside the euro area, the implicit interest rate is closely associated with recent inflation; within the euro "
              "area, much less so. Sweden, outside the euro, pays about the same as Germany."),
+            ("prix-zoom", "dette-monde-prix-zoom-en",
+             "The dense area of the previous chart, enlarged: every country in it is named, same data."),
             ("transmission", "dette-monde-transmission-en",
              "The share of debt falling due and the gap between market yields and the implicit interest rate: a marker of "
              "pressure on the average cost, not a forecast."),
@@ -1638,6 +1672,16 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
                    "France %s, Allemagne %s, Suède %s." % tuple(pct(by[c]["prix"], 2) for c in ("HU", "RO", "FR", "DE", "SE")),
             p_src="Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, %s" % an,
             p_note="Relation descriptive sur une année, non causale.",
+            p_note_cadre="Relation descriptive sur une année, non causale. Cadre en tirets : zone agrandie dans le graphique suivant.",
+            p_note_cadre_m="Relation descriptive sur une année, non causale. Cadre en tirets : zone agrandie ensuite.",
+            z_titre="Zone dense agrandie : inflation de %s à %s",
+            z_desc=lambda c, z: ("Agrandissement de la zone en tirets du graphique précédent : inflation moyenne de %s à %s, "
+                                 "taux implicite de %s à %s. Mêmes données, seules les échelles changent ; chaque pays est "
+                                 "nommé. Taux implicite : " % (LOC["fr"]["nb"](c[0], 1), pct(c[1], 1),
+                                                              LOC["fr"]["nb"](c[2], 2), pct(c[3], 2))
+                                 + ", ".join("%s %s" % (x["nom"], pct(x["prix"], 2)) for x in sorted(z, key=lambda x: -x["prix"]))
+                                 + "."),
+            z_note="Mêmes données que le graphique précédent, échelles agrandies. Relation descriptive, non causale.",
             src_tr="Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), %s" % an),
         "en": dict(
             src_stock="Eurostat gov_10dd_edpt1, Maastricht debt, end-%s" % an,
@@ -1662,8 +1706,77 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
                        pct_en(by[c]["prix"], 2) for c in ("HU", "RO", "FR", "DE", "SE")),
             p_src="Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, %s" % an,
             p_note="Descriptive relationship over one year, not causal.",
+            p_note_cadre="Descriptive relationship over one year, not causal. Dashed box: area enlarged in the next chart.",
+            p_note_cadre_m="Descriptive relationship over one year, not causal. Dashed box: area enlarged next.",
+            z_titre="Close-up of the dense area: inflation from %s to %s",
+            z_desc=lambda c, z: ("Close-up of the dashed area of the previous chart: average inflation from %s to %s, "
+                                 "implicit interest rate from %s to %s. Same data, only the scales change; every country is "
+                                 "named. Implicit rate: " % (LOC["en"]["nb"](c[0], 1), pct_en(c[1], 1),
+                                                            LOC["en"]["nb"](c[2], 2), pct_en(c[3], 2))
+                                 + ", ".join("%s %s" % (x["nom_en"], pct_en(x["prix"], 2)) for x in sorted(z, key=lambda x: -x["prix"]))
+                                 + "."),
+            z_note="Same data as the previous chart, enlarged scales. Descriptive relationship, not causal.",
             src_tr="Eurostat gov_10dd_ggd (debt by residual maturity), irt_lt_mcby_a (10-year yields), %s" % an),
     }[lang]
+    # Nuage des prix (auteur, 09/11/2026 : « tous les points du graphe n'ont pas leur pays »). Seize pays de la zone euro
+    # tiennent dans un carré d'environ 2 points sur 1,6 : à l'échelle du graphe entier, leurs marques se touchent (Grèce à
+    # 7 px du Portugal et de la Belgique) et aucun nom ni filet ne peut désigner chacun sans équivoque. D'où un
+    # AGRANDISSEMENT, figure voisine où chaque point de la zone est nommé. Le cadre se calcule à partir des points restés
+    # sans nom au premier passage (règle de la grappe ci-dessous) : l'invariant tient par construction, chaque millésime,
+    # et une garde le revérifie après le second passage (le cadre tracé déplace des noms).
+    infl = [x for x in rows if x["inflation"] is not None]
+    noms_prix = {"FR": "h", "IT": "?h", "DE": "?bdL", "HU": "h", "RO": "h", "PL": "h", "SE": "?bL3", "EE": "d", "LT": "d",
+                 # Suède et Allemagne reliées à leur point par deux filets qui divergent (03/11/2026) : posée en bas à
+                 # gauche, la Suède se lisait sous un point de la zone euro ; deux filets parallèles menaient à deux noms empilés.
+                 "CZ": "h", "DK": "g", "BG": "d",
+                 # Les deux taux implicites les plus bas (auteur, 04/10 : nommer le bas de l'échelle).
+                 "LU": "?g", "IE": "?b",
+                 # Hors de la zone dense, tous obligatoires (09/11/2026). Dans la grappe, seule la France l'est (la page
+                 # la fait repérer) : Italie, Allemagne, Suède, Luxembourg et Irlande y sont nommés s'ils trouvent une
+                 # place nette, et toujours dans l'agrandissement. Figés, Suède et Allemagne perdaient leur filet contre
+                 # le cadre et « Suède » se lisait sous le point de Chypre (contrôle du rendu, 09/11/2026).
+                 "HR": "h", "SK": "h", "LV": "bg"}  # LV en bas à gauche : à gauche, il passait sous le point de la Slovaquie ; dessous, « Lituanie » prend la place
+    # Les autres, tous dans la zone dense, ne sont nommés que dans l'agrandissement : posés ici en facultatifs, ils
+    # chargeaient le graphe d'ensemble de filets croisés (« Espagne » collé au filet de la France, rendu du 09/11/2026).
+
+    def nuage_prix(cadre):
+        NOMMES.pop(("mp", lang), None)
+        svg = nuage(infl, lambda x: x["inflation"], lambda x: x["prix"], 14, 6, 2, 1,
+                    T["p_lx"], T["p_ly"], "mp", T["p_titre"], T["p_desc"], T["p_src"],
+                    T["p_note_cadre"] if cadre else T["p_note"], noms_prix, lang=lang, cadre=cadre)
+        return svg, [x for x in infl if x["code"] not in NOMMES.get(("mp", lang), set())]
+
+    _, muets = nuage_prix(None)
+    cadre = None
+    if muets:
+        # La GRAPPE : les points sans nom, plus tout point à moins d'un demi-point de leur enveloppe (09/11/2026 :
+        # Luxembourg et Irlande, nommés sur le bureau mais restés sous le cadre, n'étaient nommés nulle part sur
+        # téléphone) ; puis une marge (en abscisse 0,3 à gauche, 0,15 à droite : la Finlande, l'Autriche, collées au bord, n'avaient
+        # plus de place sur téléphone ;
+        # 0,1 en ordonnée) et l'arrondi au demi-point en abscisse, au quart de point en ordonnée (au demi-point, la
+        # grappe prenait 2,5 points de haut et le zoom téléphone n'avait plus de place pour l'Allemagne).
+        e0 = (min(x["inflation"] for x in muets) - 0.5, max(x["inflation"] for x in muets) + 0.5,
+              min(x["prix"] for x in muets) - 0.5, max(x["prix"] for x in muets) + 0.5)
+        grappe = [x for x in infl if e0[0] <= x["inflation"] <= e0[1] and e0[2] <= x["prix"] <= e0[3]]
+        cadre = (math.floor((min(x["inflation"] for x in grappe) - 0.3) * 2) / 2,
+                 math.ceil((max(x["inflation"] for x in grappe) + 0.15) * 2) / 2,
+                 math.floor((min(x["prix"] for x in grappe) - 0.1) * 4) / 4,
+                 math.ceil((max(x["prix"] for x in grappe) + 0.1) * 4) / 4)
+    prix_principal, muets = nuage_prix(cadre)
+    dans = lambda x: cadre and cadre[0] <= x["inflation"] <= cadre[1] and cadre[2] <= x["prix"] <= cadre[3]  # noqa: E731
+    hors = [x["code"] for x in muets if not dans(x)]
+    if hors:
+        fail("mp (%s) : point(s) sans nom hors de la zone agrandie : %s" % (lang, ", ".join(hors)))
+    zone = [x for x in infl if dans(x)]
+    ZOOM[lang] = dict(cadre=cadre, codes=[x["code"] for x in zone])
+    log("  mp (%s) : agrandissement %s, %d pays" % (lang, cadre, len(zone)))
+    prix_zoom = nuage(zone, lambda x: x["inflation"], lambda x: x["prix"], cadre[1], cadre[3], 0.5, 0.25,
+                      T["p_lx"], T["p_ly"], "mpz", T["z_titre"] % (LOC[lang]["nb"](cadre[0], 1), LOC[lang]["pct"](cadre[1], 1)),
+                      T["z_desc"](cadre, zone), T["p_src"], T["z_note"], {x["code"]: "h" for x in zone},
+                      ymin=cadre[2], fmt_y=lambda v: LOC[lang]["nb"](v, 2) + LIB_FIG[lang]["pc"], lang=lang, xmin=cadre[0],
+                      fmt_x=lambda v: LOC[lang]["nb"](v, 1) + LIB_FIG[lang]["pc"])
+    if set(NOMMES.get(("mpz", lang), set())) != {x["code"] for x in zone}:
+        fail("mpz (%s) : pays non nommés dans l'agrandissement" % lang)
     D = {
         "dette-monde-stock%s.svg" % suf: barres_stock(rows + PARTIELS, an, T["src_stock"], lang),   # le stock ne demande pas les recettes
         "dette-monde-charge%s.svg" % suf: nuage(
@@ -1683,15 +1796,8 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
                      (stats["charge_stock_hors"]["ordonnee"], stats["charge_stock_hors"]["pente"],
                       stats["charge_stock_hors"]["stock_min"], stats["charge_stock_hors"]["stock_max"], COL_HORS)],
             jumeaux=jum, lang=lang),
-        "dette-monde-prix%s.svg" % suf: nuage(
-            [x for x in rows if x["inflation"] is not None], lambda x: x["inflation"], lambda x: x["prix"], 14, 6, 2, 1,
-            T["p_lx"], T["p_ly"], "mp", T["p_titre"], T["p_desc"], T["p_src"], T["p_note"],
-            {"FR": "h", "IT": "h", "DE": "!bdL", "HU": "h", "RO": "h", "PL": "h", "SE": "!bL3", "EE": "d", "LT": "d",
-             # Suède et Allemagne reliées à leur point par deux filets qui divergent (03/11/2026) : posée en bas à gauche,
-             # la Suède se lisait sous un point de la zone euro ; deux filets parallèles menaient à deux noms empilés.
-             "CZ": "h", "DK": "g", "BG": "d",
-             # Les deux taux implicites les plus bas (auteur, 04/10 : nommer le bas de l'échelle).
-             "LU": "g", "IE": "b"}, lang=lang),
+        "dette-monde-prix%s.svg" % suf: prix_principal,
+        "dette-monde-prix-zoom%s.svg" % suf: prix_zoom,
         "dette-monde-transmission%s.svg" % suf: transmission(rows + PARTIELS, an, T["src_tr"], lang),
         "dette-monde-ecarts%s.svg" % suf: ecarts_figure(ecarts, an, lang),
     }
@@ -1717,6 +1823,9 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
     infl = [x for x in rows if x["inflation"] is not None]
     trans = [x for x in rows + PARTIELS if x["part_1an"] is not None and x["taux10"] is not None]
     tr_y = [x["taux10"] - x["prix"] for x in trans]
+    titres_z = {"fr": "Zone dense agrandie, %s : inflation de %s à %s", "en": "Close-up of the dense area, %s: inflation from %s to %s"}[lang] % (
+        an, nb(ZOOM[lang]["cadre"][0], 1), P(ZOOM[lang]["cadre"][1], 1))
+    titre_liste_p = {"fr": "Taux implicite, %s", "en": "Implicit interest rate, %s"}[lang] % an
     sortie = {
         "dette-monde-charge%s-m.svg" % suf: nuage_m(
             rows, lambda x: x["stock"], lambda x: x["charge"], 160, 0, 10, 80, 2, lambda v: nb(v, 0) + pc, lambda v: nb(v, 0) + pc,
@@ -1732,15 +1841,33 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
                                                                      "CZ", "BG", "HR", "SK", "MT", "LT", "LV", "IE",
                                                                      "CY", "EE", "LU")], None, jumeaux=jum[:1],
             liste=[(c, P(by[c]["charge"])) for c in ("HU", "SI", "FR")],
+            liste_titre={"fr": "Intérêts en %% des recettes, %s", "en": "Interest as a %% of revenue, %s"}[lang] % an,
             droites=[(stats["charge_stock_euro"]["ordonnee"], stats["charge_stock_euro"]["pente"],
                       stats["charge_stock_euro"]["stock_min"], stats["charge_stock_euro"]["stock_max"], COL_EURO),
                      (stats["charge_stock_hors"]["ordonnee"], stats["charge_stock_hors"]["pente"],
                       stats["charge_stock_hors"]["stock_min"], stats["charge_stock_hors"]["stock_max"], COL_HORS)]),
         "dette-monde-prix%s-m.svg" % suf: nuage_m(
             infl, lambda x: x["inflation"], lambda x: x["prix"], 14, 0, 6, 7, 1, lambda v: nb(v, 0) + pc, lambda v: nb(v, 0) + pc,
-            lx[1], ly[1], "mp-m", titres[1], D["dette-monde-prix%s.svg" % suf], T["p_src"], T["p_note"], lang,
-            ["HU", "RO", "PL", "EE"], None,
-            liste=[(c, P(by[c]["prix"], 2)) for c in ("HU", "FR", "DE", "SE")]),
+            lx[1], ly[1], "mp-m", titres[1], D["dette-monde-prix%s.svg" % suf], T["p_src"], T["p_note_cadre_m"], lang,
+            # Tous les pays hors de la zone dense (09/11/2026) ; la zone dense est nommée dans l'agrandissement. Slovaquie et
+            # Lettonie facultatives : à 300 px, leurs points touchent ceux de la Lituanie, et « Slovaquie » se posait sous
+            # le point letton (ambigu) ; un nom qui désigne le mauvais pays est pire qu'un point sans nom.
+            ["HU", "RO", "PL", "EE", "BG", "CZ", "LT", "HR", "?SK", "?LV"], None,
+            liste=[(c, P(by[c]["prix"], 2)) for c in ("HU", "FR", "DE", "SE")], cadre=ZOOM[lang]["cadre"], liste_titre=titre_liste_p,
+            dire_muets=True),
+        "dette-monde-prix-zoom%s-m.svg" % suf: nuage_m(
+            [x for x in infl if x["code"] in ZOOM[lang]["codes"]], lambda x: x["inflation"], lambda x: x["prix"],
+            ZOOM[lang]["cadre"][1], ZOOM[lang]["cadre"][2], ZOOM[lang]["cadre"][3], 1, 0.25,
+            lambda v: nb(v, 1) + pc, lambda v: nb(v, 2) + pc, lx[1], ly[1], "mpz-m", titres_z,
+            D["dette-monde-prix-zoom%s.svg" % suf], T["p_src"], T["z_note"], lang,
+            # Ordre de placement : de droite à gauche (09/11/2026 : dans l'ordre du tableau ou par voisinage, la Suède,
+            # l'Allemagne, la Finlande ou l'Autriche restaient sans place ; de droite à gauche, chaque nom du bord droit
+            # se pose avant ses voisins, qui gardent la place à gauche de leur point).
+            # La France d'abord : la page la fait repérer (09/11/2026 : posée tard, elle se lisait près de Chypre).
+            sorted(ZOOM[lang]["codes"], key=lambda c: (c != "FR", -by[c]["inflation"])),
+            None,
+            liste=[(c, P(by[c]["prix"], 2)) for c in ("IT", "FR", "DE", "SE") if c in ZOOM[lang]["codes"]], liste_titre=titre_liste_p,
+            xmin=ZOOM[lang]["cadre"][0], hauteur=330, x0=54),  # graduations à deux décimales
         "dette-monde-transmission%s-m.svg" % suf: nuage_m(
             trans, lambda x: x["part_1an"], lambda x: x["taux10"] - x["prix"],
             math.ceil(max(x["part_1an"] for x in trans) / 10) * 10, min(-1.0, math.floor(min(tr_y))), math.ceil(max(tr_y)),

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 687" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-m-t mc-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 713" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mc-m-t mc-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="mc-m-t">Même dette, coût différent : l'UE en 2025</title><desc id="mc-m-d">Chaque point est un pays. Le pointillé relie la paire de faux jumeaux au plus grand écart, désignée par la règle publiée : dette voisine, part des recettes consacrée aux intérêts très différente. Deux droites de moindres carrés, une par groupe, sur leur plage observée. Intérêts en % des recettes : Hongrie 8,8 %, Slovénie 2,7 %, France 4,2 %, Italie 8,0 %.</desc>
-<rect width="300" height="687" fill="#ffffff"/>
+<rect width="300" height="713" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Même dette, coût différent :</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">l'UE en 2025</text>
 <circle cx="6.0" cy="83.0" r="5.0" fill="#184f95"/>
@@ -91,25 +91,26 @@
 <text x="55.2" y="333.5" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Estonie</text>
 <text x="55.2" y="333.5" font-size="13.5" fill="#0A0A0E" text-anchor="end">Estonie</text>
 <text x="0.0" y="398.0" font-size="13.5" fill="#898781" text-anchor="start">Stock : dette fin 2024 / PIB 2025</text>
-<rect x="1.5" y="410.5" width="9.0" height="9.0" fill="#eb6834"/>
-<text x="18.0" y="420.0" font-size="13.5" fill="#52514e" text-anchor="start">Hongrie</text>
-<text x="300.0" y="420.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">8,8 %</text>
-<circle cx="6.0" cy="437.0" r="5.0" fill="#184f95"/>
-<text x="18.0" y="442.0" font-size="13.5" fill="#52514e" text-anchor="start">Slovénie</text>
-<text x="300.0" y="442.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">2,7 %</text>
-<circle cx="6.0" cy="459.0" r="5.0" fill="#184f95"/>
-<text x="18.0" y="464.0" font-size="13.5" fill="#52514e" text-anchor="start">France</text>
-<text x="300.0" y="464.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">4,2 %</text>
-<line x1="0" y1="478.0" x2="300" y2="478.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="499.0" font-size="13.5" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR),</text>
-<text class="pied-source" x="0" y="516.0" font-size="13.5" fill="#52514e">gov_10dd_edpt1 (GD), nama_10_gdp</text>
-<text class="pied-source" x="0" y="533.0" font-size="13.5" fill="#52514e">(B1GQ), 2025 ; administrations</text>
-<text class="pied-source" x="0" y="550.0" font-size="13.5" fill="#52514e">publiques S.13, monnaie nationale</text>
-<text class="pied-note" x="0" y="571.0" font-size="13.5" fill="#52514e">Pointillés : la paire de faux jumeaux</text>
-<text class="pied-note" x="0" y="588.0" font-size="13.5" fill="#52514e">au plus grand écart d'intérêts</text>
-<text class="pied-note" x="0" y="605.0" font-size="13.5" fill="#52514e">rapportés aux recettes (plus proche</text>
-<text class="pied-note" x="0" y="622.0" font-size="13.5" fill="#52514e">voisin en stock, écart inférieur à 10</text>
-<text class="pied-note" x="0" y="639.0" font-size="13.5" fill="#52514e">points).</text>
-<text class="pied-licence" x="0" y="660.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="677.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text x="0.0" y="424.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">Intérêts en % des recettes, 2025</text>
+<rect x="1.5" y="436.5" width="9.0" height="9.0" fill="#eb6834"/>
+<text x="18.0" y="446.0" font-size="13.5" fill="#52514e" text-anchor="start">Hongrie</text>
+<text x="300.0" y="446.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">8,8 %</text>
+<circle cx="6.0" cy="463.0" r="5.0" fill="#184f95"/>
+<text x="18.0" y="468.0" font-size="13.5" fill="#52514e" text-anchor="start">Slovénie</text>
+<text x="300.0" y="468.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">2,7 %</text>
+<circle cx="6.0" cy="485.0" r="5.0" fill="#184f95"/>
+<text x="18.0" y="490.0" font-size="13.5" fill="#52514e" text-anchor="start">France</text>
+<text x="300.0" y="490.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">4,2 %</text>
+<line x1="0" y1="504.0" x2="300" y2="504.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="525.0" font-size="13.5" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR),</text>
+<text class="pied-source" x="0" y="542.0" font-size="13.5" fill="#52514e">gov_10dd_edpt1 (GD), nama_10_gdp</text>
+<text class="pied-source" x="0" y="559.0" font-size="13.5" fill="#52514e">(B1GQ), 2025 ; administrations</text>
+<text class="pied-source" x="0" y="576.0" font-size="13.5" fill="#52514e">publiques S.13, monnaie nationale</text>
+<text class="pied-note" x="0" y="597.0" font-size="13.5" fill="#52514e">Pointillés : la paire de faux jumeaux</text>
+<text class="pied-note" x="0" y="614.0" font-size="13.5" fill="#52514e">au plus grand écart d'intérêts</text>
+<text class="pied-note" x="0" y="631.0" font-size="13.5" fill="#52514e">rapportés aux recettes (plus proche</text>
+<text class="pied-note" x="0" y="648.0" font-size="13.5" fill="#52514e">voisin en stock, écart inférieur à 10</text>
+<text class="pied-note" x="0" y="665.0" font-size="13.5" fill="#52514e">points).</text>
+<text class="pied-licence" x="0" y="686.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="703.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
 </svg>

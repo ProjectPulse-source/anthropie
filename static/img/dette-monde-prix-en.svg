@@ -31,6 +31,7 @@
 <text x="608.3" y="403.0" font-size="11" fill="#898781" text-anchor="middle">12%</text>
 <text x="700.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">14%</text>
 <text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">average inflation 2022-2024 (HICP)</text>
+<rect x="218.5" y="212.5" width="160.5" height="108.0" fill="none" stroke="#898781" stroke-width="1" stroke-dasharray="4 3"/>
 <circle cx="316.3" cy="266.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="423.0" y="186.7" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <rect x="504.0" y="210.5" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
@@ -61,33 +62,40 @@
 <text x="436.9" y="195.6" font-size="11" fill="#0A0A0E" text-anchor="start">Bulgaria</text>
 <text x="508.9" y="206.4" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Czechia</text>
 <text x="508.9" y="206.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Czechia</text>
-<line x1="325.3" y1="295.2" x2="338.0" y2="311.3" stroke="#52514e" stroke-width="1"/>
-<text x="338.9" y="321.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Germany</text>
-<text x="338.9" y="321.7" font-size="11" fill="#0A0A0E" text-anchor="start">Germany</text>
 <text x="559.2" y="275.4" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Estonia</text>
 <text x="559.2" y="275.4" font-size="11" fill="#0A0A0E" text-anchor="start">Estonia</text>
-<text x="281.2" y="332.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Ireland</text>
-<text x="281.2" y="332.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Ireland</text>
 <line x1="265.9" y1="275.3" x2="253.4" y2="260.8" stroke="#52514e" stroke-width="1"/>
 <text x="252.5" y="258.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" font-weight="600" aria-hidden="true">France</text>
 <text x="252.5" y="258.7" font-size="11" fill="#0A0A0E" text-anchor="end" font-weight="600">France</text>
-<text x="298.0" y="220.4" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Italy</text>
-<text x="298.0" y="220.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Italy</text>
+<text x="411.1" y="236.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Croatia</text>
+<text x="411.1" y="236.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Croatia</text>
+<text x="470.9" y="267.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Latvia</text>
+<text x="470.9" y="267.5" font-size="11" fill="#0A0A0E" text-anchor="end">Latvia</text>
 <text x="502.6" y="254.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Lithuania</text>
 <text x="502.6" y="254.0" font-size="11" fill="#0A0A0E" text-anchor="start">Lithuania</text>
-<text x="253.8" y="316.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Luxembourg</text>
-<text x="253.8" y="316.8" font-size="11" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
 <text x="608.3" y="80.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Hungary</text>
 <text x="608.3" y="80.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Hungary</text>
 <text x="482.9" y="115.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Poland</text>
 <text x="482.9" y="115.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Poland</text>
 <text x="478.4" y="75.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Romania</text>
 <text x="478.4" y="75.1" font-size="11" fill="#0A0A0E" text-anchor="middle">Romania</text>
+<text x="460.0" y="230.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Slovakia</text>
+<text x="460.0" y="230.8" font-size="11" fill="#0A0A0E" text-anchor="middle">Slovakia</text>
+<text x="307.0" y="233.4" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Italy</text>
+<text x="307.0" y="233.4" font-size="11" fill="#0A0A0E" text-anchor="start">Italy</text>
+<line x1="325.3" y1="295.2" x2="338.0" y2="311.3" stroke="#52514e" stroke-width="1"/>
+<text x="338.9" y="321.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Germany</text>
+<text x="338.9" y="321.7" font-size="11" fill="#0A0A0E" text-anchor="start">Germany</text>
 <line x1="302.6" y1="293.2" x2="302.6" y2="339.4" stroke="#52514e" stroke-width="1"/>
 <text x="302.6" y="350.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Sweden</text>
 <text x="302.6" y="350.2" font-size="11" fill="#0A0A0E" text-anchor="middle">Sweden</text>
+<line x1="257.6" y1="317.5" x2="250.9" y2="323.5" stroke="#52514e" stroke-width="1"/>
+<text x="249.8" y="333.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Luxembourg</text>
+<text x="249.8" y="333.8" font-size="11" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
+<text x="281.2" y="332.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Ireland</text>
+<text x="281.2" y="332.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Ireland</text>
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="457.0" font-size="11" fill="#52514e">Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, 2025</text>
-<text class="pied-note" x="0" y="471.0" font-size="11" fill="#52514e">Descriptive relationship over one year, not causal.</text>
-<text class="pied-licence" x="0" y="485.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
+<text class="pied-note" x="0" y="471.0" font-size="11" fill="#52514e">Descriptive relationship over one year, not causal. Dashed box: area enlarged in the next chart.</text>
+<text class="pied-licence" x="0" y="485.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
 </svg>

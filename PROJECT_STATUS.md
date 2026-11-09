@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-09 — Nuage « Prix de la dette et inflation » : chaque pays nommé (agrandissement de la zone dense)
+
+- Demande de l'auteur : « tous les points du graphe n'ont pas leur pays ». Seize pays de la zone euro dans environ
+  2 points sur 1,6 : marques jointives (Grèce à 7 px du Portugal et de la Belgique), aucun nom possible sans équivoque.
+- `update_dette_monde.py` : `nuage()` et `nuage_m()` gagnent `xmin`, `cadre` (rectangle en tirets) ; cadre calculé
+  sur la grappe des points sans nom ; nouvelle figure `dette-monde-prix-zoom` (FR, EN, bureau, téléphone) ; gardes
+  « point sans nom hors de la zone agrandie » et « pays non nommé dans l'agrandissement ». Sur le bureau, l'union
+  graphe + agrandissement nomme les 26 pays. Téléphone : Slovaquie et Lettonie sans nom (points jointifs de la
+  Lituanie à 300 px), dit dans le pied (`dire_muets`). Listes téléphone titrées (« Taux implicite, 2025 » ;
+  « Intérêts en % des recettes », figure de la charge : même défaut).
+- Skill `controle-figures` : deux passages de deux contrôleurs indépendants ; marques appariées (écart ≤ 0,02 % de
+  l'étendue), cadre = axes de l'agrandissement, témoin Eurostat (France, Grèce, Slovénie) identique. `check-all --ci`
+  0, `check-figures` 0 sur 261 SVG, instantanés de relecture refaits (FR, EN). Les autres figures du jeu ne changent
+  que d'une insécable dans la licence (`pied_figure`, 05/11).
+
 ### 2026-11-08 (journée) — Page étudiants corrigée : deux études omises intégrées (Husky 2023, Melchior 2022)
 
 - Alerte du radar de diffusion ETUDIANTS-2026-11 : la page déclarait qu'aucune comparaison nationale publiée ne

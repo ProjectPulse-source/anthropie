@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 493" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mpz-t mpz-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mpz-t">Close-up of the dense area: inflation from 3.5 to 7.0%</title><desc id="mpz-d">Close-up of the dashed area of the previous chart: average inflation from 3.5 to 7.0%, implicit interest rate from 1.25 to 3.25%. Same data, only the scales change; every country is named. Implicit rate: Italy 2.94%, Malta 2.80%, Spain 2.49%, Belgium 2.25%, Portugal 2.23%, Greece 2.15%, Austria 2.07%, Slovenia 2.01%, Finland 2.00%, France 1.99%, Cyprus 1.93%, Sweden 1.89%, Germany 1.82%, Netherlands 1.73%, Luxembourg 1.39%, Ireland 1.36%.</desc>
+<rect width="720" height="493" fill="#ffffff"/>
+<text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Close-up of the dense area: inflation from 3.5 to 7.0%</text>
+<circle cx="470.0" cy="14.0" r="5.0" fill="#184f95"/>
+<text x="479.0" y="18.0" font-size="11" fill="#52514e">euro area</text>
+<rect x="555.5" y="9.5" width="9.0" height="9.0" fill="#eb6834"/>
+<text x="569.0" y="18.0" font-size="11" fill="#52514e">outside euro area</text>
+<line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#e1e0d9"/>
+<text x="52.0" y="392.0" font-size="11" fill="#898781" text-anchor="end">1.25%</text>
+<line x1="58.0" y1="347.5" x2="700.0" y2="347.5" stroke="#e1e0d9"/>
+<text x="52.0" y="351.5" font-size="11" fill="#898781" text-anchor="end">1.50%</text>
+<line x1="58.0" y1="307.0" x2="700.0" y2="307.0" stroke="#e1e0d9"/>
+<text x="52.0" y="311.0" font-size="11" fill="#898781" text-anchor="end">1.75%</text>
+<line x1="58.0" y1="266.5" x2="700.0" y2="266.5" stroke="#e1e0d9"/>
+<text x="52.0" y="270.5" font-size="11" fill="#898781" text-anchor="end">2.00%</text>
+<line x1="58.0" y1="226.0" x2="700.0" y2="226.0" stroke="#e1e0d9"/>
+<text x="52.0" y="230.0" font-size="11" fill="#898781" text-anchor="end">2.25%</text>
+<line x1="58.0" y1="185.5" x2="700.0" y2="185.5" stroke="#e1e0d9"/>
+<text x="52.0" y="189.5" font-size="11" fill="#898781" text-anchor="end">2.50%</text>
+<line x1="58.0" y1="145.0" x2="700.0" y2="145.0" stroke="#e1e0d9"/>
+<text x="52.0" y="149.0" font-size="11" fill="#898781" text-anchor="end">2.75%</text>
+<line x1="58.0" y1="104.5" x2="700.0" y2="104.5" stroke="#e1e0d9"/>
+<text x="52.0" y="108.5" font-size="11" fill="#898781" text-anchor="end">3.00%</text>
+<line x1="58.0" y1="64.0" x2="700.0" y2="64.0" stroke="#e1e0d9"/>
+<text x="52.0" y="68.0" font-size="11" fill="#898781" text-anchor="end">3.25%</text>
+<text x="58.0" y="54.0" font-size="11" fill="#52514e">implicit interest rate: interest 2025 / debt at end-2024</text>
+<line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#c3c2b7"/>
+<text x="58.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">3.5%</text>
+<text x="149.7" y="403.0" font-size="11" fill="#898781" text-anchor="middle">4.0%</text>
+<text x="241.4" y="403.0" font-size="11" fill="#898781" text-anchor="middle">4.5%</text>
+<text x="333.1" y="403.0" font-size="11" fill="#898781" text-anchor="middle">5.0%</text>
+<text x="424.9" y="403.0" font-size="11" fill="#898781" text-anchor="middle">5.5%</text>
+<text x="516.6" y="403.0" font-size="11" fill="#898781" text-anchor="middle">6.0%</text>
+<text x="608.3" y="403.0" font-size="11" fill="#898781" text-anchor="middle">6.5%</text>
+<text x="700.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">7.0%</text>
+<text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">average inflation 2022-2024 (HICP)</text>
+<circle cx="449.3" cy="225.5" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="467.7" cy="295.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="308.7" cy="370.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="424.9" cy="242.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="308.7" cy="186.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="265.9" cy="268.5" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="375.9" cy="114.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="290.3" cy="277.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="235.3" cy="364.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="278.1" cy="136.9" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="571.6" cy="310.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="589.9" cy="254.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="400.4" cy="230.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="547.1" cy="265.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="180.3" cy="266.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="389.3" y="280.1" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<text x="449.3" y="216.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Belgium</text>
+<text x="449.3" y="216.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Belgium</text>
+<text x="467.7" y="286.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Germany</text>
+<text x="467.7" y="286.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Germany</text>
+<text x="308.7" y="361.4" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Ireland</text>
+<text x="308.7" y="361.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Ireland</text>
+<text x="424.9" y="260.4" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Greece</text>
+<text x="424.9" y="260.4" font-size="11" fill="#0A0A0E" text-anchor="middle">Greece</text>
+<text x="308.7" y="177.3" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Spain</text>
+<text x="308.7" y="177.3" font-size="11" fill="#0A0A0E" text-anchor="middle">Spain</text>
+<text x="265.9" y="259.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" font-weight="600" aria-hidden="true">France</text>
+<text x="265.9" y="259.5" font-size="11" fill="#0A0A0E" text-anchor="middle" font-weight="600">France</text>
+<text x="375.9" y="105.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Italy</text>
+<text x="375.9" y="105.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Italy</text>
+<text x="290.3" y="295.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Cyprus</text>
+<text x="290.3" y="295.2" font-size="11" fill="#0A0A0E" text-anchor="middle">Cyprus</text>
+<text x="235.3" y="355.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Luxembourg</text>
+<text x="235.3" y="355.8" font-size="11" fill="#0A0A0E" text-anchor="middle">Luxembourg</text>
+<text x="278.1" y="127.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Malta</text>
+<text x="278.1" y="127.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Malta</text>
+<text x="571.6" y="301.3" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Netherlands</text>
+<text x="571.6" y="301.3" font-size="11" fill="#0A0A0E" text-anchor="middle">Netherlands</text>
+<text x="589.9" y="245.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Austria</text>
+<text x="589.9" y="245.8" font-size="11" fill="#0A0A0E" text-anchor="middle">Austria</text>
+<text x="400.4" y="221.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Portugal</text>
+<text x="400.4" y="221.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Portugal</text>
+<text x="547.1" y="256.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Slovenia</text>
+<text x="547.1" y="256.1" font-size="11" fill="#0A0A0E" text-anchor="middle">Slovenia</text>
+<text x="180.3" y="257.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Finland</text>
+<text x="180.3" y="257.2" font-size="11" fill="#0A0A0E" text-anchor="middle">Finland</text>
+<text x="394.3" y="276.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Sweden</text>
+<text x="394.3" y="276.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Sweden</text>
+<line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="457.0" font-size="11" fill="#52514e">Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, 2025</text>
+<text class="pied-note" x="0" y="471.0" font-size="11" fill="#52514e">Same data as the previous chart, enlarged scales. Descriptive relationship, not causal.</text>
+<text class="pied-licence" x="0" y="485.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
+</svg>
