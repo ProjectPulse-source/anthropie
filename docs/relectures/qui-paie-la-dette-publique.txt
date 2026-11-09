@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /qui-paie-la-dette-publique/, build de e2a5ae4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /qui-paie-la-dette-publique/, build de fd64a02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
 Un même effort budgétaire de 10 milliards d’euros, réparti selon les comptes distribués de l’Insee de 2023 (un profil comptable à structure constante, non une simulation de ses effets), n’atteint pas les mêmes ménages selon l’instrument choisi : un ajustement par l’enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l’impôt sur le revenu et le patrimoine davantage sur les ménages aisés.
@@ -99,17 +99,19 @@ La Banque de France indique détenir 488 milliards d’euros de dette publique a
 Rapporté au PIB, ce montant représente environ 16 points.
 La baisse effective de la dette au sens de Maastricht dépendrait des titres français annulés et de leur valeur nominale, que ce chiffre ne donne pas, et supposerait que l’opération soit permise et reconnue par la statistique européenne.
 Ce qu’elle n’effacerait pas.
-La Banque de France a payé ces titres en monnaie de banque centrale : des réserves créditées aux banques (étape 4 du schéma).
+La Banque de France a payé ces titres avec de l’argent qu’elle a créé et crédité aux banques sur leur compte chez elle : ce sont les réserves (étape 4 du schéma).
 Annuler les titres ne supprime pas ces réserves.
-Leur coût dépend des règles de rémunération : les réserves que les banques placent à la facilité de dépôt de l’Eurosystème rapportent 2,50 % depuis le 16 septembre 2026, alors que les réserves obligatoires ne sont plus rémunérées et que les excédents laissés en compte courant ne le sont pas.
+Or elles peuvent coûter : la Banque de France rémunère au taux fixé par la BCE, dit taux de dépôt (2,50 % depuis le 16 septembre 2026), les réserves que les banques placent à la facilité de dépôt ; ce taux est le principal instrument de la politique monétaire de la BCE.
+Les réserves obligatoires et celles laissées en compte courant, elles, ne rapportent rien.
 Lors des achats, la Banque de France a échangé des réserves contre des titres de l’État ; l’annulation rendrait cet échange définitif.
 Deux trajectoires.
 Sans annulation, chaque titre arrivé à échéance est remboursé, au besoin par un nouvel emprunt sur le marché ; toutes choses égales par ailleurs, ce remboursement fait disparaître autant de réserves.
 Avec annulation, l’État n’a plus ce montant à rembourser ni à refinancer, mais les réserves subsistent.
 Tant qu’un titre court, les intérêts que l’État cesserait de verser sont autant de revenus que la Banque de France perdrait, même si les deux effets ne touchent pas forcément le budget la même année : ce qu’elle reverse à l’État dépend de ses résultats.
 Une simulation, pas une économie observée.
-Aux échéances, l’écart dépend du taux auquel l’État aurait refinancé et de ce que coûtent les réserves maintenues.
-Supposons que chaque euro arrivé à échéance soit refinancé à dix ans, et que l’annulation maintienne en échange un euro de réserves rémunéré au taux de dépôt.
+Aux échéances, tout tient à une comparaison : réemprunter sur le marché coûte-t-il plus ou moins cher que garder les réserves ?
+En 2025, garder les réserves aurait coûté moins cher ; en 2023 et en 2024, plus cher.
+Pour le chiffrer, supposons que chaque euro arrivé à échéance soit refinancé à dix ans, et que l’annulation maintienne en échange un euro de réserves rémunéré au taux de dépôt.
 En 2025, l’État empruntait à dix ans à 3,35 % en moyenne et le taux de dépôt valait 2,26 % : le différentiel représenterait un gain d’environ 1,1 milliard par an pour 100 milliards concernés, soit 5,3 milliards si les 488 milliards l’étaient tous.
 En 2023 et en 2024, le signe était inverse : le taux de dépôt (3,31 puis 3,73 %) dépassait le taux à dix ans (2,99 puis 2,97 %), soit une perte de 0,3 puis 0,8 milliard par an pour 100 milliards.
 Le résultat peut donc changer de signe : l’annulation ne garantit ni une économie, ni une perte.
