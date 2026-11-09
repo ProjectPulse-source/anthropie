@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /qui-paie-la-dette-publique/, build de fd64a02 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-09 ; texte servi de /qui-paie-la-dette-publique/, build de 0c0ecfc + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
 Un même effort budgétaire de 10 milliards d’euros, réparti selon les comptes distribués de l’Insee de 2023 (un profil comptable à structure constante, non une simulation de ses effets), n’atteint pas les mêmes ménages selon l’instrument choisi : un ajustement par l’enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l’impôt sur le revenu et le patrimoine davantage sur les ménages aisés.
@@ -91,7 +91,8 @@ En août 2026, Jean-Luc Mélenchon a relancé une proposition formulée dès 202
 Ses partisans soutiennent qu’aucun détenteur privé ne subirait de perte, puisque ces titres ont déjà été rachetés ; leurs contradicteurs contestent l’absence de coût pour la collectivité.
 Olivier Blanchard juge l’opération sans effet : l’État économiserait des intérêts, mais perdrait autant en bénéfices reversés par sa banque centrale (propos rapportés par Euronews, 27 août 2026).
 Christine Lagarde, présidente de la BCE, a répondu le 10 septembre que l’annulation de dette relève de l’article 123 du traité, et que tout ce qui irait contre ce principe serait « une pure violation » du traité (notre traduction).
-Pour départager ces lectures, il faut d’abord voir comment l’État emprunte, et où se place la Banque de France dans ce circuit.
+Une question les départage : que faudrait-il pour qu’une dette annulée devienne une économie pour la collectivité ?
+Pour y répondre, il faut d’abord voir comment l’État emprunte, et où se place la Banque de France dans ce circuit.
 Le circuit d’un titre de l’État, puis les intérêts payés chaque année, et à qui.
 Les numéros renvoient aux étapes décrites sous le schéma.
 Ce que l’annulation effacerait.
@@ -129,7 +130,7 @@ L’État ne verse plus ces intérêts et ne rembourse plus ces titres ; la Banq
 Le résultat pour l’ensemble dépend de l’écart entre le refinancement évité et le coût des réserves
 Annulation et rémunération réduite des réserves, comme le propose l’Institut Rousseau
 Les banques perdent une partie des intérêts qu’elles auraient perçus ; l’effet sur leurs clients et leurs actionnaires dépend de leurs comportements
-Une économie pour le secteur public, qui a pour contrepartie une redistribution
+Une économie pour le secteur public, qui a pour contrepartie une redistribution et un changement de l’instrument de la politique monétaire
 Annulation, puis recapitalisation de la Banque de France par l’État
 L’État transfère des ressources à sa banque centrale
 Le gain apparent est compensé, en partie ou en totalité
@@ -137,6 +138,7 @@ Annulation et politique monétaire durablement trop accommodante
 La collectivité, par l’inflation
 Un risque conditionnel, non une conséquence automatique (objection de John Cochrane, The Grumpy Economist, 24 août 2026)
 Ce que chacun dit de juste.
+Annuler 488 milliards de dette ne signifie pas économiser 488 milliards.
 Les partisans de l’annulation ont raison sur un point : aucun détenteur privé ne perdrait.
 Olivier Blanchard aussi, tant que les titres courent : ce que l’État ne verserait plus, la Banque de France ne le recevrait plus.
 Mais une dette qui disparaît des comptes de l’État ne fait pas disparaître son coût pour la collectivité, et des réserves qui demeurent n’interdisent pas toute économie.
