@@ -52,7 +52,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-09 — « Qui paie » : section « Annuler la dette détenue par la Banque de France : qui paierait ? » (non publiée)
+### 2026-11-09 — « Qui paie » : section « Annuler la dette détenue par la Banque de France : qui paierait ? » (publiée le 09/11)
 
 - Origine : vidéo BLAST du 08/11/2026 (analyse : `D:\PRO\06_PROMOTION\RECHERCHE_VIDEO_BLAST_DETTE_ILLEGITIME_2026-11-09\`) ;
   fiche `docs/conception/annuler-dette-banque-de-france.md`. Deux contre-expertises arbitrées : PRO-20261109-025514
@@ -66,7 +66,9 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - Schéma « Comment l'État emprunte, et qui reçoit les intérêts » (`scripts/generer_schema_emprunt_etat.py`, FR, EN,
   bureau, téléphone) ; deux contrôleurs indépendants, corrections appliquées ; check-figures 0.
 - Contrôles : check-all --ci 0, build, typo_build, rendu, dates, liens ; LanguageTool FR 0 ; recette 320-1600 OK ;
-  relecture phrase à phrase et instantanés. Reste : panel, gate éditorial, raccords, accord de l'auteur, publication.
+  relecture phrase à phrase et instantanés. Panel de cinq lecteurs (réserves définies en langage courant, raison de leur
+  rémunération, résultat de la simulation dit avant les taux) ; gate éditorial tenu ; raccords depuis Formules et
+  Inflation ; publié (677c6b5), version servie attestée.
 
 ### 2026-11-09 — Nuage « Prix de la dette et inflation » : chaque pays nommé (agrandissement de la zone dense)
 
