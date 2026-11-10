@@ -91,5 +91,8 @@ diagnostic : visites de la page et clics vers la page mère. État initial au 04
   découvrent » sous le titre, bloc enseignant après la fiche et le dossier, intertitres au style des surtitres ; dossier
   présenté comme pièces d'une enquête déjà menée ; conclusion négative sur Hugo bornée au corpus et aux formes cherchées ;
   question 6 de synthèse (mots, source, sens). Impressions remesurées : 2 pages chacune.
+- Quatrième relecture externe : faite et arbitrée (10/11/2026, `6d8fec44…`, `ARBITRAGE-03.md`). Document A pour tous ;
+  fable intégrale en C (Wikisource, éd. 1874, relue) ; réponses « justes sur ce qu'elles affirment » ; lettre de Hall
+  citée d'après sa publication ; « Première » retiré de l'intertitre. Impressions : 2 pages chacune.
 - Relecture phrase à phrase par l'auteur : non faite (motif : page neuve, à relire avant diffusion) ; instantané : à prendre après cette relecture.
 - Accord de l'auteur : demande du 04/11/2026.

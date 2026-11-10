@@ -14,6 +14,13 @@ main .fiche h4 {
   text-transform: uppercase; color: var(--color-pivot);
 }
 .fiche__bref { background: var(--color-bg-elevated); border: 0.5px solid var(--color-rule-strong); padding: 0.8rem 1rem; }
+// Texte intégral d'un poème dans un dossier (fable du document C) : vers en retrait, strophes séparées.
+.fiche__vers { margin: 0.4rem 0 0.7rem 1rem !important; line-height: 1.5; font-style: italic; }
+@media print {
+  // Sur papier, la fable tient en deux colonnes : le dossier reste sur une feuille.
+  body.imprime-une-fiche .imprime-cible .fiche__dossier li:has(.fiche__vers) { columns: 2; column-gap: 14pt; }
+  body.imprime-une-fiche .imprime-cible .fiche__vers { margin: 2pt 0 4pt 8pt !important; font-size: 9.5pt !important; line-height: 1.3 !important; }
+}
 // Frise à compléter (activité d'EMC, 07/10/2026) : cases vides assez hautes pour écrire à la main, imprimées avec leurs
 // bordures ; largeur fixe à 100 % (mesuré le 07/10/2026 : en display block, la frise se réduisait à 248 px sur 386).
 .fiche__frise { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.95em; }
