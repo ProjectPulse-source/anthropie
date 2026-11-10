@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-07",
+ "releve_le": "2026-11-10",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OFGL, Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/dette-publique-collectivites-locales/",
@@ -32,7 +32,7 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-11-07T",
+    "maj_source": "2026-11-10T",
     "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
    },
    "notif": {
@@ -1203,7 +1203,7 @@
   "plf_vote_dates": [
    "2026-10-19"
   ],
-  "plf_etat_au": "2026-11-05",
+  "plf_etat_au": "2026-11-09",
   "plf_statut_dgf": "texte initial, attendu au Sénat",
   "plf_statut_dgf_en": "initial text, due before the Senate",
   "plf_etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
@@ -1383,7 +1383,7 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1,7",
   "plf_vote_date": "19 octobre 2026",
-  "plf_etat_au": "5 novembre 2026",
+  "plf_etat_au": "9 novembre 2026",
   "plf_etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27,9",
@@ -1619,7 +1619,7 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1.7",
   "plf_vote_date": "19 October 2026",
-  "plf_etat_au": "5 November 2026",
+  "plf_etat_au": "9 November 2026",
   "plf_etape_suivante": "examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27.9",
