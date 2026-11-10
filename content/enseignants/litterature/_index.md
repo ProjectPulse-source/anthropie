@@ -56,7 +56,7 @@ qui donne pour chacune l'édition et le passage consultés.
 
 <p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-citations">Imprimer la fiche élève et le dossier</button> <button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-corrige="fiche-citations">Imprimer le corrigé</button></p>
 
-<p class="fiche__bref"><strong>Ce que les élèves découvrent</strong>&nbsp;: une citation célèbre peut être mal attribuée, retouchée, ou exacte mais trompeuse hors de son œuvre&nbsp;; et une réponse juste n'est pas encore une réponse prouvée. <strong>Première · 45&nbsp;minutes · en binômes · sans écran.</strong> Fiche élève et dossier documentaire à imprimer&nbsp;; déroulé et corrigé pour l'enseignant.</p>
+<p class="fiche__bref"><strong>Ce que les élèves découvrent</strong>&nbsp;: une citation célèbre peut être mal attribuée, retouchée, ou exacte mais trompeuse hors de son œuvre&nbsp;; une réponse juste n'est pas encore une réponse prouvée&nbsp;; et une recherche sans résultat ne prouve pas qu'une phrase n'existe pas. Ils en tirent trois vérifications&nbsp;: les mots, la source, le sens. <strong>Première · 45&nbsp;minutes · en binômes · sans écran.</strong> Fiche élève et dossier documentaire à imprimer&nbsp;; déroulé et corrigé pour l'enseignant.</p>
 
 <div class="fiche__eleve">
 
@@ -70,13 +70,13 @@ Voici cinq phrases célèbres, telles qu'elles circulent&nbsp;:
 - D. «&nbsp;Les femmes sont comme les girouettes&nbsp;: elles se fixent quand elles se rouillent&nbsp;», prêtée à Voltaire.
 - E. «&nbsp;Que diable allait-il faire dans cette galère&nbsp;?&nbsp;», prêtée à Molière.
 
-1. **Seul, sans écran, sur la citation de votre binôme.** Dites en une ligne ce qu'elle signifie. Puis faites une hypothèse&nbsp;: authentique, retouchée ou introuvable chez l'auteur&nbsp;? Notez l'indice qui vous guide (la langue, l'époque, le ton, l'œuvre que vous connaissez).
+1. **Seul, sans écran.** Prenez la citation confiée à votre binôme et dites en une ligne ce qu'elle signifie. Puis faites une hypothèse&nbsp;: authentique, retouchée ou introuvable chez l'auteur&nbsp;? Notez l'indice qui vous guide (la langue, l'époque, le ton, l'œuvre que vous connaissez).
 2. **Deux réponses, avec le document A.** On a demandé qui a écrit la phrase A. Voici deux réponses, rédigées pour l'exercice sur le modèle de celles d'un assistant d'IA&nbsp;:
    - Réponse 1&nbsp;: «&nbsp;Cette phrase n'est pas de Voltaire. Elle a été écrite par une biographe anglaise au début du XXe&nbsp;siècle pour résumer sa pensée.&nbsp;»
    - Réponse 2&nbsp;: «&nbsp;Cette phrase n'est pas de Voltaire. Elle paraît en anglais en 1906, dans *The Friends of Voltaire* d'Evelyn Beatrice Hall, qui signe S.&nbsp;G.&nbsp;Tallentyre (chapitre&nbsp;VII, p.&nbsp;199)&nbsp;; Hall a écrit en 1939 que la formule était la sienne.&nbsp;»
 
    Les deux disent la même chose. Laquelle pouvez-vous vérifier directement, et comment&nbsp;? Une réponse que l'on peut vérifier est-elle pour autant vérifiée&nbsp;? Enfin, la phrase A circule en français, et Hall l'a écrite en anglais&nbsp;: de qui sont les mots français&nbsp;?
-3. **Examen des pièces, en binôme, dans le document de votre citation.** Le dossier rassemble les pièces d'une enquête déjà menée&nbsp;: à vous de juger ce qu'elles prouvent. Si la phrase s'y trouve&nbsp;: notez l'œuvre, l'édition, le passage, la forme exacte, qui parle (un personnage n'est pas l'auteur), et ce qui vient avant et après. Si elle ne s'y trouve pas&nbsp;: notez ce qui a été cherché, dans quels textes, et la source où la phrase apparaît, s'il y en a une.
+3. **Examen des pièces, en binôme, dans le document de votre citation.** Le dossier mêle deux sortes de pièces&nbsp;: des passages d'œuvres, que vous lisez vous-mêmes, et le compte rendu d'une recherche déjà menée, que vous ne pouvez pas refaire ici. À vous de juger ce que prouve chacune. Si la phrase s'y trouve&nbsp;: notez l'œuvre, l'édition, le passage, la forme exacte, qui parle (un personnage n'est pas l'auteur), et ce qui vient avant et après. Si elle ne s'y trouve pas&nbsp;: notez ce qui a été cherché, dans quels textes, et la source où la phrase apparaît, s'il y en a une.
 4. **Ce que la source permet d'affirmer.** Votre hypothèse est-elle confirmée, nuancée ou laissée indécidable&nbsp;? Qu'est-ce qui permet de dire qu'une phrase est dans une œuvre, et qu'est-ce qui permet de dire qu'elle n'y est pas&nbsp;?
 5. **Mise en commun.** Chez La Fontaine, le vers C est suivi de celui-ci&nbsp;: «&nbsp;Nous l'allons montrer tout à l'heure.&nbsp;» Lisez la fable entière dans le document C&nbsp;: que montre-t-elle, et que change-t-elle au sens du premier vers&nbsp;? Et pourquoi, selon vous, attribue-t-on plus volontiers une phrase à un auteur connu&nbsp;?
 6. **Synthèse.** Quelles sont les trois vérifications à faire avant de citer ou de partager une phrase célèbre&nbsp;?
@@ -119,8 +119,8 @@ réponses en comparant avec d'autres sources&nbsp;». La fiche se fait donc sans
 documents de l'enquête y sont fournis. Là où l'établissement le permet, une réponse obtenue d'une IA en classe peut s'y
 ajouter et se traite de la même façon.
 
-**Organisation**&nbsp;: 45&nbsp;minutes, en binômes. Tous les élèves ont le document A, pour comparer les deux réponses de la
-question&nbsp;2&nbsp;; chaque binôme reçoit ensuite une des cinq citations (A à E) et le document qui lui correspond. Le dossier rassemble les pièces d'une enquête déjà menée&nbsp;: les élèves jugent ce qu'elles prouvent, ils
+**Organisation**&nbsp;: 45&nbsp;minutes, en binômes. Chaque élève reçoit la fiche et le dossier entier, une feuille recto verso (premier
+bouton d'impression)&nbsp;: tous ont ainsi le document&nbsp;A pour la question&nbsp;2 et la fable pour la question&nbsp;5. Chaque binôme examine une des cinq citations (A à E)&nbsp;; avec quinze binômes, trois par citation. Le dossier donne des extraits, sauf la fable, et les pièces d'une enquête déjà menée&nbsp;: les élèves jugent ce qu'elles prouvent, ils
 ne refont pas la recherche. Pour la refaire, les textes sont en ligne aux adresses que donne la page mère. **Usage**&nbsp;: en classe, ou hors du cadre scolaire avec des adolescents et des adultes, en français.
 
 **Déroulé**&nbsp;:
@@ -129,7 +129,7 @@ ne refont pas la recherche. Pour la refaire, les textes sont en ligne aux adress
 - **Deux réponses, 5&nbsp;min.** Comparer deux réponses justes, inégalement documentées (question&nbsp;2).
 - **Examen des pièces, 15&nbsp;min.** En binôme, dans le document fourni (question&nbsp;3).
 - **Conclusion, 10&nbsp;min.** Ce que la source confirme, nuance ou laisse indécidable (question&nbsp;4).
-- **Mise en commun, 10&nbsp;min.** Chaque binôme présente son cas&nbsp;; lecture de la fable de La Fontaine (question&nbsp;5)&nbsp;; synthèse en trois vérifications (question&nbsp;6).
+- **Mise en commun, 10&nbsp;min.** Une citation à la fois, un rapporteur pour chacune (cinq en tout)&nbsp;; les binômes qui ont eu la même citation complètent ou contestent. Puis lecture de la fable de La Fontaine (question&nbsp;5)&nbsp;; synthèse en trois vérifications (question&nbsp;6).
 
 Ces durées sont indicatives.
 

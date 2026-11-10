@@ -94,5 +94,9 @@ diagnostic : visites de la page et clics vers la page mère. État initial au 04
 - Quatrième relecture externe : faite et arbitrée (10/11/2026, `6d8fec44…`, `ARBITRAGE-03.md`). Document A pour tous ;
   fable intégrale en C (Wikisource, éd. 1874, relue) ; réponses « justes sur ce qu'elles affirment » ; lettre de Hall
   citée d'après sa publication ; « Première » retiré de l'intertitre. Impressions : 2 pages chacune.
+- Cinquième relecture externe : faite et arbitrée (10/11/2026, `f4731716…`, `ARBITRAGE-04.md`). Citation D relue sur le
+  fac-similé du *Sottisier* de 1880, p. 99 (Internet Archive) : conforme mot pour mot, rien à changer. Chaque élève a la
+  fiche et le dossier entier ; mise en commun par citation, cinq rapporteurs ; pièces lues et recherche rapportée
+  distinguées (question 3) ; les trois vérifications nommées dans l'encadré, absent des impressions.
 - Relecture phrase à phrase par l'auteur : non faite (motif : page neuve, à relire avant diffusion) ; instantané : à prendre après cette relecture.
 - Accord de l'auteur : demande du 04/11/2026.
