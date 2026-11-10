@@ -101,5 +101,8 @@ diagnostic : visites de la page et clics vers la page mère. État initial au 04
 - Sixième relecture externe, sur le fichier de relecture de `70a87af` : faite et arbitrée (10/11/2026, `dd795ab3…`,
   `ARBITRAGE-05.md`). Corrigé de la question 2 : « n'est pas de Voltaire » des deux réponses dit plus que la preuve (même
   doctrine que la question 4) ; conclusion 7 min, mise en commun 13 min. Révisions de fond closes.
-- Relecture phrase à phrase par l'auteur : non faite (motif : page neuve, à relire avant diffusion) ; instantané : à prendre après cette relecture.
+- Relecture phrase à phrase par l'auteur : faite et validée (10/11/2026), sur le texte servi de `462e4d8`, 122 phrases
+  (`D:\CONTRE_EXPERTISE\2026-11-10_LITTERATURE_IA\Relecture_page_litterature.txt`, SHA-256 `05fbc169…`). Instantané
+  `check-relecture` : sans objet (l'outil ne suit que les pages marquées `refonte`, aucune page « Pour enseigner » ne l'est).
+- Prochain test : retour d'usage d'une séance réelle, pas une relecture de plus.
 - Accord de l'auteur : demande du 04/11/2026.
