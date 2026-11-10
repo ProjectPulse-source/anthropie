@@ -1,10 +1,10 @@
-# relu le 2026-11-05 ; texte servi de /data-centers-puissance-reservee/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-10 ; texte servi de /data-centers-puissance-reservee/, build de 5adede6 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Data centers : les gigawatts réservés annoncent-ils la consommation ?
 Le chiffre qui circule est celui des réservations : près de 18 gigawatts en mai 2026, contre environ 5 fin 2024.
 Mais une puissance réservée n’est pas une consommation.
 Plus de la moitié de la puissance réservée en novembre 2025 vise une mise en service à partir de 2030, d’autres réservations ont déjà été abandonnées, et les data centers raccordés au réseau de transport ont consommé près de 1 térawattheure en 2025.
-Page mise à jour le 5 novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données du : 4 novembre 2026 RTE, Bilan prévisionnel 2025-2035 (décembre 2025), Bilan électrique 2025 (février 2026) et page « Les data centers en chiffres clés » (mise à jour du 1er juin 2026) : valeurs lues dans le texte, répartition par statut mesurée sur une figure.
 Télécharger : CSV · JSON
@@ -34,7 +34,7 @@ Au 1er novembre 2025, les gigawatts réservés par les data centers se répartis
 Plus de la moitié de la puissance réservée vise donc 2030 ou après.
 Et depuis 2023, des réservations totalisant environ 0,9 GW ont été abandonnées, pour 0,4 GW de projets effectivement raccordés.
 Les huit data centers directement raccordés au réseau de RTE totalisent 800 mégawatts.
-RTE donne trois raisons à cet écart entre réservation et consommation.
+Trois mécanismes, relevés dans le Bilan prévisionnel et sur la page web de RTE, séparent la réservation de la consommation.
 Certains développeurs ont sécurisé un accès au réseau en plusieurs points pour des projets en réalité similaires.
 Les sites montent en charge lentement : selon les principaux opérateurs, cités par RTE, il faut dix à quinze ans pour atteindre environ 80 % de la puissance demandée, car les serveurs, très coûteux, ne sont installés qu’au rythme des usages.
 Enfin, la puissance appelée reste inférieure à la puissance de raccordement : RTE constate que les data centers raccordés à son réseau depuis deux à trois ans ne consomment pour l’instant, en moyenne, que 20 % de la puissance qu’ils ont demandée.
@@ -125,8 +125,6 @@ Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
 Les séries brutes appartiennent à leurs producteurs (RTE), sous leurs propres conditions.
-Révisions
-5 novembre 2026 — Précision : face aux 10 TWh de la page web de RTE, le Bilan prévisionnel donne aussi 5 à 10 TWh en 2024 en incluant les centres de données internes ; la page web ne précise pas son périmètre.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

@@ -1,10 +1,10 @@
-# relu le 2026-11-05 ; texte servi de /en/data-centres-reserved-capacity/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-10 ; texte servi de /en/data-centres-reserved-capacity/, build de 5adede6 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Data centres: do reserved gigawatts foretell consumption?
 The figure that circulates is that of reservations: nearly 18 gigawatts in May 2026, against about 5 at end-2024.
 But reserved capacity is not consumption.
 More than half of the capacity reserved in November 2025 is for commissioning from 2030, other reservations have already been abandoned, and the data centres connected to the transmission grid consumed nearly 1 terawatt-hour in 2025.
-Page updated 5 November 2026 · revisions
+Page updated 5 November 2026
 ↓ Charts, data and citations to reuseReuse this page
 Data as of: 4 November 2026 RTE, Bilan prévisionnel 2025-2035 (December 2025), Bilan électrique 2025 (February 2026) and web page “Les data centers en chiffres clés” (updated 1 June 2026): values read in the text, breakdown by status measured on a figure.
 Download: CSV · JSON
@@ -34,7 +34,7 @@ On 1 November 2025, of the capacity reserved by data centres (measured on an RTE
 More than half of the reserved capacity therefore targets 2030 or later.
 And since 2023, reservations totalling about 0.9 GW have been abandoned, against 0.4 GW of projects actually connected.
 The eight data centres directly connected to RTE’s grid total 800 megawatts.
-RTE gives three reasons for this gap between reservation and consumption.
+Three mechanisms, found in RTE’s Bilan prévisionnel and on its web page, separate reservation from consumption.
 Some developers have secured grid access at several points for what are in fact similar projects.
 Sites ramp up slowly: according to the main operators, cited by RTE, it takes ten to fifteen years to reach about 80% of the capacity requested, because the very expensive servers are installed only as usage grows.
 Finally, the power drawn stays below the connection capacity: RTE observes that data centres connected to its grid for two to three years consume for now, on average, only 20% of the capacity they requested.
@@ -122,8 +122,6 @@ Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
 Text under copyright — short quotation free, full reproduction on request.
 The raw series belong to their producers (RTE), under their own terms.
-Revisions
-5 November 2026 — Clarification: next to the 10 TWh of RTE’s web page, the Bilan prévisionnel also gives 5 to 10 TWh in 2024 including in-house data centres; the web page does not state its scope.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

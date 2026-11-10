@@ -52,6 +52,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-10 — Data centers : dernière erreur du paquet corrigée, chantier G4 clos
+
+- E1 du paquet du 27/10 : « RTE donne trois raisons » attribuait à RTE une énumération tirée de deux documents → « Trois
+  mécanismes, relevés dans le Bilan prévisionnel et sur la page web de RTE, séparent la réservation de la consommation »
+  (FR, EN). `check-all --ci` 0, build 0, `typo_build` 0, liens 0 critique, rendu et dates conformes ; instantanés refaits.
+- Fiche de conception : contre-expertise du 04/11 inscrite, paquet du 27/10 déclaré caduc (non déposé) ; E2 (`c9fc429`) et
+  E3 déjà corrigées. Restent pour la prochaine révision : troisième lecture d'une réservation, cohortes, allocation des
+  capacités (reportés le 04/11), dates de mise en service déclarées et coût du raccordement (P5, P9).
+
 ### 2026-11-09 — « Qui paie » : section « Annuler la dette détenue par la Banque de France : qui paierait ? » (publiée le 09/11)
 
 - Origine : vidéo BLAST du 08/11/2026 (analyse : `D:\PRO\06_PROMOTION\RECHERCHE_VIDEO_BLAST_DETTE_ILLEGITIME_2026-11-09\`) ;
