@@ -98,5 +98,8 @@ diagnostic : visites de la page et clics vers la page mère. État initial au 04
   fac-similé du *Sottisier* de 1880, p. 99 (Internet Archive) : conforme mot pour mot, rien à changer. Chaque élève a la
   fiche et le dossier entier ; mise en commun par citation, cinq rapporteurs ; pièces lues et recherche rapportée
   distinguées (question 3) ; les trois vérifications nommées dans l'encadré, absent des impressions.
+- Sixième relecture externe, sur le fichier de relecture de `70a87af` : faite et arbitrée (10/11/2026, `dd795ab3…`,
+  `ARBITRAGE-05.md`). Corrigé de la question 2 : « n'est pas de Voltaire » des deux réponses dit plus que la preuve (même
+  doctrine que la question 4) ; conclusion 7 min, mise en commun 13 min. Révisions de fond closes.
 - Relecture phrase à phrase par l'auteur : non faite (motif : page neuve, à relire avant diffusion) ; instantané : à prendre après cette relecture.
 - Accord de l'auteur : demande du 04/11/2026.
