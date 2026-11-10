@@ -81,5 +81,11 @@ diagnostic : visites de la page et clics vers la page mère. État initial au 04
   rejetée ; hypothèse sans écran d'abord ; deux réponses rédigées pour l'exercice, dites telles ; deux régimes de preuve
   (attestation, non-attestation) ; cadre d'usage de l'IA cité sur ses seuls passages lus (affiche Éduscol, le site du
   ministère refusant le script).
+- Seconde contre-expertise : faite et arbitrée (10/11/2026, réponse SHA-256 `980d1ece…`, `ARBITRAGE-01.md` du même
+  dossier). Corrigé précisé (vérifiable ≠ vérifié ; absence dans un corpus lu ≠ inexistence) ; question de traduction (A) ;
+  fin de la fable relue sur Wikisource (éd. 1874, texte validé) ; dossier documentaire de cinq extraits ; numérotation du
+  corrigé réparée (la liste ordonnée renumérotait « 1. et 2. » et décalait les réponses, défaut déjà en ligne) ; deux
+  boutons d'impression mesurés en PDF A4 : fiche élève 2 pages (fiche, puis dossier), corrigé 2 pages. Licence du texte
+  des fiches : décision de l'auteur, en attente.
 - Relecture phrase à phrase par l'auteur : non faite (motif : page neuve, à relire avant diffusion) ; instantané : à prendre après cette relecture.
 - Accord de l'auteur : demande du 04/11/2026.

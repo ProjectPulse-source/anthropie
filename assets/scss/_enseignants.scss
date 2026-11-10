@@ -54,6 +54,21 @@
   // Aucune page blanche en fin de fiche (mesuré le 02/10/2026 : la fiche « empreinte » tenait en une page et en
   // sortait deux, la seconde vide, par la marge basse du dernier bloc et la hauteur minimale du conteneur).
   body.imprime-une-fiche .imprime-cible > :last-child { margin-bottom: 0 !important; }
+
+  // Fiche à trois blocs (page Littérature, 10/11/2026) : la fiche élève ne prend pas le bloc de l'enseignant ; le dossier
+  // documentaire commence une page (recto la fiche, verso le dossier) ; un élément de liste ne se coupe jamais (les deux
+  // réponses à comparer sortaient coupées entre deux pages). Bouton « Imprimer le corrigé » : le bloc enseignant et le
+  // corrigé, sans fiche ni dossier.
+  body.imprime-une-fiche .imprime-cible li { break-inside: avoid; }
+  body.imprime-une-fiche:not(.imprime-corrige-seul) .imprime-cible .fiche__prof { display: none !important; }
+  body.imprime-une-fiche:not(.imprime-corrige-seul) .imprime-cible .fiche__dossier { break-before: page; }
+  body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__eleve,
+  body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__dossier { display: none !important; }
+  body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__corrige { display: block !important; }
+  body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__corrige > summary { list-style: none; font-weight: 600; margin: 8pt 0 4pt; }
+  body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__corrige > summary .repli__action,
+  body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__corrige > summary::after,
+  body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__corrige > summary::before { display: none !important; content: none !important; }
   body.imprime-une-fiche, body.imprime-une-fiche .site-wrapper, body.imprime-une-fiche .site-main,
   body.imprime-une-fiche main, body.imprime-une-fiche .home-section { min-height: 0 !important; height: auto !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
 }
