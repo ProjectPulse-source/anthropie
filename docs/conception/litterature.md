@@ -76,5 +76,10 @@ diagnostic : visites de la page et clics vers la page mère. État initial au 04
 - Gardes vues mordre : sans objet (aucun chiffre).
 - Affichage à 320 et 390 px : fait (04/11/2026), sans débordement ; rendu relu à 1 920 px.
 - Relecture de langue (`check_langue.py`) : faite (04/11/2026), 8 signalements dus à l'analyse des apostrophes codées, aucun ne bloque.
+- Refonte « à l'heure de l'IA » : faite (10/11/2026). Contre-expertise externe sur paquet autoportant, réponse archivée
+  (SHA-256 `86c03d23…`) et arbitrée : `D:\CONTRE_EXPERTISE\2026-11-10_LITTERATURE_IA\ARBITRAGE.md`. Sixième citation-piège
+  rejetée ; hypothèse sans écran d'abord ; deux réponses rédigées pour l'exercice, dites telles ; deux régimes de preuve
+  (attestation, non-attestation) ; cadre d'usage de l'IA cité sur ses seuls passages lus (affiche Éduscol, le site du
+  ministère refusant le script).
 - Relecture phrase à phrase par l'auteur : non faite (motif : page neuve, à relire avant diffusion) ; instantané : à prendre après cette relecture.
 - Accord de l'auteur : demande du 04/11/2026.
