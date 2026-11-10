@@ -6,6 +6,14 @@
 }
 .fiche__actions { margin: 0 0 1rem; }
 .fiche ol { padding-left: 1.4rem; }
+// Blocs d'une fiche (page Littérature, 10/11/2026) : intertitres au style des surtitres du site (le h4 par défaut se
+// lisait comme du texte courant) ; « En bref » sur fond, pour qu'un enseignant voie d'abord ce que découvrent les élèves.
+main .fiche h4 {
+  margin: 2rem 0 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--color-rule-soft);
+  font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--color-pivot);
+}
+.fiche__bref { background: var(--color-bg-elevated); border: 0.5px solid var(--color-rule-strong); padding: 0.8rem 1rem; }
 // Frise à compléter (activité d'EMC, 07/10/2026) : cases vides assez hautes pour écrire à la main, imprimées avec leurs
 // bordures ; largeur fixe à 100 % (mesuré le 07/10/2026 : en display block, la frise se réduisait à 248 px sur 386).
 .fiche__frise { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.95em; }
@@ -66,6 +74,8 @@
     border-top: 0.5pt solid #8a94a6; font-size: 9pt; color: #444;
   }
   body.imprime-une-fiche:not(.imprime-corrige-seul) .imprime-cible .fiche__prof { display: none !important; }
+  // « En bref » (ce que découvrent les élèves, format) : un résumé pour l'enseignant à l'écran, absent des deux feuilles.
+  body.imprime-une-fiche .imprime-cible .fiche__bref { display: none !important; }
   body.imprime-une-fiche:not(.imprime-corrige-seul) .imprime-cible .fiche__dossier { break-before: page; }
   body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__eleve,
   body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__dossier { display: none !important; }

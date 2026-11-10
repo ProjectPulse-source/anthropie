@@ -87,5 +87,9 @@ diagnostic : visites de la page et clics vers la page mère. État initial au 04
   corrigé réparée (la liste ordonnée renumérotait « 1. et 2. » et décalait les réponses, défaut déjà en ligne) ; deux
   boutons d'impression mesurés en PDF A4 : fiche élève 2 pages (fiche, puis dossier), corrigé 2 pages. Licence du texte
   des fiches : décision de l'auteur, en attente.
+- Troisième relecture externe : faite et arbitrée (10/11/2026, `a4dbbcb7…`, `ARBITRAGE-02.md`). « Ce que les élèves
+  découvrent » sous le titre, bloc enseignant après la fiche et le dossier, intertitres au style des surtitres ; dossier
+  présenté comme pièces d'une enquête déjà menée ; conclusion négative sur Hugo bornée au corpus et aux formes cherchées ;
+  question 6 de synthèse (mots, source, sens). Impressions remesurées : 2 pages chacune.
 - Relecture phrase à phrase par l'auteur : non faite (motif : page neuve, à relire avant diffusion) ; instantané : à prendre après cette relecture.
 - Accord de l'auteur : demande du 04/11/2026.
