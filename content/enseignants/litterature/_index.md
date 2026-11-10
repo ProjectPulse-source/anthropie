@@ -148,6 +148,7 @@ Les textes sont donnés dans l'orthographe des éditions citées.
 
 Les réponses et leurs sources sont dans la page [Citations célèbres vérifiées](/citations-celebres-verifiees/), qui
 examine vingt citations prêtées à cinq auteurs. Elle prolonge la vérification des citations de
-[*Livresque des mots*](/livres/livresque-des-mots/).
+[*Livresque des mots*](/livres/livresque-des-mots/). La fiche, le dossier et le corrigé sont sous licence CC&nbsp;BY&nbsp;4.0, à reprendre
+en citant la source&nbsp;; les extraits d'œuvres cités dans le dossier n'en relèvent pas.
 
 <script src="/js/fiche-imprimer.js" defer></script>

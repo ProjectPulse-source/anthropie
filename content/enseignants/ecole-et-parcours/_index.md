@@ -36,8 +36,8 @@ s'inscrivent les nouveaux bacheliers selon leur origine sociale&nbsp;; la second
 qui sont entrés en première année de licence. Elles portent sur les bacheliers de la même année mais ne suivent pas
 les mêmes élèves. La question du titre est celle de l'auteur, non une notion du programme&nbsp;: les fiches la
 ramènent à ce qui se mesure. Fiches et corrigés sont écrits à partir des séries elles-mêmes&nbsp;: un chiffre y change
-quand la série change. Les figures et la compilation des données sont sous licence CC&nbsp;BY&nbsp;4.0, à reprendre
-en citant la source&nbsp;; les questions demandent de constater, de calculer, de comparer ou d'expliquer un mécanisme,
+quand la série change. Les fiches, les figures et la compilation des données sont sous licence CC&nbsp;BY&nbsp;4.0, à
+reprendre en citant la source&nbsp;; les questions demandent de constater, de calculer, de comparer ou d'expliquer un mécanisme,
 aucune ne demande de trancher une politique.
 
 {{< dossier-lie bloc="ecole" >}}

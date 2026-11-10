@@ -50,7 +50,7 @@ lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) :
 publiques montrent combien de textes franchissent chacune d'elles. L'activité fait retrouver, chiffres à l'appui, les
 étapes qu'un texte doit franchir après son dépôt, puis après son vote. Les nombres de la fiche élève et du corrigé sont
 ceux des pages de données du site, qui se mettent à jour avec leurs sources&nbsp;: un chiffre change ici quand la source
-change. Les questions demandent de constater, de calculer, de comparer ou d'expliquer une procédure&nbsp;; aucune ne
+change. Les fiches et leurs corrigés sont sous licence CC&nbsp;BY&nbsp;4.0, à reprendre en citant la source. Les questions demandent de constater, de calculer, de comparer ou d'expliquer une procédure&nbsp;; aucune ne
 demande de juger une institution ou de trancher une politique.
 
 {{< dossier-lie bloc="promesses" >}}

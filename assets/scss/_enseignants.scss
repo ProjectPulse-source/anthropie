@@ -60,6 +60,11 @@
   // réponses à comparer sortaient coupées entre deux pages). Bouton « Imprimer le corrigé » : le bloc enseignant et le
   // corrigé, sans fiche ni dossier.
   body.imprime-une-fiche .imprime-cible li { break-inside: avoid; }
+  // Source et licence au bas de toute fiche imprimée (attribut posé par fiche-imprimer.js).
+  body.imprime-une-fiche .imprime-cible[data-source-imprimee]::after {
+    content: attr(data-source-imprimee); display: block; margin-top: 10pt; padding-top: 4pt;
+    border-top: 0.5pt solid #8a94a6; font-size: 9pt; color: #444;
+  }
   body.imprime-une-fiche:not(.imprime-corrige-seul) .imprime-cible .fiche__prof { display: none !important; }
   body.imprime-une-fiche:not(.imprime-corrige-seul) .imprime-cible .fiche__dossier { break-before: page; }
   body.imprime-une-fiche.imprime-corrige-seul .imprime-cible .fiche__eleve,

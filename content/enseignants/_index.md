@@ -38,8 +38,10 @@ lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) :
 
 Chaque activité part d'une figure du site, projetable telle quelle, et d'une question du programme. La fiche élève et
 son corrigé utilisent **les mêmes séries que les analyses** dont ils sont tirés&nbsp;: un chiffre y change quand il
-change dans la page d'origine, jamais séparément. Les figures et la compilation des données sont sous licence CC&nbsp;BY&nbsp;4.0, à
-reprendre en citant la source&nbsp;; les séries brutes restent soumises aux conditions de l'INSEE et d'Eurostat.
+change dans la page d'origine, jamais séparément. Les fiches (consignes, questions, dossiers et corrigés), les figures et la compilation des données sont sous licence
+[CC&nbsp;BY&nbsp;4.0](https://creativecommons.org/licenses/by/4.0/deed.fr)&nbsp;: on peut les reproduire, les adapter et les
+distribuer, en citant la source. Les séries brutes restent soumises aux conditions de l'INSEE et d'Eurostat, et les
+extraits d'œuvres cités dans une fiche à leur propre régime. Chaque fiche imprimée porte sa source et sa licence.
 
 Les questions demandent de constater, de calculer, de comparer ou d'expliquer un mécanisme. Aucune ne demande de
 trancher une politique.

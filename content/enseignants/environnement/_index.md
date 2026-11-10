@@ -36,8 +36,8 @@ lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) :
 **Terminale, chapitre sur l'action publique pour l'environnement.** La France publie deux totaux d'émissions de gaz à
 effet de serre, qui ne comptent pas la même chose. L'activité fait retrouver ce que chacun additionne, puis ce que
 cette différence change pour un instrument de politique climatique. La fiche élève et son corrigé sont écrits à
-partir de la série elle-même&nbsp;: un chiffre y change quand la série change. La figure et la compilation des
-données sont sous licence CC&nbsp;BY&nbsp;4.0, à reprendre en citant la source&nbsp;; les questions demandent de
+partir de la série elle-même&nbsp;: un chiffre y change quand la série change. La fiche, la figure et la
+compilation des données sont sous licence CC&nbsp;BY&nbsp;4.0, à reprendre en citant la source&nbsp;; les questions demandent de
 constater, de calculer, de comparer ou d'expliquer un mécanisme, aucune ne demande de trancher une politique.
 
 <section class="fiche" id="fiche-empreinte">

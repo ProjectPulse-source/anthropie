@@ -15,6 +15,8 @@
     document.body.classList.add("imprime-une-fiche");
     if (corrige) document.body.classList.add("imprime-corrige-seul");
     cible.classList.add("imprime-cible");
+    // Pied de la feuille imprimée (fiches sous CC BY 4.0, décision de l'auteur du 10/11/2026) : auteur, adresse, licence.
+    cible.setAttribute("data-source-imprimee", "Stéphane Lalut · " + location.origin + location.pathname + " · licence CC BY 4.0");
     var fin = function () {
       document.body.classList.remove("imprime-une-fiche", "imprime-corrige-seul");
       cible.classList.remove("imprime-cible");
