@@ -76,6 +76,16 @@ def tuiles(noms: list[str], par: int):
     return dessin
 
 
+def rangees(etages):
+    """Étages de boîtes sans flèche : une flèche centrale désignerait une boîte comme la réponse."""
+    def dessin(d) -> None:
+        h, g = 68, 56
+        y = (n.HAUT + n.BAS - h * len(etages) - g * (len(etages) - 1)) / 2
+        for i, (noms, col, plein) in enumerate(etages):
+            n.rangee(d, y + i * (h + g), y + i * (h + g) + h, noms, col, plein)
+    return dessin
+
+
 def registre(reg: dict, mot: str):
     """Sept barres : nombre de jalons par âge, compté dans le jeu publié."""
     nb = [sum(1 for j in reg["jalons"] if j["age"] == a["num"]) for a in reg["ages"]]
@@ -136,6 +146,12 @@ def cartes() -> list:
         ("citations-celebres-verifiees", False, "og-texte-citations.jpg", ["Citations célèbres", "vérifiées"],
          "Ce qu’ils ont vraiment écrit, relu au texte.", "citations-celebres-verifiees",
          tuiles(["Hugo", "Voltaire", "Molière", "La Fontaine", "Wilde"], 3), ["Hugo", "Voltaire", "Molière", "La Fontaine", "Wilde"]),
+        # Page Littérature (auteur, 10/11/2026) : sa propre carte, sans Wilde, absent de l'activité.
+        ("enseignants/litterature", False, "og-texte-litterature.jpg", ["Authentique, retouchée", "ou introuvable ?"],
+         "Vérifier une citation : une activité de Première.", "enseignants/litterature",
+         rangees([(["Voltaire", "Hugo", "La Fontaine", "Molière"], og.SEC, False),
+                  (["Authentique", "Retouchée", "Introuvable"], og.C1, True)]),
+         ["Voltaire", "Hugo", "La Fontaine", "Molière", "authentique", "retouchée", "introuvable"]),
         ("combien-de-temps-une-erreur-reste-inscrite", False, "og-texte-erreur.jpg", ["Une erreur inscrite,", "pour combien de temps ?"],
          "Ce qu\u2019il faut vérifier, durée par durée.", "combien-de-temps-une-erreur-reste-inscrite",
          tuiles(["Banque de France", "Casier", "Points", "Malus", "Maladie"], 3), ["Banque de France", "casier", "points", "malus", "maladie"]),

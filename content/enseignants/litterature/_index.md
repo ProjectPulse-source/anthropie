@@ -2,8 +2,8 @@
 title: "Enseigner la vérification des citations en français : une activité de Première"
 description: "Une activité de français pour la Première : cinq citations célèbres prêtées à Voltaire, Hugo, La Fontaine et Molière. Authentique, retouchée ou introuvable chez l'auteur ? Fiche élève imprimable et corrigé, réponses vérifiées dans les œuvres."
 og_title: "Authentique, retouchée ou introuvable ? — une activité de français, Première"
-og_image: "images/og-texte-citations.jpg"   # carte de la page des citations, réemployée ; vignette vig-texte-citations.jpg lue par /ressources/
-og_image_alt: "Carte de partage : « Citations célèbres vérifiées »"
+og_image: "images/og-texte-litterature.jpg"   # carte propre (scripts/og_ressources_texte.py) ; vignette vig-texte-litterature.jpg lue par /ressources/
+og_image_alt: "Carte de partage : « Authentique, retouchée ou introuvable ? », activité de Première"
 date: 2026-11-04
 lastmod: 2026-11-04
 # Première page de la discipline Littérature (bloc `enseigner`, `disciplines` dans content/ressources/_index.md), demandée par
