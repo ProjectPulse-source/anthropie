@@ -59,6 +59,8 @@ WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement (encre atténuée de l'organe commun)
+# ORANGE colore les MARQUES (courbe et points de la série consolidée) ; le TEXTE de cette série s'écrit à l'encre de
+# l'organe commun, pied_figure.encre_texte(ORANGE) (décision de l'auteur, 11/11/2026).
 LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Computed by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 SUFFIXE = {"fr": "", "en": "-en"}
 LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
@@ -543,7 +545,7 @@ def fig_achats(q, Aff, lang):
                    if degage(x18 + s * k, yc - j)), (None, yc))
     if xc is None:
         fail("figure achats : aucune position du libelle « %s » ne degage la courbe" % t["cons"])
-    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (xc, yc, ORANGE, esc(t["cons"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (xc, yc, pied_figure.encre_texte(ORANGE), esc(t["cons"])))
     e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (X(mois(r18[0])), Y(r18[1]) + 16, INK2, esc(t["marche"])))
     # jalon fin 2022 : date au-dessus du point consolidé, valeur du marché sous son point
     r22 = next(r for r in serie if r[0] == "2022-12-31")
@@ -556,7 +558,7 @@ def fig_achats(q, Aff, lang):
     rd = serie[-1]
     for k, col, lib in ((2, ORANGE, Aff["qe_sc1_d"]), (1, GRIS, Aff["qe_sm1_d"])):
         e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X1, Y(rd[k]), col))
-        e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (X1 + 7, Y(rd[k]) + 4, ORANGE if k == 2 else INK2, lib))
+        e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (X1 + 7, Y(rd[k]) + 4, pied_figure.encre_texte(col) if k == 2 else INK2, lib))
     e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 7, Y(rd[2]) - 10, MUTED, esc(Aff["qe_dern"])))
     return pied_figure.pied(e, h + 2, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                           (LICENCES[lang], MUTED, "pied-licence")], GRID)
@@ -645,7 +647,7 @@ def fig_achats_m(q, Aff, lang, svg_d):
     for lib, col in lignes:
         y += 20
         poids = ' font-weight="600"' if col == ORANGE else ""
-        e.append('<text x="0" y="%d" font-size="15"%s fill="%s">%s</text>' % (y, poids, col, esc(lib)))
+        e.append('<text x="0" y="%d" font-size="15"%s fill="%s">%s</text>' % (y, poids, pied_figure.encre_texte(col), esc(lib)))
     return pied_figure.pied_mobile(e, y + 14, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                                (LICENCES_M[lang], MUTED, "pied-licence")], GRID)
 

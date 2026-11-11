@@ -1048,7 +1048,7 @@ T = {
            "d2s": "{s} : {n} lois, {d} directes pour les deux sources, {u} classées différemment",
            "l2": ["application directe (les deux sources)", "classement divergent", "non directes (les deux sources)"],
            "lois": "{} lois",
-           "e2": "{d} directes, {u} divergentes, sur {n}",
+           "e2": "{d} {wd}, {u} {wu}, sur {n}",
            "src3": "Sénat, bilans annuels de l'application des lois, 2003-2026 (taux tels que publiés, page citée dans le tableau)",
            "note3": "%s définitions successives : ne pas relier les segments. Deux valeurs pour une session et une rupture de "
                     "définition sont deux faits distincts. 2009-2010 non représentée : date d'arrêté du taux non établie."
@@ -1242,7 +1242,11 @@ def _rows_lois(r, mobile):
     L = T[LANG]
     out = []
     for x in r["lignes"]:
-        et = L["e2"].format(d=x["D"], u=x["U"], n=x["N"]) if mobile else L["lois"].format(x["N"])
+        # Accord en nombre : en français, 0 et 1 prennent le singulier (« 1 divergente », « 0 divergente » ; relevé du
+        # contrôle indépendant, 11/11/2026 : la figure écrivait « 1 divergentes »). Le gabarit anglais ignore wd et wu.
+        wd = "directe" if x["D"] in (0, 1) else "directes"
+        wu = "divergente" if x["U"] in (0, 1) else "divergentes"
+        et = L["e2"].format(d=x["D"], u=x["U"], n=x["N"], wd=wd, wu=wu) if mobile else L["lois"].format(x["N"])
         out.append((x["session"], [(x["D"], BLEU), (x["U"], GRIS), (x["N"] - x["D"] - x["U"], GRIS_CLAIR)], et, x["N"]))
     return out
 

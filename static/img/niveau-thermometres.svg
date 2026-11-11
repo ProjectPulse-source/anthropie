@@ -37,20 +37,20 @@
 <text x="6" y="217" font-size="11.5" fill="#26262f">Test de positionnement, français</text>
 <text x="240" y="217" font-size="11" fill="#55524f">entrée en seconde GT</text>
 <text x="395" y="217" font-size="11" fill="#55524f">2021-2024</text>
-<text x="480" y="217" font-size="11.5" fill="#eb6834" font-weight="600">−4</text>
+<text x="480" y="217" font-size="11.5" fill="#b8420f" font-weight="600">−4</text>
 <rect x="545" y="208" width="10" height="10" rx="5" fill="#ffffff" stroke="#eb6834" stroke-width="1.6"/>
 <text x="561" y="217" font-size="11" fill="#26262f">baisse observée, sans test</text>
 <text x="6" y="251" font-size="11.5" fill="#26262f">PISA, culture mathématique</text>
 <text x="240" y="251" font-size="11" fill="#55524f">15 ans</text>
 <text x="395" y="251" font-size="11" fill="#55524f">2022-2025</text>
-<text x="480" y="251" font-size="11.5" fill="#eb6834" font-weight="600">−16</text>
+<text x="480" y="251" font-size="11.5" fill="#b8420f" font-weight="600">−16</text>
 <rect x="545" y="242" width="10" height="10" rx="5" fill="#eb6834" stroke="#eb6834" stroke-width="1.6"/>
 <text x="561" y="251" font-size="11" fill="#26262f">baisse significative</text>
 <rect x="0" y="264" width="720" height="34" fill="#f6f4f1"/>
 <text x="6" y="285" font-size="11.5" fill="#26262f">PISA, compréhension de l'écrit</text>
 <text x="240" y="285" font-size="11" fill="#55524f">15 ans</text>
 <text x="395" y="285" font-size="11" fill="#55524f">2022-2025</text>
-<text x="480" y="285" font-size="11.5" fill="#eb6834" font-weight="600">−18</text>
+<text x="480" y="285" font-size="11.5" fill="#b8420f" font-weight="600">−18</text>
 <rect x="545" y="276" width="10" height="10" rx="5" fill="#eb6834" stroke="#eb6834" stroke-width="1.6"/>
 <text x="561" y="285" font-size="11" fill="#26262f">baisse significative</text>
 <line x1="0" y1="310.0" x2="720" y2="310.0" stroke="#dcd8d3"/>

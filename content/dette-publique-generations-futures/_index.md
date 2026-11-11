@@ -86,7 +86,7 @@ Emprunter pour construire une école, une route ou un réseau laisse un capital 
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-actifs-m.svg" width="300" height="747">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-actifs-m.svg" width="300" height="763">
     <img src="/img/dette-generations-actifs.svg" alt="Quatre barres horizontales, chacune représentant cent pour cent du besoin de financement des administrations publiques françaises sur une période : {{< gen-val "d1_lib" >}}, {{< gen-val "d1_part" >}} % en actifs ; {{< gen-val "d2_lib" >}}, {{< gen-val "d2_part" >}} % ; {{< gen-val "d3_lib" >}}, {{< gen-val "d3_part" >}} % ; sur l'ensemble, {{< gen-val "part_k" >}} % en actifs, {{< gen-val "part_t" >}} % en transferts en capital et {{< gen-val "part_e" >}} % en dépenses courantes non couvertes par les recettes courantes." width="720" height="385" loading="lazy">
   </picture>
   <figcaption>Part du besoin de financement des administrations publiques françaises qui a correspondu à des actifs, à des transferts en capital et à des dépenses courantes non couvertes, par décennie (Eurostat, calcul de l'auteur).</figcaption>

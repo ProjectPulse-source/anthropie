@@ -24,13 +24,13 @@
 <text class="val" x="0.0" y="318.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">Total: 10 years from the 1st year</text>
 <text x="0.0" y="348.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">Presidential term</text>
 <rect x="0" y="358" width="150.0" height="30" fill="#8a8f98"/>
-<text class="val" x="75.0" y="378.0" font-size="13.5" fill="#ffffff" text-anchor="middle">5 years</text>
+<text class="val" x="75.0" y="378.0" font-size="13.5" fill="#0A0A0E" text-anchor="middle">5 years</text>
 <line x1="0" y1="389" x2="300" y2="389" stroke="#e1e0d9"/>
 <text x="0.0" y="406.0" font-size="13.5" fill="#6f6c66" text-anchor="start">0</text>
 <text x="150.0" y="406.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">5</text>
 <text x="300.0" y="406.0" font-size="13.5" fill="#6f6c66" text-anchor="end">10</text>
 <line x1="0" y1="420.0" x2="300" y2="420.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0.0" y="441.0" font-size="13.5" fill="#52514e" text-anchor="start">Order of 8 April 2013, art. 1;</text>
+<text class="pied-source" x="0.0" y="441.0" font-size="13.5" fill="#52514e" text-anchor="start">Order of 8 April 2013, art. 1;</text>
 <text class="pied-source" x="0.0" y="458.0" font-size="13.5" fill="#52514e" text-anchor="start">Education Code, art. L632-2; Law</text>
 <text class="pied-source" x="0.0" y="475.0" font-size="13.5" fill="#52514e" text-anchor="start">no. 2022-1616, art. 37; Constitution,</text>
 <text class="pied-source" x="0.0" y="492.0" font-size="13.5" fill="#52514e" text-anchor="start">art. 6</text>

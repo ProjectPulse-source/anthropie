@@ -19,10 +19,10 @@
 <circle cx="212.0" cy="164.8" r="4" fill="#eb6834"/>
 <circle cx="212.0" cy="257.8" r="4" fill="#8a8781"/>
 <text x="0" y="360" font-size="15" fill="#55524f">Fin 2022 : </text>
-<text x="0" y="380" font-size="15" font-weight="600" fill="#eb6834">État + Banque de France : 7,6</text>
+<text x="0" y="380" font-size="15" font-weight="600" fill="#b8420f">État + Banque de France : 7,6</text>
 <text x="0" y="400" font-size="15" fill="#55524f">dette de marché seule : 2,75</text>
 <text x="0" y="420" font-size="15" fill="#55524f">Juin 2026 : </text>
-<text x="0" y="440" font-size="15" font-weight="600" fill="#eb6834">État + Banque de France : 7,3</text>
+<text x="0" y="440" font-size="15" font-weight="600" fill="#b8420f">État + Banque de France : 7,3</text>
 <text x="0" y="460" font-size="15" fill="#55524f">dette de marché seule : 3,6</text>
 <line x1="0" y1="474.0" x2="300" y2="474.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="495.0" font-size="13.5" fill="#55524f">AFT (bulletins mensuels, ligne à</text>

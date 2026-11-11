@@ -190,6 +190,11 @@ def fig_decomp_m(rows, cumul, lang, C, licence_m, svg_d):
         e.append('<rect x="0" y="%d" width="12" height="12" fill="%s"/>' % (y - 11, coul))
         e.append('<text x="18" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS, C["INK2"], esc(lib)))
         y += 20
+    # Le point noir de la variation, comme en version détaillée (11/11/2026, contrôle du rendu : la légende de la page,
+    # commune aux deux versions, dit « le point noir est la variation », et la version téléphone ne le dessinait pas).
+    e.append('<circle cx="6" cy="%d" r="4" fill="%s"/>' % (y - 5, C["INK"]))
+    e.append('<text x="18" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS, C["INK2"], esc(T["leg"][2])))
+    y += 20
     y += 6
     m = max(max(0, r["volume"]) + max(0, r["taux"]) for r in rows)
     mneg = -min(min(0, r["volume"]) + min(0, r["taux"]) for r in rows)
@@ -209,6 +214,7 @@ def fig_decomp_m(rows, cumul, lang, C, licence_m, svg_d):
             else:
                 e.append('<rect x="%.1f" y="%d" width="%.1f" height="14" fill="%s"/>' % (xn + v * k, y, max(1.5, -v * k), coul))
                 xn += v * k
+        e.append('<circle cx="%.1f" cy="%d" r="4" fill="%s" stroke="#ffffff" stroke-width="1.5"/>' % (zero + r["delta"] * k, y + 7, C["INK"]))
         y += 22
     return _pied_m(e, y + 8, T["src"] % (cumul["a0"], cumul["a1"]), T["note"], licence_m, C)
 
@@ -243,13 +249,15 @@ def fig_ciseau_m(dette_annuel, d41_pib, lang, C, licence_m, svg_d, titre, source
         e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s" text-anchor="end">%s</text>'
                  % (X(dernier[0]) - 6, Y(dernier[1]) - 9 if k == 0 else Y(dernier[1]) - 10, C["INK"],
                     esc(nb(dernier[1]) + pc + " · " + fin[k])))
+        # Un texte prend l'ENCRE de sa série (PF.encre_texte : orange foncé pour l'orange, bleu inchangé) ; la courbe et
+        # les points gardent `coul` (11/11/2026).
         e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" fill="%s">%s</text>'
-                 % (X(premier[0]) + 2, Y(premier[1]) - 9, FS, coul, esc(nb(premier[1]) + pc)))
+                 % (X(premier[0]) + 2, Y(premier[1]) - 9, FS, PF.encre_texte(coul), esc(nb(premier[1]) + pc)))
         if k == 1:
             creux = lg.extremum(pts, lambda p: p[1], 1, maxi=False)
             e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>' % (X(creux[0]), Y(creux[1]), coul))
             e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" fill="%s" text-anchor="middle">%s</text>'
-                     % (X(creux[0]), Y(creux[1]) + 20, FS, coul, esc(nb(creux[1]) + pc)))
+                     % (X(creux[0]), Y(creux[1]) + 20, FS, PF.encre_texte(coul), esc(nb(creux[1]) + pc)))
         y += 130 + 26
     return _pied_m(e, y + 4, source, note, licence_m, C)
 
@@ -270,7 +278,7 @@ def fig_charge_m(interets_md, prev, lang, C, licence_m, svg_d, titre, source, no
     creux = lg.extremum(obs, lambda p: p[1], 1, maxi=False)
     e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>' % (X(creux[0]), Y(creux[1]), C["ORANGE"]))
     e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" fill="%s" text-anchor="middle">%s</text>'
-             % (X(creux[0]), Y(creux[1]) + 20, FS, C["ORANGE"], esc(nb(creux[1]))))
+             % (X(creux[0]), Y(creux[1]) + 20, FS, PF.encre_texte(C["ORANGE"]), esc(nb(creux[1]))))
     lx, ly = X(obs[-1][0]), Y(obs[-1][1])
     e.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s"/>' % (lx, ly, C["ORANGE"]))
     e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s" text-anchor="end">%s</text>'
@@ -285,9 +293,9 @@ def fig_charge_m(interets_md, prev, lang, C, licence_m, svg_d, titre, source, no
             y += 19
             d = 0 if v == round(v) else 1
             e.append('<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%d : %s</text>'
-                     % (y, FS, C["ORANGE"], a, esc(nb(v, d) + md)) if lang == "fr" else
+                     % (y, FS, PF.encre_texte(C["ORANGE"]), a, esc(nb(v, d) + md)) if lang == "fr" else
                      '<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%d: %s</text>'
-                     % (y, FS, C["ORANGE"], a, esc(nb(v, d) + md)))
+                     % (y, FS, PF.encre_texte(C["ORANGE"]), a, esc(nb(v, d) + md)))
         y += 10
     return _pied_m(e, y + 4, source, note, licence_m, C)
 
@@ -311,7 +319,7 @@ def fig_marche_m(apparent, marche, lang, C, licence_m, svg_d, titre, source, not
                  % (y - 5, y - 5, coul, 1.6 if coul == C["INK2"] else 2.6))
         e.append('<text x="24" y="%d" font-size="%s" fill="%s">%s %d</text>' % (y, FS, C["INK2"], esc(nom), pts[-1][0]))
         e.append('<text x="%d" y="%d" font-size="15" font-weight="600" fill="%s" text-anchor="end">%s</text>'
-                 % (WM, y, coul, esc(nb(pts[-1][1]) + pc)))
+                 % (WM, y, PF.encre_texte(coul), esc(nb(pts[-1][1]) + pc)))
         y += 22
     return _pied_m(e, y + 4, source, note, licence_m, C)
 

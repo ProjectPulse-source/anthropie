@@ -542,8 +542,10 @@ def tete(fid, titre, desc, h):
 
 def encre(col):
     """Couleur d'un TEXTE écrit dans la couleur de sa série : le gris de série (3,58:1 sur blanc, 3,26:1 sur une ligne
-    teintée) ne se lit pas en texte, il prend l'encre atténuée ; la marque (barre, point) garde GRIS."""
-    return MUTED if col == GRIS else col
+    teintée) ne se lit pas en texte, il prend l'encre atténuée ; l'orange (3,20:1 sur blanc, 2,92:1 sur une ligne
+    teintée) prend l'orange foncé (11/11/2026). La marque (barre, point) garde GRIS ou ORANGE. Table des encres :
+    organe commun, pied_figure.encre_texte (GRIS y rend l'encre atténuée, soit MUTED, comme avant ; BLEU inchangé)."""
+    return pied_figure.encre_texte(col)
 
 
 def pied(e, y0, source, note, licence=None):
@@ -555,7 +557,7 @@ FIG = {
     "baisse": dict(
         titre="PISA, 2015-2025 : la France parmi les {n_ocde} pays de l'OCDE",
         source="OCDE, PISA 2025, volume I, tableaux I.B1.2a.36 à 38 (variation du score moyen entre 2015 et 2025)",
-        note="Chaque point est un pays membre de l'OCDE. Bande bleue : la moitié centrale des pays (du premier au troisième quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées.",
+        note="Chaque point est un pays membre de l'OCDE ; la flèche signale un pays hors de l'échelle, en hausse. Bande bleue : la moitié centrale des pays (du premier au troisième quartile). Rangs sur estimations ponctuelles ; différences entre pays non testées.",
         montre="En lecture et en sciences, la baisse française est dans la moitié centrale des pays de l'OCDE, la lecture pratiquement à sa frontière ; en mathématiques, elle compte, sur les estimations ponctuelles, parmi le quart des plus fortes."),
     "composition": dict(
         titre="PISA 2015-2025 : trois mesures de la baisse, selon la composition retenue",
@@ -671,6 +673,27 @@ def fig_composition(c, A):
     return pied(e, h + 2, t["source"], t["note"])
 
 
+# Pays hors de l'échelle de la figure « baisse » (−70 à +20 points). Jusqu'au 11/11/2026 leur point était tracé au-delà
+# du cadre : la figure annonçait 38 pays et en montrait 37 (contrôle indépendant de la géométrie). Ils sont signalés par
+# une flèche au bord de l'échelle, avec leur nom et leur valeur. Le nom français se déclare ici : un pays nouveau hors
+# de l'échelle arrête le générateur tant qu'il n'y est pas.
+NOMS_HORS_ECHELLE = {"Turkiye": "Turquie"}
+
+
+def hors_echelle(pays: dict, vmin: float, vmax: float) -> list:
+    """[(nom français, valeur)] des pays, hors France, dont la variation sort de l'échelle par la droite."""
+    out = []
+    for p_, v in sorted(pays.items(), key=lambda kv: kv[1]):
+        if p_ == "France" or vmin <= v <= vmax:
+            continue
+        if v < vmin:
+            raise SystemExit("ECHEC : %s (%s) sort de l'echelle par la gauche : etendre l'axe de la figure « baisse »" % (p_, v))
+        if p_ not in NOMS_HORS_ECHELLE:
+            raise SystemExit("ECHEC : %s (%s) est hors de l'echelle : declarer son nom francais dans NOMS_HORS_ECHELLE" % (p_, v))
+        out.append((NOMS_HORS_ECHELLE[p_], v))
+    return out
+
+
 def fig_baisse(c, A):
     t = {k: v.format(**A) for k, v in FIG["baisse"].items()}
     P = c["P"]
@@ -701,17 +724,22 @@ def fig_baisse(c, A):
                  % (sx(n2["mediane"]), y - 11, sx(n2["mediane"]), y + 11, BLEU))
         vus = {}
         for p_, v in sorted(n2["pays"].items(), key=lambda kv: kv[1]):
-            if p_ == "France":
+            if p_ == "France" or not vmin <= v <= vmax:
                 continue
             b = round(v / 1.6)
             k = vus.get(b, 0)
             vus[b] = k + 1
             dy = (k % 3 - 1) * 5
             e.append('<circle cx="%.1f" cy="%.1f" r="3" fill="%s" opacity="0.75"/>' % (sx(v), y + dy, GRIS))
+        hors = hors_echelle(n2["pays"], vmin, vmax)
+        if hors:        # flèche au bord droit de l'échelle, nom et valeur au-dessus, alignés sur le bord du cadre
+            e.append('<path d="M%.1f,%d L%.1f,%d L%.1f,%d Z" fill="%s" opacity="0.75"/>' % (X1 + 6, y - 4, X1 + 13, y, X1 + 6, y + 4, GRIS))
+            e.append('<text x="720" y="%d" font-size="11" fill="%s" text-anchor="end">%s</text>'
+                     % (y - 14, encre(GRIS), esc(", ".join("%s +%s" % (n_, nb(v, 0)) for n_, v in hors))))
         fr = n2["france"]
         e.append('<circle cx="%.1f" cy="%d" r="6" fill="%s" stroke="#ffffff" stroke-width="1.5"/>' % (sx(fr), y, ORANGE))
         e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle" font-weight="600">France %s</text>'
-                 % (sx(fr), y - 16, ORANGE, nb(fr, 0)))
+                 % (sx(fr), y - 16, encre(ORANGE), nb(fr, 0)))
         e.append('<text x="0" y="%d" font-size="11" fill="%s">%sᵉ plus forte baisse estimée sur %s</text>' % (y + 20, INK2, n2["rang"], n2["n"]))
     return pied(e, h + 2, t["source"], t["note"])
 
@@ -865,14 +893,14 @@ def fig_baisse_m(c, A):
         y += 34
         e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(LIB[d])))
         y += 18
-        e.append('<text x="0" y="%d" font-size="%s" fill="%s">France %s · %sᵉ plus forte baisse estimée</text>' % (y, FS_MIN, ORANGE, nb(n2["france"], 0), n2["rang"]))
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">France %s · %sᵉ plus forte baisse estimée</text>' % (y, FS_MIN, encre(ORANGE), nb(n2["france"], 0), n2["rang"]))
         y += 22
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="24" fill="%s" opacity="0.14"/>' % (sx(n2["q1"]), y - 12, sx(n2["q3"]) - sx(n2["q1"]), BLEU))
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.6"/>' % (sx(n2["mediane"]), y - 12, sx(n2["mediane"]), y + 12, BLEU))
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (sx(0), y - 14, sx(0), y + 14, INK2))
         vus = {}
         for p_, v in sorted(n2["pays"].items(), key=lambda kv: kv[1]):
-            if p_ == "France":
+            if p_ == "France" or not vmin <= v <= vmax:
                 continue
             b = round(v / 3.0)
             k = vus.get(b, 0)
@@ -880,6 +908,12 @@ def fig_baisse_m(c, A):
             e.append('<circle cx="%.1f" cy="%.1f" r="3" fill="%s" opacity="0.75"/>' % (sx(v), y + (k % 3 - 1) * 6, GRIS))
         e.append('<circle cx="%.1f" cy="%d" r="6.5" fill="%s" stroke="#ffffff" stroke-width="1.5"/>' % (sx(n2["france"]), y, ORANGE))
         y += 14
+        hors = hors_echelle(n2["pays"], vmin, vmax)
+        if hors:        # flèche au bord droit, nom et valeur sur leur propre ligne, sous elle
+            e.append('<path d="M%.1f,%d L%.1f,%d L%.1f,%d Z" fill="%s" opacity="0.75"/>' % (x1 + 1, y - 18, x1 + 8, y - 14, x1 + 1, y - 10, GRIS))
+            y += 14
+            e.append('<text x="%d" y="%d" font-size="%s" fill="%s" text-anchor="end">%s</text>'
+                     % (WM, y, FS_MIN, encre(GRIS), esc(", ".join("%s +%s" % (n_, nb(v, 0)) for n_, v in hors))))
     y += 6
     for gv in range(-60, vmax + 1, 20):  # la dernière étiquette s'aligne à droite : centrée, elle sortait du cadre
         e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%s</text>' % (sx(gv), y + 12, FS_MIN, MUTED, "end" if gv == vmax else "middle", ("+" if gv > 0 else "") + nb(gv, 0)))
@@ -973,7 +1007,10 @@ def parite_mobile(figs):
         # valeurs dessinées (textes) de la version mobile : chacune doit figurer dans la description de la détaillée
         desc_d = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", d).group(1))
         nombres_d = set(re.findall(r"\d+(?:,\d+)?", desc_d))
-        textes_m = re.findall(r'<text [^>]*font-weight="600"[^>]*>([^<]*)</text>', m) + re.findall(r'<text [^>]*fill="#eb6834"[^>]*>([^<]*)</text>', m)
+        # Texte de la série orange : écrit dans son encre (encre(ORANGE)) ; les deux couleurs sont lues, sinon la ligne
+        # « France −43 · 11ᵉ… » de la figure baisse sortirait du contrôle sans rien signaler (11/11/2026).
+        textes_m = re.findall(r'<text [^>]*font-weight="600"[^>]*>([^<]*)</text>', m) + re.findall(
+            r'<text [^>]*fill="(?:%s|%s)"[^>]*>([^<]*)</text>' % (re.escape(ORANGE), re.escape(encre(ORANGE))), m)
         dessines = set(n for tx in textes_m for n in re.findall(r"\d+(?:,\d+)?", html.unescape(tx)) if not re.fullmatch(r"(19|20)\d\d", n))
         manquants = dessines - nombres_d
         if manquants:

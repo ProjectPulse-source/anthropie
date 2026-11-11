@@ -142,6 +142,8 @@ INK, INK2, MUTED, GRID, AXIS = "#2b2a28", "#52514e", PF.ENCRE_ATTENUEE, "#e1e0d9
 # flèches du schéma), qui n'a besoin que de 3:1 sur son fond. Contrôle : check-figures.py, règle R7.
 GRIS_MARQUE = "#898781"
 SEC = GRIS_MARQUE
+# Même partage pour l'orange (décision de l'auteur, 11/11/2026) : C2 colore les MARQUES ; un TEXTE orange passe par
+# encre_serie(C2), qui rend l'orange foncé de l'organe commun (PF.encre_texte).
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 # Échelle typographique COMMUNE aux deux générateurs du dépôt (mêmes noms, mêmes
 # valeurs que update_dette_insee.py) : les figures des deux volets du dossier
@@ -236,8 +238,9 @@ def txt(x, y, s, size=11, fill=INK2, anchor="start", weight=None):
 
 
 def encre_serie(col: str) -> str:
-    """Couleur du TEXTE qui nomme une série : la série grise s'écrit à l'encre atténuée, sa marque garde son gris."""
-    return MUTED if col == GRIS_MARQUE else col
+    """Couleur du TEXTE qui nomme une série : la série grise s'écrit à l'encre atténuée, la série orange à l'orange
+    foncé de l'organe commun (PF.encre_texte, 11/11/2026) ; la marque garde la couleur de la série."""
+    return MUTED if col == GRIS_MARQUE else PF.encre_texte(col)
 
 
 def etiquettes_directes(x: float, bouts: list, y_min: float, y_max: float,
@@ -924,7 +927,7 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
         corps.append('<rect x="%d" y="%.1f" width="%.1f" height="14" rx="3" fill="%s"/>'
                      % (x0, y, w, C2))
         corps.append(txt(x0 + w + 8, y + 11, "%s%s" % (nb(d["pct"], 1), pc),
-                         TY_ANNOT if fort else TY_AXE, C2 if fort else INK2,
+                         TY_ANNOT if fort else TY_AXE, encre_serie(C2) if fort else INK2,
                          weight="600" if fort else None))
         y += 22
     corps.append(txt(0, y + 10, S("* dont la Banque de France (programmes de l'Eurosystème) : "
@@ -1110,7 +1113,7 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
                           "below zero: receives more than it pays in"), TY_MINEUR, C1))
     c.append(txt(W - mr, 54, S("au-dessus : verse plus qu'il ne reçoit",
                                "above zero: pays in more than it receives"),
-                 TY_MINEUR, C2, "end"))
+                 TY_MINEUR, encre_serie(C2), "end"))
     for g in range(-20, 61, 20):
         yy = Y(g)
         c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
@@ -1676,7 +1679,7 @@ def svg_detention_m(r: dict, lang: str, svg_d: str) -> str:
         w = max(2.0, 200 * d["pct"] / domin)
         fort = d["pct"] == domin
         e.append('<rect x="0" y="%.1f" width="%.1f" height="12" rx="3" fill="%s"/>' % (y + 6, w, C2))
-        e.append(tm(w + 6, y + 17, nb(d["pct"], 1) + pc, C2 if fort else INK2, weight="600" if fort else None))
+        e.append(tm(w + 6, y + 17, nb(d["pct"], 1) + pc, encre_serie(C2) if fort else INK2, weight="600" if fort else None))
         y += 18
     y = lignes_m(e, y + 4, S("* dont la Banque de France : part non publiée par la source.",
                              "* including the Banque de France: share not published by the source."))
@@ -1773,7 +1776,7 @@ def svg_solde_net_m(d: dict, lang: str, svg_d: str) -> str:
         e.append(tm(0, y, nom, INK2))
         v = net[i]
         e.append(tm(42, y, (S("reçoit %s de plus", "receives %s more") if v < 0 else S("verse %s de plus", "pays in %s more"))
-                    % nb(abs(v), 1), C1 if v < 0 else C2, weight="600"))
+                    % nb(abs(v), 1), encre_serie(C1 if v < 0 else C2), weight="600"))
     y += 18
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y, WM, y, AXIS))
     y = lignes_m(e, y + 6, S("B · Part de personnes bénéficiaires nettes", "B · Share of people who are net beneficiaries"),

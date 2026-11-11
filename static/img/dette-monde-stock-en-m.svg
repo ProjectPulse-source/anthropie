@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 726" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ms-m-t ms-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 745" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ms-m-t ms-m-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="ms-m-t">Public debt as a % of GDP, end-2025</title><desc id="ms-m-d">Maastricht gross debt of general government, 27 European Union countries, end-2025; France: 115.7%.</desc>
-<rect width="300" height="726" fill="#ffffff"/>
+<rect width="300" height="745" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Public debt as a % of GDP,</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">end-2025</text>
 <circle cx="6.0" cy="83.0" r="5.0" fill="#184f95"/>
@@ -79,17 +79,20 @@
 <text x="90.0" y="547.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Bulgaria</text>
 <rect x="96" y="537.0" width="30.4" height="13" fill="#eb6834"/>
 <text x="130.4" y="547.0" font-size="13.5" fill="#52514e" text-anchor="start">29.9%</text>
-<text x="90.0" y="566.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
-<rect x="96" y="556.0" width="26.5" height="13" fill="#184f95"/>
-<text x="126.5" y="566.0" font-size="13.5" fill="#52514e" text-anchor="start">26.0%</text>
-<text x="90.0" y="585.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Estonia</text>
-<rect x="96" y="575.0" width="24.4" height="13" fill="#184f95"/>
-<text x="124.4" y="585.0" font-size="13.5" fill="#52514e" text-anchor="start">24.0%</text>
-<line x1="0" y1="602.0" x2="300" y2="602.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="623.0" font-size="13.5" fill="#52514e">Eurostat gov_10dd_edpt1, Maastricht</text>
-<text class="pied-source" x="0" y="640.0" font-size="13.5" fill="#52514e">debt, end-2025</text>
-<text class="pied-note" x="0" y="661.0" font-size="13.5" fill="#52514e">Gross stock, excluding public assets</text>
-<text class="pied-note" x="0" y="678.0" font-size="13.5" fill="#52514e">and liabilities outside debt.</text>
-<text class="pied-licence" x="0" y="699.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="716.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text x="90.0" y="566.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Denmark</text>
+<rect x="96" y="556.0" width="27.7" height="13" fill="#eb6834"/>
+<text x="127.7" y="566.0" font-size="13.5" fill="#52514e" text-anchor="start">27.2%</text>
+<text x="90.0" y="585.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
+<rect x="96" y="575.0" width="26.5" height="13" fill="#184f95"/>
+<text x="126.5" y="585.0" font-size="13.5" fill="#52514e" text-anchor="start">26.0%</text>
+<text x="90.0" y="604.0" font-size="13.5" fill="#0A0A0E" text-anchor="end">Estonia</text>
+<rect x="96" y="594.0" width="24.4" height="13" fill="#184f95"/>
+<text x="124.4" y="604.0" font-size="13.5" fill="#52514e" text-anchor="start">24.0%</text>
+<line x1="0" y1="621.0" x2="300" y2="621.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="642.0" font-size="13.5" fill="#52514e">Eurostat gov_10dd_edpt1, Maastricht</text>
+<text class="pied-source" x="0" y="659.0" font-size="13.5" fill="#52514e">debt, end-2025</text>
+<text class="pied-note" x="0" y="680.0" font-size="13.5" fill="#52514e">Gross stock, excluding public assets</text>
+<text class="pied-note" x="0" y="697.0" font-size="13.5" fill="#52514e">and liabilities outside debt.</text>
+<text class="pied-licence" x="0" y="718.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="735.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

@@ -4,7 +4,9 @@
 Maquettes arbitrées : PRO-20261109-092834 (réponse Dette-06) et ENTRANTE Dette-07 (09/11/2026) ; maquettes de référence :
 D:\\PRO\\06_PROMOTION\\MAQUETTES_FIGURE_QUELS_FUTURS_2026-11-09\\maquettes_v2.py. Charte : bleu #184f95 dette (Commission),
 orange #eb6834 trajectoire du Gouvernement (point contemporain), orange atténué #b8703f repère ancien (plan de 2024),
-gris ce qui fait baisser. Pied commun : pied_figure (source, note, licence ; classes relues par « Réutiliser »).
+gris ce qui fait baisser. Ces deux oranges sont ceux des MARQUES ; leurs libellés s'écrivent dans l'encre de l'organe
+commun (pied_figure.encre_texte, appliquée dans txt()). Pied commun : pied_figure (source, note, licence ; classes relues
+par « Réutiliser »).
 Toutes les valeurs viennent du calcul R d'update_dette_futurs.py ; aucune n'est saisie ici.
 """
 from __future__ import annotations
@@ -33,8 +35,11 @@ def pct(v: float, lang: str) -> str:
 
 
 def txt(x, y, s, size=12, anchor="start", weight=400, fill=ENCRE):
+    """Seul point d'émission du texte des figures. `fill` est la couleur de la SÉRIE ; le texte s'écrit dans son encre
+    (pf.encre_texte, 11/11/2026 : ORANGE et ORANGE_A, 3,20:1 et 3,87:1 sur blanc, prennent l'orange foncé de l'organe
+    commun ; bleu et encres inchangés). Les marques (traits, points, barres) ne passent pas par ici et gardent leur couleur."""
     return '<text x="%.1f" y="%.1f" font-size="%s" font-weight="%d" text-anchor="%s" fill="%s">%s</text>' % (
-        x, y, size, weight, anchor, fill, esc(s))
+        x, y, size, weight, anchor, pf.encre_texte(fill), esc(s))
 
 
 T = {

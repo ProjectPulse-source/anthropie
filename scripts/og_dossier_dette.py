@@ -630,7 +630,7 @@ def figure_collectivites(d: ImageDraw.ImageDraw, inv: dict, tr: dict, lang: str 
     def Y(v):
         return bas - (bas - top) * (v - vmin) / (vmax - vmin)
 
-    d.rectangle([X(2014), top, X(2017.999), bas], fill=(243, 239, 230))
+    d.rectangle([X(2013.5), top, X(2017.5), bas], fill=(243, 239, 230))   # mêmes bornes que la figure (11/11/2026)
     for g in (2, 3, 4, 5):
         d.line([(x0, Y(g)), (x1, Y(g))], fill=GRID, width=1)
     d.line([(X(a), Y(v)) for a, v in sorted(tr.items())], fill=SEC, width=5, joint="curve")

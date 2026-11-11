@@ -30,7 +30,7 @@
 <rect x="64.3" y="354" width="4.3" height="14" fill="#8a8781"/>
 <rect x="68.6" y="354" width="115.7" height="14" fill="#c9c5c0"/>
 <line x1="92.1" y1="351" x2="92.1" y2="371" stroke="#0A0A0E" stroke-width="2"/>
-<text x="0" y="384" font-size="13.5" font-weight="600" fill="#52514e">15 directes, 1 divergentes, sur 43</text>
+<text x="0" y="384" font-size="13.5" font-weight="600" fill="#52514e">15 directes, 1 divergente, sur 43</text>
 <text x="0" y="408" font-size="13.5" fill="#0A0A0E">2020-2021</text>
 <rect x="0.0" y="413" width="72.9" height="14" fill="#184f95"/>
 <rect x="72.9" y="413" width="12.9" height="14" fill="#8a8781"/>
@@ -48,12 +48,12 @@
 <rect x="42.9" y="531" width="4.3" height="14" fill="#8a8781"/>
 <rect x="47.1" y="531" width="141.4" height="14" fill="#c9c5c0"/>
 <line x1="94.3" y1="528" x2="94.3" y2="548" stroke="#0A0A0E" stroke-width="2"/>
-<text x="0" y="561" font-size="13.5" font-weight="600" fill="#52514e">10 directes, 1 divergentes, sur 44</text>
+<text x="0" y="561" font-size="13.5" font-weight="600" fill="#52514e">10 directes, 1 divergente, sur 44</text>
 <text x="0" y="585" font-size="13.5" fill="#0A0A0E">2023-2024</text>
 <rect x="0.0" y="590" width="90.0" height="14" fill="#184f95"/>
 <rect x="90.0" y="590" width="128.6" height="14" fill="#c9c5c0"/>
 <line x1="109.3" y1="587" x2="109.3" y2="607" stroke="#0A0A0E" stroke-width="2"/>
-<text x="0" y="620" font-size="13.5" font-weight="600" fill="#52514e">21 directes, 0 divergentes, sur 51</text>
+<text x="0" y="620" font-size="13.5" font-weight="600" fill="#52514e">21 directes, 0 divergente, sur 51</text>
 <text x="0" y="644" font-size="13.5" fill="#0A0A0E">2024-2025</text>
 <rect x="0.0" y="649" width="81.4" height="14" fill="#184f95"/>
 <rect x="81.4" y="649" width="25.7" height="14" fill="#8a8781"/>

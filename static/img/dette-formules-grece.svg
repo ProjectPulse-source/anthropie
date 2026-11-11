@@ -51,7 +51,7 @@
 <rect x="689.4" y="68.8" width="17.1" height="46.2" fill="#eb6834"/>
 <line x1="457.2" y1="48" x2="457.2" y2="262" stroke="#26262f" stroke-width="1" stroke-dasharray="3 3"/>
 <text x="457.2" y="44" font-size="11" fill="#26262f" text-anchor="middle">séance du 8 septembre 2025</text>
-<text x="449.2" y="73.0" font-size="11" font-weight="600" fill="#eb6834" text-anchor="end">France au-dessus</text>
+<text x="449.2" y="73.0" font-size="11" font-weight="600" fill="#b8420f" text-anchor="end">France au-dessus</text>
 <text x="286.7" y="209.5" font-size="11" fill="#55524f">Grèce au-dessus</text>
 <line x1="0" y1="302.0" x2="720" y2="302.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="317.0" font-size="11" fill="#55524f">Eurostat, rendements des emprunts d'État à long terme, moyennes mensuelles (irt_lt_mcby_m) ; calcul de l'auteur</text>

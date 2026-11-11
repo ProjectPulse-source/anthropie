@@ -25,17 +25,17 @@
 <text x="18" y="342" font-size="13.5" fill="#26262f">hausse observée, sans test </text>
 <text x="0" y="372" font-size="14.5" fill="#26262f">Test de positionnement, français</text>
 <text x="0" y="391" font-size="13.5" fill="#55524f">entrée en seconde GT · 2021-2024</text>
-<text x="300" y="391" font-size="16" font-weight="600" fill="#eb6834" text-anchor="end">−4</text>
+<text x="300" y="391" font-size="16" font-weight="600" fill="#b8420f" text-anchor="end">−4</text>
 <circle cx="6" cy="405" r="5" fill="#ffffff" stroke="#eb6834" stroke-width="1.6"/>
 <text x="18" y="410" font-size="13.5" fill="#26262f">baisse observée, sans test </text>
 <text x="0" y="440" font-size="14.5" fill="#26262f">PISA, culture mathématique</text>
 <text x="0" y="459" font-size="13.5" fill="#55524f">15 ans · 2022-2025</text>
-<text x="300" y="459" font-size="16" font-weight="600" fill="#eb6834" text-anchor="end">−16</text>
+<text x="300" y="459" font-size="16" font-weight="600" fill="#b8420f" text-anchor="end">−16</text>
 <circle cx="6" cy="473" r="5" fill="#eb6834" stroke="#eb6834" stroke-width="1.6"/>
 <text x="18" y="478" font-size="13.5" fill="#26262f">baisse significative </text>
 <text x="0" y="508" font-size="14.5" fill="#26262f">PISA, compréhension de l'écrit</text>
 <text x="0" y="527" font-size="13.5" fill="#55524f">15 ans · 2022-2025</text>
-<text x="300" y="527" font-size="16" font-weight="600" fill="#eb6834" text-anchor="end">−18</text>
+<text x="300" y="527" font-size="16" font-weight="600" fill="#b8420f" text-anchor="end">−18</text>
 <circle cx="6" cy="541" r="5" fill="#eb6834" stroke="#eb6834" stroke-width="1.6"/>
 <text x="18" y="546" font-size="13.5" fill="#26262f">baisse significative</text>
 <line x1="0" y1="562.0" x2="300" y2="562.0" stroke="#dcd8d3"/>

@@ -22,11 +22,53 @@ TAILLE, INTERLIGNE, CARACTERES = 11, 14, 118
 #   fonds teintés en usage (#f3f2ee). Elle remplace les gris #96928f (3,09:1) et #898781 (3,59:1) pour le TEXTE
 #   seulement : une marque grise (barre, point, filet) garde son gris, qui n'a besoin que de 3:1.
 # - POLICE_MIN : plus petite police d'une figure détaillée (720 de large). Mesure du 11/11/2026 sur les 52 pages : la
-#   version détaillée est servie à partir de 900 px d'écran et s'y affiche à 804 px au plus étroit (dans un repli) ;
-#   11 px déclarés y font 12,3 px, 10,5 px n'en font que 11,7. La version téléphone (300 de large) s'affiche à 277 px
+#   version détaillée est servie à partir de 900 px d'écran et s'y affiche à 786 px au plus étroit (bloc « dette en
+#   chiffres » ; 804 px dans un repli) ; 11 px déclarés y font 12,0 px, 10,5 px n'en font que 11,5. La version téléphone (300 de large) s'affiche à 277 px
 #   au plus étroit (320 px d'écran) : POLICE_M_MIN = 13 y fait 12,0 px. Contrôle : check-figures.py, règles R6 et R7.
 ENCRE_ATTENUEE = "#6f6c66"
 POLICE_MIN, POLICE_M_MIN = 11, 13
+
+# Texte écrit dans la couleur d'une série ORANGE (décision de l'auteur, 11/11/2026 : « Je valide l'orange foncé pour le
+# texte »). L'orange de la charte (#eb6834) ne fait que 3,20:1 sur blanc : il reste la couleur des MARQUES (barres,
+# courbes, points) ; le TEXTE de la même série s'écrit en ORANGE_TEXTE, 5,49:1 sur blanc et 5,0:1 sur les fonds
+# teintés. Passé à validate_palette.js avec le bleu de la charte : toutes vérifications tenues. L'orange atténué des
+# repères anciens (#b8703f, 3,87:1) prend la même encre : un second orange de texte ne se distinguerait pas du premier
+# (écart de 6,9, seuil 15) ; la distinction récent / ancien reste portée par les marques et par la graisse.
+ORANGE_TEXTE = "#b8420f"
+_ENCRE_DE_SERIE = {"#eb6834": ORANGE_TEXTE, "#b8703f": ORANGE_TEXTE,
+                   "#96928f": ENCRE_ATTENUEE, "#898781": ENCRE_ATTENUEE, "#8a8781": ENCRE_ATTENUEE,
+                   "#8a8f98": ENCRE_ATTENUEE, "#a5a39a": ENCRE_ATTENUEE}
+
+
+# Texte posé SUR une marque pleine, barre ou pastille (décision de l'auteur, 11/11/2026 : « Je valide l'encre foncée sur
+# les marques orange et grises »). Le blanc ne fait que 3,2:1 sur l'orange et 3,3 à 3,6:1 sur les gris de marque ; il
+# reste sur le bleu (8,2:1). Ailleurs le texte s'écrit à l'encre la plus foncée : 6,2:1 sur l'orange, 5,5:1 sur le gris
+# (#26262f n'y ferait que 4,2:1).
+ENCRE_SUR_MARQUE = "#0A0A0E"
+
+
+def _luminance(c: str) -> float:
+    v = [int(c[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    v = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in v]
+    return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]
+
+
+def contraste(a: str, b: str) -> float:
+    la, lb = _luminance(a), _luminance(b)
+    return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
+
+
+def encre_sur(fond: str) -> str:
+    """Couleur du TEXTE posé sur une marque de couleur `fond` (#rrggbb) : le blanc s'il y fait 4,5:1 au moins (bleu de la
+    charte), sinon l'encre la plus foncée. À appeler là où un texte est écrit DANS une barre, un segment ou une pastille."""
+    return "#ffffff" if contraste("#ffffff", fond) >= 4.5 else ENCRE_SUR_MARQUE
+
+
+def encre_texte(couleur: str) -> str:
+    """Couleur du TEXTE pour une couleur de série : l'orange et le gris des marques ont chacun leur encre, plus foncée ;
+    toute autre couleur (bleu, encres) s'écrit telle quelle. À appeler là où un texte reçoit la couleur de sa série ;
+    la marque, elle, garde la couleur d'origine."""
+    return _ENCRE_DE_SERIE.get((couleur or "").lower(), couleur)
 
 
 def coupe(s: str, n: int) -> list[str]:
@@ -46,6 +88,10 @@ def coupe(s: str, n: int) -> list[str]:
     s = re.sub(r"(\d) (points?|pb|percentage|basis)\b", "\\1\u00a0\\2", s)
     s = re.sub(r"\b(basis|percentage) (points?)\b", "\\1\u00a0\\2", s)
     s = re.sub(r"\b(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre) (\d{4})\b",
+               "\\1\u00a0\\2", s)
+    # Même soudure pour les mois anglais (11/11/2026, contrôle du rendu : « 8 September / 2025 », sept coupures de ce
+    # genre dans six figures anglaises).
+    s = re.sub(r"\b(January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})\b",
                "\\1\u00a0\\2", s)
     # Sigle + année et année + nom qu'elle qualifie (« DSM / 2025 », « 2027 / draft budget », « 2024 / commitment »).
     s = re.sub(r"\b(DSM|PLF|PSMT|PLFSS|LFI|LFSS) (\d{4})\b", "\\1\u00a0\\2", s)
@@ -92,7 +138,20 @@ def pied(e: list[str], y0: float, largeur: int, blocs, filet: str) -> str:
     h = int(round(y + 8))
     s = "\n".join(e)
     s = re.sub(r'viewBox="0 0 %d [0-9.]+"' % largeur, 'viewBox="0 0 %d %d"' % (largeur, h), s, count=1)
+    # Fond blanc opaque pour toute figure (11/11/2026, contrôle du rendu) : 22 figures détaillées n'en avaient pas, et
+    # les arcs décoratifs du fond de page traversaient leur tracé. Posé ici, une fois, juste après la description.
+    if not a_fond_blanc(s, largeur):
+        s = s.replace("</desc>", '</desc>\n<rect width="%d" height="%d" fill="#ffffff"/>' % (largeur, h), 1)
     return re.sub(r'<rect width="%d" height="[0-9.]+"' % largeur, '<rect width="%d" height="%d"' % (largeur, h), s, count=1)
+
+
+def a_fond_blanc(svg: str, largeur: int) -> bool:
+    """Un des trois premiers rectangles couvre-t-il toute la largeur, en blanc, depuis le bord gauche ?"""
+    for r in re.findall(r"<rect\b[^>]*>", svg)[:3]:
+        if (re.search(r'fill="(#fff|#ffffff|white)"', r, re.I) and 'width="%d"' % largeur in r
+                and not re.search(r'\bx="[1-9]', r)):
+            return True
+    return False
 
 
 def lire(svg: str, classe: str) -> str:
@@ -138,7 +197,9 @@ def parite(svg_detaille: str, svg_mobile: str, fs_min: float, couleurs=()) -> li
     desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_detaille, re.S).group(1))
     nombres = set(re.findall(r"\d+(?:[,.]\d+)?", desc))
     textes = re.findall(r'<text [^>]*font-weight="600"[^>]*>([^<]*)</text>', svg_mobile)
-    for c in couleurs:
+    # Un texte de série s'écrit dans l'ENCRE de sa couleur (encre_texte) : les deux sont lues, sinon le contrôle
+    # deviendrait aveugle aux valeurs orange sans rien signaler (11/11/2026).
+    for c in sorted(set(couleurs) | {encre_texte(c) for c in couleurs}):
         textes += re.findall(r'<text [^>]*fill="%s"[^>]*>([^<]*)</text>' % re.escape(c), svg_mobile)
     dessines = {n for t in textes for n in re.findall(r"\d+(?:[,.]\d+)?", html.unescape(t)) if not re.fullmatch(r"(19|20)\d\d", n)}
     ecarts = []

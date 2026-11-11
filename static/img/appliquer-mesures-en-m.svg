@@ -5,7 +5,7 @@
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">French laws, by session of the</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">law</text>
 <text x="0" y="104" font-size="13.5" fill="#52514e">number of measures listed and their</text>
-<text x="0" y="122" font-size="13.5" fill="#52514e">status at 5 October 2026</text>
+<text x="0" y="122" font-size="13.5" fill="#52514e">status at 5 October 2026</text>
 <rect x="0" y="136" width="12" height="12" fill="#184f95"/>
 <text x="17" y="147" font-size="13.5" fill="#52514e">identified published instrument</text>
 <rect x="0" y="155" width="12" height="12" fill="#eb6834"/>
@@ -59,7 +59,7 @@
 <line x1="0" y1="694.0" x2="300" y2="694.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="715.0" font-size="13.5" fill="#52514e">Barometer of the application of laws</text>
 <text class="pied-source" x="0" y="732.0" font-size="13.5" fill="#52514e">(National Assembly, LexImpact; DILA</text>
-<text class="pied-source" x="0" y="749.0" font-size="13.5" fill="#52514e">data), status at 5 October 2026</text>
+<text class="pied-source" x="0" y="749.0" font-size="13.5" fill="#52514e">data), status at 5 October 2026</text>
 <text class="pied-note" x="0" y="770.0" font-size="13.5" fill="#52514e">Measures of the laws promulgated per</text>
 <text class="pied-note" x="0" y="787.0" font-size="13.5" fill="#52514e">session (1 Oct.-30 Sept.), excluding</text>
 <text class="pied-note" x="0" y="804.0" font-size="13.5" fill="#52514e">treaties. Status at the reading date:</text>

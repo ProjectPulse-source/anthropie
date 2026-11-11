@@ -1045,9 +1045,11 @@ def ecarts_figure(ecarts: dict, an: str, lang: str = "fr") -> str:
     debord = pos[-1] - (Y1 - 2)
     if debord > 0:
         pos = [p - debord for p in pos]
+    # Le nom s'écrit à l'ENCRE de sa série (PF.encre_texte, 11/11/2026 : l'orange des pays hors zone euro ne fait que
+    # 3,20:1 en texte) ; la courbe garde la couleur de la série.
     for (yy, g, col, val), y_ in zip(fins, pos):
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s"%s>%s</text>'
-                 % (X1 + 6, y_ + 4, TY_ANNOT, col, ' font-weight="600"' if g == "FR" else "",
+                 % (X1 + 6, y_ + 4, TY_ANNOT, PF.encre_texte(col), ' font-weight="600"' if g == "FR" else "",
                     esc("%s %s" % (NOMS[g] if lang == "fr" else NOMS_EN[g], nb(val, 2)))))
     # Valeurs hors échelle marquées (OPTIMUM-23) : un triangle au bord supérieur pour chaque année où un pays dépasse 10 points.
     for g in SERIE_ECARTS:
@@ -1876,8 +1878,10 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
             lx[2], ly[2], "mt-m", titres[2], D["dette-monde-transmission%s.svg" % suf], T["src_tr"],
             {"fr": "Repère, non prévision.", "en": "A marker, not a forecast."}[lang], lang,
             ["FR", "DK", "SE", "PT"], {"FR": nb(by["FR"]["taux10"] - by["FR"]["prix"], 2) + pt}, x0=56),
+        # rows + PARTIELS, comme la version détaillée (11/11/2026, contrôle du rendu : le Danemark, sans recettes publiées
+        # mais avec un stock, figurait dans la version détaillée et manquait au téléphone, 26 pays contre 27).
         "dette-monde-stock%s-m.svg" % suf: barres_stock_m(
-            rows, an, D["dette-monde-stock%s.svg" % suf], T["src_stock"],
+            rows + PARTIELS, an, D["dette-monde-stock%s.svg" % suf], T["src_stock"],
             {"fr": "Stock brut, sans les actifs publics ni les engagements hors dette.",
              "en": "Gross stock, excluding public assets and liabilities outside debt."}[lang], titres[3], lang),
         "dette-monde-ecarts%s-m.svg" % suf: ecarts_figure_m(ecarts, an, D["dette-monde-ecarts%s.svg" % suf], lang),

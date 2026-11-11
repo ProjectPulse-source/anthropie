@@ -13,7 +13,7 @@
 <rect x="472.0" y="96" width="136.6" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="540.4" y="114.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">24,6</text>
 <rect x="608.7" y="96" width="103.3" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
-<text x="660.3" y="114.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">18,6</text>
+<text x="660.3" y="114.0" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">18,6</text>
 <text x="146" y="147.5" font-size="11" fill="#26262f" text-anchor="end">Cadres, professions</text>
 <text x="146" y="160.5" font-size="11" fill="#26262f" text-anchor="end">intellectuelles supérieures</text>
 <rect x="156.0" y="136" width="306.9" height="28" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
@@ -23,7 +23,7 @@
 <rect x="541.9" y="136" width="55.0" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="569.4" y="154.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">9,9</text>
 <rect x="596.9" y="136" width="115.1" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
-<text x="654.5" y="154.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">20,7</text>
+<text x="654.5" y="154.0" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">20,7</text>
 <text x="146" y="194.0" font-size="11" fill="#26262f" text-anchor="end">Professions intermédiaires</text>
 <rect x="156.0" y="176" width="339.7" height="28" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="325.9" y="194.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">61,1</text>
@@ -32,7 +32,7 @@
 <rect x="530.7" y="176" width="109.0" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="585.2" y="194.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">19,6</text>
 <rect x="639.7" y="176" width="72.3" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
-<text x="675.9" y="194.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">13,0</text>
+<text x="675.9" y="194.0" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">13,0</text>
 <text x="146" y="234.0" font-size="11" fill="#26262f" text-anchor="end">Employés</text>
 <rect x="156.0" y="216" width="336.7" height="28" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="324.4" y="234.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">60,5</text>
@@ -41,7 +41,7 @@
 <rect x="519.4" y="216" width="126.3" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="582.6" y="234.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">22,7</text>
 <rect x="645.8" y="216" width="66.2" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
-<text x="678.9" y="234.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">11,9</text>
+<text x="678.9" y="234.0" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">11,9</text>
 <text x="146" y="274.0" font-size="11" fill="#26262f" text-anchor="end">Ouvriers</text>
 <rect x="156.0" y="256" width="241.3" height="28" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="276.7" y="274.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">43,4</text>
@@ -50,7 +50,7 @@
 <rect x="418.4" y="256" width="255.8" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="546.3" y="274.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">46,0</text>
 <rect x="674.2" y="256" width="37.8" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
-<text x="693.1" y="274.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">6,8</text>
+<text x="693.1" y="274.0" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">6,8</text>
 <text x="146" y="314.0" font-size="11" fill="#26262f" text-anchor="end">Retraités, inactifs</text>
 <rect x="156.0" y="296" width="252.1" height="28" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="282.1" y="314.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">45,3</text>
@@ -59,7 +59,7 @@
 <rect x="432.1" y="296" width="236.0" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="550.0" y="314.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">42,4</text>
 <rect x="668.0" y="296" width="44.0" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
-<text x="690.0" y="314.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">7,9</text>
+<text x="690.0" y="314.0" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">7,9</text>
 <line x1="0" y1="330.0" x2="720" y2="330.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="146" y="347.5" font-size="11" fill="#26262f" text-anchor="end" font-weight="600">Ensemble</text>
 <text x="146" y="360.5" font-size="11" fill="#26262f" text-anchor="end">(origine renseignée)</text>
@@ -70,7 +70,7 @@
 <rect x="498.3" y="336" width="135.2" height="28" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
 <text x="565.9" y="354.0" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">24,3</text>
 <rect x="633.5" y="336" width="78.5" height="28" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
-<text x="672.8" y="354.0" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">14,1</text>
+<text x="672.8" y="354.0" font-size="12" font-weight="600" fill="#0A0A0E" text-anchor="middle">14,1</text>
 <text x="289.6" y="76.0" font-size="11" fill="#55524f" text-anchor="middle">Université</text>
 <text x="289.6" y="89.0" font-size="11" fill="#55524f" text-anchor="middle">(dont IUT)</text>
 <text x="447.6" y="76.0" font-size="11" fill="#55524f" text-anchor="middle">Classes</text>

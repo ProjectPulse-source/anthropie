@@ -49,15 +49,15 @@
 <text x="30.0" y="474.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#184f95">2026</text>
 <text x="300.0" y="420.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#184f95">126,5 %</text>
 <line x1="0" x2="22" y1="495.0" y2="495.0" stroke="#eb6834" stroke-width="2.5" stroke-dasharray="10 4"/>
-<text x="30.0" y="500.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#eb6834">Prévision du PLF 2027</text>
-<text x="30.0" y="518.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#eb6834">(2030)</text>
-<text x="300.0" y="500.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#eb6834">120,9 %</text>
+<text x="30.0" y="500.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">Prévision du PLF 2027</text>
+<text x="30.0" y="518.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">(2030)</text>
+<text x="300.0" y="500.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#b8420f">120,9 %</text>
 <text x="0.0" y="544.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">10e centile (2030)</text>
 <text x="300.0" y="544.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#52514e">118,1 %</text>
 <line x1="0" x2="22" y1="565.0" y2="565.0" stroke="#b8703f" stroke-width="1.5" stroke-dasharray="2 4"/>
-<text x="30.0" y="570.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8703f">Engagement d'octobre 2024</text>
-<text x="30.0" y="588.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8703f">(2029)</text>
-<text x="300.0" y="570.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#b8703f">115,8 %</text>
+<text x="30.0" y="570.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8420f">Engagement d'octobre 2024</text>
+<text x="30.0" y="588.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8420f">(2029)</text>
+<text x="300.0" y="570.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#b8420f">115,8 %</text>
 <text x="30.0" y="614.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">Commission, politique</text>
 <text x="30.0" y="632.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">inchangée (2035, hors</text>
 <text x="30.0" y="650.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">graphique)</text>

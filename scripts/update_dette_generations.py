@@ -1402,7 +1402,10 @@ def fig_actifs(total, dec, A):
             e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y - 12, W, y - 12, GRID))
         e.append('<text x="0" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (y + hb / 2 + 4, INK, esc(lib_)))
         x = X0
-        for cle, col, txt in (("part_actifs", BLEU, "#ffffff"), ("part_transferts", GRIS_CLAIR, INK), ("part_desepargne", ORANGE, "#ffffff")):
+        # Valeur d'un segment plein : l'encre que sa couleur demande (pied_figure.encre_sur, 11/11/2026) -- blanc sur le
+        # bleu, encre la plus foncée sur l'orange, où le blanc ne faisait que 3,2:1.
+        for cle, col, txt in (("part_actifs", BLEU, pied_figure.encre_sur(BLEU)), ("part_transferts", GRIS_CLAIR, INK),
+                              ("part_desepargne", ORANGE, pied_figure.encre_sur(ORANGE))):
             w = (X1 - X0) * max(d[cle], 0) / 100
             e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" fill="%s"/>' % (x, y, max(w, 0.6), hb, col))
             if w >= 30:
@@ -1433,14 +1436,23 @@ def fig_actifs_m(total, dec, A, svg_d):
         e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, MUTED, esc(T["act_besoin_m"] % fr(d["besoin"]))))
         y += 8
         x = 0.0
-        for cle, col, txt in (("part_actifs", BLEU, "#ffffff"), ("part_transferts", GRIS_CLAIR, INK), ("part_desepargne", ORANGE, "#ffffff")):
+        dessous = []    # valeur d'un segment trop étroit pour la porter : écrite sous lui, centrée (11/11/2026, contrôle du
+        #                 rendu : « 14 % », imprimé en version détaillée, manquait au téléphone pour 2016-2025)
+        for cle, col, txt in (("part_actifs", BLEU, pied_figure.encre_sur(BLEU)), ("part_transferts", GRIS_CLAIR, INK),
+                              ("part_desepargne", ORANGE, pied_figure.encre_sur(ORANGE))):
             w = WM * max(d[cle], 0) / 100
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="28" fill="%s"/>' % (x, y, max(w, 0.6), col))
             if w >= 44 and cle != "part_actifs":
                 e.append('<text x="%.1f" y="%d" font-size="%s" font-weight="600" fill="%s" text-anchor="middle">%s%s</text>'
                          % (x + w / 2, y + 19, FS_MIN, txt, fr(d[cle], 0), T["pc"]))
+            elif cle != "part_actifs" and d[cle] > 0:
+                dessous.append((min(max(x + w / 2, 22), WM - 22), "%s%s" % (fr(d[cle], 0), T["pc"])))
             x += w
         y += 28
+        for xc, val in dessous:
+            e.append('<text x="%.1f" y="%d" font-size="%s" font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (xc, y + 15, FS_MIN, INK2, val))
+        if dessous:
+            y += 16
     return pied_m(e, y + 16, T["act_src_m"] % (A["a0"], A["fin"]), T["act_note"])
 
 

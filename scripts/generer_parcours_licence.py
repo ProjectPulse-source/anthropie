@@ -100,8 +100,10 @@ BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 # MUTED ne colore que du texte (ligne de licence) : encre atténuée de l'organe commun, jamais recopiée. GRIS reste le
 # gris des barres. Les trois générateurs de /enseignants/ lisent ces deux constantes ici.
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
-COULEUR = {"passage": (BLEU, "#ffffff"), "redoublement": (GRIS, "#ffffff"), "reorientation": (GRIS_CLAIR, INK),
-           "sortie": (ORANGE, INK)}
+# Valeur écrite dans un segment plein : l'encre que sa couleur demande (pied_figure.encre_sur, 11/11/2026) -- blanc sur
+# le bleu, encre la plus foncée sur le gris des barres, où le blanc ne faisait que 3,6:1.
+COULEUR = {"passage": (BLEU, pied_figure.encre_sur(BLEU)), "redoublement": (GRIS, pied_figure.encre_sur(GRIS)),
+           "reorientation": (GRIS_CLAIR, INK), "sortie": (ORANGE, INK)}
 LIBELLE = {"passage": ("Passés en", "2ᵉ année"), "redoublement": ("Recommencent", "une 1ʳᵉ année"),
            "reorientation": ("Réorientés", "hors licence"), "sortie": ("Non", "retrouvés")}
 # « Non retrouvés » et non « sortis du supérieur » (contre-expertise du 02/10/2026, F3) : la catégorie du SIES désigne une

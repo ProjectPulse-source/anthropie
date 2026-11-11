@@ -69,7 +69,7 @@
 <rect x="464.6" y="270" width="7.0" height="20" fill="#8a8781"/>
 <text x="475.6" y="284.0" font-size="11" fill="#52514e" text-anchor="start">21 pending out of 56 laws</text>
 <line x1="0" y1="332.0" x2="720" y2="332.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026</text>
+<text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026</text>
 <text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Statuses from the barometer's labels: 'pending'</text>
 <text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">does not mean 'late'; 'no measure to take' depends on the 'not applicable' label and does not prove that the law</text>
 <text class="pied-note" x="0" y="389.0" font-size="11" fill="#52514e">provided for no measure.</text>

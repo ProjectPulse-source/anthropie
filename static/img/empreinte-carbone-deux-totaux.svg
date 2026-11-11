@@ -13,9 +13,9 @@
 <text x="216.7" y="115.0" font-size="11" fill="#ffffff" text-anchor="middle">Production en France</text>
 <text x="216.7" y="128.0" font-size="11" fill="#ffffff" text-anchor="middle">pour la demande française</text>
 <rect x="317.9" y="78" width="142.2" height="62" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
-<text x="388.9" y="100.0" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">123</text>
-<text x="388.9" y="115.0" font-size="11" fill="#ffffff" text-anchor="middle">Production en France</text>
-<text x="388.9" y="128.0" font-size="11" fill="#ffffff" text-anchor="middle">exportée</text>
+<text x="388.9" y="100.0" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="middle">123</text>
+<text x="388.9" y="115.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Production en France</text>
+<text x="388.9" y="128.0" font-size="11" fill="#0A0A0E" text-anchor="middle">exportée</text>
 <text x="468.0" y="114.0" font-size="15" font-weight="600" fill="#26262f">= 398</text>
 <text x="0" y="170" font-size="11.5" fill="#26262f"><tspan font-weight="600">Empreinte carbone</tspan> de la France</text>
 <rect x="0.0" y="178" width="115.6" height="62" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>

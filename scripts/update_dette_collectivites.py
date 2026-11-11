@@ -1429,7 +1429,11 @@ def fig_signature(r: dict, A: dict, lang: str = "fr") -> str:
     Y = lambda v: y1 - (v - vmin) / (vmax - vmin) * (y1 - y0)  # noqa: E731
     V = _sig_vals(r, A)
     e = entete(H, "cs", T["sig_titre"], T["sig_desc"].format(**V))
-    bx0, bx1 = X(2014), X(2017.999)
+    # Bande de période sur une série ANNUELLE : elle couvre exactement les points des années qu'elle nomme, d'une
+    # demi-année avant le premier à une demi-année après le dernier (arbitrage du 11/11/2026, délégué par l'auteur
+    # « au mieux de la lisibilité » : bornée de 2014 à la fin de 2017, elle s'arrêtait sur le point de 2018, et deux
+    # contrôleurs indépendants l'ont lue « 2014-2018 »).
+    bx0, bx1 = X(2013.5), X(2017.5)
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (bx0, y0, bx1 - bx0, y1 - y0, BANDE))
     for v in (2, 3, 4, 5):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x1, Y(v), GRID))
@@ -1438,18 +1442,35 @@ def fig_signature(r: dict, A: dict, lang: str = "fr") -> str:
         e.append(txt(X(a), y1 + 15, str(a), TY_AXE, MUTED, "middle"))
     e.append(txt((bx0 + bx1) / 2, y1 + 32, "2014-2017", TY_ANNOT, INK2, "middle"))
     e.append(txt((bx0 + bx1) / 2, y1 + 45, T["sig_bande"], TY_ANNOT, INK2, "middle"))
+    # Les pointillés des municipales s'interrompent derrière les textes posés dans la zone de tracé (11/11/2026, contrôle
+    # indépendant : à 11 px, trois lignes du bloc de droite traversaient le pointillé de 2020 de 10 à 22 px, et le
+    # libellé du pic celui de 2008). Largeur estimée large : un pointillé coupé un peu tôt ne gêne pas la lecture.
+    af, a_pic = max(tr), lg.extremum(tr, tr.get, 1)
+    est = lambda l_, size=TY_MIN: 0.6 * size * len(l_)  # noqa: E731
+    blocs = []      # (gauche, droite, haut, bas) de chaque ligne de texte
+    for k, l in enumerate(T["sig_fin"]):
+        l, yy = l.format(ep_a1=af), Y(tr[af]) - 8 + 13 * k
+        blocs.append((X(af) + 8, X(af) + 8 + est(l), yy - 11, yy + 4))
+    for k, l in enumerate(T["sig_rupt"]):
+        l, yy = l.format(ep_a1=af), Y(4.3) + 13 * k
+        blocs.append((x1 - est(l), x1, yy - 11, yy + 4))
+    for k, l in enumerate(T["sig_pic"]):
+        l, yy = l.format(a=a_pic), Y(tr[a_pic]) + 4 + 13 * k
+        blocs.append((X(a_pic) - 8 - est(l, TY_ANNOT), X(a_pic) - 8, yy - 11, yy + 4))
     for m in MUNICIPALES:
-        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="2 4"/>' % (X(m), y0, X(m), y1, AXIS))
+        ya = float(y0)
+        for haut, bas in sorted((h_, b_) for g_, d_, h_, b_ in blocs if g_ - 3 <= X(m) <= d_ + 3) + [(float(y1), float(y1))]:
+            if haut - ya > 1:
+                e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-dasharray="2 4"/>' % (X(m), ya, X(m), min(haut, y1), AXIS))
+            ya = max(ya, bas)
         for k, l in enumerate(T["sig_mun"]):  # la dernière ligne au contact du trait, les autres au-dessus
             e.append(txt(X(m), y0 - 6 - 13 * (len(T["sig_mun"]) - 1 - k), l.format(m=m), TY_MIN, MUTED, "middle"))
     for s, col in ((tr, GRIS), (inv, BLEU)):
         pts = " ".join("%.1f,%.1f" % (X(a), Y(v)) for a, v in sorted(s.items()) if v is not None)
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.6"/>' % (pts, col))
-    a_pic = lg.extremum(tr, tr.get, 1)
     for k, l in enumerate(T["sig_pic"]):
         e.append(txt(X(a_pic) - 8, Y(tr[a_pic]) + 4 + 13 * k, l.format(a=a_pic), anchor="end"))
     # Repere terminal de la serie des transferts (pas de lecture au-dela de 2017) et reclassements au contact
-    af = max(tr)
     e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>' % (X(af), Y(tr[af]), GRIS))
     for k, l in enumerate(T["sig_fin"]):  # à droite de l'anneau : la première ligne au-dessus, la seconde à sa hauteur
         e.append(txt(X(af) + 8, Y(tr[af]) - 8 + 13 * k, l.format(ep_a1=af), TY_MIN, INK2))
@@ -1471,13 +1492,17 @@ def fig_signature_m(r: dict, A: dict, lang: str, svg_d: str) -> str:
     vmin, vmax = 1.5, 5.0
     X = lambda a: X0 + (a - a_min) / (a_max - a_min) * (X1 - X0)  # noqa: E731
     Y = lambda v: BAS - (v - vmin) / (vmax - vmin) * (BAS - TOP)  # noqa: E731
-    e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (X(2014), TOP, X(2017.999) - X(2014), BAS - TOP, BANDE))
+    e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (X(2013.5), TOP, X(2017.5) - X(2013.5), BAS - TOP, BANDE))   # mêmes bornes que la version détaillée
     for v in (2, 3, 4, 5):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (X0, Y(v), X1, Y(v), GRID))
         e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end">%d</text>' % (X0 - 4, Y(v) + 5, FS_MIN, MUTED, v))
-    for a in (a_min, 2014, a_max):
+    for a in (a_min, a_max):
         e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%d</text>'
-                 % (X(a), BAS + 18, FS_MIN, MUTED, "start" if a == a_min else ("end" if a == a_max else "middle"), a))
+                 % (X(a), BAS + 18, FS_MIN, MUTED, "start" if a == a_min else "end", a))
+    # La bande porte sa période sous elle, comme en version détaillée (11/11/2026 : seule une graduation « 2014 » la
+    # situait, et rien ne disait où elle finissait).
+    e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">2014-2017</text>'
+             % ((X(2013.5) + X(2017.5)) / 2, BAS + 18, FS_MIN, INK2))
     for s, col in ((tr, GRIS), (inv, BLEU)):
         pts = " ".join("%.1f,%.1f" % (X(a), Y(v)) for a, v in sorted(s.items()) if v is not None)
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.6"/>' % (pts, col))
@@ -1603,9 +1628,11 @@ def fig_cascade_m(r: dict, A: dict, lang: str, svg_d: str) -> str:
                      % (4 if solde else 0, y + 4, FS_MIN, INK if solde else INK2, ' font-weight="600"' if solde else "", esc(l_)))
         y += 23
         for xc, val, num in ((C1, vm, nm), (C2, vp, np_)):
+            # Couleur de la contribution (celle des barres de la version détaillée) ; le TEXTE s'écrit dans son encre
+            # (pied_figure.encre_texte : orange foncé pour l'orange, bleu et noir inchangés ; 11/11/2026).
             col = INK if num is None else (BLEU if num > 0 else ORANGE)
             e.append('<text x="%d" y="%d" font-size="15" font-weight="600" fill="%s" text-anchor="end">%s</text>'
-                     % (xc - (4 if solde else 0), y, col, esc(val)))
+                     % (xc - (4 if solde else 0), y, pied_figure.encre_texte(col), esc(val)))
         y += 6 if solde else 0
     return _pied_m(e, y + 16, (T["cas_src"].format(releve=A["_releve"]), T["cas_note_m"].format(**V)), lang)
 
@@ -1910,14 +1937,16 @@ def fig_plf_m(r: dict, A: dict, lang: str, svg_d: str) -> str:
     for l_ in pied_figure.coupe(T["unite"], 38):
         y += 19
         e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, MUTED, esc(l_)))
+    # Version sans barres : l'orange n'y colore que du TEXTE (clé de lecture et montants), écrit dans son encre
+    # (pied_figure.encre_texte, 11/11/2026) ; MUTED est déjà une encre et passe inchangé.
     for lib_, col in (((T["leg_m_retire"], MUTED),) if any(l_[4] for l_ in lignes) else ()) + ((T["leg_m_reste"], ORANGE),):
         for l_ in pied_figure.coupe(lib_, 38):
             y += 19
-            e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(l_)))
+            e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, pied_figure.encre_texte(col), esc(l_)))
     for cle, lib, val, md, retire, etat in lignes:
         y += 26
         e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>'
-                 % (y, MUTED if retire else ORANGE, esc(val + (" bn" if lang == "en" else " Md€"))))
+                 % (y, pied_figure.encre_texte(MUTED if retire else ORANGE), esc(val + (" bn" if lang == "en" else " Md€"))))
         for l_ in pied_figure.coupe(lib, 38):
             y += 19
             e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK, esc(l_)))

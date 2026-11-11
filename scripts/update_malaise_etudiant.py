@@ -460,6 +460,9 @@ W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE = "#184f95", "#eb6834"
 # MUTED ne colore que du texte (graduations, années, licence) : encre atténuée de l'organe commun, jamais recopiée.
+# Les listes de séries et d'étiquettes portent la couleur de la SÉRIE (BLEU, ORANGE) : la courbe, le point et la pastille
+# de légende la gardent ; tout TEXTE qui la reçoit s'écrit dans son encre, pied_figure.encre_texte(col), appelée là où le
+# texte est émis (11/11/2026 : l'orange des marques ne fait que 3,20:1 sur blanc, son texte passe à l'orange foncé).
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
 FS_MIN = pied_figure.POLICE_M
 LIC_FIG = "Calcul Stéphane Lalut, licence CC BY 4.0 · stephane-lalut.com/les-etudiants-vont-ils-plus-mal/"
@@ -506,10 +509,11 @@ def esc(s: str) -> str:
 
 def valeur(x: float, y: float, taille, col: str, txt: str, ancre: str = "middle", gras: bool = False) -> str:
     """Étiquette de valeur posée sur un liseré blanc (copie aria-hidden dessous) : une ligne de grille qui passe sous
-    les chiffres ne les coupe pas (« 130 » sur la grille de 100, « 360 » sous celle de 400 : contrôleur, 07/11/2026)."""
+    les chiffres ne les coupe pas (« 130 » sur la grille de 100, « 360 » sous celle de 400 : contrôleur, 07/11/2026).
+    col : couleur de la SÉRIE ; le texte s'écrit dans son encre (pied_figure.encre_texte)."""
     att = 'x="%.1f" y="%.1f" font-size="%s"%s text-anchor="%s"' % (x, y, taille, ' font-weight="600"' if gras else "", ancre)
     return ('<text aria-hidden="true" %s fill="#ffffff" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">%s</text>'
-            '<text %s fill="%s">%s</text>' % (att, esc(txt), att, col, esc(txt)))
+            '<text %s fill="%s">%s</text>' % (att, esc(txt), att, pied_figure.encre_texte(col), esc(txt)))
 
 
 def textes_fig(A: dict) -> dict:
@@ -560,8 +564,8 @@ def fig_hospit(c: dict, A: dict) -> str:
     for serie, col, nom, cle, var in ((f, ORANGE, "femmes de 18 à 24 ans", "hosp_f_der", A["hosp_f_var"]),
                                       (h, BLEU, "hommes de 18 à 24 ans", "hosp_h_der", A["hosp_h_var"])):
         y = Y(serie[str(a1)])
-        e.append('<text x="%d" y="%.1f" font-size="16" font-weight="600" fill="%s">%s</text>' % (X1 + 12, y + 5, col, A[cle]))
-        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 12, y + 21, col, nom))
+        e.append('<text x="%d" y="%.1f" font-size="16" font-weight="600" fill="%s">%s</text>' % (X1 + 12, y + 5, pied_figure.encre_texte(col), A[cle]))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 12, y + 21, pied_figure.encre_texte(col), nom))
         e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">+%s %% depuis 2019</text>' % (X1 + 12, y + 35, INK2, var))
     return pied_figure.pied(e, BAS + 30, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                              (LIC_FIG, MUTED, "pied-licence")], GRID)
@@ -609,7 +613,7 @@ def fig_hospit_m(c: dict, A: dict, svg_d: str) -> str:
         e.append('<text x="22" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, nom))
         y += 21
         e.append('<text x="22" y="%d" font-size="%s" fill="%s">2019 : %s · %s : %s (+%s %%)</text>'
-                 % (y, FS_MIN, col, v19, a1, vder, var))
+                 % (y, FS_MIN, pied_figure.encre_texte(col), v19, a1, vder, var))
     return pied_figure.pied_mobile(e, y + 16, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                                (LIC_FIG_M, MUTED, "pied-licence")], GRID)
 
@@ -673,11 +677,12 @@ def courbes(ident: str, t: dict, desc: str, series, vmax: float, pas: float, eti
         e.append(valeur(X(a), Y(v) + 18 if pos and pos[0] == "dessous" else Y(v) - 9, 11, col, txt))
     for v, col, gros, nom in terminaux:
         y = Y(v)
+        enc = pied_figure.encre_texte(col)   # texte du terminal : encre de la série (la courbe et ses points gardent col)
         if gros:
-            e.append('<text x="%d" y="%.1f" font-size="16" font-weight="600" fill="%s">%s</text>' % (X1 + 12, y + 5, col, esc(gros)))
-            e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 12, y + 21, col, esc(nom)))
+            e.append('<text x="%d" y="%.1f" font-size="16" font-weight="600" fill="%s">%s</text>' % (X1 + 12, y + 5, enc, esc(gros)))
+            e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 12, y + 21, enc, esc(nom)))
         else:
-            e.append('<text x="%d" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (X1 + 12, y + 4, col, esc(nom)))
+            e.append('<text x="%d" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (X1 + 12, y + 4, enc, esc(nom)))
     return pied_figure.pied(e, BAS + 30, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                              (LIC_FIG, MUTED, "pied-licence")], GRID)
 
@@ -724,7 +729,7 @@ def courbes_m(ident: str, t: dict, svg_d: str, series, vmax: float, pas: float, 
         e.append('<rect x="0" y="%d" width="14" height="4" fill="%s"/>' % (y - 6, col))
         e.append('<text x="22" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(nom)))
         y += 21
-        e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(ligne)))
+        e.append('<text x="22" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, pied_figure.encre_texte(col), esc(ligne)))
     return pied_figure.pied_mobile(e, y + 16, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                                (LIC_FIG_M, MUTED, "pied-licence")], GRID)
 

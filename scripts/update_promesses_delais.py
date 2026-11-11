@@ -951,7 +951,9 @@ def fig_cursus(r: dict, A: dict) -> str:
     y2 = 168
     e.append(txt(0, y2 + 21, L["mandat"], 11, INK, weight="600"))
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="32" fill="%s"/>' % (X(0), y2, X(r["mandat"]) - X(0), GRIS))
-    e.append(txt(X(r["mandat"] / 2), y2 + 20, L["ans"].format(r["mandat"]), FS_D, "#ffffff", "middle"))
+    # « 5 ans » dans la barre grise : l'encre que cette couleur demande (pied_figure.encre_sur, 11/11/2026 : le blanc n'y
+    # faisait que 3,25:1).
+    e.append(txt(X(r["mandat"] / 2), y2 + 20, L["ans"].format(r["mandat"]), FS_D, pied_figure.encre_sur(GRIS), "middle"))
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(0), y2 + 33, X(r["duree"]), y2 + 33, GRID))
     for a in range(0, int(r["duree"]) + 1):
         e.append(txt(X(a), y2 + 50, str(a), FS_D, MUTED, "middle"))
@@ -984,7 +986,9 @@ def fig_admissions(r: dict, A: dict) -> str:
     # deux rangs : en anglais, les deux étiquettes se touchaient sur un seul (contre-expertise du rendu, 12/10/2026) ;
     # celle de 2010-2011 descend dans la zone vide au-dessus des barres d'avant 2010 (toutes < 9 000)
     for a, lab, ylab in ((2010, L["r1"], y0 + 12), (2021, L["r2"], y0 - 8)):   # y0 + 12 : 4 px sous le filet de 12 000 à 11 px
-        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (X(a), y0 - 4, X(a), y1, INK2))
+        # Chaque pointillé part de la hauteur de SA propre étiquette (11/11/2026, contrôle du rendu) : partant tous deux
+        # de y0 - 4, celui de 2010-2011 venait se loger sous l'étiquette de 2021, agrandie, qui semblait le coiffer.
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (X(a), ylab - 10, X(a), y1, INK2))
         e.append(txt(X(a) - 4, ylab, lab, FS_D, INK2, "end"))
     voisins = max(d[a] for a in range(r["amin"] - 2, r["amin"] + 3))
     ya = Y(voisins) - 22
@@ -1057,7 +1061,7 @@ def fig_cursus_m(r, A, svg_d):
     e.append(txt(0, y, L["mandat"], 15, INK, weight="600"))
     y += 10
     e.append('<rect x="0" y="%d" width="%.1f" height="30" fill="%s"/>' % (y, X(r["mandat"]), GRIS))
-    e.append(txt(X(r["mandat"]) / 2, y + 20, L["ans"].format(r["mandat"]), FS_MIN, "#ffffff", "middle", cls="val"))
+    e.append(txt(X(r["mandat"]) / 2, y + 20, L["ans"].format(r["mandat"]), FS_MIN, pied_figure.encre_sur(GRIS), "middle", cls="val"))
     y += 30
     e.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (y + 1, WM, y + 1, GRID))
     for a, anc in ((0, "start"), (r["mandat"], "middle"), (int(r["duree"]), "end")):

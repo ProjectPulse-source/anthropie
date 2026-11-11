@@ -109,6 +109,7 @@ WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, BLEU_CLAIR, ORANGE, ORANGE_CLAIR, GRIS = "#184f95", "#9db7da", "#eb6834", "#f5b89c", "#8a8781"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement
+ORANGE_TEXTE = pied_figure.ORANGE_TEXTE   # texte seulement (11/11/2026) : barres et contours gardent ORANGE
 ANTHR = INK2   # « déjà raccordés » : plein anthracite, distinct du gris clair de « suspendu » (contrôleurs du 04/11/2026)
 
 
@@ -546,7 +547,7 @@ def fig(c, Aff, lang):
     yy += 1 + 14 * (len(ab) - 1)
     # panneau B : térawattheures consommés ou projetés
     y = yy + 64
-    e.append('<text x="0" y="%d" font-size="12" font-weight="600" fill="%s">%s</text>' % (y, ORANGE, esc(t["pb"])))
+    e.append('<text x="0" y="%d" font-size="12" font-weight="600" fill="%s">%s</text>' % (y, ORANGE_TEXTE, esc(t["pb"])))
     vmax = 35.0
     lignes = [(t["m24"], [(v["rpt_2024"], ORANGE)], t["v_m24"]),
               (t["m25"], [(v["rpt_2025"], ORANGE)], t["v_m25"]),
@@ -566,7 +567,7 @@ def fig(c, Aff, lang):
             xf = xa + wb
         else:
             xf = _barre(e, x0, yy, larg, vmax, segs)
-        e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xf + 6, yy + 13, ORANGE, esc(val)))
+        e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xf + 6, yy + 13, ORANGE_TEXTE, esc(val)))
     yy = y + 18 + 34 * len(lignes) + 14
     e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x0, yy + 6, INK2, esc(t["fourchette"])))
     yy += 18
@@ -587,12 +588,13 @@ def fig_m(c, Aff, lang, svg_d):
     H = "url(#dtcm-hach)"
 
     def panneau(y, titre, col, vmax, lignes):
+        encre = pied_figure.encre_texte(col)   # le texte du panneau s'écrit dans l'encre de sa couleur ; les marques gardent col
         y += 14
         for l in pied_figure.coupe(titre, 34):
             y += 18
-            e.append('<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y, FS_MIN, col, esc(l)))
+            e.append('<text x="0" y="%d" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y, FS_MIN, encre, esc(l)))
         for k, (lib, segs, val, fourchette) in enumerate(lignes):
-            coul = INK2 if segs[0][1] in (GRIS, ANTHR) else col
+            coul = INK2 if segs[0][1] in (GRIS, ANTHR) else encre
             y += 10
             if col == ORANGE and k == 2:   # second périmètre : tous sites dédiés
                 y += 8

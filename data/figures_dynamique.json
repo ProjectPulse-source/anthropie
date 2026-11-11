@@ -31,7 +31,7 @@
    "fichier": "dette-dynamique-cascade-en",
    "titre": "Why the debt doubled: from 57.8% to 115.7% of GDP, 1995-2025",
    "montre": "Over the period, interest and nominal growth almost cancelled out; the rise in the debt is mostly due to primary deficits, excluding interest.",
-   "source": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, 1996-2025; Eurostat release of 21 October 2026",
+   "source": "Eurostat gov_10dd_edpt1 (debt), gov_10a_main (B9, D41PAY), notification GDP, France, 1996-2025; Eurostat release of 21 October 2026",
    "precaution": "Cumulative contributions to the ratio, in points of GDP: neither amounts paid nor causes. Totals computed before rounding, hence a possible gap of a tenth."
   },
   {
@@ -39,7 +39,7 @@
    "fichier": "dette-dynamique-annuelle-en",
    "titre": "Year by year: what pushed the debt-to-GDP ratio up or down, 1996-2025",
    "montre": "Year by year, what pushed the ratio up or held it back; in 2021-2023, nominal growth brought it down despite the deficits.",
-   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025; Eurostat release of 21 October 2026",
+   "source": "Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025; Eurostat release of 21 October 2026",
    "precaution": "Points of GDP per year; primary balance: a deficit counts as plus, a surplus as minus; the three bars add up to the change (black dot), to within a hundredth."
   },
   {
@@ -47,7 +47,7 @@
    "fichier": "dette-dynamique-conjoncture-en",
    "titre": "The cyclically adjusted primary deficit, according to three estimates, 1996-2025",
    "montre": "Cyclically adjusted, the primary deficit of 2022-2025 remains deeper than in 2015-2019 in all three estimates: the business cycle alone does not explain it.",
-   "source": "IMF, Fiscal Monitor, October 2026; European Commission, AMECO, spring 2026; OECD, Economic Outlook No. 119; Eurostat gov_10a_main, release of 21 October 2026",
+   "source": "IMF, Fiscal Monitor, October 2026; European Commission, AMECO, spring 2026; OECD, Economic Outlook No. 119; Eurostat gov_10a_main, release of 21 October 2026",
    "precaution": "Three methods: the Commission and the OECD also remove one-off measures, the IMF does not. Estimates of potential output, not measurements; grey bands: 2015-2019 and 2022-2025."
   }
  ]

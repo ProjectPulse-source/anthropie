@@ -27,22 +27,22 @@
 <path d="M 44.0 250.8 L 55.2 250.8 L 66.4 251.4 L 77.6 248.8 L 88.7 241.6 L 99.9 238.6 L 111.1 233.6 L 122.3 230.2 L 133.5 229.2 L 144.7 224.4 L 155.8 224.6 L 167.0 223.0 L 178.2 220.4 L 189.4 218.4 L 200.6 210.6 L 211.8 197.6 L 222.9 190.8 L 234.1 178.4 L 245.3 172.8 L 256.5 170.0 L 267.7 169.8 L 278.9 171.2 L 290.0 174.6 L 301.2 175.4 L 312.4 171.4 L 323.6 163.2 L 334.8 160.2 L 346.0 157.6 L 357.1 163.2 L 368.3 163.0 L 379.5 154.4 L 390.7 125.8 L 401.9 121.4 L 413.1 116.6 L 424.2 110.6 L 435.4 104.8 L 446.6 101.6 L 457.8 100.0 L 469.0 97.8 L 480.2 96.4 L 491.3 97.0 L 502.5 97.6 L 513.7 64.2 L 524.9 68.4 L 536.1 71.2 L 547.3 75.0 L 558.4 68.8 L 569.6 62.6 L 572.4 56.0" fill="none" stroke="#184f95" stroke-width="2.8" stroke-linejoin="round"/>
 <circle cx="44.0" cy="250.8" r="3.8" fill="#184f95"/>
 <text x="44.0" y="237.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1978</text>
-<text x="44.0" y="268.3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">21,6 %</text>
+<text x="44.0" y="268.3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8420f" text-anchor="middle">21,6 %</text>
 <circle cx="111.1" cy="233.6" r="3.8" fill="#184f95"/>
 <text x="111.1" y="220.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1984</text>
-<text x="111.1" y="258.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 30 %</text>
+<text x="111.1" y="258.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8420f" text-anchor="middle">> 30 %</text>
 <circle cx="245.3" cy="172.8" r="3.8" fill="#184f95"/>
 <text x="245.3" y="159.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">1996</text>
-<text x="245.3" y="206.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 60 %</text>
+<text x="245.3" y="206.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8420f" text-anchor="middle">> 60 %</text>
 <circle cx="390.7" cy="125.8" r="3.8" fill="#184f95"/>
 <text x="390.7" y="112.8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">2009</text>
-<text x="390.7" y="178.9" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 80 %</text>
+<text x="390.7" y="178.9" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8420f" text-anchor="middle">> 80 %</text>
 <circle cx="513.7" cy="64.2" r="3.8" fill="#184f95"/>
 <text x="513.7" y="51.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">2020</text>
-<text x="513.7" y="114.5" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8703f" text-anchor="middle">> 100 %</text>
+<text x="513.7" y="114.5" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8420f" text-anchor="middle">> 100 %</text>
 <circle cx="572.4" cy="56.0" r="5" fill="#eb6834"/>
 <text x="572.4" y="43.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#52514e" text-anchor="middle">T2 2026</text>
-<text x="572.4" y="91.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#eb6834" text-anchor="middle">119,0 %</text>
+<text x="572.4" y="91.6" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#b8420f" text-anchor="middle">119,0 %</text>
 <text x="55.2" y="303.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#6f6c66" text-anchor="start">1979-1982</text>
 <text x="55.2" y="315.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#6f6c66" text-anchor="start">post-choc pétrolier</text>
 <text x="217.3" y="303.0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" fill="#6f6c66" text-anchor="middle">1993</text>

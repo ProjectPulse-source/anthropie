@@ -35,14 +35,14 @@
 <circle cx="214.8" cy="337.4" r="3" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
 <circle cx="293.2" cy="342.3" r="3" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
 <circle cx="371.6" cy="346.0" r="3" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
-<text x="371.6" y="366.0" font-size="12" font-weight="400" text-anchor="middle" fill="#b8703f">Engagement d'octobre 2024</text>
-<text x="371.6" y="380.0" font-size="12" font-weight="400" text-anchor="middle" fill="#b8703f">115,8 % en 2029</text>
+<text x="371.6" y="366.0" font-size="12" font-weight="400" text-anchor="middle" fill="#b8420f">Engagement d'octobre 2024</text>
+<text x="371.6" y="380.0" font-size="12" font-weight="400" text-anchor="middle" fill="#b8420f">115,8 % en 2029</text>
 <text x="460.0" y="101.5" font-size="12" font-weight="400" text-anchor="start" fill="#52514e">90e centile — 136,2 %</text>
 <text x="460.0" y="219.6" font-size="12" font-weight="600" text-anchor="start" fill="#184f95">Commission, politique inchangée</text>
 <text x="460.0" y="235.6" font-size="12" font-weight="600" text-anchor="start" fill="#184f95">126,5 % en 2030</text>
 <text x="460.0" y="251.6" font-size="12" font-weight="400" text-anchor="start" fill="#184f95">sans nouvelles mesures après 2026</text>
-<text x="460.0" y="277.9" font-size="12" font-weight="600" text-anchor="start" fill="#eb6834">Prévision du PLF 2027</text>
-<text x="460.0" y="293.9" font-size="12" font-weight="600" text-anchor="start" fill="#eb6834">120,9 % en 2030</text>
+<text x="460.0" y="277.9" font-size="12" font-weight="600" text-anchor="start" fill="#b8420f">Prévision du PLF 2027</text>
+<text x="460.0" y="293.9" font-size="12" font-weight="600" text-anchor="start" fill="#b8420f">120,9 % en 2030</text>
 <text x="460.0" y="321.8" font-size="12" font-weight="400" text-anchor="start" fill="#52514e">10e centile — 118,1 %</text>
 <line x1="0" y1="420.0" x2="720" y2="420.0" stroke="#d8d6d0"/>
 <text class="pied-source" x="0" y="435.0" font-size="11" fill="#52514e">Sources : Commission européenne, Debt Sustainability Monitor 2025 (fiche France) ; Gouvernement, plan budgétaire et</text>

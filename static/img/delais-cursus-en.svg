@@ -18,7 +18,7 @@
 <text x="183.0" y="145.0" font-size="11" fill="#52514e" text-anchor="start">9 years from admission to the 2nd year</text>
 <text x="0.0" y="189.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Presidential term</text>
 <rect x="120.0" y="168" width="295.0" height="32" fill="#8a8f98"/>
-<text x="267.5" y="188.0" font-size="11" fill="#ffffff" text-anchor="middle">5 years</text>
+<text x="267.5" y="188.0" font-size="11" fill="#0A0A0E" text-anchor="middle">5 years</text>
 <line x1="120.0" y1="201" x2="710.0" y2="201" stroke="#e1e0d9"/>
 <text x="120.0" y="218.0" font-size="11" fill="#6f6c66" text-anchor="middle">0</text>
 <text x="179.0" y="218.0" font-size="11" fill="#6f6c66" text-anchor="middle">1</text>
@@ -32,7 +32,7 @@
 <text x="651.0" y="218.0" font-size="11" fill="#6f6c66" text-anchor="middle">9</text>
 <text x="710.0" y="218.0" font-size="11" fill="#6f6c66" text-anchor="middle">10</text>
 <line x1="0" y1="238.0" x2="720" y2="238.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="253.0" font-size="11" fill="#52514e">Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6</text>
+<text class="pied-source" x="0" y="253.0" font-size="11" fill="#52514e">Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6</text>
 <text class="pied-note" x="0" y="267.0" font-size="11" fill="#52514e">Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered</text>
 <text class="pied-note" x="0" y="281.0" font-size="11" fill="#52514e">residency from the 2023 academic year. Comparison of scale only: neither the effect of a policy nor the date of its</text>
 <text class="pied-note" x="0" y="295.0" font-size="11" fill="#52514e">first effects; residents provide care before the end.</text>

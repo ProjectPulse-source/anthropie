@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 453" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-mec-t qp-mec-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-mec-t">Par quels canaux la charge de la dette peut-elle être répartie ?</title>
 <desc id="qp-mec-d">Schéma sans quantités. Quatre mécanismes, non exhaustifs, peuvent modifier la charge de la dette et sa répartition, et se combinent : l'ajustement budgétaire ordinaire, par les prélèvements (contribuables) ou par les dépenses et prestations (usagers, bénéficiaires) ; l'inflation non anticipée, effet de prix qui ne se décide pas seul (détenteurs de créances et de revenus mal indexés) ; la restructuration, cas extrême (porteurs des titres). Le refinancement renouvelle l'échéance aux taux du moment et ne permet pas, à lui seul, d'identifier qui supportera la charge. En regard figure ce que la dette a financé.</desc>
+<rect width="720" height="453" fill="#ffffff"/>
 <text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Par quels canaux la charge de la dette peut-elle être répartie ?</text>
 <defs><marker id="qp-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#898781"/></marker></defs>
 <rect x="1" y="150" width="200" height="74" rx="6" fill="#ffffff" stroke="#184f95" stroke-width="1.5"/>

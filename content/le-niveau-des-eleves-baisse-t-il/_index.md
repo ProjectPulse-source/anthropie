@@ -3,7 +3,7 @@ title: "Le niveau des élèves baisse-t-il ?"
 description: "PISA 2025, TIMSS, PIRLS, tests d'entrée en seconde : ce que les évaluations disent du niveau des élèves en France. PISA, à 15 ans, perd {niv.lect_v15} points en lecture et {niv.math_v15} en mathématiques de 2015 à 2025 ; sur leurs derniers intervalles, TIMSS et PIRLS ne mettent pas en évidence de baisse significative. Ce que leur désaccord permet de conclure, et ce qu'il ne permet pas. Données OCDE, IEA et DEPP, recalculées."
 chapo: "Selon PISA, oui : de 2015 à 2025, les jeunes Français de 15 ans ont perdu {niv.lect_v15} points en compréhension de l'écrit et {niv.math_v15} en mathématiques, une baisse significative. Mais les évaluations passées en classe, en CM1 et en quatrième, ne mettent pas en évidence la même baisse récente. Les évaluations se contredisent-elles vraiment ?"
 date: 2026-10-08T00:00:00+02:00
-lastmod: 2026-10-08
+lastmod: 2026-11-11
 og_title: "Le niveau des élèves baisse-t-il ? PISA 2025, TIMSS, PIRLS, seconde — S. Lalut"
 og_image: "images/og-niveau-eleves.jpg"
 og_image_alt: "Carte de partage : « Le niveau des élèves baisse-t-il ? » — baisse du score PISA de 2015 à 2025 en lecture, en mathématiques et en sciences, France en orange contre la médiane des pays de l'OCDE en gris ; en mathématiques, la France recule plus que la plupart des pays."
@@ -15,6 +15,7 @@ og_image_alt: "Carte de partage : « Le niveau des élèves baisse-t-il ? » —
 lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 donnees: [niveau_eleves]
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-11, texte: "Correction de la figure qui situe la France parmi les pays de l'OCDE : la Turquie, dont le score a monté au-delà de l'échelle, sortait du cadre et n'était pas dessinée ; une flèche la signale désormais au bord de la figure, avec sa valeur. Rangs, médianes et quartiles, calculés sur tous les pays, sont inchangés."}
   - {date: 2026-11-05, texte: "Correction : la part des élèves de 15 ans au lycée (79 %, dont 56 % en seconde générale et technologique) était calculée sur les effectifs bruts de l'échantillon ; la page donne désormais les parts pondérées que publie la DEPP pour la population représentée (91 %, dont 65 % et 23 %), qui concordent avec la composition utilisée plus bas."}
   - {date: 2026-10-16, texte: "Correction : PISA évolue plus favorablement que TIMSS dans 12 pays, et non 13."}
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
@@ -74,8 +75,8 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="screen and (max-width: 899px)" srcset="/img/niveau-baisse-m.svg" width="300" height="639">
-    <img src="/img/niveau-baisse.svg" alt="Pour chaque domaine de PISA, variation du score moyen de 2015 à 2025 des {{< niv-val "n_ocde" >}} pays de l'OCDE, France en orange : compréhension de l'écrit −{{< niv-val "lect_v15" >}} points ({{< niv-val "lect_rang" >}}e plus forte baisse), culture mathématique −{{< niv-val "math_v15" >}} ({{< niv-val "math_rang" >}}e), culture scientifique −{{< niv-val "sci_v15" >}} ({{< niv-val "sci_rang" >}}e)." width="720" height="359" loading="lazy">
+    <source media="screen and (max-width: 899px)" srcset="/img/niveau-baisse-m.svg" width="300" height="698">
+    <img src="/img/niveau-baisse.svg" alt="Pour chaque domaine de PISA, variation du score moyen de 2015 à 2025 des {{< niv-val "n_ocde" >}} pays de l'OCDE, France en orange : compréhension de l'écrit −{{< niv-val "lect_v15" >}} points ({{< niv-val "lect_rang" >}}e plus forte baisse), culture mathématique −{{< niv-val "math_v15" >}} ({{< niv-val "math_rang" >}}e), culture scientifique −{{< niv-val "sci_v15" >}} ({{< niv-val "sci_rang" >}}e)." width="720" height="373" loading="lazy">
   </picture>
   <figcaption>Variation du score moyen PISA entre 2015 et 2025, pays membres de l'OCDE (OCDE, PISA 2025, volume&nbsp;I).</figcaption>
 </figure>

@@ -34,7 +34,7 @@
 <line x1="0" y1="460.0" x2="300" y2="460.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="481.0" font-size="13.5" fill="#55524f">AFT (outstanding debt, 31/12/2020),</text>
 <text class="pied-source" x="0" y="498.0" font-size="13.5" fill="#55524f">Eurostat (monthly HICP, France), ECB</text>
-<text class="pied-source" x="0" y="515.0" font-size="13.5" fill="#55524f">(SPF, January 2021); author's</text>
+<text class="pied-source" x="0" y="515.0" font-size="13.5" fill="#55524f">(SPF, January 2021); author's</text>
 <text class="pied-source" x="0" y="532.0" font-size="13.5" fill="#55524f">calculation</text>
 <text class="pied-note" x="0" y="553.0" font-size="13.5" fill="#55524f">Undiscounted sum of the real-value</text>
 <text class="pied-note" x="0" y="570.0" font-size="13.5" fill="#55524f">differences in promised payments, €bn</text>

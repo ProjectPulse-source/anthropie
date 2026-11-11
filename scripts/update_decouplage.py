@@ -455,7 +455,9 @@ def fig(c, Aff, lang):
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="16" fill="%s"/>' % (xa, yy + 2, max(xb - xa, 1.5), couleur(k)))
             lab = Aff["%s_%s_pct" % (d, k)] + pct
             if v >= 0:
-                e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>' % (xb + 4, yy + 14, couleur(k) if k != "int" else INK, esc(lab)))
+                # encre de la série (11/11/2026) : l'orange s'écrit en orange foncé, la barre garde couleur(k)
+                e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s">%s</text>'
+                         % (xb + 4, yy + 14, pied_figure.encre_texte(couleur(k)) if k != "int" else INK, esc(lab)))
             else:
                 e.append('<text x="%.1f" y="%d" font-size="11" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (xa - 4, yy + 14, INK, esc(lab)))
         y = y0p + 28 * 4

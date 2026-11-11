@@ -59,6 +59,8 @@ WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement (encre atténuée de l'organe commun)
+# ORANGE colore les MARQUES (barres) ; un TEXTE orange s'écrit à l'encre de l'organe commun, pied_figure.encre_texte(ORANGE)
+# (décision de l'auteur, 11/11/2026 : verdicts de la grille, « France au-dessus », valeurs de la version téléphone).
 FOND_NIVEAU = "#f3f1ee"
 LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Computed by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
@@ -889,7 +891,7 @@ def fig_grille(Aff, lang):
                 elif k == 2:
                     coul = INK2
                 elif k == 3:
-                    coul = ORANGE
+                    coul = pied_figure.encre_texte(ORANGE)
                 corps.append('<text x="%d" y="%d" font-size="%s"%s fill="%s">%s</text>' % (xs[k], y + 12 + 13 * i, fs, poids, coul, esc(l)))
         y += 13 * hl + 8
         corps.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="0.6"/>' % (y, W, y, GRID))
@@ -924,7 +926,7 @@ def fig_grille_m(Aff, lang, svg_d):
             e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(l)))
         y += 17
         e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(o)))
-        for pre, txt, coul in ((lab[0], v, INK), (lab[1], a, INK2), (lab[2], cc, ORANGE)):
+        for pre, txt, coul in ((lab[0], v, INK), (lab[1], a, INK2), (lab[2], cc, pied_figure.encre_texte(ORANGE))):
             for i, l in enumerate(pied_figure.coupe(pre + txt, 38)):
                 y += 17
                 e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, coul, esc(l)))
@@ -990,7 +992,7 @@ def fig_grece(c, Aff, lang):
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1" stroke-dasharray="3 3"/>' % (xs, TOP - 4, xs, BAS, INK))
     # libellé remonté de 2 px (11/11/2026) : à 11 px, le jambage du « p » de « septembre » rejoignait le haut du pointillé
     e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (xs, TOP - 8, INK, esc(t["seance"])))
-    e.append('<text x="%.1f" y="%.1f" font-size="11" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (xs - 8, Y(0.2), ORANGE, esc(t["dessus"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (xs - 8, Y(0.2), pied_figure.encre_texte(ORANGE), esc(t["dessus"])))
     e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">%s</text>' % (X(mois.index("2025-01")), Y(-0.45), INK2, esc(t["dessous"])))
     return pied_figure.pied(e, h + 2, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                           (LICENCES[lang], MUTED, "pied-licence")], GRID)
@@ -1023,11 +1025,11 @@ def fig_grece_m(c, Aff, lang, svg_d):
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1" stroke-dasharray="3 3"/>' % (xs, TOP - 2, xs, BAS, INK))
     y = BAS + 30
     sep = " : " if lang == "fr" else ": "
-    lignes = [((("Août 2025" if lang == "fr" else "August 2025") + sep + "%s / %s %%") % (Aff["f8_aout_fr"], Aff["f8_aout_el"]), ORANGE),
-              ((("Septembre 2025" if lang == "fr" else "September 2025") + sep + "%s / %s %%") % (Aff["f8_sept_fr"], Aff["f8_sept_el"]), ORANGE)]
+    lignes = [((("Août 2025" if lang == "fr" else "August 2025") + sep + ("%s / %s %%" if lang == "fr" else "%s / %s%%")) % (Aff["f8_aout_fr"], Aff["f8_aout_el"]), ORANGE),
+              ((("Septembre 2025" if lang == "fr" else "September 2025") + sep + ("%s / %s %%" if lang == "fr" else "%s / %s%%")) % (Aff["f8_sept_fr"], Aff["f8_sept_el"]), ORANGE)]
     for lib, col in lignes:
         y += 20
-        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, col, esc(lib)))
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, pied_figure.encre_texte(col), esc(lib)))
     for l in pied_figure.coupe(("France / Grèce, moyenne du mois ; ligne pointillée : la séance" if lang == "fr"
                                 else "France / Greece, monthly average; dotted line: the debate"), 38):
         y += 18

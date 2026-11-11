@@ -31,7 +31,7 @@
    "fichier": "collectivites-investissement-en",
    "titre": "Local government investment and transfers received, France, in % of GDP",
    "montre": "From 2013 to 2017, the transfers received by local government fell by €8.9 billion (0.64 points of GDP) and its investment by €7.5 billion (0.50 points); the comparable transfer series stops in 2017.",
-   "source": "Eurostat gov_10a_main, local government (S1313): investment P51G, current transfers received D73REC; France. Data retrieved on 10 November 2026.",
+   "source": "Eurostat gov_10a_main, local government (S1313): investment P51G, current transfers received D73REC; France. Data retrieved on 10 November 2026.",
    "precaution": "Transfers received: from central government and social security, all grants together; this is not the DGF grant. Comparable series stops in 2017: in 2018 and again in 2021, some grants were replaced by shares of VAT, counted as taxes. This reclassification changes the category of the revenue; on its own, it does not say whether resources rose or fell."
   },
   {
@@ -39,7 +39,7 @@
    "fichier": "collectivites-cascade-en",
    "titre": "Local government balance, 2013-2017: the same change, in euros and in percentage points of GDP",
    "montre": "From 2013 to 2017, the local government balance improved by €9.7 billion (0.45 points of GDP). Total spending stayed almost flat in current euros (+€1.2 billion); relative to GDP, it fell by 0.82 points, of which 0.50 points for investment, while tax revenue rose and transfers received fell. These movements are concomitant; they do not attribute the fall in investment to the grant cuts.",
-   "source": "Eurostat gov_10a_main, local government (S1313), France; percentage points computed on the GDP of the same accounts. Data retrieved on 10 November 2026.",
+   "source": "Eurostat gov_10a_main, local government (S1313), France; percentage points computed on the GDP of the same accounts. Data retrieved on 10 November 2026.",
    "precaution": "Bars: each item's contribution to the change in the balance; for spending, the opposite of its change. Other spending rose by €8.7 billion (negative bar) and fell by 0.32 percentage points of GDP (positive bar): nominal GDP rose by 8.1%. An accounting reading: the items add up to the balance; they do not say what decided it."
   },
   {
@@ -47,7 +47,7 @@
    "fichier": "collectivites-europe-en",
    "titre": "Subnational government debt and the share held by central government, in % of GDP",
    "montre": "The same subnational debt can conceal opposite architectures: in Spain, 59% of it is held by central government; in France, 1%.",
-   "source": "Eurostat gov_10q_ggdebt (4th quarter) and gov_10dd_ggd (holding sector S1311), S1312 + S1313, in % of GDP. Data retrieved on 10 November 2026.",
+   "source": "Eurostat gov_10q_ggdebt (4th quarter) and gov_10dd_ggd (holding sector S1311), S1312 + S1313, in % of GDP. Data retrieved on 10 November 2026.",
    "precaution": "Statistical scope, not responsibilities: France and Italy have no state-government tier (S1312)."
   }
  ]

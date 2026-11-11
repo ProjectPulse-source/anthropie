@@ -16,7 +16,7 @@
 <text x="0" y="276" font-size="13.5" fill="#55524f">Autre question : Hors intérêts, le</text>
 <text x="0" y="293" font-size="13.5" fill="#55524f">solde a été positif quatre ans (1998 à</text>
 <text x="0" y="310" font-size="13.5" fill="#55524f">2001)</text>
-<text x="0" y="327" font-size="13.5" fill="#eb6834">Conclusion : Constat, pas d'inférence</text>
+<text x="0" y="327" font-size="13.5" fill="#b8420f">Conclusion : Constat, pas d'inférence</text>
 <line x1="0" y1="333" x2="300" y2="333" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="359" font-size="15" font-weight="600" fill="#26262f">« Un euro de déficit, c'est un</text>
 <text x="0" y="377" font-size="15" font-weight="600" fill="#26262f">euro de dette »</text>
@@ -27,7 +27,7 @@
 <text x="0" y="462" font-size="13.5" fill="#26262f">entre flux et stock)</text>
 <text x="0" y="479" font-size="13.5" fill="#55524f">Autre question : Cumul 1996-2025 :</text>
 <text x="0" y="496" font-size="13.5" fill="#55524f">2 649 contre 2 758 Md€, proche</text>
-<text x="0" y="513" font-size="13.5" fill="#eb6834">Conclusion : Constat, pas d'inférence</text>
+<text x="0" y="513" font-size="13.5" fill="#b8420f">Conclusion : Constat, pas d'inférence</text>
 <line x1="0" y1="519" x2="300" y2="519" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="545" font-size="15" font-weight="600" fill="#26262f">« 3 % de déficit, seuil à partir</text>
 <text x="0" y="563" font-size="15" font-weight="600" fill="#26262f">duquel la dette n'augmente plus »</text>
@@ -39,8 +39,8 @@
 <text x="0" y="665" font-size="13.5" fill="#55524f">la croissance nominale dépasse environ</text>
 <text x="0" y="682" font-size="13.5" fill="#55524f">2,74 % : 3,58 % en 2024, 1,90 % en</text>
 <text x="0" y="699" font-size="13.5" fill="#55524f">2025 (connu après)</text>
-<text x="0" y="716" font-size="13.5" fill="#eb6834">Conclusion : Condition décisive non</text>
-<text x="0" y="733" font-size="13.5" fill="#eb6834">dite</text>
+<text x="0" y="716" font-size="13.5" fill="#b8420f">Conclusion : Condition décisive non</text>
+<text x="0" y="733" font-size="13.5" fill="#b8420f">dite</text>
 <line x1="0" y1="739" x2="300" y2="739" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="765" font-size="15" font-weight="600" fill="#26262f">« La France s'endette à des taux</text>
 <text x="0" y="783" font-size="15" font-weight="600" fill="#26262f">supérieurs à ceux de la Grèce »</text>
@@ -52,8 +52,8 @@
 <text x="0" y="885" font-size="13.5" fill="#55524f">Autre question : Moyenne 2025 : écarts</text>
 <text x="0" y="902" font-size="13.5" fill="#55524f">à l'Allemagne quasi égaux ; Grèce</text>
 <text x="0" y="919" font-size="13.5" fill="#55524f">au-dessus de mars à mai 2026</text>
-<text x="0" y="936" font-size="13.5" fill="#eb6834">Conclusion : Jugement de risque, non</text>
-<text x="0" y="953" font-size="13.5" fill="#eb6834">établi</text>
+<text x="0" y="936" font-size="13.5" fill="#b8420f">Conclusion : Jugement de risque, non</text>
+<text x="0" y="953" font-size="13.5" fill="#b8420f">établi</text>
 <line x1="0" y1="959" x2="300" y2="959" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="985" font-size="15" font-weight="600" fill="#26262f">« Dépenses restées stables depuis</text>
 <text x="0" y="1003" font-size="15" font-weight="600" fill="#26262f">2017 ; c'est la baisse des</text>
@@ -64,8 +64,8 @@
 <text x="0" y="1089" font-size="13.5" fill="#26262f">−2,9 pts (comptes de mai 2025)</text>
 <text x="0" y="1106" font-size="13.5" fill="#55524f">Autre question : Depuis 2019 :</text>
 <text x="0" y="1123" font-size="13.5" fill="#55524f">dépenses +1,9 pt</text>
-<text x="0" y="1140" font-size="13.5" fill="#eb6834">Conclusion : Comptable : étayé ;</text>
-<text x="0" y="1157" font-size="13.5" fill="#eb6834">causal : non établi</text>
+<text x="0" y="1140" font-size="13.5" fill="#b8420f">Conclusion : Comptable : étayé ;</text>
+<text x="0" y="1157" font-size="13.5" fill="#b8420f">causal : non établi</text>
 <line x1="0" y1="1163" x2="300" y2="1163" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="1189" font-size="15" font-weight="600" fill="#26262f">« 66 milliards en 2026 » contre</text>
 <text x="0" y="1207" font-size="15" font-weight="600" fill="#26262f">« 75 milliards en 2026 »</text>
@@ -76,7 +76,7 @@
 <text x="0" y="1292" font-size="13.5" fill="#55524f">Autre question : 66 égale le chiffre</text>
 <text x="0" y="1309" font-size="13.5" fill="#55524f">officiel de 2025 : un écho, pas une</text>
 <text x="0" y="1326" font-size="13.5" fill="#55524f">filiation prouvée</text>
-<text x="0" y="1343" font-size="13.5" fill="#eb6834">Conclusion : Pas d'inférence</text>
+<text x="0" y="1343" font-size="13.5" fill="#b8420f">Conclusion : Pas d'inférence</text>
 <line x1="0" y1="1349" x2="300" y2="1349" stroke="#dcd8d3" stroke-width="0.6"/>
 <rect x="0" y="1367" width="300" height="22" fill="#f3f1ee"/>
 <text x="6" y="1383" font-size="13.5" font-weight="600" fill="#184f95">EXPLIQUER</text>
@@ -90,8 +90,8 @@
 <text x="0" y="1539" font-size="13.5" fill="#55524f">surcroît de 2029 de 66 à 97 Md€ ; ce</text>
 <text x="0" y="1556" font-size="13.5" fill="#55524f">n'est plus le double, mais 1,1 à</text>
 <text x="0" y="1573" font-size="13.5" fill="#55524f">1,6 fois</text>
-<text x="0" y="1590" font-size="13.5" fill="#eb6834">Conclusion : « Entièrement reversé » :</text>
-<text x="0" y="1607" font-size="13.5" fill="#eb6834">non établi</text>
+<text x="0" y="1590" font-size="13.5" fill="#b8420f">Conclusion : « Entièrement reversé » :</text>
+<text x="0" y="1607" font-size="13.5" fill="#b8420f">non établi</text>
 <line x1="0" y1="1613" x2="300" y2="1613" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="1639" font-size="15" font-weight="600" fill="#26262f">« Plus de 1 000 milliards de dette</text>
 <text x="0" y="1657" font-size="15" font-weight="600" fill="#26262f">en plus » depuis 2017</text>
@@ -101,7 +101,7 @@
 <text x="0" y="1725" font-size="13.5" fill="#26262f">1 155 Md€</text>
 <text x="0" y="1742" font-size="13.5" fill="#55524f">Autre question : « Nous ont coûté » :</text>
 <text x="0" y="1759" font-size="13.5" fill="#55524f">mesurer n'est pas attribuer</text>
-<text x="0" y="1776" font-size="13.5" fill="#eb6834">Conclusion : Attribution : non établie</text>
+<text x="0" y="1776" font-size="13.5" fill="#b8420f">Conclusion : Attribution : non établie</text>
 <line x1="0" y1="1782" x2="300" y2="1782" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="1808" font-size="15" font-weight="600" fill="#26262f">« 1 200 milliards depuis 2017,</text>
 <text x="0" y="1826" font-size="15" font-weight="600" fill="#26262f">après 400 sous François Hollande »</text>
@@ -112,8 +112,8 @@
 <text x="0" y="1911" font-size="13.5" fill="#26262f">l'élection (1 064)</text>
 <text x="0" y="1928" font-size="13.5" fill="#55524f">Autre question : Par an en points de</text>
 <text x="0" y="1945" font-size="13.5" fill="#55524f">PIB : 1,6 contre 1,7</text>
-<text x="0" y="1962" font-size="13.5" fill="#eb6834">Conclusion : Imputation à un mandat :</text>
-<text x="0" y="1979" font-size="13.5" fill="#eb6834">non établie</text>
+<text x="0" y="1962" font-size="13.5" fill="#b8420f">Conclusion : Imputation à un mandat :</text>
+<text x="0" y="1979" font-size="13.5" fill="#b8420f">non établie</text>
 <line x1="0" y1="1985" x2="300" y2="1985" stroke="#dcd8d3" stroke-width="0.6"/>
 <rect x="0" y="2003" width="300" height="22" fill="#f3f1ee"/>
 <text x="6" y="2019" font-size="13.5" font-weight="600" fill="#184f95">CONCLURE</text>
@@ -126,8 +126,8 @@
 <text x="0" y="2158" font-size="13.5" fill="#55524f">Autre question : Plafonds de l'État</text>
 <text x="0" y="2175" font-size="13.5" fill="#55524f">pour 2026 : 92 % (mission qui inclut</text>
 <text x="0" y="2192" font-size="13.5" fill="#55524f">d'autres dépenses)</text>
-<text x="0" y="2209" font-size="13.5" fill="#eb6834">Conclusion : Pour l'État, étayé, non</text>
-<text x="0" y="2226" font-size="13.5" fill="#eb6834">décisif</text>
+<text x="0" y="2209" font-size="13.5" fill="#b8420f">Conclusion : Pour l'État, étayé, non</text>
+<text x="0" y="2226" font-size="13.5" fill="#b8420f">décisif</text>
 <line x1="0" y1="2232" x2="300" y2="2232" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="2258" font-size="15" font-weight="600" fill="#26262f">« La charge laissée à nos enfants</text>
 <text x="0" y="2276" font-size="15" font-weight="600" fill="#26262f">augmente de 18 millions par</text>
@@ -137,8 +137,8 @@
 <text x="0" y="2345" font-size="13.5" fill="#26262f">dette : 20,9 millions par heure</text>
 <text x="0" y="2362" font-size="13.5" fill="#55524f">Autre question : Proche du déficit</text>
 <text x="0" y="2379" font-size="13.5" fill="#55524f">prévu pour 2025 : environ 18,4</text>
-<text x="0" y="2396" font-size="13.5" fill="#eb6834">Conclusion : Question distributive :</text>
-<text x="0" y="2413" font-size="13.5" fill="#eb6834">non établi</text>
+<text x="0" y="2396" font-size="13.5" fill="#b8420f">Conclusion : Question distributive :</text>
+<text x="0" y="2413" font-size="13.5" fill="#b8420f">non établi</text>
 <line x1="0" y1="2419" x2="300" y2="2419" stroke="#dcd8d3" stroke-width="0.6"/>
 <line x1="0" y1="2429.0" x2="300" y2="2429.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="2450.0" font-size="13.5" fill="#55524f">Assemblée nationale (compte rendu du</text>

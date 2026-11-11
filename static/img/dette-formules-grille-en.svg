@@ -18,7 +18,7 @@
 <text x="372" y="94" font-size="11" fill="#55524f">Excluding interest, the balance</text>
 <text x="372" y="107" font-size="11" fill="#55524f">was positive for four years</text>
 <text x="372" y="120" font-size="11" fill="#55524f">(1998 to 2001)</text>
-<text x="560" y="94" font-size="11" fill="#eb6834">A finding, no inference</text>
+<text x="560" y="94" font-size="11" fill="#b8420f">A finding, no inference</text>
 <line x1="0" y1="142" x2="720" y2="142" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="154" font-size="11" font-weight="600" fill="#26262f">“A euro of deficit is a euro of</text>
 <text x="0" y="167" font-size="11" font-weight="600" fill="#26262f">extra debt”</text>
@@ -29,7 +29,7 @@
 <text x="186" y="193" font-size="11" fill="#26262f">adjustments)</text>
 <text x="372" y="154" font-size="11" fill="#55524f">Cumulated 1996–2025: €2,649bn</text>
 <text x="372" y="167" font-size="11" fill="#55524f">against €2,758bn, close</text>
-<text x="560" y="154" font-size="11" fill="#eb6834">A finding, no inference</text>
+<text x="560" y="154" font-size="11" fill="#b8420f">A finding, no inference</text>
 <line x1="0" y1="202" x2="720" y2="202" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="214" font-size="11" font-weight="600" fill="#26262f">“A 3% deficit, the threshold at</text>
 <text x="0" y="227" font-size="11" font-weight="600" fill="#26262f">which debt stops rising”</text>
@@ -41,32 +41,32 @@
 <text x="372" y="227" font-size="11" fill="#55524f">nominal growth exceeds about</text>
 <text x="372" y="240" font-size="11" fill="#55524f">2.74%: 3.58% in 2024, 1.90% in</text>
 <text x="372" y="253" font-size="11" fill="#55524f">2025 (known later)</text>
-<text x="560" y="214" font-size="11" fill="#eb6834">Decisive condition left</text>
-<text x="560" y="227" font-size="11" fill="#eb6834">unsaid</text>
+<text x="560" y="214" font-size="11" fill="#b8420f">Decisive condition left</text>
+<text x="560" y="227" font-size="11" fill="#b8420f">unsaid</text>
 <line x1="0" y1="262" x2="720" y2="262" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="274" font-size="11" font-weight="600" fill="#26262f">“France borrows at higher rates</text>
 <text x="0" y="287" font-size="11" font-weight="600" fill="#26262f">than Greece”</text>
 <text x="0" y="300" font-size="11" fill="#55524f">L. Wauquiez</text>
 <text x="186" y="274" font-size="11" fill="#26262f">Accurate on the day: 3.49%</text>
-<text x="186" y="287" font-size="11" fill="#26262f">against 3.34% on 8 September</text>
-<text x="186" y="300" font-size="11" fill="#26262f">2025 (both central banks'</text>
-<text x="186" y="313" font-size="11" fill="#26262f">sources)</text>
+<text x="186" y="287" font-size="11" fill="#26262f">against 3.34% on</text>
+<text x="186" y="300" font-size="11" fill="#26262f">8 September 2025 (both central</text>
+<text x="186" y="313" font-size="11" fill="#26262f">banks' sources)</text>
 <text x="372" y="274" font-size="11" fill="#55524f">2025 average: near-equal spreads</text>
 <text x="372" y="287" font-size="11" fill="#55524f">over Germany; Greece above from</text>
-<text x="372" y="300" font-size="11" fill="#55524f">March to May 2026</text>
-<text x="560" y="274" font-size="11" fill="#eb6834">Risk judgement, not</text>
-<text x="560" y="287" font-size="11" fill="#eb6834">established</text>
+<text x="372" y="300" font-size="11" fill="#55524f">March to May 2026</text>
+<text x="560" y="274" font-size="11" fill="#b8420f">Risk judgement, not</text>
+<text x="560" y="287" font-size="11" fill="#b8420f">established</text>
 <line x1="0" y1="322" x2="720" y2="322" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="334" font-size="11" font-weight="600" fill="#26262f">“Spending stable since 2017; it</text>
 <text x="0" y="347" font-size="11" font-weight="600" fill="#26262f">is falling revenue”</text>
 <text x="0" y="360" font-size="11" fill="#55524f">C. Chatelain</text>
 <text x="186" y="334" font-size="11" fill="#26262f">Accurate for 2017–2024:</text>
 <text x="186" y="347" font-size="11" fill="#26262f">spending −0.5 pt of GDP,</text>
-<text x="186" y="360" font-size="11" fill="#26262f">revenue −2.9 pts (May 2025</text>
+<text x="186" y="360" font-size="11" fill="#26262f">revenue −2.9 pts (May 2025</text>
 <text x="186" y="373" font-size="11" fill="#26262f">accounts)</text>
 <text x="372" y="334" font-size="11" fill="#55524f">Since 2019: spending +1.9 pt</text>
-<text x="560" y="334" font-size="11" fill="#eb6834">Accounting: supported;</text>
-<text x="560" y="347" font-size="11" fill="#eb6834">causal: not established</text>
+<text x="560" y="334" font-size="11" fill="#b8420f">Accounting: supported;</text>
+<text x="560" y="347" font-size="11" fill="#b8420f">causal: not established</text>
 <line x1="0" y1="382" x2="720" y2="382" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="394" font-size="11" font-weight="600" fill="#26262f">“€66bn in 2026” against “€75bn</text>
 <text x="0" y="407" font-size="11" font-weight="600" fill="#26262f">in 2026”</text>
@@ -77,7 +77,7 @@
 <text x="372" y="394" font-size="11" fill="#55524f">66 equals the official 2025</text>
 <text x="372" y="407" font-size="11" fill="#55524f">figure: an echo, not a proven</text>
 <text x="372" y="420" font-size="11" fill="#55524f">borrowing</text>
-<text x="560" y="394" font-size="11" fill="#eb6834">No inference</text>
+<text x="560" y="394" font-size="11" fill="#b8420f">No inference</text>
 <line x1="0" y1="429" x2="720" y2="429" stroke="#dcd8d3" stroke-width="0.6"/>
 <rect x="0" y="439" width="720" height="18" fill="#f3f1ee"/>
 <text x="6" y="452" font-size="11" font-weight="600" letter-spacing="0.6" fill="#184f95">EXPLAINING</text>
@@ -90,8 +90,8 @@
 <text x="372" y="475" font-size="11" fill="#55524f">Same year: extra output in 2029</text>
 <text x="372" y="488" font-size="11" fill="#55524f">of €66–97bn; no longer double,</text>
 <text x="372" y="501" font-size="11" fill="#55524f">but 1.1 to 1.6 times</text>
-<text x="560" y="475" font-size="11" fill="#eb6834">“Entirely handed over”: not</text>
-<text x="560" y="488" font-size="11" fill="#eb6834">established</text>
+<text x="560" y="475" font-size="11" fill="#b8420f">“Entirely handed over”: not</text>
+<text x="560" y="488" font-size="11" fill="#b8420f">established</text>
 <line x1="0" y1="510" x2="720" y2="510" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="522" font-size="11" font-weight="600" fill="#26262f">“Over €1,000bn of extra debt”</text>
 <text x="0" y="535" font-size="11" font-weight="600" fill="#26262f">since 2017</text>
@@ -100,19 +100,19 @@
 <text x="186" y="535" font-size="11" fill="#26262f">tested: €1,064bn to €1,155bn</text>
 <text x="372" y="522" font-size="11" fill="#55524f">“Cost us”: measuring is not</text>
 <text x="372" y="535" font-size="11" fill="#55524f">attributing</text>
-<text x="560" y="522" font-size="11" fill="#eb6834">Attribution: not established</text>
+<text x="560" y="522" font-size="11" fill="#b8420f">Attribution: not established</text>
 <line x1="0" y1="557" x2="720" y2="557" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="569" font-size="11" font-weight="600" fill="#26262f">“€1,200bn since 2017, after 400</text>
 <text x="0" y="582" font-size="11" font-weight="600" fill="#26262f">under François Hollande”</text>
 <text x="0" y="595" font-size="11" fill="#55524f">É. Ciotti</text>
 <text x="186" y="569" font-size="11" fill="#26262f">400: accurate (359); 1,200:</text>
-<text x="186" y="582" font-size="11" fill="#26262f">only just, from January 2017</text>
+<text x="186" y="582" font-size="11" fill="#26262f">only just, from January 2017</text>
 <text x="186" y="595" font-size="11" fill="#26262f">(1,155), not from the election</text>
 <text x="186" y="608" font-size="11" fill="#26262f">(1,064)</text>
 <text x="372" y="569" font-size="11" fill="#55524f">Per year in GDP points: 1.6</text>
 <text x="372" y="582" font-size="11" fill="#55524f">against 1.7</text>
-<text x="560" y="569" font-size="11" fill="#eb6834">Attribution to a term: not</text>
-<text x="560" y="582" font-size="11" fill="#eb6834">established</text>
+<text x="560" y="569" font-size="11" fill="#b8420f">Attribution to a term: not</text>
+<text x="560" y="582" font-size="11" fill="#b8420f">established</text>
 <line x1="0" y1="617" x2="720" y2="617" stroke="#dcd8d3" stroke-width="0.6"/>
 <rect x="0" y="627" width="720" height="18" fill="#f3f1ee"/>
 <text x="6" y="640" font-size="11" font-weight="600" letter-spacing="0.6" fill="#184f95">CONCLUDING</text>
@@ -125,8 +125,8 @@
 <text x="372" y="663" font-size="11" fill="#55524f">State ceilings for 2026: 92%</text>
 <text x="372" y="676" font-size="11" fill="#55524f">(programme including other</text>
 <text x="372" y="689" font-size="11" fill="#55524f">spending)</text>
-<text x="560" y="663" font-size="11" fill="#eb6834">For the State, supported,</text>
-<text x="560" y="676" font-size="11" fill="#eb6834">not decisive</text>
+<text x="560" y="663" font-size="11" fill="#b8420f">For the State, supported,</text>
+<text x="560" y="676" font-size="11" fill="#b8420f">not decisive</text>
 <line x1="0" y1="698" x2="720" y2="698" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="710" font-size="11" font-weight="600" fill="#26262f">“The burden left to our</text>
 <text x="0" y="723" font-size="11" font-weight="600" fill="#26262f">children grows by €18m an hour”</text>
@@ -135,13 +135,13 @@
 <text x="186" y="723" font-size="11" fill="#26262f">hour</text>
 <text x="372" y="710" font-size="11" fill="#55524f">Close to the 2025 planned</text>
 <text x="372" y="723" font-size="11" fill="#55524f">deficit: about 18.4</text>
-<text x="560" y="710" font-size="11" fill="#eb6834">A distributional question:</text>
-<text x="560" y="723" font-size="11" fill="#eb6834">not established</text>
+<text x="560" y="710" font-size="11" fill="#b8420f">A distributional question:</text>
+<text x="560" y="723" font-size="11" fill="#b8420f">not established</text>
 <line x1="0" y1="745" x2="720" y2="745" stroke="#dcd8d3" stroke-width="0.6"/>
 <line x1="0" y1="751.0" x2="720" y2="751.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="766.0" font-size="11" fill="#55524f">French National Assembly (record of 8 September 2025); Insee; Eurostat; Court of Audit; Government; Senate; Banque de</text>
+<text class="pied-source" x="0" y="766.0" font-size="11" fill="#55524f">French National Assembly (record of 8 September 2025); Insee; Eurostat; Court of Audit; Government; Senate; Banque de</text>
 <text class="pied-source" x="0" y="780.0" font-size="11" fill="#55524f">France; Bank of Greece; author's calculation</text>
-<text class="pied-note" x="0" y="794.0" font-size="11" fill="#55524f">Data available on 8 September 2025: public accounts as published at that date for spending, revenue and debt, revised</text>
+<text class="pied-note" x="0" y="794.0" font-size="11" fill="#55524f">Data available on 8 September 2025: public accounts as published at that date for spending, revenue and debt, revised</text>
 <text class="pied-note" x="0" y="808.0" font-size="11" fill="#55524f">version elsewhere; forecasts published after the debate are excluded from the verdicts. Round numbers judged at the</text>
 <text class="pied-note" x="0" y="822.0" font-size="11" fill="#55524f">stated precision (tolerance grid). A case study of one debate, not a sample of the debate.</text>
 <text class="pied-licence" x="0" y="836.0" font-size="11" fill="#6f6c66">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-debate-claims/</text>

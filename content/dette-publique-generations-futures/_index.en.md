@@ -81,7 +81,7 @@ Borrowing to build a school, a road or a network leaves capital as well as a deb
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-actifs-en-m.svg" width="300" height="708">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-actifs-en-m.svg" width="300" height="724">
     <img src="/img/dette-generations-actifs-en.svg" alt="Four horizontal bars, each representing one hundred per cent of French general government net borrowing over a period: {{< gen-val "d1_lib" >}}, {{< gen-val "d1_part" >}}% in assets; {{< gen-val "d2_lib" >}}, {{< gen-val "d2_part" >}}%; {{< gen-val "d3_lib" >}}, {{< gen-val "d3_part" >}}%; over the whole period, {{< gen-val "part_k" >}}% in assets, {{< gen-val "part_t" >}}% in capital transfers and {{< gen-val "part_e" >}}% in current spending not covered by current revenue." width="720" height="385" loading="lazy">
   </picture>
   <figcaption>Share of French general government net borrowing that corresponded to assets, to capital transfers and to uncovered current spending, by decade (Eurostat, author’s calculation).</figcaption>

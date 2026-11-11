@@ -20,16 +20,18 @@ Regles BLOQUANTES (une figure en defaut fait sortir 1) :
       et passe a 3 px au moins du bord de toute autre marque ;
   R5  aucune ligne de texte ne finit par un signe seul (« + », « − », « – ») ni ne commence par « : ; ? ! % » ;
   R6  aucun texte ne s'affiche sous 12 px a la plus petite largeur ou sa version est servie (11/11/2026) : une figure
-      detaillee (720 de large) s'affiche a 804 px au plus etroit, une figure telephone (300) a 277 px -- mesure sur les
-      52 pages du site ; soit 11 px dessines au moins dans la premiere, 13 px dans la seconde ; et toute figure
+      detaillee (720 de large) s'affiche a 786 px au plus etroit (bloc « dette en chiffres », a 900 px d'ecran), une
+      figure telephone (300) a 277 px -- mesure sur les 53 pages du site ; soit 11 px dessines au moins dans la premiere, 13 px dans la seconde ; et toute figure
       detaillee du site a sa version telephone (X-m.svg), sans laquelle elle est servie telle quelle sous 900 px
       (une seule en etait privee le 11/11/2026 : texte de 5,6 px sur telephone, hors du champ de tous les essais) ;
   R7  tout texte a un contraste d'au moins 4,5:1 avec son fond (3:1 pour un grand texte : 24 px affiches, ou 18,66 px
       en gras) ; le fond est le blanc de la figure ou la derniere forme pleine (rectangle, cercle) dessinee sous lui.
-      Hors R7, DECLARE (liste CONTRASTE_EN_ATTENTE, comptee avec --detail) : le texte dans une couleur de serie de la
-      charte et le texte blanc pose sur une marque orange ou grise -- decision de charte, qui revient a l'auteur ;
-      la liste meurt quand il a tranche. Non juge, signale avec --detail : un texte clair sans forme pleine reconnue
-      sous lui (trace, polygone).
+      Plus aucune exception de charte (11/11/2026) : l'auteur a retenu l'orange fonce pour le texte d'une serie
+      orange (pied_figure.ORANGE_TEXTE) et l'encre foncee pour le texte pose sur une marque orange ou grise
+      (pied_figure.encre_sur) ; un texte reste en #eb6834, ou blanc sur une telle marque, est un defaut. Non juge,
+      signale avec --detail : un texte clair sans forme pleine reconnue sous lui (trace, polygone). Sur le site entier, toute figure porte un fond blanc opaque
+      (rectangle de la largeur du dessin) : R7 juge le texte sur ce blanc, et sans lui les motifs du fond de page
+      traversent le trace (22 figures detaillees en etaient privees le 11/11/2026).
 Signalement NON bloquant (--detail) : nom de nuage dont les deux marques les plus proches sont presque a egale distance
 (rattachement a regarder au rendu ; le script ne sait pas quel pays porte chaque marque, le generateur le sait).
 
@@ -62,11 +64,8 @@ HAMPE, JAMBAGE = 0.72, 0.22
 # R6 : largeur d'affichage la plus etroite de chaque version (largeur de dessin -> px), mesuree le 11/11/2026 sur le
 # site servi (52 pages, ecrans de 320 et 900 px). Independante des generateurs : ils declarent une police minimale,
 # ce controle mesure la taille AFFICHEE.
-LARGEUR_SERVIE_MIN = {720: 804.0, 300: 277.0}
+LARGEUR_SERVIE_MIN = {720: 786.0, 300: 277.0}
 TAILLE_AFFICHEE_MIN = 12.0
-# R7 : couleurs de la charte dont le contraste en texte releve d'une decision de l'auteur (11/11/2026).
-CHARTE_TEXTE = {"#eb6834", "#b8703f"}                                   # texte dans la couleur de sa serie
-CHARTE_MARQUE = {"#eb6834", "#b8703f", "#898781", "#8a8781", "#8a8f98"}  # texte blanc pose sur une marque
 
 
 def charger_metriques() -> dict:
@@ -256,7 +255,7 @@ def examiner(F: dict, strict: bool = False) -> tuple[list[str], list[str]]:
                            % (len(petits), TAILLE_AFFICHEE_MIN, servie, fr(petits[0]["taille"]), fr(petits[0]["taille"] * echelle),
                               " ; ".join("« %s »" % t["t"][:28] for t in petits[:3])))
     # R7 : contraste du texte avec son fond
-    faibles, attente, non_juges = {}, {}, 0
+    faibles, non_juges = {}, 0
     for t in T:
         c = contraste(t["encre"], t["fond"])
         affiche = t["taille"] * (echelle or 1)
@@ -264,20 +263,13 @@ def examiner(F: dict, strict: bool = False) -> tuple[list[str], list[str]]:
         if c >= seuil - 0.005:
             continue
         cle = (t["encre"], t["fond"])
-        # Classe « en attente » : jugee sur la couleur DECLAREE (un libelle orange a 85 % d'opacite reste un texte dans
-        # l'orange de la charte) ; le contraste affiche, lui, est celui de la couleur melangee a son fond.
-        if t["encre_declaree"] in CHARTE_TEXTE or (t["encre_declaree"] == "#ffffff" and t["fond"] in CHARTE_MARQUE):
-            attente[cle] = attente.get(cle, 0) + 1
-        elif luminance(t["encre"]) > 0.5 and not t["sous_forme"]:
+        if luminance(t["encre"]) > 0.5 and not t["sous_forme"]:
             non_juges += 1          # texte clair sans forme pleine reconnue dessous : fond inconnu de ce controle
         else:
             faibles.setdefault(cle, []).append(t["t"])
     for (encre, fond), L in sorted(faibles.items(), key=lambda kv: -len(kv[1])):
         defauts.append("R7 %d texte(s) %s sur %s : contraste %s:1, minimum 4,5 -- %s"
                        % (len(L), encre, fond, fr(contraste(encre, fond), 2), " ; ".join("« %s »" % x[:28] for x in L[:3])))
-    for (encre, fond), n in sorted(attente.items(), key=lambda kv: -kv[1]):
-        signal.append("R7 en attente (charte, decision de l'auteur) : %d texte(s) %s sur %s, %s:1"
-                      % (n, encre, fond, fr(contraste(encre, fond), 2)))
     if non_juges:
         signal.append("R7 non juge : %d texte(s) clair(s) sans forme pleine reconnue dessous" % non_juges)
     # Signalement : rattachement dans un nuage (au moins 8 marques), noms sans filet
@@ -303,6 +295,16 @@ def sans_telephone(nom: str, F: dict, existe) -> str | None:
     mini = min(t["taille"] for t in F["textes"])  # brut-ok: plus petite police dessinee
     return ("R6 pas de version telephone (%s) : sous 900 px d'ecran la version detaillee est servie a %d px au plus etroit, "
             "soit %s px pour son plus petit texte" % (frere, LARGEUR_SERVIE_MIN[300], fr(mini * LARGEUR_SERVIE_MIN[300] / 720)))
+
+
+def sans_fond(svg: str, F: dict) -> str | None:
+    """R7, complement : la figure a-t-elle un fond blanc opaque sur toute sa largeur (un des trois premiers rectangles) ?"""
+    largeur = round(F["vb"][2])
+    for r in re.findall(r"<rect\b[^>]*>", svg)[:3]:
+        if (re.search(r'fill="(#fff|#ffffff|white)"', r, re.I) and 'width="%d"' % largeur in r
+                and not re.search(r'\bx="[1-9]', r) and not re.search(r'opacity="0?\.', r)):
+            return None
+    return "R7 pas de fond blanc opaque : le fond de la page, motifs compris, se voit a travers la figure"
 
 
 # Exceptions DECLAREES : figure en defaut dont la correction est faite dans le generateur mais ne peut pas encore etre
@@ -336,7 +338,12 @@ def temoin(M: dict) -> int:
                    '<text x="400" y="50" font-size="11" fill="#6f6c66">Source : Eurostat</text>'
                    '<rect x="400" y="80" width="120" height="24" fill="#184f95"/>'
                    '<text x="410" y="96" font-size="11" fill="#ffffff">42 %</text>'
-                   '<text x="400" y="150" font-size="26" fill="#eb6834">3 000 Md€</text>', None),
+                   '<text x="400" y="150" font-size="26" fill="#eb6834">3 000 Md€</text>'
+                   '<text x="560" y="50" font-size="11" fill="#b8420f">119,0 %</text>'
+                   '<rect x="560" y="80" width="120" height="24" fill="#eb6834"/>'
+                   '<text x="570" y="96" font-size="11" fill="#0A0A0E">66 %</text>'
+                   '<rect x="560" y="110" width="120" height="24" fill="#8a8781"/>'
+                   '<text x="570" y="126" font-size="11" fill="#0A0A0E">123</text>', None),
         "propre_m": ("M" + '<text x="10" y="50" font-size="13.5" fill="#6f6c66">Source : Insee</text>', None),
         "R1": ('<text x="10" y="50" font-size="11">Finlande</text><text x="30" y="52" font-size="11">Autriche</text>', "R1"),
         "R2": ('<circle cx="40" cy="47" r="5"/><text x="10" y="50" font-size="11">Croatie</text>', "R2"),
@@ -352,6 +359,11 @@ def temoin(M: dict) -> int:
         "R7fond": ('<rect x="0" y="30" width="200" height="40" fill="#e4dfd7"/>'
                    '<text x="10" y="50" font-size="11" fill="#6f6c66">Crise de 2008</text>', "R7"),
         "R7gris": ('<text x="10" y="50" font-size="11" fill="#898781">Zone euro</text>', "R7"),
+        "R7orange": ('<text x="10" y="50" font-size="11" fill="#eb6834">119,0 %</text>', "R7"),
+        "R7blanc": ('<rect x="0" y="30" width="200" height="40" fill="#eb6834"/>'
+                    '<text x="10" y="50" font-size="11" fill="#ffffff">66 %</text>', "R7"),
+        "R7blancg": ('<rect x="0" y="30" width="200" height="40" fill="#8a8781"/>'
+                     '<text x="10" y="50" font-size="11" fill="#ffffff">123</text>', "R7"),
     }
     ok = True
     for nom, (corps, attendu) in cas.items():
@@ -363,7 +375,11 @@ def temoin(M: dict) -> int:
     # R6, version telephone : une figure detaillee sans frere « -m » mord ; avec lui, ou en 300 de large, elle passe.
     F720 = lire(tete + '<text x="10" y="50" font-size="11">Taux en %</text></svg>', M)
     F300 = lire(tete_m + '<text x="10" y="50" font-size="13.5">Taux en %</text></svg>', M)
-    for nom, mord in (("R6tel", (sans_telephone("x.svg", F720, lambda n: False) or "").startswith("R6")),
+    fond = '<rect width="720" height="200" fill="#ffffff"/>'
+    for nom, mord in (("R7fd", (sans_fond(tete + "</svg>", F720) or "").startswith("R7")),
+                      ("R7fd+", sans_fond(tete + fond + "</svg>", F720) is None),
+                      ("R7fd%", (sans_fond(tete + fond.replace("/>", ' opacity="0.5"/>') + "</svg>", F720) or "").startswith("R7")),
+                      ("R6tel", (sans_telephone("x.svg", F720, lambda n: False) or "").startswith("R6")),
                       ("R6tel+", sans_telephone("x.svg", F720, lambda n: n == "x-m.svg") is None),
                       ("R6tel-m", sans_telephone("x-m.svg", F300, lambda n: False) is None)):
         print("  temoin %-6s : %s" % (nom, "OK" if mord else "ECHEC"))
@@ -406,10 +422,13 @@ def main() -> int:
     for p in fs:
         F = lire(p.read_text(encoding="utf-8"), M)
         d, s = examiner(F, strict=not args)
-        if not args:      # site entier : la version telephone se cherche a cote du fichier
+        if not args:      # site entier : la version telephone se cherche a cote du fichier ; le fond blanc se lit dans le fichier
             manque = sans_telephone(p.name, F, lambda n, dossier=p.parent: (dossier / n).exists())
             if manque:
                 d.append(manque)
+            transparent = sans_fond(p.read_text(encoding="utf-8"), F)
+            if transparent:
+                d.append(transparent)
         if p.name in EXCEPTIONS and not args:
             # L'exception n'excuse QUE sa classe (« · » en fin de ligne d'un pied, R5) ; tout autre défaut de la figure
             # reste bloquant (04/11/2026 : elle excusait auparavant n'importe quel défaut). Devenue sans objet, elle est

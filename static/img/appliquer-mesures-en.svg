@@ -64,7 +64,7 @@
 <rect x="321.2" y="270" width="67.3" height="20" fill="#c9c5c0"/>
 <text x="392.5" y="284.0" font-size="11" fill="#52514e" text-anchor="start">119 pending</text>
 <line x1="0" y1="332.0" x2="720" y2="332.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026</text>
+<text class="pied-source" x="0" y="347.0" font-size="11" fill="#52514e">Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026</text>
 <text class="pied-note" x="0" y="361.0" font-size="11" fill="#52514e">Measures of the laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date:</text>
 <text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">neither a historical rate nor efficiency.</text>
 <text class="pied-licence" x="0" y="389.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/does-a-law-apply-as-soon-as-it-is-passed/</text>

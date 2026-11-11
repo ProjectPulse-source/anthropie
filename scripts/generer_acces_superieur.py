@@ -75,7 +75,10 @@ ORIGINES = [("ind", "Agriculteurs, artisans, commerçants, chefs d'entreprise", 
             ("ouv", "Ouvriers", ("Ouvriers",)),
             ("ret", "Retraités, inactifs", ("Retraités, inactifs",))]
 DEST = [("univ", "Université"), ("cpge", "CPGE"), ("sts", "STS"), ("autres", "Autres")]
-COULEUR = {"univ": (gl.BLEU, "#ffffff"), "cpge": (gl.ORANGE, gl.INK), "sts": (gl.GRIS_CLAIR, gl.INK), "autres": (gl.GRIS, "#ffffff")}
+# Valeur écrite dans un segment plein : l'encre que sa couleur demande (pied_figure.encre_sur, 11/11/2026) -- blanc sur
+# le bleu, encre la plus foncée sur le gris des barres.
+COULEUR = {"univ": (gl.BLEU, pied_figure.encre_sur(gl.BLEU)), "cpge": (gl.ORANGE, gl.INK), "sts": (gl.GRIS_CLAIR, gl.INK),
+           "autres": (gl.GRIS, pied_figure.encre_sur(gl.GRIS))}
 LIBELLE = {"univ": ("Université", "(dont IUT)"), "cpge": ("Classes", "prépa."), "sts": ("Sections de", "technicien sup."),
            "autres": ("Autres", "formations")}
 fail, log, fr, esc = gl.fail, gl.log, gl.fr, gl.esc

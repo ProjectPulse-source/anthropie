@@ -748,6 +748,9 @@ BANDE = "#eb6834"
 # Orange ATTENUE des seuils anciens : l'orange sature est reserve au point
 # contemporain et a la serie des interets (28/09). Sinon l'oeil rebondit sur cinq
 # accents au lieu d'aller a la derniere valeur.
+# 11/11/2026 : un TEXTE ne s'ecrit plus ni en COL_INTER ni en ORANGE_DOUX (3,20:1 et 3,87:1 sur blanc) ; il prend
+# l'encre de sa couleur, pied_figure.encre_texte(...), la meme pour les deux oranges. Les MARQUES gardent leur
+# couleur ; le point contemporain se distingue des seuils anciens par sa marque (point orange, plus gros).
 ORANGE_DOUX = "#b8703f"
 PASTILLE = "#1B2A4E"
 
@@ -772,9 +775,11 @@ def bandes_crise(X, y_haut, y_bas, lang, x_min=None, x_max=None, libelles=True,
             # En haut : TY_MIN + 2 sous le bord (12 quand le libelle etait a 10 px), pour que le haut des lettres garde
             # sa place sous le premier trait de la grille.
             y = (y_bas - 10) if bas else (y_haut + TY_MIN + 2)
-            out.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle" '
-                       'opacity="0.85">%s</text>'
-                       % ((xa + xb) / 2, y, TY_MIN, BANDE, _esc(lib_fr if lang == "fr" else lib_en)))
+            # Libelle a l'encre de l'orange, SANS opacite (11/11/2026) : a 0,85 sur la bande, il tombait a 2,58:1.
+            # La bande, elle, garde BANDE et son opacite.
+            out.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">%s</text>'
+                       % ((xa + xb) / 2, y, TY_MIN, pied_figure.encre_texte(BANDE),
+                          _esc(lib_fr if lang == "fr" else lib_en)))
     return out
 
 
@@ -1213,7 +1218,7 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
         dy = (-9 - marge) if en_haut else (17 + marge)
         e.append('<text x="%.1f" y="%.1f" font-size="12" fill="%s">'
                  '<tspan font-weight="600">%s</tspan> %s%s</text>'
-                 % (px + 8, py + dy, col, _esc(L[cle]), num(serie[last]), L["pct"]))
+                 % (px + 8, py + dy, pied_figure.encre_texte(col), _esc(L[cle]), num(serie[last]), L["pct"]))
     cx, cy = pm[years.index(int(creux))]
     e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>' % (cx, cy, INK2))
     e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">'
@@ -1323,7 +1328,7 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
         e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>'
                  % (px, py, COL_INTER))
         e.append('<text x="%.1f" y="%.1f" font-size="%d" font-weight="600" fill="%s">%s</text>'
-                 % (px + 9, py + 1, TY_ANNOT, COL_INTER, num(pv[-1][1], dprev)))
+                 % (px + 9, py + 1, TY_ANNOT, pied_figure.encre_texte(COL_INTER), num(pv[-1][1], dprev)))
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s %d</text>'
                  % (px + 9, py + 16, TY_MINEUR, MUTED, "Md€" if lang == "fr" else "bn", pv[-1][0]))
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s</text>'
@@ -1419,7 +1424,7 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
     xr, yr = X(ref), Y(interets[ref])
     e.append('<circle cx="%.1f" cy="%.1f" r="3.2" fill="%s"/>' % (xr, yr, COL_INTER))
     e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle">'
-             '%s — %d</text>' % (xr, yr + 17, TY_MINEUR, COL_INTER,
+             '%s — %d</text>' % (xr, yr + 17, TY_MINEUR, pied_figure.encre_texte(COL_INTER),
                                  num(interets[ref], 1), ref))
     bouts.append((pts[-1][1], COL_INTER, L["series"]["interets"], interets[ans[-1]], True,
                   (interets[ans[-1]] / interets[ref] - 1) * 100, "interets"))
@@ -1473,7 +1478,7 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
     for y, col, nom, val, fort, croiss, code in bouts:
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">'
                  '<tspan font-weight="%d">%s</tspan> %s</text>'
-                 % (W - mr + 12, y + 1, TY_ANNOT if fort else TY_MINEUR, col,
+                 % (W - mr + 12, y + 1, TY_ANNOT if fort else TY_MINEUR, pied_figure.encre_texte(col),
                     700 if fort else 600, _esc(nom), num(val, 0)))
         dy = y + 1
         for ligne in detail.get(code, []):
@@ -1658,7 +1663,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" '
                  'font-weight="600" fill="%s" text-anchor="%s">%s</text>'
                  % (tx, bas + 17, FONT, corps,
-                    COL_INTER if dernier else ORANGE_DOUX, anchor, pct))
+                    pied_figure.encre_texte(COL_INTER if dernier else ORANGE_DOUX), anchor, pct))
     # Pas de libelles d'axe horizontal : les deux bornes de la periode sont
     # deja portees, en gras, par le premier et le dernier repere. Les repeter
     # sous l'axe ferait lire deux fois la meme date.

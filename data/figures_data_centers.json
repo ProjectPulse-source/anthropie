@@ -15,7 +15,7 @@
    "fichier": "data-centers-reserve-consomme-en",
    "titre": "Data centres: capacity reserved on the grid and electricity consumed",
    "montre": "In November 2025, data centres had reserved 14 GW with RTE, 7.6 GW of it for commissioning from 2030; those connected to RTE's grid consumed nearly 1 TWh in 2025.",
-   "source": "RTE: Bilan prévisionnel 2025-2035 (Dec. 2025), Bilan électrique 2025 (Feb. 2026), web page “Les data centers en chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel (sum: 13.9 GW).",
+   "source": "RTE: Bilan prévisionnel 2025-2035 (Dec. 2025), Bilan électrique 2025 (Feb. 2026), web page “Les data centers en chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel (sum: 13.9 GW).",
    "precaution": "Reserved capacity is neither power drawn nor consumption: the two panels are not comparable, and no ratio is computed between them. Pathways: RTE's assumptions, not measurements."
   }
  ]

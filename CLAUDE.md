@@ -652,14 +652,35 @@ cadre, filets, signe seul en bord de ligne ; chasses réelles des polices, `--te
 organe, `pied_figure.coupe` (cinq copies locales retirées le 03/11/2026).
 
 **Texte d'une figure : taille et encre (11/11/2026).** Aucun texte ne s'affiche sous 12 px à la plus petite largeur où sa
-version est servie : **11 px au moins dans une figure détaillée** (720 de large, affichée à 804 px au plus étroit, dans
-un repli à 900 px d'écran), **13 px dans une figure téléphone** (300 de large, 277 px au plus étroit, à 320 px d'écran) ;
+version est servie : **11 px au moins dans une figure détaillée** (720 de large, affichée à 786 px au plus étroit, dans
+le bloc « dette en chiffres » à 900 px d'écran), **13 px dans une figure téléphone** (300 de large, 277 px au plus étroit, à 320 px d'écran) ;
 mesure sur les 52 pages servies. **Le texte gris prend l'encre atténuée `pied_figure.ENCRE_ATTENUEE`** (`#6f6c66`,
 5,23:1 sur blanc) ; une marque grise (barre, point, filet, graduation) garde son gris, qui n'a besoin que de 3:1. Les
 deux valeurs vivent dans `scripts/pied_figure.py` (`ENCRE_ATTENUEE`, `POLICE_MIN`, `POLICE_M_MIN`) : un générateur les
 importe, il ne les recopie pas. Verrou : `check-figures.py`, règles R6 (taille affichée) et R7 (contraste du texte avec
-son fond), témoin compris. **En attente de la décision de l'auteur**, déclaré dans R7 et compté par `--detail` : le
-texte dans l'orange de la charte (`#eb6834`, 3,20:1) et le texte blanc posé sur une marque orange ou grise.
+son fond), témoin compris.
+
+**Texte d'une série orange : orange foncé (auteur, 11/11/2026 : « Je valide l'orange foncé pour le texte »).** L'orange
+de la charte `#eb6834` (3,20:1 sur blanc) reste la couleur des **marques** ; tout **texte** écrit dans la couleur d'une
+série orange, vive ou atténuée (`#b8703f`), prend `pied_figure.ORANGE_TEXTE` (`#b8420f`, 5,49:1), quelles que soient sa
+taille et sa graisse. Un générateur n'écrit pas la teinte : il appelle `pied_figure.encre_texte(couleur)` là où un
+texte reçoit la couleur de sa série (orange → orange foncé, gris des marques → encre atténuée, le reste inchangé).
+Teinte passée à `validate_palette.js` avec le bleu de la charte. Un second orange de texte pour les repères anciens ne
+se distinguerait pas du premier : leur distinction reste portée par les marques et par la graisse.
+
+**Texte posé sur une marque : encre foncée sur l'orange et le gris (auteur, 11/11/2026 : « Je valide l'encre foncée sur
+les marques orange et grises »).** Le blanc ne fait que 3,2:1 sur l'orange et 3,3 à 3,6:1 sur les gris de marque ; il
+reste sur le bleu (8,1:1). Un générateur demande la couleur à `pied_figure.encre_sur(couleur_de_la_marque)` : blanc si
+le blanc y fait 4,5:1, sinon l'encre `#0A0A0E` (6,2:1 sur l'orange, 5,5:1 sur le gris ; `#26262f` n'y ferait que
+4,2:1). R7 n'a plus aucune exception de charte.
+
+**Bande de période sur une série annuelle (arbitrage du 11/11/2026, délégué par l'auteur « au mieux de la
+lisibilité »).** La bande couvre exactement les points des années qu'elle nomme : d'une demi-année avant le premier à
+une demi-année après le dernier (`X(2013.5)` à `X(2017.5)` pour « 2014-2017 »). Bornée à la fin de la dernière année,
+elle s'arrêtait sur le point de l'année suivante, et deux contrôleurs indépendants l'ont lue « 2014-2018 ». Même borne
+dans la version téléphone et dans la carte de partage. Les bandes de crise du dossier dette (`CRISES`,
+`update_dette_insee.py`), bornées à la main et validées sur maquettes le 28/09/2026, portent leur période dans leur
+libellé et ne sont pas concernées.
 
 ⚠ **Une teinte nouvelle passe `validate_palette.js` avant d'être appliquée.** Le bleu marine du site
 (`#1B2A4E`) y échoue comme couleur de données : chroma trop faible, il lit gris. C'est ainsi que le

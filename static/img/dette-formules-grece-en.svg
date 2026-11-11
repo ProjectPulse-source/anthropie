@@ -51,11 +51,11 @@
 <rect x="689.4" y="68.8" width="17.1" height="46.2" fill="#eb6834"/>
 <line x1="457.2" y1="48" x2="457.2" y2="262" stroke="#26262f" stroke-width="1" stroke-dasharray="3 3"/>
 <text x="457.2" y="44" font-size="11" fill="#26262f" text-anchor="middle">debate of 8 September 2025</text>
-<text x="449.2" y="73.0" font-size="11" font-weight="600" fill="#eb6834" text-anchor="end">France above</text>
+<text x="449.2" y="73.0" font-size="11" font-weight="600" fill="#b8420f" text-anchor="end">France above</text>
 <text x="286.7" y="209.5" font-size="11" fill="#55524f">Greece above</text>
 <line x1="0" y1="302.0" x2="720" y2="302.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="317.0" font-size="11" fill="#55524f">Eurostat, long-term government bond yields, monthly averages (irt_lt_mcby_m); author's calculation</text>
-<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Monthly averages. On 8 September 2025, France borrowed at ten years at 3.49% (Banque de France) and Greece at 3.34%</text>
+<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Monthly averages. On 8 September 2025, France borrowed at ten years at 3.49% (Banque de France) and Greece at 3.34%</text>
 <text class="pied-note" x="0" y="345.0" font-size="11" fill="#55524f">(Bank of Greece); on the 4th, a like-for-like measure gave 3.50% against 3.44%. A market price gives the current cost</text>
 <text class="pied-note" x="0" y="359.0" font-size="11" fill="#55524f">of borrowing, not the relative soundness of two countries.</text>
 <text class="pied-licence" x="0" y="373.0" font-size="11" fill="#6f6c66">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-debate-claims/</text>

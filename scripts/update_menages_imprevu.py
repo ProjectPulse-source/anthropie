@@ -67,6 +67,7 @@ WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 ORANGE, GRIS, GRIS_CLAIR = "#eb6834", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement
+ORANGE_TEXTE = pied_figure.ORANGE_TEXTE   # texte seulement (11/11/2026) : barre et accolade gardent ORANGE
 SUFFIXE = {"fr": "", "en": "-en"}
 LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_FR, "en": "Computed by Stéphane Lalut, CC BY 4.0 · " + PAGE_EN}
 LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
@@ -354,14 +355,14 @@ def fig(c: dict, Aff: dict, lang: str) -> str:
             e.append('<rect x="%d" y="%d" width="%.1f" height="18" fill="%s"/>' % (b0, yy, X(val) - b0, COUL[cle]))
             poids = ' font-weight="600"' if cle in ("ps", "c1") else ""
             e.append('<text x="%.1f" y="%d" font-size="11.5"%s fill="%s">%s%s</text>'
-                     % (X(val) + 5, yy + 13, poids, ORANGE if cle == "ps" else INK, Aff["%s_%s" % (cle, cote)], pct))
+                     % (X(val) + 5, yy + 13, poids, ORANGE_TEXTE if cle == "ps" else INK, Aff["%s_%s" % (cle, cote)], pct))
         e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="1"/>' % (b0, top + 14, b0, top + 22 + 40 * 4 - 4, GRID))
         if cote == "dessus":   # accolade de l'écart à une seule variable : couple avec un enfant -> parent seul
             ya, yb = top + 22 + 40 * 2 + 9, top + 22 + 40 * 3 + 9
             xa = X(max(c["ps_dessus"], c["c1_dessus"])) + 46
             e.append('<path d="M%.1f,%d h6 v%d h-6" fill="none" stroke="%s" stroke-width="1.4"/>' % (xa, ya, yb - ya, ORANGE))
             e.append('<text x="%.1f" y="%d" font-size="11.5" font-weight="600" fill="%s">%s</text>'
-                     % (xa + 10, (ya + yb) // 2 + 4, ORANGE, esc(t["ecart"])))
+                     % (xa + 10, (ya + yb) // 2 + 4, ORANGE_TEXTE, esc(t["ecart"])))
     return pied_figure.pied(e, h + 2, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                           (LICENCES[lang], MUTED, "pied-licence")], GRID)
 
@@ -390,7 +391,7 @@ def fig_m(c: dict, Aff: dict, lang: str, svg_d: str) -> str:
             y += 6
             e.append('<rect x="0" y="%d" width="%.1f" height="14" fill="%s"/>' % (y, X(val), COUL[cle]))
             e.append('<text x="%.1f" y="%d" font-size="%s" font-weight="600" fill="%s">%s%s</text>'
-                     % (X(val) + 5, y + 12, FS_MIN, ORANGE if cle == "ps" else INK, Aff["%s_%s" % (cle, cote)], pct))
+                     % (X(val) + 5, y + 12, FS_MIN, ORANGE_TEXTE if cle == "ps" else INK, Aff["%s_%s" % (cle, cote)], pct))
             y += 14
         y += 30
     return pied_figure.pied_mobile(e, y + 4, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),

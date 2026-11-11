@@ -52,6 +52,65 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-11 — Texte orange des figures : orange foncé (décision de l'auteur) ; constats des deux contrôleurs indépendants
+
+- **Décision de l'auteur** (« Je valide l'orange foncé pour le texte ») : l'orange de la charte `#eb6834` (3,20:1) reste
+  la couleur des marques ; tout texte d'une série orange, vive ou atténuée (`#b8703f`), s'écrit en
+  `pied_figure.ORANGE_TEXTE` (`#b8420f`, 5,49:1 sur blanc, 5,0:1 sur fond teinté). Teinte passée à
+  `validate_palette.js` avec le bleu : toutes vérifications tenues ; un second orange de texte pour les repères anciens
+  ne s'en distinguerait pas (écart 6,9 pour un seuil de 15), d'où une seule encre orange. Organe :
+  `pied_figure.encre_texte(couleur)` rend l'encre du texte d'une couleur de série ; `parite()` lit les deux couleurs.
+- **Application** : 303 textes recolorés dans 15 générateurs et 91 figures ; l'opacité de 85 % des libellés de crise
+  (2,58:1) est retirée du texte. Contrôle d'ensemble, indépendant des lots : plus aucun texte en `#eb6834` ni
+  `#b8703f` ; hors couleur, seules les figures corrigées ci-dessous diffèrent du commit `5c1409d`. `check-figures.py`
+  refuse désormais le texte orange vif (témoin).
+- **Seconde décision de l'auteur** (« Je valide l'encre foncée sur les marques orange et grises ») : le texte posé SUR
+  une marque demande sa couleur à `pied_figure.encre_sur(couleur)`, blanc sur le bleu (8,1:1), encre `#0A0A0E` sur
+  l'orange (6,2:1) et les gris (5,5 à 6,1:1). 78 textes dans 19 figures et 9 générateurs (pastilles du schéma
+  d'emprunt, segments des barres) ; rien d'autre que leur couleur ne diffère. R7 n'a plus aucune exception : relevé
+  indépendant sur les 278 figures, 0 texte sous 4,5:1 (2 900 au départ de la journée).
+- **Bande de période, arbitrage délégué par l'auteur « au mieux de la lisibilité »** : sur une série annuelle, la bande
+  couvre exactement les points des années qu'elle nomme (demi-année avant le premier, demi-année après le dernier).
+  Appliqué à la bande « 2014-2017 » des collectivités : figure détaillée, version téléphone (qui porte maintenant sa
+  période sous la bande) et carte de partage (seules les quatre cartes « collectivités » changent). Les bandes de
+  crise du dossier dette, bornées à la main et validées sur maquettes le 28/09, ne sont pas concernées. Règle au
+  `CLAUDE.md`, « Figures de données ».
+- **Contrôleur indépendant « géométrie et données »** (état `5c1409d` contre `c2b25c2`, 278 figures) : aucune donnée
+  ni aucun nombre changé ; 71 figures recalculées sur leurs coordonnées, écart maximal 0,049 % de l'étendue ; les huit
+  traits « moitié des lois » sont à la moitié exacte. Corrigé à sa suite :
+  - `niveau-baisse` (détaillée et téléphone) : la figure annonçait 38 pays et en montrait 37 ; la Turquie, hors de
+    l'échelle (+44, +41, +69 points), était tracée au-delà du cadre. Flèche au bord de l'échelle, nom et valeur ; garde
+    qui arrête le générateur si un autre pays sort de l'échelle. Page datée du 11/11, journal de la page complété.
+  - `collectivites-investissement` : les pointillés des municipales s'interrompent derrière les textes (trois lignes
+    traversaient celui de 2020 de 10 à 22 px depuis le passage à 11 px).
+  - `appliquer-lois` (téléphone) : accord en nombre (« 1 divergente », « 0 divergente »).
+- **Contrôleur indépendant « rendu servi »** (site en ligne, 53 pages, six largeurs, 140 figures, 270 captures
+  regardées) : aucun texte sous 12 px, aucun débordement, impression et couche d'agrandissement conformes, 274 SVG
+  servis identiques au dépôt. Corrigé à sa suite :
+  - **figure « dette longue »** du bloc « dette en chiffres » (`partials/dette-chiffres.html`) : restée au point de
+    bascule de 600 px, elle servait la version détaillée à 447 px de large à 601 px d'écran (texte de 6,8 px). Même
+    bascule à 899 px et même plafond que les autres ; `essai_figures_site.py` la mesure désormais (142 figures).
+    Seuil de R6 réaligné sur la largeur la plus étroite réellement servie (786 px, dans ce bloc ; 804 dans un repli).
+  - `delais-admissions` : chaque pointillé part de la hauteur de sa propre étiquette (celui de 2010-2011 se logeait
+    sous l'étiquette de 2021).
+  - `schema-emprunt-etat` (anglais) : le pied imprimait une adresse en 404 (`/en/who-pays-public-debt/`).
+  - `dette-monde-stock` (téléphone) : le Danemark manquait (26 pays contre 27 en version détaillée).
+  - `dette-generations-actifs` (téléphone) : « 14 % », segment trop étroit, s'écrit sous son segment.
+  - `charge-encours-taux` (téléphone) : le point noir de la variation, annoncé par la légende de la page, est dessiné.
+  - 22 figures détaillées sans fond blanc opaque (coût de la dette, « qui paie ») : les arcs du fond de page
+    traversaient leur tracé. Fond posé une fois, dans `pied_figure.pied()` ; `check-figures.py` l'exige sur le site.
+  - coupure des lignes : mois anglais soudé à son année (« 8 September / 2025 ») ; espace retirée devant « % » dans la
+    figure anglaise des formules.
+- **Contrôles** : `check-figures.py` 278 figures à 0 (témoins compris) ; `check-all --ci`, build, typographie, liens,
+  dates, rendu à 0 ; relecture : une seule phrase nouvelle depuis l'état poussé (note de la figure PISA), instantané
+  refait ; hauteurs déclarées dans les pages conformes (92 lues), onze hauteurs changées ; essai sur build local :
+  53 pages, 994 rendus, 0 défaut.
+- **Ouverts, techniques** (relevés par les contrôleurs, non traités) : `qui-paie-exposition` téléphone, étiquette
+  « ≥ ×5,5 » loin de sa barre ; `taux-marche-apparent`, creux de 2020 imprimé « −0,1 » pour une série publiée à −0,15
+  (arrondi du flottant, convention de `langue_generee`) ; spirale anthropique et mini-schémas de l'accueil sous 12 px
+  au téléphone (schémas de concept, hors figures de données) ; PDF A4 : plus petit texte 7,15 pt ; libellés au contact
+  d'une courbe ou d'un filet de grille (liste dans les rapports, dossiers `ctrl_d` et `ctrl_e` de la session).
+
 ### 2026-11-11 — Texte des figures : 11 px au moins et encre atténuée, dans les 31 générateurs ; impression et couche d'agrandissement
 
 - **Demande de l'auteur** : corriger dans les générateurs les deux points laissés ouverts le matin (texte gris à

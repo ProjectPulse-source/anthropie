@@ -100,7 +100,7 @@ T = {
                   "bonds earn, its results fall: it paid no dividend for the 2022 to 2025 financial years.")],
         source="Author's diagram; Agence France Trésor, Banque de France (annual accounts), ECB, Treaty on the Functioning of the EU (Art. 123).",
         note="Simplified: the State is only part of general government, and the Banque de France is not part of it.",
-        licence="Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-pays-public-debt/",
+        licence="Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/who-really-pays-public-debt/",
         licence_m="Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
     ),
 }
@@ -136,8 +136,10 @@ def fleche(e, pts, col, nom):
 def pastille(e, x, y, n, col, r=9, mini=PF.POLICE_MIN):
     fs = max(r + 2, mini)      # chiffre de la pastille : jamais sous la police minimale de la version
     e.append('<circle cx="%.1f" cy="%.1f" r="%d" fill="%s"/>' % (x, y, r, col))
-    e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" text-anchor="middle" fill="#fff">%s</text>'
-             % (x, y + fs * 0.36, fs, n))
+    # Chiffre à l'encre que sa pastille demande (PF.encre_sur, 11/11/2026) : blanc sur le bleu, encre la plus foncée
+    # sur l'orange et le gris, où le blanc ne faisait que 3,2 et 3,6:1.
+    e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" text-anchor="middle" fill="%s">%s</text>'
+             % (x, y + fs * 0.36, fs, PF.encre_sur(col), n))
 
 
 def legende(e, y, items, cols, car, x0=0, fs=12, pas=16, r=8, mini=PF.POLICE_MIN):
@@ -175,7 +177,8 @@ def bureau(lang: str) -> str:
     y = legende(e, by + bh + 22, L["l1"], COULEURS, 100)
     # Volet 2 : l'État à gauche ; investisseurs et Banque de France au centre ; banques à droite.
     y += 18
-    e.append('<text x="0" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (y, ORANGE, esc(L["v2"])))
+    # Titre du volet à l'encre de sa couleur (PF.encre_texte, 11/11/2026) : flèches et pastilles gardent ORANGE.
+    e.append('<text x="0" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (y, PF.encre_texte(ORANGE), esc(L["v2"])))
     y0 = y + 16
     bw2, bh2 = 170, 62
     xe, xc, xd = 0, 275, 550
@@ -207,7 +210,7 @@ def telephone(lang: str) -> str:
     fs, mini = PF.POLICE_M, PF.POLICE_M_MIN
 
     def colonne(y, boites, fleches, couleur_titre, titre):
-        e.append('<text x="0" y="%.1f" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y + 18, fs, couleur_titre, esc(titre)))
+        e.append('<text x="0" y="%.1f" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y + 18, fs, PF.encre_texte(couleur_titre), esc(titre)))
         y += 30
         bw, bh, gap = 230, 58, 34
         x = (WM - bw) / 2

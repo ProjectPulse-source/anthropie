@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 443" role="img" font-variant-numeric="tabular-nums" aria-labelledby="qp-age-t qp-age-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="qp-age-t">Taxes and contributions, and public transfers, by household age, 2023</title>
 <desc id="qp-age-d">Bars by household age group, in 2023, in thousand euros per consumption unit. Transfers received rise from 18.2 for the 18-29 group to 47.8 for households whose adults are 65 or over on average, while taxes and contributions go from 23.2 to 14.6.</desc>
+<rect width="720" height="443" fill="#ffffff"/>
 <text x="0.0" y="22.0" font-size="13" fill="#2b2a28" text-anchor="start" font-weight="600">Taxes and contributions, and public transfers, by household age, 2023, € thousand per CU</text>
 <line x1="46" y1="285.7" x2="552" y2="285.7" stroke="#e1e0d9" stroke-width="1"/>
 <text x="40.0" y="289.7" font-size="11" fill="#6f6c66" text-anchor="end">−25</text>
@@ -44,12 +45,12 @@
 <text x="566.0" y="114.7" font-size="11" fill="#6f6c66" text-anchor="start">valued public services</text>
 <text x="566.0" y="173.3" font-size="11" fill="#184f95" text-anchor="start" font-weight="600">Cash benefits</text>
 <text x="566.0" y="186.3" font-size="11" fill="#6f6c66" text-anchor="start">including pensions</text>
-<text x="566.0" y="239.3" font-size="11" fill="#eb6834" text-anchor="start" font-weight="600">Taxes and contributions</text>
+<text x="566.0" y="239.3" font-size="11" fill="#b8420f" text-anchor="start" font-weight="600">Taxes and contributions</text>
 <text x="566.0" y="252.3" font-size="11" fill="#6f6c66" text-anchor="start">taxes, social contributions</text>
 <text x="566.0" y="294.5" font-size="11" fill="#6f6c66" text-anchor="start">Above the bars:</text>
 <text x="566.0" y="307.5" font-size="11" fill="#6f6c66" text-anchor="start">total transfers received</text>
 <line x1="0" y1="364.0" x2="720" y2="364.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="379.0" font-size="11" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1e) · groups by mean age</text>
+<text class="pied-source" x="0" y="379.0" font-size="11" fill="#52514e">Insee, distributional national accounts 2023 (Insee Analyses no. 118, 16 April 2026, figure 1e) · groups by mean age</text>
 <text class="pied-source" x="0" y="393.0" font-size="11" fill="#52514e">of the household's adults</text>
 <text class="pied-note" x="0" y="407.0" font-size="11" fill="#52514e">A snapshot of one year, not the balance sheet of a generation: retirement pensions are counted here as transfers</text>
 <text class="pied-note" x="0" y="421.0" font-size="11" fill="#52514e">received.</text>

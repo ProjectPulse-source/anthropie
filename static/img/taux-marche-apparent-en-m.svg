@@ -22,7 +22,7 @@
 <text x="300" y="314" font-size="15" font-weight="600" fill="#52514e" text-anchor="end">3.3%</text>
 <line x1="0" y1="331" x2="18" y2="331" stroke="#eb6834" stroke-width="2.6"/>
 <text x="24" y="336" font-size="13.5" fill="#52514e">Implicit rate 2025</text>
-<text x="300" y="336" font-size="15" font-weight="600" fill="#eb6834" text-anchor="end">2.0%</text>
+<text x="300" y="336" font-size="15" font-weight="600" fill="#b8420f" text-anchor="end">2.0%</text>
 <line x1="0" y1="362.0" x2="300" y2="362.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="383.0" font-size="13.5" fill="#52514e">Eurostat irt_lt_mcby_a (10-year yield)</text>
 <text class="pied-source" x="0" y="400.0" font-size="13.5" fill="#52514e">· implicit rate: Eurostat gov_10a_main</text>

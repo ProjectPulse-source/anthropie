@@ -584,7 +584,9 @@ def fig_dictee(c, A):
         e.append('<rect x="%d" y="%.1f" width="%d" height="%.1f" fill="%s"/>' % (x, base - sy(l + o), bw, sy(o), ORANGE))
         e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l + o) - 6, INK, nbp(tot[a])))
         e.append('<text x="%.1f" y="%.1f" font-size="11" fill="#ffffff" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) / 2 + 4, nbp(l)))
-        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="#ffffff" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) - sy(o) / 2 + 4, nbp(round(o, 1))))
+        # Valeur dans le segment orange : l'encre que cette couleur demande (pied_figure.encre_sur, 11/11/2026 : le blanc
+        # n'y faisait que 3,2:1) ; le segment bleu, juste au-dessus dans le code, garde le blanc.
+        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) - sy(o) / 2 + 4, pied_figure.encre_sur(ORANGE), nbp(round(o, 1))))
         e.append('<text x="%.1f" y="%d" font-size="11.5" fill="%s" text-anchor="middle">%s</text>' % (x + bw / 2, base + 16, INK2, a))
     yl = base + 40
     for k, (col, lib) in enumerate(((BLEU, "Erreurs lexicales (orthographe des mots)"), (ORANGE, "Autres erreurs (grammaire, ponctuation, oublis)"))):

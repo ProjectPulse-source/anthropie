@@ -59,8 +59,10 @@ L1 = {"menages": "Émissions directes des ménages",
       "interieure": "Émissions de la production intérieure destinées à la demande finale",
       "importee": "Émissions importées destinées à la demande finale",
       "emissions": "Ensemble émissions françaises", "empreinte": "Ensemble empreinte carbone"}
-COULEUR = {"menages": (gl.GRIS_CLAIR, gl.INK), "interieure": (gl.BLEU, "#ffffff"), "exportee": (gl.GRIS, "#ffffff"),
-           "importee": (gl.ORANGE, gl.INK)}
+# Valeur et nom écrits dans un segment plein : l'encre que sa couleur demande (pied_figure.encre_sur, 11/11/2026) --
+# blanc sur le bleu, encre la plus foncée sur le gris des barres.
+COULEUR = {"menages": (gl.GRIS_CLAIR, gl.INK), "interieure": (gl.BLEU, pied_figure.encre_sur(gl.BLEU)),
+           "exportee": (gl.GRIS, pied_figure.encre_sur(gl.GRIS)), "importee": (gl.ORANGE, gl.INK)}
 NOM = {"menages": ("Émissions directes", "des ménages"), "interieure": ("Production en France", "pour la demande française"),
        "exportee": ("Production en France", "exportée"), "importee": ("Importations", "pour la demande française")}
 # Un seul texte pour la figure détaillée et sa version téléphone : titre, sous-titre, totaux, description, cartouche.

@@ -49,15 +49,15 @@
 <text x="130.0" y="306" font-size="13.5" fill="#6f6c66">2025</text>
 <text x="226.0" y="306" font-size="13.5" fill="#6f6c66">2026</text>
 <line x1="198.0" y1="96" x2="198.0" y2="288" stroke="#26262f" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="0" y="338" font-size="15" font-weight="600" fill="#eb6834">August 2025: 3.42 / 3.37 %</text>
-<text x="0" y="358" font-size="15" font-weight="600" fill="#eb6834">September 2025: 3.51 / 3.39 %</text>
+<text x="0" y="338" font-size="15" font-weight="600" fill="#b8420f">August 2025: 3.42 / 3.37%</text>
+<text x="0" y="358" font-size="15" font-weight="600" fill="#b8420f">September 2025: 3.51 / 3.39%</text>
 <text x="0" y="376" font-size="13.5" fill="#55524f">France / Greece, monthly average;</text>
 <text x="0" y="394" font-size="13.5" fill="#55524f">dotted line: the debate</text>
 <line x1="0" y1="408.0" x2="300" y2="408.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="429.0" font-size="13.5" fill="#55524f">Eurostat, long-term government bond</text>
 <text class="pied-source" x="0" y="446.0" font-size="13.5" fill="#55524f">yields, monthly averages</text>
 <text class="pied-source" x="0" y="463.0" font-size="13.5" fill="#55524f">(irt_lt_mcby_m); author's calculation</text>
-<text class="pied-note" x="0" y="484.0" font-size="13.5" fill="#55524f">Monthly averages. On 8 September 2025,</text>
+<text class="pied-note" x="0" y="484.0" font-size="13.5" fill="#55524f">Monthly averages. On 8 September 2025,</text>
 <text class="pied-note" x="0" y="501.0" font-size="13.5" fill="#55524f">France borrowed at ten years at 3.49%</text>
 <text class="pied-note" x="0" y="518.0" font-size="13.5" fill="#55524f">(Banque de France) and Greece at 3.34%</text>
 <text class="pied-note" x="0" y="535.0" font-size="13.5" fill="#55524f">(Bank of Greece); on the 4th, a</text>

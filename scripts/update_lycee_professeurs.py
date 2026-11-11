@@ -60,9 +60,15 @@ BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
 # MUTED ne sert qu'au TEXTE (graduations, crédit) : encre atténuée de l'organe commun. Les marques grises (courbe et
 # points de l'ensemble des concours) gardent GRIS. Aucun texte d'une figure détaillée sous pied_figure.POLICE_MIN (11),
-# contrôle R6 et R7 de check-figures.
+# contrôle R6 et R7 de check-figures. Un texte écrit dans la couleur de sa série passe par pied_figure.encre_texte
+# (11/11/2026 : l'orange des marques, 3,20:1 sur blanc, s'écrit en orange foncé) ; la courbe et le point gardent ORANGE.
 LICENCE = "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
 GT, LP, COL = "En lycée général", "En lycée professionnel", "En collège"
+
+
+def fondu(col: str, op: float) -> str:
+    """Couleur affichée d'une marque de teinte `col` (#rrggbb) et d'opacité `op`, posée sur le blanc de la figure."""
+    return "#%02x%02x%02x" % tuple(round(op * int(col[i:i + 2], 16) + (1 - op) * 255) for i in (1, 3, 5))
 
 
 def log(msg: str) -> None:
@@ -633,9 +639,10 @@ def fig_heures(c, A):
             w = sx(v[cle])
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="26" fill="%s" opacity="%s" stroke="#ffffff" stroke-width="1"/>' % (x, y, w, col, op))
             if w > 26:
-                # Valeur dans son segment : blanche sur l'orange (charte) et sur le bleu plein ; encre sur les bleus
-                # éclaircis (11/11/2026 : le blanc sur le bleu à 62 % faisait 3,21:1, règle R7 ; l'encre y fait 4,6:1).
-                fc = "#ffffff" if (col == ORANGE or op >= 1.0) else INK
+                # Valeur dans son segment : l'encre que demande la couleur AFFICHÉE du segment, teinte fondue sur le blanc
+                # selon son opacité (pied_figure.encre_sur, 11/11/2026). Blanche sur le bleu plein ; encre la plus foncée
+                # sur l'orange (le blanc y faisait 3,20:1) et sur les bleus éclaircis (3,21:1 sur le bleu à 62 %).
+                fc = pied_figure.encre_sur(fondu(col, op))
                 e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (x + w / 2, y + 17, fc, nb(v[cle])))
             x += w
         e.append('<text x="%.1f" y="%d" font-size="11.5" font-weight="600" fill="%s">%s %%</text>' % (x + 6, y + 17, INK, nb(v["total"])))
@@ -703,7 +710,7 @@ def fig_concours(c, A):
         for a, v in pts:
             if serie is nat:
                 e.append('<circle cx="%.1f" cy="%.1f" r="2.6" fill="%s"/>' % (X(a), Y(min(v, 100)), col))
-        etiq.append([Y(pts[-1][1]) + 4, col if col != GRIS else INK2, "%s : %s %%" % (lib, nb(pts[-1][1]))])
+        etiq.append([Y(pts[-1][1]) + 4, pied_figure.encre_texte(col) if col != GRIS else INK2, "%s : %s %%" % (lib, nb(pts[-1][1]))])
     etiq.sort()
     for k in range(1, len(etiq)):   # étiquettes de fin : jamais à moins de 14 px l'une de l'autre
         etiq[k][0] = max(etiq[k][0], etiq[k - 1][0] + 14)
@@ -716,7 +723,7 @@ def fig_concours(c, A):
     e.append('<text x="%d" y="%d" font-size="11" fill="%s" text-anchor="middle">deux concours</text>' % (X26 + 14, TOP - 8, INK2))
     for v, col in ((c["t26"]["maths"], BLEU), (c["t26"]["pc"], ORANGE)):
         e.append('<circle cx="%d" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>' % (X26, Y(min(v, 100)), col))
-        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X26 + 8, Y(min(v, 100)) + 4, col, nb(v)))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X26 + 8, Y(min(v, 100)) + 4, pied_figure.encre_texte(col), nb(v)))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -851,7 +858,7 @@ def fig_concours_m(c, A, svg_d):
         e.append('<rect x="0" y="%d" width="14" height="4" fill="%s"/>' % (y - 6, col))
         e.append('<text x="22" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, lib))
         y += 22
-        e.append('<text x="22" y="%d" font-size="%s" fill="%s">2025 : %s %% · 2026 : %s %%</text>' % (y, FS_MIN, col, v25, v26))
+        e.append('<text x="22" y="%d" font-size="%s" fill="%s">2025 : %s %% · 2026 : %s %%</text>' % (y, FS_MIN, pied_figure.encre_texte(col), v25, v26))
     y += 26
     for ligne in coupe("Point creux, 2026 : deux concours (bac+3 et bac+5), plus de postes, hors série. Deux CAPES seulement : "
                        "l'ensemble des concours figure dans la version détaillée.", 38):
@@ -865,8 +872,11 @@ def parite_mobile(figs):
     for fid in ("heures", "classes", "concours"):
         d, m = figs["lycee-%s.svg" % fid], figs["lycee-%s-m.svg" % fid]
         nombres_d = set(re.findall(r"\d+(?:,\d+)?", desc_de(d)))
+        # Un texte de série s'écrit dans l'ENCRE de sa couleur : les deux sont lues, sinon les valeurs orange sortiraient
+        # du contrôle sans rien signaler (11/11/2026, même règle que pied_figure.parite).
+        encres = sorted({BLEU, ORANGE} | {pied_figure.encre_texte(x) for x in (BLEU, ORANGE)})
         textes_m = re.findall(r'<text [^>]*font-weight="600"[^>]*>([^<]*)</text>', m) + \
-            re.findall(r'<text [^>]*fill="(?:%s|%s)"[^>]*>([^<]*)</text>' % (BLEU, ORANGE), m)
+            re.findall(r'<text [^>]*fill="(?:%s)"[^>]*>([^<]*)</text>' % "|".join(re.escape(x) for x in encres), m)
         dessines = set(n for tx in textes_m for n in re.findall(r"\d+(?:,\d+)?", html.unescape(tx)) if not re.fullmatch(r"(19|20)\d\d", n))
         if not dessines:
             fail("parite mobile : %s -- aucune valeur dessinee lue (controle aveugle)" % fid)

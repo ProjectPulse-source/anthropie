@@ -85,6 +85,7 @@ WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement
+ORANGE_TEXTE = pied_figure.ORANGE_TEXTE   # texte seulement (11/11/2026) : les barres gardent ORANGE
 SUFFIXE = {"fr": "", "en": "-en"}
 LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_FR, "en": "Computed by Stéphane Lalut, CC BY 4.0 · " + PAGE_EN}
 LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
@@ -356,9 +357,11 @@ def fig(c, Aff, lang):
             wv = max(larg * v / 100, 1.5)
             e.append('<rect x="%d" y="%d" width="%.1f" height="16" fill="%s"/>' % (x0, y + 2, wv, col))
             poids = ' font-weight="600"' if cat == "HA" else ""
-            dedans = wv >= larg - 34          # barre presque pleine : l'étiquette passe dans la barre, en blanc
+            # Barre presque pleine : l'étiquette passe dans la barre, à l'encre que la couleur de cette barre demande
+            # (pied_figure.encre_sur, 11/11/2026 : le blanc ne faisait que 3,2:1 sur l'orange et 3,6:1 sur le gris).
+            dedans = wv >= larg - 34
             xt, ancre = (x0 + wv - 4, "end") if dedans else (x0 + wv + 4, "start")
-            coul = "#ffffff" if dedans else (ORANGE if col == ORANGE else INK)
+            coul = pied_figure.encre_sur(col) if dedans else (ORANGE_TEXTE if col == ORANGE else INK)
             e.append('<text x="%.1f" y="%d" font-size="11"%s fill="%s" text-anchor="%s">%s%s</text>'
                      % (xt, y + 14, poids, coul, ancre, esc(Aff[cle]), pct))
         for j, l in enumerate(pied_figure.coupe(FILIERES[lang][cat], 30)):
@@ -388,7 +391,7 @@ def fig_m(c, Aff, lang, svg_d):
             y += 20
             e.append('<rect x="0" y="%d" width="%.1f" height="12" fill="%s"/>' % (y - 10, max(150 * v / 100, 1.5), col))
             e.append('<text x="%.1f" y="%d" font-size="%s" font-weight="600" fill="%s">%s%s %s</text>'
-                     % (max(150 * v / 100, 1.5) + 6, y, FS_MIN, ORANGE if col == ORANGE else INK, esc(Aff[cle]), pct, lib))
+                     % (max(150 * v / 100, 1.5) + 6, y, FS_MIN, ORANGE_TEXTE if col == ORANGE else INK, esc(Aff[cle]), pct, lib))
         for l in pied_figure.coupe(FILIERES[lang][cat], 36):
             y += 18
             e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, BLEU if cat in STOCKABLES else INK2, esc(l)))

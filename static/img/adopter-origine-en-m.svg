@@ -54,11 +54,11 @@
 <polygon points="11.0,768.0 6.0,775.0 16.0,775.0" fill="#0A0A0E"/>
 <text x="30.0" y="780.0" font-size="13.5" fill="#52514e" text-anchor="start">lower bound: origin established by</text>
 <text x="30.0" y="798.0" font-size="13.5" fill="#52514e" text-anchor="start">both sources</text>
-<text x="0.0" y="816.0" font-size="13.5" fill="#52514e" text-anchor="start">* ongoing on 6 October 2026</text>
+<text x="0.0" y="816.0" font-size="13.5" fill="#52514e" text-anchor="start">* ongoing on 6 October 2026</text>
 <line x1="0" y1="838.0" x2="300" y2="838.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0.0" y="859.0" font-size="13.5" fill="#52514e" text-anchor="start">National Assembly (open data,</text>
 <text class="pied-source" x="0.0" y="876.0" font-size="13.5" fill="#52514e" text-anchor="start">legislative files) and Senate (Dosleg</text>
-<text class="pied-source" x="0.0" y="893.0" font-size="13.5" fill="#52514e" text-anchor="start">database), 6 October 2026; Journal</text>
+<text class="pied-source" x="0.0" y="893.0" font-size="13.5" fill="#52514e" text-anchor="start">database), 6 October 2026; Journal</text>
 <text class="pied-source" x="0.0" y="910.0" font-size="13.5" fill="#52514e" text-anchor="start">officiel</text>
 <text class="pied-note" x="0.0" y="931.0" font-size="13.5" fill="#52514e" text-anchor="start">Scope: laws promulgated, excluding</text>
 <text class="pied-note" x="0.0" y="948.0" font-size="13.5" fill="#52514e" text-anchor="start">laws authorising a treaty, finance and</text>
