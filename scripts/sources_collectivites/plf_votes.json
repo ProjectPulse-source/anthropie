@@ -1,7 +1,7 @@
 {
  "_role": "Etat du projet de loi de finances au Parlement, article par article, pour la page collectivites. Chaque resultat est une citation VERBATIM du compte rendu officiel de la seance ; le compte rendu est archive hors depot (06_PROMOTION/RECHERCHE_VOTRE_COMMUNE_2026-10-22/_SOURCES, SHA256SUMS.txt) et chaque citation y a ete retrouvee par verifier_plf_votes.py le jour de l'ecriture. Une decision de commission (amendement adopte) entre dans `commission`, citee sur la page de l'amendement archivee : en premiere lecture, la seance discute le texte du Gouvernement (Constitution, art. 42), la decision de commission n'y vaut que si la seance la reprend. A completer a chaque etape (27/10-2/11, vote solennel du 3/11, Senat, CMP, loi promulguee) : une etape = une entree datee, jamais une ecrasee. 06/11/2026 : texte rejeté par l'Assemblée le 4/11 (`texte_rejete`) ; les entrées `articles` et `commission` restent comme historique, sans effet sur le texte transmis au Sénat ; calendrier du Sénat dans `senat` (ordre du jour archivé).",
  "edition": 2027,
- "etat_au": "2026-11-09",
+ "etat_au": "2026-11-10",
  "etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
  "etape_suivante_en": "examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December",
  "etape_source": {
@@ -175,6 +175,8 @@
   "texte": "projet de loi de finances pour 2027 (A.N., n° 3210), sous réserve de sa transmission"
  },
  "veille_seances_lues": [
-  "AN-2026-11-09-1"
+  "AN-2026-11-09-1",
+  "AN-2026-11-09-2",
+  "AN-2026-11-10-1"
  ]
 }
