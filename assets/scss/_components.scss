@@ -345,9 +345,14 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 // Sur téléphone, la version -m sort du rembourrage du bloc (24 px) et de la colonne, comme les autres figures composées
 // pour le téléphone (12 px du bord) : mesure du 11/10/2026, enfermée dans le bloc elle tombait à 211 px à 320 px de
 // large, soit des textes d'environ 9,5 px.
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .dette-chiffres__figure picture { margin-left: calc(12px - var(--marge-main) - var(--marge-colonne) - 24px); margin-right: calc(12px - var(--marge-main) - var(--marge-colonne) - 24px); }
   .dette-chiffres__figure picture img { max-width: 420px; }
+}
+// De 601 à 899 px : même règle que .figure-ciseau (version téléphone servie jusqu'à 899 px, plafonnée à 460 px). Cette
+// figure était restée au point de bascule de 600 px : version détaillée à 447 px de large à 601 px d'écran (11/11/2026).
+@media screen and (min-width: 601px) and (max-width: 899px) {
+  .dette-chiffres__figure picture img { max-width: 460px; }
 }
 .dette-chiffres__faits {
   list-style: none; margin: 16px 0 0; padding: 0;

@@ -103,7 +103,10 @@
     {{- if fileExists (printf "static%s" $svgm) }}
     {{- $vbm := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` (os.ReadFile (printf "static%s" $svgm)) 1) 0 }}
     <picture>
-      <source media="(max-width: 600px)" srcset="{{ $svgm }}" width="{{ index $vbm 1 }}" height="{{ index $vbm 2 }}">
+      {{- /* Même point de bascule que les autres figures de données (899 px, à l'écran) : resté à 600 px jusqu'au
+             11/11/2026, il servait la version détaillée à 447 px de large à 601 px d'écran, soit du texte de 6,8 px
+             (second contrôle indépendant du rendu). */}}
+      <source media="screen and (max-width: 899px)" srcset="{{ $svgm }}" width="{{ index $vbm 1 }}" height="{{ index $vbm 2 }}">
       <img src="{{ $T.svg }}" width="{{ index $vb 1 }}" height="{{ index $vb 2 }}" loading="lazy" alt="{{ $alt }}">
     </picture>
     {{- else }}
