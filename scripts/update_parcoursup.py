@@ -105,7 +105,12 @@ INTERDITES = (r"fourchette,? pas un point", r"ne fluctuent pas au hasard", r"lot
               r"le plus souvent", r"personne ne peut calculer",
               # Pièce 08 : les données mesurent la tenue d'un seuil par des formations, pas le réalisme d'un vœu pour un
               # candidat ; « le conseil tient » validait ce qui n'est pas testé. « Et elle seule » : absolu inutile.
-              r"le conseil tient", r"et elle seule")
+              r"le conseil tient", r"et elle seule",
+              # 11/11/2026 (contrôle indépendant de la mise en forme) : part_acces_gen, part_acces_tec et part_acces_pro
+              # répartissent les seuls ÉLÈVES DE TERMINALE en position de recevoir une proposition (libellé de la
+              # variable ; 60 formations sans élève de terminale classé ont leurs trois parts à 0). La page écrivait
+              # « candidats », mot de la définition de la notice, que son propre dictionnaire dément.
+              r"cent candidats qui pouvaient recevoir", r"répartition par bac des candidats", r"relevaient d'un bac")
 
 
 class Arret(SystemExit):
@@ -502,6 +507,10 @@ def fragments_gardes(page: str) -> list:
     out = [("resultat en une phrase", m) for m in re.findall(r'<div class="resultat-phrase">(.*?)</div>', page, flags=re.S)]
     out += [("texte alternatif d'une figure", m) for m in re.findall(r'<img\b[^>]*\balt="([^"]*)"', page, flags=re.S)]
     out += [("reponse de la FAQ", m) for m in re.findall(r'^\s+answer:\s*"(.*)"\s*$', page, flags=re.M)]
+    # Mise en forme du 11/11/2026 (maquette B+) : les repères du haut de page (front matter « reperes: ») et les deux
+    # encadrés d'indicateurs sont des blocs citables, donc sans nombre saisi eux non plus.
+    out += [("repere du haut de page", m) for m in re.findall(r'^\s+(?:fort|texte|precision):\s*"(.*)"\s*$', page, flags=re.M)]
+    out += [("encadre d'indicateur", m) for m in re.findall(r'<p class="indicateur-encadre__(?:val|txt)">(.*?)</p>', page, flags=re.S)]
     return out
 
 
@@ -646,7 +655,10 @@ def gardes(c: dict, seule: str = "") -> int:
 
 # ------------------------------------------------------------------ mutations (chaque garde vue mordre)
 PAGE_TEMOIN = ('---\ntitle: "page temoin"\nfaq:\n  - question: "Le taux de 2026 vaudra-t-il pour 2027 ?"\n'
-               '    answer: "Rien ne le garantit : {psup.d_t6075_d1} a {psup.d_t6075_d9}."\n---\n'
+               '    answer: "Rien ne le garantit : {psup.d_t6075_d1} a {psup.d_t6075_d9}."\n'
+               'reperes:\n  - ancre: "a"\n    fort: "{psup.d_absmed_frac}"\n'
+               '    texte: "a varie de {psup.d_absmed_pts} ou moins"\n---\n'
+               '<p class="indicateur-encadre__val">{{< psup-val "ex_adm" >}} sur {{< psup-val "ex_cand" >}}</p>\n'
                '<div class="resultat-phrase">\n\n**Le résultat en une phrase.** Parmi les formations à '
                '{{< psup-val "d_t6075_lib" >}}, {{< psup-val "d_t6075_dans_frac" >}} se situaient entre '
                '{{< psup-val "d_t6075_d1" >}} et {{< psup-val "d_t6075_d9" >}}&nbsp;%.\n\n</div>\n'
@@ -661,6 +673,9 @@ MUTATIONS = {
     "reprise": ("5", "garde 5 (reprise)", "le témoin attend 200 appariées de plus"),
     "jeton": ("6", "garde 6 (jetons)", "un nombre saisi dans le résultat en une phrase"),
     "jetonfaq": ("6", "garde 6 (jetons)", "un nombre saisi dans une réponse de la FAQ"),
+    "population": ("8", "cent candidats qui pouvaient recevoir", "la répartition par bac attribuée à tous les candidats"),
+    "jetonrepere": ("6", "repere du haut de page", "un nombre saisi dans un repère du haut de page"),
+    "jetonencadre": ("6", "encadre d'indicateur", "un nombre saisi dans un encadré d'indicateur"),
     "prose": ("8", "garde 8 (prose)", "la formule « ne fluctuent pas au hasard » dans la page"),
     "diversification": ("8", "diversification", "un conseil de diversification en nom propre"),
     "fraction": ("9", "garde 9 (fractions)", "45 % écrit « un peu plus d'une sur deux »"),
@@ -712,6 +727,12 @@ def muter(c: dict, m: str) -> None:
         c["page"] = PAGE_TEMOIN.replace('{{< psup-val "d_t6075_d1" >}} et', "43 et")
     elif m == "jetonfaq":
         c["page"] = PAGE_TEMOIN.replace("{psup.d_t6075_d1}", "43")
+    elif m == "population":
+        c["page"] = PAGE_TEMOIN + "Sur cent candidats qui pouvaient recevoir une proposition, la plupart venaient d'un bac technologique.\n"
+    elif m == "jetonrepere":
+        c["page"] = PAGE_TEMOIN.replace("{psup.d_absmed_pts}", "6 points")
+    elif m == "jetonencadre":
+        c["page"] = PAGE_TEMOIN.replace('{{< psup-val "ex_cand" >}}</p>', "378</p>")
     elif m == "prose":
         c["page"] = PAGE_TEMOIN + "Les taux d'accès ne fluctuent pas au hasard d'une année à l'autre.\n"
     elif m == "diversification":
@@ -1457,7 +1478,7 @@ def payload_de(c: dict, A: dict) -> dict:
             "baisse_20_corrigee": "variation diminuée de la variation médiane de la filière (ou du groupe des formations reclassées)",
             "filieres": "formations classées dans la même filière (fili) les deux sessions ; celles dont la filière diffère forment le groupe « reclassees », compté à part et jamais présenté comme une filière",
             "selection": "groupes décrits à l'année de départ ; les nouvelles formations à l'année d'arrivée",
-            "exemple": "nombres du fichier ouvert (au 10 septembre, tous candidats) ; la fiche de la plateforme, arrêtée à la fin de la phase principale, en donne d'autres"}}
+            "exemple": "nombres du fichier ouvert (au 10 septembre, tous candidats) ; la fiche de la plateforme, arrêtée à la fin de la phase principale, en donne d'autres ; gen, tec, pro (part_acces_gen, part_acces_tec, part_acces_pro) : répartition par type de bac des seuls élèves de terminale en position de recevoir une proposition en phase principale (libellé de la variable ; vérifié sur le fichier le 11/11/2026)"}}
     T = [{k: v for k, v in t.items() if not k.startswith("_")} for t in c["T"]]
     ex = {k: c["ex"][k] for k in ("session", "code", "etab", "lib", "fili", "taux", "capa", "voe", "voe_pc", "cla", "prop", "acc", "gen", "tec", "pro",
                                   "part_admis", "part_propositions")}

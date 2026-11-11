@@ -17,6 +17,13 @@
   {{- $v := index $a $k -}}
   {{- if not $v -}}
     {{- errorf "psup-val: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}
+  {{- else if eq (.Get 1) "css" -}}
+    {{- /* {{< psup-val "d_t9099_reste" "css" >}} : la même valeur, écrite pour une propriété CSS (« 55,2 » -> « 55.2 »,
+           sans espace ni signe typographique) : largeur d'une barre, style="--v:…". Une valeur qui n'est pas un nombre
+           fait échouer le build. */ -}}
+    {{- $c := replaceRE `[\s\x{00a0}\x{202f}]` "" $v | replaceRE `,` "." | replaceRE `\x{2212}` "-" -}}
+    {{- if not (findRE `^-?\d+(\.\d+)?$` $c) -}}{{- errorf "psup-val: %q vaut %q, pas un nombre pour CSS (page %s)" $k $v .Page.RelPermalink -}}{{- end -}}
+    {{- $c -}}
   {{- else -}}{{- $v -}}{{- end -}}
 {{- end -}}
 {{- end -}}

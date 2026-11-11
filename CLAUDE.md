@@ -322,6 +322,20 @@ section « Production des ressources » ci-dessous.
     sinon un « < » ouvre une balise et tronque la phrase (corrigé dans `reutiliser.html`). Tournures familières à proscrire :
     « a monté » (→ « a augmenté »), « partis de plus de 90 % de dette » (→ « dont la dette dépassait 90 % du PIB »).
 
+17. **Mise en relief d'une page de données** (auteur, 11/11/2026 : « je valide ce type de présentation »). Page de
+    référence : `/parcoursup-quelles-chances-d-etre-admis/` ; étude, maquettes et arbitrages :
+    `D:\PRO\06_PROMOTION\MAQUETTES_PARCOURSUP_2026-11-11\` et pièces 09 et 10 du chantier
+    `RECHERCHE_RESSOURCE_UNIVERSITE_2026-11-03`. Organes : `assets/scss/_ressource-relief.scss` (encadré d'exemple,
+    figure et lecture côte à côte, cartes, grille de repères, fiche d'étapes, encadrés d'indicateurs, listes en cartes) ;
+    `partials/reperes-page.html` (front matter `reperes:`, posé par `_default/list.html`) ; `faq-visible colonnes="2"`.
+    Règles : les phrases arbitrées ne changent pas, on leur donne une forme ; **une barre ne compare que ce qui a le
+    même dénominateur (population, date)**, sinon deux encadrés distincts, sans échelle commune ; les repères du haut
+    de page ne s'affichent qu'à partir de 600 px, et leurs résultats sont écrits dans le corps ; marques graphiques à
+    3:1 au moins sur leur fond ; aucun nombre saisi dans un bloc (jetons, garde du générateur étendue aux blocs) ;
+    **tout bloc et tout organe réglé par script s'essaie aussi sans JavaScript** (la barre du bloc École débordait de
+    342 px sans script après l'ajout d'un cinquième onglet, 11/11/2026). Un contrôle technique ne mesure pas ce qu'un
+    lecteur comprend.
+
 ## Production des ressources — garanties communes, protocoles, deux gates (OPTIMUM-26, 2026-10-11)
 
 Arbitrage : `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\INDUSTRIALISATION_ARBITRAGE_2026-10-11.md`

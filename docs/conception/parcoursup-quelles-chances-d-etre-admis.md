@@ -376,3 +376,42 @@ publication, page écrite et non publiée).
 - Accord de l'auteur : fait (11/11/2026, « pousse la page en ligne »). Publication : commit et push du 11/11/2026.
   Attestation de la version servie : consignée après déploiement dans `REPRISE.md` du chantier et au
   `PROJECT_STATUS.md` du site.
+- Mise en forme (maquette B+) : fait (11/11/2026). Étude et trois maquettes HTML fabriquées sur la page servie
+  (`D:\PRO\06_PROMOTION\MAQUETTES_PARCOURSUP_2026-11-11\`, A relief, B repères visuels, C outil) ; deux
+  contre-expertises externes arbitrées (pièces 09 et 10 du chantier) : B retenue, corrigée en B+ (repères en mots à
+  partir de 600 px, fiche à partir de l'étape 1, taux d'accès et admissions en deux encadrés distincts et non en deux
+  barres, périmètre des cent cases) ; **B+ validée par l'auteur le 11/11/2026** (« je valide ce type de présentation »).
+  Application : `assets/scss/_ressource-relief.scss`, `partials/reperes-page.html` (front matter `reperes:`),
+  `psup-cent`, `psup-val "…" "css"`, `faq-visible colonnes="2"`. Texte de la page construite égal ligne à ligne à
+  celui de la maquette validée, positions et hauteurs des blocs identiques à 390, 768 et 1 280 px (avant les écarts
+  ci-dessous). Garde 6 étendue aux repères et aux encadrés ; 113 conditions de garde, 40 mutations sur 40.
+  Écarts à la maquette validée, tous issus des deux contrôles indépendants : figure à 864 px au lieu de 720 et côte à
+  côte à partir de 1 280 px (ses plus petits textes restent à 12 px) ; repères sur trois colonnes à partir de 1 100 px,
+  mot fort souligné, signe moins en gras, troisième repère enchaîné comme les deux autres ; encadrés l'un sous l'autre
+  de 760 à 1 023 px ; légende des cent cases sans carré de couleur, « (cases pleines) » dans la phrase ; effectifs
+  ajoutés à la seconde ligne de la grille ; en-tête de la fiche avec deux-points ; à 320 px, cartes numérotées 28 px
+  moins hautes.
+- Contrôle des marques graphiques (skill `controle-figures`) : fait (11/11/2026) — deux contrôleurs indépendants en
+  lecture seule. (a) Géométrie et données : recalcul depuis les trois CSV sans le jeu ni le générateur ; tous les
+  nombres et toutes les largeurs exacts (barres de la grille à moins de 0,05 point, 26 cases sur 100, composition 58
+  et 42) ; **un défaut de fond trouvé, présent dans la page publiée le matin** : `part_acces_gen`, `_tec` et `_pro`
+  répartissent les seuls élèves de terminale en position de recevoir une proposition, la page écrivait « candidats ».
+  Vérifié par la session à la source (libellé de la variable au portail et p. 11 de la notice ; 60 formations sans
+  élève de terminale classé : trois parts à 0 ; aucune part positive pour un bac sans élève de terminale classé ;
+  relevé archivé dans `_SOURCES\portail_2026-11-11\` du chantier). Corrigé : quatre passages de la page, définition du
+  jeu, trois formules retirées par la garde 8, une mutation, entrée au journal interne. La notice se contredit
+  (définition p. 3 : « candidats » ; dictionnaire p. 11 : « terminales ») : dit dans le détail des sources.
+  (b) Lecture du rendu à 390, 768 et 1 280 px : aucun défaut bloquant ; corrigés : encadrés écrasés vers 768 px, texte
+  de la figure à 10 px dans la mise côte à côte, signe moins maigre, repères non reconnaissables comme liens, coupures
+  de « N sur N », légende des cent cases ambiguë, effectif absent du corps de la page. Non traités, déclarés : entre
+  601 et 860 px la version ordinateur des figures est servie trop petite, et l'agrandissement au toucher réduit la
+  figure au téléphone (organes communs du site) ; au téléphone, les notes imprimées dans l'image séparent la figure de
+  « Le résultat en une phrase » (générateur) ; la barre de composition donne au bleu un troisième sens (bac
+  technologique) ; la mise en garde des deux encadrés vient après eux. Second passage des contrôleurs : non fait (les
+  corrections ont été relues par la session, mesures et captures ; écart à la règle « jusqu'à zéro défaut nouveau »,
+  déclaré).
+- Contrôles après application : `check-all --ci`, build, `typo_build.py`, `audit-liens-build.py`,
+  `check-rendu-ressources.py`, `check-dates-build.py`, `check-replis.py` à 0 ; recette de 320 à 1 600 px conforme ;
+  `essai_page_relief.py` du chantier à 0 (marques contre le jeu brut, contrastes, clavier, sans JavaScript) ;
+  `check_langue.py` : trois signalements, tous faux positifs sur des phrases antérieures ; instantané de relecture
+  refait (261 phrases). Aucun lecteur réel n'a vu la page ainsi mise en forme.

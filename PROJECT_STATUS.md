@@ -52,6 +52,30 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-11 — Parcoursup : mise en relief de la page (maquette B+) et correction de la population de la répartition par bac
+
+- **Correction de fond, sur la page publiée le matin** : dans les données ouvertes, `part_acces_gen`, `part_acces_tec`
+  et `part_acces_pro` répartissent les seuls **élèves de terminale** en position de recevoir une proposition ; la page
+  écrivait « candidats », mot de la définition de la notice (p. 3) que son dictionnaire des variables (p. 11) et le
+  portail démentent. Preuve sur le jeu 2025 du portail : 60 formations sans élève de terminale classé ont leurs trois
+  parts à 0. Quatre passages corrigés (texte, légende, FAQ, détail des sources), définition du jeu précisée
+  (`data/` et `static/parcoursup.json` : une ligne), trois formules retirées par la garde 8, une mutation. Trouvé par
+  le contrôleur indépendant « géométrie et données » de la mise en forme. Entrée au journal interne de la page.
+- **Mise en relief (maquette B+, validée par l'auteur : « je valide ce type de présentation »)** : trois repères sous le
+  chapô à partir de 600 px (`partials/reperes-page.html`, front matter `reperes:`), exemple en encadré avec cent cases
+  (`psup-cent`), figure et lecture côte à côte à partir de 1 280 px, grille des formations à 90-99 %, fiche Parcoursup
+  à partir de l'étape 1, taux d'accès et admissions en **deux encadrés distincts** (pas deux barres : populations et
+  dates différentes), cartes numérotées, limites et FAQ sur deux colonnes à l'ordinateur
+  (`assets/scss/_ressource-relief.scss`, `faq-visible colonnes="2"`, `psup-val "…" "css"`). Les phrases du
+  raisonnement ne changent pas. Règles du type de présentation : CLAUDE.md, doctrine éditoriale, point 17.
+- **Contrôles** : générateur à 113 conditions de garde, 40 mutations sur 40 (garde 6 étendue aux repères et aux
+  encadrés) ; `check-all --ci`, build, typographie, liens, rendu, dates, replis à 0 ; recette de 320 à 1 600 px ;
+  deux contrôleurs indépendants (aucun défaut bloquant de rendu ; nombres et largeurs exacts) ; instantané de
+  relecture refait (261 phrases). Détail, écarts à la maquette et défauts non traités : fiche de conception, étapes.
+- **Restent ouverts, organes communs** : entre 601 et 860 px la version ordinateur d'une figure est servie plus
+  petite que son dessin (texte sous 12 px) ; au téléphone, l'agrandissement au toucher réduit la figure. Non traités :
+  ils valent pour toutes les figures du site et se décident avec l'auteur.
+
 ### 2026-11-11 — Barre de dossier : libellés courts dès le HTML (sans JavaScript, le bloc École débordait de 342 px)
 
 - **Défaut** : sans JavaScript, à 1 280 px, les cinq pages du bloc « École, lycée et université » débordaient de 342 px

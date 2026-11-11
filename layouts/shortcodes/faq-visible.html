@@ -2,12 +2,18 @@
        FAQPage (partials/schema-faqpage.html). Une seule source : le balisage et le texte lu ne
        peuvent pas diverger. Réponses résolues par desc-figures (jetons {dette.*}, {qp.*}, {monde.*}),
        puis typographie française. Page sans faq = échec de build : on n'appelle pas ce shortcode
-       pour rien. */ -}}
+       pour rien.
+       {{< faq-visible colonnes="2" >}} (11/11/2026, maquette B+ de la page Parcoursup) : mêmes questions et réponses,
+       chaque paire dans son bloc, sur deux colonnes à l'ordinateur (styles : _ressource-relief.scss). Sans le
+       paramètre, le balisage est celui d'avant, inchangé pour les autres pages. */ -}}
+{{- $colonnes := eq (.Get "colonnes") "2" -}}
 {{- with .Page.Params.faq -}}
-<div class="faq-visible">
+<div class="faq-visible{{ if $colonnes }} faq-visible--colonnes{{ end }}">
 {{- range . }}
+  {{- if $colonnes }}<div class="faq-visible__qr">{{ end }}
   <h3>{{ partial "fr-typo.html" .question }}</h3>
   <p>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" .answer "isbn" nil)) }}</p>
+  {{- if $colonnes }}</div>{{ end }}
 {{- end }}
 </div>
 {{- else -}}

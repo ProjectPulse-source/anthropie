@@ -1,0 +1,12 @@
+{{- /* {{< psup-cent "ex_taux" >}} — cent cases, dont les N premières pleines : N est la valeur ENTIÈRE du jeton nommé
+       (bloc affichage de data/parcoursup.json). Montre « N sur cent » sans échelle ni axe ; la légende est écrite par la
+       page, juste dessous. Décoratif pour les lecteurs d'écran (aria-hidden) : la phrase voisine dit la même chose.
+       Jeton inconnu, ou valeur qui n'est pas un entier de 0 à 100 = échec de build. */ -}}
+{{- $k := .Get 0 -}}
+{{- $v := "" -}}
+{{- with site.Data.parcoursup -}}{{- $v = index .affichage $k -}}{{- end -}}
+{{- if not $v -}}{{- errorf "psup-cent: cle %q inconnue du bloc affichage (page %s)" $k .Page.RelPermalink -}}{{- end -}}
+{{- if not (findRE `^\d{1,3}$` $v) -}}{{- errorf "psup-cent: %q vaut %q, entier de 0 a 100 attendu (page %s)" $k $v .Page.RelPermalink -}}{{- end -}}
+{{- $n := int $v -}}
+{{- if gt $n 100 -}}{{- errorf "psup-cent: %q vaut %d, au-dela de 100 (page %s)" $k $n .Page.RelPermalink -}}{{- end -}}
+<div class="cent-cases" aria-hidden="true">{{ range $i := seq 1 100 }}<i{{ if le $i $n }} class="on"{{ end }}></i>{{ end }}</div>

@@ -103,7 +103,7 @@
    "baisse_20_corrigee": "variation diminuée de la variation médiane de la filière (ou du groupe des formations reclassées)",
    "filieres": "formations classées dans la même filière (fili) les deux sessions ; celles dont la filière diffère forment le groupe « reclassees », compté à part et jamais présenté comme une filière",
    "selection": "groupes décrits à l'année de départ ; les nouvelles formations à l'année d'arrivée",
-   "exemple": "nombres du fichier ouvert (au 10 septembre, tous candidats) ; la fiche de la plateforme, arrêtée à la fin de la phase principale, en donne d'autres",
+   "exemple": "nombres du fichier ouvert (au 10 septembre, tous candidats) ; la fiche de la plateforme, arrêtée à la fin de la phase principale, en donne d'autres ; gen, tec, pro (part_acces_gen, part_acces_tec, part_acces_pro) : répartition par type de bac des seuls élèves de terminale en position de recevoir une proposition en phase principale (libellé de la variable ; vérifié sur le fichier le 11/11/2026)",
    "cohorte": "formations appariées aux deux dernières transitions (mêmes formations sur trois sessions) ; listes [transition précédente, dernière transition] ; sans_cpge : hors formations classées CPGE à l'une au moins des trois sessions"
   }
  },

@@ -1,0 +1,152 @@
+// =======================================================================
+// _ressource-relief.scss — mise en relief d'une page de ressource (maquette B+ de la page Parcoursup, validée par
+// l'auteur le 11/11/2026 après deux contre-expertises : D:\PRO\06_PROMOTION\MAQUETTES_PARCOURSUP_2026-11-11\ et
+// arbitrages des pièces 09 et 10 du chantier RECHERCHE_RESSOURCE_UNIVERSITE_2026-11-03).
+//
+// Les phrases de la page ne changent pas : ces composants leur donnent une forme. Règles tirées des arbitrages :
+//   - une barre ne compare que ce qui a le même dénominateur (même population, même date) ; sinon, deux encadrés
+//     distincts (.indicateurs-distincts), sans échelle commune ;
+//   - bleu = dernière comparaison, gris = la précédente, comme dans les figures du jeu ;
+//   - les repères du haut de page (.reperes-page) ne s'affichent qu'à partir de 600 px : au téléphone, le chapô donne
+//     déjà la réponse et les résultats se lisent dans leurs sections ;
+//   - marques graphiques à 3:1 au moins sur leur fond (barre grise sur sa piste 3,17:1 ; contour des cases 3,58:1).
+// =======================================================================
+:root { --relief-bleu: #184f95; --relief-gris: #8a8781; --relief-piste: #f3f1ec; }
+
+// Surtitre et légende communs aux blocs.
+.surtitre-bloc { font: 600 12px/1.35 var(--font-sans) !important; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent) !important; margin: 0 0 0.5rem !important; }
+.legende-bloc { font: 13px/1.4 var(--font-sans) !important; color: var(--color-text-muted) !important; margin: 0.55rem 0 0 !important; }
+.legende-bloc--large { margin-top: 0.75rem !important; }
+.encadre-exemple .legende-bloc { max-width: 300px; }
+
+// ---- Trois repères sous le chapô (partials/reperes-page.html) ----
+.reperes-page { display: none; }
+@media (min-width: 600px) {
+  .reperes-page { display: grid; margin: 0 0 1.6rem; border-top: 1px solid var(--color-accent-rule); border-bottom: 1px solid var(--color-rule-soft); }
+  .reperes-page a { display: block; min-height: 44px; box-sizing: border-box; padding: 0.6rem 0 0.65rem; text-decoration: none; font: 14px/1.45 var(--font-sans); color: var(--color-text-muted); }
+  .reperes-page a + a { border-top: 1px solid var(--color-rule-soft); }
+  .reperes-page b { font-family: var(--font-serif); font-weight: 600; font-size: 1.25rem; line-height: 1.2; color: var(--color-accent); font-variant-numeric: lining-nums tabular-nums; margin-right: 0.15rem; }
+  .reperes-page a:hover span, .reperes-page a:focus-visible span { text-decoration: underline; text-underline-offset: 3px; }
+  .reperes-page a:hover .reperes-page__precision, .reperes-page a:focus-visible .reperes-page__precision { text-decoration: none; }
+  .reperes-page a:focus-visible { outline: 2px solid var(--color-link); outline-offset: 3px; }
+  // La parenthèse de précision ne se coupe pas (« soit 367 sur 1 695 »).
+  .reperes-page__precision { white-space: nowrap; }
+  // Un repère est un lien : son mot fort porte le soulignement des liens du site.
+  .reperes-page b { text-decoration: underline; text-decoration-color: var(--color-link-rule); text-decoration-thickness: 1px; text-underline-offset: 5px; }
+  // Le signe moins, maigre dans la police à empattements, se compose dans la police des figures, en gras.
+  .reperes-page__signe { font-family: var(--font-sans); font-weight: 700; }
+}
+// Trois colonnes à partir de 1 100 px : en dessous, « Une formation sur deux » passait sur deux lignes et décalait
+// le départ des trois textes.
+@media (min-width: 1100px) {
+  .reperes-page { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .reperes-page a { padding: 0.9rem 1.4rem 0.95rem 0; }
+  .reperes-page a + a { border-top: 0; border-left: 1px solid var(--color-rule-soft); padding-left: 1.4rem; }
+  .reperes-page b { display: block; font-size: 1.75rem; line-height: 1.15; margin: 0 0 0.4rem; }
+}
+
+// ---- L'exemple, en encadré, avec ses cent cases ----
+.encadre-exemple { display: grid; gap: 1rem 2rem; margin: 1.5rem 0; padding: 1rem 1.2rem 1.1rem; background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-left: 3px solid var(--color-accent); }
+.encadre-exemple p { margin: 0; }
+@media (min-width: 760px) { .encadre-exemple { grid-template-columns: minmax(0, 1fr) 300px; align-items: center; } }
+.cent-cases { display: grid; grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 3px; max-width: 300px; }
+.cent-cases i { aspect-ratio: 1; border-radius: 2px; box-shadow: inset 0 0 0 1.5px var(--relief-gris); }
+.cent-cases i.on { background: var(--relief-bleu); box-shadow: none; }
+
+// ---- Figure et lecture côte à côte (ordinateur) ----
+// La figure garde 864 px de large au moins (1,2 fois sa taille de dessin : ses plus petits textes, dessinés à 10 px,
+// restent à 12 px) ; en dessous de 1 280 px d'écran, la figure et sa lecture se suivent, comme avant.
+.figure-lecture { margin: 1.5rem 0; }
+@media (min-width: 1280px) {
+  .figure-lecture { display: grid; grid-template-columns: minmax(0, 864px) minmax(0, 1fr); gap: 0 2.5rem; align-items: start; }
+  .figure-lecture > figure.figure-ciseau { margin: 0; }
+  .figure-lecture__texte > :first-child { margin-top: 0; }
+  .figure-lecture__texte > :last-child { margin-bottom: 0; }
+}
+
+// ---- Paire de cartes ----
+.cartes-paire { display: grid; gap: 0.9rem; margin: 1.2rem 0 1.5rem; }
+@media (min-width: 760px) { .cartes-paire { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1280px) { .figure-lecture__texte .cartes-paire { grid-template-columns: minmax(0, 1fr); } }
+.carte-point { background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-top: 2px solid var(--color-accent); padding: 0.85rem 1.1rem 1rem; }
+.carte-point > p { margin: 0; }
+.carte-point > p.carte-point__titre { font-family: var(--font-serif); font-weight: 600; font-size: 1.15rem; line-height: 1.3; color: var(--color-text); margin: 0 0 0.45rem; }
+
+// ---- Grille de repères : deux constats, deux comparaisons ----
+.grille-reperes { margin: 1.2rem 0 1.5rem; background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-top: 2px solid var(--color-accent); }
+.grille-reperes__rang { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem 1rem; padding: 0.75rem 1rem; align-items: stretch; }
+.grille-reperes__rang > span:first-child { grid-column: 1 / -1; }
+.grille-reperes__tete > span:first-child { display: none; }
+.grille-reperes__rang + .grille-reperes__rang { border-top: 1px solid var(--color-rule-soft); }
+.grille-reperes__tete { padding-top: 0.55rem; padding-bottom: 0.45rem; }
+.grille-reperes__tete span, .grille-reperes__rang > span:first-child { font: 500 13px/1.35 var(--font-sans); color: var(--color-text-muted); }
+.grille-reperes__tete span { font-weight: 600; letter-spacing: 0.02em; }
+.grille-reperes__rang:not(.grille-reperes__tete) > span:first-child { padding-top: 0.1rem; font-weight: 600; color: var(--color-text); }
+.grille-reperes__val { display: flex; flex-direction: column; }
+.grille-reperes__val b { display: block; font-family: var(--font-serif); font-weight: 600; font-size: 1.22rem; line-height: 1.2; color: var(--color-accent); }
+.grille-reperes__val b::first-letter { text-transform: uppercase; }
+.grille-reperes__val small { display: block; font: 13px/1.35 var(--font-sans); color: var(--color-text-subtle); margin-top: 0.15rem; padding-bottom: 0.45rem; font-variant-numeric: tabular-nums; }
+.grille-reperes__val small span { white-space: nowrap; }   // « soit 936 sur 1 695 » ne se coupe pas
+.grille-reperes__val .barre-part { margin-top: auto; }
+@media (min-width: 760px) {
+  .grille-reperes__rang { grid-template-columns: minmax(0, 1fr) repeat(2, minmax(0, 1fr)); gap: 0 1rem; padding: 0.8rem 1.3rem; }
+  .grille-reperes__rang > span:first-child { grid-column: auto; }
+  .grille-reperes__tete > span:first-child { display: block; }
+  .grille-reperes__val b { font-size: 1.4rem; }
+}
+@media (min-width: 1180px) { .grille-reperes { max-width: 860px; } }
+// Barre proportionnelle : --v est la part, en pour cent, lue dans le jeu.
+.barre-part { display: block; height: 6px; background: var(--relief-piste); box-shadow: inset 0 0 0 1px rgba(15, 15, 18, 0.16); border-radius: 3px; overflow: hidden; }
+.barre-part > i { display: block; height: 100%; width: calc(var(--v) * 1%); background: var(--relief-bleu); border-radius: 3px; }
+.barre-part--avant > i { background: var(--relief-gris); }
+
+// ---- Les étapes d'une fiche officielle ----
+.fiche-etapes { margin: 1.2rem 0 1.4rem; background: var(--color-bg-elevated); border: 1px solid var(--color-rule-strong); border-radius: 6px; overflow: hidden; }
+.fiche-etapes > .surtitre-bloc { margin: 0 !important; padding: 0.6rem 1.1rem; background: var(--color-dossier-tint); border-bottom: 1px solid var(--color-rule-soft); }
+main .fiche-etapes > ol { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+main .fiche-etapes > ol > li { display: grid; grid-template-columns: 5.2rem minmax(0, 1fr); gap: 0.1rem 0.9rem; align-items: baseline; margin: 0 !important; padding: 0.7rem 1.1rem !important; }
+main .fiche-etapes > ol > li + li { border-top: 1px solid var(--color-rule-soft); }
+.fiche-etapes__n { font: 600 12px/1.5 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent); white-space: nowrap; }
+@media (max-width: 420px) { main .fiche-etapes > ol > li { grid-template-columns: minmax(0, 1fr); } }
+
+// ---- Deux indicateurs qui ne se comparent pas : deux encadrés, aucune échelle commune ----
+.indicateurs-distincts { display: grid; gap: 0.7rem; margin: 0.95rem 0 0; }
+// Côte à côte seulement quand la carte est assez large : de 560 à 759 px (carte en pleine largeur) et à partir de
+// 1 024 px. De 760 à 1 023 px la carte est en demi-largeur : deux encadrés de 138 px y coupaient « 32 sur / 378 ».
+@media (min-width: 560px) and (max-width: 759px), (min-width: 1024px) { .indicateurs-distincts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.indicateur-encadre { border: 1px solid var(--color-rule-medium); background: var(--color-bg); padding: 0.7rem 0.85rem 0.8rem; }
+.indicateur-encadre > p { margin: 0; }
+.indicateur-encadre > p.surtitre-bloc { margin: 0 0 0.35rem !important; }
+.indicateur-encadre > p.indicateur-encadre__val { font-family: var(--font-serif); font-weight: 600; font-size: 1.7rem; line-height: 1.1; color: var(--color-accent); font-variant-numeric: lining-nums tabular-nums; margin: 0 0 0.4rem; }
+.indicateur-encadre > p.indicateur-encadre__txt { font: 13.5px/1.45 var(--font-sans); color: var(--color-text-muted); }
+
+// ---- Composition d'une seule population ----
+.barre-composition { display: flex; height: 26px; margin: 0.8rem 0 0; border-radius: 3px; overflow: hidden; font: 600 12px/26px var(--font-sans); color: #fff; }
+.barre-composition span { display: block; padding: 0 0.5rem; white-space: nowrap; overflow: hidden; flex: 0 0 calc(var(--v) * 1%); }
+@media (max-width: 359px) { .barre-composition span { padding: 0 0.3rem; } }
+.barre-composition span:nth-child(1) { background: var(--relief-bleu); }
+.barre-composition span:nth-child(2) { background: #5f5c56; }
+
+// ---- Liste numérotée en cartes ----
+main .liste-cartes > ol { list-style: none !important; counter-reset: carte; padding: 0 !important; margin: 1.3rem 0 1.5rem !important; display: grid; gap: 0.9rem; }
+main .liste-cartes > ol > li { counter-increment: carte; position: relative; margin: 0 !important; padding: 0.9rem 1.1rem 1rem 3.3rem !important; background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-top: 2px solid var(--color-accent); }
+main .liste-cartes > ol > li::before { content: counter(carte); position: absolute; left: 1.1rem; top: 0.85rem; font: 600 1.9rem/1.15 var(--font-serif); color: var(--color-accent); font-variant-numeric: lining-nums; }
+@media (min-width: 900px) {
+  main .liste-cartes > ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  main .liste-cartes > ol > li { padding: 3.25rem 1.1rem 1rem !important; }
+  main .liste-cartes > ol > li::before { top: 0.9rem; line-height: 1; }
+}
+
+// ---- Liste sur deux colonnes (ordinateur) ----
+@media (min-width: 900px) { main .liste-colonnes > ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3rem; } }
+
+// ---- Questions fréquentes sur deux colonnes (ordinateur) : shortcode faq-visible colonnes="2" ----
+.faq-visible--colonnes { display: grid; gap: 1.2rem 0; }
+@media (min-width: 900px) { .faq-visible--colonnes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 3rem; } }
+.faq-visible__qr > p { margin-bottom: 0; }
+
+// Impression : les blocs gardent leur contenu, sans fonds ni ombres.
+@media print {
+  .reperes-page { display: none !important; }
+  .encadre-exemple, .carte-point, .grille-reperes, .fiche-etapes, .indicateur-encadre { background: none !important; break-inside: avoid; }
+}

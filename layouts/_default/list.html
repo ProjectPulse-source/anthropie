@@ -20,6 +20,8 @@
   <h1>{{ partial "fr-typo.html" .Title }}</h1>
   {{ end }}
 
+  {{- /* Repères du haut de page (front matter « reperes: ») : entre le chapô et la barre du dossier, à partir de 600 px. */}}
+  {{- partial "reperes-page.html" . }}
   {{- partial "barre-auto.html" . }}
   {{- partial "sommaire-ressource.html" . }}
 

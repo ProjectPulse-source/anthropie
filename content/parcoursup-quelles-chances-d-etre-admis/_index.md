@@ -4,6 +4,8 @@ description: "Le taux d'accès affiché par Parcoursup décrit la session préc�
 chapo: "Le taux d'accès affiché par Parcoursup ne mesure pas vos chances d'être admis : il dit quelle part des candidats de l'année précédente ont pu recevoir une proposition. D'une année à la suivante, ce taux reste proche pour {psup.d_absmed_frac} ({psup.d_absmed_pts} d'écart ou moins de {psup.d_de} à {psup.d_a}) ; il change parfois beaucoup, même au-dessus de {psup.seuil_reste} %. C'est un repère utile, pas une promesse."
 date: 2026-11-11
 lastmod: 2026-11-11
+journal:  # révisions qui changent la lecture de la page (registre interne, jamais affiché)
+  - {date: 2026-11-11, texte: "Correction : dans les données ouvertes, la répartition par type de bac porte sur les élèves de terminale en position de recevoir une proposition, et non sur tous les candidats (libellé de la variable, vérifié sur le fichier) ; quatre passages corrigés le jour de la publication."}
 og_title: "Parcoursup : quelles sont vraiment vos chances d'être admis ? Ce que vaut le taux d'accès — S. Lalut"
 og_image: "images/og-parcoursup.jpg"
 og_image_alt: "Carte de partage : « Parcoursup : quelles sont vraiment vos chances d'être admis ? » — pour quatre tranches de taux d'accès une année, une barre montre où se situait le taux des mêmes formations l'année suivante : chaque barre déborde largement sa tranche de départ."
@@ -45,7 +47,7 @@ faq:
   - question: "Taux d'accès et taux d'admission, est-ce la même chose ?"
     answer: "Non. Le taux d'accès compte les candidats qui ont pu recevoir une proposition, qu'ils l'aient acceptée ou non ; la part des candidats finalement admis est bien plus faible. Exemple tiré des données publiques : dans un BUT de l'{psup.ex_etab}, en {psup.ex_session}, le taux d'accès était de {psup.ex_taux} %, et {psup.ex_adm} candidats sur {psup.ex_cand} ont été admis, soit {psup.ex_adm_part} %."
   - question: "Où trouver les chiffres qui correspondent à mon bac ?"
-    answer: "Sur la fiche de la formation, dans Parcoursup, à la rubrique « Visualiser les chiffres d'accès » : elle donne le taux d'accès par type de bac, puis les possibilités d'accès selon la série et le niveau de moyenne. Les sites qui reprennent les données publiques ne disposent que de la répartition par bac des candidats qui pouvaient recevoir une proposition : une composition, pas une chance."
+    answer: "Sur la fiche de la formation, dans Parcoursup, à la rubrique « Visualiser les chiffres d'accès » : elle donne le taux d'accès par type de bac, puis les possibilités d'accès selon la série et le niveau de moyenne. Les sites qui reprennent les données publiques ne disposent que de la répartition par bac des élèves de terminale qui pouvaient recevoir une proposition : une composition, pas une chance."
   - question: "Le taux affiché cette année vaudra-t-il l'an prochain ?"
     answer: "Rien ne le garantit. D'une session à la suivante, les taux d'accès sont fortement corrélés ({psup.p_pearson} de {psup.p_de} à {psup.p_a}, {psup.d_pearson} de {psup.d_de} à {psup.d_a}), mais les écarts peuvent être grands : parmi les formations à {psup.d_t6075_court} en {psup.d_de}, {psup.d_t6075_dans_frac} se situaient entre {psup.d_t6075_d1} et {psup.d_t6075_d9} % en {psup.d_a}. Ces mesures décrivent le passé ; elles ne prévoient pas la session suivante."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
@@ -60,6 +62,21 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long: "Parcoursup : quelles sont vraiment vos chances ?"
   court: "Parcoursup"
   role: "taux d'accès, 2023-2025"
+reperes:  # trois repères sous le chapô, à partir de 600 px de large (partials/reperes-page.html ; maquette B+ validée par
+  # l'auteur le 11/11/2026, pièces 09 et 10). Chacun reprend un résultat écrit dans sa section, avec sa période ; au
+  # téléphone ils ne s'affichent pas. Aucun nombre saisi : jetons gardés par le générateur (garde 6).
+  - ancre: "d-une-annee-sur-l-autre"
+    fort: "{psup.d_absmed_frac}"
+    texte: "a vu son taux d'accès varier de {psup.d_absmed_pts} ou moins, de {psup.d_de} à {psup.d_a}"
+    precision: "{psup.d_part_absmed} % des {psup.d_n} formations comparées"
+  - ancre: "au-dessus-de-90"
+    fort: "{psup.d_t9099_b20_frac}"
+    texte: "des formations qui affichaient {psup.d_t9099_lib} en {psup.d_de} a perdu {psup.seuil_baisse_pts} ou plus en {psup.d_a}"
+    precision: "{psup.d_t9099_b20} %, soit {psup.d_t9099_b20_n} sur {psup.d_t9099_n}"
+  - ancre: "selon-la-filiere"
+    fort: "{psup.d_f_cpge_med_pts}"
+    texte: "en classes préparatoires : la moitié des formations ont perdu {psup.d_f_cpge_perte_pts} ou plus, de {psup.d_de} à {psup.d_a}"
+    precision: "{psup.d_f_cpge_n} classes comparées"
 ---
 
 {{< reutiliser-ancre >}}
@@ -70,7 +87,18 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 Le taux d'accès est le chiffre que Parcoursup affiche sur la fiche de chaque formation. Il se rapporte à l'année précédente. Chaque formation classe ses candidats, puis les appelle dans l'ordre de ce classement, à mesure que des places se libèrent&nbsp;: le taux d'accès est la part des candidats dont le rang permettait de recevoir une proposition avant la fin de la phase principale.
 
-**Un exemple.** Un taux d'accès de {{< psup-val "ex_taux" >}}&nbsp;% signifie que, sur cent candidats, {{< psup-val "ex_taux" >}} avaient un rang qui leur permettait de recevoir une proposition. Cela ne veut pas dire que les {{< psup-val "ex_taux" >}} l'ont reçue, ni qu'ils l'ont acceptée&nbsp;: certains avaient déjà renoncé à ce vœu, d'autres ont préféré une autre formation. Pour les autres candidats, l'appel n'est pas allé jusqu'à leur rang, ou la formation ne les avait pas classés.
+<div class="encadre-exemple">
+<div>
+<p class="surtitre-bloc">Un exemple</p>
+
+Un taux d'accès de {{< psup-val "ex_taux" >}}&nbsp;% signifie que, sur cent candidats, {{< psup-val "ex_taux" >}} avaient un rang qui leur permettait de recevoir une proposition. Cela ne veut pas dire que les {{< psup-val "ex_taux" >}} l'ont reçue, ni qu'ils l'ont acceptée&nbsp;: certains avaient déjà renoncé à ce vœu, d'autres ont préféré une autre formation. Pour les autres candidats, l'appel n'est pas allé jusqu'à leur rang, ou la formation ne les avait pas classés.
+
+</div>
+<div>
+{{< psup-cent "ex_taux" >}}
+<p class="legende-bloc">Sur 100&nbsp;candidats que le ministère retient pour ce calcul, {{< psup-val "ex_taux" >}} (cases pleines) avaient un rang qui leur permettait de recevoir une proposition.</p>
+</div>
+</div>
 
 **Le taux d'accès donne donc une information sur une formation, une année passée&nbsp;; il ne donne pas de réponse sur votre candidature.** Pour s'en servir, il faut savoir à quel point il varie d'une année à l'autre, puis le rapporter à son propre profil. Nous avons comparé le taux d'accès de chaque formation d'une session à la suivante, sur les sessions {{< psup-val "sessions" >}}.
 
@@ -80,6 +108,7 @@ Première réponse&nbsp;: les formations les plus accessibles une année tendent
 
 La comparaison porte sur {{< psup-val "p_n" >}} formations de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}} et sur {{< psup-val "d_n" >}} formations de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}&nbsp;: celles que l'on retrouve sous le même code et le même intitulé deux années de suite, et non toutes les formations proposées. Pour chaque tranche de taux d'accès une année, la figure montre où se situait le taux des mêmes formations l'année suivante.
 
+<div class="figure-lecture">
 <figure class="figure-ciseau">
   <picture>
     <source media="(max-width: 600px)" srcset="/img/parcoursup-tranches-m.svg" width="300" height="1200">
@@ -87,18 +116,31 @@ La comparaison porte sur {{< psup-val "p_n" >}} formations de {{< psup-val "p_de
   </picture>
   <figcaption>Taux d'accès l'année suivante, selon le taux de l'année de départ (ministère chargé de l'enseignement supérieur, calcul de l'auteur).</figcaption>
 </figure>
-
+<div class="figure-lecture__texte">
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** Un taux d'accès n'est pas une promesse pour l'année suivante&nbsp;: parmi les formations à {{< psup-val "d_t6075_court" >}} en {{< psup-val "d_de" >}}, {{< psup-val "d_t6075_dans_frac" >}} se situaient entre {{< psup-val "d_t6075_d1" >}} et {{< psup-val "d_t6075_d9" >}}&nbsp;% en {{< psup-val "d_a" >}}.
+**Le résultat en une phrase.** Un taux d'accès n'est pas une promesse pour l'année suivante&nbsp;: parmi les formations à {{< psup-val "d_t6075_court" >}} en {{< psup-val "d_de" >}}, {{< psup-val "d_t6075_dans_frac" >}} se situaient entre {{< psup-val "d_t6075_d1" >}} et&nbsp;{{< psup-val "d_t6075_d9" >}}&nbsp;% en {{< psup-val "d_a" >}}.
 
 </div>
 
 Deux choses sont à retenir, et elles vont ensemble.
 
-**Le taux change peu pour beaucoup de formations.** Pour {{< psup-val "d_absmed_frac" >}}, l'écart d'une session à la suivante est de {{< psup-val "d_absmed_pts" >}} ou moins&nbsp;: {{< psup-val "p_part_absmed" >}}&nbsp;% des formations de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}}, {{< psup-val "d_part_absmed" >}}&nbsp;% de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}.
+<div class="cartes-paire">
+<div class="carte-point">
+<p class="carte-point__titre">Le taux change peu pour beaucoup de formations</p>
 
-**Il change parfois beaucoup.** Parmi les formations à {{< psup-val "d_t6075_court" >}} en {{< psup-val "d_de" >}}, {{< psup-val "d_t6075_bas_frac" >}} s'est retrouvée à {{< psup-val "d_t6075_d1" >}}&nbsp;% ou moins en {{< psup-val "d_a" >}}.
+Pour {{< psup-val "d_absmed_frac" >}}, l'écart d'une session à la suivante est de {{< psup-val "d_absmed_pts" >}} ou moins&nbsp;: {{< psup-val "p_part_absmed" >}}&nbsp;% des formations de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}}, {{< psup-val "d_part_absmed" >}}&nbsp;% de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}.
+
+</div>
+<div class="carte-point">
+<p class="carte-point__titre">Il change parfois beaucoup</p>
+
+Parmi les formations à {{< psup-val "d_t6075_court" >}} en {{< psup-val "d_de" >}}, {{< psup-val "d_t6075_bas_frac" >}} s'est retrouvée à {{< psup-val "d_t6075_d1" >}}&nbsp;% ou moins en {{< psup-val "d_a" >}}.
+
+</div>
+</div>
+</div>
+</div>
 
 **Ces intervalles décrivent ce qui s'est passé, pas ce qui se passera.** Ils se déplacent eux aussi d'une année à l'autre&nbsp;: de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}}, {{< psup-val "p_t6075_dans_frac" >}} des formations de la même tranche se situaient entre {{< psup-val "p_t6075_d1" >}} et {{< psup-val "p_t6075_d9" >}}&nbsp;% (barres grises de la figure). Et ils décrivent des groupes de formations&nbsp;: aucune barre ne dit où se trouvera, l'an prochain, une formation précise.
 
@@ -108,8 +150,11 @@ Le conseil est courant&nbsp;: au-dessus de 90&nbsp;%, un vœu serait «&nbsp;ré
 
 Que sont devenues, un an plus tard, les formations dont le taux d'accès était de {{< psup-val "d_t9099_lib" >}}&nbsp;?
 
-- **{{< psup-val "p_t9099_reste_frac" >}}** étaient encore à 90&nbsp;% ou plus un an après, de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}} ({{< psup-val "p_t9099_reste" >}}&nbsp;%, soit {{< psup-val "p_t9099_reste_n" >}} sur {{< psup-val "p_t9099_n" >}})&nbsp;; **{{< psup-val "d_t9099_reste_frac" >}}** de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}} ({{< psup-val "d_t9099_reste" >}}&nbsp;%, soit {{< psup-val "d_t9099_reste_n" >}} sur {{< psup-val "d_t9099_n" >}})&nbsp;;
-- **{{< psup-val "p_t9099_b20_frac" >}}** avait perdu 20&nbsp;points ou plus de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}} ({{< psup-val "p_t9099_b20" >}}&nbsp;%)&nbsp;; **{{< psup-val "d_t9099_b20_frac" >}}** de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}} ({{< psup-val "d_t9099_b20" >}}&nbsp;%).
+<div class="grille-reperes" role="table" aria-label="Formations dont le taux d'accès était de {{< psup-val "d_t9099_lib" >}}, un an plus tard">
+<div class="grille-reperes__rang grille-reperes__tete" role="row"><span role="columnheader"></span><span role="columnheader">de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}}</span><span role="columnheader">de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}</span></div>
+<div class="grille-reperes__rang" role="row"><span role="rowheader">encore à 90&nbsp;% ou plus, un an après</span><span class="grille-reperes__val" role="cell"><b>{{< psup-val "p_t9099_reste_frac" >}}</b><small>{{< psup-val "p_t9099_reste" >}}&nbsp;%, <span>soit {{< psup-val "p_t9099_reste_n" >}} sur {{< psup-val "p_t9099_n" >}}</span></small><span class="barre-part barre-part--avant" style="--v:{{< psup-val "p_t9099_reste" "css" >}}" aria-hidden="true"><i></i></span></span><span class="grille-reperes__val" role="cell"><b>{{< psup-val "d_t9099_reste_frac" >}}</b><small>{{< psup-val "d_t9099_reste" >}}&nbsp;%, <span>soit {{< psup-val "d_t9099_reste_n" >}} sur {{< psup-val "d_t9099_n" >}}</span></small><span class="barre-part" style="--v:{{< psup-val "d_t9099_reste" "css" >}}" aria-hidden="true"><i></i></span></span></div>
+<div class="grille-reperes__rang" role="row"><span role="rowheader">ont perdu 20&nbsp;points ou plus</span><span class="grille-reperes__val" role="cell"><b>{{< psup-val "p_t9099_b20_frac" >}}</b><small>{{< psup-val "p_t9099_b20" >}}&nbsp;%, <span>soit {{< psup-val "p_t9099_b20_n" >}} sur {{< psup-val "p_t9099_n" >}}</span></small><span class="barre-part barre-part--avant" style="--v:{{< psup-val "p_t9099_b20" "css" >}}" aria-hidden="true"><i></i></span></span><span class="grille-reperes__val" role="cell"><b>{{< psup-val "d_t9099_b20_frac" >}}</b><small>{{< psup-val "d_t9099_b20" >}}&nbsp;%, <span>soit {{< psup-val "d_t9099_b20_n" >}} sur {{< psup-val "d_t9099_n" >}}</span></small><span class="barre-part" style="--v:{{< psup-val "d_t9099_b20" "css" >}}" aria-hidden="true"><i></i></span></span></div>
+</div>
 
 **Le seuil de 90&nbsp;% garde donc une valeur de repère, et il ne garantit rien.** Passer sous 90&nbsp;% ne veut pas dire tomber bas&nbsp;: de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}, la moitié de ces formations étaient encore à {{< psup-val "d_t9099_med" >}}&nbsp;% ou plus, et neuf sur dix à {{< psup-val "d_t9099_d1" >}}&nbsp;% ou plus. Mais {{< psup-val "p_t9099_b20_frac" >}}, puis {{< psup-val "d_t9099_b20_frac" >}}, a perdu 20&nbsp;points ou plus. **Ces résultats décrivent des formations&nbsp;: ils ne disent pas si un vœu est réaliste pour un candidat donné**, ce qui dépend aussi de son dossier.
 
@@ -123,6 +168,7 @@ En {{< psup-val "d_a" >}}, le mouvement d'ensemble a été une baisse&nbsp;: {{<
 
 De {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}, la moitié des classes préparatoires ont perdu {{< psup-val "d_f_cpge_perte_pts" >}} de taux d'accès ou plus, et {{< psup-val "d_f_cpge_baisse_frac" >}} ont vu leur taux baisser ({{< psup-val "d_f_cpge_baisse" >}}&nbsp;%). En BTS, la moitié des formations ont perdu {{< psup-val "d_f_bts_perte_pts" >}} ou plus&nbsp;; en BUT, {{< psup-val "d_f_but_perte_pts" >}} ou plus&nbsp;; en licence, la variation médiane est nulle. Un an plus tôt, la variation médiane ne dépassait {{< psup-val "p_f_absmax_pts" >}} dans aucune filière.
 
+<div class="figure-lecture">
 <figure class="figure-ciseau">
   <picture>
     <source media="(max-width: 600px)" srcset="/img/parcoursup-filieres-m.svg" width="300" height="1091">
@@ -130,40 +176,80 @@ De {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}, la moitié des classes pr�
   </picture>
   <figcaption>Variation médiane du taux d'accès selon la filière, d'une session à la suivante (ministère chargé de l'enseignement supérieur, calcul de l'auteur).</figcaption>
 </figure>
+<div class="figure-lecture__texte">
 
 Une médiane nulle ne veut pas dire que rien n'a bougé&nbsp;: en licence, {{< psup-val "d_f_licence_baisse" >}}&nbsp;% des formations ont vu leur taux baisser de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}.
 
 **Pourquoi cette baisse est-elle plus forte en classes préparatoires&nbsp;? Ces données ne permettent pas de le dire, ni de savoir si elle se reproduira.** Le taux d'accès dépend des places, des candidatures, des classements et des choix des candidats, y compris de leurs renoncements&nbsp;: des résultats agrégés par formation ne séparent pas ces mécanismes.
 
+</div>
+</div>
+
 ## Et pour un candidat avec mon bac et mes résultats&nbsp;? {#mon-bac-et-mes-resultats}
 
 Le taux d'accès d'une formation vaut pour l'ensemble de ses candidats. Les chiffres qui correspondent le mieux à un profil sont sur la fiche de la formation, dans Parcoursup. Ouvrez la rubrique «&nbsp;Visualiser les chiffres d'accès&nbsp;»&nbsp;:
 
-- l'étape&nbsp;2 donne le taux d'accès pour votre type de bac (général, technologique, professionnel)&nbsp;;
-- l'étape&nbsp;3 donne les possibilités d'accès selon votre série et votre niveau de moyenne, calculées sur trois ans&nbsp;;
-- l'étape&nbsp;4 décrit le profil des candidats admis.
+<div class="fiche-etapes">
+<p class="surtitre-bloc">Sur la fiche de la formation&nbsp;: «&nbsp;Visualiser les chiffres d'accès&nbsp;»</p>
+<ol>
+<li><span class="fiche-etapes__n">Étape&nbsp;1</span><span>Tous les candidats&nbsp;: combien ont été classés, ont pu recevoir une proposition et ont intégré la formation</span></li>
+<li><span class="fiche-etapes__n">Étape&nbsp;2</span><span>Le taux d'accès pour votre type de bac (général, technologique, professionnel)</span></li>
+<li><span class="fiche-etapes__n">Étape&nbsp;3</span><span>Les possibilités d'accès selon votre série et votre niveau de moyenne, calculées sur trois&nbsp;ans</span></li>
+<li><span class="fiche-etapes__n">Étape&nbsp;4</span><span>Le profil des candidats admis</span></li>
+</ol>
+</div>
 
 **Aucun de ces chiffres n'est la probabilité qu'un candidat en particulier soit admis.** Ils disent ce qui est arrivé à des candidats qui vous ressemblent sur un ou deux critères.
 
 Deux autres pourcentages circulent sur les sites qui reprennent les données publiques. Ils ne se lisent pas comme une chance.
 
-**La part des candidats admis.** Exemple tiré des données publiques&nbsp;: en {{< psup-val "ex_session" >}}, un BUT de l'{{< psup-val "ex_etab" >}} comptait {{< psup-val "ex_cand" >}} candidats en phase principale, et {{< psup-val "ex_adm" >}} candidats y ont été admis, soit {{< psup-val "ex_adm_part" >}}&nbsp;%. C'est la part des candidats qui ont fini par choisir cette formation, pas la part de ceux qui pouvaient y entrer&nbsp;: son taux d'accès était de {{< psup-val "ex_taux" >}}&nbsp;%.
+<div class="cartes-paire">
+<div class="carte-point">
+<p class="carte-point__titre">La part des candidats admis</p>
 
-**La part d'un type de bac.** Dans la même formation, sur cent candidats qui pouvaient recevoir une proposition, {{< psup-val "ex_tec" >}} relevaient d'un bac technologique et {{< psup-val "ex_gen" >}} d'un bac général. Ces nombres décrivent la composition du groupe, pas la chance d'un bachelier technologique&nbsp;: pour la connaître, il faudrait savoir combien de bacheliers technologiques étaient candidats. C'est le taux d'accès par type de bac, à l'étape&nbsp;2 de la fiche, qui répond à cette question&nbsp;: il ne se confond pas avec la part de ces bacheliers parmi les candidats qui pouvaient recevoir une proposition.
+Exemple tiré des données publiques&nbsp;: en {{< psup-val "ex_session" >}}, un BUT de l'{{< psup-val "ex_etab" >}} comptait {{< psup-val "ex_cand" >}} candidats en phase principale, et {{< psup-val "ex_adm" >}} candidats y ont été admis, soit {{< psup-val "ex_adm_part" >}}&nbsp;%. C'est la part des candidats qui ont fini par choisir cette formation, pas la part de ceux qui pouvaient y entrer&nbsp;: son taux d'accès était de {{< psup-val "ex_taux" >}}&nbsp;%.
+
+<div class="indicateurs-distincts">
+<div class="indicateur-encadre">
+<p class="surtitre-bloc">Indicateur du ministère</p>
+<p class="indicateur-encadre__val">{{< psup-val "ex_taux" >}}&nbsp;%</p>
+<p class="indicateur-encadre__txt">Taux d'accès&nbsp;: part des candidats dont le rang permettait de recevoir une proposition avant la fin de la phase principale. Le ministère le calcule sur les candidats scolarisés en France ou de nationalité européenne.</p>
+</div>
+<div class="indicateur-encadre">
+<p class="surtitre-bloc">Admissions constatées</p>
+<p class="indicateur-encadre__val">{{< psup-val "ex_adm" >}} sur {{< psup-val "ex_cand" >}}</p>
+<p class="indicateur-encadre__txt">Soit {{< psup-val "ex_adm_part" >}}&nbsp;% des candidats de la phase principale, tous candidats confondus, d'après le fichier public arrêté en septembre.</p>
+</div>
+</div>
+<p class="legende-bloc legende-bloc--large">Deux indicateurs, deux populations, deux dates&nbsp;: ils ne mesurent pas la même chose, et aucun n'est la chance d'un candidat.</p>
+</div>
+<div class="carte-point">
+<p class="carte-point__titre">La part d'un type de bac</p>
+
+Dans la même formation, sur cent élèves de terminale qui pouvaient recevoir une proposition, {{< psup-val "ex_tec" >}} préparaient un bac technologique et {{< psup-val "ex_gen" >}} un bac général. Ces nombres décrivent la composition de ce groupe, pas la chance d'un élève de terminale technologique&nbsp;: pour la connaître, il faudrait savoir combien d'élèves de terminale technologique étaient candidats. C'est le taux d'accès par type de bac, à l'étape&nbsp;2 de la fiche, qui répond à cette question&nbsp;: il ne se confond pas avec la part de ces élèves parmi ceux qui pouvaient recevoir une proposition.
+
+<p class="legende-bloc">Sur cent élèves de terminale qui pouvaient recevoir une proposition&nbsp;:</p>
+<div class="barre-composition" aria-hidden="true"><span style="--v:{{< psup-val "ex_tec" "css" >}}">{{< psup-val "ex_tec" >}} · bac technologique</span><span style="--v:{{< psup-val "ex_gen" "css" >}}">{{< psup-val "ex_gen" >}} · bac général</span></div>
+</div>
+</div>
 
 ## Que permettent réellement de décider ces chiffres&nbsp;? {#ce-que-ces-chiffres-permettent}
 
 Pour chaque formation de votre liste, trois vérifications évitent de faire dire au taux d'accès plus qu'il ne dit.
 
+<div class="liste-cartes">
+
 1. **Situer son taux d'accès.** Regardez dans quelle tranche il se trouve, et où se sont retrouvées, un an après, les formations de cette tranche (première figure). Une formation à 95&nbsp;%, par exemple, appartient à une tranche de formations dont {{< psup-val "d_t9099_reste_frac" >}} est restée à 90&nbsp;% ou plus de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}, et dont {{< psup-val "d_t9099_b20_frac" >}} a perdu 20&nbsp;points ou plus.
 2. **Lire les chiffres de votre profil sur sa fiche**&nbsp;: le taux d'accès pour votre type de bac, puis les possibilités selon votre série et votre moyenne.
 3. **Regarder sa filière.** Parmi les classes préparatoires, {{< psup-val "d_f_cpge_baisse_frac" >}} ont vu leur taux baisser de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}&nbsp;; en licence, la variation médiane est nulle.
+
+</div>
 
 Ces vérifications ne donnent ni votre probabilité d'être admis, ni la façon de composer votre liste. **Un taux élevé est un indice favorable&nbsp;; ce n'est jamais une garantie, même à 100&nbsp;%**&nbsp;: {{< psup-val "p_t100_reste" >}}&nbsp;% puis {{< psup-val "d_t100_reste" >}}&nbsp;% des formations à 100&nbsp;% étaient encore à 90&nbsp;% ou plus l'année suivante. [Parcoursup recommande](https://www.parcoursup.gouv.fr/faq/thematiques/fonctionnement-de-parcoursup/formuler-ses-voeux) de ne pas formuler un seul vœu et de diversifier ses vœux entre formations sélectives et non sélectives&nbsp;; les résultats de cette page ne démontrent aucune stratégie de vœux.
 
 ## Comment avons-nous vérifié ces résultats&nbsp;? {#verification}
 
-Les données sont celles que le ministère chargé de l'enseignement supérieur publie chaque année pour toutes les formations de Parcoursup, hors apprentissage. Deux sessions successives sont comparées formation par formation. Une formation est retenue si elle garde le même code et le même intitulé, si son taux d'accès est publié les deux années et si elle a classé des candidats&nbsp;: c'est le cas de {{< psup-val "p_n" >}} formations sur {{< psup-val "p_entrees" >}} de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}} ({{< psup-val "p_part_app" >}}&nbsp;%), et de {{< psup-val "d_n" >}} sur {{< psup-val "d_entrees" >}} de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}} ({{< psup-val "d_part_app" >}}&nbsp;%).
+Les données sont celles que le ministère chargé de l'enseignement supérieur publie chaque année pour toutes les formations de Parcoursup, hors apprentissage. Deux sessions successives sont comparées formation par formation. Une formation est retenue si elle garde le même code et le même intitulé, si son taux d'accès est publié et si elle a classé des candidats les deux années&nbsp;: c'est le cas de {{< psup-val "p_n" >}} formations sur {{< psup-val "p_entrees" >}} de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}} ({{< psup-val "p_part_app" >}}&nbsp;%), et de {{< psup-val "d_n" >}} sur {{< psup-val "d_entrees" >}} de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}} ({{< psup-val "d_part_app" >}}&nbsp;%).
 
 **Les résultats portent sur ces formations comparées, pas sur toutes.**
 
@@ -185,6 +271,8 @@ Trois contrôles en précisent la portée&nbsp;: la comparaison des mêmes forma
 
 ## Ce que ces données ne disent pas {#limites}
 
+<div class="liste-colonnes">
+
 - **Aucune prévision, ni pour un dossier, ni pour la session de 2027.** Trois sessions décrivent une variabilité passée&nbsp;; une variation passée ne mesure pas l'incertitude à venir.
 - **Le taux d'accès est repris, pas recalculé.** Le fichier public ne permet pas de le refaire. Selon le ministère, qui produit l'indicateur, son mode de calcul est le même pour les trois sessions.
 - **Trois sessions seulement, dont une de recul d'ensemble.** Les causes d'une variation (places, nombre de candidats, autres vœux, renoncements) ne se séparent pas dans des données agrégées par formation.
@@ -192,9 +280,11 @@ Trois contrôles en précisent la portée&nbsp;: la comparaison des mêmes forma
 - **Une baisse de taux n'est pas un échec de candidats**&nbsp;: une formation à 80&nbsp;% place encore quatre candidats sur cinq en position de recevoir une proposition.
 - **L'accès n'est pas la réussite.** Rien ici sur ce que deviennent les étudiants une fois admis&nbsp;; pour la licence, l'activité [«&nbsp;Après une première année de licence&nbsp;»](/enseignants/ecole-et-parcours/#terminale-licence) le suit sur les données du ministère.
 
+</div>
+
 ## Questions fréquentes {#questions}
 
-{{< faq-visible >}}
+{{< faq-visible colonnes="2" >}}
 
 {{< appel-livre slug="la-societe-du-premier-coup" sur="Ce qu'un premier choix engage dépend de ce qu'il permet de rattraper" avis="non" >}}
 Cette page mesure ce que vaut un chiffre au moment de choisir&nbsp;; elle ne dit pas ce que coûte un premier choix manqué. Ce coût dépend de ce que l'on peut rattraper ensuite&nbsp;: pourquoi certains disposent-ils de plusieurs chances quand d'autres jouent leur avenir dès la première tentative&nbsp;? C'est cette inégalité qu'explore le livre.
@@ -218,7 +308,7 @@ Ministère chargé de l'enseignement supérieur, données ouvertes Parcoursup de
 
 **Corrélation.** D'une session à la suivante, la corrélation entre les taux d'accès est de {{< psup-val "p_pearson" >}} puis de {{< psup-val "d_pearson" >}}&nbsp;; calculée sur les rangs, de {{< psup-val "p_spearman" >}} puis de {{< psup-val "d_spearman" >}}&nbsp;; sans les formations à 0 ou 100&nbsp;%, de {{< psup-val "p_pearson_int" >}} puis de {{< psup-val "d_pearson_int" >}}. En classes préparatoires, elle passe de {{< psup-val "p_f_cpge_pearson" >}} à {{< psup-val "d_f_cpge_pearson" >}}&nbsp;; en licence, de {{< psup-val "p_f_licence_pearson" >}} à {{< psup-val "d_f_licence_pearson" >}}.
 
-**Exemple.** {{< psup-val "ex_etab" >}}, {{< psup-val "ex_formation" >}}, session {{< psup-val "ex_session" >}}&nbsp;: nombres du fichier public, arrêtés en septembre et portant sur tous les candidats. La fiche de la formation sur Parcoursup, arrêtée à la fin de la phase principale, en donne d'autres. La répartition par type de bac est celle du fichier publié ({{< psup-val "ex_gen" >}}&nbsp;% de bacheliers généraux, {{< psup-val "ex_tec" >}}&nbsp;% de bacheliers technologiques, {{< psup-val "ex_pro" >}}&nbsp;% de bacheliers professionnels)&nbsp;; la notice méthodologique du ministère, qui prend la même formation en exemple, indique 49&nbsp;%, 50&nbsp;% et 1&nbsp;% (notice de la session 2025, lue le 11&nbsp;novembre 2026). Les autres nombres de l'exemple sont les mêmes dans les deux documents.
+**Exemple.** {{< psup-val "ex_etab" >}}, {{< psup-val "ex_formation" >}}, session {{< psup-val "ex_session" >}}&nbsp;: nombres du fichier public, arrêtés en septembre et portant sur tous les candidats. La fiche de la formation sur Parcoursup, arrêtée à la fin de la phase principale, en donne d'autres. La répartition par type de bac est celle du fichier publié ({{< psup-val "ex_gen" >}}&nbsp;% en terminale générale, {{< psup-val "ex_tec" >}}&nbsp;% en terminale technologique, {{< psup-val "ex_pro" >}}&nbsp;% en terminale professionnelle). D'après le libellé de la variable et d'après ses valeurs dans le fichier, elle porte sur les seuls élèves de terminale en position de recevoir une proposition, alors que la définition donnée par la notice du ministère parle des candidats. Cette notice, qui prend la même formation en exemple, indique 49&nbsp;%, 50&nbsp;% et 1&nbsp;% (notice de la session 2025, lue le 11&nbsp;novembre 2026). Les autres nombres de l'exemple sont les mêmes dans les deux documents.
 
 **Conseils cités.** Onisep, activité «&nbsp;Évaluer son niveau d'ambition dans MonProjetSup&nbsp;», lue le 10&nbsp;novembre 2026. Parcoursup, foire aux questions «&nbsp;Formuler ses vœux&nbsp;» et fiche d'une formation (rubrique «&nbsp;Visualiser les chiffres d'accès&nbsp;»), lues les 10 et 11&nbsp;novembre 2026.
 

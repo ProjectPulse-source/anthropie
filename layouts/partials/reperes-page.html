@@ -1,0 +1,26 @@
+{{- /* reperes-page.html — trois repères sous le chapô d'une ressource, déclarés au front matter (« reperes: »).
+       Maquette B+ de la page Parcoursup, validée par l'auteur le 11/11/2026 après deux contre-expertises (pièces 09 et
+       10 du chantier ; styles : assets/scss/_ressource-relief.scss).
+
+       reperes:
+         - ancre: "identifiant-de-la-section"       # où mène le repère
+           fort: "{jeu.cle}"                        # le mot ou le nombre mis en avant
+           texte: "… de {jeu.de} à {jeu.a}"         # la phrase, AVEC sa période
+           precision: "{jeu.part} % des {jeu.n} …"  # pourcentage exact et population, entre parenthèses
+
+       Aucun chiffre saisi : jetons {jeu.cle} résolus par desc-figures, comme le chapô et la FAQ (le générateur de la
+       page les garde). Affichés à partir de 600 px de large ; au téléphone, le chapô donne déjà la réponse et les
+       résultats se lisent dans leurs sections (ils DOIVENT donc y être). Rien si la page n'en déclare pas. */ -}}
+{{- with .Params.reperes }}
+{{- $en := eq $.Lang "en" }}
+<nav class="reperes-page" aria-label="{{ if $en }}Key results of this page{{ else }}Repères de la page{{ end }}">
+  {{- range . }}
+  {{- if not (and .ancre .fort .texte) }}{{ errorf "reperes-page : ancre, fort et texte sont requis (%s)" $.RelPermalink }}{{ end }}
+  {{- $fort := partial "desc-figures.html" (dict "text" .fort "isbn" nil) | strings.FirstUpper }}
+  {{- /* Un signe moins en tête se compose à part (police des figures, en gras) : maigre dans la police à empattements,
+         il laissait lire « 11 points » pour « −11 points ». */ -}}
+  {{- $fortHTML := replaceRE `^−` `<span class="reperes-page__signe">−</span>` (string (partial "fr-typo.html" $fort)) | safeHTML }}
+  <a href="#{{ .ancre }}"><b>{{ $fortHTML }}</b> <span>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" .texte "isbn" nil)) }}{{ with .precision }}<span class="reperes-page__precision"> ({{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" nil)) }})</span>{{ end }}.</span></a>
+  {{- end }}
+</nav>
+{{- end -}}
