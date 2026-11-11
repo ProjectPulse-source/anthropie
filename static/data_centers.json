@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-04",
+ "releve_le": "2026-11-11",
  "_licence": "CC BY 4.0 — calcul et mesures Stéphane Lalut ; source RTE",
  "meta": {
   "page": "https://stephane-lalut.com/data-centers-puissance-reservee/",
@@ -8,12 +8,12 @@
    "bp": {
     "url": "https://assets.rte-france.com/prod/public/2025-12/2025-12-23-bilan-previsionnel-2025-consommation.pdf",
     "titre": "RTE, Bilan prévisionnel 2025-2035, La consommation d'électricité (décembre 2025)",
-    "sha256": "da9540b6d7443ac59b8e08fd10f691b29f6e279025a805c8fe4be8d904187467"
+    "sha256": "89400b9d0a7265712a14e232c908837b304a5b6adc5f21e847e6cf9bcfe64abe"
    },
    "be": {
     "url": "https://assets.rte-france.com/prod/public/2026-02/Bilan-electrique-2025-principaux-resultats.pdf",
     "titre": "RTE, Bilan électrique 2025, principaux résultats (février 2026)",
-    "sha256": "eb662c7bf43eee4766d289a9e5af4a4a3a4543cc1916cc5efc44e368a9fe57ce"
+    "sha256": "13d570dd03c984ae46f28a604432af7602ec2d4b007acb6c7530940f666ae22f"
    },
    "web": {
     "url": "https://www.rte-france.com/bases-electricite/consommation-electricite/essor-data-centers-france",

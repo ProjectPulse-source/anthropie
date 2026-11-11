@@ -1,12 +1,12 @@
-# relu le 2026-11-10 ; texte servi de /data-centers-puissance-reservee/, build de 5adede6 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-11 ; texte servi de /data-centers-puissance-reservee/, build de c2b25c2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Data centers : les gigawatts réservés annoncent-ils la consommation ?
 Le chiffre qui circule est celui des réservations : près de 18 gigawatts en mai 2026, contre environ 5 fin 2024.
 Mais une puissance réservée n’est pas une consommation.
 Plus de la moitié de la puissance réservée en novembre 2025 vise une mise en service à partir de 2030, d’autres réservations ont déjà été abandonnées, et les data centers raccordés au réseau de transport ont consommé près de 1 térawattheure en 2025.
-Page mise à jour le 5 novembre 2026
+Page mise à jour le 11 novembre 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données du : 4 novembre 2026 RTE, Bilan prévisionnel 2025-2035 (décembre 2025), Bilan électrique 2025 (février 2026) et page « Les data centers en chiffres clés » (mise à jour du 1er juin 2026) : valeurs lues dans le texte, répartition par statut mesurée sur une figure.
+Données du : 11 novembre 2026 RTE, Bilan prévisionnel 2025-2035 (décembre 2025), Bilan électrique 2025 (février 2026) et page « Les data centers en chiffres clés » (mise à jour du 1er juin 2026) : valeurs lues dans le texte, répartition par statut mesurée sur une figure.
 Télécharger : CSV · JSON
 Ce qui est réservé, ce qui est consommé
 En mai 2026, selon RTE, les data centers avaient réservé près de 18 gigawatts (GW) de capacité de raccordement à son réseau, pour environ 80 projets.
@@ -113,7 +113,7 @@ Télécharger en PNG
 SVG
 Citer cette page
 Lalut, Stéphane (2026). « Data centers : les gigawatts réservés annoncent-ils la consommation ? ».
-Données RTE, relevé du 4 novembre 2026. https://stephane-lalut.com/data-centers-puissance-reservee/
+Données RTE, relevé du 11 novembre 2026. https://stephane-lalut.com/data-centers-puissance-reservee/
 Copier la citation
 En trois phrases
 En novembre 2025, les data centers avaient réservé 14 GW de raccordement auprès de RTE, dont 7,6 GW pour une mise en service à partir de 2030, et des réservations totalisant environ 0,9 GW avaient été abandonnées depuis 2023.
