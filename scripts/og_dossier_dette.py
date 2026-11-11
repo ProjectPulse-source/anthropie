@@ -957,6 +957,61 @@ def carte_etudiants() -> None:
            (C1, "Hommes de 18-24 ans : %s en 2019, %s en %s" % (A["hosp_h_2019"], A["hosp_h_der"], der))])
 
 
+TRANCHES_CARTE_PSUP = (("90-99", "t9099", 90, 99), ("75-90", "t7590", 75, 89), ("60-75", "t6075", 60, 74), ("40-60", "t4060", 40, 59))
+
+
+def figure_parcoursup_mini(d: ImageDraw.ImageDraw, A: dict, T: dict) -> None:
+    """Ressource « Parcoursup : quelles sont vraiment vos chances d'être admis ? » (11/11/2026) : la figure signature
+    réduite à quatre tranches — bande de la tranche de départ, barre du 1er au 9e décile du taux de l'année suivante,
+    point à la médiane (dernière transition). Valeurs lues dans data/parcoursup.json."""
+    x0, x1, top, pas = 660, 1126, 104, 78
+    bande = (228, 223, 215)
+
+    def X(v):
+        return x0 + (x1 - x0) * v / 100.0
+
+    fl, fv = font("inter", 17, 500), font("inter", 17, 400)
+    for g in (0, 50, 100):
+        d.line([(X(g), top - 6), (X(g), top + pas * len(TRANCHES_CARTE_PSUP) - 14)], fill=GRID, width=2 if g == 0 else 1)
+    for i, (cle, j, bas, haut) in enumerate(TRANCHES_CARTE_PSUP):
+        v = T["tranches"][cle]
+        y = top + pas * i
+        d.text((x0, y), "%s en %s" % (A["d_%s_lib" % j], A["d_de"]), font=fl, fill=INK)
+        yb = y + 40
+        d.rectangle([X(bas), yb - 15, X(haut), yb + 15], fill=bande)
+        d.rectangle([X(v["d1"]), yb - 7, X(v["d9"]), yb + 7], fill=C1)
+        cx = X(v["mediane"])
+        d.ellipse([cx - 8, yb - 8, cx + 8, yb + 8], fill=(255, 255, 255), outline=C1, width=3)
+    yb = top + pas * len(TRANCHES_CARTE_PSUP) - 8
+    for g, ancre in ((0, 0), (50, 20), (100, 52)):
+        d.text((X(g) - ancre, yb), "%d %%" % g, font=fv, fill=URL_GREY)
+    d.text((x0, yb + 26), "Taux d'accès des mêmes formations en %s" % A["d_a"], font=fv, fill=URL_GREY)
+
+
+def carte_parcoursup() -> None:
+    """Ressource « Parcoursup : quelles sont vraiment vos chances d'être admis ? » (11/11/2026). Chiffres lus dans le jeu
+    publié ; ce que la carte montre (chaque barre déborde sa tranche de départ des deux côtés) est contrôlé ici.
+    Français seulement."""
+    p = ROOT / "data" / "parcoursup.json"
+    if not p.is_file():
+        fail("jeu de données absent : %s — lancer scripts/update_parcoursup.py d'abord" % p)
+    j = json.loads(p.read_text(encoding="utf-8"))
+    A, T = j["affichage"], j["transitions"][-1]
+    for cle, _j, bas, haut in TRANCHES_CARTE_PSUP:
+        v = T["tranches"][cle]
+        if not (v["d1"] < bas and v["d9"] > haut):
+            fail("carte Parcoursup : la barre de la tranche %s ne déborde plus sa tranche de départ" % cle)
+    carte("og-parcoursup.jpg",
+          ["Parcoursup : quelles sont", "vraiment vos chances ?"],
+          "Un taux d'accès n'est pas une promesse pour l'année suivante.",
+          "Ministère de l'enseignement supérieur · calcul de l'auteur · CC BY 4.0",
+          "stephane-lalut.com/parcoursup-quelles-chances-d-etre-admis/",
+          lambda d: figure_parcoursup_mini(d, A, T),
+          [(C1, "%s en %s : %s entre %s et %s %% en %s" % (A["d_t6075_lib"].capitalize(), A["d_de"], A["d_t6075_dans_frac"],
+                                                             A["d_t6075_d1"], A["d_t6075_d9"], A["d_a"])),
+           ((228, 223, 215), "Tranche de départ, placée sur le même axe")])
+
+
 def figure_langue_mini(d: ImageDraw.ImageDraw, A: dict, X: dict) -> None:
     """Ressource « Les élèves maîtrisent-ils moins bien la langue française ? » (09/10/2026) : même dictée de CM2, erreurs
     lexicales (bleu) et autres erreurs (orange), 1987-2021."""
@@ -1017,6 +1072,9 @@ def main() -> int:
     if "--etudiants" in sys.argv[1:]:
         carte_etudiants()
         return 0
+    if "--parcoursup" in sys.argv[1:]:
+        carte_parcoursup()
+        return 0
     if "--futurs" in sys.argv[1:]:
         carte_futurs()
         return 0
@@ -1038,6 +1096,7 @@ def main() -> int:
     carte_niveau()
     carte_langue()
     carte_etudiants()
+    carte_parcoursup()
     qp = ROOT / "data" / "qui_paie_donnees.json"
     do = ROOT / "data" / "dette_officielle.json"
     for f in (qp, do):

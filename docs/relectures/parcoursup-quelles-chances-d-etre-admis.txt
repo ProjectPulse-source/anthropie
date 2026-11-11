@@ -1,0 +1,246 @@
+# relu le 2026-11-11 ; texte servi de /parcoursup-quelles-chances-d-etre-admis/, build de 1f15528 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+Parcoursup : quelles sont vraiment vos chances d’être admis ?
+Le taux d’accès affiché par Parcoursup ne mesure pas vos chances d’être admis : il dit quelle part des candidats de l’année précédente ont pu recevoir une proposition.
+D’une année à la suivante, ce taux reste proche pour une formation sur deux (6 points d’écart ou moins de 2024 à 2025) ; il change parfois beaucoup, même au-dessus de 90 %.
+C’est un repère utile, pas une promesse.
+Page publiée le 11 novembre 2026
+École, lycée et université
+↓ Graphiques, données et citations à réutiliserRéutiliser cette page
+Données mises à jour le 11 novembre 2026 Ministère chargé de l’enseignement supérieur, données ouvertes Parcoursup, sessions 2023, 2024 et 2025 ; calcul de l’auteur.
+Peut-on se fier au taux d’accès de l’année précédente ?
+Le taux d’accès est le chiffre que Parcoursup affiche sur la fiche de chaque formation.
+Il se rapporte à l’année précédente.
+Chaque formation classe ses candidats, puis les appelle dans l’ordre de ce classement, à mesure que des places se libèrent : le taux d’accès est la part des candidats dont le rang permettait de recevoir une proposition avant la fin de la phase principale.
+Un exemple.
+Un taux d’accès de 26 % signifie que, sur cent candidats, 26 avaient un rang qui leur permettait de recevoir une proposition.
+Cela ne veut pas dire que les 26 l’ont reçue, ni qu’ils l’ont acceptée : certains avaient déjà renoncé à ce vœu, d’autres ont préféré une autre formation.
+Pour les autres candidats, l’appel n’est pas allé jusqu’à leur rang, ou la formation ne les avait pas classés.
+Le taux d’accès donne donc une information sur une formation, une année passée ; il ne donne pas de réponse sur votre candidature.
+Pour s’en servir, il faut savoir à quel point il varie d’une année à l’autre, puis le rapporter à son propre profil.
+Nous avons comparé le taux d’accès de chaque formation d’une session à la suivante, sur les sessions 2023, 2024 et 2025.
+Première réponse : les formations les plus accessibles une année tendent à le rester l’année suivante, comme les plus sélectives.
+Cette stabilité d’ensemble n’empêche pas certaines formations de varier fortement.
+Et elle porte sur les formations : elle ne dit rien de l’issue d’une candidature.
+Que deviennent les taux d’une année sur l’autre ?
+La comparaison porte sur 12 065 formations de 2023 à 2024 et sur 12 816 formations de 2024 à 2025 : celles que l’on retrouve sous le même code et le même intitulé deux années de suite, et non toutes les formations proposées.
+Pour chaque tranche de taux d’accès une année, la figure montre où se situait le taux des mêmes formations l’année suivante.
+Taux d’accès l’année suivante, selon le taux de l’année de départ (ministère chargé de l’enseignement supérieur, calcul de l’auteur).
+Le résultat en une phrase.
+Un taux d’accès n’est pas une promesse pour l’année suivante : parmi les formations à 60-74 % en 2024, huit sur dix se situaient entre 43 et 83 % en 2025.
+Deux choses sont à retenir, et elles vont ensemble.
+Le taux change peu pour beaucoup de formations.
+Pour une formation sur deux, l’écart d’une session à la suivante est de 6 points ou moins : 55,0 % des formations de 2023 à 2024, 51,6 % de 2024 à 2025.
+Il change parfois beaucoup.
+Parmi les formations à 60-74 % en 2024, une sur dix s’est retrouvée à 43 % ou moins en 2025.
+Ces intervalles décrivent ce qui s’est passé, pas ce qui se passera.
+Ils se déplacent eux aussi d’une année à l’autre : de 2023 à 2024, huit sur dix des formations de la même tranche se situaient entre 48 et 85 % (barres grises de la figure).
+Et ils décrivent des groupes de formations : aucune barre ne dit où se trouvera, l’an prochain, une formation précise.
+Un taux supérieur à 90 % est-il rassurant ?
+Le conseil est courant : au-dessus de 90 %, un vœu serait « réaliste ».
+Une activité que l’Onisep propose aux élèves de terminale, « Évaluer son niveau d’ambition dans MonProjetSup », l’écrit à propos de ce qu’elle appelle le taux d’admission, à côté d’autres critères (le profil de l’élève, les attendus de la formation) : au-dessus de ce seuil, « on peut imaginer que ce choix de formation est réaliste ».
+Que sont devenues, un an plus tard, les formations dont le taux d’accès était de 90 à 99 % ?
+deux sur trois étaient encore à 90 % ou plus un an après, de 2023 à 2024 (66,9 %, soit 1 138 sur 1 701) ; un peu plus d’une sur deux de 2024 à 2025 (55,2 %, soit 936 sur 1 695) ;
+une sur dix avait perdu 20 points ou plus de 2023 à 2024 (10,1 %) ; une sur cinq de 2024 à 2025 (21,7 %).
+Le seuil de 90 % garde donc une valeur de repère, et il ne garantit rien.
+Passer sous 90 % ne veut pas dire tomber bas : de 2024 à 2025, la moitié de ces formations étaient encore à 91 % ou plus, et neuf sur dix à 59 % ou plus.
+Mais une sur dix, puis une sur cinq, a perdu 20 points ou plus.
+Ces résultats décrivent des formations : ils ne disent pas si un vœu est réaliste pour un candidat donné, ce qui dépend aussi de son dossier.
+Les formations à 100 % bougent moins : 91,1 % puis 85,3 % sont restées à 90 % ou plus, et 3,6 % puis 10,4 % ont perdu 20 points ou plus.
+Un taux de 100 % signifie qu’aucun candidat n’était encore en attente à la fin de la phase principale ; il baisse dès que l’appel ne va plus jusqu’au dernier candidat classé.
+À l’autre bout, les formations très sélectives le restent : parmi celles dont le taux était inférieur à 20 %, 17 sur 1 116, puis 20 sur 1 239, atteignaient 40 % ou plus l’année suivante.
+Selon la filière
+En 2025, le mouvement d’ensemble a été une baisse : 55,1 % des formations comparées ont vu leur taux d’accès reculer et 34,0 % l’ont vu augmenter, contre 47,3 % et 42,6 % un an plus tôt.
+Ce recul n’a pas été le même partout.
+De 2024 à 2025, la moitié des classes préparatoires ont perdu 11 points de taux d’accès ou plus, et près de quatre sur cinq ont vu leur taux baisser (77,8 %).
+En BTS, la moitié des formations ont perdu 3 points ou plus ; en BUT, 2 points ou plus ; en licence, la variation médiane est nulle.
+Un an plus tôt, la variation médiane ne dépassait 3 points dans aucune filière.
+Variation médiane du taux d’accès selon la filière, d’une session à la suivante (ministère chargé de l’enseignement supérieur, calcul de l’auteur).
+Une médiane nulle ne veut pas dire que rien n’a bougé : en licence, 39,3 % des formations ont vu leur taux baisser de 2024 à 2025.
+Pourquoi cette baisse est-elle plus forte en classes préparatoires ?
+Ces données ne permettent pas de le dire, ni de savoir si elle se reproduira.
+Le taux d’accès dépend des places, des candidatures, des classements et des choix des candidats, y compris de leurs renoncements : des résultats agrégés par formation ne séparent pas ces mécanismes.
+Et pour un candidat avec mon bac et mes résultats ?
+Le taux d’accès d’une formation vaut pour l’ensemble de ses candidats.
+Les chiffres qui correspondent le mieux à un profil sont sur la fiche de la formation, dans Parcoursup.
+Ouvrez la rubrique « Visualiser les chiffres d’accès » :
+l’étape 2 donne le taux d’accès pour votre type de bac (général, technologique, professionnel) ;
+l’étape 3 donne les possibilités d’accès selon votre série et votre niveau de moyenne, calculées sur trois ans ;
+l’étape 4 décrit le profil des candidats admis.
+Aucun de ces chiffres n’est la probabilité qu’un candidat en particulier soit admis.
+Ils disent ce qui est arrivé à des candidats qui vous ressemblent sur un ou deux critères.
+Deux autres pourcentages circulent sur les sites qui reprennent les données publiques.
+Ils ne se lisent pas comme une chance.
+La part des candidats admis.
+Exemple tiré des données publiques : en 2025, un BUT de l’I.U.T. d’Illkirch comptait 378 candidats en phase principale, et 32 candidats y ont été admis, soit 8,5 %.
+C’est la part des candidats qui ont fini par choisir cette formation, pas la part de ceux qui pouvaient y entrer : son taux d’accès était de 26 %.
+La part d’un type de bac.
+Dans la même formation, sur cent candidats qui pouvaient recevoir une proposition, 58 relevaient d’un bac technologique et 42 d’un bac général.
+Ces nombres décrivent la composition du groupe, pas la chance d’un bachelier technologique : pour la connaître, il faudrait savoir combien de bacheliers technologiques étaient candidats.
+C’est le taux d’accès par type de bac, à l’étape 2 de la fiche, qui répond à cette question : il ne se confond pas avec la part de ces bacheliers parmi les candidats qui pouvaient recevoir une proposition.
+Que permettent réellement de décider ces chiffres ?
+Pour chaque formation de votre liste, trois vérifications évitent de faire dire au taux d’accès plus qu’il ne dit.
+Situer son taux d’accès.
+Regardez dans quelle tranche il se trouve, et où se sont retrouvées, un an après, les formations de cette tranche (première figure).
+Une formation à 95 %, par exemple, appartient à une tranche de formations dont un peu plus d’une sur deux est restée à 90 % ou plus de 2024 à 2025, et dont une sur cinq a perdu 20 points ou plus.
+Lire les chiffres de votre profil sur sa fiche : le taux d’accès pour votre type de bac, puis les possibilités selon votre série et votre moyenne.
+Regarder sa filière.
+Parmi les classes préparatoires, près de quatre sur cinq ont vu leur taux baisser de 2024 à 2025 ; en licence, la variation médiane est nulle.
+Ces vérifications ne donnent ni votre probabilité d’être admis, ni la façon de composer votre liste.
+Un taux élevé est un indice favorable ; ce n’est jamais une garantie, même à 100 % : 91,1 % puis 85,3 % des formations à 100 % étaient encore à 90 % ou plus l’année suivante.
+Parcoursup recommande de ne pas formuler un seul vœu et de diversifier ses vœux entre formations sélectives et non sélectives ; les résultats de cette page ne démontrent aucune stratégie de vœux.
+Comment avons-nous vérifié ces résultats ?
+Les données sont celles que le ministère chargé de l’enseignement supérieur publie chaque année pour toutes les formations de Parcoursup, hors apprentissage.
+Deux sessions successives sont comparées formation par formation.
+Une formation est retenue si elle garde le même code et le même intitulé, si son taux d’accès est publié les deux années et si elle a classé des candidats : c’est le cas de 12 065 formations sur 14 616 de 2023 à 2024 (82,5 %), et de 12 816 sur 14 791 de 2024 à 2025 (86,6 %).
+Les résultats portent sur ces formations comparées, pas sur toutes.
+Les intervalles d’une année ne se retrouvent qu’imparfaitement l’année suivante.
+Appliqués aux formations de 2024 à 2025, les intervalles mesurés de 2023 à 2024 contenaient de 73 à 85 % des formations selon la tranche, alors qu’ils en contenaient de 80 à 90 % l’année où ils ont été mesurés.
+Pour la tranche 90 à 99 %, par exemple : 90,0 % puis 77,4 %.
+Trois contrôles en précisent la portée : la comparaison des mêmes formations sur les trois sessions, le retrait des petites formations, le retrait de celles dont le nombre de places a beaucoup changé.
+Ils déplacent peu les résultats, sauf pour les formations à 100 %.
+Le détail des contrôles
+Qui est écarté de la comparaison.
+Les formations écartées (nouvelles, disparues, renommées, sans taux publié ou sans candidat classé) sont comptées motif par motif, dans le détail des sources.
+Celles qui ont disparu ou changé d’intitulé étaient plus petites et plus accessibles que les formations comparées : leur taux d’accès médian allait de 66 à 78 %, contre 60 %.
+Le recul de 2025 subsiste lorsqu’on compare exactement les mêmes formations sur les trois sessions.
+Parmi les 11 087 formations comparées les deux fois, 55,2 % ont vu leur taux baisser de 2024 à 2025, contre 47,6 % de 2023 à 2024 ; sans les classes préparatoires, 53,1 % contre 46,5 %.
+Ce recul ne s’explique donc ni par la seule modification du périmètre des formations comparées, ni par les seules classes préparatoires.
+Cette comparaison ne dit rien des candidats, dont le nombre et les vœux changent chaque année.
+Les petites formations et les changements de capacité ne font pas ces résultats.
+Sans les formations de moins de 50 candidats, la part des formations perdant 20 points ou plus bouge de moins d’un point dans chaque tranche, sauf pour les formations à 100 % (de 10,4 à 5,9 % de 2024 à 2025).
+Sans les formations dont le nombre de places a varié de plus de 25 % (596 puis 696), les repères de la première figure se déplacent d’un point au plus.
+Classes préparatoires.
+De 2024 à 2025, le nombre médian de candidats par classe préparatoire est passé de 993,5 à 940,5, et le nombre médian de places est resté de 45.
+Ces deux médianes décrivent ; elles ne permettent d’écarter aucune explication de la baisse.
+Ce que ces données ne disent pas
+Aucune prévision, ni pour un dossier, ni pour la session de 2027.
+Trois sessions décrivent une variabilité passée ; une variation passée ne mesure pas l’incertitude à venir.
+Le taux d’accès est repris, pas recalculé.
+Le fichier public ne permet pas de le refaire.
+Selon le ministère, qui produit l’indicateur, son mode de calcul est le même pour les trois sessions.
+Trois sessions seulement, dont une de recul d’ensemble.
+Les causes d’une variation (places, nombre de candidats, autres vœux, renoncements) ne se séparent pas dans des données agrégées par formation.
+Même code et même intitulé ne garantissent pas une formation inchangée : ses groupes de classement, son recrutement ou ses modalités ont pu changer.
+Une baisse de taux n’est pas un échec de candidats : une formation à 80 % place encore quatre candidats sur cinq en position de recevoir une proposition.
+L’accès n’est pas la réussite.
+Rien ici sur ce que deviennent les étudiants une fois admis ; pour la licence, l’activité « Après une première année de licence » le suit sur les données du ministère.
+Questions fréquentes
+Le taux d’accès est-il ma chance d’être admis ?
+Non.
+Il dit quelle part des candidats de la session précédente ont pu recevoir une proposition, tous profils confondus : il ne tient compte ni de votre bac, ni de vos résultats.
+Et il décrit une année passée : de 2024 à 2025, une formation sur deux a vu son taux varier de 6 points ou moins, mais une sur cinq de celles qui affichaient 90 à 99 % en a perdu 20 points ou plus.
+Un taux d’accès de 100 % garantit-il une place ?
+Non.
+Il signifie qu’à la fin de la phase principale de la session précédente, aucun candidat n’était encore en attente dans cette formation.
+Parmi les formations à 100 % en 2024, 85,3 % étaient encore à 90 % ou plus en 2025, et 10,4 % avaient perdu 20 points ou plus.
+Un candidat resté sur liste d’attente est-il compté dans le taux d’accès ?
+Cela dépend du moment.
+Un candidat encore en attente à la fin de la phase principale est compté parmi les candidats, pas parmi ceux dont le rang permettait de recevoir une proposition.
+Un candidat d’abord en attente, puis appelé avant la fin de cette phase, est compté parmi eux.
+Ce qui se passe après la phase principale n’entre pas dans le calcul du taux.
+Taux d’accès et taux d’admission, est-ce la même chose ?
+Non.
+Le taux d’accès compte les candidats qui ont pu recevoir une proposition, qu’ils l’aient acceptée ou non ; la part des candidats finalement admis est bien plus faible.
+Exemple tiré des données publiques : dans un BUT de l’I.U.T. d’Illkirch, en 2025, le taux d’accès était de 26 %, et 32 candidats sur 378 ont été admis, soit 8,5 %.
+Où trouver les chiffres qui correspondent à mon bac ?
+Sur la fiche de la formation, dans Parcoursup, à la rubrique « Visualiser les chiffres d’accès » : elle donne le taux d’accès par type de bac, puis les possibilités d’accès selon la série et le niveau de moyenne.
+Les sites qui reprennent les données publiques ne disposent que de la répartition par bac des candidats qui pouvaient recevoir une proposition : une composition, pas une chance.
+Le taux affiché cette année vaudra-t-il l’an prochain ?
+Rien ne le garantit.
+D’une session à la suivante, les taux d’accès sont fortement corrélés (0,90 de 2023 à 2024, 0,87 de 2024 à 2025), mais les écarts peuvent être grands : parmi les formations à 60-74 % en 2024, huit sur dix se situaient entre 43 et 83 % en 2025.
+Ces mesures décrivent le passé ; elles ne prévoient pas la session suivante.
+Ce qu’un premier choix engage dépend de ce qu’il permet de rattraper
+La Société du premier coup
+Pourquoi certains peuvent recommencer — et d’autres non
+Cette page mesure ce que vaut un chiffre au moment de choisir ; elle ne dit pas ce que coûte un premier choix manqué.
+Ce coût dépend de ce que l’on peut rattraper ensuite : pourquoi certains disposent-ils de plusieurs chances quand d’autres jouent leur avenir dès la première tentative ?
+C’est cette inégalité qu’explore le livre.
+Journalistes, enseignants, chercheurs, responsables publics ou associatifs
+Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
+Votre exemplaire, disponible immédiatement →
+Version papier : 13,90 € · Kindle : 5,99 €
+Sommaire, extraits et recensions →
+D’où viennent ces chiffres
+Ministère chargé de l’enseignement supérieur, données ouvertes Parcoursup des sessions 2023, 2024 et 2025 : le taux d’accès de chaque formation, repris tel qu’il est publié.
+Le détail des sources, des formations écartées et des contrôles est ci-dessous.
+Le détail des sources et de la méthode
+Données.
+Ministère chargé de l’enseignement supérieur, sous-direction des systèmes d’information et des études statistiques (SIES), « Parcoursup : vœux de poursuite d’études et de réorientation dans l’enseignement supérieur et réponses des établissements », sessions 2023, 2024 et 2025, licence ouverte 2.0.
+Une ligne par formation, hors apprentissage.
+Les trois exports sont archivés avec leurs empreintes.
+Taux d’accès.
+Définition du ministère (méthodologie des données ouvertes, 2025) : rapport entre le nombre de candidats dont le rang de classement ne dépasse pas celui du dernier appelé de leur groupe et le nombre de candidats ayant validé un vœu pour la formation en phase principale.
+Seuls les candidats scolarisés en France ou de nationalité européenne entrent dans ce calcul.
+Le ministère précise que ce taux ne peut pas être recalculé à partir du fichier, et que son mode de calcul est identique d’une session à l’autre pour 2023, 2024 et 2025.
+Selon Boyer et Gossa (« Si Parcoursup m’était compté », Éducation et Socialisation, n° 72, 2024), il avait été modifié en 2022 : la comparaison porte sur les trois sessions qui suivent.
+Formations écartées de la comparaison, de 2023 à 2024 puis de 2024 à 2025 : nouvelles, 747 puis 712 ; disparues, 537 puis 539 ; intitulé changé, 1 190 puis 674 ; taux d’accès non publié, 77 puis 27 ; aucun candidat classé, 0 puis 23.
+De 2024 à 2025, 68 % des formations dont l’intitulé change sont des BTS, dont plusieurs diplômes ont changé de nom.
+Filières.
+Une formation compte dans une filière si le ministère la classe dans cette filière les deux années.
+Les formations qu’il a classées dans une autre filière d’une session à l’autre (163 puis 172) sont comptées à part et ne figurent pas dans la seconde figure. « Licences » s’entend hors licences accès santé ; « Autres formations » est la catégorie du ministère pour les formations qui n’entrent dans aucune autre.
+Tranches et intervalles.
+Les tranches sont définies sur le taux de l’année de départ.
+L’intervalle va du 1er au 9e décile du taux de l’année suivante, bornes comprises : il contient au moins huit formations sur dix, et neuf sur dix dans les deux tranches du haut, où il touche 100 %.
+Une variation s’exprime en points de pourcentage : un taux qui perd 11 points passe, par exemple, de 45 % à 34 %.
+Corrélation.
+D’une session à la suivante, la corrélation entre les taux d’accès est de 0,90 puis de 0,87 ; calculée sur les rangs, de 0,90 puis de 0,87 ; sans les formations à 0 ou 100 %, de 0,88 puis de 0,85.
+En classes préparatoires, elle passe de 0,93 à 0,75 ; en licence, de 0,94 à 0,94.
+Exemple.
+I.U.T. d’Illkirch, BUT - Information communication Parcours information numérique dans les organisations, session 2025 : nombres du fichier public, arrêtés en septembre et portant sur tous les candidats.
+La fiche de la formation sur Parcoursup, arrêtée à la fin de la phase principale, en donne d’autres.
+La répartition par type de bac est celle du fichier publié (42 % de bacheliers généraux, 58 % de bacheliers technologiques, 0 % de bacheliers professionnels) ; la notice méthodologique du ministère, qui prend la même formation en exemple, indique 49 %, 50 % et 1 % (notice de la session 2025, lue le 11 novembre 2026).
+Les autres nombres de l’exemple sont les mêmes dans les deux documents.
+Conseils cités.
+Onisep, activité « Évaluer son niveau d’ambition dans MonProjetSup », lue le 10 novembre 2026.
+Parcoursup, foire aux questions « Formuler ses vœux » et fiche d’une formation (rubrique « Visualiser les chiffres d’accès »), lues les 10 et 11 novembre 2026.
+Les chiffres de cette page sont lus par un script dans les trois exports du ministère, à l’exception des seuils (90 %, 20 points, 50 candidats, 25 % de places), qui sont des paramètres du calcul, et des taux de 95 % et de 80 % pris en exemple.
+Le taux d’accès est repris, jamais recalculé.
+Chaque résultat est refait par un second programme, écrit séparément et sur une autre copie du fichier de 2023 ; le script qui produit la page s’arrête si un écart dépasse un dixième de point, ou si une donnée ne remplit plus les conditions dont dépendent les principales phrases.
+Réutiliser cette page
+Les figures, les données et une citation prête, sous licence libre.
+Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Comment les taux d’accès évoluent-ils d’une année sur l’autre ?
+Un taux d’accès n’est pas une promesse pour l’année suivante : parmi les formations à 60-74 % en 2024, huit sur dix se situaient entre 43 et 83 % en 2025 (médiane : 63 %).
+Précaution d’interprétation.
+Lecture de la ligne « 60 à 74 % » : parmi les 1 771 formations à ce taux d’accès en 2024, huit sur dix avaient en 2025 un taux compris entre 43 et 83 % ; une sur dix était à 43 % ou moins, une sur deux à 63 % ou moins (la médiane).
+Dans les deux tranches du haut, la barre touche 100 %, le maximum, et contient neuf formations sur dix.
+Ces barres décrivent ce qui est arrivé aux formations d’une tranche, prises ensemble : elles ne donnent ni le taux futur d’une formation, ni les chances d’un candidat.
+Ministère chargé de l’enseignement supérieur, données ouvertes Parcoursup, sessions 2023, 2024 et 2025 ; formations présentes deux années de suite sous le même code et le même intitulé, avec un taux d’accès publié et des candidats classés.
+Taux d’accès : part des candidats de la phase principale dont le rang de classement ne dépasse pas celui du dernier appelé de leur groupe.
+Télécharger en PNG
+SVG
+Variation médiane du taux d’accès selon la filière
+De 2024 à 2025, la moitié des classes préparatoires ont perdu 11 points de taux d’accès ou plus ; la variation médiane est de −3 points en BTS, de −2 points en BUT, et nulle en licence.
+De 2023 à 2024, elle ne dépassait 3 points dans aucune filière.
+Précaution d’interprétation.
+Lecture : une médiane de −11 points signifie que la moitié des classes préparatoires ont perdu 11 points de taux d’accès ou plus ; un taux qui perd 11 points passe, par exemple, de 45 % à 34 %.
+Une médiane nulle ne veut pas dire que chaque formation est restée stable.
+Les deux points d’une filière ne portent pas tout à fait sur les mêmes formations ; les 172 formations que le ministère a classées dans une autre filière d’une session à l’autre ne sont pas dessinées.
+Ces données ne disent ni la cause d’une baisse, ni si elle se reproduira, ni les chances d’un candidat.
+Ministère chargé de l’enseignement supérieur, données ouvertes Parcoursup, sessions 2023, 2024 et 2025 ; formations présentes deux années de suite sous le même code et le même intitulé, avec un taux d’accès publié et des candidats classés.
+Taux d’accès : part des candidats de la phase principale dont le rang de classement ne dépasse pas celui du dernier appelé de leur groupe.
+Télécharger en PNG
+SVG
+Citer cette page
+Lalut, Stéphane (2026). « Parcoursup : quelles sont vraiment vos chances d’être admis ? ».
+Données ministère chargé de l’enseignement supérieur, données ouvertes Parcoursup, relevé du 11 novembre 2026. https://stephane-lalut.com/parcoursup-quelles-chances-d-etre-admis/
+Copier la citation
+En trois phrases
+D’une session à la suivante, le taux d’accès d’une formation de Parcoursup varie de 6 points ou moins pour une formation sur deux, et les taux des deux années sont fortement corrélés (0,90 de 2023 à 2024, 0,87 de 2024 à 2025).
+Mais un taux n’est pas une promesse : parmi les formations affichant 90 à 99 %, une sur dix puis une sur cinq ont perdu 20 points ou plus l’année suivante, et de 2024 à 2025 la moitié des classes préparatoires ont perdu 11 points ou plus.
+Ces mesures décrivent des groupes de formations sur trois sessions ; elles ne prévoient ni le taux d’une formation, ni l’admission d’un candidat.
+Copier le résumé
+Les données
+Par tranche de taux d’accès de l’année de départ et pour deux transitions : effectif, 1er décile, médiane et 9e décile du taux de l’année suivante, parts des formations restées à un taux élevé ou ayant fortement baissé, contrôles de sensibilité ; par filière : variation médiane et moyenne, part des formations en baisse, corrélations ; formations écartées par motif ; cohorte des formations comparées sur les trois sessions ; le même contenu existe en CSV, au format long.
+Télécharger en JSON CSV
+Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
+Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
+Les séries brutes appartiennent à leurs producteurs (ministère chargé de l’enseignement supérieur, données ouvertes Parcoursup), sous leurs propres conditions.
+Toutes les ressources : données, dossiers et repères →
+Transmettre
+WhatsApp
+Bluesky
+LinkedIn
+X
+E-mail
+Copier le lien

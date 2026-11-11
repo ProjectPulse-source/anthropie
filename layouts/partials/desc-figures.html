@@ -188,6 +188,14 @@
   {{- end -}}
 {{- end -}}
 {{- if in $text "{etu." -}}{{- errorf "desc-figures: placeholder {etu.*} non resolu dans : %s" $text -}}{{- end -}}
+{{- /* Ressource « Parcoursup : quelles sont vraiment vos chances d'être admis ? » : placeholders {psup.<cle>}, depuis
+       data/parcoursup.json (bloc affichage, scripts/update_parcoursup.py). Français seulement (exclusion déclarée). */ -}}
+{{- with site.Data.parcoursup -}}
+  {{- range $k, $v := .affichage -}}
+    {{- $text = replace $text (printf "{psup.%s}" $k) $v -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $text "{psup." -}}{{- errorf "desc-figures: placeholder {psup.*} non resolu dans : %s" $text -}}{{- end -}}
 {{- /* Ressource « Le niveau des élèves baisse-t-il ? » : placeholders {niv.<cle>}, depuis data/niveau_eleves.json
        (bloc affichage, scripts/update_niveau_eleves.py). Français seulement (exclusion déclarée). */ -}}
 {{- with site.Data.niveau_eleves -}}

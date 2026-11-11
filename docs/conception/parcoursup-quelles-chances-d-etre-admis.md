@@ -32,8 +32,8 @@ Critères `quantitatif`, un par ligne :
   principale ; effectifs des données ouvertes sur tous les candidats, toutes phases ; fiche de la plateforme arrêtée à
   la fin de la phase principale (mi-juillet), données ouvertes au 10 septembre — jamais mêlés sans le dire ;
 - reproductibilité : le taux d'accès n'est pas recalculable (méthodologie 2025, p. 3) ; la page le **reprend** et calcule
-  à partir de lui sa variation d'une session à l'autre (`scripts/update_parcoursup.py`, jeu `parcoursup`, à écrire),
-  avec conservation des lignes (entrées = appariées + écartées, motif nommé) ;
+  à partir de lui sa variation d'une session à l'autre (`scripts/update_parcoursup.py`, jeu `parcoursup`, écrit le
+  11/11/2026), avec conservation des lignes (entrées = appariées + écartées, motif nommé) ;
 - changements de série : calcul modifié en 2022 (Boyer et Gossa, 2024) ; la série commence donc en 2023. Méthodologies
   2023 (`f8a25c1a…6750`), 2024 (`61f317ba…0098`) et 2025 lues le 10/11 : même définition, et chacune précise « le mode
   de calcul de ces indicateurs est identique à celui de l'année dernière » ; la mention explicite des candidats en
@@ -70,6 +70,8 @@ les mesures côte à côte (la fiche les déroule pas à pas).
 `7215f6c4…9c54`, 2025 `0a5a95ab…4b04` ; règles : `PROTOCOLE_QUANTITATIF_PAGE_A_2026-11-10.md` du chantier ;
 appariées 12 065 sur 14 616 en 2023-2024, 12 816 sur 14 791 en 2024-2025, écartées avec motif, dont 23 formations
 « aucun classé » — taux 0 % en 2025, vide en 2024 : même objet, deux codages ; arbitrage de la pièce 04).
+Contre-population et sensibilités (points 3 à 5) recalculées le 11/11 sur les formations appariées après ce nettoyage
+(`outils_exploratoires\p06.py` du chantier) : trois nombres dataient d'avant lui et sont corrigés ci-dessous.
 Ce qui suit **décrit une dispersion passée**, jamais une prévision.
 
 1. **Les taux d'accès présentent une forte stabilité relative d'une année à l'autre** : corrélation de 0,90 entre 2023
@@ -80,21 +82,27 @@ Ce qui suit **décrit une dispersion passée**, jamais une prévision.
 2. **Un taux d'accès décrit une année passée, pas l'année suivante.** Taux de l'année suivante, du 1er au 9e décile, selon la tranche de
    l'année (2023 → 2024 ; 2024 → 2025) : 40-60 % → 34-70 % ; 32-67 % · 60-75 % → 48-85 % ; 43-83 % · 75-90 % → 58-95 % ;
    49-92 % · 90-99 % → 76-100 % ; 59-100 % · 100 % → 91-100 % ; 80-100 %. **Validation hors échantillon** : les bornes
-   de 2023-2024 ont couvert de 73 % (tranche 75-90 %) à 85 % (tranche 100 %) des formations en 2024-2025, pour 80 %
-   attendus par construction.
-3. **Au-dessus de 90 %, le conseil courant tient le plus souvent.** Tranche 90-99 % : restent à 90 % ou plus 66,9 %
+   de 2023-2024 ont couvert de 73 % (tranche 75-90 %) à 85 % (tranche 100 %) des formations en 2024-2025. Repère
+   (corrigé le 11/11 : « 80 % attendus » était faux pour deux tranches) : dans leur propre transition, ces bornes
+   contenaient 80 à 83 % des formations des tranches inférieures à 90 %, et 90 % de celles des tranches 90-99 % et
+   100 %, où le 9e décile bute sur 100 %. L'écart est le plus grand dans la tranche 90-99 % (90,0 % puis 77,4 %).
+3. **Le seuil de 90 % garde une valeur de repère et ne garantit rien** (formulation du 11/11 après la pièce 08 : les
+   données mesurent la tenue du seuil par des formations, pas le réalisme d'un vœu pour un candidat ; « le conseil
+   tient » validait ce qui n'est pas testé). Tranche 90-99 % : restent à 90 % ou plus 66,9 %
    (1 138 sur 1 701) puis 55,2 % (936 sur 1 695) ; perdent 20 points ou plus 10,1 % (172) puis 21,7 % (367).
    Tranche 100 % : restent à 90 % ou plus 91,1 % puis 85,3 % ; perdent 20 points ou plus 3,6 % puis 10,4 %. En perte
    relative (un cinquième du niveau), ces deux tranches sont les plus stables. Les formations très sélectives restent
-   sélectives : sous 20 % une année, 17 sur 1 116 puis 20 sur 1 246 dépassent 40 % l'année suivante.
+   sélectives : sous 20 % une année, 17 sur 1 116 puis 20 sur 1 239 atteignent 40 % ou plus l'année suivante.
 4. **Certaines filières connaissent des variations que la moyenne générale masque.** Variation médiane 2024-2025 :
    CPGE −11 points (974 formations ; candidats médians 993,5 → 940,5, places 45 → 45), BTS −3, licence 0 ; 2023-2024 :
-   de −3 à +1. Les baisses de 20 points ou plus ont environ doublé entre les deux transitions dans les tranches de 40 à
-   99 %, et restent plus fréquentes après correction par filière (tranche 75-90 % : 20,0 % contre 13,7 %). En CPGE, le
-   classement des formations lui-même se recompose : corrélation de 0,93 puis 0,75 (licence : 0,94 puis 0,95). Constat
+   de −3 à +1. Les baisses de 20 points ou plus sont 1,5 à 2,1 fois plus fréquentes dans la seconde transition, de la
+   tranche 40-60 % à la tranche 90-99 % ; au-dessus de 60 %, elles le restent après correction par filière (tranche
+   75-90 % : 19,9 % contre 13,7 %). En CPGE, le
+   classement des formations lui-même se recompose : corrélation de 0,93 puis 0,75 (licence : 0,94 les deux fois ;
+   « 0,95 » venait d'un double arrondi de 0,9445). Constat
    descriptif, aucune cause avancée.
 5. **Les petites formations n'expliquent pas l'instabilité** : sans les formations de moins de 50 candidats, les
-   proportions bougent de moins d'un point, sauf à 100 % (baisses de 20 points ou plus en 2024-2025 : 10,8 % → 6,0 %).
+   proportions bougent de moins d'un point, sauf à 100 % (baisses de 20 points ou plus en 2024-2025 : 10,4 % → 5,9 %).
 6. **La chance par type de bac n'existe que sur la fiche.** La plateforme affiche un taux d'accès par bac (Illkirch,
    bac général : 23 %) ; le fichier ouvert ne publie qu'une répartition des appelables par bac (vérifié, méthodologie
    p. 3), qui ne permet pas de le retrouver. Les outils bâtis sur le fichier ouvert lisent donc une composition comme une
@@ -145,7 +153,9 @@ corrigée de la médiane de la filière. Résultat : sous (a), l'hypothèse « l
 - **Ce que révèle la figure qu'une série isolée ne montre pas** : pour chaque tranche de taux une année, la fourchette
   du taux l'année suivante ; la fiche officielle ne montre qu'une année.
 - **Explications départagées** : (2) est contredite pour les formations (forte stabilité relative, corrélation 0,87 à
-  0,90, en valeurs comme en rangs), sans rien dire d'un dossier ; (1) est **confirmée le plus souvent** et
+  0,90, en valeurs comme en rangs), sans rien dire d'un dossier ; (1) n'est pas testée comme conseil (le
+  réalisme d'un vœu dépend aussi du dossier) ; la tenue du seuil, elle, est mesurée : elle vaut pour plus d'une formation
+  sur deux, et elle est
   bornée (une formation sur dix à une sur cinq de la tranche 90-99 % perd 20 points ou plus) ; (3) est corrigée par la
   définition officielle ; (4) est reconnue comme une composition, la chance par bac se lisant à l'étape 2 de la fiche.
 - **Robustesse** : deux paires de sessions, dont une sans baisse générale ; effet plafond, petites formations,
@@ -171,15 +181,15 @@ corrigée de la médiane de la filière. Résultat : sous (a), l'hypothèse « l
 - Une variation de taux n'est pas un échec de candidats : une formation à 80 % appelle encore quatre candidats sur cinq.
 - L'accès n'est pas la réussite : rien ici sur ce que deviennent les admis (page B).
 - Formations appariées par code et intitulé : une formation renommée ou recodée sort de l'appariement (écartées
-  comptées et motivées par le générateur). Les écartées sont plus petites et plus accessibles que les appariées (taux
-  médian 66 à 78 % contre 60 %), et les renommages de 2025 touchent surtout des BTS : les résultats portent sur les
-  formations restées identiques (test de sélection, 11/11, arbitrage de la pièce 05).
+  comptées et motivées par le générateur). Les formations disparues ou renommées sont plus petites et plus accessibles
+  que les appariées (taux médian 66 à 78 % contre 60 %) ; les nouvelles formations de 2025 ne le sont pas (54 %) ; les
+  renommages de 2025 touchent surtout des BTS : les résultats portent sur les formations restées identiques (test de
+  sélection, 11/11, arbitrage de la pièce 05 ; formule précisée le 11/11 en écrivant la garde).
 
 ### Valeur finale
 
 Après lecture, le candidat ou le parent sait quels chiffres correspondent le mieux à son profil (fiche de la formation, étapes 2 et 3, son bac et sa
-série) et quelle fourchette donner au taux de l'an dernier ; il sait que le conseil « au-dessus de 90 %, c'est
-réaliste » tient le plus souvent, et quand il échoue. Le professeur principal dispose d'un tableau des fourchettes par
+série) et quelle fourchette donner au taux de l'an dernier ; il sait ce que le seuil de 90 % a garanti et n'a pas garanti d'une année à l'autre. Le professeur principal dispose d'un tableau des fourchettes par
 tranche et par filière, recalculé et téléchargeable. Outil réutilisable : « ce chiffre de l'an dernier, quelle
 fourchette l'année suivante ? », applicable à Mon Master et à tout indicateur d'admission.
 
@@ -230,8 +240,8 @@ impressions et clics Search Console sur « taux d'accès parcoursup », « taux 
 « parcoursup taux d'accès ou taux d'admission », « chances parcoursup », « vœu de sécurité parcoursup » (hiérarchie à
 mesurer, hypothèse de la pièce 03) ; citations par les moteurs de réponse (relevé VEILLE_GEO) ; reprises. État initial :
 page inexistante au 10/11/2026, aucune impression. Relevés : J+30 et J+60 après publication, puis au 11/03/2027 (fin des
-vœux). **À inscrire dans `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` avant publication** (non fait :
-la page n'existe pas).
+vœux). **Inscrite dans `D:\PRO\06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` le 11/11/2026** (avant
+publication, page écrite et non publiée).
 
 ## Étapes de la méthode
 
@@ -251,18 +261,118 @@ la page n'existe pas).
   d'un chiffre » écarté (redit la fiche officielle), B « trois conseils à l'épreuve », C « composer ses vœux » ;
   **retenu C+** (décision du candidat, avec les épreuves de B) ; deux figures (fourchette, effet d'année) ; pas de
   contre-expertise du plan (R4).
-- Panel avant : à faire (page d'entrée d'un volet neuf) ; critère de réussite repris de la pièce 03 : cinq profils
-  (lycéens général, technologique, professionnel, parent, professeur principal) répondent juste à « 8,5 % d'admis par
-  candidat, est-ce 8,5 % de chances ? » et « 89 % des appelables ont un bac général, est-ce que 89 % des bacheliers
-  généraux étaient appelables ? », plus une question sur la stabilité du taux ; deux phrases d'ouverture en
-  concurrence (pièce 05).
+- Panel avant : fait (11/11/2026, `06_PROMOTION\RECHERCHE_RESSOURCE_UNIVERSITE_2026-11-03\PANEL_AVANT_2026-11-11\DIAGNOSTIC.md` ;
+  pré-inscription écrite avant lancement ; cinq profils de la pièce 03, vingt lectures simulées isolées sur une
+  maquette du plan, dont un tour de contrôle). Résultats : (1) le critère de la pièce 03 **n'est pas évaluable en
+  simulation** — cinq témoins répondent juste aux trois questions sans avoir rien lu ; (2) ouverture « question
+  d'abord », phrase de résultat sous la figure 1 (le panel ne départage pas au seuil fixé, le modèle de page tranche) ;
+  (3) huit changements au plan, dont la stabilité chiffrée (une formation sur deux varie de 6 points ou moins) et le
+  bloc par filière adressé au lecteur — plan à suivre : section finale du document des scénarios ; (4) **décision de
+  l'auteur requise sur la promesse du titre** : neuf lecteurs sur dix, puis trois sur cinq après correction du plan,
+  demandent comment composer leur liste, ce que la page ne démontre pas. Hypothèses de réception, pas preuve de
+  compréhension.
 - Contre-expertises : pièces 02 et 03 (fiche), 04 (scénarios : C+ resserré en six mouvements, trois P0 traités dont un
   défaut de codage trouvé et corrigé) arbitrées le 10/11 ; 05 (fiche refondue : trois formulations corrigées, témoin
   Spearman, corrélation par filière, test de sélection de l'appariement) arbitrée le 11/11 ; la prochaine porte sur la
   page.
-- Protocole `quantitatif` : fait (10/11/2026, `PROTOCOLE_QUANTITATIF_PAGE_A_2026-11-10.md` du chantier ; sept gardes).
-- Test sur de vrais lecteurs (pièce 04) : décision de l'auteur requise ; le panel simulé ne vaut que diagnostic.
-- Relecture contre les fiches 2027 à l'ouverture de la carte (17/12/2026) : à faire avant publication.
-- Générateur, gardes vues mordre, figures téléphone : non fait.
-- Relecture de langue, recette 320-1280, panel après, gate éditorial, relecture phrase à phrase, instantané,
-  contre-expertise de la page, accord de l'auteur : non fait.
+- Protocole `quantitatif` : fait (10/11/2026, `PROTOCOLE_QUANTITATIF_PAGE_A_2026-11-10.md` du chantier ; neuf gardes ;
+  complété le 11/11 : contre-population, stabilité en langage courant, parts par filière, fractions en lettres, témoin
+  `p06.py`).
+- Test sur de vrais lecteurs (pièces 04, 06 et 08) : non fait (auteur, 11/11/2026 : pas de lecteur réel disponible
+  dans l'immédiat) ; protocole prêt ; le panel simulé ne vaut que diagnostic, la compréhension n'est pas mesurée.
+- Relecture contre les fiches 2027 à l'ouverture de la carte (17/12/2026) : non fait, à faire ce jour-là (la page est
+  publiée avant, sur décision de l'auteur du 11/11/2026 ; elle date ses lectures de la fiche officielle des 10 et
+  11 novembre 2026).
+- Générateur, jetons, gardes : fait (11/11/2026) — `scripts/update_parcoursup.py` ; exports des trois sessions archivés
+  dans `scripts/sources_parcoursup/` (manifeste, SHA256SUMS ; export 2023 retéléchargé complet, identique à l'archive du
+  chantier sur les colonnes communes, 13 869 lignes) ; sorties `data/` et `static/parcoursup.json`,
+  `static/parcoursup.csv` ; shortcode `psup-val` ; 733 jetons, portés par un rôle (transition précédente, dernière
+  transition) et non par une année. 76 conditions de garde passées ; **32 mutations, chacune fait mordre la garde
+  visée** (`--mutations` ; le banc répond « aucune garde » à une mutation sans effet) ; égalité avec le témoin
+  indépendant (`temoin.json` : appariement de `p04b.py`, corrélations de `p05.py`, export 2023 d'origine) à 0,1 point.
+  `check-all --ci` à 0, build à 0. Non fait : gardes 6 et 8 sur la page réelle (elle n'existe pas : vues mordre sur
+  une page témoin) ; ligne au registre `data/sources_maj.json` (avec la page).
+- Figures : fait (11/11/2026, skill `controle-figures`) — `parcoursup-tranches` (taux de l'année suivante par tranche :
+  du 1er au 9e décile, médiane, deux transitions, bande de la tranche de départ) et `parcoursup-filieres` (variation
+  médiane par filière), chacune en version bureau et téléphone, SVG et PNG, fiches « Réutiliser » lues dans le SVG
+  (`data/figures_parcoursup.json`). Parité téléphone et cadre contrôlés par le générateur ; `check-figures.py` à 0. Deux
+  contrôleurs indépendants en lecture seule : (a) géométrie et données — 154 marques reconverties, 280 nombres
+  imprimés, recalcul complet depuis les CSV, aucun écart de tracé ; **un défaut de fond trouvé** : en 2024 seulement,
+  162 formations paramédicales sont classées `IFSI` par le ministère, et la règle « filière de l'année d'arrivée »
+  mêlait deux populations (ligne IFSI à 0 au lieu de +1) → règle changée : même filière les deux sessions, formations
+  reclassées comptées à part (163 puis 172) ; (b) lecture du rendu — un défaut bloquant (la note de la figure 1 se
+  lisait « huit formations sur dix ont un taux inférieur à 90 % ») et une vingtaine de défauts gênants ou
+  cosmétiques, corrigés dans le générateur : note réécrite en exemple de lecture, libellés de tranche à bornes entières
+  (« 60 à 74 % » : les tranches ne changent pas), en-têtes vrais pour les deux séries, valeurs au-dessus des barres,
+  unité de la figure 2 (« points de pourcentage », « −11 points »), valeurs écartées de l'axe du zéro, versions
+  téléphone resserrées. Second passage du contrôleur de géométrie sur l'état final : aucun défaut bloquant ni gênant
+  nouveau, les onze filières et le groupe reclassé recalculés à l'unité près, 156 marques conformes ; cinq défauts
+  cosmétiques, dont quatre corrigés (bande de la tranche 100 % retirée, lignes de la figure 2 espacées, bande au ras
+  de la barre, exemple de la note présenté comme une illustration de l'unité) ; reste, déclaré : sur la ligne « 100 % »,
+  médiane et 9e décile partagent une étiquette. Trois résumés d'une même baisse entrent au jeu et au témoin (classes
+  préparatoires 2024-2025 : médiane des variations −11 points, moyenne −14,9, taux médian de 62 % à 43 %). Limites
+  déclarées : franges de couleur du rendu PNG (propriété du rendu local, commune aux figures du site) ; la table de
+  chasses de `check-figures.py` n'a pas la police Inter (le contrôleur a remesuré aux largeurs réelles : aucun
+  chevauchement) ; second passage de lecture du rendu reporté après la contre-expertise externe, qui lit les figures.
+- Contre-expertise externe des figures et des constats : fait (11/11/2026 ; paquet du sas
+  `D:\CONTRE_EXPERTISE\2026-11-11_PARCOURSUP_FIGURES\`, réponse archivée avant lecture, pièce 06 ; arbitrage
+  `06_PROMOTION\RECHERCHE_RESSOURCE_UNIVERSITE_2026-11-03\ARBITRAGE_PIECE_06_2026-11-11.md`). Verdict : deux figures
+  gardées, pas de refonte. Vérifié à la source : empreintes du paquet conformes, notices du ministère (correction du
+  16/01/2025 hors de nos colonnes ; calcul du taux déclaré inchangé de 2023 à 2025). Contrôles demandés, faits en
+  exploratoire (`p07.py`) : le recul de 2024-2025 se retrouve sur les 11 087 formations appariées aux deux transitions,
+  sans les classes préparatoires aussi ; apparier par le code seul ne déplace aucun repère de plus d'un point.
+  Corrigé dans le générateur : clé de la figure 1 (« au moins huit formations sur dix », gardé ; bande « tranche de
+  départ, placée sur le même axe »), gris des séries secondaires (`#8a8781`, 3,58 pour 1), parts en baisse, en hausse
+  et inchangées de l'ensemble (jeu, CSV, jetons, témoin), « le plus souvent » et « personne ne peut calculer » retirés
+  par la garde 8, garde 4 durcie (une clé absente du témoin arrête). 81 conditions de garde, 741 jetons, 35 mutations
+  sur 35.
+- Second contrôle des figures, après correction : fait (11/11/2026) — géométrie et données, 152 marques reconverties
+  et 338 nombres imprimés sans écart, contrôle vu mordre sur vingt mutations ; lecture du rendu, deux passages
+  indépendants, aucun défaut bloquant, formulations corrigées (clés, notes, bande prolongée, « formations comparées »,
+  formations reclassées dites non dessinées). `check-figures.py`, `check-all --ci` et build à 0. Non fait : relecture
+  indépendante des toutes dernières formulations (elles seront relues avec la page). Limites déclarées et points de
+  l'organe commun : arbitrage 06, § 5.4.
+- Avis du contradicteur sur l'arbitrage 06 (pièce 07) : arbitré (11/11/2026, `ARBITRAGE_PIECE_07_2026-11-11.md` du
+  chantier). Figures closes. Réserve sur la cohorte : acceptée, formulation reprise mot pour mot (« ne s'explique pas
+  par la seule modification du périmètre des formations comparées »), cohorte entrée au générateur et au témoin.
+  Réserve sur la corrélation entre variations successives : le fait reste exploratoire et hors de la page (lire deux
+  années au lieu d'une ne réduit l'écart moyen que de 4 à 5 % et ne déplace pas l'écart médian, `p07.py` § 4).
+- Page (phase B) : fait, première version (11/11/2026) — `content/parcoursup-quelles-chances-d-etre-admis/_index.md`,
+  six mouvements, limites, six questions fréquentes, appel au livre, sources en repli, bloc « Réutiliser » ; tous les
+  nombres en jetons (`psup-val`, `{psup.*}` câblé dans `desc-figures.html`) ; carte de partage et vignette
+  (`og_dossier_dette.py --parcoursup`, contraste annoncé contrôlé) ; ligne `parcoursup` au registre
+  `data/sources_maj.json` (mode manuel, à revoir avant le 31/03/2027). Sources relues à la source le 11/11 :
+  recommandation de Parcoursup sur la diversification et sa définition du taux d'accès (foire aux questions
+  « Formuler ses vœux », par navigateur ; le site refuse les scripts), notices des trois jeux.
+- Contrôles de la page : fait (11/11/2026) — générateur appliqué à la page réelle, 95 conditions de garde (gardes 6 et
+  8 comprises), 758 jetons, 37 mutations sur 37 ; `check-all --ci` à 0 ; build à 0 ; `typo_build.py`,
+  `audit-liens-build.py`, `check-rendu-ressources.py`, `check-dates-build.py` à 0 ; recette `recette.py` conforme de
+  320 à 1 600 px ; `check_langue.py` sur le texte servi, quatre signalements lus, tous écartés.
+- Relecture phrase à phrase du texte servi : fait (11/11/2026, session ; instantané `docs/relectures/`, 236 phrases).
+  Non fait : relecture par un tiers.
+- Panel après : fait (11/11/2026, `PANEL_APRES_2026-11-11\DIAGNOSTIC.md` du chantier ; pré-inscription écrite avant
+  lancement, mêmes profils, même consigne, huit questions, bras témoin sans texte). Les faits propres à la page passent
+  chez quatre lecteurs sur cinq et chez aucun témoin ; trois lecteurs butaient sur « classés assez haut » et aucun ne
+  retenait spontanément la stabilité. Cinq corrections appliquées (définition, chapô, épreuve des 90 %, vérification en
+  repli, question sur la liste d'attente). Non fait : nouveau passage simulé sur le texte corrigé (motif : ces
+  corrections se jugent sur des lecteurs réels).
+- Gate éditorial : fait par la session (11/11/2026, même fichier, § 6) — exactitude, accroche, progression, originalité
+  tenus ; clarté et valeur finale partielles ; aucun P0, un P1 ouvert (le souvenir « ça bouge beaucoup »). À rejuger par
+  la contre-expertise de la page.
+- Contre-expertise de la page : fait (11/11/2026 ; paquet du sas `D:\CONTRE_EXPERTISE\2026-11-11_PARCOURSUP_PAGE\`,
+  réponse archivée avant lecture, pièce 08 ; arbitrage `ARBITRAGE_PIECE_08_2026-11-11.md` du chantier). Verdict :
+  architecture gardée, trois P0. P0-1 : la définition présentait une possibilité d'appel comme un appel (« le tour est
+  venu ») → « dont le rang permettait de recevoir une proposition ». P0-2 : « le conseil tient » validait un conseil que
+  les données ne testent pas → le seuil de 90 % garde une valeur de repère et ne garantit rien ; les résultats
+  décrivent des formations, pas le réalisme d'un vœu. P0-3 : répartition par bac de l'exemple d'Illkirch, 42, 58 et
+  0 % dans le fichier du ministère (relu au portail le 11/11, identique à notre export) contre 49, 50 et 1 % dans sa
+  notice méthodologique → valeurs du fichier gardées, écart documenté dans le détail des sources. Six P1 appliqués
+  (stabilité dite sans « l'ordre change peu », médianes des classes préparatoires en repli, « et elle seule » retiré,
+  fonction des trois vérifications, périmètre rappelé près de la première figure, liste d'attente datée). **P1-7
+  (appel au livre plus court, après les sources) : écarté par l'auteur le 11/11/2026**, l'ordre de fin de page et
+  l'exemplaire offert étant des constantes du site. Après corrections : 97 conditions de garde, 37 mutations sur 37,
+  contrôles du dépôt et du site construit à 0, recette conforme, instantané refait (245 phrases).
+- `static/llms.txt` : fait (11/11/2026, ligne de la page ajoutée dans le commit de publication).
+- Accord de l'auteur : fait (11/11/2026, « pousse la page en ligne »). Publication : commit et push du 11/11/2026.
+  Attestation de la version servie : consignée après déploiement dans `REPRISE.md` du chantier et au
+  `PROJECT_STATUS.md` du site.

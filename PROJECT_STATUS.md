@@ -52,6 +52,77 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-11 — Parcoursup, page A : générateur, figures et page écrits ; publiée le 11/11 sur décision de l'auteur
+
+- **Publication (11/11/2026, « pousse la page en ligne »)** : `/parcoursup-quelles-chances-d-etre-admis/`, avec son jeu
+  (`/parcoursup.json`, `/parcoursup.csv`), ses figures, sa carte de partage ; ligne ajoutée à `static/llms.txt`.
+  Publiée avant la relecture contre les fiches Parcoursup 2027 (17/12/2026), qui reste à faire ce jour-là, et sans test
+  sur des lecteurs réels (aucun disponible dans l'immédiat). Écart entre le fichier du ministère et sa notice sur la
+  formation prise en exemple : documenté dans la page, signalement au producteur en cours (formulaire du portail).
+
+- **Page écrite (phase B)** : `content/parcoursup-quelles-chances-d-etre-admis/_index.md` (bloc `ecole`, FR seul, type
+  `quantitatif`, rang 40), tous les nombres en jetons (`psup-val` ; `{psup.*}` câblé dans
+  `layouts/partials/desc-figures.html`). Carte de partage et vignette : `scripts/og_dossier_dette.py --parcoursup`
+  (`static/images/og-parcoursup.jpg`, `vig-parcoursup.jpg`). Registre : ligne `parcoursup` de `data/sources_maj.json`
+  (mode manuel, à revoir avant le 31/03/2027). Générateur étendu après la pièce 07 : bloc `cohorte` (formations
+  comparées sur les trois sessions, au jeu, au CSV et au témoin), seuils nommés et affichés par jetons `seuil_*`.
+  Contrôles : 95 conditions de garde sur la page réelle, 758 jetons, 37 mutations sur 37 ; `check-all --ci` à 0 ;
+  `hugo --minify` à 0 ; `typo_build.py`, `audit-liens-build.py`, `check-rendu-ressources.py`, `check-dates-build.py`,
+  `check-replis.py` à 0 ; recette de 320 à 1 600 px conforme ; instantané `docs/relectures/` (236 phrases).
+  Panel après et gate éditorial : `PANEL_APRES_2026-11-11/DIAGNOSTIC.md` du chantier (cinq corrections appliquées).
+  **Contre-expertise de la page arbitrée** (pièce 08, `ARBITRAGE_PIECE_08_2026-11-11.md` du chantier) : trois P0 levés
+  — la définition dit « dont le rang permettait de recevoir une proposition » ; « le conseil tient » retiré (les
+  résultats décrivent des formations, pas le réalisme d'un vœu) ; répartition par bac de l'exemple d'Illkirch : le
+  fichier du ministère (42, 58, 0 %) et sa notice méthodologique (49, 50, 1 %) divergent, la page garde le fichier et
+  documente l'écart. Deux formules ajoutées à la garde de prose (« le conseil tient », « et elle seule »). 97 conditions
+  de garde ; contrôles, recette et instantané refaits.
+  Tranché par l'auteur le 11/11 : l'appel au livre reste le bloc commun du site (avis contraire du contradicteur
+  écarté) ; pas de lecteur réel dans l'immédiat. **Non fait** : test sur des lecteurs réels, relecture contre les
+  fiches Parcoursup 2027 (17/12/2026), `static/llms.txt` (à la publication), accord de l'auteur.
+  **⚠ La page n'est pas en brouillon** : ses fichiers, une fois commités et poussés, la publient. Les ajouts faits à
+  `scripts/og_dossier_dette.py` (carte dans la liste par défaut) et à `data/sources_maj.json` supposent
+  `data/parcoursup.json` et `scripts/update_parcoursup.py` : ne pas les commiter sans eux.
+  Constat hors chantier : `check-relecture.py --strict` rend 2 (45 autres pages, ligne de date changée depuis leur
+  relecture) ; alerte non bloquante, non traitée ici.
+- **Contre-expertise externe des figures arbitrée (pièce 06, `ARBITRAGE_PIECE_06_2026-11-11.md` du chantier)** : deux
+  figures gardées. Corrections dans `scripts/update_parcoursup.py` : clé de la figure 1 (« au moins huit formations sur
+  dix », condition gardée ; bande « tranche de départ, placée sur le même axe ») ; gris des séries secondaires ramené
+  au gris des autres figures (`#8a8781`, 3,58 pour 1 sur blanc contre 2,94) et liseré blanc sous la barre grise ; une
+  phrase dans les notes de la figure 2 ; indicateurs d'ensemble `part_baisse`, `part_hausse`, `part_inchangee`,
+  `variation_moyenne` (jeu, CSV, jetons, témoin) ; formules « le plus souvent » et « personne ne peut calculer »
+  ajoutées à la garde de prose. **Garde 4 durcie** : une clé de transition absente du témoin arrête la génération
+  (elle n'était comparée à rien). 81 conditions de garde, 741 jetons, 35 mutations sur 35, `check-figures.py` à 0 sur
+  les quatre SVG, `check-all --ci` à 0, `hugo --minify` à 0. Figures recontrôlées par des contrôleurs indépendants
+  après correction : géométrie et données sans écart (152 marques, 338 nombres, vingt mutations détectées) ; deux
+  lectures du rendu sans défaut bloquant, dont sont sorties les dernières formulations (clés, notes, bande de la
+  tranche de départ prolongée au-dessus et au-dessous des barres, « formations comparées », 172 formations reclassées
+  dites non dessinées, « Licences (hors accès santé) »).
+  Autre point commun aux figures du site, non traité ici : l'attribut `font-variant-numeric` posé sur `<svg>` est sans
+  effet dans Chrome (269 SVG, `scripts/pied_figure.py`).
+  Point commun aux figures du site, non traité ici : le texte atténué `#96928f` (graduations, ligne de licence) n'a
+  que 3,09 pour 1 de contraste sur blanc.
+- **Figures (soir)** : `static/img/parcoursup-tranches` et `parcoursup-filieres` (SVG et PNG, versions téléphone `-m`),
+  fiches `data/figures_parcoursup.json`, produites par le générateur. Deux contrôleurs indépendants : tracés et nombres
+  sans écart ; un défaut de fond corrigé (162 formations paramédicales classées `IFSI` en 2024 seulement : filière =
+  même `fili` les deux sessions, reclassées comptées à part) ; un défaut bloquant de lecture corrigé (note de la
+  figure 1) et les libellés de tranche passés à bornes entières (« 60 à 74 % »). 76 conditions de garde, 32 mutations
+  sur 32, `check-all --ci` à 0. Paquet de contre-expertise externe des figures : `D:\CONTRE_EXPERTISE\2026-11-11_PARCOURSUP_FIGURES\`.
+- `scripts/update_parcoursup.py` (jeu `parcoursup` : `data/` et `static/parcoursup.json`, `static/parcoursup.csv` ;
+  shortcode `psup-val`, 733 jetons portés par un rôle — transition précédente, dernière transition — jamais par une
+  année). Entrées : `scripts/sources_parcoursup/` (un export par session, `manifeste.json`, `SHA256SUMS`, `temoin.json`).
+- Le calcul se fait dans le dépôt, sur les exports archivés (pas d'extrait hors dépôt comme pour les pages lycée et
+  étudiants) ; le taux d'accès est repris, jamais recalculé. Témoin indépendant en JSON (autre code d'appariement,
+  autre fichier 2023) : arrêt à 0,1 point d'écart.
+- `--mutations` : chaque mutation doit faire mordre SA garde (reconnue à son message), et une mutation sans effet rend
+  « aucune garde ». `check-all --ci` à 0 ; `hugo --minify` à 0, figures comprises.
+- Trois constats corrigés en écrivant les gardes (fiche de conception mise à jour) : le repère « 80 % attendus » de la
+  validation hors échantillon (90 % pour les tranches 90-99 % et 100 %) ; « les écartées sont plus accessibles » (vrai des
+  disparues et renommées, pas des nouvelles de 2025) ; corrélation des licences 0,94 et non 0,95 (double arrondi).
+- **⚠ `static/parcoursup.json`, `.csv` et les figures seraient servis dès un push** : ne pas pousser avant la page (ou
+  travailler sur une branche). Reste : page (phase B), ligne au registre `data/sources_maj.json`
+  (rendez-vous : jeu de la session 2026, au plus tard le 31/03/2027), carte de partage et vignette.
+- Suivi : `D:\PRO\06_PROMOTION\RECHERCHE_RESSOURCE_UNIVERSITE_2026-11-03\REPRISE.md`.
+
 ### 2026-11-10 — Data centers : dernière erreur du paquet corrigée, chantier G4 clos
 
 - E1 du paquet du 27/10 : « RTE donne trois raisons » attribuait à RTE une énumération tirée de deux documents → « Trois
