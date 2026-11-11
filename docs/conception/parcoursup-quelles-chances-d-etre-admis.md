@@ -415,3 +415,10 @@ publication, page écrite et non publiée).
   `essai_page_relief.py` du chantier à 0 (marques contre le jeu brut, contrastes, clavier, sans JavaScript) ;
   `check_langue.py` : trois signalements, tous faux positifs sur des phrases antérieures ; instantané de relecture
   refait (261 phrases). Aucun lecteur réel n'a vu la page ainsi mise en forme.
+- Corrections techniques du 11/11/2026 (demande de l'auteur : « parfait techniquement ») : fait. Organes communs des
+  figures corrigés pour tout le site (version téléphone servie jusqu'à 899 px ; agrandissement à la largeur de
+  l'écran ; détail au `PROJECT_STATUS.md`). Sur la page : « Le résultat en une phrase » affiché avant la figure quand
+  sa version téléphone est servie ; barre de composition en deux tons neutres. Non changé, décision d'édition et non
+  défaut technique : les notes imprimées dans les figures téléphone (arbitrées par les pièces 06 et 07). Second
+  contrôle indépendant du rendu, lancé sur l'état final des figures : rapport non reçu au moment du commit ; ses
+  constats seront traités à sa réception.

@@ -53,7 +53,7 @@ But income is not the whole story. Above the threshold, where an income-based cl
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/imprevu-menages-en-m.svg" width="300" height="731">
+    <source media="screen and (max-width: 899px)" srcset="/img/imprevu-menages-en-m.svg" width="300" height="731">
     <img src="/img/imprevu-menages-en.svg" alt="Horizontal bars, France {{< imp-val "annee" >}}, share of people who could not face an unexpected expense, by the type of household they live in. Above the poverty threshold: couple without children {{< imp-val "c0_dessus" >}}%, single adult {{< imp-val "seul_dessus" >}}%, couple with one child {{< imp-val "c1_dessus" >}}%, single parent {{< imp-val "ps_dessus" >}}%. Below the threshold: {{< imp-val "c0_dessous" >}}%, {{< imp-val "seul_dessous" >}}%, {{< imp-val "c1_dessous" >}}% and {{< imp-val "ps_dessous" >}}%." width="720" height="335" loading="lazy">
   </picture>
   <figcaption>Share of people (not households), self-reported; poverty threshold: 60% of median equivalised income (Eurostat, EU-SILC).</figcaption>

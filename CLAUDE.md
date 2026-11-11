@@ -330,7 +330,9 @@ section « Production des ressources » ci-dessous.
     `partials/reperes-page.html` (front matter `reperes:`, posé par `_default/list.html`) ; `faq-visible colonnes="2"`.
     Règles : les phrases arbitrées ne changent pas, on leur donne une forme ; **une barre ne compare que ce qui a le
     même dénominateur (population, date)**, sinon deux encadrés distincts, sans échelle commune ; les repères du haut
-    de page ne s'affichent qu'à partir de 600 px, et leurs résultats sont écrits dans le corps ; marques graphiques à
+    de page ne s'affichent qu'à partir de 600 px, et leurs résultats sont écrits dans le corps ; quand la version
+    téléphone d'une figure est servie (jusqu'à 899 px), « Le résultat en une phrase » s'affiche avant elle et non
+    400 px sous sa dernière barre (ordre d'affichage seulement : dans le document, la figure reste première) ; marques graphiques à
     3:1 au moins sur leur fond ; aucun nombre saisi dans un bloc (jetons, garde du générateur étendue aux blocs) ;
     **tout bloc et tout organe réglé par script s'essaie aussi sans JavaScript** (la barre du bloc École débordait de
     342 px sans script après l'ajout d'un cinquième onglet, 11/11/2026). Un contrôle technique ne mesure pas ce qu'un
@@ -652,6 +654,22 @@ organe, `pied_figure.coupe` (cinq copies locales retirées le 03/11/2026).
 ⚠ **Une teinte nouvelle passe `validate_palette.js` avant d'être appliquée.** Le bleu marine du site
 (`#1B2A4E`) y échoue comme couleur de données : chroma trop faible, il lit gris. C'est ainsi que le
 bleu profond `#184f95` a été retenu — sur mesure, non par goût.
+
+### Version servie et agrandissement d'une figure (11/11/2026)
+
+- **Point de bascule unique : 899 px, à l'écran.** Une figure de données qui a sa version téléphone s'écrit
+  `<source media="screen and (max-width: 899px)" srcset="/img/X-m.svg" …>` (le shortcode `figure-svg` le fait seul) : la
+  version téléphone est servie jusqu'à 899 px, plafonnée à 460 px de large de 601 à 899 px (`_components.scss`) ; la
+  version détaillée à partir de 900 px, et à l'impression. À 600 px, la version détaillée, dessinée pour 720 px, était
+  servie plus petite que son dessin de 601 à 860 px : sur les 139 figures de 52 pages, textes de 6 à 8 px.
+- **La couche d'agrandissement donne la largeur de l'écran** (`static/js/figure-zoom.js`, `.figure-zoom`) : jamais moins
+  que dans la page, au plus le double de la largeur de dessin ; trop haute, la figure défile dans la couche. Bornée
+  par la hauteur, une figure téléphone tombait à 188 px de large.
+- **La largeur de dessin d'un SVG se lit dans son `viewBox` ou dans l'attribut `width` de sa balise**, jamais dans
+  `naturalWidth` : ces figures n'ont qu'un `viewBox`, et le navigateur leur prête 150 px de haut.
+- Essai sur toutes les pages à figures, sept largeurs, impression et agrandissement :
+  `D:\PRO\06_PROMOTION\RECHERCHE_RESSOURCE_UNIVERSITE_2026-11-03\outils_exploratoires\essai_figures_site.py`
+  (essai ponctuel, relançable ; `recette.py` contrôle la version téléphone jusqu'à 899 px).
 
 ### Avant de corriger une mise en page, MESURER
 

@@ -69,7 +69,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-cascade-m.svg" width="300" height="643">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-dynamique-cascade-m.svg" width="300" height="643">
     <img src="/img/dette-dynamique-cascade.svg" alt="Cascade en points de PIB : la dette française part de {{< dyn-val "dette_depart" >}} % fin {{< dyn-val "annee_depart" >}} ; l'effet des intérêts l'aurait poussée de {{< dyn-val "effet_interets" >}} points, la croissance du PIB nominal en efface {{< dyn-val "effet_croissance" >}} ; les déficits primaires ajoutent {{< dyn-val "deficits_primaires" >}} points et les ajustements flux-stock {{< dyn-val "flux_stock" >}} ; la dette atteint {{< dyn-val "dette_fin" >}} % fin {{< dyn-val "annee_fin" >}}. Contributions comptables cumulées, non sommes versées." width="720" height="413" loading="lazy">
   </picture>
   <figcaption>Décomposition cumulée de la variation du ratio dette/PIB, France, {{< dyn-val "annee_depart" >}}-{{< dyn-val "annee_fin" >}}, en points de PIB (Eurostat). Bleu&nbsp;: le stock&nbsp;; orange&nbsp;: ce qui le fait monter&nbsp;; gris&nbsp;: ce qui le fait baisser.</figcaption>
@@ -89,7 +89,7 @@ Les {{< dyn-val "effet_interets" >}} points «&nbsp;effacés&nbsp;» pour l'esse
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-annuelle-m.svg" width="300" height="725">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-dynamique-annuelle-m.svg" width="300" height="725">
     <img src="/img/dette-dynamique-annuelle.svg" alt="Barres empilées par année, de {{< dyn-val "annee_premiere_variation" >}} à {{< dyn-val "annee_fin" >}}, en points de PIB : déficits primaires en orange, effet taux-croissance en bleu, ajustements flux-stock en gris, variation du ratio en point noir. Deux pics, 2009 (+{{< dyn-val "hausse_2009" >}} points) et 2020 (+{{< dyn-val "hausse_2020" >}}) ; un effet taux-croissance de −{{< dyn-val "effet_2021_2023" >}} points en 2021-2023." width="720" height="369" loading="lazy">
   </picture>
   <figcaption>Contributions annuelles à la variation du ratio dette/PIB, France (Eurostat). La somme des trois barres égale la variation, marquée par le point noir. Ici, les couleurs désignent des termes, non le sens de leur effet comme dans la cascade.</figcaption>
@@ -127,7 +127,7 @@ Un déficit peut tenir à la conjoncture&nbsp;: quand l'activité reste sous son
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-conjoncture-m.svg" width="300" height="778">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-dynamique-conjoncture-m.svg" width="300" height="778">
     <img src="/img/dette-dynamique-conjoncture.svg" alt="Courbes du solde primaire corrigé du cycle, en % du PIB potentiel : FMI depuis 1996, Commission et OCDE depuis 2010, et solde observé en gris. Sur {{< dyn-val "cs_avant_lib" >}} puis {{< dyn-val "cs_apres_lib" >}} : Commission {{< dyn-val "cs_ce_avant" >}} puis {{< dyn-val "cs_ce_apres" >}}, FMI {{< dyn-val "cs_fmi_avant" >}} puis {{< dyn-val "cs_fmi_apres" >}}, OCDE {{< dyn-val "cs_ocde_avant" >}} puis {{< dyn-val "cs_ocde_apres" >}}." width="720" height="373" loading="lazy" decoding="async">
   </picture>
   <figcaption>Solde primaire corrigé du cycle selon trois estimations, et solde primaire observé (Eurostat). Les zones grises marquent les deux périodes comparées.</figcaption>

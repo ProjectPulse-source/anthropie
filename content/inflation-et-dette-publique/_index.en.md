@@ -74,7 +74,7 @@ To measure it, we compare two worlds. In the first, inflation is what the profes
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-inflation-calendrier-en-m.svg" width="300" height="720">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-inflation-calendrier-en-m.svg" width="300" height="720">
     <img src="/img/dette-inflation-calendrier-en.svg" alt="Cumulative curve, from 2021 to {{< infl-val "fin" >}}, of the real-value erosion of the payments promised on France's end-2020 fixed-rate marketable government debt, solid until 2023 then dashed, the price gap being assumed to persist: €{{< infl-val "cum23" >}}bn in 2020 euros by end-2023, {{< infl-val "cum27" >}} by end-{{< infl-val "demi" >}}, about {{< infl-val "part27" >}}%, {{< infl-val "t_exact" >}} in total; a vertical bar at the final point shows the range depending on the starting forecast, €{{< infl-val "a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn." width="720" height="373" loading="lazy">
   </picture>
   <figcaption>An undiscounted sum of real-value differences, in billions of 2020 euros, not debt written off (author's calculation; AFT, Eurostat, ECB).</figcaption>
@@ -120,7 +120,7 @@ At end-2022, a lasting one-percentage-point rise across the whole yield curve wo
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-inflation-achats-en-m.svg" width="300" height="661">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-inflation-achats-en-m.svg" width="300" height="661">
     <img src="/img/dette-inflation-achats-en.svg" alt="Two monthly lines, from March 2015 to {{< infl-val "qe_dern" >}}, of the first-year rise in the interest bill if the whole yield curve shifted up permanently by one point: for the government and the Banque de France taken together, €{{< infl-val "qe_sc1" >}}bn at end-2022 and {{< infl-val "qe_sc1_d" >}} in {{< infl-val "qe_dern" >}}; for the government's market debt alone, {{< infl-val "qe_sm1" >}} at end-2022 and {{< infl-val "qe_sm1_d" >}} in {{< infl-val "qe_dern" >}}." width="720" height="359" loading="lazy">
   </picture>
   <figcaption>A scenario at a constant stock of debt, not a forecast; the government and the Banque de France taken together are an analytical perimeter, not interest recorded in the budget (author's calculation; AFT, Banque de France, ECB).</figcaption>

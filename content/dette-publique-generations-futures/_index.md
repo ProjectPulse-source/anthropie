@@ -86,7 +86,7 @@ Emprunter pour construire une école, une route ou un réseau laisse un capital 
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-generations-actifs-m.svg" width="300" height="747">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-actifs-m.svg" width="300" height="747">
     <img src="/img/dette-generations-actifs.svg" alt="Quatre barres horizontales, chacune représentant cent pour cent du besoin de financement des administrations publiques françaises sur une période : {{< gen-val "d1_lib" >}}, {{< gen-val "d1_part" >}} % en actifs ; {{< gen-val "d2_lib" >}}, {{< gen-val "d2_part" >}} % ; {{< gen-val "d3_lib" >}}, {{< gen-val "d3_part" >}} % ; sur l'ensemble, {{< gen-val "part_k" >}} % en actifs, {{< gen-val "part_t" >}} % en transferts en capital et {{< gen-val "part_e" >}} % en dépenses courantes non couvertes par les recettes courantes." width="720" height="385" loading="lazy">
   </picture>
   <figcaption>Part du besoin de financement des administrations publiques françaises qui a correspondu à des actifs, à des transferts en capital et à des dépenses courantes non couvertes, par décennie (Eurostat, calcul de l'auteur).</figcaption>
@@ -144,7 +144,7 @@ L'argument classique de l'économiste Abba Lerner suppose que la dette soit dét
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-generations-detention-m.svg" width="300" height="605">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-detention-m.svg" width="300" height="605">
     <img src="/img/dette-generations-detention.svg" alt="Aires empilées de {{< gen-val "h0" >}} à {{< gen-val "h_fin" >}}, en pourcentage de la dette des administrations publiques : Banque de France, autres résidents, non-résidents. Les non-résidents passent de {{< gen-val "nr0" >}} % à {{< gen-val "nr_fin" >}} %, avec un maximum de {{< gen-val "nr_max" >}} % en {{< gen-val "nr_max_annee" >}} ; la Banque de France monte à {{< gen-val "bc_max" >}} % en {{< gen-val "bc_max_annee" >}} puis redescend à {{< gen-val "bc_fin" >}} %." width="720" height="381" loading="lazy">
   </picture>
   <figcaption>Part de la dette des administrations publiques détenue par les non-résidents, la Banque de France et les autres résidents (BCE, statistiques de finances publiques).</figcaption>
@@ -174,7 +174,7 @@ Sur ces {{< gen-val "s2_pt" >}}, {{< gen-val "ibp_pt" >}} correspondent à la **
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-generations-vieillissement-m.svg" width="300" height="829">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-vieillissement-m.svg" width="300" height="829">
     <img src="/img/dette-generations-vieillissement.svg" alt="Barres horizontales par scénario de la Commission, en points de PIB, avec le total S2 : scénario de base, S2 {{< gen-val "s2" >}}, position de départ {{< gen-val "ibp" >}} et effet des variations futures des dépenses liées à l'âge {{< gen-val "coa" >}} ; productivité plus faible, S2 {{< gen-val "s2_prod" >}}, {{< gen-val "ibp_prod" >}} et {{< gen-val "coa_prod" >}} ; risque santé et dépendance, S2 {{< gen-val "s2_risque" >}}, {{< gen-val "ibp_risque" >}} et {{< gen-val "coa_risque" >}} ; édition précédente, autre jeu de projections, S2 {{< gen-val "s2_prec" >}}, {{< gen-val "ibp_prec" >}} et {{< gen-val "coa_prec" >}}." width="720" height="411" loading="lazy">
   </picture>
   <figcaption>Ajustement qui stabiliserait la dette française (indicateur S2), partagé entre la position budgétaire de départ et l'effet des variations futures des dépenses liées à l'âge, selon la Commission européenne (trois scénarios et édition précédente).</figcaption>

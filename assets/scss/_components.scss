@@ -490,6 +490,12 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   // ce cadre : mesuré le 11/10/2026, elle tombait à 245 px à 320 px de large, textes vers 11 px.
   .repli .figure-ciseau picture { margin-left: calc(12px - var(--marge-main) - var(--marge-colonne) - 0.9rem - 3px); margin-right: calc(12px - var(--marge-main) - var(--marge-colonne) - 0.9rem); }
 }
+// De 601 à 899 px (tablette, téléphone à l'horizontale) : la version téléphone reste servie — point de bascule du
+// <picture> à 899 px depuis le 11/11/2026, car la version détaillée y descendait sous sa taille de dessin (textes de
+// 7 à 9 px). Elle garde un plafond de largeur, dans la marge du conteneur ; étirée à 100 %, elle doublerait de hauteur.
+@media (min-width: 601px) and (max-width: 899px) {
+  .figure-ciseau picture img { max-width: 460px; }
+}
 // ----- Agrandissement d'une figure (static/js/figure-zoom.js) -----
 // Le lecteur qui veut lire une etiquette ou un cartouche n'avait aucun moyen de
 // le faire : les figures sont servies a 720 px et reduites par le CSS (auteur,
@@ -506,7 +512,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 }
 .figure-zoom {
   position: fixed; inset: 0; z-index: 200;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   gap: 14px; padding: 16px;
   background: rgba(24, 23, 21, .92);
   // Le pincement natif doit rester possible PAR-DESSUS la couche : c'est lui qui
@@ -514,11 +520,19 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   touch-action: auto;
   overflow: auto;
 }
+// Centrée quand elle tient dans l'écran, défilante quand elle le dépasse (un « justify-content: center » rendrait
+// le haut d'une figure trop haute inatteignable).
+.figure-zoom > :first-child { margin-top: auto; }
+.figure-zoom > :last-child { margin-bottom: auto; }
+// La figure agrandie prend la LARGEUR de l'écran, jamais moins que dans la page (11/11/2026). Bornée par la hauteur
+// (max-height: 82vh), une figure téléphone de 366 × 1 464 px tombait à 188 px de large, et une figure d'ordinateur
+// s'ouvrait à sa taille de dessin, plus petite que dans la page. Trop haute, elle défile dans la couche.
 .figure-zoom__image {
-  max-width: 100%; max-height: 82vh;
-  width: auto; height: auto;
+  flex: 0 0 auto; box-sizing: border-box;
+  width: 100%; max-width: 1440px; height: auto;
   background: #fff; border-radius: 4px; padding: 10px;
 }
+@media (max-width: 600px) { .figure-zoom { padding: 8px 6px; } .figure-zoom__image { padding: 6px; } }
 .figure-zoom__fermer {
   align-self: flex-end;
   font-family: var(--font-sans); font-size: var(--fs-small);

@@ -71,7 +71,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/etudiants-hospit-m.svg" width="300" height="713">
+    <source media="screen and (max-width: 899px)" srcset="/img/etudiants-hospit-m.svg" width="300" height="713">
     <img src="/img/etudiants-hospit.svg" alt="Deux courbes de 2012 à {{< etu-val "hosp_der" >}}, patients hospitalisés pour un geste auto-infligé pour 100 000 habitants : femmes de 18 à 24 ans {{< etu-val "hosp_f_2012" >}} en 2012, {{< etu-val "hosp_f_2014" >}} en 2014, {{< etu-val "hosp_f_2017" >}} en 2017, {{< etu-val "hosp_f_2019" >}} en 2019, {{< etu-val "hosp_f_der" >}} en {{< etu-val "hosp_der" >}} ; hommes de 18 à 24 ans {{< etu-val "hosp_h_2012" >}} en 2012, {{< etu-val "hosp_h_2017" >}} en 2017, {{< etu-val "hosp_h_2019" >}} en 2019, {{< etu-val "hosp_h_der" >}} en {{< etu-val "hosp_der" >}}." width="720" height="389" loading="lazy">
   </picture>
   <figcaption>Patients hospitalisés pour un geste auto-infligé, 18-24 ans, par sexe (DREES, calcul de l'auteur).</figcaption>
@@ -101,7 +101,7 @@ Trois d'entre eux vont dans le même sens chez les jeunes adultes.
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/etudiants-soins-m.svg" width="300" height="735">
+    <source media="screen and (max-width: 899px)" srcset="/img/etudiants-soins-m.svg" width="300" height="735">
     <img src="/img/etudiants-soins.svg" alt="Deux courbes de 2015 à 2024, part des 20-24 ans traités par antidépresseurs ou régulateurs de l'humeur, hors pathologie psychiatrique repérée, en pourcentage : femmes {{< etu-val "ad_f_2015" >}} en 2015, {{< etu-val "ad_f_2017" >}} en 2017, {{< etu-val "ad_f_2021" >}} en 2021, {{< etu-val "ad_f_2024" >}} en 2024 ; hommes {{< etu-val "ad_h_2015" >}} en 2015, {{< etu-val "ad_h_2017" >}} en 2017, {{< etu-val "ad_h_2021" >}} en 2021, {{< etu-val "ad_h_2024" >}} en 2024." width="720" height="389" loading="lazy">
   </picture>
   <figcaption>Traitements par antidépresseurs ou régulateurs de l'humeur, 20-24 ans, par sexe (Assurance maladie).</figcaption>
@@ -138,7 +138,7 @@ Les enquêtes auprès des lycéens disent la même chose sous une autre forme. L
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/etudiants-lycee-m.svg" width="300" height="665">
+    <source media="screen and (max-width: 899px)" srcset="/img/etudiants-lycee-m.svg" width="300" height="665">
     <img src="/img/etudiants-lycee.svg" alt="Deux séries reliées en tirets, enquêtes de 2018, 2022 et 2024, part des lycéens présentant un risque important de dépression, en pourcentage : lycéennes {{< etu-val "lyc_f_2018" >}} en 2018, {{< etu-val "lyc_f_2022" >}} en 2022, {{< etu-val "lyc_f_2024" >}} en 2024 ; lycéens (garçons) {{< etu-val "lyc_g_2018" >}} en 2018, {{< etu-val "lyc_g_2022" >}} en 2022, {{< etu-val "lyc_g_2024" >}} en 2024." width="720" height="375" loading="lazy">
   </picture>
   <figcaption>Risque important de dépression des lycéens, par sexe (Santé publique France, EnCLASS).</figcaption>

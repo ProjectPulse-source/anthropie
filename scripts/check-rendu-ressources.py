@@ -90,7 +90,8 @@ def figures(h: str, build: Path) -> list[str]:
         pic = re.search(r"<picture\b(?:(?!</picture>).)*?/img/%s\.svg(?:(?!</picture>).)*</picture>" % re.escape(nom), main, re.S)
         autre = pic and any(
             (build / "img" / (alt + ".svg")).is_file()  # SERVIE : le fichier existe dans le site construit
-            for src in re.findall(r"<source\b[^>]*>", pic.group(0)) if re.search(r"\bmedia=\"?\(max-width", src)
+            # « (max-width: …) » ou « screen and (max-width: …) » (figures de données, point de bascule du 11/11/2026)
+            for src in re.findall(r"<source\b[^>]*>", pic.group(0)) if re.search(r"\bmedia=\"?(?:screen and )?\(max-width", src)
             for alt in re.findall(r"/img/([^\"\s>,]+?)\.svg", src) if alt != nom)
         if not autre and not re.search(r"<source\b[^>]*\bsrcset=\"?(?:https?://[^/\s\"]+)?/img/%s-m\.svg" % re.escape(nom), main):
             out.append("figure %s : pas de version telephone servie (/img/%s-m.svg dans un <picture>)" % (nom, nom))

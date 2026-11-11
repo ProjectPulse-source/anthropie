@@ -77,7 +77,7 @@ Pour le mesurer, on compare deux mondes. Dans le premier, l'inflation est celle 
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-inflation-calendrier-m.svg" width="300" height="742">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-inflation-calendrier-m.svg" width="300" height="742">
     <img src="/img/dette-inflation-calendrier.svg" alt="Courbe cumulée, de 2021 à {{< infl-val "fin" >}}, de l'érosion réelle des paiements promis sur la dette de l'État à taux fixe de fin 2020, en trait plein jusqu'en 2023 puis en pointillé, l'écart de prix étant supposé persister : {{< infl-val "cum23" >}} milliards d'euros de 2020 fin 2023, {{< infl-val "cum27" >}} fin {{< infl-val "demi" >}}, soit environ {{< infl-val "part27" >}} %, {{< infl-val "t_exact" >}} au total ; un trait vertical au point final indique la plage selon la prévision de départ, de {{< infl-val "a_bas" >}} à {{< infl-val "a_haut" >}} milliards." width="720" height="373" loading="lazy">
   </picture>
   <figcaption>Somme non actualisée des écarts de valeur réelle, en milliards d'euros de 2020, pas de la dette effacée (calcul de l'auteur&nbsp;; AFT, Eurostat, BCE).</figcaption>
@@ -123,7 +123,7 @@ Fin 2022, une hausse durable d'un point de toute la courbe des taux aurait accru
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-inflation-achats-m.svg" width="300" height="700">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-inflation-achats-m.svg" width="300" height="700">
     <img src="/img/dette-inflation-achats.svg" alt="Deux courbes mensuelles, de mars 2015 à {{< infl-val "qe_dern" >}}, de la hausse de la charge d'intérêts la première année si toute la courbe des taux augmentait durablement d'un point : pour l'ensemble État + Banque de France, {{< infl-val "qe_sc1" >}} milliards d'euros fin 2022 et {{< infl-val "qe_sc1_d" >}} en {{< infl-val "qe_dern" >}} ; pour la seule dette de marché de l'État, {{< infl-val "qe_sm1" >}} fin 2022 et {{< infl-val "qe_sm1_d" >}} en {{< infl-val "qe_dern" >}}." width="720" height="373" loading="lazy">
   </picture>
   <figcaption>Scénario à encours constant, non prévision&nbsp;; l'ensemble État + Banque de France est un périmètre d'analyse, non des intérêts enregistrés au budget (calcul de l'auteur&nbsp;; AFT, Banque de France, BCE).</figcaption>

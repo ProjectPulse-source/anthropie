@@ -70,7 +70,7 @@ Measured each time on the same scope, the comparison gives two answers. For gene
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-formules-grille-en-m.svg" width="300" height="2614">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-formules-grille-en-m.svg" width="300" height="2614">
     <img src="/img/dette-formules-grille-en.svg" alt="Table of eleven claims made on 8 September 2025, in three groups (measuring, explaining, concluding): for each, the speaker, the verdict on the question it asks, what changes if another question is asked, and the qualification of the conclusion drawn. For example: no balanced budget since 1974, accurate; higher rates than Greece, accurate on the day, {{< form-val "f8_tec8" >}}% against {{< form-val "f8_hdat8" >}}% on 8 September 2025; over €1,000bn of extra debt since 2017, accurate under every variant tested; the burden grows by €18m an hour, understated for debt ({{< form-val "f5_hausse" >}})." width="720" height="792" loading="lazy">
   </picture>
   <figcaption>One row per claim, no “true” or “false” box: the verdict on the question asked, then the neighbouring question that changes it (author's calculation; National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece).</figcaption>
@@ -96,7 +96,7 @@ Each claim takes four steps, and each needs its own evidence: a verifiable **qua
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-formules-grece-en-m.svg" width="300" height="651">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-formules-grece-en-m.svg" width="300" height="651">
     <img src="/img/dette-formules-grece-en.svg" alt="Monthly bars from January 2024 to {{< form-val "f8_dernier" >}} of the gap between the ten-year yields of France and Greece: Greece above until spring 2025, France above from {{< form-val "f8_premier" >}} ({{< form-val "f8_aout_fr" >}}% against {{< form-val "f8_aout_el" >}}%), then in September 2025 ({{< form-val "f8_sept_fr" >}}% against {{< form-val "f8_sept_el" >}}%), Greece above again from {{< form-val "f8_dessous" >}}." width="720" height="381" loading="lazy">
   </picture>
   <figcaption>Monthly averages (Eurostat); the dotted line marks the debate. A market price gives the current cost of borrowing, not the relative soundness of two countries.</figcaption>

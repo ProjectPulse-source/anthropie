@@ -62,7 +62,7 @@ L'économie mondiale s'est donc découplée de l'énergie au sens relatif&nbsp;:
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/decouplage-decomposition-m.svg" width="300" height="865">
+    <source media="screen and (max-width: 899px)" srcset="/img/decouplage-decomposition-m.svg" width="300" height="865">
     <img src="/img/decouplage-decomposition.svg" alt="Décomposition de la variation de la consommation d'énergie primaire de {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, en % de la consommation de {{< dc-val "an0" >}}. Monde : effet de la population {{< dc-val "w_pop_pct" >}} %, effet du PIB par habitant {{< dc-val "w_rev_pct" >}} %, effet de l'intensité énergétique {{< dc-val "w_int_pct" >}} %, variation de la consommation {{< dc-val "w_tot_pct" >}} %. Union européenne : effet de la population {{< dc-val "u_pop_pct" >}} %, effet du PIB par habitant {{< dc-val "u_rev_pct" >}} %, effet de l'intensité énergétique {{< dc-val "u_int_pct" >}} %, variation de la consommation {{< dc-val "u_tot_pct" >}} %." width="720" height="441" loading="lazy">
   </picture>
   <figcaption>Énergie primaire consommée sur le territoire, convention de l'EIA&nbsp;; effets calculés par un indice de Divisia, qui s'additionnent exactement à la variation (EIA, données internationales).</figcaption>

@@ -81,7 +81,7 @@ Borrowing to build a school, a road or a network leaves capital as well as a deb
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-generations-actifs-en-m.svg" width="300" height="708">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-actifs-en-m.svg" width="300" height="708">
     <img src="/img/dette-generations-actifs-en.svg" alt="Four horizontal bars, each representing one hundred per cent of French general government net borrowing over a period: {{< gen-val "d1_lib" >}}, {{< gen-val "d1_part" >}}% in assets; {{< gen-val "d2_lib" >}}, {{< gen-val "d2_part" >}}%; {{< gen-val "d3_lib" >}}, {{< gen-val "d3_part" >}}%; over the whole period, {{< gen-val "part_k" >}}% in assets, {{< gen-val "part_t" >}}% in capital transfers and {{< gen-val "part_e" >}}% in current spending not covered by current revenue." width="720" height="385" loading="lazy">
   </picture>
   <figcaption>Share of French general government net borrowing that corresponded to assets, to capital transfers and to uncovered current spending, by decade (Eurostat, author’s calculation).</figcaption>
@@ -139,7 +139,7 @@ The economist Abba Lerner’s classic argument assumes that the debt is held wit
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-generations-detention-en-m.svg" width="300" height="566">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-detention-en-m.svg" width="300" height="566">
     <img src="/img/dette-generations-detention-en.svg" alt="Stacked areas from {{< gen-val "h0" >}} to {{< gen-val "h_fin" >}}, as a percentage of general government debt: Banque de France, other residents, non-residents. Non-residents go from {{< gen-val "nr0" >}}% to {{< gen-val "nr_fin" >}}%, peaking at {{< gen-val "nr_max" >}}% in {{< gen-val "nr_max_annee" >}}; the Banque de France rises to {{< gen-val "bc_max" >}}% in {{< gen-val "bc_max_annee" >}} and then falls back to {{< gen-val "bc_fin" >}}%." width="720" height="367" loading="lazy">
   </picture>
   <figcaption>Share of general government debt held by non-residents, the Banque de France and other residents (ECB, government finance statistics).</figcaption>
@@ -169,7 +169,7 @@ Of these {{< gen-val "s2_pt" >}}, {{< gen-val "ibp_pt" >}} correspond to the **i
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-generations-vieillissement-en-m.svg" width="300" height="812">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-generations-vieillissement-en-m.svg" width="300" height="812">
     <img src="/img/dette-generations-vieillissement-en.svg" alt="Horizontal bars by Commission scenario, in points of GDP, with the S2 total: baseline scenario, S2 {{< gen-val "s2" >}}, initial position {{< gen-val "ibp" >}} and effect of future changes in age-related spending {{< gen-val "coa" >}}; lower productivity, S2 {{< gen-val "s2_prod" >}}, {{< gen-val "ibp_prod" >}} and {{< gen-val "coa_prod" >}}; health and long-term care risk, S2 {{< gen-val "s2_risque" >}}, {{< gen-val "ibp_risque" >}} and {{< gen-val "coa_risque" >}}; previous edition, another set of projections, S2 {{< gen-val "s2_prec" >}}, {{< gen-val "ibp_prec" >}} and {{< gen-val "coa_prec" >}}." width="720" height="383" loading="lazy">
   </picture>
   <figcaption>Adjustment that would stabilise French debt (S2 indicator), split between the initial budgetary position and the effect of future changes in age-related spending, according to the European Commission (three scenarios and previous edition).</figcaption>

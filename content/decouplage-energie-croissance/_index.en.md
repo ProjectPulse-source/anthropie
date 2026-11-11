@@ -60,7 +60,7 @@ The world economy has therefore decoupled from energy in the relative sense: its
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/decouplage-decomposition-en-m.svg" width="300" height="848">
+    <source media="screen and (max-width: 899px)" srcset="/img/decouplage-decomposition-en-m.svg" width="300" height="848">
     <img src="/img/decouplage-decomposition-en.svg" alt="Decomposition of the change in primary energy consumption from {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, as % of {{< dc-val "an0" >}} consumption. World: population effect {{< dc-val "w_pop_pct" >}}%, GDP-per-head effect {{< dc-val "w_rev_pct" >}}%, energy-intensity effect {{< dc-val "w_int_pct" >}}%, change in consumption {{< dc-val "w_tot_pct" >}}%. European Union: population effect {{< dc-val "u_pop_pct" >}}%, GDP-per-head effect {{< dc-val "u_rev_pct" >}}%, energy-intensity effect {{< dc-val "u_int_pct" >}}%, change in consumption {{< dc-val "u_tot_pct" >}}%." width="720" height="441" loading="lazy">
   </picture>
   <figcaption>Primary energy consumed on the territory, EIA convention; effects computed with a Divisia index, which add up exactly to the change (EIA, international data).</figcaption>

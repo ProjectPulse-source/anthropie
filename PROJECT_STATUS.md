@@ -52,6 +52,35 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-11 — Figures de données : version téléphone servie jusqu'à 899 px ; agrandissement à la largeur de l'écran
+
+- **Défaut de l'organe commun, mesuré sur le site en ligne** (52 pages, 139 figures, sept largeurs) : de 601 à 860 px
+  environ, la version détaillée d'une figure, dessinée pour 720 px, était servie plus petite que son dessin ; plus
+  petit texte affiché : 6,0 px à 601 px, 8,1 px à 768 px. Trouvé par le contrôle indépendant du rendu de la page
+  Parcoursup.
+- **Correctif** : point de bascule du `<picture>` porté de 600 à 899 px, à l'écran seulement
+  (`media="screen and (max-width: 899px)"`) : 46 `<source>` dans 22 fichiers de contenu (seul l'attribut change) et le
+  shortcode `figure-svg` ; plafond de 460 px de large pour la version téléphone de 601 à 899 px (`_components.scss`).
+  Après : version téléphone sur les 139 figures jusqu'à 899 px (plus petit texte 16,9 px), version détaillée à partir
+  de 900 px (10,2 px à 900, 11,8 à 1 024, 12,0 à 1 280) et à l'impression. Hors champ, déclaré : la figure de
+  l'accueil et de `dette-chiffres`, et la boucle anthropique (768 px), qui ont leur propre mise en page.
+- **Agrandissement d'une figure** (`static/js/figure-zoom.js`, `.figure-zoom`) : la couche bornait l'image par la
+  hauteur de l'écran ; une figure téléphone tombait à 188 px de large (366 dans la page), une figure d'ordinateur
+  s'ouvrait à 748 px (864 dans la page). Elle donne maintenant la largeur de l'écran, au plus le double de la largeur
+  de dessin, et défile si elle dépasse l'écran : 378, 600 et 1 248 px aux trois écrans d'essai. Aide « Toucher pour
+  fermer » sur écran tactile. La largeur de dessin se lit dans l'attribut `width` de la source affichée :
+  `naturalWidth` est faux pour ces SVG, qui n'ont qu'un `viewBox`.
+- **Page Parcoursup** : quand la version téléphone de la première figure est servie, « Le résultat en une phrase »
+  s'affiche avant elle (21 px au-dessus, au lieu de 1 574 px sous son sommet à 390 px) ; ordre d'affichage seulement,
+  le document garde la figure en premier (conseil de la session, accepté par l'auteur au commit). Barre de composition
+  par bac en deux tons neutres (le bleu des séries y prenait un autre sens).
+- **Contrôles** : `essai_figures_site.py` du chantier Parcoursup (52 pages, 973 rendus de figure, impression,
+  agrandissement à trois écrans) à 0 ; `check-all --ci`, build, typographie, liens, rendu (témoin compris), dates,
+  replis à 0 ; recette sur quatre pages, français et anglais, avec `recette.py` qui contrôle désormais la version
+  téléphone jusqu'à 899 px. Règle écrite : CLAUDE.md, « Version servie et agrandissement d'une figure ».
+- **Restent ouverts, générateurs de figures (toutes les pages)** : texte atténué des figures (graduations, crédit) à
+  3,1:1 de contraste ; plus petit texte d'une figure à 10,2 px à 900 px de large.
+
 ### 2026-11-11 — Parcoursup : mise en relief de la page (maquette B+) et correction de la population de la répartition par bac
 
 - **Correction de fond, sur la page publiée le matin** : dans les données ouvertes, `part_acces_gen`, `part_acces_tec`

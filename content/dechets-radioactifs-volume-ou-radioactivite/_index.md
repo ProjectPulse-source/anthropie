@@ -55,7 +55,7 @@ Les catégories qui concentrent l'essentiel de la radioactivité déclarée ne s
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dechets-volume-activite-m.svg" width="300" height="890">
+    <source media="screen and (max-width: 899px)" srcset="/img/dechets-volume-activite-m.svg" width="300" height="890">
     <img src="/img/dechets-volume-activite.svg" alt="Pour chaque catégorie de déchets radioactifs, part du volume et part de la radioactivité déclarée, fin {{< dr-val "an_act" >}}, et filière de stockage. Haute activité : {{< dr-val "vol_ha" >}} % du volume, {{< dr-val "act_ha" >}} % de la radioactivité, stockage géologique profond en projet. Moyenne activité à vie longue : {{< dr-val "vol_mavl" >}} %, {{< dr-val "act_mavl" >}} %, même projet. Faible activité à vie longue : {{< dr-val "vol_favl" >}} %, {{< dr-val "act_favl" >}} %, stockage à l'étude. Faible et moyenne activité à vie courte : {{< dr-val "vol_fmavc" >}} %, {{< dr-val "act_fmavc" >}} %, stockage en service. Très faible activité : {{< dr-val "vol_tfa" >}} %, {{< dr-val "act_tfa" >}} %, stockage en service." width="720" height="397" loading="lazy">
   </picture>
   <figcaption>Volume en équivalent conditionné et radioactivité déclarée, en becquerels, la même année&nbsp;; filières selon l'Andra (Inventaire national, données ouvertes&nbsp;; Les Essentiels 2026).</figcaption>

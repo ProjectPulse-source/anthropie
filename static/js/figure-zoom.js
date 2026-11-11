@@ -24,10 +24,13 @@
   "use strict";
 
   var EN = document.documentElement.lang === "en";
+  // Ecran tactile sans souris ni clavier (telephone, tablette) : on ne parle ni de clic ni de touche Echap (11/11/2026).
+  var TACTILE = !!(window.matchMedia && window.matchMedia("(hover: none) and (pointer: coarse)").matches);
   var T = EN
-    ? { ouvrir: "Enlarge this figure", fermer: "Close", aide: "Click or press Escape to close" }
+    ? { ouvrir: "Enlarge this figure", fermer: "Close",
+        aide: TACTILE ? "Tap to close" : "Click or press Escape to close" }
     : { ouvrir: "Agrandir cette figure", fermer: "Fermer",
-        aide: "Cliquer ou appuyer sur Échap pour fermer" };
+        aide: TACTILE ? "Toucher pour fermer" : "Cliquer ou appuyer sur Échap pour fermer" };
 
   var figures = document.querySelectorAll(
     "figure.figure-ciseau img, .dette-chiffres__figure img");
@@ -44,6 +47,19 @@
     if (origine) { origine.focus(); origine = null; }
   }
 
+  // Largeur de dessin de la version AFFICHEE : attribut width de la <source> retenue par le navigateur, sinon de
+  // l'<img>. naturalWidth ne convient pas : ces SVG n'ont qu'un viewBox, et le navigateur leur prete 150 px de haut.
+  function largeurDeDessin(img) {
+    var src = img.currentSrc || img.src || "", p = img.parentNode, w = 0;
+    if (p && p.tagName === "PICTURE") {
+      Array.prototype.forEach.call(p.querySelectorAll("source"), function (s) {
+        var fichier = ((s.getAttribute("srcset") || "").split(/[\s,]/)[0] || "").replace(/^.*\//, "");
+        if (fichier && src.indexOf("/" + fichier) !== -1) w = parseInt(s.getAttribute("width"), 10) || w;
+      });
+    }
+    return w || parseInt(img.getAttribute("width"), 10) || 0;
+  }
+
   function ouvrir(img) {
     fermer();
     origine = img;
@@ -57,6 +73,10 @@
     grande.src = img.currentSrc || img.src;
     grande.alt = img.getAttribute("alt") || "";
     grande.className = "figure-zoom__image";
+    // La couche donne la largeur de l'ecran (feuille de style), sans depasser le double de la taille de dessin :
+    // une figure telephone (300 px) ouverte sur tablette ne devient pas trois fois plus haute que l'ecran.
+    var dessin = largeurDeDessin(img);
+    if (dessin) grande.style.maxWidth = Math.min(1440, dessin * 2) + "px";
 
     var bouton = document.createElement("button");
     bouton.type = "button";

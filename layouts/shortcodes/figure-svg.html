@@ -19,7 +19,11 @@
   {{- if fileExists $m }}
   {{- $vbm := index (findRESubmatch `viewBox="0 0 ([0-9.]+) ([0-9.]+)"` (os.ReadFile $m) 1) 0 }}
   <picture>
-    <source media="(max-width: 600px)" srcset="{{ printf "/img/%s-m.svg" $f | relURL }}" width="{{ index $vbm 1 }}" height="{{ index $vbm 2 }}">
+    {{- /* Point de bascule : 899 px, à l'écran seulement (11/11/2026). À 600 px, la version détaillée, dessinée pour
+           720 px, était servie plus petite que son dessin de 601 à 860 px environ : ses textes de 10 px tombaient à
+           7-9 px. L'impression garde la version détaillée (« screen »). Même valeur dans les <picture> écrits à la main
+           dans les pages, et dans _components.scss (plafond de largeur de la version téléphone). */}}
+    <source media="screen and (max-width: 899px)" srcset="{{ printf "/img/%s-m.svg" $f | relURL }}" width="{{ index $vbm 1 }}" height="{{ index $vbm 2 }}">
     <img src="{{ printf "/img/%s.svg" $f | relURL }}" alt="{{ .Get "alt" }}" width="{{ index $vb 1 }}" height="{{ index $vb 2 }}" loading="lazy">
   </picture>
   {{- else }}

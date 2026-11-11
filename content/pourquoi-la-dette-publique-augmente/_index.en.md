@@ -70,7 +70,7 @@ France is a telling case for a question every indebted country faces. Its debt r
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-cascade-en-m.svg" width="300" height="643">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-dynamique-cascade-en-m.svg" width="300" height="643">
     <img src="/img/dette-dynamique-cascade-en.svg" alt="Waterfall in points of GDP: French debt starts at {{< dyn-val "dette_depart" >}}% at the end of {{< dyn-val "annee_depart" >}}; the interest effect would have pushed it up by {{< dyn-val "effet_interets" >}} points, nominal GDP growth takes away {{< dyn-val "effet_croissance" >}}; primary deficits add {{< dyn-val "deficits_primaires" >}} points and stock-flow adjustments {{< dyn-val "flux_stock" >}}; the debt reaches {{< dyn-val "dette_fin" >}}% at the end of {{< dyn-val "annee_fin" >}}. Cumulative accounting contributions, not amounts paid." width="720" height="413" loading="lazy">
   </picture>
   <figcaption>Cumulative decomposition of the change in the debt-to-GDP ratio, France, {{< dyn-val "annee_depart" >}}-{{< dyn-val "annee_fin" >}}, in points of GDP (Eurostat). Blue: the stock; orange: what pushes it up; grey: what pulls it down.</figcaption>
@@ -90,7 +90,7 @@ The {{< dyn-val "effet_interets" >}} points mostly "erased" by growth are theref
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-annuelle-en-m.svg" width="300" height="747">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-dynamique-annuelle-en-m.svg" width="300" height="747">
     <img src="/img/dette-dynamique-annuelle-en.svg" alt="Stacked bars by year, from {{< dyn-val "annee_premiere_variation" >}} to {{< dyn-val "annee_fin" >}}, in points of GDP: primary deficits in orange, the interest-growth effect in blue, stock-flow adjustments in grey, the change in the ratio as a black dot. Two peaks, 2009 (+{{< dyn-val "hausse_2009" >}} points) and 2020 (+{{< dyn-val "hausse_2020" >}}); an interest-growth effect of −{{< dyn-val "effet_2021_2023" >}} points in 2021-2023." width="720" height="369" loading="lazy">
   </picture>
   <figcaption>Annual contributions to the change in the debt-to-GDP ratio, France (Eurostat). The three bars add up to the change, marked by the black dot. Here the colours designate terms, not the direction of their effect as in the waterfall.</figcaption>
@@ -128,7 +128,7 @@ A deficit can stem from the business cycle: when activity stays below its potent
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dette-dynamique-conjoncture-en-m.svg" width="300" height="744">
+    <source media="screen and (max-width: 899px)" srcset="/img/dette-dynamique-conjoncture-en-m.svg" width="300" height="744">
     <img src="/img/dette-dynamique-conjoncture-en.svg" alt="Lines of the cyclically adjusted primary balance, as % of potential GDP: IMF since 1996, Commission and OECD since 2010, and the observed balance in grey. Over {{< dyn-val "cs_avant_lib" >}} then {{< dyn-val "cs_apres_lib" >}}: Commission {{< dyn-val "cs_ce_avant" >}} then {{< dyn-val "cs_ce_apres" >}}, IMF {{< dyn-val "cs_fmi_avant" >}} then {{< dyn-val "cs_fmi_apres" >}}, OECD {{< dyn-val "cs_ocde_avant" >}} then {{< dyn-val "cs_ocde_apres" >}}." width="720" height="373" loading="lazy" decoding="async">
   </picture>
   <figcaption>Cyclically adjusted primary balance according to three estimates, and observed primary balance (Eurostat). The grey bands mark the two periods compared.</figcaption>

@@ -53,7 +53,7 @@ The categories that hold most of the declared radioactivity are therefore not th
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/dechets-volume-activite-en-m.svg" width="300" height="871">
+    <source media="screen and (max-width: 899px)" srcset="/img/dechets-volume-activite-en-m.svg" width="300" height="871">
     <img src="/img/dechets-volume-activite-en.svg" alt="For each category of radioactive waste, share of volume and share of declared radioactivity, end-{{< dr-val "an_act" >}}, and disposal route. High-level: {{< dr-val "vol_ha" >}}% of volume, {{< dr-val "act_ha" >}}% of radioactivity, deep geological disposal planned. Intermediate-level long-lived: {{< dr-val "vol_mavl" >}}%, {{< dr-val "act_mavl" >}}%, same project. Low-level long-lived: {{< dr-val "vol_favl" >}}%, {{< dr-val "act_favl" >}}%, disposal under study. Low- and intermediate-level short-lived: {{< dr-val "vol_fmavc" >}}%, {{< dr-val "act_fmavc" >}}%, disposal in operation. Very-low-level: {{< dr-val "vol_tfa" >}}%, {{< dr-val "act_tfa" >}}%, disposal in operation." width="720" height="397" loading="lazy">
   </picture>
   <figcaption>Volume in conditioned equivalent and declared radioactivity, in becquerels, for the same year; disposal routes according to Andra (National Inventory, open data; Les Essentiels 2026).</figcaption>

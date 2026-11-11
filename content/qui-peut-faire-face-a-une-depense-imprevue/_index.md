@@ -55,7 +55,7 @@ Mais le revenu ne dit pas tout. Au-dessus du seuil, là où le classement par le
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="(max-width: 600px)" srcset="/img/imprevu-menages-m.svg" width="300" height="748">
+    <source media="screen and (max-width: 899px)" srcset="/img/imprevu-menages-m.svg" width="300" height="748">
     <img src="/img/imprevu-menages.svg" alt="Barres horizontales, France {{< imp-val "annee" >}}, part des personnes qui ne pourraient pas faire face à une dépense imprévue, selon le type de foyer où elles vivent. Au-dessus du seuil de pauvreté : couple sans enfant {{< imp-val "c0_dessus" >}} %, adulte seul {{< imp-val "seul_dessus" >}} %, couple avec un enfant {{< imp-val "c1_dessus" >}} %, parent seul {{< imp-val "ps_dessus" >}} %. En dessous du seuil : {{< imp-val "c0_dessous" >}} %, {{< imp-val "seul_dessous" >}} %, {{< imp-val "c1_dessous" >}} % et {{< imp-val "ps_dessous" >}} %." width="720" height="335" loading="lazy">
   </picture>
   <figcaption>Part des personnes (et non des ménages), déclaratif&nbsp;; seuil de pauvreté&nbsp;: 60&nbsp;% du revenu médian par unité de consommation (Eurostat, EU-SILC).</figcaption>

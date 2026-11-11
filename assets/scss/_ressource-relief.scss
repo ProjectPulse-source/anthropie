@@ -64,6 +64,18 @@
   .figure-lecture__texte > :last-child { margin-bottom: 0; }
 }
 
+// Quand la version téléphone de la figure est servie (jusqu'à 899 px), elle dépasse un écran et se termine par ses
+// notes : « Le résultat en une phrase », écrit après elle dans la page, arrivait 400 px sous la dernière barre.
+// Il s'affiche alors AVANT la figure : le lecteur sait ce qu'il va y voir, comme à l'ordinateur où il est à sa droite.
+// Seul l'ordre d'affichage change ; l'ordre du document (figure, puis résultat) reste celui du modèle des ressources.
+@media (max-width: 899px) {
+  .figure-lecture { display: flex; flex-direction: column; }
+  .figure-lecture__texte { display: contents; }
+  .figure-lecture .resultat-phrase { order: -1; margin-top: 0; margin-bottom: 0.9rem; }
+  // Le résultat reste attaché à sa figure (dans une colonne flexible, les marges ne fusionnent plus).
+  .figure-lecture > figure.figure-ciseau { margin-top: 0.4rem; }
+}
+
 // ---- Paire de cartes ----
 .cartes-paire { display: grid; gap: 0.9rem; margin: 1.2rem 0 1.5rem; }
 @media (min-width: 760px) { .cartes-paire { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -124,8 +136,9 @@ main .fiche-etapes > ol > li + li { border-top: 1px solid var(--color-rule-soft)
 .barre-composition { display: flex; height: 26px; margin: 0.8rem 0 0; border-radius: 3px; overflow: hidden; font: 600 12px/26px var(--font-sans); color: #fff; }
 .barre-composition span { display: block; padding: 0 0.5rem; white-space: nowrap; overflow: hidden; flex: 0 0 calc(var(--v) * 1%); }
 @media (max-width: 359px) { .barre-composition span { padding: 0 0.3rem; } }
-.barre-composition span:nth-child(1) { background: var(--relief-bleu); }
-.barre-composition span:nth-child(2) { background: #5f5c56; }
+// Deux tons neutres : ici le bleu et le gris des séries (dernière comparaison, précédente) voudraient dire autre chose.
+.barre-composition span:nth-child(1) { background: #3a3a40; }
+.barre-composition span:nth-child(2) { background: #6f6c66; }
 
 // ---- Liste numérotée en cartes ----
 main .liste-cartes > ol { list-style: none !important; counter-reset: carte; padding: 0 !important; margin: 1.3rem 0 1.5rem !important; display: grid; gap: 0.9rem; }
