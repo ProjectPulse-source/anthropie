@@ -4,21 +4,21 @@
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Jeunes hospitalisés pour un</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">geste auto-infligé, 2012-2025</text>
 <text x="0" y="64" font-size="13.5" fill="#55524f">Patients hospitalisés dans l'année,</text>
-<text x="0" y="82" font-size="13.5" fill="#55524f">pour 100 000 habitants de 18 à 24 ans</text>
+<text x="0" y="82" font-size="13.5" fill="#55524f">pour 100 000 habitants de 18 à 24 ans</text>
 <text x="0" y="100" font-size="13.5" fill="#55524f">du même sexe, étudiants ou non</text>
 <line x1="34" y1="330.0" x2="292" y2="330.0" stroke="#dcd8d3" stroke-width="1"/>
-<text x="30" y="334.5" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
+<text x="30" y="334.5" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="34" y1="280.0" x2="292" y2="280.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="284.5" font-size="13.5" fill="#96928f" text-anchor="end">100</text>
+<text x="30" y="284.5" font-size="13.5" fill="#6f6c66" text-anchor="end">100</text>
 <line x1="34" y1="230.0" x2="292" y2="230.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="234.5" font-size="13.5" fill="#96928f" text-anchor="end">200</text>
+<text x="30" y="234.5" font-size="13.5" fill="#6f6c66" text-anchor="end">200</text>
 <line x1="34" y1="180.0" x2="292" y2="180.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="184.5" font-size="13.5" fill="#96928f" text-anchor="end">300</text>
+<text x="30" y="184.5" font-size="13.5" fill="#6f6c66" text-anchor="end">300</text>
 <line x1="34" y1="130.0" x2="292" y2="130.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="134.5" font-size="13.5" fill="#96928f" text-anchor="end">400</text>
-<text x="34.0" y="348" font-size="13.5" fill="#96928f" text-anchor="start">2012</text>
-<text x="172.9" y="348" font-size="13.5" fill="#96928f" text-anchor="middle">2019</text>
-<text x="292.0" y="348" font-size="13.5" fill="#96928f" text-anchor="end">2025</text>
+<text x="30" y="134.5" font-size="13.5" fill="#6f6c66" text-anchor="end">400</text>
+<text x="34.0" y="348" font-size="13.5" fill="#6f6c66" text-anchor="start">2012</text>
+<text x="172.9" y="348" font-size="13.5" fill="#6f6c66" text-anchor="middle">2019</text>
+<text x="292.0" y="348" font-size="13.5" fill="#6f6c66" text-anchor="end">2025</text>
 <path d="M34.0,258.6 L53.8,267.4 L73.7,266.2 L93.5,268.8 L113.4,271.4 L133.2,270.0 L153.1,265.8 L172.9,264.9 L192.8,270.5 L212.6,266.4 L232.5,265.2 L252.3,264.6 L272.2,259.5 L292.0,255.3" fill="none" stroke="#184f95" stroke-width="2.6" stroke-linejoin="round"/>
 <circle cx="172.9" cy="264.9" r="3.4" fill="#184f95"/>
 <circle cx="292.0" cy="255.3" r="3.4" fill="#184f95"/>
@@ -47,6 +47,6 @@
 <text class="pied-note" x="0" y="631.0" font-size="13.5" fill="#55524f">autres jeunes. 2020 : moins de</text>
 <text class="pied-note" x="0" y="648.0" font-size="13.5" fill="#55524f">patients hospitalisés pendant</text>
 <text class="pied-note" x="0" y="665.0" font-size="13.5" fill="#55524f">l'épidémie de covid.</text>
-<text class="pied-licence" x="0" y="686.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="703.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="686.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="703.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

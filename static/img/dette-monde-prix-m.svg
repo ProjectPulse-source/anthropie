@@ -7,24 +7,24 @@
 <text x="16.0" y="88.0" font-size="13.5" fill="#52514e" text-anchor="start">zone euro</text>
 <rect x="145.5" y="78.5" width="9.0" height="9.0" fill="#eb6834"/>
 <text x="160.0" y="88.0" font-size="13.5" fill="#52514e" text-anchor="start">hors zone euro</text>
-<text x="0.0" y="110.0" font-size="13.5" fill="#898781" text-anchor="start">Taux implicite du stock</text>
+<text x="0.0" y="110.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Taux implicite du stock</text>
 <line x1="40" y1="354.0" x2="292" y2="354.0" stroke="#c3c2b7"/>
-<text x="35.0" y="359.0" font-size="13.5" fill="#898781" text-anchor="end">0 %</text>
+<text x="35.0" y="359.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0 %</text>
 <line x1="40" y1="315.7" x2="292" y2="315.7" stroke="#e1e0d9"/>
-<text x="35.0" y="320.7" font-size="13.5" fill="#898781" text-anchor="end">1 %</text>
+<text x="35.0" y="320.7" font-size="13.5" fill="#6f6c66" text-anchor="end">1 %</text>
 <line x1="40" y1="277.3" x2="292" y2="277.3" stroke="#e1e0d9"/>
-<text x="35.0" y="282.3" font-size="13.5" fill="#898781" text-anchor="end">2 %</text>
+<text x="35.0" y="282.3" font-size="13.5" fill="#6f6c66" text-anchor="end">2 %</text>
 <line x1="40" y1="239.0" x2="292" y2="239.0" stroke="#e1e0d9"/>
-<text x="35.0" y="244.0" font-size="13.5" fill="#898781" text-anchor="end">3 %</text>
+<text x="35.0" y="244.0" font-size="13.5" fill="#6f6c66" text-anchor="end">3 %</text>
 <line x1="40" y1="200.7" x2="292" y2="200.7" stroke="#e1e0d9"/>
-<text x="35.0" y="205.7" font-size="13.5" fill="#898781" text-anchor="end">4 %</text>
+<text x="35.0" y="205.7" font-size="13.5" fill="#6f6c66" text-anchor="end">4 %</text>
 <line x1="40" y1="162.3" x2="292" y2="162.3" stroke="#e1e0d9"/>
-<text x="35.0" y="167.3" font-size="13.5" fill="#898781" text-anchor="end">5 %</text>
+<text x="35.0" y="167.3" font-size="13.5" fill="#6f6c66" text-anchor="end">5 %</text>
 <line x1="40" y1="124.0" x2="292" y2="124.0" stroke="#e1e0d9"/>
-<text x="35.0" y="129.0" font-size="13.5" fill="#898781" text-anchor="end">6 %</text>
-<text x="40.0" y="373.0" font-size="13.5" fill="#898781" text-anchor="start">0 %</text>
-<text x="166.0" y="373.0" font-size="13.5" fill="#898781" text-anchor="middle">7 %</text>
-<text x="292.0" y="373.0" font-size="13.5" fill="#898781" text-anchor="end">14 %</text>
+<text x="35.0" y="129.0" font-size="13.5" fill="#6f6c66" text-anchor="end">6 %</text>
+<text x="40.0" y="373.0" font-size="13.5" fill="#6f6c66" text-anchor="start">0 %</text>
+<text x="166.0" y="373.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">7 %</text>
+<text x="292.0" y="373.0" font-size="13.5" fill="#6f6c66" text-anchor="end">14 %</text>
 <rect x="103.0" y="229.4" width="63.0" height="76.7" fill="none" stroke="#898781" stroke-width="1" stroke-dasharray="4 3"/>
 <circle cx="141.4" cy="267.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="181.4" y="210.8" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
@@ -70,8 +70,8 @@
 <line x1="181.8" y1="257.0" x2="201.7" y2="282.6" stroke="#52514e" stroke-width="1"/>
 <text x="202.6" y="294.9" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Croatie</text>
 <text x="202.6" y="294.9" font-size="13.5" fill="#0A0A0E" text-anchor="start">Croatie</text>
-<text x="0.0" y="398.0" font-size="13.5" fill="#898781" text-anchor="start">Inflation moyenne des trois années</text>
-<text x="0.0" y="416.0" font-size="13.5" fill="#898781" text-anchor="start">précédentes (IPCH)</text>
+<text x="0.0" y="398.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Inflation moyenne des trois années</text>
+<text x="0.0" y="416.0" font-size="13.5" fill="#6f6c66" text-anchor="start">précédentes (IPCH)</text>
 <text x="0.0" y="442.0" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">Taux implicite, 2025</text>
 <rect x="1.5" y="454.5" width="9.0" height="9.0" fill="#eb6834"/>
 <text x="18.0" y="464.0" font-size="13.5" fill="#52514e" text-anchor="start">Hongrie</text>
@@ -92,6 +92,6 @@
 <text class="pied-note" x="0" y="620.0" font-size="13.5" fill="#52514e">non causale. Cadre en tirets : zone</text>
 <text class="pied-note" x="0" y="637.0" font-size="13.5" fill="#52514e">agrandie ensuite. Sans nom faute de</text>
 <text class="pied-note" x="0" y="654.0" font-size="13.5" fill="#52514e">place : Slovaquie et Lettonie.</text>
-<text class="pied-licence" x="0" y="675.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="692.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="675.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="692.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

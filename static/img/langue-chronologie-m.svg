@@ -27,7 +27,7 @@
 <line x1="202.7" y1="484" x2="202.7" y2="504" stroke="#55524f" stroke-width="1.4"/>
 <rect x="202.7" y="532" width="91.3" height="20" fill="#f1efec"/>
 <line x1="202.7" y1="532" x2="202.7" y2="552" stroke="#55524f" stroke-width="1.4"/>
-<text x="0" y="238" font-size="14" fill="#26262f">PIRLS, lecture <tspan fill="#96928f">· CM1</tspan></text>
+<text x="0" y="238" font-size="14" fill="#26262f">PIRLS, lecture <tspan fill="#6f6c66">· CM1</tspan></text>
 <line x1="118.4" y1="254" x2="153.5" y2="254" stroke="#eb6834" stroke-width="4.5" stroke-dasharray="7 4"/>
 <line x1="153.5" y1="254" x2="188.6" y2="254" stroke="#eb6834" stroke-width="4.5" stroke-dasharray="7 4"/>
 <line x1="188.6" y1="254" x2="223.8" y2="254" stroke="#eb6834" stroke-width="6"/>
@@ -37,7 +37,7 @@
 <circle cx="188.6" cy="254" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="223.8" cy="254" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="258.9" cy="254" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="286" font-size="14" fill="#26262f">Dictée (erreurs en hausse = recul) <tspan fill="#96928f">· CM2</tspan></text>
+<text x="0" y="286" font-size="14" fill="#26262f">Dictée (erreurs en hausse = recul) <tspan fill="#6f6c66">· CM2</tspan></text>
 <line x1="20.0" y1="302" x2="160.5" y2="302" stroke="#eb6834" stroke-width="6"/>
 <line x1="160.5" y1="302" x2="216.7" y2="302" stroke="#eb6834" stroke-width="4.5" stroke-dasharray="7 4"/>
 <line x1="216.7" y1="302" x2="258.9" y2="302" stroke="#eb6834" stroke-width="4.5" stroke-dasharray="7 4"/>
@@ -45,13 +45,13 @@
 <circle cx="160.5" cy="302" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="216.7" cy="302" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="258.9" cy="302" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="334" font-size="14" fill="#26262f">Lecture, épreuves de 1987 <tspan fill="#96928f">· CM2</tspan></text>
+<text x="0" y="334" font-size="14" fill="#26262f">Lecture, épreuves de 1987 <tspan fill="#6f6c66">· CM2</tspan></text>
 <line x1="20.0" y1="350" x2="90.3" y2="350" stroke="#8a8781" stroke-width="6"/>
 <line x1="90.3" y1="350" x2="160.5" y2="350" stroke="#eb6834" stroke-width="6"/>
 <circle cx="20.0" cy="350" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="90.3" cy="350" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="160.5" cy="350" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="382" font-size="14" fill="#26262f">CEDRE, maîtrise de la langue <tspan fill="#96928f">· CM2</tspan></text>
+<text x="0" y="382" font-size="14" fill="#26262f">CEDRE, maîtrise de la langue <tspan fill="#6f6c66">· CM2</tspan></text>
 <line x1="132.4" y1="398" x2="174.6" y2="398" stroke="#8a8781" stroke-width="6"/>
 <line x1="174.6" y1="398" x2="216.7" y2="398" stroke="#8a8781" stroke-width="6"/>
 <line x1="216.7" y1="398" x2="258.9" y2="398" stroke="#184f95" stroke-width="6"/>
@@ -59,28 +59,28 @@
 <circle cx="174.6" cy="398" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="216.7" cy="398" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="258.9" cy="398" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="430" font-size="14" fill="#26262f">PISA, compréhension de l'écrit <tspan fill="#96928f">· 15 ans</tspan></text>
+<text x="0" y="430" font-size="14" fill="#26262f">PISA, compréhension de l'écrit <tspan fill="#6f6c66">· 15 ans</tspan></text>
 <line x1="111.4" y1="446" x2="195.7" y2="446" stroke="#8a8781" stroke-width="6"/>
 <line x1="195.7" y1="446" x2="287.0" y2="446" stroke="#eb6834" stroke-width="6"/>
 <circle cx="111.4" cy="446" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="195.7" cy="446" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="287.0" cy="446" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="478" font-size="14" fill="#26262f">PISA, temps de lecture-plaisir <tspan fill="#96928f">· 15 ans</tspan></text>
+<text x="0" y="478" font-size="14" fill="#26262f">PISA, temps de lecture-plaisir <tspan fill="#6f6c66">· 15 ans</tspan></text>
 <line x1="111.4" y1="494" x2="174.6" y2="494" stroke="#eb6834" stroke-width="6"/>
 <line x1="174.6" y1="494" x2="237.8" y2="494" stroke="#8a8781" stroke-width="6"/>
 <circle cx="111.4" cy="494" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="174.6" cy="494" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="237.8" cy="494" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="526" font-size="14" fill="#26262f">20 livres ou plus dans l'année <tspan fill="#96928f">· 15-24 ans</tspan></text>
+<text x="0" y="526" font-size="14" fill="#26262f">20 livres ou plus dans l'année <tspan fill="#6f6c66">· 15-24 ans</tspan></text>
 <line x1="27.1" y1="542" x2="90.3" y2="542" stroke="#eb6834" stroke-width="4.5" stroke-dasharray="7 4"/>
 <line x1="90.3" y1="542" x2="167.6" y2="542" stroke="#eb6834" stroke-width="4.5" stroke-dasharray="7 4"/>
 <circle cx="27.1" cy="542" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="90.3" cy="542" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="167.6" cy="542" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="41.1" y="580" font-size="13.5" fill="#96928f" text-anchor="middle">1990</text>
-<text x="111.4" y="580" font-size="13.5" fill="#96928f" text-anchor="middle">2000</text>
-<text x="181.6" y="580" font-size="13.5" fill="#96928f" text-anchor="middle">2010</text>
-<text x="251.9" y="580" font-size="13.5" fill="#96928f" text-anchor="middle">2020</text>
+<text x="41.1" y="580" font-size="13.5" fill="#6f6c66" text-anchor="middle">1990</text>
+<text x="111.4" y="580" font-size="13.5" fill="#6f6c66" text-anchor="middle">2000</text>
+<text x="181.6" y="580" font-size="13.5" fill="#6f6c66" text-anchor="middle">2010</text>
+<text x="251.9" y="580" font-size="13.5" fill="#6f6c66" text-anchor="middle">2020</text>
 <text x="0" y="602" font-size="13.5" fill="#55524f">2013 : plus de la moitié des 12-17 ans</text>
 <text x="0" y="620" font-size="13.5" fill="#55524f">ont un smartphone (trait vertical)</text>
 <text x="0" y="654" font-size="15.5" font-weight="600" fill="#26262f">Les séries récentes</text>
@@ -92,30 +92,30 @@
 <line x1="86.0" y1="786" x2="86.0" y2="806" stroke="#55524f" stroke-width="1.4"/>
 <rect x="86.0" y="834" width="208.0" height="20" fill="#f1efec"/>
 <line x1="86.0" y1="834" x2="86.0" y2="854" stroke="#55524f" stroke-width="1.4"/>
-<text x="0" y="684" font-size="14" fill="#26262f">Évaluation de début de sixième <tspan fill="#96928f">· 6e</tspan></text>
+<text x="0" y="684" font-size="14" fill="#26262f">Évaluation de début de sixième <tspan fill="#6f6c66">· 6e</tspan></text>
 <line x1="150.0" y1="700" x2="214.0" y2="700" stroke="#184f95" stroke-width="4.5" stroke-dasharray="7 4"/>
 <line x1="214.0" y1="700" x2="278.0" y2="700" stroke="#eb6834" stroke-width="4.5" stroke-dasharray="7 4"/>
 <circle cx="150.0" cy="700" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="214.0" cy="700" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="278.0" cy="700" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="732" font-size="14" fill="#26262f">CEDRE, langue et littératie <tspan fill="#96928f">· 3e</tspan></text>
+<text x="0" y="732" font-size="14" fill="#26262f">CEDRE, langue et littératie <tspan fill="#6f6c66">· 3e</tspan></text>
 <line x1="118.0" y1="748" x2="214.0" y2="748" stroke="#8a8781" stroke-width="6"/>
 <circle cx="118.0" cy="748" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="214.0" cy="748" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="780" font-size="14" fill="#26262f">PISA, plaisir de lire (indice) <tspan fill="#96928f">· 15 ans</tspan></text>
+<text x="0" y="780" font-size="14" fill="#26262f">PISA, plaisir de lire (indice) <tspan fill="#6f6c66">· 15 ans</tspan></text>
 <line x1="22.0" y1="796" x2="166.0" y2="796" stroke="#eb6834" stroke-width="6"/>
 <circle cx="22.0" cy="796" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="166.0" cy="796" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="0" y="828" font-size="14" fill="#26262f">Test d'entrée, français (GT) <tspan fill="#96928f">· seconde</tspan></text>
+<text x="0" y="828" font-size="14" fill="#26262f">Test d'entrée, français (GT) <tspan fill="#6f6c66">· seconde</tspan></text>
 <line x1="182.0" y1="844" x2="214.0" y2="844" stroke="#184f95" stroke-width="4.5" stroke-dasharray="7 4"/>
 <line x1="214.0" y1="844" x2="278.0" y2="844" stroke="#eb6834" stroke-width="4.5" stroke-dasharray="7 4"/>
 <circle cx="182.0" cy="844" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="214.0" cy="844" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
 <circle cx="278.0" cy="844" r="3.6" fill="#ffffff" stroke="#55524f" stroke-width="1.5"/>
-<text x="38.0" y="882" font-size="13.5" fill="#96928f" text-anchor="middle">2010</text>
-<text x="118.0" y="882" font-size="13.5" fill="#96928f" text-anchor="middle">2015</text>
-<text x="198.0" y="882" font-size="13.5" fill="#96928f" text-anchor="middle">2020</text>
-<text x="278.0" y="882" font-size="13.5" fill="#96928f" text-anchor="middle">2025</text>
+<text x="38.0" y="882" font-size="13.5" fill="#6f6c66" text-anchor="middle">2010</text>
+<text x="118.0" y="882" font-size="13.5" fill="#6f6c66" text-anchor="middle">2015</text>
+<text x="198.0" y="882" font-size="13.5" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="278.0" y="882" font-size="13.5" fill="#6f6c66" text-anchor="middle">2025</text>
 <line x1="0" y1="902.0" x2="300" y2="902.0" stroke="#dcd8d3"/>
 <text x="0" y="923.0" font-size="13.5" fill="#55524f">DEPP (Notes d'Information) ; OCDE</text>
 <text x="0" y="940.0" font-size="13.5" fill="#55524f">(PISA 2025 ; 21st-Century Readers) ;</text>
@@ -125,6 +125,6 @@
 <text x="0" y="1012.0" font-size="13.5" fill="#55524f">seul le sens est montré. Plein : test</text>
 <text x="0" y="1029.0" font-size="13.5" fill="#55524f">publié (PISA 2000-2012 : test de</text>
 <text x="0" y="1046.0" font-size="13.5" fill="#55524f">l'auteur) ; tirets : sans test.</text>
-<text x="0" y="1067.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="1084.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="1067.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="1084.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

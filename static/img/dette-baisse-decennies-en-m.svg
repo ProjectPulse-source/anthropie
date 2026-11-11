@@ -8,8 +8,8 @@
 <text x="17" y="106.0" font-size="13.5" fill="#55524f">pushes the ratio up</text>
 <rect x="0" y="116.0" width="11" height="11" fill="#8a8781"/>
 <text x="17" y="126.0" font-size="13.5" fill="#55524f">pulls it down</text>
-<text x="0" y="145.0" font-size="13.5" fill="#96928f">In points of GDP cumulated over ten</text>
-<text x="0" y="164.0" font-size="13.5" fill="#96928f">years</text>
+<text x="0" y="145.0" font-size="13.5" fill="#6f6c66">In points of GDP cumulated over ten</text>
+<text x="0" y="164.0" font-size="13.5" fill="#6f6c66">years</text>
 <line x1="0" y1="176.0" x2="300" y2="176.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="198.0" font-size="15" font-weight="600" fill="#26262f">1996-2005: +10.4 points</text>
 <text x="0" y="216.0" font-size="13.5" fill="#184f95">57.8% end-1995 → 68.2% end-2005</text>
@@ -57,8 +57,8 @@
 <text class="pied-note" x="0" y="636.0" font-size="13.5" fill="#55524f">causal one: the three terms are not</text>
 <text class="pied-note" x="0" y="653.0" font-size="13.5" fill="#55524f">independent. Change computed on</text>
 <text class="pied-note" x="0" y="670.0" font-size="13.5" fill="#55524f">unrounded values; the sum of the</text>
-<text class="pied-note" x="0" y="687.0" font-size="13.5" fill="#55524f">contributions shown may differ by 0.1</text>
-<text class="pied-note" x="0" y="704.0" font-size="13.5" fill="#55524f">points.</text>
-<text class="pied-licence" x="0" y="725.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="742.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="687.0" font-size="13.5" fill="#55524f">contributions shown may differ by</text>
+<text class="pied-note" x="0" y="704.0" font-size="13.5" fill="#55524f">0.1 points.</text>
+<text class="pied-licence" x="0" y="725.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="742.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

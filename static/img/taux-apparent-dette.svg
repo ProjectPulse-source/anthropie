@@ -3,19 +3,19 @@
 <desc id="ta-d">Une courbe, en pourcentage par an. Le taux implicite de la dette descend de 6,5 % en 1996 à 1,2 % en 2020, son minimum sur la série, puis remonte à 2,0 % en 2025. La baisse court sur près de vingt-cinq ans ; la remontée sur les dernières années.</desc>
 <text x="46" y="22" font-size="13" font-weight="600" fill="#0A0A0E">Taux implicite de la dette publique, en % par an — indicateur du coût moyen du stock</text>
 <line x1="46" y1="280.0" x2="706" y2="280.0" stroke="#c3c2b7" stroke-width="1"/>
-<text x="40" y="284.0" font-size="11" fill="#898781" text-anchor="end">0</text>
+<text x="40" y="284.0" font-size="11" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="46" y1="213.1" x2="706" y2="213.1" stroke="#e1e0d9" stroke-width="1"/>
-<text x="40" y="217.1" font-size="11" fill="#898781" text-anchor="end">2</text>
+<text x="40" y="217.1" font-size="11" fill="#6f6c66" text-anchor="end">2</text>
 <line x1="46" y1="146.3" x2="706" y2="146.3" stroke="#e1e0d9" stroke-width="1"/>
-<text x="40" y="150.3" font-size="11" fill="#898781" text-anchor="end">4</text>
+<text x="40" y="150.3" font-size="11" fill="#6f6c66" text-anchor="end">4</text>
 <line x1="46" y1="79.4" x2="706" y2="79.4" stroke="#e1e0d9" stroke-width="1"/>
-<text x="40" y="83.4" font-size="11" fill="#898781" text-anchor="end">6</text>
-<text x="146.5" y="305" font-size="11" fill="#898781" text-anchor="middle">2000</text>
-<text x="255.8" y="305" font-size="11" fill="#898781" text-anchor="middle">2005</text>
-<text x="365.1" y="305" font-size="11" fill="#898781" text-anchor="middle">2010</text>
-<text x="474.3" y="305" font-size="11" fill="#898781" text-anchor="middle">2015</text>
-<text x="583.6" y="305" font-size="11" fill="#898781" text-anchor="middle">2020</text>
-<text x="692.9" y="305" font-size="11" fill="#898781" text-anchor="middle">2025</text>
+<text x="40" y="83.4" font-size="11" fill="#6f6c66" text-anchor="end">6</text>
+<text x="146.5" y="305" font-size="11" fill="#6f6c66" text-anchor="middle">2000</text>
+<text x="255.8" y="305" font-size="11" fill="#6f6c66" text-anchor="middle">2005</text>
+<text x="365.1" y="305" font-size="11" fill="#6f6c66" text-anchor="middle">2010</text>
+<text x="474.3" y="305" font-size="11" fill="#6f6c66" text-anchor="middle">2015</text>
+<text x="583.6" y="305" font-size="11" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="692.9" y="305" font-size="11" fill="#6f6c66" text-anchor="middle">2025</text>
 <path d="M59.1,63.0 L81.0,79.1 L102.8,90.5 L124.7,108.5 L146.5,109.8 L168.4,102.5 L190.2,103.8 L212.1,118.5 L233.9,130.2 L255.8,139.3 L277.7,146.3 L299.5,135.6 L321.4,129.2 L343.2,161.3 L365.1,175.7 L386.9,171.4 L408.8,179.7 L430.6,193.8 L452.5,201.1 L474.3,207.8 L496.2,213.5 L518.1,217.5 L539.9,218.5 L561.8,226.8 L583.6,238.5 L605.5,236.2 L627.3,219.8 L649.2,219.5 L671.0,215.1 L692.9,213.5" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="59.1" cy="63.0" r="4" fill="#eb6834"/>
 <text x="68.1" y="67.0" font-size="12" fill="#52514e" text-anchor="start">6,5 % en 1996</text>
@@ -25,6 +25,6 @@
 <text x="583.6" y="260.5" font-size="12" fill="#52514e" text-anchor="middle">1,2 % en 2020</text>
 <line x1="0" y1="344.0" x2="720" y2="344.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="359.0" font-size="11" fill="#52514e">Calcul sur séries Eurostat (gov_10a_main) et INSEE, 1996-2025</text>
-<text class="pied-note" x="0" y="373.0" font-size="11" fill="#52514e">Taux implicite = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour.</text>
-<text class="pied-licence" x="0" y="387.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
+<text class="pied-note" x="0" y="373.0" font-size="11" fill="#52514e">Taux implicite = intérêts de l'année / encours au 31 décembre précédent, non le taux d'emprunt du jour.</text>
+<text class="pied-licence" x="0" y="387.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/cout-de-la-dette-publique/</text>
 </svg>

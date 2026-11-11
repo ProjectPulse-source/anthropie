@@ -7,44 +7,44 @@
 <rect x="0" y="50" width="10" height="10" fill="#8a8781"/>
 <text x="14" y="59" font-size="11" fill="#55524f">effect of future changes in age-related spending</text>
 <line x1="230.0" y1="74" x2="230.0" y2="266" stroke="#dcd8d3" stroke-width="1.4"/>
-<text x="230.0" y="280" font-size="10" fill="#96928f" text-anchor="middle">0</text>
+<text x="230.0" y="280" font-size="11" fill="#6f6c66" text-anchor="middle">0</text>
 <line x1="342.5" y1="74" x2="342.5" y2="266" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="342.5" y="280" font-size="10" fill="#96928f" text-anchor="middle">1</text>
+<text x="342.5" y="280" font-size="11" fill="#6f6c66" text-anchor="middle">1</text>
 <line x1="455.0" y1="74" x2="455.0" y2="266" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="455.0" y="280" font-size="10" fill="#96928f" text-anchor="middle">2</text>
+<text x="455.0" y="280" font-size="11" fill="#6f6c66" text-anchor="middle">2</text>
 <line x1="567.5" y1="74" x2="567.5" y2="266" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="567.5" y="280" font-size="10" fill="#96928f" text-anchor="middle">3</text>
+<text x="567.5" y="280" font-size="11" fill="#6f6c66" text-anchor="middle">3</text>
 <line x1="680.0" y1="74" x2="680.0" y2="266" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="680.0" y="280" font-size="10" fill="#96928f" text-anchor="middle">4</text>
+<text x="680.0" y="280" font-size="11" fill="#6f6c66" text-anchor="middle">4</text>
 <text x="0" y="92" font-size="11.5" font-weight="600" fill="#26262f">Baseline scenario</text>
 <text x="0" y="107" font-size="11" fill="#55524f">S2: 3.1</text>
 <rect x="230.0" y="80" width="342.0" height="15" fill="#eb6834"/>
-<text x="576.0" y="91" font-size="10" font-weight="600" fill="#26262f">3.0</text>
+<text x="576.0" y="91" font-size="11" font-weight="600" fill="#26262f">3.0</text>
 <rect x="230.0" y="97" width="8.4" height="15" fill="#8a8781"/>
-<text x="242.4" y="108" font-size="10" font-weight="600" fill="#26262f">0.1</text>
+<text x="242.4" y="108" font-size="11" font-weight="600" fill="#26262f">0.1</text>
 <text x="0" y="142" font-size="11.5" font-weight="600" fill="#26262f">Lower productivity</text>
 <text x="0" y="157" font-size="11" fill="#55524f">S2: 3.8</text>
 <rect x="230.0" y="130" width="372.0" height="15" fill="#eb6834"/>
-<text x="606.0" y="141" font-size="10" font-weight="600" fill="#26262f">3.3</text>
+<text x="606.0" y="141" font-size="11" font-weight="600" fill="#26262f">3.3</text>
 <rect x="230.0" y="147" width="52.0" height="15" fill="#8a8781"/>
-<text x="286.0" y="158" font-size="10" font-weight="600" fill="#26262f">0.5</text>
+<text x="286.0" y="158" font-size="11" font-weight="600" fill="#26262f">0.5</text>
 <text x="0" y="192" font-size="11.5" font-weight="600" fill="#26262f">Health and long-term care risk</text>
 <text x="0" y="207" font-size="11" fill="#55524f">S2: 5.4</text>
 <rect x="230.0" y="180" width="340.5" height="15" fill="#eb6834"/>
-<text x="574.5" y="191" font-size="10" font-weight="600" fill="#26262f">3.0</text>
+<text x="574.5" y="191" font-size="11" font-weight="600" fill="#26262f">3.0</text>
 <rect x="230.0" y="197" width="268.3" height="15" fill="#8a8781"/>
-<text x="502.3" y="208" font-size="10" font-weight="600" fill="#26262f">2.4</text>
+<text x="502.3" y="208" font-size="11" font-weight="600" fill="#26262f">2.4</text>
 <text x="0" y="242" font-size="11.5" font-weight="600" fill="#26262f">Previous edition (2024)</text>
 <text x="0" y="257" font-size="11" fill="#55524f">S2: 3.4 · another set of projections</text>
 <rect x="230.0" y="230" width="375.1" height="15" fill="#eb6834"/>
-<text x="609.1" y="241" font-size="10" font-weight="600" fill="#26262f">3.3</text>
+<text x="609.1" y="241" font-size="11" font-weight="600" fill="#26262f">3.3</text>
 <rect x="230.0" y="247" width="6.4" height="15" fill="#8a8781"/>
-<text x="240.4" y="258" font-size="10" font-weight="600" fill="#26262f">0.1</text>
-<text x="680" y="295" font-size="10" fill="#96928f" text-anchor="end">points of GDP</text>
+<text x="240.4" y="258" font-size="11" font-weight="600" fill="#26262f">0.1</text>
+<text x="680" y="295" font-size="11" fill="#6f6c66" text-anchor="end">points of GDP</text>
 <line x1="0" y1="304.0" x2="720" y2="304.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="319.0" font-size="11" fill="#55524f">European Commission, Debt Sustainability Monitor 2025, country tables: S2 indicator and its two components, France</text>
 <text class="pied-note" x="0" y="333.0" font-size="11" fill="#55524f">Current pension spending is in the initial position; the second term measures only the projected change in age-related</text>
 <text class="pied-note" x="0" y="347.0" font-size="11" fill="#55524f">spending. The previous edition is another set of projections, not an observed change. Projections conditional on the</text>
-<text class="pied-note" x="0" y="361.0" font-size="11" fill="#55524f">Commission's assumptions (2024 Ageing Report, 2023 pension reform applied).</text>
-<text class="pied-licence" x="0" y="375.0" font-size="11" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-future-generations/</text>
+<text class="pied-note" x="0" y="361.0" font-size="11" fill="#55524f">Commission's assumptions (2024 Ageing Report, 2023 pension reform applied).</text>
+<text class="pied-licence" x="0" y="375.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-future-generations/</text>
 </svg>

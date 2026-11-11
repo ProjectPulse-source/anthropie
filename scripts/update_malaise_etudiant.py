@@ -459,7 +459,8 @@ def affichage(c: dict) -> dict:
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE = "#184f95", "#eb6834"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+# MUTED ne colore que du texte (graduations, années, licence) : encre atténuée de l'organe commun, jamais recopiée.
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
 FS_MIN = pied_figure.POLICE_M
 LIC_FIG = "Calcul Stéphane Lalut, licence CC BY 4.0 · stephane-lalut.com/les-etudiants-vont-ils-plus-mal/"
 LIC_FIG_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"
@@ -543,9 +544,9 @@ def fig_hospit(c: dict, A: dict) -> str:
     for gv in range(0, VMAX + 1, 100):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>'
                  % (X0, Y(gv), X1, Y(gv), GRID, 1 if gv == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3.5, MUTED, gv))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 4, MUTED, gv))
     for a in ans:
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 15, MUTED, a))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 16, MUTED, a))
     for serie, col in ((h, BLEU), (f, ORANGE)):
         d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(serie[str(a)])) for k, a in enumerate(ans))
         e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"/>' % (d, col))
@@ -655,10 +656,10 @@ def courbes(ident: str, t: dict, desc: str, series, vmax: float, pas: float, eti
         gv = k * pas
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>'
                  % (X0, Y(gv), X1, Y(gv), GRID, 1 if k == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>'
-                 % (X0 - 6, Y(gv) + 3.5, MUTED, lg.nombre(gv, 0)))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%s</text>'
+                 % (X0 - 6, Y(gv) + 4, MUTED, lg.nombre(gv, 0)))
     for a in ans:
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 15, MUTED, a))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 16, MUTED, a))
     trait = ' stroke-dasharray="6 4"' if tirets else ""
     for serie, col in series:
         pts = sorted(int(a) for a in serie)

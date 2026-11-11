@@ -138,7 +138,7 @@ Les enquêtes auprès des lycéens disent la même chose sous une autre forme. L
 
 <figure class="figure-ciseau">
   <picture>
-    <source media="screen and (max-width: 899px)" srcset="/img/etudiants-lycee-m.svg" width="300" height="665">
+    <source media="screen and (max-width: 899px)" srcset="/img/etudiants-lycee-m.svg" width="300" height="682">
     <img src="/img/etudiants-lycee.svg" alt="Deux séries reliées en tirets, enquêtes de 2018, 2022 et 2024, part des lycéens présentant un risque important de dépression, en pourcentage : lycéennes {{< etu-val "lyc_f_2018" >}} en 2018, {{< etu-val "lyc_f_2022" >}} en 2022, {{< etu-val "lyc_f_2024" >}} en 2024 ; lycéens (garçons) {{< etu-val "lyc_g_2018" >}} en 2018, {{< etu-val "lyc_g_2022" >}} en 2022, {{< etu-val "lyc_g_2024" >}} en 2024." width="720" height="375" loading="lazy">
   </picture>
   <figcaption>Risque important de dépression des lycéens, par sexe (Santé publique France, EnCLASS).</figcaption>

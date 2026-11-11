@@ -91,11 +91,11 @@
 <circle cx="40.1" cy="807.0" r="4.6" fill="#ffffff" stroke="#184f95" stroke-width="2.2"/>
 <line x1="6" y1="835" x2="290" y2="835" stroke="#dcd8d3"/>
 <line x1="6.0" y1="835" x2="6.0" y2="840" stroke="#96928f"/>
-<text x="6.0" y="856" font-size="13.5" fill="#96928f" text-anchor="start">0 %</text>
+<text x="6.0" y="856" font-size="13.5" fill="#6f6c66" text-anchor="start">0 %</text>
 <line x1="148.0" y1="835" x2="148.0" y2="840" stroke="#96928f"/>
-<text x="148.0" y="856" font-size="13.5" fill="#96928f" text-anchor="middle">50 %</text>
+<text x="148.0" y="856" font-size="13.5" fill="#6f6c66" text-anchor="middle">50 %</text>
 <line x1="290.0" y1="835" x2="290.0" y2="840" stroke="#96928f"/>
-<text x="290.0" y="856" font-size="13.5" fill="#96928f" text-anchor="end">100 %</text>
+<text x="290.0" y="856" font-size="13.5" fill="#6f6c66" text-anchor="end">100 %</text>
 <text x="148.0" y="875" font-size="13.5" fill="#55524f" text-anchor="middle">Taux d'accès l'année suivante</text>
 <line x1="0" y1="889.0" x2="300" y2="889.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="910.0" font-size="13.5" fill="#55524f">Ministère chargé de l'enseignement</text>
@@ -113,6 +113,6 @@
 <text class="pied-note" x="0" y="1118.0" font-size="13.5" fill="#55524f">barres décrivent le passé, pas le taux</text>
 <text class="pied-note" x="0" y="1135.0" font-size="13.5" fill="#55524f">futur d'une formation ni les chances</text>
 <text class="pied-note" x="0" y="1152.0" font-size="13.5" fill="#55524f">d'un candidat.</text>
-<text class="pied-licence" x="0" y="1173.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1190.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="1173.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1190.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

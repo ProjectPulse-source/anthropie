@@ -484,9 +484,9 @@ def affichage(r: dict, base: dict, lang: str) -> dict:
 # ------------------------------------------------------------------ figures (charte des dossiers du site)
 W = 720
 BLEU = "#184f95"
-INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
+INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", pied_figure.ENCRE_ATTENUEE, "#e1e0d9"   # MUTED : texte seulement
 # Contour des pastilles vides (contre-expertise du rendu, 11/10/2026 : trop pâle en GRID) : MUTED, contraste 3,6:1 sur blanc.
-VIDE = MUTED
+VIDE = "#898781"   # gris des marques : distinct de MUTED depuis le 11/11/2026, le texte seul a pris l'encre commune
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 LICENCE = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL,
            "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}

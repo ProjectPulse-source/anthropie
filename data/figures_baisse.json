@@ -6,7 +6,7 @@
    "titre": "France : ce qui a fait monter ou baisser le poids de la dette, décennie par décennie",
    "montre": "De décennie en décennie, le terme qui fait monter la dette française change ; sur la dernière, taux et croissance l'ont fait baisser et les déficits primaires l'ont fait monter davantage.",
    "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "Décomposition comptable, non causale : les trois termes ne sont pas indépendants. Variation calculée sur les valeurs non arrondies ; la somme des contributions affichées peut différer de 0,1 point."
+   "precaution": "Décomposition comptable, non causale : les trois termes ne sont pas indépendants. Variation calculée sur les valeurs non arrondies ; la somme des contributions affichées peut différer de 0,1 point."
   },
   {
    "id": "comparaison",
@@ -14,7 +14,7 @@
    "titre": "Sept pays à plus de 90 % de dette fin 2015 : ce qui a fait bouger leur ratio en dix ans",
    "montre": "Parmi les pays partis d'une dette au moins aussi élevée, l'effet des taux et de la croissance a fait baisser le ratio partout ; là où le ratio a nettement baissé, il a pesé environ deux fois plus que les excédents primaires.",
    "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), 2016-2025 ; pays triés par variation du ratio",
-   "precaution": "Grèce, Chypre et Portugal ont reçu des financements officiels (2010-2018). Comparaison comptable : elle n'attribue la baisse à aucune politique. Variation calculée sur les valeurs non arrondies ; la somme des contributions affichées peut différer de 0,1 point."
+   "precaution": "Grèce, Chypre et Portugal ont reçu des financements officiels (2010-2018). Comparaison comptable : elle n'attribue la baisse à aucune politique. Variation calculée sur les valeurs non arrondies ; la somme des contributions affichées peut différer de 0,1 point."
   },
   {
    "id": "stabilisant",
@@ -22,7 +22,7 @@
    "titre": "France : le solde primaire observé et celui qui aurait stabilisé la dette",
    "montre": "Le solde primaire qui stabilise la dette change chaque année avec les taux et la croissance ; le solde observé est resté le plus souvent en dessous.",
    "source": "Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin d'année précédente, hors autres ajustements (flux-stock). Un repère comptable de l'année, non un objectif."
+   "precaution": "En % du PIB ; solde stabilisant = (taux implicite − croissance nominale) / (1 + croissance) × ratio dette/PIB de fin d'année précédente, hors autres ajustements (flux-stock). Un repère comptable de l'année, non un objectif."
   },
   {
    "id": "zone-euro",
@@ -40,7 +40,7 @@
    "titre": "France: what pushed the weight of debt up or down, decade by decade",
    "montre": "From one decade to the next, the term pushing French debt up changes; over the last one, interest and growth pulled it down and primary deficits pushed it up by more.",
    "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "An accounting decomposition, not a causal one: the three terms are not independent. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 points."
+   "precaution": "An accounting decomposition, not a causal one: the three terms are not independent. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 points."
   },
   {
    "id": "comparaison",
@@ -48,7 +48,7 @@
    "titre": "Seven countries with debt above 90% of GDP at end-2015: what moved their ratio in ten years",
    "montre": "Among countries that started from debt at least as high, the interest-growth effect pulled the ratio down everywhere; where the ratio fell markedly, it weighed about twice as much as primary surpluses.",
    "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), 2016-2025; countries sorted by change in the debt ratio",
-   "precaution": "Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison: it attributes the fall to no policy. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 points."
+   "precaution": "Greece, Cyprus and Portugal received official financing (2010-2018). An accounting comparison: it attributes the fall to no policy. Change computed on unrounded values; the sum of the contributions shown may differ by 0.1 points."
   },
   {
    "id": "stabilisant",
@@ -56,7 +56,7 @@
    "titre": "France: the observed primary balance and the one that would have stabilised the debt",
    "montre": "The primary balance that stabilises the debt changes every year with interest rates and growth; the observed balance mostly stayed below it.",
    "source": "Eurostat gov_10dd_edpt1 (debt, GDP), gov_10a_main (B9, D41PAY), France, 1996-2025",
-   "precaution": "In % of GDP; stabilising balance = (implicit interest rate − nominal growth) / (1 + growth) × debt-to-GDP ratio at the end of the previous year, excluding other adjustments (stock-flow). An accounting marker for the year, not a target."
+   "precaution": "In % of GDP; stabilising balance = (implicit interest rate − nominal growth) / (1 + growth) × debt-to-GDP ratio at the end of the previous year, excluding other adjustments (stock-flow). An accounting marker for the year, not a target."
   },
   {
    "id": "zone-euro",

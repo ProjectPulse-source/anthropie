@@ -632,7 +632,8 @@ def votes(tout: dict, fen: dict, sw: dict) -> dict:
 # ------------------------------------------------------------------ figures
 W = 720
 BLEU, GRIS, GRIS_CLAIR = "#184f95", "#8a8f98", "#c9cdd3"
-INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
+# MUTED ne colore que du texte (décomptes des États, licence) : encre atténuée de l'organe commun, jamais recopiée.
+INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", pf.ENCRE_ATTENUEE, "#e1e0d9"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 LANG = "fr"
@@ -709,7 +710,7 @@ def fig_votes(tout: dict, A: dict) -> str:
         wc, wa = wmax * contre / vmax, wmax * abst / vmax
         e.append('<rect x="%d" y="%d" width="%.1f" height="%d" fill="%s"/>' % (x0, y, wc, hb, col))
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (x0 + wc, y, wa, hb, "#9db5d8" if estfr else GRIS_CLAIR))
-        e.append(txt(x0 + wc + wa + 6, y + 11, "%d · %d" % (contre, abst), 10, INK if estfr else MUTED, "start", "600" if estfr else None))
+        e.append(txt(x0 + wc + wa + 6, y + 11, "%d · %d" % (contre, abst), pf.POLICE_MIN, INK if estfr else MUTED, "start", "600" if estfr else None))
     return pf.pied(e, H + 2, W, _pied_blocs(A), GRID)
 
 

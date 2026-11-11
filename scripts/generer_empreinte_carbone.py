@@ -21,7 +21,7 @@ Chaque qualificatif de la fiche et du corrigé est une garde. SVG et PNG ensembl
 
 Usage : python scripts/generer_empreinte_carbone.py [--check]
 Sorties : data/ et static/empreinte_carbone.json (bloc affichage), static/empreinte_carbone.csv,
-          static/img/empreinte-carbone-deux-totaux.svg + .png
+          static/img/empreinte-carbone-deux-totaux.svg + .png, et sa version téléphone -m.svg + -m.png
 """
 from __future__ import annotations
 
@@ -38,6 +38,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import generer_parcours_licence as gl  # noqa: E402
 import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
 import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
+import pied_figure  # noqa: E402  -- polices minimales, version téléphone, parité des deux versions (organe commun)
 import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -62,6 +63,35 @@ COULEUR = {"menages": (gl.GRIS_CLAIR, gl.INK), "interieure": (gl.BLEU, "#ffffff"
            "importee": (gl.ORANGE, gl.INK)}
 NOM = {"menages": ("Émissions directes", "des ménages"), "interieure": ("Production en France", "pour la demande française"),
        "exportee": ("Production en France", "exportée"), "importee": ("Importations", "pour la demande française")}
+# Un seul texte pour la figure détaillée et sa version téléphone : titre, sous-titre, totaux, description, cartouche.
+TITRE = "Émissions françaises et empreinte carbone en %s : deux totaux, trois postes chacun"
+SOUS_TITRE = "Gaz à effet de serre, en millions de tonnes équivalent CO₂ (Mt CO₂ éq), France, %s."
+
+
+def barres(d: dict) -> list:
+    """Les deux totaux : (nom sur deux lignes, postes dans l'ordre des segments, total)."""
+    return [(("Émissions des unités", "résidentes françaises"), ["menages", "interieure", "exportee"], d["emissions"]),
+            (("Empreinte carbone", "de la France"), ["menages", "interieure", "importee"], d["empreinte"])]
+
+
+def description(A: dict) -> str:
+    return ("Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO₂. Émissions des unités résidentes "
+            "françaises : %s, dont %s émises directement par les ménages, %s par la production en France destinée à la demande "
+            "française et %s par la production en France exportée. Empreinte carbone : %s, dont les mêmes %s et %s, et %s "
+            "d'émissions importées pour la demande française."
+            % (A["emissions"], A["menages"], A["interieure"], A["exportee"], A["empreinte"], A["menages"], A["interieure"], A["importee"]))
+
+
+def cartouche(A: dict) -> list:
+    """Source, notes et licence."""
+    return [("Insee et SDES, %s, figure 1 ; champ : France, CO₂, méthane, protoxyde d'azote et gaz fluorés" % EDITION, gl.INK2),
+            ("Émissions des unités résidentes : format des comptes d'émissions dans l'air, transport international des résidents compris ; "
+             "ce n'est pas le total de l'inventaire national.", gl.INK2),
+            ("Empreinte : estimation des émissions associées à la demande finale française, où qu'elles aient lieu ; hors émissions "
+             "des produits exportés.", gl.INK2),
+            ("Deux conventions de comptabilité : elles ne mesurent ni une délocalisation ni l'effet d'une politique.", gl.INK2),
+            ("Estimations révisées à chaque édition ; %s est provisoire. Valeurs arrondies au million de tonnes." % A["annee"], gl.INK2),
+            ("Figure Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, gl.MUTED)]
 
 
 SERIE3 = ("menages", "interieure", "importee", "empreinte")
@@ -201,60 +231,101 @@ def affichage(j: dict) -> tuple[dict, list[str]]:
 
 
 def figure(j: dict, A: dict) -> str:
-    """Deux barres horizontales à la même échelle : ce que chaque total additionne."""
+    """Deux barres horizontales à la même échelle : ce que chaque total additionne.
+
+    Mise en page du 11/11/2026 (aucun texte sous 11 px) : le nom de chaque total se lit AU-DESSUS de sa barre, qui prend
+    la largeur de la figure. À gauche de barres de 478 px, « Émissions directes » (97 px à 11 px) ne tenait pas dans le
+    segment des ménages (84 px), d'où des noms de postes à 8 et 9 px. Les noms gardent leurs deux lignes ; si un poste
+    devient trop étroit pour le sien, arrêt, plutôt qu'un nom qui déborde sur le segment voisin."""
     d = j["decomposition"]
     W = gl.W
-    X0, LARG, TOP, HB, PAS = 168, 478, 78, 62, 92
-    barres = [(("Émissions des unités", "résidentes françaises"), ["menages", "interieure", "exportee"], d["emissions"]),
-              (("Empreinte carbone", "de la France"), ["menages", "interieure", "importee"], d["empreinte"])]
-    NB_CART = 6
-    H = TOP + PAS + HB + 16 + 12 * (NB_CART - 3)
+    X0, LARG, TOP, HB, PAS = 0, 660, 78, 62, 100         # LARG : l'empreinte ; il reste 60 px à droite pour « = 571 »
+    FS, MARGE = pied_figure.POLICE_MIN, 4                 # noms des postes : police minimale, marge de chaque côté
+    BAS = TOP + PAS + HB                                  # bas de la seconde barre ; la hauteur est fixée par le pied
     ech = LARG / d["empreinte"]
-    titre = "Émissions françaises et empreinte carbone en %s : deux totaux, trois postes chacun" % A["annee"]
-    desc = ("Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO₂. Émissions des unités résidentes "
-            "françaises : %s, dont %s émises directement par les ménages, %s par la production en France destinée à la demande "
-            "française et %s par la production en France exportée. Empreinte carbone : %s, dont les mêmes %s et %s, et %s "
-            "d'émissions importées pour la demande française."
-            % (A["emissions"], A["menages"], A["interieure"], A["exportee"], A["empreinte"], A["menages"], A["interieure"], A["importee"]))
-    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" font-variant-numeric="tabular-nums" '
-         'aria-labelledby="ec-t ec-d" font-family="%s">' % (W, H + 52, gl.FONT),
-         '<title id="ec-t">%s</title><desc id="ec-d">%s</desc>' % (esc(titre), esc(desc)),
-         '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, H + 52),
+    titre = TITRE % A["annee"]
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="ec-t ec-d" font-family="%s">' % (W, gl.FONT),
+         '<title id="ec-t">%s</title><desc id="ec-d">%s</desc>' % (esc(titre), esc(description(A))),
+         '<rect width="%d" height="0" fill="#ffffff"/>' % W,
          '<text x="0" y="18" font-size="15" font-weight="600" fill="%s">%s</text>' % (gl.INK, esc(titre)),
-         '<text x="0" y="38" font-size="11" fill="%s">%s</text>'
-         % (gl.INK2, esc("Gaz à effet de serre, en millions de tonnes équivalent CO₂ (Mt CO₂ éq), France, %s." % A["annee"]))]
-    for n, (lib, postes, total) in enumerate(barres):
+         '<text x="0" y="38" font-size="11" fill="%s">%s</text>' % (gl.INK2, esc(SOUS_TITRE % A["annee"]))]
+    for n, (lib, postes, total) in enumerate(barres(d)):
         y = TOP + PAS * n
-        for k, mot in enumerate(lib):
-            e.append('<text x="%d" y="%.1f" font-size="11.5" fill="%s" text-anchor="end"%s>%s</text>'
-                     % (X0 - 10, y + HB / 2 - 2 + 14 * k, gl.INK, ' font-weight="600"' if k == 0 else "", esc(mot)))
+        e.append('<text x="%d" y="%d" font-size="11.5" fill="%s"><tspan font-weight="600">%s</tspan> %s</text>'
+                 % (X0, y - 8, gl.INK, esc(lib[0]), esc(lib[1])))
         x = float(X0)
         for cle in postes:
             w = d[cle] * ech
             fond, encre = COULEUR[cle]
+            # Largeur du nom estimée comme dans pied_figure.hors_cadre (0,52 em par caractère) : une estimation, que le
+            # rendu a confirmée à la création (police la plus large mesurée : 97 px pour 103 estimés).
+            besoin = max(0.52 * FS * len(mot) for mot in NOM[cle]) + 2 * MARGE
+            if besoin > w:
+                fail("figure : le nom du poste %s ne tient plus dans son segment (%.0f px pour %.0f)" % (cle, w, besoin))
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s" stroke="#ffffff" stroke-width="1.5"/>' % (x, y, w, HB, fond))
             e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s" text-anchor="middle">%s</text>'
                      % (x + w / 2, y + 22, encre, esc(fr(d[cle], 0))))
             for k, mot in enumerate(NOM[cle]):
                 e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="%s" text-anchor="middle">%s</text>'
-                         % (x + w / 2, y + 37 + 11 * k, "9" if w > 110 else "8", encre, esc(mot)))
+                         % (x + w / 2, y + 37 + 13 * k, FS, encre, esc(mot)))
             x += w
         e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s">= %s</text>' % (x + 8, y + HB / 2 + 5, gl.INK, esc(fr(total, 0))))
-    y0 = H + 4 - 12 * (NB_CART - 3)
-    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, gl.GRID))
-    cart = [("Insee et SDES, %s, figure 1 ; champ : France, CO₂, méthane, protoxyde d'azote et gaz fluorés" % EDITION, gl.INK2),
-            ("Émissions des unités résidentes : format des comptes d'émissions dans l'air, transport international des résidents compris ; "
-             "ce n'est pas le total de l'inventaire national.", gl.INK2),
-            ("Empreinte : estimation des émissions associées à la demande finale française, où qu'elles aient lieu ; hors émissions "
-             "des produits exportés.", gl.INK2),
-            ("Deux conventions de comptabilité : elles ne mesurent ni une délocalisation ni l'effet d'une politique.", gl.INK2),
-            ("Estimations révisées à chaque édition ; %s est provisoire. Valeurs arrondies au million de tonnes." % A["annee"], gl.INK2),
-            ("Figure Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, gl.MUTED)]
-    assert len(cart) == NB_CART
-    for k, (txt, col) in enumerate(cart):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(txt)))
-    e.append("</svg>")
-    return "\n".join(e)
+    return gl.pied_detaille(e, BAS + 20, cartouche(A))    # source, notes, licence : pied commun, 11 px, lignes coupées
+
+
+def figure_m(j: dict, A: dict) -> str:
+    """Version téléphone (300 de large, police 13,5 au moins), créée le 11/11/2026 : la figure était la seule du site
+    servie sans elle, et sa version détaillée tombait à 366 px de large sous 900 px d'écran (texte de 5,6 px).
+
+    Pour chaque total : son nom, sa barre empilée SANS texte dedans (le segment des ménages fait 42 px), le total au bout
+    de la barre comme dans la version détaillée, puis une ligne par poste -- pastille de la couleur du segment, nom sur
+    ses deux lignes, valeur en gras à droite. Les deux barres partent du même bord et ont la même échelle : les deux
+    postes communs s'alignent, l'écart se lit au troisième. Mêmes nombres, mêmes noms, mêmes couleurs que la version
+    détaillée ; la parité des nombres est contrôlée dans main (pied_figure.parite), qui lit les textes en gras : chaque
+    valeur est donc un <text> en gras à elle seule."""
+    d = j["decomposition"]
+    pf = pied_figure
+    FS, L = pf.POLICE_M, pf.LARGEUR_M
+    LARG, HB = 240, 18                                   # LARG : l'empreinte ; il reste 60 px à droite pour « = 571 »
+    ech = LARG / d["empreinte"]
+    # car=22 : quatre lignes égales (« … / trois postes chacun ») ; à 30, quatre lignes aussi, dont « chacun » seul.
+    e, y = pf.tete_mobile("ecm", TITRE % A["annee"], description(A), gl.INK, gl.FONT, car=22)
+    for ligne in pf.coupe(SOUS_TITRE % A["annee"], 38):
+        y += 17
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS, gl.INK2, esc(ligne)))
+    for n, (lib, postes, total) in enumerate(barres(d)):
+        if n:
+            y += 12
+            e.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="0.8"/>' % (y, L, y, gl.GRID))
+        y += 28
+        e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, gl.INK, esc(lib[0])))
+        y += 18
+        e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS, gl.INK, esc(lib[1])))
+        y += 10
+        x = 0.0
+        for cle in postes:
+            w = d[cle] * ech
+            e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s" stroke="#ffffff" stroke-width="1"/>'
+                     % (x, y, w, HB, COULEUR[cle][0]))
+            x += w
+        e.append('<text x="%.1f" y="%.1f" font-size="16" font-weight="600" fill="%s">= %s</text>'
+                 % (x + 8, y + HB / 2 + 5.5, gl.INK, esc(fr(total, 0))))
+        y += HB + 6
+        for cle in postes:
+            y += 22
+            e.append('<rect x="0" y="%d" width="10" height="10" fill="%s"/>' % (y - 10, COULEUR[cle][0]))
+            e.append('<text x="%d" y="%d" font-size="15" font-weight="600" fill="%s" text-anchor="end">%s</text>'
+                     % (L - 4, y, gl.INK, esc(fr(d[cle], 0))))
+            for k, mot in enumerate(NOM[cle]):
+                y += 17 if k else 0
+                e.append('<text x="15" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS, gl.INK, esc(mot)))
+    cart = cartouche(A)
+    # Notes réunies en un paragraphe et adresse courte, comme les versions téléphone de generer_parcours_licence.py
+    # (l'adresse complète sort du cadre de 300).
+    blocs = [(cart[0][0], gl.INK2, "pied-source"), (" ".join(t for t, _ in cart[1:-1]), gl.INK2, "pied-note"),
+             (cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), gl.MUTED, "pied-licence")]
+    return pf.pied_mobile(e, y + 20, blocs, gl.GRID)
 
 
 def csv_texte(j: dict) -> str:
@@ -281,10 +352,16 @@ def main() -> int:
         fail("la page affirme ce que les donnees ne soutiennent plus : " + " ; ".join(faux))
     log("%s : emissions %s Mt, empreinte %s Mt, dont importations %s ; depuis %s : emissions -%s %%, empreinte -%s %%"
         % (A["annee"], A["emissions"], A["empreinte"], A["importee"], A["annee_depart"], A["evol_emissions"], A["evol_empreinte"]))
-    if check:
-        log("--check : temoins et gardes passes (%d cles d'affichage), rien ecrit." % len(A))
-        return 0
+    # Figures construites avant --check : la garde des noms de postes (figure) et la parité de la version téléphone
+    # (chaque nombre dessiné au téléphone figure dans la description de la version détaillée) arrêtent aussi un essai.
     svg = figure(j, A)
+    svg_m = figure_m(j, A)
+    ecarts = pied_figure.parite(svg, svg_m, pied_figure.POLICE_M)
+    if ecarts:
+        fail("parite de la version telephone : " + " ; ".join(ecarts))
+    if check:
+        log("--check : temoins et gardes passes (%d cles d'affichage), parite de la figure telephone controlee, rien ecrit." % len(A))
+        return 0
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0 pour la compilation et la figure ; données Insee-SDES",
                         "source": "Insee et SDES, " + EDITION + ", fichier de données (figure 1, figure 3, tableau complémentaire 2)",
                         "champ": "France ; CO₂, CH₄, N₂O et gaz fluorés",
@@ -308,6 +385,8 @@ def main() -> int:
             if ancien and json.dumps(p2, sort_keys=True, ensure_ascii=False) == json.dumps(payload, sort_keys=True, ensure_ascii=False) \
                     and (OUT_IMG / (FIGURE + ".svg")).exists() and (OUT_IMG / (FIGURE + ".svg")).read_text(encoding="utf-8") == svg \
                     and (OUT_IMG / (FIGURE + ".png")).exists() and OUT_STATIC.exists() \
+                    and (OUT_IMG / (FIGURE + "-m.svg")).exists() and (OUT_IMG / (FIGURE + "-m.svg")).read_text(encoding="utf-8") == svg_m \
+                    and (OUT_IMG / (FIGURE + "-m.png")).exists() \
                     and OUT_CSV.exists() and OUT_CSV.read_text(encoding="utf-8-sig") == csv_texte(j):
                 log("Donnees et figure identiques : rien ecrit (releve_le conserve : %s)." % ancien)
                 return 0
@@ -323,7 +402,11 @@ def main() -> int:
     (OUT_IMG / (FIGURE + ".svg")).write_text(svg, encoding="utf-8", newline="\n")
     cairosvg.svg2png(url=str(OUT_IMG / (FIGURE + ".svg")), write_to=str(OUT_IMG / (FIGURE + ".png")), output_width=1440,
                      background_color="white")
-    log("Ecrit : data/ et static/empreinte_carbone.json, static/empreinte_carbone.csv, static/img/%s.svg + .png" % FIGURE)
+    (OUT_IMG / (FIGURE + "-m.svg")).write_text(svg_m, encoding="utf-8", newline="\n")
+    cairosvg.svg2png(url=str(OUT_IMG / (FIGURE + "-m.svg")), write_to=str(OUT_IMG / (FIGURE + "-m.png")), output_width=900,
+                     background_color="white")
+    log("Ecrit : data/ et static/empreinte_carbone.json, static/empreinte_carbone.csv, static/img/%s.svg + .png, "
+        "-m.svg + -m.png (version telephone)" % FIGURE)
     return 0
 
 

@@ -49,7 +49,10 @@ PAGE_URL = "stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/"
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
+# MUTED ne sert qu'au TEXTE (graduations, en-têtes, crédit) : encre atténuée de l'organe commun. Les marques grises
+# (barres, points) gardent GRIS ; une valeur écrite dans la couleur de sa série passe par encre(). Aucun texte d'une
+# figure détaillée sous pied_figure.POLICE_MIN (11), contrôle R6 et R7 de check-figures.
 LICENCE = "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
 DOM = ("lecture", "mathematiques", "sciences")
 LIB = {"lecture": "Compréhension de l'écrit", "mathematiques": "Culture mathématique", "sciences": "Culture scientifique"}
@@ -537,6 +540,12 @@ def tete(fid, titre, desc, h):
             '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(titre))]
 
 
+def encre(col):
+    """Couleur d'un TEXTE écrit dans la couleur de sa série : le gris de série (3,58:1 sur blanc, 3,26:1 sur une ligne
+    teintée) ne se lit pas en texte, il prend l'encre atténuée ; la marque (barre, point) garde GRIS."""
+    return MUTED if col == GRIS else col
+
+
 def pied(e, y0, source, note, licence=None):
     return pied_figure.pied(e, y0, W, [(source, INK2, "pied-source"), (note, INK2, "pied-note"),
                                        (licence or LICENCE, MUTED, "pied-licence")], GRID)
@@ -600,7 +609,7 @@ def fig_thermometres(c, A):
     e = tete("niv-t", t["titre"], desc, h + 52)
     cols = (0, 240, 395, 480, 545)
     for x, lib in zip(cols, ("Évaluation", "Élèves", "Période", "Variation", "Statut")):
-        e.append('<text x="%d" y="48" font-size="10.5" fill="%s" font-weight="600">%s</text>' % (x, MUTED, esc(lib)))
+        e.append('<text x="%d" y="48" font-size="11" fill="%s" font-weight="600">%s</text>' % (x, MUTED, esc(lib)))
     for i, (lib, pop, per, v, st) in enumerate(lignes):
         y = 60 + 34 * i
         if i % 2 == 0:
@@ -610,7 +619,7 @@ def fig_thermometres(c, A):
         e.append('<text x="%d" y="%d" font-size="11.5" fill="%s">%s</text>' % (cols[0] + 6, y + 21, INK, esc(lib)))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[1], y + 21, INK2, esc(pop)))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[2], y + 21, INK2, per))
-        e.append('<text x="%d" y="%d" font-size="11.5" fill="%s" font-weight="600">%s%s</text>' % (cols[3], y + 21, col, "+" if v > 0 else "", nb(v, 0)))
+        e.append('<text x="%d" y="%d" font-size="11.5" fill="%s" font-weight="600">%s%s</text>' % (cols[3], y + 21, encre(col), "+" if v > 0 else "", nb(v, 0)))
         e.append('<rect x="%d" y="%d" width="10" height="10" rx="5" fill="%s" stroke="%s" stroke-width="1.6"/>'
                  % (cols[4], y + 12, "#ffffff" if creux else col, col))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (cols[4] + 16, y + 21, INK, esc(st)))
@@ -647,18 +656,18 @@ def fig_composition(c, A):
     for k, (lib, col) in enumerate(SERIES_COMPO):
         x = (0, 120, 360)[k]
         e.append('<rect x="%d" y="32" width="10" height="10" fill="%s"/>' % (x, col))
-        e.append('<text x="%d" y="41" font-size="10.5" fill="%s">%s</text>' % (x + 14, INK2, esc(lib)))
+        e.append('<text x="%d" y="41" font-size="11" fill="%s">%s</text>' % (x + 14, INK2, esc(lib)))
     y_bas = 58 + 3 * 72
     for gv in range(0, vmax + 1, 10):
         e.append('<line x1="%.1f" y1="54" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.6"/>' % (sx(gv), sx(gv), y_bas, GRID))
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (sx(gv), y_bas + 14, MUTED, gv))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (sx(gv), y_bas + 14, MUTED, gv))
     for i, (lib, a, b, cj) in enumerate(B):
         y = 62 + 72 * i
         e.append('<text x="0" y="%d" font-size="11.5" fill="%s">%s</text>' % (y + 26, INK, esc(lib)))
         for k, (v, (_, col)) in enumerate(zip((a, b, cj), SERIES_COMPO)):
             yy = y + 20 * k
             e.append('<rect x="%d" y="%d" width="%.1f" height="16" fill="%s"/>' % (X0, yy, sx(v) - X0, col))
-            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" font-weight="600">%s</text>' % (sx(v) + 5, yy + 12, INK2 if col == GRIS_CLAIR else col, nb(v, 0)))
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" font-weight="600">%s</text>' % (sx(v) + 5, yy + 12, INK2 if col == GRIS_CLAIR else encre(col), nb(v, 0)))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -671,16 +680,16 @@ def fig_baisse(c, A):
                                                     A["math_v15"], A["math_med"], A["math_rang"], A["sci_v15"], A["sci_med"], A["sci_rang"]))
     h = 292
     e = tete("niv-b", t["titre"], desc, h + 52)
-    X0, X1 = 170, 700
+    X0, X1 = 190, 700     # 170 avant le 11/11/2026 : à 11 px, la ligne de rang (183 de large) traversait la graduation −70
     vmin, vmax = -70, 20
     sx = lambda v: X0 + (X1 - X0) * (v - vmin) / (vmax - vmin)
     TOP = 50
     for gv in range(vmin, vmax + 1, 10):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"/>'
                  % (sx(gv), TOP, sx(gv), TOP + 210, INK2 if gv == 0 else GRID, 1 if gv == 0 else 0.6))
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%s</text>'
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>'
                  % (sx(gv), TOP + 224, MUTED, ("+" if gv > 0 else "") + nb(gv, 0)))
-    e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">points de score, 2025 moins 2015</text>'
+    e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">points de score, 2025 moins 2015</text>'
              % ((X0 + X1) / 2, TOP + 238, MUTED))
     for i, d in enumerate(DOM):
         y = TOP + 34 + i * 70
@@ -701,9 +710,9 @@ def fig_baisse(c, A):
             e.append('<circle cx="%.1f" cy="%.1f" r="3" fill="%s" opacity="0.75"/>' % (sx(v), y + dy, GRIS))
         fr = n2["france"]
         e.append('<circle cx="%.1f" cy="%d" r="6" fill="%s" stroke="#ffffff" stroke-width="1.5"/>' % (sx(fr), y, ORANGE))
-        e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle" font-weight="600">France %s</text>'
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle" font-weight="600">France %s</text>'
                  % (sx(fr), y - 16, ORANGE, nb(fr, 0)))
-        e.append('<text x="0" y="%d" font-size="10" fill="%s">%sᵉ plus forte baisse estimée sur %s</text>' % (y + 20, INK2, n2["rang"], n2["n"]))
+        e.append('<text x="0" y="%d" font-size="11" fill="%s">%sᵉ plus forte baisse estimée sur %s</text>' % (y + 20, INK2, n2["rang"], n2["n"]))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -722,7 +731,7 @@ def fig_sommet(c, A):
     # légende
     for k, (lib, col, op) in enumerate((("France 2015", BLEU, 0.4), ("France 2025", BLEU, 1.0), ("OCDE 2015", GRIS, 0.4), ("OCDE 2025", GRIS, 1.0))):
         e.append('<rect x="%d" y="32" width="11" height="11" fill="%s" opacity="%s"/>' % (k * 120, col, op))
-        e.append('<text x="%d" y="42" font-size="10.5" fill="%s">%s</text>' % (k * 120 + 15, INK2, lib))
+        e.append('<text x="%d" y="42" font-size="11" fill="%s">%s</text>' % (k * 120 + 15, INK2, lib))
     panneaux = [("lecture", "bas", ("Lecture", "en difficulté")), ("lecture", "haut", ("Lecture", "meilleurs élèves")),
                 ("mathematiques", "bas", ("Mathématiques", "en difficulté")), ("mathematiques", "haut", ("Mathématiques", "meilleurs élèves"))]
     BAS, HMAX, vmax = 268, 170, 40.0
@@ -736,7 +745,7 @@ def fig_sommet(c, A):
             x = x0 + j * 36 + (8 if j >= 2 else 0)
             hh = HMAX * v / vmax
             e.append('<rect x="%d" y="%.1f" width="30" height="%.1f" fill="%s" opacity="%s"/>' % (x, BAS - hh, hh, col, op))
-            e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="middle">%s</text>' % (x + 15, BAS - hh - 4, INK, nb(v)))
+            e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (x + 15, BAS - hh - 4, INK, nb(v)))
         e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (x0, BAS, x0 + 160, BAS, GRID))
     return pied(e, h + 2, t["source"], t["note"])
 
@@ -754,7 +763,7 @@ def fig_seconde(c, A):
     for gv in range(vmin, vmax + 1, 5):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"/>'
                  % (sx(gv), TOP, sx(gv), TOP + 160, INK2 if gv == 0 else GRID, 1 if gv == 0 else 0.6))
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%s</text>'
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>'
                  % (sx(gv), TOP + 174, MUTED, ("+" if gv > 0 else "") + nb(gv, 0)))
     gen = c["gen"]
     lignes = []
@@ -769,7 +778,7 @@ def fig_seconde(c, A):
         e.append('<text x="0" y="%d" font-size="11.5" fill="%s">%s</text>' % (y + 15, INK, esc(lib)))
         x = min(sx(0), sx(v))
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="22" fill="%s"/>' % (x, y, abs(sx(v) - sx(0)), ORANGE if pisa else BLEU))
-        e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="%s">%s%s</text>'
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="%s">%s%s</text>'
                  % (sx(v) + (6 if v > 0 else -6), y + 15, INK, "start" if v > 0 else "end", "+" if v > 0 else "", nb(v, 0)))
     return pied(e, h + 2, t["source"], t["note"], CREDIT_SECONDE)
 
@@ -829,7 +838,7 @@ def fig_thermometres_m(c, A):
         e.append('<text x="0" y="%d" font-size="14.5" fill="%s">%s</text>' % (y, INK, esc(lib.strip())))
         y += 19
         e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s · %s</text>' % (y, FS_MIN, INK2, esc(pop), per))
-        e.append('<text x="%d" y="%d" font-size="16" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (WM, y, col, v))
+        e.append('<text x="%d" y="%d" font-size="16" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (WM, y, encre(col), v))
         y += 19
         e.append('<circle cx="6" cy="%d" r="5" fill="%s" stroke="%s" stroke-width="1.6"/>' % (y - 5, "#ffffff" if creux else col, col))
         e.append('<text x="18" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK, esc(st)))
@@ -898,7 +907,7 @@ def fig_composition_m(c, A):
         for v, (_, col) in zip((a, b, cj), SERIES_COMPO):
             y += 8
             e.append('<rect x="0" y="%d" width="%.1f" height="18" fill="%s"/>' % (y, sx(v), col))
-            e.append('<text x="%.1f" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (sx(v) + 6, y + 14, INK2 if col == GRIS_CLAIR else col, nb(v, 0)))
+            e.append('<text x="%.1f" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (sx(v) + 6, y + 14, INK2 if col == GRIS_CLAIR else encre(col), nb(v, 0)))
             y += 18
     return finir_m(e, y + 20, t["source"], t["note"])
 

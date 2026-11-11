@@ -10,27 +10,27 @@
 <text x="75.1" y="370" font-size="11" fill="#52514e" text-anchor="middle">avant l'euro</text>
 <line x1="375.8" y1="70" x2="375.8" y2="340" stroke="#898781" stroke-dasharray="3 3"/>
 <line x1="46" y1="340.0" x2="628" y2="340.0" stroke="#e1e0d9"/>
-<text x="40" y="344.0" font-size="11" fill="#898781" text-anchor="end">−1</text>
+<text x="40" y="344.0" font-size="11" fill="#6f6c66" text-anchor="end">−1</text>
 <line x1="46" y1="315.5" x2="628" y2="315.5" stroke="#c3c2b7"/>
-<text x="40" y="319.5" font-size="11" fill="#898781" text-anchor="end">0</text>
+<text x="40" y="319.5" font-size="11" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="46" y1="266.4" x2="628" y2="266.4" stroke="#e1e0d9"/>
-<text x="40" y="270.4" font-size="11" fill="#898781" text-anchor="end">2</text>
+<text x="40" y="270.4" font-size="11" fill="#6f6c66" text-anchor="end">2</text>
 <line x1="46" y1="217.3" x2="628" y2="217.3" stroke="#e1e0d9"/>
-<text x="40" y="221.3" font-size="11" fill="#898781" text-anchor="end">4</text>
+<text x="40" y="221.3" font-size="11" fill="#6f6c66" text-anchor="end">4</text>
 <line x1="46" y1="168.2" x2="628" y2="168.2" stroke="#e1e0d9"/>
-<text x="40" y="172.2" font-size="11" fill="#898781" text-anchor="end">6</text>
+<text x="40" y="172.2" font-size="11" fill="#6f6c66" text-anchor="end">6</text>
 <line x1="46" y1="119.1" x2="628" y2="119.1" stroke="#e1e0d9"/>
-<text x="40" y="123.1" font-size="11" fill="#898781" text-anchor="end">8</text>
+<text x="40" y="123.1" font-size="11" fill="#6f6c66" text-anchor="end">8</text>
 <line x1="46" y1="70.0" x2="628" y2="70.0" stroke="#e1e0d9"/>
-<text x="40" y="74.0" font-size="11" fill="#898781" text-anchor="end">10</text>
+<text x="40" y="74.0" font-size="11" fill="#6f6c66" text-anchor="end">10</text>
 <text x="46" y="60" font-size="11" fill="#52514e">écart de rendement à 10 ans avec l'Allemagne, en points</text>
-<text x="46.0" y="355" font-size="11" fill="#898781" text-anchor="start">1995</text>
-<text x="143.0" y="355" font-size="11" fill="#898781" text-anchor="middle">2000</text>
-<text x="240.0" y="355" font-size="11" fill="#898781" text-anchor="middle">2005</text>
-<text x="337.0" y="355" font-size="11" fill="#898781" text-anchor="middle">2010</text>
-<text x="434.0" y="355" font-size="11" fill="#898781" text-anchor="middle">2015</text>
-<text x="531.0" y="355" font-size="11" fill="#898781" text-anchor="middle">2020</text>
-<text x="628.0" y="355" font-size="11" fill="#898781" text-anchor="end">2025</text>
+<text x="46.0" y="355" font-size="11" fill="#6f6c66" text-anchor="start">1995</text>
+<text x="143.0" y="355" font-size="11" fill="#6f6c66" text-anchor="middle">2000</text>
+<text x="240.0" y="355" font-size="11" fill="#6f6c66" text-anchor="middle">2005</text>
+<text x="337.0" y="355" font-size="11" fill="#6f6c66" text-anchor="middle">2010</text>
+<text x="434.0" y="355" font-size="11" fill="#6f6c66" text-anchor="middle">2015</text>
+<text x="531.0" y="355" font-size="11" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="628.0" y="355" font-size="11" fill="#6f6c66" text-anchor="end">2025</text>
 <defs><clipPath id="me-clip"><rect x="46" y="68" width="582" height="272"/></clipPath></defs>
 <polyline points="46.0,67.3 65.4,113.9 84.8,210.4 104.2,219.5 123.6,271.0 143.0,294.8 162.4,303.2 181.8,307.1 201.2,310.5 220.6,310.1 240.0,309.6 259.4,307.8 278.8,308.6 298.2,295.3 317.6,267.6 337.0,159.6 356.4,-7.1 375.8,-200.0 395.2,107.3 414.6,173.8 434.0,90.4 453.4,112.5 472.8,176.5 492.2,222.4 511.6,245.7 531.0,271.8 550.4,284.8 569.8,257.8 589.2,276.9 608.6,290.2 628.0,296.3" fill="none" stroke="#184f95" stroke-width="1.1" clip-path="url(#me-clip)"/>
 <polyline points="46.0,183.9 65.4,237.4 84.8,285.5 104.2,307.8 123.6,309.6 143.0,307.6 162.4,305.9 181.8,309.3 201.2,311.0 220.6,310.1 240.0,310.3 259.4,308.3 278.8,308.8 298.2,298.3 317.6,288.7 337.0,283.5 356.4,246.5 375.8,217.5 395.2,248.0 414.6,273.0 434.0,285.8 453.4,281.1 472.8,271.5 492.2,261.2 511.6,261.5 531.0,274.2 550.4,286.5 569.8,265.9 589.2,270.0 608.6,281.3 628.0,290.9" fill="none" stroke="#184f95" stroke-width="1.8" clip-path="url(#me-clip)"/>
@@ -52,5 +52,5 @@
 <line x1="0" y1="402.0" x2="720" y2="402.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="417.0" font-size="11" fill="#52514e">Eurostat irt_lt_mcby_a (rendements de convergence à 10 ans des emprunts d'État)</text>
 <text class="pied-note" x="0" y="431.0" font-size="11" fill="#52514e">Taux de marché à 10 ans, non le taux implicite du stock. Comparateurs, non groupe de contrôle.</text>
-<text class="pied-licence" x="0" y="445.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
+<text class="pied-licence" x="0" y="445.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
 </svg>

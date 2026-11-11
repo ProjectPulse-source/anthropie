@@ -967,7 +967,10 @@ def tableaux_en(r: dict) -> dict:
 # ------------------------------------------------------------------ figures
 W = 720
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
+# MUTED ne colore que du texte (graduations, numéros de segment, licence) : encre atténuée de l'organe commun, jamais
+# recopiée. Les marques grises (barres, carrés de légende) gardent GRIS et GRIS_CLAIR.
+INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", pf.ENCRE_ATTENUEE, "#e1e0d9"
+FS_D = pf.POLICE_MIN      # plus petite police d'une figure détaillée (720 de large)
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 LICENCES_M = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
@@ -1005,8 +1008,8 @@ def legende(e, y, items) -> None:
     x = 0
     for col, lab in items:
         e.append('<rect x="%d" y="%d" width="11" height="11" fill="%s"/>' % (x, y - 9, col))
-        e.append(txt(x + 16, y, lab, 10, INK2))
-        x += 16 + 6.2 * len(lab) + 18
+        e.append(txt(x + 16, y, lab, FS_D, INK2))
+        x += 16 + 0.62 * FS_D * len(lab) + 18
 
 
 _SEG_FR, _SEG_EN = lg.lettres(len(SEGMENTS), "fr"), lg.lettres(len(SEGMENTS), "en")
@@ -1144,10 +1147,10 @@ def _barres(e, rows, x0, x1, y0, pas, vmax, graduations, moitie=False) -> None:
     X = lambda v: x0 + v / vmax * (x1 - x0)  # noqa: E731
     for v in graduations:
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(v), y0 - 4, X(v), y0 + pas * len(rows) + 2, GRID))
-        e.append(txt(X(v), y0 + pas * len(rows) + 16, nb(v), 9, MUTED, "middle"))
+        e.append(txt(X(v), y0 + pas * len(rows) + 16, nb(v), FS_D, MUTED, "middle"))
     for i, (lab, segs, etiq, n) in enumerate(rows):
         y = y0 + i * pas
-        e.append(txt(0, y + 15, lab, 10, INK))
+        e.append(txt(0, y + 15, lab, FS_D, INK))
         a = 0
         for v, col in segs:
             if v:
@@ -1155,11 +1158,13 @@ def _barres(e, rows, x0, x1, y0, pas, vmax, graduations, moitie=False) -> None:
             a += v
         if moitie:
             e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="2"/>' % (X(n / 2), y - 3, X(n / 2), y + 23, INK))
-        e.append(txt(X(a) + 4, y + 14, etiq, 9, INK2))
+        e.append(txt(X(a) + 4, y + 14, etiq, FS_D, INK2))
 
 
-def _barres_m(ident, titre, desc, sous, leg, rows, vmax, src, note) -> str:
-    """Version téléphone (300 de large, police jamais sous 13,5) : par session, le libellé, la barre, puis l'étiquette en gras."""
+def _barres_m(ident, titre, desc, sous, leg, rows, vmax, src, note, moitie=False) -> str:
+    """Version téléphone (300 de large, police jamais sous 13,5) : par session, le libellé, la barre, puis l'étiquette en gras.
+    moitie : le trait noir de la moitié des lois, comme en version détaillée (11/11/2026 : le sous-titre l'annonçait,
+    la version téléphone ne le dessinait pas)."""
     e, y = pf.tete_mobile(ident, titre, desc, INK, FONT, 30)
     for l in pf.coupe(sous, 36):
         y += 18
@@ -1179,6 +1184,9 @@ def _barres_m(ident, titre, desc, sous, leg, rows, vmax, src, note) -> str:
             if v:
                 e.append('<rect x="%.1f" y="%d" width="%.1f" height="14" fill="%s"/>' % (300 * a / vmax, y, 300 * v / vmax, col))
             a += v
+        if moitie:
+            e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="2"/>'
+                     % (300 * n / 2 / vmax, y - 3, 300 * n / 2 / vmax, y + 17, INK))
         y += 14 + 16
         e.append('<text x="0" y="%d" font-size="13.5" font-weight="600" fill="%s">%s</text>' % (y, INK2, esc(etiq)))
         y += 6
@@ -1257,12 +1265,14 @@ def fig_lois(r: dict, A: dict) -> str:
 def fig_lois_m(r: dict, A: dict) -> str:
     L = T[LANG]
     return _barres_m("alm", L["t2"], _desc_lois(r, A), L["s2"], list(zip((BLEU, GRIS, GRIS_CLAIR), L["l2"])),
-                     _rows_lois(r, True), 70, L["src2"], _note2(r))
+                     _rows_lois(r, True), 70, L["src2"], _note2(r), moitie=True)
 
 
 def fig_serie(r: dict, A: dict) -> str:
     sess = ["%d-%d" % (a, a + 1) for a in range(2002, 2025)]
-    x0, x1, y0, y1 = 40, W - 10, 74, 272
+    # x1 laisse à droite la demi-largeur du libellé de la dernière session, centré sous son point (à 11 px, W - 10 le
+    # faisait sortir du cadre).
+    x0, x1, y0, y1 = 40, W - 18, 74, 272
     bw = (x1 - x0) / len(sess)
     X = lambda s: x0 + (sess.index(s) + 0.5) * bw  # noqa: E731
     Y = lambda v: y1 - v / 100 * (y1 - y0)  # noqa: E731
@@ -1270,7 +1280,7 @@ def fig_serie(r: dict, A: dict) -> str:
     e = cadre(330, "as", L["t3"], L["s3"], _desc_serie())
     for v in range(0, 101, 25):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x1, Y(v), GRID))
-        e.append(txt(x0 - 6, Y(v) + 4, L["pct"].format(v), 9, MUTED, "end"))
+        e.append(txt(x0 - 6, Y(v) + 4, L["pct"].format(v), FS_D, MUTED, "end"))
     segs = collections.OrderedDict()
     for s, v, _, _, seg in SERIE:
         segs.setdefault(seg, []).append((s, v))
@@ -1278,18 +1288,25 @@ def fig_serie(r: dict, A: dict) -> str:
         xa, xb = X(pts[0][0]) - bw / 2 + 1, X(pts[-1][0]) + bw / 2 - 1
         if k % 2 == 0:
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f3f2ee"/>' % (xa, y0, xb - xa, y1 - y0))
-        e.append(txt((xa + xb) / 2, y0 - 6, str(seg), 10, INK2, "middle", "600"))
+        e.append(txt((xa + xb) / 2, y0 - 6, str(seg), FS_D, INK2, "middle", "600"))
         if len(pts) > 1:
             e.append('<polyline fill="none" stroke="%s" stroke-width="1.6" points="%s"/>'
                      % (BLEU, " ".join("%.1f,%.1f" % (X(s), Y(v)) for s, v in pts)))
         for s, v in pts:
             e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="%s"/>' % (X(s), Y(v), BLEU))
     e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="#ffffff" stroke="%s" stroke-width="1.4"/>' % (X(REVISION[0]), Y(REVISION[1]), BLEU))
+    # Sessions repérées sous l'axe. À 11 px, un libellé (« 2024-2025 ») est plus large que deux pas de session : la
+    # dernière session, à deux pas de « 2022-2023 », passe sur une seconde ligne au lieu de la toucher. Largeur estimée
+    # par excès (0,62 em par caractère : les polices système les plus larges) ; le rendu tranche.
+    larg, x_prec, bas = 0.62 * FS_D * len(sess[0]), None, False
     for s in sess:
         a = int(s[:4])
         if a % 5 == 2 or s == "2024-2025":
-            e.append(txt(X(s), y1 + 14, s, 9, MUTED, "middle"))
-    e.append(txt(x1, y1 + 30, L["leg3"], 9, INK2, "end"))
+            bas = x_prec is not None and not bas and X(s) - x_prec < larg + 8
+            e.append(txt(X(s), y1 + (30 if bas else 16), s, FS_D, MUTED, "middle"))
+            x_prec = X(s)
+    # Légende sur sa propre ligne, à gauche : sous la dernière session, à droite, elle se lisait à la suite de son libellé.
+    e.append(txt(0, y1 + 46, L["leg3"], FS_D, INK2))
     return pf.pied(e, 330 + 2, W, blocs_pied(L["src3"], L["note3"]), GRID)
 
 

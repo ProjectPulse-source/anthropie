@@ -7,15 +7,15 @@
 <text x="0" y="86" font-size="17" font-weight="600" fill="#2b2a28">taken?</text>
 <text x="0.0" y="130.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">A · Amount allocated, as a % of the</text>
 <text x="0.0" y="148.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">decile's disposable income</text>
-<text x="0.0" y="166.0" font-size="13.5" fill="#898781" text-anchor="start">Pro rata to existing amounts, 2023</text>
+<text x="0.0" y="166.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Pro rata to existing amounts, 2023</text>
 <line x1="40" y1="360.0" x2="300" y2="360.0" stroke="#c3c2b7"/>
-<text x="34.0" y="365.0" font-size="13.5" fill="#898781" text-anchor="end">0%</text>
+<text x="34.0" y="365.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0%</text>
 <line x1="40" y1="303.3" x2="300" y2="303.3" stroke="#e1e0d9"/>
-<text x="34.0" y="308.3" font-size="13.5" fill="#898781" text-anchor="end">1%</text>
+<text x="34.0" y="308.3" font-size="13.5" fill="#6f6c66" text-anchor="end">1%</text>
 <line x1="40" y1="246.7" x2="300" y2="246.7" stroke="#e1e0d9"/>
-<text x="34.0" y="251.7" font-size="13.5" fill="#898781" text-anchor="end">2%</text>
+<text x="34.0" y="251.7" font-size="13.5" fill="#6f6c66" text-anchor="end">2%</text>
 <line x1="40" y1="190.0" x2="300" y2="190.0" stroke="#e1e0d9"/>
-<text x="34.0" y="195.0" font-size="13.5" fill="#898781" text-anchor="end">3%</text>
+<text x="34.0" y="195.0" font-size="13.5" fill="#6f6c66" text-anchor="end">3%</text>
 <polyline points="40.0,204.2 67.6,282.5 95.1,300.1 122.7,315.1 150.2,321.2 177.8,327.3 205.3,332.2 232.9,335.6 260.4,340.1 288.0,348.2" fill="none" stroke="#898781" stroke-width="2.4" stroke-linejoin="round"/>
 <circle cx="40.0" cy="204.2" r="3" fill="#898781"/>
 <circle cx="67.6" cy="282.5" r="3" fill="#898781"/>
@@ -50,9 +50,9 @@
 <circle cx="288.0" cy="295.2" r="3" fill="#eb6834"/>
 <circle cx="40.0" cy="342.4" r="3.4" fill="none" stroke="#eb6834" stroke-width="1.6" stroke-dasharray="2 2"/>
 <text x="48.0" y="209.2" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">2.75%</text>
-<text x="40.0" y="379.0" font-size="13.5" fill="#898781" text-anchor="middle">D1</text>
-<text x="150.2" y="379.0" font-size="13.5" fill="#898781" text-anchor="middle">D5</text>
-<text x="288.0" y="379.0" font-size="13.5" fill="#898781" text-anchor="end">D10</text>
+<text x="40.0" y="379.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">D1</text>
+<text x="150.2" y="379.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">D5</text>
+<text x="288.0" y="379.0" font-size="13.5" fill="#6f6c66" text-anchor="end">D10</text>
 <line x1="0" y1="403.0" x2="16" y2="403.0" stroke="#eb6834" stroke-width="3"/>
 <text x="22.0" y="408.0" font-size="13.5" fill="#52514e" text-anchor="start">Taxes on income and wealth</text>
 <text x="22.0" y="427.0" font-size="13.5" fill="#52514e" text-anchor="start">in D10:</text>
@@ -65,12 +65,12 @@
 <text x="22.0" y="490.0" font-size="13.5" fill="#52514e" text-anchor="start">Retirement pensions</text>
 <text x="22.0" y="509.0" font-size="13.5" fill="#52514e" text-anchor="start">by decile:</text>
 <text x="100.0" y="509.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">0.43 to 0.78%</text>
-<text x="0.0" y="533.0" font-size="13.5" fill="#898781" text-anchor="start">○ D1 tax point excluded (reason below)</text>
+<text x="0.0" y="533.0" font-size="13.5" fill="#6f6c66" text-anchor="start">○ D1 tax point excluded (reason below)</text>
 <line x1="0" y1="547.0" x2="300" y2="547.0" stroke="#c3c2b7"/>
 <text x="0.0" y="571.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">B · How much the choice changes what</text>
 <text x="0.0" y="589.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">the same decile bears</text>
-<text x="0.0" y="607.0" font-size="13.5" fill="#898781" text-anchor="start">Heaviest decision ÷ lightest · 1: no</text>
-<text x="0.0" y="625.0" font-size="13.5" fill="#898781" text-anchor="start">gap</text>
+<text x="0.0" y="607.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Heaviest decision ÷ lightest · 1: no</text>
+<text x="0.0" y="625.0" font-size="13.5" fill="#6f6c66" text-anchor="start">gap</text>
 <rect x="191.6" y="629.0" width="55.1" height="140.0" fill="#f0efe9"/>
 <rect x="32.0" y="699.5" width="16" height="69.5" rx="2" fill="#898781"/>
 <rect x="59.6" y="665.0" width="16" height="104.0" rx="2" fill="#898781"/>
@@ -86,10 +86,10 @@
 <text x="205.3" y="756.8" font-size="13.5" fill="#2b2a28" text-anchor="middle" font-weight="600">×1.4</text>
 <text x="296.0" y="693.2" font-size="13.5" fill="#2b2a28" text-anchor="end" font-weight="600">×5.5</text>
 <text x="77.6" y="679.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">×7.7</text>
-<text x="40.0" y="788.0" font-size="13.5" fill="#898781" text-anchor="middle">D1</text>
+<text x="40.0" y="788.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">D1</text>
 <text x="205.3" y="788.0" font-size="13.5" fill="#52514e" text-anchor="middle">D7</text>
 <text x="232.9" y="788.0" font-size="13.5" fill="#52514e" text-anchor="middle">D8</text>
-<text x="288.0" y="788.0" font-size="13.5" fill="#898781" text-anchor="end">D10</text>
+<text x="288.0" y="788.0" font-size="13.5" fill="#6f6c66" text-anchor="end">D10</text>
 <text x="0.0" y="813.0" font-size="13.5" fill="#52514e" text-anchor="start">D7-D8: where the choice of lever</text>
 <text x="0.0" y="831.0" font-size="13.5" fill="#52514e" text-anchor="start">changes the decile's average exposure</text>
 <text x="0.0" y="849.0" font-size="13.5" fill="#52514e" text-anchor="start">least</text>
@@ -102,6 +102,6 @@
 <text class="pied-note" x="0" y="977.0" font-size="13.5" fill="#52514e">the first twentieth is atypical there;</text>
 <text class="pied-note" x="0" y="994.0" font-size="13.5" fill="#52514e">D1 carries “≥”, a lower bound computed</text>
 <text class="pied-note" x="0" y="1011.0" font-size="13.5" fill="#52514e">on two levers.</text>
-<text class="pied-licence" x="0" y="1032.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1049.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="1032.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1049.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

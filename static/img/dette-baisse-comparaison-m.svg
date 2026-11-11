@@ -8,7 +8,7 @@
 <text x="17" y="106.0" font-size="13.5" fill="#55524f">fait monter le ratio</text>
 <rect x="0" y="116.0" width="11" height="11" fill="#8a8781"/>
 <text x="17" y="126.0" font-size="13.5" fill="#55524f">le fait baisser</text>
-<text x="0" y="145.0" font-size="13.5" fill="#96928f">En points de PIB cumulés sur dix ans</text>
+<text x="0" y="145.0" font-size="13.5" fill="#6f6c66">En points de PIB cumulés sur dix ans</text>
 <line x1="0" y1="157.0" x2="300" y2="157.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="179.0" font-size="15" font-weight="600" fill="#26262f">Chypre : −59,3 points</text>
 <text x="0" y="197.0" font-size="13.5" fill="#184f95">111,6 → 52,3 % du PIB</text>
@@ -111,7 +111,7 @@
 <text class="pied-note" x="0" y="1160.0" font-size="13.5" fill="#55524f">politique. Variation calculée sur les</text>
 <text class="pied-note" x="0" y="1177.0" font-size="13.5" fill="#55524f">valeurs non arrondies ; la somme des</text>
 <text class="pied-note" x="0" y="1194.0" font-size="13.5" fill="#55524f">contributions affichées peut différer</text>
-<text class="pied-note" x="0" y="1211.0" font-size="13.5" fill="#55524f">de 0,1 point.</text>
-<text class="pied-licence" x="0" y="1232.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1249.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="1211.0" font-size="13.5" fill="#55524f">de 0,1 point.</text>
+<text class="pied-licence" x="0" y="1232.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1249.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

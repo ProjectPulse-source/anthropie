@@ -3,20 +3,20 @@
 <rect width="300" height="720" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">End-2020 fixed-rate debt: the</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">erosion, as payments fall due</text>
-<text x="0" y="84" font-size="13.5" fill="#96928f">€bn in 2020 euros, cumulative</text>
+<text x="0" y="84" font-size="13.5" fill="#6f6c66">€bn in 2020 euros, cumulative</text>
 <line x1="34" y1="298.0" x2="296" y2="298.0" stroke="#dcd8d3" stroke-width="1.2"/>
-<text x="30" y="302.0" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
+<text x="30" y="302.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="34" y1="248.0" x2="296" y2="248.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="252.0" font-size="13.5" fill="#96928f" text-anchor="end">50</text>
+<text x="30" y="252.0" font-size="13.5" fill="#6f6c66" text-anchor="end">50</text>
 <line x1="34" y1="198.0" x2="296" y2="198.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="202.0" font-size="13.5" fill="#96928f" text-anchor="end">100</text>
+<text x="30" y="202.0" font-size="13.5" fill="#6f6c66" text-anchor="end">100</text>
 <line x1="34" y1="148.0" x2="296" y2="148.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="152.0" font-size="13.5" fill="#96928f" text-anchor="end">150</text>
+<text x="30" y="152.0" font-size="13.5" fill="#6f6c66" text-anchor="end">150</text>
 <line x1="34" y1="98.0" x2="296" y2="98.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="102.0" font-size="13.5" fill="#96928f" text-anchor="end">200</text>
-<text x="39.7" y="316" font-size="13.5" fill="#96928f" text-anchor="start">2021</text>
-<text x="176.4" y="316" font-size="13.5" fill="#96928f" text-anchor="middle">2045</text>
-<text x="296.0" y="316" font-size="13.5" fill="#96928f" text-anchor="end">2066</text>
+<text x="30" y="102.0" font-size="13.5" fill="#6f6c66" text-anchor="end">200</text>
+<text x="39.7" y="316" font-size="13.5" fill="#6f6c66" text-anchor="start">2021</text>
+<text x="176.4" y="316" font-size="13.5" fill="#6f6c66" text-anchor="middle">2045</text>
+<text x="296.0" y="316" font-size="13.5" fill="#6f6c66" text-anchor="end">2066</text>
 <path d="M34.0,298.0 L39.7,294.3 L45.4,285.1 L51.1,267.8" fill="none" stroke="#184f95" stroke-width="2.6"/>
 <path d="M51.1,267.8 L56.8,255.1 L62.5,239.4 L68.2,224.2 L73.9,215.1 L79.6,206.3 L85.3,195.0 L91.0,187.4 L96.7,182.4 L102.3,178.7 L108.0,178.0 L113.7,174.4 L119.4,171.5 L125.1,168.1 L130.8,167.6 L136.5,165.1 L142.2,162.7 L147.9,161.6 L153.6,158.6 L159.3,158.4 L165.0,158.1 L170.7,157.9 L176.4,156.0 L182.1,155.8 L187.8,155.6 L193.5,153.6 L199.2,153.5 L204.9,151.5 L210.6,151.4 L216.3,150.2 L222.0,150.1 L227.7,150.0 L233.3,148.9 L239.0,148.9 L244.7,148.8 L250.4,148.8 L256.1,148.7 L261.8,147.8 L267.5,147.8 L273.2,147.8 L278.9,147.8 L284.6,147.8 L290.3,147.8 L296.0,147.2" fill="none" stroke="#184f95" stroke-width="2.6" stroke-dasharray="6 4"/>
 <circle cx="51.1" cy="267.8" r="4" fill="#184f95"/>
@@ -44,6 +44,6 @@
 <text class="pied-note" x="0" y="638.0" font-size="13.5" fill="#55524f">Counterfactual: inflation expected in</text>
 <text class="pied-note" x="0" y="655.0" font-size="13.5" fill="#55524f">early 2021; after 2023, the price gap</text>
 <text class="pied-note" x="0" y="672.0" font-size="13.5" fill="#55524f">is assumed to persist.</text>
-<text class="pied-licence" x="0" y="693.0" font-size="13.5" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="710.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="693.0" font-size="13.5" fill="#6f6c66">Computed by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="710.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

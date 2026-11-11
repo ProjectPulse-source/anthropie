@@ -74,10 +74,10 @@
 <rect x="132" y="642.0" width="10" height="10" fill="#eb6834"/>
 <text x="147" y="652.0" font-size="13.5" fill="#26262f">Non retrouvés <tspan font-weight="600">14,7</tspan></text>
 <line x1="0" y1="681.0" x2="300" y2="681.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="702.0" font-size="13.5" fill="#55524f">MESRE-SIES, Note Flash n° 29, novembre</text>
-<text class="pied-source" x="0" y="719.0" font-size="13.5" fill="#55524f">2025, tableaux nationaux, feuille</text>
-<text class="pied-source" x="0" y="736.0" font-size="13.5" fill="#55524f">« Devenir cohorte 2023 » (SISE,</text>
-<text class="pied-source" x="0" y="753.0" font-size="13.5" fill="#55524f">SCOLARITE, SIFA)</text>
+<text class="pied-source" x="0" y="702.0" font-size="13.5" fill="#55524f">MESRE-SIES, Note Flash n° 29,</text>
+<text class="pied-source" x="0" y="719.0" font-size="13.5" fill="#55524f">novembre 2025, tableaux nationaux,</text>
+<text class="pied-source" x="0" y="736.0" font-size="13.5" fill="#55524f">feuille « Devenir cohorte 2023 »</text>
+<text class="pied-source" x="0" y="753.0" font-size="13.5" fill="#55524f">(SISE, SCOLARITE, SIFA)</text>
 <text class="pied-note" x="0" y="774.0" font-size="13.5" fill="#55524f">Passés : inscrits en 2ᵉ ou 3ᵉ année de</text>
 <text class="pied-note" x="0" y="791.0" font-size="13.5" fill="#55524f">licence, ou entrés en études de santé</text>
 <text class="pied-note" x="0" y="808.0" font-size="13.5" fill="#55524f">depuis une licence accès santé.</text>
@@ -95,6 +95,6 @@
 <text class="pied-note" x="0" y="1012.0" font-size="13.5" fill="#55524f">100 %. Origine non renseignée (3,8 %</text>
 <text class="pied-note" x="0" y="1029.0" font-size="13.5" fill="#55524f">des inscrits) : pas de barre, comprise</text>
 <text class="pied-note" x="0" y="1046.0" font-size="13.5" fill="#55524f">dans l'ensemble.</text>
-<text class="pied-licence" x="0" y="1067.0" font-size="13.5" fill="#96928f">Figure Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1084.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="1067.0" font-size="13.5" fill="#6f6c66">Figure Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1084.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

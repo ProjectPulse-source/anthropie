@@ -4,20 +4,20 @@
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Dette à taux fixe de fin</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">2020 : l'érosion, au fil des</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">paiements</text>
-<text x="0" y="106" font-size="13.5" fill="#96928f">Md€ de 2020, cumul</text>
+<text x="0" y="106" font-size="13.5" fill="#6f6c66">Md€ de 2020, cumul</text>
 <line x1="34" y1="320.0" x2="296" y2="320.0" stroke="#dcd8d3" stroke-width="1.2"/>
-<text x="30" y="324.0" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
+<text x="30" y="324.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="34" y1="270.0" x2="296" y2="270.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="274.0" font-size="13.5" fill="#96928f" text-anchor="end">50</text>
+<text x="30" y="274.0" font-size="13.5" fill="#6f6c66" text-anchor="end">50</text>
 <line x1="34" y1="220.0" x2="296" y2="220.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="224.0" font-size="13.5" fill="#96928f" text-anchor="end">100</text>
+<text x="30" y="224.0" font-size="13.5" fill="#6f6c66" text-anchor="end">100</text>
 <line x1="34" y1="170.0" x2="296" y2="170.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="174.0" font-size="13.5" fill="#96928f" text-anchor="end">150</text>
+<text x="30" y="174.0" font-size="13.5" fill="#6f6c66" text-anchor="end">150</text>
 <line x1="34" y1="120.0" x2="296" y2="120.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="124.0" font-size="13.5" fill="#96928f" text-anchor="end">200</text>
-<text x="39.7" y="338" font-size="13.5" fill="#96928f" text-anchor="start">2021</text>
-<text x="176.4" y="338" font-size="13.5" fill="#96928f" text-anchor="middle">2045</text>
-<text x="296.0" y="338" font-size="13.5" fill="#96928f" text-anchor="end">2066</text>
+<text x="30" y="124.0" font-size="13.5" fill="#6f6c66" text-anchor="end">200</text>
+<text x="39.7" y="338" font-size="13.5" fill="#6f6c66" text-anchor="start">2021</text>
+<text x="176.4" y="338" font-size="13.5" fill="#6f6c66" text-anchor="middle">2045</text>
+<text x="296.0" y="338" font-size="13.5" fill="#6f6c66" text-anchor="end">2066</text>
 <path d="M34.0,320.0 L39.7,316.3 L45.4,307.1 L51.1,289.8" fill="none" stroke="#184f95" stroke-width="2.6"/>
 <path d="M51.1,289.8 L56.8,277.1 L62.5,261.4 L68.2,246.2 L73.9,237.1 L79.6,228.3 L85.3,217.0 L91.0,209.4 L96.7,204.4 L102.3,200.7 L108.0,200.0 L113.7,196.4 L119.4,193.5 L125.1,190.1 L130.8,189.6 L136.5,187.1 L142.2,184.7 L147.9,183.6 L153.6,180.6 L159.3,180.4 L165.0,180.1 L170.7,179.9 L176.4,178.0 L182.1,177.8 L187.8,177.6 L193.5,175.6 L199.2,175.5 L204.9,173.5 L210.6,173.4 L216.3,172.2 L222.0,172.1 L227.7,172.0 L233.3,170.9 L239.0,170.9 L244.7,170.8 L250.4,170.8 L256.1,170.7 L261.8,169.8 L267.5,169.8 L273.2,169.8 L278.9,169.8 L284.6,169.8 L290.3,169.8 L296.0,169.2" fill="none" stroke="#184f95" stroke-width="2.6" stroke-dasharray="6 4"/>
 <circle cx="51.1" cy="289.8" r="4" fill="#184f95"/>
@@ -35,7 +35,7 @@
 <line x1="0" y1="482.0" x2="300" y2="482.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="503.0" font-size="13.5" fill="#55524f">AFT (encours au 31/12/2020), Eurostat</text>
 <text class="pied-source" x="0" y="520.0" font-size="13.5" fill="#55524f">(IPCH mensuel, France), BCE (SPF,</text>
-<text class="pied-source" x="0" y="537.0" font-size="13.5" fill="#55524f">janvier 2021) ; calcul de l'auteur</text>
+<text class="pied-source" x="0" y="537.0" font-size="13.5" fill="#55524f">janvier 2021) ; calcul de l'auteur</text>
 <text class="pied-note" x="0" y="558.0" font-size="13.5" fill="#55524f">Somme non actualisée des écarts de</text>
 <text class="pied-note" x="0" y="575.0" font-size="13.5" fill="#55524f">valeur réelle des paiements promis, en</text>
 <text class="pied-note" x="0" y="592.0" font-size="13.5" fill="#55524f">Md€ de 2020 aux prix à la</text>
@@ -45,6 +45,6 @@
 <text class="pied-note" x="0" y="660.0" font-size="13.5" fill="#55524f">inflation anticipée début 2021 ; après</text>
 <text class="pied-note" x="0" y="677.0" font-size="13.5" fill="#55524f">2023, l'écart de prix est supposé</text>
 <text class="pied-note" x="0" y="694.0" font-size="13.5" fill="#55524f">persister.</text>
-<text class="pied-licence" x="0" y="715.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="732.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="715.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="732.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

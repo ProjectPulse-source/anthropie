@@ -557,7 +557,8 @@ def faux_jumeaux(rows: list[dict], seuil: float = 10.0, n: int = 3) -> list[dict
 # ------------------------------------------------------------------ SVG
 W = 720
 COL_EURO, COL_HORS = "#184f95", "#eb6834"
-INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
+INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", PF.ENCRE_ATTENUEE, "#e1e0d9", "#c3c2b7"
+TRAIT = "#898781"      # traits gris (pointillés, cadres) : le gris des marques ; le texte prend MUTED, encre atténuée commune (11/11/2026)
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 TY_TITRE, TY_AXE, TY_ANNOT = 13, 11, 11
 CARTOUCHE_H = 48
@@ -757,7 +758,7 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
     if cadre:
         ca, cb, cc, cd = sx(cadre[0]), sx(cadre[1]), sy(cadre[2]), sy(cadre[3])
         e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="none" stroke="%s" stroke-width="1" '
-                 'stroke-dasharray="4 3"/>' % (ca, cd, cb - ca, cc - cd, MUTED))
+                 'stroke-dasharray="4 3"/>' % (ca, cd, cb - ca, cc - cd, TRAIT))
         traits += [(ca, cc, cb, cc), (ca, cd, cb, cd), (ca, cc, ca, cd), (cb, cc, cb, cd)]
     pointilles = []  # les seuls pointillés des faux jumeaux : un nom facultatif ou éloigné ne s'y pose jamais
     for j in jumeaux:
@@ -765,7 +766,7 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
         traits.append((sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b))))
         pointilles.append(traits[-1])
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.5" stroke-dasharray="3 3"/>'
-                 % (sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b)), MUTED))
+                 % (sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b)), TRAIT))
     for (a, b, xa, xb, col) in (droites or []):
         traits.append((sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb)))
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2" opacity="0.7"/>'
@@ -1013,7 +1014,7 @@ def ecarts_figure(ecarts: dict, an: str, lang: str = "fr") -> str:
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f0efe9"/>' % (sx(1995), Y0, sx(1998) - sx(1995), Y1 - Y0))
     e.append('<text x="%.1f" y="%d" font-size="%d" fill="%s" text-anchor="middle">%s</text>'
              % ((sx(1995) + sx(1998)) / 2, Y1 + 30, TY_AXE, INK2, esc(T[2])))
-    e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (sx(2012), Y0, sx(2012), Y1, MUTED))
+    e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (sx(2012), Y0, sx(2012), Y1, TRAIT))
     for g in range(-1, 11):
         if g % 2 and g != -1:
             continue
@@ -1131,14 +1132,14 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
     for j in jumeaux:
         a, b = by[j["bas"]], by[j["haut"]]
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.5" stroke-dasharray="3 3"/>'
-                 % (sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b)), MUTED))
+                 % (sx(fx(a)), sy(fy(a)), sx(fx(b)), sy(fy(b)), TRAIT))
     for (a, b, xa, xb, col) in (droites or []):
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.2" opacity="0.7"/>'
                  % (sx(xa), sy(a + b * xa), sx(xb), sy(a + b * xb), col))
     if cadre:
         ca, cb, cc, cd = sx(cadre[0]), sx(cadre[1]), sy(cadre[2]), sy(cadre[3])
         e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="none" stroke="%s" stroke-width="1" '
-                 'stroke-dasharray="4 3"/>' % (ca, cd, cb - ca, cc - cd, MUTED))
+                 'stroke-dasharray="4 3"/>' % (ca, cd, cb - ca, cc - cd, TRAIT))
         traits_m += [(ca, cc, cb, cc), (ca, cd, cb, cd), (ca, cc, ca, cd), (cb, cc, cb, cd)]
     pts = [(x["code"], sx(fx(x)), sy(fy(x))) for x in rows]
     for x in rows:
@@ -1276,7 +1277,7 @@ def ecarts_figure_m(ecarts, an, svg_d, lang):
     sx = lambda a: X0 + (int(a) - a0) / (a1 - a0) * (X1 - X0)  # noqa: E731
     sy = lambda v: Y1 - (min(max(v, vmin), vmax) - vmin) / (vmax - vmin) * (Y1 - Y0)  # noqa: E731
     e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="#f0efe9"/>' % (sx(1995), Y0, sx(1998) - sx(1995), Y1 - Y0))
-    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-dasharray="3 3"/>' % (sx(2012), Y0, sx(2012), Y1, MUTED))
+    e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-dasharray="3 3"/>' % (sx(2012), Y0, sx(2012), Y1, TRAIT))
     for g in (0, 2, 4, 6, 8, 10):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (X0, sy(g), X1, sy(g), AXIS if g == 0 else GRID))
         e.append(tm(X0 - 4, sy(g) + 5, nb(g, 0), MUTED, "end"))

@@ -16,6 +16,18 @@ import re
 
 TAILLE, INTERLIGNE, CARACTERES = 11, 14, 118
 
+# Texte des figures : encre atténuée et police minimale (11/11/2026). Une valeur, un organe : les générateurs les
+# importent, ils ne les recopient pas.
+# - ENCRE_ATTENUEE : graduations, crédit, valeurs d'une série grise. 5,23:1 sur blanc, 4,65:1 sur le plus foncé des
+#   fonds teintés en usage (#f3f2ee). Elle remplace les gris #96928f (3,09:1) et #898781 (3,59:1) pour le TEXTE
+#   seulement : une marque grise (barre, point, filet) garde son gris, qui n'a besoin que de 3:1.
+# - POLICE_MIN : plus petite police d'une figure détaillée (720 de large). Mesure du 11/11/2026 sur les 52 pages : la
+#   version détaillée est servie à partir de 900 px d'écran et s'y affiche à 804 px au plus étroit (dans un repli) ;
+#   11 px déclarés y font 12,3 px, 10,5 px n'en font que 11,7. La version téléphone (300 de large) s'affiche à 277 px
+#   au plus étroit (320 px d'écran) : POLICE_M_MIN = 13 y fait 12,0 px. Contrôle : check-figures.py, règles R6 et R7.
+ENCRE_ATTENUEE = "#6f6c66"
+POLICE_MIN, POLICE_M_MIN = 11, 13
+
 
 def coupe(s: str, n: int) -> list[str]:
     """Coupe aux espaces ORDINAIRES seulement (11/10/2026) : str.split() sans argument coupait aussi a l'espace
@@ -38,6 +50,18 @@ def coupe(s: str, n: int) -> list[str]:
     # Sigle + année et année + nom qu'elle qualifie (« DSM / 2025 », « 2027 / draft budget », « 2024 / commitment »).
     s = re.sub(r"\b(DSM|PLF|PSMT|PLFSS|LFI|LFSS) (\d{4})\b", "\\1\u00a0\\2", s)
     s = re.sub(r"\b(\d{4}) (draft|commitment|plan|budget)\b", "\\1\u00a0\\2", s)
+    # Nombre et unité, jour et mois, groupes de milliers, parenthèse et son nombre (11/11/2026 : relevé sur les 277
+    # figures après le passage du texte à 11 px — « environ 90 / Md€ », « −2,9 / pts », « 1,1 à 1,6 / fois »,
+    # « le 8 / septembre 2025 », « (98 / lois sur 214) », et « 1 / 200 » pour 1 200, saisi avec une espace ordinaire).
+    # Règle du site : un nombre ne se sépare ni de son unité ni de la suite de sa date, quel que soit le support.
+    s = re.sub(r"(?<![\d\u00a0\u202f])(\d{1,3}) (?=\d{3}(?!\d))", "\\1\u00a0", s)
+    s = re.sub(r"(?<=\d\u00a0\d{3}) (?=\d{3}(?!\d))", "\u00a0", s)
+    s = re.sub(r"(\d) (Md€|M€|k€|€|Md|bn|pts?|fois|times|Mt|kt|GW|MW|TWh|GWh|EJ|ha|km|h)(?![\w€])", "\\1\u00a0\\2", s)
+    s = re.sub(r"\b(\d{1,2}|1er) (janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\b",
+               "\\1\u00a0\\2", s)
+    s = re.sub(r"\b(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2})\b(?! ?\d)",
+               "\\1\u00a0\\2", s)
+    s = re.sub(r"(\([\u2212+-]?\d[\d,.\u00a0\u202f]*) ", "\\1\u00a0", s)
     # Un signe seul (« + fait monter, − fait baisser ») ne finit jamais une ligne (03/11/2026, cascade téléphone).
     s = re.sub(r"(^| )([+\u2212]) ", "\\1\\2\u00a0", s)
     # Un séparateur « · » ne finit jamais une ligne (04/11/2026 : 36 pieds de figure coupés après lui, règle R5 de

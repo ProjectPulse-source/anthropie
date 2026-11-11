@@ -108,7 +108,7 @@ W = 720
 WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, BLEU_CLAIR, ORANGE, ORANGE_CLAIR, GRIS = "#184f95", "#9db7da", "#eb6834", "#f5b89c", "#8a8781"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement
 ANTHR = INK2   # « déjà raccordés » : plein anthracite, distinct du gris clair de « suspendu » (contrôleurs du 04/11/2026)
 
 

@@ -8,19 +8,19 @@
 <text x="0.0" y="142.0" font-size="15.5" fill="#184f95" text-anchor="start" font-weight="600">Catégorie A publiée</text>
 <rect x="163.1" y="160.0" width="20.8" height="158.0" fill="#eeede8" opacity="0.6"/>
 <line x1="52.0" y1="318.0" x2="288.0" y2="318.0" stroke="#e1e0d9"/>
-<text x="46.0" y="322.0" font-size="14.5" fill="#898781" text-anchor="end">2,2 M</text>
+<text x="46.0" y="322.0" font-size="14.5" fill="#6f6c66" text-anchor="end">2,2 M</text>
 <line x1="52.0" y1="290.7" x2="288.0" y2="290.7" stroke="#e1e0d9"/>
-<text x="46.0" y="294.7" font-size="14.5" fill="#898781" text-anchor="end">2,6 M</text>
+<text x="46.0" y="294.7" font-size="14.5" fill="#6f6c66" text-anchor="end">2,6 M</text>
 <line x1="52.0" y1="263.5" x2="288.0" y2="263.5" stroke="#e1e0d9"/>
-<text x="46.0" y="267.5" font-size="14.5" fill="#898781" text-anchor="end">3,0 M</text>
+<text x="46.0" y="267.5" font-size="14.5" fill="#6f6c66" text-anchor="end">3,0 M</text>
 <line x1="52.0" y1="236.2" x2="288.0" y2="236.2" stroke="#e1e0d9"/>
-<text x="46.0" y="240.2" font-size="14.5" fill="#898781" text-anchor="end">3,4 M</text>
+<text x="46.0" y="240.2" font-size="14.5" fill="#6f6c66" text-anchor="end">3,4 M</text>
 <line x1="52.0" y1="208.9" x2="288.0" y2="208.9" stroke="#e1e0d9"/>
-<text x="46.0" y="212.9" font-size="14.5" fill="#898781" text-anchor="end">3,8 M</text>
+<text x="46.0" y="212.9" font-size="14.5" fill="#6f6c66" text-anchor="end">3,8 M</text>
 <line x1="52.0" y1="181.6" x2="288.0" y2="181.6" stroke="#e1e0d9"/>
-<text x="46.0" y="185.6" font-size="14.5" fill="#898781" text-anchor="end">4,2 M</text>
-<text x="107.5" y="333.0" font-size="14.5" fill="#898781" text-anchor="middle">2020</text>
-<text x="218.6" y="333.0" font-size="14.5" fill="#898781" text-anchor="middle">2024</text>
+<text x="46.0" y="185.6" font-size="14.5" fill="#6f6c66" text-anchor="end">4,2 M</text>
+<text x="107.5" y="333.0" font-size="14.5" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="218.6" y="333.0" font-size="14.5" fill="#6f6c66" text-anchor="middle">2024</text>
 <line x1="242.9" y1="160.0" x2="242.9" y2="318.0" stroke="#52514e" stroke-dasharray="3 3"/>
 <polyline points="52.0,215.1 58.9,215.5 65.9,215.7 72.8,217.1 79.8,218.8 86.7,220.8 93.6,222.0 100.6,224.9 107.5,224.1 114.5,168.3 121.4,200.7 128.4,206.5 135.3,208.9 142.2,213.7 149.2,226.6 156.1,238.8 163.1,249.5 170.0,252.0 176.9,253.0 183.9,260.2 190.8,262.6 197.8,262.5 204.7,260.8 211.6,261.7 218.6,262.8 225.5,262.0 232.5,260.3 239.4,254.7 246.4,236.8 253.3,248.3 260.2,244.1 267.2,240.7 274.1,243.3 281.1,241.4 288.0,239.4" fill="none" stroke="#184f95" stroke-width="2.4"/>
 <text x="173.5" y="158.0" font-size="13.5" fill="#52514e" text-anchor="middle">2022</text>
@@ -29,19 +29,19 @@
 <text x="0.0" y="392.0" font-size="15.5" fill="#52514e" text-anchor="start" font-weight="600">Hors RSA et jeunes en parcours</text>
 <rect x="163.1" y="410.0" width="20.8" height="158.0" fill="#eeede8" opacity="0.6"/>
 <line x1="52.0" y1="568.0" x2="288.0" y2="568.0" stroke="#e1e0d9"/>
-<text x="46.0" y="572.0" font-size="14.5" fill="#898781" text-anchor="end">2,2 M</text>
+<text x="46.0" y="572.0" font-size="14.5" fill="#6f6c66" text-anchor="end">2,2 M</text>
 <line x1="52.0" y1="540.7" x2="288.0" y2="540.7" stroke="#e1e0d9"/>
-<text x="46.0" y="544.7" font-size="14.5" fill="#898781" text-anchor="end">2,6 M</text>
+<text x="46.0" y="544.7" font-size="14.5" fill="#6f6c66" text-anchor="end">2,6 M</text>
 <line x1="52.0" y1="513.5" x2="288.0" y2="513.5" stroke="#e1e0d9"/>
-<text x="46.0" y="517.5" font-size="14.5" fill="#898781" text-anchor="end">3,0 M</text>
+<text x="46.0" y="517.5" font-size="14.5" fill="#6f6c66" text-anchor="end">3,0 M</text>
 <line x1="52.0" y1="486.2" x2="288.0" y2="486.2" stroke="#e1e0d9"/>
-<text x="46.0" y="490.2" font-size="14.5" fill="#898781" text-anchor="end">3,4 M</text>
+<text x="46.0" y="490.2" font-size="14.5" fill="#6f6c66" text-anchor="end">3,4 M</text>
 <line x1="52.0" y1="458.9" x2="288.0" y2="458.9" stroke="#e1e0d9"/>
-<text x="46.0" y="462.9" font-size="14.5" fill="#898781" text-anchor="end">3,8 M</text>
+<text x="46.0" y="462.9" font-size="14.5" fill="#6f6c66" text-anchor="end">3,8 M</text>
 <line x1="52.0" y1="431.6" x2="288.0" y2="431.6" stroke="#e1e0d9"/>
-<text x="46.0" y="435.6" font-size="14.5" fill="#898781" text-anchor="end">4,2 M</text>
-<text x="107.5" y="583.0" font-size="14.5" fill="#898781" text-anchor="middle">2020</text>
-<text x="218.6" y="583.0" font-size="14.5" fill="#898781" text-anchor="middle">2024</text>
+<text x="46.0" y="435.6" font-size="14.5" fill="#6f6c66" text-anchor="end">4,2 M</text>
+<text x="107.5" y="583.0" font-size="14.5" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="218.6" y="583.0" font-size="14.5" fill="#6f6c66" text-anchor="middle">2024</text>
 <line x1="242.9" y1="410.0" x2="242.9" y2="568.0" stroke="#52514e" stroke-dasharray="3 3"/>
 <polyline points="52.0,521.1 58.9,525.7 65.9,525.4 72.8,524.8 79.8,527.2 86.7,532.0 93.6,531.9 100.6,532.3 107.5,531.5 114.5,486.9 121.4,517.8 128.4,522.9 135.3,524.5 142.2,528.4 149.2,539.4 156.1,547.7 163.1,555.0 170.0,558.3 176.9,557.8 183.9,562.4 190.8,563.8 197.8,564.1 204.7,562.3 211.6,562.2 218.6,562.8 225.5,562.4 232.5,561.0 239.4,555.8 246.4,549.0 253.3,554.1 260.2,552.9 267.2,548.7 274.1,551.8 281.1,552.0 288.0,551.5" fill="none" stroke="#8a8f98" stroke-width="2.4" stroke-dasharray="5 3"/>
 <text x="173.5" y="408.0" font-size="13.5" fill="#52514e" text-anchor="middle">2022</text>
@@ -50,7 +50,7 @@
 <text x="0.0" y="626.0" font-size="13.5" fill="#52514e" text-anchor="start">Les deux séries sautent au 1er</text>
 <text x="0.0" y="644.0" font-size="13.5" fill="#52514e" text-anchor="start">trimestre 2025 et reculent au 2e</text>
 <text x="0.0" y="662.0" font-size="13.5" fill="#52514e" text-anchor="start">(actualisation automatique,</text>
-<text x="0.0" y="680.0" font-size="13.5" fill="#52514e" text-anchor="start">janvier-mars 2025) ; leur écart ne</text>
+<text x="0.0" y="680.0" font-size="13.5" fill="#52514e" text-anchor="start">janvier-mars 2025) ; leur écart ne</text>
 <text x="0.0" y="698.0" font-size="13.5" fill="#52514e" text-anchor="start">mesure pas l&#x27;effet de la réforme.</text>
 <line x1="0" y1="710.0" x2="300" y2="710.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="731.0" font-size="13.5" fill="#52514e">Dares et France Travail, moyenne</text>
@@ -63,6 +63,6 @@
 <text class="pied-note" x="0" y="854.0" font-size="13.5" fill="#52514e">labellisées depuis le 01/01/2025</text>
 <text class="pied-note" x="0" y="871.0" font-size="13.5" fill="#52514e">(label de 2021 suspendu par l'ASP, qui</text>
 <text class="pied-note" x="0" y="888.0" font-size="13.5" fill="#52514e">courait jusqu'au 20/05/2026).</text>
-<text class="pied-licence" x="0" y="909.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="926.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="909.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="926.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

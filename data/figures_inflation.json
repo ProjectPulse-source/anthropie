@@ -5,7 +5,7 @@
    "fichier": "dette-inflation-calendrier",
    "titre": "Dette de l'État à taux fixe de fin 2020 : l'érosion due à la surprise d'inflation, au fil des paiements",
    "montre": "L'érosion est acquise fin 2023 dans ce contrefactuel, mais elle se matérialise au rythme des paiements : environ 55 % d'ici fin 2027.",
-   "source": "AFT (encours au 31/12/2020), Eurostat (IPCH mensuel, France), BCE (SPF, janvier 2021) ; calcul de l'auteur",
+   "source": "AFT (encours au 31/12/2020), Eurostat (IPCH mensuel, France), BCE (SPF, janvier 2021) ; calcul de l'auteur",
    "precaution": "Somme non actualisée des écarts de valeur réelle des paiements promis, en Md€ de 2020 aux prix à la consommation : ni de la dette effacée, ni un gain budgétaire net, ni une perte finale. Contrefactuel : inflation anticipée début 2021 ; après 2023, l'écart de prix est supposé persister."
   },
   {
@@ -14,7 +14,7 @@
    "titre": "Hausse durable d'un point des taux : combien d'intérêts supplémentaires dès la première année ?",
    "montre": "Fin 2022, si toute la courbe des taux avait augmenté d'un point, la charge de l'ensemble État + Banque de France aurait augmenté la première année 2,8 fois plus que celle de la seule dette de marché ; l'écart se resserre depuis, sans disparaître.",
    "source": "AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; décision (UE) 2016/2248 ; calcul de l'auteur",
-   "precaution": "Scénario : +1 point sur toute la courbe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Ni une prévision, ni une série de dépenses constatées, ni le coût du QE."
+   "precaution": "Scénario : +1 point sur toute la courbe, encours constant ; titres de la Banque de France au taux de référence de la BCE. Ni une prévision, ni une série de dépenses constatées, ni le coût du QE."
   }
  ],
  "en": [
@@ -32,7 +32,7 @@
    "titre": "A lasting one-percentage-point rise in rates: how much extra interest in the first year?",
    "montre": "At end-2022, had the whole yield curve risen by one point, the first-year interest bill of the government and the Banque de France together would have risen 2.8 times as much as that of market debt alone; the gap has narrowed since, without closing.",
    "source": "AFT (monthly bulletins, line by line), Banque de France (Webstat), ECB; Decision (EU) 2016/2248; author's calculation",
-   "precaution": "Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. Not a forecast, not a series of recorded spending, nor the cost of QE."
+   "precaution": "Scenario: +1 point across the whole curve, constant stock; Banque de France holdings at the ECB reference rate. Not a forecast, not a series of recorded spending, nor the cost of QE."
   }
  ]
 }

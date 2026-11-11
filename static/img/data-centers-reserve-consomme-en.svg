@@ -58,5 +58,5 @@
 <text class="pied-source" x="0" y="578.0" font-size="11" fill="#55524f">chiffres clés” (1 June 2026); November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel (sum: 13.9 GW).</text>
 <text class="pied-note" x="0" y="592.0" font-size="11" fill="#55524f">Reserved capacity is neither power drawn nor consumption: the two panels are not comparable, and no ratio is computed</text>
 <text class="pied-note" x="0" y="606.0" font-size="11" fill="#55524f">between them. Pathways: RTE's assumptions, not measurements.</text>
-<text class="pied-licence" x="0" y="620.0" font-size="11" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/data-centres-reserved-capacity/</text>
+<text class="pied-licence" x="0" y="620.0" font-size="11" fill="#6f6c66">Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/data-centres-reserved-capacity/</text>
 </svg>

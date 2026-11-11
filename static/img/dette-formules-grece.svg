@@ -2,19 +2,19 @@
 <title id="grec-t">Taux à dix ans : la France au-dessus ou au-dessous de la Grèce, mois par mois</title><desc id="grec-d">Barres mensuelles de janvier 2024 à septembre 2026 de l'écart entre le rendement à dix ans de la France et celui de la Grèce : négatif jusqu'au printemps 2025, positif à partir de août 2025 ; août 2025 3,42 contre 3,37 %, septembre 2025 3,51 contre 3,39 % ; Grèce de nouveau au-dessus de mars à mai 2026 ; septembre 2026 : +0,22 point.</desc>
 <rect width="720" height="381" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Taux à dix ans : la France au-dessus ou au-dessous de la Grèce, mois par mois</text>
-<text x="46" y="38" font-size="10" fill="#96928f">écart France − Grèce, en point de pourcentage</text>
+<text x="46" y="38" font-size="11" fill="#6f6c66">écart France − Grèce, en point de pourcentage</text>
 <line x1="46" y1="241.0" x2="708" y2="241.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="40" y="244.0" font-size="10" fill="#96928f" text-anchor="end">−0,6</text>
+<text x="40" y="244.0" font-size="11" fill="#6f6c66" text-anchor="end">−0,6</text>
 <line x1="46" y1="199.0" x2="708" y2="199.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="40" y="202.0" font-size="10" fill="#96928f" text-anchor="end">−0,4</text>
+<text x="40" y="202.0" font-size="11" fill="#6f6c66" text-anchor="end">−0,4</text>
 <line x1="46" y1="157.0" x2="708" y2="157.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="40" y="160.0" font-size="10" fill="#96928f" text-anchor="end">−0,2</text>
+<text x="40" y="160.0" font-size="11" fill="#6f6c66" text-anchor="end">−0,2</text>
 <line x1="46" y1="115.0" x2="708" y2="115.0" stroke="#55524f" stroke-width="1.2"/>
-<text x="40" y="118.0" font-size="10" fill="#96928f" text-anchor="end">0,0</text>
+<text x="40" y="118.0" font-size="11" fill="#6f6c66" text-anchor="end">0,0</text>
 <line x1="46" y1="73.0" x2="708" y2="73.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="40" y="76.0" font-size="10" fill="#96928f" text-anchor="end">0,2</text>
+<text x="40" y="76.0" font-size="11" fill="#6f6c66" text-anchor="end">0,2</text>
 <rect x="47.5" y="115.0" width="17.1" height="115.5" fill="#c9c5c0"/>
-<text x="47.5" y="278" font-size="10" fill="#96928f">2024</text>
+<text x="47.5" y="278" font-size="11" fill="#6f6c66">2024</text>
 <rect x="67.6" y="115.0" width="17.1" height="126.0" fill="#c9c5c0"/>
 <rect x="87.6" y="115.0" width="17.1" height="115.5" fill="#c9c5c0"/>
 <rect x="107.7" y="115.0" width="17.1" height="109.2" fill="#c9c5c0"/>
@@ -27,7 +27,7 @@
 <rect x="248.1" y="115.0" width="17.1" height="21.0" fill="#c9c5c0"/>
 <rect x="268.2" y="115.0" width="17.1" height="8.4" fill="#c9c5c0"/>
 <rect x="288.2" y="115.0" width="17.1" height="6.3" fill="#c9c5c0"/>
-<text x="288.2" y="278" font-size="10" fill="#96928f">2025</text>
+<text x="288.2" y="278" font-size="11" fill="#6f6c66">2025</text>
 <rect x="308.3" y="115.0" width="17.1" height="29.4" fill="#c9c5c0"/>
 <rect x="328.3" y="115.0" width="17.1" height="35.7" fill="#c9c5c0"/>
 <rect x="348.4" y="115.0" width="17.1" height="37.8" fill="#c9c5c0"/>
@@ -40,7 +40,7 @@
 <rect x="488.8" y="85.6" width="17.1" height="29.4" fill="#eb6834"/>
 <rect x="508.9" y="89.8" width="17.1" height="25.2" fill="#eb6834"/>
 <rect x="529.0" y="94.0" width="17.1" height="21.0" fill="#eb6834"/>
-<text x="529.0" y="278" font-size="10" fill="#96928f">2026</text>
+<text x="529.0" y="278" font-size="11" fill="#6f6c66">2026</text>
 <rect x="549.0" y="112.9" width="17.1" height="2.1" fill="#eb6834"/>
 <rect x="569.1" y="115.0" width="17.1" height="14.7" fill="#c9c5c0"/>
 <rect x="589.1" y="115.0" width="17.1" height="10.5" fill="#c9c5c0"/>
@@ -50,13 +50,13 @@
 <rect x="669.4" y="87.7" width="17.1" height="27.3" fill="#eb6834"/>
 <rect x="689.4" y="68.8" width="17.1" height="46.2" fill="#eb6834"/>
 <line x1="457.2" y1="48" x2="457.2" y2="262" stroke="#26262f" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="457.2" y="46" font-size="10.5" fill="#26262f" text-anchor="middle">séance du 8 septembre 2025</text>
-<text x="449.2" y="73.0" font-size="10.5" font-weight="600" fill="#eb6834" text-anchor="end">France au-dessus</text>
-<text x="286.7" y="209.5" font-size="10.5" fill="#55524f">Grèce au-dessus</text>
+<text x="457.2" y="44" font-size="11" fill="#26262f" text-anchor="middle">séance du 8 septembre 2025</text>
+<text x="449.2" y="73.0" font-size="11" font-weight="600" fill="#eb6834" text-anchor="end">France au-dessus</text>
+<text x="286.7" y="209.5" font-size="11" fill="#55524f">Grèce au-dessus</text>
 <line x1="0" y1="302.0" x2="720" y2="302.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="317.0" font-size="11" fill="#55524f">Eurostat, rendements des emprunts d'État à long terme, moyennes mensuelles (irt_lt_mcby_m) ; calcul de l'auteur</text>
-<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Moyennes mensuelles. Le 8 septembre 2025, la France empruntait à dix ans à 3,49 % (Banque de France) et la Grèce à</text>
+<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Moyennes mensuelles. Le 8 septembre 2025, la France empruntait à dix ans à 3,49 % (Banque de France) et la Grèce à</text>
 <text class="pied-note" x="0" y="345.0" font-size="11" fill="#55524f">3,34 % (Banque de Grèce) ; le 4, la même mesure pour les deux pays donnait 3,50 % contre 3,44 %. Un prix de marché dit</text>
 <text class="pied-note" x="0" y="359.0" font-size="11" fill="#55524f">le coût d'emprunt du moment, pas la solidité relative de deux pays.</text>
-<text class="pied-licence" x="0" y="373.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/formules-du-debat-sur-la-dette/</text>
+<text class="pied-licence" x="0" y="373.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/formules-du-debat-sur-la-dette/</text>
 </svg>

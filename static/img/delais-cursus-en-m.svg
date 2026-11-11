@@ -26,9 +26,9 @@
 <rect x="0" y="358" width="150.0" height="30" fill="#8a8f98"/>
 <text class="val" x="75.0" y="378.0" font-size="13.5" fill="#ffffff" text-anchor="middle">5 years</text>
 <line x1="0" y1="389" x2="300" y2="389" stroke="#e1e0d9"/>
-<text x="0.0" y="406.0" font-size="13.5" fill="#898781" text-anchor="start">0</text>
-<text x="150.0" y="406.0" font-size="13.5" fill="#898781" text-anchor="middle">5</text>
-<text x="300.0" y="406.0" font-size="13.5" fill="#898781" text-anchor="end">10</text>
+<text x="0.0" y="406.0" font-size="13.5" fill="#6f6c66" text-anchor="start">0</text>
+<text x="150.0" y="406.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">5</text>
+<text x="300.0" y="406.0" font-size="13.5" fill="#6f6c66" text-anchor="end">10</text>
 <line x1="0" y1="420.0" x2="300" y2="420.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0.0" y="441.0" font-size="13.5" fill="#52514e" text-anchor="start">Order of 8 April 2013, art. 1;</text>
 <text class="pied-source" x="0.0" y="458.0" font-size="13.5" fill="#52514e" text-anchor="start">Education Code, art. L632-2; Law</text>
@@ -42,6 +42,6 @@
 <text class="pied-note" x="0.0" y="598.0" font-size="13.5" fill="#52514e" text-anchor="start">only: neither the effect of a policy</text>
 <text class="pied-note" x="0.0" y="615.0" font-size="13.5" fill="#52514e" text-anchor="start">nor the date of its first effects;</text>
 <text class="pied-note" x="0.0" y="632.0" font-size="13.5" fill="#52514e" text-anchor="start">residents provide care before the end.</text>
-<text class="pied-licence" x="0.0" y="653.0" font-size="13.5" fill="#898781" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0.0" y="670.0" font-size="13.5" fill="#898781" text-anchor="start">· stephane-lalut.com</text>
+<text class="pied-licence" x="0.0" y="653.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="670.0" font-size="13.5" fill="#6f6c66" text-anchor="start">· stephane-lalut.com</text>
 </svg>

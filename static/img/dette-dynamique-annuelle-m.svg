@@ -4,13 +4,13 @@
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Chaque année, ce qui a poussé</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">ou freiné le ratio dette/PIB</text>
 <line x1="30" y1="300.0" x2="298" y2="300.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="304.0" font-size="13.5" fill="#96928f" text-anchor="end">−8</text>
+<text x="26" y="304.0" font-size="13.5" fill="#6f6c66" text-anchor="end">−8</text>
 <line x1="30" y1="240.0" x2="298" y2="240.0" stroke="#dcd8d3" stroke-width="1.4"/>
-<text x="26" y="244.0" font-size="13.5" fill="#96928f" text-anchor="end">+0</text>
+<text x="26" y="244.0" font-size="13.5" fill="#6f6c66" text-anchor="end">+0</text>
 <line x1="30" y1="180.0" x2="298" y2="180.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="184.0" font-size="13.5" fill="#96928f" text-anchor="end">+8</text>
+<text x="26" y="184.0" font-size="13.5" fill="#6f6c66" text-anchor="end">+8</text>
 <line x1="30" y1="120.0" x2="298" y2="120.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="124.0" font-size="13.5" fill="#96928f" text-anchor="end">+16</text>
+<text x="26" y="124.0" font-size="13.5" fill="#6f6c66" text-anchor="end">+16</text>
 <rect x="31.3" y="237.9" width="6.4" height="2.1" fill="#eb6834"/>
 <rect x="31.3" y="222.3" width="6.4" height="15.6" fill="#184f95"/>
 <rect x="31.3" y="219.1" width="6.4" height="3.2" fill="#c9c5c0"/>
@@ -142,8 +142,8 @@
 <text x="22" y="396" font-size="13.5" fill="#55524f">ajustements flux-stock</text>
 <circle cx="7" cy="413" r="4" fill="#26262f"/>
 <text x="22" y="418" font-size="13.5" fill="#55524f">variation du ratio</text>
-<text x="0" y="452" font-size="15" font-weight="600" fill="#26262f">2009 : +14,2 points</text>
-<text x="0" y="474" font-size="15" font-weight="600" fill="#26262f">2020 : +16,7 points</text>
+<text x="0" y="452" font-size="15" font-weight="600" fill="#26262f">2009 : +14,2 points</text>
+<text x="0" y="474" font-size="15" font-weight="600" fill="#26262f">2020 : +16,7 points</text>
 <text x="0" y="496" font-size="15" font-weight="600" fill="#26262f">2021-2023 : effet</text>
 <text x="0" y="515" font-size="15" font-weight="600" fill="#26262f">taux-croissance −16,8</text>
 <line x1="0" y1="533.0" x2="300" y2="533.0" stroke="#dcd8d3"/>
@@ -155,6 +155,6 @@
 <text x="0" y="643.0" font-size="13.5" fill="#55524f">un excédent en moins ; la somme des</text>
 <text x="0" y="660.0" font-size="13.5" fill="#55524f">trois barres égale la variation (point</text>
 <text x="0" y="677.0" font-size="13.5" fill="#55524f">noir), au centième près.</text>
-<text x="0" y="698.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="715.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="698.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="715.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

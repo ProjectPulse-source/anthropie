@@ -47,6 +47,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lecture_tableur as lt  # noqa: E402  -- forme des cellules (organe commun)
 import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
+import pied_figure  # noqa: E402  -- pied commun, coupure des lignes, version téléphone, encre atténuée (organe commun)
 import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -96,7 +97,9 @@ FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 # Aucune teinte nouvelle : bleu et orange de la charte, deux gris déjà employés par update_dette_dynamique.py.
 # Ordre des gris choisi pour l'impression en noir : deux voisins n'ont jamais la même clarté.
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+# MUTED ne colore que du texte (ligne de licence) : encre atténuée de l'organe commun, jamais recopiée. GRIS reste le
+# gris des barres. Les trois générateurs de /enseignants/ lisent ces deux constantes ici.
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
 COULEUR = {"passage": (BLEU, "#ffffff"), "redoublement": (GRIS, "#ffffff"), "reorientation": (GRIS_CLAIR, INK),
            "sortie": (ORANGE, INK)}
 LIBELLE = {"passage": ("Passés en", "2ᵉ année"), "redoublement": ("Recommencent", "une 1ʳᵉ année"),
@@ -321,7 +324,7 @@ def figure(c: dict, A: dict) -> str:
     """Cinq barres empilées à 100 % (quatre origines, puis l'ensemble) : quatre devenirs un an après."""
     lignes = [(lib, c["origines"][cle]) for cle, lib in ORIGINES] + [("Ensemble", c["ensemble"])]
     X0, X1, TOP, HB, PAS = 132, W - 8, 96, 30, 44
-    H = TOP + PAS * (len(lignes) - 1) + HB + 14 + 36      # 36 : trois lignes de définitions dans le cartouche
+    BAS = TOP + PAS * (len(lignes) - 1) + HB              # bas de la dernière barre ; la hauteur est fixée par le pied
     titre = "Un an après une première année de licence : quatre devenirs, selon l'origine sociale"
     o = c["origines"]
     desc = ("Barres empilées à 100 %%, une par origine sociale. Bacheliers %s entrés en première année de licence : "
@@ -330,15 +333,16 @@ def figure(c: dict, A: dict) -> str:
             "hors de la licence ; %s %% et %s %% ne sont plus retrouvés dans les fichiers d'inscription."
             % (A["cohorte"], A["tf_passage"], A["d_passage"], A["tf_redoublement"], A["d_redoublement"],
                A["tf_reorientation"], A["d_reorientation"], A["tf_sortie"], A["d_sortie"]))
-    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" font-variant-numeric="tabular-nums" '
-         'aria-labelledby="pl-t pl-d" font-family="%s">' % (W, H + 52, FONT),
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="pl-t pl-d" font-family="%s">' % (W, FONT),
          '<title id="pl-t">%s</title><desc id="pl-d">%s</desc>' % (esc(titre), esc(desc)),
-         '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, H + 52),
+         '<rect width="%d" height="0" fill="#ffffff"/>' % W,
          '<text x="0" y="18" font-size="15" font-weight="600" fill="%s">%s</text>' % (INK, esc(titre)),
          '<text x="0" y="38" font-size="11" fill="%s">%s</text>'
          % (INK2, esc("Bacheliers %s inscrits en 1ʳᵉ année de licence à la rentrée %s : situation à la rentrée %s, en %% des inscrits."
                       % (A["cohorte"], A["cohorte"], A["annee_devenir"])))]
     larg = X1 - X0
+    noms = []
     for n, (lib, d) in enumerate(lignes):
         y = TOP + PAS * n
         t = d["taux_publies"]
@@ -357,17 +361,44 @@ def figure(c: dict, A: dict) -> str:
             e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s" text-anchor="middle">%s</text>'
                      % (x + w / 2, y + HB / 2 + 4, encre, esc(fr(t[k]))))
             if n == 0:      # étiquetage direct : le nom de chaque devenir au-dessus de son segment, première barre
-                for j, mot in enumerate(LIBELLE[k]):
-                    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>'
-                             % (x + w / 2, y - 19 + 12 * j, INK2, esc(mot)))
+                noms.append((x + w / 2, LIBELLE[k]))
             x += w
-    y0 = H + 4 - 36
-    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, GRID))
-    cart = cartouche(c, A)
-    for k, (txt, col) in enumerate(cart):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(txt)))
-    e.append("</svg>")
-    return "\n".join(e)
+    noms_au_dessus(e, noms, TOP)
+    return pied_detaille(e, BAS + 18, cartouche(c, A))
+
+
+ECART_NOMS = 6      # px ESTIMÉS entre deux noms voisins : mesuré au rendu, près de 10 px, l'écart d'avant le 11/11/2026
+
+
+def noms_au_dessus(e: list, noms: list, y: float) -> None:
+    """Étiquetage direct d'une barre empilée : le nom de chaque segment au-dessus de lui, lignes centrées, à la police
+    minimale de l'organe commun (10,5 px jusqu'au 11/11/2026). noms : [(centre du segment, lignes)], de gauche à droite.
+
+    Deux noms voisins que leur largeur rapproche à moins de ECART_NOMS s'écartent à parts égales : à 11 px, « hors
+    licence » et « retrouvés » ne gardaient que 6,5 px entre eux, au-dessus de deux segments de 60 et 66 px qui
+    rétrécissent d'une cohorte à l'autre. Largeur estimée comme dans pied_figure.hors_cadre (0,52 em par caractère) :
+    une estimation, large pour ces mots ; un chevauchement réel reste arrêté par check-figures.py (R1)."""
+    fs = pied_figure.POLICE_MIN
+    xs = [x for x, _ in noms]
+    demi = [max(0.52 * fs * len(mot) for mot in mots) / 2 for _, mots in noms]
+    for _ in noms:                                  # un écartement peut en demander un autre : au plus un tour par nom
+        for i in range(len(xs) - 1):
+            manque = ECART_NOMS - ((xs[i + 1] - demi[i + 1]) - (xs[i] + demi[i]))
+            if manque > 0.01:
+                xs[i], xs[i + 1] = xs[i] - manque / 2, xs[i + 1] + manque / 2
+    for x, (_, mots) in zip(xs, noms):
+        for j, mot in enumerate(mots):
+            e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="%s" text-anchor="middle">%s</text>'
+                     % (x, y - 20 + 13 * j, fs, INK2, esc(mot)))
+
+
+def pied_detaille(e: list, y0: float, cart: list) -> str:
+    """Cartouche d'une figure détaillée par l'organe commun (11/11/2026) : source, notes, licence à 11 px, coupées dans
+    la largeur de la figure ; la hauteur du SVG suit. À 9 px sur une seule ligne, chaque note tenait dans 720 ; à 11 px
+    elle en sort. Chaque note garde sa ligne de départ. Une fonction pour les trois générateurs de /enseignants/."""
+    der = len(cart) - 1
+    return pied_figure.pied(e, y0, W, [(txt, col, "pied-source" if k == 0 else "pied-licence" if k == der else "pied-note")
+                                       for k, (txt, col) in enumerate(cart)], GRID)
 
 
 def cartouche(c: dict, A: dict) -> list:
@@ -403,7 +434,7 @@ def barres_mobile(ident: str, titre: str, desc: str, sous_titre: str, lignes, or
     valeurs NOMMÉES, chacune précédée d'une pastille de la couleur de son segment, sur deux colonnes.
     lignes : [(intitule, {cle: valeur}, gras)] ; ordre : clés dans l'ordre des segments ; noms : {cle: nom court}.
     blocs : [(texte, couleur, classe)] du pied commun (pied_figure.pied_mobile)."""
-    import pied_figure as pf
+    pf = pied_figure
     e, y = pf.tete_mobile(ident, titre, desc, INK, FONT)
     for l in pf.coupe(sous_titre, 38):
         y += 17

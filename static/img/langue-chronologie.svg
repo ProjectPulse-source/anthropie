@@ -4,25 +4,25 @@
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement</text>
 <rect x="563.9" y="52" width="140.1" height="352" fill="#f1efec"/>
 <line x1="563.9" y1="52" x2="563.9" y2="404" stroke="#55524f" stroke-width="1.2"/>
-<text x="559.9" y="46" font-size="10" fill="#55524f" text-anchor="end">2013 : plus de la moitié des 12-17 ans ont un smartphone →</text>
-<text x="315.9" y="418" font-size="9.5" fill="#96928f" text-anchor="middle">1990</text>
+<text x="559.9" y="46" font-size="11" fill="#55524f" text-anchor="end">2013 : plus de la moitié des 12-17 ans ont un smartphone →</text>
+<text x="315.9" y="418" font-size="11" fill="#6f6c66" text-anchor="middle">1990</text>
 <line x1="315.9" y1="64" x2="315.9" y2="404" stroke="#dcd8d3" stroke-width="0.5"/>
-<text x="369.8" y="418" font-size="9.5" fill="#96928f" text-anchor="middle">1995</text>
+<text x="369.8" y="418" font-size="11" fill="#6f6c66" text-anchor="middle">1995</text>
 <line x1="369.8" y1="64" x2="369.8" y2="404" stroke="#dcd8d3" stroke-width="0.5"/>
-<text x="423.7" y="418" font-size="9.5" fill="#96928f" text-anchor="middle">2000</text>
+<text x="423.7" y="418" font-size="11" fill="#6f6c66" text-anchor="middle">2000</text>
 <line x1="423.7" y1="64" x2="423.7" y2="404" stroke="#dcd8d3" stroke-width="0.5"/>
-<text x="477.6" y="418" font-size="9.5" fill="#96928f" text-anchor="middle">2005</text>
+<text x="477.6" y="418" font-size="11" fill="#6f6c66" text-anchor="middle">2005</text>
 <line x1="477.6" y1="64" x2="477.6" y2="404" stroke="#dcd8d3" stroke-width="0.5"/>
-<text x="531.5" y="418" font-size="9.5" fill="#96928f" text-anchor="middle">2010</text>
+<text x="531.5" y="418" font-size="11" fill="#6f6c66" text-anchor="middle">2010</text>
 <line x1="531.5" y1="64" x2="531.5" y2="404" stroke="#dcd8d3" stroke-width="0.5"/>
-<text x="585.4" y="418" font-size="9.5" fill="#96928f" text-anchor="middle">2015</text>
+<text x="585.4" y="418" font-size="11" fill="#6f6c66" text-anchor="middle">2015</text>
 <line x1="585.4" y1="64" x2="585.4" y2="404" stroke="#dcd8d3" stroke-width="0.5"/>
-<text x="639.3" y="418" font-size="9.5" fill="#96928f" text-anchor="middle">2020</text>
+<text x="639.3" y="418" font-size="11" fill="#6f6c66" text-anchor="middle">2020</text>
 <line x1="639.3" y1="64" x2="639.3" y2="404" stroke="#dcd8d3" stroke-width="0.5"/>
-<text x="693.2" y="418" font-size="9.5" fill="#96928f" text-anchor="middle">2025</text>
+<text x="693.2" y="418" font-size="11" fill="#6f6c66" text-anchor="middle">2025</text>
 <line x1="693.2" y1="64" x2="693.2" y2="404" stroke="#dcd8d3" stroke-width="0.5"/>
 <text x="0" y="86" font-size="11" fill="#26262f">PIRLS, lecture</text>
-<text x="252" y="86" font-size="10" fill="#96928f" text-anchor="end">CM1</text>
+<text x="252" y="86" font-size="11" fill="#6f6c66" text-anchor="end">CM1</text>
 <line x1="434.5" y1="82" x2="488.4" y2="82" stroke="#eb6834" stroke-width="3" stroke-dasharray="5 3"/>
 <line x1="488.4" y1="82" x2="542.3" y2="82" stroke="#eb6834" stroke-width="3" stroke-dasharray="5 3"/>
 <line x1="542.3" y1="82" x2="596.2" y2="82" stroke="#eb6834" stroke-width="4"/>
@@ -33,7 +33,7 @@
 <circle cx="596.2" cy="82" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="650.1" cy="82" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="116" font-size="11" fill="#26262f">Dictée (erreurs en hausse = recul)</text>
-<text x="252" y="116" font-size="10" fill="#96928f" text-anchor="end">CM2</text>
+<text x="252" y="116" font-size="11" fill="#6f6c66" text-anchor="end">CM2</text>
 <line x1="283.6" y1="112" x2="499.2" y2="112" stroke="#eb6834" stroke-width="4"/>
 <line x1="499.2" y1="112" x2="585.4" y2="112" stroke="#eb6834" stroke-width="3" stroke-dasharray="5 3"/>
 <line x1="585.4" y1="112" x2="650.1" y2="112" stroke="#eb6834" stroke-width="3" stroke-dasharray="5 3"/>
@@ -42,14 +42,14 @@
 <circle cx="585.4" cy="112" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="650.1" cy="112" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="146" font-size="11" fill="#26262f">Lecture, épreuves de 1987</text>
-<text x="252" y="146" font-size="10" fill="#96928f" text-anchor="end">CM2</text>
+<text x="252" y="146" font-size="11" fill="#6f6c66" text-anchor="end">CM2</text>
 <line x1="283.6" y1="142" x2="391.4" y2="142" stroke="#8a8781" stroke-width="4"/>
 <line x1="391.4" y1="142" x2="499.2" y2="142" stroke="#eb6834" stroke-width="4"/>
 <circle cx="283.6" cy="142" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="391.4" cy="142" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="499.2" cy="142" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="176" font-size="11" fill="#26262f">CEDRE, maîtrise de la langue</text>
-<text x="252" y="176" font-size="10" fill="#96928f" text-anchor="end">CM2</text>
+<text x="252" y="176" font-size="11" fill="#6f6c66" text-anchor="end">CM2</text>
 <line x1="456.0" y1="172" x2="520.7" y2="172" stroke="#8a8781" stroke-width="4"/>
 <line x1="520.7" y1="172" x2="585.4" y2="172" stroke="#8a8781" stroke-width="4"/>
 <line x1="585.4" y1="172" x2="650.1" y2="172" stroke="#184f95" stroke-width="4"/>
@@ -58,61 +58,61 @@
 <circle cx="585.4" cy="172" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="650.1" cy="172" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="206" font-size="11" fill="#26262f">Évaluation de début de sixième</text>
-<text x="252" y="206" font-size="10" fill="#96928f" text-anchor="end">6e</text>
+<text x="252" y="206" font-size="11" fill="#6f6c66" text-anchor="end">6e</text>
 <line x1="607.0" y1="202" x2="650.1" y2="202" stroke="#184f95" stroke-width="3" stroke-dasharray="5 3"/>
 <line x1="650.1" y1="202" x2="693.2" y2="202" stroke="#eb6834" stroke-width="3" stroke-dasharray="5 3"/>
 <circle cx="607.0" cy="202" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="650.1" cy="202" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="693.2" cy="202" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="236" font-size="11" fill="#26262f">CEDRE, langue et littératie</text>
-<text x="252" y="236" font-size="10" fill="#96928f" text-anchor="end">3e</text>
+<text x="252" y="236" font-size="11" fill="#6f6c66" text-anchor="end">3e</text>
 <line x1="585.4" y1="232" x2="650.1" y2="232" stroke="#8a8781" stroke-width="4"/>
 <circle cx="585.4" cy="232" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="650.1" cy="232" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="266" font-size="11" fill="#26262f">PISA, compréhension de l'écrit</text>
-<text x="252" y="266" font-size="10" fill="#96928f" text-anchor="end">15 ans</text>
+<text x="252" y="266" font-size="11" fill="#6f6c66" text-anchor="end">15 ans</text>
 <line x1="423.7" y1="262" x2="553.1" y2="262" stroke="#8a8781" stroke-width="4"/>
 <line x1="553.1" y1="262" x2="693.2" y2="262" stroke="#eb6834" stroke-width="4"/>
 <circle cx="423.7" cy="262" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="553.1" cy="262" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="693.2" cy="262" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="296" font-size="11" fill="#26262f">PISA, temps de lecture-plaisir</text>
-<text x="252" y="296" font-size="10" fill="#96928f" text-anchor="end">15 ans</text>
+<text x="252" y="296" font-size="11" fill="#6f6c66" text-anchor="end">15 ans</text>
 <line x1="423.7" y1="292" x2="520.7" y2="292" stroke="#eb6834" stroke-width="4"/>
 <line x1="520.7" y1="292" x2="617.8" y2="292" stroke="#8a8781" stroke-width="4"/>
 <circle cx="423.7" cy="292" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="520.7" cy="292" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="617.8" cy="292" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="326" font-size="11" fill="#26262f">PISA, plaisir de lire (indice)</text>
-<text x="252" y="326" font-size="10" fill="#96928f" text-anchor="end">15 ans</text>
+<text x="252" y="326" font-size="11" fill="#6f6c66" text-anchor="end">15 ans</text>
 <line x1="520.7" y1="322" x2="617.8" y2="322" stroke="#eb6834" stroke-width="4"/>
 <circle cx="520.7" cy="322" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="617.8" cy="322" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="356" font-size="11" fill="#26262f">Test d'entrée, français (GT)</text>
-<text x="252" y="356" font-size="10" fill="#96928f" text-anchor="end">seconde</text>
+<text x="252" y="356" font-size="11" fill="#6f6c66" text-anchor="end">seconde</text>
 <line x1="628.5" y1="352" x2="650.1" y2="352" stroke="#184f95" stroke-width="3" stroke-dasharray="5 3"/>
 <line x1="650.1" y1="352" x2="693.2" y2="352" stroke="#eb6834" stroke-width="3" stroke-dasharray="5 3"/>
 <circle cx="628.5" cy="352" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="650.1" cy="352" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="693.2" cy="352" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <text x="0" y="386" font-size="11" fill="#26262f">20 livres ou plus dans l'année</text>
-<text x="252" y="386" font-size="10" fill="#96928f" text-anchor="end">15-24 ans</text>
+<text x="252" y="386" font-size="11" fill="#6f6c66" text-anchor="end">15-24 ans</text>
 <line x1="294.3" y1="382" x2="391.4" y2="382" stroke="#eb6834" stroke-width="3" stroke-dasharray="5 3"/>
 <line x1="391.4" y1="382" x2="510.0" y2="382" stroke="#eb6834" stroke-width="3" stroke-dasharray="5 3"/>
 <circle cx="294.3" cy="382" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="391.4" cy="382" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <circle cx="510.0" cy="382" r="3.2" fill="#ffffff" stroke="#55524f" stroke-width="1.4"/>
 <line x1="0" y1="438" x2="22" y2="438" stroke="#eb6834" stroke-width="4"/>
-<text x="28" y="442" font-size="10" fill="#55524f">recul significatif</text>
-<line x1="127" y1="438" x2="149" y2="438" stroke="#8a8781" stroke-width="4"/>
-<text x="155" y="442" font-size="10" fill="#55524f">sans évolution significative</text>
-<line x1="306" y1="438" x2="328" y2="438" stroke="#184f95" stroke-width="4"/>
-<text x="334" y="442" font-size="10" fill="#55524f">hausse significative</text>
-<line x1="444" y1="438" x2="466" y2="438" stroke="#eb6834" stroke-width="4" stroke-dasharray="5 3"/>
-<text x="472" y="442" font-size="10" fill="#55524f">tirets : sens observé, sans test publié</text>
+<text x="28" y="442" font-size="11" fill="#55524f">recul significatif</text>
+<line x1="136" y1="438" x2="158" y2="438" stroke="#8a8781" stroke-width="4"/>
+<text x="164" y="442" font-size="11" fill="#55524f">sans évolution significative</text>
+<line x1="330" y1="438" x2="352" y2="438" stroke="#184f95" stroke-width="4"/>
+<text x="358" y="442" font-size="11" fill="#55524f">hausse significative</text>
+<line x1="478" y1="438" x2="500" y2="438" stroke="#eb6834" stroke-width="4" stroke-dasharray="5 3"/>
+<text x="506" y="442" font-size="11" fill="#55524f">tirets : sens observé, sans test publié</text>
 <line x1="0" y1="476.0" x2="720" y2="476.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="491.0" font-size="11" fill="#55524f">DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC</text>
 <text class="pied-note" x="0" y="505.0" font-size="11" fill="#55524f">Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ;</text>
 <text class="pied-note" x="0" y="519.0" font-size="11" fill="#55524f">tirets : sans test.</text>
-<text class="pied-licence" x="0" y="533.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
+<text class="pied-licence" x="0" y="533.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
 </svg>

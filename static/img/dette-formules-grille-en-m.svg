@@ -14,7 +14,7 @@
 <text x="0" y="237" font-size="13.5" fill="#26262f">1975</text>
 <text x="0" y="254" font-size="13.5" fill="#55524f">Other question: Excluding interest,</text>
 <text x="0" y="271" font-size="13.5" fill="#55524f">the balance was positive for four</text>
-<text x="0" y="288" font-size="13.5" fill="#55524f">years (1998 to 2001)</text>
+<text x="0" y="288" font-size="13.5" fill="#55524f">years (1998 to 2001)</text>
 <text x="0" y="305" font-size="13.5" fill="#eb6834">Conclusion: A finding, no inference</text>
 <line x1="0" y1="311" x2="300" y2="311" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="337" font-size="15" font-weight="600" fill="#26262f">“A euro of deficit is a euro of</text>
@@ -57,10 +57,10 @@
 <text x="0" y="964" font-size="15" font-weight="600" fill="#26262f">falling revenue”</text>
 <text x="0" y="981" font-size="13.5" fill="#55524f">C. Chatelain</text>
 <text x="0" y="998" font-size="13.5" fill="#26262f">Question asked: Accurate for</text>
-<text x="0" y="1015" font-size="13.5" fill="#26262f">2017–2024: spending −0.5 pt of GDP,</text>
-<text x="0" y="1032" font-size="13.5" fill="#26262f">revenue −2.9 pts (May 2025 accounts)</text>
+<text x="0" y="1015" font-size="13.5" fill="#26262f">2017–2024: spending −0.5 pt of GDP,</text>
+<text x="0" y="1032" font-size="13.5" fill="#26262f">revenue −2.9 pts (May 2025 accounts)</text>
 <text x="0" y="1049" font-size="13.5" fill="#55524f">Other question: Since 2019: spending</text>
-<text x="0" y="1066" font-size="13.5" fill="#55524f">+1.9 pt</text>
+<text x="0" y="1066" font-size="13.5" fill="#55524f">+1.9 pt</text>
 <text x="0" y="1083" font-size="13.5" fill="#eb6834">Conclusion: Accounting: supported;</text>
 <text x="0" y="1100" font-size="13.5" fill="#eb6834">causal: not established</text>
 <line x1="0" y1="1106" x2="300" y2="1106" stroke="#dcd8d3" stroke-width="0.6"/>
@@ -85,7 +85,7 @@
 <text x="0" y="1448" font-size="13.5" fill="#26262f">€107bn in 2029</text>
 <text x="0" y="1465" font-size="13.5" fill="#55524f">Other question: Same year: extra</text>
 <text x="0" y="1482" font-size="13.5" fill="#55524f">output in 2029 of €66–97bn; no longer</text>
-<text x="0" y="1499" font-size="13.5" fill="#55524f">double, but 1.1 to 1.6 times</text>
+<text x="0" y="1499" font-size="13.5" fill="#55524f">double, but 1.1 to 1.6 times</text>
 <text x="0" y="1516" font-size="13.5" fill="#eb6834">Conclusion: “Entirely handed over”:</text>
 <text x="0" y="1533" font-size="13.5" fill="#eb6834">not established</text>
 <line x1="0" y1="1539" x2="300" y2="1539" stroke="#dcd8d3" stroke-width="0.6"/>
@@ -149,6 +149,6 @@
 <text class="pied-note" x="0" y="2532.0" font-size="13.5" fill="#55524f">numbers judged at the stated precision</text>
 <text class="pied-note" x="0" y="2549.0" font-size="13.5" fill="#55524f">(tolerance grid). A case study of one</text>
 <text class="pied-note" x="0" y="2566.0" font-size="13.5" fill="#55524f">debate, not a sample of the debate.</text>
-<text class="pied-licence" x="0" y="2587.0" font-size="13.5" fill="#96928f">Computed by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="2604.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="2587.0" font-size="13.5" fill="#6f6c66">Computed by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="2604.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

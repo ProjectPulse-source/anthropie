@@ -4,8 +4,8 @@
 <text x="0" y="20" font-size="17" font-weight="600" fill="#2b2a28">Qui emprunte ? Qui détient les</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#2b2a28">titres de l'État ?</text>
 <text x="0.0" y="88.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">A · Qui emprunte ? Dette par</text>
-<text x="0.0" y="106.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">administration, fin juin 2026</text>
-<text x="0.0" y="124.0" font-size="13.5" fill="#898781" text-anchor="start">Valeur nominale, milliards d'euros</text>
+<text x="0.0" y="106.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">administration, fin juin 2026</text>
+<text x="0.0" y="124.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Valeur nominale, milliards d'euros</text>
 <text x="0.0" y="146.0" font-size="13.5" fill="#52514e" text-anchor="start">État</text>
 <rect x="0" y="152.0" width="150.0" height="12" rx="3" fill="#184f95"/>
 <text x="156.0" y="163.0" font-size="13.5" fill="#184f95" text-anchor="start" font-weight="600">2 942 Md€ · 82 %</text>
@@ -21,8 +21,8 @@
 <line x1="0" y1="300.0" x2="300" y2="300.0" stroke="#c3c2b7"/>
 <text x="0.0" y="324.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">B · Qui détient les titres négociables</text>
 <text x="0.0" y="342.0" font-size="13.5" fill="#2b2a28" text-anchor="start" font-weight="600">de l'État ? 2e trimestre 2026</text>
-<text x="0.0" y="360.0" font-size="13.5" fill="#898781" text-anchor="start">Valeur de marché · par résidence du</text>
-<text x="0.0" y="378.0" font-size="13.5" fill="#898781" text-anchor="start">détenteur, non par nationalité</text>
+<text x="0.0" y="360.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Valeur de marché · par résidence du</text>
+<text x="0.0" y="378.0" font-size="13.5" fill="#6f6c66" text-anchor="start">détenteur, non par nationalité</text>
 <text x="0.0" y="400.0" font-size="13.5" fill="#52514e" text-anchor="start">Non-résidents</text>
 <rect x="0" y="406.0" width="200.0" height="12" rx="3" fill="#eb6834"/>
 <text x="206.0" y="417.0" font-size="13.5" fill="#eb6834" text-anchor="start" font-weight="600">59,7 %</text>
@@ -38,14 +38,14 @@
 <text x="0.0" y="560.0" font-size="13.5" fill="#52514e" text-anchor="start">Fonds (OPCVM) résidents</text>
 <rect x="0" y="566.0" width="6.7" height="12" rx="3" fill="#eb6834"/>
 <text x="12.7" y="577.0" font-size="13.5" fill="#52514e" text-anchor="start">2,0 %</text>
-<text x="0.0" y="600.0" font-size="13.5" fill="#898781" text-anchor="start">* dont la Banque de France : part non</text>
-<text x="0.0" y="618.0" font-size="13.5" fill="#898781" text-anchor="start">publiée par la source.</text>
+<text x="0.0" y="600.0" font-size="13.5" fill="#6f6c66" text-anchor="start">* dont la Banque de France : part non</text>
+<text x="0.0" y="618.0" font-size="13.5" fill="#6f6c66" text-anchor="start">publiée par la source.</text>
 <line x1="0" y1="632.0" x2="300" y2="632.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="653.0" font-size="13.5" fill="#52514e">A : INSEE, dette de Maastricht par</text>
 <text class="pied-source" x="0" y="670.0" font-size="13.5" fill="#52514e">sous-secteur (29/09/2026) · B : Banque</text>
 <text class="pied-source" x="0" y="687.0" font-size="13.5" fill="#52514e">de France, via l'AFT</text>
 <text class="pied-note" x="0" y="708.0" font-size="13.5" fill="#52514e">Deux champs distincts. La détention ne</text>
 <text class="pied-note" x="0" y="725.0" font-size="13.5" fill="#52514e">mesure pas la charge finale.</text>
-<text class="pied-licence" x="0" y="746.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="763.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="746.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="763.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

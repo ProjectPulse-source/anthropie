@@ -6,26 +6,26 @@
 <text x="56.0" y="70.0" font-size="11" fill="#184f95" text-anchor="start" font-weight="600">Published category A</text>
 <rect x="197.2" y="88.0" width="26.5" height="212.0" fill="#eeede8" opacity="0.6"/>
 <line x1="56.0" y1="300.0" x2="356.0" y2="300.0" stroke="#e1e0d9"/>
-<text x="50.0" y="304.0" font-size="10" fill="#898781" text-anchor="end">2.2m</text>
+<text x="50.0" y="304.0" font-size="11" fill="#6f6c66" text-anchor="end">2.2m</text>
 <line x1="56.0" y1="262.9" x2="356.0" y2="262.9" stroke="#e1e0d9"/>
-<text x="50.0" y="266.9" font-size="10" fill="#898781" text-anchor="end">2.6m</text>
+<text x="50.0" y="266.9" font-size="11" fill="#6f6c66" text-anchor="end">2.6m</text>
 <line x1="56.0" y1="225.8" x2="356.0" y2="225.8" stroke="#e1e0d9"/>
-<text x="50.0" y="229.8" font-size="10" fill="#898781" text-anchor="end">3.0m</text>
+<text x="50.0" y="229.8" font-size="11" fill="#6f6c66" text-anchor="end">3.0m</text>
 <line x1="56.0" y1="188.7" x2="356.0" y2="188.7" stroke="#e1e0d9"/>
-<text x="50.0" y="192.7" font-size="10" fill="#898781" text-anchor="end">3.4m</text>
+<text x="50.0" y="192.7" font-size="11" fill="#6f6c66" text-anchor="end">3.4m</text>
 <line x1="56.0" y1="151.6" x2="356.0" y2="151.6" stroke="#e1e0d9"/>
-<text x="50.0" y="155.6" font-size="10" fill="#898781" text-anchor="end">3.8m</text>
+<text x="50.0" y="155.6" font-size="11" fill="#6f6c66" text-anchor="end">3.8m</text>
 <line x1="56.0" y1="114.5" x2="356.0" y2="114.5" stroke="#e1e0d9"/>
-<text x="50.0" y="118.5" font-size="10" fill="#898781" text-anchor="end">4.2m</text>
-<text x="56.0" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2018</text>
-<text x="126.6" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2020</text>
-<text x="197.2" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2022</text>
-<text x="267.8" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2024</text>
-<text x="338.4" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2026</text>
+<text x="50.0" y="118.5" font-size="11" fill="#6f6c66" text-anchor="end">4.2m</text>
+<text x="56.0" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2018</text>
+<text x="126.6" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="197.2" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2022</text>
+<text x="267.8" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2024</text>
+<text x="338.4" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2026</text>
 <line x1="298.6" y1="88.0" x2="298.6" y2="300.0" stroke="#52514e" stroke-dasharray="3 3"/>
 <polyline points="56.0,160.1 64.8,160.6 73.6,160.9 82.5,162.8 91.3,165.1 100.1,167.8 108.9,169.4 117.8,173.4 126.6,172.3 135.4,96.4 144.2,140.4 153.1,148.3 161.9,151.6 170.7,158.2 179.5,175.7 188.4,192.3 197.2,206.9 206.0,210.2 214.8,211.5 223.6,221.3 232.5,224.6 241.3,224.6 250.1,222.2 258.9,223.5 267.8,224.9 276.6,223.9 285.4,221.5 294.2,213.9 303.1,189.6 311.9,205.2 320.7,199.5 329.5,194.9 338.4,198.5 347.2,195.9 356.0,193.0" fill="none" stroke="#184f95" stroke-width="2.4"/>
-<text x="210.4" y="86.0" font-size="9" fill="#52514e" text-anchor="middle">2022: form</text>
-<text x="301.6" y="86.0" font-size="9" fill="#52514e" text-anchor="start">2025: law</text>
+<text x="210.4" y="86.0" font-size="11" fill="#52514e" text-anchor="middle">2022: form</text>
+<text x="301.6" y="86.0" font-size="11" fill="#52514e" text-anchor="start">2025: law</text>
 <text x="406.0" y="70.0" font-size="11" fill="#52514e" text-anchor="start" font-weight="600">Excluding RSA recipients and youth programmes</text>
 <rect x="547.2" y="88.0" width="26.5" height="212.0" fill="#eeede8" opacity="0.6"/>
 <line x1="406.0" y1="300.0" x2="706.0" y2="300.0" stroke="#e1e0d9"/>
@@ -34,21 +34,21 @@
 <line x1="406.0" y1="188.7" x2="706.0" y2="188.7" stroke="#e1e0d9"/>
 <line x1="406.0" y1="151.6" x2="706.0" y2="151.6" stroke="#e1e0d9"/>
 <line x1="406.0" y1="114.5" x2="706.0" y2="114.5" stroke="#e1e0d9"/>
-<text x="406.0" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2018</text>
-<text x="476.6" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2020</text>
-<text x="547.2" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2022</text>
-<text x="617.8" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2024</text>
-<text x="688.4" y="315.0" font-size="10" fill="#898781" text-anchor="middle">2026</text>
+<text x="406.0" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2018</text>
+<text x="476.6" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="547.2" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2022</text>
+<text x="617.8" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2024</text>
+<text x="688.4" y="316.0" font-size="11" fill="#6f6c66" text-anchor="middle">2026</text>
 <line x1="648.6" y1="88.0" x2="648.6" y2="300.0" stroke="#52514e" stroke-dasharray="3 3"/>
 <polyline points="406.0,236.2 414.8,242.5 423.6,242.1 432.5,241.2 441.3,244.5 450.1,251.0 458.9,250.9 467.8,251.4 476.6,250.4 485.4,189.7 494.2,231.7 503.1,238.6 511.9,240.8 520.7,246.2 529.5,261.0 538.4,272.4 547.2,282.4 556.0,286.9 564.8,286.1 573.6,292.4 582.5,294.2 591.3,294.7 600.1,292.2 608.9,292.2 617.8,292.9 626.6,292.4 635.4,290.5 644.2,283.5 653.1,274.2 661.9,281.1 670.7,279.5 679.5,273.7 688.4,278.0 697.2,278.2 706.0,277.5" fill="none" stroke="#8a8f98" stroke-width="2.4" stroke-dasharray="5 3"/>
-<text x="560.4" y="86.0" font-size="9" fill="#52514e" text-anchor="middle">2022: form</text>
-<text x="651.6" y="86.0" font-size="9" fill="#52514e" text-anchor="start">2025: law</text>
-<text x="0.0" y="332.0" font-size="10" fill="#52514e" text-anchor="start">Both series jump in the first quarter of 2025 and fall back in the second (automatic updating, Jan.-Mar. 2025); their</text>
-<text x="0.0" y="344.0" font-size="10" fill="#52514e" text-anchor="start">gap does not measure the effect of the reform.</text>
+<text x="560.4" y="86.0" font-size="11" fill="#52514e" text-anchor="middle">2022: form</text>
+<text x="651.6" y="86.0" font-size="11" fill="#52514e" text-anchor="start">2025: law</text>
+<text x="0.0" y="332.0" font-size="11" fill="#52514e" text-anchor="start">Both series jump in the first quarter of 2025 and fall back in the second (automatic updating, Jan.-Mar. 2025); their</text>
+<text x="0.0" y="346.0" font-size="11" fill="#52514e" text-anchor="start">gap does not measure the effect of the reform.</text>
 <line x1="0" y1="362.0" x2="720" y2="362.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="377.0" font-size="11" fill="#52514e">Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted</text>
 <text class="pied-source" x="0" y="391.0" font-size="11" fill="#52514e">(series 'excluding RSA' since 2018)</text>
-<text class="pied-note" x="0" y="405.0" font-size="11" fill="#52514e">Scope and period differ from the 2024 cross-tabulation figure. Series not labelled since 1 Jan. 2025 (2021 label</text>
+<text class="pied-note" x="0" y="405.0" font-size="11" fill="#52514e">Scope and period differ from the 2024 cross-tabulation figure. Series not labelled since 1 Jan. 2025 (2021 label</text>
 <text class="pied-note" x="0" y="419.0" font-size="11" fill="#52514e">suspended by the ASP, which ran until 20 May 2026).</text>
-<text class="pied-licence" x="0" y="433.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/how-can-we-tell-whether-a-promise-was-kept/</text>
+<text class="pied-licence" x="0" y="433.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/how-can-we-tell-whether-a-promise-was-kept/</text>
 </svg>

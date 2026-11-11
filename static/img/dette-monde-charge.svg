@@ -7,28 +7,28 @@
 <rect x="555.5" y="9.5" width="9.0" height="9.0" fill="#eb6834"/>
 <text x="569.0" y="18.0" font-size="11" fill="#52514e">hors zone euro</text>
 <line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#e1e0d9"/>
-<text x="52.0" y="392.0" font-size="11" fill="#898781" text-anchor="end">0 %</text>
+<text x="52.0" y="392.0" font-size="11" fill="#6f6c66" text-anchor="end">0 %</text>
 <line x1="58.0" y1="323.2" x2="700.0" y2="323.2" stroke="#e1e0d9"/>
-<text x="52.0" y="327.2" font-size="11" fill="#898781" text-anchor="end">2 %</text>
+<text x="52.0" y="327.2" font-size="11" fill="#6f6c66" text-anchor="end">2 %</text>
 <line x1="58.0" y1="258.4" x2="700.0" y2="258.4" stroke="#e1e0d9"/>
-<text x="52.0" y="262.4" font-size="11" fill="#898781" text-anchor="end">4 %</text>
+<text x="52.0" y="262.4" font-size="11" fill="#6f6c66" text-anchor="end">4 %</text>
 <line x1="58.0" y1="193.6" x2="700.0" y2="193.6" stroke="#e1e0d9"/>
-<text x="52.0" y="197.6" font-size="11" fill="#898781" text-anchor="end">6 %</text>
+<text x="52.0" y="197.6" font-size="11" fill="#6f6c66" text-anchor="end">6 %</text>
 <line x1="58.0" y1="128.8" x2="700.0" y2="128.8" stroke="#e1e0d9"/>
-<text x="52.0" y="132.8" font-size="11" fill="#898781" text-anchor="end">8 %</text>
+<text x="52.0" y="132.8" font-size="11" fill="#6f6c66" text-anchor="end">8 %</text>
 <line x1="58.0" y1="64.0" x2="700.0" y2="64.0" stroke="#e1e0d9"/>
-<text x="52.0" y="68.0" font-size="11" fill="#898781" text-anchor="end">10 %</text>
+<text x="52.0" y="68.0" font-size="11" fill="#6f6c66" text-anchor="end">10 %</text>
 <text x="58.0" y="54.0" font-size="11" fill="#52514e">intérêts en % des recettes publiques</text>
 <line x1="58.0" y1="388.0" x2="700.0" y2="388.0" stroke="#c3c2b7"/>
-<text x="58.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">0 %</text>
-<text x="138.2" y="403.0" font-size="11" fill="#898781" text-anchor="middle">20 %</text>
-<text x="218.5" y="403.0" font-size="11" fill="#898781" text-anchor="middle">40 %</text>
-<text x="298.8" y="403.0" font-size="11" fill="#898781" text-anchor="middle">60 %</text>
-<text x="379.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">80 %</text>
-<text x="459.2" y="403.0" font-size="11" fill="#898781" text-anchor="middle">100 %</text>
-<text x="539.5" y="403.0" font-size="11" fill="#898781" text-anchor="middle">120 %</text>
-<text x="619.8" y="403.0" font-size="11" fill="#898781" text-anchor="middle">140 %</text>
-<text x="700.0" y="403.0" font-size="11" fill="#898781" text-anchor="middle">160 %</text>
+<text x="58.0" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">0 %</text>
+<text x="138.2" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">20 %</text>
+<text x="218.5" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">40 %</text>
+<text x="298.8" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">60 %</text>
+<text x="379.0" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">80 %</text>
+<text x="459.2" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">100 %</text>
+<text x="539.5" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">120 %</text>
+<text x="619.8" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">140 %</text>
+<text x="700.0" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">160 %</text>
 <text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">stock : dette fin 2024 rapportée au PIB 2025</text>
 <line x1="310.3" y1="299.7" x2="333.1" y2="101.9" stroke="#898781" stroke-width="1.5" stroke-dasharray="3 3"/>
 <line x1="268.3" y1="291.5" x2="264.3" y2="201.8" stroke="#898781" stroke-width="1.5" stroke-dasharray="3 3"/>
@@ -118,7 +118,7 @@
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="457.0" font-size="11" fill="#52514e">Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13,</text>
 <text class="pied-source" x="0" y="471.0" font-size="11" fill="#52514e">monnaie nationale</text>
-<text class="pied-note" x="0" y="485.0" font-size="11" fill="#52514e">Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts</text>
+<text class="pied-note" x="0" y="485.0" font-size="11" fill="#52514e">Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts</text>
 <text class="pied-note" x="0" y="499.0" font-size="11" fill="#52514e">d'intérêts rapportés aux recettes).</text>
-<text class="pied-licence" x="0" y="513.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
+<text class="pied-licence" x="0" y="513.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
 </svg>

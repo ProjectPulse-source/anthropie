@@ -5,8 +5,8 @@
    "fichier": "dette-formules-grille",
    "titre": "Onze formules du 8 septembre 2025 : ce que les chiffres tranchent, et ce qu'ils ne tranchent pas",
    "montre": "Pour la plupart des formules, le verdict dépend de la question posée : la date, l'unité, le périmètre ou l'année choisis. Aucune des conclusions tirées n'est démontrée par le chiffre.",
-   "source": "Assemblée nationale (compte rendu du 8 septembre 2025) ; Insee ; Eurostat ; Cour des comptes ; Gouvernement ; Sénat ; Banque de France ; Banque de Grèce ; calcul de l'auteur",
-   "precaution": "Données disponibles au 8 septembre 2025 : comptes publics tels que publiés à cette date pour les dépenses, les recettes et la dette, version révisée ailleurs ; prévisions publiées après la séance exclues des verdicts. Nombres ronds jugés à la précision annoncée (grille de tolérances). Une étude de cas d'une séance, pas un échantillon du débat."
+   "source": "Assemblée nationale (compte rendu du 8 septembre 2025) ; Insee ; Eurostat ; Cour des comptes ; Gouvernement ; Sénat ; Banque de France ; Banque de Grèce ; calcul de l'auteur",
+   "precaution": "Données disponibles au 8 septembre 2025 : comptes publics tels que publiés à cette date pour les dépenses, les recettes et la dette, version révisée ailleurs ; prévisions publiées après la séance exclues des verdicts. Nombres ronds jugés à la précision annoncée (grille de tolérances). Une étude de cas d'une séance, pas un échantillon du débat."
   },
   {
    "id": "grece",
@@ -14,7 +14,7 @@
    "titre": "Taux à dix ans : la France au-dessus ou au-dessous de la Grèce, mois par mois",
    "montre": "La France emprunte plus cher que la Grèce à partir de l'été 2025 : la formule est exacte au mois de la séance, et elle n'aurait pas été exacte six mois plus tôt.",
    "source": "Eurostat, rendements des emprunts d'État à long terme, moyennes mensuelles (irt_lt_mcby_m) ; calcul de l'auteur",
-   "precaution": "Moyennes mensuelles. Le 8 septembre 2025, la France empruntait à dix ans à 3,49 % (Banque de France) et la Grèce à 3,34 % (Banque de Grèce) ; le 4, la même mesure pour les deux pays donnait 3,50 % contre 3,44 %. Un prix de marché dit le coût d'emprunt du moment, pas la solidité relative de deux pays."
+   "precaution": "Moyennes mensuelles. Le 8 septembre 2025, la France empruntait à dix ans à 3,49 % (Banque de France) et la Grèce à 3,34 % (Banque de Grèce) ; le 4, la même mesure pour les deux pays donnait 3,50 % contre 3,44 %. Un prix de marché dit le coût d'emprunt du moment, pas la solidité relative de deux pays."
   }
  ],
  "en": [

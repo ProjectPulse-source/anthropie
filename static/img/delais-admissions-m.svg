@@ -7,11 +7,11 @@
 <text x="0.0" y="100.0" font-size="13.5" fill="#52514e" text-anchor="start">premier cycle, ou directement en</text>
 <text x="0.0" y="118.0" font-size="13.5" fill="#52514e" text-anchor="start">troisième année par passerelle</text>
 <line x1="50" y1="342.0" x2="298" y2="342.0" stroke="#e1e0d9" stroke-width="0.6"/>
-<text x="46.0" y="347.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<text x="46.0" y="347.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="50" y1="252.0" x2="298" y2="252.0" stroke="#e1e0d9" stroke-width="0.6"/>
-<text x="46.0" y="257.0" font-size="13.5" fill="#898781" text-anchor="end">6 000</text>
+<text x="46.0" y="257.0" font-size="13.5" fill="#6f6c66" text-anchor="end">6 000</text>
 <line x1="50" y1="162.0" x2="298" y2="162.0" stroke="#e1e0d9" stroke-width="0.6"/>
-<text x="46.0" y="167.0" font-size="13.5" fill="#898781" text-anchor="end">12 000</text>
+<text x="46.0" y="167.0" font-size="13.5" fill="#6f6c66" text-anchor="end">12 000</text>
 <rect x="50.4" y="213.2" width="3.79" height="128.8" fill="#184f95"/>
 <rect x="55.0" y="213.4" width="3.79" height="128.6" fill="#184f95"/>
 <rect x="59.6" y="213.5" width="3.79" height="128.5" fill="#184f95"/>
@@ -68,9 +68,9 @@
 <rect x="293.8" y="175.0" width="3.79" height="167.0" fill="#7fa3cf"/>
 <line x1="224.5" y1="196" x2="224.5" y2="342" stroke="#52514e" stroke-dasharray="3 3"/>
 <line x1="275.0" y1="196" x2="275.0" y2="342" stroke="#52514e" stroke-dasharray="3 3"/>
-<text x="50.0" y="360.0" font-size="13.5" fill="#898781" text-anchor="start">1972</text>
-<text x="180.9" y="360.0" font-size="13.5" fill="#898781" text-anchor="middle">2000</text>
-<text x="298.0" y="360.0" font-size="13.5" fill="#898781" text-anchor="end">2025</text>
+<text x="50.0" y="360.0" font-size="13.5" fill="#6f6c66" text-anchor="start">1972</text>
+<text x="180.9" y="360.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">2000</text>
+<text x="298.0" y="360.0" font-size="13.5" fill="#6f6c66" text-anchor="end">2025</text>
 <text class="val" x="50.0" y="205.2" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">8 588</text>
 <text class="val" x="148.7" y="272.5" font-size="15" fill="#0A0A0E" text-anchor="middle" font-weight="600">3 500</text>
 <line x1="295.7" y1="163.0" x2="295.7" y2="174.0" stroke="#52514e"/>
@@ -91,6 +91,6 @@
 <text class="pied-note" x="0.0" y="617.0" font-size="13.5" fill="#52514e" text-anchor="start">partir de 2010-2011 ; depuis 2021,</text>
 <text class="pied-note" x="0.0" y="634.0" font-size="13.5" fill="#52514e" text-anchor="start">admis. Chaque barre à l&#x27;année publiée</text>
 <text class="pied-note" x="0.0" y="651.0" font-size="13.5" fill="#52514e" text-anchor="start">par la source, sans décalage.</text>
-<text class="pied-licence" x="0.0" y="672.0" font-size="13.5" fill="#898781" text-anchor="start">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0.0" y="689.0" font-size="13.5" fill="#898781" text-anchor="start">· stephane-lalut.com</text>
+<text class="pied-licence" x="0.0" y="672.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="689.0" font-size="13.5" fill="#6f6c66" text-anchor="start">· stephane-lalut.com</text>
 </svg>

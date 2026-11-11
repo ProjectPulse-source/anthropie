@@ -58,7 +58,7 @@ W = 720
 WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement (encre atténuée de l'organe commun)
 LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Computed by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 SUFFIXE = {"fr": "", "en": "-en"}
 LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
@@ -433,8 +433,8 @@ def fig_calendrier(c, Aff, lang):
          '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(t["titre"]))]
     for gv in range(0, vmax + 1, 50):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(gv), X1, Y(gv), GRID, 1.2 if gv == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
-    e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (X0, TOP - 8, MUTED, esc(t["axe"])))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
+    e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (X0, TOP - 8, MUTED, esc(t["axe"])))
     # intervalle au POINT FINAL : la plage des prévisions de départ (famille A, sans actualisation) porte sur le total,
     # pas sur une période ; une bande 2052-2066 se lisait comme une incertitude datée (contre-expertise OPTIMUM-28, 11/10/2026)
     lo, hi = c["A_r0"]
@@ -442,9 +442,9 @@ def fig_calendrier(c, Aff, lang):
     e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.6"/>' % (xi, Y(hi), xi, Y(lo), INK2))
     for v in (lo, hi):
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.6"/>' % (xi - 4, Y(v), xi + 4, Y(v), INK2))
-    e.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (xi + 4, Y(hi) - 7, INK2, esc(t["plage"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="end">%s</text>' % (xi + 4, Y(hi) - 7, INK2, esc(t["plage"])))
     for a in range(2025, a1 + 1, 5):
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
     # trait plein jusqu'à fin 2023 (inflation réalisée), pointillé ensuite : au-delà, les paiements sont évalués sous
     # l'hypothèse du contrefactuel (l'écart de prix persiste), pas observés (contre-expertise OPTIMUM-27, 11/10/2026)
     pts = [(a0, 0.0)] + sorted(c["cum"].items())
@@ -452,14 +452,14 @@ def fig_calendrier(c, Aff, lang):
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"/>' % (trace([p for p in pts if p[0] <= 2023]), BLEU))
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-dasharray="6 4" stroke-linejoin="round"/>'
              % (trace([p for p in pts if p[0] >= 2023]), BLEU))
-    e.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s">%s</text>' % (X(2034), Y(c["cum"][2034]) + 22, INK2, esc(t["apres"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">%s</text>' % (X(2034), Y(c["cum"][2034]) + 22, INK2, esc(t["apres"])))
     # jalons : fin 2023, demi-réalisation, total
     for a, lib in ((2023, ("fin 2023 : %s" if lang == "fr" else "end-2023: %s") % Aff["cum23"]), (c["demi"], t["demi"])):
         v = c["cum"][a]
         e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X(a), Y(v), BLEU))
-        e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s">%s</text>' % (X(a) + 7, Y(v) + 12, INK, esc(lib)))
+        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">%s</text>' % (X(a) + 7, Y(v) + 12, INK, esc(lib)))
     e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X(a1), Y(c["T"]), BLEU))
-    e.append('<text x="%.1f" y="%.1f" font-size="10.5" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (X(a1) - 6, Y(c["T"]) + 16, BLEU, esc(t["total"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (X(a1) - 6, Y(c["T"]) + 16, BLEU, esc(t["total"])))
     return pied_figure.pied(e, h + 2, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                           (LICENCES[lang], MUTED, "pied-licence")], GRID)
 
@@ -495,7 +495,10 @@ TXT_QE = {
 def fig_achats(q, Aff, lang):
     t = {k: v.format(**Aff) for k, v in TXT_QE[lang].items()}
     h = 292
-    X0, X1, TOP, BAS = 54, 640, 44, 262
+    # X1 = 624 (640 avant le 11/11/2026) : la date du dernier point, passée de 9,5 à 11 px, doit tenir à droite du tracé
+    # pour le mois le plus long (« September 2026 » : 87 px en Inter, police du PNG, à partir de X1 + 7, soit 718 sur 720 ;
+    # à 640, il sortait du cadre de 10 à 14 px selon la police).
+    X0, X1, TOP, BAS = 54, 624, 44, 262
     serie = q["serie"]
     mois = lambda d: int(d[:4]) + (int(d[5:7]) - 0.5) / 12
     m0, m1 = mois(serie[0][0]), mois(serie[-1][0])
@@ -514,10 +517,10 @@ def fig_achats(q, Aff, lang):
          '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(t["titre"]))]
     for gv in range(0, vmax + 1, 2):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(gv), X1, Y(gv), GRID, 1.2 if gv == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
-    e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (X0, TOP - 8, MUTED, esc(t["axe"])))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
+    e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (X0, TOP - 8, MUTED, esc(t["axe"])))
     for a in range(int(m0) + 1, int(m1) + 1, 2):
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
     for k, col, larg in ((1, GRIS, 2.0), (2, ORANGE, 2.4)):
         d = " ".join(("M" if i == 0 else "L") + "%.1f,%.1f" % (X(mois(r[0])), Y(r[k])) for i, r in enumerate(serie))
         e.append('<path d="%s" fill="none" stroke="%s" stroke-width="%s" stroke-linejoin="round"/>' % (d, col, larg))
@@ -526,33 +529,35 @@ def fig_achats(q, Aff, lang):
     # Libellé de la consolidée posé AU-DESSUS de sa courbe sans la toucher (auteur, 12/10/2026 : « analyse) » mordait sur la
     # remontée de 2020). Départ au point de 2018, recherche vers la gauche d'abord (demande de l'auteur), puis vers la droite :
     # toute la largeur estimée du texte doit rester au-dessus de la courbe, jambages compris, avec une marge. Sinon, arrêt.
-    yc, larg_c = Y(r18[2]) - 9, 0.53 * 10.5 * len(t["cons"])
+    yc, larg_c = Y(r18[2]) - 9, 0.53 * 11 * len(t["cons"])   # largeur estimée à la police du libellé (11 px)
     pts = [(X(mois(r[0])), Y(r[2])) for r in serie]
     def degage(xc, y):
         g, d = xc - larg_c / 2 - 3, xc + larg_c / 2 + 3
         return g >= X0 and d <= X1 and y - 11 > TOP and all(py > y + 5 for px, py in pts if g <= px <= d)
     x18 = X(mois(r18[0]))
-    # vers la gauche d'abord (demande de l'auteur), avec la plus petite hausse (0 à 24 px) puis le plus petit décalage ;
+    # vers la gauche d'abord (demande de l'auteur), avec la plus petite hausse (0 à 30 px) puis le plus petit décalage ;
+    # (11/11/2026 : libellé passé de 10,5 à 11 px, donc plus large ; la fenêtre de hausse passe de 24 à 30 px, le libellé
+    # anglais se pose à 27 ; la condition reste entière : toute la largeur estimée au-dessus de la courbe, sinon arrêt)
     # vers la droite seulement si aucune position à gauche ne dégage la courbe
-    xc, yc = next(((x18 + s * k, yc - j) for s in (-1, 1) for j in range(0, 25) for k in range(0, 121)
+    xc, yc = next(((x18 + s * k, yc - j) for s in (-1, 1) for j in range(0, 31) for k in range(0, 121)
                    if degage(x18 + s * k, yc - j)), (None, yc))
     if xc is None:
         fail("figure achats : aucune position du libelle « %s » ne degage la courbe" % t["cons"])
-    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (xc, yc, ORANGE, esc(t["cons"])))
-    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (X(mois(r18[0])), Y(r18[1]) + 16, INK2, esc(t["marche"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (xc, yc, ORANGE, esc(t["cons"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (X(mois(r18[0])), Y(r18[1]) + 16, INK2, esc(t["marche"])))
     # jalon fin 2022 : date au-dessus du point consolidé, valeur du marché sous son point
     r22 = next(r for r in serie if r[0] == "2022-12-31")
     x22 = X(mois(r22[0]))
     e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (x22, Y(r22[2]), ORANGE))
     e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (x22, Y(r22[1]), GRIS))
-    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s%s%s</text>' % (x22, Y(r22[2]) - 9, INK, esc(t["jalon"]), " : " if lang == "fr" else ": ", Aff["qe_sc1"]))
-    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (x22, Y(r22[1]) + 16, INK, Aff["qe_sm1"]))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s%s%s</text>' % (x22, Y(r22[2]) - 9, INK, esc(t["jalon"]), " : " if lang == "fr" else ": ", Aff["qe_sc1"]))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (x22, Y(r22[1]) + 16, INK, Aff["qe_sm1"]))
     # valeurs terminales
     rd = serie[-1]
     for k, col, lib in ((2, ORANGE, Aff["qe_sc1_d"]), (1, GRIS, Aff["qe_sm1_d"])):
         e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X1, Y(rd[k]), col))
         e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (X1 + 7, Y(rd[k]) + 4, ORANGE if k == 2 else INK2, lib))
-    e.append('<text x="%.1f" y="%.1f" font-size="9.5" fill="%s">%s</text>' % (X1 + 7, Y(rd[2]) - 10, MUTED, esc(Aff["qe_dern"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 7, Y(rd[2]) - 10, MUTED, esc(Aff["qe_dern"])))
     return pied_figure.pied(e, h + 2, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                           (LICENCES[lang], MUTED, "pied-licence")], GRID)
 

@@ -6,11 +6,11 @@
 <rect x="201.0" y="80" width="46.2" height="190" fill="#f1efec"/>
 <rect x="265.7" y="80" width="32.3" height="190" fill="#f1efec"/>
 <line x1="30" y1="270.0" x2="298" y2="270.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="274.0" font-size="13.5" fill="#96928f" text-anchor="end">−8</text>
+<text x="26" y="274.0" font-size="13.5" fill="#6f6c66" text-anchor="end">−8</text>
 <line x1="30" y1="194.0" x2="298" y2="194.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="198.0" font-size="13.5" fill="#96928f" text-anchor="end">−4</text>
+<text x="26" y="198.0" font-size="13.5" fill="#6f6c66" text-anchor="end">−4</text>
 <line x1="30" y1="118.0" x2="298" y2="118.0" stroke="#dcd8d3" stroke-width="1.4"/>
-<text x="26" y="122.0" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
+<text x="26" y="122.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <text x="67.0" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2000</text>
 <text x="159.4" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2010</text>
 <text x="251.8" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2020</text>
@@ -33,7 +33,7 @@
 <text x="0" y="500" font-size="15" font-weight="600" fill="#26262f">OCDE : −1,8, puis −3,4</text>
 <line x1="0" y1="518.0" x2="300" y2="518.0" stroke="#dcd8d3"/>
 <text x="0" y="539.0" font-size="13.5" fill="#55524f">FMI, Moniteur des finances publiques</text>
-<text x="0" y="556.0" font-size="13.5" fill="#55524f">d’octobre 2026 ; Commission</text>
+<text x="0" y="556.0" font-size="13.5" fill="#55524f">d’octobre 2026 ; Commission</text>
 <text x="0" y="573.0" font-size="13.5" fill="#55524f">européenne, AMECO, printemps 2026 ;</text>
 <text x="0" y="590.0" font-size="13.5" fill="#55524f">OCDE, Perspectives économiques</text>
 <text x="0" y="607.0" font-size="13.5" fill="#55524f">n° 119 ; Eurostat gov_10a_main, mise à</text>
@@ -44,6 +44,6 @@
 <text x="0" y="696.0" font-size="13.5" fill="#55524f">de la production potentielle, non des</text>
 <text x="0" y="713.0" font-size="13.5" fill="#55524f">mesures ; zones grises : 2015-2019 et</text>
 <text x="0" y="730.0" font-size="13.5" fill="#55524f">2022-2025.</text>
-<text x="0" y="751.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="768.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="751.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="768.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

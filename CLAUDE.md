@@ -651,6 +651,16 @@ générateur. Verrou : `scripts/check-figures.py`, bloquant dans `check-all --ci
 cadre, filets, signe seul en bord de ligne ; chasses réelles des polices, `--temoin`). Coupure des lignes : un seul
 organe, `pied_figure.coupe` (cinq copies locales retirées le 03/11/2026).
 
+**Texte d'une figure : taille et encre (11/11/2026).** Aucun texte ne s'affiche sous 12 px à la plus petite largeur où sa
+version est servie : **11 px au moins dans une figure détaillée** (720 de large, affichée à 804 px au plus étroit, dans
+un repli à 900 px d'écran), **13 px dans une figure téléphone** (300 de large, 277 px au plus étroit, à 320 px d'écran) ;
+mesure sur les 52 pages servies. **Le texte gris prend l'encre atténuée `pied_figure.ENCRE_ATTENUEE`** (`#6f6c66`,
+5,23:1 sur blanc) ; une marque grise (barre, point, filet, graduation) garde son gris, qui n'a besoin que de 3:1. Les
+deux valeurs vivent dans `scripts/pied_figure.py` (`ENCRE_ATTENUEE`, `POLICE_MIN`, `POLICE_M_MIN`) : un générateur les
+importe, il ne les recopie pas. Verrou : `check-figures.py`, règles R6 (taille affichée) et R7 (contraste du texte avec
+son fond), témoin compris. **En attente de la décision de l'auteur**, déclaré dans R7 et compté par `--detail` : le
+texte dans l'orange de la charte (`#eb6834`, 3,20:1) et le texte blanc posé sur une marque orange ou grise.
+
 ⚠ **Une teinte nouvelle passe `validate_palette.js` avant d'être appliquée.** Le bleu marine du site
 (`#1B2A4E`) y échoue comme couleur de données : chroma trop faible, il lit gris. C'est ainsi que le
 bleu profond `#184f95` a été retenu — sur mesure, non par goût.
@@ -660,11 +670,14 @@ bleu profond `#184f95` a été retenu — sur mesure, non par goût.
 - **Point de bascule unique : 899 px, à l'écran.** Une figure de données qui a sa version téléphone s'écrit
   `<source media="screen and (max-width: 899px)" srcset="/img/X-m.svg" …>` (le shortcode `figure-svg` le fait seul) : la
   version téléphone est servie jusqu'à 899 px, plafonnée à 460 px de large de 601 à 899 px (`_components.scss`) ; la
-  version détaillée à partir de 900 px, et à l'impression. À 600 px, la version détaillée, dessinée pour 720 px, était
+  version détaillée à partir de 900 px, et à l'impression. Les plafonds de largeur sont des règles `screen` : sans ce
+  mot, une page imprimée (794 px de large) recevait la version détaillée plafonnée à 460 px, soit 4,8 pt. À 600 px, la version détaillée, dessinée pour 720 px, était
   servie plus petite que son dessin de 601 à 860 px : sur les 139 figures de 52 pages, textes de 6 à 8 px.
 - **La couche d'agrandissement donne la largeur de l'écran** (`static/js/figure-zoom.js`, `.figure-zoom`) : jamais moins
   que dans la page, au plus le double de la largeur de dessin ; trop haute, la figure défile dans la couche. Bornée
-  par la hauteur, une figure téléphone tombait à 188 px de large.
+  par la hauteur, une figure téléphone tombait à 188 px de large. La couche est une boîte modale : la tabulation y
+  reste sur « Fermer » (44 px de haut, collé en haut de la couche), l'aide précède l'image, et le focus revient à la
+  figure sans faire défiler la page (`focus({preventScroll: true})`).
 - **La largeur de dessin d'un SVG se lit dans son `viewBox` ou dans l'attribut `width` de sa balise**, jamais dans
   `naturalWidth` : ces figures n'ont qu'un `viewBox`, et le navigateur leur prête 150 px de haut.
 - Essai sur toutes les pages à figures, sept largeurs, impression et agrandissement :

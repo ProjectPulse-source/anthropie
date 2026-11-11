@@ -22,7 +22,7 @@
    "titre": "Chômeurs au sens du BIT et inscrits en catégorie A, 2012-2025",
    "montre": "De 2012 à 2025, l'écart entre inscrits en catégorie A et chômeurs au sens du BIT passe de 0,3 million en 2012 à 1,1 million en 2019, 1,2 million en 2021 et 0,7 million en 2024, selon les moyennes annuelles publiées par l'Insee ; les règles d'inscription et l'enquête ont changé dans l'intervalle.",
    "source": "Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figure 1 (Insee, enquête Emploi, séries longues ; Dares-France Travail, STMT)",
-   "precaution": "Moyennes annuelles publiées, en millions, France hors Mayotte, 15-64 ans. Repères : Insee (1, 2) et Dares (3, 4)."
+   "precaution": "Moyennes annuelles publiées, en millions, France hors Mayotte, 15-64 ans. Repères : Insee (1, 2) et Dares (3, 4)."
   }
  ],
  "en": [
@@ -40,7 +40,7 @@
    "titre": "Category A registrants: published series and series without RSA recipients or youth programmes",
    "montre": "Both series of category A registrants carry the rule changes: monthly updating form in 2022, automatic registration and automatic updating in 2025. They describe two populations, and the gap between them does not measure the effect of the reform.",
    "source": "Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)",
-   "precaution": "Scope and period differ from the 2024 cross-tabulation figure. Series not labelled since 1 Jan. 2025 (2021 label suspended by the ASP, which ran until 20 May 2026)."
+   "precaution": "Scope and period differ from the 2024 cross-tabulation figure. Series not labelled since 1 Jan. 2025 (2021 label suspended by the ASP, which ran until 20 May 2026)."
   },
   {
    "id": "serie-longue",
@@ -48,7 +48,7 @@
    "titre": "ILO unemployment and category A registrants in France, 2012-2025",
    "montre": "From 2012 to 2025, the gap between category A registrants and the ILO unemployed goes from 0.3 million in 2012 to 1.1 million in 2019, 1.2 million in 2021 and 0.7 million in 2024, according to the annual averages published by Insee; registration rules and the survey changed in the meantime.",
    "source": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., dossier 1, figure 1 (Insee, Labour Force Survey, long series; Dares-France Travail, STMT)",
-   "precaution": "Published annual averages, in millions, France excluding Mayotte, aged 15-64. Markers: Insee (1, 2) and Dares (3, 4)."
+   "precaution": "Published annual averages, in millions, France excluding Mayotte, aged 15-64. Markers: Insee (1, 2) and Dares (3, 4)."
   }
  ]
 }

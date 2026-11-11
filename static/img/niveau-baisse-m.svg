@@ -137,12 +137,12 @@
 <circle cx="273.4" cy="360.0" r="3" fill="#8a8781" opacity="0.75"/>
 <circle cx="445.9" cy="360.0" r="3" fill="#8a8781" opacity="0.75"/>
 <circle cx="192.4" cy="366" r="6.5" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
-<text x="39.6" y="398" font-size="13.5" fill="#96928f" text-anchor="middle">−60</text>
-<text x="102.7" y="398" font-size="13.5" fill="#96928f" text-anchor="middle">−40</text>
-<text x="165.8" y="398" font-size="13.5" fill="#96928f" text-anchor="middle">−20</text>
-<text x="228.9" y="398" font-size="13.5" fill="#96928f" text-anchor="middle">0</text>
-<text x="292.0" y="398" font-size="13.5" fill="#96928f" text-anchor="end">+20</text>
-<text x="0" y="416" font-size="13.5" fill="#96928f">points de score, 2025 moins 2015</text>
+<text x="39.6" y="398" font-size="13.5" fill="#6f6c66" text-anchor="middle">−60</text>
+<text x="102.7" y="398" font-size="13.5" fill="#6f6c66" text-anchor="middle">−40</text>
+<text x="165.8" y="398" font-size="13.5" fill="#6f6c66" text-anchor="middle">−20</text>
+<text x="228.9" y="398" font-size="13.5" fill="#6f6c66" text-anchor="middle">0</text>
+<text x="292.0" y="398" font-size="13.5" fill="#6f6c66" text-anchor="end">+20</text>
+<text x="0" y="416" font-size="13.5" fill="#6f6c66">points de score, 2025 moins 2015</text>
 <line x1="0" y1="430.0" x2="300" y2="430.0" stroke="#dcd8d3"/>
 <text x="0" y="451.0" font-size="13.5" fill="#55524f">OCDE, PISA 2025, volume I, tableaux</text>
 <text x="0" y="468.0" font-size="13.5" fill="#55524f">I.B1.2a.36 à 38 (variation du score</text>
@@ -153,6 +153,6 @@
 <text x="0" y="557.0" font-size="13.5" fill="#55524f">troisième quartile). Rangs sur</text>
 <text x="0" y="574.0" font-size="13.5" fill="#55524f">estimations ponctuelles ; différences</text>
 <text x="0" y="591.0" font-size="13.5" fill="#55524f">entre pays non testées.</text>
-<text x="0" y="612.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="629.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="612.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="629.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

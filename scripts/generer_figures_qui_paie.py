@@ -136,13 +136,19 @@ URL_PAGE_EN = "stephane-lalut.com/en/who-really-pays-public-debt/"
 # update_dette_insee.py (build_svg_masses) : aucune teinte nouvelle n'entre ici,
 # donc rien à soumettre à validate_palette.js.
 C1, C2 = "#184f95", "#eb6834"
-INK, INK2, MUTED, GRID, AXIS = "#2b2a28", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
-SEC = MUTED
+INK, INK2, MUTED, GRID, AXIS = "#2b2a28", "#52514e", PF.ENCRE_ATTENUEE, "#e1e0d9", "#c3c2b7"
+# Gris dédoublé (11/11/2026) : MUTED est l'encre du TEXTE atténué (graduations, précisions, crédit, nom de la série
+# grise), prise à l'organe commun ; GRIS_MARQUE garde le gris des MARQUES (barres et courbe de la série secondaire,
+# flèches du schéma), qui n'a besoin que de 3:1 sur son fond. Contrôle : check-figures.py, règle R7.
+GRIS_MARQUE = "#898781"
+SEC = GRIS_MARQUE
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 # Échelle typographique COMMUNE aux deux générateurs du dépôt (mêmes noms, mêmes
 # valeurs que update_dette_insee.py) : les figures des deux volets du dossier
-# forment une famille, et non deux collections.
-TY_TITRE, TY_AXE, TY_ANNOT, TY_VALEUR, TY_MINEUR = 13, 11, 12, 15, 11
+# forment une famille, et non deux collections. TY_MINEUR est le plancher d'une figure détaillée
+# (pied_figure.POLICE_MIN) : rien ne s'écrit dessous (les textes à 10 px, « TY_AXE moins un », y sont remontés le
+# 11/11/2026 ; contrôle : check-figures.py, règle R6).
+TY_TITRE, TY_AXE, TY_ANNOT, TY_VALEUR, TY_MINEUR = 13, 11, 12, 15, PF.POLICE_MIN
 NBSP = "\u00a0"
 W = 720
 
@@ -229,6 +235,11 @@ def txt(x, y, s, size=11, fill=INK2, anchor="start", weight=None):
             % (x, y, size, fill, anchor, w, esc(s)))
 
 
+def encre_serie(col: str) -> str:
+    """Couleur du TEXTE qui nomme une série : la série grise s'écrit à l'encre atténuée, sa marque garde son gris."""
+    return MUTED if col == GRIS_MARQUE else col
+
+
 def etiquettes_directes(x: float, bouts: list, y_min: float, y_max: float,
                         ecart: float = 34.0) -> list[str]:
     """Nomme chaque série À CÔTÉ d'elle, sans légende séparée (charte du 28/09).
@@ -251,9 +262,9 @@ def etiquettes_directes(x: float, bouts: list, y_min: float, y_max: float,
     b = [(max(y, y_min),) + tuple(reste) for y, *reste in b]
     out = []
     for y, col, nom, precision in b:
-        out.append(txt(x, y, nom, TY_AXE, col, weight="600"))
+        out.append(txt(x, y, nom, TY_AXE, encre_serie(col), weight="600"))
         if precision:
-            out.append(txt(x, y + 13, precision, TY_AXE - 1, MUTED))
+            out.append(txt(x, y + 13, precision, TY_MINEUR, MUTED))
     return out
 
 
@@ -919,7 +930,7 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
     corps.append(txt(0, y + 10, S("* dont la Banque de France (programmes de l'Eurosystème) : "
                                   "part non publiée par la source.",
                                   "* including the Banque de France (Eurosystem programmes): "
-                                  "share not published by the source."), TY_AXE - 1, MUTED))
+                                  "share not published by the source."), TY_MINEUR, MUTED))
     y += 30
     h = int(y + 13 + 12 * 3 + 8)
     if lang == "fr":
@@ -1011,7 +1022,7 @@ def svg_redistribution(d: dict, lang: str = "fr") -> tuple[str, int]:
         hp = -prel[i] * k
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
                  % (x, y0 + 2, bw, hp - 2, C2))
-        tv, cv = (TY_ANNOT, INK) if fort else (TY_AXE - 1, INK2)
+        tv, cv = (TY_ANNOT, INK) if fort else (TY_MINEUR, INK2)
         pv = "600" if fort else None
         c.append(txt(cx, y0 - h1 - h2 - 7, nb(esp[i] + nat[i], 1), tv, cv, "middle", weight=pv))
         c.append(txt(cx, y0 + hp + 13, "−" + nb(-prel[i], 1), tv, cv, "middle", weight=pv))
@@ -1027,12 +1038,12 @@ def svg_redistribution(d: dict, lang: str = "fr") -> tuple[str, int]:
         (y0 + 2 + (-prel[9] * k) / 2 + 4, C2) + ns["prel"],
     ], top + 8, bas - 12)
     # Ce que disent les nombres (03/11/2026 : celui du haut se prenait pour la valeur du seul segment gris).
-    c.append(txt(W - mr + 14, Y(-66), S("Au-dessus des barres :", "Above the bars:"), TY_AXE - 1, MUTED))
-    c.append(txt(W - mr + 14, Y(-66) + 13, S("total des transferts reçus", "total transfers received"), TY_AXE - 1, MUTED))
+    c.append(txt(W - mr + 14, Y(-66), S("Au-dessus des barres :", "Above the bars:"), TY_MINEUR, MUTED))
+    c.append(txt(W - mr + 14, Y(-66) + 13, S("total des transferts reçus", "total transfers received"), TY_MINEUR, MUTED))
     c.append(txt(ml, bas + 32, S("← 10 % les plus modestes", "← least well-off 10%"),
-                 TY_AXE - 1, MUTED))
+                 TY_MINEUR, MUTED))
     c.append(txt(W - mr, bas + 32, S("10 % les plus aisés →", "best-off 10% →"),
-                 TY_AXE - 1, MUTED, "end"))
+                 TY_MINEUR, MUTED, "end"))
     y = bas + 46
     h = int(y + 13 + 12 * 3 + 8)
     desc = (S("Barres par dixième de niveau de vie, en 2023, en milliers d'euros par unité de "
@@ -1096,10 +1107,10 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
     # à ses barres oblige le lecteur à traverser la figure pour la vérifier.
     # Deux ancrages opposés sur une ligne vide : aucune largeur à estimer.
     c.append(txt(0, 54, S("en dessous de zéro : reçoit plus qu'il ne verse",
-                          "below zero: receives more than it pays in"), TY_AXE - 1, C1))
+                          "below zero: receives more than it pays in"), TY_MINEUR, C1))
     c.append(txt(W - mr, 54, S("au-dessus : verse plus qu'il ne reçoit",
                                "above zero: pays in more than it receives"),
-                 TY_AXE - 1, C2, "end"))
+                 TY_MINEUR, C2, "end"))
     for g in range(-20, 61, 20):
         yy = Y(g)
         c.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
@@ -1121,14 +1132,16 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
                  % (cx - bw / 2, y, bw, max(haut - 2, 2), col))
         etiq = ("+" if v > 0 else "−") + nb(abs(v), 1)
-        tv, cv = (TY_ANNOT, INK) if fort else (TY_AXE - 1, INK2)
+        tv, cv = (TY_ANNOT, INK) if fort else (TY_MINEUR, INK2)
         pv = "600" if fort else None
         c.append(txt(cx, (y - 6) if v > 0 else (y + haut + 11), etiq, tv, cv, "middle", weight=pv))
         c.append(txt(cx, bas + 30, lib_dixieme(i + 1, lang), TY_AXE,
                      INK if fort else MUTED, "middle", weight=pv))
     y = bas + 56
-    c.append(txt(0, y, S("B · Part de personnes bénéficiaires nettes, en %",
-                         "B · Share of people who are net beneficiaries, in %"), TY_AXE, MUTED))
+    # Titre du panneau remonté de 4 (11/11/2026) : la valeur du 1er dixième, passée de 10 à 11 px, venait à moins
+    # d'un pixel sous ses jambages. Le tracé du panneau (barres, grille, hauteur de la figure) ne bouge pas.
+    c.append(txt(0, y - 4, S("B · Part de personnes bénéficiaires nettes, en %",
+                             "B · Share of people who are net beneficiaries, in %"), TY_AXE, MUTED))
     top2, bas2 = y + 16, y + 106
     k2 = (bas2 - top2) / 100.0
     for g in (0, 50, 100):
@@ -1145,7 +1158,7 @@ def svg_solde_net(d: dict, lang: str = "fr") -> tuple[str, int]:
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
                  % (cx - bw / 2, bas2 - haut, bw, haut, C1))
         c.append(txt(cx, bas2 - haut - 6, nb(part[i]) + pc,
-                     TY_ANNOT if fort else TY_AXE - 1, INK if fort else INK2, "middle",
+                     TY_ANNOT if fort else TY_MINEUR, INK if fort else INK2, "middle",
                      weight="600" if fort else None))
     y = bas2 + 30
     h = int(y + 13 + 12 * 3 + 8)
@@ -1233,7 +1246,7 @@ def svg_age(d: dict, lang: str = "fr") -> tuple[str, int]:
         hp = -prel[i] * k
         c.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" rx="2" fill="%s"/>'
                  % (x, y0 + 2, bw, hp - 2, C2))
-        tv, cv = (TY_ANNOT, INK) if fort else (TY_AXE - 1, INK2)
+        tv, cv = (TY_ANNOT, INK) if fort else (TY_MINEUR, INK2)
         pv = "600" if fort else None
         c.append(txt(cx, y0 - h1 - h2 - 7, nb(esp[i] + nat[i], 1), tv, cv, "middle", weight=pv))
         c.append(txt(cx, y0 + hp + 13, "−" + nb(-prel[i], 1), tv, cv, "middle", weight=pv))
@@ -1248,8 +1261,8 @@ def svg_age(d: dict, lang: str = "fr") -> tuple[str, int]:
         (y0 + 2 + (-prel[dernier] * k) / 2 + 4, C2) + ns["prel"],
     ], top + 8, bas - 12)
     # Même mention que la figure par dixième (03/11/2026).
-    c.append(txt(W - mr + 14, Y(-28), S("Au-dessus des barres :", "Above the bars:"), TY_AXE - 1, MUTED))
-    c.append(txt(W - mr + 14, Y(-28) + 13, S("total des transferts reçus", "total transfers received"), TY_AXE - 1, MUTED))
+    c.append(txt(W - mr + 14, Y(-28), S("Au-dessus des barres :", "Above the bars:"), TY_MINEUR, MUTED))
+    c.append(txt(W - mr + 14, Y(-28) + 13, S("total des transferts reçus", "total transfers received"), TY_MINEUR, MUTED))
     y = bas + 34
     h = int(y + 13 + 12 * 3 + 8)
     desc = (S("Barres par groupe d'âge du ménage, en 2023, en milliers d'euros par unité de "
@@ -1300,11 +1313,11 @@ def svg_mecanismes(lang: str = "fr") -> tuple[str, int]:
 
     def fleche(x1, y1, x2, y2):
         return ['<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="1.5" '
-                'stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>' % (x1, y1, x2, y2, MUTED)]
+                'stroke-dasharray="5 4" marker-end="url(#qp-fl)"/>' % (x1, y1, x2, y2, GRIS_MARQUE)]
 
     c.append('<defs><marker id="qp-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" '
              'markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="%s"/></marker>'
-             '</defs>' % MUTED)
+             '</defs>' % GRIS_MARQUE)
     c += boite(1, 150, 200, 74, [(S("Charge de la dette", "Debt burden"), TY_ANNOT, INK, True),
                                  (S("et sa répartition", "and its distribution"), TY_ANNOT, INK,
                                   True),
@@ -1460,7 +1473,7 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
     c_.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="none" stroke="%s" stroke-width="1.6" '
               'stroke-dasharray="2 2"/>' % (X(0), YA(0.31), C2))
     # +1 et non +4 (03/11/2026, check-figures R2) : le libellé touchait le point du 2e dixième, juste dessous.
-    c_.append(txt(X(0) + 9, YA(0.31) + 1, S("point écarté", "point excluded"), TY_AXE - 1,
+    c_.append(txt(X(0) + 9, YA(0.31) + 1, S("point écarté", "point excluded"), TY_MINEUR,
                   MUTED))
     c_.append(txt(X(0), YA(p["enseignement"][0]) - 10, nb(p["enseignement"][0], 2) + pc,
                   TY_VALEUR, INK, "middle", weight="600"))
@@ -1471,9 +1484,9 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
     for i in range(10):
         c_.append(txt(X(i), basA + 16, lib_dixieme(i + 1, lang), TY_AXE, MUTED, "middle"))
     c_.append(txt(ml, basA + 32, S("← 10" + NBSP + "% les plus modestes", "← least well-off 10%"),
-                  TY_AXE - 1, MUTED))
+                  TY_MINEUR, MUTED))
     c_.append(txt(W - mr, basA + 32, S("10" + NBSP + "% les plus aisés →", "best-off 10% →"),
-                  TY_AXE - 1, MUTED, "end"))
+                  TY_MINEUR, MUTED, "end"))
 
     topB, basB, vmaxB = 404, 504, 8.0
     kB = (basB - topB) / (vmaxB - 1)
@@ -1512,7 +1525,7 @@ def svg_exposition(c: dict, lang: str = "fr") -> tuple[str, int]:
         # l'affirmation tient quelle que soit la valeur du point manquant.
         borne = i == 0 and any(p[k][0] is None for k in p if not k.startswith("_"))
         c_.append(txt(X(i), basB - h_ - 7, ("≥ ×" if borne else "×") + nb(v, 1),
-                      TY_ANNOT if fort else TY_AXE - 1, INK if fort else INK2, "middle",
+                      TY_ANNOT if fort else TY_MINEUR, INK if fort else INK2, "middle",
                       weight="600" if fort else None))
         c_.append(txt(X(i), basB + 16, lib_dixieme(i + 1, lang), TY_AXE,
                       INK if fort else MUTED, "middle", weight="600" if fort else None))
@@ -1861,7 +1874,7 @@ def svg_mecanismes_m(lang: str, svg_d: str) -> str:
                 (S("Cas extrême", "Extreme case"),
                  [(S("Restructuration", "Restructuring"), S("porteurs des titres", "holders of the securities"))])]
     e.append('<line x1="150" y1="%.1f" x2="150" y2="%.1f" stroke="%s" stroke-width="1.5" stroke-dasharray="5 4"/>'
-             % (y, y + 16, MUTED))
+             % (y, y + 16, GRIS_MARQUE))
     y += 16
     for fam, canaux in familles:
         y += 20

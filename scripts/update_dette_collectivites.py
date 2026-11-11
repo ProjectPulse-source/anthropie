@@ -1240,9 +1240,12 @@ def affichage(r: dict, lang: str = "fr") -> dict:
 # les relisent dans le SVG (fiches_figures), jamais recopies.
 W = 720
 BLEU, GRIS, ORANGE = "#184f95", "#8a8f98", "#eb6834"
-INK, INK2, MUTED, GRID, AXIS, BANDE = "#0A0A0E", "#52514e", "#898781", "#e1e0d9", "#c3c2b7", "#f3efe6"
+# Texte gris : encre atténuée de l'organe commun (11/11/2026), jamais recopiée. MUTED ne colore que du TEXTE (graduations,
+# unités, états, crédit, et le nom de la série grise) ; GRIS reste le gris des MARQUES (courbes, anneaux, clé de légende).
+INK, INK2, MUTED, GRID, AXIS, BANDE = "#0A0A0E", "#52514e", pied_figure.ENCRE_ATTENUEE, "#e1e0d9", "#c3c2b7", "#f3efe6"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 TY_TITRE, TY_AXE, TY_ANNOT = 13, 11, 11
+TY_MIN = pied_figure.POLICE_MIN  # plus petite police d'une figure détaillée (720 de large)
 CARTOUCHE_H = 48
 PAGE_URL = "stephane-lalut.com/dette-publique-collectivites-locales/"
 PAGE_URL_EN = "stephane-lalut.com/en/local-government-debt/"
@@ -1278,9 +1281,11 @@ TXTF = {
         sig_desc="Deux courbes depuis {a_min} : l'investissement local (formation brute de capital fixe) oscille autour de 2 % du "
                  "PIB ; de {ep_a0} à {ep_a1}, il passe de {inv0} % à {inv1} % du PIB et les transferts reçus de {tr0} % à {tr1} %. "
                  "La série comparable des transferts s'arrête en {ep_a1}.",
-        sig_fin="{ep_a1} : fin de la série comparable",
+        # sig_fin et sig_mun : listes de lignes (11/11/2026). À 11 px, « fin de la série comparable » sortait du cadre et
+        # les élections anglaises se chevauchaient dans la police de repli du serveur (DejaVu Sans, plus large), qui rend les PNG.
+        sig_fin=["{ep_a1} : fin de la", "série comparable"],
         sig_rupt=["Transferts : série arrêtée", "en {ep_a1} ; en 2018 et 2021,", "des dotations deviennent", "des fractions de TVA"],
-        sig_bande="baisse des dotations", sig_mun="municipales {m}", sig_pic=["{a} : compensation", "de la taxe professionnelle"],
+        sig_bande="baisse des dotations", sig_mun=["municipales {m}"], sig_pic=["{a} : compensation", "de la taxe professionnelle"],
         sig_inv="investissement local", sig_tr="transferts reçus",
         sig_m_tr="Transferts reçus : {tr0} % → {tr1} %", sig_m_inv="Investissement : {inv0} % → {inv1} %",
         sig_m_txt="De {ep_a0} à {ep_a1}, en % du PIB. Série des transferts arrêtée en {ep_a1} : en 2018 et en 2021, des dotations "
@@ -1337,9 +1342,9 @@ TXTF = {
         sig_desc="Two lines since {a_min}: local investment (gross fixed capital formation) hovers around 2% of GDP; from {ep_a0} "
                  "to {ep_a1}, it went from {inv0}% to {inv1}% of GDP and transfers received from {tr0}% to {tr1}%. The comparable "
                  "transfer series stops in {ep_a1}.",
-        sig_fin="{ep_a1}: end of the comparable series",
+        sig_fin=["{ep_a1}: end of the", "comparable series"],
         sig_rupt=["Transfers: series stops", "in {ep_a1}; in 2018 and 2021,", "some grants became", "shares of VAT"],
-        sig_bande="grant cuts", sig_mun="municipal elections {m}", sig_pic=["{a}: compensation for the", "abolished business tax"],
+        sig_bande="grant cuts", sig_mun=["municipal elections", "{m}"], sig_pic=["{a}: compensation for the", "abolished business tax"],
         sig_inv="local investment", sig_tr="transfers received",
         sig_m_tr="Transfers received: {tr0}% → {tr1}%", sig_m_inv="Investment: {inv0}% → {inv1}%",
         sig_m_txt="From {ep_a0} to {ep_a1}, in % of GDP. The transfer series stops in {ep_a1}: in 2018 and 2021, some grants "
@@ -1435,7 +1440,8 @@ def fig_signature(r: dict, A: dict, lang: str = "fr") -> str:
     e.append(txt((bx0 + bx1) / 2, y1 + 45, T["sig_bande"], TY_ANNOT, INK2, "middle"))
     for m in MUNICIPALES:
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="2 4"/>' % (X(m), y0, X(m), y1, AXIS))
-        e.append(txt(X(m), y0 - 6, T["sig_mun"].format(m=m), 10, MUTED, "middle"))
+        for k, l in enumerate(T["sig_mun"]):  # la dernière ligne au contact du trait, les autres au-dessus
+            e.append(txt(X(m), y0 - 6 - 13 * (len(T["sig_mun"]) - 1 - k), l.format(m=m), TY_MIN, MUTED, "middle"))
     for s, col in ((tr, GRIS), (inv, BLEU)):
         pts = " ".join("%.1f,%.1f" % (X(a), Y(v)) for a, v in sorted(s.items()) if v is not None)
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.6"/>' % (pts, col))
@@ -1445,10 +1451,11 @@ def fig_signature(r: dict, A: dict, lang: str = "fr") -> str:
     # Repere terminal de la serie des transferts (pas de lecture au-dela de 2017) et reclassements au contact
     af = max(tr)
     e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>' % (X(af), Y(tr[af]), GRIS))
-    e.append(txt(X(af) + 8, Y(tr[af]) - 8, T["sig_fin"].format(ep_a1=af), 10, INK2))
+    for k, l in enumerate(T["sig_fin"]):  # à droite de l'anneau : la première ligne au-dessus, la seconde à sa hauteur
+        e.append(txt(X(af) + 8, Y(tr[af]) - 8 + 13 * k, l.format(ep_a1=af), TY_MIN, INK2))
     for k, l in enumerate(T["sig_rupt"]):
-        e.append(txt(x1, Y(4.3) + 13 * k, l.format(ep_a1=af), 10, INK2, "end"))
-    e.append(txt(X(2003), Y(tr[2003]) - 12, T["sig_tr"], TY_ANNOT, GRIS, "middle", "600"))
+        e.append(txt(x1, Y(4.3) + 13 * k, l.format(ep_a1=af), TY_MIN, INK2, "end"))
+    e.append(txt(X(2003), Y(tr[2003]) - 12, T["sig_tr"], TY_ANNOT, MUTED, "middle", "600"))
     e.append(txt(X(1997), Y(inv[1997]) + 22, T["sig_inv"], TY_ANNOT, BLEU, "middle", "600"))
     return _pied(e, H + 2, (T["sig_src"].format(releve=A["_releve"]), T["sig_note"].format(ep_a1=af)), lang)
 
@@ -1477,7 +1484,7 @@ def fig_signature_m(r: dict, A: dict, lang: str, svg_d: str) -> str:
     af = max(tr)
     e.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>' % (X(af), Y(tr[af]), GRIS))
     y = BAS + 26
-    for lib, col in ((T["sig_m_tr"].format(**V), GRIS), (T["sig_m_inv"].format(**V), BLEU)):
+    for lib, col in ((T["sig_m_tr"].format(**V), MUTED), (T["sig_m_inv"].format(**V), BLEU)):
         y += 20
         e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, col, esc(lib)))
     for l in pied_figure.coupe(T["sig_m_txt"].format(**V), 38):
@@ -1529,14 +1536,14 @@ def fig_cascade(r: dict, A: dict, lang: str = "fr") -> str:
         vmin, vmax = (_m.floor(mn / pas) - 1) * pas, (_m.ceil(mx / pas) + 1) * pas
         X = lambda v, a=px0, b=px1, lo=vmin, hi=vmax: a + (v - lo) / (hi - lo) * (b - a)  # noqa: E731
         e.append(txt((px0 + px1) / 2, 50, titre, TY_ANNOT, INK, "middle", "600"))
-        e.append(txt((px0 + px1) / 2, 64, T["cas_sous"], 10, MUTED, "middle"))
+        e.append(txt((px0 + px1) / 2, 64, T["cas_sous"], TY_MIN, MUTED, "middle"))
         y_bas = top + len(vals) * rh
         n_ = int(round((vmax - vmin) / pas))
         for j in range(n_ + 1):
             g = vmin + j * pas
             e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(g), top, X(g), y_bas, AXIS if abs(g) < 1e-9 else GRID))
             if abs(g / (2 * pas) - round(g / (2 * pas))) < 1e-9:  # graduations multiples de 10 Md EUR / 0,5 point
-                e.append(txt(X(g), y_bas + 14, lg.nombre(g, 0 if ident == "md" else 1, L), 10, MUTED, "middle"))
+                e.append(txt(X(g), y_bas + 14, lg.nombre(g, 0 if ident == "md" else 1, L), TY_MIN, MUTED, "middle"))
         cum = 0.0
         for k, v in enumerate(vals):
             yy, hh = top + k * rh + rh * 0.2, rh * 0.6
@@ -1550,10 +1557,10 @@ def fig_cascade(r: dict, A: dict, lang: str = "fr") -> str:
                 cum += v
             e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (X(a_), yy, max(X(b_) - X(a_), 1.5), hh, col))
             lib = lg.nombre(v, dec, L) if base else lg.signe(v, dec, L)
-            if X(b_) + 6 + 6.0 * len(lib) <= px1 + 6:
-                e.append(txt(X(b_) + 5, yy + hh / 2 + 4, lib, 10, INK))
+            if X(b_) + 6 + 0.6 * TY_MIN * len(lib) <= px1 + 6:  # largeur estimée à la taille dessinée (0,6 em par signe)
+                e.append(txt(X(b_) + 5, yy + hh / 2 + 4, lib, TY_MIN, INK))
             else:
-                e.append(txt(X(a_) - 5, yy + hh / 2 + 4, lib, 10, INK, "end"))
+                e.append(txt(X(a_) - 5, yy + hh / 2 + 4, lib, TY_MIN, INK, "end"))
     return _pied(e, H + 2, (T["cas_src"].format(releve=A["_releve"]), T["cas_note"].format(**V)), lang)
 
 
@@ -1625,9 +1632,9 @@ def fig_europe(r: dict, A: dict, lang: str = "fr") -> str:
     vmax = 30.0
     e = entete(H, "ce", T["eu_titre"], T["eu_desc"].format(**B))
     e.append('<line x1="0" y1="36" x2="18" y2="36" stroke="%s" stroke-width="2.4"/>' % BLEU)
-    e.append(txt(24, 40, T["eu_leg1"], 10))
+    e.append(txt(24, 40, T["eu_leg1"], TY_MIN))
     e.append('<line x1="0" y1="52" x2="18" y2="52" stroke="%s" stroke-width="2.2" stroke-dasharray="4 3"/>' % GRIS)
-    e.append(txt(24, 56, T["eu_leg2"], 10))
+    e.append(txt(24, 56, T["eu_leg2"], TY_MIN))
     for k, (p, q) in enumerate(zip(r["pays"], pays)):
         ox, oy = 46 + k * (pw + gap), 96
         s = p["serie_dette"]
@@ -1645,15 +1652,33 @@ def fig_europe(r: dict, A: dict, lang: str = "fr") -> str:
             e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.2" stroke-dasharray="4 3"/>' % (pts, GRIS))
         pts = " ".join("%.1f,%.1f" % (X(a), Y(v)) for a, v in sorted(s.items()))
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.4"/>' % (pts, BLEU))
-        # etiquettes au-dessus des trois premiers / derniers points (jamais sur la courbe)
-        hd = max(v for a, v in s.items() if a <= a0 + 3)
-        hf = max(v for a, v in s.items() if a >= a1 - 3)
-        e.append(txt(X(a0), Y(hd) - 7, f(s[a0], 1), 10))
-        e.append(txt(X(a1), Y(hf) - 7, f(s[a1], 1), 10, INK, "end", "600"))
+        # Etiquettes des deux extremites, jamais sur la courbe. La courbe se lit sous la LARGEUR REELLE de l'etiquette, a sa
+        # taille (11/11/2026 : « les trois premiers / derniers points » valaient pour 10 px ; a 11 px la courbe entrait
+        # dans « 21,7 », et elle touchait deja « 19,6 » et « 21,4 »). Au-dessus par defaut ; dessous quand, au-dessus,
+        # l'etiquette s'eloignerait nettement plus de son point (courbe qui monte apres le depart, ou descend vers l'arrivee).
+        ans_s = sorted(s)
+
+        def extremes(xa, xb, s=s, ans_s=ans_s, a0=a0, a1=a1, ox=ox):
+            vals = []
+            for i in range(13):
+                a = min(max(a0 + (xa + (xb - xa) * i / 12 - ox) / pw * (a1 - a0), a0), a1)
+                g_, d_ = max(y for y in ans_s if y <= a), min(y for y in ans_s if y >= a)
+                vals.append(s[g_] if g_ == d_ else s[g_] + (s[d_] - s[g_]) * (a - g_) / (d_ - g_))
+            return min(vals), max(vals)
+        for a_, ancre, gras in ((a0, "start", None), (a1, "end", "600")):
+            lib = f(s[a_], 1)
+            larg = (0.62 if gras else 0.6) * TY_MIN * len(lib)
+            bas_, haut_ = extremes(X(a_), X(a_) + larg) if ancre == "start" else extremes(X(a_) - larg, X(a_))
+            dessus, dessous = Y(haut_) - 7, Y(bas_) + 7 + 0.72 * TY_MIN
+            for g_ in (10, 20):  # dessous, l'etiquette ne se pose pas a cheval sur un trait de la grille
+                if dessous - 0.72 * TY_MIN - 2 < Y(g_) < dessous + 2:
+                    dessous = Y(g_) + 3 + 0.72 * TY_MIN
+            en_dessous = (Y(s[a_]) - dessus) > (dessous - Y(s[a_])) + 6 and dessous < Y(0) - 3
+            e.append(txt(X(a_), dessous if en_dessous else dessus, lib, TY_MIN, INK if gras else INK2, ancre, gras))
         e.append(txt(ox, oy + ph + 15, str(a0), TY_AXE, MUTED))
         e.append(txt(ox + pw, oy + ph + 15, str(a1), TY_AXE, MUTED, "end"))
         # Part detenue par l'Etat central pour CHAQUE pays (France et Italie comprises), sous le panneau : aucune collision
-        e.append(txt(ox, oy + ph + 34, T["eu_dont"].format(**B), 10, INK2))
+        e.append(txt(ox, oy + ph + 34, T["eu_dont"].format(**B), TY_MIN, INK2))
         e.append(txt(ox, oy + ph + 49, q["etat_pt"], 11, INK2, "start", "600"))
     return _pied(e, H + 2, (T["eu_src"].format(releve=A["_releve"]), T["eu_note"]), lang)
 
@@ -1830,10 +1855,25 @@ def _pied_plf(e, y0, t, lang, mobile=False):
                                        (LIC_PLF[lang], MUTED, "pied-licence")], GRID)
 
 
+def lignes_etat(etat: str) -> list[str]:
+    """État d'une mesure, sur toute la largeur de la figure détaillée (11 px) : au-delà de la longueur de ligne du pied
+    commun (même largeur, même police), il se coupe à son dernier point-virgule, sinon aux espaces (11/11/2026 : à 11 px,
+    l'état de l'article 84 sortait du cadre dans la police de repli du serveur, qui rend les PNG)."""
+    n = pied_figure.CARACTERES
+    if len(etat) <= n:
+        return [etat]
+    k = etat.rfind(";", 0, n)
+    if k <= 0:
+        return pied_figure.coupe(etat, n)
+    return [etat[:k + 1].rstrip()] + pied_figure.coupe(etat[k + 1:].strip(), n)
+
+
 def fig_plf(r: dict, A: dict, lang: str = "fr") -> str:
     T = _plf_txt(r, lang)
     lignes, V = _plf_vals(r, A, lang)
-    H = 66 + 46 * len(lignes) + 20
+    etats = [lignes_etat(l_[5]) for l_ in lignes]
+    sup = [13 * (len(x) - 1) for x in etats]  # lignes d'état supplémentaires ; la dernière rangée en loge une dans la marge du bas
+    H = 66 + 46 * len(lignes) + sum(sup) - min(sup[-1], 13) + 20
     e = entete(H, "cp", T["titre"].format(**V), T["desc"].format(**V))
     # legende : deux pastilles, dans l'ordre de lecture ; une seule quand aucune barre n'est evidee (texte rejete)
     if any(l_[4] for l_ in lignes):
@@ -1848,9 +1888,10 @@ def fig_plf(r: dict, A: dict, lang: str = "fr") -> str:
     x0, larg = 300, 320
     vmax = max(l_[3] for l_ in lignes)
     y = 66
-    for cle, lib, val, md, retire, etat in lignes:
+    for (cle, lib, val, md, retire, etat), etat_l, sup_ in zip(lignes, etats, sup):
         e.append(txt(0, y + 13, lib, 12, INK))
-        e.append(txt(0, y + 29, etat, 10, MUTED))
+        for k, l_ in enumerate(etat_l):  # y + 30 (29 à 10 px) : l'état passe sous la barre, il garde son écart avec elle
+            e.append(txt(0, y + 30 + 13 * k, l_, TY_MIN, MUTED))
         w = larg * md / vmax
         if retire:
             e.append('<rect x="%d" y="%d" width="%.1f" height="18" fill="#ffffff" stroke="%s" stroke-width="1.6" '
@@ -1858,7 +1899,7 @@ def fig_plf(r: dict, A: dict, lang: str = "fr") -> str:
         else:
             e.append('<rect x="%d" y="%d" width="%.1f" height="18" fill="%s"/>' % (x0, y + 2, w, ORANGE))
         e.append(txt(x0 + w + 8, y + 16, val, 12, INK, weight="600"))
-        y += 46
+        y += 46 + sup_
     return _pied_plf(e, H + 2, (T["src"].format(**V), T["note"].format(**V)), lang)
 
 

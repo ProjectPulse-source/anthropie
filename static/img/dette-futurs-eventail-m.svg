@@ -59,7 +59,7 @@
 <text x="30.0" y="588.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8703f">(2029)</text>
 <text x="300.0" y="570.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#b8703f">115,8 %</text>
 <text x="30.0" y="614.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">Commission, politique</text>
-<text x="30.0" y="632.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">inchangée (2035, hors</text>
+<text x="30.0" y="632.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">inchangée (2035, hors</text>
 <text x="30.0" y="650.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">graphique)</text>
 <text x="300.0" y="614.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#184f95">140,8 %</text>
 <line x1="0" y1="680.0" x2="300" y2="680.0" stroke="#d8d6d0"/>
@@ -73,7 +73,7 @@
 <text class="pied-note" x="0" y="824.0" font-size="13.5" fill="#52514e">foncée : du 10e au 90e, du 20e au 80e</text>
 <text class="pied-note" x="0" y="841.0" font-size="13.5" fill="#52514e">et du 40e au 60e centile des</text>
 <text class="pied-note" x="0" y="858.0" font-size="13.5" fill="#52514e">trajectoires simulées par la</text>
-<text class="pied-note" x="0" y="875.0" font-size="13.5" fill="#52514e">Commission (8, 6 et 2 sur 10). Départs</text>
+<text class="pied-note" x="0" y="875.0" font-size="13.5" fill="#52514e">Commission (8, 6 et 2 sur 10). Départs</text>
 <text class="pied-note" x="0" y="892.0" font-size="13.5" fill="#52514e">en 2025 : Commission 116,3 %, PLF 2027</text>
 <text class="pied-note" x="0" y="909.0" font-size="13.5" fill="#52514e">115,7 %, engagement de 2024 114,7 % ;</text>
 <text class="pied-note" x="0" y="926.0" font-size="13.5" fill="#52514e">l'engagement ne donne pas de valeur</text>

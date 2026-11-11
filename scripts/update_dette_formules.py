@@ -58,7 +58,7 @@ W = 720
 WM, FS_MIN = pied_figure.LARGEUR_M, pied_figure.POLICE_M
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement (encre atténuée de l'organe commun)
 FOND_NIVEAU = "#f3f1ee"
 LICENCES = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Computed by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 LICENCES_M = {"fr": "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com", "en": "Computed by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"}
@@ -856,20 +856,24 @@ def fig_grille(Aff, lang):
     L = lignes_txt(Aff, lang)
     xs = (0, 186, 372, 560)
     larg = (178, 178, 180, 160)
-    car = lambda w: int(w / 5.3)
+    fs = pied_figure.POLICE_MIN      # police du tableau : 11 px (10,5 avant le 11/11/2026)
+    # Caractères par ligne : 0,51 em par caractère (les 5,3 px d'avant valaient 0,505 em à 10,5 px). À 0,505 em et 11 px, deux
+    # lignes de 32 caractères touchaient la colonne voisine dans le rendu Inter, première police de la pile et police du PNG
+    # (jeu de 1 px, mesuré le 11/11/2026) ; à 0,51 em (31, 31, 32 et 28 caractères), le jeu mesuré est d'au moins 8 px.
+    car = lambda w: int(w / (0.51 * fs))
     e = []
     y = 40
     corps = []
     corps.append('<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(t["titre"])))
     for k, col in enumerate(t["col"]):
-        corps.append('<text x="%d" y="%d" font-size="10.5" font-weight="600" fill="%s">%s</text>' % (xs[k], y, INK2, esc(col)))
+        corps.append('<text x="%d" y="%d" font-size="%s" font-weight="600" fill="%s">%s</text>' % (xs[k], y, fs, INK2, esc(col)))
     y += 8
     niv_prec = None
     for niv, fid, cells in L:
         if niv != niv_prec:
             y += 10
             corps.append('<rect x="0" y="%d" width="%d" height="18" fill="%s"/>' % (y, W, FOND_NIVEAU))
-            corps.append('<text x="6" y="%d" font-size="10" font-weight="600" letter-spacing="0.6" fill="%s">%s</text>' % (y + 13, BLEU, NIVEAUX[lang][niv]))
+            corps.append('<text x="6" y="%d" font-size="%s" font-weight="600" letter-spacing="0.6" fill="%s">%s</text>' % (y + 13, fs, BLEU, NIVEAUX[lang][niv]))
             y += 24
             niv_prec = niv
         f, o, v, a, cc = cells
@@ -886,7 +890,7 @@ def fig_grille(Aff, lang):
                     coul = INK2
                 elif k == 3:
                     coul = ORANGE
-                corps.append('<text x="%d" y="%d" font-size="10.5"%s fill="%s">%s</text>' % (xs[k], y + 12 + 13 * i, poids, coul, esc(l)))
+                corps.append('<text x="%d" y="%d" font-size="%s"%s fill="%s">%s</text>' % (xs[k], y + 12 + 13 * i, fs, poids, coul, esc(l)))
         y += 13 * hl + 8
         corps.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="0.6"/>' % (y, W, y, GRID))
     h = y + 6
@@ -971,22 +975,23 @@ def fig_grece(c, Aff, lang):
          '<title id="grec-t">%s</title><desc id="grec-d">%s</desc>' % (esc(t["titre"]), esc(t["desc"])),
          '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, h + 40),
          '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(t["titre"])),
-         '<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (X0, TOP - 14, MUTED, esc(t["axe"]))]
+         '<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (X0, TOP - 14, MUTED, esc(t["axe"]))]
     for gv in (-0.6, -0.4, -0.2, 0, 0.2):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(gv), X1, Y(gv), INK2 if gv == 0 else GRID, 1.2 if gv == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(gv) + 3, MUTED, nb(gv, 1, lang).replace("-", "−")))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(gv) + 3, MUTED, nb(gv, 1, lang).replace("-", "−")))
     i_s = mois.index("2025-09")
     for i, m in enumerate(mois):
         v = f8["ecart"][m]
         y0, y1 = sorted((Y(0), Y(v)))
         e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (X(i) + 1.5, y0, bw - 3, max(y1 - y0, 0.8), ORANGE if v > 0 else GRIS_CLAIR))
         if m.endswith("-01"):
-            e.append('<text x="%.1f" y="%d" font-size="10" fill="%s">%s</text>' % (X(i) + 1.5, BAS + 16, MUTED, m[:4]))
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s">%s</text>' % (X(i) + 1.5, BAS + 16, MUTED, m[:4]))
     xs = X(i_s) + bw / 2
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1" stroke-dasharray="3 3"/>' % (xs, TOP - 4, xs, BAS, INK))
-    e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (xs, TOP - 6 + 0, INK, esc(t["seance"])))
-    e.append('<text x="%.1f" y="%.1f" font-size="10.5" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (xs - 8, Y(0.2), ORANGE, esc(t["dessus"])))
-    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s">%s</text>' % (X(mois.index("2025-01")), Y(-0.45), INK2, esc(t["dessous"])))
+    # libellé remonté de 2 px (11/11/2026) : à 11 px, le jambage du « p » de « septembre » rejoignait le haut du pointillé
+    e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (xs, TOP - 8, INK, esc(t["seance"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" font-weight="600" fill="%s" text-anchor="end">%s</text>' % (xs - 8, Y(0.2), ORANGE, esc(t["dessus"])))
+    e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">%s</text>' % (X(mois.index("2025-01")), Y(-0.45), INK2, esc(t["dessous"])))
     return pied_figure.pied(e, h + 2, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                           (LICENCES[lang], MUTED, "pied-licence")], GRID)
 

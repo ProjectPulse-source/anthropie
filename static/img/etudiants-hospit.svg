@@ -4,29 +4,29 @@
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Jeunes hospitalisés pour un geste auto-infligé, 2012-2025</text>
 <text x="0" y="37" font-size="11" fill="#55524f">Patients hospitalisés dans l'année, pour 100 000 habitants de 18 à 24 ans du même sexe, étudiants ou non</text>
 <line x1="44" y1="280.0" x2="540" y2="280.0" stroke="#dcd8d3" stroke-width="1"/>
-<text x="38" y="283.5" font-size="10" fill="#96928f" text-anchor="end">0</text>
+<text x="38" y="284.0" font-size="11" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="44" y1="226.0" x2="540" y2="226.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="38" y="229.5" font-size="10" fill="#96928f" text-anchor="end">100</text>
+<text x="38" y="230.0" font-size="11" fill="#6f6c66" text-anchor="end">100</text>
 <line x1="44" y1="172.0" x2="540" y2="172.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="38" y="175.5" font-size="10" fill="#96928f" text-anchor="end">200</text>
+<text x="38" y="176.0" font-size="11" fill="#6f6c66" text-anchor="end">200</text>
 <line x1="44" y1="118.0" x2="540" y2="118.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="38" y="121.5" font-size="10" fill="#96928f" text-anchor="end">300</text>
+<text x="38" y="122.0" font-size="11" fill="#6f6c66" text-anchor="end">300</text>
 <line x1="44" y1="64.0" x2="540" y2="64.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="38" y="67.5" font-size="10" fill="#96928f" text-anchor="end">400</text>
-<text x="44.0" y="295" font-size="10" fill="#96928f" text-anchor="middle">2012</text>
-<text x="82.2" y="295" font-size="10" fill="#96928f" text-anchor="middle">2013</text>
-<text x="120.3" y="295" font-size="10" fill="#96928f" text-anchor="middle">2014</text>
-<text x="158.5" y="295" font-size="10" fill="#96928f" text-anchor="middle">2015</text>
-<text x="196.6" y="295" font-size="10" fill="#96928f" text-anchor="middle">2016</text>
-<text x="234.8" y="295" font-size="10" fill="#96928f" text-anchor="middle">2017</text>
-<text x="272.9" y="295" font-size="10" fill="#96928f" text-anchor="middle">2018</text>
-<text x="311.1" y="295" font-size="10" fill="#96928f" text-anchor="middle">2019</text>
-<text x="349.2" y="295" font-size="10" fill="#96928f" text-anchor="middle">2020</text>
-<text x="387.4" y="295" font-size="10" fill="#96928f" text-anchor="middle">2021</text>
-<text x="425.5" y="295" font-size="10" fill="#96928f" text-anchor="middle">2022</text>
-<text x="463.7" y="295" font-size="10" fill="#96928f" text-anchor="middle">2023</text>
-<text x="501.8" y="295" font-size="10" fill="#96928f" text-anchor="middle">2024</text>
-<text x="540.0" y="295" font-size="10" fill="#96928f" text-anchor="middle">2025</text>
+<text x="38" y="68.0" font-size="11" fill="#6f6c66" text-anchor="end">400</text>
+<text x="44.0" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2012</text>
+<text x="82.2" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2013</text>
+<text x="120.3" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2014</text>
+<text x="158.5" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2015</text>
+<text x="196.6" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2016</text>
+<text x="234.8" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2017</text>
+<text x="272.9" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2018</text>
+<text x="311.1" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2019</text>
+<text x="349.2" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="387.4" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2021</text>
+<text x="425.5" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2022</text>
+<text x="463.7" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2023</text>
+<text x="501.8" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2024</text>
+<text x="540.0" y="296" font-size="11" fill="#6f6c66" text-anchor="middle">2025</text>
 <path d="M44.0,202.9 L82.2,212.4 L120.3,211.0 L158.5,213.9 L196.6,216.8 L234.8,215.2 L272.9,210.7 L311.1,209.7 L349.2,215.7 L387.4,211.3 L425.5,210.0 L463.7,209.4 L501.8,203.9 L540.0,199.3" fill="none" stroke="#184f95" stroke-width="2.4" stroke-linejoin="round"/>
 <circle cx="44.0" cy="202.9" r="2.8" fill="#184f95"/>
 <circle cx="82.2" cy="212.4" r="2.8" fill="#184f95"/>
@@ -70,5 +70,5 @@
 <text class="pied-source" x="0" y="339.0" font-size="11" fill="#55524f">recalculés à partir des effectifs par âge détaillé</text>
 <text class="pied-note" x="0" y="353.0" font-size="11" fill="#55524f">Geste auto-infligé : tentative de suicide ou automutilation. Ces séries ne distinguent pas les étudiants des autres</text>
 <text class="pied-note" x="0" y="367.0" font-size="11" fill="#55524f">jeunes. 2020 : moins de patients hospitalisés pendant l'épidémie de covid.</text>
-<text class="pied-licence" x="0" y="381.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, licence CC BY 4.0 · stephane-lalut.com/les-etudiants-vont-ils-plus-mal/</text>
+<text class="pied-licence" x="0" y="381.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, licence CC BY 4.0 · stephane-lalut.com/les-etudiants-vont-ils-plus-mal/</text>
 </svg>

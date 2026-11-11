@@ -55,9 +55,9 @@
 <text x="250" y="533" font-size="11" fill="#55524f">Plein : bas de la fourchette ; contour : jusqu'au haut.</text>
 <line x1="0" y1="549.0" x2="720" y2="549.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="564.0" font-size="11" fill="#55524f">RTE : Bilan prévisionnel 2025-2035 (déc. 2025), Bilan électrique 2025 (févr. 2026), page « Les data centers en</text>
-<text class="pied-source" x="0" y="578.0" font-size="11" fill="#55524f">chiffres clés » (1ᵉʳ juin 2026) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel</text>
+<text class="pied-source" x="0" y="578.0" font-size="11" fill="#55524f">chiffres clés » (1ᵉʳ juin 2026) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel</text>
 <text class="pied-source" x="0" y="592.0" font-size="11" fill="#55524f">(somme : 13,9 GW).</text>
 <text class="pied-note" x="0" y="606.0" font-size="11" fill="#55524f">Une puissance réservée n'est ni une puissance appelée ni une consommation : les deux panneaux ne se comparent pas,</text>
 <text class="pied-note" x="0" y="620.0" font-size="11" fill="#55524f">aucun rapport n'est calculé entre eux. Trajectoires : hypothèses de RTE, non des mesures.</text>
-<text class="pied-licence" x="0" y="634.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/data-centers-puissance-reservee/</text>
+<text class="pied-licence" x="0" y="634.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/data-centers-puissance-reservee/</text>
 </svg>

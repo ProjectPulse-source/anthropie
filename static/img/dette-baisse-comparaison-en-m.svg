@@ -9,8 +9,8 @@
 <text x="17" y="128.0" font-size="13.5" fill="#55524f">pushes the ratio up</text>
 <rect x="0" y="138.0" width="11" height="11" fill="#8a8781"/>
 <text x="17" y="148.0" font-size="13.5" fill="#55524f">pulls it down</text>
-<text x="0" y="167.0" font-size="13.5" fill="#96928f">In points of GDP cumulated over ten</text>
-<text x="0" y="186.0" font-size="13.5" fill="#96928f">years</text>
+<text x="0" y="167.0" font-size="13.5" fill="#6f6c66">In points of GDP cumulated over ten</text>
+<text x="0" y="186.0" font-size="13.5" fill="#6f6c66">years</text>
 <line x1="0" y1="198.0" x2="300" y2="198.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="0" y="220.0" font-size="15" font-weight="600" fill="#26262f">Cyprus: −59.3 points</text>
 <text x="0" y="238.0" font-size="13.5" fill="#184f95">111.6 → 52.3% of GDP</text>
@@ -112,8 +112,8 @@
 <text class="pied-note" x="0" y="1184.0" font-size="13.5" fill="#55524f">accounting comparison: it attributes</text>
 <text class="pied-note" x="0" y="1201.0" font-size="13.5" fill="#55524f">the fall to no policy. Change computed</text>
 <text class="pied-note" x="0" y="1218.0" font-size="13.5" fill="#55524f">on unrounded values; the sum of the</text>
-<text class="pied-note" x="0" y="1235.0" font-size="13.5" fill="#55524f">contributions shown may differ by 0.1</text>
-<text class="pied-note" x="0" y="1252.0" font-size="13.5" fill="#55524f">points.</text>
-<text class="pied-licence" x="0" y="1273.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1290.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="1235.0" font-size="13.5" fill="#55524f">contributions shown may differ by</text>
+<text class="pied-note" x="0" y="1252.0" font-size="13.5" fill="#55524f">0.1 points.</text>
+<text class="pied-licence" x="0" y="1273.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1290.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

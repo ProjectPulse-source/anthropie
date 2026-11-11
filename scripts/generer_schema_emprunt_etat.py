@@ -26,7 +26,8 @@ import pied_figure as PF  # noqa: E402
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BLEU, ORANGE = "#184f95", "#eb6834"
-INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
+INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", PF.ENCRE_ATTENUEE, "#e1e0d9"
+GRIS_MARQUE = "#898781"   # pastilles, flèches et pointes grises : le gris des marques ; le texte prend MUTED, encre atténuée de l'organe commun
 FOND = "#f6f5f1"
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 W, WM = 720, PF.LARGEUR_M
@@ -111,19 +112,19 @@ def esc(s: str) -> str:
 
 def defs() -> str:
     m = ""
-    for nom, col in (("b", BLEU), ("o", ORANGE), ("g", MUTED)):
+    for nom, col in (("b", BLEU), ("o", ORANGE), ("g", GRIS_MARQUE)):
         m += ('<marker id="f%s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">'
               '<path d="M0,0 L10,5 L0,10 z" fill="%s"/></marker>' % (nom, col))
     return "<defs>%s</defs>" % m
 
 
-def boite(e, x, y, w, h, nom, sous, car, fs=12, accent=INK):
+def boite(e, x, y, w, h, nom, sous, car, fs=12, accent=INK, mini=PF.POLICE_MIN):
     e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" rx="6" fill="%s" stroke="%s"/>' % (x, y, w, h, FOND, GRID))
     lignes = [(l, True) for l in PF.coupe(nom, car)] + [(l, False) for l in PF.coupe(sous, car + 2)]
     y0 = y + h / 2 - (len(lignes) - 1) * (fs + 3) / 2 + fs * 0.35
     for k, (l, gras) in enumerate(lignes):
         e.append('<text x="%.1f" y="%.1f" font-size="%s" text-anchor="middle" fill="%s"%s>%s</text>'
-                 % (x + w / 2, y0 + k * (fs + 3), fs if gras else fs - 1, accent if gras else INK2,
+                 % (x + w / 2, y0 + k * (fs + 3), fs if gras else max(fs - 1, mini), accent if gras else INK2,
                     ' font-weight="600"' if gras else "", esc(l)))
 
 
@@ -132,22 +133,23 @@ def fleche(e, pts, col, nom):
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" marker-end="url(#f%s)"/>' % (d, col, nom))
 
 
-def pastille(e, x, y, n, col, r=9):
+def pastille(e, x, y, n, col, r=9, mini=PF.POLICE_MIN):
+    fs = max(r + 2, mini)      # chiffre de la pastille : jamais sous la police minimale de la version
     e.append('<circle cx="%.1f" cy="%.1f" r="%d" fill="%s"/>' % (x, y, r, col))
-    e.append('<text x="%.1f" y="%.1f" font-size="%d" font-weight="600" text-anchor="middle" fill="#fff">%s</text>'
-             % (x, y + 4, r + 2, n))
+    e.append('<text x="%.1f" y="%.1f" font-size="%s" font-weight="600" text-anchor="middle" fill="#fff">%s</text>'
+             % (x, y + fs * 0.36, fs, n))
 
 
-def legende(e, y, items, cols, car, x0=0, fs=12, pas=16, r=8):
+def legende(e, y, items, cols, car, x0=0, fs=12, pas=16, r=8, mini=PF.POLICE_MIN):
     for n, texte in items:
-        pastille(e, x0 + r, y + 6, n, cols[n], r)
+        pastille(e, x0 + r, y + 6, n, cols[n], r, mini)
         for k, l in enumerate(PF.coupe(texte, car)):
             e.append('<text x="%.1f" y="%.1f" font-size="%s" fill="%s">%s</text>' % (x0 + 2 * r + 8, y + 10 + k * pas, fs, INK, esc(l)))
         y += pas * len(PF.coupe(texte, car)) + 6
     return y
 
 
-COULEURS = {"1": BLEU, "2": BLEU, "3": BLEU, "4": MUTED, "5": ORANGE, "6": ORANGE, "7": MUTED}
+COULEURS = {"1": BLEU, "2": BLEU, "3": BLEU, "4": GRIS_MARQUE, "5": ORANGE, "6": ORANGE, "7": GRIS_MARQUE}
 
 
 def bureau(lang: str) -> str:
@@ -168,8 +170,8 @@ def bureau(lang: str) -> str:
         fleche(e, [(x1, by + 30), (x2, by + 30)], BLEU, "b")
         pastille(e, (x1 + x2) / 2, by + 13, str(k + 1), BLEU)
     x1, x2 = xs[3] - 3, xs[2] + bw + 3
-    fleche(e, [(x1, by + 62), (x2, by + 62)], MUTED, "g")
-    pastille(e, (x1 + x2) / 2, by + 79, "4", MUTED)
+    fleche(e, [(x1, by + 62), (x2, by + 62)], GRIS_MARQUE, "g")
+    pastille(e, (x1 + x2) / 2, by + 79, "4", GRIS_MARQUE)
     y = legende(e, by + bh + 22, L["l1"], COULEURS, 100)
     # Volet 2 : l'État à gauche ; investisseurs et Banque de France au centre ; banques à droite.
     y += 18
@@ -191,8 +193,8 @@ def bureau(lang: str) -> str:
     pastille(e, (xc + bw2 + xd) / 2, yb + 8, "6", ORANGE)
     # 7 : bénéfices reversés à l'État, sous les boîtes.
     fleche(e, [(xc + 30, yb + bh2 + 3), (xc + 30, yb + bh2 + 22), (xe + bw2 / 2, yb + bh2 + 22), (xe + bw2 / 2, ye + bh2 + 3)],
-           MUTED, "g")
-    pastille(e, (xc + 30 + xe + bw2 / 2) / 2, yb + bh2 + 22, "7", MUTED)
+           GRIS_MARQUE, "g")
+    pastille(e, (xc + 30 + xe + bw2 / 2) / 2, yb + bh2 + 22, "7", GRIS_MARQUE)
     y = legende(e, yb + bh2 + 50, L["l2"], COULEURS, 100)
     blocs = [(L["source"], INK2, "pied-source"), (L["note"], INK2, "pied-note"), (L["licence"], MUTED, "pied-licence")]
     return PF.pied(e, y + 10, W, blocs, GRID)
@@ -202,7 +204,7 @@ def telephone(lang: str) -> str:
     L = T[lang]
     e, y = PF.tete_mobile("sem", L["titre"], L["desc"], INK, FONT, car=28)
     e.insert(3, defs())
-    fs = PF.POLICE_M
+    fs, mini = PF.POLICE_M, PF.POLICE_M_MIN
 
     def colonne(y, boites, fleches, couleur_titre, titre):
         e.append('<text x="0" y="%.1f" font-size="%s" font-weight="600" fill="%s">%s</text>' % (y + 18, fs, couleur_titre, esc(titre)))
@@ -211,32 +213,32 @@ def telephone(lang: str) -> str:
         x = (WM - bw) / 2
         ys = []
         for k, (nom, sous) in enumerate(boites):
-            boite(e, x, y, bw, bh, nom, sous, 26, fs=13)
+            boite(e, x, y, bw, bh, nom, sous, 26, fs=13, mini=mini)
             ys.append(y)
             y += bh + gap
         for (a, b, n, col, nm) in fleches:
             if b == a + 1:
                 fleche(e, [(x + bw / 2, ys[a] + bh + 3), (x + bw / 2, ys[b] - 3)], col, nm)
-                pastille(e, x + bw / 2 + 22, (ys[a] + bh + ys[b]) / 2, n, col)
+                pastille(e, x + bw / 2 + 22, (ys[a] + bh + ys[b]) / 2, n, col, mini=mini)
             elif b > a:
                 # Flèche qui saute une boîte (coupons de l'État à la Banque de France) : par la gauche.
                 fleche(e, [(x - 3, ys[a] + bh / 2), (x - 22, ys[a] + bh / 2), (x - 22, ys[b] + bh / 2),
                            (x - 3, ys[b] + bh / 2)], col, nm)
-                pastille(e, x - 22, (ys[a] + ys[b]) / 2 + bh / 2, n, col)
+                pastille(e, x - 22, (ys[a] + ys[b]) / 2 + bh / 2, n, col, mini=mini)
             else:
                 fleche(e, [(x + bw + 3, ys[a] + bh / 2), (x + bw + 22, ys[a] + bh / 2), (x + bw + 22, ys[b] + bh / 2),
                            (x + bw + 3, ys[b] + bh / 2)], col, nm)
-                pastille(e, x + bw + 22, (ys[a] + ys[b]) / 2 + bh / 2, n, col)
+                pastille(e, x + bw + 22, (ys[a] + ys[b]) / 2 + bh / 2, n, col, mini=mini)
         return y - gap + 18
 
     y = colonne(y, [L["etat"], L["svt"], L["inv"], L["bdf"]],
-                [(0, 1, "1", BLEU, "b"), (1, 2, "2", BLEU, "b"), (2, 3, "3", BLEU, "b"), (3, 2, "4", MUTED, "g")],
+                [(0, 1, "1", BLEU, "b"), (1, 2, "2", BLEU, "b"), (2, 3, "3", BLEU, "b"), (3, 2, "4", GRIS_MARQUE, "g")],
                 BLEU, L["v1"])
-    y = legende(e, y, L["l1"], COULEURS, 30, fs=fs, pas=17, r=9) + 10
+    y = legende(e, y, L["l1"], COULEURS, 30, fs=fs, pas=17, r=9, mini=mini) + 10
     y = colonne(y, [L["etat"], L["inv"], L["bdf"], L["banques"]],
-                [(0, 1, "5", ORANGE, "o"), (0, 2, "5", ORANGE, "o"), (2, 3, "6", ORANGE, "o"), (2, 0, "7", MUTED, "g")],
+                [(0, 1, "5", ORANGE, "o"), (0, 2, "5", ORANGE, "o"), (2, 3, "6", ORANGE, "o"), (2, 0, "7", GRIS_MARQUE, "g")],
                 ORANGE, L["v2_m"])
-    y = legende(e, y, L["l2"], COULEURS, 30, fs=fs, pas=17, r=9)
+    y = legende(e, y, L["l2"], COULEURS, 30, fs=fs, pas=17, r=9, mini=mini)
     blocs = [(L["source"], INK2, "pied-source"), (L["note"], INK2, "pied-note"), (L["licence_m"], MUTED, "pied-licence")]
     return PF.pied_mobile(e, y + 10, blocs, GRID)
 

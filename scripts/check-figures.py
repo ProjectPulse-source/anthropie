@@ -18,7 +18,18 @@ Regles BLOQUANTES (une figure en defaut fait sortir 1) :
   R3  un texte reste dans le cadre (viewBox) ;
   R4  un filet de rattachement (trait #52514e, 1 px) part d'une marque, mene a un texte, ne croise aucun autre filet
       et passe a 3 px au moins du bord de toute autre marque ;
-  R5  aucune ligne de texte ne finit par un signe seul (« + », « − », « – ») ni ne commence par « : ; ? ! % ».
+  R5  aucune ligne de texte ne finit par un signe seul (« + », « − », « – ») ni ne commence par « : ; ? ! % » ;
+  R6  aucun texte ne s'affiche sous 12 px a la plus petite largeur ou sa version est servie (11/11/2026) : une figure
+      detaillee (720 de large) s'affiche a 804 px au plus etroit, une figure telephone (300) a 277 px -- mesure sur les
+      52 pages du site ; soit 11 px dessines au moins dans la premiere, 13 px dans la seconde ; et toute figure
+      detaillee du site a sa version telephone (X-m.svg), sans laquelle elle est servie telle quelle sous 900 px
+      (une seule en etait privee le 11/11/2026 : texte de 5,6 px sur telephone, hors du champ de tous les essais) ;
+  R7  tout texte a un contraste d'au moins 4,5:1 avec son fond (3:1 pour un grand texte : 24 px affiches, ou 18,66 px
+      en gras) ; le fond est le blanc de la figure ou la derniere forme pleine (rectangle, cercle) dessinee sous lui.
+      Hors R7, DECLARE (liste CONTRASTE_EN_ATTENTE, comptee avec --detail) : le texte dans une couleur de serie de la
+      charte et le texte blanc pose sur une marque orange ou grise -- decision de charte, qui revient a l'auteur ;
+      la liste meurt quand il a tranche. Non juge, signale avec --detail : un texte clair sans forme pleine reconnue
+      sous lui (trace, polygone).
 Signalement NON bloquant (--detail) : nom de nuage dont les deux marques les plus proches sont presque a egale distance
 (rattachement a regarder au rendu ; le script ne sait pas quel pays porte chaque marque, le generateur le sait).
 
@@ -48,6 +59,14 @@ METRIQUES = ROOT / "scripts" / "metriques_polices.json"
 NS = "{http://www.w3.org/2000/svg}"
 FILET = "#52514e"
 HAMPE, JAMBAGE = 0.72, 0.22
+# R6 : largeur d'affichage la plus etroite de chaque version (largeur de dessin -> px), mesuree le 11/11/2026 sur le
+# site servi (52 pages, ecrans de 320 et 900 px). Independante des generateurs : ils declarent une police minimale,
+# ce controle mesure la taille AFFICHEE.
+LARGEUR_SERVIE_MIN = {720: 804.0, 300: 277.0}
+TAILLE_AFFICHEE_MIN = 12.0
+# R7 : couleurs de la charte dont le contraste en texte releve d'une decision de l'auteur (11/11/2026).
+CHARTE_TEXTE = {"#eb6834", "#b8703f"}                                   # texte dans la couleur de sa serie
+CHARTE_MARQUE = {"#eb6834", "#b8703f", "#898781", "#8a8781", "#8a8f98"}  # texte blanc pose sur une marque
 
 
 def charger_metriques() -> dict:
@@ -60,12 +79,56 @@ def chasse(texte: str, taille: float, gras: bool, M: dict) -> float:
     return sum(t.get(c, defaut) for c in texte) * taille / 1000
 
 
+def hexa(c: str | None) -> str | None:
+    c = (c or "").strip().lower()
+    c = {"white": "#ffffff", "black": "#000000"}.get(c, c)
+    if re.fullmatch(r"#[0-9a-f]{3}", c):
+        c = "#" + "".join(x * 2 for x in c[1:])
+    return c if re.fullmatch(r"#[0-9a-f]{6}", c) else None
+
+
+def rvb(c: str) -> tuple[float, float, float]:
+    return tuple(int(c[i:i + 2], 16) for i in (1, 3, 5))
+
+
+def melange(dessus: str, dessous: str, op: float) -> str:
+    return "#%02x%02x%02x" % tuple(round(op * a + (1 - op) * b) for a, b in zip(rvb(dessus), rvb(dessous)))
+
+
+def luminance(c: str) -> float:
+    v = [x / 255 for x in rvb(c)]
+    v = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in v]
+    return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]
+
+
+def contraste(a: str, b: str) -> float:
+    la, lb = luminance(a), luminance(b)
+    return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
+
+
+def opacite(el) -> float:
+    try:
+        return float(el.get("opacity", 1) or 1) * float(el.get("fill-opacity", 1) or 1)
+    except ValueError:
+        return 1.0
+
+
 def lire(svg: str, M: dict) -> dict:
     racine = ET.fromstring(svg)
     vb = [float(v) for v in (racine.get("viewBox") or "0 0 0 0").split()]
     textes, marques, filets = [], [], []
+    parent = {c: p for p in racine.iter() for c in p}
+    formes = []      # formes pleines dans l'ordre du document : ("r", x0, y0, x1, y1, couleur, opacite) ou ("c", cx, cy, r, ...)
     for el in racine.iter():
         tag = el.tag.replace(NS, "")
+        if tag in ("rect", "circle") and hexa(el.get("fill")):
+            if tag == "rect":
+                x, y = float(el.get("x", 0) or 0), float(el.get("y", 0) or 0)
+                formes.append(("r", x, y, x + float(el.get("width", 0) or 0), y + float(el.get("height", 0) or 0),
+                               hexa(el.get("fill")), opacite(el)))
+            else:
+                formes.append(("c", float(el.get("cx", 0) or 0), float(el.get("cy", 0) or 0), float(el.get("r", 0) or 0), 0,
+                               hexa(el.get("fill")), opacite(el)))
         if tag == "text":
             if el.get("aria-hidden") == "true":
                 continue   # liseré blanc : le meme texte, dessous
@@ -81,7 +144,24 @@ def lire(svg: str, M: dict) -> dict:
             # Jambage compté seulement si une lettre descend (p, q, g, j, y, virgule...) : sinon la boîte touchait à tort
             # un point posé juste sous le texte (« point écarté », 03/11/2026).
             bas = JAMBAGE if re.search(r"[gjpqyçQ,;()\[\]{}/|µ]", contenu) else 0.05
-            textes.append(dict(t=contenu, b=(x0, y - HAMPE * taille, x0 + larg, y + bas * taille), taille=taille))
+            # Couleur du texte (heritee d'un groupe a defaut d'attribut) et fond : le blanc, puis chaque forme pleine
+            # deja dessinee qui couvre le centre du texte.
+            n, encre = el, None
+            while n is not None and encre is None:
+                encre = hexa(n.get("fill"))
+                n = parent.get(n)
+            encre = encre or "#000000"
+            xc, yc = x0 + larg / 2, y - 0.3 * taille
+            fond, sous_forme = "#ffffff", False
+            for f in formes:
+                dedans = (f[1] <= xc <= f[3] and f[2] <= yc <= f[4]) if f[0] == "r" else math.hypot(xc - f[1], yc - f[2]) <= f[3]
+                if dedans:
+                    fond = melange(f[5], fond, f[6])
+                    sous_forme = sous_forme or f[5] != "#ffffff"
+            op = opacite(el)
+            textes.append(dict(t=contenu, b=(x0, y - HAMPE * taille, x0 + larg, y + bas * taille), taille=taille, gras=gras,
+                               encre=melange(encre, fond, op) if op < 1 else encre, encre_declaree=encre, fond=fond,
+                               sous_forme=sous_forme))
         elif tag == "circle":
             r = float(el.get("r", 0))
             if 0 < r <= 8:
@@ -112,7 +192,11 @@ def croise(a, b) -> bool:
     return o(p1, p2, p3) * o(p1, p2, p4) < 0 and o(p3, p4, p1) * o(p3, p4, p2) < 0
 
 
-def examiner(F: dict) -> tuple[list[str], list[str]]:
+def fr(x: float, n: int = 1) -> str:
+    return ("%.*f" % (n, x)).replace(".", ",")
+
+
+def examiner(F: dict, strict: bool = False) -> tuple[list[str], list[str]]:
     defauts, signal = [], []
     T, Mq, Fl = F["textes"], F["marques"], F["filets"]
     # R1
@@ -159,6 +243,43 @@ def examiner(F: dict) -> tuple[list[str], list[str]]:
             defauts.append("R5 « %s » finit par un signe seul" % t["t"])
         if re.match(r"^[:;?!%]", t["t"].lstrip()):
             defauts.append("R5 « %s » commence par une ponctuation haute" % t["t"])
+    # R6 : taille affichee a la plus petite largeur servie
+    servie = LARGEUR_SERVIE_MIN.get(round(w))
+    echelle = servie / w if servie else None
+    if echelle is None and T and w:
+        (defauts if strict else signal).append(
+            "R6 largeur de dessin %d sans largeur servie connue (LARGEUR_SERVIE_MIN) : taille non controlee" % round(w))
+    if echelle:
+        petits = sorted((t for t in T if t["taille"] * echelle < TAILLE_AFFICHEE_MIN - 0.005), key=lambda t: t["taille"])
+        if petits:
+            defauts.append("R6 %d texte(s) sous %d px affiches a %d px de large (le plus petit : %s px dessines, %s px affiches) : %s"
+                           % (len(petits), TAILLE_AFFICHEE_MIN, servie, fr(petits[0]["taille"]), fr(petits[0]["taille"] * echelle),
+                              " ; ".join("« %s »" % t["t"][:28] for t in petits[:3])))
+    # R7 : contraste du texte avec son fond
+    faibles, attente, non_juges = {}, {}, 0
+    for t in T:
+        c = contraste(t["encre"], t["fond"])
+        affiche = t["taille"] * (echelle or 1)
+        seuil = 3.0 if affiche >= 24 or (t["gras"] and affiche >= 18.66) else 4.5
+        if c >= seuil - 0.005:
+            continue
+        cle = (t["encre"], t["fond"])
+        # Classe « en attente » : jugee sur la couleur DECLAREE (un libelle orange a 85 % d'opacite reste un texte dans
+        # l'orange de la charte) ; le contraste affiche, lui, est celui de la couleur melangee a son fond.
+        if t["encre_declaree"] in CHARTE_TEXTE or (t["encre_declaree"] == "#ffffff" and t["fond"] in CHARTE_MARQUE):
+            attente[cle] = attente.get(cle, 0) + 1
+        elif luminance(t["encre"]) > 0.5 and not t["sous_forme"]:
+            non_juges += 1          # texte clair sans forme pleine reconnue dessous : fond inconnu de ce controle
+        else:
+            faibles.setdefault(cle, []).append(t["t"])
+    for (encre, fond), L in sorted(faibles.items(), key=lambda kv: -len(kv[1])):
+        defauts.append("R7 %d texte(s) %s sur %s : contraste %s:1, minimum 4,5 -- %s"
+                       % (len(L), encre, fond, fr(contraste(encre, fond), 2), " ; ".join("« %s »" % x[:28] for x in L[:3])))
+    for (encre, fond), n in sorted(attente.items(), key=lambda kv: -kv[1]):
+        signal.append("R7 en attente (charte, decision de l'auteur) : %d texte(s) %s sur %s, %s:1"
+                      % (n, encre, fond, fr(contraste(encre, fond), 2)))
+    if non_juges:
+        signal.append("R7 non juge : %d texte(s) clair(s) sans forme pleine reconnue dessous" % non_juges)
     # Signalement : rattachement dans un nuage (au moins 8 marques), noms sans filet
     if len(Mq) >= 8:
         bouts = [(s[2], s[3]) for s in Fl]
@@ -169,6 +290,19 @@ def examiner(F: dict) -> tuple[list[str], list[str]]:
             if len(ds) > 1 and ds[0] < 8 and ds[1] - ds[0] < 2:
                 signal.append("« %s » : deux marques presque a egale distance (%.1f et %.1f px)" % (t["t"], ds[0], ds[1]))
     return defauts, signal
+
+
+def sans_telephone(nom: str, F: dict, existe) -> str | None:
+    """R6, complement : une figure detaillee (720 de large) sans version telephone est servie telle quelle sous 900 px.
+    `existe(nom_de_fichier)` dit si le fichier frere est la (injecte : le temoin l'essaie sans rien ecrire)."""
+    if nom.endswith("-m.svg") or round(F["vb"][2]) != 720 or not F["textes"]:
+        return None
+    frere = nom[:-4] + "-m.svg"
+    if existe(frere):
+        return None
+    mini = min(t["taille"] for t in F["textes"])  # brut-ok: plus petite police dessinee
+    return ("R6 pas de version telephone (%s) : sous 900 px d'ecran la version detaillee est servie a %d px au plus etroit, "
+            "soit %s px pour son plus petit texte" % (frere, LARGEUR_SERVIE_MIN[300], fr(mini * LARGEUR_SERVIE_MIN[300] / 720)))
 
 
 # Exceptions DECLAREES : figure en defaut dont la correction est faite dans le generateur mais ne peut pas encore etre
@@ -191,25 +325,48 @@ def fichiers(args: list[str]) -> list[Path]:
 
 def temoin(M: dict) -> int:
     """Chaque regle doit mordre sur un SVG fabrique pour elle, et un SVG propre doit passer."""
-    tete = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">'
+    # En-tete de 720 de large (version detaillee) : a 11 px, les textes des cas R1 a R5 passent R6. Le cas « propre »
+    # porte aussi ce que R6 et R7 doivent laisser passer : encre attenuee, texte blanc sur le bleu, grand titre orange.
+    tete = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200">'
+    tete_m = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">'
     cas = {
         "propre": ('<circle cx="100" cy="100" r="5"/><text x="109" y="104" font-size="11">Autriche</text>'
                    '<circle cx="200" cy="150" r="5"/><line x1="200" y1="145" x2="200" y2="120" stroke="#52514e" stroke-width="1"/>'
-                   '<text x="200" y="117" font-size="11" text-anchor="middle">Chypre</text>', None),
+                   '<text x="200" y="117" font-size="11" text-anchor="middle">Chypre</text>'
+                   '<text x="400" y="50" font-size="11" fill="#6f6c66">Source : Eurostat</text>'
+                   '<rect x="400" y="80" width="120" height="24" fill="#184f95"/>'
+                   '<text x="410" y="96" font-size="11" fill="#ffffff">42 %</text>'
+                   '<text x="400" y="150" font-size="26" fill="#eb6834">3 000 Md€</text>', None),
+        "propre_m": ("M" + '<text x="10" y="50" font-size="13.5" fill="#6f6c66">Source : Insee</text>', None),
         "R1": ('<text x="10" y="50" font-size="11">Finlande</text><text x="30" y="52" font-size="11">Autriche</text>', "R1"),
         "R2": ('<circle cx="40" cy="47" r="5"/><text x="10" y="50" font-size="11">Croatie</text>', "R2"),
-        "R3": ('<text x="290" y="50" font-size="11">Slovaquie</text>', "R3"),
+        "R3": ('<text x="700" y="50" font-size="11">Slovaquie</text>', "R3"),
         "R4": ('<circle cx="50" cy="50" r="5"/><circle cx="70" cy="70" r="5"/>'
                '<line x1="50" y1="55" x2="90" y2="95" stroke="#52514e" stroke-width="1"/>'
                '<text x="92" y="100" font-size="11">Irlande</text>', "R4"),
         "R5": ('<text x="10" y="50" font-size="11">en points de PIB ; + fait monter, −</text>', "R5"),
         "R5b": ('<text x="10" y="50" font-size="11">Calcul Stéphane Lalut, CC BY 4.0 ·</text>', "R5"),
+        "R6": ('<text x="10" y="50" font-size="10.5">Taux en %</text>', "R6"),
+        "R6m": ("M" + '<text x="10" y="50" font-size="12">Taux en %</text>', "R6"),
+        "R7": ('<text x="10" y="50" font-size="11" fill="#96928f">2024</text>', "R7"),
+        "R7fond": ('<rect x="0" y="30" width="200" height="40" fill="#e4dfd7"/>'
+                   '<text x="10" y="50" font-size="11" fill="#6f6c66">Crise de 2008</text>', "R7"),
+        "R7gris": ('<text x="10" y="50" font-size="11" fill="#898781">Zone euro</text>', "R7"),
     }
     ok = True
     for nom, (corps, attendu) in cas.items():
-        d, _ = examiner(lire(tete + corps + "</svg>", M))
+        corps, t = (corps[1:], tete_m) if corps.startswith("M") else (corps, tete)
+        d, _ = examiner(lire(t + corps + "</svg>", M))
         mord = any(x.startswith(attendu) for x in d) if attendu else not d
         print("  temoin %-6s : %s%s" % (nom, "OK" if mord else "ECHEC", "" if mord else " -- " + "; ".join(d)))
+        ok &= mord
+    # R6, version telephone : une figure detaillee sans frere « -m » mord ; avec lui, ou en 300 de large, elle passe.
+    F720 = lire(tete + '<text x="10" y="50" font-size="11">Taux en %</text></svg>', M)
+    F300 = lire(tete_m + '<text x="10" y="50" font-size="13.5">Taux en %</text></svg>', M)
+    for nom, mord in (("R6tel", (sans_telephone("x.svg", F720, lambda n: False) or "").startswith("R6")),
+                      ("R6tel+", sans_telephone("x.svg", F720, lambda n: n == "x-m.svg") is None),
+                      ("R6tel-m", sans_telephone("x-m.svg", F300, lambda n: False) is None)):
+        print("  temoin %-6s : %s" % (nom, "OK" if mord else "ECHEC"))
         ok &= mord
     print("Temoin check-figures : %s" % ("chaque regle mord, le cas propre passe. OK" if ok else "ECHEC"))
     return 0 if ok else 1
@@ -247,7 +404,12 @@ def main() -> int:
     n_def = 0
     fs = fichiers(args)
     for p in fs:
-        d, s = examiner(lire(p.read_text(encoding="utf-8"), M))
+        F = lire(p.read_text(encoding="utf-8"), M)
+        d, s = examiner(F, strict=not args)
+        if not args:      # site entier : la version telephone se cherche a cote du fichier
+            manque = sans_telephone(p.name, F, lambda n, dossier=p.parent: (dossier / n).exists())
+            if manque:
+                d.append(manque)
         if p.name in EXCEPTIONS and not args:
             # L'exception n'excuse QUE sa classe (« · » en fin de ligne d'un pied, R5) ; tout autre défaut de la figure
             # reste bloquant (04/11/2026 : elle excusait auparavant n'importe quel défaut). Devenue sans objet, elle est

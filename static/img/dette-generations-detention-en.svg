@@ -6,33 +6,33 @@
 <polygon points="40.0,143.3 58.4,150.2 76.8,154.0 95.2,157.6 113.6,158.3 132.0,161.0 150.4,163.8 168.8,167.2 187.2,168.6 205.6,170.0 224.0,171.1 242.4,170.1 260.8,169.3 279.2,167.4 297.6,179.6 316.0,178.5 334.4,176.5 352.8,178.0 371.2,180.9 389.6,183.3 408.0,180.6 426.4,173.9 444.8,170.2 463.2,167.7 481.6,170.4 500.0,166.1 518.4,161.9 536.8,164.8 555.2,171.0 573.6,174.5 592.0,177.4 592.0,240.3 573.6,234.4 555.2,230.0 536.8,227.2 518.4,228.4 500.0,236.6 481.6,243.9 463.2,242.4 444.8,245.3 426.4,254.2 408.0,264.2 389.6,271.4 371.2,270.7 352.8,269.0 334.4,270.8 316.0,272.5 297.6,273.5 279.2,273.4 260.8,273.8 242.4,273.8 224.0,273.8 205.6,273.8 187.2,273.7 168.8,273.7 150.4,273.4 132.0,273.3 113.6,273.3 95.2,273.2 76.8,273.1 58.4,272.6 40.0,272.4" fill="#c9c5c0"/>
 <polygon points="40.0,60.0 58.4,60.0 76.8,60.0 95.2,60.0 113.6,60.0 132.0,60.0 150.4,60.0 168.8,60.0 187.2,60.0 205.6,60.0 224.0,60.0 242.4,60.0 260.8,60.0 279.2,60.0 297.6,60.0 316.0,60.0 334.4,60.0 352.8,60.0 371.2,60.0 389.6,60.0 408.0,60.0 426.4,60.0 444.8,60.0 463.2,60.0 481.6,60.0 500.0,60.0 518.4,60.0 536.8,60.0 555.2,60.0 573.6,60.0 592.0,60.0 592.0,177.4 573.6,174.5 555.2,171.0 536.8,164.8 518.4,161.9 500.0,166.1 481.6,170.4 463.2,167.7 444.8,170.2 426.4,173.9 408.0,180.6 389.6,183.3 371.2,180.9 352.8,178.0 334.4,176.5 316.0,178.5 297.6,179.6 279.2,167.4 260.8,169.3 242.4,170.1 224.0,171.1 205.6,170.0 187.2,168.6 168.8,167.2 150.4,163.8 132.0,161.0 113.6,158.3 95.2,157.6 76.8,154.0 58.4,150.2 40.0,143.3" fill="#eb6834"/>
 <line x1="40" y1="276.0" x2="592" y2="276.0" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.8"/>
-<text x="34" y="279.0" font-size="10" fill="#96928f" text-anchor="end">0%</text>
+<text x="34" y="279.0" font-size="11" fill="#6f6c66" text-anchor="end">0%</text>
 <line x1="40" y1="222.0" x2="592" y2="222.0" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.8"/>
-<text x="34" y="225.0" font-size="10" fill="#96928f" text-anchor="end">25%</text>
+<text x="34" y="225.0" font-size="11" fill="#6f6c66" text-anchor="end">25%</text>
 <line x1="40" y1="168.0" x2="592" y2="168.0" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.8"/>
-<text x="34" y="171.0" font-size="10" fill="#96928f" text-anchor="end">50%</text>
+<text x="34" y="171.0" font-size="11" fill="#6f6c66" text-anchor="end">50%</text>
 <line x1="40" y1="114.0" x2="592" y2="114.0" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.8"/>
-<text x="34" y="117.0" font-size="10" fill="#96928f" text-anchor="end">75%</text>
+<text x="34" y="117.0" font-size="11" fill="#6f6c66" text-anchor="end">75%</text>
 <line x1="40" y1="60.0" x2="592" y2="60.0" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.8"/>
-<text x="34" y="63.0" font-size="10" fill="#96928f" text-anchor="end">100%</text>
+<text x="34" y="63.0" font-size="11" fill="#6f6c66" text-anchor="end">100%</text>
 <line x1="40" y1="168.0" x2="592" y2="168.0" stroke="#26262f" stroke-width="1.2" stroke-dasharray="4 3"/>
-<text x="40.0" y="290" font-size="10" fill="#55524f" text-anchor="middle">1995</text>
-<text x="132.0" y="290" font-size="10" fill="#55524f" text-anchor="middle">2000</text>
-<text x="224.0" y="290" font-size="10" fill="#55524f" text-anchor="middle">2005</text>
-<text x="316.0" y="290" font-size="10" fill="#55524f" text-anchor="middle">2010</text>
-<text x="408.0" y="290" font-size="10" fill="#55524f" text-anchor="middle">2015</text>
-<text x="500.0" y="290" font-size="10" fill="#55524f" text-anchor="middle">2020</text>
-<text x="592.0" y="290" font-size="10" fill="#55524f" text-anchor="middle">2025</text>
+<text x="40.0" y="291" font-size="11" fill="#55524f" text-anchor="middle">1995</text>
+<text x="132.0" y="291" font-size="11" fill="#55524f" text-anchor="middle">2000</text>
+<text x="224.0" y="291" font-size="11" fill="#55524f" text-anchor="middle">2005</text>
+<text x="316.0" y="291" font-size="11" fill="#55524f" text-anchor="middle">2010</text>
+<text x="408.0" y="291" font-size="11" fill="#55524f" text-anchor="middle">2015</text>
+<text x="500.0" y="291" font-size="11" fill="#55524f" text-anchor="middle">2020</text>
+<text x="592.0" y="291" font-size="11" fill="#55524f" text-anchor="middle">2025</text>
 <text x="600" y="116.7" font-size="11" fill="#55524f">non-residents</text>
 <text x="600" y="129.7" font-size="11" font-weight="600" fill="#26262f">54%</text>
 <text x="600" y="206.8" font-size="11" fill="#55524f">other residents</text>
 <text x="600" y="219.8" font-size="11" font-weight="600" fill="#26262f">29%</text>
 <text x="600" y="256.1" font-size="11" fill="#55524f">Banque de France</text>
 <text x="600" y="269.1" font-size="11" font-weight="600" fill="#26262f">17%</text>
-<text x="44" y="164.0" font-size="10" fill="#26262f">half of the debt</text>
+<text x="44" y="164.0" font-size="11" fill="#26262f">half of the debt</text>
 <line x1="0" y1="302.0" x2="720" y2="302.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="317.0" font-size="11" fill="#55524f">ECB, government finance statistics (GFS): Maastricht debt of general government by holding sector, France, 1995-2025</text>
 <text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Residence of the registered holder (fund, custodian), not of the final saver; nominal value. The non-resident share</text>
 <text class="pied-note" x="0" y="345.0" font-size="11" fill="#55524f">does not, on its own, measure the net transfer of wealth abroad.</text>
-<text class="pied-licence" x="0" y="359.0" font-size="11" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-future-generations/</text>
+<text class="pied-licence" x="0" y="359.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-future-generations/</text>
 </svg>

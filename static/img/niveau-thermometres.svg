@@ -2,29 +2,29 @@
 <title id="niv-t-t">Quatre évaluations, leur dernière variation en France</title><desc id="niv-t-d">Tableau, dernière variation de chaque évaluation en France, dans sa propre échelle : PIRLS, compréhension de l'écrit (CM1, 2016-2021) +3 points, non significative ; TIMSS, mathématiques (CM1, 2019-2023) −1 points, non significative ; TIMSS, mathématiques (quatrième, 2019-2023) −4 points, non significative ; Test de positionnement, mathématiques (entrée en seconde GT, 2021-2024) +7 points, hausse observée, sans test ; Test de positionnement, français (entrée en seconde GT, 2021-2024) −4 points, baisse observée, sans test ; PISA, culture mathématique (15 ans, 2022-2025) −16 points, baisse significative ; PISA, compréhension de l'écrit (15 ans, 2022-2025) −18 points, baisse significative.</desc>
 <rect width="720" height="389" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Quatre évaluations, leur dernière variation en France</text>
-<text x="0" y="48" font-size="10.5" fill="#96928f" font-weight="600">Évaluation</text>
-<text x="240" y="48" font-size="10.5" fill="#96928f" font-weight="600">Élèves</text>
-<text x="395" y="48" font-size="10.5" fill="#96928f" font-weight="600">Période</text>
-<text x="480" y="48" font-size="10.5" fill="#96928f" font-weight="600">Variation</text>
-<text x="545" y="48" font-size="10.5" fill="#96928f" font-weight="600">Statut</text>
+<text x="0" y="48" font-size="11" fill="#6f6c66" font-weight="600">Évaluation</text>
+<text x="240" y="48" font-size="11" fill="#6f6c66" font-weight="600">Élèves</text>
+<text x="395" y="48" font-size="11" fill="#6f6c66" font-weight="600">Période</text>
+<text x="480" y="48" font-size="11" fill="#6f6c66" font-weight="600">Variation</text>
+<text x="545" y="48" font-size="11" fill="#6f6c66" font-weight="600">Statut</text>
 <rect x="0" y="60" width="720" height="34" fill="#f6f4f1"/>
 <text x="6" y="81" font-size="11.5" fill="#26262f">PIRLS, compréhension de l'écrit</text>
 <text x="240" y="81" font-size="11" fill="#55524f">CM1</text>
 <text x="395" y="81" font-size="11" fill="#55524f">2016-2021</text>
-<text x="480" y="81" font-size="11.5" fill="#8a8781" font-weight="600">+3</text>
+<text x="480" y="81" font-size="11.5" fill="#6f6c66" font-weight="600">+3</text>
 <rect x="545" y="72" width="10" height="10" rx="5" fill="#8a8781" stroke="#8a8781" stroke-width="1.6"/>
 <text x="561" y="81" font-size="11" fill="#26262f">non significative</text>
 <text x="6" y="115" font-size="11.5" fill="#26262f">TIMSS, mathématiques</text>
 <text x="240" y="115" font-size="11" fill="#55524f">CM1</text>
 <text x="395" y="115" font-size="11" fill="#55524f">2019-2023</text>
-<text x="480" y="115" font-size="11.5" fill="#8a8781" font-weight="600">−1</text>
+<text x="480" y="115" font-size="11.5" fill="#6f6c66" font-weight="600">−1</text>
 <rect x="545" y="106" width="10" height="10" rx="5" fill="#8a8781" stroke="#8a8781" stroke-width="1.6"/>
 <text x="561" y="115" font-size="11" fill="#26262f">non significative</text>
 <rect x="0" y="128" width="720" height="34" fill="#f6f4f1"/>
 <text x="6" y="149" font-size="11.5" fill="#26262f">TIMSS, mathématiques</text>
 <text x="240" y="149" font-size="11" fill="#55524f">quatrième</text>
 <text x="395" y="149" font-size="11" fill="#55524f">2019-2023</text>
-<text x="480" y="149" font-size="11.5" fill="#8a8781" font-weight="600">−4</text>
+<text x="480" y="149" font-size="11.5" fill="#6f6c66" font-weight="600">−4</text>
 <rect x="545" y="140" width="10" height="10" rx="5" fill="#8a8781" stroke="#8a8781" stroke-width="1.6"/>
 <text x="561" y="149" font-size="11" fill="#26262f">non significative</text>
 <text x="6" y="183" font-size="11.5" fill="#26262f">Test de positionnement, mathématiques</text>
@@ -58,5 +58,5 @@
 <text class="pied-source" x="0" y="339.0" font-size="11" fill="#55524f">OCDE (PISA 2025)</text>
 <text class="pied-note" x="0" y="353.0" font-size="11" fill="#55524f">Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : test publié,</text>
 <text class="pied-note" x="0" y="367.0" font-size="11" fill="#55524f">significatif ou non ; point creux : aucun test publié. Couleur : sens de la variation.</text>
-<text class="pied-licence" x="0" y="381.0" font-size="11" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
+<text class="pied-licence" x="0" y="381.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/</text>
 </svg>

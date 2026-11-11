@@ -762,7 +762,8 @@ def tableaux(R, S) -> tuple[dict, dict]:
 # ------------------------------------------------------------------ figures
 W = 720
 BLEU, GRIS, GRIS_CLAIR = "#184f95", "#8a8f98", "#c9cdd3"
-INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
+INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", pied_figure.ENCRE_ATTENUEE, "#e1e0d9"   # MUTED : texte seulement
+FS_D = pied_figure.POLICE_MIN      # plus petite police des figures détaillées (720 de large)
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 LICENCES_M = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
@@ -864,17 +865,18 @@ def fig_registre(R, r, A):
     Y = lambda p: yb - p / 100 * hmax  # noqa: E731
     e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (x0, yb, x1, yb, INK2))
     e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-dasharray="3 3"/>' % (x0, Y(50), x1, Y(50), GRIS))
-    e.append(txt(X(1976), Y(50) - 4, L["moitie"], 10, MUTED, "start"))  # zone sans scrutin (1973-1987)
+    e.append(txt(X(1976), Y(50) - 4, L["moitie"], FS_D, MUTED, "start"))  # zone sans scrutin (1973-1987)
     for an in range(1960, a1, 10):
-        e.append(txt(X(an), yb + 16, str(an), 10, MUTED, "middle"))
+        e.append(txt(X(an), yb + 16, str(an), FS_D, MUTED, "middle"))
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(an), yb, X(an), yb + 4, INK2))
     dernier = max(l["date_scrutin"] for l in R)
     xd = X(int(dernier[:4]) + (int(dernier[5:7]) - 0.5) / 12)
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s" opacity="0.35"/>' % (xd + 6, yb - hmax, x1 - xd - 6, hmax, GRID))
     e.append(txt((xd + x1) / 2, yb - hmax + 22, L["aucun"].format(**V), 11, INK2, "middle", "600"))
+    AN = lambda l: int(l["date_scrutin"][:4]) + (int(l["date_scrutin"][5:7]) - 0.5) / 12  # noqa: E731
     prec = None
-    for l in R:
-        an = int(l["date_scrutin"][:4]) + (int(l["date_scrutin"][5:7]) - 0.5) / 12
+    for k, l in enumerate(R):
+        an = AN(l)
         p = pct_oui(l)
         x = X(an)
         ad = l["oui"] > l["non"]
@@ -883,13 +885,19 @@ def fig_registre(R, r, A):
         lab = (fr(p, 0) + "\u00a0%") if LANG == "fr" else en(p, 0) + "%"
         # deux scrutins à moins d'un an (1962) : l'étiquette du second passe à droite de sa tige
         proche = prec is not None and an - prec < 1
-        e.append(txt(x + (12 if proche else 0), Y(p) + (4 if proche else -10), lab, 10, INK if ad else INK2,
-                     "start" if proche else "middle", "600"))
+        # à 11 px, l'étiquette centrée mord la tige du scrutin suivant quand celle-ci est à moins d'une demi-étiquette
+        # et monte au moins aussi haut (1961, devant avril 1962) : elle passe à gauche de son point, en miroir du cas
+        # « proche » ; la demi-largeur est estimée sur la taille de police (chiffres gras : 0,57 em par signe)
+        suiv = R[k + 1] if k + 1 < len(R) else None
+        demi = 0.57 * FS_D * len(lab) / 2
+        mord = not proche and suiv is not None and X(AN(suiv)) - 4.5 < x + demi and pct_oui(suiv) >= p
+        dx, dy, ancre = (-12, 4, "end") if mord else (12, 4, "start") if proche else (0, -10, "middle")
+        e.append(txt(x + dx, Y(p) + dy, lab, FS_D, INK if ad else INK2, ancre, "600"))
         prec = an
     e.append('<circle cx="%d" cy="%d" r="5" fill="%s"/>' % (x0 + 4, 58, BLEU))
-    e.append(txt(x0 + 14, 62, L["adopte"], 10, INK2))
+    e.append(txt(x0 + 14, 62, L["adopte"], FS_D, INK2))
     e.append('<circle cx="%d" cy="%d" r="5" fill="#ffffff" stroke="%s" stroke-width="1.5"/>' % (x0 + 84, 58, INK2))
-    e.append(txt(x0 + 94, 62, L["rejete"], 10, INK2))
+    e.append(txt(x0 + 94, 62, L["rejete"], FS_D, INK2))
     return pied(e, H + 2, L["src1"], L["note1"].format(**V))
 
 
@@ -914,10 +922,10 @@ def fig_rip(S, r, A, R):
     ws = wmax * conf["soutiens"] / conf["seuil"]
     e.append('<rect x="%d" y="%d" width="%d" height="12" fill="none" stroke="%s"/>' % (x0, yy, wmax, INK2))
     e.append('<rect x="%d" y="%d" width="%.1f" height="12" fill="%s"/>' % (x0, yy, ws, GRIS))
-    e.append(txt(x0 - 10, yy + 10, "2019-1 RIP", 10, INK2, "end"))
-    e.append(txt(x0 + ws + 6, yy + 10, L["part"].format(**V), 10, INK2))
-    e.append(txt(x0, yy + 28, L["sout"].format(**V), 10, INK, "start", "600"))
-    e.append(txt(x0, yy + 42, L["seuil"].format(**V), 10, INK2))
+    e.append(txt(x0 - 10, yy + 10, "2019-1 RIP", FS_D, INK2, "end"))
+    e.append(txt(x0 + ws + 6, yy + 10, L["part"].format(**V), FS_D, INK2))
+    e.append(txt(x0, yy + 28, L["sout"].format(**V), FS_D, INK, "start", "600"))
+    e.append(txt(x0, yy + 42, L["seuil"].format(**V), FS_D, INK2))
     return pied(e, H + 2, L["src2"], L["note2"].format(**V))
 
 
@@ -964,7 +972,12 @@ def fig_registre_m(R, r, A, svg_d):
         else:
             e.append('<rect x="%d" y="%d" width="%.1f" height="18" fill="#ffffff" stroke="%s" stroke-width="1.5"/>' % (X0, y + 1, w, INK2))
         lab = (fr(p, 0) + "\u00a0%") if LANG == "fr" else en(p, 0) + "%"
-        e.append(txt(X0 + w + 6, y + 14, lab, FS_MIN, INK if ad else INK2, "start", "600", "val"))
+        # une étiquette que les pointillés de la moitié traverseraient (45 % : le filet passait dans le « 4 » ; 48 % :
+        # il la touchait) se pose juste à droite du filet (11/11/2026 ; largeur estimée, 0,57 em par signe en gras)
+        xl = X0 + w + 6
+        if xl - 4 < xm < xl + 0.57 * FS_MIN * len(lab) + 3:
+            xl = xm + 5
+        e.append(txt(xl, y + 14, lab, FS_MIN, INK if ad else INK2, "start", "600", "val"))
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (xm, top, xm, y + 22, GRIS))
     y += 46
     e.append('<rect x="0" y="%d" width="14" height="14" fill="%s"/>' % (y - 12, BLEU))

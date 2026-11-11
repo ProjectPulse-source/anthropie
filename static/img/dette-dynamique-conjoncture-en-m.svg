@@ -6,11 +6,11 @@
 <rect x="201.0" y="80" width="46.2" height="190" fill="#f1efec"/>
 <rect x="265.7" y="80" width="32.3" height="190" fill="#f1efec"/>
 <line x1="30" y1="270.0" x2="298" y2="270.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="274.0" font-size="13.5" fill="#96928f" text-anchor="end">−8</text>
+<text x="26" y="274.0" font-size="13.5" fill="#6f6c66" text-anchor="end">−8</text>
 <line x1="30" y1="194.0" x2="298" y2="194.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="198.0" font-size="13.5" fill="#96928f" text-anchor="end">−4</text>
+<text x="26" y="198.0" font-size="13.5" fill="#6f6c66" text-anchor="end">−4</text>
 <line x1="30" y1="118.0" x2="298" y2="118.0" stroke="#dcd8d3" stroke-width="1.4"/>
-<text x="26" y="122.0" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
+<text x="26" y="122.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <text x="67.0" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2000</text>
 <text x="159.4" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2010</text>
 <text x="251.8" y="288" font-size="13.5" fill="#55524f" text-anchor="middle">2020</text>
@@ -42,6 +42,6 @@
 <text x="0" y="662.0" font-size="13.5" fill="#55524f">IMF does not. Estimates of potential</text>
 <text x="0" y="679.0" font-size="13.5" fill="#55524f">output, not measurements; grey bands:</text>
 <text x="0" y="696.0" font-size="13.5" fill="#55524f">2015-2019 and 2022-2025.</text>
-<text x="0" y="717.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="734.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="717.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="734.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

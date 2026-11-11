@@ -4,21 +4,21 @@
 <text x="0" y="22" font-size="13" font-weight="600" fill="#0A0A0E">Interest due compared with a few large functions of spending</text>
 <text x="0" y="40" font-size="11" fill="#52514e">France · general government · billion euros, current prices</text>
 <line x1="52.0" y1="346.0" x2="524.0" y2="346.0" stroke="#c3c2b7" stroke-width="1"/>
-<text x="45.0" y="350.0" font-size="11" fill="#898781" text-anchor="end">0</text>
+<text x="45.0" y="350.0" font-size="11" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="52.0" y1="294.6" x2="524.0" y2="294.6" stroke="#e1e0d9" stroke-width="1"/>
-<text x="45.0" y="298.6" font-size="11" fill="#898781" text-anchor="end">50</text>
+<text x="45.0" y="298.6" font-size="11" fill="#6f6c66" text-anchor="end">50</text>
 <line x1="52.0" y1="243.2" x2="524.0" y2="243.2" stroke="#e1e0d9" stroke-width="1"/>
-<text x="45.0" y="247.2" font-size="11" fill="#898781" text-anchor="end">100</text>
+<text x="45.0" y="247.2" font-size="11" fill="#6f6c66" text-anchor="end">100</text>
 <line x1="52.0" y1="191.8" x2="524.0" y2="191.8" stroke="#e1e0d9" stroke-width="1"/>
-<text x="45.0" y="195.8" font-size="11" fill="#898781" text-anchor="end">150</text>
+<text x="45.0" y="195.8" font-size="11" fill="#6f6c66" text-anchor="end">150</text>
 <line x1="52.0" y1="140.4" x2="524.0" y2="140.4" stroke="#e1e0d9" stroke-width="1"/>
-<text x="45.0" y="144.4" font-size="11" fill="#898781" text-anchor="end">200</text>
+<text x="45.0" y="144.4" font-size="11" fill="#6f6c66" text-anchor="end">200</text>
 <line x1="52.0" y1="89.0" x2="524.0" y2="89.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="45.0" y="93.0" font-size="11" fill="#898781" text-anchor="end">250</text>
-<text x="133.4" y="364.0" font-size="11" fill="#898781" text-anchor="middle">2000</text>
-<text x="296.1" y="364.0" font-size="11" fill="#898781" text-anchor="middle">2010</text>
-<text x="458.9" y="364.0" font-size="11" fill="#898781" text-anchor="middle">2020</text>
-<text x="524.0" y="364.0" font-size="11" fill="#898781" text-anchor="middle">2024</text>
+<text x="45.0" y="93.0" font-size="11" fill="#6f6c66" text-anchor="end">250</text>
+<text x="133.4" y="364.0" font-size="11" fill="#6f6c66" text-anchor="middle">2000</text>
+<text x="296.1" y="364.0" font-size="11" fill="#6f6c66" text-anchor="middle">2010</text>
+<text x="458.9" y="364.0" font-size="11" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="524.0" y="364.0" font-size="11" fill="#6f6c66" text-anchor="middle">2024</text>
 <path d="M52.0,259.4 L68.3,255.0 L84.6,255.2 L100.8,251.6 L117.1,248.0 L133.4,241.4 L149.7,235.9 L165.9,227.7 L182.2,220.0 L198.5,213.0 L214.8,204.7 L231.0,199.9 L247.3,194.7 L263.6,191.1 L279.9,184.2 L296.1,178.9 L312.4,173.8 L328.7,170.7 L345.0,166.7 L361.2,161.4 L377.5,160.0 L393.8,156.2 L410.1,150.6 L426.3,147.0 L442.6,142.3 L458.9,132.1 L475.2,104.7 L491.4,98.4 L507.7,89.3 L524.0,77.5" fill="none" stroke="#52514e" stroke-width="1.6" stroke-linejoin="round"/>
 <path d="M52.0,273.7 L68.3,272.0 L84.6,271.3 L100.8,269.2 L117.1,265.0 L133.4,261.7 L149.7,258.0 L165.9,252.9 L182.2,250.4 L198.5,250.1 L214.8,247.0 L231.0,243.3 L247.3,241.6 L263.6,237.3 L279.9,233.9 L296.1,232.5 L312.4,232.9 L328.7,231.8 L345.0,230.2 L361.2,228.5 L377.5,226.9 L393.8,227.4 L410.1,224.0 L426.3,222.1 L442.6,220.1 L458.9,222.5 L475.2,215.3 L491.4,208.2 L507.7,200.5 L524.0,193.2" fill="none" stroke="#898781" stroke-width="1.6" stroke-linejoin="round"/>
 <path d="M52.0,327.4 L68.3,326.9 L84.6,327.3 L100.8,326.8 L117.1,325.9 L133.4,325.2 L149.7,322.8 L165.9,320.8 L182.2,319.6 L198.5,319.1 L214.8,318.4 L231.0,317.8 L247.3,316.7 L263.6,314.2 L279.9,312.8 L296.1,311.6 L312.4,311.3 L328.7,311.0 L345.0,310.5 L361.2,310.0 L377.5,309.2 L393.8,308.3 L410.1,307.1 L426.3,306.3 L442.6,304.7 L458.9,303.6 L475.2,302.0 L491.4,299.2 L507.7,295.9 L524.0,292.4" fill="none" stroke="#a5a39a" stroke-width="1.6" stroke-linejoin="round"/>
@@ -27,22 +27,22 @@
 <circle cx="458.9" cy="315.5" r="3.2" fill="#eb6834"/>
 <text x="458.9" y="332.5" font-size="11" fill="#eb6834" text-anchor="middle">29.7 — 2020</text>
 <text x="536.0" y="78.5" font-size="11" fill="#52514e"><tspan font-weight="600">Health</tspan> 261</text>
-<text x="536.0" y="91.5" font-size="10" fill="#898781">hospital 109 · outpatient 92</text>
-<text x="536.0" y="104.5" font-size="10" fill="#898781">medical products 44 · other 16</text>
-<text x="536.0" y="117.5" font-size="10" fill="#898781">+26% since 2020</text>
-<text x="536.0" y="194.2" font-size="11" fill="#898781"><tspan font-weight="600">Education</tspan> 149</text>
-<text x="536.0" y="207.2" font-size="10" fill="#898781">secondary 64 · primary 42</text>
-<text x="536.0" y="220.2" font-size="10" fill="#898781">tertiary 12 · ancillary 20</text>
-<text x="536.0" y="233.2" font-size="10" fill="#898781">other 10</text>
-<text x="536.0" y="246.2" font-size="10" fill="#898781">+24% since 2020</text>
+<text x="536.0" y="91.5" font-size="11" fill="#6f6c66">hospital 109 · outpatient 92</text>
+<text x="536.0" y="104.5" font-size="11" fill="#6f6c66">medical products 44 · other 16</text>
+<text x="536.0" y="117.5" font-size="11" fill="#6f6c66">+26% since 2020</text>
+<text x="536.0" y="194.2" font-size="11" fill="#6f6c66"><tspan font-weight="600">Education</tspan> 149</text>
+<text x="536.0" y="207.2" font-size="11" fill="#6f6c66">secondary 64 · primary 42</text>
+<text x="536.0" y="220.2" font-size="11" fill="#6f6c66">tertiary 12 · ancillary 20</text>
+<text x="536.0" y="233.2" font-size="11" fill="#6f6c66">other 10</text>
+<text x="536.0" y="246.2" font-size="11" fill="#6f6c66">+24% since 2020</text>
 <text x="536.0" y="285.2" font-size="12" fill="#eb6834"><tspan font-weight="700">Interest due</tspan> 60</text>
-<text x="536.0" y="298.2" font-size="10" fill="#898781">+102% since 2020</text>
-<text x="536.0" y="317.2" font-size="11" fill="#a5a39a"><tspan font-weight="600">Public order and safety</tspan> 52</text>
-<text x="536.0" y="330.2" font-size="10" fill="#898781">+26% since 2020</text>
+<text x="536.0" y="298.2" font-size="11" fill="#6f6c66">+102% since 2020</text>
+<text x="536.0" y="317.2" font-size="11" fill="#6f6c66"><tspan font-weight="600">Public order and safety</tspan> 52</text>
+<text x="536.0" y="330.2" font-size="11" fill="#6f6c66">+26% since 2020</text>
 <line x1="0" y1="384.0" x2="720" y2="384.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="399.0" font-size="11" fill="#52514e">Eurostat: interest due (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG),</text>
 <text class="pied-source" x="0" y="413.0" font-size="11" fill="#52514e">1995-2024</text>
 <text class="pied-note" x="0" y="427.0" font-size="11" fill="#52514e">Interest is a type of spending, the other three are functions: not the same breakdown, and no transfer from one to the</text>
 <text class="pied-note" x="0" y="441.0" font-size="11" fill="#52514e">other is established.</text>
-<text class="pied-licence" x="0" y="455.0" font-size="11" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
+<text class="pied-licence" x="0" y="455.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/cost-of-french-public-debt/</text>
 </svg>

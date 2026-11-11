@@ -33,7 +33,7 @@
 <text x="221.7" y="499" font-size="13.5" font-weight="600" fill="#26262f">3,3</text>
 <rect x="0.0" y="505" width="3.7" height="16" fill="#8a8781"/>
 <text x="8.7" y="518" font-size="13.5" font-weight="600" fill="#26262f">0,1</text>
-<text x="0" y="538" font-size="13.5" fill="#96928f">points de PIB</text>
+<text x="0" y="538" font-size="13.5" fill="#6f6c66">points de PIB</text>
 <line x1="0" y1="552.0" x2="300" y2="552.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="573.0" font-size="13.5" fill="#55524f">Commission européenne, Debt</text>
 <text class="pied-source" x="0" y="590.0" font-size="13.5" fill="#55524f">Sustainability Monitor 2025, France</text>
@@ -47,7 +47,7 @@
 <text class="pied-note" x="0" y="730.0" font-size="13.5" fill="#55524f">aux hypothèses de la Commission</text>
 <text class="pied-note" x="0" y="747.0" font-size="13.5" fill="#55524f">(Ageing Report 2024, réforme des</text>
 <text class="pied-note" x="0" y="764.0" font-size="13.5" fill="#55524f">retraites de 2023 appliquée).</text>
-<text class="pied-licence" x="0" y="785.0" font-size="13.5" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="802.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
-<text class="pied-licence" x="0" y="819.0" font-size="13.5" fill="#96928f">/dette-publique-generations-futures/</text>
+<text class="pied-licence" x="0" y="785.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="802.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="819.0" font-size="13.5" fill="#6f6c66">/dette-publique-generations-futures/</text>
 </svg>

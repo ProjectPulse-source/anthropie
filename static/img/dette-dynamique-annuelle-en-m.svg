@@ -5,13 +5,13 @@
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">debt-to-GDP ratio up or held</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">it back</text>
 <line x1="30" y1="322.0" x2="298" y2="322.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="326.0" font-size="13.5" fill="#96928f" text-anchor="end">−8</text>
+<text x="26" y="326.0" font-size="13.5" fill="#6f6c66" text-anchor="end">−8</text>
 <line x1="30" y1="262.0" x2="298" y2="262.0" stroke="#dcd8d3" stroke-width="1.4"/>
-<text x="26" y="266.0" font-size="13.5" fill="#96928f" text-anchor="end">+0</text>
+<text x="26" y="266.0" font-size="13.5" fill="#6f6c66" text-anchor="end">+0</text>
 <line x1="30" y1="202.0" x2="298" y2="202.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="206.0" font-size="13.5" fill="#96928f" text-anchor="end">+8</text>
+<text x="26" y="206.0" font-size="13.5" fill="#6f6c66" text-anchor="end">+8</text>
 <line x1="30" y1="142.0" x2="298" y2="142.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="26" y="146.0" font-size="13.5" fill="#96928f" text-anchor="end">+16</text>
+<text x="26" y="146.0" font-size="13.5" fill="#6f6c66" text-anchor="end">+16</text>
 <rect x="31.3" y="259.9" width="6.4" height="2.1" fill="#eb6834"/>
 <rect x="31.3" y="244.3" width="6.4" height="15.6" fill="#184f95"/>
 <rect x="31.3" y="241.1" width="6.4" height="3.2" fill="#c9c5c0"/>
@@ -143,8 +143,8 @@
 <text x="22" y="418" font-size="13.5" fill="#55524f">stock-flow adjustments</text>
 <circle cx="7" cy="435" r="4" fill="#26262f"/>
 <text x="22" y="440" font-size="13.5" fill="#55524f">change in the ratio</text>
-<text x="0" y="474" font-size="15" font-weight="600" fill="#26262f">2009: +14.2 points</text>
-<text x="0" y="496" font-size="15" font-weight="600" fill="#26262f">2020: +16.7 points</text>
+<text x="0" y="474" font-size="15" font-weight="600" fill="#26262f">2009: +14.2 points</text>
+<text x="0" y="496" font-size="15" font-weight="600" fill="#26262f">2020: +16.7 points</text>
 <text x="0" y="518" font-size="15" font-weight="600" fill="#26262f">2021-2023: interest-growth</text>
 <text x="0" y="537" font-size="15" font-weight="600" fill="#26262f">effect −16.8</text>
 <line x1="0" y1="555.0" x2="300" y2="555.0" stroke="#dcd8d3"/>
@@ -156,6 +156,6 @@
 <text x="0" y="665.0" font-size="13.5" fill="#55524f">surplus as minus; the three bars add</text>
 <text x="0" y="682.0" font-size="13.5" fill="#55524f">up to the change (black dot), to</text>
 <text x="0" y="699.0" font-size="13.5" fill="#55524f">within a hundredth.</text>
-<text x="0" y="720.0" font-size="13.5" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="737.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text x="0" y="720.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="737.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

@@ -58,7 +58,7 @@
 <text x="30.0" y="570.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8703f">(2029)</text>
 <text x="300.0" y="552.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#b8703f">115.8%</text>
 <text x="30.0" y="596.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">Commission, unchanged</text>
-<text x="30.0" y="614.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">policy (2035, off the</text>
+<text x="30.0" y="614.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">policy (2035, off the</text>
 <text x="30.0" y="632.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">chart)</text>
 <text x="300.0" y="596.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#184f95">140.8%</text>
 <line x1="0" y1="662.0" x2="300" y2="662.0" stroke="#d8d6d0"/>
@@ -70,8 +70,8 @@
 <text class="pied-note" x="0" y="772.0" font-size="13.5" fill="#52514e">forecasts. Bands, from lightest to</text>
 <text class="pied-note" x="0" y="789.0" font-size="13.5" fill="#52514e">darkest: 10th to 90th, 20th to 80th</text>
 <text class="pied-note" x="0" y="806.0" font-size="13.5" fill="#52514e">and 40th to 60th percentiles of the</text>
-<text class="pied-note" x="0" y="823.0" font-size="13.5" fill="#52514e">paths simulated by the Commission (8,</text>
-<text class="pied-note" x="0" y="840.0" font-size="13.5" fill="#52514e">6 and 2 in 10). Starting points in</text>
+<text class="pied-note" x="0" y="823.0" font-size="13.5" fill="#52514e">paths simulated by the Commission</text>
+<text class="pied-note" x="0" y="840.0" font-size="13.5" fill="#52514e">(8, 6 and 2 in 10). Starting points in</text>
 <text class="pied-note" x="0" y="857.0" font-size="13.5" fill="#52514e">2025: Commission 116.3%, 2027 draft</text>
 <text class="pied-note" x="0" y="874.0" font-size="13.5" fill="#52514e">budget 115.7%, 2024 commitment 114.7%;</text>
 <text class="pied-note" x="0" y="891.0" font-size="13.5" fill="#52514e">the commitment gives no figure for</text>

@@ -3,25 +3,25 @@
 <rect width="720" height="403" fill="#ffffff"/>
 <text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Dette des administrations territoriales et part détenue par l’État central, en % du PIB</text>
 <line x1="0" y1="36" x2="18" y2="36" stroke="#184f95" stroke-width="2.4"/>
-<text x="24.0" y="40.0" font-size="10" fill="#52514e" text-anchor="start">dette des administrations territoriales</text>
+<text x="24.0" y="40.0" font-size="11" fill="#52514e" text-anchor="start">dette des administrations territoriales</text>
 <line x1="0" y1="52" x2="18" y2="52" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
-<text x="24.0" y="56.0" font-size="10" fill="#52514e" text-anchor="start">dont détenue par l’État central (publiée depuis 2020 pour l’Espagne, la France et l’Italie)</text>
+<text x="24.0" y="56.0" font-size="11" fill="#52514e" text-anchor="start">dont détenue par l’État central (publiée depuis 2020 pour l’Espagne, la France et l’Italie)</text>
 <text x="46.0" y="86.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">France</text>
 <line x1="46" y1="266.0" x2="196" y2="266.0" stroke="#e1e0d9"/>
-<text x="40.0" y="270.0" font-size="11" fill="#898781" text-anchor="end">0 %</text>
+<text x="40.0" y="270.0" font-size="11" fill="#6f6c66" text-anchor="end">0 %</text>
 <line x1="46" y1="209.3" x2="196" y2="209.3" stroke="#e1e0d9"/>
-<text x="40.0" y="213.3" font-size="11" fill="#898781" text-anchor="end">10 %</text>
+<text x="40.0" y="213.3" font-size="11" fill="#6f6c66" text-anchor="end">10 %</text>
 <line x1="46" y1="152.7" x2="196" y2="152.7" stroke="#e1e0d9"/>
-<text x="40.0" y="156.7" font-size="11" fill="#898781" text-anchor="end">20 %</text>
+<text x="40.0" y="156.7" font-size="11" fill="#6f6c66" text-anchor="end">20 %</text>
 <line x1="46" y1="96.0" x2="196" y2="96.0" stroke="#e1e0d9"/>
-<text x="40.0" y="100.0" font-size="11" fill="#898781" text-anchor="end">30 %</text>
+<text x="40.0" y="100.0" font-size="11" fill="#6f6c66" text-anchor="end">30 %</text>
 <polyline points="166.0,265.4 172.0,265.4 178.0,265.4 184.0,265.4 190.0,265.4 196.0,265.4" fill="none" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
 <polyline points="46.0,225.2 52.0,226.9 58.0,228.0 64.0,228.0 70.0,228.0 76.0,227.5 82.0,226.9 88.0,225.8 94.0,224.1 100.0,220.1 106.0,219.5 112.0,219.5 118.0,218.4 124.0,217.3 130.0,216.7 136.0,215.6 142.0,215.6 148.0,216.7 154.0,216.7 160.0,217.3 166.0,209.9 172.0,210.5 178.0,213.3 184.0,215.6 190.0,215.0 196.0,213.3" fill="none" stroke="#184f95" stroke-width="2.4"/>
-<text x="46.0" y="218.2" font-size="10" fill="#52514e" text-anchor="start">7,2</text>
-<text x="196.0" y="206.3" font-size="10" fill="#0A0A0E" text-anchor="end" font-weight="600">9,3</text>
-<text x="46.0" y="281.0" font-size="11" fill="#898781" text-anchor="start">2000</text>
-<text x="196.0" y="281.0" font-size="11" fill="#898781" text-anchor="end">2025</text>
-<text x="46.0" y="300.0" font-size="10" fill="#52514e" text-anchor="start">dont État central, 2025</text>
+<text x="46.0" y="218.2" font-size="11" fill="#52514e" text-anchor="start">7,2</text>
+<text x="196.0" y="205.1" font-size="11" fill="#0A0A0E" text-anchor="end" font-weight="600">9,3</text>
+<text x="46.0" y="281.0" font-size="11" fill="#6f6c66" text-anchor="start">2000</text>
+<text x="196.0" y="281.0" font-size="11" fill="#6f6c66" text-anchor="end">2025</text>
+<text x="46.0" y="300.0" font-size="11" fill="#52514e" text-anchor="start">dont État central, 2025</text>
 <text x="46.0" y="315.0" font-size="11" fill="#52514e" text-anchor="start" font-weight="600">0,1 point</text>
 <text x="218.0" y="86.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Allemagne</text>
 <line x1="218" y1="266.0" x2="368" y2="266.0" stroke="#e1e0d9"/>
@@ -30,11 +30,11 @@
 <line x1="218" y1="96.0" x2="368" y2="96.0" stroke="#e1e0d9"/>
 <polyline points="218.0,262.6 224.0,262.6 230.0,262.6 236.0,263.2 242.0,263.2 248.0,263.2 254.0,263.7 260.0,263.7 266.0,263.7 272.0,263.7 278.0,263.7 284.0,263.7 290.0,263.7 296.0,264.3 302.0,263.7 308.0,263.7 314.0,264.3 320.0,264.3 326.0,264.3 332.0,264.3 338.0,264.9 344.0,264.9 350.0,264.9 356.0,264.9 362.0,264.9 368.0,264.9" fill="none" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
 <polyline points="218.0,143.0 224.0,139.1 230.0,132.8 236.0,124.3 242.0,119.8 248.0,115.3 254.0,118.1 260.0,124.3 266.0,119.2 272.0,102.2 278.0,95.4 284.0,98.3 290.0,94.3 296.0,101.7 302.0,108.5 308.0,114.1 314.0,122.1 320.0,133.4 326.0,140.2 332.0,142.5 338.0,130.6 344.0,138.5 350.0,151.5 356.0,159.5 362.0,157.8 368.0,154.9" fill="none" stroke="#184f95" stroke-width="2.4"/>
-<text x="218.0" y="117.3" font-size="10" fill="#52514e" text-anchor="start">21,7</text>
-<text x="368.0" y="144.5" font-size="10" fill="#0A0A0E" text-anchor="end" font-weight="600">19,6</text>
-<text x="218.0" y="281.0" font-size="11" fill="#898781" text-anchor="start">2000</text>
-<text x="368.0" y="281.0" font-size="11" fill="#898781" text-anchor="end">2025</text>
-<text x="218.0" y="300.0" font-size="10" fill="#52514e" text-anchor="start">dont État central, 2025</text>
+<text x="218.0" y="163.6" font-size="11" fill="#52514e" text-anchor="start">21,7</text>
+<text x="368.0" y="174.2" font-size="11" fill="#0A0A0E" text-anchor="end" font-weight="600">19,6</text>
+<text x="218.0" y="281.0" font-size="11" fill="#6f6c66" text-anchor="start">2000</text>
+<text x="368.0" y="281.0" font-size="11" fill="#6f6c66" text-anchor="end">2025</text>
+<text x="218.0" y="300.0" font-size="11" fill="#52514e" text-anchor="start">dont État central, 2025</text>
 <text x="218.0" y="315.0" font-size="11" fill="#52514e" text-anchor="start" font-weight="600">0,2 point</text>
 <text x="390.0" y="86.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Italie</text>
 <line x1="390" y1="266.0" x2="540" y2="266.0" stroke="#e1e0d9"/>
@@ -43,11 +43,11 @@
 <line x1="390" y1="96.0" x2="540" y2="96.0" stroke="#e1e0d9"/>
 <polyline points="510.0,253.0 516.0,256.4 522.0,258.1 528.0,258.6 534.0,259.2 540.0,259.2" fill="none" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
 <polyline points="390.0,236.0 396.0,234.8 402.0,232.0 408.0,230.9 414.0,228.6 420.0,225.2 426.0,222.4 432.0,222.4 438.0,221.8 444.0,218.4 450.0,219.5 456.0,220.1 462.0,220.7 468.0,217.3 474.0,216.1 480.0,218.4 486.0,221.2 492.0,223.5 498.0,225.2 504.0,226.9 510.0,224.1 516.0,228.6 522.0,232.6 528.0,236.0 534.0,237.7 540.0,239.4" fill="none" stroke="#184f95" stroke-width="2.4"/>
-<text x="390.0" y="223.9" font-size="10" fill="#52514e" text-anchor="start">5,3</text>
-<text x="540.0" y="225.6" font-size="10" fill="#0A0A0E" text-anchor="end" font-weight="600">4,7</text>
-<text x="390.0" y="281.0" font-size="11" fill="#898781" text-anchor="start">2000</text>
-<text x="540.0" y="281.0" font-size="11" fill="#898781" text-anchor="end">2025</text>
-<text x="390.0" y="300.0" font-size="10" fill="#52514e" text-anchor="start">dont État central, 2025</text>
+<text x="390.0" y="223.2" font-size="11" fill="#52514e" text-anchor="start">5,3</text>
+<text x="540.0" y="223.9" font-size="11" fill="#0A0A0E" text-anchor="end" font-weight="600">4,7</text>
+<text x="390.0" y="281.0" font-size="11" fill="#6f6c66" text-anchor="start">2000</text>
+<text x="540.0" y="281.0" font-size="11" fill="#6f6c66" text-anchor="end">2025</text>
+<text x="390.0" y="300.0" font-size="11" fill="#52514e" text-anchor="start">dont État central, 2025</text>
 <text x="390.0" y="315.0" font-size="11" fill="#52514e" text-anchor="start" font-weight="600">1,2 point</text>
 <text x="562.0" y="86.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Espagne</text>
 <line x1="562" y1="266.0" x2="712" y2="266.0" stroke="#e1e0d9"/>
@@ -56,15 +56,15 @@
 <line x1="562" y1="96.0" x2="712" y2="96.0" stroke="#e1e0d9"/>
 <polyline points="682.0,172.5 688.0,180.4 694.0,186.1 700.0,188.4 706.0,188.4 712.0,194.6" fill="none" stroke="#8a8f98" stroke-width="2.2" stroke-dasharray="4 3"/>
 <polyline points="562.0,213.9 568.0,214.4 574.0,214.4 580.0,215.0 586.0,215.6 592.0,215.0 598.0,217.3 604.0,217.8 610.0,211.6 616.0,198.6 622.0,182.1 628.0,169.1 634.0,138.5 640.0,126.6 646.0,115.3 652.0,110.7 658.0,109.6 664.0,112.4 670.0,117.0 676.0,122.1 682.0,102.8 688.0,112.4 694.0,126.0 700.0,134.0 706.0,139.1 712.0,144.7" fill="none" stroke="#184f95" stroke-width="2.4"/>
-<text x="562.0" y="206.9" font-size="10" fill="#52514e" text-anchor="start">9,2</text>
-<text x="712.0" y="119.0" font-size="10" fill="#0A0A0E" text-anchor="end" font-weight="600">21,4</text>
-<text x="562.0" y="281.0" font-size="11" fill="#898781" text-anchor="start">2000</text>
-<text x="712.0" y="281.0" font-size="11" fill="#898781" text-anchor="end">2025</text>
-<text x="562.0" y="300.0" font-size="10" fill="#52514e" text-anchor="start">dont État central, 2025</text>
+<text x="562.0" y="206.9" font-size="11" fill="#52514e" text-anchor="start">9,2</text>
+<text x="712.0" y="163.6" font-size="11" fill="#0A0A0E" text-anchor="end" font-weight="600">21,4</text>
+<text x="562.0" y="281.0" font-size="11" fill="#6f6c66" text-anchor="start">2000</text>
+<text x="712.0" y="281.0" font-size="11" fill="#6f6c66" text-anchor="end">2025</text>
+<text x="562.0" y="300.0" font-size="11" fill="#52514e" text-anchor="start">dont État central, 2025</text>
 <text x="562.0" y="315.0" font-size="11" fill="#52514e" text-anchor="start" font-weight="600">12,6 points</text>
 <line x1="0" y1="338.0" x2="720" y2="338.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="353.0" font-size="11" fill="#52514e">Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (secteur détenteur S1311), S1312 + S1313, en % du PIB. Données</text>
-<text class="pied-source" x="0" y="367.0" font-size="11" fill="#52514e">relevées le 10 novembre 2026.</text>
+<text class="pied-source" x="0" y="367.0" font-size="11" fill="#52514e">relevées le 10 novembre 2026.</text>
 <text class="pied-note" x="0" y="381.0" font-size="11" fill="#52514e">Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312).</text>
-<text class="pied-licence" x="0" y="395.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-collectivites-locales/</text>
+<text class="pied-licence" x="0" y="395.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-collectivites-locales/</text>
 </svg>

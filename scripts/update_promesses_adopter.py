@@ -706,7 +706,8 @@ def tableaux(r: dict, lang: str) -> dict:
 W = 720
 WM, FS_MIN = 300, 13.5
 BLEU, BLEU_CLAIR, GRIS, GRIS_CLAIR = "#184f95", "#7fa3cf", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
+INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", pied_figure.ENCRE_ATTENUEE, "#e1e0d9"   # MUTED : texte seulement
+FS_D = pied_figure.POLICE_MIN      # plus petite police des figures détaillées (720 de large) ; elle règle aussi le pas des légendes
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 LICENCES_M = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
@@ -869,11 +870,11 @@ def fig_origine(r: dict, A: dict) -> str:
     x = 0
     for col, lab in zip((BLEU, BLEU_CLAIR, GRIS_CLAIR), L["l1"]):
         e.append('<rect x="%d" y="%d" width="11" height="11" fill="%s"/>' % (x, 49, col))
-        e.append(txt(x + 16, 58, lab, 10, INK2))
-        x += 16 + 5.6 * len(lab) + 16
+        e.append(txt(x + 16, 58, lab, FS_D, INK2))
+        x += 16 + 0.56 * FS_D * len(lab) + 16
     for i, (l, xx) in enumerate(r["leg"].items()):
         y = y0 + i * pas
-        e.append(txt(0, y + 15, lib_leg(l), 10, INK))
+        e.append(txt(0, y + 15, lib_leg(l), FS_D, INK))
         a = 0
         for v, col in ((xx["AN"], BLEU), (xx["SEN"], BLEU_CLAIR), (xx["gouv"], GRIS_CLAIR)):
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="22" fill="%s"/>' % (X(a / xx["N"]), y, X((a + v) / xx["N"]) - X(a / xx["N"]), col))
@@ -881,16 +882,16 @@ def fig_origine(r: dict, A: dict) -> str:
         if xx["Pmin"] != xx["P"]:
             e.append(triangle(X(xx["Pmin"] / xx["N"]), y + 23))
         e.append(txt(x1 + 8, y + 10, pc(pct(xx["P"], xx["N"])) + ("" if xx["Pmin"] == xx["P"] else " " + L["au_moins"].format(pc(pct(xx["Pmin"], xx["N"])))),
-                     10.5, INK, weight="600"))
-        e.append(txt(x1 + 8, y + 24, L["toutes"].format(pc(pct(xx["Ptot"], xx["Ntot"]))), 10, INK2))
+                     FS_D, INK, weight="600"))
+        e.append(txt(x1 + 8, y + 24, L["toutes"].format(pc(pct(xx["Ptot"], xx["Ntot"]))), FS_D, INK2))
     ybas = y0 + 4 * pas - 18
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.5" stroke-dasharray="4 3"/>'
              % (X(0.5), y0 - 8, X(0.5), ybas, INK))
     for v in (0, 0.5, 1):
-        e.append(txt(X(v), ybas + 12, pc(100 * v), 9, MUTED, "middle"))
+        e.append(txt(X(v), ybas + 12, pc(100 * v), FS_D, MUTED, "middle"))
     e.append(triangle(6, ybas + 22, 5))
-    e.append(txt(16, ybas + 31, L["bb"], 9.5, INK2))
-    e.append(txt(x1 + 8, ybas + 31, L["encours"], 9.5, INK2))
+    e.append(txt(16, ybas + 31, L["bb"], FS_D, INK2))
+    e.append(txt(x1 + 8, ybas + 31, L["encours"], FS_D, INK2))
     return pied(e, H + 2, L["src1"], L["note1"].format(champ=A["champ"]))
 
 
@@ -904,23 +905,25 @@ def fig_493(r: dict, A: dict) -> str:
     x = 0
     for col, lab in zip((BLEU, GRIS_CLAIR), L["l2"]):
         e.append('<rect x="%d" y="%d" width="11" height="11" fill="%s"/>' % (x, 49, col))
-        e.append(txt(x + 16, 58, lab, 10, INK2))
-        x += 16 + 5.6 * len(lab) + 16
+        e.append(txt(x + 16, 58, lab, FS_D, INK2))
+        x += 16 + 0.56 * FS_D * len(lab) + 16
     for v in range(0, vmax + 1, 5):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(v), y0 - 4, X(v), y0 + pas * 4 - 10, GRID))
-        e.append(txt(X(v), y0 + pas * 4 + 2, str(v), 9, MUTED, "middle"))
+        e.append(txt(X(v), y0 + pas * 4 + 5, str(v), FS_D, MUTED, "middle"))
     for i, (l, x) in enumerate(r["eng"].items()):
         y = y0 + i * pas
-        e.append(txt(0, y + 13, lib_leg(l), 10, INK))
+        e.append(txt(0, y + 13, lib_leg(l), FS_D, INK))
         a = 0
         for v, col in ((x["fin"], BLEU), (x["n"] - x["fin"], GRIS_CLAIR)):
             if v:
                 e.append('<rect x="%.1f" y="%d" width="%.1f" height="18" fill="%s"/>' % (X(a), y, X(a + v) - X(a), col))
             a += v
-        e.append(txt(X(a) + 4, y + 13, nb(x["n"]), 10, INK, weight="600"))
+        e.append(txt(X(a) + 4, y + 13, nb(x["n"]), FS_D, INK, weight="600"))
         for k, ligne in enumerate(coupe(" · ".join(lignes_493(l, x)), 104)):
-            e.append(txt(x0, y + 31 + 12 * k, ligne, 9.5, INK2))
-    e.append(txt(0, y0 + pas * 4 + 16, L["encours"], 9, INK2))
+            # 11 px : interligne 14 (12 à 9,5 px) ; le bloc remonte d'un pixel et la graduation descend de trois, pour
+            # que le « 0 » de l'axe ne se lise pas comme une troisième ligne du texte de la dernière barre
+            e.append(txt(x0, y + 30 + 14 * k, ligne, FS_D, INK2))
+    e.append(txt(0, y0 + pas * 4 + 18, L["encours"], FS_D, INK2))
     return pied(e, H + 2, L["src2"], L["note2"])
 
 

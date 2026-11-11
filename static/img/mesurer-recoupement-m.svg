@@ -3,7 +3,7 @@
 <rect width="300" height="555" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Chômeurs au sens du BIT et</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">inscrits en catégorie A, 2024</text>
-<text x="0.0" y="72.0" font-size="13.5" fill="#898781" text-anchor="start">En milliers de personnes, moyenne 2024</text>
+<text x="0.0" y="72.0" font-size="13.5" fill="#6f6c66" text-anchor="start">En milliers de personnes, moyenne 2024</text>
 <text x="0.0" y="106.0" font-size="13.5" fill="#52514e" text-anchor="start">Chômeurs BIT non inscrits en A</text>
 <rect x="0" y="114" width="129.5" height="22" fill="#c9cdd3"/>
 <text x="135.5" y="130.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">863</text>
@@ -27,6 +27,6 @@
 <text class="pied-note" x="0" y="473.0" font-size="13.5" fill="#52514e">logement ordinaire ; deux définitions</text>
 <text class="pied-note" x="0" y="490.0" font-size="13.5" fill="#52514e">distinctes ; marge d'enquête non</text>
 <text class="pied-note" x="0" y="507.0" font-size="13.5" fill="#52514e">publiée.</text>
-<text class="pied-licence" x="0" y="528.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="545.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="528.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="545.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

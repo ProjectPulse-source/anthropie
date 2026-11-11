@@ -40,6 +40,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import generer_parcours_licence as gl  # noqa: E402
 import langue_generee as lg  # noqa: E402  -- comparaisons publiées à la précision affichée (organe commun)
+import pied_figure  # noqa: E402  -- police minimale d'une figure détaillée (organe commun)
 import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -65,7 +66,9 @@ if not _AUTRES:
     sys.exit(1)
 TEMOIN = _AUTRES[0]
 FICHE_BAC = _SRC["fiches_bac"][str(ANNEE)]
-ORIGINES = [("ind", "Agriculteurs, artisans, commerçants, chefs d'entreprise", ("Agriculteurs, artisans,", "commerçants, chefs d'entreprise")),
+# Troisième champ : l'intitulé coupé pour la figure détaillée. Le premier tient sur trois lignes depuis le 11/11/2026 :
+# à 11 px, « commerçants, chefs d'entreprise » (172 px) prenait aux barres la largeur dont « 3,8 » a besoin dans son segment.
+ORIGINES = [("ind", "Agriculteurs, artisans, commerçants, chefs d'entreprise", ("Agriculteurs, artisans,", "commerçants,", "chefs d'entreprise")),
             ("cad", "Cadres, professions intellectuelles supérieures", ("Cadres, professions", "intellectuelles supérieures")),
             ("pi", "Professions intermédiaires", ("Professions intermédiaires",)),
             ("emp", "Employés", ("Employés",)),
@@ -216,9 +219,11 @@ def figure(a: dict, A: dict) -> str:
     """Sept barres empilées à 100 % : six origines (ordre de la source), puis l'ensemble des origines renseignées."""
     lignes = [(lib2, a["origines"][cle]) for cle, _, lib2 in ORIGINES] + [(("Ensemble", "(origine renseignée)"), a["ensemble_renseigne"])]
     W = gl.W
-    X0, X1, TOP, HB, PAS = 196, W - 8, 96, 28, 40
-    NB_CART = 6
-    H = TOP + PAS * (len(lignes) - 1) + HB + 14 + 12 * (NB_CART - 3)
+    # X0 : 196 jusqu'au 11/11/2026. À 11 px au lieu de 10, la plus petite valeur (« 3,8 ») demande 20,3 px de segment :
+    # les barres gagnent 40 px sur la colonne des intitulés, dont le plus long tient désormais sur trois lignes.
+    X0, X1, TOP, HB, PAS = 156, W - 8, 96, 28, 40
+    BAS = TOP + PAS * (len(lignes) - 1) + HB              # bas de la dernière barre ; la hauteur est fixée par le pied
+    FS = pied_figure.POLICE_MIN                           # plus petite police de la figure : intitulés, petites valeurs
     titre = "Après le bac : où s'inscrivent les nouveaux bacheliers, selon l'origine sociale"
     o = a["origines"]
     desc = ("Barres empilées à 100 %%, une par catégorie socioprofessionnelle du parent. Nouveaux bacheliers %s inscrits dans "
@@ -226,10 +231,10 @@ def figure(a: dict, A: dict) -> str:
             "en sections de technicien supérieur, %s %% dans d'autres formations ; pour les enfants d'ouvriers, %s %%, %s %%, "
             "%s %% et %s %%. Toutes les valeurs sont dans le tableau qui suit la figure."
             % (A["annee"], A["cad_univ"], A["cad_cpge"], A["cad_sts"], A["cad_autres"], A["ouv_univ"], A["ouv_cpge"], A["ouv_sts"], A["ouv_autres"]))
-    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" font-variant-numeric="tabular-nums" '
-         'aria-labelledby="as-t as-d" font-family="%s">' % (W, H + 52, gl.FONT),
+    e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" font-variant-numeric="tabular-nums" '
+         'aria-labelledby="as-t as-d" font-family="%s">' % (W, gl.FONT),
          '<title id="as-t">%s</title><desc id="as-d">%s</desc>' % (esc(titre), esc(desc)),
-         '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, H + 52),
+         '<rect width="%d" height="0" fill="#ffffff"/>' % W,
          '<text x="0" y="18" font-size="15" font-weight="600" fill="%s">%s</text>' % (gl.INK, esc(titre)),
          '<text x="0" y="38" font-size="11" fill="%s">%s</text>'
          % (gl.INK2, esc("Nouveaux bacheliers %s inscrits dans l'enseignement supérieur, par filière, en %% de chaque catégorie." % A["annee"]))]
@@ -238,8 +243,9 @@ def figure(a: dict, A: dict) -> str:
     # de son segment (vu le 04/10). Chasse des chiffres 0,556 em, virgule 0,278 ; gras +7 %. Trois formes, de la plus
     # lisible à la plus compacte ; chaque valeur reçoit la première qui laisse sa marge, et toutes les valeurs qui
     # ne tiennent pas en grand prennent la MÊME forme, celle de la plus serrée : deux styles au plus dans la figure.
-    # Aucune forme ne tient : arrêt, plutôt qu'un chiffre rogné.
-    FORMES = ((12, True, 4), (10, True, 3), (10, False, 2.5))
+    # Aucune forme ne tient : arrêt, plutôt qu'un chiffre rogné. Les deux petites formes sont à la police minimale de
+    # l'organe commun (10 px jusqu'au 11/11/2026) : la même taille sert au dessin et à la mesure.
+    FORMES = ((12, True, 4), (FS, True, 3), (FS, False, 2.5))
 
     def niveau(val, w):
         em = sum(0.278 if c in ",." else 0.556 for c in val)
@@ -250,16 +256,17 @@ def figure(a: dict, A: dict) -> str:
 
     niveaux = [niveau(fr(d[k]), larg * d[k] / sum(d[q] for q, _ in DEST)) for _, d in lignes for k, _ in DEST]
     petit = max(niveaux)
+    noms = []
     for n, (lib, d) in enumerate(lignes):
         y = TOP + PAS * n
         total = sum(d[k] for k, _ in DEST)
         ens = lib[0] == "Ensemble"
         if ens:
             e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (y - 6, W, y - 6, gl.GRID))
-        y0l = y + HB / 2 + 4 - (6 if len(lib) == 2 else 0)
+        y0l = y + HB / 2 + 4 - 6.5 * (len(lib) - 1)      # une, deux ou trois lignes, centrées sur la barre
         for j, mot in enumerate(lib):
-            e.append('<text x="%d" y="%.1f" font-size="10.5" fill="%s" text-anchor="end"%s>%s</text>'
-                     % (X0 - 10, y0l + 12 * j, gl.INK, ' font-weight="600"' if ens and j == 0 else "", esc(mot)))
+            e.append('<text x="%d" y="%.1f" font-size="%s" fill="%s" text-anchor="end"%s>%s</text>'
+                     % (X0 - 10, y0l + 13 * j, FS, gl.INK, ' font-weight="600"' if ens and j == 0 else "", esc(mot)))
         x = float(X0)
         for k, _ in DEST:
             w = larg * d[k] / total
@@ -270,17 +277,10 @@ def figure(a: dict, A: dict) -> str:
             e.append('<text x="%.1f" y="%.1f" font-size="%s"%s fill="%s" text-anchor="middle">%s</text>'
                      % (x + w / 2, y + HB / 2 + 4, taille, ' font-weight="600"' if gras else "", encre, esc(val)))
             if n == 0:
-                for j, mot in enumerate(LIBELLE[k]):
-                    e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>'
-                             % (x + w / 2, y - 19 + 12 * j, gl.INK2, esc(mot)))
+                noms.append((x + w / 2, LIBELLE[k]))
             x += w
-    y0 = H + 4 - 12 * (NB_CART - 3)
-    e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, W, y0, gl.GRID))
-    cart = cartouche(a, A)
-    for k, (txt, col) in enumerate(cart):
-        e.append('<text x="0" y="%.1f" font-size="9" fill="%s">%s</text>' % (y0 + 13 + 12 * k, col, esc(txt)))
-    e.append("</svg>")
-    return "\n".join(e)
+    gl.noms_au_dessus(e, noms, TOP)                          # nom de chaque filière au-dessus de son segment, première barre
+    return gl.pied_detaille(e, BAS + 18, cartouche(a, A))    # source, notes, licence : pied commun, 11 px, lignes coupées
 
 
 def cartouche(a: dict, A: dict) -> list:

@@ -6,7 +6,7 @@
    "titre": "Même dette, coût différent : 26 pays de l'UE en 2025",
    "montre": "À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à 3,2 ; hors de la zone euro, elle croît plus vite avec la dette.",
    "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale",
-   "precaution": "Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts d'intérêts rapportés aux recettes)."
+   "precaution": "Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts d'intérêts rapportés aux recettes)."
   },
   {
    "id": "prix",
@@ -56,7 +56,7 @@
    "titre": "Same debt, different burden: 26 EU countries in 2025",
    "montre": "With similar debt, the share of revenue spent on interest can differ by a factor of 3.2; outside the euro area, it rises faster with debt.",
    "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025; general government S.13, national currency",
-   "precaution": "Dotted lines: look-alike pairs (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in burden)."
+   "precaution": "Dotted lines: look-alike pairs (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in burden)."
   },
   {
    "id": "prix",

@@ -4,19 +4,19 @@
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">La charge d'intérêts en</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">milliards d'euros, 1995-2025</text>
 <line x1="34" y1="270.0" x2="286" y2="270.0" stroke="#c3c2b7"/>
-<text x="29" y="275.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<text x="29" y="275.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="34" y1="233.7" x2="286" y2="233.7" stroke="#e1e0d9"/>
-<text x="29" y="238.7" font-size="13.5" fill="#898781" text-anchor="end">20</text>
+<text x="29" y="238.7" font-size="13.5" fill="#6f6c66" text-anchor="end">20</text>
 <line x1="34" y1="197.4" x2="286" y2="197.4" stroke="#e1e0d9"/>
-<text x="29" y="202.4" font-size="13.5" fill="#898781" text-anchor="end">40</text>
+<text x="29" y="202.4" font-size="13.5" fill="#6f6c66" text-anchor="end">40</text>
 <line x1="34" y1="161.1" x2="286" y2="161.1" stroke="#e1e0d9"/>
-<text x="29" y="166.1" font-size="13.5" fill="#898781" text-anchor="end">60</text>
+<text x="29" y="166.1" font-size="13.5" fill="#6f6c66" text-anchor="end">60</text>
 <line x1="34" y1="124.8" x2="286" y2="124.8" stroke="#e1e0d9"/>
-<text x="29" y="129.8" font-size="13.5" fill="#898781" text-anchor="end">80</text>
+<text x="29" y="129.8" font-size="13.5" fill="#6f6c66" text-anchor="end">80</text>
 <line x1="34" y1="88.4" x2="286" y2="88.4" stroke="#e1e0d9"/>
-<text x="29" y="93.4" font-size="13.5" fill="#898781" text-anchor="end">100</text>
-<text x="34.0" y="289.0" font-size="13.5" fill="#898781" text-anchor="start">1995</text>
-<text x="286.0" y="289.0" font-size="13.5" fill="#898781" text-anchor="end">2027</text>
+<text x="29" y="93.4" font-size="13.5" fill="#6f6c66" text-anchor="end">100</text>
+<text x="34.0" y="289.0" font-size="13.5" fill="#6f6c66" text-anchor="start">1995</text>
+<text x="286.0" y="289.0" font-size="13.5" fill="#6f6c66" text-anchor="end">2027</text>
 <path d="M34.0,193.4 L41.9,187.4 L49.8,187.6 L57.6,187.8 L65.5,192.1 L73.4,190.8 L81.2,185.2 L89.1,183.2 L97.0,185.2 L104.9,183.8 L112.8,183.2 L120.6,182.7 L128.5,175.4 L136.4,166.1 L144.2,180.5 L152.1,178.0 L160.0,168.3 L167.9,170.3 L175.8,180.3 L183.6,184.1 L191.5,188.8 L199.4,193.0 L207.2,195.6 L215.1,194.3 L223.0,203.0 L230.9,216.1 L238.8,206.8 L246.6,177.6 L254.5,173.0 L262.4,160.9 L270.2,150.7" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="230.9" cy="216.1" r="3.5" fill="#eb6834"/>
 <text x="230.9" y="236.1" font-size="13.5" font-weight="600" fill="#eb6834" text-anchor="middle">29,7</text>
@@ -40,6 +40,6 @@
 <text class="pied-note" x="0" y="534.0" font-size="13.5" fill="#52514e">dont la base 2025 n'est pas publiée ;</text>
 <text class="pied-note" x="0" y="551.0" font-size="13.5" fill="#52514e">aucune variation ne se lit entre</text>
 <text class="pied-note" x="0" y="568.0" font-size="13.5" fill="#52514e">l'observé et le prévu.</text>
-<text class="pied-licence" x="0" y="589.0" font-size="13.5" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="606.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="589.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="606.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

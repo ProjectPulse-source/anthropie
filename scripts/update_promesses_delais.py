@@ -831,7 +831,8 @@ def verifier(S: dict):
 # ------------------------------------------------------------------ figures
 W = 720
 BLEU, BLEU_CLAIR, GRIS, GRIS_CLAIR = "#184f95", "#7fa3cf", "#8a8f98", "#c9cdd3"
-INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
+INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", pied_figure.ENCRE_ATTENUEE, "#e1e0d9"   # MUTED : texte seulement
+FS_D = pied_figure.POLICE_MIN      # plus petite police des figures détaillées (720 de large)
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 LICENCES_M = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
@@ -937,23 +938,23 @@ def fig_cursus(r: dict, A: dict) -> str:
     for a0, l, lab, col in segs:
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="32" fill="%s" stroke="#ffffff" stroke-width="2"/>' % (X(a0), y, X(a0 + l) - X(a0), col))
         if lab:
-            e.append(txt((X(a0) + X(a0 + l)) / 2, y + 20, lab, 10, INK, "middle"))
+            e.append(txt((X(a0) + X(a0 + l)) / 2, y + 20, lab, FS_D, INK, "middle"))
     # un seul bloc « Internat de médecine générale », de quatre ans, la dernière année plus soutenue (arbitrage, graphique 2)
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="32" fill="none" stroke="%s" stroke-width="1.5"/>'
              % (X(deb_int) + 1, y, X(r["duree"]) - X(deb_int) - 2, BLEU))
-    e.append(txt((X(deb_int) + X(r["duree"] - 1)) / 2, y + 20, L["cycles"][2], 10, INK, "middle"))
-    e.append(txt((X(deb_int) + X(r["duree"])) / 2, y - 6, L["internat"].format(r["mg"]), 10, BLEU, "middle", "600"))
-    e.append(txt(X(r["duree"]), y + 46, L["auto"], 9.5, BLEU, "end"))
+    e.append(txt((X(deb_int) + X(r["duree"] - 1)) / 2, y + 20, L["cycles"][2], FS_D, INK, "middle"))
+    e.append(txt((X(deb_int) + X(r["duree"])) / 2, y - 6, L["internat"].format(r["mg"]), FS_D, BLEU, "middle", "600"))
+    e.append(txt(X(r["duree"]), y + 46, L["auto"], FS_D, BLEU, "end"))
     ya = y + 62
     e.append('<path d="M%.1f %d V%d H%.1f V%d" fill="none" stroke="%s"/>' % (X(1), ya - 5, ya, X(r["duree"]), ya - 5, INK2))
-    e.append(txt(X(1) + 4, ya + 13, L["depuis_adm"].format("%d" % r["duree_adm"]), 10, INK2))
+    e.append(txt(X(1) + 4, ya + 13, L["depuis_adm"].format("%d" % r["duree_adm"]), FS_D, INK2))
     y2 = 168
     e.append(txt(0, y2 + 21, L["mandat"], 11, INK, weight="600"))
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="32" fill="%s"/>' % (X(0), y2, X(r["mandat"]) - X(0), GRIS))
-    e.append(txt(X(r["mandat"] / 2), y2 + 20, L["ans"].format(r["mandat"]), 10, "#ffffff", "middle"))
+    e.append(txt(X(r["mandat"] / 2), y2 + 20, L["ans"].format(r["mandat"]), FS_D, "#ffffff", "middle"))
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(0), y2 + 33, X(r["duree"]), y2 + 33, GRID))
     for a in range(0, int(r["duree"]) + 1):
-        e.append(txt(X(a), y2 + 50, str(a), 9, MUTED, "middle"))
+        e.append(txt(X(a), y2 + 50, str(a), FS_D, MUTED, "middle"))
     return pied(e, H + 2, L["src1"], L["note1"])
 
 
@@ -962,7 +963,9 @@ def fig_admissions(r: dict, A: dict) -> str:
     d = dict(r["dd76"])
     o = {int(k): v for k, v in r["ondps"]["admis_medecine"].items()}
     ans = list(range(1972, 2026))
-    x0, x1, y0, y1 = 50, W - 8, 60, 280
+    # tracé descendu de 6 px, hauteur de la figure inchangée (11/11/2026) : à 11 px, l'étiquette de 2021 se lisait
+    # comme une seconde ligne du sous-titre, à 4 px sous ses jambages ; la place est prise sous les années de l'axe
+    x0, x1, y0, y1 = 50, W - 8, 66, 286
     vmax = 12000
     bw = (x1 - x0) / len(ans)
     X = lambda a: x0 + (a - 1972) * bw  # noqa: E731
@@ -971,22 +974,22 @@ def fig_admissions(r: dict, A: dict) -> str:
     e = cadre(H, "da", L["t2"], L["s2"], L["d2"].format(min_admis=nb(min(o.values())), **A))
     for v in range(0, vmax + 1, 3000):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x1, Y(v), GRID))
-        e.append(txt(x0 - 6, Y(v) + 4, nb(v), 10, MUTED, "end"))
+        e.append(txt(x0 - 6, Y(v) + 4, nb(v), FS_D, MUTED, "end"))
     for a in ans:
         v = d.get(a, o.get(a))
         col = BLEU if a <= 2020 else BLEU_CLAIR
         e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (X(a) + 0.6, Y(v), bw - 1.2, y1 - Y(v), col))
         if a % 10 == 0 or a == 1972:
-            e.append(txt(X(a) + bw / 2, y1 + 14, str(a), 10, MUTED, "middle"))
+            e.append(txt(X(a) + bw / 2, y1 + 14, str(a), FS_D, MUTED, "middle"))
     # deux rangs : en anglais, les deux étiquettes se touchaient sur un seul (contre-expertise du rendu, 12/10/2026) ;
     # celle de 2010-2011 descend dans la zone vide au-dessus des barres d'avant 2010 (toutes < 9 000)
-    for a, lab, ylab in ((2010, L["r1"], y0 + 10), (2021, L["r2"], y0 - 8)):
+    for a, lab, ylab in ((2010, L["r1"], y0 + 12), (2021, L["r2"], y0 - 8)):   # y0 + 12 : 4 px sous le filet de 12 000 à 11 px
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (X(a), y0 - 4, X(a), y1, INK2))
-        e.append(txt(X(a) - 4, ylab, lab, 9, INK2, "end"))
+        e.append(txt(X(a) - 4, ylab, lab, FS_D, INK2, "end"))
     voisins = max(d[a] for a in range(r["amin"] - 2, r["amin"] + 3))
     ya = Y(voisins) - 22
     e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s"/>' % (X(r["amin"]) + bw / 2, ya + 4, X(r["amin"]) + bw / 2, Y(d[r["amin"]]) - 2, INK2))
-    e.append(txt(X(r["amin"]) + bw / 2, ya, (L["annot"] % (r["amin"], A["places_min"])), 10, INK, "middle", "600"))
+    e.append(txt(X(r["amin"]) + bw / 2, ya, (L["annot"] % (r["amin"], A["places_min"])), FS_D, INK, "middle", "600"))
     return pied(e, H + 2, L["src2"], L["note2"])
 
 

@@ -52,6 +52,63 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-11 — Texte des figures : 11 px au moins et encre atténuée, dans les 31 générateurs ; impression et couche d'agrandissement
+
+- **Demande de l'auteur** : corriger dans les générateurs les deux points laissés ouverts le matin (texte gris à
+  3,1:1 ; plus petit texte à 10,2 px à 900 px d'écran). État de départ, mesuré : 267 figures sur 277 en défaut,
+  environ 1 700 textes sous 11 px dans 22 générateurs (8 à 10,5 px), texte gris `#96928f` (3,09:1) ou `#898781`
+  (3,59:1) dans presque tous.
+- **Organe commun** (`scripts/pied_figure.py`) : `ENCRE_ATTENUEE = "#6f6c66"` (5,23:1 sur blanc, 4,65:1 sur le plus
+  foncé des fonds teintés), `POLICE_MIN = 11` (figure détaillée, 720 de large), `POLICE_M_MIN = 13` (figure téléphone,
+  300 de large). Seuils tirés d'une mesure sur les 52 pages servies : la version détaillée s'affiche à 804 px au plus
+  étroit (dans un repli, à 900 px d'écran), la version téléphone à 277 px (320 px d'écran). Les générateurs importent
+  ces valeurs ; seul le TEXTE gris change, les marques grises gardent leur gris (constantes dédoublées là où une même
+  couleur servait aux deux).
+- **Verrou** (`scripts/check-figures.py`, dans `check-all --ci`) : R6, aucun texte sous 12 px affichés à la plus
+  petite largeur servie, et toute figure détaillée a sa version téléphone ; R7, contraste du texte avec son fond
+  (blanc, ou dernière forme pleine dessinée sous lui) d'au moins 4,5:1. Témoin : chaque règle mord, le cas propre passe.
+  Indépendant des générateurs : ils déclarent une police, le contrôle mesure la taille affichée.
+- **Résultat** : 278 figures, 0 défaut. Sur un build local, 53 pages et 980 rendus : plus petit texte affiché 12,3 px
+  à 900 px d'écran (10,2 avant), 15,6 px à 390 px ; aucune hauteur déclarée dans une page ne diverge de son SVG
+  (47 lues). Huit hauteurs changent ; trois pages suivent (`formules`, français et anglais ; `étudiants`).
+- **Mises en page reprises** là où le texte plus grand mordait (dans le générateur, rendu regardé) : grille des onze
+  formules (colonnes), cascade de la dynamique (« Ajustements / flux-stock »), achats de la Banque de France (tracé
+  resserré de 2,7 %), `niveau-baisse` (tracé resserré de 20 px), `appliquer-serie`, `delais-admissions` (tracé descendu
+  de 6 px), `referendum-registre` (« 75 % » à gauche de son point), `adopter-493`, collectivités (libellés sur deux
+  lignes, étiquettes de la figure Europe sous la courbe), `acces-superieur` (barres élargies), `empreinte-carbone`
+  (noms au-dessus des barres), `lycee-heures` (valeurs à l'encre foncée sur le bleu clair).
+- **Coupure des lignes** (`pied_figure.coupe`) : un nombre ne se sépare plus de son unité (Md€, pts, fois…), de son
+  mois, de la suite de ses milliers ni de la parenthèse qui l'ouvre. Relevé d'avant : « environ 90 / Md€ »,
+  « le 8 / septembre 2025 », « (98 / lois sur 214) », « 1 / 200 » pour 1 200.
+- **Défauts antérieurs corrigés au passage** : la figure « empreinte carbone » n'avait pas de version téléphone (seule
+  du site : texte de 5,6 px sur téléphone, hors du champ de tous les essais) ; la version téléphone de
+  `appliquer-lois` annonçait un « trait noir : la moitié des lois » qu'elle ne dessinait pas ; « -0.1% en 2020 » dans
+  la figure anglaise des taux (« in ») ; pointillés traversant « 45 % » (`referendum-registre`, téléphone) ; courbe
+  traversant « 28,9 » (`lycee-classes`, téléphone) ; `data/sources_maj.json` ne déclarait pas les versions téléphone de
+  trois figures, que le robot aurait régénérées sans les commiter.
+- **Second contrôle du rendu (rapport reçu après le push du matin), constats vérifiés sur le site en ligne puis
+  corrigés** : à l'impression, les 139 figures sortaient à 460 px de large, soit 4,8 pt (plafond de largeur sans
+  `screen` ; 698 à 730 px après) ; couche d'agrandissement : la page sautait de plusieurs centaines de pixels à la
+  fermeture, la tabulation partait derrière la couche, le bouton « Fermer » faisait 31 px et sortait de l'écran, l'aide
+  était sous l'image ; de 445 à 600 px la figure se décalait de 8 px à gauche du texte ; repères de la page Parcoursup
+  coupés avant l'année. Essai : `essai_couche.py` du dossier de travail (18 échecs sur le site d'avant, 0 après hors
+  une coupure naturelle à 768 px) ; `essai_figures_site.py` lit désormais la largeur imprimée sur toutes les pages.
+- **Données : aucune valeur changée.** Dix-sept `data/figures_*.json` reçoivent des espaces insécables (texte du pied
+  relu dans le SVG). `data_centers.json` : relevé du 11/11, RTE a republié ses deux documents le 10/11 (nouvelles
+  empreintes, mêmes valeurs ; instantanés de relecture refaits). Dates de référence dans `dette_collectivites.json`
+  et `dette_generations_controles.csv`.
+- **Ouverts, décision de l'auteur** : texte dans l'orange de la charte (301 textes, 3,20:1 ; 2,58:1 pour les libellés
+  de crise à 85 % d'opacité) et texte blanc sur une marque orange ou grise (44 textes), déclarés par R7 ; proposition
+  essayée hors dépôt : orange foncé `#b8420f` (5,5:1) pour le texte seul.
+- **Ouverts, techniques** : les PNG rendus par le robot le sont en DejaVu Sans, 15 % plus large qu'Arial (titres des
+  figures « collectivités » au bord du cadre) ; quatre figures ont moins de 7 % de marge en police système large ;
+  valeurs posées sur un filet de grille (`qui-paie`, `lycee-classes`, `dette-longue`) ; agrandissement sans gain au
+  téléphone ; figure de 460 px calée à gauche de 601 à 899 px ; onglets du dossier de 28 px de haut au téléphone ;
+  `update_dette_generations.py --hors-ligne` réécrit une valeur du CSV par arrondi (lancé en ligne ici) ;
+  `update_dette_collectivites.py` ne valide pas le certificat d'OFGL sur ce poste (lancé avec le magasin `certifi`).
+- **Contrôles** : `check-all --ci`, build, `typo_build`, liens, dates, rendu, relecture à 0. Les deux contrôleurs
+  indépendants du skill `controle-figures` sont lancés sur le site déployé.
+
 ### 2026-11-11 — Figures de données : version téléphone servie jusqu'à 899 px ; agrandissement à la largeur de l'écran
 
 - **Défaut de l'organe commun, mesuré sur le site en ligne** (52 pages, 139 figures, sept largeurs) : de 601 à 860 px

@@ -8,7 +8,7 @@
 <text x="166" y="45" font-size="11" fill="#55524f">le fait baisser</text>
 <rect x="274" y="36" width="10" height="10" fill="#184f95"/>
 <text x="288" y="45" font-size="11" fill="#55524f">variation du ratio (somme des trois)</text>
-<text x="0" y="64" font-size="11" fill="#96928f">En points de PIB cumulés sur dix ans</text>
+<text x="0" y="64" font-size="11" fill="#6f6c66">En points de PIB cumulés sur dix ans</text>
 <text x="221.2" y="88" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">Taux et croissance</text>
 <text x="363.8" y="88" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">Solde primaire</text>
 <text x="506.2" y="88" font-size="12" font-weight="600" fill="#26262f" text-anchor="middle">Autres ajustements</text>
@@ -97,6 +97,6 @@
 <text class="pied-source" x="0" y="401.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), 2016-2025 ; pays triés par variation du ratio</text>
 <text class="pied-note" x="0" y="415.0" font-size="11" fill="#55524f">Grèce, Chypre et Portugal ont reçu des financements officiels (2010-2018). Comparaison comptable : elle n'attribue la</text>
 <text class="pied-note" x="0" y="429.0" font-size="11" fill="#55524f">baisse à aucune politique. Variation calculée sur les valeurs non arrondies ; la somme des contributions affichées</text>
-<text class="pied-note" x="0" y="443.0" font-size="11" fill="#55524f">peut différer de 0,1 point.</text>
-<text class="pied-licence" x="0" y="457.0" font-size="11" fill="#96928f">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-peut-elle-baisser/</text>
+<text class="pied-note" x="0" y="443.0" font-size="11" fill="#55524f">peut différer de 0,1 point.</text>
+<text class="pied-licence" x="0" y="457.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-peut-elle-baisser/</text>
 </svg>

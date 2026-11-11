@@ -4,25 +4,26 @@
 <text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Projet de loi de finances pour 2027 : ce qu&#x27;il demande aux collectivités, dans le texte initial attendu au Sénat</text>
 <rect x="0" y="34" width="14" height="10" fill="#eb6834"/>
 <text x="20.0" y="43.0" font-size="11" fill="#52514e" text-anchor="start">dans le texte initial attendu au Sénat</text>
-<text x="720.0" y="43.0" font-size="11" fill="#898781" text-anchor="end">milliards d&#x27;euros, montants du projet déposé</text>
+<text x="720.0" y="43.0" font-size="11" fill="#6f6c66" text-anchor="end">milliards d&#x27;euros, montants du projet déposé</text>
 <text x="0.0" y="79.0" font-size="12" fill="#0A0A0E" text-anchor="start">Contribution progressive (art. 37)</text>
-<text x="0.0" y="95.0" font-size="10" fill="#898781" text-anchor="start">texte initial attendu au Sénat ; Assemblée : art. 37 supprimé en séance le 19 octobre 2026</text>
+<text x="0.0" y="96.0" font-size="11" fill="#6f6c66" text-anchor="start">texte initial attendu au Sénat ; Assemblée : art. 37 supprimé en séance le 19 octobre 2026</text>
 <rect x="300" y="68" width="320.0" height="18" fill="#eb6834"/>
 <text x="628.0" y="82.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">2,5</text>
 <text x="0.0" y="125.0" font-size="12" fill="#0A0A0E" text-anchor="start">FCTVA, taux abaissé (art. 35)</text>
-<text x="0.0" y="141.0" font-size="10" fill="#898781" text-anchor="start">texte initial attendu au Sénat ; Assemblée : art. 35 supprimé en séance le 19 octobre 2026</text>
+<text x="0.0" y="142.0" font-size="11" fill="#6f6c66" text-anchor="start">texte initial attendu au Sénat ; Assemblée : art. 35 supprimé en séance le 19 octobre 2026</text>
 <rect x="300" y="114" width="267.8" height="18" fill="#eb6834"/>
 <text x="575.8" y="128.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">2,1</text>
 <text x="0.0" y="171.0" font-size="12" fill="#0A0A0E" text-anchor="start">Contributions de ministères</text>
-<text x="0.0" y="187.0" font-size="10" fill="#898781" text-anchor="start">texte initial attendu au Sénat ; Assemblée : seconde partie, non examinée</text>
+<text x="0.0" y="188.0" font-size="11" fill="#6f6c66" text-anchor="start">texte initial attendu au Sénat ; Assemblée : seconde partie, non examinée</text>
 <rect x="300" y="160" width="89.6" height="18" fill="#eb6834"/>
 <text x="397.6" y="174.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">0,7</text>
 <text x="0.0" y="217.0" font-size="12" fill="#0A0A0E" text-anchor="start">TVA affectée, écrêtement (art. 36)</text>
-<text x="0.0" y="233.0" font-size="10" fill="#898781" text-anchor="start">texte initial attendu au Sénat ; Assemblée : art. 36 non adopté en séance le 19 octobre 2026</text>
+<text x="0.0" y="234.0" font-size="11" fill="#6f6c66" text-anchor="start">texte initial attendu au Sénat ; Assemblée : art. 36 non adopté en séance le 19 octobre 2026</text>
 <rect x="300" y="206" width="76.8" height="18" fill="#eb6834"/>
 <text x="384.8" y="220.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">0,6</text>
 <text x="0.0" y="263.0" font-size="12" fill="#0A0A0E" text-anchor="start">DILICO, reversement étalé (art. 84)</text>
-<text x="0.0" y="279.0" font-size="10" fill="#898781" text-anchor="start">texte initial attendu au Sénat, examen prévu le 2 décembre 2026 ; Assemblée : art. 84 supprimé en commission le 28 octobre 2026</text>
+<text x="0.0" y="280.0" font-size="11" fill="#6f6c66" text-anchor="start">texte initial attendu au Sénat, examen prévu le 2 décembre 2026 ;</text>
+<text x="0.0" y="293.0" font-size="11" fill="#6f6c66" text-anchor="start">Assemblée : art. 84 supprimé en commission le 28 octobre 2026</text>
 <rect x="300" y="252" width="38.4" height="18" fill="#eb6834"/>
 <text x="346.4" y="266.0" font-size="12" fill="#0A0A0E" text-anchor="start" font-weight="600">0,3</text>
 <line x1="0" y1="318.0" x2="720" y2="318.0" stroke="#e1e0d9"/>
@@ -31,5 +32,5 @@
 <text class="pied-source" x="0" y="361.0" font-size="11" fill="#52514e">amendement II-CF2778 (art. 84), 28 octobre 2026 ; Sénat, ordre du jour. État au 9 novembre 2026.</text>
 <text class="pied-note" x="0" y="375.0" font-size="11" fill="#52514e">Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : elle ne mesure</text>
 <text class="pied-note" x="0" y="389.0" font-size="11" fill="#52514e">pas un prélèvement net. Le Sénat peut modifier chaque mesure avant la loi définitive.</text>
-<text class="pied-licence" x="0" y="403.0" font-size="11" fill="#898781">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/budget-2027-votre-commune/</text>
+<text class="pied-licence" x="0" y="403.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/budget-2027-votre-commune/</text>
 </svg>

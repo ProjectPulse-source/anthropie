@@ -16,40 +16,48 @@
 <rect x="0.0" y="214" width="47.1" height="14" fill="#184f95"/>
 <rect x="47.1" y="214" width="12.9" height="14" fill="#8a8781"/>
 <rect x="60.0" y="214" width="115.7" height="14" fill="#c9c5c0"/>
+<line x1="87.9" y1="211" x2="87.9" y2="231" stroke="#0A0A0E" stroke-width="2"/>
 <text x="0" y="244" font-size="13.5" font-weight="600" fill="#52514e">11 direct, 3 divergent, out of 41</text>
 <text x="0" y="268" font-size="13.5" fill="#0A0A0E">2018-2019</text>
 <rect x="0.0" y="273" width="94.3" height="14" fill="#184f95"/>
 <rect x="94.3" y="273" width="12.9" height="14" fill="#8a8781"/>
 <rect x="107.1" y="273" width="102.9" height="14" fill="#c9c5c0"/>
+<line x1="105.0" y1="270" x2="105.0" y2="290" stroke="#0A0A0E" stroke-width="2"/>
 <text x="0" y="303" font-size="13.5" font-weight="600" fill="#52514e">22 direct, 3 divergent, out of 49</text>
 <text x="0" y="327" font-size="13.5" fill="#0A0A0E">2019-2020</text>
 <rect x="0.0" y="332" width="64.3" height="14" fill="#184f95"/>
 <rect x="64.3" y="332" width="4.3" height="14" fill="#8a8781"/>
 <rect x="68.6" y="332" width="115.7" height="14" fill="#c9c5c0"/>
+<line x1="92.1" y1="329" x2="92.1" y2="349" stroke="#0A0A0E" stroke-width="2"/>
 <text x="0" y="362" font-size="13.5" font-weight="600" fill="#52514e">15 direct, 1 divergent, out of 43</text>
 <text x="0" y="386" font-size="13.5" fill="#0A0A0E">2020-2021</text>
 <rect x="0.0" y="391" width="72.9" height="14" fill="#184f95"/>
 <rect x="72.9" y="391" width="12.9" height="14" fill="#8a8781"/>
 <rect x="85.7" y="391" width="132.9" height="14" fill="#c9c5c0"/>
+<line x1="109.3" y1="388" x2="109.3" y2="408" stroke="#0A0A0E" stroke-width="2"/>
 <text x="0" y="421" font-size="13.5" font-weight="600" fill="#52514e">17 direct, 3 divergent, out of 51</text>
 <text x="0" y="445" font-size="13.5" fill="#0A0A0E">2021-2022</text>
 <rect x="0.0" y="450" width="64.3" height="14" fill="#184f95"/>
 <rect x="64.3" y="450" width="38.6" height="14" fill="#8a8781"/>
 <rect x="102.9" y="450" width="171.4" height="14" fill="#c9c5c0"/>
+<line x1="137.1" y1="447" x2="137.1" y2="467" stroke="#0A0A0E" stroke-width="2"/>
 <text x="0" y="480" font-size="13.5" font-weight="600" fill="#52514e">15 direct, 9 divergent, out of 64</text>
 <text x="0" y="504" font-size="13.5" fill="#0A0A0E">2022-2023</text>
 <rect x="0.0" y="509" width="42.9" height="14" fill="#184f95"/>
 <rect x="42.9" y="509" width="4.3" height="14" fill="#8a8781"/>
 <rect x="47.1" y="509" width="141.4" height="14" fill="#c9c5c0"/>
+<line x1="94.3" y1="506" x2="94.3" y2="526" stroke="#0A0A0E" stroke-width="2"/>
 <text x="0" y="539" font-size="13.5" font-weight="600" fill="#52514e">10 direct, 1 divergent, out of 44</text>
 <text x="0" y="563" font-size="13.5" fill="#0A0A0E">2023-2024</text>
 <rect x="0.0" y="568" width="90.0" height="14" fill="#184f95"/>
 <rect x="90.0" y="568" width="128.6" height="14" fill="#c9c5c0"/>
+<line x1="109.3" y1="565" x2="109.3" y2="585" stroke="#0A0A0E" stroke-width="2"/>
 <text x="0" y="598" font-size="13.5" font-weight="600" fill="#52514e">21 direct, 0 divergent, out of 51</text>
 <text x="0" y="622" font-size="13.5" fill="#0A0A0E">2024-2025</text>
 <rect x="0.0" y="627" width="81.4" height="14" fill="#184f95"/>
 <rect x="81.4" y="627" width="25.7" height="14" fill="#8a8781"/>
 <rect x="107.1" y="627" width="132.9" height="14" fill="#c9c5c0"/>
+<line x1="120.0" y1="624" x2="120.0" y2="644" stroke="#0A0A0E" stroke-width="2"/>
 <text x="0" y="657" font-size="13.5" font-weight="600" fill="#52514e">19 direct, 6 divergent, out of 56</text>
 <line x1="0" y1="671.0" x2="300" y2="671.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="692.0" font-size="13.5" fill="#52514e">Barometer of the application of laws</text>
@@ -64,6 +72,6 @@
 <text class="pied-note" x="0" y="849.0" font-size="13.5" fill="#52514e">report; the 2 extra laws, with no list</text>
 <text class="pied-note" x="0" y="866.0" font-size="13.5" fill="#52514e">of names, are in grey. Black mark:</text>
 <text class="pied-note" x="0" y="883.0" font-size="13.5" fill="#52514e">half of the laws.</text>
-<text class="pied-licence" x="0" y="904.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="921.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="904.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="921.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

@@ -6,32 +6,32 @@
 <text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">1995-Q2 2026</text>
 <text x="0" y="100" font-size="13.5" font-weight="600" fill="#0A0A0E">Public debt, % of GDP</text>
 <line x1="34" y1="244.0" x2="292" y2="244.0" stroke="#c3c2b7"/>
-<text x="29" y="249.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<text x="29" y="249.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="34" y1="206.9" x2="292" y2="206.9" stroke="#e1e0d9"/>
-<text x="29" y="211.9" font-size="13.5" fill="#898781" text-anchor="end">40</text>
+<text x="29" y="211.9" font-size="13.5" fill="#6f6c66" text-anchor="end">40</text>
 <line x1="34" y1="169.7" x2="292" y2="169.7" stroke="#e1e0d9"/>
-<text x="29" y="174.7" font-size="13.5" fill="#898781" text-anchor="end">80</text>
+<text x="29" y="174.7" font-size="13.5" fill="#6f6c66" text-anchor="end">80</text>
 <line x1="34" y1="132.6" x2="292" y2="132.6" stroke="#e1e0d9"/>
-<text x="29" y="137.6" font-size="13.5" fill="#898781" text-anchor="end">120</text>
-<text x="34.0" y="263.0" font-size="13.5" fill="#898781" text-anchor="start">1995</text>
-<text x="292.0" y="263.0" font-size="13.5" fill="#898781" text-anchor="end">2026</text>
+<text x="29" y="137.6" font-size="13.5" fill="#6f6c66" text-anchor="end">120</text>
+<text x="34.0" y="263.0" font-size="13.5" fill="#6f6c66" text-anchor="start">1995</text>
+<text x="292.0" y="263.0" font-size="13.5" fill="#6f6c66" text-anchor="end">2026</text>
 <path d="M37.1,190.3 L39.2,189.6 L41.3,188.9 L43.4,188.3 L45.5,187.7 L47.6,187.5 L49.7,185.5 L51.8,185.5 L53.8,186.4 L55.9,187.2 L58.0,187.1 L60.1,185.9 L62.2,186.3 L64.3,186.2 L66.4,186.6 L68.5,186.3 L70.6,187.0 L72.6,187.8 L74.7,187.9 L76.8,188.5 L78.9,188.6 L81.0,189.5 L83.1,188.7 L85.2,188.6 L87.3,188.9 L89.4,188.7 L91.4,187.4 L93.5,187.6 L95.6,187.1 L97.7,185.8 L99.8,183.7 L101.9,183.3 L104.0,183.3 L106.1,182.8 L108.2,181.5 L110.3,181.8 L112.3,181.9 L114.4,181.0 L116.5,180.7 L118.6,180.9 L120.7,180.7 L122.8,180.8 L124.9,181.8 L127.0,181.9 L129.1,183.3 L131.1,182.2 L133.2,181.4 L135.3,182.0 L137.4,183.2 L139.5,182.0 L141.6,181.5 L143.7,181.0 L145.8,179.2 L147.9,174.6 L149.9,169.9 L152.0,167.4 L154.1,165.9 L156.2,164.2 L158.3,162.0 L160.4,163.8 L162.5,163.9 L164.6,162.6 L166.7,161.2 L168.7,161.9 L170.8,161.6 L172.9,159.3 L175.0,158.0 L177.1,159.2 L179.2,158.8 L181.3,157.4 L183.4,156.0 L185.5,156.7 L187.5,156.2 L189.6,154.8 L191.7,154.2 L193.8,154.4 L195.9,154.7 L198.0,153.0 L200.1,152.8 L202.2,153.3 L204.3,153.9 L206.3,152.2 L208.4,151.2 L210.5,151.9 L212.6,152.9 L214.7,150.4 L216.8,150.0 L218.9,151.0 L221.0,152.3 L223.1,152.0 L225.1,151.9 L227.2,151.7 L229.3,152.5 L231.4,151.8 L233.5,152.1 L235.6,151.2 L237.7,152.8 L239.8,150.0 L241.9,139.1 L244.0,137.0 L246.0,137.3 L248.1,134.6 L250.2,137.6 L252.3,136.7 L254.4,139.3 L256.5,137.7 L258.6,139.0 L260.7,138.8 L262.8,140.6 L264.8,139.9 L266.9,140.7 L269.0,141.1 L271.1,142.3 L273.2,141.9 L275.3,140.4 L277.4,139.0 L279.5,139.4 L281.6,138.7 L283.6,137.0 L285.7,135.4 L287.8,136.6 L289.9,134.9 L292.0,133.5" fill="none" stroke="#184f95" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="292.0" cy="133.5" r="4" fill="#184f95"/>
 <text x="286.0" y="124.5" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">119.0% · Q2 2026</text>
 <text x="39.1" y="181.3" font-size="13.5" font-weight="600" fill="#184f95">57.8%</text>
 <text x="0" y="284" font-size="13.5" font-weight="600" fill="#0A0A0E">Interest, % of GDP</text>
 <line x1="34" y1="428.0" x2="292" y2="428.0" stroke="#c3c2b7"/>
-<text x="29" y="433.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<text x="29" y="433.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="34" y1="395.5" x2="292" y2="395.5" stroke="#e1e0d9"/>
-<text x="29" y="400.5" font-size="13.5" fill="#898781" text-anchor="end">1</text>
+<text x="29" y="400.5" font-size="13.5" fill="#6f6c66" text-anchor="end">1</text>
 <line x1="34" y1="363.0" x2="292" y2="363.0" stroke="#e1e0d9"/>
-<text x="29" y="368.0" font-size="13.5" fill="#898781" text-anchor="end">2</text>
+<text x="29" y="368.0" font-size="13.5" fill="#6f6c66" text-anchor="end">2</text>
 <line x1="34" y1="330.5" x2="292" y2="330.5" stroke="#e1e0d9"/>
-<text x="29" y="335.5" font-size="13.5" fill="#898781" text-anchor="end">3</text>
+<text x="29" y="335.5" font-size="13.5" fill="#6f6c66" text-anchor="end">3</text>
 <line x1="34" y1="298.0" x2="292" y2="298.0" stroke="#e1e0d9"/>
-<text x="29" y="303.0" font-size="13.5" fill="#898781" text-anchor="end">4</text>
-<text x="34.0" y="447.0" font-size="13.5" fill="#898781" text-anchor="start">1995</text>
-<text x="292.0" y="447.0" font-size="13.5" fill="#898781" text-anchor="end">2026</text>
+<text x="29" y="303.0" font-size="13.5" fill="#6f6c66" text-anchor="end">4</text>
+<text x="34.0" y="447.0" font-size="13.5" fill="#6f6c66" text-anchor="start">1995</text>
+<text x="292.0" y="447.0" font-size="13.5" fill="#6f6c66" text-anchor="end">2026</text>
 <path d="M34.0,314.2 L42.4,311.0 L50.7,311.0 L59.1,317.5 L67.4,327.2 L75.8,330.5 L84.1,327.2 L92.5,330.5 L100.9,333.8 L109.2,337.0 L117.6,340.2 L125.9,343.5 L134.3,340.2 L142.6,333.8 L151.0,346.8 L159.3,346.8 L167.7,340.2 L176.1,343.5 L184.4,353.2 L192.8,356.5 L201.1,363.0 L209.5,366.2 L217.8,369.5 L226.2,369.5 L234.6,379.2 L242.9,385.8 L251.3,382.5 L259.6,366.2 L268.0,366.2 L276.3,363.0 L284.7,356.5" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="284.7" cy="356.5" r="4" fill="#eb6834"/>
 <text x="278.7" y="346.5" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="end">2.2% · 2025</text>
@@ -44,6 +44,6 @@
 <text class="pied-source" x="0" y="513.0" font-size="13.5" fill="#52514e">D41PAY (2025)</text>
 <text class="pied-note" x="0" y="534.0" font-size="13.5" fill="#52514e">Two separate scales, one shared</text>
 <text class="pied-note" x="0" y="551.0" font-size="13.5" fill="#52514e">unit: % of GDP.</text>
-<text class="pied-licence" x="0" y="572.0" font-size="13.5" fill="#898781">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="589.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="572.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="589.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

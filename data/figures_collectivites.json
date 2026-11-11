@@ -5,7 +5,7 @@
    "fichier": "collectivites-investissement",
    "titre": "Investissement des administrations locales et transferts reçus, France, en % du PIB",
    "montre": "De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; la série comparable des transferts s'arrête en 2017.",
-   "source": "Eurostat gov_10a_main, administrations publiques locales (S1313) : investissement P51G, transferts courants reçus D73REC ; France. Données relevées le 10 novembre 2026.",
+   "source": "Eurostat gov_10a_main, administrations publiques locales (S1313) : investissement P51G, transferts courants reçus D73REC ; France. Données relevées le 10 novembre 2026.",
    "precaution": "Transferts reçus : de l'État et de la sécurité sociale, toutes dotations confondues ; ce n'est pas la DGF. Série comparable arrêtée en 2017 : en 2018 puis en 2021, des dotations sont remplacées par des fractions de TVA, comptées en impôts. Ce reclassement change la catégorie de la recette ; il ne dit pas, à lui seul, si les ressources ont augmenté ou baissé."
   },
   {
@@ -13,7 +13,7 @@
    "fichier": "collectivites-cascade",
    "titre": "Solde des administrations locales, 2013-2017 : la même variation, en euros et en points de PIB",
    "montre": "De 2013 à 2017, le solde des administrations publiques locales s'améliore de 9,7 milliards d’euros (0,45 point de PIB). Leurs dépenses totales restent presque stables en euros courants (+1,2 milliard d’euros) ; rapportées au PIB, elles diminuent de 0,82 point, dont 0,50 point pour l'investissement, pendant que les recettes fiscales progressent et que les transferts reçus reculent. Ces évolutions sont concomitantes ; elles n'attribuent pas le recul de l'investissement à la baisse des dotations.",
-   "source": "Eurostat gov_10a_main, administrations publiques locales (S1313), France ; points calculés sur le PIB des mêmes comptes. Données relevées le 10 novembre 2026.",
+   "source": "Eurostat gov_10a_main, administrations publiques locales (S1313), France ; points calculés sur le PIB des mêmes comptes. Données relevées le 10 novembre 2026.",
    "precaution": "Barres : contribution de chaque poste à la variation du solde ; pour une dépense, l'inverse de sa variation. Les autres dépenses augmentent de 8,7 milliards d’euros (barre négative) et reculent de 0,32 point de PIB (barre positive) : le PIB nominal augmente de 8,1 %. Lecture comptable : les postes reconstituent le solde ; ils ne disent pas ce qui l'a décidé."
   },
   {
@@ -21,7 +21,7 @@
    "fichier": "collectivites-europe",
    "titre": "Dette des administrations territoriales et part détenue par l’État central, en % du PIB",
    "montre": "Une même dette territoriale peut recouvrir des architectures opposées : en Espagne, 59 % en est détenue par l'État central ; en France, 1 %.",
-   "source": "Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (secteur détenteur S1311), S1312 + S1313, en % du PIB. Données relevées le 10 novembre 2026.",
+   "source": "Eurostat gov_10q_ggdebt (4e trimestre) et gov_10dd_ggd (secteur détenteur S1311), S1312 + S1313, en % du PIB. Données relevées le 10 novembre 2026.",
    "precaution": "Périmètre statistique, non compétences : la France et l'Italie n'ont pas d'échelon d'États fédérés (S1312)."
   }
  ],

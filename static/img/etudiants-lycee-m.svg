@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 665" role="img" font-variant-numeric="tabular-nums" aria-labelledby="etu-lm-t etu-lm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 682" role="img" font-variant-numeric="tabular-nums" aria-labelledby="etu-lm-t etu-lm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
 <title id="etu-lm-t">Lycéens présentant un risque important de dépression, 2018-2024</title><desc id="etu-lm-d">Deux séries, enquêtes de 2018, 2022 et 2024, de la part des lycéens présentant un risque important de dépression, en %. Lycéennes : 18,0 en 2018, 22,7 en 2022, 25,7 en 2024. Lycéens (garçons) : 8,6 en 2018, 8,0 en 2022, 11,7 en 2024.</desc>
-<rect width="300" height="665" fill="#ffffff"/>
+<rect width="300" height="682" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Lycéens présentant un risque</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">important de dépression,</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">2018-2024</text>
 <text x="0" y="86" font-size="13.5" fill="#55524f">Part des lycéens de chaque sexe, en %</text>
 <line x1="34" y1="316.0" x2="292" y2="316.0" stroke="#dcd8d3" stroke-width="1"/>
-<text x="30" y="320.5" font-size="13.5" fill="#96928f" text-anchor="end">0</text>
+<text x="30" y="320.5" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="34" y1="249.3" x2="292" y2="249.3" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="253.8" font-size="13.5" fill="#96928f" text-anchor="end">10</text>
+<text x="30" y="253.8" font-size="13.5" fill="#6f6c66" text-anchor="end">10</text>
 <line x1="34" y1="182.7" x2="292" y2="182.7" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="187.2" font-size="13.5" fill="#96928f" text-anchor="end">20</text>
+<text x="30" y="187.2" font-size="13.5" fill="#6f6c66" text-anchor="end">20</text>
 <line x1="34" y1="116.0" x2="292" y2="116.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="30" y="120.5" font-size="13.5" fill="#96928f" text-anchor="end">30</text>
-<text x="34.0" y="334" font-size="13.5" fill="#96928f" text-anchor="start">2018</text>
-<text x="206.0" y="334" font-size="13.5" fill="#96928f" text-anchor="middle">2022</text>
-<text x="292.0" y="334" font-size="13.5" fill="#96928f" text-anchor="end">2024</text>
+<text x="30" y="120.5" font-size="13.5" fill="#6f6c66" text-anchor="end">30</text>
+<text x="34.0" y="334" font-size="13.5" fill="#6f6c66" text-anchor="start">2018</text>
+<text x="206.0" y="334" font-size="13.5" fill="#6f6c66" text-anchor="middle">2022</text>
+<text x="292.0" y="334" font-size="13.5" fill="#6f6c66" text-anchor="end">2024</text>
 <path d="M34.0,258.7 L206.0,262.7 L292.0,238.0" fill="none" stroke="#184f95" stroke-width="2.6" stroke-linejoin="round" stroke-dasharray="6 4"/>
 <path d="M34.0,196.0 L206.0,164.7 L292.0,144.7" fill="none" stroke="#eb6834" stroke-width="2.6" stroke-linejoin="round" stroke-dasharray="6 4"/>
 <circle cx="34.0" cy="196.0" r="3.4" fill="#eb6834"/>
@@ -38,14 +38,15 @@
 <text x="22" y="440" font-size="13.5" fill="#184f95">2018 : 8,6 · 2022 : 8,0 · 2024 : 11,7</text>
 <line x1="0" y1="456.0" x2="300" y2="456.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="477.0" font-size="13.5" fill="#55524f">Santé publique France, enquête EnCLASS</text>
-<text class="pied-source" x="0" y="494.0" font-size="13.5" fill="#55524f">2024 (Le point sur, 2 juin 2026),</text>
+<text class="pied-source" x="0" y="494.0" font-size="13.5" fill="#55524f">2024 (Le point sur, 2 juin 2026),</text>
 <text class="pied-source" x="0" y="511.0" font-size="13.5" fill="#55524f">lycéens</text>
 <text class="pied-note" x="0" y="532.0" font-size="13.5" fill="#55524f">Risque important : au moins 7</text>
 <text class="pied-note" x="0" y="549.0" font-size="13.5" fill="#55524f">symptômes sur les 10 de l'ADRS,</text>
 <text class="pied-note" x="0" y="566.0" font-size="13.5" fill="#55524f">échelle de repérage de la dépression</text>
-<text class="pied-note" x="0" y="583.0" font-size="13.5" fill="#55524f">de l'adolescent. Trois enquêtes (2018,</text>
-<text class="pied-note" x="0" y="600.0" font-size="13.5" fill="#55524f">2022, 2024), reliées en tirets, auprès</text>
-<text class="pied-note" x="0" y="617.0" font-size="13.5" fill="#55524f">d'élèves différents à chaque fois.</text>
-<text class="pied-licence" x="0" y="638.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="655.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="583.0" font-size="13.5" fill="#55524f">de l'adolescent. Trois enquêtes</text>
+<text class="pied-note" x="0" y="600.0" font-size="13.5" fill="#55524f">(2018, 2022, 2024), reliées en tirets,</text>
+<text class="pied-note" x="0" y="617.0" font-size="13.5" fill="#55524f">auprès d'élèves différents à chaque</text>
+<text class="pied-note" x="0" y="634.0" font-size="13.5" fill="#55524f">fois.</text>
+<text class="pied-licence" x="0" y="655.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="672.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

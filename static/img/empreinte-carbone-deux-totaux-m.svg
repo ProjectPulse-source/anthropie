@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 981" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ecm-t ecm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="ecm-t">Émissions françaises et empreinte carbone en 2025 : deux totaux, trois postes chacun</title><desc id="ecm-d">Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO₂. Émissions des unités résidentes françaises : 398, dont 100 émises directement par les ménages, 175 par la production en France destinée à la demande française et 123 par la production en France exportée. Empreinte carbone : 571, dont les mêmes 100 et 175, et 296 d'émissions importées pour la demande française.</desc>
+<rect width="300" height="981" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Émissions françaises</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">et empreinte carbone</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">en 2025 : deux totaux,</text>
+<text x="0" y="86" font-size="17" font-weight="600" fill="#26262f">trois postes chacun</text>
+<text x="0" y="125" font-size="13.5" fill="#55524f">Gaz à effet de serre, en millions de</text>
+<text x="0" y="142" font-size="13.5" fill="#55524f">tonnes équivalent CO₂ (Mt CO₂ éq),</text>
+<text x="0" y="159" font-size="13.5" fill="#55524f">France, 2025.</text>
+<text x="0" y="187" font-size="15" font-weight="600" fill="#26262f">Émissions des unités</text>
+<text x="0" y="205" font-size="13.5" fill="#26262f">résidentes françaises</text>
+<rect x="0.0" y="215" width="42.0" height="18" fill="#c9c5c0" stroke="#ffffff" stroke-width="1"/>
+<rect x="42.0" y="215" width="73.6" height="18" fill="#184f95" stroke="#ffffff" stroke-width="1"/>
+<rect x="115.6" y="215" width="51.7" height="18" fill="#8a8781" stroke="#ffffff" stroke-width="1"/>
+<text x="175.3" y="229.5" font-size="16" font-weight="600" fill="#26262f">= 398</text>
+<rect x="0" y="251" width="10" height="10" fill="#c9c5c0"/>
+<text x="296" y="261" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">100</text>
+<text x="15" y="261" font-size="13.5" fill="#26262f">Émissions directes</text>
+<text x="15" y="278" font-size="13.5" fill="#26262f">des ménages</text>
+<rect x="0" y="290" width="10" height="10" fill="#184f95"/>
+<text x="296" y="300" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">175</text>
+<text x="15" y="300" font-size="13.5" fill="#26262f">Production en France</text>
+<text x="15" y="317" font-size="13.5" fill="#26262f">pour la demande française</text>
+<rect x="0" y="329" width="10" height="10" fill="#8a8781"/>
+<text x="296" y="339" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">123</text>
+<text x="15" y="339" font-size="13.5" fill="#26262f">Production en France</text>
+<text x="15" y="356" font-size="13.5" fill="#26262f">exportée</text>
+<line x1="0" y1="368" x2="300" y2="368" stroke="#dcd8d3" stroke-width="0.8"/>
+<text x="0" y="396" font-size="15" font-weight="600" fill="#26262f">Empreinte carbone</text>
+<text x="0" y="414" font-size="13.5" fill="#26262f">de la France</text>
+<rect x="0.0" y="424" width="42.0" height="18" fill="#c9c5c0" stroke="#ffffff" stroke-width="1"/>
+<rect x="42.0" y="424" width="73.6" height="18" fill="#184f95" stroke="#ffffff" stroke-width="1"/>
+<rect x="115.6" y="424" width="124.4" height="18" fill="#eb6834" stroke="#ffffff" stroke-width="1"/>
+<text x="248.0" y="438.5" font-size="16" font-weight="600" fill="#26262f">= 571</text>
+<rect x="0" y="460" width="10" height="10" fill="#c9c5c0"/>
+<text x="296" y="470" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">100</text>
+<text x="15" y="470" font-size="13.5" fill="#26262f">Émissions directes</text>
+<text x="15" y="487" font-size="13.5" fill="#26262f">des ménages</text>
+<rect x="0" y="499" width="10" height="10" fill="#184f95"/>
+<text x="296" y="509" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">175</text>
+<text x="15" y="509" font-size="13.5" fill="#26262f">Production en France</text>
+<text x="15" y="526" font-size="13.5" fill="#26262f">pour la demande française</text>
+<rect x="0" y="538" width="10" height="10" fill="#eb6834"/>
+<text x="296" y="548" font-size="15" font-weight="600" fill="#26262f" text-anchor="end">296</text>
+<text x="15" y="548" font-size="13.5" fill="#26262f">Importations</text>
+<text x="15" y="565" font-size="13.5" fill="#26262f">pour la demande française</text>
+<line x1="0" y1="585.0" x2="300" y2="585.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="606.0" font-size="13.5" fill="#55524f">Insee et SDES, Insee Première n° 2130,</text>
+<text class="pied-source" x="0" y="623.0" font-size="13.5" fill="#55524f">octobre 2026, figure 1 ; champ :</text>
+<text class="pied-source" x="0" y="640.0" font-size="13.5" fill="#55524f">France, CO₂, méthane, protoxyde</text>
+<text class="pied-source" x="0" y="657.0" font-size="13.5" fill="#55524f">d'azote et gaz fluorés</text>
+<text class="pied-note" x="0" y="678.0" font-size="13.5" fill="#55524f">Émissions des unités résidentes :</text>
+<text class="pied-note" x="0" y="695.0" font-size="13.5" fill="#55524f">format des comptes d'émissions dans</text>
+<text class="pied-note" x="0" y="712.0" font-size="13.5" fill="#55524f">l'air, transport international des</text>
+<text class="pied-note" x="0" y="729.0" font-size="13.5" fill="#55524f">résidents compris ; ce n'est pas le</text>
+<text class="pied-note" x="0" y="746.0" font-size="13.5" fill="#55524f">total de l'inventaire national.</text>
+<text class="pied-note" x="0" y="763.0" font-size="13.5" fill="#55524f">Empreinte : estimation des émissions</text>
+<text class="pied-note" x="0" y="780.0" font-size="13.5" fill="#55524f">associées à la demande finale</text>
+<text class="pied-note" x="0" y="797.0" font-size="13.5" fill="#55524f">française, où qu'elles aient lieu ;</text>
+<text class="pied-note" x="0" y="814.0" font-size="13.5" fill="#55524f">hors émissions des produits exportés.</text>
+<text class="pied-note" x="0" y="831.0" font-size="13.5" fill="#55524f">Deux conventions de comptabilité :</text>
+<text class="pied-note" x="0" y="848.0" font-size="13.5" fill="#55524f">elles ne mesurent ni une</text>
+<text class="pied-note" x="0" y="865.0" font-size="13.5" fill="#55524f">délocalisation ni l'effet d'une</text>
+<text class="pied-note" x="0" y="882.0" font-size="13.5" fill="#55524f">politique. Estimations révisées à</text>
+<text class="pied-note" x="0" y="899.0" font-size="13.5" fill="#55524f">chaque édition ; 2025 est provisoire.</text>
+<text class="pied-note" x="0" y="916.0" font-size="13.5" fill="#55524f">Valeurs arrondies au million de</text>
+<text class="pied-note" x="0" y="933.0" font-size="13.5" fill="#55524f">tonnes.</text>
+<text class="pied-licence" x="0" y="954.0" font-size="13.5" fill="#6f6c66">Figure Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="971.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+</svg>

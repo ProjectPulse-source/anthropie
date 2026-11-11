@@ -64,7 +64,8 @@ TOL_TEMOIN = 0.11   # ratios publiés à une décimale ; le solde primaire addit
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
+TRAIT = "#96928f"      # pointillé entre deux marches de la cascade : le gris des marques ; le texte prend MUTED, encre atténuée de l'organe commun
 
 
 def log(msg: str) -> None:
@@ -526,7 +527,7 @@ def fig_cascade(a0, d_depart, rows, total, lang="fr"):
     e = entete(H, "dc", titre, desc)
     for g in range(0, vmax + 1, 20):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.2 if g == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d%s</text>' % (X0 - 6, Y(g) + 3, MUTED, g, T["pc"]))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d%s</text>' % (X0 - 6, Y(g) + 3, MUTED, g, T["pc"]))
     n = len(etapes)
     pas = (X1 - X0) / n
     bw = pas * 0.58
@@ -542,16 +543,23 @@ def fig_cascade(a0, d_depart, rows, total, lang="fr"):
             col = ORANGE if v >= 0 else GRIS
             etiq = sg(v)
             e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-dasharray="3 2"/>'
-                     % (cx - pas + bw / 2, Y(niveau), cx - bw / 2, Y(niveau), MUTED))
+                     % (cx - pas + bw / 2, Y(niveau), cx - bw / 2, Y(niveau), TRAIT))
             niveau += v
         e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (cx - bw / 2, Y(haut_v), bw, max(1.0, Y(bas_v) - Y(haut_v)), col))
         e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (cx, Y(haut_v) - 6, INK, esc(etiq)))
         mots = lib.split(" ")
-        l1 = " ".join(mots[:2]) if len(mots) > 2 else lib
-        l2 = " ".join(mots[2:]) if len(mots) > 2 else ""
-        e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (cx, BAS + 16, INK2, esc(l1)))
+        # Deux lignes au-delà de deux mots (coupe après le deuxième), et aussi pour deux mots plus larges que la marche
+        # (11/11/2026 : à 11 px, « Ajustements flux-stock », 120 px pour une marche de 112, venait à 6 px de « Déficits
+        # primaires » ; largeur estimée à 0,52 em par caractère).
+        if len(mots) > 2:
+            l1, l2 = " ".join(mots[:2]), " ".join(mots[2:])
+        elif len(mots) == 2 and 0.52 * 11 * len(lib) > pas:
+            l1, l2 = mots
+        else:
+            l1, l2 = lib, ""
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (cx, BAS + 16, INK2, esc(l1)))
         if l2:
-            e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (cx, BAS + 29, INK2, esc(l2)))
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (cx, BAS + 29, INK2, esc(l2)))
     e.append('<text x="%d" y="44" font-size="11" fill="%s">%s</text>' % (X0, INK2, esc(T["legende_cascade"])))
     return pied(e, H + 4, T["src_cascade"] % ((a0 + 1, an_fin) + (editions(lang),)), T["note_cascade"], lang)
 
@@ -575,7 +583,7 @@ def fig_annuelle(rows, lang="fr"):
     e = entete(H, "da", titre, desc)
     for g in range(vmin, vmax + 1, 4):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 3, MUTED, sg(g, 0)))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 3, MUTED, sg(g, 0)))
     pas = (X1 - X0) / len(rows)
     bw = pas * 0.7
     for k, r in enumerate(rows):
@@ -591,7 +599,7 @@ def fig_annuelle(rows, lang="fr"):
                 neg += v
         e.append('<circle cx="%.1f" cy="%.1f" r="3.2" fill="%s" stroke="#ffffff" stroke-width="1"/>' % (cx, Y(r["variation"]), INK))
         if r["annee"] % 5 == 0 or k == len(rows) - 1:
-            e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (cx, BAS + 14, INK2, r["annee"]))
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (cx, BAS + 14, INK2, r["annee"]))
     leg = list(zip((ORANGE, BLEU, GRIS_CLAIR), T["legende_annuelle"][:3]))
     x = X0
     for col, lib in leg:
@@ -645,10 +653,10 @@ def fig_cs(cs, lang="fr"):
         e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f1efec"/>' % (X(a0 - 0.5), TOP, min(X(a1 + 0.5), X1) - X(a0 - 0.5), BAS - TOP))
     for g in range(vmin, vmax + 1, 2):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="%s"/>' % (X0, Y(g), X1, Y(g), GRID, 1.4 if g == 0 else 0.6))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 3, MUTED, sg(g, 0) if g else "0"))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%s</text>' % (X0 - 6, Y(g) + 3, MUTED, sg(g, 0) if g else "0"))
     for a in ans:
         if a % 5 == 0 or a == fin:
-            e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="%s">%d</text>' % (X(a), BAS + 14, INK2, "end" if a == fin else "middle", a))
+            e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="%s">%d</text>' % (X(a), BAS + 14, INK2, "end" if a == fin else "middle", a))
     for cle, col, dash, aa in reversed(series):
         pts = " ".join("%.1f,%.1f" % (X(a), Y(cs[a][cle])) for a in aa)
         e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%s"%s/>'

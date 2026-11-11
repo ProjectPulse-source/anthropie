@@ -19,36 +19,36 @@
 <rect x="137.4" y="244" width="162.6" height="24" fill="#c9c5c0"/>
 <line x1="150.0" y1="240" x2="150.0" y2="272" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
 <polygon points="122.0,269.0 117.0,276.0 127.0,276.0" fill="#0A0A0E"/>
-<text class="val" x="0.0" y="295.0" font-size="13.5" fill="#52514e" text-anchor="start">46% of parliamentary origin (98 laws</text>
+<text class="val" x="0.0" y="295.0" font-size="13.5" fill="#52514e" text-anchor="start">46% of parliamentary origin (98 laws</text>
 <text class="val" x="0.0" y="314.0" font-size="13.5" fill="#52514e" text-anchor="start">out of 214)</text>
-<text class="val" x="0.0" y="333.0" font-size="13.5" fill="#52514e" text-anchor="start">at least 41% (87 laws)</text>
-<text class="val" x="0.0" y="352.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 42% (110 out of 260)</text>
+<text class="val" x="0.0" y="333.0" font-size="13.5" fill="#52514e" text-anchor="start">at least 41% (87 laws)</text>
+<text class="val" x="0.0" y="352.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 42% (110 out of 260)</text>
 <text x="0.0" y="376.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">15th (2017-2022)</text>
 <rect x="0.0" y="384" width="114.4" height="24" fill="#184f95"/>
 <rect x="114.4" y="384" width="46.0" height="24" fill="#7fa3cf"/>
 <rect x="160.4" y="384" width="139.6" height="24" fill="#c9c5c0"/>
 <line x1="150.0" y1="380" x2="150.0" y2="412" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
 <polygon points="153.0,409.0 148.0,416.0 158.0,416.0" fill="#0A0A0E"/>
-<text class="val" x="0.0" y="435.0" font-size="13.5" fill="#52514e" text-anchor="start">53% of parliamentary origin (108</text>
-<text class="val" x="0.0" y="454.0" font-size="13.5" fill="#52514e" text-anchor="start">laws out of 202)</text>
-<text class="val" x="0.0" y="473.0" font-size="13.5" fill="#52514e" text-anchor="start">at least 51% (103 laws)</text>
-<text class="val" x="0.0" y="492.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 46% (114 out of 249)</text>
+<text class="val" x="0.0" y="435.0" font-size="13.5" fill="#52514e" text-anchor="start">53% of parliamentary origin</text>
+<text class="val" x="0.0" y="454.0" font-size="13.5" fill="#52514e" text-anchor="start">(108 laws out of 202)</text>
+<text class="val" x="0.0" y="473.0" font-size="13.5" fill="#52514e" text-anchor="start">at least 51% (103 laws)</text>
+<text class="val" x="0.0" y="492.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 46% (114 out of 249)</text>
 <text x="0.0" y="516.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">16th (2022-2024)</text>
 <rect x="0.0" y="524" width="115.7" height="24" fill="#184f95"/>
 <rect x="115.7" y="524" width="83.1" height="24" fill="#7fa3cf"/>
 <rect x="198.8" y="524" width="101.2" height="24" fill="#c9c5c0"/>
 <line x1="150.0" y1="520" x2="150.0" y2="552" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
-<text class="val" x="0.0" y="575.0" font-size="13.5" fill="#52514e" text-anchor="start">66% of parliamentary origin (55 laws</text>
+<text class="val" x="0.0" y="575.0" font-size="13.5" fill="#52514e" text-anchor="start">66% of parliamentary origin (55 laws</text>
 <text class="val" x="0.0" y="594.0" font-size="13.5" fill="#52514e" text-anchor="start">out of 83)</text>
-<text class="val" x="0.0" y="613.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 58% (55 out of 95)</text>
+<text class="val" x="0.0" y="613.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 58% (55 out of 95)</text>
 <text x="0.0" y="637.0" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">17th (since 2024) *</text>
 <rect x="0.0" y="645" width="148.5" height="24" fill="#184f95"/>
 <rect x="148.5" y="645" width="92.8" height="24" fill="#7fa3cf"/>
 <rect x="241.2" y="645" width="58.8" height="24" fill="#c9c5c0"/>
 <line x1="150.0" y1="641" x2="150.0" y2="673" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
-<text class="val" x="0.0" y="696.0" font-size="13.5" fill="#52514e" text-anchor="start">80% of parliamentary origin (78 laws</text>
+<text class="val" x="0.0" y="696.0" font-size="13.5" fill="#52514e" text-anchor="start">80% of parliamentary origin (78 laws</text>
 <text class="val" x="0.0" y="715.0" font-size="13.5" fill="#52514e" text-anchor="start">out of 97)</text>
-<text class="val" x="0.0" y="734.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 76% (85 out of 112)</text>
+<text class="val" x="0.0" y="734.0" font-size="13.5" fill="#52514e" text-anchor="start">all kinds: 76% (85 out of 112)</text>
 <line x1="0" y1="755" x2="22" y2="755" stroke="#0A0A0E" stroke-width="1.5" stroke-dasharray="4 3"/>
 <text x="30.0" y="760.0" font-size="13.5" fill="#52514e" text-anchor="start">half</text>
 <polygon points="11.0,768.0 6.0,775.0 16.0,775.0" fill="#0A0A0E"/>
@@ -69,6 +69,6 @@
 <text class="pied-note" x="0.0" y="1033.0" font-size="13.5" fill="#52514e" text-anchor="start">with institutional, finance and</text>
 <text class="pied-note" x="0.0" y="1050.0" font-size="13.5" fill="#52514e" text-anchor="start">constitutional acts put back in,</text>
 <text class="pied-note" x="0.0" y="1067.0" font-size="13.5" fill="#52514e" text-anchor="start">treaties still excluded.</text>
-<text class="pied-licence" x="0.0" y="1088.0" font-size="13.5" fill="#898781" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0.0" y="1105.0" font-size="13.5" fill="#898781" text-anchor="start">· stephane-lalut.com</text>
+<text class="pied-licence" x="0.0" y="1088.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="1105.0" font-size="13.5" fill="#6f6c66" text-anchor="start">· stephane-lalut.com</text>
 </svg>

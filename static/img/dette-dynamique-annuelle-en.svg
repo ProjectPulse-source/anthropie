@@ -3,21 +3,21 @@
 <rect width="720" height="369" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Year by year: what pushed the debt-to-GDP ratio up or down, 1996-2025</text>
 <line x1="40" y1="270.0" x2="710" y2="270.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="273.0" font-size="10" fill="#96928f" text-anchor="end">−8</text>
+<text x="34" y="273.0" font-size="11" fill="#6f6c66" text-anchor="end">−8</text>
 <line x1="40" y1="241.4" x2="710" y2="241.4" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="244.4" font-size="10" fill="#96928f" text-anchor="end">−4</text>
+<text x="34" y="244.4" font-size="11" fill="#6f6c66" text-anchor="end">−4</text>
 <line x1="40" y1="212.9" x2="710" y2="212.9" stroke="#dcd8d3" stroke-width="1.4"/>
-<text x="34" y="215.9" font-size="10" fill="#96928f" text-anchor="end">+0</text>
+<text x="34" y="215.9" font-size="11" fill="#6f6c66" text-anchor="end">+0</text>
 <line x1="40" y1="184.3" x2="710" y2="184.3" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="187.3" font-size="10" fill="#96928f" text-anchor="end">+4</text>
+<text x="34" y="187.3" font-size="11" fill="#6f6c66" text-anchor="end">+4</text>
 <line x1="40" y1="155.7" x2="710" y2="155.7" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="158.7" font-size="10" fill="#96928f" text-anchor="end">+8</text>
+<text x="34" y="158.7" font-size="11" fill="#6f6c66" text-anchor="end">+8</text>
 <line x1="40" y1="127.1" x2="710" y2="127.1" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="130.1" font-size="10" fill="#96928f" text-anchor="end">+12</text>
+<text x="34" y="130.1" font-size="11" fill="#6f6c66" text-anchor="end">+12</text>
 <line x1="40" y1="98.6" x2="710" y2="98.6" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="101.6" font-size="10" fill="#96928f" text-anchor="end">+16</text>
+<text x="34" y="101.6" font-size="11" fill="#6f6c66" text-anchor="end">+16</text>
 <line x1="40" y1="70.0" x2="710" y2="70.0" stroke="#dcd8d3" stroke-width="0.6"/>
-<text x="34" y="73.0" font-size="10" fill="#96928f" text-anchor="end">+20</text>
+<text x="34" y="73.0" font-size="11" fill="#6f6c66" text-anchor="end">+20</text>
 <rect x="43.4" y="210.8" width="15.6" height="2.0" fill="#eb6834"/>
 <rect x="43.4" y="196.0" width="15.6" height="14.8" fill="#184f95"/>
 <rect x="43.4" y="192.9" width="15.6" height="3.1" fill="#c9c5c0"/>
@@ -38,7 +38,7 @@
 <rect x="132.7" y="224.6" width="15.6" height="2.2" fill="#184f95"/>
 <rect x="132.7" y="211.1" width="15.6" height="1.8" fill="#c9c5c0"/>
 <circle cx="140.5" cy="225.0" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
-<text x="140.5" y="284" font-size="10" fill="#55524f" text-anchor="middle">2000</text>
+<text x="140.5" y="284" font-size="11" fill="#55524f" text-anchor="middle">2000</text>
 <rect x="155.0" y="212.9" width="15.6" height="11.7" fill="#eb6834"/>
 <rect x="155.0" y="206.8" width="15.6" height="6.0" fill="#184f95"/>
 <rect x="155.0" y="204.0" width="15.6" height="2.8" fill="#c9c5c0"/>
@@ -59,7 +59,7 @@
 <rect x="244.3" y="205.7" width="15.6" height="1.5" fill="#184f95"/>
 <rect x="244.3" y="203.5" width="15.6" height="2.2" fill="#c9c5c0"/>
 <circle cx="252.2" cy="203.5" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
-<text x="252.2" y="284" font-size="10" fill="#55524f" text-anchor="middle">2005</text>
+<text x="252.2" y="284" font-size="11" fill="#55524f" text-anchor="middle">2005</text>
 <rect x="266.7" y="212.5" width="15.6" height="0.4" fill="#eb6834"/>
 <rect x="266.7" y="212.9" width="15.6" height="3.6" fill="#184f95"/>
 <rect x="266.7" y="216.4" width="15.6" height="16.7" fill="#c9c5c0"/>
@@ -80,7 +80,7 @@
 <rect x="356.0" y="179.9" width="15.6" height="0.0" fill="#184f95"/>
 <rect x="356.0" y="212.9" width="15.6" height="17.1" fill="#c9c5c0"/>
 <circle cx="363.8" cy="197.0" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
-<text x="363.8" y="284" font-size="10" fill="#55524f" text-anchor="middle">2010</text>
+<text x="363.8" y="284" font-size="11" fill="#55524f" text-anchor="middle">2010</text>
 <rect x="378.3" y="194.4" width="15.6" height="18.5" fill="#eb6834"/>
 <rect x="378.3" y="212.9" width="15.6" height="0.3" fill="#184f95"/>
 <rect x="378.3" y="213.2" width="15.6" height="0.5" fill="#c9c5c0"/>
@@ -101,7 +101,7 @@
 <rect x="467.7" y="212.9" width="15.6" height="0.4" fill="#184f95"/>
 <rect x="467.7" y="213.2" width="15.6" height="7.1" fill="#c9c5c0"/>
 <circle cx="475.5" cy="207.0" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
-<text x="475.5" y="284" font-size="10" fill="#55524f" text-anchor="middle">2015</text>
+<text x="475.5" y="284" font-size="11" fill="#55524f" text-anchor="middle">2015</text>
 <rect x="490.0" y="199.5" width="15.6" height="13.3" fill="#eb6834"/>
 <rect x="490.0" y="195.4" width="15.6" height="4.1" fill="#184f95"/>
 <rect x="490.0" y="212.9" width="15.6" height="9.1" fill="#c9c5c0"/>
@@ -122,7 +122,7 @@
 <rect x="579.3" y="114.6" width="15.6" height="43.6" fill="#184f95"/>
 <rect x="579.3" y="93.2" width="15.6" height="21.4" fill="#c9c5c0"/>
 <circle cx="587.2" cy="93.2" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
-<text x="587.2" y="284" font-size="10" fill="#55524f" text-anchor="middle">2020</text>
+<text x="587.2" y="284" font-size="11" fill="#55524f" text-anchor="middle">2020</text>
 <rect x="601.7" y="175.7" width="15.6" height="37.1" fill="#eb6834"/>
 <rect x="601.7" y="212.9" width="15.6" height="52.2" fill="#184f95"/>
 <rect x="601.7" y="265.1" width="15.6" height="0.1" fill="#c9c5c0"/>
@@ -143,7 +143,7 @@
 <rect x="691.0" y="191.7" width="15.6" height="0.7" fill="#184f95"/>
 <rect x="691.0" y="191.1" width="15.6" height="0.6" fill="#c9c5c0"/>
 <circle cx="698.8" cy="191.1" r="3.2" fill="#26262f" stroke="#ffffff" stroke-width="1"/>
-<text x="698.8" y="284" font-size="10" fill="#55524f" text-anchor="middle">2025</text>
+<text x="698.8" y="284" font-size="11" fill="#55524f" text-anchor="middle">2025</text>
 <rect x="40" y="36" width="10" height="10" fill="#eb6834"/>
 <text x="54" y="45" font-size="11" fill="#55524f">primary balance contribution</text>
 <rect x="228" y="36" width="10" height="10" fill="#184f95"/>
@@ -156,5 +156,5 @@
 <text class="pied-source" x="0" y="319.0" font-size="11" fill="#55524f">Eurostat gov_10dd_edpt1, gov_10a_main (B9, D41PAY), France, 1996-2025; Eurostat release of 21 October 2026</text>
 <text class="pied-note" x="0" y="333.0" font-size="11" fill="#55524f">Points of GDP per year; primary balance: a deficit counts as plus, a surplus as minus; the three bars add up to the</text>
 <text class="pied-note" x="0" y="347.0" font-size="11" fill="#55524f">change (black dot), to within a hundredth.</text>
-<text class="pied-licence" x="0" y="361.0" font-size="11" fill="#96928f">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/why-does-public-debt-rise/</text>
+<text class="pied-licence" x="0" y="361.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/why-does-public-debt-rise/</text>
 </svg>

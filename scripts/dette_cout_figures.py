@@ -324,7 +324,7 @@ def fig_masses_m(interets, cofog, noms, lang, C, licence_m, svg_d, titre, source
     fonctions = ("GF07", "GF09", "GF03")
     ans = sorted(set(interets) & set.intersection(*[set(cofog[c]) for c in fonctions]))
     a0, a1 = ans[0], ans[-1]
-    gris = {"GF07": C["INK2"], "GF09": C["MUTED"], "GF03": C["CTX3"]}
+    gris = {"GF07": C["INK2"], "GF09": C["GRIS_MARQUE"], "GF03": C["CTX3"]}  # courbes : gris des marques ; C["MUTED"] ne colore que du texte
     vmax = max(max(cofog[c][a] for a in ans) for c in fonctions) * 1.08
     y += 14
     series = [([(a, cofog[c][a]) for a in ans], gris[c], 1.6) for c in fonctions]

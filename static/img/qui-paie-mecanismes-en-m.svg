@@ -8,7 +8,7 @@
 <text x="12.0" y="117.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Debt burden and its distribution</text>
 <text x="12.0" y="136.0" font-size="13.5" fill="#52514e" text-anchor="start">interest, maturing debt</text>
 <line x1="150" y1="144.0" x2="150" y2="160.0" stroke="#898781" stroke-width="1.5" stroke-dasharray="5 4"/>
-<text x="0.0" y="180.0" font-size="13.5" fill="#898781" text-anchor="start" font-weight="600">Ordinary budget adjustment</text>
+<text x="0.0" y="180.0" font-size="13.5" fill="#6f6c66" text-anchor="start" font-weight="600">Ordinary budget adjustment</text>
 <rect x="1" y="186.0" width="298" height="66" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
 <text x="12.0" y="207.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Taxes and contributions</text>
 <text x="12.0" y="226.0" font-size="13.5" fill="#52514e" text-anchor="start">taxpayers: taxes, social</text>
@@ -17,12 +17,12 @@
 <text x="12.0" y="279.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Spending and benefits</text>
 <text x="12.0" y="298.0" font-size="13.5" fill="#52514e" text-anchor="start">users, beneficiaries: cut, frozen,</text>
 <text x="12.0" y="316.0" font-size="13.5" fill="#52514e" text-anchor="start">postponed</text>
-<text x="0.0" y="344.0" font-size="13.5" fill="#898781" text-anchor="start" font-weight="600">Price effect, not decided alone</text>
+<text x="0.0" y="344.0" font-size="13.5" fill="#6f6c66" text-anchor="start" font-weight="600">Price effect, not decided alone</text>
 <rect x="1" y="350.0" width="298" height="66" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
 <text x="12.0" y="371.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Unanticipated inflation</text>
 <text x="12.0" y="390.0" font-size="13.5" fill="#52514e" text-anchor="start">holders of claims and of poorly</text>
 <text x="12.0" y="408.0" font-size="13.5" fill="#52514e" text-anchor="start">indexed incomes</text>
-<text x="0.0" y="436.0" font-size="13.5" fill="#898781" text-anchor="start" font-weight="600">Extreme case</text>
+<text x="0.0" y="436.0" font-size="13.5" fill="#6f6c66" text-anchor="start" font-weight="600">Extreme case</text>
 <rect x="1" y="442.0" width="298" height="48" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
 <text x="12.0" y="463.0" font-size="15" fill="#2b2a28" text-anchor="start" font-weight="600">Restructuring</text>
 <text x="12.0" y="482.0" font-size="13.5" fill="#52514e" text-anchor="start">holders of the securities</text>
@@ -39,6 +39,6 @@
 <text class="pied-source" x="0" y="710.0" font-size="13.5" fill="#52514e">diagram</text>
 <text class="pied-note" x="0" y="731.0" font-size="13.5" fill="#52514e">No relative weight or causal effect is</text>
 <text class="pied-note" x="0" y="748.0" font-size="13.5" fill="#52514e">measured here.</text>
-<text class="pied-licence" x="0" y="769.0" font-size="13.5" fill="#898781">Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="786.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="769.0" font-size="13.5" fill="#6f6c66">Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="786.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

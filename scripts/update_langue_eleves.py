@@ -52,7 +52,9 @@ PAGE_URL = "stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-fr
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
+# MUTED ne sert qu'au TEXTE (graduations, populations, crédit) : encre atténuée de l'organe commun. Les marques grises
+# (traits, ronds) gardent GRIS. Aucun texte d'une figure détaillée sous pied_figure.POLICE_MIN (11), contrôle R6 et R7.
 LICENCE = "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
 Q5, Q6 = "ST326Q05JA", "ST326Q06JA"
 NIVEAUX_2023 = ("Sixième", "Quatrième", "Seconde générale et technologique", "Seconde professionnelle", "CAP")
@@ -462,7 +464,7 @@ def fig_ecarts(c, A):
     e = tete("lan-e", t["titre"], desc_ecarts(L), h + 52)
     for v in range(v0, v1 + 1, 5):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.5"/>' % (sx(v), top - 16, sx(v), top + pas * len(L) - 10, GRID))
-        e.append('<text x="%.1f" y="%d" font-size="9.5" fill="%s" text-anchor="middle">%d</text>' % (sx(v), top + pas * len(L) + 6, MUTED, v))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (sx(v), top + pas * len(L) + 6, MUTED, v))
     for i, (lib, a, b, sg) in enumerate(L):
         y = top + pas * i
         col = ORANGE if sg and b < a else GRIS
@@ -471,16 +473,16 @@ def fig_ecarts(c, A):
         e.append('<circle cx="%.1f" cy="%d" r="4.5" fill="#ffffff" stroke="%s" stroke-width="1.6"/>' % (sx(a), y, INK2))
         e.append('<circle cx="%.1f" cy="%d" r="5" fill="%s"/>' % (sx(b), y, col))
         gauche, droite = (b, a) if b < a else (a, b)
-        e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="end">%s</text>' % (sx(gauche) - 9, y + 4, INK2, nb(gauche)))
-        e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s">%s</text>' % (sx(droite) + 9, y + 4, INK2, nb(droite)))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="end">%s</text>' % (sx(gauche) - 9, y + 4, INK2, nb(gauche)))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s">%s</text>' % (sx(droite) + 9, y + 4, INK2, nb(droite)))
     yl = top + pas * len(L) + 26
     e.append('<circle cx="6" cy="%d" r="4.5" fill="#ffffff" stroke="%s" stroke-width="1.6"/>' % (yl - 4, INK2))
-    e.append('<text x="16" y="%d" font-size="10" fill="%s">2015</text>' % (yl, INK2))
+    e.append('<text x="16" y="%d" font-size="11" fill="%s">2015</text>' % (yl, INK2))
     e.append('<circle cx="62" cy="%d" r="5" fill="%s"/>' % (yl - 4, GRIS))
-    e.append('<text x="72" y="%d" font-size="10" fill="%s">2021</text>' % (yl, INK2))
+    e.append('<text x="72" y="%d" font-size="11" fill="%s">2021</text>' % (yl, INK2))
     for k, (col, lib) in enumerate(((ORANGE, "baisse significative"), (GRIS, "sans évolution significative"))):
         e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="5"/>' % (130 + 190 * k, yl - 4, 152 + 190 * k, yl - 4, col))
-        e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (158 + 190 * k, yl, INK2, lib))
+        e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (158 + 190 * k, yl, INK2, lib))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -535,15 +537,15 @@ def fig_chronologie(c, A):
     xs = sx(c["seuil"])
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f1efec"/>' % (xs, top - 22, x1 - xs, pas * len(L) + 22))
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.2"/>' % (xs, top - 22, xs, top + pas * len(L), INK2))
-    e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="end">%s : plus de la moitié des 12-17 ans ont un smartphone →</text>'
+    e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="end">%s : plus de la moitié des 12-17 ans ont un smartphone →</text>'
              % (xs - 4, top - 28, INK2, A["smart_seuil"]))
     for a in range(1990, 2026, 5):
-        e.append('<text x="%.1f" y="%d" font-size="9.5" fill="%s" text-anchor="middle">%d</text>' % (sx(a), top + pas * len(L) + 14, MUTED, a))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (sx(a), top + pas * len(L) + 14, MUTED, a))
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.5"/>' % (sx(a), top - 10, sx(a), top + pas * len(L), GRID))
     for i, (lib, pop, seg) in enumerate(L):
         y = top + pas * i + 8
         e.append('<text x="0" y="%d" font-size="11" fill="%s">%s</text>' % (y + 4, INK, esc(lib)))
-        e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="end">%s</text>' % (x0 - 10, y + 4, MUTED, esc(pop)))
+        e.append('<text x="%d" y="%d" font-size="11" fill="%s" text-anchor="end">%s</text>' % (x0 - 10, y + 4, MUTED, esc(pop)))
         for u, v, sg, bs in seg:
             col, plein = statut(sg, bs)
             e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"%s/>'
@@ -555,8 +557,8 @@ def fig_chronologie(c, A):
     for (col, plein), lib in ((( ORANGE, True), "recul significatif"), ((GRIS, True), "sans évolution significative"),
                               ((BLEU, True), "hausse significative"), ((ORANGE, False), "tirets : sens observé, sans test publié")):
         e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="4"%s/>' % (x, yl, x + 22, yl, col, "" if plein else ' stroke-dasharray="5 3"'))
-        e.append('<text x="%d" y="%d" font-size="10" fill="%s">%s</text>' % (x + 28, yl + 4, INK2, esc(lib)))
-        x += 34 + int(5.2 * len(lib))   # 7 px par caractère sortaient la 4e entrée du cadre (coupée à 720, mesure du 11/10/2026)
+        e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x + 28, yl + 4, INK2, esc(lib)))
+        x += 34 + int(5.2 * 11 / 10 * len(lib))   # 5,2 px par caractère à 10 px, portés à la police de 11 (7 px sortaient la 4e entrée du cadre, mesure du 11/10/2026)
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -574,20 +576,20 @@ def fig_dictee(c, A):
     for v in (0, 5, 10, 15, 20, 25):
         y = base - sy(v)
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (x0 - 10, y, W - 40, y, GRID))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d</text>' % (x0 - 16, y + 3.5, MUTED, v))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d</text>' % (x0 - 16, y + 3.5, MUTED, v))
     for i, a in enumerate(ans):
         x = x0 + i * (bw + gap)
         l, o = lx[a], tot[a] - lx[a]
         e.append('<rect x="%d" y="%.1f" width="%d" height="%.1f" fill="%s"/>' % (x, base - sy(l), bw, sy(l), BLEU))
         e.append('<rect x="%d" y="%.1f" width="%d" height="%.1f" fill="%s"/>' % (x, base - sy(l + o), bw, sy(o), ORANGE))
         e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l + o) - 6, INK, nbp(tot[a])))
-        e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="#ffffff" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) / 2 + 4, nbp(l)))
-        e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="#ffffff" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) - sy(o) / 2 + 4, nbp(round(o, 1))))
+        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="#ffffff" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) / 2 + 4, nbp(l)))
+        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="#ffffff" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) - sy(o) / 2 + 4, nbp(round(o, 1))))
         e.append('<text x="%.1f" y="%d" font-size="11.5" fill="%s" text-anchor="middle">%s</text>' % (x + bw / 2, base + 16, INK2, a))
     yl = base + 40
     for k, (col, lib) in enumerate(((BLEU, "Erreurs lexicales (orthographe des mots)"), (ORANGE, "Autres erreurs (grammaire, ponctuation, oublis)"))):
         e.append('<rect x="%d" y="%d" width="12" height="12" fill="%s"/>' % (k * 300, yl - 10, col))
-        e.append('<text x="%d" y="%d" font-size="10.5" fill="%s">%s</text>' % (k * 300 + 18, yl, INK2, esc(lib)))
+        e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (k * 300 + 18, yl, INK2, esc(lib)))
     return pied(e, h + 2, t["source"], t["note"])
 
 

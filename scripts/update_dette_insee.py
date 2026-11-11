@@ -540,12 +540,16 @@ MARG_L, MARG_R = 46, 14
 # controles, seul et avec l'orange et l'aqua.
 COL_DETTE = "#184f95"   # palette dataviz, rampe bleue, pas 600 (validee)
 COL_INTER = "#eb6834"   # slot 2
-INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
+# MUTED ne colore que du TEXTE (graduations, annees, unites, credit, libelles des series grises) : encre attenuee de
+# l'organe commun, jamais recopiee (11/11/2026 : #898781 faisait 3,59:1 en texte). L'ancien gris reste celui des MARQUES
+# sous le nom GRIS_MARQUE (courbe « Enseignement » des masses comparees), comme CTX3 plus bas.
+INK, INK2, MUTED, GRID, AXIS = "#0A0A0E", "#52514e", pied_figure.ENCRE_ATTENUEE, "#e1e0d9", "#c3c2b7"
+GRIS_MARQUE = "#898781"
 # Troisieme valeur de contexte des masses comparees. « Ordre et securite » etait
 # trace en AXIS, c'est-a-dire dans la couleur de l'axe des abscisses : une SERIE
 # partageait la teinte d'un element de structure, et la comparaison la plus
 # frappante de la figure -- les interets repassent au-dessus d'elle -- se lisait
-# comme du quadrillage. Un gris de plus, entre MUTED et AXIS, separe la donnee de
+# comme du quadrillage. Un gris de plus, entre GRIS_MARQUE et AXIS, separe la donnee de
 # la grille SANS introduire de seconde couleur de donnees : la hierarchie continue
 # de tenir en noir et blanc, ce que la docstring de la figure protege.  (2026-09-29)
 CTX3 = "#a5a39a"
@@ -558,6 +562,7 @@ TABNUM = 'font-variant-numeric="tabular-nums"'
 # collection. Les tailles restent celles deja en place -- ce qui change, c'est
 # qu'elles sont nommees en un seul endroit.
 TY_TITRE, TY_AXE, TY_ANNOT, TY_VALEUR, TY_MINEUR = 13, 11, 12, 15, 11
+TY_MIN = pied_figure.POLICE_MIN   # plus petite police d'une figure detaillee (720 de large) ; controle : check-figures.py, R6
 
 
 def _x(t: float, t0: float, t1: float) -> float:
@@ -764,10 +769,12 @@ def bandes_crise(X, y_haut, y_bas, lang, x_min=None, x_max=None, libelles=True,
         if libelles:
             # `bas` : 10 px au-dessus de la ligne de base du panneau, la ou aucune
             # courbe ne passe -- l'evenement est du contexte, il se lit apres.
-            y = (y_bas - 10) if bas else (y_haut + 12)
-            out.append('<text x="%.1f" y="%.1f" font-size="10" fill="%s" text-anchor="middle" '
+            # En haut : TY_MIN + 2 sous le bord (12 quand le libelle etait a 10 px), pour que le haut des lettres garde
+            # sa place sous le premier trait de la grille.
+            y = (y_bas - 10) if bas else (y_haut + TY_MIN + 2)
+            out.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="middle" '
                        'opacity="0.85">%s</text>'
-                       % ((xa + xb) / 2, y, BANDE, _esc(lib_fr if lang == "fr" else lib_en)))
+                       % ((xa + xb) / 2, y, TY_MIN, BANDE, _esc(lib_fr if lang == "fr" else lib_en)))
     return out
 
 
@@ -1210,7 +1217,9 @@ def build_svg_marche(apparent: dict, marche: dict, lang: str = "fr") -> str:
     cx, cy = pm[years.index(int(creux))]
     e.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"/>' % (cx, cy, INK2))
     e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">'
-             '%s%s en %s</text>' % (cx, cy + 18, INK2, num(marche[creux]), L["pct"], creux))
+             '%s%s %s %s</text>' % (cx, cy + 18, INK2, num(marche[creux]), L["pct"], "en" if lang == "fr" else "in", creux))
+    # « en » / « in » : le mot français était écrit en dur et passait dans la figure anglaise (« -0.1% en 2020 », relevé
+    # le 11/11/2026 par le contrôle du rendu).
 
     src = LABELS_CARTOUCHE[lang]["src_marche"]
     pc = " %" if lang == "fr" else "%"
@@ -1389,13 +1398,16 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
     # calcule, il ne se choisit pas -- sinon la comparaison deviendrait un cadrage.
     ref = lg.extremum(ans, lambda a: interets[a], 0, maxi=False)
     # contexte d'abord, serie heroine ensuite : l'ordre de dessin est la hierarchie
-    gris = {"GF07": INK2, "GF09": MUTED, "GF03": CTX3}
+    # gris : les COURBES (marques, inchangees) ; encre : leurs LIBELLES, a l'encre attenuee quand le gris de la courbe
+    # n'a pas le contraste d'un texte (11/11/2026). Le libelle se rattache a sa courbe par sa position, en bout de trace.
+    gris = {"GF07": INK2, "GF09": GRIS_MARQUE, "GF03": CTX3}
+    encre = {"GF07": INK2, "GF09": MUTED, "GF03": MUTED}
     bouts = []
     for c in fonctions:
         pts = [(X(a), Y(cofog[c][a])) for a in ans]
         e.append('<path d="%s" fill="none" stroke="%s" stroke-width="1.6" '
                  'stroke-linejoin="round"/>' % (_line_path(pts), gris[c]))
-        bouts.append((pts[-1][1], gris[c], L["series"][c], cofog[c][ans[-1]], False,
+        bouts.append((pts[-1][1], encre[c], L["series"][c], cofog[c][ans[-1]], False,
                       (cofog[c][ans[-1]] / cofog[c][ref] - 1) * 100, c))
     pts = [(X(a), Y(interets[a])) for a in ans]
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.8" '
@@ -1467,13 +1479,13 @@ def build_svg_masses(interets: dict, cofog: dict, lang: str = "fr") -> str:
         for ligne in detail.get(code, []):
             dy += PAS
             e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%s</text>'
-                     % (W - mr + 12, dy, TY_MINEUR - 1, MUTED, _esc(ligne)))
+                     % (W - mr + 12, dy, TY_MIN, MUTED, _esc(ligne)))
         # La croissance DEPUIS LE CREUX repond a la lecture spontanee de la
         # figure (« tout monte plus vite que les interets ») : vraie sur trente
         # ans, fausse depuis le creux. Calculee, jamais ecrite a la main.
         # Espace avant « % » en français, aucune en anglais (« +26% since 2020 », 04/10).
         e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s">%+d%s %s %d</text>'
-                 % (W - mr + 12, dy + PAS, TY_MINEUR - 1, MUTED, round(croiss),
+                 % (W - mr + 12, dy + PAS, TY_MIN, MUTED, round(croiss),
                     " %" if lang == "fr" else "%", "depuis" if lang == "fr" else "since", ref))
     return fin_pied(e, W, H + 4, L["src"] % (a0, a1), "masses", lang)
 
@@ -1537,8 +1549,8 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
     # Seuil de traite : un fait, donc une ligne, pas une annotation flottante.
     e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" '
              'stroke-width="1" stroke-dasharray="5 4"/>' % (ml, Y(60), w - mr, Y(60), AXIS))
-    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="10" fill="%s">%s</text>'
-             % (ml + 6, Y(60) - 5, FONT, MUTED,
+    e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s">%s</text>'
+             % (ml + 6, Y(60) - 5, FONT, TY_MIN, MUTED,
                 _esc("référence Maastricht, 60 %" if lang == "fr"
                      else "Maastricht reference, 60%")))
     # Les bandes passent APRES l'aplat : dessous, elles viraient au gris (vu au
@@ -1665,7 +1677,7 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
         # flottait sans designer sa bande. Il s'aligne alors sur le BORD de la
         # bande -- debut a gauche, fin a droite (auteur, 12/10/2026 : « 1979 »
         # aligne sur le debut de la bande du post-choc petrolier).
-        demi = 0.29 * (TY_MINEUR - 1) * max(len(lib), len(per))
+        demi = 0.29 * TY_MIN * max(len(lib), len(per))
         ancre = "middle"
         if cx - demi < ml:
             cx, ancre = X(max(a1b, x0)), "start"
@@ -1673,10 +1685,10 @@ def build_svg_longue(annuel: dict, pct_courant: float, label_courant: str,
             cx, ancre = X(min(a2b, x1)), "end"
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s" '
                  'text-anchor="%s">%s</text>'
-                 % (cx, h - 18, FONT, TY_MINEUR - 1, MUTED, ancre, _esc(per)))
+                 % (cx, h - 17, FONT, TY_MIN, MUTED, ancre, _esc(per)))  # 17 et 5 (18 et 6 a 10 px) : la periode ne touche pas l'axe
         e.append('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s" '
                  'text-anchor="%s">%s</text>'
-                 % (cx, h - 6, FONT, TY_MINEUR - 1, MUTED, ancre, _esc(lib)))
+                 % (cx, h - 5, FONT, TY_MIN, MUTED, ancre, _esc(lib)))
 
     src = LABELS_CARTOUCHE[lang]["src_longue"]
     return fin_pied(e, w, h + 4, src % (ans[0], label_courant), "longue", lang)
@@ -2513,7 +2525,8 @@ def main() -> int:
             t = nbf(abs(v), d)
             return ("+" + t) if v > 0.0005 else (("\u2212" + t) if v < -0.0005 else t)
         return f
-    CTX = {"INK": INK, "INK2": INK2, "MUTED": MUTED, "GRID": GRID, "AXIS": AXIS, "CTX3": CTX3,
+    # MUTED : texte (encre attenuee) ; GRIS_MARQUE et CTX3 : courbes grises (marques).
+    CTX = {"INK": INK, "INK2": INK2, "MUTED": MUTED, "GRIS_MARQUE": GRIS_MARQUE, "GRID": GRID, "AXIS": AXIS, "CTX3": CTX3,
            "BLEU": COL_DETTE, "ORANGE": COL_INTER, "FONT": FONT,
            "nb": {"fr": fr, "en": en}, "sg": {"fr": signe(fr), "en": signe(en)}}
     LIC_M = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",

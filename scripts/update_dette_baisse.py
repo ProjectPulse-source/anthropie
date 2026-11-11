@@ -81,7 +81,7 @@ API = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/%s?fo
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", PF.ENCRE_ATTENUEE, "#dcd8d3"   # MUTED : texte seulement
 LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 
 # nom, forme avec article (prose)

@@ -193,8 +193,11 @@ ECB = "https://data-api.ecb.europa.eu/service/data/GFS/%s?format=csvdata&detail=
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
-LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
+# MUTED ne colore que du TEXTE (graduations, unités, crédit) : encre atténuée de l'organe commun (11/11/2026). Les marques
+# grises (GRIS, GRIS_CLAIR, GRID) gardent leur gris. FS_DET : plus petite police d'une figure détaillée (720 de large).
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
+FS_DET = pied_figure.POLICE_MIN
+LICENCES ={"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 
 PAYS = {"AT": ("Autriche", "l'Autriche"), "BE": ("Belgique", "la Belgique"), "BG": ("Bulgarie", "la Bulgarie"),
         "CY": ("Chypre", "Chypre"), "CZ": ("Tchéquie", "la Tchéquie"), "DE": ("Allemagne", "l'Allemagne"),
@@ -1389,8 +1392,8 @@ def fig_actifs(total, dec, A):
                        % (lib_, fr(d["besoin"]), fr(d["part_actifs"], 0), fr(d["part_transferts"], 0), fr(d["part_desepargne"], 0)) for lib_, d in rang))
     e = entete(0, "ga", T["act_titre"], desc)
     legende(e, [(BLEU, T["act_leg"][0]), (GRIS_CLAIR, T["act_leg"][1]), (ORANGE, T["act_leg"][2])])
-    e.append('<text x="%d" y="72" font-size="10" fill="%s" text-anchor="end">%s</text>' % (W, MUTED, T["act_axe"][0]))
-    e.append('<text x="%d" y="84" font-size="10" fill="%s" text-anchor="end">%s</text>' % (W, MUTED, T["act_axe"][1]))
+    e.append('<text x="%d" y="72" font-size="%d" fill="%s" text-anchor="end">%s</text>' % (W, FS_DET, MUTED, T["act_axe"][0]))
+    e.append('<text x="%d" y="84" font-size="%d" fill="%s" text-anchor="end">%s</text>' % (W, FS_DET, MUTED, T["act_axe"][1]))
     top, hb, pas = 96, 34, 50
     y = top
     for k, (lib_, d) in enumerate(rang):
@@ -1465,16 +1468,17 @@ def fig_detention(det, A):
         bas_cumul = haut
     for g_ in range(0, 101, 25):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6" stroke-opacity="0.8"/>' % (X0, Y(g_), X1, Y(g_), "#ffffff"))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d%s</text>' % (X0 - 6, Y(g_) + 3, MUTED, g_, T["pc"]))
+        e.append('<text x="%d" y="%.1f" font-size="%d" fill="%s" text-anchor="end">%d%s</text>' % (X0 - 6, Y(g_) + 3, FS_DET, MUTED, g_, T["pc"]))
     e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1.2" stroke-dasharray="4 3"/>' % (X0, Y(50), X1, Y(50), INK))
     for k, r in enumerate(det):
         if r["annee"] % 5 == 0 or k == n - 1:
-            e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(k), BAS + 14, INK2, r["annee"]))
+            # BAS + 15 (14 quand ces années étaient à 10 px) : « 1995 » garde son écart sous le « 0 % » de l'axe vertical
+            e.append('<text x="%.1f" y="%d" font-size="%d" fill="%s" text-anchor="middle">%d</text>' % (X(k), BAS + 15, FS_DET, INK2, r["annee"]))
     last = det[-1]
     for cle, lib_ in zip(("part_non_residents", "part_autres_residents", "part_banque_centrale"), T["det_lib"]):
         e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 8, Y(milieux[cle]) - 2, INK2, esc(lib_)))
         e.append('<text x="%d" y="%.1f" font-size="11" font-weight="600" fill="%s">%s%s</text>' % (X1 + 8, Y(milieux[cle]) + 11, INK, fr(last[cle], 0), T["pc"]))
-    e.append('<text x="%d" y="%.1f" font-size="10" fill="%s">%s</text>' % (X0 + 4, Y(50) - 4, INK, T["det_moitie"]))
+    e.append('<text x="%d" y="%.1f" font-size="%d" fill="%s">%s</text>' % (X0 + 4, Y(50) - 4, FS_DET, INK, T["det_moitie"]))
     return pied(e, BAS + 26, T["det_src"] % (A["h0"], A["h_fin"]), T["det_note"])
 
 
@@ -1535,7 +1539,7 @@ def fig_vieillissement(S2fr, C, A):
     top, pas, hb = 80, 50, 15
     for g_ in range(0, vmax + 1):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"/>' % (Xv(g_), top - 6, Xv(g_), top + pas * len(groupes) - 14, GRID, 1.4 if g_ == 0 else 0.6))
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (Xv(g_), top + pas * len(groupes), MUTED, g_))
+        e.append('<text x="%.1f" y="%d" font-size="%d" fill="%s" text-anchor="middle">%d</text>' % (Xv(g_), top + pas * len(groupes), FS_DET, MUTED, g_))
     for k, (lib_, s, a, b) in enumerate(groupes):
         y = top + pas * k
         e.append('<text x="0" y="%d" font-size="11.5" font-weight="600" fill="%s">%s</text>' % (y + 12, INK, esc(lib_)))
@@ -1545,9 +1549,9 @@ def fig_vieillissement(S2fr, C, A):
             yy = y + j * (hb + 2)
             x0_, x1_ = sorted((Xv(0), Xv(v)))
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (x0_, yy, max(x1_ - x0_, 0.6), hb, col))
-            e.append('<text x="%.1f" y="%d" font-size="10" font-weight="600" fill="%s">%s</text>' % (max(x1_, Xv(0)) + 4, yy + 11, INK, fr(v)))
+            e.append('<text x="%.1f" y="%d" font-size="%d" font-weight="600" fill="%s">%s</text>' % (max(x1_, Xv(0)) + 4, yy + 11, FS_DET, INK, fr(v)))
     yb = top + pas * len(groupes)
-    e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="end">%s</text>' % (X1, yb + 15, MUTED, T["vie_axe"]))
+    e.append('<text x="%d" y="%d" font-size="%d" fill="%s" text-anchor="end">%s</text>' % (X1, yb + 15, FS_DET, MUTED, T["vie_axe"]))
     return pied(e, yb + 24, T["vie_src"] % A["dsm_lib"], T["vie_note"])
 
 

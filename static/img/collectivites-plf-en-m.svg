@@ -4,35 +4,35 @@
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Draft budget bill for 2027:</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">what it asks of local</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">authorities</text>
-<text x="0" y="105" font-size="13.5" fill="#898781">€ billion, amounts in the bill as</text>
-<text x="0" y="124" font-size="13.5" fill="#898781">tabled</text>
+<text x="0" y="105" font-size="13.5" fill="#6f6c66">€ billion, amounts in the bill as</text>
+<text x="0" y="124" font-size="13.5" fill="#6f6c66">tabled</text>
 <text x="0" y="143" font-size="13.5" fill="#eb6834">In orange: in the initial bill due</text>
 <text x="0" y="162" font-size="13.5" fill="#eb6834">before the Senate</text>
 <text x="0" y="188" font-size="15" font-weight="600" fill="#eb6834">2.5 bn</text>
 <text x="0" y="207" font-size="13.5" fill="#0A0A0E">Progressive contribution (art. 37)</text>
-<text x="0" y="225" font-size="13.5" fill="#898781">initial bill due before the Senate;</text>
-<text x="0" y="243" font-size="13.5" fill="#898781">Assembly: art. 37 deleted in plenary</text>
-<text x="0" y="261" font-size="13.5" fill="#898781">on 19 October 2026</text>
+<text x="0" y="225" font-size="13.5" fill="#6f6c66">initial bill due before the Senate;</text>
+<text x="0" y="243" font-size="13.5" fill="#6f6c66">Assembly: art. 37 deleted in plenary</text>
+<text x="0" y="261" font-size="13.5" fill="#6f6c66">on 19 October 2026</text>
 <text x="0" y="287" font-size="15" font-weight="600" fill="#eb6834">2.1 bn</text>
 <text x="0" y="306" font-size="13.5" fill="#0A0A0E">FCTVA, rate cut (art. 35)</text>
-<text x="0" y="324" font-size="13.5" fill="#898781">initial bill due before the Senate;</text>
-<text x="0" y="342" font-size="13.5" fill="#898781">Assembly: art. 35 deleted in plenary</text>
-<text x="0" y="360" font-size="13.5" fill="#898781">on 19 October 2026</text>
+<text x="0" y="324" font-size="13.5" fill="#6f6c66">initial bill due before the Senate;</text>
+<text x="0" y="342" font-size="13.5" fill="#6f6c66">Assembly: art. 35 deleted in plenary</text>
+<text x="0" y="360" font-size="13.5" fill="#6f6c66">on 19 October 2026</text>
 <text x="0" y="386" font-size="15" font-weight="600" fill="#eb6834">0.7 bn</text>
 <text x="0" y="405" font-size="13.5" fill="#0A0A0E">Contributions from ministries</text>
-<text x="0" y="423" font-size="13.5" fill="#898781">initial bill due before the Senate;</text>
-<text x="0" y="441" font-size="13.5" fill="#898781">Assembly: second part, not examined</text>
+<text x="0" y="423" font-size="13.5" fill="#6f6c66">initial bill due before the Senate;</text>
+<text x="0" y="441" font-size="13.5" fill="#6f6c66">Assembly: second part, not examined</text>
 <text x="0" y="467" font-size="15" font-weight="600" fill="#eb6834">0.6 bn</text>
 <text x="0" y="486" font-size="13.5" fill="#0A0A0E">Assigned VAT, capping (art. 36)</text>
-<text x="0" y="504" font-size="13.5" fill="#898781">initial bill due before the Senate;</text>
-<text x="0" y="522" font-size="13.5" fill="#898781">Assembly: art. 36 not adopted in</text>
-<text x="0" y="540" font-size="13.5" fill="#898781">plenary on 19 October 2026</text>
+<text x="0" y="504" font-size="13.5" fill="#6f6c66">initial bill due before the Senate;</text>
+<text x="0" y="522" font-size="13.5" fill="#6f6c66">Assembly: art. 36 not adopted in</text>
+<text x="0" y="540" font-size="13.5" fill="#6f6c66">plenary on 19 October 2026</text>
 <text x="0" y="566" font-size="15" font-weight="600" fill="#eb6834">0.3 bn</text>
 <text x="0" y="585" font-size="13.5" fill="#0A0A0E">DILICO, repayment spread out (art. 84)</text>
-<text x="0" y="603" font-size="13.5" fill="#898781">initial bill due before the Senate,</text>
-<text x="0" y="621" font-size="13.5" fill="#898781">examination scheduled for 2 December</text>
-<text x="0" y="639" font-size="13.5" fill="#898781">2026; Assembly: art. 84 deleted in</text>
-<text x="0" y="657" font-size="13.5" fill="#898781">committee on 28 October 2026</text>
+<text x="0" y="603" font-size="13.5" fill="#6f6c66">initial bill due before the Senate,</text>
+<text x="0" y="621" font-size="13.5" fill="#6f6c66">examination scheduled for 2 December</text>
+<text x="0" y="639" font-size="13.5" fill="#6f6c66">2026; Assembly: art. 84 deleted in</text>
+<text x="0" y="657" font-size="13.5" fill="#6f6c66">committee on 28 October 2026</text>
 <line x1="0" y1="673.0" x2="300" y2="673.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="694.0" font-size="13.5" fill="#52514e">Draft budget bill for 2027 (no. 3210)</text>
 <text class="pied-source" x="0" y="711.0" font-size="13.5" fill="#52514e">and opinion no. 2026-5 of the High</text>
@@ -49,6 +49,6 @@
 <text class="pied-note" x="0" y="902.0" font-size="13.5" fill="#52514e">not measure a net levy. The Senate may</text>
 <text class="pied-note" x="0" y="919.0" font-size="13.5" fill="#52514e">amend each measure before the final</text>
 <text class="pied-note" x="0" y="936.0" font-size="13.5" fill="#52514e">act.</text>
-<text class="pied-licence" x="0" y="957.0" font-size="13.5" fill="#898781">Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="974.0" font-size="13.5" fill="#898781">· stephane-lalut.com</text>
+<text class="pied-licence" x="0" y="957.0" font-size="13.5" fill="#6f6c66">Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="974.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

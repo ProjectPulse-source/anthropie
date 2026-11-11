@@ -958,7 +958,8 @@ def affichage(c: dict) -> dict:
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, GRIS = "#184f95", "#8a8781"
-INK, INK2, MUTED, GRID, BANDE, LIEN = "#26262f", "#55524f", "#96928f", "#dcd8d3", "#e4dfd7", "#cfcac3"
+INK, INK2, MUTED, GRID, BANDE, LIEN = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3", "#e4dfd7", "#cfcac3"
+TRAIT = "#96928f"      # graduations (traits) : le gris des marques ; le texte prend MUTED, encre atténuée de l'organe commun
 FS_MIN = pied_figure.POLICE_M
 LIC_FIG = "Calcul Stéphane Lalut, licence CC BY 4.0 · " + PAGE_URL
 LIC_FIG_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"
@@ -1133,20 +1134,20 @@ def fig_tranches(c: dict, A: dict) -> str:
     ordre = [cle for cle, _, _, _ in reversed(TRANCHES)]      # 100 % en haut : la figure monte de gauche à droite
     BAS = TOP + PAS * len(ordre)
     e = ouvre("psup-t", t["titre"], t["sous_titre"], desc_tranches(c, A))
-    cle_tranches(e, 60, A, 10.5)
-    e.append('<text x="0" y="%d" font-size="10.5" fill="%s">Taux d\'accès l\'année de départ</text>' % (TOP - 6, INK2))
+    cle_tranches(e, 60, A, 11)
+    e.append('<text x="0" y="%d" font-size="11" fill="%s">Taux d\'accès l\'année de départ</text>' % (TOP - 6, INK2))
     for gv in range(0, 101, 20):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"/>'
                  % (X(gv), TOP - 2, X(gv), BAS, GRID, 1 if gv == 0 else 0.6))
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(gv), BAS + 15, MUTED, gv))
-    e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">Taux d\'accès l\'année suivante, en %%</text>'
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(gv), BAS + 15, MUTED, gv))
+    e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">Taux d\'accès l\'année suivante, en %%</text>'
              % (X(50), BAS + 31, INK2))
     for i, cle in enumerate(ordre):
         y = TOP + PAS * i + 22
         j = "d_%s_" % JETON_TRANCHE[cle]
         ancre = cle == TRANCHE_RESULTAT
         e.append('<text x="0" y="%.1f" font-size="12" font-weight="600" fill="%s">%s</text>' % (y + 1, INK, esc(A[j + "lib"].capitalize())))
-        e.append('<text x="0" y="%.1f" font-size="10" fill="%s">%s formations en %s</text>' % (y + 15, INK2, esc(A[j + "n"]), A["d_de"]))
+        e.append('<text x="0" y="%.1f" font-size="11" fill="%s">%s formations en %s</text>' % (y + 15, INK2, esc(A[j + "n"]), A["d_de"]))
         marques_tranche(e, X, y, cle, p, d)
         vd = d["tranches"][cle]
         fs = 13 if ancre else 11
@@ -1190,7 +1191,7 @@ def fig_tranches_m(c: dict, A: dict, svg_d: str) -> str:
     y += 12
     e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s"/>' % (X0, y, X1, y, GRID))
     for gv, ancre_ in ((0, "start"), (50, "middle"), (100, "end")):
-        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(gv), y, X(gv), y + 5, MUTED))
+        e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s"/>' % (X(gv), y, X(gv), y + 5, TRAIT))
         e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%s</text>' % (X(gv), y + 21, FS_MIN, MUTED, ancre_, esc("%d %%" % gv)))
     e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">Taux d\'accès l\'année suivante</text>'
              % (X(50), y + 40, FS_MIN, INK2))
@@ -1260,16 +1261,16 @@ def fig_filieres(c: dict, A: dict) -> str:
     # Clé dans l'ordre du temps, comme sur téléphone (« −2 puis −11 ») ; l'en-tête des effectifs est collé à sa colonne et
     # dit « de … à … » (« 2024-2025 » se lisait comme une année scolaire, et l'en-tête comme une suite de la clé).
     e.append('<circle cx="6" cy="60" r="5.2" fill="#ffffff" stroke="%s" stroke-width="1.3"/>' % GRIS)
-    e.append('<text x="18" y="64" font-size="10.5" fill="%s">de %s à %s, puis</text>' % (INK2, A["p_de"], A["p_a"]))
+    e.append('<text x="18" y="64" font-size="11" fill="%s">de %s à %s, puis</text>' % (INK2, A["p_de"], A["p_a"]))
     e.append('<circle cx="158" cy="60" r="4.6" fill="%s"/>' % BLEU)
-    e.append('<text x="170" y="64" font-size="10.5" fill="%s">de %s à %s</text>' % (INK2, A["d_de"], A["d_a"]))
-    e.append('<text x="236" y="%d" font-size="10" fill="%s" text-anchor="end">formations comparées de %s à %s</text>'
+    e.append('<text x="170" y="64" font-size="11" fill="%s">de %s à %s</text>' % (INK2, A["d_de"], A["d_a"]))
+    e.append('<text x="236" y="%d" font-size="11" fill="%s" text-anchor="end">formations comparées de %s à %s</text>'
              % (TOP + 3, INK2, A["d_de"], A["d_a"]))
     for gv in (-10, -5, 0):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"/>'
                  % (X(gv), TOP - 2, X(gv), BAS, INK2 if gv == 0 else GRID, 0.9 if gv == 0 else 0.6))
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%s</text>' % (X(gv), BAS + 15, MUTED, lg.signe(gv, 0)))
-    e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">Variation médiane du taux d\'accès, en points de pourcentage</text>'
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (X(gv), BAS + 15, MUTED, lg.signe(gv, 0)))
+    e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">Variation médiane du taux d\'accès, en points de pourcentage</text>'
              % ((X0 + X1) / 2.0, BAS + 31, INK2))
     extreme = fil[0]
     for i, f in enumerate(fil):
@@ -1286,11 +1287,11 @@ def fig_filieres(c: dict, A: dict) -> str:
         e.append('<line x1="%.1f" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (xg, y, X1, y, GRID))
         e.append('<text x="0" y="%.1f" font-size="11.5"%s fill="%s">%s</text>'
                  % (y + 4, ' font-weight="600"' if f == extreme else "", INK, esc(NOM_FILIERE[f])))
-        e.append('<text x="236" y="%.1f" font-size="10" fill="%s" text-anchor="end">%s</text>' % (y + 4, INK2, esc(A["d_" + j + "n"])))
+        e.append('<text x="236" y="%.1f" font-size="11" fill="%s" text-anchor="end">%s</text>' % (y + 4, INK2, esc(A["d_" + j + "n"])))
         marques_filiere(e, X, y, vp, vd)
         e.append(pose_valeur(X, y, vd, vp, a_gauche, bleu, 14 if f == extreme else 11, BLEU, True))
         if vp is not None:                                               # à égalité aussi : chaque ligne porte ses deux valeurs
-            e.append(pose_valeur(X, y, vp, vd, not a_gauche, A["p_" + j + "med"], 10, INK2, False))
+            e.append(pose_valeur(X, y, vp, vd, not a_gauche, A["p_" + j + "med"], 11, INK2, False))
     return pied_figure.pied(e, BAS + 44, W, [(t["source"], INK2, "pied-source"), (t["note"], INK2, "pied-note"),
                                              (LIC_FIG, MUTED, "pied-licence")], GRID)
 
@@ -1339,7 +1340,7 @@ def fig_filieres_m(c: dict, A: dict, svg_d: str) -> str:
         for gv in (-10, -5, 0):     # repères de l'échelle sur chaque ligne, sous le texte et jamais à travers
             h = 6 if gv == 0 else 3
             e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="%s"/>'
-                     % (X(gv), yb - h, X(gv), yb + h, INK2 if gv == 0 else MUTED, 1 if gv == 0 else 0.8))
+                     % (X(gv), yb - h, X(gv), yb + h, INK2 if gv == 0 else TRAIT, 1 if gv == 0 else 0.8))
         marques_filiere(e, X, yb, vp, vd)
         e.append('<text x="298" y="%d" font-size="%s" fill="%s" text-anchor="end">%s</text>' % (yb + 5, FS_MIN, INK2, esc(A["d_" + j + "n"])))
         y = yb

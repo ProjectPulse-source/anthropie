@@ -9,11 +9,11 @@
 <text x="0.0" y="140.0" font-size="13.5" fill="#52514e" text-anchor="start">year through an alternative-entry</text>
 <text x="0.0" y="158.0" font-size="13.5" fill="#52514e" text-anchor="start">route</text>
 <line x1="50" y1="382.0" x2="298" y2="382.0" stroke="#e1e0d9" stroke-width="0.6"/>
-<text x="46.0" y="387.0" font-size="13.5" fill="#898781" text-anchor="end">0</text>
+<text x="46.0" y="387.0" font-size="13.5" fill="#6f6c66" text-anchor="end">0</text>
 <line x1="50" y1="292.0" x2="298" y2="292.0" stroke="#e1e0d9" stroke-width="0.6"/>
-<text x="46.0" y="297.0" font-size="13.5" fill="#898781" text-anchor="end">6,000</text>
+<text x="46.0" y="297.0" font-size="13.5" fill="#6f6c66" text-anchor="end">6,000</text>
 <line x1="50" y1="202.0" x2="298" y2="202.0" stroke="#e1e0d9" stroke-width="0.6"/>
-<text x="46.0" y="207.0" font-size="13.5" fill="#898781" text-anchor="end">12,000</text>
+<text x="46.0" y="207.0" font-size="13.5" fill="#6f6c66" text-anchor="end">12,000</text>
 <rect x="50.4" y="253.2" width="3.79" height="128.8" fill="#184f95"/>
 <rect x="55.0" y="253.4" width="3.79" height="128.6" fill="#184f95"/>
 <rect x="59.6" y="253.5" width="3.79" height="128.5" fill="#184f95"/>
@@ -70,9 +70,9 @@
 <rect x="293.8" y="215.0" width="3.79" height="167.0" fill="#7fa3cf"/>
 <line x1="224.5" y1="236" x2="224.5" y2="382" stroke="#52514e" stroke-dasharray="3 3"/>
 <line x1="275.0" y1="236" x2="275.0" y2="382" stroke="#52514e" stroke-dasharray="3 3"/>
-<text x="50.0" y="400.0" font-size="13.5" fill="#898781" text-anchor="start">1972</text>
-<text x="180.9" y="400.0" font-size="13.5" fill="#898781" text-anchor="middle">2000</text>
-<text x="298.0" y="400.0" font-size="13.5" fill="#898781" text-anchor="end">2025</text>
+<text x="50.0" y="400.0" font-size="13.5" fill="#6f6c66" text-anchor="start">1972</text>
+<text x="180.9" y="400.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">2000</text>
+<text x="298.0" y="400.0" font-size="13.5" fill="#6f6c66" text-anchor="end">2025</text>
 <text class="val" x="50.0" y="245.2" font-size="15" fill="#0A0A0E" text-anchor="start" font-weight="600">8,588</text>
 <text class="val" x="148.7" y="312.5" font-size="15" fill="#0A0A0E" text-anchor="middle" font-weight="600">3,500</text>
 <line x1="295.7" y1="203.0" x2="295.7" y2="214.0" stroke="#52514e"/>
@@ -94,6 +94,6 @@
 <text class="pied-note" x="0.0" y="674.0" font-size="13.5" fill="#52514e" text-anchor="start">since 2021, students admitted. Each</text>
 <text class="pied-note" x="0.0" y="691.0" font-size="13.5" fill="#52514e" text-anchor="start">bar at the year published by the</text>
 <text class="pied-note" x="0.0" y="708.0" font-size="13.5" fill="#52514e" text-anchor="start">source, no shift.</text>
-<text class="pied-licence" x="0.0" y="729.0" font-size="13.5" fill="#898781" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0.0" y="746.0" font-size="13.5" fill="#898781" text-anchor="start">· stephane-lalut.com</text>
+<text class="pied-licence" x="0.0" y="729.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="746.0" font-size="13.5" fill="#6f6c66" text-anchor="start">· stephane-lalut.com</text>
 </svg>

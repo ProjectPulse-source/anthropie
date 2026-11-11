@@ -498,11 +498,19 @@ def affichage(r: dict, L: dict, N: dict) -> dict:
 # ------------------------------------------------------------------ figures (charte des dossiers du site)
 W = 720
 BLEU, GRIS, GRIS_CLAIR = "#184f95", "#8a8f98", "#c9cdd3"
-INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", "#898781", "#e1e0d9"
+INK, INK2, MUTED, GRID = "#0A0A0E", "#52514e", pied_figure.ENCRE_ATTENUEE, "#e1e0d9"
+TRAIT = "#898781"      # filets pointillés des repères (traits) : le gris des marques ; le texte prend MUTED, encre atténuée de l'organe commun
 FONT = "system-ui, -apple-system, Segoe UI, sans-serif"
 LICENCES = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, "en": "Compiled by Stéphane Lalut, CC BY 4.0 · " + PAGE_URL_EN}
 LANG = "fr"
 FS_MIN = pied_figure.POLICE_M
+FS_D = pied_figure.POLICE_MIN      # plus petite police d'une figure détaillée (720 de large)
+
+
+def _fs(taille: float, mobile: bool = False) -> float:
+    """Taille d'un texte secondaire (graduation, repère), jamais sous le minimum de sa version : 11 en version détaillée,
+    13 en version téléphone (pied_figure). Au-dessus du seuil, la taille demandée est rendue telle quelle."""
+    return max(taille, pied_figure.POLICE_M_MIN if mobile else pied_figure.POLICE_MIN)
 
 
 def nbl(v, dec: int = 0) -> str:  # nombre selon la langue de la figure
@@ -637,11 +645,11 @@ def fig_recoupement(r: dict) -> str:
     e.append('<path d="M%.1f %d v8 H%.1f v-8" fill="none" stroke="%s" stroke-width="1.5"/>' % (a, y + h + 6, x1 - 1, INK2))
     e.append(txt((a + x1) / 2, y + h + 30, L["insc"] % (F["a_total"], F["p_a"]), 12, INK, "middle", "600"))
     yy = y + h + 62
-    e.append(txt(x0, yy, L["dont1"] % (nbl(r["bit_non_inscrits"]), nbl(r["bit_bc"])), 10, INK2))
-    e.append(txt(x0, yy + 13, L["dont2"] % nbl(r["bit_de"]), 10, INK2))
-    e.append(txt(x1, yy, L["dont3"] % nbl(r["a_halo"]), 10, INK2, "end"))
-    e.append(txt(x1, yy + 13, L["dont4"] % (nbl(r["a_hors_halo"]), nbl(r["a_emploi"])), 10, INK2, "end"))
-    e.append(txt((a + b) / 2, yy, L["deux"], 10, BLEU, "middle", "600"))
+    e.append(txt(x0, yy, L["dont1"] % (nbl(r["bit_non_inscrits"]), nbl(r["bit_bc"])), FS_D, INK2))
+    e.append(txt(x0, yy + 14, L["dont2"] % nbl(r["bit_de"]), FS_D, INK2))
+    e.append(txt(x1, yy, L["dont3"] % nbl(r["a_halo"]), FS_D, INK2, "end"))
+    e.append(txt(x1, yy + 14, L["dont4"] % (nbl(r["a_hors_halo"]), nbl(r["a_emploi"])), FS_D, INK2, "end"))
+    e.append(txt((a + b) / 2, yy, L["deux"], FS_D, BLEU, "middle", "600"))
     return pied_figure.pied(e, H + 2, W, blocs_pied(L["src1"], L["note1"]), GRID)
 
 
@@ -697,18 +705,18 @@ def _panneau(e: list, s: dict, cles: list, vmin: int, vmax: int, x0: float, pw: 
     for v in range(vmin, vmax + 1, 400_000):
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x0 + pw, Y(v), GRID))
         if axe:
-            e.append(txt(x0 - 6, Y(v) + 4, L["M"](v), fs - 1, MUTED, "end"))
+            e.append(txt(x0 - 6, Y(v) + 4, L["M"](v), _fs(fs - 1, mobile), MUTED, "end"))
     for i, c in enumerate(cles):
         if c.endswith("T1") and int(c[:4]) % an_pas == 0:
-            e.append(txt(X(i), y1 + 15, c[:4], fs - 1, MUTED, "middle"))
+            e.append(txt(X(i), y1 + (15 if mobile else 16), c[:4], _fs(fs - 1, mobile), MUTED, "middle"))
     i25 = cles.index("2025-T1") - 0.5
     e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-dasharray="3 3"/>' % (X(i25), y0 - 8, X(i25), y1, INK2))
     pts = " ".join("%.1f,%.1f" % (X(i), Y(s[c])) for i, c in enumerate(cles))
     e.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.4"%s/>'
              % (pts, col, "" if col == BLEU else ' stroke-dasharray="5 3"'))
     # téléphone : l'année seule (les deux libellés se chevauchaient à 300 de large)
-    e.append(txt((X(i22a) + X(i22b)) / 2, y0 - 10, "2022" if mobile else L["r2022"], fs - 2, INK2, "middle"))
-    e.append(txt(X(i25) + 3, y0 - 10, "2025" if mobile else L["r2025"], fs - 2, INK2, "start"))
+    e.append(txt((X(i22a) + X(i22b)) / 2, y0 - 10, "2022" if mobile else L["r2022"], _fs(fs - 2, mobile), INK2, "middle"))
+    e.append(txt(X(i25) + 3, y0 - 10, "2025" if mobile else L["r2025"], _fs(fs - 2, mobile), INK2, "start"))
 
 
 def fig_regle(r: dict) -> str:
@@ -725,7 +733,7 @@ def fig_regle(r: dict) -> str:
     # Deux lignes au plus (03/11/2026, check-figures R3 : la note anglaise, sur une ligne, sortait du cadre avec une police
     # plus large que celle du rendu de controle).
     for k, ligne in enumerate(pied_figure.coupe(L["ecart"], 118)[:2]):
-        e.append(txt(0, 332 + 12 * k, ligne, 10, INK2))
+        e.append(txt(0, 332 + 14 * k, ligne, FS_D, INK2))
     return pied_figure.pied(e, H + 2, W, blocs_pied(L["src2"], L["note2"]), GRID)
 
 
@@ -763,18 +771,18 @@ def _courbes(e: list, Lg: dict, x0: float, x1: float, y0: float, y1: float, fs: 
     Y = lambda v: y1 - (v - vmin) / (vmax - vmin) * (y1 - y0)  # noqa: E731
     for v in (2.0, 2.5, 3.0, 3.5, 4.0):
         e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x1, Y(v), GRID))
-        e.append(txt(x0 - 6, Y(v) + 4, L["Mi"](v), fs - 1, MUTED, "end"))
+        e.append(txt(x0 - 6, Y(v) + 4, L["Mi"](v), _fs(fs - 1, mobile), MUTED, "end"))
     for i, a in enumerate(ans):
         if not mobile or int(a) % 4 == 0:
-            e.append(txt(X(i), y1 + (22 if mobile else 16), a, fs - 1, MUTED, "middle"))
+            e.append(txt(X(i), y1 + (22 if mobile else 17), a, _fs(fs - 1, mobile), MUTED, "middle"))
     for a0, a1, n in REPERES:
         xa, xb = X(ans.index(a0)), X(ans.index(a1))
         if xb > xa:
             e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="#eeede8" opacity="0.7"/>' % (xa, y0 - 4, xb - xa, y1 - y0 + 4))
-        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-dasharray="2 3"/>' % (xa, y0 - 4, xa, y1, MUTED))
+        e.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-dasharray="2 3"/>' % (xa, y0 - 4, xa, y1, TRAIT))
         cy = y0 - 16 - (22 if mobile and n % 2 == 0 else 0)  # téléphone : repères voisins sur deux hauteurs
         e.append('<circle cx="%.1f" cy="%.1f" r="%d" fill="#ffffff" stroke="%s"/>' % ((xa + xb) / 2, cy, 10 if mobile else 8, INK2))
-        e.append(txt((xa + xb) / 2, cy + 4, str(n), fs - 2, INK2, "middle"))
+        e.append(txt((xa + xb) / 2, cy + 4, str(n), _fs(fs - 2, mobile), INK2, "middle"))
     for cle, col, dash in (("a", BLEU, ""), ("bit", INK2, ' stroke-dasharray="5 3"')):
         s = Lg[cle]
         pts = " ".join("%.1f,%.1f" % (X(i), Y(s[a])) for i, a in enumerate(ans))
@@ -795,7 +803,7 @@ def fig_serie_longue(Lg: dict) -> str:
     e.append(txt(244, 60, L["l_bit"], 11, INK2, "start", "600"))
     _courbes(e, Lg, 40, 700, 100, 260, 11, False)
     for k, rep in enumerate(L["rep"]):
-        e.append(txt((k % 2) * 360, 296 + 15 * (k // 2), rep, 10, INK2))
+        e.append(txt((k % 2) * 360, 296 + 15 * (k // 2), rep, FS_D, INK2))
     return pied_figure.pied(e, H + 2, W, blocs_pied(L["src3"], L["note3"]), GRID)
 
 

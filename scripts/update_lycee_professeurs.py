@@ -57,7 +57,10 @@ PAGE_URL = "stephane-lalut.com/manque-t-il-des-professeurs/"
 W = 720
 FONT = "Inter, 'Helvetica Neue', Arial, sans-serif"
 BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
-INK, INK2, MUTED, GRID = "#26262f", "#55524f", "#96928f", "#dcd8d3"
+INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
+# MUTED ne sert qu'au TEXTE (graduations, crédit) : encre atténuée de l'organe commun. Les marques grises (courbe et
+# points de l'ensemble des concours) gardent GRIS. Aucun texte d'une figure détaillée sous pied_figure.POLICE_MIN (11),
+# contrôle R6 et R7 de check-figures.
 LICENCE = "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
 GT, LP, COL = "En lycée général", "En lycée professionnel", "En collège"
 
@@ -620,8 +623,8 @@ def fig_heures(c, A):
     lx = 0
     for k, (_, lib, col, op) in enumerate(segs):
         e.append('<rect x="%d" y="34" width="11" height="11" fill="%s" opacity="%s"/>' % (lx, col, op))
-        e.append('<text x="%d" y="44" font-size="10.5" fill="%s">%s</text>' % (lx + 15, INK2, esc(lib)))
-        lx += 22 + int(6.1 * len(lib)) + 12
+        e.append('<text x="%d" y="44" font-size="11" fill="%s">%s</text>' % (lx + 15, INK2, esc(lib)))
+        lx += 22 + int(6.1 * 11 / 10.5 * len(lib)) + 12   # 6,1 px par caractère à 10,5 px, portés à la police de 11
     for i, (lib, v) in enumerate(lignes):
         y = 78 + i * 58
         e.append('<text x="0" y="%d" font-size="11.5" fill="%s" font-weight="%s">%s</text>' % (y + 17, INK, 600 if i == 0 else 400, esc(lib)))
@@ -630,11 +633,13 @@ def fig_heures(c, A):
             w = sx(v[cle])
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="26" fill="%s" opacity="%s" stroke="#ffffff" stroke-width="1"/>' % (x, y, w, col, op))
             if w > 26:
-                fc = "#ffffff" if (col == ORANGE or op > 0.5) else INK
-                e.append('<text x="%.1f" y="%d" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (x + w / 2, y + 17, fc, nb(v[cle])))
+                # Valeur dans son segment : blanche sur l'orange (charte) et sur le bleu plein ; encre sur les bleus
+                # éclaircis (11/11/2026 : le blanc sur le bleu à 62 % faisait 3,21:1, règle R7 ; l'encre y fait 4,6:1).
+                fc = "#ffffff" if (col == ORANGE or op >= 1.0) else INK
+                e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (x + w / 2, y + 17, fc, nb(v[cle])))
             x += w
         e.append('<text x="%.1f" y="%d" font-size="11.5" font-weight="600" fill="%s">%s %%</text>' % (x + 6, y + 17, INK, nb(v["total"])))
-    e.append('<text x="0" y="%d" font-size="10.5" fill="%s">%s</text>' % (h - 14, INK2, esc(arrondi_txt(A))))
+    e.append('<text x="0" y="%d" font-size="11" fill="%s">%s</text>' % (h - 14, INK2, esc(arrondi_txt(A))))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -657,16 +662,16 @@ def fig_classes(c, A):
     Y = lambda v: BAS - (BAS - TOP) * (v - vmin) / (vmax - vmin)
     for gv in range(vmin, vmax + 1):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (X0, Y(gv), X1, Y(gv), GRID))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s" opacity="0.25"/>' % (X(2020) - 4, TOP, X(a1) - X(2020) + 8, BAS - TOP, GRIS_CLAIR))
-    e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">depuis 2020 : plus de 30</text>' % ((X(2020) + X(a1)) / 2, TOP - 6, INK2))
+    e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">depuis 2020 : plus de 30</text>' % ((X(2020) + X(a1)) / 2, TOP - 6, INK2))
     for a in range(1995, a1 + 1, 5):
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
     d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(v)) for k, (a, v) in enumerate(sorted(ed.items())))
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.4" stroke-linejoin="round"/>' % (d, BLEU))
     for a in (a0, c["ed_an_max_avant"], a1):
         e.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="%s"/>' % (X(a), Y(ed[a]), BLEU))
-        e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s" text-anchor="middle">%s</text>' % (X(a), Y(ed[a]) + 16, INK, nb(ed[a])))
+        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" text-anchor="middle">%s</text>' % (X(a), Y(ed[a]) + 16, INK, nb(ed[a])))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -687,9 +692,9 @@ def fig_concours(c, A):
     Y = lambda v: BAS - (BAS - TOP) * (v - 40) / 60
     for gv in range(40, 101, 20):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="0.6"/>' % (X0, Y(gv), X1, Y(gv), GRID))
-        e.append('<text x="%d" y="%.1f" font-size="10" fill="%s" text-anchor="end">%d %%</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s" text-anchor="end">%d %%</text>' % (X0 - 6, Y(gv) + 3, MUTED, gv))
     for a in range(2010, a1 + 1, 5):
-        e.append('<text x="%.1f" y="%d" font-size="10" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (X(a), BAS + 14, MUTED, a))
     etiq = []
     for serie, col, lib, dash in ((nat, GRIS, "Ensemble des concours", "4 3"), (m, BLEU, "CAPES de mathématiques", ""), (p, ORANGE, "CAPES de physique-chimie", "")):
         pts = sorted((a, v) for a, v in serie.items() if a >= a0)
@@ -703,15 +708,15 @@ def fig_concours(c, A):
     for k in range(1, len(etiq)):   # étiquettes de fin : jamais à moins de 14 px l'une de l'autre
         etiq[k][0] = max(etiq[k][0], etiq[k - 1][0] + 14)
     for y, col, txt in etiq:
-        e.append('<text x="%.1f" y="%.1f" font-size="10.5" fill="%s">%s</text>' % (X1 + 8, y, col, esc(txt)))
+        e.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">%s</text>' % (X1 + 8, y, col, esc(txt)))
     # 2026 : autre régime (deux concours, autre source) -- colonne séparée par une rupture, points creux, jamais reliés
     XR, X26 = 624, 660
     e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-dasharray="3 3"/>' % (XR, TOP - 4, XR, BAS, INK2))
-    e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="middle">2026</text>' % (X26 + 14, BAS + 14, MUTED))
-    e.append('<text x="%d" y="%d" font-size="10" fill="%s" text-anchor="middle">deux concours</text>' % (X26 + 14, TOP - 8, INK2))
+    e.append('<text x="%d" y="%d" font-size="11" fill="%s" text-anchor="middle">2026</text>' % (X26 + 14, BAS + 14, MUTED))
+    e.append('<text x="%d" y="%d" font-size="11" fill="%s" text-anchor="middle">deux concours</text>' % (X26 + 14, TOP - 8, INK2))
     for v, col in ((c["t26"]["maths"], BLEU), (c["t26"]["pc"], ORANGE)):
         e.append('<circle cx="%d" cy="%.1f" r="4" fill="#ffffff" stroke="%s" stroke-width="2"/>' % (X26, Y(min(v, 100)), col))
-        e.append('<text x="%d" y="%.1f" font-size="10.5" fill="%s">%s</text>' % (X26 + 8, Y(min(v, 100)) + 4, col, nb(v)))
+        e.append('<text x="%d" y="%.1f" font-size="11" fill="%s">%s</text>' % (X26 + 8, Y(min(v, 100)) + 4, col, nb(v)))
     return pied(e, h + 2, t["source"], t["note"])
 
 
@@ -809,9 +814,11 @@ def fig_classes_m(c, A, svg_d):
         e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="%s">%d</text>' % (X(a), BAS + 18, FS_MIN, MUTED, "end" if a == a1 else "middle", a))
     d = " ".join(("M" if k == 0 else "L") + "%.1f,%.1f" % (X(a), Y(v)) for k, (a, v) in enumerate(sorted(ed.items())))
     e.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.6" stroke-linejoin="round"/>' % (d, BLEU))
-    for a, anc in ((a0, "start"), (c["ed_an_max_avant"], "middle"), (a1, "end")):
+    # Première valeur 10 px plus bas que les autres (11/11/2026) : la courbe descend juste après son point, et à 22 px
+    # elle traversait le dernier chiffre du libellé (défaut relevé au rendu, antérieur au passage des polices).
+    for a, anc, dy in ((a0, "start", 32), (c["ed_an_max_avant"], "middle", 22), (a1, "end", 22)):
         e.append('<circle cx="%.1f" cy="%.1f" r="3.6" fill="%s"/>' % (X(a), Y(ed[a]), BLEU))
-        e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s" text-anchor="%s">%s</text>' % (X(a), Y(ed[a]) + 22, INK, anc, nb(ed[a])))
+        e.append('<text x="%.1f" y="%.1f" font-size="15" font-weight="600" fill="%s" text-anchor="%s">%s</text>' % (X(a), Y(ed[a]) + dy, INK, anc, nb(ed[a])))
     return finir_m(e, BAS + 36, t["source"], t["note"])
 
 
