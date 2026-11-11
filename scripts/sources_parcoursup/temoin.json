@@ -1,0 +1,1009 @@
+{
+ "_doc": "Temoin independant du generateur update_parcoursup.py : appariement de p04b.py, correlations et test de selection de p05.py, sur les exports archives du chantier (dossier de pilotage de l'auteur, 06_PROMOTION/RECHERCHE_RESSOURCE_UNIVERSITE_2026-11-03). Ecrit par outils_exploratoires/temoin_json.py.",
+ "cohorte": {
+  "sans_cpge": {
+   "n": 10132,
+   "part_baisse": [
+    46.525858665613896,
+    53.13857086458744
+   ],
+   "part_hausse": [
+    42.765495459928935,
+    35.14607185155942
+   ],
+   "variation_mediane": [
+    0.0,
+    -1.0
+   ],
+   "variation_moyenne": [
+    -0.3818594551914726,
+    -2.644492696407422
+   ]
+  },
+  "toutes": {
+   "n": 11087,
+   "part_baisse": [
+    47.614323081085956,
+    55.23586182014972
+   ],
+   "part_hausse": [
+    42.2206187426716,
+    33.7602597636872
+   ],
+   "variation_mediane": [
+    0.0,
+    -2.0
+   ],
+   "variation_moyenne": [
+    -0.5823937945341391,
+    -3.6872012266618563
+   ]
+  }
+ },
+ "entrees_sha256": {
+  "cap2023.csv": "a57288e65c053edaff286180e23994fe4dfca31358e9f5c1e5fea7332fc666e2",
+  "ps2023_full.csv": "f0a8b6b07ae1a67b9fc5283e227313bec263df4a64164f65641089f883acecf5",
+  "ps2024_full.csv": "7215f6c4974a5ae42fde1a3750e4ae6ddf39c5753afda932fdeffb9724039c54",
+  "ps2025_full.csv": "0a5a95ab655aae9f1214e6f18a2b0e0408b017af40b05c1c6a8e4ab768b93f04"
+ },
+ "scripts": [
+  "p04b.py",
+  "p05.py",
+  "temoin_json.py"
+ ],
+ "transitions": {
+  "2023-2024": {
+   "abs_mediane": 6.0,
+   "appariees": 12065,
+   "capacite_changee_25": {
+    "n": 596,
+    "part": 4.939908827186076
+   },
+   "contre_population": {
+    "atteint_40": 17,
+    "n": 1116
+   },
+   "ecartees": {
+    "disparue": 537,
+    "intitulé changé": 1190,
+    "nouvelle": 747,
+    "taux absent": 77
+   },
+   "entrees": 14616,
+   "filieres": {
+    "Autre formation": {
+     "candidats_med": [
+      267.5,
+      272.5
+     ],
+     "n": 1002,
+     "part_baisse": 49.50099800399202,
+     "part_mediane_ou_moins": 57.684630738522955,
+     "pearson": 0.8796128305563503,
+     "places_med": [
+      19.5,
+      20.0
+     ],
+     "spearman": 0.9015152142718456,
+     "taux_med": [
+      38.0,
+      36.0
+     ],
+     "variation_mediane": 0.0,
+     "variation_moyenne": -0.5898203592814372
+    },
+    "BTS": {
+     "candidats_med": [
+      308.0,
+      222.0
+     ],
+     "n": 4986,
+     "part_baisse": 45.166466105094266,
+     "part_mediane_ou_moins": 53.32932210188528,
+     "pearson": 0.8508135054108069,
+     "places_med": [
+      25.0,
+      24.0
+     ],
+     "spearman": 0.8408643086156606,
+     "taux_med": [
+      60.0,
+      62.0
+     ],
+     "variation_mediane": 1.0,
+     "variation_moyenne": 1.097272362615323
+    },
+    "BUT": {
+     "candidats_med": [
+      943.0,
+      889.0
+     ],
+     "n": 565,
+     "part_baisse": 52.38938053097345,
+     "part_mediane_ou_moins": 52.38938053097345,
+     "pearson": 0.9277512656951182,
+     "places_med": [
+      56.0,
+      56.0
+     ],
+     "spearman": 0.9286372623617015,
+     "taux_med": [
+      50.0,
+      48.0
+     ],
+     "variation_mediane": -1.0,
+     "variation_moyenne": -0.9168141592920354
+    },
+    "CPGE": {
+     "candidats_med": [
+      769.0,
+      1029.0
+     ],
+     "n": 963,
+     "part_baisse": 59.086188992731046,
+     "part_mediane_ou_moins": 53.68639667705089,
+     "pearson": 0.9273581222344001,
+     "places_med": [
+      45.0,
+      45.0
+     ],
+     "spearman": 0.9094521694582898,
+     "taux_med": [
+      66.0,
+      62.0
+     ],
+     "variation_mediane": -2.0,
+     "variation_moyenne": -2.691588785046729
+    },
+    "EFTS": {
+     "candidats_med": [
+      125.5,
+      132.5
+     ],
+     "n": 226,
+     "part_baisse": 46.017699115044245,
+     "part_mediane_ou_moins": 51.32743362831859,
+     "pearson": 0.6143228645297246,
+     "places_med": [
+      28.0,
+      29.5
+     ],
+     "spearman": 0.5911156291882099,
+     "taux_med": [
+      46.0,
+      44.5
+     ],
+     "variation_mediane": 0.0,
+     "variation_moyenne": -1.7433628318584071
+    },
+    "Ecole d'Ingénieur": {
+     "candidats_med": [
+      771.5,
+      829.0
+     ],
+     "n": 424,
+     "part_baisse": 43.39622641509434,
+     "part_mediane_ou_moins": 57.54716981132076,
+     "pearson": 0.7948382051881125,
+     "places_med": [
+      30.0,
+      28.0
+     ],
+     "spearman": 0.7799837252439025,
+     "taux_med": [
+      71.5,
+      73.0
+     ],
+     "variation_mediane": 1.0,
+     "variation_moyenne": 0.3136792452830189
+    },
+    "Ecole de Commerce": {
+     "candidats_med": [
+      724.0,
+      750.5
+     ],
+     "n": 176,
+     "part_baisse": 55.11363636363637,
+     "part_mediane_ou_moins": 55.11363636363637,
+     "pearson": 0.913300886444107,
+     "places_med": [
+      60.0,
+      70.0
+     ],
+     "spearman": 0.878498487480905,
+     "taux_med": [
+      64.5,
+      63.5
+     ],
+     "variation_mediane": -1.0,
+     "variation_moyenne": -1.1022727272727273
+    },
+    "IFSI": {
+     "candidats_med": [
+      3501.5,
+      3284.0
+     ],
+     "n": 340,
+     "part_baisse": 39.705882352941174,
+     "part_mediane_ou_moins": 53.23529411764706,
+     "pearson": 0.8892240308650092,
+     "places_med": [
+      78.0,
+      81.5
+     ],
+     "spearman": 0.8866559339103613,
+     "taux_med": [
+      43.0,
+      43.0
+     ],
+     "variation_mediane": 1.0,
+     "variation_moyenne": 0.8735294117647059
+    },
+    "Licence": {
+     "candidats_med": [
+      489.0,
+      522.0
+     ],
+     "n": 2510,
+     "part_baisse": 41.51394422310757,
+     "part_mediane_ou_moins": 68.08764940239044,
+     "pearson": 0.940950153324119,
+     "places_med": [
+      63.0,
+      60.0
+     ],
+     "spearman": 0.8857492286104758,
+     "taux_med": [
+      94.0,
+      91.0
+     ],
+     "variation_mediane": 0.0,
+     "variation_moyenne": -1.6127490039840637
+    },
+    "Licence_Las": {
+     "candidats_med": [
+      492.5,
+      552.0
+     ],
+     "n": 442,
+     "part_baisse": 60.85972850678733,
+     "part_mediane_ou_moins": 51.35746606334841,
+     "pearson": 0.8838925446334756,
+     "places_med": [
+      30.0,
+      30.0
+     ],
+     "spearman": 0.885584545960683,
+     "taux_med": [
+      65.0,
+      57.0
+     ],
+     "variation_mediane": -3.0,
+     "variation_moyenne": -4.843891402714932
+    },
+    "PASS": {
+     "candidats_med": [
+      2365.0,
+      2552.0
+     ],
+     "n": 268,
+     "part_baisse": 60.820895522388064,
+     "part_mediane_ou_moins": 54.1044776119403,
+     "pearson": 0.8883046047630602,
+     "places_med": [
+      50.0,
+      50.0
+     ],
+     "spearman": 0.9000057241039313,
+     "taux_med": [
+      38.5,
+      35.5
+     ],
+     "variation_mediane": -2.0,
+     "variation_moyenne": -4.481343283582089
+    }
+   },
+   "n_interieur": 11103,
+   "part_abs_mediane_ou_moins": 54.97720679651885,
+   "part_baisse": 47.25238292581848,
+   "part_hausse": 42.58599254040613,
+   "part_inchangee": 10.161624533775383,
+   "pearson": 0.8994783174161392,
+   "pearson_interieur": 0.8832929445292493,
+   "reclassees": {
+    "n": 163,
+    "variation_mediane": -2.0
+   },
+   "selection": {
+    "appariée": {
+     "cand_med": 418.0,
+     "capa_med": 32.0,
+     "n": 12065,
+     "part_bts": 41.326150020721094,
+     "part_cpge": 7.981765437215086,
+     "part_licence": 20.803978450062164,
+     "taux_med": 60.0
+    },
+    "disparue": {
+     "cand_med": 148.0,
+     "capa_med": 20.0,
+     "n": 537,
+     "part_bts": 16.945996275605214,
+     "part_cpge": 2.793296089385475,
+     "part_licence": 31.843575418994412,
+     "taux_med": 78.0
+    },
+    "intitulé changé": {
+     "cand_med": 279.0,
+     "capa_med": 28.0,
+     "n": 1190,
+     "part_bts": 21.428571428571427,
+     "part_cpge": 0.42016806722689076,
+     "part_licence": 18.15126050420168,
+     "taux_med": 66.0
+    },
+    "nouvelle": {
+     "n": 747,
+     "part_bts": 12.985274431057563,
+     "part_cpge": 1.8741633199464525,
+     "part_licence": 38.28647925033467,
+     "taux_med": 73.0
+    },
+    "taux absent": {
+     "cand_med": 0.0,
+     "capa_med": 18.0,
+     "n": 77,
+     "part_bts": 9.090909090909092,
+     "part_cpge": 0.0,
+     "part_licence": 7.792207792207792,
+     "taux_med": 82.5
+    }
+   },
+   "spearman": 0.8986882833502952,
+   "spearman_interieur": 0.881304770508843,
+   "tranches": {
+    "0-20": {
+     "a_d1_ou_moins": 11.917562724014337,
+     "baisse_20": 0.0,
+     "baisse_20_50cand": 0.0,
+     "baisse_20_corrigee": 0.0,
+     "d1": 5.0,
+     "d9": 24.0,
+     "dans_d1_d9": 83.42293906810035,
+     "mediane": 13.0,
+     "n": 1116,
+     "n_50cand": 1092,
+     "n_baisse_20": 0,
+     "n_reste_90": 2,
+     "perte_cinquieme": 21.057347670250895,
+     "reste_90": 0.17921146953405018,
+     "sans_capa": {
+      "d1": 5.0,
+      "d9": 23.5,
+      "mediane": 13.0,
+      "n": 1066
+     }
+    },
+    "100": {
+     "a_d1_ou_moins": 10.4989604989605,
+     "baisse_20": 3.6382536382536386,
+     "baisse_20_50cand": 3.0495552731893265,
+     "baisse_20_corrigee": 3.6382536382536386,
+     "d1": 91.0,
+     "d9": 100.0,
+     "dans_d1_d9": 90.33264033264034,
+     "mediane": 100.0,
+     "n": 962,
+     "n_50cand": 787,
+     "n_baisse_20": 35,
+     "n_reste_90": 876,
+     "perte_cinquieme": 3.6382536382536386,
+     "reste_90": 91.06029106029106,
+     "sans_capa": {
+      "d1": 91.0,
+      "d9": 100.0,
+      "mediane": 100.0,
+      "n": 912
+     }
+    },
+    "20-40": {
+     "a_d1_ou_moins": 10.300618921308576,
+     "baisse_20": 0.3978779840848806,
+     "baisse_20_50cand": 0.40595399188092013,
+     "baisse_20_corrigee": 0.3536693191865605,
+     "d1": 19.0,
+     "d9": 48.0,
+     "dans_d1_d9": 82.13969938107869,
+     "mediane": 31.0,
+     "n": 2262,
+     "n_50cand": 2217,
+     "n_baisse_20": 9,
+     "n_reste_90": 6,
+     "perte_cinquieme": 20.822281167108752,
+     "reste_90": 0.2652519893899204,
+     "sans_capa": {
+      "d1": 19.0,
+      "d9": 48.0,
+      "mediane": 31.0,
+      "n": 2183
+     }
+    },
+    "40-60": {
+     "a_d1_ou_moins": 10.510046367851624,
+     "baisse_20": 3.7094281298299845,
+     "baisse_20_50cand": 3.591160220994475,
+     "baisse_20_corrigee": 4.01854714064915,
+     "d1": 34.0,
+     "d9": 70.0,
+     "dans_d1_d9": 81.41421947449768,
+     "mediane": 50.0,
+     "n": 2588,
+     "n_50cand": 2534,
+     "n_baisse_20": 96,
+     "n_reste_90": 47,
+     "perte_cinquieme": 17.34930448222566,
+     "reste_90": 1.8160741885625966,
+     "sans_capa": {
+      "d1": 34.0,
+      "d9": 70.0,
+      "mediane": 50.0,
+      "n": 2494
+     }
+    },
+    "60-75": {
+     "a_d1_ou_moins": 11.164755582377792,
+     "baisse_20": 8.509354254677127,
+     "baisse_20_50cand": 8.235294117647058,
+     "baisse_20_corrigee": 8.871454435727218,
+     "d1": 48.0,
+     "d9": 85.0,
+     "dans_d1_d9": 80.20519010259505,
+     "mediane": 66.0,
+     "n": 1657,
+     "n_50cand": 1615,
+     "n_baisse_20": 141,
+     "n_reste_90": 93,
+     "perte_cinquieme": 18.467109233554616,
+     "reste_90": 5.612552806276403,
+     "sans_capa": {
+      "d1": 48.0,
+      "d9": 85.0,
+      "mediane": 66.0,
+      "n": 1588
+     }
+    },
+    "75-90": {
+     "a_d1_ou_moins": 10.45531197301855,
+     "baisse_20": 13.827993254637436,
+     "baisse_20_50cand": 13.78299120234604,
+     "baisse_20_corrigee": 13.659359190556492,
+     "d1": 58.0,
+     "d9": 95.0,
+     "dans_d1_d9": 80.4946599213041,
+     "mediane": 81.0,
+     "n": 1779,
+     "n_50cand": 1705,
+     "n_baisse_20": 246,
+     "n_reste_90": 449,
+     "perte_cinquieme": 17.537942664418214,
+     "reste_90": 25.238898257448007,
+     "sans_capa": {
+      "d1": 58.0,
+      "d9": 96.0,
+      "mediane": 81.0,
+      "n": 1657
+     }
+    },
+    "90-99": {
+     "a_d1_ou_moins": 11.169900058788947,
+     "baisse_20": 10.11169900058789,
+     "baisse_20_50cand": 9.556527170518427,
+     "baisse_20_corrigee": 9.935332157554381,
+     "d1": 76.0,
+     "d9": 100.0,
+     "dans_d1_d9": 90.00587889476779,
+     "mediane": 94.0,
+     "n": 1701,
+     "n_50cand": 1601,
+     "n_baisse_20": 172,
+     "n_reste_90": 1138,
+     "perte_cinquieme": 10.46443268665491,
+     "reste_90": 66.90182245737802,
+     "sans_capa": {
+      "d1": 76.0,
+      "d9": 100.0,
+      "mediane": 95.0,
+      "n": 1568
+     }
+    }
+   },
+   "variation_mediane": 0.0,
+   "variation_moyenne": -0.5223373394115209
+  },
+  "2024-2025": {
+   "abs_mediane": 6.0,
+   "appariees": 12816,
+   "capacite_changee_25": {
+    "n": 696,
+    "part": 5.430711610486892
+   },
+   "contre_population": {
+    "atteint_40": 20,
+    "n": 1239
+   },
+   "ecartees": {
+    "aucun classé": 23,
+    "disparue": 539,
+    "intitulé changé": 674,
+    "nouvelle": 712,
+    "taux absent": 27
+   },
+   "entrees": 14791,
+   "filieres": {
+    "Autre formation": {
+     "candidats_med": [
+      185.0,
+      173.0
+     ],
+     "n": 1369,
+     "part_baisse": 50.8400292184076,
+     "part_mediane_ou_moins": 50.8400292184076,
+     "pearson": 0.7651835816592198,
+     "places_med": [
+      15.0,
+      15.0
+     ],
+     "spearman": 0.7979879621498893,
+     "taux_med": [
+      46.0,
+      41.0
+     ],
+     "variation_mediane": -1.0,
+     "variation_moyenne": -4.324324324324325
+    },
+    "BTS": {
+     "candidats_med": [
+      226.0,
+      221.0
+     ],
+     "n": 4799,
+     "part_baisse": 60.408418420504276,
+     "part_mediane_ou_moins": 52.84434257136904,
+     "pearson": 0.8418513202799228,
+     "places_med": [
+      24.0,
+      24.0
+     ],
+     "spearman": 0.8334615032527349,
+     "taux_med": [
+      60.0,
+      56.0
+     ],
+     "variation_mediane": -3.0,
+     "variation_moyenne": -3.8612210877266095
+    },
+    "BUT": {
+     "candidats_med": [
+      888.0,
+      967.0
+     ],
+     "n": 813,
+     "part_baisse": 60.147601476014756,
+     "part_mediane_ou_moins": 55.84255842558426,
+     "pearson": 0.9374868684535677,
+     "places_med": [
+      58.0,
+      56.0
+     ],
+     "spearman": 0.9372896194477905,
+     "taux_med": [
+      49.0,
+      45.0
+     ],
+     "variation_mediane": -2.0,
+     "variation_moyenne": -2.6998769987699878
+    },
+    "CPGE": {
+     "candidats_med": [
+      993.5,
+      940.5
+     ],
+     "n": 974,
+     "part_baisse": 77.82340862422998,
+     "part_mediane_ou_moins": 52.15605749486652,
+     "pearson": 0.7456806317016372,
+     "places_med": [
+      45.0,
+      45.0
+     ],
+     "spearman": 0.722269174629378,
+     "taux_med": [
+      62.0,
+      43.0
+     ],
+     "variation_mediane": -11.0,
+     "variation_moyenne": -14.859342915811089
+    },
+    "EFTS": {
+     "candidats_med": [
+      129.0,
+      126.0
+     ],
+     "n": 227,
+     "part_baisse": 52.42290748898678,
+     "part_mediane_ou_moins": 52.42290748898678,
+     "pearson": 0.7996146675604324,
+     "places_med": [
+      28.0,
+      28.0
+     ],
+     "spearman": 0.801811770428392,
+     "taux_med": [
+      45.0,
+      46.0
+     ],
+     "variation_mediane": -1.0,
+     "variation_moyenne": 0.02643171806167401
+    },
+    "Ecole d'Ingénieur": {
+     "candidats_med": [
+      706.0,
+      651.5
+     ],
+     "n": 462,
+     "part_baisse": 40.692640692640694,
+     "part_mediane_ou_moins": 56.060606060606055,
+     "pearson": 0.8106974482727486,
+     "places_med": [
+      25.0,
+      25.0
+     ],
+     "spearman": 0.8136025949088301,
+     "taux_med": [
+      73.0,
+      70.0
+     ],
+     "variation_mediane": 0.0,
+     "variation_moyenne": -1.0216450216450217
+    },
+    "Ecole de Commerce": {
+     "candidats_med": [
+      662.0,
+      688.0
+     ],
+     "n": 187,
+     "part_baisse": 49.73262032085562,
+     "part_mediane_ou_moins": 56.68449197860963,
+     "pearson": 0.9253024356374683,
+     "places_med": [
+      60.0,
+      60.0
+     ],
+     "spearman": 0.8919058514148418,
+     "taux_med": [
+      63.0,
+      63.0
+     ],
+     "variation_mediane": 0.0,
+     "variation_moyenne": -0.39572192513368987
+    },
+    "IFSI": {
+     "candidats_med": [
+      3266.5,
+      3706.5
+     ],
+     "n": 342,
+     "part_baisse": 59.356725146198826,
+     "part_mediane_ou_moins": 56.4327485380117,
+     "pearson": 0.899328897246864,
+     "places_med": [
+      81.0,
+      83.0
+     ],
+     "spearman": 0.897037704979847,
+     "taux_med": [
+      43.0,
+      40.5
+     ],
+     "variation_mediane": -2.0,
+     "variation_moyenne": -1.780701754385965
+    },
+    "Licence": {
+     "candidats_med": [
+      495.0,
+      497.5
+     ],
+     "n": 2718,
+     "part_baisse": 39.33038999264164,
+     "part_mediane_ou_moins": 67.99116997792495,
+     "pearson": 0.9445077730995675,
+     "places_med": [
+      60.0,
+      60.0
+     ],
+     "spearman": 0.9010946003729108,
+     "taux_med": [
+      91.0,
+      88.0
+     ],
+     "variation_mediane": 0.0,
+     "variation_moyenne": -1.2303164091243561
+    },
+    "Licence_Las": {
+     "candidats_med": [
+      548.0,
+      566.0
+     ],
+     "n": 481,
+     "part_baisse": 55.71725571725572,
+     "part_mediane_ou_moins": 51.143451143451145,
+     "pearson": 0.8896073268920914,
+     "places_med": [
+      30.0,
+      30.0
+     ],
+     "spearman": 0.8919923372156103,
+     "taux_med": [
+      58.0,
+      53.0
+     ],
+     "variation_mediane": -2.0,
+     "variation_moyenne": -2.2765072765072767
+    },
+    "PASS": {
+     "candidats_med": [
+      2643.5,
+      2966.0
+     ],
+     "n": 272,
+     "part_baisse": 55.14705882352941,
+     "part_mediane_ou_moins": 55.14705882352941,
+     "pearson": 0.9215524872183847,
+     "places_med": [
+      50.0,
+      55.5
+     ],
+     "spearman": 0.9193247548809347,
+     "taux_med": [
+      35.0,
+      34.0
+     ],
+     "variation_mediane": -1.0,
+     "variation_moyenne": -1.125
+    }
+   },
+   "n_interieur": 11723,
+   "part_abs_mediane_ou_moins": 51.56835205992509,
+   "part_baisse": 55.063982521847684,
+   "part_hausse": 33.95755305867665,
+   "part_inchangee": 10.978464419475657,
+   "pearson": 0.8716744531783102,
+   "pearson_interieur": 0.8540288766017168,
+   "reclassees": {
+    "n": 172,
+    "variation_mediane": -4.0
+   },
+   "selection": {
+    "appariée": {
+     "cand_med": 371.0,
+     "capa_med": 32.0,
+     "n": 12816,
+     "part_bts": 37.44538077403246,
+     "part_cpge": 7.599875156054932,
+     "part_licence": 21.207865168539325,
+     "taux_med": 60.0
+    },
+    "aucun classé": {
+     "cand_med": 42.0,
+     "capa_med": 15.0,
+     "n": 23,
+     "part_bts": 30.434782608695656,
+     "part_cpge": 0.0,
+     "part_licence": 13.043478260869565,
+     "taux_med": 50.0
+    },
+    "disparue": {
+     "cand_med": 109.0,
+     "capa_med": 20.0,
+     "n": 539,
+     "part_bts": 14.100185528756956,
+     "part_cpge": 0.927643784786642,
+     "part_licence": 33.76623376623377,
+     "taux_med": 69.0
+    },
+    "intitulé changé": {
+     "cand_med": 246.5,
+     "capa_med": 30.0,
+     "n": 674,
+     "part_bts": 68.24925816023739,
+     "part_cpge": 0.44510385756676557,
+     "part_licence": 16.913946587537094,
+     "taux_med": 69.0
+    },
+    "nouvelle": {
+     "n": 712,
+     "part_bts": 11.51685393258427,
+     "part_cpge": 1.2640449438202246,
+     "part_licence": 30.196629213483146,
+     "taux_med": 54.0
+    },
+    "taux absent": {
+     "cand_med": 33.0,
+     "capa_med": 12.0,
+     "n": 27,
+     "part_bts": 11.11111111111111,
+     "part_cpge": 0.0,
+     "part_licence": 7.4074074074074066,
+     "taux_med": 100.0
+    }
+   },
+   "spearman": 0.8723666172204645,
+   "spearman_interieur": 0.8553357986296435,
+   "tranches": {
+    "0-20": {
+     "a_d1_ou_moins": 15.09281678773204,
+     "baisse_20": 0.0,
+     "baisse_20_50cand": 0.0,
+     "baisse_20_corrigee": 0.0,
+     "couverture_bornes_precedentes": 83.05084745762711,
+     "d1": 5.0,
+     "d9": 22.0,
+     "dans_d1_d9": 80.30669895076676,
+     "mediane": 12.0,
+     "n": 1239,
+     "n_50cand": 1217,
+     "n_baisse_20": 0,
+     "n_reste_90": 1,
+     "perte_cinquieme": 29.37853107344633,
+     "reste_90": 0.08071025020177562,
+     "sans_capa": {
+      "d1": 5.0,
+      "d9": 22.0,
+      "mediane": 12.0,
+      "n": 1168
+     }
+    },
+    "100": {
+     "a_d1_ou_moins": 10.430009149130832,
+     "baisse_20": 10.430009149130832,
+     "baisse_20_50cand": 5.90318772136954,
+     "baisse_20_corrigee": 9.789569990850868,
+     "couverture_bornes_precedentes": 84.72095150960659,
+     "d1": 80.0,
+     "d9": 100.0,
+     "dans_d1_d9": 90.30192131747484,
+     "mediane": 100.0,
+     "n": 1093,
+     "n_50cand": 847,
+     "n_baisse_20": 114,
+     "n_reste_90": 932,
+     "perte_cinquieme": 10.430009149130832,
+     "reste_90": 85.26989935956084,
+     "sans_capa": {
+      "d1": 79.6,
+      "d9": 100.0,
+      "mediane": 100.0,
+      "n": 1007
+     }
+    },
+    "20-40": {
+     "a_d1_ou_moins": 10.934312525499797,
+     "baisse_20": 0.7751937984496124,
+     "baisse_20_50cand": 0.7434944237918215,
+     "baisse_20_corrigee": 0.3263973888208894,
+     "couverture_bornes_precedentes": 79.15136678906569,
+     "d1": 17.0,
+     "d9": 45.0,
+     "dans_d1_d9": 82.12974296205631,
+     "mediane": 29.0,
+     "n": 2451,
+     "n_50cand": 2421,
+     "n_baisse_20": 19,
+     "n_reste_90": 12,
+     "perte_cinquieme": 26.438188494492042,
+     "reste_90": 0.4895960832313341,
+     "sans_capa": {
+      "d1": 17.0,
+      "d9": 45.0,
+      "mediane": 28.0,
+      "n": 2364
+     }
+    },
+    "40-60": {
+     "a_d1_ou_moins": 10.860731437015145,
+     "baisse_20": 5.467306981898782,
+     "baisse_20_50cand": 5.4442344045368625,
+     "baisse_20_corrigee": 3.5833025489471737,
+     "couverture_bornes_precedentes": 79.6084226080532,
+     "d1": 32.0,
+     "d9": 67.0,
+     "dans_d1_d9": 81.08607314370151,
+     "mediane": 47.0,
+     "n": 2707,
+     "n_50cand": 2645,
+     "n_baisse_20": 148,
+     "n_reste_90": 38,
+     "perte_cinquieme": 24.085703731067603,
+     "reste_90": 1.4037680088659032,
+     "sans_capa": {
+      "d1": 32.0,
+      "d9": 67.0,
+      "mediane": 47.0,
+      "n": 2605
+     }
+    },
+    "60-75": {
+     "a_d1_ou_moins": 10.38961038961039,
+     "baisse_20": 14.906832298136646,
+     "baisse_20_50cand": 15.075075075075075,
+     "baisse_20_corrigee": 10.38961038961039,
+     "couverture_bornes_precedentes": 77.13156408808582,
+     "d1": 43.0,
+     "d9": 83.0,
+     "dans_d1_d9": 81.30999435347262,
+     "mediane": 63.0,
+     "n": 1771,
+     "n_50cand": 1665,
+     "n_baisse_20": 264,
+     "n_reste_90": 78,
+     "perte_cinquieme": 25.804630152456237,
+     "reste_90": 4.4042913608131,
+     "sans_capa": {
+      "d1": 43.0,
+      "d9": 83.0,
+      "mediane": 63.0,
+      "n": 1673
+     }
+    },
+    "75-90": {
+     "a_d1_ou_moins": 10.483870967741936,
+     "baisse_20": 26.881720430107524,
+     "baisse_20_50cand": 26.771196283391408,
+     "baisse_20_corrigee": 19.892473118279568,
+     "couverture_bornes_precedentes": 73.01075268817205,
+     "d1": 49.0,
+     "d9": 92.0,
+     "dans_d1_d9": 80.86021505376344,
+     "mediane": 74.0,
+     "n": 1860,
+     "n_50cand": 1722,
+     "n_baisse_20": 500,
+     "n_reste_90": 270,
+     "perte_cinquieme": 31.397849462365592,
+     "reste_90": 14.516129032258066,
+     "sans_capa": {
+      "d1": 49.0,
+      "d9": 92.0,
+      "mediane": 74.0,
+      "n": 1740
+     }
+    },
+    "90-99": {
+     "a_d1_ou_moins": 10.029498525073747,
+     "baisse_20": 21.651917404129794,
+     "baisse_20_50cand": 21.508196721311474,
+     "baisse_20_corrigee": 19.05604719764012,
+     "couverture_bornes_precedentes": 77.40412979351032,
+     "d1": 59.4,
+     "d9": 100.0,
+     "dans_d1_d9": 89.97050147492625,
+     "mediane": 91.0,
+     "n": 1695,
+     "n_50cand": 1525,
+     "n_baisse_20": 367,
+     "n_reste_90": 936,
+     "perte_cinquieme": 22.59587020648968,
+     "reste_90": 55.2212389380531,
+     "sans_capa": {
+      "d1": 60.0,
+      "d9": 100.0,
+      "mediane": 91.0,
+      "n": 1561
+     }
+    }
+   },
+   "variation_mediane": -2.0,
+   "variation_moyenne": -3.7364232209737827
+  }
+ }
+}

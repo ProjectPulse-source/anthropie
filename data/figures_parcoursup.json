@@ -1,0 +1,20 @@
+{
+ "fr": [
+  {
+   "id": "tranches",
+   "fichier": "parcoursup-tranches",
+   "titre": "Comment les taux d'accès évoluent-ils d'une année sur l'autre ?",
+   "montre": "Un taux d'accès n'est pas une promesse pour l'année suivante : parmi les formations à 60-74 % en 2024, huit sur dix se situaient entre 43 et 83 % en 2025 (médiane : 63 %).",
+   "source": "Ministère chargé de l'enseignement supérieur, données ouvertes Parcoursup, sessions 2023, 2024 et 2025 ; formations présentes deux années de suite sous le même code et le même intitulé, avec un taux d'accès publié et des candidats classés. Taux d'accès : part des candidats de la phase principale dont le rang de classement ne dépasse pas celui du dernier appelé de leur groupe.",
+   "precaution": "Lecture de la ligne « 60 à 74 % » : parmi les 1 771 formations à ce taux d'accès en 2024, huit sur dix avaient en 2025 un taux compris entre 43 et 83 % ; une sur dix était à 43 % ou moins, une sur deux à 63 % ou moins (la médiane). Dans les deux tranches du haut, la barre touche 100 %, le maximum, et contient neuf formations sur dix. Ces barres décrivent ce qui est arrivé aux formations d'une tranche, prises ensemble : elles ne donnent ni le taux futur d'une formation, ni les chances d'un candidat."
+  },
+  {
+   "id": "filieres",
+   "fichier": "parcoursup-filieres",
+   "titre": "Variation médiane du taux d'accès selon la filière",
+   "montre": "De 2024 à 2025, la moitié des classes préparatoires ont perdu 11 points de taux d'accès ou plus ; la variation médiane est de −3 points en BTS, de −2 points en BUT, et nulle en licence. De 2023 à 2024, elle ne dépassait 3 points dans aucune filière.",
+   "source": "Ministère chargé de l'enseignement supérieur, données ouvertes Parcoursup, sessions 2023, 2024 et 2025 ; formations présentes deux années de suite sous le même code et le même intitulé, avec un taux d'accès publié et des candidats classés. Taux d'accès : part des candidats de la phase principale dont le rang de classement ne dépasse pas celui du dernier appelé de leur groupe.",
+   "precaution": "Lecture : une médiane de −11 points signifie que la moitié des classes préparatoires ont perdu 11 points de taux d'accès ou plus ; un taux qui perd 11 points passe, par exemple, de 45 % à 34 %. Une médiane nulle ne veut pas dire que chaque formation est restée stable. Les deux points d'une filière ne portent pas tout à fait sur les mêmes formations ; les 172 formations que le ministère a classées dans une autre filière d'une session à l'autre ne sont pas dessinées. Ces données ne disent ni la cause d'une baisse, ni si elle se reproduira, ni les chances d'un candidat."
+  }
+ ]
+}

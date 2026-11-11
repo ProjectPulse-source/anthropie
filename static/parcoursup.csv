@@ -1,0 +1,628 @@
+﻿tableau,transition,modalite,indicateur,valeur,unite
+appariement,2023-2024,présentes l'une ou l'autre année,formations,14616,formations
+appariement,2023-2024,"appariées (même code, même intitulé)",formations,12065,formations
+appariement,2023-2024,écartées : nouvelle,formations,747,formations
+appariement,2023-2024,écartées : disparue,formations,537,formations
+appariement,2023-2024,écartées : intitulé changé,formations,1190,formations
+appariement,2023-2024,écartées : taux absent,formations,77,formations
+appariement,2023-2024,écartées : aucun classé,formations,0,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,effectif,1116,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,premier_decile,5.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,mediane,13.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,neuvieme_decile,24.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,part_a_90_ou_plus,0.17921146953405018,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,part_perdant_20_points_ou_plus,0.0,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,part_perdant_un_cinquieme_du_niveau,21.057347670250895,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,part_entre_les_deux_deciles,83.42293906810036,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,sensibilite_50_candidats_effectif,1092,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,sensibilite_50_candidats_part_perdant_20_points,0.0,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,sensibilite_filiere_part_perdant_20_points,0.0,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,sensibilite_capacite_effectif,1066,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,sensibilite_capacite_premier_decile,5.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,sensibilite_capacite_mediane,13.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,moins de 20 %,sensibilite_capacite_neuvieme_decile,23.5,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,effectif,2262,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,premier_decile,19.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,mediane,31.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,neuvieme_decile,48.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,part_a_90_ou_plus,0.26525198938992045,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,part_perdant_20_points_ou_plus,0.3978779840848806,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,part_perdant_un_cinquieme_du_niveau,20.822281167108752,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,part_entre_les_deux_deciles,82.13969938107869,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,sensibilite_50_candidats_effectif,2217,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,sensibilite_50_candidats_part_perdant_20_points,0.4059539918809202,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,sensibilite_filiere_part_perdant_20_points,0.3536693191865606,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,sensibilite_capacite_effectif,2183,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,sensibilite_capacite_premier_decile,19.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,sensibilite_capacite_mediane,31,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,20 à 39 %,sensibilite_capacite_neuvieme_decile,48.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,effectif,2588,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,premier_decile,34.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,mediane,50.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,neuvieme_decile,70.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,part_a_90_ou_plus,1.8160741885625966,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,part_perdant_20_points_ou_plus,3.7094281298299845,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,part_perdant_un_cinquieme_du_niveau,17.34930448222566,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,part_entre_les_deux_deciles,81.41421947449768,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,sensibilite_50_candidats_effectif,2534,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,sensibilite_50_candidats_part_perdant_20_points,3.591160220994475,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,sensibilite_filiere_part_perdant_20_points,4.01854714064915,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,sensibilite_capacite_effectif,2494,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,sensibilite_capacite_premier_decile,34.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,sensibilite_capacite_mediane,50.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,40 à 59 %,sensibilite_capacite_neuvieme_decile,70.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,effectif,1657,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,premier_decile,48.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,mediane,66,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,neuvieme_decile,85.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,part_a_90_ou_plus,5.612552806276403,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,part_perdant_20_points_ou_plus,8.509354254677127,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,part_perdant_un_cinquieme_du_niveau,18.467109233554616,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,part_entre_les_deux_deciles,80.20519010259505,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,sensibilite_50_candidats_effectif,1615,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,sensibilite_50_candidats_part_perdant_20_points,8.235294117647058,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,sensibilite_filiere_part_perdant_20_points,8.871454435727218,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,sensibilite_capacite_effectif,1588,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,sensibilite_capacite_premier_decile,48.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,sensibilite_capacite_mediane,66.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,60 à 74 %,sensibilite_capacite_neuvieme_decile,85.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,effectif,1779,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,premier_decile,58.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,mediane,81,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,neuvieme_decile,95.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,part_a_90_ou_plus,25.238898257448003,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,part_perdant_20_points_ou_plus,13.827993254637438,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,part_perdant_un_cinquieme_du_niveau,17.537942664418214,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,part_entre_les_deux_deciles,80.4946599213041,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,sensibilite_50_candidats_effectif,1705,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,sensibilite_50_candidats_part_perdant_20_points,13.782991202346041,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,sensibilite_filiere_part_perdant_20_points,13.659359190556492,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,sensibilite_capacite_effectif,1657,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,sensibilite_capacite_premier_decile,58.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,sensibilite_capacite_mediane,81,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,75 à 89 %,sensibilite_capacite_neuvieme_decile,96.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,effectif,1701,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,premier_decile,76.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,mediane,94,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,neuvieme_decile,100.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,part_a_90_ou_plus,66.90182245737802,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,part_perdant_20_points_ou_plus,10.111699000587889,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,part_perdant_un_cinquieme_du_niveau,10.46443268665491,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,part_entre_les_deux_deciles,90.00587889476779,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,sensibilite_50_candidats_effectif,1601,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,sensibilite_50_candidats_part_perdant_20_points,9.556527170518425,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,sensibilite_filiere_part_perdant_20_points,9.93533215755438,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,sensibilite_capacite_effectif,1568,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,sensibilite_capacite_premier_decile,76.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,sensibilite_capacite_mediane,95.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,90 à 99 %,sensibilite_capacite_neuvieme_decile,100.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,effectif,962,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,premier_decile,91.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,mediane,100.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,neuvieme_decile,100.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,part_a_90_ou_plus,91.06029106029106,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,part_perdant_20_points_ou_plus,3.638253638253638,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,part_perdant_un_cinquieme_du_niveau,3.638253638253638,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,part_entre_les_deux_deciles,90.33264033264034,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,sensibilite_50_candidats_effectif,787,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,sensibilite_50_candidats_part_perdant_20_points,3.0495552731893265,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,sensibilite_filiere_part_perdant_20_points,3.638253638253638,% des formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,sensibilite_capacite_effectif,912,formations
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,sensibilite_capacite_premier_decile,91.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,sensibilite_capacite_mediane,100.0,%
+taux_de_l_annee_suivante_par_tranche,2023-2024,100 %,sensibilite_capacite_neuvieme_decile,100.0,%
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,correlation_de_pearson,0.8994783174161392,
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,correlation_de_spearman,0.8986882833502952,
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,correlation_de_pearson_hors_0_et_100,0.8832929445292493,
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,correlation_de_spearman_hors_0_et_100,0.881304770508843,
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,variation_mediane,0,points
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,variation_moyenne,-0.5223373394115209,points
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,part_en_baisse,47.25238292581848,% des formations
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,part_en_hausse,42.58599254040613,% des formations
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,part_inchangee,10.161624533775383,% des formations
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,variation_absolue_mediane,6,points
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,tres_selectives_moins_de_20_effectif,1116,formations
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,tres_selectives_atteignant_40_ou_plus,17,formations
+stabilite_d_ensemble,2023-2024,toutes les formations appariées,capacite_changee_de_plus_de_25_pour_cent,596,formations
+filieres,2023-2024,Autre formation,effectif,1002,formations
+filieres,2023-2024,Autre formation,variation_mediane,0.0,points
+filieres,2023-2024,Autre formation,variation_moyenne,-0.5898203592814372,points
+filieres,2023-2024,Autre formation,taux_median_depart,38.0,%
+filieres,2023-2024,Autre formation,taux_median_arrivee,36.0,%
+filieres,2023-2024,Autre formation,part_en_baisse,49.50099800399202,% des formations
+filieres,2023-2024,Autre formation,correlation_de_pearson,0.8796128305563503,
+filieres,2023-2024,Autre formation,correlation_de_spearman,0.9015152142718456,
+filieres,2023-2024,Autre formation,candidats_medians_depart,267.5,candidats
+filieres,2023-2024,Autre formation,candidats_medians_arrivee,272.5,candidats
+filieres,2023-2024,Autre formation,places_medianes_depart,19.5,places
+filieres,2023-2024,Autre formation,places_medianes_arrivee,20.0,places
+filieres,2023-2024,BTS,effectif,4986,formations
+filieres,2023-2024,BTS,variation_mediane,1.0,points
+filieres,2023-2024,BTS,variation_moyenne,1.097272362615323,points
+filieres,2023-2024,BTS,taux_median_depart,60.0,%
+filieres,2023-2024,BTS,taux_median_arrivee,62.0,%
+filieres,2023-2024,BTS,part_en_baisse,45.166466105094266,% des formations
+filieres,2023-2024,BTS,correlation_de_pearson,0.8508135054108069,
+filieres,2023-2024,BTS,correlation_de_spearman,0.8408643086156606,
+filieres,2023-2024,BTS,candidats_medians_depart,308.0,candidats
+filieres,2023-2024,BTS,candidats_medians_arrivee,222.0,candidats
+filieres,2023-2024,BTS,places_medianes_depart,25.0,places
+filieres,2023-2024,BTS,places_medianes_arrivee,24.0,places
+filieres,2023-2024,BUT,effectif,565,formations
+filieres,2023-2024,BUT,variation_mediane,-1,points
+filieres,2023-2024,BUT,variation_moyenne,-0.9168141592920354,points
+filieres,2023-2024,BUT,taux_median_depart,50,%
+filieres,2023-2024,BUT,taux_median_arrivee,48,%
+filieres,2023-2024,BUT,part_en_baisse,52.389380530973455,% des formations
+filieres,2023-2024,BUT,correlation_de_pearson,0.9277512656951182,
+filieres,2023-2024,BUT,correlation_de_spearman,0.9286372623617015,
+filieres,2023-2024,BUT,candidats_medians_depart,943.0,candidats
+filieres,2023-2024,BUT,candidats_medians_arrivee,889.0,candidats
+filieres,2023-2024,BUT,places_medianes_depart,56.0,places
+filieres,2023-2024,BUT,places_medianes_arrivee,56.0,places
+filieres,2023-2024,CPGE,effectif,963,formations
+filieres,2023-2024,CPGE,variation_mediane,-2,points
+filieres,2023-2024,CPGE,variation_moyenne,-2.691588785046729,points
+filieres,2023-2024,CPGE,taux_median_depart,66,%
+filieres,2023-2024,CPGE,taux_median_arrivee,62,%
+filieres,2023-2024,CPGE,part_en_baisse,59.086188992731046,% des formations
+filieres,2023-2024,CPGE,correlation_de_pearson,0.9273581222344001,
+filieres,2023-2024,CPGE,correlation_de_spearman,0.9094521694582898,
+filieres,2023-2024,CPGE,candidats_medians_depart,769.0,candidats
+filieres,2023-2024,CPGE,candidats_medians_arrivee,1029.0,candidats
+filieres,2023-2024,CPGE,places_medianes_depart,45.0,places
+filieres,2023-2024,CPGE,places_medianes_arrivee,45.0,places
+filieres,2023-2024,EFTS,effectif,226,formations
+filieres,2023-2024,EFTS,variation_mediane,0.0,points
+filieres,2023-2024,EFTS,variation_moyenne,-1.7433628318584071,points
+filieres,2023-2024,EFTS,taux_median_depart,46.0,%
+filieres,2023-2024,EFTS,taux_median_arrivee,44.5,%
+filieres,2023-2024,EFTS,part_en_baisse,46.017699115044245,% des formations
+filieres,2023-2024,EFTS,correlation_de_pearson,0.6143228645297246,
+filieres,2023-2024,EFTS,correlation_de_spearman,0.5911156291882099,
+filieres,2023-2024,EFTS,candidats_medians_depart,125.5,candidats
+filieres,2023-2024,EFTS,candidats_medians_arrivee,132.5,candidats
+filieres,2023-2024,EFTS,places_medianes_depart,28.0,places
+filieres,2023-2024,EFTS,places_medianes_arrivee,29.5,places
+filieres,2023-2024,Ecole d'Ingénieur,effectif,424,formations
+filieres,2023-2024,Ecole d'Ingénieur,variation_mediane,1.0,points
+filieres,2023-2024,Ecole d'Ingénieur,variation_moyenne,0.3136792452830189,points
+filieres,2023-2024,Ecole d'Ingénieur,taux_median_depart,71.5,%
+filieres,2023-2024,Ecole d'Ingénieur,taux_median_arrivee,73.0,%
+filieres,2023-2024,Ecole d'Ingénieur,part_en_baisse,43.39622641509434,% des formations
+filieres,2023-2024,Ecole d'Ingénieur,correlation_de_pearson,0.7948382051881125,
+filieres,2023-2024,Ecole d'Ingénieur,correlation_de_spearman,0.7799837252439025,
+filieres,2023-2024,Ecole d'Ingénieur,candidats_medians_depart,771.5,candidats
+filieres,2023-2024,Ecole d'Ingénieur,candidats_medians_arrivee,829.0,candidats
+filieres,2023-2024,Ecole d'Ingénieur,places_medianes_depart,30.0,places
+filieres,2023-2024,Ecole d'Ingénieur,places_medianes_arrivee,28.0,places
+filieres,2023-2024,Ecole de Commerce,effectif,176,formations
+filieres,2023-2024,Ecole de Commerce,variation_mediane,-1.0,points
+filieres,2023-2024,Ecole de Commerce,variation_moyenne,-1.1022727272727273,points
+filieres,2023-2024,Ecole de Commerce,taux_median_depart,64.5,%
+filieres,2023-2024,Ecole de Commerce,taux_median_arrivee,63.5,%
+filieres,2023-2024,Ecole de Commerce,part_en_baisse,55.11363636363637,% des formations
+filieres,2023-2024,Ecole de Commerce,correlation_de_pearson,0.913300886444107,
+filieres,2023-2024,Ecole de Commerce,correlation_de_spearman,0.878498487480905,
+filieres,2023-2024,Ecole de Commerce,candidats_medians_depart,724.0,candidats
+filieres,2023-2024,Ecole de Commerce,candidats_medians_arrivee,750.5,candidats
+filieres,2023-2024,Ecole de Commerce,places_medianes_depart,60.0,places
+filieres,2023-2024,Ecole de Commerce,places_medianes_arrivee,70.0,places
+filieres,2023-2024,IFSI,effectif,340,formations
+filieres,2023-2024,IFSI,variation_mediane,1.0,points
+filieres,2023-2024,IFSI,variation_moyenne,0.8735294117647059,points
+filieres,2023-2024,IFSI,taux_median_depart,43.0,%
+filieres,2023-2024,IFSI,taux_median_arrivee,43.0,%
+filieres,2023-2024,IFSI,part_en_baisse,39.705882352941174,% des formations
+filieres,2023-2024,IFSI,correlation_de_pearson,0.8892240308650092,
+filieres,2023-2024,IFSI,correlation_de_spearman,0.8866559339103613,
+filieres,2023-2024,IFSI,candidats_medians_depart,3501.5,candidats
+filieres,2023-2024,IFSI,candidats_medians_arrivee,3284.0,candidats
+filieres,2023-2024,IFSI,places_medianes_depart,78.0,places
+filieres,2023-2024,IFSI,places_medianes_arrivee,81.5,places
+filieres,2023-2024,Licence,effectif,2510,formations
+filieres,2023-2024,Licence,variation_mediane,0.0,points
+filieres,2023-2024,Licence,variation_moyenne,-1.6127490039840637,points
+filieres,2023-2024,Licence,taux_median_depart,94.0,%
+filieres,2023-2024,Licence,taux_median_arrivee,91.0,%
+filieres,2023-2024,Licence,part_en_baisse,41.51394422310757,% des formations
+filieres,2023-2024,Licence,correlation_de_pearson,0.940950153324119,
+filieres,2023-2024,Licence,correlation_de_spearman,0.8857492286104758,
+filieres,2023-2024,Licence,candidats_medians_depart,489.0,candidats
+filieres,2023-2024,Licence,candidats_medians_arrivee,522.0,candidats
+filieres,2023-2024,Licence,places_medianes_depart,63.0,places
+filieres,2023-2024,Licence,places_medianes_arrivee,60.0,places
+filieres,2023-2024,Licence_Las,effectif,442,formations
+filieres,2023-2024,Licence_Las,variation_mediane,-3.0,points
+filieres,2023-2024,Licence_Las,variation_moyenne,-4.843891402714932,points
+filieres,2023-2024,Licence_Las,taux_median_depart,65.0,%
+filieres,2023-2024,Licence_Las,taux_median_arrivee,57.0,%
+filieres,2023-2024,Licence_Las,part_en_baisse,60.85972850678733,% des formations
+filieres,2023-2024,Licence_Las,correlation_de_pearson,0.8838925446334756,
+filieres,2023-2024,Licence_Las,correlation_de_spearman,0.885584545960683,
+filieres,2023-2024,Licence_Las,candidats_medians_depart,492.5,candidats
+filieres,2023-2024,Licence_Las,candidats_medians_arrivee,552.0,candidats
+filieres,2023-2024,Licence_Las,places_medianes_depart,30.0,places
+filieres,2023-2024,Licence_Las,places_medianes_arrivee,30.0,places
+filieres,2023-2024,PASS,effectif,268,formations
+filieres,2023-2024,PASS,variation_mediane,-2.0,points
+filieres,2023-2024,PASS,variation_moyenne,-4.481343283582089,points
+filieres,2023-2024,PASS,taux_median_depart,38.5,%
+filieres,2023-2024,PASS,taux_median_arrivee,35.5,%
+filieres,2023-2024,PASS,part_en_baisse,60.82089552238806,% des formations
+filieres,2023-2024,PASS,correlation_de_pearson,0.8883046047630602,
+filieres,2023-2024,PASS,correlation_de_spearman,0.9000057241039313,
+filieres,2023-2024,PASS,candidats_medians_depart,2365.0,candidats
+filieres,2023-2024,PASS,candidats_medians_arrivee,2552.0,candidats
+filieres,2023-2024,PASS,places_medianes_depart,50.0,places
+filieres,2023-2024,PASS,places_medianes_arrivee,50.0,places
+filieres,2023-2024,filière reclassée par le ministère d'une session à l'autre,effectif,163,formations
+filieres,2023-2024,filière reclassée par le ministère d'une session à l'autre,variation_mediane,-2,points
+selection_de_l_appariement,2023-2024,appariée,effectif,12065,formations
+selection_de_l_appariement,2023-2024,appariée,taux_d_acces_median,60,%
+selection_de_l_appariement,2023-2024,appariée,capacite_mediane,32.0,places
+selection_de_l_appariement,2023-2024,appariée,candidats_medians,418.0,candidats
+selection_de_l_appariement,2023-2024,appariée,part_de_cpge,7.981765437215085,%
+selection_de_l_appariement,2023-2024,appariée,part_de_bts,41.326150020721094,%
+selection_de_l_appariement,2023-2024,appariée,part_de_licences,20.803978450062164,%
+selection_de_l_appariement,2023-2024,intitulé changé,effectif,1190,formations
+selection_de_l_appariement,2023-2024,intitulé changé,taux_d_acces_median,66,%
+selection_de_l_appariement,2023-2024,intitulé changé,capacite_mediane,28.0,places
+selection_de_l_appariement,2023-2024,intitulé changé,candidats_medians,279.0,candidats
+selection_de_l_appariement,2023-2024,intitulé changé,part_de_cpge,0.42016806722689076,%
+selection_de_l_appariement,2023-2024,intitulé changé,part_de_bts,21.428571428571427,%
+selection_de_l_appariement,2023-2024,intitulé changé,part_de_licences,18.15126050420168,%
+selection_de_l_appariement,2023-2024,disparue,effectif,537,formations
+selection_de_l_appariement,2023-2024,disparue,taux_d_acces_median,78,%
+selection_de_l_appariement,2023-2024,disparue,capacite_mediane,20.0,places
+selection_de_l_appariement,2023-2024,disparue,candidats_medians,148.0,candidats
+selection_de_l_appariement,2023-2024,disparue,part_de_cpge,2.793296089385475,%
+selection_de_l_appariement,2023-2024,disparue,part_de_bts,16.945996275605214,%
+selection_de_l_appariement,2023-2024,disparue,part_de_licences,31.843575418994412,%
+selection_de_l_appariement,2023-2024,taux absent,effectif,77,formations
+selection_de_l_appariement,2023-2024,taux absent,taux_d_acces_median,82.5,%
+selection_de_l_appariement,2023-2024,taux absent,capacite_mediane,18.0,places
+selection_de_l_appariement,2023-2024,taux absent,candidats_medians,0.0,candidats
+selection_de_l_appariement,2023-2024,taux absent,part_de_cpge,0.0,%
+selection_de_l_appariement,2023-2024,taux absent,part_de_bts,9.090909090909092,%
+selection_de_l_appariement,2023-2024,taux absent,part_de_licences,7.792207792207792,%
+selection_de_l_appariement,2023-2024,nouvelle,effectif,747,formations
+selection_de_l_appariement,2023-2024,nouvelle,taux_d_acces_median,73,%
+selection_de_l_appariement,2023-2024,nouvelle,part_de_cpge,1.8741633199464525,%
+selection_de_l_appariement,2023-2024,nouvelle,part_de_bts,12.985274431057563,%
+selection_de_l_appariement,2023-2024,nouvelle,part_de_licences,38.28647925033467,%
+appariement,2024-2025,présentes l'une ou l'autre année,formations,14791,formations
+appariement,2024-2025,"appariées (même code, même intitulé)",formations,12816,formations
+appariement,2024-2025,écartées : nouvelle,formations,712,formations
+appariement,2024-2025,écartées : disparue,formations,539,formations
+appariement,2024-2025,écartées : intitulé changé,formations,674,formations
+appariement,2024-2025,écartées : taux absent,formations,27,formations
+appariement,2024-2025,écartées : aucun classé,formations,23,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,effectif,1239,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,premier_decile,5.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,mediane,12,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,neuvieme_decile,22.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,part_a_90_ou_plus,0.08071025020177562,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,part_perdant_20_points_ou_plus,0.0,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,part_perdant_un_cinquieme_du_niveau,29.37853107344633,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,part_entre_les_deux_deciles,80.30669895076674,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,part_couverte_par_les_bornes_de_la_transition_precedente,83.05084745762711,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,sensibilite_50_candidats_effectif,1217,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,sensibilite_50_candidats_part_perdant_20_points,0.0,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,sensibilite_filiere_part_perdant_20_points,0.0,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,sensibilite_capacite_effectif,1168,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,sensibilite_capacite_premier_decile,5.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,sensibilite_capacite_mediane,12.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,moins de 20 %,sensibilite_capacite_neuvieme_decile,22.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,effectif,2451,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,premier_decile,17.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,mediane,29,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,neuvieme_decile,45.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,part_a_90_ou_plus,0.48959608323133413,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,part_perdant_20_points_ou_plus,0.7751937984496124,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,part_perdant_un_cinquieme_du_niveau,26.438188494492046,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,part_entre_les_deux_deciles,82.1297429620563,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,part_couverte_par_les_bornes_de_la_transition_precedente,79.15136678906569,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,sensibilite_50_candidats_effectif,2421,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,sensibilite_50_candidats_part_perdant_20_points,0.7434944237918215,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,sensibilite_filiere_part_perdant_20_points,0.3263973888208894,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,sensibilite_capacite_effectif,2364,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,sensibilite_capacite_premier_decile,17.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,sensibilite_capacite_mediane,28.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,20 à 39 %,sensibilite_capacite_neuvieme_decile,45.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,effectif,2707,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,premier_decile,32.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,mediane,47,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,neuvieme_decile,67.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,part_a_90_ou_plus,1.4037680088659032,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,part_perdant_20_points_ou_plus,5.467306981898781,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,part_perdant_un_cinquieme_du_niveau,24.085703731067603,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,part_entre_les_deux_deciles,81.08607314370151,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,part_couverte_par_les_bornes_de_la_transition_precedente,79.60842260805319,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,sensibilite_50_candidats_effectif,2645,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,sensibilite_50_candidats_part_perdant_20_points,5.444234404536862,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,sensibilite_filiere_part_perdant_20_points,3.583302548947174,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,sensibilite_capacite_effectif,2605,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,sensibilite_capacite_premier_decile,32.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,sensibilite_capacite_mediane,47,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,40 à 59 %,sensibilite_capacite_neuvieme_decile,67.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,effectif,1771,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,premier_decile,43.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,mediane,63,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,neuvieme_decile,83.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,part_a_90_ou_plus,4.4042913608131,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,part_perdant_20_points_ou_plus,14.906832298136646,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,part_perdant_un_cinquieme_du_niveau,25.80463015245624,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,part_entre_les_deux_deciles,81.30999435347262,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,part_couverte_par_les_bornes_de_la_transition_precedente,77.13156408808582,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,sensibilite_50_candidats_effectif,1665,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,sensibilite_50_candidats_part_perdant_20_points,15.075075075075075,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,sensibilite_filiere_part_perdant_20_points,10.38961038961039,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,sensibilite_capacite_effectif,1673,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,sensibilite_capacite_premier_decile,43.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,sensibilite_capacite_mediane,63,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,60 à 74 %,sensibilite_capacite_neuvieme_decile,83.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,effectif,1860,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,premier_decile,49.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,mediane,74.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,neuvieme_decile,92.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,part_a_90_ou_plus,14.516129032258064,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,part_perdant_20_points_ou_plus,26.881720430107528,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,part_perdant_un_cinquieme_du_niveau,31.397849462365592,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,part_entre_les_deux_deciles,80.86021505376344,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,part_couverte_par_les_bornes_de_la_transition_precedente,73.01075268817205,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,sensibilite_50_candidats_effectif,1722,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,sensibilite_50_candidats_part_perdant_20_points,26.771196283391404,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,sensibilite_filiere_part_perdant_20_points,19.892473118279568,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,sensibilite_capacite_effectif,1740,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,sensibilite_capacite_premier_decile,49.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,sensibilite_capacite_mediane,74.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,75 à 89 %,sensibilite_capacite_neuvieme_decile,92.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,effectif,1695,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,premier_decile,59.4,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,mediane,91,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,neuvieme_decile,100.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,part_a_90_ou_plus,55.2212389380531,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,part_perdant_20_points_ou_plus,21.651917404129794,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,part_perdant_un_cinquieme_du_niveau,22.595870206489675,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,part_entre_les_deux_deciles,89.97050147492625,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,part_couverte_par_les_bornes_de_la_transition_precedente,77.40412979351032,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,sensibilite_50_candidats_effectif,1525,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,sensibilite_50_candidats_part_perdant_20_points,21.508196721311474,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,sensibilite_filiere_part_perdant_20_points,19.05604719764012,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,sensibilite_capacite_effectif,1561,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,sensibilite_capacite_premier_decile,60.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,sensibilite_capacite_mediane,91,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,90 à 99 %,sensibilite_capacite_neuvieme_decile,100.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,effectif,1093,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,premier_decile,80.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,mediane,100,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,neuvieme_decile,100.0,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,part_a_90_ou_plus,85.26989935956084,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,part_perdant_20_points_ou_plus,10.430009149130832,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,part_perdant_un_cinquieme_du_niveau,10.430009149130832,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,part_entre_les_deux_deciles,90.30192131747484,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,part_couverte_par_les_bornes_de_la_transition_precedente,84.72095150960659,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,sensibilite_50_candidats_effectif,847,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,sensibilite_50_candidats_part_perdant_20_points,5.903187721369539,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,sensibilite_filiere_part_perdant_20_points,9.78956999085087,% des formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,sensibilite_capacite_effectif,1007,formations
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,sensibilite_capacite_premier_decile,79.6,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,sensibilite_capacite_mediane,100,%
+taux_de_l_annee_suivante_par_tranche,2024-2025,100 %,sensibilite_capacite_neuvieme_decile,100.0,%
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,correlation_de_pearson,0.8716744531783102,
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,correlation_de_spearman,0.8723666172204645,
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,correlation_de_pearson_hors_0_et_100,0.8540288766017168,
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,correlation_de_spearman_hors_0_et_100,0.8553357986296435,
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,variation_mediane,-2.0,points
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,variation_moyenne,-3.7364232209737827,points
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,part_en_baisse,55.06398252184769,% des formations
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,part_en_hausse,33.95755305867665,% des formations
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,part_inchangee,10.978464419475655,% des formations
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,variation_absolue_mediane,6.0,points
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,tres_selectives_moins_de_20_effectif,1239,formations
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,tres_selectives_atteignant_40_ou_plus,20,formations
+stabilite_d_ensemble,2024-2025,toutes les formations appariées,capacite_changee_de_plus_de_25_pour_cent,696,formations
+filieres,2024-2025,Autre formation,effectif,1369,formations
+filieres,2024-2025,Autre formation,variation_mediane,-1,points
+filieres,2024-2025,Autre formation,variation_moyenne,-4.324324324324325,points
+filieres,2024-2025,Autre formation,taux_median_depart,46,%
+filieres,2024-2025,Autre formation,taux_median_arrivee,41,%
+filieres,2024-2025,Autre formation,part_en_baisse,50.840029218407594,% des formations
+filieres,2024-2025,Autre formation,correlation_de_pearson,0.7651835816592198,
+filieres,2024-2025,Autre formation,correlation_de_spearman,0.7979879621498893,
+filieres,2024-2025,Autre formation,candidats_medians_depart,185.0,candidats
+filieres,2024-2025,Autre formation,candidats_medians_arrivee,173.0,candidats
+filieres,2024-2025,Autre formation,places_medianes_depart,15.0,places
+filieres,2024-2025,Autre formation,places_medianes_arrivee,15.0,places
+filieres,2024-2025,BTS,effectif,4799,formations
+filieres,2024-2025,BTS,variation_mediane,-3,points
+filieres,2024-2025,BTS,variation_moyenne,-3.8612210877266095,points
+filieres,2024-2025,BTS,taux_median_depart,60,%
+filieres,2024-2025,BTS,taux_median_arrivee,56,%
+filieres,2024-2025,BTS,part_en_baisse,60.40841842050427,% des formations
+filieres,2024-2025,BTS,correlation_de_pearson,0.8418513202799228,
+filieres,2024-2025,BTS,correlation_de_spearman,0.8334615032527349,
+filieres,2024-2025,BTS,candidats_medians_depart,226.0,candidats
+filieres,2024-2025,BTS,candidats_medians_arrivee,221.0,candidats
+filieres,2024-2025,BTS,places_medianes_depart,24.0,places
+filieres,2024-2025,BTS,places_medianes_arrivee,24.0,places
+filieres,2024-2025,BUT,effectif,813,formations
+filieres,2024-2025,BUT,variation_mediane,-2,points
+filieres,2024-2025,BUT,variation_moyenne,-2.6998769987699878,points
+filieres,2024-2025,BUT,taux_median_depart,49,%
+filieres,2024-2025,BUT,taux_median_arrivee,45,%
+filieres,2024-2025,BUT,part_en_baisse,60.14760147601476,% des formations
+filieres,2024-2025,BUT,correlation_de_pearson,0.9374868684535677,
+filieres,2024-2025,BUT,correlation_de_spearman,0.9372896194477905,
+filieres,2024-2025,BUT,candidats_medians_depart,888.0,candidats
+filieres,2024-2025,BUT,candidats_medians_arrivee,967.0,candidats
+filieres,2024-2025,BUT,places_medianes_depart,58.0,places
+filieres,2024-2025,BUT,places_medianes_arrivee,56.0,places
+filieres,2024-2025,CPGE,effectif,974,formations
+filieres,2024-2025,CPGE,variation_mediane,-11.0,points
+filieres,2024-2025,CPGE,variation_moyenne,-14.859342915811089,points
+filieres,2024-2025,CPGE,taux_median_depart,62.0,%
+filieres,2024-2025,CPGE,taux_median_arrivee,43.0,%
+filieres,2024-2025,CPGE,part_en_baisse,77.82340862422998,% des formations
+filieres,2024-2025,CPGE,correlation_de_pearson,0.7456806317016372,
+filieres,2024-2025,CPGE,correlation_de_spearman,0.722269174629378,
+filieres,2024-2025,CPGE,candidats_medians_depart,993.5,candidats
+filieres,2024-2025,CPGE,candidats_medians_arrivee,940.5,candidats
+filieres,2024-2025,CPGE,places_medianes_depart,45.0,places
+filieres,2024-2025,CPGE,places_medianes_arrivee,45.0,places
+filieres,2024-2025,EFTS,effectif,227,formations
+filieres,2024-2025,EFTS,variation_mediane,-1,points
+filieres,2024-2025,EFTS,variation_moyenne,0.02643171806167401,points
+filieres,2024-2025,EFTS,taux_median_depart,45,%
+filieres,2024-2025,EFTS,taux_median_arrivee,46,%
+filieres,2024-2025,EFTS,part_en_baisse,52.42290748898679,% des formations
+filieres,2024-2025,EFTS,correlation_de_pearson,0.7996146675604324,
+filieres,2024-2025,EFTS,correlation_de_spearman,0.801811770428392,
+filieres,2024-2025,EFTS,candidats_medians_depart,129.0,candidats
+filieres,2024-2025,EFTS,candidats_medians_arrivee,126.0,candidats
+filieres,2024-2025,EFTS,places_medianes_depart,28.0,places
+filieres,2024-2025,EFTS,places_medianes_arrivee,28.0,places
+filieres,2024-2025,Ecole d'Ingénieur,effectif,462,formations
+filieres,2024-2025,Ecole d'Ingénieur,variation_mediane,0.0,points
+filieres,2024-2025,Ecole d'Ingénieur,variation_moyenne,-1.0216450216450217,points
+filieres,2024-2025,Ecole d'Ingénieur,taux_median_depart,73.0,%
+filieres,2024-2025,Ecole d'Ingénieur,taux_median_arrivee,70.0,%
+filieres,2024-2025,Ecole d'Ingénieur,part_en_baisse,40.692640692640694,% des formations
+filieres,2024-2025,Ecole d'Ingénieur,correlation_de_pearson,0.8106974482727486,
+filieres,2024-2025,Ecole d'Ingénieur,correlation_de_spearman,0.8136025949088301,
+filieres,2024-2025,Ecole d'Ingénieur,candidats_medians_depart,706.0,candidats
+filieres,2024-2025,Ecole d'Ingénieur,candidats_medians_arrivee,651.5,candidats
+filieres,2024-2025,Ecole d'Ingénieur,places_medianes_depart,25.0,places
+filieres,2024-2025,Ecole d'Ingénieur,places_medianes_arrivee,25.0,places
+filieres,2024-2025,Ecole de Commerce,effectif,187,formations
+filieres,2024-2025,Ecole de Commerce,variation_mediane,0,points
+filieres,2024-2025,Ecole de Commerce,variation_moyenne,-0.39572192513368987,points
+filieres,2024-2025,Ecole de Commerce,taux_median_depart,63,%
+filieres,2024-2025,Ecole de Commerce,taux_median_arrivee,63,%
+filieres,2024-2025,Ecole de Commerce,part_en_baisse,49.73262032085562,% des formations
+filieres,2024-2025,Ecole de Commerce,correlation_de_pearson,0.9253024356374683,
+filieres,2024-2025,Ecole de Commerce,correlation_de_spearman,0.8919058514148418,
+filieres,2024-2025,Ecole de Commerce,candidats_medians_depart,662.0,candidats
+filieres,2024-2025,Ecole de Commerce,candidats_medians_arrivee,688.0,candidats
+filieres,2024-2025,Ecole de Commerce,places_medianes_depart,60.0,places
+filieres,2024-2025,Ecole de Commerce,places_medianes_arrivee,60.0,places
+filieres,2024-2025,IFSI,effectif,342,formations
+filieres,2024-2025,IFSI,variation_mediane,-2.0,points
+filieres,2024-2025,IFSI,variation_moyenne,-1.780701754385965,points
+filieres,2024-2025,IFSI,taux_median_depart,43.0,%
+filieres,2024-2025,IFSI,taux_median_arrivee,40.5,%
+filieres,2024-2025,IFSI,part_en_baisse,59.35672514619883,% des formations
+filieres,2024-2025,IFSI,correlation_de_pearson,0.899328897246864,
+filieres,2024-2025,IFSI,correlation_de_spearman,0.897037704979847,
+filieres,2024-2025,IFSI,candidats_medians_depart,3266.5,candidats
+filieres,2024-2025,IFSI,candidats_medians_arrivee,3706.5,candidats
+filieres,2024-2025,IFSI,places_medianes_depart,81.0,places
+filieres,2024-2025,IFSI,places_medianes_arrivee,83.0,places
+filieres,2024-2025,Licence,effectif,2718,formations
+filieres,2024-2025,Licence,variation_mediane,0.0,points
+filieres,2024-2025,Licence,variation_moyenne,-1.2303164091243561,points
+filieres,2024-2025,Licence,taux_median_depart,91.0,%
+filieres,2024-2025,Licence,taux_median_arrivee,88.0,%
+filieres,2024-2025,Licence,part_en_baisse,39.33038999264165,% des formations
+filieres,2024-2025,Licence,correlation_de_pearson,0.9445077730995675,
+filieres,2024-2025,Licence,correlation_de_spearman,0.9010946003729108,
+filieres,2024-2025,Licence,candidats_medians_depart,495.0,candidats
+filieres,2024-2025,Licence,candidats_medians_arrivee,497.5,candidats
+filieres,2024-2025,Licence,places_medianes_depart,60.0,places
+filieres,2024-2025,Licence,places_medianes_arrivee,60.0,places
+filieres,2024-2025,Licence_Las,effectif,481,formations
+filieres,2024-2025,Licence_Las,variation_mediane,-2,points
+filieres,2024-2025,Licence_Las,variation_moyenne,-2.2765072765072767,points
+filieres,2024-2025,Licence_Las,taux_median_depart,58,%
+filieres,2024-2025,Licence_Las,taux_median_arrivee,53,%
+filieres,2024-2025,Licence_Las,part_en_baisse,55.71725571725572,% des formations
+filieres,2024-2025,Licence_Las,correlation_de_pearson,0.8896073268920914,
+filieres,2024-2025,Licence_Las,correlation_de_spearman,0.8919923372156103,
+filieres,2024-2025,Licence_Las,candidats_medians_depart,548.0,candidats
+filieres,2024-2025,Licence_Las,candidats_medians_arrivee,566.0,candidats
+filieres,2024-2025,Licence_Las,places_medianes_depart,30.0,places
+filieres,2024-2025,Licence_Las,places_medianes_arrivee,30.0,places
+filieres,2024-2025,PASS,effectif,272,formations
+filieres,2024-2025,PASS,variation_mediane,-1.0,points
+filieres,2024-2025,PASS,variation_moyenne,-1.125,points
+filieres,2024-2025,PASS,taux_median_depart,35.0,%
+filieres,2024-2025,PASS,taux_median_arrivee,34.0,%
+filieres,2024-2025,PASS,part_en_baisse,55.14705882352941,% des formations
+filieres,2024-2025,PASS,correlation_de_pearson,0.9215524872183847,
+filieres,2024-2025,PASS,correlation_de_spearman,0.9193247548809347,
+filieres,2024-2025,PASS,candidats_medians_depart,2643.5,candidats
+filieres,2024-2025,PASS,candidats_medians_arrivee,2966.0,candidats
+filieres,2024-2025,PASS,places_medianes_depart,50.0,places
+filieres,2024-2025,PASS,places_medianes_arrivee,55.5,places
+filieres,2024-2025,filière reclassée par le ministère d'une session à l'autre,effectif,172,formations
+filieres,2024-2025,filière reclassée par le ministère d'une session à l'autre,variation_mediane,-4.0,points
+selection_de_l_appariement,2024-2025,appariée,effectif,12816,formations
+selection_de_l_appariement,2024-2025,appariée,taux_d_acces_median,60.0,%
+selection_de_l_appariement,2024-2025,appariée,capacite_mediane,32.0,places
+selection_de_l_appariement,2024-2025,appariée,candidats_medians,371.0,candidats
+selection_de_l_appariement,2024-2025,appariée,part_de_cpge,7.599875156054932,%
+selection_de_l_appariement,2024-2025,appariée,part_de_bts,37.44538077403246,%
+selection_de_l_appariement,2024-2025,appariée,part_de_licences,21.207865168539325,%
+selection_de_l_appariement,2024-2025,intitulé changé,effectif,674,formations
+selection_de_l_appariement,2024-2025,intitulé changé,taux_d_acces_median,69.0,%
+selection_de_l_appariement,2024-2025,intitulé changé,capacite_mediane,30.0,places
+selection_de_l_appariement,2024-2025,intitulé changé,candidats_medians,246.5,candidats
+selection_de_l_appariement,2024-2025,intitulé changé,part_de_cpge,0.44510385756676557,%
+selection_de_l_appariement,2024-2025,intitulé changé,part_de_bts,68.24925816023739,%
+selection_de_l_appariement,2024-2025,intitulé changé,part_de_licences,16.91394658753709,%
+selection_de_l_appariement,2024-2025,disparue,effectif,539,formations
+selection_de_l_appariement,2024-2025,disparue,taux_d_acces_median,69.0,%
+selection_de_l_appariement,2024-2025,disparue,capacite_mediane,20.0,places
+selection_de_l_appariement,2024-2025,disparue,candidats_medians,109.0,candidats
+selection_de_l_appariement,2024-2025,disparue,part_de_cpge,0.9276437847866419,%
+selection_de_l_appariement,2024-2025,disparue,part_de_bts,14.100185528756958,%
+selection_de_l_appariement,2024-2025,disparue,part_de_licences,33.76623376623377,%
+selection_de_l_appariement,2024-2025,aucun classé,effectif,23,formations
+selection_de_l_appariement,2024-2025,aucun classé,taux_d_acces_median,50,%
+selection_de_l_appariement,2024-2025,aucun classé,capacite_mediane,15.0,places
+selection_de_l_appariement,2024-2025,aucun classé,candidats_medians,42.0,candidats
+selection_de_l_appariement,2024-2025,aucun classé,part_de_cpge,0.0,%
+selection_de_l_appariement,2024-2025,aucun classé,part_de_bts,30.434782608695652,%
+selection_de_l_appariement,2024-2025,aucun classé,part_de_licences,13.043478260869565,%
+selection_de_l_appariement,2024-2025,taux absent,effectif,27,formations
+selection_de_l_appariement,2024-2025,taux absent,taux_d_acces_median,100,%
+selection_de_l_appariement,2024-2025,taux absent,capacite_mediane,12.0,places
+selection_de_l_appariement,2024-2025,taux absent,candidats_medians,33.0,candidats
+selection_de_l_appariement,2024-2025,taux absent,part_de_cpge,0.0,%
+selection_de_l_appariement,2024-2025,taux absent,part_de_bts,11.11111111111111,%
+selection_de_l_appariement,2024-2025,taux absent,part_de_licences,7.407407407407407,%
+selection_de_l_appariement,2024-2025,nouvelle,effectif,712,formations
+selection_de_l_appariement,2024-2025,nouvelle,taux_d_acces_median,54.0,%
+selection_de_l_appariement,2024-2025,nouvelle,part_de_cpge,1.2640449438202248,%
+selection_de_l_appariement,2024-2025,nouvelle,part_de_bts,11.51685393258427,%
+selection_de_l_appariement,2024-2025,nouvelle,part_de_licences,30.196629213483146,%
+cohorte_des_trois_sessions,2023-2024,toutes les formations appariées aux deux transitions,effectif,11087,formations
+cohorte_des_trois_sessions,2023-2024,toutes les formations appariées aux deux transitions,part_en_baisse,47.614323081085956,% des formations
+cohorte_des_trois_sessions,2023-2024,toutes les formations appariées aux deux transitions,part_en_hausse,42.2206187426716,% des formations
+cohorte_des_trois_sessions,2023-2024,toutes les formations appariées aux deux transitions,variation_moyenne,-0.5823937945341391,points
+cohorte_des_trois_sessions,2023-2024,toutes les formations appariées aux deux transitions,variation_mediane,0,points
+cohorte_des_trois_sessions,2024-2025,toutes les formations appariées aux deux transitions,effectif,11087,formations
+cohorte_des_trois_sessions,2024-2025,toutes les formations appariées aux deux transitions,part_en_baisse,55.23586182014972,% des formations
+cohorte_des_trois_sessions,2024-2025,toutes les formations appariées aux deux transitions,part_en_hausse,33.7602597636872,% des formations
+cohorte_des_trois_sessions,2024-2025,toutes les formations appariées aux deux transitions,variation_moyenne,-3.6872012266618563,points
+cohorte_des_trois_sessions,2024-2025,toutes les formations appariées aux deux transitions,variation_mediane,-2,points
+cohorte_des_trois_sessions,2023-2024,"idem, sans les classes préparatoires",effectif,10132,formations
+cohorte_des_trois_sessions,2023-2024,"idem, sans les classes préparatoires",part_en_baisse,46.525858665613896,% des formations
+cohorte_des_trois_sessions,2023-2024,"idem, sans les classes préparatoires",part_en_hausse,42.765495459928935,% des formations
+cohorte_des_trois_sessions,2023-2024,"idem, sans les classes préparatoires",variation_moyenne,-0.3818594551914726,points
+cohorte_des_trois_sessions,2023-2024,"idem, sans les classes préparatoires",variation_mediane,0.0,points
+cohorte_des_trois_sessions,2024-2025,"idem, sans les classes préparatoires",effectif,10132,formations
+cohorte_des_trois_sessions,2024-2025,"idem, sans les classes préparatoires",part_en_baisse,53.13857086458744,% des formations
+cohorte_des_trois_sessions,2024-2025,"idem, sans les classes préparatoires",part_en_hausse,35.14607185155941,% des formations
+cohorte_des_trois_sessions,2024-2025,"idem, sans les classes préparatoires",variation_moyenne,-2.644492696407422,points
+cohorte_des_trois_sessions,2024-2025,"idem, sans les classes préparatoires",variation_mediane,-1.0,points
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,taux_d_acces,26,%
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,candidats_phase_principale,378.0,candidats
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,candidats_classes,116.0,candidats
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,propositions,82.0,propositions
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,admis,32.0,candidats
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,capacite,30.0,places
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,part_bac_general_parmi_les_appelables,42.0,%
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,part_bac_technologique_parmi_les_appelables,58.0,%
+exemple_fichier_ouvert,2025,I.U.T. d'Illkirch — BUT - Information communication Parcours information numérique dans les organisations,part_bac_professionnel_parmi_les_appelables,0.0,%

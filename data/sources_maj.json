@@ -274,6 +274,22 @@
    {"date": "2026-12-17", "etape": "expiration du délai de 70 jours, jeudi 17 décembre à minuit (même annexe ; mise en vigueur possible par ordonnance)"},
    {"date": "2026-12-31", "etape": "loi de finances promulguée en principe ; fiche et lots de courriels à revoir sur le texte définitif"}
   ]
+ },
+ {
+  "id": "parcoursup",
+  "producteur": "Ministère chargé de l'enseignement supérieur (SIES)",
+  "objet": "Jeux ouverts Parcoursup (vœux et réponses des établissements), un jeu par session : taux d'accès de chaque formation",
+  "mode": "manuel",
+  "pages": [
+   "/parcoursup-quelles-chances-d-etre-admis/"
+  ],
+  "generateurs": [
+   "update_parcoursup.py"
+  ],
+  "jeu": "data/parcoursup.json",
+  "cadence": "annuelle (jeu de la session écoulée, date de parution variable)",
+  "nature": "annuelle : déposer l'export de la session 2026 dans scripts/sources_parcoursup/ (manifeste, SHA256SUMS), relancer le témoin du dossier de recherche (temoin_json.py), puis update_parcoursup.py ; la garde 5 attend les effectifs du témoin",
+  "revoir_avant": "2027-03-31"
  }
  ]
 }

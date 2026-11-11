@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1200" role="img" font-variant-numeric="tabular-nums" aria-labelledby="psup-tm-t psup-tm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="psup-tm-t">Comment les taux d'accès évoluent-ils d'une année sur l'autre ?</title><desc id="psup-tm-d">Pour chaque tranche de taux d'accès une année, intervalle du 1er au 9e décile et médiane du taux d'accès des mêmes formations l'année suivante : de 2024 à 2025, puis de 2023 à 2024 (autres formations, autres effectifs). 100 % en 2024 (1 093 formations) : en 2025, de 80 à 100 %, médiane 100 %. 100 % en 2023 (962 formations) : en 2024, de 91 à 100 %, médiane 100 %. 90 à 99 % en 2024 (1 695 formations) : en 2025, de 59 à 100 %, médiane 91 %. 90 à 99 % en 2023 (1 701 formations) : en 2024, de 76 à 100 %, médiane 94 %. 75 à 89 % en 2024 (1 860 formations) : en 2025, de 49 à 92 %, médiane 74 %. 75 à 89 % en 2023 (1 779 formations) : en 2024, de 58 à 95 %, médiane 81 %. 60 à 74 % en 2024 (1 771 formations) : en 2025, de 43 à 83 %, médiane 63 %. 60 à 74 % en 2023 (1 657 formations) : en 2024, de 48 à 85 %, médiane 66 %. 40 à 59 % en 2024 (2 707 formations) : en 2025, de 32 à 67 %, médiane 47 %. 40 à 59 % en 2023 (2 588 formations) : en 2024, de 34 à 70 %, médiane 50 %. 20 à 39 % en 2024 (2 451 formations) : en 2025, de 17 à 45 %, médiane 29 %. 20 à 39 % en 2023 (2 262 formations) : en 2024, de 19 à 48 %, médiane 31 %. Moins de 20 % en 2024 (1 239 formations) : en 2025, de 5 à 22 %, médiane 12 %. Moins de 20 % en 2023 (1 116 formations) : en 2024, de 5 à 24 %, médiane 13 %.</desc>
+<rect width="300" height="1200" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Comment les taux d'accès</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">évoluent-ils d'une année</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">sur l'autre ?</text>
+<text x="0" y="86" font-size="13.5" fill="#55524f">Taux d'accès l'année suivante, selon</text>
+<text x="0" y="104" font-size="13.5" fill="#55524f">le taux de l'année de départ, toutes</text>
+<text x="0" y="122" font-size="13.5" fill="#55524f">filières confondues</text>
+<rect x="0.0" y="141.0" width="20" height="10" fill="#184f95"/>
+<circle cx="10.0" cy="146.0" r="3.4" fill="#ffffff" stroke="#184f95" stroke-width="1.8"/>
+<text x="26.0" y="150.0" font-size="13.5" fill="#55524f">de 2024 à 2025 : la barre</text>
+<text x="26.0" y="167.0" font-size="13.5" fill="#55524f">(« de … à … % ») contient au</text>
+<text x="26.0" y="184.0" font-size="13.5" fill="#55524f">moins huit formations sur dix ;</text>
+<text x="26.0" y="201.0" font-size="13.5" fill="#55524f">le point est la médiane</text>
+<rect x="0.0" y="216.0" width="20" height="4" fill="#8a8781"/>
+<circle cx="10.0" cy="218.0" r="3" fill="#8a8781" stroke="#ffffff" stroke-width="1.2"/>
+<text x="26.0" y="222.0" font-size="13.5" fill="#55524f">de 2023 à 2024 : même mesure un</text>
+<text x="26.0" y="239.0" font-size="13.5" fill="#55524f">an plus tôt (autres effectifs)</text>
+<rect x="0.0" y="250.0" width="20" height="12" fill="#e4dfd7"/>
+<text x="26.0" y="260.0" font-size="13.5" fill="#55524f">tranche de départ, placée sur le</text>
+<text x="26.0" y="277.0" font-size="13.5" fill="#55524f">même axe</text>
+<text x="0" y="304" font-size="15" font-weight="600" fill="#26262f">100 % en 2024</text>
+<text x="298" y="304" font-size="13.5" fill="#55524f" text-anchor="end">1 093 formations</text>
+<text x="0" y="323" font-size="13.5" fill="#184f95">en 2025 : de 80 à 100 %, médiane 100 %</text>
+<line x1="6" y1="339" x2="290" y2="339" stroke="#dcd8d3" stroke-width="0.8"/>
+<rect aria-hidden="true" x="263.4" y="348.0" width="27.6" height="6" fill="#ffffff"/>
+<rect x="264.4" y="349.0" width="25.6" height="4" fill="#8a8781"/>
+<circle cx="290.0" cy="351.0" r="3" fill="#8a8781" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="233.2" y="334.0" width="56.8" height="10" fill="#184f95"/>
+<circle cx="290.0" cy="339.0" r="4.6" fill="#ffffff" stroke="#184f95" stroke-width="2.2"/>
+<text x="0" y="382" font-size="15" font-weight="600" fill="#26262f">90 à 99 % en 2024</text>
+<text x="298" y="382" font-size="13.5" fill="#55524f" text-anchor="end">1 695 formations</text>
+<text x="0" y="401" font-size="13.5" fill="#184f95">en 2025 : de 59 à 100 %, médiane 91 %</text>
+<line x1="6" y1="417" x2="290" y2="417" stroke="#dcd8d3" stroke-width="0.8"/>
+<rect x="261.6" y="408.0" width="25.6" height="28" fill="#e4dfd7"/>
+<rect aria-hidden="true" x="220.8" y="426.0" width="70.2" height="6" fill="#ffffff"/>
+<rect x="221.8" y="427.0" width="68.2" height="4" fill="#8a8781"/>
+<circle cx="273.0" cy="429.0" r="3" fill="#8a8781" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="174.7" y="412.0" width="115.3" height="10" fill="#184f95"/>
+<circle cx="264.4" cy="417.0" r="4.6" fill="#ffffff" stroke="#184f95" stroke-width="2.2"/>
+<text x="0" y="460" font-size="15" font-weight="600" fill="#26262f">75 à 89 % en 2024</text>
+<text x="298" y="460" font-size="13.5" fill="#55524f" text-anchor="end">1 860 formations</text>
+<text x="0" y="479" font-size="13.5" fill="#184f95">en 2025 : de 49 à 92 %, médiane 74 %</text>
+<line x1="6" y1="495" x2="290" y2="495" stroke="#dcd8d3" stroke-width="0.8"/>
+<rect x="219.0" y="486.0" width="39.8" height="28" fill="#e4dfd7"/>
+<rect aria-hidden="true" x="169.7" y="504.0" width="107.1" height="6" fill="#ffffff"/>
+<rect x="170.7" y="505.0" width="105.1" height="4" fill="#8a8781"/>
+<circle cx="236.0" cy="507.0" r="3" fill="#8a8781" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="145.2" y="490.0" width="122.1" height="10" fill="#184f95"/>
+<circle cx="216.2" cy="495.0" r="4.6" fill="#ffffff" stroke="#184f95" stroke-width="2.2"/>
+<text x="0" y="538" font-size="15" font-weight="600" fill="#26262f">60 à 74 % en 2024</text>
+<text x="298" y="538" font-size="13.5" fill="#55524f" text-anchor="end">1 771 formations</text>
+<text x="0" y="557" font-size="15" font-weight="600" fill="#184f95">en 2025 : de 43 à 83 %, médiane 63 %</text>
+<line x1="6" y1="573" x2="290" y2="573" stroke="#dcd8d3" stroke-width="0.8"/>
+<rect x="176.4" y="564.0" width="39.8" height="28" fill="#e4dfd7"/>
+<rect aria-hidden="true" x="141.3" y="582.0" width="107.1" height="6" fill="#ffffff"/>
+<rect x="142.3" y="583.0" width="105.1" height="4" fill="#8a8781"/>
+<circle cx="193.4" cy="585.0" r="3" fill="#8a8781" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="128.1" y="568.0" width="113.6" height="10" fill="#184f95"/>
+<circle cx="184.9" cy="573.0" r="4.6" fill="#ffffff" stroke="#184f95" stroke-width="2.2"/>
+<text x="0" y="616" font-size="15" font-weight="600" fill="#26262f">40 à 59 % en 2024</text>
+<text x="298" y="616" font-size="13.5" fill="#55524f" text-anchor="end">2 707 formations</text>
+<text x="0" y="635" font-size="13.5" fill="#184f95">en 2025 : de 32 à 67 %, médiane 47 %</text>
+<line x1="6" y1="651" x2="290" y2="651" stroke="#dcd8d3" stroke-width="0.8"/>
+<rect x="119.6" y="642.0" width="54.0" height="28" fill="#e4dfd7"/>
+<rect aria-hidden="true" x="101.6" y="660.0" width="104.2" height="6" fill="#ffffff"/>
+<rect x="102.6" y="661.0" width="102.2" height="4" fill="#8a8781"/>
+<circle cx="148.0" cy="663.0" r="3" fill="#8a8781" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="96.9" y="646.0" width="99.4" height="10" fill="#184f95"/>
+<circle cx="139.5" cy="651.0" r="4.6" fill="#ffffff" stroke="#184f95" stroke-width="2.2"/>
+<text x="0" y="694" font-size="15" font-weight="600" fill="#26262f">20 à 39 % en 2024</text>
+<text x="298" y="694" font-size="13.5" fill="#55524f" text-anchor="end">2 451 formations</text>
+<text x="0" y="713" font-size="13.5" fill="#184f95">en 2025 : de 17 à 45 %, médiane 29 %</text>
+<line x1="6" y1="729" x2="290" y2="729" stroke="#dcd8d3" stroke-width="0.8"/>
+<rect x="62.8" y="720.0" width="54.0" height="28" fill="#e4dfd7"/>
+<rect aria-hidden="true" x="59.0" y="738.0" width="84.4" height="6" fill="#ffffff"/>
+<rect x="60.0" y="739.0" width="82.4" height="4" fill="#8a8781"/>
+<circle cx="94.0" cy="741.0" r="3" fill="#8a8781" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="54.3" y="724.0" width="79.5" height="10" fill="#184f95"/>
+<circle cx="88.4" cy="729.0" r="4.6" fill="#ffffff" stroke="#184f95" stroke-width="2.2"/>
+<text x="0" y="772" font-size="15" font-weight="600" fill="#26262f">Moins de 20 % en 2024</text>
+<text x="298" y="772" font-size="13.5" fill="#55524f" text-anchor="end">1 239 formations</text>
+<text x="0" y="791" font-size="13.5" fill="#184f95">en 2025 : de 5 à 22 %, médiane 12 %</text>
+<line x1="6" y1="807" x2="290" y2="807" stroke="#dcd8d3" stroke-width="0.8"/>
+<rect x="6.0" y="798.0" width="54.0" height="28" fill="#e4dfd7"/>
+<rect aria-hidden="true" x="19.2" y="816.0" width="56.0" height="6" fill="#ffffff"/>
+<rect x="20.2" y="817.0" width="54.0" height="4" fill="#8a8781"/>
+<circle cx="42.9" cy="819.0" r="3" fill="#8a8781" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="20.2" y="802.0" width="48.3" height="10" fill="#184f95"/>
+<circle cx="40.1" cy="807.0" r="4.6" fill="#ffffff" stroke="#184f95" stroke-width="2.2"/>
+<line x1="6" y1="835" x2="290" y2="835" stroke="#dcd8d3"/>
+<line x1="6.0" y1="835" x2="6.0" y2="840" stroke="#96928f"/>
+<text x="6.0" y="856" font-size="13.5" fill="#96928f" text-anchor="start">0 %</text>
+<line x1="148.0" y1="835" x2="148.0" y2="840" stroke="#96928f"/>
+<text x="148.0" y="856" font-size="13.5" fill="#96928f" text-anchor="middle">50 %</text>
+<line x1="290.0" y1="835" x2="290.0" y2="840" stroke="#96928f"/>
+<text x="290.0" y="856" font-size="13.5" fill="#96928f" text-anchor="end">100 %</text>
+<text x="148.0" y="875" font-size="13.5" fill="#55524f" text-anchor="middle">Taux d'accès l'année suivante</text>
+<line x1="0" y1="889.0" x2="300" y2="889.0" stroke="#dcd8d3"/>
+<text class="pied-source" x="0" y="910.0" font-size="13.5" fill="#55524f">Ministère chargé de l'enseignement</text>
+<text class="pied-source" x="0" y="927.0" font-size="13.5" fill="#55524f">supérieur, données ouvertes</text>
+<text class="pied-source" x="0" y="944.0" font-size="13.5" fill="#55524f">Parcoursup, sessions 2023 à 2025</text>
+<text class="pied-note" x="0" y="965.0" font-size="13.5" fill="#55524f">Lecture de la ligne « 60 à 74 % » :</text>
+<text class="pied-note" x="0" y="982.0" font-size="13.5" fill="#55524f">parmi les formations à ce taux en</text>
+<text class="pied-note" x="0" y="999.0" font-size="13.5" fill="#55524f">2024, huit sur dix avaient en 2025 un</text>
+<text class="pied-note" x="0" y="1016.0" font-size="13.5" fill="#55524f">taux compris entre 43 et 83 % ; une</text>
+<text class="pied-note" x="0" y="1033.0" font-size="13.5" fill="#55524f">sur dix était à 43 % ou moins, une sur</text>
+<text class="pied-note" x="0" y="1050.0" font-size="13.5" fill="#55524f">deux à 63 % ou moins (la médiane).</text>
+<text class="pied-note" x="0" y="1067.0" font-size="13.5" fill="#55524f">Dans les deux tranches du haut, la</text>
+<text class="pied-note" x="0" y="1084.0" font-size="13.5" fill="#55524f">barre touche 100 %, le maximum, et</text>
+<text class="pied-note" x="0" y="1101.0" font-size="13.5" fill="#55524f">contient neuf formations sur dix. Ces</text>
+<text class="pied-note" x="0" y="1118.0" font-size="13.5" fill="#55524f">barres décrivent le passé, pas le taux</text>
+<text class="pied-note" x="0" y="1135.0" font-size="13.5" fill="#55524f">futur d'une formation ni les chances</text>
+<text class="pied-note" x="0" y="1152.0" font-size="13.5" fill="#55524f">d'un candidat.</text>
+<text class="pied-licence" x="0" y="1173.0" font-size="13.5" fill="#96928f">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1190.0" font-size="13.5" fill="#96928f">· stephane-lalut.com</text>
+</svg>

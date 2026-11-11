@@ -1,0 +1,14 @@
+{
+ "_doc": "Exports archivés des jeux ouverts Parcoursup, une session par fichier, lus par scripts/update_parcoursup.py. Ajouter une session : déposer son export (mêmes colonnes), inscrire sa ligne ici et son empreinte dans SHA256SUMS, relancer le témoin du dossier de recherche (temoin.json), puis le générateur. Le jeu « fr-esr-parcoursup » du portail est toujours la DERNIÈRE session ; les précédentes portent leur année.",
+ "producteur": "Ministère chargé de l'enseignement supérieur, Sous-direction des systèmes d'information et des études statistiques (SIES)",
+ "portail": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/",
+ "licence": "Licence Ouverte v2.0 (Etalab)",
+ "export": "https://data.enseignementsup-recherche.gouv.fr/api/explore/v2.1/catalog/datasets/<jeu>/exports/csv?select=<colonnes>&delimiter=%3B",
+ "colonnes": "session,g_ea_lib_vx,ville_etab,lib_for_voe_ins,fili,select_form,detail_forma,capa_fin,voe_tot,nb_voe_pp,nb_voe_pc,nb_cla_pp,nb_cla_pc,prop_tot,acc_tot,acc_pp,acc_pc,taux_acces_ens,part_acces_gen,part_acces_tec,part_acces_pro,cod_aff_form,contrat_etab",
+ "sessions": [
+  {"session": 2023, "fichier": "parcoursup_2023.csv", "jeu": "fr-esr-parcoursup_2023", "modifie_le": "2024-07-01", "telecharge_le": "2026-11-11", "lignes": 13869},
+  {"session": 2024, "fichier": "parcoursup_2024.csv", "jeu": "fr-esr-parcoursup_2024", "modifie_le": "2025-01-16", "telecharge_le": "2026-11-10", "lignes": 14079},
+  {"session": 2025, "fichier": "parcoursup_2025.csv", "jeu": "fr-esr-parcoursup", "modifie_le": "2026-03-09", "telecharge_le": "2026-11-10", "lignes": 14252}
+ ],
+ "exemple": {"cod_aff_form": "7970", "motif": "formation dont la fiche officielle a été lue le 10/11/2026 (arbitrage de la pièce 03) ; seuls les nombres du fichier ouvert sont publiés"}
+}
