@@ -30,7 +30,10 @@
   <span class="dossier-entete__source"{{ with $.srcTitre }} title="{{ . }}"{{ end }}>{{ if $en }}{{ . }}{{ else }}{{ partial "fr-typo.html" . }}{{ end }}</span>
   {{- end }}
 </div>
-<nav class="dossier-dette dossier-dette--v2{{ with .classe }} {{ . }}{{ end }}" aria-label="{{ .label }}">
+{{- /* « is-court » dès le HTML (11/11/2026) : sans script, la barre affiche ses libellés courts, qui tiennent toujours ;
+       le script ci-dessous retire la classe puis la remet si les libellés longs débordent. Avant, sans script, la barre
+       du bloc École (cinq onglets) demandait 1 590 px pour 1 216 et faisait déborder la page de 342 px à 1 280 px. */}}
+<nav class="dossier-dette dossier-dette--v2 is-court{{ with .classe }} {{ . }}{{ end }}" aria-label="{{ .label }}">
   <div class="dossier-dette__barre">
     <ol class="dossier-dette__volets">
       {{- range .items }}

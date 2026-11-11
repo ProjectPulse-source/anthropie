@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-11 — Barre de dossier : libellés courts dès le HTML (sans JavaScript, le bloc École débordait de 342 px)
+
+- **Défaut** : sans JavaScript, à 1 280 px, les cinq pages du bloc « École, lycée et université » débordaient de 342 px
+  depuis l'ajout du cinquième onglet (page Parcoursup, publiée le matin) : les libellés longs de la barre demandaient
+  1 590 px pour 1 216, et seul le script les remplaçait par les libellés courts. Trouvé par le contrôle « sans
+  JavaScript » de la maquette de mise en forme de la page Parcoursup ; la recette du matin tournait avec script.
+- **Correctif** : `layouts/partials/dossier-barre.html` pose `is-court` dès le HTML ; le script retire la classe puis
+  la remet si les libellés longs débordent. Avec JavaScript, rien ne change.
+- **Essais sur le build local** : sans JavaScript, 48 pages × 6 largeurs (320 à 1 680 px), aucun débordement, témoin
+  positif sur la page en ligne (342 px) ; avec JavaScript, 192 états finals identiques à ceux du site en ligne ; relevé
+  image par image au chargement, processeur et réseau ralentis, 12 pages à 390 et 1 280 px : mêmes états peints avant et
+  après, même décalage de mise en page, témoin positif (basculement injecté). `check-all --ci` à 0. Scripts des essais :
+  `D:\PRO\06_PROMOTION\RECHERCHE_RESSOURCE_UNIVERSITE_2026-11-03\outils_exploratoires\essai_barre.py` et
+  `essai_saut_barre.py` (essais ponctuels, pas un contrôle permanent).
+- **À retenir** : un organe qui se règle par script s'essaie aussi sans script, et à chaque onglet ajouté à une barre.
+
 ### 2026-11-11 — Parcoursup, page A : générateur, figures et page écrits ; publiée le 11/11 sur décision de l'auteur
 
 - **Publication (11/11/2026, « pousse la page en ligne »)** : `/parcoursup-quelles-chances-d-etre-admis/`, avec son jeu
