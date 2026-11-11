@@ -20,7 +20,7 @@
   {{- /* Un signe moins en tête se compose à part (police des figures, en gras) : maigre dans la police à empattements,
          il laissait lire « 11 points » pour « −11 points ». */ -}}
   {{- $fortHTML := replaceRE `^−` `<span class="reperes-page__signe">−</span>` (string (partial "fr-typo.html" $fort)) | safeHTML }}
-  <a href="#{{ .ancre }}"><b>{{ $fortHTML }}</b> <span>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" .texte "isbn" nil)) }}{{ with .precision }}<span class="reperes-page__precision"> ({{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" nil)) }})</span>{{ end }}.</span></a>
+  <a href="#{{ .ancre }}"><b>{{ $fortHTML }}</b> <span>{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" .texte "isbn" nil)) }}{{ with .precision }} <span class="reperes-page__precision">({{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" nil)) }})</span>{{ end }}.</span></a>
   {{- end }}
 </nav>
 {{- end -}}

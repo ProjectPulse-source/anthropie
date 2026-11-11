@@ -481,19 +481,25 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 // le téléphone (<picture>, versions -m) prennent presque toute la largeur — 12 px de marge, quelle que soit celle du
 // conteneur (--marge-main + --marge-colonne, _layout.scss) — pour qu'aucun texte n'y descende sous 12 px affichés, même à
 // 320 px. Marge exacte, jamais 100vw (règle 13 du CLAUDE.md du site).
-@media (max-width: 600px) {
-  // 12 px du bord, quelle que soit la marge du conteneur (variables de _layout.scss).
+// « screen » sur ces trois règles (11/11/2026, second contrôle du rendu) : à l'impression, la page fait environ 794 px
+// de large et reçoit la version DÉTAILLÉE (le <source> téléphone est réservé à l'écran) ; sans « screen », le plafond
+// de 460 px s'y appliquait et la figure sortait à 4,8 pt.
+@media screen and (max-width: 444px) {
+  // 12 px du bord, quelle que soit la marge du conteneur (variables de _layout.scss). Jusqu'à 444 px seulement : au-delà
+  // la figure atteint son plafond de 420 px, et sortie de la colonne elle se décalait de 8 px à gauche du texte.
   .figure-ciseau picture { display: block; margin-left: calc(12px - var(--marge-main) - var(--marge-colonne)); margin-right: calc(12px - var(--marge-main) - var(--marge-colonne)); }
-  // Plafond : entre 450 et 600 px, la version mobile étirée devenait démesurément haute.
-  .figure-ciseau picture img { max-width: 420px; }
   // Dans un repli (.repli : filet de 3 px et 0,9rem de rembourrage, _dette-monde.scss), la même figure sort aussi de
   // ce cadre : mesuré le 11/10/2026, elle tombait à 245 px à 320 px de large, textes vers 11 px.
   .repli .figure-ciseau picture { margin-left: calc(12px - var(--marge-main) - var(--marge-colonne) - 0.9rem - 3px); margin-right: calc(12px - var(--marge-main) - var(--marge-colonne) - 0.9rem); }
 }
+@media screen and (max-width: 600px) {
+  // Plafond : entre 450 et 600 px, la version mobile étirée devenait démesurément haute.
+  .figure-ciseau picture img { max-width: 420px; }
+}
 // De 601 à 899 px (tablette, téléphone à l'horizontale) : la version téléphone reste servie — point de bascule du
 // <picture> à 899 px depuis le 11/11/2026, car la version détaillée y descendait sous sa taille de dessin (textes de
 // 7 à 9 px). Elle garde un plafond de largeur, dans la marge du conteneur ; étirée à 100 %, elle doublerait de hauteur.
-@media (min-width: 601px) and (max-width: 899px) {
+@media screen and (min-width: 601px) and (max-width: 899px) {
   .figure-ciseau picture img { max-width: 460px; }
 }
 // ----- Agrandissement d'une figure (static/js/figure-zoom.js) -----
@@ -514,7 +520,7 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
   position: fixed; inset: 0; z-index: 200;
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   gap: 14px; padding: 16px;
-  background: rgba(24, 23, 21, .92);
+  background: rgba(24, 23, 21, .96);   // .92 laissait lire le texte de la page sous l'aide (second contrôle, 11/11/2026)
   // Le pincement natif doit rester possible PAR-DESSUS la couche : c'est lui qui
   // sert vraiment sur telephone, la couche ne fait que donner la pleine largeur.
   touch-action: auto;
@@ -535,12 +541,15 @@ body.menu-open { overflow: hidden; position: fixed; width: 100%; }
 @media (max-width: 600px) { .figure-zoom { padding: 8px 6px; } .figure-zoom__image { padding: 6px; } }
 .figure-zoom__fermer {
   align-self: flex-end;
+  // Reste en haut de la couche quand une figure haute défile, sur un fond plein, à la taille d'une cible tactile
+  // (second contrôle, 11/11/2026 : 31 px de haut, et hors de l'écran dès qu'on faisait défiler).
+  position: sticky; top: 0; z-index: 1; flex: 0 0 auto; min-height: 44px;
   font-family: var(--font-sans); font-size: var(--fs-small);
-  color: #fff; background: transparent;
+  color: #fff; background: rgb(24, 23, 21);
   border: 1px solid rgba(255, 255, 255, .5); border-radius: 4px;
-  padding: 6px 14px; cursor: pointer;
+  padding: 6px 16px; cursor: pointer;
 
-  &:hover { background: rgba(255, 255, 255, .12); }
+  &:hover { background: rgb(58, 56, 52); }
   &:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 }
 .figure-zoom__aide {

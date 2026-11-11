@@ -44,7 +44,12 @@
     couche.remove();
     couche = null;
     document.body.style.overflow = "";
-    if (origine) { origine.focus(); origine = null; }
+    // preventScroll : sans lui, rendre le focus a une figure qui depasse l'ecran faisait sauter la page de plusieurs
+    // centaines de pixels a la fermeture (second controle du rendu, 11/11/2026).
+    if (origine) {
+      try { origine.focus({ preventScroll: true }); } catch (e) { origine.focus(); }
+      origine = null;
+    }
   }
 
   // Largeur de dessin de la version AFFICHEE : attribut width de la <source> retenue par le navigateur, sinon de
@@ -87,9 +92,10 @@
     aide.className = "figure-zoom__aide";
     aide.textContent = T.aide;
 
+    // L'aide avant l'image : sous une figure plus haute que l'ecran, elle n'etait pas visible a l'ouverture.
     couche.appendChild(bouton);
-    couche.appendChild(grande);
     couche.appendChild(aide);
+    couche.appendChild(grande);
     couche.addEventListener("click", fermer);
     document.body.appendChild(couche);
     // Le fond de page ne defile plus sous la couche : sur telephone, un scroll
@@ -116,5 +122,12 @@
 
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" || e.key === "Esc") fermer();
+    // La couche est une boite modale (aria-modal) : la tabulation reste sur son seul element activable, le bouton
+    // « Fermer », au lieu de partir vers les liens de la page masques derriere elle (second controle, 11/11/2026).
+    if (couche && e.key === "Tab") {
+      e.preventDefault();
+      var b = couche.querySelector("button");
+      if (b) b.focus();
+    }
   });
 })();
