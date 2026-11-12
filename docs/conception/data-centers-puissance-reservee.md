@@ -232,5 +232,9 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   exacts face à la page corrigée.
 - Instantané de relecture : fait le 12/11/2026 (139 phrases FR, 135 EN) ; `refonte` porté au 12/11/2026 ; journal : entrée du 12/11/2026 ;
   `data/dates_affichage.json` : 05/11/2026 versé à l'historique.
-- Mise en ligne : poussée sur mandat de l'auteur, le 12/11/2026 ; attestation de la version servie : ci-dessous.
+- Mise en ligne : poussée sur mandat de l'auteur, le 12/11/2026 (commit 0095bb4) ; déploiement `hugo.yml`
+  n° 43241566593 réussi (build, relecture, deploy, contrôle de fumée de la production).
+- Attestation de la version servie : faite le 12/11/2026 vers 15 h 55 (heure de Paris). HTML servi identique au build
+  contrôlé, aux empreintes de cache des scripts près (neuf en FR, huit en EN : fins de ligne du poste) ; les quatre SVG
+  de la figure servis identiques, octet pour octet, au commit ; « Page mise à jour le 12 novembre 2026 ».
 - Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
