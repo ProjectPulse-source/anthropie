@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 8d9ea71 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Radioactive waste: does volume tell the problem?
 Radioactive waste is first counted in cubic metres: 1.89 million at end-2024 in Andra’s balances.
@@ -100,7 +100,7 @@ Légifrance, search for “Cigéo” in the Journal officiel, and Prefecture of 
 AFP dispatch of 14 September 2026, as published by Connaissance des énergies: close of the public inquiry and the commission’s opinion.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 Radioactive waste: volume does not show where the radioactivity is
 At end-2021, high-level waste made up 0.25% of the volume and 97.2% of the declared radioactivity (mostly an upper bound); its final disposal is planned.
 Reading caveat.
@@ -111,8 +111,7 @@ Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Radioactive waste: does volume tell the problem?”.
-Andra, National Inventory data, retrieved 12 November 2026. https://stephane-lalut.com/en/radioactive-waste-volume-or-radioactivity/
+“Radioactive waste: does volume tell the problem?” Andra, National Inventory data, retrieved 12 November 2026. https://stephane-lalut.com/en/radioactive-waste-volume-or-radioactivity/
 Copy citation
 In three sentences
 In France, at end-2021, high-level waste made up 0.25% of the volume of radioactive waste recorded in Andra’s balances and 97.2% of the declared radioactivity (mostly an upper bound, not an exact measurement).
@@ -123,7 +122,7 @@ The data
 In the CSV, in long format, for each annual file of the National Inventory since end-2013: volume in conditioned equivalent and declared activity by category, volume with declared activity, upper-bound declared activity and, for FMA-VC (low- and intermediate-level short-lived) and TFA (very-low-level), volume located in an Andra facility (not identified for 2013, 2014 and 2023); the JSON gives the computed shares, including those drawn by the chart (volume and declared radioactivity for the same year).
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
+Text under copyright — short quotations permitted, full reproduction on request.
 The raw series belong to their producers (Andra, National Inventory), under their own terms.
 All resources: data, explainers and reference material →
 Share

@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /en/inflation-and-french-public-debt/, build de 038893c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /en/inflation-and-french-public-debt/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Did inflation really ease France’s debt burden?
 Did the French government gain €150bn from inflation?
@@ -262,7 +262,7 @@ Several published values are transcribed in that calculation with their source: 
 Before the page was written, the calculation was subjected to external critical review, which led to revisions to the timing of prices, the construction of the range and the treatment of inflation-linked bonds.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 End-2020 fixed-rate government debt: erosion from the inflation surprise, as payments fall due
 In this counterfactual the erosion is locked in by end-2023, but it materialises as payments fall due: about 55% by end-2027.
 Reading caveat.
@@ -281,8 +281,7 @@ Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Did inflation really ease France’s debt burden?”.
-AFT, Eurostat, ECB, Banque de France, European Commission data, retrieved 8 October 2026. https://stephane-lalut.com/en/inflation-and-french-public-debt/
+“Did inflation really ease France’s debt burden?” AFT, Eurostat, ECB, Banque de France, European Commission data, retrieved 8 October 2026. https://stephane-lalut.com/en/inflation-and-french-public-debt/
 Copy citation
 In three sentences
 In this page’s counterfactual, relative to the inflation expected in early 2021, realised 2021–2023 inflation reduces the real value of the payments promised on France’s end-2020 fixed-rate marketable government debt by about €150bn in 2020 euros (€144bn to €172bn depending on the forecast used); about 55% materialises by end-2027.
@@ -292,7 +291,7 @@ The data
 Cumulative real-value erosion by year of payment, results for each forecast and each breakeven, inflation-linked bonds, simplified consolidation, mechanical allocation by holder and, for the central bank’s purchases, the monthly exposure, the refixing period and the yield gap by year; the same content is available as CSV, in long format.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
+Text under copyright — short quotations permitted, full reproduction on request.
 The raw series belong to their producers (AFT, Eurostat, ECB, Banque de France, European Commission), under their own terms.
 Values taken from Agence France Trésor (AFT), in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
 All resources: data, explainers and reference material →

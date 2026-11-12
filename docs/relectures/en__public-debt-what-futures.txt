@@ -1,4 +1,4 @@
-# relu le 2026-11-10 ; texte servi de /en/public-debt-what-futures/, build de fde159c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /en/public-debt-what-futures/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can the rules of the public debt game be changed?
 Yes, but with no automatic effect: depending on its mechanism and conditions, the same operation can reduce debt, shift burdens or risks onto others, or worsen it.
@@ -400,7 +400,7 @@ Figures attributed to other authors in the matrix (International Monetary Fund, 
 The script stops if a data point no longer meets the conditions on which the page’s main sentences depend; their wording is subject to editorial review.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 Public debt in 2030: several futures, under which assumptions?
 Where the current path leads according to the European Commission, with unchanged policy and under historical shocks, and where the paths announced by the Government in 2024 and 2026 stand.
 Reading caveat.
@@ -422,8 +422,7 @@ Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Can the rules of the public debt game be changed?”.
-European Commission, French Government and Agence France Trésor data, retrieved 9 November 2026. https://stephane-lalut.com/en/public-debt-what-futures/
+“Can the rules of the public debt game be changed?” European Commission, French Government and Agence France Trésor data, retrieved 9 November 2026. https://stephane-lalut.com/en/public-debt-what-futures/
 Copy citation
 In three sentences
 With unchanged policy, the European Commission projects French public debt at 126.5% of GDP in 2030 and 140.8% in 2035; the Government’s forecast for 2030 (120.9%) sits in the lower half of the fan of its projections.
@@ -434,7 +433,7 @@ The data
 The European Commission’s unchanged-policy path, variants and stochastic distribution for France, the Government’s commitments and forecasts, and the sensitivities calculated on the Commission’s baseline; the complete institutional matrix is a second CSV file.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
+Text under copyright — short quotations permitted, full reproduction on request.
 The raw series belong to their producers (European Commission, French Government and Agence France Trésor), under their own terms.
 All resources: data, explainers and reference material →
 Share

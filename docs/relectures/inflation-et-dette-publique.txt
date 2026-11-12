@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /inflation-et-dette-publique/, build de 038893c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /inflation-et-dette-publique/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L’inflation a-t-elle vraiment allégé la dette française ?
 L’État a-t-il gagné 150 milliards grâce à l’inflation ?
@@ -287,8 +287,7 @@ AFT (bulletins mensuels, ligne à ligne), Banque de France (Webstat), BCE ; déc
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « L’inflation a-t-elle vraiment allégé la dette française ? ».
-Données AFT, Eurostat, BCE, Banque de France, Commission européenne, relevé du 8 octobre 2026. https://stephane-lalut.com/inflation-et-dette-publique/
+Lalut, Stéphane (2026). « L’inflation a-t-elle vraiment allégé la dette française ? » Données AFT, Eurostat, BCE, Banque de France, Commission européenne, relevé du 8 octobre 2026. https://stephane-lalut.com/inflation-et-dette-publique/
 Copier la citation
 En trois phrases
 Dans le contrefactuel de cette page, l’écart entre l’inflation réalisée en 2021-2023 et celle anticipée début 2021 réduit d’environ 150 milliards d’euros de 2020 la valeur réelle des paiements promis sur la dette de l’État à taux fixe de fin 2020 (de 144 à 172 selon la prévision retenue) ; environ 55 % se matérialise d’ici fin 2027.

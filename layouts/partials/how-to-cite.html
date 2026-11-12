@@ -5,9 +5,11 @@
 {{- with .OutputFormats.Get "RIS" -}}{{- $risURL = .RelPermalink -}}{{- end -}}
 
 {{- /* Guillemets de la langue de la page : « » en français, “ ” en anglais (26/10/2026). */ -}}
-{{- $citation := printf (cond $isEn "Lalut, Stéphane (%s). “%s”. %s. Anthropie Working Papers. https://doi.org/%s" "Lalut, Stéphane (%s). « %s ». %s. Anthropie Working Papers. https://doi.org/%s")
+{{- /* Un titre qui finit par « ? » ou « ! » n'est pas suivi du point (même règle que le bloc « Réutiliser », 12/11/2026). */ -}}
+{{- $fin := cond (or (strings.HasSuffix .Title "?") (strings.HasSuffix .Title "!")) "" "." -}}
+{{- $citation := printf (cond $isEn "Lalut, Stéphane (%s). “%s”%s %s. Anthropie Working Papers. https://doi.org/%s" "Lalut, Stéphane (%s). « %s »%s %s. Anthropie Working Papers. https://doi.org/%s")
     (.Date.Format "2006")
-    .Title
+    .Title $fin
     .Params.awp_number
     .Params.doi_zenodo -}}
 

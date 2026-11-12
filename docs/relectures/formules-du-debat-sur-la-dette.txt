@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /formules-du-debat-sur-la-dette/, build de 43ad0eb + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /formules-du-debat-sur-la-dette/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que valent les formules du débat sur la dette ?
 Le 8 septembre 2025, à l’Assemblée nationale, tous les groupes invoquent les chiffres de la dette.
@@ -467,8 +467,7 @@ Eurostat, rendements des emprunts d’État à long terme, moyennes mensuelles (
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Que valent les formules du débat sur la dette ? ».
-Données Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce, relevé du 7 novembre 2026. https://stephane-lalut.com/formules-du-debat-sur-la-dette/
+Lalut, Stéphane (2026). « Que valent les formules du débat sur la dette ? » Données Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce, relevé du 7 novembre 2026. https://stephane-lalut.com/formules-du-debat-sur-la-dette/
 Copier la citation
 En trois phrases
 Sur onze cas chiffrés de la séance de l’Assemblée nationale du 8 septembre 2025, beaucoup de montants résistent à la vérification, mais le verdict change souvent avec la date, l’unité, le périmètre ou l’année.

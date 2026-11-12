@@ -64,7 +64,7 @@
 {{- if $isEn -}}
 {{- $T = dict
     "titre" "Reusing this page"
-    "chapo" "The charts, the data and a ready-made citation, under an open licence. Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable."
+    "chapo" "The charts, the data and a ready-made citation, under an open licence. Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable."
     "precaution" "Reading caveat."
     "png" "Download PNG"
     "citer" "Cite this page"
@@ -77,23 +77,27 @@
     "copie" "Copied!"
     "donnees_de" "Data from"
     "releve" "retrieved"
-    "licence" "<strong>Data and charts</strong> CC BY 4.0 — free reuse, including commercial, with attribution. <strong>Text</strong> under copyright — short quotation free, full reproduction on request. The raw series belong to their producers (%s), under their own terms." -}}
+    "licence" "<strong>Data and charts</strong> CC BY 4.0 — free reuse, including commercial, with attribution. <strong>Text</strong> under copyright — short quotations permitted, full reproduction on request. The raw series belong to their producers (%s), under their own terms." -}}
 {{- end -}}
-{{- $T = merge $T (dict "licence" (printf $T.licence $sources)) -}}
+{{- /* Parenthèses imbriquées évitées (relectures de langue du 12/11/2026) : une parenthèse de « sources » devient un crochet
+       dans la licence, qui place déjà les producteurs entre parenthèses. */ -}}
+{{- $T = merge $T (dict "licence" (printf $T.licence (replace (replace $sources "(" "[") ")" "]"))) -}}
 {{- /* reserve="du FMI" (en : "the IMF") : producteur dont les conditions restreignent la réutilisation commerciale de ses
        valeurs. Ses valeurs restent sur la page, mais la licence CC BY ne peut pas les couvrir (arbitrage des dépôts Zenodo,
        06/11/2026 : FMI, AFT). */ -}}
 {{- with .Get "reserve" -}}{{- $T = merge $T (dict "licence" (printf (cond $isEn "%s Values taken from %s, in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse." "%s Les valeurs reprises %s, dans les fichiers comme dans les graphiques, ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale.") $T.licence .)) -}}{{- end -}}
 {{- with $donneesP }}{{ $T = merge $T (dict "donnees_p" .) }}{{ end -}}
 
-{{- /* Citation au format du site (partials/how-to-cite.html) : Nom, Prénom (année). « Titre ». */ -}}
+{{- /* Citation au format du site (partials/how-to-cite.html) : Nom, Prénom (année). « Titre ». Un titre qui finit par « ? » ou
+       « ! » n'est pas suivi du point (relectures de langue du 12/11/2026 : « …problème ? ». » cumulait deux ponctuations). */ -}}
+{{- $fin := cond (or (strings.HasSuffix .Page.Title "?") (strings.HasSuffix .Page.Title "!")) "" "." -}}
 {{- $citation := "" -}}
 {{- if $isEn -}}
-  {{- $citation = printf "Lalut, Stéphane (%s). “%s”. %s %s%s. %s"
-      (.Page.Date.Format "2006") .Page.Title $sources (cond (ne $releve "") "data, retrieved " "data") $releve .Page.Permalink -}}
+  {{- $citation = printf "Lalut, Stéphane (%s). “%s”%s %s %s%s. %s"
+      (.Page.Date.Format "2006") .Page.Title $fin $sources (cond (ne $releve "") "data, retrieved " "data") $releve .Page.Permalink -}}
 {{- else -}}
-  {{- $citation = printf "Lalut, Stéphane (%s). « %s ». Données %s%s%s. %s"
-      (.Page.Date.Format "2006") .Page.Title $sources (cond (ne $releve "") ", relevé du " "") $releve .Page.Permalink -}}
+  {{- $citation = printf "Lalut, Stéphane (%s). « %s »%s Données %s%s%s. %s"
+      (.Page.Date.Format "2006") .Page.Title $fin $sources (cond (ne $releve "") ", relevé du " "") $releve .Page.Permalink -}}
 {{- end -}}
 
 <section class="reutiliser" id="reutiliser" aria-labelledby="reutiliser-titre">

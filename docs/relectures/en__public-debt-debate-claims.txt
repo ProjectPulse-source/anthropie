@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /en/public-debt-debate-claims/, build de 43ad0eb + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /en/public-debt-debate-claims/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What are the claims of the French debt debate worth?
 On 8 September 2025, in the French National Assembly, every group invoked the figures on public debt.
@@ -443,7 +443,7 @@ The work was submitted to five external reviews, which led to misleading proport
 The same rule, fixing the window and the object before comparing, reconciles in working paper AWP-09 three scholarly estimates thought to be contradictory.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 Eleven claims from 8 September 2025: what the figures settle, and what they do not
 For most claims, the verdict depends on the question asked: the date, unit, scope or year chosen.
 None of the conclusions drawn is demonstrated by the figure.
@@ -465,8 +465,7 @@ Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“What are the claims of the French debt debate worth?”.
-French National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece data, retrieved 7 November 2026. https://stephane-lalut.com/en/public-debt-debate-claims/
+“What are the claims of the French debt debate worth?” French National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece data, retrieved 7 November 2026. https://stephane-lalut.com/en/public-debt-debate-claims/
 Copy citation
 In three sentences
 Of eleven numerical cases from the French National Assembly debate of 8 September 2025, many amounts withstand checking, but the verdict often changes with the date, unit, scope or year.
@@ -477,7 +476,7 @@ The data
 The verdict on each of the eleven claims, with the question asked and the neighbouring question; the public balance since 1949, the deficit and the increase in debt year by year, the windows of spending and revenue (May 2025 accounts and revised accounts), the increase in debt by starting date, monthly and daily ten-year yields, interest and education under three scopes, the counts from the inventory; for the 2027 candidates, the counts by register and the statements tested, with their documents; the same content is available as CSV, in long format.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
+Text under copyright — short quotations permitted, full reproduction on request.
 The raw series belong to their producers (French National Assembly, Insee, Eurostat, Court of Audit, Government, Senate, Banque de France, Bank of Greece), under their own terms.
 All resources: data, explainers and reference material →
 Share

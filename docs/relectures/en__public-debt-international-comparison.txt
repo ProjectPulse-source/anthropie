@@ -1,4 +1,4 @@
-# relu le 2026-11-09 ; texte servi de /en/public-debt-international-comparison/, build de 606940b + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /en/public-debt-international-comparison/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 In 2025, at almost equal debt levels, Hungary devotes 8.8% of its public revenue to interest; Slovenia, 2.7%.
@@ -584,7 +584,7 @@ Download the data (CC BY 4.0 licence): CSV, one row per country, readable in a s
 Method: the burden, the stock and the implicit interest rate satisfy the exact identity given above, using debt at the end of the previous year (the ECB’s implicit interest rate convention, distinct from Eurostat’s “apparent cost”, based on average debt); the robustness of the coefficients is recalculated at each update over inflation windows of two to five years; the statistics are simple, descriptive least squares.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 Same debt, different burden: 26 EU countries in 2025
 With similar debt, the share of revenue spent on interest can differ by a factor of 3.2; outside the euro area, it rises faster with debt.
 Reading caveat.
@@ -646,7 +646,7 @@ The data
 The 27 European Union countries and the economies outside Europe, with their levels of comparability, their definitions and their statistics; the same content is available as CSV, one row per country, readable in a spreadsheet.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
+Text under copyright — short quotations permitted, full reproduction on request.
 The raw series belong to their producers (Eurostat, OECD, IMF and World Bank), under their own terms.
 Values taken from the IMF, in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
 All resources: data, explainers and reference material →

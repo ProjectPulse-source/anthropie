@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /en/data-centres-reserved-capacity/, build de 0b40322 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /en/data-centres-reserved-capacity/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Data centres: do reserved gigawatts foretell consumption?
 The figure in circulation is the one for reservations: nearly 18 gigawatts on RTE’s transmission grid in May 2026, against about 5 at end-2024.
@@ -99,7 +99,7 @@ RTE, “Les data centers en chiffres clés” (in French), page updated on 1 Jun
 SDES, “La consommation d’électricité des data centers en 2024” (2 July 2026): census of centres above 1 GWh and estimate of the total, a cross-check on RTE’s figures (the SDES takes its consumption figures primarily from Enedis and RTE databases).
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 Data centres: capacity reserved on the grid and electricity consumed
 In November 2025, data centres had reserved 14 GW with RTE, 7.6 GW of it for commissioning from 2030; those connected to RTE’s grid consumed nearly 1 TWh in 2025.
 Reading caveat.
@@ -112,8 +112,7 @@ Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Data centres: do reserved gigawatts foretell consumption?”.
-RTE and SDES data, retrieved 11 November 2026. https://stephane-lalut.com/en/data-centres-reserved-capacity/
+“Data centres: do reserved gigawatts foretell consumption?” RTE and SDES data, retrieved 11 November 2026. https://stephane-lalut.com/en/data-centres-reserved-capacity/
 Copy citation
 In three sentences
 In November 2025, data centres had reserved 14 GW of grid connection capacity with RTE, 7.6 GW of it for commissioning from 2030, and reservations totalling about 0.9 GW had been abandoned since 2023 (breakdown and abandonments measured on an RTE figure).
@@ -124,7 +123,7 @@ The data
 Capacity reserved by data centres (end-2024, November 2025, May 2026), the November 2025 breakdown by status, and metered, estimated and projected consumption; for each value, its nature (read in the text or measured on the figure) and its source, as CSV in long format.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
+Text under copyright — short quotations permitted, full reproduction on request.
 The raw series belong to their producers (RTE and SDES), under their own terms.
 All resources: data, explainers and reference material →
 Share

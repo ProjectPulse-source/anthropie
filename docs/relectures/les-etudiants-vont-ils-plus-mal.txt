@@ -1,4 +1,4 @@
-# relu le 2026-11-08 ; texte servi de /les-etudiants-vont-ils-plus-mal/, build de e88309f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /les-etudiants-vont-ils-plus-mal/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les étudiants vont-ils plus mal que les autres jeunes ?
 La dépression déclarée a fortement augmenté chez les étudiants de 2017 à 2021, et les traitements comme le taux de jeunes hospitalisés pour un geste auto-infligé confirment une dégradation réelle dans cette classe d’âge.
 Mais cette dégradation touche d’abord les jeunes femmes, commence avant l’université et avant le covid, et elle ne se limite pas aux étudiants : dans la comparaison publiée par situation d’activité (18-25 ans), la hausse estimée est plus forte chez les jeunes en emploi ou sans emploi ni formation, sans que l’écart soit testé.
@@ -275,8 +275,7 @@ Santé publique France, enquête EnCLASS 2024 (Le point sur, 2 juin 2026), lycé
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Les étudiants vont-ils plus mal que les autres jeunes ? ».
-Données Santé publique France, DREES, Assurance maladie, Eurostat et CépiDc-Inserm, Insee et Depp, relevé du 8 novembre 2026. https://stephane-lalut.com/les-etudiants-vont-ils-plus-mal/
+Lalut, Stéphane (2026). « Les étudiants vont-ils plus mal que les autres jeunes ? » Données Santé publique France, DREES, Assurance maladie, Eurostat et CépiDc-Inserm, Insee et Depp, relevé du 8 novembre 2026. https://stephane-lalut.com/les-etudiants-vont-ils-plus-mal/
 Copier la citation
 En trois phrases
 De 2017 à 2021, la hausse estimée de la dépression déclarée a été plus forte chez les étudiants que dans les autres situations professionnelles analysées par Santé publique France ; chez les 18-25 ans, la hausse estimée est toutefois plus faible chez eux que chez les jeunes en emploi ou sans emploi ni formation (écart non testé).

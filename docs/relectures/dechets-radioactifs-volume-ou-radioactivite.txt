@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 8d9ea71 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Déchets radioactifs : le volume dit-il le problème ?
 Les déchets radioactifs se comptent d’abord en mètres cubes : 1,89 million fin 2024 dans les bilans de l’Andra.
@@ -116,8 +116,7 @@ Andra, Inventaire national (données ouvertes, data.gouv.fr) ; filières : Andra
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Déchets radioactifs : le volume dit-il le problème ? ».
-Données Andra, Inventaire national, relevé du 12 novembre 2026. https://stephane-lalut.com/dechets-radioactifs-volume-ou-radioactivite/
+Lalut, Stéphane (2026). « Déchets radioactifs : le volume dit-il le problème ? » Données Andra, Inventaire national, relevé du 12 novembre 2026. https://stephane-lalut.com/dechets-radioactifs-volume-ou-radioactivite/
 Copier la citation
 En trois phrases
 En France, fin 2021, les déchets de haute activité faisaient 0,25 % du volume des déchets radioactifs recensés dans les bilans de l’Andra et 97,2 % de la radioactivité déclarée (pour l’essentiel un maximum, non une mesure exacte).

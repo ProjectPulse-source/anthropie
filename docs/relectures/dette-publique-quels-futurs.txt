@@ -1,4 +1,4 @@
-# relu le 2026-11-10 ; texte servi de /dette-publique-quels-futurs/, build de fde159c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /dette-publique-quels-futurs/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Peut-on changer les règles du jeu de la dette publique ?
 Oui, mais sans effet automatique : selon son mécanisme et ses conditions, une même opération peut réduire la dette, déplacer des charges ou des risques vers d’autres, ou l’aggraver.
@@ -430,8 +430,7 @@ Calculs de l’auteur à partir de la référence de la Commission européenne (
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Peut-on changer les règles du jeu de la dette publique ? ».
-Données Commission européenne, Gouvernement et Agence France Trésor, relevé du 9 novembre 2026. https://stephane-lalut.com/dette-publique-quels-futurs/
+Lalut, Stéphane (2026). « Peut-on changer les règles du jeu de la dette publique ? » Données Commission européenne, Gouvernement et Agence France Trésor, relevé du 9 novembre 2026. https://stephane-lalut.com/dette-publique-quels-futurs/
 Copier la citation
 En trois phrases
 À politique inchangée, la Commission européenne projette une dette publique française de 126,5 % du PIB en 2030 et de 140,8 % en 2035 ; la prévision du Gouvernement pour 2030 (120,9 %) se place dans la moitié basse de l’éventail de ses projections.

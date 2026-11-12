@@ -1,4 +1,4 @@
-# relu le 2026-11-11 ; texte servi de /parcoursup-quelles-chances-d-etre-admis/, build de 5b94784 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /parcoursup-quelles-chances-d-etre-admis/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Parcoursup : quelles sont vraiment vos chances d’être admis ?
 Le taux d’accès affiché par Parcoursup ne mesure pas vos chances d’être admis : il dit quelle part des candidats de l’année précédente ont pu recevoir une proposition.
 D’une année à la suivante, ce taux reste proche pour une formation sur deux (6 points d’écart ou moins de 2024 à 2025) ; il change parfois beaucoup, même au-dessus de 90 %.
@@ -238,8 +238,7 @@ Taux d’accès : part des candidats de la phase principale dont le rang de clas
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Parcoursup : quelles sont vraiment vos chances d’être admis ? ».
-Données ministère chargé de l’enseignement supérieur, données ouvertes Parcoursup, relevé du 11 novembre 2026. https://stephane-lalut.com/parcoursup-quelles-chances-d-etre-admis/
+Lalut, Stéphane (2026). « Parcoursup : quelles sont vraiment vos chances d’être admis ? » Données ministère chargé de l’enseignement supérieur, données ouvertes Parcoursup, relevé du 11 novembre 2026. https://stephane-lalut.com/parcoursup-quelles-chances-d-etre-admis/
 Copier la citation
 En trois phrases
 D’une session à la suivante, le taux d’accès d’une formation de Parcoursup varie de 6 points ou moins pour une formation sur deux, et les taux des deux années sont fortement corrélés (0,90 de 2023 à 2024, 0,87 de 2024 à 2025).
