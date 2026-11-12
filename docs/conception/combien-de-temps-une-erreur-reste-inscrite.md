@@ -38,19 +38,16 @@ Les durées vont de six mois (un point de permis) à quarante ans (le bulletin n
 n'est pas le temps seul, et l'effacement s'obtient de quatre manières différentes :
 - automatiquement : réhabilitation légale, points, malus, droit à l'oubli ;
 - sur démarche de la personne : justifier la régularisation d'un chèque, demander l'exclusion d'une mention du B2,
-  demander un déréférencement ;
-- par un tiers : la radiation du FICP dépend de la déclaration du créancier ;
-- ou collectivement, d'un trait : l'indicateur « 040 » des dirigeants, supprimé par décret en 2013.
+  demander un déréférencement, justifier le règlement de toutes les dettes d'un plan de surendettement (radiation anticipée, arrêté FICP, art. 11 : R1-É4) ;
+- par un tiers : la radiation d'un incident au FICP dépend de la déclaration de l'établissement responsable de l'inscription (cession du crédit : R1-É11) ;
+- ou par une règle, pour toute une catégorie : l'indicateur « 040 » des dirigeants, retiré par décret en 2013 pour une liquidation unique, la liquidation restant communiquée aux banques cinq ans au lieu de trois (ce n'est pas un effacement : R2-13, D. 144-12 sondé).
 
-Le même registre oublie aussi à des vitesses différentes selon le sens. Un malus revient au plus à 1 après deux ans sans
-sinistre ; le bonus maximal demande treize ans ; le relevé d'informations garde cinq ans de sinistres.
+Le même registre oublie aussi à des vitesses différentes selon le sens. Un malus revient au plus à 1 après deux années consécutives sans sinistre ; le bonus maximal demande treize ans depuis 1 (neuf pour un usage « Tournées ou Tous Déplacements » : R1-É1) ; le relevé d'informations garde cinq ans de sinistres.
 
 ### Mécanisme explicatif
 
-La durée d'une trace est fixée par un texte, pour un usage (protéger un prêteur, un employeur, des mineurs, un assureur).
-Elle se mesure donc à ce qu'elle protège encore, non à la gravité initiale seule. C'est la thèse du chapitre 5 du livre
-(« la durée d'une trace n'est pas une propriété de l'échec. C'est un choix »), que la page expose comme thèse, après les
-règles.
+La durée d'une trace est fixée par un texte, qui en dit rarement l'usage : l'article L. 751-2 du code de la consommation le fait pour le fichier bancaire (« un élément d'appréciation de la solvabilité » de qui demande un crédit), les articles 776 et R. 79 du code de procédure pénale pour les recrutements auprès de mineurs ; ailleurs, l'usage (protéger un prêteur, un employeur, un assureur) est une lecture de l'auteur (relecture R2, l. 195, statut C ; reformulation EF-30 à arbitrer). D'un registre à l'autre, la durée ne suit pas la gravité ; à l'intérieur d'un registre, les textes la règlent souvent sur elle (R2-12). C'est la thèse du chapitre 5 du livre
+(« la durée d'une trace n'est pas une propriété de l'échec. C'est un choix »), que la page expose comme thèse, après les règles. Relecture des sources du 12/11/2026 : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\SOURCES\combien-de-temps-une-erreur-reste-inscrite_SYNTHESE.md`.
 
 ### Preuve décisive
 
@@ -225,3 +222,39 @@ pas les durées entre eux.
   articles cités dans la FAQ. Art. 769 (8°, empreinte 8a1dccbd…) : la cellule « retrait par le tribunal dans des cas
   limités » devient « retrait plus tôt si la juridiction qui prononce une réhabilitation judiciaire en ordonne la
   suppression », phrase correspondante au corps. Aucun point ouvert restant sur cette page.
+
+### Reprise du lot « guides » (12/11/2026)
+
+Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RESSOURCE.md` ; dossier `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\` (rapport `RAPPORTS\combien-de-temps-une-erreur-reste-inscrite.md`, état `LOT.md`).
+
+- Relecture des sources : faite le 12/11/2026, trois relecteurs indépendants et les sondes de la session (`SOURCES\combien-de-temps-une-erreur-reste-inscrite_R1.md` à `_R3.md`, `_SYNTHESE.md`, `SONDES_SESSION.md`) ; écarts de la
+  version en ligne corrigés : destinataires du bulletin n° 2, décret n° 2013-799, liquidation judiciaire, surendettement et
+  cession du crédit, réhabilitation légale, malus et bonus, quarante ans, droit à l'oubli de 2016-2022, versions de 2029.
+- Interventions : `specs\combien-de-temps-une-erreur-reste-inscrite.py`, 133 remplacements, dont une explication
+  (EF-30, à quoi servent les durées), tranchée par le contradicteur externe ; témoin : la spécification appliquée à la page
+  d'origine (`ed36025`) redonne cette page, en-tête de publication et organe de forme à part.
+- Juge interne à l'aveugle : deux tours ; contradicteur externe `PRO-20261112-105456` (réponse archivée avant lecture,
+  SHA-256 E8BA5900…) : version proposée retenue, deux P0 (récidive légale ; « un second délai, fixé par un texte ») et un
+  P1 corrigés ; arbitrage `ARBITRATIONS\PRO-20261112-105456_arbitrage.md`.
+- Premier écran : trois tours de deux lecteurs (personne concernée, travailleur social), témoin trompeur pris à chaque
+  tour ; chapô final sans conclusion interdite (`P\premier_ecran.md`).
+- Contrôle final avant publication (juge interne, textes relus à l'API Légifrance) : 0 P0, 7 P1, tous corrigés (bulletin
+  n° 3 dans la question sur l'employeur, conditions de la réhabilitation, fiche maintenue au casier, réhabilitation
+  judiciaire, relevé d'informations, contrats en cours au 20/11/2026, date) ; revérification : constats fermés, un P0
+  nouveau dans le chapô (les quarante ans ne valent que pour la fiche d'une condamnation pour crime ou délit, CPP
+  art. 769) corrigé.
+- Frise : dix passages de deux contrôleurs indépendants ; le délai de dix ans du permis (C. route, art. L. 223-6, dernier
+  alinéa) entre au tableau et à la question n° 5, et la note le déclare non figuré ; garde du générateur étendue (toute
+  durée de la cellule « Délai » dessinée ou déclarée ; couples de récidive), témoins `--mutation=nonfigure` et
+  `--mutation=couple` vus mordre ; dernier état identique, octet pour octet, à la simulation contrôlée ; restes
+  cosmétiques déclarés (`JUGE\SORTS.md`).
+- Relecture de langue phrase à phrase du texte servi (388 phrases) : une faute et 33 maladresses corrigées, préférences
+  retenues quand elles éclairent ; deux points de fond rendus exacts au passage (surendettement : plan ou mesures, C.
+  consom. L. 752-3 ; quatre manières d'oublier : le tableau et l'indicateur « 040 ») ; LanguageTool : 5 signalements,
+  aucun retenu.
+- Contrôles : `check-all --ci` 0 ; build et `typo_build` 0 ; rendu 0 ; liens 0 critique ; dates 83/83, 0 bloc sans
+  période ; couverture « ok » ; lettre : chaque écart rattaché à son intervention, sauf la date de mise à jour (en-tête).
+- Instantané de relecture : fait le 12/11/2026 (409 phrases) ; `refonte` porté au 12/11/2026 ; journal : entrée du
+  12/11/2026 ; `data/dates_affichage.json` : 05/11/2026 versé à l'historique.
+- Mise en ligne : poussée sur mandat de l'auteur, le 12/11/2026 ; attestation de la version servie : ci-dessous.
+- Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
