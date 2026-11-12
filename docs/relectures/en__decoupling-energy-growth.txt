@@ -1,29 +1,28 @@
-# relu le 2026-11-05 ; texte servi de /en/decoupling-energy-growth/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /en/decoupling-energy-growth/, build de da6159e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is the world economy decoupling from energy?
-The world economy uses less and less energy for each unit of wealth it produces: 28.5% less in 2024 than in 2000.
-Its energy consumption, meanwhile, rose by 58% over the same period.
-Falling energy intensity slowed the rise; it did not reverse it.
-Page updated 5 November 2026 · revisions
+The world economy uses less energy for each unit of output it produces, measured by GDP at purchasing power parity: 28.5% less in 2024 than in 2000.
+But over the same period, that GDP rose by 121%, and energy consumption by 58%: the decoupling is relative, not absolute.
+Page updated 12 November 2026
 ↓ Charts, data and citations to reuseReuse this page
-Data as of: 26 October 2026 EIA, international data: primary energy consumption, GDP at purchasing power parity in constant prices and population, world and European Union, 1980 to 2024.
+Data last updated 12 November 2026 EIA, international data: primary energy consumption, GDP at purchasing power parity in constant prices and population, the world and the European Union, 1980 to 2024.
 Download: CSV · JSON
 Intensity falls, consumption rises
 From 2000 to 2024, world GDP, measured at purchasing power parity in constant prices, rose by 121%.
-The energy used to produce each unit of that GDP, energy intensity, fell by 28.5%.
+The energy used per unit of that GDP — energy intensity — fell by 28.5%.
 And world primary energy consumption went from 405 to 639 exajoules (one exajoule is 10¹⁸ joules): 58% more.
-The world economy has therefore decoupled from energy in the relative sense: its consumption grows more slowly than its output.
-It has not decoupled in the absolute sense, where consumption would fall while the economy grows.
-Primary energy consumed on the territory, EIA convention; effects computed with a Divisia index, which add up exactly to the change (EIA, international data).
+The world economy has therefore decoupled from energy in the relative sense: its energy consumption grows more slowly than its output.
+It has not decoupled in the absolute sense, in which consumption falls while the economy grows.
+Territorial primary energy consumption, EIA convention; effects computed with a Divisia index; they add up exactly to the change (EIA, international data).
 The result in one sentence.
-From 2000 to 2024, world energy consumption rose by 58%: the decomposition attributes 407 exajoules of increase to population and GDP per head, and only 172 of decrease to energy intensity.
+From 2000 to 2024, world energy consumption rose by 58%: the accounting decomposition, with GDP at purchasing power parity, attributes an increase of 407 exajoules to population and GDP per head, and a decrease of 172 to energy intensity — shares of a calculation, not the additional amount that would have been consumed without the fall in intensity.
 Population or growing wealth?
-It is often said that energy consumption rises because the world’s population rises.
-An accounting decomposition separates the two.
-Energy consumption is the product of three terms: population, GDP per head, and the energy used per unit of GDP.
-From 2000 to 2024, the decomposition attributes 144 exajoules to the population effect, 263 to the GDP-per-head effect and −172 to falling intensity: 235 exajoules more in all.
-GDP per head therefore weighed 1.8 times as much as demography.
-That ranking does not depend on the starting year: in each of the windows tested, starting in 1990, 2000, 2010, 2015 and 2019 and ending in 2024, the GDP-per-head effect exceeds the population effect, and consumption rose.
+One might think that energy consumption rises mainly because the world’s population is growing.
+An accounting decomposition separates the population effect from the GDP-per-head effect.
+Energy consumption is the product of three quantities: population, GDP per head and the energy used per unit of GDP.
+From 2000 to 2024, the decomposition attributes 144 exajoules to the population effect, 263 to the GDP-per-head effect and −172 to the intensity effect: 235 exajoules more in all.
+With GDP at purchasing power parity, the GDP-per-head effect therefore weighs 1.8 times as much as the population effect.
+That ranking holds for every starting year tested: in each of the windows (starting in 1990, 2000, 2010, 2015 and 2019, all ending in 2024), the GDP-per-head effect exceeds the population effect, and consumption rises.
 The five windows, in exajoules
 Start
 Population effect
@@ -56,137 +55,135 @@ Change in consumption
 −46
 +37
 Each window ends in 2024; world, EIA.
-Values rounded to the exajoule: their sum may differ from the total by one.
+Values rounded to the nearest exajoule: their sum may differ from the total by one.
 An accounting decomposition is not an explanation.
 It says how much each term weighed, not why.
-It does not say that getting richer causes the rise in consumption, nor that falling intensity comes from more efficient uses: intensity also falls when the economy shifts towards services, or when a measurement convention counts electricity differently.
+It does not say that getting richer causes the rise in consumption, nor that falling intensity comes from more efficient energy use: intensity also falls when the economy shifts towards services, or when wind or hydro electricity, counted at its electrical content, replaces fuels counted at their heat content.
 Nor can it be used to estimate a rebound effect.
-Why the intensity effect (−172 exajoules) exceeds the fall in intensity itself
+Why an effect, as a share of starting consumption, differs from the change in its factor
 The 28.5% measures the change in intensity; the 172 exajoules, its contribution to the change in consumption.
-The decomposition measures each change in logarithms, which makes the sum of the effects exact.
-Intensity was multiplied by 0.715 (a fall of 28.5%), whose logarithm is −0.34.
-That value applies to the period’s average consumption, 513 exajoules (a so-called logarithmic mean, between 405 and 639): hence an effect of −172 exajoules.
-Set against the 405 exajoules of 2000, it is worth 42.6%, the figure in the chart: it is the same fall in intensity, measured on a wider base, not a second fall.
+The decomposition measures each change in logarithmic terms, which makes the sum of the effects exact.
+Intensity was multiplied by 0.7146 (a fall of 28.5%); the natural logarithm of that ratio is −0.336.
+That value is applied to a reference consumption, known as the logarithmic mean of 405 and 639, that is, 513 exajoules: hence an effect of −172 exajoules.
+Expressed as a share of the 405 exajoules of 2000 (computed on unrounded values), it amounts to 42.6%, the figure in the chart: it is the same fall in intensity, measured on a larger base, not a second fall.
+The other two effects also differ from the change in their factor, in either direction, for the same reason (logarithm and reference consumption): +32.4% for population and an effect of +35.6%; +67.0% for GDP per head and an effect of +65.0%.
 The European Union: absolute decoupling, on its territory
-The same producer, with the same definition, gives the other case for the EU-27.
-From 2000 to 2024, its primary energy consumption fell by 18%, from 66 to 54 exajoules, while its GDP rose by 43%; it peaked in 2006.
-The population effect adds 3 exajoules, the GDP-per-head effect 18, and the 42.4% fall in intensity takes away 33: more than the other two combined.
+The same producer, using the same definition, shows the other case for the EU-27.
+From 2000 to 2024, its primary energy consumption fell by 18%, from 66 to 54 exajoules, while its GDP rose by 43%; consumption peaked in 2006.
+The population effect adds 3 exajoules and the GDP-per-head effect 18; the intensity effect, for a 42.4% fall in intensity, takes away 33: more than the other two combined.
 The end year matters.
-Stopping in 2019, before the pandemic and the 2022 surge in energy prices, European consumption falls by 6.4% from 2000, with GDP up 34%.
-Absolute decoupling is already there, but more than half of the fall measured to 2024 came after 2019; these data do not say how much of it will last.
+If the window ends in 2019, before the pandemic and the 2022 surge in energy prices, European consumption falls by 6.4% from 2000, with GDP up 34%.
+Absolute decoupling is already visible over that period, but more than half of the fall measured to 2024 came after 2019; these data do not say how much of it will last.
 What the comparison does not say.
-These figures count the energy consumed on European territory, not the energy used to make the goods Europe imports.
-They cannot tell whether the fall comes from efficiency, from the decline of the most energy-intensive industries or from their relocation outside Europe.
-Settling that would require an energy footprint of European demand, which we have not found published in a reusable form.
+These figures count the energy consumed on EU territory, not the energy used to make the goods the EU imports.
+They cannot show whether the fall comes from efficiency, from the decline of the most energy-intensive industries, from their relocation outside the EU, or from the way the measurement convention counts nuclear, wind and solar electricity, whose mix has changed.
+Measuring the share attributable to relocation would require an energy footprint of European demand, which we have not found published in a reusable form.
 Does the result depend on the source?
 A measurement convention, checked year by year.
-Primary energy is not counted the same way everywhere.
-In the EIA’s files, we measure every year from 1990 to 2024 the ratio between the energy counted and the electricity generated: 3,412 Btu per kilowatt-hour for hydro and wind, that is, their electrical content, with no change of convention; from 10,400 to 10,700 Btu for nuclear, counted at the heat produced by the reactor.
-Solar is counted at 3,443 Btu in 2024, at a higher ratio in earlier years, when it weighed very little.
-The Energy Institute, which publishes the Statistical Review of World Energy, has applied the same physical-content logic since its 2025 edition: the comparison below tests another producer, not another convention.
+Primary energy is not counted in the same way everywhere.
+In the EIA’s files, we measure, for every year from 1990 to 2024, the ratio of the energy counted to the electricity generated: 3,412 Btu per kilowatt-hour for hydro and wind, that is, their electrical content, with no change of convention; from 10,400 to 10,700 Btu for nuclear, counted at the heat produced by the reactor.
+Solar is counted at 3,443 Btu in 2024 and at a higher ratio in earlier years, when it weighed very little.
+The Energy Institute, which publishes the Statistical Review of World Energy, has applied the same physical-content approach since its 2025 edition: the comparison below changes the producer, not the convention.
 Another producer.
 With the Energy Institute’s total energy supply (2026 edition: 592 exajoules in 2024) and World Bank GDP and population, the decomposition keeps the same ranking: world consumption up 55% from 2000 to 2024; GDP-per-head effect 247 exajoules, population 133, intensity −170.
-For the European Union, the fall is 17% instead of 18%.
-Eurostat, which publishes its primary energy consumption indicator only from 2005, gives the same size within a few points: from 2005 to 2024, EU consumption falls by 20% according to Eurostat, 22% according to the Energy Institute and 23% according to the EIA.
+For the European Union, from 2000 to 2024, primary energy consumption fell by 17% according to the Energy Institute, 18% according to the EIA and 15% according to Eurostat’s complete energy balances: a similar fall, slightly smaller in Eurostat’s figures.
 Levels differ more (50 exajoules in 2024 for Eurostat, 54 for the EIA): Eurostat’s indicator leaves out, among other things, non-energy uses of fuels.
 How GDP is converted matters.
-The figures on this page convert GDP at purchasing power parity.
-At market exchange rates, world GDP rises by 99% from 2000 to 2024, and intensity falls by only 21%; the GDP-per-head effect drops to 210 exajoules and the intensity effect to −120, while the population effect does not change.
-Under both conversions, in every window, consumption rises, intensity falls and GDP per head weighs more than population.
-How much intensity falls, however, depends on the conversion: at market exchange rates, from 2000 to 2024, it takes away less than population adds.
-Confronting the research
-Paul Brockway and four co-authors, researchers in energy economics and engineering (universities of Leeds, Sussex, Massachusetts, SOAS and Calvin, IFP Energies nouvelles), reviewed in 2021 thirty-three studies that estimate the rebound effect for a whole economy, twenty-one based on general equilibrium models and twelve on other methods.
-They conclude that these effects may erode more than half of the energy savings expected from efficiency, and that global energy scenarios, which take too little account of them, may underestimate future demand.
-On the observation, our figures agree with theirs: from 1971 to 2018, they write, the world experienced no absolute decoupling, only national cases; from 2000 to 2024, the EIA series shows the same.
-On the explanation, this page does not test them.
-The same authors stress that an improvement in efficiency measured at one level does not necessarily bring an improvement measured at another: an aggregate energy intensity does not measure efficiency, and no rebound rate can be derived from a decomposition like this one.
+The figures on this page use GDP converted at purchasing power parity.
+At market exchange rates, world GDP rises by 99% from 2000 to 2024, and intensity falls by only 21%; the GDP-per-head effect drops to 210 exajoules and the intensity effect shrinks to −120, while the population effect does not change.
+Under both conversions, in every window, consumption rises, intensity falls and the GDP-per-head effect exceeds the population effect.
+How much intensity falls, however, depends on the conversion: at market exchange rates, from 2000 to 2024, the intensity effect takes away less than the population effect adds.
+Comparison with the research
+In 2021, Paul Brockway and four co-authors, researchers in energy economics and engineering (universities of Leeds, Sussex and Massachusetts, SOAS University of London, Calvin University, IFP Energies nouvelles), reviewed thirty-three studies that estimate the rebound effect for a whole economy, twenty-one based on general equilibrium models and twelve on other methods.
+They conclude that these effects may erode more than half of the energy savings expected from efficiency improvements, and that global energy scenarios, which take too little account of them, may underestimate future demand.
+On what is observed, our figures agree with theirs: from 1971 to 2018, they write, the world experienced no absolute decoupling, only a few short-lived national cases, achieved in part, they note, by offshoring production to other countries; from 2000 to 2024, the EIA series likewise shows no absolute decoupling at world level.
+On the explanation, this page does not test theirs.
+The same authors stress that an improvement in efficiency, measured in one way or at one level, does not necessarily bring an improvement measured in another way or at another level.
+An aggregate energy intensity therefore does not measure efficiency, and no rebound rate can be derived from a decomposition like this one.
 What these data do not say
 A decomposition, not a cause.
 The three effects add up exactly to the change in consumption; they attribute no part of it to a cause.
 Intensity is not efficiency.
-Energy per unit of GDP also falls when the make-up of the economy changes, or when the measurement convention changes.
+Energy per unit of GDP can also fall when the make-up of the economy changes, and it depends on the measurement convention and on how the energy mix evolves.
 A measurement convention.
 The EIA and the Energy Institute count hydro and wind electricity at its electrical content.
-Counted as the fossil fuel it replaces (the so-called substitution method), its growth would weigh more, and intensity would fall less; that variant is not computed here.
+If it were counted as the fossil fuel it replaces (known as the substitution method), its growth would weigh more, and intensity would fall less; that variant is not computed here.
 Territory, not footprint.
-Energy embodied in imports is not counted: this is the decisive limit of the comparison with the European Union.
+Energy embodied in imported goods is not counted: this is one limitation of the comparison with the European Union.
 GDP at purchasing power parity.
-It depends on a base year and on revisions; the EIA’s constant prices are checked against the World Bank at each update, and the variant at market exchange rates is given above.
+It depends on a base year and on revisions; the EIA’s constant-price GDP is checked against the World Bank’s at each update, and the variant at market exchange rates is given above.
 One decomposition method.
-The effects are those of the logarithmic mean Divisia index; no other decomposition method has been tried.
+The effects are those of the logarithmic mean Divisia index (LMDI); no other decomposition method has been tried.
 A world aggregate.
 It adds up very different regional trajectories, which this page does not detail.
 A reading by the author, not tested here.
-The notion of the rebound effect refers to the renewed consumption that erodes an efficiency gain.
+The rebound effect refers to the extra consumption that erodes an efficiency gain.
 In the working paper AWP-04, the economist Stéphane Lalut places it among the transfer mechanisms of the energy transition.
-The figures on this page describe relative decoupling; they do not measure a rebound and do not demonstrate that reading.
+The world figures on this page describe relative decoupling; they do not measure a rebound and do not demonstrate that reading.
 To take the question further
 ANTHROPY – A Big History of Civilization’s Hidden Costs
 Seven ages of history for a single hypothesis: disorder is never resolved, only displaced.
-ANTHROPY follows, over the long run, what each order leaves behind it and on whom it leaves the burden.
+ANTHROPY follows, over the long run, what each order leaves behind and on whom it leaves the burden.
 $29.99paperback, 644 pagesKindle
 Buy the paperback — $29.99Kindle edition
 Contents, excerpts and reviews →
 Frequently asked questions
 Is world energy consumption falling?
 No.
-From 2000 to 2024, it went from 405 to 639 exajoules, a rise of 58%, while the energy used per unit of GDP fell by 28.5%.
+From 2000 to 2024, world primary energy consumption went from 405 to 639 exajoules according to the EIA, a rise of 58%, while the energy used per unit of GDP, measured at purchasing power parity, fell by 28.5%.
 This is relative decoupling: consumption grows more slowly than the economy, without falling.
 Does the rise in energy consumption come mainly from population growth?
-Not primarily.
-In an accounting decomposition of the rise from 2000 to 2024, the GDP-per-head effect (263 exajoules) weighs 1.8 times as much as the population effect (144), and falling energy intensity takes away 172.
+Not primarily, in accounting terms: in a decomposition of the rise in world energy consumption from 2000 to 2024, with GDP at purchasing power parity, the GDP-per-head effect (263 exajoules) weighs 1.8 times as much as the population effect (144), and the energy-intensity effect takes away 172.
 The decomposition says how much each term weighed, not why.
 Can a country or region use less energy while getting richer?
-Yes, on its territory: in the European Union, primary energy consumption fell by 18% from 2000 to 2024 while GDP rose by 43%.
-These data do not count the energy embodied in imported goods: they do not say whether the fall comes from efficiency, from a change in the economy or from production moving outside Europe.
+Yes, on its territory: in the European Union, according to the EIA, primary energy consumption fell by 18% from 2000 to 2024 while GDP rose by 43%, and more than half of that fall came after 2019.
+These data do not count the energy embodied in imported goods; nor do they say whether the fall comes from efficiency, from a change in the structure of the economy, from production moving outside the EU or from the way the measurement convention counts electricity.
 Where do these figures come from?
-From EIA international data (energy, GDP at purchasing power parity in constant prices, population), retrieved by a script that stops if a figure no longer meets the conditions on which the page’s main sentences depend, and recalculated on Energy Institute, World Bank and Eurostat data.
-Only one value is transcribed by hand: the world total published by the Energy Institute for 2024, used to check where the recalculation comes from.
+From EIA international data (energy, GDP at purchasing power parity in constant prices, population), retrieved by a script that stops if a figure no longer meets the conditions on which the page’s main sentences depend; the figures are recalculated using Energy Institute, World Bank and Eurostat data.
+Only one value is transcribed by hand: the world total published by the Energy Institute for 2024, used to verify the provenance of the data behind the recalculation.
 The data can be downloaded as CSV and JSON, under a CC BY 4.0 licence.
 Sources
 EIA (U.S.
 Energy Information Administration), international data, bulk file INTL.zip read by script: total energy consumption, GDP at purchasing power parity, population.
-Measurement convention read from the same file (hydro, wind, solar and nuclear electricity generation and consumption).
-Author’s calculations: logarithmic mean Divisia index decomposition.
-Energy Institute, Statistical Review of World Energy, 2026 edition, total energy supply (physical energy content method), read in Our World in Data’s dataset (owid_energy); the 2024 world total is checked against the one published in the report of the 2026 edition (592.18 exajoules), a value transcribed from the report.
+Measurement convention read from the same file (hydro, wind, solar and nuclear electricity generation and primary energy consumption).
+Author’s calculations: logarithmic mean Divisia index (LMDI) decomposition.
+Energy Institute, Statistical Review of World Energy, 2026 edition, total energy supply (physical energy content method), read from Our World in Data’s dataset (owid_energy); the 2024 world total is checked against the one published in the report of the 2026 edition (592.18 exajoules), a value transcribed from the report.
 World Bank, GDP in constant prices at purchasing power parity and at market exchange rates, and population.
-Eurostat, primary energy consumption (Energy Efficiency Directive indicator), EU-27.
+Eurostat, complete energy balances, primary energy consumption (Energy Efficiency Directive indicator), EU-27, from 1990.
 Paul E.
 Brockway, Steve Sorrell, Gregor Semieniuk, Matthew Kuperus Heun and Victor Court, “Energy efficiency and economy-wide rebound effects: A review of the evidence and its implications”, Renewable and Sustainable Energy Reviews, vol.
 141, 2021, doi:10.1016/j.rser.2021.110781, read in its open-access version.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
-Energy consumption, 2000-2024: what pushed it up, what held it back
-From 2000 to 2024, world energy consumption rose by 58%: the decomposition attributes 407 exajoules to population and GDP per head, and takes 172 away for the fall in energy intensity.
-In the EU, it fell by 18%.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
+Energy consumption, 2000-2024: accounting decomposition of the change
+According to EIA data, world primary energy consumption rose by 58% from 2000 to 2024.
+The accounting decomposition (Divisia index) splits the change into contributions from population (+144 EJ), GDP per head at purchasing power parity (+263 EJ) and energy intensity (−172 EJ).
+These terms measure neither causes nor the consumption that would have been observed without the fall in intensity.
+In the EU-27, primary energy consumption on its territory, as measured by the EIA, fell by 18%; this measure does not include the energy embodied in imported goods and depends on accounting conventions.
 Reading caveat.
-Primary energy consumed on the territory (energy embodied in imports not counted); hydro and wind electricity counted at its electrical content, nuclear at the heat produced.
-Accounting decomposition (Divisia index), GDP at purchasing power parity: it does not say why intensity falls.
-Values rounded to one decimal: their sum may differ from the total by one tenth.
+Territorial primary energy consumption (energy embodied in imported goods not counted); hydro and wind electricity counted at its electrical content, nuclear at the heat produced.
+The intensity effect combines efficiency, economic structure and the effect of these conventions.
+Accounting decomposition (Divisia index, GDP at purchasing power parity): its terms measure neither causes nor what would have been consumed without the fall in intensity.
+Effects rounded to one decimal place: their sum may differ from the total by 0.1 points.
 EIA, international data (energy, GDP at purchasing power parity in constant prices, population)
 Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Is the world economy decoupling from energy?”.
-EIA (international data) data, retrieved 26 October 2026. https://stephane-lalut.com/en/decoupling-energy-growth/
+“Is the world economy decoupling from energy?” EIA data, retrieved 12 November 2026. https://stephane-lalut.com/en/decoupling-energy-growth/
 Copy citation
 In three sentences
-From 2000 to 2024, world energy consumption rose by 58% while the energy used per unit of GDP fell by 28.5%: relative, not absolute, decoupling.
-In an accounting decomposition, the GDP-per-head effect weighs 1.8 times as much as the population effect.
-In the European Union, consumption fell on its territory; these data do not say whether through efficiency or relocation.
+From 2000 to 2024, world energy consumption rose by 58% while the energy used per unit of GDP, measured at purchasing power parity, fell by 28.5%: relative, not absolute, decoupling.
+In an accounting decomposition, with GDP measured the same way, the GDP-per-head effect weighs 1.8 times as much as the population effect.
+In the European Union, according to the EIA, consumption fell on its territory; these data do not say whether it fell through efficiency, the decline of the most energy-intensive industries, relocation of production outside the EU or the effect of the convention used to count electricity.
 Copy summary
 The data
-For the world and the EU-27, every year since 1980: primary energy consumption, GDP at purchasing power parity in constant prices and population; decomposition of the change in consumption and its recalculation on other sources, in the JSON; the annual series are also available as CSV, one row per area and year.
+In the CSV, one row per area and year since 1980, for the world and the EU-27: primary energy consumption, GDP at purchasing power parity in constant prices and population (EIA aggregates of varying composition before 1993); in the JSON, the decomposition of the change in consumption and its recalculation using other sources.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
-The raw series belong to their producers (EIA (international data)), under their own terms.
-Revisions
-26 October 2026 — Correction: the check recalculation relied on an Our World in Data primary energy series using the substitution method, wrongly attributed to the Energy Institute, which adopted the physical energy content method in 2025; it now relies on the Energy Institute’s total energy supply (EU fall from 2000 to 2024: 17% instead of 12%).
-The EIA convention is checked for wind as for hydro, not for solar.
-Added: a variant with GDP at market exchange rates, a comparison with Eurostat; “income per head” becomes “GDP per head”.
+Text under copyright — short quotations permitted, full reproduction on request.
+The raw series belong to their producers (EIA), under their own terms.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

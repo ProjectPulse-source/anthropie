@@ -38,18 +38,17 @@ consommation monte, c'est d'abord parce que la population mondiale augmente » (
 
 ### Découverte principale
 
-De 2000 à 2024, l'intensité énergétique mondiale a baissé de 28,5 % et la consommation d'énergie a augmenté de 58 % :
+De 2000 à 2024, l'intensité énergétique mondiale a baissé de 28,5 % (PIB en parité de pouvoir d'achat ; 20,8 % aux taux de marché : R1-4) et la consommation d'énergie a augmenté de 58 % :
 découplage relatif, pas absolu. Dans la décomposition, la hausse du PIB par habitant pèse 1,8 fois plus que
 celle de la population (+263 EJ contre +144 EJ, PIB en parité de pouvoir d'achat), et la baisse de l'intensité en retire 172 : elle compense environ
 deux cinquièmes de la poussée, pas davantage. Dans l'Union européenne, même producteur, même définition, la
-consommation a baissé de 18 % pendant que le PIB augmentait de 43 % : un découplage absolu, sur son territoire.
+consommation a baissé de 18 % pendant que le PIB augmentait de 43 % : un découplage absolu, sur son territoire. Eurostat, autre producteur et autre convention, donne −14,5 % de 2000 à 2024 (R2-1, sonde de la session).
 
 ### Mécanisme explicatif
 
 Identité comptable E = population × (PIB / population) × (E / PIB), décomposée par la méthode de l'indice de Divisia
 logarithmique moyen (somme exacte, sans résidu). Elle dit combien chaque terme a pesé, pas pourquoi : la baisse de
-l'intensité mêle progrès d'efficacité, changement de la composition de l'économie et changement de convention de
-mesure des énergies ; elle ne permet pas d'estimer un effet rebond (phrase interdite par l'arbitrage).
+l'intensité mêle progrès d'efficacité, changement de la composition de l'économie et effet de la convention de comptage, constante, sur un bouquet qui change (part de l'électricité comptée à son contenu énergétique : R1-6, DE-8 à arbitrer) ; elle ne permet pas d'estimer un effet rebond (phrase interdite par l'arbitrage). Brockway et al. (2021) ne disent pas ce que la page leur prêtait (R2-3, DE-1). Relecture des sources du 12/11/2026 : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\SOURCES\decouplage-energie-croissance_SYNTHESE.md`.
 
 ### Preuve décisive
 
@@ -190,3 +189,60 @@ note d'arrondi ; encadré « Pourquoi… » chiffré (0,715, logarithme, moyenne
 repli ; convention contrôlée chaque année de 1990 à 2024 (garde) ; année d'arrivée de l'UE éprouvée (2019 : −6,4 %, plus
 de la moitié de la baisse après 2019, garde) ; édition 2025 de l'Energy Institute lue et citée ; exajoule défini. Non
 retesté après correction.
+
+### Reprise du lot « guides » (12/11/2026)
+
+Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RESSOURCE.md` ; dossier `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\` (rapport
+`RAPPORTS\decouplage-energie-croissance.md`, état `LOT.md`).
+
+- Relecture des sources : faite le 12/11/2026, deux relecteurs indépendants et les sondes de la session
+  (`SOURCES\decouplage-energie-croissance_R1.md`, `_R2.md`, `_SYNTHESE.md`) : valeurs recalculées sur le fichier de l'EIA,
+  toutes identiques à la page ; Brockway et al. (2021) relus sur le PDF archivé ; Eurostat `nrg_bal_c` lu (1990-2024).
+  Écarts de la version en ligne corrigés : verbes causaux pour une décomposition comptable (« a freiné ») ; 28,5 % sans la
+  conversion du PIB ; deux propositions prêtées à Brockway et al. que l'article ne porte pas ; indicateur d'Eurostat dit
+  commencer en 2005 ; convention de comptage absente des explications possibles de la baisse européenne ; moyenne
+  logarithmique (513 EJ). Reste à relire (R1-2) : la définition de l'EIA (soutes internationales, chaleur renouvelable),
+  avant de dire « sur le territoire » sans réserve.
+- Interventions : `specs\decouplage-energie-croissance.py`, 164 remplacements (FR et EN), dont cinq explications (DE-2,
+  DE-8, DE-11, DE-23, DE-24) tranchées par le contradicteur externe en faveur de la version proposée ; témoin : la
+  spécification appliquée à la page d'origine (`c2b25c2`) redonne cette page, en-tête de publication, sujet du jeu de données
+  et organes de forme (`figure-lecture`, questions sur deux colonnes) à part.
+- Contradicteur externe `PRO-20261112-140721` (réponse archivée avant lecture, SHA-256 `A71FAC4D…`) : version proposée
+  retenue sur 19 passages sur 20, le passage 12 laissé à la version en ligne ; décisions 14 à 19 appliquées : « une intensité
+  agrégée ne mesure pas l'efficacité » rendu comme constat de la page, la citation de Brockway et al. restant fidèle ; titre
+  et note de la figure comptables, sans contrefactuel ; « selon la convention de mesure et l'évolution du mix » ; texte
+  réutilisable avec sa source et sa mesure. Décision 19 : relevé du 12/11/2026, fichier groupé INTL.zip dont les séries
+  portent une mise à jour au plus tard le 21/08/2026 ; la mise à jour du 9 au 11/11 qu'il signalait (non vérifiée) n'y
+  apparaît pas, la vérification par un autre canal revient à une session de données. Juge interne (P1) : les trois
+  producteurs comparés sur 2000-2024 avec les bilans complets d'Eurostat (garde « baisse chez les trois, un peu moins forte
+  chez Eurostat », vue mordre).
+- Générateur (`scripts/update_decouplage.py`) : Eurostat lu dans les bilans complets (`nrg_bal_c`, même indicateur que
+  `nrg_ind_eff` à 5 ktep près sur 2005-2024) ; chaque rangée de la figure porte la variation propre de son facteur (un effet
+  se lisait comme cette variation : −42,6 % pour une intensité en baisse de 28,5 %) ; note : ce que mêle l'effet de
+  l'intensité (efficacité, structure de l'économie, conventions), ni causes ni contrefactuel, borne d'arrondi exacte
+  (0,1 point), « biens importés » ; description intégrée avec la conversion du PIB, le territoire et les variations propres ;
+  rapport et logarithme à quatre et trois décimales (513 × 0,336 redonne 172). Cartes (`scripts/og_decouplage.py`) :
+  conversion du PIB dans la ligne de source, « mondiale » dans le titre français, variation propre de chaque facteur, dessin
+  décalé hors de la gouttière de l'accroche, total au bleu de la charte ; fabrique commune (`og_dossier_dette.py`) : « % »
+  soudé à son nombre (78 cartes simulées par le contrôleur : aucune autre coupure changée).
+- Figure : `check-figures` 0 défaut ; contrôleur de géométrie et de données (nombres recalculés, Banque mondiale en témoin)
+  et contrôleur de lecture, puis trois passages sur l'état corrigé (second : cinq défauts nouveaux, cosmétiques ; troisième :
+  deux gênants et quatre cosmétiques ; corrigés) ; quatrième passage : un défaut nouveau, cosmétique (la parenthèse d'un libellé allongé au contact de l'axe sur la carte
+  anglaise), corrigé par la correction que le contrôleur avait simulée et mesurée ; sortie identique à sa simulation, octet
+  pour octet (`JUGE\FIGURE_DECOUPLAGE_CONTROLE_{GEOMETRIE,LECTURE,2,3,4}.md`).
+- Relecture de langue phrase à phrase du texte servi, FR (194 phrases : 6 fautes, 19 maladresses) et EN (192 : 3 erreurs,
+  39 maladresses) : corrigées. Points de fond tranchés au passage : l'effet, non la baisse réelle, sujet des verbes ;
+  périmètre de l'Union ; solaire retiré des électricités comptées à leur contenu électrique (convention non vérifiée pour lui
+  avant 2024, journal du 26/10) ; constat partagé avec Brockway et al. borné à l'échelle mondiale ; rang « pour chaque année
+  de départ testée » ; FAQ au sens comptable. Relecture de contrôle des phrases changées
+  (`JUGE\RELECTURE_LANGUE_DECOUPLAGE_CONTROLE.md`) : un défaut nécessaire (chapô anglais) ; bornes d'arrondi rétablies à
+  la borne exacte ; « les scénarios énergétiques mondiaux », comme le résumé de Brockway et al. ; corrigés.
+- Données structurées : sujet du jeu de données déclaré (`apropos`) ; sans lui, le gabarit déclarait « dette publique »
+  (relecture de langue de la page dépense imprévue).
+- Contrôles : `check-all --ci` 0 ; build et `typo_build` 0 défaut ; rendu 0 ; liens 0 critique ; dates 83/83, 0 bloc sans
+  période ; couverture : 15 signaux, aucun nouveau.
+- Envois : la page est citée par un courriel de la campagne ANTHROPY-EN (LOT3, parti le 12/11) ; aucun envoi non parti ne
+  la cite.
+- Instantané de relecture : fait le 12/11/2026 (195 phrases FR, 193 EN) ; `refonte` porté au 12/11/2026 ; journal : entrée du 12/11/2026.
+- Mise en ligne : poussée le 12/11/2026 sur le mandat de l'auteur ; attestation de la version servie consignée ensuite.
+- Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.

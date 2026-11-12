@@ -107,7 +107,8 @@ def _mots_insecables(texte: str) -> list[str]:
     qui précède, guillemet ouvrant et nombre au mot qui suit (jamais « ? » en tête de ligne, ni « 10 » sans « ans »)."""
     mots, colle = [], False
     for m in texte.split():
-        if mots and (colle or m in ("?", "!", ":", ";", "»")):
+        # « % » au nombre qui précède, même signé (« +58 % » : 12/11/2026, carte du découplage)
+        if mots and (colle or m in ("?", "!", ":", ";", "»") or m.rstrip(".,;:!?") == "%"):
             mots[-1] += " " + m
         else:
             mots.append(m)

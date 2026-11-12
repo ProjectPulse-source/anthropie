@@ -66,9 +66,10 @@ OWID_COL = "total_energy_twh"
 # publié. Elle porte son édition : si Our World in Data passe à une autre édition, la garde s'arrête et la valeur se relit.
 EI_PUBLIE = (2024, 592.18)
 EI_PUBLIE_ED = 2026
-EUROSTAT = ("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_eff"
-            "?geo=EU27_2020&nrg_bal=PEC_EED&unit=MTOE&format=JSON&lang=fr")
-AN_ES = 2005                                  # première année de l'indicateur d'Eurostat
+# Bilans complets d'Eurostat (depuis 1990) : même indicateur que nrg_ind_eff, qui commence en 2005 (valeurs égales à 5 ktep
+# près sur 2005-2024, mesure du 12/11/2026) ; producteurs comparés sur la fenêtre de la page (juge interne, P1).
+EUROSTAT = ("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_bal_c"
+            "?geo=EU27_2020&nrg_bal=PEC_EED&siec=TOTAL&unit=KTOE&format=JSON&lang=fr")
 WB = "https://api.worldbank.org/v2/country/%s/indicator/%s?format=json&per_page=200&date=1980:2030"
 GEOS = {"WORL": ("WLD", "World"), "EU27": ("EUU", "European Union (27)")}   # EIA -> (Banque mondiale, Our World in Data)
 SERIES = {"E": "INTL.44-2-%s-TJ.A", "Y": "INTL.4701-34-%s-BDOLPPP.A", "P": "INTL.4702-33-%s-THP.A"}
@@ -77,6 +78,7 @@ CONVENTION = {"hydro_q": "INTL.33-12-WORL-QBTU.A", "hydro_kwh": "INTL.33-12-WORL
               "sol_q": "INTL.116-12-WORL-QBTU.A", "sol_kwh": "INTL.116-12-WORL-BKWH.A",
               "nuc_q": "INTL.4417-2-WORL-QBTU.A", "nuc_kwh": "INTL.27-12-WORL-BKWH.A"}
 DEBUT = 2000                                  # fenêtre principale (début du siècle) ; variantes ci-dessous
+AN_ES = DEBUT                                 # comparaison des trois producteurs pour l'UE : la fenêtre de la page
 FENETRES = (1990, 2000, 2010, 2015, 2019)     # « dans toutes les fenêtres testées »
 TERMES = ("pop", "rev", "int")
 
@@ -161,11 +163,11 @@ def relever_temoin() -> dict:
     if "energy content of their gross electrical output" not in col.get("description_from_producer", ""):
         fail("codebook : la colonne %s n'est plus decrite en contenu physique" % OWID_COL)
     t["edition_ei"] = int(m.group(1))
-    j = json.loads(lire_url(EUROSTAT, "Eurostat nrg_ind_eff").decode("utf-8"))
+    j = json.loads(lire_url(EUROSTAT, "Eurostat nrg_bal_c").decode("utf-8"))
     idx = j["dimension"]["time"]["category"]["index"]          # une seule série demandée : l'indice est celui de l'année
-    t["es"] = {int(a): float(j["value"][str(i)]) for a, i in idx.items() if str(i) in j["value"]}
+    t["es"] = {int(a): float(j["value"][str(i)]) / 1000 for a, i in idx.items() if str(i) in j["value"]}   # ktep -> Mtep
     if AN_ES not in t["es"]:
-        fail("Eurostat nrg_ind_eff : annee %d absente" % AN_ES)
+        fail("Eurostat nrg_bal_c : annee %d absente" % AN_ES)
     return t
 
 
@@ -222,9 +224,9 @@ def calcul(s: dict, t: dict, conv: dict) -> dict:
     if any(a not in mer["Y"] for a in FENETRES + (y1,)):
         fail("Banque mondiale NY.GDP.MKTP.KD : annees manquantes")
     c["M"] = {y0: decomp(mer, y0, y1) for y0 in FENETRES}
-    # UE : la baisse depuis AN_ES chez trois producteurs (Eurostat ne publie pas cet indicateur avant)
+    # UE : la baisse sur la fenêtre de la page chez trois producteurs (bilans complets d'Eurostat)
     if y1 not in es:
-        fail("Eurostat nrg_ind_eff : annee %d absente" % y1)
+        fail("Eurostat nrg_bal_c : annee %d absente" % y1)
     c["ue_es"] = {"EIA": 100 * (s["EU27"]["E"][y1] / s["EU27"]["E"][AN_ES] - 1),
                   "EI": 100 * (t["EU27"]["E"][y1] / t["EU27"]["E"][AN_ES] - 1),
                   "Eurostat": 100 * (es[y1] / es[AN_ES] - 1)}
@@ -272,7 +274,7 @@ def mutation(c: dict):
         c["M"][1990]["rev"] = c["M"][1990]["pop"] * 0.9
     elif m == "marche_ordre":  # « aux taux de marché, l'intensité retire moins que la population n'ajoute »
         c["M"][DEBUT]["int"] = -c["M"][DEBUT]["pop"] * 1.2
-    elif m == "eurostat":   # « trois producteurs, même baisse à quelques points près »
+    elif m == "eurostat":   # « un peu moins forte chez Eurostat » : un écart de plus de cinq points doit arrêter
         c["ue_es"]["Eurostat"] = -5.0
     elif m == "temoin":     # même hiérarchie chez l'autre producteur
         c["T"]["rev"] = c["T"]["pop"] * 0.9
@@ -327,9 +329,10 @@ def gardes(c: dict) -> int:
     g(-M[DEBUT]["int"] < M[DEBUT]["pop"] < -W_["int"],
       "« aux taux de marche, la baisse de l'intensite retire moins que la population n'ajoute ; en parite, plus » : %.0f, %.0f, %.0f"
       % (-M[DEBUT]["int"] / 1e6, M[DEBUT]["pop"] / 1e6, -W_["int"] / 1e6))
-    v = list(c["ue_es"].values())
-    g(max(v) < 0 and max(v) - min(v) < 5, "UE depuis %d : « trois producteurs, meme baisse a quelques points pres » : %s"
-      % (AN_ES, {k: round(x, 1) for k, x in c["ue_es"].items()}))
+    v, ues = list(c["ue_es"].values()), c["ue_es"]
+    g(max(v) < 0 and ues["Eurostat"] > max(ues["EIA"], ues["EI"]) and max(v) - min(v) < 5,
+      "UE depuis %d : « baisse chez les trois producteurs, un peu moins forte chez Eurostat » : %s"
+      % (AN_ES, {k: round(x, 1) for k, x in ues.items()}))
     return n
 
 
@@ -359,12 +362,16 @@ def affichage(c: dict, lang: str) -> dict:
          "btu_hydro": f(c["btu_hydro"], 0), "btu_nuc": f(round(c["btu_nuc"], -2), 0), "an_conv0": str(c["an_conv0"]),
          "btu_nuc_min": f(round(c["btu_nuc_min"], -2), 0), "btu_nuc_max": f(round(c["btu_nuc_max"], -2), 0),
          "poussee_ej": ej(W_["pop"] + W_["rev"]), "lmoy_ej": ej(L(W_["E0"], W_["E1"])),
-         "ln_i": lg.nombre(math.log(1 + W_["dI_pct"] / 100), 2, lang), "ratio_i": lg.nombre(1 + W_["dI_pct"] / 100, 3, lang), "int_pct_e0": f(-W_["int_pct"], 1),
+         "ln_i": lg.nombre(math.log(1 + W_["dI_pct"] / 100), 3, lang), "ratio_i": lg.nombre(1 + W_["dI_pct"] / 100, 4, lang), "int_pct_e0": f(-W_["int_pct"], 1),
          "ue19_de_pct": f(-c["U19"]["dE_pct"], 1), "ue19_dy_pct": f(c["U19"]["dY_pct"]),
          "pct": "%" if lang == "en" else " %"}
     for nom, d in (("w", W_), ("u", U)):
         for k in TERMES + ("tot",):
             A["%s_%s_pct" % (nom, k)] = lg.signe(d[k + "_pct"], 1, lang)
+        # variation propre de chaque facteur, dans le libellé de sa rangée (contrôles de la lecture, G1, 12/11/2026)
+        A["%s_var_pop" % nom] = lg.signe(d["dP_pct"], 1, lang)
+        A["%s_var_rev" % nom] = lg.signe(100 * ((1 + d["dY_pct"] / 100) / (1 + d["dP_pct"] / 100) - 1), 1, lang)
+        A["%s_var_int" % nom] = lg.signe(d["dI_pct"], 1, lang)
     for y0, d in c["fen"].items():                  # tableau des fenêtres (le test de lecture demandait les chiffres)
         for k in TERMES + ("tot",):
             A["f%d_%s" % (y0, k)] = lg.signe(d[k] / 1e6, 0, lang)
@@ -373,41 +380,69 @@ def affichage(c: dict, lang: str) -> dict:
 
 # ------------------------------------------------------------------ figure signature
 TXT = {
-    "fr": dict(titre="Consommation d'énergie, {an0}-{an1} : ce qui l'a fait monter, ce qui l'a freinée",
-               titre_m="Énergie, {an0}-{an1} : ce qui a fait monter la consommation, ce qui l'a freinée",
-               desc="Décomposition de la variation de la consommation d'énergie primaire de {an0} à {an1}, en % de la consommation de {an0}. "
-                    "Monde : effet de la population {w_pop_pct} %, du PIB par habitant {w_rev_pct} %, de l'intensité énergétique {w_int_pct} %, "
-                    "variation totale {w_tot_pct} % (l'intensité elle-même a baissé de {di_pct} %). Union européenne (27 pays) : effet de la population {u_pop_pct} %, "
-                    "du PIB par habitant {u_rev_pct} %, de l'intensité énergétique {u_int_pct} %, variation totale {u_tot_pct} %.",
+    "fr": dict(titre="Consommation d'énergie, {an0}-{an1} : décomposition comptable de la variation",
+               titre_m="Énergie, {an0}-{an1} : décomposition comptable de la variation de la consommation",
+               desc="Décomposition comptable de la variation de la consommation d'énergie primaire de {an0} à {an1}, en % de la consommation "
+                    "de {an0}, avec un PIB en parité de pouvoir d'achat ; énergie consommée sur le territoire (énergie incorporée dans les biens "
+                    "importés non comptée). Monde : effet de la population {w_pop_pct} % (population : {w_var_pop} %), effet du PIB par "
+                    "habitant {w_rev_pct} % (PIB par habitant : {w_var_rev} %), effet de l'intensité énergétique {w_int_pct} % (énergie par "
+                    "unité de PIB : {w_var_int} %), variation totale {w_tot_pct} %. Union européenne (27 pays) : effet de la population "
+                    "{u_pop_pct} % (population : {u_var_pop} %), effet du PIB par habitant {u_rev_pct} % (PIB par habitant : {u_var_rev} %), "
+                    "effet de l'intensité énergétique {u_int_pct} % (énergie par unité de PIB : {u_var_int} %), variation totale {u_tot_pct} %. "
+                    "Ces termes ne mesurent ni des causes ni "
+                    "ce qu'on aurait consommé sans la baisse de l'intensité.",
                panneaux=("Monde", "Union européenne (27 pays)"),
-               termes=("Effet de la population", "Effet du PIB par habitant", "Effet de l'intensité énergétique (énergie par unité de PIB)", "Variation de la consommation"),
+               termes=("Effet de la population", "Effet du PIB par habitant", "Effet de l'intensité énergétique", "Variation de la consommation"),
+               facteurs=("population", "PIB par habitant", "énergie par unité de PIB", ""),
                echelle="effets et variation, en % de la consommation de {an0}",
                source="EIA, données internationales (énergie, PIB en parité de pouvoir d'achat à prix constants, population)",
-               note="Énergie primaire consommée sur le territoire (énergie contenue dans les importations non comptée) ; électricité "
-                    "hydraulique et éolienne comptée à son contenu électrique, nucléaire à la chaleur produite. Décomposition comptable "
-                    "(indice de Divisia), PIB en parité de pouvoir d'achat : elle ne dit pas pourquoi l'intensité baisse. Valeurs "
-                    "arrondies au dixième : leur somme peut différer d'un dixième du total.",
-               montre="De {an0} à {an1}, la consommation mondiale d'énergie a augmenté de {de_pct} % : la décomposition attribue "
-                      "{poussee_ej} exajoules à la population et au PIB par habitant, et en retire {int_ej} à la baisse de l'intensité "
-                      "énergétique. Dans l'UE, elle a baissé de {ue_de_pct} %."),
-    "en": dict(titre="Energy consumption, {an0}-{an1}: what pushed it up, what held it back",
-               titre_m="Energy, {an0}-{an1}: what pushed consumption up, what held it back",
-               desc="Decomposition of the change in primary energy consumption from {an0} to {an1}, as % of {an0} consumption. "
-                    "World: population effect {w_pop_pct}%, GDP-per-head effect {w_rev_pct}%, energy-intensity effect {w_int_pct}%, total change "
-                    "{w_tot_pct}% (intensity itself fell by {di_pct}%). European Union (27 countries): population effect {u_pop_pct}%, "
-                    "GDP-per-head effect {u_rev_pct}%, energy-intensity effect {u_int_pct}%, total change {u_tot_pct}%.",
+               note="Énergie primaire consommée sur le territoire (énergie incorporée dans les biens importés non comptée) ; électricité "
+                    "hydraulique et éolienne comptée à son contenu électrique, nucléaire à la chaleur produite. L'effet de l'intensité mêle "
+                    "efficacité, structure de l'économie et effet de ces conventions. Décomposition comptable (indice de Divisia, PIB en "
+                    "parité de pouvoir d'achat) : ses termes ne mesurent ni des causes ni ce qu'on aurait consommé sans la baisse de "
+                    "l'intensité. Effets arrondis au dixième : leur somme peut s'écarter du total de 0,1 point.",
+               montre="Selon les données de l'EIA, la consommation mondiale d'énergie primaire a augmenté de {de_pct} % de {an0} à "
+                      "{an1}. La décomposition comptable (indice de Divisia) répartit la variation en contributions de la population (+{pop_ej} EJ), "
+                      "du PIB par habitant en parité de pouvoir d'achat (+{rev_ej} EJ) et de l'intensité énergétique (−{int_ej} EJ). "
+                      "Ces termes ne mesurent ni des causes ni les consommations qui auraient été observées sans la baisse "
+                      "de l'intensité. Dans l'UE à 27, la consommation d'énergie primaire mesurée par l'EIA sur le territoire a baissé "
+                      "de {ue_de_pct} % ; cette mesure ne contient pas l'énergie incorporée dans les biens importés et dépend de "
+                      "conventions de comptage."),
+    "en": dict(titre="Energy consumption, {an0}-{an1}: accounting decomposition of the change",
+               titre_m="Energy, {an0}-{an1}: accounting decomposition of the change in consumption",
+               desc="Accounting decomposition of the change in primary energy consumption from {an0} to {an1}, as % of {an0} consumption, "
+                    "with GDP at purchasing power parity; territorial consumption (energy embodied in imported goods not counted). "
+                    "World: population effect {w_pop_pct}% (population: {w_var_pop}%), GDP-per-head effect {w_rev_pct}% (GDP per head: "
+                    "{w_var_rev}%), energy-intensity effect {w_int_pct}% (energy per unit of GDP: {w_var_int}%), total change {w_tot_pct}%. "
+                    "European Union (27 countries): population effect {u_pop_pct}% (population: {u_var_pop}%), GDP-per-head effect "
+                    "{u_rev_pct}% (GDP per head: {u_var_rev}%), energy-intensity effect {u_int_pct}% (energy per unit of GDP: {u_var_int}%), "
+                    "total change {u_tot_pct}%. These terms measure neither causes nor what would have been consumed without the fall in intensity.",
                panneaux=("World", "European Union (27 countries)"),
-               termes=("Population effect", "GDP-per-head effect", "Energy-intensity effect (energy per unit of GDP)", "Change in consumption"),
+               termes=("Population effect", "GDP-per-head effect", "Energy-intensity effect", "Change in consumption"),
+               facteurs=("population", "GDP per head", "energy per unit of GDP", ""),
                echelle="effects and change, as % of {an0} consumption",
                source="EIA, international data (energy, GDP at purchasing power parity in constant prices, population)",
-               note="Primary energy consumed on the territory (energy embodied in imports not counted); hydro and wind electricity "
-                    "counted at its electrical content, nuclear at the heat produced. Accounting decomposition (Divisia index), GDP at "
-                    "purchasing power parity: it does not say why intensity falls. Values rounded to one decimal: their sum may "
-                    "differ from the total by one tenth.",
-               montre="From {an0} to {an1}, world energy consumption rose by {de_pct}%: the decomposition attributes {poussee_ej} "
-                      "exajoules to population and GDP per head, and takes {int_ej} away for the fall in energy intensity. In the EU, "
-                      "it fell by {ue_de_pct}%."),
+               note="Territorial primary energy consumption (energy embodied in imported goods not counted); hydro and wind electricity "
+                    "counted at its electrical content, nuclear at the heat produced. The intensity effect combines efficiency, economic "
+                    "structure and the effect of these conventions. Accounting decomposition (Divisia index, GDP at purchasing power "
+                    "parity): its terms measure neither causes nor what would have been consumed without the fall in intensity. Effects "
+                    "rounded to one decimal place: their sum may differ from the total by 0.1 points.",
+               montre="According to EIA data, world primary energy consumption rose by {de_pct}% from {an0} to {an1}. The accounting "
+                      "decomposition (Divisia index) splits the change into contributions from population (+{pop_ej} EJ), GDP per head at purchasing "
+                      "power parity (+{rev_ej} EJ) and energy intensity (−{int_ej} EJ). These terms measure neither causes "
+                      "nor the consumption that would have been observed without the fall in intensity. In the EU-27, primary energy "
+                      "consumption on its territory, as measured by the EIA, fell by {ue_de_pct}%; this measure does not include the energy "
+                      "embodied in imported goods and depends on accounting conventions."),
 }
+
+
+def libelle(t, i, k, d, Aff, lang):
+    """Libellé d'une rangée : l'effet, puis la variation propre de son facteur entre parenthèses soudées (contrôles de
+    la lecture, G1, 12/11/2026 : un effet se lisait comme la variation de son facteur), qui passe à la ligne d'un bloc."""
+    if not t["facteurs"][i]:
+        return t["termes"][i]
+    par = "(%s%s%s%s)" % (t["facteurs"][i], " : " if lang == "fr" else ": ", Aff["%s_var_%s" % (d, k)], Aff["pct"])
+    return t["termes"][i] + " " + par.replace(" ", "\u00a0")
 
 
 def esc(s: str) -> str:
@@ -447,9 +482,10 @@ def fig(c, Aff, lang):
         for i, k in enumerate(TERMES + ("tot",)):
             yy = y0p + 28 * i
             v = c["W" if d == "w" else "U"][k + "_pct"]
-            for j, l in enumerate(pied_figure.coupe(t["termes"][i], 34)):
+            lignes = pied_figure.coupe(libelle(t, i, k, d, Aff, lang), 36)
+            for j, l in enumerate(lignes):
                 e.append('<text x="0" y="%d" font-size="11"%s fill="%s">%s</text>'
-                         % (yy + 14 + 12 * j - 6 * (len(pied_figure.coupe(t["termes"][i], 34)) - 1),
+                         % (yy + 14 + 12 * j - 6 * (len(lignes) - 1),
                             ' font-weight="600"' if k == "tot" else "", INK, esc(l)))
             xa, xb = sorted((X(0), X(v)))
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="16" fill="%s"/>' % (xa, yy + 2, max(xb - xa, 1.5), couleur(k)))
@@ -484,9 +520,10 @@ def fig_m(c, Aff, lang, svg_d):
         e.append('<text x="0" y="%d" font-size="15" font-weight="600" fill="%s">%s</text>' % (y, INK, esc(nom)))
         for i, k in enumerate(TERMES + ("tot",)):
             v = c["W" if d == "w" else "U"][k + "_pct"]
-            for l in pied_figure.coupe(t["termes"][i], 36):
+            for l in pied_figure.coupe(libelle(t, i, k, d, Aff, lang), 36):
                 y += 18
-                e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK, esc(l)))
+                e.append('<text x="0" y="%d" font-size="%s"%s fill="%s">%s</text>'
+                         % (y, FS_MIN, ' font-weight="600"' if k == "tot" else "", INK, esc(l)))
             y += 18
             xa, xb = sorted((X(0), X(v)))
             e.append('<rect x="%.1f" y="%d" width="%.1f" height="12" fill="%s"/>' % (xa, y - 10, max(xb - xa, 1.5), couleur(k)))
@@ -563,7 +600,7 @@ def main() -> int:
                         "source": "EIA, International Energy Data, fichier groupé INTL.zip (api.eia.gov/bulk)", "eia_mis_a_jour": maj,
                         "temoin": "Energy Institute, Statistical Review of World Energy, édition %d, offre totale d'énergie "
                                   "(contenu physique), jeu owid_energy d'Our World in Data ; Banque mondiale NY.GDP.MKTP.PP.KD, "
-                                  "NY.GDP.MKTP.KD (variante aux taux de marché) et SP.POP.TOTL ; Eurostat nrg_ind_eff (PEC_EED)"
+                                  "NY.GDP.MKTP.KD (variante aux taux de marché) et SP.POP.TOTL ; Eurostat nrg_bal_c (PEC_EED, ensemble des produits)"
                                   % c["edition_ei"],
                         "convention_mesuree": {"annee": c["an_conv"], "hydro_btu_par_kwh": round(c["btu_hydro"], 1),
                                                "eolien_et_hydro_min_max": [round(c["btu_hydro_min"], 1), round(c["btu_hydro_max"], 1)],

@@ -3,20 +3,20 @@
   {
    "id": "decomposition",
    "fichier": "decouplage-decomposition",
-   "titre": "Consommation d'énergie, 2000-2024 : ce qui l'a fait monter, ce qui l'a freinée",
-   "montre": "De 2000 à 2024, la consommation mondiale d'énergie a augmenté de 58 % : la décomposition attribue 407 exajoules à la population et au PIB par habitant, et en retire 172 à la baisse de l'intensité énergétique. Dans l'UE, elle a baissé de 18 %.",
+   "titre": "Consommation d'énergie, 2000-2024 : décomposition comptable de la variation",
+   "montre": "Selon les données de l'EIA, la consommation mondiale d'énergie primaire a augmenté de 58 % de 2000 à 2024. La décomposition comptable (indice de Divisia) répartit la variation en contributions de la population (+144 EJ), du PIB par habitant en parité de pouvoir d'achat (+263 EJ) et de l'intensité énergétique (−172 EJ). Ces termes ne mesurent ni des causes ni les consommations qui auraient été observées sans la baisse de l'intensité. Dans l'UE à 27, la consommation d'énergie primaire mesurée par l'EIA sur le territoire a baissé de 18 % ; cette mesure ne contient pas l'énergie incorporée dans les biens importés et dépend de conventions de comptage.",
    "source": "EIA, données internationales (énergie, PIB en parité de pouvoir d'achat à prix constants, population)",
-   "precaution": "Énergie primaire consommée sur le territoire (énergie contenue dans les importations non comptée) ; électricité hydraulique et éolienne comptée à son contenu électrique, nucléaire à la chaleur produite. Décomposition comptable (indice de Divisia), PIB en parité de pouvoir d'achat : elle ne dit pas pourquoi l'intensité baisse. Valeurs arrondies au dixième : leur somme peut différer d'un dixième du total."
+   "precaution": "Énergie primaire consommée sur le territoire (énergie incorporée dans les biens importés non comptée) ; électricité hydraulique et éolienne comptée à son contenu électrique, nucléaire à la chaleur produite. L'effet de l'intensité mêle efficacité, structure de l'économie et effet de ces conventions. Décomposition comptable (indice de Divisia, PIB en parité de pouvoir d'achat) : ses termes ne mesurent ni des causes ni ce qu'on aurait consommé sans la baisse de l'intensité. Effets arrondis au dixième : leur somme peut s'écarter du total de 0,1 point."
   }
  ],
  "en": [
   {
    "id": "decomposition",
    "fichier": "decouplage-decomposition-en",
-   "titre": "Energy consumption, 2000-2024: what pushed it up, what held it back",
-   "montre": "From 2000 to 2024, world energy consumption rose by 58%: the decomposition attributes 407 exajoules to population and GDP per head, and takes 172 away for the fall in energy intensity. In the EU, it fell by 18%.",
+   "titre": "Energy consumption, 2000-2024: accounting decomposition of the change",
+   "montre": "According to EIA data, world primary energy consumption rose by 58% from 2000 to 2024. The accounting decomposition (Divisia index) splits the change into contributions from population (+144 EJ), GDP per head at purchasing power parity (+263 EJ) and energy intensity (−172 EJ). These terms measure neither causes nor the consumption that would have been observed without the fall in intensity. In the EU-27, primary energy consumption on its territory, as measured by the EIA, fell by 18%; this measure does not include the energy embodied in imported goods and depends on accounting conventions.",
    "source": "EIA, international data (energy, GDP at purchasing power parity in constant prices, population)",
-   "precaution": "Primary energy consumed on the territory (energy embodied in imports not counted); hydro and wind electricity counted at its electrical content, nuclear at the heat produced. Accounting decomposition (Divisia index), GDP at purchasing power parity: it does not say why intensity falls. Values rounded to one decimal: their sum may differ from the total by one tenth."
+   "precaution": "Territorial primary energy consumption (energy embodied in imported goods not counted); hydro and wind electricity counted at its electrical content, nuclear at the heat produced. The intensity effect combines efficiency, economic structure and the effect of these conventions. Accounting decomposition (Divisia index, GDP at purchasing power parity): its terms measure neither causes nor what would have been consumed without the fall in intensity. Effects rounded to one decimal place: their sum may differ from the total by 0.1 points."
   }
  ]
 }
