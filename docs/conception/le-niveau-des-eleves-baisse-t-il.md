@@ -181,6 +181,13 @@ diagnostics, état initial, ce qui l'infirme ; relevés le 12/12/2026 et le 11/0
 État réel de chaque étape, de la plus récente à la plus ancienne : la session de publication du 12/11/2026, puis la
 passe du 11/11/2026 sur la branche A' du pilote.
 
+### Mise en page du 12/11/2026 (contre-expertise technique PRO-20261112-045621)
+
+- La figure collante sortait sous la barre d'onglets en fin de bloc : retirée. À côté de chaque figure, le résultat en
+  une phrase et un premier niveau d'explication ; la suite du raisonnement passe sous le bloc (baisse, seconde,
+  composition). Aucune lecture ne dépasse sa figure de plus de 150 px (mesure : `outils\captures.py` du chantier).
+- « Elle revient près de la baisse observée », occurrence manquée le matin, devient « elle n'en est pas réduite ».
+
 ### Mise à jour du 12/11/2026, sur l'avis du contradicteur externe
 
 - Trois corrections décidées par le contradicteur (`LOTS

@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 0864f3f + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /le-niveau-des-eleves-baisse-t-il/, build de 5804f95 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Le niveau des élèves baisse-t-il ?
 Selon PISA, oui : de 2015 à 2025, les jeunes Français de 15 ans ont perdu 43 points en compréhension de l’écrit et 35 en mathématiques, une baisse significative.
 Mais les évaluations passées en classe, en CM1 et en quatrième, ne mettent pas en évidence la même baisse récente.
@@ -108,7 +108,7 @@ Baisse du score moyen, observée, à la répartition entre classes de 2015 et à
 Le résultat en une phrase.
 En mathématiques, la baisse vaut 35 points telle qu’observée, 43 à la répartition entre classes de 2015, 36 à la composition de 2015 pour la classe, le sexe et la famille : trois réponses à trois questions différentes, dont aucune n’est « la vraie baisse ».
 Non : le changement de répartition entre classes ne suffit pas à expliquer la baisse.
-À la répartition entre classes de 2015, la baisse calculée est même plus forte, dans les trois domaines ; ajustée aussi du sexe et de la famille, elle revient près de la baisse observée.
+À la répartition entre classes de 2015, la baisse calculée est même plus forte, dans les trois domaines ; ajustée aussi du sexe et de la famille, elle n’en est pas réduite.
 PISA retient un âge, non une classe.
 Entre 2015 et 2025, en même temps que reculait le redoublement, la part des jeunes de 15 ans encore en troisième ou avant est passée de près d’un quart à moins d’un dixième de l’échantillon français (24,1 % puis 9,5 %), et celle de la seconde professionnelle et du CAP de 14 % à 23 %.
 Or les élèves encore au collège à 15 ans ont des scores bien plus bas.

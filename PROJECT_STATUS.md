@@ -52,6 +52,12 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-12 (suite 2) — Niveau : figure non collante, lecture recomposée (contre-expertise PRO-20261112-045621)
+
+- `position: sticky` retiré de `.figure-lecture` (la figure sortait sous la barre d'onglets en fin de bloc). Trois
+  colonnes de lecture coupées à une articulation du raisonnement, la suite sous le bloc : lecture au plus +127 px de sa
+  figure (avant : +689 en « seconde »). Une phrase : « revient près de la baisse observée » → « n'en est pas réduite ».
+
 ### 2026-11-12 (suite) — `/le-niveau-des-eleves-baisse-t-il/` : trois corrections décidées par le contradicteur externe
 
 - Retrait du décompte « dans 12 pays sur 28, PISA évolue plus favorablement que TIMSS » (points bruts de deux échelles),
