@@ -63,6 +63,16 @@
   .figure-lecture__texte > :first-child { margin-top: 0; }
   .figure-lecture__texte > :last-child { margin-bottom: 0; }
 }
+// Quand la lecture est plus longue que la figure (jusqu'à 690 px de plus, section « seconde » de la page Niveau), la
+// figure restait en haut et laissait un grand blanc sous elle : elle accompagne désormais la lecture, sous l'en-tête et
+// la barre du dossier, toutes deux collantes (169 px), et s'arrête au bas de son bloc. Hauteur d'écran exigée : la plus
+// haute figure (520 px) doit tenir sous elles ; en dessous, la figure reste à sa place. Aucun script, aucun changement de
+// texte (12/11/2026). Sans effet quand la figure est plus haute que sa lecture (page Parcoursup) : elle n'a pas de place
+// pour glisser. Limite : une figure de plus de 576 px dont la lecture serait plus longue aurait son bas caché tant qu'elle
+// colle ; aucune au 12/11/2026 (la plus haute qui glisse : 521 px).
+@media (min-width: 1280px) and (min-height: 760px) {
+  .figure-lecture > figure.figure-ciseau { position: sticky; top: 11.5rem; }
+}
 
 // Quand la version téléphone de la figure est servie (jusqu'à 899 px), elle dépasse un écran et se termine par ses
 // notes : « Le résultat en une phrase », écrit après elle dans la page, arrivait 400 px sous la dernière barre.
