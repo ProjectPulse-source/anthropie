@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-26",
+ "releve_le": "2026-11-12",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; source Andra (Licence ouverte)",
  "meta": {
   "page": "https://stephane-lalut.com/dechets-radioactifs-volume-ou-radioactivite/",
@@ -94,7 +94,9 @@
    2015,
    2016,
    2021
-  ]
+  ],
+  "volume_annee_activite": "parts.volume_annee_activite : parts du volume au millésime de l'activité, celles que trace la figure ; parts.volume : au dernier millésime du volume",
+  "activite_majorante": "activité déclarée avec le signe « < » (colonne MAJORATION du fichier de l'Andra : activité majorante) : un maximum, non une mesure exacte ; part dans parts.activite_majorante (en % de l'activité déclarée, au millésime de l'activité) et colonne activite_declaree_majorante_bq du CSV"
  },
  "parts": {
   "volume": {
@@ -158,6 +160,18 @@
   "stocke_andra": {
    "FMA-VC": 90.84065204997931,
    "TFA": 67.92812162116323
+  },
+  "volume_annee_activite": {
+   "HA": 0.24522861401414436,
+   "MA-VL": 2.24495050690347,
+   "FA-VL": 5.857971751005943,
+   "FMA-VC": 55.72561904295305,
+   "TFA": 35.9262300851234
+  },
+  "activite_majorante": {
+   "annee": 2021,
+   "HA": 89.67016809433977,
+   "cinq_categories": 88.39388428192305
   }
  },
  "affichage": {
@@ -186,6 +200,8 @@
   "tot5_a": "1,76",
   "rtcu": "0,89",
   "malvesi": "690 000",
+  "maj_ha": "89,7",
+  "maj_5": "88,4",
   "vol_ha": "0,25",
   "act_ha": "97,2",
   "vol_mavl": "2,2",
@@ -224,6 +240,8 @@
   "tot5_a": "1.76",
   "rtcu": "0.89",
   "malvesi": "690,000",
+  "maj_ha": "89.7",
+  "maj_5": "88.4",
   "vol_ha": "0.25",
   "act_ha": "97.2",
   "vol_mavl": "2.2",

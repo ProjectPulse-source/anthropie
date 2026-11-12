@@ -4,9 +4,9 @@
    "id": "volume-activite",
    "fichier": "dechets-volume-activite",
    "titre": "Déchets radioactifs : le volume ne dit pas où est la radioactivité",
-   "montre": "Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,2 % de la radioactivité déclarée ; leur stockage définitif est en projet.",
+   "montre": "Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,2 % de la radioactivité déclarée (pour l'essentiel un maximum) ; leur stockage définitif est en projet.",
    "source": "Andra, Inventaire national (données ouvertes, data.gouv.fr) ; filières : Andra, Les Essentiels 2026",
-   "precaution": "Volume en équivalent conditionné et radioactivité déclarée, cinq catégories des bilans de l'Andra, même année. La radioactivité ne mesure à elle seule ni le risque sanitaire ni le coût de gestion."
+   "precaution": "Volume en équivalent conditionné et radioactivité déclarée, tous deux à fin 2021, cinq catégories des bilans de l'Andra, qui laissent de côté notamment les résidus miniers d'uranium et les résidus historiques de conversion de l'uranium à Malvési ; 88,4 % de cette radioactivité est déclarée comme un maximum (signe « < » de l'inventaire), non comme une mesure exacte. Le graphe ne mesure pas le risque sanitaire et ne classe ni les risques ni les coûts."
   }
  ],
  "en": [
@@ -14,9 +14,9 @@
    "id": "volume-activite",
    "fichier": "dechets-volume-activite-en",
    "titre": "Radioactive waste: volume does not show where the radioactivity is",
-   "montre": "At end-2021, high-level waste made up 0.25% of the volume and 97.2% of the declared radioactivity; its final disposal is planned.",
+   "montre": "At end-2021, high-level waste made up 0.25% of the volume and 97.2% of the declared radioactivity (mostly an upper bound); its final disposal is planned.",
    "source": "Andra, National Inventory (open data, data.gouv.fr); disposal routes: Andra, Les Essentiels 2026",
-   "precaution": "Volume in conditioned equivalent and declared radioactivity, five categories of Andra's balances, same year. Radioactivity alone measures neither health risk nor management cost."
+   "precaution": "Volume in conditioned equivalent and declared radioactivity, both at end-2021, five categories of Andra's balances, which leave out, among others, uranium mining residues and the historical conversion residues at Malvési; 88.4% of this radioactivity is declared as an upper bound (“<” sign in the inventory), not as an exact measurement. The chart does not measure health risk and ranks neither risks nor costs."
   }
  ]
 }

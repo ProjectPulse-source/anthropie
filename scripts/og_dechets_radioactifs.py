@@ -19,6 +19,9 @@ import og_dossier_dette as og  # noqa: E402
 def barres(d, j: dict, lang: str = "fr") -> None:
     a = j["affichage_en" if lang == "en" else "affichage"]
     p = j["parts"]
+    # Même millésime pour les deux barres (fin de la dernière édition qui déclare l'activité), comme la page :
+    # « Volume et radioactivité sont comparés fin 2021 » (reprise du 12/11/2026 ; la carte comparait fin 2024 et fin 2021).
+    num = lambda s: float(s.replace(" ", "").replace(" ", "").replace(",", "."))  # noqa: E731
     x0, x1 = 660, 1000
     X = lambda v: x0 + (x1 - x0) * v / 100  # noqa: E731
     fl, fv = og.font("inter", 18, 500), og.font("inter", 20, 600)
@@ -28,9 +31,9 @@ def barres(d, j: dict, lang: str = "fr") -> None:
     for i, (cat, lib, k) in enumerate(groupes):
         y = 120 + 170 * i
         d.text((x0, y), lib, font=fl, fill=og.INK)
-        vol = p["volume"]["HA"] if cat else p["volume"]["FMA-VC"] + p["volume"]["TFA"]
+        vol = num(j["affichage"]["ha_vol_a"]) if cat else num(j["affichage"]["masse_vol_a"])
         act = p["activite"]["HA"] if cat else p["activite"]["FMA-VC"] + p["activite"]["TFA"]
-        tv = a["ha_vol"] if cat else a["masse_vol"]
+        tv = a["ha_vol_a"] if cat else a["masse_vol_a"]
         ta = a["ha_act"] if cat else a["masse_act"]
         for jdx, (v, t, col, nom) in enumerate(((vol, tv, og.SEC, "volume"), (act, ta, og.C2, "radioactivity" if lang == "en" else "radioactivité"))):
             yy = y + 34 + 46 * jdx
@@ -44,23 +47,24 @@ def main() -> int:
         og.fail("jeu absent : %s — lancer scripts/update_dechets_radioactifs.py d'abord" % f)
     j = json.loads(f.read_text(encoding="utf-8"))
     p = j["parts"]
-    if not (p["volume"]["HA"] < 0.5 and p["activite"]["HA"] > 95):
-        og.fail("carte : le contraste annonce n'est plus vrai (%s / %s)" % (p["volume"]["HA"], p["activite"]["HA"]))
+    vol_a = float(j["affichage"]["ha_vol_a"].replace(",", "."))
+    if not (vol_a < 0.5 and p["activite"]["HA"] > 95):
+        og.fail("carte : le contraste annonce n'est plus vrai (%s / %s)" % (vol_a, p["activite"]["HA"]))
     A, E = j["affichage"], j["affichage_en"]
     og.carte("og-dechets-radioactifs-en.jpg",
              ["Volume does not show", "where the radioactivity is"],
-             "High-level waste: %s%% of the volume, %s%% of the radioactivity, no final disposal yet." % (E["ha_vol"], E["ha_act"]),
+             "High-level waste: %s%% of the volume, %s%% of declared radioactivity, mostly an upper bound." % (E["ha_vol_a"], E["ha_act"]),
              "Andra, National Inventory (open data) · CC BY 4.0",
              "stephane-lalut.com/en/radioactive-waste-volume-or-radioactivity/",
              lambda d: barres(d, j, "en"),
-             [(og.SEC, "Share of volume (end-%s)" % E["an_vol"]), (og.C2, "Share of radioactivity (end-%s)" % E["an_act"])])
+             [(og.SEC, "Share of volume (end-%s)" % E["an_act"]), (og.C2, "Share of declared radioactivity (end-%s)" % E["an_act"])])
     og.carte("og-dechets-radioactifs.jpg",
              ["Le volume ne dit pas", "où est la radioactivité"],
-             "Haute activité : %s %% du volume, %s %% de la radioactivité, pas encore de stockage définitif." % (A["ha_vol"], A["ha_act"]),
+             "Haute activité : %s %% du volume, %s %% de la radioactivité déclarée, pour l'essentiel un maximum." % (A["ha_vol_a"], A["ha_act"]),
              "Andra, Inventaire national (données ouvertes) · CC BY 4.0",
              "stephane-lalut.com/dechets-radioactifs-volume-ou-radioactivite/",
              lambda d: barres(d, j),
-             [(og.SEC, "Part du volume (fin %s)" % A["an_vol"]), (og.C2, "Part de la radioactivité (fin %s)" % A["an_act"])])
+             [(og.SEC, "Part du volume (fin %s)" % A["an_act"]), (og.C2, "Part de la radioactivité déclarée (fin %s)" % A["an_act"])])
     return 0
 
 

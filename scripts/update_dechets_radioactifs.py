@@ -22,7 +22,7 @@ centres de l'Andra, publiés par l'Andra dans Les Essentiels 2026, retrouvés à
 Chaque qualificatif de la prose est une garde ; si la donnée la dément, arrêt, rien n'est écrit.
 
 Usage : python scripts/update_dechets_radioactifs.py [--check] [--force]
-        [--mutation=vol|act|editions|ajuste|ha_mavl|ha_mavl_ed|masse|masse_a|faible|stocke|hors|periode]
+        [--mutation=vol|act|editions|ajuste|ha_mavl|ha_mavl_ed|masse|masse_a|faible|stocke|hors|periode|majorant|hors_edition]
 Sorties : data/ et static/dechets_radioactifs.json, static/dechets_radioactifs.csv, data/figures_dechets.json,
           static/img/dechets-volume-activite{,-en}{,-m}.svg + .png
 """
@@ -135,12 +135,15 @@ def lire_annee(url: str):
     k = list(rows[0])
     cle = lambda motif: next(x for x in k if motif in x.upper())  # noqa: E731
     kc, kv, ka, ks, kf = cle("CATEG"), cle("VOLUME"), cle("ACTIV"), cle("NOM DU SITE"), cle("FAMILLE")
-    return rows, (kc, kv, ka, ks, kf), hashlib.sha256(raw).hexdigest()
+    # « < » dans la colonne MAJORATION : activité majorante (dictionnaire de l'inventaire), un maximum et non une mesure
+    km = next((x for x in k if "MAJOR" in x.upper()), None)
+    return rows, (kc, kv, ka, ks, kf, km), hashlib.sha256(raw).hexdigest()
 
 
 def agreger(rows, cles) -> dict:
-    kc, kv, ka, ks, kf = cles
-    a = {"vol": {}, "act": {}, "vol_declare": {}, "stocke": {}, "hb_famille": {}, "lignes": len(rows)}
+    kc, kv, ka, ks, kf, km = cles
+    a = {"vol": {}, "act": {}, "act_maj": {}, "vol_declare": {}, "stocke": {}, "hb_famille": {}, "lignes": len(rows),
+         "majoration_lue": km is not None}
     for r in rows:
         c = (r[kc] or "").strip()
         c = "HORS_BILAN" if c in HORS_BILAN else c
@@ -153,6 +156,8 @@ def agreger(rows, cles) -> dict:
         if act is not None:
             a["act"][c] = a["act"].get(c, 0.0) + act
             a["vol_declare"][c] = a["vol_declare"].get(c, 0.0) + v
+            if km and "<" in (r[km] or ""):
+                a["act_maj"][c] = a["act_maj"].get(c, 0.0) + act
         site = (r[ks] or "").upper()
         if c in STOCKABLES and "ANDRA" in site and "STOCKAGE" in site and any(re.search(r"\b%s\b" % x, site) for x in CENTRES):
             a["stocke"][c] = a["stocke"].get(c, 0.0) + v
@@ -197,11 +202,16 @@ def calcul(ans: dict) -> dict:
     # variante : volumes sans activité déclarée crédités de l'activité moyenne de leur catégorie (même année)
     aj = {c: (ans[ya]["act"][c] * ans[ya]["vol"][c] / ans[ya]["vol_declare"][c]) for c in ans[ya]["act"] if c in CATS and ans[ya]["vol_declare"].get(c)}
     taj = sum(aj.values())
+    if not ans[ya]["majoration_lue"]:
+        fail("%d : colonne MAJORATION absente, la part majorante de l'activite ne peut etre lue" % ya)
+    t5 = sum(ans[ya]["act"].get(c, 0.0) for c in CATS)
+    maj = {"HA": 100 * ans[ya]["act_maj"].get("HA", 0.0) / ans[ya]["act"]["HA"],
+           "cinq": 100 * sum(ans[ya]["act_maj"].get(c, 0.0) for c in CATS) / t5}
     hb = {y: a["vol"].get("HORS_BILAN", 0.0) for y, a in ans.items()}
     an_hb = min((y for y, v in hb.items() if v > 1e6), default=None)
     return {"yv": yv, "ya": ya, "editions": eds, "pv": pv, "pv_a": pv_a, "tot5_a": tot5(ya), "pa": pa(ya),
             "rtcu": ans[yv]["hb_famille"].get("RTCU", 0.0), "pa_ed": {y: pa(y) for y in eds},
-            "pa_aj": {c: 100 * aj.get(c, 0.0) / taj for c in CATS},
+            "pa_aj": {c: 100 * aj.get(c, 0.0) / taj for c in CATS}, "maj": maj,
             "vol": {c: ans[yv]["vol"][c] for c in CATS}, "tot5": tot5(yv), "tot5_0": tot5(min(ans)), "y0": min(ans),
             "stocke": {c: 100 * ans[yv]["stocke"].get(c, 0.0) / ans[yv]["vol"][c] for c in STOCKABLES},
             "hb": hb[yv], "an_hb": an_hb, "hb_avant": max((v for y, v in hb.items() if an_hb and y < an_hb), default=0.0),
@@ -234,6 +244,11 @@ def mutation(c: dict):
         c["hb"] = 4e5
     elif m == "periode":
         c["hb_avant"] = 9e5
+    elif m == "hors_edition":   # témoin : une année hors édition qui déclare de l'activité doit arrêter la phrase
+        y = min(y for y in c["ans"] if y not in c["editions"])
+        c["ans"][y]["vol_declare"]["FMA-VC"] = 0.5 * c["ans"][y]["vol"]["FMA-VC"]
+    elif m == "majorant":   # témoin : une activité HA surtout mesurée doit arrêter « pour l'essentiel un maximum »
+        c["maj"]["HA"] = 30.0
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -265,6 +280,14 @@ def gardes(c: dict) -> int:
     g(pa["FMA-VC"] + pa["TFA"] < 1, "« FMA-VC et TFA : moins de 1 %% de la radioactivité » : %.2f" % (pa["FMA-VC"] + pa["TFA"]))
     g(c["stocke"]["FMA-VC"] > 85 and c["stocke"]["TFA"] > 60,
       "« l'essentiel des FMA-VC et deux tiers des TFA sont déjà dans un centre de stockage » : %s" % {k: round(v, 1) for k, v in c["stocke"].items()})
+    g(c["maj"]["HA"] > 50 and c["maj"]["cinq"] > 50,
+      "« pour l'essentiel un maximum » (activite declaree avec « < », fin %d) : HA %.1f %%, cinq categories %.1f %%"
+      % (c["ya"], c["maj"]["HA"], c["maj"]["cinq"]))
+    hors_ed = {y: sum(a["vol_declare"].get(k, 0.0) for k in CATS) / sum(a["vol"].get(k, 0.0) for k in CATS)
+               for y, a in c["ans"].items() if y not in c["editions"]}
+    g(all(v < 0.001 for v in hors_ed.values()),
+      "« hors des editions, moins d'un millieme du volume avec radioactivite declaree » : %s"
+      % {y: "%.4f %%" % (100 * v) for y, v in hors_ed.items()})
     g(c["hb"] > 1e6, "« plus d'un million de m³ hors des bilans » : %.0f" % c["hb"])
     g(c["an_hb"] is not None and c["hb_avant"] < 2e5,
       "« ces volumes apparaissent dans le fichier ouvert à partir de fin %s » : avant, %.0f m³" % (c["an_hb"], c["hb_avant"]))
@@ -287,7 +310,7 @@ def affichage(c: dict, lang: str) -> dict:
          "ha_m3": f(c["vol"]["HA"], 0),
          "ha_vol_a": f(c["pv_a"]["HA"], 2), "masse_vol_a": f(c["pv_a"]["FMA-VC"] + c["pv_a"]["TFA"], 1),
          "tot5_a": f(c["tot5_a"] / 1e6, 2), "rtcu": f(c["rtcu"] / 1e6, 2),
-         "malvesi": f(round(MALVESI_ESSENTIELS_M3, -4), 0)}
+         "malvesi": f(round(MALVESI_ESSENTIELS_M3, -4), 0), "maj_ha": f(c["maj"]["HA"], 1), "maj_5": f(c["maj"]["cinq"], 1)}
     for cat in CATS:
         k = cat.lower().replace("-", "")
         # parts de volume de la FIGURE au millésime de l'activité (comparaison synchrone, P6)
@@ -302,26 +325,36 @@ def affichage(c: dict, lang: str) -> dict:
 TXT = {
     "fr": dict(titre="Déchets radioactifs : le volume ne dit pas où est la radioactivité",
                titre_m="Déchets radioactifs : le volume ne dit pas où est la radioactivité",
-               desc="Pour chaque catégorie, part du volume des déchets radioactifs et part de leur radioactivité déclarée, fin {an_act} "
-                    "(dernière édition qui déclare l'activité), et filière de stockage. HA : {vol_ha} % du volume, {act_ha} % de la radioactivité. MA-VL : {vol_mavl} %, "
+               desc="Pour chacune des cinq catégories des bilans de l'Andra, part du volume des déchets radioactifs et part de la "
+                    "radioactivité déclarée, fin {an_act} (dernière édition qui déclare l'activité), et filière de stockage ; {maj_5} % "
+                    "de cette radioactivité est déclarée comme un maximum. HA : {vol_ha} % du volume, {act_ha} % de la radioactivité. MA-VL : {vol_mavl} %, "
                     "{act_mavl} %. FA-VL : {vol_favl} %, {act_favl} %. FMA-VC : {vol_fmavc} %, {act_fmavc} %. TFA : {vol_tfa} %, {act_tfa} %.",
-               volume="Part du volume (fin {an_act})", activite="Part de la radioactivité (fin {an_act})", filiere="Stockage",
+               volume="Part du volume (fin {an_act})", activite="Part de la radioactivité déclarée (fin {an_act})",
+               filiere="Filière de stockage", sous_titre_m="Part du volume et de la radioactivité déclarée, fin {an_act}",
                source="Andra, Inventaire national (données ouvertes, data.gouv.fr) ; filières : Andra, Les Essentiels 2026",
-               note="Volume en équivalent conditionné et radioactivité déclarée, cinq catégories des bilans de l'Andra, même année. "
-                    "La radioactivité ne mesure à elle seule ni le risque sanitaire ni le coût de gestion.",
+               note="Volume en équivalent conditionné et radioactivité déclarée, tous deux à fin {an_act}, cinq catégories des "
+                    "bilans de l'Andra, qui laissent de côté notamment les résidus miniers d'uranium et les résidus historiques "
+                    "de conversion de l'uranium à Malvési ; {maj_5} % de cette "
+                    "radioactivité est déclarée comme un maximum (signe « < » de l'inventaire), non comme une mesure exacte. "
+                    "Le graphe ne mesure pas le risque sanitaire et ne classe ni les risques ni les coûts.",
                montre="Fin {an_act}, les déchets de haute activité faisaient {ha_vol_a} % du volume et {ha_act} % de la radioactivité "
-                      "déclarée ; leur stockage définitif est en projet."),
+                      "déclarée (pour l'essentiel un maximum) ; leur stockage définitif est en projet."),
     "en": dict(titre="Radioactive waste: volume does not show where the radioactivity is",
                titre_m="Radioactive waste: volume does not show where the radioactivity is",
-               desc="For each category, share of the volume of radioactive waste and share of its declared radioactivity, end-{an_act} "
-                    "(latest edition declaring activity), and disposal route. HA: {vol_ha}% of volume, {act_ha}% of radioactivity. MA-VL: {vol_mavl}%, {act_mavl}%. "
+               desc="For each of the five categories of Andra's balances, share of the volume of radioactive waste and share of "
+                    "declared radioactivity, end-{an_act} (latest edition declaring activity), and disposal route; {maj_5}% of this "
+                    "radioactivity is declared as an upper bound. HA: {vol_ha}% of volume, {act_ha}% of radioactivity. MA-VL: {vol_mavl}%, {act_mavl}%. "
                     "FA-VL: {vol_favl}%, {act_favl}%. FMA-VC: {vol_fmavc}%, {act_fmavc}%. TFA: {vol_tfa}%, {act_tfa}%.",
-               volume="Share of volume (end-{an_act})", activite="Share of radioactivity (end-{an_act})", filiere="Disposal",
+               volume="Share of volume (end-{an_act})", activite="Share of declared radioactivity (end-{an_act})",
+               filiere="Disposal route", sous_titre_m="Share of volume and of declared radioactivity, end-{an_act}",
                source="Andra, National Inventory (open data, data.gouv.fr); disposal routes: Andra, Les Essentiels 2026",
-               note="Volume in conditioned equivalent and declared radioactivity, five categories of Andra's balances, same year. "
-                    "Radioactivity alone measures neither health risk nor management cost.",
-               montre="At end-{an_act}, high-level waste made up {ha_vol_a}% of the volume and {ha_act}% of the declared radioactivity; "
-                      "its final disposal is planned."),
+               note="Volume in conditioned equivalent and declared radioactivity, both at end-{an_act}, five categories of "
+                    "Andra's balances, which leave out, among others, uranium mining residues and the historical conversion residues "
+                    "at Malvési; {maj_5}% of this radioactivity is declared as an upper bound (“<” sign in the inventory), "
+                    "not as an exact measurement. "
+                    "The chart does not measure health risk and ranks neither risks nor costs.",
+               montre="At end-{an_act}, high-level waste made up {ha_vol_a}% of the volume and {ha_act}% of the declared radioactivity "
+                      "(mostly an upper bound); its final disposal is planned."),
 }
 
 
@@ -354,6 +387,7 @@ def fig(c, Aff, lang):
         for j, l in enumerate(pied_figure.coupe(NOMS[lang][cat], 30)):
             e.append('<text x="0" y="%d" font-size="11" fill="%s">%s</text>' % (y + 12 + 13 * j, INK, esc(l)))
         for x0, v, col, cle in ((xv0, c["pv_a"][cat], GRIS, "vol_" + k), (xa0, c["pa"][cat], ORANGE, "act_" + k)):
+            # plancher de 1,5 px : une part de moins d'un point environ reste visible ; sa valeur est écrite à côté
             wv = max(larg * v / 100, 1.5)
             e.append('<rect x="%d" y="%d" width="%.1f" height="16" fill="%s"/>' % (x0, y + 2, wv, col))
             poids = ' font-weight="600"' if cat == "HA" else ""
@@ -379,6 +413,10 @@ def fig_m(c, Aff, lang, svg_d):
     t = t_(lang, Aff)
     pct = Aff["pct"]
     e, y = pied_figure.tete_mobile("drm", t["titre_m"], desc_de(svg_d), INK, FONT)
+    st = pied_figure.coupe(t["sous_titre_m"], 38)   # périmètre de la mesure et année (contrôle de lecture, G2 et C1)
+    for k, l in enumerate(st):
+        e.append('<text x="0" y="%d" font-size="%g" fill="%s">%s</text>' % (y + 18 * k, FS_MIN, INK2, esc(l)))
+    y += 18 * len(st)
     y += 10
     lab = {"fr": ("volume", "radioactivité"), "en": ("volume", "radioactivity")}[lang]
     for cat in CATS:
@@ -389,6 +427,7 @@ def fig_m(c, Aff, lang, svg_d):
         y += 19 * (len(pied_figure.coupe(NOMS[lang][cat], 32)) - 1)
         for lib, v, col, cle in ((lab[0], c["pv_a"][cat], GRIS, "vol_" + k), (lab[1], c["pa"][cat], ORANGE, "act_" + k)):
             y += 20
+            # plancher de 1,5 px, comme la version bureau : la valeur est écrite à côté de la barre
             e.append('<rect x="0" y="%d" width="%.1f" height="12" fill="%s"/>' % (y - 10, max(150 * v / 100, 1.5), col))
             e.append('<text x="%.1f" y="%d" font-size="%s" font-weight="600" fill="%s">%s%s %s</text>'
                      % (max(150 * v / 100, 1.5) + 6, y, FS_MIN, ORANGE_TEXTE if col == ORANGE else INK, esc(Aff[cle]), pct, lib))
@@ -415,12 +454,13 @@ def csv_texte(c) -> str:
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
     w.writerow(["annee_fin", "categorie", "volume_m3_equivalent_conditionne", "activite_declaree_bq", "volume_avec_activite_declaree_m3",
-                "volume_dans_un_centre_de_stockage_andra_m3"])
+                "volume_dans_un_centre_de_stockage_andra_m3", "activite_declaree_majorante_bq"])
     for y, a in sorted(c["ans"].items()):
         for cat in CATS + ("VTC", "DSF", "HORS_BILAN"):
             if cat in a["vol"]:
                 w.writerow([y, cat, "%.1f" % a["vol"][cat], "%.4e" % a["act"][cat] if cat in a["act"] else "",
-                            "%.1f" % a["vol_declare"].get(cat, 0.0), "%.1f" % a["stocke"][cat] if cat in a["stocke"] else ""])
+                            "%.1f" % a["vol_declare"].get(cat, 0.0), "%.1f" % a["stocke"][cat] if cat in a["stocke"] else "",
+                            "%.4e" % a["act_maj"][cat] if cat in a["act_maj"] else ""])
     return buf.getvalue()
 
 
@@ -469,9 +509,17 @@ def main() -> int:
                         "unite_volume": "m³ en équivalent conditionné", "unite_activite": "Bq déclarés",
                         "categories_bilan": list(CATS), "hors_bilan": "catégories AUTRES / SANS CATEGORIE du fichier (gestion particulière)",
                         "filieres_transcrites": FILIERES["fr"], "filieres_source": "Andra, Les Essentiels 2026, p. 11 ; inventaire.andra.fr (classification et filières), lus le 26/10/2026",
-                        "annee_volume": c["yv"], "annee_activite": c["ya"], "editions_activite": c["editions"]},
+                        "annee_volume": c["yv"], "annee_activite": c["ya"], "editions_activite": c["editions"],
+                        "volume_annee_activite": "parts.volume_annee_activite : parts du volume au millésime de l'activité, "
+                                                 "celles que trace la figure ; parts.volume : au dernier millésime du volume",
+                        "activite_majorante": "activité déclarée avec le signe « < » (colonne MAJORATION du fichier de l'Andra : "
+                                              "activité majorante) : un maximum, non une mesure exacte ; part dans parts.activite_majorante "
+                                              "(en % de l'activité déclarée, au millésime de l'activité) et colonne "
+                                              "activite_declaree_majorante_bq du CSV"},
                "parts": {"volume": c["pv"], "activite": c["pa"], "activite_ajustee": c["pa_aj"],
-                         "activite_par_edition": {str(y): v for y, v in c["pa_ed"].items()}, "stocke_andra": c["stocke"]},
+                         "activite_par_edition": {str(y): v for y, v in c["pa_ed"].items()}, "stocke_andra": c["stocke"],
+                         "volume_annee_activite": c["pv_a"],
+                         "activite_majorante": {"annee": c["ya"], "HA": c["maj"]["HA"], "cinq_categories": c["maj"]["cinq"]}},
                "affichage": Aff["fr"], "affichage_en": Aff["en"]}
     releve = None
     if OUT_DATA.exists():

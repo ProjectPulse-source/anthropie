@@ -35,7 +35,7 @@ Le problème des déchets nucléaires se mesure à leur volume ; plus il y en a,
 ### Découverte principale
 
 À fin 2021, les déchets de haute activité font quelques millièmes du volume et plus de 95 % de la radioactivité
-déclarée ; avec la moyenne activité à vie longue, plus de 99 %. Elles font partie des trois catégories à vie longue qui
+déclarée ; avec la moyenne activité à vie longue, plus de 99 % (périmètre : les cinq catégories des bilans de l'inventaire ; résidus miniers, déchets à radioactivité naturelle élevée et résidus historiques de conversion de Malvési en sont hors (une partie des volumes récents de Malvési est, elle, classée TFA et FA-VL : second contrôle de la figure, 12/11/2026) : R1-2, R1-6, R1-7 ; l'activité déclarée de la haute activité est un majorant : R1). Elles font partie des trois catégories à vie longue qui
 n'ont pas encore de stockage définitif (avec FA-VL). Le volume, lui, est porté à plus de neuf dixièmes par des
 catégories qui ont un stockage en service.
 
@@ -44,7 +44,7 @@ catégories qui ont un stockage en service.
 La classification de l'Andra croise niveau d'activité et durée de vie ; le volume se concentre dans les catégories
 faiblement actives (démantèlement, exploitation courante), l'activité dans les résidus du retraitement des combustibles.
 Les filières ont été créées d'abord pour les déchets les plus volumineux et les moins actifs (CSA en 1992, Cires en
-2003) ; le stockage profond des plus actifs est en projet.
+2003) ; le stockage profond des plus actifs est en projet : ils sont entreposés, non stockés (C. env., art. L. 542-1-1 : R2-2). Relecture des sources du 12/11/2026 : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\SOURCES\dechets-radioactifs-volume-ou-radioactivite_SYNTHESE.md`.
 
 ### Preuve décisive
 
@@ -170,3 +170,46 @@ même lectrice : « j'ai compris que "radioactif" et "dangereux", ce n'est pas t
 Cigéo, à Bure, qui n'est pas encore autorisé » ; persiste dans sa phrase à une amie : « on ne sait toujours pas où les
 mettre » et « les plus dangereux, enfin les plus radioactifs » (auto-corrigé). Le chapô et le résultat ont été réécrits
 après la contre-épreuve ; non retestés.
+
+### Reprise du lot « guides » (12/11/2026)
+
+Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RESSOURCE.md` ; dossier `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\` (rapport
+`RAPPORTS\dechets-radioactifs-volume-ou-radioactivite.md`, état `LOT.md`).
+
+- Relecture des sources : faite le 12/11/2026, deux relecteurs indépendants et les sondes de la session
+  (`SOURCES\dechets-radioactifs-volume-ou-radioactivite_R1.md`, `_R2.md`, `_SYNTHESE.md`, `SONDES_SESSION.md`) ; écarts de
+  la version en ligne corrigés : 97,2 % présentés sans dire que la radioactivité déclarée est, pour l'essentiel, un
+  maximum ; centre de la Manche dit « en surveillance » alors qu'il est en phase de fermeture ; localisation des déchets
+  de haute activité et de moyenne activité à vie longue généralisée aux sites de production ; résidus de conversion
+  rapprochés de Malvési ; éditions lues comme une série ; entreposage et stockage ; requalification des matières.
+- Interventions : `specs\dechets-radioactifs-volume-ou-radioactivite.py`, 117 remplacements (FR et EN), dont une
+  explication (DR-9, Malvési) tranchée en faveur de la version proposée par le contradicteur externe ; témoin : la
+  spécification appliquée à la page d'origine redonne cette page, en-tête de publication et organe de forme
+  (`figure-lecture`) à part. Reste en ligne, à arbitrer, « Ce constat reflète des contraintes de gestion… » (le retirer
+  retirerait une explication).
+- Juge interne à l'aveugle : deux tours sur le lot ; contradicteur externe `PRO-20261112-140721` (réponse archivée avant
+  lecture, SHA-256 `A71FAC4D…`) : version proposée retenue sur 16 passages sur 17, le passage 5 réécrit sur sa proposition
+  (deux classements, aucun ne mesure à lui seul doses, durée de danger ou coût) ; décisions 10 à 13 appliquées : note de
+  la figure (année et part majorante lues dans le jeu), « pour l'essentiel un maximum » documenté (fichier, méthode,
+  garde), Cigéo vérifié sur Légifrance et sur la page de la préfecture, tonnes et mètres cubes non additionnés ; carte de partage et son texte
+  alternatif portent la réserve (décision 26) ; arbitrage `ARBITRATIONS\PRO-20261112-140721_arbitrage.md`.
+- Générateur (`scripts/update_dechets_radioactifs.py`) : lit la colonne MAJORATION (signe « < » : activité majorante) ;
+  part majorante de l'activité déclarée fin 2021, 89,7 % pour la haute activité et 88,4 % pour les cinq catégories,
+  égale à la mesure indépendante de la relecture R1 ; deux gardes nouvelles, vues mordre (`--mutation=majorant` :
+  « pour l'essentiel un maximum » ; `--mutation=hors_edition` : hors des éditions, moins d'un millième du volume avec
+  activité déclarée, mesuré à 0,006-0,013 %) ; JSON (`meta.activite_majorante`, `parts.activite_majorante`) et CSV (colonne
+  `activite_declaree_majorante_bq`, anciennes colonnes inchangées) ; fichiers sources de l'Andra inchangés (empreintes),
+  relevé porté au 12/11/2026. Mesure de la session : « n'est déclarée qu'aux éditions » était inexact à la lettre (120 à
+  241 m³ déclarés certaines années hors édition) : la page dit « pour l'essentiel du volume ».
+- Cigéo : au 12/11/2026, Légifrance (Journal officiel, « Cigéo », trié par date) ne montre aucun décret d'autorisation de
+  création, et la préfecture de la Meuse aucune étape après le 14 septembre (`SONDES_SESSION.md`).
+- Figure régénérée par le générateur : note (année, périmètre et ce qu'il laisse de côté, résidus miniers et résidus historiques de conversion de Malvési ; part majorante ; « non comme une mesure exacte » ; « ne mesure pas le risque sanitaire et ne classe ni les risques ni les coûts »), en-têtes « radioactivité déclarée » et « Filière de stockage », sous-titre téléphone, description pour lecteur d'écran ; plancher de tracé de 1,5 px commenté (chaque barre porte sa valeur). Protocole des figures : `check-figures` 0 défaut ; contrôleur de géométrie et de données (chaque nombre recalculé dans le fichier de l'Andra, témoin positif vu) et contrôleur de lecture, puis deux passages sur l'état corrigé, le premier trouvant un défaut nouveau (Malvési : une partie récente de ses volumes est classée TFA et FA-VL), le second un seul défaut cosmétique, corrigé ; carte de partage régénérée avec la réserve (`scripts/og_dechets_radioactifs.py`, décision 26).
+- Relecture de langue phrase à phrase du texte servi, FR (138 phrases : 4 fautes, 13 maladresses) et EN (134 : 7 erreurs, 22 maladresses) : corrigées, sauf la ponctuation de la citation et deux libellés du gabarit commun (commit séparé) ; préférences retenues quand elles éclairent ; le titre anglais (« does volume tell the problem? », calque) est laissé à l'auteur, la méthode gardant les titres. Points de fond tranchés au passage : la FAQ date Cigéo du 12 novembre 2026, comme le corps ; « se vérifie à chaque étape », qui ne décrivait aucun contrôle (relecture R2), dit ce qui a été lu et vérifié ; les centres de l'Aube et de la Manche, non les départements. Relecture de contrôle des phrases changées (`JUGE\RELECTURE_LANGUE_DECHETS_CONTROLE.md`) : aucune faute ; une inexactitude introduite en anglais (« the latest year for which the inventory declares radioactivity » : fin 2022 en déclare pour 241 m³), corrigée ; reports de parité entre les deux langues.
+- Contrôles : `check-all --ci` 0 ; build et `typo_build` 0 défaut ; rendu 0 ; liens 0 critique ; dates 83/83, 0 bloc sans
+  période ; couverture : 15 signaux, aucun nouveau ; lettre : chaque écart rattaché à son intervention, sauf la date de mise
+  à jour (en-tête).
+- Envois : la page est citée par un courriel de la campagne ANTHROPY-EN (LOT3, parti le 12/11), qui reste exact face à
+  la page corrigée ; publication décidée par l'auteur le 12/11/2026.
+- Instantané de relecture : fait le 12/11/2026 (139 phrases FR, 134 EN) ; `refonte` porté au 12/11/2026 ; journal créé, entrée du 12/11/2026 ; relevé du jeu porté au 12/11/2026, fichiers sources de l'Andra inchangés.
+- Mise en ligne : poussée sur mandat de l'auteur, le 12/11/2026 ; attestation de la version servie : ci-dessous.
+- Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
