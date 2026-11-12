@@ -244,5 +244,10 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
 - Envois : la page est citée par un courriel de la campagne ANTHROPY-EN (LOT3, parti le 12/11) ; aucun envoi non parti ne
   la cite.
 - Instantané de relecture : fait le 12/11/2026 (195 phrases FR, 193 EN) ; `refonte` porté au 12/11/2026 ; journal : entrée du 12/11/2026.
-- Mise en ligne : poussée le 12/11/2026 sur le mandat de l'auteur ; attestation de la version servie consignée ensuite.
+- Mise en ligne : poussée sur le mandat de l'auteur, le 12/11/2026 (commit 42a4540) ; déploiement `hugo.yml`
+  n° 43289023871 réussi (build, relecture, deploy, contrôle de fumée de la production).
+- Attestation de la version servie : faite le 12/11/2026 vers 20 h 22 (heure de Paris). HTML servi identique au build
+  contrôlé (arbre propre extrait de l'index), aux empreintes de cache des feuilles et scripts près, en FR et en EN ; les
+  quatre SVG de la figure, le PNG du bureau, les deux cartes de partage et leurs vignettes, le JSON et le CSV servis
+  identiques, octet pour octet, au commit.
 - Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
