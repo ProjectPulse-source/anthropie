@@ -256,5 +256,9 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   période ; couverture « ok » ; lettre : chaque écart rattaché à son intervention, sauf la date de mise à jour (en-tête).
 - Instantané de relecture : fait le 12/11/2026 (409 phrases) ; `refonte` porté au 12/11/2026 ; journal : entrée du
   12/11/2026 ; `data/dates_affichage.json` : 05/11/2026 versé à l'historique.
-- Mise en ligne : poussée sur mandat de l'auteur, le 12/11/2026 ; attestation de la version servie : ci-dessous.
+- Mise en ligne : poussée sur mandat de l'auteur, le 12/11/2026 (commits 06560eb et 64d7d79) ; déploiement
+  `hugo.yml` n° 43220050990 réussi (build, relecture, deploy).
+- Attestation de la version servie : faite le 12/11/2026 vers 13 h 45 (heure de Paris). HTML servi identique au build
+  contrôlé, aux neuf empreintes de cache des scripts près (fins de ligne du poste) ; les deux SVG de la frise servis
+  identiques, octet pour octet, au commit ; « Page mise à jour le 12 novembre 2026 ».
 - Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
