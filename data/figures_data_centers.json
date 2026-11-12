@@ -4,7 +4,7 @@
    "id": "reserve-consomme",
    "fichier": "data-centers-reserve-consomme",
    "titre": "Data centers : puissance réservée sur le réseau et électricité consommée",
-   "montre": "En novembre 2025, les data centers avaient réservé 14 GW auprès de RTE, dont 7,6 GW pour une mise en service à partir de 2030 ; ceux raccordés au réseau de RTE consommaient près de 1 TWh en 2025.",
+   "montre": "En novembre 2025, les data centers avaient réservé 14 GW auprès de RTE, dont 7,6 GW pour une mise en service à partir de 2030 ; ceux raccordés au réseau de RTE ont consommé près de 1 TWh en 2025.",
    "source": "RTE : Bilan prévisionnel 2025-2035 (déc. 2025), Bilan électrique 2025 (févr. 2026), page « Les data centers en chiffres clés » (1ᵉʳ juin 2026) ; répartition de novembre 2025 mesurée sur la figure 2.3 du Bilan prévisionnel (somme : 13,9 GW).",
    "precaution": "Une puissance réservée n'est ni une puissance appelée ni une consommation : les deux panneaux ne se comparent pas, aucun rapport n'est calculé entre eux. Trajectoires : hypothèses de RTE, non des mesures."
   }

@@ -447,7 +447,7 @@ TXT = {
                note="Une puissance réservée n'est ni une puissance appelée ni une consommation : les deux panneaux ne se comparent pas, "
                     "aucun rapport n'est calculé entre eux. Trajectoires : hypothèses de RTE, non des mesures.",
                montre="En novembre 2025, les data centers avaient réservé {res_nov2025} GW auprès de RTE, dont {st_2030} GW pour une mise en "
-                      "service à partir de 2030 ; ceux raccordés au réseau de RTE consommaient près de {rpt_2025} TWh en 2025."),
+                      "service à partir de 2030 ; ceux raccordés au réseau de RTE ont consommé près de {rpt_2025} TWh en 2025."),
     "en": dict(titre="Data centres: capacity reserved on the grid and electricity consumed",
                titre_m="Data centres: reserved capacity and electricity consumed",
                pa="Grid connection capacity reserved with RTE, in gigawatts (GW)",

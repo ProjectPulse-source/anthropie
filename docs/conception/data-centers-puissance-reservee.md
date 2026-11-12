@@ -43,16 +43,14 @@ réacteurs qui tourneront pour eux.
 En dix-huit mois, la puissance réservée par les data centers auprès de RTE a plus que triplé (environ 5 GW fin 2024,
 14 GW en novembre 2025, près de 18 GW en mai 2026). La consommation mesurée des centres raccordés au réseau de transport,
 elle, est passée de 0,8 TWh en 2024 à près de 1 TWh en 2025. Sur les 14 GW de novembre 2025, plus de la moitié vise une
-mise en service à partir de 2030, et près d'un gigawatt de réservations a été abandonné depuis 2023. RTE lui-même ne
-convertit pas les réservations en consommation : ses deux trajectoires donnent 10 à 15 TWh en 2030.
+mise en service à partir de 2030, et près d'un gigawatt de réservations a été abandonné depuis 2023. RTE ne déduit pas sa projection des réservations : ses deux trajectoires donnent 10 à 15 TWh en 2030, valeurs lues sur une figure (R2-E7) ; sa page web illustre pourtant une puissance demandée par la consommation d'une ville (R1-3).
 
 ### Mécanisme explicatif
 
 Une réservation (proposition technique et financière signée) garantit une capacité d'accès au réseau ; elle ne
-dit ni si le site sera construit, ni quand, ni à quelle puissance il tournera. Selon RTE : doublons (un même projet sur
-plusieurs points du réseau), concurrence de développeurs pour un même client, montée en charge d'une dizaine d'années,
+dit ni si le site sera construit, ni quand, ni à quelle puissance il tournera. Selon RTE : doublons (un même projet sur plusieurs points du réseau, que RTE observe « parfois » sur l'ensemble des demandes, pas seulement celles des data centers : R1-4), concurrence de développeurs pour un même client, montée en charge d'une dizaine d'années,
 puissance appelée inférieure à la puissance de raccordement (marges de sécurité) ; la règle « premier arrivé, premier
-servi » rend la réservation peu engageante.
+servi » rend la réservation peu engageante « pour les porteurs de projet » (R1-7) ; elle n'est pas sans effet pour la collectivité (raccordements retardés, saturation contractuelle : R1, conclusion 3). Relecture des sources du 12/11/2026 : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\SOURCES\data-centers-puissance-reservee_SYNTHESE.md`.
 
 ### Preuve décisive
 
@@ -186,3 +184,53 @@ sur la réforme du raccordement). Diagnostics : vues, citations. État initial :
   (le Bilan prévisionnel, p. 11, étudie aussi une trajectoire de stagnation, en test de sensibilité : « les deux
   trajectoires » était inexact). Écartés : légende de l'orange foncé (libellés « mesurée ») ; largeur minimale du segment
   « suspendu » au téléphone (elle fausserait la valeur ; la légende le désigne).
+
+### Reprise du lot « guides » (12/11/2026)
+
+Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RESSOURCE.md` ; dossier `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\` (rapport
+`RAPPORTS\data-centers-puissance-reservee.md`, état `LOT.md`).
+
+- Relecture des sources : faite le 12/11/2026, deux relecteurs indépendants et les sondes de la session
+  (`SOURCES\data-centers-puissance-reservee_R1.md`, `_R2.md`, `_SYNTHESE.md`, `SONDES_SESSION.md`) ; écarts de la version
+  en ligne corrigés : 18 GW rapportés au réseau de transport de RTE (non à tout le réseau français) ; recensement du SDES
+  présenté comme un recoupement (il tire en priorité ses données de consommation des bases d'Enedis et de RTE), non comme
+  un contrôle indépendant ; réservations multiples observées par RTE sur l'ensemble des demandes ; deux emplois de 20 %
+  distingués (observation, hypothèse) ; condition et effets d'une suspension, selon RTE.
+- Interventions : `specs\data-centers-puissance-reservee.py`, 121 remplacements (FR et EN), dont trois explications (DC-3,
+  DC-4, DC-16, FR et EN), tranchées en faveur de la version proposée par le contradicteur externe ; témoin : la spécification
+  appliquée à la page d'origine (`c2b25c2`) redonne cette page, en-tête de publication et organe de forme (`figure-lecture`)
+  à part.
+- Juge interne à l'aveugle : deux tours sur le lot, version proposée préférée, sans P0 ; contradicteur externe
+  `PRO-20261112-140721` (réponse archivée avant lecture, SHA-256 `A71FAC4D…`) : version proposée retenue aux 22 passages ; P0
+  de la page en ligne (18 GW lus sur tout le réseau ; SDES « contrôle indépendant ») corrigés par elle ; repris sur sa
+  décision : attribution à RTE rendue visible (« selon RTE »), réserve « répartition et abandons mesurés sur une figure »
+  (les 0,9 GW abandonnés sont mesurés sur la figure 2.3 : relecture R1, l. 44), lecture de RTE rattachée à ses textes et
+  proportion inconnue, réservation garantie « dans les conditions de son contrat et des règles de raccordement » ;
+  arbitrage `ARBITRATIONS\PRO-20261112-140721_arbitrage.md`.
+- Premier écran : deux lecteurs (élu local, grand public) sur le chapô proposé, témoin trompeur pris
+  (`P\premier_ecran.md`).
+- Relecture de langue phrase à phrase du texte servi, FR (135 phrases : 2 fautes, 24 maladresses) et EN (132 : 2 erreurs,
+  34 maladresses) : corrigées, préférences retenues quand elles éclairent (44 corrections FR, 56 EN, pastille et contrôle compris). Points de fond
+  tranchés au passage : les 800 MW attribués à la page de RTE du 1er juin 2026, qui ne les date pas (relecture des
+  sources, R1-8), et cumulés, ce qui les distingue des 0,4 GW raccordés depuis 2023 ; les 0,9 GW abandonnés bornés au
+  1er novembre 2025 ; « recoupement » pour le rôle du SDES partout ; la réserve du résumé couvre
+  la répartition et les abandons ; on « utilise » une puissance, on consomme une énergie. Écartés avec motif : « 1er »
+  (convention du site non unifiée : décision transversale), titres en italique dans le corps (préférence), texte de
+  l'offre de livre (gabarit, formule de l'auteur), texte inscrit dans l'image (juxtaposition admise), libellés de la
+  colonne « nature » du CSV ; ponctuation de la citation quand le titre finit par « ? » : gabarit commun, traitée à part.
+  Relecture de contrôle des phrases changées (`JUGE\RELECTURE_LANGUE_DATA_CENTERS_CONTROLE.md`) : aucune faute ; un changement de sens (les 800 MW datés de juin 2026, ce que la relecture des sources interdisait) et quatre maladresses, corrigés.
+- Fiche de figure (« ce que montre la figure ») : « consommaient » devient « ont consommé », dans le générateur et dans
+  `data/figures_data_centers.json` ; figure inchangée. Pastille : « Données mises à jour le », libellé des pages modèles
+  (date du relevé ; au premier écran, « Données du » se lisait comme la date des données). Reste dans la figure et son
+  texte alternatif l'étiquette « déjà raccordés au réseau de RTE en juin 2026 » (R1-8, renvoyé) : elle se corrige au
+  prochain passage du générateur, qui relit les publications de RTE en ligne, avec la mise à jour des données (R2-E1).
+- Contrôles : `check-all --ci` 0 ; build et `typo_build` 0 défaut ; rendu 0 ; liens 0 critique ; dates 83/83, 0 bloc sans
+  période ; couverture : 15 signaux, aucun nouveau ; lettre : chaque écart rattaché à son intervention, sauf la date de mise
+  à jour (en-tête).
+- Envois : la page est citée par deux courriels de la campagne ANTHROPY-EN (LOT3, parti le 12/11 ; LOT6, 17-18/11) ; publication
+  décidée par l'auteur le 12/11/2026, un écart avec un envoi non parti se corrigeant dans le courriel ; les deux restent
+  exacts face à la page corrigée.
+- Instantané de relecture : fait le 12/11/2026 (139 phrases FR, 135 EN) ; `refonte` porté au 12/11/2026 ; journal : entrée du 12/11/2026 ;
+  `data/dates_affichage.json` : 05/11/2026 versé à l'historique.
+- Mise en ligne : poussée sur mandat de l'auteur, le 12/11/2026 ; attestation de la version servie : ci-dessous.
+- Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
