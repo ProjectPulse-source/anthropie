@@ -211,5 +211,10 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
 - Envois : la page est citée par un courriel de la campagne ANTHROPY-EN (LOT3, parti le 12/11), qui reste exact face à
   la page corrigée ; publication décidée par l'auteur le 12/11/2026.
 - Instantané de relecture : fait le 12/11/2026 (139 phrases FR, 134 EN) ; `refonte` porté au 12/11/2026 ; journal créé, entrée du 12/11/2026 ; relevé du jeu porté au 12/11/2026, fichiers sources de l'Andra inchangés.
-- Mise en ligne : poussée sur mandat de l'auteur, le 12/11/2026 ; attestation de la version servie : ci-dessous.
+- Mise en ligne : poussée sur décision de l'auteur, le 12/11/2026 (commit 1e4c0ac) ; déploiement `hugo.yml`
+  n° 43256651052 réussi (build, relecture, deploy, contrôle de fumée de la production).
+- Attestation de la version servie : faite le 12/11/2026 vers 17 h 17 (heure de Paris). HTML servi identique au build
+  contrôlé, aux empreintes de cache des scripts près (neuf en FR, huit en EN : fins de ligne du poste) ; les quatre SVG
+  de la figure et les deux cartes de partage servis identiques, octet pour octet, au commit ; CSV servi avec la colonne
+  `activite_declaree_majorante_bq` ; « Page mise à jour le 12 novembre 2026 ».
 - Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
