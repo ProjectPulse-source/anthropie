@@ -16,6 +16,7 @@ og_image_alt: "Carte de partage : « Réservé n'est pas consommé » — puissa
 donnees: [data_centers]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "data_centers"
+  apropos: "puissance électrique réservée par les centres de données en France"
   nom: "Data centers en France : puissance de raccordement réservée auprès de RTE, répartition par statut et consommation d'électricité (publications de RTE, recensement du SDES)"
   description: "Puissance de raccordement réservée par les data centers auprès de RTE (fin 2024, novembre 2025, mai 2026), répartition de novembre 2025 par statut (raccordé, en travaux, mise en service 2025-2029 ou à partir de 2030, suspendu, abandonné) mesurée sur la figure 2.3 du Bilan prévisionnel 2025-2035, consommation mesurée et estimée, trajectoires de RTE pour 2030 et 2035 ; chaque valeur porte sa nature (lue dans le texte ou mesurée sur la figure) et sa source."
   couverture_temporelle: "2024/2035"

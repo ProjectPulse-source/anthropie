@@ -15,6 +15,7 @@ og_image_alt: "Carte de partage : « Le volume ne dit pas où est la radioactivi
 donnees: [dechets_radioactifs]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; jetons résolus au build
   jeu: "dechets_radioactifs"
+  apropos: "déchets radioactifs en France : volume et radioactivité"
   nom: "Déchets radioactifs en France : volume et radioactivité déclarée par catégorie, volume situé dans les centres de l'Andra (Inventaire national de l'Andra)"
   description: "Volumes en équivalent conditionné et activité déclarée des déchets radioactifs, par catégorie (HA, MA-VL, FA-VL, FMA-VC, TFA, DSF, VTC, hors bilans), pour chaque fichier annuel ouvert de l'Inventaire national de l'Andra (fin 2013 à fin {dr.an_vol}), avec, pour les FMA-VC et les TFA, les volumes situés dans les centres de l'Andra ; parts calculées par l'auteur."
   couverture_temporelle: "2013/{dr.an_vol}"

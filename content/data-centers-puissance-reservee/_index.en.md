@@ -14,6 +14,7 @@ og_image_alt: "Share card: “Reserved is not consumed” — capacity reserved 
 donnees: [data_centers]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; tokens resolved at build
   jeu: "data_centers"
+  apropos: "grid capacity reserved by data centres in France"
   nom: "Data centres in France: grid connection capacity reserved with RTE, breakdown by status and electricity consumption (RTE publications, SDES census)"
   description: "Grid connection capacity reserved by data centres with RTE (end-2024, November 2025, May 2026), November 2025 breakdown by status (connected, under construction, commissioning 2025-2029 or from 2030, suspended, abandoned) measured on figure 2.3 of RTE's Bilan prévisionnel 2025-2035, metered and estimated consumption, RTE pathways for 2030 and 2035; each value carries its nature (read in the text or measured on the figure) and its source."
   couverture_temporelle: "2024/2035"

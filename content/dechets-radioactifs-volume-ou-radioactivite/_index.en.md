@@ -13,6 +13,7 @@ og_image_alt: "Share card: “Volume does not show where the radioactivity is”
 donnees: [dechets_radioactifs]
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html) ; tokens resolved at build
   jeu: "dechets_radioactifs"
+  apropos: "radioactive waste in France: volume and radioactivity"
   nom: "Radioactive waste in France: volume and declared radioactivity by category, volume located in Andra's facilities (Andra National Inventory)"
   description: "Volumes in conditioned equivalent and declared activity of radioactive waste, by category (HA, MA-VL, FA-VL, FMA-VC, TFA, DSF, VTC, outside the balances), for each annual open file of Andra's National Inventory (end-2013 to end-{dr.an_vol}), with, for FMA-VC and TFA, the volumes located in Andra's facilities; shares computed by the author."
   couverture_temporelle: "2013/{dr.an_vol}"
