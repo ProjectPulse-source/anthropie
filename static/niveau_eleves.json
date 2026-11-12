@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-09",
+ "releve_le": "2026-11-12",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources OCDE (PISA, Regards sur l'éducation), DEPP, IEA",
  "meta": {
   "page": "https://stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/",
@@ -1941,7 +1941,7 @@
    "france_sig": true,
    "ocde_d": -0.3116,
    "rang": 1,
-   "n_pays": 38,
+   "n_pays": 37,
    "verdict": "NON FAIT (controle 3 de couverture echoue : mathematiques 2022 : couverture 478.8 contre 473.9 publie ; lecture 2022 : couverture 479.7 contre 473.9 publie)"
   },
   "autres_evaluations": {
@@ -2471,8 +2471,8 @@
   "pirls_11": "520",
   "pirls_16": "511",
   "pirls_21": "514",
-  "comp_retard15": "24",
-  "comp_retard25": "10",
+  "comp_retard15": "24,1",
+  "comp_retard25": "9,5",
   "comp_pro15": "14",
   "comp_pro25": "23",
   "comp_prem25": "3",
@@ -2500,6 +2500,6 @@
   "eff_25": "6,43",
   "eff_d": "0,61",
   "eff_od": "0,31",
-  "eff_n": "38"
+  "eff_n": "37"
  }
 }

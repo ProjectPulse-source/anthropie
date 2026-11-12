@@ -119,7 +119,7 @@ def calcul(X):
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
         p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
         t3=X["p3_timss_pisa_maths"], t4=X["p4_timss_pisa_facteurs"], p5=X["p5_donnees_individuelles"],
-        p6=X["p6_composition_conjointe"], p7=X["p7_controles"],
+        p6=X["p6_composition_conjointe"], p7=X["p7_controles"], p8=X["p8_premiere"],
         comp=X["p2_composition_sciences"], pct=X["p2_percentiles"], eff=X["p2_effort"], ae=X["p2_autres_evaluations"],
     )
 
@@ -207,6 +207,21 @@ def mutation(c):
         c["pct"]["mathematiques"]["France"][4] = c["pct"]["mathematiques"]["France"][0] / 2
     elif m == "effort":       # la France ne serait que troisième pour la baisse de l'effort déclaré
         c["eff"] = dict(c["eff"], rang=3)
+    elif m == "effort_n":     # le pays sans mesure de 2022 (Luxembourg) compterait de nouveau parmi les pays comparés
+        c["eff"] = dict(c["eff"], n_pays=38)
+    elif m == "premiere_sig":  # la variation de « première et après » deviendrait significative en sciences
+        c["p8"] = json.loads(json.dumps(c["p8"]))
+        c["p8"]["sciences"]["a_premiere_et_apres"]["ecart"]["significatif"] = True
+    elif m == "premiere_reste":  # le reste de la catégorie compterait trente élèves ou plus en 2025
+        c["p8"] = json.loads(json.dumps(c["p8"]))
+        c["p8"]["sciences"]["c_reste"]["2025"]["n"] = 30
+    elif m == "premiere_gt":  # la première générale et technologique ne serait plus plus basse en lecture
+        c["p8"] = json.loads(json.dumps(c["p8"]))
+        c["p8"]["lecture"]["b_premiere_gt"]["ecart"]["valeur"] = 0.5
+    elif m == "bloc_saisi":   # une valeur saisie dans un repère du haut de page
+        c["page_mut"] = ('fort: "Pas la même baisse récente"', 'fort: "Pas la même baisse récente, 3 points"')
+    elif m == "bloc_saisi_seconde":  # une valeur saisie dans le résultat en une phrase de la section « seconde »
+        c["page_mut"] = ("en mathématiques, il monte quand celui de PISA baisse.", "en mathématiques, il monte de 7 points quand celui de PISA baisse.")
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -254,7 +269,17 @@ def gardes(c):
         g(all(b < a for a, b in p5["N18"][d]["classes"].values()), "données individuelles, %s : « dans chacune des catégories, plus bas »" % d)
     sc = p5["N18"]["sciences"]["classes"]
     g([k for k, (a, b) in sc.items() if not b < a] == ["d_premiere"],
-      "données individuelles, sciences : « trois catégories sur quatre reculent ; la première et après ne baisse pas »")
+      "données individuelles, sciences : « plus bas en 2025 dans trois catégories sur quatre » (la quatrième : première et après)")
+    # protocole 8 (VERDICT_8.md, 12/11/2026) : les trois affirmations sur « première et après » et la première GT
+    p8 = c["p8"]
+    g(not any(p8[d]["a_premiere_et_apres"]["ecart"]["significatif"] for d in ("sciences", "mathematiques")),
+      "première et après : « en sciences comme en mathématiques, sa variation n'est pas significative »")
+    g(all(p8[d]["c_reste"][a]["n"] < 30 for d in DOM for a in ("2015", "2025"))
+      and p8["sciences"]["b_premiere_gt"]["ecart"]["valeur"] < 0 <= p8["sciences"]["a_premiere_et_apres"]["ecart"]["valeur"],
+      "première et après : « elle dépend des quelques élèves hors voie générale et technologique » (moins de trente élèves "
+      "chaque année ; sans eux, le signe s'inverse en sciences)")
+    g(all(p8[d]["b_premiere_gt"]["ecart"]["valeur"] < 0 for d in DOM),
+      "première générale et technologique : « le score moyen est plus bas en 2025 dans les trois domaines »")
     g(c["p6"]["compo"]["classe"]["d_premiere"][1] < 5
       and c["p6"]["compo"]["classe"]["d_premiere"][1] == min(v[1] for v in c["p6"]["compo"]["classe"].values()),
       "composition : « la petite catégorie première et après, environ 3 % des élèves »")
@@ -321,6 +346,9 @@ def gardes(c):
     # protocole 2, N10 (descriptif) : « la plus forte baisse de l'effort déclaré des pays de l'OCDE », « deux fois la moyenne »
     ef = c["eff"]
     g(ef["rang"] == 1 and ef["france_sig"], "effort : « la plus forte baisse », significative")
+    # 12/11/2026 : la prose ne cite plus le nombre de pays (« parmi les pays de l'OCDE mesurés aux deux dates ») ; le jeu
+    # publié doit compter les seuls pays mesurés en 2022 et en 2025 : 37, Luxembourg exclu (calc_niveau_2.py, N10).
+    g(ef["n_pays"] == 37, "effort : 37 pays mesurés aux deux dates dans le jeu publié (Luxembourg sans 2022)")
     g(1.8 <= ef["france_d"] / ef["ocde_d"] < 2.2, "effort : « deux fois la moyenne de l'OCDE »")
     for d in DOM:
         x = P[d]["dif"]["2015"]
@@ -408,6 +436,25 @@ def gardes(c):
     # P2/P3 : « de moitié » ; au secondaire plus que l'OCDE, l'inverse avec le primaire
     p2 = c["p2"]
     g(1.4 <= p2[max(p2)] / p2[min(p2)] <= 1.6, "P2 : « a augmenté de moitié »")
+    # Blocs citables (12/11/2026, modèle : garde 6 de update_parcoursup.py) : les repères du haut de page et chaque
+    # « résultat en une phrase » ne portent aucune VALEUR saisie, seulement des jetons. Les millésimes (1995-2025),
+    # écrits en clair sur cette page depuis l'origine, restent permis, comme « CM1 » et les niveaux de PISA nommés
+    # (« niveaux 5 et 6 », « niveau 2 ») et la population de PISA (« 15 ans ») : ce sont des noms, pas des valeurs.
+    page = (ROOT / "content" / "le-niveau-des-eleves-baisse-t-il" / "_index.md").read_text(encoding="utf-8")
+    if c.get("page_mut"):
+        assert page.count(c["page_mut"][0]) == 1, "mutation : passage introuvable"
+        page = page.replace(*c["page_mut"])
+    blocs = [("résultat en une phrase", x) for x in re.findall(r'<div class="resultat-phrase">(.*?)</div>', page, flags=re.S)]
+    blocs += [("repère du haut de page", x) for x in re.findall(r'^\s+(?:fort|texte|precision):\s*"(.*)"\s*$', page, flags=re.M)]
+    g(len([b for b in blocs if b[0].startswith("rés")]) >= 4 and len([b for b in blocs if b[0].startswith("rep")]) == 9,
+      "blocs citables : quatre « résultats en une phrase » au moins, trois repères de trois champs")
+    for nom_, x in blocs:
+        nu = re.sub(r"\{\{[<%].*?[%>]\}\}", " ", x, flags=re.S)
+        nu = re.sub(r"\{[a-z_]+\.[a-z0-9_]+\}", " ", nu)
+        nu = re.sub(r"<[^>]+>|&[a-z]+;|&#\d+;", " ", nu)
+        nu = re.sub(r"\b(?:19|20)\d\d\b|niveaux? \d(?: et \d)?|\b15 ans\b", " ", nu)
+        saisi = re.findall(r"\b\d[\d  ,.]*", nu)
+        g(not saisi, "bloc citable sans valeur saisie (%s) -- lu : %s" % (nom_, ", ".join(saisi[:3])))
     return n
 
 
@@ -509,7 +556,8 @@ def affichage(c):
         A["pirls_" + a[2:]] = nb(v["score"], 0)
     cp = c["comp"]
     pc = c["p6"]["compo"]["classe"]   # données individuelles (protocole 7 D)
-    A["comp_retard15"], A["comp_retard25"] = (nb(v, 0) for v in pc["a_troisieme_et_moins"])
+    # 12/11/2026 : au dixième, sinon « moins d'un dixième » s'affichait avec « 10 % » (9,5 au calcul)
+    A["comp_retard15"], A["comp_retard25"] = (nb(v, 1) for v in pc["a_troisieme_et_moins"])
     A["comp_pro15"], A["comp_pro25"] = (nb(v, 0) for v in pc["c_seconde_pro_cap"])
     A["comp_prem25"] = nb(pc["d_premiere"][1], 0)
     i1 = c["p7"]["A"]["I1"]["lecture"]
@@ -524,6 +572,8 @@ def affichage(c):
     A["eff_22"], A["eff_25"] = nb(ef["france"]["2022"], 2), nb(ef["france"]["2025"], 2)
     A["eff_d"], A["eff_od"] = nb(-ef["france_d"], 2), nb(-ef["ocde_d"], 2)
     A["eff_n"] = str(ef["n_pays"])
+    if not float(A["comp_retard25"].replace(",", ".").replace(" ", "")) < 10:
+        fail("affichage : « moins d'un dixième » contredit par la part affichée (%s %%)" % A["comp_retard25"])
     return A
 
 
@@ -565,10 +615,10 @@ FIG = {
         note="Baisse du score moyen, en points. Une baisse observée et deux standardisations descriptives, trois questions : aucune n'est « la vraie baisse », aucune ne mesure l'effet du redoublement.",
         montre="Trois mesures de la même baisse : observée ; plus forte à la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège ; revenue près du niveau observé à la composition de 2015 pour la classe, le sexe et la famille. Ces calculs décrivent, ils n'attribuent pas de cause."),
     "thermometres": dict(
-        titre="Quatre évaluations, leur dernière variation en France",
+        titre="Quatre évaluations, la variation comparée en France",
         source="IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
         note="Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : test publié, significatif ou non ; point creux : aucun test publié. Couleur : sens de la variation.",
-        montre="Sur leurs dernières périodes, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent."),
+        montre="Sur les périodes comparées, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques de 2021 à 2024, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent."),
     "sommet": dict(
         titre="Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
         source="OCDE, PISA 2025, volume I, tableaux I.B1.2a.34 et 35 ; moyenne de l'OCDE sur 35 pays comparables",
@@ -605,7 +655,7 @@ def fig_thermometres(c, A):
     for d_, lib in (("mathematiques", "PISA, culture mathématique"), ("lecture", "PISA, compréhension de l'écrit")):
         x = P[d_]["dif"]["2022"]
         lignes.append((lib, "15 ans", "2022-2025", x["v"], "baisse significative" if x["sig"] and x["v"] < 0 else "non significative"))
-    desc = "Tableau, dernière variation de chaque évaluation en France, dans sa propre échelle : " + " ; ".join(
+    desc = "Tableau, variation comparée de chaque évaluation en France, dans sa propre échelle (la dernière période publiée ; pour le test de seconde, les rentrées alignées sur PISA) : " + " ; ".join(
         "%s (%s, %s) %s%s points, %s" % (l, p, per, "+" if v > 0 else "", nb(v, 0), st) for l, p, per, v, st in lignes) + "."
     h = 60 + 34 * len(lignes) + 10
     e = tete("niv-t", t["titre"], desc, h + 52)
@@ -857,7 +907,7 @@ def fig_thermometres_m(c, A):
     svg_d = fig_thermometres(c, A)
     desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_d).group(1))
     lignes = [m for m in re.findall(r"([^;:]+?) \(([^,]+), (\d{4}-\d{4})\) ([+−-]?\d+) points, ([^;.]+)", desc)]
-    e, y = tete_m("niv-tm", "Quatre évaluations, leur dernière variation en France", desc)
+    e, y = tete_m("niv-tm", FIG["thermometres"]["titre"], desc)
     y += 6
     for lib, pop, per, v, st in lignes:
         col = ORANGE if st.startswith("baisse") else (BLEU if st.startswith("hausse") else GRIS)

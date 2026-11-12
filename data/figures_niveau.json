@@ -3,8 +3,8 @@
   {
    "id": "thermometres",
    "fichier": "niveau-thermometres",
-   "titre": "Quatre évaluations, leur dernière variation en France",
-   "montre": "Sur leurs dernières périodes, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent.",
+   "titre": "Quatre évaluations, la variation comparée en France",
+   "montre": "Sur les périodes comparées, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques de 2021 à 2024, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent.",
    "source": "IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
    "precaution": "Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : test publié, significatif ou non ; point creux : aucun test publié. Couleur : sens de la variation."
   },
