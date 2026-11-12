@@ -1,47 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 748" role="img" font-variant-numeric="tabular-nums" aria-labelledby="impm-t impm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="impm-t">Faire face à une dépense imprévue : le revenu ne dit pas tout (France, 2025)</title><desc id="impm-d">Part des personnes qui ne pourraient pas faire face à une dépense imprévue, selon le type de foyer où elles vivent, France, 2025. Au-dessus du seuil de pauvreté : couple sans enfant 14,0 %, adulte seul 23,4 %, couple avec un enfant 18,6 %, parent seul 46,9 %. En dessous du seuil : couple sans enfant 50,1 %, adulte seul 58,4 %, couple avec un enfant 71,9 %, parent seul 77,0 %.</desc>
-<rect width="300" height="748" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Faire face à une dépense</text>
-<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">imprévue : le revenu ne dit</text>
-<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">pas tout (France, 2025)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 833" role="img" font-variant-numeric="tabular-nums" aria-labelledby="impm-t impm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="impm-t">Dépense imprévue : être au-dessus du seuil de pauvreté ne suffit pas (France, 2025)</title><desc id="impm-d">Part des personnes dont le ménage déclare ne pas pouvoir faire face à une dépense imprévue de 1 000 €, selon le type de foyer où elles vivent, France, 2025. Au-dessus du seuil de pauvreté : deux adultes sans enfant 14,0 %, un adulte sans enfant 23,4 %, deux adultes avec un enfant 18,6 %, un adulte avec un ou plusieurs enfants 46,9 %. En dessous du seuil : deux adultes sans enfant 50,1 %, un adulte sans enfant 58,4 %, deux adultes avec un enfant 71,9 %, un adulte avec un ou plusieurs enfants 77,0 %. Association, non cause : les groupes ne sont pas comparés à revenu égal (la distance au seuil n’est pas prise en compte).</desc>
+<rect width="300" height="833" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Dépense imprévue : être</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">au-dessus du seuil de pauvreté</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">ne suffit pas (France, 2025)</text>
 <text x="0" y="88" font-size="13.5" fill="#55524f">Part des personnes qui ne pourraient</text>
-<text x="0" y="106" font-size="13.5" fill="#55524f">pas y faire face, selon le type de</text>
-<text x="0" y="124" font-size="13.5" fill="#55524f">foyer où elles vivent</text>
+<text x="0" y="106" font-size="13.5" fill="#55524f">pas faire face à une dépense imprévue,</text>
+<text x="0" y="124" font-size="13.5" fill="#55524f">selon le type de foyer où elles vivent</text>
 <text x="0" y="148" font-size="15" font-weight="600" fill="#55524f">Au-dessus du seuil de pauvreté</text>
-<text x="0" y="170" font-size="13.5" fill="#26262f">Couple sans enfant</text>
+<text x="0" y="170" font-size="13.5" fill="#26262f">Deux adultes sans enfant</text>
 <rect x="0" y="176" width="31.9" height="14" fill="#c9c5c0"/>
 <text x="36.9" y="188" font-size="13.5" font-weight="600" fill="#26262f">14,0 %</text>
-<text x="0" y="212" font-size="13.5" fill="#26262f">Adulte seul</text>
+<text x="0" y="212" font-size="13.5" fill="#26262f">Un adulte sans enfant</text>
 <rect x="0" y="218" width="53.4" height="14" fill="#c9c5c0"/>
 <text x="58.4" y="230" font-size="13.5" font-weight="600" fill="#26262f">23,4 %</text>
-<text x="0" y="254" font-size="13.5" fill="#26262f">Couple avec un enfant</text>
+<text x="0" y="254" font-size="13.5" fill="#26262f">Deux adultes, un enfant</text>
 <rect x="0" y="260" width="42.4" height="14" fill="#8a8781"/>
 <text x="47.4" y="272" font-size="13.5" font-weight="600" fill="#26262f">18,6 %</text>
-<text x="0" y="296" font-size="13.5" fill="#26262f">Parent seul</text>
+<text x="0" y="296" font-size="13.5" fill="#26262f">Un adulte avec enfants</text>
 <rect x="0" y="302" width="106.9" height="14" fill="#eb6834"/>
 <text x="111.9" y="314" font-size="13.5" font-weight="600" fill="#b8420f">46,9 %</text>
 <text x="0" y="354" font-size="15" font-weight="600" fill="#55524f">En dessous du seuil de pauvreté</text>
-<text x="0" y="376" font-size="13.5" fill="#26262f">Couple sans enfant</text>
+<text x="0" y="376" font-size="13.5" fill="#26262f">Deux adultes sans enfant</text>
 <rect x="0" y="382" width="114.2" height="14" fill="#c9c5c0"/>
 <text x="119.2" y="394" font-size="13.5" font-weight="600" fill="#26262f">50,1 %</text>
-<text x="0" y="418" font-size="13.5" fill="#26262f">Adulte seul</text>
+<text x="0" y="418" font-size="13.5" fill="#26262f">Un adulte sans enfant</text>
 <rect x="0" y="424" width="133.2" height="14" fill="#c9c5c0"/>
 <text x="138.2" y="436" font-size="13.5" font-weight="600" fill="#26262f">58,4 %</text>
-<text x="0" y="460" font-size="13.5" fill="#26262f">Couple avec un enfant</text>
+<text x="0" y="460" font-size="13.5" fill="#26262f">Deux adultes, un enfant</text>
 <rect x="0" y="466" width="163.9" height="14" fill="#8a8781"/>
 <text x="168.9" y="478" font-size="13.5" font-weight="600" fill="#26262f">71,9 %</text>
-<text x="0" y="502" font-size="13.5" fill="#26262f">Parent seul</text>
+<text x="0" y="502" font-size="13.5" fill="#26262f">Un adulte avec enfants</text>
 <rect x="0" y="508" width="175.6" height="14" fill="#eb6834"/>
 <text x="180.6" y="520" font-size="13.5" font-weight="600" fill="#b8420f">77,0 %</text>
 <line x1="0" y1="556.0" x2="300" y2="556.0" stroke="#dcd8d3"/>
-<text class="pied-source" x="0" y="577.0" font-size="13.5" fill="#55524f">Eurostat, enquête SILC (ilc_mdes04),</text>
-<text class="pied-source" x="0" y="594.0" font-size="13.5" fill="#55524f">en % des personnes</text>
-<text class="pied-note" x="0" y="615.0" font-size="13.5" fill="#55524f">Déclaratif ; seuil de pauvreté : 60 %</text>
-<text class="pied-note" x="0" y="632.0" font-size="13.5" fill="#55524f">du revenu médian par unité de</text>
-<text class="pied-note" x="0" y="649.0" font-size="13.5" fill="#55524f">consommation ; montant de la dépense</text>
-<text class="pied-note" x="0" y="666.0" font-size="13.5" fill="#55524f">fixé par l'enquête. Association, non</text>
-<text class="pied-note" x="0" y="683.0" font-size="13.5" fill="#55524f">cause : la position dans la tranche de</text>
-<text class="pied-note" x="0" y="700.0" font-size="13.5" fill="#55524f">revenu n'est pas contrôlée.</text>
-<text class="pied-licence" x="0" y="721.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="738.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text class="pied-source" x="0" y="577.0" font-size="13.5" fill="#55524f">Eurostat, enquête EU-SILC</text>
+<text class="pied-source" x="0" y="594.0" font-size="13.5" fill="#55524f">(ilc_mdes04), en % des personnes</text>
+<text class="pied-note" x="0" y="615.0" font-size="13.5" fill="#55524f">Déclaration du ménage ; dépense de</text>
+<text class="pied-note" x="0" y="632.0" font-size="13.5" fill="#55524f">1 000 € en France (enquête 2025) ;</text>
+<text class="pied-note" x="0" y="649.0" font-size="13.5" fill="#55524f">seuil de pauvreté : 60 % du revenu</text>
+<text class="pied-note" x="0" y="666.0" font-size="13.5" fill="#55524f">disponible médian national par unité</text>
+<text class="pied-note" x="0" y="683.0" font-size="13.5" fill="#55524f">de consommation. « Un adulte avec</text>
+<text class="pied-note" x="0" y="700.0" font-size="13.5" fill="#55524f">enfants » : un ou plusieurs enfants,</text>
+<text class="pied-note" x="0" y="717.0" font-size="13.5" fill="#55524f">comparé à deux adultes avec un enfant.</text>
+<text class="pied-note" x="0" y="734.0" font-size="13.5" fill="#55524f">Association, non cause : les groupes</text>
+<text class="pied-note" x="0" y="751.0" font-size="13.5" fill="#55524f">ne sont pas comparés à revenu égal (la</text>
+<text class="pied-note" x="0" y="768.0" font-size="13.5" fill="#55524f">distance au seuil n’est pas prise en</text>
+<text class="pied-note" x="0" y="785.0" font-size="13.5" fill="#55524f">compte).</text>
+<text class="pied-licence" x="0" y="806.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="823.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

@@ -15,7 +15,7 @@ Chaque qualificatif de la prose est une garde (fonction gardes) ; si la donnée 
 Témoin : l'UE à 27 (même indicateur, autre population) et la variante « couple avec deux enfants » ; le calcul ne
 partage avec eux que la définition de l'indicateur.
 
-Usage : python scripts/update_menages_imprevu.py [--check] [--mutation=total|dessus|dessous|ratio|ecarts|chaque|serre|ue|deux|majorite|fiable|rupture|annee|montant|enquete]
+Usage : python scripts/update_menages_imprevu.py [--check] [--mutation=total|dessus|dessous|ratio|ecarts|ecarts_debut|chaque|serre|ue|deux|majorite|fiable|rupture|annee|montant|enquete]
 Sorties : data/ et static/menages_imprevu.json, static/menages_imprevu.csv, data/figures_imprevu.json,
           static/img/imprevu-menages{,-en}{,-m}.svg + .png
 """
@@ -184,8 +184,11 @@ def mutation(c: dict):
         c["ps_dessus"] = 1.8 * c["c1_dessus"]
     elif m == "ecarts":     # « deux à trois fois l'écart observé sans enfants »
         c["g_sans"][c["y"]] = c["g_enf"][c["y"]] / 1.2
-    elif m == "chaque":     # « chaque année depuis 2015 »
-        c["g_sans"][DEBUT] = c["g_enf"][DEBUT] + 1
+    elif m == "ecarts_debut":   # « chaque année … deux à trois fois » : la première année hors de la fourchette
+        c["g_sans"][DEBUT] = c["g_enf"][DEBUT] / 3.5
+    elif m == "chaque":     # « chaque année depuis 2015 » : écart avec enfants qui ne dépasse plus nettement celui sans
+        # (rapport 2,1, dans la fourchette « deux à trois fois » : la garde de rapport ne masque plus ce témoin, 12/11/2026)
+        c["g_enf"][DEBUT], c["g_sans"][DEBUT] = 8.5, 4.0
     elif m == "serre":      # « sous le seuil, l'écart se resserre »
         c["g_enf_dessous"][c["y"]] = c["g_enf"][c["y"]] + 1
     elif m == "ue":         # « même constat dans l'Union européenne »
@@ -225,8 +228,11 @@ def gardes(c: dict) -> int:
     g(62 <= c["dessous"] <= 71, "« environ deux tiers sous le seuil » : %.1f" % c["dessous"])
     g(c["ps_dessus"] > 2 * c["c1_dessus"], "« plus de deux fois » (parent seul / couple avec un enfant, au-dessus) : %.1f / %.1f"
       % (c["ps_dessus"], c["c1_dessus"]))
-    r_ = c["g_enf"][y] / c["g_sans"][y]
-    g(2 <= r_ <= 3.5, "« deux à trois fois l'écart observé sans enfants » : %.2f" % r_)
+    # chaque année de la fenêtre, au dixième près (relecture de contrôle du 12/11/2026 : la garde ne testait que la dernière
+    # année, bornée à 3,5, alors que la page dit « chaque année depuis … deux à trois fois »)
+    r_ = {a: c["g_enf"][a] / c["g_sans"][a] for a in ans}
+    g(all(1.95 <= v < 3.05 for v in r_.values()),
+      "« chaque année depuis %d, deux à trois fois l'écart observé sans enfants » : %s" % (DEBUT, {a: round(v, 2) for a, v in r_.items()}))
     g(all(c["g_enf"][a] > c["g_sans"][a] + 5 for a in ans),
       "« chaque année depuis %d, l'écart avec enfants dépasse nettement celui sans enfants » : %s"
       % (DEBUT, {a: round(c["g_enf"][a] - c["g_sans"][a], 1) for a in ans}))
@@ -282,41 +288,51 @@ def affichage(c: dict, lang: str) -> dict:
 # ------------------------------------------------------------------ figure signature
 TXT = {
     "fr": dict(
-        titre="Ne pas pouvoir faire face à une dépense imprévue : le revenu ne dit pas tout (France, {annee})",
-        titre_m="Faire face à une dépense imprévue : le revenu ne dit pas tout (France, {annee})",
-        unite="Part des personnes qui ne pourraient pas y faire face, selon le type de foyer où elles vivent",
-        desc="Part des personnes qui ne pourraient pas faire face à une dépense imprévue, selon le type de foyer où elles vivent, "
-             "France, {annee}. Au-dessus du seuil de "
-             "pauvreté : couple sans enfant {c0_dessus} %, adulte seul {seul_dessus} %, couple avec un enfant {c1_dessus} %, parent seul "
-             "{ps_dessus} %. En dessous du seuil : couple sans enfant {c0_dessous} %, adulte seul {seul_dessous} %, couple avec un enfant "
-             "{c1_dessous} %, parent seul {ps_dessous} %.",
+        titre="Dépense imprévue : être au-dessus du seuil de pauvreté ne suffit pas (France, {annee})",
+        titre_m="Dépense imprévue : être au-dessus du seuil de pauvreté ne suffit pas (France, {annee})",
+        unite="Part des personnes qui ne pourraient pas faire face à une dépense imprévue, selon le type de foyer où elles vivent",
+        desc="Part des personnes dont le ménage déclare ne pas pouvoir faire face à une dépense imprévue de {montant_question} €, "
+             "selon le type de foyer où elles vivent, France, {annee}. Au-dessus du seuil de "
+             "pauvreté : deux adultes sans enfant {c0_dessus} %, un adulte sans enfant {seul_dessus} %, deux adultes avec un enfant {c1_dessus} %, "
+             "un adulte avec un ou plusieurs enfants {ps_dessus} %. En dessous du seuil : deux adultes sans enfant {c0_dessous} %, "
+             "un adulte sans enfant {seul_dessous} %, deux adultes avec un enfant {c1_dessous} %, un adulte avec un ou plusieurs enfants "
+             "{ps_dessous} %. Association, non cause : les groupes ne sont pas comparés à revenu égal (la distance au seuil n’est pas prise en compte).",
         dessus="Au-dessus du seuil de pauvreté", dessous="En dessous du seuil de pauvreté",
-        menages=("Couple sans enfant", "Adulte seul", "Couple avec un enfant", "Parent seul"),
-        ecart="+{ecart_enf}",
-        source="Eurostat, enquête SILC (ilc_mdes04), en % des personnes",
-        note="Déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation ; montant de la dépense fixé par "
-             "l'enquête. Association, non cause : la position dans la tranche de revenu n'est pas contrôlée.",
-        montre="Au-dessus du seuil de pauvreté, {ps_dessus} % des personnes vivant dans un foyer monoparental ne pourraient pas faire "
-               "face à une dépense imprévue, contre {c1_dessus} % de celles vivant dans un foyer de deux adultes avec un enfant : le revenu "
-               "relatif ne dit pas tout de la capacité d'encaisser un choc."),
+        menages=("Deux adultes sans enfant", "Un adulte sans enfant", "Deux adultes, un enfant", "Un adulte avec enfants"),
+        ecart="{ecart_enf}",
+        source="Eurostat, enquête EU-SILC (ilc_mdes04), en % des personnes",
+        note="Déclaration du ménage ; dépense de {montant_question} € en France (enquête {annee}) ; seuil de pauvreté : 60 % du "
+             "revenu disponible médian national par unité de consommation. « Un adulte avec enfants » : un ou plusieurs enfants, "
+             "comparé à deux adultes avec un enfant. Association, non cause : les groupes ne sont pas comparés à revenu égal (la "
+             "distance au seuil n’est pas prise en compte).",
+        montre="En France, en {annee}, au-dessus du seuil de pauvreté, {ps_dessus} % des personnes vivant dans un foyer d'un adulte "
+               "avec un ou plusieurs enfants ne pourraient pas, selon la déclaration de leur ménage, faire face à une dépense imprévue "
+               "de {montant_question} €, contre {c1_dessus} % de celles vivant dans un foyer de deux adultes avec un enfant. Être "
+               "au-dessus du seuil de pauvreté ne garantit donc pas de pouvoir absorber une dépense imprévue ; cet écart traduit une "
+               "association, non un effet mesuré de la composition du foyer."),
     "en": dict(
-        titre="Unable to face an unexpected expense: income is not the whole story (France, {annee})",
-        titre_m="Facing an unexpected expense: income is not the whole story (France, {annee})",
-        unite="Share of people who could not face it, by the type of household they live in",
-        desc="Share of people who could not face an unexpected expense, by the type of household they live in, France, {annee}. "
-             "Above the poverty threshold: couple without "
-             "children {c0_dessus}%, single adult {seul_dessus}%, couple with one child {c1_dessus}%, single parent {ps_dessus}%. Below "
-             "the threshold: couple without children {c0_dessous}%, single adult {seul_dessous}%, couple with one child {c1_dessous}%, "
-             "single parent {ps_dessous}%.",
+        titre="Unexpected expense: being above the poverty threshold is not enough (France, {annee})",
+        titre_m="Unexpected expense: being above the poverty threshold is not enough (France, {annee})",
+        unite="Share of people who could not face an unexpected expense, by the type of household they live in",
+        desc="Share of people whose household says it could not face an unexpected expense of €{montant_question}, by the type of "
+             "household they live in, France, {annee}. Above the poverty threshold: two adults "
+             "without children {c0_dessus}%, one adult without children {seul_dessus}%, two adults with one child {c1_dessus}%, one adult with one or "
+             "more children {ps_dessus}%. Below the threshold: two adults without children {c0_dessous}%, one adult without children {seul_dessous}%, "
+             "two adults with one child {c1_dessous}%, one adult with one or more children {ps_dessous}%. Association, not cause: the "
+             "groups are not compared at equal income (how far incomes lie from the threshold is not taken into account).",
         dessus="Above the poverty threshold", dessous="Below the poverty threshold",
-        menages=("Couple, no children", "Single adult", "Couple, one child", "Single parent"),
-        ecart="+{ecart_enf}",
+        menages=("Two adults, no children", "One adult, no children", "Two adults, one child", "One adult with children"),
+        ecart="{ecart_enf}",
         source="Eurostat, EU-SILC (ilc_mdes04), % of people",
-        note="Self-reported; poverty threshold: 60% of median equivalised income; expense amount set by the survey. "
-             "Association, not cause: position within the income band is not controlled.",
-        montre="Above the poverty threshold, {ps_dessus}% of people in single-parent households could not face an unexpected expense, "
-               "against {c1_dessus}% of people in two-adult households with one child: relative income does not tell the whole story "
-               "about coping with a shock."),
+        note="Reported by the household; expense of €{montant_question} in France ({annee} survey); poverty threshold: 60% of national "
+             "median equivalised disposable income. “One adult with children”: one or more children, compared with two adults with "
+             "one child. Association, not cause: the groups are not compared at equal income (how far incomes lie from the "
+             "threshold is not taken into account).",
+        montre="In France, in {annee}, above the poverty threshold, {ps_dessus}% of people in households of one adult with one or "
+               "more children could not, according to their household, face an unexpected expense of €{montant_question}, against "
+               "{c1_dessus}% of people in two-adult households with one child. Being above the poverty threshold therefore does not "
+               "guarantee being able to absorb an unexpected expense; this gap reflects an association, not a measured effect of household "
+               "composition."),
 }
 CLES = ("c0", "seul", "c1", "ps")
 COUL = {"c0": GRIS_CLAIR, "seul": GRIS_CLAIR, "c1": GRIS, "ps": ORANGE}
@@ -346,7 +362,10 @@ def fig(c: dict, Aff: dict, lang: str) -> str:
     top = 70
     for p, (cote, x0) in enumerate((("dessus", 0), ("dessous", 372))):
         e.append('<text x="%d" y="%d" font-size="12" font-weight="600" fill="%s">%s</text>' % (x0, top, INK2, esc(t[cote])))
-        lab, b0, b1 = x0, x0 + 132, x0 + 312
+        # colonne des libellés élargie (12/11/2026) : « Deux adultes sans enfant » rendu sur 137,5 unités par cairosvg (Inter
+        # installé), 129,8 en Arial, était mordu par sa barre à 132, sans alerte : check-figures ne compare pas un texte à une
+        # barre (contrôleur de géométrie du 12/11/2026)
+        lab, b0, b1 = x0, x0 + 152, x0 + 312
         X = lambda v: b0 + (b1 - b0) * v / 100  # noqa: E731
         for i, cle in enumerate(CLES):
             yy = top + 22 + 40 * i
@@ -359,7 +378,8 @@ def fig(c: dict, Aff: dict, lang: str) -> str:
         e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="1"/>' % (b0, top + 14, b0, top + 22 + 40 * 4 - 4, GRID))
         if cote == "dessus":   # accolade de l'écart à une seule variable : couple avec un enfant -> parent seul
             ya, yb = top + 22 + 40 * 2 + 9, top + 22 + 40 * 3 + 9
-            xa = X(max(c["ps_dessus"], c["c1_dessus"])) + 46
+            # + 52 (12/11/2026) : à + 46, le trait touchait « 46,9 % » (0,95 unité en Inter, contrôleur de géométrie)
+            xa = X(max(c["ps_dessus"], c["c1_dessus"])) + 52
             e.append('<path d="M%.1f,%d h6 v%d h-6" fill="none" stroke="%s" stroke-width="1.4"/>' % (xa, ya, yb - ya, ORANGE))
             e.append('<text x="%.1f" y="%d" font-size="11.5" font-weight="600" fill="%s">%s</text>'
                      % (xa + 10, (ya + yb) // 2 + 4, ORANGE_TEXTE, esc(t["ecart"])))
@@ -375,7 +395,9 @@ def fig_m(c: dict, Aff: dict, lang: str, svg_d: str) -> str:
     t = txt(lang, Aff)
     pct = "%" if lang == "en" else " %"
     e, y = pied_figure.tete_mobile("impm", t["titre_m"], desc_de(svg_d), INK, FONT)
-    for k, l in enumerate(pied_figure.coupe(t["unite"], 36)):   # unité statistique, comme la version détaillée
+    # coupe à 38 en français (second passage, 12/11/2026 : à 36, « elles vivent » restait seul sur une quatrième ligne) ;
+    # 36 en anglais (à 38, « face an / unexpected » se couperait)
+    for k, l in enumerate(pied_figure.coupe(t["unite"], 38 if lang == "fr" else 36)):   # unité statistique
         y += 18 if k else 2
         e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, esc(l)))
     y += 16

@@ -34,14 +34,14 @@ Ne pas pouvoir faire face à une dépense imprévue, c'est être pauvre ; au-des
 ### Découverte principale
 
 Au-dessus du seuil de pauvreté, être le seul adulte d'un foyer avec enfants va de pair avec une vulnérabilité au choc
-nettement plus forte : en France en 2025, 46,9 % des parents seuls au-dessus du seuil ne pourraient pas faire face à une
-dépense imprévue, contre 18,6 % des couples avec un enfant (chiffres à afficher par jetons, jamais saisis).
+nettement plus forte : en France en 2025, 46,9 % des ménages d'un adulte avec enfants dépendants au-dessus du seuil ne pourraient pas faire face à une
+dépense imprévue, contre 18,6 % des ménages de deux adultes avec un enfant dépendant (catégories d'Eurostat : R1-5, R2-8) (chiffres à afficher par jetons, jamais saisis).
 
 ### Mécanisme explicatif
 
 Un seul revenu et un seul filet (épargne, entourage, second salaire) pour un foyer qui porte des charges d'enfants : le
 seuil de pauvreté, calculé sur un revenu par unité de consommation, ne dit rien de la réserve disponible ni du nombre
-d'adultes qui pourraient la reconstituer. Mécanisme proposé, non mesuré par la série : la page le dit.
+d'adultes qui pourraient la reconstituer. Mécanisme proposé, non mesuré par la série : la page le dit. Relecture R1-2 : la position juste au-dessus du seuil est documentée par Eurostat (ilc_li03 : 22,8 % contre 4,9 %) ; « le revenu ne dit pas tout » se restreint à la position au seuil (IM-1, à arbitrer). Relecture des sources du 12/11/2026 : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\SOURCES\qui-peut-faire-face-a-une-depense-imprevue_SYNTHESE.md`.
 
 ### Preuve décisive
 
@@ -158,3 +158,53 @@ simulé partage les présupposés du modèle qui l'écrit ; ce test ne remplace 
 
 Décision : aucune correction de fond. Le montant de la dépense imprévue n'est pas donné (définition non vérifiée à la
 source) ; à préciser si la définition d'Eurostat est lue.
+
+### Reprise du lot « guides » (12/11/2026)
+
+Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RESSOURCE.md` ; dossier `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\` (rapport
+`RAPPORTS\qui-peut-faire-face-a-une-depense-imprevue.md`, état `LOT.md`).
+
+- Relecture des sources : faite le 12/11/2026, deux relecteurs indépendants et les sondes de la session
+  (`SOURCES\qui-peut-faire-face-a-une-depense-imprevue_R1.md`, `_R2.md`, `_SYNTHESE.md`, `SONDES_SESSION.md`) : « le revenu
+  ne dit pas tout » corrigé (seule la position au seuil est montrée insuffisante) ; catégories d'Eurostat rendues exactes
+  (un adulte avec un ou plusieurs enfants dépendants, deux adultes avec un enfant, couple ou non) ; position juste au-dessus du
+  seuil documentée par Eurostat (`ilc_li03`), non exploitée (point ouvert).
+- Interventions : `specs\qui-peut-faire-face-a-une-depense-imprevue.py`, 153 remplacements (FR et EN), dont trois
+  explications (IM-1a, IM-1b, IM-1e) tranchées par le contradicteur externe en faveur de la version proposée ; témoin : la
+  spécification appliquée à la page d'origine (`c2b25c2`) redonne cette page, en-tête de publication, sujet du jeu de données
+  et organe de forme (`figure-lecture`) à part.
+- Contradicteur externe `PRO-20261112-140721` (réponse archivée avant lecture, SHA-256 `A71FAC4D…`) : version proposée
+  retenue sauf le passage 13 ; décisions 20 à 25 appliquées. Décisions de l'auteur du 12/11/2026 : « capacité individuelle de
+  repli » gardée (terme d'AWP-08), l'indicateur, fondé sur la déclaration du ménage, n'en saisissant que le volet financier ;
+  « Deux explications, un test » remplacé par la réécriture du contradicteur (« Ce que la comparaison permet — et ne permet
+  pas — de dire »), nombres repris des jetons. Aussi : « le nombre d'enfants ne suffit pas à expliquer l'écart » corrigé (les
+  catégories ne mesurent pas l'effet du nombre d'enfants) ; réserve de causalité en tête de la réponse de FAQ ; « le lien
+  avec le revenu est fort » remplacé par l'écart de part et d'autre du seuil.
+- Générateur (`scripts/update_menages_imprevu.py`) : titre du contradicteur ; note (déclaration du ménage, montant, « un
+  adulte avec enfants » = un ou plusieurs enfants, groupes non comparés à revenu égal) ; description intégrée et texte
+  réutilisable avec la réserve ; « Un adulte sans enfant » ; accolade sans « + » et décalée ; colonne des libellés élargie
+  (« Deux adultes sans enfant » était mordu par sa barre dans le PNG, sans alerte du verrou) ; garde « chaque année … deux à
+  trois fois » étendue à toutes les années de la fenêtre (elle ne testait que la dernière ; témoin `--mutation=ecarts_debut`
+  vu mordre). Carte (`scripts/og_imprevu_menages.py`) : sujet dans le titre, même nom de barre que la figure, légende en
+  personnes, « association, non cause, pas à revenu égal », orange du texte de la charte, garde d'échelle de 0 à 60 %.
+- Figure : `check-figures` 0 défaut ; contrôleur de géométrie et de données (API d'Eurostat relue : 684 cellules identiques
+  au jeu) et contrôleur de lecture, puis un passage sur l'état corrigé (trois cosmétiques nouveaux, corrigés) ; troisième
+  passage : aucun défaut nouveau sur la figure, les cartes et la page ; un constat d'outillage (le témoin d'une garde
+  masqué par la garde élargie), corrigé et vu mordre (`JUGE\FIGURE_DEPENSE_CONTROLE_{GEOMETRIE,LECTURE,2,3}.md`).
+- Relecture de langue phrase à phrase du texte servi, FR (124 phrases : 2 fautes, 21 maladresses) et EN (118 : 5 erreurs,
+  25 maladresses) : corrigées. Points de fond tranchés au passage : fourchettes annuelles écrites comme telles ; groupe
+  européen exact ; « non un effet mesuré de la composition du foyer » (« non un effet isolé » inversait la réserve) ; FAQ
+  lue seule (pays, année, montant) ; « peut dépendre du montant demandé » ; « foyer monoparental » nommé comme le terme de la
+  page, non d'Eurostat ; « aides sociales reçues ». Relecture de contrôle des phrases changées
+  (`JUGE\RELECTURE_LANGUE_DEPENSE_CONTROLE.md`) : deux défauts nécessaires (apostrophe de la carte, réserve de la
+  description intégrée), corrigés.
+- Données structurées : sujet du jeu de données déclaré (`apropos`). Dates : le 07/11/2026 ajouté à l'historique des dates
+  de la page (`data/dates_affichage.json`), l'entrée du journal de ce jour étant une modification de fond.
+- Contrôles : `check-all --ci` 0 ; build et `typo_build` 0 défaut ; rendu 0 ; liens 0 critique ; dates 83/83, 0 bloc sans
+  période ; couverture : 15 signaux, aucun nouveau.
+- Envois : la page est citée par deux courriels non partis de la campagne ANTHROPY-EN (LOT5, Lusardi ; LOT6, Nieuwenhuis) ;
+  leur texte est mis en cohérence avec la page publiée (décision de l'auteur du 12/11/2026), réapprobation des lots par
+  l'auteur.
+- Instantané de relecture : fait le 12/11/2026 (125 phrases FR, 119 EN) ; `refonte` porté au 12/11/2026 ; journal : entrée du 12/11/2026.
+- Mise en ligne : poussée le 12/11/2026 sur le mandat de l'auteur ; attestation de la version servie consignée ensuite.
+- Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.

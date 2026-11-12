@@ -3,20 +3,20 @@
   {
    "id": "menages",
    "fichier": "imprevu-menages",
-   "titre": "Ne pas pouvoir faire face à une dépense imprévue : le revenu ne dit pas tout (France, 2025)",
-   "montre": "Au-dessus du seuil de pauvreté, 46,9 % des personnes vivant dans un foyer monoparental ne pourraient pas faire face à une dépense imprévue, contre 18,6 % de celles vivant dans un foyer de deux adultes avec un enfant : le revenu relatif ne dit pas tout de la capacité d'encaisser un choc.",
-   "source": "Eurostat, enquête SILC (ilc_mdes04), en % des personnes",
-   "precaution": "Déclaratif ; seuil de pauvreté : 60 % du revenu médian par unité de consommation ; montant de la dépense fixé par l'enquête. Association, non cause : la position dans la tranche de revenu n'est pas contrôlée."
+   "titre": "Dépense imprévue : être au-dessus du seuil de pauvreté ne suffit pas (France, 2025)",
+   "montre": "En France, en 2025, au-dessus du seuil de pauvreté, 46,9 % des personnes vivant dans un foyer d'un adulte avec un ou plusieurs enfants ne pourraient pas, selon la déclaration de leur ménage, faire face à une dépense imprévue de 1 000 €, contre 18,6 % de celles vivant dans un foyer de deux adultes avec un enfant. Être au-dessus du seuil de pauvreté ne garantit donc pas de pouvoir absorber une dépense imprévue ; cet écart traduit une association, non un effet mesuré de la composition du foyer.",
+   "source": "Eurostat, enquête EU-SILC (ilc_mdes04), en % des personnes",
+   "precaution": "Déclaration du ménage ; dépense de 1 000 € en France (enquête 2025) ; seuil de pauvreté : 60 % du revenu disponible médian national par unité de consommation. « Un adulte avec enfants » : un ou plusieurs enfants, comparé à deux adultes avec un enfant. Association, non cause : les groupes ne sont pas comparés à revenu égal (la distance au seuil n’est pas prise en compte)."
   }
  ],
  "en": [
   {
    "id": "menages",
    "fichier": "imprevu-menages-en",
-   "titre": "Unable to face an unexpected expense: income is not the whole story (France, 2025)",
-   "montre": "Above the poverty threshold, 46.9% of people in single-parent households could not face an unexpected expense, against 18.6% of people in two-adult households with one child: relative income does not tell the whole story about coping with a shock.",
+   "titre": "Unexpected expense: being above the poverty threshold is not enough (France, 2025)",
+   "montre": "In France, in 2025, above the poverty threshold, 46.9% of people in households of one adult with one or more children could not, according to their household, face an unexpected expense of €1,000, against 18.6% of people in two-adult households with one child. Being above the poverty threshold therefore does not guarantee being able to absorb an unexpected expense; this gap reflects an association, not a measured effect of household composition.",
    "source": "Eurostat, EU-SILC (ilc_mdes04), % of people",
-   "precaution": "Self-reported; poverty threshold: 60% of median equivalised income; expense amount set by the survey. Association, not cause: position within the income band is not controlled."
+   "precaution": "Reported by the household; expense of €1,000 in France (2025 survey); poverty threshold: 60% of national median equivalised disposable income. “One adult with children”: one or more children, compared with two adults with one child. Association, not cause: the groups are not compared at equal income (how far incomes lie from the threshold is not taken into account)."
   }
  ]
 }

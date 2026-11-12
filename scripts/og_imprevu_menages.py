@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import og_dossier_dette as og  # noqa: E402
+import pied_figure  # noqa: E402
 
 GRIS_CLAIR = (201, 197, 192)
 
@@ -31,15 +32,18 @@ def barres(d, j: dict, lang: str = "fr") -> None:
     d.text((x0, 134), "% of people, by type of household" if lang == "en" else "En % des personnes, selon le type de foyer",
            font=og.font("inter", 17, 400), fill=og.GREY)
     pct = "%" if lang == "en" else " %"
-    for i, (cle, lib_fr, lib_en, col) in enumerate((("A2", "Couple sans enfant", "Couple, no children", GRIS_CLAIR),
+    for i, (cle, lib_fr, lib_en, col) in enumerate((("A2", "Deux adultes sans enfant", "Two adults, no children", GRIS_CLAIR),
                                                      ("A2_DCH1", "Deux adultes, un enfant", "Two adults, one child", og.SEC),
-                                                     ("A1_DCH", "Foyer monoparental", "Single-parent household", og.C2))):
+                                                     ("A1_DCH", "Un adulte avec enfants", "One adult with children", og.C2))):
         y = 160 + 92 * i
         v = s[cle][an]
+        if not 0 <= v <= 60:   # échelle de 0 à 60 % : la série a atteint 61,3 % en 2005 (contrôleur de géométrie, 12/11/2026)
+            og.fail("carte : %s vaut %.1f %%, hors de l'échelle de 0 à 60 %%" % (cle, v))
         d.text((x0, y), lib_en if lang == "en" else lib_fr, font=fl, fill=og.INK)
         d.rectangle([x0, y + 30, X(v), y + 62], fill=col)
         k = {"A2": "c0_dessus", "A2_DCH1": "c1_dessus", "A1_DCH": "ps_dessus"}[cle]
-        d.text((X(v) + 10, y + 32), a[k] + pct, font=fv, fill=og.C2 if cle == "A1_DCH" else og.INK)
+        # texte de la série orange en orange foncé (charte du 11/11/2026 ; l'orange vif ne passait pas 4,5:1 sur le crème)
+        d.text((X(v) + 10, y + 32), a[k] + pct, font=fv, fill=pied_figure.ORANGE_TEXTE if cle == "A1_DCH" else og.INK)
 
 
 def main() -> int:
@@ -53,19 +57,23 @@ def main() -> int:
         og.fail("carte : « plus de deux fois » n'est plus vrai dans les donnees (%s contre %s)" % (s["A1_DCH"][an], s["A2_DCH1"][an]))
     A, E = j["affichage"], j["affichage_en"]
     og.carte("og-imprevu-menages-en.jpg",
-             ["Income is not", "the whole story"],
-             "Above the poverty line, %s%% of people in single-parent households could not face an unexpected expense." % E["ps_dessus"],
-             "Eurostat, EU-SILC (ilc_mdes04), France %s · CC BY 4.0" % an,
+             ["Unexpected expense: being above", "the poverty threshold is not enough"],
+             "Above the threshold: %s%% of people in one-adult households with children could not pay an unexpected bill."
+             % E["ps_dessus"],
+             "Eurostat, EU-SILC (ilc_mdes04), France %s; association, not cause, not at equal income · CC BY 4.0" % an,
              "stephane-lalut.com/en/who-can-cope-with-an-unexpected-expense/",
              lambda d: barres(d, j, "en"),
-             [(og.C2, "Single-parent household: %s%%" % E["ps_dessus"]), (og.SEC, "Two adults, one child: %s%%" % E["c1_dessus"])])
+             [(og.C2, "One adult with children: %s%% of people" % E["ps_dessus"]),
+              (og.SEC, "Two adults, one child: %s%% of people" % E["c1_dessus"])])
     og.carte("og-imprevu-menages.jpg",
-             ["Le revenu", "ne dit pas tout"],
-             "Au-dessus du seuil de pauvreté : %s %% des personnes en foyer monoparental ne pourraient pas payer un imprévu." % A["ps_dessus"],
-             "Eurostat, EU-SILC (ilc_mdes04), France %s · CC BY 4.0" % an,
+             ["Dépense imprévue : être au-dessus", "du seuil de pauvreté ne suffit pas"],
+             "Au-dessus du seuil : %s %% des personnes en foyer d’un adulte avec enfants ne pourraient pas payer un imprévu."
+             % A["ps_dessus"],
+             "Eurostat, EU-SILC (ilc_mdes04), France %s ; association, non cause, pas à revenu égal · CC BY 4.0" % an,
              "stephane-lalut.com/qui-peut-faire-face-a-une-depense-imprevue/",
              lambda d: barres(d, j),
-             [(og.C2, "Foyer monoparental : %s %%" % A["ps_dessus"]), (og.SEC, "Deux adultes, un enfant : %s %%" % A["c1_dessus"])])
+             [(og.C2, "Un adulte avec enfants : %s %% des personnes" % A["ps_dessus"]),
+              (og.SEC, "Deux adultes, un enfant : %s %% des personnes" % A["c1_dessus"])])
     return 0
 
 

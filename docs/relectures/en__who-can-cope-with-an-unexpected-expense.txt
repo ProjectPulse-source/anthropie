@@ -1,111 +1,115 @@
-# relu le 2026-11-05 ; texte servi de /en/who-can-cope-with-an-unexpected-expense/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-12 ; texte servi de /en/who-can-cope-with-an-unexpected-expense/, build de b7fb3d3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who can cope with an unexpected expense?
 Is being unable to face an unexpected expense a matter of poverty?
 Only in part.
 In France, in 2025, 65.9% of people below the poverty threshold are in this situation, and 21.6% above it.
-But above the threshold, household composition sharply separates situations: 46.9% of single parents could not face an unexpected expense, against 18.6% of couples with one child.
-Page updated 5 November 2026 · revisions
+But above the threshold, situations differ sharply by household composition: 46.9% of people in single-parent households could not face an unexpected expense, against 18.6% of people in two-adult households with one child.
+Page updated 12 November 2026
 ↓ Charts, data and citations to reuseReuse this page
-Data as of: 26 October 2026 Eurostat, EU-SILC survey, dataset ilc_mdes04: France and the EU-27, full series since the start of the survey; gaps studied from 2015 to 2025.
+Data last updated 26 October 2026 Eurostat, EU-SILC survey, dataset ilc_mdes04: France (series since 2004) and the EU-27 (since 2010); gaps studied from 2015 to 2025.
 Download: CSV · JSON
 Who could not face an unexpected expense?
-In France, in 2025, 28.8% of people live in a household that, by its own account, could not meet an unexpected expense of €1,000 from its own resources: nearly three in ten.
-Income weighs heavily.
-Below the poverty threshold the share reaches 65.9%, about two thirds; above it, 21.6%, about one in five.
-But income is not the whole story.
-Above the threshold, where an income-based classification says “not poor”, household composition sharply separates situations.
-Share of people (not households), self-reported; poverty threshold: 60% of median equivalised income (Eurostat, EU-SILC).
+In France, in 2025, 28.8% of people live in a household that says it could not meet an unexpected expense of €1,000 from its own resources: nearly three in ten.
+The gap between people on either side of the poverty threshold is very marked: below it, the share reaches 65.9%, about two thirds; above it, 21.6%, about one in five.
+But being above or below the threshold is not the whole story.
+Above the threshold, where an income-based classification says “not poor”, situations differ sharply by household composition.
+Share of people (not households), as reported by their household; poverty threshold: 60% of national median equivalised disposable income (Eurostat, EU-SILC).
 The result in one sentence.
-In France, in 2025, above the poverty threshold, 46.9% of single parents could not face an unexpected expense, against 18.6% of couples with one child, a gap of 28.3 points.
-Two explanations, one test
-One might think that everything turns on income: being above or below the poverty threshold.
-If so, two households on the same side of the threshold should show similar shares.
-The test compares households that differ first of all in one thing: one adult more or less.
-With one child, moving from two adults to one adds 28.3 points above the threshold in 2025, and between 20 and 30 points every year since 2015.
-Without children, the same move adds only 9.4 points (between 9 and 13 points over the same period).
-The number of children is not enough to explain the gap.
-The statistics count as a “single parent” any single adult with one child or more; against couples with two children, the gap remains 29.3 points.
-Above the threshold, the gap between one- and two-adult households is thus two to three times larger with children than without.
-It persists throughout the series, but it does not isolate the effect of household composition itself: the number and age of children, employment, social transfers and expenses may also differ between these households.
-Below it, the gap narrows (5.1 points in 2025): single parents and couples with one child are both exposed in a large majority.
+In France, in 2025, above the poverty threshold, 46.9% of people in single-parent households (one adult with one or more children) could not face an unexpected expense of €1,000, against 18.6% of people in two-adult households with one child, a gap of 28.3 points.
+What the comparison can — and cannot — tell us
+Being above the poverty threshold does not guarantee being able to absorb an unexpected expense.
+Among people above that threshold in France in 2025, 46.9% of those in a household of one adult with one or more children could not, according to their household, face an expense of €1,000, against 18.6% of those in two-adult households with one child.
+The gap is 28.3 points.
+It describes two groups: it does not measure what would happen to a person if their household went from two adults to one.
+These groups may also differ in their exact income above the threshold, the number and age of children, employment, committed expenses and the benefits they receive.
+The data published here cannot tell these explanations apart.
+Above the threshold, the series allows other comparisons:
+With children, the gap between households of one adult with one or more children and two-adult households with one child has stayed between 20 and 30 points every year since 2015.
+Without children, the gap between one- and two-adult households is only 9.4 points in 2025 (between 9 and 13 points each year over the same period).
+Compared with two-adult households with two children, the gap for households of one adult with one or more children is still 29.3 points in 2025.
+The comparison does not, however, measure the effect of the number of children: the Eurostat category this page calls a single-parent household covers any household of one adult with one or more dependent children (under 18, or aged 18 to 24 if economically inactive and living with a parent), and the two-adult category any household of two adults, whether or not they are a couple.
+Above the threshold, the gap between one- and two-adult households is thus two to three times as wide with children as without.
+It has persisted every year since 2015, but it does not isolate the effect of household composition itself: the number and age of children, employment, committed expenses and the benefits received may also differ between these households.
+Below the threshold, the gap between single-parent households and two-adult households with one child is smaller (5.1 points in 2025): in both, a large majority of people could not face an unexpected expense.
 Being above or below the threshold is therefore not enough to explain these gaps.
-What the test does not settle.
-A third explanation remains possible: above the threshold, single parents might on average sit closer to the threshold than couples with one child.
-The Eurostat dataset does not detail position within the income band, so it cannot separate what household composition weighs from what that position weighs.
+What the comparison does not settle.
+Above the threshold, single-parent households might on average sit closer to the threshold than two-adult households with one child.
+The Eurostat dataset does not show how far each household’s income lies above the threshold, so it cannot tell how much of the gap goes with household composition and how much with that distance.
 The same finding across the European Union
 In the EU-27, 29.2% of people could not face an unexpected expense in 2025.
-Above the poverty threshold, moving from two adults to one adds 22.8 points with one child (between 19 and 25 points since 2015), against 10.1 points without children (between 9 and 11).
+Above the poverty threshold, the gap between households of one adult with one or more children and two-adult households with one child is 22.8 points (between 19 and 25 points every year since 2015), against 10.1 points between one- and two-adult households without children (between 9 and 11 points).
 The finding is not specific to France.
 What these data do not say
 A statement, not a bank balance.
 The question asks whether the household could pay an unexpected expense without outside help or new borrowing; it measures neither savings nor available assets.
-An amount below the common rule.
+An amount below the one set by the common rule.
 In France, the 2025 survey asks about an expense of €1,000 (Insee).
-Eurostat’s guidelines set this amount, country by country, at one twelfth of the poverty threshold taken from the survey two years earlier, rounded to within 5%: about €1,209 for France in 2025, on the 2023 threshold.
-The French question therefore tests a smaller sum, which matters when its level is compared with other countries; it does not affect the comparison between French households, who all answer the same question.
+Eurostat’s guidelines set this amount, country by country, at one twelfth of the poverty threshold taken from the survey two years earlier, rounded to within 5%: about €1,209 for France in 2025, based on the 2023 threshold.
+The French question therefore asks about a smaller sum, which matters when the French share is compared with that of other countries.
+It does not bias comparisons between French households in a given year, since they all answer the same question; but the size of the gaps may depend on the amount asked, which may have changed from one year to the next.
 People, not households.
-Shares are computed over people: a child in an exposed household counts as exposed.
+Shares are computed over people: a child in a household that could not face the expense is counted among the people concerned.
 The poverty threshold is relative.
-It is 60% of median equivalised income; it accounts for household size, not for the reserve the household holds.
+It is 60% of national median equivalised disposable income, after social transfers; it accounts for household size and composition, not for the reserve the household holds.
 An association, not a cause.
-The chart shows that household composition and vulnerability to a shock go together, not that one produces the other; position within the income band is not controlled.
-Precision not published.
-Eurostat publishes no confidence intervals for these subgroups; none of the values used is flagged by Eurostat as of low reliability.
-That flag does not make a gap of a few tenths of a point significant: the page comments only on gaps of several points.
+The chart shows that household composition and inability to face an unexpected expense go together, not that one produces the other; how far incomes lie from the threshold is not taken into account.
+Margin of error not published.
+Eurostat publishes no confidence intervals for these subgroups; none of the values used carries Eurostat’s “low reliability” flag, but EU values before 2019 are flagged as estimated.
+The absence of that flag does not make a gap of a few tenths of a point significant: the page comments only on gaps of several points, without being able to say, for lack of published intervals, how large a gap between these small groups must be to be reliable.
 Breaks in series.
-Eurostat flags breaks in France in 2020 and 2022: multi-year ranges should be read with caution.
-The main finding compares households in the same year, and the break does not affect it.
-A hypothesis of the author, not tested here.
-In the working paper AWP-08, the economist Stéphane Lalut proposes reading financial fallback capacity as one of the three components of what the author calls social reversibility: what a person can afford to fail without durably closing their future.
-The indicator on this page measures only part of it; it says nothing about the cost of a failure or the possibility of trying again.
-To go further: La Société du premier coup (in French) tells, through concrete cases, what a failure costs depending on the social position of the person who suffers it, and why some cannot afford to try.
+Eurostat flags breaks in the French series in 2020 and 2022: multi-year ranges should be read with caution.
+The main finding compares household types in the same year, and these breaks do not affect it.
+The author’s hypothesis, not tested here.
+In the working paper AWP-08, the economist Stéphane Lalut proposes reading individual fallback capacity as one of the three components of what he calls social reversibility: what a person can afford to fail at without durably closing off their future.
+The indicator on this page, based on what the household reports, captures only the financial side of that capacity; it says nothing about the cost of a failure or the possibility of trying again.
+Further reading: La Société du premier coup (in French) shows, through concrete cases, what a failure costs depending on the social position of the person who suffers it, and why some cannot afford to try.
 Frequently asked questions
 What share of people in France could not face an unexpected expense?
-In 2025, 28.8% of people living in France say their household could not face an unexpected expense (Eurostat, EU-SILC survey).
-The share reaches 65.9% below the poverty threshold and 21.6% above it.
-Are single parents more exposed, even when they are not poor?
-Yes, and the gap is widest above the poverty threshold: in 2025, 46.9% of single parents above the threshold could not face an unexpected expense, against 18.6% of couples with one child, a gap of 28.3 points.
-Without children, the same move from two adults to one adds only 9.4 points.
-This is an association: the series does not say whether the gap comes from household composition or from a lower position within the income band.
+In 2025, 28.8% of people living in France belong to a household that says it could not face, from its own resources, an unexpected expense of €1,000 (Eurostat, EU-SILC survey).
+The share is 65.9% below the poverty threshold and 21.6% above it.
+Are people in single-parent households more often unable to face an unexpected expense, even when they are not poor?
+Yes, as an association, not a cause; the gap is wider above the poverty threshold than below it.
+In France, in 2025, among people above the threshold, 46.9% of those in single-parent households (one adult with one or more children) could not face an unexpected expense of €1,000, against 18.6% of those in two-adult households with one child, a gap of 28.3 points.
+Without children, the gap between one- and two-adult households is only 9.4 points.
+The series does not say whether the gap comes from household composition, from incomes closer to the threshold or from other differences between these households (number and age of children, employment, committed expenses, benefits received).
 Where do these figures come from?
-From the European survey on income and living conditions (EU-SILC), Eurostat dataset ilc_mdes04 (series from 2003 to 2025), retrieved by a script that stops if a figure no longer meets the conditions on which the page’s main sentences depend.
-Only the amount of the question, €1,000 in France, is transcribed from an Insee publication, and checked for each survey year cited.
+From the EU Statistics on Income and Living Conditions survey (EU-SILC), Eurostat dataset ilc_mdes04 (series since 2004 for France and 2010 for the EU-27, up to 2025), retrieved by a script that stops if a figure no longer meets the conditions on which the page’s main sentences depend.
+Only the amount asked about in the 2025 survey, €1,000 in France, is transcribed from an Insee publication.
 The data can be downloaded as CSV and JSON, under a CC BY 4.0 licence.
 Sources
 Eurostat, European Union Statistics on Income and Living Conditions (EU-SILC), dataset ilc_mdes04 (“Inability to face unexpected financial expenses”), retrieved through the dissemination API.
-Author’s calculations: gaps between household compositions, annual ranges.
-Amount of the question: Insee, press release launching the SRCV survey, 31 January 2025 (in French: “are you able to face an unexpected expense of 1,000 euros?”); common rule: Eurostat, EU-SILC Methodological guidelines, 2025 operation, variable HS060, p.
+Author’s calculations: gaps between household compositions, ranges of the annual gaps.
+Amount asked in the survey: Insee, press release of 31 January 2025 launching the SRCV survey, the French part of EU-SILC (French wording, translated: “Are you able to face an unexpected expense of 1,000 euros?”); common rule: Eurostat, EU-SILC Methodological guidelines, 2025 operation, variable HS060, p.
 154; poverty threshold for a single person: Eurostat, dataset ilc_li01, retrieved by the script.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
-Unable to face an unexpected expense: income is not the whole story (France, 2025)
-Above the poverty threshold, 46.9% of single parents could not face an unexpected expense, against 18.6% of couples with one child: relative income does not tell the whole story about coping with a shock.
+Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
+Unexpected expense: being above the poverty threshold is not enough (France, 2025)
+In France, in 2025, above the poverty threshold, 46.9% of people in households of one adult with one or more children could not, according to their household, face an unexpected expense of €1,000, against 18.6% of people in two-adult households with one child.
+Being above the poverty threshold therefore does not guarantee being able to absorb an unexpected expense; this gap reflects an association, not a measured effect of household composition.
 Reading caveat.
-Self-reported; poverty threshold: 60% of median equivalised income; expense amount set by the survey.
-Association, not cause: position within the income band is not controlled.
+Reported by the household; expense of €1,000 in France (2025 survey); poverty threshold: 60% of national median equivalised disposable income.
+“One adult with children”: one or more children, compared with two adults with one child.
+Association, not cause: the groups are not compared at equal income (how far incomes lie from the threshold is not taken into account).
 Eurostat, EU-SILC (ilc_mdes04), % of people
 Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Who can cope with an unexpected expense?”.
-Eurostat (EU-SILC) data, retrieved 26 October 2026. https://stephane-lalut.com/en/who-can-cope-with-an-unexpected-expense/
+“Who can cope with an unexpected expense?” Eurostat (EU-SILC) data, retrieved 26 October 2026. https://stephane-lalut.com/en/who-can-cope-with-an-unexpected-expense/
 Copy citation
 In three sentences
-Above the poverty threshold, the share of people unable to face an unexpected expense is more than twice as high among single parents as among couples with one child.
-When there are children, the gap between one- and two-adult households is two to three times larger than without children; this is an association, not an isolated effect.
-Relative income therefore does not tell the whole story about coping with a shock.
+In France, in 2025, above the poverty threshold, the share of people whose household says it could not face an unexpected expense of €1,000 is more than twice as high among people in single-parent households as among people in two-adult households with one child.
+Above the threshold, every year since 2015, the gap between one- and two-adult households has been two to three times as wide with children as without; this is an association, not a measured effect of household composition.
+Being above the poverty threshold therefore does not tell the whole story about being able to face an unexpected expense.
 Copy summary
 The data
-The share of people unable to face an unexpected expense, for France and the EU-27, by household composition and position relative to the poverty threshold, every year since the start of the survey; the same content is available as CSV, in long format, with Eurostat’s flags.
+The share of people unable to face an unexpected expense, for France and the EU-27, by household composition and position relative to the poverty threshold, every year since 2004 for France and 2010 for the EU-27; the same content is available as CSV, in long format, with Eurostat’s flags (statut_eurostat column: e, estimated value; b, break in series).
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
-The raw series belong to their producers (Eurostat (EU-SILC)), under their own terms.
-Revisions
-5 November 2026 — Correction: the ranges of rates are rounded outwards (lower bound down, upper bound up), so that they contain every value they summarise.
+Text under copyright — short quotations permitted, full reproduction on request.
+The raw series belong to their producers (Eurostat [EU-SILC]), under their own terms.
 All resources: data, explainers and reference material →
 Share
 WhatsApp
