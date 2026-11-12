@@ -52,6 +52,23 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-12 — `/le-niveau-des-eleves-baisse-t-il/` : version définitive du pilote « intelligibilité » publiée
+
+- **Page** : version définitive du pilote (jugée à l'aveugle par le contradicteur externe ; arbitrages
+  `PRO-20261112-000538` et `REPONSE-04` du chantier `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\` de D:\PRO) :
+  significativité définie, corrections d'exactitude (périodicité de PISA, effort déclaré, catégorie « première »,
+  longue période membre par membre), synthèse, repères et figure-lecture sur le modèle Parcoursup. Fenêtre 2021-2024 du
+  test de seconde nommée partout où la page dit « monte » ; part des 15 ans encore au collège affichée au dixième
+  (24,1 % puis 9,5 %, sous « moins d'un dixième »). Fiche de conception versée (`docs/conception/`), instantané de
+  relecture refait, date de fond du 11/11 ajoutée à l'historique de `data/dates_affichage.json`.
+- **Extrait** : effort déclaré recalculé sur les niveaux (la colonne de différence de la DEPP, figure 31 web de la
+  NI 26-40, est désalignée à partir du Luxembourg) : 37 pays, rang inchangé ; protocole 8 (`p8_premiere`) entré.
+- **Générateur** : 117 gardes (99) ; nouvelles : trois affirmations sur « première et après », 37 pays, aucune valeur
+  saisie dans les repères et les résultats en une phrase ; 32 mutations, toutes vues mordre. Figure des évaluations :
+  « la variation comparée ».
+- **Ouvert** : les écarts relevés par la relecture des sources du second calibrage et encore présents (environ vingt,
+  surtout déjà en ligne avant ce jour), dans `LOTS\niveau\A_ARBITRER.md` du chantier : à faire juger avant correction.
+
 ### 2026-11-11 — Texte orange des figures : orange foncé (décision de l'auteur) ; constats des deux contrôleurs indépendants
 
 - **Décision de l'auteur** (« Je valide l'orange foncé pour le texte ») : l'orange de la charte `#eb6834` (3,20:1) reste
