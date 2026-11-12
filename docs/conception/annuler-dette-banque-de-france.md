@@ -50,7 +50,7 @@ brute baisserait (si l'opération était licite et reconnue) ; l'économie nette
 Précisée par la note de Nicolas Dufrêne (Institut Rousseau, août 2026, lue le 09/11/2026) : la question est **qui
 porte le coût du passif qui demeure**. Trois cas : statu quo (le marché, au refinancement des échéances) ; annulation
 seule (la Banque de France, donc l'État actionnaire, au taux de dépôt) ; annulation et réserves obligatoires non
-rémunérées, schéma complet de la note (les banques). Analyse : `D:\PRO_PROMOTION\RECHERCHE_VIDEO_BLAST_DETTE_ILLEGITIME_2026-11-09\ANALYSE_NOTE_DUFRENE_2026-08.md`.
+rémunérées, schéma complet de la note (les banques). Analyse : `D:\PRO\06_PROMOTION\RECHERCHE_VIDEO_BLAST_DETTE_ILLEGITIME_2026-11-09\ANALYSE_NOTE_DUFRENE_2026-08.md`.
 
 ### Mécanisme explicatif
 

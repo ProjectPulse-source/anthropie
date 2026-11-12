@@ -412,7 +412,7 @@ Générateur envisagé : `scripts/update_dette_futurs.py`, jeu `dette_futurs` ; 
   leur prochaine régénération (aucune figure publiée régénérée ici).
 - Panel « après » (consigne `CONSIGNE_PANEL_RESSOURCE.md` mot pour mot, cinq lecteurs isolés, texte servi) et gate
   éditorial : FAITS (09/11/2026), détail et tableaux dans
-  `D:\PRO_PROMOTION\RECHERCHE_QUELS_FUTURS_DETTE_2026-11-09\PANEL_ET_GATE_PAGE_2026-11-09.md`. Constat : la première
+  `D:\PRO\06_PROMOTION\RECHERCHE_QUELS_FUTURS_DETTE_2026-11-09\PANEL_ET_GATE_PAGE_2026-11-09.md`. Constat : la première
   section (« Lire l'éventail », rang en variation) arrêtait ou perdait trois des quatre lecteurs non spécialistes ; le
   connaisseur y voyait l'apport le plus original. Gate v1 : clarté et progression partielles (P1). Corrigé : phrase utile
   d'abord, rang en variation en repli sur la même URL, centile glosé par jeton, « promesse » → « engagement », Commission
