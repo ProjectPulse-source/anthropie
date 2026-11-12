@@ -181,6 +181,15 @@ diagnostics, état initial, ce qui l'infirme ; relevés le 12/12/2026 et le 11/0
 État réel de chaque étape, de la plus récente à la plus ancienne : la session de publication du 12/11/2026, puis la
 passe du 11/11/2026 sur la branche A' du pilote.
 
+### Mise à jour du 12/11/2026, sur l'avis du contradicteur externe
+
+- Trois corrections décidées par le contradicteur (`LOTS
+iveau\ARBITRAGE_REPONSE_NIVEAU_2026-11-12.md` du chantier) :
+  décompte « 12 pays sur 28 » retiré (points de deux échelles), page et jeu ; recul du milieu et du sommet circonscrit à
+  la lecture et aux mathématiques ; « revient à peu près au niveau observé » remplacé par « la baisse n'en est pas
+  réduite » (`VERDICT_7.md`, B), chiffres présentés comme ceux de la spécification retenue.
+- Gardes : 116 (une retirée avec l'affirmation qu'elle protégeait) ; 32 mutations, toutes vues mordre.
+
 ### Session du 12/11/2026 (`/reprise-ressource niveau publier`)
 
 - **Chaîne de recherche** : effort déclaré recalculé sur les niveaux 2022 et 2025 (la colonne de différence de la DEPP

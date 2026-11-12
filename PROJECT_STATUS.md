@@ -52,6 +52,13 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-12 (suite) — `/le-niveau-des-eleves-baisse-t-il/` : trois corrections décidées par le contradicteur externe
+
+- Retrait du décompte « dans 12 pays sur 28, PISA évolue plus favorablement que TIMSS » (points bruts de deux échelles),
+  dans la page et le jeu (`affichage.t3_autre`) ; « peu liées » reste (corrélation). Recul du milieu et du sommet dit
+  « en lecture et en mathématiques » dans les synthèses. « Revient à peu près au niveau observé » → « la baisse n'en est
+  pas réduite » (VERDICT_7, B : robustesse non tenue), cinq occurrences. 116 gardes, 32 mutations vues mordre.
+
 ### 2026-11-12 — `/le-niveau-des-eleves-baisse-t-il/` : version définitive du pilote « intelligibilité » publiée
 
 - **Page** : version définitive du pilote (jugée à l'aveugle par le contradicteur externe ; arbitrages

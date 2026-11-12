@@ -152,6 +152,8 @@ def mutation(c):
     elif m == "timss_pisa":   # la France serait au milieu des écarts TIMSS 4e / PISA
         c["t3"] = json.loads(json.dumps(c["t3"]))
         c["t3"]["rang"] = c["t3"]["n"] // 2
+    elif m == "timss_pisa_lien":  # les évolutions TIMSS et PISA seraient fortement liées d'un pays à l'autre
+        c["t3"] = dict(c["t3"], rho=0.7)
     elif m == "facteurs":     # l'effort déclaré rendrait compte de l'écart TIMSS / PISA
         c["t4"] = dict(c["t4"], N16="TIENT")
     elif m == "classes_micro":  # la répartition entre classes aurait contribué à la baisse en mathématiques
@@ -174,10 +176,6 @@ def mutation(c):
     elif m == "ocde_moyenne":  # la moyenne de l'OCDE perdrait plus que la France en sciences
         c["P"] = json.loads(json.dumps(c["P"]))
         c["P"]["sciences"]["ocde35_dif2015"] = c["P"]["sciences"]["dif"]["2015"]["v"] - 5
-    elif m == "conjointe_forte":  # a composition conjointe de 2015, la baisse serait nettement plus forte qu'observee
-        c["p6"] = json.loads(json.dumps(c["p6"]))
-        x = c["p6"]["N22"]["central"]["mathematiques"]
-        x["rec"] = x["m25"] - 8
     elif m == "mediane_quart":  # l'élève médian du quart le moins favorisé ne reculerait pas significativement en lecture
         c["p6"] = json.loads(json.dumps(c["p6"]))
         c["p6"]["N23"]["lecture"]["1"]["P50"] = [-3.0, 7.4]
@@ -252,8 +250,9 @@ def gardes(c):
     g(p3["rang"] <= p3["n"] // 4 and p3["rang"] in LETTRES, "TIMSS / PISA : France dans le quart le plus défavorable")
     fr3 = p3["pays"]["France"]
     g(fr3["dT"] < 0 and fr3["dP"] < 0, "TIMSS / PISA : la France recule dans les deux")
-    autre = sum(1 for v in p3["pays"].values() if lg.depasse(v["dP"], v["dT"], 0))
-    g(autre >= p3["n"] / 3 and p3["rho"] < 0.5, "TIMSS / PISA : « peu liées d'un pays à l'autre », « au contraire dans N pays »")
+    # 12/11/2026 (contradicteur externe) : le décompte « dans N pays, PISA évolue plus favorablement » est retiré de la
+    # page et du jeu (points bruts de deux échelles) ; reste « peu liées », qui ne dépend pas de l'échelle (corrélation).
+    g(p3["rho"] < 0.5, "TIMSS / PISA : « peu liées d'un pays à l'autre »")
     g(p3["verdict_sciences"] != "TIENT", "TIMSS / PISA : « le même test n'est pas concluant en sciences »")
     # protocole 4 : « elle y reste une fois pris en compte le niveau de départ » ; limite : aucun des facteurs testés
     t4 = c["t4"]
@@ -295,10 +294,8 @@ def gardes(c):
     # protocole 6 : composition conjointe (classe, sexe, diplôme des parents, origine) ; médiane par quart social
     p6 = c["p6"]
     B7 = c["p7"]["B"]
-    # refonte du 10/10/2026 (contre-expertise de phase A, P1-2) : la prose dit que l'ajustement conjoint ramene la baisse
-    # « a peu pres au niveau observe » -- borne dans les deux sens, a 2 points
-    g(all(abs(x["rec"] - x["m25"]) <= 2 for x in p6["N22"]["central"].values()),
-      "composition conjointe : la baisse revient « a peu pres au niveau observe » (a 2 points pres, trois domaines)")
+    # 12/11/2026 (contradicteur externe ; VERDICT_7, B) : « revient a peu pres au niveau observe » est retire de la prose,
+    # la robustesse ne tenant pas (cas complets) ; la page dit « la baisse n'en est pas reduite », gardee ci-dessous.
     g(p6["v22"] == "TIENT" and p6["v22_robuste"] and all(x["rec"] <= x["m25"] for x in p6["N22"]["central"].values()),
       "composition conjointe : la baisse « ne diminue pas » dans les trois domaines")
     variantes = [p6["N22"][k] for k in ("a_classe_x_diplome", "b_diplome_deux_groupes", "c_avec_profession")] + [B7[k] for k in ("B2", "B3", "B4")]
@@ -546,7 +543,6 @@ def affichage(c):
     A["t3_rang_l"] = LETTRES[p3["rang"]]
     A["t3_fr_dt"] = nb(-p3["pays"]["France"]["dT"], 0)
     A["t3_fr_dp"] = nb(-p3["pays"]["France"]["dP"], 0)
-    A["t3_autre"] = str(sum(1 for v in p3["pays"].values() if lg.depasse(v["dP"], v["dT"], 0)))
     # protocole 2
     ae = c["ae"]
     for lib, k in (("TIMSS CM1 maths", "tcm1"), ("TIMSS 4e maths", "t4e"), ("TIMSS CM1 sciences", "tcm1s"), ("TIMSS 4e sciences", "t4es")):
@@ -613,7 +609,7 @@ FIG = {
         titre="PISA 2015-2025 : trois mesures de la baisse, selon la composition retenue",
         source="OCDE, bases PISA 2015 et 2025 (données individuelles) ; calcul de l'auteur (valeurs plausibles, poids répliqués)",
         note="Baisse du score moyen, en points. Une baisse observée et deux standardisations descriptives, trois questions : aucune n'est « la vraie baisse », aucune ne mesure l'effet du redoublement.",
-        montre="Trois mesures de la même baisse : observée ; plus forte à la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège ; revenue près du niveau observé à la composition de 2015 pour la classe, le sexe et la famille. Ces calculs décrivent, ils n'attribuent pas de cause."),
+        montre="Trois mesures de la même baisse : observée ; plus forte à la répartition entre classes de 2015, parce qu'à 15 ans moins d'élèves sont encore au collège ; non réduite à la composition de 2015 pour la classe, le sexe et la famille. Ces calculs décrivent, ils n'attribuent pas de cause."),
     "thermometres": dict(
         titre="Quatre évaluations, la variation comparée en France",
         source="IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
