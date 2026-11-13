@@ -68,6 +68,10 @@ Organes existants seulement ; les phrases arbitrées ne changent pas, elles pren
   chapôs arbitrés laissés à l'auteur (`LOTS\guides\A_ARBITRER.md`).
 - Organes : `imp-val` reçoit la variante « css » de `psup-val` ; une espace sépare libellé et texte des fiches et des grilles
   (« Étape 216 juillet » à l'extraction ; invisible à l'écran).
+- `/parcoursup-quelles-chances-d-etre-admis/` (demande de l'auteur) : la même espace dans sa fiche, sa grille et sa barre de
+  composition (« Étape 1Tous les candidats », « un an aprèsdeux sur trois66,9 % », « bac technologique42 ») ; texte servi
+  changé à ces seuls endroits, rendu inchangé, 113 gardes du générateur passées, instantané refait. Préexistant, non traité :
+  à 320 px, deux cartes dépassent leur colonne de 3 px (libellés insécables de la barre de composition, cause probable).
 - Contrôles : `check-all --ci` 0, build CI et typographie 0, liens 0 critique, rendu 0, dates 83/83 ; 198 rendus (neuf
   versions, onze largeurs, avec et sans JavaScript) sans débordement ; instantanés de relecture refaits.
 
