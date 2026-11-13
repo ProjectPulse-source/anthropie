@@ -255,8 +255,11 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   `llms.txt`), adresse inchangée. « En France » au chapô. `lastmod` au 13/11/2026, journal, historique des dates.
 - Langue : relecteur indépendant, aucun P0 ni P1 ; la relative accrochée à « Bure (Cigéo) » est rattachée au centre (« à
   Bure, dans le centre Cigéo, qui … » ; « in the Cigéo facility at Bure, which … » : en anglais, la licence va à
-  l'installation, non à « disposal »). Restent en P3, à changer partout ou nulle part : « Andra's balances », « creation
-  licence ».
+  l'installation, non à « disposal »). Sur décision déléguée par l'auteur (13/11/2026, clarté pour le lecteur) :
+  « creation licence » devient « construction licence », treize fois (un lecteur anglais demandait « permission to
+  build, or to operate? » ; création et mise en service d'une installation nucléaire de base sont deux autorisations,
+  Code de l'environnement, art. L. 593-7 et L. 593-11, lus sur Légifrance). « Andra's balances » reste : les figures
+  anglaises portent le même mot, et leur régénération est groupée au lot P2 avec leurs autres calques.
 - Premier écran : le second repère met 0,12 % en gras et porte sa date ; troisième tour, aucune conclusion interdite (FR,
   EN).
 - Reportés : concentration de l'activité déclarée (lot P3, calcul reproductible d'abord) ; à la publication d'un décret

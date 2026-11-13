@@ -1,9 +1,9 @@
-# relu le 2026-11-13 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de e0812dd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 3898af2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Radioactive waste: what can volume really tell us?
 In France, radioactive waste is first counted in cubic metres: 1.89 million at end-2024 in Andra’s balances.
 But volume says neither where the radioactivity is nor what remains unresolved.
-At end-2021, high-level waste made up 0.25% of the volume and 97.2% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal is planned in the Cigéo facility at Bure, which has not yet received its creation licence.
+At end-2021, high-level waste made up 0.25% of the volume and 97.2% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal is planned in the Cigéo facility at Bure, which has not yet received its construction licence.
 Page updated 13 November 2026
 ↓ Charts, data and citations to reuseReuse this page
 Data last updated 12 November 2026 Andra, National Inventory of radioactive materials and waste, open files (data.gouv.fr): volume and declared radioactivity at end-2021 (latest edition declaring radioactivity), volumes at end-2024.
@@ -16,7 +16,7 @@ The categories that hold most of the declared radioactivity are therefore not th
 Their radioactivity does not, on its own, measure how hazardous they are or the risk to which the public is exposed.
 Volume in conditioned equivalent and declared radioactivity, in becquerels, for the same year; disposal routes according to Andra (National Inventory, open data; Les Essentiels 2026).
 The result in one sentence.
-In France, at end-2021, high-level waste made up 0.25% of the volume of radioactive waste recorded in Andra’s balances and 97.2% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal is planned in the Cigéo facility at Bure, which has not yet received its creation licence.
+In France, at end-2021, high-level waste made up 0.25% of the volume of radioactive waste recorded in Andra’s balances and 97.2% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal is planned in the Cigéo facility at Bure, which has not yet received its construction licence.
 Volume has kept growing since: 1.89 million cubic metres at end-2024, including 4,717 m³ of high-level waste, still 0.25% of the total.
 Radioactivity, by contrast, is declared for the bulk of the volume only in the files of the inventory’s editions, the latest at end-2021.
 What the chart shows, and what it does not
@@ -39,13 +39,13 @@ The categories in which the radioactivity is concentrated have no final disposal
 According to Andra, some high-level and long-lived intermediate-level waste is “produced and stored on its production sites, pending the creation of the disposal facility intended to receive it: Cigéo” (our translation); disposal for low-level long-lived waste is under study.
 Cigéo is a deep geological disposal facility planned at Bure (Meuse).
 It was declared to be of public utility by a decree of 7 July 2022 (no.
-2022-993); its creation licence follows a separate procedure.
-The creation licence procedure for Cigéo
-Step 1 January 2023: Andra applies for Cigéo’s creation licence
+2022-993); its construction licence (autorisation de création) follows a separate procedure.
+The construction licence procedure for Cigéo
+Step 1 January 2023: Andra applies for Cigéo’s construction licence
 Step 2 16 July 2026: the public inquiry closes
 Step 3 August 2026: the inquiry commission issues a favourable opinion, with two reservations and two recommendations; this opinion is not a licence
 Then The procedure provides for a preliminary draft decree sent to Andra for comments, an opinion from the Nuclear Safety and Radiation Protection Authority (ASNR), and a decree issued after consulting the Conseil d’État
-As of 12 November 2026, no creation licence decree had been published in the Journal officiel.
+As of 12 November 2026, no decree granting the construction licence had been published in the Journal officiel.
 What remains outside the balances
 Some waste does not appear in Andra’s balances.
 This includes the historical uranium conversion residues at Orano’s Malvési site: Andra reports about 690,000 m³ (ECRIN facility, evaporation and settling ponds) and states that these volumes “are not counted in the balances” and that “the search for a safe long-term management route on the Malvési site is under way” (our translations).
@@ -88,7 +88,7 @@ At end-2024, it takes up 4,717 m³ in conditioned equivalent, 0.25% of the volum
 Is the most radioactive waste disposed of?
 No: it is held in storage — that is, placed temporarily with the intention of retrieving it — and not disposed of, a term French law reserves for potentially permanent emplacement (Environment Code, Article L.
 542-1-1).
-High-level waste and long-lived intermediate-level waste, which together hold 99.9% of the declared radioactivity (end-2021), are stored on the sites that produce or hold them: their deep geological disposal, Cigéo, is planned at Bure; after the 2026 public inquiry and the inquiry commission’s favourable opinion, with two reservations, no creation licence decree had been published as of 12 November 2026.
+High-level waste and long-lived intermediate-level waste, which together hold 99.9% of the declared radioactivity (end-2021), are stored on the sites that produce or hold them: their deep geological disposal, Cigéo, is planned at Bure; after the 2026 public inquiry and the inquiry commission’s favourable opinion, with two reservations, no decree granting the construction licence had been published as of 12 November 2026.
 Low- and intermediate-level short-lived waste and very-low-level waste, over nine tenths of the volume, have disposal facilities in operation.
 Where do these figures come from?
 From the open files of Andra’s National Inventory (waste declared at end-2024, and at end-2021 for activity), read by a script that stops if a figure no longer meets the conditions on which the page’s main sentences depend.
@@ -100,7 +100,7 @@ Andra, National Inventory, Les Essentiels 2026 and the page “Classification de
 Calculation check: the volumes by category published by Andra for end-2024 are reproduced to within rounding; the disposed volumes, to within a few hundred cubic metres, as the script counts what is located in an Andra facility.
 Nuclear Safety and Radiation Protection Authority (ASNR), letter of 30 March 2026 (CODEP-DRC-2026-012666): Cigéo licence application.
 Prefecture of Haute-Marne, public inquiry page (in French), read on 26 October 2026: inquiry dates (18 May to 16 July 2026, after extension), favourable opinion of the commission with two reservations and two recommendations, report online since 14 September 2026, decision still to come, by decree issued after consulting the Conseil d’État.
-Légifrance, search for “Cigéo” in the Journal officiel, and Prefecture of Meuse, creation licence application page (in French), read on 12 November 2026: no creation licence decree published, no step in the procedure after 14 September 2026.
+Légifrance, search for “Cigéo” in the Journal officiel, and Prefecture of Meuse, page on the construction licence application (in French), read on 12 November 2026: no construction licence decree published, no step in the procedure after 14 September 2026.
 AFP dispatch of 14 September 2026, as published by Connaissance des énergies: close of the public inquiry and the commission’s opinion.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
@@ -119,7 +119,7 @@ Lalut, Stéphane (2026).
 Copy citation
 In three sentences
 In France, at end-2021, high-level waste made up 0.25% of the volume of radioactive waste recorded in Andra’s balances and 97.2% of the declared radioactivity (mostly an upper bound, not an exact measurement).
-High-level waste and the two long-lived categories (intermediate- and low-level long-lived) have no final disposal route in operation yet: disposal of high-level and long-lived intermediate-level waste is planned in the Cigéo facility at Bure, which has not yet received its creation licence.
+High-level waste and the two long-lived categories (intermediate- and low-level long-lived) have no final disposal route in operation yet: disposal of high-level and long-lived intermediate-level waste is planned in the Cigéo facility at Bure, which has not yet received its construction licence.
 Volume, for its part, lies mostly in categories that have a disposal facility in operation.
 Copy summary
 The data
