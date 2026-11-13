@@ -28,15 +28,16 @@ Le numérique est immatériel ; « dette technologique » désigne la dette tech
 
 ### Découverte principale
 
-Trois opérations (engagement, garantie, irréversibilisation) convertissent un coût en dette, sur quatre registres couplés.
+Trois opérations (engagement, garantie, irréversibilisation) convertissent un coût en dette, sur quatre registres couplés — énergie, matière, territoire et, à titre de registre possible seulement, attention. Porté par relecture des sources du 13/11/2026, `LOTS
+otions-a\SOURCES\dette-technologique_R1.md`, l. 66 et 70 (conforme à AWP-06, p. 2 et 6) et P1-1 (l'attention n'est pas une dette constituée, AWP-06 p. 5).
 
 ### Mécanisme explicatif
 
-Le derisking et les contrats de long terme reportent le coût sur ceux qui n'ont pas signé.
+Les contrats de long terme, les garanties publiques (le derisking que Daniela Gabor décrit pour le développement, qu'AWP-06 transpose au numérique) et l'irréversibilité des choix reportent le coût, surtout sur ceux qui n'ont pas signé : territoires, populations exposées aux mines et aux déchets, générations futures. Porté par R1, l. 48-50 et 67-69 (conformes en sens), et borné par R1-P1-4 (aucune garantie publique d'un data center documentée par AWP-06 ; « le risque ne se transfère pas mécaniquement », p. 15) et R1-P1-6 (porteurs).
 
 ### Preuve décisive
 
-AWP-06 (grille des registres de coûts couplés) ; Gabor sur le derisking ; le cas des data centers.
+AWP-06 (grille des registres de coûts couplés, p. 2 ; passage du coût à la dette, p. 6) ; Gabor, prépublication de 2020, pour le derisking ; la page de données des data centers pour ce qu'une réservation n'est pas encore. La grille est proposée, non testée (R1, l. 70).
 
 ### Pouvoir discriminant
 
@@ -45,7 +46,7 @@ Sans objet : la page ne publie aucune série ; ses schémas décrivent un mécan
 
 ### Limite
 
-La dette n'est que partiellement financière ; le reste est fait d'engagements non monétaires.
+La dette n'est que partiellement financière, et une garantie n'est une dette que si elle est appelée ; l'attention n'est qu'un registre possible ; les data centers sont des communs négatifs candidats, sous cinq conditions, non par principe (R1-P1-5, P1-1, P1-7).
 
 ### Valeur finale
 
