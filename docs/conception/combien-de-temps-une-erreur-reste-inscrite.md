@@ -262,3 +262,23 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   contrôlé, aux neuf empreintes de cache des scripts près (fins de ligne du poste) ; les deux SVG de la frise servis
   identiques, octet pour octet, au commit ; « Page mise à jour le 12 novembre 2026 ».
 - Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
+
+### Reprise du style (13/11/2026)
+
+- Consigne de l'auteur (13/11/2026) : une mise en page « ultra lisible », au niveau de la page Parcoursup (règle 17
+  du `CLAUDE.md` du site), adaptée au sujet. Étude, choix et mesures :
+  `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ETUDE_STYLE.md`. Organes existants seulement
+  (`_ressource-relief.scss`, `reperes-page.html`) ; les phrases ne changent pas, elles prennent une forme.
+- Organes : les quatre situations en cartes (titre : leur phrase en gras ; « Ce qu'il faut vérifier » mis en gras) ; les
+  trois bulletins du casier en cartes numérotées ; les délais de la réhabilitation légale en fiche (trois, cinq, dix ans
+  en tête de ligne) ; « Ce que montrent ces durées » en quatre cartes ; dix paragraphes coupés à leurs articulations,
+  dont deux dans les cartes. Pas de repères (page sans jeu de données). Français seul.
+- Inchangés : titre, adresse, ancres, chapô, figures, nombres, réserves, questions fréquentes, sources, « Réutiliser ».
+  Aucune modification de fond : `lastmod`, journal et `data/dates_affichage.json` inchangés ; `refonte` reste au
+  12/11/2026 (instantané du 13/11, postérieur).
+- Contrôles : `check-all --ci` 19/19 à 0 ; build CI et `typo_build` 0 défaut ; liens 0 critique ; rendu 0 ; dates 83/83,
+  0 bloc sans période ; 0 débordement sur onze largeurs de 320 à 1 440 px, avec et sans JavaScript ; aucun texte des
+  blocs sous 12 px ; repères absents sous 600 px ; lecture à côté de la figure dans la limite. Lettre : texte servi avant
+  et après, phrase à phrase ; seules changent les phrases mises en forme ; nombres inchangés. Langue et fidélité : la
+  session, puis un relecteur indépendant (aucun P0 ; P1 traités). Premier écran inchangé.
+- Instantané de relecture refait le 13/11/2026.

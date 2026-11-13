@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de ed36025 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 Six mois pour un point de permis retiré seul, deux années consécutives sans sinistre pour effacer un malus, cinq ans au plus pour une interdiction d’émettre des chèques, quarante ans pour la fiche d’une condamnation pour crime ou délit — parfois davantage.
@@ -77,7 +77,7 @@ Lu à partir de sa dernière colonne, le tableau montre aussi ce que les durées
 Quatre situations : ce qu’il faut vérifier, et qui agit
 Qui accompagne une personne part de sa situation plutôt que du registre ; en voici quatre, avec, pour chacune, ce qu’il faut vérifier et à qui s’adresser.
 Ces repères n’épuisent pas l’examen d’un dossier.
-La dette est payée, l’inscription au FICP demeure.
+La dette est payée, l’inscription au FICP demeure
 La radiation suit la déclaration du paiement intégral, et cette déclaration revient à l’établissement qui a déclaré l’incident, non à la personne.
 Si le crédit a été cédé, la rédaction en vigueur à compter du 20 novembre 2026 met cette déclaration à la charge de l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier (un établissement de crédit, par exemple), ou du gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits.
 Tout autre repreneur informe du paiement l’entreprise responsable de l’inscription, qui le déclare.
@@ -85,7 +85,7 @@ Un contrat en cours à cette date reste régi par les règles antérieures.
 Ce que contient le fichier, la personne peut le demander à la Banque de France, en ligne depuis son espace personnel, à un guichet sur rendez-vous ou par courrier avec une copie de sa pièce d’identité.
 Si l’établissement ne fait pas la déclaration, elle peut saisir le médiateur de sa banque, puis adresser une réclamation à la CNIL (Service-public, fiche F17608, vérifiée par la DILA, Direction de l’information légale et administrative, le 25 septembre 2025).
 L’inscription ne dépasse pas, de toute façon, cinq ans (le détail).
-Une condamnation pèse sur une embauche.
+Une condamnation pèse sur une embauche
 Il faut d’abord savoir quel bulletin est en cause, et quel est l’employeur.
 Le bulletin n° 2 est délivré, avec ses mentions, aux administrations de l’État et à certains employeurs pour leurs recrutements (collectivités locales, SNCF, EDF ou Banque de France, par exemple, et, pour un emploi au contact habituel de mineurs, les administrations, les collectivités et certains établissements publics).
 Les dirigeants de certains organismes qui exercent auprès de mineurs une activité culturelle, éducative ou sociale, et dont un décret fixe la liste, ne l’obtiennent que s’il ne porte la mention d’aucune condamnation.
@@ -97,13 +97,13 @@ D’abord, des sorties automatiques : sursis devenu non avenu, sauf mesure qui l
 Ensuite, la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, pour les peines que vise l’article 133-13 du Code pénal.
 Enfin, l’exclusion, que le tribunal décide dans le jugement ou plus tard sur requête de la personne, sauf si elle a été condamnée pour une infraction de l’article 706-47 du Code de procédure pénale.
 Ce qu’il faut vérifier : la peine prononcée et la date de son paiement, de son exécution ou de sa prescription, ou, pour un sursis, celle où la condamnation est devenue non avenue, d’où court le délai de réhabilitation ; une interdiction, une incapacité ou une déchéance prononcée à titre définitif comme peine complémentaire, un suivi socio-judiciaire ou une interdiction d’activité au contact de mineurs, qui retarde les effets de la réhabilitation (le détail).
-Un jeune conducteur perd des points pendant le permis probatoire.
+Un jeune conducteur perd des points pendant le permis probatoire
 Le délai probatoire dure trois ans, deux après un apprentissage anticipé de la conduite, et il est réduit pour le titulaire d’un premier permis qui suit une formation complémentaire sans commettre d’infraction ayant donné lieu à un retrait de points ou à une restriction ou une suspension du droit de conduire.
 Le permis y gagne des points chaque année, tant qu’aucune infraction ayant donné lieu à un retrait de points n’a été commise depuis son début : une seule suffit à arrêter ce gain, et la récupération de tous les points après deux ans sans infraction ne joue pas pendant ce délai (Code de la route, art.
 L.
 223-1).
 Ce qu’il faut vérifier : le solde de points, que le titulaire consulte sur le téléservice Mes points permis, avec un calendrier prévisionnel de récupération (Service-public, consulter les informations du permis) ; à zéro point, le permis perd sa validité (le détail).
-La cause est réglée depuis longtemps, une trace demeure.
+La cause est réglée depuis longtemps, une trace demeure
 La dernière colonne du tableau dit qui la fait cesser, et l’on y lit trois cas.
 Le temps suffit pour les points du permis, le malus, la réhabilitation légale et le droit à l’oubli.
 Ailleurs, c’est la personne qui agit : elle lève l’interdiction d’émettre des chèques dès qu’elle justifie avoir réglé le chèque ou constitué la provision, fait radier par anticipation une inscription pour surendettement dès qu’elle justifie avoir réglé toutes ses dettes, et peut obtenir du tribunal, par une requête, l’exclusion du bulletin n° 2.
@@ -157,10 +157,10 @@ Le bulletin n° 3 ne retient que les peines privatives de liberté de plus de de
 Seule la personne peut l’obtenir (art.
 777).
 La réhabilitation légale est acquise de plein droit, sans démarche, à la personne qui n’a subi aucune nouvelle condamnation criminelle ou correctionnelle pendant un délai de :
-trois ans pour une amende ou des jours-amende (une contribution quotidienne fixée par le juge, due pendant un certain nombre de jours ; Code pénal, art.
-131-5), à compter du paiement ou de la prescription ;
-cinq ans pour une condamnation unique à un emprisonnement d’un an au plus, ou à une autre peine non privative de liberté, à compter de l’exécution ou de la prescription ;
-dix ans pour une condamnation unique à un emprisonnement de dix ans au plus, ou pour plusieurs dont le total ne dépasse pas cinq ans, à compter de l’expiration de la peine ou de la prescription.
+Trois ans pour une amende ou des jours-amende (une contribution quotidienne fixée par le juge, due pendant un certain nombre de jours ; Code pénal, art.
+131-5), à compter du paiement ou de la prescription
+Cinq ans pour une condamnation unique à un emprisonnement d’un an au plus, ou à une autre peine non privative de liberté, à compter de l’exécution ou de la prescription
+Dix ans pour une condamnation unique à un emprisonnement de dix ans au plus, ou pour plusieurs dont le total ne dépasse pas cinq ans, à compter de l’expiration de la peine ou de la prescription
 Pour une condamnation avec sursis, le délai court du jour où elle est « non avenue » : pour un sursis simple, cinq ans après la condamnation, si aucun crime ou délit commis pendant ces cinq ans n’en a fait révoquer totalement le sursis (Code pénal, art.
 132-35).
 Au-delà de ces trois cas — notamment réclusion criminelle, emprisonnement de plus de dix ans, emprisonnements cumulés de plus de cinq ans —, la loi ne prévoit pas de réhabilitation de plein droit.
@@ -235,22 +235,22 @@ L.
 113-2-1).
 Là, le droit n’attend plus que le passé s’efface : il interdit de poser la question.
 Ce que montrent ces durées : un choix, et pas le même pour tout le monde
-D’un registre à l’autre, la durée d’une trace ne dit pas la gravité de l’erreur.
+D’un registre à l’autre, la durée d’une trace ne dit pas la gravité de l’erreur
 Six mois pour un point, cinq ans pour un incident de crédit non régularisé, quarante ans pour une condamnation pour crime ou délit inscrite au bulletin n° 1 : chaque durée est fixée par un texte.
 Et chaque trace a ses lecteurs : les prêteurs pour le fichier des incidents de crédit, que le code destine à l’appréciation de la solvabilité de qui demande un crédit ; les juges pour le bulletin n° 1 ; des administrations et des employeurs pour le bulletin n° 2 ; le nouvel assureur pour le relevé d’informations.
 Certaines traces protègent, et c’est leur raison d’être.
 La question que pose La Société du premier coup est ailleurs : la durée est-elle proportionnée à ce que la trace protège encore, et quelqu’un est-il chargé de la réexaminer ?
-Qui efface compte autant que le délai.
+Qui efface compte autant que le délai
 Les points du permis, le malus, la réhabilitation légale et le droit à l’oubli ne demandent aucune démarche : le temps suffit, ou la règle s’applique d’office.
 La régularisation d’un chèque abrège l’interdiction bancaire, l’exclusion du bulletin n° 2 passe par le tribunal, et la radiation de l’inscription au FICP après un remboursement dépend d’un tiers.
 Le livre montre l’autre bout de la chaîne avec l’indicateur « 040 » de la Banque de France, qui signalait aux banques les dirigeants ayant connu une liquidation judiciaire dans les trois années précédentes.
 Un décret l’a supprimé d’un trait en septembre 2013 pour une liquidation unique, hors faillite personnelle et interdiction de gérer, y compris pour les dirigeants qui y figuraient déjà ; le même texte a porté de trois à cinq ans la durée pendant laquelle la liquidation peut être communiquée aux banques (décret n° 2013-799 ; repère chiffré).
 Face à deux formes d’échec financier, deux politiques de la mémoire coexistent : pour l’une, un signal retiré d’un coup à toute une catégorie, l’information restant connue des banques ; pour l’autre, une radiation au cas par cas. « La durée d’une trace n’est pas une propriété de l’échec.
 C’est un choix », écrit le livre.
-Oublier n’est pas toujours effacer.
+Oublier n’est pas toujours effacer
 Les huit lignes du tableau et l’indicateur « 040 » font voir quatre manières d’oublier, qui n’ont ni le même coût ni les mêmes effets : supprimer l’information (la radiation du FICP, le retrait d’une fiche du casier) ; en restreindre les destinataires (l’exclusion du bulletin n° 2 laisse la condamnation au bulletin n° 1) ; interdire de la demander ou d’en tenir compte (le droit à l’oubli, l’assurance sans questionnaire) ; changer le signal qui lui est attaché (l’indicateur « 040 » a disparu, la liquidation a eu lieu).
 Certains doivent attendre que leur passé s’efface ; pour d’autres, une règle interdit d’emblée de s’en servir contre eux.
-Et beaucoup d’erreurs ne s’inscrivent dans aucun de ces registres.
+Et beaucoup d’erreurs ne s’inscrivent dans aucun de ces registres
 Aucun ne retient les premières années d’études ratées, ni les mois de loyer qu’un parent a payés pendant une réorientation : au chapitre 8, le livre suit ces « erreurs qui disparaissent » et ce qui les fait disparaître — un virement, une caution, un savoir.
 Le tableau de cette page ne mesure donc qu’une partie du coût d’une erreur : ce coût dépend aussi de ce que l’on a pour tenir pendant que le délai court, et de la chance d’avoir commis une erreur qui ne s’inscrit pas.
 C’est ce que le livre appelle la réversibilité sociale.
