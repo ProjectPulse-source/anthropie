@@ -52,6 +52,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-13 (suite 2) — Décisions déléguées par l'auteur : clarté pour le lecteur
+
+L'auteur : « Je te laisse arbitrer ce qui est le plus pertinent du point de vue de la clarté pour le lecteur. »
+- Cartes de partage : le texte secondaire (adresse, années, légendes des mini-figures) passe de (150, 146, 143),
+  2,6 à 2,8:1 sur le fond, à #686560, 4,81:1 au plus sombre (`og_dossier_dette.URL_GREY`, `og_ressources_livre_base.URL`) ;
+  le mois et l'année se soudent (« 8 septembre / 2025 », « October / 2017 ») ; 158 images régénérées par leurs
+  seize générateurs ; comparaison pixel à pixel : 151 ne changent que par ce gris, les 7 autres par la coupure de la
+  date (accroche anglaise des « Onze formules » : « 8 September 2025, ten-year yields », sans « On », pour tenir sur
+  deux lignes).
+- Index des ressources : le bloc des guides s'appelle « Chiffres et règles, vérifiés à la source » (« Figures checked at
+  source » en anglais, où la page juridique n'existe pas), et ses pages le portent dans leur ligne d'appartenance ;
+  « Données et droit » était ambigu pour quatre lecteurs sur sept.
+- `/combien-de-temps-une-erreur-reste-inscrite/` : trois exemples de la peine du 2°, prononcés à la place de
+  l'emprisonnement (art. 131-3), et le cas inverse : un emprisonnement sous bracelet électronique (art. 132-25) ou avec
+  sursis et travail d'intérêt général reste un emprisonnement, dont la durée fixe le délai.
+- `/en/radioactive-waste-volume-or-radioactivity/` : « construction licence » (art. L. 593-7 et L. 593-11).
+- Non retenus, faute de gain pour le lecteur : « Courriel » dans la barre de partage (il périmerait les instantanés de
+  tout le site) ; une graphie nouvelle de « 1er ».
+
 ### 2026-11-13 (suite) — Lot « guides » : arbitrage externe, relectures, contrôleurs des figures ; Parcoursup à 320 px
 
 Pièce externe remise par l'auteur, archivée avant lecture, arbitrée par écrit (`06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ARBITRAGE_EXTERNE_2026-11-13.md`) ;
