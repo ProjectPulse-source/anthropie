@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Déchets radioactifs : le volume dit-il le problème ?
 Les déchets radioactifs se comptent d’abord en mètres cubes : 1,89 million fin 2024 dans les bilans de l’Andra.
@@ -38,9 +38,11 @@ Au Cires, dans l’Aube, se trouvent 68 % des déchets de très faible activité
 Les catégories qui concentrent la radioactivité n’ont pas encore de stockage définitif.
 Selon l’Andra, des déchets de haute activité et de moyenne activité à vie longue sont « produits et entreposés sur leurs sites de production, en attendant la création du centre de stockage destiné à les accueillir : Cigéo » ; le stockage des déchets de faible activité à vie longue est à l’étude.
 Cigéo est un centre de stockage en couche géologique profonde prévu à Bure (Meuse).
-L’Andra en a demandé l’autorisation de création en janvier 2023.
-L’enquête publique s’est close le 16 juillet 2026, et la commission d’enquête a rendu en août un avis favorable, assorti de deux réserves et de deux recommandations.
-Cet avis ne vaut pas autorisation : la procédure prévoit ensuite un avant-projet de décret transmis à l’Andra pour observations, un avis de l’Autorité de sûreté nucléaire et de radioprotection, puis un décret pris après avis du Conseil d’État.
+La procédure d’autorisation de création de Cigéo
+Étape 1 Janvier 2023 : l’Andra demande l’autorisation de création
+Étape 2 16 juillet 2026 : l’enquête publique se clôt
+Étape 3 Août 2026 : la commission d’enquête rend un avis favorable, assorti de deux réserves et de deux recommandations ; cet avis ne vaut pas autorisation
+Ensuite La procédure prévoit un avant-projet de décret transmis à l’Andra pour observations, un avis de l’Autorité de sûreté nucléaire et de radioprotection, puis un décret pris après avis du Conseil d’État
 Au 12 novembre 2026, aucun décret d’autorisation de création n’avait été publié au Journal officiel.
 Ce qui reste hors des bilans
 Certains déchets ne figurent pas dans les bilans de l’Andra.

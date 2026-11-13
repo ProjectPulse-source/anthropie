@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /en/radioactive-waste-volume-or-radioactivity/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Radioactive waste: does volume tell the problem?
 Radioactive waste is first counted in cubic metres: 1.89 million at end-2024 in Andra’s balances.
@@ -38,9 +38,11 @@ Cires, in the Aube, holds 68% of very-low-level waste.
 The categories in which the radioactivity is concentrated have no final disposal yet.
 According to Andra, some high-level and long-lived intermediate-level waste is “produced and stored on its production sites, pending the creation of the disposal facility intended to receive it: Cigéo” (our translation); disposal for low-level long-lived waste is under study.
 Cigéo is a deep geological disposal facility planned at Bure (Meuse).
-Andra applied for Cigéo’s creation licence in January 2023.
-The public inquiry closed on 16 July 2026, and the inquiry commission issued a favourable opinion in August, with two reservations and two recommendations.
-This opinion is not a licence: the procedure then provides for a preliminary draft decree sent to Andra for comments, an opinion from the Nuclear Safety and Radiation Protection Authority (ASNR), and a decree issued after consulting the Conseil d’État.
+The creation licence procedure for Cigéo
+Step 1 January 2023: Andra applies for Cigéo’s creation licence
+Step 2 16 July 2026: the public inquiry closes
+Step 3 August 2026: the inquiry commission issues a favourable opinion, with two reservations and two recommendations; this opinion is not a licence
+Then The procedure provides for a preliminary draft decree sent to Andra for comments, an opinion from the Nuclear Safety and Radiation Protection Authority (ASNR), and a decree issued after consulting the Conseil d’État
 As of 12 November 2026, no creation licence decree had been published in the Journal officiel.
 What remains outside the balances
 Some waste does not appear in Andra’s balances.

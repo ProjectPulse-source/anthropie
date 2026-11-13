@@ -44,6 +44,18 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 45
   nature: "Données ouvertes recalculées (Andra, Inventaire national)"
+reperes:  # trois repères sous le chapô, à partir de 600 px de large (partials/reperes-page.html ; règle 17 du site,
+  # reprise du style du 13/11/2026, test du premier écran). Chacun reprend un résultat écrit dans sa section, avec sa
+  # période et sa réserve, à son contact. Aucun nombre saisi : jetons {dr.*} (scripts/update_dechets_radioactifs.py).
+  - ancre: "volume-radioactivite"
+    fort: "{dr.ha_act} %"
+    texte: "de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte) dans {dr.ha_vol_a} % du volume : les déchets de haute activité des bilans de l'Andra, fin {dr.an_act}"
+  - ancre: "volume-radioactivite"
+    fort: "Plus de neuf dixièmes du volume"
+    texte: "la même année : les déchets de faible et moyenne activité à vie courte et de très faible activité, qui portaient {dr.masse_act} % de la radioactivité déclarée"
+  - ancre: "stockage"
+    fort: "Cigéo"
+    texte: "n'est pas encore autorisé : le centre de stockage prévu à Bure pour les déchets de haute activité et de moyenne activité à vie longue"
 ---
 
 {{< reutiliser-ancre >}}
@@ -81,7 +93,9 @@ Deux classements donnent des hiérarchies très différentes, et le graphe les p
 
 Le graphe montre aussi que la haute activité et les deux catégories à vie longue (moyenne et faible activité) n'ont pas encore de filière de stockage définitif en exploitation, y compris la faible activité à vie longue, qui ne porte que {{< dr-val "act_favl" >}}&nbsp;% de la radioactivité déclarée. Ce constat reflète des contraintes de gestion liées notamment à la période radioactive, au niveau d'activité et aux propriétés des déchets&nbsp;; il ne permet pas d'attribuer la situation à la seule durée de vie.
 
-La radioactivité de chaque catégorie figure dans {{< dr-val "nb_editions" >}} fichiers ({{< dr-val "editions" >}})&nbsp;: déclarée chaque année jusqu'aux données de fin 2016, elle ne l'est plus, depuis, pour l'essentiel du volume, qu'aux éditions de l'inventaire&nbsp;; les fichiers des autres années n'en donnent que pour moins d'un millième du volume. Dans chacun de ces cinq fichiers, la haute activité représente entre {{< dr-val "ha_ed_bas" >}} et {{< dr-val "ha_ed_haut" >}}&nbsp;% de la radioactivité recensée dans les cinq catégories des bilans, et la haute activité avec la moyenne activité à vie longue, au moins {{< dr-val "ha_mavl_ed_bas" >}}&nbsp;%. Les données disponibles ne permettent pas, sans harmonisation supplémentaire, de lire ces parts comme une évolution, ni d'expliquer la variation d'une édition à l'autre. Une partie des volumes n'a pas de radioactivité déclarée&nbsp;; si l'on suppose que ces volumes ont l'activité moyenne de leur catégorie, hypothèse non vérifiée, la part de la haute activité serait de {{< dr-val "ha_act_aj" >}}&nbsp;%.
+La radioactivité de chaque catégorie figure dans {{< dr-val "nb_editions" >}} fichiers ({{< dr-val "editions" >}})&nbsp;: déclarée chaque année jusqu'aux données de fin 2016, elle ne l'est plus, depuis, pour l'essentiel du volume, qu'aux éditions de l'inventaire&nbsp;; les fichiers des autres années n'en donnent que pour moins d'un millième du volume. Dans chacun de ces cinq fichiers, la haute activité représente entre {{< dr-val "ha_ed_bas" >}} et {{< dr-val "ha_ed_haut" >}}&nbsp;% de la radioactivité recensée dans les cinq catégories des bilans, et la haute activité avec la moyenne activité à vie longue, au moins {{< dr-val "ha_mavl_ed_bas" >}}&nbsp;%. Les données disponibles ne permettent pas, sans harmonisation supplémentaire, de lire ces parts comme une évolution, ni d'expliquer la variation d'une édition à l'autre.
+
+Une partie des volumes n'a pas de radioactivité déclarée&nbsp;; si l'on suppose que ces volumes ont l'activité moyenne de leur catégorie, hypothèse non vérifiée, la part de la haute activité serait de {{< dr-val "ha_act_aj" >}}&nbsp;%.
 
 **Ce que le graphe ne montre pas.** Le becquerel mesure un nombre de désintégrations par seconde. Il ne mesure directement ni la dose reçue, ni la toxicité d'un radionucléide, ni le risque sanitaire, ni la difficulté ou le coût de gestion. Le graphe montre comment se répartit la radioactivité déclarée entre les catégories&nbsp;; il ne classe ni les risques ni les coûts.
 
@@ -91,11 +105,25 @@ Fin {{< dr-val "an_vol" >}}, {{< dr-val "stocke_fmavc" >}}&nbsp;% du volume des 
 
 Les catégories qui concentrent la radioactivité n'ont pas encore de stockage définitif. Selon l'Andra, des déchets de haute activité et de moyenne activité à vie longue sont «&nbsp;produits et entreposés sur leurs sites de production, en attendant la création du centre de stockage destiné à les accueillir&nbsp;: Cigéo&nbsp;»&nbsp;; le stockage des déchets de faible activité à vie longue est à l'étude.
 
-Cigéo est un centre de stockage en couche géologique profonde prévu à Bure (Meuse). L'Andra en a demandé l'autorisation de création en janvier 2023. L'enquête publique s'est close le 16&nbsp;juillet 2026, et la commission d'enquête a rendu en août un avis favorable, assorti de deux réserves et de deux recommandations. Cet avis ne vaut pas autorisation&nbsp;: la procédure prévoit ensuite un avant-projet de décret transmis à l'Andra pour observations, un avis de l'Autorité de sûreté nucléaire et de radioprotection, puis un décret pris après avis du Conseil d'État. Au 12&nbsp;novembre 2026, aucun décret d'autorisation de création n'avait été publié au Journal officiel.
+Cigéo est un centre de stockage en couche géologique profonde prévu à Bure (Meuse).
+
+<div class="fiche-etapes">
+<p class="surtitre-bloc">La procédure d'autorisation de création de Cigéo</p>
+<ol>
+<li><span class="fiche-etapes__n">Étape&nbsp;1</span> <span>Janvier 2023&nbsp;: l'Andra demande l'autorisation de création</span></li>
+<li><span class="fiche-etapes__n">Étape&nbsp;2</span> <span>16&nbsp;juillet 2026&nbsp;: l'enquête publique se clôt</span></li>
+<li><span class="fiche-etapes__n">Étape&nbsp;3</span> <span>Août 2026&nbsp;: la commission d'enquête rend un avis favorable, assorti de deux réserves et de deux recommandations&nbsp;; cet avis ne vaut pas autorisation</span></li>
+<li><span class="fiche-etapes__n">Ensuite</span> <span>La procédure prévoit un avant-projet de décret transmis à l'Andra pour observations, un avis de l'Autorité de sûreté nucléaire et de radioprotection, puis un décret pris après avis du Conseil d'État</span></li>
+</ol>
+</div>
+
+Au 12&nbsp;novembre 2026, aucun décret d'autorisation de création n'avait été publié au Journal officiel.
 
 ## Ce qui reste hors des bilans {#hors-bilans}
 
-Certains déchets ne figurent pas dans les bilans de l'Andra. Parmi eux se trouvent les résidus historiques de conversion de l'uranium du site d'Orano à Malvési&nbsp;: l'Andra en publie environ {{< dr-val "malvesi" >}}&nbsp;m³ (installation ECRIN, bassins d'évaporation et de décantation), précise que ces volumes «&nbsp;ne sont pas comptabilisés dans les bilans&nbsp;» et que «&nbsp;la recherche d'une filière sûre de gestion à long terme sur le site de Malvési est en cours&nbsp;». Restent aussi hors des bilans, notamment, les résidus du traitement des minerais d'uranium des anciens sites miniers et des déchets à radioactivité naturelle élevée&nbsp;: l'Andra les compte en tonnes (des dizaines de millions), et ils ne s'additionnent donc pas à ces mètres cubes. Des stockages historiques, qui relèvent de leurs détenteurs, en sont également absents.
+Certains déchets ne figurent pas dans les bilans de l'Andra. Parmi eux se trouvent les résidus historiques de conversion de l'uranium du site d'Orano à Malvési&nbsp;: l'Andra en publie environ {{< dr-val "malvesi" >}}&nbsp;m³ (installation ECRIN, bassins d'évaporation et de décantation), précise que ces volumes «&nbsp;ne sont pas comptabilisés dans les bilans&nbsp;» et que «&nbsp;la recherche d'une filière sûre de gestion à long terme sur le site de Malvési est en cours&nbsp;».
+
+Restent aussi hors des bilans, notamment, les résidus du traitement des minerais d'uranium des anciens sites miniers et des déchets à radioactivité naturelle élevée&nbsp;: l'Andra les compte en tonnes (des dizaines de millions), et ils ne s'additionnent donc pas à ces mètres cubes. Des stockages historiques, qui relèvent de leurs détenteurs, en sont également absents.
 
 ## Ce que ces données ne disent pas {#limites}
 

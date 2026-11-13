@@ -42,6 +42,17 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["anthropie-ordre-ici-dette-ailleurs"]
   rang: 45
   nature: "Open data recomputed (Andra, National Inventory)"
+reperes:  # three key results under the standfirst, from 600 px wide (partials/reperes-page.html ; règle 17 du site,
+  # reprise du style du 13/11/2026, test du premier écran). Same results, periods, caveat and tokens as the French page.
+  - ancre: "volume-radioactivity"
+    fort: "{dr.ha_act}%"
+    texte: "of the declared radioactivity (mostly an upper bound, not an exact measurement) in {dr.ha_vol_a}% of the volume: high-level waste in Andra's balances, France, end-{dr.an_act}"
+  - ancre: "volume-radioactivity"
+    fort: "Over nine tenths of the volume"
+    texte: "the same year: low- and intermediate-level short-lived waste and very-low-level waste, which carried {dr.masse_act}% of the declared radioactivity"
+  - ancre: "disposal"
+    fort: "Cigéo"
+    texte: "is not yet licensed: the disposal facility planned at Bure for high-level and long-lived intermediate-level waste"
 ---
 
 {{< reutiliser-ancre >}}
@@ -79,7 +90,9 @@ The two rankings are very different, and the chart sets them side by side: by vo
 
 The chart also shows that high-level waste and the two long-lived categories (intermediate- and low-level long-lived) have no final disposal route in operation yet, including low-level long-lived waste, which holds only {{< dr-val "act_favl" >}}% of the declared radioactivity. This reflects management constraints linked in particular to half-life, activity level and the properties of the waste; it does not allow the situation to be attributed to lifespan alone.
 
-The radioactivity of each category appears in {{< dr-val "nb_editions" >}} files ({{< dr-val "editions" >}}): declared every year up to the end-2016 data, it has since been declared, for the bulk of the volume, only in the inventory's editions; the files for other years give it for less than a thousandth of the volume. In each of these five files, high-level waste accounts for between {{< dr-val "ha_ed_bas" >}}% and {{< dr-val "ha_ed_haut" >}}% of the radioactivity recorded in the five categories of the balances, and high-level together with long-lived intermediate-level waste for at least {{< dr-val "ha_mavl_ed_bas" >}}%. The available data do not, without further harmonisation, allow these shares to be read as a trend, nor the variation from one edition to the next to be explained. Part of the volume has no declared radioactivity; assuming it has the average activity of its category, an unverified assumption, the share of high-level waste would be {{< dr-val "ha_act_aj" >}}%.
+The radioactivity of each category appears in {{< dr-val "nb_editions" >}} files ({{< dr-val "editions" >}}): declared every year up to the end-2016 data, it has since been declared, for the bulk of the volume, only in the inventory's editions; the files for other years give it for less than a thousandth of the volume. In each of these five files, high-level waste accounts for between {{< dr-val "ha_ed_bas" >}}% and {{< dr-val "ha_ed_haut" >}}% of the radioactivity recorded in the five categories of the balances, and high-level together with long-lived intermediate-level waste for at least {{< dr-val "ha_mavl_ed_bas" >}}%. The available data do not, without further harmonisation, allow these shares to be read as a trend, nor the variation from one edition to the next to be explained.
+
+Part of the volume has no declared radioactivity; assuming it has the average activity of its category, an unverified assumption, the share of high-level waste would be {{< dr-val "ha_act_aj" >}}%.
 
 **What the chart does not show.** The becquerel measures a number of decays per second. It does not directly measure the dose received, the toxicity of a radionuclide, health risk, or the difficulty or cost of management. The chart shows how declared radioactivity is distributed across categories; it ranks neither risks nor costs.
 
@@ -89,11 +102,25 @@ At end-{{< dr-val "an_vol" >}}, {{< dr-val "stocke_fmavc" >}}% of the volume of 
 
 The categories in which the radioactivity is concentrated have no final disposal yet. According to Andra, some high-level and long-lived intermediate-level waste is "produced and stored on its production sites, pending the creation of the disposal facility intended to receive it: Cigéo" (our translation); disposal for low-level long-lived waste is under study.
 
-Cigéo is a deep geological disposal facility planned at Bure (Meuse). Andra applied for Cigéo's creation licence in January 2023. The public inquiry closed on 16 July 2026, and the inquiry commission issued a favourable opinion in August, with two reservations and two recommendations. This opinion is not a licence: the procedure then provides for a preliminary draft decree sent to Andra for comments, an opinion from the Nuclear Safety and Radiation Protection Authority (ASNR), and a decree issued after consulting the Conseil d'État. As of 12 November 2026, no creation licence decree had been published in the Journal officiel.
+Cigéo is a deep geological disposal facility planned at Bure (Meuse).
+
+<div class="fiche-etapes">
+<p class="surtitre-bloc">The creation licence procedure for Cigéo</p>
+<ol>
+<li><span class="fiche-etapes__n">Step&nbsp;1</span> <span>January 2023: Andra applies for Cigéo's creation licence</span></li>
+<li><span class="fiche-etapes__n">Step&nbsp;2</span> <span>16 July 2026: the public inquiry closes</span></li>
+<li><span class="fiche-etapes__n">Step&nbsp;3</span> <span>August 2026: the inquiry commission issues a favourable opinion, with two reservations and two recommendations; this opinion is not a licence</span></li>
+<li><span class="fiche-etapes__n">Then</span> <span>The procedure provides for a preliminary draft decree sent to Andra for comments, an opinion from the Nuclear Safety and Radiation Protection Authority (ASNR), and a decree issued after consulting the Conseil d'État</span></li>
+</ol>
+</div>
+
+As of 12 November 2026, no creation licence decree had been published in the Journal officiel.
 
 ## What remains outside the balances {#outside-balances}
 
-Some waste does not appear in Andra's balances. This includes the historical uranium conversion residues at Orano's Malvési site: Andra reports about {{< dr-val "malvesi" >}} m³ (ECRIN facility, evaporation and settling ponds) and states that these volumes "are not counted in the balances" and that "the search for a safe long-term management route on the Malvési site is under way" (our translations). Also outside the balances are, in particular, residues from the processing of uranium ore at former mining sites and waste with enhanced natural radioactivity: Andra counts them in tonnes (tens of millions), so they cannot be added to these cubic metres. Historical disposal sites, which are the responsibility of their holders, are also absent from them.
+Some waste does not appear in Andra's balances. This includes the historical uranium conversion residues at Orano's Malvési site: Andra reports about {{< dr-val "malvesi" >}} m³ (ECRIN facility, evaporation and settling ponds) and states that these volumes "are not counted in the balances" and that "the search for a safe long-term management route on the Malvési site is under way" (our translations).
+
+Also outside the balances are, in particular, residues from the processing of uranium ore at former mining sites and waste with enhanced natural radioactivity: Andra counts them in tonnes (tens of millions), so they cannot be added to these cubic metres. Historical disposal sites, which are the responsibility of their holders, are also absent from them.
 
 ## What these data do not say {#limits}
 

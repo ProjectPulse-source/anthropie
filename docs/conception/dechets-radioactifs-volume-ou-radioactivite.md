@@ -218,3 +218,25 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   de la figure et les deux cartes de partage servis identiques, octet pour octet, au commit ; CSV servi avec la colonne
   `activite_declaree_majorante_bq` ; « Page mise à jour le 12 novembre 2026 ».
 - Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
+
+### Reprise du style (13/11/2026)
+
+- Consigne de l'auteur (13/11/2026) : une mise en page « ultra lisible », au niveau de la page Parcoursup (règle 17
+  du `CLAUDE.md` du site), adaptée au sujet. Étude, choix et mesures :
+  `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ETUDE_STYLE.md`. Organes existants seulement
+  (`_ressource-relief.scss`, `reperes-page.html`) ; les phrases ne changent pas, elles prennent une forme.
+- Organes : trois repères (97,2 % de la radioactivité déclarée, pour l'essentiel un maximum, non une mesure exacte,
+  dans 0,25 % du volume, fin 2021 ; plus de neuf dixièmes du volume pour 0,12 % ; Cigéo pas encore autorisé, repère à
+  changer avec le résultat en une phrase à la publication d'un décret) ; la procédure de Cigéo en fiche d'étapes (trois
+  étapes datées, puis la suite prévue ; la phrase vérifiée du 12/11/2026 reste sous la fiche ; « en août » devient
+  « août 2026 ») ; deux paragraphes coupés. Jetons `{dr.*}` seulement.
+- Inchangés : titre, adresse, ancres, chapô, figures, nombres, réserves, questions fréquentes, sources, « Réutiliser ».
+  Aucune modification de fond : `lastmod`, journal et `data/dates_affichage.json` inchangés ; `refonte` reste au
+  12/11/2026 (instantané du 13/11, postérieur).
+- Contrôles : `check-all --ci` 19/19 à 0 ; build CI et `typo_build` 0 défaut ; liens 0 critique ; rendu 0 ; dates 83/83,
+  0 bloc sans période ; 0 débordement sur onze largeurs de 320 à 1 440 px, avec et sans JavaScript ; aucun texte des
+  blocs sous 12 px ; repères absents sous 600 px ; lecture à côté de la figure dans la limite. Lettre : texte servi avant
+  et après, phrase à phrase ; seules changent les phrases mises en forme ; nombres inchangés. Langue et fidélité : la
+  session, puis un relecteur indépendant (aucun P0 ; P1 traités). Premier écran : deux tours de lecteurs neufs (FR, EN) et un témoin trompeur vu mordre
+  (`LOTS\guides\P\premier_ecran_style.md`) ; constats sur le chapô, inchangé : `LOTS\guides\A_ARBITRER.md`.
+- Instantané de relecture refait le 13/11/2026.
