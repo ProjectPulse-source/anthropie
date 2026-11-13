@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de b7fb3d3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire face à une dépense imprévue ?
 Ne pas pouvoir faire face à une dépense imprévue, est-ce une affaire de pauvreté ?
@@ -11,7 +11,9 @@ Données mises à jour le 26 octobre 2026 Eurostat, enquête EU-SILC, jeu ilc_md
 Télécharger : CSV · JSON
 Qui ne pourrait pas faire face à une dépense imprévue ?
 En France, en 2025, 28,8 % des personnes vivent dans un ménage qui, selon ses propres déclarations, ne pourrait pas, par ses seuls moyens, faire face à une dépense imprévue de 1 000 € : près de trois sur dix.
-L’écart est très marqué de part et d’autre du seuil de pauvreté : en dessous, la part atteint 65,9 %, environ deux tiers ; au-dessus, 21,6 %, environ une sur cinq.
+L’écart est très marqué de part et d’autre du seuil de pauvreté :
+en dessous du seuil de pauvreté au-dessus du seuil
+ne pourraient pas faire face à la dépense, en 2025 environ deux tiers 65,9 % environ une sur cinq 21,6 %
 Mais être au-dessus ou en dessous du seuil ne dit pas tout.
 Au-dessus du seuil, là où le classement par le revenu dit « pas pauvre », les situations diffèrent nettement selon la composition du foyer.
 Part des personnes (et non des ménages), selon la déclaration du ménage ; seuil de pauvreté : 60 % du revenu disponible médian national par unité de consommation (Eurostat, EU-SILC).

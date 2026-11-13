@@ -20,6 +20,13 @@
   {{- $v := index $a $k -}}
   {{- if not $v -}}
     {{- errorf "imp-val: cle %q inconnue du bloc %s (page %s)" $k (cond $en "affichage_en" "affichage") .Page.RelPermalink -}}
+  {{- else if eq (.Get 1) "css" -}}
+    {{- /* {{< imp-val "dessous" "css" >}} : la même valeur, écrite pour une propriété CSS (« 65,9 » -> « 65.9 », sans espace
+           ni signe typographique) : largeur d'une barre de grille, style="--v:…" (reprise du style du 13/11/2026, même
+           contrat que psup-val). Une valeur qui n'est pas un nombre fait échouer le build. */ -}}
+    {{- $c := replaceRE `[\s\x{00a0}\x{202f}]` "" $v | replaceRE `,` "." | replaceRE `\x{2212}` "-" -}}
+    {{- if not (findRE `^-?\d+(\.\d+)?$` $c) -}}{{- errorf "imp-val: %q vaut %q, pas un nombre pour CSS (page %s)" $k $v .Page.RelPermalink -}}{{- end -}}
+    {{- $c -}}
   {{- else -}}{{- $v -}}{{- end -}}
 {{- end -}}
 {{- end -}}

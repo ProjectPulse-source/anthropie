@@ -43,6 +43,19 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["la-societe-du-premier-coup"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 40
   nature: "Données officielles recalculées (Eurostat, EU-SILC)"
+reperes:  # trois repères sous le chapô, à partir de 600 px de large (partials/reperes-page.html ; règle 17 du site,
+  # reprise du style du 13/11/2026, test du premier écran). Chacun reprend un résultat écrit dans sa section, avec sa
+  # période et sa réserve. Aucun nombre saisi : jetons {imp.*} (scripts/update_menages_imprevu.py). Pas de repère pour
+  # l'Union européenne : la question française porte sur un montant plus bas (limites de la page).
+  - ancre: "qui"
+    fort: "{imp.total} %"
+    texte: "des personnes vivant en France font partie, en {imp.annee}, d'un ménage qui déclare ne pas pouvoir faire face, par ses seuls moyens, à une dépense imprévue de {imp.montant_question} €"
+  - ancre: "qui"
+    fort: "{imp.dessous} %"
+    texte: "des personnes sous le seuil de pauvreté ne pourraient pas faire face à la dépense, contre {imp.dessus} % de celles qui vivent au-dessus, en {imp.annee}"
+  - ancre: "test"
+    fort: "{imp.ps_dessus} %"
+    texte: "des personnes vivant dans un foyer monoparental ne pourraient pas faire face à la dépense, contre {imp.c1_dessus} % de celles vivant dans un foyer de deux adultes avec un enfant, dans les deux cas au-dessus du seuil de pauvreté, en {imp.annee} : un écart entre deux groupes, qui ne mesure pas ce qui arriverait si un foyer passait de deux adultes à un seul"
 ---
 
 {{< reutiliser-ancre >}}
@@ -51,7 +64,12 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 ## Qui ne pourrait pas faire face à une dépense imprévue&nbsp;? {#qui}
 
-En France, en {{< imp-val "annee" >}}, {{< imp-val "total" >}}&nbsp;% des personnes vivent dans un ménage qui, selon ses propres déclarations, ne pourrait pas, par ses seuls moyens, faire face à une dépense imprévue de {{< imp-val "montant_question" >}}&nbsp;€&nbsp;: près de trois sur dix. L'écart est très marqué de part et d'autre du seuil de pauvreté&nbsp;: en dessous, la part atteint {{< imp-val "dessous" >}}&nbsp;%, environ deux tiers&nbsp;; au-dessus, {{< imp-val "dessus" >}}&nbsp;%, environ une sur cinq.
+En France, en {{< imp-val "annee" >}}, {{< imp-val "total" >}}&nbsp;% des personnes vivent dans un ménage qui, selon ses propres déclarations, ne pourrait pas, par ses seuls moyens, faire face à une dépense imprévue de {{< imp-val "montant_question" >}}&nbsp;€&nbsp;: près de trois sur dix. L'écart est très marqué de part et d'autre du seuil de pauvreté&nbsp;:
+
+<div class="grille-reperes" role="table" aria-label="Part des personnes dont le ménage ne pourrait pas faire face à une dépense imprévue, selon la position par rapport au seuil de pauvreté, France, {{< imp-val "annee" >}}">
+<div class="grille-reperes__rang grille-reperes__tete" role="row"><span role="columnheader"></span> <span role="columnheader">en dessous du seuil de pauvreté</span> <span role="columnheader">au-dessus du seuil</span></div>
+<div class="grille-reperes__rang" role="row"><span role="rowheader">ne pourraient pas faire face à la dépense, en {{< imp-val "annee" >}}</span> <span class="grille-reperes__val" role="cell"><b>environ deux tiers</b> <small>{{< imp-val "dessous" >}}&nbsp;%</small> <span class="barre-part" style="--v:{{< imp-val "dessous" "css" >}}"><i></i></span></span> <span class="grille-reperes__val" role="cell"><b>environ une sur cinq</b> <small>{{< imp-val "dessus" >}}&nbsp;%</small> <span class="barre-part" style="--v:{{< imp-val "dessus" "css" >}}"><i></i></span></span></div>
+</div>
 
 Mais être au-dessus ou en dessous du seuil ne dit pas tout. Au-dessus du seuil, là où le classement par le revenu dit «&nbsp;pas pauvre&nbsp;», les situations diffèrent nettement selon la composition du foyer.
 
@@ -74,13 +92,17 @@ Mais être au-dessus ou en dessous du seuil ne dit pas tout. Au-dessus du seuil,
 
 ## Ce que la comparaison permet&nbsp;— et ne permet pas&nbsp;— de dire {#test}
 
-Être au-dessus du seuil de pauvreté ne garantit pas de pouvoir absorber une dépense imprévue. Parmi les personnes situées au-dessus de ce seuil en France en {{< imp-val "annee" >}}, {{< imp-val "ps_dessus" >}}&nbsp;% de celles vivant dans un foyer d'un adulte avec un ou plusieurs enfants ne pourraient pas, selon la déclaration de leur ménage, faire face à une dépense de {{< imp-val "montant_question" >}}&nbsp;€, contre {{< imp-val "c1_dessus" >}}&nbsp;% de celles vivant dans un foyer de deux adultes avec un enfant. L'écart est de {{< imp-val "ecart_enf" >}}. Il décrit deux groupes&nbsp;: il ne mesure pas ce qui arriverait à une personne si son foyer passait de deux adultes à un seul. Ces groupes peuvent aussi différer par leur revenu exact au-dessus du seuil, le nombre et l'âge des enfants, l'emploi, les dépenses contraintes et les aides sociales reçues. Les données publiées ici ne permettent pas de départager ces explications. Au-dessus du seuil, la série permet d'autres comparaisons&nbsp;:
+Être au-dessus du seuil de pauvreté ne garantit pas de pouvoir absorber une dépense imprévue. Parmi les personnes situées au-dessus de ce seuil en France en {{< imp-val "annee" >}}, {{< imp-val "ps_dessus" >}}&nbsp;% de celles vivant dans un foyer d'un adulte avec un ou plusieurs enfants ne pourraient pas, selon la déclaration de leur ménage, faire face à une dépense de {{< imp-val "montant_question" >}}&nbsp;€, contre {{< imp-val "c1_dessus" >}}&nbsp;% de celles vivant dans un foyer de deux adultes avec un enfant. L'écart est de {{< imp-val "ecart_enf" >}}.
+
+Il décrit deux groupes&nbsp;: il ne mesure pas ce qui arriverait à une personne si son foyer passait de deux adultes à un seul. Ces groupes peuvent aussi différer par leur revenu exact au-dessus du seuil, le nombre et l'âge des enfants, l'emploi, les dépenses contraintes et les aides sociales reçues. Les données publiées ici ne permettent pas de départager ces explications. Au-dessus du seuil, la série permet d'autres comparaisons&nbsp;:
 
 - **Avec des enfants**, l'écart entre les foyers d'un adulte avec un ou plusieurs enfants et ceux de deux adultes avec un enfant est compris chaque année, depuis {{< imp-val "debut" >}}, entre {{< imp-val "plage_enf_bas" >}} et {{< imp-val "plage_enf_haut" >}}&nbsp;points.
 - **Sans enfant**, l'écart entre foyers d'un et de deux adultes n'est que de {{< imp-val "ecart_sans" >}} en {{< imp-val "annee" >}} (entre {{< imp-val "plage_sans_bas" >}} et {{< imp-val "plage_sans_haut" >}}&nbsp;points chaque année sur la même période).
 - **Comparé aux foyers de deux adultes avec deux enfants**, l'écart des foyers d'un adulte avec un ou plusieurs enfants est encore de {{< imp-val "ecart_enf2" >}} en {{< imp-val "annee" >}}. La comparaison ne mesure pas pour autant l'effet du nombre d'enfants&nbsp;: la catégorie d'Eurostat que la page appelle «&nbsp;foyer monoparental&nbsp;» réunit tout ménage d'un seul adulte avec un ou plusieurs enfants dépendants (moins de 18 ans, ou de 18 à 24 ans s'ils sont inactifs et vivent avec un parent), et celle des foyers de deux adultes, tout ménage de deux adultes, couple ou non.
 
-Au-dessus du seuil, l'écart entre foyers d'un et de deux adultes est donc deux à trois fois plus grand avec des enfants que sans. Il persiste chaque année depuis {{< imp-val "debut" >}}, mais il ne permet pas d'isoler l'effet propre de la composition du foyer&nbsp;: le nombre et l'âge des enfants, l'emploi, les dépenses contraintes et les aides sociales reçues peuvent aussi différer entre ces foyers. En dessous du seuil, l'écart entre foyers monoparentaux et foyers de deux adultes avec un enfant est plus étroit ({{< imp-val "ecart_enf_dessous" >}} en {{< imp-val "annee" >}})&nbsp;: dans les uns comme dans les autres, une grande majorité des personnes ne pourraient pas faire face à une dépense imprévue. Être au-dessus ou en dessous du seuil ne suffit donc pas à expliquer ces écarts.
+Au-dessus du seuil, l'écart entre foyers d'un et de deux adultes est donc deux à trois fois plus grand avec des enfants que sans. Il persiste chaque année depuis {{< imp-val "debut" >}}, mais il ne permet pas d'isoler l'effet propre de la composition du foyer&nbsp;: le nombre et l'âge des enfants, l'emploi, les dépenses contraintes et les aides sociales reçues peuvent aussi différer entre ces foyers.
+
+En dessous du seuil, l'écart entre foyers monoparentaux et foyers de deux adultes avec un enfant est plus étroit ({{< imp-val "ecart_enf_dessous" >}} en {{< imp-val "annee" >}})&nbsp;: dans les uns comme dans les autres, une grande majorité des personnes ne pourraient pas faire face à une dépense imprévue. Être au-dessus ou en dessous du seuil ne suffit donc pas à expliquer ces écarts.
 
 **Ce que la comparaison ne tranche pas.** Au-dessus du seuil, les foyers monoparentaux pourraient être en moyenne plus proches du seuil que les foyers de deux adultes avec un enfant. Le jeu d'Eurostat ne dit pas à quelle distance du seuil se situe le revenu de chaque foyer&nbsp;; il ne permet donc pas de séparer ce que pèse la composition du foyer de ce que pèse cette distance.
 

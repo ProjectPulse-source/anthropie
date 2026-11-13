@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /en/who-can-cope-with-an-unexpected-expense/, build de b7fb3d3 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /en/who-can-cope-with-an-unexpected-expense/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who can cope with an unexpected expense?
 Is being unable to face an unexpected expense a matter of poverty?
@@ -11,7 +11,9 @@ Data last updated 26 October 2026 Eurostat, EU-SILC survey, dataset ilc_mdes04: 
 Download: CSV · JSON
 Who could not face an unexpected expense?
 In France, in 2025, 28.8% of people live in a household that says it could not meet an unexpected expense of €1,000 from its own resources: nearly three in ten.
-The gap between people on either side of the poverty threshold is very marked: below it, the share reaches 65.9%, about two thirds; above it, 21.6%, about one in five.
+The gap between people on either side of the poverty threshold is very marked:
+below the poverty threshold above the threshold
+could not face the expense, in 2025 about two thirds 65.9% about one in five 21.6%
 But being above or below the threshold is not the whole story.
 Above the threshold, where an income-based classification says “not poor”, situations differ sharply by household composition.
 Share of people (not households), as reported by their household; poverty threshold: 60% of national median equivalised disposable income (Eurostat, EU-SILC).

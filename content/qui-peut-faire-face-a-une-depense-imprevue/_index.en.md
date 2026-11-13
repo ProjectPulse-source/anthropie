@@ -41,6 +41,17 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["la-societe-du-premier-coup"]
   rang: 40
   nature: "Official data recomputed (Eurostat, EU-SILC)"
+reperes:  # three key results under the standfirst, from 600 px wide (partials/reperes-page.html ; règle 17 du site,
+  # reprise du style du 13/11/2026, test du premier écran). Same results, periods, caveat and tokens as the French page.
+  - ancre: "who"
+    fort: "{imp.total}%"
+    texte: "of people in France live in a household that says it could not meet an unexpected expense of €{imp.montant_question} from its own resources, in {imp.annee}"
+  - ancre: "who"
+    fort: "{imp.dessous}%"
+    texte: "of people below the poverty threshold could not face the expense, against {imp.dessus}% of those above it, in {imp.annee}"
+  - ancre: "test"
+    fort: "{imp.ps_dessus}%"
+    texte: "of people in single-parent households could not face the expense, against {imp.c1_dessus}% of those in two-adult households with one child, in both cases above the poverty threshold, in {imp.annee}: a gap between two groups, which does not measure what would happen if a household went from two adults to one"
 ---
 
 {{< reutiliser-ancre >}}
@@ -49,7 +60,12 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 ## Who could not face an unexpected expense? {#who}
 
-In France, in {{< imp-val "annee" >}}, {{< imp-val "total" >}}% of people live in a household that says it could not meet an unexpected expense of €{{< imp-val "montant_question" >}} from its own resources: nearly three in ten. The gap between people on either side of the poverty threshold is very marked: below it, the share reaches {{< imp-val "dessous" >}}%, about two thirds; above it, {{< imp-val "dessus" >}}%, about one in five.
+In France, in {{< imp-val "annee" >}}, {{< imp-val "total" >}}% of people live in a household that says it could not meet an unexpected expense of €{{< imp-val "montant_question" >}} from its own resources: nearly three in ten. The gap between people on either side of the poverty threshold is very marked:
+
+<div class="grille-reperes" role="table" aria-label="Share of people whose household could not face an unexpected expense, by position relative to the poverty threshold, France, {{< imp-val "annee" >}}">
+<div class="grille-reperes__rang grille-reperes__tete" role="row"><span role="columnheader"></span> <span role="columnheader">below the poverty threshold</span> <span role="columnheader">above the threshold</span></div>
+<div class="grille-reperes__rang" role="row"><span role="rowheader">could not face the expense, in {{< imp-val "annee" >}}</span> <span class="grille-reperes__val" role="cell"><b>about two thirds</b> <small>{{< imp-val "dessous" >}}%</small> <span class="barre-part" style="--v:{{< imp-val "dessous" "css" >}}"><i></i></span></span> <span class="grille-reperes__val" role="cell"><b>about one in five</b> <small>{{< imp-val "dessus" >}}%</small> <span class="barre-part" style="--v:{{< imp-val "dessus" "css" >}}"><i></i></span></span></div>
+</div>
 
 But being above or below the threshold is not the whole story. Above the threshold, where an income-based classification says "not poor", situations differ sharply by household composition.
 
@@ -72,13 +88,17 @@ But being above or below the threshold is not the whole story. Above the thresho
 
 ## What the comparison can — and cannot — tell us {#test}
 
-Being above the poverty threshold does not guarantee being able to absorb an unexpected expense. Among people above that threshold in France in {{< imp-val "annee" >}}, {{< imp-val "ps_dessus" >}}% of those in a household of one adult with one or more children could not, according to their household, face an expense of €{{< imp-val "montant_question" >}}, against {{< imp-val "c1_dessus" >}}% of those in two-adult households with one child. The gap is {{< imp-val "ecart_enf" >}}. It describes two groups: it does not measure what would happen to a person if their household went from two adults to one. These groups may also differ in their exact income above the threshold, the number and age of children, employment, committed expenses and the benefits they receive. The data published here cannot tell these explanations apart. Above the threshold, the series allows other comparisons:
+Being above the poverty threshold does not guarantee being able to absorb an unexpected expense. Among people above that threshold in France in {{< imp-val "annee" >}}, {{< imp-val "ps_dessus" >}}% of those in a household of one adult with one or more children could not, according to their household, face an expense of €{{< imp-val "montant_question" >}}, against {{< imp-val "c1_dessus" >}}% of those in two-adult households with one child. The gap is {{< imp-val "ecart_enf" >}}.
+
+It describes two groups: it does not measure what would happen to a person if their household went from two adults to one. These groups may also differ in their exact income above the threshold, the number and age of children, employment, committed expenses and the benefits they receive. The data published here cannot tell these explanations apart. Above the threshold, the series allows other comparisons:
 
 - **With children**, the gap between households of one adult with one or more children and two-adult households with one child has stayed between {{< imp-val "plage_enf_bas" >}} and {{< imp-val "plage_enf_haut" >}} points every year since {{< imp-val "debut" >}}.
 - **Without children**, the gap between one- and two-adult households is only {{< imp-val "ecart_sans" >}} in {{< imp-val "annee" >}} (between {{< imp-val "plage_sans_bas" >}} and {{< imp-val "plage_sans_haut" >}} points each year over the same period).
 - **Compared with two-adult households with two children**, the gap for households of one adult with one or more children is still {{< imp-val "ecart_enf2" >}} in {{< imp-val "annee" >}}. The comparison does not, however, measure the effect of the number of children: the Eurostat category this page calls a single-parent household covers any household of one adult with one or more dependent children (under 18, or aged 18 to 24 if economically inactive and living with a parent), and the two-adult category any household of two adults, whether or not they are a couple.
 
-Above the threshold, the gap between one- and two-adult households is thus two to three times as wide with children as without. It has persisted every year since {{< imp-val "debut" >}}, but it does not isolate the effect of household composition itself: the number and age of children, employment, committed expenses and the benefits received may also differ between these households. Below the threshold, the gap between single-parent households and two-adult households with one child is smaller ({{< imp-val "ecart_enf_dessous" >}} in {{< imp-val "annee" >}}): in both, a large majority of people could not face an unexpected expense. Being above or below the threshold is therefore not enough to explain these gaps.
+Above the threshold, the gap between one- and two-adult households is thus two to three times as wide with children as without. It has persisted every year since {{< imp-val "debut" >}}, but it does not isolate the effect of household composition itself: the number and age of children, employment, committed expenses and the benefits received may also differ between these households.
+
+Below the threshold, the gap between single-parent households and two-adult households with one child is smaller ({{< imp-val "ecart_enf_dessous" >}} in {{< imp-val "annee" >}}): in both, a large majority of people could not face an unexpected expense. Being above or below the threshold is therefore not enough to explain these gaps.
 
 **What the comparison does not settle.** Above the threshold, single-parent households might on average sit closer to the threshold than two-adult households with one child. The Eurostat dataset does not show how far each household's income lies above the threshold, so it cannot tell how much of the gap goes with household composition and how much with that distance.
 
