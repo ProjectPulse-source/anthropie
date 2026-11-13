@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /en/decoupling-energy-growth/, build de da6159e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /en/decoupling-energy-growth/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is the world economy decoupling from energy?
 The world economy uses less energy for each unit of output it produces, measured by GDP at purchasing power parity: 28.5% less in 2024 than in 2000.
@@ -71,10 +71,10 @@ The European Union: absolute decoupling, on its territory
 The same producer, using the same definition, shows the other case for the EU-27.
 From 2000 to 2024, its primary energy consumption fell by 18%, from 66 to 54 exajoules, while its GDP rose by 43%; consumption peaked in 2006.
 The population effect adds 3 exajoules and the GDP-per-head effect 18; the intensity effect, for a 42.4% fall in intensity, takes away 33: more than the other two combined.
-The end year matters.
+The end year matters
 If the window ends in 2019, before the pandemic and the 2022 surge in energy prices, European consumption falls by 6.4% from 2000, with GDP up 34%.
 Absolute decoupling is already visible over that period, but more than half of the fall measured to 2024 came after 2019; these data do not say how much of it will last.
-What the comparison does not say.
+What the comparison does not say
 These figures count the energy consumed on EU territory, not the energy used to make the goods the EU imports.
 They cannot show whether the fall comes from efficiency, from the decline of the most energy-intensive industries, from their relocation outside the EU, or from the way the measurement convention counts nuclear, wind and solar electricity, whose mix has changed.
 Measuring the share attributable to relocation would require an energy footprint of European demand, which we have not found published in a reusable form.

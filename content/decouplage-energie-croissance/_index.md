@@ -50,6 +50,19 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 50
   nature: "Données publiques recalculées (EIA, Energy Institute, Banque mondiale)"
+reperes:  # trois repères sous le chapô, à partir de 600 px de large (partials/reperes-page.html ; règle 17 du site,
+  # reprise du style du 13/11/2026, test du premier écran). Chacun reprend un résultat écrit dans sa section, avec sa
+  # période, son producteur et la conversion du PIB. Aucun nombre saisi : jetons {dc.*} (scripts/update_decouplage.py,
+  # qui garde « fois plus », la hausse mondiale et la baisse européenne).
+  - ancre: "paradoxe"
+    fort: "+{dc.de_pct} %"
+    texte: "de consommation d'énergie primaire dans le monde de {dc.an0} à {dc.an1} selon l'EIA, pour un PIB en hausse de {dc.dy_pct} % en parité de pouvoir d'achat : un découplage relatif, pas absolu"
+  - ancre: "demographie-revenu"
+    fort: "Le poids du PIB par habitant"
+    texte: "est {dc.ratio_rp} fois celui de la population dans la décomposition comptable de la hausse mondiale de la consommation d'énergie, de {dc.an0} à {dc.an1} (PIB en parité de pouvoir d'achat)"
+  - ancre: "union-europeenne"
+    fort: "−{dc.ue_de_pct} %"
+    texte: "de consommation d'énergie primaire dans l'Union européenne à 27, sur son territoire, de {dc.an0} à {dc.an1} selon l'EIA (−{dc.es_es_pct} % selon Eurostat), pour un PIB en hausse de {dc.ue_dy_pct} % en parité de pouvoir d'achat"
 ---
 
 {{< reutiliser-ancre >}}
@@ -81,7 +94,9 @@ L'économie mondiale s'est donc découplée de l'énergie au sens relatif&nbsp;:
 
 ## Démographie ou enrichissement&nbsp;? {#demographie-revenu}
 
-On pourrait croire que la consommation d'énergie augmente d'abord parce que la population mondiale augmente. Une décomposition comptable sépare l'effet de la population de celui du PIB par habitant. La consommation d'énergie est le produit de trois grandeurs&nbsp;: la population, le PIB par habitant et l'énergie consommée par unité de PIB. De {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, la décomposition attribue {{< dc-val "pop_ej" >}}&nbsp;exajoules à l'effet de la population, {{< dc-val "rev_ej" >}} à celui du PIB par habitant et −{{< dc-val "int_ej" >}} à celui de l'intensité&nbsp;: au total, {{< dc-val "tot_ej" >}}&nbsp;exajoules de plus.
+On pourrait croire que la consommation d'énergie augmente d'abord parce que la population mondiale augmente. Une décomposition comptable sépare l'effet de la population de celui du PIB par habitant.
+
+La consommation d'énergie est le produit de trois grandeurs&nbsp;: la population, le PIB par habitant et l'énergie consommée par unité de PIB. De {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, la décomposition attribue {{< dc-val "pop_ej" >}}&nbsp;exajoules à l'effet de la population, {{< dc-val "rev_ej" >}} à celui du PIB par habitant et −{{< dc-val "int_ej" >}} à celui de l'intensité&nbsp;: au total, {{< dc-val "tot_ej" >}}&nbsp;exajoules de plus.
 
 Avec un PIB en parité de pouvoir d'achat, l'effet du PIB par habitant pèse donc {{< dc-val "ratio_rp" >}}&nbsp;fois plus que celui de la population. Ce rang tient pour chaque année de départ testée&nbsp;: dans chacune des fenêtres, qui partent de {{< dc-val "fenetres" >}} et s'arrêtent en {{< dc-val "an1" >}}, l'effet du PIB par habitant dépasse celui de la population, et la consommation a augmenté.
 
@@ -113,17 +128,30 @@ Les {{< dc-val "di_pct" >}}&nbsp;% mesurent la variation de l'intensité&nbsp;; 
 
 Le même producteur, avec la même définition, donne pour l'Union européenne à 27 l'autre cas de figure. De {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, sa consommation d'énergie primaire a baissé de {{< dc-val "ue_de_pct" >}}&nbsp;%, de {{< dc-val "ue_e0" >}} à {{< dc-val "ue_e1" >}}&nbsp;exajoules, pendant que son PIB augmentait de {{< dc-val "ue_dy_pct" >}}&nbsp;%&nbsp;; elle culmine en {{< dc-val "an_pic_ue" >}}. L'effet de la population y ajoute {{< dc-val "ue_pop_ej" >}}&nbsp;exajoules et celui du PIB par habitant {{< dc-val "ue_rev_ej" >}}&nbsp;; l'intensité ayant baissé de {{< dc-val "ue_di_pct" >}}&nbsp;%, son effet en retire {{< dc-val "ue_int_ej" >}}&nbsp;: plus que les deux autres réunis.
 
-**L'année d'arrivée compte.** Si l'on s'arrête en 2019, avant la pandémie et la flambée des prix de l'énergie de 2022, la consommation européenne baisse de {{< dc-val "ue19_de_pct" >}}&nbsp;% depuis {{< dc-val "an0" >}}, pour un PIB en hausse de {{< dc-val "ue19_dy_pct" >}}&nbsp;%. Le découplage absolu est déjà là, mais plus de la moitié de la baisse mesurée jusqu'en {{< dc-val "an1" >}} est intervenue après 2019&nbsp;; ces données ne disent pas quelle part en durera.
+<div class="cartes-paire">
+<div class="carte-point">
+<p class="carte-point__titre">L'année d'arrivée compte</p>
 
-**Ce que la comparaison ne dit pas.** Ces chiffres comptent l'énergie consommée sur le territoire de l'Union, pas celle qui a servi à fabriquer les biens qu'elle importe. Ils ne permettent donc pas de dire si la baisse tient à l'efficacité, au recul des industries les plus consommatrices d'énergie, à leur déplacement hors de l'Union, ou à la façon dont la convention de mesure compte l'électricité nucléaire, éolienne et solaire, dont la répartition a changé. Pour mesurer la part du déplacement, il faudrait une empreinte énergétique de la demande européenne, que nous n'avons pas trouvée publiée sous une forme réutilisable.
+Si l'on s'arrête en 2019, avant la pandémie et la flambée des prix de l'énergie de 2022, la consommation européenne baisse de {{< dc-val "ue19_de_pct" >}}&nbsp;% depuis {{< dc-val "an0" >}}, pour un PIB en hausse de {{< dc-val "ue19_dy_pct" >}}&nbsp;%. Le découplage absolu est déjà là, mais plus de la moitié de la baisse mesurée jusqu'en {{< dc-val "an1" >}} est intervenue après 2019&nbsp;; ces données ne disent pas quelle part en durera.
+
+</div>
+<div class="carte-point">
+<p class="carte-point__titre">Ce que la comparaison ne dit pas</p>
+
+Ces chiffres comptent l'énergie consommée sur le territoire de l'Union, pas celle qui a servi à fabriquer les biens qu'elle importe. Ils ne permettent donc pas de dire si la baisse tient à l'efficacité, au recul des industries les plus consommatrices d'énergie, à leur déplacement hors de l'Union, ou à la façon dont la convention de mesure compte l'électricité nucléaire, éolienne et solaire, dont la répartition a changé. Pour mesurer la part du déplacement, il faudrait une empreinte énergétique de la demande européenne, que nous n'avons pas trouvée publiée sous une forme réutilisable.
+
+</div>
+</div>
 
 ## Le résultat dépend-il de la source&nbsp;? {#robustesse}
 
-**Une convention de mesure, vérifiée année par année.** L'énergie primaire ne se compte pas de la même façon partout. Dans les fichiers de l'EIA, nous mesurons, pour chaque année de {{< dc-val "an_conv0" >}} à {{< dc-val "an_conv" >}}, le rapport entre l'énergie comptée et l'électricité produite&nbsp;: {{< dc-val "btu_hydro" >}}&nbsp;Btu par kilowattheure pour l'hydraulique et l'éolien, c'est-à-dire leur contenu électrique, sans rupture de convention&nbsp;; de {{< dc-val "btu_nuc_min" >}} à {{< dc-val "btu_nuc_max" >}}&nbsp;Btu pour le nucléaire, compté à la chaleur du réacteur. Le solaire est compté à {{< dc-val "btu_sol" >}}&nbsp;Btu en {{< dc-val "an_conv" >}}&nbsp;; il l'était à un rapport plus élevé les années précédentes, où il pesait très peu. L'Energy Institute, qui publie la *Statistical Review of World Energy*, applique la même logique de contenu physique depuis son édition de 2025&nbsp;: la comparaison qui suit change de producteur, pas de convention.
+<div class="liste-cartes">
 
-**Un autre producteur.** Avec l'offre totale d'énergie de l'Energy Institute (édition {{< dc-val "edition_ei" >}}&nbsp;: {{< dc-val "t_e1" >}}&nbsp;exajoules en {{< dc-val "an_t" >}}) et le PIB et la population de la Banque mondiale, la décomposition garde le même ordre&nbsp;: consommation mondiale en hausse de {{< dc-val "t_de_pct" >}}&nbsp;% de {{< dc-val "an0" >}} à {{< dc-val "an_t" >}}&nbsp;; effet du PIB par habitant {{< dc-val "t_rev_ej" >}}&nbsp;exajoules, de la population {{< dc-val "t_pop_ej" >}}, de l'intensité −{{< dc-val "t_int_ej" >}}. Pour l'Union européenne, de {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, la consommation d'énergie primaire baisse de {{< dc-val "es_ei_pct" >}}&nbsp;% selon l'Energy Institute, de {{< dc-val "es_eia_pct" >}}&nbsp;% selon l'EIA et de {{< dc-val "es_es_pct" >}}&nbsp;% selon les bilans énergétiques complets d'Eurostat&nbsp;: une baisse du même ordre, un peu moins forte chez Eurostat. Les niveaux diffèrent davantage ({{< dc-val "es_ej" >}}&nbsp;exajoules en {{< dc-val "an1" >}} chez Eurostat, {{< dc-val "ue_e1" >}} chez l'EIA)&nbsp;: l'indicateur d'Eurostat ne compte pas, notamment, les usages non énergétiques des combustibles.
+1. **Une convention de mesure, vérifiée année par année.** L'énergie primaire ne se compte pas de la même façon partout. Dans les fichiers de l'EIA, nous mesurons, pour chaque année de {{< dc-val "an_conv0" >}} à {{< dc-val "an_conv" >}}, le rapport entre l'énergie comptée et l'électricité produite&nbsp;: {{< dc-val "btu_hydro" >}}&nbsp;Btu par kilowattheure pour l'hydraulique et l'éolien, c'est-à-dire leur contenu électrique, sans rupture de convention&nbsp;; de {{< dc-val "btu_nuc_min" >}} à {{< dc-val "btu_nuc_max" >}}&nbsp;Btu pour le nucléaire, compté à la chaleur du réacteur. Le solaire est compté à {{< dc-val "btu_sol" >}}&nbsp;Btu en {{< dc-val "an_conv" >}}&nbsp;; il l'était à un rapport plus élevé les années précédentes, où il pesait très peu. L'Energy Institute, qui publie la *Statistical Review of World Energy*, applique la même logique de contenu physique depuis son édition de 2025&nbsp;: la comparaison qui suit change de producteur, pas de convention.
+2. **Un autre producteur.** Avec l'offre totale d'énergie de l'Energy Institute (édition {{< dc-val "edition_ei" >}}&nbsp;: {{< dc-val "t_e1" >}}&nbsp;exajoules en {{< dc-val "an_t" >}}) et le PIB et la population de la Banque mondiale, la décomposition garde le même ordre&nbsp;: consommation mondiale en hausse de {{< dc-val "t_de_pct" >}}&nbsp;% de {{< dc-val "an0" >}} à {{< dc-val "an_t" >}}&nbsp;; effet du PIB par habitant {{< dc-val "t_rev_ej" >}}&nbsp;exajoules, de la population {{< dc-val "t_pop_ej" >}}, de l'intensité −{{< dc-val "t_int_ej" >}}. Pour l'Union européenne, de {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, la consommation d'énergie primaire baisse de {{< dc-val "es_ei_pct" >}}&nbsp;% selon l'Energy Institute, de {{< dc-val "es_eia_pct" >}}&nbsp;% selon l'EIA et de {{< dc-val "es_es_pct" >}}&nbsp;% selon les bilans énergétiques complets d'Eurostat&nbsp;: une baisse du même ordre, un peu moins forte chez Eurostat. Les niveaux diffèrent davantage ({{< dc-val "es_ej" >}}&nbsp;exajoules en {{< dc-val "an1" >}} chez Eurostat, {{< dc-val "ue_e1" >}} chez l'EIA)&nbsp;: l'indicateur d'Eurostat ne compte pas, notamment, les usages non énergétiques des combustibles.
+3. **La conversion du PIB compte.** Les chiffres de cette page convertissent le PIB en parité de pouvoir d'achat. Aux taux de change de marché, le PIB mondial augmente de {{< dc-val "m_dy_pct" >}}&nbsp;% de {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, et l'intensité ne baisse que de {{< dc-val "m_di_pct" >}}&nbsp;%&nbsp;; l'effet du PIB par habitant tombe à {{< dc-val "m_rev_ej" >}}&nbsp;exajoules, celui de l'intensité passe à −{{< dc-val "m_int_ej" >}} et celui de la population ne change pas. Avec l'une comme avec l'autre conversion, dans chaque fenêtre, la consommation monte, l'intensité baisse et l'effet du PIB par habitant dépasse celui de la population. L'ampleur de la baisse de l'intensité, elle, dépend de la conversion&nbsp;: aux taux de change de marché, de {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, l'effet de l'intensité retire moins que celui de la population n'ajoute.
 
-**La conversion du PIB compte.** Les chiffres de cette page convertissent le PIB en parité de pouvoir d'achat. Aux taux de change de marché, le PIB mondial augmente de {{< dc-val "m_dy_pct" >}}&nbsp;% de {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, et l'intensité ne baisse que de {{< dc-val "m_di_pct" >}}&nbsp;%&nbsp;; l'effet du PIB par habitant tombe à {{< dc-val "m_rev_ej" >}}&nbsp;exajoules, celui de l'intensité passe à −{{< dc-val "m_int_ej" >}} et celui de la population ne change pas. Avec l'une comme avec l'autre conversion, dans chaque fenêtre, la consommation monte, l'intensité baisse et l'effet du PIB par habitant dépasse celui de la population. L'ampleur de la baisse de l'intensité, elle, dépend de la conversion&nbsp;: aux taux de change de marché, de {{< dc-val "an0" >}} à {{< dc-val "an1" >}}, l'effet de l'intensité retire moins que celui de la population n'ajoute.
+</div>
 
 ## Confrontation à la recherche {#recherche}
 

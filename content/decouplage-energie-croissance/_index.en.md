@@ -48,6 +48,17 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["anthropie-ordre-ici-dette-ailleurs"]
   rang: 50
   nature: "Public data recalculated (EIA, Energy Institute, World Bank)"
+reperes:  # three key results under the standfirst, from 600 px wide (partials/reperes-page.html ; règle 17 du site,
+  # reprise du style du 13/11/2026, test du premier écran). Same results, periods and tokens as the French page.
+  - ancre: "paradox"
+    fort: "+{dc.de_pct}%"
+    texte: "in primary energy consumption worldwide from {dc.an0} to {dc.an1} according to the EIA, with GDP up {dc.dy_pct}% at purchasing power parity: the decoupling is relative, not absolute"
+  - ancre: "population-income"
+    fort: "The weight of GDP per head"
+    texte: "is {dc.ratio_rp} times that of population in the accounting decomposition of the rise in world energy consumption, from {dc.an0} to {dc.an1} (GDP at purchasing power parity)"
+  - ancre: "european-union"
+    fort: "−{dc.ue_de_pct}%"
+    texte: "in primary energy consumption in the EU-27, on its territory, from {dc.an0} to {dc.an1} according to the EIA (−{dc.es_es_pct}% according to Eurostat), with GDP up {dc.ue_dy_pct}% at purchasing power parity"
 ---
 
 {{< reutiliser-ancre >}}
@@ -79,7 +90,9 @@ The world economy has therefore decoupled from energy in the relative sense: its
 
 ## Population or growing wealth? {#population-income}
 
-One might think that energy consumption rises mainly because the world's population is growing. An accounting decomposition separates the population effect from the GDP-per-head effect. Energy consumption is the product of three quantities: population, GDP per head and the energy used per unit of GDP. From {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, the decomposition attributes {{< dc-val "pop_ej" >}} exajoules to the population effect, {{< dc-val "rev_ej" >}} to the GDP-per-head effect and −{{< dc-val "int_ej" >}} to the intensity effect: {{< dc-val "tot_ej" >}} exajoules more in all.
+One might think that energy consumption rises mainly because the world's population is growing. An accounting decomposition separates the population effect from the GDP-per-head effect.
+
+Energy consumption is the product of three quantities: population, GDP per head and the energy used per unit of GDP. From {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, the decomposition attributes {{< dc-val "pop_ej" >}} exajoules to the population effect, {{< dc-val "rev_ej" >}} to the GDP-per-head effect and −{{< dc-val "int_ej" >}} to the intensity effect: {{< dc-val "tot_ej" >}} exajoules more in all.
 
 With GDP at purchasing power parity, the GDP-per-head effect therefore weighs {{< dc-val "ratio_rp" >}} times as much as the population effect. That ranking holds for every starting year tested: in each of the windows (starting in {{< dc-val "fenetres" >}}, all ending in {{< dc-val "an1" >}}), the GDP-per-head effect exceeds the population effect, and consumption rises.
 
@@ -111,17 +124,30 @@ The {{< dc-val "di_pct" >}}% measures the change in intensity; the {{< dc-val "i
 
 The same producer, using the same definition, shows the other case for the EU-27. From {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, its primary energy consumption fell by {{< dc-val "ue_de_pct" >}}%, from {{< dc-val "ue_e0" >}} to {{< dc-val "ue_e1" >}} exajoules, while its GDP rose by {{< dc-val "ue_dy_pct" >}}%; consumption peaked in {{< dc-val "an_pic_ue" >}}. The population effect adds {{< dc-val "ue_pop_ej" >}} exajoules and the GDP-per-head effect {{< dc-val "ue_rev_ej" >}}; the intensity effect, for a {{< dc-val "ue_di_pct" >}}% fall in intensity, takes away {{< dc-val "ue_int_ej" >}}: more than the other two combined.
 
-**The end year matters.** If the window ends in 2019, before the pandemic and the 2022 surge in energy prices, European consumption falls by {{< dc-val "ue19_de_pct" >}}% from {{< dc-val "an0" >}}, with GDP up {{< dc-val "ue19_dy_pct" >}}%. Absolute decoupling is already visible over that period, but more than half of the fall measured to {{< dc-val "an1" >}} came after 2019; these data do not say how much of it will last.
+<div class="cartes-paire">
+<div class="carte-point">
+<p class="carte-point__titre">The end year matters</p>
 
-**What the comparison does not say.** These figures count the energy consumed on EU territory, not the energy used to make the goods the EU imports. They cannot show whether the fall comes from efficiency, from the decline of the most energy-intensive industries, from their relocation outside the EU, or from the way the measurement convention counts nuclear, wind and solar electricity, whose mix has changed. Measuring the share attributable to relocation would require an energy footprint of European demand, which we have not found published in a reusable form.
+If the window ends in 2019, before the pandemic and the 2022 surge in energy prices, European consumption falls by {{< dc-val "ue19_de_pct" >}}% from {{< dc-val "an0" >}}, with GDP up {{< dc-val "ue19_dy_pct" >}}%. Absolute decoupling is already visible over that period, but more than half of the fall measured to {{< dc-val "an1" >}} came after 2019; these data do not say how much of it will last.
+
+</div>
+<div class="carte-point">
+<p class="carte-point__titre">What the comparison does not say</p>
+
+These figures count the energy consumed on EU territory, not the energy used to make the goods the EU imports. They cannot show whether the fall comes from efficiency, from the decline of the most energy-intensive industries, from their relocation outside the EU, or from the way the measurement convention counts nuclear, wind and solar electricity, whose mix has changed. Measuring the share attributable to relocation would require an energy footprint of European demand, which we have not found published in a reusable form.
+
+</div>
+</div>
 
 ## Does the result depend on the source? {#robustness}
 
-**A measurement convention, checked year by year.** Primary energy is not counted in the same way everywhere. In the EIA's files, we measure, for every year from {{< dc-val "an_conv0" >}} to {{< dc-val "an_conv" >}}, the ratio of the energy counted to the electricity generated: {{< dc-val "btu_hydro" >}} Btu per kilowatt-hour for hydro and wind, that is, their electrical content, with no change of convention; from {{< dc-val "btu_nuc_min" >}} to {{< dc-val "btu_nuc_max" >}} Btu for nuclear, counted at the heat produced by the reactor. Solar is counted at {{< dc-val "btu_sol" >}} Btu in {{< dc-val "an_conv" >}} and at a higher ratio in earlier years, when it weighed very little. The Energy Institute, which publishes the *Statistical Review of World Energy*, has applied the same physical-content approach since its 2025 edition: the comparison below changes the producer, not the convention.
+<div class="liste-cartes">
 
-**Another producer.** With the Energy Institute's total energy supply ({{< dc-val "edition_ei" >}} edition: {{< dc-val "t_e1" >}} exajoules in {{< dc-val "an_t" >}}) and World Bank GDP and population, the decomposition keeps the same ranking: world consumption up {{< dc-val "t_de_pct" >}}% from {{< dc-val "an0" >}} to {{< dc-val "an_t" >}}; GDP-per-head effect {{< dc-val "t_rev_ej" >}} exajoules, population {{< dc-val "t_pop_ej" >}}, intensity −{{< dc-val "t_int_ej" >}}. For the European Union, from {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, primary energy consumption fell by {{< dc-val "es_ei_pct" >}}% according to the Energy Institute, {{< dc-val "es_eia_pct" >}}% according to the EIA and {{< dc-val "es_es_pct" >}}% according to Eurostat's complete energy balances: a similar fall, slightly smaller in Eurostat's figures. Levels differ more ({{< dc-val "es_ej" >}} exajoules in {{< dc-val "an1" >}} for Eurostat, {{< dc-val "ue_e1" >}} for the EIA): Eurostat's indicator leaves out, among other things, non-energy uses of fuels.
+1. **A measurement convention, checked year by year.** Primary energy is not counted in the same way everywhere. In the EIA's files, we measure, for every year from {{< dc-val "an_conv0" >}} to {{< dc-val "an_conv" >}}, the ratio of the energy counted to the electricity generated: {{< dc-val "btu_hydro" >}} Btu per kilowatt-hour for hydro and wind, that is, their electrical content, with no change of convention; from {{< dc-val "btu_nuc_min" >}} to {{< dc-val "btu_nuc_max" >}} Btu for nuclear, counted at the heat produced by the reactor. Solar is counted at {{< dc-val "btu_sol" >}} Btu in {{< dc-val "an_conv" >}} and at a higher ratio in earlier years, when it weighed very little. The Energy Institute, which publishes the *Statistical Review of World Energy*, has applied the same physical-content approach since its 2025 edition: the comparison below changes the producer, not the convention.
+2. **Another producer.** With the Energy Institute's total energy supply ({{< dc-val "edition_ei" >}} edition: {{< dc-val "t_e1" >}} exajoules in {{< dc-val "an_t" >}}) and World Bank GDP and population, the decomposition keeps the same ranking: world consumption up {{< dc-val "t_de_pct" >}}% from {{< dc-val "an0" >}} to {{< dc-val "an_t" >}}; GDP-per-head effect {{< dc-val "t_rev_ej" >}} exajoules, population {{< dc-val "t_pop_ej" >}}, intensity −{{< dc-val "t_int_ej" >}}. For the European Union, from {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, primary energy consumption fell by {{< dc-val "es_ei_pct" >}}% according to the Energy Institute, {{< dc-val "es_eia_pct" >}}% according to the EIA and {{< dc-val "es_es_pct" >}}% according to Eurostat's complete energy balances: a similar fall, slightly smaller in Eurostat's figures. Levels differ more ({{< dc-val "es_ej" >}} exajoules in {{< dc-val "an1" >}} for Eurostat, {{< dc-val "ue_e1" >}} for the EIA): Eurostat's indicator leaves out, among other things, non-energy uses of fuels.
+3. **How GDP is converted matters.** The figures on this page use GDP converted at purchasing power parity. At market exchange rates, world GDP rises by {{< dc-val "m_dy_pct" >}}% from {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, and intensity falls by only {{< dc-val "m_di_pct" >}}%; the GDP-per-head effect drops to {{< dc-val "m_rev_ej" >}} exajoules and the intensity effect shrinks to −{{< dc-val "m_int_ej" >}}, while the population effect does not change. Under both conversions, in every window, consumption rises, intensity falls and the GDP-per-head effect exceeds the population effect. How much intensity falls, however, depends on the conversion: at market exchange rates, from {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, the intensity effect takes away less than the population effect adds.
 
-**How GDP is converted matters.** The figures on this page use GDP converted at purchasing power parity. At market exchange rates, world GDP rises by {{< dc-val "m_dy_pct" >}}% from {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, and intensity falls by only {{< dc-val "m_di_pct" >}}%; the GDP-per-head effect drops to {{< dc-val "m_rev_ej" >}} exajoules and the intensity effect shrinks to −{{< dc-val "m_int_ej" >}}, while the population effect does not change. Under both conversions, in every window, consumption rises, intensity falls and the GDP-per-head effect exceeds the population effect. How much intensity falls, however, depends on the conversion: at market exchange rates, from {{< dc-val "an0" >}} to {{< dc-val "an1" >}}, the intensity effect takes away less than the population effect adds.
+</div>
 
 ## Comparison with the research {#research}
 

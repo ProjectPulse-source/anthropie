@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /decouplage-energie-croissance/, build de da6159e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /decouplage-energie-croissance/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 L’économie mondiale se découple-t-elle de l’énergie ?
 L’économie mondiale consomme moins d’énergie pour chaque unité de richesse produite, mesurée par le PIB en parité de pouvoir d’achat : 28,5 % de moins en 2024 qu’en 2000.
@@ -71,10 +71,10 @@ L’Union européenne : un découplage absolu, sur son territoire
 Le même producteur, avec la même définition, donne pour l’Union européenne à 27 l’autre cas de figure.
 De 2000 à 2024, sa consommation d’énergie primaire a baissé de 18 %, de 66 à 54 exajoules, pendant que son PIB augmentait de 43 % ; elle culmine en 2006.
 L’effet de la population y ajoute 3 exajoules et celui du PIB par habitant 18 ; l’intensité ayant baissé de 42,4 %, son effet en retire 33 : plus que les deux autres réunis.
-L’année d’arrivée compte.
+L’année d’arrivée compte
 Si l’on s’arrête en 2019, avant la pandémie et la flambée des prix de l’énergie de 2022, la consommation européenne baisse de 6,4 % depuis 2000, pour un PIB en hausse de 34 %.
 Le découplage absolu est déjà là, mais plus de la moitié de la baisse mesurée jusqu’en 2024 est intervenue après 2019 ; ces données ne disent pas quelle part en durera.
-Ce que la comparaison ne dit pas.
+Ce que la comparaison ne dit pas
 Ces chiffres comptent l’énergie consommée sur le territoire de l’Union, pas celle qui a servi à fabriquer les biens qu’elle importe.
 Ils ne permettent donc pas de dire si la baisse tient à l’efficacité, au recul des industries les plus consommatrices d’énergie, à leur déplacement hors de l’Union, ou à la façon dont la convention de mesure compte l’électricité nucléaire, éolienne et solaire, dont la répartition a changé.
 Pour mesurer la part du déplacement, il faudrait une empreinte énergétique de la demande européenne, que nous n’avons pas trouvée publiée sous une forme réutilisable.
