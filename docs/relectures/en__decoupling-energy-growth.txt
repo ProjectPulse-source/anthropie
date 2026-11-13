@@ -1,7 +1,7 @@
-# relu le 2026-11-13 ; texte servi de /en/decoupling-energy-growth/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /en/decoupling-energy-growth/, build de e0812dd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is the world economy decoupling from energy?
-The world economy uses less energy for each unit of output it produces, measured by GDP at purchasing power parity: 28.5% less in 2024 than in 2000.
+For each unit of output, measured by GDP at purchasing power parity, the world economy uses less energy: 28.5% less in 2024 than in 2000.
 But over the same period, that GDP rose by 121%, and energy consumption by 58%: the decoupling is relative, not absolute.
 Page updated 12 November 2026
 ↓ Charts, data and citations to reuseReuse this page

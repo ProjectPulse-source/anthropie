@@ -1,7 +1,7 @@
 ---
 title: "L'économie mondiale se découple-t-elle de l'énergie ?"
 description: "De {dc.an0} à {dc.an1}, l'énergie consommée par unité de PIB, mesuré en parité de pouvoir d'achat, a baissé de {dc.di_pct} % dans le monde, et la consommation d'énergie a augmenté de {dc.de_pct} %. Dans la décomposition, l'effet du PIB par habitant dépasse celui de la population ; dans l'Union européenne, la consommation a baissé sur son territoire (EIA, calcul de l'auteur)."
-chapo: "L'économie mondiale consomme moins d'énergie pour chaque unité de richesse produite, mesurée par le PIB en parité de pouvoir d'achat : {dc.di_pct} % de moins en {dc.an1} qu'en {dc.an0}. Mais ce PIB a augmenté de {dc.dy_pct} %, et la consommation d'énergie de {dc.de_pct} % sur la même période : le découplage est relatif, il n'est pas absolu."
+chapo: "Pour chaque unité de richesse produite, mesurée par le PIB en parité de pouvoir d'achat, l'économie mondiale consomme moins d'énergie : {dc.di_pct} % de moins en {dc.an1} qu'en {dc.an0}. Mais ce PIB a augmenté de {dc.dy_pct} %, et la consommation d'énergie de {dc.de_pct} % sur la même période : le découplage est relatif, il n'est pas absolu."
 date: 2026-10-26
 lastmod: 2026-11-12
 journal:  # révisions qui changent la lecture de la page (contre-expertise du 26/10/2026)
@@ -56,13 +56,13 @@ reperes:  # trois repères sous le chapô, à partir de 600 px de large (partial
   # qui garde « fois plus », la hausse mondiale et la baisse européenne).
   - ancre: "paradoxe"
     fort: "+{dc.de_pct} %"
-    texte: "de consommation d'énergie primaire dans le monde de {dc.an0} à {dc.an1} selon l'EIA, pour un PIB en hausse de {dc.dy_pct} % en parité de pouvoir d'achat : un découplage relatif, pas absolu"
-  - ancre: "demographie-revenu"
-    fort: "Le poids du PIB par habitant"
-    texte: "est {dc.ratio_rp} fois celui de la population dans la décomposition comptable de la hausse mondiale de la consommation d'énergie, de {dc.an0} à {dc.an1} (PIB en parité de pouvoir d'achat)"
+    texte: "de consommation d'énergie primaire dans le monde de {dc.an0} à {dc.an1} selon l'EIA, pendant que le PIB augmentait de {dc.dy_pct} % en parité de pouvoir d'achat : un découplage relatif, pas absolu"
+  - ancre: "paradoxe"
+    fort: "−{dc.di_pct} %"
+    texte: "d'intensité énergétique mondiale (énergie consommée par unité de PIB) de {dc.an0} à {dc.an1}, PIB en parité de pouvoir d'achat, selon l'EIA"
   - ancre: "union-europeenne"
     fort: "−{dc.ue_de_pct} %"
-    texte: "de consommation d'énergie primaire dans l'Union européenne à 27, sur son territoire, de {dc.an0} à {dc.an1} selon l'EIA (−{dc.es_es_pct} % selon Eurostat), pour un PIB en hausse de {dc.ue_dy_pct} % en parité de pouvoir d'achat"
+    texte: "de consommation d'énergie primaire dans l'Union européenne à 27, sur son territoire, de {dc.an0} à {dc.an1} selon l'EIA (−{dc.es_es_pct} % selon Eurostat), pendant que le PIB augmentait de {dc.ue_dy_pct} % en parité de pouvoir d'achat"
 ---
 
 {{< reutiliser-ancre >}}

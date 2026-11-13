@@ -276,3 +276,24 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
 - Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `cf3ad02` à `17d3598`) ; déploiement `hugo.yml`
   n° 43351148379 réussi (build, mise en ligne, relecture). Attestation de la version servie : faite le 13/11/2026 vers 03 h 20 (heure de
   Paris) ; HTML servi identique au build contrôlé, aux empreintes de cache des feuilles et scripts près.
+
+### Arbitrage externe et relectures (13/11/2026)
+
+- Pièce remise par l'auteur, archivée avant lecture et arbitrée par écrit : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ARBITRAGE_EXTERNE_2026-11-13.md`.
+- Chapô ouvert par la grandeur rapportée : « Pour chaque unité de richesse produite, mesurée par le PIB en parité de pouvoir
+  d'achat, l'économie mondiale consomme moins d'énergie : 28,5 % de moins … » ; chiffres et conversion gardés (« chiffres
+  sans leur conversion » est une conclusion interdite) ; anglais « For each unit of output, measured by GDP … ». Pas de
+  modification de fond : `lastmod` inchangé.
+- Bandeau, après les troisième et quatrième tours du premier écran : le repère « le poids du PIB par habitant est 1,8 fois
+  celui de la population », incompris, puis lu comme une cause (conclusion interdite : lecture causale de la
+  décomposition), quitte le bandeau ; il reste au corps, aux questions fréquentes et dans « Réutiliser », avec ses réserves.
+  À sa place, la baisse de l'intensité énergétique, la grandeur nommée d'abord (« −28,5 % d'intensité énergétique mondiale
+  (énergie consommée par unité de PIB) ») ; « pendant que le PIB augmentait » (français) ; la hausse de la consommation
+  mondiale en tête, parce qu'un lecteur qui ne lit que les nombres en gras voyait d'abord −28,5 %. Quatrième tour : aucune
+  conclusion interdite ; le territoire européen disparaît du récit oral d'un lecteur, qui le signale.
+- Reportés : mise à jour de l'EIA et périmètre « sur le territoire » (session de données, déjà ouverts) ; « à prix
+  constants » et « dont plus de la moitié après 2019 » non ajoutés au bandeau, faute de place (dits au corps).
+- Contrôles : `check-all --ci` à 0 ; build CI et typographie 0 défaut ; liens 0 critique ; rendu 0 ; dates 83/83 ;
+  0 débordement sur onze largeurs de 320 à 1 440 px, avec et sans JavaScript (la mesure vérifie désormais le statut
+  HTTP de chaque page) ; lettre : texte servi avant et après, phrase à phrase, seules changent les phrases décidées.
+- Instantanés de relecture refaits le 13/11/2026.

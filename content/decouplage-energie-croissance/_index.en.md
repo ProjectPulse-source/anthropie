@@ -2,7 +2,7 @@
 title: "Is the world economy decoupling from energy?"
 url: "/en/decoupling-energy-growth/"
 description: "From {dc.an0} to {dc.an1}, the energy used per unit of world GDP, measured at purchasing power parity, fell by {dc.di_pct}%, and energy consumption rose by {dc.de_pct}%. In the decomposition, the GDP-per-head effect exceeds the population effect; in the European Union, consumption fell on its territory (EIA, author's calculation)."
-chapo: "The world economy uses less energy for each unit of output it produces, measured by GDP at purchasing power parity: {dc.di_pct}% less in {dc.an1} than in {dc.an0}. But over the same period, that GDP rose by {dc.dy_pct}%, and energy consumption by {dc.de_pct}%: the decoupling is relative, not absolute."
+chapo: "For each unit of output, measured by GDP at purchasing power parity, the world economy uses less energy: {dc.di_pct}% less in {dc.an1} than in {dc.an0}. But over the same period, that GDP rose by {dc.dy_pct}%, and energy consumption by {dc.de_pct}%: the decoupling is relative, not absolute."
 date: 2026-10-26
 lastmod: 2026-11-12
 journal:
@@ -52,10 +52,10 @@ reperes:  # three key results under the standfirst, from 600 px wide (partials/r
   # reprise du style du 13/11/2026, test du premier écran). Same results, periods and tokens as the French page.
   - ancre: "paradox"
     fort: "+{dc.de_pct}%"
-    texte: "in primary energy consumption worldwide from {dc.an0} to {dc.an1} according to the EIA, with GDP up {dc.dy_pct}% at purchasing power parity: the decoupling is relative, not absolute"
-  - ancre: "population-income"
-    fort: "The weight of GDP per head"
-    texte: "is {dc.ratio_rp} times that of population in the accounting decomposition of the rise in world energy consumption, from {dc.an0} to {dc.an1} (GDP at purchasing power parity)"
+    texte: "in world primary energy consumption from {dc.an0} to {dc.an1} according to the EIA, with GDP up {dc.dy_pct}% at purchasing power parity: the decoupling is relative, not absolute"
+  - ancre: "paradox"
+    fort: "−{dc.di_pct}%"
+    texte: "in world energy intensity (energy used per unit of GDP) from {dc.an0} to {dc.an1}, with GDP at purchasing power parity, according to the EIA"
   - ancre: "european-union"
     fort: "−{dc.ue_de_pct}%"
     texte: "in primary energy consumption in the EU-27, on its territory, from {dc.an0} to {dc.an1} according to the EIA (−{dc.es_es_pct}% according to Eurostat), with GDP up {dc.ue_dy_pct}% at purchasing power parity"
