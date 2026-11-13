@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-11",
+ "releve_le": "2026-11-13",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OFGL, Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/dette-publique-collectivites-locales/",
@@ -17,13 +17,13 @@
    },
    "pib": {
     "jeu": "nama_10_gdp",
-    "maj_source": "2026-11-05T23:00:00+0100",
-    "sha256": "c7df947d972d67adaa36aa58309d5e1cd0dbcc53607702f0134a1ffeb8063aca"
+    "maj_source": "2026-11-11T23:00:00+0100",
+    "sha256": "116207ffc67927577ebc3ff118ebcb528b51fdddfe8e22ea52bc1c29a977d7d4"
    },
    "dette": {
     "jeu": "gov_10q_ggdebt",
-    "maj_source": "2026-10-21T11:00:00+0200",
-    "sha256": "776d56bdd0e0adf1e5467f498d2358eb45486c223509a58596df160a4a34a88d"
+    "maj_source": "2026-11-12T23:00:00+0100",
+    "sha256": "0d9563661c3b8f0ff4a08a679396cc56b956789124ba33b5095e794ad9178fc2"
    },
    "ggd": {
     "jeu": "gov_10dd_ggd",
@@ -32,7 +32,7 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-11-11T",
+    "maj_source": "2026-11-13T",
     "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
    },
    "notif": {
@@ -992,7 +992,7 @@
    2021,
    2022
   ],
-  "dette_maj": "2026-10-21",
+  "dette_maj": "2026-11-12",
   "notif_maj": "2026-10-21",
   "dette_apu_notif_fin": 115.7,
   "cahors_taux": 1.2,
@@ -1203,7 +1203,7 @@
   "plf_vote_dates": [
    "2026-10-19"
   ],
-  "plf_etat_au": "2026-11-10",
+  "plf_etat_au": "2026-11-12",
   "plf_statut_dgf": "texte initial, attendu au Sénat",
   "plf_statut_dgf_en": "initial text, due before the Senate",
   "plf_etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
@@ -1383,7 +1383,7 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1,7",
   "plf_vote_date": "19 octobre 2026",
-  "plf_etat_au": "10 novembre 2026",
+  "plf_etat_au": "12 novembre 2026",
   "plf_etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27,9",
@@ -1450,7 +1450,7 @@
   "ep_inv_pct_eur": "15",
   "ep_te_pc_a1": "10,9",
   "dette_apu_notif_fin": "115,7",
-  "dette_maj": "21 octobre 2026",
+  "dette_maj": "12 novembre 2026",
   "notif_maj": "21 octobre 2026",
   "avant_a0": "2021",
   "avant_a1": "2022",
@@ -1619,7 +1619,7 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1.7",
   "plf_vote_date": "19 October 2026",
-  "plf_etat_au": "10 November 2026",
+  "plf_etat_au": "12 November 2026",
   "plf_etape_suivante": "examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27.9",
@@ -1686,7 +1686,7 @@
   "ep_inv_pct_eur": "15",
   "ep_te_pc_a1": "10.9",
   "dette_apu_notif_fin": "115.7",
-  "dette_maj": "21 October 2026",
+  "dette_maj": "12 November 2026",
   "notif_maj": "21 October 2026",
   "avant_a0": "2021",
   "avant_a1": "2022",
