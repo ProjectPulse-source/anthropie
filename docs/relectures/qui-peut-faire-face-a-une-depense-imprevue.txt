@@ -1,11 +1,11 @@
-# relu le 2026-11-13 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /qui-peut-faire-face-a-une-depense-imprevue/, build de e0812dd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire face à une dépense imprévue ?
 Ne pas pouvoir faire face à une dépense imprévue, est-ce une affaire de pauvreté ?
 En partie seulement.
 En France, en 2025, 65,9 % des personnes sous le seuil de pauvreté sont dans ce cas, et 21,6 % au-dessus.
 Mais au-dessus du seuil, les situations diffèrent nettement selon la composition du foyer : 46,9 % des personnes vivant dans un foyer monoparental ne pourraient pas faire face à une dépense imprévue, contre 18,6 % de celles vivant dans un foyer de deux adultes avec un enfant.
-Page mise à jour le 12 novembre 2026
+Page mise à jour le 13 novembre 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données mises à jour le 26 octobre 2026 Eurostat, enquête EU-SILC, jeu ilc_mdes04 : France (séries depuis 2004) et Union européenne à 27 (depuis 2010) ; écarts étudiés de 2015 à 2025.
 Télécharger : CSV · JSON
@@ -41,7 +41,7 @@ Le jeu d’Eurostat ne dit pas à quelle distance du seuil se situe le revenu de
 Le même constat dans l’Union européenne
 Dans l’Union européenne à 27, 29,2 % des personnes ne pourraient pas faire face à une dépense imprévue en 2025.
 Au-dessus du seuil de pauvreté, l’écart entre les foyers d’un adulte avec un ou plusieurs enfants et ceux de deux adultes avec un enfant est de 22,8 points (entre 19 et 25 points chaque année depuis 2015), contre 10,1 points entre foyers d’un et de deux adultes sans enfant (entre 9 et 11 points).
-Le constat n’est pas propre à la France.
+Pour l’ensemble de l’Union, France comprise, l’écart est lui aussi plus grand avec des enfants que sans.
 Ce que ces données ne disent pas
 Une déclaration, pas un compte en banque.
 La question porte sur la capacité perçue du ménage à payer une dépense imprévue sans aide extérieure ni nouvel emprunt ; elle ne mesure ni l’épargne ni les actifs disponibles.

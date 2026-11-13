@@ -4,8 +4,9 @@ url: /en/who-can-cope-with-an-unexpected-expense/
 description: "In France, {imp.total}% of people could not face an unexpected expense ({imp.annee}, Eurostat). The poverty threshold is not the whole story: above it, {imp.ps_dessus}% of people in single-parent households are in this situation, against {imp.c1_dessus}% of people in two-adult households with one child."
 chapo: "Is being unable to face an unexpected expense a matter of poverty? Only in part. In France, in {imp.annee}, {imp.dessous}% of people below the poverty threshold are in this situation, and {imp.dessus}% above it. But above the threshold, situations differ sharply by household composition: {imp.ps_dessus}% of people in single-parent households could not face an unexpected expense, against {imp.c1_dessus}% of people in two-adult households with one child."
 date: 2026-10-26
-lastmod: 2026-11-12
+lastmod: 2026-11-13
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-13, texte: "Correction: the European comparison covers the EU as a whole, France included; “the finding is not specific to France” is replaced by what it establishes."}
   - {date: 2026-11-12, texte: "Revision: the comparison presented for what it can and cannot tell us (two groups, not a household going from two adults to one; other possible differences between these households), instead of a “test”; the one-adult household has one or more children, the two-adult household one child, couple or not; the chart retitled, its note and the share card carry the caveat; the indicator, reported by the household, captures only the financial side of individual fallback capacity."}
   - {date: 2026-11-07, texte: "Correction: the shares are those of people living in each type of household (children included), not of parents or households; the wording, the figures and the share card now say so. Values unchanged."}
   - {date: 2026-11-05, texte: "Correction: the ranges of rates are rounded outwards (lower bound down, upper bound up), so that they contain every value they summarise."}
@@ -104,7 +105,7 @@ Below the threshold, the gap between single-parent households and two-adult hous
 
 ## The same finding across the European Union {#europe}
 
-In the EU-27, {{< imp-val "ue_total" >}}% of people could not face an unexpected expense in {{< imp-val "annee" >}}. Above the poverty threshold, the gap between households of one adult with one or more children and two-adult households with one child is {{< imp-val "ue_ecart_enf" >}} (between {{< imp-val "ue_plage_enf_bas" >}} and {{< imp-val "ue_plage_enf_haut" >}} points every year since {{< imp-val "debut" >}}), against {{< imp-val "ue_ecart_sans" >}} between one- and two-adult households without children (between {{< imp-val "ue_plage_sans_bas" >}} and {{< imp-val "ue_plage_sans_haut" >}} points). The finding is not specific to France.
+In the EU-27, {{< imp-val "ue_total" >}}% of people could not face an unexpected expense in {{< imp-val "annee" >}}. Above the poverty threshold, the gap between households of one adult with one or more children and two-adult households with one child is {{< imp-val "ue_ecart_enf" >}} (between {{< imp-val "ue_plage_enf_bas" >}} and {{< imp-val "ue_plage_enf_haut" >}} points every year since {{< imp-val "debut" >}}), against {{< imp-val "ue_ecart_sans" >}} between one- and two-adult households without children (between {{< imp-val "ue_plage_sans_bas" >}} and {{< imp-val "ue_plage_sans_haut" >}} points). For the EU as a whole, France included, the gap is likewise wider with children than without.
 
 ## What these data do not say {#limits}
 

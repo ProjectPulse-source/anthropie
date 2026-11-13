@@ -238,3 +238,17 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
 - Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `cf3ad02` à `17d3598`) ; déploiement `hugo.yml`
   n° 43351148379 réussi (build, mise en ligne, relecture). Attestation de la version servie : faite le 13/11/2026 vers 03 h 20 (heure de
   Paris) ; HTML servi identique au build contrôlé, aux empreintes de cache des feuilles et scripts près.
+
+### Arbitrage externe et relectures (13/11/2026)
+
+- Pièce remise par l'auteur, archivée avant lecture et arbitrée par écrit : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ARBITRAGE_EXTERNE_2026-11-13.md`.
+- « Le constat n'est pas propre à la France » devient « Pour l'ensemble de l'Union, France comprise, l'écart est lui aussi
+  plus grand avec des enfants que sans » (FR, EN). La phrase de la pièce (« des difficultés analogues dans les autres
+  pays ») est écartée : la page ne compare pas les pays un à un (conclusion interdite : « partout en Europe, même
+  constat ») ; la formulation retenue vient du relecteur indépendant (deux écarts venaient d'être cités). `lastmod` au
+  13/11/2026, journal, historique des dates.
+- Reporté : l'écart de 28,3 points sur téléphone (lot P2, figures). Premier écran inchangé, non retesté.
+- Contrôles : `check-all --ci` à 0 ; build CI et typographie 0 défaut ; liens 0 critique ; rendu 0 ; dates 83/83 ;
+  0 débordement sur onze largeurs de 320 à 1 440 px, avec et sans JavaScript (la mesure vérifie désormais le statut
+  HTTP de chaque page) ; lettre : texte servi avant et après, phrase à phrase, seules changent les phrases décidées.
+- Instantanés de relecture refaits le 13/11/2026.
