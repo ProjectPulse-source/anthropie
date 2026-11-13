@@ -238,3 +238,27 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   contrôlé, aux empreintes de cache des scripts près (neuf en FR, huit en EN : fins de ligne du poste) ; les quatre SVG
   de la figure servis identiques, octet pour octet, au commit ; « Page mise à jour le 12 novembre 2026 ».
 - Laissés à l'auteur : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\A_ARBITRER.md`.
+
+### Reprise du style (13/11/2026)
+
+- Consigne de l'auteur (13/11/2026) : une mise en page « ultra lisible », au niveau de la page Parcoursup (règle 17
+  du `CLAUDE.md` du site), adaptée au sujet. Étude, choix et mesures :
+  `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ETUDE_STYLE.md`. Organes existants seulement
+  (`_ressource-relief.scss`, `reperes-page.html`) ; les phrases ne changent pas, elles prennent une forme.
+- Organes : trois repères sous le chapô, tous en puissance réservée (près de 18 GW en mai 2026 ; 7,6 GW sur 13,9 GW
+  au 1er novembre 2025 visaient 2030 ou après ; environ 0,9 GW abandonnés de 2023 à cette date, contre 0,4 GW raccordés sur la même période).
+  Aucun repère en TWh : côte à côte, GW et TWh invitaient la comparaison que la page interdit. Les trois mécanismes en
+  cartes numérotées (le numéro remplace « D'abord, Ensuite, Enfin » ; le gras de la première carte porte son périmètre,
+  « pas seulement celles des data centers ») ; deux paragraphes coupés. Périodes des repères écrites en clair, comme
+  dans le chapô : jeu transcrit, la période fait partie du motif de lecture du générateur (écart déclaré à « aucun
+  nombre saisi » ; aucune valeur saisie).
+- Inchangés : titre, adresse, ancres, chapô, figures, nombres, réserves, questions fréquentes, sources, « Réutiliser ».
+  Aucune modification de fond : `lastmod`, journal et `data/dates_affichage.json` inchangés ; `refonte` reste au
+  12/11/2026 (instantané du 13/11, postérieur).
+- Contrôles : `check-all --ci` 19/19 à 0 ; build CI et `typo_build` 0 défaut ; liens 0 critique ; rendu 0 ; dates 83/83,
+  0 bloc sans période ; 0 débordement sur onze largeurs de 320 à 1 440 px, avec et sans JavaScript ; aucun texte des
+  blocs sous 12 px ; repères absents sous 600 px ; lecture à côté de la figure dans la limite. Lettre : texte servi avant
+  et après, phrase à phrase ; seules changent les phrases mises en forme ; nombres inchangés. Langue et fidélité : la
+  session, puis un relecteur indépendant (aucun P0 ; P1 traités). Premier écran : deux tours de lecteurs neufs (FR, EN) et un témoin trompeur vu mordre
+  (`LOTS\guides\P\premier_ecran_style.md`) ; constats sur le chapô, inchangé : `LOTS\guides\A_ARBITRER.md`.
+- Instantané de relecture refait le 13/11/2026.

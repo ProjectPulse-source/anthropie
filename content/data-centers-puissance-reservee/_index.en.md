@@ -46,6 +46,17 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["anthropie-ordre-ici-dette-ailleurs"]
   rang: 47
   nature: "RTE publications read and measured"
+reperes:  # three key results under the standfirst, from 600 px wide (partials/reperes-page.html ; règle 17 du site,
+  # reprise du style du 13/11/2026, test du premier écran). Same results, periods and tokens as the French page.
+  - ancre: "reserved-consumed"
+    fort: "Nearly {dtc.res_mai2026} GW"
+    texte: "of connection capacity reserved by data centres on the French transmission grid (run by RTE) as of May 2026, against about {dtc.res_fin2024} GW at end-2024"
+  - ancre: "timing"
+    fort: "{dtc.st_2030} GW out of {dtc.actif_dc} GW"
+    texte: "reserved by data centres as of {dtc.date_fig23} were for commissioning in 2030 or later: more than half of the total (measured on an RTE figure)"
+  - ancre: "timing"
+    fort: "About {dtc.st_abandon} GW"
+    texte: "of data-centre reservations abandoned between 2023 and {dtc.date_fig23}, against {dtc.st_raccorde} GW of projects actually connected over the same period (measured on an RTE figure)"
 ---
 
 {{< reutiliser-ancre >}}
@@ -56,7 +67,9 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 In May 2026, according to RTE, France's transmission system operator, data centres had reserved nearly {{< dtc-val "res_mai2026" >}} gigawatts (GW) of connection capacity on its grid, for about {{< dtc-val "projets_2026" >}} projects. At end-2024, some forty projects totalled about {{< dtc-val "res_fin2024" >}} GW: in less than a year and a half, reserved capacity more than tripled. At end-November 2025, of the roughly {{< dtc-val "tot_nov2025" >}} GW of grid access rights (that is, reserved connection capacity) granted by RTE to large projects, data centres held {{< dtc-val "res_nov2025" >}} GW, ahead of hydrogen ({{< dtc-val "tot_h2" >}} GW) and industry ({{< dtc-val "tot_ind" >}} GW).
 
-Consumption, by contrast, is measured in terawatt-hours (TWh). Dedicated-site data centres connected to RTE's transmission grid consumed {{< dtc-val "rpt_2024" >}} TWh in 2024 and nearly {{< dtc-val "rpt_2025" >}} TWh in 2025; those on the distribution grid run by Enedis, {{< dtc-val "enedis_2024" >}} TWh in 2024. RTE estimates the consumption of all dedicated sites at {{< dtc-val "sd_bas" >}} to {{< dtc-val "sd_haut" >}} TWh in 2024, and at {{< dtc-val "int_bas" >}} to {{< dtc-val "int_haut" >}} TWh including the in-house data centres of companies and public bodies. The statistical service of the French ministry for the ecological transition (SDES), which counts the centres itself but takes their consumption figures primarily from the Enedis and RTE databases, reaches the same order of magnitude: {{< dtc-val "sdes_n" >}} centres using more than 1 GWh a year consumed nearly {{< dtc-val "sdes_twh" >}} TWh in 2024, and the total for all centres is estimated at {{< dtc-val "sdes_bas" >}} to {{< dtc-val "sdes_haut" >}} TWh. The two estimates do not cover exactly the same scope: they cross-check each other without being interchangeable.
+Consumption, by contrast, is measured in terawatt-hours (TWh). Dedicated-site data centres connected to RTE's transmission grid consumed {{< dtc-val "rpt_2024" >}} TWh in 2024 and nearly {{< dtc-val "rpt_2025" >}} TWh in 2025; those on the distribution grid run by Enedis, {{< dtc-val "enedis_2024" >}} TWh in 2024. RTE estimates the consumption of all dedicated sites at {{< dtc-val "sd_bas" >}} to {{< dtc-val "sd_haut" >}} TWh in 2024, and at {{< dtc-val "int_bas" >}} to {{< dtc-val "int_haut" >}} TWh including the in-house data centres of companies and public bodies.
+
+The statistical service of the French ministry for the ecological transition (SDES), which counts the centres itself but takes their consumption figures primarily from the Enedis and RTE databases, reaches the same order of magnitude: {{< dtc-val "sdes_n" >}} centres using more than 1 GWh a year consumed nearly {{< dtc-val "sdes_twh" >}} TWh in 2024, and the total for all centres is estimated at {{< dtc-val "sdes_bas" >}} to {{< dtc-val "sdes_haut" >}} TWh. The two estimates do not cover exactly the same scope: they cross-check each other without being interchangeable.
 
 **Reserved capacity is not consumption.** A reservation guarantees access to the grid, under the terms of its contract and the connection rules; it guarantees neither that the site will be built, nor when it will be commissioned, nor at what power it will run. The chart places the two quantities one above the other, each on its own scale, without calculating any ratio between them.
 
@@ -83,9 +96,19 @@ From reservation to consumption, each step carries its own uncertainty: the proj
 
 The reservation figure lends itself to two readings. The first reads it as consumption that is announced, and imminent. The second reads it as an option on the grid, part of which will materialise slowly and part never, in proportions no one knows: this is the reading of RTE, which grants these reservations and warns that not all connection requests will materialise. This reading is not neutral, however: RTE uses it to argue for reforming the connection queue.
 
-The reservations themselves settle one point between the two readings: timing. On {{< dtc-val "date_fig23" >}}, of the capacity reserved by data centres (measured on an RTE figure, to within 0.1 GW), {{< dtc-val "st_travaux" >}} GW was under construction, {{< dtc-val "st_2529" >}} GW signed for commissioning between 2025 and 2029, {{< dtc-val "st_2030" >}} GW for commissioning from 2030 and {{< dtc-val "st_suspendu" >}} GW suspended. More than half of the reserved capacity therefore targeted 2030 or later. And since 2023, reservations totalling about {{< dtc-val "st_abandon" >}} GW had been abandoned, against {{< dtc-val "st_raccorde" >}} GW of projects actually connected. According to RTE's web page updated on {{< dtc-val "date_web" >}}, the {{< dtc-val "sites_rte" >}} data centres directly connected to its grid, whatever their connection date, total {{< dtc-val "rac_mw" >}} megawatts.
+The reservations themselves settle one point between the two readings: timing. On {{< dtc-val "date_fig23" >}}, of the capacity reserved by data centres (measured on an RTE figure, to within 0.1 GW), {{< dtc-val "st_travaux" >}} GW was under construction, {{< dtc-val "st_2529" >}} GW signed for commissioning between 2025 and 2029, {{< dtc-val "st_2030" >}} GW for commissioning from 2030 and {{< dtc-val "st_suspendu" >}} GW suspended.
 
-Three mechanisms, found in RTE's Bilan prévisionnel and on its web page, separate reservation from consumption. First, across all connection requests, and not only those of data centres, RTE observes that some developers have, on occasion, secured grid access at several points for what are in fact similar projects. Second, sites ramp up slowly: according to the main operators, cited by RTE, it takes {{< dtc-val "montee" >}} to reach about {{< dtc-val "montee_pct" >}}% of the capacity requested, because servers, which are very expensive, are installed only as usage grows. Finally, the power drawn stays below the connection capacity: RTE observes that data centres that have been connected to its grid for two to three years currently use, on average, only {{< dtc-val "util_obs" >}}% of the capacity they requested.
+More than half of the reserved capacity therefore targeted 2030 or later. And since 2023, reservations totalling about {{< dtc-val "st_abandon" >}} GW had been abandoned, against {{< dtc-val "st_raccorde" >}} GW of projects actually connected. According to RTE's web page updated on {{< dtc-val "date_web" >}}, the {{< dtc-val "sites_rte" >}} data centres directly connected to its grid, whatever their connection date, total {{< dtc-val "rac_mw" >}} megawatts.
+
+Three mechanisms, found in RTE's Bilan prévisionnel and on its web page, separate reservation from consumption.
+
+<div class="liste-cartes">
+
+1. **Across all connection requests, and not only those of data centres**, RTE observes that some developers have, on occasion, secured grid access at several points for what are in fact similar projects.
+2. **Sites ramp up slowly**: according to the main operators, cited by RTE, it takes {{< dtc-val "montee" >}} to reach about {{< dtc-val "montee_pct" >}}% of the capacity requested, because servers, which are very expensive, are installed only as usage grows.
+3. **The power drawn stays below the connection capacity**: RTE observes that data centres that have been connected to its grid for two to three years currently use, on average, only {{< dtc-val "util_obs" >}}% of the capacity they requested.
+
+</div>
 
 **The chart above settles a question of timing, not of volume.** It shows that reserved capacity translates into consumption neither immediately nor in full; it does not say what share will materialise by 2035.
 

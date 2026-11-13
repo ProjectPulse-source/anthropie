@@ -48,6 +48,21 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
   livres: ["anthropie-ordre-ici-dette-ailleurs"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 47
   nature: "Publications de RTE relues et mesurées"
+reperes:  # trois repères sous le chapô, à partir de 600 px de large (partials/reperes-page.html ; règle 17 du site,
+  # reprise du style du 13/11/2026, test du premier écran, deux tours). Chacun reprend un résultat écrit dans sa section, avec sa
+  # période. Nombres : jetons {dtc.*} ; périodes écrites en clair, comme dans le chapô (jeu transcrit : la période fait
+  # partie du motif de lecture du générateur, qui s'arrête si RTE la change). La base de la part (13,9 GW au 1er novembre
+  # 2025) est en gras : deux lecteurs sur trois appliquaient « plus de la moitié » aux 18 GW de mai 2026. Aucun repère
+  # en TWh : posés côte à côte, GW et TWh invitaient la comparaison que la page interdit (la consommation est au chapô).
+  - ancre: "reserve-consomme"
+    fort: "Près de {dtc.res_mai2026} GW"
+    texte: "de puissance de raccordement réservée par les data centers sur le réseau de transport d'électricité de RTE en mai 2026, contre environ {dtc.res_fin2024} GW à la fin de 2024"
+  - ancre: "calendrier"
+    fort: "{dtc.st_2030} GW sur {dtc.actif_dc} GW"
+    texte: "réservés par les data centers au {dtc.date_fig23} visaient une mise en service en 2030 ou après, soit plus de la moitié (mesure sur une figure de RTE)"
+  - ancre: "calendrier"
+    fort: "Environ {dtc.st_abandon} GW"
+    texte: "de réservations de data centers abandonnées entre 2023 et le {dtc.date_fig23}, contre {dtc.st_raccorde} GW de projets effectivement raccordés sur la même période (mesure sur une figure de RTE)"
 ---
 
 {{< reutiliser-ancre >}}
@@ -58,7 +73,9 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 En mai 2026, selon RTE, gestionnaire du réseau de transport d'électricité, les data centers avaient réservé près de {{< dtc-val "res_mai2026" >}}&nbsp;gigawatts (GW) de puissance de raccordement à son réseau, pour environ {{< dtc-val "projets_2026" >}}&nbsp;projets. Fin 2024, une quarantaine de projets totalisaient environ {{< dtc-val "res_fin2024" >}}&nbsp;GW&nbsp;: en moins d'un an et demi, la puissance réservée a plus que triplé. Fin novembre 2025, les grands projets détenaient quelque {{< dtc-val "tot_nov2025" >}}&nbsp;GW de droits d'accès au réseau attribués par RTE, c'est-à-dire de puissance de raccordement réservée&nbsp;; les data centers en détenaient {{< dtc-val "res_nov2025" >}}&nbsp;GW, devant l'hydrogène ({{< dtc-val "tot_h2" >}}&nbsp;GW) et l'industrie ({{< dtc-val "tot_ind" >}}&nbsp;GW).
 
-La consommation, elle, se compte en térawattheures (TWh). Les data centers sur sites dédiés raccordés au réseau de transport de RTE ont consommé {{< dtc-val "rpt_2024" >}}&nbsp;TWh en 2024 et près de {{< dtc-val "rpt_2025" >}}&nbsp;TWh en 2025&nbsp;; ceux du réseau de distribution d'Enedis, {{< dtc-val "enedis_2024" >}}&nbsp;TWh en 2024. RTE estime la consommation de l'ensemble des sites dédiés entre {{< dtc-val "sd_bas" >}} et {{< dtc-val "sd_haut" >}}&nbsp;TWh en 2024, et entre {{< dtc-val "int_bas" >}} et {{< dtc-val "int_haut" >}}&nbsp;TWh avec les centres de données internes des entreprises et des administrations. Le service statistique du ministère de la Transition écologique (SDES) recense les centres eux-mêmes, mais tire en priorité leurs données de consommation des bases d'Enedis et de RTE. Il aboutit au même ordre de grandeur&nbsp;: {{< dtc-val "sdes_n" >}}&nbsp;centres de plus de 1&nbsp;GWh par an ont consommé près de {{< dtc-val "sdes_twh" >}}&nbsp;TWh en 2024, et l'ensemble est estimé entre {{< dtc-val "sdes_bas" >}} et {{< dtc-val "sdes_haut" >}}&nbsp;TWh. Les deux estimations ne portent pas exactement sur le même périmètre&nbsp;: elles se recoupent, sans se remplacer.
+La consommation, elle, se compte en térawattheures (TWh). Les data centers sur sites dédiés raccordés au réseau de transport de RTE ont consommé {{< dtc-val "rpt_2024" >}}&nbsp;TWh en 2024 et près de {{< dtc-val "rpt_2025" >}}&nbsp;TWh en 2025&nbsp;; ceux du réseau de distribution d'Enedis, {{< dtc-val "enedis_2024" >}}&nbsp;TWh en 2024. RTE estime la consommation de l'ensemble des sites dédiés entre {{< dtc-val "sd_bas" >}} et {{< dtc-val "sd_haut" >}}&nbsp;TWh en 2024, et entre {{< dtc-val "int_bas" >}} et {{< dtc-val "int_haut" >}}&nbsp;TWh avec les centres de données internes des entreprises et des administrations.
+
+Le service statistique du ministère de la Transition écologique (SDES) recense les centres eux-mêmes, mais tire en priorité leurs données de consommation des bases d'Enedis et de RTE. Il aboutit au même ordre de grandeur&nbsp;: {{< dtc-val "sdes_n" >}}&nbsp;centres de plus de 1&nbsp;GWh par an ont consommé près de {{< dtc-val "sdes_twh" >}}&nbsp;TWh en 2024, et l'ensemble est estimé entre {{< dtc-val "sdes_bas" >}} et {{< dtc-val "sdes_haut" >}}&nbsp;TWh. Les deux estimations ne portent pas exactement sur le même périmètre&nbsp;: elles se recoupent, sans se remplacer.
 
 **Une puissance réservée n'est pas une consommation.** Une réservation garantit un accès au réseau, dans les conditions de son contrat et des règles de raccordement&nbsp;; elle ne garantit ni que le site sera construit, ni la date de sa mise en service, ni la puissance à laquelle il fonctionnera. La figure place les deux grandeurs l'une sous l'autre, chacune sur son échelle, sans calculer de rapport entre elles.
 
@@ -85,9 +102,19 @@ Entre une réservation et une consommation, chaque étape a son incertitude&nbsp
 
 Le chiffre des réservations se prête à deux lectures. La première y voit une consommation annoncée, et prochaine. La seconde y voit une option sur le réseau, dont une part se réalisera lentement et une autre jamais, sans que l'on sache dans quelle proportion&nbsp;: c'est celle de RTE, qui attribue ces réservations et prévient que les demandes de raccordement ne se concrétiseront pas toutes. Elle n'est pas neutre pour autant&nbsp;: RTE en tire argument pour réformer la file d'attente des raccordements.
 
-Les réservations elles-mêmes permettent de départager les deux lectures sur un point&nbsp;: le calendrier. Au {{< dtc-val "date_fig23" >}}, les gigawatts réservés par les data centers se répartissaient ainsi (mesure sur une figure de RTE, au dixième de gigawatt près)&nbsp;: en travaux, {{< dtc-val "st_travaux" >}}&nbsp;GW&nbsp;; signés pour une mise en service entre 2025 et 2029, {{< dtc-val "st_2529" >}}&nbsp;GW&nbsp;; pour une mise en service à partir de 2030, {{< dtc-val "st_2030" >}}&nbsp;GW&nbsp;; suspendus, {{< dtc-val "st_suspendu" >}}&nbsp;GW. Plus de la moitié de la puissance réservée visait donc 2030 ou après. Et depuis 2023, des réservations totalisant environ {{< dtc-val "st_abandon" >}}&nbsp;GW avaient été abandonnées, contre {{< dtc-val "st_raccorde" >}}&nbsp;GW de projets effectivement raccordés. D'après la page de RTE mise à jour le {{< dtc-val "date_web" >}}, les {{< dtc-val "sites_rte" >}}&nbsp;data centers directement raccordés à son réseau, quelle que soit la date de leur raccordement, totalisent {{< dtc-val "rac_mw" >}}&nbsp;mégawatts.
+Les réservations elles-mêmes permettent de départager les deux lectures sur un point&nbsp;: le calendrier. Au {{< dtc-val "date_fig23" >}}, les gigawatts réservés par les data centers se répartissaient ainsi (mesure sur une figure de RTE, au dixième de gigawatt près)&nbsp;: en travaux, {{< dtc-val "st_travaux" >}}&nbsp;GW&nbsp;; signés pour une mise en service entre 2025 et 2029, {{< dtc-val "st_2529" >}}&nbsp;GW&nbsp;; pour une mise en service à partir de 2030, {{< dtc-val "st_2030" >}}&nbsp;GW&nbsp;; suspendus, {{< dtc-val "st_suspendu" >}}&nbsp;GW.
 
-Trois mécanismes, relevés dans le Bilan prévisionnel et sur la page web de RTE, séparent la réservation de la consommation. D'abord, sur l'ensemble des demandes de raccordement, et pas seulement celles des data centers, RTE observe que certains développeurs se sont parfois assuré un accès au réseau en plusieurs points pour des projets en réalité similaires. Ensuite, les sites montent en charge lentement&nbsp;: selon les principaux opérateurs, cités par RTE, il faut {{< dtc-val "montee" >}} pour atteindre environ {{< dtc-val "montee_pct" >}}&nbsp;% de la puissance demandée, car les serveurs, très coûteux, ne sont installés qu'au rythme des usages. Enfin, la puissance appelée reste inférieure à la puissance de raccordement&nbsp;: RTE constate que les data centers raccordés à son réseau depuis deux à trois ans n'utilisent pour l'instant, en moyenne, que {{< dtc-val "util_obs" >}}&nbsp;% de la puissance qu'ils ont demandée.
+Plus de la moitié de la puissance réservée visait donc 2030 ou après. Et depuis 2023, des réservations totalisant environ {{< dtc-val "st_abandon" >}}&nbsp;GW avaient été abandonnées, contre {{< dtc-val "st_raccorde" >}}&nbsp;GW de projets effectivement raccordés. D'après la page de RTE mise à jour le {{< dtc-val "date_web" >}}, les {{< dtc-val "sites_rte" >}}&nbsp;data centers directement raccordés à son réseau, quelle que soit la date de leur raccordement, totalisent {{< dtc-val "rac_mw" >}}&nbsp;mégawatts.
+
+Trois mécanismes, relevés dans le Bilan prévisionnel et sur la page web de RTE, séparent la réservation de la consommation.
+
+<div class="liste-cartes">
+
+1. **Sur l'ensemble des demandes de raccordement, et pas seulement celles des data centers**, RTE observe que certains développeurs se sont parfois assuré un accès au réseau en plusieurs points pour des projets en réalité similaires.
+2. **Les sites montent en charge lentement**&nbsp;: selon les principaux opérateurs, cités par RTE, il faut {{< dtc-val "montee" >}} pour atteindre environ {{< dtc-val "montee_pct" >}}&nbsp;% de la puissance demandée, car les serveurs, très coûteux, ne sont installés qu'au rythme des usages.
+3. **La puissance appelée reste inférieure à la puissance de raccordement**&nbsp;: RTE constate que les data centers raccordés à son réseau depuis deux à trois ans n'utilisent pour l'instant, en moyenne, que {{< dtc-val "util_obs" >}}&nbsp;% de la puissance qu'ils ont demandée.
+
+</div>
 
 **La figure ci-dessus tranche une question de calendrier, pas de volume.** Elle montre que la puissance réservée ne se traduit ni immédiatement ni intégralement en consommation&nbsp;; elle ne dit pas quelle part se réalisera d'ici 2035.
 

@@ -1,4 +1,4 @@
-# relu le 2026-11-12 ; texte servi de /en/data-centres-reserved-capacity/, build de 0f1686e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /en/data-centres-reserved-capacity/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Data centres: do reserved gigawatts foretell consumption?
 The figure in circulation is the one for reservations: nearly 18 gigawatts on RTE’s transmission grid in May 2026, against about 5 at end-2024.
@@ -36,9 +36,9 @@ More than half of the reserved capacity therefore targeted 2030 or later.
 And since 2023, reservations totalling about 0.9 GW had been abandoned, against 0.4 GW of projects actually connected.
 According to RTE’s web page updated on 1 June 2026, the eight data centres directly connected to its grid, whatever their connection date, total 800 megawatts.
 Three mechanisms, found in RTE’s Bilan prévisionnel and on its web page, separate reservation from consumption.
-First, across all connection requests, and not only those of data centres, RTE observes that some developers have, on occasion, secured grid access at several points for what are in fact similar projects.
-Second, sites ramp up slowly: according to the main operators, cited by RTE, it takes ten to fifteen years to reach about 80% of the capacity requested, because servers, which are very expensive, are installed only as usage grows.
-Finally, the power drawn stays below the connection capacity: RTE observes that data centres that have been connected to its grid for two to three years currently use, on average, only 20% of the capacity they requested.
+Across all connection requests, and not only those of data centres, RTE observes that some developers have, on occasion, secured grid access at several points for what are in fact similar projects.
+Sites ramp up slowly: according to the main operators, cited by RTE, it takes ten to fifteen years to reach about 80% of the capacity requested, because servers, which are very expensive, are installed only as usage grows.
+The power drawn stays below the connection capacity: RTE observes that data centres that have been connected to its grid for two to three years currently use, on average, only 20% of the capacity they requested.
 The chart above settles a question of timing, not of volume.
 It shows that reserved capacity translates into consumption neither immediately nor in full; it does not say what share will materialise by 2035.
 What RTE projects
