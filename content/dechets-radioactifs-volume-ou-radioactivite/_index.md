@@ -1,10 +1,11 @@
 ---
 title: "Déchets radioactifs : le volume dit-il le problème ?"
-description: "Fin {dr.an_act}, les déchets de haute activité faisaient {dr.ha_vol_a} % du volume des déchets radioactifs recensés dans les bilans de l'Andra et {dr.ha_act} % de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte) ; leur stockage définitif, prévu à Bure (Cigéo), n'est pas encore autorisé. Volume, radioactivité et filière de stockage, catégorie par catégorie (Andra, données ouvertes et Les Essentiels 2026)."
-chapo: "Les déchets radioactifs se comptent d'abord en mètres cubes : {dr.tot5} million fin {dr.an_vol} dans les bilans de l'Andra. Mais le volume ne dit ni où est la radioactivité, ni ce qui reste sans solution. Fin {dr.an_act}, les déchets de haute activité faisaient {dr.ha_vol_a} % du volume et {dr.ha_act} % de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte) ; leur stockage définitif est prévu à Bure (Cigéo), mais pas encore autorisé."
+description: "Fin {dr.an_act}, les déchets de haute activité faisaient {dr.ha_vol_a} % du volume des déchets radioactifs recensés dans les bilans de l'Andra et {dr.ha_act} % de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte) ; leur stockage définitif, prévu à Bure (Cigéo), n'a pas encore reçu son autorisation de création. Volume, radioactivité et filière de stockage, catégorie par catégorie (Andra, données ouvertes et Les Essentiels 2026)."
+chapo: "En France, les déchets radioactifs se comptent d'abord en mètres cubes : {dr.tot5} million fin {dr.an_vol} dans les bilans de l'Andra. Mais le volume ne dit ni où est la radioactivité, ni ce qui reste sans solution. Fin {dr.an_act}, les déchets de haute activité faisaient {dr.ha_vol_a} % du volume et {dr.ha_act} % de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte) ; leur stockage définitif est prévu à Bure, dans le centre Cigéo, qui n'a pas encore reçu son autorisation de création."
 date: 2026-10-26
-lastmod: 2026-11-12
+lastmod: 2026-11-13
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-13, texte: "Correction : une explication de l'absence de filière par des contraintes de gestion, non établie pour ce constat, est retirée ; Cigéo, déclaré d'utilité publique en 2022, « n'a pas encore reçu son autorisation de création » au lieu de « n'est pas encore autorisé »."}
   - {date: 2026-11-12, texte: "Reprise : la radioactivité déclarée, pour l'essentiel un maximum, dite à côté de chaque part et documentée dans le fichier de données et la figure ; le centre de la Manche en phase de fermeture, non en surveillance ; deux classements qui ne mesurent à eux seuls ni les doses, ni la durée de danger, ni le coût ; Malvési rapproché des volumes que publie l'Andra ; volumes hors bilans comptés en tonnes, non additionnés aux mètres cubes ; état de Cigéo vérifié au 12 novembre 2026."}
 og_title: "Déchets radioactifs : le volume dit-il le problème ? — S. Lalut"
 og_image: "images/og-dechets-radioactifs.jpg"
@@ -51,11 +52,11 @@ reperes:  # trois repères sous le chapô, à partir de 600 px de large (partial
     fort: "{dr.ha_act} %"
     texte: "de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte) dans {dr.ha_vol_a} % du volume : les déchets de haute activité des bilans de l'Andra, fin {dr.an_act}"
   - ancre: "volume-radioactivite"
-    fort: "Plus de neuf dixièmes du volume"
-    texte: "la même année : les déchets de faible et moyenne activité à vie courte et de très faible activité, qui portaient {dr.masse_act} % de la radioactivité déclarée"
+    fort: "{dr.masse_act} %"
+    texte: "de la radioactivité déclarée dans plus de neuf dixièmes du volume, fin {dr.an_act} : les déchets de faible et moyenne activité à vie courte et de très faible activité"
   - ancre: "stockage"
     fort: "Cigéo"
-    texte: "n'est pas encore autorisé : le centre de stockage prévu à Bure pour les déchets de haute activité et de moyenne activité à vie longue"
+    texte: "n'a pas encore reçu son autorisation de création : le centre de stockage prévu à Bure pour les déchets de haute activité et de moyenne activité à vie longue"
 ---
 
 {{< reutiliser-ancre >}}
@@ -79,7 +80,7 @@ Les catégories qui concentrent l'essentiel de la radioactivité déclarée ne s
 <div class="figure-lecture__texte">
 <div class="resultat-phrase">
 
-**Le résultat en une phrase.** En France, fin {{< dr-val "an_act" >}}, les déchets de haute activité faisaient {{< dr-val "ha_vol_a" >}}&nbsp;% du volume des déchets radioactifs recensés dans les bilans de l'Andra et {{< dr-val "ha_act" >}}&nbsp;% de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte)&nbsp;; leur stockage définitif, prévu à Bure (Cigéo), n'est pas encore autorisé.
+**Le résultat en une phrase.** En France, fin {{< dr-val "an_act" >}}, les déchets de haute activité faisaient {{< dr-val "ha_vol_a" >}}&nbsp;% du volume des déchets radioactifs recensés dans les bilans de l'Andra et {{< dr-val "ha_act" >}}&nbsp;% de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte)&nbsp;; leur stockage définitif, prévu à Bure (Cigéo), n'a pas encore reçu son autorisation de création.
 
 </div>
 </div>
@@ -91,7 +92,7 @@ Depuis, le volume a continué de croître&nbsp;: {{< dr-val "tot5" >}}&nbsp;mill
 
 Deux classements donnent des hiérarchies très différentes, et le graphe les place côte à côte&nbsp;: en volume, les déchets à vie courte et de très faible activité dominent&nbsp;; en radioactivité déclarée, la haute activité. Mais ni l'un ni l'autre ne mesure, à lui seul, les doses auxquelles une population peut être exposée, la durée pendant laquelle les déchets restent dangereux ou le coût des solutions de gestion.
 
-Le graphe montre aussi que la haute activité et les deux catégories à vie longue (moyenne et faible activité) n'ont pas encore de filière de stockage définitif en exploitation, y compris la faible activité à vie longue, qui ne porte que {{< dr-val "act_favl" >}}&nbsp;% de la radioactivité déclarée. Ce constat reflète des contraintes de gestion liées notamment à la période radioactive, au niveau d'activité et aux propriétés des déchets&nbsp;; il ne permet pas d'attribuer la situation à la seule durée de vie.
+Le graphe montre aussi que la haute activité et les deux catégories à vie longue (moyenne et faible activité) n'ont pas encore de filière de stockage définitif en exploitation, y compris la faible activité à vie longue, qui ne porte que {{< dr-val "act_favl" >}}&nbsp;% de la radioactivité déclarée. Ce constat ne permet pas d'attribuer cette absence de filière à la seule durée de vie.
 
 La radioactivité de chaque catégorie figure dans {{< dr-val "nb_editions" >}} fichiers ({{< dr-val "editions" >}})&nbsp;: déclarée chaque année jusqu'aux données de fin 2016, elle ne l'est plus, depuis, pour l'essentiel du volume, qu'aux éditions de l'inventaire&nbsp;; les fichiers des autres années n'en donnent que pour moins d'un millième du volume. Dans chacun de ces cinq fichiers, la haute activité représente entre {{< dr-val "ha_ed_bas" >}} et {{< dr-val "ha_ed_haut" >}}&nbsp;% de la radioactivité recensée dans les cinq catégories des bilans, et la haute activité avec la moyenne activité à vie longue, au moins {{< dr-val "ha_mavl_ed_bas" >}}&nbsp;%. Les données disponibles ne permettent pas, sans harmonisation supplémentaire, de lire ces parts comme une évolution, ni d'expliquer la variation d'une édition à l'autre.
 
@@ -105,7 +106,7 @@ Fin {{< dr-val "an_vol" >}}, {{< dr-val "stocke_fmavc" >}}&nbsp;% du volume des 
 
 Les catégories qui concentrent la radioactivité n'ont pas encore de stockage définitif. Selon l'Andra, des déchets de haute activité et de moyenne activité à vie longue sont «&nbsp;produits et entreposés sur leurs sites de production, en attendant la création du centre de stockage destiné à les accueillir&nbsp;: Cigéo&nbsp;»&nbsp;; le stockage des déchets de faible activité à vie longue est à l'étude.
 
-Cigéo est un centre de stockage en couche géologique profonde prévu à Bure (Meuse).
+Cigéo est un centre de stockage en couche géologique profonde prévu à Bure (Meuse). Il a été déclaré d'utilité publique par un décret du 7&nbsp;juillet 2022 (n°&nbsp;2022-993)&nbsp;; son autorisation de création relève d'une autre procédure.
 
 <div class="fiche-etapes">
 <p class="surtitre-bloc">La procédure d'autorisation de création de Cigéo</p>
@@ -156,5 +157,5 @@ Restent aussi hors des bilans, notamment, les résidus du traitement des minerai
 - Autorité de sûreté nucléaire et de radioprotection, [lettre du 30&nbsp;mars 2026](https://reglementation-controle.asnr.fr/Media/Files/demande-d-autorisation-de-creation-de-l-installation-nucleaire-de-base-cigeo) (CODEP-DRC-2026-012666)&nbsp;: demande d'autorisation de Cigéo. Préfecture de la Haute-Marne, [page de l'enquête publique](https://www.haute-marne.gouv.fr/index.php/Actions-de-l-Etat/CIGEO/Demande-d-autorisation-de-creation-de-Cigeo), lue le 26&nbsp;octobre 2026&nbsp;: dates de l'enquête (18&nbsp;mai au 16&nbsp;juillet 2026, après prolongation), avis favorable de la commission assorti de deux réserves et de deux recommandations, rapport en ligne depuis le 14&nbsp;septembre 2026, décision par décret en Conseil d'État à venir. Légifrance, recherche «&nbsp;Cigéo&nbsp;» au Journal officiel, et préfecture de la Meuse, [page de la demande d'autorisation de création](https://www.meuse.gouv.fr/Actions-de-l-Etat/CIGEO/Demande-d-autorisation-de-creation-de-Cigeo), consultées le 12&nbsp;novembre 2026&nbsp;: aucun décret d'autorisation publié, aucune étape de la procédure après le 14&nbsp;septembre 2026. Dépêche AFP du 14&nbsp;septembre 2026, [reprise par Connaissance des énergies](https://www.connaissancedesenergies.org/afp/dechets-nucleaires-avis-favorable-de-la-commission-denquete-pour-cigeo-260914)&nbsp;: clôture de l'enquête publique et avis de la commission.
 
 {{< reutiliser figures="figures_dechets" jeu="dechets_radioactifs" sources="Andra, Inventaire national" donnees="Dans le CSV, au format long, pour chaque fichier annuel de l'Inventaire national depuis fin 2013 : volume en équivalent conditionné et activité déclarée par catégorie, volume avec activité déclarée, activité déclarée majorante et, pour les déchets de faible et moyenne activité à vie courte (FMA-VC) et de très faible activité (TFA), volume situé dans un centre de l'Andra (non repéré pour 2013, 2014 et 2023) ; le JSON donne les parts calculées, dont celles que trace la figure (volume et radioactivité déclarée, la même année)." >}}
-En France, fin {{< dr-val "an_act" >}}, les déchets de haute activité faisaient {{< dr-val "ha_vol_a" >}} % du volume des déchets radioactifs recensés dans les bilans de l'Andra et {{< dr-val "ha_act" >}} % de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte). La haute activité et les deux catégories à vie longue (moyenne et faible activité) n'ont pas encore de filière de stockage définitif en exploitation&nbsp;: le stockage de la haute activité et de la moyenne activité à vie longue est prévu à Bure (Cigéo), pas encore autorisé. Le volume, lui, est porté pour l'essentiel par des catégories qui ont un stockage en service.
+En France, fin {{< dr-val "an_act" >}}, les déchets de haute activité faisaient {{< dr-val "ha_vol_a" >}} % du volume des déchets radioactifs recensés dans les bilans de l'Andra et {{< dr-val "ha_act" >}} % de la radioactivité déclarée (pour l'essentiel un maximum, non une mesure exacte). La haute activité et les deux catégories à vie longue (moyenne et faible activité) n'ont pas encore de filière de stockage définitif en exploitation&nbsp;: le stockage de la haute activité et de la moyenne activité à vie longue est prévu à Bure, dans le centre Cigéo, qui n'a pas encore reçu son autorisation de création. Le volume, lui, est porté pour l'essentiel par des catégories qui ont un stockage en service.
 {{< /reutiliser >}}

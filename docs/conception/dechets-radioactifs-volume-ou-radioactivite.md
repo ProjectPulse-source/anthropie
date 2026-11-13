@@ -243,3 +243,25 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
 - Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `cf3ad02` à `17d3598`) ; déploiement `hugo.yml`
   n° 43351148379 réussi (build, mise en ligne, relecture). Attestation de la version servie : faite le 13/11/2026 vers 03 h 20 (heure de
   Paris) ; HTML servi identique au build contrôlé, aux empreintes de cache des feuilles et scripts près.
+
+### Arbitrage externe et relectures (13/11/2026)
+
+- Pièce remise par l'auteur, archivée avant lecture et arbitrée par écrit : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ARBITRAGE_EXTERNE_2026-11-13.md`.
+- Fond : l'explication de l'absence de filière par des contraintes de gestion, non établie pour ce constat, est retirée ;
+  reste la réserve, « Ce constat ne permet pas d'attribuer cette absence de filière à la seule durée de vie ». Cigéo « n'a
+  pas encore reçu son autorisation de création » (description, chapô, repère, résultat, « Réutiliser ») ; il a été déclaré
+  d'utilité publique par le décret n° 2022-993 du 7 juillet 2022 (lu sur Légifrance), autre procédure. Titre anglais
+  « Radioactive waste: what can volume really tell us? » (titre, partage, lien de la page « negative commons »,
+  `llms.txt`), adresse inchangée. « En France » au chapô. `lastmod` au 13/11/2026, journal, historique des dates.
+- Langue : relecteur indépendant, aucun P0 ni P1 ; la relative accrochée à « Bure (Cigéo) » est rattachée au centre (« à
+  Bure, dans le centre Cigéo, qui … » ; « in the Cigéo facility at Bure, which … » : en anglais, la licence va à
+  l'installation, non à « disposal »). Restent en P3, à changer partout ou nulle part : « Andra's balances », « creation
+  licence ».
+- Premier écran : le second repère met 0,12 % en gras et porte sa date ; troisième tour, aucune conclusion interdite (FR,
+  EN).
+- Reportés : concentration de l'activité déclarée (lot P3, calcul reproductible d'abord) ; à la publication d'un décret
+  d'autorisation de Cigéo, changer ensemble repère, résultat, description, chapô et « Réutiliser » (`A_ARBITRER.md` du lot).
+- Contrôles : `check-all --ci` à 0 ; build CI et typographie 0 défaut ; liens 0 critique ; rendu 0 ; dates 83/83 ;
+  0 débordement sur onze largeurs de 320 à 1 440 px, avec et sans JavaScript (la mesure vérifie désormais le statut
+  HTTP de chaque page) ; lettre : texte servi avant et après, phrase à phrase, seules changent les phrases décidées.
+- Instantanés de relecture refaits le 13/11/2026.

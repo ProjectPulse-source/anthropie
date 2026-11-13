@@ -1,13 +1,14 @@
 ---
-title: "Radioactive waste: does volume tell the problem?"
+title: "Radioactive waste: what can volume really tell us?"
 url: /en/radioactive-waste-volume-or-radioactivity/
-description: "At end-{dr.an_act}, high-level waste made up {dr.ha_vol_a}% of the volume of radioactive waste recorded in Andra's balances and {dr.ha_act}% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal, planned at Bure (Cigéo), is not yet licensed. Volume, radioactivity and disposal route, category by category (Andra, open data and Les Essentiels 2026)."
-chapo: "Radioactive waste is first counted in cubic metres: {dr.tot5} million at end-{dr.an_vol} in Andra's balances. But volume says neither where the radioactivity is nor what remains unresolved. At end-{dr.an_act}, high-level waste made up {dr.ha_vol_a}% of the volume and {dr.ha_act}% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal is planned at Bure (Cigéo), but not yet licensed."
+description: "At end-{dr.an_act}, high-level waste made up {dr.ha_vol_a}% of the volume of radioactive waste recorded in Andra's balances and {dr.ha_act}% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal is planned in the Cigéo facility at Bure, which has not yet received its creation licence. Volume, radioactivity and disposal route, category by category (Andra, open data and Les Essentiels 2026)."
+chapo: "In France, radioactive waste is first counted in cubic metres: {dr.tot5} million at end-{dr.an_vol} in Andra's balances. But volume says neither where the radioactivity is nor what remains unresolved. At end-{dr.an_act}, high-level waste made up {dr.ha_vol_a}% of the volume and {dr.ha_act}% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal is planned in the Cigéo facility at Bure, which has not yet received its creation licence."
 date: 2026-10-26
-lastmod: 2026-11-12
+lastmod: 2026-11-13
 journal:  # revisions that change how the page reads
+  - {date: 2026-11-13, texte: "Correction: an explanation attributing the lack of a disposal route to management constraints, which was not established for this finding, has been removed; Cigéo, declared to be of public utility in 2022, “has not yet received its creation licence” instead of “is not yet licensed”. Title reworded."}
   - {date: 2026-11-12, texte: "Revision: declared radioactivity, mostly an upper bound, stated next to each share and documented in the data file and the chart; the Manche centre in its closure phase, not under surveillance; two rankings that on their own measure neither doses, nor how long the waste remains hazardous, nor cost; Malvési reconciled with the volumes Andra publishes; volumes outside the balances counted in tonnes, not added to cubic metres; status of Cigéo checked as of 12 November 2026."}
-og_title: "Radioactive waste: does volume tell the problem? — S. Lalut"
+og_title: "Radioactive waste: what can volume really tell us? — S. Lalut"
 og_image: "images/og-dechets-radioactifs-en.jpg"
 og_image_alt: "Share card: “Volume does not show where the radioactivity is” — share of volume and of declared radioactivity (mostly an upper bound) of high-level waste, and of short-lived and very-low-level waste, end-2021 (Andra, National Inventory)."
 donnees: [dechets_radioactifs]
@@ -48,11 +49,11 @@ reperes:  # three key results under the standfirst, from 600 px wide (partials/r
     fort: "{dr.ha_act}%"
     texte: "of the declared radioactivity (mostly an upper bound, not an exact measurement) in {dr.ha_vol_a}% of the volume: high-level waste in Andra's balances, France, end-{dr.an_act}"
   - ancre: "volume-radioactivity"
-    fort: "Over nine tenths of the volume"
-    texte: "the same year: low- and intermediate-level short-lived waste and very-low-level waste, which carried {dr.masse_act}% of the declared radioactivity"
+    fort: "{dr.masse_act}%"
+    texte: "of the declared radioactivity in over nine tenths of the volume at end-{dr.an_act}: low- and intermediate-level short-lived waste and very-low-level waste"
   - ancre: "disposal"
     fort: "Cigéo"
-    texte: "is not yet licensed: the disposal facility planned at Bure for high-level and long-lived intermediate-level waste"
+    texte: "has not yet received its creation licence: the disposal facility planned at Bure for high-level and long-lived intermediate-level waste"
 ---
 
 {{< reutiliser-ancre >}}
@@ -76,7 +77,7 @@ The categories that hold most of the declared radioactivity are therefore not th
 <div class="figure-lecture__texte">
 <div class="resultat-phrase">
 
-**The result in one sentence.** In France, at end-{{< dr-val "an_act" >}}, high-level waste made up {{< dr-val "ha_vol_a" >}}% of the volume of radioactive waste recorded in Andra's balances and {{< dr-val "ha_act" >}}% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal, planned at Bure (Cigéo), is not yet licensed.
+**The result in one sentence.** In France, at end-{{< dr-val "an_act" >}}, high-level waste made up {{< dr-val "ha_vol_a" >}}% of the volume of radioactive waste recorded in Andra's balances and {{< dr-val "ha_act" >}}% of the declared radioactivity (mostly an upper bound, not an exact measurement); its final disposal is planned in the Cigéo facility at Bure, which has not yet received its creation licence.
 
 </div>
 </div>
@@ -88,7 +89,7 @@ Volume has kept growing since: {{< dr-val "tot5" >}} million cubic metres at end
 
 The two rankings are very different, and the chart sets them side by side: by volume, short-lived and very-low-level waste dominates; by declared radioactivity, high-level waste. But neither, on its own, measures the doses to which a population may be exposed, how long the waste remains hazardous or the cost of management solutions.
 
-The chart also shows that high-level waste and the two long-lived categories (intermediate- and low-level long-lived) have no final disposal route in operation yet, including low-level long-lived waste, which holds only {{< dr-val "act_favl" >}}% of the declared radioactivity. This reflects management constraints linked in particular to half-life, activity level and the properties of the waste; it does not allow the situation to be attributed to lifespan alone.
+The chart also shows that high-level waste and the two long-lived categories (intermediate- and low-level long-lived) have no final disposal route in operation yet, including low-level long-lived waste, which holds only {{< dr-val "act_favl" >}}% of the declared radioactivity. This finding does not allow the lack of a disposal route to be attributed to lifespan alone.
 
 The radioactivity of each category appears in {{< dr-val "nb_editions" >}} files ({{< dr-val "editions" >}}): declared every year up to the end-2016 data, it has since been declared, for the bulk of the volume, only in the inventory's editions; the files for other years give it for less than a thousandth of the volume. In each of these five files, high-level waste accounts for between {{< dr-val "ha_ed_bas" >}}% and {{< dr-val "ha_ed_haut" >}}% of the radioactivity recorded in the five categories of the balances, and high-level together with long-lived intermediate-level waste for at least {{< dr-val "ha_mavl_ed_bas" >}}%. The available data do not, without further harmonisation, allow these shares to be read as a trend, nor the variation from one edition to the next to be explained.
 
@@ -102,7 +103,7 @@ At end-{{< dr-val "an_vol" >}}, {{< dr-val "stocke_fmavc" >}}% of the volume of 
 
 The categories in which the radioactivity is concentrated have no final disposal yet. According to Andra, some high-level and long-lived intermediate-level waste is "produced and stored on its production sites, pending the creation of the disposal facility intended to receive it: Cigéo" (our translation); disposal for low-level long-lived waste is under study.
 
-Cigéo is a deep geological disposal facility planned at Bure (Meuse).
+Cigéo is a deep geological disposal facility planned at Bure (Meuse). It was declared to be of public utility by a decree of 7 July 2022 (no. 2022-993); its creation licence follows a separate procedure.
 
 <div class="fiche-etapes">
 <p class="surtitre-bloc">The creation licence procedure for Cigéo</p>
@@ -153,5 +154,5 @@ Also outside the balances are, in particular, residues from the processing of ur
 - Nuclear Safety and Radiation Protection Authority (ASNR), [letter of 30 March 2026](https://reglementation-controle.asnr.fr/Media/Files/demande-d-autorisation-de-creation-de-l-installation-nucleaire-de-base-cigeo) (CODEP-DRC-2026-012666): Cigéo licence application. Prefecture of Haute-Marne, [public inquiry page](https://www.haute-marne.gouv.fr/index.php/Actions-de-l-Etat/CIGEO/Demande-d-autorisation-de-creation-de-Cigeo) (in French), read on 26 October 2026: inquiry dates (18 May to 16 July 2026, after extension), favourable opinion of the commission with two reservations and two recommendations, report online since 14 September 2026, decision still to come, by decree issued after consulting the Conseil d'État. Légifrance, search for “Cigéo” in the Journal officiel, and Prefecture of Meuse, [creation licence application page](https://www.meuse.gouv.fr/Actions-de-l-Etat/CIGEO/Demande-d-autorisation-de-creation-de-Cigeo) (in French), read on 12 November 2026: no creation licence decree published, no step in the procedure after 14 September 2026. AFP dispatch of 14 September 2026, [as published by Connaissance des énergies](https://www.connaissancedesenergies.org/afp/dechets-nucleaires-avis-favorable-de-la-commission-denquete-pour-cigeo-260914): close of the public inquiry and the commission's opinion.
 
 {{< reutiliser figures="figures_dechets" jeu="dechets_radioactifs" sources="Andra, National Inventory" donnees="In the CSV, in long format, for each annual file of the National Inventory since end-2013: volume in conditioned equivalent and declared activity by category, volume with declared activity, upper-bound declared activity and, for FMA-VC (low- and intermediate-level short-lived) and TFA (very-low-level), volume located in an Andra facility (not identified for 2013, 2014 and 2023); the JSON gives the computed shares, including those drawn by the chart (volume and declared radioactivity for the same year)." >}}
-In France, at end-{{< dr-val "an_act" >}}, high-level waste made up {{< dr-val "ha_vol_a" >}}% of the volume of radioactive waste recorded in Andra's balances and {{< dr-val "ha_act" >}}% of the declared radioactivity (mostly an upper bound, not an exact measurement). High-level waste and the two long-lived categories (intermediate- and low-level long-lived) have no final disposal route in operation yet: disposal of high-level and long-lived intermediate-level waste is planned at Bure (Cigéo) but not yet licensed. Volume, for its part, lies mostly in categories that have a disposal facility in operation.
+In France, at end-{{< dr-val "an_act" >}}, high-level waste made up {{< dr-val "ha_vol_a" >}}% of the volume of radioactive waste recorded in Andra's balances and {{< dr-val "ha_act" >}}% of the declared radioactivity (mostly an upper bound, not an exact measurement). High-level waste and the two long-lived categories (intermediate- and low-level long-lived) have no final disposal route in operation yet: disposal of high-level and long-lived intermediate-level waste is planned in the Cigéo facility at Bure, which has not yet received its creation licence. Volume, for its part, lies mostly in categories that have a disposal facility in operation.
 {{< /reutiliser >}}

@@ -1,10 +1,10 @@
-# relu le 2026-11-13 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /dechets-radioactifs-volume-ou-radioactivite/, build de e0812dd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Déchets radioactifs : le volume dit-il le problème ?
-Les déchets radioactifs se comptent d’abord en mètres cubes : 1,89 million fin 2024 dans les bilans de l’Andra.
+En France, les déchets radioactifs se comptent d’abord en mètres cubes : 1,89 million fin 2024 dans les bilans de l’Andra.
 Mais le volume ne dit ni où est la radioactivité, ni ce qui reste sans solution.
-Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,2 % de la radioactivité déclarée (pour l’essentiel un maximum, non une mesure exacte) ; leur stockage définitif est prévu à Bure (Cigéo), mais pas encore autorisé.
-Page mise à jour le 12 novembre 2026
+Fin 2021, les déchets de haute activité faisaient 0,25 % du volume et 97,2 % de la radioactivité déclarée (pour l’essentiel un maximum, non une mesure exacte) ; leur stockage définitif est prévu à Bure, dans le centre Cigéo, qui n’a pas encore reçu son autorisation de création.
+Page mise à jour le 13 novembre 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données mises à jour le 12 novembre 2026 Andra, Inventaire national des matières et déchets radioactifs, fichiers ouverts (data.gouv.fr) : volume et radioactivité déclarée à fin 2021 (dernière édition qui déclare la radioactivité), volumes à fin 2024.
 Télécharger : CSV · JSON
@@ -16,14 +16,14 @@ Les catégories qui concentrent l’essentiel de la radioactivité déclarée ne
 Leur radioactivité ne mesure pas, à elle seule, leur dangerosité ni le risque auquel la population est exposée.
 Volume en équivalent conditionné et radioactivité déclarée, en becquerels, la même année ; filières selon l’Andra (Inventaire national, données ouvertes ; Les Essentiels 2026).
 Le résultat en une phrase.
-En France, fin 2021, les déchets de haute activité faisaient 0,25 % du volume des déchets radioactifs recensés dans les bilans de l’Andra et 97,2 % de la radioactivité déclarée (pour l’essentiel un maximum, non une mesure exacte) ; leur stockage définitif, prévu à Bure (Cigéo), n’est pas encore autorisé.
+En France, fin 2021, les déchets de haute activité faisaient 0,25 % du volume des déchets radioactifs recensés dans les bilans de l’Andra et 97,2 % de la radioactivité déclarée (pour l’essentiel un maximum, non une mesure exacte) ; leur stockage définitif, prévu à Bure (Cigéo), n’a pas encore reçu son autorisation de création.
 Depuis, le volume a continué de croître : 1,89 million de mètres cubes fin 2024, dont 4 717 m³ de haute activité, toujours 0,25 % du total.
 La radioactivité, elle, n’est déclarée, pour l’essentiel du volume, que dans les fichiers des éditions de l’inventaire, la dernière à fin 2021.
 Ce que le graphe montre, et ce qu’il ne montre pas
 Deux classements donnent des hiérarchies très différentes, et le graphe les place côte à côte : en volume, les déchets à vie courte et de très faible activité dominent ; en radioactivité déclarée, la haute activité.
 Mais ni l’un ni l’autre ne mesure, à lui seul, les doses auxquelles une population peut être exposée, la durée pendant laquelle les déchets restent dangereux ou le coût des solutions de gestion.
 Le graphe montre aussi que la haute activité et les deux catégories à vie longue (moyenne et faible activité) n’ont pas encore de filière de stockage définitif en exploitation, y compris la faible activité à vie longue, qui ne porte que 0,01 % de la radioactivité déclarée.
-Ce constat reflète des contraintes de gestion liées notamment à la période radioactive, au niveau d’activité et aux propriétés des déchets ; il ne permet pas d’attribuer la situation à la seule durée de vie.
+Ce constat ne permet pas d’attribuer cette absence de filière à la seule durée de vie.
 La radioactivité de chaque catégorie figure dans cinq fichiers (2013, 2014, 2015, 2016 et 2021) : déclarée chaque année jusqu’aux données de fin 2016, elle ne l’est plus, depuis, pour l’essentiel du volume, qu’aux éditions de l’inventaire ; les fichiers des autres années n’en donnent que pour moins d’un millième du volume.
 Dans chacun de ces cinq fichiers, la haute activité représente entre 84,7 et 97,2 % de la radioactivité recensée dans les cinq catégories des bilans, et la haute activité avec la moyenne activité à vie longue, au moins 99,8 %.
 Les données disponibles ne permettent pas, sans harmonisation supplémentaire, de lire ces parts comme une évolution, ni d’expliquer la variation d’une édition à l’autre.
@@ -38,6 +38,7 @@ Au Cires, dans l’Aube, se trouvent 68 % des déchets de très faible activité
 Les catégories qui concentrent la radioactivité n’ont pas encore de stockage définitif.
 Selon l’Andra, des déchets de haute activité et de moyenne activité à vie longue sont « produits et entreposés sur leurs sites de production, en attendant la création du centre de stockage destiné à les accueillir : Cigéo » ; le stockage des déchets de faible activité à vie longue est à l’étude.
 Cigéo est un centre de stockage en couche géologique profonde prévu à Bure (Meuse).
+Il a été déclaré d’utilité publique par un décret du 7 juillet 2022 (n° 2022-993) ; son autorisation de création relève d’une autre procédure.
 La procédure d’autorisation de création de Cigéo
 Étape 1 Janvier 2023 : l’Andra demande l’autorisation de création
 Étape 2 16 juillet 2026 : l’enquête publique se clôt
@@ -122,7 +123,7 @@ Lalut, Stéphane (2026). « Déchets radioactifs : le volume dit-il le problème
 Copier la citation
 En trois phrases
 En France, fin 2021, les déchets de haute activité faisaient 0,25 % du volume des déchets radioactifs recensés dans les bilans de l’Andra et 97,2 % de la radioactivité déclarée (pour l’essentiel un maximum, non une mesure exacte).
-La haute activité et les deux catégories à vie longue (moyenne et faible activité) n’ont pas encore de filière de stockage définitif en exploitation : le stockage de la haute activité et de la moyenne activité à vie longue est prévu à Bure (Cigéo), pas encore autorisé.
+La haute activité et les deux catégories à vie longue (moyenne et faible activité) n’ont pas encore de filière de stockage définitif en exploitation : le stockage de la haute activité et de la moyenne activité à vie longue est prévu à Bure, dans le centre Cigéo, qui n’a pas encore reçu son autorisation de création.
 Le volume, lui, est porté pour l’essentiel par des catégories qui ont un stockage en service.
 Copier le résumé
 Les données

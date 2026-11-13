@@ -105,7 +105,7 @@ This reading links the two notions without conflating them: negative commons des
 
 {{< notion-schema id="mecanisme" >}}
 
-What such a legacy amounts to, in figures, for French radioactive waste: the data page [Radioactive waste: does volume tell the problem?](/en/radioactive-waste-volume-or-radioactivity/) shows that radioactivity is concentrated in a tiny share of the volume, the share still awaiting final disposal.
+What such a legacy amounts to, in figures, for French radioactive waste: the data page [Radioactive waste: what can volume really tell us?](/en/radioactive-waste-volume-or-radioactivity/) shows that radioactivity is concentrated in a tiny share of the volume, the share still awaiting final disposal.
 
 ## The coming textbook case: digital technology
 
