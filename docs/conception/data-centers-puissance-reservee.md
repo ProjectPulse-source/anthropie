@@ -265,3 +265,24 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
 - Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `cf3ad02` à `17d3598`) ; déploiement `hugo.yml`
   n° 43351148379 réussi (build, mise en ligne, relecture). Attestation de la version servie : faite le 13/11/2026 vers 03 h 20 (heure de
   Paris) ; HTML servi identique au build contrôlé, aux empreintes de cache des feuilles et scripts près.
+
+### Arbitrage externe et relectures (13/11/2026)
+
+- Pièce remise par l'auteur, archivée avant lecture et arbitrée par écrit : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ARBITRAGE_EXTERNE_2026-11-13.md`.
+- Fond : les 800 MW des data centers déjà raccordés (huit sites) ne sont plus datés de juin 2026, mois de mise à jour de la
+  page de RTE, qui ne dit pas quand ils ont été mesurés (figure régénérée par `scripts/update_data_centers.py`, FR et EN,
+  bureau et téléphone ; texte alternatif). Chapô : « En France » ; la part qui vise 2030 rapportée aux 14 GW réservés en
+  novembre 2025, une seule base de date ; « sur sites dédiés » pour la consommation. « La figure ci-dessus précise un
+  calendrier, pas un volume. » `lastmod` au 13/11/2026, journal, historique des dates.
+- Non repris, faute de source lue : 18,2 GW à la mi-juin 2026 et 12,4 GW (absents du jeu et des sources du générateur),
+  770 MW raccordés fin 2025, programme de 300 M€ ; lot P3 (DC-16).
+- Langue : relecteur indépendant, aucun P0 ni P1 ; texte alternatif « selon la page de RTE mise à jour le … » (le
+  possessif pouvait viser le réseau). « Against » gardé en anglais : usage britannique des comparaisons, employé sur toute
+  la page.
+- Figure : deux contrôleurs indépendants (géométrie et données ; lecture du rendu), aucun défaut sur les quatre versions ;
+  page de RTE relue, aucune date n'y est attachée aux 800 MW. Premier écran, troisième tour : aucune conclusion interdite ;
+  le lecteur français rattache encore « plus de la moitié » aux 18 GW en le racontant, et le signale lui-même.
+- Contrôles : `check-all --ci` à 0 ; build CI et typographie 0 défaut ; liens 0 critique ; rendu 0 ; dates 83/83 ;
+  0 débordement sur onze largeurs de 320 à 1 440 px, avec et sans JavaScript (la mesure vérifie désormais le statut
+  HTTP de chaque page) ; lettre : texte servi avant et après, phrase à phrase, seules changent les phrases décidées.
+- Instantanés de relecture refaits le 13/11/2026.

@@ -2,10 +2,11 @@
 title: "Data centres: do reserved gigawatts foretell consumption?"
 url: /en/data-centres-reserved-capacity/
 description: "In November 2025, data centres had reserved {dtc.res_nov2025} GW of grid connection capacity with RTE, {dtc.st_2030} GW of it for commissioning from 2030; those connected to RTE's grid consumed nearly {dtc.rpt_2025} TWh in 2025. Reserved capacity, timing, abandonments and consumption in France, from RTE's publications."
-chapo: "The figure in circulation is the one for reservations: nearly {dtc.res_mai2026} gigawatts on RTE's transmission grid in May 2026, against about {dtc.res_fin2024} at end-2024. But reserved capacity is not consumption. In November 2025, more than half of the reserved capacity was for commissioning from 2030; other reservations have already been abandoned, and the data centres connected to the transmission grid consumed nearly {dtc.rpt_2025} terawatt-hour in 2025."
+chapo: "In France, the figure in circulation is the one for reservations: nearly {dtc.res_mai2026} gigawatts on RTE's electricity transmission grid in May 2026, against about {dtc.res_fin2024} at end-2024. But reserved capacity is not consumption. In November 2025, more than half of the {dtc.res_nov2025} gigawatts then reserved were for commissioning from 2030; other reservations have already been abandoned, and the dedicated-site data centres connected to the transmission grid consumed nearly {dtc.rpt_2025} terawatt-hour in 2025."
 date: 2026-10-27
-lastmod: 2026-11-12
+lastmod: 2026-11-13
 journal:  # revisions that change how the page reads
+  - {date: 2026-11-13, texte: "Correction: the capacity of data centres already connected (800 MW) is no longer dated June 2026, the month RTE's web page was updated, since that page does not say when it was measured (chart and alt text); the standfirst relates the share for commissioning from 2030 to the gigawatts reserved in November 2025."}
   - {date: 2026-11-05, texte: "Clarification: next to the 10 TWh of RTE's web page, the Bilan prévisionnel also gives 5 to 10 TWh in 2024 including in-house data centres; the web page does not state its scope."}
   - {date: 2026-11-12, texte: "Revision: the 18 GW referred to RTE's transmission grid; the SDES census presented as a cross-check, not as an independent control; multiple reservations noted by RTE for all applicants; the two uses of 20% told apart (observation, assumption); conditions and effects of a suspension, according to RTE; RTE's reading tied to its texts; a reservation guarantees access under the terms of its contract."}
 og_title: "Data centres: do reserved gigawatts foretell consumption? — S. Lalut"
@@ -77,7 +78,7 @@ The statistical service of the French ministry for the ecological transition (SD
 <figure class="figure-ciseau">
   <picture>
     <source media="screen and (max-width: 899px)" srcset="/img/data-centers-reserve-consomme-en-m.svg" width="300" height="1252">
-    <img src="/img/data-centers-reserve-consomme-en.svg" alt="Two panels. Top: grid connection capacity reserved by data centres with RTE: about {{< dtc-val "res_fin2024" >}} GW at end-2024, {{< dtc-val "res_nov2025" >}} GW in November 2025, of which {{< dtc-val "st_avant2030" >}} GW for commissioning before 2030, {{< dtc-val "st_2030" >}} GW from 2030 and {{< dtc-val "st_suspendu" >}} GW suspended, nearly {{< dtc-val "res_mai2026" >}} GW in May 2026; {{< dtc-val "rac_gw" >}} GW of combined capacity already connected to RTE's grid in {{< dtc-val "mois_web" >}} ({{< dtc-val "sites_rte" >}} sites); about {{< dtc-val "st_abandon" >}} GW abandoned since 2023. Bottom: consumption: {{< dtc-val "rpt_2024" >}} TWh in 2024 and nearly {{< dtc-val "rpt_2025" >}} TWh in 2025 on RTE's grid, {{< dtc-val "sd_bas" >}} to {{< dtc-val "sd_haut" >}} TWh estimated for all dedicated sites in 2024, {{< dtc-val "l2030" >}} to {{< dtc-val "r2030" >}} TWh in 2030 and {{< dtc-val "l2035" >}} to {{< dtc-val "r2035" >}} TWh in 2035 in RTE's slow and fast decarbonisation pathways." width="720" height="628" loading="lazy">
+    <img src="/img/data-centers-reserve-consomme-en.svg" alt="Two panels. Top: grid connection capacity reserved by data centres with RTE: about {{< dtc-val "res_fin2024" >}} GW at end-2024, {{< dtc-val "res_nov2025" >}} GW in November 2025, of which {{< dtc-val "st_avant2030" >}} GW for commissioning before 2030, {{< dtc-val "st_2030" >}} GW from 2030 and {{< dtc-val "st_suspendu" >}} GW suspended, nearly {{< dtc-val "res_mai2026" >}} GW in May 2026; {{< dtc-val "rac_gw" >}} GW of combined capacity already connected to RTE's grid ({{< dtc-val "sites_rte" >}} sites), according to RTE's web page updated on {{< dtc-val "date_web" >}}, which does not state when this was measured; about {{< dtc-val "st_abandon" >}} GW abandoned since 2023. Bottom: consumption: {{< dtc-val "rpt_2024" >}} TWh in 2024 and nearly {{< dtc-val "rpt_2025" >}} TWh in 2025 on RTE's grid, {{< dtc-val "sd_bas" >}} to {{< dtc-val "sd_haut" >}} TWh estimated for all dedicated sites in 2024, {{< dtc-val "l2030" >}} to {{< dtc-val "r2030" >}} TWh in 2030 and {{< dtc-val "l2035" >}} to {{< dtc-val "r2035" >}} TWh in 2035 in RTE's slow and fast decarbonisation pathways." width="720" height="628" loading="lazy">
   </picture>
   <figcaption>Reserved grid connection capacity (GW) and electricity consumption (TWh per year) of data centres, according to RTE; November 2025 breakdown measured on figure 2.3 of the Bilan prévisionnel 2025-2035.</figcaption>
 </figure>
@@ -110,7 +111,7 @@ Three mechanisms, found in RTE's Bilan prévisionnel and on its web page, separa
 
 </div>
 
-**The chart above settles a question of timing, not of volume.** It shows that reserved capacity translates into consumption neither immediately nor in full; it does not say what share will materialise by 2035.
+**The chart above clarifies timing, not volume.** It shows that reserved capacity translates into consumption neither immediately nor in full; it does not say what share will materialise by 2035.
 
 ## What RTE projects {#pathways}
 

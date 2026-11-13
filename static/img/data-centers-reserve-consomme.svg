@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 642" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dtc-t dtc-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="dtc-t">Data centers : puissance réservée sur le réseau et électricité consommée</title><desc id="dtc-d">Deux panneaux, deux grandeurs. Puissance de raccordement réservée par les data centers auprès de RTE : environ 5 GW fin 2024, 14 GW en novembre 2025 (dont 6,1 GW pour une mise en service avant 2030, 7,6 GW à partir de 2030 et 0,2 GW suspendus), près de 18 GW en mai 2026 ; 0,8 GW déjà raccordés au réseau de RTE en juin 2026 (huit sites) ; environ 0,9 GW abandonnés depuis 2023. Consommation des data centers sur sites dédiés : 0,8 TWh en 2024 et près de 1 TWh en 2025 mesurés sur le réseau de RTE ; 4 à 5 TWh estimés pour l'ensemble en 2024 ; 10 à 15 TWh en 2030 et 21 à 32 TWh en 2035 dans les deux trajectoires de RTE.</desc>
+<title id="dtc-t">Data centers : puissance réservée sur le réseau et électricité consommée</title><desc id="dtc-d">Deux panneaux, deux grandeurs. Puissance de raccordement réservée par les data centers auprès de RTE : environ 5 GW fin 2024, 14 GW en novembre 2025 (dont 6,1 GW pour une mise en service avant 2030, 7,6 GW à partir de 2030 et 0,2 GW suspendus), près de 18 GW en mai 2026 ; 0,8 GW déjà raccordés au réseau de RTE (huit sites, selon sa page du 1ᵉʳ juin 2026, sans date de mesure) ; environ 0,9 GW abandonnés depuis 2023. Consommation des data centers sur sites dédiés : 0,8 TWh en 2024 et près de 1 TWh en 2025 mesurés sur le réseau de RTE ; 4 à 5 TWh estimés pour l'ensemble en 2024 ; 10 à 15 TWh en 2030 et 21 à 32 TWh en 2035 dans les deux trajectoires de RTE.</desc>
 <rect width="720" height="642" fill="#ffffff"/>
 <defs><pattern id="dtc-hach" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="#ffffff"/><line x1="0" y1="0" x2="0" y2="5" stroke="#184f95" stroke-width="2.4"/></pattern></defs>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">Data centers : puissance réservée sur le réseau et électricité consommée</text>
@@ -16,8 +16,8 @@
 <rect x="250.0" y="136.0" width="297.0" height="18" fill="url(#dtc-hach)" stroke="#184f95" stroke-width="1"/>
 <text x="553.0" y="149" font-size="11" font-weight="600" fill="#184f95">près de 18 GW</text>
 <text x="0" y="183" font-size="11" fill="#26262f">Déjà raccordés au réseau de RTE</text>
-<text x="0" y="195" font-size="11" fill="#26262f">en juin 2026 (huit sites, puissance</text>
-<text x="0" y="207" font-size="11" fill="#26262f">cumulée)</text>
+<text x="0" y="195" font-size="11" fill="#26262f">(huit sites, puissance cumulée ;</text>
+<text x="0" y="207" font-size="11" fill="#26262f">date de mesure non précisée)</text>
 <rect x="250.0" y="170.0" width="13.2" height="18" fill="#55524f"/>
 <text x="269.2" y="183" font-size="11" font-weight="600" fill="#55524f">0,8 GW</text>
 <rect x="250" y="216" width="10" height="10" fill="url(#dtc-hach)" stroke="#184f95" stroke-width="1"/>

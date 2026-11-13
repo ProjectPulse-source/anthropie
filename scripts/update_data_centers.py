@@ -428,7 +428,7 @@ TXT = {
                titre_m="Data centers : puissance réservée et électricité consommée",
                pa="Puissance de raccordement réservée auprès de RTE, en gigawatts (GW)",
                pb="Consommation d'électricité des data centers sur sites dédiés, en térawattheures par an (TWh)",
-               fin2024="Fin 2024", nov2025="Novembre 2025", mai2026="Mai 2026", rac="Déjà raccordés au réseau de RTE en\u00a0{mois_web} ({sites_rte} sites, puissance cumulée)",
+               fin2024="Fin 2024", nov2025="Novembre 2025", mai2026="Mai 2026", rac="Déjà raccordés au réseau de RTE ({sites_rte} sites, puissance cumulée ; date de mesure non précisée)",
                avant="mise en service prévue avant 2030", apres="à partir de 2030", abandon="Suspendu (trait gris en bout de barre) : {st_suspendu} GW ; abandonné depuis 2023 : environ {st_abandon} GW",
                total="Fin 2024 et mai 2026 : total, sans répartition",
                m24="2024, mesurée (réseau de RTE)", m25="2025, mesurée (réseau de RTE)", e24="2024, estimée par RTE (tous\u00a0sites\u00a0dédiés)",
@@ -438,7 +438,7 @@ TXT = {
                v_m24="{rpt_2024} TWh", v_m25="près de {rpt_2025} TWh", v_e24="{sd_bas} à {sd_haut} TWh", v_t30="{l2030} à {r2030} TWh", v_t35="{l2035} à {r2035} TWh",
                desc="Deux panneaux, deux grandeurs. Puissance de raccordement réservée par les data centers auprès de RTE : environ {res_fin2024} GW "
                     "fin 2024, {res_nov2025} GW en novembre 2025 (dont {st_avant2030} GW pour une mise en service avant 2030, {st_2030} GW à partir "
-                    "de 2030 et {st_suspendu} GW suspendus), près de {res_mai2026} GW en mai 2026 ; {rac_gw} GW déjà raccordés au réseau de RTE en {mois_web} ({sites_rte} sites) ; environ "
+                    "de 2030 et {st_suspendu} GW suspendus), près de {res_mai2026} GW en mai 2026 ; {rac_gw} GW déjà raccordés au réseau de RTE ({sites_rte} sites, selon sa page du {date_web}, sans date de mesure) ; environ "
                     "{st_abandon} GW abandonnés depuis 2023. Consommation des data centers sur sites dédiés : {rpt_2024} TWh en 2024 et près de "
                     "{rpt_2025} TWh en 2025 mesurés sur le réseau de RTE ; {sd_bas} à {sd_haut} TWh estimés pour l'ensemble en 2024 ; "
                     "{l2030} à {r2030} TWh en 2030 et {l2035} à {r2035} TWh en 2035 dans les deux trajectoires de RTE.",
@@ -452,7 +452,7 @@ TXT = {
                titre_m="Data centres: reserved capacity and electricity consumed",
                pa="Grid connection capacity reserved with RTE, in gigawatts (GW)",
                pb="Electricity consumption of dedicated-site data centres, in terawatt-hours per year (TWh)",
-               fin2024="End-2024", nov2025="November 2025", mai2026="May 2026", rac="Already connected to RTE's grid in\u00a0{mois_web} ({sites_rte} sites, combined capacity)",
+               fin2024="End-2024", nov2025="November 2025", mai2026="May 2026", rac="Already connected to RTE's grid ({sites_rte} sites, combined capacity; measurement date not stated)",
                avant="commissioning planned before 2030", apres="from 2030", abandon="Suspended (grey end tick): {st_suspendu} GW; abandoned since 2023: about {st_abandon} GW",
                total="End-2024 and May 2026: total, not broken down",
                m24="2024, metered (RTE's grid)", m25="2025, metered (RTE's grid)", e24="2024, estimated by RTE (all\u00a0dedicated\u00a0sites)",
@@ -462,7 +462,7 @@ TXT = {
                v_m24="{rpt_2024} TWh", v_m25="nearly {rpt_2025} TWh", v_e24="{sd_bas} to {sd_haut} TWh", v_t30="{l2030} to {r2030} TWh", v_t35="{l2035} to {r2035} TWh",
                desc="Two panels, two quantities. Grid connection capacity reserved by data centres with RTE: about {res_fin2024} GW at end-2024, "
                     "{res_nov2025} GW in November 2025 (of which {st_avant2030} GW for commissioning before 2030, {st_2030} GW from 2030 and {st_suspendu} GW suspended), "
-                    "nearly {res_mai2026} GW in May 2026; {rac_gw} GW already connected to RTE's grid in {mois_web} ({sites_rte} sites); about {st_abandon} GW "
+                    "nearly {res_mai2026} GW in May 2026; {rac_gw} GW already connected to RTE's grid ({sites_rte} sites, according to its web page of {date_web}, with no measurement date); about {st_abandon} GW "
                     "abandoned since 2023. Consumption of dedicated-site data centres: {rpt_2024} TWh in 2024 and nearly {rpt_2025} TWh in 2025 "
                     "metered on RTE's grid; {sd_bas} to {sd_haut} TWh estimated for all of them in 2024; {l2030} to {r2030} TWh in 2030 and "
                     "{l2035} to {r2035} TWh in 2035 in RTE's two pathways.",
