@@ -70,6 +70,9 @@ L'auteur : « Je te laisse arbitrer ce qui est le plus pertinent du point de vue
 - `/en/radioactive-waste-volume-or-radioactivity/` : « construction licence » (art. L. 593-7 et L. 593-11).
 - Non retenus, faute de gain pour le lecteur : « Courriel » dans la barre de partage (il périmerait les instantanés de
   tout le site) ; une graphie nouvelle de « 1er ».
+- Poussé sur demande de l'auteur (`e0812dd..56ec209`) ; déploiement `hugo.yml` 43393816179 réussi ; version servie
+  attestée le 13/11/2026 à 9 h 33 : HTML des quatorze adresses identique au build contrôlé, aux empreintes de cache
+  près ; 170 fichiers statiques (157 cartes, figures, `llms.txt`) identiques au commit.
 
 ### 2026-11-13 (suite) — Lot « guides » : arbitrage externe, relectures, contrôleurs des figures ; Parcoursup à 320 px
 

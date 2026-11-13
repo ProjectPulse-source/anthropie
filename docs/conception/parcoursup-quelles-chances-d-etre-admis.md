@@ -445,3 +445,7 @@ publication, page écrite et non publiée).
 - Mesure : version en ligne, 3 px à 320 px, avec et sans JavaScript (témoin) ; version corrigée, 0 sur onze largeurs ; les
   neuf versions du lot « guides », qui partagent l'organe, 0 aussi. Texte servi inchangé (comparaison phrase à phrase) :
   pas de nouvel instantané.
+- Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `98cc594` à `56ec209`) ; déploiement
+  `hugo.yml` n° 43393816179 réussi (build, mise en ligne, contrôle de fumée, relecture). Attestation de la version
+  servie : faite le 13/11/2026 à 9 h 33 (heure de Paris) ; HTML servi identique au build contrôlé, aux empreintes de
+  cache des feuilles et scripts près ; fichiers statiques servis (figures, cartes de partage) identiques au commit.
