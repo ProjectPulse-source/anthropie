@@ -26,7 +26,7 @@ du même dépôt de recherche (protocoles 1 à 4 du bâti) ; balances DGFiP annu
 rattrapage en juillet 2027 (exercice 2026) — relancer les tests du bâti puis extrait_bati.py, recopier l'extrait et son empreinte.
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
-Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|concours26|eleves|ocde|bati|complements|agregation|meca]
+Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|concours26|eleves|ocde|bati|complements|agregation|meca|depense|chute2011]
 Sorties : data/ et static/lycee_professeurs.json, static/lycee_professeurs.csv, data/figures_lycee.json,
           static/img/lycee-{heures,classes,concours}.svg + .png
 """
@@ -342,6 +342,13 @@ def mutation(c):
         fx = dict(c["flux"])
         fx[max(fx)] = dict(fx[max(fx)], presents=fx[min(fx)]["presents"] // 2)
         c["flux"] = fx
+    elif m == "depense":      # la dépense de 2024 serait 5 % sous celle de 2015
+        c1m = dict(c["c1"])
+        c1m[max(c1m)] = c1m[2015] * 0.95
+        c["c1"] = c1m
+    elif m == "chute2011":    # la baisse de 2011 aurait été plus faible que celle de 2022
+        c["comp"] = json.loads(json.dumps(c["comp"]))
+        c["comp"]["depp_ni_12_28"]["baisse_presents_2011_pct"] = 20.0
     elif m == "complements":  # le plafond annoncé dépasserait la moyenne actuelle des classes
         mutation_complements(c)
     elif m == "agregation":   # l'agrégation de mathématiques passerait sous le CAPES la dernière année
@@ -455,6 +462,12 @@ def gardes(c):
         g(all(s[a] < 80 for a in ("2023", "2024", "2025")), "« moins de quatre postes sur cinq, trois sessions » : CAPES %s" % nom)
     for cle in ("Capet / sciences industrielles de l’ingénieur", "CAPLP / mathématiques-physique chimie"):
         g(all(c["detail"][an_][cle]["couverture"] < 85 for an_ in ("2024", "2025")), "« d'autres concours sous 85 %% en 2024 et 2025 » : %s" % cle)
+    c1 = c["c1"]
+    g(c1[2010] == max(c1.values()), "dépense : « 2010, le plus élevé des années publiées »")
+    g(abs(c1[max(c1)] / c1[2015] - 1) < 0.01, "dépense : « le niveau de %d est proche de celui de 2015 »" % max(c1))
+    fl = c["flux"]
+    g(c["comp"]["depp_ni_12_28"]["baisse_presents_2011_pct"] > 100 * (1 - fl[2022]["presents"] / fl[2021]["presents"]),
+      "concours : « la DEPP avait relevé une baisse plus forte encore en 2011 »")
     am = max(c["agreg_maths"])
     g(c["agreg_maths"][am] > c["maths"][am], "« l'agrégation de mathématiques reste au-dessus » du CAPES en %s" % am)
     co = c["comp"]
@@ -529,6 +542,8 @@ def affichage(c):
         "c1_max": nb(c["c1"][2010], 0), "c1_dern": nb(c["c1"][max(c["c1"])], 0), "c1_an": str(max(c["c1"])),
         "c1_var": nb(100 * (c["c1"][max(c["c1"])] / c["c1"][2010] - 1), 0),
         "c1_baisse": nb(100 * (1 - c["c1"][max(c["c1"])] / c["c1"][2010]), 0),
+        "c1_2015": nb(c["c1"][2015], 0),
+        "fx_chute11": nb(c["comp"]["depp_ni_12_28"]["baisse_presents_2011_pct"]),
         "c3_an": str(max(c["c3"])), "c3_fra": nb(c["c3"][max(c["c3"])]["FRA"], 0), "c3_oecd": nb(c["c3"][max(c["c3"])]["OECD"], 0),
         "c3_pct": nb(100 * (rap[max(rap)] - 1), 0), "c3_debut": str(a_rmin),
         "ocde_depp_pct": nb(100 * (c["ocde_depp"]["france"] / c["ocde_depp"]["moyenne_ocde"] - 1)), "ocde_depp_an": str(c["ocde_depp"]["annee"]),

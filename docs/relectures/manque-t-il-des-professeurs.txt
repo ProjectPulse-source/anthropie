@@ -1,4 +1,4 @@
-# relu le 2026-11-13 ; texte servi de /manque-t-il-des-professeurs/, build de 94ffd11 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /manque-t-il-des-professeurs/, build de 44a4245 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Manque-t-il des professeurs au lycée ?
 Au lycée général et technologique public, 10,4 % des heures de cours prévues n’ont pas été assurées en 2024-2025, une sur dix.
 Sur ces 10,4 points, les absences individuelles d’enseignants non remplacées en représentent 3,9 ; les fermetures d’établissement, les enseignants mobilisés par les examens ou les commissions et leur formation, 6,6 (arrondies, les parts totalisent 10,5).
@@ -46,6 +46,7 @@ Dans l’ensemble du second degré public, 4,3 % des heures prévues sont perdue
 Dans le second degré public, les journées non remplacées d’absences de plus de quinze jours ont augmenté de 93,2 % entre 2018-2019 et 2023-2024 (949 493 journées, chiffres du ministère publiés par le Sénat), la seule série publique trouvée sur les absences longues.
 On ne sait pas où ces heures se perdent.
 Les heures non assurées ne sont publiées ni par académie, ni par établissement, ni selon la durée des absences : la statistique publique ne permet pas de dire dans quels territoires les lycéens perdent le plus de cours.
+La Cour des comptes publie, pour plusieurs académies, des taux d’efficacité du remplacement des absences longues ; ce ne sont pas des heures perdues, et son étude porte sur le collège.
 Une heure non assurée n’est pas un poste vide.
 Les concours disent, eux, quelle part des postes ouverts au recrutement a été pourvue ; ils ne recensent pas les postes restés sans enseignant dans les établissements, qui dépendent aussi des affectations, des contractuels et des remplacements.
 Les concours manquent-ils de candidats ?
@@ -54,8 +55,9 @@ Les professeurs de collège et de lycée sont recrutés par concours : le CAPES 
 Aux concours externes d’enseignants du second degré public, ouverts sur condition de diplôme (les concours internes sont réservés aux agents publics en poste), 80 222 candidats se sont présentés en 2005, 28 570 en 2025, 64 % de moins.
 Les postes offerts ont varié entre-temps (13 475 en 2005, 8 300 en 2010, 12 609 en 2015, 9 455 en 2025) ; les candidats, eux, n’ont approché leur niveau de 2005 en aucune des années publiées depuis.
 On est passé de 6,0 candidats par poste à 3,0.
-Parmi les sessions que la DEPP publie depuis 2020, la baisse la plus forte d’une session à la suivante est celle de 2022 : 27 000 présents, contre 39 531 l’année précédente, 32 % de moins ; la DEPP avait relevé une baisse plus forte encore en 2011, session qui ne figure pas dans la série reprise ici.
-La DEPP signale qu’à partir de la session 2022 les concours externes ne sont ouverts qu’aux titulaires d’un master ou aux étudiants inscrits en deuxième année (et non plus en première) : la coïncidence est documentée, la part de la baisse qui lui revient ne l’est pas.
+Parmi les sessions que la DEPP publie depuis 2020, la baisse la plus forte d’une session à la suivante est celle de 2022 : 27 000 présents, contre 39 531 l’année précédente, 32 % de moins ; la DEPP avait relevé une baisse plus forte encore en 2011, session qui ne figure pas dans la série reprise ici (38,7 % de présents en moins aux concours externes du public).
+La session 2011 était la première à recruter au niveau du master ; selon la DEPP, ce vivier réduit « a accéléré une baisse déjà amorcée depuis plusieurs années ».
+La réforme de 2022 en est une autre : la DEPP signale qu’à partir de cette session les concours externes ne sont ouverts qu’aux titulaires d’un master ou aux étudiants inscrits en deuxième année (et non plus en première) ; la coïncidence est documentée, la part de la baisse qui lui revient ne l’est pas.
 Présents et admis sont additionnés concours par concours, pas personne par personne : la DEPP précise qu’un candidat admis à plusieurs concours est compté plusieurs fois.
 Part des postes offerts aux concours externes pourvus par des admis, enseignement public (DEPP, Repères et références statistiques 2026) ; session 2026 à part (ministère, résultats par concours).
 Moins de candidats ne signifie pas, à lui seul, davantage de postes non pourvus aux concours : c’est la part des postes offerts pourvus par des admis qui le dit, et elle dépend de la discipline ; elle mesure le résultat du recrutement par concours, non l’ensemble des besoins restés sans enseignant.
@@ -87,7 +89,7 @@ Près d’une classe sur deux compte de 30 à 34 élèves (47,6 %).
 Pourquoi des lycéens disent-ils « nous sommes 35 » quand la moyenne est de 30 ?
 D’abord parce qu’une moyenne par classe n’est pas la moyenne vécue : une classe de 35 compte 35 témoins, une classe de 15 n’en compte que 15.
 Dans le public, la classe moyenne compte 30,5 élèves, mais l’élève moyen est dans une classe de 31,3, et près d’un lycéen sur quatre (23,6 %) est dans une classe de 35 ou plus.
-Ensuite parce que la classe n’est pas toujours le groupe : en comptant les cours en groupe, un enseignant de lycée général et technologique a en moyenne 24,0 élèves devant lui par heure de cours, de 15,3 en éducation musicale à 30,4 en éducation physique et sportive (mathématiques 25,3, histoire-géographie 27,3, philosophie 27,6).
+Ensuite parce que la classe n’est pas toujours le groupe : en comptant les cours en groupe, un enseignant de lycée général et technologique a en moyenne 24,0 élèves devant lui par heure de cours, de 15,4 en éducation musicale à 30,4 en éducation physique et sportive (mathématiques 25,3, histoire-géographie 27,3, philosophie 27,6).
 Depuis la réforme du baccalauréat, qui fait choisir des enseignements de spécialité, la DEPP observe davantage d’heures en groupe : en première générale, la part des heures en groupe est passée de 49,6 % en 2018 à 67,0 % en 2019, et atteint 68,0 % en première et 70,1 % en terminale générales en 2025 ; en seconde, elle a baissé (49,4 %).
 Tous les lycées sont-ils logés à la même enseigne ?
 Non.
@@ -100,7 +102,7 @@ Pas sur vingt ans.
 Entre 2005 et 2025, les lycées généraux et technologiques ont gagné 6,1 % d’élèves et perdu 1,3 % de leurs classes ; dans le public, les heures d’enseignement par élève (heures assurées par les enseignants chaque semaine, rapportées au nombre d’élèves : un indicateur de moyens, non la durée des cours que suit un lycéen), formations post-bac comprises, sont passées de 1,41 à 1,32 par semaine (6 % de moins), la baisse s’étant faite entre 2010 et 2015 (1,41 puis 1,33).
 Depuis 2020, heures et élèves évoluent au même rythme.
 Ces heures disent le service offert aux élèves ; les enseignants, eux, se comptent autrement.
-En euros constants (corrigés de la hausse des prix), la dépense par lycéen général et technologique est de 13 020 € en 2024 (chiffre provisoire), 8 % sous son niveau de 2010 (14 150 €), le plus élevé des années publiées.
+En euros constants (corrigés de la hausse des prix), la dépense par lycéen général et technologique est de 13 020 € en 2024 (chiffre provisoire), 8 % sous son niveau de 2010 (14 150 €), le plus élevé des années publiées ; le niveau de 2024 est proche de celui de 2015 (13 080 €).
 Les comptes provisoires l’estiment à 13 200 € en 2025, en euros de 2025 ; la série longue à ces prix n’est pas encore publiée.
 Combien d’enseignants exercent dans ces formations ?
 La DEPP compte les enseignants en charge des formations générales et technologiques en lycée, public et privé sous contrat réunis, chacun au prorata de son enseignement à ce niveau : 114 049 à la rentrée 2011, 123 507 en 2017, 118 582 en 2025, soit 4,0 % de moins qu’en 2017.
@@ -113,9 +115,9 @@ La France est au-dessus chaque année publiée depuis 2012.
 La DEPP, qui compare la dépense totale par élève de l’ensemble du second cycle (voie professionnelle et financements privés compris), trouve un écart de 27,7 % en 2023 : le périmètre change l’ampleur de l’écart, pas son sens.
 La baisse dans le temps et la position au-dessus des autres pays ne se contredisent pas : la première vient d’une comparaison de la France avec elle-même, la seconde d’une comparaison avec les autres pays une année donnée, sur des champs différents.
 Les différences de dépense par élève peuvent notamment tenir au volume d’enseignement, aux rémunérations et à la structure des formations ; ces données ne permettent pas d’isoler la contribution de chacun à l’écart observé.
-Une hausse annoncée des crédits ne contredit pas cette baisse de la dépense par lycéen : l’une compare 2024 à 2010 pour le seul lycée général et technologique, l’autre 2017 au projet de budget 2027, pour tous les niveaux d’enseignement.
+Une hausse annoncée des crédits ne contredit pas cette baisse de la dépense par lycéen : l’une compare 2024 à 2010 pour le seul lycée général et technologique, l’autre 2017 au projet de budget 2027, pour les premier et second degrés.
 La hausse des crédits annoncée pour 2027, en euros constants et par élève
-Le gouvernement fait valoir une hausse des crédits de l’État pour l’Éducation nationale, tous niveaux d’enseignement confondus et hors pensions, de 48,8 milliards d’euros en 2017 à 64 dans le projet de budget 2027, soit 31 % en euros courants.
+Le gouvernement fait valoir une hausse des crédits de l’État pour l’Éducation nationale, premier et second degrés, hors enseignement supérieur et hors pensions, de 48,8 milliards d’euros en 2017 à 64 dans le projet de budget 2027, soit 31 % en euros courants.
 Le chiffre de 2027 est un projet, non une dépense constatée.
 Les prix ont augmenté de 19 % de 2017 à 2025 : la hausse réelle est donc d’environ 10 % aux prix de 2025, avant l’évolution des prix en 2026 et 2027, qui la réduira s’ils continuent de monter.
 Comme les élèves seront 7 % moins nombreux en 2027 qu’en 2017 (projection de la DEPP), la hausse réelle par élève atteint environ 19 %, sous la même réserve : rapportée à un nombre d’élèves en baisse, la hausse par élève est mécaniquement plus forte que celle des crédits.
@@ -158,7 +160,7 @@ Ministère de l’Éducation nationale, communiqué de juillet 2026 : 96,1 % des
 Communiqué du ministère ; périmètre plus large que la série de la DEPP (concours internes et troisièmes concours, conseillers d’éducation, psychologues, listes complémentaires) et deux concours en 2026 : pas de comparaison directe avec les années passées.
 Résultats détaillés (admis rapportés aux postes) : CAPES de mathématiques 93,1 %, de physique-chimie 97,8 %, CAPLP de mathématiques-physique-chimie 64,2 %.
 Premier ministre, lettre du 4 octobre 2026 : crédits portés à 64 Md€ contre 48,8 en 2017, hors pensions.
-Projet de budget, crédits de l’État, tous niveaux d’enseignement. + 31 % en euros courants ; environ + 10 % en euros constants de 2025.
+Projet de budget, crédits de l’État, premier et second degrés. + 31 % en euros courants ; environ + 10 % en euros constants de 2025.
 Premier ministre et ministère : taux de remplacement des absences de moins de quinze jours « triplé » depuis 2022-2023.
 Tableau de bord du ministère, cité par la Cour des comptes : heures remplacées rapportées aux heures à remplacer, second degré public, France entière.
 De 4,5 % à 11,7 % : multiplié par 2,6, sur une base 2022-2023 que la Cour juge fragile ; 88 % des heures d’absence courte restent non remplacées.

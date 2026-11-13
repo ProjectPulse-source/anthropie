@@ -22,5 +22,11 @@
     "source": "SNPDEN-Unsa, « Rentrée 2026 : Comment faire… avec rien ? », 10/09/2026",
     "piece": "pieces/enonces/snpden_2026-09-10_extrait.txt",
     "piece_sha256": "ed88f71cb60c7a92f6b5aa8ab0f5aef9143cd3482ee0559bc16bf094e2a79ce9"
+  },
+  "depp_ni_12_28": {
+    "baisse_presents_2011_pct": 38.7,
+    "source": "DEPP, Note d'Information 12-28 (décembre 2012), concours de la session 2011 : « Le nombre de candidats présents aux concours externes de l'enseignement public baisse fortement en 2011 (- 38,7 %) par rapport à 2010 » ; « le vivier ainsi réduit a accéléré une baisse déjà amorcée depuis plusieurs années »",
+    "piece": "pieces/depp-ni-12-28-concours-2011.pdf",
+    "piece_sha256": "c4e3858b5e559f7bf137be5b50ca5efa7b95ffe2184ce5f05dd2fd22a3435d6c"
   }
 }
