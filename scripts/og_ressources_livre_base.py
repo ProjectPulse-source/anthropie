@@ -44,7 +44,7 @@ NAVY = (31, 43, 77)
 INK = (38, 38, 48)
 GREY_ITAL = (85, 82, 80)
 RULE = (86, 110, 146)
-URL = (150, 146, 143)
+URL = (104, 101, 96)   # 13/11/2026 : (150, 146, 143) donnait 2,6 à 2,8:1 sur ce fond ; #686560 tient 4,81:1 (og_dossier_dette.URL_GREY)
 
 
 def font(name: str, size: int, weight: int = 400, italic: bool = False) -> ImageFont.FreeTypeFont:

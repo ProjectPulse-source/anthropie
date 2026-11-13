@@ -62,7 +62,7 @@ def main() -> int:
              [(og.C2, "France au-dessus de la Grèce"), ((201, 197, 192), "Grèce au-dessus")])
     og.carte("og-dette-formules-en.jpg",
              ["Eleven claims from the", "French debt debate, tested"],
-             "The verdict depends on the question. On 8 September 2025, ten-year yields: France %s%%, Greece %s%%." % (E["f8_tec8"], E["f8_hdat8"]),
+             "The verdict depends on the question. 8 September 2025, ten-year yields: France %s%%, Greece %s%%." % (E["f8_tec8"], E["f8_hdat8"]),
              "French National Assembly, Eurostat, Insee · CC BY 4.0",
              "stephane-lalut.com/en/public-debt-debate-claims/",
              lambda d: barres(d, e, "en"),

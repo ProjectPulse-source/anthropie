@@ -50,8 +50,14 @@ NAVY = (31, 43, 77)
 INK = (38, 38, 48)
 GREY = (85, 82, 80)
 RULE = (86, 110, 146)
-URL_GREY = (150, 146, 143)
+# Texte secondaire (adresse, années, légendes des mini-figures). 13/11/2026 : (150, 146, 143) ne donnait que 2,6 à 2,8:1
+# sur le fond (pièce externe du lot « guides », § 8) ; #686560 tient 4,81:1 dans le coin le plus sombre du dégradé, et
+# reste plus clair que GREY (accroche). Même règle que le texte gris des figures (décision de l'auteur du 11/11/2026).
+URL_GREY = (104, 101, 96)
 GRID = (214, 210, 205)
+MOIS = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre",
+        "décembre", "january", "february", "march", "april", "may", "june", "july", "august", "september", "october",
+        "november", "december")
 
 # Legende sous la figure du ciseau, posee par carte() selon la langue.
 LEGENDE_CISEAU = ("", "")
@@ -107,8 +113,11 @@ def _mots_insecables(texte: str) -> list[str]:
     qui précède, guillemet ouvrant et nombre au mot qui suit (jamais « ? » en tête de ligne, ni « 10 » sans « ans »)."""
     mots, colle = [], False
     for m in texte.split():
-        # « % » au nombre qui précède, même signé (« +58 % » : 12/11/2026, carte du découplage)
-        if mots and (colle or m in ("?", "!", ":", ";", "»") or m.rstrip(".,;:!?") == "%"):
+        nu = m.rstrip(".,;:!?)")
+        # « % » au nombre qui précède, même signé (« +58 % » : 12/11/2026, carte du découplage) ; l'année au mois qui
+        # précède (« 8 septembre / 2025 » coupait la date de la carte « Onze formules » : 13/11/2026)
+        if mots and (colle or m in ("?", "!", ":", ";", "»") or m.rstrip(".,;:!?") == "%"
+                     or (nu.isdigit() and len(nu) == 4 and mots[-1].split()[-1].lower() in MOIS)):
             mots[-1] += " " + m
         else:
             mots.append(m)
