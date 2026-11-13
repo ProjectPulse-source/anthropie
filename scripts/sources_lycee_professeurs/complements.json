@@ -1,0 +1,26 @@
+{
+  "_note": "Valeurs TRANSCRITES à la main (13/11/2026) et vérifiées contre les pièces archivées dans le dépôt de recherche (06_PROMOTION/RECHERCHE_LYCEES_MOYENS_2026-10-07/test_decisif/pieces/), dont l'empreinte est donnée ; elles ne sont pas recalculées.",
+  "ocde_penurie": {
+    "part_postes": 0.4,
+    "rentree": "2023-2024",
+    "champ": "secondaire public ; besoins de recrutement prévus, avant ou au début de la rentrée (première approche de l'OCDE)",
+    "source": "OCDE, Education at a Glance 2026: France, note pays, 29/09/2026",
+    "piece": "pieces/ocde/eag2026_note_pays_france_extrait.txt",
+    "piece_sha256": "df664a3edfa42ea6d71ef3a51791c85053caba7909d69a737c402476bef70009"
+  },
+  "annonces_2026_10_26": {
+    "plafond_seconde": 28,
+    "postes_crees": 500,
+    "contractuels_remplacement": 920,
+    "source": "ministère de l'Éducation nationale, communiqué de presse du 26/10/2026",
+    "piece": "pieces/enonces/men_2026-10-26_communique_extrait.txt",
+    "piece_sha256": "1fce0b6ed11e37ae2569a8ba0bfbc303dbe2bec0f8129ea027c884c9e251fe68"
+  },
+  "snpden_2026": {
+    "reponses": 2300,
+    "date_publication": "2026-09-10",
+    "source": "SNPDEN-Unsa, « Rentrée 2026 : Comment faire… avec rien ? », 10/09/2026",
+    "piece": "pieces/enonces/snpden_2026-09-10_extrait.txt",
+    "piece_sha256": "ed88f71cb60c7a92f6b5aa8ab0f5aef9143cd3482ee0559bc16bf094e2a79ce9"
+  }
+}

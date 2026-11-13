@@ -26,7 +26,7 @@ du même dépôt de recherche (protocoles 1 à 4 du bâti) ; balances DGFiP annu
 rattrapage en juillet 2027 (exercice 2026) — relancer les tests du bâti puis extrait_bati.py, recopier l'extrait et son empreinte.
 Page en français seulement (exclusion déclarée : débat, programme et statistique français).
 
-Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|concours26|eleves|ocde|bati]
+Usage : python scripts/update_lycee_professeurs.py [--check] [--mutation=organisation|classes|concours|concours26|eleves|ocde|bati|complements|agregation|meca]
 Sorties : data/ et static/lycee_professeurs.json, static/lycee_professeurs.csv, data/figures_lycee.json,
           static/img/lycee-{heures,classes,concours}.svg + .png
 """
@@ -113,7 +113,11 @@ def lire():
         h, nom_ = ligne.split()
         if hashlib.sha256((SRC / nom_.lstrip("*")).read_bytes()).hexdigest() != h:
             fail("empreinte de %s differente de SHA256SUMS : extrait modifie hors du depot de recherche" % nom_)
-    return json.loads((SRC / "extrait.json").read_text(encoding="utf-8"))
+    X = json.loads((SRC / "extrait.json").read_text(encoding="utf-8"))
+    # Compléments transcrits (13/11/2026) : estimation de l'OCDE, annonces du 26/10/2026, enquête du SNPDEN ; chacun
+    # vérifié contre sa pièce archivée (empreinte dans le fichier), scellé ici par SHA256SUMS.
+    X["complements"] = json.loads((SRC / "complements.json").read_text(encoding="utf-8"))
+    return X
 
 
 def calcul(X):
@@ -167,7 +171,7 @@ def calcul(X):
         e4=e4, e4_nom=e4_nom, e4_prix=e4_prix, e4_reel=e4_reel, e4_el=e4_el, e4_par_el=e4_par_el, p_dern=p_dern,
         e5=e5, e5_f=e5["rcd_2024"] / e5["rcd_2022"], e9=e9,
         sd=X["d4"]["second_degre"], ms=X["d4"]["ni2614_meme_champ"], releve=X["releve_le"],
-        e1=X["enonces"]["e1"],
+        e1=X["enonces"]["e1"], comp=X["complements"],
         detail={"2024": X["d2"]["detail_2024"], "2025": X["d2"]["detail_2025"]},
         # Phase B de la refonte (10/10/2026) : candidats et postes des concours externes, motifs de fermeture du lycée.
         flux={int(a): v for a, v in X["d2"]["externes_flux"].items()}, ferm=X["d4"]["fermeture_gt"],
@@ -263,6 +267,7 @@ def calcul_bati(B):
         rho_pt=rho(P, T), rho_pf=rho(P, fon), prive_top=sorted(cs, key=P.get)[-2:], inv_top=ordre_inv[-2:],
         rho_lf=rho(dL, fon), rho_ll=rho(dL, fon_lyc), med_bas=mediane(bas), med_haut=mediane(haut),
         n_bas=len(bas), n_haut=len(haut), meca=rap({c: 1 / (1 + dL[c]) for c in cs}),
+        baisse_max=-min(dL.values()), meca_max=1 / (1 + min(dL.values())) - 1,
         rho_19=rho(x, fon19), rho_creuse=rho(x, dFN), an=B["annees"], fen=B["fenetre_investissement"],
     )
 
@@ -286,6 +291,8 @@ def gardes_bati(b, g):
       "bâti : « la dépense rapportée aux lycées va dans le même sens, moins nettement » (rho %.2f)" % (b["rho_ll"] or 0))
     g(b["rho_19"] is not None and b["rho_19"] <= -0.6, "bâti : « relation déjà visible en %d »" % b["an"]["avant"])
     g(b["rho_creuse"] is None or b["rho_creuse"] > -0.6, "bâti : « que l'écart se soit creusé, les comptes ne permettent pas de l'établir »")
+    g(b["baisse_max"] > 0 and b["meca_max"] < b["med_bas"] / b["med_haut"] - 1,
+      "bâti : « effet de dénominateur insuffisant » (hausse mécanique maximale %.3f)" % b["meca_max"])
     g(b["n_bas"] in LETTRES and b["n_haut"] in LETTRES, "bâti : effectifs des groupes en toutes lettres")
 
 
@@ -302,7 +309,13 @@ def affichage_bati(b):
         "bt_med_bas": nb(b["med_bas"], 0), "bt_med_haut": nb(b["med_haut"], 0),
         "bt_n_bas": LETTRES[b["n_bas"]], "bt_n_haut": LETTRES[b["n_haut"]],
         "bt_n_regions": {13: "treize"}[len(R)],
+        "bt_baisse_max": nb(100 * b["baisse_max"]), "bt_meca_max": nb(100 * b["meca_max"]),
     }
+
+
+def mutation_complements(c):
+    c["comp"] = json.loads(json.dumps(c["comp"]))
+    c["comp"]["annonces_2026_10_26"]["plafond_seconde"] = 35
 
 
 def mutation(c):
@@ -329,6 +342,13 @@ def mutation(c):
         fx = dict(c["flux"])
         fx[max(fx)] = dict(fx[max(fx)], presents=fx[min(fx)]["presents"] // 2)
         c["flux"] = fx
+    elif m == "complements":  # le plafond annoncé dépasserait la moyenne actuelle des classes
+        mutation_complements(c)
+    elif m == "agregation":   # l'agrégation de mathématiques passerait sous le CAPES la dernière année
+        am = max(c["agreg_maths"])
+        c["agreg_maths"] = dict(c["agreg_maths"], **{am: c["maths"][am] - 1})
+    elif m == "meca":         # la baisse des effectifs suffirait à expliquer l'écart des médianes
+        c["bati"] = dict(c["bati"], meca_max=1.0)
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -435,6 +455,13 @@ def gardes(c):
         g(all(s[a] < 80 for a in ("2023", "2024", "2025")), "« moins de quatre postes sur cinq, trois sessions » : CAPES %s" % nom)
     for cle in ("Capet / sciences industrielles de l’ingénieur", "CAPLP / mathématiques-physique chimie"):
         g(all(c["detail"][an_][cle]["couverture"] < 85 for an_ in ("2024", "2025")), "« d'autres concours sous 85 %% en 2024 et 2025 » : %s" % cle)
+    am = max(c["agreg_maths"])
+    g(c["agreg_maths"][am] > c["maths"][am], "« l'agrégation de mathématiques reste au-dessus » du CAPES en %s" % am)
+    co = c["comp"]
+    g(0 < co["ocde_penurie"]["part_postes"] < 100 and co["ocde_penurie"]["rentree"] == "2023-2024",
+      "OCDE : part de postes en pénurie transcrite (pourcentage) et rentrée 2023-2024")
+    g(co["annonces_2026_10_26"]["plafond_seconde"] < c["ed"][c["ed_dern"]],
+      "annonces : un plafond de classe sous la moyenne actuelle (sinon « plafonner » ne réduit rien)")
     g(c["agreg_maths"]["2023"] >= 85, "« l'agrégation de mathématiques ne remplit pas le critère des trois sessions »")
     g(c["t26"]["maths"] > 90 and c["t26"]["pc"] > 90, "« 2026 : plus de neuf postes sur dix en mathématiques et en physique-chimie »")
     g(c["t26"]["lp"] < 200 / 3, "« CAPLP mathématiques-physique-chimie 2026 : moins de deux postes sur trois » : %.1f" % c["t26"]["lp"])
@@ -518,6 +545,12 @@ def affichage(c):
         "m23": nb(c["maths"]["2023"]), "m24": nb(c["maths"]["2024"]), "m25": nb(c["maths"]["2025"]),
         "pc23": nb(c["pc"]["2023"]), "pc24": nb(c["pc"]["2024"]), "pc25": nb(c["pc"]["2025"]),
         "agm23": nb(c["agreg_maths"]["2023"]),
+        "agm_dern": nb(c["agreg_maths"][max(c["agreg_maths"])]), "agm_dern_an": max(c["agreg_maths"]),
+        "ocde_pen": nb(c["comp"]["ocde_penurie"]["part_postes"]),
+        "ann_plafond": nb(c["comp"]["annonces_2026_10_26"]["plafond_seconde"], 0),
+        "ann_postes": nb(c["comp"]["annonces_2026_10_26"]["postes_crees"], 0),
+        "ann_contr": nb(c["comp"]["annonces_2026_10_26"]["contractuels_remplacement"], 0),
+        "snpden_rep": nb(c["comp"]["snpden_2026"]["reponses"], 0),
         "nat15": nb(nat[2015]), "nat22": nb(nat[2022]), "nat25": nb(nat[max(nat)]),
         "e7": nb(c["e7"]["enonce_2026"]), "e7_25": nb(c["e7"]["enonce_2025"]),
         "contr_debut": nb(c["contr"][min(c["contr"])]), "contr_fin": nb(c["contr"][max(c["contr"])]),
