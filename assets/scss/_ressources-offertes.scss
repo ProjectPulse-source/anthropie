@@ -50,9 +50,10 @@
   margin: 0 0 32px;
   font-family: var(--font-sans);
 }
-// Ligne principale de la chaîne : plus grande, immédiatement lisible.
+// Ligne principale de la chaîne : plus grande, immédiatement lisible. Marge basse 22 px (13/11/2026) : à 10 px, le
+// paragraphe suivant touchait les pastilles au téléphone, où la chaîne passe sur deux lignes.
 .ressources-chain--main {
-  margin: 26px 0 10px;
+  margin: 26px 0 22px;
   .ressources-chain__node {
     font-size: var(--fs-small);
     padding: 9px 15px;
