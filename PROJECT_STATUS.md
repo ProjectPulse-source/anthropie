@@ -52,6 +52,27 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-13 (suite) — Lot « guides » : arbitrage externe, relectures, contrôleurs des figures ; Parcoursup à 320 px
+
+Pièce externe remise par l'auteur, archivée avant lecture, arbitrée par écrit (`06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ARBITRAGE_EXTERNE_2026-11-13.md`) ;
+fiches de conception des cinq pages, section du 13/11/2026.
+- `/combien-de-temps-une-erreur-reste-inscrite/` : réhabilitation légale à cinq ans (art. 133-13, 2°) et six mois du permis
+  (art. L. 223-6, al. 3) rendus au texte ; condition des six mois portée par l'infraction commise dans l'intervalle ;
+  condition commune aux trois délais en tête ; question fréquente « au-delà de ces trois cas ». Frise régénérée : libellé
+  du permis, un cas par ligne, soudures (fins de ligne sur un mot-outil 7 et 14, contre 10 et 17).
+- Data centers : 800 MW sans date de mesure (figure régénérée, FR et EN) ; chapô sur une seule base de date (14 GW de
+  novembre 2025) ; « En France ». Déchets : explication causale retirée ; Cigéo « n'a pas encore reçu son autorisation de
+  création » (déclaré d'utilité publique en 2022) ; titre anglais. Découplage : chapô ouvert par la grandeur rapportée ;
+  bandeau sans le repère « 1,8 fois » (lu comme une cause), intensité nommée d'abord, consommation mondiale en tête.
+  Dépense imprévue : « Pour l'ensemble de l'Union, France comprise, l'écart est lui aussi plus grand avec des enfants
+  que sans ». Ligne d'appartenance des cinq guides : « Analyses de séries et de textes officiels ».
+- `/parcoursup-quelles-chances-d-etre-admis/` : `.cartes-paire` en `minmax(0, 1fr)` dès le téléphone ; la version en ligne
+  dépassait de 3 px à 320 px (témoin), la version corrigée ne dépasse plus.
+- Contrôles : relecteur de langue indépendant (deux passages, aucun P0 ni P1) ; deux contrôleurs indépendants par figure,
+  trois passages pour la frise ; tests du premier écran, troisième et quatrième tours ; `check-all --ci` 0, liens, rendu,
+  dates 83/83 ; 0 débordement sur dix versions, onze largeurs, avec et sans JavaScript. La mesure des débordements vérifie
+  désormais le statut HTTP : sans `MSYS_NO_PATHCONV=1`, Git Bash réécrivait les adresses et l'outil mesurait une page 404.
+
 ### 2026-11-13 — Lot « guides » : reprise du style (mise en relief de la règle 17, adaptée à chaque sujet)
 
 Consigne de l'auteur : une mise en page « ultra lisible », au niveau de `/parcoursup-quelles-chances-d-etre-admis/`, sans
