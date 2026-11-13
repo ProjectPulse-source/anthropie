@@ -422,3 +422,16 @@ publication, page écrite et non publiée).
   défaut technique : les notes imprimées dans les figures téléphone (arbitrées par les pièces 06 et 07). Second
   contrôle indépendant du rendu, lancé sur l'état final des figures : rapport non reçu au moment du commit ; ses
   constats seront traités à sa réception.
+
+### Organes : libellé et texte séparés (13/11/2026)
+
+- Demande de l'auteur : dans la fiche d'étapes, la grille de repères et la barre de composition, deux éléments voisins sans
+  espace faisaient lire, à l'extraction et à un lecteur d'écran, « Étape 1Tous les candidats », « un an aprèsdeux sur
+  trois66,9 % », « bac technologique42 ». Une espace les sépare, sans effet à l'écran (commit `17d3598`, même correction
+  que sur les pages du lot « guides »). Texte servi changé à ces seuls endroits ; `update_parcoursup.py --check` : 113
+  gardes passées ; contrôles du site à 0 ; instantané de relecture refait le 13/11/2026.
+- Préexistant, non traité : à 320 px, deux cartes dépassent leur colonne de 3 px (cause probable : libellés insécables de
+  la barre de composition) ; aucun débordement du document.
+- Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `cf3ad02` à `17d3598`) ; déploiement `hugo.yml`
+  n° 43351148379 réussi (build, mise en ligne, relecture). Attestation de la version servie : faite le 13/11/2026 vers 03 h 20 (heure de
+  Paris) ; HTML servi identique au build contrôlé, aux empreintes de cache des feuilles et scripts près.

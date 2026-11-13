@@ -282,3 +282,6 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   et après, phrase à phrase ; seules changent les phrases mises en forme ; nombres inchangés. Langue et fidélité : la
   session, puis un relecteur indépendant (aucun P0 ; P1 traités). Premier écran inchangé.
 - Instantané de relecture refait le 13/11/2026.
+- Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `cf3ad02` à `17d3598`) ; déploiement `hugo.yml`
+  n° 43351148379 réussi (build, mise en ligne, relecture). Attestation de la version servie : faite le 13/11/2026 vers 03 h 20 (heure de
+  Paris) ; HTML servi identique au build contrôlé, aux empreintes de cache des feuilles et scripts près.
