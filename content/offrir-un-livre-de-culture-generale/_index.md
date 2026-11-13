@@ -39,10 +39,25 @@ Le broché reste le cadeau classique — un objet qu'on emballe. Mais le Kindle 
 
 ## Questions fréquentes
 
+<div class="faq-visible faq-visible--colonnes">
+<div class="faq-visible__qr">
+
 **Pour quelqu'un qui aime la philosophie et les sciences&nbsp;?** *L'Odyssée des idées* — la fresque qui relie les deux, en 250 escales et sept chemins.
+
+</div>
+<div class="faq-visible__qr">
 
 **Pour quelqu'un qui aime les mots&nbsp;?** *Livresque des mots* — l'anthologie sans classement, qui se lit comme un roman.
 
+</div>
+<div class="faq-visible__qr">
+
 **Pour un étudiant&nbsp;?** L'Odyssée, pour relier ce que les cours séparent — l'index et les sept chemins en font aussi un instrument de révision buissonnière.
 
+</div>
+<div class="faq-visible__qr">
+
 **En numérique&nbsp;?** Les deux existent en Kindle&nbsp;; le [mode d'emploi du lien prépayé](/offrir-un-livre-kindle/) explique tout.
+
+</div>
+</div>
