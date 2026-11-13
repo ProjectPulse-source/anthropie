@@ -312,6 +312,14 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   condition des six mois absente du chapô (exacte, elle y serait trop longue ; « sans nouvelle infraction » seul serait
   faux) ; point de départ des trois ans résumé par « exécution » (contrainte judiciaire, art. 131-25) ; dans le tableau, la
   condition commune suit l'énumération, « doublés » la rattache à l'ensemble.
+- Décision déléguée par l'auteur (13/11/2026, « ce qui est le plus pertinent du point de vue de la clarté pour le
+  lecteur ») : la peine du 2° est une définition négative, opaque pour un non-juriste ; la fiche des délais en donne
+  trois exemples tirés de l'art. 131-3 du Code pénal, lu sur Légifrance (détention à domicile sous surveillance
+  électronique, travail d'intérêt général, stage), « prononcés à la place de l'emprisonnement » (art. 131-4-1 et
+  131-8), comme elle explique déjà le jour-amende ; une phrase dit le cas inverse : un emprisonnement exécuté sous
+  bracelet électronique (art. 132-25) ou assorti d'un sursis avec travail d'intérêt général reste un emprisonnement,
+  dont la durée fixe le délai. Sans elle, les exemples faisaient compter cinq ans au lieu de dix (relecteur
+  indépendant, P1). Tableau, frise et questions fréquentes gardent la lettre du texte.
 - Langue : relecteur indépendant, aucun P0 ni P1 ; « si aucune infraction commise dans l'intervalle n'a donné lieu à un
   nouveau retrait de points » remplace une phrase où « n'a entraîné » revenait deux fois. Premier écran, troisième tour :
   aucune conclusion interdite (« si tu n'en as perdu qu'un » en le racontant).

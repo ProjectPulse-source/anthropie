@@ -1,4 +1,4 @@
-# relu le 2026-11-13 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de e0812dd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 3898af2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 Six mois pour récupérer un point de permis quand l’infraction n’en a retiré qu’un, deux années consécutives sans sinistre pour effacer un malus, cinq ans au plus pour une interdiction d’émettre des chèques, quarante ans pour la fiche d’une condamnation pour crime ou délit — parfois davantage.
@@ -159,8 +159,11 @@ Seule la personne peut l’obtenir (art.
 La réhabilitation légale est acquise de plein droit, sans démarche, à la personne qui n’a subi aucune nouvelle condamnation criminelle ou correctionnelle pendant un délai de :
 Trois ans pour une amende ou des jours-amende (une contribution quotidienne fixée par le juge, due pendant un certain nombre de jours ; Code pénal, art.
 131-5), à compter du paiement ou de la prescription
-Cinq ans pour une condamnation unique à un emprisonnement d’un an au plus, ou à une peine autre que la réclusion criminelle, la détention criminelle, l’emprisonnement, l’amende ou le jour-amende, à compter de l’exécution ou de la prescription
+Cinq ans pour une condamnation unique à un emprisonnement d’un an au plus, ou à une peine autre que la réclusion criminelle, la détention criminelle, l’emprisonnement, l’amende ou le jour-amende (par exemple une détention à domicile sous surveillance électronique, un travail d’intérêt général ou un stage, prononcés à la place de l’emprisonnement ; Code pénal, art.
+131-3), à compter de l’exécution ou de la prescription
 Dix ans pour une condamnation unique à un emprisonnement de dix ans au plus, ou pour plusieurs dont le total ne dépasse pas cinq ans, à compter de l’expiration de la peine ou de la prescription
+Un emprisonnement exécuté sous bracelet électronique (Code pénal, art.
+132-25), ou assorti d’un sursis avec travail d’intérêt général, reste un emprisonnement : c’est sa durée qui fixe le délai.
 Pour une condamnation avec sursis, le délai court du jour où elle est « non avenue » : pour un sursis simple, cinq ans après la condamnation, si aucun crime ou délit commis pendant ces cinq ans n’en a fait révoquer totalement le sursis (Code pénal, art.
 132-35).
 Au-delà de ces trois cas — notamment réclusion criminelle, emprisonnement de plus de dix ans, emprisonnements cumulés de plus de cinq ans —, la loi ne prévoit pas de réhabilitation de plein droit.
