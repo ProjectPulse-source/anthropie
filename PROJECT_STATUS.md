@@ -52,6 +52,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-13 — Lot « guides » : reprise du style (mise en relief de la règle 17, adaptée à chaque sujet)
+
+Consigne de l'auteur : une mise en page « ultra lisible », au niveau de `/parcoursup-quelles-chances-d-etre-admis/`, sans
+dupliquer son plan. Étude, choix et mesures : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ETUDE_STYLE.md`.
+Organes existants seulement ; les phrases arbitrées ne changent pas, elles prennent une forme ; aucune modification de fond
+(`lastmod`, journal, dates affichées inchangés).
+- `/combien-de-temps-une-erreur-reste-inscrite/` (FR) : quatre situations et « Ce que montrent ces durées » en cartes, les
+  trois bulletins du casier en cartes numérotées, la réhabilitation légale en fiche, dix paragraphes coupés.
+- Data centers, déchets, découplage, dépense imprévue (FR, EN) : trois repères sous le chapô (jetons ; périodes des data
+  centers en clair, comme le chapô), cartes numérotées (mécanismes, contrôles de robustesse), paire de cartes (Union
+  européenne), fiche d'étapes (Cigéo), grille de part et d'autre du seuil de pauvreté (dépense), paragraphes coupés.
+- Repères éprouvés : conclusions interdites de chaque page, relecteur indépendant (aucun P0, P1 traités), deux tours de
+  lecteurs du premier écran et un témoin trompeur vu mordre (`LOTS\guides\P\premier_ecran_style.md`) ; constats sur des
+  chapôs arbitrés laissés à l'auteur (`LOTS\guides\A_ARBITRER.md`).
+- Organes : `imp-val` reçoit la variante « css » de `psup-val` ; une espace sépare libellé et texte des fiches et des grilles
+  (« Étape 216 juillet » à l'extraction ; invisible à l'écran).
+- Contrôles : `check-all --ci` 0, build CI et typographie 0, liens 0 critique, rendu 0, dates 83/83 ; 198 rendus (neuf
+  versions, onze largeurs, avec et sans JavaScript) sans débordement ; instantanés de relecture refaits.
+
 ### 2026-11-12 (suite 2) — Niveau : figure non collante, lecture recomposée (contre-expertise PRO-20261112-045621)
 
 - `position: sticky` retiré de `.figure-lecture` (la figure sortait sous la barre d'onglets en fin de bloc). Trois
