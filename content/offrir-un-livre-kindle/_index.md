@@ -20,17 +20,25 @@ Offrir un livre numérique est moins connu qu'offrir un livre papier — et pour
 
 ## Comment faire, en quatre étapes
 
-1. **Ouvrez la page du livre Kindle** sur le site web d'Amazon (pas dans les applications iOS ou Android, qui ne proposent pas l'achat d'ebooks) — depuis un navigateur, sur ordinateur ou téléphone.
-2. **Choisissez «&nbsp;Acheter pour d'autres personnes&nbsp;»**, à côté du bouton d'achat habituel. Vous pouvez sélectionner plusieurs exemplaires en une seule commande.
-3. **Choisissez le mode de remise**&nbsp;: soit Amazon envoie directement le lien d'échange par e-mail au destinataire (adresse saisie au moment de l'achat, avec date d'envoi programmable), soit le lien vous est remis — à transmettre vous-même, ou à imprimer sous forme de bon à glisser dans une carte.
-4. **Le destinataire clique sur le lien**, se connecte à son compte Amazon, et le livre rejoint sa bibliothèque Kindle.
+<div class="fiche-etapes">
+<ol>
+<li><span class="fiche-etapes__n">Étape&nbsp;1</span> <span><strong>Ouvrez la page du livre Kindle</strong> sur le site web d'Amazon (pas dans les applications iOS ou Android, qui ne proposent pas l'achat d'ebooks) — depuis un navigateur, sur ordinateur ou téléphone.</span></li>
+<li><span class="fiche-etapes__n">Étape&nbsp;2</span> <span><strong>Choisissez «&nbsp;Acheter pour d'autres personnes&nbsp;»</strong>, à côté du bouton d'achat habituel. Vous pouvez sélectionner plusieurs exemplaires en une seule commande.</span></li>
+<li><span class="fiche-etapes__n">Étape&nbsp;3</span> <span><strong>Choisissez le mode de remise</strong>&nbsp;: soit Amazon envoie directement le lien d'échange par e-mail au destinataire (adresse saisie au moment de l'achat, avec date d'envoi programmable), soit le lien vous est remis — à transmettre vous-même, ou à imprimer sous forme de bon à glisser dans une carte.</span></li>
+<li><span class="fiche-etapes__n">Étape&nbsp;4</span> <span><strong>Le destinataire clique sur le lien</strong>, se connecte à son compte Amazon, et le livre rejoint sa bibliothèque Kindle.</span></li>
+</ol>
+</div>
 
 ## Les règles à connaître
+
+<div class="liste-colonnes">
 
 - **Même pays obligatoire**&nbsp;: un ebook acheté sur amazon.fr ne peut être échangé que par un compte du même pays. Pour offrir à quelqu'un à l'étranger, achetez sur la boutique Amazon de *son* pays.
 - **Pas besoin de liseuse**&nbsp;: l'application Kindle, gratuite sur téléphone, tablette et ordinateur, suffit.
 - **60 jours**&nbsp;: les exemplaires non réclamés sont remboursables pendant 60 jours&nbsp;; le lien reste ré-offrable à tout moment.
 - **Achat depuis le site web**&nbsp;: les applications mobiles Amazon ne vendent pas d'ebooks — passez par le navigateur.
+
+</div>
 
 ## Offrir un des livres de ce site
 
@@ -47,10 +55,25 @@ Les fiches complètes (argument, sommaire, extraits) sont sur la [page des livre
 
 ## Questions fréquentes
 
+<div class="faq-visible faq-visible--colonnes">
+<div class="faq-visible__qr">
+
 **Sans liseuse&nbsp;?** Oui — compte Amazon + application Kindle gratuite, c'est tout.
+
+</div>
+<div class="faq-visible__qr">
 
 **Vers un autre pays&nbsp;?** Non — même boutique nationale pour l'acheteur et le destinataire.
 
+</div>
+<div class="faq-visible__qr">
+
 **Livre non réclamé&nbsp;?** Remboursable 60 jours, ré-offrable sans limite.
 
+</div>
+<div class="faq-visible__qr">
+
 **Plusieurs exemplaires&nbsp;?** Oui, en une commande — un lien d'échange par exemplaire.
+
+</div>
+</div>
