@@ -48,7 +48,7 @@ NB = " "
 # (registre de la cellule « Registre », libellé, détail affiché, fragments exacts de la cellule « Délai », marques)
 # marques : ("p", années) point plein, délai ; ("c", années) point creux, délai doublé en récidive
 LIGNES = [
-    ("Permis à points", "Permis : un seul point retiré", "6 mois pour un point seul, sans nouveau retrait de points", ["6 mois pour un point seul, sans nouveau retrait de points"], [("p", 0.5)]),
+    ("Permis à points", "Permis : infraction à un seul point", "6 mois quand une infraction n'a retiré qu'un point, sans nouvelle infraction entraînant un retrait de points", ["6 mois quand une infraction n'a retiré qu'un point, sans nouvelle infraction entraînant un retrait de points"], [("p", 0.5)]),
     ("Permis à points", "Permis : tous les points rendus",
      "2 ans sans infraction entraînant un retrait de points ; 3 ans si l'une des infractions est un délit ou une contravention de 4e ou 5e classe ; hors permis probatoire",
      ["2 ans sans infraction entraînant un retrait de points", "3 ans si l'une des infractions est un délit ou une contravention de 4e ou 5e classe"], [("p", 2), ("p", 3)]),
@@ -64,8 +64,8 @@ LIGNES = [
      ["la durée du plan ou des mesures, 7 ans au plus", "5 ans si le plan ou les mesures sont exécutés sans incident",
       "5 ans après un rétablissement personnel ou, en Alsace-Moselle, la liquidation judiciaire d'un particulier"], [("p", 5), ("p", 7)]),
     ("Casier, bulletin n° 2", "Casier, bulletin n° 2 (réhabilitation)",
-     "points creux : en récidive légale, délais doublés (6 ans au lieu de 3, 10 au lieu de 5, 20 au lieu de 10) ; réhabilitation légale dans trois cas seulement : 3 ans (amende ou jours-amende), 5 ans (condamnation unique à un emprisonnement d'un an au plus ou à une autre peine non privative de liberté), 10 ans (condamnation unique à un emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus), sans nouvelle condamnation criminelle ou correctionnelle ; pas de réhabilitation légale au-delà de ces trois cas ; n'y figurent pas les contraventions, ni un sursis devenu non avenu, sauf mesure qui l'y maintient, ni, au bout de 3 ou 5 ans, certaines peines prononcées sans sursis",
-     ["3 ans (amende ou jours-amende), 5 ans (condamnation unique à un emprisonnement d'un an au plus ou à une autre peine non privative de liberté), 10 ans (condamnation unique à un emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus), sans nouvelle condamnation criminelle ou correctionnelle, doublés en récidive légale", "pas de réhabilitation légale au-delà de ces trois cas"], [("p", 3), ("p", 5), ("p", 10), ("c", 6), ("c", 10), ("c", 20)]),
+     "points creux : en récidive légale, délais doublés (6 ans au lieu de 3, 10 au lieu de 5, 20 au lieu de 10) ; réhabilitation légale, sans nouvelle condamnation criminelle ou correctionnelle, dans trois cas seulement : 3 ans (amende ou jours-amende), 5 ans (condamnation unique à un emprisonnement d'un an au plus ou à une peine autre que la réclusion criminelle, la détention criminelle, l'emprisonnement, l'amende ou le jour-amende), 10 ans (condamnation unique à un emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus) ; pas de réhabilitation légale au-delà de ces trois cas ; n'y figurent pas les contraventions, ni un sursis devenu non avenu, sauf mesure qui l'y maintient, ni, au bout de 3 ou 5 ans, certaines peines prononcées sans sursis",
+     ["3 ans (amende ou jours-amende), 5 ans (condamnation unique à un emprisonnement d'un an au plus ou à une peine autre que la réclusion criminelle, la détention criminelle, l'emprisonnement, l'amende ou le jour-amende), 10 ans (condamnation unique à un emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus), sans nouvelle condamnation criminelle ou correctionnelle, doublés en récidive légale", "pas de réhabilitation légale au-delà de ces trois cas"], [("p", 3), ("p", 5), ("p", 10), ("c", 6), ("c", 10), ("c", 20)]),
     ("Casier, bulletin n° 1", "Casier, bulletin n° 1 (aucun employeur)",
      "40 ans sans nouvelle condamnation criminelle ou correctionnelle, hors faits imprescriptibles et condamnations "
      "étrangères ; 3 ans pour une contravention, une dispense de peine et, sous conditions, une amende forfaitaire délictuelle ou une composition pénale ; 4 ans pour une contravention dont la récidive constitue un délit",
@@ -106,7 +106,7 @@ def aff(s: str) -> str:
     s = re.sub("(\\d" + NB + "ans) (après|pour)", "\\1" + NB + "\\2", s)   # B4 : « 5 ans après », « 4 ans pour » (valeur et condition)
     s = s.replace("exécutés sans", "exécutés" + NB + "sans").replace("prononcées sans", "prononcées" + NB + "sans")   # B4 : la condition « sans … » reste avec son verbe
     s = s.replace("(amende ou jours-amende)", "(amende" + NB + "ou" + NB + "jours-amende)")   # B4 : parenthèse courte entière
-    s = s.replace("sans" + NB + "nouveau retrait de" + NB + "points", "sans" + NB + "nouveau" + NB + "retrait" + NB + "de" + NB + "points").replace("de la peine", "de la" + NB + "peine").replace("le bonus antérieur", "le" + NB + "bonus" + NB + "antérieur").replace("après un rétablissement", "après" + NB + "un" + NB + "rétablissement")   # C1c du contrôleur B5 ; « après un rétablissement » : A5 (12/11/2026)
+    s = s.replace("sans" + NB + "nouvelle infraction", "sans" + NB + "nouvelle" + NB + "infraction").replace("un retrait", "un" + NB + "retrait").replace("de la peine", "de la" + NB + "peine").replace("le bonus antérieur", "le" + NB + "bonus" + NB + "antérieur").replace("après un rétablissement", "après" + NB + "un" + NB + "rétablissement")   # C1c du contrôleur B5 ; « après un rétablissement » : A5 (12/11/2026)
     s = s.replace(" ni ", " ni" + NB)   # contrôleur A6 : « ni » jamais seul en fin de ligne
     s = s.replace("ni, au bout de 3", "ni," + NB + "au" + NB + "bout" + NB + "de" + NB + "3")   # contrôleur A6
     s = s.replace("dès le paiement", "dès" + NB + "le" + NB + "paiement")   # contrôleur A6
@@ -119,13 +119,27 @@ def aff(s: str) -> str:
     s = s.replace("prêts couverts", "prêts" + NB + "couverts")   # contrôleur B6, 12/11/2026
     s = re.sub("trois[  ]cas[  ]seulement", "trois" + NB + "cas" + NB + "seulement", s)   # contrôleur B7, 12/11/2026 : restriction avec ce qu'elle restreint
     s = re.sub("2[  ]années[  ]consécutives[  ]sans[  ]sinistre", "2" + NB + "années" + NB + "consécutives" + NB + "sans" + NB + "sinistre", s)   # contrôleur B7, 12/11/2026 : valeur et condition
-    s = re.sub("peine[  ]non[  ]privative", "peine" + NB + "non" + NB + "privative", s)   # contrôleur B7, 12/11/2026 : négation avec ce qu'elle qualifie
+    s = s.replace("n'a retiré qu'un point", "n'a" + NB + "retiré" + NB + "qu'un" + NB + "point").replace("le jour-amende", "le" + NB + "jour-amende").replace("ou le" + NB + "jour-amende", "ou" + NB + "le" + NB + "jour-amende").replace("que la réclusion criminelle", "que" + NB + "la" + NB + "réclusion" + NB + "criminelle").replace("la détention criminelle", "la" + NB + "détention" + NB + "criminelle").replace("contravention de 4ᵉ", "contravention de" + NB + "4ᵉ").replace("ou correctionnelle", "ou" + NB + "correctionnelle")   # contrôleur de lecture, 13/11/2026 : le nombre avec ce qu'il compte, l'article avec son nom
     s = s.replace("constitue un" + NB + "délit", "constitue" + NB + "un" + NB + "délit")   # contrôleur A7, 12/11/2026 : « un délit » ne reste pas seul en fin de ligne
     s = s.replace(" au lieu de ", NB + "au" + NB + "lieu" + NB + "de" + NB)   # contrôleur B7, G4 : chaque couple « 6 ans au lieu de 3 » d'un tenant
     s = s.replace("délais doublés", "délais" + NB + "doublés")   # contrôleur A8, C3
     s = s.replace("dans trois" + NB + "cas", "dans" + NB + "trois" + NB + "cas")   # contrôleur A8, C3
     s = s.replace("sans" + NB + "rétablir le", "sans" + NB + "rétablir" + NB + "le")   # contrôleur A8, C4
+    s = s.replace("sans" + NB + "nouvelle condamnation", "sans" + NB + "nouvelle" + NB + "condamnation").replace("autre que" + NB + "la", "autre" + NB + "que" + NB + "la").replace("totalisant 5" + NB + "ans", "totalisant" + NB + "5" + NB + "ans")   # troisième passage des contrôleurs, 13/11/2026
     return re.sub("([0-9]" + NB + "ans) [(]", lambda m: m.group(1) + NB + "(", s)   # « 3 ans (amende…) » sur une même ligne
+
+
+def coupe_det(det: str, n: int) -> list:
+    """Détail affiché, coupé à n caractères. La liste des trois cas de réhabilitation légale ouvre une ligne à chaque cas
+    (« 3 ans (…) », « 5 ans (…) », « 10 ans (…) »), sur les deux supports : coupe() remplit au nombre de caractères, et
+    au téléphone « 10 ans » finissait une ligne une fois la peine du 2° corrigée (contrôleur de lecture, 13/11/2026)."""
+    s = aff(det)
+    if len(re.findall("(?<![0-9])[0-9]+" + NB + "ans" + NB + "[(]", s)) < 2:   # pas d'énumération de cas
+        return PF.coupe(s, n)
+    lignes = []
+    for morceau in re.split("(?<![0-9])(?=[0-9]+" + NB + "ans" + NB + "[(])", s):
+        lignes += PF.coupe(morceau.rstrip(), n)
+    return lignes
 
 
 def insec(s: str) -> str:
@@ -251,7 +265,7 @@ def figure() -> str:
     # Hauteur de ligne : 54 pour un détail de deux lignes, 13 de plus par ligne au-delà. Jamais de troncature : le
     # 04/11/2026, un [:2] coupait en silence deux détails au milieu d'une phrase (contrôleur indépendant).
     y0, pas = 74, 54   # 74 : place de l'échelle en tête (contrôleur indépendant, 12/11/2026)
-    dets = [PF.coupe(aff(det), 48) for _, _, det, _, _ in LIGNES]   # 48 : « délit » ne reste pas seul (04/11)
+    dets = [coupe_det(det, 48) for _, _, det, _, _ in LIGNES]   # 48 : « délit » ne reste pas seul (04/11)
     ys, y = [], y0
     for d in dets:
         ys.append(y)
@@ -314,7 +328,7 @@ def figure_m() -> str:
             e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y + DY_RECIDIVE + 5, PF.POLICE_M, GRIS, esc("en récidive" + NB + ":")))
             y += DY_RECIDIVE + 8   # la clé « en récidive » reste avec ses points (contrôleur B6)
         y += 6
-        for l in PF.coupe(aff(det), 40):   # 40 : C1c du contrôleur B5 (12/11/2026)
+        for l in coupe_det(det, 40):   # 40 : C1c du contrôleur B5 (12/11/2026)
             y += 17
             e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, PF.POLICE_M, DETAIL, esc(l)))
         y += 14

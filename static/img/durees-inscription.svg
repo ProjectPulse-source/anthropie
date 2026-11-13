@@ -1,118 +1,122 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1181" role="img" font-variant-numeric="tabular-nums" aria-labelledby="durees-inscription-t durees-inscription-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="durees-inscription-t">Combien de temps dure chaque délai : de six mois à quarante ans</title><desc id="durees-inscription-d">Frise des délais fixés par les textes, sur une échelle logarithmique de six mois à quarante ans. Permis : un seul point retiré, 6 mois pour un point seul, sans nouveau retrait de points ; Permis : tous les points rendus, 2 ans sans infraction entraînant un retrait de points ; 3 ans si l'une des infractions est un délit ou une contravention de 4e ou 5e classe ; hors permis probatoire ; Malus d'assurance auto, 2 années consécutives sans sinistre : coefficient ramené à 1 au plus, sans rétablir le bonus antérieur ; Incident de crédit (FICP), 5 ans au plus ; radiation dès le paiement intégral déclaré ; Interdiction d'émettre des chèques, 5 ans, moins si la personne régularise ; Assurance de prêt : cancer ou hépatite C, antécédent à ne plus déclarer 5 ans après la fin du protocole thérapeutique, sans rechute ; prêts couverts par la convention AERAS, assurance prenant fin avant le 71e anniversaire ; Surendettement (FICP), la durée du plan ou des mesures, 7 ans au plus ; 5 ans si le plan ou les mesures sont exécutés sans incident ; 5 ans après un rétablissement personnel ou, en Alsace-Moselle, la liquidation judiciaire d'un particulier ; Casier, bulletin n° 2 (réhabilitation), points creux : en récidive légale, délais doublés (6 ans au lieu de 3, 10 au lieu de 5, 20 au lieu de 10) ; réhabilitation légale dans trois cas seulement : 3 ans (amende ou jours-amende), 5 ans (condamnation unique à un emprisonnement d'un an au plus ou à une autre peine non privative de liberté), 10 ans (condamnation unique à un emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus), sans nouvelle condamnation criminelle ou correctionnelle ; pas de réhabilitation légale au-delà de ces trois cas ; n'y figurent pas les contraventions, ni un sursis devenu non avenu, sauf mesure qui l'y maintient, ni, au bout de 3 ou 5 ans, certaines peines prononcées sans sursis ; Casier, bulletin n° 1 (aucun employeur), 40 ans sans nouvelle condamnation criminelle ou correctionnelle, hors faits imprescriptibles et condamnations étrangères ; 3 ans pour une contravention, une dispense de peine et, sous conditions, une amende forfaitaire délictuelle ou une composition pénale ; 4 ans pour une contravention dont la récidive constitue un délit. Échelle logarithmique. Point plein : délai ou durée maximale ; point creux : délai du bulletin n° 2 doublé en récidive ; non figuré : le retour, au plus tard 10 ans après, des points de permis retirés pour des contraventions des quatre premières classes, même après une nouvelle infraction. Chaque délai s'écoule sans démarche, vaut dans les conditions du tableau et ne court pas du même point de départ. Certains s'abrègent : démarche de la personne (stage de récupération de points, une fois par an ; régularisation d'un chèque ; justification du règlement de toutes les dettes d'un plan ou d'un jugement de surendettement ; requête en exclusion du bulletin n° 2, sauf exceptions), déclaration d'un tiers (paiement déclaré par l'établissement), délais plus courts que la convention AERAS peut fixer pour certaines pathologies. Les effets de la réhabilitation sont reportés en cas d'interdiction, d'incapacité ou de déchéance prononcée à titre définitif comme peine complémentaire, de suivi socio-judiciaire ou d'interdiction d'activité au contact de mineurs.</desc>
-<rect width="720" height="1181" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1233" role="img" font-variant-numeric="tabular-nums" aria-labelledby="durees-inscription-t durees-inscription-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="durees-inscription-t">Combien de temps dure chaque délai : de six mois à quarante ans</title><desc id="durees-inscription-d">Frise des délais fixés par les textes, sur une échelle logarithmique de six mois à quarante ans. Permis : infraction à un seul point, 6 mois quand une infraction n'a retiré qu'un point, sans nouvelle infraction entraînant un retrait de points ; Permis : tous les points rendus, 2 ans sans infraction entraînant un retrait de points ; 3 ans si l'une des infractions est un délit ou une contravention de 4e ou 5e classe ; hors permis probatoire ; Malus d'assurance auto, 2 années consécutives sans sinistre : coefficient ramené à 1 au plus, sans rétablir le bonus antérieur ; Incident de crédit (FICP), 5 ans au plus ; radiation dès le paiement intégral déclaré ; Interdiction d'émettre des chèques, 5 ans, moins si la personne régularise ; Assurance de prêt : cancer ou hépatite C, antécédent à ne plus déclarer 5 ans après la fin du protocole thérapeutique, sans rechute ; prêts couverts par la convention AERAS, assurance prenant fin avant le 71e anniversaire ; Surendettement (FICP), la durée du plan ou des mesures, 7 ans au plus ; 5 ans si le plan ou les mesures sont exécutés sans incident ; 5 ans après un rétablissement personnel ou, en Alsace-Moselle, la liquidation judiciaire d'un particulier ; Casier, bulletin n° 2 (réhabilitation), points creux : en récidive légale, délais doublés (6 ans au lieu de 3, 10 au lieu de 5, 20 au lieu de 10) ; réhabilitation légale, sans nouvelle condamnation criminelle ou correctionnelle, dans trois cas seulement : 3 ans (amende ou jours-amende), 5 ans (condamnation unique à un emprisonnement d'un an au plus ou à une peine autre que la réclusion criminelle, la détention criminelle, l'emprisonnement, l'amende ou le jour-amende), 10 ans (condamnation unique à un emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus) ; pas de réhabilitation légale au-delà de ces trois cas ; n'y figurent pas les contraventions, ni un sursis devenu non avenu, sauf mesure qui l'y maintient, ni, au bout de 3 ou 5 ans, certaines peines prononcées sans sursis ; Casier, bulletin n° 1 (aucun employeur), 40 ans sans nouvelle condamnation criminelle ou correctionnelle, hors faits imprescriptibles et condamnations étrangères ; 3 ans pour une contravention, une dispense de peine et, sous conditions, une amende forfaitaire délictuelle ou une composition pénale ; 4 ans pour une contravention dont la récidive constitue un délit. Échelle logarithmique. Point plein : délai ou durée maximale ; point creux : délai du bulletin n° 2 doublé en récidive ; non figuré : le retour, au plus tard 10 ans après, des points de permis retirés pour des contraventions des quatre premières classes, même après une nouvelle infraction. Chaque délai s'écoule sans démarche, vaut dans les conditions du tableau et ne court pas du même point de départ. Certains s'abrègent : démarche de la personne (stage de récupération de points, une fois par an ; régularisation d'un chèque ; justification du règlement de toutes les dettes d'un plan ou d'un jugement de surendettement ; requête en exclusion du bulletin n° 2, sauf exceptions), déclaration d'un tiers (paiement déclaré par l'établissement), délais plus courts que la convention AERAS peut fixer pour certaines pathologies. Les effets de la réhabilitation sont reportés en cas d'interdiction, d'incapacité ou de déchéance prononcée à titre définitif comme peine complémentaire, de suivi socio-judiciaire ou d'interdiction d'activité au contact de mineurs.</desc>
+<rect width="720" height="1233" fill="#ffffff"/>
 <text x="0" y="22" font-size="17" font-weight="600" fill="#1a1a1f">Combien de temps dure chaque délai : de six mois à quarante ans</text>
 <text x="0" y="52" font-size="11" fill="#55524f">Échelle logarithmique :</text>
-<line x1="300.0" y1="60" x2="300.0" y2="936" stroke="#e6e3dc"/>
+<line x1="300.0" y1="60" x2="300.0" y2="988" stroke="#e6e3dc"/>
 <text x="300.0" y="52" font-size="11" fill="#55524f" text-anchor="middle">6 mois</text>
-<text x="300.0" y="951" font-size="11" fill="#55524f" text-anchor="middle">6 mois</text>
-<line x1="361.7" y1="60" x2="361.7" y2="936" stroke="#e6e3dc"/>
+<text x="300.0" y="1003" font-size="11" fill="#55524f" text-anchor="middle">6 mois</text>
+<line x1="361.7" y1="60" x2="361.7" y2="988" stroke="#e6e3dc"/>
 <text x="361.7" y="52" font-size="11" fill="#55524f" text-anchor="middle">1 an</text>
-<text x="361.7" y="951" font-size="11" fill="#55524f" text-anchor="middle">1 an</text>
-<line x1="423.4" y1="60" x2="423.4" y2="936" stroke="#e6e3dc"/>
+<text x="361.7" y="1003" font-size="11" fill="#55524f" text-anchor="middle">1 an</text>
+<line x1="423.4" y1="60" x2="423.4" y2="988" stroke="#e6e3dc"/>
 <text x="423.4" y="52" font-size="11" fill="#55524f" text-anchor="middle">2 ans</text>
-<text x="423.4" y="951" font-size="11" fill="#55524f" text-anchor="middle">2 ans</text>
-<line x1="504.9" y1="60" x2="504.9" y2="936" stroke="#e6e3dc"/>
+<text x="423.4" y="1003" font-size="11" fill="#55524f" text-anchor="middle">2 ans</text>
+<line x1="504.9" y1="60" x2="504.9" y2="988" stroke="#e6e3dc"/>
 <text x="504.9" y="52" font-size="11" fill="#55524f" text-anchor="middle">5 ans</text>
-<text x="504.9" y="951" font-size="11" fill="#55524f" text-anchor="middle">5 ans</text>
-<line x1="566.6" y1="60" x2="566.6" y2="936" stroke="#e6e3dc"/>
+<text x="504.9" y="1003" font-size="11" fill="#55524f" text-anchor="middle">5 ans</text>
+<line x1="566.6" y1="60" x2="566.6" y2="988" stroke="#e6e3dc"/>
 <text x="566.6" y="52" font-size="11" fill="#55524f" text-anchor="middle">10 ans</text>
-<text x="566.6" y="951" font-size="11" fill="#55524f" text-anchor="middle">10 ans</text>
-<line x1="628.3" y1="60" x2="628.3" y2="936" stroke="#e6e3dc"/>
+<text x="566.6" y="1003" font-size="11" fill="#55524f" text-anchor="middle">10 ans</text>
+<line x1="628.3" y1="60" x2="628.3" y2="988" stroke="#e6e3dc"/>
 <text x="628.3" y="52" font-size="11" fill="#55524f" text-anchor="middle">20 ans</text>
-<text x="628.3" y="951" font-size="11" fill="#55524f" text-anchor="middle">20 ans</text>
-<line x1="690.0" y1="60" x2="690.0" y2="936" stroke="#e6e3dc"/>
+<text x="628.3" y="1003" font-size="11" fill="#55524f" text-anchor="middle">20 ans</text>
+<line x1="690.0" y1="60" x2="690.0" y2="988" stroke="#e6e3dc"/>
 <text x="690.0" y="52" font-size="11" fill="#55524f" text-anchor="middle">40 ans</text>
-<text x="690.0" y="951" font-size="11" fill="#55524f" text-anchor="middle">40 ans</text>
-<text x="0" y="72.0" font-size="13" font-weight="600" fill="#1a1a1f">Permis : un seul point retiré</text>
-<text x="0" y="86.0" font-size="11" fill="#45423e">6 mois pour un point seul,</text>
-<text x="0" y="99.0" font-size="11" fill="#45423e">sans nouveau retrait de points</text>
+<text x="690.0" y="1003" font-size="11" fill="#55524f" text-anchor="middle">40 ans</text>
+<text x="0" y="72.0" font-size="13" font-weight="600" fill="#1a1a1f">Permis : infraction à un seul point</text>
+<text x="0" y="86.0" font-size="11" fill="#45423e">6 mois quand une infraction</text>
+<text x="0" y="99.0" font-size="11" fill="#45423e">n'a retiré qu'un point, sans nouvelle infraction</text>
+<text x="0" y="112.0" font-size="11" fill="#45423e">entraînant un retrait de points</text>
 <circle cx="300.0" cy="76.0" r="5.5" fill="#184f95"/>
-<text x="0" y="126.0" font-size="13" font-weight="600" fill="#1a1a1f">Permis : tous les points rendus</text>
-<text x="0" y="140.0" font-size="11" fill="#45423e">2 ans sans infraction entraînant un retrait</text>
-<text x="0" y="153.0" font-size="11" fill="#45423e">de points ; 3 ans si l'une des infractions est</text>
-<text x="0" y="166.0" font-size="11" fill="#45423e">un délit ou une contravention de</text>
-<text x="0" y="179.0" font-size="11" fill="#45423e">4ᵉ ou 5ᵉ classe ; hors permis probatoire</text>
-<circle cx="423.4" cy="130.0" r="5.5" fill="#184f95"/>
-<circle cx="459.5" cy="130.0" r="5.5" fill="#184f95"/>
-<text x="0" y="206.0" font-size="13" font-weight="600" fill="#1a1a1f">Malus d'assurance auto</text>
-<text x="0" y="220.0" font-size="11" fill="#45423e">2 années consécutives sans sinistre :</text>
-<text x="0" y="233.0" font-size="11" fill="#45423e">coefficient ramené à 1 au plus,</text>
-<text x="0" y="246.0" font-size="11" fill="#45423e">sans rétablir le bonus antérieur</text>
-<circle cx="423.4" cy="210.0" r="5.5" fill="#184f95"/>
-<text x="0" y="273.0" font-size="13" font-weight="600" fill="#1a1a1f">Incident de crédit (FICP)</text>
-<text x="0" y="287.0" font-size="11" fill="#45423e">5 ans au plus ; radiation</text>
-<text x="0" y="300.0" font-size="11" fill="#45423e">dès le paiement intégral déclaré</text>
-<circle cx="504.9" cy="277.0" r="5.5" fill="#184f95"/>
-<text x="0" y="327.0" font-size="13" font-weight="600" fill="#1a1a1f">Interdiction d'émettre des chèques</text>
-<text x="0" y="341.0" font-size="11" fill="#45423e">5 ans, moins si la personne régularise</text>
-<circle cx="504.9" cy="331.0" r="5.5" fill="#184f95"/>
-<text x="0" y="368.0" font-size="13" font-weight="600" fill="#1a1a1f">Assurance de prêt : cancer ou hépatite C</text>
-<text x="0" y="382.0" font-size="11" fill="#45423e">antécédent à ne plus déclarer 5 ans après la fin</text>
-<text x="0" y="395.0" font-size="11" fill="#45423e">du protocole thérapeutique, sans rechute ;</text>
-<text x="0" y="408.0" font-size="11" fill="#45423e">prêts couverts par la convention AERAS,</text>
-<text x="0" y="421.0" font-size="11" fill="#45423e">assurance prenant fin avant le 71ᵉ anniversaire</text>
-<circle cx="504.9" cy="372.0" r="5.5" fill="#184f95"/>
-<text x="0" y="448.0" font-size="13" font-weight="600" fill="#1a1a1f">Surendettement (FICP)</text>
-<text x="0" y="462.0" font-size="11" fill="#45423e">la durée du plan ou des mesures, 7 ans au plus ;</text>
-<text x="0" y="475.0" font-size="11" fill="#45423e">5 ans si le plan ou les mesures sont</text>
-<text x="0" y="488.0" font-size="11" fill="#45423e">exécutés sans incident ;</text>
-<text x="0" y="501.0" font-size="11" fill="#45423e">5 ans après un rétablissement personnel ou,</text>
-<text x="0" y="514.0" font-size="11" fill="#45423e">en Alsace-Moselle, la liquidation judiciaire</text>
-<text x="0" y="527.0" font-size="11" fill="#45423e">d'un particulier</text>
-<circle cx="504.9" cy="452.0" r="5.5" fill="#184f95"/>
-<circle cx="534.9" cy="452.0" r="5.5" fill="#184f95"/>
-<text x="0" y="554.0" font-size="13" font-weight="600" fill="#1a1a1f">Casier, bulletin n° 2 (réhabilitation)</text>
-<text x="0" y="568.0" font-size="11" fill="#45423e">points creux : en récidive légale,</text>
-<text x="0" y="581.0" font-size="11" fill="#45423e">délais doublés (6 ans au lieu de 3,</text>
-<text x="0" y="594.0" font-size="11" fill="#45423e">10 au lieu de 5, 20 au lieu de 10) ;</text>
-<text x="0" y="607.0" font-size="11" fill="#45423e">réhabilitation légale dans trois cas seulement :</text>
-<text x="0" y="620.0" font-size="11" fill="#45423e">3 ans (amende ou jours-amende),</text>
-<text x="0" y="633.0" font-size="11" fill="#45423e">5 ans (condamnation unique à un emprisonnement</text>
-<text x="0" y="646.0" font-size="11" fill="#45423e">d'un an au plus ou à une autre</text>
-<text x="0" y="659.0" font-size="11" fill="#45423e">peine non privative de liberté),</text>
-<text x="0" y="672.0" font-size="11" fill="#45423e">10 ans (condamnation unique à un emprisonnement</text>
-<text x="0" y="685.0" font-size="11" fill="#45423e">de 10 ans au plus, ou plusieurs totalisant</text>
-<text x="0" y="698.0" font-size="11" fill="#45423e">5 ans au plus), sans nouvelle condamnation</text>
-<text x="0" y="711.0" font-size="11" fill="#45423e">criminelle ou correctionnelle ;</text>
-<text x="0" y="724.0" font-size="11" fill="#45423e">pas de réhabilitation légale au-delà de ces</text>
-<text x="0" y="737.0" font-size="11" fill="#45423e">trois cas ; n'y figurent pas les contraventions,</text>
-<text x="0" y="750.0" font-size="11" fill="#45423e">ni un sursis devenu non avenu, sauf mesure qui</text>
-<text x="0" y="763.0" font-size="11" fill="#45423e">l'y maintient, ni, au bout de 3 ou 5 ans,</text>
-<text x="0" y="776.0" font-size="11" fill="#45423e">certaines peines prononcées sans sursis</text>
-<circle cx="459.5" cy="558.0" r="5.5" fill="#184f95"/>
-<circle cx="504.9" cy="558.0" r="5.5" fill="#184f95"/>
-<circle cx="566.6" cy="558.0" r="5.5" fill="#184f95"/>
-<circle cx="521.2" cy="572.0" r="5.0" fill="#ffffff" stroke="#184f95" stroke-width="1.6"/>
-<circle cx="566.6" cy="572.0" r="5.0" fill="#ffffff" stroke="#184f95" stroke-width="1.6"/>
-<circle cx="628.3" cy="572.0" r="5.0" fill="#ffffff" stroke="#184f95" stroke-width="1.6"/>
-<text x="0" y="803.0" font-size="13" font-weight="600" fill="#1a1a1f">Casier, bulletin n° 1 (aucun employeur)</text>
-<text x="0" y="817.0" font-size="11" fill="#45423e">40 ans sans nouvelle condamnation criminelle ou</text>
-<text x="0" y="830.0" font-size="11" fill="#45423e">correctionnelle, hors faits imprescriptibles et</text>
-<text x="0" y="843.0" font-size="11" fill="#45423e">condamnations étrangères ; 3 ans pour une</text>
-<text x="0" y="856.0" font-size="11" fill="#45423e">contravention, une dispense de peine et,</text>
-<text x="0" y="869.0" font-size="11" fill="#45423e">sous conditions, une</text>
-<text x="0" y="882.0" font-size="11" fill="#45423e">amende forfaitaire délictuelle ou une</text>
-<text x="0" y="895.0" font-size="11" fill="#45423e">composition pénale ; 4 ans pour une</text>
-<text x="0" y="908.0" font-size="11" fill="#45423e">contravention dont la récidive</text>
-<text x="0" y="921.0" font-size="11" fill="#45423e">constitue un délit</text>
-<circle cx="459.5" cy="807.0" r="5.5" fill="#184f95"/>
-<circle cx="485.1" cy="807.0" r="5.5" fill="#184f95"/>
-<circle cx="690.0" cy="807.0" r="5.5" fill="#184f95"/>
-<line x1="0" y1="962.0" x2="720" y2="962.0" stroke="#c9c6bd"/>
-<text class="pied-source" x="0" y="977.0" font-size="11" fill="#55524f">Source : tableau et texte de la page (droit en vigueur au 1er novembre 2026), établis d'après les textes qu'elle cite</text>
-<text class="pied-source" x="0" y="991.0" font-size="11" fill="#55524f">(code monétaire et financier, code de la consommation, code de commerce, arrêté du 26 octobre 2010 relatif au FICP,</text>
-<text class="pied-source" x="0" y="1005.0" font-size="11" fill="#55524f">code pénal et code de procédure pénale, code de la route, code des assurances, code de la santé publique, convention</text>
-<text class="pied-source" x="0" y="1019.0" font-size="11" fill="#55524f">AERAS).</text>
-<text class="pied-note" x="0" y="1033.0" font-size="11" fill="#55524f">Échelle logarithmique. Point plein : délai ou durée maximale ; point creux : délai du bulletin n° 2 doublé</text>
-<text class="pied-note" x="0" y="1047.0" font-size="11" fill="#55524f">en récidive ; non figuré : le retour, au plus tard 10 ans après, des points de permis retirés pour des contraventions</text>
-<text class="pied-note" x="0" y="1061.0" font-size="11" fill="#55524f">des quatre premières classes, même après une nouvelle infraction. Chaque délai s'écoule sans démarche, vaut dans les</text>
-<text class="pied-note" x="0" y="1075.0" font-size="11" fill="#55524f">conditions du tableau et ne court pas du même point de départ. Certains s'abrègent : démarche de la personne (stage de</text>
-<text class="pied-note" x="0" y="1089.0" font-size="11" fill="#55524f">récupération de points, une fois par an ; régularisation d'un chèque ; justification du règlement de toutes les dettes</text>
-<text class="pied-note" x="0" y="1103.0" font-size="11" fill="#55524f">d'un plan ou d'un jugement de surendettement ; requête en exclusion du bulletin n° 2, sauf exceptions), déclaration</text>
-<text class="pied-note" x="0" y="1117.0" font-size="11" fill="#55524f">d'un tiers (paiement déclaré par l'établissement), délais plus courts que la convention AERAS peut fixer pour</text>
-<text class="pied-note" x="0" y="1131.0" font-size="11" fill="#55524f">certaines pathologies. Les effets de la réhabilitation sont reportés en cas d'interdiction, d'incapacité ou de</text>
-<text class="pied-note" x="0" y="1145.0" font-size="11" fill="#55524f">déchéance prononcée à titre définitif comme peine complémentaire, de suivi socio-judiciaire ou d'interdiction</text>
-<text class="pied-note" x="0" y="1159.0" font-size="11" fill="#55524f">d'activité au contact de mineurs.</text>
-<text class="pied-licence" x="0" y="1173.0" font-size="11" fill="#55524f">Figure Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/combien-de-temps-une-erreur-reste-inscrite/</text>
+<text x="0" y="139.0" font-size="13" font-weight="600" fill="#1a1a1f">Permis : tous les points rendus</text>
+<text x="0" y="153.0" font-size="11" fill="#45423e">2 ans sans infraction entraînant un retrait</text>
+<text x="0" y="166.0" font-size="11" fill="#45423e">de points ; 3 ans si l'une des infractions est</text>
+<text x="0" y="179.0" font-size="11" fill="#45423e">un délit ou une contravention</text>
+<text x="0" y="192.0" font-size="11" fill="#45423e">de 4ᵉ ou 5ᵉ classe ; hors permis probatoire</text>
+<circle cx="423.4" cy="143.0" r="5.5" fill="#184f95"/>
+<circle cx="459.5" cy="143.0" r="5.5" fill="#184f95"/>
+<text x="0" y="219.0" font-size="13" font-weight="600" fill="#1a1a1f">Malus d'assurance auto</text>
+<text x="0" y="233.0" font-size="11" fill="#45423e">2 années consécutives sans sinistre :</text>
+<text x="0" y="246.0" font-size="11" fill="#45423e">coefficient ramené à 1 au plus,</text>
+<text x="0" y="259.0" font-size="11" fill="#45423e">sans rétablir le bonus antérieur</text>
+<circle cx="423.4" cy="223.0" r="5.5" fill="#184f95"/>
+<text x="0" y="286.0" font-size="13" font-weight="600" fill="#1a1a1f">Incident de crédit (FICP)</text>
+<text x="0" y="300.0" font-size="11" fill="#45423e">5 ans au plus ; radiation</text>
+<text x="0" y="313.0" font-size="11" fill="#45423e">dès le paiement intégral déclaré</text>
+<circle cx="504.9" cy="290.0" r="5.5" fill="#184f95"/>
+<text x="0" y="340.0" font-size="13" font-weight="600" fill="#1a1a1f">Interdiction d'émettre des chèques</text>
+<text x="0" y="354.0" font-size="11" fill="#45423e">5 ans, moins si la personne régularise</text>
+<circle cx="504.9" cy="344.0" r="5.5" fill="#184f95"/>
+<text x="0" y="381.0" font-size="13" font-weight="600" fill="#1a1a1f">Assurance de prêt : cancer ou hépatite C</text>
+<text x="0" y="395.0" font-size="11" fill="#45423e">antécédent à ne plus déclarer 5 ans après la fin</text>
+<text x="0" y="408.0" font-size="11" fill="#45423e">du protocole thérapeutique, sans rechute ;</text>
+<text x="0" y="421.0" font-size="11" fill="#45423e">prêts couverts par la convention AERAS,</text>
+<text x="0" y="434.0" font-size="11" fill="#45423e">assurance prenant fin avant le 71ᵉ anniversaire</text>
+<circle cx="504.9" cy="385.0" r="5.5" fill="#184f95"/>
+<text x="0" y="461.0" font-size="13" font-weight="600" fill="#1a1a1f">Surendettement (FICP)</text>
+<text x="0" y="475.0" font-size="11" fill="#45423e">la durée du plan ou des mesures, 7 ans au plus ;</text>
+<text x="0" y="488.0" font-size="11" fill="#45423e">5 ans si le plan ou les mesures sont</text>
+<text x="0" y="501.0" font-size="11" fill="#45423e">exécutés sans incident ;</text>
+<text x="0" y="514.0" font-size="11" fill="#45423e">5 ans après un rétablissement personnel ou,</text>
+<text x="0" y="527.0" font-size="11" fill="#45423e">en Alsace-Moselle, la liquidation judiciaire</text>
+<text x="0" y="540.0" font-size="11" fill="#45423e">d'un particulier</text>
+<circle cx="504.9" cy="465.0" r="5.5" fill="#184f95"/>
+<circle cx="534.9" cy="465.0" r="5.5" fill="#184f95"/>
+<text x="0" y="567.0" font-size="13" font-weight="600" fill="#1a1a1f">Casier, bulletin n° 2 (réhabilitation)</text>
+<text x="0" y="581.0" font-size="11" fill="#45423e">points creux : en récidive légale,</text>
+<text x="0" y="594.0" font-size="11" fill="#45423e">délais doublés (6 ans au lieu de 3,</text>
+<text x="0" y="607.0" font-size="11" fill="#45423e">10 au lieu de 5, 20 au lieu de 10) ;</text>
+<text x="0" y="620.0" font-size="11" fill="#45423e">réhabilitation légale,</text>
+<text x="0" y="633.0" font-size="11" fill="#45423e">sans nouvelle condamnation criminelle</text>
+<text x="0" y="646.0" font-size="11" fill="#45423e">ou correctionnelle, dans trois cas seulement :</text>
+<text x="0" y="659.0" font-size="11" fill="#45423e">3 ans (amende ou jours-amende),</text>
+<text x="0" y="672.0" font-size="11" fill="#45423e">5 ans (condamnation unique à un emprisonnement</text>
+<text x="0" y="685.0" font-size="11" fill="#45423e">d'un an au plus ou à une peine</text>
+<text x="0" y="698.0" font-size="11" fill="#45423e">autre que la réclusion criminelle,</text>
+<text x="0" y="711.0" font-size="11" fill="#45423e">la détention criminelle, l'emprisonnement,</text>
+<text x="0" y="724.0" font-size="11" fill="#45423e">l'amende ou le jour-amende),</text>
+<text x="0" y="737.0" font-size="11" fill="#45423e">10 ans (condamnation unique à un emprisonnement</text>
+<text x="0" y="750.0" font-size="11" fill="#45423e">de 10 ans au plus, ou plusieurs</text>
+<text x="0" y="763.0" font-size="11" fill="#45423e">totalisant 5 ans au plus) ;</text>
+<text x="0" y="776.0" font-size="11" fill="#45423e">pas de réhabilitation légale au-delà de ces</text>
+<text x="0" y="789.0" font-size="11" fill="#45423e">trois cas ; n'y figurent pas les contraventions,</text>
+<text x="0" y="802.0" font-size="11" fill="#45423e">ni un sursis devenu non avenu, sauf mesure qui</text>
+<text x="0" y="815.0" font-size="11" fill="#45423e">l'y maintient, ni, au bout de 3 ou 5 ans,</text>
+<text x="0" y="828.0" font-size="11" fill="#45423e">certaines peines prononcées sans sursis</text>
+<circle cx="459.5" cy="571.0" r="5.5" fill="#184f95"/>
+<circle cx="504.9" cy="571.0" r="5.5" fill="#184f95"/>
+<circle cx="566.6" cy="571.0" r="5.5" fill="#184f95"/>
+<circle cx="521.2" cy="585.0" r="5.0" fill="#ffffff" stroke="#184f95" stroke-width="1.6"/>
+<circle cx="566.6" cy="585.0" r="5.0" fill="#ffffff" stroke="#184f95" stroke-width="1.6"/>
+<circle cx="628.3" cy="585.0" r="5.0" fill="#ffffff" stroke="#184f95" stroke-width="1.6"/>
+<text x="0" y="855.0" font-size="13" font-weight="600" fill="#1a1a1f">Casier, bulletin n° 1 (aucun employeur)</text>
+<text x="0" y="869.0" font-size="11" fill="#45423e">40 ans sans nouvelle condamnation criminelle</text>
+<text x="0" y="882.0" font-size="11" fill="#45423e">ou correctionnelle, hors faits imprescriptibles</text>
+<text x="0" y="895.0" font-size="11" fill="#45423e">et condamnations étrangères ; 3 ans pour une</text>
+<text x="0" y="908.0" font-size="11" fill="#45423e">contravention, une dispense de peine et,</text>
+<text x="0" y="921.0" font-size="11" fill="#45423e">sous conditions, une</text>
+<text x="0" y="934.0" font-size="11" fill="#45423e">amende forfaitaire délictuelle ou une</text>
+<text x="0" y="947.0" font-size="11" fill="#45423e">composition pénale ; 4 ans pour une</text>
+<text x="0" y="960.0" font-size="11" fill="#45423e">contravention dont la récidive</text>
+<text x="0" y="973.0" font-size="11" fill="#45423e">constitue un délit</text>
+<circle cx="459.5" cy="859.0" r="5.5" fill="#184f95"/>
+<circle cx="485.1" cy="859.0" r="5.5" fill="#184f95"/>
+<circle cx="690.0" cy="859.0" r="5.5" fill="#184f95"/>
+<line x1="0" y1="1014.0" x2="720" y2="1014.0" stroke="#c9c6bd"/>
+<text class="pied-source" x="0" y="1029.0" font-size="11" fill="#55524f">Source : tableau et texte de la page (droit en vigueur au 1er novembre 2026), établis d'après les textes qu'elle cite</text>
+<text class="pied-source" x="0" y="1043.0" font-size="11" fill="#55524f">(code monétaire et financier, code de la consommation, code de commerce, arrêté du 26 octobre 2010 relatif au FICP,</text>
+<text class="pied-source" x="0" y="1057.0" font-size="11" fill="#55524f">code pénal et code de procédure pénale, code de la route, code des assurances, code de la santé publique, convention</text>
+<text class="pied-source" x="0" y="1071.0" font-size="11" fill="#55524f">AERAS).</text>
+<text class="pied-note" x="0" y="1085.0" font-size="11" fill="#55524f">Échelle logarithmique. Point plein : délai ou durée maximale ; point creux : délai du bulletin n° 2 doublé</text>
+<text class="pied-note" x="0" y="1099.0" font-size="11" fill="#55524f">en récidive ; non figuré : le retour, au plus tard 10 ans après, des points de permis retirés pour des contraventions</text>
+<text class="pied-note" x="0" y="1113.0" font-size="11" fill="#55524f">des quatre premières classes, même après une nouvelle infraction. Chaque délai s'écoule sans démarche, vaut dans les</text>
+<text class="pied-note" x="0" y="1127.0" font-size="11" fill="#55524f">conditions du tableau et ne court pas du même point de départ. Certains s'abrègent : démarche de la personne (stage de</text>
+<text class="pied-note" x="0" y="1141.0" font-size="11" fill="#55524f">récupération de points, une fois par an ; régularisation d'un chèque ; justification du règlement de toutes les dettes</text>
+<text class="pied-note" x="0" y="1155.0" font-size="11" fill="#55524f">d'un plan ou d'un jugement de surendettement ; requête en exclusion du bulletin n° 2, sauf exceptions), déclaration</text>
+<text class="pied-note" x="0" y="1169.0" font-size="11" fill="#55524f">d'un tiers (paiement déclaré par l'établissement), délais plus courts que la convention AERAS peut fixer pour</text>
+<text class="pied-note" x="0" y="1183.0" font-size="11" fill="#55524f">certaines pathologies. Les effets de la réhabilitation sont reportés en cas d'interdiction, d'incapacité ou de</text>
+<text class="pied-note" x="0" y="1197.0" font-size="11" fill="#55524f">déchéance prononcée à titre définitif comme peine complémentaire, de suivi socio-judiciaire ou d'interdiction</text>
+<text class="pied-note" x="0" y="1211.0" font-size="11" fill="#55524f">d'activité au contact de mineurs.</text>
+<text class="pied-licence" x="0" y="1225.0" font-size="11" fill="#55524f">Figure Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/combien-de-temps-une-erreur-reste-inscrite/</text>
 </svg>

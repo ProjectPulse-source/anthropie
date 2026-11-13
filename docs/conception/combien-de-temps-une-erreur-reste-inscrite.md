@@ -285,3 +285,38 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
 - Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `cf3ad02` à `17d3598`) ; déploiement `hugo.yml`
   n° 43351148379 réussi (build, mise en ligne, relecture). Attestation de la version servie : faite le 13/11/2026 vers 03 h 20 (heure de
   Paris) ; HTML servi identique au build contrôlé, aux empreintes de cache des feuilles et scripts près.
+
+### Arbitrage externe et relectures (13/11/2026)
+
+- Pièce remise par l'auteur, archivée avant lecture et arbitrée par écrit : `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\guides\ARBITRAGE_EXTERNE_2026-11-13.md`.
+- Fond (P0 de la pièce, vérifiés sur Légifrance) : le délai de cinq ans de la réhabilitation légale vise, outre
+  l'emprisonnement d'un an au plus, une peine autre que la réclusion criminelle, la détention criminelle,
+  l'emprisonnement, l'amende ou le jour-amende (Code pénal, art. 133-13, 2°), et non toute « autre peine non privative de
+  liberté » ; le délai de six mois du permis vaut quand une infraction n'a entraîné le retrait que d'un point (Code de la
+  route, art. L. 223-6, al. 3). Chapô, tableau, frise, texte alternatif, corps, questions fréquentes et fiche des délais.
+- Les contrôleurs de la figure ont trouvé deux autres écarts au droit, antérieurs à la reprise : la condition des six mois
+  porte sur une infraction commise dans l'intervalle, non sur un retrait intervenu dans l'intervalle (tableau, frise, texte
+  alternatif, corps) ; la condition commune aux trois délais (« sans nouvelle condamnation criminelle ou
+  correctionnelle ») passe en tête dans la frise et son texte alternatif, comme au corps et aux questions fréquentes. La
+  question fréquente sur le casier dit « au-delà de ces trois cas » au lieu de « pour des peines plus lourdes » : un cumul
+  de condamnations en est exclu sans être une peine plus lourde.
+- Frise (`scripts/generer_frise_durees.py`) : libellé « Permis : infraction à un seul point » (trois relecteurs : l'ancien,
+  lu seul, semblait valoir pour tout point retiré) ; chaque cas de la réhabilitation ouvre sa ligne sur les deux supports
+  (`coupe_det()`, déclenchée par l'énumération elle-même) ; soudures insécables (nombre écrit en lettres et son nom,
+  articles, « ou », « sans nouvelle … ») : 7 fins de ligne sur un mot-outil au bureau et 14 au téléphone, contre 10 et 17
+  au dernier commit ; hauteurs 720 × 1233 et 300 × 2553. Exactitude : 18 marques sur 18 reconverties, `--check` et ses
+  sept témoins, `check-figures` à 0. Trois passages des deux contrôleurs indépendants ; les retouches du troisième avaient
+  été simulées par eux, et la sortie du générateur est identique à leur simulation (52 et 60 lignes de détail).
+- Restes déclarés (`A_ARBITRER.md` du lot) : classe des fins de ligne sur un mot-outil et coupure avant chaque « ; N ans »
+  (avec la régénération de la frise du lot P2) ; crochet du « j » rogné de 0,2 à 1,3 px au bord gauche du téléphone ;
+  condition des six mois absente du chapô (exacte, elle y serait trop longue ; « sans nouvelle infraction » seul serait
+  faux) ; point de départ des trois ans résumé par « exécution » (contrainte judiciaire, art. 131-25) ; dans le tableau, la
+  condition commune suit l'énumération, « doublés » la rattache à l'ensemble.
+- Langue : relecteur indépendant, aucun P0 ni P1 ; « si aucune infraction commise dans l'intervalle n'a donné lieu à un
+  nouveau retrait de points » remplace une phrase où « n'a entraîné » revenait deux fois. Premier écran, troisième tour :
+  aucune conclusion interdite (« si tu n'en as perdu qu'un » en le racontant).
+- `lastmod` au 13/11/2026, journal, historique des dates.
+- Contrôles : `check-all --ci` à 0 ; build CI et typographie 0 défaut ; liens 0 critique ; rendu 0 ; dates 83/83 ;
+  0 débordement sur onze largeurs de 320 à 1 440 px, avec et sans JavaScript (la mesure vérifie désormais le statut
+  HTTP de chaque page) ; lettre : texte servi avant et après, phrase à phrase, seules changent les phrases décidées.
+- Instantané de relecture refait le 13/11/2026.

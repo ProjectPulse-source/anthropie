@@ -1,12 +1,12 @@
-# relu le 2026-11-13 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 4c49145 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-13 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de e0812dd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
-Six mois pour un point de permis retiré seul, deux années consécutives sans sinistre pour effacer un malus, cinq ans au plus pour une interdiction d’émettre des chèques, quarante ans pour la fiche d’une condamnation pour crime ou délit — parfois davantage.
+Six mois pour récupérer un point de permis quand l’infraction n’en a retiré qu’un, deux années consécutives sans sinistre pour effacer un malus, cinq ans au plus pour une interdiction d’émettre des chèques, quarante ans pour la fiche d’une condamnation pour crime ou délit — parfois davantage.
 Le droit français ne conserve pas toutes les traces du passé selon les mêmes règles.
 Certaines disparaissent avec le temps, d’autres après un remboursement déclaré, une réhabilitation ou une décision judiciaire.
 Et supprimer une inscription ne signifie pas toujours effacer l’information.
 Pour savoir quand une trace cesse de produire ses effets, trois questions comptent : quel registre la conserve, quelle condition permet d’en sortir et qui doit agir ?
-Page mise à jour le 12 novembre 2026
+Page mise à jour le 13 novembre 2026
 Une dette se rembourse, une peine s’exécute, une maladie se soigne (la maladie n’est pas une erreur, mais elle aussi laisse une trace).
 Cela ne fait pas nécessairement disparaître toutes les conséquences qui leur sont associées : selon le registre, il faut laisser passer un délai, remplir une condition, obtenir une décision ou attendre qu’un organisme accomplisse une formalité.
 Cette page donne ces délais et ces conditions pour les principaux registres, d’après les textes en vigueur au 1er novembre 2026, relus sur Légifrance le 12 novembre 2026.
@@ -40,7 +40,7 @@ la régularisation : payer le chèque ou constituer la provision
 la personne, qui justifie la régularisation ; puis la banque, qui avise la Banque de France
 Casier, bulletin n° 2
 un délai de réhabilitation légale
-3 ans (amende ou jours-amende), 5 ans (condamnation unique à un emprisonnement d’un an au plus ou à une autre peine non privative de liberté), 10 ans (condamnation unique à un emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus), sans nouvelle condamnation criminelle ou correctionnelle, doublés en récidive légale ; pas de réhabilitation légale au-delà de ces trois cas
+3 ans (amende ou jours-amende), 5 ans (condamnation unique à un emprisonnement d’un an au plus ou à une peine autre que la réclusion criminelle, la détention criminelle, l’emprisonnement, l’amende ou le jour-amende), 10 ans (condamnation unique à un emprisonnement de 10 ans au plus, ou plusieurs totalisant 5 ans au plus), sans nouvelle condamnation criminelle ou correctionnelle, doublés en récidive légale ; pas de réhabilitation légale au-delà de ces trois cas
 le paiement, l’exécution ou la prescription de la peine ; pour un sursis, la date où la condamnation est non avenue
 sorties sans démarche : sursis devenu non avenu, sauf mesure qui l’y maintient, et certaines peines au bout de 3 ou 5 ans (art.
 775 du Code de procédure pénale) ; l’exclusion décidée par le tribunal, sauf pour les personnes condamnées pour une infraction de l’art.
@@ -56,7 +56,7 @@ exclus du délai de 40 ans : faits imprescriptibles, condamnations étrangères 
 aucune démarche pour le retrait automatique
 Permis à points
 un délai de récupération des points
-2 ans sans infraction entraînant un retrait de points (3 ans si l’une des infractions est un délit ou une contravention de 4e ou 5e classe) ; 6 mois pour un point seul, sans nouveau retrait de points ; pour les points retirés pour des contraventions des quatre premières classes, au plus tard 10 ans après la condamnation définitive ou le paiement de l’amende forfaitaire, même après une nouvelle infraction
+2 ans sans infraction entraînant un retrait de points (3 ans si l’une des infractions est un délit ou une contravention de 4e ou 5e classe) ; 6 mois quand une infraction n’a retiré qu’un point, sans nouvelle infraction entraînant un retrait de points ; pour les points retirés pour des contraventions des quatre premières classes, au plus tard 10 ans après la condamnation définitive ou le paiement de l’amende forfaitaire, même après une nouvelle infraction
 la dernière infraction établie (paiement de l’amende, condamnation définitive…)
 un stage par an ; règles propres au permis probatoire ; un permis à zéro point perd sa validité
 aucune démarche, sauf pour le stage
@@ -159,7 +159,7 @@ Seule la personne peut l’obtenir (art.
 La réhabilitation légale est acquise de plein droit, sans démarche, à la personne qui n’a subi aucune nouvelle condamnation criminelle ou correctionnelle pendant un délai de :
 Trois ans pour une amende ou des jours-amende (une contribution quotidienne fixée par le juge, due pendant un certain nombre de jours ; Code pénal, art.
 131-5), à compter du paiement ou de la prescription
-Cinq ans pour une condamnation unique à un emprisonnement d’un an au plus, ou à une autre peine non privative de liberté, à compter de l’exécution ou de la prescription
+Cinq ans pour une condamnation unique à un emprisonnement d’un an au plus, ou à une peine autre que la réclusion criminelle, la détention criminelle, l’emprisonnement, l’amende ou le jour-amende, à compter de l’exécution ou de la prescription
 Dix ans pour une condamnation unique à un emprisonnement de dix ans au plus, ou pour plusieurs dont le total ne dépasse pas cinq ans, à compter de l’expiration de la peine ou de la prescription
 Pour une condamnation avec sursis, le délai court du jour où elle est « non avenue » : pour un sursis simple, cinq ans après la condamnation, si aucun crime ou délit commis pendant ces cinq ans n’en a fait révoquer totalement le sursis (Code pénal, art.
 132-35).
@@ -191,7 +191,7 @@ Le retrait de la fiche ne se confond donc ni avec la réhabilitation ni avec l�
 769 ; Service-public, fiche F31802, vérifiée par la DILA le 20 octobre 2025).
 Combien de temps faut-il pour récupérer ses points de permis ?
 Le permis retrouve son nombre maximal de points si son titulaire n’a pas commis, pendant deux ans, de nouvelle infraction entraînant un retrait de points ; le délai est de trois ans si l’une des infractions était un délit ou une contravention de quatrième ou de cinquième classe.
-Un point retiré seul est rendu au bout de six mois, si aucune infraction n’a entraîné un nouveau retrait de points dans l’intervalle.
+Quand une infraction n’a entraîné le retrait que d’un point, ce point est rendu au bout de six mois, si aucune infraction commise dans l’intervalle n’a donné lieu à un nouveau retrait de points.
 Un stage de sensibilisation à la sécurité routière permet de récupérer des points, une fois par an au plus.
 Les points retirés pour des contraventions des quatre premières classes sont aussi réattribués dix ans après la condamnation définitive ou le paiement de l’amende (Code de la route, art.
 L.
@@ -316,10 +316,10 @@ L’exclusion décidée par le tribunal, dans le jugement ou plus tard sur requ�
 Droit en vigueur au 1er novembre 2026.
 Comment une condamnation disparaît-elle du casier judiciaire ?
 De plusieurs façons.
-La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation criminelle ou correctionnelle, après un délai qui court du paiement, de l’exécution ou de la prescription de la peine (pour un sursis, du jour où la condamnation est non avenue) : trois ans pour une amende ou des jours-amende ; cinq ans pour une condamnation unique à un emprisonnement d’un an au plus ou à une autre peine non privative de liberté ; dix ans pour une condamnation unique à un emprisonnement de dix ans au plus ou pour plusieurs totalisant cinq ans au plus.
+La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation criminelle ou correctionnelle, après un délai qui court du paiement, de l’exécution ou de la prescription de la peine (pour un sursis, du jour où la condamnation est non avenue) : trois ans pour une amende ou des jours-amende ; cinq ans pour une condamnation unique à un emprisonnement d’un an au plus ou à une peine autre que la réclusion criminelle, la détention criminelle, l’emprisonnement, l’amende ou le jour-amende ; dix ans pour une condamnation unique à un emprisonnement de dix ans au plus ou pour plusieurs totalisant cinq ans au plus.
 Ces délais sont doublés si la condamnation a sanctionné des faits commis en état de récidive légale (Code pénal, art.
 133-13).
-Elle n’est pas prévue pour des peines plus lourdes ; reste alors la réhabilitation judiciaire, que toute personne condamnée peut demander dans les conditions du Code de procédure pénale (Code pénal, art.
+Au-delà de ces trois cas, elle n’est pas prévue ; reste alors la réhabilitation judiciaire, que toute personne condamnée peut demander dans les conditions du Code de procédure pénale (Code pénal, art.
 133-12).
 L’une et l’autre effacent la condamnation des bulletins n° 2 et n° 3 (Code de procédure pénale, art.
 775 et 777), mais leurs effets sont reportés en cas d’interdiction, d’incapacité ou de déchéance prononcée à titre définitif comme peine complémentaire, de suivi socio-judiciaire ou d’interdiction d’activité au contact de mineurs (Code pénal, art.
@@ -338,7 +338,7 @@ Enfin, les fiches du casier, dont le bulletin n° 1 est le relevé intégral, so
 Droit en vigueur au 1er novembre 2026.
 Combien de temps faut-il pour récupérer ses points de permis ?
 Le permis retrouve tous ses points après deux ans sans nouvelle infraction entraînant un retrait, trois ans si l’une des infractions est un délit ou une contravention de quatrième ou de cinquième classe ; ces délais courent de la dernière condamnation définitive, du paiement de la dernière amende forfaitaire, de l’émission du titre exécutoire de la dernière amende forfaitaire majorée ou de l’exécution de la dernière composition pénale.
-Un point retiré seul est rendu six mois après cette même date, sans nouvelle infraction entraînant un retrait de points.
+Quand une infraction n’a entraîné le retrait que d’un point, ce point est rendu six mois après cette même date, sans nouvelle infraction entraînant un retrait de points.
 Les points retirés pour des contraventions des quatre premières classes sont en outre réattribués au plus tard dix ans après la condamnation définitive ou le paiement de l’amende forfaitaire, même si une nouvelle infraction a fait repartir les délais de deux ou trois ans.
 Un stage de sensibilisation permet de récupérer des points une fois par an (Code de la route, art.
 L.
