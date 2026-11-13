@@ -78,9 +78,8 @@ blocs:
     titre_barre: "Cadre d'analyse de l'auteur"   # ligne d'appartenance des pages (partials/ressource-appartenance.html)
     chapo: "L'hypothèse de l'auteur et sa définition, les notions qu'elle mobilise, chacune attribuée à qui l'a forgée, et le Registre qui l'applique à l'histoire longue."
   - id: guides
-    titre: "Données et droit"
-    titre_barre: "Analyses de séries et de textes officiels"   # ligne d'appartenance des pages (arbitrage externe du 13/11/2026)
-    chapo: "Des analyses tirées des séries et des textes officiels : data centers, déchets radioactifs, découplage énergie-croissance, dépense imprévue, durée d’inscription des erreurs."
+    titre: "Chiffres et règles, vérifiés à la source"   # remplace « Données et droit », ambigu pour quatre lecteurs sur sept ; vaut aussi pour la ligne d'appartenance des pages (13/11/2026)
+    chapo: "Des questions du débat public, examinées dans les séries et les textes officiels : data centers, déchets radioactifs, découplage énergie-croissance, dépense imprévue, durée d’inscription des erreurs."
   - id: reperes
     titre: "Idées et méthode"
     chapo: "Des éclairages d’histoire des idées et de méthode : l’écriture, le pouvoir, la tabula rasa, les citations, la recherche hors institution."
