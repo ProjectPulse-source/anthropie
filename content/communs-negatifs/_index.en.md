@@ -6,8 +6,9 @@ url: /en/negative-commons/
 description: "Negative commons designate what we inherit collectively without having chosen it: waste, polluted soils, power plants to be dismantled, obsolete infrastructures. A notion developed by Alexandre Monnin, Emmanuel Bonnet and Diego Landivar — and an anthropic reading of these legacies."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-26
-lastmod: 2026-11-05
+lastmod: 2026-11-13
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-13, texte: "Source check: first formulation of the expression in 2001 (Mies and Bennholdt-Thomsen, according to Monnin); no object is a negative commons by nature; Ostrom and Kapp quoted more closely; critique of externality attributed to Monnin; AWP-06's five conditions; loop conditional."}
   - {date: 2026-11-05, texte: "Clarification: the article \"Les ‘communs négatifs’\" in the journal Études (2021) is by Alexandre Monnin alone."}
   - {date: 2026-11-05, texte: "Correction: it is Alexandre Monnin who ranks digital technologies among the candidate negative commons; AWP-06 takes up his proposal, under conditions. The externality belongs to economic analysis, not to accounting."}
 og_title: "What are negative commons? — definition and sources — S. Lalut"
@@ -17,23 +18,23 @@ faq:
   - question: "What is the difference between negative commons and commons (Ostrom)?"
     answer: "Elinor Ostrom's commons are positive resources — pastures, irrigation, knowledge — managed collectively so that they last. Negative commons invert the figure: they are not goods we want to preserve but realities we inherit and nobody wants — which must nonetheless be maintained, monitored or dismantled collectively, sometimes over generations."
   - question: "What is the difference between negative commons and externalities?"
-    answer: "The externality is a notion of economic analysis: an unbilled cost, which one imagines can be corrected by a price (tax, market). The notion of negative commons challenges this reading: a polluted soil or a power plant at the end of its life is not a price discrepancy but an installed material reality, which demands care, institutions and labour — not only a monetary internalisation."
+    answer: "The externality is a notion of economic analysis: an unbilled cost, which one proposes to correct through a price (tax, market) or a rule. The notion of negative commons challenges this reading, which, according to Alexandre Monnin, treats the damage after the fact, as an unfortunate consequence rather than a structural cause: a polluted soil or a power plant at the end of its life is not a price discrepancy but an installed material reality, which demands care, institutions and labour — not only a monetary internalisation."
   - question: "What is the link between negative commons and anthropy?"
-    answer: "In the anthropic framework (Stéphane Lalut), negative commons can be read as the anthropic transfer turned into matter: when a system displaces its disorder (waste, pollution, end-of-life infrastructures) and the receptacle accumulates, what remains is a shared negative inheritance. Taking up Alexandre Monnin's proposal, the working paper AWP-06 (Stéphane Lalut, 2026) analyses some digital infrastructures — data centers, equipment to be dismantled — as candidate negative commons, under conditions."
+    answer: "In the anthropic framework (Stéphane Lalut), negative commons can be read as the anthropic transfer turned into matter: when a system displaces its disorder (waste, pollution, end-of-life infrastructures) and the burden accumulates, what remains is a shared negative inheritance. Taking up Alexandre Monnin's proposal, the working paper AWP-06 (Stéphane Lalut, 2026) analyses some digital infrastructures — data centers, equipment to be dismantled — as candidate negative commons, under conditions."
   - question: "Are negative commons a pessimistic notion?"
-    answer: "No — it is a notion of action. It shifts attention from promises alone (building, innovating) to neglected gestures: maintaining, closing, dismantling, cleaning up. Whole trades, institutions and know-how rest on this \"care of remains\"."
+    answer: "No — it is a notion of action. It shifts attention from promises alone (building, innovating) to neglected gestures: maintaining, closing, dismantling, cleaning up. Whole trades, institutions and know-how rest on this care of remains."
   - question: "Who introduced the notion?"
-    answer: "It stabilised around the work of Alexandre Monnin, Emmanuel Bonnet and Diego Landivar (Héritage et fermeture, 2021, by the three authors; article \"Les ‘communs négatifs’\" by Alexandre Monnin, journal Études, 2021 — both in French), in the field of the ecology of dismantling and of ecological redirection."
+    answer: "The expression appears as early as 2001 in the work of the sociologists Maria Mies and Veronika Bennholdt-Thomsen, according to Alexandre Monnin himself (journal Multitudes, 2023). Monnin, who has worked on it since 2017, turned it into a concept, developed with Emmanuel Bonnet and Diego Landivar (Héritage et fermeture, 2021, by the three authors) and in his article \"Les ‘communs négatifs’. Entre déchets et ruines\" (journal Études, 2021) — both in French — in the field of the ecology of dismantling and of ecological redirection, which proposes closing or redirecting activities and infrastructures rather than prolonging them."
   - question: "Where is it applied in the anthropic corpus?"
-    answer: "In AWP-06 (digital technology as a candidate negative common), in the glossary, and in the background of technological debt: a debt whose creditors are the generations that will inherit the equipment."
+    answer: "In AWP-06 (digital technology as a candidate negative common), in the glossary, and in the background of technological debt: a debt borne, among others, by the generations that will inherit the equipment."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
   lignes:
     - t: "Definition"
-      d: "What we inherit collectively without having chosen it — nuclear waste, polluted soils, power plants to be dismantled, industrial ruins, obsolete infrastructures: common burdens to be managed, closed down or dismantled."
+      d: "What we inherit collectively without having chosen it — nuclear waste, polluted soils, power plants to be dismantled, industrial ruins, obsolete infrastructures: common burdens to be managed, closed down or dismantled. No object is one by nature: for Monnin, the qualification comes from an inquiry."
     - t: "Origin"
       d: "Alexandre Monnin, with Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021, in French)."
     - t: "Not to be confused with"
-      d: "Elinor Ostrom's commons, resources a community makes last; and the externality, an unbilled cost that a price would be enough to correct."
+      d: "Elinor Ostrom's commons, resources a community makes last; and the externality, an unbilled cost that economic analysis proposes to correct through a price."
     - t: "Example"
       d: "A stock of radioactive waste: a material reality installed for millennia, which demands institutions, skills, work and vigilance."
     - t: "Scope"
@@ -48,15 +49,15 @@ schemas:  # mechanism diagram (notion-schema shortcode)
       - boites:
           - {t: "An order produced", d: "Power plants, industries, networks, data centers", ton: "ordre"}
         fleche: "disorder is displaced"
-      - titre: "The route: the anthropic loop"
+      - titre: "The possible route: the anthropic loop"
         boites:
           - {t: "Displacement", d: "Toward other places, other times, other groups"}
           - {t: "Accumulation", d: "The receptacle fills up"}
-          - {t: "Saturation", d: "It no longer absorbs"}
+          - {t: "Saturation", d: "It may stop absorbing"}
         fleche: "what remains becomes matter"
       - boites:
           - {t: "A negative commons", d: "Soils, water tables, end-of-life infrastructures: a shared legacy that must be taken care of", ton: "cout"}
-    note: "The [anthropic loop](/en/anthropic-loop/) describes the route — displacement, accumulation, saturation, return; negative commons describe what remains."
+    note: "The [anthropic loop](/en/anthropic-loop/) describes the route — displacement, accumulation, saturation, return, bifurcation, no step being a given; negative commons describe what remains."
 comparaisons:  # boundary between neighbouring notions (notion-comparaison shortcode)
   frontiere:
     titre: "Commons, externality, negative commons"
@@ -64,7 +65,7 @@ comparaisons:  # boundary between neighbouring notions (notion-comparaison short
     accent: 3
     lignes:
       - {critere: "What is shared", valeurs: ["A resource: pasture, irrigation, knowledge", "An unbilled cost", "A reality nobody wants"]}
-      - {critere: "The task", valeurs: ["Making it last, without the state or the market", "Internalising it through a price: tax, quota, market in rights", "Monitoring, containing, decontaminating, dismantling — sometimes over generations"]}
+      - {critere: "The task", valeurs: ["Making it last, through rules the community sets for itself", "Correcting it: through a price (tax, quota, market in rights) or a rule", "Monitoring, containing, decontaminating, dismantling — sometimes over generations"]}
       - {critere: "The question", valeurs: ["How to manage the resource durably?", "How much does it cost?", "Who takes care of it, how, and for how long?"]}
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
@@ -79,29 +80,29 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long_en: "Negative commons"
 ---
 
-Negative commons designate what we inherit collectively **without having chosen it**: nuclear waste, polluted soils, power plants to be dismantled, industrial ruins, obsolete infrastructures. The notion was developed by the philosopher Alexandre Monnin with Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021 — in French; title translated here as "Legacy and Closure: An Ecology of Dismantling"): no longer common goods to be preserved, but **common burdens** to be managed, closed or dismantled — sometimes over generations.
+Negative commons designate what we inherit collectively **without having chosen it**: for instance nuclear waste, polluted soils, power plants to be dismantled, industrial ruins, obsolete infrastructures. No object is one by nature: the qualification comes from an inquiry. The notion was developed by the philosopher Alexandre Monnin with Emmanuel Bonnet and Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021 — in French; title translated here as "Legacy and Closure: An Ecology of Dismantling"): no longer common goods to be preserved, but **common burdens** to be managed, closed or dismantled — sometimes over generations.
 
 {{< notion-fiche >}}
 
 ## The inversion of a classic figure
 
-Elinor Ostrom's "commons" rehabilitated the idea that a community can durably manage a shared resource — pasture, irrigation, knowledge — without the state or the market. Negative commons **invert the figure**: the shared thing is no longer a resource one wants to make last, but a reality nobody wants and which must nonetheless be taken care of. A polluted soil is not tended like a pasture — it is monitored, contained, cleaned up; an end-of-life power plant is not made to yield value — it is dismantled, over decades.
+Elinor Ostrom's "commons" rehabilitated the idea that a community can durably manage a shared resource — pasture, irrigation, knowledge — through rules it sets for itself, without relying on the state alone or the market alone. Negative commons **invert the figure**: the shared thing is no longer a resource one wants to make last, but a reality nobody wants and which must nonetheless be taken care of. A polluted soil is not tended like a pasture — it is monitored, contained, cleaned up; an end-of-life power plant is not made to yield value — it is dismantled, over decades.
 
 The reversal is also a reversal of the economic gaze: to think in negative commons is to take the problem backwards — starting from what is already there, installed, inherited, rather than from projects and promises alone.
 
 ## Why "externality" is not enough
 
-Standard economics files these realities under the category of **externality**: an unbilled cost, which the analysis imagines can be corrected by a price — a tax, a quota, a market in rights. The notion of negative commons challenges the sufficiency of this reading. A stock of radioactive waste is not a price discrepancy: it is a material reality installed for millennia, which demands institutions, skills, labour and vigilance — not only a monetary internalisation. The question is no longer "how much does it cost?" but "**who takes care of it, how, and for how long?**"
+Standard economics files these realities under the category of **externality**: an unbilled cost, which the analysis proposes to correct through a price — a tax, a quota, a market in rights — or through a rule — a standard, an obligation to repair. The notion of negative commons challenges the sufficiency of this reading: for Alexandre Monnin (*Multitudes*, 2023), this reading takes the damage into account after the fact, as an unfortunate consequence rather than a structural cause. A stock of radioactive waste is not a price discrepancy: it is a material reality installed for millennia, which demands institutions, skills, labour and vigilance — not only a monetary internalisation. The question is no longer "how much does it cost?" but "**who takes care of it, how, and for how long?**"
 
-This critique echoes K. William Kapp's *cost-shifting* tradition, which had already challenged the concept of externality: shifting costs is not a market failure but a systemic mechanism — and correcting it takes more than a price.
+This critique echoes K. William Kapp's *cost-shifting* tradition, which had already challenged the concept of externality: shifting costs is not an exceptional disturbance but a characteristic phenomenon of the market economy — and correcting it takes more than a price.
 
 {{< notion-comparaison id="frontiere" >}}
 
 ## The anthropic reading: transfer turned into matter
 
-The framework of [anthropy](/en/quest-ce-que-lanthropie/) offers a genealogy of these legacies. A social system produces its order by displacing its disorder — toward other places, other times, other groups. When the receptacle accumulates and saturates, what remains on the ground, in the water tables, in end-of-life infrastructures is **the anthropic transfer crystallised in the materiality of the world**: a negative common is a displacement of disorder that has become an inheritance.
+The framework of [anthropy](/en/quest-ce-que-lanthropie/) proposes a genealogy of these legacies. Its hypothesis: a social system produces its order by displacing its disorder — toward other places, other times, other groups. When the burden accumulates, and sometimes saturates its receptacle (the place, time or group that receives it), through its capacity or through contestation, what remains on the ground, in the water tables, in end-of-life infrastructures is **the anthropic transfer crystallised in the materiality of the world**: a negative common is a displacement of disorder that has become an inheritance.
 
-This reading links the two notions without conflating them: negative commons describe **what remains**; the [anthropic loop](/en/anthropic-loop/) describes **the route** — displacement, accumulation, saturation, return. And it sheds light on the question of responsibility that Guillaume Vuillemey raises about the firm: when limited liability separates action from accountability, damages slide toward common goods — the firm disappears, the inheritance remains.
+This reading links the two notions without conflating them: negative commons describe **what remains**; the [anthropic loop](/en/anthropic-loop/) describes **the route** — displacement, accumulation, saturation, return, bifurcation, each step being one that may not occur. And it sheds light on the question of responsibility that Guillaume Vuillemey raises about the firm: when limited liability separates action from accountability, damages slide toward common goods — the firm disappears, the inheritance remains.
 
 {{< notion-schema id="mecanisme" >}}
 
@@ -109,7 +110,7 @@ What such a legacy amounts to, in figures, for French radioactive waste: the dat
 
 ## The coming textbook case: digital technology
 
-The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) (2026) takes up Alexandre Monnin's proposal, which ranks digital technologies among the **candidate negative commons**; it analyses some digital infrastructures — data centers sized for decades, mining supply chains, short-cycle devices — as candidates under conditions (lasting dependence, displaced costs, irreversibility), not as negative commons by principle. Digital technology presents itself as immaterial; its remains will be very material — and shared. To think the cloud in negative commons is to ask today the question that polluted soils taught us too late: who will inherit the infrastructure, and who will take care of it?
+The working paper [AWP-06 — *Digital Infrastructures and Technological Debt*](/en/awp/awp-06/) (2026) takes up Alexandre Monnin's proposal, which ranks digital technologies among the **candidate negative commons**; it analyses some digital infrastructures — data centers sized for decades, mining supply chains, short-cycle devices — as candidates under five conditions (lasting dependence, costs displaced onto identified receptacles, irreversible commitments, invisibilised consequences, democratic difficulty in steering their trajectory otherwise), not as negative commons by principle. Digital technology presents itself as immaterial; its remains will be very material — and shared. To think the cloud in negative commons is to ask today the question that polluted soils taught us too late: who will inherit the infrastructure, and who will take care of it?
 
 ## Frequently asked questions
 

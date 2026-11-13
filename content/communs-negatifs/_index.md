@@ -5,8 +5,9 @@ og_image_alt: "Carte de partage : « Les communs négatifs » et son schéma"
 description: "Les communs négatifs désignent ce dont nous héritons collectivement sans l'avoir choisi : déchets, sols pollués, centrales à démanteler, infrastructures obsolètes. Notion développée par Alexandre Monnin, Emmanuel Bonnet et Diego Landivar — et lecture anthropique de ces héritages."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-26
-lastmod: 2026-11-05
+lastmod: 2026-11-13
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-13, texte: "Relecture des sources : première formulation de l'expression en 2001 (Mies et Bennholdt-Thomsen, selon Monnin) ; aucun objet n'est un commun négatif par nature ; Ostrom et Kapp cités au plus près ; critique de l'externalité attribuée à Monnin ; cinq conditions d'AWP-06 ; boucle conditionnelle."}
   - {date: 2026-11-05, texte: "Précision : l'article « Les “communs négatifs” » de la revue Études (2021) est d'Alexandre Monnin seul."}
   - {date: 2026-11-05, texte: "Correction : c'est Alexandre Monnin qui range les technologies numériques parmi les communs négatifs candidats ; AWP-06 reprend sa proposition, sous conditions. L'externalité relève de l'analyse économique, non de la comptabilité."}
 og_title: "Qu'est-ce que les communs négatifs ? — définition et sources — S. Lalut"
@@ -16,23 +17,23 @@ faq:
   - question: "Quelle est la différence entre communs négatifs et communs (Ostrom) ?"
     answer: "Les communs d'Elinor Ostrom sont des ressources positives — pâturages, irrigation, savoirs — gérées collectivement pour durer. Les communs négatifs inversent la figure : ce ne sont pas des biens qu'on veut préserver mais des réalités dont on hérite et dont personne ne veut — qu'il faut pourtant maintenir, surveiller ou démanteler collectivement, parfois sur des générations."
   - question: "Quelle est la différence entre communs négatifs et externalités ?"
-    answer: "L'externalité est une notion de l'analyse économique : un coût non facturé, qu'on imagine corrigible par un prix (taxe, marché). La notion de communs négatifs conteste cette lecture : un sol pollué ou une centrale en fin de vie ne sont pas des écarts de prix mais des réalités matérielles installées, qui exigent du soin, des institutions et du travail — pas seulement une internalisation monétaire."
+    answer: "L'externalité est une notion de l'analyse économique : un coût non facturé, qu'on propose de corriger par un prix (taxe, marché) ou par une règle. La notion de communs négatifs conteste cette lecture, qui, selon Alexandre Monnin, traite le dommage après coup, comme une conséquence malheureuse plutôt que comme une cause structurelle : un sol pollué ou une centrale en fin de vie ne sont pas des écarts de prix mais des réalités matérielles installées, qui exigent du soin, des institutions et du travail — pas seulement une internalisation monétaire."
   - question: "Quel est le lien entre communs négatifs et anthropie ?"
-    answer: "Dans le cadre anthropique (Stéphane Lalut), les communs négatifs se lisent comme le transfert anthropique devenu matière : quand un système déplace son désordre (déchets, pollutions, infrastructures en fin de vie) et que le réceptacle s'accumule, ce qui reste est un héritage négatif partagé. Reprenant la proposition d'Alexandre Monnin, le working paper AWP-06 (Stéphane Lalut, 2026) analyse certaines infrastructures numériques — data centers, équipements à démanteler — comme des communs négatifs candidats, sous conditions."
+    answer: "Dans le cadre anthropique (Stéphane Lalut), les communs négatifs se lisent comme le transfert anthropique devenu matière : quand un système déplace son désordre (déchets, pollutions, infrastructures en fin de vie) et que la charge s'accumule, ce qui reste est un héritage négatif partagé. Reprenant la proposition d'Alexandre Monnin, le working paper AWP-06 (Stéphane Lalut, 2026) analyse certaines infrastructures numériques — data centers, équipements à démanteler — comme des communs négatifs candidats, sous conditions."
   - question: "Les communs négatifs sont-ils une notion pessimiste ?"
-    answer: "Non — c'est une notion d'action. Elle déplace l'attention des seules promesses (construire, innover) vers les gestes négligés : maintenir, refermer, démanteler, dépolluer. Des métiers, des institutions et des savoir-faire entiers tiennent dans ce « soin des restes »."
+    answer: "Non — c'est une notion d'action. Elle déplace l'attention des seules promesses (construire, innover) vers les gestes négligés : maintenir, refermer, démanteler, dépolluer. Des métiers, des institutions et des savoir-faire entiers tiennent dans ce soin des restes."
   - question: "Qui a introduit la notion ?"
-    answer: "Elle s'est stabilisée autour des travaux d'Alexandre Monnin, Emmanuel Bonnet et Diego Landivar (Héritage et fermeture, 2021, des trois auteurs ; article « Les “communs négatifs” » d'Alexandre Monnin, revue Études, 2021), dans le champ de l'écologie du démantèlement et de la redirection écologique."
+    answer: "L'expression apparaît dès 2001 chez les sociologues Maria Mies et Veronika Bennholdt-Thomsen, selon Alexandre Monnin lui-même (revue Multitudes, 2023). Monnin, qui y travaille depuis 2017, en a fait un concept, développé avec Emmanuel Bonnet et Diego Landivar (Héritage et fermeture, 2021, des trois auteurs) et dans son article « Les “communs négatifs”. Entre déchets et ruines » (revue Études, 2021), dans le champ de l'écologie du démantèlement et de la redirection écologique, qui propose de fermer ou de réorienter des activités et des infrastructures plutôt que de les prolonger."
   - question: "Où la trouve-t-on appliquée dans le corpus anthropique ?"
-    answer: "Dans AWP-06 (le numérique comme commun négatif candidat), au glossaire, et en filigrane de la dette technologique : une dette dont les créanciers sont les générations qui hériteront des équipements."
+    answer: "Dans AWP-06 (le numérique comme commun négatif candidat), au glossaire, et en filigrane de la dette technologique : une dette que porteront, entre autres, les générations qui hériteront des équipements."
 fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
   lignes:
     - t: "Définition"
-      d: "Ce dont nous héritons collectivement sans l'avoir choisi — déchets nucléaires, sols pollués, centrales à démanteler, ruines industrielles, infrastructures obsolètes&nbsp;: des charges communes à gérer, refermer ou démanteler."
+      d: "Ce dont nous héritons collectivement sans l'avoir choisi — déchets nucléaires, sols pollués, centrales à démanteler, ruines industrielles, infrastructures obsolètes&nbsp;: des charges communes à gérer, refermer ou démanteler. Aucun objet n'en est un par nature&nbsp;: pour Monnin, la qualification vient d'une enquête."
     - t: "Origine"
       d: "Alexandre Monnin, avec Emmanuel Bonnet et Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021)."
     - t: "À ne pas confondre"
-      d: "Les communs d'Elinor Ostrom, ressources qu'une communauté fait durer&nbsp;; et l'externalité, coût non facturé qu'un prix suffirait à corriger."
+      d: "Les communs d'Elinor Ostrom, ressources qu'une communauté fait durer&nbsp;; et l'externalité, coût non facturé que l'analyse économique propose de corriger par un prix."
     - t: "Exemple"
       d: "Un stock de déchets radioactifs&nbsp;: une réalité matérielle installée pour des millénaires, qui exige des institutions, des compétences, du travail et de la vigilance."
     - t: "Portée"
@@ -47,15 +48,15 @@ schemas:  # schéma de mécanisme (shortcode notion-schema)
       - boites:
           - {t: "Un ordre produit", d: "Centrales, industries, réseaux, data centers", ton: "ordre"}
         fleche: "le désordre est déplacé"
-      - titre: "Le trajet&nbsp;: la boucle anthropique"
+      - titre: "Le trajet possible&nbsp;: la boucle anthropique"
         boites:
           - {t: "Déplacement", d: "Vers d'autres lieux, d'autres temps, d'autres groupes"}
           - {t: "Accumulation", d: "Le réceptacle se remplit"}
-          - {t: "Saturation", d: "Il n'absorbe plus"}
+          - {t: "Saturation", d: "Il peut ne plus absorber"}
         fleche: "ce qui reste devient matière"
       - boites:
           - {t: "Un commun négatif", d: "Sols, nappes, infrastructures en fin de vie&nbsp;: un héritage partagé dont il faut prendre soin", ton: "cout"}
-    note: "La [boucle anthropique](/boucle-anthropique/) décrit le trajet — déplacement, accumulation, saturation, retour&nbsp;; les communs négatifs décrivent ce qui reste."
+    note: "La [boucle anthropique](/boucle-anthropique/) décrit le trajet — déplacement, accumulation, saturation, retour, bifurcation, aucun passage n'étant obligé&nbsp;; les communs négatifs décrivent ce qui reste."
 comparaisons:  # frontière entre notions voisines (shortcode notion-comparaison)
   frontiere:
     titre: "Commun, externalité, commun négatif"
@@ -63,7 +64,7 @@ comparaisons:  # frontière entre notions voisines (shortcode notion-comparaison
     accent: 3
     lignes:
       - {critere: "Ce qui est partagé", valeurs: ["Une ressource&nbsp;: pâturage, irrigation, savoir", "Un coût non facturé", "Une réalité dont personne ne veut"]}
-      - {critere: "Le geste", valeurs: ["La faire durer, sans État ni marché", "L'internaliser par un prix&nbsp;: taxe, quota, marché de droits", "Surveiller, confiner, dépolluer, démanteler — parfois sur des générations"]}
+      - {critere: "Le geste", valeurs: ["La faire durer, par des règles que la communauté se donne", "La corriger&nbsp;: par un prix (taxe, quota, marché de droits) ou par une règle", "Surveiller, confiner, dépolluer, démanteler — parfois sur des générations"]}
       - {critere: "La question", valeurs: ["Comment gérer durablement la ressource&nbsp;?", "Combien cela coûte-t-il&nbsp;?", "Qui en prend soin, comment, et pendant combien de temps&nbsp;?"]}
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["notion"]  # protocole de la page (CLAUDE.md du site, « Production des ressources »)
@@ -78,29 +79,29 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long_en: "Negative commons"
 ---
 
-Les communs négatifs désignent ce dont nous héritons collectivement **sans l'avoir choisi**&nbsp;: déchets nucléaires, sols pollués, centrales à démanteler, ruines industrielles, infrastructures obsolètes. La notion a été développée par le philosophe Alexandre Monnin avec Emmanuel Bonnet et Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021)&nbsp;: non plus des biens communs à préserver, mais des **charges communes** à gérer, refermer ou démanteler — parfois sur des générations.
+Les communs négatifs désignent ce dont nous héritons collectivement **sans l'avoir choisi**&nbsp;: par exemple des déchets nucléaires, des sols pollués, des centrales à démanteler, des ruines industrielles, des infrastructures obsolètes. Aucun objet n'en est un par nature&nbsp;: la qualification vient d'une enquête. La notion a été développée par le philosophe Alexandre Monnin avec Emmanuel Bonnet et Diego Landivar (*Héritage et fermeture. Une écologie du démantèlement*, 2021)&nbsp;: non plus des biens communs à préserver, mais des **charges communes** à gérer, refermer ou démanteler — parfois sur des générations.
 
 {{< notion-fiche >}}
 
 ## L'inversion d'une figure classique
 
-Les «&nbsp;communs&nbsp;» d'Elinor Ostrom ont réhabilité l'idée qu'une communauté peut gérer durablement une ressource partagée — pâturage, irrigation, savoir — sans État ni marché. Les communs négatifs **inversent la figure**&nbsp;: la chose partagée n'est plus une ressource qu'on veut faire durer, mais une réalité dont personne ne veut et dont il faut pourtant prendre soin. On n'entretient pas un sol pollué comme un pâturage — on le surveille, on le confine, on le dépollue&nbsp;; on ne valorise pas une centrale en fin de vie — on la démantèle, sur des décennies.
+Les «&nbsp;communs&nbsp;» d'Elinor Ostrom ont réhabilité l'idée qu'une communauté peut gérer durablement une ressource partagée — pâturage, irrigation, savoir — par des règles qu'elle se donne, sans s'en remettre ni au seul État ni au seul marché. Les communs négatifs **inversent la figure**&nbsp;: la chose partagée n'est plus une ressource qu'on veut faire durer, mais une réalité dont personne ne veut et dont il faut pourtant prendre soin. On n'entretient pas un sol pollué comme un pâturage — on le surveille, on le confine, on le dépollue&nbsp;; on ne valorise pas une centrale en fin de vie — on la démantèle, sur des décennies.
 
 Le renversement est aussi un renversement du regard économique&nbsp;: penser en communs négatifs, c'est prendre le problème à l'envers — partir de ce qui est déjà là, installé, hérité, plutôt que des seuls projets et des seules promesses.
 
 ## Pourquoi «&nbsp;externalité&nbsp;» ne suffit pas
 
-L'économie standard range ces réalités sous la catégorie d'**externalité**&nbsp;: un coût non facturé, que l'analyse imagine corrigible par un prix — taxe, quota, marché de droits. La notion de communs négatifs conteste la suffisance de cette lecture. Un stock de déchets radioactifs n'est pas un écart de prix&nbsp;: c'est une réalité matérielle installée pour des millénaires, qui exige des institutions, des compétences, du travail et de la vigilance — pas seulement une internalisation monétaire. La question n'est plus «&nbsp;combien cela coûte-t-il&nbsp;?&nbsp;» mais «&nbsp;**qui en prend soin, comment, et pendant combien de temps&nbsp;?**&nbsp;».
+L'économie standard range ces réalités sous la catégorie d'**externalité**&nbsp;: un coût non facturé, que l'analyse propose de corriger par un prix — taxe, quota, marché de droits — ou par une règle — norme, obligation de réparation. La notion de communs négatifs conteste la suffisance de cette lecture&nbsp;: pour Alexandre Monnin (*Multitudes*, 2023), cette lecture prend le dommage en compte après coup, comme une conséquence malheureuse et non comme une cause structurelle. Un stock de déchets radioactifs n'est pas un écart de prix&nbsp;: c'est une réalité matérielle installée pour des millénaires, qui exige des institutions, des compétences, du travail et de la vigilance — pas seulement une internalisation monétaire. La question n'est plus «&nbsp;combien cela coûte-t-il&nbsp;?&nbsp;» mais «&nbsp;**qui en prend soin, comment, et pendant combien de temps&nbsp;?**&nbsp;».
 
-Cette critique rejoint celle que la tradition du *cost-shifting* de K.&nbsp;William Kapp adressait déjà à l'externalité&nbsp;: le report des coûts n'est pas un raté du marché, c'est un mécanisme systémique — et le corriger demande plus qu'un prix.
+Cette critique rejoint celle que la tradition du *cost-shifting* de K.&nbsp;William Kapp adressait déjà à l'externalité&nbsp;: le report des coûts n'est pas une perturbation exceptionnelle, c'est un phénomène caractéristique de l'économie de marché — et le corriger demande plus qu'un prix.
 
 {{< notion-comparaison id="frontiere" >}}
 
 ## La lecture anthropique&nbsp;: le transfert devenu matière
 
-Le cadre de l'[anthropie](/quest-ce-que-lanthropie/) offre une généalogie de ces héritages. Un système social produit son ordre en déplaçant son désordre — vers d'autres lieux, d'autres temps, d'autres groupes. Quand le réceptacle s'accumule et sature, ce qui reste au sol, dans les nappes, dans les infrastructures en fin de vie, c'est **le transfert anthropique cristallisé dans la matérialité du monde**&nbsp;: un commun négatif est un déplacement de désordre devenu héritage.
+Le cadre de l'[anthropie](/quest-ce-que-lanthropie/) propose une généalogie de ces héritages. Son hypothèse&nbsp;: un système social produit son ordre en déplaçant son désordre — vers d'autres lieux, d'autres temps, d'autres groupes. Quand la charge s'accumule, et parfois sature son réceptacle (le lieu, le temps ou le groupe qui la reçoit), par sa capacité ou par la contestation, ce qui reste au sol, dans les nappes, dans les infrastructures en fin de vie, c'est **le transfert anthropique cristallisé dans la matérialité du monde**&nbsp;: un commun négatif est un déplacement de désordre devenu héritage.
 
-Cette lecture relie les deux notions sans les confondre&nbsp;: les communs négatifs décrivent **ce qui reste**&nbsp;; la [boucle anthropique](/boucle-anthropique/) décrit **le trajet** — déplacement, accumulation, saturation, retour. Et elle éclaire la question de la responsabilité que pose Guillaume Vuillemey à propos de l'entreprise&nbsp;: quand la responsabilité limitée sépare l'agir du répondre, les dommages glissent vers les biens communs — l'entreprise disparaît, l'héritage reste.
+Cette lecture relie les deux notions sans les confondre&nbsp;: les communs négatifs décrivent **ce qui reste**&nbsp;; la [boucle anthropique](/boucle-anthropique/) décrit **le trajet** — déplacement, accumulation, saturation, retour, bifurcation, chaque passage pouvant ne pas avoir lieu. Et elle éclaire la question de la responsabilité que pose Guillaume Vuillemey à propos de l'entreprise&nbsp;: quand la responsabilité limitée sépare l'agir du répondre, les dommages glissent vers les biens communs — l'entreprise disparaît, l'héritage reste.
 
 {{< notion-schema id="mecanisme" >}}
 
@@ -108,7 +109,7 @@ Ce que représente un tel héritage, en chiffres, pour les déchets radioactifs 
 
 ## Le cas d'école qui vient&nbsp;: le numérique
 
-Le working paper [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (2026) reprend la proposition d'Alexandre Monnin, qui range les technologies numériques parmi les **communs négatifs candidats**&nbsp;; il analyse certaines infrastructures numériques — data centers dimensionnés pour des décennies, chaînes d'approvisionnement minières, terminaux à cycle court — comme candidates sous conditions (dépendance durable, coûts déplacés, irréversibilité), non comme des communs négatifs par principe. Le numérique se présente comme immatériel&nbsp;; ses restes seront très matériels — et partagés. Penser le cloud en communs négatifs, c'est poser aujourd'hui la question que les sols pollués nous ont apprise trop tard&nbsp;: qui héritera de l'infrastructure, et qui en prendra soin&nbsp;?
+Le working paper [AWP-06 — *Infrastructures numériques et dette technologique*](/awp/awp-06/) (2026) reprend la proposition d'Alexandre Monnin, qui range les technologies numériques parmi les **communs négatifs candidats**&nbsp;; il analyse certaines infrastructures numériques — data centers dimensionnés pour des décennies, chaînes d'approvisionnement minières, terminaux à cycle court — comme candidates sous cinq conditions (dépendance durable, coûts déplacés vers des réceptacles identifiés, irréversibilité des engagements, invisibilisation des conséquences, difficulté démocratique d'en orienter autrement la trajectoire), non comme des communs négatifs par principe. Le numérique se présente comme immatériel&nbsp;; ses restes seront très matériels — et partagés. Penser le cloud en communs négatifs, c'est poser aujourd'hui la question que les sols pollués nous ont apprise trop tard&nbsp;: qui héritera de l'infrastructure, et qui en prendra soin&nbsp;?
 
 ## Questions fréquentes
 

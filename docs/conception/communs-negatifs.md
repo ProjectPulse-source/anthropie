@@ -32,11 +32,12 @@ Les communs négatifs inversent la figure d'Ostrom : la chose partagée est une 
 
 ### Mécanisme explicatif
 
-Lecture anthropique : le désordre déplacé s'accumule et sature ; ce qui reste devient un héritage matériel.
+Lecture anthropique, au titre d'hypothèse : quand le désordre déplacé s'accumule et que le réceptacle sature — ce qui n'est jamais obligé —, ce qui reste devient un héritage matériel. Borné par la relecture des sources du 13/11/2026 (`LOTS
+otions-a\SOURCES\communs-negatifs_R1.md`, P2-6 : hypothèse posée en fait, saturation donnée pour obligée).
 
 ### Preuve décisive
 
-Monnin, Bonnet et Landivar (*Héritage et fermeture*, 2021) ; Kapp (cost-shifting) ; Vuillemey (responsabilité limitée).
+Monnin, Bonnet et Landivar (*Héritage et fermeture*, 2021) ; Monnin, « Retour sur les communs négatifs » (*Multitudes* 93, 2023), qui date la première formulation de 2001 (Mies et Bennholdt-Thomsen) et refuse toute qualification « ontologique » a priori ; Kapp (report des coûts) ; Vuillemey (responsabilité limitée). Découverte principale portée par R1, l. 22-23 (conforme : Monnin, « ce dont personne ne veut et dont il faudra cependant prendre soin »).
 
 ### Pouvoir discriminant
 
@@ -45,7 +46,7 @@ Sans objet : la page ne publie aucune série ; ses schémas décrivent un mécan
 
 ### Limite
 
-La page ne mesure aucun stock d'héritage ; le numérique y est un commun négatif *candidat* (AWP-06).
+La page ne mesure aucun stock d'héritage ; aucun objet n'est un commun négatif par nature (qualification après enquête) ; le numérique y est un commun négatif *candidat*, sous les cinq conditions d'AWP-06.
 
 ### Valeur finale
 
