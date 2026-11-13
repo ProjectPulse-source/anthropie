@@ -39,6 +39,7 @@ blocs:
     chapo: "The author’s hypothesis and its definition, the concepts it draws on, each credited to whoever coined it, and the Register that applies it to deep history."
   - id: guides
     titre: "Data and law"
+    titre_barre: "Analyses of official series and texts"   # page membership line (external arbitration, 13/11/2026)
     chapo: "Analyses drawn from official series and texts: data centres, radioactive waste, energy decoupling, unexpected expenses."
   - id: reperes
     titre: "Ideas and method"

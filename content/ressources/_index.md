@@ -79,6 +79,7 @@ blocs:
     chapo: "L'hypothèse de l'auteur et sa définition, les notions qu'elle mobilise, chacune attribuée à qui l'a forgée, et le Registre qui l'applique à l'histoire longue."
   - id: guides
     titre: "Données et droit"
+    titre_barre: "Analyses de séries et de textes officiels"   # ligne d'appartenance des pages (arbitrage externe du 13/11/2026)
     chapo: "Des analyses tirées des séries et des textes officiels : data centers, déchets radioactifs, découplage énergie-croissance, dépense imprévue, durée d’inscription des erreurs."
   - id: reperes
     titre: "Idées et méthode"
