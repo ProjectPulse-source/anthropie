@@ -435,3 +435,13 @@ publication, page écrite et non publiée).
 - Mise en ligne : poussée sur demande de l'auteur le 13/11/2026 (commits `cf3ad02` à `17d3598`) ; déploiement `hugo.yml`
   n° 43351148379 réussi (build, mise en ligne, relecture). Attestation de la version servie : faite le 13/11/2026 vers 03 h 20 (heure de
   Paris) ; HTML servi identique au build contrôlé, aux empreintes de cache des feuilles et scripts près.
+
+### Dépassement de 3 px à 320 px corrigé (13/11/2026)
+
+- Demande de l'auteur (« corrige ce que tu as vu sur Parcoursup »). Cause mesurée : les libellés insécables de la barre de
+  composition (245 px) imposaient leur largeur à une carte dans une piste de grille « auto ». Correction dans l'organe
+  commun `assets/scss/_ressource-relief.scss` : `.cartes-paire` reçoit `grid-template-columns: minmax(0, 1fr)` dès le
+  téléphone, règle qu'il avait déjà à partir de 760 px.
+- Mesure : version en ligne, 3 px à 320 px, avec et sans JavaScript (témoin) ; version corrigée, 0 sur onze largeurs ; les
+  neuf versions du lot « guides », qui partagent l'organe, 0 aussi. Texte servi inchangé (comparaison phrase à phrase) :
+  pas de nouvel instantané.
