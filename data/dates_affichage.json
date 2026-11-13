@@ -141,7 +141,9 @@
    "2026-11-06"
   ],
   "dette-technologique/_index.en.md": [
-   "2026-11-04"
+   "2026-07-04",
+   "2026-11-04",
+   "2026-11-05"
   ],
   "enseignants/_index.md": [
    "2026-11-05"
@@ -206,12 +208,16 @@
    "2026-11-04"
   ],
   "quest-ce-que-lanthropie/_index.en.md": [
+   "2026-04-03",
    "2026-11-05",
-   "2026-11-06"
+   "2026-11-06",
+   "2026-11-07"
   ],
   "quest-ce-que-lanthropie/_index.md": [
+   "2026-04-03",
    "2026-11-05",
-   "2026-11-06"
+   "2026-11-06",
+   "2026-11-07"
   ],
   "qui-paie-la-dette-publique/_index.en.md": [
    "2026-11-05",
@@ -260,6 +266,26 @@
   "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/_index.md": [
    "2026-11-05",
    "2026-11-07"
+  ],
+  "boucle-anthropique/_index.md": [
+   "2026-07-24",
+   "2026-10-30"
+  ],
+  "boucle-anthropique/_index.en.md": [
+   "2026-07-24",
+   "2026-11-05"
+  ],
+  "communs-negatifs/_index.md": [
+   "2026-07-26",
+   "2026-11-05"
+  ],
+  "communs-negatifs/_index.en.md": [
+   "2026-07-26",
+   "2026-11-05"
+  ],
+  "dette-technologique/_index.md": [
+   "2026-07-04",
+   "2026-11-04"
   ]
  }
 }

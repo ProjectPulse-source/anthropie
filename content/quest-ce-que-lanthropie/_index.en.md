@@ -3,7 +3,7 @@ title: "What is anthropy?"
 og_image: "images/og-notion-anthropie-en.jpg"
 og_image_alt: "Share card: “What is anthropy?” and its diagram"
 date: 2026-04-03  # first possible publication on stephane-lalut.com (CNAME acf728c, 03/04/2026); first public Wayback capture 16/04/2026 (audit of 05/11/2026)
-lastmod: 2026-11-07  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-13  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
 # /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
@@ -20,11 +20,11 @@ aliases: ["/en/what-is-anthropy/", "/what-is-anthropy/"]
 description: "Anthropy is the hypothesis, developed by economist Stéphane Lalut in ANTHROPIE (2025; English edition ANTHROPY, 2026), that social systems produce order locally by displacing disorder elsewhere rather than resolving it."
 faq:
   - question: "What is anthropy in social science?"
-    answer: "Anthropy is the hypothesis, developed by economist Stéphane Lalut in ANTHROPIE (2025; English edition ANTHROPY, 2026), that social systems produce order locally by displacing disorder elsewhere rather than resolving it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially."
+    answer: "Anthropy is the hypothesis, developed by economist Stéphane Lalut in ANTHROPIE (2025; English edition ANTHROPY, 2026), that social systems produce order locally by displacing disorder elsewhere rather than resolving it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially. AWP-01 specifies that it does not postulate that everything is transfer, but that every observable stability deserves to be questioned about its offloaded costs."
   - question: "What is the difference between anthropy and entropy?"
     answer: "Entropy belongs to physics and thermodynamics. Anthropy designates a social and institutional mechanism: the way in which human systems produce local order by displacing disorder outside the visible perimeter."
   - question: "What is the difference between anthropy and the Anthropocene?"
-    answer: "The Anthropocene refers to a proposed geological epoch — the trace human societies leave in the planet's stratigraphy; in 2024 the International Union of Geological Sciences declined to make it a formal unit of the geologic time scale, while the term remains a recognised descriptive concept. Anthropy names a social mechanism: the way those societies produce their local orders by displacing disorder. One is a mark, the other a mechanism — and the mechanism precedes the mark."
+    answer: "The Anthropocene refers to a proposed geological epoch — the trace human societies leave in the planet's stratigraphy; in 2024 the International Union of Geological Sciences declined to make it a formal unit of the geologic time scale, while the term remains a recognised descriptive concept. Anthropy names a social mechanism: the way those societies produce their local orders by displacing disorder. One is a mark, the other a mechanism — and the mechanism can be traced long before the mark."
   - question: "What is the difference between anthropy and the anthropic principle?"
     answer: "No lineage — only the Greek root is shared. The anthropic principle is a cosmological thesis (Brandon Carter, 1973-1974) holding that the universe we observe is necessarily compatible with the existence of observers. Anthropy, in Stéphane Lalut's sense, is a social mechanism — the displacement of disorder by human systems — and makes no claim about the physical universe."
   - question: "Did Stéphane Lalut coin the word anthropy?"
@@ -42,9 +42,9 @@ faq:
   - question: "How does anthropy apply to public debt?"
     answer: "Public debt can shift burdens between periods and between social groups. This shift is neither automatic nor necessarily unfavourable to future generations: it depends on what the borrowing finances, who benefits, and how burdens and assets are distributed. Anthropy treats it as a hypothesis to be examined, not as an established consequence of all borrowing: working paper AWP-03 states it, AWP-09 tests it against the public accounts, and the page “Is public debt a burden on future generations?” sets out that examination."
   - question: "What are the limits of the concept of anthropy?"
-    answer: "Anthropy presents itself as a working hypothesis, not a finished theory. Three limits are acknowledged: it extends existing traditions (externalities, K. W. Kapp's cost-shifting) whose cases it unifies; its generality requires observable criteria — rising marginal cost, boomerang effect — to remain falsifiable; and its contribution lies less in discovering transfer than in stabilising it operationally (canonical definition, vocabulary, criteria, dated corpus)."
+    answer: "Anthropy presents itself as a working hypothesis, not a finished theory. Three limits are acknowledged: it extends existing traditions (externalities, K. W. Kapp's cost-shifting) whose cases it unifies; its generality requires observable conditions of saturation and a refutation protocol to remain falsifiable; and its contribution lies less in discovering transfer than in stabilising it operationally (canonical definition, vocabulary, criteria, dated corpus)."
   - question: "How does anthropy differ from cost-shifting (K. W. Kapp)?"
-    answer: "Kapp's cost-shifting tradition showed as early as 1950 that shifting costs onto third parties is systemic rather than accidental. Anthropy embraces this lineage and extends it: it unifies spatial, temporal, and social displacement into a single mechanism, adds saturation criteria (rising marginal cost, boomerang effect), and focuses on the mediations that keep the transfer invisible."
+    answer: "Kapp's cost-shifting tradition showed as early as 1950 that shifting costs onto third parties is systemic rather than accidental. Anthropy embraces this lineage and extends it: it unifies spatial, temporal, and social displacement into a single mechanism, adds saturation conditions and an analysis of return, and focuses on the mediations that keep the transfer invisible."
   - question: "Who developed the framework of anthropy?"
     answer: "Stéphane Lalut, economist, independent researcher and essayist, proposed the framework of anthropy in 2025 in the book ANTHROPIE — Ordre ici. Dette ailleurs, then formalised it from 2026 onwards in a series of working papers published on Zenodo under the label Anthropie Working Papers (AWP)."
 proposee_par: "The hypothesis was proposed by the economist Stéphane Lalut (in the book *ANTHROPIE*, 2025; English edition *ANTHROPY*, 2026) and formalised in the *Anthropie Working Papers* (2026)."
@@ -59,11 +59,11 @@ frontiere:
     - texte: "Displaced disorder can accumulate, saturate and return: displacement, accumulation, saturation, return, bifurcation."
       ancre: "the-three-axes-of-transfer"
       section: "The three axes"
-    - texte: "It gives itself observable criteria — rising marginal cost of transfer, boomerang effect — to say when a displacement space saturates."
+    - texte: "It gives itself observable conditions to say when a displacement space (the place, time or group that receives the disorder) saturates, and a protocol stating what would refute it."
       ancre: "objections-and-limits"
       section: "Objections and limits"
   naffirme:
-    - texte: "To be a fully developed theory: it is a working hypothesis with heuristic value."
+    - texte: "To be a fully developed theory, or to postulate that everything is transfer: it is a working hypothesis, which asks that every stability be questioned about its offloaded costs."
       ancre: "definition"
       section: "Definition"
     - texte: "To have discovered transfer: the claimed contribution is its operational stabilisation — definition, vocabulary, criteria, dated corpus."
@@ -80,11 +80,13 @@ frontiere:
 # française (adjectif courant d'origine humaine / emploi propre au cadre) ne se pose pas ; la page anglaise traite
 # déjà le principe anthropique (FAQ) et l'homonyme britannique « Anthropy ». À rouvrir si une requête anglophone le demande.
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-13, texte: "Source check: saturation criteria aligned with AWP-07, AWP-02 given as a first sketch, the boomerang effect credited to Ulrich Beck; Lomekwi tools predate the genus Homo; rule of inquiry bounded (AWP-07, P1); earlier uses of the word limited to those found; Carter's anthropic principle in its strong version."}
   - {date: 2026-11-07, texte: "Correction: the British Anthropy gathering has been held since 2022, not every year (editions in 2022, 2023, 2025 and 2026)."}
   - {date: 2026-11-06, texte: "Addition: the author is named in the quoted definition."}
   - {date: 2026-11-05, texte: "Correction: the answer on public debt presented as a fact what the site treats as a hypothesis; it now says that the shift of burdens is neither automatic nor necessarily unfavourable, and where the hypothesis is examined. The Anthropocene is a proposed geological epoch, not adopted as a formal unit in 2024. The displayed publication date was wrong (first online: April 2026)."}
 ressource:  # /en/resources/ index: head of the analytical framework (PRO-20261025-225715); keeps its menu entry
   type: ["notion"]
+  conception: "docs/conception/quest-ce-que-lanthropie.md"  # fiche de conception (regle 12), reprise du lot notions-a du 13/11/2026
   bloc: "notions"
   rang: 1
   encart: true
@@ -97,13 +99,13 @@ ressource:  # /en/resources/ index: head of the analytical framework (PRO-202610
 
 Every observable order in a social system — whether an institution, a territory, an organisation, or an economy — implies disorder exported elsewhere: to other places, other times, or other social groups.
 
-Anthropy does not claim to constitute a fully developed theory. It is a working hypothesis with heuristic value: it makes it possible to ask questions that other analytical frameworks do not formulate, or tend to neutralise.
+Anthropy does not claim to constitute a fully developed theory. It is a working hypothesis with heuristic value: it makes it possible to ask questions that other analytical frameworks do not formulate, or tend to neutralise. It does not postulate that everything is transfer: it derives from it a rule of inquiry — faced with a stable order, look for where the disorder goes before concluding that it has been resolved —, bounded by a stopping rule that says when to conclude that a disorder has been absorbed locally, no elsewhere receiving more of it than a threshold set in advance ([AWP-07](/en/awp/awp-07/), proposition P1).
 
 ## The word, its uses, the concept
 
 The word "anthropy" derives from the Greek *ánthrōpos*, "human being". It belongs to an old lexical family — philanthropy, misanthropy, lycanthropy — in which the suffix *-anthropy* forms terms relating to the human.
 
-The word itself, or neighbouring forms, has had scattered uses among several authors, most often by proximity with entropy, in philosophical, psychoanalytical, or technological contexts — Bernard Stiegler, notably, used it to designate an entropy of human origin, to which he opposed "neganthropy". None of these uses had fixed an operational definition of it in social science.
+The word itself, or neighbouring forms, has had scattered uses among several authors, most often by proximity with entropy, in philosophical, anthropological, or technological contexts — Bernard Stiegler, notably, used it to designate an entropy of human origin, to which he opposed "neganthropy". None of the uses we have found had fixed an operational definition of it in social science.
 
 Stéphane Lalut therefore does not invent the word: he proposes a specific conceptual use of it. In the book *ANTHROPIE — Ordre ici. Dette ailleurs* (2025), then in the *Anthropie Working Papers* (2026), anthropy designates the hypothesis that social systems produce local order by displacing their disorder toward other places, other times, or other social groups. The originality lies not in coining the word, but in stabilising it as an operational hypothesis — with a canonical definition, observable criteria, and a dated corpus (DOI).
 
@@ -129,7 +131,7 @@ The displacement of disorder can take several forms. The framework of anthropy d
 |---|---|---|
 | **Spatial** | Externalisation to other places | displaced pollution, remote extraction, territorial relegation |
 | **Temporal** | Deferral to other times | public debt, underinvestment, costs transmitted to future generations |
-| **Social** | Displacement to other groups | exclusion, precarisation, asymmetrical distribution of costs |
+| **Social** | Displacement to other groups | exclusion, precarisation, asymmetrical capture of costs |
 
 These three axes are not mutually exclusive. In many configurations, they combine.
 
@@ -139,7 +141,7 @@ The three axes say where the burden is shifted; the anthropic loop says what may
 
 The page [What is the anthropic loop?](/en/anthropic-loop/) presents it in detail, and [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/) formalises it: definitions, states, and conditions of refutation.
 
-In the contemporary digital metaprogram, the three axes reach a receptacle that has become central: attention. Cognitive externalization is as old as the hand, the tool, and language; tool-mediated cognition has made it possible to extend the displacement of disorder across space, across time, and between social groups. Once that receptacle saturates, however, the disorder can turn back toward cognition in its concrete forms — captured attention, delegated judgment, and the devices that extend them. This is not a fourth axis, but one form of anthropic return, directed at the very capacity that made displacement possible.
+In the contemporary digital metaprogram, the three axes reach a receptacle that the corpus treats as a limit case: attention. Cognitive externalization is as old as the hand, the tool, and language; tool-mediated cognition has made it possible to extend the displacement of disorder across space, across time, and between social groups. Once the spaces that receive disorder — places, times, groups — saturate, however, the disorder can turn back toward cognition in its concrete forms — captured attention, delegated judgment, and the devices that extend them. This is not a fourth axis, but one form of anthropic return, directed at the very capacity that made displacement possible.
 
 ## Neighbouring notions {#neighbouring-notions}
 
@@ -161,7 +163,7 @@ The term therefore does not function as a decorative metaphor, but as an analyti
 
 The Anthropocene refers to a proposed geological epoch: the imprint that human societies leave in the planet's stratigraphy. In 2024 the International Union of Geological Sciences declined to make it a formal unit of the geologic time scale; the term remains a recognised descriptive concept. Anthropy names a social mechanism: the way these societies produce their local orders by displacing disorder — toward other places, other times, other groups.
 
-One is a mark; the other is a mechanism. And the mechanism precedes the mark: anthropy can be traced as far back as the earliest technical programs of the species, across a 3.3-million-year depth, well before industrialization made the geological trace visible. It does not invalidate the Anthropocene. It clarifies its institutional dynamic, by showing through which transfers societies came to leave such a trace.
+One is a mark; the other is a mechanism. And the mechanism would predate the mark: anthropy can be traced as far back as the oldest known stone tools, older than the oldest known fossils of the genus *Homo*, across a 3.3-million-year depth, well before industrialization made the geological trace visible. It does not invalidate the Anthropocene. It clarifies its institutional dynamic, by proposing a reading of the transfers through which societies came to leave such a trace.
 
 See [AWP-02 — *3.3 million years in one principle*](https://stephane-lalut.com/en/awp/awp-02/) for the long-duration analysis.
 
@@ -170,7 +172,7 @@ See [AWP-02 — *3.3 million years in one principle*](https://stephane-lalut.com
 <details class="notion" id="anthropy-and-the-anthropic-principle"><summary><span class="notion__avec">the anthropic principle</span><span class="notion__pr">Anthropy should also not be confused with the <i>anthropic principle</i>.</span></summary>
 <div class="notion__suite">
 
-The anthropic principle belongs to cosmology. Presented by the physicist Brandon Carter at a 1973 symposium and published in 1974, it states that our observations of the universe are necessarily compatible with the existence of observers able to make them: the physical constants are as we measure them because, were it otherwise, no one would be there to measure them.
+The anthropic principle belongs to cosmology. Presented by the physicist Brandon Carter at a 1973 symposium and published in 1974, it states that our observations of the universe are necessarily compatible with the existence of observers able to make them: in its strong version, the physical constants must be compatible with the emergence, at some stage, of observers able to measure them.
 
 Anthropy, by contrast, says nothing about the universe or its constants. It designates a social and institutional mechanism: the way human societies produce local order by displacing disorder. The proximity is merely lexical — both derive from the Greek *ánthrōpos*, "human being" — with no conceptual lineage.
 
@@ -224,9 +226,9 @@ In other words, the challenge is not merely to observe that an order exists, but
 
 A hypothesis is also judged by what it concedes. Three objections recur — here they are, with what is sound in each.
 
-**"Anthropy merely renames externalities."** The objection has a real basis: economics has long described costs shifted onto third parties, and K. W. Kapp's *cost-shifting* tradition showed as early as 1950 that these transfers are systemic rather than accidental. The anthropic framework embraces this lineage. Its difference: where externality isolates cases of "market failure", anthropy unifies the three axes — spatial, temporal, social — into a single mechanism, and interrogates what externality leaves out of frame: the mediations that keep the transfer invisible.
+**"Anthropy merely renames externalities."** The objection has a real basis: economics has long described costs shifted onto third parties, and the cost-shifting tradition stemming from K. W. Kapp showed as early as 1950 that these transfers are systemic rather than accidental. The anthropic framework embraces this lineage. Its difference: where externality isolates cases of "market failure", anthropy unifies the three axes — spatial, temporal, social — into a single mechanism, and interrogates what externality leaves out of frame: the mediations that keep the transfer invisible.
 
-**"The hypothesis is too general to be falsifiable."** Concession: a grid that can reread everything risks explaining nothing. This is why the framework gives itself observable criteria — rising marginal cost of transfer, boomerang effect — that make it possible to say when a displacement space saturates, and presents itself as a working hypothesis with heuristic value, not a finished theory (see [AWP-01](/en/awp/awp-01/)).
+**"The hypothesis is too general to be falsifiable."** Concession: a grid that can reread everything risks explaining nothing. This is why the framework gives itself observable conditions of saturation — the receptacle's capacity reached, or contestation that no longer allows the transfer to be kept invisible — and a protocol stating what would refute it ([AWP-07](/en/awp/awp-07/)); [AWP-02](/en/awp/awp-02/) had given a first sketch of them, the rising marginal cost of displacement and the boomerang effect (the term is Ulrich Beck's). It presents itself as a working hypothesis with heuristic value, not a finished theory (see [AWP-01](/en/awp/awp-01/)).
 
 **"Nothing new: longue-durée history, world-systems theory, political ecology already said this."** Partly true — the framework explicitly dialogues with these traditions. The claimed contribution is not the discovery of transfer, but its operational stabilisation: a canonical definition, a vocabulary ([glossary](/en/glossaire/)), criteria, and a dated corpus that make it citable and testable.
 

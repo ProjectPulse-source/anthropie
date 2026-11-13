@@ -3,15 +3,15 @@ title: "Qu'est-ce que l'anthropie ?"
 og_image: "images/og-notion-anthropie.jpg"
 og_image_alt: "Carte de partage : « Qu’est-ce que l’anthropie ? » et son schéma"
 date: 2026-04-03  # premiere mise en ligne possible sur stephane-lalut.com (CNAME acf728c, 03/04/2026) ; premiere capture publique Wayback le 16/04/2026 (audit du 05/11/2026)
-lastmod: 2026-11-07  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-13  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
-    answer: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement."
+    answer: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement. AWP-01 précise qu'elle ne postule pas que tout est transfert, mais que toute stabilité observable mérite d'être interrogée sur ses coûts déportés."
   - question: "Quelle est la différence entre anthropie et entropie ?"
     answer: "L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne un mécanisme social et institutionnel : la manière dont des systèmes humains produisent de l'ordre local en déplaçant le désordre hors du périmètre visible."
   - question: "Quelle est la différence entre anthropie et Anthropocène ?"
-    answer: "L'Anthropocène désigne une époque géologique proposée — la trace que les sociétés humaines impriment dans la stratigraphie de la planète ; l'Union internationale des sciences géologiques a refusé en 2024 d'en faire une unité formelle de l'échelle des temps, le terme restant un concept descriptif reconnu. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre. L'une est une marque, l'autre est un mécanisme — et le mécanisme précède la marque."
+    answer: "L'Anthropocène désigne une époque géologique proposée — la trace que les sociétés humaines impriment dans la stratigraphie de la planète ; l'Union internationale des sciences géologiques a refusé en 2024 d'en faire une unité formelle de l'échelle des temps, le terme restant un concept descriptif reconnu. L'anthropie nomme un mécanisme social : la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre. L'une est une marque, l'autre est un mécanisme — et le mécanisme peut se lire bien avant la marque."
   - question: "Quelle est la différence entre l'anthropie et le principe anthropique ?"
     answer: "Aucune filiation : seul le radical grec est commun. Le principe anthropique est une thèse de cosmologie (Brandon Carter, 1973-1974) selon laquelle l'univers que nous observons est nécessairement compatible avec l'existence d'observateurs. L'anthropie, au sens de Stéphane Lalut, est un mécanisme social — le déplacement du désordre par les systèmes humains — et ne porte aucune affirmation sur l'univers physique."
   - question: "Quelle est la différence entre anthropie et anthropologie ?"
@@ -27,9 +27,9 @@ faq:
   - question: "Comment l'anthropie s'applique-t-elle à la dette publique ?"
     answer: "La dette publique peut déplacer des charges entre périodes et entre groupes sociaux. Ce déplacement n'est ni automatique ni nécessairement défavorable aux générations futures : il dépend de l'usage de l'emprunt, de ses bénéficiaires et de la répartition des charges et des actifs. L'anthropie en fait une hypothèse à examiner, non une conséquence établie de tout endettement : le working paper AWP-03 la formule, l'AWP-09 la confronte aux comptes publics, et la page « La dette publique est-elle un fardeau pour les générations futures ? » en présente l'examen."
   - question: "Quelles sont les limites du concept d'anthropie ?"
-    answer: "L'anthropie se présente comme une hypothèse de travail, non comme une théorie achevée. Trois limites sont assumées : elle prolonge des traditions existantes (externalités, cost-shifting de K. W. Kapp) dont elle unifie les cas ; sa généralité exige des critères observables — coût marginal croissant, effet boomerang — pour rester réfutable ; et son apport tient moins à la découverte du transfert qu'à sa stabilisation opératoire (définition canonique, vocabulaire, critères, corpus daté)."
+    answer: "L'anthropie se présente comme une hypothèse de travail, non comme une théorie achevée. Trois limites sont assumées : elle prolonge des traditions existantes (externalités, cost-shifting de K. W. Kapp) dont elle unifie les cas ; sa généralité exige des conditions observables de saturation et un protocole de réfutation pour rester réfutable ; et son apport tient moins à la découverte du transfert qu'à sa stabilisation opératoire (définition canonique, vocabulaire, critères, corpus daté)."
   - question: "En quoi l'anthropie se distingue-t-elle du cost-shifting de K. W. Kapp ?"
-    answer: "La tradition du cost-shifting de K. W. Kapp a montré dès 1950 que le report des coûts sur des tiers est systémique plutôt qu'accidentel. L'anthropie reprend cette filiation et la prolonge : elle réunit les déplacements dans l'espace, dans le temps et entre groupes sociaux en un seul mécanisme, ajoute des critères de saturation (coût marginal croissant, effet boomerang) et s'attache aux médiations qui rendent le transfert invisible. La section « Objections et limites » développe la comparaison."
+    answer: "La tradition du cost-shifting de K. W. Kapp a montré dès 1950 que le report des coûts sur des tiers est systémique plutôt qu'accidentel. L'anthropie reprend cette filiation et la prolonge : elle réunit les déplacements dans l'espace, dans le temps et entre groupes sociaux en un seul mécanisme, ajoute des conditions de saturation et une analyse du retour et s'attache aux médiations qui rendent le transfert invisible. La section « Objections et limites » développe la comparaison."
   - question: "Qui a développé le cadre anthropique ?"
     answer: "Stéphane Lalut, économiste, chercheur indépendant et essayiste, a proposé le cadre anthropique en 2025 dans le livre ANTHROPIE — Ordre ici. Dette ailleurs, puis l'a formalisé à partir de 2026 dans une série de working papers publiés sur Zenodo sous le label Anthropie Working Papers (AWP)."
 # En-tête de la page (auteur, 01/10/2026, variante B) : la phrase « proposée par » (déplacée de la section Définition,
@@ -47,11 +47,11 @@ frontiere:
     - texte: "Le désordre déplacé peut s'accumuler, saturer et revenir : déplacement, accumulation, saturation, retour, bifurcation."
       ancre: "les-trois-axes-de-transfert"
       section: "Les trois axes"
-    - texte: "Elle se donne des critères observables — coût marginal croissant du transfert, effet boomerang — pour dire quand un espace de déportation sature."
+    - texte: "Elle se donne des conditions observables pour dire quand un espace de déportation (le lieu, le temps ou le groupe qui reçoit le désordre) sature, et un protocole qui dit ce qui la réfuterait."
       ancre: "objections-et-limites"
       section: "Objections et limites"
   naffirme:
-    - texte: "Être une théorie achevée : c'est une hypothèse de travail à valeur heuristique."
+    - texte: "Être une théorie achevée, ni postuler que tout est transfert : c'est une hypothèse de travail, qui demande d'interroger toute stabilité sur ses coûts déportés."
       ancre: "définition"
       section: "Définition"
     - texte: "Avoir découvert le transfert : l'apport revendiqué est sa stabilisation opératoire — définition, vocabulaire, critères, corpus daté."
@@ -64,11 +64,13 @@ frontiere:
       ancre: "quelques-domaines-dapplication"
       section: "Domaines d'application"
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
+  - {date: 2026-11-13, texte: "Relecture des sources : critères de saturation alignés sur AWP-07, AWP-02 donné pour première esquisse, effet boomerang crédité à Ulrich Beck ; outils de Lomekwi antérieurs au genre Homo ; règle d'enquête bornée (AWP-07, P1) ; usages antérieurs du mot bornés à ceux recensés ; principe anthropique de Carter dans sa version forte."}
   - {date: 2026-11-07, texte: "Ajout : une réponse sur ce qui distingue l'anthropie du cost-shifting de K. W. Kapp, jusqu'ici dans la seule version anglaise."}
   - {date: 2026-11-06, texte: "Ajout : une section sur l'adjectif « anthropique », entre son sens courant (d'origine humaine) et son emploi propre au cadre ; l'auteur est nommé dans la définition reprise."}
   - {date: 2026-11-05, texte: "Correction : la réponse sur la dette publique présentait comme un fait ce que le site traite comme une hypothèse ; elle dit désormais que le déplacement de charges n'est ni automatique ni nécessairement défavorable, et où l'hypothèse est examinée. L'Anthropocène est une époque géologique proposée, non retenue comme unité formelle en 2024. La date de publication affichée était fausse (première mise en ligne : avril 2026)."}
 ressource:  # index /ressources/ : en tête du cadre d'analyse (arbitrage PRO-20261025-225715, 25/10/2026) ; garde son entrée de menu
   type: ["notion"]
+  conception: "docs/conception/quest-ce-que-lanthropie.md"  # fiche de conception (regle 12), reprise du lot notions-a du 13/11/2026
   bloc: "notions"
   rang: 1
   encart: true
@@ -81,13 +83,13 @@ ressource:  # index /ressources/ : en tête du cadre d'analyse (arbitrage PRO-20
 
 Tout ordre observable dans un système social — qu'il s'agisse d'une institution, d'un territoire, d'une organisation ou d'une économie — suppose un désordre exporté ailleurs&nbsp;: vers d'autres lieux, vers d'autres temps ou vers d'autres groupes sociaux.
 
-L'anthropie ne prétend pas constituer une théorie achevée. Il s'agit d'une hypothèse de travail à valeur heuristique&nbsp;: elle permet de poser des questions que d'autres cadres analytiques ne formulent pas, ou qu'ils tendent à neutraliser.
+L'anthropie ne prétend pas constituer une théorie achevée. Il s'agit d'une hypothèse de travail à valeur heuristique&nbsp;: elle permet de poser des questions que d'autres cadres analytiques ne formulent pas, ou qu'ils tendent à neutraliser. Elle ne postule pas que tout est transfert&nbsp;: elle en tire une règle d'enquête — devant un ordre stable, chercher où va le désordre avant de conclure qu'il est résolu —, bornée par une règle d'arrêt qui dit quand conclure qu'un désordre a été résorbé sur place, aucun ailleurs n'en recevant plus qu'un seuil fixé d'avance ([AWP-07](/awp/awp-07/), proposition P1).
 
 ## Le mot, ses usages, le concept
 
 Le mot «&nbsp;anthropie&nbsp;» dérive du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;». Il appartient à une famille lexicale ancienne — philanthropie, misanthropie, lycanthropie — où le suffixe *-anthropie* forme des termes relatifs à l'humain.
 
-Le mot lui-même, ou des formes voisines, a connu des usages dispersés chez plusieurs auteurs, le plus souvent par proximité avec l'entropie, dans des contextes philosophiques, psychanalytiques ou technologiques — Bernard Stiegler, notamment, l'a employé pour désigner une entropie d'origine humaine, à laquelle il opposait la «&nbsp;néguanthropie&nbsp;». Aucun de ces usages n'en avait fixé une définition opératoire en sciences sociales.
+Le mot lui-même, ou des formes voisines, a connu des usages dispersés chez plusieurs auteurs, le plus souvent par proximité avec l'entropie, dans des contextes philosophiques, anthropologiques ou technologiques — Bernard Stiegler, notamment, l'a employé pour désigner une entropie d'origine humaine, à laquelle il opposait la «&nbsp;néguanthropie&nbsp;». Aucun des usages que nous avons recensés n'en avait fixé une définition opératoire en sciences sociales.
 
 Stéphane Lalut n'invente donc pas le mot&nbsp;: il en propose un usage conceptuel spécifique. Dans le livre *ANTHROPIE — Ordre ici. Dette ailleurs* (2025), puis dans les *Anthropie Working Papers* (2026), l'anthropie désigne l'hypothèse selon laquelle les systèmes sociaux produisent de l'ordre local en déplaçant leur désordre vers d'autres lieux, d'autres temps ou d'autres groupes sociaux. L'originalité ne tient pas à la création du mot, mais à sa stabilisation comme hypothèse opératoire — dotée d'une définition canonique, de critères observables et d'un corpus daté (DOI).
 
@@ -123,7 +125,7 @@ Les trois axes disent où la charge est déplacée&nbsp;; la boucle anthropique 
 
 La page [Qu'est-ce que la boucle anthropique&nbsp;?](/boucle-anthropique/) la présente en détail, et [AWP-07 — *La boucle anthropique*](/awp/awp-07/) la formalise&nbsp;: définitions, états et conditions de réfutation.
 
-Dans le métaprogramme numérique contemporain, les trois axes atteignent un réceptacle devenu central&nbsp;: l'attention. L'extériorisation cognitive est aussi ancienne que l'outil, la main et le langage&nbsp;; la cognition outillée a permis d'étendre les déplacements du désordre dans l'espace, le temps et le social. Mais, quand ce réceptacle sature, le désordre peut revenir vers les prises concrètes de la cognition — attention captée, jugement délégué, dispositifs qui les prolongent. Il ne s'agit pas d'un quatrième axe, mais d'une forme de retour anthropique, dirigée vers la capacité même qui avait rendu le déplacement possible.
+Dans le métaprogramme numérique contemporain, les trois axes atteignent un réceptacle que le corpus traite comme un cas limite&nbsp;: l'attention. L'extériorisation cognitive est aussi ancienne que l'outil, la main et le langage&nbsp;; la cognition outillée a permis d'étendre les déplacements du désordre dans l'espace, le temps et le social. Mais, quand les espaces qui reçoivent le désordre — lieux, temps, groupes — saturent, le désordre peut revenir vers les prises concrètes de la cognition — attention captée, jugement délégué, dispositifs qui les prolongent. Il ne s'agit pas d'un quatrième axe, mais d'une forme de retour anthropique, dirigée vers la capacité même qui avait rendu le déplacement possible.
 
 ## Notions voisines {#notions-voisines}
 
@@ -145,7 +147,7 @@ Le terme ne vaut donc pas comme métaphore décorative, mais comme hypothèse an
 
 L'Anthropocène désigne une époque géologique proposée&nbsp;: la trace que les sociétés humaines impriment dans la stratigraphie de la planète. L'Union internationale des sciences géologiques a refusé en 2024 d'en faire une unité formelle de l'échelle des temps&nbsp;; le terme reste un concept descriptif reconnu. L'anthropie nomme un mécanisme social&nbsp;: la manière dont ces sociétés produisent leurs ordres locaux en déplaçant le désordre — vers d'autres lieux, vers d'autres temps, vers d'autres groupes.
 
-L'une est une marque&nbsp;; l'autre est un mécanisme. Et le mécanisme précède la marque&nbsp;: l'anthropie peut se lire dès les premiers programmes techniques de l'espèce, sur une profondeur de 3,3 millions d'années, bien avant l'industrialisation qui rend la trace géologique visible. Elle n'invalide donc pas l'Anthropocène. Elle en éclaire la dynamique institutionnelle, en montrant par quels transferts les sociétés en sont venues à laisser une telle trace.
+L'une est une marque&nbsp;; l'autre est un mécanisme. Et le mécanisme serait antérieur à la marque&nbsp;: l'anthropie peut se lire dès les plus anciens outils de pierre connus, antérieurs aux plus anciens fossiles connus du genre *Homo*, sur une profondeur de 3,3 millions d'années, bien avant l'industrialisation qui rend la trace géologique visible. Elle n'invalide donc pas l'Anthropocène. Elle en éclaire la dynamique institutionnelle, en proposant une lecture des transferts par lesquels les sociétés en sont venues à laisser une telle trace.
 
 Voir [AWP-02 — *3,3 millions d'années en un principe*](https://stephane-lalut.com/awp/awp-02/) pour l'analyse en longue durée.
 
@@ -154,7 +156,7 @@ Voir [AWP-02 — *3,3 millions d'années en un principe*](https://stephane-lalut
 <details class="notion" id="anthropie-et-principe-anthropique"><summary><span class="notion__avec">principe anthropique</span><span class="notion__pr">L'anthropie ne doit pas non plus être confondue avec le <i>principe anthropique</i>.</span></summary>
 <div class="notion__suite">
 
-Le principe anthropique relève de la cosmologie. Présenté par le physicien Brandon Carter lors d'un symposium en 1973, puis publié en 1974, il énonce que nos observations de l'univers sont nécessairement compatibles avec l'existence d'observateurs capables de les faire&nbsp;: les constantes physiques sont telles que nous les mesurons parce que, dans le cas contraire, nul ne serait là pour les mesurer.
+Le principe anthropique relève de la cosmologie. Présenté par le physicien Brandon Carter lors d'un symposium en 1973, puis publié en 1974, il énonce que nos observations de l'univers sont nécessairement compatibles avec l'existence d'observateurs capables de les faire&nbsp;: dans sa version forte, les constantes physiques doivent être compatibles avec l'apparition, à un moment, d'observateurs capables de les mesurer.
 
 L'anthropie, elle, ne dit rien de l'univers ni de ses constantes. Elle désigne un mécanisme social et institutionnel&nbsp;: la manière dont les sociétés humaines produisent un ordre local en déplaçant le désordre. La proximité n'est que lexicale — l'un et l'autre dérivent du grec *ánthrôpos*, «&nbsp;l'être humain&nbsp;» —, sans aucune filiation conceptuelle.
 
@@ -214,9 +216,9 @@ Autrement dit, l'enjeu n'est pas seulement de constater qu'un ordre existe, mais
 
 Une hypothèse se juge aussi à ce qu'elle concède. Trois objections reviennent — les voici, avec ce qu'elles ont de fondé.
 
-**«&nbsp;L'anthropie ne fait que renommer les externalités.&nbsp;»** L'objection a un socle réel&nbsp;: l'économie décrit depuis longtemps les coûts reportés sur des tiers, et la tradition du *cost-shifting* de K. W. Kapp a montré dès 1950 que ces transferts sont systémiques plutôt qu'accidentels. Le cadre anthropique assume cette filiation. Sa différence&nbsp;: là où l'externalité isole des cas de «&nbsp;défaillance du marché&nbsp;», l'anthropie unifie les trois axes — spatial, temporel, social — en un mécanisme unique, et interroge ce que l'externalité laisse hors champ&nbsp;: les médiations qui rendent le transfert invisible.
+**«&nbsp;L'anthropie ne fait que renommer les externalités.&nbsp;»** L'objection a un socle réel&nbsp;: l'économie décrit depuis longtemps les coûts reportés sur des tiers, et la tradition du report des coûts (*cost-shifting*) issue de K. W. Kapp a montré dès 1950 que ces transferts sont systémiques plutôt qu'accidentels. Le cadre anthropique assume cette filiation. Sa différence&nbsp;: là où l'externalité isole des cas de «&nbsp;défaillance du marché&nbsp;», l'anthropie unifie les trois axes — spatial, temporel, social — en un mécanisme unique, et interroge ce que l'externalité laisse hors champ&nbsp;: les médiations qui rendent le transfert invisible.
 
-**«&nbsp;L'hypothèse est trop générale pour être réfutable.&nbsp;»** Concession&nbsp;: une grille qui peut tout relire risque de ne rien expliquer. C'est pourquoi le cadre se donne des critères observables — coût marginal croissant du transfert, effet boomerang — qui permettent de dire quand un espace de déportation sature, et se présente comme hypothèse de travail à valeur heuristique, non comme théorie achevée (voir [AWP-01](/awp/awp-01/)).
+**«&nbsp;L'hypothèse est trop générale pour être réfutable.&nbsp;»** Concession&nbsp;: une grille qui peut tout relire risque de ne rien expliquer. C'est pourquoi le cadre se donne des conditions observables de saturation — capacité du réceptacle atteinte, ou contestation qui ne permet plus de rendre le transfert invisible — et un protocole qui dit ce qui le réfuterait ([AWP-07](/awp/awp-07/))&nbsp;; [AWP-02](/awp/awp-02/) en avait donné une première esquisse, le coût marginal croissant de la déportation et l'effet boomerang (le mot est d'Ulrich Beck). Il se présente comme hypothèse de travail à valeur heuristique, non comme théorie achevée (voir [AWP-01](/awp/awp-01/)).
 
 **«&nbsp;Rien de neuf&nbsp;: la longue durée, les systèmes-mondes, l'écologie politique disaient déjà cela.&nbsp;»** En partie vrai — le cadre dialogue explicitement avec ces traditions. L'apport revendiqué n'est pas la découverte du transfert, mais sa stabilisation opératoire&nbsp;: une définition canonique, un vocabulaire ([glossaire](/glossaire/)), des critères et un corpus daté qui permettent de le citer et de le tester.
 
