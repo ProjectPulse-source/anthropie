@@ -1083,7 +1083,11 @@ main ol.trois-questions li {
   border-top: 2px solid var(--color-accent);
   font-family: var(--font-serif); font-size: 1.2rem; line-height: 1.3; color: var(--color-text); font-weight: 500 !important;
 }
-.trois-questions__n { font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--color-accent); }
+// Chiffre plus marqué, dans le serif des questions (auteur, 15/11/2026) : repère visible, sans dépasser la question.
+.trois-questions__n {
+  font-family: var(--font-serif); font-size: 1.75rem; font-weight: 500; line-height: 1;
+  font-variant-numeric: lining-nums; color: var(--color-accent);
+}
 @media (max-width: 680px) { main ol.trois-questions { grid-template-columns: minmax(0, 1fr); } }
 
 // Notions voisines : une ligne par notion, dépliable, texte complet conservé.
