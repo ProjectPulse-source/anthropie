@@ -26,10 +26,11 @@
   {{- end -}}
   {{- $alt = "A rising spiral drawn as a single line in stacked loops. The top turn, the only one in full, carries the five states: E1 Displacement, E2 Accumulation, E3 Saturation, E4 Return, E5 Bifurcation, linked by conditional transitions, with a possible transfer arrest and an early return towards the emitter S. The two lower, increasingly faint turns depict, schematically, possible earlier iterations. E5 has three possible exits: a partial collapse, a reconfiguration, or a re-displacement, in which case the line ends at the top in E1′, a possible next iteration." -}}
 {{- end -}}
-{{- /* Exemples (auteur, 29/10/2026) : sur la forme complete seulement, des boutons recolorent la spirale d'apres le
-       codage du corpus (data/boucle_exemples.yaml ; figures spirale-anthropique-<id>-*.svg du meme generateur).
-       Sans script : pas de boutons, la figure generique, et les quatre textes a la suite de la legende. */ -}}
-{{- $exemples := cond $renvoi slice (site.Data.boucle_exemples | default slice) -}}
+{{- /* Exemples (auteur, 29/10/2026) : des boutons recolorent la spirale d'apres le codage du corpus
+       (data/boucle_exemples.yaml ; figures spirale-anthropique-<id>-*.svg du meme generateur). Retires de la forme
+       courte le 30/10 (b9441fa), retablis sur les deux formes a la demande de l'auteur (15/11/2026) ; la forme courte
+       garde sa legende et sa cle. Sans script : pas de boutons, la figure generique, et les quatre textes a la suite. */ -}}
+{{- $exemples := site.Data.boucle_exemples | default slice -}}
 {{- $suf := cond $isEn "-en" "" -}}
 <figure class="figure-boucle-anthropique"{{ with $exemples }} data-boucle-exemples{{ end }}>
   {{- with $exemples }}

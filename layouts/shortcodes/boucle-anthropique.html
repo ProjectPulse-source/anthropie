@@ -1,3 +1,4 @@
 {{- /* Shortcode boucle-anthropique : transmet la Page courante et la legende voulue au partial.
-     legende="renvoi" : legende courte (page anthropie) ; sans parametre : mode de lecture complet (page de la boucle). */ -}}
+     legende="renvoi" : legende courte et cle des etats (page anthropie) ; sans parametre : legende complete (page de la
+     boucle). Les boutons d'exemples figurent sur les deux formes (auteur, 15/11/2026). */ -}}
 {{ partial "figures/boucle-anthropique.html" (dict "page" .Page "legende" (.Get "legende")) }}
