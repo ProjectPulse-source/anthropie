@@ -3,7 +3,7 @@ title: "What is the rebound effect (Jevons paradox)?"
 og_image: "images/og-notion-rebond-en.jpg"
 og_image_alt: "Share card: “The rebound effect” and its diagram"
 url: /en/rebound-effect/
-description: "The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use; when the take-back exceeds the gain, total consumption rises. Described by William Stanley Jevons in 1865, it remains the blind spot of efficiency policies."
+description: "The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use; when the take-back exceeds the gain, total consumption rises. Described by William Stanley Jevons in 1865, it remains poorly built into energy scenarios."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
 lastmod: 2026-11-05
@@ -18,13 +18,13 @@ faq:
   - question: "What are the forms of the rebound effect?"
     answer: "Three forms are classically distinguished: the direct rebound (a more economical car encourages more driving), the indirect rebound (the money saved funds other, themselves energy-intensive, consumption) and the macroeconomic rebound (efficiency lowers the implicit cost of energy across the whole economy, which stimulates overall production and demand)."
   - question: "Does the rebound effect cancel every efficiency gain?"
-    answer: "No — the size of the rebound varies by use, sector and period, and is the subject of an abundant literature. But it is structural, not anecdotal: ignoring the rebound systematically leads to overestimating the energy savings expected from efficiency policies. This is why serious scenarios distinguish efficiency from sufficiency."
+    answer: "No — the size of the rebound varies by use, sector and period, and is the subject of an abundant literature. But it is structural, not anecdotal: leaving it out of assessments risks overestimating the energy savings expected from efficiency policies. This is why serious scenarios distinguish efficiency from sufficiency."
   - question: "What is the link between the rebound effect and anthropy?"
-    answer: "In the anthropic framework (Stéphane Lalut), the rebound effect is a case of boomerang effect: the efficiency gain produces a local order — less energy per unit — whose cost comes back as a global disorder — smaller savings than expected, or even more total consumption. The analysis is developed in AWP-04, “Energy transition or entropic transfer?” (2026, DOI 10.5281/zenodo.19269244)."
+    answer: "In the anthropic framework (Stéphane Lalut), the rebound effect can be read as a case of boomerang effect: the efficiency gain produces a local order — less energy per unit — whose cost comes back as a global disorder — smaller savings than expected, or even more total consumption. The analysis is developed in AWP-04, “Energy transition or entropic transfer?” (2026, DOI 10.5281/zenodo.19269244)."
   - question: "Rebound effect, Jevons effect, Jevons paradox: are they the same thing?"
     answer: "The rebound effect is the general phenomenon — any recovery of consumption that eats into an efficiency gain. We speak of the Jevons paradox (or effect) in the extreme case where the recovery exceeds the gain: total consumption rises. The short definition is in the glossary."
   - question: "Does the rebound effect apply outside energy?"
-    answer: "Yes. The mechanism is observed wherever an efficiency gain lowers the cost of a use: transport time (speed gains lengthened distances rather than shortening journeys), digital technology (processor efficiency fed the explosion of uses), materials."
+    answer: "The question is debated beyond energy, wherever an efficiency gain lowers the cost of a use: transport time (speed gains went with longer distances rather than shorter journeys), digital technology (the IPCC flags a risk of rebound there), materials. Size and mechanism are less established there than for energy."
   - question: "Can the rebound effect be \"corrected\"?"
     answer: "It can be contained — by coupling efficiency with volume constraints — but not abolished by technology alone: it follows from prices, not from a consumer error. The first step is to count it, which the forecast assessments of efficiency policies still often omit."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
@@ -32,9 +32,9 @@ fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the pa
     - t: "Definition"
       d: "The mechanism by which part of an energy-efficiency gain is taken back by increased use: what becomes more efficient becomes cheaper, hence more used. When the take-back exceeds the gain, total consumption rises (Jevons paradox)."
     - t: "Origin"
-      d: "William Stanley Jevons, *The Coal Question* (1865), on steam engines; generalised by energy economics (the Khazzoom-Brookes postulate, 1980s)."
+      d: "William Stanley Jevons, *The Coal Question* (1865), on steam engines; taken up by energy economics from 1980 onwards (Khazzoom, Brookes, then the \"Khazzoom-Brookes postulate\", named in 1992)."
     - t: "Not to be confused with"
-      d: "The [Jevons paradox](/en/glossaire/#jevons-effect) is the extreme case: the rebound in consumption exceeds the gain. The rebound effect is any rebound that erodes the gain."
+      d: "The [Jevons paradox](/en/glossaire/#jevons-effect) is the extreme case: the rebound in consumption exceeds the gain. The rebound effect is any take-back of consumption that erodes the gain."
     - t: "Example"
       d: "A more fuel-efficient car encourages more driving; heating savings pay for a plane ticket."
     - t: "Limit"
@@ -73,7 +73,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long_en: "Rebound effect"
 ---
 
-The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use: what becomes more efficient becomes cheaper, hence more used. When the take-back exceeds the gain, total energy consumption rises instead of falling: this is the Jevons paradox. Described by the economist William Stanley Jevons as early as 1865, it remains the blind spot of most energy-efficiency policies.
+The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use: what becomes more efficient becomes cheaper, hence more used. When the take-back exceeds the gain, total energy consumption rises instead of falling: this is the Jevons paradox. Described by the economist William Stanley Jevons as early as 1865, it remains poorly built into energy models and scenarios, and the UN climate panel (IPCC) asks that they take greater account of it (Working Group III report, chapter 5, 2022).
 
 {{< notion-fiche >}}
 
@@ -81,7 +81,7 @@ The rebound effect is the mechanism by which part of an energy-efficiency gain i
 
 In *The Coal Question* (1865), Jevons observes a counter-intuitive fact: the steam engines of his day, far more efficient than Newcomen's a century earlier, did not reduce England's coal consumption — they made it explode. The reason is economic: a machine that draws more work from each ton of coal lowers the cost of that work, opens up new profitable uses and multiplies machines. "It is wholly a confusion of ideas to suppose that the economical use of fuel is equivalent to a diminished consumption," he writes. "The very contrary is the truth."
 
-The mechanism was rediscovered and generalised by contemporary energy economics — notably under the name of the Khazzoom-Brookes postulate, after the work of Daniel Khazzoom and Leonard Brookes around the turn of the 1980s.
+The mechanism was rediscovered by contemporary energy economics: J. Daniel Khazzoom studied it in 1980 for household-appliance efficiency standards; Len Brookes argued in 1990 that efficiency gains can raise total energy consumption, a thesis Harry Saunders named the "Khazzoom-Brookes postulate" in 1992 and whose reach, across a whole economy, remains debated.
 
 ## The three forms of rebound
 
@@ -93,23 +93,23 @@ The literature classically distinguishes three channels:
 2. **The indirect rebound** — the money saved does not evaporate: it funds other consumption, itself carrying energy and matter (the plane ticket paid for by heating savings).
 3. **The macroeconomic rebound** — across the whole economy, efficiency lowers the implicit cost of energy, which stimulates production, demand and innovation in new uses.
 
-The size of each channel varies by use and sector; their sum is the subject of an abundant and debated literature. But the direction of the mechanism is hardly in doubt: **ignoring the rebound systematically leads to overestimating the savings expected** from efficiency policies.
+The size of each channel varies by use and sector; their sum is the subject of an abundant and debated literature. The mechanisms themselves are documented: **leaving them out of assessments risks overestimating the savings expected** from efficiency policies.
 
 ## Why the rebound is structural
 
-The rebound effect is not a behavioural anomaly that better information would correct. It follows from the very logic of prices: efficiency makes the energy service cheaper, and a cheaper service is more in demand — from households, from firms, from uses that did not yet exist. That is why efficiency alone, without constraints on volumes, guarantees no fall in total consumption. The historian Jean-Baptiste Fressoz (*Sans transition*, 2024, in French) shows it over two centuries: energies never replaced one another, they **added up** — coal does not replace wood, it is added to it; oil is added to coal; and efficiency gains accompanied, rather than contradicted, this accumulation.
+The rebound effect is not a behavioural anomaly that better information would correct. It follows from the very logic of prices: efficiency makes the energy service cheaper, and a cheaper service is more in demand — from households, from firms, from uses that did not yet exist. That is why efficiency alone, without constraints on volumes, guarantees no fall in total consumption. The historian Jean-Baptiste Fressoz (*Sans transition*, 2024, in French) observes, over two centuries, that at world scale energies tended to **add up** rather than replace one another — coal does not replace wood, it is added to it; oil is added to coal.
 
 ## The anthropic reading: a boomerang effect
 
 The anthropic framework of the economist Stéphane Lalut proposes to read the rebound effect as a case of [boomerang effect](/en/glossaire/#boomerang-effect): the efficiency gain produces a **local order** — less energy per unit produced, an improving balance sheet — whose cost comes back as a **global disorder** — smaller savings than expected and, when the take-back exceeds the gain, more total consumption, more extraction, more waste.
 
-This reading is developed in [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/) (2026), which places the rebound among three transfer mechanisms at work in the energy transition: extraction externalised toward lithium- and cobalt-producing countries, technological waste deferred to the coming decades, and the unaccounted rebound effect. What the three have in common: the disorder the transition claims to eliminate is not resolved, it is **displaced** — in space, in time, or by the detour of volumes.
+This reading is developed in [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/) (2026). That working paper reads the energy transition, in its dominant form, as a double transfer — in space, from fossil fuels to mining, and in time, toward technological debt, the end-of-life cost (waste, worn-out infrastructure) that will be borne tomorrow — masked by carbon accounting that counts territorial emissions but not those of imports; the rebound effect is, there, the disorder that comes back. The disorder the transition claims to eliminate is not resolved: it is **displaced** in space and time, or comes back by the detour of volumes.
 
 The rebound effect incidentally shows why the anthropic question — *where does disorder go?* — is not rhetorical: in the case of the rebound, disorder comes back through the least visible channel there is, the aggregation of millions of individually rational decisions.
 
 ## Efficiency or sufficiency
 
-The practical consequence is known to serious energy scenarios: efficiency is necessary but not sufficient. Without a mechanism that constrains or steers volumes — sufficiency, caps, pricing — efficiency gains feed demand instead of reducing consumption. The question posed by the anthropic framework goes one step further: when a mechanism does reduce consumption *here*, it remains to check where the cost has moved — toward which territories, which groups, which decades.
+The practical consequence is known to serious energy scenarios: efficiency is necessary but not sufficient. Without a mechanism that constrains or steers volumes — sufficiency, caps, pricing — part of the efficiency gains feeds demand instead of reducing consumption. The question posed by the anthropic framework goes one step further: when a mechanism does reduce consumption *here*, it remains to check where the cost has moved — toward which territories, which groups, which decades.
 
 ## Frequently asked questions
 
@@ -117,7 +117,7 @@ The practical consequence is known to serious energy scenarios: efficiency is ne
 
 ## Further reading
 
-- [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/) — the working paper that places the rebound effect among the transfer mechanisms of the transition (DOI: 10.5281/zenodo.19269244, open-access PDF).
+- [AWP-04 — *Energy transition or entropic transfer?*](/en/awp/awp-04/) — the working paper that reads the energy transition as a transfer and the rebound effect as the disorder that comes back (DOI: 10.5281/zenodo.19269244, open-access PDF).
 - [Is the world economy decoupling from energy?](/en/decoupling-energy-growth/) — the data page: energy used per unit of GDP falls, world consumption rises. It shows relative decoupling; it does not measure the rebound.
 - [What is anthropy?](/en/quest-ce-que-lanthropie/) — the general framework: local order, displaced disorder, boomerang effect.
-- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 p.) devotes a chapter to energy and to the transfers of the transition.
+- The book [*ANTHROPY – A Big History of Civilization's Hidden Costs*](/en/livres/anthropie-ordre-ici-dette-ailleurs/) (2026, 644 p.) traces the hypothesis of displaced disorder across the long history, from the first tools to the Paris Agreement.

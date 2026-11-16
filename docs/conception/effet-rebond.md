@@ -28,11 +28,11 @@ Plus efficace veut dire moins consommé.
 
 ### Découverte principale
 
-Le service devenu moins cher est davantage utilisé : par trois canaux (direct, indirect, macroéconomique), la reprise rogne le gain, et peut le dépasser (paradoxe de Jevons).
+Le service devenu moins cher est davantage utilisé : par trois canaux (direct, indirect, macroéconomique), la reprise rogne le gain, et peut le dépasser (paradoxe de Jevons) — relecture R1, l. 4-5, 47-49 et 73, conformes à Jevons (ch. VII) et à Sorrell (2009). L'ampleur reste discutée : à l'échelle d'une économie, le rebond « pourrait effacer plus de la moitié » des économies attendues (Brockway et al., 2021, R1 § 1).
 
 ### Mécanisme explicatif
 
-Le prix : l'efficacité abaisse le coût du service, la demande augmente.
+Le prix : l'efficacité abaisse le coût du service, la demande augmente (R1, l. 25a et 54, conformes à Jevons, ch. VII). Le postulat de Khazzoom-Brookes (Saunders, 1992) en est la version forte, à l'échelle de l'économie, qui reste discutée (R1, l. 12 et 26).
 
 ### Preuve décisive
 
@@ -93,3 +93,10 @@ moteurs de réponse) ; état initial à relever au relevé J+60 déjà prévu po
 - Instantané de relecture : non fait (suit la relecture entière).
 - Contre-expertise de la page : non faite.
 - Accord de l'auteur : demandé avec le diff du 26/10/2026.
+
+### Reprise du 16/11/2026 (lot « notions-b », `/reprise-ressource`, mode préparer)
+
+- Relecture des sources par un relecteur neuf : faite (`06_PROMOTION/INTELLIGIBILITE_RESSOURCES_2026-11-11/LOTS/notions-b/SOURCES/effet-rebond_R1.md`), trois lignes sondées à la source par la session (`SONDES_SESSION.md`).
+- Interventions : spécification rejouable `LOTS/notions-b/specs/effet-rebond.py` ; contrôle de la lettre justifié ligne à ligne.
+- Juge interne à l'aveugle et jugement externe : voir `LOTS/notions-b/LOT.md`. `ressource.refonte` : non posée (relecture phrase à phrase entière et instantané à faire à la publication).
+
