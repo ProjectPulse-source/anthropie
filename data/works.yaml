@@ -368,8 +368,8 @@ works:
     publication_date_en: "2026-04-06"
     license: "CC-BY 4.0"
     abstract_short:
-      fr: "Le champ académique déplace-t-il du désordre épistémique vers ses marges ? Ce working paper applique le cadre anthropique au champ lui-même, examine les mécanismes de relégation et interroge le rôle des infrastructures ouvertes (Zenodo, ORCID)."
-      en: "Does the academic field displace epistemic disorder toward its margins? This working paper applies the framework of anthropy to the field itself, examines relegation mechanisms, and questions the role of open infrastructures (Zenodo, ORCID)."
+      fr: "Le champ académique déplace-t-il du désordre épistémique vers ses marges ? Ce working paper applique le cadre anthropique au champ lui-même, examine les mécanismes de relégation et interroge le rôle des infrastructures ouvertes (HAL, ORCID, revues overlay)."
+      en: "Does the academic field displace epistemic disorder toward its margins? This working paper applies the framework of anthropy to the field itself, examines relegation mechanisms, and questions the role of open infrastructures (HAL, ORCID, overlay journals)."
     keywords:
       fr: [recherche indépendante, anthropie, ordre épistémique, légitimité académique, infrastructures ouvertes]
       en: [independent research, anthropy, epistemic order, academic legitimacy, open-access infrastructure]
@@ -726,7 +726,7 @@ works:
     canonical_title:
       fr: "L'Odyssée des idées"
       en: ""  # n/a
-    subtitle_fr: "Culture, philosophie et science — de l'aube de l'humanité à l'intelligence artificielle"  # sous-titre canonique tranché 2026-07-03 (aligné intérieur + couverture + BO + site)
+    subtitle_fr: "De l'aube de l'humanité à l'ère numérique"  # sous-titre de la page de titre (intérieur en vente, 682 p., p. 1 ; déjà celle des 696 p. de juillet et du manuscrit) ; retranché le 16/11/2026 (lot reperes-a) : celui du 03/07 n'était sur aucune surface du livre
     publication_date: "2026-07-03"  # nouvelle édition entièrement recomposée (696 p. au 03/07, 682 p. depuis le 28/09, nouvel ISBN) ; première édition 2023, ISBN 978-2-9586347-1-1 / broché 295863471X dépublié
     # TROIS ÉDITIONS, et non deux — l'écart 2023/2024 n'est pas une contradiction
     # (auteur, 2026-09-13) : 2023 = première édition chez Bookelis, distribuée par Hachette,

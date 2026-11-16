@@ -2,7 +2,7 @@
 title: "ANTHROPY – A Big History of Civilization's Hidden Costs"
 subtitle: "Seven ages of history for a single hypothesis: disorder is never resolved, only displaced."
 date: 2026-07-21  # date de publication de l'édition anglaise (mise en vente KDP)
-lastmod: 2026-11-05
+lastmod: 2026-11-16
 description: "The foundational work on the anthropic framework. Across 644 pages, ANTHROPY develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Order here. Debt elsewhere."
 isbn: "978-2-958634-75-9"
 currency: "USD"
@@ -49,9 +49,9 @@ related_awp:
     awp: "awp-02"
   - chapter: "Public debt and anthropy: who really pays for disorder?"
     awp: "awp-03"
-  - chapter: "Energy transition or entropic transfer?"
+  - chapter: "Energy transition, or anthropic transfer?"
     awp: "awp-04"
-  - chapter: "Thinking outside the walls: notes on independent research in economics"
+  - chapter: "Thinking beyond the walls: notes on independent research in economics"
     awp: "awp-05"
   - chapter: "Digital infrastructures and technological debt"
     awp: "awp-06"

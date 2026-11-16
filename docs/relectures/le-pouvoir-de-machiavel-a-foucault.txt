@@ -1,9 +1,9 @@
-# relu le 2026-11-05 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-16 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 3c13f6c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 À quoi tient l’obéissance ?
 Le pouvoir, de Machiavel à Foucault
 La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l’attraction : de −1200 à 2012, le parcours « Pouvoir » de L’Odyssée des idées répond en neuf étapes à la question « pourquoi obéit-on ? ».
 Et trois formules célèbres du parcours ne sont pas ce qu’on croit, à commencer par « la fin justifie les moyens ».
-Page mise à jour le 5 novembre 2026 · révisions
+Page mise à jour le 5 novembre 2026
 « Qu’est-ce qui fait qu’un homme obéit à un autre ? » La question ouvre, dans L’Odyssée des idées, le parcours que le livre consacre au pouvoir : onze escales datées, de −1200 à 2012, et trois échos vers d’autres routes du livre.
 Cette page suit ce parcours.
 Chaque étape reçoit la même grille : l’idée, telle que le livre la résume ; le texte, cité dans sa langue d’origine avec son édition quand il a pu être lu ; la limite, le point où ce ressort de l’obéissance cède ; et l’escale du livre.
@@ -195,7 +195,7 @@ Les résumés sont ceux du livre, qui en développe les nuances ; Surveiller et 
 Les trois manières de faire agir sont une grille de cette page, établie après sa contre-expertise ; le livre ne la formule pas sous cette forme.
 Suivre les idées dans le temps
 L’Odyssée des idées
-Culture, philosophie et science — de l’aube de l’humanité à l’intelligence artificielle
+De l’aube de l’humanité à l’ère numérique
 Cette page suit un parcours.
 L’Odyssée des idées en compte sept, qui relient ses 250 escales, des premiers signes à l’intelligence artificielle : le pouvoir y croise la liberté, l’argent, l’opinion et le sacré, et chaque escale y tient en quelques pages.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
@@ -231,13 +231,6 @@ XVI, p.
 128 (Internet Archive) ; Constitution du 3 septembre 1791 (Wikisource) ; Marx, Les Luttes de classes en France, 1850, chapitre III, et lettre à Joseph Weydemeyer du 5 mars 1852 (marxists.org, traduction anglaise) ; loi n° 2013-672 du 26 juillet 2013 (Légifrance).
 Les liens sont donnés à chaque étape.
 Le livre : Stéphane Lalut, L’Odyssée des idées, nouvelle édition 2026, parcours « Pouvoir » et escales citées à chaque étape.
-Révisions
-5 novembre 2026 — « Car tel est notre plaisir » : rien n’établit qu’une ordonnance du 31 octobre 1472 ait institué la clause, que l’on lit dès les premières années du règne de Louis XI ; Mas-Latrie (1881) n’a pas trouvé « bon plaisir » dans les édits du règne de Louis XVI.
-5 novembre 2026 — Deux corrections.
-Machiavel, Le Prince, chapitre XVIII : le conseil se lit « di vincere e mantenere lo stato », vaincre et maintenir l’État, dans les éditions critiques ; la leçon « vivere », vivre, du texte courant est tenue par Lisio pour une faute de copie.
-Saint-Just soutient qu’on ne peut régner innocemment dès son discours du 13 novembre 1792, avant l’ouverture du procès en décembre.
-4 novembre 2026 — « Notre bon plaisir » : ajout de la vérification des chartistes (Demante, 1893, après Mas-Latrie, 1881) : les actes imprimés avec « bon plaisir » ne résistent pas à la confrontation avec l’original, qui porte « Car tel est notre plaisir ».
-4 novembre 2026 — La troisième manière de faire agir s’appelle désormais « façonner les conduites », et non plus « organiser les choix » : la discipline décrite par Foucault agit sur les corps et les conduites, pas seulement sur les choix offerts (contre-expertise PRO-20261103-195836).
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp
