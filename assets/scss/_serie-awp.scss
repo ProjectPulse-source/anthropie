@@ -27,9 +27,13 @@
   max-width: 720px;
 }
 
-// ── L'arc de la série (variante B, 01/10/2026) : frise de six étapes, puis un groupe par étape ──
+// ── L'arc de la série (variante B, 01/10/2026) : frise des étapes, puis un groupe par étape ──
+// Autant de colonnes que d'étapes (16/11/2026) : la grille en comptait six depuis le 01/10 ; la septième (« Éprouver »,
+// AWP-09) passait seule sous la première, son repère posé sur rien. Jusqu'à 960 px, la frise se lit de haut en bas (une
+// étape par ligne) : sur sept colonnes, « 03 · 04 · 06 » y passait sur deux lignes (mesuré à 901 px), et sur les trois
+// colonnes du téléphone la septième restait seule.
 .awp-arc {
-  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr);
   border-top: 2px solid var(--color-accent); margin: 0 0 2rem;
 }
 .awp-arc__etape {
@@ -45,10 +49,19 @@
 }
 .awp-arc__verbe { font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent); }
 .awp-arc__nums { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--color-text); }
-@media (max-width: 720px) {
-  .awp-arc { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .awp-arc__etape:nth-child(3) { border-right: 0; }
-  .awp-arc__etape:nth-child(n+4) { border-top: 1px solid var(--color-rule-soft); }
+@media (max-width: 960px) {
+  // Filet vertical à gauche, repère centré sur lui (12 px sur un filet de 2 px : -7 px) ; 6 px de marge pour que le
+  // repère reste dans la colonne.
+  .awp-arc {
+    grid-auto-flow: row; grid-template-columns: minmax(0, 1fr);
+    border-top: 0; border-left: 2px solid var(--color-accent); margin-left: 6px;
+  }
+  .awp-arc__etape {
+    grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0 0.75rem; align-items: baseline;
+    padding: 0.45rem 0.65rem 0.45rem 1.1rem; border-right: 0;
+    &::before { top: calc(50% - 6px); left: -7px; }
+  }
+  .awp-arc__etape + .awp-arc__etape { border-top: 1px solid var(--color-rule-soft); }
 }
 
 .awp-groupe { margin: 0 0 1.5rem; scroll-margin-top: 5rem; }
