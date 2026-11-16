@@ -16,15 +16,15 @@ faq:
   - question: "How does it differ from standard inequality measures?"
     answer: "Income and wealth measure what one owns; mobility, what one crosses. Reversibility measures what one can afford to fail. Two people with similar incomes can face very different futures depending on their capacity to survive error."
   - question: "What does the capacity to bounce back after failure depend on?"
-    answer: "On three components that combine: fallback capacity (holding out through the interval after the fall — savings, support networks, institutional safety nets), the institutional price of failure (what a recorded failure costs, in law and in practice) and the readmission environment (the conditions under which doors reopen). The central hypothesis of AWP-08 is their complementarity: a solid fallback protects no one if the trace of failure locks readmission, and open readmission protects no one who cannot hold out through the interval."
+    answer: "On three components that combine: fallback capacity (holding out through the interval after the fall — savings, support networks, institutional safety nets), the institutional price of failure (what a recorded failure costs, in law and in practice) and the readmission environment (the conditions under which doors reopen). The central hypothesis of AWP-08 is the complementarity of fallback and trace: when the trace of failure shuts a door all-or-nothing, a solid fallback does not reopen it; the other way round, erasing the trace protects no one who cannot hold out through the interval. It is a hypothesis to be tested, not a result."
   - question: "Why is the second chance not the same for everyone?"
-    answer: "Because the price of failure is stratified: two people with similar incomes can face very different futures depending on whether their error is erased or durably recorded in an institutional memory — payment-incident files, default histories, credit records. That inequality appears neither in income statistics nor in mobility statistics."
+    answer: "Because, according to AWP-08, the price of failure is stratified: two people with similar incomes can face very different futures depending on whether their error is erased or durably recorded in an institutional memory — payment-incident files, default histories, credit records. That inequality appears neither in income statistics nor in mobility statistics."
   - question: "Can social reversibility be measured?"
     answer: "That is the programme opened by AWP-08: a measurement architecture (V = f(C, T, A)), four families of testable propositions and an identification protocol on two dated French institutional reforms — the removal of the 040 indicator from the Banque de France's FIBEN file and the insurance right-to-be-forgotten of the Lemoine Act. It is a refutable framework, not yet an empirical result."
   - question: "Who proposed the concept of social reversibility?"
     answer: "Stéphane Lalut, economist and independent researcher, in the working paper AWP-08 — Social Reversibility as a Dimension of Inequality (2026, DOI 10.5281/zenodo.21507249), eighth of the Anthropie Working Papers. The concept extends the framework of anthropy: the stratified price of failure is a mechanism of social disorder distribution."
   - question: "Is social reversibility a synonym for resilience?"
-    answer: "No. Resilience describes an individual psychological capacity to overcome hardship. Social reversibility describes a structural position — fallback, price, readmission — that exists before any hardship and independently of a person's psychological dispositions."
+    answer: "No. In the psychological sense used here, resilience describes an individual capacity to overcome hardship. Social reversibility describes a structural position — fallback, price, readmission — that exists before any hardship and independently of a person's psychological dispositions."
   - question: "Why \"reversibility\"?"
     answer: "Because the decisive question is that of return: an error is reversible when the options it closes can be recovered. Irreversibility — the lasting closure of one's future — is the true social cost of failure, and it is unequally distributed."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
@@ -34,7 +34,7 @@ fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the pa
     - t: "Origin"
       d: "Proposed by the economist Stéphane Lalut in [AWP-08](/en/awp/awp-08/) (2026), as a third dimension of inequality."
     - t: "Not to be confused with"
-      d: "Resilience, an individual psychological capacity to overcome hardship; social reversibility is a structural position that exists before any hardship."
+      d: "Resilience in the psychological sense, an individual capacity to overcome hardship; social reversibility is a structural position that exists before any hardship."
     - t: "Example"
       d: "Two people with identical incomes: one can attempt a business, a fallback exists; for the other, the same failure triggers the gears — overdraft, negative records, housing."
     - t: "Limit"
@@ -46,19 +46,19 @@ schemas:  # mechanism diagram (notion-schema shortcode)
   mecanisme:
     titre: "What makes bouncing back possible: V = f(C, T, A)"
     etages:
-      - titre: "Three complementary components"
+      - titre: "Three components"
         boites:
           - {t: "C — Fallback capacity", d: "Holding out through the interval between the fall and the next attempt: savings, support networks, safety nets"}
           - {t: "T — Price of failure", d: "What failure costs in law and in practice, including the trace it leaves"}
           - {t: "A — Readmission", d: "Doors that reopen: employers, lenders, institutions"}
-        fleche: "the effect of each depends on the level of the others"
+        fleche: "central hypothesis: the effect of the fallback depends on the trace, and vice versa"
       - boites:
           - {t: "V — Social reversibility", d: "Withstanding a failure without durably closing one's future", ton: "ordre"}
         fleche: "it acts before and after failure"
       - boites:
-          - {t: "Before: the decision to try", d: "Whoever knows a failure would be irrecoverable abstains — an abstention invisible in the statistics", ton: "cout"}
-          - {t: "After: the price of failure", d: "Stratified by social position; the trace conditions credit, insurance, housing", ton: "cout"}
-    note: "A solid fallback is worth little if the trace locks readmission; open readmission protects no one who cannot hold out through the interval."
+          - {t: "Before: the decision to try", d: "Whoever knows a failure would be irrecoverable would abstain — an abstention invisible in the statistics (AWP-08's proposition, to be tested)", ton: "cout"}
+          - {t: "After: the price of failure", d: "Stratified by social position, according to AWP-08; the trace conditions credit, insurance, housing", ton: "cout"}
+    note: "AWP-08's hypothesis: when the trace shuts a door all-or-nothing, a solid fallback does not reopen it; the other way round, erasing the trace protects no one who cannot hold out through the interval."
 comparaisons:  # boundary between neighbouring notions (notion-comparaison shortcode)
   dimensions:
     titre: "Three dimensions of inequality"
@@ -86,9 +86,9 @@ Social reversibility is the capacity, assessed *before* an attempt, to withstand
 
 ## What one can afford to fail
 
-Inequality is usually measured by what one owns — income, wealth — or by what one crosses — mobility between social positions. A third measure is missing: what a person can afford to **fail** without durably closing their future.
+Inequality is usually measured by what one owns — income, wealth — or by what one crosses — mobility between social positions. A third measure is almost always missing: what a person can afford to **fail** without durably closing their future.
 
-Two people with identical incomes do not stand in the same relation to risk. One can leave a job, attempt a business, return to study: if the attempt fails, a fallback exists — savings, a support network, a way back. The other plays every attempt double-or-nothing: the same failure triggers the gears — overdraft, negative records, housing, reputation. The first has high reversibility; the second, low. This difference shows up neither in income statistics nor in mobility statistics — yet it governs who gets to try.
+Two people with identical incomes do not always stand in the same relation to risk. One can leave a job, attempt a business, return to study: if the attempt fails, a fallback exists — savings, a support network, a way back. The other plays every attempt double-or-nothing: the same failure triggers the gears — overdraft, negative records, housing, reputation. The first has high reversibility; the second, low. This difference shows up neither in income statistics nor in mobility statistics — yet it would weigh on who gets to try.
 
 {{< notion-comparaison id="dimensions" >}}
 
@@ -96,7 +96,7 @@ Two people with identical incomes do not stand in the same relation to risk. One
 
 The pivot of the framework is the **trace**: the memory institutions keep of a failure, and the readmission regime it governs.
 
-A payment incident, a business default, a recorded flag do not disappear with the event: they are written down — files, histories, scores — and condition future access to credit, insurance, housing, sometimes employment. Institutions choose how long they remember. In the United States, bankruptcy law is explicitly built around a *fresh start*, and the Fair Credit Reporting Act caps how long most negative items may remain on a credit report. France has shortened two of its own memories: a 2013 decree (no. 2013-799) removed the 040 indicator from the Banque de France's FIBEN file, which for three years had flagged directors who had been through a judicial liquidation; and the Lemoine Act (2022) cut to five years the waiting period of the insurance right to be forgotten, after which the insurer may no longer collect information on a cured cancer. In each case, a society decided to *shorten the memory of failure* — that is, to increase the reversibility of those it concerned.
+A payment incident, a business default, a recorded flag do not disappear with the event: they are written down — files, histories, scores — and condition future access to credit, insurance, housing, sometimes employment. Institutions choose how long they remember. In the United States, bankruptcy law is explicitly built around a *fresh start*, and the Fair Credit Reporting Act caps how long most negative items may remain on a credit report. France has changed two of its institutional memories: a 2013 decree (no. 2013-799) removed the 040 indicator from the Banque de France's business file (FIBEN), which for three years had flagged directors who had been through a single judicial liquidation — the same decree extended from three to five years the period during which the liquidation itself may be reported to banks; and the Lemoine Act (2022) cut to five years the waiting period of the right to be forgotten in loan insurance, after which the insurer may no longer collect information on a cancer or hepatitis C whose treatment has ended. In the first case, the rule erased a flag while lengthening the memory of the information; in the second, it shortened the memory of an illness, which is not a failure in AWP-08's sense. The framework reads both as changes in reversibility, still to be measured.
 
 ## Bouncing back: structure, not just psychology
 
@@ -110,13 +110,13 @@ The framework of AWP-08 names them. Bouncing back requires:
 2. **a bearable price of failure** (T) — what failure costs in law and in practice, including the trace it leaves;
 3. **a readmission environment** (A) — doors that reopen: employers, lenders, institutions willing to consider a marked file.
 
-The framework's own hypothesis is the **complementarity** of these components: the effect of each depends on the level of the others. A solid fallback is worth little if the trace locks readmission; open readmission protects no one who cannot hold out through the interval. This is why second-chance policies acting on a single component — psychological support without the safety net, or record-clearing without the fallback — so often disappoint.
+The framework's own hypothesis is the **complementarity** of fallback and trace: the effect of the one depends on the level of the other; readmission extends it, outside the core that AWP-08 puts to the test. On this hypothesis, when the trace shuts a door all-or-nothing, a solid fallback does not reopen it; the other way round, erasing the trace protects no one who cannot hold out through the interval. The framework draws from it a prediction, which its protocols must test: a second-chance policy acting on a single component — psychological support without the safety net, or record-clearing without the fallback — would have little effect.
 
-Only one of these components can be measured in public statistics today, and only in part: the financial capacity to absorb a shock. The data page [Who can cope with an unexpected expense?](/en/who-can-cope-with-an-unexpected-expense/) shows that it varies sharply with household composition, including above the poverty threshold.
+Public statistics mostly measure fallback capacity, and only in part: the financial capacity to absorb a shock. The trace appears there only through the headcounts of the banking files published by the Banque de France, and its duration can be read in the law. The data page [Who can cope with an unexpected expense?](/en/who-can-cope-with-an-unexpected-expense/) shows that this capacity varies sharply with household composition, including above the poverty threshold.
 
 ## An inequality that governs attempts
 
-Social reversibility does not act only *after* failure: it acts *before*, on the very decision to try. Whoever knows that a failure would be unrecoverable abstains — and that abstention is invisible in the statistics, since nothing happened. A low-reversibility society does not merely produce costlier failures: it produces fewer attempts, and reserves them for those who can afford to fail.
+According to AWP-08's first proposition, which the framework puts to the test, social reversibility does not act only *after* failure: it acts *before*, on the very decision to try. Whoever knows that a failure would be unrecoverable tends to abstain — and that abstention is invisible in the statistics, since nothing happened. A low-reversibility society would not merely produce costlier failures: it would produce fewer attempts, and reserve them for those who can afford to fail.
 
 This is the link with the general framework of [anthropy](/en/quest-ce-que-lanthropie/): the cost of failure does not disappear, it is displaced and distributed — unequally. [AWP-01](/en/awp/awp-01/) states the hypothesis of disorder displacement; [AWP-07](/en/awp/awp-07/) formalises its loop (see [What is the anthropic loop?](/en/anthropic-loop/)); [AWP-08](/en/awp/awp-08/) provides its micro-institutional counterpart: the stratified price of failure is a mechanism of social disorder distribution.
 

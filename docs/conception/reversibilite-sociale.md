@@ -28,15 +28,15 @@ Rebondir après un échec est affaire de psychologie (résilience).
 
 ### Découverte principale
 
-Rebondir suppose trois composantes complémentaires — repli, tarif d'échec, réadmission — inégalement réparties ; leur absence agit avant même l'échec, sur la décision d'essayer.
+Selon AWP-08, la capacité de rebondir dépend du repli, de la trace (tarif d'échec) et de la réadmission ; l'hypothèse propre du cadre est la complémentarité du repli et de la trace, et sa première proposition, à tester, est que cette capacité agit avant l'échec, sur la décision d'essayer (relecture R1, l. 79 et 85-87 ; AWP-08, résumé et § 5.1-5.2 ; sonde de la session, AWP-08 l. 23-24).
 
 ### Mécanisme explicatif
 
-V = f(C, T, A), avec complémentarité des composantes ; la trace gouverne la réadmission.
+V = f(C, T, A), avec complémentarité du repli et de la trace (P4), hypothèse à tester ; quand la trace ferme une porte en tout-ou-rien, le repli ne la rouvre pas (R1, l. 73 et 79 ; AWP-08 § 2.2 et § 5.2).
 
 ### Preuve décisive
 
-AWP-08 (architecture de mesure, protocole d'identification) ; deux terrains datés : indicateur 040 du FIBEN (2021), loi Lemoine (2022).
+AWP-08 (architecture de mesure, protocole d'identification) ; deux terrains datés : indicateur 040 du FIBEN (supprimé en 2013, décret n° 2013-799 ; le même décret a porté de trois à cinq ans la communication de l'information de liquidation : R1, l. 52 a), loi Lemoine (2022).
 
 ### Pouvoir discriminant
 
@@ -93,3 +93,10 @@ moteurs de réponse) ; état initial à relever au relevé J+60 déjà prévu po
 - Instantané de relecture : non fait (suit la relecture entière).
 - Contre-expertise de la page : non faite.
 - Accord de l'auteur : demandé avec le diff du 26/10/2026.
+
+### Reprise du 16/11/2026 (lot « notions-b », `/reprise-ressource`, mode préparer)
+
+- Relecture des sources par un relecteur neuf : faite (`06_PROMOTION/INTELLIGIBILITE_RESSOURCES_2026-11-11/LOTS/notions-b/SOURCES/reversibilite-sociale_R1.md`), trois lignes sondées à la source par la session (`SONDES_SESSION.md`).
+- Interventions : spécification rejouable `LOTS/notions-b/specs/reversibilite-sociale.py` ; contrôle de la lettre justifié ligne à ligne.
+- Juge interne à l'aveugle et jugement externe : voir `LOTS/notions-b/LOT.md`. `ressource.refonte` : non posée (relecture phrase à phrase entière et instantané à faire à la publication).
+
