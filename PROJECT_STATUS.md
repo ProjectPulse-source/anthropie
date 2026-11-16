@@ -77,6 +77,13 @@ puis publiée sur demande de l'auteur (« retiens Platon et la fiche AWP-05, pui
   1 440 px.
 - **Servi** : déploiement `hugo.yml` 43873759646 réussi, contrôle de fumée compris ; version servie attestée le 16/11
   vers 14 h 15 : 7 pages en HTTP 200, texte identique au build contrôlé (0 écart), une phrase nouvelle trouvée sur chacune.
+- **Arbitrages restants, tranchés le même jour sur délégation de l'auteur** (`336a025`, `688226a`) : sous-titre de
+  *L'Odyssée des idées* pris à sa page de titre (« De l'aube de l'humanité à l'ère numérique », celui des éditions de 682
+  et 696 p. ; le sous-titre du 03/07 n'était sur aucune surface du livre), affiché sur 13 pages ; résumé d'AWP-05 et
+  titres anglais d'AWP-04/05 alignés sur les dépôts ; gloses du « marbre veiné » et de « en acte » sur la tabula (premier
+  écran retesté). 22 pages HTML changées, toutes lues ; `check-all --ci` à 0. Déploiement 43882700044 réussi ; version
+  servie attestée vers 15 h 25 (7 pages : nouveau texte présent, ancien sous-titre absent ; tabula et Machiavel
+  identiques au build contrôlé).
 
 ### 2026-11-16 — Guichet `/ressources-offertes/` : surtitres rendus comme dessinés ; Livresque sans chapô visible
 
