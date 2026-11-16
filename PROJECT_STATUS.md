@@ -70,6 +70,9 @@ Commande `/reprise-forme publications publier`, relance sur le forfait (R3 du lo
 - **Contrôles** : lettre sur les 12 pages (témoin vu mordre) ; périmètre du site construit (seule la page Livresque
   change, et la feuille) ; `check-all --ci` à 0 ; build et `typo_build.py` ; liens identiques avant et après ;
   débordement 0.
+- **Servi** : déploiement `hugo.yml` 43831672026 réussi ; version servie attestée le 16/11 vers 9 h 35 (12 pages en
+  HTTP 200, texte identique au build contrôlé, feuille `style.8aa9cc85…` identique, surtitres relevés en ligne en
+  linéale de 12 px sans filet ; chapô de Livresque absent).
 
 ### 2026-11-16 — Forme du lot « publications » (AWP, série AWP) : lecture au téléphone, titres d'encadré, frise
 
