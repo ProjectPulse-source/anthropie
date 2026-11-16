@@ -43,7 +43,7 @@ onglet:  # barre du bloc (partials/barre-bloc.html, posée par le gabarit)
   court: "Pouvoir"
 ---
 
-«&nbsp;Qu'est-ce qui fait qu'un homme obéit à un autre&nbsp;?&nbsp;» La question ouvre, dans [*L'Odyssée des idées*](/livres/lodyssee-des-idees/), le parcours que le livre consacre au pouvoir&nbsp;: onze escales datées, de −1200 à 2012, et trois échos vers d'autres routes du livre. Cette page suit ce parcours. Chaque étape reçoit la même grille&nbsp;: **l'idée**, telle que le livre la résume&nbsp;; **le texte**, cité dans sa langue d'origine avec son édition quand il a pu être lu&nbsp;; **la limite**, le point où ce ressort de l'obéissance cède&nbsp;; et l'escale du livre. Les textes ont été relus le 1<sup>er</sup>&nbsp;novembre 2026&nbsp;; les traductions sont celles de cette page.
+«&nbsp;Qu'est-ce qui fait qu'un homme obéit à un autre&nbsp;?&nbsp;» La question ouvre, dans [*L'Odyssée des idées*](/livres/lodyssee-des-idees/), le parcours que le livre consacre au pouvoir&nbsp;: onze escales datées, de −1200, horizon mythique d'Atrée, à 2012, et trois échos vers d'autres routes du livre. Cette page suit ce parcours en neuf étapes, deux d'entre elles réunissant chacune deux escales (1789 et 1793, 2003 et 2012)&nbsp;; la crainte y revient deux fois, d'Atrée à Machiavel, si bien que les neuf étapes font apparaître huit ressorts. Chaque étape reçoit la même grille&nbsp;: **l'idée**, telle que le livre la résume&nbsp;; **le texte**, cité dans sa langue d'origine avec son édition quand il a pu être lu&nbsp;; **la limite**, le point où ce ressort de l'obéissance cède&nbsp;; et l'escale du livre. Les textes ont été relus le 1<sup>er</sup>&nbsp;novembre 2026&nbsp;; les traductions sont celles de cette page.
 
 
 <div class="resultat-phrase">

@@ -1,11 +1,11 @@
-# relu le 2026-11-16 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 40b5513 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
-À quoi tient l’obéissance ?
+# relu le 2026-11-16 ; texte servi de /le-pouvoir-de-machiavel-a-foucault/, build de 02bbc87 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+À quoi tient l'obéissance ?
 Le pouvoir, de Machiavel à Foucault
-La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l’attraction : de −1200 à 2012, le parcours « Pouvoir » de L’Odyssée des idées répond en neuf étapes à la question « pourquoi obéit-on ? ».
-Et trois formules célèbres du parcours ne sont pas ce qu’on croit, à commencer par « la fin justifie les moyens ».
+La crainte, le pacte, le corps du roi, le peuple souverain, le provisoire, la norme, la nécessité, l'attraction : de −1200 à 2012, le parcours « Pouvoir » de L'Odyssée des idées répond en neuf étapes à la question « pourquoi obéit-on ? ».
+Et trois formules célèbres du parcours ne sont pas ce qu'on croit, à commencer par « la fin justifie les moyens ».
 Page mise à jour le 16 novembre 2026
-« Qu’est-ce qui fait qu’un homme obéit à un autre ? » La question ouvre, dans L’Odyssée des idées, le parcours que le livre consacre au pouvoir : onze escales datées, de −1200 à 2012, et trois échos vers d’autres routes du livre.
-Cette page suit ce parcours.
+« Qu’est-ce qui fait qu’un homme obéit à un autre ? » La question ouvre, dans L’Odyssée des idées, le parcours que le livre consacre au pouvoir : onze escales datées, de −1200, horizon mythique d’Atrée, à 2012, et trois échos vers d’autres routes du livre.
+Cette page suit ce parcours en neuf étapes, deux d’entre elles réunissant chacune deux escales (1789 et 1793, 2003 et 2012) ; la crainte y revient deux fois, d’Atrée à Machiavel, si bien que les neuf étapes font apparaître huit ressorts.
 Chaque étape reçoit la même grille : l’idée, telle que le livre la résume ; le texte, cité dans sa langue d’origine avec son édition quand il a pu être lu ; la limite, le point où ce ressort de l’obéissance cède ; et l’escale du livre.
 Les textes ont été relus le 1er novembre 2026 ; les traductions sont celles de cette page.
 Le résultat en une phrase.
@@ -122,7 +122,7 @@ Encore faut-il examiner, décision par décision, quelles options existaient et 
 Le bilan reste disputé : inflation maîtrisée et place financière de Londres d’un côté ; désindustrialisation, chômage massif au début des années 1980 et fractures territoriales de l’autre.
 Dans le livre : escale « 1979 · Margaret Thatcher : la nécessité comme arme politique ».
 2003-2012 : le pouvoir sans visage
-L’attraction et les conditions · façonner les conduites
+L'attraction et les conditions · façonner les conduites
 L’idée : trois manières d’influencer sans commander, qui ne fonctionnent pas de la même façon : des techniques qui organisent les choix, une attraction qui change les préférences, des contraintes financières qui pèsent sur les gouvernants.
 En 2003, B.
 J.
@@ -149,7 +149,7 @@ Panem et circenses : dans la dixième de ses Satires, au début du IIe siècle, 
 Le danger, dit le livre, naît à l’instant où ils tiennent lieu de participation (escale « 110 · Panem et circenses : nourrir, distraire, et faire de la mort un spectacle »).
 Ce que montre le parcours : trois manières de faire agir
 Ressort
-Manière d’agir
+Manière d'agir
 Ce qui fait obéir
 Où il cède, selon le livre
 La crainte (−1200, 1513)
@@ -162,28 +162,28 @@ la peur de la guerre de chacun contre chacun
 au droit de chacun de ne pas vouloir sa mort
 Le corps du roi (1655)
 faire obéir
-l’incarnation du pouvoir dans une personne
-à la mort du roi : « l’État demeurera toujours », selon le mémorialiste Dangeau
+l'incarnation du pouvoir dans une personne
+à la mort du roi : « l'État demeurera toujours », selon le mémorialiste Dangeau
 Le peuple souverain (1789-1793)
 faire reconnaître une autorité
-une légitimité venue d’en bas
+une légitimité venue d'en bas
 elle doit se prouver sans relâche
 Le provisoire (1850)
 faire reconnaître une autorité
 la promesse de disparaître
-le provisoire s’installe, faute de contre-pouvoirs
+le provisoire s'installe, faute de contre-pouvoirs
 La norme (1975)
 façonner les conduites
 la surveillance que chacun fait sienne
-le livre n’en nomme pas ; Foucault y place la résistance
+le livre n'en nomme pas ; Foucault y place la résistance
 La nécessité (1979)
 façonner les conduites
-l’absence d’alternative proclamée
+l'absence d'alternative proclamée
 les alternatives existaient
-L’attraction et les conditions (2003-2012)
+L'attraction et les conditions (2003-2012)
 façonner les conduites
-l’adhésion sans ordre donné
-l’adhésion peut se perdre
+l'adhésion sans ordre donné
+l'adhésion peut se perdre
 Lu de haut en bas, le tableau, qui est une grille de cette page, ne raconte pas la substitution d’un pouvoir à un autre.
 Il fait voir trois manières de faire agir les hommes — faire obéir, faire reconnaître une autorité, façonner les conduites —, qui coexistent, et dont un même pouvoir peut user à la fois.
 Ce ne sont pas trois explications concurrentes de l’obéissance : chez Hobbes, l’autorité qu’on reconnaît au souverain et la crainte de sa puissance vont ensemble.
@@ -197,8 +197,8 @@ Le choix des étapes est celui du livre, onze escales et trois échos, et il n�
 Les résumés sont ceux du livre, qui en développe les nuances ; Surveiller et punir est résumé, non cité ; la formule « There is no alternative » est donnée d’après le livre, et une seule de ses occurrences datées a été relue ici (1980).
 Les trois manières de faire agir sont une grille de cette page, établie après sa contre-expertise ; le livre ne la formule pas sous cette forme.
 Suivre les idées dans le temps
-L’Odyssée des idées
-De l’aube de l’humanité à l’ère numérique
+L'Odyssée des idées
+De l'aube de l'humanité à l'ère numérique
 Cette page suit un parcours.
 L’Odyssée des idées en compte sept, qui traversent ses 250 escales, des premiers signes à l’intelligence artificielle : le pouvoir y croise la liberté, l’argent, l’opinion et le sacré, et chaque escale y tient en quelques pages.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
@@ -208,22 +208,22 @@ Version papier : 36 € · Kindle : disponible
 Sommaire, extraits et recensions →
 Questions fréquentes
 Machiavel a-t-il écrit « la fin justifie les moyens » ?
-Non, la formule n’est pas dans Le Prince.
-Le contresens part du chapitre XVIII : dans les actions des princes, écrit Machiavel, « si guarda al fine » — on regarde au résultat — et « i mezzi saranno sempre giudicati onorevoli », les moyens seront toujours jugés honorables, par la foule qui juge sur l’apparence et sur l’issue.
-Le passage est aussi un conseil : que le prince fasse en sorte de vaincre et de maintenir l’État, le résultat fera juger les moyens.
-Ce n’est pas une permission générale de tout faire, et sa portée morale reste discutée.
-D’où vient « l’homme est un loup pour l’homme » ?
+Non, la formule n'est pas dans Le Prince.
+Le contresens part du chapitre XVIII : dans les actions des princes, écrit Machiavel, « si guarda al fine » — on regarde au résultat — et « i mezzi saranno sempre giudicati onorevoli », les moyens seront toujours jugés honorables, par la foule qui juge sur l'apparence et sur l'issue.
+Le passage est aussi un conseil : que le prince fasse en sorte de vaincre et de maintenir l'État, le résultat fera juger les moyens.
+Ce n'est pas une permission générale de tout faire, et sa portée morale reste discutée.
+D'où vient « l'homme est un loup pour l'homme » ?
 De Plaute, dans la comédie Asinaria (v.
-495) : « lupus est homo homini, non homo, quom qualis sit non novit », l’homme est un loup, non un homme, pour qui ne sait pas encore quel il est.
-Hobbes la reprend dans la dédicace du De Cive (1642), et non dans le Léviathan, en la dédoublant : l’homme est un dieu pour l’homme entre citoyens, un loup entre cités.
-Louis XIV a-t-il dit « L’État, c’est moi » ?
-Rien ne l’établit.
-On la lui prête devant le Parlement de Paris, le 13 avril 1655, mais aucun témoignage contemporain solide ne la rapporte et les registres du Parlement l’ignorent : les historiens y voient une invention tardive.
-Mourant, en 1715, il aurait dit l’inverse, selon un mémoire de Dangeau dont le texte diffère d’une autre version de la scène : « Je m’en vais, mais l’État demeurera toujours. »
-Qu’est-ce que la dictature du prolétariat chez Marx ?
+495) : « lupus est homo homini, non homo, quom qualis sit non novit », l'homme est un loup, non un homme, pour qui ne sait pas encore quel il est.
+Hobbes la reprend dans la dédicace du De Cive (1642), et non dans le Léviathan, en la dédoublant : l'homme est un dieu pour l'homme entre citoyens, un loup entre cités.
+Louis XIV a-t-il dit « L'État, c'est moi » ?
+Rien ne l'établit.
+On la lui prête devant le Parlement de Paris, le 13 avril 1655, mais aucun témoignage contemporain solide ne la rapporte et les registres du Parlement l'ignorent : les historiens y voient une invention tardive.
+Mourant, en 1715, il aurait dit l'inverse, selon un mémoire de Dangeau dont le texte diffère d'une autre version de la scène : « Je m'en vais, mais l'État demeurera toujours. »
+Qu'est-ce que la dictature du prolétariat chez Marx ?
 Un passage.
-Marx la nomme en 1850, dans Les Luttes de classes en France, comme le point de transit nécessaire vers l’abolition des différences de classe, et le redit en 1852 dans une lettre à Joseph Weydemeyer : cette dictature ne constitue que la transition vers l’abolition de toutes les classes.
-L’expression n’est pas dans le Manifeste de 1848.
+Marx la nomme en 1850, dans Les Luttes de classes en France, comme le point de transit nécessaire vers l'abolition des différences de classe, et le redit en 1852 dans une lettre à Joseph Weydemeyer : cette dictature ne constitue que la transition vers l'abolition de toutes les classes.
+L'expression n'est pas dans le Manifeste de 1848.
 Sources
 Textes, relus le 1er novembre 2026 : Suétone, Vie de Caligula, 30, et Vie de Tibère, 59 (The Latin Library) ; Machiavel, Il Principe, chapitres XV, XVII et XVIII (Wikisource), et pour la phrase « Facci dunque » du chapitre XVIII, l’édition critique de Giuseppe Lisio (Florence, Sansoni, 1899, texte et apparat, Internet Archive) et l’édition de Luigi Firpo (Turin, Einaudi, 1972, Liber Liber), relues le 5 novembre 2026 ; Isambert et al., Recueil général des anciennes lois françaises, t.
 X, règne de Louis XI (Internet Archive, lu le 5 novembre 2026) ; Saint-Just, discours du 13 novembre 1792 (Archives parlementaires, t.
