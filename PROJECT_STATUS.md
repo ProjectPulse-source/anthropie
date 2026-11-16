@@ -52,6 +52,28 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-16 — Forme du lot « publications » (AWP, série AWP) : lecture au téléphone, titres d'encadré, frise
+
+Commande `/reprise-forme publications publier` ; rapport : `D:\PRO\06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\forme-publications\RAPPORT.md`.
+- **Pages AWP (9 FR, 9 EN), un gabarit** : le bloc « Lire ou télécharger » (`partials/awp-lire.html`, posé deux fois)
+  s'affiche à la fin de l'en-tête jusqu'à 768 px, où la colonne latérale passe sous l'article : à 390 px de large,
+  « Lire en ligne » arrivait entre 5 783 et 9 325 px de haut selon l'AWP, il est désormais entre 369 et 536 px, dans le
+  premier écran ; un seul des deux blocs est visible à chaque largeur (mesuré de 320 à 1 440 px, avec et sans
+  JavaScript). Deux lecteurs simulés sur deux trouvent « Lire en ligne » pour premier geste ; témoin trompeur vu mordre.
+  Titres d'encadré (Résumé, Abstract, Informations bibliographiques, Comment citer, Working papers liés) : deux classes,
+  pour que la règle commune `.content-reading h2` (`_page-common.scss`) ne leur pose plus filet, retrait de 32 px ni
+  corps de titre de section. Listes du gabarit (fil d'Ariane, mots-clés, papiers liés, série) sorties du décalage de
+  `main ul` (`_typography.scss`). Interligne propre des titres de la colonne : les accents des capitales n'y sont plus
+  rognés (« TÉLÉCHARGER »).
+- **Frise de l'arc** (`_serie-awp.scss`, sert `/serie-awp/` et la définition de l'anthropie, FR et EN) : autant de
+  colonnes que d'étapes (la septième, « Éprouver », passait seule sous la première sur une grille de six) ; jusqu'à
+  960 px, une étape par ligne le long d'un filet vertical.
+- **Texte servi** : identique sur les 44 pages du lot, sauf la seconde copie du bloc de lecture (4 lignes déjà présentes
+  sur chaque page AWP) ; contrôles à 0 (`check-all --ci`, build, `typo_build.py`, liens identiques avant et après, dates,
+  rendu, relecture) ; débordement 0 sur 46 pages × 5 largeurs.
+- **Non publié, décision de l'auteur** : `/livresque/methode-et-corpus/` sans chapô visible (il redit le premier
+  paragraphe) ; correctif d'une ligne dans le lot.
+
 ### 2026-11-15 — `/quest-ce-que-lanthropie/` : boutons de la spirale rétablis, chiffres des trois questions marqués
 
 - Boutons d'exemples (Le schéma, Rome, Dette publique, Environnement, Numérique) rétablis sur la forme courte de la
