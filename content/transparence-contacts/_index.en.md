@@ -18,6 +18,19 @@ with the text, the data, the resource or the book I am pointing to.
 
 Each message is written for a specific recipient, because of their published work or their position. No address list is bought.
 
+## Your rights
+
+You may request access to, rectification or erasure of your data, or restriction of
+its processing.
+
+You may object at any time to further contact. A simple reply saying “do not contact
+me again” is enough. A minimal piece of data may then be kept exclusively in order to
+comply with this request.
+
+You can exercise your rights by replying to the message you received or through the
+[Contact page](/en/contact/). You may also lodge a complaint with the
+[CNIL](https://www.cnil.fr) (the French data protection authority).
+
 ## Data controller
 
 Stéphane Lalut, economist — independent researcher.
@@ -58,19 +71,6 @@ exchanges is kept for as long as is needed to follow them up.
 
 In the event of an objection, minimised information is kept for at least three
 years, solely in order to prevent any further contact.
-
-## Your rights
-
-You may request access to, rectification or erasure of your data, or restriction of
-its processing.
-
-You may object at any time to further contact. A simple reply saying “do not contact
-me again” is enough. A minimal piece of data may then be kept exclusively in order to
-comply with this request.
-
-You can exercise your rights by replying to the message you received or through the
-[Contact page](/en/contact/). You may also lodge a complaint with the
-[CNIL](https://www.cnil.fr) (the French data protection authority).
 
 ## “Free books” scheme {#ressources-offertes}
 

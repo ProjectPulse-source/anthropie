@@ -18,6 +18,19 @@ direct avec le texte, la donnée, la ressource ou l'ouvrage signalé.
 
 Chaque message est rédigé pour un destinataire précis, en raison de son travail publié ou de sa fonction. Aucun fichier d'adresses n'est acheté.
 
+## Vos droits
+
+Vous pouvez demander l'accès, la rectification, l'effacement ou la limitation du
+traitement de vos données.
+
+Vous pouvez vous opposer à tout moment à un nouveau contact. Une simple réponse
+«&nbsp;ne plus me contacter&nbsp;» suffit. Une donnée minimale peut alors être
+conservée exclusivement pour respecter cette demande.
+
+Vous pouvez exercer vos droits en répondant au message reçu ou par la
+[page Contact](/contact/). Vous pouvez également adresser une réclamation à la
+[CNIL](https://www.cnil.fr).
+
 ## Responsable du traitement
 
 Stéphane Lalut, économiste — chercheur indépendant.
@@ -60,19 +73,6 @@ minimal des échanges est conservé pendant la durée nécessaire à leur suivi.
 
 En cas d'opposition, une information minimisée est conservée pendant au moins trois
 ans, uniquement afin d'éviter tout nouveau contact.
-
-## Vos droits
-
-Vous pouvez demander l'accès, la rectification, l'effacement ou la limitation du
-traitement de vos données.
-
-Vous pouvez vous opposer à tout moment à un nouveau contact. Une simple réponse
-«&nbsp;ne plus me contacter&nbsp;» suffit. Une donnée minimale peut alors être
-conservée exclusivement pour respecter cette demande.
-
-Vous pouvez exercer vos droits en répondant au message reçu ou par la
-[page Contact](/contact/). Vous pouvez également adresser une réclamation à la
-[CNIL](https://www.cnil.fr).
 
 ## Dispositif «&nbsp;Livres offerts&nbsp;» {#ressources-offertes}
 
