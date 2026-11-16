@@ -52,6 +52,25 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-16 — Guichet `/ressources-offertes/` : surtitres rendus comme dessinés ; Livresque sans chapô visible
+
+Commande `/reprise-forme publications publier`, relance sur le forfait (R3 du lot ; Livresque sur décision de l'auteur du
+16/11) ; rapport : `D:\PRO\06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\forme-publications\RAPPORT.md`, section
+« Relance du 16/11 ».
+- **Guichet, 11 pages** : les surtitres `h2.ressources-kicker` (« Comment cela fonctionne », « Amazon », « Confidentialité »,
+  « Faire circuler ce livre »…) recevaient depuis la création de la page (05/07/2026) la règle commune `.home-section h2`
+  (`_page-common.scss`, spécificité 0,3,1) : titres à empattements de 22 à 28 px, filet, 48 px de marge et 32 px de
+  retrait, double filet sous le filet accentué des blocs Garanties et Transmission. Règle en 0,4,1 dans
+  `_ressources-offertes.scss`, comme `.livres-sous` : linéale de 12 px, un seul filet, surtitre à 18 px du bord du bloc
+  (mesuré de 320 à 1 440 px, avec et sans JavaScript). Texte servi identique.
+- **`/livresque/methode-et-corpus/`** : chapô visible retiré (il redisait le premier paragraphe dans le même ordre ; la
+  description reste en métadonnée). `livres/list.html`, qui sert aussi cette page, n'honorait pas `sans_chapo` : il le
+  fait désormais, comme `_default/list.html`. Une phrase servie en moins, aucune autre ; au téléphone, les chiffres
+  canoniques entrent dans le premier écran.
+- **Contrôles** : lettre sur les 12 pages (témoin vu mordre) ; périmètre du site construit (seule la page Livresque
+  change, et la feuille) ; `check-all --ci` à 0 ; build et `typo_build.py` ; liens identiques avant et après ;
+  débordement 0.
+
 ### 2026-11-16 — Forme du lot « publications » (AWP, série AWP) : lecture au téléphone, titres d'encadré, frise
 
 Commande `/reprise-forme publications publier` ; rapport : `D:\PRO\06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\forme-publications\RAPPORT.md`.
