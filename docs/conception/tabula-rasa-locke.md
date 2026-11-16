@@ -159,3 +159,9 @@ reprise : J+30 et J+60 après sa mise en ligne, à inscrire dans `D:\PRO\06_PROM
   `typo_build.py`) ; date de modification et journal posés le même jour (`LOTS/reperes-a/specs/publication.py`).
 - Accord de l'auteur : publication demandée le 16/11/2026 (« retiens Platon et la fiche AWP-05, puis publie ») ; état de
   la mise en ligne : `LOTS/reperes-a/LOT.md`.
+- Arbitrages tranchés par délégation de l'auteur (16/11/2026, « tranche les arbitrages ») : deux gloses de définition,
+  « marbre veiné » au chapô (« dont les veines disposent la pierre à une figure plutôt qu'à une autre », mots du corps
+  et de la FAQ) et « en acte, c'est-à-dire effectivement » au corps ; premier écran retesté (deux lecteurs, témoin vu
+  mordre) ; instantané de relecture refait. Le sous-titre de *L'Odyssée des idées* affiché par le bloc d'appel est
+  désormais celui de la page de titre du livre (« De l'aube de l'humanité à l'ère numérique », `data/works.yaml`).
+  `LOTS/reperes-a/specs/arbitrages.py`.

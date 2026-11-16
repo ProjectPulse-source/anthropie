@@ -1,9 +1,9 @@
-# relu le 2026-11-16 ; texte servi de /tabula-rasa-locke/, build de 386e365 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-16 ; texte servi de /tabula-rasa-locke/, build de 3c13f6c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 La tabula rasa : Locke a-t-il vraiment parlé d’une page blanche ?
 D’un « papier blanc », oui : l’Essai de 1690 dit « white paper ».
 La formule tabula rasa, elle, n’est pas dans son livre, mais Locke la connaît : il l’emploie dès les années 1660, dans des écrits restés manuscrits, puis dans le résumé de son livre, publié en 1688, avant le livre lui-même.
 L’image de la tablette vierge vient d’Aristote, la formule latine de ses commentateurs médiévaux, et en français elle est entrée dans le texte de l’Essai par sa traduction.
-Leibniz lui oppose un marbre veiné.
+Leibniz lui oppose un marbre veiné, dont les veines disposent la pierre à une figure plutôt qu’à une autre.
 Ce que la formule fait dire de trop tient en une phrase : l’esprit naît vide d’idées, il ne naît pas inerte.
 Page mise à jour le 16 novembre 2026
 On prête à John Locke l’idée que l’esprit naît comme une tabula rasa, une page blanche.
@@ -13,7 +13,7 @@ Que veut dire tabula rasa ?
 Une tablette prête à recevoir l’écriture
 La tabula est la tablette de cire sur laquelle on écrivait avec un stylet ; rasa, raclée, lissée pour effacer ce qui y était inscrit.
 Appliquée à l’esprit, l’expression soutient une thèse précise : à la naissance, aucune idée n’y est encore inscrite, et toutes viendront de l’expérience.
-L’image est ancienne : dans le Théétète, Platon fait déjà supposer à Socrate, dans l’âme, un bloc de cire où s’impriment perceptions et pensées (191c-d) ; Aristote, lui, compare l’intellect à une tablette sur laquelle rien n’est encore écrit en acte (De l’âme, III, 4, 430a1).
+L’image est ancienne : dans le Théétète, Platon fait déjà supposer à Socrate, dans l’âme, un bloc de cire où s’impriment perceptions et pensées (191c-d) ; Aristote, lui, compare l’intellect à une tablette sur laquelle rien n’est encore écrit en acte, c’est-à-dire effectivement (De l’âme, III, 4, 430a1).
 La formule latine vient plus tard, de ses commentateurs médiévaux : au XIIIe siècle, Thomas d’Aquin écrit ainsi, en citant Aristote, que l’intellect humain « in principio est sicut tabula rasa in qua nihil est scriptum », qu’il est d’abord comme une table rase sur laquelle rien n’est écrit (Somme théologique, I, q.
 79, a.
 2).
@@ -90,7 +90,7 @@ De la traduction de Coste, elle n’a lu que l’édition de 1735.
 Elle n’aborde ni la psychologie ni les sciences cognitives d’aujourd’hui, qui ont repris la question de l’inné à d’autres frais.
 Suivre les idées dans le temps
 L’Odyssée des idées
-Culture, philosophie et science — de l’aube de l’humanité à l’intelligence artificielle
+De l’aube de l’humanité à l’ère numérique
 Cette page suit un seul mot, d’Aristote à Leibniz.
 L’Odyssée des idées replace Locke dans le temps long, entre Hobbes et Rousseau, et sa notice « 1690 · Locke : la page blanche et le gouvernement par consentement » réunit les deux versants de sa pensée, la connaissance et le pouvoir, parmi 250 escales de l’histoire des idées.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
