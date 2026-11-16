@@ -63,7 +63,7 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
   long: "Glossary"
 ---
 
-This glossary brings together the terms specific to the anthropic framework. It is not a general dictionary: each entry designates a concept coined or repurposed within the framework of the anthropic hypothesis, and carries its precise meaning only in that theoretical context. Definitions refer to the *Anthropie Working Papers* that formalise them and to the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (in French) that develops them across the full scope of the framework.
+This glossary brings together the terms specific to the anthropic framework. It is not a general dictionary: each entry gives the meaning that a term, coined by the framework or borrowed from other authors, takes in the anthropic hypothesis. Definitions refer to the *Anthropie Working Papers* and to the book [*ANTHROPIE — Ordre ici. Dette ailleurs*](/livres/anthropie-ordre-ici-dette-ailleurs/) (in French), which develop them; two names, flagged in their entry, are specific to this glossary.
 
 Anthropy rests on a single hypothesis — social systems displace disorder rather than resolve it — and the terms below constitute its working vocabulary. They are organised around three sets — the **mechanism** (anthropic transfer and its three dimensions), the **thresholds** (saturation, rising marginal cost, boomerang effect), and the **configurations** (historical arrangements of transfer over 3.3 million years) — to which is added an analytical posture: the **discipline of attention**.
 
@@ -73,7 +73,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="anthropy">
 <dt>Anthropy</dt>
-<dd>The hypothesis that social systems displace disorder rather than resolve it. Every observable order presupposes disorder exported elsewhere. This displacement operates along three axes — spatial, temporal, social — which combine and reinforce one another in most observable configurations. Hypothesis proposed by the economist Stéphane Lalut (book <em>ANTHROPIE</em>, 2025; AWP series, 2026). See <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a></dd>
+<dd>The hypothesis that social systems displace disorder rather than resolve it. On this hypothesis, every observable order presupposes disorder exported elsewhere; AWP-01 specifies that it does not postulate that everything is transfer, but that every observable stability deserves to be questioned about its offloaded costs. This displacement operates along three axes — spatial, temporal, social — which, in many configurations, combine and reinforce one another. Hypothesis proposed by the economist Stéphane Lalut (book <em>ANTHROPIE</em>, 2025; AWP series, 2026). See <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a></dd>
 </div>
 
 <div class="glossaire-entry" id="anthropic-transfer">
@@ -83,12 +83,12 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="spatial-transfer">
 <dt>Spatial transfer (entropic externalisation)</dt>
-<dd>The spatial form of anthropic transfer. Disorder is displaced toward other territories — remote extraction, offshored pollution, territorial relegation. Metropolises shine, peripheries pay: the digital consumption of the North rests on the extraction of cobalt and rare earths in the global South. See <a href="/en/awp/awp-04/">AWP-04</a>.</dd>
+<dd>The spatial form of anthropic transfer (<a href="/en/awp/awp-01/">AWP-01</a>); the name "entropic externalisation" is specific to this glossary. Disorder is displaced toward other territories — remote extraction, offshored pollution, territorial relegation. Metropolises shine, peripheries pay: the digital consumption of the North rests on the extraction of cobalt and rare earths in the global South. See <a href="/en/awp/awp-04/">AWP-04</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="temporal-transfer">
 <dt>Temporal transfer (anthropic debt)</dt>
-<dd>The temporal form of transfer. Disorder is deferred to the future — public debt, underinvestment, deferred maintenance. Temporal transfer converts a present cost into a future debt: the generations that inherit the disorder did not contract the loan. See <a href="/en/awp/awp-03/">AWP-03</a>.</dd>
+<dd>The temporal form of transfer (<a href="/en/awp/awp-01/">AWP-01</a>); the name "anthropic debt" is specific to this glossary. Disorder is deferred to the future — public debt, underinvestment, deferred maintenance. Temporal transfer converts a present cost into a future debt: the generations that inherit the disorder did not contract the loan. See <a href="/en/awp/awp-03/">AWP-03</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="social-transfer">
@@ -98,7 +98,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="local-order">
 <dt>Local order</dt>
-<dd>A social configuration resulting from the displacement of disorder beyond the perimeter under consideration. Local order is always relative: it presupposes an elsewhere that absorbs its cost. Order is never a spontaneous state: it is the product of a transfer operation whose recipients remain out of frame. See <a href="/en/awp/awp-01/">AWP-01</a>.</dd>
+<dd>A social configuration resulting from the displacement of disorder beyond the perimeter under consideration. The hypothesis leads one to look, behind a local order, for an elsewhere that would absorb its cost and whose recipients would remain out of frame. This search does not prejudge its outcome: inquiry may conclude that no displacement is established (see the entry <a href="#anthropy">Anthropy</a>). See <a href="/en/awp/awp-01/">AWP-01</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="discipline-of-attention">
@@ -108,22 +108,22 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="saturation">
 <dt>Saturation</dt>
-<dd>The state of a displacement space when the marginal cost of transfer exceeds the benefit, or when the displaced disorder returns to the emitting system. Saturation manifests through two observable criteria: rising marginal cost and the boomerang effect. When no space — geographical, social, temporal — can absorb the burden any longer, complexity holds only through internal tension. See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
+<dd>The state of a displacement space that can no longer absorb disorder quietly: its capacity is reached, or the transfer becomes legible and contested (<a href="/en/awp/awp-07/">AWP-07</a>, saturation conditions). <a href="/en/awp/awp-02/">AWP-02</a> had given a first sketch: a space saturates when exporting disorder costs more than managing it on the spot, which two criteria signal, rising marginal cost and the boomerang effect; AWP-07 places the first on the side of the system that displaces disorder and makes the second a return, which comes after saturation. When no space — geographical, social, temporal, cognitive — can absorb the burden any longer, complexity holds, according to AWP-02, only through an internal tension bound to break.</dd>
 </div>
 
 <div class="glossaire-entry" id="rising-marginal-cost">
 <dt>Rising marginal cost</dt>
-<dd>The first criterion of saturation: transfer becomes increasingly costly as the displacement space fills up. Each additional unit of exported disorder costs more than the last — not only in economic terms, but in social, political, and cognitive terms. See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
+<dd>The first criterion of saturation according to AWP-02: transfer becomes increasingly costly as the displacement space fills up, each unit of exported disorder costing more than the last. AWP-07 makes it a condition on the side of the system that displaces disorder, distinct from the saturation of the space that receives it. See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="boomerang-effect">
 <dt>Boomerang effect</dt>
-<dd>The second criterion of saturation: displaced disorder returns to the emitting system in a form often more costly than the initial disorder. Climate change is its planetary illustration: the disorder exported into the atmosphere over two centuries of industrialisation returns as costs that the original export had not counted. The notion of the boomerang effect comes from Ulrich Beck (<em>Risk Society</em>, 1986). See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
+<dd>The second criterion of saturation according to AWP-02: displaced disorder returns to the system that displaced it, sometimes in a form more costly than the initial disorder; AWP-07 makes it a return, which comes after saturation. Climate change is its planetary illustration: the disorder exported into the atmosphere over two centuries of industrialisation returns as costs that the original export had not counted. In the sense of risks returning to those who produce them, the notion comes from Ulrich Beck (<em>Risikogesellschaft</em>, 1986; <em>Risk Society</em>, 1992 in English). See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="jevons-effect">
 <dt>Jevons effect (Jevons paradox)</dt>
-<dd>The extreme case of the rebound effect: increased use takes back more than the efficiency gain, and total consumption of the resource rises instead of falling (Jevons, <em>The Coal Question</em>, 1865). An example of the anthropic boomerang effect. The efficiency gain does not resolve disorder: it shifts the saturation threshold, opening new transfer spaces and accelerating overall consumption. See <a href="/en/awp/awp-04/">AWP-04</a>.</dd>
+<dd>The extreme case of the rebound effect: increased use takes back more than the efficiency gain, and total consumption of the resource rises instead of falling (Jevons, <em>The Coal Question</em>, 1865). The anthropic framework can read it as a boomerang effect: according to AWP-04, the efficiency gains of the energy transition open new spaces of consumption, hence new transfers. See the page <a href="/en/rebound-effect/">What is the rebound effect?</a> and <a href="/en/awp/awp-04/">AWP-04</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="metaprogramme">
@@ -133,12 +133,12 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="anthropic-loop">
 <dt>Anthropic loop</dt>
-<dd>A sequence of five conditional states describing what becomes of the disorder a social system makes others bear: displacement toward a receptacle (E1), accumulation (E2), saturation (E3), a possible return toward the emitting system (E4), bifurcation (E5) — new displacement, reconfiguration or partial collapse. No passage is compulsory. Formalised in <a href="/en/awp/awp-07/">AWP-07</a> and presented on the page <a href="/en/anthropic-loop/">What is the anthropic loop?</a>. In the digital metaprogramme, the return can target the very capacity that made displacement possible, cognition: captured attention, delegated judgement. It is then a return, not a fourth axis of transfer. See also <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a> and <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
+<dd>A sequence of five conditional states describing what becomes of the disorder a social system makes others bear: displacement toward a receptacle (E1), accumulation (E2), saturation (E3), a possible return toward the emitting system (E4), bifurcation (E5) — new displacement, reconfiguration or partial collapse. After displacement, no passage is compulsory. Formalised in <a href="/en/awp/awp-07/">AWP-07</a>: this definition follows its revised version, not yet deposited; the version deposited in July 2026 treats accumulation as automatic and states the cycle without conditions. Presented on the page <a href="/en/anthropic-loop/">What is the anthropic loop?</a>. In the digital metaprogramme, the return can target the very capacity that made displacement possible, cognition: captured attention, delegated judgement. It is then a return, not a fourth axis of transfer. See also <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a> and <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="epistemic-order">
 <dt>Epistemic order</dt>
-<dd>The system of hierarchies of legitimacy, criteria of validity, and circuits of recognition produced by the academic field. This order presupposes an epistemic disorder exported to its margins. The institution simultaneously produces legitimate selection and cost transfer: certain questions, certain formats, certain postures are relegated through a mechanism analogous to anthropic transfer. See <a href="/en/awp/awp-05/">AWP-05</a>.</dd>
+<dd>The system of hierarchies of legitimacy, criteria of validity, and circuits of recognition produced by the academic field. On AWP-05's hypothesis, this order presupposes an epistemic disorder exported to its margins. The institution simultaneously produces legitimate selection and cost transfer: certain questions, certain formats, certain postures are relegated through a mechanism analogous to anthropic transfer. See <a href="/en/awp/awp-05/">AWP-05</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="displacement-space">
@@ -148,7 +148,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="configuration">
 <dt>Configuration</dt>
-<dd>A particular historical arrangement of anthropic transfer mechanisms. The framework identifies seven major configurations over 3.3 million years. Transfer does not repeat identically: its forms migrate. From founding systems to ancient systems, transfer remains primarily spatial; from transcontinental networks to the Machine-State, the social takes over; from industrialisation to the digital metaprogramme, the temporal and cognitive prevail. See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
+<dd>A particular historical arrangement of anthropic transfer mechanisms. The framework identifies seven major configurations over 3.3 million years. Transfer does not repeat identically: its forms migrate. From the founding programmes to the Neolithic trap, transfer remains primarily spatial; from ancient systems to transcontinental networks, the social takes over; from industrialisation to the digital metaprogramme, the temporal and cognitive prevail (AWP-02, version 1.1). The seven ages of the book follow another periodisation, in which the spatial dominates up to the ancient systems. See <a href="/en/awp/awp-02/">AWP-02</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="derisking">
@@ -158,12 +158,12 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="technological-debt">
 <dt>Technological debt</dt>
-<dd>The cost of digital infrastructures — energy, matter, territory, attention — converted into debt through commitment mechanisms: public guarantees, long-term contracts, the irreversibilisation of infrastructure choices. Not to be confused with the "technical debt" of software engineering, which designates accumulated design compromises in a program: technological debt in the anthropic sense is an economic and political mechanism, not a property of code. Concept formalised by Stéphane Lalut (AWP-06, 2026). See <a href="/en/awp/awp-06/">AWP-06</a> and the book <a href="/livres/anthropie-ordre-ici-dette-ailleurs/"><em>ANTHROPIE — Ordre ici. Dette ailleurs</em></a> (in French).</dd>
+<dd>The cost of digital infrastructures — energy, matter, territory, and perhaps attention — turned into debt by three operations: commitment (long-term contracts), public guarantee and the irreversibilisation of infrastructure choices. Attention is a possible register there, not a debt already constituted. Not to be confused with the "technical debt" of software engineering, which designates accumulated design compromises in a program: technological debt in the anthropic sense is an economic and political mechanism, not a property of code. Concept formalised by Stéphane Lalut (AWP-06, 2026). See <a href="/en/technological-debt/">What is technological debt?</a>, <a href="/en/awp/awp-06/">AWP-06</a> and the book <a href="/livres/anthropie-ordre-ici-dette-ailleurs/"><em>ANTHROPIE — Ordre ici. Dette ailleurs</em></a> (in French).</dd>
 </div>
 
 <div class="glossaire-entry" id="negative-commons">
 <dt>Negative commons</dt>
-<dd>Category introduced by Alexandre Monnin to designate what we inherit without having chosen: waste, ruins, obsolete infrastructures. Negative commons are not goods voluntarily shared, but burdens transmitted — an anthropic transfer crystallised in the materiality of the world. AWP-06 places digital technologies among candidate negative commons. See <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
+<dd>Notion developed by Alexandre Monnin, with Emmanuel Bonnet and Diego Landivar (<em>Héritage et fermeture</em>, 2021), from an expression Monnin traces back to Maria Mies and Veronika Bennholdt-Thomsen (2001), to designate what we inherit without having chosen: waste, ruins, obsolete infrastructures. Negative commons are not goods voluntarily shared, but burdens transmitted — an anthropic transfer crystallised in the materiality of the world. Monnin places digital technologies among candidate negative commons; AWP-06 analyses some digital infrastructures as candidates, under conditions. See the page <a href="/en/negative-commons/">What are negative commons?</a> and <a href="/en/awp/awp-06/">AWP-06</a>.</dd>
 </div>
 
 <div class="glossaire-entry" id="social-reversibility">
@@ -173,12 +173,12 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="coupled-cost-registers">
 <dt>Coupled cost registers</dt>
-<dd>AWP-06's central contribution: a testable grid of four registers — energy, matter, territory, attention — for examining how digital infrastructure may simultaneously displace disorder along several irreducible axes. These registers do not add up: they couple. Reducing one may shift the burden onto the others: that is what the grid asks to be established, case by case. See <a href="/en/awp/awp-06/">AWP-06</a>. Not to be confused with the <em>Register of Offloaded Costs</em>, which is a chronology rather than a typology.</dd>
+<dd>AWP-06's central contribution: a testable grid of four registers — energy, matter, territory, attention — for examining how digital infrastructure may simultaneously displace disorder along several irreducible axes. These registers do not add up: they couple. Reducing one may shift the burden onto the others: that is what the grid asks to be established, case by case. See <a href="/en/awp/awp-06/">AWP-06</a>. Not to be confused with the <em>Register of Offloaded Costs</em>, which is a chronology rather than an analytical grid.</dd>
 </div>
 
 <div class="glossaire-entry" id="register-of-offloaded-costs">
 <dt>Register of Offloaded Costs</dt>
-<dd>The documentary apparatus of the book <em>ANTHROPY – A Big History of Civilization's Hidden Costs</em> (2026; French original 2025): a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, documenting for each innovation the order created and the debt displaced, with the categories of the transfer. Browsable online, all 168 milestones: <a href="/en/register-of-offloaded-costs/">The Register of Offloaded Costs</a>. Not to be confused with the <a href="#coupled-cost-registers">coupled cost registers</a> of AWP-06, which are a typology rather than a chronology.</dd>
+<dd>The documentary apparatus of the book <em>ANTHROPY – A Big History of Civilization's Hidden Costs</em> (2026; French original 2025): a chronology of 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, documenting for each innovation the order created and the debt displaced, with the categories of the transfer. Browsable online, all 168 milestones: <a href="/en/register-of-offloaded-costs/">The Register of Offloaded Costs</a>. Not to be confused with the <a href="#coupled-cost-registers">coupled cost registers</a> of AWP-06, which are an analytical grid rather than a chronology.</dd>
 </div>
 
 </dl>

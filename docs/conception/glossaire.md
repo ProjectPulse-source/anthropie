@@ -28,11 +28,11 @@ Un glossaire est un dictionnaire alphabétique.
 
 ### Découverte principale
 
-Les termes s'organisent autour d'une hypothèse unique et d'ensembles nommés par l'introduction (mécanisme, seuils, configurations, posture), auxquels s'ajoutent les applications.
+Les termes s'organisent autour d'une hypothèse unique et d'ensembles nommés par l'introduction (mécanisme, seuils, configurations, posture), auxquels s'ajoutent les applications ; ce rangement est éditorial, non une thèse des working papers (relecture R1, l. 10). Chaque définition dit à quel texte elle se rattache et quelle version elle suit (R1, P1-1, P1-6, P1-7).
 
 ### Mécanisme explicatif
 
-La carte du vocabulaire place chaque terme dans son ensemble et mène à son entrée.
+La carte du vocabulaire place chaque terme dans son ensemble et mène à son entrée ; chaque entrée reprend la définition de la page de notion qui la développe, quand elle existe (R1, « Entrées qui contredisent la page de notion »).
 
 ### Preuve décisive
 
@@ -93,3 +93,10 @@ moteurs de réponse) ; état initial à relever au relevé J+60 déjà prévu po
 - Instantané de relecture : non fait (suit la relecture entière).
 - Contre-expertise de la page : non faite.
 - Accord de l'auteur : demandé avec le diff du 26/10/2026.
+
+### Reprise du 16/11/2026 (lot « notions-b », `/reprise-ressource`, mode préparer)
+
+- Relecture des sources par un relecteur neuf : faite (`06_PROMOTION/INTELLIGIBILITE_RESSOURCES_2026-11-11/LOTS/notions-b/SOURCES/glossaire_R1.md`), trois lignes sondées à la source par la session (`SONDES_SESSION.md`).
+- Interventions : spécification rejouable `LOTS/notions-b/specs/glossaire.py` ; contrôle de la lettre justifié ligne à ligne.
+- Juge interne à l'aveugle et jugement externe : voir `LOTS/notions-b/LOT.md`. `ressource.refonte` : non posée (relecture phrase à phrase entière et instantané à faire à la publication).
+
