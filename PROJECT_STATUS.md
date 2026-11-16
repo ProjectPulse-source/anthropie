@@ -52,6 +52,32 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-16 — Lot « Repères A » publié : tabula rasa, écriture et pensée, chercheur indépendant (FR, EN), fiche AWP-05
+
+Commande `/reprise-ressource tabula-rasa-locke comment-lecriture-a-transforme-la-pensee chercheur-independant`, préparée
+puis publiée sur demande de l'auteur (« retiens Platon et la fiche AWP-05, puis publie ») ; rapport :
+`D:\PRO\06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\reperes-a\RAPPORTS\00_LOT_REPERES_A.md`.
+- **Circuit** : relecture des sources par des agents neufs ; juge interne à l'aveugle, deux tours ; jugement externe à
+  l'aveugle PRO-20261116-112929, qui retient la version proposée sur les trois pages, arbitré point par point
+  (`LOTS\reperes-a\JUGE\ARBITRAGE_EXTERNE.md`).
+- **`/tabula-rasa-locke/`** (`cef912e`) : P0 corrigé, Locke emploie la formule dès les années 1660 (écrits restés
+  manuscrits) et pas seulement dans le résumé de 1688 ; les mots anglais sont ceux du manuscrit (1858) ; la cire de
+  Platon (*Théétète*) avant la tablette vierge d'Aristote.
+- **`/comment-lecriture-a-transforme-la-pensee/`** FR, EN (`3180b01`) : datation de Habermas discutée (Lake et Pincus,
+  2006) ; débat Eisenstein-Johns ouvert ; le *Phèdre* n'admet l'écrit que « par jeu » ; mécanisme proposé, non démontré ;
+  comptes de Mésopotamie.
+- **`/chercheur-independant/`** FR, EN (`08b811a`) : AWP-05 pose une hypothèse, sans marginalité « fonctionnelle » ni
+  circularité ; DOI et relecture à simple anonymat ; la forge ; « profils normés » sourcés ; page désormais refondue
+  (`ressource.refonte`, instantanés de relecture).
+- **`/awp/awp-05/`** FR, EN (`ceb9a98`) : fiche alignée sur les PDF déposés (titre complet, hypothèse, HAL, ORCID et
+  revues overlay, et la conclusion sur la circularité, que la fiche inversait).
+- **Contrôles** : `check-all --ci` à 0 ; liens 0 critique ; dates 83/83 ; relecture attestée (instantanés refaits,
+  témoin vu mordre) ; rendu : 61 pages refondues conformes ; lettre : aucun nombre retiré (2014, 2020 et 2012 ajoutés,
+  lus aux sources) ; premiers écrans du chercheur et de la tabula retestés (témoins vus mordre) ; débordement 0 de 320 à
+  1 440 px.
+- **Servi** : déploiement `hugo.yml` 43873759646 réussi, contrôle de fumée compris ; version servie attestée le 16/11
+  vers 14 h 15 : 7 pages en HTTP 200, texte identique au build contrôlé (0 écart), une phrase nouvelle trouvée sur chacune.
+
 ### 2026-11-16 — Guichet `/ressources-offertes/` : surtitres rendus comme dessinés ; Livresque sans chapô visible
 
 Commande `/reprise-forme publications publier`, relance sur le forfait (R3 du lot ; Livresque sur décision de l'auteur du
