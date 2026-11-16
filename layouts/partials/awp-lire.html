@@ -1,0 +1,49 @@
+{{- /* awp-lire.html — bloc « Lire ou télécharger » d'une page AWP (16/11/2026). Posé deux fois par awp/single.html :
+       en tête de la colonne latérale (ordinateur, colonne collante) et à la fin de l'en-tête de l'article (jusqu'à
+       768 px, où la colonne latérale passe sous l'article : le bouton « Lire en ligne » y arrivait à 9 289 px sur
+       11 312 au téléphone, sur /awp/awp-07/). Un seul des deux s'affiche à chaque largeur (_awp-single.scss).
+       Entrée : dict { page, tete } ; « tete » vrai pour la copie de l'en-tête, dont le libellé est un paragraphe (un
+       titre de niveau 3 y suivrait directement le titre de la page).
+
+       Zenodo sert ses fichiers en "content-disposition: attachment" : un lien PDF ne s'ouvre jamais dans le navigateur,
+       il part en téléchargement — et sur téléphone le lecteur doit ensuite aller le rechercher dans ses fichiers. Le
+       lecteur intégré de Zenodo rend le même PDF lisible d'un tap ; le téléchargement reste offert juste après, nommé
+       pour ce qu'il fait. L'ordre des deux ne dépend plus d'aucune mesure.
+
+       Le routage de convergence (data/convergence_routing.json) promouvait ici la notice Zenodo en bouton principal
+       quand le record manquait de vues — 11 records sur 17 le 2026-09-13, soit une majorité d'articles plaçant une
+       fiche de métadonnées devant le texte. Désarmé côté site sur arbitrage auteur du 2026-09-13 : « toujours simple
+       pour le lecteur ». Le collector continue de produire le fichier, qui ne pilote plus rien tant que cette ligne le
+       dit. */ -}}
+{{- $p := .page -}}
+{{- $isEn := eq $p.Params.language "en" -}}
+{{- $preview := partial "awp-preview-url.html" $p.Params.pdf_url -}}
+{{- /* Langue du TEXTE déposé : vaut la langue de la page, sauf fiche anglaise d'un papier encore français seul
+       (text_language: "fr", AWP-09 au 2026-10-04). */ -}}
+{{- $lang := upper ($p.Params.text_language | default $p.Lang) -}}
+<div class="awp-sidebar__block awp-lire{{ if .tete }} awp-lire--tete{{ end }}">
+  {{ if .tete }}<p class="awp-sidebar__heading">{{ else }}<h3 class="awp-sidebar__heading">{{ end }}{{ if $isEn }}Read or download{{ else }}Lire ou télécharger{{ end }}{{ if .tete }}</p>{{ else }}</h3>{{ end }}
+  {{ with $preview }}
+  <a href="{{ . }}" class="btn btn--primary awp-sidebar__btn" target="_blank" rel="noopener">
+    {{ if $isEn }}Read online{{ else }}Lire en ligne{{ end }}
+  </a>
+  {{ end }}
+  {{ with $p.Params.pdf_url }}
+  <a href="{{ . }}" class="btn {{ if $preview }}btn--secondary{{ else }}btn--primary{{ end }} awp-sidebar__btn" target="_blank" rel="noopener">
+    {{ if $isEn }}Download the PDF{{ else }}Télécharger le PDF{{ end }} ({{ $lang }})
+  </a>
+  {{ end }}
+  {{/* PDF des autres langues. On passe par .Translations (lien natif de Hugo entre awp-NN.md et awp-NN.en.md) et non
+       par le champ "translation" du front matter : celui-ci porte une URL de sortie ("/en/awp/awp-08/") que
+       Site.GetPage, qui résout des chemins de contenu, ne retrouvait pas. Résultat mesuré le 2026-09-13 sur les 16 pages
+       construites : bouton absent sur les 8 pages FR, et sur les 8 pages EN libellé "(FR)" au-dessus du fichier anglais.
+       La langue du libellé se dérive désormais de la page pointée, elle ne se recopie plus. */}}
+  {{ range $p.Translations }}
+    {{- $trLang := upper .Lang -}}
+    {{ with .Params.pdf_url }}{{ if ne . $p.Params.pdf_url }}
+    <a href="{{ . }}" class="btn btn--secondary awp-sidebar__btn" target="_blank" rel="noopener">
+      {{ if $isEn }}Download the PDF{{ else }}Télécharger le PDF{{ end }} ({{ $trLang }})
+    </a>
+    {{ end }}{{ end }}
+  {{ end }}
+</div>

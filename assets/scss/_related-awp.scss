@@ -3,10 +3,14 @@
   padding-top: 2rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-.related-awp__title {
+// Deux classes (16/11/2026) : même motif que le titre de « Comment citer ce document » (_how-to-cite.scss) ; le bloc
+// porte déjà son filet, la règle commune lui en ajoutait un second.
+.related-awp .related-awp__title {
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0 0 1.25rem 0;
+  padding-top: 0;
+  border-top: 0;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #1B2A4E;

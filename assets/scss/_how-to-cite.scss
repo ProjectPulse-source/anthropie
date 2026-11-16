@@ -5,10 +5,15 @@
   border-left: 3px solid #1B2A4E;
   border-radius: 4px;
 }
-.how-to-cite__title {
+// Deux classes (16/11/2026) : la règle commune `.content-reading h2` (_page-common.scss, importée après) l'emportait
+// sur la classe seule et donnait au titre de l'encadré le corps des titres de section, un filet et 2 rem de retrait
+// (pages AWP, seul emploi de ce partiel).
+.how-to-cite .how-to-cite__title {
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
+  padding-top: 0;
+  border-top: 0;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #1B2A4E;

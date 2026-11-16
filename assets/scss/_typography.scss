@@ -142,7 +142,9 @@ main .citations-mouvements li,
 main .citation-entree__corps > ul > li,
 main .book-parcours__ch li,
 main .book-others__list--grille > li,
-main .book-sommaire li {
+main .book-sommaire li,
+main .awp-breadcrumb li,
+main .related-awp__list > li {
   padding-left: 0 !important;
   margin-bottom: 0 !important;
 }
@@ -154,7 +156,9 @@ main .exigences-liste > ul,
 main .citation-entree__corps > ul,
 main ol.book-parcours__ch,
 main .book-others__list--grille,
-main .book-sommaire ol {
+main .book-sommaire ol,
+main .awp-breadcrumb ol,
+main .awp-sidebar__series {
   padding-left: 0 !important;
   margin: 0 !important;
   list-style: none !important;
@@ -162,6 +166,14 @@ main .book-sommaire ol {
 main .citation-entree__corps > ul > li,
 main .etape-fiche > ul > li { margin-bottom: 0.75em !important; padding-left: 0 !important; }
 main .outils-grille > ol > li { margin-bottom: 0 !important; padding-left: 3rem !important; }
+// Gabarit des AWP (16/11/2026) : la règle commune décalait de 22 px le fil d'Ariane, les pastilles de mots-clés, la liste
+// des papiers liés et celle de la série (colonne latérale, titres coupés d'autant), et mettait les pastilles une par
+// ligne au téléphone (mesuré sur /awp/awp-07/). Ces listes gardent les marges que leur donne leur feuille.
+main .awp-article__keywords { padding-left: 0 !important; margin: 0.75rem 0 0 !important; list-style: none !important; }
+main .awp-article__keywords > li { margin-bottom: 0 !important; padding-left: 0.6rem !important; }
+main .related-awp__list { padding-left: 0 !important; margin: 0 0 1.5rem !important; list-style: none !important; }
+main .awp-sidebar__series > li { margin-bottom: 0.4rem !important; padding-left: 0 !important; }
+main .awp-breadcrumb [aria-current] { font-weight: 500 !important; }
 
 main li::marker {
   color: var(--color-text-faint);
