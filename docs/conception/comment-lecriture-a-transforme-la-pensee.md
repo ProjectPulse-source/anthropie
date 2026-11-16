@@ -67,6 +67,13 @@ Lignes retenues (vérifiées au texte, Fowler/Perseus pour Platon, PDF pour Du e
 Ni l'un ni l'autre texte ne condamne l'outil en soi (276d ; « Offloading is not the problem as such »), mais Platon décrit
 des propriétés de l'écrit, Du et Yuan des configurations (interfaces, évaluations, institutions).
 
+**Relecture des sources du 16/11/2026** (lot « reperes-a », `SOURCES/comment-lecriture-a-transforme-la-pensee_R1.md`,
+« R1, l. N » ; sondes de la session S7 à S13) : le tableau tient, ligne à ligne, contre Fowler et le PDF, avec deux
+forces ramenées à la source (l. 87 : l'élève « peut avoir à » répondre, Du et Yuan écrivent « may » ; l. 90 : la
+provenance, « un moyen essentiel », non « le principal ») ; en 275b-c, Socrate reproche à Phèdre de *tenir compte* de qui
+parle, non de le demander (sonde S8) ; en 276d, l'écrit est admis « par jeu » (sonde S9), et Socrate ne le tient que pour
+l'image du discours vivant (276a) : « ce qu'il juge, c'est l'usage » était une lecture donnée pour un fait (R1, l. 25).
+
 ### Mécanisme explicatif
 
 Possibilité technique → pratiques (lire, apprendre, confronter, vérifier) → institutions (école, marché, État,
@@ -74,6 +81,11 @@ plateformes) → effets cognitifs et sociaux, avec des retours dans les deux sen
 ouvre des opérations (la liste, le tableau, la comparaison terme à terme chez Goody) ; leur acquisition dépend de la
 pratique et de l'école (Scribner et Cole) ; la stabilité de l'imprimé dépend des ateliers, du commerce et des
 institutions (Johns) ; la dépendance à l'IA est utile ou nuisible selon six conditions de la relation (Du et Yuan).
+Ce qui porte chaque maillon, d'après la relecture du 16/11 : Goody (R1, l. 39-40) ; Scribner et Cole (l. 43-45, lus dans
+« Unpackaging literacy », 1978, le livre de 1981 n'étant connu que par sa notice, § 3) ; Johns contre Eisenstein (l. 51-52
+et 133 : un débat ouvert, d'où « Johns a soutenu », non « a montré ») ; Du et Yuan (l. 69-71). La constance du mécanisme
+d'un bout à l'autre est une synthèse de l'auteur (R1, § 5, l. 113), que la phrase suivante de la page borne ; la thèse de
+la page s'appuie sur deux témoins, les Vaï et les premiers imprimés, d'où « suggère » au chapô (R1, § 5, l. 7 et 112).
 
 ### Preuve décisive
 
@@ -88,8 +100,9 @@ institutions (Johns) ; la dépendance à l'IA est utile ou nuisible selon six co
    usages pratiqués, non un raisonnement logique général — il départage le déterminisme technique et la lecture par les
    pratiques.
 4. **Les premiers imprimés** : *Sūtra du Diamant* daté de 868 (British Library, Or.8210/P.2, plus ancien livre imprimé
-   daté parvenu complet) ; *Jikji* 1377 ; Mayence, années 1450 (Bible à environ 180 exemplaires, lettres d'indulgence,
-   grammaires latines, un calendrier) ; Web conçu au CERN en 1989-1991 pour des physiciens.
+   daté parvenu complet) ; *Jikji* 1377 ; Mayence, dispositif mis au point entre la fin des années 1440 et le début des
+   années 1450, Bible sortie au milieu des années 1450 à environ 180 exemplaires (R1, l. 50, corrigé le 16/11), lettres
+   d'indulgence, grammaires latines, un calendrier ; Web conçu au CERN en 1989-1991 pour des physiciens.
 
 ### Pouvoir discriminant
 
@@ -128,10 +141,14 @@ cadre de Du et Yuan ; la page ne le prétend pas et cite les travaux antérieurs
   raconte en escales ce que la page examine : l'écriture (−3 500), Socrate, le philosophe sans livre, Gutenberg. »
   Relation : les trois escales relues le 31/10/2026 dans le manuscrit de l'édition en vente (commit `2bf70c6`) ; on
   reprend leur vocabulaire (« sept fils », « cartes »), sans liste d'escales du fil des signes, non vérifiée.
-- **Retenu — la boucle anthropique** (`/boucle-anthropique/`), dans un bloc séparé, présenté comme l'hypothèse de
-  l'auteur et non testé ici : elle prolonge la question de l'externalisation, elle n'est pas démontrée par la page.
-- **Écartée — la définition de l'anthropie dans le corps** : aucune application du concept n'est démontrée ; rien
-  n'est ajouté à « Quelques domaines d'application » de `/quest-ce-que-lanthropie/`.
+- **Retenu — la boucle anthropique** (`/boucle-anthropique/`), dans « Pour aller plus loin », comme « ce que devient un
+  coût déplacé, selon l'auteur » (16/11/2026). Elle n'est plus donnée pour le lieu de l'hypothèse sur l'attention et le
+  jugement : la page liée ne traite pas de la cognition (R1, l. 145-146 et 181 ; sonde S12).
+- **Retenue, par un seul renvoi — la définition de l'anthropie** (`/quest-ce-que-lanthropie/#les-trois-axes-de-transfert`) :
+  c'est là que l'hypothèse de l'auteur est formulée (« quand les espaces qui reçoivent le désordre — lieux, temps, groupes
+  — saturent, le désordre peut revenir vers les prises concrètes de la cognition »), et le bloc « Une hypothèse de
+  l'auteur » y renvoie en la reprenant au plus près ; aucune application du concept n'est démontrée dans le corps, rien
+  n'est ajouté à « Quelques domaines d'application ».
 - **Écartés — les working papers** : aucun ne porte sur l'écriture ou l'IA comme technique intellectuelle (AWP-06 porte
   sur la dette technologique des infrastructures numériques : relation trop lâche).
 - **Retenu — `/offrir-un-livre-de-culture-generale/`** : lien existant de « Pour aller plus loin », gardé (même livre).
@@ -231,3 +248,29 @@ refonte. Relevés : J+30 et J+60. Une reprise est un résultat à observer, jama
 - Recette visuelle : faite le 03/11/2026 sur la page servie (navigateur sans interface, script) — aucun débordement à
   320, 390, 768 et 1 280 px, replis fermés et ouverts (témoin positif : un bloc de 900 px injecté est détecté) ;
   arrivée par ancre : repli ouvert, titre à 80 px sous un en-tête collant de 58 à 62 px ; captures relues à 390 px.
+
+### Reprise du 16/11/2026 (lot « reperes-a », `D:\PRO\06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\reperes-a\`)
+
+- Relecture des sources par deux relecteurs neufs : page française (141 lignes du tableau : 107 conformes à la source,
+  20 conformes au calcul seul, 14 écarts — 0 P0, 1 P1, 9 P2 ; termes du corps ; conclusions interdites) et version
+  anglaise (181 phrases alignées : 0 P0, 1 P1) ; sondes de la session S7 à S13, dont une qui contredit un relecteur
+  (« María Reyes Calderón », attesté par le dépôt de l'Universidad Pontificia Comillas : écart rejeté).
+- Trois vérifications antérieures contredites par la relecture, et corrigées : le maintien de la date au 01/11, « aucun
+  fait nouveau » (le 03/11 a ajouté une affirmation sur le Web : date et journal à poser à la publication) ; la date de
+  l'assemblage du dispositif de Gutenberg ; le raccord à la boucle anthropique.
+- Interventions : `LOTS/reperes-a/specs/comment-lecriture-a-transforme-la-pensee.py` (EC-1 à EC-10, EN-L, forme ;
+  69 remplacements FR et EN, tous publiables seuls d'après la méthode, § R7) ; contrôles, juge interne à l'aveugle et
+  jugement externe : `LOTS/reperes-a/LOT.md`.
+- Juge interne à l'aveugle, deux tours (`LOTS/reperes-a/JUGE/`) : version proposée retenue aux deux, sans P0 ni P1
+  propre ; corrections du texte commun et des P2 retenus dans `comment-lecriture-a-transforme-la-pensee_j1.py` puis
+  `tour2.py` (T2-E1 à T2-E13 : « suggèrent ces travaux », « le mécanisme proposé », Ong « en a donné une version plus
+  forte », 275b-c, etc.), rejouées après la première : résultat identique à la version proposée. Premier écran retesté
+  sur le chapô final (« la critique du *Phèdre* fait apparaître … un renversement et une absence ; l'histoire de l'écrit
+  et de ses usages suggère ») : deux lecteurs, aucune conclusion interdite, témoin cohérent vu mordre.
+- Jugement externe à l'aveugle (PRO-20261116-112929, réponse archivée avant lecture) : version proposée retenue ; le
+  périmètre de « l'écriture conservée commence par des comptes » ramené à celui des sources, la Mésopotamie (`externe.py`,
+  EX-2, FR et EN) ; son P1 sur l'hypothèse de l'auteur rejeté après lecture de la source qu'il n'avait pas
+  (`/quest-ce-que-lanthropie/`, « Les trois axes de transfert ») ; arbitrage : `LOTS/reperes-a/JUGE/ARBITRAGE_EXTERNE.md`.
+- Publication demandée par l'auteur le 16/11/2026 : date de modification et journal posés, `ressource.refonte` reposée
+  au 16/11, instantanés de relecture FR et EN refaits sur le build final (`LOTS/reperes-a/specs/publication.py`) ; état
+  de la mise en ligne : `LOTS/reperes-a/LOT.md`.
