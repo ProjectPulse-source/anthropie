@@ -5,10 +5,11 @@ og_image_alt: "Carte de partage : « La réversibilité sociale » et son schém
 description: "La réversibilité sociale est la capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de son avenir. Ni un stock ni un flux : une troisième dimension de l'inégalité — ce qu'on peut se permettre de rater."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
-lastmod: 2026-11-05
+lastmod: 2026-11-16
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Ajout : le témoin américain (fresh start du droit des faillites, Fair Credit Reporting Act), que la version anglaise donnait déjà."}
   - {date: 2026-11-05, texte: "Corrections : l'indicateur 040 du fichier FIBEN a été supprimé en 2013 (décret n° 2013-799), non en 2021 ; la loi Lemoine (2022) a ramené à cinq ans le délai du droit à l'oubli, qu'elle n'a pas créé ; le droit à l'erreur vaut devant toutes les administrations, pas seulement en matière fiscale."}
+  - {date: 2026-11-16, texte: "Relecture des sources : l'échec des politiques de la seconde chance est présenté comme une prédiction du cadre, à tester, non comme un fait ; droit à l'erreur exact (première méconnaissance de bonne foi d'une règle ou erreur matérielle de déclaration) ; résilience comparée au sens psychologique retenu ici."}
 og_title: "Qu'est-ce que la réversibilité sociale ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que la réversibilité sociale ?"

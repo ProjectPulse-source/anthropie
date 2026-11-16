@@ -6,9 +6,10 @@ url: /en/rebound-effect/
 description: "The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use; when the take-back exceeds the gain, total consumption rises. Described by William Stanley Jevons in 1865, it remains poorly built into energy scenarios."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
-lastmod: 2026-11-05
+lastmod: 2026-11-16
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Corrected definition: the rebound effect takes back part of the efficiency gain; total consumption rises only when the take-back exceeds the gain (Jevons paradox)."}
+  - {date: 2026-11-16, texte: "Source review: leaving it out of assessments risks overestimating expected savings (instead of “systematically”); exact reference to the IPCC (Working Group III, chapter 5, 2022); a sentence attributed to Fressoz removed, absent from the sources read."}
 og_title: "The rebound effect (Jevons paradox) — definition and sources — S. Lalut"
 faq:
   - question: "What is the rebound effect?"

@@ -6,9 +6,10 @@ url: /en/social-reversibility/
 description: "Social reversibility is the capacity, assessed before an attempt, to withstand its possible failure without a lasting closure of one's future. Neither a stock nor a flow: a third dimension of inequality — what one can afford to fail."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
-lastmod: 2026-11-05
+lastmod: 2026-11-16
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Corrections: indicator 040 of the FIBEN file was removed in 2013 (decree no. 2013-799), not in 2021; the Lemoine law (2022) shortened the right-to-be-forgotten period to five years, it did not create it."}
+  - {date: 2026-11-16, texte: "Source review: the failure of second-chance policies is presented as a prediction of the framework, to be tested, not as a fact; right to err stated exactly; resilience compared in the psychological sense used here."}
 og_title: "What is social reversibility? — definition and sources — S. Lalut"
 faq:
   - question: "What is social reversibility?"

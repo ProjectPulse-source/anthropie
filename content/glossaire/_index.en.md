@@ -1,9 +1,10 @@
 ---
 date: 2026-04-15  # premier commit de la page (git log --follow)
-lastmod: 2026-11-05
+lastmod: 2026-11-16
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Correction: the “Anthropic loop” entry now gives the AWP-07 definition (five states, from displacement to bifurcation); the return toward cognition becomes one case of it, specific to the digital metaprogramme."}
   - {date: 2026-11-05, texte: "Corrections: Jevons effect (extreme case of the rebound effect), boomerang effect (credit to Ulrich Beck, balance not asserted), registers of debt (a possible displacement, to be established case by case)."}
+  - {date: 2026-11-16, texte: "Source review: definitions aligned with the deposited working papers (including saturation, and the anthropic loop following the revised AWP-07); “entropic externalisation” presented as an inquiry the hypothesis directs, without prejudging its outcome."}
 title: "Glossary"
 og_title: "Glossary — the concepts, defined and sourced — S. Lalut"
 description: "Key terms of the anthropic framework."

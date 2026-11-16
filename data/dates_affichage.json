@@ -157,6 +157,12 @@
    "2026-11-04",
    "2026-11-05"
   ],
+  "effet-rebond/_index.en.md": [
+   "2026-11-05"
+  ],
+  "effet-rebond/_index.md": [
+   "2026-11-05"
+  ],
   "enseignants/_index.md": [
    "2026-11-05"
   ],
@@ -170,10 +176,12 @@
    "2026-11-02"
   ],
   "glossaire/_index.en.md": [
-   "2026-10-25"
+   "2026-10-25",
+   "2026-11-05"
   ],
   "glossaire/_index.md": [
-   "2026-10-25"
+   "2026-10-25",
+   "2026-11-05"
   ],
   "inflation-et-dette-publique/_index.en.md": [
    "2026-10-16",
@@ -260,11 +268,19 @@
   ],
   "registre-des-couts-deportes/_index.en.md": [
    "2026-10-25",
-   "2026-10-26"
+   "2026-10-26",
+   "2026-11-01"
   ],
   "registre-des-couts-deportes/_index.md": [
    "2026-10-25",
-   "2026-10-26"
+   "2026-10-26",
+   "2026-11-01"
+  ],
+  "reversibilite-sociale/_index.en.md": [
+   "2026-11-05"
+  ],
+  "reversibilite-sociale/_index.md": [
+   "2026-11-05"
   ],
   "tabula-rasa-locke/_index.md": [
    "2026-11-05"

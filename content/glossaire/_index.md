@@ -1,9 +1,10 @@
 ---
 date: 2026-04-02  # premier commit de la page (git log --follow)
-lastmod: 2026-11-05
+lastmod: 2026-11-16
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Correction : l'entrée « Boucle anthropique » donne désormais la définition d'AWP-07 (cinq états, du déplacement à la bifurcation) ; le retour vers la cognition en devient un cas, propre au métaprogramme numérique."}
   - {date: 2026-11-05, texte: "Corrections : effet Jevons (cas extrême de l'effet rebond), effet boomerang (crédit à Ulrich Beck, bilan non affirmé), registres de la dette (un déplacement possible, à établir cas par cas)."}
+  - {date: 2026-11-16, texte: "Relecture des sources : définitions alignées sur les working papers déposés (dont la saturation, et la boucle anthropique selon la version révisée d'AWP-07) ; « externalisation entropique » présentée comme une recherche que l'hypothèse oriente, sans en préjuger le résultat."}
 title: "Glossaire"
 og_title: "Glossaire — les notions, définies et sourcées — S. Lalut"
 description: "Glossaire des termes clés du cadre anthropique."

@@ -5,7 +5,7 @@ og_image_alt: "Carte de partage : « Le Registre des coûts déportés »"
 description: "Le Registre des coûts déportés est l'appareil documentaire du livre ANTHROPIE : les jalons du livre, des premiers outils (≈ −3,3 millions d'années) aux algorithmes contemporains, ramenés chacun à l'ordre créé et à la dette déportée — le désordre déplacé ailleurs, plus tard ou sur d'autres. Les 168 jalons en consultation libre, classés selon les sept âges du livre."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-08-15
-lastmod: 2026-11-01
+lastmod: 2026-11-16
 og_title: "Le Registre des coûts déportés — chronologie documentée — S. Lalut"
 faq:
   - question: "Qu'est-ce que le Registre des coûts déportés ?"
@@ -23,6 +23,8 @@ faq:
   - question: "Où trouver le Registre des coûts déportés complet ?"
     answer: "Sur cette page, en consultation libre : les 168 jalons du livre ANTHROPIE — Ordre ici. Dette ailleurs (2025, 630 pages). Le livre déploie chaque jalon en chapitre, résume chaque âge par un schéma « ordre créé / désordre déporté » et tire la trajectoire d'ensemble dans sa postface. Le livre renvoie à cette page par un QR code (« Pour aller plus loin », p. 619)."
 journal:
+  - date: 2026-11-16
+    texte: "Relecture des sources : la migration des coûts vers l'abstrait est attribuée à la postface du livre, comme une lecture d'ensemble et non une mesure (les catégories des jalons disent la nature du coût, non l'axe de son déplacement) ; « comptabilité » précisée comme qualitative ; les rapprochements du retour des dettes sont illustrés, non démontrés."
   - date: 2026-11-01
     texte: "Pour 68 jalons, une ligne « L’idée dans son histoire » renvoie à l’escale de L’Odyssée des idées qui traite la même idée, le même penseur ou le même événement ; chaque paire vérifiée sur le texte du livre, aucune entrée du Registre réécrite."
   - date: 2026-10-26
