@@ -47,7 +47,7 @@ nécessité cache des alternatives. Le pouvoir sans visage peut perdre l'adhési
 ressort que le livre décrit sans cette limite est la norme de Foucault : quand elle triomphe, elle « ressemble à une
 évidence ». D'une étape à l'autre, le pouvoir devient aussi moins visible, du supplice au règlement et du règlement à
 l'interface. Trois formules célèbres du parcours sont fausses ou déformées : « la fin justifie les moyens » (pas dans
-*Le Prince*), « L'État, c'est moi » (apocryphe), « notre bon plaisir » (non attesté).
+*Le Prince*), « L'État, c'est moi » (apocryphe), « notre bon plaisir » (non attesté sous l'Ancien Régime ; attesté sous l'Empire, de 1808 à 1814, et la Restauration, selon Mas-Latrie, 1881).
 
 ### Mécanisme explicatif
 
@@ -73,7 +73,7 @@ Sans objet (page sans données ni figure).
 ### Limite
 
 Un parcours n'est pas une histoire de la pensée politique. Le choix est celui du livre (onze escales et trois échos) et
-non une sélection représentative. Locke, Rousseau et Montesquieu relèvent dans le livre d'autres parcours (« Liberté »),
+non une sélection représentative. Locke et Rousseau relèvent dans le livre d'un autre parcours (« Liberté ») ; Montesquieu a son escale hors des parcours,
 la page le dit. Les résumés sont ceux du livre, et le livre en garde les nuances. Les traductions sont celles de la page.
 
 ### Valeur finale
@@ -175,3 +175,5 @@ Aucun des deux articles ne relie les réponses entre elles ni ne montre la limit
   au script). Demante rapporte qu'aucun acte imprimé avec « bon plaisir », confronté à l'original, n'y résiste
   (l'original porte « Car tel est notre plaisir ») : ajouté à l'écho, journal du 04/11. La datation « Empire puis
   Restauration » avancée par la contre-expertise n'est pas dans l'extrait lu : non écrite.
+- Relecture des sources du lot « reperes-b » (16/11/2026, `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\reperes-b\SOURCES\le-pouvoir-de-machiavel-a-foucault_R1.md`, sondes S7 à S11) : trois P1 corrigés dans la version proposée — Cicéron marque le danger de la devise dans la *Première Philippique* (I, 34), non dans le *De Officiis* (I, 97 : convenance au personnage d'Atrée ; erreur reprise du livre, p. 49) ; la dernière zone du livre des promesses s'intitule « Hors de sa main » ; Montesquieu n'est pas sur la carte « Liberté » (p. 15), ce qui contredit la vérification ci-dessus. Points fermés : une occurrence datée de « There is no alternative » (25/06/1980, Thatcher Foundation, doc. 104389, lue par la Wayback Machine) ; le « bon plaisir » de l'Empire et de la Restauration, que la ligne ci-dessus laissait « non écrit », est attesté par Mas-Latrie (BEC 1881). La découverte principale et le mécanisme de cette fiche ne sont pas contredits : les trois manières de faire agir restent une grille de la page.
+- Jugement externe à l'aveugle (audit PRO-20261116-165827, 16/11/2026, réponse archivée avant lecture, SHA-256 2D243C03…65C0) : la version proposée retenue ; corrections tirées de son arbitrage (`06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\reperes-b\specs\externe.py`, `JUGE\ARBITRAGE_EXTERNE.md`). « Non attestée » pour « L'État, c'est moi » ; les deux phrases de 1655 et de 1715 éclairent une distinction, elles n'établissent pas une transformation historique ; la grille est dite celle de la page au tableau.
