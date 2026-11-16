@@ -2,6 +2,7 @@
 title: "Livresque des mots : méthode et corpus"
 url: /livresque/methode-et-corpus/
 description: "La page de référence du corpus de Livresque des mots : chiffres exacts de l'édition courante, explication des écarts avec les notices anciennes, méthode de sélection et principe du recueil sans classement."
+sans_chapo: true  # le premier paragraphe redit la description dans le même ordre (décision de l'auteur, 16/11/2026) ; elle reste en métadonnée
 date: 2026-07-24
 lastmod: 2026-10-04
 stats_isbn: "978-2-9586347-0-4"

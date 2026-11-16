@@ -3,7 +3,9 @@
 <article class="home-section">
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
-    {{ with (.Params.chapo | default .Description) }}
+    {{- /* `sans_chapo: true` : même règle que _default/list.html (07/11/2026). Ce gabarit sert aussi /livresque/methode-et-corpus/
+           (garde ci-dessous), qui le pose ; sans cette condition, le drapeau y restait sans effet (constaté au build, 16/11/2026). */ -}}
+    {{ with and (not .Params.sans_chapo) (.Params.chapo | default .Description) }}
     <p class="page-header__lede">{{ partial "fr-typo.html" . }}</p>
     {{ end }}
   </header>
