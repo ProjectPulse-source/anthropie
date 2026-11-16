@@ -733,7 +733,7 @@ main .registre-frise__liste li::before { content: none !important; }
 // ----- AWP list compact (a-propos) -----
 
 // ----- Contact form -----
-.contact-form { max-width: 720px; margin: 0 auto; }
+.contact-form { max-width: 720px; margin: 0; }
 .contact-form label { display: block; font-weight: 600; margin-bottom: 0.3rem; margin-top: 1rem; }
 .contact-form input, .contact-form textarea {
   width: 100%; padding: 0.6rem; border: 1px solid var(--color-rule-medium);
