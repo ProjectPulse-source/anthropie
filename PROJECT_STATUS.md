@@ -73,6 +73,10 @@ Commande `/reprise-forme publications publier` ; rapport : `D:\PRO\06_PROMOTION\
   rendu, relecture) ; débordement 0 sur 46 pages × 5 largeurs.
 - **Non publié, décision de l'auteur** : `/livresque/methode-et-corpus/` sans chapô visible (il redit le premier
   paragraphe) ; correctif d'une ligne dans le lot.
+- **Publié** : `0e69313` (gabarit AWP), `7a7e240` (frise), `63d63ab` (ce journal), poussés (`70ce02c..63d63ab`) ;
+  déploiement `hugo.yml` 43825287649 réussi ; version servie attestée le 16/11/2026 à 8 h 41 : texte des 44 pages
+  identique au build contrôlé, feuille de style servie identique à celle du build (`style.f83d23e3…`). Retour arrière :
+  `git revert` du commit, puis poussée.
 
 ### 2026-11-15 — `/quest-ce-que-lanthropie/` : boutons de la spirale rétablis, chiffres des trois questions marqués
 
