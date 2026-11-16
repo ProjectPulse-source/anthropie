@@ -52,6 +52,14 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-15 — `/quest-ce-que-lanthropie/` : boutons de la spirale rétablis, chiffres des trois questions marqués
+
+- Boutons d'exemples (Le schéma, Rome, Dette publique, Environnement, Numérique) rétablis sur la forme courte de la
+  spirale, à la demande de l'auteur (`0d6500a`) : ils en avaient été retirés le 30/10 (`b9441fa`, contre-expertise
+  jessop-12). Légende courte, clé des cinq états et lien vers `/boucle-anthropique/` inchangés.
+- Chiffres 1, 2, 3 des « trois questions fondamentales » : serif, 1,75 rem, graisse 500, couleur d'accent (`02995aa`).
+- Contrôles : build 0, `check-all --ci` 0 ; rendu servi vérifié FR et EN à 1920 et 386 px (5 boutons, sans débordement).
+
 ### 2026-11-13 (suite 2) — Décisions déléguées par l'auteur : clarté pour le lecteur
 
 L'auteur : « Je te laisse arbitrer ce qui est le plus pertinent du point de vue de la clarté pour le lecteur. »
