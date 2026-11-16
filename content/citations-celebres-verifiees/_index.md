@@ -3,10 +3,12 @@ title: "Citations célèbres : qu'ont vraiment écrit Hugo, Voltaire, Molière, 
 og_image: "images/og-texte-citations.jpg"
 og_image_alt: "Carte de partage : « Citations célèbres vérifiées »"
 description: "Vingt citations célèbres prêtées à Victor Hugo, Voltaire, Molière, La Fontaine et Oscar Wilde, relues dans leurs œuvres : le texte exact, l'édition, le passage. Quinze sont établies, deux circulent retouchées, trois n'ont pas été trouvées chez l'auteur qu'on leur prête."
-chapo: "Sur vingt citations célèbres qu'on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n'y ont pas été trouvées. Voltaire n'a pas écrit « je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » : la phrase est d'une biographe anglaise, qui l'a reconnue pour sienne en 1939. Et souvent, l'auteur citait déjà quelqu'un d'autre."
+chapo: "Sur vingt citations célèbres qu'on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n'y ont pas été trouvées. « Je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » ne se lit pas chez Voltaire, dans les sources consultées : la phrase est d'une biographe anglaise, qui l'a reconnue pour sienne en 1939. Et plusieurs fois, l'auteur citait déjà quelqu'un d'autre."
 date: 2026-11-01T06:00:00+01:00  # heure de Paris : une date nue se lit minuit UTC
-lastmod: 2026-11-05T12:00:00+01:00
+lastmod: 2026-11-16T12:00:00+01:00
 journal:  # révisions qui changent la lecture de la page
+  - date: 2026-11-16
+    texte: "Corrections : une première attestation très postérieure à la mort d'un auteur rend son attribution douteuse, elle ne l'écarte pas (Le Sottisier paraît en 1880) ; les trois attributions corrigées dans Livresque des mots ne sont attestées que dans une version antérieure du recueil ; « je me battrai… » ne se lit pas chez Voltaire dans les sources consultées, et sa biographe l'a revendiquée ; l'idée de l'école contre la prison se lit chez Hugo et circulait avant lui. Précisé : règle de regroupement des fractions par auteur, Lady Windermere's Fan créée en 1892 et publiée en 1893, sources de l'entrée « Ouvrez une école »."
   - {date: 2026-11-05, texte: "Hugo, « Ultima verba » : la dernière strophe se lit p. 430 de l'édition Hetzel de 1880 (446 est le numéro de la vue du fac-similé)."}
   - date: 2026-11-05
     texte: "Correction du bilan par auteur de la vérification de Livresque des mots : les graphies d'un même auteur sont désormais réunies. Molière : 41 citations retrouvées sur 44, et non 16 sur 16 ; Voltaire : 32 sur 51, et non 17 sur 29. La Fontaine et Hugo ne changent pas."
@@ -18,13 +20,13 @@ stats_isbn: "978-2-9586347-0-4"  # chiffres du corpus de Livresque des mots (sho
 lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 faq:
   - question: "Voltaire a-t-il dit « Je ne suis pas d'accord avec ce que vous dites, mais je me battrai jusqu'à la mort pour que vous ayez le droit de le dire » ?"
-    answer: "La phrase n'a pas été trouvée dans les textes de Voltaire. Elle paraît d'abord en anglais, en 1906, dans The Friends of Voltaire d'Evelyn Beatrice Hall, qui signe S. G. Tallentyre : « I disapprove of what you say, but I will defend to the death your right to say it », suivi de « was his attitude now » (telle était désormais son attitude). Hall y résume la réaction de Voltaire à la condamnation du livre d'Helvétius, De l'esprit. Dans une lettre du 9 mai 1939, publiée en 1943 dans Modern Language Notes, elle écrit que la phrase est sa propre expression et n'aurait pas dû être mise entre guillemets."
+    answer: "La phrase n'a pas été trouvée chez Voltaire dans les sources consultées, et son auteure l'a revendiquée. Elle paraît d'abord en anglais, en 1906, dans The Friends of Voltaire d'Evelyn Beatrice Hall, qui signe S. G. Tallentyre : « I disapprove of what you say, but I will defend to the death your right to say it », suivi de « was his attitude now » (telle était désormais son attitude). Hall y résume la réaction de Voltaire à la condamnation du livre d'Helvétius, De l'esprit. Dans une lettre du 9 mai 1939, publiée en 1943 dans Modern Language Notes, elle écrit que la phrase est sa propre expression et n'aurait pas dû être mise entre guillemets."
   - question: "Oscar Wilde a-t-il dit « Soyez vous-même, les autres sont déjà pris » ?"
     answer: "Aucun texte de Wilde ne la contient dans les sources consultées. Selon l'enquête du site Quote Investigator (2014), la plus ancienne attestation exacte retrouvée de « Be yourself; everyone else is already taken » date de décembre 1999, sur un forum Usenet, déjà entre guillemets et sans auteur ; son origine reste inconnue. Wilde est mort en 1900. Livresque des mots l'imprime sous « Anonyme »."
   - question: "D'où vient « Que diable allait-il faire dans cette galère ? »"
     answer: "Des Fourberies de Scapin de Molière (1671), acte II : Géronte, à qui Scapin réclame cinq cents écus pour racheter son fils prisonnier d'une galère turque, répète la question à plusieurs reprises. Molière reprend la scène de Cyrano de Bergerac, Le Pédant joué (1654), acte II, où Granger s'écrie : « Que Diable aller faire aussi dans la Galère d'un Turc ? »"
   - question: "Victor Hugo a-t-il écrit « Ouvrez une école, vous fermerez une prison » ?"
-    answer: "La formule n'a pas été trouvée dans les textes de Hugo numérisés sur Wikisource. Le texte le plus proche est un poème des Quatre Vents de l'esprit (1881), « Écrit après la visite d'un bagne » : « Chaque enfant qu'on enseigne est un homme qu'on gagne. / Quatrevingt-dix voleurs sur cent qui sont au bagne / Ne sont jamais allés à l'école une fois ». L'idée est de Hugo ; la formule en circulation est plus nette que son vers."
+    answer: "La formule n'a pas été trouvée dans les textes de Hugo numérisés sur Wikisource. Le texte le plus proche est un poème des Quatre Vents de l'esprit (1881), « Écrit après la visite d'un bagne » : « Chaque enfant qu'on enseigne est un homme qu'on gagne. / Quatrevingt-dix voleurs sur cent qui sont au bagne / Ne sont jamais allés à l'école une fois ». L'idée se lit chez Hugo, et elle circulait avant lui ; la formule en circulation est plus nette que son vers."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   refonte: "2026-11-01"  # relecture attestée (instantané docs/relectures/)
   type: ["corpus"]  # protocole de la page (CLAUDE.md du site, « Production des ressources ») : grille uniforme, entrées datées et sourcées
@@ -67,7 +69,7 @@ Le statut dit si la phrase est dans l'œuvre. Ce qui lui est arrivé en circulan
 <div class="citations-mouvements">
 
 - **L'auteur citait déjà**&nbsp;: la phrase existait avant lui, et son nom a pris la place de la source, même quand il la signalait.
-- **La phrase change d'auteur**&nbsp;: elle va vers un nom qui la rend vraisemblable.
+- **La phrase change d'auteur**&nbsp;: elle peut aller vers un nom qui la rend vraisemblable.
 - **La forme se simplifie**&nbsp;: la syntaxe se règle sur la conversation.
 - **La phrase perd sa suite**&nbsp;: exacte, elle se lit sans le vers, la réplique ou le personnage qui l'entourait.
 
@@ -106,7 +108,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 {{< citation-entree id="hugo-l-enfer-des-pauvres"
     statut="etablie"
     statut_texte=`Établie`
-    mecanisme=`la phrase change d'auteur (prêtée à Condorcet)`
+    mecanisme=`la phrase change d'auteur (prêtée à Condorcet par une version antérieure du recueil)`
     q=`«&nbsp;C'est de l'enfer des pauvres qu'est fait le paradis des riches&nbsp;»`
     decouverte=`Une réplique de personnage, qui circule comme une maxime.`
     ref=`« C'est de l'enfer des pauvres qu'est fait le paradis des riches. » — Victor Hugo, L'Homme qui rit (1869), IIe partie, livre II, chap. XI (Gwynplaine).` >}}
@@ -134,7 +136,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 {{< citation-entree id="hugo-dieu-n-a-pas-de-main"
     statut="etablie"
     statut_texte=`Établie, chez Hugo`
-    mecanisme=`la phrase change d'auteur (prêtée à Voltaire)`
+    mecanisme=`la phrase change d'auteur (prêtée à Voltaire par une version antérieure du recueil)`
     q=`«&nbsp;Dieu n'a pas de main, et les rois n'ont pas de cœur&nbsp;»`
     decouverte=`Le trait a l'allure d'un mot de Voltaire contre Bossuet&nbsp;; il est de Hugo, en exil.`
     ref=`« Dieu n'a pas de main, et les rois n'ont pas de cœur. » — Victor Hugo, William Shakespeare (1864), IIIe partie, livre III, chap. III.` >}}
@@ -147,7 +149,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     statut="non"
     statut_texte=`Non établie dans les sources consultées`
     q=`«&nbsp;Ouvrez une école, vous fermerez une prison&nbsp;»`
-    decouverte=`L'idée est de Hugo&nbsp;; la formule, plus nette que son vers, n'a pas été trouvée chez lui.`
+    decouverte=`L'idée se lit chez Hugo&nbsp;; la formule, plus nette que son vers, n'a pas été trouvée chez lui.`
     circule_lbl=`Ce qui circule`
     circule=`«&nbsp;Ouvrez une école, vous fermerez une prison&nbsp;»`
     ecrit_lbl=`Le texte de Hugo le plus proche`
@@ -155,8 +157,8 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     ref=`« Ouvrez une école, vous fermerez une prison » : formule non trouvée chez Victor Hugo (texte intégral de Wikisource). Texte le plus proche : « Chaque enfant qu'on enseigne est un homme qu'on gagne », Les Quatre Vents de l'esprit (1881), « Écrit après la visite d'un bagne ».` >}}
 - **Le texte le plus proche**&nbsp;: «&nbsp;Chaque enfant qu'on enseigne est un homme qu'on gagne. / Quatrevingt-dix voleurs sur cent qui sont au bagne / Ne sont jamais allés à l'école une fois, / Et ne savent pas lire, et signent d'une croix.&nbsp;»
 - **Source**&nbsp;: *Les Quatre Vents de l'esprit* (1881), «&nbsp;Le Livre satirique&nbsp;», «&nbsp;Écrit après la visite d'un bagne&nbsp;»&nbsp;; *Œuvres complètes*, Ollendorff, Poésie, t.&nbsp;X, 1908 ([Wikisource](https://fr.wikisource.org/wiki/Les_Quatre_Vents_de_l%E2%80%99esprit/Le_Livre_satirique/%C3%89crit_apr%C3%A8s_la_visite_d%E2%80%99un_bagne)). La formule «&nbsp;ouvrez une école&nbsp;» et ses variantes («&nbsp;ouvrir une école&nbsp;», «&nbsp;fermer une prison&nbsp;») ont été cherchées dans le texte intégral de Wikisource&nbsp;: aucune occurrence chez Hugo.
-- **Une piste d'attribution**&nbsp;: le *Grand dictionnaire universel du XIXe siècle* de Pierre Larousse cite, aux articles «&nbsp;École&nbsp;» (t.&nbsp;VII) et «&nbsp;Prison&nbsp;» (t.&nbsp;XIII), «&nbsp;Ouvrir une école aujourd'hui, c'est fermer une prison dans vingt ans&nbsp;», signé L.&nbsp;Jourdan, sans nommer Hugo ([t.&nbsp;VII](https://archive.org/details/LarousGrdictionnXIX07bnf), [t.&nbsp;XIII](https://archive.org/details/LarousGrdictionnXIX13bnf)). Le Guichet du savoir y voit Louis-Charles Jourdan, rédacteur au *Siècle* ([question 31966](https://www.guichetdusavoir.org/question/voir/31966))&nbsp;; des formes voisines plus anciennes étant signalées, il n'est pas établi qu'il en soit le premier auteur.
-- **Ce que l'écart change**&nbsp;: l'idée est de Hugo, la formule en circulation est plus nette que son vers. Le poème parle d'enfants et d'un bagne, la phrase courante d'une école et d'une prison, comme une équation de politique publique.
+- **Une piste d'attribution**&nbsp;: le *Grand dictionnaire universel du XIXe siècle* de Pierre Larousse cite, aux articles «&nbsp;École&nbsp;» (t.&nbsp;VII) et «&nbsp;Prison&nbsp;» (t.&nbsp;XIII), «&nbsp;Ouvrir une école aujourd'hui, c'est fermer une prison dans vingt ans&nbsp;», signé L.&nbsp;Jourdan, sans nommer Hugo ([t.&nbsp;VII](https://archive.org/details/LarousGrdictionnXIX07bnf), [t.&nbsp;XIII](https://archive.org/details/LarousGrdictionnXIX13bnf)). Le Guichet du savoir, service de questions et réponses de la Bibliothèque municipale de Lyon, y voit Louis-Charles Jourdan, rédacteur au *Siècle* ([question 31966](https://www.guichetdusavoir.org/question/voir/31966))&nbsp;; des formes voisines plus anciennes étant signalées, il n'est pas établi qu'il en soit le premier auteur.
+- **Ce que l'écart change**&nbsp;: l'idée se lit chez Hugo, la formule en circulation est plus nette que son vers. Le poème parle d'enfants et d'un bagne, et ses «&nbsp;quatrevingt-dix voleurs sur cent&nbsp;» sont un chiffre de poète, non une statistique&nbsp;; la phrase courante parle d'une école et d'une prison, comme une équation de politique publique.
 {{< /citation-entree >}}
 
 ## Voltaire&nbsp;: la phrase la plus célèbre n'est pas de lui {#voltaire}
@@ -206,7 +208,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     statut_texte=`Variante documentée`
     mecanisme=`la forme se simplifie, et la phrase change d'auteur`
     q=`«&nbsp;Les femmes sont comme les girouettes&nbsp;: elles se fixent quand elles se rouillent&nbsp;»`
-    decouverte=`Voltaire écrit «&nbsp;ressemblent aux girouettes&nbsp;»&nbsp;; la phrase a aussi été prêtée à Jean Webster et à Sacha Guitry.`
+    decouverte=`Voltaire écrit «&nbsp;ressemblent aux girouettes&nbsp;»&nbsp;; la phrase a aussi été prêtée à Jean Webster et, par une version antérieure du recueil, à Sacha Guitry.`
     circule_lbl=`Ce qui circule`
     circule=`«&nbsp;Les femmes <mark>sont comme les</mark> girouettes&nbsp;: elles se fixent quand elles se rouillent&nbsp;»`
     ecrit_lbl=`Ce que Voltaire a écrit`
@@ -232,7 +234,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     ref=`« suivant le dire d'un ancien, il faut manger pour vivre, et non pas vivre pour manger. » — Molière, L'Avare (1668), acte III, réplique de Valère.` >}}
 - **Le texte**&nbsp;: «&nbsp;suivant le dire d'un ancien, il faut manger pour vivre, et non pas vivre pour manger.&nbsp;»
 - **Source**&nbsp;: *L'Avare* (1668), acte&nbsp;III, réplique de Valère (scène&nbsp;5 dans l'édition Louandre, 1910&nbsp;; [Wikisource](https://fr.wikisource.org/wiki/L%E2%80%99Avare_(Moli%C3%A8re)/%C3%89dition_Louandre,_1910/Acte_III)).
-- **Ce que l'écart change**&nbsp;: Valère cite «&nbsp;un ancien&nbsp;» sans le nommer, et il a raison de citer&nbsp;: la *Rhétorique à Herennius* (IV, 28), longtemps attribuée à Cicéron, donne la formule en exemple de figure, «&nbsp;*Esse oportet ut vivas, non vivere ut edas*&nbsp;», et Rabelais en avait déjà tiré un effet comique dans le *Tiers Livre*. Le programme de recherche Molière21 en relève d'autres reprises au XVII<sup>e</sup>&nbsp;siècle ([«&nbsp;Il faut manger pour vivre&nbsp;»](https://moliere21.cnrs.fr/il-faut-manger-pour-vivre/)). Le rattachement à Socrate relève d'une autre tradition, non examinée ici. Harpagon, ravi, veut la répéter et la retourne&nbsp;: «&nbsp;Il faut vivre pour manger, et non pas manger pour vi… Non, ce n'est pas cela.&nbsp;» Isolée, la citation perd la réplique qui la rend comique.
+- **Ce que l'écart change**&nbsp;: Valère cite «&nbsp;un ancien&nbsp;» sans le nommer, et il a raison de citer&nbsp;: la *Rhétorique à Herennius* (IV, 28), traité latin d'art oratoire longtemps attribué à Cicéron, donne la formule en exemple de figure, «&nbsp;*Esse oportet ut vivas, non vivere ut edas*&nbsp;», et Rabelais en avait déjà tiré un effet comique dans le *Tiers Livre*. Le programme de recherche Molière21 en relève d'autres reprises au XVII<sup>e</sup>&nbsp;siècle ([«&nbsp;Il faut manger pour vivre&nbsp;»](https://moliere21.cnrs.fr/il-faut-manger-pour-vivre/)). Le rattachement à Socrate relève d'une autre tradition, non examinée ici. Harpagon, ravi, veut la répéter et la retourne&nbsp;: «&nbsp;Il faut vivre pour manger, et non pas manger pour vi… Non, ce n'est pas cela.&nbsp;» Isolée, la citation perd la réplique qui la rend comique.
 {{< /citation-entree >}}
 
 {{< citation-entree id="moliere-cette-galere"
@@ -247,7 +249,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     ecrit=`«&nbsp;Que diable alloit-il faire dans cette galère&nbsp;?&nbsp;»`
     ref=`« Que diable alloit-il faire dans cette galère ? » — Molière, Les Fourberies de Scapin (1671), acte II (Géronte) ; reprise de Cyrano de Bergerac, Le Pédant joué (1654), acte II, sc. 4.` >}}
 - **Le texte**&nbsp;: «&nbsp;Que diable alloit-il faire dans cette galère&nbsp;?&nbsp;» (Géronte, qui la répète à plusieurs reprises).
-- **Source**&nbsp;: *Les Fourberies de Scapin* (1671), acte&nbsp;II (scène&nbsp;11 dans l'édition Louandre, 1910&nbsp;; [Wikisource](https://fr.wikisource.org/wiki/Les_Fourberies_de_Scapin/%C3%89dition_Louandre,_1910/Acte_II)). Avant lui&nbsp;: Cyrano de Bergerac, *Le Pédant joué* (1654), acte&nbsp;II, scène&nbsp;4&nbsp;: «&nbsp;Que Diable aller faire aussi dans la Galère d'un Turc&nbsp;?&nbsp;» ([édition de 1654, Wikisource](https://fr.wikisource.org/wiki/Le_P%C3%A9dant_jou%C3%A9_(1654))).
+- **Source**&nbsp;: *Les Fourberies de Scapin* (1671), acte&nbsp;II (scène&nbsp;11 dans l'édition Louandre, 1910&nbsp;; [Wikisource](https://fr.wikisource.org/wiki/Les_Fourberies_de_Scapin/%C3%89dition_Louandre,_1910/Acte_II)). Avant lui&nbsp;: Cyrano de Bergerac, *Le Pédant joué* (1654), acte&nbsp;II, scène&nbsp;4&nbsp;: «&nbsp;Que Diable aller faire aussi dans la Galère d'un Turc&nbsp;?&nbsp;» (graphie modernisée&nbsp;; [édition de 1654, Wikisource](https://fr.wikisource.org/wiki/Le_P%C3%A9dant_jou%C3%A9_(1654))).
 - **Ce que l'écart change**&nbsp;: Molière reprend de Cyrano la situation — un père à qui l'on réclame la rançon d'un fils pris par les Turcs — et la réplique répétée. L'édition de 1910 le signale en note. Le mot est devenu proverbe sous le nom de Molière, qui l'a rendu célèbre.
 {{< /citation-entree >}}
 
@@ -322,8 +324,8 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     decouverte=`La plus ancienne attestation retrouvée date de près d'un siècle après la mort de Wilde&nbsp;; son origine reste inconnue.`
     ref=`« Be yourself; everyone else is already taken » : phrase non trouvée chez Oscar Wilde ; plus ancienne attestation exacte retrouvée : forum Usenet, décembre 1999, sans auteur (Quote Investigator, 2014).` >}}
 - **Le texte**&nbsp;: aucun texte de Wilde connu. En anglais&nbsp;: «&nbsp;*Be yourself; everyone else is already taken.*&nbsp;»
-- **Source**&nbsp;: enquête du site Quote Investigator, consacré à la généalogie des citations (20&nbsp;janvier 2014, lue le 1<sup>er</sup>&nbsp;novembre 2026)&nbsp;: la première occurrence exacte trouvée date de décembre 1999, sur un forum Usenet, entre guillemets et sans auteur, et l'enquête ne trouve «&nbsp;*no substantive evidence*&nbsp;» d'une origine chez Wilde. *Livresque des mots* l'imprime sous «&nbsp;Anonyme&nbsp;».
-- **Ce que l'écart change**&nbsp;: la plus ancienne attestation exacte retrouvée date de près d'un siècle après la mort de Wilde (1900), et elle était déjà donnée comme une citation&nbsp;: son origine reste inconnue. La phrase a le tour d'un paradoxe de Wilde, et cela a suffi pour qu'on la lui prête.
+- **Source**&nbsp;: enquête du site Quote Investigator, consacré à la généalogie des citations (20&nbsp;janvier 2014, lue le 1<sup>er</sup>&nbsp;novembre 2026)&nbsp;: la première occurrence exacte trouvée date de décembre 1999, sur un forum Usenet, l'un des premiers réseaux de discussion d'Internet, entre guillemets et sans auteur, et l'enquête ne trouve «&nbsp;*no substantive evidence*&nbsp;» d'une origine chez Wilde. *Livresque des mots* l'imprime sous «&nbsp;Anonyme&nbsp;».
+- **Ce que l'écart change**&nbsp;: la plus ancienne attestation exacte retrouvée date de près d'un siècle après la mort de Wilde (1900), et elle était déjà donnée comme une citation&nbsp;: son origine reste inconnue. La phrase a le tour d'un paradoxe de Wilde, et cela a pu suffire pour qu'on la lui prête.
 {{< /citation-entree >}}
 
 {{< citation-entree id="wilde-resister-a-tout"
@@ -334,7 +336,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     decouverte=`C'est un personnage qui parle, et on lui répond aussitôt.`
     ref=`« I can resist everything except temptation. » — Oscar Wilde, Lady Windermere's Fan (1892), acte I, Lord Darlington.` >}}
 - **Le texte**&nbsp;: «&nbsp;*I can resist everything except temptation.*&nbsp;»
-- **Source**&nbsp;: *Lady Windermere's Fan* (*L'Éventail de Lady Windermere*, 1892), acte&nbsp;I, Lord Darlington ([texte anglais, Project Gutenberg](https://www.gutenberg.org/ebooks/790)).
+- **Source**&nbsp;: *Lady Windermere's Fan* (*L'Éventail de Lady Windermere*, créée en 1892, publiée en 1893), acte&nbsp;I, Lord Darlington ([texte anglais, Project Gutenberg](https://www.gutenberg.org/ebooks/790)).
 - **Ce que l'écart change**&nbsp;: c'est un personnage qui parle, et on lui répond aussitôt. Lady Windermere&nbsp;: «&nbsp;*You have the modern affectation of weakness*&nbsp;», vous avez l'affectation moderne de la faiblesse.
 {{< /citation-entree >}}
 
@@ -345,7 +347,7 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
     q=`«&nbsp;Le seul moyen de se délivrer d'une tentation, c'est d'y céder&nbsp;»`
     decouverte=`La phrase est de Lord Henry, dont le roman montre ce que sa doctrine fait de Dorian.`
     ref=`« The only way to get rid of a temptation is to yield to it. » — Oscar Wilde, The Picture of Dorian Gray (1891), chap. II, Lord Henry.` >}}
-- **Le texte**&nbsp;: «&nbsp;*The only way to get rid of a temptation is to yield to it. Resist it, and your soul grows sick with longing for the things it has forbidden to itself.*&nbsp;»
+- **Le texte**&nbsp;: «&nbsp;*The only way to get rid of a temptation is to yield to it. Resist it, and your soul grows sick with longing for the things it has forbidden to itself […]*&nbsp;»
 - **Source**&nbsp;: *The Picture of Dorian Gray* (*Le Portrait de Dorian Gray*), édition en volume de 1891, chapitre&nbsp;II, Lord Henry ([texte anglais, Project Gutenberg](https://www.gutenberg.org/ebooks/174)).
 - **Ce que l'écart change**&nbsp;: la phrase appartient à Lord Henry, dont le roman montre ce que sa doctrine fait de Dorian. La citation en fait une maxime de l'auteur.
 {{< /citation-entree >}}
@@ -366,20 +368,20 @@ Pour chaque entrée, la même grille&nbsp;: le **statut**, le **texte** tel que 
 
 **L'auteur citait déjà.** Voltaire attribue «&nbsp;le mieux est l'ennemi du bien&nbsp;» à «&nbsp;un sage Italien&nbsp;»&nbsp;; Valère donne sa maxime «&nbsp;suivant le dire d'un ancien&nbsp;»&nbsp;; Géronte reprend la galère de Cyrano&nbsp;; Wilde se cite lui-même. Les guillemets que l'auteur avait posés tombent en route, et la phrase reste au dernier nom connu.
 
-**La phrase va vers un nom qui la rend vraisemblable.** Le résumé de Hall passe à Voltaire, la phrase anonyme de 1999 à Wilde. *Livresque des mots* avait lui-même recueilli trois de ces glissements, que l'édition en vente depuis octobre 2026 a corrigés&nbsp;: le trait contre Dieu et les rois prêté à Voltaire, le mot sur les femmes à Guitry, la réplique de Gwynplaine à Condorcet. Le nom d'arrivée est chaque fois celui que la réputation associe au thème — la tolérance, le paradoxe, l'ironie anticléricale, le mot d'esprit sur les femmes, la justice sociale — et la citation circule d'autant mieux qu'elle confirme ce qu'on croit déjà de l'auteur.
+**La phrase peut aller vers un nom qui la rend vraisemblable.** Le résumé de Hall passe à Voltaire, la phrase anonyme de 1999 à Wilde. *Livresque des mots* avait lui-même opéré trois de ces glissements, que l'édition en vente depuis octobre 2026 a corrigés&nbsp;: le trait contre Dieu et les rois prêté à Voltaire, le mot sur les femmes à Guitry, la réplique de Gwynplaine à Condorcet&nbsp;; aucune source consultée ne dit s'il les avait trouvés ailleurs. Dans ces cas, le nom d'arrivée est celui que la réputation associe au thème — la tolérance, le paradoxe, l'ironie anticléricale, le mot d'esprit sur les femmes, la justice sociale. On peut en faire l'hypothèse&nbsp;: une attribution paraît d'autant plus crédible qu'elle confirme ce qu'on croit déjà de l'auteur. Vingt cas ne la mesurent pas&nbsp;; c'est une interprétation.
 
 **La forme se simplifie.** «&nbsp;Si l'on n'est plus que mille&nbsp;» devient «&nbsp;S'il n'en est plus que mille&nbsp;», «&nbsp;ressemblent aux girouettes&nbsp;» devient «&nbsp;sont comme les girouettes&nbsp;», «&nbsp;la conviction qu'on est aimé&nbsp;» devient «&nbsp;savoir que vous êtes aimé&nbsp;». La syntaxe se règle sur celle de la conversation, et le vers qui précède ou qui suit disparaît.
 
 Les trois mouvements se cumulent souvent. Un auteur reprend une formule ancienne, la circulation la simplifie, puis l'attache à un nom plus célèbre&nbsp;: à chaque étape, l'autorité du nom remplace un peu plus la preuve du texte. Une citation qui quitte son œuvre change parfois de mots, parfois d'auteur, et toujours de contexte.
 
-La vérification des citations de *Livresque des mots* va dans le même sens pour ces cinq auteurs. Chez Molière, presque toutes les citations vérifiées ont été retrouvées dans le texte, exactes ou à une variante près (41 sur 44)&nbsp;; chez La Fontaine aussi (33 sur 36)&nbsp;; chez Hugo, sept sur dix (55 sur 78)&nbsp;; chez Voltaire, un peu plus de six sur dix (32 sur 51). Ces différences décrivent les citations que le recueil avait réunies&nbsp;; elles ne mesurent ni la fiabilité des attributions à chaque auteur, ni la fréquence des erreurs dans les citations qui circulent. Le genre des œuvres, le vers, l'apprentissage scolaire ou le choix initial des citations peuvent y jouer, et rien ici ne permet de faire la part de chacun.
+La vérification des citations de *Livresque des mots* va dans le même sens pour ces cinq auteurs. Chez Molière, presque toutes les citations vérifiées ont été retrouvées dans le texte, exactes ou à une variante près (41 sur 44)&nbsp;; chez La Fontaine aussi (33 sur 36)&nbsp;; chez Hugo, sept sur dix (55 sur 78)&nbsp;; chez Voltaire, un peu plus de six sur dix (32 sur 51). Les graphies d'un même nom sont réunies, et les fiches dont l'attribution est elle-même qualifiée (contestée, collective) restent hors du compte. Ces différences décrivent les citations que le recueil avait réunies&nbsp;; elles ne mesurent ni la fiabilité des attributions à chaque auteur, ni la fréquence des erreurs dans les citations qui circulent. Le genre des œuvres, le vers, l'apprentissage scolaire ou le choix initial des citations peuvent y jouer, et rien ici ne permet de faire la part de chacun.
 
 ## Vérifier une citation soi-même&nbsp;: quatre questions {#verifier-une-citation}
 
 1. **Quelle œuvre, quel passage&nbsp;?** Une citation sans référence précise reste presque impossible à vérifier.
-2. **Le texte se lit-il dans une édition qu'on peut nommer&nbsp;?** Les fac-similés de Wikisource, de Gallica, d'Internet Archive ou de Project Gutenberg permettent de lire la phrase dans sa page.
+2. **Le texte se lit-il dans une édition qu'on peut nommer&nbsp;?** Les fac-similés de Wikisource, de Gallica ou d'Internet Archive permettent de lire la phrase dans sa page&nbsp;; Project Gutenberg en donne une transcription.
 3. **Qui parle dans le texte&nbsp;?** L'auteur, un personnage, ou un auteur qu'il cite&nbsp;: Lord Henry n'est pas Wilde, et Valère cite un ancien.
-4. **Quand la phrase apparaît-elle pour la première fois, et chez qui&nbsp;?** Une première attestation postérieure à la mort de l'auteur écarte l'attribution. À l'inverse, trouver la phrase chez un auteur ne dit pas qu'il l'a inventée&nbsp;: «&nbsp;Aide-toi, le Ciel t'aidera&nbsp;» est bien de La Fontaine, et la maxime est plus ancienne que lui.
+4. **Quand la phrase apparaît-elle pour la première fois, et chez qui&nbsp;?** Une première attestation très postérieure à la mort de l'auteur, sans manuscrit, sans publication posthume de ses papiers ni témoin de son vivant, rend l'attribution très douteuse. À l'inverse, trouver la phrase chez un auteur ne dit pas qu'il l'a inventée&nbsp;: «&nbsp;Aide-toi, le Ciel t'aidera&nbsp;» est bien de La Fontaine, et la maxime est plus ancienne que lui.
 
 ## Ce que cette page ne dit pas {#limites}
 
@@ -391,12 +393,12 @@ Cette page relit vingt citations. *Livresque des mots* en réunit {{< stat "cita
 
 ## Questions fréquentes {#questions-frequentes}
 
-{{< faq-visible >}}
+{{< faq-visible colonnes="2" >}}
 
 ## Sources {#sources}
 
-**Textes des auteurs** (relus le 1<sup>er</sup>&nbsp;novembre 2026)&nbsp;: Victor Hugo, *Les Châtiments*, Hetzel, 1880&nbsp;; *L'Homme qui rit*, 1869&nbsp;; *Les Misérables*, 1862&nbsp;; *William Shakespeare*, 1864&nbsp;; *Les Quatre Vents de l'esprit*, Ollendorff, 1908. Voltaire, «&nbsp;La Bégueule&nbsp;» et *Candide*, *Œuvres complètes*, Garnier, 1877&nbsp;; *Le Sottisier*, Librairie des bibliophiles, 1880, et Garnier, 1883. Molière, *L'Avare*, *Les Fourberies de Scapin*, *Le Tartuffe*, édition Louandre, 1910. Cyrano de Bergerac, *Le Pédant joué*, 1654. La Fontaine, *Fables*, Bernardin-Béchet, 1874, et édition Barbin. Oscar Wilde, *The Picture of Dorian Gray*, 1891, et *Lady Windermere's Fan*, 1892, Project Gutenberg. Les liens sont donnés à chaque entrée.
+**Textes des auteurs** (relus le 1<sup>er</sup>&nbsp;novembre 2026)&nbsp;: Victor Hugo, *Les Châtiments*, Hetzel, 1880&nbsp;; *L'Homme qui rit*, 1869&nbsp;; *Les Misérables*, 1862&nbsp;; *William Shakespeare*, 1864&nbsp;; *Les Quatre Vents de l'esprit*, Ollendorff, 1908. Voltaire, «&nbsp;La Bégueule&nbsp;» et *Candide*, *Œuvres complètes*, Garnier, 1877&nbsp;; *Le Sottisier*, Librairie des bibliophiles, 1880, et Garnier, 1883. Molière, *L'Avare*, *Les Fourberies de Scapin*, *Le Tartuffe*, édition Louandre, 1910. Cyrano de Bergerac, *Le Pédant joué*, 1654. La Fontaine, *Fables*, Bernardin-Béchet, 1874, et édition Barbin. Oscar Wilde, *The Picture of Dorian Gray*, 1891, et *Lady Windermere's Fan*, créée en 1892, publiée en 1893, Project Gutenberg. Les liens sont donnés à chaque entrée.
 
-**Sur l'origine de quatre phrases**&nbsp;: S.&nbsp;G.&nbsp;Tallentyre (Evelyn Beatrice Hall), *The Friends of Voltaire*, Londres, John Murray, 1906, chapitre&nbsp;VII&nbsp;; Burdette Kinne, «&nbsp;Voltaire Never Said It!&nbsp;», *Modern Language Notes*, 58 (7), 1943, p.&nbsp;534-535&nbsp;; Molière21, «&nbsp;Il faut manger pour vivre&nbsp;»&nbsp;; P.-M. Quitard, *Dictionnaire étymologique, historique et anecdotique des proverbes*, 1842, article «&nbsp;aider&nbsp;»&nbsp;; Quote Investigator, «&nbsp;Be Yourself; Everyone Else Is Already Taken&nbsp;», 20&nbsp;janvier 2014 ([quoteinvestigator.com](https://quoteinvestigator.com/2014/01/20/be-yourself/)).
+**Sur l'origine de cinq phrases**&nbsp;: Pierre Larousse, *Grand dictionnaire universel du XIX<sup>e</sup>&nbsp;siècle*, t.&nbsp;VII et XIII, articles «&nbsp;École&nbsp;» et «&nbsp;Prison&nbsp;»&nbsp;; Guichet du savoir (Bibliothèque municipale de Lyon), question 31966&nbsp;; S.&nbsp;G.&nbsp;Tallentyre (Evelyn Beatrice Hall), *The Friends of Voltaire*, Londres, John Murray, 1906, chapitre&nbsp;VII&nbsp;; Burdette Kinne, «&nbsp;Voltaire Never Said It!&nbsp;», *Modern Language Notes*, 58 (7), 1943, p.&nbsp;534-535&nbsp;; Molière21, «&nbsp;Il faut manger pour vivre&nbsp;»&nbsp;; P.-M. Quitard, *Dictionnaire étymologique, historique et anecdotique des proverbes*, 1842, article «&nbsp;aider&nbsp;»&nbsp;; Quote Investigator, «&nbsp;Be Yourself; Everyone Else Is Already Taken&nbsp;», 20&nbsp;janvier 2014 ([quoteinvestigator.com](https://quoteinvestigator.com/2014/01/20/be-yourself/)).
 
 **Vérification de *Livresque des mots***&nbsp;: [méthode et corpus de l'édition 2026](/livresque/methode-et-corpus/). Sur un mot qui a changé d'auteur&nbsp;: [la *tabula rasa* de Locke](/tabula-rasa-locke/).

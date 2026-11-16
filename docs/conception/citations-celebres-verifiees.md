@@ -48,7 +48,7 @@ nette que le vers dont elle semble tirée. Il y a aussi un motif qu'on n'attenda
 Voltaire attribue « le mieux est l'ennemi du bien » à « un sage Italien », et Molière fait dire « suivant le dire d'un
 ancien ». Molière reprend en outre Cyrano de Bergerac. La circulation efface les guillemets qu'ils avaient posés. Enfin,
 une phrase migre vers l'auteur dont elle conforte la réputation : le résumé de Hall passe à Voltaire, l'anonyme de 1999
-à Wilde. Le tirage de septembre 2026 de *Livresque des mots* (P15) avait recueilli trois glissements de ce type, corrigés dans l'édition en vente depuis le 05/10/2026
+à Wilde. Le tirage de septembre 2026 de *Livresque des mots* (P15) avait lui-même opéré trois glissements de ce type, corrigés dans l'édition en vente depuis le 05/10/2026
 (Hugo → Voltaire, Voltaire → Guitry, Hugo → Condorcet). Contrôle du 01/11/2026 : aucune source indépendante ne montre ces
 trois noms dans la circulation publique (recherche web). La page les présente donc comme des attributions d'une version
 antérieure du recueil, et non comme des usages répandus. Linternaute range les girouettes sous Jean Webster.
@@ -183,3 +183,5 @@ circule, en citant une édition qui imprime l'autre. La page Hugo ne contient ni
 - Recette visuelle : faite le 03/11/2026 sur la page servie (navigateur sans interface, script) — aucun débordement à
   320, 390, 768 et 1 280 px, replis fermés et ouverts (témoin positif : un bloc de 900 px injecté est détecté) ;
   arrivée par ancre : repli ouvert, titre à 80 px sous un en-tête collant de 58 à 62 px ; captures relues à 390 px.
+- Relecture des sources du lot « reperes-b » (16/11/2026, `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\reperes-b\SOURCES\citations-celebres-verifiees_R1.md`, sondes S4 à S6) : les vingt citations conformes mot à mot, dans l'édition et au passage annoncés ; deux P1 corrigés dans la version proposée — la règle « une première attestation postérieure à la mort de l'auteur écarte l'attribution » contredisait la page (*Le Sottisier*, 1880) ; les trois glissements de *Livresque des mots* n'étaient attestés que dans le recueil, la page les donnait pour « recueillis » dans la circulation. Fractions par auteur recalculées (41/44, 33/36, 32/51), règle de regroupement désormais dite. La découverte principale (« la phrase va vers un nom qui la rend vraisemblable ») reste portée par deux cas attestés hors du recueil (Hall → Voltaire, 1999 → Wilde) et par Webster.
+- Jugement externe à l'aveugle (audit PRO-20261116-165827, 16/11/2026, réponse archivée avant lecture, SHA-256 2D243C03…65C0) : la version proposée retenue ; corrections tirées de son arbitrage (`06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\reperes-b\specs\externe.py`, `JUGE\ARBITRAGE_EXTERNE.md`). Passage 15 : l'explication par la réputation est désormais une hypothèse déclarée ; « quatrevingt-dix voleurs sur cent » donné pour un chiffre de poète.

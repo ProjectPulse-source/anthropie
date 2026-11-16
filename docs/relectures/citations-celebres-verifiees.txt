@@ -1,9 +1,8 @@
-# relu le 2026-11-05 ; texte servi de /citations-celebres-verifiees/, build de 27d2940 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-16 ; texte servi de /citations-celebres-verifiees/, build de e20b456 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Citations célèbres : qu’ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ?
-Sur vingt citations célèbres qu’on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n’y ont pas été trouvées.
-Voltaire n’a pas écrit « je me battrai jusqu’à la mort pour que vous ayez le droit de le dire » : la phrase est d’une biographe anglaise, qui l’a reconnue pour sienne en 1939.
-Et souvent, l’auteur citait déjà quelqu’un d’autre.
-Page mise à jour le 5 novembre 2026 · révisions
+Sur vingt citations célèbres qu’on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n’y ont pas été trouvées. « Je me battrai jusqu’à la mort pour que vous ayez le droit de le dire » ne se lit pas chez Voltaire, dans les sources consultées : la phrase est d’une biographe anglaise, qui l’a reconnue pour sienne en 1939.
+Et plusieurs fois, l’auteur citait déjà quelqu’un d’autre.
+Page mise à jour le 16 novembre 2026
 Une citation célèbre se répète d’ordinaire sans son livre, sans sa page et souvent sans sa forme exacte.
 Cette page examine vingt citations célèbres prêtées à cinq auteurs, choisies pour ce qu’elles montrent de la façon dont un texte se transmet, se transforme ou change d’auteur, et les relit dans leurs œuvres, dans une édition qu’elle nomme, au passage qu’elle indique.
 Elle s’appuie sur la vérification des 4 656 citations de Livresque des mots, dont l’édition 2026 a réexaminé le texte et la paternité une à une.
@@ -25,7 +24,7 @@ Ce statut ne dit pas qu’elle est fausse : il dit ce qui a été cherché, et o
 Le statut dit si la phrase est dans l’œuvre.
 Ce qui lui est arrivé en circulant tient le plus souvent à l’un de ces mouvements, signalé sous chaque citation quand l’entrée l’établit :
 L’auteur citait déjà : la phrase existait avant lui, et son nom a pris la place de la source, même quand il la signalait.
-La phrase change d’auteur : elle va vers un nom qui la rend vraisemblable.
+La phrase change d’auteur : elle peut aller vers un nom qui la rend vraisemblable.
 La forme se simplifie : la syntaxe se règle sur la conversation.
 La phrase perd sa suite : exacte, elle se lit sans le vers, la réplique ou le personnage qui l’entourait.
 Retrouver une phrase chez un auteur, la lui attribuer et en connaître l’origine sont trois opérations distinctes.
@@ -55,7 +54,7 @@ Hetzel, 1880, p.
 430.
 Vérification : https://stephane-lalut.com/citations-celebres-verifiees/#hugo-s-il-n-en-reste-qu-un
 « C’est de l’enfer des pauvres qu’est fait le paradis des riches »
-Établie · la phrase change d’auteur (prêtée à Condorcet)
+Établie · la phrase change d’auteur (prêtée à Condorcet par une version antérieure du recueil)
 Une réplique de personnage, qui circule comme une maxime.
 Le texte : « — Oui, murmura Gwynplaine pensif, c’est de l’enfer des pauvres qu’est fait le paradis des riches. »
 Source : L’Homme qui rit (1869), deuxième partie, livre II, chapitre XI ; édition de 1869 (Wikisource).
@@ -85,7 +84,7 @@ Lien permanent
 4.
 Vérification : https://stephane-lalut.com/citations-celebres-verifiees/#hugo-le-supreme-bonheur
 « Dieu n’a pas de main, et les rois n’ont pas de cœur »
-Établie, chez Hugo · la phrase change d’auteur (prêtée à Voltaire)
+Établie, chez Hugo · la phrase change d’auteur (prêtée à Voltaire par une version antérieure du recueil)
 Le trait a l’allure d’un mot de Voltaire contre Bossuet ; il est de Hugo, en exil.
 Le texte : « [Bossuet] se satisfait par cette formule : Dieu tient dans sa main le cœur des rois.
 Cela n’est pas, pour deux raisons : Dieu n’a pas de main, et les rois n’ont pas de cœur.
@@ -100,7 +99,7 @@ III.
 Vérification : https://stephane-lalut.com/citations-celebres-verifiees/#hugo-dieu-n-a-pas-de-main
 « Ouvrez une école, vous fermerez une prison »
 Non établie dans les sources consultées
-L’idée est de Hugo ; la formule, plus nette que son vers, n’a pas été trouvée chez lui.
+L’idée se lit chez Hugo ; la formule, plus nette que son vers, n’a pas été trouvée chez lui.
 Ce qui circule
 « Ouvrez une école, vous fermerez une prison »
 Le texte de Hugo le plus proche
@@ -115,9 +114,9 @@ XIII), « Ouvrir une école aujourd’hui, c’est fermer une prison dans vingt 
 Jourdan, sans nommer Hugo (t.
 VII, t.
 XIII).
-Le Guichet du savoir y voit Louis-Charles Jourdan, rédacteur au Siècle (question 31966) ; des formes voisines plus anciennes étant signalées, il n’est pas établi qu’il en soit le premier auteur.
-Ce que l’écart change : l’idée est de Hugo, la formule en circulation est plus nette que son vers.
-Le poème parle d’enfants et d’un bagne, la phrase courante d’une école et d’une prison, comme une équation de politique publique.
+Le Guichet du savoir, service de questions et réponses de la Bibliothèque municipale de Lyon, y voit Louis-Charles Jourdan, rédacteur au Siècle (question 31966) ; des formes voisines plus anciennes étant signalées, il n’est pas établi qu’il en soit le premier auteur.
+Ce que l’écart change : l’idée se lit chez Hugo, la formule en circulation est plus nette que son vers.
+Le poème parle d’enfants et d’un bagne, et ses « quatrevingt-dix voleurs sur cent » sont un chiffre de poète, non une statistique ; la phrase courante parle d’une école et d’une prison, comme une équation de politique publique.
 Copier la référence
 Lien permanent
 « Ouvrez une école, vous fermerez une prison » : formule non trouvée chez Victor Hugo (texte intégral de Wikisource).
@@ -186,7 +185,7 @@ XXX, dernière phrase.
 Vérification : https://stephane-lalut.com/citations-celebres-verifiees/#voltaire-cultiver-notre-jardin
 « Les femmes sont comme les girouettes : elles se fixent quand elles se rouillent »
 Variante documentée · la forme se simplifie, et la phrase change d’auteur
-Voltaire écrit « ressemblent aux girouettes » ; la phrase a aussi été prêtée à Jean Webster et à Sacha Guitry.
+Voltaire écrit « ressemblent aux girouettes » ; la phrase a aussi été prêtée à Jean Webster et, par une version antérieure du recueil, à Sacha Guitry.
 Ce qui circule
 « Les femmes sont comme les girouettes : elles se fixent quand elles se rouillent »
 Ce que Voltaire a écrit
@@ -217,7 +216,7 @@ Ce que Molière a écrit (1668)
 « suivant le dire d’un ancien, il faut manger pour vivre, et non pas vivre pour manger. »
 Le texte : « suivant le dire d’un ancien, il faut manger pour vivre, et non pas vivre pour manger. »
 Source : L’Avare (1668), acte III, réplique de Valère (scène 5 dans l’édition Louandre, 1910 ; Wikisource).
-Ce que l’écart change : Valère cite « un ancien » sans le nommer, et il a raison de citer : la Rhétorique à Herennius (IV, 28), longtemps attribuée à Cicéron, donne la formule en exemple de figure, « Esse oportet ut vivas, non vivere ut edas », et Rabelais en avait déjà tiré un effet comique dans le Tiers Livre.
+Ce que l’écart change : Valère cite « un ancien » sans le nommer, et il a raison de citer : la Rhétorique à Herennius (IV, 28), traité latin d’art oratoire longtemps attribué à Cicéron, donne la formule en exemple de figure, « Esse oportet ut vivas, non vivere ut edas », et Rabelais en avait déjà tiré un effet comique dans le Tiers Livre.
 Le programme de recherche Molière21 en relève d’autres reprises au XVIIe siècle (« Il faut manger pour vivre »).
 Le rattachement à Socrate relève d’une autre tradition, non examinée ici.
 Harpagon, ravi, veut la répéter et la retourne : « Il faut vivre pour manger, et non pas manger pour vi…
@@ -235,7 +234,7 @@ Ce que Molière a écrit (1671)
 « Que diable alloit-il faire dans cette galère ? »
 Le texte : « Que diable alloit-il faire dans cette galère ? » (Géronte, qui la répète à plusieurs reprises).
 Source : Les Fourberies de Scapin (1671), acte II (scène 11 dans l’édition Louandre, 1910 ; Wikisource).
-Avant lui : Cyrano de Bergerac, Le Pédant joué (1654), acte II, scène 4 : « Que Diable aller faire aussi dans la Galère d’un Turc ? » (édition de 1654, Wikisource).
+Avant lui : Cyrano de Bergerac, Le Pédant joué (1654), acte II, scène 4 : « Que Diable aller faire aussi dans la Galère d’un Turc ? » (graphie modernisée ; édition de 1654, Wikisource).
 Ce que l’écart change : Molière reprend de Cyrano la situation — un père à qui l’on réclame la rançon d’un fils pris par les Turcs — et la réplique répétée.
 L’édition de 1910 le signale en note.
 Le mot est devenu proverbe sous le nom de Molière, qui l’a rendu célèbre.
@@ -311,10 +310,10 @@ Non établie dans les sources consultées · la phrase change d’auteur
 La plus ancienne attestation retrouvée date de près d’un siècle après la mort de Wilde ; son origine reste inconnue.
 Le texte : aucun texte de Wilde connu.
 En anglais : « Be yourself; everyone else is already taken. »
-Source : enquête du site Quote Investigator, consacré à la généalogie des citations (20 janvier 2014, lue le 1er novembre 2026) : la première occurrence exacte trouvée date de décembre 1999, sur un forum Usenet, entre guillemets et sans auteur, et l’enquête ne trouve « no substantive evidence » d’une origine chez Wilde.
+Source : enquête du site Quote Investigator, consacré à la généalogie des citations (20 janvier 2014, lue le 1er novembre 2026) : la première occurrence exacte trouvée date de décembre 1999, sur un forum Usenet, l’un des premiers réseaux de discussion d’Internet, entre guillemets et sans auteur, et l’enquête ne trouve « no substantive evidence » d’une origine chez Wilde.
 Livresque des mots l’imprime sous « Anonyme ».
 Ce que l’écart change : la plus ancienne attestation exacte retrouvée date de près d’un siècle après la mort de Wilde (1900), et elle était déjà donnée comme une citation : son origine reste inconnue.
-La phrase a le tour d’un paradoxe de Wilde, et cela a suffi pour qu’on la lui prête.
+La phrase a le tour d’un paradoxe de Wilde, et cela a pu suffire pour qu’on la lui prête.
 Copier la référence
 Lien permanent
 « Be yourself; everyone else is already taken » : phrase non trouvée chez Oscar Wilde ; plus ancienne attestation exacte retrouvée : forum Usenet, décembre 1999, sans auteur (Quote Investigator, 2014).
@@ -323,7 +322,7 @@ Vérification : https://stephane-lalut.com/citations-celebres-verifiees/#wilde-s
 Établie · la phrase perd sa suite (la réponse de Lady Windermere)
 C’est un personnage qui parle, et on lui répond aussitôt.
 Le texte : « I can resist everything except temptation. »
-Source : Lady Windermere’s Fan (L’Éventail de Lady Windermere, 1892), acte I, Lord Darlington (texte anglais, Project Gutenberg).
+Source : Lady Windermere’s Fan (L’Éventail de Lady Windermere, créée en 1892, publiée en 1893), acte I, Lord Darlington (texte anglais, Project Gutenberg).
 Ce que l’écart change : c’est un personnage qui parle, et on lui répond aussitôt.
 Lady Windermere : « You have the modern affectation of weakness », vous avez l’affectation moderne de la faiblesse.
 Copier la référence
@@ -334,7 +333,7 @@ Vérification : https://stephane-lalut.com/citations-celebres-verifiees/#wilde-r
 Établie · la phrase perd sa suite (le personnage de Lord Henry)
 La phrase est de Lord Henry, dont le roman montre ce que sa doctrine fait de Dorian.
 Le texte : « The only way to get rid of a temptation is to yield to it.
-Resist it, and your soul grows sick with longing for the things it has forbidden to itself. »
+Resist it, and your soul grows sick with longing for the things it has forbidden to itself […] »
 Source : The Picture of Dorian Gray (Le Portrait de Dorian Gray), édition en volume de 1891, chapitre II, Lord Henry (texte anglais, Project Gutenberg).
 Ce que l’écart change : la phrase appartient à Lord Henry, dont le roman montre ce que sa doctrine fait de Dorian.
 La citation en fait une maxime de l’auteur.
@@ -359,10 +358,12 @@ Ce que montrent ces vingt citations : trois manières de s’éloigner du texte
 L’auteur citait déjà.
 Voltaire attribue « le mieux est l’ennemi du bien » à « un sage Italien » ; Valère donne sa maxime « suivant le dire d’un ancien » ; Géronte reprend la galère de Cyrano ; Wilde se cite lui-même.
 Les guillemets que l’auteur avait posés tombent en route, et la phrase reste au dernier nom connu.
-La phrase va vers un nom qui la rend vraisemblable.
+La phrase peut aller vers un nom qui la rend vraisemblable.
 Le résumé de Hall passe à Voltaire, la phrase anonyme de 1999 à Wilde.
-Livresque des mots avait lui-même recueilli trois de ces glissements, que l’édition en vente depuis octobre 2026 a corrigés : le trait contre Dieu et les rois prêté à Voltaire, le mot sur les femmes à Guitry, la réplique de Gwynplaine à Condorcet.
-Le nom d’arrivée est chaque fois celui que la réputation associe au thème — la tolérance, le paradoxe, l’ironie anticléricale, le mot d’esprit sur les femmes, la justice sociale — et la citation circule d’autant mieux qu’elle confirme ce qu’on croit déjà de l’auteur.
+Livresque des mots avait lui-même opéré trois de ces glissements, que l’édition en vente depuis octobre 2026 a corrigés : le trait contre Dieu et les rois prêté à Voltaire, le mot sur les femmes à Guitry, la réplique de Gwynplaine à Condorcet ; aucune source consultée ne dit s’il les avait trouvés ailleurs.
+Dans ces cas, le nom d’arrivée est celui que la réputation associe au thème — la tolérance, le paradoxe, l’ironie anticléricale, le mot d’esprit sur les femmes, la justice sociale.
+On peut en faire l’hypothèse : une attribution paraît d’autant plus crédible qu’elle confirme ce qu’on croit déjà de l’auteur.
+Vingt cas ne la mesurent pas ; c’est une interprétation.
 La forme se simplifie. « Si l’on n’est plus que mille » devient « S’il n’en est plus que mille », « ressemblent aux girouettes » devient « sont comme les girouettes », « la conviction qu’on est aimé » devient « savoir que vous êtes aimé ».
 La syntaxe se règle sur celle de la conversation, et le vers qui précède ou qui suit disparaît.
 Les trois mouvements se cumulent souvent.
@@ -370,17 +371,18 @@ Un auteur reprend une formule ancienne, la circulation la simplifie, puis l’at
 Une citation qui quitte son œuvre change parfois de mots, parfois d’auteur, et toujours de contexte.
 La vérification des citations de Livresque des mots va dans le même sens pour ces cinq auteurs.
 Chez Molière, presque toutes les citations vérifiées ont été retrouvées dans le texte, exactes ou à une variante près (41 sur 44) ; chez La Fontaine aussi (33 sur 36) ; chez Hugo, sept sur dix (55 sur 78) ; chez Voltaire, un peu plus de six sur dix (32 sur 51).
+Les graphies d’un même nom sont réunies, et les fiches dont l’attribution est elle-même qualifiée (contestée, collective) restent hors du compte.
 Ces différences décrivent les citations que le recueil avait réunies ; elles ne mesurent ni la fiabilité des attributions à chaque auteur, ni la fréquence des erreurs dans les citations qui circulent.
 Le genre des œuvres, le vers, l’apprentissage scolaire ou le choix initial des citations peuvent y jouer, et rien ici ne permet de faire la part de chacun.
 Vérifier une citation soi-même : quatre questions
 Quelle œuvre, quel passage ?
 Une citation sans référence précise reste presque impossible à vérifier.
 Le texte se lit-il dans une édition qu’on peut nommer ?
-Les fac-similés de Wikisource, de Gallica, d’Internet Archive ou de Project Gutenberg permettent de lire la phrase dans sa page.
+Les fac-similés de Wikisource, de Gallica ou d’Internet Archive permettent de lire la phrase dans sa page ; Project Gutenberg en donne une transcription.
 Qui parle dans le texte ?
 L’auteur, un personnage, ou un auteur qu’il cite : Lord Henry n’est pas Wilde, et Valère cite un ancien.
 Quand la phrase apparaît-elle pour la première fois, et chez qui ?
-Une première attestation postérieure à la mort de l’auteur écarte l’attribution.
+Une première attestation très postérieure à la mort de l’auteur, sans manuscrit, sans publication posthume de ses papiers ni témoin de son vivant, rend l’attribution très douteuse.
 À l’inverse, trouver la phrase chez un auteur ne dit pas qu’il l’a inventée : « Aide-toi, le Ciel t’aidera » est bien de La Fontaine, et la maxime est plus ancienne que lui.
 Ce que cette page ne dit pas
 Elle porte sur vingt citations de cinq auteurs, choisies pour ce qu’elles montrent et non par une mesure de leur fréquence : elle ne mesure pas la part des fausses citations en général. « Non établie » y signifie « non trouvée dans les sources consultées », jamais « fausse » ni « jamais dite » : une phrase prononcée et non écrite échappe à cette méthode.
@@ -399,7 +401,7 @@ Version papier : 36 € · Kindle : disponible
 Sommaire, extraits et recensions →
 Questions fréquentes
 Voltaire a-t-il dit « Je ne suis pas d’accord avec ce que vous dites, mais je me battrai jusqu’à la mort pour que vous ayez le droit de le dire » ?
-La phrase n’a pas été trouvée dans les textes de Voltaire.
+La phrase n’a pas été trouvée chez Voltaire dans les sources consultées, et son auteure l’a revendiquée.
 Elle paraît d’abord en anglais, en 1906, dans The Friends of Voltaire d’Evelyn Beatrice Hall, qui signe S.
 G.
 Tallentyre : « I disapprove of what you say, but I will defend to the death your right to say it », suivi de « was his attitude now » (telle était désormais son attitude).
@@ -416,28 +418,23 @@ Molière reprend la scène de Cyrano de Bergerac, Le Pédant joué (1654), acte 
 Victor Hugo a-t-il écrit « Ouvrez une école, vous fermerez une prison » ?
 La formule n’a pas été trouvée dans les textes de Hugo numérisés sur Wikisource.
 Le texte le plus proche est un poème des Quatre Vents de l’esprit (1881), « Écrit après la visite d’un bagne » : « Chaque enfant qu’on enseigne est un homme qu’on gagne. / Quatrevingt-dix voleurs sur cent qui sont au bagne / Ne sont jamais allés à l’école une fois ».
-L’idée est de Hugo ; la formule en circulation est plus nette que son vers.
+L’idée se lit chez Hugo, et elle circulait avant lui ; la formule en circulation est plus nette que son vers.
 Sources
 Textes des auteurs (relus le 1er novembre 2026) : Victor Hugo, Les Châtiments, Hetzel, 1880 ; L’Homme qui rit, 1869 ; Les Misérables, 1862 ; William Shakespeare, 1864 ; Les Quatre Vents de l’esprit, Ollendorff, 1908.
 Voltaire, « La Bégueule » et Candide, Œuvres complètes, Garnier, 1877 ; Le Sottisier, Librairie des bibliophiles, 1880, et Garnier, 1883.
 Molière, L’Avare, Les Fourberies de Scapin, Le Tartuffe, édition Louandre, 1910.
 Cyrano de Bergerac, Le Pédant joué, 1654.
 La Fontaine, Fables, Bernardin-Béchet, 1874, et édition Barbin.
-Oscar Wilde, The Picture of Dorian Gray, 1891, et Lady Windermere’s Fan, 1892, Project Gutenberg.
+Oscar Wilde, The Picture of Dorian Gray, 1891, et Lady Windermere’s Fan, créée en 1892, publiée en 1893, Project Gutenberg.
 Les liens sont donnés à chaque entrée.
-Sur l’origine de quatre phrases : S.
+Sur l’origine de cinq phrases : Pierre Larousse, Grand dictionnaire universel du XIXe siècle, t.
+VII et XIII, articles « École » et « Prison » ; Guichet du savoir (Bibliothèque municipale de Lyon), question 31966 ; S.
 G.
 Tallentyre (Evelyn Beatrice Hall), The Friends of Voltaire, Londres, John Murray, 1906, chapitre VII ; Burdette Kinne, « Voltaire Never Said It! », Modern Language Notes, 58 (7), 1943, p.
 534-535 ; Molière21, « Il faut manger pour vivre » ; P.-M.
 Quitard, Dictionnaire étymologique, historique et anecdotique des proverbes, 1842, article « aider » ; Quote Investigator, « Be Yourself; Everyone Else Is Already Taken », 20 janvier 2014 (quoteinvestigator.com).
 Vérification de Livresque des mots : méthode et corpus de l’édition 2026.
 Sur un mot qui a changé d’auteur : la tabula rasa de Locke.
-Révisions
-5 novembre 2026 — Hugo, « Ultima verba » : la dernière strophe se lit p.
-430 de l’édition Hetzel de 1880 (446 est le numéro de la vue du fac-similé).
-5 novembre 2026 — Correction du bilan par auteur de la vérification de Livresque des mots : les graphies d’un même auteur sont désormais réunies.
-Molière : 41 citations retrouvées sur 44, et non 16 sur 16 ; Voltaire : 32 sur 51, et non 17 sur 29.
-La Fontaine et Hugo ne changent pas.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp
