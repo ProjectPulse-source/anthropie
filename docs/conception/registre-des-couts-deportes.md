@@ -38,14 +38,19 @@ problème — et leurs coûts comme des effets secondaires accidentels.
 
 ### Découverte principale
 
-Sur 168 jalons, de −3,3 millions d'années à 2024, chaque solution a un coût déplacé hors de son périmètre visible, et la
-destination de ce coût migre : de l'espace (âges 1 à 3) au social (4 et 5), puis au temps et à l'attention (6 et 7).
+Sur 168 jalons, de −3,3 millions d'années à 2024, le Registre pose à chaque solution la même grille : l'ordre créé, le
+coût déplacé hors de son périmètre visible. Selon la postface du livre, la destination de ce coût migre : de l'espace
+(âges 1 à 3) au social (4 et 5), puis au temps, à l'inconscient et à l'attention (6 et 7) (relecture R1, l. 1543-1545 :
+conforme au livre, p. 622). C'est une lecture du livre, non une mesure du Registre : les catégories des jalons disent la
+nature du coût, non l'axe de son déplacement (R1 § 5 ; « Spatial » marque 6 des 49 jalons des âges 1 à 3, recalcul de
+la session).
 
 ### Mécanisme explicatif
 
 L'hypothèse anthropique : un système qui crée de l'ordre localement exporte du désordre ailleurs, plus tard ou sur
 d'autres ; quand un espace de déportation sature, la fuite s'invente ailleurs, plus abstraite et moins politisable
-(postface du livre ; AWP-07 pour la boucle).
+(postface du livre, p. 621-622 ; AWP-07, version déposée, résumé et § 1, pour la boucle : relecture R1, l. 1545 et
+1546 a).
 
 ### Preuve décisive
 
@@ -128,3 +133,10 @@ relever (Search Console, page FR et EN, 26/10/2026) au relevé J+60 déjà prév
 - Contrôles : `check-all --ci` 0 ; build 0 ; liens 0 critique ; dates 73/73 (date de fond du 26/10 inscrite à
   l'historique de `dates_affichage.json`, `lastmod` passé au 01/11) ; recette 320-1600 FR et EN OK ; `check_langue.py` :
   7 signalements, aucun sur le texte neuf.
+
+### Reprise du 16/11/2026 (lot « notions-b », `/reprise-ressource`, mode préparer)
+
+- Relecture des sources par un relecteur neuf : faite (`06_PROMOTION/INTELLIGIBILITE_RESSOURCES_2026-11-11/LOTS/notions-b/SOURCES/registre-des-couts-deportes_R1.md`), trois lignes sondées à la source par la session (`SONDES_SESSION.md`).
+- Interventions : spécification rejouable `LOTS/notions-b/specs/registre-des-couts-deportes.py` ; contrôle de la lettre justifié ligne à ligne.
+- Juge interne à l'aveugle et jugement externe : voir `LOTS/notions-b/LOT.md`. `ressource.refonte` : non posée (relecture phrase à phrase entière et instantané à faire à la publication).
+

@@ -1,7 +1,7 @@
-# relu le 2026-11-07 ; texte servi de /registre-des-couts-deportes/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-16 ; texte servi de /registre-des-couts-deportes/, build de 0df5100 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Le Registre des coûts déportés
-Page mise à jour le 1er novembre 2026 · révisions
+Page mise à jour le 1er novembre 2026
 Le Registre des coûts déportés est l’appareil documentaire du livre ANTHROPIE – Ordre ici.
 Dette ailleurs (2025) : le livre raconte l’histoire longue en 168 jalons, des premiers outils de pierre (≈ −3,3 millions d’années) aux algorithmes contemporains, et le Registre pose à chacun les deux mêmes questions : quel ordre cette innovation a-t-elle créé, et quelle dette a-t-elle déportée — vers d’autres lieux, d’autres temps ou d’autres groupes sociaux ?
 La version en ligne, ci-dessous, est en consultation libre ; elle compte les 168 jalons du livre.
@@ -24,7 +24,7 @@ Ordre créé — ce que l’innovation stabilise : sécurité alimentaire, mémo
 Dette déportée — le coût que cet ordre déplace hors de son périmètre visible : dépendance matérielle, exclusion sociale, charge reportée sur les générations suivantes ;
 Catégories — la nature du transfert : énergétique, sociale, cognitive, politique, écologique, symbolique…
 L’idée dans son histoire — pour 68 jalons, l’escale de L’Odyssée des idées qui traite la même idée, le même penseur ou le même événement : le Registre en tient le coût déporté, l’escale en raconte l’histoire.
-Le Registre ne raconte pas l’histoire du progrès : il en tient la comptabilité.
+Le Registre ne raconte pas l’histoire du progrès : il en tient la comptabilité — une comptabilité qualitative, qui recense et classe des coûts sans les mesurer ni les additionner.
 Ce que d’autres récits présentent comme des solutions y apparaît comme des déplacements — chaque solution contracte une dette, et l’histoire est la suite de ces transferts.
 Sept âges, 168 jalons
 Répartition des jalons du livre entre ses sept âges : un choix d’écriture du livre, non une mesure de l’importance des périodes.
@@ -948,7 +948,7 @@ Anthropie, p.
 Ordre créé.
 Centralisation radicale du pouvoir et discipline révolutionnaire pour sauver la République face aux menaces internes et externes.
 Dette déportée.
-Paranoïa institutionnalisée, purges et exécutions de masse ; la vertu devient un prétexte à l’élimination physique des opposants.
+Paranoïa institutionnalisée, purges et exécutions de masse ; la vertu devient le principe de l’élimination physique des opposants.
 L’idée dans son histoire.
 Escale « 1793 · La Terreur : quand la Révolution se dévore » de L’Odyssée des idées.
 Politique · Moral · Social
@@ -1539,15 +1539,16 @@ Anthropie, p.
 609‑613
 Aucun jalon ne répond à ces critères.
 La trajectoire : du spatial au cognitif
-Lue d’un bout à l’autre, la chronologie dessine une migration que la postface du livre résume ainsi.
+Selon la postface du livre, la chronologie, lue d’un bout à l’autre, dessine une migration, que la postface résume ainsi.
+C’est une lecture d’ensemble du livre, non une mesure : les catégories de chaque jalon disent la nature du coût déporté, non l’axe de son déplacement, et ne permettent pas de la compter.
 Aux âges 1 à 3, l’ordre déplace le désordre spatialement : les morts hors du village, les déchets hors de la cité, les « barbares » hors de l’empire.
 Aux âges 4 et 5, il le déplace socialement : sur les serfs, sur les colonies, sur les classes laborieuses.
-Aux âges 6 et 7, temporellement et cognitivement : sur les générations futures (climat), sur l’attention (algorithmes).
-À chaque saturation d’un espace de déportation, la fuite s’invente ailleurs — plus abstrait, plus lointain, moins politisable.
-Cette dynamique — déplacement, accumulation, saturation, retour — est formalisée dans AWP-07 — La boucle anthropique ; la lecture du Registre en longue durée est l’objet d’AWP-02 — 3,3 millions d’années en un principe.
+Aux âges 6 et 7, temporellement et cognitivement : sur les générations futures (climat), sur l’inconscient (publicité), sur l’attention (algorithmes).
+À chaque saturation d’un espace de déportation, écrit la postface, la fuite s’invente ailleurs — plus abstrait, plus lointain, moins politisable.
+Cette dynamique — déplacement, accumulation, saturation, retour — est formalisée dans AWP-07 — La boucle anthropique ; la même grille, appliquée à sept configurations de la longue durée qui ne recoupent pas les sept âges du livre, est l’objet d’AWP-02 — 3,3 millions d’années en un principe.
 Ce que le Registre ne dit pas
-Le Registre montre où vont les dettes ; il ne montre pas comment elles reviennent.
-Or elles reviennent — métamorphosées : le CO₂ en canicules, l’exploitation coloniale en migrations, l’attention captée en dépendances.
+Le Registre montre où vont les dettes ; il ne montre ni si elles reviennent, ni comment.
+Or, selon le livre, elles reviennent — métamorphosées : le CO₂ en canicules, l’exploitation coloniale en migrations, l’inconscient refoulé en symptômes collectifs, rapprochements que le Registre illustre sans les démontrer.
 Ce retour est précisément l’objet de la boucle anthropique, formalisée dans AWP-07.
 Autre limite, assumée par le livre : les catégories du Registre — économique, social, politique — sont elles-mêmes des outils d’analyse qui découpent le réel, et ce découpage peut servir la déportation qu’il décrit : séparer l’économique du social permet de déplacer les coûts de l’un vers l’autre.
 Le Registre recense ; il ne prétend pas trancher ce que chaque transfert avait d’évitable.
@@ -1556,8 +1557,10 @@ Le livre ANTHROPIE – Ordre ici.
 Dette ailleurs (2025, 630 pages) déploie chaque jalon en chapitre, résume chaque âge par un schéma « ordre créé / désordre déporté » et tire la trajectoire d’ensemble dans sa postface ; il renvoie à cette page par un QR code (« Pour aller plus loin », p.
 619).
 Le Registre condense chaque chapitre sur la grille commune, dans les termes de l’auteur ; chaque jalon y est rangé dans l’âge de son chapitre, avec la pagination de l’édition de 630 pages.
-Quand le livre est corrigé, le Registre suit : les révisions sont consignées en pied de page.
-Le vocabulaire du cadre est défini au glossaire — à ne pas confondre avec les registres de coûts couplés d’AWP-06, qui sont une typologie et non une chronologie.
+Quand le livre est corrigé, le Registre suit.
+Comme le livre, il emploie l’entropie comme une image directrice, non comme une loi physique appliquée au social, et chaque entrée condense un chapitre qui s’ouvre souvent sur une scène reconstituée (p.
+13).
+Le vocabulaire du cadre est défini au glossaire — à ne pas confondre avec les registres de coûts couplés d’AWP-06, qui sont une grille d’analyse et non une chronologie.
 L’anthropie est l’hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu’ils ne le résolvent.
 Questions fréquentes
 Qu’est-ce que le Registre des coûts déportés ?
@@ -1574,29 +1577,29 @@ Les réseaux : routes, relais, relais de pouvoir (20, 486 → 1494) ; 5.
 La machine-État moderne (24, 1513 → 1784) ; 6.
 L’industrialisation et les nations (29, 1789 → 1905) ; 7.
 Le métaprogramme contemporain (46, 1905 → 2024).
-Le livre ne fixe pas de bornes à ses âges : chacun se définit par ses chapitres, et le Registre range chaque jalon dans l’âge de son chapitre.
+Les schémas du livre donnent à chaque âge des bornes indicatives (de −3 300 000 à −10 000 pour le premier, de 1914 à 2024 pour le dernier), qui ne coïncident pas toujours avec les dates de ses chapitres : le Registre range chaque jalon dans l’âge de son chapitre et date chaque âge par son premier et son dernier chapitre.
 Que signifient « ordre créé » et « dette déportée » ?
 C’est la grille de lecture de chaque jalon du Registre.
 L’« ordre créé » décrit ce qu’une innovation stabilise — sécurité alimentaire, mémoire écrite, confiance monétaire, coordination à distance.
 La « dette déportée » décrit le coût que cet ordre déplace hors de son périmètre visible : vers d’autres lieux, d’autres temps ou d’autres groupes sociaux.
 Des catégories (énergétique, sociale, cognitive, politique…) précisent la nature du transfert.
-La grille applique l’hypothèse anthropique : l’ordre ne se crée pas, il se paie ailleurs.
+La grille applique l’hypothèse anthropique, selon laquelle l’ordre ne se crée pas : il se paie ailleurs.
 Quel est le plus ancien transfert documenté par le Registre ?
 Les premiers outils de pierre, vers −3,3 millions d’années.
 Ordre créé : l’externalisation de la mémoire et de l’intention dans des artefacts durables, qui rend le savoir transmissible indépendamment de son porteur.
 Dette déportée : la dépendance aux matériaux et aux savoir-faire, et la conversion d’un coût cognitif en coût thermodynamique pour l’extraction et le façonnage.
-Le déplacement du désordre précède donc de très loin l’industrialisation.
+Pour le livre, le déplacement du désordre précède donc de très loin l’industrialisation.
 Comment le déplacement du désordre a-t-il évolué au fil des sept âges ?
-La postface du livre dégage une trajectoire nette.
+La postface du livre dégage une trajectoire nette — sa lecture d’ensemble, non une mesure tirée des catégories du Registre.
 Âges 1 à 3 : l’ordre déplace le désordre spatialement — les morts hors du village, les déchets hors de la cité, les « barbares » hors de l’empire.
 Âges 4 et 5 : socialement — sur les serfs, les colonies, les classes laborieuses.
-Âges 6 et 7 : temporellement et cognitivement — sur les générations futures (climat), sur l’attention (algorithmes).
+Âges 6 et 7 : temporellement et cognitivement — sur les générations futures (climat), sur l’inconscient (publicité), sur l’attention (algorithmes).
 À chaque saturation d’un espace de déportation, la fuite s’invente ailleurs : plus abstrait, plus lointain, moins politisable.
 Le Registre des coûts déportés est-il la même chose que les registres de coûts couplés ?
 Non.
 Le Registre des coûts déportés est l’appareil documentaire du livre ANTHROPIE : une chronologie des jalons historiques du livre.
-Les registres de coûts couplés sont un apport théorique d’AWP-06 : la grille des quatre registres — énergie, matière, territoire, attention — selon lesquels l’infrastructure numérique déplace simultanément le désordre.
-L’un est une chronologie, l’autre une typologie ; seul le mot « registre » est commun.
+Les registres de coûts couplés sont un apport théorique d’AWP-06 : la grille des quatre registres — énergie, matière, territoire, attention — selon lesquels l’infrastructure numérique peut déplacer simultanément le désordre.
+L’un est une chronologie, l’autre une grille d’analyse ; seul le mot « registre » est commun.
 Où trouver le Registre des coûts déportés complet ?
 Sur cette page, en consultation libre : les 168 jalons du livre ANTHROPIE – Ordre ici.
 Dette ailleurs (2025, 630 pages).
@@ -1609,12 +1612,6 @@ Un exemplaire numérique de consultation de ANTHROPIE – Ordre ici.
 Dette ailleurs vous est offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Aucune recension ni aucune citation n’est demandée.
 Votre exemplaire, disponible immédiatement →
-Révisions
-1er novembre 2026 — Pour 68 jalons, une ligne « L’idée dans son histoire » renvoie à l’escale de L’Odyssée des idées qui traite la même idée, le même penseur ou le même événement ; chaque paire vérifiée sur le texte du livre, aucune entrée du Registre réécrite.
-26 octobre 2026 — Les trois jalons absents ajoutés (Olmèques, Odyssée, Gutenberg), rédigés sur le texte du livre : le Registre compte désormais les 168 jalons.
-Les 165 autres entrées relues contre l’édition corrigée ; 41 réalignées là où elles contredisaient le livre, affirmaient plus que lui ou lui prêtaient un fait qu’il ne porte pas (par exemple : le Rubicon ouvre la guerre civile, il ne la clôt pas ; l’hygiène explique « sans doute une part majeure » de la baisse de la mortalité, non toute).
-Le même jour, chaque jalon rangé dans l’âge de son chapitre (vingt changeaient d’âge : Clovis, les jalons de 1789 à 1793, ceux de 1905 à 1945) et pourvu de sa pagination ; relecture contre l’édition anglaise, qui a fait corriger quatorze entrées françaises de plus là où elles durcissaient le livre (par exemple : Érasme livre « l’un des outils » de la Réforme, non ses outils).
-25 octobre 2026 — Périmètre dit en tête (165 des 168 jalons, les trois absents nommés) ; le Registre n’est plus présenté comme l’épilogue du livre, qui le résume en schémas et y renvoie par un QR code ; jalon « Templiers » aligné sur l’édition corrigée du livre (le Temple a moins légué ses méthodes à l’administration royale qu’une leçon).
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

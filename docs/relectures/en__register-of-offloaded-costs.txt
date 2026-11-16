@@ -1,7 +1,7 @@
-# relu le 2026-11-07 ; texte servi de /en/register-of-offloaded-costs/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-16 ; texte servi de /en/register-of-offloaded-costs/, build de 0df5100 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 The Register of Offloaded Costs
-Page updated 1 November 2026 · revisions
+Page updated 1 November 2026
 The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY – A Big History of Civilization’s Hidden Costs: the book tells deep history in 168 milestones, from the first stone tools (≈ 3.3 million years ago) to contemporary algorithms, and the Register asks each of them the same two questions: what order did this innovation create, and what debt did it displace—toward other places, other times, or other social groups?
 The English version, below, is freely browsable; it holds all 168 milestones of the book.
 One milestone, the two questions · ≈ −1,500,000
@@ -18,11 +18,11 @@ Seven ages of history for a single hypothesis: disorder is never resolved, only 
 Discover the book ›
 How to read a milestone
 Each entry applies the grid of the anthropic hypothesis—social systems displace disorder rather than resolve it:
-Order created—the visible, immediate benefit, the structure gained: food security, written memory, monetary trust, coordination at a distance;
-Debt displaced—the invisible cost that this order moves out of its visible perimeter: material dependence, social exclusion, charges passed on to later generations;
+Order created—what the innovation stabilizes: food security, written memory, monetary trust, coordination at a distance;
+Debt displaced—the cost that this order moves out of its visible perimeter: material dependence, social exclusion, charges passed on to later generations;
 Categories—the nature of the transfer: energetic, social, cognitive, political, ecological, symbolic…
 The idea in its history—for 68 milestones, the stop in L’Odyssée des idées (in French) that deals with the same idea, thinker or event: the Register keeps the account of its displaced cost, the stop tells its history.
-The Register does not tell the story of progress: it keeps its accounts.
+The Register does not tell the story of progress: it keeps its accounts—qualitative accounts, which list and classify costs without measuring or adding them up.
 What other narratives present as solutions appears here as displacements—every solution incurs a debt, and history is the sequence of these transfers.
 Seven ages, 168 milestones
 How the book’s milestones are spread across its seven ages: a choice in the writing of the book, not a measure of how much each period matters.
@@ -946,7 +946,7 @@ Anthropy, pp.
 Order created.
 Radical centralization of power and revolutionary discipline to save the Republic from internal and external threats.
 Debt displaced.
-Institutionalized paranoia, purges, and mass executions; virtue becomes a pretext for the physical elimination of opponents.
+Institutionalized paranoia, purges, and mass executions; virtue becomes the principle behind the physical elimination of opponents.
 The idea in its history.
 Stop “1793 · La Terreur: quand la Révolution se dévore” in L’Odyssée des idées (in French).
 Political · Moral · Social
@@ -1537,15 +1537,16 @@ Anthropy, pp.
 622–626
 No milestone matches these criteria.
 The trajectory: from the spatial to the cognitive
-Read end to end, the chronology draws a migration that the book’s afterword sums up.
+According to the book’s afterword, the chronology, read end to end, draws a migration, which the afterword sums up.
+This is the book’s overall reading, not a measurement: each milestone’s categories state the nature of the displaced cost, not the axis of its displacement, and cannot count it.
 In ages 1 to 3, order displaces disorder spatially: the dead beyond the village, waste beyond the city, “barbarians” beyond the empire.
 In ages 4 and 5, socially: onto serfs, onto colonies, onto labouring classes.
-In ages 6 and 7, temporally and cognitively: onto future generations (climate), onto attention (algorithms).
-Each time a receptacle saturates, the escape reinvents itself elsewhere—more abstract, more distant, less politicizable.
-This dynamic—displacement, accumulation, saturation, return—is formalized in AWP-07, The Anthropic Loop; the deep-history reading of the Register is the object of AWP-02, 3.3 Million Years in One Principle.
+In ages 6 and 7, temporally and cognitively: onto future generations (climate), onto the unconscious (advertising), onto attention (algorithms).
+Each time a receptacle saturates, the afterword writes, the escape reinvents itself elsewhere—more abstract, more distant, less politicizable.
+This dynamic—displacement, accumulation, saturation, return—is formalized in AWP-07, The Anthropic Loop; the same grid, applied to seven deep-history configurations that do not match the book’s seven ages, is the object of AWP-02, 3.3 Million Years in One Principle.
 What the Register does not say
-The Register shows where the debts go; it does not show how they come back.
-Yet they do come back—metamorphosed: CO₂ as heatwaves, colonial extraction as migrations, captured attention as dependencies.
+The Register shows where the debts go; it does not show whether, or how, they come back.
+Yet, the book argues, they do come back—metamorphosed: CO₂ as heatwaves, colonial extraction as migrations, the repressed unconscious as collective symptoms—connections the Register illustrates without proving them.
 That return is precisely the object of the anthropic loop, formalized in AWP-07.
 Another limit, assumed by the book: the Register’s categories—economic, social, political—are themselves analytical tools that carve up reality, and that carving can serve the very displacement it describes: separating the economic from the social makes it possible to move costs from one to the other.
 The Register records; it does not claim to settle what part of each transfer was avoidable.
@@ -1553,8 +1554,10 @@ Where this register comes from
 ANTHROPY – A Big History of Civilization’s Hidden Costs (2026, 644 pages) develops each milestone as a chapter, sums up each age in an “order created / disorder displaced” diagram, and draws the overall trajectory in its afterword; it points to this page through a QR code (“Going Further,” p.
 631).
 The Register condenses each chapter onto the common grid, in the author’s words; each milestone sits in the age of its chapter, with the page numbers of the 644-page edition.
-When the book is corrected, the Register follows: revisions are logged at the foot of the page.
-The working vocabulary of the framework is defined in the glossary—not to be confused with the coupled cost registers of AWP-06, a typology rather than a chronology.
+When the book is corrected, the Register follows.
+Like the book, it uses entropy as a guiding image, not as a physical law applied to society, and each entry condenses a chapter that often opens with a reconstructed scene (p.
+11).
+The working vocabulary of the framework is defined in the glossary—not to be confused with the coupled cost registers of AWP-06, an analytical grid rather than a chronology.
 The French version is browsable at Le Registre des coûts déportés.
 Frequently asked questions
 What is the Register of Offloaded Costs?
@@ -1569,41 +1572,35 @@ The Networks—Routes, Relays, Relays of Power (20, 486 → 1494); 5.
 The Modern State-machine (24, 1513 → 1784); 6.
 Industrialization and Nation-States (29, 1789 → 1905); 7.
 The Contemporary Metaprogram (46, 1905 → 2024).
-The book sets no boundaries for its ages: each is defined by its chapters, and the Register places each milestone in the age of its chapter.
+The book’s diagrams give each age indicative bounds (from 3,300,000 to 10,000 BCE for the first, from 1914 to 2024 for the last), which do not always match the dates of its chapters: the Register places each milestone in the age of its chapter and dates each age by its first and last chapter.
 What do “Order created” and “Debt displaced” mean?
 It is the reading grid of every milestone in the Register.
-The “Order created” is the visible, immediate benefit, the structure gained—food security, written memory, monetary trust, coordination at a distance.
-The “Debt displaced” is the invisible cost, exported in time, in space, or onto other groups.
+The “Order created” describes what an innovation stabilizes—food security, written memory, monetary trust, coordination at a distance.
+The “Debt displaced” describes the cost that this order moves out of its visible perimeter: to other places, other times or other social groups.
 Categories (energetic, social, cognitive, political…) specify the nature of each transfer.
-The grid applies the anthropic hypothesis: order is not created, it is paid for elsewhere.
+The grid applies the anthropic hypothesis, according to which order is not created but paid for elsewhere.
 What is the oldest transfer documented in the Register?
 The first stone tools, around 3.3 million years ago.
 Order created: memory and intention externalized into durable artifacts, creating transmissible knowledge independent of its bearer.
 Debt displaced: dependence on materials and know-how, a cognitive cost converted into a thermodynamic cost of extraction and shaping.
-The displacement of disorder therefore precedes industrialization by a very long way.
+For the book, the displacement of disorder therefore precedes industrialization by a very long way.
 How has the displacement of disorder evolved across the seven ages?
-The book’s afterword draws a clear trajectory.
+The book’s afterword draws a clear trajectory — its overall reading, not a measurement taken from the Register’s categories.
 Ages 1 to 3: order displaces disorder spatially—the dead beyond the village, waste beyond the city, “barbarians” beyond the empire.
 Ages 4 and 5: socially—onto serfs, colonies, labouring classes.
-Ages 6 and 7: temporally and cognitively—onto future generations (climate), onto attention (algorithms).
+Ages 6 and 7: temporally and cognitively—onto future generations (climate), onto the unconscious (advertising), onto attention (algorithms).
 Each time a receptacle saturates, the escape reinvents itself elsewhere: more abstract, more distant, less politicizable.
 Is the Register of Offloaded Costs the same thing as the coupled cost registers?
 No.
 The Register of Offloaded Costs is the documentary apparatus of the book ANTHROPY: a chronology of the book’s historical milestones.
-The coupled cost registers are a theoretical contribution of AWP-06: the grid of four registers—energy, matter, territory, attention—along which digital infrastructure simultaneously displaces disorder.
-One is a chronology, the other a typology; only the word “register” is shared.
+The coupled cost registers are a theoretical contribution of AWP-06: the grid of four registers—energy, matter, territory, attention—along which digital infrastructure may simultaneously displace disorder.
+One is a chronology, the other an analytical grid; only the word “register” is shared.
 Where can I read the full Register of Offloaded Costs?
 On this page, freely browsable and anchored entry by entry: all 168 milestones of ANTHROPY – A Big History of Civilization’s Hidden Costs (2026, 644 pages).
 The book develops each milestone as a chapter, sums up each age in an “order created / disorder displaced” diagram, and draws the overall trajectory in its afterword.
 The book points to this page through a QR code (“Going Further”, p.
 631).
 The French version is browsable at /registre-des-couts-deportes/.
-Revisions
-1 November 2026 — For 68 milestones, a line “The idea in its history” points to the stop in L’Odyssée des idées (in French) that deals with the same idea, thinker or event; each pair checked against the text of the book, no entry of the Register rewritten.
-26 October 2026 — The three missing milestones added (the Olmecs, the Odyssey, Gutenberg), written from the book’s text: the Register now holds all 168 milestones.
-The other 165 entries checked against the corrected edition; 41 realigned where they contradicted the book, claimed more than it does, or attributed to it a fact it does not contain (for example: crossing the Rubicon opens the civil war rather than ending it; hygiene “probably” accounts for a major part of the fall in mortality, not all of it).
-The same day, each milestone placed in the age of its chapter (twenty changed age: Clovis, the milestones from 1789 to 1793, those from 1905 to 1945) and given its page numbers; all entries read against the English edition (644 pages): fifty-one titles aligned on the book’s chapter titles, twenty entries corrected (for example: Erasmus supplies “one of the tools” of the Reformation, not its tools).
-25 October 2026 — Scope stated at the top (165 of the 168 milestones, the three missing ones named); the Register is no longer presented as the book’s epilogue—the book sums it up in diagrams and points to it through a QR code; the Templars milestone aligned with the corrected edition of the book (the Temple left the royal administration a lesson more than its methods).
 All resources: data, explainers and reference material →
 Share
 WhatsApp

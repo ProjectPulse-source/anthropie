@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "source": "Registre des couts deportes, appareil documentaire du livre ANTHROPIE (le livre y renvoie par un QR code, p. 619 de l'edition de 630 p.). Version en ligne derivee le 2026-08-15 de l'ancienne page d'accueil, redigee par l'auteur ; completee et realignee le 2026-10-26 sur l'edition corrigee (630 p.) : trois jalons ajoutes (Olmeques, Odyssee, Gutenberg), 41 entrees relues chapitre par chapitre et corrigees (trace : D:/PRO/06_PROMOTION/ARCHITECTURE_RESSOURCES_2026-10-25/FIDELITE_REGISTRE/). Les ages suivent la segmentation du livre publie, chaque jalon dans l'age de son chapitre ; periode = dates du premier et du dernier chapitre de l'age (le livre ne donne pas de bornes). Toute correction editoriale se fait ICI (source maintenue), et suit le livre.",
+  "source": "Registre des couts deportes, appareil documentaire du livre ANTHROPIE (le livre y renvoie par un QR code, p. 619 de l'edition de 630 p.). Version en ligne derivee le 2026-08-15 de l'ancienne page d'accueil, redigee par l'auteur ; completee et realignee le 2026-10-26 sur l'edition corrigee (630 p.) : trois jalons ajoutes (Olmeques, Odyssee, Gutenberg), 41 entrees relues chapitre par chapitre et corrigees (trace : D:/PRO/06_PROMOTION/ARCHITECTURE_RESSOURCES_2026-10-25/FIDELITE_REGISTRE/). Les ages suivent la segmentation du livre publie, chaque jalon dans l'age de son chapitre ; periode = dates du premier et du dernier chapitre de l'age (les schemas du livre donnent des bornes indicatives, p. 53 a 613, qui ne coincident pas toujours avec ces dates). Toute correction editoriale se fait ICI (source maintenue), et suit le livre.",
   "jalons_livre": 168
  },
  "ages": [
@@ -1490,7 +1490,7 @@
    "date": "1793",
    "titre": "Terreur — la machine à purifier les âmes",
    "ordre": "Centralisation radicale du pouvoir et discipline révolutionnaire pour sauver la République face aux menaces internes et externes.",
-   "dette": "Paranoïa institutionnalisée, purges et exécutions de masse ; la vertu devient un prétexte à l'élimination physique des opposants.",
+   "dette": "Paranoïa institutionnalisée, purges et exécutions de masse ; la vertu devient le principe de l'élimination physique des opposants.",
    "categories": [
     "Politique",
     "Moral",
