@@ -22,6 +22,22 @@
   color: var(--color-text-subtle);
   margin: 0 0 12px;
 }
+// Spécificité (0,4,1), comme `.livres-sous` (_components.scss) : la règle commune `.home-section h2:not(.page-header__title)
+// :not(.section-title)` (0,3,1, _page-common.scss) l'emportait sur la classe seule depuis la création de la page
+// (05/07/2026). Ces surtitres sortaient en titres de section à empattements de 22 à 28 px, avec un filet, 48 px de marge et
+// 32 px de retrait ; sous le filet accentué des blocs Garanties et Transmission, un second filet, et le surtitre à 66 px
+// du bord du bloc au lieu de 18 (filet de 2 px et retrait de 16 ; mesuré en ligne le 16/11/2026 sur les 11 pages du
+// guichet, de 320 à 1 440 px). La règle ne
+// reprend que ce que la règle commune impose, plus un interligne de surtitre (celui des titres, 1,06, serre les deux
+// lignes au téléphone) ; la couleur reste à `.ressources-legal__block .ressources-kicker`.
+.home-section h2.ressources-kicker:not(.page-header__title):not(.section-title) {
+  font-family: var(--font-sans);
+  font-size: var(--fs-tiny);
+  line-height: 1.4;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
 
 // ----- Accroche (tagline sous le titre) -----
 .ressources-tagline {
