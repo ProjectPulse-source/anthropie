@@ -123,7 +123,7 @@ sur…, inexact sur…* ; *inexact* ; *hors d'atteinte des séries* (proposition
 — dit, non comblé par un chiffre voisin).
 
 Corpus : **une seule séance**, le vote de confiance du 8 septembre 2025 à l'Assemblée nationale (compte rendu intégral
-officiel, *JO* débats AN, p. 7691 et suivantes, PDF relu le 01/11/2026), où tous les groupes ont parlé de la dette le même
+officiel, *JO* débats AN, p. 7691 et suivantes, PDF relu le 01/11/2026), où tous les groupes ont parlé des finances publiques (dette, déficit, économies) le même
 jour. Choix motivé : une séance unique neutralise le tri des citations par l'auteur de la page (on ne choisit pas ses
 adversaires), et chaque camp y est représenté. Formules relevées à ce stade (attribution par lecture du compte rendu ;
 celles marquées ⚠ sont à confirmer par relecture de la page imprimée, l'extraction automatique attribuant mal les
@@ -393,8 +393,13 @@ après la mise en ligne.
   jugé sur le document en vigueur à la date du texte, plafonds 2027 ajoutés ; recettes 2025 à l'édition d'octobre 2026 ;
   attributions et bornes contrefactuelles « non établies » ; 19 lignes avec critère de sélection écrit ; vivier des 71
   testables publié ; 77 gardes). Statut `ARBITRATED`. Contrôles refaits : check-all --ci 0, build 0, RECETTE OK, instantanés.
-- Point ouvert hors section : `update_dette_dynamique.py` refuse l'édition Eurostat d'octobre 2026 (garde de prose du volet 1) ;
-  la page cite donc l'édition d'octobre par un extrait figé propre et dit les deux millésimes.
+- Point ouvert hors section, clos depuis : le jeu du volet 1 est passé à l'édition d'Eurostat du 21/10/2026 le 02/11/2026
+  (commentaire du générateur, l. 331) ; la page garde le millésime du printemps 2026 figé pour le cas H12 et dit les deux.
+- Relecture des sources du 16/11/2026 (lot « dette-a », `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\dette-a\SOURCES\`,
+  R1a et R1b) : 1 P0 (le test du livre décrivait l'édition du 17/10, retirée le 09/11, au présent), 6 P1 (« tous les
+  groupes », orateurs des onze formules, date du texte de N. Arthaud, millésime du contrefactuel de J.-L. Mélenchon,
+  sélection des onze formules, règle écrite après une lecture partielle) et des P2 ; corrigés dans la version proposée du
+  lot, non publiée (sort de chaque écart : `SOURCES\SYNTHESE.md` du lot).
 - Mises à jour d'état du site (`PROJECT_STATUS.md`, `static/llms.txt`) : fait (02/11/2026, seuls nos ajouts indexés, les
   modifications d'une autre session laissées hors du commit).
 - Accord de l'auteur : fait (02/11/2026, « Ok finis et pousse »). Commit `3344c98`, vérifié dans un arbre de travail propre

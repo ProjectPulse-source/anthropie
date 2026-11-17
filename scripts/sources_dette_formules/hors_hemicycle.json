@@ -323,8 +323,8 @@
    "sha256_piece": "90d0748445644a433b594864cf553a03245739e07cb65672f01c1c0b49be6f83",
    "date_reference": "2026-09",
    "rang": "A",
-   "citation": "La dette publique de la France dépasse désormais 3.305 Md€, soit […] plus de 113% du PIB",
-   "citation_en": "France's public debt now exceeds €3,305bn, that is […] more than 113% of GDP",
+   "citation": "La dette publique de la France dépasse désormais 3.305 Md€, soit plus de 113% du PIB",
+   "citation_en": "France's public debt now exceeds €3,305bn, that is more than 113% of GDP",
    "annonce": {
     "niveau": 3305,
     "pct": 113
@@ -398,7 +398,7 @@
    "document": "D002",
    "url": "https://www.lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
    "sha256_piece": "c5d720a8cd9e06d7ba7a1229edd6f93294c41ae61c28b70e4f9b52c55052a190",
-   "date_reference": "2026-07-06",
+   "date_reference": "2026-06-26",
    "rang": "A",
    "citation": "est passé devant celui de l’Éducation nationale",
    "citation_en": "has overtaken that of National Education",

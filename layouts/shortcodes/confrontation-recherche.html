@@ -24,11 +24,11 @@
 {{- if eq .Page.Lang "en" }}
 <summary>Tested against the research literature{{ with $resume }}<span class="confrontation__resume">: {{ . | safeHTML }}</span>{{ else }}: what the literature does to this reading{{ end }}</summary>
 {{ .Inner | .Page.RenderString }}
-<p class="confrontation__date">Literature review checked on {{ (time $verifie).Format "2 January 2006" }}: every reference cited was read in full on that date, in the version indicated.</p>
+<p class="confrontation__date">Literature review checked on {{ (time $verifie).Format "2 January 2006" }}: each reference was read in the version indicated, in the sections on which what is said of it rests.</p>
 {{- else }}
 <summary>Confrontation à la recherche{{ with $resume }}<span class="confrontation__resume">&nbsp;: {{ . | safeHTML }}</span>{{ else }}&nbsp;: ce que la littérature fait à cette lecture{{ end }}</summary>
 {{ .Inner | .Page.RenderString }}
-<p class="confrontation__date">Revue de littérature vérifiée le {{ partial "date-affichee.html" (dict "t" (time $verifie) "fmt" "2 January 2006" "en" false) }}&nbsp;: chaque référence citée a été lue en entier à cette date, dans la version indiquée.</p>
+<p class="confrontation__date">Revue de littérature vérifiée le {{ partial "date-affichee.html" (dict "t" (time $verifie) "fmt" "2 January 2006" "en" false) }}&nbsp;: chaque référence a été lue dans la version indiquée, aux sections qui fondent ce qui en est dit.</p>
 {{- end }}
 </details>
 {{- else -}}

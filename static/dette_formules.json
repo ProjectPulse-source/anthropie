@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-07",
+ "releve_le": "2026-11-16",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce",
  "meta": {
   "page": "https://stephane-lalut.com/formules-du-debat-sur-la-dette/",
@@ -1043,8 +1043,8 @@
     "url": "https://les-patriotes.fr/wp-content/uploads/2026/09/Projet-pour-la-France-2026-v2.pdf",
     "sha256_piece": "90d0748445644a433b594864cf553a03245739e07cb65672f01c1c0b49be6f83",
     "date_reference": "2026-09",
-    "citation": "La dette publique de la France dépasse désormais 3.305 Md€, soit […] plus de 113% du PIB",
-    "citation_en": "France's public debt now exceeds €3,305bn, that is […] more than 113% of GDP",
+    "citation": "La dette publique de la France dépasse désormais 3.305 Md€, soit plus de 113% du PIB",
+    "citation_en": "France's public debt now exceeds €3,305bn, that is more than 113% of GDP",
     "annonce": {
      "niveau": 3305,
      "pct": 113
@@ -1130,7 +1130,7 @@
      "mission_defense_2027": 63.4
     },
     "verdict": "Selon le document : inexact pour la loi de finances de 2026, où la mission qui porte la charge de la dette (60,3 milliards) reste derrière l'enseignement scolaire (64,5) ; exact pour les plafonds de 2027 publiés le jour de la lettre (73,0, devant 65,3 et la Défense, 63,4). Rang d'une mission, qui contient d'autres dépenses que les intérêts",
-    "verdict_en": "Depends on the document: inaccurate for the 2026 Finance Act, where the programme carrying the debt charge (€60.3bn) stays behind school education (€64.5bn); accurate for the 2027 ceilings published on the day of the letter (€73.0bn, ahead of €65.3bn and Defence, €63.4bn). The rank of a programme that contains spending other than interest"
+    "verdict_en": "Depends on the document: inaccurate for the 2026 Finance Act, where the mission carrying the debt charge (€60.3bn) stays behind school education (€64.5bn); accurate for the 2027 ceilings published on the day of the letter (€73.0bn, ahead of €65.3bn and Defence, €63.4bn). The rank of a mission that contains spending other than interest"
    },
    {
     "id": "H09",
@@ -1153,7 +1153,7 @@
      "mission_defense_2025": 50.5
     },
     "verdict": "Exact pour 2025, l'année que vise le texte : 56,2 milliards en loi de finances, derrière l'enseignement scolaire (64,3), devant la Défense (50,5). Rang d'une mission, hors pensions et hors remboursements d'impôts",
-    "verdict_en": "Accurate for 2025, the year the text refers to: €56.2bn in the Finance Act, behind school education (€64.3bn), ahead of Defence (€50.5bn). The rank of a programme, excluding pensions and tax refunds"
+    "verdict_en": "Accurate for 2025, the year the text refers to: €56.2bn in the Finance Act, behind school education (€64.3bn), ahead of Defence (€50.5bn). The rank of a mission, excluding pensions and tax refunds"
    },
    {
     "id": "H10",
@@ -1161,22 +1161,21 @@
     "document": "D002",
     "url": "https://www.lutte-ouvriere.org/medias/document/fichiers/2026/06/brochure-ete-2026.pdf",
     "sha256_piece": "c5d720a8cd9e06d7ba7a1229edd6f93294c41ae61c28b70e4f9b52c55052a190",
-    "date_reference": "2026-07-06",
+    "date_reference": "2026-06-26",
     "citation": "est passé devant celui de l’Éducation nationale",
     "citation_en": "has overtaken that of National Education",
     "annonce": {},
-    "trimestre_publie_a_la_date": "2026-Q1",
+    "trimestre_publie_a_la_date": "2025-Q4",
     "donnees_a_la_date": {
-     "dette_mdeur": 3535.9,
-     "hausse_depuis_election_2017": 1254.6,
-     "hausse_depuis_janvier_2017": 1345.4,
-     "points_pib_depuis_fin_2017": 18.7,
+     "hausse_depuis_election_2017": 1178.8,
+     "hausse_depuis_janvier_2017": 1269.6,
+     "points_pib_depuis_fin_2017": 16.9,
      "interets_apu_mdeur": 65.7,
      "mission_enseignement_scolaire_2026": 64.5,
      "mission_engagements_financiers_2026": 60.3
     },
-    "verdict": "Inexact au même périmètre à la date du texte : en loi de finances 2026, 60,3 contre 64,5 milliards ; vrai seulement si l'on compare les intérêts de toutes les administrations (65,7 milliards en 2025) au budget d'un seul ministère. Les plafonds de 2027, publiés neuf jours plus tard, inversent l'ordre des missions",
-    "verdict_en": "Inaccurate within one scope at the date of the text: in the 2026 Finance Act, €60.3bn against €64.5bn; true only when the interest of all general government (€65.7bn in 2025) is compared with a single ministry's budget. The 2027 ceilings, published nine days later, reverse the order of the programmes"
+    "verdict": "Inexact au même périmètre à la date du texte : en loi de finances 2026, 60,3 contre 64,5 milliards ; vrai seulement si l'on compare les intérêts de toutes les administrations (65,7 milliards en 2025) au budget d'un seul ministère. Les plafonds de 2027, publiés dix-neuf jours plus tard, inversent l'ordre des missions",
+    "verdict_en": "Inaccurate within one scope at the date of the text: in the 2026 Finance Act, €60.3bn against €64.5bn; true only when the interest of all general government (€65.7bn in 2025) is compared with a single ministry's budget. The 2027 ceilings, published nineteen days later, reverse the order of the budget missions"
    },
    {
     "id": "H11",
@@ -1225,8 +1224,8 @@
      "recettes_pct_derniere_octobre": 52.2,
      "solde_pct_derniere": -5.1
     },
-    "verdict": "Exact avec les comptes du printemps 2026 (recettes de 54,3 % du PIB en 2017, 52,1 % en 2025) ; 3,0 % avec l'édition d'octobre 2026 (52,2 %). Un calcul à dépenses inchangées, pas une cause démontrée",
-    "verdict_en": "Accurate with the spring 2026 accounts (revenue of 54.3% of GDP in 2017, 52.1% in 2025); 3.0% with the October 2026 edition (52.2%). A calculation at unchanged spending, not a proven cause"
+    "verdict": "Exact avec la première estimation de mars 2026 (recettes de 54,3 % du PIB en 2017, 52,1 % en 2025) ; 3,0 % avec les comptes de mai 2026, antérieurs au texte, comme avec l'édition d'octobre 2026 (52,2 %). Un calcul à dépenses inchangées, pas une cause démontrée",
+    "verdict_en": "Accurate with the first estimate of March 2026 (revenue of 54.3% of GDP in 2017, 52.1% in 2025); 3.0% with the May 2026 accounts, published before the text, as with the October 2026 edition (52.2%). A calculation at unchanged spending, not a proven cause"
    },
    {
     "id": "H13",
@@ -2071,7 +2070,7 @@
   "hh_c_H04": "Avec 3417 milliards d'euros la dette atteint désormais 120% du PIB",
   "hh_d_H04": "page relevée le 2 novembre 2026",
   "hh_n_H05": "Florian Philippot",
-  "hh_c_H05": "La dette publique de la France dépasse désormais 3.305 Md€, soit […] plus de 113% du PIB",
+  "hh_c_H05": "La dette publique de la France dépasse désormais 3.305 Md€, soit plus de 113% du PIB",
   "hh_d_H05": "septembre 2026",
   "hh_n_H06": "Jean-François Legendre",
   "hh_c_H06": "La dette globale est de 3500 milliards",
@@ -2087,7 +2086,7 @@
   "hh_d_H09": "septembre 2026",
   "hh_n_H10": "Nathalie Arthaud",
   "hh_c_H10": "est passé devant celui de l’Éducation nationale",
-  "hh_d_H10": "juillet 2026",
+  "hh_d_H10": "juin 2026",
   "hh_n_H11": "Jean-François Legendre",
   "hh_c_H11": "Rien que les intérêts de notre dette représentent 80 milliards d'euros par an",
   "hh_d_H11": "page relevée le 2 novembre 2026",
@@ -2122,9 +2121,9 @@
   "hh_v_H07": "Inexact (3 595,5 au deuxième trimestre 2026) ; le même texte écrit aussi « 3500 milliards »",
   "hh_v_H08": "Selon le document : inexact pour la loi de finances de 2026, où la mission qui porte la charge de la dette (60,3 milliards) reste derrière l'enseignement scolaire (64,5) ; exact pour les plafonds de 2027 publiés le jour de la lettre (73,0, devant 65,3 et la Défense, 63,4). Rang d'une mission, qui contient d'autres dépenses que les intérêts",
   "hh_v_H09": "Exact pour 2025, l'année que vise le texte : 56,2 milliards en loi de finances, derrière l'enseignement scolaire (64,3), devant la Défense (50,5). Rang d'une mission, hors pensions et hors remboursements d'impôts",
-  "hh_v_H10": "Inexact au même périmètre à la date du texte : en loi de finances 2026, 60,3 contre 64,5 milliards ; vrai seulement si l'on compare les intérêts de toutes les administrations (65,7 milliards en 2025) au budget d'un seul ministère. Les plafonds de 2027, publiés neuf jours plus tard, inversent l'ordre des missions",
+  "hh_v_H10": "Inexact au même périmètre à la date du texte : en loi de finances 2026, 60,3 contre 64,5 milliards ; vrai seulement si l'on compare les intérêts de toutes les administrations (65,7 milliards en 2025) au budget d'un seul ministère. Les plafonds de 2027, publiés dix-neuf jours plus tard, inversent l'ordre des missions",
   "hh_v_H11": "Non établi : le texte ne dit ni l'année ni le périmètre. Aucune année réalisée n'en approche (65,7 milliards en 2025 pour toutes les administrations) ; le gouvernement prévoit 74,2 milliards en 2027 pour les seules administrations centrales",
-  "hh_v_H12": "Exact avec les comptes du printemps 2026 (recettes de 54,3 % du PIB en 2017, 52,1 % en 2025) ; 3,0 % avec l'édition d'octobre 2026 (52,2 %). Un calcul à dépenses inchangées, pas une cause démontrée",
+  "hh_v_H12": "Exact avec la première estimation de mars 2026 (recettes de 54,3 % du PIB en 2017, 52,1 % en 2025) ; 3,0 % avec les comptes de mai 2026, antérieurs au texte, comme avec l'édition d'octobre 2026 (52,2 %). Un calcul à dépenses inchangées, pas une cause démontrée",
   "hh_v_H13": "« Au moins 400 » : non établi. Le calcul à part de recettes constante donne 360 milliards avant intérêts et effets sur l'activité, et ne suffit ni à établir ni à réfuter la borne ; « proche des 100 % » : compatible (104 %)",
   "hh_v_H14": "Hausse exacte (18,7 points de fin 2017 au premier trimestre 2026) ; attribution non établie : le calcul à part de recettes constante donne environ 12 points, et il n'isole pas l'effet des mesures fiscales",
   "hh_v_H15": "Exact pour la dette négociable de l'État (56,0 % fin 2025), inexact pour celle de toutes les administrations (54,3 %)",
@@ -2365,7 +2364,7 @@
   "hh_c_H04": "at 3,417 billion euros, debt now stands at 120% of GDP",
   "hh_d_H04": "page captured on 2 November 2026",
   "hh_n_H05": "Florian Philippot",
-  "hh_c_H05": "France's public debt now exceeds €3,305bn, that is […] more than 113% of GDP",
+  "hh_c_H05": "France's public debt now exceeds €3,305bn, that is more than 113% of GDP",
   "hh_d_H05": "September 2026",
   "hh_n_H06": "Jean-François Legendre",
   "hh_c_H06": "total debt is 3,500 billion",
@@ -2381,7 +2380,7 @@
   "hh_d_H09": "September 2026",
   "hh_n_H10": "Nathalie Arthaud",
   "hh_c_H10": "has overtaken that of National Education",
-  "hh_d_H10": "July 2026",
+  "hh_d_H10": "June 2026",
   "hh_n_H11": "Jean-François Legendre",
   "hh_c_H11": "the interest on our debt alone amounts to 80 billion euros a year",
   "hh_d_H11": "page captured on 2 November 2026",
@@ -2414,11 +2413,11 @@
   "hh_v_H05": "Accurate as thresholds: €3,535.9bn and 117.5% in the first quarter of 2026. The figures cited are the end-2024 ones published in May 2025 (€3,305.3bn, 113.2%), 112.6% since the revision",
   "hh_v_H06": "Accurate for the first quarter of 2026 (€3,535.9bn), overtaken in the second (€3,595.5bn)",
   "hh_v_H07": "Inaccurate (€3,595.5bn in the second quarter of 2026); the same text also writes “3,500 billion”",
-  "hh_v_H08": "Depends on the document: inaccurate for the 2026 Finance Act, where the programme carrying the debt charge (€60.3bn) stays behind school education (€64.5bn); accurate for the 2027 ceilings published on the day of the letter (€73.0bn, ahead of €65.3bn and Defence, €63.4bn). The rank of a programme that contains spending other than interest",
-  "hh_v_H09": "Accurate for 2025, the year the text refers to: €56.2bn in the Finance Act, behind school education (€64.3bn), ahead of Defence (€50.5bn). The rank of a programme, excluding pensions and tax refunds",
-  "hh_v_H10": "Inaccurate within one scope at the date of the text: in the 2026 Finance Act, €60.3bn against €64.5bn; true only when the interest of all general government (€65.7bn in 2025) is compared with a single ministry's budget. The 2027 ceilings, published nine days later, reverse the order of the programmes",
+  "hh_v_H08": "Depends on the document: inaccurate for the 2026 Finance Act, where the mission carrying the debt charge (€60.3bn) stays behind school education (€64.5bn); accurate for the 2027 ceilings published on the day of the letter (€73.0bn, ahead of €65.3bn and Defence, €63.4bn). The rank of a mission that contains spending other than interest",
+  "hh_v_H09": "Accurate for 2025, the year the text refers to: €56.2bn in the Finance Act, behind school education (€64.3bn), ahead of Defence (€50.5bn). The rank of a mission, excluding pensions and tax refunds",
+  "hh_v_H10": "Inaccurate within one scope at the date of the text: in the 2026 Finance Act, €60.3bn against €64.5bn; true only when the interest of all general government (€65.7bn in 2025) is compared with a single ministry's budget. The 2027 ceilings, published nineteen days later, reverse the order of the budget missions",
   "hh_v_H11": "Not established: the text gives neither the year nor the scope. No actual year comes close (€65.7bn in 2025 for general government as a whole); the government forecasts €74.2bn in 2027 for central government alone",
-  "hh_v_H12": "Accurate with the spring 2026 accounts (revenue of 54.3% of GDP in 2017, 52.1% in 2025); 3.0% with the October 2026 edition (52.2%). A calculation at unchanged spending, not a proven cause",
+  "hh_v_H12": "Accurate with the first estimate of March 2026 (revenue of 54.3% of GDP in 2017, 52.1% in 2025); 3.0% with the May 2026 accounts, published before the text, as with the October 2026 edition (52.2%). A calculation at unchanged spending, not a proven cause",
   "hh_v_H13": "“At least 400”: not established. The calculation at a constant revenue share gives €360bn before interest and effects on activity, and can neither establish nor refute the bound; “close to 100%”: consistent (104%)",
   "hh_v_H14": "The rise is accurate (18.7 points from the end of 2017 to the first quarter of 2026); the attribution is not established: the calculation at a constant revenue share gives about 12 points, and does not isolate the effect of tax measures",
   "hh_v_H15": "Accurate for the State's negotiable debt (56.0% at the end of 2025), inaccurate for general government debt as a whole (54.3%)",

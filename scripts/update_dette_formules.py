@@ -514,8 +514,8 @@ def gardes(c):
     g(hh["ef27"] > hh["es27"] > hh["def27"] > hh["autres27"] and hh["p26_date"] == E["H08"]["date_reference"] and E["H10"]["date_reference"] < hh["p26_date"],
       "H08-H10 « plafonds 2027, publiés le jour de la lettre de B. Cazeneuve et après le texte de N. Arthaud : en tête »")
     from datetime import date
-    g((date.fromisoformat(hh["p26_date"]) - date.fromisoformat(E["H10"]["date_reference"])).days == 9,
-      "H10 « les plafonds de 2027, publiés neuf jours plus tard »")
+    g((date.fromisoformat(hh["p26_date"]) - date.fromisoformat(E["H10"]["date_reference"])).days == 19,
+      "H10 « les plafonds de 2027, publiés dix-neuf jours plus tard »")
     g(hh["manque"] < an("H13", "moins"), "H13 « au moins 400 » : le calcul à part de recettes constante reste en deçà, sans pouvoir réfuter")
     g(hh["int_c"] > hh["es26"] > hh["ef26"], "H10 « devant l'Éducation nationale » : en 2026, seulement en comparant toutes les administrations à une mission de l'État")
     g(not arrondi_rang(hh["int_c"], an("H11", "interets")) and hh["int_max"] < an("H11", "interets") - 5 and hh["apuc27"] < an("H11", "interets"),
@@ -681,15 +681,15 @@ VERDICTS_HH = {
     "H07": {"fr": "Inexact ({hh_t2} au deuxième trimestre 2026) ; le même texte écrit aussi « 3500 milliards »",
             "en": "Inaccurate (€{hh_t2}bn in the second quarter of 2026); the same text also writes “3,500 billion”"},
     "H08": {"fr": "Selon le document : inexact pour la loi de finances de 2026, où la mission qui porte la charge de la dette ({hh_ef26} milliards) reste derrière l'enseignement scolaire ({hh_es26}) ; exact pour les plafonds de 2027 publiés le jour de la lettre ({hh_ef27}, devant {hh_es27} et la Défense, {hh_def27}). Rang d'une mission, qui contient d'autres dépenses que les intérêts",
-            "en": "Depends on the document: inaccurate for the 2026 Finance Act, where the programme carrying the debt charge (€{hh_ef26}bn) stays behind school education (€{hh_es26}bn); accurate for the 2027 ceilings published on the day of the letter (€{hh_ef27}bn, ahead of €{hh_es27}bn and Defence, €{hh_def27}bn). The rank of a programme that contains spending other than interest"},
+            "en": "Depends on the document: inaccurate for the 2026 Finance Act, where the mission carrying the debt charge (€{hh_ef26}bn) stays behind school education (€{hh_es26}bn); accurate for the 2027 ceilings published on the day of the letter (€{hh_ef27}bn, ahead of €{hh_es27}bn and Defence, €{hh_def27}bn). The rank of a mission that contains spending other than interest"},
     "H09": {"fr": "Exact pour 2025, l'année que vise le texte : {hh_ef25} milliards en loi de finances, derrière l'enseignement scolaire ({hh_es25}), devant la Défense ({hh_def25}). Rang d'une mission, hors pensions et hors remboursements d'impôts",
-            "en": "Accurate for 2025, the year the text refers to: €{hh_ef25}bn in the Finance Act, behind school education (€{hh_es25}bn), ahead of Defence (€{hh_def25}bn). The rank of a programme, excluding pensions and tax refunds"},
-    "H10": {"fr": "Inexact au même périmètre à la date du texte : en loi de finances 2026, {hh_ef26} contre {hh_es26} milliards ; vrai seulement si l'on compare les intérêts de toutes les administrations ({hh_int_c} milliards en {hh_an_c}) au budget d'un seul ministère. Les plafonds de 2027, publiés neuf jours plus tard, inversent l'ordre des missions",
-            "en": "Inaccurate within one scope at the date of the text: in the 2026 Finance Act, €{hh_ef26}bn against €{hh_es26}bn; true only when the interest of all general government (€{hh_int_c}bn in {hh_an_c}) is compared with a single ministry's budget. The 2027 ceilings, published nine days later, reverse the order of the programmes"},
+            "en": "Accurate for 2025, the year the text refers to: €{hh_ef25}bn in the Finance Act, behind school education (€{hh_es25}bn), ahead of Defence (€{hh_def25}bn). The rank of a mission, excluding pensions and tax refunds"},
+    "H10": {"fr": "Inexact au même périmètre à la date du texte : en loi de finances 2026, {hh_ef26} contre {hh_es26} milliards ; vrai seulement si l'on compare les intérêts de toutes les administrations ({hh_int_c} milliards en {hh_an_c}) au budget d'un seul ministère. Les plafonds de 2027, publiés dix-neuf jours plus tard, inversent l'ordre des missions",
+            "en": "Inaccurate within one scope at the date of the text: in the 2026 Finance Act, €{hh_ef26}bn against €{hh_es26}bn; true only when the interest of all general government (€{hh_int_c}bn in {hh_an_c}) is compared with a single ministry's budget. The 2027 ceilings, published nineteen days later, reverse the order of the budget missions"},
     "H11": {"fr": "Non établi : le texte ne dit ni l'année ni le périmètre. Aucune année réalisée n'en approche ({hh_int_c} milliards en {hh_an_c} pour toutes les administrations) ; le gouvernement prévoit {hh_apuc27} milliards en 2027 pour les seules administrations centrales",
             "en": "Not established: the text gives neither the year nor the scope. No actual year comes close (€{hh_int_c}bn in {hh_an_c} for general government as a whole); the government forecasts €{hh_apuc27}bn in 2027 for central government alone"},
-    "H12": {"fr": "Exact avec les comptes du printemps 2026 (recettes de {hh_rec17} % du PIB en 2017, {hh_rec_c} % en {hh_an_c}) ; {hh_sans_rev} % avec l'édition d'octobre 2026 ({hh_rec_rev_c} %). Un calcul à dépenses inchangées, pas une cause démontrée",
-            "en": "Accurate with the spring 2026 accounts (revenue of {hh_rec17}% of GDP in 2017, {hh_rec_c}% in {hh_an_c}); {hh_sans_rev}% with the October 2026 edition ({hh_rec_rev_c}%). A calculation at unchanged spending, not a proven cause"},
+    "H12": {"fr": "Exact avec la première estimation de mars 2026 (recettes de {hh_rec17} % du PIB en 2017, {hh_rec_c} % en {hh_an_c}) ; {hh_sans_rev} % avec les comptes de mai 2026, antérieurs au texte, comme avec l'édition d'octobre 2026 ({hh_rec_rev_c} %). Un calcul à dépenses inchangées, pas une cause démontrée",
+            "en": "Accurate with the first estimate of March 2026 (revenue of {hh_rec17}% of GDP in 2017, {hh_rec_c}% in {hh_an_c}); {hh_sans_rev}% with the May 2026 accounts, published before the text, as with the October 2026 edition ({hh_rec_rev_c}%). A calculation at unchanged spending, not a proven cause"},
     "H13": {"fr": "« Au moins 400 » : non établi. Le calcul à part de recettes constante donne {hh_manque} milliards avant intérêts et effets sur l'activité, et ne suffit ni à établir ni à réfuter la borne ; « proche des 100 % » : compatible ({hh_sans_pct} %)",
             "en": "“At least 400”: not established. The calculation at a constant revenue share gives €{hh_manque}bn before interest and effects on activity, and can neither establish nor refute the bound; “close to 100%”: consistent ({hh_sans_pct}%)"},
     "H14": {"fr": "Hausse exacte ({hh_pts_h14} de fin 2017 au premier trimestre 2026) ; attribution non établie : le calcul à part de recettes constante donne environ {hh_manque_pts}, et il n'isole pas l'effet des mesures fiscales",
@@ -947,7 +947,7 @@ TXT_E = {
                seance="séance du 8 septembre 2025", dessus="France au-dessus", dessous="Grèce au-dessus",
                source="Eurostat, rendements des emprunts d'État à long terme, moyennes mensuelles (irt_lt_mcby_m) ; calcul de l'auteur",
                note="Moyennes mensuelles. Le 8 septembre 2025, la France empruntait à dix ans à {f8_tec8} % (Banque de France) et la Grèce à {f8_hdat8} % (Banque de Grèce) ; le 4, la même mesure pour les deux pays donnait {f8_j4_fr} % contre {f8_j4_gr} %. Un prix de marché dit le coût d'emprunt du moment, pas la solidité relative de deux pays.",
-               montre="La France emprunte plus cher que la Grèce à partir de l'été 2025 : la formule est exacte au mois de la séance, et elle n'aurait pas été exacte six mois plus tôt."),
+               montre="La France emprunte plus cher que la Grèce à partir de l'été 2025, sauf de mars à mai 2026 : la formule est exacte au mois de la séance, et elle n'aurait pas été exacte six mois plus tôt."),
     "en": dict(titre="Ten-year yields: France above or below Greece, month by month",
                titre_m="Ten-year yields: France minus Greece, month by month",
                axe="France − Greece spread, percentage points", axe_m="France − Greece, points",
@@ -957,7 +957,7 @@ TXT_E = {
                seance="debate of 8 September 2025", dessus="France above", dessous="Greece above",
                source="Eurostat, long-term government bond yields, monthly averages (irt_lt_mcby_m); author's calculation",
                note="Monthly averages. On 8 September 2025, France borrowed at ten years at {f8_tec8}% (Banque de France) and Greece at {f8_hdat8}% (Bank of Greece); on the 4th, a like-for-like measure gave {f8_j4_fr}% against {f8_j4_gr}%. A market price gives the current cost of borrowing, not the relative soundness of two countries.",
-               montre="France borrows at higher rates than Greece from summer 2025: the claim is accurate for the month of the debate, and would not have been six months earlier."),
+               montre="France borrows at higher rates than Greece from summer 2025, except from March to May 2026: the claim is accurate for the month of the debate, and would not have been six months earlier."),
 }
 
 

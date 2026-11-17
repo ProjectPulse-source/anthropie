@@ -12,7 +12,7 @@
    "id": "grece",
    "fichier": "dette-formules-grece",
    "titre": "Taux à dix ans : la France au-dessus ou au-dessous de la Grèce, mois par mois",
-   "montre": "La France emprunte plus cher que la Grèce à partir de l'été 2025 : la formule est exacte au mois de la séance, et elle n'aurait pas été exacte six mois plus tôt.",
+   "montre": "La France emprunte plus cher que la Grèce à partir de l'été 2025, sauf de mars à mai 2026 : la formule est exacte au mois de la séance, et elle n'aurait pas été exacte six mois plus tôt.",
    "source": "Eurostat, rendements des emprunts d'État à long terme, moyennes mensuelles (irt_lt_mcby_m) ; calcul de l'auteur",
    "precaution": "Moyennes mensuelles. Le 8 septembre 2025, la France empruntait à dix ans à 3,49 % (Banque de France) et la Grèce à 3,34 % (Banque de Grèce) ; le 4, la même mesure pour les deux pays donnait 3,50 % contre 3,44 %. Un prix de marché dit le coût d'emprunt du moment, pas la solidité relative de deux pays."
   }
@@ -30,7 +30,7 @@
    "id": "grece",
    "fichier": "dette-formules-grece-en",
    "titre": "Ten-year yields: France above or below Greece, month by month",
-   "montre": "France borrows at higher rates than Greece from summer 2025: the claim is accurate for the month of the debate, and would not have been six months earlier.",
+   "montre": "France borrows at higher rates than Greece from summer 2025, except from March to May 2026: the claim is accurate for the month of the debate, and would not have been six months earlier.",
    "source": "Eurostat, long-term government bond yields, monthly averages (irt_lt_mcby_m); author's calculation",
    "precaution": "Monthly averages. On 8 September 2025, France borrowed at ten years at 3.49% (Banque de France) and Greece at 3.34% (Bank of Greece); on the 4th, a like-for-like measure gave 3.50% against 3.44%. A market price gives the current cost of borrowing, not the relative soundness of two countries."
   }
