@@ -555,7 +555,7 @@ def plf_mesures() -> dict:
 
 
 PLF_VOTES = DON / "plf_votes.json"
-PLF_VOTES_SHA = "46665b61a3f2a36746f12b9821bcceb2c45c905fbc1e45ead0fc3d437a4c8692"  # 06/11/2026 : rejet du texte, calendrier du Senat
+PLF_VOTES_SHA = "cc9075dabddc0e11fb333d1526c8118667d66102b7c92faa57a83b2cd18781a5"  # 06/11/2026 : rejet du texte, calendrier du Senat
 # Etat du projet au Parlement (22/10/2026, arbitrage de l'auteur, piece 1807_Communes.txt) : chaque resultat est une
 # citation verbatim du compte rendu officiel, retrouvee par sources_collectivites/verifier_plf_votes.py dans le compte
 # rendu archive (empreinte dans plf_votes.json). Mesure -> article qui la porte ; None = credits de seconde partie.
