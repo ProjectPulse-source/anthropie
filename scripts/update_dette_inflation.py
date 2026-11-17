@@ -22,7 +22,7 @@ Témoins publiés que le calcul n'utilise pas : figure 1.16 de l'OCDE (SBO 2023)
 de la Bundesbank (avril 2024) ; comptes de la Banque de France (résultat ordinaire, versements à l'État).
 
 Usage : python scripts/update_dette_inflation.py [--check]
-        [--mutation=demi|indexes|consolidation|encadre|qe_cinq|qe_partage|qe_ocde|qe_bdf|fonds]
+        [--mutation=demi|indexes|consolidation|encadre|qe_cinq|qe_partage|qe_ocde|qe_bdf|fonds|pal_pont]
 Sorties : data/ et static/dette_inflation.json, static/dette_inflation.csv, data/figures_inflation.json,
           static/img/dette-inflation-{calendrier,achats}{,-en}{,-m}.svg + .png (versions téléphone -m : refonte du 11/10/2026)
 """
@@ -128,6 +128,10 @@ def calcul(v3, sens, ci):
         "cons25": v3["op5_consolidation"]["T_consolide_fin_2025_mdeur"],
         "pal_rapport": pal["rapport_eux_sur_nous_pib_annuel"], "pal_total": pont["Résidu jusqu'à la position de Pallotti (0,39 x 3 = 1,17 PIB)"],
         "pal_residu": residu,
+        # Relecture des sources du lot « dette-a » (16/11/2026) : « 87 % de l'écart » était 87 % de LEUR chiffre (point de
+        # départ, notre calcul, compris) ; la part de l'ÉCART que réduit le pont se calcule depuis notre point de départ.
+        "pal_nous": pont["Nous : T, r = 0, État taux fixe, IPCH moyennes annuelles, SPF"],
+        "pal_pont": pont["Date : ratio de 2017 au lieu de 2020"],
         "parts": {k: v for k, v in ci["_parts_2020T4"].items() if k != "total_MdEUR"},
     }
 
@@ -231,6 +235,8 @@ def mutation(c):
         c["qe"]["bdf_ro_apres"] = 5.0
     elif m == "fonds":         # « fonds et autres » dépasserait la part des banques : l'ordre dit dans la page serait faux
         c["parts"]["assureurs"] -= 5
+    elif m == "pal_pont":      # le pont réduirait presque tout l'écart : « environ les trois quarts » serait faux (lot dette-a)
+        c["pal_pont"] = c["pal_total"] - 0.3
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
@@ -267,6 +273,14 @@ def gardes(c):
     g(c["cons23"] >= 0.95 * T, "« consolidée, l'érosion reste presque entière fin 2023 » : %.1f" % c["cons23"])
     g(c["cons25"] < c["cons23"] - 10, "« puis l'avantage consolidé se réduit en 2024-2025 »")
     g(0.10 <= c["pal_residu"] / c["pal_total"] <= 0.16, "« résidu d'environ 13 %% » : %.3f" % (c["pal_residu"] / c["pal_total"]))
+    # Lot « dette-a » (16/11/2026) : part de l'ÉCART que le pont réduit, depuis notre point de départ (environ les trois
+    # quarts) ; le rapport affiché est bien leur chiffre sur NOTRE calcul en moyennes annuelles, point de départ du pont.
+    part_ecart = (c["pal_pont"] - c["pal_nous"]) / (c["pal_total"] - c["pal_nous"])
+    g(0.70 <= part_ecart <= 0.85, "« le pont réduit l'écart d'environ les trois quarts » : %.3f" % part_ecart)
+    g(abs(c["pal_rapport"] - c["pal_total"] / c["pal_nous"]) < 0.01,
+      "« 2,33 fois notre calcul en moyennes annuelles » : %.3f contre %.3f" % (c["pal_rapport"], c["pal_total"] / c["pal_nous"]))
+    g(abs(c["pal_nous"] - 100 * c["T_annuel"] / (100 * c["T"] / c["pts_pib"])) < 0.05,
+      "le point de départ du pont est le calcul en moyennes annuelles : %.2f %% du PIB" % c["pal_nous"])
     g(c["charge_aft"][2022] == max(c["charge_aft"].values()), "« la charge d'indexation a culminé en 2022 »")
     fa = 100 - sum(v for k, v in c["parts"].items() if k != "OPC")
     g(1 < fa < 5 and fa < c["parts"]["banques"], "« fonds et autres » : petite part, sous celle des banques : %.2f" % fa)
@@ -330,7 +344,9 @@ def affichage(c, lang):
         "charge22": f(c["charge_aft"][2022], 0), "charge_cum": f(sum(c["charge_aft"].values()), 1),
         "s_bdf": f(100 * c["s_bdf"], 0), "cons23": f(c["cons23"], 0), "cons25": f(c["cons25"], 0),
         "pal_rapport": f(c["pal_rapport"], 2), "pal_residu": str(round(100 * c["pal_residu"] / c["pal_total"])),
-        "pal_explique": str(100 - round(100 * c["pal_residu"] / c["pal_total"])),
+        # « pal_explique » (87) retiré le 16/11/2026 : c'était la part de LEUR chiffre atteinte, la page la disait « de l'écart »
+        "pal_explique_ecart": str(round(100 * (c["pal_pont"] - c["pal_nous"]) / (c["pal_total"] - c["pal_nous"]))),
+        "pal_residu_pts": f(c["pal_residu"], 1),
         **{"part_" + k: f(v, 0) for k, v in c["parts"].items()},
         **{"alloc_" + k: f(c["T"] * v / 100, 0) for k, v in c["parts"].items()},
         "part_autres": f(100 - sum(c["parts"].values()), 0), "alloc_autres": f(c["T"] * (100 - sum(c["parts"].values())) / 100, 0),
