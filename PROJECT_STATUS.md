@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-17 — `/enseignants/environnement/` publiée : sources relues, contre-analyse externe arbitrée
+
+- **Commit** `aad0325` (15 fichiers) : version proposée du lot `enseignants-environnement` (relecture des sources,
+  juge interne à l'aveugle) et les six corrections de la contre-analyse externe, archivée avant lecture et arbitrée
+  point par point (`06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\enseignants-environnement\ARBITRAGE_EXTERNE.md`) :
+  question 4 ouverte aux deux totaux ; corrigés 4 et 5 conditionnés ; libellés de la figure au principe de résidence ;
+  unités résidentes et demande finale définies dans le pied imprimé ; licence des données de l'Insee et du SDES.
+- **Contrôles** : `check-all --ci` 0, Hugo 0, `typo_build` 0 ; générateur `--check` 0, 7 mutations sur 7 ;
+  `check-figures` 0, deux contrôleurs indépendants puis repasse, aucun bloquant ; fiche élève sur une page ; débordement
+  0 de 320 à 1 440 px ; JSON-LD valide.
+- **Servi** : déploiement `hugo.yml` 44016037692 réussi, contrôle de fumée compris ; version servie attestée le 17/11
+  vers 5 h 25 : texte identique au build contrôlé (147 phrases, 0 écart), figures bureau et téléphone identiques à l'octet.
+
 ### 2026-11-16 — Lot « Repères A » publié : tabula rasa, écriture et pensée, chercheur indépendant (FR, EN), fiche AWP-05
 
 Commande `/reprise-ressource tabula-rasa-locke comment-lecriture-a-transforme-la-pensee chercheur-independant`, préparée
