@@ -24,7 +24,7 @@ porte les mêmes clés que `affichage`, au format anglais (point décimal, virgu
 reprennent le même dessin, textes traduits dans l'image. Les gardes de prose ne regardent que les nombres : une seule
 passe vaut pour les deux langues.
 
-Usage : python scripts/update_dette_dynamique.py [--check]
+Usage : python scripts/update_dette_dynamique.py [--check] [--mutation=fmi_signe|sfa_2009]
 Sorties : data/ et static/dette_dynamique.json (blocs affichage et affichage_en), static/dette_dynamique.csv,
           data/figures_dynamique.json (clés fr et en),
           static/img/dette-dynamique-{cascade,annuelle}{,-en}.svg + .png
@@ -1190,6 +1190,15 @@ def affichage(a0, d_depart, rows, total, per, dr, cs, po):
          and moy_cs(cs, "fmi_ca", FEN_CS["apres"], last["annee"]) < moy_cs(cs, "fmi_ca", FEN_CS["avant"], last["annee"])),
         ("2009 et 2020 : les deux plus fortes hausses de la série",
          sorted(rows, key=lambda r: -r["variation"])[0]["annee"] in (2009, 2020) and sorted(rows, key=lambda r: -r["variation"])[1]["annee"] in (2009, 2020)),
+        # Relecture des sources du lot « dette-a » (16/11/2026) : la garde ci-dessus ne regarde que des moyennes de fenêtres
+        # et ne pouvait pas voir la dérive interne à 1996-2007 (excédents jusqu'en 2001, déficits dès 2002, −1,7 en 2007).
+        ("FMI : la moyenne de 1996-2007 « réunit des excédents à la fin des années 1990 et des déficits ensuite » : solde "
+         "corrigé du cycle positif chaque année de 1996 à 2001, négatif chaque année ensuite, jusqu'à la dernière ; le déficit "
+         "« précède la crise de 2008 » et s'est « creusé après elle » (moyenne 2010-2014 sous chacune des années 2002-2007)",
+         all(cs[a]["fmi_ca"] > 0 for a in range(1996, 2002)) and all(cs[a]["fmi_ca"] < 0 for a in range(2002, last["annee"] + 1))
+         and moy_cs(cs, "fmi_ca", FEN_CS["crise"], last["annee"]) < min(cs[a]["fmi_ca"] for a in range(2002, 2008))),
+        ("2009 : « les ajustements flux-stock pèsent aussi » dans la hausse de l'année (plus du quart de la variation)",
+         next(r for r in rows if r["annee"] == 2009)["flux_stock"] > 0.25 * next(r for r in rows if r["annee"] == 2009)["variation"]),
     ]
     # --- Baisses d'impôts ou recettes qui ralentissent (06/11/2026). Seuils écrits avant les phrases.
     P = po
@@ -1223,8 +1232,20 @@ def affichage(a0, d_depart, rows, total, per, dr, cs, po):
 
 
 # ------------------------------------------------------------------ main
+def mutation(rows, cs) -> str | None:
+    """Témoins des gardes ajoutées le 16/11/2026 (lot « dette-a ») : chaque mutation doit faire échouer le générateur."""
+    m = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--mutation=")), None)
+    if m == "fmi_signe":       # un excédent corrigé en 2003 : « des déficits ensuite » serait faux
+        cs[2003]["fmi_ca"] = 0.1
+    elif m == "sfa_2009":      # ajustements flux-stock de 2009 presque nuls : « pèsent aussi » serait faux
+        next(r for r in rows if r["annee"] == 2009)["flux_stock"] = 0.2
+    elif m is not None:
+        fail("mutation inconnue : %s" % m)
+    return m
+
+
 def main() -> int:
-    check = "--check" in sys.argv[1:]
+    check = "--check" in sys.argv[1:] or any(a.startswith("--mutation=") for a in sys.argv[1:])
     if not check:
         try:
             import cairosvg  # noqa: F401
@@ -1236,7 +1257,10 @@ def main() -> int:
     dr = depenses_recettes()
     cs = conjoncture(rows)
     po = prelevements(rows[-1]["annee"])
+    mut = mutation(rows, cs)
     aff, aff_en = affichage(a0, d_depart, rows, total, per, dr, cs, po)
+    if mut:
+        fail("mutation %s : aucune garde n'a mordu" % mut)
     log("Decomposition %d-%d : hausse %.1f = interets %.1f + croissance %.1f + deficits primaires %.1f + flux-stock %.1f"
         % (rows[0]["annee"], rows[-1]["annee"], total["variation"], total["effet_interets"], total["effet_croissance"],
            total["contribution_solde_primaire"], total["flux_stock"]))
