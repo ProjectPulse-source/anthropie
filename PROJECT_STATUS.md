@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-17 — `/les-etudiants-vont-ils-plus-mal/` : correction anticipée des passages P0 de la version en ligne
+
+- **Commit** `1c92658` (2 fichiers) : sept passages de la page et une ligne de `llms.txt`, dans leur version
+  définitive (lot `parcoursup-etudiants`, `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\parcoursup-etudiants\ARBITRAGE_EXTERNE.md`) :
+  absence d'analyse publiée restreinte à la dépression, Husky et coauteurs (2024) pour les idées et tentatives de suicide ;
+  Observatoire national du suicide « dès 2016 » ; « plus touchées » précisé ; « écarts non testés » rendu à une réponse
+  fréquente. Exception à la règle des pages citées, décidée par l'auteur le 17/11 ; le reste du lot attend le 20/12.
+- **Contrôles** : `check-all --ci` 0, Hugo 0, `typo_build` 0, générateur `--check` (54 gardes) ; aucun nombre calculé ni
+  jeton changé ; phrases citées par les envois armés présentes à l'identique ; relecture de langue des 13 phrases
+  nouvelles.
+- **Servi** : déploiement `hugo.yml` 44092288177 réussi, contrôle de fumée compris ; version servie attestée le 17/11 :
+  texte identique au build contrôlé (299 phrases, 0 écart) ; `llms.txt` identique aux fins de ligne près.
+
 ### 2026-11-17 — `/enseignants/environnement/` publiée : sources relues, contre-analyse externe arbitrée
 
 - **Commit** `aad0325` (15 fichiers) : version proposée du lot `enseignants-environnement` (relecture des sources,
