@@ -4,7 +4,8 @@ description: "Un exemplaire numérique de consultation d'ANTHROPIE — Ordre ici
 livre: "anthropie-ordre-ici-dette-ailleurs"
 # Façade enseignants du guichet existant, sur le modèle de dette-publique-enseignants.md : même gabarit, même Worker,
 # même stock COMMUN que la page mère du livre ; aucune donnée collectée. Liée depuis /enseignants/environnement/#exemplaire.
-# Rédaction : le livre défend une thèse, l'activité ne la met pas à l'épreuve (arbitrage ENTRANTE_2026-10-02_Enseignants_Theme3).
+# Rédaction : le livre propose une hypothèse (« thèse » jusqu'au 16/11/2026 ; la page du livre dit « hypothèse »),
+# l'activité ne la met pas à l'épreuve (arbitrage ENTRANTE_2026-10-02_Enseignants_Theme3).
 draft: false
 facade: "enseignants"   # pas de bloc « Faire circuler ce livre » (gabarit single.html)
 noindex: true
@@ -16,9 +17,9 @@ _build:
   render: always     # l'URL reste servie pour qui possède le lien
 ---
 
-*ANTHROPIE — Ordre ici. Dette ailleurs* défend une thèse&nbsp;: un ordre obtenu quelque part se paie par un désordre
+*ANTHROPIE — Ordre ici. Dette ailleurs* propose une hypothèse&nbsp;: un ordre obtenu quelque part se paie par un désordre
 reporté ailleurs, dans l'espace, dans le temps ou vers d'autres groupes. L'activité de SES sur l'empreinte carbone
-compare deux conventions de comptabilité&nbsp;; elle ne met pas cette thèse à l'épreuve.
+compare deux conventions de comptabilité&nbsp;; elle ne met pas cette hypothèse à l'épreuve.
 
 Les enseignants qui souhaitent prendre connaissance de cet essai peuvent disposer, dans la limite des exemplaires
 disponibles, d'un exemplaire numérique de consultation. Il est proposé **sans contrepartie**&nbsp;: aucune recension,

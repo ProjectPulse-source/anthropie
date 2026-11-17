@@ -116,8 +116,9 @@ def carte_empreinte() -> None:
              "stephane-lalut.com/enseignants/environnement/",
              lambda d: figure_deux_totaux(d, dec),
              [(GRIS_CLAIR, "Émissions directes des ménages : %s" % A["menages"]),
-              (og.C1, "Production en France, demande française : %s" % A["interieure"]),
-              (og.SEC, "Production en France exportée : %s" % A["exportee"]),
+              # Libellés de la figure, contre-analyse externe du 17/11/2026 (X4) : la série compte des résidents.
+              (og.C1, "Production résidente, demande française : %s" % A["interieure"]),
+              (og.SEC, "Production résidente exportée : %s" % A["exportee"]),
               (og.C2, "Importations, demande française : %s" % A["importee"])])
 
 

@@ -1,13 +1,14 @@
 ---
 title: "Enseigner l'empreinte carbone en SES : une activité de Terminale"
-description: "Une activité de SES pour la Terminale, chapitre sur l'action publique pour l'environnement : pourquoi les émissions françaises et l'empreinte carbone de la France donnent deux totaux. Figure, fiche élève, corrigé et données de l'INSEE."
+description: "Une activité de SES pour la Terminale, chapitre sur l'action publique pour l'environnement : pourquoi les émissions françaises et l'empreinte carbone de la France donnent deux totaux. Figure, fiche élève, corrigé et données de l'Insee et du SDES."
 og_title: "Émissions françaises et empreinte carbone : pourquoi deux totaux ? — une activité de SES, Terminale"
 og_image: "images/og-empreinte-carbone.jpg"   # scripts/og_enseignants.py ; vignette vig-empreinte-carbone.jpg lue par /ressources/
 og_image_alt: "Deux barres : les émissions des unités résidentes françaises et l'empreinte carbone de la France, décomposées en trois postes."
 date: 2026-10-02
-lastmod: 2026-11-05
+lastmod: 2026-11-17
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Précision : les émissions importées sont presque au même niveau qu'au départ, après un pic au milieu de la période."}
+  - {date: 2026-11-17, texte: "Relecture des sources et contre-analyse externe : la France publie plusieurs totaux, dont l'inventaire territorial ; émissions importées en légère hausse depuis 1990 ; unités résidentes et demande finale définies sur la feuille ; question 4 ouverte aux deux totaux ; corrigé de la question 5 complété par les facteurs que cite l'Insee."}
 date_suit: [empreinte_carbone]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Troisième thème de la couche enseignants (auteur, 02/10/2026 ; arbitrage
 # .claude/external-audits/ARBITRATIONS/ENTRANTE_2026-10-02_Enseignants_Theme3_Exemplaires_arbitrage.md). Navigation
@@ -27,17 +28,28 @@ ressource:
   intitule: "Environnement : émissions françaises et empreinte carbone"
   encart: true
   bouton: "Voir l'activité"
+  conception: "docs/conception/enseignants-environnement.md"  # fiche de conception (règle 12), écrite le 16/11/2026 après la relecture des sources
 onglet:  # barre de la discipline (partials/barre-discipline.html)
   court: "Climat"
   role: "Terminale"
+activite:  # JSON-LD LearningResource (partials/schema-activite.html) ; reprise du 16/11/2026
+  nom: "Émissions françaises et empreinte carbone : pourquoi deux totaux ?"
+  niveau: "Terminale"
+  discipline: "Sciences économiques et sociales"
+  type: "Activité pédagogique"
+  duree: "PT30M"  # la page dit 20 à 30 minutes ; timeRequired n'admet qu'une durée : la borne haute
+  enseigne: ["empreinte carbone", "émissions des unités résidentes", "convention de comptabilité", "émissions importées et exportées", "solde", "taxation", "échelles de l'action publique", "corrélation et causalité"]
+  sources:
+    - "https://www.education.gouv.fr/bo/19/Special8/MENE1921253A.htm"
+    - "https://www.insee.fr/fr/statistiques/9074153"
 lang_repli: "/en/resources/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 ---
 
-**Terminale, chapitre sur l'action publique pour l'environnement.** La France publie deux totaux d'émissions de gaz à
-effet de serre, qui ne comptent pas la même chose. L'activité fait retrouver ce que chacun additionne, puis ce que
+**Terminale, chapitre sur l'action publique pour l'environnement.** La France publie plusieurs totaux d'émissions de gaz à
+effet de serre&nbsp;; deux d'entre eux, publiés ensemble chaque année par l'Insee et le SDES, ne comptent pas la même chose. L'activité fait retrouver ce que chacun additionne, puis ce que
 cette différence change pour un instrument de politique climatique. La fiche élève et son corrigé sont écrits à
 partir de la série elle-même&nbsp;: un chiffre y change quand la série change. La fiche, la figure et la
-compilation des données sont sous licence CC&nbsp;BY&nbsp;4.0, à reprendre en citant la source&nbsp;; les questions demandent de
+compilation des données sont sous licence CC&nbsp;BY&nbsp;4.0 (les données de l'Insee et du SDES gardent leur propre licence), à reprendre en citant la source&nbsp;; les questions demandent de
 constater, de calculer, de comparer ou d'expliquer un mécanisme, aucune ne demande de trancher une politique.
 
 <section class="fiche" id="fiche-empreinte">
@@ -45,6 +57,8 @@ constater, de calculer, de comparer ou d'expliquer un mécanisme, aucune ne dema
 ### Terminale — Émissions françaises et empreinte carbone&nbsp;: pourquoi deux totaux&nbsp;? {#terminale-deux-totaux}
 
 <p class="fiche__actions"><button type="button" class="how-to-cite__btn how-to-cite__btn--secondary" data-imprimer-fiche="fiche-empreinte">Imprimer la fiche élève — sans corrigé</button></p>
+
+<div class="fiche__prof">
 
 **Programme.** Chapitre «&nbsp;Quelle action publique pour l'environnement&nbsp;?&nbsp;» — «&nbsp;Comprendre que
 l'action publique pour l'environnement articule différentes échelles (locale, nationale, européenne, mondiale)&nbsp;»,
@@ -54,60 +68,68 @@ taxation, subvention à l'innovation verte&nbsp;» (Éduscol).
 
 **Du programme au document.** Le programme porte sur l'action publique, ses acteurs, ses échelles et ses
 instruments&nbsp;; la figure ne montre aucun instrument. Elle donne deux manières de compter les émissions d'un pays,
-pour une seule année. La première attribue les émissions à ceux qui les produisent&nbsp;: les entreprises et les
-ménages résidant en France. La seconde, l'empreinte carbone, les attribue à ce que la France consomme, où que les
-émissions aient lieu. Ce sont deux conventions de comptabilité&nbsp;: elles ne mesurent ni une délocalisation, ni
+pour une seule année. La première attribue les émissions à ceux qui les produisent, les unités résidentes&nbsp;: entreprises,
+administrations et ménages résidant en France. La seconde, l'empreinte carbone, les attribue à la demande finale de la
+France, c'est-à-dire à sa consommation et à ses investissements, où que les émissions aient lieu. Ce sont deux conventions de comptabilité&nbsp;: elles ne mesurent ni une délocalisation, ni
 l'effet d'une politique. Les stratégies de passager clandestin et les inégalités de développement, que le chapitre
-traite aussi, ne sont pas dans ce document. L'empreinte est une estimation, révisée à chaque édition&nbsp;; le total
-des émissions des unités résidentes n'est pas celui de l'inventaire national, dont le périmètre diffère.
+traite aussi, ne sont pas dans ce document. L'empreinte est une estimation, révisée à chaque édition comme le total des émissions des unités résidentes. Ce
+dernier n'est pas celui de l'inventaire territorial du Citepa, que la France déclare à la convention des Nations unies
+sur le climat et qui compte les émissions ayant lieu sur le territoire français.
 
 **Durée indicative**&nbsp;: 20 à 30&nbsp;minutes. **Support**&nbsp;: la figure ci-dessous, construite pour cette
-activité à partir d'un fichier de l'INSEE.
+activité à partir d'un fichier de l'Insee et du SDES.
 
-{{< figure-svg fichier="empreinte-carbone-deux-totaux" alt="Deux barres horizontales à la même échelle. Les émissions des unités résidentes françaises additionnent les émissions directes des ménages, la production en France pour la demande française et la production en France exportée. L'empreinte carbone additionne les deux premiers postes et les importations pour la demande française. Les valeurs sont dans le tableau qui suit la figure." >}}Source&nbsp;: Insee et SDES, {{< empreinte-val "edition" >}}. [Agrandir la figure](/img/empreinte-carbone-deux-totaux.png){{< /figure-svg >}}
+</div>
+
+{{< figure-svg fichier="empreinte-carbone-deux-totaux" alt="Deux barres horizontales à la même échelle. Les émissions des unités résidentes françaises additionnent les émissions directes des ménages, la production des unités résidentes pour la demande française et leur production exportée. L'empreinte carbone additionne les deux premiers postes et les importations pour la demande française. Les valeurs sont dans le tableau qui suit la figure." >}}Source&nbsp;: Insee et SDES, {{< empreinte-val "edition" >}}. [Agrandir la figure](/img/empreinte-carbone-deux-totaux.png){{< /figure-svg >}}
 
 {{< empreinte-tableau >}}
 
 **Fiche élève**
 
 1. Que mesure chacune des deux barres&nbsp;? Quels postes ont-elles en commun, et quel poste est propre à chacune&nbsp;?
-2. Calculez la part des importations dans l'empreinte carbone.
+2. Calculez la part des émissions importées dans l'empreinte carbone.
 3. Calculez l'écart entre les deux totaux. Est-il égal aux émissions importées&nbsp;? Expliquez avec les postes de la figure.
-4. Un pays taxe un bien très émetteur, qu'il soit fabriqué sur son sol ou importé, et sa consommation baisse. Expliquez comment cette taxe peut réduire des émissions qui ont lieu à l'étranger. Lequel des deux totaux enregistre cette baisse&nbsp;?
+4. Un pays taxe un bien dont la fabrication émet beaucoup de gaz à effet de serre, qu'il soit fabriqué sur son sol ou importé, et sa consommation baisse. Expliquez comment cette taxe peut réduire des émissions qui ont lieu à l'étranger. Quels effets cette baisse de consommation peut-elle avoir sur chacun des deux totaux&nbsp;? Distinguez la production des unités résidentes et celle des producteurs étrangers.
 5. Ces deux totaux permettent-ils de conclure qu'une réglementation française a déplacé des productions à l'étranger&nbsp;? Quelles informations faudrait-il pour le savoir&nbsp;?
 
 <details class="repli fiche__corrige"><summary>Corrigé pour l'enseignant</summary>
 
-1. La première barre compte les émissions des unités qui résident en France, quelle que soit la destination de ce qu'elles produisent&nbsp;; la seconde compte les émissions liées à ce que la France consomme, quel que soit le lieu de production. Elles ont en commun les émissions directes des ménages ({{< empreinte-val "menages" >}}&nbsp;Mt) et celles de la production en France destinée à la demande française ({{< empreinte-val "interieure" >}}&nbsp;Mt), soit {{< empreinte-val "commun" >}}&nbsp;Mt. La première y ajoute la production exportée ({{< empreinte-val "exportee" >}}&nbsp;Mt), la seconde les importations ({{< empreinte-val "importee" >}}&nbsp;Mt).
-2. {{< empreinte-val "importee" >}}&nbsp;÷&nbsp;{{< empreinte-val "empreinte" >}}, soit {{< empreinte-val "part_importee" >}}&nbsp;%&nbsp;: la moitié de l'empreinte.
+1. La première barre compte les émissions des unités qui résident en France, quelle que soit la destination de ce qu'elles produisent&nbsp;; la seconde compte les émissions liées à la demande finale de la France, sa consommation et ses investissements, quel que soit le lieu de production. Elles ont en commun les émissions directes des ménages ({{< empreinte-val "menages" >}}&nbsp;Mt) et celles de la production des unités résidentes destinée à la demande française ({{< empreinte-val "interieure" >}}&nbsp;Mt), soit {{< empreinte-val "commun" >}}&nbsp;Mt. La première y ajoute la production exportée ({{< empreinte-val "exportee" >}}&nbsp;Mt), la seconde les importations ({{< empreinte-val "importee" >}}&nbsp;Mt).
+2. {{< empreinte-val "importee" >}}&nbsp;÷&nbsp;{{< empreinte-val "empreinte" >}}, soit {{< empreinte-val "part_importee" >}}&nbsp;%&nbsp;: la moitié de l'empreinte. C'est une part des émissions, non des biens consommés.
 3. {{< empreinte-val "empreinte" >}}&nbsp;−&nbsp;{{< empreinte-val "emissions" >}}&nbsp;=&nbsp;{{< empreinte-val "ecart_totaux" >}}&nbsp;Mt, et non {{< empreinte-val "importee" >}}. Pour passer d'un total à l'autre, on ajoute les importations et on retire les exportations&nbsp;: {{< empreinte-val "importee" >}}&nbsp;−&nbsp;{{< empreinte-val "exportee" >}}&nbsp;=&nbsp;{{< empreinte-val "ecart_totaux" >}}. L'écart mesure donc un solde, ce que la France importe d'émissions de plus qu'elle n'en exporte.
-4. Si la consommation du bien baisse, sa production baisse aussi, y compris chez le producteur étranger&nbsp;: des émissions diminuent hors du pays qui taxe. L'empreinte enregistre cette baisse, puisqu'elle suit la consommation&nbsp;; les émissions des unités résidentes ne l'enregistrent que pour la part fabriquée sur le sol national. C'est un mécanisme possible, non un résultat mesuré ici&nbsp;: son ampleur dépend de la réaction des consommateurs et des producteurs. Le périmètre juridique d'un instrument, national, et la portée de ses effets sont deux questions distinctes&nbsp;: c'est le lien avec les échelles de l'action publique.
-5. Non. La figure compare deux conventions à une même date. Elle ne dit ni pourquoi un bien est produit ici ou ailleurs, ni ce qui se serait passé sans la réglementation. Il faudrait suivre la production et les échanges d'un secteur avant et après la règle, et les comparer à un secteur ou à un pays qui n'y est pas soumis. Sur la durée, la même source indique que depuis {{< empreinte-val "annee_depart" >}} les émissions des unités résidentes ont baissé de {{< empreinte-val "evol_emissions" >}}&nbsp;% et l'empreinte de {{< empreinte-val "evol_empreinte" >}}&nbsp;%&nbsp;; les émissions importées sont presque au même niveau qu'au départ ({{< empreinte-val "importee_depart" >}}&nbsp;Mt puis {{< empreinte-val "importee" >}}&nbsp;Mt, soit +{{< empreinte-val "evol_importee" >}}&nbsp;%), après un pic de {{< empreinte-val "importee_pic" >}}&nbsp;Mt en {{< empreinte-val "importee_pic_annee" >}}. Ces évolutions ne suffisent pas non plus à établir un déplacement&nbsp;: la consommation, les techniques et la composition des échanges ont changé en même temps.
+4. Si la consommation du bien baisse, la production destinée à ce pays baisse aussi, y compris chez le producteur étranger&nbsp;: des émissions peuvent diminuer hors du pays qui taxe. Elles diminuent moins si le producteur étranger vend ailleurs ce qu'il ne vend plus&nbsp;: c'est l'une des limites d'un instrument national. La baisse des émissions liées à ce bien entre dans les deux totaux&nbsp;: dans l'empreinte, qui suit la demande finale, quel que soit le lieu de fabrication&nbsp;; dans les émissions des unités résidentes, pour la seule part fabriquée par des producteurs résidents. Elle ne fait baisser un total d'autant que si les autres achats et les techniques de production restent inchangés. C'est un mécanisme possible, non un résultat mesuré ici&nbsp;: son ampleur dépend de la réaction des consommateurs et des producteurs. Enregistrer une baisse n'est pas en établir la cause&nbsp;: un total bouge avec toutes les causes à la fois, et la part due à la taxe ne se lit qu'en comparant avec une situation sans elle (question&nbsp;5). Un élève qui relève l'une de ces limites, la vente ailleurs ou l'impossibilité d'attribuer à la taxe la variation d'un total, donne une réponse juste. Le périmètre juridique d'un instrument, national, et la portée de ses effets sont deux questions distinctes&nbsp;: c'est le lien avec les échelles de l'action publique.
+5. Non. La figure compare deux conventions à une même date. Elle ne dit ni pourquoi un bien est produit ici ou ailleurs, ni ce qui se serait passé sans la réglementation. Il faudrait suivre la production et les échanges d'un secteur avant et après la règle, et les comparer à ceux d'un secteur ou d'un pays comparable qui n'y est pas soumis, en tenant compte de ce qui a changé d'autre pendant la même période. Sur la durée, la même source indique que depuis {{< empreinte-val "annee_depart" >}} les émissions des unités résidentes ont baissé de {{< empreinte-val "evol_emissions" >}}&nbsp;% et l'empreinte de {{< empreinte-val "evol_empreinte" >}}&nbsp;%&nbsp;; les émissions importées sont en légère hausse ({{< empreinte-val "importee_depart" >}}&nbsp;Mt puis {{< empreinte-val "importee" >}}&nbsp;Mt, soit +{{< empreinte-val "evol_importee" >}}&nbsp;%), après un pic de {{< empreinte-val "importee_pic" >}}&nbsp;Mt en {{< empreinte-val "importee_pic_annee" >}}&nbsp;; les valeurs de {{< empreinte-val "retro_debut" >}} à {{< empreinte-val "retro_fin" >}} sont des estimations rétropolées. Ces évolutions ne suffisent pas non plus à établir un déplacement&nbsp;: la consommation, les techniques et la composition des échanges ont changé en même temps. La même publication cite, parmi les facteurs qui ont porté la part des émissions importées dans l'empreinte de {{< empreinte-val "part_importee_depart" >}}&nbsp;% en {{< empreinte-val "annee_depart" >}} à {{< empreinte-val "part_importee" >}}&nbsp;% en {{< empreinte-val "annee" >}}, la hausse de la demande française pour des produits principalement fabriqués à l'étranger (les smartphones, par exemple) et la délocalisation de certaines productions&nbsp;: pour le textile, elle s'appuie sur une autre donnée, la production de la branche en France, divisée par deux en euros constants pendant que la consommation restait relativement stable. C'est le type d'information que demande la question&nbsp;; cette donnée ne dit pas, à elle seule, qu'une réglementation en est la cause.
 
 </details>
 
+<div class="fiche__prof">
+
 **Données**&nbsp;: [empreinte_carbone.csv](/empreinte_carbone.csv), une ligne par année depuis {{< empreinte-val "annee_depart" >}}.
+
+</div>
 
 </section>
 
 ### Méthode et sources {#methode}
 
 La figure reprend la figure 1 du fichier de données de l'{{< empreinte-val "edition" >}} («&nbsp;Émissions de gaz à
-effet de serre et empreinte carbone de la France en {{< empreinte-val "annee" >}}&nbsp;»), coproduite par l'INSEE et
-le service statistique du ministère chargé de l'environnement (SDES). Champ&nbsp;: France&nbsp;; dioxyde de carbone,
+effet de serre et empreinte carbone de la France en {{< empreinte-val "annee" >}}&nbsp;»), coproduite par l'Insee et
+le service statistique des ministères chargés de l'environnement (SDES). La figure de cette page laisse de côté les émissions des importations réexportées, qui n'entrent dans aucun des deux totaux. Champ&nbsp;: France&nbsp;; dioxyde de carbone,
 méthane, protoxyde d'azote et gaz fluorés. Les émissions des unités résidentes suivent le format des comptes
-d'émissions dans l'air et comprennent le transport international des résidents&nbsp;; par habitant, elles sont de
+d'émissions dans l'air et comprennent les émissions à l'étranger des transporteurs résidents (compagnies aériennes,
+armateurs)&nbsp;; par habitant, elles sont de
 {{< empreinte-val "emissions_hab" >}}&nbsp;tonnes en {{< empreinte-val "annee" >}}, et l'empreinte de
 {{< empreinte-val "empreinte_hab" >}}&nbsp;tonnes. L'année {{< empreinte-val "annee" >}} est provisoire, les années
-1990 à 2009 sont rétropolées, et chaque édition révise les précédentes&nbsp;: tous les chiffres de cette page viennent
-de la même édition. La part des importations, l'écart entre les totaux et les évolutions sont un calcul de cette
-page. Fichier téléchargé le {{< empreinte-val "telecharge_le" >}}. Les extraits du programme viennent de l'annexe «&nbsp;Programme de
-sciences économiques et sociales de terminale générale&nbsp;» publiée par Éduscol.
+{{< empreinte-val "retro_debut" >}} à {{< empreinte-val "retro_fin" >}} sont rétropolées, et chaque édition révise les précédentes&nbsp;: tous les chiffres de cette page viennent
+de la même édition. La part des importations, l'écart entre les deux totaux et les évolutions depuis {{< empreinte-val "annee_depart" >}} sont
+recalculés ici à partir du fichier. Fichier téléchargé le {{< empreinte-val "telecharge_le" >}}. Les extraits du programme viennent de son texte officiel, l'annexe «&nbsp;Programme de
+sciences économiques et sociales de terminale générale&nbsp;» de l'arrêté du 19&nbsp;juillet&nbsp;2019 (Bulletin officiel spécial n°&nbsp;8 du 25&nbsp;juillet&nbsp;2019), diffusée par Éduscol parmi les programmes en vigueur. Les chiffres, les définitions et les extraits du programme de cette page ont été relus à leur source&nbsp;; l'activité n'a pas été relue par un enseignant de sciences économiques et sociales.
 
 {{< exemplaire slug="anthropie-ordre-ici-dette-ailleurs" lien="/ressources-offertes/anthropie-enseignants/"
     surtitre="Pour les enseignants de SES" >}}
-*ANTHROPIE — Ordre ici. Dette ailleurs* défend une thèse&nbsp;: un ordre obtenu quelque part se paie par un désordre
-reporté ailleurs. L'activité ci-dessus compare deux conventions de comptabilité&nbsp;; elle ne met pas cette thèse à
+*ANTHROPIE — Ordre ici. Dette ailleurs* propose une hypothèse&nbsp;: un ordre obtenu quelque part se paie par un désordre
+reporté ailleurs, dans l'espace, dans le temps ou vers d'autres groupes. L'activité ci-dessus compare deux conventions de comptabilité&nbsp;; elle ne met pas cette hypothèse à
 l'épreuve.
 
 Les enseignants qui souhaitent prendre connaissance de cet essai peuvent disposer d'un exemplaire numérique de

@@ -3,13 +3,20 @@
 (/enseignants/environnement/).
 
 Jeu : émissions de gaz à effet de serre des unités résidentes françaises et empreinte carbone de la France, décomposées.
-Source : Insee Première n° 2077 (16/10/2025), fichier de données ARCHIVÉ dans scripts/sources_enseignants/ (empreinte
-dans SHA256SUMS) : figure 1 (décomposition de l'année), figure 3 (empreinte et composantes depuis 1990), tableau
-complémentaire 2 (émissions et empreinte depuis 1990). Coproduction Insee-SDES. Aucun appel réseau ici.
+Source : l'Insee Première annuelle « Émissions de gaz à effet de serre et empreinte carbone de la France » (édition LUE
+DANS LE REGISTRE data/sources_maj.json, entrée insee-empreinte), fichier de données ARCHIVÉ dans
+scripts/sources_enseignants/ (empreinte dans SHA256SUMS) : figure 1 (décomposition de l'année), figure 3 (empreinte et
+composantes depuis 1990, et sa note sur les années rétropolées), tableau complémentaire 2 (émissions et empreinte depuis
+1990). Coproduction Insee-SDES. Aucun appel réseau ici.
 
 ⚠ SÉRIE RÉVISÉE À CHAQUE ÉDITION (arbitrage ENTRANTE_2026-10-02_Enseignants_Theme3_Exemplaires, T1) : l'empreinte 2023
-valait 644 Mt dans l'édition de 2024 et 583 Mt dans celle-ci ; la dernière année est provisoire. On ne mélange jamais
-deux éditions : tout vient d'UN fichier.
+valait 644 Mt dans l'édition de 2024 (n° 2077 de 2025 : 583 Mt ; n° 2130 de 2026 : 590 Mt) ; la dernière année est
+provisoire. On ne mélange jamais deux éditions : tout vient d'UN fichier.
+
+⚠ LECTURE CITÉE (reprise du 16/11/2026, lot « enseignants-environnement ») : le corrigé 5 rapporte ce que la publication
+DIT des causes de la hausse de la part importée (délocalisation de certaines productions, exemple du textile). Ce texte
+n'est pas dans le fichier de données : la garde LECTURE_CITEE arrête l'adoption d'une édition nouvelle tant que sa
+publication n'a pas été relue et la phrase confirmée ou réécrite.
 
 METTRE À JOUR (édition annuelle, mi-octobre) : `python scripts/maj_sources.py integrer` archive le fichier de la
 nouvelle Insee Première et l'inscrit au registre data/sources_maj.json, puis relance ce générateur. Les gardes disent
@@ -29,6 +36,7 @@ import csv
 import hashlib
 import io
 import json
+import re
 import sys
 import warnings
 from datetime import datetime, timezone
@@ -52,6 +60,9 @@ PAGE_URL = "stephane-lalut.com/enseignants/environnement/"
 # Édition lue dans le registre data/sources_maj.json : une nouvelle Insee Première s'adopte là (scripts/maj_sources.py).
 _SRC = gl.source("insee-empreinte")
 FICHIER, EDITION = _SRC["fichier"], _SRC["edition"]
+# Édition dont le corrigé 5 rapporte la LECTURE (texte de la publication, hors du fichier de données ; relue le 16/11/2026,
+# lot « enseignants-environnement », SOURCES\RELECTURE_R1.md, écart G). Une autre édition au registre arrête le générateur.
+LECTURE_CITEE = "Insee Première n° 2130, octobre 2026"
 fail, log, fr, esc = gl.fail, gl.log, gl.fr, gl.esc
 
 L1 = {"menages": "Émissions directes des ménages",
@@ -63,8 +74,13 @@ L1 = {"menages": "Émissions directes des ménages",
 # blanc sur le bleu, encre la plus foncée sur le gris des barres.
 COULEUR = {"menages": (gl.GRIS_CLAIR, gl.INK), "interieure": (gl.BLEU, pied_figure.encre_sur(gl.BLEU)),
            "exportee": (gl.GRIS, pied_figure.encre_sur(gl.GRIS)), "importee": (gl.ORANGE, gl.INK)}
-NOM = {"menages": ("Émissions directes", "des ménages"), "interieure": ("Production en France", "pour la demande française"),
-       "exportee": ("Production en France", "exportée"), "importee": ("Importations", "pour la demande française")}
+# Contre-analyse externe du 17/11/2026 (X4) : « Production en France » désignait un territoire, la série compte des
+# résidents (format AEA, transporteurs résidents à l'étranger compris). « Production des unités résidentes destinée à
+# l'exportation » ne tient pas dans le segment exporté (garde ci-dessous) ; « Exportations » se lisait comme un flux de
+# biens (contrôleur de lecture du 17/11) : « Production exportée », comme le libellé de l'Insee.
+NOM = {"menages": ("Émissions directes", "des ménages"),
+       "interieure": ("Production des unités résidentes", "pour la demande française"),
+       "exportee": ("Production exportée", "des unités résidentes"), "importee": ("Importations", "pour la demande française")}
 # Un seul texte pour la figure détaillée et sa version téléphone : titre, sous-titre, totaux, description, cartouche.
 TITRE = "Émissions françaises et empreinte carbone en %s : deux totaux, trois postes chacun"
 SOUS_TITRE = "Gaz à effet de serre, en millions de tonnes équivalent CO₂ (Mt CO₂ éq), France, %s."
@@ -78,8 +94,8 @@ def barres(d: dict) -> list:
 
 def description(A: dict) -> str:
     return ("Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO₂. Émissions des unités résidentes "
-            "françaises : %s, dont %s émises directement par les ménages, %s par la production en France destinée à la demande "
-            "française et %s par la production en France exportée. Empreinte carbone : %s, dont les mêmes %s et %s, et %s "
+            "françaises : %s, dont %s émises directement par les ménages, %s par la production des unités résidentes destinée "
+            "à la demande française et %s par leur production exportée. Empreinte carbone : %s, dont les mêmes %s et %s, et %s "
             "d'émissions importées pour la demande française."
             % (A["emissions"], A["menages"], A["interieure"], A["exportee"], A["empreinte"], A["menages"], A["interieure"], A["importee"]))
 
@@ -87,10 +103,17 @@ def description(A: dict) -> str:
 def cartouche(A: dict) -> list:
     """Source, notes et licence."""
     return [("Insee et SDES, %s, figure 1 ; champ : France, CO₂, méthane, protoxyde d'azote et gaz fluorés" % EDITION, gl.INK2),
-            ("Émissions des unités résidentes : format des comptes d'émissions dans l'air, transport international des résidents compris ; "
-             "ce n'est pas le total de l'inventaire national.", gl.INK2),
-            ("Empreinte : estimation des émissions associées à la demande finale française, où qu'elles aient lieu ; hors émissions "
-             "des produits exportés.", gl.INK2),
+            # Reprise du 16/11/2026 (relecture R1, écarts C et D) : « transport international des résidents » se lisait comme
+            # les voyages des Français, et « l'inventaire national » désigne aussi ce compte chez le SDES.
+            # Juge interne du 17/11 (H3) : « Citepa » seul ne dit rien à un élève ; la feuille imprimée n'a que ce pied.
+            # Contre-analyse externe du 17/11 (X3) : la feuille imprimée n'a que ce pied ; il définit donc les deux termes
+            # de la question 1 (demande finale : définition du SDES).
+            ("Unités résidentes : entreprises, administrations et ménages qui résident en France. Leurs émissions suivent "
+             "le format des comptes d'émissions dans l'air, émissions à l'étranger des transporteurs résidents comprises ; "
+             "ce n'est pas l'inventaire territorial que la France déclare aux Nations unies (Citepa).", gl.INK2),
+            ("Demande finale : consommation des ménages, des administrations publiques et des organismes à but non lucratif, "
+             "et investissements. Empreinte : estimation des émissions associées à la demande finale française, où qu'elles "
+             "aient lieu ; hors émissions des produits exportés.", gl.INK2),
             ("Deux conventions de comptabilité : elles ne mesurent ni une délocalisation ni l'effet d'une politique.", gl.INK2),
             ("Estimations révisées à chaque édition ; %s est provisoire. Valeurs arrondies au million de tonnes." % A["annee"], gl.INK2),
             ("Figure Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, gl.MUTED)]
@@ -169,6 +192,13 @@ def lire(sums: dict[str, str]) -> dict:
     _annees_completes(f3[3:], 4, annee, "figure 3")
     serie = [dict(annee=lt.annee(r[0]), **{k: _n(r[i], "figure 3", k) for i, k in enumerate(SERIE3, 1)})
              for r in f3[3:] if lt.annee(r[0]) is not None]
+    # Note de la figure 3 : années rétropolées (reprise du 16/11/2026, relecture R1, écart H : la réserve se dit au contact
+    # des niveaux anciens que cite le corrigé 5). Lue dans la source, jamais saisie ; note absente ou reformulée = arrêt.
+    notes3 = re.sub(r"\s+", " ", " ".join(str(r[0]) for r in f3 if isinstance(r[0], str) and "rétropol" in r[0]))
+    m = re.search(r"de (\d{4}) à (\d{4}) sont rétropolées", notes3)
+    if not m:
+        fail("figure 3 : note des annees retropolees absente ou reformulee (%r)" % notes3[:160])
+    retro = (int(m.group(1)), int(m.group(2)))
     der = serie[-1]
     # témoin 2 : la série longue se termine sur la décomposition de l'année
     if der["annee"] != annee or any(der[k] != d[k] for k in ("menages", "interieure", "importee", "empreinte")):
@@ -187,7 +217,7 @@ def lire(sums: dict[str, str]) -> dict:
                  empreinte_hab=em[s["annee"]]["empreinte_hab"])
     if abs(em[annee]["emissions"] - d["emissions"]) > 0.51:
         fail("tableau complementaire 2 : emissions %d differentes de la figure 1" % annee)
-    return {"decomposition": d, "serie": serie}
+    return {"decomposition": d, "serie": serie, "retro": retro}
 
 
 def affichage(j: dict) -> tuple[dict, list[str]]:
@@ -198,6 +228,9 @@ def affichage(j: dict) -> tuple[dict, list[str]]:
     interieure0, interieure1 = a0["menages"] + a0["interieure"], a1["menages"] + a1["interieure"]
     e_em, e_emp = evol(a0["emissions"], a1["emissions"]), evol(a0["empreinte"], a1["empreinte"])
     e_imp, e_int = evol(a0["importee"], a1["importee"]), evol(interieure0, interieure1)
+    r0, r1 = j["retro"]
+    pic = lg.extremum(s, lambda x: x["importee"], 0)
+    part0, part1 = 100 * a0["importee"] / a0["empreinte"], 100 * d["importee"] / d["empreinte"]
     A = {"annee": str(d["annee"]), "annee_depart": str(a0["annee"]), "edition": EDITION,
          "telecharge_le": gl.date_fr(_SRC["telecharge_le"]),
          "emissions": ent(d["emissions"]), "empreinte": ent(d["empreinte"]), "menages": ent(d["menages"]),
@@ -208,10 +241,15 @@ def affichage(j: dict) -> tuple[dict, list[str]]:
          "evol_emissions": ent(abs(e_em)), "evol_empreinte": ent(abs(e_emp)), "evol_importee": ent(abs(e_imp)),
          "evol_interieure": ent(abs(e_int)),
          "emissions_depart": ent(a0["emissions"]), "empreinte_depart": ent(a0["empreinte"]), "importee_depart": ent(a0["importee"]),
-         # Audit du 05/11/2026 : « presque stables » entre deux bornes masquait un pic (417 Mt en 2008) ; la prose dit
-         # désormais « presque au même niveau qu'en <départ>, après un pic » : le pic est lu dans la série, jamais saisi.
-         "importee_pic": ent(lg.extremum(s, lambda x: x["importee"], 0)["importee"]),
-         "importee_pic_annee": str(lg.extremum(s, lambda x: x["importee"], 0)["annee"])}
+         # Audit du 05/11/2026 : « presque stables » entre deux bornes masquait un pic (417 Mt en 2008) ; le pic est lu dans
+         # la série, jamais saisi. Reprise du 16/11/2026 (relecture R1, écart G) : « presque au même niveau » devient
+         # « en légère hausse », le mot de l'Insee et du SDES pour la même variation.
+         "importee_pic": ent(pic["importee"]),
+         "importee_pic_annee": str(pic["annee"]),
+         # Reprise du 16/11/2026 : part importée de l'empreinte au départ (écart G, lecture de la source citée au corrigé 5)
+         # et bornes des années rétropolées (écart H), lues dans la note de la figure 3.
+         "part_importee_depart": ent(part0),
+         "retro_debut": str(r0), "retro_fin": str(r1)}
     gardes = [
         ("l'empreinte dépasse les émissions françaises", lg.depasse(d["empreinte"], d["emissions"], 0)),
         ("les émissions importées pour la demande française dépassent « nettement » la production exportée (plus du double)",
@@ -222,9 +260,15 @@ def affichage(j: dict) -> tuple[dict, list[str]]:
          and abs((d["empreinte"] - d["emissions"]) - d["importee"]) > 50),
         ("depuis %d, les émissions françaises ont baissé plus vite que l'empreinte (au moins cinq points d'écart)" % a0["annee"],
          e_em < 0 and e_emp < 0 and e_emp - e_em > 5),
-        ("les émissions importées sont « presque au même niveau » qu'en %d (moins de 5 %% de variation)" % a0["annee"], abs(e_imp) < 5),
+        ("les émissions importées sont « en légère hausse » depuis %d (entre 0 et 10 %%)" % a0["annee"], 0 < e_imp < 10),
         ("« après un pic » : la série passe nettement au-dessus de ses deux bornes (plus de 20 %)",
-         lg.extremum(s, lambda x: x["importee"], 0)["importee"] > 1.2 * max(a0["importee"], a1["importee"])),
+         pic["importee"] > 1.2 * max(a0["importee"], a1["importee"])),
+        ("« les valeurs de %d à %d sont des estimations rétropolées » couvre le départ et le pic que cite le corrigé 5" % (r0, r1),
+         r0 <= a0["annee"] <= r1 and r0 <= pic["annee"] <= r1),
+        ("la part des émissions importées dans l'empreinte a monté depuis %d (au moins cinq points)" % a0["annee"],
+         part1 - part0 > 5),
+        ("le corrigé 5 rapporte la lecture de la publication de l'édition %s : édition au registre = %s" % (LECTURE_CITEE, EDITION),
+         EDITION == LECTURE_CITEE),
         ("la composante intérieure de l'empreinte, ménages compris, a baissé « d'un tiers environ » (entre 28 et 40 %)", -40 < e_int < -28),
         ("les signes écrits dans le corrigé : émissions, empreinte et composante intérieure en baisse, importations en hausse",
          e_em < 0 and e_emp < 0 and e_int < 0 and e_imp > 0),
@@ -323,10 +367,11 @@ def figure_m(j: dict, A: dict) -> str:
                 y += 17 if k else 0
                 e.append('<text x="15" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS, gl.INK, esc(mot)))
     cart = cartouche(A)
-    # Notes réunies en un paragraphe et adresse courte, comme les versions téléphone de generer_parcours_licence.py
-    # (l'adresse complète sort du cadre de 300).
-    blocs = [(cart[0][0], gl.INK2, "pied-source"), (" ".join(t for t, _ in cart[1:-1]), gl.INK2, "pied-note"),
-             (cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), gl.MUTED, "pied-licence")]
+    # Adresse courte, comme les versions téléphone de generer_parcours_licence.py (l'adresse complète sort du cadre de
+    # 300). Une note par paragraphe depuis le 17/11/2026 : avec les définitions, le paragraphe unique faisait 24 lignes
+    # où la précaution sur la délocalisation se perdait (contrôleur de lecture).
+    blocs = ([(cart[0][0], gl.INK2, "pied-source")] + [(t, gl.INK2, "pied-note") for t, _ in cart[1:-1]]
+             + [(cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), gl.MUTED, "pied-licence")])
     return pf.pied_mobile(e, y + 20, blocs, gl.GRID)
 
 
@@ -368,7 +413,7 @@ def main() -> int:
                         "source": "Insee et SDES, " + EDITION + ", fichier de données (figure 1, figure 3, tableau complémentaire 2)",
                         "champ": "France ; CO₂, CH₄, N₂O et gaz fluorés",
                         "definitions": {
-                            "emissions": "émissions des unités résidentes françaises (inventaire au format des comptes d'émissions dans l'air), transport international des résidents compris",
+                            "emissions": "émissions des unités résidentes françaises (inventaire au format des comptes d'émissions dans l'air), émissions à l'étranger des transporteurs résidents comprises ; ce n'est pas l'inventaire territorial que la France déclare aux Nations unies (Citepa)",
                             "empreinte": "estimation des émissions associées à la demande finale française, hors exportations, où qu'elles aient lieu",
                             "menages": "émissions directes des ménages (chauffage, carburants)",
                             "interieure": "émissions de la production intérieure destinée à la demande finale française",

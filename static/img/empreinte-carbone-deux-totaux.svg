@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 395" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ec-t ec-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-<title id="ec-t">Émissions françaises et empreinte carbone en 2025 : deux totaux, trois postes chacun</title><desc id="ec-d">Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO₂. Émissions des unités résidentes françaises : 398, dont 100 émises directement par les ménages, 175 par la production en France destinée à la demande française et 123 par la production en France exportée. Empreinte carbone : 571, dont les mêmes 100 et 175, et 296 d'émissions importées pour la demande française.</desc>
-<rect width="720" height="395" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 423" role="img" font-variant-numeric="tabular-nums" aria-labelledby="ec-t ec-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="ec-t">Émissions françaises et empreinte carbone en 2025 : deux totaux, trois postes chacun</title><desc id="ec-d">Deux barres horizontales à la même échelle, en millions de tonnes équivalent CO₂. Émissions des unités résidentes françaises : 398, dont 100 émises directement par les ménages, 175 par la production des unités résidentes destinée à la demande française et 123 par leur production exportée. Empreinte carbone : 571, dont les mêmes 100 et 175, et 296 d'émissions importées pour la demande française.</desc>
+<rect width="720" height="423" fill="#ffffff"/>
 <text x="0" y="18" font-size="15" font-weight="600" fill="#26262f">Émissions françaises et empreinte carbone en 2025 : deux totaux, trois postes chacun</text>
 <text x="0" y="38" font-size="11" fill="#55524f">Gaz à effet de serre, en millions de tonnes équivalent CO₂ (Mt CO₂ éq), France, 2025.</text>
 <text x="0" y="70" font-size="11.5" fill="#26262f"><tspan font-weight="600">Émissions des unités</tspan> résidentes françaises</text>
@@ -10,12 +10,12 @@
 <text x="57.8" y="128.0" font-size="11" fill="#26262f" text-anchor="middle">des ménages</text>
 <rect x="115.6" y="78" width="202.3" height="62" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="216.7" y="100.0" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">175</text>
-<text x="216.7" y="115.0" font-size="11" fill="#ffffff" text-anchor="middle">Production en France</text>
+<text x="216.7" y="115.0" font-size="11" fill="#ffffff" text-anchor="middle">Production des unités résidentes</text>
 <text x="216.7" y="128.0" font-size="11" fill="#ffffff" text-anchor="middle">pour la demande française</text>
 <rect x="317.9" y="78" width="142.2" height="62" fill="#8a8781" stroke="#ffffff" stroke-width="1.5"/>
 <text x="388.9" y="100.0" font-size="15" font-weight="600" fill="#0A0A0E" text-anchor="middle">123</text>
-<text x="388.9" y="115.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Production en France</text>
-<text x="388.9" y="128.0" font-size="11" fill="#0A0A0E" text-anchor="middle">exportée</text>
+<text x="388.9" y="115.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Production exportée</text>
+<text x="388.9" y="128.0" font-size="11" fill="#0A0A0E" text-anchor="middle">des unités résidentes</text>
 <text x="468.0" y="114.0" font-size="15" font-weight="600" fill="#26262f">= 398</text>
 <text x="0" y="170" font-size="11.5" fill="#26262f"><tspan font-weight="600">Empreinte carbone</tspan> de la France</text>
 <rect x="0.0" y="178" width="115.6" height="62" fill="#c9c5c0" stroke="#ffffff" stroke-width="1.5"/>
@@ -24,7 +24,7 @@
 <text x="57.8" y="228.0" font-size="11" fill="#26262f" text-anchor="middle">des ménages</text>
 <rect x="115.6" y="178" width="202.3" height="62" fill="#184f95" stroke="#ffffff" stroke-width="1.5"/>
 <text x="216.7" y="200.0" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">175</text>
-<text x="216.7" y="215.0" font-size="11" fill="#ffffff" text-anchor="middle">Production en France</text>
+<text x="216.7" y="215.0" font-size="11" fill="#ffffff" text-anchor="middle">Production des unités résidentes</text>
 <text x="216.7" y="228.0" font-size="11" fill="#ffffff" text-anchor="middle">pour la demande française</text>
 <rect x="317.9" y="178" width="342.1" height="62" fill="#eb6834" stroke="#ffffff" stroke-width="1.5"/>
 <text x="488.9" y="200.0" font-size="15" font-weight="600" fill="#26262f" text-anchor="middle">296</text>
@@ -34,11 +34,13 @@
 <line x1="0" y1="260.0" x2="720" y2="260.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="275.0" font-size="11" fill="#55524f">Insee et SDES, Insee Première n° 2130, octobre 2026, figure 1 ; champ : France, CO₂, méthane, protoxyde d'azote et gaz</text>
 <text class="pied-source" x="0" y="289.0" font-size="11" fill="#55524f">fluorés</text>
-<text class="pied-note" x="0" y="303.0" font-size="11" fill="#55524f">Émissions des unités résidentes : format des comptes d'émissions dans l'air, transport international des résidents</text>
-<text class="pied-note" x="0" y="317.0" font-size="11" fill="#55524f">compris ; ce n'est pas le total de l'inventaire national.</text>
-<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">Empreinte : estimation des émissions associées à la demande finale française, où qu'elles aient lieu ; hors émissions</text>
-<text class="pied-note" x="0" y="345.0" font-size="11" fill="#55524f">des produits exportés.</text>
-<text class="pied-note" x="0" y="359.0" font-size="11" fill="#55524f">Deux conventions de comptabilité : elles ne mesurent ni une délocalisation ni l'effet d'une politique.</text>
-<text class="pied-note" x="0" y="373.0" font-size="11" fill="#55524f">Estimations révisées à chaque édition ; 2025 est provisoire. Valeurs arrondies au million de tonnes.</text>
-<text class="pied-licence" x="0" y="387.0" font-size="11" fill="#6f6c66">Figure Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/enseignants/environnement/</text>
+<text class="pied-note" x="0" y="303.0" font-size="11" fill="#55524f">Unités résidentes : entreprises, administrations et ménages qui résident en France. Leurs émissions suivent le format</text>
+<text class="pied-note" x="0" y="317.0" font-size="11" fill="#55524f">des comptes d'émissions dans l'air, émissions à l'étranger des transporteurs résidents comprises ; ce n'est pas</text>
+<text class="pied-note" x="0" y="331.0" font-size="11" fill="#55524f">l'inventaire territorial que la France déclare aux Nations unies (Citepa).</text>
+<text class="pied-note" x="0" y="345.0" font-size="11" fill="#55524f">Demande finale : consommation des ménages, des administrations publiques et des organismes à but non lucratif, et</text>
+<text class="pied-note" x="0" y="359.0" font-size="11" fill="#55524f">investissements. Empreinte : estimation des émissions associées à la demande finale française, où qu'elles aient</text>
+<text class="pied-note" x="0" y="373.0" font-size="11" fill="#55524f">lieu ; hors émissions des produits exportés.</text>
+<text class="pied-note" x="0" y="387.0" font-size="11" fill="#55524f">Deux conventions de comptabilité : elles ne mesurent ni une délocalisation ni l'effet d'une politique.</text>
+<text class="pied-note" x="0" y="401.0" font-size="11" fill="#55524f">Estimations révisées à chaque édition ; 2025 est provisoire. Valeurs arrondies au million de tonnes.</text>
+<text class="pied-licence" x="0" y="415.0" font-size="11" fill="#6f6c66">Figure Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/enseignants/environnement/</text>
 </svg>
