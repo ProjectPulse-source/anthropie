@@ -52,6 +52,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-17 — Lot « Dette A » publié : pourquoi elle augmente, peut-elle baisser, inflation, formules du débat (FR, EN)
+
+- **Commits** `25d1d2b` (Pourquoi), `c34c693` (Peut-elle baisser), `1c7b5ff` (Inflation), `c07760b` (Formules et gabarit
+  commun `confrontation-recherche`) : version proposée du lot `dette-a` (relecture des sources : 2 P0 et 26 P1 de la
+  version en ligne corrigées ; deux juges internes à l'aveugle) et corrections de la contre-analyse externe, archivée
+  avant lecture et arbitrée point par point
+  (`06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\dette-a\ARBITRAGE_EXTERNE.md`) ; deux corrections de langue
+  à la relecture avant publication ; fiches de conception de trois pages ; registre des dates édité au plus juste.
+- **Contrôles** : générateurs `--check` (224 clés, 93, 43 et 77 gardes), Hugo 0, `typo_build` 0, `check-all --ci` 0 ;
+  textes servis identiques à la version arbitrée, date exceptée.
+- **Servi** : déploiement `hugo.yml` 44098237292 réussi ; version servie attestée le 17/11 : huit pages identiques au
+  build contrôlé (3 481 phrases, 0 écart) ; les sept pages hors lot qui emploient le gabarit commun aussi (0 écart).
 ### 2026-11-17 — `/les-etudiants-vont-ils-plus-mal/` : correction anticipée des passages P0 de la version en ligne
 
 - **Commit** `1c92658` (2 fichiers) : sept passages de la page et une ligne de `llms.txt`, dans leur version
