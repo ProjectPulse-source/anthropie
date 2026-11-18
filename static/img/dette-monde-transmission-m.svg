@@ -26,37 +26,37 @@
 <text x="134.7" y="373.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">10 %</text>
 <text x="213.3" y="373.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">20 %</text>
 <text x="292.0" y="373.0" font-size="13.5" fill="#6f6c66" text-anchor="end">30 %</text>
-<circle cx="125.9" cy="206.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="109.1" y="251.1" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<rect x="96.8" y="189.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="112.9" cy="218.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="150.8" cy="188.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="125.6" cy="206.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="108.8" y="251.1" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="96.6" y="189.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="114.1" cy="218.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="150.7" cy="188.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="110.0" cy="159.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="90.3" cy="183.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="90.4" cy="183.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="96.8" cy="222.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="130.5" cy="172.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="137.0" cy="250.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="141.6" cy="227.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="66.7" cy="201.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="141.5" cy="227.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="65.8" cy="201.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="75.4" cy="220.4" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="61.0" cy="252.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="69.9" cy="161.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="110.6" y="165.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="119.2" cy="228.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="147.6" cy="195.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="105.5" cy="207.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="61.8" cy="252.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="71.9" cy="161.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="110.7" y="165.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="118.7" cy="228.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="147.4" cy="195.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="105.2" cy="207.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="77.0" y="223.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <circle cx="225.3" cy="212.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="107.0" y="171.5" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="103.1" cy="193.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="60.0" cy="224.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="136.6" cy="201.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="103.2" cy="193.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="60.1" cy="224.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="136.3" cy="201.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="279.4" y="230.5" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<rect x="86.6" y="308.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<text x="137.5" y="177.9" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">France 1,36 pt</text>
-<text x="137.5" y="177.9" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">France 1,36 pt</text>
-<text x="97.4" y="316.8" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Danemark</text>
-<text x="97.4" y="316.8" font-size="13.5" fill="#0A0A0E" text-anchor="start">Danemark</text>
+<rect x="87.0" y="308.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<text x="136.5" y="165.9" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">France 1,36 pt</text>
+<text x="136.5" y="165.9" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">France 1,36 pt</text>
+<text x="97.7" y="316.8" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Danemark</text>
+<text x="97.7" y="316.8" font-size="13.5" fill="#0A0A0E" text-anchor="start">Danemark</text>
 <text x="276.2" y="239.3" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Suède</text>
 <text x="276.2" y="239.3" font-size="13.5" fill="#0A0A0E" text-anchor="end">Suède</text>
 <text x="232.3" y="217.1" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Portugal</text>
@@ -67,6 +67,6 @@
 <text class="pied-source" x="0" y="450.0" font-size="13.5" fill="#52514e">échéance résiduelle), irt_lt_mcby_a</text>
 <text class="pied-source" x="0" y="467.0" font-size="13.5" fill="#52514e">(taux à 10 ans), 2025</text>
 <text class="pied-note" x="0" y="488.0" font-size="13.5" fill="#52514e">Repère, non prévision.</text>
-<text class="pied-licence" x="0" y="509.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="509.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
 <text class="pied-licence" x="0" y="526.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

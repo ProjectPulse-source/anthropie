@@ -50,6 +50,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import sys
 import time
 import urllib.parse
@@ -140,6 +141,12 @@ ENTREES_EURO = {"BG": ("1er janvier 2026", "1 January 2026")}
 TOL_RATIO = 0.11  # témoin de la variation du ratio : deux ratios publiés à une décimale (même tolérance que le volet 5)
 PAGE_URL_EN = "stephane-lalut.com/en/public-debt-international-comparison/"
 AVANCES = ["USA", "JPN", "GBR", "CAN", "CHE", "NOR", "FRA"]
+# Edition de l'Economic Outlook de l'OCDE lue par le script : version du flux SDMX ecrite ici, a mettre a jour a
+# chaque edition (juin, decembre) ; la page imprime l'edition lue (cle ocde_edition). Relecture des sources du
+# 16/11/2026 : la version 1.3 (n° 117, 3 juin 2025, valeurs 2025 projetees) etait encore lue, la 1.5 (n° 119,
+# juin 2026) etait parue.
+OCDE_VERSION = "1.5"
+OCDE_EDITION = {"fr": "n° 119, juin 2026", "en": "No. 119, June 2026"}
 EMERGENTS = ["CHN", "IND", "BRA", "ZAF"]
 NOMMES: dict = {}  # (ident, langue) -> codes nommés par nuage() ; sert la garde « aucun point muet » (09/11/2026)
 ZOOM: dict = {}  # langue -> cadre et codes de l'agrandissement du nuage des prix
@@ -195,9 +202,9 @@ def eurostat(dataset: str, annees: list[str], **filtres) -> dict[tuple[str, str]
 
 # ------------------------------------------------------------------ OCDE
 def ocde(cle: str) -> dict[tuple[str, str, str], float]:
-    """(pays, mesure, annee) -> valeur, Economic Outlook (derniere edition publiee)."""
-    url = ("https://sdmx.oecd.org/public/rest/data/OECD.ECO.MAD,DSD_EO@DF_EO,1.3/%s"
-           "?format=csvfilewithlabels&startPeriod=2022" % cle)
+    """(pays, mesure, annee) -> valeur, Economic Outlook, edition OCDE_VERSION (voir OCDE_EDITION)."""
+    url = ("https://sdmx.oecd.org/public/rest/data/OECD.ECO.MAD,DSD_EO@DF_EO,%s/%s"
+           "?format=csvfilewithlabels&startPeriod=2022" % (OCDE_VERSION, cle))
     raw = fetch(url).decode("utf-8-sig")
     import csv
     import io
@@ -300,12 +307,12 @@ def ordinal_en(n: int) -> str:
 
 # Les deux pr\u00e9sentations, d\u00e9crites une fois : affichage() et les figures lisent l'une ou l'autre, jamais un litt\u00e9ral.
 LOC = {
-    "fr": dict(nb=fr, pct=pct, nom="nom", article=ARTICLE, ordinal=lambda n: ORD_FR.get(n, "%de" % n),
+    "fr": dict(ocde_edition=OCDE_EDITION["fr"], nb=fr, pct=pct, nom="nom", article=ARTICLE, ordinal=lambda n: ORD_FR.get(n, "%de" % n),
                liste=lambda noms: " et ".join(noms), point=lambda v: fr(v, 2) + "\u00a0point",
                mots=lambda n: MOTS_FR.get(n, str(n)),
                # Unite accordee au nombre, pour les cles « _pts » (la prose francaise garde ses propres cles).
                unite=lambda v, mot: "\u00a0point" + ("s" if abs(v) >= 2 else "")),
-    "en": dict(nb=en, pct=pct_en, nom="nom_en", article=ARTICLE_EN, ordinal=ordinal_en, liste=liste_en,
+    "en": dict(ocde_edition=OCDE_EDITION["en"], nb=en, pct=pct_en, nom="nom_en", article=ARTICLE_EN, ordinal=ordinal_en, liste=liste_en,
                point=lambda v: en(v, 2) + (" percentage point" if abs(round(v, 2)) == 1 else " percentage points"),
                mots=lambda n: MOTS_EN.get(n, str(n)),
                # English unit agreement: plural unless the displayed value is exactly 1 ("0.31 points").
@@ -653,21 +660,23 @@ def largeur_texte(s: str, taille: float) -> float:
     return sum(chasse(c) for c in s) * taille / 1000
 
 
-def ambigu(code, b, px, py, points) -> bool:
+def ambigu(code, b, px, py, points, rayon=5.5) -> bool:
     """Le nom posé dans la boîte b se lit-il comme celui d'un AUTRE point ? (03/11/2026 : « Autriche » posé au-dessus
     du point de la Finlande ; sur téléphone, « Slovénie » aligné sur l'Allemagne.) Trois motifs : (1) nom au-dessus ou
     au-dessous, et un autre point sous son étendue horizontale presque aussi près que le sien (à 2 px) ; (2) un autre
     point à hauteur du texte, collé à l'un de ses bouts (16 px), comme l'est un nom posé à droite ou à gauche de son
-    point ; (3) un autre point nettement plus près du texte que le sien. Bureau et téléphone appellent la même règle."""
-    bord = lambda qx, qy: math.hypot(qx - min(max(qx, b[0]), b[2]), qy - min(max(qy, b[1]), b[3]))  # noqa: E731
+    point ; (3) un autre point nettement plus près du texte que le sien. Bureau et téléphone appellent la même règle.
+    Distances mesurées BORD À BORD, du texte au bord des marques (rayon), et motif (1) appliqué aussi au nom posé à côté
+    de son point (18/11/2026, contrôle de géométrie du lot dette-b : « Slovénie » à 1,6 px du point autrichien et à
+    2,8 px du sien, au téléphone, que la mesure aux centres ne voyait pas)."""
+    bord = lambda qx, qy: max(0.0, math.hypot(qx - min(max(qx, b[0]), b[2]), qy - min(max(qy, b[1]), b[3])) - rayon)  # noqa: E731
     d_b = bord(px, py)
-    lateral = b[1] <= py <= b[3]
     for c, qx, qy in points:
         if c == code:
             continue
         gap_v = max(b[1] - qy, qy - b[3], 0)
         gap_h = max(b[0] - qx, qx - b[2], 0)
-        if (not lateral and b[0] - 1 <= qx <= b[2] + 1 and gap_v <= d_b + 2)                 or (b[1] - 3 <= qy <= b[3] + 3 and 0 < gap_h <= 16) or bord(qx, qy) < 0.7 * d_b:
+        if (b[0] - 1 <= qx <= b[2] + 1 and max(gap_v - rayon, 0) <= d_b + 2)                 or (b[1] - 3 <= qy <= b[3] + 3 and 0 < gap_h <= 16) or bord(qx, qy) < 0.7 * d_b:
             return True
     return False
 
@@ -884,7 +893,7 @@ def nuage(rows, fx, fy, xmax, ymax, pasx, pasy, lx, ly, ident, titre, desc, sour
             continue
         _, rg, dx, dy, anc, b, loin = min(libres, key=lambda t: t[1])  # brut-ok: rang de placement, pas une donnee
         if loin:
-            e.append(filet(px, py, b, mini=0))
+            e.append(filet(px, py, b, mini=11))   # C1 (18/11/2026) : pas de filet de moins de 2,5 px
             qx, qy = min(max(px, b[0]), b[2]), min(max(py, b[1] - 1), b[3])
             traits.append((px, py, qx, qy))
             liens.append((px, py, qx, qy))
@@ -1108,7 +1117,8 @@ def pied_m(e: list[str], y: float, source: str, note: str, lang: str) -> str:
 
 
 def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, ident, titre, svg_d, source, note, lang,
-            noms, valeurs=None, jumeaux=(), droites=None, liste=None, x0=40, xmin=0.0, cadre=None, liste_titre=None, hauteur=230, dire_muets=False):
+            noms, valeurs=None, jumeaux=(), droites=None, liste=None, x0=40, xmin=0.0, cadre=None, liste_titre=None, hauteur=230, dire_muets=False,
+            _essai=0):
     """liste : [(code, valeur)] dits SOUS la figure quand leurs points sont trop serrés pour être nommés dedans.
     xmin, cadre : comme nuage() (agrandissement du nuage des prix, 09/11/2026)."""
     e, y = PF.tete_mobile(ident, titre, desc_de(svg_d), INK, FONT)
@@ -1147,6 +1157,7 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
     for x in rows:
         e.append(marque(sx(fx(x)), sy(fy(x)), x["euro"], 4.2))
     boites, echecs, segs = list(graduations), [], []
+    echecs_c = []
     nommes_m = set()
     PROCHES = ((7, 5, "start"), (-7, 5, "end"), (0, -9, "middle"), (0, 19, "middle"), (6, -7, "start"),
                (-6, -7, "end"), (6, 17, "start"), (-6, 17, "end"), (0, -14, "middle"), (0, 24, "middle"))
@@ -1185,14 +1196,14 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
             if (facultatif or lo) and barre(b, traits_m[:len(jumeaux)], 3):
                 continue
             if lo:
-                if filet_libre(px, py, b, code, pts, [("", o) for o in boites], 5.2, 9.2, liens=segs, traits=traits_m)                         or any(c != code and math.hypot(cx - min(max(cx, b[0]), b[2]), cy - min(max(cy, b[1]), b[3])) < 8
+                if filet_libre(px, py, b, code, pts, [("", o) for o in boites], 5.2, 9.2, liens=segs, traits=traits_m)                         or any(c != code and math.hypot(cx - min(max(cx, b[0]), b[2]), cy - min(max(cy, b[1]), b[3])) < 12   # 18/11/2026 : 7,8 du bord, comme ambigu()
                                for c, cx, cy in pts) or bout_a_bout(code, b, pts):
                     continue
                 ok, loin = (dx, dy, anc, b), True
                 break
             # Même règle de rattachement qu'au bureau (03/11/2026 : « Slovénie 2,7 % » aligné sur l'Allemagne,
             # « France 4,2 % » accroché à la Finlande) : une place ambiguë ne sert qu'à défaut, avec un filet.
-            if ambigu(code, b, px, py, pts):
+            if ambigu(code, b, px, py, pts, 4.2):
                 repli = repli or (dx, dy, anc, b)
                 continue
             ok = (dx, dy, anc, b)
@@ -1200,17 +1211,18 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
         if not ok and repli and not facultatif:
             ok = repli
             log("  %s (%s, telephone) : %s pose pres d'un autre point" % (ident, lang, code))
-            if filet(px, py, repli[3], 5.2, 6):
-                e.append(filet(px, py, repli[3], 5.2, 6))
+            if filet(px, py, repli[3], 5.2, 9.2):
+                e.append(filet(px, py, repli[3], 5.2, 9.2))
         if not ok:
             if facultatif:
                 log("  %s (%s, telephone) : %s sans place, non nomme" % (ident, lang, code))
             else:
                 echecs.append(lib)
+                echecs_c.append(code)
             continue
         dx, dy, anc, b = ok
         if loin:
-            e.append(filet(px, py, b, 5.2, 0))
+            e.append(filet(px, py, b, 5.2, 9.2))   # C1 (18/11/2026) : pas de filet de moins de 2,5 px
             segs.append((px, py, min(max(px, b[0]), b[2]), min(max(py, b[1] - 1), b[3])))
         boites.append(b)
         nommes_m.add(code)
@@ -1218,6 +1230,13 @@ def nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, id
                  'text-anchor="%s"%s aria-hidden="true">%s</text>'
                  % (px + dx, py + dy, FSM, anc, ' font-weight="600"' if gras else "", esc(lib)))
         e.append(tm(px + dx, py + dy, lib, INK, anc, "600" if gras else None))
+    if echecs and _essai < 3:
+        # Ordre adaptatif (18/11/2026, lot dette-b) : un nom obligatoire sans place passe en tête, et l'on recommence.
+        log("  %s (%s, telephone) : %s sans place, place en tete, nouvel essai" % (ident, lang, ", ".join(echecs_c)))
+        ordre = [c for c in noms if c.lstrip("?") in echecs_c] + [c for c in noms if c.lstrip("?") not in echecs_c]
+        return nuage_m(rows, fx, fy, xmax, ymin, ymax, pasx, pasy, fmt_x, fmt_y, lx, ly, ident, titre, svg_d, source, note,
+                       lang, ordre, valeurs, jumeaux, droites, liste, x0, xmin, cadre, liste_titre, hauteur, dire_muets,
+                       _essai + 1)
     if echecs:
         fail("%s (%s, téléphone) : aucune position libre pour %s" % (ident, lang, ", ".join(echecs)))
     if dire_muets:
@@ -1346,6 +1365,9 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
              "n_euro": str(sum(x["euro"] for x in rows)), "n_hors": str(sum(not x["euro"] for x in rows))}
         A["n_euro_mots"] = L["mots"](sum(x["euro"] for x in rows))
         A["n_hors_mots"] = L["mots"](sum(not x["euro"] for x in rows))
+        A["ocde_edition"] = L["ocde_edition"]
+        if "JPN" in av and "FRA" in av:   # rapport des passifs bruts, lu dans les donnees (16/11/2026)
+            A["jpn_fra_fois"] = nb(av["JPN"]["stock"] / av["FRA"]["stock"], 1)
         # Exclusion dite, au contact du nuage (02/11/2026) ; et l'exemple de parité fixe ne cite que des pays du calcul.
         hors = [L["article"][x["code"]] for x in PARTIELS]
         if L is LOC["fr"]:
@@ -1367,6 +1389,11 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
         A["r2_euro"] = nb(s["charge_stock_euro"]["r2"], 2)
         A["r2_hors"] = nb(s["charge_stock_hors"]["r2"], 2)
         A["r2_prix_stock"] = nb(s["prix_stock_r2"], 2)
+        # 18/11/2026 (lot dette-b, § D) : le prix sur le stock, par groupe ; l'Italie ; la réserve sur l'Irlande.
+        A["r2_prix_stock_euro"] = nb(s["prix_stock_r2_euro"], 2)
+        A["r2_prix_stock_hors"] = nb(s["prix_stock_r2_hors"], 2)
+        A["it_prix"] = pc(by["IT"]["prix"], 2)
+        A["ie_recettes"] = pc(by["IE"]["recettes"], 0)
         A["prix_moyen_euro"] = pc(s["prix_moyen_euro"], 1)
         A["prix_moyen_hors"] = pc(s["prix_moyen_hors"], 1)
         A["r2_prix_inflation_euro"] = nb(s["prix_inflation_euro"]["r2"], 2)
@@ -1497,7 +1524,26 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
     if absents:
         fail("pays cites par la prose absents des donnees %s : %s -- attendre la source, rien n'est ecrit" % (an, ", ".join(absents)))
     se, de, dk = by["SE"], by["DE"], by["DK"]
+    it, ie = dict(by["IT"]), dict(by["IE"])
+    r2e, r2h = stats["prix_stock_r2_euro"], stats["prix_stock_r2_hors"]
+    mut = os.environ.get("DETTE_MUTATION")
+    if mut == "italie":      # temoin : l'Italie ne serait plus la plus chere de la zone euro
+        it["prix"] -= 0.3
+    elif mut == "italie_voisins":  # temoin : l'Italie paierait nettement plus que tous les pays peu endettes
+        it["prix"] += 1.0
+    elif mut == "irlande":   # temoin : les recettes irlandaises rejoindraient celles des autres pays
+        ie["recettes"] = 36.0
+    elif mut == "r2groupes":  # temoin : la relation serait aussi forte dans la zone euro
+        r2e = 0.5
+    autres_euro = [x for x in rows if x["euro"] and x["code"] != "IT"]
     affirmations = [
+        ("l'Italie paie le taux implicite le plus élevé de la zone euro",
+         all(lg.depasse(it["prix"], x["prix"], 2) for x in autres_euro)),
+        ("l'Italie paie un taux voisin de pays beaucoup moins endettés (trois au moins : dette moitié moindre, moins de 0,4 point d'écart)",
+         sum(1 for x in autres_euro if x["stock"] < it["stock"] / 2 and it["prix"] - x["prix"] < 0.4) >= 3),
+        ("le prix suit peu le stock dans la zone euro, davantage hors de l'euro", r2e < 0.15 and r2h > 0.4),
+        ("l'Irlande a de loin la part de recettes la plus faible des pays comparés",
+         all(x["code"] == "IE" or x["recettes"] - ie["recettes"] > 8 for x in rows)),
         ("la Suède paie comme l'Allemagne", abs(se["prix"] - de["prix"]) < 0.15),
         ("FAQ « pas systématiquement » : l'Allemagne paie moins que la France", lg.depasse(F["prix"], de["prix"], 2)),
         ("FAQ « pas systématiquement » : d'autres pays de la zone euro paient davantage",
@@ -1513,7 +1559,8 @@ def affichage(an, rows, stats, jum, avances, an_fmi, emergents, ecarts) -> tuple
          and min(r["effet_inflation"] for r in stats["robustesse_inflation"]) / max(r["effet_inflation"] for r in stats["robustesse_inflation"]) > 0.5),
         ("le Japon consacre moins que la France (base OCDE)", lg.depasse(av["FRA"]["charge"], av["JPN"]["charge"], 1)),
         # Cartes hors Europe (30/09) : les qualificatifs de la prose, recalculés.
-        ("le Japon doit « près du double » de la France (rapport 1,7 à 2,2)", 1.7 < av["JPN"]["stock"] / av["FRA"]["stock"] < 2.2),
+        # 16/11/2026 : la prose ne dit plus « pres du double » (1,74 avec l'edition n° 119) mais le rapport, lu dans les donnees.
+        ("le Japon doit nettement plus que la France (rapport des passifs bruts > 1,3)", av["JPN"]["stock"] / av["FRA"]["stock"] > 1.3),
         ("le Japon paie moins cher que la France sur ses passifs", lg.depasse(av["FRA"]["prix"], av["JPN"]["prix"], 2)),
         ("la Suisse « paie peu sur une dette faible » (< 60 % du PIB, rapport sous la France)",
          av["CHE"]["stock"] < 60 and lg.depasse(av["FRA"]["prix"], av["CHE"]["prix"], 2)),
@@ -1575,8 +1622,8 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
     MONTRE = {
         "fr": [
             ("charge", "dette-monde-charge",
-             "À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à %s ; hors de la zone euro, "
-             "elle croît plus vite avec la dette." % A["j_rapport"]),
+             "Entre deux pays voisins par la dette, la part des recettes consacrée aux intérêts peut varier de 1 à %s ; hors de la zone euro, "
+             "elle s'élève davantage, d'un pays à l'autre, avec le niveau de la dette." % A["j_rapport"]),
             ("prix", "dette-monde-prix",
              "Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, "
              "beaucoup moins. La Suède, hors euro, paie comme l'Allemagne."),
@@ -1584,7 +1631,7 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
              "La zone dense du graphique précédent, agrandie : chaque pays qui s'y trouve est nommé, mêmes données."),
             ("transmission", "dette-monde-transmission",
              "La part de la dette qui arrive à échéance et l'écart entre taux de marché et taux implicite : un repère de "
-             "pression sur le coût moyen, non une prévision."),
+             "pression sur le coût moyen, non une prévision, qui ne mesure que la transmission par les refinancements."),
             ("stock", "dette-monde-stock",
              "Le classement le plus cité : il ne dit ni le prix payé sur la dette, ni la part des recettes qu'elle absorbe."),
             ("ecarts", "dette-monde-ecarts",
@@ -1593,8 +1640,8 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
         ],
         "en": [
             ("charge", "dette-monde-charge-en",
-             "With similar debt, the share of revenue spent on interest can differ by a factor of %s; outside the euro area, "
-             "it rises faster with debt." % A_en["j_rapport"]),
+             "Between two countries that are nearest neighbours by debt, the share of revenue spent on interest can differ by a factor of %s; outside the euro area, "
+             "it rises more steeply, from one country to the next, with the level of debt." % A_en["j_rapport"]),
             ("prix", "dette-monde-prix-en",
              "Outside the euro area, the implicit interest rate is closely associated with recent inflation; within the euro "
              "area, much less so. Sweden, outside the euro, pays about the same as Germany."),
@@ -1602,7 +1649,7 @@ def fiches_figures(figs: dict, A: dict, A_en: dict) -> dict:
              "The dense area of the previous chart, enlarged: every country in it is named, same data."),
             ("transmission", "dette-monde-transmission-en",
              "The share of debt falling due and the gap between market yields and the implicit interest rate: a marker of "
-             "pressure on the average cost, not a forecast."),
+             "pressure on the average cost, not a forecast, measuring only transmission through refinancing."),
             ("stock", "dette-monde-stock-en",
              "The most quoted ranking: it shows neither the average interest cost of the debt nor the share of revenue it absorbs."),
             ("ecarts", "dette-monde-ecarts-en",
@@ -1870,7 +1917,7 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
             sorted(ZOOM[lang]["codes"], key=lambda c: (c != "FR", -by[c]["inflation"])),
             None,
             liste=[(c, P(by[c]["prix"], 2)) for c in ("IT", "FR", "DE", "SE") if c in ZOOM[lang]["codes"]], liste_titre=titre_liste_p,
-            xmin=ZOOM[lang]["cadre"][0], hauteur=330, x0=54),  # graduations à deux décimales
+            xmin=ZOOM[lang]["cadre"][0], hauteur=420, x0=54),  # graduations à deux décimales
         "dette-monde-transmission%s-m.svg" % suf: nuage_m(
             trans, lambda x: x["part_1an"], lambda x: x["taux10"] - x["prix"],
             math.ceil(max(x["part_1an"] for x in trans) / 10) * 10, min(-1.0, math.floor(min(tr_y))), math.ceil(max(tr_y)),

@@ -25,37 +25,37 @@
 <text x="134.7" y="351.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">10%</text>
 <text x="213.3" y="351.0" font-size="13.5" fill="#6f6c66" text-anchor="middle">20%</text>
 <text x="292.0" y="351.0" font-size="13.5" fill="#6f6c66" text-anchor="end">30%</text>
-<circle cx="125.9" cy="184.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="109.1" y="229.1" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<rect x="96.8" y="167.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="112.9" cy="196.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="150.8" cy="166.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="125.6" cy="184.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="108.8" y="229.1" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="96.6" y="167.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="114.1" cy="196.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="150.7" cy="166.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="110.0" cy="137.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="90.3" cy="161.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="90.4" cy="161.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="96.8" cy="200.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="130.5" cy="150.9" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="137.0" cy="228.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="141.6" cy="205.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="66.7" cy="179.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="141.5" cy="205.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="65.8" cy="179.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="75.4" cy="198.4" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="61.0" cy="230.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="69.9" cy="139.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="110.6" y="143.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="119.2" cy="206.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="147.6" cy="173.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="105.5" cy="185.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="61.8" cy="230.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="71.9" cy="139.7" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="110.7" y="143.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="118.7" cy="206.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="147.4" cy="173.2" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="105.2" cy="185.6" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="77.0" y="201.9" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <circle cx="225.3" cy="190.1" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="107.0" y="149.5" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="103.1" cy="171.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="60.0" cy="202.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="136.6" cy="179.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="103.2" cy="171.5" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="60.1" cy="202.8" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="136.3" cy="179.0" r="4.2" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="279.4" y="208.5" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<rect x="86.6" y="286.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<text x="137.5" y="155.9" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">France 1.36 pp</text>
-<text x="137.5" y="155.9" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">France 1.36 pp</text>
-<text x="97.4" y="294.8" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Denmark</text>
-<text x="97.4" y="294.8" font-size="13.5" fill="#0A0A0E" text-anchor="start">Denmark</text>
+<rect x="87.0" y="286.0" width="7.6" height="7.6" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<text x="136.5" y="143.9" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" font-weight="600" aria-hidden="true">France 1.36 pp</text>
+<text x="136.5" y="143.9" font-size="13.5" fill="#0A0A0E" text-anchor="start" font-weight="600">France 1.36 pp</text>
+<text x="97.7" y="294.8" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Denmark</text>
+<text x="97.7" y="294.8" font-size="13.5" fill="#0A0A0E" text-anchor="start">Denmark</text>
 <text x="276.2" y="217.3" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Sweden</text>
 <text x="276.2" y="217.3" font-size="13.5" fill="#0A0A0E" text-anchor="end">Sweden</text>
 <text x="232.3" y="195.1" font-size="13.5" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Portugal</text>
@@ -66,6 +66,6 @@
 <text class="pied-source" x="0" y="428.0" font-size="13.5" fill="#52514e">residual maturity), irt_lt_mcby_a</text>
 <text class="pied-source" x="0" y="445.0" font-size="13.5" fill="#52514e">(10-year yields), 2025</text>
 <text class="pied-note" x="0" y="466.0" font-size="13.5" fill="#52514e">A marker, not a forecast.</text>
-<text class="pied-licence" x="0" y="487.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="487.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
 <text class="pied-licence" x="0" y="504.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

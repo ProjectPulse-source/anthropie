@@ -80,8 +80,8 @@
 <text x="268.3" y="318.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Croatie</text>
 <text x="583.8" y="119.3" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Italie</text>
 <text x="583.8" y="119.3" font-size="11" fill="#0A0A0E" text-anchor="middle">Italie</text>
-<text x="148.5" y="368.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Luxembourg</text>
-<text x="148.5" y="368.1" font-size="11" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
+<text x="157.5" y="382.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Luxembourg</text>
+<text x="157.5" y="382.1" font-size="11" fill="#0A0A0E" text-anchor="middle">Luxembourg</text>
 <text x="333.1" y="92.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Hongrie</text>
 <text x="333.1" y="92.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Hongrie</text>
 <text x="363.9" y="277.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Autriche</text>
@@ -120,5 +120,5 @@
 <text class="pied-source" x="0" y="471.0" font-size="11" fill="#52514e">monnaie nationale</text>
 <text class="pied-note" x="0" y="485.0" font-size="11" fill="#52514e">Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts</text>
 <text class="pied-note" x="0" y="499.0" font-size="11" fill="#52514e">d'intérêts rapportés aux recettes).</text>
-<text class="pied-licence" x="0" y="513.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
+<text class="pied-licence" x="0" y="513.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
 </svg>

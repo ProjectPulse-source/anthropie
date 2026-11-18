@@ -80,8 +80,8 @@
 <text x="268.3" y="318.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Croatia</text>
 <text x="583.8" y="119.3" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Italy</text>
 <text x="583.8" y="119.3" font-size="11" fill="#0A0A0E" text-anchor="middle">Italy</text>
-<text x="148.5" y="368.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Luxembourg</text>
-<text x="148.5" y="368.1" font-size="11" fill="#0A0A0E" text-anchor="end">Luxembourg</text>
+<text x="157.5" y="382.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Luxembourg</text>
+<text x="157.5" y="382.1" font-size="11" fill="#0A0A0E" text-anchor="middle">Luxembourg</text>
 <text x="333.1" y="92.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Hungary</text>
 <text x="333.1" y="92.9" font-size="11" fill="#0A0A0E" text-anchor="middle">Hungary</text>
 <text x="363.9" y="277.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Austria</text>
@@ -94,10 +94,12 @@
 <text x="258.6" y="123.2" font-size="11" fill="#0A0A0E" text-anchor="middle">Romania</text>
 <text x="319.3" y="303.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Slovenia</text>
 <text x="319.3" y="303.7" font-size="11" fill="#0A0A0E" text-anchor="start">Slovenia</text>
-<text x="199.3" y="349.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Sweden</text>
-<text x="199.3" y="349.8" font-size="11" fill="#0A0A0E" text-anchor="start">Sweden</text>
+<text x="199.3" y="361.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Sweden</text>
+<text x="199.3" y="361.8" font-size="11" fill="#0A0A0E" text-anchor="start">Sweden</text>
 <text x="212.3" y="289.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Czechia</text>
 <text x="212.3" y="289.6" font-size="11" fill="#0A0A0E" text-anchor="end">Czechia</text>
+<text x="235.4" y="350.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Netherlands</text>
+<text x="235.4" y="350.0" font-size="11" fill="#0A0A0E" text-anchor="start">Netherlands</text>
 <text x="382.3" y="308.3" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Finland</text>
 <text x="382.3" y="308.3" font-size="11" fill="#0A0A0E" text-anchor="middle">Finland</text>
 <line x1="278.3" y1="266.6" x2="253.8" y2="238.1" stroke="#52514e" stroke-width="1"/>
@@ -105,9 +107,6 @@
 <text x="252.8" y="235.9" font-size="11" fill="#0A0A0E" text-anchor="end">Slovakia</text>
 <text x="230.8" y="267.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Malta</text>
 <text x="230.8" y="267.6" font-size="11" fill="#0A0A0E" text-anchor="middle">Malta</text>
-<line x1="235.2" y1="311.1" x2="259.8" y2="341.2" stroke="#52514e" stroke-width="1"/>
-<text x="260.8" y="351.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Latvia</text>
-<text x="260.8" y="351.6" font-size="11" fill="#0A0A0E" text-anchor="start">Latvia</text>
 <text x="194.0" y="306.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Lithuania</text>
 <text x="194.0" y="306.5" font-size="11" fill="#0A0A0E" text-anchor="end">Lithuania</text>
 <line x1="291.0" y1="296.7" x2="323.5" y2="258.2" stroke="#52514e" stroke-width="1"/>
@@ -118,5 +117,5 @@
 <text class="pied-source" x="0" y="471.0" font-size="11" fill="#52514e">currency</text>
 <text class="pied-note" x="0" y="485.0" font-size="11" fill="#52514e">Dotted lines: look-alike pairs (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in</text>
 <text class="pied-note" x="0" y="499.0" font-size="11" fill="#52514e">burden).</text>
-<text class="pied-licence" x="0" y="513.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
+<text class="pied-licence" x="0" y="513.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-international-comparison/</text>
 </svg>

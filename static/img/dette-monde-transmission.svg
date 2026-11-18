@@ -28,60 +28,60 @@
 <text x="593.0" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">25 %</text>
 <text x="700.0" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">30 %</text>
 <text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">part de la dette à échéance résiduelle de moins d'un an</text>
-<circle cx="248.2" cy="204.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<rect x="207.7" y="280.3" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<rect x="174.2" y="176.8" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="212.9" cy="223.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="315.9" cy="173.5" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="247.3" cy="204.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<rect x="207.0" y="280.3" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<rect x="173.9" y="176.8" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<circle cx="216.1" cy="223.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="315.6" cy="173.5" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="204.8" cy="124.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="151.3" cy="164.9" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="151.6" cy="164.9" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="169.0" cy="230.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="260.7" cy="146.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="278.4" cy="277.1" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="290.8" cy="238.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="87.2" cy="194.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="290.7" cy="238.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="84.6" cy="194.6" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <circle cx="110.9" cy="227.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="71.5" cy="281.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="95.8" cy="127.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="73.7" cy="281.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="101.1" cy="127.8" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="212.0" y="134.7" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="229.9" cy="240.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="307.1" cy="184.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="192.6" cy="205.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="228.7" cy="240.7" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="306.7" cy="184.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="191.8" cy="205.3" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="120.4" y="234.3" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <circle cx="518.6" cy="213.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="202.0" y="145.7" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<circle cx="186.1" cy="181.5" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="68.8" cy="234.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
-<circle cx="277.2" cy="194.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="186.3" cy="181.5" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="69.1" cy="234.4" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
+<circle cx="276.5" cy="194.2" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="671.1" y="245.5" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<rect x="146.5" y="376.5" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
-<text x="221.7" y="289.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Bulgarie</text>
-<text x="221.7" y="289.2" font-size="11" fill="#0A0A0E" text-anchor="start">Bulgarie</text>
-<text x="221.9" y="227.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Allemagne</text>
-<text x="221.9" y="227.1" font-size="11" fill="#0A0A0E" text-anchor="start">Allemagne</text>
+<rect x="147.5" y="376.5" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
+<text x="221.0" y="289.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Bulgarie</text>
+<text x="221.0" y="289.2" font-size="11" fill="#0A0A0E" text-anchor="start">Bulgarie</text>
+<text x="225.1" y="227.1" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Allemagne</text>
+<text x="225.1" y="227.1" font-size="11" fill="#0A0A0E" text-anchor="start">Allemagne</text>
 <text x="204.8" y="115.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Irlande</text>
 <text x="204.8" y="115.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Irlande</text>
-<text x="142.3" y="168.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Grèce</text>
-<text x="142.3" y="168.9" font-size="11" fill="#0A0A0E" text-anchor="end">Grèce</text>
+<text x="142.6" y="168.9" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Grèce</text>
+<text x="142.6" y="168.9" font-size="11" fill="#0A0A0E" text-anchor="end">Grèce</text>
 <text x="260.7" y="137.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" font-weight="600" aria-hidden="true">France</text>
 <text x="260.7" y="137.7" font-size="11" fill="#0A0A0E" text-anchor="middle" font-weight="600">France</text>
-<text x="299.8" y="242.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Italie</text>
-<text x="299.8" y="242.2" font-size="11" fill="#0A0A0E" text-anchor="start">Italie</text>
-<text x="104.8" y="131.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Luxembourg</text>
-<text x="104.8" y="131.8" font-size="11" fill="#0A0A0E" text-anchor="start">Luxembourg</text>
-<line x1="209.9" y1="139.6" x2="194.4" y2="139.6" stroke="#52514e" stroke-width="1"/>
-<text x="192.9" y="143.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Hongrie</text>
-<text x="192.9" y="143.6" font-size="11" fill="#0A0A0E" text-anchor="end">Hongrie</text>
+<text x="299.7" y="242.2" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Italie</text>
+<text x="299.7" y="242.2" font-size="11" fill="#0A0A0E" text-anchor="start">Italie</text>
+<text x="110.1" y="131.8" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="start" aria-hidden="true">Luxembourg</text>
+<text x="110.1" y="131.8" font-size="11" fill="#0A0A0E" text-anchor="start">Luxembourg</text>
+<line x1="210.0" y1="139.6" x2="194.5" y2="139.6" stroke="#52514e" stroke-width="1"/>
+<text x="193.0" y="143.6" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="end" aria-hidden="true">Hongrie</text>
+<text x="193.0" y="143.6" font-size="11" fill="#0A0A0E" text-anchor="end">Hongrie</text>
 <text x="518.6" y="204.0" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Portugal</text>
 <text x="518.6" y="204.0" font-size="11" fill="#0A0A0E" text-anchor="middle">Portugal</text>
 <text x="206.9" y="168.7" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Roumanie</text>
 <text x="206.9" y="168.7" font-size="11" fill="#0A0A0E" text-anchor="middle">Roumanie</text>
 <text x="676.0" y="241.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Suède</text>
 <text x="676.0" y="241.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Suède</text>
-<text x="151.5" y="372.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Danemark</text>
-<text x="151.5" y="372.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Danemark</text>
+<text x="152.5" y="372.5" font-size="11" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" text-anchor="middle" aria-hidden="true">Danemark</text>
+<text x="152.5" y="372.5" font-size="11" fill="#0A0A0E" text-anchor="middle">Danemark</text>
 <line x1="0" y1="442.0" x2="720" y2="442.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="457.0" font-size="11" fill="#52514e">Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), 2025</text>
 <text class="pied-note" x="0" y="471.0" font-size="11" fill="#52514e">Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles. Repère, non prévision.</text>
-<text class="pied-licence" x="0" y="485.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
+<text class="pied-licence" x="0" y="485.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-comparaison-internationale/</text>
 </svg>

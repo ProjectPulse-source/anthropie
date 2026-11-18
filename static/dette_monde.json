@@ -1,9 +1,9 @@
 {
- "releve_le": "2026-11-02",
+ "releve_le": "2026-11-18",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale ; les valeurs du FMI ne sont pas couvertes par la licence CC BY : ce producteur soumet leur réutilisation commerciale à autorisation",
  "meta": {
   "annee": "2025",
-  "releve_le": "2026-11-02",
+  "releve_le": "2026-11-18",
   "page": "https://stephane-lalut.com/dette-publique-comparaison-internationale/",
   "licence": "CC BY 4.0",
   "definitions": {
@@ -51,7 +51,7 @@
     "5": 4.1
    },
    "taux10": 3.17326,
-   "part_1an": 8.89014944962
+   "part_1an": 8.84660478249
   },
   {
    "code": "BG",
@@ -73,7 +73,7 @@
     "5": 5.64
    },
    "taux10": 3.93,
-   "part_1an": 7.2285469281
+   "part_1an": 7.19516050234
   },
   {
    "code": "CZ",
@@ -95,7 +95,7 @@
     "5": 7.22
    },
    "taux10": 4.28686,
-   "part_1an": 5.66143281611
+   "part_1an": 5.64535825835
   },
   {
    "code": "DE",
@@ -117,7 +117,7 @@
     "5": 4.16
    },
    "taux10": 2.59206,
-   "part_1an": 7.23828402048
+   "part_1an": 7.38844023695
   },
   {
    "code": "EE",
@@ -139,7 +139,7 @@
     "5": 7.22
    },
    "taux10": 3.31443,
-   "part_1an": 12.0525749362
+   "part_1an": 12.0390185637
   },
   {
    "code": "IE",
@@ -161,7 +161,7 @@
     "5": 3.3
    },
    "taux10": 2.88975,
-   "part_1an": 6.85976285157
+   "part_1an": 6.85919476988
   },
   {
    "code": "EL",
@@ -183,7 +183,7 @@
     "5": 3.16
    },
    "taux10": 3.36997,
-   "part_1an": 4.35853978364
+   "part_1an": 4.37450395227
   },
   {
    "code": "ES",
@@ -205,7 +205,7 @@
     "5": 3.46
    },
    "taux10": 3.21381,
-   "part_1an": 5.18774725086
+   "part_1an": 5.18734954557
   },
   {
    "code": "FR",
@@ -249,7 +249,7 @@
     "5": 5.16
    },
    "taux10": 2.99293,
-   "part_1an": 10.2988688353
+   "part_1an": 10.2997252312
   },
   {
    "code": "IT",
@@ -271,7 +271,7 @@
     "5": 3.5
    },
    "taux10": 3.59284,
-   "part_1an": 10.8768871325
+   "part_1an": 10.8726301529
   },
   {
    "code": "CY",
@@ -293,7 +293,7 @@
     "5": 3.1
    },
    "taux10": 2.92614,
-   "part_1an": 1.36617873383
+   "part_1an": 1.24319930584
   },
   {
    "code": "LV",
@@ -337,7 +337,7 @@
     "5": 6.84
    },
    "taux10": 2.88,
-   "part_1an": 0.63261072191
+   "part_1an": 0.733819357886
   },
   {
    "code": "LU",
@@ -359,7 +359,7 @@
     "5": 3.38
    },
    "taux10": 2.90111,
-   "part_1an": 1.76829808695
+   "part_1an": 2.01609337696
   },
   {
    "code": "HU",
@@ -381,7 +381,7 @@
     "5": 8.92
    },
    "taux10": 6.93975,
-   "part_1an": 7.42663896419
+   "part_1an": 7.4282992559
   },
   {
    "code": "MT",
@@ -403,7 +403,7 @@
     "5": 3.12
    },
    "taux10": 3.43704,
-   "part_1an": 8.03186775583
+   "part_1an": 7.97451380794
   },
   {
    "code": "NL",
@@ -425,7 +425,7 @@
     "5": 4.56
    },
    "taux10": 2.80112,
-   "part_1an": 11.6399670704
+   "part_1an": 11.6205224166
   },
   {
    "code": "AT",
@@ -447,7 +447,7 @@
     "5": 4.68
    },
    "taux10": 2.98216,
-   "part_1an": 6.29087599578
+   "part_1an": 6.25280998916
   },
   {
    "code": "PL",
@@ -469,7 +469,7 @@
     "5": 7.34
    },
    "taux10": 5.52335,
-   "part_1an": 3.14743749619
+   "part_1an": 3.14690315814
   },
   {
    "code": "PT",
@@ -491,7 +491,7 @@
     "5": 3.38
    },
    "taux10": 3.07583,
-   "part_1an": 21.5253025854
+   "part_1an": 21.5243037265
   },
   {
    "code": "RO",
@@ -513,7 +513,7 @@
     "5": 6.78
    },
    "taux10": 6.9585,
-   "part_1an": 6.95975121243
+   "part_1an": 6.95814791165
   },
   {
    "code": "SI",
@@ -535,7 +535,7 @@
     "5": 4.04
    },
    "taux10": 3.1024,
-   "part_1an": 5.98722897184
+   "part_1an": 5.9965034965
   },
   {
    "code": "SK",
@@ -557,7 +557,7 @@
     "5": 6.22
    },
    "taux10": 3.42929,
-   "part_1an": 0.505855392297
+   "part_1an": 0.517407720619
   },
   {
    "code": "FI",
@@ -579,7 +579,7 @@
     "5": 3.0
    },
    "taux10": 2.99698,
-   "part_1an": 10.2442107127
+   "part_1an": 10.2124586217
   },
   {
    "code": "SE",
@@ -702,7 +702,7 @@
    "recettes": null,
    "charge": null,
    "taux10": 2.32731,
-   "part_1an": 4.36776090558,
+   "part_1an": 4.41536547658,
    "motif": "recettes de 2025 non publiées par Eurostat",
    "motif_en": "2025 revenue not published by Eurostat"
   }
@@ -735,13 +735,13 @@
    "niveau": "avance",
    "badge": "avec réserve",
    "badge_en": "with reservations",
-   "stock": 117.042477835,
-   "prix": 3.96409293647,
-   "recettes": 31.6459792018,
-   "charge": 14.6611756487,
+   "stock": 117.553559313,
+   "prix": 4.01854869962,
+   "recettes": 32.5343897399,
+   "charge": 14.5198575013,
    "note": "",
    "note_en": "",
-   "dette_nette": 98.074970747
+   "dette_nette": 95.8692000818
   },
   {
    "code": "JPN",
@@ -750,13 +750,13 @@
    "niveau": "avance",
    "badge": "avec réserve",
    "badge_en": "with reservations",
-   "stock": 214.933393072,
-   "prix": 0.69433424884,
-   "recettes": 38.0458865876,
-   "charge": 3.92251645092,
+   "stock": 196.517075591,
+   "prix": 0.679638351558,
+   "recettes": 36.9068900561,
+   "charge": 3.61885114419,
    "note": "",
    "note_en": "",
-   "dette_nette": 87.9414455174
+   "dette_nette": 78.4843772294
   },
   {
    "code": "GBR",
@@ -765,13 +765,13 @@
    "niveau": "avance",
    "badge": "avec réserve",
    "badge_en": "with reservations",
-   "stock": 96.5717226703,
-   "prix": 2.59728718894,
-   "recettes": 42.0113467262,
-   "charge": 5.9703988958,
+   "stock": 95.0656245071,
+   "prix": 3.44587393964,
+   "recettes": 40.6294052036,
+   "charge": 8.06273575513,
    "note": "",
    "note_en": "",
-   "dette_nette": 76.015927355
+   "dette_nette": 75.7258967124
   },
   {
    "code": "CAN",
@@ -780,13 +780,13 @@
    "niveau": "avance",
    "badge": "avec réserve",
    "badge_en": "with reservations",
-   "stock": 103.626695675,
-   "prix": 3.33950214705,
-   "recettes": 42.4639849338,
-   "charge": 8.14953126135,
+   "stock": 102.121681597,
+   "prix": 3.28347745859,
+   "recettes": 42.1855330642,
+   "charge": 7.94855997305,
    "note": "",
    "note_en": "",
-   "dette_nette": 8.31815774526
+   "dette_nette": 6.10350350628
   },
   {
    "code": "CHE",
@@ -795,13 +795,13 @@
    "niveau": "avance",
    "badge": "avec réserve",
    "badge_en": "with reservations",
-   "stock": 38.7558361922,
-   "prix": 0.702228362215,
-   "recettes": 33.5004980826,
-   "charge": 0.812389335477,
+   "stock": 40.2639887849,
+   "prix": 0.629317812151,
+   "recettes": 33.7234537276,
+   "charge": 0.75137159839,
    "note": "",
    "note_en": "",
-   "dette_nette": -12.4577058677
+   "dette_nette": -16.5379527152
   },
   {
    "code": "NOR",
@@ -812,8 +812,8 @@
    "badge_en": "with reservations",
    "stock": null,
    "prix": null,
-   "recettes": 61.5980726099,
-   "charge": 1.85347036412,
+   "recettes": 59.9069929796,
+   "charge": 2.47387880103,
    "note": "passifs financiers bruts publiés jusqu'en 2023 seulement : prix non calculé",
    "note_en": "gross financial liabilities published up to 2023 only: implicit interest rate not computed",
    "dette_nette": null
@@ -825,13 +825,13 @@
    "niveau": "avance",
    "badge": "avec réserve",
    "badge_en": "with reservations",
-   "stock": 113.641491516,
-   "prix": 2.01120183636,
-   "recettes": 51.5510753161,
-   "charge": 4.43358310222,
+   "stock": 113.121943442,
+   "prix": 1.97393908317,
+   "recettes": 52.3298385476,
+   "charge": 4.2670841631,
    "note": "",
    "note_en": "",
-   "dette_nette": 78.4771266999
+   "dette_nette": 73.5591556888
   }
  ],
  "emergents": [
@@ -1254,6 +1254,8 @@
   "n_hors": "6",
   "n_euro_mots": "vingt",
   "n_hors_mots": "six",
+  "ocde_edition": "n° 119, juin 2026",
+  "jpn_fra_fois": "1,7",
   "hors_recettes": "Le Danemark n'entre pas dans ces deux groupes : Eurostat ne publie pas, à ce jour, ses recettes de 2025.",
   "parite_ex": "la Bulgarie jusqu'à son entrée",
   "fr_stock_fin": "115,7 %",
@@ -1266,6 +1268,10 @@
   "r2_euro": "0,82",
   "r2_hors": "0,81",
   "r2_prix_stock": "0,00",
+  "r2_prix_stock_euro": "0,07",
+  "r2_prix_stock_hors": "0,53",
+  "it_prix": "2,94 %",
+  "ie_recettes": "24 %",
   "prix_moyen_euro": "2,2 %",
   "prix_moyen_hors": "4,1 %",
   "r2_prix_inflation_euro": "0,13",
@@ -1310,7 +1316,7 @@
   "it_part_1an": "10,9 %",
   "it_ecart_taux": "0,66 point",
   "it_taux10": "3,59 %",
-  "de_part_1an": "7,2 %",
+  "de_part_1an": "7,4 %",
   "de_ecart_taux": "0,77 point",
   "de_taux10": "2,59 %",
   "an_fmi": "2025",
@@ -1326,31 +1332,31 @@
   "rob_infl_max_pts": "0,34 point",
   "fr_rang_stock": "troisième",
   "devant_fr": "Grèce et Italie",
-  "usa_stock": "117 %",
-  "usa_prix": "3,96 %",
-  "usa_charge": "14,7 %",
-  "usa_dette_nette": "98 %",
-  "jpn_stock": "215 %",
-  "jpn_prix": "0,69 %",
-  "jpn_charge": "3,9 %",
-  "jpn_dette_nette": "88 %",
-  "gbr_stock": "97 %",
-  "gbr_prix": "2,60 %",
-  "gbr_charge": "6,0 %",
+  "usa_stock": "118 %",
+  "usa_prix": "4,02 %",
+  "usa_charge": "14,5 %",
+  "usa_dette_nette": "96 %",
+  "jpn_stock": "197 %",
+  "jpn_prix": "0,68 %",
+  "jpn_charge": "3,6 %",
+  "jpn_dette_nette": "78 %",
+  "gbr_stock": "95 %",
+  "gbr_prix": "3,45 %",
+  "gbr_charge": "8,1 %",
   "gbr_dette_nette": "76 %",
-  "can_stock": "104 %",
-  "can_prix": "3,34 %",
-  "can_charge": "8,1 %",
-  "can_dette_nette": "8 %",
-  "che_stock": "39 %",
-  "che_prix": "0,70 %",
+  "can_stock": "102 %",
+  "can_prix": "3,28 %",
+  "can_charge": "7,9 %",
+  "can_dette_nette": "6 %",
+  "che_stock": "40 %",
+  "che_prix": "0,63 %",
   "che_charge": "0,8 %",
-  "che_dette_nette": "−12 %",
-  "nor_charge": "1,9 %",
-  "fra_stock": "114 %",
-  "fra_prix": "2,01 %",
-  "fra_charge": "4,4 %",
-  "fra_dette_nette": "78 %",
+  "che_dette_nette": "−17 %",
+  "nor_charge": "2,5 %",
+  "fra_stock": "113 %",
+  "fra_prix": "1,97 %",
+  "fra_charge": "4,3 %",
+  "fra_dette_nette": "74 %",
   "chn_stock": "72 %",
   "chn_charge": "3 %",
   "chn_charge_annee": "2021",
@@ -1389,7 +1395,7 @@
   "ec_se_an_pts": "0,15 point",
   "ec_dk_an_pts": "0,26 point",
   "ec_fr_an_pts": "0,76 point",
-  "usa_fra_rapport": "3,3",
+  "usa_fra_rapport": "3,4",
   "fr_ipib": "2,20 %",
   "fr_rang_ipib": "huitième",
   "fr_egal_ipib": "",
@@ -1419,6 +1425,8 @@
   "n_hors": "6",
   "n_euro_mots": "twenty",
   "n_hors_mots": "six",
+  "ocde_edition": "No. 119, June 2026",
+  "jpn_fra_fois": "1.7",
   "hors_recettes": "Denmark is not in either group: Eurostat does not, to date, publish its revenue for 2025.",
   "parite_ex": "Bulgaria until it joined",
   "fr_stock_fin": "115.7%",
@@ -1431,6 +1439,10 @@
   "r2_euro": "0.82",
   "r2_hors": "0.81",
   "r2_prix_stock": "0.00",
+  "r2_prix_stock_euro": "0.07",
+  "r2_prix_stock_hors": "0.53",
+  "it_prix": "2.94%",
+  "ie_recettes": "24%",
   "prix_moyen_euro": "2.2%",
   "prix_moyen_hors": "4.1%",
   "r2_prix_inflation_euro": "0.13",
@@ -1475,7 +1487,7 @@
   "it_part_1an": "10.9%",
   "it_ecart_taux": "0.66 percentage points",
   "it_taux10": "3.59%",
-  "de_part_1an": "7.2%",
+  "de_part_1an": "7.4%",
   "de_ecart_taux": "0.77 percentage points",
   "de_taux10": "2.59%",
   "an_fmi": "2025",
@@ -1491,31 +1503,31 @@
   "rob_infl_max_pts": "0.34 points",
   "fr_rang_stock": "third",
   "devant_fr": "Greece and Italy",
-  "usa_stock": "117%",
-  "usa_prix": "3.96%",
-  "usa_charge": "14.7%",
-  "usa_dette_nette": "98%",
-  "jpn_stock": "215%",
-  "jpn_prix": "0.69%",
-  "jpn_charge": "3.9%",
-  "jpn_dette_nette": "88%",
-  "gbr_stock": "97%",
-  "gbr_prix": "2.60%",
-  "gbr_charge": "6.0%",
+  "usa_stock": "118%",
+  "usa_prix": "4.02%",
+  "usa_charge": "14.5%",
+  "usa_dette_nette": "96%",
+  "jpn_stock": "197%",
+  "jpn_prix": "0.68%",
+  "jpn_charge": "3.6%",
+  "jpn_dette_nette": "78%",
+  "gbr_stock": "95%",
+  "gbr_prix": "3.45%",
+  "gbr_charge": "8.1%",
   "gbr_dette_nette": "76%",
-  "can_stock": "104%",
-  "can_prix": "3.34%",
-  "can_charge": "8.1%",
-  "can_dette_nette": "8%",
-  "che_stock": "39%",
-  "che_prix": "0.70%",
+  "can_stock": "102%",
+  "can_prix": "3.28%",
+  "can_charge": "7.9%",
+  "can_dette_nette": "6%",
+  "che_stock": "40%",
+  "che_prix": "0.63%",
   "che_charge": "0.8%",
-  "che_dette_nette": "−12%",
-  "nor_charge": "1.9%",
-  "fra_stock": "114%",
-  "fra_prix": "2.01%",
-  "fra_charge": "4.4%",
-  "fra_dette_nette": "78%",
+  "che_dette_nette": "−17%",
+  "nor_charge": "2.5%",
+  "fra_stock": "113%",
+  "fra_prix": "1.97%",
+  "fra_charge": "4.3%",
+  "fra_dette_nette": "74%",
   "chn_stock": "72%",
   "chn_charge": "3%",
   "chn_charge_annee": "2021",
@@ -1554,7 +1566,7 @@
   "ec_se_an_pts": "0.15 points",
   "ec_dk_an_pts": "0.26 points",
   "ec_fr_an_pts": "0.76 points",
-  "usa_fra_rapport": "3.3",
+  "usa_fra_rapport": "3.4",
   "fr_ipib": "2.20%",
   "fr_rang_ipib": "eighth",
   "fr_egal_ipib": "",

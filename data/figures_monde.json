@@ -4,7 +4,7 @@
    "id": "charge",
    "fichier": "dette-monde-charge",
    "titre": "Même dette, coût différent : 26 pays de l'UE en 2025",
-   "montre": "À dette voisine, la part des recettes consacrée aux intérêts peut varier de 1 à 3,2 ; hors de la zone euro, elle croît plus vite avec la dette.",
+   "montre": "Entre deux pays voisins par la dette, la part des recettes consacrée aux intérêts peut varier de 1 à 3,2 ; hors de la zone euro, elle s'élève davantage, d'un pays à l'autre, avec le niveau de la dette.",
    "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025 ; administrations publiques S.13, monnaie nationale",
    "precaution": "Pointillés : faux jumeaux (plus proche voisin en stock, écart inférieur à 10 points, trois plus grands écarts d'intérêts rapportés aux recettes)."
   },
@@ -28,7 +28,7 @@
    "id": "transmission",
    "fichier": "dette-monde-transmission",
    "titre": "Pression de refinancement : échéances et écart de taux, 2025",
-   "montre": "La part de la dette qui arrive à échéance et l'écart entre taux de marché et taux implicite : un repère de pression sur le coût moyen, non une prévision.",
+   "montre": "La part de la dette qui arrive à échéance et l'écart entre taux de marché et taux implicite : un repère de pression sur le coût moyen, non une prévision, qui ne mesure que la transmission par les refinancements.",
    "source": "Eurostat gov_10dd_ggd (dette par échéance résiduelle), irt_lt_mcby_a (taux à 10 ans), 2025",
    "precaution": "Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles. Repère, non prévision."
   },
@@ -54,7 +54,7 @@
    "id": "charge",
    "fichier": "dette-monde-charge-en",
    "titre": "Same debt, different burden: 26 EU countries in 2025",
-   "montre": "With similar debt, the share of revenue spent on interest can differ by a factor of 3.2; outside the euro area, it rises faster with debt.",
+   "montre": "Between two countries that are nearest neighbours by debt, the share of revenue spent on interest can differ by a factor of 3.2; outside the euro area, it rises more steeply, from one country to the next, with the level of debt.",
    "source": "Eurostat gov_10a_main (D41PAY, TR), gov_10dd_edpt1 (GD), nama_10_gdp (B1GQ), 2025; general government S.13, national currency",
    "precaution": "Dotted lines: look-alike pairs (nearest neighbour by debt stock, gap under 10 percentage points, three largest gaps in burden)."
   },
@@ -78,7 +78,7 @@
    "id": "transmission",
    "fichier": "dette-monde-transmission-en",
    "titre": "Refinancing pressure: maturities and rate gap, 2025",
-   "montre": "The share of debt falling due and the gap between market yields and the implicit interest rate: a marker of pressure on the average cost, not a forecast.",
+   "montre": "The share of debt falling due and the gap between market yields and the implicit interest rate: a marker of pressure on the average cost, not a forecast, measuring only transmission through refinancing.",
    "source": "Eurostat gov_10dd_ggd (debt by residual maturity), irt_lt_mcby_a (10-year yields), 2025",
    "precaution": "10-year convergence yield, not the cost of all new issuance. A marker, not a forecast."
   },
