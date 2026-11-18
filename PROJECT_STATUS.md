@@ -52,6 +52,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Passe de forme de la page d'enseignants « École et parcours » publiée après jugement externe à l'aveugle (FR)
+- **Commit** `ceab7246` : durée et support en tête du bloc du professeur (deux activités) ; corrigé 4, dénominateur de
+  l'écart en points dit dans les mots de la question 1 ; corrigé 5, « candidatures », le mot de la note de la figure.
+- **Jugement externe** : paquet n° 04 (6 passages), réponse archivée avant lecture (`8FE70FDE…868261E9`) et arbitrée :
+  version proposée retenue sur les six passages ; précision du dénominateur recommandée, acceptée avec modification.
+- **Contrôles** : Hugo 0, `typo_build` 0, `check-all --ci` 0, `check-figures` 0, `check-typo-fr` 0 ; texte servi comparé
+  à la version en ligne : seuls les passages voulus changent.
+- **Servi** : déploiement `hugo.yml` 44411721812 réussi ; version servie attestée le 18/11 : 312 phrases, 0 écart ;
+  10 scripts identiques au build. Fiches élèves imprimées de nouveau sur la version servie (deux fiches de 2 pages,
+  figure et pied « source et licence » présents, corrigés et bloc du professeur absents).
+
 ### 2026-11-18 — Passe de forme du lot « Dette B » publiée après jugement externe à l'aveugle (FR, EN)
 - **Commits** `1c54385f` (Combien coûte), `e7605d10` (Qui paie : l'annulation avant la synthèse), `a473a4e7` (Générations
   futures), `babcd734` (Comparaison internationale) : niveau de connaissance qualifié à l'affirmation (identité, décomposition
