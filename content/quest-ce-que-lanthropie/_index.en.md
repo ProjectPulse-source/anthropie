@@ -3,7 +3,7 @@ title: "What is anthropy?"
 og_image: "images/og-notion-anthropie-en.jpg"
 og_image_alt: "Share card: “What is anthropy?” and its diagram"
 date: 2026-04-03  # first possible publication on stephane-lalut.com (CNAME acf728c, 03/04/2026); first public Wayback capture 16/04/2026 (audit of 05/11/2026)
-lastmod: 2026-11-13  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-18  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 # slug: est ignoré par Hugo sur les _index.md de section — l'URL réelle reste
 # /en/quest-ce-que-lanthropie/. Les alias ci-dessous réparent le 404 de
 # /en/what-is-anthropy/, référencée par Wikidata Q138827949 (P973, batch
@@ -20,7 +20,7 @@ aliases: ["/en/what-is-anthropy/", "/what-is-anthropy/"]
 description: "Anthropy is the hypothesis, developed by economist Stéphane Lalut in ANTHROPIE (2025; English edition ANTHROPY, 2026), that social systems produce order locally by displacing disorder elsewhere rather than resolving it."
 faq:
   - question: "What is anthropy in social science?"
-    answer: "Anthropy is the hypothesis, developed by economist Stéphane Lalut in ANTHROPIE (2025; English edition ANTHROPY, 2026), that social systems produce order locally by displacing disorder elsewhere rather than resolving it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially. AWP-01 specifies that it does not postulate that everything is transfer, but that every observable stability deserves to be questioned about its offloaded costs."
+    answer: "Anthropy is the hypothesis, developed by economist Stéphane Lalut in ANTHROPIE (2025; English edition ANTHROPY, 2026), that social systems produce order locally by displacing disorder elsewhere rather than resolving it. Every local order is built by exporting its disorder elsewhere — across space, across time, or towards other social groups. AWP-01 specifies that it does not postulate that everything is transfer, but that every observable stability deserves to be questioned about its offloaded costs."
   - question: "What is the difference between anthropy and entropy?"
     answer: "Entropy belongs to physics and thermodynamics. Anthropy designates a social and institutional mechanism: the way in which human systems produce local order by displacing disorder outside the visible perimeter."
   - question: "What is the difference between anthropy and the Anthropocene?"
@@ -50,7 +50,7 @@ faq:
 proposee_par: "The hypothesis was proposed by the economist Stéphane Lalut (in the book *ANTHROPIE*, 2025; English edition *ANTHROPY*, 2026) and formalised in the *Anthropie Working Papers* (2026)."
 frontiere:
   affirme:
-    - texte: "Every observable order in a social system implies disorder exported elsewhere: to other places, other times, or other social groups."
+    - texte: "Every local order is built by exporting its disorder elsewhere: across space, across time, or towards other social groups."
       ancre: "definition"
       section: "Definition"
     - texte: "This transfer has a mechanism that can be named: who creates order, who absorbs disorder, and what makes the transfer invisible."
@@ -84,6 +84,7 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
   - {date: 2026-11-07, texte: "Correction: the British Anthropy gathering has been held since 2022, not every year (editions in 2022, 2023, 2025 and 2026)."}
   - {date: 2026-11-06, texte: "Addition: the author is named in the quoted definition."}
   - {date: 2026-11-05, texte: "Correction: the answer on public debt presented as a fact what the site treats as a hypothesis; it now says that the shift of burdens is neither automatic nor necessarily unfavourable, and where the hypothesis is examined. The Anthropocene is a proposed geological epoch, not adopted as a formal unit in 2024. The displayed publication date was wrong (first online: April 2026)."}
+  - {date: 2026-11-18, texte: "Definition aligned with AWP-01's canonical definition (§ 1.2): every local order is built by exporting its disorder elsewhere; an analytical grid, not fatalism."}
 ressource:  # /en/resources/ index: head of the analytical framework (PRO-20261025-225715); keeps its menu entry
   type: ["notion"]
   conception: "docs/conception/quest-ce-que-lanthropie.md"  # fiche de conception (regle 12), reprise du lot notions-a du 13/11/2026
@@ -97,7 +98,7 @@ ressource:  # /en/resources/ index: head of the analytical framework (PRO-202610
 
 ## Definition
 
-Every observable order in a social system — whether an institution, a territory, an organisation, or an economy — implies disorder exported elsewhere: to other places, other times, or other social groups.
+In its canonical definition ([AWP-01](/en/awp/awp-01/), § 1.2), every local order — whether an institution, a territory, an organisation, or an economy — is built by exporting its disorder elsewhere: across space, across time, or towards other social groups. This is not fatalism but an analytical grid meant to reveal the invisible transfers of cost that underpin every stability.
 
 Anthropy does not claim to constitute a fully developed theory. It is a working hypothesis with heuristic value: it makes it possible to ask questions that other analytical frameworks do not formulate, or tend to neutralise. It does not postulate that everything is transfer: it derives from it a rule of inquiry — faced with a stable order, look for where the disorder goes before concluding that it has been resolved —, bounded by a stopping rule that says when to conclude that a disorder has been absorbed locally, no elsewhere receiving more of it than a threshold set in advance ([AWP-07](/en/awp/awp-07/), proposition P1).
 

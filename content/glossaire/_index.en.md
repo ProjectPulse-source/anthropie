@@ -1,10 +1,11 @@
 ---
 date: 2026-04-15  # premier commit de la page (git log --follow)
-lastmod: 2026-11-16
+lastmod: 2026-11-18
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Correction: the “Anthropic loop” entry now gives the AWP-07 definition (five states, from displacement to bifurcation); the return toward cognition becomes one case of it, specific to the digital metaprogramme."}
   - {date: 2026-11-05, texte: "Corrections: Jevons effect (extreme case of the rebound effect), boomerang effect (credit to Ulrich Beck, balance not asserted), registers of debt (a possible displacement, to be established case by case)."}
   - {date: 2026-11-16, texte: "Source review: definitions aligned with the deposited working papers (including saturation, and the anthropic loop following the revised AWP-07); “entropic externalisation” presented as an inquiry the hypothesis directs, without prejudging its outcome."}
+  - {date: 2026-11-18, texte: "“Anthropy” entry aligned with AWP-01's canonical definition (§ 1.2)."}
 title: "Glossary"
 og_title: "Glossary — the concepts, defined and sourced — S. Lalut"
 description: "Key terms of the anthropic framework."
@@ -74,7 +75,7 @@ Anthropy rests on a single hypothesis — social systems displace disorder rathe
 
 <div class="glossaire-entry" id="anthropy">
 <dt>Anthropy</dt>
-<dd>The hypothesis that social systems displace disorder rather than resolve it. On this hypothesis, every observable order presupposes disorder exported elsewhere; AWP-01 specifies that it does not postulate that everything is transfer, but that every observable stability deserves to be questioned about its offloaded costs. This displacement operates along three axes — spatial, temporal, social — which, in many configurations, combine and reinforce one another. Hypothesis proposed by the economist Stéphane Lalut (book <em>ANTHROPIE</em>, 2025; AWP series, 2026). See <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a></dd>
+<dd>The hypothesis that social systems displace disorder rather than resolve it. On this hypothesis, every local order is built by exporting its disorder elsewhere; AWP-01 specifies that it does not postulate that everything is transfer, but that every observable stability deserves to be questioned about its offloaded costs. This displacement operates along three axes — spatial, temporal, social — which, in many configurations, combine and reinforce one another. Hypothesis proposed by the economist Stéphane Lalut (book <em>ANTHROPIE</em>, 2025; AWP series, 2026). See <a href="/en/quest-ce-que-lanthropie/">What is anthropy?</a></dd>
 </div>
 
 <div class="glossaire-entry" id="anthropic-transfer">

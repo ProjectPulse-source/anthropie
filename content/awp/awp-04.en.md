@@ -2,14 +2,14 @@
 title: "Energy transition or entropic transfer?"
 awp_number: "AWP-04"
 date: 2026-04-06
-lastmod: 2026-11-05
+lastmod: 2026-11-18
 draft: false
 outputs:
   - HTML
   - BibTeX
   - RIS
   - EndNote
-description: "Does the energy transition reduce disorder or merely displace it? This working paper examines anthropic mechanisms in contemporary energy policies: externalised extraction, deferred waste, unaccounted rebound effects."
+description: "Does the energy transition reduce disorder or merely displace it? This working paper examines anthropic mechanisms in contemporary energy policies: disorder displaced across space (from fossil fuels to mining) and across time (towards technological debt), masked by carbon accounting that ignores imports; the rebound effect, or disorder that returns."
 doi_zenodo: "10.5281/zenodo.19439921"
 wikidata_qid: "Q139771992"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
 url_zenodo: "https://zenodo.org/records/19439921"
@@ -44,9 +44,9 @@ The energy transition is typically presented as a reduction of disorder: fewer e
 
 The shift to renewable energies rests on massive mining extraction — lithium, cobalt, rare earths — located primarily in the Global South. Environmental disorder is not eliminated: it is spatially transferred, from centres of consumption to zones of extraction.
 
-## Three transfer mechanisms
+## A double transfer, and a return
 
-This text identifies three anthropic mechanisms at work in the energy transition.
+This text describes a double transfer, spatial and temporal, masked by carbon accounting that measures territorial emissions without counting imports; the rebound effect is the disorder that returns.
 
 Externalised extraction transfers the environmental and social cost of "clean" energy production to territories and populations far from the beneficiaries. Lithium mines in Chile, cobalt operations in the Democratic Republic of the Congo produce the disorder that European solar panels and batteries render invisible.
 

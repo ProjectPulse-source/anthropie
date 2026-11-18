@@ -1,10 +1,11 @@
 ---
 date: 2026-04-02  # premier commit de la page (git log --follow)
-lastmod: 2026-11-16
+lastmod: 2026-11-18
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Correction : l'entrée « Boucle anthropique » donne désormais la définition d'AWP-07 (cinq états, du déplacement à la bifurcation) ; le retour vers la cognition en devient un cas, propre au métaprogramme numérique."}
   - {date: 2026-11-05, texte: "Corrections : effet Jevons (cas extrême de l'effet rebond), effet boomerang (crédit à Ulrich Beck, bilan non affirmé), registres de la dette (un déplacement possible, à établir cas par cas)."}
   - {date: 2026-11-16, texte: "Relecture des sources : définitions alignées sur les working papers déposés (dont la saturation, et la boucle anthropique selon la version révisée d'AWP-07) ; « externalisation entropique » présentée comme une recherche que l'hypothèse oriente, sans en préjuger le résultat."}
+  - {date: 2026-11-18, texte: "Entrée « Anthropie » alignée sur la définition canonique d'AWP-01 (§ 1.2)."}
 title: "Glossaire"
 og_title: "Glossaire — les notions, définies et sourcées — S. Lalut"
 description: "Glossaire des termes clés du cadre anthropique."
@@ -74,7 +75,7 @@ L'anthropie repose sur une hypothèse unique — les systèmes sociaux déplacen
 
 <div class="glossaire-entry" id="anthropie">
 <dt>Anthropie</dt>
-<dd>Hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Dans cette hypothèse, tout ordre observable suppose un désordre exporté ailleurs&nbsp;; AWP-01 précise qu'elle ne postule pas que tout est transfert, mais que toute stabilité observable mérite d'être interrogée sur ses coûts déportés. Ce déplacement opère selon trois axes — spatial, temporel, social — qui, dans de nombreuses configurations, se combinent et se renforcent mutuellement. Hypothèse proposée par l'économiste Stéphane Lalut (livre <em>ANTHROPIE</em>, 2025&nbsp;; série AWP, 2026). Voir <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a></dd>
+<dd>Hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Dans cette hypothèse, tout ordre local se construit en exportant son désordre ailleurs&nbsp;; AWP-01 précise qu'elle ne postule pas que tout est transfert, mais que toute stabilité observable mérite d'être interrogée sur ses coûts déportés. Ce déplacement opère selon trois axes — spatial, temporel, social — qui, dans de nombreuses configurations, se combinent et se renforcent mutuellement. Hypothèse proposée par l'économiste Stéphane Lalut (livre <em>ANTHROPIE</em>, 2025&nbsp;; série AWP, 2026). Voir <a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?</a></dd>
 </div>
 
 <div class="glossaire-entry" id="transfert-anthropique">

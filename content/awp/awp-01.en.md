@@ -3,7 +3,7 @@ title: "What is anthropy? Principles of a hypothesis"
 awp_number: "AWP-01"
 accueil_awp: true  # repère montré sur l'accueil, avec le dernier paru (04/11/2026)
 date: 2026-04-05
-lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-18  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML
@@ -19,7 +19,7 @@ jel_codes: ["B41", "D02", "Z13"]
 keywords: ["anthropy", "social disorder", "entropic transfer", "social systems", "institutional economics"]
 faq:
   - question: "What is anthropy in social science?"
-    answer: "Anthropy is the principle that social systems displace disorder rather than resolve it. Every observable order in a system implies disorder exported elsewhere — spatially, temporally, or socially."
+    answer: "Anthropy is the principle that social systems displace disorder rather than resolve it. Every local order is built by exporting its disorder elsewhere — across space, across time, or towards other social groups. This is not fatalism but an analytical grid."
   - question: "How does anthropy differ from entropy?"
     answer: "Anthropy is not a physical metaphor. It designates an observable institutional mechanism: the deliberate or structural displacement of disorder between actors, territories, and generations."
   - question: "Is anthropy a theory or a hypothesis?"

@@ -5,10 +5,11 @@ og_image_alt: "Carte de partage : « L’effet rebond » et son schéma"
 description: "L'effet rebond désigne le mécanisme par lequel une partie du gain d'efficacité énergétique est reprise par une hausse de l'usage ; quand la reprise dépasse le gain, la consommation totale augmente. Décrit par William Stanley Jevons en 1865, il reste mal intégré aux scénarios énergétiques."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
-lastmod: 2026-11-16
+lastmod: 2026-11-18
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Correction de la définition : l'effet rebond reprend une partie du gain d'efficacité ; la consommation totale n'augmente que lorsque la reprise dépasse le gain (paradoxe de Jevons)."}
   - {date: 2026-11-16, texte: "Relecture des sources : ne pas l'intégrer aux évaluations risque de surestimer les économies attendues (au lieu de « systématiquement ») ; renvoi exact au GIEC (groupe III, chapitre 5, 2022) ; phrase prêtée à Fressoz retirée, absente des sources lues."}
+  - {date: 2026-11-18, texte: "FAQ : le rebond n'est pas toujours à éviter ; dans de nombreux pays en développement, il peut accélérer l'accès à l'énergie moderne (GIEC, groupe III, chapitre 5, 2022)."}
 og_title: "L'effet rebond (paradoxe de Jevons) — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que l'effet rebond ?"
@@ -26,7 +27,7 @@ faq:
   - question: "L'effet rebond vaut-il en dehors de l'énergie ?"
     answer: "La question est discutée au-delà de l'énergie, partout où un gain d'efficacité abaisse le coût d'un usage : temps de transport (les gains de vitesse ont accompagné l'allongement des distances plutôt que le raccourcissement des trajets), numérique (le GIEC y signale un risque de rebond), matériaux. L'ampleur et le mécanisme y sont moins établis que pour l'énergie."
   - question: "Peut-on « corriger » l'effet rebond ?"
-    answer: "On peut le contenir — en couplant l'efficacité à des contraintes de volume — mais pas l'abolir par la seule technique : il découle des prix, pas d'une erreur des consommateurs. Le premier pas est de le compter, ce que les bilans prévisionnels des politiques d'efficacité omettent encore souvent."
+    answer: "On peut le contenir — en couplant l'efficacité à des contraintes de volume — mais pas l'abolir par la seule technique : il découle des prix, pas d'une erreur des consommateurs. Ni toujours le vouloir : dans de nombreux pays en développement, note le GIEC, le rebond peut accélérer l'accès à une énergie moderne abordable et à un minimum de consommation par habitant (rapport du groupe III, chapitre 5, 2022). Le premier pas est de le compter, ce que les bilans prévisionnels des politiques d'efficacité omettent encore souvent."
 fiche:  # encadré « La notion en bref » (shortcode notion-fiche) : reprend la page, aucun fait nouveau
   lignes:
     - t: "Définition"

@@ -3,11 +3,11 @@ title: "Qu'est-ce que l'anthropie ?"
 og_image: "images/og-notion-anthropie.jpg"
 og_image_alt: "Carte de partage : « Qu’est-ce que l’anthropie ? » et son schéma"
 date: 2026-04-03  # premiere mise en ligne possible sur stephane-lalut.com (CNAME acf728c, 03/04/2026) ; premiere capture publique Wayback le 16/04/2026 (audit du 05/11/2026)
-lastmod: 2026-11-13  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-18  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent."
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
-    answer: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement. AWP-01 précise qu'elle ne postule pas que tout est transfert, mais que toute stabilité observable mérite d'être interrogée sur ses coûts déportés."
+    answer: "L'anthropie, au sens développé par l'économiste Stéphane Lalut dans ANTHROPIE (2025), est l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre local se construit en exportant son désordre ailleurs — dans l'espace, dans le temps ou vers d'autres groupes sociaux. AWP-01 précise qu'elle ne postule pas que tout est transfert, mais que toute stabilité observable mérite d'être interrogée sur ses coûts déportés."
   - question: "Quelle est la différence entre anthropie et entropie ?"
     answer: "L'entropie relève de la physique et de la thermodynamique. L'anthropie désigne un mécanisme social et institutionnel : la manière dont des systèmes humains produisent de l'ordre local en déplaçant le désordre hors du périmètre visible."
   - question: "Quelle est la différence entre anthropie et Anthropocène ?"
@@ -38,7 +38,7 @@ faq:
 proposee_par: "Cette hypothèse est proposée par l'économiste Stéphane Lalut (livre *ANTHROPIE*, 2025) et formalisée dans les *Anthropie Working Papers* (2026)."
 frontiere:
   affirme:
-    - texte: "Tout ordre observable dans un système social suppose un désordre exporté ailleurs : vers d'autres lieux, d'autres temps ou d'autres groupes sociaux."
+    - texte: "Tout ordre local se construit en exportant son désordre ailleurs : dans l'espace, dans le temps ou vers d'autres groupes sociaux."
       ancre: "définition"
       section: "Définition"
     - texte: "Ce transfert a un mécanisme que l'on peut nommer : qui crée l'ordre, qui absorbe le désordre, et ce qui rend le transfert invisible."
@@ -68,6 +68,7 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
   - {date: 2026-11-07, texte: "Ajout : une réponse sur ce qui distingue l'anthropie du cost-shifting de K. W. Kapp, jusqu'ici dans la seule version anglaise."}
   - {date: 2026-11-06, texte: "Ajout : une section sur l'adjectif « anthropique », entre son sens courant (d'origine humaine) et son emploi propre au cadre ; l'auteur est nommé dans la définition reprise."}
   - {date: 2026-11-05, texte: "Correction : la réponse sur la dette publique présentait comme un fait ce que le site traite comme une hypothèse ; elle dit désormais que le déplacement de charges n'est ni automatique ni nécessairement défavorable, et où l'hypothèse est examinée. L'Anthropocène est une époque géologique proposée, non retenue comme unité formelle en 2024. La date de publication affichée était fausse (première mise en ligne : avril 2026)."}
+  - {date: 2026-11-18, texte: "Définition alignée sur la définition canonique d'AWP-01 (§ 1.2) : tout ordre local se construit en exportant son désordre ailleurs ; grille d'analyse, non fatalisme."}
 ressource:  # index /ressources/ : en tête du cadre d'analyse (arbitrage PRO-20261025-225715, 25/10/2026) ; garde son entrée de menu
   type: ["notion"]
   conception: "docs/conception/quest-ce-que-lanthropie.md"  # fiche de conception (regle 12), reprise du lot notions-a du 13/11/2026
@@ -81,7 +82,7 @@ ressource:  # index /ressources/ : en tête du cadre d'analyse (arbitrage PRO-20
 
 ## Définition
 
-Tout ordre observable dans un système social — qu'il s'agisse d'une institution, d'un territoire, d'une organisation ou d'une économie — suppose un désordre exporté ailleurs&nbsp;: vers d'autres lieux, vers d'autres temps ou vers d'autres groupes sociaux.
+Selon sa définition canonique ([AWP-01](/awp/awp-01/), § 1.2), tout ordre local — qu'il s'agisse d'une institution, d'un territoire, d'une organisation ou d'une économie — se construit en exportant son désordre ailleurs&nbsp;: dans l'espace, dans le temps ou vers d'autres groupes sociaux. Ce n'est pas un fatalisme, mais une grille d'analyse destinée à révéler les transferts invisibles de coûts qui sous-tendent chaque stabilité.
 
 L'anthropie ne prétend pas constituer une théorie achevée. Il s'agit d'une hypothèse de travail à valeur heuristique&nbsp;: elle permet de poser des questions que d'autres cadres analytiques ne formulent pas, ou qu'ils tendent à neutraliser. Elle ne postule pas que tout est transfert&nbsp;: elle en tire une règle d'enquête — devant un ordre stable, chercher où va le désordre avant de conclure qu'il est résolu —, bornée par une règle d'arrêt qui dit quand conclure qu'un désordre a été résorbé sur place, aucun ailleurs n'en recevant plus qu'un seuil fixé d'avance ([AWP-07](/awp/awp-07/), proposition P1).
 

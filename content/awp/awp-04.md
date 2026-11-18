@@ -2,14 +2,14 @@
 title: "Transition énergétique ou transfert entropique ?"
 awp_number: "AWP-04"
 date: 2026-03-10
-lastmod: 2026-11-05
+lastmod: 2026-11-18
 draft: false
 outputs:
   - HTML
   - BibTeX
   - RIS
   - EndNote
-description: "La transition énergétique réduit-elle le désordre ou le déplace-t-elle ? Ce working paper examine les mécanismes anthropiques dans les politiques énergétiques contemporaines : extraction externalisée, déchets reportés, effet rebond non comptabilisé."
+description: "La transition énergétique réduit-elle le désordre ou le déplace-t-elle ? Ce working paper examine les mécanismes anthropiques dans les politiques énergétiques contemporaines : déplacement du désordre dans l'espace (du fossile vers le minier) et dans le temps (vers la dette technologique), masqué par une comptabilité carbone qui ignore les importations ; l'effet rebond, ou le désordre qui revient."
 doi_zenodo: "10.5281/zenodo.19269244"
 wikidata_qid: "Q139771992"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
 url_zenodo: "https://zenodo.org/records/19269244"
@@ -43,9 +43,9 @@ La transition énergétique est habituellement présentée comme une réduction 
 
 Le passage aux énergies renouvelables repose sur une extraction minière massive — lithium, cobalt, terres rares — localisée principalement dans les pays du Sud global. Le désordre environnemental n'est pas éliminé&nbsp;: il est transféré spatialement, des centres de consommation vers les zones d'extraction.
 
-## Trois mécanismes de transfert
+## Un double transfert, et un retour
 
-Ce texte identifie trois mécanismes anthropiques à l'œuvre dans la transition énergétique.
+Ce texte décrit un double transfert, spatial et temporel, que masque une comptabilité carbone mesurant les émissions territoriales sans compter les importations&nbsp;; l'effet rebond y est le désordre qui revient.
 
 L'extraction externalisée transfère le coût environnemental et social de la production d'énergie «&nbsp;propre&nbsp;» vers des territoires et des populations éloignés des bénéficiaires. Les mines de lithium du Chili, les exploitations de cobalt en République démocratique du Congo produisent le désordre que les panneaux solaires et les batteries européennes rendent invisible.
 

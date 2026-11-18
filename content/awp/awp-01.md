@@ -3,7 +3,7 @@ title: "Qu'est-ce que l'anthropie ? Principes d'une hypothèse"
 awp_number: "AWP-01"
 accueil_awp: true  # repère montré sur l'accueil, avec le dernier paru (04/11/2026)
 date: 2026-02-01
-lastmod: 2026-07-05  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-18  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 draft: false
 outputs:
   - HTML
@@ -19,7 +19,7 @@ keywords: ["anthropie", "désordre social", "transfert entropique", "systèmes s
 keywords_en: ["anthropy", "social disorder", "entropic transfer", "social systems", "institutional economics"]
 faq:
   - question: "Qu'est-ce que l'anthropie en sciences sociales ?"
-    answer: "L'anthropie est le principe selon lequel les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre observable dans un système suppose un désordre exporté ailleurs — spatialement, temporellement ou socialement."
+    answer: "L'anthropie est le principe selon lequel les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent. Tout ordre local se construit en exportant son désordre ailleurs — dans l'espace, dans le temps ou vers d'autres groupes sociaux. Ce n'est pas un fatalisme, mais une grille d'analyse."
   - question: "Comment l'anthropie se distingue-t-elle de l'entropie ?"
     answer: "L'anthropie n'est pas une métaphore physique. Elle désigne un mécanisme institutionnel observable : le déplacement délibéré ou structurel du désordre entre acteurs, territoires et générations."
   - question: "L'anthropie est-elle une théorie ou une hypothèse ?"

@@ -6,10 +6,11 @@ url: /en/rebound-effect/
 description: "The rebound effect is the mechanism by which part of an energy-efficiency gain is taken back by increased use; when the take-back exceeds the gain, total consumption rises. Described by William Stanley Jevons in 1865, it remains poorly built into energy scenarios."
 sans_chapo: true  # le premier paragraphe dit déjà la description (07/11/2026)
 date: 2026-07-24
-lastmod: 2026-11-16
+lastmod: 2026-11-18
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Corrected definition: the rebound effect takes back part of the efficiency gain; total consumption rises only when the take-back exceeds the gain (Jevons paradox)."}
   - {date: 2026-11-16, texte: "Source review: leaving it out of assessments risks overestimating expected savings (instead of “systematically”); exact reference to the IPCC (Working Group III, chapter 5, 2022); a sentence attributed to Fressoz removed, absent from the sources read."}
+  - {date: 2026-11-18, texte: "FAQ: rebound is not always to be avoided; in many developing countries it can speed up access to modern energy (IPCC, Working Group III, chapter 5, 2022)."}
 og_title: "The rebound effect (Jevons paradox) — definition and sources — S. Lalut"
 faq:
   - question: "What is the rebound effect?"
@@ -27,7 +28,7 @@ faq:
   - question: "Does the rebound effect apply outside energy?"
     answer: "The question is debated beyond energy, wherever an efficiency gain lowers the cost of a use: transport time (speed gains went with longer distances rather than shorter journeys), digital technology (the IPCC flags a risk of rebound there), materials. Size and mechanism are less established there than for energy."
   - question: "Can the rebound effect be \"corrected\"?"
-    answer: "It can be contained — by coupling efficiency with volume constraints — but not abolished by technology alone: it follows from prices, not from a consumer error. The first step is to count it, which the forecast assessments of efficiency policies still often omit."
+    answer: "It can be contained — by coupling efficiency with volume constraints — but not abolished by technology alone: it follows from prices, not from a consumer error. Nor is it always to be wished away: in many developing countries, the IPCC notes, rebound can speed up access to affordable modern energy and to a minimum level of per capita energy consumption (Working Group III report, chapter 5, 2022). The first step is to count it, which the forecast assessments of efficiency policies still often omit."
 fiche:  # "The notion at a glance" box (notion-fiche shortcode): restates the page, no new fact
   lignes:
     - t: "Definition"
