@@ -225,6 +225,11 @@ def gardes(c):
     tot, lx = dic["total"], dic["lexicales"]
     autres = {a: tot[a] - lx[a] for a in tot}
     # chronologie
+    # Garde de transition (contrôle de géométrie de la frise, 18/11/2026) : le statut de PIRLS 2016-2021 vient du gras de
+    # la NI 23.21 (« significativement supérieur à 2021 »), qui ne signale qu'une baisse ; une hausse significative serait
+    # tracée en gris sans alerte. Condition de mort : statut lu d'un indicateur de significativité dans les deux sens.
+    g(max(k for k in c["pirls"] if k.isdigit()) == "2021", "PIRLS sans cycle postérieur à 2021 (sinon, lire la"
+      " significativité dans les deux sens avant de tracer)")
     g(c["seuil"] == 2013 and c["sm"][2011] < 25, "« en 2013, plus de la moitié des 12-17 ans » ; « en 2011, moins d'un quart »")
     g(dic["hausse_significative_1987_2007"] and 2007 < c["seuil"], "dictée : hausse significative des erreurs de 1987 à 2007, « avant le smartphone »")
     g(lc["stable_1987_1997"] and lc["baisse_significative_1997_2007"] and lc["score"]["2007"] < lc["score"]["1997"] <= lc["score"]["1987"] + 0.05,
@@ -463,7 +468,7 @@ FIG = {
     "chronologie": dict(
         titre="La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement",
         source="DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
-        note="Seul le sens de l'évolution est montré, pas son ampleur. Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l'auteur ; tirets : sans test. PISA, compréhension de l'écrit : recul de 2000 à 2006 non\u00a0tracé. Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu'en 2008, non\u00a0tracée.",
+        note="Seul le sens de l'évolution est montré, pas son ampleur. Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l'auteur ; tirets : sans test. Ronds : bornes des intervalles, pas toutes les vagues d'enquête. PISA, compréhension de l'écrit : recul de 2000 à 2006 non\u00a0tracé. Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu'en 2008, non\u00a0tracée.",
         montre="Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA, revenu en 2012 à son niveau de 2000, baisse significativement ensuite, et les évaluations passées en classe ne suivent pas toutes cette pente."),
     "dictee": dict(
         titre="La même dictée en CM2 : nombre moyen d'erreurs",
@@ -617,7 +622,7 @@ def fig_chronologie(c, A):
     x = 0
     for (col, plein), lib in ((( ORANGE, True), "recul significatif"), ((GRIS, True), "sans évolution significative"),
                               ((BLEU, True), "hausse significative"), ((ORANGE, False), "tirets : sens observé, sans test publié")):
-        e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="4"%s/>' % (x, yl, x + 22, yl, col, "" if plein else ' stroke-dasharray="5 3"'))
+        e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="%s"%s/>' % (x, yl, x + 22, yl, col, "4" if plein else "3", "" if plein else ' stroke-dasharray="5 3"'))  # trait des tracés
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x + 28, yl + 4, INK2, esc(lib)))
         x += 34 + int(5.2 * 11 / 10 * len(lib))   # 5,2 px par caractère à 10 px, portés à la police de 11 (7 px sortaient la 4e entrée du cadre, mesure du 11/10/2026)
     return pied(e, h + 2, t["source"], t["note"])
@@ -772,23 +777,25 @@ def fig_plaisir_m(c, A):
 
 
 def fig_chronologie_m(c, A):
-    """Deux panneaux à axes propres : les mesures qui remontent avant 2009, puis les mesures récentes (axe 2008-2026)."""
+    """Deux panneaux à axes propres : les mesures commencées avant le repère (axe 1985-2026), puis celles commencées depuis (axe calculé)."""
     t = FIG["chronologie"]
     L = lignes_chrono(c)
     mots = {(ORANGE, True): "recul significatif", (BLEU, True): "hausse significative", (GRIS, True): "sans évolution significative",
             (ORANGE, False): "recul, sans test publié", (BLEU, False): "hausse, sans test publié"}
     desc = "Frise en deux panneaux, une ligne par mesure, sens de chaque intervalle ; repère : %s, plus de la moitié des 12-17 ans équipés d'un smartphone. " % A["smart_seuil"] + " ; ".join(
         "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + ". " + t["note"].split("tirets : sans test. ", 1)[1]
-    longues = [r for r in L if min(u for u, *_ in r[2]) < 2009]
-    recentes = [r for r in L if min(u for u, *_ in r[2]) >= 2009]
+    longues = [r for r in L if min(u for u, *_ in r[2]) < c["seuil"]]  # partage au repère (forme, 18/11/2026)
+    recentes = [r for r in L if min(u for u, *_ in r[2]) >= c["seuil"]]
+    a0_rec = int(min(c["seuil"], min(min(u for u, *_ in r[2]) for r in recentes))) - 1  # un an avant la première borne ou le repère
     e, y = tete_m("lan-cm", "Quand chaque mesure de la langue recule, progresse ou n'évolue pas significativement", desc, 0)
     y += 8
     for col, plein, lib in ((ORANGE, True, "recul significatif"), (GRIS, True, "sans évolution significative"),
-                            (BLEU, True, "hausse significative"), (ORANGE, False, "tirets : sens observé, sans test")):
+                            (BLEU, True, "hausse significative"), (ORANGE, False, "tirets : sens observé, sans test publié")):
         y += 20
-        e.append('<line x1="0" y1="%d" x2="24" y2="%d" stroke="%s" stroke-width="5"%s/>' % (y - 5, y - 5, col, "" if plein else ' stroke-dasharray="6 3"'))
+        e.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="%s"%s/>' % (y - 5, 24 if plein else 18, y - 5, col, "6" if plein else "4.5", "" if plein else ' stroke-dasharray="7 4"'))  # trait des tracés ; tirets sur 18 : deux tirets entiers
         e.append('<text x="32" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, lib))
-    for titre_p, rows, a0, a1, pas_ax in (("Les séries longues", longues, 1985, 2026, 10), ("Les séries récentes", recentes, 2008, 2026, 5)):
+    for titre_p, rows, a0, a1, pas_ax, repere in (("Mesures commencées avant %s" % A["smart_seuil"], longues, 1985, 2026, 10, True),
+                                                  ("Mesures commencées depuis %s" % A["smart_seuil"], recentes, a0_rec, 2026, 5, False)):
         y += 34
         e.append('<text x="0" y="%d" font-size="15.5" font-weight="600" fill="%s">%s</text>' % (y, INK, titre_p))
         y += 10
@@ -814,7 +821,7 @@ def fig_chronologie_m(c, A):
         for a in range(a0 + (pas_ax - a0 % pas_ax) % pas_ax, a1 + 1, pas_ax):
             e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">%d</text>' % (sx(a), y + 18, FS_MIN, MUTED, a))
         y += 24
-        if titre_p == "Les séries longues":  # arbitrage multi-angle du 10/10 : dire ce que 2013 désigne
+        if repere:  # arbitrage multi-angle du 10/10 : dire ce que 2013 désigne
             for k, ligne in enumerate(("%s : plus de la moitié des 12-17 ans" % A["smart_seuil"], "ont un smartphone (trait vertical)")):
                 e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y + 16 + 18 * k, FS_MIN, INK2, ligne))
             y += 34

@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 696b0269 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 455ee018 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les élèves maîtrisent-ils moins bien la langue française ?
 Pas d’un bloc.
 À la même dictée de CM2, les élèves faisaient 10,7 erreurs en 1987 et 19,4 en 2021 ; mais sur ces 8,7 erreurs supplémentaires, 0,9 portent sur l’orthographe des mots eux-mêmes.
@@ -125,7 +125,7 @@ En fin de collège, le score CEDRE de l’ensemble des élèves n’évolue pas 
 Pourtant, celui de l’éducation prioritaire (les collèges des réseaux REP et REP+, qui scolarisent une forte part d’élèves défavorisés et reçoivent davantage de moyens) baisse significativement (233 puis 225), comme celui des garçons (247 puis 241).
 Le public hors éducation prioritaire n’évoluant pas significativement, l’écart entre les deux passe, selon la DEPP, de 17 à 22 points, et celui entre filles et garçons augmente aussi.
 Mais la DEPP ne publie pas de test de l’évolution de ces écarts eux-mêmes : on ne peut donc pas dire qu’ils se creusent significativement.
-Selon le milieu social des collèges, la DEPP trouve un écart du même ordre qu’en 2015 : 30 points entre le quart le plus favorisé et le moins favorisé, en 2015 comme en 2021, avec une baisse légère et non significative dans chaque quart.
+Selon le milieu social des collèges, la DEPP trouve un écart du même ordre qu’en 2015 : 30 points entre le quart le plus favorisé et le moins favorisé, en 2015 comme en 2021, avec une baisse légère et non significative dans chaque quart ; là non plus, aucun test de l’évolution de l’écart n’est publié.
 En fin d’école, la hausse de 2021 vient surtout du public hors éducation prioritaire ; l’éducation prioritaire n’évolue pas significativement.
 À l’entrée du lycée, près de la moitié des élèves de seconde professionnelle déclarent ne pas lire pour leur plaisir.
 Comme en fin de collège, une moyenne qui ne baisse pas significativement peut recouvrir le recul significatif de certains groupes.
@@ -163,7 +163,7 @@ Pour les livres anciens numérisés par la BnF, les conditions de Gallica ne ren
 Un cas mesurable à petite échelle.
 Le Club des Cinq existe en français dans trois textes : une traduction parue à partir de 1955, une seconde dans les années 1970, et une traduction revue publiée en 2006.
 Les travaux universitaires retrouvés, un poster de master et un article de traductologie, les comparent sans les compter : le passé simple y cède partout la place au présent, des objets sont modernisés, des valeurs jugées discriminatoires sont modifiées ou supprimées, de nombreuses descriptions disparaissent (Maisonneuve, 2014 ; Fournié-Chaboche, 2024).
-Si la langue en sort simplifiée, et de combien, aucune mesure publiée ne le dit.
+Si la langue en sort simplifiée, et de combien, aucune mesure publiée retrouvée ne le dit.
 Une telle mesure ne suppose pas de numériser les livres : la longueur des phrases, la part de chaque temps verbal ou celle des dialogues se relèvent à la main sur des exemplaires achetés, et seuls les comptes se publient.
 Elle demande en revanche une précaution : ne comparer que les passages conservés d’une version à l’autre effacerait une partie des changements, puisque des descriptions entières ont disparu ; les suppressions se comptent à part.
 Plusieurs recherches combleraient ces manques :
@@ -182,16 +182,18 @@ Ce qu’il faut retenir
 La question se pose souvent comme celle d’un déclin d’ensemble, centré sur les mots et précipité par les écrans.
 Les mesures dessinent autre chose.
 Ce qui est établi.
-La plus longue mesure de compétence, une même dictée depuis 1987, montre une hausse des erreurs qui tient pour l’essentiel à autre chose que l’orthographe des mots, à la grammaire d’abord sur la période où le détail existe.
-Cette hausse s’est engagée avant la généralisation du smartphone, comme le recul de la lecture en fin d’école et du temps de lecture pour le plaisir ; le smartphone ne peut donc pas être la seule cause de son apparition.
+La plus longue des mesures de compétence réunies ici, une même dictée de CM2 depuis 1987, montre une hausse des erreurs qui tient pour l’essentiel à autre chose que l’orthographe des mots, à la grammaire d’abord sur la période où le détail existe.
+Cette hausse s’est engagée avant la généralisation du smartphone, comme le recul de la lecture en fin d’école et du temps de lecture pour le plaisir à 15 ans ; cette généralisation ne peut donc pas être la seule cause de leur apparition.
 Ce qui est à différencier.
-À 15 ans, PISA recule depuis 2012, sans que les évaluations de l’école et du collège suivent toutes cette pente ; le goût de lire recule de 2009 à 2018 ; en fin de collège, l’éducation prioritaire recule quand l’ensemble ne bouge pas significativement.
+À 15 ans, PISA recule depuis 2012, sans que les évaluations de l’école et du collège, sur des périodes qui recouvrent en partie cette baisse, suivent toutes cette pente.
+Au même âge, le goût de lire recule de 2009 à 2018, quand le temps de lecture pour le plaisir n’évolue plus significativement.
+En fin de collège, de 2015 à 2021, l’éducation prioritaire recule quand l’ensemble n’évolue pas significativement ; aucun test publié ne dit si son écart avec le public hors éducation prioritaire se creuse significativement.
 Ce qui reste ouvert.
-L’écart selon le milieu social des collèges reste, selon la DEPP, du même ordre de grandeur qu’en 2015, sans test publié de son évolution.
-Quant au vocabulaire, que la question vise d’abord, seules des séries récentes de l’école primaire le suivent, sans test publié de leurs évolutions, qui ne vont pas dans le même sens.
+D’après la DEPP, l’écart selon le milieu social des collèges est en 2021 du même ordre de grandeur qu’en 2015, sans test publié de son évolution.
+Quant au vocabulaire, que la question vise d’abord, des séries récentes le suivent à l’école primaire, sans test publié de leurs évolutions, qui ne vont pas dans le même sens.
 Ce qui reste à rechercher.
-Aucune série ne permet de suivre l’évolution du vocabulaire au collège ni au lycée ; quant à une éventuelle simplification des textes donnés à lire, aucune mesure publiée n’a été retrouvée.
-Les recherches qui combleraient ces manques sont décrites plus haut.
+Aucune série publique recensée ne permet de suivre l’évolution du vocabulaire au collège ni au lycée.
+Pour la France, aucune mesure publiée d’une éventuelle simplification des textes donnés à lire n’a été retrouvée ; les recherches qui combleraient cette lacune sont décrites plus haut.
 Là où le diagnostic est le plus souvent proclamé, la mesure manque ; là où elle existe, elle oblige à le préciser : quelles compétences reculent, chez quels élèves, et depuis quand.
 Questions fréquentes
 Les élèves font-ils plus de fautes qu’avant ?
@@ -270,6 +272,7 @@ Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le
 Précaution d’interprétation.
 Seul le sens de l’évolution est montré, pas son ampleur.
 Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l’auteur ; tirets : sans test.
+Ronds : bornes des intervalles, pas toutes les vagues d’enquête.
 PISA, compréhension de l’écrit : recul de 2000 à 2006 non tracé.
 Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu’en 2008, non tracée.
 DEPP (Notes d’Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC
@@ -305,7 +308,7 @@ Lalut, Stéphane (2026). « Les élèves maîtrisent-ils moins bien la langue fr
 Copier la citation
 En trois phrases
 La langue des élèves ne recule pas d’un bloc : à la même dictée de CM2, les erreurs passent de 10,7 à 19,4 entre 1987 et 2021 ; sur ces 8,7 erreurs supplémentaires, 0,9 portent sur l’orthographe des mots ; le détail par type d’erreur n’existe que pour 1987-2007, où la hausse est surtout grammaticale.
-Plusieurs reculs étaient déjà engagés avant la généralisation du smartphone, qui ne peut donc pas être la seule cause de leur apparition ; PISA, revenu en 2012 à son niveau de 2000, baisse ensuite, quand d’autres évaluations, à l’école et en fin de collège, ne suivent pas toutes cette pente.
+Plusieurs reculs étaient déjà engagés avant la généralisation du smartphone : elle ne peut donc pas être la seule cause de leur apparition ; PISA, revenu en 2012 à son niveau de 2000, baisse ensuite ; sur des périodes qui recouvrent en partie ce recul, les autres évaluations, à l’école et en fin de collège, ne suivent pas toutes cette pente.
 Au collège et au lycée, aucune des séries publiques recensées ne permet de suivre l’évolution du vocabulaire des élèves.
 Copier le résumé
 Les données
