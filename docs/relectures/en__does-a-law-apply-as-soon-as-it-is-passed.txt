@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/does-a-law-apply-as-soon-as-it-is-passed/, build de cc5dc5c9 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Does a French law apply as soon as it is passed?
 Not by the vote alone.
@@ -397,6 +397,8 @@ The Senate’s series does not allow us to say so from end to end.
 The corpus shows six successive definitions since 2002-2003, which differ in cut-off date, scope of laws and treatment of deferred and optional measures: the segments do not read as a single series.
 The Senate nevertheless reads a trend across its own breaks: “le Sénat assiste depuis 2018 à une réduction globale et constante du taux d’application moyen des lois qu’il adopte” [our translation: “since 2018 the Senate has witnessed an overall and steady decline in the average implementation rate of the laws it adopts”].
 Its series only allows this reading to be tested segment by segment: 2024-2025 falls under a different definition from the previous sessions.
+Over the segment where the definition stays the same, from 2017-2018 to 2023-2024, the series confirms the decline, from 78% to 59%.
+This decline is not uninterrupted, however: the rate rises from 57% in 2020-2021 to 65% in 2021-2022.
 Implementation rates of laws published by the French Senate, as published.
 The segments correspond to different definitions: do not join them.
 The open circle marks the 2019-2020 figure given by the following report.

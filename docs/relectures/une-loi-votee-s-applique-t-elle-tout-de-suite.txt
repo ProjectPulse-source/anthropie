@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /une-loi-votee-s-applique-t-elle-tout-de-suite/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /une-loi-votee-s-applique-t-elle-tout-de-suite/, build de cc5dc5c9 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Une loi votée s’applique-t-elle tout de suite ?
 Pas du seul fait du vote.
@@ -377,6 +377,8 @@ La série du Sénat ne permet pas de le dire d’un bout à l’autre.
 Le corpus fait apparaître six définitions successives depuis 2002-2003, qui diffèrent par la date d’arrêté, le champ des lois et le traitement des mesures différées et éventuelles : les segments ne se lisent pas comme une seule série.
 Le Sénat lit pourtant une tendance à travers ses propres ruptures : « le Sénat assiste depuis 2018 à une réduction globale et constante du taux d’application moyen des lois qu’il adopte ».
 Sa série ne permet de confronter cette lecture que segment par segment : 2024-2025 relève d’une autre définition que les sessions précédentes.
+Sur le segment de même définition, de 2017-2018 à 2023-2024, la série confirme la baisse, de 78 % à 59 %.
+Cette baisse n’est toutefois pas ininterrompue : le taux remonte de 57 % en 2020-2021 à 65 % en 2021-2022.
 Taux d’application des lois publiés par le Sénat, tels que publiés.
 Les segments correspondent à des définitions différentes : ne pas les relier.
 Le cercle vide marque la valeur de 2019-2020 donnée par le rapport suivant.

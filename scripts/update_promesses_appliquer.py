@@ -399,6 +399,20 @@ SERIE = [
     ("2023-2024", 59, "r24-710|3", "et s'établit à 59 %", 5),
     ("2024-2025", 66, "r25-802|7", "Taux d'application global des lois 66 % (+ 4 points)", 6),
 ]
+# 18/11/2026 (A_ARBITRER.md du lot promesses-b, § 1, point 5, décision du § D) : la lecture du Sénat (« réduction globale
+# et constante » du taux depuis 2018) s'éprouve sur sa propre série, dans le segment de même définition. La page dit
+# l'accord (la baisse) et l'écart (une baisse qui n'est pas ininterrompue ; le « constante » du Sénat, ambigu, n'est
+# pas réfuté : arbitrage du paquet n° 07) : la garde A12 arrête si l'un ou l'autre cesse d'être vrai.
+SEG_LECTURE = [x for x in SERIE if x[4] == 5]
+if not (SEG_LECTURE and SEG_LECTURE[0][0] == "2017-2018" and SEG_LECTURE[-1][0] == "2023-2024"):
+    raise Arret("A12 : segment de lecture du Senat attendu de 2017-2018 a 2023-2024")
+if not SEG_LECTURE[0][1] > SEG_LECTURE[-1][1]:
+    raise Arret("A12 : « confirme la baisse » n'est plus vrai sur le segment")
+_REMONTEES = [(b[1] - a[1], a[1], b[1], b[0], a[0]) for a, b in zip(SEG_LECTURE, SEG_LECTURE[1:]) if b[1] > a[1]]
+if not _REMONTEES:
+    raise Arret("A12 : « pas ininterrompue » n'est plus vrai : aucune remontee dans le segment")
+REMONTEE = max(_REMONTEES)   # (écart, de, à, session d'arrivée, session de départ)
+
 # 2019-2020 : 62 % dans le rapport de 2020 ; le rapport suivant écrit « (60 %) » pour l'année précédente, et donne aussi
 # « 62 % pour l'année précédente » en incluant les mesures prises mais non prévues. Révision ou autre variante : non établi
 # (arbitrage du 12/10/2026, Q6) ; les deux valeurs sont gardées avec leurs documents.
@@ -798,7 +812,11 @@ def _cles_communes(r: dict, lang: str) -> dict:
     """Valeurs calculées, mêmes clés dans les deux langues (nombres par langue_generee)."""
     nb = fr if lang == "fr" else en
     lt = lambda n: lg.lettres(n, lang)  # noqa: E731
-    pct = (lambda v: "%d %%" % v) if lang == "fr" else (lambda v: "%d%%" % v)
+    def _entier(v):  # 18/11/2026 : « %d » tronquait sans bruit une valeur décimale ; elle arrête désormais
+        if float(v) != int(v):
+            raise Arret("pct : valeur non entiere %r, que %%d tronquerait" % (v,))
+        return int(v)
+    pct = (lambda v: "%d %%" % _entier(v)) if lang == "fr" else (lambda v: "%d%%" % _entier(v))
     t, ct, cl, st = r["tot"], r["ct"], r["cl"], r["statut"]
     l25 = r["lignes"][-1]
     tst = collections.Counter()
@@ -835,6 +853,8 @@ def _cles_communes(r: dict, lang: str) -> dict:
         "s25_dir": nb(st["2024-2025"].get("directe", 0)), "s25_tout": nb(st["2024-2025"].get("toutes", 0)),
         "s25_dirtout": nb(st["2024-2025"].get("directe", 0) + st["2024-2025"].get("toutes", 0)),
         "nsessions": lt(len(SESSIONS)), "nautres": lt(len(SESSIONS) - 1), "nsegments": lt(len(SEGMENTS)),
+        "sen5_debut": pct(SEG_LECTURE[0][1]), "sen5_fin": pct(SEG_LECTURE[-1][1]),
+        "sen5_de": pct(REMONTEE[1]), "sen5_a": pct(REMONTEE[2]), "sen5_session": REMONTEE[3], "sen5_session_de": REMONTEE[4],
         "sgg16_taux": pct(r["sgg"]["sgg16"]["taux"]), "sgg17_taux": pct(r["sgg"]["sgg17"]["taux"]),
         "sgg16_n": nb(r["sgg"]["sgg16"]["mesures"]), "sgg17_n": nb(r["sgg"]["sgg17"]["mesures"]),
         "s1718_hd": pct(int(re.search(r"- (\d+) % si on exclut", r["citations"]["cit_senat_1718"]).group(1))),
