@@ -78,10 +78,19 @@ Ni l'un ni l'autre ne tient tel quel. Trois niveaux d'énoncé gouvernent la ré
   étudiants sont plus souvent déprimés que les jeunes en emploi après ajustement (EPICOV, 18-30 ans, 2020-2021, Melchior
   et al. 2022, rapport de cotes 1,29). La version publiée le 08/11 au matin omettait ces deux études : elle déclarait
   absente une comparaison nationale qui existait ;
-- **non établi** : que cette progression diffère de celle de jeunes non étudiants à âge et sexe égaux (aucune analyse
-  nationale publiée trouvée, recherche du 08/11/2026), et qu'un écart tienne aux conditions d'études. Les auteurs du BEH le disent eux-mêmes ; l'étude CONFINS (*BMJ Open*, 2021 ; en ligne, premier
-  confinement, PHQ-9) trouve un risque plus élevé chez les étudiants après ajustement (rapport de cotes 1,58), sans
-  représentativité nationale.
+- **non établi** : que la progression de la **dépression** diffère de celle de jeunes non étudiants à âge et sexe égaux
+  (aucune analyse nationale publiée trouvée ; recherche du 08/11/2026, refaite le 17/11/2026 : relecture des sources du
+  lot « parcoursup-etudiants », `SOURCES\les-etudiants-vont-ils-plus-mal_R1a.md` § 3 bis, et `_R1b.md` P1 n° 1), et
+  qu'un écart tienne aux conditions d'études. Les auteurs du BEH le disent eux-mêmes ; l'étude CONFINS (Arsandaux et
+  coauteurs, *BMJ Open*, 2021 ; en ligne, volontaires, premier confinement, PHQ-9) trouve un risque plus élevé chez les
+  étudiants après ajustement (rapport de cotes 1,58), sans représentativité nationale et face à des non-étudiants plus
+  âgés (R1a, P1 l. 83).
+- **établi pour un autre indicateur, ajouté le 17/11/2026** (R1a P1 l. 103, R1b P1 n° 1, sondé par la session) : pour les
+  idées suicidaires et les tentatives de suicide, Husky et al., *Psychiatry Research* 333 (2024), comparent l'évolution
+  2000-2021 des étudiants, des jeunes en emploi et des NEET de 18-25 ans à âge et sexe égaux ; l'interaction vague ×
+  situation est significative pour les idées suicidaires (p = 0,015), non pour les tentatives (p = 0,49). La page
+  publiée le 08/11 déclarait cette comparaison absente sans dire qu'elle ne cherchait que la dépression (requêtes
+  « depress* »).
 Deux témoins déplacent la question : les enquêtes ne détectent pas d'augmentation significative des états anxieux sur
 la même période (BEH 2025 n° 14, autre instrument, autre fenêtre) ; et la dégradation est visible **avant le
 supérieur** (EnCLASS : collégiens et lycéens, 2018-2022), avec en 2024 un bien-être qui remonte (+11 points au collège,
@@ -92,14 +101,16 @@ moments de la jeunesse, et dont les études peuvent modifier l'intensité.
 ### Mécanisme explicatif
 
 Deux familles de mécanismes, qui peuvent se combiner et ne s'excluent pas :
-- **une question de sexe avant d'être de statut ?** L'écart le plus constant de toutes les sources est entre femmes et
-  hommes (18-24 ans : +11,4 points contre +6,9 de 2017 à 2021 ; lycéennes 25,7 % contre lycéens 11,7 % de risque
-  important de dépression en 2024) ; le supérieur étant majoritairement féminin, une part du « malaise étudiant » peut
+- **une question de sexe avant d'être de statut ?** L'écart le plus constant des séries qui montrent une dégradation
+  est entre femmes et hommes (18-24 ans : +11,4 points contre +6,9 de 2017 à 2021 ; lycéennes 25,7 % contre lycéens
+  11,7 % de risque important de dépression en 2024 ; pour les suicides, plus rares chez les femmes, c'est la hausse qui
+  les distingue : relecture du 17/11, R1b P1 n° 2, conforme à Eurostat) ; le supérieur étant majoritairement féminin, une part du « malaise étudiant » peut
   être celui des jeunes femmes — à tester par le croisement sexe × statut, jamais à affirmer ;
 - **communs à la génération** : le choc du confinement (isolement, rupture des routines, 2020-2021), certains usages
   numériques (effet causal possible de pratiques précises, Castelo et al. 2025 ; effet non détecté de politiques
   scolaires restrictives, SMART Schools 2025), des anticipations dégradées (climat, logement, défiance) ;
-- **associés au fait d'étudier** : la pression sur les moyens par étudiant depuis 2014 (dépense moyenne en baisse alors
+- **associés au fait d'étudier** : la pression sur les moyens par étudiant, dont la dépense moyenne culmine en 2009
+  (Insee, compte de l'éducation ; relecture du 17/11, R1a l. 78-79 conforme, millésime 2025 paru depuis) (dépense moyenne en baisse alors
   que la dépense totale augmente ; 12 460 € à l'université contre 19 070 € en classe préparatoire en 2024), le coût du
   logement et la précarité financière (associée à la détresse dans les enquêtes OVE), l'isolement résidentiel, les
   examens ;
@@ -171,9 +182,13 @@ tombe.
 ### Valeur finale
 
 Après lecture, on sait dire sans jargon : ce qu'on croyait (six causes, ou une génération perdue) ; ce qu'on sait (la
-dépression a augmenté, plus vite chez les étudiants, l'anxiété non ; les moyens par étudiant reculent depuis 2014) ; sur
-quelles preuves (deux bulletins de Santé publique France, les séries du SIES et de la DEPP) ; et quelle question
-s'ouvre (le test à âge égal, qui n'a jamais été publié). Outil réutilisable : la grille « fait → mécanisme →
+dépression déclarée a augmenté de 2017 à 2021 ; chez les 18-25 ans, la hausse estimée des étudiants est la plus faible
+des trois situations comparées, sans test de l'écart ; l'anxiété n'a pas augmenté significativement ; des indicateurs
+d'actes vont dans le même sens, d'abord chez les jeunes femmes et dès le lycée ; la dépense par étudiant n'a plus
+retrouvé son niveau de 2009) ; sur quelles preuves (bulletins et rapports de Santé publique France, séries de la DREES,
+de l'Assurance maladie et d'Eurostat, comparaisons publiées par Husky et coauteurs et par Melchior et coauteurs) ; et
+quelle question s'ouvre (pour la dépression, la comparaison de l'évolution à âge et sexe égaux, qui n'est pas publiée ;
+corrigé le 17/11/2026, la version précédente de ce champ datait d'avant l'intégration de Husky et al. 2023). Outil réutilisable : la grille « fait → mécanisme →
 concordance → ce qui l'invaliderait → conclusion limitée », appliquée aux six maillons dans un encadré.
 
 ### Singularité
@@ -394,3 +409,9 @@ chercheur est un résultat à observer, jamais une propriété déclarée avant 
   `macalli`, 54 gardes ; relecture de toutes les mentions des non-étudiants dans le texte servi ; une inversion de sens
   introduite en réécrivant, trouvée à la relecture et corrigée. check-all 0, build 0, recette ok, instantané refait
   (298 phrases). **Non fait** : panel « après » (correction ciblée) ; push (ordre de l'auteur).
+
+### Reprise du 17/11/2026 (lot « parcoursup-etudiants », session de nuit N24) — préparée, non publiée
+
+- Relecture des sources : fait (17/11, deux relecteurs neufs, `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\parcoursup-etudiants\SOURCES\les-etudiants-vont-ils-plus-mal_R1a.md` et `_R1b.md`) : aucun nombre faux ; P1 : affirmation d'absence non restreinte à la dépression (Husky et al. 2024), dates prêtées à l'ONS et à la DREES, confinement donné pour cause, « dans toutes les sources », Baromètre 2024 « non comparable », auteur de CONFINS dans le jeu ; sort de chaque écart dans `SYNTHESE.md` du lot.
+- Interventions et corrections : fait (`specs\etudiants.py`, 43 remplacements ; `specs\forme.py`, figure et lecture côte à côte pour les deux premières figures, questions fréquentes sur deux colonnes ; `specs\moteurs.py`, `llms.txt`) ; jeu : attribution de CONFINS corrigée dans l'extrait figé et le JSON servi, relevé gardé au 08/11 (aucune donnée changée). À reporter dans `RECHERCHE_MALAISE_ETUDIANT_2026-10-23\outils\extrait.py` (l. 254) à la publication.
+- Juge interne, premier écran, jugement externe : voir `LOT.md` du lot. Publication : au plus tôt le 20/12/2026 (envois ETUDIANTS-2026-11 jusqu'au 19/12).

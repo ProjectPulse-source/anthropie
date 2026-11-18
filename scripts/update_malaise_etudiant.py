@@ -146,6 +146,8 @@ def calcul(X: dict) -> dict:
     c["mel"] = X["melchior2022"]
     c["enc"] = X["enclass2024"]
     c["dep"] = X["depense"]
+    c["bs24"] = X["barometre2024"]      # 18/11/2026 : niveau 2024, non comparable à 2021
+    c["dep25"] = X["depense2025"]      # 18/11/2026 : millésime 2025 de la Depp, cité (série de la page : Insee)
     c["comp"] = X["composition"]
     # Hospitalisations des femmes de 18-24 ans et des hommes : variation relative de 2019 à la dernière année.
     c["der"] = max(int(k) for k in h["f18_24"])
@@ -334,6 +336,11 @@ def gardes(c: dict) -> int:
     g(sommet == "2009", "la depense par etudiant culmine en 2009")
     p = c["dep"]["par_etudiant_2024"]
     g(p["universite"] < p["ensemble"] < p["cpge"], "universite sous la moyenne, classes preparatoires au-dessus")
+    d25 = c["dep25"]
+    g(d25["evolution_2024_2025_prix_constants_pct"] < 0, "depense 2025 de la Depp : « en recul » en prix constants")
+    b24 = c["bs24"]
+    g(b24["ic95"][0] < b24["edc_12_mois_etudes_2024"] < b24["ic95"][1], "Barometre 2024 : niveau dans son intervalle")
+    g(b24["comparable_2021"] is False, "Barometre 2024 : niveau donne seul, jamais compare a 2021")
     # Section 5 -- composition
     cp = c["comp"]
     g(cp["par_annee"]["2021"]["ecart_pts"] > cp["par_annee"]["2017"]["ecart_pts"] > 0,
@@ -420,6 +427,10 @@ def affichage(c: dict) -> dict:
         "be_lycee": lg.points(en["bien_etre_hausse_2022_2024_pts"]["lycee"], 0, signe_=True),
         "dep_2009": n(d["2009"], 0), "dep_2024": n(d["2024"], 0),
         "dep_univ": n(p["universite"], 0), "dep_cpge": n(p["cpge"], 0), "dep_sts": n(p["sts"], 0), "dep_ens": n(p["ensemble"], 0),
+        "dep25_ens": n(c["dep25"]["par_etudiant_2025_y_compris_apprentis"], 0),
+        "dep25_evol": n(abs(c["dep25"]["evolution_2024_2025_prix_constants_pct"]), 1),
+        "bs24_etu": n(c["bs24"]["edc_12_mois_etudes_2024"]),
+        "bs24_ic_bas": n(c["bs24"]["ic95"][0]), "bs24_ic_haut": n(c["bs24"]["ic95"][1]),
         "comp_ecart_2017": lg.points(cp["par_annee"]["2017"]["ecart_pts"]),
         "comp_ecart_2021": lg.points(cp["par_annee"]["2021"]["ecart_pts"]),
         "comp_sim": lg.points(cp["simulation_pts"]),
@@ -838,9 +849,22 @@ def csv_texte(c: dict) -> str:
     for k, v in sorted(s["deces_f20_24_survenus_en_france"].items()):
         w.writerow(["suicides_deces_femmes_20_24_survenus_en_france", "F", k, v, "deces", s["categorie"], s["source"]])
     e = X["enclass2024"]
+    # 18/11/2026 (A_ARBITRER.md du lot parcoursup-etudiants, § 4) : 2018 est calculée (2022 moins la « première
+    # progression de 2 points entre 2018 et 2022 » du texte), non transcrite ; la garde refait le calcul.
+    calc = {("risque_depression_lyceens", "2018"): round(e["risque_depression_lyceens"]["2022"] - 2, 1)}
+    for (nom, k), attendu in calc.items():
+        if abs(e[nom][k] - attendu) > 1e-9:
+            raise SystemExit("CSV : %s %s = %s, calcul attendu %s (note de l'extrait) : categorie a revoir" % (nom, k, e[nom][k], attendu))
     for nom in ("risque_depression_lyceens", "risque_depression_lyceennes", "risque_depression_lyceens_garcons"):
         for k, v in sorted(e[nom].items()):
-            w.writerow(["lyceens_risque_important_de_depression", nom, k, v, "%", e["categorie"], e["source"]])
+            cat = "calculee" if (nom, k) in calc else e["categorie"]
+            w.writerow(["lyceens_risque_important_de_depression", nom, k, v, "%", cat, e["source"]])
+    b24 = X["barometre2024"]
+    w.writerow(["episode_depressif_declare_2024_non_comparable", "personnes_en_etudes_18_79", "2024",
+                b24["edc_12_mois_etudes_2024"], "%", b24["categorie"], b24["source"]])
+    d25 = X["depense2025"]
+    w.writerow(["depense_par_etudiant_superieur_depp_2025", "euros_2025_y_compris_apprentis", "2025",
+                d25["par_etudiant_2025_y_compris_apprentis"], "euros", d25["categorie"], d25["source"]])
     dp = X["depense"]
     for k, v in sorted(dp["superieur_euros_constants_2024"].items()):
         w.writerow(["depense_par_etudiant_superieur", "euros_constants_2024", k, v, "euros", dp["categorie"], dp["source"]])
@@ -887,7 +911,7 @@ def main() -> int:
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; jeunes de 18 à 24 ans sauf mention ; aucune série non déclarative ne connaît le statut d'étudiant",
                         "source_calcul": "extrait figé scripts/sources_malaise_etudiant/ (SHA256SUMS), écrit par outils/extrait.py du dossier de recherche",
-                        "categories": "lue : calculée sur une réponse brute archivée ; transcrite_verifiee : phrase exigée telle quelle dans le document archivé ; citee : étude citée"},
+                        "categories": "lue : calculée sur une réponse brute archivée ; transcrite_verifiee : phrase exigée telle quelle dans le document archivé ; calculee : calculée par le générateur à partir de valeurs transcrites (risque de dépression des lycéens en 2018 : 2022 moins 2 points) ; citee : étude citée"},
                "extrait": X, "affichage": A}
     try:
         prev = json.loads(OUT_DATA.read_text(encoding="utf-8"))

@@ -1,5 +1,5 @@
 {
- "version": "2026-11-08",
+ "version": "2026-11-18",
  "beh2023": {
   "source": "BEH 2023 n° 2 (Léon, du Roscoät, Beck, 14/02/2023), texte et figure 3, 18-75 ans, France métropolitaine",
   "fichier": "beh_2023_2_1.pdf",
@@ -376,8 +376,31 @@
    "origine": "arbitrage pièce 06, § 3 (champ et alignement)"
   }
  },
+ "barometre2024": {
+  "source": "Santé publique France, Baromètre de Santé publique France : résultats de l'édition 2024, « Épisodes dépressifs : prévalence et recours aux soins » (décembre 2025), tableau 1 ; 18-79 ans, France hexagonale, Guadeloupe, Martinique, Guyane et La Réunion",
+  "fichier": "spf00006265.pdf",
+  "sha256": "67505b7331d1092c480f3d6ce32250a7fe06ca4691c1af4f8651047882ce374f",
+  "categorie": "transcrite_verifiee",
+  "edc_12_mois_etudes_2024": 21.7,
+  "ic95": [
+   19.7,
+   23.7
+  ],
+  "effectif_etudes": 2519,
+  "edc_12_mois_18_79_2024": 15.6,
+  "comparable_2021": false,
+  "note": "évolutions renvoyées par Santé publique France à des « travaux ultérieurs »"
+ },
+ "depense2025": {
+  "source": "Depp, Note d'information n° 26.42 (septembre 2026), « En 2025, 199,2 milliards d'euros consacrés à l'éducation, soit 6,7 % du PIB », données 2025 provisoires ; champ : France",
+  "fichier": "depp_ni_2026_42.pdf",
+  "sha256": "6cbcefafa8e23a61de3c6a0c4b9e120d3920c0928f5281274cc8db32758b985b",
+  "categorie": "transcrite_verifiee",
+  "par_etudiant_2025_y_compris_apprentis": 13350,
+  "evolution_2024_2025_prix_constants_pct": -0.7
+ },
  "confins": {
-  "source": "Wathelet et al., BMJ Open 2021 (CONFINS), premier confinement, en ligne, PHQ-9",
+  "source": "Arsandaux et al., BMJ Open 2021 (CONFINS), premier confinement, en ligne, PHQ-9",
   "categorie": "citee",
   "rapport_de_cotes_etudiants": 1.58
  },
