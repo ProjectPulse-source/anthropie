@@ -47,6 +47,7 @@ articles:
   "21": { legiarti: LEGIARTI000006527485, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, ordre: 21, empreinte: ec04bca269f2bb1d8d41a22541853096f4a2eef7091b31f154e05f8158502a28 }
   "22": { legiarti: LEGIARTI000006527486, vigueur_depuis: 1958-10-05, lu_le: 2026-09-30, ordre: 22, empreinte: 79933dc89cbeab8bb98b833bbb5c4fe31dd01d6cecaab9821b36cb08ec099736 }
   "34": { legiarti: LEGIARTI000049255019, vigueur_depuis: 2024-03-10, lu_le: 2026-10-05, ordre: 34, empreinte: e1e942eccace67bff5f064c59a0baf9cb139f99b91b629155f48f76b89a6a067 }
+  "35": { legiarti: LEGIARTI000019241022, vigueur_depuis: 2008-07-25, lu_le: 2026-11-17, ordre: 35, empreinte: 606c68dc758a939ec2768e932d64b3965dff8b8052dacc4b53e5e1510346a3be }
   "37": { legiarti: LEGIARTI000006527508, vigueur_depuis: 1958-10-05, lu_le: 2026-10-05, ordre: 37, empreinte: e0f7c95680179e006c8fc8da8378bef366615e09b1b10ef28d5a3c3bd6876c36 }
   "38": { legiarti: LEGIARTI000019241024, vigueur_depuis: 2008-07-25, lu_le: 2026-10-06, ordre: 38, empreinte: bc3e829192910fef29fd8db680ad2dc63d5179d6463ed498b9db48ec9fa12a9f }
   "47": { legiarti: LEGIARTI000019241054, vigueur_depuis: 2008-07-25, lu_le: 2026-10-11, ordre: 47, empreinte: 79acbcca695f1c2b2c5ae38cd4d686bb3ac41c4bfada4228a5df27976306ce43 }
@@ -65,6 +66,7 @@ articles:
   "ord58-1136-1":  { ref: "ord. 58-1136, art. 1", num: "1", texte: "Ordonnance n° 58-1136 du 28 novembre 1958 portant loi organique concernant les nominations aux emplois civils et militaires de l'État, article 1", legiarti: LEGIARTI000033041029, vigueur_depuis: 2016-08-12, lu_le: 2026-10-11, ordre: 103, empreinte: 0904042cd0b90cc0aaeab0e138f0132f62c499ffb05ad642e0d38ed00c2a2af3 }
   "ord58-1136-2":  { ref: "ord. 58-1136, art. 2", num: "2", texte: "Ordonnance n° 58-1136 du 28 novembre 1958, article 2", legiarti: LEGIARTI000006451981, vigueur_depuis: 1958-11-29, lu_le: 2026-10-11, ordre: 104, empreinte: 3d9bd916974fe1e1e6cb124175451c0b9b3abfbef36d19520dbd3dbc8927dde1 }
   "ord58-1136-3":  { ref: "ord. 58-1136, art. 3", num: "3", texte: "Ordonnance n° 58-1136 du 28 novembre 1958, article 3", legiarti: LEGIARTI000006451982, vigueur_depuis: 1958-11-29, lu_le: 2026-10-11, ordre: 105, empreinte: dd150c4a09f59401fe54188141d5c9146fddf10d0e01966f78fd9d7ea76346e6 }
+  "lo2010-837-annexe": { ref: "LO n° 2010-837, annexe", num: "Annexe", texte: "Loi organique n° 2010-837 du 23 juillet 2010 relative à l'application du cinquième alinéa de l'article 13 de la Constitution, annexe", legiarti: LEGIARTI000049569307, vigueur_depuis: 2025-01-01, lu_le: 2026-11-17, ordre: 106, empreinte: 60f11e9fc0e44a60946028bfca450623fa7288819865dc5abc746084c8f3af3e }
   # Niveau 3 : jurisprudence (décisions lues dans la base JADE, texte intégral archivé)
   "ce-1962-rubin":  { ref: "CE, 1962", cetatext: CETATEXT000007636269, texte: "Conseil d'État, Assemblée, 2 mars 1962, n° 55049 et 55055, Rubin de Servens", lu_le: 2026-10-11, ordre: 201, empreinte: ddddcf80ee18f1131b2b951fbecf4ae0d9c040aad6d739ba4198e4b7cc01a1c3 }
   "ce-1992-meyet":  { ref: "CE, 1992", cetatext: CETATEXT000007834093, texte: "Conseil d'État, Assemblée, 10 septembre 1992, n° 140376 et autres, Meyet", lu_le: 2026-10-11, ordre: 202, empreinte: 68439f25c3fac68637c720da7347010e72673498419b5a6dab9ca04f20d8ca63 }
@@ -155,7 +157,7 @@ inventaire_19:
       - {art: "11", cite: "celles dans lesquelles le Conseil constitutionnel contrôle le respect des dispositions de l'alinéa précédent", temporalite: avant, facultatif: false,
          justification: "Contrôle du Conseil constitutionnel prévu avant la soumission."}
       - {art: "11", cite: "Si la proposition de loi n'a pas été examinée par les deux assemblées dans un délai fixé par la loi organique", temporalite: avant, facultatif: false,
-         justification: "L'acte suppose que les deux assemblées n'aient pas examiné la proposition : compétence liée du président (« la soumet »)."}
+         justification: "L'acte suppose que l'une au moins des deux assemblées n'ait pas examiné la proposition dans le délai ; la page lit « la soumet » comme une compétence liée du président."}
     autre_autorite:
       - {art: "11", cite: "Lorsque la proposition de loi n'est pas adoptée par le peuple français", temporalite: après, facultatif: false,
          justification: "Les électeurs décident de l'issue."}
@@ -195,7 +197,7 @@ inventaire_19:
       - {art: "16", cite: "après consultation officielle du Premier ministre, des Présidents des Assemblées ainsi que du Conseil constitutionnel", temporalite: avant, facultatif: false,
          justification: "Premier temps, la décision d'y recourir : consultation exigée avant."}
       - {art: "16", cite: "Le Conseil constitutionnel est consulté à leur sujet.", contexte: "les mesures", temporalite: pendant, facultatif: false,
-         justification: "Deuxième temps, les mesures : consultation du Conseil constitutionnel sur chacune, distincte de la consultation initiale."}
+         justification: "Deuxième temps, les mesures : consultation du Conseil constitutionnel sur les mesures (« à leur sujet »), distincte de la consultation initiale."}
     autre_autorite:
       - {art: "16", cite: "Le Parlement se réunit de plein droit.", temporalite: pendant, facultatif: false,
          justification: "Le Parlement intervient de droit pendant l'exercice des pouvoirs."}
@@ -347,7 +349,7 @@ pouvoirs:
   - id: nommer-premier-ministre
     groupe: sans_contreseing
     question: "Le président peut-il nommer et renvoyer le Premier ministre ?"
-    bref: "Nommer, oui : sa seule signature suffit. Renvoyer, non : l'article 8 ne prévoit que la démission que le Premier ministre présente. L'article 50 l'oblige à la présenter quand l'Assemblée nationale vote la censure ; ce n'est pas une révocation par le président."
+    bref: "Nommer, oui : sa seule signature suffit. Renvoyer, en droit, non : l'article 8 ne prévoit que la démission que le Premier ministre présente. L'article 50 l'oblige à la présenter quand l'Assemblée nationale vote la censure ; ce n'est pas une révocation par le président."
     pouvoir: "Nommer le Premier ministre, mettre fin à ses fonctions"
     articles: ["8", "19", "20", "50"]
     decide: "Le président, pour deux actes de l'article 8 : « Le Président de la République nomme le Premier ministre. Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement. »"
@@ -363,9 +365,9 @@ pouvoirs:
     pouvoir: "Soumettre un texte au référendum (article 11)"
     articles: ["11", "19", "60", "61", "7", "ord58-1067-46"]
     decide: "Le président soumet le texte au référendum ; les électeurs l'adoptent ou le rejettent."
-    condition: "Deux voies. Pour un projet de loi, une proposition du Gouvernement « pendant la durée des sessions » ou une proposition conjointe des deux assemblées, publiées au Journal officiel. Pour une proposition de loi d'initiative partagée, l'initiative « d'un cinquième des membres du Parlement, soutenue par un dixième des électeurs inscrits sur les listes électorales », le contrôle du Conseil constitutionnel, puis l'absence d'examen par les deux assemblées dans le délai de la loi organique."
-    tiers: "Lorsque le référendum est organisé sur proposition du Gouvernement, celui-ci fait devant chaque assemblée « une déclaration qui est suivie d'un débat ». Puis les électeurs votent. Si le texte est adopté, le président « promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation » : la promulgation est son acte, enfermé dans un délai."
-    portee_texte: "L'objet est limité : organisation des pouvoirs publics, réformes relatives à la politique économique, sociale ou environnementale et aux services publics qui y concourent, autorisation de ratifier certains traités. Dans l'initiative partagée, le texte l'oblige : si les deux assemblées n'ont pas examiné la proposition dans le délai, il « la soumet » au référendum."
+    condition: "Deux voies. Pour un projet de loi, une proposition du Gouvernement « pendant la durée des sessions » ou une proposition conjointe des deux assemblées, publiées au Journal officiel. Pour une proposition de loi d'initiative partagée, l'initiative « d'un cinquième des membres du Parlement, soutenue par un dixième des électeurs inscrits sur les listes électorales », le contrôle du Conseil constitutionnel, puis l'absence d'examen par l'une au moins des deux assemblées dans le délai de la loi organique."
+    tiers: "Lorsque le référendum est organisé sur proposition du Gouvernement, celui-ci fait devant chaque assemblée « une déclaration qui est suivie d'un débat ». Puis les électeurs votent. Si le texte est adopté, le président « promulgue la loi dans les quinze jours qui suivent la proclamation des résultats de la consultation » : la promulgation, qui rend la loi exécutoire, est son acte, enfermé dans un délai."
+    portee_texte: "L'objet est limité : organisation des pouvoirs publics, réformes relatives à la politique économique, sociale ou environnementale et aux services publics qui y concourent, autorisation de ratifier certains traités. Dans l'initiative partagée, si elle n'a pas été examinée par chacune des deux assemblées dans le délai, l'article dit qu'il « la soumet » au référendum, ce que cette page lit comme une obligation."
     chaine: "Le Conseil constitutionnel « veille à la régularité des opérations de référendum » et en proclame les résultats (art. 60) ; il « est consulté par le Gouvernement sur l'organisation des opérations de référendum » (ordonnance n° 58-1067, art. 46) ; il contrôle les propositions d'initiative partagée « avant qu'elles ne soient soumises au référendum » (art. 61). En cas de vacance ou d'empêchement, les fonctions du président sont exercées par intérim, « à l'exception de celles prévues aux articles 11 et 12 » (art. 7)."
 
   - id: dissolution
@@ -458,7 +460,7 @@ pouvoirs:
     decide: "Le président promulgue ; le Parlement délibère à nouveau s'il le demande."
     condition: "Aucune proposition ni consultation n'est exigée avant l'acte."
     tiers: "Le Parlement : la nouvelle délibération « ne peut être refusée », et c'est lui qui vote à nouveau."
-    portee_texte: "Il promulgue dans les quinze jours qui suivent la transmission de la loi définitivement adoptée ; avant l'expiration de ce délai, il peut demander une nouvelle délibération de la loi ou de certains articles. Le texte fixe ce délai et ouvre une seconde lecture, dont l'issue appartient au Parlement ; il ne prévoit pas de veto. Saisi avant la promulgation, le Conseil constitutionnel la retarde : la saisine « suspend le délai de promulgation » (art. 61)."
+    portee_texte: "Il promulgue dans les quinze jours qui suivent la transmission de la loi définitivement adoptée ; avant l'expiration de ce délai, il peut demander une nouvelle délibération de la loi ou de certains articles. Le texte fixe ce délai et ouvre une nouvelle délibération, dont l'issue appartient au Parlement ; il ne prévoit pas de veto. Saisi avant la promulgation, le Conseil constitutionnel la retarde : la saisine « suspend le délai de promulgation » (art. 61)."
 
   - id: decrets-ordonnances
     groupe: contresigne
@@ -466,7 +468,7 @@ pouvoirs:
     bref: "En partie. Il signe les ordonnances et les décrets délibérés en Conseil des ministres, contresignés par le Premier ministre et les ministres responsables ; les autres décrets réglementaires relèvent du Premier ministre."
     pouvoir: "Signer les ordonnances et les décrets délibérés en Conseil des ministres"
     articles: ["13", "9", "21", "19", "ce-1992-meyet", "ce-2024-470962"]
-    decide: "Le président signe « les ordonnances et les décrets délibérés en Conseil des ministres », qu'il préside (art. 9). Les autres décrets réglementaires relèvent du Premier ministre, qui exerce le pouvoir réglementaire « sous réserve des dispositions de l'article 13 » (art. 21)."
+    decide: "Le président signe « les ordonnances et les décrets délibérés en Conseil des ministres » (art. 13), conseil qu'il préside (art. 9). Les autres décrets réglementaires relèvent du Premier ministre, qui exerce le pouvoir réglementaire « sous réserve des dispositions de l'article 13 » (art. 21)."
     condition: "Une délibération en Conseil des ministres. Un décret ainsi délibéré doit être signé par le président « alors même qu'aucun texte n'imposait cette délibération » (Conseil d'État, Assemblée, 10 septembre 1992, Meyet ; règle reprise le 5 février 2024)."
     tiers: "Le Premier ministre et les ministres responsables, qui contresignent."
     portee_texte: "La frontière passe par ce qui est délibéré en Conseil des ministres. Le texte dit « signe » ; il ne précise pas si le président peut refuser."
@@ -479,7 +481,7 @@ pouvoirs:
     pouvoir: "Nommer aux emplois civils et militaires de l'État"
     articles: ["13", "21", "19", "65", "ord58-1136-1", "ord58-1136-2", "ord58-1136-3"]
     decide: "Le président : « Il nomme aux emplois civils et militaires de l'Etat » (art. 13). En Conseil des ministres pour les emplois que l'article 13 énumère (conseillers d'État, ambassadeurs, préfets, recteurs, directeurs d'administration centrale, officiers généraux…) et ceux qu'une loi organique y ajoute ; par décret du président pour d'autres. Pour les autres emplois, l'exercice de ce pouvoir peut être délégué au Premier ministre, qui nomme « sous réserve des dispositions de l'article 13 » (art. 21)."
-    condition: "Délibération en Conseil des ministres pour les emplois énumérés. Pour les emplois qu'une loi organique désigne, avis public de la commission compétente de chaque assemblée, qui peut empêcher la nomination par trois cinquièmes des suffrages exprimés. Pour les magistrats du siège, le Conseil supérieur de la magistrature « fait des propositions » (Cour de cassation, premiers présidents de cour d'appel, présidents de tribunal) ou rend un « avis conforme » ; pour ceux du parquet, il « donne son avis » (art. 65)."
+    condition: "Délibération en Conseil des ministres pour les emplois énumérés. Pour les emplois qu'une loi organique désigne, avis public de la commission compétente de chaque assemblée ; la nomination est impossible lorsque les votes négatifs, additionnés dans les deux commissions, atteignent trois cinquièmes des suffrages exprimés. Pour les magistrats du siège, le Conseil supérieur de la magistrature « fait des propositions » (Cour de cassation, premiers présidents de cour d'appel, présidents de tribunal de grande instance, aujourd'hui tribunal judiciaire) ou rend un « avis conforme », qui lie le président ; pour ceux du parquet, il « donne son avis » (art. 65)."
     tiers: "Le Premier ministre et les ministres responsables, qui contresignent."
     portee_texte: "Dans le texte, le pouvoir de nomination est général ; il est contresigné, peut être délégué au Premier ministre et, pour certains emplois, passe par un avis parlementaire ou par le Conseil supérieur de la magistrature."
     chaine: "L'ordonnance n° 58-1136 (loi organique) ajoute des emplois pourvus en Conseil des ministres (art. 1) ; fait nommer « par décret du Président de la République » les membres du Conseil d'État et de la Cour des comptes, les magistrats de l'ordre judiciaire, les professeurs de l'enseignement supérieur et les officiers (art. 2) ; permet que la nomination aux autres emplois soit déléguée au Premier ministre « par décret du Président de la République » (art. 3)."
@@ -487,13 +489,13 @@ pouvoirs:
   - id: chef-des-armees
     groupe: contresigne
     question: "Le président décide-t-il seul en matière militaire ?"
-    bref: "Il est le chef des armées, mais le Gouvernement dispose de la force armée et le Premier ministre est responsable de la Défense nationale ; ses actes sont contresignés."
+    bref: "Il est le chef des armées, mais le Gouvernement dispose de la force armée, le Premier ministre est responsable de la Défense nationale et le Parlement autorise la déclaration de guerre ; ses actes sont contresignés."
     pouvoir: "Chef des armées"
-    articles: ["15", "20", "21", "19"]
+    articles: ["15", "20", "21", "35", "19"]
     decide: "Le président est le chef des armées et préside les conseils et comités supérieurs de la Défense nationale (art. 15)."
     condition: "Aucune proposition ni consultation n'est écrite pour la qualité de chef des armées ; ses actes sont contresignés."
-    tiers: "Le Gouvernement « dispose […] de la force armée » (art. 20) ; le Premier ministre « est responsable de la Défense nationale » (art. 21)."
-    portee_texte: "La Constitution répartit le militaire entre trois titres : chef des armées, disposition de la force armée, responsabilité de la Défense nationale. Aucun ne se lit seul."
+    tiers: "Le Gouvernement « dispose […] de la force armée » (art. 20) ; le Premier ministre « est responsable de la Défense nationale » (art. 21). Le Parlement, enfin : « La déclaration de guerre est autorisée par le Parlement », et la prolongation au-delà de quatre mois d'une intervention des forces armées à l'étranger, décidée par le Gouvernement, est soumise à son autorisation (art. 35)."
+    portee_texte: "Les articles 15, 20 et 21 répartissent le militaire entre trois titres : chef des armées, disposition de la force armée, responsabilité de la Défense nationale ; l'article 35 y ajoute l'autorisation du Parlement, pour la déclaration de guerre et pour la prolongation d'une intervention au-delà de quatre mois. Aucun ne se lit seul."
 
   - id: grace
     groupe: contresigne
@@ -513,7 +515,7 @@ pouvoirs:
     pouvoir: "Négocier et ratifier les traités"
     articles: ["52", "53", "54", "19"]
     decide: "Le président « négocie et ratifie les traités » ; il « est informé de toute négociation tendant à la conclusion d'un accord international non soumis à ratification » (art. 52)."
-    condition: "Pour les traités de paix, de commerce, ceux qui engagent les finances de l'État, modifient des dispositions de nature législative, touchent à l'état des personnes ou au territoire, une loi : ils « ne peuvent être ratifiés ou approuvés qu'en vertu d'une loi » (art. 53). Si le Conseil constitutionnel a déclaré une clause contraire à la Constitution, l'autorisation de ratifier n'intervient qu'après révision (art. 54)."
+    condition: "Pour les traités de paix, de commerce, les traités ou accords relatifs à l'organisation internationale, ceux qui engagent les finances de l'État, modifient des dispositions de nature législative, sont relatifs à l'état des personnes ou comportent cession, échange ou adjonction de territoire, une loi : ils « ne peuvent être ratifiés ou approuvés qu'en vertu d'une loi » (art. 53). Si le Conseil constitutionnel a déclaré une clause contraire à la Constitution, l'autorisation de ratifier n'intervient qu'après révision (art. 54)."
     tiers: "Le Parlement, qui vote la loi d'autorisation pour les traités de l'article 53 ; le Premier ministre et les ministres responsables, qui contresignent ; le Conseil constitutionnel s'il est saisi."
     portee_texte: "Ratifier n'est pas dans la liste de l'article 19 : la ratification est contresignée et, pour une partie des traités, suppose une loi."
 

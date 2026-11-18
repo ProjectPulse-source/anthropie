@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 602" role="img" aria-labelledby="pv-t pv-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 630" role="img" aria-labelledby="pv-t pv-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="pv-t">Les huit dispositions de l’article 19, acte par acte : ce que le texte de chaque article exige avant, qui il fait intervenir ensuite</title><desc id="pv-d">Matrice de douze actes répartis entre les huit dispositions de l&#x27;article 19, et quatre colonnes. Une case pleine signifie que l&#x27;article lui-même contient une citation exacte de l&#x27;élément. Trois actes n&#x27;y ont ni élément exigé avant l&#x27;acte ni autre acteur pour la suite : nommer le Premier ministre, adresser un message au Parlement et désigner le président du Conseil constitutionnel.</desc>
-<rect width="720" height="602" fill="#ffffff"/>
+<rect width="720" height="630" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="14" fill="#0A0A0E" text-anchor="start" font-weight="600">L’article 19 dispense de contreseing huit dispositions</text>
 <text x="0.0" y="37.0" font-size="12" fill="#52514e" text-anchor="start">acte par acte, ce que le texte de chaque article exige ou fait intervenir</text>
 <text x="405.0" y="79.0" font-size="11" fill="#52514e" text-anchor="middle">Exigé avant</text>
@@ -100,10 +100,12 @@
 <circle cx="585.0" cy="488.0" r="7" fill="#184f95"/>
 <circle cx="675.0" cy="488.0" r="7" fill="#184f95"/>
 <line x1="0" y1="509.0" x2="720" y2="509.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="524.0" font-size="11" fill="#52514e">Constitution du 4 octobre 1958, art. 8, 11, 12, 16, 18, 19, 54, 56, 61, versions en vigueur lues sur Légifrance</text>
+<text class="pied-source" x="0" y="524.0" font-size="11" fill="#52514e">Constitution du 4 octobre 1958, art. 8, 11, 12, 16, 18, 19, 54, 56, 61, en vigueur, lus sur Légifrance le 30/09/2026</text>
 <text class="pied-note" x="0" y="538.0" font-size="11" fill="#52514e">Case pleine : citation exacte de l’article (liste et justification sur la page). Case vide : rien dans cet article ;</text>
 <text class="pied-note" x="0" y="552.0" font-size="11" fill="#52514e">ne dit rien des autres articles ni de la pratique. « Exigé avant » : proposition, consultation ou acte d’un autre</text>
 <text class="pied-note" x="0" y="566.0" font-size="11" fill="#52514e">acteur ; « autre acteur » : institution, autorité ou corps électoral à qui l’article attribue une intervention</text>
 <text class="pied-note" x="0" y="580.0" font-size="11" fill="#52514e">distincte après l’acte, même facultative ; les modalités matérielles d’exécution ne comptent pas.</text>
-<text class="pied-licence" x="0" y="594.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/pouvoirs-du-president-de-la-republique/</text>
+<text class="pied-note" x="0" y="594.0" font-size="11" fill="#52514e">« Pouvoir partagé » : d’autres autorités, nommées par l’article, détiennent un pouvoir de même nature ; « autre cadre</text>
+<text class="pied-note" x="0" y="608.0" font-size="11" fill="#52514e">écrit » : limite de temps, d’objet ou d’effet que l’article fixe à l’acte.</text>
+<text class="pied-licence" x="0" y="622.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/pouvoirs-du-president-de-la-republique/</text>
 </svg>

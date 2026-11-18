@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1891" role="img" font-variant-numeric="tabular-nums" aria-labelledby="pvm-t pvm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1959" role="img" font-variant-numeric="tabular-nums" aria-labelledby="pvm-t pvm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="pvm-t">L’article 19 dispense de contreseing huit dispositions : acte par acte, ce que dit chaque article</title><desc id="pvm-d">Matrice de douze actes répartis entre les huit dispositions de l'article 19, et quatre colonnes. Une case pleine signifie que l'article lui-même contient une citation exacte de l'élément. Trois actes n'y ont ni élément exigé avant l'acte ni autre acteur pour la suite : nommer le Premier ministre, adresser un message au Parlement et désigner le président du Conseil constitutionnel.</desc>
-<rect width="300" height="1891" fill="#ffffff"/>
+<rect width="300" height="1959" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">L’article 19 dispense de</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">contreseing huit</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">dispositions : acte par acte,</text>
@@ -142,13 +142,17 @@
 <line x1="0" y1="1682.0" x2="300" y2="1682.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="1703.0" font-size="13.5" fill="#52514e">Constitution du 4 octobre 1958,</text>
 <text class="pied-source" x="0" y="1720.0" font-size="13.5" fill="#52514e">art. 8, 11, 12, 16, 18, 19, 54, 56,</text>
-<text class="pied-source" x="0" y="1737.0" font-size="13.5" fill="#52514e">61, versions en vigueur lues sur</text>
-<text class="pied-source" x="0" y="1754.0" font-size="13.5" fill="#52514e">Légifrance</text>
+<text class="pied-source" x="0" y="1737.0" font-size="13.5" fill="#52514e">61, en vigueur, lus sur Légifrance</text>
+<text class="pied-source" x="0" y="1754.0" font-size="13.5" fill="#52514e">le 30/09/2026</text>
 <text class="pied-note" x="0" y="1775.0" font-size="13.5" fill="#52514e">Case pleine : citation exacte de</text>
 <text class="pied-note" x="0" y="1792.0" font-size="13.5" fill="#52514e">l’article ; case vide : rien dans cet</text>
-<text class="pied-note" x="0" y="1809.0" font-size="13.5" fill="#52514e">article. Définitions et citations :</text>
-<text class="pied-note" x="0" y="1826.0" font-size="13.5" fill="#52514e">section « Comment le tableau est-il</text>
-<text class="pied-note" x="0" y="1843.0" font-size="13.5" fill="#52514e">établi ? » de la page.</text>
-<text class="pied-licence" x="0" y="1864.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1881.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="1809.0" font-size="13.5" fill="#52514e">article, ce qui ne dit rien des autres</text>
+<text class="pied-note" x="0" y="1826.0" font-size="13.5" fill="#52514e">articles ni de la pratique.</text>
+<text class="pied-note" x="0" y="1843.0" font-size="13.5" fill="#52514e">« Pouvoir partagé » : d’autres</text>
+<text class="pied-note" x="0" y="1860.0" font-size="13.5" fill="#52514e">autorités ont un pouvoir de même</text>
+<text class="pied-note" x="0" y="1877.0" font-size="13.5" fill="#52514e">nature. Définitions et citations :</text>
+<text class="pied-note" x="0" y="1894.0" font-size="13.5" fill="#52514e">section « Comment le tableau est-il</text>
+<text class="pied-note" x="0" y="1911.0" font-size="13.5" fill="#52514e">établi ? » de la page.</text>
+<text class="pied-licence" x="0" y="1932.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1949.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

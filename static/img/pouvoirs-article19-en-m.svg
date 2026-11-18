@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1873" role="img" font-variant-numeric="tabular-nums" aria-labelledby="pvm-t pvm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1941" role="img" font-variant-numeric="tabular-nums" aria-labelledby="pvm-t pvm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="pvm-t">Article 19 exempts eight provisions from countersignature: act by act, what each article says</title><desc id="pvm-d">Matrix of twelve acts spread over the eight provisions of article 19, and four columns. A filled cell means that the article itself contains an exact quotation of the element. Three acts have neither an element required before the act nor another actor afterwards: appointing the Prime Minister, addressing Parliament by message and appointing the President of the Constitutional Council.</desc>
-<rect width="300" height="1873" fill="#ffffff"/>
+<rect width="300" height="1941" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Article 19 exempts eight</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">provisions from</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">countersignature: act by act,</text>
@@ -141,13 +141,17 @@
 <line x1="0" y1="1664.0" x2="300" y2="1664.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="1685.0" font-size="13.5" fill="#52514e">Constitution of 4 October 1958, arts.</text>
 <text class="pied-source" x="0" y="1702.0" font-size="13.5" fill="#52514e">8, 11, 12, 16, 18, 19, 54, 56, 61</text>
-<text class="pied-source" x="0" y="1719.0" font-size="13.5" fill="#52514e">(Légifrance; English translation:</text>
-<text class="pied-source" x="0" y="1736.0" font-size="13.5" fill="#52514e">Conseil constitutionnel)</text>
-<text class="pied-note" x="0" y="1757.0" font-size="13.5" fill="#52514e">Filled cell: exact quotation of the</text>
-<text class="pied-note" x="0" y="1774.0" font-size="13.5" fill="#52514e">article; empty cell: nothing in that</text>
-<text class="pied-note" x="0" y="1791.0" font-size="13.5" fill="#52514e">article. Definitions and quotations:</text>
-<text class="pied-note" x="0" y="1808.0" font-size="13.5" fill="#52514e">section “How is the table</text>
-<text class="pied-note" x="0" y="1825.0" font-size="13.5" fill="#52514e">established?” on the page.</text>
-<text class="pied-licence" x="0" y="1846.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1863.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text class="pied-source" x="0" y="1719.0" font-size="13.5" fill="#52514e">(Légifrance, read</text>
+<text class="pied-source" x="0" y="1736.0" font-size="13.5" fill="#52514e">on 30 September 2026; English</text>
+<text class="pied-source" x="0" y="1753.0" font-size="13.5" fill="#52514e">translation: Conseil constitutionnel)</text>
+<text class="pied-note" x="0" y="1774.0" font-size="13.5" fill="#52514e">Filled cell: exact quotation of the</text>
+<text class="pied-note" x="0" y="1791.0" font-size="13.5" fill="#52514e">article; empty cell: nothing in that</text>
+<text class="pied-note" x="0" y="1808.0" font-size="13.5" fill="#52514e">article, which says nothing of other</text>
+<text class="pied-note" x="0" y="1825.0" font-size="13.5" fill="#52514e">articles or of practice.</text>
+<text class="pied-note" x="0" y="1842.0" font-size="13.5" fill="#52514e">“Shared power”: other authorities hold</text>
+<text class="pied-note" x="0" y="1859.0" font-size="13.5" fill="#52514e">a power of the same kind. Definitions</text>
+<text class="pied-note" x="0" y="1876.0" font-size="13.5" fill="#52514e">and quotations: section “How is the</text>
+<text class="pied-note" x="0" y="1893.0" font-size="13.5" fill="#52514e">table established?” on the page.</text>
+<text class="pied-licence" x="0" y="1914.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1931.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

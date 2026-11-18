@@ -27,16 +27,16 @@
   "G2 : 51 citations de l'inventaire retrouvees mot pour mot",
   "G6 : chaque citation porte temporalite, facultatif et justification ; chaque case vide decisive est justifiee",
   "G2 : 9 citations de « qui fixe les regles » retrouvees",
-  "G2 : 69 citations entre guillemets des fiches retrouvees",
+  "G2 : 70 citations entre guillemets des fiches retrouvees",
   "G3 : inventaire complet, 8 renvois relus dans l'article 19 (8, 11, 12, 16, 18, 54, 56, 61), 12 actes",
   "G4 : « seulement » tenu par renvoi (2 sur 8) et par acte (3 sur 12)",
   "G4 bis : la colonne des pouvoirs partages ne change aucun compte",
   "G7 : comptes tenus (par renvoi 2, par acte 3)",
   "G2 : 9 citations du texte de la page retrouvees (FR et EN)",
-  "G2-EN : 60 citations anglaises (Conseil constitutionnel) et 65 citations des fiches anglaises retrouvees",
-  "G5 : aucun motif « sans tiers » dans 725 textes (pages, bases)",
+  "G2-EN : 60 citations anglaises (Conseil constitutionnel) et 68 citations des fiches anglaises retrouvees",
+  "G5 : aucun motif « sans tiers » dans 726 textes (pages, bases)",
   "G8 : 2 paragraphe(s) donnent le compte par renvoi, tous dans le repli de methode, avec son denominateur et le compte par acte ; chapo et description par jeton",
-  "G5 : aucun motif « sans tiers » dans 729 textes (pages, bases, figures)",
+  "G5 : aucun motif « sans tiers » dans 730 textes (pages, bases, figures)",
   "G8 figure : aucun compte par disposition dans 6 textes de figure",
   "parite telephone : 4 figures, cases identiques au bureau, police >= 13.5"
  ],
@@ -192,7 +192,7 @@
      "cite": "Si la proposition de loi n'a pas été examinée par les deux assemblées dans un délai fixé par la loi organique",
      "temporalite": "avant",
      "facultatif": false,
-     "justification": "L'acte suppose que les deux assemblées n'aient pas examiné la proposition : compétence liée du président (« la soumet »)."
+     "justification": "L'acte suppose que l'une au moins des deux assemblées n'ait pas examiné la proposition dans le délai ; la page lit « la soumet » comme une compétence liée du président."
     }
    ],
    "autre_autorite": [
@@ -326,7 +326,7 @@
      "contexte": "les mesures",
      "temporalite": "pendant",
      "facultatif": false,
-     "justification": "Deuxième temps, les mesures : consultation du Conseil constitutionnel sur chacune, distincte de la consultation initiale."
+     "justification": "Deuxième temps, les mesures : consultation du Conseil constitutionnel sur les mesures (« à leur sujet »), distincte de la consultation initiale."
     }
    ],
    "autre_autorite": [

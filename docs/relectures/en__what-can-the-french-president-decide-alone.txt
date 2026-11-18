@@ -1,19 +1,19 @@
-# relu le 2026-10-16 ; texte servi de /en/what-can-the-french-president-decide-alone/, build de 6afc622 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/what-can-the-french-president-decide-alone/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What can the French president decide alone?
 The president appoints the Prime Minister.
 Can he dismiss him?
-No: the Constitution provides that the Prime Minister's appointment ends when the resignation of the Government is tendered.
-As a general rule, an instrument of the president also bears the signature of a minister: this is countersignature.
+In law, no: the Constitution provides that he terminates the Prime Minister’s appointment only when the latter tenders the resignation of the Government.
+As a general rule, an instrument of the president also bears the signature of the Prime Minister and, where required, of the ministers concerned: this is countersignature.
 Article 19 exempts the instruments of eight provisions from it; even there, the text most often brings in someone else, before or after the president.
-His most visible powers (the armed forces, pardon, treaties, appointments) are not on that list: they are countersigned.
-Page updated 11 October 2026 · texts read on Légifrance between 30 September 2026 and 11 October 2026
+His most visible powers (the armed forces, pardon, treaties, appointments to civil and military posts) are not on that list: they are countersigned.
+Page updated 18 November 2026 · texts read on Légifrance between 30 September 2026 and 17 November 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 “The President of the Republic shall appoint the Prime Minister.
 He shall terminate the appointment of the Prime Minister when the latter tenders the resignation of the Government.” (article 8).
 The appointment rests on his signature alone; the end of the appointment requires an act of the Prime Minister, the resignation he tenders.
-To measure the gap between the image of a president who decides alone and what the text says, the page starts from the only list the Constitution draws up: the instruments the president signs without countersignature, that is, without the signature of a minister next to his own.
+To set the image of a president who decides alone against what the text says, the page starts from the list the Constitution draws up of the instruments the president signs without countersignature, that is, without the signature of the Prime Minister or of a minister next to his own.
 It reads them one by one, and records an element only if it is written, word for word, in the article.
 The Constitution is quoted in the English translation published by the Conseil constitutionnel, itself checked word for word; the French text, read on Légifrance, remains the reference.
 Status: a documentary reading of the French Constitution, without legal certification.
@@ -21,25 +21,26 @@ Each quotation is checked word for word; its classification is a reading, justif
 The table: one row per act, grouped by provision of article 19; one column per element.
 Filled cell: the article itself contains an exact quotation of the element; empty cell: that article does not contain it, which says nothing of other articles or of practice.
 Another actor afterwards: an institution, authority or electorate to which the article assigns a distinct intervention, after the president’s act, including an optional one; mere practical arrangements for carrying out the act are not counted.
-Download · Cite · Data
 The finding in one sentence.
 Of the twelve acts that article 19 exempts from countersignature, nine bring in someone else, before or after the president, in the very text of their article.
 This count reads the text of each article, not practice nor the rest of the Constitution.
 Stepping in does not always mean blocking: before dissolving, the president must consult the Prime Minister, not obtain his agreement.
 That leaves three acts: appointing the Prime Minister, addressing Parliament by message and appointing the President of the Constitutional Council.
 For these, the article provides for neither a recommendation, consultation or act of another actor beforehand, nor the intervention of another actor afterwards.
+These twelve acts result from the way this page divides the provisions cited in article 19; their count measures neither the president’s own powers nor his political autonomy.
+DownloadCiteData
 What does “deciding alone” mean for a French president?
 Article 19 sets the rule: “Instruments of the President of the Republic, other than those provided for under articles 8 (paragraph one), 11, 12, 16, 18, 54, 56 and 61, shall be countersigned by the Prime Minister and, where required, by the ministers concerned.” The exceptions are therefore the acts no minister has to sign.
 In the text, this is what comes closest to “deciding alone”, without being the same thing.
 Without countersignature does not mean without condition.
 The text may require, before the act, a recommendation (for the referendum), a consultation (for dissolution) or an act of another actor (the resignation the Prime Minister tenders).
-It may bring in afterwards the voters, Parliament or the Constitutional Council, sometimes merely as a possibility: a statement before Congress may be followed by a debate, without a vote.
+It may bring in afterwards the voters, Parliament or the Constitutional Council, sometimes merely as a possibility: a statement before Congress, both Houses sitting together, may be followed by a debate, without a vote.
 Other authorities may hold a power of the same kind.
 Finally, the text may limit the act in time, in subject or in effect.
 These are the four columns of the table above; a single act may fill several.
 Three levels of reading.
 The table and the counts read only the text of the article referred to in article 19.
-The entries below add what other articles, Institutional Acts and two court decisions say.
+The entries below add what other articles, Institutional Acts (provided for by the Constitution to specify some of its rules) and three decisions of the Conseil d’État say.
 The section on the policy of the Nation then deals with practice.
 These last two levels change the scope of an act, never the content of a cell.
 An example.
@@ -48,10 +49,10 @@ But the Government appointed falls under article 20: “It shall be accountable 
 If the National Assembly censures it, it must tender its resignation (article 50).
 Which acts does the president sign without countersignature?
 One entry per provision, eight in all: the short answer first, then, when unfolded, the detail quotation by quotation (what the text requires before the act, who steps in afterwards, what the act produces, what other texts add).
-They are read alongside the role that article 5 gives the president: to ensure due respect for the Constitution and to ensure, “by his arbitration, the proper functioning of the public authorities and the continuity of the State”.
+They are read alongside one of the roles that article 5 gives the president: to ensure due respect for the Constitution and to ensure, “by his arbitration, the proper functioning of the public authorities and the continuity of the State”.
 Can the president appoint and dismiss the Prime Minister?
 Appoint, yes: his signature alone is enough.
-Dismiss, no: article 8 provides only for the resignation the Prime Minister tenders.
+Dismiss, not in law: article 8 provides only for the resignation the Prime Minister tenders.
 Article 50 obliges him to tender it when the National Assembly passes a resolution of no-confidence; it is not a dismissal by the president.
 The detail, quotation by quotation
 Basis
@@ -94,24 +95,24 @@ The president submits the text to a referendum; the voters adopt or reject it.
 Required before the act
 Two routes.
 For a government bill, a recommendation from the Government “when Parliament is in session” or a joint motion of the two Houses, published in the Journal officiel.
-For a shared-initiative private members' bill, the initiative “of one fifth of the members of Parliament, supported by one tenth of the voters enrolled on the electoral lists”, review by the Constitutional Council, then the absence of consideration by the two Houses within the period set by the Institutional Act.
+For a shared-initiative private members’ bill, the initiative “of one fifth of the members of Parliament, supported by one tenth of the voters enrolled on the electoral lists”, review by the Constitutional Council, then the absence of consideration by at least one of the two Houses within the period set by the Institutional Act.
 Who steps in afterwards
 Where the referendum is held on the recommendation of the Government, the latter makes before each House a statement which “shall be followed by a debate”.
 Then the voters vote.
-If the text is adopted, the president “shall promulgate the resulting statute within fifteen days following the proclamation of the results of the vote”: promulgation is his own act, bound by a time limit.
+If the text is adopted, the president “shall promulgate the resulting statute within fifteen days following the proclamation of the results of the vote”: promulgation, which makes the statute enforceable, is his own act, bound by a time limit.
 Effect of the act
 The subject is limited: organisation of the public authorities, reforms relating to the economic, social or environmental policy of the Nation and to the public services contributing thereto, authorisation to ratify certain treaties.
-In the shared-initiative referendum, if the two Houses have not considered the bill within the period, the French text uses the indicative « la soumet » (submits it), whereas the English translation published by the Conseil constitutionnel reads “may submit it to a referendum”.
+In the shared-initiative referendum, if the bill has not been considered by each of the two Houses within the period, the French text uses the indicative “la soumet” (submits it), which this page reads as an obligation, whereas the English translation published by the Conseil constitutionnel reads “may submit it to a referendum”.
 Beyond this article
 The Constitutional Council “shall ensure the proper conduct of referendum proceedings” and proclaims the results (art.
 60); it is consulted by the Government on the organisation of referendum proceedings (Ordinance no.
 58-1067, art.
-46: « est consulté par le Gouvernement sur l'organisation des opérations de référendum »); it reviews shared-initiative bills “before they are submitted to referendum” (art.
+46: “est consulté par le Gouvernement sur l’organisation des opérations de référendum”); it reviews shared-initiative bills “before they are submitted to referendum” (art.
 61).
-During a vacancy or incapacity, the president's functions are exercised in the interim, except those of articles 11 and 12 (art.
+During a vacancy or incapacity, the president’s functions are exercised in the interim, except those of articles 11 and 12 (art.
 7).
-Can the president dissolve the National Assembly without the Prime Minister's agreement?
-Yes, without anyone's agreement: he must only consult the Prime Minister and the presidents of the two Houses.
+Can the president dissolve the National Assembly without the Prime Minister’s agreement?
+Yes, without anyone’s agreement: he must only consult the Prime Minister and the presidents of the two Houses.
 The voters then vote, twenty to forty days later, and no further dissolution may take place in the year following those elections.
 The detail, quotation by quotation
 Basis
@@ -133,7 +134,7 @@ The dissolution takes effect by his decision alone; the majority that emerges fr
 Beyond this article
 “The National Assembly shall not be dissolved during the exercise of such emergency powers” (art.
 16).
-During a vacancy or incapacity, the president's functions are exercised in the interim, except those of articles 11 and 12 (art.
+During a vacancy or incapacity, the president’s functions are exercised in the interim, except those of articles 11 and 12 (art.
 7).
 What are the emergency powers of article 16?
 They are the measures the president may take in the face of a serious and immediate threat, when the public authorities no longer function properly, and only after formal consultations.
@@ -151,12 +152,12 @@ Three stages.
 To use them, two cumulative conditions — a serious and immediate threat to the institutions, the independence of the Nation, the integrity of its territory or the fulfilment of its international commitments, and the interruption of “the proper functioning of the constitutional public authorities” — and formal consultation of the Prime Minister, the Presidents of the Houses and the Constitutional Council.
 For each measure: “The Constitutional Council shall be consulted with regard to such measures.”
 Who steps in afterwards
-“Parliament shall sit as of right.” For their continuation: after thirty days, the matter may be referred to the Constitutional Council by the President of the National Assembly, the President of the Senate, sixty deputies or sixty senators, to decide whether the conditions still apply; it does so as of right after sixty days and at any moment thereafter, “by public announcement”.
+“Parliament shall sit as of right.” For their continuation: after thirty days, the matter may be referred to the Constitutional Council by the President of the National Assembly, the President of the Senate, sixty deputies or sixty senators, to examine whether the conditions still apply; it does so as of right after sixty days and at any moment thereafter, “by public announcement”.
 Effect of the act
 The power is bounded by its purpose: to provide the public authorities, “as swiftly as possible”, with the means to carry out their duties.
 Its duration is examined by the Constitutional Council; the article gives this public announcement no effect that would end the emergency powers.
 Beyond this article
-The administrative courts have declared themselves without jurisdiction over the decision to use article 16, an act of government « dont il n'appartient au Conseil d'Etat ni d'apprécier la légalité, ni de contrôler la durée d'application » (whose legality and duration the Conseil d'État may neither assess nor review), and over a measure taken in the matters of article 34, which « présente le caractère d'un acte législatif » (has the character of a legislative act) (Conseil d'État, Assembly, 2 March 1962, Rubin de Servens; our translation).
+The administrative courts have declared themselves without jurisdiction over the decision to use article 16, an act of government “dont il n’appartient au Conseil d’Etat ni d’apprécier la légalité, ni de contrôler la durée d’application” (whose legality and duration the Conseil d’État may neither assess nor review), and over a measure taken in the matters of article 34, which “présente le caractère d’un acte législatif” (has the character of a legislative act) (Conseil d’État, Assembly, 2 March 1962, Rubin de Servens; our translation).
 Can the president address Parliament?
 Yes, in two ways: a message read out before the two Houses, or a statement before Parliament convened in Congress.
 No vote follows; only the statement may be followed by a debate, in his absence.
@@ -194,7 +195,7 @@ Effect of the act
 The president obtains the review, not the decision.
 Who appoints the members of the Constitutional Council?
 He appoints three of the nine members, but the committees of the two Houses may prevent it if their negative votes, added together, reach three fifths of the votes cast.
-He also designates the president of the Council, without prior opinion, but from among the Council's members.
+He also designates the president of the Council, without prior opinion, but from among the Council’s members.
 The detail, quotation by quotation
 Basis
 art.
@@ -217,7 +218,7 @@ Members hold “a non-renewable term of nine years”; the President of the Coun
 Effect of the act
 The choice is his; for the members, a qualified opposition of the two committees can prevent it.
 Beyond this article
-The President of the Council is « nommé par décision du Président de la République » and « choisi parmi les membres du conseil, nommés ou de droit » (appointed by decision of the President of the Republic, chosen from among the members of the Council, appointed or ex officio: Ordinance no.
+The President of the Council is “nommé par décision du Président de la République” and “choisi parmi les membres du conseil, nommés ou de droit” (appointed by decision of the President of the Republic, chosen from among the members of the Council, appointed or ex officio: Ordinance no.
 58-1067, art.
 1, our translation): the appointment concerns a person who is already a member, appointed or ex officio like former Presidents of the Republic.
 Can the president have a law reviewed before it is promulgated?
@@ -235,12 +236,12 @@ Required before the act
 No recommendation or consultation is required; the moment is written: “before their promulgation”.
 The Prime Minister, the Presidents of the two Houses, sixty deputies or sixty senators can also refer the law.
 Who steps in afterwards
-The Constitutional Council, which “must deliver its ruling within one month” (eight days in cases of urgency, at the Government's request).
+The Constitutional Council, which “must deliver its ruling within one month” (eight days in cases of urgency, at the Government’s request).
 Effect of the act
 Referral “shall suspend the time allotted for promulgation”.
 It obtains a review of constitutionality, not a judgement of expediency.
 Which powers are attributed to him personally although they are countersigned?
-Commander-in-Chief, pardon, treaties, decrees, appointments: these are the most visible attributes of the office, and none appears in the list of article 19.
+Commander-in-Chief, pardon, treaties, decrees deliberated upon in the Council of Ministers, appointments to civil and military posts: these are the most visible attributes of the office, and none appears in the list of article 19.
 When they give rise to an instrument of the president, that instrument is subject to the countersignature this article provides for.
 Some also bring in Parliament or another institution: part of the treaties may be ratified only by an Act of Parliament, and some appointments go through a consultation of the parliamentary committees or through the High Council of the Judiciary.
 Does the president choose ministers alone?
@@ -262,7 +263,7 @@ Effect of the act
 Neither the appointment nor the dismissal of a minister is in the list of article 19.
 Can the president refuse to promulgate a law?
 The text provides for no veto: he must promulgate within fifteen days, a time limit suspended if the law is referred to the Constitutional Council (article 61).
-He may only ask for a further deliberation, which Parliament may not refuse and whose outcome is Parliament's to decide.
+He may only ask for a further deliberation, which Parliament may not refuse and whose outcome is Parliament’s to decide.
 The detail, quotation by quotation
 Basis
 art.
@@ -277,7 +278,7 @@ Who steps in afterwards
 Parliament: “Such reopening of debate shall not be refused”, and Parliament votes again.
 Effect of the act
 He promulgates within fifteen days following the final passage of an Act and its transmission to the Government; before this time limit expires, he may ask Parliament to reopen debate on the Act or any sections thereof.
-The text sets this time limit and opens a second reading, whose outcome belongs to Parliament; it provides for no veto.
+The text sets this time limit and allows a further deliberation, whose outcome belongs to Parliament; it provides for no veto.
 A referral to the Constitutional Council before promulgation delays it: referral “shall suspend the time allotted for promulgation” (art.
 61).
 Can the president govern by decree?
@@ -297,18 +298,18 @@ Other regulatory decrees fall to the Prime Minister, who has power to make regul
 21).
 Required before the act
 A deliberation in the Council of Ministers.
-A decree so deliberated must be signed by the president « alors même qu'aucun texte n'imposait cette délibération » (even though no text required that deliberation: Conseil d'État, Assembly, 10 September 1992, Meyet, our translation; rule restated on 5 February 2024).
+A decree so deliberated must be signed by the president “alors même qu’aucun texte n’imposait cette délibération” (even though no text required that deliberation: Conseil d’État, Assembly, 10 September 1992, Meyet, our translation; rule restated on 5 February 2024).
 Who steps in afterwards
 The Prime Minister and the ministers responsible, who countersign.
 Effect of the act
 The boundary runs through what is deliberated upon in the Council of Ministers.
 The text says “shall sign”; it does not specify whether the president may refuse.
 Beyond this article
-The provisions of a decree deliberated upon in the Council of Ministers may, « en principe » (in principle), be amended only by a decree deliberated upon in the same way; it is otherwise if that decree provides that they may be amended « par décret en Conseil d'Etat ou par décret simple » (by a decree in the Conseil d'État or by a simple decree), or if their codification shows that they fall under such decrees (Conseil d'État, 5 February 2024, no.
+The provisions of a decree deliberated upon in the Council of Ministers may, “en principe” (in principle), be amended only by a decree deliberated upon in the same way; it is otherwise if that decree provides that they may be amended “par décret en Conseil d’Etat ou par décret simple” (by a decree in the Conseil d’État or by a simple decree), or if their codification shows that they fall under such decrees (Conseil d’État, 5 February 2024, no.
 470962; our translation).
 Does the president alone appoint senior officials?
 No.
-His appointments are countersigned, and he is not the only one who appoints: the Prime Minister also makes appointments to civil and military posts, subject to article 13 (article 21), and some of the president's appointments may be delegated to him.
+His appointments are countersigned, and he is not the only one who appoints: the Prime Minister also makes appointments to civil and military posts, subject to article 13 (article 21), and some of the president’s appointments may be delegated to him.
 Some appointments also go through an opinion of the parliamentary committees or through the High Council of the Judiciary.
 The detail, quotation by quotation
 Basis
@@ -326,13 +327,13 @@ art.
 Who decides
 The president: “He shall make appointments to the civil and military posts of the State” (art.
 13).
-In the Council of Ministers for the posts that article 13 lists (Conseillers d'État, ambassadors, prefects, recteurs, directors of central government departments, highest-ranking military officers…) and those an Institutional Act adds; by presidential decree for others.
+In the Council of Ministers for the posts that article 13 lists (Conseillers d’État, ambassadors, prefects, recteurs, directors of central government departments, highest-ranking military officers…) and those an Institutional Act adds; by presidential decree for others.
 For the remaining posts, this power may be delegated to the Prime Minister, who makes appointments “Subject to article 13” (art.
 21).
 Required before the act
 Deliberation in the Council of Ministers for the listed posts.
-For the posts an Institutional Act designates, public consultation of the relevant standing committee in each House, which can prevent the appointment by three fifths of the votes cast.
-For judges, the High Council of the Judiciary “shall make recommendations” (Cour de cassation, Chief Presidents of Courts of Appeal, Presidents of the Tribunaux de grande instance) or is consulted; for public prosecutors, it “shall give its opinion” (art.
+For the posts an Institutional Act designates, public consultation of the relevant standing committee in each House; no appointment may be made when the negative votes, added together in the two committees, reach three fifths of the votes cast.
+For judges, the High Council of the Judiciary “shall make recommendations” (Cour de cassation, Chief Presidents of Courts of Appeal, Presidents of the Tribunaux de grande instance) or gives a binding opinion (“avis conforme”; the published translation reads “after consultation with this section”); for public prosecutors, it “shall give its opinion” (art.
 65).
 Who steps in afterwards
 The Prime Minister and the ministers responsible, who countersign.
@@ -341,18 +342,19 @@ In the text, the power of appointment is general; it is countersigned, may be de
 Beyond this article
 Ordinance no.
 58-1136 (an Institutional Act) adds posts filled in the Council of Ministers (art.
-1); has the members of the Conseil d'État and the Cour des comptes, judges and prosecutors, university professors and military officers appointed « par décret du Président de la République » (by decree of the President of the Republic, art.
+1); has the members of the Conseil d’État and the Cour des comptes, judges and prosecutors, university professors and military officers appointed “par décret du Président de la République” (by decree of the President of the Republic, art.
 2); allows appointment to the other posts to be delegated to the Prime Minister by such a decree (art.
 3).
 Our translation.
 Does the president decide alone in military matters?
-He is Commander-in-Chief, but the Government has the armed forces at its disposal and the Prime Minister is responsible for national defence; his instruments are countersigned.
+He is Commander-in-Chief, but the Government has the armed forces at its disposal, the Prime Minister is responsible for national defence and Parliament authorises a declaration of war; his instruments are countersigned.
 The detail, quotation by quotation
 Basis
 art.
 15, art.
 20, art.
 21, art.
+35, art.
 19
 Who decides
 The president “shall be Commander-in-Chief of the Armed Forces” and presides over the higher national defence councils and committees (art.
@@ -363,8 +365,10 @@ Who steps in afterwards
 The Government “shall have at its disposal the civil service and the armed forces” (art.
 20); the Prime Minister “shall be responsible for national defence” (art.
 21).
+Parliament, finally: “A declaration of war shall be authorized by Parliament”, and the extension beyond four months of an intervention of the armed forces abroad, decided by the Government, requires its authorisation (art.
+35).
 Effect of the act
-The Constitution spreads military matters over three titles: Commander-in-Chief, disposal of the armed forces, responsibility for national defence.
+Articles 15, 20 and 21 spread military matters over three titles: Commander-in-Chief, disposal of the armed forces, responsibility for national defence; article 35 adds Parliament’s authorisation, for a declaration of war and for extending an intervention beyond four months.
 None can be read in isolation.
 Can the president grant a pardon alone?
 No, not by his signature alone.
@@ -382,7 +386,7 @@ No recommendation or consultation is required before the act.
 Who steps in afterwards
 The Prime Minister and the minister responsible, who countersign.
 Effect of the act
-The text limits its object to individual pardons (“in an individual capacity”, in the published translation), a precision added in 2008 (the 1958 text said only that he « a le droit de faire grâce », has the right to grant pardons).
+The text limits its object to individual pardons (“in an individual capacity”, in the published translation), a precision added in 2008 (the 1958 text said only that he “a le droit de faire grâce”, has the right to grant pardons).
 A personal power in the image, a countersigned act in the text.
 Can the president sign a treaty alone?
 He negotiates and ratifies treaties, but ratification is countersigned and, for part of the treaties (peace, commerce, State finances, territory, among others), it requires an Act of Parliament.
@@ -397,7 +401,7 @@ Who decides
 The president “shall negotiate and ratify treaties”; he “shall be informed of any negotiations for the conclusion of an international agreement not subject to ratification” (art.
 52).
 Required before the act
-For peace treaties, trade agreements, those committing the finances of the State, modifying provisions which are the preserve of statute law, relating to the status of persons or to territory, a statute: they “may be ratified or approved only by an Act of Parliament” (art.
+For peace treaties, trade agreements, treaties or agreements relating to international organization, those committing the finances of the State, modifying provisions which are the preserve of statute law, relating to the status of persons or involving the ceding, exchanging or acquiring of territory, a statute: they “may be ratified or approved only by an Act of Parliament” (art.
 53).
 If the Constitutional Council has held that a clause is contrary to the Constitution, authorisation to ratify comes only after amending the Constitution (art.
 54).
@@ -433,19 +437,19 @@ Art.
 49: “In that event, the Bill shall be considered passed unless a resolution of no-confidence, tabled within the subsequent twenty-four hours, is carried”
 Art.
 47: “Should Parliament fail to reach a decision within seventy days, the provisions of the Bill may be brought into force by Ordinance.”
-A tax promise therefore goes through Parliament, but not always through a vote on the text.
+A tax promise is therefore a matter for statute law, but not always for a vote on the text.
 On a finance bill, the Prime Minister may, after deliberation by the Council of Ministers, which the president chairs (article 9), make its passing an issue of a vote of confidence: “the Bill shall be considered passed” unless a resolution of no-confidence is carried (article 49, paragraph 3).
 And if Parliament fails to reach a decision within the time limit set by article 47, the provisions of the bill may be brought into force by ordinance.
 These procedures are set out in the page “Who can get a law passed in France?”.
 A promise implemented by decree also brings in signatures other than the president’s: the Prime Minister’s, or the countersignature if the decree is deliberated upon in the Council of Ministers.
 Who determines the policy of the Nation?
 Why, then, does the Élysée seem to decide everything?
-The answer is not in the list of article 19, but in article 20: “The Government shall determine and conduct the policy of the Nation.” It has at its disposal the civil service and the armed forces, and it answers to Parliament.
+The answer does not lie in the list of article 19; it starts from article 20: “The Government shall determine and conduct the policy of the Nation.” It has at its disposal the civil service and the armed forces, and it answers to Parliament.
 The Government answers to the Assembly.
 A resolution of no-confidence can be passed only by a majority of the members of the National Assembly (article 49); if it is, “the Prime Minister shall tender the resignation of the Government to the President of the Republic” (article 50).
 The Government therefore cannot remain in office against an absolute majority of deputies voting to censure it, nor when the Assembly fails to endorse its programme or a general policy statement (article 50).
 The Prime Minister may also tender his resignation without having been censured (article 8).
-When the Assembly’s majority supports the president, the Government he appointed conducts the policy on which the president was elected: this is where the image of a president who decides everything comes from.
+When the Assembly’s majority supports the president, the Government he appointed conducts the policy on which the president was elected: this is a plausible explanation, not demonstrated here, of the image of a president who decides everything.
 That link belongs to political practice, which the text does not describe.
 When a Prime Minister leaves office at the president’s request, which belongs to the same practice, the end of the appointment still goes, in law, through the resignation he tenders (article 8).
 The text makes that resignation compulsory only after a vote of the Assembly (article 50).
@@ -470,7 +474,7 @@ Required before the act
 No prior condition is written; the Government then answers for its policy to Parliament (art.
 20).
 Who steps in afterwards
-The National Assembly, to which it answers; the ministers, who countersign the Prime Minister's instruments where they are responsible for their implementation (art.
+The National Assembly, to which it answers; the ministers, who countersign the Prime Minister’s instruments where they are responsible for their implementation (art.
 22).
 Effect of the act
 The president “shall ensure due respect for the Constitution” and ensures, by his arbitration, the proper functioning of the public authorities (art.
@@ -505,6 +509,7 @@ The criterion.
 An act is retained when the text of its article requires before it no recommendation, no consultation and no act of another actor, and brings in no other actor afterwards, even optionally.
 Shared powers and other written limits do not enter the criterion.
 Counted act by act, it retains three acts out of twelve.
+The division into twelve acts is the page’s own: another, counting separately the message by which the president informs the Nation (article 16) or the promulgation of a statute adopted by referendum (article 11), would change the number of acts.
 Another actor afterwards: an institution, authority or electorate to which the article assigns a distinct intervention, after the president’s act, including an optional one.
 Mere practical arrangements for carrying out the act are not counted.
 The Constitutional Council, when a treaty or a statute is referred to it, rules: that is a distinct intervention.
@@ -512,7 +517,7 @@ The reading aloud of the message the president addresses to the Houses is not co
 A retained act is therefore not an act performed by no one else; likewise, appointing the Prime Minister produces a Government accountable to Parliament.
 Counted by provision: why an earlier version found a different number
 An earlier version of this dataset, published on 6 October 2026, counted by provision: each was represented by the first act its article gives the president.
-The same criterion then retains two provisions out of eight; counted act by act, it retains three acts out of twelve.
+Applied provision by provision, the current criterion retains two provisions out of eight, as many as that version, whose criterion also set aside shared powers; counted act by act, it retains three acts out of twelve.
 The act that escaped the first count is the designation of the president of the Constitutional Council, which article 56 provides for after the appointment of three members.
 Those appointments go through an opinion of the parliamentary committees; the designation of the president requires none.
 The quotations that fill the table, act by act
@@ -583,7 +588,7 @@ Another actor afterwards
 art.
 11
 Another actor afterwards
-“Where the outcome of the referendum is favourable to the Government Bill or to the Private Members' Bill”
+“Where the outcome of the referendum is favourable to the Government Bill or to the Private Members’ Bill”
 art.
 11
 Other written limit
@@ -592,7 +597,7 @@ art.
 11
 Other written limit
 “the President of the Republic shall promulgate the resulting statute within fifteen days following the proclamation of the results of the vote”
-Submitting a shared-initiative private members' bill to a referendum
+Submitting a shared-initiative private members’ bill to a referendum
 art.
 11
 Act
@@ -608,11 +613,11 @@ Required before the act
 art.
 11
 Required before the act
-“If the Private Members' Bill has not been considered by the two Houses within a period set by the Institutional Act”
+“If the Private Members’ Bill has not been considered by the two Houses within a period set by the Institutional Act”
 art.
 11
 Another actor afterwards
-“Where the Private Members' Bill is not passed by the French people”
+“Where the Private Members’ Bill is not passed by the French people”
 art.
 11
 Other written limit
@@ -810,26 +815,27 @@ art.
 Other written limit
 “referral to the Constitutional Council shall suspend the time allotted for promulgation”
 What this page does not say
-It keeps to the texts in force, reread on Légifrance, and to two decisions of the Conseil d’État read in full.
+It keeps to the texts read on Légifrance, in force (and article 17 in its 1958 version, for comparison), and to three decisions of the Conseil d’État read in full.
 It does not describe institutional practice beyond what the section on the policy of the Nation says of it, and it is not legal advice.
 Where the text is silent, for instance on whether the president may refuse to sign an ordinance, the page says so without deciding.
 The counts measure neither the president’s autonomy nor the number of his own powers.
-Following a promise beyond the signature Un président peut-il tenir ses promesses ?, the author's book, in French: contents, excerpts and reviews →
+Following a promise beyond the signature Un président peut-il tenir ses promesses?, the author’s book, in French: contents, excerpts and reviews →
 Frequently asked questions
 What can the French president decide alone?
 The Constitution does not speak of deciding alone.
-Article 19 exempts from the Prime Minister's countersignature the instruments of eight provisions: appointing the Prime Minister and terminating his appointment, submitting a text to a referendum, dissolving the National Assembly, exercising emergency powers, addressing Parliament, referring a treaty or a statute to the Constitutional Council, appointing to the Constitutional Council.
+Article 19 exempts from countersignature (that of the Prime Minister and, where required, of the ministers concerned) the instruments of eight provisions: appointing the Prime Minister and terminating his appointment, submitting a text to a referendum, dissolving the National Assembly, exercising emergency powers, addressing Parliament, referring a treaty or a statute to the Constitutional Council, appointing to the Constitutional Council.
 Of the twelve acts they contain, nine bring in, in their own article, another actor before or after the president: a recommendation for the referendum, a consultation and then an election for dissolution.
 His other instruments are countersigned.
 Can the French president dismiss the Prime Minister?
-No.
-Article 8 describes a single route: the president terminates the Prime Minister's appointment "when the latter tenders the resignation of the Government" (English translation published by the Conseil constitutionnel).
+Not in law.
+Article 8 describes a single route: the president terminates the Prime Minister’s appointment “when the latter tenders the resignation of the Government” (English translation published by the Conseil constitutionnel).
 Article 50 describes the case in which this resignation becomes compulsory: when the National Assembly passes a resolution of no-confidence or fails to endorse the Government programme or a general policy statement.
 This obligation arises from a vote of the Assembly; the text does not give it to the president.
+In practice, a Prime Minister may leave office at the president’s request: the end of the appointment still goes, in law, through the resignation he tenders.
 Who sets taxes in France: the president, the Government or Parliament?
-Article 34 reserves to statute law "the base, rates and methods of collection of all types of taxes" (English translation published by the Conseil constitutionnel).
-A tax promise therefore goes through Parliament, but not always through a vote on the text: on a finance bill, the Prime Minister may, after deliberation by the Council of Ministers, make its passing an issue of a vote of confidence, and the bill is considered passed unless a resolution of no-confidence is carried (article 49, paragraph 3); if Parliament fails to reach a decision within the time limit set by article 47, the provisions of the bill may be brought into force by ordinance.
-In none of these cases is the president's signature enough.
+Article 34 reserves to statute law “the base, rates and methods of collection of all types of taxes” (English translation published by the Conseil constitutionnel).
+A tax promise is therefore a matter for statute law, but not always for a vote on the text: on a finance bill, the Prime Minister may, after deliberation by the Council of Ministers, make its passing an issue of a vote of confidence, and the bill is considered passed unless a resolution of no-confidence is carried (article 49, paragraph 3); if Parliament fails to reach a decision within the time limit set by article 47, the provisions of the bill may be brought into force by ordinance.
+In none of these cases is the president’s signature enough.
 Sources
 All the texts cited here were read in their version in force, on Légifrance, on the date indicated; article 17 was also read in its 1958 version, for the comparison drawn in the entry on pardon.
 The Constitution is quoted in the English translation published by the Conseil constitutionnel (Constitution of 4 October 1958); other French texts are quoted in French, with our translation.
@@ -852,6 +858,7 @@ Constitution of 4 October 1958, article 20 (in French) — version in force sinc
 Constitution of 4 October 1958, article 21 (in French) — version in force since 5 October 1958, read on Légifrance on 30 September 2026.
 Constitution of 4 October 1958, article 22 (in French) — version in force since 5 October 1958, read on Légifrance on 30 September 2026.
 Constitution of 4 October 1958, article 34 (in French) — version in force since 10 March 2024, read on Légifrance on 5 October 2026.
+Constitution of 4 October 1958, article 35 (in French) — version in force since 25 July 2008, read on Légifrance on 17 November 2026.
 Constitution of 4 October 1958, article 37 (in French) — version in force since 5 October 1958, read on Légifrance on 5 October 2026.
 Constitution of 4 October 1958, article 38 (in French) — version in force since 25 July 2008, read on Légifrance on 6 October 2026.
 Constitution of 4 October 1958, article 47 (in French) — version in force since 25 July 2008, read on Légifrance on 11 October 2026.
@@ -866,34 +873,34 @@ Constitution of 4 October 1958, article 61 (in French) — version in force sinc
 Constitution of 4 October 1958, article 65 (in French) — version in force since 25 July 2008, read on Légifrance on 11 October 2026.
 Ordonnance n° 58-1067 du 7 novembre 1958 portant loi organique sur le Conseil constitutionnel, article 1 (in French) — version in force since 9 November 1958, read on Légifrance on 11 October 2026.
 Ordonnance n° 58-1067 du 7 novembre 1958 portant loi organique sur le Conseil constitutionnel, article 46 (in French) — version in force since 9 November 1958, read on Légifrance on 11 October 2026.
-Ordonnance n° 58-1136 du 28 novembre 1958 portant loi organique concernant les nominations aux emplois civils et militaires de l'État, article 1 (in French) — version in force since 12 August 2016, read on Légifrance on 11 October 2026.
+Ordonnance n° 58-1136 du 28 novembre 1958 portant loi organique concernant les nominations aux emplois civils et militaires de l’État, article 1 (in French) — version in force since 12 August 2016, read on Légifrance on 11 October 2026.
 Ordonnance n° 58-1136 du 28 novembre 1958, article 2 (in French) — version in force since 29 November 1958, read on Légifrance on 11 October 2026.
 Ordonnance n° 58-1136 du 28 novembre 1958, article 3 (in French) — version in force since 29 November 1958, read on Légifrance on 11 October 2026.
-Conseil d'État, Assemblée, 2 mars 1962, n° 55049 et 55055, Rubin de Servens (in French) — read on Légifrance on 11 October 2026.
-Conseil d'État, Assemblée, 10 septembre 1992, n° 140376 et autres, Meyet (in French) — read on Légifrance on 11 October 2026.
-Conseil d'État, 6e et 5e chambres réunies, 5 février 2024, n° 470962 (in French) — read on Légifrance on 11 October 2026.
+Conseil d’État, Assemblée, 2 mars 1962, n° 55049 et 55055, Rubin de Servens (in French) — read on Légifrance on 11 October 2026.
+Conseil d’État, Assemblée, 10 septembre 1992, n° 140376 et autres, Meyet (in French) — read on Légifrance on 11 October 2026.
+Conseil d’État, 6e et 5e chambres réunies, 5 février 2024, n° 470962 (in French) — read on Légifrance on 11 October 2026.
 Download the data (CC BY 4.0 licence): CSV, long format, one row per quotation or empty cell, with its timing, its optional character and the reason for its classification (French quotations); JSON, with definitions, counting criteria and the record of the checks (in French).
-An earlier version of this dataset, one row per provision, is archived on Zenodo with the six others of the same series and their methods note: doi:10.5281/zenodo.23212664; the dataset downloadable here, act by act, replaces it.
+This dataset is also archived on Zenodo, with the six others of the same series and their methods note: doi:10.5281/zenodo.23212664, the identifier shared by all versions, which leads to the most recent, that of 12 October 2026, already act by act; the versions of 7 October 2026, one row per provision, remain available there, and the corrections made since are not yet included.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, period and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 The eight provisions of article 19 of the French Constitution, act by act: what the text of each article requires beforehand, whom it brings in afterwards
 The eight provisions that article 19 exempts from countersignature contain twelve acts.
-Nine of these acts bring in, in their own article, another actor before or after the president's decision.
+Nine of these acts bring in, in their own article, another actor before or after the president’s decision.
 Only three provide there for neither a recommendation, consultation or act of another actor before the act nor the intervention of another actor afterwards: appointing the Prime Minister, addressing Parliament by message and appointing the President of the Constitutional Council.
 This count describes the text of each article, not practice.
 Reading caveat.
 Filled cell: exact quotation of the article (list and justification on the page).
 Empty cell: nothing in that article; says nothing of other articles or of practice.
 “Required before”: recommendation, consultation or act of another actor; “another actor”: an institution, authority or electorate to which the article assigns a distinct intervention after the act, even an optional one; practical arrangements for carrying out the act are not counted.
+“Shared power”: other authorities, named by the article, hold a power of the same kind; “other written limit”: time, subject or effect that the article sets for the act.
 Constitution of 4 October 1958, arts.
-8, 11, 12, 16, 18, 19, 54, 56, 61 (Légifrance; English translation: Conseil constitutionnel)
+8, 11, 12, 16, 18, 19, 54, 56, 61 (Légifrance, read on 30 September 2026; English translation: Conseil constitutionnel)
 Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“What can the French president decide alone?”.
-Légifrance (Constitution of 4 October 1958) and the Conseil constitutionnel's English translation data, retrieved 11 October 2026 (texts read on Légifrance from 30 September 2026 to 11 October 2026; quoted in the English translation published by the Conseil constitutionnel). https://stephane-lalut.com/en/what-can-the-french-president-decide-alone/
+“What can the French president decide alone?” Légifrance (Constitution of 4 October 1958) and the Conseil constitutionnel’s English translation data, retrieved 11 October 2026 (texts read on Légifrance from 30 September 2026 to 11 October 2026; quoted in the English translation published by the Conseil constitutionnel). https://stephane-lalut.com/en/what-can-the-french-president-decide-alone/
 Copy citation
 In three sentences
 This page reads, in the text of the French Constitution, the eight provisions that article 19 exempts from countersignature.
@@ -909,8 +916,8 @@ The data
 The inventory of the eight provisions of article 19, act by act: each element with its exact quotation, its article, its reading date, its timing and the reason for its classification, and the articles that assign statute law and regulation; the same content exists as CSV, in long format, readable in a spreadsheet.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
-The raw series belong to their producers (Légifrance (Constitution of 4 October 1958) and the Conseil constitutionnel's English translation), under their own terms.
+Text under copyright — short quotations permitted, full reproduction on request.
+The raw series belong to their producers (Légifrance [Constitution of 4 October 1958] and the Conseil constitutionnel’s English translation), under their own terms.
 All resources: data, explainers and reference material →
 Share
 WhatsApp

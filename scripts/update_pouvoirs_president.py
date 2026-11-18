@@ -498,30 +498,36 @@ TXT = {
            "t1": "L’article 19 dispense de contreseing {n} dispositions",
            "t2": "acte par acte, ce que le texte de chaque article exige ou fait intervenir",
            "titre_m": "L’article 19 dispense de contreseing {n} dispositions : acte par acte, ce que dit chaque article",
-           "source": "Constitution du 4 octobre 1958, art. 8, 11, 12, 16, 18, 19, 54, 56, 61, versions en vigueur lues "
-                     "sur Légifrance",
+           "source": "Constitution du 4 octobre 1958, art. 8, 11, 12, 16, 18, 19, 54, 56, 61, en vigueur, lus sur "
+                     "Légifrance {lu}",
            "note": "Case pleine : citation exacte de l’article (liste et justification sur la page). Case vide : rien "
                    "dans cet article ; ne dit rien des autres articles ni de la pratique. « Exigé avant » : proposition, "
                    "consultation ou acte d’un autre acteur ; « autre acteur » : institution, autorité ou corps électoral à "
                    "qui l’article attribue une intervention distincte après l’acte, même facultative ; les modalités "
-                   "matérielles d’exécution ne comptent pas.",
-           "note_m": "Case pleine : citation exacte de l’article ; case vide : rien dans cet article. Définitions et "
-                     "citations : section « Comment le tableau est-il établi ? » de la page.",
+                   "matérielles d’exécution ne comptent pas. « Pouvoir partagé » : d’autres autorités, nommées par "
+                   "l’article, détiennent un pouvoir de même nature ; « autre cadre écrit » : limite de temps, d’objet ou "
+                   "d’effet que l’article fixe à l’acte.",
+           "note_m": "Case pleine : citation exacte de l’article ; case vide : rien dans cet article, ce qui ne dit rien "
+                     "des autres articles ni de la pratique. « Pouvoir partagé » : d’autres autorités ont un pouvoir de "
+                     "même nature. Définitions et citations : section « Comment le tableau est-il établi ? » de la page.",
            "renvoi": "art. ", "plein": "présent", "vide": "absent"},
     "en": {"titre": "The {n} provisions of article 19 of the French Constitution, act by act: what the text of each "
                     "article requires beforehand, whom it brings in afterwards",
            "t1": "Article 19 exempts {n} provisions from countersignature",
            "t2": "act by act, what the text of each article requires or brings in",
            "titre_m": "Article 19 exempts {n} provisions from countersignature: act by act, what each article says",
-           "source": "Constitution of 4 October 1958, arts. 8, 11, 12, 16, 18, 19, 54, 56, 61 (Légifrance; English "
-                     "translation: Conseil constitutionnel)",
+           "source": "Constitution of 4 October 1958, arts. 8, 11, 12, 16, 18, 19, 54, 56, 61 (Légifrance, read {lu}; "
+                     "English translation: Conseil constitutionnel)",
            "note": "Filled cell: exact quotation of the article (list and justification on the page). Empty cell: "
                    "nothing in that article; says nothing of other articles or of practice. “Required before”: "
                    "recommendation, consultation or act of another actor; “another actor”: an institution, authority or "
                    "electorate to which the article assigns a distinct intervention after the act, even an optional "
-                   "one; practical arrangements for carrying out the act are not counted.",
-           "note_m": "Filled cell: exact quotation of the article; empty cell: nothing in that article. Definitions and "
-                     "quotations: section “How is the table established?” on the page.",
+                   "one; practical arrangements for carrying out the act are not counted. “Shared power”: other "
+                   "authorities, named by the article, hold a power of the same kind; “other written limit”: time, "
+                   "subject or effect that the article sets for the act.",
+           "note_m": "Filled cell: exact quotation of the article; empty cell: nothing in that article, which says "
+                     "nothing of other articles or of practice. “Shared power”: other authorities hold a power of the "
+                     "same kind. Definitions and quotations: section “How is the table established?” on the page.",
            "renvoi": "art. ", "plein": "present", "vide": "absent"},
 }
 
@@ -557,8 +563,24 @@ def desc_figure(r: dict, A: dict, lang: str) -> str:
             % (A["n_actes"], A["n_renvois"], A["n_seuls_acte_maj"], A["seuls_acte_liste"]))
 
 
+# Articles de la matrice (les huit renvois de l'article 19, et l'article 19) : la figure imprime leur date de lecture
+# (relecture des sources du 17/11/2026, lot « promesses-a » : « Chaque figure porte dans l'image sa source, sa date et sa
+# précaution de lecture », bloc Réutiliser ; la figure n'avait pas de date).
+MATRICE = ["8", "11", "12", "16", "18", "19", "54", "56", "61"]
+
+
+def lu_matrice(base: dict, lang: str) -> str:
+    d = sorted({date.fromisoformat(str(base["articles"][k]["lu_le"])) for k in MATRICE})
+    # Contrôleurs des figures (17/11/2026) : en anglais, la forme longue de la page anglaise (« 30 September 2026 »),
+    # formatée sans directive propre à une plateforme ; la préposition soudée à la date (espace insécable).
+    j = (lambda x: x.strftime("%d/%m/%Y")) if lang == "fr" else (lambda x: "%d %s %d" % (x.day, x.strftime("%B"), x.year))
+    if len(d) == 1:
+        return ("le %s" if lang == "fr" else "on %s") % j(d[0])
+    return ("du %s au %s" if lang == "fr" else "from %s to %s") % (j(d[0]), j(d[-1]))
+
+
 def figure(r: dict, base: dict, A: dict, lang: str) -> str:
-    T = {k: v.replace("{n}", A["n_renvois"]) for k, v in TXT[lang].items()}
+    T = {k: v.replace("{n}", A["n_renvois"]).replace("{lu}", lu_matrice(base, lang)) for k, v in TXT[lang].items()}
     rows = lignes_de(r["inventaire"], base, lang)
     top, pas, col0, colw = 104, 30, 360, 90
     e = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d 0" role="img" aria-labelledby="pv-t pv-d" '
@@ -602,7 +624,7 @@ def figure(r: dict, base: dict, A: dict, lang: str) -> str:
 
 def figure_m(r: dict, base: dict, A: dict, lang: str, svg_d: str) -> str:
     """Version téléphone, par disposition : un bloc par acte, ses quatre éléments en clair."""
-    T = {k: v.replace("{n}", A["n_renvois"]) for k, v in TXT[lang].items()}
+    T = {k: v.replace("{n}", A["n_renvois"]).replace("{lu}", lu_matrice(base, lang)) for k, v in TXT[lang].items()}
     desc = html.unescape(re.search(r"<desc[^>]*>(.*?)</desc>", svg_d, re.S).group(1))
     e, y = pied_figure.tete_mobile("pvm", T["titre_m"], desc, INK, FONT)
     rows = lignes_de(r["inventaire"], base, lang)
