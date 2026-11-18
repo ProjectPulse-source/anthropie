@@ -159,9 +159,11 @@ def a_fond_blanc(svg: str, largeur: int) -> bool:
 def lire(svg: str, classe: str) -> str:
     """Texte d'un bloc du pied, lignes rejointes (fiches « Réutiliser »). La soudure « ·  » de coupe() ne sert
     que la coupure du SVG : elle se défait ici (05/11/2026 : depuis 8ef0d00, la licence relue ne valait plus celle du
-    générateur, et dix générateurs s'arrêtaient sur « pied illisible »)."""
+    générateur, et dix générateurs s'arrêtaient sur « pied illisible »). Même chose pour la soudure du nom de l'auteur
+    (18/11/2026 : posée dans coupe() le matin même, elle faisait échouer la comparaison de la licence relue dans sept
+    générateurs, vu sur update_dette_monde.py)."""
     return " ".join(html.unescape(t) for t in re.findall(r'<text class="%s"[^>]*>(.*?)</text>' % classe, svg)
-                    ).replace("· ", "· ")
+                    ).replace("· ", "· ").replace("Stéphane\u00a0Lalut", "Stéphane Lalut")
 
 
 def hauteur(svg: str, largeur: int) -> str:
