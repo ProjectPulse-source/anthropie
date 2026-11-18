@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Passe de forme du lot « Dette B » publiée après jugement externe à l'aveugle (FR, EN)
+- **Commits** `1c54385f` (Combien coûte), `e7605d10` (Qui paie : l'annulation avant la synthèse), `a473a4e7` (Générations
+  futures), `babcd734` (Comparaison internationale) : niveau de connaissance qualifié à l'affirmation (identité, décomposition
+  comptable, scénario, modèle, interprétation nommée), extraits autonomes avec leur réserve, intertitres en questions ;
+  provenance de « Combien coûte » complétée (cinq familles de valeurs, chiffrage du Sénat compté).
+- **Jugement externe** : paquet n° 03 (90 passages), réponse archivée avant lecture (`272D3C1F…9A452273`) et arbitrée :
+  version proposée retenue à 84 passages sur 90 ; version en ligne gardée pour le titre du ciseau, le chapô de « Qui paie »
+  et la réserve sur les millésimes.
+- **Relecture** : texte servi relu contre le corps par un relecteur indépendant, deux passages (6 points de langue, puis 1).
+- **Contrôles** : Hugo 0, `typo_build` 0, `check-rendu-ressources` 0, `check-typo-fr` 0, `check-all --ci` 0 ; générateur
+  Générations (79 gardes de données, 804 de texte) ; lettre : aucun nombre retiré ; envois : passages cités mot pour mot.
+- **Servi** : déploiement `hugo.yml` 44388271130 réussi ; version servie attestée le 18/11 : 8 versions, 0 écart ;
+  9 scripts identiques au build.
+
 ### 2026-11-18 — Passe de forme du lot « Promesses B » publiée après jugement externe à l'aveugle (FR, EN)
 - **Commit** `10c9e40c` (« Une loi votée s'applique-t-elle tout de suite ? » : la lecture du Sénat éprouvée par sa
   série, sur le segment de même définition ; « pas ininterrompue », et non plus « non sa constance » ; jetons du
