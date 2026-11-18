@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1094" role="img" font-variant-numeric="tabular-nums" aria-labelledby="plm-t plm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1263" role="img" font-variant-numeric="tabular-nums" aria-labelledby="plm-t plm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
 <title id="plm-t">Un an après une première année de licence : quatre devenirs, selon l'origine sociale</title><desc id="plm-d">Version téléphone : valeurs du tableau qui suit la figure.</desc>
-<rect width="300" height="1094" fill="#ffffff"/>
+<rect width="300" height="1263" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Un an après une première année</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">de licence : quatre devenirs,</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">selon l'origine sociale</text>
@@ -82,19 +82,28 @@
 <text class="pied-note" x="0" y="791.0" font-size="13.5" fill="#55524f">licence, ou entrés en études de santé</text>
 <text class="pied-note" x="0" y="808.0" font-size="13.5" fill="#55524f">depuis une licence accès santé.</text>
 <text class="pied-note" x="0" y="825.0" font-size="13.5" fill="#55524f">Recommencent : changements de</text>
-<text class="pied-note" x="0" y="842.0" font-size="13.5" fill="#55524f">discipline compris. Non retrouvés :</text>
-<text class="pied-note" x="0" y="859.0" font-size="13.5" fill="#55524f">absents des fichiers d'inscription</text>
-<text class="pied-note" x="0" y="876.0" font-size="13.5" fill="#55524f">(« sortie de l'enseignement</text>
-<text class="pied-note" x="0" y="893.0" font-size="13.5" fill="#55524f">supérieur » pour le SIES) ; certains</text>
-<text class="pied-note" x="0" y="910.0" font-size="13.5" fill="#55524f">étudient à l'étranger ou hors du champ</text>
-<text class="pied-note" x="0" y="927.0" font-size="13.5" fill="#55524f">suivi. Situation d'inscription un an</text>
-<text class="pied-note" x="0" y="944.0" font-size="13.5" fill="#55524f">après, non un diplôme. Le tableau ne</text>
-<text class="pied-note" x="0" y="961.0" font-size="13.5" fill="#55524f">croise pas l'origine sociale et le</text>
-<text class="pied-note" x="0" y="978.0" font-size="13.5" fill="#55524f">niveau scolaire à l'entrée. Taux</text>
-<text class="pied-note" x="0" y="995.0" font-size="13.5" fill="#55524f">arrondis : leur somme peut différer de</text>
-<text class="pied-note" x="0" y="1012.0" font-size="13.5" fill="#55524f">100 %. Origine non renseignée (3,8 %</text>
-<text class="pied-note" x="0" y="1029.0" font-size="13.5" fill="#55524f">des inscrits) : pas de barre, comprise</text>
-<text class="pied-note" x="0" y="1046.0" font-size="13.5" fill="#55524f">dans l'ensemble.</text>
-<text class="pied-licence" x="0" y="1067.0" font-size="13.5" fill="#6f6c66">Figure Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1084.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="842.0" font-size="13.5" fill="#55524f">discipline ou d'établissement compris.</text>
+<text class="pied-note" x="0" y="863.0" font-size="13.5" fill="#55524f">Non retrouvés : absents des fichiers</text>
+<text class="pied-note" x="0" y="880.0" font-size="13.5" fill="#55524f">d'inscription (« sortie de</text>
+<text class="pied-note" x="0" y="897.0" font-size="13.5" fill="#55524f">l'enseignement supérieur » pour le</text>
+<text class="pied-note" x="0" y="914.0" font-size="13.5" fill="#55524f">SIES) ; en général, ils ne sont plus</text>
+<text class="pied-note" x="0" y="931.0" font-size="13.5" fill="#55524f">étudiants, mais une faible part peut</text>
+<text class="pied-note" x="0" y="948.0" font-size="13.5" fill="#55524f">être inscrite à l'étranger ou hors du</text>
+<text class="pied-note" x="0" y="965.0" font-size="13.5" fill="#55524f">champ suivi.</text>
+<text class="pied-note" x="0" y="986.0" font-size="13.5" fill="#55524f">Origine : profession du parent</text>
+<text class="pied-note" x="0" y="1003.0" font-size="13.5" fill="#55524f">référent, en quatre classes du SIES :</text>
+<text class="pied-note" x="0" y="1020.0" font-size="13.5" fill="#55524f">très favorisée (cadres, enseignants…),</text>
+<text class="pied-note" x="0" y="1037.0" font-size="13.5" fill="#55524f">favorisée (professions</text>
+<text class="pied-note" x="0" y="1054.0" font-size="13.5" fill="#55524f">intermédiaires), assez défavorisée</text>
+<text class="pied-note" x="0" y="1071.0" font-size="13.5" fill="#55524f">(employés…), défavorisée (ouvriers…).</text>
+<text class="pied-note" x="0" y="1092.0" font-size="13.5" fill="#55524f">Situation d'inscription un an après,</text>
+<text class="pied-note" x="0" y="1109.0" font-size="13.5" fill="#55524f">non un diplôme. Le tableau ne croise</text>
+<text class="pied-note" x="0" y="1126.0" font-size="13.5" fill="#55524f">pas l'origine sociale et le niveau</text>
+<text class="pied-note" x="0" y="1143.0" font-size="13.5" fill="#55524f">scolaire à l'entrée.</text>
+<text class="pied-note" x="0" y="1164.0" font-size="13.5" fill="#55524f">Taux arrondis : leur somme peut</text>
+<text class="pied-note" x="0" y="1181.0" font-size="13.5" fill="#55524f">différer de 100 %. Origine non</text>
+<text class="pied-note" x="0" y="1198.0" font-size="13.5" fill="#55524f">renseignée (3,8 % des inscrits) : pas</text>
+<text class="pied-note" x="0" y="1215.0" font-size="13.5" fill="#55524f">de barre, comprise dans l'ensemble.</text>
+<text class="pied-licence" x="0" y="1236.0" font-size="13.5" fill="#6f6c66">Figure Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1253.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

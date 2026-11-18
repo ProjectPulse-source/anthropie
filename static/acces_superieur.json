@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-02",
+ "releve_le": "2026-11-17",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source MESRE-SIES",
  "meta": {
   "page": "https://stephane-lalut.com/enseignants/ecole-et-parcours/",
@@ -10,8 +10,9 @@
    "universite": "université, IUT compris (« dont IUT » est un sous-ensemble, non une cinquième destination)",
    "cpge": "classes préparatoires aux grandes écoles",
    "sts": "sections de technicien supérieur, par voie scolaire et par apprentissage",
-   "autres": "autres formations (écoles de commerce et d'ingénieurs, formations paramédicales et sociales, autres établissements)",
+   "autres": "autres formations, dont écoles de commerce ou d'ingénieurs, formations privées, formations paramédicales et sociales (texte de la fiche 13)",
    "origine_sociale": "catégorie socioprofessionnelle du parent, six catégories de la source ; origine non renseignée : non répartie par la source",
+   "tous_inscrits": "tableau 13.01, bloc « Ensemble tous baccalauréats » : filière de tous les nouveaux bacheliers inscrits, origine renseignée ou non, en % des inscrits ; comparé à la ligne « Origine sociale renseignée » de 13.03, il situe les inscrits sans origine (surtout en STS)",
    "temoin_baccalaureat": "série du baccalauréat des nouveaux inscrits de chaque filière (09.03) et origine sociale des bacheliers de chaque série (09.04)"
   }
  },
@@ -71,6 +72,12 @@
     "cpge": 8.0,
     "sts": 24.3,
     "autres": 14.1
+   },
+   "tous_inscrits": {
+    "univ": 48.669201520912544,
+    "cpge": 7.604562737642585,
+    "sts": 29.15082382762991,
+    "autres": 14.575411913814955
    }
   },
   {
@@ -128,6 +135,12 @@
     "cpge": 8.2,
     "sts": 23.4,
     "autres": 15.0
+   },
+   "tous_inscrits": {
+    "univ": 48.73096446700508,
+    "cpge": 7.868020304568528,
+    "sts": 28.299492385786802,
+    "autres": 15.228426395939087
    }
   }
  ],

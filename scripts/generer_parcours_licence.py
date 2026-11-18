@@ -101,9 +101,12 @@ BLEU, ORANGE, GRIS, GRIS_CLAIR = "#184f95", "#eb6834", "#8a8781", "#c9c5c0"
 # gris des barres. Les trois générateurs de /enseignants/ lisent ces deux constantes ici.
 INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd8d3"
 # Valeur écrite dans un segment plein : l'encre que sa couleur demande (pied_figure.encre_sur, 11/11/2026) -- blanc sur
-# le bleu, encre la plus foncée sur le gris des barres, où le blanc ne faisait que 3,6:1.
+# le bleu, encre la plus foncée sur le gris des barres, où le blanc ne faisait que 3,6:1, sur le gris clair et sur
+# l'orange (18/11/2026 : #26262f ne faisait que 4,68:1 sur l'orange). Limite connue : imprimés en noir et blanc,
+# l'orange et le gris foncé ont la même clarté (137 et 135 sur 255) ; seul l'ordre des segments les distingue
+# (contrôle du rendu, 18/11/2026 ; le gris de données relève de la charte, donc de l'auteur).
 COULEUR = {"passage": (BLEU, pied_figure.encre_sur(BLEU)), "redoublement": (GRIS, pied_figure.encre_sur(GRIS)),
-           "reorientation": (GRIS_CLAIR, INK), "sortie": (ORANGE, INK)}
+           "reorientation": (GRIS_CLAIR, pied_figure.encre_sur(GRIS_CLAIR)), "sortie": (ORANGE, pied_figure.encre_sur(ORANGE))}
 LIBELLE = {"passage": ("Passés en", "2ᵉ année"), "redoublement": ("Recommencent", "une 1ʳᵉ année"),
            "reorientation": ("Réorientés", "hors licence"), "sortie": ("Non", "retrouvés")}
 # « Non retrouvés » et non « sortis du supérieur » (contre-expertise du 02/10/2026, F3) : la catégorie du SIES désigne une
@@ -202,7 +205,10 @@ def lire_cohorte(annee: int, sums: dict[str, str]) -> dict:
         fail("%d : modalites d'origine sociale inattendues : %s" % (annee, ", ".join(sorted(par_modalite))))
     out = {"annee": annee, "note": note, "fichier": fichier, "ensemble": ligne(ens[0]),
            "origines": {cle: par_modalite[lib] for cle, lib in ORIGINES}, "non_reponse": par_modalite[NON_REPONSE],
-           "mentions": {}}
+           "mentions": {},
+           # Le corrigé 5 renvoie à la feuille des boursiers sur critères sociaux (reprise du 17/11/2026) : sa présence
+           # dans le tableur de la cohorte affichée est une garde.
+           "feuille_bcs": (feuille + " - BCS") in wb.sheetnames}
     for cle, lib in MENTIONS:
         m = [r for r in men if r[2] == lib]
         if len(m) != 1:
@@ -317,6 +323,7 @@ def affichage(cohortes: dict[int, dict]) -> tuple[dict, list[str]]:
         # Les deux écarts ne se comparent pas (découpages différents, tableau non croisé : F6) ; seul « forts écarts » est écrit.
         ("« forts écarts » de passage selon la mention (plus de cinquante points entre les deux mentions citées)",
          ecart_mentions > 50),
+        ("corrigé 5 : la même source publie le devenir des boursiers (feuille « Devenir cohorte N - BCS »)", c["feuille_bcs"]),
     ]
     return A, [nom for nom, ok in gardes if not ok]
 
@@ -329,7 +336,7 @@ def figure(c: dict, A: dict) -> str:
     BAS = TOP + PAS * (len(lignes) - 1) + HB              # bas de la dernière barre ; la hauteur est fixée par le pied
     titre = "Un an après une première année de licence : quatre devenirs, selon l'origine sociale"
     o = c["origines"]
-    desc = ("Barres empilées à 100 %%, une par origine sociale. Bacheliers %s entrés en première année de licence : "
+    desc = ("Barres empilées à 100 %%, une par origine sociale, puis l'ensemble. Bacheliers %s entrés en première année de licence : "
             "%s %% des étudiants d'origine très favorisée sont passés en deuxième année un an après, contre %s %% de ceux "
             "d'origine défavorisée ; %s %% et %s %% recommencent une première année ; %s %% et %s %% sont réorientés "
             "hors de la licence ; %s %% et %s %% ne sont plus retrouvés dans les fichiers d'inscription."
@@ -406,10 +413,14 @@ def pied_detaille(e: list, y0: float, cart: list) -> str:
 def cartouche(c: dict, A: dict) -> list:
     """Source, notes et licence : un seul texte pour la figure détaillée et sa version téléphone (05/11/2026)."""
     return [("MESRE-SIES, %s, tableaux nationaux, feuille « Devenir cohorte %s » (SISE, SCOLARITE, SIFA)" % (c["note"], A["cohorte"]), INK2),
+            # Reprise du 17/11/2026 (relecture des sources) : changements d'établissement ; degré de la réserve de la source sur
+            # les non-retrouvés ; composition des classes d'origine, avec les points de suspension de la méthodologie du SIES.
             ("Passés : inscrits en 2ᵉ ou 3ᵉ année de licence, ou entrés en études de santé depuis une licence accès santé. "
-             "Recommencent : changements de discipline compris.", INK2),
-            ("Non retrouvés : absents des fichiers d'inscription (« sortie de l'enseignement supérieur » pour le SIES) ; "
-             "certains étudient à l'étranger ou hors du champ suivi.", INK2),
+             "Recommencent : changements de discipline ou d'établissement compris.", INK2),
+            ("Non retrouvés : absents des fichiers d'inscription (« sortie de l'enseignement supérieur » pour le SIES) ; en général, "
+             "ils ne sont plus étudiants, mais une faible part peut être inscrite à l'étranger ou hors du champ suivi.", INK2),
+            ("Origine : profession du parent référent, en quatre classes du SIES : très favorisée (cadres, enseignants…), favorisée "
+             "(professions intermédiaires), assez défavorisée (employés…), défavorisée (ouvriers…).", INK2),
             ("Situation d'inscription un an après, non un diplôme. Le tableau ne croise pas l'origine sociale et le niveau "
              "scolaire à l'entrée.", INK2),
             ("Taux arrondis : leur somme peut différer de 100 %%. Origine non renseignée (%s %% des inscrits) : pas de barre, "
@@ -422,7 +433,9 @@ def figure_m(c: dict, A: dict) -> str:
     cart = cartouche(c, A)
     lignes = [(lib, c["origines"][cle]["taux_publies"], False) for cle, lib in ORIGINES] + [("Ensemble", c["ensemble"]["taux_publies"], True)]
     noms = {"passage": "Passés", "redoublement": "Recommencent", "reorientation": "Réorientés", "sortie": "Non retrouvés"}
-    blocs = [(cart[0][0], INK2, "pied-source"), (" ".join(t for t, _ in cart[1:-1]), INK2, "pied-note"), (cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), MUTED, "pied-licence")]   # l'adresse complète sortait du cadre de 300 (check-figures R3)
+    # Une note par bloc (18/11/2026, contrôle du rendu : jointes, elles faisaient 25 lignes grises d'un seul tenant).
+    blocs = ([(cart[0][0], INK2, "pied-source")] + [(t, INK2, "pied-note") for t, _ in cart[1:-1]]
+             + [(cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), MUTED, "pied-licence")])   # l'adresse complète sortait du cadre de 300 (check-figures R3)
     return barres_mobile('plm', "Un an après une première année de licence : quatre devenirs, selon l'origine sociale", "Version téléphone : valeurs du tableau qui suit la figure.",
                          "Bacheliers %s entrés en 1ʳᵉ année de licence : situation à la rentrée %s, en %% des inscrits." % (A["cohorte"], A["annee_devenir"]), lignes, ISSUES, COULEUR, noms, blocs)
 

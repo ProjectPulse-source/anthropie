@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1321" role="img" font-variant-numeric="tabular-nums" aria-labelledby="asm-t asm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1486" role="img" font-variant-numeric="tabular-nums" aria-labelledby="asm-t asm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
 <title id="asm-t">Après le bac : où s'inscrivent les nouveaux bacheliers, selon l'origine sociale</title><desc id="asm-d">Version téléphone : valeurs du tableau qui suit la figure.</desc>
-<rect width="300" height="1321" fill="#ffffff"/>
+<rect width="300" height="1486" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Après le bac : où s'inscrivent</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">les nouveaux bacheliers, selon</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#26262f">l'origine sociale</text>
@@ -104,24 +104,33 @@
 <line x1="0" y1="925.0" x2="300" y2="925.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="946.0" font-size="13.5" fill="#55524f">MESRE-SIES, État de l'enseignement</text>
 <text class="pied-source" x="0" y="963.0" font-size="13.5" fill="#55524f">supérieur, de la recherche et de</text>
-<text class="pied-source" x="0" y="980.0" font-size="13.5" fill="#55524f">l'innovation en France n° 18, tableau</text>
-<text class="pied-source" x="0" y="997.0" font-size="13.5" fill="#55524f">13.03 ; France métropolitaine et DROM</text>
-<text class="pied-note" x="0" y="1018.0" font-size="13.5" fill="#55524f">Champ : bacheliers 2023 inscrits dans</text>
-<text class="pied-note" x="0" y="1035.0" font-size="13.5" fill="#55524f">le supérieur à la rentrée suivante ;</text>
-<text class="pied-note" x="0" y="1052.0" font-size="13.5" fill="#55524f">ceux qui ne poursuivent pas n'y</text>
-<text class="pied-note" x="0" y="1069.0" font-size="13.5" fill="#55524f">figurent pas. STS : apprentissage</text>
-<text class="pied-note" x="0" y="1086.0" font-size="13.5" fill="#55524f">compris. Origine : catégorie</text>
-<text class="pied-note" x="0" y="1103.0" font-size="13.5" fill="#55524f">socioprofessionnelle du parent,</text>
-<text class="pied-note" x="0" y="1120.0" font-size="13.5" fill="#55524f">renseignée pour 88,9 % des inscrits ;</text>
-<text class="pied-note" x="0" y="1137.0" font-size="13.5" fill="#55524f">les autres ne sont pas répartis par la</text>
-<text class="pied-note" x="0" y="1154.0" font-size="13.5" fill="#55524f">source. Une inscription observée n'est</text>
-<text class="pied-note" x="0" y="1171.0" font-size="13.5" fill="#55524f">pas un choix : elle dépend aussi de la</text>
-<text class="pied-note" x="0" y="1188.0" font-size="13.5" fill="#55524f">série du baccalauréat, des</text>
-<text class="pied-note" x="0" y="1205.0" font-size="13.5" fill="#55524f">candidatures et des admissions, que ce</text>
-<text class="pied-note" x="0" y="1222.0" font-size="13.5" fill="#55524f">tableau ne croise pas. Taux arrondis :</text>
-<text class="pied-note" x="0" y="1239.0" font-size="13.5" fill="#55524f">leur somme peut différer de 100 %.</text>
-<text class="pied-note" x="0" y="1256.0" font-size="13.5" fill="#55524f">Catégories dans l'ordre de la source,</text>
-<text class="pied-note" x="0" y="1273.0" font-size="13.5" fill="#55524f">sans hiérarchie.</text>
-<text class="pied-licence" x="0" y="1294.0" font-size="13.5" fill="#6f6c66">Figure Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1311.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text class="pied-source" x="0" y="980.0" font-size="13.5" fill="#55524f">l'innovation en France n° 18, tableaux</text>
+<text class="pied-source" x="0" y="997.0" font-size="13.5" fill="#55524f">13.03 et 13.01 ; France métropolitaine</text>
+<text class="pied-source" x="0" y="1014.0" font-size="13.5" fill="#55524f">et DROM</text>
+<text class="pied-note" x="0" y="1035.0" font-size="13.5" fill="#55524f">Champ : bacheliers 2023 inscrits dans</text>
+<text class="pied-note" x="0" y="1052.0" font-size="13.5" fill="#55524f">le supérieur à la rentrée suivante ;</text>
+<text class="pied-note" x="0" y="1069.0" font-size="13.5" fill="#55524f">ceux qui ne poursuivent pas n'y</text>
+<text class="pied-note" x="0" y="1086.0" font-size="13.5" fill="#55524f">figurent pas. Université : IUT</text>
+<text class="pied-note" x="0" y="1103.0" font-size="13.5" fill="#55524f">compris. STS (sections de technicien</text>
+<text class="pied-note" x="0" y="1120.0" font-size="13.5" fill="#55524f">supérieur) : apprentissage compris.</text>
+<text class="pied-note" x="0" y="1137.0" font-size="13.5" fill="#55524f">Autres : dont écoles de commerce ou</text>
+<text class="pied-note" x="0" y="1154.0" font-size="13.5" fill="#55524f">d'ingénieurs, formations privées,</text>
+<text class="pied-note" x="0" y="1171.0" font-size="13.5" fill="#55524f">paramédicales et sociales.</text>
+<text class="pied-note" x="0" y="1192.0" font-size="13.5" fill="#55524f">Origine : catégorie</text>
+<text class="pied-note" x="0" y="1209.0" font-size="13.5" fill="#55524f">socioprofessionnelle du parent,</text>
+<text class="pied-note" x="0" y="1226.0" font-size="13.5" fill="#55524f">renseignée pour 88,9 % des inscrits ;</text>
+<text class="pied-note" x="0" y="1243.0" font-size="13.5" fill="#55524f">les autres, surtout inscrits en STS,</text>
+<text class="pied-note" x="0" y="1260.0" font-size="13.5" fill="#55524f">ne sont pas répartis par la source :</text>
+<text class="pied-note" x="0" y="1277.0" font-size="13.5" fill="#55524f">les parts sont celles des inscrits</text>
+<text class="pied-note" x="0" y="1294.0" font-size="13.5" fill="#55524f">d'origine connue.</text>
+<text class="pied-note" x="0" y="1315.0" font-size="13.5" fill="#55524f">Une inscription observée ne se réduit</text>
+<text class="pied-note" x="0" y="1332.0" font-size="13.5" fill="#55524f">pas à un choix : elle dépend aussi de</text>
+<text class="pied-note" x="0" y="1349.0" font-size="13.5" fill="#55524f">la série du baccalauréat, des</text>
+<text class="pied-note" x="0" y="1366.0" font-size="13.5" fill="#55524f">candidatures et des admissions, que ce</text>
+<text class="pied-note" x="0" y="1383.0" font-size="13.5" fill="#55524f">tableau ne croise pas.</text>
+<text class="pied-note" x="0" y="1404.0" font-size="13.5" fill="#55524f">Taux arrondis : leur somme peut</text>
+<text class="pied-note" x="0" y="1421.0" font-size="13.5" fill="#55524f">différer de 100 %. Catégories dans</text>
+<text class="pied-note" x="0" y="1438.0" font-size="13.5" fill="#55524f">l'ordre de la source, sans hiérarchie.</text>
+<text class="pied-licence" x="0" y="1459.0" font-size="13.5" fill="#6f6c66">Figure Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1476.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

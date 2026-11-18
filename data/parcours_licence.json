@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-10-02",
+ "releve_le": "2026-11-17",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; source MESRE-SIES",
  "meta": {
   "page": "https://stephane-lalut.com/enseignants/ecole-et-parcours/",
@@ -141,7 +141,8 @@
      },
      "redoublement_strict": null
     }
-   }
+   },
+   "feuille_bcs": true
   },
   {
    "annee": 2022,
@@ -267,7 +268,8 @@
      },
      "redoublement_strict": 3203
     }
-   }
+   },
+   "feuille_bcs": true
   },
   {
    "annee": 2023,
@@ -393,7 +395,8 @@
      },
      "redoublement_strict": 3134
     }
-   }
+   },
+   "feuille_bcs": true
   }
  ],
  "affichage": {

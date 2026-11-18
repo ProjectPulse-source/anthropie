@@ -16,6 +16,9 @@ inscrit au registre data/sources_maj.json ; l'année de la figure suit d'elle-m�
 
 TÉMOINS, bloquants : six catégories d'origine exactement, libellés de la source ; quatre destinations qui somment à
 100 à l'arrondi près sur chaque ligne ; « dont IUT » inférieur à « université » ; mêmes contrôles sur le millésime témoin.
+Tableau 13.01 (reprise du 17/11/2026) : ses quatre filières redonnent l'ensemble, et ce qu'il compte de plus que la
+ligne « Origine sociale renseignée » de 13.03, filière par filière, n'est jamais négatif (à 0,5 point près) ; sinon
+arrêt (18/11/2026 : la somme sur les filières, testée auparavant, redonnait toujours 100 − p et ne pouvait échouer).
 Chaque qualificatif de la fiche et du corrigé est une garde. SVG et PNG ensemble ou pas du tout.
 
 Mêmes fonctions de service, mêmes couleurs que generer_parcours_licence.py, importé tel quel : les deux figures de la
@@ -76,8 +79,12 @@ ORIGINES = [("ind", "Agriculteurs, artisans, commerçants, chefs d'entreprise", 
             ("ret", "Retraités, inactifs", ("Retraités, inactifs",))]
 DEST = [("univ", "Université"), ("cpge", "CPGE"), ("sts", "STS"), ("autres", "Autres")]
 # Valeur écrite dans un segment plein : l'encre que sa couleur demande (pied_figure.encre_sur, 11/11/2026) -- blanc sur
-# le bleu, encre la plus foncée sur le gris des barres.
-COULEUR = {"univ": (gl.BLEU, pied_figure.encre_sur(gl.BLEU)), "cpge": (gl.ORANGE, gl.INK), "sts": (gl.GRIS_CLAIR, gl.INK),
+# le bleu, encre la plus foncée sur l'orange et les gris (18/11/2026 : #26262f ne faisait que 4,68:1 sur l'orange).
+# Limite connue (contrôle du rendu, 18/11/2026) : imprimés en noir et blanc, l'orange et le gris foncé de la charte ont
+# la même clarté (137 et 135 sur 255) ; seul l'ordre des segments les distingue. Changer le gris de données relève de
+# la charte, donc de l'auteur, pour toutes les figures à la fois.
+COULEUR = {"univ": (gl.BLEU, pied_figure.encre_sur(gl.BLEU)), "cpge": (gl.ORANGE, pied_figure.encre_sur(gl.ORANGE)),
+           "sts": (gl.GRIS_CLAIR, pied_figure.encre_sur(gl.GRIS_CLAIR)),
            "autres": (gl.GRIS, pied_figure.encre_sur(gl.GRIS))}
 LIBELLE = {"univ": ("Université", "(dont IUT)"), "cpge": ("Classes", "prépa."), "sts": ("Sections de", "technicien sup."),
            "autres": ("Autres", "formations")}
@@ -136,8 +143,63 @@ def lire_acces(annee: int, sums: dict[str, str]) -> dict:
             fail("%d, %s : « dont IUT » superieur a « universite »" % (annee, nom))
         return d
 
-    return {"annee": annee, "edition": edition, "fichier": fichier, "origine_renseignee_pct": nombre(m.group(1)),
-            "origines": {cle: ligne(lignes[lib], lib) for cle, lib, _ in ORIGINES}, "ensemble_renseigne": ligne(lignes[rens[0]], "ensemble")}
+    out = {"annee": annee, "edition": edition, "fichier": fichier, "origine_renseignee_pct": nombre(m.group(1)),
+           "origines": {cle: ligne(lignes[lib], lib) for cle, lib, _ in ORIGINES}, "ensemble_renseigne": ligne(lignes[rens[0]], "ensemble")}
+    out["tous_inscrits"] = tous_inscrits(tabs, fichier, annee)
+    # Témoin de population (reprise du 17/11/2026) : ce que 13.01 compte de plus que 13.03, filière par filière, doit
+    # redonner les inscrits d'origine non renseignée. Sinon les deux tableaux ne décrivent pas la même population, et la
+    # phrase « l'origine manque surtout en STS » ne se garde plus.
+    # La somme sur les filières est une identité (contrôle de géométrie du 18/11/2026) : ce qui peut échouer, c'est le
+    # signe filière par filière. Un 13.01 d'une autre population (sans les apprentis, sans les CPGE) y donne des inscrits
+    # sans origine négatifs (témoins vus mordre le 18/11, LOTS\enseignants-ecole-et-parcours\LOT.md).
+    for k, _ in DEST:
+        m_k = out["tous_inscrits"][k] - out["origine_renseignee_pct"] / 100 * out["ensemble_renseigne"][k]
+        if m_k < -0.5:
+            fail("%s : 13.01 et 13.03 ne decrivent pas la meme population (%s : %.2f %% d'inscrits sans origine)"
+                 % (fichier, k, m_k))
+    # Témoin de population (18/11/2026, contrôle de géométrie) : une même part d'hommes dans chaque filière, que les
+    # lignes Hommes / Femmes de 13.03 redonnent depuis 13.01 ; un 13.01 sans les apprentis ou sans les CPGE l'arrête.
+    if "Hommes" not in lignes or "Femmes" not in lignes:
+        fail("%s : lignes Hommes / Femmes absentes de 13.03 : temoin de population impossible" % fichier)
+    hom, fem = ligne(lignes["Hommes"], "hommes"), ligne(lignes["Femmes"], "femmes")
+    # Part d'hommes ajustée par moindres carrés (tous_k ≈ s·H_k + (1 − s)·F_k), puis écart de chaque filière à
+    # l'ajustement (second contrôle de géométrie, 18/11/2026 : l'étendue des parts par filière frôlait son seuil sur
+    # le millésime témoin) ; l'arrondi des parts publiées en donne au plus 0,13 point, les mutations au moins 0,31.
+    d = {k: hom[k] - fem[k] for k, _ in DEST}
+    s = sum((out["tous_inscrits"][k] - fem[k]) * d[k] for k in d) / sum(v * v for v in d.values())
+    ecarts = {k: out["tous_inscrits"][k] - fem[k] - s * d[k] for k in d}
+    if not 0 < s < 1 or max(abs(v) for v in ecarts.values()) > 0.2:
+        fail("%s : 13.01 et 13.03 ne decrivent pas la meme population (part d'hommes ajustee %.3f ; ecarts %s)"
+             % (fichier, s, ", ".join("%s %+.2f" % kv for kv in sorted(ecarts.items()))))
+    return out
+
+
+def tous_inscrits(tabs: list, fichier: str, annee: int) -> dict:
+    """Tableau 13.01, bloc « Ensemble tous baccalauréats » : filière de TOUS les nouveaux bacheliers inscrits (origine
+    renseignée ou non), en % des inscrits dans le supérieur. Reprise du 17/11/2026 (relecture des sources, R1 P1-1) :
+    13.03 ne répartit par origine que 88,9 % des inscrits, et ceux qui manquent sont surtout en STS."""
+    cible = [tb for tb in tabs if any(r and r[0] == "Ensemble tous baccalauréats" for r in tb)]
+    if len(cible) != 1:
+        fail("%s : tableau 13.01 introuvable (%d candidat(s))" % (fichier, len(cible)))
+    tb = cible[0]
+    annees = tb[0][1:]
+    if str(annee) not in annees:
+        fail("%s : l'annee %d manque au tableau 13.01 (%s)" % (fichier, annee, annees))
+    col = annees.index(str(annee)) - len(annees)                # compté depuis la fin : la première ligne d'un bloc a deux libellés
+    k = next(j for j, r in enumerate(tb) if r and r[0] == "Ensemble tous baccalauréats")
+    if tb[k][1] != "Ensemble du supérieur":
+        fail("%s : 13.01, ligne « Ensemble du supérieur » attendue, lue %r" % (fichier, tb[k][1]))
+    ensemble = nombre(tb[k][col])
+    vus = {}
+    for r in tb[k + 1:k + 9]:
+        for cle, debut in (("univ", "Université"), ("cpge", "CPGE"), ("sts", "STS"), ("autres", "Autres formations")):
+            if r and r[0].startswith(debut) and cle not in vus:
+                vus[cle] = nombre(r[col])
+    if sorted(vus) != sorted(k for k, _ in DEST):
+        fail("%s : 13.01, filieres lues : %s" % (fichier, sorted(vus)))
+    if abs(sum(vus.values()) - ensemble) > 0.25:
+        fail("%s : 13.01, les quatre filieres ne redonnent pas l'ensemble (%.1f contre %.1f)" % (fichier, sum(vus.values()), ensemble))
+    return {cle: 100 * v / ensemble for cle, v in vus.items()}
 
 
 def lire_bac(sums: dict[str, str]) -> dict:
@@ -193,9 +255,24 @@ def affichage(a: dict, t: dict, bac: dict) -> tuple[dict, list[str]]:
     A["telecharge_le"] = gl.date_fr(_SRC["telecharge_le"])
     for k, v in bac.items():
         A[k] = fr(v)
-    derive = max(abs(o[c][k] - t["origines"][c][k]) for c in o for k, _ in DEST)
+    # « Aucune valeur » : la ligne « Ensemble (origine renseignée) » comprise (relecture R1 du 17/11/2026).
+    derive = max([abs(o[c][k] - t["origines"][c][k]) for c in o for k, _ in DEST]
+                 + [abs(a["ensemble_renseigne"][k] - t["ensemble_renseigne"][k]) for k, _ in DEST])
     A["derive_max"] = fr(derive)
+    # Inscrits d'origine non renseignée, filière par filière (13.01 moins 13.03, en % de tous les inscrits) : la page écrit
+    # qu'ils sont « surtout » en STS et que c'est là que l'origine manque le plus souvent.
+    tous = a["tous_inscrits"]
+    manque = {k: tous[k] - a["origine_renseignee_pct"] / 100 * a["ensemble_renseigne"][k] for k, _ in DEST}
+    taux_manque = {k: manque[k] / tous[k] for k, _ in DEST}
+    univ = [d["univ"] for d in o.values()]
+    cpge = [d["cpge"] for d in o.values()]
     gardes = [
+        ("l'origine manque « surtout » en STS : plus de la moitié des inscrits sans origine y sont (13.01 contre 13.03)",
+         manque["sts"] > 0.5 * sum(manque.values())),
+        ("c'est en STS que l'origine manque le plus souvent", taux_manque["sts"] == max(taux_manque.values())),
+        ("corrigé 4 : à l'université, part la plus forte pour les professions intermédiaires, la plus faible pour les "
+         "ouvriers ; en CPGE, les cadres et les ouvriers",
+         o["pi"]["univ"] == max(univ) and o["ouv"]["univ"] == min(univ) and o["cad"]["cpge"] == max(cpge) and o["ouv"]["cpge"] == min(cpge)),
         ("« six catégories » d'origine", len(o) == 6),
         ("les enfants d'ouvriers sont la catégorie la plus souvent inscrite en STS, les enfants de cadres la moins souvent",
          o["ouv"]["sts"] == max(d["sts"] for d in o.values()) and o["cad"]["sts"] == min(d["sts"] for d in o.values())),
@@ -229,7 +306,7 @@ def figure(a: dict, A: dict) -> str:
     FS = pied_figure.POLICE_MIN                           # plus petite police de la figure : intitulés, petites valeurs
     titre = "Après le bac : où s'inscrivent les nouveaux bacheliers, selon l'origine sociale"
     o = a["origines"]
-    desc = ("Barres empilées à 100 %%, une par catégorie socioprofessionnelle du parent. Nouveaux bacheliers %s inscrits dans "
+    desc = ("Barres empilées à 100 %%, une par catégorie socioprofessionnelle du parent, puis l'ensemble des inscrits d'origine renseignée. Nouveaux bacheliers %s inscrits dans "
             "l'enseignement supérieur : %s %% des enfants de cadres sont à l'université, %s %% en classes préparatoires, %s %% "
             "en sections de technicien supérieur, %s %% dans d'autres formations ; pour les enfants d'ouvriers, %s %%, %s %%, "
             "%s %% et %s %%. Toutes les valeurs sont dans le tableau qui suit la figure."
@@ -288,14 +365,17 @@ def figure(a: dict, A: dict) -> str:
 
 def cartouche(a: dict, A: dict) -> list:
     """Source, notes et licence : un seul texte pour la figure détaillée et sa version téléphone (05/11/2026)."""
-    return [("MESRE-SIES, État de l'enseignement supérieur, de la recherche et de l'innovation en France %s, tableau 13.03 ; France "
-             "métropolitaine et DROM" % a["edition"], gl.INK2),
+    return [("MESRE-SIES, État de l'enseignement supérieur, de la recherche et de l'innovation en France %s, tableaux 13.03 et 13.01 ; "
+             "France métropolitaine et DROM" % a["edition"], gl.INK2),
+            # Reprise du 17/11/2026 (relecture des sources) : « Autres » et l'IUT définis (la version téléphone n'écrit que
+            # « Université ») ; l'origine qui manque, surtout en STS (gardes de affichage) ; « ne se réduit pas à un choix ».
             ("Champ : bacheliers %s inscrits dans le supérieur à la rentrée suivante ; ceux qui ne poursuivent pas n'y figurent pas. "
-             "STS : apprentissage compris." % A["annee"], gl.INK2),
-            ("Origine : catégorie socioprofessionnelle du parent, renseignée pour %s %% des inscrits ; les autres ne sont pas répartis "
-             "par la source." % A["origine_renseignee"], gl.INK2),
-            ("Une inscription observée n'est pas un choix : elle dépend aussi de la série du baccalauréat, des candidatures et des "
-             "admissions, que ce tableau ne croise pas.", gl.INK2),
+             "Université : IUT compris. STS (sections de technicien supérieur) : apprentissage compris. Autres : dont écoles de commerce ou d'ingénieurs, formations "
+             "privées, paramédicales et sociales." % A["annee"], gl.INK2),
+            ("Origine : catégorie socioprofessionnelle du parent, renseignée pour %s %% des inscrits ; les autres, surtout inscrits en "
+             "STS, ne sont pas répartis par la source : les parts sont celles des inscrits d'origine connue." % A["origine_renseignee"], gl.INK2),
+            ("Une inscription observée ne se réduit pas à un choix : elle dépend aussi de la série du baccalauréat, des candidatures "
+             "et des admissions, que ce tableau ne croise pas.", gl.INK2),
             ("Taux arrondis : leur somme peut différer de 100 %. Catégories dans l'ordre de la source, sans hiérarchie.", gl.INK2),
             ("Figure Stéphane Lalut, CC BY 4.0 · " + PAGE_URL, gl.MUTED)]
 
@@ -305,7 +385,9 @@ def figure_m(a: dict, A: dict) -> str:
     cart = cartouche(a, A)
     lignes = [(lib, a["origines"][cle], False) for cle, lib, _ in ORIGINES] + [("Ensemble (origine renseignée)", a["ensemble_renseigne"], True)]
     noms = {"univ": "Université", "cpge": "Classes prépa.", "sts": "STS", "autres": "Autres"}
-    blocs = [(cart[0][0], INK2, "pied-source"), (" ".join(t for t, _ in cart[1:-1]), INK2, "pied-note"), (cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), MUTED, "pied-licence")]   # l'adresse complète sortait du cadre de 300 (check-figures R3)
+    # Une note par bloc (18/11/2026, contrôle du rendu : jointes, elles faisaient 22 lignes grises d'un seul tenant).
+    blocs = ([(cart[0][0], INK2, "pied-source")] + [(t, INK2, "pied-note") for t, _ in cart[1:-1]]
+             + [(cart[-1][0].replace(PAGE_URL, "stephane-lalut.com"), MUTED, "pied-licence")])   # l'adresse complète sortait du cadre de 300 (check-figures R3)
     return barres_mobile('asm', "Après le bac : où s'inscrivent les nouveaux bacheliers, selon l'origine sociale", "Version téléphone : valeurs du tableau qui suit la figure.",
                          "Nouveaux bacheliers %s inscrits dans le supérieur, par filière, en %% de chaque catégorie." % A["annee"], lignes, [k for k, _ in DEST], COULEUR, noms, blocs)
 
@@ -349,8 +431,9 @@ def main() -> int:
                             "universite": "université, IUT compris (« dont IUT » est un sous-ensemble, non une cinquième destination)",
                             "cpge": "classes préparatoires aux grandes écoles",
                             "sts": "sections de technicien supérieur, par voie scolaire et par apprentissage",
-                            "autres": "autres formations (écoles de commerce et d'ingénieurs, formations paramédicales et sociales, autres établissements)",
+                            "autres": "autres formations, dont écoles de commerce ou d'ingénieurs, formations privées, formations paramédicales et sociales (texte de la fiche 13)",
                             "origine_sociale": "catégorie socioprofessionnelle du parent, six catégories de la source ; origine non renseignée : non répartie par la source",
+                            "tous_inscrits": "tableau 13.01, bloc « Ensemble tous baccalauréats » : filière de tous les nouveaux bacheliers inscrits, origine renseignée ou non, en % des inscrits ; comparé à la ligne « Origine sociale renseignée » de 13.03, il situe les inscrits sans origine (surtout en STS)",
                             "temoin_baccalaureat": "série du baccalauréat des nouveaux inscrits de chaque filière (09.03) et origine sociale des bacheliers de chaque série (09.04)"}},
                "bacheliers": [a, t], "temoin_baccalaureat": bac, "affichage": A}
     releve = datetime.now(timezone.utc).strftime("%Y-%m-%d")
