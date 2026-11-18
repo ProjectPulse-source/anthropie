@@ -3,8 +3,8 @@
  "pages": {
   "budget-2027-votre-commune/_index.en.md": "2026-10-22",
   "budget-2027-votre-commune/_index.md": "2026-10-22",
-  "cout-de-la-dette-publique/_index.en.md": "2026-11-05",
-  "cout-de-la-dette-publique/_index.md": "2026-11-05",
+  "cout-de-la-dette-publique/_index.en.md": "2026-11-18",
+  "cout-de-la-dette-publique/_index.md": "2026-11-18",
   "data-centers-puissance-reservee/_index.en.md": "2026-11-04",
   "data-centers-puissance-reservee/_index.md": "2026-11-04",
   "dechets-radioactifs-volume-ou-radioactivite/_index.en.md": "2026-11-05",
@@ -15,8 +15,8 @@
   "dette-publique-collectivites-locales/_index.md": "2026-10-18",
   "dette-publique-comparaison-internationale/_index.en.md": "2026-11-05",
   "dette-publique-comparaison-internationale/_index.md": "2026-11-05",
-  "dette-publique-generations-futures/_index.en.md": "2026-10-31",
-  "dette-publique-generations-futures/_index.md": "2026-10-31",
+  "dette-publique-generations-futures/_index.en.md": "2026-11-18",
+  "dette-publique-generations-futures/_index.md": "2026-11-18",
   "dette-publique-peut-elle-baisser/_index.en.md": "2026-11-06",
   "dette-publique-peut-elle-baisser/_index.md": "2026-11-06",
   "enseignants/_index.md": "2026-11-05",
@@ -79,10 +79,12 @@
    "2026-11-01"
   ],
   "cout-de-la-dette-publique/_index.en.md": [
-   "2026-11-05"
+   "2026-11-05",
+   "2026-11-18"
   ],
   "cout-de-la-dette-publique/_index.md": [
-   "2026-11-05"
+   "2026-11-05",
+   "2026-11-18"
   ],
   "data-centers-puissance-reservee/_index.en.md": [
    "2026-11-04",
@@ -126,19 +128,25 @@
   ],
   "dette-publique-comparaison-internationale/_index.en.md": [
    "2026-10-16",
+   "2026-11-02",
    "2026-11-05"
   ],
   "dette-publique-comparaison-internationale/_index.md": [
    "2026-10-16",
+   "2026-11-02",
    "2026-11-05"
   ],
   "dette-publique-generations-futures/_index.en.md": [
    "2026-10-18",
-   "2026-10-31"
+   "2026-10-31",
+   "2026-11-07",
+   "2026-11-18"
   ],
   "dette-publique-generations-futures/_index.md": [
    "2026-10-18",
-   "2026-10-31"
+   "2026-10-31",
+   "2026-11-07",
+   "2026-11-18"
   ],
   "dette-publique-peut-elle-baisser/_index.en.md": [
    "2026-10-16",

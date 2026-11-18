@@ -28,7 +28,7 @@
    "id": "longue",
    "fichier": "dette-longue",
    "titre": "La dette depuis 1978, en % du PIB",
-   "montre": "La dette monte par paliers, chacun installé par une crise ; dans la série observée, le ratio n'est jamais revenu à son niveau de dix ans auparavant.",
+   "montre": "La dette monte par paliers, dont les principaux sauts coïncident avec des crises ; dans la série observée, le ratio n'est jamais revenu à son niveau de dix ans auparavant.",
    "source": "INSEE, dette de Maastricht, 1978-T2 2026",
    "precaution": "Dette au sens de Maastricht, toutes administrations publiques. « > 80 % » : première fin d'année au-delà du seuil ; en trimestriel, il peut être franchi plus tôt."
   },
@@ -46,13 +46,13 @@
    "titre": "La charge d'intérêts en milliards d'euros, 1995-2025",
    "montre": "Ce que la dette coûte en euros, et non en part de PIB : le creux, puis la remontée.",
    "source": "Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), 1995-2025",
-   "precaution": "Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du Gouvernement, dont la base 2025 n'est pas publiée ; aucune variation ne se lit entre l'observé et le prévu."
+   "precaution": "Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du Gouvernement ; l'avis du Haut Conseil n'en donne la base 2025 qu'arrondie, dans un tableau qui mêle conventions de comptabilité nationale et budgétaire : aucune variation ne se lit entre l'observé et le prévu."
   },
   {
    "id": "masses",
    "fichier": "masses-comparees",
    "titre": "La charge d'intérêts face aux grands budgets, 1995-2024",
-   "montre": "La charge d'intérêts est longtemps restée sous le poste « ordre et sécurité » ; elle est repassée au-dessus.",
+   "montre": "Longtemps au-dessus du poste « ordre et sécurité », la charge d'intérêts est passée en dessous de 2019 à 2021, puis repassée au-dessus.",
    "source": "Eurostat : intérêts dus (gov_10a_main, D41PAY) et dépenses des administrations par fonction (gov_10a_exp, COFOG), 1995-2024",
    "precaution": "Les intérêts sont une nature de dépense, les trois autres des fonctions : ce n'est pas le même découpage, et aucun transfert n'est établi de l'un vers l'autre."
   }
@@ -86,7 +86,7 @@
    "id": "longue",
    "fichier": "dette-longue-en",
    "titre": "Debt since 1978, as a % of GDP",
-   "montre": "Debt climbs in steps, each set by a crisis; in the observed series, the ratio has never returned to its level of ten years earlier.",
+   "montre": "Debt climbs in steps, whose main jumps coincide with crises; in the observed series, the ratio has never returned to its level of ten years earlier.",
    "source": "INSEE, Maastricht debt, 1978-Q2 2026",
    "precaution": "Maastricht debt, general government. \"> 80%\": first year-end above the threshold; in quarterly data it may be crossed earlier."
   },
@@ -104,13 +104,13 @@
    "titre": "Interest due in billion euros, 1995-2025",
    "montre": "What the debt costs in euros rather than as a share of GDP: the trough, then the climb.",
    "source": "Eurostat, interest due by general government (gov_10a_main, D41PAY), 1995-2025",
-   "precaution": "Billion euros at current prices, not adjusted for inflation. Open circles: Government forecast, whose 2025 base is not published; no change can be read between the observed and the forecast values."
+   "precaution": "Billion euros at current prices, not adjusted for inflation. Open circles: Government forecast; the Haut Conseil's opinion gives its 2025 base only as a rounded figure, in a table that mixes national-accounts and budgetary conventions: no change can be read between the observed and the forecast values."
   },
   {
    "id": "masses",
    "fichier": "masses-comparees-en",
    "titre": "Interest due against the main public budgets, 1995-2024",
-   "montre": "Interest due long stayed below the public order and safety function; it has moved back above it.",
+   "montre": "Long above the public order and safety function, interest due fell below it from 2019 to 2021, then moved back above it.",
    "source": "Eurostat: interest due (gov_10a_main, D41PAY) and general government expenditure by function (gov_10a_exp, COFOG), 1995-2024",
    "precaution": "Interest is a type of spending, the other three are functions: not the same breakdown, and no transfer from one to the other is established."
   }

@@ -64,6 +64,10 @@ import langue_generee as lg  # noqa: E402  -- extremums publiés à la précisio
 import releve_jeu as rj  # noqa: E402  -- relevé daté par les seules données (organe commun, 17/10/2026)
 import dette_cout_figures as FIG  # noqa: E402
 
+# Cout maastrichtien de l'indexation des titres de l'Etat, Md EUR, transcrit du rapport du Senat n° 771 (2022-2023),
+# t. I, page l22-771-17 (lot dette-b de la reprise des ressources, 0-1, 18/11/2026) : ordre de grandeur seulement.
+SENAT_INDEXATION = {2021: 8.0, 2022: 23.0}
+
 REPO = Path(__file__).resolve().parent.parent
 OUT_JSON = REPO / "data" / "dette_officielle.json"
 OUT_ENDPOINT = REPO / "static" / "dette_officielle.json"
@@ -606,11 +610,11 @@ LABELS_CARTOUCHE = {
                           "d'intérêts baisse jusqu'à son point bas, puis remonte, surtout à partir de 2022."),
         "montre_taux": ("Le coût moyen du stock : il baisse pendant vingt-cinq "
                         "ans, puis remonte depuis son point bas, surtout par un saut en 2022."),
-        "montre_longue": ("La dette monte par paliers, chacun installé par une "
-                          "crise ; dans la série observée, le ratio n\'est jamais revenu à son niveau de dix ans auparavant."),
+        "montre_longue": ("La dette monte par paliers, dont les principaux sauts coïncident avec des "
+                          "crises ; dans la série observée, le ratio n\'est jamais revenu à son niveau de dix ans auparavant."),
         "charge": ("Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du "
-                   "Gouvernement, dont la base 2025 n'est pas publiée ; aucune variation ne se lit "
-                   "entre l'observé et le prévu."),
+                   "Gouvernement ; l'avis du Haut Conseil n'en donne la base 2025 qu'arrondie, dans un tableau qui mêle "
+                   "conventions de comptabilité nationale et budgétaire : aucune variation ne se lit entre l'observé et le prévu."),
         "titre_charge": "La charge d'intérêts en milliards d'euros, %s-%s",
         "src_charge_m": ("Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), %s-%s ; "
                          "prévision du Gouvernement, projet de loi de finances pour %d (avis du HCFP, § 115)"),
@@ -620,8 +624,8 @@ LABELS_CARTOUCHE = {
                    "fonctions : ce n'est pas le même découpage, et aucun transfert "
                    "n'est établi de l'un vers l'autre."),
         "titre_masses": "La charge d'intérêts face aux grands budgets, %s-%s",
-        "montre_masses": ("La charge d'intérêts est longtemps restée sous le poste "
-                          "« ordre et sécurité » ; elle est repassée au-dessus."),
+        "montre_masses": ("Longtemps au-dessus du poste « ordre et sécurité », la charge d'intérêts est "
+                          "passée en dessous de %d à %d, puis repassée au-dessus."),
         "marche": ("Le taux à 10 ans est un indicateur de référence, non le coût effectif des émissions ; le "
                    "taux implicite, coût moyen de tout le stock, ne suit les taux de marché qu'au fil des "
                    "renouvellements, et inclut l'indexation des titres indexés sur l'inflation."),
@@ -656,11 +660,11 @@ LABELS_CARTOUCHE = {
                           "burden falls to its low point, then rises again, above all from 2022."),
         "montre_taux": ("The average cost of the stock: falling for twenty-five "
                         "years, then rising from its low, mostly through a jump in 2022."),
-        "montre_longue": ("Debt climbs in steps, each set by a crisis; in the observed series, the ratio has "
+        "montre_longue": ("Debt climbs in steps, whose main jumps coincide with crises; in the observed series, the ratio has "
                           "never returned to its level of ten years earlier."),
         "charge": ("Billion euros at current prices, not adjusted for inflation. Open circles: Government "
-                   "forecast, whose 2025 base is not published; no change can be read between the "
-                   "observed and the forecast values."),
+                   "forecast; the Haut Conseil's opinion gives its 2025 base only as a rounded figure, in a table that mixes "
+                   "national-accounts and budgetary conventions: no change can be read between the observed and the forecast values."),
         "titre_charge": "Interest due in billion euros, %s-%s",
         "src_charge_m": ("Eurostat, interest due by general government (gov_10a_main, D41PAY), %s-%s; Government "
                          "forecast, %d budget bill (HCFP opinion, para. 115)"),
@@ -670,8 +674,8 @@ LABELS_CARTOUCHE = {
                    "the same breakdown, and no transfer from one to the other is "
                    "established."),
         "titre_masses": "Interest due against the main public budgets, %s-%s",
-        "montre_masses": ("Interest due long stayed below the public order and safety "
-                          "function; it has moved back above it."),
+        "montre_masses": ("Long above the public order and safety function, interest due fell "
+                          "below it from %d to %d, then moved back above it."),
         "marche": ("The 10-year yield is a reference indicator, not the actual cost of issuance; the implicit "
                    "rate, the average cost of the whole stock, follows market rates only as debt is renewed, and "
                    "includes the indexation of inflation-linked bonds."),
@@ -1314,7 +1318,8 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
              % (cx, cy + 20, TY_MINEUR, MUTED, _esc(T["creux"]), num(interets_md[creux], 1), creux))
     lx, ly = pts[-1]
     if pv:
-        # OPTIMUM-13 (P1 nouveau) : la base 2025 du Gouvernement n'est pas publiee ; un trait depuis le
+        # OPTIMUM-13 (P1 nouveau) : la base 2025 du Gouvernement n'est publiee qu'arrondie (avis du HCFP, tableau 10,
+        # conventions melees) ; un trait depuis le
         # dernier point observe ferait lire une trajectoire homogene que rien ne garantit. Cercles evides seuls,
         # pointille entre previsions seulement.
         ppts = [(X(a), Y(v)) for a, v in pv]
@@ -1338,9 +1343,9 @@ def build_svg_charge(interets_md: dict, lang: str = "fr", prev: dict | None = No
     # a droite, elle serait traversee par le pointille.
     ancre, dx = ("end", -10) if pv else ("start", 10)
     e.append('<text x="%.1f" y="%.1f" font-size="%d" font-weight="700" fill="%s" text-anchor="%s">%s</text>'
-             % (lx + dx, ly - 6 if pv else ly + 2, TY_VALEUR, INK, ancre, num(interets_md[a1], 1)))
+             % (lx + dx - (4 if pv else 0), ly - 6 if pv else ly + 2, TY_VALEUR, INK, ancre, num(interets_md[a1], 1)))
     e.append('<text x="%.1f" y="%.1f" font-size="%d" fill="%s" text-anchor="%s">%s %d</text>'
-             % (lx + dx, ly + 9 if pv else ly + 17, TY_MINEUR, MUTED, ancre,
+             % (lx + dx - (4 if pv else 0), ly + 9 if pv else ly + 17, TY_MINEUR, MUTED, ancre,  # C2 : loin de la courbe
                 "Md€" if lang == "fr" else "bn", a1))
     return fin_pied(e, W, H + 4, T["src"] % (a0, a1) + (T["src_prev"] % edition if pv else ""),
                    "charge", lang)
@@ -1759,7 +1764,8 @@ def atomic_write(path: Path, text: str) -> None:
 
 
 def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
-                 masses: tuple[int, int], charge: tuple[int, int], decomp: tuple[int, int] = (0, 0)) -> dict:
+                 masses: tuple[int, int], charge: tuple[int, int], decomp: tuple[int, int] = (0, 0),
+                 sous_gf03: tuple[int, int] = (0, 0)) -> dict:
     """Donnees des cartes « Reutiliser » : meme texte que les cartouches.
 
     Source UNIQUE de la precaution de lecture : elle est ecrite une fois, dans
@@ -1800,7 +1806,7 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
                          "(gov_10a_main, D41PAY), %s-%s")) % (c0, c1),
              "precaution": C["charge"]},
             {"id": "masses", "fichier": "masses-comparees" + suf,
-             "titre": C["titre_masses"] % (m0, m1), "montre": C["montre_masses"],
+             "titre": C["titre_masses"] % (m0, m1), "montre": C["montre_masses"] % sous_gf03,
              "source": LABELS_MASSES[lang]["src"] % (m0, m1), "precaution": C["masses"]},
         ]
     out["licence"] = {"fr": LABELS_CARTOUCHE["fr"]["licence"],
@@ -2063,6 +2069,15 @@ def main() -> int:
           "depuis l'annee du saut, l'encours pese davantage que le taux implicite")
     prose(all(r["volume"] > 0 for r in dec_rows), "l'encours augmente chaque annee depuis le creux")
     prose(saut["annee"] == 2022, "le saut du taux implicite est en 2022 (annee citee avec l'indexation)")
+    # Indexation des titres de l'Etat, cout maastrichtien publie par le Senat (rapport n° 771, 2022-2023, t. I,
+    # J.-F. Husson, 28/06/2023, page l22-771-17) : « 23,0 milliards d'euros en 2022, contre 8,0 milliards d'euros en
+    # 2021 ». Transcrit (18/11/2026, lot dette-b, 0-1) : ordre de grandeur, perimetre de l'Etat, jamais retranche de la
+    # decomposition des administrations publiques.
+    idx_senat = dict(SENAT_INDEXATION)
+    if os.environ.get("DETTE_MUTATION") == "senat_idx":   # temoin : un ordre de grandeur sans rapport avec le saut
+        idx_senat[2022] = 60.0
+    prose(0.5 <= (idx_senat[2022] - idx_senat[2021]) / saut["taux"] <= 2,
+          "l'indexation de l'Etat chiffree par le Senat est du meme ordre de grandeur que le saut de 2022")
 
     # (2) Temoin de la serie longue : le niveau de la derniere annee, situe dans la serie (D1).
     pib_fin = d41_pib[last_y]
@@ -2260,6 +2275,7 @@ def main() -> int:
             "dec19_delta": nb(dec19["delta"]), "dec19_volume": nb(dec19["volume"]), "dec19_taux": nb(dec19["taux"]),
             "dec_saut_annee": str(saut["annee"]), "dec_saut_delta": nb(saut["delta"]),
             "dec_saut_taux": nb(saut["taux"]), "dec_saut_volume": nb(saut["volume"]),
+            "idx_senat_21": nb(SENAT_INDEXATION[2021]), "idx_senat_22": nb(SENAT_INDEXATION[2022]),
             "dec_apres_delta": nb(dec_apres["delta"]), "dec_apres_volume": nb(dec_apres["volume"]),
             "dec_apres_taux": nb(dec_apres["taux"]),
             "taux_marche_dernier": nb(taux_marche[max(taux_marche)]) if taux_marche else "",
@@ -2492,11 +2508,22 @@ def main() -> int:
     inter_md = {int(a): v for a, v in d41_mdeur.items()}
     ans_masses = sorted(set(inter_md) & set(cofog_md["GF07"]) & set(cofog_md["GF09"])
                         & set(cofog_md["GF03"]))
+    # 16/11/2026 (relecture des sources, P0) : la fiche disait la charge « longtemps restee sous » le poste « ordre et
+    # securite » ; Eurostat la place au-dessus de 1995 a 2018, en dessous de 2019 a 2021 seulement. Les annees se lisent
+    # dans les series ; la garde verifie « longtemps au-dessus », une seule periode en dessous, « repassee au-dessus ».
+    sous_gf03 = [a for a in ans_masses if inter_md[a] < cofog_md["GF03"][a]]
+    if os.environ.get("DETTE_MUTATION") == "gf03":   # temoin : une annee ancienne passe sous le poste
+        sous_gf03 = sorted(set(sous_gf03) | {ans_masses[1]})
+    if not (sous_gf03 and sous_gf03 == list(range(sous_gf03[0], sous_gf03[-1] + 1))
+            and sous_gf03[0] - ans_masses[0] >= 10 and sous_gf03[-1] < ans_masses[-1]):
+        arret("fiche des masses : la charge n'est plus « longtemps au-dessus » du poste « ordre et securite », "
+              "puis « passee en dessous » une seule fois et « repassee au-dessus » (%s) : relire la fiche" % sous_gf03)
     sorties = [
         (OUT_FIGURES, json.dumps(meta_figures(
             lastq, last_y, taux_apparent, annuel,
             (ans_masses[0], ans_masses[-1]),
-            (min(inter_md), max(inter_md)), (dec_cumul["a0"], dec_cumul["a1"])),
+            (min(inter_md), max(inter_md)), (dec_cumul["a0"], dec_cumul["a1"]),
+            (sous_gf03[0], sous_gf03[-1])),
             ensure_ascii=False, indent=1) + "\n"),
         (OUT_JSON, txt),
         (OUT_ENDPOINT, txt),

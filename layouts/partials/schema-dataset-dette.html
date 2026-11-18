@@ -57,8 +57,8 @@
 {{- $isEn := eq site.Language.Lang "en" -}}
 {{- $T := dict
     "name" "Dette publique française : encours, charge d'intérêts et masses budgétaires comparables"
-    "desc" "Compilation dérivée automatiquement des séries officielles, sans aucune valeur recopiée à la main : dette de Maastricht des administrations publiques (INSEE, trimestriel, %s à %s), intérêts versés et recettes totales (Eurostat %s, D41PAY et TR, jusqu'en %s), dépenses par fonction COFOG (Eurostat %s, jusqu'en %s), et taux implicite de la dette calculé comme les intérêts de l'année rapportés à l'encours de fin d'année précédente."
-    "technique" "Rapatriement automatisé des API officielles (INSEE BDM SDMX, Eurostat dissemination API), gardes de cohérence bloquantes (ancres consolidées, écart maximal admis sur la dernière période publiée, non-régression de période), publication automatique hebdomadaire — aucune valeur saisie à la main"
+    "desc" "Compilation dérivée des séries officielles : dette de Maastricht des administrations publiques (INSEE, trimestriel, %s à %s), intérêts dus et recettes totales (Eurostat %s, D41PAY et TR, jusqu'en %s), dépenses par fonction COFOG (Eurostat %s, jusqu'en %s), et taux implicite de la dette calculé comme les intérêts de l'année rapportés à l'encours de fin d'année précédente. Ces séries sont rapatriées automatiquement ; le segment annuel de 1978 à 1994, figé, est transcrit d'un tableau de l'INSEE, et les prévisions du Gouvernement et les repères de l'Agence France Trésor sont saisis à la main, avec leur source et leur date."
+    "technique" "Rapatriement automatisé des API officielles (INSEE BDM SDMX, Eurostat dissemination API), gardes de cohérence bloquantes (ancres consolidées, écart maximal admis sur la dernière période publiée, non-régression de période), publication automatique hebdomadaire ; segment de 1978 à 1994 transcrit d'un tableau de l'INSEE, raccord contrôlé sur 1995 ; prévisions du Gouvernement et repères de l'Agence France Trésor saisis à la main, datés et sourcés"
     "v_encours" "Dette de Maastricht des administrations publiques"
     "v_ratio" "Ratio dette/PIB"
     "v_interets" "Intérêts versés par les administrations publiques (D41PAY)"
@@ -72,8 +72,8 @@
 {{- if $isEn -}}
   {{- $T = dict
       "name" "French public debt: outstanding stock, interest burden and comparable budget aggregates"
-      "desc" "A compilation derived automatically from official series, with no figure copied by hand: Maastricht debt of general government (INSEE, quarterly, %s to %s), interest paid and total revenue (Eurostat %s, D41PAY and TR, through %s), expenditure by COFOG function (Eurostat %s, through %s), and the implicit interest rate computed as a year's interest over the debt stock at the end of the previous year."
-      "technique" "Automated retrieval from official APIs (INSEE BDM SDMX, Eurostat dissemination API), blocking consistency guards (consolidated anchors, maximum admissible revision on the last published period, no period regression), automated weekly publication — no figure entered by hand"
+      "desc" "A compilation derived from official series: Maastricht debt of general government (INSEE, quarterly, %s to %s), interest due and total revenue (Eurostat %s, D41PAY and TR, through %s), expenditure by COFOG function (Eurostat %s, through %s), and the implicit interest rate computed as a year's interest over the debt stock at the end of the previous year. These series are retrieved automatically; the fixed annual segment from 1978 to 1994 is transcribed from an INSEE table, and the Government's forecasts and the Agence France Trésor benchmarks are entered by hand, with their source and date."
+      "technique" "Automated retrieval from official APIs (INSEE BDM SDMX, Eurostat dissemination API), blocking consistency guards (consolidated anchors, maximum admissible revision on the last published period, no period regression), automated weekly publication; 1978-1994 segment transcribed from an INSEE table, its junction checked on 1995; Government forecasts and Agence France Trésor benchmarks entered by hand, dated and sourced"
       "v_encours" "Maastricht debt of general government"
       "v_ratio" "Debt-to-GDP ratio"
       "v_interets" "Interest paid by general government (D41PAY)"
