@@ -68,6 +68,8 @@ related_awp:
     awp: "awp-04"
   - label: "Infrastructures numériques et dette technologique"
     awp: "awp-06"
+  - chapter: "Ce que les comptes publics permettent d'établir sur le déplacement de la charge de la dette"
+    awp: "awp-09"
 lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 # Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
 # mot pour mot contre la source : EPUB de l'édition du 17/10/2026 (en vente), 03_LIVRABLES/Dette_Publique_KINDLE_edition-20261017.epub ; coupe sur les chiffres.

@@ -55,6 +55,12 @@ related_awp:
     awp: "awp-05"
   - chapter: "Digital infrastructures and technological debt"
     awp: "awp-06"
+  - chapter: "The anthropic loop: displacement, saturation, return"
+    awp: "awp-07"
+  - chapter: "Social reversibility as a dimension of inequality"
+    awp: "awp-08"
+  - chapter: "What public accounts can establish about the displacement of the public debt burden"
+    awp: "awp-09"
 # Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
 # mot pour mot contre la source : édition révisée de 644 p. (en vente), 02_FABRIQUE/chaine-broche/08-PDF/complet_en/pdf_complet_source.html.
 extrait_voix:

@@ -62,6 +62,12 @@ related_awp:
     awp: "awp-05"
   - chapter: "Infrastructures numériques et dette technologique"
     awp: "awp-06"
+  - chapter: "La boucle anthropique : déplacement, saturation, retour"
+    awp: "awp-07"
+  - chapter: "La réversibilité sociale comme dimension de l'inégalité"
+    awp: "awp-08"
+  - chapter: "Ce que les comptes publics permettent d'établir sur le déplacement de la charge de la dette"
+    awp: "awp-09"
 # Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
 # mot pour mot contre la source : manuscrit de la génération n+47 (630 p., en vente), AUDIT_EXACTITUDE/navettes/retour_cloture/ANTHROPIE_FINALE_FR.html.
 extrait_voix:
