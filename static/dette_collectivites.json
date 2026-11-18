@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-17",
+ "releve_le": "2026-11-18",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OFGL, Légifrance",
  "meta": {
   "page": "https://stephane-lalut.com/dette-publique-collectivites-locales/",
@@ -27,13 +27,13 @@
    },
    "ggd": {
     "jeu": "gov_10dd_ggd",
-    "maj_source": "2026-11-16T23:00:00+0100",
-    "sha256": "42fa0a9773690a9348e27cc01d7c26e97e19f8803db4f0df1b1a6355862ab87b"
+    "maj_source": "2026-11-17T23:00:00+0100",
+    "sha256": "f09f77c3c09c36e077e09cd3011d7157880d2daa2638c4e92114d70afb7dcee3"
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-11-17T",
-    "sha256": "ecf3e95c1d7499a6f5833097cd167e115b916ed7e7c179258aee148094ae3fb1"
+    "maj_source": "2026-11-18T",
+    "sha256": "c924192f0552b859d6837582dc5875f8ddf7ef1bbb41823aebb284e77dcc93a0"
    },
    "notif": {
     "jeu": "gov_10dd_edpt1",
@@ -169,6 +169,10 @@
   },
   {
    "garde": "« épargne brute des départements divisée par plus de deux » (OFGL)",
+   "ok": true
+  },
+  {
+   "garde": "« de 2013 à 2017, l'équipement des départements baisse, celui des régions augmente » (OFGL)",
    "ok": true
   },
   {
@@ -666,7 +670,7 @@
      "2024": 4.5,
      "2025": 5.0
     },
-    "temoin_detenteur_ecart": 0.1,
+    "temoin_detenteur_ecart": 0.0,
     "detenu_etat": 0.2,
     "detenu_total": 19.6,
     "part_etat_pct": 1.02040816327,
@@ -905,6 +909,10 @@
   "of_dgf_reg_17": 4.12620213059,
   "of_dgf_reg_18": 0.30438714219,
   "of_tva_reg_18": 4.19694757714,
+  "of_eq_dep_13": 6.54979330001,
+  "of_eq_dep_17": 5.65842317678,
+  "of_eq_reg_13": 2.65860747315,
+  "of_eq_reg_17": 3.21776895915,
   "of_an": 2025,
   "of_eb_dep_apic": 2022,
   "of_eb_dep_pic": 13.1805165991,
@@ -980,10 +988,10 @@
    -3.385239,
    -2.361801
   ],
-  "of_encours_total": 218.495805369,
+  "of_encours_total": 204.979933014,
   "dette_loc_md": 278.206610995,
   "of_encours_rec0_annee": 2023,
-  "of_encours_rec0": 200.536443899,
+  "of_encours_rec0": 188.977178733,
   "avant_soldes": [
    -0.0355751792751,
    -0.0432896347194
@@ -1103,12 +1111,12 @@
    },
    {
     "cle": "dilico",
-    "mesure": "Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au lieu de trois",
+    "mesure": "Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement étalé jusqu'en 2031",
     "texte": "article 84",
     "nature": "étalement du reversement ; montant total restitué inchangé",
     "md": 0.3,
     "source": "Haut Conseil des finances publiques, avis n° 2026-5",
-    "mesure_en": "Sums placed in reserve in 2025 and 2026 (DILICO): repaid over five years instead of three",
+    "mesure_en": "Sums placed in reserve in 2025 and 2026 (DILICO): repayment spread until 2031",
     "texte_en": "article 84",
     "nature_en": "repayment spread out; total amount returned unchanged",
     "etat": "dans le texte initial attendu au Sénat, examen prévu le 2 décembre 2026 ; à l'Assemblée, art. 84 supprimé en commission le 28 octobre 2026, avant le rejet de l'ensemble du texte le 4 novembre 2026",
@@ -1358,6 +1366,12 @@
   "of_eb_dep_fin": "8,0",
   "of_eq_com_20": "20,0",
   "of_eq_com_fin": "30,1",
+  "of_eq_dep_13": "6,55",
+  "of_eq_dep_17": "5,66",
+  "of_eq_dep_var": "−14",
+  "of_eq_reg_13": "2,66",
+  "of_eq_reg_17": "3,22",
+  "of_eq_reg_var": "+21",
   "of_eq_com_hausse_pct": "51",
   "ep_transf_md": "8,9",
   "ep_inv_md": "7,5",
@@ -1415,9 +1429,9 @@
   "dgf_vote_b15": "3,5",
   "dgf_vote_b16": "3,4",
   "dgf_vote_b17": "2,4",
-  "of_encours_total": "218,5",
+  "of_encours_total": "205,0",
   "dette_loc_md": "278",
-  "of_ecart_maastricht": "60",
+  "of_ecart_maastricht": "73",
   "pib_ecart_fr": "0,09",
   "pib_ecart_de": "0,1",
   "pib_ecart_it": "0,1",
@@ -1457,9 +1471,9 @@
   "recent_solde_deb_pt": "0,35 point",
   "recent_solde_fin_pt": "0,52 point",
   "recent_inv_deb1": "2,2",
-  "of_encours_rec0": "200,5",
+  "of_encours_rec0": "189,0",
   "of_encours_rec0_annee": "2023",
-  "of_encours_hausse": "18,0",
+  "of_encours_hausse": "16,0",
   "consolidation_ecart_pt": "0,2 point",
   "plf_somme": "6,2",
   "plf_ecart_mde": "1,2 milliard d’euros",
@@ -1594,6 +1608,12 @@
   "of_eb_dep_fin": "8.0",
   "of_eq_com_20": "20.0",
   "of_eq_com_fin": "30.1",
+  "of_eq_dep_13": "6.55",
+  "of_eq_dep_17": "5.66",
+  "of_eq_dep_var": "−14",
+  "of_eq_reg_13": "2.66",
+  "of_eq_reg_17": "3.22",
+  "of_eq_reg_var": "+21",
   "of_eq_com_hausse_pct": "51",
   "ep_transf_md": "8.9",
   "ep_inv_md": "7.5",
@@ -1651,9 +1671,9 @@
   "dgf_vote_b15": "3.5",
   "dgf_vote_b16": "3.4",
   "dgf_vote_b17": "2.4",
-  "of_encours_total": "218.5",
+  "of_encours_total": "205.0",
   "dette_loc_md": "278",
-  "of_ecart_maastricht": "60",
+  "of_ecart_maastricht": "73",
   "pib_ecart_fr": "0.09",
   "pib_ecart_de": "0.1",
   "pib_ecart_it": "0.1",
@@ -1693,9 +1713,9 @@
   "recent_solde_deb_pt": "0.35 points",
   "recent_solde_fin_pt": "0.52 points",
   "recent_inv_deb1": "2.2",
-  "of_encours_rec0": "200.5",
+  "of_encours_rec0": "189.0",
   "of_encours_rec0_annee": "2023",
-  "of_encours_hausse": "18.0",
+  "of_encours_hausse": "16.0",
   "consolidation_ecart_pt": "0.2 points",
   "plf_somme": "6.2",
   "plf_ecart_mde": "€1.2 billion",

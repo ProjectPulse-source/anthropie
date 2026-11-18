@@ -21,7 +21,7 @@ de PROSE sur la page elle-meme (une phrase d'attribution sur 2013-2017 porte ses
 dette ; la somme des mesures du projet de loi n'est jamais un prelevement net) ; versions telephone (-m.svg) et pied
 commun (pied_figure.py) ; langue generee par langue_generee.py pour toute cle nouvelle.
 
-Usage : python scripts/update_dette_collectivites.py [--check] [--mutation=unite|verdict|plf_net|reclassement|plf_ecart|perime|stables|cahors]
+Usage : python scripts/update_dette_collectivites.py [--check] [--mutation=unite|verdict|plf_net|reclassement|plf_ecart|perime|stables|cahors|doublon]
   --mutation : temoin positif d'une garde (prose ou donnee) ; la garde DOIT mordre (sortie 1), rien n'est ecrit.
 Histoire : prototype contre-expertise en trois tours de raisonnement et trois de faits (01/10/2026), arbitrages dans
 D:\PRO\.claude\external-audits\ARBITRATIONS\ (ENTRANTE_2026-10-01_Collectivites, PRO-20261001-145721, -152012, -153529).
@@ -125,8 +125,43 @@ def ofgl() -> dict:
             if "results" not in d:
                 fail("OFGL %s / %s : reponse sans resultats" % (cat, ag))
             out.setdefault(cat, {})[ag] = {str(r["exer"])[:4]: r["m"] for r in d["results"] if r["m"] is not None}
+    # Doublons (17/11/2026, relecture du lot « dette-c ») : la base des departements incorpore la Ville de Paris et la
+    # metropole de Lyon, qui restent aussi dans les bases des communes et des groupements (notice de l'OFGL) ; la
+    # somme des quatre bases les compterait deux fois. Encours de ces deux collectivites, dans chacune des deux bases.
+    dbl = {}
+    for cle, ds, filtre in (("paris_dep", OFGL_BASES["departements"], 'dep_code="75"'),
+                            ("lyon_dep", OFGL_BASES["departements"], 'dep_code="691"'),
+                            ("paris_com", OFGL_BASES["communes"], 'com_code="75056"'),
+                            ("lyon_gfp", OFGL_BASES["intercommunalites"], 'epci_name="Métropole de Lyon"')):
+        q = {"select": "exer, sum(montant) as m", "where": 'agregat="Encours de dette" and %s' % filtre,
+             "group_by": "exer", "limit": 100}
+        url = "https://data.ofgl.fr/api/explore/v2.1/catalog/datasets/%s/records?" % ds + urllib.parse.urlencode(q)
+        brut = fetch(url)
+        h.update(brut)
+        d = json.loads(brut)
+        if not d.get("results"):
+            fail("OFGL doublons %s : reponse sans resultats" % cle)
+        dbl[cle] = {str(r["exer"])[:4]: r["m"] for r in d["results"] if r["m"] is not None}
+    # Perimetre de la contre-epreuve 2013-2017 (18/11/2026) : equipement des entites dont la categorie change sur la
+    # periode (Rhone et metropole de Lyon ; Martinique et Guyane, departements puis collectivites uniques).
+    per = {}
+    for cle, ds, filtre in (("dep_69", OFGL_BASES["departements"], 'dep_code="69"'),
+                            ("dep_691", OFGL_BASES["departements"], 'dep_code="691"'),
+                            ("dep_972", OFGL_BASES["departements"], 'dep_code="972"'),
+                            ("dep_973", OFGL_BASES["departements"], 'dep_code="973"'),
+                            ("reg_02", OFGL_BASES["regions"], 'reg_code="02"'),
+                            ("reg_03", OFGL_BASES["regions"], 'reg_code="03"')):
+        q = {"select": "exer, sum(montant) as m", "where": 'agregat="Dépenses d\'équipement" and %s' % filtre,
+             "group_by": "exer", "limit": 100}
+        url = "https://data.ofgl.fr/api/explore/v2.1/catalog/datasets/%s/records?" % ds + urllib.parse.urlencode(q)
+        brut = fetch(url)
+        h.update(brut)
+        d = json.loads(brut)
+        if "results" not in d:
+            fail("OFGL perimetre %s : reponse sans resultats" % cle)
+        per[cle] = {str(r["exer"])[:4]: r["m"] for r in d["results"] if r["m"] is not None}
     return {"dataset": "data.ofgl.fr (4 bases consolidees)", "maj_eurostat": datetime.now(timezone.utc).strftime("%Y-%m-%dT"),
-            "sha256": h.hexdigest(), "series": out}
+            "sha256": h.hexdigest(), "series": out, "doublons": dbl, "perimetre": per}
 
 
 def relever() -> dict:
@@ -266,6 +301,8 @@ class Jeu:
         self.pib_nama = {(o["geo"], int(o["time"])): o["v"] for o in b["pib"]["obs"]}
         self.ggd = {(o["geo"], o["sector"], o["sector2"], int(o["time"])): o["v"] for o in b["ggd"]["obs"]}
         self.ofgl = b["ofgl"]["series"]
+        self.ofgl_dbl = b["ofgl"].get("doublons", {})
+        self.ofgl_per = b["ofgl"].get("perimetre", {})
         self.notif = {(o["sector"], o["na_item"], o["unit"], int(o["time"])): o["v"] for o in b["notif"]["obs"]}
         self.d = {}
         for o in b["dette"]["obs"]:
@@ -295,6 +332,23 @@ class Jeu:
 
     def of_annees(self, cat, ag):
         return sorted(int(y) for y in self.ofgl.get(cat, {}).get(ag, {}))
+
+    def of_doublon(self, y):
+        """Encours de Paris et de Lyon comptes dans deux bases (milliards d'euros). Garde : s'ils ne sont plus
+        comptes a l'identique dans les deux, la convention de l'OFGL a change et la somme est a revoir."""
+        v = {k: self.ofgl_dbl.get(k, {}).get(str(y)) for k in ("paris_dep", "lyon_dep", "paris_com", "lyon_gfp")}
+        if None in v.values():
+            fail("OFGL : encours de Paris ou de Lyon absent pour %d (doublons des bases)" % y)
+        if abs(v["paris_dep"] - v["paris_com"]) > 1 or abs(v["lyon_dep"] - v["lyon_gfp"]) > 1:
+            fail("OFGL : Paris ou Lyon ne sont plus comptes a l'identique dans deux bases (%d) : revoir la somme" % y)
+        return (v["paris_dep"] + v["lyon_dep"]) / 1e9
+
+    def of_hors(self, cles, y):
+        """Equipement (milliards d'euros) des entites dont la categorie change, a retirer pour un perimetre constant ;
+        une entite absente une annee compte pour zero (absente de la base cette annee-la)."""
+        if not all(k in self.ofgl_per for k in cles):
+            fail("OFGL : perimetre de la contre-epreuve non releve (%s)" % ", ".join(k for k in cles if k not in self.ofgl_per))
+        return sum(self.ofgl_per[k].get(str(y), 0) for k in cles) / 1e9
 
     def dette_annees(self, g, s):
         return sorted(y for (gg, ss, y) in self.d if (gg, ss) == (g, s))
@@ -512,7 +566,7 @@ def plf_mesures() -> dict:
         {"cle": "ministeres", "mesure": "Contributions de certains ministères aux collectivités",
          "texte": "crédits des missions", "nature": "réduction de contributions de certains ministères", "md": minist,
          "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
-        {"cle": "dilico", "mesure": "Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement sur cinq ans au lieu de trois",
+        {"cle": "dilico", "mesure": "Sommes mises en réserve en 2025 et 2026 (DILICO) : reversement étalé jusqu'en 2031",
          "texte": "article 84", "nature": "étalement du reversement ; montant total restitué inchangé", "md": dilico,
          "source": "Haut Conseil des finances publiques, avis n° 2026-5"},
     ]
@@ -526,7 +580,7 @@ def plf_mesures() -> dict:
                 "capping of the growth of assigned VAT, excluding regions"),
         "ministeres": ("Contributions of certain ministries to local authorities", "appropriations under State budget missions",
                        "cut in contributions from certain ministries"),
-        "dilico": ("Sums placed in reserve in 2025 and 2026 (DILICO): repaid over five years instead of three", "article 84",
+        "dilico": ("Sums placed in reserve in 2025 and 2026 (DILICO): repayment spread until 2031", "article 84",
                    "repayment spread out; total amount returned unchanged"),
     }
     for m_ in mesures:
@@ -930,6 +984,14 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
     r["of_dgf_dep_13"], r["of_dgf_dep_17"] = J.of("departements", "Dotation globale de fonctionnement", 2013), J.of("departements", "Dotation globale de fonctionnement", 2017)
     r["of_dgf_reg_13"], r["of_dgf_reg_17"] = J.of("regions", "Dotation globale de fonctionnement", 2013), J.of("regions", "Dotation globale de fonctionnement", 2017)
     r["of_dgf_reg_18"], r["of_tva_reg_18"] = J.of("regions", "Dotation globale de fonctionnement", 2018), J.of("regions", "TVA", 2018)
+    # Contre-épreuve de la lecture par le cycle municipal (contradicteur externe du lot dette-c, décision de l'auteur du
+    # 17/11/2026) : dépenses d'équipement des départements et des régions, que ce cycle ne concerne pas, 2013 et 2017.
+    # A perimetre constant (controle de geometrie, 18/11/2026) : hors Rhone, metropole de Lyon, Martinique et Guyane.
+    for cat, k, hors in (("departements", "dep", ("dep_69", "dep_691", "dep_972", "dep_973")), ("regions", "reg", ("reg_02", "reg_03"))):
+        for y in (2013, 2017):
+            r["of_eq_%s_%d" % (k, y % 100)] = J.of(cat, "Dépenses d'équipement", y) - J.of_hors(hors, y)
+    if MUTATION == "contre_epreuve":   # temoin : les regions baisseraient aussi
+        r["of_eq_reg_17"] = r["of_eq_reg_13"] * 0.9
     eb = {y: J.of("departements", "Epargne brute", y) for y in J.of_annees("departements", "Epargne brute") if y >= 2018}
     a_ebpic = lg.extremum(eb, eb.get, 1)
     a_ebmin = lg.extremum((y for y in eb if y > a_ebpic), eb.get, 1, maxi=False)
@@ -951,14 +1013,15 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
     r["dgf_vote"] = {a: dv[a] for a in range(2013, 2018)}
     r["dgf_vote_baisses"] = [dv[a] - dv[a - 1] for a in range(2014, 2018)]
     # 11. Ecart documente, jamais corrige : somme des encours OFGL contre dette Maastricht des administrations locales
-    r["of_encours_total"] = sum(c["dette_fin"] for c in cats)
+    # Paris et Lyon une seule fois (relecture du lot « dette-c », 17/11/2026 ; convention du rapport de l'OFGL)
+    r["of_encours_total"] = sum(c["dette_fin"] for c in cats) - J.of_doublon(an_of)
     r["dette_loc_md"] = r["dette_loc_fin"] / 100 * J.pib[(G, an_dette_fin)] / 1000
 
     # 12. Refonte du 11/10/2026. « Depuis 2023 » : ce qui est observable dans les quatre categories (encours OFGL), sans
     # attribuer par difference le reste de la hausse aux organismes divers (consolidation et conventions differentes).
     a_rec0 = an_dette_fin - 2
     r["of_encours_rec0_annee"] = a_rec0
-    r["of_encours_rec0"] = sum(J.of(c_, "Encours de dette", a_rec0) for c_ in OFGL_BASES)
+    r["of_encours_rec0"] = sum(J.of(c_, "Encours de dette", a_rec0) for c_ in OFGL_BASES) - J.of_doublon(a_rec0)
     # B15 : « le besoin de financement se creuse » -- etat des deux annees precedant la fenetre recente
     r["avant_soldes"] = [J.pc(G, "S1313", "B9", y) for y in (an_fin - 4, an_fin - 3)]
     r["avant_annees"] = [an_fin - 4, an_fin - 3]
@@ -1011,6 +1074,8 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
         ("« DGF des départements et des régions en baisse de 2013 à 2017 » (OFGL)", r["of_dgf_dep_17"] < r["of_dgf_dep_13"] - 2 and r["of_dgf_reg_17"] < r["of_dgf_reg_13"] - 1),
         ("« 2018 : la DGF des régions disparaît presque, une fraction de TVA la remplace » (OFGL)", r["of_dgf_reg_18"] < 1 and r["of_tva_reg_18"] > 3),
         ("« épargne brute des départements divisée par plus de deux » (OFGL)", r["of_eb_dep_pic"] >= 2 * r["of_eb_dep_min"]),
+        ("« de 2013 à 2017, l'équipement des départements baisse, celui des régions augmente » (OFGL)",
+         lg.depasse(r["of_eq_dep_13"], r["of_eq_dep_17"], 2) and lg.depasse(r["of_eq_reg_17"], r["of_eq_reg_13"], 2)),
         ("« puis remonte » (dernier exercice OFGL au-dessus du creux)", lg.depasse(r["of_eb_dep_fin"], r["of_eb_dep_min"])),
         ("« la DGF votée baisse chaque année de 2014 à 2017, de plus de 10 milliards au total » (CGCT L. 1613-1)",
          all(d < 0 for d in r["dgf_vote_baisses"]) and r["dgf_vote"][2013] - r["dgf_vote"][2017] > 10),
@@ -1126,6 +1191,10 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "of_eb_dep_apic": str(r["of_eb_dep_apic"]), "of_eb_dep_pic": fr1(r["of_eb_dep_pic"]), "of_eb_dep_amin": str(r["of_eb_dep_amin"]),
         "of_eb_dep_min": fr1(r["of_eb_dep_min"]), "of_eb_dep_fin": fr1(r["of_eb_dep_fin"]),
         "of_eq_com_20": fr1(r["of_eq_com_20"]), "of_eq_com_fin": fr1(r["of_eq_com_fin"]),
+        "of_eq_dep_13": fr1(r["of_eq_dep_13"], 2), "of_eq_dep_17": fr1(r["of_eq_dep_17"], 2),
+        "of_eq_dep_var": ("+" if r["of_eq_dep_17"] > r["of_eq_dep_13"] else "") + fr1(100 * (r["of_eq_dep_17"] / r["of_eq_dep_13"] - 1), 0),
+        "of_eq_reg_13": fr1(r["of_eq_reg_13"], 2), "of_eq_reg_17": fr1(r["of_eq_reg_17"], 2),
+        "of_eq_reg_var": ("+" if r["of_eq_reg_17"] > r["of_eq_reg_13"] else "") + fr1(100 * (r["of_eq_reg_17"] / r["of_eq_reg_13"] - 1), 0),
         "of_eq_com_hausse_pct": fr1(100 * (r["of_eq_com_fin"] / r["of_eq_com_20"] - 1), 0),
         "ep_transf_md": fr1(r["ep_transf_md"], 1), "ep_inv_md": fr1(r["ep_inv_md"], 1),
         "dilico_2025": montant_en(dilico_montant()) if lang == "en" else dilico_montant(),
@@ -1284,17 +1353,19 @@ TXTF = {
         # sig_fin et sig_mun : listes de lignes (11/11/2026). À 11 px, « fin de la série comparable » sortait du cadre et
         # les élections anglaises se chevauchaient dans la police de repli du serveur (DejaVu Sans, plus large), qui rend les PNG.
         sig_fin=["{ep_a1} : fin de la", "série comparable"],
-        sig_rupt=["Transferts : série arrêtée", "en {ep_a1} ; en 2018 et 2021,", "des dotations deviennent", "des fractions de TVA"],
+        sig_rupt=["Transferts : série arrêtée", "en {ep_a1} ; en 2018 et 2021,", "des transferts sont", "remplacés par des impôts"],
         sig_bande="baisse des dotations", sig_mun=["municipales {m}"], sig_pic=["{a} : compensation", "de la taxe professionnelle"],
         sig_inv="investissement local", sig_tr="transferts reçus",
         sig_m_tr="Transferts reçus : {tr0} % → {tr1} %", sig_m_inv="Investissement : {inv0} % → {inv1} %",
-        sig_m_txt="De {ep_a0} à {ep_a1}, en % du PIB. Série des transferts arrêtée en {ep_a1} : en 2018 et en 2021, des dotations "
-                  "deviennent des fractions de TVA, comptées en impôts.",
+        sig_m_txt="De {ep_a0} à {ep_a1}, en % du PIB. Série des transferts arrêtée en {ep_a1} : en 2018, une dotation, puis en "
+                  "2021 le dégrèvement de taxe d'habitation, enregistré en transfert de l'État, sont remplacés par des "
+                  "fractions de TVA ou de taxe foncière, comptées en impôts.",
         sig_src="Eurostat gov_10a_main, administrations publiques locales (S1313) : investissement P51G, transferts courants reçus "
                 "D73REC ; France. Données relevées le {releve}.",
         sig_note="Transferts reçus : de l'État et de la sécurité sociale, toutes dotations confondues ; ce n'est pas la DGF. "
-                 "Série comparable arrêtée en {ep_a1} : en 2018 puis en 2021, des dotations sont remplacées par des fractions de "
-                 "TVA, comptées en impôts. Ce reclassement change la catégorie de la recette ; il ne dit pas, à lui seul, si "
+                 "Série comparable arrêtée en {ep_a1} : en 2018, une dotation, puis en 2021 le dégrèvement de taxe d'habitation, "
+                 "enregistré en transfert de l'État, sont remplacés par des fractions de TVA ou de taxe foncière, comptées "
+                 "en impôts. Ce reclassement change la catégorie de la recette ; il ne dit pas, à lui seul, si "
                  "les ressources ont augmenté ou baissé.",
         cas_titre="Solde des administrations locales, {ep_a0}-{ep_a1} : la même variation, en euros et en points de PIB",
         cas_titre_m="Solde local {ep_a0}-{ep_a1}, en euros et en points de PIB",
@@ -1343,17 +1414,19 @@ TXTF = {
                  "to {ep_a1}, it went from {inv0}% to {inv1}% of GDP and transfers received from {tr0}% to {tr1}%. The comparable "
                  "transfer series stops in {ep_a1}.",
         sig_fin=["{ep_a1}: end of the", "comparable series"],
-        sig_rupt=["Transfers: series stops", "in {ep_a1}; in 2018 and 2021,", "some grants became", "shares of VAT"],
+        sig_rupt=["Transfers: series stops", "in {ep_a1}; in 2018 and 2021,", "some transfers were", "replaced by taxes"],
         sig_bande="grant cuts", sig_mun=["municipal elections", "{m}"], sig_pic=["{a}: compensation for the", "abolished business tax"],
         sig_inv="local investment", sig_tr="transfers received",
         sig_m_tr="Transfers received: {tr0}% → {tr1}%", sig_m_inv="Investment: {inv0}% → {inv1}%",
-        sig_m_txt="From {ep_a0} to {ep_a1}, in % of GDP. The transfer series stops in {ep_a1}: in 2018 and 2021, some grants "
-                  "became shares of VAT, counted as taxes.",
+        sig_m_txt="From {ep_a0} to {ep_a1}, in % of GDP. The transfer series stops in {ep_a1}: in 2018 a grant, then in 2021 the "
+                  "residence tax relief, recorded as a transfer from the State, were replaced by shares of VAT or of "
+                  "property tax, counted as taxes.",
         sig_src="Eurostat gov_10a_main, local government (S1313): investment P51G, current transfers received D73REC; France. "
                 "Data retrieved on {releve}.",
         sig_note="Transfers received: from central government and social security, all grants together; this is not the DGF "
-                 "grant. Comparable series stops in {ep_a1}: in 2018 and again in 2021, some grants were replaced by shares of "
-                 "VAT, counted as taxes. This reclassification changes the category of the revenue; on its own, it does not "
+                 "grant. Comparable series stops in {ep_a1}: in 2018 a grant, then in 2021 the residence tax relief, recorded as "
+                 "a transfer from the State, were replaced by shares of VAT or of property tax, counted as taxes. This "
+                 "reclassification changes the category of the revenue; on its own, it does not "
                  "say whether resources rose or fell.",
         cas_titre="Local government balance, {ep_a0}-{ep_a1}: the same change, in euros and in percentage points of GDP",
         cas_titre_m="Local balance {ep_a0}-{ep_a1}, in euros and in percentage points of GDP",
@@ -1821,7 +1894,7 @@ PLF_TXT_REJET = {
                titre="Projet de loi de finances pour {ed} : ce qu'il demande aux collectivités, dans le texte transmis au Sénat",
                titre_m="Projet de loi de finances pour {ed} : ce qu'il demande aux collectivités",
                leg_reste="dans le texte transmis au Sénat", leg_m_reste="En orange : dans le texte transmis au Sénat",
-               desc="Montants pour {ed} des cinq mesures du projet de loi de finances déposé visant les collectivités, en "
+               desc="Montants pour {ed} des cinq principales mesures du projet de loi de finances déposé visant les collectivités, en "
                     "milliards d'euros : {liste}. Leur somme arithmétique, {somme}, ne mesure pas un prélèvement net. "
                     "L'Assemblée nationale {resume} le {vote}, puis a rejeté l'ensemble du texte le {rejet} : les cinq "
                     "mesures figurent dans le texte transmis au Sénat. État au {etat}.",
@@ -1830,14 +1903,14 @@ PLF_TXT_REJET = {
                    "Sénat, ordre du jour. État au {etat}.",
                note="Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : "
                     "elle ne mesure pas un prélèvement net. Le Sénat peut modifier chaque mesure avant la loi définitive.",
-               montre="Le projet déposé prévoyait cinq mesures visant les collectivités, dont la somme arithmétique "
-                      "atteignait {somme} milliards d'euros ; l'Assemblée nationale {resume}, puis a rejeté l'ensemble du "
+               montre="Le projet déposé prévoyait cinq principales mesures visant les collectivités, dont la somme "
+                      "arithmétique atteignait {somme} milliards d'euros ; l'Assemblée nationale {resume}, puis a rejeté l'ensemble du "
                       "texte le {rejet} : les cinq mesures figurent dans le texte transmis au Sénat."),
     "en": dict(PLF_TXT["en"],
                titre="Draft budget bill for {ed}: what it asks of local authorities, in the bill sent to the Senate",
                titre_m="Draft budget bill for {ed}: what it asks of local authorities",
                leg_reste="in the bill sent to the Senate", leg_m_reste="In orange: in the bill sent to the Senate",
-               desc="Amounts for {ed} of the five measures of the draft budget bill as tabled aimed at local authorities, "
+               desc="Amounts for {ed} of the five main measures of the draft budget bill as tabled aimed at local authorities, "
                     "in billions of euros: {liste}. Their arithmetic sum, {somme}, does not measure a net levy. The "
                     "National Assembly {resume} on {vote}, then rejected the whole bill on {rejet}: all five measures are "
                     "in the bill sent to the Senate. State on {etat}.",
@@ -1846,8 +1919,8 @@ PLF_TXT_REJET = {
                    "State on {etat}.",
                note="Arithmetic sum of heterogeneous amounts, each assessed against the situation without the measure: it "
                     "does not measure a net levy. The Senate may amend each measure before the final act.",
-               montre="The bill as tabled provided for five measures aimed at local authorities, whose arithmetic sum came "
-                      "to €{somme} billion; the National Assembly {resume}, then rejected the whole bill on {rejet}: all "
+               montre="The bill as tabled provided for five main measures aimed at local authorities, whose arithmetic sum "
+                      "came to €{somme} billion; the National Assembly {resume}, then rejected the whole bill on {rejet}: all "
                       "five measures are in the bill sent to the Senate."),
 }
 
@@ -2161,7 +2234,7 @@ def main() -> int:
 
 def _main() -> int:
     check = "--check" in sys.argv[1:] or MUTATION is not None
-    if MUTATION is not None and MUTATION not in MUTATIONS_PROSE and MUTATION not in ("stables", "cahors"):
+    if MUTATION is not None and MUTATION not in MUTATIONS_PROSE and MUTATION not in ("stables", "cahors", "doublon", "contre_epreuve"):
         fail("mutation inconnue : %s" % MUTATION)
     if not check:
         try:
@@ -2177,6 +2250,9 @@ def _main() -> int:
         for o in b["comptes"]["obs"]:
             if (o["geo"], o["sector"], o["time"]) == ("FR", "S1313", "2017") and o["na_item"] in ("TE", "TR"):
                 o["v"] *= 1.03
+    if MUTATION == "doublon":  # temoin : Paris ne serait plus compte a l'identique dans deux bases -> arret
+        for y in b["ofgl"]["doublons"]["paris_com"]:
+            b["ofgl"]["doublons"]["paris_com"][y] += 1e9
     J = Jeu(b)
     r, rapport = calculer(J)
     if MUTATION is not None:
@@ -2276,8 +2352,11 @@ def _main() -> int:
     import cairosvg
     for n, s in figs.items():
         (OUT_IMG / n).write_text(s, encoding="utf-8")
-        cairosvg.svg2png(url=str(OUT_IMG / n), write_to=str(OUT_IMG / n.replace(".svg", ".png")), output_width=1440,
-                         background_color="white")
+        # PNG rendu avec Inter en tête (contrôle du rendu du lot dette-c, 18/11/2026) : cairosvg ne lit que la première
+        # famille, et « system-ui », inconnue du serveur, le faisait retomber sur DejaVu Sans (titres coupés). Inter est
+        # installée au poste et par les workflows qui lancent ce générateur ; le SVG servi garde sa pile.
+        cairosvg.svg2png(bytestring=s.replace('font-family="%s"' % FONT, 'font-family="Inter, %s"' % FONT).encode("utf-8"),
+                         write_to=str(OUT_IMG / n.replace(".svg", ".png")), output_width=1440, background_color="white")
     OUT_FIGURES.write_text(json.dumps(fiches, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     OUT_FIGURES_PLF.write_text(json.dumps(fiches_p, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     log("OK : %d gardes tenues ; temoin TR-TE-B9 max %.3f MEUR sur %d annees" % (len(rapport), r["temoin_residu_max_meur"], r["temoin_annees"]))

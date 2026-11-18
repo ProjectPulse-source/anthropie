@@ -52,7 +52,7 @@
 <tr><td>{{ .mesure_en }}</td><td>{{ .texte_en }}</td><td>{{ .nature_en }}</td><td>{{ printf $f1 .md }}</td><td>{{ .etat_en }}</td></tr>
 {{- end }}
 </tbody></table></div>
-<p><small>Amounts for {{ $c.plf_edition }}, as provided for in the bill as tabled (initial framing of the debate). Last column: fate of the article in plenary, from the official record of the sitting; a deleted provision may be reinstated before the final act. Sources: draft budget bill (explanatory memoranda) for the first two rows; opinion of the High Council of Public Finance for the next three, which the text of the bill does not quantify.</small></p>
+<p><small>Amounts for {{ $c.plf_edition }}, as provided for in the bill as tabled (initial framing of the debate). Last column: fate of the article in the National Assembly, from the record of the sitting (of the committee for article 84); a deleted provision may be reinstated before the final act. Sources: draft budget bill (explanatory memoranda) for the first two rows; opinion of the High Council of Public Finance for the next three, which the text of the bill does not quantify.</small></p>
 {{- else if eq $t "plf_lectures" -}}
 {{- $a := $j.affichage_en -}}
 <div class="table-scroll"><table class="dette-monde-table">
@@ -101,7 +101,7 @@
 <tr><td>{{ .mesure }}</td><td>{{ .texte }}</td><td>{{ .nature }}</td><td>{{ replace (printf $f1 .md) "." "," }}</td><td>{{ .etat }}</td></tr>
 {{- end }}
 </tbody></table></div>
-<p><small>Montants pour {{ $c.plf_edition }}, tels que le projet déposé les prévoit (cadrage initial du débat). Dernière colonne&nbsp;: sort de l'article en séance, d'après le compte rendu officiel&nbsp;; une disposition supprimée peut être rétablie d'ici la loi définitive. Sources&nbsp;: projet de loi de finances (exposés des motifs) pour les deux premières lignes&nbsp;; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.</small></p>
+<p><small>Montants pour {{ $c.plf_edition }}, tels que le projet déposé les prévoit (cadrage initial du débat). Dernière colonne&nbsp;: sort de l'article à l'Assemblée nationale, d'après le compte rendu de la séance (de la commission pour l'article 84)&nbsp;; une disposition supprimée peut être rétablie d'ici la loi définitive. Sources&nbsp;: projet de loi de finances (exposés des motifs) pour les deux premières lignes&nbsp;; avis du Haut Conseil des finances publiques pour les trois suivantes, que le texte du projet ne chiffre pas.</small></p>
 {{- else if eq $t "plf_lectures" -}}
 {{- $a := $j.affichage -}}
 <div class="table-scroll"><table class="dette-monde-table">

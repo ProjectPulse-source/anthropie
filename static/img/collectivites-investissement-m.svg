@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 740" role="img" font-variant-numeric="tabular-nums" aria-labelledby="csm-t csm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 848" role="img" font-variant-numeric="tabular-nums" aria-labelledby="csm-t csm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="csm-t">Investissement local et transferts reçus, en % du PIB</title><desc id="csm-d">Deux courbes depuis 1995 : l'investissement local (formation brute de capital fixe) oscille autour de 2 % du PIB ; de 2013 à 2017, il passe de 2,4 % à 1,9 % du PIB et les transferts reçus de 3,3 % à 2,7 %. La série comparable des transferts s'arrête en 2017.</desc>
-<rect width="300" height="740" fill="#ffffff"/>
+<rect width="300" height="848" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Investissement local et</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">transferts reçus, en % du PIB</text>
 <rect x="192.8" y="84" width="35.2" height="170" fill="#f3efe6"/>
@@ -21,26 +21,32 @@
 <text x="0" y="300" font-size="15" font-weight="600" fill="#6f6c66">Transferts reçus : 3,3 % → 2,7 %</text>
 <text x="0" y="320" font-size="15" font-weight="600" fill="#184f95">Investissement : 2,4 % → 1,9 %</text>
 <text x="0" y="339" font-size="13.5" fill="#52514e">De 2013 à 2017, en % du PIB. Série des</text>
-<text x="0" y="358" font-size="13.5" fill="#52514e">transferts arrêtée en 2017 : en 2018</text>
-<text x="0" y="377" font-size="13.5" fill="#52514e">et en 2021, des dotations deviennent</text>
-<text x="0" y="396" font-size="13.5" fill="#52514e">des fractions de TVA, comptées en</text>
-<text x="0" y="415" font-size="13.5" fill="#52514e">impôts.</text>
-<line x1="0" y1="429.0" x2="300" y2="429.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="450.0" font-size="13.5" fill="#52514e">Eurostat gov_10a_main, administrations</text>
-<text class="pied-source" x="0" y="467.0" font-size="13.5" fill="#52514e">publiques locales (S1313) :</text>
-<text class="pied-source" x="0" y="484.0" font-size="13.5" fill="#52514e">investissement P51G, transferts</text>
-<text class="pied-source" x="0" y="501.0" font-size="13.5" fill="#52514e">courants reçus D73REC ; France.</text>
-<text class="pied-source" x="0" y="518.0" font-size="13.5" fill="#52514e">Données relevées le 17 novembre 2026.</text>
-<text class="pied-note" x="0" y="539.0" font-size="13.5" fill="#52514e">Transferts reçus : de l'État et de la</text>
-<text class="pied-note" x="0" y="556.0" font-size="13.5" fill="#52514e">sécurité sociale, toutes dotations</text>
-<text class="pied-note" x="0" y="573.0" font-size="13.5" fill="#52514e">confondues ; ce n'est pas la DGF.</text>
-<text class="pied-note" x="0" y="590.0" font-size="13.5" fill="#52514e">Série comparable arrêtée en 2017 : en</text>
-<text class="pied-note" x="0" y="607.0" font-size="13.5" fill="#52514e">2018 puis en 2021, des dotations sont</text>
-<text class="pied-note" x="0" y="624.0" font-size="13.5" fill="#52514e">remplacées par des fractions de TVA,</text>
-<text class="pied-note" x="0" y="641.0" font-size="13.5" fill="#52514e">comptées en impôts. Ce reclassement</text>
-<text class="pied-note" x="0" y="658.0" font-size="13.5" fill="#52514e">change la catégorie de la recette ; il</text>
-<text class="pied-note" x="0" y="675.0" font-size="13.5" fill="#52514e">ne dit pas, à lui seul, si les</text>
-<text class="pied-note" x="0" y="692.0" font-size="13.5" fill="#52514e">ressources ont augmenté ou baissé.</text>
-<text class="pied-licence" x="0" y="713.0" font-size="13.5" fill="#6f6c66">Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="730.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text x="0" y="358" font-size="13.5" fill="#52514e">transferts arrêtée en 2017 : en 2018,</text>
+<text x="0" y="377" font-size="13.5" fill="#52514e">une dotation, puis en 2021 le</text>
+<text x="0" y="396" font-size="13.5" fill="#52514e">dégrèvement de taxe d&#x27;habitation,</text>
+<text x="0" y="415" font-size="13.5" fill="#52514e">enregistré en transfert de l&#x27;État,</text>
+<text x="0" y="434" font-size="13.5" fill="#52514e">sont remplacés par des fractions de</text>
+<text x="0" y="453" font-size="13.5" fill="#52514e">TVA ou de taxe foncière, comptées en</text>
+<text x="0" y="472" font-size="13.5" fill="#52514e">impôts.</text>
+<line x1="0" y1="486.0" x2="300" y2="486.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="507.0" font-size="13.5" fill="#52514e">Eurostat gov_10a_main, administrations</text>
+<text class="pied-source" x="0" y="524.0" font-size="13.5" fill="#52514e">publiques locales (S1313) :</text>
+<text class="pied-source" x="0" y="541.0" font-size="13.5" fill="#52514e">investissement P51G, transferts</text>
+<text class="pied-source" x="0" y="558.0" font-size="13.5" fill="#52514e">courants reçus D73REC ; France.</text>
+<text class="pied-source" x="0" y="575.0" font-size="13.5" fill="#52514e">Données relevées le 18 novembre 2026.</text>
+<text class="pied-note" x="0" y="596.0" font-size="13.5" fill="#52514e">Transferts reçus : de l'État et de la</text>
+<text class="pied-note" x="0" y="613.0" font-size="13.5" fill="#52514e">sécurité sociale, toutes dotations</text>
+<text class="pied-note" x="0" y="630.0" font-size="13.5" fill="#52514e">confondues ; ce n'est pas la DGF.</text>
+<text class="pied-note" x="0" y="647.0" font-size="13.5" fill="#52514e">Série comparable arrêtée en 2017 : en</text>
+<text class="pied-note" x="0" y="664.0" font-size="13.5" fill="#52514e">2018, une dotation, puis en 2021 le</text>
+<text class="pied-note" x="0" y="681.0" font-size="13.5" fill="#52514e">dégrèvement de taxe d'habitation,</text>
+<text class="pied-note" x="0" y="698.0" font-size="13.5" fill="#52514e">enregistré en transfert de l'État,</text>
+<text class="pied-note" x="0" y="715.0" font-size="13.5" fill="#52514e">sont remplacés par des fractions de</text>
+<text class="pied-note" x="0" y="732.0" font-size="13.5" fill="#52514e">TVA ou de taxe foncière, comptées en</text>
+<text class="pied-note" x="0" y="749.0" font-size="13.5" fill="#52514e">impôts. Ce reclassement change la</text>
+<text class="pied-note" x="0" y="766.0" font-size="13.5" fill="#52514e">catégorie de la recette ; il ne dit</text>
+<text class="pied-note" x="0" y="783.0" font-size="13.5" fill="#52514e">pas, à lui seul, si les ressources ont</text>
+<text class="pied-note" x="0" y="800.0" font-size="13.5" fill="#52514e">augmenté ou baissé.</text>
+<text class="pied-licence" x="0" y="821.0" font-size="13.5" fill="#6f6c66">Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="838.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>
