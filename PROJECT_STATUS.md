@@ -52,6 +52,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Passe de forme du lot « Dette A » publiée après jugement externe à l'aveugle (FR, EN)
+
+- **Commits** `0eef937a` (Pourquoi la dette augmente, et texte de méthode commun du dossier `dette-methode`),
+  `95170229` (Peut-elle baisser), `a226c438` (Inflation), `15d66d8d` (Formules du débat) : titres posés en questions au
+  vocabulaire comptable, deux soldes primaires et un effort distingués, résultat des fenêtres européennes sorti du repli
+  et borné aux fenêtres retenues, contresens d'un titre anglais corrigé, texte commun des indicateurs et des vérifications.
+- **Jugement externe** : paquet n° 01, réponse archivée avant lecture (`249D83BB…1A14030D`) et arbitrée ; P0 du texte
+  commun corrigé avant publication (le seuil de 3 % porte sur le déficit, non sur la dette) ; trois titres en ligne gardés.
+- **Contrôles** : Hugo 0, `typo_build` 0, `check-rendu-ressources` 0, `check-all --ci` 0, lettre (aucun nombre retiré),
+  relecture de langue, instantanés refaits.
+- **Servi** : déploiement `hugo.yml` 44330153867 réussi ; version servie attestée le 18/11 : 8 pages, 3 817 phrases,
+  0 écart ; 9 scripts identiques.
+
 ### 2026-11-18 — Lot « Parcoursup, Étudiants » publié : chances d'admission, santé mentale des étudiants (FR)
 
 - **Commits** `e8d92dd4` (Étudiants : niveau 2024 du Baromètre de Santé publique France donné non comparable, millésime
