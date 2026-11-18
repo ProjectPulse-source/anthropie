@@ -155,3 +155,15 @@ page, liens entrants depuis le dossier. Pas de campagne de mesure des réponses 
   leur paragraphe).
 - Contrôles : `check-all --ci` 0 ; build 0 ; `typo_build` 0 ; liens, rendu et dates 0 ; instantanés refaits. Recette
   sur la page servie : 320, 390, 1 280 px, aucun défilement horizontal ; neuf blocs de zones ; FAQ 3/3.
+
+### Reprise du 17/11/2026 (lot « promesses-b » de la reprise des ressources)
+
+- Relecture des sources par deux relecteurs neufs (`LOTS\promesses-b\SOURCES\…_R1a.md`, `_R1b.md`) : aucun P0, huit P1
+  (condition de la commission du Sénat, périmètre du calcul du groupe d'experts sur le Smic, acteur des baisses de TVA
+  espagnole et polonaise, refonte des allègements attribuée au décret, règles de l'indemnisation et loi du 11 juin 2026,
+  échéance des places de rétention, généralisation sur la procédure accélérée, placement en rétention prêté au président
+  dans la FAQ) ; tous corrigés dans la version proposée, FR et EN, avec une sélection de P2 ; sondes de la session à
+  l'API Légifrance (CESEDA L741-1, loi n° 2026-470, décret n° 2025-887, C. trav. L3231-6 et L3231-10, loi n° 2025-796).
+- Le chapô et la description disent désormais « l'exécutif » : le président ne décide pas seul ce que la page range dans la
+  première zone. Premier écran retesté (voir `LOT.md` du lot).
+- Reste à la publication : relecture phrase à phrase, instantanés, accord de l'auteur ; P2 reportés (`A_ARBITRER.md`).

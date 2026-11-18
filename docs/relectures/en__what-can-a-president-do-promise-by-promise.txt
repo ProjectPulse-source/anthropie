@@ -1,13 +1,14 @@
-# relu le 2026-11-05 ; texte servi de /en/what-can-a-president-do-promise-by-promise/, build de 27d7689 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/what-can-a-president-do-promise-by-promise/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Nine campaign promises: what can a president really do?
 Can a president raise wages, lower prices, get people hired, make the country safer, deport more people?
-He decides part of each promise, almost never all of it: the rest goes through a vote, a negotiation, or depends on actors he does not command.
+The executive, president and Government, decides part of each promise, almost never all of it: the rest goes through a vote, a negotiation, or depends on actors he does not command.
 The boundary does not fall in the same place from one theme to another.
-Page updated 5 November 2026 · revisions
+Page updated 18 November 2026
 Presidential promises
 No text obliges a president to carry out his programme: a campaign programme is not a legal act, and the Constitution entrusts the Government, not the president, with determining and conducting “the policy of the Nation” (article 20).
-A presidential promise therefore passes through a chain: the Government that signs, the majority that votes, the administration that applies.
+A presidential promise therefore does not necessarily designate a power of the president: it may commit the Government to act, require a statute, depend on a negotiation or wait for a decision that no member of the executive can impose.
+It thus passes through a chain: the Government that signs, the majority that votes, the administration that applies.
 The book Un président peut-il tenir ses promesses? [Can a president keep his promises?] (September 2026, in French) follows this chain across nine themes with the same four-zone map.
 In the executive’s hands: what can be decided without a new statute, by the president, the Prime Minister, a minister or an administrative authority, each within its powers; the president does not personally sign all of these decisions.
 Must be voted: what goes through the legislative or budget procedure, with its balance of forces, its timescales and its modes of adoption.
@@ -18,14 +19,14 @@ Hence the reading rule: start with the last zone.
 Begin with the announced result: who must act for it to happen, and which of those actors is beyond the reach of the one who promises?
 Then work back up the chain to the first act the executive can actually decide.
 The table of the nine promises sums up the map, theme by theme.
-The map does not say whether a promise is desirable; it says what is feasible, by whom, and in how much time.
+The map does not say whether a promise is desirable; it helps to see who can decide, which conditions remain to be met and what delays may separate a decision from its result.
 The result in one sentence.
 A president can launch a policy without deciding all its measures alone or guaranteeing its effects.
 The nine promises examined meet different constraints, which combine: decentralised economic decisions for wages, prices and employment; training and observation lags for health and schools; judges’ decisions and enforcement capacity for security and immigration; long trajectories and shared commitments for debt and climate.
 Health: can a president bring a doctor back?
 The first zone exists, but the pen usually belongs to the director general of the regional health agency: he is the one who sets, every two years, the zones where the provision of care is insufficient (Public Health Code, article L.
 1434-4).
-Regulating where doctors set up practice requires a statute: passed by the National Assembly on 7 May 2025, a private member’s bill made setting up subject to authorisation; on 27 May 2026, the Senate committee turned it into an obligation to practise part-time in an under-served zone.
+Regulating where doctors set up practice requires a statute: passed by the National Assembly on 7 May 2025, a private member’s bill made setting up subject to authorisation; on 27 May 2026, the Senate committee turned it into a condition: to set up in an over-served zone, a commitment to practise part-time in an under-served zone.
 Debate in the Senate chamber began on 11 June 2026 without yet covering all the articles (Senate legislative file, read on 4 November 2026).
 Training targets are shared with the universities.
 That leaves the practitioner, free to set up or not, and the clock of the curriculum: a student who starts in 2027 cannot complete general-practice training before 2037 at the earliest.
@@ -40,7 +41,7 @@ A promise to raise private-sector wages requires an employer to pay more.
 The executive directly sets only a floor, the Smic, France’s minimum wage, which already rises without it through a statutory formula.
 The crux lies at one level: almost all its instruments act between the wage and the bank account, on disposable income, not on the amount at the top of the pay slip.
 In the executive’s hands.
-The Government can raise the Smic by decree beyond what the formula produces (article L3231-10 of the Labour Code): this is the “coup de pouce”, the last of which dates from 1 July 2012 according to the 2025 report of the group of experts on the Smic.
+The Government can raise the Smic by decree beyond what the formula produces, at the annual uprating of 1 January or during the year (articles L3231-6 to L3231-10 of the Labour Code): this is the “coup de pouce”, the last of which dates from 1 July 2012 according to the 2025 report of the group of experts on the Smic.
 It can also bring forward an automatic uprating, as on 1 November 2024: the decision then concerned the date, not the amount.
 The schedule of the prime d’activité (in-work benefit) is set by decree (article L842-3 of the Social Security Code), as is the rate of old-age insurance contributions (article L241-3 of the same code).
 Finally, an order of the minister responsible for labour can make an industry-wide pay scale binding on the whole industry (article L2261-15 of the Labour Code).
@@ -54,17 +55,17 @@ The minister can initiate the extension (article L2261-24), exclude from it clau
 He can also initiate the merger of industries whose bargaining activity is too weak (articles L2261-32 to L2261-34).
 He acts on the framework that negotiates, not on what the pay scale says.
 Out of his hands.
-The wage above the floor remains set by the employer or by the industry pay scale.
+The wage above the floor remains set by the employer, a company agreement or the industry pay scale.
 Where a rise is absorbed cannot be decreed: margins, prices, productivity, employment, hours, or the public budget if the State compensates; which one dominates is measured afterwards.
-And these outcomes are not equivalent for the employee: through employment or hours, the counterpart appears on no pay slip.
+And these outcomes are not equivalent for the employee: through employment, the counterpart appears on no pay slip; through hours, it shows only as a lower total.
 And the purchasing power of this income also depends on prices that the executive does not set.
 What the book adds.
 The chapter separates three quantities that the formula “making work pay more” conflates: the wage, disposable income, purchasing power.
-It follows a written promise that joins two instruments in one line, a monthly Smic raised to 1,600 euros net and the indexation of wages to inflation: the first half goes through a decree, the second through a statute whose programme states neither the timetable nor the majority.
+It follows a written promise that joins two instruments in one line, a monthly Smic raised to 1,600 euros net and the indexation of wages to inflation: the first half goes through a decree, the second through a statute whose programme specifies neither the vehicle nor the majority.
 It locates the break in two places.
 The decree sets the starting wage when the promise speaks of the net wage, which has passed through the level of compulsory levies.
-And the decided part of an amount is the gap above what the formula would have produced on its own, impossible to calculate in advance: six weeks before 1 January 2026, the group of experts on the Smic announced an uprating “of the order of 1.4%”; the decree of 17 December 2025 applied 1.18.
-It also shows the slope of contribution relief: under the regime in force in spring 2025, according to the 2025 report of the same group, 242 euros of additional cost to the employer between one and 1.6 times the Smic produced 100 euros of net wage and 60 euros of disposable income.
+And the decided part of an amount is the gap above what the formula would have produced on its own, impossible to calculate in advance: five weeks before 1 January 2026, the group of experts on the Smic announced an uprating “of the order of 1.4%”; the decree of 17 December 2025 applied 1.18%.
+It also shows the slope of contribution relief: under the regime in force on 1 April 2025, according to the 2025 report of the same group, 242 euros of additional cost to the employer produced, for a single employee without children paid the Smic, 100 euros of net wage and 60 euros of disposable income.
 It closes on four questions, in this order: which level the promise speaks of, through which vehicle, compared with what and measured when, who absorbs.
 Prices: can a president bring down what you pay?
 A promise to bring prices down most often requires returning to those of before: it targets a level, whereas inflation measures a pace.
@@ -73,34 +74,34 @@ On energy, which the book follows, the crux is twofold: the same tax changes mas
 In the executive’s hands.
 The Government can institute by decree a rebate on the displayed price: the 2022 one (decree no.
 2022-423 of 25 March 2022) showed at the pump within a week, according to the Court of Audit (Cour des comptes, March 2024), but it is the State that pays, not the underlying price that falls.
-It can freeze prices on grounds of crisis, for six months at most, by decree in the Conseil d’État (article L.
-410-2 of the Commercial Code), and adjust the excise duty by order if a budget act has empowered it to.
+It can freeze prices on grounds of crisis, for six months at most, by a decree issued after consulting the Conseil d’État (article L.
+410-2 of the Commercial Code), and adjust the excise duty (the tax on energy charged by quantity) by order if a budget act has empowered it to.
 On the regulated electricity tariff, proposed by the Energy Regulatory Commission (CRE), ministers can only object within three months (article L.
 337-4 of the Energy Code): prevent, not write.
 Must be voted.
-VAT and the level of the excise duty are set in the budget act, with a majority.
+VAT and the level of the excise duty are set by statute, in practice in the budget act, with a majority.
 The European list of reduced rates (Annex III of Council Directive (EU) 2022/542 of 5 April 2022) allows a reduced rate on electricity with no end date, and on gas until 1 January 2030.
 Since the regulated tariff is calculated excluding taxes, going from 20 to 5.5% would remove about 12% of the typical bill, 130 euros a year out of 1,072 on 1 August 2026 (the book’s calculation on the bill published by the CRE in July 2026), if nothing else moves.
 Must be negotiated or shared.
 A reduced rate on motor fuels and heating oil complies with Union law only if the European list includes them, and it can only be amended by unanimity in the Council (article 113 of the Treaty on the Functioning of the European Union).
 Its last revision took four years and two months, and it phases out reduced rates on fossil fuels by 1 January 2030 at the latest.
-A Parliament can vote the rate without waiting, as Spain and Poland did in March 2026; it then loses the legal certainty of what it has voted.
+A State can apply it without waiting, as Spain and Poland did in March 2026, each by an act of its government; it then loses the legal certainty of what it has decided.
 Out of his hands.
 Wholesale prices, the price negotiated on the shelf and the level already reached.
-The pass-through of a tax cut depends on sellers, competition and market structure: after the 2009 VAT cut in restaurants, prices fell by about 2% where full pass-through would have given nearly 10% (Insee, 2014).
+The pass-through of a tax cut depends on sellers, competition and market structure: after the 2009 VAT cut in restaurants, prices fell by about 2% as a result of the cut, according to an estimate, where full pass-through would have given nearly 10% (Insee working paper, 2014).
 What the book adds.
 The chapter follows a written and dated promise, to bring VAT on the four energy products down from 20 to 5.5%, and shows that the law makes three promises of it: one immediate, one with a deadline, one whose compliance depends on twenty-seven capitals, where the motor fuel that opens its wording falls.
-It rereads the National Assembly vote of 20 November 2025, which rejects the whole promise and adopts only a fragment, and establishes that the national excise duty offered a lever that could be pulled more directly.
+It rereads the National Assembly vote of 20 November 2025, which rejects the whole promise and adopts only a fragment, soon swept away by the rejection of the first part of the budget, and establishes that the national excise duty offered a lever that could be pulled more directly.
 It leaves four questions: which price, through which instrument, who still has to say yes, how much gets through and who bears the loss.
 Schools: can a president change schools faster than a generation of pupils?
-The first zone is fullest here: curricula are set by ministerial order, the organisation of lower secondary school (collège) by decree of the Prime Minister, as the Conseil d’État held when it annulled for lack of competence the order creating the groups in the first two years of collège (decision no.
+The first zone is fullest here: curricula are set by ministerial order, the organisation of lower secondary school (collège) by decree of the Prime Minister, as the Conseil d’État held when it annulled for lack of competence the provisions of the order organising the groups in the first two years of collège (decision no.
 493513 of 28 November 2024).
-Posts and pay rises are voted again each year in the budget act; teacher training is shared with the universities.
-The rest escapes: the candidate who does not sit the competitive examination, the teacher in the classroom, the family, the birth rate of yesterday, which would remove 125,400 pupils from primary education from the start of the 2026 school year according to the projections of the Depp (the education ministry’s statistical service) of April 2026.
+Posts and the appropriations for any pay rise are voted again each year in the budget act; teacher training is shared with the universities.
+The rest escapes: the candidate who does not sit the competitive examination, the teacher in the classroom, the family, the birth rate of yesterday, the main cause of a fall of 125,400 pupils in primary education from the start of the 2026 school year according to the projections of the Depp (the education ministry’s statistical service) of April 2026.
 Almost everything is decided quickly here; almost nothing is proven within the time of a term.
 In short, from the table of the nine promises:
 In the executive’s hands. curricula (order), organisation of collège (decree), repeating a year, national assessments
-Must be voted. posts and appropriations, pay rises, programming act
+Must be voted. posts and appropriations, pay rises included, programming act
 Must be negotiated or shared. teacher training (universities and INSPE), private schools under contract
 Out of his hands. candidates for the competitive examination, teacher in the classroom, families, past birth rate
 The page Le niveau des élèves baisse-t-il? [Are pupils’ attainment levels falling?] (in French) sets PISA, TIMSS and PIRLS against one another; it deals with the finding, not with the president’s powers.
@@ -110,12 +111,12 @@ Yet private-sector salaried hiring bears an employer’s signature, and no publi
 That is where the crux lies: the State largely regulates the conditions of hiring, it does not sign the contract, and it will still have to prove that a quantified result is due to it.
 In the executive’s hands.
 The Government regulates by decree the price of labour near the Smic: decree no.
-2025-887 of 4 September 2025 recasts, from 1 January 2026, the reductions and exemptions of employer contributions applicable at that level.
+2025-887 of 4 September 2025 sets, for 2026, the parameters of the reduction in employer contributions that the 2025 social security financing act recast at that level.
 Hiring subsidies for an apprentice are also set by decree, and their schedule has changed three times in three years, twice through decrees no.
 2025-174 of 22 February 2025 and no.
 2026-168 of 6 March 2026.
-Sanctions on jobseekers fall under decree no.
-2025-478 of 30 May 2025, against which the Conseil d’État rejected the appeals in September 2026.
+The sanctions regime for jobseekers is specified by decree no.
+2025-478 of 30 May 2025, adopted to implement the full employment act, against which the Conseil d’État rejected the appeals in September 2026.
 If the negotiation on unemployment insurance fails, a so-called “default” decree (décret de carence) sets the rule as a last resort.
 Each of these acts applies from the date it sets, and none signs a contract.
 Must be voted.
@@ -124,7 +125,7 @@ Contract and dismissal law falls to statute law or ordinances.
 Support for jobseekers rests on the 2023 “full employment” act, rolled out in waves: since January 2025, recipients of the RSA (the minimum income), among other groups, have been registered automatically with France Travail, the public employment service.
 An overhaul of the Labour Code requires a statute, and therefore a majority.
 Must be negotiated or shared.
-The rules on unemployment benefits do not come from Parliament: an agreement of the social partners sets them, which the State frames and then approves.
+The detailed rules on unemployment benefits do not come from Parliament: an agreement of the social partners sets them, within the framework laid down by law, which the State frames and then approves; when an agreement goes beyond that framework, a law is needed to transpose it, as on 11 June 2026.
 The agreement of 15 November 2024 runs until 31 December 2028, and two amendments had already modified it by mid-2026, including amendment no.
 2, approved by order of 19 June 2026.
 An industry agreement can be made binding by order of the minister responsible for labour, after a reasoned opinion of the National Commission for Collective Bargaining, Employment and Vocational Training (Labour Code, article L.
@@ -142,31 +143,31 @@ The economic cycle weighs on the total: according to the OFCE, net job creation 
 The demography of the workforce, already largely written, and the matching of posts and jobseekers, which coincide neither by occupation nor by place, also escape decrees.
 What the book adds.
 The chapter follows a written promise for 2027, in the conditional in its very text: a reform of unemployment insurance “that encourages work and that would create 100,000 additional jobs” (our translation).
-It shows where it breaks: between “returning to work faster” and “extra jobs” lie two links, that a post exists and that an employer signs.
-The evaluation of the revamped support for RSA recipients in eighteen areas (Dares and the Institut des politiques publiques, June 2026) provides the test: participants’ probability of salaried employment rises by about 3.2 percentage points in the year after entry, and nearly two thirds of their additional lasting employment comes through subsidised contracts; across all recipients in the areas, the net effect can no longer be distinguished, the participants’ gains being offset by side effects on other recipients.
+It shows where it breaks: between returning to work faster and extra jobs lie two links, that a post exists and that an employer signs.
+The evaluation of the revamped support for RSA recipients in eighteen areas (Dares and the Institut des politiques publiques, June 2026) provides a test, on a neighbouring channel: participants’ probability of salaried employment rises by about 3.2 percentage points in the year after entry, and nearly two thirds of their additional lasting employment comes through subsidised contracts; across all recipients in the areas, the net effect can no longer be distinguished, the participants’ gains being offset by side effects on other recipients.
 The precedent of the CICE (a tax credit for competitiveness and employment), about 100,000 jobs for a cost of the order of 18 billion euros in 2016 according to the France Stratégie evaluation published in 2020, shows that at this scale the uncertainty of attribution can become of the same order as the estimated effect; that of the apprenticeship bonus, that an attributable volume remains below the volume announced.
 The chapter also examines a job-guarantee promise, then asks four questions in this order: the counter and the horizon, the exact rule and who must consent to it, the claimed channel with its proof, the judge’s method.
 Security: can a president make the country safer?
-Police officers, gendarmes, judges and prisons belong to the State: security seems the field where it is most at home.
+The national police and gendarmerie, magistrates and prisons come under the State: security seems the field where it is most at home.
 Yet a promise to make the country safer requires three distinct things: changing the rule, getting the criminal justice chain to produce, bringing crime down.
 The crux lies in the middle of the chain, with a judge the State employs without commanding, and at its end, in behaviour that no public act commands.
 In the executive’s hands.
-The executive sets the doctrine and deployment of the forces: the national police “comes under the authority of the minister of the interior” (our translation; Internal Security Code, art.
+The executive sets the doctrine and deployment of the forces: the national police “comes under the authority of the minister of the interior” (our translation), “subject to the provisions of the Code of Criminal Procedure on the exercise of criminal investigation police work” (our translation; Internal Security Code, art.
 L.
 411-1), and the prefect directs police and gendarmerie for public order (art.
 L.
 122-1).
 The Minister of Justice addresses general instructions to the public prosecution service, but “no instruction in individual cases” (our translation; Code of Criminal Procedure, art.
 30).
-These levers start quickly, with officers who take a long time to train: twenty-four months of training for a police constable (gardien de la paix) (order of 2 May 2022, art.
+These levers start quickly, with officers who take a long time to train: twenty-four months of training for a police constable (gardien de la paix), the second year in a first posting (order of 2 May 2022, art.
 1).
 Must be voted.
 The scale of penalties falls to statute law: the minimum sentences for repeat offenders, created by Law no.
 2007-1198 of 10 August 2007, were repealed by article 7 of Law no.
 2014-896 of 15 August 2014.
-Appropriations, posts and places go through the budget act and through two programming acts that expire in 2027: the one for the interior (Law no.
-2023-22 of 24 January 2023), which raises the ministry’s appropriations from about 20.8 billion euros in 2022 to 25.4 billion in 2027, and the one for justice (Law no.
-2023-1059 of 20 November 2023), which programmes 1,500 additional judges.
+Appropriations, posts and places go through the budget act and through two programming acts whose period ends in 2027: the one for the interior (Law no.
+2023-22 of 24 January 2023), which raises the ministry’s payment appropriations, excluding pensions, from about 20.8 billion euros in 2022 to 25.4 billion in 2027, and the one for justice (Law no.
+2023-1059 of 20 November 2023), which programmes 1,500 additional magistrates (judges and prosecutors).
 Must be shared, without being commanded.
 The executive organises the means of the justice system, but the sitting judge rules independently: paid by the State, the judge cannot be removed (Constitution, art.
 64) and receives no new posting without his consent (Ordinance no.
@@ -194,7 +195,7 @@ Changing the age requires a vote; the 2023 reform and its suspension (Law no.
 2025-1403 of 30 December 2025, article 105) went through a social security financing act.
 Supplementary pension schemes are negotiated between the social partners.
 What escapes are the assumptions of any trajectory, actual retirements, the wage bill and the price at which lenders lend.
-Yet a cost is judged against a dated trajectory, and the Court of Audit noted in June 2026 that the Government’s dated back to January 2025.
+Yet a cost is judged against a dated trajectory, and the Court of Audit noted in June 2026 that the Government’s dated back to January 2025; the Government published a new one on 6 October 2026, with the draft budget for 2027.
 In short, from the table of the nine promises:
 In the executive’s hands. old-age contribution rates (decree)
 Must be voted. age and contribution period, legislative vehicle, forfait social
@@ -208,20 +209,20 @@ That is the crux: ordering is not removing, and between the two stand capacities
 In the executive’s hands.
 The executive can give prefects, by circular, instructions on applying the existing framework, that of article L.
 611-1 of the Code on the Entry and Residence of Foreigners and the Right of Asylum, under which the administrative authority “may” oblige a foreign national to leave the territory.
-It also decides on placement in administrative detention, with immediate effect, but within the limit of existing places: about two thousand, according to a scrutiny note of the National Assembly’s law committee of June 2025.
+The prefect also decides on placement in administrative detention, for ninety-six hours and under the conditions set by law, but within the limit of existing places: about two thousand, according to a scrutiny note of the National Assembly’s law committee of June 2025.
 Must be voted.
-Places go through the budget, and their lead time cannot be compressed: the target of three thousand, first set for 2027, is pushed back to 2029 by the documents of the 2026 budget.
+Places go through the budget, and their lead time cannot be compressed: the target of three thousand, first set for 2027, then aimed at 2029 when the 2026 budget was examined, is pushed back to the end of 2030 according to the interior ministry, quoted by the Senate in October 2026.
 The maximum length of detention, the conditions of removal and criminal offences fall to statute law.
-The bill still has to reach the agenda: of thirty-eight private members’ bills on immigration identified by the book between summer 2024 and the end of August 2026, thirty went no further than referral to committee; the two that became law are the only ones on which the Government had triggered the accelerated procedure.
+The bill still has to reach the agenda: of thirty-eight private members’ bills on immigration identified by the book between summer 2024 and the end of August 2026, thirty went no further than referral to committee; the two that became law are those on which the Government had triggered the accelerated procedure; two cases do not make a rule, and a Senate bill on detention, outside this corpus, also became law, on 11 August 2025, without that procedure.
 Must be negotiated or shared.
 Without a recognised travel document, removal requires a consular travel document (laissez-passer) that only the country of origin issues, “an expression of a State’s sovereignty” (our translation) according to the same note.
-Against a refusal, France retains the refusal of visas under article 47 of the law of 26 January 2024, a lever of negotiation and not a power to compel; the conditioning of development aid, provided for in the same article, fell, as unrelated to the bill, before decision no.
-2023-863 DC of the Constitutional Council.
+Against a refusal, France retains the refusal of visas under article 47 of the law of 26 January 2024, a lever of negotiation and not a power to compel; the conditioning of development aid, provided for in the same article, was struck down by decision no.
+2023-863 DC of the Constitutional Council, for lack of any link with the bill.
 The Franco-Algerian agreement of 27 December 1968 cannot be modified by one side.
 The obligation to decide also comes from the Union: article 6 of Directive 2008/115/EC in principle requires a return decision against any third-country national staying illegally, subject to the exceptions set out in its paragraphs 2 to 5.
 Out of his hands.
 The administrative courts annulled 18% of the obligations to leave French territory brought before them in 2022, according to the Court of Audit (report of January 2024).
-The ordinary courts step in when the administration wants to extend detention: between 2018 and 2022, according to the same report, 58% of releases before removal resulted from their decisions, “often because of a deadlock in the issuing of consular travel documents” (our translation), against 6% for the administrative courts and 32% for the prefectures.
+The ordinary courts review the placement in detention and authorise its extension: between 2018 and 2022, according to the same report, 58% of releases before removal resulted from their decisions, “often because of a deadlock in the issuing of consular travel documents” (our translation), against 6% for the administrative courts and 32% for the prefectures.
 That leaves the person, who must be found, and their cooperation in establishing their identity.
 What the book adds.
 The chapter follows a private member’s bill of 15 October 2024 “aimed at facilitating and accelerating the expulsion” (our translation) of foreign nationals under an obligation to leave the territory: it stops in committee without examination and, assuming it were passed, would break at the last signature, which is not French for cases without a travel document.
@@ -245,7 +246,7 @@ Out of his hands. emitting sectors, imported emissions, carbon sinks
 The page Enseigner l’empreinte carbone en SES [Teaching the carbon footprint in economics and social sciences] (in French) shows why French emissions and the carbon footprint give two totals, a choice of counter that a climate promise must settle; it does not deal with the president’s powers.
 The table of the nine promises
 One row per theme, the four zones in columns.
-Each cell summarises the corresponding section above; the full demonstration, with the written promise, is in the book’s chapter.
+Each cell restates the corresponding section above or, failing that, the book’s chapter; the full demonstration, with the written promise, is in the book’s chapter.
 Theme
 In the executive’s hands
 Must be voted
@@ -268,7 +269,7 @@ compliant reduced rate on motor fuels and heating oil: unanimity of the Twenty-S
 wholesale prices, pass-through by sellers, level already reached
 Schools
 curricula (order), organisation of collège (decree), repeating a year, national assessments
-posts and appropriations, pay rises, programming act
+posts and appropriations, pay rises included, programming act
 teacher training (universities and INSPE), private schools under contract
 candidates for the competitive examination, teacher in the classroom, families, past birth rate
 Jobs
@@ -278,8 +279,8 @@ unemployment insurance agreement, extension of industry agreements, training wit
 employer’s signature, candidate’s choice, economic cycle, demography, matching
 Security
 doctrine and deployment of the forces, general instructions to the prosecution service
-scale of penalties, appropriations, posts, places; programming acts expiring in 2027
-irremovable sitting judge, adjustment of sentences, land and appeals
+scale of penalties, appropriations, posts, places; programming acts whose period ends in 2027
+irremovable sitting judge (shared, not commanded), adjustment of sentences, land and appeals
 victims’ complaints, offenders’ behaviour, reoffending
 Debt (pensions)
 old-age contribution rates (decree)
@@ -296,21 +297,21 @@ carbon budgets and national low-carbon strategy (decree)
 2030 course and 2050 neutrality (Energy Code)
 European target of 47.5%, local authorities that “take into account” the strategy
 emitting sectors, imported emissions, carbon sinks
-Read by column, the table shows that the nine promises do not run into the same obstacle: wages, prices and jobs depend mainly on decentralised economic decisions; health and schools, on training and observation lead times; security and immigration, on judges’ decisions and enforcement capacity; debt and climate, on long trajectories and shared commitments.
+Read with the sections that precede it, the table shows that the nine promises do not run into the same obstacle: wages, prices and jobs depend mainly on decentralised economic decisions; health and schools, on training and observation lead times; security and immigration, on judges’ decisions and enforcement capacity; debt and climate, on long trajectories and shared commitments.
 What this page does not say
-It summarises, theme by theme, what the book establishes: it does not repeat the examination of promises already made, with figures and votes, which forms the core of each chapter.
+It summarises, theme by theme, what the book establishes, and flags a few later facts; it does not repeat the examination of promises already made, with figures and votes, which forms the core of each chapter.
 It assesses no candidate, gives no voting advice and does not say whether a promise is desirable.
-The law cited is the law the book read in its version in force in summer 2026; a later statute or decree may shift a boundary between the zones.
+The law cited is the law the book read in its version in force in summer 2026; a later statute, decree or fact may shift a boundary between the zones.
 Following each promise to the point where the power to decide is no longer enough Un président peut-il tenir ses promesses?, the author’s book, in French: contents, excerpts and reviews →
 Frequently asked questions
 Can a French president raise the minimum wage (Smic)?
-Yes, by decree: the Government can raise the Smic, the minimum wage, beyond its automatic uprating (Labour Code, article L3231-10), what is called a “coup de pouce” (a discretionary boost).
+Yes, by decree: the Government can raise the Smic, the minimum wage, beyond its automatic uprating, at the annual uprating of 1 January or during the year (Labour Code, articles L3231-6 to L3231-10), what is called a “coup de pouce” (a discretionary boost).
 Above the Smic, private-sector wages are set by employers and by industry-wide pay scales, which the State can extend but not write.
 Can a French president cut VAT on energy?
-He must get it voted in a budget act.
+He must get it voted by Parliament, in practice in a budget act.
 European law allows a reduced rate on electricity, and on gas until 1 January 2030, but not on motor fuels: the European list can only be amended by unanimity of the Twenty-Seven (Treaty on the Functioning of the European Union, article 113).
 Can a French president increase the number of deportations?
-He can give instructions to prefects and place people in administrative detention within the limit of existing places.
+Not alone: the interior minister can give instructions to prefects, and the prefect can place people in administrative detention, under the conditions set by law and within the limit of existing places.
 But a removal often requires a travel document that only the country of origin issues, and the administrative and ordinary courts review the decisions and the detention.
 Sources
 The texts cited are those that the book Un président peut-il tenir ses promesses?
@@ -333,7 +334,8 @@ Jobs: decrees no.
 2025-887 of 4 September 2025, no.
 2025-174 of 22 February 2025, no.
 2026-168 of 6 March 2026 and no.
-2025-478 of 30 May 2025; unemployment insurance agreement of 15 November 2024 and order of 19 June 2026; Labour Code, articles L.
+2025-478 of 30 May 2025; unemployment insurance agreement of 15 November 2024 and order of 19 June 2026; Law no.
+2026-470 of 11 June 2026; Labour Code, articles L.
 2261-15, L.
 2261-17 and L.
 6121-1; Constitutional Council, decision no.
@@ -350,17 +352,15 @@ Security: Internal Security Code, articles L.
 105, 2024.
 Debt (pensions): Social Security Code, article L.
 241-3; Law no.
-2025-1403 of 30 December 2025, article 105.
+2025-1403 of 30 December 2025, article 105; Court of Audit, La situation et les perspectives des finances publiques (public finances: situation and outlook), June 2026; economic, social and financial report annexed to the 2027 finance bill, 6 October 2026.
 Immigration: Code on the Entry and Residence of Foreigners and the Right of Asylum, article L.
 611-1; Directive 2008/115/EC, article 6; Law of 26 January 2024 to control immigration and improve integration, article 47; Constitutional Council, decision no.
-2023-863 DC of 25 January 2024; Franco-Algerian agreement of 27 December 1968; Eurostat, migr_eiord; National Assembly, law committee, June 2025; Court of Audit, January 2024.
+2023-863 DC of 25 January 2024; Franco-Algerian agreement of 27 December 1968; Law no.
+2025-796 of 11 August 2025; Eurostat, migr_eiord; National Assembly, law committee, June 2025; Court of Audit, January 2024; French Senate, presentation note on the “Immigration, asylum and integration” mission of the 2027 finance bill, examined on 28 October 2026.
 Climate: Energy Code, article L.
 100-4; Environmental Code, article L.
 222-1 A; decree no.
 2026-636 of 16 July 2026; Regulation (EU) 2023/857, Annex I.
-Revisions
-5 November 2026 — Correction: a student entering medical school in 2027 cannot complete general-practice training before 2037 at the earliest.
-4 November 2026 — Health: the bill on doctors’ installation began to be debated in the Senate chamber on 11 June 2026, without all its articles having yet been examined (Senate legislative file).
 All resources: data, explainers and reference material →
 Share
 WhatsApp
