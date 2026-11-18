@@ -1,11 +1,11 @@
-# relu le 2026-11-03 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 3bc1163 ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can the French president call a referendum?
 Can a French president put a reform to the voters whenever he wants?
-The Constitution gives him that power through three routes, each with its own conditions: for a Government Bill, a recommendation from the Government or a joint motion of the two Houses, and a subject defined by article 11; for an amendment to the Constitution, a vote of the two Houses in identical terms; for the accession of a State to the European Union, a referendum is the rule unless Parliament decides otherwise.
+The Constitution gives him that power through three routes, each with its own conditions: for a Government Bill, a recommendation from the Government or a joint motion of the two Houses, and a subject defined by article 11; for an amendment to the Constitution, a vote of the two Houses in identical terms; for the accession of a State to the European Union, a referendum is the rule unless Parliament authorises the Congress route and the president takes it.
 From 4 October 1958 to 5 October 2026, nine national referendums were held, the last one on 29 May 2005.
-Since 2015, members of Parliament backed by voters can also initiate a procedure that may lead to one: it has not led to any vote.
-Page updated 12 October 2026
+Since 2015, members of Parliament backed by voters can also initiate a procedure that may lead to one: as of 5 October 2026, it has not led to any vote.
+Page updated 18 November 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 Promising to put a reform to the voters means promising to use a route other than a parliamentary vote alone.
@@ -15,7 +15,7 @@ This page sets out who can put a text to a referendum, by which route and on whi
 It rests on the letter of the texts, the decisions cited and the official documents read, and keeps apart what the texts say, what has been applied and what the Conseil constitutionnel has inferred from them; it is not legal advice.
 The Constitution is quoted in the English translation published by the Conseil constitutionnel; other French texts are quoted in French, followed by our translation.
 Who can put a text to a referendum?
-Three articles of the Constitution allow a text to be put to a referendum: article 11 for a Government Bill, article 89 for an amendment to the Constitution, article 88-5 for the accession of a State to the European Union.
+Three articles of the Constitution allow a text to be put to a national referendum: article 11 for a Government or Private Member’s Bill, article 89 for an amendment to the Constitution, article 88-5 for the accession of a State to the European Union.
 They do not leave the president the same latitude: depending on the route, he decides on a recommendation he does not make himself, after a vote of the two Houses (the National Assembly and the Senate), or because the article provides that the Bill “shall be submitted” to a referendum.
 Three articles, but four routes: article 11 also opens the shared initiative, in which members of Parliament backed by voters initiate the procedure (below).
 Article 11, for a Government Bill.
@@ -32,24 +32,24 @@ If the text is adopted, “the President of the Republic shall promulgate the re
 Article 89, for an amendment to the Constitution.
 The text may come from the Government: the president presents it on the recommendation of the Prime Minister, and it is then called a Government Bill.
 It may also come from deputies or senators: it is then a Private Member’s Bill.
-Either way, it must “be passed by the two Houses in identical terms”, then be approved by referendum.
+Either way, it must “be considered within the time limits set down in the third paragraph of article 42 and be passed by the two Houses in identical terms”, then be approved by referendum.
 The Government Bill, and it alone, has a second route: the president may submit it to Parliament convened in Congress, where it must obtain three fifths of the votes cast.
 A Private Member’s Bill to amend the Constitution can therefore only be finally adopted by referendum.
 The decision to convene Congress is not among the exceptions listed in article 19; by the letter of that article, it is countersigned.
 Article 89, word for word
-“The President of the Republic, on the recommendation of the Prime Minister, and Members of Parliament alike shall have the right to initiate amendments to the Constitution.” A Government Bill or a Private Member’s Bill must “be passed by the two Houses in identical terms”.
+“The President of the Republic, on the recommendation of the Prime Minister, and Members of Parliament alike shall have the right to initiate amendments to the Constitution.” A Government Bill or a Private Member’s Bill must “be considered within the time limits set down in the third paragraph of article 42 and be passed by the two Houses in identical terms”.
 Once the text is passed, “The amendment shall take effect after approval by referendum.” However, “a Government Bill to amend the Constitution shall not be submitted to referendum where the President of the Republic decides to submit it to Parliament convened in Congress”, where it must obtain three fifths of the votes cast.
 The article also sets limits to any amendment: “No amendment procedure shall be commenced or continued where the integrity of national territory is placed in jeopardy.
 The republican form of government shall not be the object of any amendment.”
 Article 88-5, for the accession of a State to the European Union.
 Here the referendum is the rule: the Government Bill authorising the ratification of an accession treaty is submitted to a referendum by the president.
-Parliament can avoid it if each House passes the same motion by a three-fifths majority: the Bill then goes to Congress, with three fifths of the votes cast.
+Parliament can open another route: by the same motion, passed by a three-fifths majority in each House, it may authorise the adoption of the Bill under the Congress procedure; the president may then submit it to Parliament convened in Congress, where it must obtain three fifths of the votes cast.
 The article does not cover all accessions: the constitutional act of 23 July 2008 (art.
-47) excludes some of them, depending on the date of the conference that prepared them.
+47) excludes some of them, depending on the date on which the European Council decided to convene the conference that prepared them.
 The instrument of submission is not in the list of article 19 either: it is countersigned.
 None of the nine votes in the register was held under this article.
 What France decides alone or with the other member States is the subject of another page of this dossier.
-Article 88-5 and its 2004 clause, word for word
+Article 88-5 and the 2004 exception, word for word
 “Any government bill authorizing the ratification of a treaty pertaining to the accession of a state to the European Union shall be submitted to referendum by the president of the republic.” However, “by passing a motion adopted in identical terms in each House by a three-fifths majority, Parliament may authorize the passing of the bill according to the procedure provided for in paragraph three of article 89”, that is, by Congress, with three fifths of the votes cast.
 Under the constitutional act of 23 July 2008 (art.
 47), as the Conseil constitutionnel’s translation notes, “Article 88-5 is not applicable to accessions that result from an Intergovernmental Conference whose meeting was decided by the European Council before July 1, 2004.”
@@ -61,7 +61,9 @@ How many referendums have been held, and what did they decide?
 National referendums whose results were proclaimed by the Conseil constitutionnel, from 4 October 1958 to 5 October 2026.
 Excludes the referendum of 28 September 1958 (adoption of the Constitution, before the Conseil was created) and local consultations.
 Yes is shown as a share of valid votes, turnout is a share of registered voters: in 2000, 73.21% yes among valid votes, with a turnout of 30.2% of registered voters.
-Download · Cite · Data
+The result in one sentence.
+From 4 October 1958 to 5 October 2026, nine national referendums were held in France; the proposed text was approved in seven and rejected in two, and the last one took place on 29 May 2005.
+DownloadCiteData
 The votes in a table
 Vote
 Subject
@@ -140,8 +142,6 @@ Ratification of the Treaty establishing a Constitution for Europe
 69.4%
 45.33%
 Rejected
-The result in one sentence.
-From 4 October 1958 to 5 October 2026, nine national referendums were held in France; the proposed text was approved in seven and rejected in two, and the last one took place on 29 May 2005.
 Eight votes were held under article 11, only one under article 89: the five-year presidential term, in 2000.
 Two Bills put to the vote under article 11 nevertheless concerned the Constitution itself: the 1962 Bill, adopted, which amends its articles 6 and 7 so that the president is elected by direct universal suffrage (Act no.
 62-1292 of 6 November 1962), and the 1969 Bill, rejected.
@@ -163,18 +163,20 @@ The two time limits are those of article 11: the bill “may not be applied to t
 If it meets the conditions, registered voters can support it: “La durée de la période de recueil des soutiens est de neuf mois.” (institutional act, art.
 4; our translation: “The period for collecting signatures of support is nine months.”).
 If one tenth of registered voters has supported it, the Conseil constitutionnel declares so, and each of the two Houses has six months from the publication of that decision in the Journal officiel to consider the bill; “Ce délai est suspendu entre deux sessions ordinaires.” (institutional act, art.
-9; our translation: “This period is suspended between two ordinary sessions.”).
+9; our translation: “This period is suspended between two ordinary sessions.”); the Conseil constitutionnel held that this period is also suspended if the National Assembly is dissolved (decision No.
+2013-681 DC of 5 December 2013, recital 31).
 If either House has not considered it within that period, the president submits it to a referendum.
 For there to be no referendum, it is therefore enough for each House to consider the bill at least once, even without passing it.
 For this step, the published translation of article 11 reads “the President of the Republic may submit it to a referendum”, whereas the French text reads “la soumet” (literally, “submits it”), in the indicative, where its first paragraph says “peut soumettre” (may submit).
-This page notes the difference in wording without taking a position on its legal effect.
+The Conseil constitutionnel also uses the indicative in the same decision: failing consideration within that period, “le Président de la République soumet la proposition de loi au référendum” (our translation: “the President of the Republic submits the bill to a referendum”; recital 30).
+This page reads this step as an obligation.
 Article 9 of the institutional act, word for word
 The president submits the bill to a referendum if it “n’a pas été examinée au moins une fois par chacune des deux assemblées parlementaires dans un délai de six mois à compter de la publication au Journal officiel de la décision du Conseil constitutionnel déclarant qu’elle a obtenu le soutien d’au moins un dixième des électeurs inscrits sur les listes électorales” (our translation: “has not been considered at least once by each of the two Houses of Parliament within six months of the publication in the Journal officiel of the decision of the Conseil constitutionnel declaring that it has obtained the support of at least one tenth of the voters registered on the electoral lists”).
 “Ce délai est suspendu entre deux sessions ordinaires.” (our translation: “This period is suspended between two ordinary sessions.”)
 Bills introduced under article 11, paragraph 3, referred to the Conseil constitutionnel, from 2015 to 5 October 2026, and what became of them.
-Download · Cite · Data
 The result in one sentence.
 From 2015 to 5 October 2026, the Conseil constitutionnel received seven bills under article 11; one was found to meet the statutory conditions and collected 1,093,030 signatures for 4,717,396 required, 23.2% of the threshold; none was put to a referendum.
+DownloadCiteData
 The decisions in a table, with their grounds
 Decision
 Number
@@ -272,7 +274,7 @@ Ainsi, ne relèvent pas de ces objets les questions, d’ordre éthique, relativ
 7; our translation: “it follows from the preparatory work for the constitutional act of 4 August 1995 mentioned above that the framers of the constitutional amendment intended to exclude questions of society from the subjects listed in the first paragraph of Article 11 of the Constitution.
 Thus, questions of an ethical nature relating to end of life do not fall within these subjects.”).
 This is the Conseil’s interpretation of that preparatory work: article 11 does not mention “questions de société” (questions of society).
-The decision concerns the subjects that the first paragraph of article 11 opens to a referendum; it says nothing about a revision of the Constitution (article 89).
+The decision concerns the subjects that the first paragraph of article 11 opens to a referendum; it does not rule on a revision of the Constitution (article 89).
 As the bill concerned end of life, the Conseil concludes that “elle ne porte ni sur la politique sociale de la nation et les services publics qui y concourent, ni sur aucun des autres objets mentionnés au premier alinéa de l’article 11 de la Constitution” (“it relates neither to the social policy of the nation and the public services contributing to it, nor to any of the other subjects listed in the first paragraph of Article 11 of the Constitution”, para.
 9).
 The decision then adds the ground used for retirement: the bill “n’emporte pas de changement de l’état du droit” (“does not change the state of the law”, para.
@@ -342,10 +344,10 @@ Can the French president hold a referendum whenever he wants?
 No, not alone and not on any subject.
 Under article 11 of the Constitution, he may submit to a referendum a Government Bill “on a recommendation from the Government when Parliament is in session, or on a joint motion of the two Houses, published in the Journal Officiel”, and only on the subjects the article lists.
 An amendment to the Constitution (article 89) must first be passed by the two Houses in identical terms.
-For the ratification of a treaty on the accession of a State to the European Union (article 88-5), a referendum is the rule, unless the two Houses pass a motion by a three-fifths majority.
+For the ratification of a treaty on the accession of a State to the European Union (article 88-5), a referendum is the rule, unless a motion passed in identical terms by each House by a three-fifths majority authorises the adoption of the Bill by Congress, where it must obtain three fifths of the votes cast.
 Must the president put to a referendum a recommendation he receives?
 For article 11, the French text says that he “peut soumettre” (may submit) on a recommendation from the Government or a joint motion of the two Houses: the recommendation is required, and the article does not make it an obligation.
-For the shared initiative, once the bill has gathered the support of one tenth of voters and the two Houses have not considered it within the time limit, the French text of article 11 reads “la soumet” (submits it), where the published English translation reads “may submit it”.
+For the shared initiative, once the bill has gathered the support of one tenth of voters and at least one of the two Houses has not considered it within the time limit, the French text of article 11 reads “la soumet” (submits it), where the published English translation reads “may submit it”.
 For a Bill to amend the Constitution passed by the two Houses, article 89 leaves him the choice of Congress instead of a referendum.
 Does the shared-initiative referendum allow citizens to trigger a referendum?
 Not on their own.
@@ -367,12 +369,14 @@ Ordinance No.
 2013-1114 of 6 December 2013 implementing article 11, art.
 1, 4 and 9; Civil Code, art.
 1.
-Conseil constitutionnel, proclamations of referendum results (decisions 61-4, 62-7, 62-9, 69-10, 72-11, 88-14, 92-19, 2000-29, 2005-38) and decisions on bills under article 11 (2019-1 and 2019-1-8, 2021-2, 2022-3, 2023-4, 2023-5, 2024-6, 2026-7 RIP), read in the CONSTIT database published by the DILA, as at 5 October 2026; decision No.
+Conseil constitutionnel, decision No.
+2013-681 DC of 5 December 2013, recitals 30 and 31; proclamations of referendum results (decisions 61-4, 62-7, 62-9, 69-10, 72-11, 88-14, 92-19, 2000-29, 2005-38) and decisions on bills under article 11 (2019-1 and 2019-1-8, 2021-2, 2022-3, 2023-4, 2023-5, 2024-6, 2026-7 RIP), read in the CONSTIT database published by the DILA, as at 5 October 2026; decision No.
 2007-560 DC.
-Journal officiel (Légifrance), decrees putting texts to a referendum and acts adopted by referendum; National Assembly, open data of the 15th to 17th legislatures (bills under article 11), and analyses of the Congress vote of 4 February 2008 and of vote No.
-82 of 6 February 2008 (13th legislature), consulted on 12 October 2026; Senate, bill No.
+Journal officiel (Légifrance), decrees putting texts to a referendum and acts adopted by referendum; National Assembly, open data of the 14th to 17th legislatures (bills under article 11), summary sheet No.
+55 “La révision de la Constitution” (March 2024), and analyses of the Congress vote of 4 February 2008 and of vote No.
+82 of 6 February 2008 (13th legislature), consulted on 12 October 2026; Senate, export of the Dosleg database (files tabled under article 11), bill No.
 459 (2017-2018) and legislative file of Government Bill to amend the Constitution No.
-449 (2020-2021), consulted on 12 October 2026; Presidency of the Republic, speech of 29 June 2020 to the Citizens’ Convention for Climate (elysee.fr), consulted on 12 October 2026.
+449 (2020-2021), consulted on 12 October 2026; EUR-Lex, title of the Treaty of Lisbon (Official Journal of the European Union C 306 of 17 December 2007); Presidency of the Republic, speech of 29 June 2020 to the Citizens’ Convention for Climate (elysee.fr), consulted on 12 October 2026.
 How the referendum register was checked
 The register.
 The decisions of the Conseil constitutionnel are read in the database published by the DILA, the French official publications office (open files, as at 5 October 2026).
@@ -393,10 +397,10 @@ It finds word for word each quotation from the Constitution, the ordinance, the 
 The list of bills tabled without a decision is checked against Assemblée and Sénat data; the number of their signatories, transcribed in the script, is reread in those data and in the bill tabled in the Senate.
 The subjects of the votes and bills are written by hand, and the English translations of French texts other than the Constitution are ours.
 Download the data (CC BY 4.0 licence): CSV, long format; JSON, with the identifiers of the decisions, the grounds quoted and the report of the checks.
-An earlier version of this dataset, without the grounds quoted added on 12 October 2026, is archived on Zenodo with the six others of the same series and their methods note, under a permanent identifier: doi:10.5281/zenodo.23212664.
+This dataset is also archived on Zenodo, with the six others of the same series and their methods note, under a permanent identifier: doi:10.5281/zenodo.23212664, the identifier shared by all versions, which leads to the most recent, that of 12 October 2026, with the grounds quoted; the versions of 7 October, without them, remain available there, and the corrections made since are not yet included.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, period and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 National referendums in France since 1958
 From 4 October 1958 to 5 October 2026, nine national referendums were held; the proposed text was approved in seven and rejected in two; the last one took place on 29 May 2005.
 Reading caveat.
@@ -417,19 +421,18 @@ Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Can the French president call a referendum?”.
-Conseil constitutionnel and Journal officiel data, retrieved 5 October 2026 (Conseil constitutionnel register, DILA database as at that date). https://stephane-lalut.com/en/can-the-french-president-call-a-referendum/
+“Can the French president call a referendum?” Conseil constitutionnel and Journal officiel data, retrieved 5 October 2026 (Conseil constitutionnel register, DILA database as at that date). https://stephane-lalut.com/en/can-the-french-president-call-a-referendum/
 Copy citation
 In three sentences
 A French president may put a Government Bill to a referendum on a recommendation from the Government or a joint motion of the two Houses, and on the subjects set by article 11 of the Constitution; an amendment to the Constitution (article 89) and the accession of a State to the European Union (article 88-5) have their own routes.
 From 4 October 1958 to 5 October 2026, nine national referendums were held; the proposed text was approved in seven and rejected in two, and the last one took place on 29 May 2005.
-The shared-initiative referendum, open since 2015, has not yet led to any vote.
+The shared-initiative referendum, open since 2015, had not led to any vote as of 5 October 2026.
 Copy summary
 The data
 The register of national referendums (registered voters, voters, valid votes, yes, no, article, outcome), the decisions on the shared-initiative referendum with their grounds quoted, and the bills with no decision; the same content exists in CSV, long format, readable in a spreadsheet.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
+Text under copyright — short quotations permitted, full reproduction on request.
 The raw series belong to their producers (Conseil constitutionnel and Journal officiel), under their own terms.
 All resources: data, explainers and reference material →
 Share

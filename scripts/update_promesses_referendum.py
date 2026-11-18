@@ -144,7 +144,7 @@ CIT = {
                      "Article 88-5 is not applicable to accessions that result from an Intergovernmental Conference whose meeting was decided by the European Council before July 1, 2004."),
     "art89_init": ("89", "L'initiative de la révision de la Constitution appartient concurremment au Président de la République sur proposition du Premier ministre et aux membres du Parlement.",
                    "The President of the Republic, on the recommendation of the Prime Minister, and Members of Parliament alike shall have the right to initiate amendments to the Constitution."),
-    "art89_identiques": ("89", "voté par les deux assemblées en termes identiques", "be passed by the two Houses in identical terms"),
+    "art89_identiques": ("89", "examiné dans les conditions de délai fixées au troisième alinéa de l'article 42 et voté par les deux assemblées en termes identiques", "be considered within the time limits set down in the third paragraph of article 42 and be passed by the two Houses in identical terms"),
     "art89_ref": ("89", "La révision est définitive après avoir été approuvée par référendum.",
                   "The amendment shall take effect after approval by referendum."),
     "art89_voies": ("89", "le projet de révision n'est pas présenté au référendum lorsque le Président de la République décide de le soumettre au Parlement convoqué en Congrès",
