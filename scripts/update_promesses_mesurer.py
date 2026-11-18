@@ -336,6 +336,9 @@ def serie_longue(I: dict, texte_d1: str) -> tuple[dict, str]:
 D1 = "insee_ecrt2026_d1_texte.txt"
 VE = "insee_ve2026_encadre5_extrait.txt"
 IR = "insee_ir192_2026-08-07_extrait.txt"
+# Informations rapides n° 270 (10/11/2026), qui remplacent le chiffrage du n° 192 (« moins de la moitié », +0,35 sur
+# +0,84) : extrait archivé le 17/11/2026 (lot promesses-b de la reprise des ressources, relecture R1, écart P1-2).
+IR270 = "insee_ir270_2026-11-10_extrait.txt"
 UN = "unedic_comprendre_bit_2026-09-04_extrait.txt"
 META = "dares_defm_stock_france_cvs_trim_meta.json"
 ASP = "asp_delibere_2024-11-14_texte.txt"
@@ -354,6 +357,9 @@ CIT = {
     "cit_ir192": (IR, "les deux publics cibles de la loi pour le plein emploi contribuent pour près de la moitié de la hausse du taux de chômage depuis fin 2024 (+0,44 point sur +0,98 point au total)"),
     "cit_ir192_prudence": (IR, "Ces contributions doivent toutefois être considérées avec prudence, du fait des aléas d’enquête et de la faible part des populations concernées"),
     "cit_ir192_reserve": (IR, "Il s’agit par ailleurs de contributions comptables, qui ne permettent pas de distinguer les effets de la loi pour le plein emploi des effets conjoncturels affectant ces publics"),
+    "cit_ir270": (IR270, "après sept trimestres de mise en œuvre de la loi pour le plein emploi, les deux publics cibles de cette loi contribuent pour moins de la moitié de la hausse du taux de chômage global depuis fin 2024 (+0,35 point sur +0,84 point au total)"),
+    "cit_ir270_prudence": (IR270, "Ces contributions doivent toutefois être considérées avec prudence, du fait des aléas d’enquête et de la faible part des populations concernées"),
+    "cit_ir270_reserve": (IR270, "Il s’agit par ailleurs de contributions comptables, qui ne permettent pas de distinguer les effets de la loi des effets conjoncturels affectant ces publics"),
     "cit_unedic": (UN, "cette loi expliquerait près de la moitié de la hausse du taux de chômage depuis fin 2024"),
     "cit_ve_titre": (VE, "En 2025, la loi pour le plein emploi a des effets relativement limités sur les indicateurs du marché du travail au sens du BIT"),
     "cit_ve_contrib": (VE, "une faible contribution haussière des bénéficiaires du RSA sur les taux d’activité et de chômage"),
@@ -380,6 +386,10 @@ TR = {
                  % (lg.points(0.44, 2, "en", True), lg.points(0.98, 2, "en", True)),
     "cit_ir192_prudence": "these contributions should however be treated with caution, because of survey error and the small share of the populations concerned",
     "cit_ir192_reserve": "these are moreover accounting contributions, which do not make it possible to distinguish the effects of the full employment act from the cyclical effects affecting these groups",
+    "cit_ir270": "after seven quarters of implementation of the full employment act, the two target groups of this act account for less than half of the rise in the overall unemployment rate since end-2024 (%s out of %s in total)"
+                 % (lg.points(0.35, 2, "en", True), lg.points(0.84, 2, "en", True)),
+    "cit_ir270_prudence": "these contributions should however be treated with caution, because of survey error and the small share of the populations concerned",
+    "cit_ir270_reserve": "these are moreover accounting contributions, which do not make it possible to distinguish the effects of the act from the cyclical effects affecting these groups",
     "cit_unedic": "this law would explain nearly half of the rise in the unemployment rate since end-2024",
     "cit_ve_titre": "In 2025, the full employment act has relatively limited effects on labour market indicators in the ILO sense",
     "cit_ve_contrib": "a small upward contribution of RSA recipients to the activity and unemployment rates",
@@ -398,6 +408,8 @@ PREUVES = {
     "dares_hors_mayotte": (META, "à l’exception de Mayotte"),
     "ir192_avec_mayotte": ("insee_ir192_2026-08-07_avertissement_extrait.txt",
                            "le champ des principaux indicateurs conjoncturels du marché du travail porte sur le champ « France », étendant ainsi le champ précédent « France hors Mayotte »"),
+    # même champ « France » (y compris Mayotte depuis le n° 192) pour le n° 270, qui le dit sous ses tableaux
+    "ir270_champ_france": (IR270, "Champ : France, personnes de 15 ans ou plus, vivant en logement ordinaire."),
 }
 # Nombres cités LUS dans les sources (catégorie « lue par le script » de la phrase de méthode).
 NOMBRES = {
@@ -939,6 +951,10 @@ def autotest(I: dict, D: dict, octets: dict, sommes: dict, textes: dict) -> list
         attendre("citation Insee alteree", "M7", lambda: verifier_citations(textes))
     finally:
         CIT["cit_ve_titre"] = sauve
+    # 17/11/2026 (lot promesses-b) : la source du chiffrage le plus récent revient à l'ancien qualificatif -> M7
+    t270 = dict(textes)
+    t270[IR270] = t270[IR270].replace("moins de la moitié", "près de la moitié")
+    attendre("n° 270 revenu a « pres de la moitie »", "M7", lambda: verifier_citations(t270))
     return out
 
 
@@ -1040,9 +1056,11 @@ def _main() -> int:
                                  "inscrits_A": Lg["a"], "ecart": Lg["ecart"]},
         # « Citer » : « relevé du <date> » = date à laquelle les sources ont été relues et figées (défaut D16 : c'était la
         # date de mise à jour de la Dares, non celle de la lecture)
-        "affichage": dict(A, releve_le="%s (séries Dares mises à jour le %s, jusqu'au %s ; Insee, édition du 02/07/2026)"
+        "affichage": dict(A, releve_le="%s (séries Dares mises à jour le %s, jusqu'au %s ; Insee, édition du 02/07/2026 et "
+                          "Informations rapides n° 270 du 10/11/2026, lues le 17/11/2026)"
                           % ("/".join(reversed(releve.split("-"))), "/".join(reversed(maj_dares.split("-"))), lib_fin_fr)),
-        "affichage_en": dict(A_en, releve_le="%s (Dares series updated on %s, up to the %s; Insee, edition of 2 July 2026)"
+        "affichage_en": dict(A_en, releve_le="%s (Dares series updated on %s, up to the %s; Insee, edition of 2 July 2026 and "
+                             "Informations rapides No. 270 of 10 November 2026, read on 17 November 2026)"
                              % (releve, maj_dares, lib_fin_en)),
     }
     txt_json = json.dumps(payload, ensure_ascii=False, indent=1, default=str)

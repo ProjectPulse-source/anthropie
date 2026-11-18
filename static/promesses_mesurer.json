@@ -67,7 +67,7 @@
   ]
  },
  "gardes": [
-  "M0 : 10 fichiers lus, empreintes conformes au releve fige",
+  "M0 : 11 fichiers lus, empreintes conformes au releve fige",
   "M1 : figure 2, moyenne 2024, champ « France hors Mayotte, personnes âgées de 15 à 64 ans, vivant dans un logement ordinaire. »",
   "M2 : effectifs additifs a l'arrondi publie pres",
   "M3 : recoupement partiel (commun 1427, BIT hors A 863, A hors BIT 1466 milliers)",
@@ -76,7 +76,7 @@
   "M6 : series Dares A (1996-T1-2026-T3) et A hors RSA (2018-T1-2026-T3)",
   "M9 : les deux series montent au 1er trimestre 2025 et reculent au 2e (A +261200 / -167700 ; hors RSA +100300 / -74500)",
   "M8 : serie longue 2012-2025 ; ecarts 2012, 2019, 2020, 2021, 2024 et variations 2025 egaux au texte de l'Insee",
-  "M7 : 23 citations et 4 preuves retrouvees mot pour mot ; 3 nombres lus dans les sources ; traductions controlees",
+  "M7 : 26 citations et 5 preuves retrouvees mot pour mot ; 3 nombres lus dans les sources ; traductions controlees",
   "parite : 6 versions telephone conformes a leur figure detaillee"
  ],
  "calcul": {
@@ -421,6 +421,9 @@
   "cit_ir192": "les deux publics cibles de la loi pour le plein emploi contribuent pour près de la moitié de la hausse du taux de chômage depuis fin 2024 (+0,44 point sur +0,98 point au total)",
   "cit_ir192_prudence": "Ces contributions doivent toutefois être considérées avec prudence, du fait des aléas d’enquête et de la faible part des populations concernées",
   "cit_ir192_reserve": "Il s’agit par ailleurs de contributions comptables, qui ne permettent pas de distinguer les effets de la loi pour le plein emploi des effets conjoncturels affectant ces publics",
+  "cit_ir270": "après sept trimestres de mise en œuvre de la loi pour le plein emploi, les deux publics cibles de cette loi contribuent pour moins de la moitié de la hausse du taux de chômage global depuis fin 2024 (+0,35 point sur +0,84 point au total)",
+  "cit_ir270_prudence": "Ces contributions doivent toutefois être considérées avec prudence, du fait des aléas d’enquête et de la faible part des populations concernées",
+  "cit_ir270_reserve": "Il s’agit par ailleurs de contributions comptables, qui ne permettent pas de distinguer les effets de la loi des effets conjoncturels affectant ces publics",
   "cit_unedic": "cette loi expliquerait près de la moitié de la hausse du taux de chômage depuis fin 2024",
   "cit_ve_titre": "En 2025, la loi pour le plein emploi a des effets relativement limités sur les indicateurs du marché du travail au sens du BIT",
   "cit_ve_contrib": "une faible contribution haussière des bénéficiaires du RSA sur les taux d’activité et de chômage",
@@ -431,7 +434,7 @@
   "cit_asp_suspend": "la labellisation de ces séries pour la période restant à courir entre le 1er janvier 2025 et le 20 mai 2026",
   "cit_asp_attente": "dans l’attente d’être à même d’envisager un processus de labellisation des nouvelles séries, lorsque le régime pérenne sera atteint",
   "cit_dares_label": "a suspendu, à partir du 1er janvier 2025, la labellisation des séries statistiques sur les demandeurs d'emploi produites par France Travail et la Dares",
-  "releve_le": "05/11/2026 (séries Dares mises à jour le 28/10/2026, jusqu'au 3e trimestre 2026 ; Insee, édition du 02/07/2026)"
+  "releve_le": "05/11/2026 (séries Dares mises à jour le 28/10/2026, jusqu'au 3e trimestre 2026 ; Insee, édition du 02/07/2026 et Informations rapides n° 270 du 10/11/2026, lues le 17/11/2026)"
  },
  "affichage_en": {
   "commun": "1.43 million",
@@ -483,6 +486,9 @@
   "cit_ir192": "the two target groups of the full employment act account for nearly half of the rise in the unemployment rate since end-2024 (+0.44 points out of +0.98 points in total)",
   "cit_ir192_prudence": "these contributions should however be treated with caution, because of survey error and the small share of the populations concerned",
   "cit_ir192_reserve": "these are moreover accounting contributions, which do not make it possible to distinguish the effects of the full employment act from the cyclical effects affecting these groups",
+  "cit_ir270": "after seven quarters of implementation of the full employment act, the two target groups of this act account for less than half of the rise in the overall unemployment rate since end-2024 (+0.35 points out of +0.84 points in total)",
+  "cit_ir270_prudence": "these contributions should however be treated with caution, because of survey error and the small share of the populations concerned",
+  "cit_ir270_reserve": "these are moreover accounting contributions, which do not make it possible to distinguish the effects of the act from the cyclical effects affecting these groups",
   "cit_unedic": "this law would explain nearly half of the rise in the unemployment rate since end-2024",
   "cit_ve_titre": "In 2025, the full employment act has relatively limited effects on labour market indicators in the ILO sense",
   "cit_ve_contrib": "a small upward contribution of RSA recipients to the activity and unemployment rates",
@@ -493,6 +499,6 @@
   "cit_asp_suspend": "the label of these series for the period remaining between 1 January 2025 and 20 May 2026",
   "cit_asp_attente": "until it is in a position to consider a labelling process for the new series, once the permanent regime has been reached",
   "cit_dares_label": "suspended, from 1 January 2025, the label of the statistical series on jobseekers produced by France Travail and the Dares",
-  "releve_le": "2026-11-05 (Dares series updated on 2026-10-28, up to the third quarter of 2026; Insee, edition of 2 July 2026)"
+  "releve_le": "2026-11-05 (Dares series updated on 2026-10-28, up to the third quarter of 2026; Insee, edition of 2 July 2026 and Informations rapides No. 270 of 10 November 2026, read on 17 November 2026)"
  }
 }
