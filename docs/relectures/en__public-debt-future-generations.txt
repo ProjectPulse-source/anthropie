@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/public-debt-future-generations/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/public-debt-future-generations/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -13,11 +13,11 @@ Data · Eurostat and ECB 2025 · projections 2026
 ↓ Charts, data and citations to reuseReuse this page
 Data last updated 5 November 2026 General government, Eurostat, Insee and ECB series from 1995 to 2025; European Commission and COR, projections.
 Download: CSV · JSON · method
-What deficits corresponded to in the accounts
+What did deficits correspond to in the accounts?
 Borrowing to build a school, a road or a network leaves capital as well as a debt.
 This is an essential argument in assessing the weight of that debt on future generations, provided we know what was acquired and what it will bring.
 The national accounts answer the first question.
-Share of French general government net borrowing (its deficit, as measured by balancing item B9 of the national accounts) that corresponded to assets, to capital transfers and to uncovered current spending, by decade (Eurostat, author’s calculation).
+Share of French general government net borrowing (its deficit, as measured by balancing item B9 of the national accounts) that corresponded to assets, to capital transfers and to uncovered current spending (wear and tear of capital included), by decade (Eurostat, author’s calculation).
 The finding in one sentence.
 From 1996 to 2025, only 18% of French public deficits corresponded to a net increase in recorded public assets, and 66%, nearly two thirds, to current spending, wear and tear of capital included, that current revenue (taxes, social contributions and other revenue, excluding capital transfers received) did not cover; the share in assets fell from 32% over 1996-2005 to 10% over 2016-2025.
 This is an accounting reading: it says what deficits corresponded to, not what they produced.
@@ -36,7 +36,7 @@ The shares can be read directly.
 The amounts, for their part, add up yearly net borrowing, each relative to the GDP of its year: the 124.5 points of GDP cumulated from 1996 to 2025 are neither 124.5% of 2025 GDP nor the rise in the debt ratio over the period.
 Investment grants paid to firms, households or bodies outside general government totalled 25.5 points of GDP, cumulated over the period.
 The share in assets fell decade by decade, from 32% to 19% and then to 10%, and the two declines do not reflect the same accounting movement.
-From the first decade to the second, the share fell mainly because cumulated net borrowing rose, from 28.6 to 47.6 points of GDP, while net acquisitions of assets stayed almost unchanged (9.1, then 9.0 points); from the second to the third, net borrowing stayed almost the same (48.3 points) and net acquisitions of assets nearly halved (4.8 points).
+From the first decade to the second, the share fell mainly because its denominator, cumulated net borrowing, rose, from 28.6 to 47.6 points of GDP, while net acquisitions of assets stayed almost unchanged (9.1, then 9.0 points); from the second to the third, net borrowing stayed almost the same (48.3 points) and net acquisitions of assets nearly halved (4.8 points).
 Over the last decade, net acquisitions of assets amounted to only 0.5 points of GDP a year on average.
 In thirty years, current revenue exceeded current spending, wear and tear of capital included, in only two years, 2000 and 2001, and in no year did acquisitions of assets match net borrowing.
 Even counting as capital acquired all the investment grants paid outside general government, the share would reach 39% at most: still less than half.
@@ -235,7 +235,7 @@ Of the 231 possible comparisons between two years at least ten years apart, 54 s
 Its changes mix flows and revaluations.
 The value of land changed by +28.9 points of GDP over the period, largely unrelated to deficits; even produced assets, which changed by only +1.0 point, are stocks valued at current prices and relative to GDP, sensitive to prices as well as to the denominator.
 A flow identity, checked year by year, is not validated by a stock whose changes also obey other mechanisms: the balance sheet remains complementary information here.
-The “we owe it to ourselves” argument
+The “we owe it to ourselves” argument: does it hold?
 The economist Abba Lerner’s classic argument (“The Burden of the National Debt”, 1948) assumes that the debt is held within the country: servicing it would then amount to levying national taxpayers to pay national savers, and the generation that pays would also be the one that receives.
 Holdings statistics make it possible to check its premise, not its conclusion.
 Share of general government debt held by non-residents, the Banque de France and other residents (ECB, government finance statistics).
@@ -272,6 +272,7 @@ In the risk scenario where the Commission assumes heavier health and long-term c
 The initial position nevertheless remains the larger term there, as in the lower-productivity scenario.
 Yet the indicator can show the opposite: in 13 EU countries out of 27, including Belgium, Spain and Luxembourg, the future change in age-related spending weighs more than the initial position.
 The COR, for its part, projects pension spending rising as a share of GDP, where the Commission assumes a fall: the two projections rest on different assumptions and cannot be compared directly.
+According to the test made for this page (details below), the initial position remains the larger term in the central scenarios of both institutions, not in the combination of their unfavourable assumptions.
 Technical definition of S2, and the second term item by item
 S2 is the permanent improvement in the structural primary balance (the balance excluding interest, adjusted for the economic cycle), made in 2027, that would stabilise the debt over an infinite horizon (taking every future year into account, with no end date).
 Unlike the S1 indicator, which targets 60% of GDP by 2070, it sets neither the level at which the debt stabilises nor the date.
@@ -336,7 +337,7 @@ S2 and the COR projections are scenarios conditional on their assumptions (demog
 Distribution within a generation.
 None of these series says who, within the same generation, pays and receives: that is the subject of Who really pays for public debt?
 The anthropic reading: who decides today, who will have to adapt tomorrow?
-The anthropic framework does not settle the macroeconomic controversy; it moves the question from the volume of debt to participation in decisions and the future distribution of adjustments.
+The anthropic framework, proposed by the author of this page, does not settle the macroeconomic controversy; it moves the question from the volume of debt to participation in decisions and the future distribution of adjustments.
 It comes down to three propositions.
 One generation can commit to spending whose consequences concern people absent from the decision: no one votes “against” future generations; people vote for budgets part of whose costs will fall to them.
 A transfer over time does not, on its own, determine who will actually bear the charge: within each generation, the adjustment may go through taxes, user charges, services or savings, and not fall on the same people.
@@ -351,7 +352,8 @@ The uses of French and European general government net borrowing, general govern
 None of the texts read calculates these quantities on these sources and these periods: they are validated by reproduction.
 Consistent with.
 The use criterion: in Diamond’s model, issuing debt to acquire public capital makes the government a mere intermediary between savers and entrepreneurs, with no short-run or long-run effect.
-The decline in the share invested: in 21 OECD countries, including France, from 1979 to 2003, a heavier interest burden goes together, five years later, with a lower share of public investment and a higher share of pensions, shares computed between these two items and unemployment benefits, postponing an investment costing less, politically, than cutting an entitlement, as the authors explain it (Breunig and Busemeyer).
+The decline in the share invested: in 21 OECD countries, including France, from 1979 to 2003, a heavier interest burden goes together, five years later, with a lower share of public investment and a higher share of pensions, shares computed between these two items and unemployment benefits (Breunig and Busemeyer).
+The authors explain it by a lower political cost: postponing an investment costs less than cutting an entitlement.
 These are associations in a panel, over another period: they do not say why the share invested has fallen in France since.
 The approach of the S2 indicator, finally, is close to the one called for by Auerbach, Gokhale and Kotlikoff: starting from the government’s budget constraint over a long horizon and from age-related spending, rather than from a single year’s deficit.
 Challenged by.
@@ -404,6 +406,7 @@ Frequently asked questions
 Does public debt weigh on future generations?
 It may leave them a charge, and it also leaves what was acquired at the same time; no single statistic measures the balance of the two.
 In France, from 1996 to 2025, 18% of public deficits corresponded, in the accounts, to a net increase in recorded public assets, 16% to capital transfers to other sectors and 66% to current spending, wear and tear of capital included, that current revenue did not cover.
+The 66% do not mean that two thirds of borrowing paid for running costs: they come from a breakdown of the accounts that counts the wear and tear of existing capital among current spending.
 This is an accounting composition: it measures neither what each generation will pay, nor what current spending on education or health produced.
 Does debt taken on to invest weigh less?
 It leaves capital along with the charge: that is why use is a relevant criterion, though it does not say what the spending yields.
@@ -415,10 +418,10 @@ This statistic gives the residence of registered holders, not the burden: it mea
 And a debt held at home is not painless for all that.
 Are pensions the real burden?
 The European Commission’s S2 indicator does not answer that question in that form.
-It puts at 3.1 points of GDP the permanent adjustment that would stabilise French debt, of which 3.0 for the initial budgetary position, which includes current pension spending, and 0.1 for the future change in age-related spending (Debt Sustainability Monitor 2025).
+In the baseline scenario, it puts at 3.1 points of GDP the permanent adjustment that would stabilise French debt, of which 3.0 for the initial budgetary position, which includes current pension spending, and 0.1 for the future change in age-related spending (Debt Sustainability Monitor 2025).
 That small second term does not mean that pensions cost little; and the Conseil d’orientation des retraites (COR), the French pensions advisory council, projects rising pension spending where the Commission assumes a fall.
 What will future generations actually pay?
-These series cannot put a figure on a bill per child: that would require knowing future policies.
+The series on this page cannot put a figure on a bill per child: that would require knowing future policies.
 A debt is rolled over without any particular generation repaying all of it; it may call for future tax or spending adjustments, weigh on capital accumulation, or come with assets and services from which those who follow will benefit.
 Its weight also depends on the gap between the interest rate the government pays and the growth of the economy.
 In the public debt dossier

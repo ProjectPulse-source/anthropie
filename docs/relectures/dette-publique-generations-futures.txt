@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /dette-publique-generations-futures/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /dette-publique-generations-futures/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d’autres équipements.
@@ -13,11 +13,11 @@ Données · Eurostat et BCE 2025 · projections 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Données mises à jour le 5 novembre 2026 Administrations publiques, séries Eurostat, Insee et BCE de 1995 à 2025 ; Commission européenne et COR, projections.
 Télécharger : CSV · JSON · méthode
-À quoi les déficits ont correspondu dans les comptes
+À quoi les déficits ont-ils correspondu dans les comptes ?
 Emprunter pour construire une école, une route ou un réseau laisse un capital en même temps qu’une dette.
 C’est un argument essentiel pour en apprécier le poids sur les générations futures : encore faut-il savoir ce qui a été acquis et ce que cela apportera.
 Les comptes nationaux répondent à la première question.
-Part du besoin de financement des administrations publiques françaises (leur déficit, mesuré par le solde B9 des comptes nationaux) qui a correspondu à des actifs, à des transferts en capital et à des dépenses courantes non couvertes, par décennie (Eurostat, calcul de l’auteur).
+Part du besoin de financement des administrations publiques françaises (leur déficit, mesuré par le solde B9 des comptes nationaux) qui a correspondu à des actifs, à des transferts en capital et à des dépenses courantes non couvertes (usure du capital comprise), par décennie (Eurostat, calcul de l’auteur).
 Le résultat en une phrase.
 De 1996 à 2025, 18 % seulement des déficits publics français ont correspondu à un accroissement net des actifs publics comptabilisés, et 66 %, près des deux tiers, à des dépenses courantes, usure du capital comprise, que les recettes courantes (impôts, cotisations sociales et autres recettes, hors transferts en capital reçus) ne couvraient pas ; la part en actifs est tombée de 32 % sur 1996-2005 à 10 % sur 2016-2025.
 C’est une lecture comptable : elle dit à quoi les déficits ont correspondu, non ce qu’ils ont produit.
@@ -36,7 +36,7 @@ Les parts se lisent directement.
 Les montants, eux, additionnent des besoins de financement annuels, chacun rapporté au PIB de son année : les 124,5 points de PIB cumulés de 1996 à 2025 ne sont ni 124,5 % du PIB de 2025, ni la hausse du ratio de dette sur la période.
 Les aides à l’investissement versées aux entreprises, aux ménages ou aux organismes hors du champ des administrations ont totalisé 25,5 points de PIB cumulés sur la période.
 La part en actifs a baissé de décennie en décennie, de 32 % à 19 %, puis à 10 %, et ces deux reculs ne relèvent pas du même mouvement comptable.
-De la première décennie à la deuxième, la part a reculé surtout parce que le besoin de financement cumulé a augmenté, de 28,6 à 47,6 points de PIB, alors que les acquisitions nettes d’actifs restaient presque stables (9,1 puis 9,0 points) ; de la deuxième à la troisième, le besoin est resté presque identique (48,3 points) et les acquisitions nettes ont diminué presque de moitié (4,8 points).
+De la première décennie à la deuxième, la part a reculé surtout parce que son dénominateur, le besoin de financement cumulé, a augmenté, de 28,6 à 47,6 points de PIB, alors que les acquisitions nettes d’actifs restaient presque stables (9,1 puis 9,0 points) ; de la deuxième à la troisième, le besoin est resté presque identique (48,3 points) et les acquisitions nettes ont diminué presque de moitié (4,8 points).
 Sur la dernière décennie, les acquisitions nettes d’actifs n’ont représenté que 0,5 point de PIB par an en moyenne.
 En trente ans, les recettes courantes n’ont dépassé les dépenses courantes, usure du capital comprise, que deux années, en 2000 et 2001, et aucune année les acquisitions d’actifs n’ont égalé le besoin de financement.
 Même en comptant comme un capital acquis toutes les aides à l’investissement versées hors des administrations, la part atteindrait 39 % au plus : toujours moins de la moitié.
@@ -272,6 +272,7 @@ Dans le scénario de risque où la Commission retient des dépenses de santé et
 La position de départ y reste pourtant le premier terme, comme dans le scénario d’une productivité plus faible.
 L’indicateur sait montrer l’inverse : dans 13 pays de l’Union sur 27, dont la Belgique, l’Espagne et le Luxembourg, l’évolution future des dépenses liées à l’âge pèse davantage que la position de départ.
 Le COR projette, lui, une dépense de retraite en hausse dans le PIB, là où la Commission en retient une baisse : les deux projections reposent sur des hypothèses différentes et ne se comparent pas directement.
+Selon le test fait pour cette page (détail ci-dessous), la position de départ reste le premier terme dans les scénarios centraux des deux institutions, pas dans le cumul de leurs hypothèses défavorables.
 Définition technique de S2, et le second terme poste par poste
 S2 est l’amélioration permanente du solde primaire structurel (le solde hors intérêts, corrigé de la conjoncture), engagée en 2027, qui stabiliserait la dette sur un horizon infini (en tenant compte de toutes les années à venir, sans date butoir).
 À la différence de l’indicateur S1, qui vise 60 % du PIB en 2070, il ne fixe ni le niveau auquel la dette se stabilise ni la date.
@@ -336,7 +337,7 @@ S2 et les projections du COR sont des scénarios conditionnels à leurs hypothè
 La répartition à l’intérieur d’une génération.
 Aucune de ces séries ne dit qui, dans une même génération, paie et reçoit : c’est l’objet de Qui paie vraiment la dette publique ?
 La lecture anthropique : qui décide aujourd’hui, qui devra s’adapter demain ?
-Le cadre anthropique ne tranche pas la controverse macroéconomique ; il déplace la question du volume de la dette vers la participation aux décisions et la répartition future des ajustements.
+Le cadre anthropique, proposé par l’auteur de cette page, ne tranche pas la controverse macroéconomique ; il déplace la question du volume de la dette vers la participation aux décisions et la répartition future des ajustements.
 Il tient en trois propositions.
 Une génération peut engager des dépenses dont les conséquences concernent des personnes absentes de la décision : personne ne vote « contre » les générations futures ; on vote des budgets dont une part des coûts leur reviendra.
 Le transfert dans le temps ne détermine pas, à lui seul, qui supportera effectivement la charge : à l’intérieur de chaque génération, l’ajustement peut passer par l’impôt, les tarifs, les services ou l’épargne, et ne pas tomber sur les mêmes.
@@ -351,7 +352,8 @@ Les emplois du besoin de financement des administrations publiques françaises e
 Aucun des textes lus ne calcule ces grandeurs sur ces sources et ces périodes : elles se valident par reproduction.
 Cohérent avec.
 Le critère de l’usage : dans le modèle de Diamond, émettre de la dette pour acquérir du capital public fait de l’État un simple intermédiaire entre épargnants et entrepreneurs, sans effet de court ni de long terme.
-Le recul de la part investie : dans 21 pays de l’OCDE, dont la France, de 1979 à 2003, une charge d’intérêts plus lourde va de pair, cinq ans plus tard, avec une part plus faible de l’investissement public et une part plus forte des retraites, parts calculées entre ces deux postes et l’indemnisation du chômage, reporter un investissement coûtant moins, politiquement, que réduire un droit, selon l’explication des auteurs (Breunig et Busemeyer).
+Le recul de la part investie : dans 21 pays de l’OCDE, dont la France, de 1979 à 2003, une charge d’intérêts plus lourde va de pair, cinq ans plus tard, avec une part plus faible de l’investissement public et une part plus forte des retraites, parts calculées entre ces deux postes et l’indemnisation du chômage (Breunig et Busemeyer).
+Les auteurs l’expliquent par un coût politique moindre : reporter un investissement coûte moins que réduire un droit.
 Ce sont des associations dans un panel, sur une autre période : elles ne disent pas pourquoi la part investie a baissé en France depuis.
 La démarche de l’indicateur S2, enfin, est proche de celle que réclament Auerbach, Gokhale et Kotlikoff : partir de la contrainte budgétaire de l’État sur un horizon long et des dépenses liées à l’âge, plutôt que du déficit d’une année.
 Mis en danger par.
@@ -403,6 +405,7 @@ Questions fréquentes
 La dette publique pèse-t-elle sur les générations futures ?
 Elle peut leur laisser une charge, et leur laisse aussi ce qui a été acquis en même temps ; aucune statistique ne mesure à elle seule le solde des deux.
 En France, de 1996 à 2025, 18 % des déficits publics ont correspondu, dans les comptes, à un accroissement net des actifs publics comptabilisés, 16 % à des transferts en capital vers d’autres secteurs et 66 % à des dépenses courantes, usure du capital comprise, que les recettes courantes ne couvraient pas.
+Les 66 % ne veulent pas dire que les deux tiers des emprunts ont payé des dépenses de fonctionnement : ils résultent d’une décomposition des comptes qui range l’usure du capital existant parmi les dépenses courantes.
 C’est une composition comptable : elle ne mesure ni ce que chaque génération paiera, ni ce que les dépenses courantes, en éducation ou en santé, ont produit.
 Une dette contractée pour investir pèse-t-elle moins ?
 Elle laisse un capital en même temps qu’une charge : c’est pourquoi l’usage est un critère pertinent, qui ne dit pas pour autant ce que rapportent les dépenses.
@@ -414,10 +417,10 @@ Cette statistique dit la résidence des détenteurs enregistrés, non le fardeau
 Et une dette détenue dans le pays n’est pas indolore pour autant.
 Les retraites sont-elles le vrai fardeau ?
 L’indicateur S2 de la Commission européenne ne répond pas à cette question sous cette forme.
-Il évalue à 3,1 points de PIB l’ajustement permanent qui stabiliserait la dette française, dont 3,0 pour la position budgétaire de départ, qui contient la dépense de retraite actuelle, et 0,1 pour l’évolution future des dépenses liées à l’âge (Debt Sustainability Monitor 2025).
+Dans le scénario de base, il évalue à 3,1 points de PIB l’ajustement permanent qui stabiliserait la dette française, dont 3,0 pour la position budgétaire de départ, qui contient la dépense de retraite actuelle, et 0,1 pour l’évolution future des dépenses liées à l’âge (Debt Sustainability Monitor 2025).
 Ce faible second terme ne dit pas que les retraites coûtent peu ; et le Conseil d’orientation des retraites projette une dépense de retraite en hausse, là où la Commission retient une baisse.
 Que paieront concrètement les générations futures ?
-Ces séries ne permettent pas de chiffrer une facture par enfant : il faudrait connaître les politiques à venir.
+Les séries de cette page ne permettent pas de chiffrer une facture par enfant : il faudrait connaître les politiques à venir.
 Une dette se renouvelle sans qu’une génération précise la rembourse en entier ; elle peut appeler des ajustements futurs d’impôts ou de dépenses, peser sur l’accumulation de capital, ou s’accompagner d’actifs et de services dont bénéficieront les suivants.
 Son poids dépend aussi de l’écart entre le taux d’intérêt que paie l’État et la croissance de l’économie.
 Dans le dossier dette publique
