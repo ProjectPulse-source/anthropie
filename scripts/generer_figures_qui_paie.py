@@ -20,10 +20,13 @@ symétrie avec la page du coût.
   F3  qui-paie-mecanismes     Schéma NON quantitatif des canaux de répartition.
 
 SOURCES — une seule chacune, jamais recopiée à la main :
-  - F1 : le registre du livre (03_LIVRES/dette-publique/01_SOURCE/
-    REGISTRE_DONNEES.yaml, bloc infographie_detention) -- la même source que la
-    p. 101 du livre. Le site n'en garde qu'un instantané, régénéré ici ; la
-    révision annuelle du livre (maj_edition.py) relance ce script.
+  - F1 : depuis le 05/11/2026 (auteur), les sources propres de la page,
+    data/qui_paie_detention_site.json : A lu dans l'extrait SDMX de l'INSEE
+    archivé, B transcrit du graphique de l'AFT sur sa capture archivée, chacun
+    contrôlé par son empreinte. Le registre du livre (03_LIVRES/dette-publique/
+    01_SOURCE/REGISTRE_DONNEES.yaml) reste lu pour les valeurs de la p. 101,
+    citées à part, et pour le nombre de foyers fiscaux ; la révision annuelle
+    du livre (maj_edition.py) relance ce script.
   - F2 : le fichier de l'Insee archivé dans scripts/sources/, contrôlé par son
     empreinte. Un fichier remplacé sans que l'empreinte suive arrête tout.
 
@@ -930,10 +933,10 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
                          TY_ANNOT if fort else TY_AXE, encre_serie(C2) if fort else INK2,
                          weight="600" if fort else None))
         y += 22
-    corps.append(txt(0, y + 10, S("* dont la Banque de France (programmes de l'Eurosystème) : "
-                                  "part non publiée par la source.",
-                                  "* including the Banque de France (Eurosystem programmes): "
-                                  "share not published by the source."), TY_MINEUR, MUTED))
+    corps.append(txt(0, y + 10, S("* dont la Banque de France (programmes de l'Eurosystème), "
+                                  "que le graphique de l'AFT repris ici n'isole pas.",
+                                  "* including the Banque de France (Eurosystem programmes), "
+                                  "which the AFT chart used here does not single out."), TY_MINEUR, MUTED))
     y += 30
     h = int(y + 13 + 12 * 3 + 8)
     if lang == "fr":
@@ -962,12 +965,12 @@ def svg_detention(r: dict, lang: str = "fr") -> tuple[str, int]:
            "· B : Banque de France, via l'AFT",
            "A: INSEE, quarterly Maastricht debt by subsector (updated 29 September 2026) "
            "· B: Banque de France, via Agence France Trésor (French Treasury agency)"), INK2),
-        (S("Deux champs distincts. A : valeur nominale ; B : valeur de marché. "
-           "La détention ne mesure pas la charge finale.",
-           "Two separate scopes. A: nominal value; B: market value. "
+        (S("Deux champs distincts. A : valeur nominale ; B : valeur de marché. Parts arrondies : leur somme peut "
+           "s'écarter de 100. La détention ne mesure pas la charge finale.",
+           "Two separate scopes. A: nominal value; B: market value. Rounded shares: they may not sum to 100. "
            "Holding securities does not measure the final burden."), INK2),
-        (S("Compilation Stéphane Lalut, CC BY 4.0 · " + URL_PAGE,
-           "Compiled by Stéphane Lalut, CC BY 4.0 · " + URL_PAGE_EN), MUTED)])
+        (S("Compilation Stéphane Lalut, CC BY 4.0, hors valeurs de l'AFT · " + URL_PAGE,
+           "Compiled by Stéphane Lalut, CC BY 4.0, except Agence France Trésor values · " + URL_PAGE_EN), MUTED)])
 
 
 # ------------------------------------------------------------------ F2
@@ -1681,15 +1684,18 @@ def svg_detention_m(r: dict, lang: str, svg_d: str) -> str:
         e.append('<rect x="0" y="%.1f" width="%.1f" height="12" rx="3" fill="%s"/>' % (y + 6, w, C2))
         e.append(tm(w + 6, y + 17, nb(d["pct"], 1) + pc, encre_serie(C2) if fort else INK2, weight="600" if fort else None))
         y += 18
-    y = lignes_m(e, y + 4, S("* dont la Banque de France : part non publiée par la source.",
-                             "* including the Banque de France: share not published by the source."))
+    y = lignes_m(e, y + 4, S("* dont la Banque de France, que le graphique de l'AFT repris ici n'isole pas.",
+                             "* including the Banque de France, which the AFT chart used here does not single out."))
     return pied_m(e, y + 14, [
         (S("A : INSEE, dette de Maastricht par sous-secteur (29/09/2026) · B : Banque de France, via l'AFT",
            "A: INSEE, Maastricht debt by subsector (29 September 2026) · B: Banque de France, via Agence France "
            "Trésor"), INK2),
-        (S("Deux champs distincts. La détention ne mesure pas la charge finale.",
-           "Two separate scopes. Holding securities does not measure the final burden."), INK2),
-        licence_m(S)])
+        (S("Deux champs distincts. Parts arrondies : leur somme peut s'écarter de 100. La détention ne mesure pas la "
+           "charge finale.",
+           "Two separate scopes. Rounded shares: they may not sum to 100. Holding securities does not measure the "
+           "final burden."), INK2),
+        (S("Compilation Stéphane Lalut, CC BY 4.0, hors valeurs de l'AFT · stephane-lalut.com",
+           "Compiled by Stéphane Lalut, CC BY 4.0, except AFT values · stephane-lalut.com"), MUTED)])
 
 
 def rangees(e: list[str], y: float, libelles: list[str], gauche: list[list], droite: list[list],

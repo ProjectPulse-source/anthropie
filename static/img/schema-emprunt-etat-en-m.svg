@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1818" role="img" font-variant-numeric="tabular-nums" aria-labelledby="sem-t sem-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="sem-t">How the French State borrows, and who receives the interest</title><desc id="sem-d">Two-part diagram. Part one, the path of a bond: the French Treasury agency (Agence France Trésor) sells government bonds at auction to licensed banks, the primary dealers; they resell them to investors in France and abroad; from 2015 to 2022 (net purchases), the Banque de France bought some of them on that market, never directly from the State, paying with reserves credited to banks. Part two, what the State pays each year: coupons to every holder, the Banque de France included; the Banque de France in turn pays interest on the reserves banks place with it, at the ECB deposit rate, and passes its profits on to the State. At maturity, the State repays each bond from its cash or new borrowing.</desc>
-<rect width="300" height="1818" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1886" role="img" font-variant-numeric="tabular-nums" aria-labelledby="sem-t sem-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="sem-t">How the French State borrows, and who receives the interest</title><desc id="sem-d">Two-part diagram. Part one, the path of a bond: the French Treasury agency (Agence France Trésor) sells government bonds at auction to licensed banks, the primary dealers; they resell them to investors in France and abroad; from 2015 to 2022 (net purchases), the Banque de France bought some of them on that market, never directly from the State, paying with reserves credited to banks. Part two, what the State pays each year: coupons to every holder, the Banque de France included; the Banque de France in turn pays, at the ECB deposit rate, interest on the reserves banks place in its deposit facility and, since June 2026, on excess reserves that banks with access to that facility leave on current accounts, and passes its profits on to the State. At maturity, the State repays each bond from its cash or new borrowing.</desc>
+<rect width="300" height="1886" fill="#ffffff"/>
 <defs><marker id="fb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#184f95"/></marker><marker id="fo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker><marker id="fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#898781"/></marker></defs>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">How the French State</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">borrows, and who receives</text>
@@ -35,10 +35,10 @@
 <text x="9.0" y="478.7" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff">1</text>
 <text x="26.0" y="478.0" font-size="13.5" fill="#0A0A0E">The Agence France Trésor sells</text>
 <text x="26.0" y="495.0" font-size="13.5" fill="#0A0A0E">government bonds, mostly at</text>
-<text x="26.0" y="512.0" font-size="13.5" fill="#0A0A0E">auction. Only primary dealers</text>
-<text x="26.0" y="529.0" font-size="13.5" fill="#0A0A0E">can buy there: the State</text>
-<text x="26.0" y="546.0" font-size="13.5" fill="#0A0A0E">receives their money; that is</text>
-<text x="26.0" y="563.0" font-size="13.5" fill="#0A0A0E">the borrowing.</text>
+<text x="26.0" y="512.0" font-size="13.5" fill="#0A0A0E">auction, where primary dealers</text>
+<text x="26.0" y="529.0" font-size="13.5" fill="#0A0A0E">buy them: the State receives</text>
+<text x="26.0" y="546.0" font-size="13.5" fill="#0A0A0E">their money; that is the</text>
+<text x="26.0" y="563.0" font-size="13.5" fill="#0A0A0E">borrowing.</text>
 <circle cx="9.0" cy="582.0" r="9" fill="#184f95"/>
 <text x="9.0" y="586.7" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff">2</text>
 <text x="26.0" y="586.0" font-size="13.5" fill="#0A0A0E">They keep them or resell them</text>
@@ -102,26 +102,30 @@
 <text x="26.0" y="1410.0" font-size="13.5" fill="#0A0A0E">The Banque de France pays the</text>
 <text x="26.0" y="1427.0" font-size="13.5" fill="#0A0A0E">ECB deposit rate on reserves</text>
 <text x="26.0" y="1444.0" font-size="13.5" fill="#0A0A0E">placed in its deposit facility</text>
-<text x="26.0" y="1461.0" font-size="13.5" fill="#0A0A0E">(minimum reserves have not</text>
-<text x="26.0" y="1478.0" font-size="13.5" fill="#0A0A0E">been remunerated since</text>
-<text x="26.0" y="1495.0" font-size="13.5" fill="#0A0A0E">September 2023).</text>
-<circle cx="9.0" cy="1514.0" r="9" fill="#898781"/>
-<text x="9.0" y="1518.7" font-size="13" font-weight="600" text-anchor="middle" fill="#0A0A0E">7</text>
-<text x="26.0" y="1518.0" font-size="13.5" fill="#0A0A0E">Depending on its results, it</text>
-<text x="26.0" y="1535.0" font-size="13.5" fill="#0A0A0E">pays the State tax and a</text>
-<text x="26.0" y="1552.0" font-size="13.5" fill="#0A0A0E">dividend. When reserves cost</text>
-<text x="26.0" y="1569.0" font-size="13.5" fill="#0A0A0E">it more than its bonds earn,</text>
-<text x="26.0" y="1586.0" font-size="13.5" fill="#0A0A0E">its results fall: it paid no</text>
-<text x="26.0" y="1603.0" font-size="13.5" fill="#0A0A0E">dividend for the 2022 to 2025</text>
-<text x="26.0" y="1620.0" font-size="13.5" fill="#0A0A0E">financial years.</text>
-<line x1="0" y1="1643.0" x2="300" y2="1643.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="1664.0" font-size="13.5" fill="#52514e">Author's diagram; Agence France</text>
-<text class="pied-source" x="0" y="1681.0" font-size="13.5" fill="#52514e">Trésor, Banque de France (annual</text>
-<text class="pied-source" x="0" y="1698.0" font-size="13.5" fill="#52514e">accounts), ECB, Treaty on the</text>
-<text class="pied-source" x="0" y="1715.0" font-size="13.5" fill="#52514e">Functioning of the EU (Art. 123).</text>
-<text class="pied-note" x="0" y="1736.0" font-size="13.5" fill="#52514e">Simplified: the State is only part of</text>
-<text class="pied-note" x="0" y="1753.0" font-size="13.5" fill="#52514e">general government, and the Banque de</text>
-<text class="pied-note" x="0" y="1770.0" font-size="13.5" fill="#52514e">France is not part of it.</text>
-<text class="pied-licence" x="0" y="1791.0" font-size="13.5" fill="#6f6c66">Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1808.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text x="26.0" y="1461.0" font-size="13.5" fill="#0A0A0E">and, since June 2026, on</text>
+<text x="26.0" y="1478.0" font-size="13.5" fill="#0A0A0E">excess reserves that banks</text>
+<text x="26.0" y="1495.0" font-size="13.5" fill="#0A0A0E">with access to that facility</text>
+<text x="26.0" y="1512.0" font-size="13.5" fill="#0A0A0E">leave on current accounts</text>
+<text x="26.0" y="1529.0" font-size="13.5" fill="#0A0A0E">(minimum reserves have not</text>
+<text x="26.0" y="1546.0" font-size="13.5" fill="#0A0A0E">been remunerated since</text>
+<text x="26.0" y="1563.0" font-size="13.5" fill="#0A0A0E">September 2023).</text>
+<circle cx="9.0" cy="1582.0" r="9" fill="#898781"/>
+<text x="9.0" y="1586.7" font-size="13" font-weight="600" text-anchor="middle" fill="#0A0A0E">7</text>
+<text x="26.0" y="1586.0" font-size="13.5" fill="#0A0A0E">Depending on its results, it</text>
+<text x="26.0" y="1603.0" font-size="13.5" fill="#0A0A0E">pays the State tax and a</text>
+<text x="26.0" y="1620.0" font-size="13.5" fill="#0A0A0E">dividend. When reserves cost</text>
+<text x="26.0" y="1637.0" font-size="13.5" fill="#0A0A0E">it more than its bonds earn,</text>
+<text x="26.0" y="1654.0" font-size="13.5" fill="#0A0A0E">its results fall: it paid no</text>
+<text x="26.0" y="1671.0" font-size="13.5" fill="#0A0A0E">dividend for the 2022 to 2025</text>
+<text x="26.0" y="1688.0" font-size="13.5" fill="#0A0A0E">financial years.</text>
+<line x1="0" y1="1711.0" x2="300" y2="1711.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="1732.0" font-size="13.5" fill="#52514e">Author's diagram; Agence France</text>
+<text class="pied-source" x="0" y="1749.0" font-size="13.5" fill="#52514e">Trésor, Banque de France (annual</text>
+<text class="pied-source" x="0" y="1766.0" font-size="13.5" fill="#52514e">accounts), ECB, Treaty on the</text>
+<text class="pied-source" x="0" y="1783.0" font-size="13.5" fill="#52514e">Functioning of the EU (Art. 123).</text>
+<text class="pied-note" x="0" y="1804.0" font-size="13.5" fill="#52514e">Simplified: the State is only part of</text>
+<text class="pied-note" x="0" y="1821.0" font-size="13.5" fill="#52514e">general government, and the Banque de</text>
+<text class="pied-note" x="0" y="1838.0" font-size="13.5" fill="#52514e">France is not part of it.</text>
+<text class="pied-licence" x="0" y="1859.0" font-size="13.5" fill="#6f6c66">Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1876.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

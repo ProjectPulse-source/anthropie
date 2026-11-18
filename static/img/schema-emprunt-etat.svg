@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 791" role="img" aria-labelledby="se-t se-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="se-t">Comment l'État emprunte, et qui reçoit les intérêts</title><desc id="se-d">Schéma en deux volets. Premier volet, le chemin d'un titre : l'Agence France Trésor vend les titres de l'État aux enchères à des banques agréées, les spécialistes en valeurs du Trésor ; elles les revendent aux investisseurs, en France et à l'étranger ; de 2015 à 2022 (achats nets), la Banque de France en a acheté sur ce marché, jamais directement à l'État, en payant avec des réserves créditées aux banques. Second volet, ce que l'État paie chaque année : les coupons, à chaque détenteur, Banque de France comprise ; la Banque de France paie de son côté les réserves placées par les banques, au taux de dépôt de la BCE, et reverse ses bénéfices à l'État selon ses résultats. À l'échéance, l'État rembourse chaque titre avec sa trésorerie ou un nouvel emprunt.</desc>
-<rect width="720" height="791" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 823" role="img" aria-labelledby="se-t se-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="se-t">Comment l'État emprunte, et qui reçoit les intérêts</title><desc id="se-d">Schéma en deux volets. Premier volet, le chemin d'un titre : l'Agence France Trésor vend les titres de l'État aux enchères à des banques agréées, les spécialistes en valeurs du Trésor ; elles les revendent aux investisseurs, en France et à l'étranger ; de 2015 à 2022 (achats nets), la Banque de France en a acheté sur ce marché, jamais directement à l'État, en payant avec des réserves créditées aux banques. Second volet, ce que l'État paie chaque année : les coupons, à chaque détenteur, Banque de France comprise ; la Banque de France rémunère de son côté, au taux de dépôt de la BCE, les réserves placées par les banques à sa facilité de dépôt et, depuis juin 2026, les excédents de réserves que les banques ayant accès à cette facilité laissent en compte courant, et reverse ses bénéfices à l'État selon ses résultats. À l'échéance, l'État rembourse chaque titre avec sa trésorerie ou un nouvel emprunt.</desc>
+<rect width="720" height="823" fill="#ffffff"/>
 <defs><marker id="fb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#184f95"/></marker><marker id="fo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker><marker id="fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#898781"/></marker></defs>
 <text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Comment l'État emprunte, et qui reçoit les intérêts</text>
 <text x="0" y="50" font-size="12" font-weight="600" fill="#184f95">1. Le chemin d'un titre</text>
@@ -33,8 +33,8 @@
 <text x="550.0" y="147.0" font-size="11" font-weight="600" text-anchor="middle" fill="#0A0A0E">4</text>
 <circle cx="8.0" cy="176.0" r="8" fill="#184f95"/>
 <text x="8.0" y="180.0" font-size="11" font-weight="600" text-anchor="middle" fill="#ffffff">1</text>
-<text x="24.0" y="180.0" font-size="12" fill="#0A0A0E">L'Agence France Trésor vend les titres de l'État, pour l'essentiel aux enchères (adjudication).</text>
-<text x="24.0" y="196.0" font-size="12" fill="#0A0A0E">Seuls les spécialistes en valeurs du Trésor y achètent : l'État reçoit leur argent, c'est l'emprunt.</text>
+<text x="24.0" y="180.0" font-size="12" fill="#0A0A0E">L'Agence France Trésor vend les titres de l'État, pour l'essentiel aux enchères (adjudication), où</text>
+<text x="24.0" y="196.0" font-size="12" fill="#0A0A0E">achètent les spécialistes en valeurs du Trésor : l'État reçoit leur argent, c'est l'emprunt.</text>
 <circle cx="8.0" cy="214.0" r="8" fill="#184f95"/>
 <text x="8.0" y="218.0" font-size="11" font-weight="600" text-anchor="middle" fill="#ffffff">2</text>
 <text x="24.0" y="218.0" font-size="12" fill="#0A0A0E">Ils les gardent ou les revendent aux investisseurs, sur le marché « secondaire ».</text>
@@ -79,16 +79,18 @@
 <circle cx="8.0" cy="616.0" r="8" fill="#eb6834"/>
 <text x="8.0" y="620.0" font-size="11" font-weight="600" text-anchor="middle" fill="#0A0A0E">6</text>
 <text x="24.0" y="620.0" font-size="12" fill="#0A0A0E">La Banque de France rémunère au taux de dépôt de la BCE les réserves placées à sa facilité de dépôt</text>
-<text x="24.0" y="636.0" font-size="12" fill="#0A0A0E">(les réserves obligatoires ne sont plus rémunérées depuis septembre 2023).</text>
-<circle cx="8.0" cy="654.0" r="8" fill="#898781"/>
-<text x="8.0" y="658.0" font-size="11" font-weight="600" text-anchor="middle" fill="#0A0A0E">7</text>
-<text x="24.0" y="658.0" font-size="12" fill="#0A0A0E">Selon ses résultats, elle reverse à l'État un impôt et un dividende. Quand les réserves lui coûtent</text>
-<text x="24.0" y="674.0" font-size="12" fill="#0A0A0E">plus que ses titres ne rapportent, ses résultats baissent : elle n'a versé aucun dividende au titre</text>
-<text x="24.0" y="690.0" font-size="12" fill="#0A0A0E">des exercices 2022 à 2025.</text>
-<line x1="0" y1="712.0" x2="720" y2="712.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="727.0" font-size="11" fill="#52514e">Schéma de l'auteur ; Agence France Trésor, Banque de France (comptes annuels), BCE, traité sur le fonctionnement de</text>
-<text class="pied-source" x="0" y="741.0" font-size="11" fill="#52514e">l'UE (art. 123).</text>
-<text class="pied-note" x="0" y="755.0" font-size="11" fill="#52514e">Schéma simplifié : l'État n'est qu'une partie des administrations publiques, et la Banque de France n'en fait pas</text>
-<text class="pied-note" x="0" y="769.0" font-size="11" fill="#52514e">partie.</text>
-<text class="pied-licence" x="0" y="783.0" font-size="11" fill="#6f6c66">Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
+<text x="24.0" y="636.0" font-size="12" fill="#0A0A0E">et, depuis juin 2026, les excédents de réserves que les banques ayant accès à cette facilité</text>
+<text x="24.0" y="652.0" font-size="12" fill="#0A0A0E">laissent en compte courant (les réserves obligatoires ne sont plus rémunérées depuis</text>
+<text x="24.0" y="668.0" font-size="12" fill="#0A0A0E">septembre 2023).</text>
+<circle cx="8.0" cy="686.0" r="8" fill="#898781"/>
+<text x="8.0" y="690.0" font-size="11" font-weight="600" text-anchor="middle" fill="#0A0A0E">7</text>
+<text x="24.0" y="690.0" font-size="12" fill="#0A0A0E">Selon ses résultats, elle reverse à l'État un impôt et un dividende. Quand les réserves lui coûtent</text>
+<text x="24.0" y="706.0" font-size="12" fill="#0A0A0E">plus que ses titres ne rapportent, ses résultats baissent : elle n'a versé aucun dividende au titre</text>
+<text x="24.0" y="722.0" font-size="12" fill="#0A0A0E">des exercices 2022 à 2025.</text>
+<line x1="0" y1="744.0" x2="720" y2="744.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="759.0" font-size="11" fill="#52514e">Schéma de l'auteur ; Agence France Trésor, Banque de France (comptes annuels), BCE, traité sur le fonctionnement de</text>
+<text class="pied-source" x="0" y="773.0" font-size="11" fill="#52514e">l'UE (art. 123).</text>
+<text class="pied-note" x="0" y="787.0" font-size="11" fill="#52514e">Schéma simplifié : l'État n'est qu'une partie des administrations publiques, et la Banque de France n'en fait pas</text>
+<text class="pied-note" x="0" y="801.0" font-size="11" fill="#52514e">partie.</text>
+<text class="pied-licence" x="0" y="815.0" font-size="11" fill="#6f6c66">Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/qui-paie-la-dette-publique/</text>
 </svg>

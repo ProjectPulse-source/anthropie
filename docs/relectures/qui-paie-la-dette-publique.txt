@@ -1,50 +1,50 @@
-# relu le 2026-11-09 ; texte servi de /qui-paie-la-dette-publique/, build de a8c3678 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /qui-paie-la-dette-publique/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
 Un même effort budgétaire de 10 milliards d’euros, réparti selon les comptes distribués de l’Insee de 2023 (un profil comptable à structure constante, non une simulation de ses effets), n’atteint pas les mêmes ménages selon l’instrument choisi : un ajustement par l’enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l’impôt sur le revenu et le patrimoine davantage sur les ménages aisés.
 Qui paie la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir.
-Page mise à jour le 9 novembre 2026
+Page mise à jour le 18 novembre 2026
 Dossier dette publique
 Mise à jour · 11/2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Qui paie la dette publique ?
 La réponse change avec la décision prise pour l’ajuster.
-Un même effort de 10 milliards d’euros pèse surtout sur les ménages les plus modestes s’il passe par l’enseignement, surtout sur les plus aisés s’il passe par l’impôt, et presque également sur tous s’il passe par les pensions.
+Selon un profil comptable tiré des comptes de l’Insee, un même effort de 10 milliards d’euros pèse surtout sur les ménages les plus modestes s’il passe par l’enseignement, surtout sur les plus aisés s’il passe par l’impôt, et de façon bien moins inégale entre dixièmes s’il passe par les pensions.
 Le montant de la facture — encours, charge d’intérêts, coût moyen du stock — est mesuré sur une autre page de ce dossier, Combien coûte la dette publique ? ; celle-ci demande sur qui elle retombe, ce que les données permettent, ou non, d’attribuer, et ce qu’une décision réelle, envisagée pour 2026 puis écartée, en montre.
 Dette publique française — dernière donnée officielle
 3 595,5 milliards d’euros soit 119,0 % du PIB, au T2 2026.
 Source : INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608) · séries relevées le 21/10/2026 · données brutes (JSON).
 Ce que cette dette coûte, et pourquoi : Combien coûte la dette publique ?
 Selon la décision, l’effort ne tombe pas sur les mêmes ménages
-La population est rangée du plus modeste au plus aisé, puis coupée en dix groupes de même taille, les dixièmes de niveau de vie.
+La population est rangée du plus modeste au plus aisé, puis coupée en dix groupes de même taille, les dixièmes de niveau de vie usuel (le revenu disponible monétaire par unité de consommation).
 L’exercice prend 10 milliards d’euros et les répartit trois fois — par une hausse des impôts sur les revenus et le patrimoine, par une baisse des pensions de retraite, par une baisse des dépenses d’enseignement —, toujours au prorata de ce que chaque dixième verse ou reçoit déjà, puis rapporte le résultat à son revenu.
 L’impôt retenu est la catégorie des comptes distribués « impôts sur les revenus et le patrimoine » : CSG, impôt sur le revenu et autres impôts de cette catégorie, comme la CRDS, la taxe d’habitation ou l’impôt sur la fortune immobilière.
 Ce n’est ni une prévision ni une mesure envisagée : aucun comportement, aucun effet en retour n’y entre.
-C’est la structure actuelle des postes, rendue comparable d’une décision à l’autre.
+C’est la structure des postes en 2023, dernier millésime publié, rendue comparable d’une décision à l’autre.
 Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020) ; millésime 2023.
 Profil comptable à structure constante, sans modélisation des comportements ni des effets en retour.
+Le résultat en une phrase. « Qui paie la dette ? » n’a pas de réponse en soi, il en a une par décision : un même effort pèse surtout sur les plus modestes s’il passe par l’enseignement, surtout sur les plus aisés s’il passe par l’impôt.
 TéléchargerCiterDonnées
 Le classement s’inverse d’une décision à l’autre.
 Dans ce profil comptable, une réduction des dépenses d’enseignement représenterait 2,75 % du revenu des 10 % les plus modestes et 0,21 % de celui des plus aisés ; une hausse des impôts sur les revenus et le patrimoine ferait l’inverse, jusqu’à 1,14 % pour le dernier dixième.
 Le contraste ne vient pas seulement de ce que les petits revenus sont plus petits : en euros, la moitié la moins aisée supporterait 57,8 % de la coupe d’enseignement contre 14,6 % de l’effort fiscal.
 Une baisse des pensions se tiendrait dans une bande étroite, de 0,43 à 0,78 %, sans épargner aucun groupe en particulier.
 Et « l’impôt » n’a pas un seul profil : une hausse des taxes sur les produits, comme la TVA, répartie de même, pèserait elle aussi davantage sur les plus modestes en part de leur revenu, 1,14 % contre 0,43 % pour les plus aisés.
-Le profil favorable aux plus modestes est donc celui des impôts sur les revenus et le patrimoine, non de toute la fiscalité ; et ce calcul suit la même convention proportionnelle, sans être l’incidence finale d’une hausse réelle de TVA.
+Le profil favorable aux plus modestes est donc celui des impôts sur les revenus et le patrimoine, non de toute la fiscalité ; et ce calcul suit la même convention proportionnelle, sans être l’incidence finale (qui supporte la charge en définitive, et non qui la verse) d’une hausse réelle de TVA.
 Une exposition comptable, non une perte observée.
-Les 2,75 % du premier dixième sont la valeur des services d’enseignement que les comptes de l’Insee lui attribuent par convention, rapportée à son revenu : ni une perte de revenu effectivement subie, ni une mesure de bien-être.
+Les 2,75 % du premier dixième sont la part de l’effort qui lui revient, répartie au prorata des services d’enseignement que les comptes de l’Insee lui attribuent par convention, rapportée à son revenu : ni une perte de revenu effectivement subie, ni une mesure de bien-être.
 Une hausse d’impôt retire de l’argent ; une baisse de dépense retire un service, dont la valeur est imputée et dont le coût réel pour chacun dépend de ce qui est supprimé.
-Le résultat en une phrase. « Qui paie la dette ? » n’a pas de réponse en soi, il en a une par décision : un même effort pèse surtout sur les plus modestes s’il passe par l’enseignement, surtout sur les plus aisés s’il passe par l’impôt.
 Au milieu de l’échelle, le choix du levier compte le moins.
 Pour le 7e ou 8e dixième, un peu au-dessus du milieu, l’effort moyen changerait peu d’une décision à l’autre : la plus lourde y coûterait 1,4 fois la plus légère.
-Pour les 10 % les plus aisés, elle coûterait 5,5 fois la plus légère, et au moins autant pour les 10 % les plus modestes : aux deux bouts de l’échelle, le choix du levier décide presque tout.
+Pour les 10 % les plus aisés, elle coûterait 5,5 fois la plus légère, et 5,5 fois pour les 10 % les plus modestes : aux deux bouts de l’échelle, le choix du levier décide presque tout.
 Ces dixièmes ne supporteraient pas moins d’effort ; simplement, changer de levier y modifierait moins leur exposition moyenne, qui ne dit pas la situation de chacun des ménages qui les composent.
-La convergence se retrouve dans les quatre millésimes 2020-2023 — qui partagent conventions et structures, et ne sont donc pas des réplications indépendantes —, et elle ne vaut que pour ces trois leviers ainsi répartis.
+La convergence se retrouve dans les quatre millésimes 2020-2023, publiés par l’Insee comme statistiques expérimentales — qui partagent conventions et structures, et ne sont donc pas des réplications indépendantes —, et elle ne vaut que pour ces trois leviers ainsi répartis.
 Le creux aux 7e et 8e dixièmes mis à l’épreuve, et les limites de l’exercice
 En vingtièmes.
 Découpée en vingt groupes au lieu de dix, la population place encore le minimum dans la zone des 7e et 8e dixièmes : au 14e ou 15e vingtième selon l’année.
 Le creux ne vient donc pas du regroupement par dixièmes.
 Par paires de leviers.
-La courbe de l’impôt monte avec le niveau de vie, celle de l’enseignement descend : prises deux à deux, elles se rapprochent le plus au 7e dixième, et c’est leur croisement qui fait le creux, la courbe des pensions, presque plate, passant tout près des deux.
+La courbe de l’impôt monte avec le niveau de vie, celle de l’enseignement descend : prises deux à deux, elles se rapprochent le plus au 7e dixième, et c’est leur croisement qui fait le creux, la courbe des pensions, presque plate, passant au-dessus des deux à cet endroit.
 Le coefficient de variation et l’étendue rapportée à la moyenne placent le minimum dans la même zone que le rapport du plus lourd au plus léger.
 Mesuré en points de revenu plutôt qu’en rapport, l’écart entre la décision la plus lourde et la plus légère est encore le plus faible aux 7e et 8e dixièmes.
 Sans les pensions, impôt et enseignement seuls se rapprochent le plus au 7e dixième : le creux ne doit rien à la troisième courbe.
@@ -66,20 +66,20 @@ Quatre questions se confondent souvent : qui emprunte, qui finance et reçoit le
 Ce ne sont pas quatre populations : une même personne paie l’impôt, se soigne à l’hôpital public et détient des titres de l’État par son assurance-vie.
 Et « qui paie » se dit toujours par rapport à une autre décision : moins emprunter aurait signifié un autre impôt, une autre dépense, avec leurs propres perdants.
 Deux champs distincts : A en valeur nominale (INSEE), B en valeur de marché (Banque de France, via l’Agence France Trésor).
-Les valeurs viennent du même registre que la figure de la p.
-101 du livre.
+La figure de la p.
+101 du livre, arrêtée sur les comptes de fin 2025, en donne une version antérieure.
 TéléchargerCiterDonnées
 Qui emprunte, qui détient.
 L’État porte l’essentiel de la dette publique : 2 942 milliards d’euros sur 3 595,5, soit 82 %, fin juin 2026.
-Au 2e trimestre 2026, ses titres négociables sont détenus à 59,7 % par des non-résidents ; banques, assureurs et fonds résidents en portent ensemble 21,7 % ; les autres porteurs résidents, 18,7 %, comprennent la Banque de France, dont la source ne publie pas la part.
-Les deux panneaux ne se combinent pas : l’un est en valeur nominale, l’autre en valeur de marché.
+Au 2e trimestre 2026, ses titres négociables (obligations à moyen et long terme et bons du Trésor à court terme, qui s’échangent sur les marchés) sont détenus à 59,7 % par des non-résidents ; banques, assureurs et fonds résidents en portent ensemble 21,7 % ; les autres porteurs résidents, 18,7 %, comprennent la Banque de France, que le graphique de l’AFT repris dans la figure n’isole pas.
+Les deux panneaux ne se combinent pas : l’un est en valeur nominale (le montant que l’emprunteur devra rembourser à l’échéance), l’autre en valeur de marché (le prix des titres sur le marché à la date du relevé).
 Qui reçoit les intérêts : ce qu’on observe, ce qu’on approche, ce qu’on ignore.
 On observe les porteurs directs, classés par résidence : c’est un stock photographié à une date, non le flux des coupons, qui dépend des titres détenus et de leur date d’émission.
 On approche les porteurs indirects : en remontant les placements de l’assurance-vie, des fonds et des banques jusqu’à leur usage final, la Direction générale du Trésor estime que sur 10 euros de patrimoine financier des ménages français, 1 finance de la dette des administrations publiques, majoritairement françaises (Trésor-Éco n° 378, janvier 2026).
-On ignore qui, parmi les ménages, reçoit ces intérêts : aucune statistique publiée ne les répartit par niveau de vie ou de patrimoine, ce qui demanderait de suivre chaque titre, sa rémunération et ses intermédiaires.
+On ignore qui, parmi les ménages, reçoit ces intérêts : les comptes distribués de l’Insee ne les répartissent que par convention, au prorata des revenus financiers de chaque groupe, et aucune statistique publiée ne l’observe, ce qui demanderait de suivre chaque titre, sa rémunération et ses intermédiaires.
 Deux lectures sont donc exclues : 59,7 % des titres ne font pas 59,7 % des intérêts, et la détention d’actifs financiers par dixième ne dit pas la part de chacun dans ces intérêts.
 L’absence de cette ventilation ne signifie pas que ces revenus sont négligeables : elle borne ce qu’on peut affirmer.
-Deux précisions encore : le porteur d’aujourd’hui n’est pas forcément celui qui a prêté à l’émission, un titre s’échangeant ensuite sur le marché ; et les titres détenus par la Banque de France au titre des programmes de l’Eurosystème ne s’analysent pas comme ceux d’un créancier privé.
+Deux précisions encore : le porteur d’aujourd’hui n’est pas forcément celui qui a prêté à l’émission, un titre s’échangeant ensuite sur le marché ; et les titres détenus par la Banque de France au titre des programmes de l’Eurosystème (la BCE et les banques centrales nationales de la zone euro) ne s’analysent pas comme ceux d’un créancier privé.
 Résidence n’est pas nationalité, et financer n’est pas gagner
 Financer n’est pas gagner.
 Le créancier a avancé les fonds : les intérêts rémunèrent cette avance, le temps et le risque.
@@ -87,7 +87,7 @@ Son rendement réel tient compte de l’inflation et de la variation de valeur d
 La répartition publiée classe les porteurs par résidence, non par nationalité : un « non-résident » peut être un fonds étranger qui gère l’épargne de ménages français, et un ménage français peut détenir des titres de l’État sans le savoir, par son assurance-vie.
 La statistique de la Banque de France sur les titres de long terme de l’ensemble des administrations publiques porte sur un autre champ que celle de l’Agence France Trésor, limitée aux titres négociables de l’État : les deux parts ne se substituent pas l’une à l’autre.
 Annuler la dette détenue par la Banque de France : qui paierait ?
-En août 2026, Jean-Luc Mélenchon a relancé une proposition formulée dès 2020 à l’Institut Rousseau : annuler les titres de l’État que détient la Banque de France.
+En août 2026, Jean-Luc Mélenchon a relancé, pour les titres de l’État que détient la Banque de France, une proposition formulée dès 2020 à l’Institut Rousseau pour les dettes publiques détenues par l’Eurosystème : les annuler.
 Ses partisans soutiennent qu’aucun détenteur privé ne subirait de perte, puisque ces titres ont déjà été rachetés ; leurs contradicteurs contestent l’absence de coût pour la collectivité.
 Olivier Blanchard juge l’opération sans effet : l’État économiserait des intérêts, mais perdrait autant en bénéfices reversés par sa banque centrale (propos rapportés par Euronews, 27 août 2026).
 Christine Lagarde, présidente de la BCE, a répondu le 10 septembre que l’annulation de dette relève de l’article 123 du traité, et que tout ce qui irait contre ce principe serait « une pure violation » du traité (notre traduction).
@@ -96,14 +96,14 @@ Pour y répondre, il faut d’abord voir comment l’État emprunte, et où se p
 Le circuit d’un titre de l’État, puis les intérêts payés chaque année, et à qui.
 Les numéros renvoient aux étapes décrites sous le schéma.
 Ce que l’annulation effacerait.
-La Banque de France indique détenir 488 milliards d’euros de dette publique achetée pour l’Eurosystème au 30 juin 2026, en coût amorti, contre 546 au 31 décembre 2025 : l’encours baisse à chaque échéance, parce que les titres remboursés ne sont plus remplacés.
+La Banque de France indique détenir 488 milliards d’euros de dette publique achetée pour l’Eurosystème au 30 juin 2026, en coût amorti (le prix d’achat, rapproché au fil du temps de la valeur de remboursement), contre 546 au 31 décembre 2025 : l’encours baisse à chaque échéance, parce que les titres remboursés ne sont plus remplacés.
 Rapporté au PIB, ce montant représente environ 16 points.
-La baisse effective de la dette au sens de Maastricht dépendrait des titres français annulés et de leur valeur nominale, que ce chiffre ne donne pas, et supposerait que l’opération soit permise et reconnue par la statistique européenne.
+La baisse effective de la dette au sens de Maastricht (la dette brute des administrations publiques, hors dettes entre elles, en valeur nominale) dépendrait des titres français annulés et de leur valeur nominale, que ce chiffre ne donne pas, et supposerait que l’opération soit permise et reconnue par la statistique européenne.
 Ce qu’elle n’effacerait pas.
 La Banque de France a payé ces titres avec de l’argent qu’elle a créé et crédité aux banques sur leur compte chez elle : ce sont les réserves (étape 4 du schéma).
 Annuler les titres ne supprime pas ces réserves.
 Or elles peuvent coûter : la Banque de France rémunère au taux fixé par la BCE, dit taux de dépôt (2,50 % depuis le 16 septembre 2026), les réserves que les banques placent à la facilité de dépôt ; ce taux est le principal instrument de la politique monétaire de la BCE.
-Les réserves obligatoires et celles laissées en compte courant, elles, ne rapportent rien.
+Les réserves obligatoires (le minimum que chaque banque doit détenir sur son compte courant à la Banque de France), elles, ne rapportent rien depuis septembre 2023 ; depuis juin 2026, les excédents de réserves que les banques ayant accès à la facilité de dépôt laissent en compte courant sont rémunérés au même taux.
 Lors des achats, la Banque de France a échangé des réserves contre des titres de l’État ; l’annulation rendrait cet échange définitif.
 Deux trajectoires.
 Sans annulation, chaque titre arrivé à échéance est remboursé, au besoin par un nouvel emprunt sur le marché ; toutes choses égales par ailleurs, ce remboursement fait disparaître autant de réserves.
@@ -113,7 +113,7 @@ Une simulation, pas une économie observée.
 Aux échéances, tout tient à une comparaison : réemprunter sur le marché coûte-t-il plus ou moins cher que garder les réserves ?
 En 2025, garder les réserves aurait coûté moins cher ; en 2023 et en 2024, plus cher.
 Pour le chiffrer, supposons que chaque euro arrivé à échéance soit refinancé à dix ans, et que l’annulation maintienne en échange un euro de réserves rémunéré au taux de dépôt.
-En 2025, l’État empruntait à dix ans à 3,35 % en moyenne et le taux de dépôt valait 2,26 % : le différentiel représenterait un gain d’environ 1,1 milliard par an pour 100 milliards concernés, soit 5,3 milliards si les 488 milliards l’étaient tous.
+En 2025, le rendement des titres de l’État à dix ans valait en moyenne 3,35 % sur le marché, et le taux de dépôt 2,26 % en moyenne : le différentiel représenterait un gain d’environ 1,1 milliard par an pour 100 milliards concernés, soit 5,3 milliards si les 488 milliards l’étaient tous.
 En 2023 et en 2024, le signe était inverse : le taux de dépôt (3,31 puis 3,73 %) dépassait le taux à dix ans (2,99 puis 2,97 %), soit une perte de 0,3 puis 0,8 milliard par an pour 100 milliards.
 Le résultat peut donc changer de signe : l’annulation ne garantit ni une économie, ni une perte.
 Ces chiffres ne sont ni une prévision ni une économie réalisée : ils appliquent les taux de chaque année à l’encours de juin 2026, alors que l’État emprunte aussi à plus court terme.
@@ -139,24 +139,24 @@ La collectivité, par l’inflation
 Un risque conditionnel, non une conséquence automatique (objection de John Cochrane, The Grumpy Economist, 24 août 2026)
 Ce que chacun dit de juste.
 Annuler 488 milliards de dette ne signifie pas économiser 488 milliards.
-Les partisans de l’annulation ont raison sur un point : aucun détenteur privé ne perdrait.
+Les partisans de l’annulation ont raison sur un point : aucun détenteur privé ne perdrait sur les titres annulés.
 Olivier Blanchard aussi, tant que les titres courent : ce que l’État ne verserait plus, la Banque de France ne le recevrait plus.
 Mais une dette qui disparaît des comptes de l’État ne fait pas disparaître son coût pour la collectivité, et des réserves qui demeurent n’interdisent pas toute économie.
 L’annulation peut modifier le montant officiel de la dette, la répartition des charges et leur calendrier ; elle ne garantit ni une économie, ni une absence de coût.
 Le droit et la statistique.
 L’article 123 du traité interdit à la BCE et aux banques centrales nationales de faire crédit aux États et d’acheter leurs titres directement auprès d’eux.
 Il ne nomme pas l’annulation : l’y rattacher est la lecture de la BCE, que l’Institut Rousseau conteste en invoquant le but de la règle, et la Cour de justice de l’Union ne s’est pas prononcée.
-En comptabilité nationale, une annulation décidée d’un commun accord entre la Banque de France et l’État serait enregistrée comme un transfert en capital de l’une vers l’autre (SEC 2010, point 4.165 f) : elle pourrait améliorer ponctuellement le solde public mesuré, sans apporter un euro de trésorerie.
+En comptabilité nationale, une annulation décidée d’un commun accord entre la Banque de France et l’État serait, selon les règles générales du SEC 2010 (point 4.165 f) et sous réserve de la décision qu’Eurostat prendrait sur ce cas, enregistrée comme un transfert en capital de l’une vers l’autre : elle pourrait améliorer ponctuellement le solde public mesuré, sans apporter un euro de trésorerie.
 Un refus de payer décidé par l’État seul ne serait pas enregistré, et la dette resterait due.
-Nous n’avons trouvé aucune décision d’Eurostat sur ce cas.
+Au 18 novembre 2026, aucune des décisions méthodologiques publiées par Eurostat ne traite de ce cas.
 Ce que cette comparaison ne dit pas
-L’ensemble formé par l’État et la Banque de France est un périmètre d’analyse, non une statistique officielle : la Banque de France n’appartient pas aux administrations publiques, et l’État ne répond pas de ses engagements.
+L’ensemble formé par l’État et la Banque de France est un périmètre d’analyse, non une statistique officielle : la Banque de France n’appartient pas aux administrations publiques.
 Le taux de dépôt moyen de l’année approche le coût des réserves sans le mesurer titre par titre, et le lien entre un titre annulé et un euro de réserves maintenu est une simplification : les réserves dépendent aussi des opérations de toute la zone euro, et l’Eurosystème dispose d’autres moyens que la vente de titres pour retirer de la liquidité.
-Dans les programmes d’achat de titres publics, 20 % des achats sont soumis au partage des risques à l’échelle de l’Eurosystème ; cette proportion ne s’applique pas directement aux seuls titres français de la Banque de France.
+Dans les programmes d’achat de titres publics, 20 % des achats sont soumis au partage des risques à l’échelle de l’Eurosystème ; les titres de l’État français achetés par la Banque de France n’y sont pas soumis.
 Les résultats de la Banque de France ne dépendent pas seulement de ses titres et de ses réserves : en 2025, une opération exceptionnelle sur son or les a rendus positifs.
 Enfin, ni l’effet sur les taux de marché, ni l’effet sur la confiance, ni le risque d’inflation ne se chiffrent avec ces données.
 Qui contribue, qui reçoit aujourd’hui
-Les comptes nationaux distribués de l’Insee répartissent, pour 2023, prélèvements et transferts publics entre les dixièmes de niveau de vie — la population rangée du plus modeste au plus aisé, puis coupée en dix parts d’effectif égal.
+Les comptes nationaux distribués de l’Insee répartissent, pour 2023, prélèvements et transferts publics entre les dixièmes de niveau de vie usuel — la population rangée du plus modeste au plus aisé, puis coupée en dix parts d’effectif égal.
 Les montants y sont exprimés par unité de consommation (UC), l’unité qui rend comparables des ménages de tailles différentes : une personne seule compte 1 UC, un couple avec deux enfants de moins de 14 ans, 2,1.
 Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16 avril 2026, figure 1c), en euros par unité de consommation.
 TéléchargerCiterDonnées
@@ -214,11 +214,11 @@ Les transferts reçus — prestations en espèces et services publics valorisés
 Ce qui est versé suit le niveau de vie ; ce qui est reçu, beaucoup moins.
 Ces prélèvements ne sont pas des paiements relevés un à un : outre l’impôt sur le revenu et les cotisations, ils comprennent les taxes sur les produits, comme la TVA, et des impôts sur la production, que l’Insee attribue aux ménages par convention.
 Où la dette entre dans ces comptes.
-En 2023, les transferts attribués aux ménages dépassent les prélèvements de 66 milliards d’euros, et l’Insee rattache cet écart à l’endettement public : c’est la part du revenu élargi de l’année qui n’est pas financée par des prélèvements de la même année.
+En 2023, les transferts attribués aux ménages dépassent les prélèvements de 66 milliards d’euros, et l’Insee rattache cet écart à l’endettement public : c’est la part du revenu élargi de l’année (le revenu de l’ensemble de l’économie attribué aux ménages, après prélèvements et transferts publics) qui n’est pas financée par des prélèvements de la même année.
 Ces 66 milliards ne sont pas la charge d’intérêts de 2025 (65,7 milliards) : année, champ et nature diffèrent, et la proximité des deux nombres est une coïncidence.
 Un solde réparti par convention, financé à crédit, qui ne dit pas qui paiera demain
 Ce total porte sur le champ des comptes distribués, qui n’est pas celui du déficit public : les deux montants ne se substituent pas l’un à l’autre.
-Dans cette construction, l’écart élève le niveau de vie élargi des ménages de l’année — un bénéfice présent, financé à crédit —, mais ce ne sont pas 66 milliards de versements identifiables : c’est un solde réparti par convention, que l’Insee impute pour moitié à de moindres prélèvements et pour moitié à des transferts supplémentaires quand il calcule un niveau de vie « net de l’endettement ».
+Dans cette construction, l’écart élève le niveau de vie élargi (ce revenu élargi par unité de consommation) des ménages de l’année — un bénéfice présent, financé à crédit —, mais ce ne sont pas 66 milliards de versements identifiables : c’est un solde réparti par convention, que l’Insee impute pour moitié à de moindres prélèvements et pour moitié à des transferts supplémentaires quand il calcule un niveau de vie « net de l’endettement ».
 Les figures de cette page présentent les transferts courants, avant ce retraitement.
 Le solde n’implique pas que les bénéficiaires de la redistribution aient « créé » cette dette, ni que leur position dise qui la remboursera.
 Insee, comptes nationaux distribués 2023 (figure 2a).
@@ -230,12 +230,12 @@ Une moyenne de groupe ne décrit pas ses membres.
 56 % des personnes sont bénéficiaires nettes en 2023, 99 % dans le premier dixième et 18 % dans le dernier.
 Mais elles ne sont majoritaires que dans les cinq premiers dixièmes : dans le 7e dixième, qui reçoit en moyenne 1 800 € par UC de plus qu’il ne verse, elles ne sont plus que 36 %.
 Le signe d’une moyenne ne dit pas la situation de la majorité.
-Un groupe peut recevoir plus qu’il ne verse en moyenne alors que la majorité de ses membres versent plus qu’ils ne reçoivent : il suffit que ce que reçoivent en moyenne les bénéficiaires nets l’emporte sur ce que versent en moyenne les autres.
+Un groupe peut recevoir plus qu’il ne verse en moyenne alors que la majorité de ses membres versent plus qu’ils ne reçoivent : il suffit que le gain net cumulé des bénéficiaires nets l’emporte sur la perte nette cumulée des autres.
 Les données regroupées ne disent pas comment ces soldes se répartissent.
 Recevoir plus que l’on ne verse, en moyenne, ne protège donc pas d’un ajustement : la position dans la redistribution d’aujourd’hui et l’exposition à une décision de demain sont deux classements distincts.
 Conventions : le solde d’une année, non d’une vie ; des services publics imputés, non mesurés ; toute la redistribution, pas l’effet propre de la dette
 C’est le solde d’une année, non d’une vie : les pensions de retraite y sont comptées comme prestations courantes.
-Les transferts comprennent des services publics — soins, éducation, services collectifs — valorisés en euros et répartis par imputation statistique, non un relevé des services utilisés par chacun ; la part de bénéficiaires nets en dépend à la marge.
+Les transferts comprennent des services publics — soins, éducation, services collectifs — valorisés en euros et répartis par imputation statistique, non un relevé des services utilisés par chacun ; la part de bénéficiaires nets dépend de ces conventions.
 Le revenu « avant transferts » est une étape de calcul, non le revenu qu’aurait chacun dans une économie sans impôts ni services publics.
 Et ce solde décrit la redistribution dans son ensemble, pas l’effet propre de la dette.
 Par âge du ménage : une photographie de l’année, non un bilan de vie
@@ -254,7 +254,7 @@ Schéma de mécanismes possibles : aucun poids relatif ni effet causal n’y est
 TéléchargerCiterDonnées
 Le refinancement, lui, renouvelle une échéance aux conditions du moment : il peut alléger ou alourdir la charge, sans désigner qui la supportera.
 Et en face de ces coûts se trouve ce que la dette a financé : services, prestations et investissements profitent à des ménages aujourd’hui et demain, et une analyse qui ne compterait que les coûts ne décrirait que la moitié du bilan.
-Pourquoi seule l’inflation non anticipée transfère la charge, et ce qui joue en sens inverse
+Inflation attendue ou non : ce qui peut transférer la charge, et ce qui joue en sens inverse
 L’inflation attendue au moment où le taux d’un titre a été fixé tend à être déjà incorporée au taux exigé à l’émission, et n’opère alors aucun transfert.
 C’est l’écart entre l’inflation réalisée et celle-là qui réduit la valeur réelle des créances nominales déjà émises.
 Deux mécanismes jouent en sens inverse : les titres indexés voient leur charge monter avec les prix, et le refinancement se fait aux taux nouveaux.
@@ -274,12 +274,12 @@ Le transfert net dépend de l’usage, du financement, des créances transmises 
 La dette nette publiée par l’INSEE ne tranche pas non plus : elle ne déduit que certains actifs financiers, pas les routes, le capital humain ni l’environnement.
 La page La dette publique est-elle un fardeau pour les générations futures ? décompose, dans les comptes, les emplois des déficits, sans dire quel euro emprunté a payé quelle dépense.
 Les groupes moins mobiles — une hypothèse à tester
-Les ménages et les entreprises qui peuvent déplacer leurs revenus, leur patrimoine ou leur activité échappent plus facilement à un prélèvement que les salariés, les retraités ou les usagers d’un service public local.
+Les ménages et les entreprises qui peuvent déplacer leurs revenus, leur patrimoine ou leur activité peuvent échapper plus facilement à un prélèvement que les salariés, les retraités ou les usagers d’un service public local.
 D’où l’hypothèse : quand l’ajustement suit la ligne de moindre résistance, il peut peser davantage sur ceux qui ne peuvent pas partir.
 Pour l’éprouver : des groupes définis d’avance, un ajustement précis, une mesure fixée
 Pour l’éprouver, il faut définir ces groupes avant d’observer l’ajustement, préciser l’ajustement étudié et fixer une mesure de l’effort ; l’hypothèse serait affaiblie par un ajustement portant surtout sur d’autres groupes, ou par des compensations accordées aux perdants.
 Mobilité géographique, mobilité de la base imposable et capacité à remplacer un service public sont trois propriétés distinctes.
-Le canal territorial est examiné sur la page Dette publique : pourquoi les collectivités locales sont-elles la variable d’ajustement ?
+Le canal territorial est examiné sur la page Les collectivités locales sont-elles une variable d’ajustement des finances publiques ?
 Les investissements à bénéfices différés — un mécanisme à établir cas par cas
 Un budget contraint par le service de la dette peut inciter à reporter les dépenses dont les bénéfices sont lointains et le report peu coûteux politiquement : recherche, entretien du patrimoine, formation, transition écologique.
 Le mécanisme est plausible, non établi.
@@ -288,10 +288,10 @@ Il reste à l’établir décision par décision — quelle dépense, reportée 
 Là où il est établi, il alourdit le transfert : aux engagements transmis s’ajoute le bénéfice qui n’a pas été construit, et celui-là n’apparaît dans aucun encours.
 Une décision réelle, datée
 Exemple réel, distinct de l’exercice théorique.
-Le projet de loi de financement de la sécurité sociale pour 2026 prévoyait, à son article 44, de ne pas revaloriser en 2026 les pensions de retraite des régimes de base — un coefficient « égal à un ».
+Le projet de loi de financement de la sécurité sociale pour 2026 prévoyait, à son article 44, de ne pas revaloriser en 2026 la plupart des prestations sociales, dont les pensions de retraite des régimes de base — un coefficient « égal à un ».
 La disposition a été écartée au cours de l’examen parlementaire : la loi de financement de la sécurité sociale pour 2026, promulguée le 30 décembre 2025, ne comporte pas de gel, et l’instruction interministérielle du 15 décembre 2025 revalorise ces pensions au 1er janvier 2026 d’un coefficient de 1,009, soit 0,9 %, « conformément au droit en vigueur ».
 C’est une décision du type « pensions », envisagée puis écartée.
-Deux limites empêchent de lui appliquer directement l’exercice : un gel des seules pensions de base n’a pas le profil d’une baisse répartie au prorata de toutes les pensions, et rien dans ces textes ne rattache la mesure envisagée à la dette plutôt qu’au déficit de la sécurité sociale.
+Deux limites empêchent de lui appliquer directement l’exercice : un gel des seules pensions de base n’a pas le profil d’une baisse répartie au prorata de toutes les pensions, et rien dans ces textes ne rattache la mesure envisagée à la dette plutôt qu’au déficit public et à celui de la branche vieillesse, que son exposé des motifs invoque.
 Un budget réel combine recettes, cotisations, prestations, dépenses et emprunt, et ne permet généralement pas de rattacher un impôt donné à un euro d’intérêts.
 Mesure non adoptée, elle ne permet pas non plus de mesurer une incidence effectivement subie : il faudrait pour cela une mesure appliquée, et la situation qui aurait prévalu sans elle.
 Les trois décisions de 10 milliards de cette page sont des hypothèses de calcul, non une description des choix de 2026.
@@ -307,13 +307,13 @@ Un profil comptable : un même effort de 10 milliards d’euros réparti au pror
 La littérature éprouve les lectures qu’on en tire, pas ce profil.
 Cohérent avec.
 Le sens du contraste entre dépense et impôt : sur des consolidations effectivement observées dans 18 pays industrialisés, dont la France, de 1978 à 2009, les inégalités de revenu net augmentent ; les coupes de dépenses y paraissent défavorables, les hausses d’impôt égalisatrices, sans que ce dernier effet soit significatif dans la spécification de base (Agnello et Sousa).
-Le report des investissements : dans l’échantillon de Breunig et Busemeyer, une charge d’intérêts plus lourde va de pair avec un recul de la part de l’investissement public au profit des retraites, reporter un investissement coûtant moins, politiquement, que réduire un droit.
+Le report des investissements : dans l’échantillon de Breunig et Busemeyer, une charge d’intérêts plus lourde va de pair avec un recul de la part de l’investissement public, parmi les trois postes étudiés, au profit des retraites ; les auteurs l’expliquent par un coût politique moindre : reporter un investissement coûte moins que réduire un droit.
 Le rôle de l’usage : dans le modèle de Diamond, emprunter pour acquérir du capital physique fait de l’État un simple intermédiaire entre épargnants et entrepreneurs, sans effet.
 Mis en danger par.
 Toute lecture selon laquelle la créance héritée neutraliserait la charge : dans le cas efficace du modèle de Diamond, où le taux d’intérêt dépasse la croissance de la population, la dette détenue dans le pays abaisse davantage le bien-être de long terme que la dette extérieure, parce qu’elle prend la place du capital productif dans les patrimoines.
 Barro, qui défend l’idée inverse, la fonde sur des transferts volontaires entre parents et enfants, opérants pour la plupart des gens, et reconnaît qu’en 1989 la majorité des économistes penche encore vers les modèles standard.
-L’ampleur : dans le découpage d’Agnello et Sousa, ce sont les hausses d’impôt les plus fortes qui s’associent à une baisse significative des inégalités, et les effets tendent à disparaître en deux ans.
-La courbe « impôt » lue comme incidence finale : dans 55 082 entreprises de neuf pays européens, de 1996 à 2003, environ la moitié d’une hausse de l’impôt sur les sociétés retombe à long terme sur les salaires (Arulampalam, Devereux et Maffini) — un autre impôt que celui de la page, mais le même écart entre incidence légale et incidence finale.
+L’ampleur : dans le découpage d’Agnello et Sousa, ce sont les hausses d’impôt les plus fortes qui s’associent à une baisse significative des inégalités, et les effets des consolidations tendent à disparaître en deux ans.
+La courbe « impôt » lue comme incidence finale : dans 55 082 entreprises de neuf pays européens, de 1996 à 2003, environ la moitié d’une hausse de l’impôt sur les sociétés retombe à long terme sur les salaires (Arulampalam, Devereux et Maffini) — un autre impôt que celui de la page, mais le même écart entre incidence légale (qui doit verser l’impôt) et incidence finale.
 Non établi.
 Que les groupes moins mobiles supportent davantage l’ajustement : l’étude sur l’impôt sur les sociétés mesure une négociation salariale, et son seul contraste de mobilité, entre multinationales et entreprises indépendantes, n’est pas significatif.
 Que seule l’inflation non anticipée transfère la charge : nous n’avons pas trouvé, dans les textes examinés, de test séparant inflation anticipée et non anticipée.
@@ -335,14 +335,14 @@ Barro, R.
 J.
 (1989), « The Ricardian Approach to Budget Deficits », Journal of Economic Perspectives, 3(2), p.
 37-54.
-Revue de littérature vérifiée le 30 septembre 2026 : chaque référence citée a été lue en entier à cette date, dans la version indiquée.
+Revue de littérature vérifiée le 30 septembre 2026 : chaque référence a été lue dans la version indiquée, aux sections qui fondent ce qui en est dit.
 Synthèse
 Ce qu’il faut retenir
 « Qui paie ? » a une réponse par décision, et le choix pèse surtout aux extrémités.
-Un même effort retombe sur les plus modestes par l’enseignement, sur les plus aisés par l’impôt ; au milieu de l’échelle, les trois leviers étudiés produisent des expositions proches.
+Dans le profil comptable de cette page, un même effort pèse surtout sur les plus modestes par l’enseignement, sur les plus aisés par l’impôt ; au milieu de l’échelle, les trois leviers étudiés produisent des expositions proches.
 Nommer la décision et l’alternative transforme une opinion en énoncé vérifiable.
 Détenir n’est pas payer, et les intérêts ne se suivent que jusqu’à un point.
-On observe les porteurs directs, on approche les porteurs indirects par l’épargne des ménages, mais aucune statistique ne dit quels ménages reçoivent les intérêts : la répartition des porteurs renseigne sur la destination des intérêts, jamais sur qui les finance.
+On observe les porteurs directs, on approche les porteurs indirects par l’épargne des ménages, mais aucune statistique n’observe quels ménages reçoivent les intérêts (l’Insee ne les répartit que par convention) : la répartition des porteurs renseigne sur la destination des intérêts, jamais sur qui les finance.
 Une moyenne de groupe ne décrit pas ses membres.
 Un dixième peut recevoir plus qu’il ne verse en moyenne alors que la majorité de ses membres versent plus qu’ils ne reçoivent.
 Une statistique de dixièmes répond à « comment se répartit la masse ? », pas à « que vit une personne de ce dixième ? ».
@@ -358,15 +358,15 @@ La question utile porte alors sur ce qu’elle finance et sur qui supporte les a
 La dette publique est-elle un fardeau pour les générations futures ?
 Pas mécaniquement.
 Les générations suivantes héritent des engagements, mais aussi de ce qu’ils ont financé — infrastructures, formation, patrimoine public — et d’une partie des titres eux-mêmes, détenus directement ou par l’assurance-vie — ce qui ne neutralise pas nécessairement la charge, la dette pouvant aussi évincer du capital productif.
-Le transfert net dépend de l’usage : une dette qui finance une consommation courante sans contrepartie durable leur transmet surtout un coût ; un investissement dont elles profiteront peut leur transmettre davantage qu’il ne coûte.
+Le transfert net dépend de l’usage, du financement, des créances transmises et de l’alternative retenue ; toutes choses égales par ailleurs, une dette qui finance une consommation courante sans contrepartie durable leur transmet surtout un coût, et un investissement dont elles profiteront peut leur transmettre davantage qu’il ne coûte.
 Ce qui reste vrai dans tous les cas : la décision est prise sans elles.
 La page « La dette publique est-elle un fardeau pour les générations futures ? » du même dossier décompose, dans les comptes, les emplois des déficits.
 Qui détient la dette publique française, et qui en touche les intérêts ?
 L’État porte 82 % de la dette publique (fin juin 2026, INSEE).
-Au 2e trimestre 2026, ses titres négociables sont détenus en valeur de marché à 59,7 % par des non-résidents, 21,7 % par des banques, assureurs et fonds résidents, 18,7 % par d’autres porteurs résidents, parmi lesquels la Banque de France, dont la part n’est pas publiée (Banque de France, via l’Agence France Trésor).
+Au 2e trimestre 2026, ses titres négociables sont détenus en valeur de marché à 59,7 % par des non-résidents, 21,7 % par des banques, assureurs et fonds résidents, 18,7 % par d’autres porteurs résidents, parmi lesquels la Banque de France, que cette répartition n’isole pas (Banque de France, via l’Agence France Trésor).
 Le classement se fait par résidence, non par nationalité.
 Pour les ménages, la Direction générale du Trésor estime, en remontant les placements de l’assurance-vie, des fonds et des banques, que sur 10 euros de patrimoine financier, 1 finance de la dette des administrations publiques, majoritairement françaises.
-Aucune statistique publiée ne répartit en revanche les intérêts de la dette publique par niveau de vie ou de patrimoine, et une part des titres détenus n’est pas une part des intérêts versés.
+Les comptes distribués de l’Insee ne répartissent en revanche ces intérêts entre ménages que par convention, au prorata de leurs revenus financiers : aucune statistique publiée n’observe quels ménages les reçoivent, et une part des titres détenus n’est pas une part des intérêts versés.
 Détenir n’est pas payer : le porteur a avancé les fonds et en reçoit la rémunération ; la répartition des porteurs ne dit pas qui supporte la charge finale.
 Faut-il rembourser la dette publique ?
 Chaque titre arrivé à échéance est remboursé, mais la dette dans son ensemble se refinance : l’État émet de nouveaux titres pour rembourser les anciens, et le stock évolue avec le déficit.
@@ -377,8 +377,9 @@ Peut-on sortir de l’engrenage de la dette publique ?
 Le renouvellement des emprunts ne condamne pas, à lui seul, la dette à croître.
 Son poids augmente quand le déficit hors intérêts persiste et quand le taux payé dépasse la croissance de l’économie ; il peut s’alourdir encore si les prêteurs exigent des taux plus élevés, ou si les ajustements affaiblissent la croissance.
 Ce n’est pas une fatalité : plusieurs pays européens ont réduit leur ratio.
-Mais les sorties ne sont pas équivalentes : réduire le déficit, accroître la croissance, alléger le coût du financement ou annuler une part de la dette déplacent la charge vers des groupes différents, contribuables, bénéficiaires des dépenses, épargnants ou banques.
-Une annulation réduit le stock sans supprimer ce qui le reconstitue.
+Mais les sorties ne sont pas équivalentes : réduire le déficit, accroître la croissance, alléger le coût du financement ou annuler une part de la dette ne font pas porter la charge aux mêmes groupes, contribuables, bénéficiaires des dépenses, épargnants ou banques.
+Une annulation, si elle était permise et reconnue, réduirait le stock sans supprimer ce qui le reconstitue.
+Le volet « Peut-on changer les règles du jeu de la dette publique ? » du dossier compare ces voies, parmi d’autres : ce que chacune change, qui la décide et sur qui elle fait porter la charge.
 Cette analyse est développée dans le livre
 Dette Publique : Qui paie vraiment ?
 La question n’est pas « combien ? » mais « qui paie ? » — et par quels canaux le coût se déplace.
@@ -391,21 +392,21 @@ Version papier : 19 € · Kindle : 9,99 €
 Sommaire, extraits et recensions →
 D’où viennent ces chiffres
 Redistribution par dixième et par âge : Mathias André, Alexis Barrau et Thomas Renaud (Insee), « Revenus des ménages élargis à l’ensemble de l’économie en 2023 », Insee Analyses n° 118, 16 avril 2026 (figures 1c, 1e et 2a).
-Exposition à un même effort : Insee, comptes nationaux distribués, tableau CND.101, vingtièmes de niveau de vie, 2020-2023, base 2020 ; calcul de l’auteur, tests de robustesse publiés avec les données.
+Exposition à un même effort : Insee, comptes nationaux distribués, tableau CND.101, vingtièmes de niveau de vie usuel, 2020-2023, base 2020, diffusés comme statistiques expérimentales ; calcul de l’auteur, tests de robustesse publiés avec les données.
 Dette par administration : INSEE, dette trimestrielle de Maastricht des administrations publiques par sous-secteur (séries 010777610, 010777613, 010777625 et 010777626 de la Banque de données macroéconomiques), mise à jour du 29 septembre 2026, fin juin 2026.
 Le livre, arrêté sur les comptes de fin 2025, imprime 2 823 milliards pour l’État sur 3 460,5 ; cette page suit les dernières données publiées.
 Détenteurs des titres de l’État : Banque de France, via l’Agence France Trésor, 2e trimestre 2026, valeurs relevées sur le graphique de l’Agence (capture archivée).
 Créanciers indirects des ménages : Direction générale du Trésor, « Que finance l’épargne financière des ménages français ? », Trésor-Éco n° 378, 8 janvier 2026.
 Revalorisation des pensions en 2026 : projet de loi de financement de la sécurité sociale pour 2026, n° 1907, article 44 ; loi n° 2025-1403 du 30 décembre 2025 de financement de la sécurité sociale pour 2026 ; instruction interministérielle DSS/3A/DB/6BRS/2025/174, 15 décembre 2025.
-Chaque chiffre de cette page est lu dans ces pièces par un générateur qui en contrôle l’empreinte, et non recopié à la main ; les données compilées se téléchargent dans le bloc « Réutiliser » ci-dessous.
+Les chiffres sont lus par des générateurs dans des pièces archivées dont l’empreinte est contrôlée ; les parts de l’AFT, publiées en image seulement, sont relevées à la main sur la capture archivée, et les valeurs des communiqués de la section sur l’annulation sont transcrites, puis confrontées par script au texte archivé ; les données compilées se téléchargent dans le bloc « Réutiliser » ci-dessous.
 D’où vient cette analyse
 L’anthropie est l’hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu’ils ne le résolvent.
 Appliquée aux finances publiques, cette hypothèse est formalisée dans le working paper AWP-03 — Dette publique et anthropie : qui paie vraiment le désordre ?
 (DOI : 10.5281/zenodo.19268769, PDF en accès libre).
-Le working paper AWP-09 met cette lecture à l’épreuve des comptes publics : l’incidence d’un même effort dépend de l’instrument retenu, mais l’asymétrie entre ménages mobiles et ménages captifs reste hors de portée des comptes, qui n’observent pas la soustraction des premiers.
+Le working paper AWP-09 met cette lecture à l’épreuve des comptes publics : la répartition comptable d’un même effort entre ménages dépend de l’instrument retenu, mais l’asymétrie entre ménages mobiles et ménages captifs reste hors de portée des comptes, qui n’observent pas la soustraction des premiers.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l’image sa source, sa période et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Qui emprunte ?
 Qui détient les titres de l’État ?
 Les administrations qui empruntent, puis les porteurs des titres de l’État : deux champs distincts, sans lien de proportion.
@@ -453,20 +454,19 @@ Synthèse de l’auteur, schéma non quantitatif
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Qui paie vraiment la dette publique ? ».
-Données Insee et Banque de France via l’AFT, relevé du 5 novembre 2026. https://stephane-lalut.com/qui-paie-la-dette-publique/
+Lalut, Stéphane (2026). « Qui paie vraiment la dette publique ? » Données Insee, Banque de France (directement et via l’AFT), BCE et Eurostat, relevé du 5 novembre 2026. https://stephane-lalut.com/qui-paie-la-dette-publique/
 Copier la citation
 En trois phrases
-La répartition des effets de la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations peuvent reporter des coûts sur des groupes moins capables de les éviter.
+La répartition des effets de la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations pourraient, hypothèse que ces données ne testent pas, reporter des coûts sur des groupes moins capables de les éviter.
 Les données disponibles montrent qui emprunte, qui détient les titres de l’État et qui contribue ou reçoit aujourd’hui — pas qui supportera la charge finale.
 Une perte ne s’attribue qu’à une décision déterminée, comparée à son alternative.
 Copier le résumé
 Les données
-Détention de la dette publique (registre du livre, sources INSEE et Banque de France) et comptes nationaux distribués 2023 de l’Insee, avec leurs périodes, unités et conventions, et les tests de robustesse de l’exposition.
+Dette publique par administration (INSEE), détenteurs des titres négociables de l’État (Banque de France via l’AFT) et comptes nationaux distribués 2023 de l’Insee, avec leurs périodes, unités et conventions, et les tests de robustesse de l’exposition.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
-Les séries brutes appartiennent à leurs producteurs (Insee et Banque de France via l’AFT), sous leurs propres conditions.
+Les séries brutes appartiennent à leurs producteurs (Insee, Banque de France [directement et via l’AFT], BCE et Eurostat), sous leurs propres conditions.
 Les valeurs reprises de l’AFT, dans les fichiers comme dans les graphiques, ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →

@@ -39,9 +39,11 @@ T = {
               "l'État aux enchères à des banques agréées, les spécialistes en valeurs du Trésor ; elles les revendent aux "
               "investisseurs, en France et à l'étranger ; de 2015 à 2022 (achats nets), la Banque de France en a acheté sur ce marché, "
               "jamais directement à l'État, en payant avec des réserves créditées aux banques. Second volet, ce que l'État "
-              "paie chaque année : les coupons, à chaque détenteur, Banque de France comprise ; la Banque de France paie "
-              "de son côté les réserves placées par les banques, au taux de dépôt de la BCE, et reverse ses bénéfices à "
-              "l'État selon ses résultats. À l'échéance, l'État rembourse chaque titre avec sa trésorerie ou un nouvel emprunt."),
+              "paie chaque année : les coupons, à chaque détenteur, Banque de France comprise ; la Banque de France rémunère "
+              "de son côté, au taux de dépôt de la BCE, les réserves placées par les banques à sa facilité de dépôt et, "
+              "depuis juin 2026, les excédents de réserves que les banques ayant accès à cette facilité laissent en compte "
+              "courant, et reverse ses "
+              "bénéfices à l'État selon ses résultats. À l'échéance, l'État rembourse chaque titre avec sa trésorerie ou un nouvel emprunt."),
         v1="1. Le chemin d'un titre", v2="2. Les intérêts payés chaque année, et à qui",
         v2_m="2. Les intérêts payés, et à qui",
         etat=("L'État", "Agence France Trésor"),
@@ -49,8 +51,8 @@ T = {
         inv=("Investisseurs", "assureurs, banques, fonds, en France et à l'étranger"),
         bdf=("Banque de France", "pour l'Eurosystème"),
         banques=("Banques", "qui détiennent les réserves"),
-        l1=[("1", "L'Agence France Trésor vend les titres de l'État, pour l'essentiel aux enchères (adjudication). Seuls les spécialistes en "
-                  "valeurs du Trésor y achètent : l'État reçoit leur argent, c'est l'emprunt."),
+        l1=[("1", "L'Agence France Trésor vend les titres de l'État, pour l'essentiel aux enchères (adjudication), où achètent les "
+                  "spécialistes en valeurs du Trésor : l'État reçoit leur argent, c'est l'emprunt."),
             ("2", "Ils les gardent ou les revendent aux investisseurs, sur le marché « secondaire »."),
             ("3", "De 2015 à 2022 (achats nets), la Banque de France en a acheté sur ce marché pour l'Eurosystème (les "
                   "banques centrales de la zone euro), puis a remplacé les titres échus jusqu'en juillet 2023 ou fin 2024 "
@@ -60,7 +62,9 @@ T = {
         l2=[("5", "Chaque année, l'État paie les intérêts de ses titres à chaque détenteur, Banque de France comprise. "
                   "À l'échéance, il rembourse le titre avec sa trésorerie ou un nouvel emprunt : retour en 1."),
             ("6", "La Banque de France rémunère au taux de dépôt de la BCE les réserves placées à sa facilité de dépôt "
-                  "(les réserves obligatoires ne sont plus rémunérées depuis septembre 2023)."),
+                  "et, depuis juin 2026, les excédents de réserves que les banques ayant accès à cette facilité laissent en "
+                  "compte courant (les réserves obligatoires ne sont plus "
+                  "rémunérées depuis septembre 2023)."),
             ("7", "Selon ses résultats, elle reverse à l'État un impôt et un dividende. Quand les réserves lui coûtent plus "
                   "que ses titres ne rapportent, ses résultats baissent : elle n'a versé aucun dividende au titre des "
                   "exercices 2022 à 2025.")],
@@ -75,8 +79,9 @@ T = {
               "government bonds at auction to licensed banks, the primary dealers; they resell them to investors in "
               "France and abroad; from 2015 to 2022 (net purchases), the Banque de France bought some of them on that market, never "
               "directly from the State, paying with reserves credited to banks. Part two, what the State pays each year: "
-              "coupons to every holder, the Banque de France included; the Banque de France in turn pays interest on "
-              "the reserves banks place with it, at the ECB deposit rate, and passes its profits on to the State. At maturity, the State "
+              "coupons to every holder, the Banque de France included; the Banque de France in turn pays, at the ECB "
+              "deposit rate, interest on the reserves banks place in its deposit facility and, since June 2026, on excess "
+              "reserves that banks with access to that facility leave on current accounts, and passes its profits on to the State. At maturity, the State "
               "repays each bond from its cash or new borrowing."),
         v1="1. The path of a bond", v2="2. Interest paid each year, and to whom",
         v2_m="2. Interest paid, and to whom",
@@ -85,7 +90,7 @@ T = {
         inv=("Investors", "insurers, banks, funds, in France and abroad"),
         bdf=("Banque de France", "for the Eurosystem"),
         banques=("Banks", "holding the reserves"),
-        l1=[("1", "The Agence France Trésor sells government bonds, mostly at auction. Only primary dealers can buy there: the "
+        l1=[("1", "The Agence France Trésor sells government bonds, mostly at auction, where primary dealers buy them: the "
                   "State receives their money; that is the borrowing."),
             ("2", "They keep them or resell them to investors on the secondary market."),
             ("3", "From 2015 to 2022 (net purchases), the Banque de France bought some on that market for the Eurosystem "
@@ -94,8 +99,10 @@ T = {
             ("4", "It paid in central bank money created for the purchase: reserves credited to the seller's bank.")],
         l2=[("5", "Each year, the State pays interest on its bonds to every holder, the Banque de France included. At "
                   "maturity, it repays the bond from its cash or new borrowing: back to 1."),
-            ("6", "The Banque de France pays the ECB deposit rate on reserves placed in its deposit facility (minimum "
-                  "reserves have not been remunerated since September 2023)."),
+            ("6", "The Banque de France pays the ECB deposit rate on reserves placed in its deposit facility and, since "
+                  "June 2026, on excess reserves that banks with access to that facility leave on current accounts (minimum "
+                  "reserves have not been remunerated "
+                  "since September 2023)."),
             ("7", "Depending on its results, it pays the State tax and a dividend. When reserves cost it more than its "
                   "bonds earn, its results fall: it paid no dividend for the 2022 to 2025 financial years.")],
         source="Author's diagram; Agence France Trésor, Banque de France (annual accounts), ECB, Treaty on the Functioning of the EU (Art. 123).",
