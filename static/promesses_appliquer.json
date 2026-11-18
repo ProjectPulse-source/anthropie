@@ -1,10 +1,10 @@
 {
  "releve_le": "2026-11-05",
- "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (données DILA), Sénat, Secrétariat général du Gouvernement, Légifrance, Conseil d'État",
+ "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (échéanciers du Gouvernement publiés par la DILA), Sénat, Secrétariat général du Gouvernement, Légifrance, Conseil d'État",
  "meta": {
   "page": "https://stephane-lalut.com/une-loi-votee-s-applique-t-elle-tout-de-suite/",
   "protocole": "fiches de preuve v2, volet Appliquer, E1 à E3 ; phase B de la refonte du 12/10/2026",
-  "dates": "baromètre : version du 05/10/2026 ; rapports du Sénat : pages lues le 06/10/2026 (deux pages ajoutées le 12/10/2026) ; bilan du SGG au 30/06/2026 : page rendue lue le 05/11/2026 ; décisions du Conseil d'État : lues le 12/10/2026 ; releve_le = date de la dernière lecture d'une source",
+  "dates": "baromètre : version du 05/10/2026 ; rapports du Sénat : pages lues le 06/10/2026 (deux pages ajoutées le 12/10/2026) ; bilan du SGG au 30/06/2026 : page rendue lue le 05/11/2026 ; décisions du Conseil d'État : lues le 12/10/2026 (la n° 471646, le 06/11/2026) ; releve_le = date de la dernière lecture d'une source",
   "sources": {
    "barometre": [
     "# source: https://barometre.assemblee-nationale.fr/barometre_application_lois_assemblee.csv ; version du 05/10/2026 ; sha256 5a79d54f9fec5cd7366a2dabb7ccb3d0a444b317f29d36531d9015dcb52692b8 ; 2059 lois au fichier complet ; extrait : lois publiees du 01/10/2017 au 30/09/2025 (553)",
@@ -85,7 +85,7 @@
    }
   },
   "definitions": {
-   "session": "lois publiées du 1er octobre au 30 septembre suivant",
+   "session": "lois promulguées (date de la loi) du 1er octobre au 30 septembre suivant",
    "directe": "loi classée d'application directe : par le baromètre quand son échéancier ne comporte, à la date du relevé, aucune mesure autre que « sans objet » (un statut courant, pas la preuve que la loi ne prévoyait aucune mesure : voir 2025-138) ; par le Sénat dans ses annexes",
    "statut_loi": "attente : au moins une mesure « en attente d'application » ; toutes : non directe, avec échéancier, toutes ses mesures à appliquer appliquées ; directe : « Loi d'application directe » ; sans_echeancier : « Loi sans échéancier » (baromètre)",
    "U_lois": "lois classées différemment par les deux sources, même quand une règle explique l'écart",
@@ -1457,7 +1457,7 @@
   "s2324": "59 %",
   "s2425": "66 %",
   "releve": "05/10/2026",
-  "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au 30/06/2026, page lue le 05/11/2026 ; décisions du Conseil d'État lues le 12/10/2026",
+  "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus les 06 et 12/10/2026 ; bilan du SGG au 30/06/2026, page lue le 05/11/2026 ; décisions du Conseil d'État lues les 12/10 et 06/11/2026",
   "senat_1819": "72 %",
   "sgg_1819": "82,4 %",
   "cit_sgg_1718": "Au 31 mars 2019, ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
@@ -1516,7 +1516,7 @@
   "cit_sgg_1819_tr": "the departments of the General Secretariat of the Government arrive for their part at an overall rate of 82.4%",
   "cit_diverge_tr": "The rate calculated by the Senate may differ from the one calculated by the Government for technical reasons, of two kinds.",
   "cit_arretes_tr": "the Senate carries out a comprehensive check of the implementing measures of laws, including the ministerial orders (arrêtés) whose publication is provided for by the law. This is not the case of the General Secretariat of the Government.",
-  "cit_politique_tr": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted does not reflect the legislature's intent, and therefore that the expected measure has not been taken.",
+  "cit_politique_tr": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted does not respect the legislature's intent, and therefore that the expected measure has not been taken.",
   "cit_differees_tr": "the Senate includes in its rate the measures expected for articles whose entry into force is deferred, unlike the Government.",
   "cit_1213_tr": "for the laws promulgated during the 2012-2013 parliamentary year, the implementation rate of laws stands at 90% (counting by number of laws) or about 64% (counting by number of measures), percentages calculated from the Senate's statistical database and which match exactly those calculated by the Government's departments",
   "cit_802_arretes_tr": "Since 1 January 2024, the SGG has checked the publication of ministerial orders provided that they were expressly provided for by a legislative provision.",
@@ -1623,7 +1623,7 @@
   "s2324": "59%",
   "s2425": "66%",
   "releve": "5 October 2026",
-  "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General Secretariat of the Government report at 30 June 2026, page read on 5 November 2026; Conseil d'État decisions read on 12 October 2026",
+  "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 and 12 October 2026; General Secretariat of the Government report at 30 June 2026, page read on 5 November 2026; Conseil d'État decisions read on 12 October and 6 November 2026",
   "senat_1819": "72%",
   "sgg_1819": "82.4%",
   "cit_sgg_1718": "Au 31 mars 2019, ces 28 lois appelaient 461 mesures réglementaires d'application et nous en avons pris 393, soit un taux d'application de 85 %",
@@ -1673,7 +1673,7 @@
   "cit_sgg_1819_tr": "the departments of the General Secretariat of the Government arrive for their part at an overall rate of 82.4%",
   "cit_diverge_tr": "The rate calculated by the Senate may differ from the one calculated by the Government for technical reasons, of two kinds.",
   "cit_arretes_tr": "the Senate carries out a comprehensive check of the implementing measures of laws, including the ministerial orders (arrêtés) whose publication is provided for by the law. This is not the case of the General Secretariat of the Government.",
-  "cit_politique_tr": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted does not reflect the legislature's intent, and therefore that the expected measure has not been taken.",
+  "cit_politique_tr": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted does not respect the legislature's intent, and therefore that the expected measure has not been taken.",
   "cit_differees_tr": "the Senate includes in its rate the measures expected for articles whose entry into force is deferred, unlike the Government.",
   "cit_1213_tr": "for the laws promulgated during the 2012-2013 parliamentary year, the implementation rate of laws stands at 90% (counting by number of laws) or about 64% (counting by number of measures), percentages calculated from the Senate's statistical database and which match exactly those calculated by the Government's departments",
   "cit_802_arretes_tr": "Since 1 January 2024, the SGG has checked the publication of ministerial orders provided that they were expressly provided for by a legislative provision.",

@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 938" role="img" font-variant-numeric="tabular-nums" aria-labelledby="atm-t atm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="atm-t">Are the laws promulgated in France since 2017 still waiting for a measure?</title><desc id="atm-d">Horizontal bars, one per session from 2017-2018 to 2024-2025, laws promulgated excluding treaties, by status at 5 October 2026: 2017-2018: 41 laws, 8 with at least one measure pending, 21 with all measures taken, 12 with no measure to take; 2018-2019: 49 laws, 13 with at least one measure pending, 11 with all measures taken, 25 with no measure to take; 2019-2020: 43 laws, 13 with at least one measure pending, 14 with all measures taken, 16 with no measure to take; 2020-2021: 51 laws, 21 with at least one measure pending, 11 with all measures taken, 19 with no measure to take; 2021-2022: 64 laws, 18 with at least one measure pending, 25 with all measures taken, 21 with no measure to take; 2022-2023: 44 laws, 15 with at least one measure pending, 19 with all measures taken, 10 with no measure to take; 2023-2024: 51 laws, 21 with at least one measure pending, 9 with all measures taken, 21 with no measure to take; 2024-2025: 56 laws, 21 with at least one measure pending, 14 with all measures taken, 20 with no measure to take, 1 with no schedule. The values are in the table below the figure.</desc>
-<rect width="300" height="938" fill="#ffffff"/>
-<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Are the laws promulgated in</text>
-<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">France since 2017 still</text>
-<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">waiting for a measure?</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 972" role="img" font-variant-numeric="tabular-nums" aria-labelledby="atm-t atm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="atm-t">Laws promulgated in France from Oct. 2017 to Sept. 2025: still waiting for a measure?</title><desc id="atm-d">Horizontal bars, one per session from 2017-2018 to 2024-2025, laws promulgated excluding treaties, by status at 5 October 2026: 2017-2018: 41 laws, 8 with at least one measure pending, 21 with all measures taken, 12 with no measure to take; 2018-2019: 49 laws, 13 with at least one measure pending, 11 with all measures taken, 25 with no measure to take; 2019-2020: 43 laws, 13 with at least one measure pending, 14 with all measures taken, 16 with no measure to take; 2020-2021: 51 laws, 21 with at least one measure pending, 11 with all measures taken, 19 with no measure to take; 2021-2022: 64 laws, 18 with at least one measure pending, 25 with all measures taken, 21 with no measure to take; 2022-2023: 44 laws, 15 with at least one measure pending, 19 with all measures taken, 10 with no measure to take; 2023-2024: 51 laws, 21 with at least one measure pending, 9 with all measures taken, 21 with no measure to take; 2024-2025: 56 laws, 21 with at least one measure pending, 14 with all measures taken, 20 with no measure to take, 1 with no schedule. The values are in the table below the figure.</desc>
+<rect width="300" height="972" fill="#ffffff"/>
+<text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Laws promulgated in France</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">from Oct. 2017 to Sept. 2025:</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">still waiting for a measure?</text>
 <text x="0" y="104" font-size="13.5" fill="#52514e">number of laws per session;</text>
 <text x="0" y="122" font-size="13.5" fill="#52514e">administrative statuses at the</text>
 <text x="0" y="140" font-size="13.5" fill="#52514e">reading date (5 October 2026)</text>
@@ -58,15 +58,17 @@
 <text x="0" y="698" font-size="13.5" font-weight="600" fill="#52514e">21 pending out of 56 laws</text>
 <line x1="0" y1="712.0" x2="300" y2="712.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="733.0" font-size="13.5" fill="#52514e">Barometer of the application of laws</text>
-<text class="pied-source" x="0" y="750.0" font-size="13.5" fill="#52514e">(National Assembly, LexImpact; DILA</text>
-<text class="pied-source" x="0" y="767.0" font-size="13.5" fill="#52514e">data), status at 5 October 2026</text>
-<text class="pied-note" x="0" y="788.0" font-size="13.5" fill="#52514e">Laws promulgated per session</text>
-<text class="pied-note" x="0" y="805.0" font-size="13.5" fill="#52514e">(1 Oct.-30 Sept.), excluding treaties.</text>
-<text class="pied-note" x="0" y="822.0" font-size="13.5" fill="#52514e">Statuses from the barometer's labels:</text>
-<text class="pied-note" x="0" y="839.0" font-size="13.5" fill="#52514e">'pending' does not mean 'late'; 'no</text>
-<text class="pied-note" x="0" y="856.0" font-size="13.5" fill="#52514e">measure to take' depends on the 'not</text>
-<text class="pied-note" x="0" y="873.0" font-size="13.5" fill="#52514e">applicable' label and does not prove</text>
-<text class="pied-note" x="0" y="890.0" font-size="13.5" fill="#52514e">that the law provided for no measure.</text>
-<text class="pied-licence" x="0" y="911.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="928.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text class="pied-source" x="0" y="750.0" font-size="13.5" fill="#52514e">(National Assembly, LexImpact;</text>
+<text class="pied-source" x="0" y="767.0" font-size="13.5" fill="#52514e">Government implementation schedules</text>
+<text class="pied-source" x="0" y="784.0" font-size="13.5" fill="#52514e">published by DILA),</text>
+<text class="pied-source" x="0" y="801.0" font-size="13.5" fill="#52514e">status at 5 October 2026</text>
+<text class="pied-note" x="0" y="822.0" font-size="13.5" fill="#52514e">Laws promulgated per session</text>
+<text class="pied-note" x="0" y="839.0" font-size="13.5" fill="#52514e">(1 Oct.-30 Sept.), excluding treaties.</text>
+<text class="pied-note" x="0" y="856.0" font-size="13.5" fill="#52514e">Statuses from the barometer's labels:</text>
+<text class="pied-note" x="0" y="873.0" font-size="13.5" fill="#52514e">“pending” does not mean “late”; “no</text>
+<text class="pied-note" x="0" y="890.0" font-size="13.5" fill="#52514e">measure to take” depends on the “not</text>
+<text class="pied-note" x="0" y="907.0" font-size="13.5" fill="#52514e">applicable” label and does not prove</text>
+<text class="pied-note" x="0" y="924.0" font-size="13.5" fill="#52514e">that the law provided for no measure.</text>
+<text class="pied-licence" x="0" y="945.0" font-size="13.5" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="962.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

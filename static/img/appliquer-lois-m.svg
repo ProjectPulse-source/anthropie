@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 953" role="img" font-variant-numeric="tabular-nums" aria-labelledby="alm-t alm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="alm-t">Les lois classées d'application directe, selon deux sources</title><desc id="alm-d">Barres horizontales, une par session : lois d'application directe pour les deux sources, lois classées différemment par le baromètre et par le Sénat, lois qu'aucune des deux ne classe d'application directe. Par session : 2017-2018 : 41 lois, 11 directes pour les deux sources, 3 classées différemment; 2018-2019 : 49 lois, 22 directes pour les deux sources, 3 classées différemment; 2019-2020 : 43 lois, 15 directes pour les deux sources, 1 classées différemment; 2020-2021 : 51 lois, 17 directes pour les deux sources, 3 classées différemment; 2021-2022 : 64 lois, 15 directes pour les deux sources, 9 classées différemment; 2022-2023 : 44 lois, 10 directes pour les deux sources, 1 classées différemment; 2023-2024 : 51 lois, 21 directes pour les deux sources, 0 classées différemment; 2024-2025 : 56 lois, 19 directes pour les deux sources, 6 classées différemment. En 2018-2019, le baromètre compte 25 lois d'application directe sur 49. Les valeurs sont dans le tableau sous la figure.</desc>
+<title id="alm-t">Les lois classées d'application directe, selon deux sources</title><desc id="alm-d">Barres horizontales, une par session : lois d'application directe pour les deux sources, lois classées différemment par le baromètre et par le Sénat, lois qu'aucune des deux ne classe d'application directe. Par session : 2017-2018 : 41 lois, 11 directes pour les deux sources, 3 classées différemment ; 2018-2019 : 49 lois, 22 directes pour les deux sources, 3 classées différemment ; 2019-2020 : 43 lois, 15 directes pour les deux sources, 1 classée différemment ; 2020-2021 : 51 lois, 17 directes pour les deux sources, 3 classées différemment ; 2021-2022 : 64 lois, 15 directes pour les deux sources, 9 classées différemment ; 2022-2023 : 44 lois, 10 directes pour les deux sources, 1 classée différemment ; 2023-2024 : 51 lois, 21 directes pour les deux sources, 0 classée différemment ; 2024-2025 : 56 lois, 19 directes pour les deux sources, 6 classées différemment. En 2018-2019, le baromètre compte 25 lois d'application directe sur 49. Les valeurs sont dans le tableau sous la figure.</desc>
 <rect width="300" height="953" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Les lois classées</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">d'application directe, selon</text>
@@ -62,7 +62,7 @@
 <text x="0" y="679" font-size="13.5" font-weight="600" fill="#52514e">19 directes, 6 divergentes, sur 56</text>
 <line x1="0" y1="693.0" x2="300" y2="693.0" stroke="#e1e0d9"/>
 <text class="pied-source" x="0" y="714.0" font-size="13.5" fill="#52514e">Baromètre de l'application des lois</text>
-<text class="pied-source" x="0" y="731.0" font-size="13.5" fill="#52514e">(état au 05/10/2026) ; rapports</text>
+<text class="pied-source" x="0" y="731.0" font-size="13.5" fill="#52514e">(état au 05/10/2026) ; rapports</text>
 <text class="pied-source" x="0" y="748.0" font-size="13.5" fill="#52514e">annuels du Sénat sur l'application des</text>
 <text class="pied-source" x="0" y="765.0" font-size="13.5" fill="#52514e">lois</text>
 <text class="pied-note" x="0" y="786.0" font-size="13.5" fill="#52514e">Gris : lois que le baromètre et le</text>
@@ -73,6 +73,6 @@
 <text class="pied-note" x="0" y="871.0" font-size="13.5" fill="#52514e">les 2 de plus, sans liste nominative,</text>
 <text class="pied-note" x="0" y="888.0" font-size="13.5" fill="#52514e">sont en gris. Trait noir : la moitié</text>
 <text class="pied-note" x="0" y="905.0" font-size="13.5" fill="#52514e">des lois.</text>
-<text class="pied-licence" x="0" y="926.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="926.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
 <text class="pied-licence" x="0" y="943.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

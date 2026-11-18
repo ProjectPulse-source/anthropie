@@ -1,10 +1,11 @@
 ---
 title: "Une loi votée s'applique-t-elle tout de suite ?"
-description: "Du vote à la dernière mesure : les étapes qui séparent une loi votée de son application, combien des lois promulguées depuis 2017 attendent encore un décret ou un arrêté, ce que le Conseil d'État exige du Gouvernement, et pourquoi le Sénat et le Gouvernement publient des taux d'application différents. Données ouvertes."
+description: "Du vote à la dernière mesure : les étapes qui séparent une loi votée de son application, combien des lois promulguées d'octobre 2017 à septembre 2025 attendent encore un décret ou un arrêté, ce que le Conseil d'État exige du Gouvernement, et pourquoi le Sénat et le Gouvernement publient des taux d'application différents. Données ouvertes."
 chapo: "Pas du seul fait du vote. Une fois la loi promulguée et publiée, celles de ses dispositions dont l'exécution nécessite des décrets ou des arrêtés attendent ces mesures. Au {app.releve}, selon le baromètre de l'application des lois, {app.L_att} des {app.nlois} lois promulguées d'octobre 2017 à septembre 2025, hors conventions (lois qui autorisent la ratification ou l'approbation d'un accord international, ou l'adhésion à un tel accord), attendaient encore au moins une mesure ; {app.L_tout} les avaient toutes reçues et {app.L_dir} étaient classées sans mesure à prendre. Une mesure en attente n'est pas forcément en retard, mais le Gouvernement n'est pas libre d'attendre indéfiniment : le Conseil d'État exige qu'il agisse « dans un délai raisonnable », et le refus de prendre une mesure due peut être porté devant le juge administratif, qui peut l'annuler et ordonner de la prendre."
 date: 2026-10-06
-lastmod: 2026-11-06
+lastmod: 2026-11-18
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-18, texte: "Corrections après relecture des sources : les années de deux rapports du Sénat sont rectifiées ; la page ne dit plus qu'on ne peut calculer les délais et les taux à six mois, que le baromètre publie ; pour la loi n° 2025-138, c'est le classement de la même mesure qui a changé entre le 30 juin et le 5 octobre 2026."}
   - {date: 2026-11-06, texte: "Ajout : répartition des lois en attente selon la commission de l'Assemblée saisie au fond ; injonction assortie d'une astreinte (Conseil d'État, 27 septembre 2023)."}
   - {date: 2026-11-05, texte: "Mise à jour : bilan semestriel du Gouvernement au 30 juin 2026 (XVIe législature : 91 % sur 1 086 mesures ; XVIIe : 67 % sur 518 mesures, lois promulguées jusqu'au 31 décembre 2025). Pour la XVIe, le texte de ce bilan reprend la date du précédent, ce que la page signale."}
   - {date: 2026-11-05, texte: "Correction : la phrase « Toutefois… » appartient au premier alinéa de l'article 1er du code civil ; la voie d'urgence forme le second."}
@@ -15,7 +16,7 @@ og_image_alt: "Carte de partage : le nombre de mesures d'application encore atte
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "promesses_appliquer"
   nom: "Mesures d'application des lois promulguées de 2017 à 2025, statut des lois, lois d'application directe et taux publiés par le Sénat et le Gouvernement"
-  description: "Statut, loi par loi, des lois promulguées du 1er octobre 2017 au 30 septembre 2025, hors conventions, et état de leurs mesures d'application au 5 octobre 2026 (baromètre de l'application des lois, Assemblée nationale et LexImpact, données DILA) ; tri des observations « sans objet » par règles écrites ; lois d'application directe par session selon le baromètre et selon le Sénat, rapprochées loi par loi ; taux d'application publiés par le Sénat de 2002-2003 à 2024-2025, par segment de définition, et par le Secrétariat général du Gouvernement dans son bilan au 30 juin 2026."
+  description: "Statut, loi par loi, des lois promulguées du 1er octobre 2017 au 30 septembre 2025, hors conventions, et état de leurs mesures d'application au 5 octobre 2026 (baromètre de l'application des lois, Assemblée nationale et LexImpact, d'après les échéanciers du Gouvernement publiés par la DILA) ; tri des observations « sans objet » par règles écrites ; lois d'application directe par session selon le baromètre et selon le Sénat, rapprochées loi par loi ; taux d'application publiés par le Sénat de 2002-2003 à 2024-2025, par segment de définition, et par le Secrétariat général du Gouvernement dans son bilan au 30 juin 2026."
   couverture_temporelle: "2002/2026"
   couverture_spatiale: "France"
   variables:
@@ -26,7 +27,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   sources:
     - "https://barometre.assemblee-nationale.fr/"
     - "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006419280"
-    - "https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/legislatif-et-reglementaire/application-des-lois/bilan-semestriel-au-31-decembre-2025"
+    - "https://www.legifrance.gouv.fr/contenu/menu/bilan-semestriel-au-30-juin-2026"
   mots: ["application des lois", "décrets d'application", "mesures réglementaires", "délai raisonnable", "Conseil d'État", "Sénat", "Secrétariat général du Gouvernement", "promesses"]
   fichiers: ["promesses_appliquer.csv", "promesses_appliquer.json"]
   doi: "10.5281/zenodo.23212664"
@@ -37,16 +38,17 @@ faq:
   - question: "Combien de lois attendent encore une mesure d'application ?"
     answer: "Au {app.releve}, selon le baromètre de l'application des lois, {app.L_att} des {app.nlois} lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente » ; {app.L_tout} avaient reçu toutes leurs mesures, {app.L_dir} étaient classées sans mesure à prendre et une n'avait pas d'échéancier. Sur les {app.nmes} mesures recensées pour ces lois, {app.A} étaient en attente. Une mesure en attente n'est pas forcément en retard."
   - question: "Quel est le taux d'application des lois ?"
-    answer: "Il dépend des conventions de calcul. Dans son bilan au 30 juin 2026, le Secrétariat général du Gouvernement publie {app.sgg16_taux} pour les lois de la XVIe législature, décrets seuls, et {app.sgg17_taux} pour celles de la XVIIe, décrets ou arrêtés ; le Sénat publie {app.s2425} pour la session 2024-2025, au 31 mars 2026. Ces taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date : ils ne se classent pas."
+    answer: "Il dépend des conventions de calcul, et de la façon d'apprécier si une loi est effectivement appliquée, qui diffère parfois entre le Sénat et le Gouvernement. Dans son bilan au 30 juin 2026, le Secrétariat général du Gouvernement publie {app.sgg16_taux} pour les lois de la XVIe législature, décrets seuls, et {app.sgg17_taux} pour celles de la XVIIe, décrets ou arrêtés ; le Sénat publie {app.s2425} pour la session 2024-2025, au 31 mars 2026. Ces taux ne portent ni sur les mêmes lois, ni sur les mêmes mesures, ni à la même date : ils ne se classent pas."
   - question: "Une loi sur deux n'est-elle pas appliquée ?"
     answer: "Au {app.releve}, selon le baromètre, {app.L_att} des {app.nlois} lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée « en attente ». Rapportées aux {app.L_mes} lois dont l'échéancier comportait au moins une mesure à prendre, en attente ou prise, elles en forment {app.L_att_pct_mes}, environ une sur deux : c'est un rapport entre deux catégories du baromètre à la date du relevé, non la part des lois en attente parmi celles qui prévoyaient une mesure. Cela ne signifie ni que ces lois étaient entièrement inapplicables, ni que chacune de ces mesures était en retard. Une formule comme « une loi sur deux » peut venir de ce second compte, d'un taux par mesure, d'une seule session ou d'une autre date : avant de la reprendre, il faut savoir ce qu'elle compte, à quelle date et sur quelles lois."
 ressource:  # index /ressources/ (layouts/ressources/list.html)
   type: ["juridique-institutionnel", "quantitatif"]  # protocoles de la page (CLAUDE.md du site, « Production des ressources »)
   refonte: "2026-10-12"
+  conception: "docs/conception/une-loi-votee-s-applique-t-elle-tout-de-suite.md"  # fiche de conception (règle 12 du site)
   bloc: "promesses"
   livres: ["un-president-peut-il-tenir-ses-promesses"]  # livre que la page prolonge (fiche du livre, « Ressources et données du livre »)
   rang: 30
-  nature: "Baromètre de l'application des lois, rapports du Sénat, bilan du SGG et décisions du Conseil d'État, rapprochés loi par loi ; données ouvertes"
+  nature: "Baromètre de l'application des lois, rapports du Sénat, bilan du Secrétariat général du Gouvernement et décisions du Conseil d'État, rapprochés loi par loi ; données ouvertes"
 onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le gabarit)
   long: "Une loi votée s'applique-t-elle tout de suite ?"
   court: "Appliquer"
@@ -55,11 +57,11 @@ onglet:  # barre du dossier de son bloc (partials/barre-bloc.html, posée par le
 
 {{< reutiliser-ancre >}}
 
-Une promesse qui passe par la loi ne s'arrête pas au vote. Entre l'adoption et l'application, la loi franchit plusieurs étapes, et certaines de ses dispositions attendent ensuite des décrets ou des arrêtés. Cette page suit ces étapes, compte les lois et les mesures qui attendent encore pour les lois promulguées depuis 2017, dit ce que le juge exige du Gouvernement, et explique pourquoi les taux d'application publiés ne disent pas tous la même chose. Les comptes de lois et de mesures sont recalculés loi par loi à partir des sources publiques&nbsp;; les taux publiés par le Sénat et par le Gouvernement, transcrits de leurs rapports, sont relus par le script dans les documents archivés.
+Une promesse qui passe par la loi ne s'arrête pas au vote. Entre l'adoption et l'application, la loi franchit plusieurs étapes, et certaines de ses dispositions attendent ensuite des décrets ou des arrêtés. Cette page suit ces étapes, compte les lois et les mesures qui attendent encore pour les lois promulguées d'octobre 2017 à septembre 2025, dit ce que le juge exige du Gouvernement, et explique pourquoi les taux d'application publiés ne disent pas tous la même chose. Les comptes de lois et de mesures sont recalculés loi par loi à partir des sources publiques&nbsp;; les taux publiés par le Sénat et par le Gouvernement, transcrits de leurs rapports, sont relus par le script dans les documents archivés.
 
 ## Du vote à l'application&nbsp;: par quelles étapes passe une loi&nbsp;? {#du-vote-a-l-application}
 
-Cinq étapes séparent une loi votée de son application, et chacune a son acteur.
+Du vote d'une loi à son application, cinq étapes se succèdent, vote compris, et chacune a son acteur.
 
 1. **Le vote.** Le Parlement adopte définitivement le texte.
 2. **La promulgation.** Le Président de la République promulgue la loi dans les quinze jours qui suivent sa transmission au Gouvernement, et peut, dans ce délai, demander au Parlement une nouvelle délibération (Constitution, art.&nbsp;10). Le Conseil constitutionnel s'intercale ici&nbsp;: il examine obligatoirement les lois organiques avant leur promulgation, les autres lois peuvent lui être déférées, et sa saisine suspend le délai de promulgation (art.&nbsp;61).
@@ -85,19 +87,22 @@ Le code civil ne vise pas toute disposition qui annonce un décret&nbsp;: il vis
 
 ## Combien de lois attendent encore une mesure&nbsp;? {#lois-en-attente}
 
-{{< figure-svg fichier="appliquer-statut" alt="Barres horizontales, une par session de 2017-2018 à 2024-2025 : lois qui attendent au moins une mesure, lois qui ont reçu toutes leurs mesures, lois classées sans mesure à prendre, loi sans échéancier. Chaque session compte des lois qui attendent encore, y compris la plus ancienne. Les valeurs sont dans le tableau sous la figure." >}}Lois promulguées de chaque session, hors conventions, et leur statut administratif à la date du relevé ({{< app-val "releve" >}}), selon le baromètre de l'application des lois. Une mesure «&nbsp;en attente&nbsp;» n'est pas forcément en retard.{{< /figure-svg >}}
-
-{{< fig-actions id="statut" >}}
-
-{{< app-tableau "statut" "Les valeurs de la figure en tableau" >}}
-
+<div class="figure-lecture">
+{{< figure-svg fichier="appliquer-statut" alt="Barres horizontales, une par session de 2017-2018 à 2024-2025 : lois qui attendent au moins une mesure, lois qui ont reçu toutes leurs mesures, lois classées sans mesure à prendre, loi sans échéancier. Chaque session compte des lois qui attendent encore, y compris la plus ancienne. Les valeurs sont dans le tableau sous la figure." >}}Lois promulguées de chaque session (du 1er&nbsp;octobre au 30&nbsp;septembre), hors conventions, et leur statut administratif à la date du relevé ({{< app-val "releve" >}}), selon le baromètre de l'application des lois. Une mesure «&nbsp;en attente&nbsp;» n'est pas forcément en retard.{{< /figure-svg >}}
+<div class="figure-lecture__texte">
 <div class="resultat-phrase">
 
 **Le résultat en une phrase.** Au {{< app-val "releve" >}}, selon le baromètre, {{< app-val "L_att" >}} des {{< app-val "nlois" >}} lois promulguées d'octobre 2017 à septembre 2025, hors conventions, comportaient encore au moins une mesure classée «&nbsp;en attente&nbsp;»&nbsp;; {{< app-val "L_tout" >}} avaient reçu toutes leurs mesures, {{< app-val "L_dir" >}} étaient classées sans mesure à prendre, et une n'avait pas d'échéancier.
 
 </div>
+</div>
+</div>
 
-**Rapporté aux lois classées avec des mesures à prendre.** À la date du relevé, le baromètre classe {{< app-val "L_dir" >}} des {{< app-val "nlois" >}} lois promulguées sans mesure à prendre. Parmi les autres, {{< app-val "L_mes" >}} ont un échéancier qui comporte au moins une mesure à prendre, encore en attente ou déjà prise, et une n'a pas d'échéancier. Les {{< app-val "L_att" >}} lois en attente forment {{< app-val "L_att_pct_mes" >}} de ces {{< app-val "L_mes" >}} lois, environ une sur deux. La loi sans échéancier n'est comptée ni d'un côté ni de l'autre. Les deux parts sont exactes&nbsp;: l'une rapporte les lois en attente à toutes les lois promulguées, l'autre aux seules lois que le baromètre classe avec au moins une mesure à prendre.
+{{< fig-actions id="statut" >}}
+
+{{< app-tableau "statut" "Les valeurs de la figure en tableau" >}}
+
+**Rapporté aux lois classées avec des mesures à prendre.** À la date du relevé, le baromètre classe {{< app-val "L_dir" >}} des {{< app-val "nlois" >}} lois promulguées sans mesure à prendre. Parmi les autres, {{< app-val "L_mes" >}} ont un échéancier (la liste, tenue par le Gouvernement, des mesures qu'appelle la loi, avec, le cas échéant, leur date prévue) qui comporte au moins une mesure à prendre, encore en attente ou déjà prise, et une n'a pas d'échéancier. Les {{< app-val "L_att" >}} lois en attente forment {{< app-val "L_att_pct_mes" >}} de ces {{< app-val "L_mes" >}} lois, environ une sur deux. La loi sans échéancier n'est comptée ni d'un côté ni de l'autre. Les deux parts sont exactes&nbsp;: l'une rapporte les lois en attente à toutes les lois promulguées, l'autre aux seules lois que le baromètre classe avec au moins une mesure à prendre.
 
 **Une catégorie du baromètre n'est pas un besoin initial.** Le baromètre classe «&nbsp;sans mesure à prendre&nbsp;» une loi dont toutes les mesures sont indiquées «&nbsp;sans objet&nbsp;» à la date du relevé&nbsp;: c'est un statut courant, pas la preuve que la loi ne prévoyait aucune mesure. La loi n°&nbsp;2025-138 sur la sclérose latérale amyotrophique en est le contre-exemple&nbsp;: classée sans mesure à prendre, elle prévoyait un arrêté, pris depuis, dont l'observation du baromètre donne la référence («&nbsp;{{< app-val "cas_2025_138" >}}&nbsp;»&nbsp;; voir la section suivante). Le rapport de {{< app-val "L_att" >}} à {{< app-val "L_mes" >}} compare donc deux catégories du baromètre&nbsp;; il ne dit pas quelle part des lois qui prévoyaient une mesure en attend encore.
 
@@ -105,7 +110,7 @@ Le code civil ne vise pas toute disposition qui annonce un décret&nbsp;: il vis
 
 **De quels textes s'agit-il&nbsp;?** Le baromètre indique, pour chaque loi, la commission de l'Assemblée nationale saisie au fond. Les {{< app-val "L_att" >}} lois en attente relèvent surtout de quatre commissions&nbsp;: celles {{< app-val "com1" >}} ({{< app-val "com1_n" >}} lois), {{< app-val "com2" >}} ({{< app-val "com2_n" >}}), {{< app-val "com3" >}} ({{< app-val "com3_n" >}}) et {{< app-val "com4" >}} ({{< app-val "com4_n" >}}). Avec {{< app-val "com_m_n" >}} des {{< app-val "A" >}} mesures en attente, la commission {{< app-val "com_m" >}} en porte la plus grande part. La commission saisie indique le domaine du texte, non le ministère chargé de prendre les mesures.
 
-**Le témoin du Sénat.** Le Sénat compte, lui, les lois «&nbsp;entièrement applicables&nbsp;»&nbsp;: celles d'application directe et celles qui ont reçu toutes les mesures prévues. Pour la session 2024-2025, il écrit&nbsp;: «&nbsp;{{< app-val "cit_802_36" >}}&nbsp;» Il précise&nbsp;: «&nbsp;{{< app-val "cit_802_detail" >}}&nbsp;» Le baromètre compte lui aussi {{< app-val "s25_N" >}} lois pour cette session. Au {{< app-val "releve" >}}, ces deux mêmes catégories y réunissent {{< app-val "s25_dirtout" >}} lois&nbsp;: {{< app-val "s25_dir" >}} sans mesure à prendre et {{< app-val "s25_tout" >}} dont toutes les mesures sont prises. Ce sont deux constats, à deux dates, par deux producteurs qui ne classent pas les lois de la même façon&nbsp;: ils ne s'additionnent ni ne se confirment, et rien n'établit que les lois comptées de part et d'autre soient les mêmes.
+**Le témoin du Sénat.** Le Sénat compte, lui, les lois «&nbsp;entièrement applicables&nbsp;»&nbsp;: celles d'application directe et celles qui ont reçu toutes les mesures prévues. Pour la session 2024-2025, il écrit&nbsp;: «&nbsp;{{< app-val "cit_802_36" >}}&nbsp;» Il précise&nbsp;: «&nbsp;{{< app-val "cit_802_detail" >}}&nbsp;» Le baromètre compte lui aussi {{< app-val "s25_N" >}} lois pour cette session. Au {{< app-val "releve" >}}, ces deux mêmes catégories y réunissent {{< app-val "s25_dirtout" >}} lois&nbsp;: {{< app-val "s25_dir" >}} sans mesure à prendre et {{< app-val "s25_tout" >}} dont toutes les mesures sont prises. Ce sont deux constats, à deux dates, par deux producteurs qui ne classent pas les lois de la même façon&nbsp;: ils ne s'additionnent ni ne se confirment. Les lois d'application directe sont rapprochées loi par loi, plus bas, à partir de la liste du Sénat&nbsp;; les lois dont toutes les mesures sont prises ne le sont pas ici, et rien n'établit que ce soient les mêmes de part et d'autre.
 
 ## Combien de mesures d'application attendent encore&nbsp;? {#mesures-en-attente}
 
@@ -119,19 +124,19 @@ Une loi attend des mesures&nbsp;; c'est en mesures que le baromètre suit l'appl
 
 Au {{< app-val "releve" >}}, sur les {{< app-val "nmes" >}} mesures recensées pour ces lois, {{< app-val "P" >}} ont un acte publié identifié, {{< app-val "A" >}} sont en attente, {{< app-val "S" >}} sont indiquées «&nbsp;sans objet&nbsp;» et {{< app-val "U" >}} ont un statut incomplet («&nbsp;appliqué&nbsp;» sans acte identifié). Pour les lois de 2017-2018, {{< app-val "A_1718" >}} mesures sur {{< app-val "N_1718" >}} restent en attente&nbsp;; pour celles de 2024-2025, {{< app-val "A_2425" >}} sur {{< app-val "N_2425" >}}.
 
-**«&nbsp;En attente&nbsp;» n'est pas «&nbsp;en retard&nbsp;».** {{< app-val "differ_A" >}} des {{< app-val "A" >}} mesures en attente portent, dans leur objet ou leur observation, la mention «&nbsp;différé&nbsp;» ou «&nbsp;différée&nbsp;», dont {{< app-val "differ_1819" >}} pour les lois de 2018-2019 et {{< app-val "differ_1920" >}} pour celles de 2019-2020&nbsp;; la mention ne dit pas si la date différée est passée. La date prévue manque pour {{< app-val "A_sans_date" >}} des {{< app-val "A" >}} mesures en attente&nbsp;: l'ancienneté d'une attente ne se calcule donc pas, et la page ne publie aucun délai.
+**«&nbsp;En attente&nbsp;» n'est pas «&nbsp;en retard&nbsp;».** {{< app-val "differ_A" >}} des {{< app-val "A" >}} mesures en attente portent, dans leur objet ou leur observation, la mention «&nbsp;différé&nbsp;» ou «&nbsp;différée&nbsp;», dont {{< app-val "differ_1819" >}} pour les lois de 2018-2019 et {{< app-val "differ_1920" >}} pour celles de 2019-2020&nbsp;; la mention ne dit pas si la date différée est passée. La date prévue manque pour {{< app-val "A_sans_date" >}} des {{< app-val "A" >}} mesures en attente&nbsp;: le retard par rapport à la date prévue ne se calcule donc pas, et la page ne publie aucun délai.
 
 **«&nbsp;Sans objet&nbsp;» est une étiquette, pas une preuve.** Le producteur range {{< app-val "S" >}} mesures sous cette étiquette et en donne le motif en observation. Triées par règles écrites, ces observations disent le plus souvent que la mesure est déjà appliquée par un texte existant ({{< app-val "tri_deja" >}}), que sa base légale a été abrogée, réécrite ou privée de son renvoi à un décret ({{< app-val "tri_base" >}}), ou qu'aucune mesure n'est nécessaire ({{< app-val "tri_aucune" >}})&nbsp;; {{< app-val "tri_event" >}} portent sur des mesures éventuelles non utilisées, {{< app-val "tri_nonprise" >}} disent qu'un décret n'a pas été pris, et {{< app-val "tri_indet" >}} restent indéterminées, faute de relever d'une seule règle. Ce tri reprend ce qu'écrit le producteur&nbsp;; il ne reclasse aucune mesure.
 
-Restent, parmi les {{< app-val "S" >}} observations «&nbsp;sans objet&nbsp;», les {{< app-val "tri_acte" >}} qui commencent par la référence d'un arrêté ou d'un décret. Pour les lois de 2024-2025, elles sont {{< app-val "obs_acte_2425" >}}. Les {{< app-val "obs_ecartes" >}} observations qui commencent par «&nbsp;Décret non pris&nbsp;», sans référence d'acte, n'y sont pas comptées. Pour la loi n°&nbsp;2025-138, l'observation porte «&nbsp;{{< app-val "cas_2025_138" >}}&nbsp;», et le bilan du Gouvernement au 30&nbsp;juin 2026 compte encore sa mesure comme en attente&nbsp;: les deux sources décrivent deux états, à deux dates, et ne se contredisent pas.
+Restent, parmi les {{< app-val "S" >}} observations «&nbsp;sans objet&nbsp;», les {{< app-val "tri_acte" >}} qui commencent par la référence d'un arrêté ou d'un décret. Pour les lois de 2024-2025, elles sont {{< app-val "obs_acte_2425" >}}. Les {{< app-val "obs_ecartes" >}} observations qui commencent par «&nbsp;Décret non pris&nbsp;», sans référence d'acte, n'y sont pas comptées. Pour la loi n°&nbsp;2025-138, l'observation porte «&nbsp;{{< app-val "cas_2025_138" >}}&nbsp;», et le bilan du Gouvernement au 30&nbsp;juin 2026 compte encore sa mesure comme en attente, alors que cet arrêté lui est antérieur&nbsp;: entre le 30&nbsp;juin et le 5&nbsp;octobre, c'est le classement de la même mesure qui a changé, dans les échéanciers que tient le Secrétariat général du Gouvernement lui-même.
 
 <details class="repli"><summary>Ce qui a été vérifié, et comment</summary>
 
-Les mesures sont celles du baromètre de l'application des lois, publié par l'Assemblée nationale et LexImpact à partir des échéanciers de la DILA, dans sa version du {{< app-val "releve" >}}. Une mesure compte comme publiée si son état est «&nbsp;appliqué&nbsp;» et qu'un acte est identifié&nbsp;; «&nbsp;appliqué&nbsp;» sans acte identifié donne un statut incomplet. Le script vérifie que chaque mesure entre dans une et une seule catégorie, session par session, et que le fichier des lois du même producteur donne, loi par loi, le même nombre de mesures appliquées et à appliquer&nbsp;; il vérifie aussi que chaque loi relève d'un et d'un seul des quatre statuts. Un second programme, écrit séparément, a recompté les catégories de mesures à partir du fichier brut&nbsp;: les nombres concordent.
+Les mesures sont celles du baromètre de l'application des lois, publié par l'Assemblée nationale et sa cellule LexImpact à partir des échéanciers que tient le Secrétariat général du Gouvernement et que publie la direction de l'information légale et administrative (DILA), dans sa version du {{< app-val "releve" >}}. Une mesure compte comme publiée si son état est «&nbsp;appliqué&nbsp;» et qu'un acte est identifié&nbsp;; «&nbsp;appliqué&nbsp;» sans acte identifié donne un statut incomplet. Le script vérifie que chaque mesure entre dans une et une seule catégorie, session par session, et que le fichier des lois du même producteur donne, loi par loi, le même nombre de mesures appliquées et à appliquer&nbsp;; il vérifie aussi que chaque loi relève d'un et d'un seul des quatre statuts. Un second programme, écrit séparément, a recompté les catégories de mesures à partir du fichier brut&nbsp;: les nombres concordent.
 
 Les règles du tri des observations «&nbsp;sans objet&nbsp;» sont publiées dans le jeu de données&nbsp;; une observation qui relève de zéro ou de plusieurs règles est indéterminée. Une observation compte comme portant la référence d'un acte si elle commence par «&nbsp;Arrêté du&nbsp;», «&nbsp;Décret du&nbsp;» ou «&nbsp;Décret n°&nbsp;»&nbsp;; celles qui commencent par le mot sans référence sont listées dans le jeu de données, avec leur motif.
 
-Le baromètre ne publie que l'état courant. Les données ouvertes de la DILA sur les échéanciers ne remontent qu'en juillet 2025. Aucun taux «&nbsp;six mois après la loi&nbsp;» ne peut donc se recalculer pour les sessions antérieures, et la page n'en publie aucun.
+Le baromètre ne publie que l'état courant&nbsp;; il en tire, pour les lois promulguées depuis 2002, des indicateurs de délai (part des mesures appliquées dans un délai de six mois, délai médian d'application). Les données ouvertes de la DILA, elles, ne gardent pas l'historique des échéanciers&nbsp;: seuls le dernier export complet et ses mises à jour restent en ligne. L'état de chaque mesure six mois après sa loi, y compris pour celles qui ont changé de statut depuis, ne se reconstitue donc pas, et la page ne publie aucun taux à six mois par session.
 
 </details>
 
@@ -165,7 +170,7 @@ Le délai raisonnable ne se chiffre pas une fois pour toutes&nbsp;: il s'appréc
 
 Le refus de prendre une mesure due peut être porté devant le juge administratif, qui peut l'annuler et ordonner de la prendre&nbsp;: en mai 2021, le Conseil d'État a enjoint au Premier ministre de prendre un décret, et en janvier 2021, il a ordonné au garde des sceaux de prendre un arrêté, chaque fois dans un délai qu'il a fixé. Le retard peut aussi engager la responsabilité de l'État et ouvrir droit à réparation (CE, 27&nbsp;juillet 2005).
 
-Une mesure prévue n'est pas toujours due. En 2011, à propos d'un arrêté prévu par un décret et jamais pris, le Conseil d'État a jugé que le ministre n'était pas tenu de le prendre&nbsp;: l'article qui prévoyait cet arrêté fixait déjà de façon exhaustive le contenu du dossier en cause, et ne lui renvoyait que le modèle de ce dossier (CE, 29&nbsp;juin 2011, n°&nbsp;343188).
+Une mesure prévue n'est pas toujours due. En 2011, à propos d'un arrêté prévu par un décret et qui n'avait pas été pris, le Conseil d'État a jugé que le ministre n'était pas tenu de le prendre&nbsp;: l'article qui prévoyait cet arrêté fixait déjà de façon exhaustive le contenu du dossier en cause, et ne lui renvoyait que le modèle de ce dossier (CE, 29&nbsp;juin 2011, n°&nbsp;343188).
 
 <details class="repli"><summary>Les décisions du Conseil d’État, mot pour mot</summary>
 
@@ -179,25 +184,25 @@ Une mesure prévue n'est pas toujours due. En 2011, à propos d'un arrêté pré
 
 </details>
 
-**L'injonction peut être assortie d'une astreinte.** Le 27&nbsp;septembre 2023, le Conseil d'État a enjoint au Gouvernement de prendre le décret prévu par l'article&nbsp;477-1 du code civil, issu de la {{< app-val "cit_ce_loi2015" >}}, et a décidé&nbsp;: «&nbsp;{{< app-val "cit_ce_astreinte" >}}&nbsp;», si l'exécution n'est pas justifiée dans le délai fixé (n°&nbsp;471646).
+**L'injonction peut être assortie d'une astreinte.** Le 27&nbsp;septembre 2023, le Conseil d'État a enjoint à la Première ministre de prendre le décret prévu par l'article&nbsp;477-1 du code civil, issu de la {{< app-val "cit_ce_loi2015" >}}, et a décidé&nbsp;: «&nbsp;{{< app-val "cit_ce_astreinte" >}}&nbsp;», si l'exécution n'est pas justifiée dans le délai fixé (n°&nbsp;471646).
 
 **Ce que ces décisions ne disent pas.** Elles posent une règle et tranchent des cas&nbsp;; elles ne disent ni combien de refus sont portés devant le juge, ni ce que deviennent les injonctions, et aucune donnée lue ici ne le mesure. Le statut «&nbsp;en attente&nbsp;» du baromètre ne dit pas non plus si une mesure est due, ni si le délai raisonnable est dépassé.
 
 ## Pourquoi le Sénat et le Gouvernement publient-ils des taux différents&nbsp;? {#taux-publies}
 
-Parce que leurs conventions de calcul ont différé et diffèrent encore en partie. L'écart a une histoire.
+Parce que leurs conventions de calcul ont différé et diffèrent encore en partie, et que le Sénat et le Gouvernement n'apprécient pas toujours de la même façon si une loi est effectivement appliquée. L'écart a une histoire.
 
 **En 2012-2013, des taux qui coïncident.** Le Sénat écrit que, «&nbsp;{{< app-val "cit_1213" >}}&nbsp;». Cette année-là, le taux changeait selon qu'on comptait des lois ou des mesures, non selon le producteur.
 
-**En 2017-2019, un écart et ses raisons.** Pour 2017-2018, une fois les mesures différées écartées, les taux du Sénat et du Gouvernement se rapprochent, {{< app-val "s1718_hd" >}} pour le Sénat et {{< app-val "sgg1718" >}} pour le Gouvernement&nbsp;; les arrêtés, que seul le Sénat comptait, restent une différence de champ. Pour 2018-2019, le Sénat publie {{< app-val "senat_1819" >}} et rapporte que le Gouvernement parvient à {{< app-val "sgg_1819" >}}. En 2019, il donnait lui-même deux raisons techniques à l'écart, les arrêtés et les mesures différées, et un troisième motif, qu'il qualifiait de raisons politiques, notamment quand il juge qu'un décret pris ne respecte pas la volonté du législateur&nbsp;: la mesure attendue compte alors pour lui comme non prise. Un taux peut ainsi intégrer une appréciation, et non seulement un comptage.
+**En 2017-2019, un écart et ses raisons.** Pour 2017-2018, une fois les mesures différées écartées, les taux du Sénat et du Gouvernement se rapprochent, {{< app-val "s1718_hd" >}} pour le Sénat et {{< app-val "sgg1718" >}} pour le Gouvernement&nbsp;; les arrêtés, que seul le Sénat comptait, restent une différence de champ. Pour 2018-2019, le Sénat publie {{< app-val "senat_1819" >}} et rapporte que le Gouvernement parvient à {{< app-val "sgg_1819" >}}. En 2020, il donnait lui-même deux raisons techniques à l'écart, les arrêtés et les mesures différées, et un troisième motif, qu'il qualifiait de raisons politiques, notamment quand il juge qu'un décret pris ne respecte pas la volonté du législateur&nbsp;: la mesure attendue compte alors pour lui comme non prise. Un taux peut ainsi intégrer une appréciation, et non seulement un comptage.
 
-<details class="repli"><summary>Ce qu’écrivaient le Sénat et le Gouvernement en 2018 et 2019, mot pour mot</summary>
+<details class="repli"><summary>Ce qu’écrivaient le Sénat et le Gouvernement en 2019 et 2020, mot pour mot</summary>
 
 Pour 2017-2018, le Sénat écrit&nbsp;: «&nbsp;{{< app-val "cit_senat_1718" >}}&nbsp;». Le Secrétariat général du Gouvernement, entendu par le Sénat, déclare&nbsp;: «&nbsp;{{< app-val "cit_sgg_1718" >}}&nbsp;».
 
 Pour 2018-2019, le Sénat écrit&nbsp;: «&nbsp;{{< app-val "cit_senat_1819" >}}&nbsp;» et ajoute que «&nbsp;{{< app-val "cit_sgg_1819" >}}&nbsp;».
 
-En 2019, il en donnait les raisons&nbsp;: «&nbsp;{{< app-val "cit_diverge" >}}&nbsp;» D'une part, «&nbsp;{{< app-val "cit_arretes" >}}&nbsp;» D'autre part, «&nbsp;{{< app-val "cit_differees" >}}&nbsp;» Il mentionne aussi un troisième motif&nbsp;: «&nbsp;{{< app-val "cit_politique" >}}&nbsp;»
+En 2020, il en donnait les raisons&nbsp;: «&nbsp;{{< app-val "cit_diverge" >}}&nbsp;» D'une part, «&nbsp;{{< app-val "cit_arretes" >}}&nbsp;» D'autre part, «&nbsp;{{< app-val "cit_differees" >}}&nbsp;» Il mentionne aussi un troisième motif&nbsp;: «&nbsp;{{< app-val "cit_politique" >}}&nbsp;»
 
 </details>
 
@@ -221,19 +226,19 @@ Le dernier point du premier segment et le premier point retenu du suivant sont s
 
 Les «&nbsp;+&nbsp;{{< app-val "plus4" >}}&nbsp;points&nbsp;» ne se lisent pas dans le tableau, qui donne {{< app-val "s2324" >}} pour 2023-2024&nbsp;: le Sénat compare à son taux de 2023-2024 hors mesures différées. Le rapport précédent l'indiquait&nbsp;: «&nbsp;{{< app-val "cit_2324_62" >}}&nbsp;».
 
-Pour 2019-2020, les rapports donnent deux valeurs, celle du rapport de 2020 et celle du rapport suivant, marquée d'un cercle vide sur la figure. Révision du chiffre ou autre variante du taux&nbsp;: les documents ne permettent pas de le trancher, et la série garde les deux valeurs. La session 2009-2010 n'est pas retenue sur la figure, faute de date d'arrêté établie dans la phrase qui donne son taux. Deux valeurs pour une même session et une rupture de définition sont deux faits distincts&nbsp;: la série les garde l'un et l'autre.
+Pour 2019-2020, les rapports donnent deux valeurs, celle du rapport de 2021 et celle du rapport suivant, de 2022, marquée d'un cercle vide sur la figure. Révision du chiffre ou autre variante du taux&nbsp;: les documents ne permettent pas de le trancher, et la série garde les deux valeurs. La session 2009-2010 n'est pas retenue sur la figure, faute de date d'arrêté établie dans la phrase qui donne son taux. Deux valeurs pour une même session et une rupture de définition sont deux faits distincts&nbsp;: la série les garde l'un et l'autre.
 
 <details class="repli"><summary>La rupture de définition et les deux valeurs de 2019-2020, mot pour mot</summary>
 
 La rupture entre les deux premiers segments, selon le Sénat&nbsp;: «&nbsp;{{< app-val "cit_six_mois" >}}&nbsp;»
 
-Pour 2019-2020, le rapport de 2020 écrit&nbsp;: «&nbsp;{{< app-val "cit_2020_62" >}}&nbsp;». Le suivant, consacré à 2020-2021, écrit «&nbsp;{{< app-val "cit_2021_60" >}}&nbsp;», puis&nbsp;: «&nbsp;{{< app-val "cit_2021_62" >}}&nbsp;».
+Pour 2019-2020, le rapport de 2021 écrit&nbsp;: «&nbsp;{{< app-val "cit_2020_62" >}}&nbsp;». Le suivant, consacré à 2020-2021, écrit «&nbsp;{{< app-val "cit_2021_60" >}}&nbsp;», puis&nbsp;: «&nbsp;{{< app-val "cit_2021_62" >}}&nbsp;».
 
 </details>
 
 ## Ce que cette page ne dit pas {#limites}
 
-Elle ne dit pas si une loi produit l'effet que visait la promesse. Elle ne mesure pas la qualité des décrets, ni leur conformité à la volonté du législateur, que le Sénat apprécie lui-même. Elle ne donne aucun délai de publication, faute d'historique daté des échéanciers. Elle met côte à côte les taux du Sénat et du Gouvernement avec leurs définitions, sans les classer, et ne relie pas deux segments de la série du Sénat.
+Elle ne dit pas si une loi produit l'effet que visait la promesse. Elle ne mesure pas la qualité des décrets, ni leur conformité à la volonté du législateur, que le Sénat apprécie lui-même. Elle ne publie aucun délai par session&nbsp;: les délais du baromètre se calculent sur l'état courant des mesures, et celui de chaque mesure six mois après sa loi ne se reconstitue pas. Elle met côte à côte les taux du Sénat et du Gouvernement avec leurs définitions, sans les classer, et ne relie pas deux segments de la série du Sénat.
 
 {{< appel-livre slug="un-president-peut-il-tenir-ses-promesses" sur="Après le vote" avis="non" >}}
 Cette page compte ce qu'une loi attend encore après son vote. Le livre suit neuf promesses écrites, datées et signées, le long de la chaîne qui va de la décision à son résultat&nbsp;: ce qu'un président décide dans sa propre chaîne de pouvoir, ce qu'il doit faire voter, ce qu'il doit négocier, et ce qui ne dépendra jamais de lui. Il ne donne aucun conseil de vote.
@@ -241,13 +246,13 @@ Cette page compte ce qu'une loi attend encore après son vote. Le livre suit neu
 
 ## Questions fréquentes {#questions-frequentes}
 
-{{< faq-visible >}}
+{{< faq-visible colonnes="2" >}}
 
 ## Sources {#sources}
 
-**Baromètre de l'application des lois**, Assemblée nationale et LexImpact, à partir des échéanciers de la DILA&nbsp;: fichiers des lois et des mesures, version du {{< app-val "releve" >}}.
+**Baromètre de l'application des lois**, Assemblée nationale et LexImpact, à partir des échéanciers que tient le Secrétariat général du Gouvernement et que publie la DILA&nbsp;: fichiers des lois et des mesures, version du {{< app-val "releve" >}}.
 
-**Sénat**, rapports annuels sur l'application des lois de 2011 à 2026, synthèses et communiqués de 2003 à 2011&nbsp;; le document et la page de chaque valeur et de chaque citation sont donnés dans le jeu de données.
+**Sénat**, rapports annuels sur l'application des lois de 2012 à 2026, synthèses et communiqués de 2003 à 2011&nbsp;; le document et la page de chaque valeur et de chaque citation sont donnés dans le jeu de données.
 
 **Secrétariat général du Gouvernement**, bilan semestriel de l'application des lois au 30&nbsp;juin 2026, lu sur Légifrance par navigateur le 5&nbsp;novembre 2026.
 
@@ -255,8 +260,8 @@ Cette page compte ce qu'une loi attend encore après son vote. Le livre suit neu
 
 **Constitution**, art.&nbsp;10, 13, 21, 22 et 61, et **code civil**, art.&nbsp;1er, lus sur Légifrance (API).
 
-Les chiffres, les citations, les contrôles et les figures sont produits par un script unique, qui s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases. Chaque citation est vérifiée mot pour mot dans le document archivé dont elle est tirée&nbsp;: pages des rapports du Sénat, articles de la Constitution et du code civil, décisions du Conseil d'État&nbsp;; pour le bilan du Secrétariat général du Gouvernement, que Légifrance refuse aux scripts, dans un relevé de la page lue par navigateur, dont l'empreinte est celle que le navigateur a calculée. Les comptes de lois et de mesures sont recalculés à partir des fichiers du baromètre&nbsp;; les taux du Sénat, transcrits dans le script, sont relus dans les pages archivées de ses rapports&nbsp;; le tri des observations «&nbsp;sans objet&nbsp;» suit des règles écrites dans le script. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_appliquer.csv), en format long&nbsp;; [JSON](/promesses_appliquer.json), avec les définitions, les règles du tri et le compte rendu des contrôles. Ce jeu est aussi archivé sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664).
+Les chiffres, les citations, les contrôles et les figures sont produits par un script unique, qui s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases. Chaque citation est vérifiée mot pour mot dans le document archivé dont elle est tirée&nbsp;: pages des rapports du Sénat, articles de la Constitution et du code civil, décisions du Conseil d'État&nbsp;; pour le bilan du Secrétariat général du Gouvernement, que Légifrance refuse aux scripts, dans un relevé de la page lue par navigateur, dont l'empreinte est celle que le navigateur a calculée. Les comptes de lois et de mesures sont recalculés à partir des fichiers du baromètre&nbsp;; les taux du Sénat, transcrits dans le script, sont relus dans les pages archivées de ses rapports&nbsp;; le tri des observations «&nbsp;sans objet&nbsp;» suit des règles écrites dans le script. **Télécharger les données** (licence CC BY 4.0)&nbsp;: [CSV](/promesses_appliquer.csv), en format long&nbsp;; [JSON](/promesses_appliquer.json), avec les définitions, les règles du tri et le compte rendu des contrôles. La version de ce jeu du 12&nbsp;octobre 2026 est archivée sur Zenodo, avec les six autres de la même série et leur note de méthode, sous un identifiant permanent à citer&nbsp;: [doi:10.5281/zenodo.23212664](https://doi.org/10.5281/zenodo.23212664)&nbsp;; elle porte le bilan du Gouvernement au 31&nbsp;décembre 2025, et les ajouts et corrections faits depuis (bilan au 30&nbsp;juin 2026, répartition par commission, astreinte) n'y figurent pas encore.
 
-{{< reutiliser figures="figures_appliquer" jeu="promesses_appliquer" sources="Assemblée nationale et LexImpact (données DILA), Sénat, SGG, Conseil d'État, Légifrance" donnees="Le statut des lois et l'état de leurs mesures d'application par session, le tri des observations « sans objet », les lois d'application directe selon les deux sources et les taux publiés par le Sénat depuis 2002-2003 et par le Gouvernement au 31 décembre 2025 ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
-Au {{< app-val "releve" >}}, selon le baromètre de l'application des lois, {{< app-val "L_att" >}} des {{< app-val "nlois" >}} lois promulguées d'octobre 2017 à septembre 2025, hors conventions, attendaient encore au moins une mesure&nbsp;; {{< app-val "L_tout" >}} les avaient toutes reçues et {{< app-val "L_dir" >}} étaient classées sans mesure à prendre. Le Conseil d'État exige que les mesures qu'implique nécessairement l'application de la loi soient prises dans un délai raisonnable. Les taux d'application du Sénat et du Gouvernement reposent sur des conventions de calcul différentes, et la série du Sénat sur {{< app-val "nsegments" >}} définitions successives depuis 2002-2003.
+{{< reutiliser figures="figures_appliquer" jeu="promesses_appliquer" sources="Assemblée nationale et LexImpact (échéanciers du Gouvernement publiés par la DILA), Sénat, Secrétariat général du Gouvernement, Conseil d'État, Légifrance" donnees="Le statut des lois et l'état de leurs mesures d'application par session, le tri des observations « sans objet », les lois d'application directe selon les deux sources et les taux publiés par le Sénat depuis 2002-2003 et par le Gouvernement dans son bilan au 30 juin 2026 ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
+Au {{< app-val "releve" >}}, selon le baromètre de l'application des lois, {{< app-val "L_att" >}} des {{< app-val "nlois" >}} lois promulguées d'octobre 2017 à septembre 2025, hors conventions, attendaient encore au moins une mesure&nbsp;; {{< app-val "L_tout" >}} les avaient toutes reçues et {{< app-val "L_dir" >}} étaient classées sans mesure à prendre. Une mesure en attente n'est pas forcément en retard, mais le Conseil d'État exige que les mesures qu'implique nécessairement l'application de la loi soient prises dans un délai raisonnable, hors le cas où des engagements internationaux de la France s'y opposent. Les taux d'application du Sénat et du Gouvernement reposent sur des conventions de calcul différentes, et la série du Sénat sur {{< app-val "nsegments" >}} définitions successives depuis 2002-2003.
 {{< /reutiliser >}}

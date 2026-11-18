@@ -205,7 +205,7 @@ TR = {
                    "orders (arrêtés) whose publication is provided for by the law. This is not the case of the General "
                    "Secretariat of the Government.",
     "cit_politique": "It may also differ for political reasons, in particular when the Senate considers that a decree adopted "
-                     "does not reflect the legislature's intent, and therefore that the expected measure has not been taken.",
+                     "does not respect the legislature's intent, and therefore that the expected measure has not been taken.",
     "cit_differees": "the Senate includes in its rate the measures expected for articles whose entry into force is deferred, "
                      "unlike the Government.",
     "cit_1213": "for the laws promulgated during the 2012-2013 parliamentary year, the implementation rate of laws stands at 90% "
@@ -847,8 +847,9 @@ def affichage(r: dict) -> dict:
     A = _cles_communes(r, "fr")
     A.update({
         "releve": RELEVE,
-        "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus le 06/10/2026 ; bilan du SGG au "
-                     "30/06/2026, page lue le 05/11/2026 ; décisions du Conseil d'État lues le 12/10/2026",
+        # 17/11/2026 (lot promesses-b, relecture P1-7) : deux pages du Sénat lues le 12/10, la décision n° 471646 le 06/11
+        "releve_le": "05/10/2026 (baromètre de l'application des lois) ; rapports du Sénat lus les 06 et 12/10/2026 ; bilan du "
+                     "SGG au 30/06/2026, page lue le 05/11/2026 ; décisions du Conseil d'État lues les 12/10 et 06/11/2026",
     })
     for k, cle in (("senat_1819", "cit_senat_1819"), ("sgg_1819", "cit_sgg_1819")):
         m = re.search(r"(\d+(?:,\d+)?) %", r["citations"][cle])
@@ -869,9 +870,9 @@ def affichage_en(r: dict, A_fr: dict) -> dict:
     A = _cles_communes(r, "en")
     A.update({
         "releve": "5 October 2026",
-        "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 October 2026; General "
-                     "Secretariat of the Government report at 30 June 2026, page read on 5 November 2026; Conseil "
-                     "d'État decisions read on 12 October 2026",
+        "releve_le": "5 October 2026 (barometer of the application of laws); Senate reports read on 6 and 12 October 2026; "
+                     "General Secretariat of the Government report at 30 June 2026, page read on 5 November 2026; Conseil "
+                     "d'État decisions read on 12 October and 6 November 2026",
     })
     for k in ("senat_1819", "sgg_1819"):
         A[k] = A_fr[k].replace(" ", "").replace(",", ".")
@@ -1014,29 +1015,29 @@ def legende(e, y, items) -> None:
 
 _SEG_FR, _SEG_EN = lg.lettres(len(SEGMENTS), "fr"), lg.lettres(len(SEGMENTS), "en")
 T = {
-    "fr": {"src0": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au " + RELEVE,
-           "note0": "Lois promulguées par session (1er oct.-30 sept.), hors conventions. Statuts tirés des étiquettes du baromètre : "
+    "fr": {"src0": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; échéanciers du Gouvernement publiés par la\u00a0DILA), état\u00a0au\u00a0" + RELEVE,
+           "note0": "Lois promulguées par session (1er\u00a0oct.-30\u00a0sept.), hors conventions. Statuts tirés des étiquettes du baromètre : "
                     "« en attente » ne veut pas dire « en retard » ; « sans mesure à prendre » dépend de l'étiquette « sans objet » et "
                     "ne prouve pas que la loi ne prévoyait aucune mesure.",
-           "t0": "Les lois promulguées depuis 2017 attendent-elles encore une mesure ?",
+           "t0": "Les lois promulguées d'octobre 2017 à\u00a0septembre\u00a02025 attendent-elles encore une\u00a0mesure\u00a0?",
            "s0": "nombre de lois par session ; statuts administratifs à la date du relevé (%s)" % RELEVE,
            "l0": ["au moins une mesure en attente", "toutes mesures prises", "sans mesure à prendre", "sans échéancier"],
            "e0": "{a} en attente sur {n} lois",
            "d0": "Barres horizontales, une par session de 2017-2018 à 2024-2025, lois promulguées hors conventions, par statut au {r} : "
                  "{liste}. Les valeurs sont dans le tableau sous la figure.",
-           "d0s": "{s} : {n} lois, dont {a} avec au moins une mesure en attente, {t} toutes mesures prises, {d} sans mesure à prendre{e}",
+           "d0s": "{s}\u00a0: {n} lois, dont {a} avec au moins une mesure en attente, {t} toutes mesures prises, {d} sans mesure à prendre{e}",
            "d0e": ", {x} sans échéancier",
-           "src1": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; données DILA), état au " + RELEVE,
-           "note1": "Mesures des lois promulguées par session (1er oct.-30 sept.), hors conventions. État à la date du relevé : ni un "
+           "src1": "Baromètre de l'application des lois (Assemblée nationale, LexImpact ; échéanciers du Gouvernement publiés par la\u00a0DILA), état\u00a0au\u00a0" + RELEVE,
+           "note1": "Mesures des lois promulguées par session (1er\u00a0oct.-30\u00a0sept.), hors conventions. État à la date du relevé : ni un "
                     "taux historique, ni une efficacité.",
            "t1": "Les mesures d'application des lois, par session de la loi", "s1": "nombre de mesures recensées et leur état au %s" % RELEVE,
            "d1": "Barres horizontales, une par session de 2017-2018 à 2024-2025 : mesures avec un acte publié identifié, en attente, "
                  "indiquées sans objet, statut incomplet. Au total {nmes} mesures, dont {A} en attente. Par session : {liste}. "
                  "Les valeurs sont dans le tableau sous la figure.",
-           "d1s": "{s} : {n} mesures, dont {a} en attente",
+           "d1s": "{s}\u00a0: {n} mesures, dont {a} en attente",
            "l1": ["acte publié identifié", "en attente", "indiquées sans objet", "statut incomplet"],
            "attente": "{} en attente", "e1": "{a} en attente sur {n} mesures",
-           "src2": "Baromètre de l'application des lois (état au %s) ; rapports annuels du Sénat sur l'application des lois" % RELEVE,
+           "src2": "Baromètre de l'application des lois (état\u00a0au\u00a0%s) ; rapports annuels du Sénat sur l'application des lois" % RELEVE,
            "note2": "Gris : lois que le baromètre et le Sénat classent différemment. 2024-2025 : le Sénat publie {senat} lois "
                     "d'application directe dans sa synthèse et {publie} ailleurs dans le même rapport ; les {ecart} de plus, sans liste "
                     "nominative, sont en gris. Trait noir : la moitié des lois.",
@@ -1045,7 +1046,7 @@ T = {
            "d2": "Barres horizontales, une par session : lois d'application directe pour les deux sources, lois classées différemment "
                  "par le baromètre et par le Sénat, lois qu'aucune des deux ne classe d'application directe. Par session : {liste}. En {ct_session}, le baromètre "
                  "compte {ct_baro} lois d'application directe sur {ct_N}. Les valeurs sont dans le tableau sous la figure.",
-           "d2s": "{s} : {n} lois, {d} directes pour les deux sources, {u} classées différemment",
+           "d2s": "{s}\u00a0: {n} lois, {d} {directes} pour les deux sources, {u} {classees} différemment",
            "l2": ["application directe (les deux sources)", "classement divergent", "non directes (les deux sources)"],
            "lois": "{} lois",
            "e2": "{d} {wd}, {u} {wu}, sur {n}",
@@ -1061,11 +1062,11 @@ T = {
            "d3s": "{s} : {v} % (segment {g})",
            "pct": "{} %", "leg3": "1 à 6 : segments (définitions dans le tableau) ; cercle vide : 2019-2020 selon le rapport suivant",
            "leg3m": "1 à 6 : segments ; cercle vide : 2019-2020 selon le rapport suivant"},
-    "en": {"src0": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
-           "note0": "Laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Statuses from the barometer's labels: "
-                    "'pending' does not mean 'late'; 'no measure to take' depends on the 'not applicable' label and does not prove "
+    "en": {"src0": "Barometer of the application of laws (National Assembly, LexImpact; Government implementation schedules published by DILA), status\u00a0at\u00a05\u00a0October\u00a02026",
+           "note0": "Laws promulgated per session (1\u00a0Oct.-30\u00a0Sept.), excluding treaties. Statuses from the barometer's labels: "
+                    "“pending” does not mean “late”; “no measure to take” depends on the “not applicable” label and does not prove "
                     "that the law provided for no measure.",
-           "t0": "Are the laws promulgated in France since 2017 still waiting for a measure?",
+           "t0": "Laws promulgated in France from Oct. 2017 to Sept. 2025: still waiting for a measure?",
            "s0": "number of laws per session; administrative statuses at the reading date (5 October 2026)",
            "l0": ["at least one measure pending", "all measures taken", "no measure to take", "no schedule"],
            "e0": "{a} pending out of {n} laws",
@@ -1073,10 +1074,10 @@ T = {
                  "{liste}. The values are in the table below the figure.",
            "d0s": "{s}: {n} laws, {a} with at least one measure pending, {t} with all measures taken, {d} with no measure to take{e}",
            "d0e": ", {x} with no schedule",
-           "src1": "Barometer of the application of laws (National Assembly, LexImpact; DILA data), status at 5 October 2026",
-           "note1": "Measures of the laws promulgated per session (1 Oct.-30 Sept.), excluding treaties. Status at the reading date: "
+           "src1": "Barometer of the application of laws (National Assembly, LexImpact; Government implementation schedules published by DILA), status\u00a0at\u00a05\u00a0October\u00a02026",
+           "note1": "Measures of the laws promulgated per session (1\u00a0Oct.-30\u00a0Sept.), excluding treaties. Status at the reading date: "
                     "neither a historical rate nor efficiency.",
-           "t1": "Implementing measures of French laws, by session of the law", "s1": "number of measures listed and their status at 5 October 2026",
+           "t1": "Implementing measures of French laws, by session of the\u00a0law", "s1": "number of measures listed and their status at 5 October 2026",
            "d1": "Horizontal bars, one per session from 2017-2018 to 2024-2025: measures with an identified published instrument, "
                  "pending, classified as “not applicable”, incomplete status. In total {nmes} measures, {A} of them pending. By "
                  "session: {liste}. The values are in the table below the figure.",
@@ -1111,6 +1112,10 @@ T = {
 }
 
 
+# 18/11/2026 (seconde passe des contrôleurs, C4) : espace insécable avant « ; » dans les descriptions françaises.
+SEP_DESC = {"fr": "\u00a0; ", "en": "; "}
+
+
 def _desc_statut(r: dict, A: dict) -> str:
     L = T[LANG]
     parts = []
@@ -1119,18 +1124,20 @@ def _desc_statut(r: dict, A: dict) -> str:
         e = L["d0e"].format(x=nb(st["sans_echeancier"])) if st.get("sans_echeancier") else ""
         parts.append(L["d0s"].format(s=s, n=nb(r["N"][s]), a=nb(st.get("attente", 0)), t=nb(st.get("toutes", 0)),
                                      d=nb(st.get("directe", 0)), e=e))
-    return L["d0"].format(r=A["releve"], liste="; ".join(parts))
+    return L["d0"].format(r=A["releve"], liste=SEP_DESC[LANG].join(parts))
 
 
 def _desc_mesures(r: dict, A: dict) -> str:
     L = T[LANG]
-    liste = "; ".join(L["d1s"].format(s=s, n=nb(sum(r["cl"][s].values())), a=nb(r["cl"][s].get("A", 0))) for s in SESSIONS)
+    liste = SEP_DESC[LANG].join(L["d1s"].format(s=s, n=nb(sum(r["cl"][s].values())), a=nb(r["cl"][s].get("A", 0))) for s in SESSIONS)
     return L["d1"].format(liste=liste, **A)
 
 
 def _desc_lois(r: dict, A: dict) -> str:
     L = T[LANG]
-    liste = "; ".join(L["d2s"].format(s=x["session"], n=x["N"], d=x["D"], u=x["U"]) for x in r["lignes"])
+    liste = SEP_DESC[LANG].join(L["d2s"].format(s=x["session"], n=x["N"], d=x["D"], u=x["U"],
+                                             directes="directe" if x["D"] < 2 else "directes",
+                                             classees="classée" if x["U"] < 2 else "classées") for x in r["lignes"])
     return L["d2"].format(liste=liste, **A)
 
 
@@ -1358,7 +1365,7 @@ def fig_serie_m(r: dict, A: dict) -> str:
 MONTRE = {
     "fr": {"statut": "Au {releve}, selon le baromètre, {L_att} des {nlois} lois promulguées d'octobre 2017 à septembre 2025, hors "
                      "conventions, comportaient encore au moins une mesure classée « en attente » ; {L_tout} avaient reçu toutes leurs "
-                     "mesures et {L_dir} étaient classées sans mesure à prendre.",
+                     "mesures, {L_dir} étaient classées sans mesure à prendre et une n'avait pas d'échéancier.",
            "mesures": "Au {releve}, sur les {nmes} mesures d'application recensées par le baromètre pour les lois promulguées "
                       "d'octobre 2017 à septembre 2025, {P} ont un acte publié identifié, {A} sont en attente, {S} sont indiquées "
                       "sans objet et {U} ont un statut incomplet.",
@@ -1369,7 +1376,8 @@ MONTRE = {
                     "se lisent pas comme une seule série."},
     "en": {"statut": "On {releve}, according to the barometer, {L_att} of the {nlois} laws promulgated in France from October 2017 "
                      "to September 2025, excluding treaties, still had at least one measure classified as pending; {L_tout} had "
-                     "received all their measures and {L_dir} were classified as having no measure to take.",
+                     "received all their measures, {L_dir} were classified as having no measure to take "
+                     "and one had no schedule.",
            "mesures": "On {releve}, of the {nmes} implementing measures listed by the barometer for the laws promulgated in France "
                       "from October 2017 to September 2025, {P} have an identified published instrument, {A} are pending, {S} are "
                       "classified as “not applicable” (sans objet) and {U} have an incomplete status.",
@@ -1677,13 +1685,13 @@ def _main() -> int:
     csvt = csv_texte(r)
     payload = {
         "releve_le": "2026-11-05",
-        "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (données DILA), Sénat, "
+        "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Assemblée nationale et LexImpact (échéanciers du Gouvernement publiés par la DILA), Sénat, "
                     "Secrétariat général du Gouvernement, Légifrance, Conseil d'État",
         "meta": {"page": "https://" + PAGE_URL,
                  "protocole": "fiches de preuve v2, volet Appliquer, E1 à E3 ; phase B de la refonte du 12/10/2026",
                  "dates": "baromètre : version du 05/10/2026 ; rapports du Sénat : pages lues le 06/10/2026 (deux pages ajoutées le "
                           "12/10/2026) ; bilan du SGG au 30/06/2026 : page rendue lue le 05/11/2026 ; décisions du Conseil d'État : "
-                          "lues le 12/10/2026 ; releve_le = date de la dernière lecture d'une source",
+                          "lues le 12/10/2026 (la n° 471646, le 06/11/2026) ; releve_le = date de la dernière lecture d'une source",
                  "sources": {"barometre": S["tetes"], "code_civil_art1": S["cciv"]["id"],
                              "constitution": {k: S["const"][k]["id"] for k in ("art10", "art13", "art21_exec", "art22", "art61")},
                              "senat_pages": {k: v["sha256_document"] for k, v in S["pages"].items()},
@@ -1696,7 +1704,7 @@ def _main() -> int:
                                                            % (re.search(r"(\d{4}-\d\d-\d\d)", f).group(1), num)}
                                               for num, (f, h) in CE.items()}},
                  "definitions": {
-                     "session": "lois publiées du 1er octobre au 30 septembre suivant",
+                     "session": "lois promulguées (date de la loi) du 1er octobre au 30 septembre suivant",
                      "directe": "loi classée d'application directe : par le baromètre quand son échéancier ne comporte, à la "
                                 "date du relevé, aucune mesure autre que « sans objet » (un statut courant, pas la preuve que la "
                                 "loi ne prévoyait aucune mesure : voir 2025-138) ; par le Sénat dans ses annexes",
