@@ -37,9 +37,9 @@ BCE GFS / Eurostat gov_10dd_ggd,FR,2021,non_residents,53.196700,53.200000,-0.003
 BCE GFS / Eurostat gov_10dd_ggd,FR,2022,banque_centrale,25.159100,25.200000,-0.040900,0.15,% du PIB,conforme,
 BCE GFS / Eurostat gov_10dd_ggd,FR,2022,non_residents,54.049300,54.100000,-0.050700,0.15,% du PIB,conforme,
 BCE GFS / Eurostat gov_10dd_ggd,FR,2023,banque_centrale,23.324400,23.300000,0.024400,0.15,% du PIB,conforme,
-BCE GFS / Eurostat gov_10dd_ggd,FR,2023,non_residents,56.286900,56.100000,0.186900,0.15,% du PIB,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-06-05, reference 2026-11-11) ; ecart publie, calcul poursuivi"
+BCE GFS / Eurostat gov_10dd_ggd,FR,2023,non_residents,56.286900,56.100000,0.186900,0.15,% du PIB,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-11-17, reference 2026-11-18) ; ecart publie, calcul poursuivi"
 BCE GFS / Eurostat gov_10dd_ggd,FR,2024,banque_centrale,21.690400,21.700000,-0.009600,0.15,% du PIB,conforme,
-BCE GFS / Eurostat gov_10dd_ggd,FR,2024,non_residents,59.689300,59.200000,0.489300,0.15,% du PIB,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-06-05, reference 2026-11-11) ; ecart publie, calcul poursuivi"
+BCE GFS / Eurostat gov_10dd_ggd,FR,2024,non_residents,59.689300,59.200000,0.489300,0.15,% du PIB,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-11-17, reference 2026-11-18) ; ecart publie, calcul poursuivi"
 BCE GFS / Eurostat gov_10dd_ggd,FR,2025,banque_centrale,19.121000,19.100000,0.021000,0.15,% du PIB,conforme,
 BCE GFS / Eurostat gov_10dd_ggd,FR,2025,non_residents,62.870200,62.800000,0.070200,0.15,% du PIB,conforme,
 Eurostat / Insee 8.204,FR,1995,N1N,727099.000000,727099.000000,0.000000,1000,M EUR,conforme,
@@ -128,13 +128,13 @@ Eurostat / Insee 8.204,FR,2022,N2N,1241062.200000,1241062.000000,0.200000,1000,M
 Eurostat / Insee 8.204,FR,2022,valeur financiere nette,-1892140.000000,-1892140.000000,0.000000,2000,M EUR,conforme,
 Eurostat / Insee 8.204,FR,2023,N1N,1762727.100000,1762727.000000,0.100000,1000,M EUR,conforme,
 Eurostat / Insee 8.204,FR,2023,N2N,1128105.900000,1128106.000000,-0.100000,1000,M EUR,conforme,
-Eurostat / Insee 8.204,FR,2023,valeur financiere nette,-2110884.000000,-2076034.000000,-34850.000000,2000,M EUR,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-07-30, reference 2026-10-30) ; ecart publie, calcul poursuivi"
+Eurostat / Insee 8.204,FR,2023,valeur financiere nette,-2110884.000000,-2076034.000000,-34850.000000,2000,M EUR,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-07-30, reference 2026-11-17) ; ecart publie, calcul poursuivi"
 Eurostat / Insee 8.204,FR,2024,N1N,1788715.200000,1788715.000000,0.200000,1000,M EUR,conforme,
 Eurostat / Insee 8.204,FR,2024,N2N,1114558.600000,1114559.000000,-0.400000,1000,M EUR,conforme,
-Eurostat / Insee 8.204,FR,2024,valeur financiere nette,-2153581.000000,-2137350.000000,-16231.000000,2000,M EUR,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-07-30, reference 2026-10-30) ; ecart publie, calcul poursuivi"
+Eurostat / Insee 8.204,FR,2024,valeur financiere nette,-2153581.000000,-2137350.000000,-16231.000000,2000,M EUR,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-07-30, reference 2026-11-17) ; ecart publie, calcul poursuivi"
 Eurostat / Insee 8.204,FR,2025,N1N,1822009.300000,1822009.000000,0.300000,1000,M EUR,conforme,
 Eurostat / Insee 8.204,FR,2025,N2N,1122920.400000,1122920.000000,0.400000,1000,M EUR,conforme,
-Eurostat / Insee 8.204,FR,2025,valeur financiere nette,-2134325.000000,-2195150.000000,60825.000000,2000,M EUR,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-07-30, reference 2026-10-30) ; ecart publie, calcul poursuivi"
+Eurostat / Insee 8.204,FR,2025,valeur financiere nette,-2134325.000000,-2195150.000000,60825.000000,2000,M EUR,décalage documenté,"millesime anterieur de la serie de comparaison (mise a jour 2026-07-30, reference 2026-11-17) ; ecart publie, calcul poursuivi"
 Eurostat nasa_10_f_bs (annuel) / nasq_10_f_bs (4e trimestre),FR,1999,valeur financiere nette,-445464.000000,-445464.000000,0.000000,2000,M EUR,conforme,
 Eurostat nasa_10_f_bs (annuel) / nasq_10_f_bs (4e trimestre),FR,2000,valeur financiere nette,-491752.000000,-491752.000000,0.000000,2000,M EUR,conforme,
 Eurostat nasa_10_f_bs (annuel) / nasq_10_f_bs (4e trimestre),FR,2001,valeur financiere nette,-554603.000000,-554603.000000,0.000000,2000,M EUR,conforme,
