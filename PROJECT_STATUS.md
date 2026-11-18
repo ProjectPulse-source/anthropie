@@ -52,6 +52,40 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Lot « Parcoursup, Étudiants » publié : chances d'admission, santé mentale des étudiants (FR)
+
+- **Commits** `e8d92dd4` (Étudiants : niveau 2024 du Baromètre de Santé publique France donné non comparable, millésime
+  2025 de la dépense par étudiant cité, champs territoriaux, demande à Santé publique France datée, valeur 2018 des
+  lycéens classée « calculee », recherche bibliographique refaite le 18/11 : l'absence tient pour la dépression ; extrait
+  du 18/11 tiré des documents archivés), `786b2711` (Parcoursup : champ du calcul dans la définition imprimée des
+  figures, formations reclassées des deux périodes, « tous types de bac confondus »).
+- **Contrôles** : générateurs `--check` (57 gardes ; 113 conditions, témoin à 0,1 point), deux contrôleurs de figures,
+  `check-figures` 0, Hugo 0, `typo_build` 0, `check-rendu-ressources` 0, `check-all --ci` 0, lettre, relecture de langue,
+  premier écran de Parcoursup retesté (témoin trompeur mordu), envois ETUDIANTS-2026-11 : passages cités présents avant
+  et après (10 sur 10).
+- **Servi** : déploiement `hugo.yml` 44274338313 réussi ; version servie attestée le 18/11 : 2 pages, 570 phrases,
+  0 écart ; 14 figures, 9 scripts et les jeux `malaise_etudiant` et `parcoursup` identiques.
+- **Restent, déclarés** : rebasage en euros de 2025 de la dépense (tableur de la note de la Depp à télécharger par
+  l'auteur) ; texte intégral de Husky et coauteurs 2025 à lire (accès libre, CAPTCHA de l'éditeur non contourné) ;
+  relecture contre les fiches Parcoursup 2027 le 17/12 ; classe DejaVu Sans (décision de l'auteur).
+
+### 2026-11-18 — Lot « Promesses B » publié : mesurer, appliquer, délais, neuf promesses (FR, EN)
+
+- **Commits** `afb9886a` (Mesurer : chiffrage de l'Insee du 10/11/2026), `e8dd6899` (Appliquer : lois comptées bornées,
+  réponse de tête complétée, crédits « échéanciers du Gouvernement publiés par la DILA »), `232abdfd` (Délais : phase
+  socle, début de la quatrième année constaté par l'ARS Provence-Alpes-Côte d'Azur, description des admissions juste),
+  `9d825fef` (Neuf promesses).
+- **Contrôles** : générateurs `--check` (15, 14, 11 gardes), deux contrôleurs de figures en deux passages, titres mesurés
+  sous DejaVu, `check-figures` 0, Hugo 0, `typo_build` 0, `check-rendu-ressources` 0, `check-all --ci` 0, lettre,
+  relecture de langue, premier écran de « Neuf promesses » retesté ; envoi PROMESSES-SUITE-2026-12-07 : phrase citée et
+  CSV présents avant et après.
+- **Servi** : déploiement `hugo.yml` 44272200323 réussi ; version servie attestée le 18/11 : 8 pages, 3 004 phrases,
+  0 écart ; 48 figures et 9 scripts identiques.
+- **Restent, déclarés** : phrase « constante » (lecture du Sénat éprouvée par sa série) en jugement externe (paquet de
+  forme n° 07) ; Zenodo version 4 (geste de l'auteur) ; errata du livre (session « livre ») ; séries corrigées de la Dares
+  (CAPTCHA, téléchargement par l'auteur) ; défauts anciens de figures non touchées (bandes, pointillé, « seasonally
+  adjusted »).
+
 ### 2026-11-18 — Lot « Dette C » publié : votre commune, collectivités locales, quels futurs (FR, EN)
 
 - **Commits** `8efa2aec` (Budget 2027 : votre commune, avec les trois corrections de `fiche-commune.js` et la clause de
