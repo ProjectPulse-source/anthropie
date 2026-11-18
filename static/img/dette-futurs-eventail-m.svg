@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 991" role="img" font-variant-numeric="tabular-nums" aria-labelledby="futurs-eventail-m-t futurs-eventail-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="futurs-eventail-m-t">La dette publique en 2030 : plusieurs futurs, sous quelles hypothèses ?</title><desc id="futurs-eventail-m-d">Éventail des trajectoires de dette simulées par la Commission européenne de 2025 à 2030 : en 2030, 10e centile 118,1 %, 90e centile 136,2 % ; référence de la Commission 126,5 % en 2030 et 140,8 % en 2035 ; prévision du PLF 2027 : 120,9 % en 2030 ; engagement d'octobre 2024 : 115,8 % en 2029. Bandes, de la plus claire à la plus foncée : du 10e au 90e, du 20e au 80e et du 40e au 60e centile des trajectoires simulées par la Commission (8, 6 et 2 sur 10). Départs en 2025 : Commission 116,3 %, PLF 2027 115,7 %, engagement de 2024 114,7 %.</desc>
-<rect width="300" height="991" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1042" role="img" font-variant-numeric="tabular-nums" aria-labelledby="futurs-eventail-m-t futurs-eventail-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="futurs-eventail-m-t">La dette publique en 2030 : plusieurs futurs, sous quelles hypothèses ?</title><desc id="futurs-eventail-m-d">Éventail des trajectoires de dette simulées par la Commission européenne de 2025 à 2030 : en 2030, 10e centile 118,1 %, 90e centile 136,2 % ; référence de la Commission 126,5 % en 2030 et 140,8 % en 2035 ; prévision du PLF 2027 : 120,9 % en 2030 ; plan d'octobre 2024 : 115,8 % en 2029. Bandes, de la plus claire à la plus foncée : du 10e au 90e, du 20e au 80e et du 40e au 60e centile des trajectoires simulées par la Commission (8, 6 et 2 sur 10). Départs en 2025 : Commission 116,3 %, PLF 2027 115,7 %, plan de 2024 114,7 %.</desc>
+<rect width="300" height="1042" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#1a1a1a">La dette publique en 2030 :</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#1a1a1a">plusieurs futurs, sous quelles</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#1a1a1a">hypothèses ?</text>
@@ -40,7 +40,7 @@
 <circle cx="145.6" cy="313.8" r="2.5" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
 <circle cx="194.4" cy="317.5" r="2.5" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
 <circle cx="243.2" cy="320.2" r="2.5" fill="#ffffff" stroke="#b8703f" stroke-width="1.5"/>
-<text x="0.0" y="394.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">90e centile (2030)</text>
+<text x="0.0" y="394.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">90e centile (2030)</text>
 <text x="300.0" y="394.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#52514e">136,2 %</text>
 <line x1="0" x2="22" y1="415.0" y2="415.0" stroke="#184f95" stroke-width="2.5" stroke-dasharray="6 4"/>
 <text x="30.0" y="420.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#184f95">Commission, politique</text>
@@ -49,14 +49,14 @@
 <text x="30.0" y="474.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#184f95">2026</text>
 <text x="300.0" y="420.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#184f95">126,5 %</text>
 <line x1="0" x2="22" y1="495.0" y2="495.0" stroke="#eb6834" stroke-width="2.5" stroke-dasharray="10 4"/>
-<text x="30.0" y="500.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">Prévision du PLF 2027</text>
-<text x="30.0" y="518.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">(2030)</text>
+<text x="30.0" y="500.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">Prévision du</text>
+<text x="30.0" y="518.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">PLF 2027 (2030)</text>
 <text x="300.0" y="500.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#b8420f">120,9 %</text>
-<text x="0.0" y="544.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">10e centile (2030)</text>
+<text x="0.0" y="544.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#52514e">10e centile (2030)</text>
 <text x="300.0" y="544.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#52514e">118,1 %</text>
 <line x1="0" x2="22" y1="565.0" y2="565.0" stroke="#b8703f" stroke-width="1.5" stroke-dasharray="2 4"/>
-<text x="30.0" y="570.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8420f">Engagement d'octobre 2024</text>
-<text x="30.0" y="588.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8420f">(2029)</text>
+<text x="30.0" y="570.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8420f">Prévision du plan</text>
+<text x="30.0" y="588.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#b8420f">d'octobre 2024 (2029)</text>
 <text x="300.0" y="570.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#b8420f">115,8 %</text>
 <text x="30.0" y="614.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">Commission, politique</text>
 <text x="30.0" y="632.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#184f95">inchangée (2035, hors</text>
@@ -67,17 +67,20 @@
 <text class="pied-source" x="0" y="718.0" font-size="13.5" fill="#52514e">(DSM 2025) ; Gouvernement (plan</text>
 <text class="pied-source" x="0" y="735.0" font-size="13.5" fill="#52514e">d'octobre 2024, PLF 2027).</text>
 <text class="pied-note" x="0" y="756.0" font-size="13.5" fill="#52514e">Les bandes sont des projections</text>
-<text class="pied-note" x="0" y="773.0" font-size="13.5" fill="#52514e">conditionnelles fondées sur des chocs</text>
-<text class="pied-note" x="0" y="790.0" font-size="13.5" fill="#52514e">historiques, non des prévisions.</text>
-<text class="pied-note" x="0" y="807.0" font-size="13.5" fill="#52514e">Bandes, de la plus claire à la plus</text>
-<text class="pied-note" x="0" y="824.0" font-size="13.5" fill="#52514e">foncée : du 10e au 90e, du 20e au 80e</text>
-<text class="pied-note" x="0" y="841.0" font-size="13.5" fill="#52514e">et du 40e au 60e centile des</text>
-<text class="pied-note" x="0" y="858.0" font-size="13.5" fill="#52514e">trajectoires simulées par la</text>
-<text class="pied-note" x="0" y="875.0" font-size="13.5" fill="#52514e">Commission (8, 6 et 2 sur 10). Départs</text>
-<text class="pied-note" x="0" y="892.0" font-size="13.5" fill="#52514e">en 2025 : Commission 116,3 %, PLF 2027</text>
-<text class="pied-note" x="0" y="909.0" font-size="13.5" fill="#52514e">115,7 %, engagement de 2024 114,7 % ;</text>
-<text class="pied-note" x="0" y="926.0" font-size="13.5" fill="#52514e">l'engagement ne donne pas de valeur</text>
-<text class="pied-note" x="0" y="943.0" font-size="13.5" fill="#52514e">pour 2026.</text>
-<text class="pied-licence" x="0" y="964.0" font-size="13.5" fill="#52514e">Graphique : Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="981.0" font-size="13.5" fill="#52514e">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="773.0" font-size="13.5" fill="#52514e">conditionnelles, à politique</text>
+<text class="pied-note" x="0" y="790.0" font-size="13.5" fill="#52514e">inchangée, fondées sur des chocs</text>
+<text class="pied-note" x="0" y="807.0" font-size="13.5" fill="#52514e">historiques, non des prévisions ; les</text>
+<text class="pied-note" x="0" y="824.0" font-size="13.5" fill="#52514e">prévisions du Gouvernement supposent</text>
+<text class="pied-note" x="0" y="841.0" font-size="13.5" fill="#52514e">des mesures qui ne sont pas toutes</text>
+<text class="pied-note" x="0" y="858.0" font-size="13.5" fill="#52514e">votées. Bandes, de la plus claire à la</text>
+<text class="pied-note" x="0" y="875.0" font-size="13.5" fill="#52514e">plus foncée : du 10e au 90e, du 20e au</text>
+<text class="pied-note" x="0" y="892.0" font-size="13.5" fill="#52514e">80e et du 40e au 60e centile des</text>
+<text class="pied-note" x="0" y="909.0" font-size="13.5" fill="#52514e">trajectoires simulées par la</text>
+<text class="pied-note" x="0" y="926.0" font-size="13.5" fill="#52514e">Commission (8, 6 et 2 sur 10). Départs</text>
+<text class="pied-note" x="0" y="943.0" font-size="13.5" fill="#52514e">en 2025 : Commission, 116,3 % ;</text>
+<text class="pied-note" x="0" y="960.0" font-size="13.5" fill="#52514e">PLF 2027, 115,7 % ; plan de 2024,</text>
+<text class="pied-note" x="0" y="977.0" font-size="13.5" fill="#52514e">114,7 % ; le plan ne donne pas de</text>
+<text class="pied-note" x="0" y="994.0" font-size="13.5" fill="#52514e">valeur pour 2026.</text>
+<text class="pied-licence" x="0" y="1015.0" font-size="13.5" fill="#52514e">Graphique : Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1032.0" font-size="13.5" fill="#52514e">· stephane-lalut.com</text>
 </svg>

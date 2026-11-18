@@ -1,8 +1,8 @@
 {
- "releve_le": "2026-11-09",
+ "releve_le": "2026-11-18",
  "_licence": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/dette-publique-quels-futurs/",
  "meta": {
-  "releve_le": "2026-11-09",
+  "releve_le": "2026-11-18",
   "page": "https://stephane-lalut.com/dette-publique-quels-futurs/",
   "licence": "CC BY 4.0",
   "sources": [
@@ -478,7 +478,7 @@
       },
       "qui_decide": {
        "libelle": "Qui décide",
-       "texte": "Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l'ancien ISF avec un plafonnement (décision 2012-662 DC) sans valider d'avance un impôt plancher sur une autre assiette. Adopté par l'Assemblée en février 2025, rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.",
+       "texte": "Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l'ancien ISF au vu de son taux marginal, des biens exclus de son assiette et de son plafonnement (décision 2012-662 DC) sans valider d'avance un impôt plancher sur une autre assiette. Adopté par l'Assemblée en février 2025, rejeté par le Sénat en juin 2025, rejeté lors de l'examen du budget pour 2026, puis de nouveau par l'Assemblée le 16 octobre 2026, en première lecture du projet de loi de finances pour 2027.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -489,7 +489,7 @@
       },
       "droit": {
        "libelle": "Droit applicable",
-       "texte": "À droit constant ; l'art. 63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités, notamment une taxe à la sortie ; aucun jugement de compatibilité ici. L'avis du Conseil d'État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n'a pas été lu.",
+       "texte": "À droit constant ; l'art. 63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités, notamment une taxe à la sortie ; aucun jugement de compatibilité ici. L'avis du Conseil d'État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n'a pas été lu, ni l'art. 65 TFUE, qui prévoit des exceptions à cette liberté.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -533,7 +533,7 @@
       },
       "detail": {
        "libelle": "Les estimations publiées",
-       "texte": "Aucun chiffre central. Pour l'impôt plancher de 2 % au-delà de 100 M€, l'administration fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre 3,5 et 5,5 Md€ après effets de comportement (méthode non examinée ici). Les autres estimations ne portent pas sur les mêmes conventions : mécanique, 19,4 Md€ (Observatoire européen de la fiscalité, dirigé par Gabriel Zucman, qui propose l'impôt) ; en déduisant l'impôt sur les sociétés déjà payé, ce qui change aussi la conception de l'impôt, de 5,5 à 1,25 Md€ (Institut de l'entreprise, financé par de grandes entreprises) ; avec les réactions des contribuables, un paramètre tiré d'études scandinaves (54 centimes perdus par optimisation et 20 par départ, pour un euro prélevé, cités par le Conseil d'analyse économique, qui juge l'exil modeste en France). Repère : l'ISF rapportait 4,2 Md€ en 2017.",
+       "texte": "Cette page ne retient aucun chiffre central. Pour l'impôt plancher de 2 % au-delà de 100 M€, l'administration fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre 3,5 et 5,5 Md€ après effets de comportement (méthode non examinée ici). Les autres estimations ne portent pas sur les mêmes conventions : mécanique, 19,4 Md€ (Observatoire européen de la fiscalité, dirigé par Gabriel Zucman, qui propose l'impôt) ; en déduisant l'impôt sur les sociétés déjà payé, ce qui change aussi la conception de l'impôt, de 5,5 à 1,25 Md€ (Institut de l'entreprise, financé par de grandes entreprises) ; avec les réactions des contribuables, un paramètre tiré d'études scandinaves (54 centimes perdus par optimisation et 20 par départ, pour un euro prélevé, cités par les auteurs d'un Focus du Conseil d'analyse économique, qui jugent l'exil modeste en France). Repère : l'ISF rapportait 4,2 Md€ en 2017.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -566,7 +566,7 @@
       },
       "effet": {
        "libelle": "Effet",
-       "texte": "Non chiffré : l'allongement porte sur la trajectoire de dépenses fixée par le règlement européen ; la référence de la Commission utilisée ici ne contient pas cette trajectoire, et ne permet donc pas d'en déduire l'effet sur la dette.",
+       "texte": "Non chiffré : l'allongement porte sur la trajectoire de dépenses que fixe le Conseil en application du règlement européen ; la référence de la Commission utilisée ici ne contient pas cette trajectoire, et ne permet donc pas d'en déduire l'effet sur la dette.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -588,7 +588,7 @@
       },
       "droit": {
        "libelle": "Droit applicable",
-       "texte": "À droit constant : quatre ans, prolongeables de trois (art. 2 § 8 et art. 14) ; sauvegardes des art. 7 et 8.",
+       "texte": "À droit constant : quatre ans, prolongeables de trois au plus (art. 2 § 8 et art. 14) ; sauvegardes des art. 7 et 8.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -756,7 +756,7 @@
       },
       "effet": {
        "libelle": "Effet",
-       "texte": "Non estimé. Pour ordre de grandeur seulement, une hypothèse de taux, et non une estimation de l'instrument : des taux de marché plus bas de vingt points de base sur tous les nouveaux emprunts publics abaisseraient la dette de 1,0 point en 2035.",
+       "texte": "Non estimé. Pour ordre de grandeur seulement, une hypothèse de taux, et non une estimation de l'instrument : des taux de marché plus bas de vingt points de base sur tous les nouveaux emprunts publics abaisseraient la dette d'environ un point en 2035.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -872,7 +872,7 @@
       },
       "droit": {
        "libelle": "Droit applicable",
-       "texte": "L'arrêt Pringle (C-370/12, 2012) lit l'art. 125 : il n'interdit pas « toute forme d'assistance financière », mais celle qui affaiblit l'incitation à une politique budgétaire saine, et admet l'assistance à un État qui reste responsable de ses engagements envers ses créanciers. L'article permet donc certaines formes d'assistance conditionnelle et encadre strictement la prise en charge des engagements d'un autre État ; la compatibilité dépend de l'instrument.",
+       "texte": "L'arrêt Pringle (C-370/12, 2012) lit l'art. 125 : il n'interdit pas « toute forme d'assistance financière », mais celle qui affaiblit l'incitation à une politique budgétaire saine, et admet l'assistance à un État qui reste responsable de ses engagements envers ses créanciers. L'article permet donc certaines formes d'assistance conditionnelle et interdit la prise en charge des engagements d'un autre État, sauf garanties mutuelles pour un projet commun ; la compatibilité dépend de l'instrument.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -940,7 +940,7 @@
       },
       "effet": {
        "libelle": "Effet",
-       "texte": "La Banque de France détenait 546 Md€ de titres publics français au 31 décembre 2025. Effet comptable brut et économie nette s'évaluent séparément : l'économie nette dépend de l'écart entre la rémunération des réserves des banques et le coût de refinancement de l'État, et n'est pas acquise.",
+       "texte": "La Banque de France détenait 488 Md€ de dette publique au titre des programmes d'achats de l'Eurosystème (APP et PEPP, en coût amorti) au 30 juin 2026, contre 546 Md€ au 31 décembre 2025. Effet comptable brut et économie nette s'évaluent séparément : l'économie nette dépend de l'écart entre la rémunération des réserves des banques et le coût de refinancement de l'État, et n'est pas acquise.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -1051,7 +1051,7 @@
       },
       "droit": {
        "libelle": "Droit applicable",
-       "texte": "À droit constant pour les seuls titres couverts. Selon notre reconstitution des fiches de l'AFT (9 novembre 2026), 86,3 % de l'encours nominal non indexé des OAT, OATi et OAT€i (2 282 Md€ sur 2 645) relève de lignes créées depuis 2013, auxquelles s'applique en principe le régime des clauses ; 13 lignes plus anciennes (362 Md€, échéances jusqu'en 2060) en sont exclues ; les titres à un an au plus (216 Md€) sont hors champ. Des clauses facilitent une modification collective ; elles n'en garantissent ni l'adoption ni la faisabilité.",
+       "texte": "À droit constant pour les seuls titres couverts. Selon notre reconstitution des fiches de l'AFT (9 novembre 2026), 86,3 % de l'encours nominal non indexé des OAT, OATi et OAT€i (2 282 Md€ sur 2 645) relève de lignes créées depuis 2013, auxquelles s'applique en principe le régime des clauses ; 13 lignes plus anciennes (362 Md€, échéances jusqu'en 2060) en sont exclues ; les titres à un an au plus (216 Md€) sont hors champ. Trois lignes indexées sur l'inflation de la zone euro y sont rangées d'après leur date de création, sans lecture de leurs arrêtés. Des clauses facilitent une modification collective ; elles n'en garantissent ni l'adoption ni la faisabilité.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -1127,7 +1127,7 @@
       },
       "qui_decide": {
        "libelle": "Qui décide",
-       "texte": "Non déterminé : le seul départ prévu par les traités est le retrait de l'Union (art. 50 TUE : selon les règles constitutionnelles de l'État, accord conclu par le Conseil à la majorité qualifiée, traités inapplicables deux ans après la notification à défaut d'accord) ; l'absence de procédure propre à la zone euro dans les textes lus ne vaut pas conclusion.",
+       "texte": "Non déterminé : le seul départ prévu par les traités est le retrait de l'Union (art. 50 TUE : selon les règles constitutionnelles de l'État, accord conclu par le Conseil à la majorité qualifiée après approbation du Parlement européen, traités inapplicables deux ans après la notification à défaut d'accord, délai que le Conseil européen peut proroger à l'unanimité) ; l'absence de procédure propre à la zone euro dans les textes lus ne vaut pas conclusion.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -1326,7 +1326,7 @@
       },
       "qui_decide": {
        "libelle": "Who decides",
-       "texte": "Parliament, under review by the Constitutional Council, which accepted the former wealth tax with a cap (decision 2012-662 DC) without validating in advance a minimum tax on a different base. Passed by the National Assembly in February 2025, rejected by the Senate in June 2025, rejected in the 2026 budget act.",
+       "texte": "Parliament, under review by the Constitutional Council, which accepted the former wealth tax in view of its top marginal rate, the assets excluded from its base and its cap (decision 2012-662 DC) without validating in advance a minimum tax on a different base. Passed by the National Assembly in February 2025, rejected by the Senate in June 2025, rejected when the 2026 budget was examined, then again by the National Assembly on 16 October 2026, at first reading of the 2027 draft budget.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -1337,7 +1337,7 @@
       },
       "droit": {
        "libelle": "Applicable law",
-       "texte": "Under current law; Art. 63 TFEU prohibits restrictions on capital movements and frames the design, notably an exit tax; no compatibility judgment is made here. The Conseil d'État's opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read.",
+       "texte": "Under current law; Art. 63 TFEU prohibits restrictions on capital movements and frames the design, notably an exit tax; no compatibility judgment is made here. The Conseil d'État's opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read, nor has Art. 65 TFEU, which provides exceptions to that freedom.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -1381,7 +1381,7 @@
       },
       "detail": {
        "libelle": "Published estimates",
-       "texte": "No central figure. For the 2% minimum tax above €100 million, the tax administration said in February 2025 that it could not simulate it; in June 2026, a Senate report cites a note from the Treasury directorate, sent to its finance committee, estimating it at €3.5 to €5.5 billion after behavioural effects (method not examined here). The other estimates rest on different conventions: mechanical, €19.4 billion (EU Tax Observatory, directed by Gabriel Zucman, who proposes the tax); deducting corporate tax already paid, which also changes the tax's design, from €5.5 to €1.25 billion (Institut de l'entreprise, funded by large companies); with taxpayer responses, a parameter taken from Scandinavian studies (54 cents lost to avoidance and 20 to departures, per euro levied, cited by the Conseil d'analyse économique, which finds emigration modest in France). Benchmark: the former wealth tax raised €4.2 billion in 2017.",
+       "texte": "This page retains no central figure. For the 2% minimum tax above €100 million, the tax administration said in February 2025 that it could not simulate it; in June 2026, a Senate report cites a note from the Treasury directorate, sent to its finance committee, estimating it at €3.5 to €5.5 billion after behavioural effects (method not examined here). The other estimates rest on different conventions: mechanical, €19.4 billion (EU Tax Observatory, directed by Gabriel Zucman, who proposes the tax); deducting corporate tax already paid, which also changes the tax's design, from €5.5 to €1.25 billion (Institut de l'entreprise, funded by large companies); with taxpayer responses, a parameter taken from Scandinavian studies (54 cents lost to avoidance and 20 to departures, per euro levied, cited by the authors of a Conseil d'analyse économique Focus, who find emigration modest in France). Benchmark: the former wealth tax raised €4.2 billion in 2017.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -1414,7 +1414,7 @@
       },
       "effet": {
        "libelle": "Effect",
-       "texte": "Not quantified: the extension applies to the expenditure path set by the European regulation; the Commission baseline used here does not contain that path, so its effect on debt cannot be derived from it.",
+       "texte": "Not quantified: the extension applies to the expenditure path the Council sets under the European regulation; the Commission baseline used here does not contain that path, so its effect on debt cannot be derived from it.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -1436,7 +1436,7 @@
       },
       "droit": {
        "libelle": "Applicable law",
-       "texte": "Under current law: four years, extendable by three (Art. 2(8) and Art. 14); safeguards in Art. 7 and 8.",
+       "texte": "Under current law: four years, extendable by up to three (Art. 2(8) and Art. 14); safeguards in Art. 7 and 8.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -1604,7 +1604,7 @@
       },
       "effet": {
        "libelle": "Effect",
-       "texte": "Not estimated. As an order of magnitude only, an interest-rate assumption rather than an estimate of the instrument: market rates twenty basis points lower on all new public borrowing would lower debt by 1.0 point in 2035.",
+       "texte": "Not estimated. As an order of magnitude only, an interest-rate assumption rather than an estimate of the instrument: market rates twenty basis points lower on all new public borrowing would lower debt by about one point in 2035.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -1626,7 +1626,7 @@
       },
       "droit": {
        "libelle": "Applicable law",
-       "texte": "Possible without Treaty change, as in 2020, within limits: a capped amount, \"exclusively\" for the crisis, no net borrowing after 2026, repayment by 2058 at the latest (Decision 2020/2053, Art. 5).",
+       "texte": "Possible without Treaty change, as in 2020, within limits: a capped amount, \"for the sole purpose\" of addressing the crisis, no net borrowing after 2026, repayment by 2058 at the latest (Decision 2020/2053, Art. 5).",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -1720,7 +1720,7 @@
       },
       "droit": {
        "libelle": "Applicable law",
-       "texte": "The Pringle judgment (C-370/12, 2012) reads Art. 125: it does not prohibit \"any form of financial assistance\", but assistance that weakens the incentive for sound budgetary policy, and it allows assistance to a State that remains responsible for its commitments to its creditors. The article thus permits some forms of conditional assistance and strictly limits taking over another State's commitments; compatibility depends on the instrument.",
+       "texte": "The Pringle judgment (C-370/12, 2012) reads Art. 125: it does not prohibit \"any form of financial assistance\", but assistance that weakens the incentive for sound budgetary policy, and it allows assistance to a State that remains responsible for its commitments to its creditors. The article thus permits some forms of conditional assistance and prohibits taking over another State's commitments, save mutual guarantees for a joint project; compatibility depends on the instrument.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -1788,7 +1788,7 @@
       },
       "effet": {
        "libelle": "Effect",
-       "texte": "The Banque de France held €546 billion of French government securities at 31 December 2025. The gross accounting effect and the net saving are assessed separately: the net saving depends on the gap between the interest paid on bank reserves and the State's refinancing cost, and is not secured.",
+       "texte": "The Banque de France held €488 billion of public debt under the Eurosystem's purchase programmes (APP and PEPP, at amortised cost) at 30 June 2026, against €546 billion at 31 December 2025. The gross accounting effect and the net saving are assessed separately: the net saving depends on the gap between the interest paid on bank reserves and the State's refinancing cost, and is not secured.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -1810,7 +1810,7 @@
       },
       "droit": {
        "libelle": "Applicable law",
-       "texte": "Art. 123 TFEU prohibits credit to public bodies and the \"direct purchase\" of their debt instruments; Protocol No 12 counts debt \"at nominal value\"; ESA 2010 classifies perpetual securities as debt securities, but how a security with neither coupon nor repayment right should be classified is not settled by the texts read.",
+       "texte": "Art. 123 TFEU prohibits credit to public bodies and \"the purchase directly from them\" of their debt instruments; Protocol No 12 counts debt \"at nominal value\"; ESA 2010 classifies perpetual securities as debt securities, but how a security with neither coupon nor repayment right should be classified is not settled by the texts read.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -1899,7 +1899,7 @@
       },
       "droit": {
        "libelle": "Applicable law",
-       "texte": "Under current law for covered securities only. According to our reconstruction from the AFT line sheets (9 November 2026), 86.3% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€2,282 billion of €2,645 billion) belongs to lines created since 2013, to which the clause regime applies in principle; 13 older lines (€362 billion, maturing up to 2060) are excluded; securities of one year or less (€216 billion) fall outside its scope. Clauses ease a collective modification; they guarantee neither its adoption nor its feasibility.",
+       "texte": "Under current law for covered securities only. According to our reconstruction from the AFT line sheets (9 November 2026), 86.3% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€2,282 billion of €2,645 billion) belongs to lines created since 2013, to which the clause regime applies in principle; 13 older lines (€362 billion, maturing up to 2060) are excluded; securities of one year or less (€216 billion) fall outside its scope. Three lines indexed to euro-area inflation are classed by their creation date, without reading their creation orders. Clauses ease a collective modification; they guarantee neither its adoption nor its feasibility.",
        "fiche": false,
        "intro": null,
        "items": null,
@@ -1975,7 +1975,7 @@
       },
       "qui_decide": {
        "libelle": "Who decides",
-       "texte": "Not determined: the only departure the Treaties provide for is withdrawal from the Union (Art. 50 TEU: in line with the State's constitutional requirements, an agreement concluded by the Council by qualified majority, Treaties ceasing to apply two years after notification failing agreement); the absence of a euro-area-specific procedure in the texts read is not a conclusion.",
+       "texte": "Not determined: the only departure the Treaties provide for is withdrawal from the Union (Art. 50 TEU: in line with the State's constitutional requirements, an agreement concluded by the Council by qualified majority after the consent of the European Parliament, Treaties ceasing to apply two years after notification failing agreement, a period the European Council may extend unanimously); the absence of a euro-area-specific procedure in the texts read is not a conclusion.",
        "fiche": true,
        "intro": null,
        "items": null,
@@ -2053,8 +2053,8 @@
   "psmt_2025": "114,7",
   "psmt_2029_var": "1,1",
   "psmt_2029_c_var": "12",
-  "taux10_2035_pts": "0,5 point",
-  "taux20_2035_pts": "1,0 point",
+  "taux10_2035_pts": "environ un demi-point",
+  "taux20_2035_pts": "environ un point",
   "taux20_int_2035": "8,1",
   "taux100_2035_pts": "5,5 points",
   "taux100_int_2035": "44,6",
@@ -2096,8 +2096,8 @@
   "psmt_2025": "114.7",
   "psmt_2029_var": "1.1",
   "psmt_2029_c_var": "12",
-  "taux10_2035_pts": "0.5 points",
-  "taux20_2035_pts": "1.0 point",
+  "taux10_2035_pts": "about half a point",
+  "taux20_2035_pts": "about one point",
   "taux20_int_2035": "8.1",
   "taux100_2035_pts": "5.5 points",
   "taux100_int_2035": "44.6",

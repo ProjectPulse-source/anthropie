@@ -61,11 +61,22 @@ OUT_MAT_CSV = ROOT / "static" / "dette_futurs_matrice.csv"
 OUT_FIGURES = ROOT / "data" / "figures_futurs.json"   # fiches « Réutiliser », lues dans les SVG
 MONTRE = {
     "fr": [("eventail", "dette-futurs-eventail", "a_titre", "Où mène la trajectoire actuelle selon la Commission européenne, à politique inchangée et sous des chocs historiques, et où se placent les trajectoires annoncées par le Gouvernement en 2024 et en 2026."),
-           ("leviers", "dette-futurs-leviers", "b_titre", "Ce que changeraient en 2035, un à la fois, un solde primaire supérieur d'un point de PIB, quelques dixièmes de point de taux ou un demi-point de croissance, sur la référence de la Commission.")],
+           ("leviers", "dette-futurs-leviers", "b_titre", "Ce que changeraient en 2035, un à la fois, un solde primaire supérieur d'un point de PIB, des taux de marché plus bas de 0,2 point ou plus hauts d'un point, ou un demi-point de croissance réelle à inflation inchangée, sur la référence de la Commission.")],
     "en": [("eventail", "dette-futurs-eventail-en", "a_titre", "Where the current path leads according to the European Commission, with unchanged policy and under historical shocks, and where the paths announced by the Government in 2024 and 2026 stand."),
-           ("leviers", "dette-futurs-leviers-en", "b_titre", "What a primary balance one point of GDP higher, a few tenths of a point of interest rates or half a point of growth would each change in 2035, on the Commission's baseline.")],
+           ("leviers", "dette-futurs-leviers-en", "b_titre", "What a primary balance one point of GDP higher, market rates 0.2 point lower or one point higher, or half a point of real growth with inflation unchanged would each change in 2035, on the Commission's baseline.")],
 }
 
+
+
+def environ_point(v: float, lang: str) -> str:
+    """Sensibilité aux taux dite au point près, jamais au dixième (arbitrage B1 ; lot dette-c, § D, 18/11/2026 : le
+    témoin du relecteur donne −0,9 à −1,2 point pour −20 pb selon le rythme de renouvellement). Arrêt si la valeur ne
+    se dit plus « environ un point » ou « environ un demi-point »."""
+    d = round(abs(v) * 2) / 2
+    mots = {0.5: ("environ un demi-point", "about half a point"), 1.0: ("environ un point", "about one point")}
+    if d not in mots:
+        raise SystemExit("ARRET : sensibilite aux taux de %.2f point : la prose « environ un point » est a reecrire" % v)
+    return mots[d][0 if lang == "fr" else 1]
 
 def fiches(figs: dict) -> dict:
     out = {}
@@ -334,7 +345,7 @@ def affichage(R: dict, lang: str) -> dict:
         "plf_2025": f(gv["plf2027"]["dette"][2025]), "plf_2030_var": f(p["variation"]),
         "plf_2030_c_niv": f(p["centile_niveau"], 0), "plf_2030_c_var": f(p["centile_variation"], 0),
         "psmt_2025": f(gv["psmt"][2025]), "psmt_2029_var": f(q["variation"]), "psmt_2029_c_var": f(q["centile_variation"], 0),
-        "taux10_2035_pts": pts(s["taux_moins_10pb"]["dette_2035"]), "taux20_2035_pts": pts(s["taux_moins_20pb"]["dette_2035"]),
+        "taux10_2035_pts": environ_point(s["taux_moins_10pb"]["dette_2035"], lang), "taux20_2035_pts": environ_point(s["taux_moins_20pb"]["dette_2035"], lang),
         "taux20_int_2035": md(s["taux_moins_20pb"]["interets_md_2035"]),
         "taux100_2035_pts": pts(s["taux_plus_100pb"]["dette_2035"]), "taux100_int_2035": md(s["taux_plus_100pb"]["interets_md_2035"]),
         "croiss_plus_2035_pts": pts(s["croissance_plus_05"]["dette_2035"]), "croiss_moins_2035_pts": pts(s["croissance_moins_05"]["dette_2035"]),

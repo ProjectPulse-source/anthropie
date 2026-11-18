@@ -81,6 +81,17 @@ class Garde(Exception):
     pass
 
 
+
+def environ_point(v: float, lang: str) -> str:
+    """Sensibilité aux taux dite au point près, jamais au dixième (arbitrage B1 ; lot dette-c, § D, 18/11/2026 : le
+    témoin du relecteur donne −0,9 à −1,2 point pour −20 pb selon le rythme de renouvellement). Arrêt si la valeur ne
+    se dit plus « environ un point » ou « environ un demi-point »."""
+    d = round(abs(v) * 2) / 2
+    mots = {0.5: ("environ un demi-point", "about half a point"), 1.0: ("environ un point", "about one point")}
+    if d not in mots:
+        raise SystemExit("ARRET : sensibilite aux taux de %.2f point : la prose « environ un point » est a reecrire" % v)
+    return mots[d][0 if lang == "fr" else 1]
+
 def fail(msg: str) -> None:
     raise Garde("matrice : " + msg)
 
@@ -134,7 +145,7 @@ def jetons(R: dict, A: dict, src: dict, lang: str) -> dict:
     pts = lambda v: lg.points(abs(v), 1, lang)
     J = {"solde_2035_pts": pts(s["solde_plus_1_comptable"]["dette_2035"]),
          "invest_2035_pts": pts(s["investissement_emprunte_1pt_comptable"]["dette_2035"]),
-         "taux20_2035_pts": pts(s["taux_moins_20pb"]["dette_2035"]),
+         "taux20_2035_pts": environ_point(s["taux_moins_20pb"]["dette_2035"], lang),
          "croiss_plus_2035_pts": pts(s["croissance_plus_05"]["dette_2035"]),
          "croiss_moins_2035_pts": pts(s["croissance_moins_05"]["dette_2035"]),
          "cac_part": lg.nombre(A["cac_part"], 1, lang), "cac_md": lg.nombre(A["cac_md"], 0, lang),
@@ -143,7 +154,7 @@ def jetons(R: dict, A: dict, src: dict, lang: str) -> dict:
          "btf_md": lg.nombre(A["btf_md"], 0, lang), "aft_date": AFT_DATE[lang]}
     bdf = json.loads((ROOT / "data" / "annulation_bdf.json").read_text(encoding="utf-8"))
     aff = bdf["affichage" if lang == "fr" else "affichage_en"]
-    J["bdf_md"], J["bdf_date"] = aff["e0"], aff["date_e0"]
+    J["bdf_md"], J["bdf_date"], J["bdf_md0"], J["bdf_date0"] = aff["e"], aff["date_e"], aff["e0"], aff["date_e0"]
     gen = json.loads((ROOT / "data" / "dette_generations.json").read_text(encoding="utf-8"))["etat_negociable"]["releve"]
     m = re.fullmatch(r"(\d{4})-Q([1-4])", gen["periode"])
     if not m:

@@ -58,7 +58,15 @@ le porte.
 
 ### Découverte principale
 
-Rien n'est établi à ce stade : la découverte se constate après la phase B, levier par levier. Ce qui est posé
+Après la phase B et la relecture des sources du lot « dette-c » (17/11/2026, `LOTS\dette-c\SOURCES\
+dette-publique-quels-futurs_R1a.md` et `_R1b.md`) : à politique inchangée, la Commission projette 126,5 % du PIB en
+2030 et 140,8 % en 2035, et la prévision du Gouvernement pour 2030 (120,9 %, rapport sur la dette annexé au PLF
+2027) se place vers le 20e centile de son éventail, rang qui ne mesure ni l'effet des décisions ni leur probabilité
+(R1a, l. 32-36, CONFORME À LA SOURCE ou recalculé à l'identique) ; aucune des neuf opérations ne change la
+trajectoire autrement que par le solde primaire, les taux, la croissance ou les ajustements de stock, et elles
+relèvent d'accords différents (R1b, matrice). La relecture a corrigé deux affirmations de la page : l'absence de
+témoin pour un choc de solde durable (la Commission en publie un ; le calcul en manque le calendrier) et le statut
+d'« engagement » prêté à la dette du plan d'octobre 2024 (une prévision). Ce qui avait été posé en phase A
 (arbitrages `PRO-20261109-063209` et `ENTRANTE_2026-11-09_Dette-04`) :
 - **Clé de lecture comptable**, non une découverte : à solde primaire, taux implicite, croissance et ajustements
   inchangés, une réforme institutionnelle ne change pas à elle seule la trajectoire calculée du ratio. Elle n'agit que

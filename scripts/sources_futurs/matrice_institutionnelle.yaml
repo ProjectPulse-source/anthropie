@@ -100,7 +100,7 @@ operations:
   detail:
     statut: lu
     fr: >-
-      Aucun chiffre central. Pour l'impôt plancher de {v.zucman_taux} % au-delà de {v.zucman_seuil} M€, l'administration
+      Cette page ne retient aucun chiffre central. Pour l'impôt plancher de {v.zucman_taux} % au-delà de {v.zucman_seuil} M€, l'administration
       fiscale indiquait en février 2025 ne pas pouvoir le simuler ; en juin 2026, un rapport du Sénat cite une note de la
       direction générale du Trésor, transmise à sa commission des finances, qui en estime le rendement entre {v.dgt_bas} et
       {v.dgt_haut} Md€ après effets de comportement (méthode non examinée ici). Les autres estimations ne portent pas sur les
@@ -108,36 +108,38 @@ operations:
       Zucman, qui propose l'impôt) ; en déduisant l'impôt sur les sociétés déjà payé, ce qui change aussi la conception de
       l'impôt, de {v.ide_82} à {v.ide_100} Md€ (Institut de l'entreprise, financé par de grandes entreprises) ; avec les
       réactions des contribuables, un paramètre tiré d'études scandinaves ({v.cae_optimisation} centimes perdus par
-      optimisation et {v.cae_depart} par départ, pour un euro prélevé, cités par le Conseil d'analyse économique, qui juge
-      l'exil modeste en France). Repère : l'ISF rapportait {v.isf_2017} Md€ en 2017.
+      optimisation et {v.cae_depart} par départ, pour un euro prélevé, cités par les auteurs d'un Focus du Conseil d'analyse économique, qui
+      jugent l'exil modeste en France). Repère : l'ISF rapportait {v.isf_2017} Md€ en 2017.
     en: >-
-      No central figure. For the {v.zucman_taux}% minimum tax above €{v.zucman_seuil} million, the tax administration said in
+      This page retains no central figure. For the {v.zucman_taux}% minimum tax above €{v.zucman_seuil} million, the tax administration said in
       February 2025 that it could not simulate it; in June 2026, a Senate report cites a note from the Treasury directorate,
       sent to its finance committee, estimating it at €{v.dgt_bas} to €{v.dgt_haut} billion after behavioural effects
       (method not examined here). The other estimates rest on different conventions: mechanical, €{v.zucman_mecanique}
       billion (EU Tax Observatory, directed by Gabriel Zucman, who proposes the tax); deducting corporate tax already paid,
       which also changes the tax's design, from €{v.ide_82} to €{v.ide_100} billion (Institut de l'entreprise, funded by
       large companies); with taxpayer responses, a parameter taken from Scandinavian studies ({v.cae_optimisation} cents
-      lost to avoidance and {v.cae_depart} to departures, per euro levied, cited by the Conseil d'analyse économique, which
-      finds emigration modest in France). Benchmark: the former wealth tax raised €{v.isf_2017} billion in 2017.
+      lost to avoidance and {v.cae_depart} to departures, per euro levied, cited by the authors of a Conseil d'analyse économique Focus, who
+      find emigration modest in France). Benchmark: the former wealth tax raised €{v.isf_2017} billion in 2017.
   qui_decide:
     statut: lu
     fr: >-
-      Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l'ancien ISF avec un plafonnement (décision
+      Le Parlement, sous le contrôle du Conseil constitutionnel, qui a admis l'ancien ISF au vu de son taux marginal, des biens exclus de son assiette et de son plafonnement (décision
       2012-662 DC) sans valider d'avance un impôt plancher sur une autre assiette. Adopté par l'Assemblée en février 2025,
-      rejeté par le Sénat en juin 2025, rejeté en loi de finances pour 2026.
+      rejeté par le Sénat en juin 2025, rejeté lors de l'examen du budget pour 2026, puis de nouveau par l'Assemblée le
+      16 octobre 2026, en première lecture du projet de loi de finances pour 2027.
     en: >-
-      Parliament, under review by the Constitutional Council, which accepted the former wealth tax with a cap (decision
+      Parliament, under review by the Constitutional Council, which accepted the former wealth tax in view of its top marginal rate, the assets excluded from its base and its cap (decision
       2012-662 DC) without validating in advance a minimum tax on a different base. Passed by the National Assembly in
-      February 2025, rejected by the Senate in June 2025, rejected in the 2026 budget act.
+      February 2025, rejected by the Senate in June 2025, rejected when the 2026 budget was examined, then again by
+      the National Assembly on 16 October 2026, at first reading of the 2027 draft budget.
   droit:
     statut: lu
     fr: >-
       À droit constant ; l'art. 63 TFUE interdit les restrictions aux mouvements de capitaux et encadre les modalités,
-      notamment une taxe à la sortie ; aucun jugement de compatibilité ici. L'avis du Conseil d'État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n'a pas été lu.
+      notamment une taxe à la sortie ; aucun jugement de compatibilité ici. L'avis du Conseil d'État n° 410182 (30 octobre 2025) sur une imposition différentielle du patrimoine, cité par le Sénat, n'a pas été lu, ni l'art. 65 TFUE, qui prévoit des exceptions à cette liberté.
     en: >-
       Under current law; Art. 63 TFEU prohibits restrictions on capital movements and frames the design, notably an exit tax;
-      no compatibility judgment is made here. The Conseil d'État's opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read.
+      no compatibility judgment is made here. The Conseil d'État's opinion No 410182 (30 October 2025) on a differential wealth tax, cited by the Senate, has not been read, nor has Art. 65 TFEU, which provides exceptions to that freedom.
   repartition:
     statut: infere
     fr: >-
@@ -168,10 +170,10 @@ operations:
   effet:
     statut: non_etabli
     fr: >-
-      Non chiffré : l'allongement porte sur la trajectoire de dépenses fixée par le règlement européen ; la référence de la
+      Non chiffré : l'allongement porte sur la trajectoire de dépenses que fixe le Conseil en application du règlement européen ; la référence de la
       Commission utilisée ici ne contient pas cette trajectoire, et ne permet donc pas d'en déduire l'effet sur la dette.
     en: >-
-      Not quantified: the extension applies to the expenditure path set by the European regulation; the Commission
+      Not quantified: the extension applies to the expenditure path the Council sets under the European regulation; the Commission
       baseline used here does not contain that path, so its effect on debt cannot be derived from it.
   qui_decide:
     statut: lu
@@ -183,8 +185,8 @@ operations:
       Art. 14 and 17); France requested it in its October 2024 plan.
   droit:
     statut: lu
-    fr: "À droit constant : quatre ans, prolongeables de trois (art. 2 § 8 et art. 14) ; sauvegardes des art. 7 et 8."
-    en: "Under current law: four years, extendable by three (Art. 2(8) and Art. 14); safeguards in Art. 7 and 8."
+    fr: "À droit constant : quatre ans, prolongeables de trois au plus (art. 2 § 8 et art. 14) ; sauvegardes des art. 7 et 8."
+    en: "Under current law: four years, extendable by up to three (Art. 2(8) and Art. 14); safeguards in Art. 7 and 8."
   repartition:
     statut: non_etabli
     fr: "Non établi."
@@ -289,8 +291,8 @@ operations:
     statut: non_etabli
     fr: >-
       Non estimé. Pour ordre de grandeur seulement, une hypothèse de taux, et non une estimation de l'instrument : des taux
-      de marché plus bas de vingt points de base sur tous les nouveaux emprunts publics abaisseraient la dette de
-      {taux20_2035_pts} en 2035.
+      de marché plus bas de vingt points de base sur tous les nouveaux emprunts publics abaisseraient la dette
+      d'{taux20_2035_pts} en 2035.
     en: >-
       Not estimated. As an order of magnitude only, an interest-rate assumption rather than an estimate of the instrument:
       market rates twenty basis points lower on all new public borrowing would lower debt by {taux20_2035_pts} in 2035.
@@ -308,7 +310,7 @@ operations:
       Possible sans révision des traités, comme en 2020, dans des bornes : un montant plafonné, « à la seule fin » de la crise,
       aucun emprunt net après 2026, remboursement au plus tard en 2058 (décision 2020/2053, art. 5).
     en: >-
-      Possible without Treaty change, as in 2020, within limits: a capped amount, "exclusively" for the crisis, no net
+      Possible without Treaty change, as in 2020, within limits: a capped amount, "for the sole purpose" of addressing the crisis, no net
       borrowing after 2026, repayment by 2058 at the latest (Decision 2020/2053, Art. 5).
   repartition:
     statut: lu
@@ -360,13 +362,15 @@ operations:
     fr: >-
       L'arrêt Pringle (C-370/12, 2012) lit l'art. 125 : il n'interdit pas « toute forme d'assistance financière », mais celle
       qui affaiblit l'incitation à une politique budgétaire saine, et admet l'assistance à un État qui reste responsable de
-      ses engagements envers ses créanciers. L'article permet donc certaines formes d'assistance conditionnelle et encadre
-      strictement la prise en charge des engagements d'un autre État ; la compatibilité dépend de l'instrument.
+      ses engagements envers ses créanciers. L'article permet donc certaines formes d'assistance conditionnelle et interdit
+      la prise en charge des engagements d'un autre État, sauf garanties mutuelles pour un projet commun ; la compatibilité
+      dépend de l'instrument.
     en: >-
       The Pringle judgment (C-370/12, 2012) reads Art. 125: it does not prohibit "any form of financial assistance", but
       assistance that weakens the incentive for sound budgetary policy, and it allows assistance to a State that remains
       responsible for its commitments to its creditors. The article thus permits some forms of conditional assistance and
-      strictly limits taking over another State's commitments; compatibility depends on the instrument.
+      prohibits taking over another State's commitments, save mutual guarantees for a joint project; compatibility
+      depends on the instrument.
   repartition:
     statut: non_etabli
     fr: "Transfert de risque entre États, d'ampleur variable, non établie."
@@ -399,11 +403,15 @@ operations:
   effet:
     statut: site
     fr: >-
-      La Banque de France détenait {bdf_md} Md€ de titres publics français au {bdf_date}. Effet comptable brut et économie
+      La Banque de France détenait {bdf_md} Md€ de dette publique au titre des programmes d'achats de
+      l'Eurosystème (APP et PEPP, en coût amorti) au {bdf_date}, contre {bdf_md0} Md€ au {bdf_date0}. Effet comptable
+      brut et économie
       nette s'évaluent séparément : l'économie nette dépend de l'écart entre la rémunération des réserves des banques et le
       coût de refinancement de l'État, et n'est pas acquise.
     en: >-
-      The Banque de France held €{bdf_md} billion of French government securities at {bdf_date}. The gross accounting effect
+      The Banque de France held €{bdf_md} billion of public debt under the Eurosystem's purchase programmes
+      (APP and PEPP, at amortised cost) at {bdf_date}, against €{bdf_md0} billion at {bdf_date0}. The gross
+      accounting effect
       and the net saving are assessed separately: the net saving depends on the gap between the interest paid on bank
       reserves and the State's refinancing cost, and is not secured.
   qui_decide:
@@ -422,7 +430,7 @@ operations:
       protocole n° 12 compte la dette « à leur valeur nominale » ; le SEC 2010 classe les titres perpétuels parmi les titres
       de créance, mais la qualification d'un titre sans coupon ni droit de remboursement n'est pas tranchée par les textes lus.
     en: >-
-      Art. 123 TFEU prohibits credit to public bodies and the "direct purchase" of their debt instruments; Protocol No 12
+      Art. 123 TFEU prohibits credit to public bodies and "the purchase directly from them" of their debt instruments; Protocol No 12
       counts debt "at nominal value"; ESA 2010 classifies perpetual securities as debt securities, but how a security with
       neither coupon nor repayment right should be classified is not settled by the texts read.
   repartition:
@@ -479,15 +487,17 @@ operations:
       {cac_part} % de l'encours nominal non indexé des OAT, OATi et OAT€i ({cac_md} Md€ sur {oat_md}) relève de lignes
       créées depuis 2013, auxquelles s'applique en principe le régime des clauses ; {sans_cac_n} lignes plus anciennes
       ({sans_cac_md} Md€, échéances jusqu'en {sans_cac_fin}) en sont exclues ; les titres à un an au plus ({btf_md} Md€)
-      sont hors champ. Des clauses facilitent une modification collective ; elles n'en garantissent ni l'adoption ni la
-      faisabilité.
+      sont hors champ. Trois lignes indexées sur l'inflation de la zone euro y sont rangées d'après leur date de
+      création, sans lecture de leurs arrêtés. Des clauses facilitent une modification collective ; elles n'en
+      garantissent ni l'adoption ni la faisabilité.
     en: >-
       Under current law for covered securities only. According to our reconstruction from the AFT line sheets ({aft_date}),
       {cac_part}% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€{cac_md} billion of €{oat_md} billion)
       belongs to lines created since 2013, to which the clause regime applies in principle; {sans_cac_n} older lines
       (€{sans_cac_md} billion, maturing up to {sans_cac_fin}) are excluded; securities of one year or less (€{btf_md}
-      billion) fall outside its scope. Clauses ease a collective modification; they guarantee neither its adoption nor its
-      feasibility.
+      billion) fall outside its scope. Three lines indexed to euro-area inflation are classed by their creation date,
+      without reading their creation orders. Clauses ease a collective modification; they guarantee neither its adoption
+      nor its feasibility.
   repartition:
     statut: site
     fr: >-
@@ -529,13 +539,15 @@ operations:
     statut: lu
     fr: >-
       Non déterminé : le seul départ prévu par les traités est le retrait de l'Union (art. 50 TUE : selon les règles
-      constitutionnelles de l'État, accord conclu par le Conseil à la majorité qualifiée, traités inapplicables deux ans
-      après la notification à défaut d'accord) ; l'absence de procédure propre à la zone euro dans les textes lus ne vaut
+      constitutionnelles de l'État, accord conclu par le Conseil à la majorité qualifiée après approbation du Parlement
+      européen, traités inapplicables deux ans après la notification à défaut d'accord, délai que le Conseil européen
+      peut proroger à l'unanimité) ; l'absence de procédure propre à la zone euro dans les textes lus ne vaut
       pas conclusion.
     en: >-
       Not determined: the only departure the Treaties provide for is withdrawal from the Union (Art. 50 TEU: in line with
-      the State's constitutional requirements, an agreement concluded by the Council by qualified majority, Treaties ceasing
-      to apply two years after notification failing agreement); the absence of a euro-area-specific procedure in the texts
+      the State's constitutional requirements, an agreement concluded by the Council by qualified majority after the
+      consent of the European Parliament, Treaties ceasing to apply two years after notification failing agreement, a
+      period the European Council may extend unanimously); the absence of a euro-area-specific procedure in the texts
       read is not a conclusion.
   droit:
     statut: non_etabli

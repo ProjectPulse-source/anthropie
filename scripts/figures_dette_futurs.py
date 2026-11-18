@@ -47,19 +47,20 @@ T = {
         a_titre="La dette publique en 2030 : plusieurs futurs, sous quelles hypothèses ?",
         a_sous="Dette publique française, en % du PIB",
         p90="90e centile", p10="10e centile", ref="Commission, politique inchangée", ref2="sans nouvelles mesures après 2026",
-        plf="Prévision du PLF 2027", psmt="Engagement d'octobre 2024", en_="en",
+        plf="Prévision du PLF 2027", psmt="Plan d'octobre 2024", en_="en", prevoyait="prévoyait",
+        psmt_m="Prévision du plan d'octobre 2024",
         ref35="Commission, politique inchangée (2035, hors graphique)",
         au_dela="Au-delà de 2030, hors de l'éventail : projection à politique inchangée de la Commission en 2035, {v} du PIB, "
                 "sans nouvelles mesures après 2026.",
         bandes="Bandes, de la plus claire à la plus foncée : du 10e au 90e, du 20e au 80e et du 40e au 60e centile des "
-               "trajectoires simulées par la Commission (8, 6 et 2 sur 10).",
-        a_note="Les bandes sont des projections conditionnelles fondées sur des chocs économiques historiques ; elles "
+               "trajectoires simulées par la Commission (8, 6 et 2 sur 10).",
+        a_note="Les bandes sont des projections conditionnelles, à politique inchangée, fondées sur des chocs économiques historiques ; elles "
                "ne prédisent ni les décisions futures ni leurs conséquences. {bandes} Les trois trajectoires reposent sur "
-               "des hypothèses et des points de départ différents. Départs en 2025 : Commission {a} (février 2026), "
-               "PLF 2027 {b} (octobre 2026), engagement de 2024 {c} (octobre 2024) ; l'engagement ne donne pas de "
+               "des hypothèses et des points de départ différents ; les prévisions du Gouvernement supposent des mesures qui ne sont pas toutes votées. Départs en 2025 : Commission, {a} (février 2026) ; "
+               "PLF 2027, {b} (octobre 2026) ; plan de 2024, {c} (octobre 2024) ; le plan ne donne pas de "
                "valeur pour 2026.",
-        a_note_m="Les bandes sont des projections conditionnelles fondées sur des chocs historiques, non des prévisions. "
-                 "{bandes} Départs en 2025 : Commission {a}, PLF 2027 {b}, engagement de 2024 {c} ; l'engagement ne "
+        a_note_m="Les bandes sont des projections conditionnelles, à politique inchangée, fondées sur des chocs historiques, non des prévisions ; les prévisions du Gouvernement supposent des mesures qui ne sont pas toutes votées. "
+                 "{bandes} Départs en 2025 : Commission, {a} ; PLF 2027, {b} ; plan de 2024, {c} ; le plan ne "
                  "donne pas de valeur pour 2026.",
         a_source_m="Sources : Commission européenne (DSM 2025) ; Gouvernement (plan d'octobre 2024, PLF 2027).",
         a_source="Sources : Commission européenne, Debt Sustainability Monitor 2025 (fiche France) ; Gouvernement, plan "
@@ -74,8 +75,8 @@ T = {
         l_solde_n="Calcul comptable, hors effets sur la croissance et les taux",
         l_eub="Taux de marché plus bas de 0,2 point",
         l_t100="Taux de marché plus hauts de 1 point",
-        l_gp="Croissance nominale plus forte de 0,5 point par an",
-        l_gm="Croissance nominale plus faible de 0,5 point par an",
+        l_gp="Croissance réelle plus forte de 0,5 point par an, à\u00a0inflation\u00a0inchangée",
+        l_gm="Croissance réelle plus faible de 0,5 point par an, à\u00a0inflation\u00a0inchangée",
         b_note="Sensibilités : un seul paramètre modifié à la fois, les autres inchangés ; ni prévisions, ni "
                "évaluations complètes de politiques, ni classement coût-bénéfice.",
         b_source="Calculs de l'auteur à partir de la référence de la Commission européenne (Debt Sustainability Monitor "
@@ -85,22 +86,23 @@ T = {
         a_titre="Public debt in 2030: several futures, under which assumptions?",
         a_sous="French public debt, % of GDP",
         p90="90th percentile", p10="10th percentile", ref="Commission, unchanged policy", ref2="no new measures after 2026",
-        plf="2027 draft budget forecast", psmt="October 2024 commitment", en_="in",
+        plf="2027 draft budget forecast", psmt="October 2024 plan", en_="in", prevoyait="forecast",
+        psmt_m="October 2024 plan forecast",
         ref35="Commission, unchanged policy (2035, off the chart)",
         au_dela="Beyond 2030, outside the fan: the Commission's unchanged-policy projection for 2035 is {v} of GDP, with "
                 "no new measures after 2026.",
         bandes="Bands, from lightest to darkest: 10th to 90th, 20th to 80th and 40th to 60th percentiles of the paths "
-               "simulated by the Commission (8, 6 and 2 in 10).",
-        a_note="The bands are conditional projections based on historical economic shocks; they do not predict future "
+               "simulated by the Commission (8, 6 and 2 in 10).",
+        a_note="The bands are conditional projections, under unchanged policy, based on historical economic shocks; they do not predict future "
                "decisions or their consequences. {bandes} The three paths rest on different assumptions and starting "
-               "points. Starting points in 2025: Commission {a} (February 2026 release), 2027 draft budget {b} (October "
-               "2026), 2024 commitment {c} (October 2024); the commitment gives no figure for 2026.",
-        a_note_m="The bands are conditional projections based on historical shocks, not forecasts. {bandes} Starting "
-                 "points in 2025: Commission {a}, 2027 draft budget {b}, 2024 commitment {c}; the commitment gives no "
+               "points; the Government's forecasts assume measures not all of which have been passed. Starting points in 2025: Commission, {a} (February 2026 release); 2027 draft budget, {b} (October "
+               "2026); 2024 plan, {c} (October 2024); the plan gives no figure for 2026.",
+        a_note_m="The bands are conditional projections, under unchanged policy, based on historical shocks, not forecasts; the Government's forecasts assume measures not all of which have been passed. {bandes} Starting "
+                 "points in 2025: Commission, {a}; 2027 draft budget, {b}; 2024 plan, {c}; the plan gives no "
                  "figure for 2026.",
-        a_source_m="Sources: European Commission (DSM 2025); French government (October 2024 plan, 2027 draft budget).",
+        a_source_m="Sources: European Commission (DSM 2025); French Government (October 2024 plan, 2027 draft budget).",
         a_source="Sources: European Commission, Debt Sustainability Monitor 2025 (France country fiche); French "
-                 "government, medium-term fiscal-structural plan (October 2024) and debt report annexed to the 2027 "
+                 "Government, medium-term fiscal-structural plan (October 2024) and debt report annexed to the 2027 "
                  "draft budget.",
         licence="Chart: Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/en/public-debt-what-futures/",
         licence_m="Chart: Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
@@ -112,8 +114,8 @@ T = {
         l_solde_n="Accounting calculation, ignoring any effect on growth or interest rates",
         l_eub="Market rates 0.2 percentage point lower",
         l_t100="Market rates 1 percentage point higher",
-        l_gp="Nominal growth 0.5 percentage point higher each year",
-        l_gm="Nominal growth 0.5 percentage point lower each year",
+        l_gp="Real growth 0.5 percentage point higher each year, inflation\u00a0unchanged",
+        l_gm="Real growth 0.5 percentage point lower each year, inflation\u00a0unchanged",
         b_note="Sensitivities: one parameter changed at a time, the others unchanged. These are not forecasts, full policy assessments or a "
                "cost-benefit ranking.",
         b_source="Author's calculations based on the European Commission's baseline (Debt Sustainability Monitor 2025, "
@@ -150,15 +152,15 @@ def desc_a(D: dict, lang: str) -> str:
     if lang == "fr":
         return ("Éventail des trajectoires de dette simulées par la Commission européenne de 2025 à 2030 : en 2030, 10e "
                 "centile %s, 90e centile %s ; référence de la Commission %s en 2030 et %s en 2035 ; prévision du PLF "
-                "2027 : %s en 2030 ; engagement d'octobre 2024 : %s en 2029. %s Départs en 2025 : Commission %s, PLF "
-                "2027 %s, engagement de 2024 %s." % (pct(d["p10"][2030], lang), pct(d["p90"][2030], lang),
+                "2027 : %s en 2030 ; plan d'octobre 2024 : %s en 2029. %s Départs en 2025 : Commission %s, PLF "
+                "2027 %s, plan de 2024 %s." % (pct(d["p10"][2030], lang), pct(d["p90"][2030], lang),
                                                        pct(b[2030], lang), pct(b[2035], lang), pct(p[2030], lang),
                                                        pct(s[2029], lang), t["bandes"], pct(b[2025], lang),
                                                        pct(p[2025], lang), pct(s[2025], lang)))
     return ("Fan of debt paths simulated by the European Commission, 2025 to 2030: in 2030, 10th percentile %s, 90th "
             "percentile %s; Commission baseline %s in 2030 and %s in 2035; 2027 draft budget forecast: %s in 2030; "
-            "October 2024 commitment: %s in 2029. %s Starting points in 2025: Commission %s, 2027 draft budget %s, 2024 "
-            "commitment %s." % (pct(d["p10"][2030], lang), pct(d["p90"][2030], lang), pct(b[2030], lang),
+            "October 2024 plan: %s in 2029. %s Starting points in 2025: Commission %s, 2027 draft budget %s, 2024 "
+            "plan %s." % (pct(d["p10"][2030], lang), pct(d["p90"][2030], lang), pct(b[2030], lang),
                                 pct(b[2035], lang), pct(p[2030], lang), pct(s[2029], lang), t["bandes"],
                                 pct(b[2025], lang), pct(p[2025], lang), pct(s[2025], lang)))
 
@@ -202,8 +204,8 @@ def eventail(D: dict, lang: str) -> str:
     for a in ps:
         e.append('<circle cx="%.1f" cy="%.1f" r="3" fill="#ffffff" stroke="%s" stroke-width="1.5"/>' % (X(a), Y(s[a]), ORANGE_A))
     # Engagement de 2024 : nom puis valeur, centrés sous le point de 2029 qu'ils désignent.
-    e.append(txt(X(2029), Y(s[2029]) + 20, t["psmt"], 12, "middle", fill=ORANGE_A))
-    e.append(txt(X(2029), Y(s[2029]) + 34, "%s %s 2029" % (pct(s[2029], lang), t["en_"]), 12, "middle", fill=ORANGE_A))
+    e.append(txt(X(2029), Y(s[2029]) + 23, t["psmt"], 12, "middle", fill=ORANGE_A))
+    e.append(txt(X(2029), Y(s[2029]) + 37, "%s %s %s 2029" % (t["prevoyait"], pct(s[2029], lang), t["en_"]), 12, "middle", fill=ORANGE_A))
     xr = X(2030) + 10
     e.append(txt(xr, Y(d["p90"][2030]) + 4, "%s — %s" % (t["p90"], pct(d["p90"][2030], lang)), 12, fill=SEC))
     e.append(txt(xr, Y(b[2030]) + 4, t["ref"], 12, weight=600, fill=BLEU))
@@ -253,11 +255,11 @@ def eventail_m(D: dict, lang: str) -> str:
     # Échantillon du trait devant chaque libellé (contrôleur, 09/11/2026) : la couleur du texte seule reliait mal le
     # pointillé de l'engagement et les tirets de la prévision, deux orangés voisins sur un petit écran.
     traits = {"ref": (BLEU, "6 4", 2.5), "plf": (ORANGE, "10 4", 2.5), "psmt": (ORANGE_A, "2 4", 1.5)}
-    for lib, val, coul, gras, tr in ((t["p90"] + " (2030)", pct(d["p90"][2030], lang), SEC, 400, None),
+    for lib, val, coul, gras, tr in ((t["p90"] + "\u00a0(2030)", pct(d["p90"][2030], lang), SEC, 400, None),
                                      (t["ref"] + " (2030), " + t["ref2"], pct(b[2030], lang), BLEU, 600, "ref"),
-                                     (t["plf"] + " (2030)", pct(p[2030], lang), ORANGE, 600, "plf"),
-                                     (t["p10"] + " (2030)", pct(d["p10"][2030], lang), SEC, 400, None),
-                                     (t["psmt"] + " (2029)", pct(s[2029], lang), ORANGE_A, 400, "psmt"),
+                                     (t["plf"] + "\u00a0(2030)", pct(p[2030], lang), ORANGE, 600, "plf"),
+                                     (t["p10"] + "\u00a0(2030)", pct(d["p10"][2030], lang), SEC, 400, None),
+                                     (t["psmt_m"] + "\u00a0(2029)", pct(s[2029], lang), ORANGE_A, 400, "psmt"),
                                      (t["ref35"], pct(b[2035], lang), BLEU, 400, "aucun")):
         xt = 30 if tr else 0
         if tr and tr in traits:

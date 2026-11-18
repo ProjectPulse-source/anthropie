@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 969" role="img" font-variant-numeric="tabular-nums" aria-labelledby="futurs-leviers-m-t futurs-leviers-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="futurs-leviers-m-t">Public debt in 2035: how far the primary balance, interest rates and growth move it</title><desc id="futurs-leviers-m-d">Effect on the debt-to-GDP ratio in 2035, in percentage points of GDP, relative to the Commission's baseline. Orange: debt rises; grey: debt falls; dotted outline: accounting calculation. Primary balance 1 percentage point of GDP higher every year, from 2028 to 2035: −8.2; market rates 0.2 percentage point lower: −1.0; market rates 1 percentage point higher: +5.5; nominal growth 0.5 percentage point higher each year: −5.7; nominal growth 0.5 percentage point lower each year: +5.9.</desc>
-<rect width="300" height="969" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 987" role="img" font-variant-numeric="tabular-nums" aria-labelledby="futurs-leviers-m-t futurs-leviers-m-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="futurs-leviers-m-t">Public debt in 2035: how far the primary balance, interest rates and growth move it</title><desc id="futurs-leviers-m-d">Effect on the debt-to-GDP ratio in 2035, in percentage points of GDP, relative to the Commission's baseline. Orange: debt rises; grey: debt falls; dotted outline: accounting calculation. Primary balance 1 percentage point of GDP higher every year, from 2028 to 2035: −8.2; market rates 0.2 percentage point lower: −1.0; market rates 1 percentage point higher: +5.5; real growth 0.5 percentage point higher each year, inflation unchanged: −5.7; real growth 0.5 percentage point lower each year, inflation unchanged: +5.9.</desc>
+<rect width="300" height="987" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#1a1a1a">Public debt in 2035: how far</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#1a1a1a">the primary balance, interest</text>
 <text x="0" y="64" font-size="17" font-weight="600" fill="#1a1a1a">rates and growth move it</text>
@@ -31,29 +31,30 @@
 <rect x="160.0" y="501.0" width="63.7" height="16" fill="#eb6834"/>
 <text x="228.7" y="514.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">+5.5</text>
 <text x="0.0" y="550.0" font-size="15" font-weight="600" text-anchor="start" fill="#1a1a1a">Economic activity</text>
-<text x="0.0" y="575.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">Nominal growth 0.5 percentage point</text>
-<text x="0.0" y="593.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">higher each year</text>
-<line x1="160.0" x2="160.0" y1="600.0" y2="622.0" stroke="#9a9994"/>
-<rect x="94.3" y="603.0" width="65.7" height="16" fill="#8a8984"/>
-<text x="89.3" y="616.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#1a1a1a">−5.7</text>
-<text x="0.0" y="645.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">Nominal growth 0.5 percentage point</text>
-<text x="0.0" y="663.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">lower each year</text>
-<line x1="160.0" x2="160.0" y1="670.0" y2="692.0" stroke="#9a9994"/>
-<rect x="160.0" y="673.0" width="69.0" height="16" fill="#eb6834"/>
-<text x="234.0" y="686.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">+5.9</text>
-<text x="160.0" y="716.0" font-size="13.5" font-weight="400" text-anchor="middle" fill="#52514e">0</text>
-<line x1="0" y1="726.0" x2="300" y2="726.0" stroke="#d8d6d0"/>
-<text class="pied-source" x="0" y="747.0" font-size="13.5" fill="#52514e">Author's calculations based on the</text>
-<text class="pied-source" x="0" y="764.0" font-size="13.5" fill="#52514e">European Commission's baseline (Debt</text>
-<text class="pied-source" x="0" y="781.0" font-size="13.5" fill="#52514e">Sustainability Monitor 2025, France</text>
-<text class="pied-source" x="0" y="798.0" font-size="13.5" fill="#52514e">country fiche), engine tested against</text>
-<text class="pied-source" x="0" y="815.0" font-size="13.5" fill="#52514e">the Commission and against the</text>
-<text class="pied-source" x="0" y="832.0" font-size="13.5" fill="#52514e">sensitivity published by the French</text>
-<text class="pied-source" x="0" y="849.0" font-size="13.5" fill="#52514e">Treasury (AFT).</text>
-<text class="pied-note" x="0" y="870.0" font-size="13.5" fill="#52514e">Sensitivities: one parameter changed</text>
-<text class="pied-note" x="0" y="887.0" font-size="13.5" fill="#52514e">at a time, the others unchanged. These</text>
-<text class="pied-note" x="0" y="904.0" font-size="13.5" fill="#52514e">are not forecasts, full policy</text>
-<text class="pied-note" x="0" y="921.0" font-size="13.5" fill="#52514e">assessments or a cost-benefit ranking.</text>
-<text class="pied-licence" x="0" y="942.0" font-size="13.5" fill="#52514e">Chart: Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="959.0" font-size="13.5" fill="#52514e">· stephane-lalut.com</text>
+<text x="0.0" y="575.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">Real growth 0.5 percentage point</text>
+<text x="0.0" y="593.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">higher each year,</text>
+<text x="0.0" y="611.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">inflation unchanged</text>
+<line x1="160.0" x2="160.0" y1="618.0" y2="640.0" stroke="#9a9994"/>
+<rect x="94.3" y="621.0" width="65.7" height="16" fill="#8a8984"/>
+<text x="89.3" y="634.0" font-size="13.5" font-weight="600" text-anchor="end" fill="#1a1a1a">−5.7</text>
+<text x="0.0" y="663.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">Real growth 0.5 percentage point</text>
+<text x="0.0" y="681.0" font-size="13.5" font-weight="400" text-anchor="start" fill="#1a1a1a">lower each year, inflation unchanged</text>
+<line x1="160.0" x2="160.0" y1="688.0" y2="710.0" stroke="#9a9994"/>
+<rect x="160.0" y="691.0" width="69.0" height="16" fill="#eb6834"/>
+<text x="234.0" y="704.0" font-size="13.5" font-weight="600" text-anchor="start" fill="#b8420f">+5.9</text>
+<text x="160.0" y="734.0" font-size="13.5" font-weight="400" text-anchor="middle" fill="#52514e">0</text>
+<line x1="0" y1="744.0" x2="300" y2="744.0" stroke="#d8d6d0"/>
+<text class="pied-source" x="0" y="765.0" font-size="13.5" fill="#52514e">Author's calculations based on the</text>
+<text class="pied-source" x="0" y="782.0" font-size="13.5" fill="#52514e">European Commission's baseline (Debt</text>
+<text class="pied-source" x="0" y="799.0" font-size="13.5" fill="#52514e">Sustainability Monitor 2025, France</text>
+<text class="pied-source" x="0" y="816.0" font-size="13.5" fill="#52514e">country fiche), engine tested against</text>
+<text class="pied-source" x="0" y="833.0" font-size="13.5" fill="#52514e">the Commission and against the</text>
+<text class="pied-source" x="0" y="850.0" font-size="13.5" fill="#52514e">sensitivity published by the French</text>
+<text class="pied-source" x="0" y="867.0" font-size="13.5" fill="#52514e">Treasury (AFT).</text>
+<text class="pied-note" x="0" y="888.0" font-size="13.5" fill="#52514e">Sensitivities: one parameter changed</text>
+<text class="pied-note" x="0" y="905.0" font-size="13.5" fill="#52514e">at a time, the others unchanged. These</text>
+<text class="pied-note" x="0" y="922.0" font-size="13.5" fill="#52514e">are not forecasts, full policy</text>
+<text class="pied-note" x="0" y="939.0" font-size="13.5" fill="#52514e">assessments or a cost-benefit ranking.</text>
+<text class="pied-licence" x="0" y="960.0" font-size="13.5" fill="#52514e">Chart: Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="977.0" font-size="13.5" fill="#52514e">· stephane-lalut.com</text>
 </svg>
