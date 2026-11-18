@@ -72,7 +72,7 @@ Every year, three terms move this ratio, set out in [Why does French public debt
 
 Changes in the ratio are measured in points of GDP. In {{< baisse-val "annee_fin" >}}, one point is about {{< baisse-val "point_md" >}} billion euros; but contributions cumulated over ten years, each computed on that year's GDP, do not represent sums paid or saved. This decomposition is an accounting one: it says through which channel the ratio moved. Economic conditions (growth, inflation, interest rates) and budget decisions act on several terms at once, and it does not separate them.
 
-## France: three decades, and three years apart {#trois-decennies}
+## France: three decades, and three years that stand out {#trois-decennies}
 
 <div class="figure-lecture">
 {{< figure-svg fichier="dette-baisse-decennies-en" alt="For each of the last three decades, four bars: the interest-growth effect, the primary balance, other adjustments, and the change in the debt ratio, their sum. Over the last decade, interest and growth pull the ratio down, primary deficits push it up by more." >}}What pushed the French debt-to-GDP ratio up or down, by decade, in points of GDP cumulated (Eurostat, author's calculation). Orange: what pushes it up; grey: what pulls it down; blue: the change, the sum of the three.{{< /figure-svg >}}
@@ -99,7 +99,7 @@ From one decade to the next, the contribution of primary deficits went from {{< 
 
 **{{< baisse-val "d3_lib" >}}: three years of relief, outweighed by deficits.** Over the decade, interest adds {{< baisse-val "d3_interets" >}} points to the ratio and nominal GDP growth erases {{< baisse-val "d3_croissance" >}}: the interest-growth effect is {{< baisse-val "d3_tc" >}} points. This is not a steady advantage. The years {{< baisse-val "d3_creux_lib" >}} alone take off {{< baisse-val "d3_creux_abs" >}} points; the other {{< baisse-val "d3_reste_n" >}} together weigh {{< baisse-val "d3_reste" >}} points, including {{< baisse-val "d3_pic_tc" >}} in {{< baisse-val "d3_pic_annee" >}}, when GDP fell. In {{< baisse-val "d3_creux_rebond" >}}, activity rebounds ({{< baisse-val "d3_creux_rebond_gv" >}}% in volume); in the next two years, nominal growth owes more to prices than to volume. Even when rising prices lighten the ratio, this is not an equivalent gain in wealth: inflation higher than expected reduces the real value of fixed payments owed to creditors, a redistributive effect that depends on the indexation of the securities and their maturity. No year of the decade shows a primary surplus: cumulated deficits add {{< baisse-val "d3_def_abs" >}} points, more than the whole rise in the ratio ({{< baisse-val "d3_var" >}}).
 
-## What brought the ratio down elsewhere {#pays-compares}
+## Elsewhere, how do declines in the ratio break down? {#pays-compares}
 
 The same decomposition, over the same decade, applies to the EU countries whose debt exceeded {{< baisse-val "seuil_dette" >}}% of GDP at end-{{< baisse-val "cmp_veille" >}}: France, at {{< baisse-val "cmp_fr_d0" >}}%, and {{< baisse-val "cmp_autres_n" >}} others, all starting from a higher level. This threshold is a presentation convention, close to the French level; it does not make these countries equivalent experiences, and, at 100%, France drops out of the group.
 
@@ -137,6 +137,8 @@ Lowering the threshold to 80% brings {{< baisse-val "s80_ajouts" >}} into the gr
 
 ## What primary balance would stabilise the debt? {#solde-stabilisant}
 
+Two primary balances and one effort should be kept apart: the observed primary balance, the one recorded in the accounts; the stabilising primary balance, the one that would have left the ratio unchanged in the year, stock-flow adjustments aside; and the medium-term effort, which this page does not calculate: the multi-year adjustment that institutions estimate, under their assumptions, to reach a deficit or debt target.
+
 In a given year, and excluding other adjustments, the ratio does not move if the primary balance exactly offsets that year's interest-growth effect. This balance, called stabilising, is the grey line; the balance actually observed is the orange line.
 
 {{< figure-svg fichier="dette-baisse-stabilisant-en" alt="Two annual lines over thirty years, as a percentage of GDP: the observed primary balance and the balance that would have stabilised the debt ratio, which jumps in the year GDP fell and plunges in the year of the rebound; in the last year, a dotted line marks the gap between the two." >}}Observed primary balance and the primary balance that would have stabilised the debt ratio within the year, excluding other adjustments, France, in % of GDP (Eurostat, author's calculation).{{< /figure-svg >}}
@@ -153,7 +155,7 @@ Over {{< baisse-val "annees_total" >}} years, the observed balance reached or ex
 
 Stabilising the ratio and bringing it down are two distinct objectives. An adjustment amount is read with its objective, its horizon and its assumptions; the marker calculated here for {{< baisse-val "annee_fin" >}} holds for that year and does not allow the multi-year estimates of institutions to be assessed.
 
-### In the euro area, what sets France apart {#zone-euro}
+### In the euro area, how does France's decomposition compare with the other countries'? {#zone-euro}
 
 The same calculation, run on the current members of the euro area, separates what the gap to the marker, on its own, conflates: the rate paid on debt, the growth of the economy and the primary balance. Over {{< baisse-val "ze_lib" >}}, {{< baisse-val "ze_compares" >}}; {{< baisse-val "ze_hors" >}}.
 
@@ -197,7 +199,13 @@ No level of debt, on its own, settles this question. A debt is called sustainabl
 
 **What these data do not say.** Lenders' confidence, market access and the cost of future refinancing depend on the maturity of the debt and on the gap between market rates and the implicit rate (see [transmission](/en/public-debt-international-comparison/#transmission)), on who holds it ([Who really pays for public debt?](/en/who-really-pays-public-debt/)) and on central bank decisions. The sustainability assessments that institutions publish rest on conditional projections, which these data can neither confirm nor rule out.
 
-## Thirty years of European windows {#europe}
+## In the European windows selected, has a high debt ratio fallen sharply with a negative average primary balance? {#europe}
+
+<div class="resultat-phrase">
+
+**The finding in one sentence.** No, in the windows selected: among the {{< baisse-val "eu_hautes_n" >}} ten-year windows where starting debt exceeded {{< baisse-val "seuil_dette" >}}% of GDP, in the {{< baisse-val "eu_pays" >}} current EU members, since {{< baisse-val "eu_premiere" >}}, none of the {{< baisse-val "eu_def_n" >}} with a negative average primary balance saw the ratio fall by {{< baisse-val "forte_baisse" >}} points or more. These windows overlap, come from a few countries and describe past periods, and other windows are excluded, with the reason for each, in the method below: they give neither a surplus threshold to reach nor a probability of success.
+
+</div>
 
 <details class="repli"><summary>Primary balances and falls in the ratio: European ten-year periods</summary>
 
@@ -300,6 +308,8 @@ Eurostat, general government (S.13), ESA 2010 accounts, in national currency: Ma
 Structural primary balance: European Commission, AMECO database, series UBLGBPS (general government balance excluding interest, adjusted for the cycle and one-off measures, in % of potential GDP), {{< baisse-val "ze_edition" >}} edition, an extract archived with its hash; it serves as a check and enters no calculation. The same applies to the two other checks on the structural ranking: OECD, {{< baisse-val "ze_ocde_ed" >}}, series NLGXQU (underlying primary balance, excluding the cycle and one-off measures, in % of potential GDP, euro-area members that belong to the OECD); IMF, {{< baisse-val "ze_fmi_ed" >}}, series GGCBP_G01_PGDP_PT (cyclically adjusted primary balance only, in % of potential GDP).
 
 Check: for each country and each year, the calculated debt ratio and primary balance are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use. Beyond a gap of {{< baisse-val "tolerance" >}} points, the year is excluded; a year for which Eurostat publishes no ratio cannot be checked and is excluded too. With the current accounts, {{< baisse-val "cons_ecartees" >}} country-years out of {{< baisse-val "cons_calculables" >}} are excluded, all for lack of a published ratio (list and reason in the JSON file); for France and the compared countries, the script stops. A window containing a year of nominal growth above 35% is excluded: {{< baisse-val "eu_fenetres_ecartees" >}} are. The countries compared with France are designated by a rule, not chosen: debt above {{< baisse-val "seuil_dette" >}}% of GDP at end-{{< baisse-val "cmp_veille" >}}; the same calculation is redone at 80% and 100%. The figures computed from Eurostat series all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially. Figures attributed to the French Treasury, the Conseil d'analyse économique and the OFCE are given as they publish them.
+
+{{< dette-methode >}}
 
 {{< reutiliser figures="figures_baisse" jeu="dette_baisse" sources="Eurostat and European Commission (AMECO)" donnees="The decade-by-decade decomposition of the French debt-to-GDP ratio, the observed and stabilising primary balance (excluding other adjustments) year by year, the same decomposition for the EU countries whose debt exceeded 90% of GDP, and the averages for euro-area countries (primary balance, stabilising balance, implicit rate, nominal growth, AMECO structural balance); the same content exists as CSV, in long format." >}}
 From {{< baisse-val "d3_debut" >}} to {{< baisse-val "annee_fin" >}}, primary deficits added {{< baisse-val "d3_def_abs" >}} points of GDP to the French debt ratio, the interest-growth effect, concentrated in {{< baisse-val "d3_creux_lib" >}}, took off {{< baisse-val "d3_tc_abs" >}}, and other adjustments added {{< baisse-val "d3_sfa_abs" >}}: a rise of {{< baisse-val "d3_var_abs" >}} points. Among the {{< baisse-val "cmp_n" >}} EU countries whose debt exceeded {{< baisse-val "seuil_dette" >}}% of GDP at end-{{< baisse-val "cmp_veille" >}}, the ratio fell markedly in {{< baisse-val "cmp_exc_n" >}}, first through the interest-growth effect, about twice as strong as that of their primary surpluses. This is an accounting decomposition, not a causal attribution.

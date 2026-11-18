@@ -104,7 +104,7 @@ D'une décennie à l'autre, la contribution des déficits primaires est passée 
 
 **{{< baisse-val "d3_lib" >}}&nbsp;: un allègement de trois ans, dépassé par les déficits.** Sur la décennie, les intérêts ajoutent {{< baisse-val "d3_interets" >}} points au ratio et la croissance du PIB nominal en efface {{< baisse-val "d3_croissance" >}}&nbsp;: l'effet des taux et de la croissance est de {{< baisse-val "d3_tc" >}} points. Ce n'est pas un avantage régulier. Les années {{< baisse-val "d3_creux_lib" >}} en retirent à elles seules {{< baisse-val "d3_creux_abs" >}} points&nbsp;; les {{< baisse-val "d3_reste_n" >}} autres pèsent ensemble {{< baisse-val "d3_reste" >}} point, dont {{< baisse-val "d3_pic_tc" >}} en {{< baisse-val "d3_pic_annee" >}}, quand le PIB reculait. En {{< baisse-val "d3_creux_rebond" >}}, l'activité rebondit ({{< baisse-val "d3_creux_rebond_gv" >}}&nbsp;% en volume)&nbsp;; les deux années suivantes, la croissance nominale doit davantage aux prix qu'au volume. Même quand la hausse des prix allège le ratio, ce n'est pas un enrichissement du même montant&nbsp;: une inflation supérieure à celle qui était anticipée réduit la valeur réelle des paiements fixes dus aux créanciers, un effet redistributif qui dépend de l'indexation des titres et de leur durée. Aucune année de la décennie n'est en excédent primaire&nbsp;: les déficits cumulés ajoutent {{< baisse-val "d3_def_abs" >}} points, plus que toute la hausse du ratio ({{< baisse-val "d3_var" >}}).
 
-## Ce qui a fait baisser le ratio ailleurs {#pays-compares}
+## Ailleurs, comment se décomposent les baisses du ratio&nbsp;? {#pays-compares}
 
 La même décomposition, sur la même décennie, s'applique aux pays de l'Union dont la dette dépassait {{< baisse-val "seuil_dette" >}}&nbsp;% du PIB fin {{< baisse-val "cmp_veille" >}}&nbsp;: la France, à {{< baisse-val "cmp_fr_d0" >}}&nbsp;%, et {{< baisse-val "cmp_autres_n" >}} autres, qui partaient tous d'un niveau plus élevé. Ce seuil est une convention de présentation, proche du niveau français&nbsp;; il ne fait pas de ces pays des expériences équivalentes, et, à 100&nbsp;%, la France sort du groupe.
 
@@ -142,6 +142,8 @@ Abaisser le seuil à 80&nbsp;% fait entrer dans le groupe {{< baisse-val "s80_aj
 
 ## Quel solde stabiliserait la dette&nbsp;? {#solde-stabilisant}
 
+Deux soldes primaires et un effort sont à distinguer&nbsp;: le solde primaire observé, celui que les comptes enregistrent&nbsp;; le solde primaire stabilisant, celui qui aurait laissé le ratio inchangé dans l'année, hors ajustements flux-stock&nbsp;; et l'effort de moyen terme, que cette page ne calcule pas, ajustement sur plusieurs années qu'estiment les institutions, sous leurs hypothèses, pour atteindre un objectif de déficit ou de dette.
+
 Une année donnée, et hors autres ajustements, le ratio ne bouge pas si le solde primaire compense exactement l'effet des taux et de la croissance de l'année. Ce solde, dit stabilisant, est la courbe grise&nbsp;; le solde réellement observé est la courbe orange.
 
 {{< figure-svg fichier="dette-baisse-stabilisant" alt="Deux courbes annuelles sur trente ans, en pourcentage du PIB : le solde primaire observé et le solde qui aurait stabilisé le ratio de dette, qui bondit l'année du recul du PIB et plonge l'année du rebond ; la dernière année, un pointillé marque l'écart entre les deux." >}}Solde primaire observé et solde primaire qui aurait stabilisé le ratio de dette dans l'année, hors autres ajustements, France, en&nbsp;% du PIB (Eurostat, calcul de l'auteur).{{< /figure-svg >}}
@@ -158,7 +160,7 @@ Sur {{< baisse-val "annees_total" >}} ans, le solde observé a atteint ou dépas
 
 Stabiliser le ratio et le faire baisser sont deux objectifs distincts. Un montant d'ajustement se lit avec son objectif, son horizon et ses hypothèses&nbsp;; le repère calculé ici pour {{< baisse-val "annee_fin" >}} vaut pour cette année-là et ne permet pas d'évaluer les estimations pluriannuelles des institutions.
 
-### Dans la zone euro, ce qui distingue la France {#zone-euro}
+### Dans la zone euro, comment la décomposition française se compare-t-elle à celle des autres pays&nbsp;? {#zone-euro}
 
 Le même calcul, mené sur les membres actuels de la zone euro, sépare ce que l'écart au repère, à lui seul, confond&nbsp;: le taux payé sur la dette, la croissance de l'économie et le solde primaire. Sur {{< baisse-val "ze_lib" >}}, {{< baisse-val "ze_compares" >}}&nbsp;; {{< baisse-val "ze_hors" >}}.
 
@@ -202,7 +204,13 @@ Aucun niveau de dette, à lui seul, ne tranche cette question. Une dette est dit
 
 **Ce que ces données ne disent pas.** La confiance des prêteurs, l'accès au marché et le coût des refinancements à venir dépendent de la maturité de la dette et de l'écart entre les taux de marché et le taux implicite (voir [la transmission](/dette-publique-comparaison-internationale/#transmission)), de ceux qui la détiennent ([Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)) et des décisions de la banque centrale. Les diagnostics de soutenabilité que publient les institutions reposent sur des projections conditionnelles, que ces données ne permettent ni de confirmer ni d'écarter.
 
-## Trente ans de fenêtres européennes {#europe}
+## Dans les fenêtres européennes retenues, un ratio élevé a-t-il nettement baissé avec un solde primaire moyen négatif&nbsp;? {#europe}
+
+<div class="resultat-phrase">
+
+**Le résultat en une phrase.** Non, dans les fenêtres retenues&nbsp;: parmi les {{< baisse-val "eu_hautes_n" >}} fenêtres de dix ans où la dette de départ dépassait {{< baisse-val "seuil_dette" >}}&nbsp;% du PIB, dans les {{< baisse-val "eu_pays" >}} pays aujourd'hui membres de l'Union, depuis {{< baisse-val "eu_premiere" >}}, aucune des {{< baisse-val "eu_def_n" >}} à solde primaire moyen négatif n'a vu le ratio baisser d'au moins {{< baisse-val "forte_baisse" >}} points. Ces fenêtres se recouvrent, viennent de quelques pays et décrivent des périodes passées, et d'autres fenêtres sont écartées, avec leur motif, dans la méthode ci-dessous&nbsp;: elles ne donnent ni un seuil d'excédent à atteindre, ni une probabilité de réussite.
+
+</div>
 
 <details class="repli"><summary>Soldes primaires et baisses du ratio&nbsp;: les périodes européennes de dix ans</summary>
 
@@ -305,6 +313,8 @@ Eurostat, administrations publiques (S.13), comptes SEC 2010, en monnaie nationa
 Solde primaire structurel&nbsp;: Commission européenne, base AMECO, série UBLGBPS (solde des administrations publiques hors intérêts, corrigé du cycle et des mesures ponctuelles, en&nbsp;% du PIB potentiel), édition de {{< baisse-val "ze_edition" >}}, extrait archivé avec son empreinte&nbsp;; il sert de témoin et n'entre dans aucun calcul. Mêmes réserves pour les deux autres témoins du rang structurel&nbsp;: OCDE, {{< baisse-val "ze_ocde_ed" >}}, série NLGXQU (solde primaire sous-jacent, hors cycle et mesures ponctuelles, en&nbsp;% du PIB potentiel, membres de la zone euro qui sont membres de l'OCDE)&nbsp;; FMI, {{< baisse-val "ze_fmi_ed" >}}, série GGCBP_G01_PGDP_PT (solde primaire corrigé du cycle seulement, en&nbsp;% du PIB potentiel).
 
 Contrôle&nbsp;: pour chaque pays et chaque année, le ratio de dette et le solde primaire calculés sont comparés à ceux qu'Eurostat publie en pourcentage du PIB, que le calcul n'utilise pas. Au-delà de {{< baisse-val "tolerance" >}} point d'écart, l'année est écartée&nbsp;; une année dont Eurostat ne publie pas le ratio ne peut pas être contrôlée et l'est aussi. Avec les comptes actuels, {{< baisse-val "cons_ecartees" >}} années-pays sur {{< baisse-val "cons_calculables" >}} sont écartées, toutes faute de ratio publié (liste et motif dans le fichier JSON)&nbsp;; pour la France et les pays comparés, le script s'arrête. Une fenêtre qui contient une année de croissance nominale supérieure à 35&nbsp;% est écartée&nbsp;: {{< baisse-val "eu_fenetres_ecartees" >}} le sont. Les pays comparés à la France sont désignés par une règle, non choisis&nbsp;: dette supérieure à {{< baisse-val "seuil_dette" >}}&nbsp;% du PIB à la fin de {{< baisse-val "cmp_veille" >}}&nbsp;; le même calcul est refait à 80 et à 100&nbsp;%. Les chiffres calculés sur les séries d'Eurostat viennent tous du même script, qui vérifie les principales affirmations chiffrées et s'arrête si leurs conditions ne sont plus remplies&nbsp;; leur formulation fait l'objet d'une relecture éditoriale. Les chiffres attribués à la direction générale du Trésor, au Conseil d'analyse économique et à l'OFCE sont repris tels qu'ils les publient.
+
+{{< dette-methode >}}
 
 {{< reutiliser figures="figures_baisse" jeu="dette_baisse" sources="Eurostat et Commission européenne (AMECO)" donnees="La décomposition par décennie du ratio dette/PIB français, le solde primaire observé et le solde stabilisant hors autres ajustements année par année, la même décomposition pour les pays de l'Union dont la dette dépassait 90 % du PIB, et les moyennes des pays de la zone euro (solde primaire, solde stabilisant, taux implicite, croissance nominale, solde structurel AMECO) ; le même contenu existe en CSV, au format long." >}}
 De {{< baisse-val "d3_debut" >}} à {{< baisse-val "annee_fin" >}}, les déficits primaires ont ajouté {{< baisse-val "d3_def_abs" >}} points de PIB au ratio de dette français, l'effet des taux et de la croissance, concentré en {{< baisse-val "d3_creux_lib" >}}, en a retiré {{< baisse-val "d3_tc_abs" >}}, et les autres ajustements en ont ajouté {{< baisse-val "d3_sfa_abs" >}}&nbsp;: une hausse de {{< baisse-val "d3_var_abs" >}} points. Parmi les {{< baisse-val "cmp_n" >}} pays de l'Union dont la dette dépassait {{< baisse-val "seuil_dette" >}}&nbsp;% du PIB fin {{< baisse-val "cmp_veille" >}}, le ratio a nettement baissé dans {{< baisse-val "cmp_exc_n" >}}, d'abord par l'effet des taux et de la croissance, environ deux fois plus fort que celui de leurs excédents primaires. C'est une décomposition comptable, non une attribution causale.

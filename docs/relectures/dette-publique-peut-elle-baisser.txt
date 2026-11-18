@@ -1,10 +1,11 @@
-# relu le 2026-11-06 ; texte servi de /dette-publique-peut-elle-baisser/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /dette-publique-peut-elle-baisser/, build de b191128c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
-Oui : ce qui peut baisser, c’est le poids de la dette dans le PIB, même quand son montant augmente.
+Oui.
+Le poids de la dette dans le PIB peut baisser, même quand son montant augmente.
 Au Portugal, la dette publique est passée de 235 à 275 milliards d’euros de fin 2015 à fin 2025, et son poids de 131,0 % à 89,2 % du PIB.
 En France, il a augmenté de 18,7 points sur la même période : les administrations ont dépensé plus qu’elles n’encaissaient, même sans compter les intérêts, et ce déficit a pesé plus lourd que l’aide des taux et de la croissance.
-Page mise à jour le 6 novembre 2026 · révisions
+Page mise à jour le 17 novembre 2026
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
@@ -17,25 +18,25 @@ Ce recul a suivi un programme d’aide et d’ajustement, dont ces séries ne me
 Chaque année, trois termes font bouger ce ratio, détaillés dans Pourquoi la dette publique augmente-t-elle ? :
 les taux et la croissance : les intérêts payés alourdissent le ratio, la croissance du PIB nominal, en volume et en prix, l’allège ; la page appelle leur bilan « l’effet des taux et de la croissance » ;
 le solde primaire, recettes moins dépenses hors intérêts : un déficit alourdit le ratio, un excédent l’allège ;
-les autres ajustements, dits « flux-stock » : acquisitions d’actifs, variations de trésorerie et autres opérations qui modifient la dette sans passer par le déficit.
+les autres ajustements, dits « flux-stock » : acquisitions nettes d’actifs financiers (prêts, participations, trésorerie), effets de valorisation et autres écarts qui modifient la dette sans passer par le déficit.
 Les variations du ratio se mesurent en points de PIB.
 En 2025, un point correspond à environ 30 milliards d’euros ; mais les contributions cumulées sur dix ans, calculées chaque année sur le PIB de l’année, ne représentent pas des sommes versées ou économisées.
 Cette décomposition est comptable : elle dit par quel canal le ratio a bougé.
 Les conditions économiques (croissance, inflation, taux) et les décisions budgétaires agissent sur plusieurs termes à la fois, et elle ne les sépare pas.
 La France : trois décennies, et trois années à part
-Ce qui a fait monter ou baisser le ratio dette/PIB français, par décennie, en points de PIB cumulés (Eurostat).
+Ce qui a fait monter ou baisser le ratio dette/PIB français, par décennie, en points de PIB cumulés (Eurostat, calcul de l’auteur).
 Orange : ce qui le fait monter ; gris : ce qui le fait baisser ; bleu : la variation, somme des trois.
 Le résultat en une phrase.
 De 2016 à 2025, les déficits primaires ont ajouté 30,6 points au ratio de dette français, l’effet des taux et de la croissance, concentré en 2021-2023, en a retiré 15,0, et les autres ajustements en ont ajouté 3,1 : le bilan est une hausse de 18,7 points.
-C’est une décomposition comptable : elle dit par quel terme la dette a bougé, pas pourquoi les déficits ont existé.
+C’est une décomposition comptable : elle dit par quel terme le ratio a bougé, pas pourquoi les déficits ont existé.
 Les deux décennies précédentes.
 De fin 1995 à fin 2015, le ratio passe de 57,8 % à 97,0 % du PIB : l’effet des taux et de la croissance pousse d’abord le ratio à la hausse, le budget hors intérêts restant proche de l’équilibre, puis les déficits primaires prennent le dessus, avec la crise financière de 2008-2009.
 Les deux décennies précédentes, terme par terme
 1996-2005 : les taux et la croissance poussent à la hausse.
 Le ratio passe de 57,8 % du PIB fin 1995 à 68,2 % fin 2005.
-L’effet des taux et de la croissance ajoute 8,4 points ; le solde primaire, excédentaire quatre années sur dix, en retire 2,5.
+L’effet des taux et de la croissance ajoute 8,4 points ; le solde primaire, excédentaire quatre années sur dix, en retire 2,5, et les autres ajustements en ajoutent 4,4.
 2006-2015 : les deux termes poussent ensemble.
-Le ratio gagne 28,8 points, la plus forte hausse des trois décennies : 22,4 par les déficits primaires, 7,8 par l’effet des taux et de la croissance.
+Le ratio gagne 28,8 points, la plus forte hausse des trois décennies : 22,4 par les déficits primaires, 7,8 par l’effet des taux et de la croissance, et les autres ajustements en retirent 1,5.
 La période contient la crise financière de 2008-2009.
 D’une décennie à l’autre, la contribution des déficits primaires est passée de −2,5 à +22,4 puis +30,6 points.
 Ce constat décrit une récurrence ; il ne dit pas si ces déficits étaient évitables, ni lequel de leurs deux termes, dépenses ou recettes, les explique.
@@ -44,12 +45,12 @@ Sur la décennie, les intérêts ajoutent 17,7 points au ratio et la croissance 
 Ce n’est pas un avantage régulier.
 Les années 2021-2023 en retirent à elles seules 16,8 points ; les sept autres pèsent ensemble +1,8 point, dont +6,1 en 2020, quand le PIB reculait.
 En 2021, l’activité rebondit (6,9 % en volume) ; les deux années suivantes, la croissance nominale doit davantage aux prix qu’au volume.
-Une baisse du ratio par l’inflation n’est pas un enrichissement du même montant : une inflation supérieure à celle qui était anticipée réduit la valeur réelle des paiements fixes dus aux créanciers, un effet redistributif qui dépend de l’indexation des titres et de leur durée.
+Même quand la hausse des prix allège le ratio, ce n’est pas un enrichissement du même montant : une inflation supérieure à celle qui était anticipée réduit la valeur réelle des paiements fixes dus aux créanciers, un effet redistributif qui dépend de l’indexation des titres et de leur durée.
 Aucune année de la décennie n’est en excédent primaire : les déficits cumulés ajoutent 30,6 points, plus que toute la hausse du ratio (+18,7).
-Ce qui a fait baisser le ratio ailleurs
+Ailleurs, comment se décomposent les baisses du ratio ?
 La même décomposition, sur la même décennie, s’applique aux pays de l’Union dont la dette dépassait 90 % du PIB fin 2015 : la France, à 97,0 %, et six autres, qui partaient tous d’un niveau plus élevé.
 Ce seuil est une convention de présentation, proche du niveau français ; il ne fait pas de ces pays des expériences équivalentes, et, à 100 %, la France sort du groupe.
-Effet des taux et de la croissance, solde primaire et autres ajustements, et leur somme, la variation du ratio de dette, 2016-2025, en points de PIB cumulés (Eurostat).
+Effet des taux et de la croissance, solde primaire et autres ajustements, et leur somme, la variation du ratio de dette, 2016-2025, en points de PIB cumulés (Eurostat, calcul de l’auteur).
 Pays triés par variation du ratio.
 Deux ressorts, dans l’ordre de leur poids.
 Dans les trois pays dont le ratio a nettement baissé, Chypre, le Portugal et la Grèce, la contribution comptable la plus forte vient des taux et de la croissance : de 31,2 à 49,4 points en dix ans, environ deux fois celle de leurs excédents primaires, de 15,3 à 23,1 points (rapport de 2,0 à 2,2).
@@ -65,7 +66,7 @@ La Slovénie en donne un exemple : partie d’une dette de 83,4 % du PIB, sous l
 Leur taux implicite n’était pas plus bas.
 Sur la décennie, le taux implicite moyen de leur dette, intérêts payés rapportés à la dette, va de 1,76 à 2,40 %, contre 1,74 % en France, le plus bas du groupe.
 Cet indicateur porte sur le stock : il reflète l’histoire des émissions, leur durée et les prêts officiels, et ne dit pas à quelles conditions ces pays empruntaient sur les marchés.
-Ce qui les distingue, c’est la croissance du PIB nominal : de 3,8 à 8,0 % par an en moyenne, contre 3,2 % en France.
+Leur croissance du PIB nominal a, elle, été plus forte : de 3,8 à 8,0 % par an en moyenne, contre 3,2 % en France.
 En volume, elle y a dépassé celle de la France, de 1,7 à 5,9 % par an contre 1,3 % ; la hausse des prix y a été de 2,0 à 3,3 % par an, contre 1,9 %.
 Le niveau de la dette compte aussi.
 Le même écart entre taux et croissance retire d’autant plus de points que le ratio est élevé.
@@ -74,7 +75,7 @@ Mais sa dette, 182 % du PIB en moyenne, la plus élevée du groupe, démultiplie
 Une partie de la dette grecque est due à ses partenaires européens depuis les programmes d’aide ; ces séries ne séparent pas le taux de ces prêts de celui du reste de la dette.
 Plus la dette de départ est élevée, plus un même écart entre taux et croissance amplifie la variation du ratio, à la baisse comme à la hausse.
 Les autres pays du groupe.
-En France, le ratio a augmenté de 18,7 points, la plus forte hausse du groupe, avec le déficit primaire moyen le plus élevé (−3,1 % du PIB) ; le ratio est resté à peu près stable pour l’Espagne, l’Italie et la Belgique, en déficit primaire moyen, malgré un effet des taux et de la croissance favorable.
+En France, le ratio a augmenté de 18,7 points, la plus forte hausse du groupe, avec le déficit primaire moyen le plus élevé (−3,1 % du PIB) ; le ratio a fini la décennie à peu près à son niveau de départ pour l’Espagne, l’Italie et la Belgique, en déficit primaire moyen, malgré un effet des taux et de la croissance favorable.
 Le Portugal, Chypre et la Grèce ont bénéficié de financements officiels de leurs partenaires européens et du FMI, l’Espagne d’une aide à la recapitalisation de ses banques (calendrier dans le repli ci-dessous).
 Sept pays sur une décennie ne font pas une régularité générale.
 Les sept pays, terme par terme, taux par taux, et les programmes d’aide
@@ -219,13 +220,14 @@ France
 Moyennes annuelles sur 2016-2025 : dette en % du PIB au début de chaque année ; taux et croissance en % par an.
 Volume : volumes chaînés des comptes nationaux ; prix : (1 + croissance nominale) / (1 + croissance en volume) − 1, année par année ; les deux moyennes ne s’additionnent pas exactement.
 Source : Eurostat.
-Le ratio est resté à peu près stable pour l’Espagne, l’Italie et la Belgique (−2,0 à +2,4 points), en déficit primaire moyen, malgré un effet des taux et de la croissance favorable.
+Le ratio a fini la décennie à peu près à son niveau de départ pour l’Espagne, l’Italie et la Belgique (−2,0 à +2,4 points), en déficit primaire moyen, malgré un effet des taux et de la croissance favorable.
 En Belgique, les contributions des taux et de la croissance et du solde primaire totalisent −6,6 points ; les autres ajustements en ajoutent 9,0, portant la variation à +2,4 points.
 Ces pays n’ont pas été financés dans les mêmes conditions.
 Le Portugal (de 2011 à mi-2014), Chypre (d’avril 2013 à mars 2016) et la Grèce (de mai 2010 à août 2018, dernier programme, financé par le Mécanisme européen de stabilité, d’août 2015 à août 2018) ont bénéficié de financements officiels de leurs partenaires européens et du FMI ; l’Espagne a reçu, de juillet 2012 à janvier 2014, une aide à la recapitalisation de ses banques (Commission européenne ; Mécanisme européen de stabilité).
 La restructuration de la dette grecque, en 2012, précède la décennie étudiée.
 Abaisser le seuil à 80 % fait entrer dans le groupe l’Autriche, la Croatie et la Slovénie.
 Quel solde stabiliserait la dette ?
+Deux soldes primaires et un effort sont à distinguer : le solde primaire observé, celui que les comptes enregistrent ; le solde primaire stabilisant, celui qui aurait laissé le ratio inchangé dans l’année, hors ajustements flux-stock ; et l’effort de moyen terme, que cette page ne calcule pas, ajustement sur plusieurs années qu’estiment les institutions, sous leurs hypothèses, pour atteindre un objectif de déficit ou de dette.
 Une année donnée, et hors autres ajustements, le ratio ne bouge pas si le solde primaire compense exactement l’effet des taux et de la croissance de l’année.
 Ce solde, dit stabilisant, est la courbe grise ; le solde réellement observé est la courbe orange.
 Solde primaire observé et solde primaire qui aurait stabilisé le ratio de dette dans l’année, hors autres ajustements, France, en % du PIB (Eurostat, calcul de l’auteur).
@@ -243,10 +245,10 @@ C’est une propriété de l’identité, à dette et à taux donnés ; elle ne 
 Le repère, année par année, et les excédents français
 Sur 30 ans, le solde observé a atteint ou dépassé ce repère onze années.
 Le ratio a effectivement baissé neuf de ces années ; en 1998 et 2007, il a augmenté malgré tout, sous l’effet des autres ajustements.
-La France n’a dégagé un excédent primaire que quatre fois, de 1998 à 2001, au plus 1,65 % du PIB.
+Sur la même période, la France n’a dégagé un excédent primaire que quatre fois, de 1998 à 2001, au plus 1,65 % du PIB.
 Stabiliser le ratio et le faire baisser sont deux objectifs distincts.
 Un montant d’ajustement se lit avec son objectif, son horizon et ses hypothèses ; le repère calculé ici pour 2025 vaut pour cette année-là et ne permet pas d’évaluer les estimations pluriannuelles des institutions.
-Dans la zone euro, ce qui distingue la France
+Dans la zone euro, comment la décomposition française se compare-t-elle à celle des autres pays ?
 Le même calcul, mené sur les membres actuels de la zone euro, sépare ce que l’écart au repère, à lui seul, confond : le taux payé sur la dette, la croissance de l’économie et le solde primaire.
 Sur 2016-2025, les 21 pays sont comparés ; aucun n’est écarté par le contrôle : chaque année de chaque pays retrouve les ratios publiés par Eurostat à la marge d’arrondi près.
 Taux implicite, croissance nominale et solde primaire, moyennes annuelles 2016-2025, pays de la zone euro (Eurostat, calcul de l’auteur).
@@ -269,8 +271,8 @@ Le solde primaire structurel de la France, que la Commission européenne calcule
 Ce témoin ne sert pas au calcul, sans en être tout à fait indépendant : la Commission part des mêmes comptes publics, et sa correction repose sur une estimation du PIB potentiel qu’elle révise d’une édition à l’autre.
 L’OCDE, qui estime elle-même ce potentiel, donne aussi à la France le solde structurel le plus bas des pays qu’elle couvre sur la période ; le FMI, dont l’indicateur corrige le cycle sans retirer les mesures ponctuelles, la place à égalité avec la Finlande et la Slovaquie.
 Le rang structurel dépend donc de l’estimation retenue ; celui du solde observé n’en dépend pas.
-Le repère s’est abaissé, pas le solde.
-Sur les cinq dernières années (2021-2025), une forte croissance nominale, reprise après 2020 puis hausse des prix, a abaissé le repère de tous les pays sauf l’Irlande par rapport aux cinq années d’avant 2020 : la France n’est plus, en moyenne, sous le sien (+0,1 point), et cinq pays ont un écart plus défavorable.
+L’écart s’est refermé parce que le repère a baissé plus que le solde.
+Sur les cinq dernières années (2021-2025), le repère de tous les pays sauf l’Irlande s’est abaissé par rapport aux cinq années d’avant 2020, avec une forte croissance nominale (reprise après 2020, puis hausse des prix) et, en médiane, un taux implicite plus bas : la France n’est plus, en moyenne, sous le sien (+0,1 point), et cinq pays ont un écart plus défavorable.
 Son solde primaire reste pourtant le plus bas des pays comparés, et son solde structurel parmi les deux plus bas.
 Sur les cinq années qui ont précédé 2020, la France était le seul pays de la zone euro dont le solde primaire moyen restait sous le repère.
 La France dans la zone euro selon la période retenue, et ce que l’écart moyen n’ajoute pas
@@ -322,14 +324,17 @@ Aucun niveau de dette, à lui seul, ne tranche cette question.
 Une dette est dite soutenable quand l’État peut la servir et la refinancer sans un ajustement budgétaire hors de portée ; cela dépend de son solde primaire, de l’écart entre le taux qu’il paie et la croissance nominale, et de la confiance de ceux qui lui prêtent.
 Les deux premiers termes se mesurent ici ; le troisième, non.
 Ce qui le rend fragile.
-L’égalité de 2025 entre taux et croissance n’est pas un état acquis.
+La quasi-égalité de 2025 entre taux et croissance n’est pas un état acquis.
 Sur 30 ans, le taux implicite a dépassé la croissance nominale 16 années.
 Tombé à 1,2 % en 2020, il remonte, à mesure que la dette ancienne se refinance aux conditions de marché, pendant que la croissance nominale retombe après les années d’inflation : l’allègement de la dernière décennie tenait pour l’essentiel à 2021-2023.
-Au niveau de dette et de croissance de 2025 (115,7 % du PIB), et toutes choses égales par ailleurs, un point supplémentaire d’écart entre le taux et la croissance relève le solde stabilisant d’environ 1,1 point de PIB : plus la dette est élevée, plus sa trajectoire dépend de taux que le budget ne commande pas directement, et dont les travaux cités plus bas trouvent l’écart à la croissance plus élevé quand la dette l’est aussi.
+Au niveau de dette et de croissance de 2025 (115,7 % du PIB), et toutes choses égales par ailleurs, un point supplémentaire d’écart entre le taux et la croissance relève le solde stabilisant d’environ 1,1 point de PIB : plus la dette est élevée, plus sa trajectoire dépend de taux que le budget ne commande pas directement, et dont plusieurs des travaux cités plus bas, mais pas tous, trouvent l’écart à la croissance plus élevé quand la dette l’est aussi.
 Ce que ces données ne disent pas.
 La confiance des prêteurs, l’accès au marché et le coût des refinancements à venir dépendent de la maturité de la dette et de l’écart entre les taux de marché et le taux implicite (voir la transmission), de ceux qui la détiennent (Qui paie vraiment la dette publique ?) et des décisions de la banque centrale.
 Les diagnostics de soutenabilité que publient les institutions reposent sur des projections conditionnelles, que ces données ne permettent ni de confirmer ni d’écarter.
-Trente ans de fenêtres européennes
+Dans les fenêtres européennes retenues, un ratio élevé a-t-il nettement baissé avec un solde primaire moyen négatif ?
+Le résultat en une phrase.
+Non, dans les fenêtres retenues : parmi les 78 fenêtres de dix ans où la dette de départ dépassait 90 % du PIB, dans les 27 pays aujourd’hui membres de l’Union, depuis 1996, aucune des 35 à solde primaire moyen négatif n’a vu le ratio baisser d’au moins 15 points.
+Ces fenêtres se recouvrent, viennent de quelques pays et décrivent des périodes passées, et d’autres fenêtres sont écartées, avec leur motif, dans la méthode ci-dessous : elles ne donnent ni un seuil d’excédent à atteindre, ni une probabilité de réussite.
 Soldes primaires et baisses du ratio : les périodes européennes de dix ans
 La comparaison ci-dessus ne porte que sur une décennie.
 Pour la replacer dans un ensemble plus large, la même décomposition a été appliquée à toutes les fenêtres de dix ans des 27 pays aujourd’hui membres de l’Union, depuis 1996 : 537 fenêtres retenues (18 écartées, voir la méthode), qui se recouvrent, ne sont donc pas autant d’expériences indépendantes et contiennent la décennie déjà comparée.
@@ -367,19 +372,22 @@ La décomposition par décennie du ratio français, le solde stabilisant année 
 Aucun des textes lus ne calcule ces grandeurs sur cette source et ces périodes : elles se valident par reproduction.
 Le constat sur le solde primaire, lui, n’est pas nouveau (ci-dessous).
 Cohérent avec.
-Le solde primaire qui stabilise la dette dépend de l’écart entre taux et croissance et du niveau de la dette, dans la même identité de dynamique de la dette, exprimée en termes nominaux ici et en termes réels dans le Focus, chez Clavères (direction générale du Trésor), dans la Note n° 82 du Conseil d’analyse économique (Auclert, Philippon et Ragot) et dans son Focus n° 124 (Auclert, Barbara, Jaravel, Laveissière, Lasterra, Ragot et Renaud), qui part d’un écart nul, comme le repère de la page pour la dernière année.
+Le solde primaire qui stabilise la dette dépend de l’écart entre taux et croissance et du niveau de la dette, dans la même identité de dynamique de la dette, exprimée en termes nominaux ici et en termes réels dans le Focus, chez Clavères (direction générale du Trésor), dans la Note n° 82 du Conseil d’analyse économique (Auclert, Philippon et Ragot) et dans son Focus n° 124 (Auclert, Barbara, Jaravel, Laveissière, Lasterra, Lopes, Ragot et Renaud), qui part d’un écart nul, comme le repère de la page pour la dernière année.
 La Note distingue dans les mêmes termes stabiliser, qui exige un solde primaire nul quand taux et croissance sont égaux, et faire baisser, qui exige un excédent.
 Sur les pays du G7 depuis la fin du XIXe siècle, Clavères trouve que, dans la grande majorité des cas, les consolidations budgétaires réussies se sont appuyées à la fois sur un écart taux-croissance négatif et sur des excédents primaires.
 La direction générale du Trésor présente la stabilisation du ratio comme une condition nécessaire de la soutenabilité, qu’elle rattache aussi à la capacité de l’État à financer durablement sa dette ; elle situe le solde stabilisant de 2025 à −2,1 % du PIB, en solde public total, pour un déficit de 5,1 %.
-Deux conventions différentes, et un écart à combler presque identique en 2025 : environ trois points de PIB chez le Trésor, 3,0 points mesurés ici en solde primaire.
+Deux conventions différentes, et un écart presque identique en 2025 : environ trois points de PIB d’après les chiffres du Trésor, 3,0 points mesurés ici en solde primaire.
+La Cour des comptes fait le même calcul pour 2025, sur les comptes de l’INSEE, et trouve à l’arrondi les mêmes valeurs que la page : un solde primaire stabilisant de +0,1 % du PIB, un solde observé de −2,9 %, un écart de 3,0 points (juin 2026, tableau n° 8).
+Sur longue période, elle attribue aux déficits primaires 57,4 points de la hausse du ratio de 1978 à 2024, et 8,8 points à l’effet « boule de neige » des taux et de la croissance (juin 2025, p.
+93-94).
 L’OFCE estime à 2,1 points, en 2024, l’écart entre le solde primaire et celui qui stabiliserait la dette ; la mesure Eurostat de la page donne 2,0 points pour 2024.
-Sur les quatre plus grands pays de la zone euro, de 1995 à 2024, la Cour des comptes fait le constat que la section sur la zone euro étend à dix-neuf pays : « c’est l’évolution du solde primaire qui constitue le principal facteur explicatif » des écarts d’évolution de la dette, la France étant en déficit primaire depuis 2002.
+Sur les quatre plus grands pays de la zone euro, de 1995 à 2024, la Cour des comptes fait le constat que la section sur la zone euro étend à 21 pays : « c’est l’évolution du solde primaire qui constitue le principal facteur explicatif » des écarts d’évolution de la dette, la France étant en déficit primaire depuis 2002.
 La page sépare ce que la Cour réunit dans l’« effet boule de neige », le taux et la croissance, et ne reprend pas sa lecture, qui y voit l’effet d’une stratégie de finances publiques : l’identité comptable ne départage pas les causes.
 Mis en danger par.
 Trois lectures que la page doit éviter.
 La première ferait de l’excédent primaire le seul ressort des baisses : après 1945, c’est l’écart fortement négatif entre taux et croissance qui a le plus contribué à la baisse des dettes des économies avancées, les excédents primaires ayant aussi joué un rôle (Clavères) ; au Portugal, l’excédent a coïncidé avec une croissance de 4,38 % par an de 2015 à 2019, et en Italie, quand le taux dépassait la croissance, la dette a augmenté malgré un solde primaire structurel positif (Note du CAE).
 D’où la réserve de la page : la comparaison n’isole pas l’effet d’une politique.
-La deuxième lirait l’écart nul de la dernière année comme un état durable : à l’automne 2025, l’État empruntait à 10 ans à 3,5 %, au-dessus d’un taux apparent estimé à 2,0 % (Focus du CAE) ; la hausse des taux ne se transmet au stock que progressivement, la maturité moyenne de la dette étant de 8,5 ans en 2023, les valeurs futures de l’écart ne se prévoient pas, et, dans l’estimation de Clavères sur 18 économies avancées de 1950 à 2019, mesurée avec le taux à 10 ans, une dette plus élevée va de pair avec un écart plus élevé l’année suivante, estimation que son auteur dit à prendre avec précaution.
+La deuxième lirait l’écart nul de la dernière année comme un état durable : à l’automne 2025, l’État empruntait à 10 ans à 3,5 %, au-dessus d’un taux apparent estimé à 2,0 % (Focus du CAE) ; la hausse des taux ne se transmet au stock que progressivement, la maturité moyenne de la dette étant de 8,5 ans en 2023, les valeurs futures de l’écart ne se prévoient pas, et, dans l’estimation de Clavères sur 18 économies avancées de 1950 à 2019, mesurée avec le taux à 10 ans, une dette plus élevée va de pair avec un écart plus élevé l’année suivante, un effet que l’auteur dit significatif dans toutes ses spécifications ; c’est son estimation de la probabilité d’un écart négatif qu’il dit à prendre avec précaution.
 Trois économistes du FMI (Lian, Presbitero et Wiriadinata), qui mesurent l’écart avec un taux de marché à long terme, le plus souvent le rendement des obligations publiques à 10 ans, et non avec le taux implicite de cette page, trouvent une association de même sens, qu’ils étudient sous d’autres formes.
 Dans 17 économies avancées, dont la France, de 1950 à 2019, les épisodes d’écart négatif d’au moins trois ans sont d’autant plus courts que la dette de départ est élevée, de près de cinq mois par dix points de dette, et la probabilité qu’un écart négatif d’au moins deux ans laisse place à un écart moyen positif sur les cinq années suivantes passe d’environ 25 % quand la dette est inférieure à la médiane à près de 75 % dans le quart le plus endetté.
 Dans 31 économies avancées et 25 émergentes de 2000 à 2019, quand la dette passe de 40 à 120 % du PIB, le neuvième décile de l’écart moyen des cinq années suivantes passe d’environ 0 à environ 2 points, tandis que sa médiane augmente d’environ 0,8 point et son premier décile d’environ 1,2 point : toute la distribution se déplace vers le haut, sa partie haute davantage.
@@ -392,6 +400,9 @@ Philipp Heimberger, de l’Institut viennois d’études économiques internatio
 Les deux études ne mesurent pas le même objet.
 La seconde rapporte le taux à 10 ans à la croissance du PIB en dollars courants, non en euros : pour la France, 5,2 % en 2016 dans ses données, 1,4 % en euros selon Eurostat.
 Elle estime en outre l’association de la dette avec l’écart à taux réel de long terme et inflation donnés, alors qu’une partie de l’effet cherché passerait précisément par les taux.
+La Cour des comptes juge « rétrospectivement peu prudent » l’accent mis, pendant la période de taux bas, sur la pérennité d’un taux inférieur à la croissance (juin 2025, p.
+91), et chiffre à environ 1,1 point de PIB l’excédent primaire durable qui stabiliserait la dette pour un écart taux-croissance de 1,1 point à terme, hypothèse qu’elle reprend des documents du Gouvernement (p.
+123).
 La direction générale du Trésor écrit, elle aussi, que la remontée des taux inverse la période d’écart négatif et exige désormais un léger excédent primaire, et que la hausse des taux se répercute sur le stock à mesure qu’il est refinancé.
 Le diagnostic n’est pas unanime : l’OFCE tient la hausse de la charge d’intérêts pour probable, mais son ampleur pour moins certaine que dans les projections officielles.
 Renouveler au taux à 10 ans de juillet 2025 les 900 milliards d’euros de titres arrivant à échéance d’ici 2029 coûterait environ 0,5 point de PIB ; les auteurs le rapprochent d’une hausse totale de 1,2 point projetée par le FMI, sans que les deux calculs aient le même périmètre.
@@ -406,14 +417,15 @@ Les 112 milliards d’euros du Focus du CAE font 3,7 points de PIB : un déficit
 Ils ne se comparent pas terme à terme à l’écart observé de la page pour 2025, hors autres ajustements.
 L’OFCE (Heyer, Plane, Ragot, Sampognaro et Timbeau) chiffre à 2,8 points de PIB d’ici 2029 un ajustement progressif qui stabiliserait la dette à 110 %, 2,5 points avec des taux plus bas : une projection de modèle.
 L’effet de la dette sur l’écart futur : les études lues ne livrent pas un coefficient unique, leur résultat dépend de la mesure du taux, de la période, de ce qu’elles tiennent constant et des institutions monétaires ; seule la relation comptable ne dépend d’aucune estimation : le solde qui stabilise la dette est le produit de l’écart et du niveau de la dette, de sorte que plus elle est élevée, plus une même remontée de l’écart coûte cher, ce que rappelle l’article de Heimberger.
-L’accès au marché : aucun des onze textes ne le mesure ; la direction générale du Trésor invoque la crédibilité auprès des investisseurs sans la mesurer.
+L’accès au marché : la Cour des comptes en suit les indicateurs (écart de taux avec l’Allemagne, couverture des adjudications, notations) et décrit une dette « qui trouve des acquéreurs sans difficulté, mais à un taux de plus en plus élevé », sans mesurer l’effet du niveau de la dette sur cet accès ; la direction générale du Trésor invoque la crédibilité auprès des investisseurs sans la mesurer.
 Références lues
 Auclert, A., Philippon, T. et Ragot, X., « Quelle trajectoire pour les finances publiques françaises ? », Les notes du Conseil d’analyse économique, n° 82, juillet 2024.
-Auclert, A., Barbara, M.-A., Jaravel, X., Laveissière, E., Lasterra, O., Ragot, X. et Renaud, D., « Comment stabiliser la dette publique ? », Focus du Conseil d’analyse économique, n° 124, octobre 2025.
+Auclert, A., Barbara, M.-A., Jaravel, X., Laveissière, E., Lasterra, O., Lopes, A., Ragot, X. et Renaud, D., « Comment stabiliser la dette publique ? », Focus du Conseil d’analyse économique, n° 124, octobre 2025.
 Checherita-Westphal, C. et Domingues Semeano, J., « Interest rate-growth differentials on government debt: an empirical investigation for the euro area », ECB Working Paper Series, n° 2486, Banque centrale européenne, novembre 2020 (en anglais).
 Clavères, G., « Taux d’intérêt, croissance et soutenabilité de la dette publique », Trésor-Éco, n° 334, direction générale du Trésor, octobre 2023.
-Cour des comptes, La situation et les perspectives des finances publiques, juin 2025, p.
-112-116.
+Cour des comptes, La situation et les perspectives des finances publiques, juin 2025, chapitre III, p.
+79-126 ; juin 2026, p.
+46.
 Ecalle, F., « Les finances publiques des pays de la zone euro de 2019 à 2025 », Fipeco, commentaire, avril 2026.
 Heimberger, P., « Public debt and r-g risks in advanced economies: Eurozone versus stand-alone », Journal of International Money and Finance, vol.
 136, article 102877, septembre 2023 (en anglais).
@@ -422,24 +434,25 @@ Direction générale du Trésor, « Finances publiques : une situation dégradé
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. et Timbeau, X., « Quelles trajectoires pour les finances publiques de la France ? », document de travail de l’OFCE n° 13, juillet 2025.
 Lian, W., Presbitero, A.
 F. et Wiriadinata, U., « Public Debt and r - g at Risk », IMF Working Paper, n° 20/137, Fonds monétaire international, juillet 2020 (en anglais).
-Revue de littérature vérifiée le 17 octobre 2026 : chaque référence citée a été lue en entier à cette date, dans la version indiquée.
+Revue de littérature vérifiée le 6 novembre 2026 : chaque référence a été lue dans la version indiquée, aux sections qui fondent ce qui en est dit.
 Synthèse
 Ce qu’il faut retenir
 Le poids d’une dette peut baisser sans que son montant diminue : au Portugal, la dette est passée de 235 à 275 milliards d’euros en dix ans pendant que son poids reculait de 131,0 % à 89,2 % du PIB.
 Parmi les pays de l’Union qui partaient d’un niveau de dette plus élevé que la France, le ratio a nettement reculé dans trois d’entre eux : Chypre, le Portugal et la Grèce.
 La contribution la plus forte y vient des taux et de la croissance, environ deux fois celle de leurs excédents primaires.
 Leur taux implicite moyen n’était pas plus bas que celui de la France : leur croissance nominale a été plus forte.
-La Slovénie, sous le seuil retenu, a réduit le sien sans excédent.
+La Slovénie, sous le seuil retenu, a réduit le sien avec un solde primaire moyen négatif, une moyenne qui n’exclut pas des excédents certaines années.
 En France, sur la même décennie, les taux et la croissance ont retiré 15,0 points au ratio, à la faveur des années 2021-2023 ; les déficits primaires en ont ajouté 30,6, et le ratio a augmenté de 18,7 points.
 En 2025, taux implicite et croissance nominale étaient presque égaux : le solde primaire observé était inférieur de 3,0 points de PIB, environ 89 milliards d’euros, au repère qui aurait stabilisé le ratio cette année-là, hors autres ajustements.
 Ce repère change chaque année avec les taux et la croissance ; à ce niveau de dette, un point d’écart entre taux et croissance le déplace d’environ 1,1 point de PIB, dans un sens comme dans l’autre.
 Aucune des combinaisons observées n’est une recette transposable : ces comparaisons ne disent ni quelle politique produirait une baisse, ni à quel prix, ni qui le paierait.
 Ce dernier point est l’objet de Qui paie vraiment la dette publique ?
+Ce que changeraient ici, d’ici 2035, le solde, les taux, la croissance ou une modification des règles, et qui devrait en décider, est l’objet de Peut-on changer les règles du jeu de la dette publique ?
 Questions fréquentes
 La croissance et l’inflation suffisent-elles à faire baisser la dette ?
-Elles allègent le ratio quand la croissance nominale dépasse le taux d’intérêt payé sur la dette, et ce sont elles qui ont le plus fait reculer le ratio dans les trois pays de l’Union où il a nettement baissé, parmi ceux dont la dette dépassait 90 % du PIB fin 2015 : environ deux fois plus que leurs excédents primaires.
+Elles allègent le ratio quand la croissance nominale dépasse le taux d’intérêt payé sur la dette, et leur contribution comptable au recul du ratio est la plus forte dans les trois pays de l’Union où il a nettement baissé, parmi ceux dont la dette dépassait 90 % du PIB fin 2015 : environ deux fois plus que leurs excédents primaires.
 Mais l’effet varie fortement d’une année à l’autre : en France, il a retiré 16,8 points au ratio en 2021-2023 et compté pour +6,1 points en 2020.
-Dans ce groupe, aucun pays resté en déficit primaire moyen n’a vu son ratio baisser de 15 points ; la Slovénie, sous le seuil, l’a fait.
+Dans ce groupe, aucun pays resté en déficit primaire moyen n’a vu son ratio baisser de 15 points ; la Slovénie, sous le seuil, l’a fait, avec un solde primaire déficitaire en moyenne, ce qui n’exclut pas des excédents certaines années.
 La France a-t-elle déjà dégagé un excédent primaire ?
 Quatre fois depuis 1996, de 1998 à 2001, au plus 1,65 % du PIB (Eurostat).
 Depuis, le solde primaire des administrations publiques est resté déficitaire chaque année.
@@ -472,13 +485,54 @@ Mêmes réserves pour les deux autres témoins du rang structurel : OCDE, Perspe
 Contrôle : pour chaque pays et chaque année, le ratio de dette et le solde primaire calculés sont comparés à ceux qu’Eurostat publie en pourcentage du PIB, que le calcul n’utilise pas.
 Au-delà de 0,11 point d’écart, l’année est écartée ; une année dont Eurostat ne publie pas le ratio ne peut pas être contrôlée et l’est aussi.
 Avec les comptes actuels, cinq années-pays sur 803 sont écartées, toutes faute de ratio publié (liste et motif dans le fichier JSON) ; pour la France et les pays comparés, le script s’arrête.
-Une fenêtre qui contient une année de croissance nominale supérieure à 35 % (hyperinflation, rupture de série) est écartée : 18 le sont.
+Une fenêtre qui contient une année de croissance nominale supérieure à 35 % est écartée : 18 le sont.
 Les pays comparés à la France sont désignés par une règle, non choisis : dette supérieure à 90 % du PIB à la fin de 2015 ; le même calcul est refait à 80 et à 100 %.
 Les chiffres calculés sur les séries d’Eurostat viennent tous du même script, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
 Les chiffres attribués à la direction générale du Trésor, au Conseil d’analyse économique et à l’OFCE sont repris tels qu’ils les publient.
+Méthode commune au dossier : indicateurs et vérifications
+Le même mot ne désigne pas toujours la même grandeur d’une page du dossier à l’autre.
+Le tableau donne les principaux repères ; la section « D’où viennent ces chiffres » de chaque page précise ses séries et ses périmètres.
+Indicateur
+Ce qu’il mesure
+Où il sert
+Dette de Maastricht
+dette brute consolidée de l’ensemble des administrations publiques (État et organismes centraux, collectivités locales, sécurité sociale), en valeur nominale
+les décompositions du ratio (pourquoi elle augmente, peut-elle baisser) ; la hausse de la dette (formules du débat)
+Dette négociable de l’État
+titres émis par l’État seul (OAT et BTF), gérés par l’Agence France Trésor
+l’érosion par l’inflation, les détenteurs de cette dette et les achats de la Banque de France (inflation) ; la part détenue par des non-résidents, que les formules du débat distinguent de celle de l’ensemble des administrations publiques
+Ratio dette/PIB
+dette de Maastricht rapportée au PIB nominal de l’année
+toutes les pages ; la page sur l’inflation explique pourquoi son résultat n’est pas une variation de ce ratio
+Solde primaire
+solde des administrations publiques hors intérêts, en comptabilité nationale (intérêts dus, D.41)
+les décompositions du ratio
+Solde primaire stabilisant
+solde primaire qui aurait laissé le ratio inchangé dans l’année, hors ajustements flux-stock
+peut-elle baisser
+Déficit qui stabilise le ratio
+déficit total, intérêts compris, qui laisse le ratio inchangé pour un ratio de départ et une croissance nominale donnés, hors ajustements flux-stock
+l’examen de la formule « un déficit de 3 % stabilise la dette » (formules du débat) : 3 % est un seuil de déficit, non de dette
+Taux implicite
+intérêts de l’année des administrations publiques (comptabilité nationale) rapportés à leur dette de Maastricht de la fin de l’année précédente
+pourquoi elle augmente, peut-elle baisser
+Intérêts et charge de la dette
+selon la page : intérêts de l’ensemble des administrations publiques, en comptabilité nationale ; charge de la dette de l’État, dans son budget ; sur la page de l’inflation, charge d’indexation des titres indexés et exposition de la Banque de France aux taux.
+Ces mesures ne s’additionnent pas.
+les administrations publiques dans les décompositions du ratio ; plusieurs périmètres comparés dans les formules du débat ; titres indexés et Banque de France (inflation)
+Ce qui est vérifié, et comment.
+Pour lire la méthode de ces pages, trois opérations sont à distinguer.
+Le contrôle numérique.
+Selon la page, les nombres sont calculés par le script qui écrit la page, sur des séries publiées, ou repris d’un calcul archivé ; ce script vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies.
+Les décompositions du ratio sont en outre confrontées, année par année, au ratio et au solde primaire que publie Eurostat, avec la tolérance et les exclusions que dit chaque page.
+La confrontation documentaire.
+Les valeurs tirées d’un document (rapport de la Cour des comptes, loi de finances, publication de la Banque de France ou de l’Agence France Trésor, étude) sont transcrites avec la source que cite la page ; celles d’une étude sont reprises telles qu’elle les publie, lui restent attribuées et sont distinguées des recalculs du dossier.
+Le jugement éditorial.
+Le choix des périodes, des seuils de présentation, des comparaisons et des mots revient à l’auteur.
+Le calcul contrôle les conséquences de ces choix, non leur pertinence : ils sont relus, les contre-expertises externes sont signalées là où elles sont documentées, et ils sont dits comme tels quand ils comptent (un seuil de présentation n’est pas un résultat).
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l’image sa source, sa période et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 France : ce qui a fait monter ou baisser le poids de la dette, décennie par décennie
 De décennie en décennie, le terme qui fait monter la dette française change ; sur la dernière, taux et croissance l’ont fait baisser et les déficits primaires l’ont fait monter davantage.
 Précaution d’interprétation.
@@ -513,8 +567,7 @@ Eurostat gov_10dd_edpt1 (dette, PIB), gov_10a_main (B9, D41PAY), 2016-2025
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « La dette publique peut-elle baisser ? ».
-Données Eurostat et Commission européenne (AMECO), relevé du 2 novembre 2026. https://stephane-lalut.com/dette-publique-peut-elle-baisser/
+Lalut, Stéphane (2026). « La dette publique peut-elle baisser ? » Données Eurostat et Commission européenne (AMECO), relevé du 2 novembre 2026. https://stephane-lalut.com/dette-publique-peut-elle-baisser/
 Copier la citation
 En trois phrases
 De 2016 à 2025, les déficits primaires ont ajouté 30,6 points de PIB au ratio de dette français, l’effet des taux et de la croissance, concentré en 2021-2023, en a retiré 15,0, et les autres ajustements en ont ajouté 3,1 : une hausse de 18,7 points.
@@ -526,16 +579,9 @@ La décomposition par décennie du ratio dette/PIB français, le solde primaire 
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
-Les séries brutes appartiennent à leurs producteurs (Eurostat et Commission européenne (AMECO)), sous leurs propres conditions.
+Les séries brutes appartiennent à leurs producteurs (Eurostat et Commission européenne [AMECO]), sous leurs propres conditions.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
-Révisions
-5 novembre 2026 — Précision : la réponse « Un excédent primaire fait-il toujours baisser la dette ? » citait 2007, une année de déficit primaire ; elle cite désormais 1998, année d’excédent primaire où le ratio a pourtant augmenté.
-Les bornes des deux décennies sont dites en fin d’année (57,8 % fin 1995).
-5 novembre 2026 — Correction : les années-pays écartées du contrôle l’étaient toutes faute de ratio publié par Eurostat, non pour un écart au-delà de la tolérance comme le disait la page ; les fenêtres écartées pour croissance nominale supérieure à 35 % sont désormais comptées.
-Précision : avec les comptes du 21 octobre, l’année 2025 porte à 16 le nombre d’années où le taux implicite a dépassé la croissance nominale (15 au 16 octobre).
-2 novembre 2026 — Comptes d’Eurostat du 21 octobre 2026 : aucun pays de la zone euro n’est plus écarté par le contrôle ; la Finlande, revenue dans la comparaison, a eu une croissance nominale plus faible que la France, qui passe au deuxième rang ; sur cinq ans, le repère s’est abaissé partout sauf en Irlande.
-16 octobre 2026 — Correction : le taux implicite a dépassé la croissance nominale 15 années, et non 16 ; la comparaison se fait désormais à la précision affichée.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp
