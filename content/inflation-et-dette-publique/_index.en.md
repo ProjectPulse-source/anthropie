@@ -176,7 +176,7 @@ The same mechanism governs what a cancellation of the bonds held by the Banque d
 
 The debt series page ["Why does public debt rise?"](/en/why-does-public-debt-rise/) attributes to the interest-growth effect a contribution of −{{< dyn-val "effet_2021_2023" >}} percentage points of GDP to the change in the debt ratio in 2021–2023. That is not the observed fall in the ratio: it fell by only {{< dyn-val "recul_2021_2023" >}} points; primary deficits added {{< dyn-val "deficits_2021_2023" >}} points to it. And the {{< infl-val "pts_pib" >}}% of 2020 GDP on this page is not a {{< infl-val "pts_pib" >}}-point fall in the ratio: the points of the first part respond to all nominal GDP growth, expected inflation included, for all of general government; this page's percentage counts only the unexpected part of inflation, on the payments already promised by the central government. Bringing them together would require a decomposition that is not made here.
 
-## What moves the number {#sensibilite}
+## What makes the estimate vary? {#sensibilite}
 
 The published range, €{{< infl-val "a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn, comes from the starting forecast. The reference, the ECB survey, was not chosen for its level: it is the only one of the four forecasts to cover the whole horizon of payments, and the three forecasts specific to France bracket its result. Market breakevens and discounting widen it; the timing of prices explains the gap with the annual-average calculation.
 
@@ -273,6 +273,8 @@ This is a mechanical allocation, not a measure of who lost. Bonds change hands o
 </details>
 
 The figures on this page come from a reproducible calculation by the author, whose extract is archived with its checksums; the script that writes the page checks the main numerical statements and stops if their conditions no longer hold. Several published values are transcribed in that calculation with their source: the indexation charge on an accrual basis, the annual OAT and BTF yields and the break-even inflation rates published by the Agence France Trésor, and the inflation forecasts of the Banque de France and the Commission. Before the page was written, the calculation was subjected to external critical review, which led to revisions to the timing of prices, the construction of the range and the treatment of inflation-linked bonds.
+
+{{< dette-methode >}}
 
 {{< reutiliser figures="figures_inflation" jeu="dette_inflation" sources="AFT, Eurostat, ECB, Banque de France, European Commission" reserve="Agence France Trésor (AFT)" donnees="Cumulative real-value erosion by year of payment, results for each forecast and each breakeven, inflation-linked bonds, simplified consolidation, mechanical allocation by holder and, for the central bank's purchases, the monthly exposure, the refixing period and the yield gap by year; the same content is available as CSV, in long format." >}}
 In this page's counterfactual, relative to the inflation expected in early 2021, realised 2021–2023 inflation reduces the real value of the payments promised on France's end-2020 fixed-rate marketable government debt by about €{{< infl-val "t" >}}bn in 2020 euros, as an undiscounted sum (€{{< infl-val "a_bas" >}}bn to €{{< infl-val "a_haut" >}}bn depending on the forecast used); about {{< infl-val "part27" >}}% materialises by end-{{< infl-val "demi" >}}. It is a gross advantage for the government, not proof of an equivalent net fiscal gain.
