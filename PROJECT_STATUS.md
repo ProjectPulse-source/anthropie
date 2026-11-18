@@ -52,6 +52,23 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Lot « Langue » publié : `/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/` ; gabarit « Réutiliser » ; chapô du bloc « École »
+
+- **Commits** `32eaea2` (gabarit « Réutiliser » : « sa période », FR et EN), `ece1cb5` (chapô du bloc « École »,
+  décision déléguée du lot `enseignants-ecole-et-parcours`, § D 2), `45c3010` (page Langue) : version arbitrée après la
+  contre-analyse externe et décisions du § D du lot ; série des livres lus reprise de la dernière publication du ministère
+  de la Culture (DEPS 2020, hors bandes dessinées), tableur archivé avec son SHA-256, garde et mutation ; quatre figures
+  contrôlées par deux contrôleurs puis un contrôle final (0 bloquant, 0 gênant, trois cosmétiques corrigés) ;
+  `pied_figure.coupe` : sigle d'enquête et année, nom de l'auteur, insécables (latent pour les autres générateurs, adopté
+  à leur prochaine régénération).
+- **Contrôles** : générateur `--check` (56 gardes), `check-figures` 0 (8 SVG), Hugo 0, `typo_build` 0, `check-all --ci` 0,
+  instantané de relecture refait ; lettre justifiée (version arbitrée → publiée : six réserves reformulées, motivées dans
+  `LOTS\les-eleves-maitrisent-ils-moins-bien-la-langue-francaise\LOT.md`) ; envoi armé `LANGUE-ELEVES-2026-10` : passage
+  cité retrouvé en substance avant et après.
+- **Servi** : déploiement `hugo.yml` 44250325498 réussi ; version servie attestée le 18/11 : texte de la page identique au
+  build contrôlé (316 phrases, 0 écart), 8 SVG identiques aux fins de ligne près, PNG identiques ; gabarit servi en FR
+  et en EN, chapô servi sur `/ressources/`.
+
 ### 2026-11-17 — Lot « Dette A » publié : pourquoi elle augmente, peut-elle baisser, inflation, formules du débat (FR, EN)
 
 - **Commits** `25d1d2b` (Pourquoi), `c34c693` (Peut-elle baisser), `1c7b5ff` (Inflation), `c07760b` (Formules et gabarit
