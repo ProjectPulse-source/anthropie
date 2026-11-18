@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /qui-paie-la-dette-publique/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /qui-paie-la-dette-publique/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui paie vraiment la dette publique ?
 Un même effort budgétaire de 10 milliards d’euros, réparti selon les comptes distribués de l’Insee de 2023 (un profil comptable à structure constante, non une simulation de ses effets), n’atteint pas les mêmes ménages selon l’instrument choisi : un ajustement par l’enseignement pèse proportionnellement davantage sur les ménages modestes, un ajustement par l’impôt sur le revenu et le patrimoine davantage sur les ménages aisés.
@@ -15,7 +15,7 @@ Dette publique française — dernière donnée officielle
 3 595,5 milliards d’euros soit 119,0 % du PIB, au T2 2026.
 Source : INSEE, dette de Maastricht des administrations publiques (séries 010777616 et 010777608) · séries relevées le 21/10/2026 · données brutes (JSON).
 Ce que cette dette coûte, et pourquoi : Combien coûte la dette publique ?
-Selon la décision, l’effort ne tombe pas sur les mêmes ménages
+Comment se répartit un même effort selon le levier retenu ?
 La population est rangée du plus modeste au plus aisé, puis coupée en dix groupes de même taille, les dixièmes de niveau de vie usuel (le revenu disponible monétaire par unité de consommation).
 L’exercice prend 10 milliards d’euros et les répartit trois fois — par une hausse des impôts sur les revenus et le patrimoine, par une baisse des pensions de retraite, par une baisse des dépenses d’enseignement —, toujours au prorata de ce que chaque dixième verse ou reçoit déjà, puis rapporte le résultat à son revenu.
 L’impôt retenu est la catégorie des comptes distribués « impôts sur les revenus et le patrimoine » : CSG, impôt sur le revenu et autres impôts de cette catégorie, comme la CRDS, la taxe d’habitation ou l’impôt sur la fortune immobilière.
@@ -23,7 +23,7 @@ Ce n’est ni une prévision ni une mesure envisagée : aucun comportement, aucu
 C’est la structure des postes en 2023, dernier millésime publié, rendue comparable d’une décision à l’autre.
 Insee, comptes nationaux distribués, tableau CND.101 (vingtièmes de niveau de vie, 2020-2023, base 2020) ; millésime 2023.
 Profil comptable à structure constante, sans modélisation des comportements ni des effets en retour.
-Le résultat en une phrase. « Qui paie la dette ? » n’a pas de réponse en soi, il en a une par décision : un même effort pèse surtout sur les plus modestes s’il passe par l’enseignement, surtout sur les plus aisés s’il passe par l’impôt.
+Le résultat en une phrase. « Qui paie la dette ? » n’a pas de réponse en soi, il en a une par décision : selon un profil comptable tiré des comptes de l’Insee de 2023, un même effort pèse surtout sur les plus modestes s’il passe par l’enseignement, surtout sur les plus aisés s’il passe par l’impôt.
 TéléchargerCiterDonnées
 Le classement s’inverse d’une décision à l’autre.
 Dans ce profil comptable, une réduction des dépenses d’enseignement représenterait 2,75 % du revenu des 10 % les plus modestes et 0,21 % de celui des plus aisés ; une hausse des impôts sur les revenus et le patrimoine ferait l’inverse, jusqu’à 1,14 % pour le dernier dixième.
@@ -61,7 +61,7 @@ Un service public valorisé n’est pas un revenu : une dépense d’enseignemen
 Les trois décisions sont proportionnelles par construction ; la figure ne dit rien de « l’impôt » ni de « la dépense publique » en général.
 Enfin, le point du premier dixième est écarté pour la décision fiscale : l’impôt sur le revenu du premier vingtième y pèse 60 % du poste quand les vingtièmes voisins sont à zéro, une cellule atypique de la source.
 L’écart de ce dixième, calculé sur les deux autres leviers, est donc une borne inférieure.
-Qui emprunte, qui détient, qui reçoit les intérêts
+Qui emprunte, qui détient, qui reçoit les intérêts ?
 Quatre questions se confondent souvent : qui emprunte, qui finance et reçoit les intérêts, par quels mécanismes le financement et les ajustements opèrent, et qui en supporte finalement les effets.
 Ce ne sont pas quatre populations : une même personne paie l’impôt, se soigne à l’hôpital public et détient des titres de l’État par son assurance-vie.
 Et « qui paie » se dit toujours par rapport à une autre décision : moins emprunter aurait signifié un autre impôt, une autre dépense, avec leurs propres perdants.
@@ -86,76 +86,7 @@ Le créancier a avancé les fonds : les intérêts rémunèrent cette avance, le
 Son rendement réel tient compte de l’inflation et de la variation de valeur du titre, et son avantage sur un autre placement se mesure à horizon et risque comparables. « On se la doit à nous-mêmes » n’est donc vrai qu’en partie, et ne dit pas lesquels d’entre « nous » reçoivent et lesquels financent.
 La répartition publiée classe les porteurs par résidence, non par nationalité : un « non-résident » peut être un fonds étranger qui gère l’épargne de ménages français, et un ménage français peut détenir des titres de l’État sans le savoir, par son assurance-vie.
 La statistique de la Banque de France sur les titres de long terme de l’ensemble des administrations publiques porte sur un autre champ que celle de l’Agence France Trésor, limitée aux titres négociables de l’État : les deux parts ne se substituent pas l’une à l’autre.
-Annuler la dette détenue par la Banque de France : qui paierait ?
-En août 2026, Jean-Luc Mélenchon a relancé, pour les titres de l’État que détient la Banque de France, une proposition formulée dès 2020 à l’Institut Rousseau pour les dettes publiques détenues par l’Eurosystème : les annuler.
-Ses partisans soutiennent qu’aucun détenteur privé ne subirait de perte, puisque ces titres ont déjà été rachetés ; leurs contradicteurs contestent l’absence de coût pour la collectivité.
-Olivier Blanchard juge l’opération sans effet : l’État économiserait des intérêts, mais perdrait autant en bénéfices reversés par sa banque centrale (propos rapportés par Euronews, 27 août 2026).
-Christine Lagarde, présidente de la BCE, a répondu le 10 septembre que l’annulation de dette relève de l’article 123 du traité, et que tout ce qui irait contre ce principe serait « une pure violation » du traité (notre traduction).
-Une question les départage : que faudrait-il pour qu’une dette annulée devienne une économie pour la collectivité ?
-Pour y répondre, il faut d’abord voir comment l’État emprunte, et où se place la Banque de France dans ce circuit.
-Le circuit d’un titre de l’État, puis les intérêts payés chaque année, et à qui.
-Les numéros renvoient aux étapes décrites sous le schéma.
-Ce que l’annulation effacerait.
-La Banque de France indique détenir 488 milliards d’euros de dette publique achetée pour l’Eurosystème au 30 juin 2026, en coût amorti (le prix d’achat, rapproché au fil du temps de la valeur de remboursement), contre 546 au 31 décembre 2025 : l’encours baisse à chaque échéance, parce que les titres remboursés ne sont plus remplacés.
-Rapporté au PIB, ce montant représente environ 16 points.
-La baisse effective de la dette au sens de Maastricht (la dette brute des administrations publiques, hors dettes entre elles, en valeur nominale) dépendrait des titres français annulés et de leur valeur nominale, que ce chiffre ne donne pas, et supposerait que l’opération soit permise et reconnue par la statistique européenne.
-Ce qu’elle n’effacerait pas.
-La Banque de France a payé ces titres avec de l’argent qu’elle a créé et crédité aux banques sur leur compte chez elle : ce sont les réserves (étape 4 du schéma).
-Annuler les titres ne supprime pas ces réserves.
-Or elles peuvent coûter : la Banque de France rémunère au taux fixé par la BCE, dit taux de dépôt (2,50 % depuis le 16 septembre 2026), les réserves que les banques placent à la facilité de dépôt ; ce taux est le principal instrument de la politique monétaire de la BCE.
-Les réserves obligatoires (le minimum que chaque banque doit détenir sur son compte courant à la Banque de France), elles, ne rapportent rien depuis septembre 2023 ; depuis juin 2026, les excédents de réserves que les banques ayant accès à la facilité de dépôt laissent en compte courant sont rémunérés au même taux.
-Lors des achats, la Banque de France a échangé des réserves contre des titres de l’État ; l’annulation rendrait cet échange définitif.
-Deux trajectoires.
-Sans annulation, chaque titre arrivé à échéance est remboursé, au besoin par un nouvel emprunt sur le marché ; toutes choses égales par ailleurs, ce remboursement fait disparaître autant de réserves.
-Avec annulation, l’État n’a plus ce montant à rembourser ni à refinancer, mais les réserves subsistent.
-Tant qu’un titre court, les intérêts que l’État cesserait de verser sont autant de revenus que la Banque de France perdrait, même si les deux effets ne touchent pas forcément le budget la même année : ce qu’elle reverse à l’État dépend de ses résultats.
-Une simulation, pas une économie observée.
-Aux échéances, tout tient à une comparaison : réemprunter sur le marché coûte-t-il plus ou moins cher que garder les réserves ?
-En 2025, garder les réserves aurait coûté moins cher ; en 2023 et en 2024, plus cher.
-Pour le chiffrer, supposons que chaque euro arrivé à échéance soit refinancé à dix ans, et que l’annulation maintienne en échange un euro de réserves rémunéré au taux de dépôt.
-En 2025, le rendement des titres de l’État à dix ans valait en moyenne 3,35 % sur le marché, et le taux de dépôt 2,26 % en moyenne : le différentiel représenterait un gain d’environ 1,1 milliard par an pour 100 milliards concernés, soit 5,3 milliards si les 488 milliards l’étaient tous.
-En 2023 et en 2024, le signe était inverse : le taux de dépôt (3,31 puis 3,73 %) dépassait le taux à dix ans (2,99 puis 2,97 %), soit une perte de 0,3 puis 0,8 milliard par an pour 100 milliards.
-Le résultat peut donc changer de signe : l’annulation ne garantit ni une économie, ni une perte.
-Ces chiffres ne sont ni une prévision ni une économie réalisée : ils appliquent les taux de chaque année à l’encours de juin 2026, alors que l’État emprunte aussi à plus court terme.
-Qui supporterait la charge.
-L’annulation modifierait la répartition des charges et des revenus entre l’État, la Banque de France, les banques et, éventuellement, leurs clients ; le résultat dépendrait des règles de rémunération des réserves et des instruments monétaires employés.
-Scénario
-Qui supporte la charge
-Conséquence
-Sans annulation
-L’État paie les intérêts et rembourse les titres, au besoin par de nouveaux emprunts ; la Banque de France supporte le coût des réserves jusqu’aux échéances
-Les flux suivent les échéances, les taux et les résultats de la Banque de France
-Annulation, sans autre changement
-L’État ne verse plus ces intérêts et ne rembourse plus ces titres ; la Banque de France perd ces revenus et garde les réserves
-Le résultat pour l’ensemble dépend de l’écart entre le refinancement évité et le coût des réserves
-Annulation et rémunération réduite des réserves, comme le propose l’Institut Rousseau
-Les banques perdent une partie des intérêts qu’elles auraient perçus ; l’effet sur leurs clients et leurs actionnaires dépend de leurs comportements
-Une économie pour le secteur public, qui a pour contrepartie une redistribution et un changement de l’instrument de la politique monétaire
-Annulation, puis recapitalisation de la Banque de France par l’État
-L’État transfère des ressources à sa banque centrale
-Le gain apparent est compensé, en partie ou en totalité
-Annulation et politique monétaire durablement trop accommodante
-La collectivité, par l’inflation
-Un risque conditionnel, non une conséquence automatique (objection de John Cochrane, The Grumpy Economist, 24 août 2026)
-Ce que chacun dit de juste.
-Annuler 488 milliards de dette ne signifie pas économiser 488 milliards.
-Les partisans de l’annulation ont raison sur un point : aucun détenteur privé ne perdrait sur les titres annulés.
-Olivier Blanchard aussi, tant que les titres courent : ce que l’État ne verserait plus, la Banque de France ne le recevrait plus.
-Mais une dette qui disparaît des comptes de l’État ne fait pas disparaître son coût pour la collectivité, et des réserves qui demeurent n’interdisent pas toute économie.
-L’annulation peut modifier le montant officiel de la dette, la répartition des charges et leur calendrier ; elle ne garantit ni une économie, ni une absence de coût.
-Le droit et la statistique.
-L’article 123 du traité interdit à la BCE et aux banques centrales nationales de faire crédit aux États et d’acheter leurs titres directement auprès d’eux.
-Il ne nomme pas l’annulation : l’y rattacher est la lecture de la BCE, que l’Institut Rousseau conteste en invoquant le but de la règle, et la Cour de justice de l’Union ne s’est pas prononcée.
-En comptabilité nationale, une annulation décidée d’un commun accord entre la Banque de France et l’État serait, selon les règles générales du SEC 2010 (point 4.165 f) et sous réserve de la décision qu’Eurostat prendrait sur ce cas, enregistrée comme un transfert en capital de l’une vers l’autre : elle pourrait améliorer ponctuellement le solde public mesuré, sans apporter un euro de trésorerie.
-Un refus de payer décidé par l’État seul ne serait pas enregistré, et la dette resterait due.
-Au 18 novembre 2026, aucune des décisions méthodologiques publiées par Eurostat ne traite de ce cas.
-Ce que cette comparaison ne dit pas
-L’ensemble formé par l’État et la Banque de France est un périmètre d’analyse, non une statistique officielle : la Banque de France n’appartient pas aux administrations publiques.
-Le taux de dépôt moyen de l’année approche le coût des réserves sans le mesurer titre par titre, et le lien entre un titre annulé et un euro de réserves maintenu est une simplification : les réserves dépendent aussi des opérations de toute la zone euro, et l’Eurosystème dispose d’autres moyens que la vente de titres pour retirer de la liquidité.
-Dans les programmes d’achat de titres publics, 20 % des achats sont soumis au partage des risques à l’échelle de l’Eurosystème ; les titres de l’État français achetés par la Banque de France n’y sont pas soumis.
-Les résultats de la Banque de France ne dépendent pas seulement de ses titres et de ses réserves : en 2025, une opération exceptionnelle sur son or les a rendus positifs.
-Enfin, ni l’effet sur les taux de marché, ni l’effet sur la confiance, ni le risque d’inflation ne se chiffrent avec ces données.
-Qui contribue, qui reçoit aujourd’hui
+Qui contribue, qui reçoit aujourd’hui ?
 Les comptes nationaux distribués de l’Insee répartissent, pour 2023, prélèvements et transferts publics entre les dixièmes de niveau de vie usuel — la population rangée du plus modeste au plus aisé, puis coupée en dix parts d’effectif égal.
 Les montants y sont exprimés par unité de consommation (UC), l’unité qui rend comparables des ménages de tailles différentes : une personne seule compte 1 UC, un couple avec deux enfants de moins de 14 ans, 2,1.
 Insee, comptes nationaux distribués 2023 (Insee Analyses n° 118, 16 avril 2026, figure 1c), en euros par unité de consommation.
@@ -227,7 +158,7 @@ TéléchargerCiterDonnées
 Qui verse net, qui reçoit net.
 En moyenne par UC, les transferts reçus dépassent les prélèvements dans chacun des sept premiers dixièmes — de 20 800 € par UC dans le premier —, et le solde bascule au 8e dixième : dans les trois derniers, c’est l’inverse, et le dernier dixième verse en moyenne 58 400 € par UC de plus qu’il ne reçoit.
 Une moyenne de groupe ne décrit pas ses membres.
-56 % des personnes sont bénéficiaires nettes en 2023, 99 % dans le premier dixième et 18 % dans le dernier.
+Selon l’Insee, services publics imputés compris, 56 % des personnes sont bénéficiaires nettes en 2023, 99 % dans le premier dixième et 18 % dans le dernier.
 Mais elles ne sont majoritaires que dans les cinq premiers dixièmes : dans le 7e dixième, qui reçoit en moyenne 1 800 € par UC de plus qu’il ne verse, elles ne sont plus que 36 %.
 Le signe d’une moyenne ne dit pas la situation de la majorité.
 Un groupe peut recevoir plus qu’il ne verse en moyenne alors que la majorité de ses membres versent plus qu’ils ne reçoivent : il suffit que le gain net cumulé des bénéficiaires nets l’emporte sur la perte nette cumulée des autres.
@@ -245,7 +176,7 @@ TéléchargerCiterDonnées
 En 2023, selon ces conventions, les ménages dont l’âge moyen des adultes atteint 65 ans ou plus reçoivent 47 800 € de transferts par unité de consommation — dont 28 700 € de prestations en espèces, pensions comprises — et versent 14 600 € de prélèvements, contre 33 800 € pour les ménages de 50 à 64 ans.
 Les pensions correspondent pour une part à des droits acquis au cours de la carrière, ici comptés comme prestations courantes ; l’âge du ménage n’est pas le statut de retraite de chacun de ses membres, et un montant élevé de soins imputés traduit aussi des besoins plus élevés.
 Cette photographie ne désigne aucun payeur de demain.
-Par quels canaux la charge peut se répartir
+Par quels canaux la charge peut-elle se répartir ?
 Quatre mécanismes peuvent modifier la charge de la dette et sa répartition, et ils se combinent.
 Les deux premiers relèvent de l’ajustement budgétaire ordinaire, décidé chaque année : les prélèvements — impôts et cotisations supplémentaires, ou baisses d’impôt auxquelles on renonce — et les dépenses et prestations réduites, gelées ou reportées.
 Le troisième ne se décide pas seul : l’inflation non anticipée réduit la valeur réelle des créances déjà émises et reporte une partie de la charge sur leurs détenteurs et sur les revenus mal indexés.
@@ -255,7 +186,7 @@ TéléchargerCiterDonnées
 Le refinancement, lui, renouvelle une échéance aux conditions du moment : il peut alléger ou alourdir la charge, sans désigner qui la supportera.
 Et en face de ces coûts se trouve ce que la dette a financé : services, prestations et investissements profitent à des ménages aujourd’hui et demain, et une analyse qui ne compterait que les coûts ne décrirait que la moitié du bilan.
 Inflation attendue ou non : ce qui peut transférer la charge, et ce qui joue en sens inverse
-L’inflation attendue au moment où le taux d’un titre a été fixé tend à être déjà incorporée au taux exigé à l’émission, et n’opère alors aucun transfert.
+En théorie, l’inflation attendue au moment où le taux d’un titre a été fixé tend à être déjà incorporée au taux exigé à l’émission, et n’opère alors aucun transfert.
 C’est l’écart entre l’inflation réalisée et celle-là qui réduit la valeur réelle des créances nominales déjà émises.
 Deux mécanismes jouent en sens inverse : les titres indexés voient leur charge monter avec les prix, et le refinancement se fait aux taux nouveaux.
 L’effet net dépend donc de la part indexée, du calendrier de refinancement et de ce qui était anticipé — et la France ne choisit pas seule son inflation.
@@ -301,7 +232,7 @@ Aucune statistique ne dit, à elle seule, qui supporte au bout du compte la char
 Une répartition actuelle des impôts et des prestations décrit qui contribue et qui reçoit aujourd’hui ; elle n’identifie pas les payeurs futurs.
 Une moyenne par unité de consommation n’est pas une facture individuelle.
 Ce qui peut s’établir, c’est l’effet d’une décision déterminée — une réforme, un gel, un report — sur des groupes définis d’avance : c’est à ce niveau que « qui paie ? » reçoit des réponses vérifiables.
-Confrontation à la recherche : le sens du contraste dépense / impôt est retrouvé sur des consolidations réelles ; l’argument de la créance héritée est mis en danger par l’éviction du capital
+Confrontation à la recherche : le sens du contraste dépense / impôt est retrouvé sur des consolidations réelles ; l’argument de la créance héritée est mis en danger par l’éviction du capital dans le modèle de Diamond
 Mesuré ici.
 Un profil comptable : un même effort de 10 milliards d’euros réparti au prorata de ce que chaque dixième verse ou reçoit déjà, d’après l’Insee, sans comportement ni effet en retour.
 La littérature éprouve les lectures qu’on en tire, pas ce profil.
@@ -336,6 +267,75 @@ J.
 (1989), « The Ricardian Approach to Budget Deficits », Journal of Economic Perspectives, 3(2), p.
 37-54.
 Revue de littérature vérifiée le 30 septembre 2026 : chaque référence a été lue dans la version indiquée, aux sections qui fondent ce qui en est dit.
+Annuler la dette détenue par la Banque de France : qui paierait ?
+En août 2026, Jean-Luc Mélenchon a relancé, pour les titres de l’État que détient la Banque de France, une proposition formulée dès 2020 à l’Institut Rousseau pour les dettes publiques détenues par l’Eurosystème : les annuler.
+Ses partisans soutiennent qu’aucun détenteur privé ne subirait de perte, puisque ces titres ont déjà été rachetés ; leurs contradicteurs contestent l’absence de coût pour la collectivité.
+Olivier Blanchard juge l’opération sans effet : l’État économiserait des intérêts, mais perdrait autant en bénéfices reversés par sa banque centrale (propos rapportés par Euronews, 27 août 2026).
+Christine Lagarde, présidente de la BCE, a répondu le 10 septembre que l’annulation de dette relève de l’article 123 du traité, et que tout ce qui irait contre ce principe serait « une pure violation » du traité (notre traduction).
+Une question les départage : que faudrait-il pour qu’une dette annulée devienne une économie pour la collectivité ?
+Pour y répondre, il faut d’abord voir comment l’État emprunte, et où se place la Banque de France dans ce circuit.
+Le circuit d’un titre de l’État, puis les intérêts payés chaque année, et à qui.
+Les numéros renvoient aux étapes décrites sous le schéma.
+Ce que l’annulation effacerait.
+La Banque de France indique détenir 488 milliards d’euros de dette publique achetée pour l’Eurosystème au 30 juin 2026, en coût amorti (le prix d’achat, rapproché au fil du temps de la valeur de remboursement), contre 546 au 31 décembre 2025 : l’encours baisse à chaque échéance, parce que les titres remboursés ne sont plus remplacés.
+Rapporté au PIB, ce montant représente environ 16 points.
+La baisse effective de la dette au sens de Maastricht (la dette brute des administrations publiques, hors dettes entre elles, en valeur nominale) dépendrait des titres français annulés et de leur valeur nominale, que ce chiffre ne donne pas, et supposerait que l’opération soit permise et reconnue par la statistique européenne.
+Ce qu’elle n’effacerait pas.
+La Banque de France a payé ces titres avec de l’argent qu’elle a créé et crédité aux banques sur leur compte chez elle : ce sont les réserves (étape 4 du schéma).
+Annuler les titres ne supprime pas ces réserves.
+Or elles peuvent coûter : la Banque de France rémunère au taux fixé par la BCE, dit taux de dépôt (2,50 % depuis le 16 septembre 2026), les réserves que les banques placent à la facilité de dépôt ; ce taux est le principal instrument de la politique monétaire de la BCE.
+Les réserves obligatoires (le minimum que chaque banque doit détenir sur son compte courant à la Banque de France), elles, ne rapportent rien depuis septembre 2023 ; depuis juin 2026, les excédents de réserves que les banques ayant accès à la facilité de dépôt laissent en compte courant sont rémunérés au même taux.
+Lors des achats, la Banque de France a échangé des réserves contre des titres de l’État ; l’annulation rendrait cet échange définitif.
+Deux trajectoires.
+Sans annulation, chaque titre arrivé à échéance est remboursé, au besoin par un nouvel emprunt sur le marché ; toutes choses égales par ailleurs, ce remboursement fait disparaître autant de réserves.
+Avec annulation, l’État n’a plus ce montant à rembourser ni à refinancer, mais les réserves subsistent.
+Tant qu’un titre court, les intérêts que l’État cesserait de verser sont autant de revenus que la Banque de France perdrait, même si les deux effets ne touchent pas forcément le budget la même année : ce qu’elle reverse à l’État dépend de ses résultats.
+Une simulation, pas une économie observée.
+Aux échéances, tout tient à une comparaison : réemprunter sur le marché coûte-t-il plus ou moins cher que garder les réserves ?
+En 2025, garder les réserves aurait coûté moins cher ; en 2023 et en 2024, plus cher.
+Pour le chiffrer, supposons que chaque euro arrivé à échéance soit refinancé à dix ans, et que l’annulation maintienne en échange un euro de réserves rémunéré au taux de dépôt.
+En 2025, le rendement des titres de l’État à dix ans valait en moyenne 3,35 % sur le marché, et le taux de dépôt 2,26 % en moyenne : le différentiel représenterait un gain d’environ 1,1 milliard par an pour 100 milliards concernés, soit 5,3 milliards si les 488 milliards l’étaient tous.
+En 2023 et en 2024, le signe était inverse : le taux de dépôt (3,31 puis 3,73 %) dépassait le taux à dix ans (2,99 puis 2,97 %), soit une perte de 0,3 puis 0,8 milliard par an pour 100 milliards.
+Le résultat peut donc changer de signe : l’annulation ne garantit ni une économie, ni une perte.
+Ces chiffres ne sont ni une prévision ni une économie réalisée : ils appliquent les taux de chaque année à l’encours de juin 2026, alors que l’État emprunte aussi à plus court terme.
+Qui supporterait la charge.
+L’annulation modifierait la répartition des charges et des revenus entre l’État, la Banque de France, les banques et, éventuellement, leurs clients ; le résultat dépendrait des règles de rémunération des réserves et des instruments monétaires employés.
+Scénario
+Qui supporte la charge
+Conséquence
+Sans annulation
+L’État paie les intérêts et rembourse les titres, au besoin par de nouveaux emprunts ; la Banque de France supporte le coût des réserves jusqu’aux échéances
+Les flux suivent les échéances, les taux et les résultats de la Banque de France
+Annulation, sans autre changement
+L’État ne verse plus ces intérêts et ne rembourse plus ces titres ; la Banque de France perd ces revenus et garde les réserves
+Le résultat pour l’ensemble dépend de l’écart entre le refinancement évité et le coût des réserves
+Annulation et rémunération réduite des réserves, comme le propose l’Institut Rousseau
+Les banques perdent une partie des intérêts qu’elles auraient perçus ; l’effet sur leurs clients et leurs actionnaires dépend de leurs comportements
+Une économie pour le secteur public, qui a pour contrepartie une redistribution et un changement de l’instrument de la politique monétaire
+Annulation, puis recapitalisation de la Banque de France par l’État
+L’État transfère des ressources à sa banque centrale
+Le gain apparent est compensé, en partie ou en totalité
+Annulation et politique monétaire durablement trop accommodante
+La collectivité, par l’inflation
+Un risque conditionnel, non une conséquence automatique (objection de John Cochrane, The Grumpy Economist, 24 août 2026)
+Ce que chacun dit de juste.
+Annuler 488 milliards de dette ne signifie pas économiser 488 milliards.
+Les partisans de l’annulation ont raison sur un point : aucun détenteur privé ne perdrait sur les titres annulés.
+Olivier Blanchard aussi, tant que les titres courent : ce que l’État ne verserait plus, la Banque de France ne le recevrait plus.
+Mais une dette qui disparaît des comptes de l’État ne fait pas disparaître son coût pour la collectivité, et des réserves qui demeurent n’interdisent pas toute économie.
+L’annulation peut modifier le montant officiel de la dette, la répartition des charges et leur calendrier ; elle ne garantit ni une économie, ni une absence de coût.
+Le droit et la statistique.
+L’article 123 du traité interdit à la BCE et aux banques centrales nationales de faire crédit aux États et d’acheter leurs titres directement auprès d’eux.
+Il ne nomme pas l’annulation : l’y rattacher est la lecture de la BCE, que l’Institut Rousseau conteste en invoquant le but de la règle, et la Cour de justice de l’Union ne s’est pas prononcée.
+En comptabilité nationale, une annulation décidée d’un commun accord entre la Banque de France et l’État serait, selon les règles générales du SEC 2010 (point 4.165 f) et sous réserve de la décision qu’Eurostat prendrait sur ce cas, enregistrée comme un transfert en capital de l’une vers l’autre : elle pourrait améliorer ponctuellement le solde public mesuré, sans apporter un euro de trésorerie.
+Un refus de payer décidé par l’État seul ne serait pas enregistré, et la dette resterait due.
+Au 18 novembre 2026, aucune des décisions méthodologiques publiées par Eurostat ne traite de ce cas.
+Ce que cette comparaison ne dit pas
+L’ensemble formé par l’État et la Banque de France est un périmètre d’analyse, non une statistique officielle : la Banque de France n’appartient pas aux administrations publiques.
+Le taux de dépôt moyen de l’année approche le coût des réserves sans le mesurer titre par titre, et le lien entre un titre annulé et un euro de réserves maintenu est une simplification : les réserves dépendent aussi des opérations de toute la zone euro, et l’Eurosystème dispose d’autres moyens que la vente de titres pour retirer de la liquidité.
+Dans les programmes d’achat de titres publics, 20 % des achats sont soumis au partage des risques à l’échelle de l’Eurosystème ; les titres de l’État français achetés par la Banque de France n’y sont pas soumis.
+Les résultats de la Banque de France ne dépendent pas seulement de ses titres et de ses réserves : en 2025, une opération exceptionnelle sur son or les a rendus positifs.
+Enfin, ni l’effet sur les taux de marché, ni l’effet sur la confiance, ni le risque d’inflation ne se chiffrent avec ces données.
 Synthèse
 Ce qu’il faut retenir
 « Qui paie ? » a une réponse par décision, et le choix pèse surtout aux extrémités.
@@ -351,13 +351,13 @@ Collectivités localesComment une contrainte de l’État peut descendre vers de
 Générations futuresQuand la dette constitue-t-elle réellement un transfert vers ceux qui viennent après ?
 Questions fréquentes
 La dette publique est-elle vraiment un problème ?
-L’argument rassurant est sérieux : quand le taux d’intérêt reste inférieur à la croissance, le ratio de dette peut se stabiliser, à condition que le déficit hors intérêts — le solde primaire — reste sous un seuil qui dépend de l’écart entre ces deux taux et du niveau de la dette.
+L’argument rassurant est sérieux : par simple arithmétique de la dette, quand le taux d’intérêt reste inférieur à la croissance, le ratio de dette peut se stabiliser, à condition que le déficit hors intérêts — le solde primaire — reste sous un seuil qui dépend de l’écart entre ces deux taux et du niveau de la dette.
 Au-delà, le ratio monte malgré tout.
 Et même stable, une dette doit être servie chaque année : son financement et ses ajustements répartissent des coûts et des avantages entre contribuables, usagers, épargnants et générations.
 La question utile porte alors sur ce qu’elle finance et sur qui supporte les ajustements — elle se traite configuration par configuration, pas par principe.
 La dette publique est-elle un fardeau pour les générations futures ?
 Pas mécaniquement.
-Les générations suivantes héritent des engagements, mais aussi de ce qu’ils ont financé — infrastructures, formation, patrimoine public — et d’une partie des titres eux-mêmes, détenus directement ou par l’assurance-vie — ce qui ne neutralise pas nécessairement la charge, la dette pouvant aussi évincer du capital productif.
+Les générations suivantes héritent des engagements, mais aussi de ce qu’ils ont financé — infrastructures, formation, patrimoine public — et d’une partie des titres eux-mêmes, détenus directement ou par l’assurance-vie — ce qui ne neutralise pas nécessairement la charge, la dette pouvant aussi, selon certains modèles, évincer du capital productif.
 Le transfert net dépend de l’usage, du financement, des créances transmises et de l’alternative retenue ; toutes choses égales par ailleurs, une dette qui finance une consommation courante sans contrepartie durable leur transmet surtout un coût, et un investissement dont elles profiteront peut leur transmettre davantage qu’il ne coûte.
 Ce qui reste vrai dans tous les cas : la décision est prise sans elles.
 La page « La dette publique est-elle un fardeau pour les générations futures ? » du même dossier décompose, dans les comptes, les emplois des déficits.
@@ -457,7 +457,7 @@ Citer cette page
 Lalut, Stéphane (2026). « Qui paie vraiment la dette publique ? » Données Insee, Banque de France (directement et via l’AFT), BCE et Eurostat, relevé du 5 novembre 2026. https://stephane-lalut.com/qui-paie-la-dette-publique/
 Copier la citation
 En trois phrases
-La répartition des effets de la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations pourraient, hypothèse que ces données ne testent pas, reporter des coûts sur des groupes moins capables de les éviter.
+La répartition des effets de la dette publique dépend de ce qu’elle finance, de la manière dont elle est financée et des ajustements choisis pour la servir ; certaines configurations pourraient reporter des coûts sur des groupes moins capables de les éviter, hypothèse que ces données ne testent pas.
 Les données disponibles montrent qui emprunte, qui détient les titres de l’État et qui contribue ou reçoit aujourd’hui — pas qui supportera la charge finale.
 Une perte ne s’attribue qu’à une décision déterminée, comparée à son alternative.
 Copier le résumé
