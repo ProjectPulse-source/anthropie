@@ -3,6 +3,8 @@
  "pages": {
   "budget-2027-votre-commune/_index.en.md": "2026-10-22",
   "budget-2027-votre-commune/_index.md": "2026-10-22",
+  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.en.md": "2026-11-18",
+  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.md": "2026-11-18",
   "cout-de-la-dette-publique/_index.en.md": "2026-11-18",
   "cout-de-la-dette-publique/_index.md": "2026-11-18",
   "data-centers-puissance-reservee/_index.en.md": "2026-11-04",
@@ -33,10 +35,12 @@
   "pourquoi-la-dette-publique-augmente/_index.md": "2026-11-06",
   "qui-paie-la-dette-publique/_index.en.md": "2026-11-05",
   "qui-paie-la-dette-publique/_index.md": "2026-11-05",
-  "qui-peut-faire-adopter-une-loi/_index.en.md": "2026-11-06",
-  "qui-peut-faire-adopter-une-loi/_index.md": "2026-11-06",
+  "qui-peut-faire-adopter-une-loi/_index.en.md": "2026-11-18",
+  "qui-peut-faire-adopter-une-loi/_index.md": "2026-11-18",
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": "2026-11-05",
   "qui-peut-faire-face-a-une-depense-imprevue/_index.md": "2026-11-05",
+  "un-president-peut-il-recourir-au-referendum/_index.en.md": "2026-11-18",
+  "un-president-peut-il-recourir-au-referendum/_index.md": "2026-11-18",
   "une-loi-votee-s-applique-t-elle-tout-de-suite/_index.en.md": "2026-11-06",
   "une-loi-votee-s-applique-t-elle-tout-de-suite/_index.md": "2026-11-06",
   "une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/_index.en.md": "2026-11-07",
@@ -52,6 +56,20 @@
   "qui-paie-la-dette-publique/_index.md": "2026-10-27"
  },
  "historique": {
+  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.md": [
+   "2026-11-05",
+   "2026-11-18"
+  ],
+  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.en.md": [
+   "2026-11-05",
+   "2026-11-18"
+  ],
+  "un-president-peut-il-recourir-au-referendum/_index.md": [
+   "2026-11-18"
+  ],
+  "un-president-peut-il-recourir-au-referendum/_index.en.md": [
+   "2026-11-18"
+  ],
   "budget-2027-votre-commune/_index.en.md": [
    "2026-10-22",
    "2026-11-04",
@@ -263,10 +281,12 @@
    "2026-11-08"
   ],
   "qui-peut-faire-adopter-une-loi/_index.en.md": [
-   "2026-11-06"
+   "2026-11-06",
+   "2026-11-18"
   ],
   "qui-peut-faire-adopter-une-loi/_index.md": [
-   "2026-11-06"
+   "2026-11-06",
+   "2026-11-18"
   ],
   "qui-peut-faire-face-a-une-depense-imprevue/_index.en.md": [
    "2026-10-26",

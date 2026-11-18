@@ -45,6 +45,9 @@ principales phrases ; elles ne relisent pas le texte servi :
   B5  E1 : excès de dépôts sur les bulletins ; « plus de la moitié » sur le pire cas ; jeton Zpct seulement si son
       arrondi est celui du pire cas ; jeton « neuf sur dix » (Zdix, 12/10/2026) seulement si le dixième arrondi est le
       même pour les trois législatures closes, pire cas compris ;
+  B6 bis (17/11/2026) la loi spéciale prévue à l'art. 45 de la LOLF (« Les lois prévues à l'article 45 » ont le
+      caractère de lois de finances, LOLF art. 1er, 5°), typée « ordinaire » par l'AN et Dosleg, est reclassée en loi de
+      finances (lois n° 2024-1188 et 2025-1316) ; le registre brut, non reclassé, doit être arrêté (autotest) ;
   B6  (12/10/2026) toute nature et tout rattachement de e2_lois.csv est soit dans le champ, soit dans la liste des
       exclusions affichée (jeton `champ`) ; entrées == champ + exclues + entre deux législatures ;
   B7  (12/10/2026) jointure engagements / lois par dossier : un engagement classé « PLF ou PLFSS » (titre) porte sur une
@@ -106,8 +109,10 @@ EXCLUES = {"traite": ("lois autorisant un traité", "laws authorising a treaty",
                       "which allow France to ratify or approve an international agreement"),
            "finances_fss": ("lois de finances et de financement de la sécurité sociale",
                             "finance and social security financing acts",
-                            "les budgets de l'État et de la sécurité sociale",
-                            "the State and social security budgets"),
+                            "les budgets de l'État et de la sécurité sociale, et les lois spéciales que la loi organique range parmi "
+                             "les lois de finances",
+                            "the State and social security budgets, and the special acts that the Institutional Act classes as "
+                             "finance acts"),
            "organique": ("lois organiques", "institutional acts",
                          "prévues par la Constitution pour en préciser certaines règles",
                          "provided for by the Constitution to specify some of its rules"),
@@ -340,6 +345,29 @@ def parl(r: dict) -> bool:
 
 
 # ------------------------------------------------------------------ calcul et gardes
+# Loi spéciale (LOLF, art. 45) : reconnue à son titre, reclassée en loi de finances (B6 bis). Condition de mort : l'AN et
+# Dosleg la typent eux-mêmes en loi de finances.
+LOI_SPECIALE = re.compile(r"\bloi sp[ée]ciale\b", re.I)
+
+
+def reclasser_lois_speciales(L: list) -> tuple[list, int]:
+    out, n = [], 0
+    for r in L:
+        if LOI_SPECIALE.search(r["titre"]) and r["nature"] != "finances_fss":
+            r = dict(r, nature="finances_fss",
+                     nature_source=r["nature_source"] + " ; reclassee : LOLF, art. 1er, 5deg (loi prevue a l'article 45)")
+            n += 1
+        out.append(r)
+    return out, n
+
+
+def verifier_lois_speciales(L: list) -> None:
+    """B6 bis : aucune loi spéciale de l'art. 45 de la LOLF ne reste dans le champ des lois ordinaires."""
+    reste = [r["numero"] for r in L if LOI_SPECIALE.search(r["titre"]) and r["nature"] != "finances_fss"]
+    if reste:
+        raise Arret("B6 bis : loi(s) speciale(s) de l'art. 45 de la LOLF typee(s) hors lois de finances : %s" % reste)
+
+
 def calculer(S: dict) -> tuple[dict, list[str]]:
     g, cit = [], {}
     for k, (_, c) in CONST.items():
@@ -364,6 +392,26 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
         raise Arret("B1 : citations FR et EN : cles differentes %s" % sorted(set(CONST) ^ set(CONST_EN)))
     g.append("B1 : %d citations de la Constitution (FR Legifrance, EN Conseil constitutionnel), %d des temoins, retrouvees mot pour mot"
              % (len(CONST), len(TEMOINS)))
+
+    # --- B6 bis (17/11/2026, relecture des sources du lot « promesses-a », P1-2) : la loi spéciale de l'article 45 de la
+    # LOLF a le caractère de loi de finances (LOLF, art. 1er, 5° : « Les lois prévues à l'article 45 ») ; l'AN et Dosleg la
+    # typent « ordinaire ». Elle est reclassée en « finances_fss », hors du champ, comme les autres lois financières.
+    # Garde vue mordre : une loi spéciale remise en « ordinaire » doit être arrêtée.
+    S["lois"], _ = reclasser_lois_speciales(S["lois"])
+    verifier_lois_speciales(S["lois"])
+    speciales = [i for i, r in enumerate(S["lois"]) if LOI_SPECIALE.search(r["titre"])]
+    if not speciales:
+        raise Arret("B6 bis : aucune loi speciale dans le registre (deux au 06/10/2026) : relire le titre des lois")
+    mut = list(S["lois"])
+    mut[speciales[0]] = dict(mut[speciales[0]], nature="ordinaire")
+    try:
+        verifier_lois_speciales(mut)
+    except Arret:
+        pass
+    else:
+        raise Arret("mutation loi speciale typee ordinaire : B6 bis n'a pas mordu, controle ABSENT")
+    g.append("B6 bis : %d loi(s) speciale(s) de l'art. 45 de la LOLF (%s) comptee(s) en lois de finances, typees ordinaires par "
+             "l'AN et Dosleg ; mutation (une remise en ordinaire) arretee" % (len(speciales), ", ".join(S["lois"][i]["numero"] for i in speciales)))
 
     # --- B6 : chaque loi est dans le champ, dans une exclusion nommée, ou entre deux législatures (12/10/2026)
     L = S["lois"]

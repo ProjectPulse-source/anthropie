@@ -49,14 +49,15 @@
  },
  "gardes": [
   "B1 : 24 citations de la Constitution (FR Legifrance, EN Conseil constitutionnel), 6 des temoins, retrouvees mot pour mot",
-  "B6 : 1085 lois = 596 du champ + 485 exclues (traite 365, finances_fss 62, organique 57, constitutionnelle 1) + 4 entre deux legislatures",
-  "B2 : origine concordante AN/Dosleg ; champ XIV 98/214, XV 103-108/202, XVI 55/83, XVII 78/97 ; toutes natures hors traites XIV 110/260, XV 114/249, XVI 55/95, XVII 85/112 ; 4 lois entre deux legislatures",
+  "B6 bis : 2 loi(s) speciale(s) de l'art. 45 de la LOLF (2024-1188, 2025-1316) comptee(s) en lois de finances, typees ordinaires par l'AN et Dosleg ; mutation (une remise en ordinaire) arretee",
+  "B6 : 1085 lois = 594 du champ + 487 exclues (traite 365, finances_fss 64, organique 57, constitutionnelle 1) + 4 entre deux legislatures",
+  "B2 : origine concordante AN/Dosleg ; champ XIV 98/214, XV 103-108/202, XVI 55/83, XVII 78/95 ; toutes natures hors traites XIV 110/260, XV 114/249, XVI 55/95, XVII 85/112 ; 4 lois entre deux legislatures",
   "B3 : champ par session = barometre (8 sessions) ; 2024-2025 45/56 = Senat ; 2023-2024 30/51 = 58.8 %",
   "B8 : 38 engagements = 38 actes distincts ; 10 couples (texte, etape) a plusieurs engagements, dont PLF 2023 en premiere lecture (2022-10-19, 2022-11-02)",
   "B4 : engagements XIV 6, XV 1, XVI 23 (= fiche 64 et bulletins) ; XVI 21 PLF/PLFSS + 2 LPFP ; 0 motion adoptee XIV-XVI",
-  "B7 : lois financieres avec au moins un engagement (jointure par dossier) : XVI 5/8, XVII 3/6 ; classements titre/nature concordants",
+  "B7 : lois financieres avec au moins un engagement (jointure par dossier) : XVI 5/8, XVII 3/8 ; classements titre/nature concordants",
   "B5 : E1 pire cas XIV 1385/1538, XV 1959/2155, XVI 1128/1238 (exces sur bulletins 17, 5, 3) ; dixieme unique 9",
-  "parite des 4 figures telephone (66 valeurs dessinees)"
+  "parite des 4 figures telephone (64 valeurs dessinees)"
  ],
  "calcul": {
   "legislatures": {
@@ -112,20 +113,20 @@
     "Ncst": 1
    },
    "17": {
-    "N": 97,
+    "N": 95,
     "P": 78,
     "Pmin": 78,
-    "gouv": 19,
+    "gouv": 17,
     "AN": 48,
     "SEN": 30,
     "traites": 32,
-    "autres": 15,
+    "autres": 17,
     "Ntot": 112,
     "Ptot": 85,
     "Ptotmin": 85,
     "Norg": 9,
     "Porg": 7,
-    "Nfin": 6,
+    "Nfin": 8,
     "Ncst": 0
    }
   },
@@ -220,7 +221,7 @@
     "textes": 3,
     "lpfp": 0,
     "adoptees": 1,
-    "lois_fin": 6,
+    "lois_fin": 8,
     "lois_fin_engagees": 3,
     "lois_fin_engagees_numeros": [
      "2025-127",
@@ -271,12 +272,12 @@
     ],
     [
      "XVIIe (depuis 2024, en cours au 06/10/2026)",
-     "97",
-     "19",
+     "95",
+     "17",
      "48",
      "30",
      "78",
-     "80 %"
+     "82 %"
     ],
     [
      "Entre deux législatures (juin 2024)",
@@ -336,7 +337,7 @@
      "112",
      "85",
      "76 %",
-     "6",
+     "8",
      "9 / 7",
      "0",
      "32"
@@ -446,7 +447,7 @@
      "8",
      "0",
      "1",
-     "3 sur 6"
+     "3 sur 8"
     ]
    ]
   },
@@ -528,12 +529,12 @@
     ],
     [
      "17th legislature (since 2024, ongoing on 6 October 2026)",
-     "97",
-     "19",
+     "95",
+     "17",
      "48",
      "30",
      "78",
-     "80%"
+     "82%"
     ],
     [
      "Between two legislatures (June 2024)",
@@ -593,7 +594,7 @@
      "112",
      "85",
      "76%",
-     "6",
+     "8",
      "9 / 7",
      "0",
      "32"
@@ -703,7 +704,7 @@
      "8",
      "0",
      "1",
-     "3 out of 6"
+     "3 out of 8"
     ]
    ]
   },
@@ -791,21 +792,21 @@
   "Norg16": "3",
   "Porg16": "0",
   "Nfin16": "8",
-  "N17": "97",
+  "N17": "95",
   "P17": "78",
   "Pmin17": "78",
-  "G17": "19",
+  "G17": "17",
   "AN17": "48",
   "SEN17": "30",
   "T17": "32",
-  "Ppct17": "80",
-  "Pminpct17": "80",
+  "Ppct17": "82",
+  "Pminpct17": "82",
   "Ntot17": "112",
   "Ptot17": "85",
   "Ptotpct17": "76",
   "Norg17": "9",
   "Porg17": "7",
-  "Nfin17": "6",
+  "Nfin17": "8",
   "E14": "6",
   "Efin14": "0",
   "Etextes14": "2",
@@ -831,7 +832,7 @@
   "Efin17": "8",
   "Etextes17": "3",
   "Eautre17": "0",
-  "Lfin17": "6",
+  "Lfin17": "8",
   "Lfineng17": "3",
   "Efois17": "8 fois",
   "Z14": "1 402",
@@ -868,7 +869,7 @@
   "HLn": "quatre",
   "HLmois": "juin 2024",
   "champ": "hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles",
-  "champ_def": "lois autorisant un traité (qui autorisent la France à ratifier ou approuver un accord international), lois de finances et de financement de la sécurité sociale (les budgets de l'État et de la sécurité sociale), lois organiques (prévues par la Constitution pour en préciser certaines règles) et lois constitutionnelles (qui modifient la Constitution)",
+  "champ_def": "lois autorisant un traité (qui autorisent la France à ratifier ou approuver un accord international), lois de finances et de financement de la sécurité sociale (les budgets de l'État et de la sécurité sociale, et les lois spéciales que la loi organique range parmi les lois de finances), lois organiques (prévues par la Constitution pour en préciser certaines règles) et lois constitutionnelles (qui modifient la Constitution)",
   "s1718_P": "12",
   "s1718_N": "41",
   "s2425_P": "45",
@@ -965,21 +966,21 @@
   "Norg16": "3",
   "Porg16": "0",
   "Nfin16": "8",
-  "N17": "97",
+  "N17": "95",
   "P17": "78",
   "Pmin17": "78",
-  "G17": "19",
+  "G17": "17",
   "AN17": "48",
   "SEN17": "30",
   "T17": "32",
-  "Ppct17": "80",
-  "Pminpct17": "80",
+  "Ppct17": "82",
+  "Pminpct17": "82",
   "Ntot17": "112",
   "Ptot17": "85",
   "Ptotpct17": "76",
   "Norg17": "9",
   "Porg17": "7",
-  "Nfin17": "6",
+  "Nfin17": "8",
   "E14": "6",
   "Efin14": "0",
   "Etextes14": "2",
@@ -1005,7 +1006,7 @@
   "Efin17": "8",
   "Etextes17": "3",
   "Eautre17": "0",
-  "Lfin17": "6",
+  "Lfin17": "8",
   "Lfineng17": "3",
   "Efois17": "8 times",
   "Z14": "1,402",
@@ -1042,7 +1043,7 @@
   "HLn": "four",
   "HLmois": "June 2024",
   "champ": "excluding laws authorising a treaty, finance and social security financing acts, institutional acts and constitutional acts",
-  "champ_def": "laws authorising a treaty (which allow France to ratify or approve an international agreement), finance and social security financing acts (the State and social security budgets), institutional acts (provided for by the Constitution to specify some of its rules) and constitutional acts (which amend the Constitution)",
+  "champ_def": "laws authorising a treaty (which allow France to ratify or approve an international agreement), finance and social security financing acts (the State and social security budgets, and the special acts that the Institutional Act classes as finance acts), institutional acts (provided for by the Constitution to specify some of its rules) and constitutional acts (which amend the Constitution)",
   "s1718_P": "12",
   "s1718_N": "41",
   "s2425_P": "45",

@@ -4,7 +4,7 @@
    "id": "origine",
    "fichier": "adopter-origine",
    "titre": "Qui est à l'origine des lois promulguées ?",
-   "montre": "Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d'une proposition de parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 80 % sous la XVIIe, en cours au 06/10/2026 ; toutes natures hors traités, 42, 46, 58 et 76 %. Origine formelle au dépôt initial, non l'influence.",
+   "montre": "Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d'une proposition de parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 82 % sous la XVIIe, en cours au 06/10/2026 ; toutes natures hors traités, 42, 46, 58 et 76 %. Origine formelle au dépôt initial, non l'influence.",
    "source": "Assemblée nationale (données ouvertes, dossiers législatifs) et Sénat (base Dosleg), 06/10/2026 ; Journal officiel",
    "precaution": "Champ : lois promulguées, hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles. Origine au dépôt initial, non l'influence. Toutes natures : même compte, lois organiques, financières et constitutionnelles réintégrées, traités toujours exclus."
   },
@@ -22,7 +22,7 @@
    "id": "origine",
    "fichier": "adopter-origine-en",
    "titre": "Who initiated the laws promulgated in France?",
-   "montre": "In the scope studied (excluding laws authorising a treaty, finance and social security financing acts, institutional acts and constitutional acts), the share of the laws promulgated in France that arose from a private member's bill is 46% during the 14th legislature, 53% during the 15th (at least 51%), 66% during the 16th and 80% during the 17th, ongoing on 6 October 2026; all kinds except treaties, 42, 46, 58 and 76%. Formal origin at the initial tabling, not influence.",
+   "montre": "In the scope studied (excluding laws authorising a treaty, finance and social security financing acts, institutional acts and constitutional acts), the share of the laws promulgated in France that arose from a private member's bill is 46% during the 14th legislature, 53% during the 15th (at least 51%), 66% during the 16th and 82% during the 17th, ongoing on 6 October 2026; all kinds except treaties, 42, 46, 58 and 76%. Formal origin at the initial tabling, not influence.",
    "source": "National Assembly (open data, legislative files) and Senate (Dosleg database), 6 October 2026; Journal officiel",
    "precaution": "Scope: laws promulgated, excluding laws authorising a treaty, finance and social security financing acts, institutional acts and constitutional acts. Origin at the initial tabling, not influence. All kinds: same count with institutional, finance and constitutional acts put back in, treaties still excluded."
   },
