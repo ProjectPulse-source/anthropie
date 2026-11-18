@@ -30,11 +30,11 @@ blocs:
   - id: ecole
     titre: "École, lycée et université"
     dossier: true
-    chapo: "Ce que les séries officielles disent des moyens du lycée et des parcours d'élèves : recrutement, classes, cours perdus, dépense, et ce qu'elles ne disent pas."
+    chapo: "Le niveau des élèves, leur maîtrise de la langue, le manque de professeurs, les chances d'admission dans le supérieur et la santé des étudiants : ce que les séries officielles établissent, et ce qu'elles ne disent pas."
     # Bloc créé le 07/10/2026 (ressource « Manque-t-il des professeurs au lycée ? », pendant la consultation nationale des
     # lycéens). Élargi le 23/10/2026 à l'université (décision de l'auteur ; chantier
-    # 06_PROMOTION/RECHERCHE_MALAISE_ETUDIANT_2026-10-23) : chapô inchangé tant qu'aucune page du supérieur n'est en
-    # ligne, il décrit ce que le bloc contient. Français seulement : pas de bloc dans _index.en.md tant qu'aucune page anglaise n'existe (exclusion déclarée).
+    # 06_PROMOTION/RECHERCHE_MALAISE_ETUDIANT_2026-10-23). Chapô réécrit le 18/11/2026 pour nommer les questions du bloc,
+    # supérieur compris, sans nombre (décision déléguée par l'auteur, lot enseignants-ecole-et-parcours, § D). Français seulement : pas de bloc dans _index.en.md tant qu'aucune page anglaise n'existe (exclusion déclarée).
   - id: enseigner
     titre: "Pour enseigner"
     dossier: true
