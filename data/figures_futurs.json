@@ -30,7 +30,7 @@
    "id": "leviers",
    "fichier": "dette-futurs-leviers-en",
    "titre": "Public debt in 2035: how far the primary balance, interest rates and growth move it",
-   "montre": "What a primary balance one point of GDP higher, market rates 0.2 point lower or one point higher, or half a point of real growth with inflation unchanged would each change in 2035, on the Commission's baseline.",
+   "montre": "What a primary balance one point of GDP higher, market rates 0.2 points lower or one point higher, or half a point of real growth with inflation unchanged would each change in 2035, on the Commission's baseline.",
    "source": "Author's calculations based on the European Commission's baseline (Debt Sustainability Monitor 2025, France country fiche), engine tested against the Commission and against the sensitivity published by the French Treasury (AFT).",
    "precaution": "Sensitivities: one parameter changed at a time, the others unchanged. These are not forecasts, full policy assessments or a cost-benefit ranking."
   }

@@ -63,7 +63,7 @@ MONTRE = {
     "fr": [("eventail", "dette-futurs-eventail", "a_titre", "Où mène la trajectoire actuelle selon la Commission européenne, à politique inchangée et sous des chocs historiques, et où se placent les trajectoires annoncées par le Gouvernement en 2024 et en 2026."),
            ("leviers", "dette-futurs-leviers", "b_titre", "Ce que changeraient en 2035, un à la fois, un solde primaire supérieur d'un point de PIB, des taux de marché plus bas de 0,2 point ou plus hauts d'un point, ou un demi-point de croissance réelle à inflation inchangée, sur la référence de la Commission.")],
     "en": [("eventail", "dette-futurs-eventail-en", "a_titre", "Where the current path leads according to the European Commission, with unchanged policy and under historical shocks, and where the paths announced by the Government in 2024 and 2026 stand."),
-           ("leviers", "dette-futurs-leviers-en", "b_titre", "What a primary balance one point of GDP higher, market rates 0.2 point lower or one point higher, or half a point of real growth with inflation unchanged would each change in 2035, on the Commission's baseline.")],
+           ("leviers", "dette-futurs-leviers-en", "b_titre", "What a primary balance one point of GDP higher, market rates 0.2 points lower or one point higher, or half a point of real growth with inflation unchanged would each change in 2035, on the Commission's baseline.")],
 }
 
 
