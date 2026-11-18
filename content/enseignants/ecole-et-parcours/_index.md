@@ -69,6 +69,10 @@ société&nbsp;?&nbsp;» — «&nbsp;comprendre l'évolution, depuis les années
 l'accès à l'école et à l'enseignement supérieur (taux de scolarisation, taux d'accès à un diplôme ou à un type de
 formation) en distinguant les processus de massification et de démocratisation&nbsp;» (Éduscol). Ce chapitre reste au programme, mais il ne figure pas parmi les questions évaluables à l'épreuve écrite de spécialité (note de service du 11&nbsp;septembre 2026, BO spécial n°&nbsp;4 du 17&nbsp;septembre 2026, annexe&nbsp;I, à compter de la session 2027).
 
+**Durée indicative**&nbsp;: 20 à 30&nbsp;minutes pour les questions 1 à 5&nbsp;; la question 6 est un prolongement.
+**Support**&nbsp;: la figure ci-dessous, construite pour cette activité à partir d'un tableau du service statistique du
+ministère de l'Enseignement supérieur (SIES).
+
 **Du programme au document.** Le programme demande une évolution depuis les années 1950&nbsp;; la figure donne une
 seule année, celle des bacheliers {{< acces-val "annee" >}}. Elle ne donne pas un taux d'accès, rapporté à une génération ou à toute une catégorie, mais la répartition entre types de formation des
 seuls bacheliers qui poursuivent leurs études&nbsp;: ceux qui ne s'inscrivent nulle part n'y figurent pas. Elle
@@ -78,10 +82,6 @@ candidatures et des admissions. «&nbsp;Université&nbsp;» comprend les IUT&nbs
 source la classe, sans jugement sur les personnes&nbsp;; elle est renseignée pour
 {{< acces-val "origine_renseignee" >}}&nbsp;% des inscrits. Elle manque surtout pour les inscrits en STS&nbsp;: les parts de la figure sont
 calculées sur les seuls inscrits dont l'origine est connue.
-
-**Durée indicative**&nbsp;: 20 à 30&nbsp;minutes pour les questions 1 à 5&nbsp;; la question 6 est un prolongement.
-**Support**&nbsp;: la figure ci-dessous, construite pour cette activité à partir d'un tableau du service statistique du
-ministère de l'Enseignement supérieur (SIES).
 
 </div>
 
@@ -105,8 +105,8 @@ Pour les questions d'interprétation, tenir pour juste toute réponse qui sépar
 1. Sections de technicien supérieur&nbsp;: {{< acces-val "cad_sts" >}}&nbsp;% des enfants de cadres inscrits dans le supérieur, {{< acces-val "ouv_sts" >}}&nbsp;% des enfants d'ouvriers inscrits. Classes préparatoires&nbsp;: {{< acces-val "cad_cpge" >}}&nbsp;% et {{< acces-val "ouv_cpge" >}}&nbsp;%.
 2. Parmi les inscrits dont l'origine est connue, l'inscription en STS est {{< acces-val "sts_ouv_sur_cad" >}}&nbsp;fois plus fréquente pour les enfants d'ouvriers&nbsp;; l'inscription en classes préparatoires, {{< acces-val "cpge_cad_sur_ouv" >}}&nbsp;fois plus fréquente pour les enfants de cadres.
 3. Les STS pour les enfants d'ouvriers ({{< acces-val "ouv_sts" >}}&nbsp;%, contre {{< acces-val "ouv_univ" >}}&nbsp;% à l'université)&nbsp;; l'université pour les cinq autres catégories, y compris les enfants de retraités et d'inactifs, pour qui les deux parts sont proches ({{< acces-val "ret_univ" >}}&nbsp;% et {{< acces-val "ret_sts" >}}&nbsp;%)&nbsp;; comme l'origine manque surtout en STS, ce dernier classement est fragile.
-4. Université&nbsp;: professions intermédiaires ({{< acces-val "pi_univ" >}}&nbsp;%) et ouvriers ({{< acces-val "ouv_univ" >}}&nbsp;%), {{< acces-val "ecart_univ" >}}&nbsp;points d'écart, un rapport de 1 à {{< acces-val "rapport_univ" >}}. Classes préparatoires&nbsp;: cadres ({{< acces-val "cad_cpge" >}}&nbsp;%) et ouvriers ({{< acces-val "ouv_cpge" >}}&nbsp;%), {{< acces-val "ecart_cpge" >}}&nbsp;points, un rapport de 1 à {{< acces-val "rapport_cpge" >}}. En points, l'écart est plus faible pour les classes préparatoires&nbsp;; en rapport, il est bien plus fort. Une filière qui n'accueille qu'une faible part de chaque catégorie ne peut pas produire un grand écart en points&nbsp;: le rapport dit mieux ce qui sépare les catégories, l'écart en points dit mieux combien d'élèves, sur cent de chaque catégorie, sont concernés. Aucune des deux mesures n'est la bonne en soi, et ni l'une ni l'autre ne donne un nombre d'élèves&nbsp;: il faudrait pour cela les effectifs de chaque catégorie.
-5. Non. Le document établit que les inscriptions diffèrent selon l'origine sociale&nbsp;; il n'observe ni les vœux, ni les admissions, ni les raisons. Une partie de l'écart peut passer par la série du baccalauréat, que ce tableau ne croise pas avec l'origine&nbsp;: {{< acces-val "cpge_bac_general" >}}&nbsp;% des nouveaux inscrits en classes préparatoires ont un baccalauréat général, contre {{< acces-val "sts_bac_general" >}}&nbsp;% en STS, où {{< acces-val "sts_bac_professionnel" >}}&nbsp;% ont un baccalauréat professionnel&nbsp;; et, parmi les bacheliers dont l'origine est renseignée, {{< acces-val "bac_general_cadres" >}}&nbsp;% des bacheliers généraux sont enfants de cadres et {{< acces-val "bac_general_ouvriers" >}}&nbsp;% enfants d'ouvriers, contre {{< acces-val "bac_professionnel_cadres" >}}&nbsp;% et {{< acces-val "bac_professionnel_ouvriers" >}}&nbsp;% des bacheliers professionnels. L'origine sociale est donc associée à la filière d'inscription, et une partie de cette association peut passer par le parcours scolaire antérieur&nbsp;; ces tableaux ne permettent pas de dire quelle partie. La note en bas de la figure nomme déjà la série du baccalauréat, les candidatures et les admissions&nbsp;; deux autres informations à connaître, par exemple parmi celles-ci&nbsp;: les raisons ou préférences déclarées des élèves, les résultats au baccalauréat, la distance aux formations et l'offre proche, les ressources de la famille et le coût des études.
+4. Université&nbsp;: professions intermédiaires ({{< acces-val "pi_univ" >}}&nbsp;%) et ouvriers ({{< acces-val "ouv_univ" >}}&nbsp;%), {{< acces-val "ecart_univ" >}}&nbsp;points d'écart, un rapport de 1 à {{< acces-val "rapport_univ" >}}. Classes préparatoires&nbsp;: cadres ({{< acces-val "cad_cpge" >}}&nbsp;%) et ouvriers ({{< acces-val "ouv_cpge" >}}&nbsp;%), {{< acces-val "ecart_cpge" >}}&nbsp;points, un rapport de 1 à {{< acces-val "rapport_cpge" >}}. En points, l'écart est plus faible pour les classes préparatoires&nbsp;; en rapport, il est bien plus fort. Une filière qui n'accueille qu'une faible part de chaque catégorie ne peut pas produire un grand écart en points&nbsp;: le rapport dit mieux ce qui sépare les catégories, l'écart en points dit mieux combien d'élèves, sur cent nouveaux bacheliers de chaque catégorie inscrits dans l'enseignement supérieur, sont concernés. Aucune des deux mesures n'est la bonne en soi, et ni l'une ni l'autre ne donne un nombre d'élèves&nbsp;: il faudrait pour cela les effectifs de chaque catégorie.
+5. Non. Le document établit que les inscriptions diffèrent selon l'origine sociale&nbsp;; il n'observe ni les candidatures, ni les admissions, ni les raisons. Une partie de l'écart peut passer par la série du baccalauréat, que ce tableau ne croise pas avec l'origine&nbsp;: {{< acces-val "cpge_bac_general" >}}&nbsp;% des nouveaux inscrits en classes préparatoires ont un baccalauréat général, contre {{< acces-val "sts_bac_general" >}}&nbsp;% en STS, où {{< acces-val "sts_bac_professionnel" >}}&nbsp;% ont un baccalauréat professionnel&nbsp;; et, parmi les bacheliers dont l'origine est renseignée, {{< acces-val "bac_general_cadres" >}}&nbsp;% des bacheliers généraux sont enfants de cadres et {{< acces-val "bac_general_ouvriers" >}}&nbsp;% enfants d'ouvriers, contre {{< acces-val "bac_professionnel_cadres" >}}&nbsp;% et {{< acces-val "bac_professionnel_ouvriers" >}}&nbsp;% des bacheliers professionnels. L'origine sociale est donc associée à la filière d'inscription, et une partie de cette association peut passer par le parcours scolaire antérieur&nbsp;; ces tableaux ne permettent pas de dire quelle partie. La note en bas de la figure nomme déjà la série du baccalauréat, les candidatures et les admissions&nbsp;; deux autres informations à connaître, par exemple parmi celles-ci&nbsp;: les raisons ou préférences déclarées des élèves, les résultats au baccalauréat, la distance aux formations et l'offre proche, les ressources de la famille et le coût des études.
 6. Pour la massification, il faudrait la part d'une génération qui accède au baccalauréat puis à l'enseignement supérieur, à plusieurs dates. Pour la démocratisation, qui porte selon Éduscol sur l'égalité ou l'inégalité des chances d'accès, ici selon l'origine sociale, il faudrait les taux d'accès au baccalauréat et à l'enseignement supérieur selon l'origine, à plusieurs dates, puis ce même tableau à plusieurs dates, pour voir si l'association entre origine et filière s'affaiblit. Avec les deux éditions retenues ici, une seule comparaison est possible&nbsp;: d'une année à la suivante, aucune valeur ne bouge de plus d'un point et demi ({{< acces-val "chrono1_ouv_sts" >}}&nbsp;% des enfants d'ouvriers inscrits le sont en STS en {{< acces-val "chrono1_annee" >}}, {{< acces-val "chrono2_ouv_sts" >}}&nbsp;% en {{< acces-val "chrono2_annee" >}}&nbsp;; {{< acces-val "chrono1_cad_cpge" >}}&nbsp;% puis {{< acces-val "chrono2_cad_cpge" >}}&nbsp;% des enfants de cadres inscrits le sont en classes préparatoires), ce qui ne dit rien d'une évolution longue. Les deux activités de cette page ne suivent pas les élèves de l'une à l'autre&nbsp;: celle-ci porte sur tous les bacheliers qui poursuivent, la suivante sur les seuls entrants en licence. Pour savoir si les écarts se cumulent chez les mêmes élèves, il faudrait les suivre du baccalauréat aux années suivantes.
 
 </details>
@@ -132,6 +132,10 @@ société&nbsp;?&nbsp;» — «&nbsp;Comprendre la multiplicité des facteurs d'
 rôle de l'École, rôle du capital culturel et des investissements familiaux, socialisation selon le genre, effets des
 stratégies des ménages) dans la construction des trajectoires individuelles de formation&nbsp;» (Éduscol). Même chapitre, même statut&nbsp;: au programme, hors des questions évaluables à l'épreuve écrite de spécialité à compter de la session 2027.
 
+**Durée indicative**&nbsp;: 20 à 30&nbsp;minutes pour les questions 1 à 5, selon les acquis des élèves&nbsp;; la
+question 6 est un prolongement. **Support**&nbsp;: la figure ci-dessous, construite pour cette activité à partir des
+tableaux du SIES.
+
 </div>
 
 **Du programme au document.** Le programme porte sur l'École dans son ensemble&nbsp;; la figure suit les bacheliers
@@ -149,14 +153,6 @@ partir de la profession du parent référent&nbsp;; elle ne porte aucun jugement
 quatre classes, dont il ne nomme que les principales catégories&nbsp;: très favorisée (cadres, enseignants…), favorisée
 (professions intermédiaires), assez défavorisée (employés…), défavorisée (ouvriers…). «&nbsp;Défavorisée&nbsp;» ne se lit
 donc pas «&nbsp;enfants d'ouvriers&nbsp;».
-
-<div class="fiche__prof">
-
-**Durée indicative**&nbsp;: 20 à 30&nbsp;minutes pour les questions 1 à 5, selon les acquis des élèves&nbsp;; la
-question 6 est un prolongement. **Support**&nbsp;: la figure ci-dessous, construite pour cette activité à partir des
-tableaux du SIES.
-
-</div>
 
 {{< figure-svg fichier="parcours-licence-devenir" alt="Cinq barres horizontales empilées à 100 %, une par origine sociale puis l'ensemble : part des étudiants passés en deuxième année, recommençant une première année, réorientés hors de la licence ou non retrouvés dans les fichiers d'inscription. Les valeurs sont dans le tableau qui suit la figure." >}}Source&nbsp;: MESRE-SIES, {{< licence-val "note" >}}. [Agrandir la figure](/img/parcours-licence-devenir.png){{< /figure-svg >}}
 
