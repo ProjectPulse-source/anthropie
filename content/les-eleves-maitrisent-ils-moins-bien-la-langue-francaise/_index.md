@@ -239,7 +239,17 @@ Plusieurs recherches combleraient ces manques&nbsp;:
 
 ## Ce qu'il faut retenir {#retenir}
 
-La question se pose souvent comme celle d'un déclin d'ensemble, centré sur les mots et précipité par les écrans. Les mesures dessinent autre chose. La plus longue mesure de compétence, une même dictée depuis 1987, montre une hausse des erreurs qui tient pour l'essentiel à autre chose que l'orthographe des mots, à la grammaire d'abord sur la période où le détail existe. Cette hausse s'est engagée avant la généralisation du smartphone, comme le recul de la lecture en fin d'école et du temps de lecture pour le plaisir&nbsp;; le smartphone ne peut donc pas être la seule cause de son apparition. À 15 ans, PISA recule depuis 2012, sans que les évaluations de l'école et du collège suivent toutes cette pente&nbsp;; le goût de lire recule de 2009 à 2018&nbsp;; en fin de collège, l'éducation prioritaire recule quand l'ensemble ne bouge pas significativement, et l'écart selon le milieu social des collèges reste, selon la DEPP, du même ordre de grandeur qu'en 2015, sans test publié de son évolution. Quant au vocabulaire, que la question vise d'abord, seules des séries récentes de l'école primaire le suivent, sans test publié de leurs évolutions, qui ne vont pas dans le même sens&nbsp;; aucune ne le suit au collège ni au lycée. Là où le diagnostic est le plus souvent proclamé, la mesure manque&nbsp;; là où elle existe, elle oblige à le préciser&nbsp;: quelles compétences reculent, chez quels élèves, et depuis quand.
+La question se pose souvent comme celle d'un déclin d'ensemble, centré sur les mots et précipité par les écrans. Les mesures dessinent autre chose.
+
+**Ce qui est établi.** La plus longue mesure de compétence, une même dictée depuis 1987, montre une hausse des erreurs qui tient pour l'essentiel à autre chose que l'orthographe des mots, à la grammaire d'abord sur la période où le détail existe. Cette hausse s'est engagée avant la généralisation du smartphone, comme le recul de la lecture en fin d'école et du temps de lecture pour le plaisir&nbsp;; le smartphone ne peut donc pas être la seule cause de son apparition.
+
+**Ce qui est à différencier.** À 15 ans, PISA recule depuis 2012, sans que les évaluations de l'école et du collège suivent toutes cette pente&nbsp;; le goût de lire recule de 2009 à 2018&nbsp;; en fin de collège, l'éducation prioritaire recule quand l'ensemble ne bouge pas significativement.
+
+**Ce qui reste ouvert.** L'écart selon le milieu social des collèges reste, selon la DEPP, du même ordre de grandeur qu'en 2015, sans test publié de son évolution. Quant au vocabulaire, que la question vise d'abord, seules des séries récentes de l'école primaire le suivent, sans test publié de leurs évolutions, qui ne vont pas dans le même sens.
+
+**Ce qui reste à rechercher.** Aucune série ne permet de suivre l'évolution du vocabulaire au collège ni au lycée&nbsp;; quant à une éventuelle simplification des textes donnés à lire, aucune mesure publiée n'a été retrouvée. Les recherches qui combleraient ces manques sont décrites [plus haut](#textes).
+
+Là où le diagnostic est le plus souvent proclamé, la mesure manque&nbsp;; là où elle existe, elle oblige à le préciser&nbsp;: quelles compétences reculent, chez quels élèves, et depuis quand.
 
 </div>
 
