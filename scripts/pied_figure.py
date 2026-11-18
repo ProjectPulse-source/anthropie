@@ -94,7 +94,9 @@ def coupe(s: str, n: int) -> list[str]:
     s = re.sub(r"\b(January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})\b",
                "\\1\u00a0\\2", s)
     # Sigle + année et année + nom qu'elle qualifie (« DSM / 2025 », « 2027 / draft budget », « 2024 / commitment »).
-    s = re.sub(r"\b(DSM|PLF|PSMT|PLFSS|LFI|LFSS) (\d{4})\b", "\\1\u00a0\\2", s)
+    s = re.sub(r"\b(DSM|PLF|PSMT|PLFSS|LFI|LFSS|PISA|PIRLS|CEDRE|TIMSS) (\d{4})\b", "\\1\u00a0\\2", s)
+    # Le nom de l'auteur ne se coupe pas (18/11/2026, contrôle du rendu des figures « langue » : « Stéphane / Lalut »).
+    s = s.replace("Stéphane Lalut", "Stéphane\u00a0Lalut")
     s = re.sub(r"\b(\d{4}) (draft|commitment|plan|budget)\b", "\\1\u00a0\\2", s)
     # Nombre et unité, jour et mois, groupes de milliers, parenthèse et son nombre (11/11/2026 : relevé sur les 277
     # figures après le passage du texte à 11 px — « environ 90 / Md€ », « −2,9 / pts », « 1,1 à 1,6 / fois »,

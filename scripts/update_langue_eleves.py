@@ -20,6 +20,9 @@ pour PISA) dans le dossier de recherche, recopier l'extrait et son empreinte, re
 Page en français seulement (exclusion déclarée : langue, programmes et statistique français).
 
 Section « textes » : extrait_textes.json (Gate 0 de l'étude sur la langue offerte aux enfants, 10/10/2026).
+Complément du 16/11/2026 : extrait_complement.json (relecture des sources de la reprise du 16/11 : PIRLS
+2001-2011, NI 12.21 ; PISA 2000-2006, NI 08.08 ; vocabulaire au CP et au CM1, NI 25.15 et 26.18 ; numérique
+de loisir, tableau I.B1.4.29 de l'OCDE), lu par ancre et contrôlé contre SHA256SUMS comme l'extrait figé.
 
 Usage : python scripts/update_langue_eleves.py [--check] [--mutation=<nom>]  (noms : les branches de mutation())
 Sorties : data/ et static/langue_eleves.json, static/langue_eleves.csv, data/figures_langue.json,
@@ -56,6 +59,9 @@ INK, INK2, MUTED, GRID = "#26262f", "#55524f", pied_figure.ENCRE_ATTENUEE, "#dcd
 # MUTED ne sert qu'au TEXTE (graduations, populations, crédit) : encre atténuée de l'organe commun. Les marques grises
 # (traits, ronds) gardent GRIS. Aucun texte d'une figure détaillée sous pied_figure.POLICE_MIN (11), contrôle R6 et R7.
 LICENCE = "Calcul Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
+# Valeurs reprises sans calcul (figures « plaisir » et « écarts ») : « calcul » seulement quand un calcul a été fait
+# (§ D du lot Langue de la reprise des ressources, délégation de l'auteur du 17/11/2026).
+LICENCE_DONNEES = "Données : DEPP ; graphique : Stéphane Lalut, CC BY 4.0 · " + PAGE_URL
 Q5, Q6 = "ST326Q05JA", "ST326Q06JA"
 NIVEAUX_2023 = ("Sixième", "Quatrième", "Seconde générale et technologique", "Seconde professionnelle", "CAP")
 DOMAINES_6E = ("Compréhension de l'écrit", "Lexique", "Compréhension de l'oral", "Grammaire", "Orthographe")
@@ -100,6 +106,7 @@ def lire():
     # Gate 0 de l'étude « langue offerte aux enfants » (06_PROMOTION/RECHERCHE_LANGUE_OFFERTE_2026-10-10/gate0,
     # extrait_textes.py) : recensement Emmanuelle et rappel du catalogue de la BnF, pour la section « textes »
     X["textes_offerts"] = json.loads((SRC / "extrait_textes.json").read_text(encoding="utf-8"))
+    X["complement"] = json.loads((SRC / "extrait_complement.json").read_text(encoding="utf-8"))
     return X
 
 
@@ -122,7 +129,7 @@ def calcul(X):
     return dict(X=X, sm=sm, seuil=seuil, P=P, d_00_12=d_00_12, se_00_12=se_00_12, q5=t7[Q5], q6=t7[Q6],
                 dic=X["dictee"], lc=X["lecture_cm2"], ce=X["cedre_ecole"], cc=X["cedre_college"], six=X["sixieme"],
                 pirls=X["pirls"], sec=X["seconde_francais"], oc=X["ocde_lecture_loisir"], cul=X["culture"],
-                pr=X["pratiques_2023_ne_lit_pas_pour_plaisir"], releve=X["releve_le"],
+                pr=X["pratiques_2023_ne_lit_pas_pour_plaisir"], releve=max(X["releve_le"], X["complement"]["releve_le"]),  # le plus récent des deux extraits (17/11/2026)
                 dty=X["dictee_types_1987_2007"], cct=X["cedre_college_textes"], tx=X["textes_offerts"])
 
 
@@ -151,6 +158,8 @@ def mutation(c):
         X["sixieme"]["satisfaisant_par_domaine_2025"]["Groupe d'IPS 5"]["Lexique"] = 40.0
     elif m == "seconde":
         X["seconde_francais"]["GT"]["2025"] = 272.0
+    elif m == "culture_2018":  # la part des 15-24 ans qui lisent vingt livres ou plus aurait encore baisse de 2008 a 2018
+        X["culture"]["vingt_livres_ou_plus"]["15_24"]["2018"] = 8
     elif m == "smartphone":
         X["smartphone_12_17"]["2013"] = 45.0
     elif m == "college":  # l'education prioritaire ne reculerait pas significativement en fin de college
@@ -182,6 +191,20 @@ def mutation(c):
         X["dictee"]["ecart_type"]["2021"] = 16.0
     elif m == "ecart_ep":  # le calcul des tableaux ne retrouverait pas l'ecart ecrit par la DEPP
         X["cedre_college"]["groupes"]["Public hors EP"]["2021"] = 245.0
+    elif m == "ips":  # l'ecart selon l'indice social se serait creuse
+        X["complement"]["cedre_college_indice_social"]["ecart_premier_quatrieme_quart_points"]["2021"] = 36.0
+    elif m == "indice_2000":  # l'indice de plaisir aurait baisse de 2000 a 2009 chez les garcons
+        X["complement"]["ocde_indice_plaisir_2000_2009"]["garcons"]["dif"] = -0.2
+    elif m == "pirls_2001_2011":  # le test de 2001-2011 n'aurait pas ete publie non significatif
+        X["complement"]["pirls_2001_2006_2011"]["ecarts_non_significatifs"] = False
+    elif m == "pisa_2006":  # la DEPP n'aurait pas juge importante la baisse de 2000 a 2006
+        X["complement"]["pisa_2000_2006_depp"]["baisse_importante"] = False
+    elif m == "vocabulaire_cp":  # la comprehension de mots au CP aurait baisse
+        X["complement"]["vocabulaire_primaire"]["cp_comprendre_mots_oral_points_2019_2025"] = -0.5
+    elif m == "seconde_pro":  # la voie professionnelle n'aurait pas baisse depuis 2021
+        X["seconde_francais"]["Pro"]["2025"] = 225.0
+    elif m == "ocde_ecrans":  # une tranche ne baisserait pas significativement selon l'OCDE
+        X["complement"]["ocde_numerique_loisir"]["avant_apres_ecole"]["dif"][1] = -0.2
     else:
         fail("mutation inconnue : %s" % m)
     c.update(calcul(X))
@@ -191,6 +214,7 @@ def mutation(c):
 # ------------------------------------------------------------------ gardes : chaque qualificatif de la prose
 def gardes(c):
     n = [0]
+    cmp = c["X"]["complement"]  # extrait complémentaire (reprise du 16/11/2026)
 
     def g(cond, phrase):
         n[0] += 1
@@ -218,6 +242,9 @@ def gardes(c):
       "PIRLS : « sans recul significatif de 2016 à 2021 »")
     g(c["X"]["pirls_baisses_2016_significatives_a_5_10_15_ans"] and c["pirls"]["2016"]["score"] < c["pirls"]["2011"]["score"],
       "PIRLS : baisse significative de 2011 à 2016")
+    pc = cmp["pirls_2001_2006_2011"]
+    g(pc["ecarts_non_significatifs"] and all(pc["scores"][a] == c["pirls"][a]["score"] for a in ("2001", "2006", "2011")),
+      "PIRLS : « sans évolution significative de 2001 à 2011 » (DEPP, NI 12.21), scores identiques à l'extrait")
     g(ce["significatif"]["2021"] and lg.depasse(ce["score"]["2021"], ce["score"]["2015"], 0) and ce["stable_2003_2015_declare"],
       "CEDRE fin d'école : « sans évolution significative de 2003 à 2015, en hausse significative en 2021 »")
     g(not cc["significatif"]["2021"] and abs(cc["score"]["2021"] - cc["score"]["2015"]) < 5, "CEDRE fin de collège : « sans évolution significative »")
@@ -226,10 +253,14 @@ def gardes(c):
       "sixième : « au-dessus de 2017, après un sommet en 2020-2021 »")
     gt = c["sec"]["GT"]
     g(abs(gt["2025"] - gt["2019"]) < 1 and gt["2021"] == max(gt.values()), "seconde GT : « revient en 2025 au niveau de 2019, après un sommet en 2020-2021 »")
+    pro = c["sec"]["Pro"]
+    g(pro["2025"] < pro["2021"] == max(pro.values()), "seconde professionnelle : « passe de 2021 à 2025 », plus bas en 2025, 2021 sommet de la série")
     L = lignes_chrono(c)
     g(len(L) == 11, "chronologie : « onze mesures »")
     g(sum(1 for _, _, seg in L for u, v, sg, bs in seg if v < c["seuil"] - 1 and sg and bs) == 3, "chronologie : « trois reculs sont acquis avant » le smartphone")
-    g(lg.depasse(s["2000"], s["2006"], 0) and lg.depasse(s["2009"], s["2006"], 0) and s["2012"] >= s["2000"], "PISA : « un creux en 2006 sans tendance »")
+    g(lg.depasse(s["2000"], s["2006"], 0) and lg.depasse(s["2009"], s["2006"], 0) and s["2012"] >= s["2000"]
+      and cmp["pisa_2000_2006_depp"]["baisse_importante"],
+      "PISA : « un recul de 2000 à 2006, que la DEPP jugeait important, effacé en 2009 et en 2012 » (NI 08.08)")
     # vocabulaire et dictée
     cit = set(dic["citations_depp"])
     g({"mots_usuels_neuf_sur_dix", "accords_baisse_1987_2015_seulement", "hausse_2015_2021_deux_fois_moindre"} <= cit,
@@ -257,16 +288,24 @@ def gardes(c):
     ecarts = {d: sat["Groupe d'IPS 5"][d] - sat["Groupe d'IPS 1"][d] for d in DOMAINES_6E}
     g(lg.extremum(ecarts, ecarts.get, 1) == "Lexique", "sixième 2025 : l'écart social est « le plus grand en lexique »")
     g(sat["Groupe d'IPS 5"]["Lexique"] > 2 * sat["Groupe d'IPS 1"]["Lexique"], "sixième 2025 : en lexique, « plus du double » dans les collèges favorisés")
+    vp = cmp["vocabulaire_primaire"]
+    g(vp["evalue_le_vocabulaire_sans_contexte"] and vp["evaluations_exhaustives_sans_test"]
+      and vp["cp_comprendre_mots_oral_points_2019_2025"] > 0 and vp["cm1_synonymes_points_2023_2025"] < 0,
+      "vocabulaire à l'école : au CP, la compréhension de mots à l'oral « augmente » de 2019 à 2025 ; en CM1, la recherche de synonymes « baisse » de 2023 à 2025 (DEPP, sans test)")
     # lecture pour le plaisir
     jr = oc["joyread"]
     g(jr["variation"] < 0 and abs(jr["variation"]) >= 1.96 * jr["variation_et"], "OCDE : le plaisir de lire baisse significativement de 2009 à 2018")
     ob = oc["lit_seulement_si_oblige"]
     g(ob["2009"] < 35 and ob["2018"] > 40, "OCDE : « je ne lis que si j'y suis obligé », « d'un tiers à plus de quatre sur dix »")
+    ij = cmp["ocde_indice_plaisir_2000_2009"]
+    g(all(not (ij[k]["dif"] < 0 and abs(ij[k]["dif"]) >= 1.96 * ij[k]["se"]) for k in ("garcons", "filles")),
+      "OCDE : de 2000 à 2009, l'indice de plaisir de lire « ne baisse ni chez les filles ni chez les garçons » (d'abord le temps, ensuite le goût)")
     pr = c["pr"]
     g(all(pr[a] < pr[b] for a, b in zip(NIVEAUX_2023[:3], NIVEAUX_2023[1:4])), "DEPP 2023 : la part qui ne lit pas pour le plaisir « croît de la sixième à la seconde professionnelle »")
     g(45 <= pr["Seconde professionnelle"] < 50 and 11 <= pr["Sixième"] < 14, "DEPP 2023 : « un élève de sixième sur huit », « près de la moitié » en seconde professionnelle")
     v20 = c["cul"]["vingt_livres_ou_plus"]["15_24"]
     g(v20["1988"] > v20["1997"] > v20["2008"], "Culture : les forts lecteurs de 15-24 ans reculent de 1988 à 2008")
+    g(nb(v20["2018"], 0) == nb(v20["2008"], 0), "Culture : en 2018, la part des 15-24 ans qui lisent vingt livres ou plus « est la même » qu'en 2008")
     # écarts
     gs = cc["groupes_significatif"]
     g(gs["EP"]["2021"] and gs["Garçons"]["2021"] and lg.depasse(cc["groupes"]["EP"]["2015"], cc["groupes"]["EP"]["2021"], 0)
@@ -277,6 +316,9 @@ def gardes(c):
       and not gs["Public hors EP"]["2021"] and not ct["test_de_l_ecart_publie"]
       and ct["ecart_filles_garcons_dit_augmenter"] and grp["Filles"]["2021"] - grp["Garçons"]["2021"] > grp["Filles"]["2015"] - grp["Garçons"]["2015"],
       "CEDRE fin de collège : l'écart avec le public hors éducation prioritaire « passe de 17 à 22 points », celui entre filles et garçons « augmente aussi » (DEPP), sans test publié")
+    cis = cmp["cedre_college_indice_social"]
+    g(cis["baisses_non_significatives_dans_chaque_quart"] and cis["ecart_premier_quatrieme_quart_points"]["2015"] == cis["ecart_premier_quatrieme_quart_points"]["2021"],
+      "CEDRE fin de collège, selon l'indice social des collèges : baisse « non significative » dans chaque quart, écart « de … points en 2015 comme en 2021 » (NI 22.29)")
     g(not ce["secteurs_significatif"]["EP"]["2021"] and ce["secteurs_significatif"]["Public hors EP"]["2021"],
       "CEDRE fin d'école : « la hausse vient du public hors éducation prioritaire »")
     # textes offerts (Gate 0)
@@ -298,6 +340,10 @@ def gardes(c):
     a5 = c["q5"]["a"]
     r = a5["2025"]["non_reponse"][0] / a5["2022"]["non_reponse"][0]
     g(1.7 <= r < 2.0, "PISA : la non-réponse « a presque doublé »")
+    ab, p3 = cmp["ocde_numerique_loisir"]["avant_apres_ecole"], c["q5"]["c"]["part_plus_de_3h"]
+    g(all(d < 0 and abs(d) > 1.96 * e for d, e in zip(ab["dif"], ab["se"])) and abs(sum(ab["p2022"]) - p3["2022"][0]) < 0.1
+      and abs(sum(ab["p2022"]) + sum(ab["dif"]) - p3["2025"][0]) < 0.1,
+      "PISA : parmi les répondants, la part au-delà de trois heures avant et après l'école « baisse », baisse publiée par l'OCDE, significative dans chaque tranche (tableau I.B1.4.29), parts égales à celles du calcul")
     g(20 <= a5["2025"]["non_reponse"][0] < 25, "PISA 2025 : « près d'un élève sur quatre » ne répond pas")
     g(all(a5[an]["lecture_repondants"][0] - a5[an]["lecture_non_repondants"][0] > 80 for an in ("2022", "2025")),
       "PISA : les non-répondants ont des scores « très inférieurs »")
@@ -336,12 +382,14 @@ def affichage(c):
     A["pisa_v12"] = nb(-P["variation_vers_2025"]["2012"], 0)
     pi = c["pirls"]
     A["pirls01"], A["pirls11"], A["pirls16"], A["pirls21"] = (nb(pi[a]["score"], 0) for a in ("2001", "2011", "2016", "2021"))
+    A["pirls06"] = nb(pi["2006"]["score"], 0)
     A["ce03"], A["ce15"], A["ce21"] = nb(ce["score"]["2003"], 0), nb(ce["score"]["2015"], 0), nb(ce["score"]["2021"], 0)
     A["cc15"], A["cc21"] = nb(cc["score"]["2015"], 0), nb(cc["score"]["2021"], 0)
     g_ = cc["groupes"]
     A["ccep15"], A["ccep21"] = nb(g_["EP"]["2015"], 0), nb(g_["EP"]["2021"], 0)
     A["ccg15"], A["ccg21"] = nb(g_["Garçons"]["2015"], 0), nb(g_["Garçons"]["2021"], 0)
     A["ccec15"], A["ccec21"] = (nb(c["cct"]["ecart_hors_ep_ep_points"][a], 0) for a in ("2015", "2021"))
+    A["ips_ecart"] = nb(c["X"]["complement"]["cedre_college_indice_social"]["ecart_premier_quatrieme_quart_points"]["2021"], 0)
     dty = c["dty"]
     A["gram87"], A["gram07"] = nbp(dty["grammaticales"]["1987"]), nbp(dty["grammaticales"]["2007"])
     # décomposition de la hausse (arbitrage de phase A, C1)
@@ -353,9 +401,14 @@ def affichage(c):
     A["six17"], A["six21"], A["six25"] = nb(sf["2017"], 0), nb(sf["2021"], 0), nb(sf["2025"], 0)
     gt = c["sec"]["GT"]
     A["sec19"], A["sec21"], A["sec25"] = nb(gt["2019"], 0), nb(gt["2021"], 0), nb(gt["2025"], 0)
+    pro = c["sec"]["Pro"]
+    A["sec_pro21"], A["sec_pro25"] = nb(pro["2021"], 0), nb(pro["2025"], 0)
     sat = six["satisfaisant_par_domaine_2025"]
     A["lex_sat"] = nb(sat["Ensemble"]["Lexique"])
     A["lex_ips1"], A["lex_ips5"] = nb(sat["Groupe d'IPS 1"]["Lexique"]), nb(sat["Groupe d'IPS 5"]["Lexique"])
+    vp = c["X"]["complement"]["vocabulaire_primaire"]
+    A["voc_cp"] = nb(vp["cp_comprendre_mots_oral_points_2019_2025"])
+    A["syn_cm1"] = nb(-vp["cm1_synonymes_points_2023_2025"])
     hs = oc["heures_semaine"]
     A["h00"], A["h09"], A["h18"] = nb(hs["2000"]), nb(hs["2009"]), nb(hs["2018"])
     ob = oc["lit_seulement_si_oblige"]
@@ -363,7 +416,7 @@ def affichage(c):
     pr = c["pr"]
     A["np6"], A["np4"], A["np2gt"], A["np2pro"], A["npcap"] = (nb(pr[k], 0) for k in NIVEAUX_2023)
     v20 = c["cul"]["vingt_livres_ou_plus"]["15_24"]
-    A["cul88"], A["cul08"] = nb(v20["1988"], 0), nb(v20["2008"], 0)
+    A["cul88"], A["cul08"], A["cul18"] = nb(v20["1988"], 0), nb(v20["2008"], 0), nb(v20["2018"], 0)
     for q, k in ((c["q5"], "e"), (c["q6"], "w")):
         p = q["c"]["part_plus_de_3h"]
         A[k + "3h22"], A[k + "3h25"] = nb(p["2022"][0], 0), nb(p["2025"][0], 0)
@@ -401,25 +454,25 @@ def tete(fid, titre, desc, h):
             '<text x="0" y="18" font-size="14" font-weight="600" fill="%s">%s</text>' % (INK, esc(titre))]
 
 
-def pied(e, y0, source, note):
+def pied(e, y0, source, note, licence=LICENCE):
     return pied_figure.pied(e, y0, W, [(source, INK2, "pied-source"), (note, INK2, "pied-note"),
-                                       (LICENCE, MUTED, "pied-licence")], GRID)
+                                       (licence, MUTED, "pied-licence")], GRID)
 
 
 FIG = {
     "chronologie": dict(
         titre="La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement",
         source="DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
-        note="Chaque ligne a sa propre échelle ; seul le sens est montré. Plein : test publié (PISA 2000-2012 : test de l'auteur) ; tirets : sans test.",
-        montre="Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA ne baisse significativement qu'après 2012, quand PIRLS et CEDRE ne reculent pas significativement sur des périodes qui recouvrent en partie cette baisse."),
+        note="Seul le sens de l'évolution est montré, pas son ampleur. Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l'auteur ; tirets : sans test. PISA, compréhension de l'écrit : recul de 2000 à 2006 non\u00a0tracé. Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu'en 2008, non\u00a0tracée.",
+        montre="Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA, revenu en 2012 à son niveau de 2000, baisse significativement ensuite, et les évaluations passées en classe ne suivent pas toutes cette pente."),
     "dictee": dict(
         titre="La même dictée en CM2 : nombre moyen d'erreurs",
-        source="DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; NI 08.38 pour 1987-2007",
+        source="DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; détail des autres erreurs, 1987 et 2007 : NI 08.38",
         note="Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales).",
         montre="De 1987 à 2021, l'orthographe des mots eux-mêmes ne compte que pour un dixième environ de la hausse des erreurs ; les autres erreurs ont presque doublé. Le détail par type d'erreur n'existe que pour 1987-2007 : la hausse y est surtout grammaticale."),
     "plaisir": dict(
         titre="Élèves qui déclarent ne pas lire pour leur plaisir, selon la classe (2023)",
-        source="DEPP, Note d'Information 25.66, figure 1.1 web (questionnaires des évaluations nationales, septembre 2023)",
+        source="DEPP, Note d'Information 25.66, figure\u00a01.1\u00a0web (questionnaires des évaluations nationales, septembre 2023)",
         note="Une seule enquête : l'écart entre classes compare des élèves différents la même année, ce n'est pas une évolution dans le temps.",
         montre="Dans l'enquête de 2023, la part des élèves qui ne lisent pas pour leur plaisir est plus élevée en seconde qu'en sixième, et atteint près de la moitié en seconde professionnelle : des élèves différents la même année, pas une évolution."),
 }
@@ -428,7 +481,7 @@ FIG = {
 FIG["ecarts"] = dict(
     titre="Fin de collège : la moyenne ne baisse pas significativement, l'éducation prioritaire si",
     source="DEPP, Note d'Information 22.29 et tableaux de données (CEDRE, compétences langagières et littératie en fin de collège)",
-    note="Échelle fixée à 250 en 2015. Orange : baisse significative selon la DEPP ; gris : sans évolution significative. "
+    note="Score moyen fixé à 250 en 2015 ; valeur de 2021 en gras. Orange : baisse significative selon la DEPP ; gris : sans évolution significative. "
          "Aucun test de l'évolution des écarts entre groupes n'est publié.",
     montre="En fin de collège, le score de l'ensemble des élèves n'évolue pas significativement de 2015 à 2021, quand celui de "
            "l'éducation prioritaire et celui des garçons baissent significativement ; l'évolution des écarts entre groupes n'est pas testée.")
@@ -472,9 +525,13 @@ def fig_ecarts(c, A):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="5"/>' % (sx(a), y, sx(b), y, col))
         e.append('<circle cx="%.1f" cy="%d" r="4.5" fill="#ffffff" stroke="%s" stroke-width="1.6"/>' % (sx(a), y, INK2))
         e.append('<circle cx="%.1f" cy="%d" r="5" fill="%s"/>' % (sx(b), y, col))
+        # anneau de 2015 redessiné par-dessus le rond de 2021 : les deux marques restent visibles quand elles se
+        # recouvrent (contrôle du rendu du 18/11/2026, « Filles »)
+        e.append('<circle cx="%.1f" cy="%d" r="4.5" fill="none" stroke="%s" stroke-width="1.6"/>' % (sx(a), y, INK2))
         gauche, droite = (b, a) if b < a else (a, b)
-        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="end">%s</text>' % (sx(gauche) - 9, y + 4, INK2, nb(gauche)))
-        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s">%s</text>' % (sx(droite) + 9, y + 4, INK2, nb(droite)))
+        gras_g, gras_d = (' font-weight="600"', "") if b < a else ("", ' font-weight="600"')  # 2021 en gras
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="end"%s>%s</text>' % (sx(gauche) - 9, y + 4, INK2, gras_g, nb(gauche)))
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s"%s>%s</text>' % (sx(droite) + 9, y + 4, INK2, gras_d, nb(droite)))
     yl = top + pas * len(L) + 26
     e.append('<circle cx="6" cy="%d" r="4.5" fill="#ffffff" stroke="%s" stroke-width="1.6"/>' % (yl - 4, INK2))
     e.append('<text x="16" y="%d" font-size="11" fill="%s">2015</text>' % (yl, INK2))
@@ -483,7 +540,7 @@ def fig_ecarts(c, A):
     for k, (col, lib) in enumerate(((ORANGE, "baisse significative"), (GRIS, "sans évolution significative"))):
         e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="5"/>' % (130 + 190 * k, yl - 4, 152 + 190 * k, yl - 4, col))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (158 + 190 * k, yl, INK2, lib))
-    return pied(e, h + 2, t["source"], t["note"])
+    return pied(e, h + 2, t["source"], t["note"], LICENCE_DONNEES)
 
 
 def statut(sig, baisse):
@@ -501,13 +558,17 @@ def lignes_chrono(c):
     v12 = P["variation_vers_2025"]["2012"], P["variation_vers_2025_et"]["2012"]
     jr = oc["joyread"]
     v20 = c["cul"]["vingt_livres_ou_plus"]["15_24"]
+    # 17/11/2026 (relecture des sources, R1 P0-1) : la DEPP a publié le test de PIRLS 2001-2006-2011, non
+    # significatif (NI 12.21, p. 4) ; ces deux segments étaient codés « recul, sans test publié ».
+    pns = c["X"]["complement"]["pirls_2001_2006_2011"]["ecarts_non_significatifs"]
     L = [
-        ("PIRLS, lecture", "CM1", [(2001, 2006, None, pi["2006"]["score"] < pi["2001"]["score"]),
-                                   (2006, 2011, None, pi["2011"]["score"] < pi["2006"]["score"]),
+        ("PIRLS, lecture", "CM1", [(2001, 2006, False if pns else None, pi["2006"]["score"] < pi["2001"]["score"]),
+                                   (2006, 2011, False if pns else None, pi["2011"]["score"] < pi["2006"]["score"]),
                                    (2011, 2016, True, True), (2016, 2021, pi["2016"]["sup_2021"], pi["2021"]["score"] < pi["2016"]["score"])]),
         ("Dictée (erreurs en hausse = recul)", "CM2", [(1987, 2007, True, True), (2007, 2015, None, True), (2015, 2021, None, True)]),
         ("Lecture, épreuves de 1987", "CM2", [(1987, 1997, False, True), (1997, 2007, True, True)]),
-        ("CEDRE, maîtrise de la langue", "CM2", [(2003, 2009, False, False), (2009, 2015, False, False),
+        ("CEDRE, maîtrise de la langue", "CM2", [(2003, 2009, False if ce["stable_2003_2015_declare"] else None, False),
+                                                 (2009, 2015, False if ce["stable_2003_2015_declare"] else None, False),
                                                  (2015, 2021, ce["significatif"]["2021"], lg.depasse(ce["score"]["2015"], ce["score"]["2021"], 0))]),
         ("Évaluation de début de sixième", "6e", [(2017, 2021, None, lg.depasse(sf["2017"], sf["2021"], 0)), (2021, 2025, None, lg.depasse(sf["2021"], sf["2025"], 0))]),
         ("CEDRE, langue et littératie", "3e", [(2015, 2021, cc["significatif"]["2021"], lg.depasse(cc["score"]["2015"], cc["score"]["2021"], 0))]),
@@ -532,7 +593,7 @@ def fig_chronologie(c, A):
     mots = {(ORANGE, True): "recul significatif", (BLEU, True): "hausse significative", (GRIS, True): "sans évolution significative",
             (ORANGE, False): "recul, sans test publié", (BLEU, False): "hausse, sans test publié"}
     desc = "Frise 1985-2026, une ligne par mesure, sens de chaque intervalle ; repère : %s, plus de la moitié des 12-17 ans équipés d'un smartphone. " % A["smart_seuil"] + " ; ".join(
-        "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + "."
+        "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + ". " + t["note"].split("tirets : sans test. ", 1)[1]
     e = tete("lan-c", t["titre"], desc, h + 52)
     xs = sx(c["seuil"])
     e.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f1efec"/>' % (xs, top - 22, x1 - xs, pas * len(L) + 22))
@@ -582,6 +643,9 @@ def fig_dictee(c, A):
         l, o = lx[a], tot[a] - lx[a]
         e.append('<rect x="%d" y="%.1f" width="%d" height="%.1f" fill="%s"/>' % (x, base - sy(l), bw, sy(l), BLEU))
         e.append('<rect x="%d" y="%.1f" width="%d" height="%.1f" fill="%s"/>' % (x, base - sy(l + o), bw, sy(o), ORANGE))
+        yt = base - sy(l + o) - 6  # ligne de base du total ; cache blanc seulement si une ligne de grille traverse sa boîte
+        if any(yt - 10 <= base - sy(g) <= yt + 3 for g in (0, 5, 10, 15, 20, 25)):
+            e.append('<rect x="%.1f" y="%.1f" width="36" height="13" fill="#ffffff"/>' % (x + bw / 2 - 18, yt - 10))
         e.append('<text x="%.1f" y="%.1f" font-size="12" font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l + o) - 6, INK, nbp(tot[a])))
         e.append('<text x="%.1f" y="%.1f" font-size="11" fill="#ffffff" text-anchor="middle">%s</text>' % (x + bw / 2, base - sy(l) / 2 + 4, nbp(l)))
         # Valeur dans le segment orange : l'encre que cette couleur demande (pied_figure.encre_sur, 11/11/2026 : le blanc
@@ -609,9 +673,9 @@ def fig_plaisir(c, A):
     for i, k in enumerate(NIVEAUX_2023):
         y = top + pas * i
         e.append('<text x="0" y="%d" font-size="11.5" fill="%s">%s</text>' % (y + 18, INK, esc(libs[k])))
-        e.append('<rect x="%d" y="%d" width="%.1f" height="22" fill="%s"/>' % (x0, y + 4, sx(pr[k]), ORANGE))
+        e.append('<rect x="%d" y="%d" width="%.1f" height="22" fill="%s"/>' % (x0, y + 4, sx(pr[k]), BLEU))
         e.append('<text x="%.1f" y="%d" font-size="12" font-weight="600" fill="%s">%s %%</text>' % (x0 + sx(pr[k]) + 8, y + 20, INK, nb(pr[k], 0)))
-    return pied(e, h + 2, t["source"], t["note"])
+    return pied(e, h + 2, t["source"], t["note"], LICENCE_DONNEES)
 
 
 # ------------------------------------------------------------------ figures mobiles (refonte du 10/10, arbitrage C5)
@@ -619,6 +683,7 @@ def fig_plaisir(c, A):
 # aucune police sous FS_MIN unités (≈ 12 px affichés). Mêmes valeurs que la version détaillée (parite_mobile).
 WM, FS_MIN = 300, 13.5
 LICENCE_M = "Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"  # l'URL de la page ne se coupe pas en 300 unités
+LICENCE_DONNEES_M = "Données : DEPP ; graphique : Stéphane Lalut, CC BY 4.0 · stephane-lalut.com"
 
 
 # Coupure des lignes : organe commun (03/11/2026, cinq copies locales ramenées à pied_figure.coupe ; l'une
@@ -636,11 +701,11 @@ def tete_m(fid, titre, desc, h):
     return e, 20 + 22 * len(coupe(titre, 30))
 
 
-def pied_m(e, y0, source, note):
+def pied_m(e, y0, source, note, licence=LICENCE_M):
     """Renvoie (svg, hauteur) ; le pied se coupe en lignes courtes."""
     e.append('<line x1="0" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (y0, WM, y0, GRID))
     y = y0 + 4
-    for tx, col in ((source, INK2), (note, INK2), (LICENCE_M, MUTED)):
+    for tx, col in ((source, INK2), (note, INK2), (licence, MUTED)):
         for ligne in coupe(tx, 38):
             y += 17
             e.append('<text x="0" y="%.1f" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, col, esc(ligne)))
@@ -699,10 +764,10 @@ def fig_plaisir_m(c, A):
     for k in NIVEAUX_2023:
         e.append('<text x="0" y="%d" font-size="14.5" fill="%s">%s</text>' % (y + 4, INK, esc(libs[k])))
         y += 10
-        e.append('<rect x="0" y="%d" width="%.1f" height="22" fill="%s"/>' % (y, sx(pr[k]), ORANGE))
+        e.append('<rect x="0" y="%d" width="%.1f" height="22" fill="%s"/>' % (y, sx(pr[k]), BLEU))
         e.append('<text x="%.1f" y="%d" font-size="16" font-weight="600" fill="%s">%s %%</text>' % (sx(pr[k]) + 6, y + 17, INK, nb(pr[k], 0)))
         y += 22 + 24
-    e, h = pied_m(e, y, t["source"], t["note"])
+    e, h = pied_m(e, y, t["source"], t["note"], LICENCE_DONNEES_M)
     return finir_m(e, h)
 
 
@@ -713,7 +778,7 @@ def fig_chronologie_m(c, A):
     mots = {(ORANGE, True): "recul significatif", (BLEU, True): "hausse significative", (GRIS, True): "sans évolution significative",
             (ORANGE, False): "recul, sans test publié", (BLEU, False): "hausse, sans test publié"}
     desc = "Frise en deux panneaux, une ligne par mesure, sens de chaque intervalle ; repère : %s, plus de la moitié des 12-17 ans équipés d'un smartphone. " % A["smart_seuil"] + " ; ".join(
-        "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + "."
+        "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + ". " + t["note"].split("tirets : sans test. ", 1)[1]
     longues = [r for r in L if min(u for u, *_ in r[2]) < 2009]
     recentes = [r for r in L if min(u for u, *_ in r[2]) >= 2009]
     e, y = tete_m("lan-cm", "Quand chaque mesure de la langue recule, progresse ou n'évolue pas significativement", desc, 0)
@@ -769,7 +834,9 @@ def fig_ecarts_m(c, A):
         e.append('<line x1="0" y1="%d" x2="24" y2="%d" stroke="%s" stroke-width="5"/>' % (y - 5, y - 5, col))
         e.append('<text x="32" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, lib))
     y += 20
-    e.append('<text x="0" y="%d" font-size="%s" fill="%s">rond blanc : 2015 · rond plein : 2021</text>' % (y, FS_MIN, INK2))
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">anneau : 2015</text>' % (y, FS_MIN, INK2))
+    y += 18
+    e.append('<text x="0" y="%d" font-size="%s" fill="%s">rond plein, valeur en gras : 2021</text>' % (y, FS_MIN, INK2))
     y += 14
     for i, (lib, a, b, sg) in enumerate(L):
         col = ORANGE if sg and b < a else GRIS
@@ -779,10 +846,12 @@ def fig_ecarts_m(c, A):
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="6"/>' % (sx(a), y, sx(b), y, col))
         e.append('<circle cx="%.1f" cy="%d" r="5" fill="#ffffff" stroke="%s" stroke-width="1.6"/>' % (sx(a), y, INK2))
         e.append('<circle cx="%.1f" cy="%d" r="5.5" fill="%s"/>' % (sx(b), y, col))
+        e.append('<circle cx="%.1f" cy="%d" r="5" fill="none" stroke="%s" stroke-width="1.6"/>' % (sx(a), y, INK2))
         gauche, droite = (b, a) if b < a else (a, b)
-        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="end">%s</text>' % (sx(gauche) - 8, y + 5, FS_MIN, INK2, nb(gauche)))
-        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s">%s</text>' % (sx(droite) + 8, y + 5, FS_MIN, INK2, nb(droite)))
-    e, h = pied_m(e, y + 22, t["source"], t["note"])
+        gras_g, gras_d = (' font-weight="600"', "") if b < a else ("", ' font-weight="600"')  # 2021 en gras
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="end"%s>%s</text>' % (sx(gauche) - 11, y + 5, FS_MIN, INK2, gras_g, nb(gauche)))
+        e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s"%s>%s</text>' % (sx(droite) + 11, y + 5, FS_MIN, INK2, gras_d, nb(droite)))
+    e, h = pied_m(e, y + 22, t["source"], t["note"], LICENCE_DONNEES_M)
     return finir_m(e, h)
 
 
@@ -858,7 +927,7 @@ def csv_texte(c):
         if isinstance(s, dict):
             for pop, v in s.items():
                 for a, x in sorted(v.items()):
-                    w.writerow(["culture_pratiques_culturelles", k + " / " + pop, a, x, "% (enquetes 1973-2008)"])
+                    w.writerow(["culture_pratiques_culturelles", k + " / " + pop, a, x, "% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"])
     for a, v in sorted(X["smartphone_12_17"].items()):
         w.writerow(["credoc_smartphone_12_17_ans", "equipes", a, v, "%"])
     for k, v in X["pratiques_2023_ne_lit_pas_pour_plaisir"].items():
@@ -871,6 +940,23 @@ def csv_texte(c):
             for t_, v in a["tranches"].items():
                 w.writerow(["pisa_numerique_loisir_" + lib, t_ + " / part", an, round(v["part"][0], 2), "% des repondants (calcul)"])
                 w.writerow(["pisa_numerique_loisir_" + lib, t_ + " / lecture", an, round(v["lecture"][0], 2), "points PISA (calcul)"])
+    cx = X["complement"]  # extrait complémentaire (reprise du 16-17/11/2026)
+    vp = cx["vocabulaire_primaire"]
+    w.writerow(["depp_reperes_cp_comprendre_des_mots_a_l_oral", "evolution du taux de maitrise", "2019-2025", vp["cp_comprendre_mots_oral_points_2019_2025"], "points (NI 26.18 ; evaluation exhaustive, sans test)"])
+    w.writerow(["depp_reperes_cm1_trouver_des_synonymes", "evolution du taux de maitrise", "2023-2025", vp["cm1_synonymes_points_2023_2025"], "points (NI 26.18 ; evaluation exhaustive, sans test)"])
+    for a, v in sorted(cx["cedre_college_indice_social"]["ecart_premier_quatrieme_quart_points"].items()):
+        w.writerow(["depp_cedre_fin_college", "ecart 4e quart - 1er quart d'indice social des colleges (texte de la DEPP)", a, v, "points ; baisses non significatives dans chaque quart (NI 22.29)"])
+    for k, v in cx["ocde_indice_plaisir_2000_2009"].items():
+        if isinstance(v, dict):
+            w.writerow(["ocde_indice_plaisir_de_lire_france", "evolution 2000-2009 / " + k, "2000-2009", v["dif"], "indice (erreur type %s ; PISA 2018 vol. II, tab. II.B1.8.5)" % v["se"]])
+    on = cx["ocde_numerique_loisir"]
+    for lib in ("avant_apres_ecole", "week_end"):
+        for t_, p, d_, e in zip(on["tranches"], on[lib]["p2022"], on[lib]["dif"], on[lib]["se"]):
+            w.writerow(["ocde_numerique_loisir_" + lib, t_ + " / part", "2022", p, "% des repondants (OCDE, tab. I.B1.4.29)"])
+            w.writerow(["ocde_numerique_loisir_" + lib, t_ + " / evolution", "2022-2025", d_, "points de %% (erreur type %s ; OCDE, tab. I.B1.4.29)" % e])
+    pc = cx["pirls_2001_2006_2011"]
+    w.writerow(["iea_pirls_france_cm1", "ecarts 2001-2006-2011", "2001-2011", "non significatifs", "test publie par la DEPP (NI 12.21)"])
+    w.writerow(["depp_pisa_2006_lecture", "comparaison 2000-2006", "2000-2006", "baisse importante", "qualification de la DEPP (NI 08.08 ; lecture domaine mineur)"])
     tx = X["textes_offerts"]
     w.writerow(["emmanuelle_manuels_recenses", "disciplines saisies", tx["releve_le"], len(tx["emmanuelle"]["disciplines_saisies"]),
                 "disciplines (" + ", ".join(tx["emmanuelle"]["disciplines_saisies"]) + ") ; francais : saisie en cours"])

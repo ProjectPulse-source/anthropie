@@ -1,0 +1,122 @@
+{
+ "_objet": "complement de l'extrait fige, lu par ancre dans des pieces de la DEPP (reprise du 16/11/2026)",
+ "_ancres": "comparees sans blancs (couche texte des PDF)",
+ "releve_le": "2026-11-16",
+ "_pieces": {
+  "ni12_21": {
+   "fichier": "ni12-21_pirls2011.pdf",
+   "sha256": "6b0694471217c8313c8c6929f3ed318d6291b5cec38bb28e4dfec98b5e138a48"
+  },
+  "ni08_08": {
+   "fichier": "ni08-08.pdf",
+   "sha256": "f174451cc5d4d3763a5f924ec7a9615a3e57370d80a850f1d75d0777ce68f0a2"
+  },
+  "ni25_15": {
+   "fichier": "reperes_cp_2024_brut.pdf",
+   "sha256": "c5913d260dcb6aad027ce1698b9b11e2fe60b10f9d409a7aa529e2ede1b57611"
+  },
+  "ni26_18": {
+   "fichier": "reperes_2025_francais_brut.pdf",
+   "sha256": "5a411852672774d199ec0b51429c7e799ce61c6a7ec1837ce2ae9eeddec32b73"
+  },
+  "xmra2f": {
+   "fichier": "xmra2f.xlsx",
+   "sha256": "6e31d69f2f699245a957fe06e019034b2ff4c0d52219b3ed8167c1f44ed699d9"
+  },
+  "ni22_29": {
+   "fichier": "ni22-29_cedre_college_2021.pdf",
+   "sha256": "7c96d2527a147d4e2f079c136354d2f0a458ce55b72cb2d40762d5c19c87eb89"
+  },
+  "pisa2018_vol2_b18": {
+   "fichier": "pisa2018_vol2_annexB1-8_tables.xlsx",
+   "sha256": "27910fee73ea35ae058fe5706fb9e53fec7ccb7665e98f594b0ed495ee457a90"
+  }
+ },
+ "pirls_2001_2006_2011": {
+  "scores": {
+   "2001": 525.0,
+   "2006": 522.0,
+   "2011": 520.0
+  },
+  "ecarts_non_significatifs": true,
+  "source": "DEPP, Note d'Information 12.21, p. 4",
+  "ancre": "En 2001, le score global de la France était de 525, en 2006 de 522, et il est de 520 en 2011 (tableau 3). Du point de vue statistique, ces différences, à cinq ou dix ans, ne sont pas significatives"
+ },
+ "pisa_2000_2006_depp": {
+  "baisse_importante": true,
+  "lecture_domaine_mineur": true,
+  "source": "DEPP, Note d'Information 08.08, p. 4",
+  "ancre": "Les variations entre les sessions 2000-2003 et 2003-2006 ne sont pas significatives alors que la comparaison entre 2000 et 2006 révèle une baisse importante de la performance globale"
+ },
+ "vocabulaire_primaire": {
+  "cp_comprendre_mots_oral_points_2019_2025": 1.7,
+  "cm1_synonymes_points_2023_2025": -1.7,
+  "evalue_le_vocabulaire_sans_contexte": true,
+  "evaluations_exhaustives_sans_test": true,
+  "sources": [
+   "DEPP, Note d'Information 25.15, p. 3 (nature de l'exercice de compréhension de mots)",
+   "DEPP, Note d'Information 26.18, p. 3 (évolutions 2019-2025 en CP, 2023-2025 en CM1)"
+  ]
+ },
+ "ocde_numerique_loisir": {
+  "avant_apres_ecole": {
+   "p2022": [
+    21.23,
+    6.53,
+    3.96
+   ],
+   "dif": [
+    -2.89,
+    -1.24,
+    -1.31
+   ],
+   "se": [
+    0.89,
+    0.52,
+    0.39
+   ]
+  },
+  "week_end": {
+   "p2022": [
+    26.75,
+    17.99,
+    16.25
+   ],
+   "dif": [
+    -0.58,
+    -2.84,
+    -3.14
+   ],
+   "se": [
+    0.94,
+    0.78,
+    0.76
+   ]
+  },
+  "tranches": [
+   "More than 3 hours and up to 5 hours",
+   "More than 5 hours and up to 7 hours",
+   "More than 7 hours"
+  ],
+  "source": "OCDE, PISA 2025 Results, vol. I, tableau I.B1.4.29, ligne France"
+ },
+ "cedre_college_indice_social": {
+  "baisses_non_significatives_dans_chaque_quart": true,
+  "ecart_premier_quatrieme_quart_points": {
+   "2015": 30.0,
+   "2021": 30.0
+  },
+  "source": "DEPP, Note d'Information 22.29, p. 4 (figure 5)"
+ },
+ "ocde_indice_plaisir_2000_2009": {
+  "garcons": {
+   "dif": 0.107,
+   "se": 0.039
+  },
+  "filles": {
+   "dif": 0.049,
+   "se": 0.038
+  },
+  "source": "OCDE, PISA 2018 Results, vol. II, tableau II.B1.8.5, ligne France"
+ }
+}

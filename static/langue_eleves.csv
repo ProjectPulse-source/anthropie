@@ -129,26 +129,22 @@ ocde_lit_seulement_si_oblige_france,2009,,33.89,% des eleves
 ocde_lit_seulement_si_oblige_france,2009_et,,1.0,% des eleves
 ocde_lit_seulement_si_oblige_france,2018,,43.03,% des eleves
 ocde_lit_seulement_si_oblige_france,2018_et,,0.73,% des eleves
-culture_pratiques_culturelles,au_moins_un_livre / ensemble,1973,70.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / ensemble,1981,74.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / ensemble,1988,75.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / ensemble,1997,73.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / ensemble,2008,70.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / 15_24,1973,88.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / 15_24,1981,91.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / 15_24,1988,83.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / 15_24,1997,84.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,au_moins_un_livre / 15_24,2008,78.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1973,28.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1981,26.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1988,24.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1997,20.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,2008,16.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1973,41.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1981,37.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1988,25.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1997,20.0,% (enquetes 1973-2008)
-culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,2008,16.0,% (enquetes 1973-2008)
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,1988,81,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,1997,80,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,2008,72,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,au_moins_un_livre / 15_24,2018,59,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,1988,73,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,1997,71,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,2008,67,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,au_moins_un_livre / ensemble,2018,62,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1988,22,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,1997,17,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,2008,11,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,vingt_livres_ou_plus / 15_24,2018,11,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1988,22,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,1997,18,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,2008,14,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
+culture_pratiques_culturelles,vingt_livres_ou_plus / ensemble,2018,15,"% (enquetes 1988-2018, hors bandes dessinees ; serie du DEPS, 2020)"
 credoc_smartphone_12_17_ans,equipes,2011,22.0,%
 credoc_smartphone_12_17_ans,equipes,2012,46.0,%
 credoc_smartphone_12_17_ans,equipes,2013,55.0,%
@@ -196,6 +192,26 @@ pisa_numerique_loisir_week_end,3_a_5h / part,2025,26.17,% des repondants (calcul
 pisa_numerique_loisir_week_end,3_a_5h / lecture,2025,500.36,points PISA (calcul)
 pisa_numerique_loisir_week_end,plus_de_5h / part,2025,28.26,% des repondants (calcul)
 pisa_numerique_loisir_week_end,plus_de_5h / lecture,2025,464.75,points PISA (calcul)
+depp_reperes_cp_comprendre_des_mots_a_l_oral,evolution du taux de maitrise,2019-2025,1.7,"points (NI 26.18 ; evaluation exhaustive, sans test)"
+depp_reperes_cm1_trouver_des_synonymes,evolution du taux de maitrise,2023-2025,-1.7,"points (NI 26.18 ; evaluation exhaustive, sans test)"
+depp_cedre_fin_college,ecart 4e quart - 1er quart d'indice social des colleges (texte de la DEPP),2015,30.0,points ; baisses non significatives dans chaque quart (NI 22.29)
+depp_cedre_fin_college,ecart 4e quart - 1er quart d'indice social des colleges (texte de la DEPP),2021,30.0,points ; baisses non significatives dans chaque quart (NI 22.29)
+ocde_indice_plaisir_de_lire_france,evolution 2000-2009 / garcons,2000-2009,0.107,"indice (erreur type 0.039 ; PISA 2018 vol. II, tab. II.B1.8.5)"
+ocde_indice_plaisir_de_lire_france,evolution 2000-2009 / filles,2000-2009,0.049,"indice (erreur type 0.038 ; PISA 2018 vol. II, tab. II.B1.8.5)"
+ocde_numerique_loisir_avant_apres_ecole,More than 3 hours and up to 5 hours / part,2022,21.23,"% des repondants (OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_avant_apres_ecole,More than 3 hours and up to 5 hours / evolution,2022-2025,-2.89,"points de % (erreur type 0.89 ; OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_avant_apres_ecole,More than 5 hours and up to 7 hours / part,2022,6.53,"% des repondants (OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_avant_apres_ecole,More than 5 hours and up to 7 hours / evolution,2022-2025,-1.24,"points de % (erreur type 0.52 ; OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_avant_apres_ecole,More than 7 hours / part,2022,3.96,"% des repondants (OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_avant_apres_ecole,More than 7 hours / evolution,2022-2025,-1.31,"points de % (erreur type 0.39 ; OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_week_end,More than 3 hours and up to 5 hours / part,2022,26.75,"% des repondants (OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_week_end,More than 3 hours and up to 5 hours / evolution,2022-2025,-0.58,"points de % (erreur type 0.94 ; OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_week_end,More than 5 hours and up to 7 hours / part,2022,17.99,"% des repondants (OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_week_end,More than 5 hours and up to 7 hours / evolution,2022-2025,-2.84,"points de % (erreur type 0.78 ; OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_week_end,More than 7 hours / part,2022,16.25,"% des repondants (OCDE, tab. I.B1.4.29)"
+ocde_numerique_loisir_week_end,More than 7 hours / evolution,2022-2025,-3.14,"points de % (erreur type 0.76 ; OCDE, tab. I.B1.4.29)"
+iea_pirls_france_cm1,ecarts 2001-2006-2011,2001-2011,non significatifs,test publie par la DEPP (NI 12.21)
+depp_pisa_2006_lecture,comparaison 2000-2006,2000-2006,baisse importante,qualification de la DEPP (NI 08.08 ; lecture domaine mineur)
 emmanuelle_manuels_recenses,disciplines saisies,2026-10-10,8,"disciplines (grec, latin, anglais, allemand, italien, espagnol, histoire, géographie) ; francais : saisie en cours"
 emmanuelle_manuels_recenses,notices de la base,2026-10-10,27595,notices
 bnf_rappel_cadre_par_titre,daniel et valérie / notices au catalogue (1970s),2026-10-10,16,notices
