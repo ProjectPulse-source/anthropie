@@ -104,9 +104,18 @@ Ce qui suit **décrit une dispersion passée**, jamais une prévision.
 5. **Les petites formations n'expliquent pas l'instabilité** : sans les formations de moins de 50 candidats, les
    proportions bougent de moins d'un point, sauf à 100 % (baisses de 20 points ou plus en 2024-2025 : 10,4 % → 5,9 %).
 6. **La chance par type de bac n'existe que sur la fiche.** La plateforme affiche un taux d'accès par bac (Illkirch,
-   bac général : 23 %) ; le fichier ouvert ne publie qu'une répartition des appelables par bac (vérifié, méthodologie
-   p. 3), qui ne permet pas de le retrouver. Les outils bâtis sur le fichier ouvert lisent donc une composition comme une
-   chance ; l'activité de l'Onisep fait le même glissement avec la part des admis d'une série.
+   bac général : 23 % ; bac technologique : 40 %, soit 45 sur 112) ; le fichier ouvert publie, par type de bac, les
+   candidats, les classés, les candidats ayant reçu une proposition et les admis, et une répartition par bac des élèves
+   de terminale en position de recevoir une proposition, mais pas leur nombre par bac, qui est la base du taux par bac
+   (corrigé le 17/11/2026 : « ne publie qu'une répartition » était faux ; relecture du lot « parcoursup-etudiants »,
+   `SOURCES\parcoursup-quelles-chances-d-etre-admis_R1b.md` P1, sondé par la session sur l'enregistrement 7970). Les
+   outils bâtis sur le fichier ouvert risquent donc de lire une composition comme une chance ; l'activité de l'Onisep
+   fait le même glissement avec la part des admis d'une série.
+7. **Le taux étudié n'est pas le pourcentage qu'affiche la plateforme** (ajouté le 17/11/2026 ; `_R1a.md` E1, captures
+   de la fiche 7970 et de la carte des formations du 17/11, regardées par la session) : la page compare le taux d'accès
+   global que le ministère publie en données ouvertes ; la fiche Parcoursup en donne les effectifs (étape 1) et affiche,
+   comme la carte des formations, un taux par type de bac calculé sur les seuls lycéens de terminale. Les résultats par
+   tranche portent sur le premier ; aucun ne porte sur le second.
 
 **Hypothèse de la version précédente, réfutée par le test décisif** (10/11) : « le taux est le moins fiable là où l'on
 cherche la sécurité ». En perte relative, c'est l'inverse ; en points, la tranche 90-99 % décroche moins que la tranche
@@ -449,3 +458,9 @@ publication, page écrite et non publiée).
   `hugo.yml` n° 43393816179 réussi (build, mise en ligne, contrôle de fumée, relecture). Attestation de la version
   servie : faite le 13/11/2026 à 9 h 33 (heure de Paris) ; HTML servi identique au build contrôlé, aux empreintes de
   cache des feuilles et scripts près ; fichiers statiques servis (figures, cartes de partage) identiques au commit.
+
+### Reprise du 17/11/2026 (lot « parcoursup-etudiants », session de nuit N24) — préparée, non publiée
+
+- Relecture des sources : fait (17/11, deux relecteurs neufs, `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\parcoursup-etudiants\SOURCES\parcoursup-quelles-chances-d-etre-admis_R1a.md` et `_R1b.md`) : aucun nombre faux, vingt-trois constats recalculés par un code indépendant ; P1 : le taux étudié présenté comme le pourcentage qu'affiche la plateforme (elle affiche un taux par type de bac) ; contenu du fichier public par type de bac (questions fréquentes) ; sort de chaque écart dans `SYNTHESE.md` du lot.
+- Interventions et corrections : fait (`specs\parcoursup.py`, 25 remplacements : chapô et description, définitions de la phase principale, des points de pourcentage, des BTS et BUT, de la corrélation) ; forme inchangée (page de référence de la règle 17).
+- Juge interne, premier écran, jugement externe : voir `LOT.md` du lot. Publication : au plus tôt le 20/12/2026, après la relecture du 17/12 contre les fiches Parcoursup 2027 (la nouvelle phrase sur ce qu'affichent la fiche et la carte est à y confronter).

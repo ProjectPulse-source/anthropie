@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1091" role="img" font-variant-numeric="tabular-nums" aria-labelledby="psup-fm-t psup-fm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
-<title id="psup-fm-t">Variation médiane du taux d'accès selon la filière</title><desc id="psup-fm-d">Variation médiane du taux d'accès par filière, en points de pourcentage, de 2023 à 2024 puis de 2024 à 2025. Classes préparatoires : −2 de 2023 à 2024 (963 formations), −11 de 2024 à 2025 (974 formations). BTS : +1 de 2023 à 2024 (4 986 formations), −3 de 2024 à 2025 (4 799 formations). BUT : −1 de 2023 à 2024 (565 formations), −2 de 2024 à 2025 (813 formations). Licences accès santé (L.AS) : −3 de 2023 à 2024 (442 formations), −2 de 2024 à 2025 (481 formations). Soins infirmiers (IFSI) : +1 de 2023 à 2024 (340 formations), −2 de 2024 à 2025 (342 formations). Autres formations : 0 de 2023 à 2024 (1 002 formations), −1 de 2024 à 2025 (1 369 formations). Parcours accès santé (PASS) : −2 de 2023 à 2024 (268 formations), −1 de 2024 à 2025 (272 formations). Travail social (EFTS) : 0 de 2023 à 2024 (226 formations), −1 de 2024 à 2025 (227 formations). Licences (hors accès santé) : 0 de 2023 à 2024 (2 510 formations), 0 de 2024 à 2025 (2 718 formations). Écoles d'ingénieurs : +1 de 2023 à 2024 (424 formations), 0 de 2024 à 2025 (462 formations). Écoles de commerce : −1 de 2023 à 2024 (176 formations), 0 de 2024 à 2025 (187 formations). Ne sont pas dessinées les formations que le ministère a changé de filière d'une session à l'autre : 163 de 2023 à 2024, 172 de 2024 à 2025.</desc>
-<rect width="300" height="1091" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1108" role="img" font-variant-numeric="tabular-nums" aria-labelledby="psup-fm-t psup-fm-d" font-family="Inter, &#x27;Helvetica Neue&#x27;, Arial, sans-serif">
+<title id="psup-fm-t">Variation médiane du taux d'accès selon la filière</title><desc id="psup-fm-d">Variation médiane du taux d'accès par filière, en points de pourcentage, de 2023 à 2024 puis de 2024 à 2025. Classes préparatoires : −2 de 2023 à 2024 (963 formations), −11 de 2024 à 2025 (974 formations). BTS : +1 de 2023 à 2024 (4 986 formations), −3 de 2024 à 2025 (4 799 formations). BUT : −1 de 2023 à 2024 (565 formations), −2 de 2024 à 2025 (813 formations). Licences accès santé (L.AS) : −3 de 2023 à 2024 (442 formations), −2 de 2024 à 2025 (481 formations). Soins infirmiers (IFSI) : +1 de 2023 à 2024 (340 formations), −2 de 2024 à 2025 (342 formations). Autres formations : 0 de 2023 à 2024 (1 002 formations), −1 de 2024 à 2025 (1 369 formations). Parcours accès santé (PASS) : −2 de 2023 à 2024 (268 formations), −1 de 2024 à 2025 (272 formations). Travail social (EFTS) : 0 de 2023 à 2024 (226 formations), −1 de 2024 à 2025 (227 formations). Licences (hors accès santé) : 0 de 2023 à 2024 (2 510 formations), 0 de 2024 à 2025 (2 718 formations). Écoles d'ingénieurs : +1 de 2023 à 2024 (424 formations), 0 de 2024 à 2025 (462 formations). Écoles de commerce : −1 de 2023 à 2024 (176 formations), 0 de 2024 à 2025 (187 formations). Ne sont pas dessinées les formations que le ministère a changées de filière d'une session à l'autre : 163 de 2023 à 2024, 172 de 2024 à 2025.</desc>
+<rect width="300" height="1108" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">Variation médiane du taux</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">d'accès selon la filière</text>
 <text x="0" y="64" font-size="13.5" fill="#55524f">D'une année à la suivante, en points</text>
@@ -147,12 +147,13 @@
 <text class="pied-note" x="0" y="907.0" font-size="13.5" fill="#55524f">chaque formation est restée stable.</text>
 <text class="pied-note" x="0" y="924.0" font-size="13.5" fill="#55524f">Les deux points d'une filière ne</text>
 <text class="pied-note" x="0" y="941.0" font-size="13.5" fill="#55524f">portent pas tout à fait sur les mêmes</text>
-<text class="pied-note" x="0" y="958.0" font-size="13.5" fill="#55524f">formations ; les 172 que le ministère</text>
-<text class="pied-note" x="0" y="975.0" font-size="13.5" fill="#55524f">a classées dans une autre filière ne</text>
-<text class="pied-note" x="0" y="992.0" font-size="13.5" fill="#55524f">sont pas dessinées. Ces données ne</text>
-<text class="pied-note" x="0" y="1009.0" font-size="13.5" fill="#55524f">disent ni la cause d'une baisse, ni si</text>
-<text class="pied-note" x="0" y="1026.0" font-size="13.5" fill="#55524f">elle se reproduira, ni les chances</text>
-<text class="pied-note" x="0" y="1043.0" font-size="13.5" fill="#55524f">d'un candidat.</text>
-<text class="pied-licence" x="0" y="1064.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="1081.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text class="pied-note" x="0" y="958.0" font-size="13.5" fill="#55524f">formations ; les formations classées</text>
+<text class="pied-note" x="0" y="975.0" font-size="13.5" fill="#55524f">par le ministère dans une autre</text>
+<text class="pied-note" x="0" y="992.0" font-size="13.5" fill="#55524f">filière (163 en 2024, 172 en 2025) ne</text>
+<text class="pied-note" x="0" y="1009.0" font-size="13.5" fill="#55524f">sont pas dessinées. Ces données ne</text>
+<text class="pied-note" x="0" y="1026.0" font-size="13.5" fill="#55524f">disent ni la cause d'une baisse, ni si</text>
+<text class="pied-note" x="0" y="1043.0" font-size="13.5" fill="#55524f">elle se reproduira, ni les chances</text>
+<text class="pied-note" x="0" y="1060.0" font-size="13.5" fill="#55524f">d'un candidat.</text>
+<text class="pied-licence" x="0" y="1081.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1098.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

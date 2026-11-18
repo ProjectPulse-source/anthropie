@@ -971,8 +971,9 @@ NOM_FILIERE = {"CPGE": "Classes préparatoires", "BTS": "BTS", "BUT": "BUT", "Li
 ECHELLE_FILIERES = (-15, 3)     # points ; une médiane hors de l'échelle arrête la génération
 SOURCE_FIG = ("Ministère chargé de l'enseignement supérieur, données ouvertes Parcoursup, sessions {sessions} ; formations "
               "présentes deux années de suite sous le même code et le même intitulé, avec un taux d'accès publié et des "
-              "candidats classés. Taux d'accès : part des candidats de la phase principale dont le rang de classement ne "
-              "dépasse pas celui du dernier appelé de leur groupe.")
+              "candidats classés. Taux d'accès : part des candidats de la phase principale scolarisés en France ou de "
+              "nationalité européenne dont le rang de classement ne dépasse pas celui du dernier appelé de leur "
+              "groupe.")
 FIG = {
     "tranches": dict(
         titre="Comment les taux d'accès évoluent-ils d'une année sur l'autre ?",
@@ -980,14 +981,14 @@ FIG = {
         source=SOURCE_FIG,
         note="Lecture de la ligne « {d_t6075_lib} » : parmi les {d_t6075_n} formations à ce taux d'accès en {d_de}, "
              "{d_t6075_dans_frac} avaient en {d_a} un taux compris entre {d_t6075_d1}~et~{d_t6075_d9} % ; "
-             "{d_t6075_bas_frac} était à {d_t6075_d1} % ou moins, une sur deux à {d_t6075_med} % ou moins (la médiane). "
+             "{d_t6075_bas_frac} était à {d_t6075_d1} % ou moins, une~sur~deux à {d_t6075_med} % ou moins (la médiane). "
              "Dans les deux tranches du haut, la barre touche 100 %, le maximum, et contient neuf formations sur dix. Ces "
              "barres décrivent ce qui est arrivé aux formations d'une tranche, prises ensemble : elles ne donnent ni le "
              "taux futur d'une formation, ni les chances d'un candidat.",
         source_m="Ministère chargé de l'enseignement supérieur, données ouvertes Parcoursup, sessions {s_premiere} à {s_derniere}",
         note_m="Lecture de la ligne « {d_t6075_lib} » : parmi les formations à ce taux en {d_de}, {d_t6075_dans_frac} "
                "avaient en {d_a} un taux compris entre {d_t6075_d1}~et~{d_t6075_d9} % ; {d_t6075_bas_frac} était à "
-               "{d_t6075_d1} % ou moins, une sur deux à {d_t6075_med} % ou moins (la médiane). Dans les deux tranches du "
+               "{d_t6075_d1} % ou moins, une~sur~deux à {d_t6075_med} % ou moins (la médiane). Dans les deux tranches du "
                "haut, la barre touche 100 %, le maximum, et contient neuf formations sur dix. Ces barres décrivent le "
                "passé, pas le taux futur d'une formation ni les chances d'un candidat.",
         montre="Un taux d'accès n'est pas une promesse pour l'année suivante : parmi les formations à {d_t6075_court} en "
@@ -1000,15 +1001,16 @@ FIG = {
         note="Lecture : une médiane de {d_f_cpge_med_pts} signifie que la moitié des classes préparatoires ont perdu "
              "{d_f_cpge_perte_pts} de taux d'accès ou plus ; un taux qui perd {d_f_cpge_perte_pts} passe, {d_f_cpge_exemple}. "
              "Une médiane nulle ne veut pas dire que chaque formation est restée stable. Les deux points d'une filière ne "
-             "portent pas tout à fait sur les mêmes formations ; les {d_recl_n} formations que le ministère a classées "
-             "dans une autre filière d'une session à l'autre ne sont pas dessinées. Ces données ne disent ni la cause "
+             "portent pas tout à fait sur les mêmes formations ; les formations que le ministère a classées dans une "
+             "autre filière d'une session à l'autre ({p_recl_n} de {p_de}~à~{p_a}, {d_recl_n} de {d_de}~à~{d_a}) ne "
+             "sont pas dessinées. Ces données ne disent ni la cause "
              "d'une baisse, ni si elle se reproduira, ni les chances d'un candidat.",
         source_m="Ministère chargé de l'enseignement supérieur, données ouvertes Parcoursup, sessions {s_premiere} à {s_derniere}",
         note_m="Lecture : {d_f_cpge_med_pts} signifie que la moitié des classes préparatoires ont perdu "
                "{d_f_cpge_perte_pts} de taux d'accès ou plus ({d_f_cpge_exemple}). Une médiane nulle ne veut pas dire que "
                "chaque formation est restée stable. Les deux points d'une filière ne portent pas tout à fait sur les "
-               "mêmes formations ; les {d_recl_n} que le ministère a classées dans une autre filière ne sont pas "
-               "dessinées. Ces données ne disent ni la cause d'une baisse, ni si elle se reproduira, ni les chances d'un "
+               "mêmes formations ; les formations classées par le ministère dans une autre filière ({p_recl_n} en {p_a}, "
+               "{d_recl_n} en {d_a}) ne sont pas dessinées. Ces données ne disent ni la cause d'une baisse, ni si elle se reproduira, ni les chances d'un "
                "candidat.",
         montre="De {d_de} à {d_a}, la moitié des classes préparatoires ont perdu {d_f_cpge_perte_pts} de taux d'accès ou "
                "plus ; la variation médiane est de {d_f_bts_med_pts} en BTS, de {d_f_but_med_pts} en BUT, et nulle en licence. "
@@ -1222,7 +1224,7 @@ def desc_filieres(c: dict, A: dict) -> str:
         out.append("%s : %s%s de %s à %s (%s formations)." % (NOM_FILIERE[f], avant, A["d_" + j + "med"], A["d_de"], A["d_a"], A["d_" + j + "n"]))
     # Exclusion déclarée dans l'image elle-même (contrôleur de géométrie, 11/11/2026) : le groupe reclassé n'est ni
     # dessiné ni nommé dans la figure ; il est au jeu, au CSV et dans la description.
-    out.append("Ne sont pas dessinées les formations que le ministère a changé de filière d'une session à l'autre : %s de %s à %s, "
+    out.append("Ne sont pas dessinées les formations que le ministère a changées de filière d'une session à l'autre : %s de %s à %s, "
                "%s de %s à %s." % (A["p_recl_n"], A["p_de"], A["p_a"], A["d_recl_n"], A["d_de"], A["d_a"]))
     return " ".join(out)
 

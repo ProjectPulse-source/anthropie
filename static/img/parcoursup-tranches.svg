@@ -103,12 +103,12 @@
 <line x1="0" y1="480.0" x2="720" y2="480.0" stroke="#dcd8d3"/>
 <text class="pied-source" x="0" y="495.0" font-size="11" fill="#55524f">Ministère chargé de l'enseignement supérieur, données ouvertes Parcoursup, sessions 2023, 2024 et 2025 ; formations</text>
 <text class="pied-source" x="0" y="509.0" font-size="11" fill="#55524f">présentes deux années de suite sous le même code et le même intitulé, avec un taux d'accès publié et des candidats</text>
-<text class="pied-source" x="0" y="523.0" font-size="11" fill="#55524f">classés. Taux d'accès : part des candidats de la phase principale dont le rang de classement ne dépasse pas celui du</text>
-<text class="pied-source" x="0" y="537.0" font-size="11" fill="#55524f">dernier appelé de leur groupe.</text>
+<text class="pied-source" x="0" y="523.0" font-size="11" fill="#55524f">classés. Taux d'accès : part des candidats de la phase principale scolarisés en France ou de nationalité européenne</text>
+<text class="pied-source" x="0" y="537.0" font-size="11" fill="#55524f">dont le rang de classement ne dépasse pas celui du dernier appelé de leur groupe.</text>
 <text class="pied-note" x="0" y="551.0" font-size="11" fill="#55524f">Lecture de la ligne « 60 à 74 % » : parmi les 1 771 formations à ce taux d'accès en 2024, huit sur dix avaient en 2025</text>
-<text class="pied-note" x="0" y="565.0" font-size="11" fill="#55524f">un taux compris entre 43 et 83 % ; une sur dix était à 43 % ou moins, une sur deux à 63 % ou moins (la médiane). Dans</text>
+<text class="pied-note" x="0" y="565.0" font-size="11" fill="#55524f">un taux compris entre 43 et 83 % ; une sur dix était à 43 % ou moins, une sur deux à 63 % ou moins (la médiane). Dans</text>
 <text class="pied-note" x="0" y="579.0" font-size="11" fill="#55524f">les deux tranches du haut, la barre touche 100 %, le maximum, et contient neuf formations sur dix. Ces barres</text>
 <text class="pied-note" x="0" y="593.0" font-size="11" fill="#55524f">décrivent ce qui est arrivé aux formations d'une tranche, prises ensemble : elles ne donnent ni le taux futur d'une</text>
 <text class="pied-note" x="0" y="607.0" font-size="11" fill="#55524f">formation, ni les chances d'un candidat.</text>
-<text class="pied-licence" x="0" y="621.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, licence CC BY 4.0 · stephane-lalut.com/parcoursup-quelles-chances-d-etre-admis/</text>
+<text class="pied-licence" x="0" y="621.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, licence CC BY 4.0 · stephane-lalut.com/parcoursup-quelles-chances-d-etre-admis/</text>
 </svg>
