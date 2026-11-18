@@ -67,7 +67,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 <p class="donnees-ligne"><span class="badge-donnees">Données mises à jour le {{< dyn-val "date_donnees" >}}</span> France, administrations publiques, séries Eurostat de {{< dyn-val "annee_depart" >}} à {{< dyn-val "annee_fin" >}}. Télécharger&nbsp;: <a href="/dette_dynamique.csv">CSV</a> · <a href="/dette_dynamique.json">JSON</a> · <a href="#sources">méthode</a></p>
 
-## D'où vient la hausse {#cascade}
+## Comment se décompose la hausse du ratio dette/PIB&nbsp;? {#cascade}
 
 <div class="figure-lecture">
 <figure class="figure-ciseau">
@@ -90,7 +90,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 Les {{< dyn-val "effet_interets" >}} points «&nbsp;effacés&nbsp;» pour l'essentiel par la croissance sont donc des contributions, cumulées sur trente ans, à l'évolution d'un ratio, pas une somme versée égale à {{< dyn-val "effet_interets" >}}&nbsp;% du PIB. Qui reçoit ces intérêts et qui supporte ce que la dette coûte est l'objet de [Qui paie vraiment la dette publique&nbsp;?](/qui-paie-la-dette-publique/)
 
-## Année par année {#annee-par-annee}
+## Année par année, quels termes contribuent à la variation du ratio&nbsp;? {#annee-par-annee}
 
 <figure class="figure-ciseau">
   <picture>
@@ -285,6 +285,8 @@ Eurostat, administrations publiques (S.13), comptes nationaux SEC 2010, en monna
 Section «&nbsp;Baisses d'impôts ou recettes qui ralentissent&nbsp;?&nbsp;»&nbsp;: mesures nouvelles, évolution spontanée et croissance du PIB en valeur transcrites des rapports de la Cour des comptes sur la situation et les perspectives des finances publiques, au dernier millésime de chaque année, et vérifiées contre les rapports archivés&nbsp;; taux de prélèvements obligatoires nets des crédits d'impôt de l'INSEE ([comptes nationaux, base 2020](https://www.insee.fr/fr/statistiques/2381412))&nbsp;; crédits d'impôt payables (PTC) et recettes totales d'Eurostat (`gov_10a_main`). Chaque année, l'identité de la Cour, Δτ = τ<sub>t−1</sub>&nbsp;×&nbsp;(s&nbsp;−&nbsp;g)&nbsp;/&nbsp;(1&nbsp;+&nbsp;g) + mesures nouvelles&nbsp;/&nbsp;PIB, avec s la croissance spontanée et g celle du PIB, est confrontée au taux publié par l'INSEE&nbsp;; le script s'arrête si l'écart dépasse 0,3&nbsp;point une année, ou si le calcul s'éloigne de plus de 0,15&nbsp;point de la décomposition que la Cour publie pour 2017-2022.
 
 La méthode de cette décomposition (l'identité, le témoin que forment les ratios publiés par Eurostat et l'erreur qu'il a rejetée) et son rapprochement avec trois lectures publiques de la même dette (l'audit citoyen de 2014, la Fondation iFRAP, la Cour des comptes) sont exposés dans le working paper [AWP-09 — *Ce que les comptes publics permettent d'établir sur le déplacement de la charge de la dette*](/awp/awp-09/) (DOI&nbsp;: 10.5281/zenodo.23143030, PDF en accès libre).
+
+{{< dette-methode >}}
 
 {{< reutiliser figures="figures_dynamique" jeu="dette_dynamique" sources="Eurostat, INSEE, Cour des comptes, Commission européenne (AMECO), FMI et OCDE" reserve="du FMI" donnees="La décomposition annuelle de la variation du ratio dette/PIB, France, avec ses quatre termes, le taux implicite et la croissance nominale ; dépenses, recettes et solde en % du PIB ; le même contenu existe en CSV, une ligne par année." >}}
 De fin {{< dyn-val "annee_depart" >}} à fin {{< dyn-val "annee_fin" >}}, le ratio dette/PIB français est passé de {{< dyn-val "dette_depart" >}}&nbsp;% à {{< dyn-val "dette_fin" >}}&nbsp;%. Sur ces {{< dyn-val "hausse" >}} points, les déficits primaires en apportent {{< dyn-val "deficits_primaires" >}}, les ajustements flux-stock {{< dyn-val "flux_stock_nb" >}} et l'effet net des intérêts et de la croissance nominale {{< dyn-val "effet_net_nb" >}}, fait de deux périodes opposées. C'est une décomposition comptable, non une attribution causale&nbsp;: elle ne dit pas pourquoi les déficits ont existé, et la réponse «&nbsp;dépenses ou recettes&nbsp;» change avec les deux années comparées.

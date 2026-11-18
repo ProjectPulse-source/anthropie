@@ -68,7 +68,7 @@ ressource:  # index /ressources/ (layouts/ressources/list.html)
 
 France is a telling case. Its debt ratio doubled in thirty years, and Eurostat's harmonised series allow that rise to be split, year by year, into the terms of a standard accounting identity. The accounting identity is general; the estimates below are for France.
 
-## Where the rise comes from {#cascade}
+## How does the rise in the debt-to-GDP ratio break down? {#cascade}
 
 <div class="figure-lecture">
 <figure class="figure-ciseau">
@@ -91,7 +91,7 @@ France is a telling case. Its debt ratio doubled in thirty years, and Eurostat's
 
 The {{< dyn-val "effet_interets" >}} points mostly "erased" by growth are therefore contributions, cumulated over thirty years, to the change in a ratio, not an amount paid equal to {{< dyn-val "effet_interets" >}}% of GDP. Who receives this interest and who bears what the debt costs is the subject of [Who really pays for public debt?](/en/who-really-pays-public-debt/)
 
-## Year by year {#annee-par-annee}
+## Year by year, which terms contribute to the change in the ratio? {#annee-par-annee}
 
 <figure class="figure-ciseau">
   <picture>
@@ -290,6 +290,8 @@ Eurostat, general government (S.13), national accounts ESA 2010, in national cur
 Section "Tax cuts, or revenue that slows down?": new measures, spontaneous growth and nominal GDP growth transcribed from the Court of Audit's reports on the state and outlook of public finances, using the latest vintage for each year, and checked against the archived reports; INSEE's rate of compulsory levies net of tax credits ([national accounts, base 2020](https://www.insee.fr/fr/statistiques/2381412), in French); Eurostat's payable tax credits (PTC) and total revenue (`gov_10a_main`). Each year, the Court's identity, Δτ = τ<sub>t−1</sub> × (s − g) / (1 + g) + new measures / GDP, with s the spontaneous growth and g GDP growth, is checked against the rate published by INSEE; the script stops if the gap exceeds 0.3 points in any year, or if the calculation strays more than 0.15 points from the breakdown the Court publishes for 2017-2022.
 
 The method behind this decomposition (the identity, the benchmark formed by the ratios Eurostat publishes, and the error it rejected) and its reconciliation with three public readings of the same debt (the 2014 citizens' audit, the iFRAP Foundation, the French Court of Audit) are set out in the working paper [AWP-09 — *What Public Accounts Can Establish about the Displacement of the Public Debt Burden*](/en/awp/awp-09/) (DOI: 10.5281/zenodo.23145963, open-access PDF).
+
+{{< dette-methode >}}
 
 {{< reutiliser figures="figures_dynamique" jeu="dette_dynamique" sources="Eurostat, INSEE, Court of Audit, European Commission (AMECO), IMF and OECD" reserve="the IMF" donnees="The annual decomposition of the change in the debt-to-GDP ratio, France, with its four terms, the implicit interest rate and nominal growth; spending, revenue and balance as a share of GDP; the same content is available as CSV, one row per year." >}}
 From end-{{< dyn-val "annee_depart" >}} to end-{{< dyn-val "annee_fin" >}}, the French debt-to-GDP ratio went from {{< dyn-val "dette_depart" >}}% to {{< dyn-val "dette_fin" >}}%. Of these {{< dyn-val "hausse" >}} points, primary deficits contributed {{< dyn-val "deficits_primaires" >}}, stock-flow adjustments {{< dyn-val "flux_stock_nb" >}} and the net effect of interest and nominal growth {{< dyn-val "effet_net_nb" >}}, made of two opposite periods. This is an accounting decomposition, not a causal attribution: it does not say why the deficits existed, and the answer to “spending or revenue” changes with the two years compared.

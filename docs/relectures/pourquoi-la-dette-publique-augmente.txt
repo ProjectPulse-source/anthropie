@@ -1,16 +1,16 @@
-# relu le 2026-11-06 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de 578e268 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /pourquoi-la-dette-publique-augmente/, build de b191128c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Pourquoi la dette publique augmente-t-elle ?
 Entre 1995 et 2025, la dette publique française est passée de 57,8 % à 115,7 % du PIB : elle a doublé en part de la richesse produite.
 Sur ces 57,9 points de PIB, les déficits publics hors intérêts, dits primaires, en apportent 50,5.
 Ce bilan dit par où la dette a augmenté, pas pourquoi les déficits ont existé.
-Page mise à jour le 6 novembre 2026 · révisions
+Page mise à jour le 17 novembre 2026
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Données mises à jour le 2 novembre 2026 France, administrations publiques, séries Eurostat de 1995 à 2025.
+Données mises à jour le 7 novembre 2026 France, administrations publiques, séries Eurostat de 1995 à 2025.
 Télécharger : CSV · JSON · méthode
-D’où vient la hausse
+Comment se décompose la hausse du ratio dette/PIB ?
 Décomposition cumulée de la variation du ratio dette/PIB, France, 1995-2025, en points de PIB (Eurostat).
 Bleu : le stock ; orange : ce qui le fait monter ; gris : ce qui le fait baisser.
 Le résultat en une phrase.
@@ -22,23 +22,23 @@ Prenez une dette égale au PIB et isolez les intérêts, sans autre dépense, re
 Les intérêts n’ont pas disparu : c’est la progression du dénominateur qui compense leur effet sur le ratio.
 Les 73,9 points « effacés » pour l’essentiel par la croissance sont donc des contributions, cumulées sur trente ans, à l’évolution d’un ratio, pas une somme versée égale à 73,9 % du PIB.
 Qui reçoit ces intérêts et qui supporte ce que la dette coûte est l’objet de Qui paie vraiment la dette publique ?
-Année par année
+Année par année, quels termes contribuent à la variation du ratio ?
 Contributions annuelles à la variation du ratio dette/PIB, France (Eurostat).
 La somme des trois barres égale la variation, marquée par le point noir.
 Ici, les couleurs désignent des termes, non le sens de leur effet comme dans la cascade.
-Trois périodes se dégagent, et le terme qui domine change de l’une à l’autre.
+Trois périodes se dégagent : l’effet taux–croissance domine la première, les déficits primaires les deux suivantes, et l’effet taux–croissance change de signe dans la dernière.
 La bascule de 2017, qui partage la série en deux pour l’effet taux–croissance, tombe à l’intérieur de la deuxième période.
 1996-2007 : l’effet taux–croissance.
 Le ratio gagne 7,7 points.
 Le taux implicite de la dette, c’est-à-dire le taux moyen auquel revient l’ensemble de la dette, dépasse alors, en moyenne, la croissance nominale : l’effet taux–croissance ajoute 7,5 points, quand le solde primaire, proche de l’équilibre et parfois excédentaire, contribue pour −2,1.
 2008-2019 : les déficits primaires.
 Le ratio gagne 32,7 points, dont +26,9 par les déficits primaires et +6,1 par l’effet taux–croissance.
-L’année 2009 compte à elle seule 14,2 points : le déficit primaire se creuse et le PIB recule, deux effets qui coïncident avec la crise financière.
+L’année 2009 compte à elle seule 14,2 points : le déficit primaire se creuse, le PIB recule et les ajustements flux-stock pèsent aussi, trois mouvements qui coïncident avec la crise financière.
 2020-2025 : la croissance nominale freine le ratio, les déficits le poussent.
 Le ratio gagne 17,5 points.
 En 2020, il bondit de 16,7 points, avec la crise sanitaire.
 De 2021 à 2023, la forte croissance du PIB nominal, hausse des prix comprise, fait baisser le ratio : l’effet taux–croissance retire 16,8 points au ratio, plus que les déficits primaires n’en ajoutent (11,5).
-La part des prix dans cette croissance est l’objet de L’inflation a-t-elle allégé la dette ?
+Cette décomposition ne sépare pas la part des prix de celle de la croissance réelle ; L’inflation a-t-elle allégé la dette ? mesure autre chose : ce que l’inflation non prévue de 2021-2023 a retiré à la valeur réelle des paiements promis sur la dette de l’État à taux fixe.
 Depuis 2024, le ratio remonte.
 Le taux implicite remonte depuis son point bas de 2020, surtout par un saut en 2022.
 Après 1,25 % en 2020, il augmente légèrement en 2021 (1,31 %), bondit en 2022 (1,80 %), puis progresse plus lentement.
@@ -76,31 +76,32 @@ Et un déficit qui se réduit n’a pas disparu : en 2025, le solde primaire res
 Ces comparaisons, sur des comptes encore révisables, ne disent pas quelles décisions ont produit ces mouvements, ni ce qu’il faudrait corriger.
 Ce que l’OFCE et la direction générale du Trésor en concluent, et sur quels objets, est confronté plus bas.
 Conjoncture ou structure ?
-Un déficit peut tenir à la conjoncture : quand l’activité reste sous son niveau potentiel, les recettes fléchissent et certaines dépenses augmentent, puis le déficit se résorbe avec la reprise.
+Un déficit peut tenir à la conjoncture : quand l’activité reste sous son niveau potentiel (celui qu’elle pourrait soutenir durablement sans tensions sur les prix), les recettes fléchissent et certaines dépenses augmentent, puis le déficit se résorbe avec la reprise.
 Il peut aussi être structurel, et demeurer quand l’économie revient à son potentiel.
 Trois institutions estiment ce partage, chacune avec sa méthode : la Commission européenne, le FMI et l’OCDE.
-Solde primaire corrigé du cycle selon trois estimations, et solde primaire observé (Eurostat).
+Solde primaire corrigé du cycle selon trois estimations (FMI depuis 1996, Commission et OCDE depuis 2010), et solde primaire observé (Eurostat).
 Les zones grises marquent les deux périodes comparées.
 Sur 2022-2025, le déficit ne se résorberait pas avec la seule conjoncture.
 Corrigé du cycle, le solde primaire est plus bas sur 2022-2025 que sur 2015-2019 dans les trois estimations : de 1,9 point selon la Commission (−1,1 % puis −3,0 % du PIB potentiel), de 2,6 points selon le FMI (−0,5 % puis −3,1 %) et de 1,6 point selon l’OCDE (−1,8 % puis −3,4 %).
-Sur 2022-2025, la part conjoncturelle du déficit n’est que de 0,23 point de PIB selon le FMI, qui publie dans la même édition le solde observé et le solde corrigé du cycle.
+Sur 2022-2025, l’écart, calculé ici, entre le solde observé et le solde corrigé du cycle que le FMI publie dans la même édition est de 0,23 point, l’un rapporté au PIB, l’autre au PIB potentiel.
 Ce sont trois estimations, et elles ne coïncident pas.
-La Commission et l’OCDE retirent aussi les mesures ponctuelles, le FMI non ; et chacune repose sur une estimation de la production potentielle, qui n’est pas une mesure et se révise.
+La Commission et l’OCDE retirent aussi les mesures ponctuelles (recettes ou dépenses exceptionnelles, sans lendemain), le FMI non ; et chacune repose sur une estimation de la production potentielle, qui n’est pas une mesure et se révise.
 La page donne les trois valeurs, sans en faire la moyenne.
-Avant 2008, le solde corrigé du cycle était proche de l’équilibre.
-Seul le FMI remonte avant 2010.
+En moyenne sur 1996-2007, le solde corrigé du cycle était proche de l’équilibre.
+Des trois soldes de la figure, seul celui du FMI y est tracé avant 2010 ; l’OCDE publie son solde sous-jacent depuis 1995, et la Commission son solde corrigé du cycle depuis 1978.
 Son solde primaire corrigé du cycle vaut en moyenne −0,2 % du PIB potentiel sur 1996-2007, −2,1 % sur 2010-2014, −0,5 % sur 2015-2019, puis −3,1 % sur 2022-2025.
-Le déficit corrigé apparu après 2008 a été en partie résorbé ; celui d’après 2020 ne l’est pas à ce jour.
+Cette moyenne réunit des excédents à la fin des années 1990 et des déficits dès 2002 : le déficit corrigé précède la crise de 2008 ; creusé après elle, il a été en partie résorbé, et celui d’après 2020 ne l’est pas à ce jour.
 Cette succession date les dégradations ; elle ne suffit pas à établir que les crises les ont produites.
 Par où : les recettes sur la période récente, les dépenses sur la longue.
 Les recettes et les dépenses hors intérêts corrigées du cycle que publie la Commission redonnent exactement son solde corrigé.
 De 2015-2019 à 2022-2025, ce solde baisse de 1,70 point : les recettes corrigées reculent de 1,62 point, les dépenses corrigées varient de +0,09 point.
-Le solde structurel cité plus haut baisse de 1,9 point parce qu’il retire aussi les mesures ponctuelles, surtout présentes en 2019.
+Le solde structurel cité plus haut baisse de 1,9 point, un écart qui peut tenir à ce qu’il retire aussi les mesures ponctuelles, surtout présentes en 2019.
 Depuis 1996-2007 en revanche, les dépenses corrigées ont augmenté de 3,9 points de PIB potentiel et les recettes de 0,9 : sur la longue période, la hausse des dépenses domine.
 Comme pour les fenêtres de l’OFCE et du Trésor plus haut, la réponse dépend des années comparées.
 Ce que ce partage ne dit pas.
 Une recette corrigée du cycle qui baisse mêle les baisses d’impôts décidées et le rendement spontané de l’impôt, qui peut croître moins vite que l’économie.
 Ces séries ne séparent pas les deux : elles disent où le déficit s’est creusé, et que la conjoncture ne suffit pas à l’expliquer, non quelles décisions l’ont creusé.
+Les comptes de la Cour des comptes les séparent ; la section suivante les rapproche des séries d’Eurostat et de l’INSEE, et montre qu’une part de ce recul des recettes a son pendant en dépense.
 Les valeurs année par année, les définitions et les éditions
 Année
 Commission, structurel
@@ -175,17 +176,64 @@ C’est pour l’essentiel une différence de définition.
 Éditions.
 Commission européenne, AMECO, printemps 2026 ; FMI, Moniteur des finances publiques d’octobre 2026 ; OCDE, Perspectives économiques n° 119.
 Les trois ont été publiées à des dates différentes et seront révisées.
+Baisses d’impôts ou recettes qui ralentissent ?
+Une recette peut reculer en part de PIB parce que la loi l’a réduite, ou parce qu’à législation inchangée elle croît moins vite que l’économie.
+La Cour des comptes sépare chaque année ces deux mouvements pour les prélèvements obligatoires (impôts et cotisations sociales) : leur évolution spontanée, à législation constante, et les mesures nouvelles, hausses ou baisses décidées, chiffrées par l’administration.
+Cumulées depuis 2015 et ramenées aux deux périodes de la section précédente, ses séries permettent d’éprouver une lecture du déficit récent : des baisses d’impôts pérennes, dont le coût serait resté masqué jusqu’en 2023 par des recettes dynamiques.
+Plus d’un tiers du recul des recettes observées tient à la façon de compter les crédits d’impôt restituables, et il a son pendant en dépense.
+Ces crédits peuvent être remboursés au-delà de l’impôt dû.
+Selon les règles européennes, Eurostat, comme la Commission, compte donc les impôts avant ces crédits et range les crédits parmi les dépenses ; l’INSEE et la Cour calculent les prélèvements obligatoires nets de ces crédits.
+Or le plus important d’entre eux, le crédit d’impôt pour la compétitivité et l’emploi (CICE), a été remplacé en 2019 par une baisse pérenne des cotisations patronales : la recette brute a baissé, la dépense de crédit d’impôt aussi.
+Les crédits d’impôt qu’Eurostat ajoute aux recettes passent de 1,4 % du PIB sur 2015-2019 à 0,8 % sur 2022-2025.
+Nets de ces crédits, les prélèvements obligatoires reculent de 1,0 point de PIB, et non de 1,6 comme les recettes totales, corrigées du cycle ou non ; le reste, écart de rapprochement entre ces séries, varie de +0,02 point.
+Retirée aussi des dépenses hors intérêts observées, la même série porte leur hausse à environ 0,9 point de PIB au lieu de 0,3.
+Ce chiffre reste une estimation : dans ses comptes actuels, en base 2020, l’INSEE enregistre la dépense de crédit d’impôt l’année où naît le droit, et la recette l’année où le crédit s’impute.
+Le solde, lui, ne change pas : c’est le partage entre recettes et dépenses qui change.
+Les mesures, à elles seules, retirent davantage que ce recul net.
+Entre 2015-2019 et 2022-2025
+Points de PIB
+Prélèvements obligatoires nets des crédits d’impôt (INSEE), variation observée
+−1,00
+Mesures nouvelles cumulées, hors CICE
+−1,91
+Remplacement du CICE (année double de 2019, puis contrecoups)
++0,18
+Évolution spontanée plus rapide que le PIB (effet d’élasticité cumulé)
++0,87
+Écart de bouclage
+−0,14
+Dans cette reconstitution, les mesures cumulées retirent 1,9 point, près du double du recul observé : des recettes spontanément plus dynamiques que le PIB en compensent encore 0,9.
+Pour 2017-2022, la Cour publie en base 2020, en points de PIB, des mesures de −1,9 et une évolution spontanée de +1,6 ; en rapportant, comme elle le fait pour 2018-2023, le cumul des mesures en euros au PIB de la dernière année, le même calcul donne ici −2,0 et +1,7.
+Rapportées chacune au PIB de son année, comme dans le tableau, ces mesures pèsent −2,1.
+D’une année à l’autre, l’écart de bouclage avec le taux publié par l’INSEE ne dépasse pas 0,21 point.
+Le masquage, puis la normalisation.
+De 2017 à 2022, l’élasticité compense presque exactement les baisses décidées, dont la Cour détaille les montants ; parmi les plus fortes : suppression de la taxe d’habitation (15,7 Md€), baisse des impôts de production (11,3 Md€) et du taux de l’impôt sur les sociétés (11,1 Md€), réforme du barème de l’impôt sur le revenu (5,4 Md€).
+Le taux de prélèvements obligatoires de 2022, 45,0 % du PIB, est ainsi proche de celui de 2017, 45,3 %.
+Puis l’élasticité se retourne et retire 2,1 points en 2023 et 2024 : les baisses décidées ne sont alors plus compensées dans le taux de prélèvements.
+La Cour l’écrivait dès juillet 2024 : ce dynamisme spontané « masquait encore, fin 2022, l’effet des baisses de prélèvements obligatoires intervenues depuis 2018 ».
+De 2024 à 2025, les mesures nouvelles changent de sens et rendent 0,9 point.
+Celles de 2024 comprennent une baisse de 3,9 Md€ de la contribution des banques au fonds de résolution unique européen, sans effet sur le solde public ; hors ces prélèvements affectés à l’Europe, elles atteignent 7,1 Md€.
+Le cumul des mesures depuis 2015 passe de −2,5 en 2023 à −1,6 en 2025.
+Près de 8,5 Md€ des hausses de 2025, soit 0,3 point de PIB, viennent de dispositifs annoncés comme temporaires, dont deux ont été prorogés en 2026.
+Ce que ce test établit, et ce qu’il laisse ouvert.
+Le mécanisme, la Cour le décrit elle-même : des baisses de prélèvements, pour l’essentiel pérennes, compensées jusqu’en 2022 par des recettes spontanément dynamiques, dont l’effet a paru en 2023 et 2024.
+Le test en mesure la portée entre les deux périodes.
+Sur le recul de 1,6 point des recettes observées, 0,6 tient au recul des crédits d’impôt restituables, la fin du CICE pour l’essentiel, qui a son pendant en dépense.
+Sur le recul net de 1,0 point, mesures, CICE et élasticité laissent un écart de bouclage de −0,14.
+C’est une décomposition comptable, non une attribution causale : l’administration chiffre les mesures pour l’essentiel à comportements inchangés, sans leur effet sur l’activité ni sur les assiettes, et ces effets se mêlent à l’évolution dite spontanée.
+Une partie des mesures est temporaire, une autre sans effet sur le solde public.
+Enfin, le test décrit un changement entre deux périodes ; il ne dit pas pourquoi le déficit était déjà élevé auparavant.
 Comment le calcul fonctionne
 Chaque année, le ratio dette/PIB bouge sous l’effet de trois termes.
 L’effet taux–croissance : les intérêts de l’année accroissent la dette, quand la croissance du PIB nominal — croissance réelle et hausse des prix — fait baisser le ratio même sans remboursement ; leur solde est positif quand le taux implicite dépasse la croissance nominale, négatif dans le cas inverse.
-Le déficit primaire : l’écart entre dépenses et recettes publiques hors intérêts, qui en mesure l’ampleur, pas la cause.
+Le déficit primaire : l’écart entre les dépenses publiques hors intérêts et les recettes publiques, qui en mesure l’ampleur, pas la cause.
 Les ajustements flux-stock : la dette qui bouge sans passer par le déficit (trésorerie mise en réserve, prêts et participations, écarts de valorisation), obtenue ici comme résidu.
 La cascade présente l’effet taux–croissance en ses deux composantes, intérêts et croissance : d’où ses quatre marches pour trois termes.
 L’identité exacte, terme à terme
 Ce qui fait bouger le ratio dette/PIB d’une année à l’autre
 l’effet taux–croissanceintérêts moins croissance du PIB nominal
 +
-le déficit primairedépenses moins recettes, hors intérêts
+le déficit primairedépenses hors intérêts moins recettes
 +
 les ajustements flux-stockce qui ne passe pas par le déficit
 =
@@ -211,20 +259,20 @@ Mesuré ici.
 La décomposition annuelle du ratio français de 1995 à 2025, sur les séries d’Eurostat, contrôlée contre les ratios publiés.
 Aucun des textes lus ne décompose cette fenêtre avec cette source : la mesure se valide par reproduction, non par citation.
 Cohérent avec.
-L’audit citoyen de 2014 attribuait une large part de la hausse de la dette de 1980 à 2012 à l’effet des taux d’intérêt.
-Les deux analyses ne portent ni sur les mêmes bornes, ni nécessairement sur le même contrefactuel ; mais sur leur période commune, de fin 1995 à fin 2012, l’effet taux–croissance est ici aussi le premier terme de la hausse : 14,7 points sur 33,9, devant les déficits primaires (13,1) et les ajustements flux-stock (6,2).
+L’audit citoyen de 2014 imputait « un gros tiers » de la hausse de la dette de 1980 à 2012 à l’effet des taux d’intérêt, qu’il nomme effet « boule de neige » et que cette page appelle effet taux–croissance, et « près des deux tiers » au cumul des déficits primaires.
+Les deux analyses ne portent ni sur les mêmes bornes, ni nécessairement sur le même contrefactuel (la situation de référence à laquelle on compare) ; sur leur période commune, de fin 1995 à fin 2012, l’effet taux–croissance pèse ici 14,7 points sur 33,9, devant les déficits primaires (13,1) et les ajustements flux-stock (6,2), que l’audit ne présente pas à part : réunis, ces deux derniers termes passent devant.
 La confrontation de leurs méthodes est exposée dans le working paper AWP-09.
 Sur 1970-2023, avec les comptes de l’Insee et une base historique, Auclert, Philippon et Ragot trouvent que les déficits primaires et les ajustements flux-stock représentent 88 points d’une hausse de près de 90 (de 21 % à 110 % du PIB), et un effet « boule de neige » proche de zéro en moyenne : même identité, autre période, autre source, et un déficit primaire qui inclut les ajustements que la page isole.
 Clavères, à la direction générale du Trésor, retrouve la même chronologie des signes : le taux apparent de la dette passe au-dessus de la croissance nominale dans le courant des années 1980, et la croissance repasse au-dessus à partir de 2016.
-Ce taux apparent est proche du taux implicite de cette page sans lui être identique : les deux rapportent les intérêts à un encours de dette, pas nécessairement au même, le coût apparent publié par Eurostat retenant l’encours moyen de l’année, cette page celui de la fin de l’année précédente.
+Ce taux apparent a la même définition que le taux implicite de cette page (les intérêts rapportés à la dette de fin d’année précédente), mais il est calculé sur d’autres séries, des bases historiques et internationales dont celle du FMI.
 L’OFCE (Heyer, Plane, Ragot, Sampognaro et Timbeau) rattache aux déficits une hausse de la dette de 53 points en France de 2000 à 2024, contre 44 en Espagne, 27 en Italie et 5 en Allemagne, sans décomposer ces hausses.
-La direction générale du Trésor décrit une dette qui augmente presque continûment depuis 2001, les réductions du déficit ne permettant, dans les périodes favorables, que de stabiliser le ratio, et un déficit resté supérieur au solde stabilisant jusqu’en 2019.
+La direction générale du Trésor décrit une dette qui augmente presque continûment depuis 2001, les réductions du déficit ne permettant, dans les périodes favorables, que de stabiliser le ratio, et un déficit resté supérieur au solde stabilisant (le déficit qui maintiendrait le ratio constant) jusqu’en 2019.
 Elle qualifie la période 2001-2007 de « relative stabilité » ; la série de la page y enregistre néanmoins une hausse de 59,3 % à 65,5 % du PIB, et l’OFCE estime que près de la moitié de l’écart de déficit avec la zone euro s’était formée avant la crise de 2007-2008.
 Mis en danger par.
 Toute lecture de la quasi-annulation des intérêts et de la croissance comme une neutralité.
 La coïncidence dépend du point de départ, à une dizaine de points près (Auclert, Philippon et Ragot), et l’écart entre taux et croissance a changé de signe en cours de période (Clavères).
 Les données de la page le confirment : l’effet taux-croissance a pesé +16,9 points avant 2017, −15,6 depuis.
-La Note du CAE, elle, interprète ce constat comptable comme résultant directement des choix budgétaires (« notre dette est la conséquence directe de nos choix budgétaires »), tout en jugant difficile d’estimer la part des crises, qu’une estimation de l’OFCE, citée par la Note, situe autour de la moitié de la hausse depuis 2007.
+La Note du CAE, elle, interprète ce constat comptable comme résultant directement des choix budgétaires (« notre dette est la conséquence directe de nos choix budgétaires »), tout en jugeant difficile d’estimer la part des crises, qu’une estimation de l’OFCE, citée par la Note, situe autour de la moitié de la hausse depuis 2007.
 Non établi.
 Lequel, des dépenses ou des recettes, a creusé les déficits récents.
 L’OFCE, qui propose une trajectoire d’ajustement plus progressive, fait débuter la période récente à l’élection présidentielle de 2017 et attribue l’essentiel de la dégradation du solde structurel à une baisse non financée des prélèvements obligatoires, qui ont diminué de 2,5 points de PIB de 2017 à 2024 ; sur cette période, selon lui, la dépense totale reste stable en part de PIB et la dépense primaire recule légèrement en part de PIB potentiel (sur les séries d’Eurostat, en part du PIB effectif, la dépense totale varie de −0,7 point).
@@ -232,14 +280,18 @@ La direction générale du Trésor, pour qui la consolidation « pourrait passer
 Sur la fenêtre commune, l’OFCE et la direction générale du Trésor convergent sur un fait : la dépense publique a moins progressé en France que dans la zone euro (1,8 point contre 2,6 pour l’un, 1,6 contre 2,4 pour l’autre) ; les séries d’Eurostat en retrouvent le sens et l’ordre de grandeur (dépenses +1,7 point, recettes totales −1,8).
 Ils n’analysent toutefois pas ensuite le même objet : l’OFCE explique l’écart entre la France et la zone euro, qu’il rattache surtout aux recettes, la direction générale du Trésor décompose la dégradation du solde français sur 2019-2025 ; et les recettes totales d’Eurostat ne sont pas les prélèvements obligatoires de l’OFCE.
 Sur les séries d’Eurostat, le diagnostic dépend des deux bornes de la fenêtre (section « Trop de dépenses ou pas assez de recettes ? »).
-Les causes, enfin : la Note du CAE attribue la dégradation récente à la crise sanitaire, aux boucliers tarifaires sur l’énergie et à des baisses d’impôts non financées, la direction générale du Trésor aux crises et aux mesures de soutien, mais aucun des six textes ne fournit une décomposition causale des déficits primaires observés de 1995 à 2025.
+La Cour des comptes sépare, pour les prélèvements obligatoires, les mesures décidées de l’évolution spontanée ; ses rapports de 2017 à 2026 nourrissent la section « Baisses d’impôts ou recettes qui ralentissent ? », qui retrouve sa décomposition de 2017-2022 et mesure ce que les crédits d’impôt changent au partage entre recettes et dépenses.
+Les causes, enfin : la Note du CAE attribue la dégradation récente à la crise sanitaire, aux boucliers tarifaires sur l’énergie et à des baisses d’impôts non financées, la direction générale du Trésor aux crises successives et aux mesures de soutien, en citant aussi la charge de la dette, l’effort de défense et le vieillissement de la population ; mais aucun des textes lus ne fournit une décomposition causale des déficits primaires observés de 1995 à 2025.
 Références lues
 Auclert, A., Philippon, T. et Ragot, X., « Quelle trajectoire pour les finances publiques françaises ? », Les notes du Conseil d’analyse économique, n° 82, juillet 2024.
 Clavères, G., « Taux d’intérêt, croissance et soutenabilité de la dette publique », Trésor-Éco, n° 334, direction générale du Trésor, octobre 2023.
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. et Timbeau, X., « Quelles trajectoires pour les finances publiques de la France ? », Blog de l’OFCE, 2025.
 Direction générale du Trésor, « Finances publiques : une situation dégradée, un redressement nécessaire », Trésor-Éco, n° 403, septembre 2026.
+Cour des comptes, La situation et les perspectives des finances publiques, éditions de juin ou juillet 2017 à 2026 (décomposition de l’évolution des prélèvements obligatoires ; juillet 2023, p.
+31 ; juin 2026, p.
+27-30).
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. et Timbeau, X., « Quelles trajectoires pour les finances publiques de la France ? », document de travail de l’OFCE n° 13, juillet 2025.
-Revue de littérature vérifiée le 3 octobre 2026 : chaque référence citée a été lue en entier à cette date, dans la version indiquée.
+Revue de littérature vérifiée le 6 novembre 2026 : chaque référence a été lue dans la version indiquée, aux sections qui fondent ce qui en est dit.
 Synthèse
 Ce qu’il faut retenir
 Une fois les intérêts et la croissance presque compensés, ce qui reste dans la décomposition Eurostat utilisée ici, ce sont les déficits primaires, 87 % de la hausse : hors intérêts, les comptes publics n’ont été excédentaires que 4 années sur 30.
@@ -261,7 +313,7 @@ Ces comptes ne le tranchent pas : un déficit primaire est un écart, qui peut v
 Sur les séries d’Eurostat, le diagnostic change avec les années comparées : de 2017 à 2024, les recettes publiques varient de −3,1 points de PIB et les dépenses hors intérêts de −0,9 ; de 2019 à 2025, les dépenses hors intérêts de +1,3 et les recettes de −0,8 ; de 2019 à 2024, les recettes de −1,8 et les dépenses hors intérêts de +1,2.
 L’année d’arrivée compte autant que l’année de départ.
 L’inflation fait-elle baisser la dette ?
-Elle peut faire baisser le ratio, en gonflant le PIB nominal plus vite que la charge d’intérêts.
+Elle peut faire baisser le ratio quand elle porte la croissance du PIB nominal au-dessus du taux d’intérêt moyen payé sur la dette (le taux implicite).
 De 2021 à 2023, la croissance nominale — hausse des prix comprise — a produit un effet taux-croissance de −16,8 points, alors que les déficits primaires en ajoutaient 11,5 ; cette décomposition ne sépare pas la part des prix de celle de la croissance réelle.
 L’inflation ne le fait pas sans coût : elle réduit la valeur réelle des créances nominales, et elle renchérit les titres indexés sur l’inflation.
 Un déficit primaire, est-ce trop de dépenses ?
@@ -288,10 +340,53 @@ Le script compare ensuite, année par année, le ratio de dette et le solde prim
 Les chiffres calculés sur les séries d’Eurostat viennent tous du même script, relancé à chaque publication des sources, qui vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies ; leur formulation fait l’objet d’une relecture éditoriale.
 Les chiffres attribués à d’autres études (CAE, OFCE, direction générale du Trésor) sont repris tels qu’elles les publient.
 Charge d’indexation des titres de l’État en 2022 : Sénat, rapport sur le projet de loi de règlement du budget 2022.
+Section « Baisses d’impôts ou recettes qui ralentissent ? » : mesures nouvelles, évolution spontanée et croissance du PIB en valeur transcrites des rapports de la Cour des comptes sur la situation et les perspectives des finances publiques, au dernier millésime de chaque année, et vérifiées contre les rapports archivés ; taux de prélèvements obligatoires nets des crédits d’impôt de l’INSEE (comptes nationaux, base 2020) ; crédits d’impôt payables (PTC) et recettes totales d’Eurostat (gov_10a_main).
+Chaque année, l’identité de la Cour, Δτ = τt−1 × (s − g) / (1 + g) + mesures nouvelles / PIB, avec s la croissance spontanée et g celle du PIB, est confrontée au taux publié par l’INSEE ; le script s’arrête si l’écart dépasse 0,3 point une année, ou si le calcul s’éloigne de plus de 0,15 point de la décomposition que la Cour publie pour 2017-2022.
 La méthode de cette décomposition (l’identité, le témoin que forment les ratios publiés par Eurostat et l’erreur qu’il a rejetée) et son rapprochement avec trois lectures publiques de la même dette (l’audit citoyen de 2014, la Fondation iFRAP, la Cour des comptes) sont exposés dans le working paper AWP-09 — Ce que les comptes publics permettent d’établir sur le déplacement de la charge de la dette (DOI : 10.5281/zenodo.23143030, PDF en accès libre).
+Méthode commune au dossier : indicateurs et vérifications
+Le même mot ne désigne pas toujours la même grandeur d’une page du dossier à l’autre.
+Le tableau donne les principaux repères ; la section « D’où viennent ces chiffres » de chaque page précise ses séries et ses périmètres.
+Indicateur
+Ce qu’il mesure
+Où il sert
+Dette de Maastricht
+dette brute consolidée de l’ensemble des administrations publiques (État et organismes centraux, collectivités locales, sécurité sociale), en valeur nominale
+les décompositions du ratio (pourquoi elle augmente, peut-elle baisser) ; la hausse de la dette (formules du débat)
+Dette négociable de l’État
+titres émis par l’État seul (OAT et BTF), gérés par l’Agence France Trésor
+l’érosion par l’inflation, les détenteurs de cette dette et les achats de la Banque de France (inflation) ; la part détenue par des non-résidents, que les formules du débat distinguent de celle de l’ensemble des administrations publiques
+Ratio dette/PIB
+dette de Maastricht rapportée au PIB nominal de l’année
+toutes les pages ; la page sur l’inflation explique pourquoi son résultat n’est pas une variation de ce ratio
+Solde primaire
+solde des administrations publiques hors intérêts, en comptabilité nationale (intérêts dus, D.41)
+les décompositions du ratio
+Solde primaire stabilisant
+solde primaire qui aurait laissé le ratio inchangé dans l’année, hors ajustements flux-stock
+peut-elle baisser
+Déficit qui stabilise le ratio
+déficit total, intérêts compris, qui laisse le ratio inchangé pour un ratio de départ et une croissance nominale donnés, hors ajustements flux-stock
+l’examen de la formule « un déficit de 3 % stabilise la dette » (formules du débat) : 3 % est un seuil de déficit, non de dette
+Taux implicite
+intérêts de l’année des administrations publiques (comptabilité nationale) rapportés à leur dette de Maastricht de la fin de l’année précédente
+pourquoi elle augmente, peut-elle baisser
+Intérêts et charge de la dette
+selon la page : intérêts de l’ensemble des administrations publiques, en comptabilité nationale ; charge de la dette de l’État, dans son budget ; sur la page de l’inflation, charge d’indexation des titres indexés et exposition de la Banque de France aux taux.
+Ces mesures ne s’additionnent pas.
+les administrations publiques dans les décompositions du ratio ; plusieurs périmètres comparés dans les formules du débat ; titres indexés et Banque de France (inflation)
+Ce qui est vérifié, et comment.
+Pour lire la méthode de ces pages, trois opérations sont à distinguer.
+Le contrôle numérique.
+Selon la page, les nombres sont calculés par le script qui écrit la page, sur des séries publiées, ou repris d’un calcul archivé ; ce script vérifie les principales affirmations chiffrées et s’arrête si leurs conditions ne sont plus remplies.
+Les décompositions du ratio sont en outre confrontées, année par année, au ratio et au solde primaire que publie Eurostat, avec la tolérance et les exclusions que dit chaque page.
+La confrontation documentaire.
+Les valeurs tirées d’un document (rapport de la Cour des comptes, loi de finances, publication de la Banque de France ou de l’Agence France Trésor, étude) sont transcrites avec la source que cite la page ; celles d’une étude sont reprises telles qu’elle les publie, lui restent attribuées et sont distinguées des recalculs du dossier.
+Le jugement éditorial.
+Le choix des périodes, des seuils de présentation, des comparaisons et des mots revient à l’auteur.
+Le calcul contrôle les conséquences de ces choix, non leur pertinence : ils sont relus, les contre-expertises externes sont signalées là où elles sont documentées, et ils sont dits comme tels quand ils comptent (un seuil de présentation n’est pas un résultat).
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
-Chaque figure porte dans l’image sa source, sa date et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
+Chaque figure porte dans l’image sa source, sa période et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Pourquoi la dette a doublé : de 57,8 % à 115,7 % du PIB, 1995-2025
 Sur la période, les intérêts et la croissance nominale se sont presque annulés ; la hausse de la dette tient pour l’essentiel aux déficits primaires, hors intérêts.
 Précaution d’interprétation.
@@ -316,8 +411,7 @@ FMI, Moniteur des finances publiques d’octobre 2026 ; Commission européenne, 
 Télécharger en PNG
 SVG
 Citer cette page
-Lalut, Stéphane (2026). « Pourquoi la dette publique augmente-t-elle ? ».
-Données Eurostat, relevé du 2 novembre 2026. https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/
+Lalut, Stéphane (2026). « Pourquoi la dette publique augmente-t-elle ? » Données Eurostat, INSEE, Cour des comptes, Commission européenne (AMECO), FMI et OCDE, relevé du 7 novembre 2026. https://stephane-lalut.com/pourquoi-la-dette-publique-augmente/
 Copier la citation
 En trois phrases
 De fin 1995 à fin 2025, le ratio dette/PIB français est passé de 57,8 % à 115,7 %.
@@ -329,14 +423,10 @@ La décomposition annuelle de la variation du ratio dette/PIB, France, avec ses 
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
-Les séries brutes appartiennent à leurs producteurs (Eurostat), sous leurs propres conditions.
+Les séries brutes appartiennent à leurs producteurs (Eurostat, INSEE, Cour des comptes, Commission européenne [AMECO], FMI et OCDE), sous leurs propres conditions.
+Les valeurs reprises du FMI, dans les fichiers comme dans les graphiques, ne sont pas couvertes par la licence CC BY : ce producteur restreint leur réutilisation commerciale.
 Vous enseignez les SES ?
 Activités, figures et données prêtes pour la classe →
-Révisions
-5 novembre 2026 — Correction : la page attribuait à la Commission une « part conjoncturelle et ponctuelle » du déficit qu’elle calculait elle-même, en rapprochant le solde observé d’Eurostat et le solde structurel de la Commission (deux éditions, deux dénominateurs).
-Ce chiffre est retiré ; seul reste celui du FMI, tiré d’une même édition.
-2 novembre 2026 — Comptes d’Eurostat du 21 octobre 2026 : en 2025, le taux implicite repasse légèrement au-dessus de la croissance nominale ; « la croissance l’emporte chaque année depuis 2017, sauf en 2020 » devient « jusqu’en 2024 ».
-18 octobre 2026 — Ajout : section « Conjoncture ou structure ? », le déficit primaire corrigé du cycle selon la Commission, le FMI et l’OCDE, et sa décomposition en recettes et dépenses.
 Toutes les ressources : données, dossiers et repères →
 Transmettre
 WhatsApp

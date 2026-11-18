@@ -1,0 +1,67 @@
+{{- /* dette-methode.html — texte de méthode commun aux pages du dossier dette, replié dans leur section
+       « D'où viennent ces chiffres » (passe de forme du 18/11/2026, point X-17 de la contre-analyse externe du lot
+       « Dette A », décidé sur délégation de l'auteur : LOTS\dette-a\A_ARBITRER.md, § D).
+
+       Deux pièces, un seul exemplaire pour toutes les pages qui l'appellent (une copie par page dériverait) :
+       1. la correspondance des indicateurs : la même dette, le même solde ou les mêmes intérêts ne désignent pas la
+          même grandeur d'une page à l'autre ; chaque ligne dit où l'indicateur sert ;
+       2. ce qui est vérifié, et comment : contrôle numérique, confrontation documentaire, jugement éditorial.
+       Aucun nombre : les pages portent les leurs, par leurs jetons. Organes existants seulement (repli, tableau).
+       Une ligne nouvelle (page, indicateur) se vérifie sur le texte de chaque page qu'elle cite.
+       Condition de mort : aucune -- texte de méthode permanent du dossier ; à retirer si une page de méthode du
+       dossier le remplace. */ -}}
+{{- if eq .Page.Lang "en" }}
+<details class="repli" id="methode-commune">
+<summary>Method shared by the debt pages: indicators and checks</summary>
+
+<p>The same word does not always name the same quantity from one page to the next. The table gives the key reference points; the section on where the figures come from, on each page, details its series and scopes.</p>
+
+<table>
+<thead><tr><th>Indicator</th><th>What it measures</th><th>Where it is used</th></tr></thead>
+<tbody>
+<tr><td>Maastricht debt</td><td>gross consolidated debt of general government as a whole (central government, local authorities, social security), at nominal value</td><td>the decompositions of the ratio (<a href="/en/why-does-public-debt-rise/">why it rises</a>, <a href="/en/can-public-debt-come-down/">can it come down</a>); the rise in the debt (<a href="/en/public-debt-debate-claims/">claims of the debate</a>)</td></tr>
+<tr><td>Negotiable debt of the French State</td><td>securities issued by the State alone (OATs and BTFs), managed by Agence France Trésor</td><td>erosion by inflation, the holders of this debt and Banque de France purchases (<a href="/en/inflation-and-french-public-debt/">inflation</a>); the share held by non-residents, which the claims of the debate distinguish from that of general government as a whole</td></tr>
+<tr><td>Debt-to-GDP ratio</td><td>Maastricht debt divided by the year's nominal GDP</td><td>every page; the inflation page explains why its result is not a change in this ratio</td></tr>
+<tr><td>Primary balance</td><td>general government balance excluding interest, in the national accounts (interest payable, D.41)</td><td>the decompositions of the ratio</td></tr>
+<tr><td>Stabilising primary balance</td><td>the primary balance that would have left the ratio unchanged in the year, stock-flow adjustments aside</td><td>can it come down</td></tr>
+<tr><td>Deficit that stabilises the ratio</td><td>the total deficit, interest included, that leaves the ratio unchanged for a given starting ratio and nominal growth, stock-flow adjustments aside</td><td>the examination of the claim that “a 3% deficit stabilises the debt” (claims of the debate): 3% is a deficit threshold, not a debt threshold</td></tr>
+<tr><td>Implicit interest rate</td><td>general government interest for the year (national accounts) divided by its Maastricht debt at the end of the previous year</td><td>why it rises, can it come down</td></tr>
+<tr><td>Interest and debt charge</td><td>depending on the page: interest of general government as a whole, in the national accounts; the State's debt charge (interest and indexation), in its budget; on the inflation page, the indexation cost of inflation-linked securities and the Banque de France's exposure to rates. These measures cannot be added together.</td><td>general government in the decompositions of the ratio; several scopes compared in the claims of the debate; inflation-linked securities and the Banque de France (inflation)</td></tr>
+</tbody>
+</table>
+
+<p><strong>What is checked, and how.</strong> Three operations should be distinguished when reading the method of these pages.</p>
+<ul>
+<li><strong>Numerical checking.</strong> Depending on the page, figures are calculated by the script that writes the page, from published series, or taken from an archived calculation; this script checks the main numerical claims and stops if their conditions no longer hold. The decompositions of the ratio are also compared, year by year, with the ratio and the primary balance that Eurostat publishes, with the tolerance and exclusions each page states.</li>
+<li><strong>Documentary checking.</strong> Values taken from a document (Cour des comptes report, budget act, Banque de France or Agence France Trésor publication, study) are transcribed with the source the page cites; a study's figures are reproduced as it publishes them, remain attributed to it and are kept apart from the recalculations made for these pages.</li>
+<li><strong>Editorial judgement.</strong> The choice of periods, presentation thresholds, comparisons and words is the author's. Calculations check the consequences of these choices, not their relevance: they are reviewed, independent external reviews are reported where they are documented, and they are stated as such where they matter (a presentation threshold is not a result).</li>
+</ul>
+</details>
+{{- else }}
+<details class="repli" id="methode-commune">
+<summary>Méthode commune au dossier&nbsp;: indicateurs et vérifications</summary>
+
+<p>Le même mot ne désigne pas toujours la même grandeur d'une page du dossier à l'autre. Le tableau donne les principaux repères&nbsp;; la section «&nbsp;D'où viennent ces chiffres&nbsp;» de chaque page précise ses séries et ses périmètres.</p>
+
+<table>
+<thead><tr><th>Indicateur</th><th>Ce qu'il mesure</th><th>Où il sert</th></tr></thead>
+<tbody>
+<tr><td>Dette de Maastricht</td><td>dette brute consolidée de l'ensemble des administrations publiques (État et organismes centraux, collectivités locales, sécurité sociale), en valeur nominale</td><td>les décompositions du ratio (<a href="/pourquoi-la-dette-publique-augmente/">pourquoi elle augmente</a>, <a href="/dette-publique-peut-elle-baisser/">peut-elle baisser</a>)&nbsp;; la hausse de la dette (<a href="/formules-du-debat-sur-la-dette/">formules du débat</a>)</td></tr>
+<tr><td>Dette négociable de l'État</td><td>titres émis par l'État seul (OAT et BTF), gérés par l'Agence France Trésor</td><td>l'érosion par l'inflation, les détenteurs de cette dette et les achats de la Banque de France (<a href="/inflation-et-dette-publique/">inflation</a>)&nbsp;; la part détenue par des non-résidents, que les formules du débat distinguent de celle de l'ensemble des administrations publiques</td></tr>
+<tr><td>Ratio dette/PIB</td><td>dette de Maastricht rapportée au PIB nominal de l'année</td><td>toutes les pages&nbsp;; la page sur l'inflation explique pourquoi son résultat n'est pas une variation de ce ratio</td></tr>
+<tr><td>Solde primaire</td><td>solde des administrations publiques hors intérêts, en comptabilité nationale (intérêts dus, D.41)</td><td>les décompositions du ratio</td></tr>
+<tr><td>Solde primaire stabilisant</td><td>solde primaire qui aurait laissé le ratio inchangé dans l'année, hors ajustements flux-stock</td><td>peut-elle baisser</td></tr>
+<tr><td>Déficit qui stabilise le ratio</td><td>déficit total, intérêts compris, qui laisse le ratio inchangé pour un ratio de départ et une croissance nominale donnés, hors ajustements flux-stock</td><td>l'examen de la formule «&nbsp;un déficit de 3&nbsp;% stabilise la dette&nbsp;» (formules du débat)&nbsp;: 3&nbsp;% est un seuil de déficit, non de dette</td></tr>
+<tr><td>Taux implicite</td><td>intérêts de l'année des administrations publiques (comptabilité nationale) rapportés à leur dette de Maastricht de la fin de l'année précédente</td><td>pourquoi elle augmente, peut-elle baisser</td></tr>
+<tr><td>Intérêts et charge de la dette</td><td>selon la page&nbsp;: intérêts de l'ensemble des administrations publiques, en comptabilité nationale&nbsp;; charge de la dette de l'État, dans son budget&nbsp;; sur la page de l'inflation, charge d'indexation des titres indexés et exposition de la Banque de France aux taux. Ces mesures ne s'additionnent pas.</td><td>les administrations publiques dans les décompositions du ratio&nbsp;; plusieurs périmètres comparés dans les formules du débat&nbsp;; titres indexés et Banque de France (inflation)</td></tr>
+</tbody>
+</table>
+
+<p><strong>Ce qui est vérifié, et comment.</strong> Pour lire la méthode de ces pages, trois opérations sont à distinguer.</p>
+<ul>
+<li><strong>Le contrôle numérique.</strong> Selon la page, les nombres sont calculés par le script qui écrit la page, sur des séries publiées, ou repris d'un calcul archivé&nbsp;; ce script vérifie les principales affirmations chiffrées et s'arrête si leurs conditions ne sont plus remplies. Les décompositions du ratio sont en outre confrontées, année par année, au ratio et au solde primaire que publie Eurostat, avec la tolérance et les exclusions que dit chaque page.</li>
+<li><strong>La confrontation documentaire.</strong> Les valeurs tirées d'un document (rapport de la Cour des comptes, loi de finances, publication de la Banque de France ou de l'Agence France Trésor, étude) sont transcrites avec la source que cite la page&nbsp;; celles d'une étude sont reprises telles qu'elle les publie, lui restent attribuées et sont distinguées des recalculs du dossier.</li>
+<li><strong>Le jugement éditorial.</strong> Le choix des périodes, des seuils de présentation, des comparaisons et des mots revient à l'auteur. Le calcul contrôle les conséquences de ces choix, non leur pertinence&nbsp;: ils sont relus, les contre-expertises externes sont signalées là où elles sont documentées, et ils sont dits comme tels quand ils comptent (un seuil de présentation n'est pas un résultat).</li>
+</ul>
+</details>
+{{- end }}

@@ -1,19 +1,19 @@
-# relu le 2026-11-06 ; texte servi de /en/why-does-public-debt-rise/, build de 3d48b29 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/why-does-public-debt-rise/, build de b191128c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Why does French public debt rise?
 Between 1995 and 2025, French public debt went from 57.8% to 115.7% of GDP: it doubled as a share of the wealth produced.
 Of these 57.9 points of GDP, public deficits excluding interest, known as primary deficits, contributed 50.5.
 This balance shows which terms drove the debt up, not why the deficits existed.
-Page updated 6 November 2026 · revisions
+Page updated 17 November 2026
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
-Data last updated 2 November 2026 France, general government, Eurostat series from 1995 to 2025.
+Data last updated 7 November 2026 France, general government, Eurostat series from 1995 to 2025.
 Download: CSV · JSON · method
-France is a telling case for a question every indebted country faces.
+France is a telling case.
 Its debt ratio doubled in thirty years, and Eurostat’s harmonised series allow that rise to be split, year by year, into the terms of a standard accounting identity.
 The accounting identity is general; the estimates below are for France.
-Where the rise comes from
+How does the rise in the debt-to-GDP ratio break down?
 Cumulative decomposition of the change in the debt-to-GDP ratio, France, 1995-2025, in points of GDP (Eurostat).
 Blue: the stock; orange: what pushes it up; grey: what pulls it down.
 The result in one sentence.
@@ -25,23 +25,23 @@ Take a debt equal to GDP and isolate interest, with no other spending, revenue o
 The interest has not disappeared: it is the growth of the denominator that offsets its effect on the ratio.
 The 73.9 points mostly “erased” by growth are therefore contributions, cumulated over thirty years, to the change in a ratio, not an amount paid equal to 73.9% of GDP.
 Who receives this interest and who bears what the debt costs is the subject of Who really pays for public debt?
-Year by year
+Year by year, which terms contribute to the change in the ratio?
 Annual contributions to the change in the debt-to-GDP ratio, France (Eurostat).
 The three bars add up to the change, marked by the black dot.
 Here the colours designate terms, not the direction of their effect as in the waterfall.
-Three periods stand out, and the dominant term changes from one to the next.
+Three periods stand out: the interest-growth effect dominates the first, primary deficits the next two, and in the last the interest-growth effect changes sign.
 The 2017 turning point, which splits the series in two for the interest-growth effect, falls within the second period.
 1996-2007: the interest-growth effect.
 The ratio gains 7.7 points.
 The implicit interest rate on the debt, that is, the average rate on the debt as a whole, then exceeds nominal growth on average: the interest-growth effect adds 7.5 points, while the primary balance, close to equilibrium and sometimes in surplus, contributes −2.1.
 2008-2019: primary deficits.
 The ratio gains 32.7 points, of which +26.9 come from primary deficits and +6.1 from the interest-growth effect.
-The year 2009 alone accounts for 14.2 points: the primary deficit widens and GDP contracts, two effects that coincide with the financial crisis.
+The year 2009 alone accounts for 14.2 points: the primary deficit widens, GDP contracts and stock-flow adjustments weigh in too, three movements that coincide with the financial crisis.
 2020-2025: nominal growth holds the ratio back, deficits push it up.
 The ratio gains 17.5 points.
 In 2020 it jumps by 16.7 points, with the pandemic.
 From 2021 to 2023, strong nominal GDP growth, price rises included, brings the ratio down: the interest-growth effect takes 16.8 points off the ratio, more than primary deficits add (11.5).
-The share of prices in that growth is the subject of the page Did inflation really ease France’s debt burden?
+This decomposition does not separate the share of prices from that of real growth; Did inflation really ease France’s debt burden? measures something else: what the unexpected inflation of 2021-2023 took from the real value of the payments promised on the government’s fixed-rate debt.
 Since 2024, the ratio has been rising again.
 The implicit interest rate has been rising since its low of 2020, mostly through a jump in 2022.
 After 1.25% in 2020, it edges up in 2021 (1.31%), jumps in 2022 (1.80%), then rises more slowly.
@@ -80,31 +80,32 @@ And a shrinking deficit has not disappeared: in 2025, the primary balance is sti
 These comparisons, on accounts still subject to revision, do not say which decisions produced these movements, or what should be corrected.
 The conclusions the OFCE and the French Treasury draw from them, and the objects they examine, are compared below.
 Business cycle or structure?
-A deficit can stem from the business cycle: when activity stays below its potential level, revenue weakens and some spending rises, then the deficit shrinks with the recovery.
+A deficit can stem from the business cycle: when activity stays below its potential level (the level it could sustain without pressure on prices), revenue weakens and some spending rises, then the deficit shrinks with the recovery.
 It can also be structural, and remain once the economy is back at its potential.
 Three institutions estimate this split, each with its own method: the European Commission, the IMF and the OECD.
-Cyclically adjusted primary balance according to three estimates, and observed primary balance (Eurostat).
+Cyclically adjusted primary balance according to three estimates (IMF from 1996, Commission and OECD from 2010), and observed primary balance (Eurostat).
 The grey bands mark the two periods compared.
 Over 2022-2025, the deficit would not disappear with the business cycle alone.
 Cyclically adjusted, the primary balance is lower over 2022-2025 than over 2015-2019 in all three estimates: by 1.9 points according to the Commission (−1.1% then −3.0% of potential GDP), by 2.6 points according to the IMF (−0.5% then −3.1%) and by 1.6 points according to the OECD (−1.8% then −3.4%).
-Over 2022-2025, the cyclical part of the deficit is only 0.23 points of GDP according to the IMF, which publishes the observed and the cyclically adjusted balance in the same edition.
+Over 2022-2025, the gap, calculated here, between the observed and the cyclically adjusted balances that the IMF publishes in the same edition is 0.23 points, one as a share of GDP, the other of potential GDP.
 These are three estimates, and they do not coincide.
-The Commission and the OECD also remove one-off measures, the IMF does not; and each relies on an estimate of potential output, which is not a measurement and gets revised.
+The Commission and the OECD also remove one-off measures (exceptional revenue or spending that does not recur), the IMF does not; and each relies on an estimate of potential output, which is not a measurement and gets revised.
 The page gives the three values, without averaging them.
-Before 2008, the cyclically adjusted balance was close to zero.
-Only the IMF goes back before 2010.
+On average over 1996-2007, the cyclically adjusted balance was close to zero.
+Of the three balances in the chart, only the IMF’s is plotted before 2010; the OECD publishes its underlying balance from 1995, and the Commission its cyclically adjusted balance from 1978.
 Its cyclically adjusted primary balance averages −0.2% of potential GDP over 1996-2007, −2.1% over 2010-2014, −0.5% over 2015-2019, then −3.1% over 2022-2025.
-The adjusted deficit that appeared after 2008 was partly absorbed; the one after 2020 has not been so far.
+That average combines surpluses in the late 1990s and deficits from 2002: the adjusted deficit predates the 2008 crisis; deepened after it, it was partly absorbed, and the one after 2020 has not been so far.
 This sequence dates the deteriorations; it is not enough to establish that the crises produced them.
 Where: revenue over the recent period, spending over the long run.
 The cyclically adjusted revenue and non-interest spending published by the Commission add up exactly to its adjusted balance.
 From 2015-2019 to 2022-2025, that balance falls by 1.70 points: adjusted revenue falls by 1.62 points, adjusted spending changes by +0.09 points.
-The structural balance cited above falls by 1.9 points because it also removes one-off measures, present above all in 2019.
+The structural balance cited above falls by 1.9 points, a gap that may come from its also removing one-off measures, present above all in 2019.
 Since 1996-2007, by contrast, adjusted spending has risen by 3.9 points of potential GDP and revenue by 0.9: over the long run, the rise in spending dominates.
 As with the OFCE and Treasury windows above, the answer depends on the years compared.
 What this split does not say.
 Cyclically adjusted revenue that falls mixes decided tax cuts and the spontaneous yield of taxes, which can grow more slowly than the economy.
 These series do not separate the two: they say where the deficit deepened, and that the business cycle alone does not explain it, not which decisions deepened it.
+The Court of Audit’s accounts separate them; the next section sets them against the Eurostat and INSEE series, and shows that part of this fall in revenue has a counterpart in spending.
 Year-by-year values, definitions and editions
 Year
 Commission, structural
@@ -180,17 +181,64 @@ Editions.
 European Commission, AMECO, spring 2026; IMF, Fiscal Monitor, October 2026; OECD, Economic Outlook No.
 119.
 The three were published on different dates and will be revised.
+Tax cuts, or revenue that slows down?
+Revenue can fall as a share of GDP because the law cut it, or because, with the law unchanged, it grows more slowly than the economy.
+Each year, the French Court of Audit (Cour des comptes) separates these two movements for compulsory levies (taxes and social contributions): their spontaneous growth, at constant legislation, and new measures, the increases or cuts that were decided, as costed by the administration.
+Accumulated since 2015 and set against the two periods of the previous section, its series make it possible to test one reading of the recent deficit: lasting tax cuts whose cost would have stayed hidden until 2023 behind buoyant revenue.
+More than a third of the fall in observed revenue comes from how refundable tax credits are recorded, and it has a counterpart in spending.
+These credits can be paid out beyond the tax due.
+Under European rules, Eurostat, like the Commission, therefore records taxes before these credits and classifies the credits as spending; INSEE and the Court of Audit compute compulsory levies net of them.
+The largest of them, the tax credit for competitiveness and employment (CICE), was replaced in 2019 by a permanent cut in employer social contributions: gross revenue fell, and so did tax-credit spending.
+The tax credits that Eurostat adds to revenue go from 1.4% of GDP over 2015-2019 to 0.8% over 2022-2025.
+Net of these credits, compulsory levies fall by 1.0 point of GDP, not by 1.6 like total revenue, cyclically adjusted or not; the remainder, a reconciliation gap between these series, changes by +0.02 points.
+Removed from observed spending excluding interest as well, the same series brings its rise to about 0.9 points of GDP instead of 0.3.
+That figure remains an estimate: in its current accounts, on the 2020 base, INSEE records tax-credit spending in the year the entitlement arises, and the revenue in the year the credit is set against tax.
+The balance itself does not change: what changes is the split between revenue and spending.
+The measures alone take away more than this net fall.
+Between 2015-2019 and 2022-2025
+Points of GDP
+Compulsory levies net of tax credits (INSEE), observed change
+−1.00
+New measures, accumulated, excluding the CICE
+−1.91
+Replacement of the CICE (double year of 2019, then knock-on effects)
++0.18
+Spontaneous growth faster than GDP (accumulated elasticity effect)
++0.87
+Closing gap
+−0.14
+In this reconstruction, the accumulated measures take away 1.9 points, nearly twice the observed fall: revenue that grew spontaneously faster than GDP still offsets 0.9 of it.
+For 2017-2022, the Court of Audit publishes, on the 2020 base, measures of −1.9 points and spontaneous growth of +1.6; dividing, as the Court does for 2018-2023, the cumulative measures in euros by the GDP of the last year, the same calculation gives −2.0 and +1.7 here.
+Each divided by the GDP of its own year, as in the table, these measures weigh −2.1.
+From one year to the next, the closing gap with the rate published by INSEE never exceeds 0.21 points.
+The masking, then the normalisation.
+From 2017 to 2022, elasticity almost exactly offsets the cuts that were decided, whose amounts the Court of Audit details; among the largest: abolition of the housing tax (EUR 15.7 billion), cuts in production taxes (EUR 11.3 billion) and in the corporate income tax rate (EUR 11.1 billion), reform of the income tax schedule (EUR 5.4 billion).
+The 2022 levy rate, 45.0% of GDP, is thus close to that of 2017, 45.3%.
+Then elasticity turns and takes away 2.1 points in 2023 and 2024: the decided cuts are then no longer offset in the levy rate.
+The Court of Audit wrote as early as July 2024 that this spontaneous buoyancy “was still masking, at the end of 2022, the effect of the cuts in compulsory levies made since 2018” (our translation).
+From 2024 to 2025, new measures change direction and bring back 0.9 points.
+Those of 2024 include a EUR 3.9 billion cut in banks’ contributions to the European Single Resolution Fund, with no effect on the government balance; excluding these levies earmarked for Europe, they reach EUR 7.1 billion.
+The total of measures since 2015 goes from −2.5 in 2023 to −1.6 in 2025.
+Nearly EUR 8.5 billion of the 2025 increases, or 0.3 points of GDP, come from schemes announced as temporary, two of which were extended in 2026.
+What this test establishes, and what it leaves open.
+The mechanism is described by the Court of Audit itself: cuts in levies, mostly lasting, offset until 2022 by spontaneously buoyant revenue, whose effect appeared in 2023 and 2024.
+The test measures its scope between the two periods.
+Of the fall in observed revenue, 1.6 points, 0.6 comes from the fall in refundable tax credits, mostly the end of the CICE, which has its counterpart in spending.
+Of the net fall of 1.0 point, measures, the CICE and elasticity leave a closing gap of −0.14.
+This is an accounting breakdown, not a causal attribution: the administration costs the measures mostly with behaviour unchanged, leaving out their effect on activity and on tax bases, and these effects blend into so-called spontaneous growth.
+Some measures are temporary, others have no effect on the government balance.
+Finally, the test describes a change between two periods; it does not say why the deficit was already high before.
 How the calculation works
 Each year, the debt-to-GDP ratio moves under the effect of three terms.
 The interest-growth effect: the year’s interest adds to the debt, while nominal GDP growth — real growth plus price rises — lowers the ratio even without any repayment; their balance is positive when the implicit interest rate exceeds nominal growth, negative in the opposite case.
-The primary deficit: the gap between public spending and revenue excluding interest, which measures its size, not its cause.
+The primary deficit: the gap between public spending excluding interest and public revenue, which measures its size, not its cause.
 Stock-flow adjustments: debt that moves without passing through the deficit (cash set aside, loans and equity stakes, valuation effects), obtained here as a residual.
 The waterfall shows the interest-growth effect as its two components, interest and growth: hence its four steps for three terms.
 The exact identity, term by term
 What moves the debt-to-GDP ratio from one year to the next
 the interest-growth effectinterest minus nominal GDP growth
 +
-the primary deficitspending minus revenue, excluding interest
+the primary deficitspending excluding interest minus revenue
 +
 stock-flow adjustmentswhat does not pass through the deficit
 =
@@ -216,28 +264,29 @@ Measured here.
 The annual decomposition of the French ratio from 1995 to 2025, on Eurostat series, checked against the published ratios.
 None of the texts read decomposes this window with this source: the measurement is validated by reproduction, not by citation.
 Consistent with.
-The 2014 citizens’ audit attributed a large share of the rise in the debt from 1980 to 2012 to the effect of interest rates.
-The two analyses share neither the same end points nor necessarily the same counterfactual; but over their common period, from end-1995 to end-2012, the interest-growth effect is, here too, the largest term in the rise: 14.7 points out of 33.9, ahead of primary deficits (13.1) and stock-flow adjustments (6.2).
+The 2014 citizens’ audit attributed “a good third” of the rise in the debt from 1980 to 2012 to the effect of interest rates, which it calls the “snowball” effect and this page calls the interest-growth effect, and “nearly two thirds” to accumulated primary deficits (our translation).
+The two analyses share neither the same end points nor necessarily the same counterfactual (the reference situation used for comparison); over their common period, from end-1995 to end-2012, the interest-growth effect weighs 14.7 points out of 33.9 here, ahead of primary deficits (13.1) and stock-flow adjustments (6.2), which the audit does not show separately: taken together, these last two terms come first.
 The comparison of their methods is set out in the working paper AWP-09.
 Over 1970-2023, using INSEE accounts and a historical database, Auclert, Philippon and Ragot find that primary deficits and stock-flow adjustments account for 88 points of a rise of nearly 90 (from 21% to 110% of GDP), and a “snowball” effect close to zero on average: the same identity, another period, another source, and a primary deficit that includes the adjustments this page isolates.
 Clavères, at the French Treasury, finds the same sequence of signs: the effective interest rate on the debt moves above nominal growth in the course of the 1980s, and growth moves back above it from 2016.
-That rate is close to this page’s implicit interest rate without being identical to it: both relate interest to a debt stock, not necessarily the same one, the apparent cost published by Eurostat using the year’s average stock, this page the stock at the end of the previous year.
+That rate has the same definition as this page’s implicit interest rate (interest relative to the debt at the end of the previous year), but it is computed on other series, historical and international databases including the IMF’s.
 The OFCE (Heyer, Plane, Ragot, Sampognaro and Timbeau) links France’s 53-point rise in debt from 2000 to 2024 (against 44 points in Spain, 27 in Italy and 5 in Germany) to deficits, without decomposing these rises.
-The French Treasury describes debt rising almost continuously since 2001, with deficit reductions in favourable periods only stabilising the ratio, and a deficit that stayed above the stabilising balance until 2019.
+The French Treasury describes debt rising almost continuously since 2001, with deficit reductions in favourable periods only stabilising the ratio, and a deficit that stayed above the stabilising balance (the deficit that would keep the ratio constant) until 2019.
 It describes 2001-2007 as “relative stability”; the page’s series nonetheless records a rise from 59.3% to 65.5% of GDP, and the OFCE estimates that nearly half of the deficit gap with the euro area had formed before the 2007-2008 crisis.
 Challenged by.
 Any reading of the near-cancellation of interest and growth as neutrality.
 The match depends on the starting point, to within about ten points (Auclert, Philippon and Ragot), and the gap between interest and growth changed sign during the period (Clavères).
 This page’s data confirm it: the interest-growth effect contributed +16.9 points before 2017, −15.6 since.
-The CAE note, for its part, interprets this accounting finding as the direct result of budgetary choices (“our debt is the direct consequence of our budgetary choices”), while judging the share of crises hard to estimate; an OFCE estimate, cited by the note, puts it at about half of the rise since 2007.
+The CAE note, for its part, interprets this accounting finding as the direct result of budgetary choices (“our debt is the direct consequence of our budgetary choices”, our translation), while judging the share of crises hard to estimate; an OFCE estimate, cited by the note, puts it at about half of the rise since 2007.
 Not established.
 Which of spending or revenue widened the recent deficits.
 The OFCE, which puts forward a more gradual adjustment path, starts the recent period at the 2017 presidential election and attributes most of the deterioration of the structural balance to an unfunded fall in compulsory levies, which declined by 2.5 points of GDP from 2017 to 2024; over that period, according to the OFCE, total spending stays stable as a share of GDP and primary spending falls slightly as a share of potential GDP (on Eurostat’s series, as a share of actual GDP, total spending changes by −0.7 points).
-The French Treasury, for which consolidation “could go first” through cutting spending, starts from 2019, the situation before the pandemic, and notes that several spending items (interest charge, social security, central and local government) contributed to the 2.7-point deterioration of the balance up to 2025, while noting that reforms durably reduced revenue.
+The French Treasury, for which consolidation “could go first” (our translation) through cutting spending, starts from 2019, the situation before the pandemic, and notes that several spending items (interest charge, social security, central and local government) contributed to the 2.7-point deterioration of the balance up to 2025, while noting that reforms durably reduced revenue.
 Over the common window, the OFCE and the French Treasury converge on one fact: public spending rose less in France than in the euro area (1.8 points against 2.6 according to the OFCE, 1.6 against 2.4 according to the Treasury); Eurostat’s series find the same direction and order of magnitude (spending +1.7 points, total revenue −1.8).
 They do not, however, then analyse the same object: the OFCE explains the gap between France and the euro area, which it links mainly to revenue, while the French Treasury breaks down the deterioration of the French balance over 2019-2025; and Eurostat’s total revenue is not the OFCE’s compulsory levies.
 On Eurostat’s series, the diagnosis depends on both ends of the window (section “Too much spending or too little revenue?”).
-The causes, finally: the CAE note attributes the recent deterioration to the pandemic, the energy price shields and unfunded tax cuts, the French Treasury to the crises and the support measures, but none of the six texts provides a causal decomposition of the primary deficits observed from 1995 to 2025.
+The Court of Audit separates, for compulsory levies, decided measures from spontaneous growth; its reports from 2017 to 2026 feed the section “Tax cuts, or revenue that slows down?”, which reproduces its 2017-2022 breakdown and measures what tax credits change in the split between revenue and spending.
+The causes, finally: the CAE note attributes the recent deterioration to the pandemic, the energy price shields and unfunded tax cuts, the French Treasury to the crises and the support measures, but none of the texts read provides a causal decomposition of the primary deficits observed from 1995 to 2025.
 References read
 Auclert, A., Philippon, T. and Ragot, X., “Quelle trajectoire pour les finances publiques françaises ?” [What path for French public finances?], Les notes du Conseil d’analyse économique, no.
 82, July 2024 (in French).
@@ -246,9 +295,12 @@ Clavères, G., “Taux d’intérêt, croissance et soutenabilité de la dette p
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., “Quelles trajectoires pour les finances publiques de la France ?” [What paths for France’s public finances?], Blog de l’OFCE, 2025 (in French).
 French Treasury (Direction générale du Trésor), “Finances publiques: une situation dégradée, un redressement nécessaire” [Public finances: a deteriorated situation, a necessary recovery], Trésor-Éco, no.
 403, September 2026 (in French).
+Cour des comptes (French Court of Audit), La situation et les perspectives des finances publiques [The state and outlook of public finances], June or July editions 2017 to 2026 (breakdown of the change in compulsory levies; July 2023, p.
+31; June 2026, pp.
+27-30) (in French).
 Heyer, É., Plane, M., Ragot, X., Sampognaro, R. and Timbeau, X., “Quelles trajectoires pour les finances publiques de la France ?” [What paths for France’s public finances?], OFCE working paper no.
 13, July 2025 (in French).
-Literature review checked on 3 October 2026: every reference cited was read in full on that date, in the version indicated.
+Literature review checked on 6 November 2026: each reference was read in the version indicated, in the sections on which what is said of it rests.
 Summary
 What to take away
 Once interest and growth have almost offset each other, what remains in the Eurostat decomposition used here is primary deficits, 87% of the rise: excluding interest, the public accounts were in surplus in only 4 years out of 30.
@@ -270,7 +322,7 @@ These accounts do not settle it: a primary deficit is a gap, which can come from
 On Eurostat’s series, the diagnosis changes with the years compared: from 2017 to 2024, public revenue changes by −3.1 points of GDP and spending excluding interest by −0.9; from 2019 to 2025, spending excluding interest by +1.3 and revenue by −0.8; from 2019 to 2024, revenue by −1.8 and spending excluding interest by +1.2.
 The end year matters as much as the start year.
 Does inflation reduce the debt?
-It can reduce the ratio, by increasing nominal GDP faster than the interest bill.
+It can reduce the ratio when it lifts nominal GDP growth above the average interest rate paid on the debt (the implicit interest rate).
 From 2021 to 2023, nominal growth — price rises included — produced an interest-growth effect of −16.8 points, while primary deficits added 11.5; this decomposition does not separate the share of prices from that of real growth.
 This is not costless: it reduces the real value of nominal claims, and it raises the cost of inflation-linked bonds.
 Is a primary deficit a sign of too much spending?
@@ -294,10 +346,53 @@ The script then compares, year by year, the debt ratio and the primary balance i
 The figures computed from Eurostat series all come from the same script, re-run with each release of the sources, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
 Figures attributed to other studies (CAE, OFCE, French Treasury) are given as they publish them.
 Indexation cost of State bonds in 2022: French Senate, report on the 2022 budget settlement bill (in French).
+Section “Tax cuts, or revenue that slows down?”: new measures, spontaneous growth and nominal GDP growth transcribed from the Court of Audit’s reports on the state and outlook of public finances, using the latest vintage for each year, and checked against the archived reports; INSEE’s rate of compulsory levies net of tax credits (national accounts, base 2020, in French); Eurostat’s payable tax credits (PTC) and total revenue (gov_10a_main).
+Each year, the Court’s identity, Δτ = τt−1 × (s − g) / (1 + g) + new measures / GDP, with s the spontaneous growth and g GDP growth, is checked against the rate published by INSEE; the script stops if the gap exceeds 0.3 points in any year, or if the calculation strays more than 0.15 points from the breakdown the Court publishes for 2017-2022.
 The method behind this decomposition (the identity, the benchmark formed by the ratios Eurostat publishes, and the error it rejected) and its reconciliation with three public readings of the same debt (the 2014 citizens’ audit, the iFRAP Foundation, the French Court of Audit) are set out in the working paper AWP-09 — What Public Accounts Can Establish about the Displacement of the Public Debt Burden (DOI: 10.5281/zenodo.23145963, open-access PDF).
+Method shared by the debt pages: indicators and checks
+The same word does not always name the same quantity from one page to the next.
+The table gives the key reference points; the section on where the figures come from, on each page, details its series and scopes.
+Indicator
+What it measures
+Where it is used
+Maastricht debt
+gross consolidated debt of general government as a whole (central government, local authorities, social security), at nominal value
+the decompositions of the ratio (why it rises, can it come down); the rise in the debt (claims of the debate)
+Negotiable debt of the French State
+securities issued by the State alone (OATs and BTFs), managed by Agence France Trésor
+erosion by inflation, the holders of this debt and Banque de France purchases (inflation); the share held by non-residents, which the claims of the debate distinguish from that of general government as a whole
+Debt-to-GDP ratio
+Maastricht debt divided by the year’s nominal GDP
+every page; the inflation page explains why its result is not a change in this ratio
+Primary balance
+general government balance excluding interest, in the national accounts (interest payable, D.41)
+the decompositions of the ratio
+Stabilising primary balance
+the primary balance that would have left the ratio unchanged in the year, stock-flow adjustments aside
+can it come down
+Deficit that stabilises the ratio
+the total deficit, interest included, that leaves the ratio unchanged for a given starting ratio and nominal growth, stock-flow adjustments aside
+the examination of the claim that “a 3% deficit stabilises the debt” (claims of the debate): 3% is a deficit threshold, not a debt threshold
+Implicit interest rate
+general government interest for the year (national accounts) divided by its Maastricht debt at the end of the previous year
+why it rises, can it come down
+Interest and debt charge
+depending on the page: interest of general government as a whole, in the national accounts; the State’s debt charge (interest and indexation), in its budget; on the inflation page, the indexation cost of inflation-linked securities and the Banque de France’s exposure to rates.
+These measures cannot be added together.
+general government in the decompositions of the ratio; several scopes compared in the claims of the debate; inflation-linked securities and the Banque de France (inflation)
+What is checked, and how.
+Three operations should be distinguished when reading the method of these pages.
+Numerical checking.
+Depending on the page, figures are calculated by the script that writes the page, from published series, or taken from an archived calculation; this script checks the main numerical claims and stops if their conditions no longer hold.
+The decompositions of the ratio are also compared, year by year, with the ratio and the primary balance that Eurostat publishes, with the tolerance and exclusions each page states.
+Documentary checking.
+Values taken from a document (Cour des comptes report, budget act, Banque de France or Agence France Trésor publication, study) are transcribed with the source the page cites; a study’s figures are reproduced as it publishes them, remain attributed to it and are kept apart from the recalculations made for these pages.
+Editorial judgement.
+The choice of periods, presentation thresholds, comparisons and words is the author’s.
+Calculations check the consequences of these choices, not their relevance: they are reviewed, independent external reviews are reported where they are documented, and they are stated as such where they matter (a presentation threshold is not a result).
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, period and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 Why the debt doubled: from 57.8% to 115.7% of GDP, 1995-2025
 Over the period, interest and nominal growth almost cancelled out; the rise in the debt is mostly due to primary deficits, excluding interest.
 Reading caveat.
@@ -324,8 +419,7 @@ Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Why does French public debt rise?”.
-Eurostat data, retrieved 2 November 2026. https://stephane-lalut.com/en/why-does-public-debt-rise/
+“Why does French public debt rise?” Eurostat, INSEE, Court of Audit, European Commission (AMECO), IMF and OECD data, retrieved 7 November 2026. https://stephane-lalut.com/en/why-does-public-debt-rise/
 Copy citation
 In three sentences
 From end-1995 to end-2025, the French debt-to-GDP ratio went from 57.8% to 115.7%.
@@ -336,13 +430,9 @@ The data
 The annual decomposition of the change in the debt-to-GDP ratio, France, with its four terms, the implicit interest rate and nominal growth; spending, revenue and balance as a share of GDP; the same content is available as CSV, one row per year.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
-The raw series belong to their producers (Eurostat), under their own terms.
-Revisions
-5 November 2026 — Correction: the page attributed to the Commission a “cyclical and one-off part” of the deficit that it computed itself, by setting Eurostat’s observed balance against the Commission’s structural balance (two editions, two denominators).
-That figure is withdrawn; only the IMF’s, drawn from a single edition, remains.
-2 November 2026 — Eurostat accounts of 21 October 2026: in 2025, the implicit rate moves slightly back above nominal growth; “nominal growth has prevailed every year since 2017, except 2020” becomes “up to 2024”.
-18 October 2026 — Addition: section “Business cycle or structure?”, the cyclically adjusted primary deficit according to the Commission, the IMF and the OECD, and its breakdown into revenue and spending.
+Text under copyright — short quotations permitted, full reproduction on request.
+The raw series belong to their producers (Eurostat, INSEE, Court of Audit, European Commission [AMECO], IMF and OECD), under their own terms.
+Values taken from the IMF, in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
 All resources: data, explainers and reference material →
 Share
 WhatsApp
