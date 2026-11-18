@@ -4,15 +4,15 @@
    "id": "actifs",
    "fichier": "dette-generations-actifs",
    "titre": "France : à quoi ont correspondu les déficits publics",
-   "montre": "Depuis trente ans, la part des déficits français qui a correspondu, dans les comptes, à un accroissement net des actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes que les recettes courantes ne couvraient pas. Ces parts ne mesurent ni la rentabilité ni l'utilité des dépenses.",
+   "montre": "Depuis trente ans, la part des déficits français qui a correspondu, dans les comptes, à un accroissement net des actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes, usure du capital comprise, que les recettes courantes ne couvraient pas. Ces parts ne mesurent ni la rentabilité ni l'utilité des dépenses.",
    "source": "Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (PIB), administrations publiques, France, 1996-2025",
-   "precaution": "Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit. Ces parts ne mesurent ni la rentabilité des dépenses ni leur utilité pour les générations futures ; l'éducation n'y est pas un actif."
+   "precaution": "Dépenses courantes non couvertes : usure du capital comprise. Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit. Ces parts ne mesurent ni la rentabilité des dépenses ni leur utilité pour les générations futures ; l'éducation n'y est pas un actif."
   },
   {
    "id": "detention",
    "fichier": "dette-generations-detention",
    "titre": "Qui détient la dette publique française",
-   "montre": "La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le début des années 2000 ; les achats de la Banque de France l'ont fait reculer, le reflux de ses avoirs la fait remonter. C'est la résidence des détenteurs enregistrés, non une mesure du fardeau.",
+   "montre": "La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le début des années 2000 ; elle a reculé pendant les achats de la Banque de France et remonte depuis le reflux de ses avoirs. C'est la résidence des détenteurs enregistrés, non une mesure du fardeau.",
    "source": "BCE, statistiques de finances publiques (GFS) : dette de Maastricht des administrations publiques par secteur détenteur, France, 1995-2025",
    "precaution": "Résidence du détenteur enregistré (fonds, dépositaire), non de l'épargnant final ; valeur nominale. La part des non-résidents ne mesure pas, à elle seule, le transfert net de richesse vers l'étranger."
   },
@@ -30,15 +30,15 @@
    "id": "actifs",
    "fichier": "dette-generations-actifs-en",
    "titre": "France: what public deficits corresponded to",
-   "montre": "Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public assets has fallen decade by decade; the largest share corresponded to current spending that current revenue did not cover. These shares measure neither the return on spending nor its usefulness.",
+   "montre": "Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public assets has fallen decade by decade; the largest share corresponded to current spending, wear and tear of capital included, that current revenue did not cover. These shares measure neither the return on spending nor its usefulness.",
    "source": "Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (GDP), general government, France, 1996-2025",
-   "precaution": "Accounting identity: it shows what deficits corresponded to, not what they produced. These shares measure neither the return on spending nor its usefulness to future generations; education does not count as an asset."
+   "precaution": "Uncovered current spending: wear and tear of capital included. Accounting identity: it shows what deficits corresponded to, not what they produced. These shares measure neither the return on spending nor its usefulness to future generations; education does not count as an asset."
   },
   {
    "id": "detention",
    "fichier": "dette-generations-detention-en",
    "titre": "Who holds French public debt",
-   "montre": "The share of French debt held by non-residents has been above half in most years since the early 2000s; Banque de France purchases pushed it down, and the ebb of its holdings is pushing it back up. This is the residence of registered holders, not a measure of the burden.",
+   "montre": "The share of French debt held by non-residents has been above half in most years since the early 2000s; it fell during the Banque de France's purchases and has been rising since its holdings began to ebb. This is the residence of registered holders, not a measure of the burden.",
    "source": "ECB, government finance statistics (GFS): Maastricht debt of general government by holding sector, France, 1995-2025",
    "precaution": "Residence of the registered holder (fund, custodian), not of the final saver; nominal value. The non-resident share does not, on its own, measure the net transfer of wealth abroad."
   },

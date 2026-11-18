@@ -931,8 +931,9 @@ def affichage(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, cons, etat
     # Volet 5 : même valeur, même année que la page « La dette publique peut-elle baisser ? » (gardes)
     V5 = volet5()
     A.update(v5_annee=str(V5["annee"]), v5_ecart=lg.sans_signe(V5["ecart"], 1, LANG), v5_ecart_pt=lg.points(abs(V5["ecart"]), 1, LANG))
-    vieux = sorted(g for g, y in S2.items() if y["CoA"]["base"] > y["IBP"]["base"])
-    A["pays_coa_n"] = str(len(vieux)); A["pays_n"] = str(len(S2))  # chiffres des deux côtés : « 15 pays sur 27 », jamais lettres et chiffres mêlés
+    # 16/11/2026 (relecture R1b, P1) : un second terme negatif n'exige aucun ajustement (Grece, Portugal) : il ne pese pas.
+    vieux = sorted(g for g, y in S2.items() if y["CoA"]["base"] > max(y["IBP"]["base"], 0))
+    A["pays_coa_n"] = str(len(vieux)); A["pays_n"] = str(len(S2))  # chiffres des deux côtés : « 13 pays sur 27 », jamais lettres et chiffres mêlés
     # Où le recul de l'investissement net s'est produit : deuxième et troisième décennies, administrations locales et autres
     d2, d3 = dec[1], dec[2]
     moy = lambda k, d: sum(x[k] for x in ss["annees"] if d["debut"] <= x["annee"] <= d["fin"]) / d["annees"]
@@ -1237,7 +1238,7 @@ TXT = {
   act_titre_m="France : à quoi ont correspondu les déficits publics",
   act_desc=("Pour chaque période, le besoin de financement des administrations publiques, ramené à 100, partagé entre trois emplois : "
             "acquisitions nettes d'actifs (investissement moins usure du capital, terrains, stocks), transferts en capital nets vers "
-            "d'autres secteurs, dépenses courantes non couvertes par les recettes courantes. "),
+            "d'autres secteurs, dépenses courantes, usure du capital comprise, non couvertes par les recettes courantes. "),
   act_desc_per="%s : %s points de PIB de besoin de financement cumulé, dont %s %% en actifs, %s %% en transferts, %s %% en dépenses courantes.",
   act_leg=("actifs (investissement net, terrains)", "transferts en capital", "dépenses courantes non couvertes"),
   act_axe=("besoin de financement cumulé,", "points de PIB"),
@@ -1245,7 +1246,7 @@ TXT = {
   act_besoin_m="%s points de PIB cumulés",
   act_src="Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (PIB), administrations publiques, France, %s-%s",
   act_src_m="Eurostat (gov_10a_main, gov_10dd_edpt1), administrations publiques, France, %s-%s",
-  act_note=("Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit. Ces parts ne mesurent ni la "
+  act_note=("Dépenses courantes non couvertes : usure du capital comprise. Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit. Ces parts ne mesurent ni la "
             "rentabilité des dépenses ni leur utilité pour les générations futures ; l'éducation n'y est pas un actif."),
   det_titre="Qui détient la dette publique française",
   det_titre_m="Qui détient la dette publique française",
@@ -1278,11 +1279,12 @@ TXT = {
             "dépenses liées à l'âge. L'édition précédente est un autre jeu de projections, non une évolution observée. Projections "
             "conditionnelles aux hypothèses de la Commission (Ageing Report 2024, réforme des retraites de 2023 appliquée)."),
   montre=[("actifs", "Depuis trente ans, la part des déficits français qui a correspondu, dans les comptes, à un accroissement net des "
-                     "actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes que les "
+                     "actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes, usure du "
+                     "capital comprise, que les "
                      "recettes courantes ne couvraient pas. Ces parts ne mesurent ni la rentabilité ni l'utilité des dépenses."),
           ("detention", "La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le "
-                        "début des années 2000 ; les achats de la Banque de France l'ont fait reculer, le reflux de ses avoirs la fait "
-                        "remonter. C'est la résidence des détenteurs enregistrés, non une mesure du fardeau."),
+                        "début des années 2000 ; elle a reculé pendant les achats de la Banque de France et remonte depuis le reflux de "
+                        "ses avoirs. C'est la résidence des détenteurs enregistrés, non une mesure du fardeau."),
           ("vieillissement", "Selon l'indicateur S2 de la Commission, l'ajustement qui stabiliserait la dette française correspond surtout "
                              "à la position budgétaire de départ, où figure la dépense de retraite actuelle ; l'effet des variations "
                              "futures des dépenses liées à l'âge y est faible dans le scénario de base, nettement plus fort dans le "
@@ -1292,8 +1294,8 @@ TXT = {
   act_titre="France: what public deficits corresponded to",
   act_titre_m="France: what public deficits corresponded to",
   act_desc=("For each period, general government net borrowing, set at 100, split between three uses: net acquisitions of assets "
-            "(investment minus depreciation of capital, land, inventories), net capital transfers to other sectors, current spending "
-            "not covered by current revenue. "),
+            "(investment minus wear and tear of capital, land, inventories), net capital transfers to other sectors, current "
+            "spending, wear and tear of capital included, not covered by current revenue. "),
   act_desc_per="%s: %s points of GDP of cumulated net borrowing, of which %s%% in assets, %s%% in transfers, %s%% in current spending.",
   act_leg=("assets (net investment, land)", "capital transfers", "uncovered current spending"),
   act_axe=("cumulated net borrowing,", "points of GDP"),
@@ -1301,7 +1303,7 @@ TXT = {
   act_besoin_m="%s points of GDP, cumulated",
   act_src="Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (GDP), general government, France, %s-%s",
   act_src_m="Eurostat (gov_10a_main, gov_10dd_edpt1), general government, France, %s-%s",
-  act_note=("Accounting identity: it shows what deficits corresponded to, not what they produced. These shares measure neither the "
+  act_note=("Uncovered current spending: wear and tear of capital included. Accounting identity: it shows what deficits corresponded to, not what they produced. These shares measure neither the "
             "return on spending nor its usefulness to future generations; education does not count as an asset."),
   det_titre="Who holds French public debt",
   det_titre_m="Who holds French public debt",
@@ -1334,10 +1336,11 @@ TXT = {
             "spending. The previous edition is another set of projections, not an observed change. Projections conditional on the "
             "Commission's assumptions (2024 Ageing Report, 2023 pension reform applied)."),
   montre=[("actifs", "Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public "
-                     "assets has fallen decade by decade; the largest share corresponded to current spending that current revenue did "
+                     "assets has fallen decade by decade; the largest share corresponded to current spending, wear and tear of "
+                     "capital included, that current revenue did "
                      "not cover. These shares measure neither the return on spending nor its usefulness."),
           ("detention", "The share of French debt held by non-residents has been above half in most years since the early 2000s; "
-                        "Banque de France purchases pushed it down, and the ebb of its holdings is pushing it back up. This is the "
+                        "it fell during the Banque de France's purchases and has been rising since its holdings began to ebb. This is the "
                         "residence of registered holders, not a measure of the burden."),
           ("vieillissement", "According to the Commission's S2 indicator, the adjustment that would stabilise French debt mainly "
                              "reflects the initial budgetary position, which includes current pension spending; the effect of future "

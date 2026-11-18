@@ -1,13 +1,13 @@
-# relu le 2026-11-07 ; texte servi de /en/public-debt-future-generations/, build de f1570d4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/public-debt-future-generations/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
 What do the French accounts show?
-From 1996 to 2025, only 18% of public deficits corresponded to new public assets (equipment, buildings, land), after wear and tear; that share fell to 10% over 2016-2025.
+From 1996 to 2025, only 18% of public deficits corresponded to new public assets (notably equipment, buildings, land), after wear and tear; that share fell to 10% over 2016-2025.
 The human capital that education or health may leave behind is not counted: the figure says what deficits corresponded to, not what they produced.
 Two other arguments deserve scrutiny: “we owe the debt to ourselves” and “the real burden will come from ageing”.
 Three tests put them to the proof, without claiming to calculate each generation’s bill.
-Page updated 7 November 2026 · revisions
+Page updated 18 November 2026
 Public debt dossier
 Data · Eurostat and ECB 2025 · projections 2026
 ↓ Charts, data and citations to reuseReuse this page
@@ -17,18 +17,20 @@ What deficits corresponded to in the accounts
 Borrowing to build a school, a road or a network leaves capital as well as a debt.
 This is an essential argument in assessing the weight of that debt on future generations, provided we know what was acquired and what it will bring.
 The national accounts answer the first question.
-Share of French general government net borrowing that corresponded to assets, to capital transfers and to uncovered current spending, by decade (Eurostat, author’s calculation).
+Share of French general government net borrowing (its deficit, as measured by balancing item B9 of the national accounts) that corresponded to assets, to capital transfers and to uncovered current spending, by decade (Eurostat, author’s calculation).
 The finding in one sentence.
-From 1996 to 2025, only 18% of French public deficits corresponded to a net increase in recorded public assets, and 66%, nearly two thirds, to current spending that current revenue did not cover; the share in assets fell from 32% over 1996-2005 to 10% over 2016-2025.
+From 1996 to 2025, only 18% of French public deficits corresponded to a net increase in recorded public assets, and 66%, nearly two thirds, to current spending, wear and tear of capital included, that current revenue (taxes, social contributions and other revenue, excluding capital transfers received) did not cover; the share in assets fell from 32% over 1996-2005 to 10% over 2016-2025.
 This is an accounting reading: it says what deficits corresponded to, not what they produced.
+The 66% do not mean that two thirds of borrowing paid for running costs: they come from a breakdown of the accounts that counts the wear and tear of existing capital among current spending.
 Every year, the public deficit breaks down exactly into three uses.
-Net acquisitions of assets: additional public equipment, land and inventories, once the wear and tear of what already exists has been deducted.
-Capital transfers, 16% of the total: grants paid to others, firms, households or other bodies, so that they invest, minus revenue of the same kind.
-Uncovered current spending: the part of current spending (running costs, social benefits, interest…) that current revenue did not cover.
-Since public money is not earmarked for a given expense, this breakdown does not say which borrowed euro paid for which expense: it says what, overall, the deficit corresponded to.
+Net acquisitions of assets: additional public buildings, equipment, software and research, land and inventories, once the wear and tear of what already exists has been deducted.
+Capital transfers, 16% of the total: grants paid to others, firms, households or other bodies, so that they invest, and other capital transfers, such as debt assumptions, minus the capital transfers received.
+Uncovered current spending: the part of current spending that current revenue did not cover.
+It includes the wear and tear of existing capital, counted as current spending.
+Since public money is, for the most part, not earmarked for a given expense (local authorities, for their part, may borrow only to invest), this breakdown does not say which borrowed euro paid for which expense: it says what, overall, the deficit corresponded to.
 The three uses in accounting terms, and what the cumulated amounts mean
-Net acquisitions of assets are investment, minus the wear and tear of existing capital, plus net purchases of land and changes in inventories; only this surplus adds to public net worth.
-Net capital transfers are investment grants paid to other sectors, minus capital revenue, inheritance taxes included.
+Net acquisitions of assets are investment, minus the wear and tear of existing capital, plus net purchases of land and changes in inventories; only this surplus adds to the stock of public assets.
+Net capital transfers are investment grants and other capital transfers paid to other sectors, minus the capital transfers received, inheritance taxes included.
 Uncovered current spending is the excess of current spending, wear and tear of capital included, over current revenue, which accountants call dissaving.
 The shares can be read directly.
 The amounts, for their part, add up yearly net borrowing, each relative to the GDP of its year: the 124.5 points of GDP cumulated from 1996 to 2025 are neither 124.5% of 2025 GDP nor the rise in the debt ratio over the period.
@@ -36,7 +38,7 @@ Investment grants paid to firms, households or bodies outside general government
 The share in assets fell decade by decade, from 32% to 19% and then to 10%, and the two declines do not reflect the same accounting movement.
 From the first decade to the second, the share fell mainly because cumulated net borrowing rose, from 28.6 to 47.6 points of GDP, while net acquisitions of assets stayed almost unchanged (9.1, then 9.0 points); from the second to the third, net borrowing stayed almost the same (48.3 points) and net acquisitions of assets nearly halved (4.8 points).
 Over the last decade, net acquisitions of assets amounted to only 0.5 points of GDP a year on average.
-In thirty years, current revenue exceeded current spending in only two years, 2000 and 2001, and in no year did acquisitions of assets match net borrowing.
+In thirty years, current revenue exceeded current spending, wear and tear of capital included, in only two years, 2000 and 2001, and in no year did acquisitions of assets match net borrowing.
 Even counting as capital acquired all the investment grants paid outside general government, the share would reach 39% at most: still less than half.
 Where the decline took place.
 The accounts do not say why the invested share fell, but they do locate the decline.
@@ -45,13 +47,13 @@ Over these two periods, local government accounts for 0.24 points out of a decli
 This split depends on the years compared (details below).
 The decline was not steady: local net investment reached its low point in 2016, at 0.03 points of GDP, when local government gross investment barely covered the estimated wear and tear on its capital.
 It was back at 0.47 points in 2024, then 0.48 points in 2025.
-The 2016 trough came two years after the 2014 municipal elections, while the transfers received by local government were falling: the page Local authorities: the adjustment variable? shows that the comparison with earlier cycles weakens the explanation by the municipal calendar alone, without isolating the effect of transfers or grants.
+The 2016 trough came two years after the 2014 municipal elections, while the transfers received by local government were falling: the page Are local authorities the adjustment variable of public finances? shows that the comparison with earlier cycles weakens the explanation by the municipal calendar alone, without isolating the effect of transfers or grants.
 The local share of the decline depending on the years compared
 Taking as reference each of the eleven periods of ten consecutive years between 1996 and 2015, compared with 2016-2025, the local government share of the decline ranges from 56% (2006-2015, the period used above) to 81% (1998-2007).
 Without the last year, it is 57%; without the stimulus years, 2009 and 2010, 66%.
 These periods overlap: they are variants of one calculation, not independent observations.
 What this share does not measure.
-That only 18% of deficits correspond to recorded assets does not mean that the remaining 82% produced nothing.
+That only 18% of deficits correspond to recorded assets does not mean that the remaining 82% produced nothing, nor that the recorded assets were all worthwhile.
 The accounts record counterparts, not all benefits: education, health and non-capitalised research are current spending, which may leave the following generations a human capital that these series do not count.
 Nor do these shares measure the return on spending, or whether a deficit run in a recession, which spreads the effort over time, was justified.
 Neither universal nor exceptional.
@@ -221,25 +223,25 @@ Slovakia
 0.7
 1.7
 95.7
-Points of GDP cumulated from 2001 to 2025; assets: investment minus depreciation of capital, land and inventories; negative net borrowing means cumulated surpluses (“not applicable”); “above net borrowing”: net acquisitions of assets exceed net borrowing, the difference corresponding to positive public saving.
+Points of GDP cumulated from 2001 to 2025; assets: investment minus depreciation of capital, land and inventories; negative net borrowing means cumulated surpluses (“not applicable”); “above net borrowing”: net acquisitions of assets exceed net borrowing, the difference corresponding to net public saving and net capital transfers.
 Source: Eurostat, author’s calculation.
 Bulgaria, Estonia, Finland, Luxembourg and Sweden, whose cumulated net borrowing stayed below that threshold or was negative, cannot be compared on this ratio.
 Denmark is not in this table: Eurostat’s annual government accounts do not give its net lending/net borrowing or its net saving for 2024 and 2025.
 The general government balance sheet: a complement, not a proof
 The general government balance sheet seems to offer confirmation: from 1995 to 2025, its net worth — all its non-financial assets, produced or not, minus its debts net of its financial assets — went from 37.1% to 27.1% of GDP.
 But this stock depends on the two years being compared.
-It reached 61.6% in 2007, was still above its starting level in 2022 (40.3%), and it rose by 10.2 points from 2016 to 2025, the decade in which the share of deficits corresponding to assets fell to 10%.
+It reached 61.6% in 2007, was still above its starting level in 2022 (40.3%), and it rose by 10.2 points from end-2016 to end-2025, during the decade in which the share of deficits corresponding to assets fell to 10%.
 Of the 231 possible comparisons between two years at least ten years apart, 54 show it rising.
 Its changes mix flows and revaluations.
-The value of land changed by +28.9 points of GDP over the period, unrelated to deficits; even produced assets, which changed by only +1.0 point, are stocks valued at current prices and relative to GDP, sensitive to prices as well as to the denominator.
+The value of land changed by +28.9 points of GDP over the period, largely unrelated to deficits; even produced assets, which changed by only +1.0 point, are stocks valued at current prices and relative to GDP, sensitive to prices as well as to the denominator.
 A flow identity, checked year by year, is not validated by a stock whose changes also obey other mechanisms: the balance sheet remains complementary information here.
 The “we owe it to ourselves” argument
-The economist Abba Lerner’s classic argument assumes that the debt is held within the country: servicing it would then amount to levying national taxpayers to pay national savers, and the generation that pays would also be the one that receives.
+The economist Abba Lerner’s classic argument (“The Burden of the National Debt”, 1948) assumes that the debt is held within the country: servicing it would then amount to levying national taxpayers to pay national savers, and the generation that pays would also be the one that receives.
 Holdings statistics make it possible to check its premise, not its conclusion.
 Share of general government debt held by non-residents, the Banque de France and other residents (ECB, government finance statistics).
 In 2025, 54.3% of French public debt was recorded as held by non-residents, and 45.7% by residents (ECB).
 Of the latter, the Banque de France held 16.5% of the total, and other residents 29.1%.
-The Banque de France is set apart because its role is not that of an ordinary private creditor: its holdings rose sharply with the Eurosystem’s purchases of public securities, before receding.
+The Banque de France is set apart because its role is not that of an ordinary private creditor: its holdings rose sharply with the Eurosystem’s purchases of public securities (the Eurosystem being the ECB and the national central banks of the euro area), before receding.
 With more than half of the debt held by non-residents, the assumption of a debt held entirely within the country does not describe the French situation.
 It describes Italy (34% of debt held by non-residents in 2025) or Sweden (23%) better, and Austria (66%) or Belgium (63%) less well.
 It has not always been so.
@@ -250,8 +252,8 @@ Holders year by year, and the scope of central-government securities
 The non-resident share peaked at 57.1% in 2014.
 The Banque de France held 1.7% of the debt in 1995; since 2016, it has held more than a tenth of it, and the growth of its holdings has offset the decline of other residents, from 40.8% in 2014 to 29.1% in 2025.
 In 2025, it held 6.1 points less than in 2022.
-On the narrower scope of central-government marketable securities, at market value, the Banque de France describes the same movement: 56.0% held by non-residents at end-2025, a trough of 47.5% in 2021, at the height of central bank purchases, and 59.7% in the second quarter of 2026 according to Agence France Trésor, the French debt management office.
-The general government series is at nominal value, the series for central-government marketable securities at market value: their levels cannot be compared point by point.
+On the narrower scope of central-government marketable securities (central government’s bonds and Treasury bills, which trade on the market), at market value (their market price on the reporting date), the Banque de France describes the same movement: 56.0% held by non-residents at end-2025, a trough of 47.5% in 2021, at the height of central bank purchases, and 59.7% in the second quarter of 2026 (Banque de France, a figure taken up by Agence France Trésor, the French debt management office).
+The general government series is at nominal value (the amount the borrower will have to repay at maturity), the series for central-government marketable securities at market value: their levels cannot be compared point by point.
 What holdings statistics do not establish.
 They show where creditors are registered, not who bears the charge.
 They establish neither the residence of each final saver, since a foreign fund may manage the savings of French households and vice versa; nor the net charge left to the following generations; nor France’s net external position, since residents also hold claims on the rest of the world; nor the effects of the debt on capital, incomes and growth.
@@ -268,22 +270,23 @@ Adjustment that would stabilise French debt (S2 indicator), split between the in
 The result depends on the assumptions.
 In the risk scenario where the Commission assumes heavier health and long-term care spending, the effect of future changes in age-related spending reaches 2.4 points, against 0.1 points in the baseline scenario; S2 then reaches 5.4 points.
 The initial position nevertheless remains the larger term there, as in the lower-productivity scenario.
-Yet the indicator can show the opposite: in 15 EU countries out of 27, including Belgium, Spain and Luxembourg, the future change in age-related spending weighs more than the initial position.
+Yet the indicator can show the opposite: in 13 EU countries out of 27, including Belgium, Spain and Luxembourg, the future change in age-related spending weighs more than the initial position.
 The COR, for its part, projects pension spending rising as a share of GDP, where the Commission assumes a fall: the two projections rest on different assumptions and cannot be compared directly.
 Technical definition of S2, and the second term item by item
-S2 is the permanent improvement in the structural primary balance (the balance excluding interest, adjusted for the economic cycle), made in 2027, that would stabilise the debt over an infinite horizon.
+S2 is the permanent improvement in the structural primary balance (the balance excluding interest, adjusted for the economic cycle), made in 2027, that would stabilise the debt over an infinite horizon (taking every future year into account, with no end date).
 Unlike the S1 indicator, which targets 60% of GDP by 2070, it sets neither the level at which the debt stabilises nor the date.
-The initial budgetary position is the gap between the starting structural balance and the one that would stabilise the ratio.
+The initial budgetary position is the gap between the starting structural primary balance and the one that would stabilise the ratio.
 The effect of future changes in age-related spending is small because it nets out opposite movements.
 In S2, the contribution of pensions is negative (−0.5 points), net of the taxes and contributions paid by pensioners, with the 2023 reform applied; those of health (+0.6 points) and long-term care (+0.6 points) are positive; that of education is negative (−0.6 points).
 These contributions add up to the second term of S2.
 Commission and COR: two projections, two sets of assumptions
 Who is speaking matters here.
-The Commission is the institution that enforces the European fiscal rules.
+The Commission is the institution that monitors compliance with the European fiscal rules and proposes to the Council the decisions that enforce them.
 The COR, a pluralist body that brings together the social partners, members of parliament and government departments, projects in its baseline scenario (annual report of June 2026) gross pension spending rising from 14.1% of GDP in 2025 to 15.3% in 2070, a change of +1.2 points, where the Commission assumes a fall.
 The two figures cannot be compared term by term: one is gross spending between two dates, the other a net component.
 Their gap, which may stem from each institution’s assumptions, shows how much the projection depends on them; it does not yield another S2.
-The COR bases its projection on INSEE’s new demographic projections, with lower fertility and higher net migration than in its previous reports, and stresses how much its financial diagnosis depends on them; the Commission uses the ageing projections of its 2024 report, drawn up before them.
+The test made for this page on 3 October 2026, which substituted the COR’s pension trajectory for the Commission’s through an approximation that overstates its effect, kept the starting position ahead of the change in age-related spending, except when the Commission’s health and long-term care risk scenario was added to it: the finding holds in the central scenarios of both institutions, not in the combination of their unfavourable assumptions.
+The COR bases its projection on INSEE’s new demographic projections, with lower fertility and higher net migration than in its previous reports, and stresses how much its financial diagnosis depends on them; the Commission uses the ageing projections of its 2024 report, drawn up with the member states (for French pensions, by INSEE and the Treasury) before those new demographic projections.
 The COR also assumes, for Agirc-Arrco, the supplementary pension scheme for private-sector employees, an uprating of the pension point that is less restrained from 2038 than in its earlier reports, which raises projected spending.
 Part of the gap between the two institutions may therefore stem from their assumptions, and not from the financial situation of the pension system alone.
 The deficit the COR projects for the pension system, 2.4 points of GDP in 2070, stems as much from the projected fall in its resources, from 13.9% to 12.9% of GDP, as from the rise in its spending.
@@ -340,7 +343,7 @@ A transfer over time does not, on its own, determine who will actually bear the 
 Unequal capacities for mobility, avoidance or negotiation may influence that distribution: mobile households, fiscally or geographically, have room for manoeuvre that the least mobile lack.
 The third proposition is a refutable hypothesis, not a finding of this page.
 It is tested on specific reforms, with groups defined in advance; it would be weakened by an adjustment falling mainly on other groups, or by compensation granted to the losers.
-It is formalised in AWP-03; AWP-09 confronts this reading with the public accounts, without establishing the final burden on each generation.
+It is stated in AWP-03, in a more assertive form; AWP-09 turns it into a testable hypothesis and confronts it with the public accounts, without establishing the final burden on each generation.
 That leaves the question these accounts keep open: will those who must bear the consequences of today’s decisions have the same possibilities of choice, adaptation and protection as those who benefited from them?
 Tested against the research literature: the use criterion and the decline in investment are found again; reading resident holding as an absence of burden, or the composition of deficits as a measure of the burden between generations, is challenged
 Measured here.
@@ -348,13 +351,13 @@ The uses of French and European general government net borrowing, general govern
 None of the texts read calculates these quantities on these sources and these periods: they are validated by reproduction.
 Consistent with.
 The use criterion: in Diamond’s model, issuing debt to acquire public capital makes the government a mere intermediary between savers and entrepreneurs, with no short-run or long-run effect.
-The decline in the share invested: in 21 OECD countries, including France, from 1979 to 2003, a heavier interest burden goes together, five years later, with a lower share of public investment and a higher share of pensions, postponing an investment costing less, politically, than cutting an entitlement (Breunig and Busemeyer).
+The decline in the share invested: in 21 OECD countries, including France, from 1979 to 2003, a heavier interest burden goes together, five years later, with a lower share of public investment and a higher share of pensions, shares computed between these two items and unemployment benefits, postponing an investment costing less, politically, than cutting an entitlement, as the authors explain it (Breunig and Busemeyer).
 These are associations in a panel, over another period: they do not say why the share invested has fallen in France since.
-The approach of the S2 indicator, finally, is the one called for by Auerbach, Gokhale and Kotlikoff: starting from the government’s budget constraint over a long horizon and from age-related spending, rather than from a single year’s deficit.
+The approach of the S2 indicator, finally, is close to the one called for by Auerbach, Gokhale and Kotlikoff: starting from the government’s budget constraint over a long horizon and from age-related spending, rather than from a single year’s deficit.
 Challenged by.
 Any reading of the breakdown of deficits as a measure of the burden between generations.
 For Auerbach, Gokhale and Kotlikoff, the measured deficit has, in theory, no necessary relationship with the stance of fiscal policy between generations: it depends on how revenue and spending are labelled.
-They replace it with generational accounts, which estimate what each generation pays and receives over the rest of its life; for the United States in 1989, under unchanged policy, they found a net burden about 20% heavier for future generations than for newborns.
+They replace it with generational accounts, which estimate what each generation pays and receives over the rest of its life; for the United States in 1989, under unchanged policy and before the 1990 budget agreement, they found a net burden about 20% heavier for future generations than for newborns.
 Hence the page’s limit: its breakdown gives the accounting composition of deficits, not the burden on each generation.
 Any reading, too, according to which only the share held by non-residents would weigh on the following generations.
 In the efficient case of Diamond’s model, where the interest rate exceeds population growth, internal debt lowers long-run welfare more than external debt, because it takes the place of productive capital in wealth holdings.
@@ -384,11 +387,11 @@ Breunig, C. and Busemeyer, M.
 R.
 (2012), “Fiscal austerity and the trade-off between public investment and social spending”, Journal of European Public Policy, 19(6), pp.
 921-938.
-Literature review checked on 3 October 2026: every reference cited was read in full on that date, in the version indicated.
+Literature review checked on 3 October 2026: each reference was read in the version indicated, in the sections on which what is said of it rests.
 Summary
 What to take away
 What holds.
-Use distinguishes one debt from another, and the French share is low: 18% of deficits have corresponded to recorded assets since 1996, 10% over 2016-2025, while other EU countries exceed one half.
+Use distinguishes one debt from another, and the French share is low: 18% of deficits have corresponded to recorded assets since 1996, 10% over 2016-2025, while, from 2001 to 2025, other EU countries exceed one half.
 The assumption of a debt held at home does not describe France: 54.3% of public debt was registered to non-residents in 2025.
 What is not enough.
 None of these figures is a bill: the composition of deficits is not a charge per generation, the residence of creditors is not a net transfer, and S2 is a conditional projection.
@@ -399,8 +402,8 @@ A small effect of the future change in age-related spending does not imply low c
 To judge what debt leaves to future generations, knowing its amount is not enough: one must know what was acquired at the same time, to whom it is owed, on what conditions it stabilises, and how costs and benefits will be shared.
 Frequently asked questions
 Does public debt weigh on future generations?
-It leaves them a charge, and also what was acquired at the same time; no single statistic measures the balance of the two.
-In France, from 1996 to 2025, 18% of public deficits corresponded, in the accounts, to a net increase in recorded public assets, 16% to capital transfers to other sectors and 66% to current spending that current revenue did not cover.
+It may leave them a charge, and it also leaves what was acquired at the same time; no single statistic measures the balance of the two.
+In France, from 1996 to 2025, 18% of public deficits corresponded, in the accounts, to a net increase in recorded public assets, 16% to capital transfers to other sectors and 66% to current spending, wear and tear of capital included, that current revenue did not cover.
 This is an accounting composition: it measures neither what each generation will pay, nor what current spending on education or health produced.
 Does debt taken on to invest weigh less?
 It leaves capital along with the charge: that is why use is a relevant criterion, though it does not say what the spending yields.
@@ -434,16 +437,16 @@ Each year, net borrowing = net dissaving + net acquisitions of assets + net capi
 Ratios are calculated on the GDP published with the deficit and debt notification (gov_10dd_edpt1) and cumulated by period in points of GDP; the share in assets calculated in current euros gives 17%, against 18% in points of GDP.
 Excluding land and inventories, net investment alone represents 15% of net borrowing.
 Net worth.
-General government accounts disseminated by Eurostat, in their latest vintage: produced and non-produced non-financial assets (nama_10_nfa_bs, N1N and N2N, current prices), of which land (N211N), compiled by Insee, and consolidated net financial worth (nasa_10_f_bs, BF90), compiled by the Banque de France, relative to GDP.
+General government accounts disseminated by Eurostat, in the vintage retrieved on 5 November 2026: produced and non-produced non-financial assets (nama_10_nfa_bs, N1N and N2N, current prices), of which land (N211N), compiled by Insee, and consolidated net financial worth (nasa_10_f_bs, BF90), compiled by the Banque de France, relative to GDP.
 Every October the Banque de France revises the last three years of its financial accounts, so the same account may then differ from one source to another.
 Blocking check: annual net financial worth equals the fourth-quarter value (nasq_10_f_bs).
 Vintage check: Insee’s balance sheet (table 8.204, corrected on 30 July 2026, file archived with its hash); a gap is accepted only within the revision window, if earlier years agree and if Insee’s release is the older of the two, and it is listed in the checks file.
 Asset stocks are valued at current prices: their changes mix flows and revaluations.
 Holdings.
-ECB, government finance statistics (GFS): Maastricht debt of general government by counterpart area (rest of the world, residents) and holding sector (central bank).
+ECB, government finance statistics (GFS): Maastricht debt of general government (its gross debt, excluding debt between government units, at nominal value) by counterpart area (rest of the world, residents) and holding sector (central bank).
 Checks: non-residents and residents add up to total debt each year; over the common years, the values equal those of Eurostat (gov_10dd_ggd), reported by the same administration, except, within the Banque de France revision window, a vintage gap listed in the checks file.
 Scope witness: Banque de France, series DET.Q.FR.1315.F33000.M.Z9.8.F, on Webstat (share of central-government marketable securities held by non-residents, at market value, end of quarter; file from the series’ public page, latest observation published on 7 April 2026, archived with its hash); latest observations: charts from Agence France Trésor (source Banque de France), read no later than 5 November 2026 with the hash of their image.
-The reading is checked against Webstat over the common period; the most recent value, read on the breakdown of securities by holder group, has no period in common with Webstat and rests only on its archived capture.
+The reading is checked against Webstat’s DET series over the only common quarter, end-2025; the Banque de France also publishes, in another Webstat series (DET2), the first two quarters of 2026, which match the reading; for other quarters, the AFT and Webstat values differ by a few tenths of a point.
 The script stops if the two series cease to converge, or if Webstat publishes a period that the reading no longer goes beyond.
 S2 indicator.
 European Commission, Debt Sustainability Monitor 2025, country tables (file of the edition, archived with its hash): the components used are those of the spreadsheet; table 3.2 of the report prints the initial position as the difference between S2 and the second term, hence 3.1 instead of 3.0 for France.
@@ -454,24 +457,25 @@ Pensions.
 COR, annual report of June 2026, data from the summary, baseline scenario; Agirc-Arrco indexation rule: part 1, chapter 2 of the report.
 Check: for each country and each year, the calculated ratios are compared with those Eurostat publishes as a percentage of GDP, which the calculation does not use.
 Beyond a gap of 0.11 points, the year is excluded and counted (0 out of 835); for France, the script stops.
-The computed figures all come from the same script, which checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
-The non-resident shares for the first and second quarters of 2026 are read by hand from the Agence France Trésor charts; the latest observation in the Banque de France’s Webstat series (consulted on 7 November 2026) is for the fourth quarter of 2025, which serves as the check.
+The figures computed for this page come from the same script, which also reads the gap computed for part 5 and checks the main quantitative statements and stops if their conditions are no longer met; their wording is reviewed editorially.
+The non-resident shares for the first and second quarters of 2026 are read by hand from the Agence France Trésor charts; the latest observation in Webstat’s DET series (consulted on 7 November 2026) is for the fourth quarter of 2025, which serves as the check.
 Figures from the studies cited are given as they publish them.
-The arguments were tested before the page was written, following a protocol set before the calculation.
+The arguments were tested on 3 October 2026, before the page was rewritten, following a protocol written before the final calculation, after a first look at the French data, which the protocol declares.
 Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
-Each chart carries its source, vintage and reading caveat inside the image: reused in a lecture or an article, it does not come apart from what makes it readable.
+Each chart carries its source, period and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 France: what public deficits corresponded to
-Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public assets has fallen decade by decade; the largest share corresponded to current spending that current revenue did not cover.
+Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public assets has fallen decade by decade; the largest share corresponded to current spending, wear and tear of capital included, that current revenue did not cover.
 These shares measure neither the return on spending nor its usefulness.
 Reading caveat.
+Uncovered current spending: wear and tear of capital included.
 Accounting identity: it shows what deficits corresponded to, not what they produced.
 These shares measure neither the return on spending nor its usefulness to future generations; education does not count as an asset.
 Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (GDP), general government, France, 1996-2025
 Download PNG
 SVG
 Who holds French public debt
-The share of French debt held by non-residents has been above half in most years since the early 2000s; Banque de France purchases pushed it down, and the ebb of its holdings is pushing it back up.
+The share of French debt held by non-residents has been above half in most years since the early 2000s; it fell during the Banque de France’s purchases and has been rising since its holdings began to ebb.
 This is the residence of registered holders, not a measure of the burden.
 Reading caveat.
 Residence of the registered holder (fund, custodian), not of the final saver; nominal value.
@@ -490,11 +494,10 @@ Download PNG
 SVG
 Cite this page
 Lalut, Stéphane (2026).
-“Is public debt a burden on future generations?”.
-Eurostat, Insee, ECB, European Commission, COR and AFT data, retrieved 5 November 2026. https://stephane-lalut.com/en/public-debt-future-generations/
+“Is public debt a burden on future generations?” Eurostat, Insee, ECB, European Commission, COR and AFT data, retrieved 5 November 2026. https://stephane-lalut.com/en/public-debt-future-generations/
 Copy citation
 In three sentences
-From 1996 to 2025, 18% of French general government net borrowing corresponded, in the accounts, to a net increase in its recorded assets, and 66% to current spending not covered by current revenue; the share in assets went from 32% (1996-2005) to 10% (2016-2025).
+From 1996 to 2025, 18% of French general government net borrowing corresponded, in the accounts, to a net increase in its recorded assets, and 66% to current spending, wear and tear of capital included, not covered by current revenue; the share in assets went from 32% (1996-2005) to 10% (2016-2025).
 This is an accounting reading, not a causal attribution: these shares measure neither the return on spending nor its usefulness to future generations.
 In 2025, 54.3% of public debt was registered to non-residents, which gives the residence of holders, not the burden.
 Copy summary
@@ -502,16 +505,9 @@ The data
 The uses of general government net borrowing (France by decade, EU countries cumulated), general government net worth, debt holdings by sector and the Commission’s S2 indicator; the same content exists as CSV, in long format.
 Download JSON CSV
 Data and charts CC BY 4.0 — free reuse, including commercial, with attribution.
-Text under copyright — short quotation free, full reproduction on request.
+Text under copyright — short quotations permitted, full reproduction on request.
 The raw series belong to their producers (Eurostat, Insee, ECB, European Commission, COR and AFT), under their own terms.
 Values taken from Agence France Trésor (AFT), in the files and in the charts, are not covered by the CC BY licence: that producer restricts their commercial reuse.
-Revisions
-7 November 2026 — Correction to the method note: the non-resident shares for the first and second quarters of 2026 (57.5%, read on 3 October; 59.7%, read on 5 November) come from the Agence France Trésor charts; the check against Webstat bears on the fourth quarter of 2025, the latest observation in that series on 7 November.
-5 November 2026 — Correction: the values by item (pensions, health, long-term care, education) are contributions to the second term of the S2 indicator, not changes in spending in points of GDP.
-31 October 2026 — Revision of general government net worth: the Banque de France financial accounts, updated in October 2026 for 2023 to 2025 and taken up by Eurostat, mainly revalue the equity held by government; net worth at the end of 2025 moves from 25.0% to 27.1% of GDP.
-Insee’s July balance sheet, which does not yet include it, becomes a check.
-The decomposition of deficits, based on flows, does not depend on it (counter-review of 31 October).
-18 October 2026 — Addition: where the decline in net investment took place, local government and other government bodies, with its 2016 low point and the local share of the decline depending on the years compared (counter-review of 18 October).
 All resources: data, explainers and reference material →
 Share
 WhatsApp
