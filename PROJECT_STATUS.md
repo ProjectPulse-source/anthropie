@@ -52,6 +52,38 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Lot « Dette C » publié : votre commune, collectivités locales, quels futurs (FR, EN)
+
+- **Commits** `8efa2aec` (Budget 2027 : votre commune, avec les trois corrections de `fiche-commune.js` et la clause de
+  plafond du DILICO citée), `e1a6a81b` (Collectivités locales : contre-épreuve 2013-2017 à périmètre constant, garde et
+  mutation au générateur ; phrase de continuité budgétaire, art. 47 de la Constitution et art. 45 de la LOLF), `48a7ada1`
+  (Quels futurs : sensibilités « au point près » par une fonction gardée, « croissance réelle, à inflation inchangée »,
+  fiche des clauses d'action collective), `50bd6a89` (accord de « points » dans la phrase anglaise des leviers).
+- **Contrôles** : générateurs `--check`, `check-figures` 0, deux contrôleurs de figures, Hugo 0, `typo_build` 0,
+  `check-all --ci` 0, lettre (version arbitrée → publiée), instantanés de relecture refaits (FR, EN), sources de la
+  contre-épreuve et de la continuité lues (OFGL, Sénat, Légifrance). Le premier déploiement (44261450424) a échoué sur
+  `check-rendu-ressources.py` (« market rates 0.2 point lower ») : ce contrôle n'était pas lancé avant la poussée ; il
+  l'est désormais pour chaque lot.
+- **Servi** : déploiement `hugo.yml` 44264676186 réussi ; version servie attestée le 18/11 : 6 pages identiques au build
+  (2 532 phrases, 0 écart), 48 figures identiques (SVG aux fins de ligne près, PNG à l'octet), 10 scripts identiques dont
+  `fiche-commune.js` (fins de ligne normalisées).
+- **Restent, déclarés** : portée de la règle « au point près » pour la figure et la hausse de cent points de base
+  (décision de l'auteur) ; titres de figures rendus en DejaVu à l'écran quand Inter manque ; « 0.2 percentage point »
+  (singulier) dans la page anglaise des futurs, son texte alternatif et trois figures, que `check-rendu-ressources` ne voit
+  pas (le mot « percentage » s'intercale).
+
+### 2026-11-18 — Lot « Promesses A » publié : adopter une loi, pouvoirs du président, référendum, Union européenne (FR, EN)
+
+- **Commits** `bb5b16ba` (Adopter), `4236b3af` (Pouvoirs), `81c06b29` (Référendum), `cec77101` (Union européenne) : version
+  arbitrée après la contre-analyse externe, contre-expertise juridique comprise, et décisions du § D du lot `promesses-a`.
+- **Contrôles** : générateurs `--check`, `check-figures` 0, Hugo 0, `typo_build` 0, `check-all --ci` 0, lettre (version
+  arbitrée → publiée), premier écran de la page Union européenne retesté (conforme) ; envois du 30/11 (Union européenne) et
+  du 02/12 (Pouvoirs) : passages cités retrouvés, « douze actes » gardé tant que l'envoi court.
+- **Servi** : déploiement `hugo.yml` 44260534268 réussi ; version servie attestée le 18/11 : 8 pages identiques au build
+  (4 927 phrases, 0 écart) et figures identiques.
+- **Restent, déclarés** : reformulation des « douze actes » après le 04/12 (convention de la page, non propriété de
+  l'article 19) ; version 4 du jeu Zenodo (geste de l'auteur, après les lots Promesses A et B).
+
 ### 2026-11-18 — Lot « Dette B » publié : coût, qui paie, générations futures, comparaison internationale (FR, EN)
 
 - **Commits** `2322443e` (Coût, avec registre des dates et schéma JSON-LD des jeux du dossier), `1fcff9fe` (Qui paie),
