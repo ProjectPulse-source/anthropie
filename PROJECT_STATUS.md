@@ -52,6 +52,31 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Lot « Dette B » publié : coût, qui paie, générations futures, comparaison internationale (FR, EN)
+
+- **Commits** `2322443e` (Coût, avec registre des dates et schéma JSON-LD des jeux du dossier), `1fcff9fe` (Qui paie),
+  `9cab1d6f` (Générations), `1be34be9` (Comparaison) : version arbitrée après la contre-analyse externe et décisions du § D
+  du lot `dette-b` ; figures corrigées après deux passages de deux contrôleurs (règle `ambigu()` mesurée bord à bord,
+  filets, ordre adaptatif au téléphone, schéma de l'emprunt, notes de la charge et des actifs, PNG re-rendus).
+- **Contrôles** : générateurs `--check`, `check-figures` 0 (92 SVG), `check-png-dette` 28/28, Hugo 0, `typo_build` 0,
+  `check-all --ci` 0, instantanés de relecture refaits ; lettre (version arbitrée → publiée) : phrases changées toutes
+  voulues ; envois `ANNULATION-DETTE-2026-11` et `PROMESSES-SUITE-2026-11-18` : passages cités retrouvés mot pour mot.
+- **Servi** : déploiement `hugo.yml` 44259366991 réussi ; version servie attestée le 18/11 : 8 pages identiques au build
+  (3 976 phrases, 0 écart), 126 figures identiques (SVG aux fins de ligne près, PNG à l'octet).
+- **Restent, déclarés** : « Roumanie » de la transmission (place figée le 03/11), « Croatie » (bureau) et « Roumanie »
+  barrée par un pointillé (téléphone) ; troisième phrase du point 0-6 (Générations), dont la garde demande une série que le
+  mode hors ligne ne lit pas.
+
+### 2026-11-18 — `/enseignants/ecole-et-parcours/` publiée (lot « enseignants-ecole-et-parcours »)
+
+- **Commit** `478ee79c` : version arbitrée et § D (questions 5, corrigés) ; figures corrigées après deux passages de deux
+  contrôleurs ; garde de population du générateur d'accès réécrite (elle ne pouvait pas échouer ; trois mutations
+  arrêtées désormais).
+- **Contrôles** : générateurs à 0, `check-figures` 0, Hugo 0, `typo_build` 0, `check-all --ci` 0, impressions des deux
+  fiches refaites ; aucun envoi armé ne cite la page.
+- **Servi** : déploiement `hugo.yml` 44258529505 réussi ; version servie attestée le 18/11 : 312 phrases, 0 écart ; 8
+  figures identiques.
+
 ### 2026-11-18 — Lot « Langue » publié : `/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/` ; gabarit « Réutiliser » ; chapô du bloc « École »
 
 - **Commits** `32eaea2` (gabarit « Réutiliser » : « sa période », FR et EN), `ece1cb5` (chapô du bloc « École »,
