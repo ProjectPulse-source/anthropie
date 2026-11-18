@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/cost-of-french-public-debt/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/cost-of-french-public-debt/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What does French public debt actually cost?
 In 2025, French general government interest expenditure amounts to 65.7 billion euros, or 4.2% of its revenue.
@@ -82,7 +82,7 @@ The 2025 burden is thus back, as a share of GDP, to its 2014 level; as a share o
 In 1995 it amounted to 3.5% of GDP and 6.8% of revenue.
 But since the 2020 trough it has risen by 121% in euros, and by 78% since 2019: both baselines lead to the same conclusion.
 The two findings hold together and answer both “the debt costs almost nothing” and “debt has never cost so much”: in current euros, the 2025 burden is indeed the highest since 1995; as a share of GDP and of revenue, it is not.
-Eurostat, interest due by general government, at current prices not adjusted for inflation; open circles: Government forecast, not to be subtracted from the observed curve.
+Eurostat, interest due by general government, at current prices not adjusted for inflation; open circles: Government forecast in the 2027 budget bill, not to be subtracted from the observed curve.
 DownloadCiteData
 Gross, then net.
 General government also receives interest: 3.5 billion in 2025.
@@ -167,7 +167,7 @@ Public services rely heavily on human labour: their costs tend to track wages ra
 Demand for some of them may also grow faster than GDP: ageing and costly medical progress in health, litigation in justice.
 If both mechanisms hold, a spending category that remains stable as a share of GDP does not guarantee a stable volume or quality of service.
 Establishing that the service delivered actually fell would require what this page does not measure: sectoral inflation, wages, productivity, demographics, and the volumes actually delivered.
-What the data does establish is narrower: a higher interest burden raises the borrowing requirement under unchanged policies; its consequences for spending, taxes and the deficit then depend on the choices made, the economic cycle and the financing available — which is not the same as saying that every euro of interest is a euro taken from health or education.
+What the data does establish is narrower: a higher interest burden raises, by construction, the borrowing requirement under unchanged policies; its consequences for spending, taxes and the deficit then depend on the choices made, the economic cycle and the financing available — which is not the same as saying that every euro of interest is a euro taken from health or education.
 The question is therefore not “are budgets falling?” but “who will absorb the adjustment”: higher taxes, cuts to other spending, wider deficits, inflation, or future generations.
 That is the subject of Who really pays for public debt?
 An interpretative hypothesis of the author’s, distinct from the findings.
@@ -180,7 +180,8 @@ What to take away
 Why the bill long fell.
 For twenty-five years, the falling average cost of the stock offset the rising stock: the debt doubled as a share of GDP while its burden fell.
 Why it is rising.
-Since 2020, stock and average cost have risen together: 15.1 billion of the rise come from the stock, 20.9 from the implicit rate, most of it in 2022, the year inflation also raised the cost of indexed bonds, without these series measuring indexation’s share; taking 2019 as the starting year, the stock weighs most.
+Since 2020, stock and average cost have risen together: in an accounting decomposition, 15.1 billion of the rise come from the stock, 20.9 from the implicit rate, most of it in 2022, the year inflation also raised the cost of indexed bonds, without these series measuring indexation’s share.
+Taking 2019 as the starting year, the stock weighs most.
 The level reached is not unprecedented (the 2014 level as a share of GDP); the rise, though, is fast.
 Why it can go on.
 The average cost catches up with market rates only as securities are renewed: the bill can rise even as the debt stops growing.
@@ -200,7 +201,8 @@ How large is France’s public debt?
 Over the INSEE series available since 1995, the highest debt-to-GDP ratio is reached in Q2 2026 (119.0%).
 Why is the interest burden rising so fast?
 Because two terms are rising together: the amount of debt and its average cost, the implicit interest rate.
-From 2020 to 2025, the burden rises by 36.0 billion euros; in an accounting decomposition, 15.1 come from the larger debt stock and 20.9 from the higher implicit rate (since 2019, before the pandemic, the split reverses: 16.1 from the stock, 12.7 from the rate).
+From 2020 to 2025, the burden rises by 36.0 billion euros; in an accounting decomposition, 15.1 come from the larger debt stock and 20.9 from the higher implicit rate.
+Since 2019, before the pandemic, the split reverses: 16.1 from the stock, 12.7 from the rate.
 The implicit rate made most of its move in 2022, the year inflation also raised the cost of the State’s inflation-linked bonds (the series do not measure indexation’s share); since then, the larger stock has weighed most.
 This decomposition does not measure the effect of market rates: the implicit-rate part mixes refinancing, the composition of the debt and indexation.
 Does the interest burden exceed the justice budget?
@@ -211,7 +213,7 @@ Has the rise in interest already cut health or education spending?
 Not in the observed aggregates: in euros, public spending on health (261.2 billion euros in 2024) and education (148.6 billion) kept rising after 2019, education after a dip in 2020; as a share of GDP, both are above 2019, slightly below their 2020-2021 peak.
 That does not mean there was no crowding out: a budget that goes from 100 to 105 instead of 110 has not fallen, and has still been crowded out.
 These series allow neither an attribution of their path to the debt, nor a conclusion that they would not have been higher without the interest constraint.
-What they do establish: a higher burden raises the borrowing requirement under unchanged policies, and its consequences for spending, taxes and the deficit then depend on the choices made; who will absorb the adjustment is the subject of the page “Who really pays for public debt?”.
+What they do establish: a higher burden raises, by construction, the borrowing requirement under unchanged policies, and its consequences for spending, taxes and the deficit then depend on the choices made; who will absorb the adjustment is the subject of the page “Who really pays for public debt?”.
 Which leaves a question these figures do not settle: who ultimately bears this burden, and is part of its cost shifted onto others?
 That is the subject of the next page.
 To take the analysis further Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
@@ -223,8 +225,8 @@ $29.99paperback, 644 pagesKindle
 Buy the paperback — $29.99Kindle edition
 Contents, excerpts and reviews →
 Where these figures come from
-The figures on this page are derived automatically from INSEE and Eurostat series, re-queried every week; last retrieval that changed a value: 21 October 2026.
-Four sets of values are stored in the repository, each with its source and date: the 1978-1994 ratios, transcribed from an INSEE table (their junction year, 1995, is checked against the live series at every run); and, entered by hand, the Government’s forecasts, the Agence France Trésor benchmarks and the number of tax households.
+The main figures on this page are derived automatically from INSEE and Eurostat series, re-queried every week; last retrieval that changed a value: 21 October 2026.
+Five sets of values are stored in the repository, each with its source and date: the 1978-1994 ratios, transcribed from an INSEE table (their junction year, 1995, is checked against the live series at every run); and, entered by hand, the Government’s forecasts, the cost of indexation as estimated by the Senate, the Agence France Trésor benchmarks and the number of tax households.
 Open data: dette_officielle.json, CC BY 4.0 licence.
 INSEE and Eurostat series, interest on an accrual basis, implicit rate on the stock at the end of the previous year, dated values entered by hand; compilation under a CC BY 4.0 licence
 Values derived automatically from official sources: quarterly Maastricht debt from INSEE (series 010777616 — stock in billions of euros — and 010777608 — % of GDP); interest due (D41PAY), interest received (D41REC) and total revenue (TR) of general government (Eurostat, gov_10a_main); expenditure by COFOG function, including the ten main functions (Eurostat, gov_10a_exp); the 10-year yield (Eurostat, irt_lt_mcby_a).
@@ -234,6 +236,7 @@ Values entered by hand.
 The Government’s forecasts for 2026 and 2027 and its sensitivity to rates and inflation are read in the opinion of the Haut Conseil des finances publiques on the 2027 budget bills (paragraphs 113, 115 and 116), which reports them; the opinion is archived with its fingerprint.
 They are not subtracted from the Eurostat observation: the opinion gives the 2025 burden only rounded (66 billion, table 10), in a table that mixes national-accounts and budgetary conventions.
 The average maturity and the inflation-linked bonds of the State’s negotiable debt are those published by the Agence France Trésor in its monthly bulletin, on a settlement-date basis, for the end of September 2026.
+The cost of indexation for the central government is transcribed from the Senate report cited above: an order of magnitude, on the central government’s scope, never subtracted from the decomposition.
 The official series are re-queried every week; the retrieval date changes only when a release changes a figure.
 The consolidated data is published openly as dette_officielle.json under a CC BY 4.0 licence — free reuse, including commercial use, on the single condition that the source is cited, except the Agence France Trésor values, which that producer restricts.
 The raw series belong to INSEE and Eurostat; what is licensed here is the compilation: the assembly of series, the derived quantities (implicit rate, decomposition, ratios, single-vintage equivalences) and their reconciliation.
