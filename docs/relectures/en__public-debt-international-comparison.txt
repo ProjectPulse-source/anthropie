@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/public-debt-international-comparison/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-18 ; texte servi de /en/public-debt-international-comparison/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 In 2025, at almost equal debt levels, Hungary devotes 8.8% of its public revenue to interest; Slovenia, 2.7%.
@@ -11,12 +11,12 @@ Data last updated 18 November 2026 The 27 countries of the European Union, main 
 Download: CSV · JSON · method
 The debt-to-GDP ratio, on its own, does not say what a debt costs.
 This page sets France alongside the other members of the European Union and a few economies beyond Europe, and asks what the ratio leaves out.
-Same debt, different burden
+With similar debt, does interest absorb the same share of revenue?
 Starting stock (debt at end-2024 / 2025 GDP) and burden (interest / revenue), 2025.
 Dotted lines link the “look-alike pairs”, two countries with similar debt whose burden differs most, picked out by a rule set before the calculation: for each country, its nearest neighbour by debt stock; pairs less than 10 percentage points apart; the three largest gaps in burden.
 Groups as in the data year: Bulgaria, outside the euro area in 2025, joined it on 1 January 2026.
 The result in one sentence.
-In 2025, between two countries that are nearest neighbours by debt, the share of revenue absorbed by interest can differ by a factor of 3.2 (Hungary and Slovenia): the stock alone does not determine the burden, because it sets neither the average interest cost of the debt nor the level of public revenue (taxes, social contributions and other revenue of all levels of government).
+In 2025, between two EU countries that are nearest neighbours by debt, the share of revenue absorbed by interest can differ by a factor of 3.2 (Hungary and Slovenia): the stock alone does not determine the burden, because it sets neither the average interest cost of the debt nor the level of public revenue (taxes, social contributions and other revenue of all levels of government).
 Why does Hungary devote a share of its revenue to interest 3.2 times as large as Slovenia?
 Not mainly through its debt: relative to GDP, it is only 1.09 times higher.
 The average rate paid on that debt is 2.75 times higher (5.52% against 2.01%), and its lower public revenue (43% of GDP against 46%) adds a further factor of 1.08: 1.09 × 2.75 × 1.08 does give 3.2.
@@ -26,7 +26,8 @@ Two groups, two lines.
 In 2025, among the six EU countries that remained outside the euro area and whose 2025 revenue Eurostat publishes, the relationship between debt and interest burden is 3.7 times steeper than among the twenty euro-area members.
 Denmark is not in either group: Eurostat does not, to date, publish its revenue for 2025.
 This is an association between countries observed in the same year, not a rate of change over time.
-It reflects in particular the high financing costs of some of these countries, and does not measure an effect of the common currency: the countries outside the euro in this regression do not form a homogeneous monetary regime, one of them keeping a fixed parity with the euro, an exchange rate held constant by its central bank (Bulgaria until it joined), the others letting their currency float, their exchange rates being set on the foreign exchange market.
+It reflects in particular the high financing costs of some of these countries.
+It does not measure an effect of the common currency: the countries outside the euro in this regression do not form a homogeneous monetary regime, one of them keeping a fixed parity with the euro, an exchange rate held constant by its central bank (Bulgaria until it joined), the others letting their currency float, their exchange rates being set on the foreign exchange market.
 The figure’s statistics: a relationship partly expected by construction, two lines that depend on no single country taken alone
 Ranked by debt and by burden, the countries fall in a similar order (rank correlation of 0.74); the stock accounts for only part of the dispersion of the burden (R² = 0.40).
 Within each group, it accounts for more: R² = 0.82 across the twenty euro-area countries, 0.81 across the six others.
@@ -35,7 +36,8 @@ What the figure adds is the heterogeneity of prices and revenue across countries
 The slope outside the euro area depends on no single country: when each of the six countries is removed in turn, it stays between 0.155 and 0.216.
 This test says nothing about the collective weight of the countries that pay the most.
 Ireland’s ratios to GDP compare poorly with those of other countries: its public revenue amounts to only 24% of its GDP, by far the lowest share among the countries compared.
-France: two readings of the same burden
+Where does France stand?
+Two readings of the same burden
 Depending on the measure, France looks better or worse placed.
 In 2025, interest on its debt amounts to 2.20% of GDP and 4.2% of public revenue.
 Relative to revenue, it is lower than in six countries that are nonetheless less indebted (Romania, Poland, Hungary, Portugal, Spain, Belgium); relative to GDP, it puts France in eighth place in the Union, and only five less indebted countries rank above it (Romania, Poland, Hungary, Spain, Belgium).
@@ -51,7 +53,7 @@ Why the gap between these two figures is not the rise in the ratio over one year
 The 5.2 points between the two figures measure the rise of the debt in euros during 2025, relative to the same GDP.
 The debt ratio, by contrast, is computed each year on that year’s GDP: it stood at 112.6% at the end of 2024 and rose by 3.0 points in 2025 (computed on amounts, not on rounded ratios).
 A third figure is a market price: the 10-year yield (3.35%), which is neither the average cost of debt already issued nor necessarily that of future borrowing.
-Why?
+How does the burden break down?
 One equation, three terms
 What the debt weighs on public revenue depends on three terms
 the debtstarting stock, % of GDP
@@ -67,12 +69,13 @@ It measures the average cost of the stock, not the rate at which a government bo
 With the same starting stock, two countries can differ in burden only through their price or their revenue.
 One mechanism adds to this over time, transmission: old borrowing continues to weigh on today’s cost, and is replaced only as it matures.
 Cost and revenue
-The price does not follow the stock.
+Does the price follow the stock?
 In the European Union in 2025, the level of debt, across all countries together, does not predict its price (R² = 0.00), which does not mean it never affects it.
 By group, the relationship stays weak in the euro area (R² = 0.07) and is stronger among the countries outside the euro, of which there are only six (R² = 0.53).
-Italy, heavily indebted, pays the highest implicit interest rate of the twenty euro-area countries (2.94%), but close to that of far less indebted countries, and France pays 1.99%, slightly below the simple average of euro-area countries (2.2%): the sixth lowest rate out of twenty.
+Italy, heavily indebted, pays the highest implicit interest rate of the twenty euro-area countries (2.94%), but close to that of far less indebted countries.
+France pays 1.99%, slightly below the simple average of euro-area countries (2.2%): the sixth lowest rate out of twenty.
 Revenue matters too.
-With the same debt and price, a government that collects a smaller share of national income devotes a larger share of its revenue to interest: this is the third factor in the gap between Hungary and Slovenia, and the reason for the two readings of the French burden.
+With the same debt and price, a government that collects a smaller share of national income devotes, by construction, a larger share of its revenue to interest: this is the third factor in the gap between Hungary and Slovenia, and the reason for the two readings of the French burden.
 See the 27 countries: stock, cost, revenue and burden
 The four dimensions, 2025 — Eurostat, general government, harmonised scope (strictly comparable)
 Country
@@ -247,7 +250,7 @@ no
 2.78%
 —
 —
-Average interest cost and recent inflation
+Is the average interest cost associated with recent inflation?
 Implicit interest rate on the debt (2025) and average inflation over the three previous years (harmonised index of consumer prices, Eurostat).
 Descriptive relationship over one year.
 The dashed area of the previous chart, enlarged: same data, every country named.
@@ -265,7 +268,8 @@ Thirty years of spreads against Germany
 Market rates, not the implicit interest rate on the stock; the countries outside the euro are comparators, not a control group.
 No, judging by thirty years of 10-year rates compared with Germany’s.
 Before 1999, convergence was not specific to the euro: the Italian spread narrows from 5.36 to 0.31 points, but so does Sweden’s, from 3.39 to 0.42, although it would not adopt the common currency.
-In 2012, the common currency does not guarantee convergence: the yield on Greek 10-year bonds exceeds Germany’s by 21.0 points, the Portuguese one by 9.05, more than in any country that stayed outside; the ECB’s interventions from summer 2012 contributed to narrowing the spreads, though their role cannot be isolated from the other factors of the period.
+In 2012, the common currency does not guarantee convergence: the yield on Greek 10-year bonds exceeds Germany’s by 21.0 points, the Portuguese one by 9.05, more than in any country that stayed outside.
+The ECB’s interventions from summer 2012 contributed to narrowing the spreads, though their role cannot be isolated from the other factors of the period.
 In 2025, on an annual average, the euro’s border does not separate those who borrow expensively from the others: Sweden and Denmark borrow more cheaply than Germany, France 0.76 points more, Hungary 4.35 points.
 The euro removed exchange-rate risk between its members; it did not guarantee them the German rate.
 The Swedish case refutes the idea that adopting the euro alone explains the convergence; it does not measure what the euro brought to those who adopted it.
@@ -378,7 +382,8 @@ If financing conditions remained above the cost of the debt being replaced, each
 Its share of revenue would not necessarily rise, if revenue grew too.
 The mechanism is set out on the page What does French public debt actually cost?
 In Denmark, the indicator points the other way: the 10-year yield is below the implicit interest rate on the stock (−0.45 percentage points).
-The stock: a ranking that does not tell the whole story
+Where does France rank by its debt?
+A ranking that does not tell the whole story
 Closing stock: Eurostat, Maastricht gross debt of general government, end-2025.
 In blue, the euro area; in orange, countries outside the euro area.
 At the end of 2025, France is the third most indebted country in the European Union, at 115.7% of GDP.
@@ -549,7 +554,7 @@ The level of a debt does not, on its own, say what it weighs.
 In the Union, between two countries that are nearest neighbours by debt, the share of revenue absorbed by interest can vary by a factor of 3.2; between Hungary and Slovenia, most of the gap comes arithmetically from the price paid on the debt, not from its level.
 France’s position depends on the measure.
 With the third highest debt in the Union, at 115.7% of GDP, it pays an implicit interest rate slightly below the simple euro-area average and devotes 4.2% of its revenue to interest, but 2.20% of its GDP: public revenue among the highest in the Union makes the first measure more favourable than the second.
-And this position has a horizon: if the market yield stayed above the average cost, refinancing would bring the two closer, without the debt needing to grow.
+And if the market yield stayed above the average cost, this position would not last: refinancing would bring the two closer, without the debt needing to grow.
 A common currency does not set the price.
 The euro removed exchange-rate risk between its members, not the yield spread: convergence before 1999 also reached Sweden, which stayed outside; in 2012, the yield on Greek bonds exceeded Germany’s by 21.0 points, and the ECB’s interventions contributed to the easing that followed, among other factors.
 What remains is the trajectory: the same level of debt can rise or fall depending on the gap between interest rates and growth and on the primary balance.
@@ -566,8 +571,9 @@ In 2025, the 10-year yield exceeded this implicit rate by 1.36 percentage points
 Does the euro lower the cost of debt?
 Not automatically.
 Before 1999, yield spreads against Germany narrowed sharply in the future euro countries, but also in Sweden, which never joined.
-In 2012, spreads widened sharply for the most vulnerable members (the yield on Greek bonds exceeded Germany’s by 21.0 points), Greece and Portugal more than any country that stayed outside; the ECB’s interventions contributed to the easing that followed.
-In 2025, Sweden and Denmark borrow more cheaply than Germany at 10 years, France more expensively.
+In 2012, spreads widened sharply for the most vulnerable members (the yield on Greek bonds exceeded Germany’s by 21.0 points), Greece and Portugal more than any country that stayed outside.
+The ECB’s interventions contributed to the easing that followed, among other factors.
+In 2025, on an annual average, Sweden and Denmark borrow more cheaply than Germany at 10 years, France more expensively.
 On its debt stock, Sweden pays 1.89%, like Germany (1.82%).
 The euro removes exchange-rate risk between its members; it does not guarantee them the German rate.
 Does high debt necessarily lead to a crisis?
