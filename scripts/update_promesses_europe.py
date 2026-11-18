@@ -20,6 +20,9 @@ Entrées (script LOCAL ; il s'arrête si elles manquent) :
 Gardes (toutes ARRÊTENT ; le texte servi n'est relu que par U9) :
   U1  typologie complète et citée (contrôles de test_u_e1) ;
   U2  bases qualifiées sans unité non classée, concordance exacte avec le témoin du Conseil (test_u_e2) ;
+  U2 bis (17/11/2026) les règles de procédure 293(1) et 294(9), qui imposent l'unanimité sans fonder d'acte, sortent du
+      compte des bases à l'unanimité avec leur motif (publiés dans calcul.bases.ecartes) ; l'une d'elles absente de la
+      liste brute arrête (mutation dans l'autotest) ;
   U3  TÉMOIN : sur la période commune (22/12/2009 - 28/03/2023), les comptes « contre » et « abstention » de chaque État,
       recalculés du jeu SWP, égalent la transcription du relevé du Conseil, aux seuls écarts expliqués près (acte du
       28/03/2023 absent de SWP ; deux fiches SWP sans titre du 17/05/2021 démenties par le registre des documents) ;
@@ -161,7 +164,7 @@ ACTES = [
      (23, 1, 4, 0), "ST-12596-2015-INIT", "32015R1775", "règlement (UE) 2015/1775", "Regulation (EU) 2015/1775", "2015-10-06", "2015/0028 (COD)"),
     ("2025-07-08", "abstention", "Décision sur l'accord d'interprétation du traité sur la Charte de l'énergie", "Decision on the agreement on the interpretation of the Energy Charter Treaty",
      (22, 1, 4, 0), "ST-11350-2025-INIT", "32025D1904", "décision (UE) 2025/1904", "Decision (EU) 2025/1904", "2025-09-10", "2024/0148 (COD)"),
-    ("2026-02-23", "contre", "Règlement sur la notion de « pays tiers sûr »", "Regulation on the 'safe third country' concept",
+    ("2026-02-23", "contre", "Règlement sur la notion de « pays tiers sûr »", "Regulation on the “safe third country” concept",
      (23, 3, 0, 1), "ST-6628-2026-INIT", "32026R0463", "règlement (UE) 2026/463", "Regulation (EU) 2026/463", "2026-02-24", "2025/0132 (COD)"),
 ]
 FR_ACTES = [(a[0], a[1], a[2], a[3]) for a in ACTES]
@@ -577,6 +580,26 @@ def typologie() -> dict:
     return s
 
 
+# Relecture des sources du 17/11/2026 (lot « promesses-a », P1-1) : deux paragraphes du TFUE imposent l'unanimité au
+# Conseil pour AMENDER une proposition de la Commission (293, § 1) ou retenir des amendements du Parlement qu'elle
+# désapprouve (294, § 9) ; ils ne fondent aucun acte, comme 238(4), que test_u_e2 écarte déjà (« règle générale de vote du
+# Conseil »). La page dit écarter « les articles qui décrivent la procédure » : ils sortent du compte des bases, avec leur
+# motif, publié dans le jeu (calcul.bases.ecartes). Condition de mort : test_u_e2 les écarte lui-même.
+ECARTS_UNA_PROCEDURE = {
+    "293(1)": "règle de procédure : amendement par le Conseil de la proposition de la Commission",
+    "294(9)": "règle de procédure : amendements du Parlement ayant reçu un avis négatif de la Commission",
+}
+
+
+def exclure_procedure(una_brut: set) -> set:
+    """U2 bis : les règles de procédure sortent du compte des bases ; si l'une manque à la liste brute, la source ou le
+    classement de test_u_e2 a changé, et le compte publié ne serait plus celui que la page décrit."""
+    absents = sorted(set(ECARTS_UNA_PROCEDURE) - set(una_brut))
+    if absents:
+        raise Arret("U2 bis : règle(s) de procédure %s absente(s) de la liste brute de l'unanimité : relire test_u_e2" % absents)
+    return set(una_brut) - set(ECARTS_UNA_PROCEDURE)
+
+
 def bases() -> dict:
     _, rel = ue2.lire()
     q, nc = ue2.qualifier(rel)
@@ -584,13 +607,16 @@ def bases() -> dict:
         raise Arret("U2 : unités non classées %s" % nc)
     plo = {x["unite"] for x in q if x["plo"] == "base"} | {u for u, v in ue2.RENVOI_PLO.items() if v[0] == "base"}
     cond = set(ue2.CONDITIONNEL_PLO) | {u for u, v in ue2.RENVOI_PLO.items() if v[0] == "conditionnel"}
-    una = {x["unite"] for x in q if x["una_q"] == "base"}
+    una = exclure_procedure({x["unite"] for x in q if x["una_q"] == "base"})
     seul_nous, seul_tem = ue2.comparer(plo | cond, ue2.temoin())
     if seul_nous or seul_tem:
         raise Arret("U2 : écart au témoin du Conseil (%s / %s)" % (seul_nous, seul_tem))
     art = lambda S: len({u.split(",")[0].split("(")[0] for u in S})  # noqa: E731
     return {"plo": sorted(plo), "cond": sorted(cond), "una": sorted(una), "plo_art": art(plo), "una_art": art(una),
-            "mixtes": sorted(plo & una), "ecartes_plo": len(ue2.ECARTS_PLO), "ecartes_una": len(ue2.ECARTS_UNA),
+            "mixtes": sorted(plo & una), "ecartes_plo": len(ue2.ECARTS_PLO),
+            "ecartes_una": len(ue2.ECARTS_UNA) + len(ECARTS_UNA_PROCEDURE),
+            "ecartes": {"plo": dict(sorted(ue2.ECARTS_PLO.items())),
+                        "una": dict(sorted({**ue2.ECARTS_UNA, **ECARTS_UNA_PROCEDURE}.items()))},
             "temoin": len(ue2.temoin()), "q": {x["unite"]: (x["plo"], x["una_q"]) for x in q}}
 
 
@@ -875,7 +901,7 @@ INSTRUMENTS = [
     (["207(2)"], "Politique commerciale : cadre de mise en œuvre", "Commercial policy: implementing framework"),
     (["207(4)"], "Politique commerciale : certains accords", "Commercial policy: certain agreements"),
     (["192(1)"], "Environnement", "Environment"),
-    (["192(2)"], "Environnement : dispositions fiscales, aménagement du territoire, énergie", "Environment: fiscal provisions, land use, energy mix"),
+    (["192(2)"], "Environnement : dispositions fiscales, aménagement du territoire, énergie", "Environment: fiscal provisions, town and country planning, energy mix"),
     (["43(2)"], "Agriculture et pêche : organisation commune des marchés", "Agriculture and fisheries: common market organisation"),
     (["78(2)"], "Asile", "Asylum"),
     (["79(2)"], "Immigration", "Immigration"),
@@ -982,6 +1008,14 @@ def autotest(sw):
     if not ue1.verifier(s):
         raise Arret("mutation domaine retiré : U1 n'a pas mordu")
     out.append("domaine retiré -> U1")
+    try:  # 294(9) absent de la liste brute : U2 bis doit arrêter
+        exclure_procedure({"293(1)", "113, al. 1"})
+    except Arret as e:
+        if not str(e).startswith("U2 bis"):
+            raise
+    else:
+        raise Arret("mutation règle de procédure retirée : U2 bis n'a pas mordu, contrôle ABSENT")
+    out.append("règle de procédure retirée de la liste brute -> U2 bis")
     return out
 
 
@@ -1111,7 +1145,8 @@ def _main() -> int:
     typ = typologie()
     g.append("U1 : typologie complète et citée (%s exclusives, %s partagées, %s d'appui)" % tuple(len(l["domaines"]) for l in typ["listes"]))
     B = bases()
-    g.append("U2 : %d bases PLO (%d articles), %d conditionnelles, %d bases à l'unanimité ; témoin du Conseil : concordance exacte" % (len(B["plo"]), B["plo_art"], len(B["cond"]), len(B["una"])))
+    g.append("U2 : %d bases PLO (%d articles), %d conditionnelles, %d bases à l'unanimité (%d articles ; U2 bis : règles de procédure %s écartées) ; témoin du Conseil : concordance exacte"
+             % (len(B["plo"]), B["plo_art"], len(B["cond"]), len(B["una"]), B["una_art"], ", ".join(sorted(ECARTS_UNA_PROCEDURE))))
     sw = swp_fenetre()
     V = votes(TOUT, FENETRE, sw)
     g.append("U3 : relevé du Conseil concordant avec SWP pays par pays (écarts expliqués seulement) ; règles de vote %s = %d entrées"

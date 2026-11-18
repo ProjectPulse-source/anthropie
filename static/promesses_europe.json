@@ -147,7 +147,7 @@
  },
  "gardes": [
   "U1 : typologie complète et citée (5 exclusives, 11 partagées, 7 d'appui)",
-  "U2 : 81 bases PLO (74 articles), 2 conditionnelles, 51 bases à l'unanimité ; témoin du Conseil : concordance exacte",
+  "U2 : 81 bases PLO (74 articles), 2 conditionnelles, 49 bases à l'unanimité (46 articles ; U2 bis : règles de procédure 293(1), 294(9) écartées) ; témoin du Conseil : concordance exacte",
   "U3 : relevé du Conseil concordant avec SWP pays par pays (écarts expliqués seulement) ; règles de vote 1622 + 132 + 1 = 1755 entrées",
   "U4 : France 2 contre, 3 abstentions, 1750 pour (liste des actes cohérente)",
   "U5 : transposition contrôlée par le texte de la Commission",
@@ -281,8 +281,6 @@
     "252, al. 1",
     "257, al. 4",
     "262, al. 1",
-    "293(1)",
-    "294(9)",
     "301, al. 2",
     "305, al. 2",
     "308, al. 3",
@@ -308,14 +306,40 @@
     "92, al. 1"
    ],
    "plo_art": 74,
-   "una_art": 48,
+   "una_art": 46,
    "mixtes": [
     "153(2)",
     "82(2)",
     "83(1)"
    ],
    "ecartes_plo": 11,
-   "ecartes_una": 7,
+   "ecartes_una": 9,
+   "ecartes": {
+    "plo": {
+     "192(2)": "passerelle : la procédure ordinaire est la cible, la décision se prend à l'unanimité",
+     "218(6)": "renvoi : approbation d'accords dans les domaines soumis à la procédure",
+     "289(1)": "définition de la procédure",
+     "294(1)": "description de la procédure",
+     "294(15)": "description de la procédure",
+     "297(1)": "signature et publication des actes",
+     "333(2)": "passerelle (coopération renforcée) : la procédure ordinaire est la cible",
+     "48, al. 2": "frein d'urgence : la procédure est suspendue",
+     "81(3)": "passerelle : la procédure ordinaire est la cible, la décision se prend à l'unanimité",
+     "82(3)": "frein d'urgence : la procédure est suspendue",
+     "83(3)": "frein d'urgence : la procédure est suspendue"
+    },
+    "una": {
+     "235(1)": "règle générale de vote du Conseil européen",
+     "238(4)": "règle générale de vote du Conseil",
+     "244, al. 1": "Conseil européen",
+     "292, al. 1": "renvoi général aux domaines où l'unanimité est requise",
+     "293(1)": "règle de procédure : amendement par le Conseil de la proposition de la Commission",
+     "294(9)": "règle de procédure : amendements du Parlement ayant reçu un avis négatif de la Commission",
+     "330, al. 2": "définition (coopération renforcée)",
+     "355, al. 13": "Conseil européen",
+     "86(4)": "Conseil européen"
+    }
+   },
    "temoin": 83
   }
  },
@@ -944,7 +968,7 @@
      "ordinary legislative procedure (qualified majority)"
     ],
     [
-     "Environment: fiscal provisions, land use, energy mix",
+     "Environment: fiscal provisions, town and country planning, energy mix",
      "art. 192(2)",
      "unanimity in the Council"
     ],
@@ -1066,7 +1090,7 @@
     [
      "23 February 2026",
      "against",
-     "Regulation on the 'safe third country' concept",
+     "Regulation on the “safe third country” concept",
      "23 in favour, 3 against, 0 abstentions, 1 not taking part",
      "Regulation (EU) 2026/463 of 24 February 2026",
      "none (vote later than the SWP dataset)",
@@ -1315,8 +1339,8 @@
   "cit_3_2": "L'Union dispose également d'une compétence exclusive pour la conclusion d'un accord international lorsque cette conclusion est prévue dans un acte législatif de l'Union, ou est nécessaire pour lui permettre d'exercer sa compétence interne, ou dans la mesure où elle est susceptible d'affecter des règles communes ou d'en altérer la portée.",
   "n_plo": "81",
   "n_plo_art": "74",
-  "n_una": "51",
-  "n_una_art": "48",
+  "n_una": "49",
+  "n_una_art": "46",
   "n_cond": "Deux",
   "n_temoin": "83",
   "debut": "22 décembre 2009",
@@ -1413,8 +1437,8 @@
   "n_appui": "7",
   "n_plo": "81",
   "n_plo_art": "74",
-  "n_una": "51",
-  "n_una_art": "48",
+  "n_una": "49",
+  "n_una_art": "46",
   "n_cond": "Two",
   "n_temoin": "83",
   "debut": "22 December 2009",
