@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Passe de forme du lot « Langue » publiée après jugement externe à l'aveugle (FR)
+- **Commits** `e79950ed` (synthèse en quatre temps, deux corrections du contradicteur) et `88c37003` (synthèse ramenée
+  au corps de la page après une relecture indépendante du texte servi, en trois passages ; même famille dans la
+  description, « En trois phrases » et la section des textes ; frise : rôle des ronds, panneaux du téléphone partagés au
+  repère de 2013, axe calculé, légendes au trait des tracés ; garde de transition PIRLS).
+- **Jugement externe** : paquet n° 02, réponse archivée avant lecture (`9A95A0CC…78C1BBA5`) et arbitrée ; outil des
+  paquets corrigé (l'annexe C n'est plus demandée qu'à un paquet qui en a une).
+- **Relecture et figure** : synthèse relue en trois passages (12 points, puis 7, puis 1), chaque constat vérifié sur le
+  corps ; frise contrôlée par deux contrôleurs indépendants jusqu'à un passage sans défaut nouveau.
+- **Contrôles** : Hugo 0, `typo_build` 0, `check-rendu-ressources` 0, `check-typo-fr` 0, `check-all --ci` 0,
+  `check-figures` 0 (278 SVG), 57 gardes du générateur ; lettre : aucun nombre retiré ; envoi LANGUE-ELEVES-2026-10 :
+  passage cité présent avant et après.
+- **Servi** : déploiements `hugo.yml` 44351521836 et 44361185789 réussis ; version servie attestée le 18/11 :
+  326 phrases, 0 écart ; 4 figures et 9 scripts identiques au build ; description servie vérifiée.
+
 ### 2026-11-18 — Passe de forme du lot « Dette A » publiée après jugement externe à l'aveugle (FR, EN)
 
 - **Commits** `0eef937a` (Pourquoi la dette augmente, et texte de méthode commun du dossier `dette-methode`),
