@@ -52,6 +52,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-18 — Passe de forme du lot « Promesses B » publiée après jugement externe à l'aveugle (FR, EN)
+- **Commit** `10c9e40c` (« Une loi votée s'applique-t-elle tout de suite ? » : la lecture du Sénat éprouvée par sa
+  série, sur le segment de même définition ; « pas ininterrompue », et non plus « non sa constance » ; jetons du
+  générateur, garde A12 ; `pct` arrête sur une valeur non entière au lieu de la tronquer).
+- **Jugement externe** : paquet n° 07, réponse archivée avant lecture (`EF09A9CD…35269363`) et arbitrée (P1 accepté :
+  la page ne prétend plus réfuter le « constante » du Sénat, terme ambigu).
+- **Relecture** : texte servi relu contre le corps par un relecteur indépendant avant publication (nombres et sessions
+  vérifiés de cinq façons ; trois défauts de rédaction corrigés ; second passage sans défaut nouveau).
+- **Contrôles** : générateur (15 gardes ; A12 et `pct` vues mordre), Hugo 0, `typo_build` 0, `check-rendu-ressources` 0,
+  `check-typo-fr` 0, `check-all --ci` 0, `check-figures` 0 ; dates d'affichage classées ; lettre : aucun nombre retiré ;
+  aucun envoi armé ne cite la page.
+- **Servi** : déploiement `hugo.yml` 44367581329 réussi ; version servie attestée le 18/11 : FR 600 phrases, EN
+  619 phrases, 0 écart ; 9 scripts identiques au build.
+
 ### 2026-11-18 — Passe de forme du lot « Langue » publiée après jugement externe à l'aveugle (FR)
 - **Commits** `e79950ed` (synthèse en quatre temps, deux corrections du contradicteur) et `88c37003` (synthèse ramenée
   au corps de la page après une relecture indépendante du texte servi, en trois passages ; même famille dans la
