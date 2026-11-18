@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 331" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="dc-t">Training a general practitioner in France, and the length of a presidential term</title><desc id="dc-d">Two bars on the same scale. Above, the general practice curriculum: 3 years of first cycle, 3 years of second cycle, then 4 years of general practice residency, the last under supervised autonomy: 10 years from the first year and 9 from admission to the second year. Below, a presidential term of 5 years. Comparison of scale only.</desc>
-<rect width="720" height="331" fill="#ffffff"/>
-<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Training a general practitioner in France, and the length of a presidential term</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 345" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="dc-t">Training a general practitioner in France, and the length of a presidential term</title><desc id="dc-d">Two bars on the same scale. Above, the general practice curriculum: 3 years of first cycle, 3 years of second cycle, then 4 years of general practice residency, the last under supervised autonomy: 10 years from the first year and 9 from admission to the second year. Below, a presidential term of 5 years. Comparison of scale only.</desc>
+<rect width="720" height="345" fill="#ffffff"/>
+<text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Training a general practitioner in France, and the length of a presidential term</text>
 <text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">in years, minimum durations written in the texts in force</text>
 <text x="0.0" y="91.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">General practice</text>
 <rect x="120.0" y="70" width="177.0" height="32" fill="#c9cdd3" stroke="#ffffff" stroke-width="2"/>
@@ -35,7 +35,8 @@
 <text class="pied-source" x="0" y="253.0" font-size="11" fill="#52514e">Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6</text>
 <text class="pied-note" x="0" y="267.0" font-size="11" fill="#52514e">Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered</text>
 <text class="pied-note" x="0" y="281.0" font-size="11" fill="#52514e">residency from the 2023 academic year. Comparison of scale only: neither the effect of a policy nor the date of its</text>
-<text class="pied-note" x="0" y="295.0" font-size="11" fill="#52514e">first effects; residents provide care before the end.</text>
-<text class="pied-licence" x="0" y="309.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="323.0" font-size="11" fill="#6f6c66">· stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/</text>
+<text class="pied-note" x="0" y="295.0" font-size="11" fill="#52514e">first effects; residents provide care before the end of the curriculum; an additional student, however, does not enter</text>
+<text class="pied-note" x="0" y="309.0" font-size="11" fill="#52514e">residency until after the second cycle.</text>
+<text class="pied-licence" x="0" y="323.0" font-size="11" fill="#6f6c66">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="337.0" font-size="11" fill="#6f6c66">· stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/</text>
 </svg>

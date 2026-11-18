@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 756" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dam-t dam-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="dam-t">Students admitted into the medical curriculum in France, 1972-2025</title><desc id="dam-d">Annual bars of students admitted to the second year of the first cycle: 8,588 places filled in 1972, a minimum of 3,500 in 1993, 9,361 in 2020; then from 10,806 to 11,133 admissions a year from 2021 to 2025.</desc>
+<title id="dam-t">Students admitted into the medical curriculum in France, 1972-2025</title><desc id="dam-d">Annual bars of students admitted to the second year of the first cycle: 8,588 places filled in 1972, a minimum of 3,500 in 1993, 9,361 in 2020; then from 10,806 to 11,310 admissions a year from 2021 to 2025 (11,133 in 2025).</desc>
 <rect width="300" height="756" fill="#ffffff"/>
 <text x="0.0" y="20.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">Students admitted into the</text>
 <text x="0.0" y="42.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">medical curriculum in France,</text>
@@ -94,6 +94,6 @@
 <text class="pied-note" x="0.0" y="674.0" font-size="13.5" fill="#52514e" text-anchor="start">since 2021, students admitted. Each</text>
 <text class="pied-note" x="0.0" y="691.0" font-size="13.5" fill="#52514e" text-anchor="start">bar at the year published by the</text>
 <text class="pied-note" x="0.0" y="708.0" font-size="13.5" fill="#52514e" text-anchor="start">source, no shift.</text>
-<text class="pied-licence" x="0.0" y="729.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="729.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compiled by Stéphane Lalut, CC BY 4.0</text>
 <text class="pied-licence" x="0.0" y="746.0" font-size="13.5" fill="#6f6c66" text-anchor="start">· stephane-lalut.com</text>
 </svg>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 699" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dam-t dam-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="dam-t">Étudiants admis dans le cursus de médecine, 1972-2025</title><desc id="dam-d">Barres annuelles des étudiants admis en deuxième année du premier cycle : 8 588 places pourvues en 1972, minimum de 3 500 en 1993, 9 361 en 2020 ; puis de 10 806 à 11 133 admis par an de 2021 à 2025.</desc>
+<title id="dam-t">Étudiants admis dans le cursus de médecine, 1972-2025</title><desc id="dam-d">Barres annuelles des étudiants admis en deuxième année du premier cycle : 8 588 places pourvues en 1972, minimum de 3 500 en 1993, 9 361 en 2020 ; puis de 10 806 à 11 310 admis par an de 2021 à 2025 (11 133 en 2025).</desc>
 <rect width="300" height="699" fill="#ffffff"/>
 <text x="0.0" y="20.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">Étudiants admis dans le cursus</text>
 <text x="0.0" y="42.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">de médecine, 1972-2025</text>
@@ -91,6 +91,6 @@
 <text class="pied-note" x="0.0" y="617.0" font-size="13.5" fill="#52514e" text-anchor="start">partir de 2010-2011 ; depuis 2021,</text>
 <text class="pied-note" x="0.0" y="634.0" font-size="13.5" fill="#52514e" text-anchor="start">admis. Chaque barre à l&#x27;année publiée</text>
 <text class="pied-note" x="0.0" y="651.0" font-size="13.5" fill="#52514e" text-anchor="start">par la source, sans décalage.</text>
-<text class="pied-licence" x="0.0" y="672.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="672.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compilation Stéphane Lalut, CC BY 4.0</text>
 <text class="pied-licence" x="0.0" y="689.0" font-size="13.5" fill="#6f6c66" text-anchor="start">· stephane-lalut.com</text>
 </svg>

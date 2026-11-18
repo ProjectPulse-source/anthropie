@@ -51,7 +51,10 @@ Temporalité :
       « was scheduled », « planned by »), jamais au futur ; et AUCUNE phrase ne dit le début constaté (« a commencé »,
       « has begun »…) tant qu'une source officielle qui le constate n'est pas archivée dans sources_delais/ et déclarée
       dans PREUVE_DEBUT. Au 03/11/2026, sept communiqués d'ARS lus (du 12/10 au 02/11) l'annonçaient tous au futur ;
-      aucun ne le constatait : la page dit « devait » ;
+      aucun ne le constatait : la page dit « devait ». Le 17/11/2026 (lot promesses-b de la reprise des ressources),
+      PREUVE_DEBUT = le communiqué de presse de l'ARS Provence-Alpes-Côte d'Azur du 4 novembre 2026, qui le CONSTATE
+      (« Depuis le 2 novembre 2026, 193 docteurs juniors en médecine générale ont rejoint leurs terrains de stage »),
+      extrait archivé dans sources_delais/ ; T3 contrôle son empreinte et la présence du constat ;
   T4  « moins de quatre ans » (loi -> première année d'autonomie supervisée) et « près de cinq ans » (loi -> premiers
       diplômés au plus tôt) : inégalités STRICTES, sans quoi la phrase n'est pas écrite.
 D1 bis : citations retrouvées mot pour mot ; D1 ter : chaque nombre d'une traduction figure dans l'original.
@@ -306,8 +309,10 @@ def lire() -> dict:
         t["postes_%s" % an] = {"id": v[3], "sha": v[1], "texte": ""}
     pages = {"fr": PAGE_FR.read_text(encoding="utf-8"), "en": PAGE_EN.read_text(encoding="utf-8"),
              "og": OG.read_text(encoding="utf-8")}
+    preuve = (SRC / PREUVE_DEBUT[0]).read_bytes() if PREUVE_DEBUT else None
     return {"textes": t, "dd76": serie, "ondps": ondps, "pdf_sha": t["ondps"]["sha"], "texte_pdf": texte_pdf,
-            "rpps": rpps, "pages": pages, "aujourdhui": dt.date.today(), "libelles": copy.deepcopy(T), "postes": postes}
+            "rpps": rpps, "pages": pages, "aujourdhui": dt.date.today(), "libelles": copy.deepcopy(T), "postes": postes,
+            "preuve_debut": preuve}
 
 
 # ------------------------------------------------------------------ postes d'internat (lecture par position, P1)
@@ -722,10 +727,17 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         "pg_hausse_mg_23_pct": n(100 * (r["postes"][max(POSTES)]["mg"] / r["postes"]["2023"]["mg"] - 1), 1),
         "pg_internat": lg.lettres(r["mg"], lang),
         "etr_p12": n(r["p12"], 1), "etr_p26": n(r["p26"], 1), "etr_26": n(r["etr26"]), "tot_26": n(r["tot26"]),
-        "releve_le": ("06/11/2026 (textes lus sur Légifrance les 05, 06, 11 et 12/10/2026 ; instruction du 21 mai 2026 ; DREES, "
-                      "2 juillet 2026 ; ONDPS, 19 décembre 2025 ; arrêtés de postes d'internat, JO de 2023 à 2026, ceux de 2023 lus le 07/11/2026)") if lang == "fr" else
-                     ("6 November 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; "
-                      "DREES, 2 July 2026; ONDPS, 19 December 2025; orders on residency posts, Journal officiel 2023 to 2026, those of 2023 read on 7 November 2026)"),
+        # 17/11/2026 (lot promesses-b, relecture P2-16) : date de la dernière lecture (communiqué de l'ARS PACA), et les
+        # arrêtés des objectifs nationaux, absents de la liste
+        "releve_le": ("17/11/2026 (textes lus sur Légifrance les 05, 06, 11 et 12/10/2026 ; instruction du 21 mai 2026 ; DREES, "
+                      "2 juillet 2026 ; ONDPS, 19 décembre 2025 ; arrêtés des objectifs nationaux du 13 septembre 2021 et du "
+                      "16 octobre 2026 ; arrêtés de postes d'internat, JO de 2023 à 2026, ceux de 2023 lus le 07/11/2026 ; "
+                      "ARS Provence-Alpes-Côte d'Azur, communiqué du 4 novembre 2026, lu le 17/11/2026)") if lang == "fr" else
+                     ("17 November 2026 (texts read on Légifrance on 5, 6, 11 and 12 October 2026; instruction of 21 May 2026; "
+                      "DREES, 2 July 2026; ONDPS, 19 December 2025; orders setting the national targets of 13 September 2021 "
+                      "and 16 October 2026; orders on residency posts, Journal officiel 2023 to 2026, those of 2023 read on "
+                      "7 November 2026; regional health agency of Provence-Alpes-Côte d'Azur, press release of 4 November 2026, "
+                      "read on 17 November 2026)"),
     }
 
 
@@ -765,6 +777,24 @@ T_FUTUR = re.compile(r"\bdoit\b|\bdoivent\b|\bis (?:scheduled|due|set)\b|\bwill\
 T_CONSTAT = re.compile(r"(?<![lL]['’])\b(?:a|ont) (?:commencé|débuté|pris leurs fonctions)|\bha(?:s|ve) (?:begun|started)|\bbegan\b",
                        re.I)
 PREUVE_DEBUT = None   # (fichier archivé dans sources_delais/, empreinte) d'une source officielle qui CONSTATE le début
+# 17/11/2026 : l'ARS Provence-Alpes-Côte d'Azur le constate au passé dans son communiqué de presse du 4 novembre 2026
+# (page lue le 17/11/2026, extrait sans retouche ; les effectifs du communiqué varient, 193 puis 160 et 161 : la page
+# ne les reprend pas).
+PREUVE_DEBUT = ("ars_paca_communique_2026-11-04_extrait.txt",
+                "103b6b36d2fb092db800f5cab021752fceff32362be8f3589d6b4a4b82cf52d2")
+PREUVE_CONSTAT = "Depuis le 2 novembre 2026, 193 docteurs juniors en médecine générale ont rejoint leurs terrains de stage"
+
+
+def preuve_debut(S: dict) -> bool:
+    """Vrai si la preuve archivée du début est présente, à son empreinte, et dit le constat ; une preuve altérée arrête."""
+    b = S.get("preuve_debut")
+    if PREUVE_DEBUT is None or b is None:
+        return False
+    if hashlib.sha256(b).hexdigest() != PREUVE_DEBUT[1]:
+        raise Arret("T3 : preuve du debut (%s) differente de l'archive lue (empreinte)" % PREUVE_DEBUT[0])
+    if PREUVE_CONSTAT not in re.sub(r"\s+", " ", b.decode("utf-8").replace(" ", " ")):
+        raise Arret("T3 : preuve du debut sans le constat attendu (%s)" % PREUVE_DEBUT[0])
+    return True
 DATE_CLAIRE = re.compile(r"\b2\s*(?:&nbsp;|\u00a0)?\s*(?:novembre|November)\s*(?:&nbsp;|\u00a0)?\s*2026")
 
 
@@ -777,7 +807,7 @@ def phrases(texte: str):
             yield par, ph
 
 
-def prose(textes: dict, an_reforme: int, passee: bool = False) -> int:
+def prose(textes: dict, an_reforme: int, passee: bool = False, preuve: bool = False) -> int:
     n = 0
     for nom, texte in textes.items():
         for par, ph in phrases(texte):
@@ -802,7 +832,7 @@ def prose(textes: dict, an_reforme: int, passee: bool = False) -> int:
             if "debut_conso" in jetons and passee and (not T_PREVU_PASSE.search(ph) or T_FUTUR.search(ph)):
                 raise Arret("T3 %s : date passee, la phrase doit la dire prevue AU PASSE (« devait », « date prevue par »), "
                             "jamais au futur : %s" % (nom, ph[:90]))
-            if passee and PREUVE_DEBUT is None and T_CONSTAT.search(ph) and re.search(
+            if passee and not preuve and T_CONSTAT.search(ph) and re.search(
                     r"docteur|quatrième année|fourth year|consolidation|debut_conso", ph, re.I):
                 raise Arret("T3 %s : debut de la quatrieme annee dit constate sans source officielle archivee "
                             "(PREUVE_DEBUT) : %s" % (nom, ph[:90]))
@@ -821,7 +851,7 @@ def textes_prose(S: dict) -> dict:
 
 def verifier(S: dict):
     r, g = calculer(S)
-    n = prose(textes_prose(S), r["an_reforme"], S.get("passee", False))
+    n = prose(textes_prose(S), r["an_reforme"], S.get("passee", False), preuve_debut(S))
     # le nombre de phrases relues n'entre pas dans le jeu publié : une retouche de prose ne doit pas réécrire les données
     log("prose : %d phrases relues (pages FR et EN avec front matter, carte, libelles des figures)" % n)
     g.append("Q1-Q2, T2-T4 : pages FR et EN avec front matter, carte, libelles des figures")
@@ -870,10 +900,10 @@ def pied(e, y0, source, note) -> str:
 
 T = {
     "fr": {"src1": "Arrêté du 8 avril 2013, art. 1 ; code de l'éducation, art. L632-2 ; loi n° 2022-1616, art. 37 ; Constitution, art. 6 (Légifrance)",
-           "note1": "Durées minimales, sans redoublement, interruption ni passerelle, pour les étudiants entrés en internat à partir de la rentrée 2023. Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets ; les internes soignent avant la fin du cursus.",
+           "note1": "Durées minimales, sans redoublement, interruption ni passerelle, pour les étudiants entrés en internat à partir de la rentrée 2023. Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets ; les internes soignent avant la fin du cursus, mais un étudiant admis en plus n'entre en internat qu'après le\u00a0deuxième\u00a0cycle.",
            "src2": "DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)",
            "note2": "Admissions en deuxième année du premier cycle, ou directement en troisième pour certaines passerelles. Jusqu'en 2020, places pourvues du numerus clausus, élargi aux passerelles et aux droits au remords à partir de 2010-2011 ; depuis 2021, admis. Chaque barre à l'année publiée par la source, sans décalage.",
-           "t1": "Former un médecin généraliste, et la durée d'un mandat présidentiel",
+           "t1": "Former un médecin généraliste,\u00a0et la durée d'un\u00a0mandat\u00a0présidentiel",
            "s1": "en années, durées minimales écrites dans les textes en vigueur",
            "d1": "Deux barres de même échelle. En haut, le cursus de médecine générale : {a} ans de premier cycle, {b} ans de "
                  "deuxième cycle, puis {c} ans d'internat de médecine générale dont la dernière en autonomie supervisée, soit {d} "
@@ -889,14 +919,14 @@ T = {
            "s2": "admissions en deuxième année du premier cycle, ou directement en troisième année par passerelle",
            "s2m": "admissions en deuxième année du premier cycle, ou directement en troisième année par passerelle",
            "d2": "Barres annuelles des étudiants admis en deuxième année du premier cycle : {places_1972} places pourvues en "
-                 "1972, minimum de {places_min} en {an_min}, {places_2020} en 2020 ; puis de {min_admis} à {admis_2025} admis par "
-                 "an de 2021 à 2025.",
+                 "1972, minimum de {places_min} en {an_min}, {places_2020} en 2020 ; puis de {min_admis} à {max_admis} admis par "
+                 "an de 2021 à 2025 ({admis_2025} en 2025).",
            "r1": "2010-2011 : passerelles incluses", "r2": "2021 : fin du numerus clausus", "annot": "%s : %s"},
     "en": {"src1": "Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6",
-           "note1": "Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered residency from the 2023 academic year. Comparison of scale only: neither the effect of a policy nor the date of its first effects; residents provide care before the end.",
+           "note1": "Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered residency from the 2023 academic year. Comparison of scale only: neither the effect of a policy nor the date of its first effects; residents provide care before the end of the curriculum; an additional student, however, does not enter residency until after the\u00a0second\u00a0cycle.",
            "src2": "DREES, Dossier no. 76 (2021), chart 8, source ONDPS (1972-2020); ONDPS, 2021-2025 report (admissions)",
            "note2": "Admissions to the second year of the first cycle, or directly to the third for some alternative-entry routes. Until 2020, places filled under the numerus clausus, widened to alternative-entry routes and reorientation entries from 2010-2011; since 2021, students admitted. Each bar at the year published by the source, no shift.",
-           "t1": "Training a general practitioner in France, and the length of a presidential term",
+           "t1": "Training a general practitioner in France, and the length of a\u00a0presidential\u00a0term",
            "s1": "in years, minimum durations written in the texts in force",
            "d1": "Two bars on the same scale. Above, the general practice curriculum: {a} years of first cycle, {b} years of second "
                  "cycle, then {c} years of general practice residency, the last under supervised autonomy: {d} years from the "
@@ -912,8 +942,8 @@ T = {
            "s2": "admissions to the second year of the first cycle, or directly to the third year through an alternative-entry route",
            "s2m": "admissions to the second year of the first cycle, or directly to the third year through an alternative-entry route",
            "d2": "Annual bars of students admitted to the second year of the first cycle: {places_1972} places filled in 1972, a "
-                 "minimum of {places_min} in {an_min}, {places_2020} in 2020; then from {min_admis} to {admis_2025} admissions a "
-                 "year from 2021 to 2025.",
+                 "minimum of {places_min} in {an_min}, {places_2020} in 2020; then from {min_admis} to {max_admis} admissions a "
+                 "year from 2021 to 2025 ({admis_2025} in 2025).",
            "r1": "2010-2011: alternative routes included", "r2": "2021: end of the numerus clausus", "annot": "%s: %s"},
 }
 
@@ -973,7 +1003,7 @@ def fig_admissions(r: dict, A: dict) -> str:
     X = lambda a: x0 + (a - 1972) * bw  # noqa: E731
     Y = lambda v: y1 - v / vmax * (y1 - y0)  # noqa: E731
     L = T[LANG]
-    e = cadre(H, "da", L["t2"], L["s2"], L["d2"].format(min_admis=nb(min(o.values())), **A))
+    e = cadre(H, "da", L["t2"], L["s2"], L["d2"].format(min_admis=nb(min(o.values())), max_admis=nb(max(o.values())), **A))
     for v in range(0, vmax + 1, 3000):
         e.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s"/>' % (x0, Y(v), x1, Y(v), GRID))
         e.append(txt(x0 - 6, Y(v) + 4, nb(v), FS_D, MUTED, "end"))
@@ -1258,8 +1288,13 @@ MUTATIONS = [  # (nom, mutation, garde qui DOIT arrêter)
      _texte("instr", "dès le 2 novembre 2026", "dès le 23 décembre 2026"), "T4"),
     # Date passée (depuis le 03/11/2026, l'autotest tourne dans ce mode) : futur interdit, début constaté interdit sans preuve.
     ("date passee, phrase restee au futur", _page("en", "The reform is scheduled to apply on {del.debut_conso}."), "T3"),
+    # 17/11/2026 : la preuve est archivée ; le témoin la retire, puis l'altère, et chaque fois T3 doit arrêter
     ("debut constate sans source archivee",
-     _page("fr", "La quatrième année a commencé le {del.debut_conso}, date prévue par l'instruction."), "T3"),
+     lambda m: (m.__setitem__("preuve_debut", None),
+                _page("fr", "La quatrième année a commencé le {del.debut_conso}, date prévue par l'instruction.")(m)), "T3"),
+    ("preuve du debut alteree (constat retire)",
+     lambda m: m.__setitem__("preuve_debut", m["preuve_debut"].replace("ont rejoint".encode("utf-8"),
+                                                                       "rejoindront".encode("utf-8"))), "T3"),
     ("date en clair dans la page", _page("fr", "La quatrième année commence le 2&nbsp;novembre 2026."), "T3"),
     ("date non dite prevue", _page("en", "The fourth year begins on {del.debut_conso}."), "T3"),
     ("admis presentes comme entrants (FR)", _page("fr", "En 2025, {del.admis_2025} étudiants commencent des études de médecine."), "Q1"),
@@ -1328,7 +1363,8 @@ def _main() -> int:
     except RuntimeError as e:
         raise Arret(str(e))
     fi = fiches(figs, A, A_en)
-    n = prose({"fiches " + l: "\n".join(f["titre"] + "\n" + f["montre"] for f in v) for l, v in fi.items()}, r["an_reforme"], S.get("passee", False))
+    n = prose({"fiches " + l: "\n".join(f["titre"] + "\n" + f["montre"] for f in v) for l, v in fi.items()}, r["an_reforme"], S.get("passee", False),
+              preuve_debut(S))
     g.append("parite des %d figures telephone (%d valeurs dessinees) ; Q1-Q2 sur les fiches Reutiliser"
              % (len([k for k in figs if k.endswith("-m.svg")]), nv))
     if "--check" in sys.argv[1:]:
