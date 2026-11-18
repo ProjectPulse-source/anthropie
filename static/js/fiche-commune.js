@@ -38,10 +38,10 @@
       n4: function (n, a) { return n + ' — Situation financière (comptes ' + a + ')'; },
       col: ['Mesure', 'Statut au ' + etat, 'Pour la commune', 'Pour préparer 2027'],
       qDil: function (n, x) { return n + NB + ': ' + x + ' de reversement DILICO différés en 2027' + NB + '?'; },
-      rDil: 'C’est l’écart entre le calendrier actuel de restitution du DILICO et celui du projet de loi déposé (article 84). Le montant total restitué ne change pas' + NB + '; seule sa répartition dans le temps serait modifiée si l’article était adopté en l’état.',
+      rDil: 'C’est l’écart entre le calendrier actuel de restitution du DILICO et celui du projet de loi déposé (article 84). Le montant total restitué ne change pas' + NB + '; seule sa répartition dans le temps serait modifiée si l’article était adopté en l’état, ce qui peut avoir un coût de trésorerie.',
       qDgf: function (n, x, m, a) { return n + NB + ': en ' + a + ', la DGF représente ' + x + ' des recettes de fonctionnement, contre ' + m + ' pour la médiane des communes de même taille'; },
       pDgf: function () { return 'Cet écart décrit la structure des recettes de la commune' + NB + '; il ne permet, à lui seul, ni d’apprécier sa fragilité financière ni de prévoir sa DGF 2027, qui ne sera connue qu’à la notification.'; },
-      qExo: function (n) { return n + NB + ': exonérée si la contribution sur les recettes était rétablie'; },
+      qExo: function (n, sup) { return n + NB + (sup ? ': exonérée si la contribution sur les recettes était rétablie' : ': exonérée de la contribution sur les recettes selon le texte déposé'); },
       qRien: function (n) { return n + NB + ': aucun effet individuel chiffrable des mesures examinées à ce stade'; },
       nonContrib: 'La commune n’a pas contribué au DILICO en 2025.',
       sansDot: 'Les données de dotations de la commune ne sont pas disponibles' + NB + ': sa contribution au DILICO 2025 et une éventuelle exonération ne peuvent pas être établies ici.',
@@ -73,10 +73,10 @@
       actuel: 'Droit actuel', projet: 'Projet déposé', annee: 'Année', aucunV: 'aucun versement', parAn: ' par an', a2029: '2029 à 2031',
       noteDil: function (t, p) { return 'Un reversement plus faible à court terme, compensé par des versements étalés jusqu’en 2031' + NB + ': total restitué identique (' + t + ' sur ' + p + ' prélevés)' + NB + '; ce décalage peut avoir un coût de trésorerie, non chiffré ici. Le calcul porte sur le DILICO prélevé sur la commune en 2025' + NB + '; il ne comprend pas les effets éventuels du DILICO de son intercommunalité.'; },
       aFaire: 'Pour préparer le budget 2027 →', aFaireDil: 'comparer deux scénarios de trésorerie' + NB + ': le calendrier actuel et celui qui résulterait de l’adoption de l’article 84 sans modification.',
-      kEb: 'Épargne brute (marge d’autofinancement)', kEbS: 'en % des recettes de fonctionnement',
+      kEb: 'Épargne brute', kEbS: 'recettes moins dépenses de fonctionnement, avant remboursement du capital de la dette' + NB + '; en % des recettes de fonctionnement',
       kDh: 'Dette par habitant', kDhS: 'encours du budget principal',
       kAd: 'Capacité de désendettement théorique', kAdS: 'budget principal' + NB + '; un ratio, pas un échéancier',
-      kPd: 'Part de la DGF', kPdS: 'dans les recettes de fonctionnement', med: 'médiane', ans: 'ans',
+      kPd: 'Part de la DGF', kPdS: 'dans les recettes de fonctionnement', med: 'médiane de la strate', ans: 'ans',
       strate: function (s) { return 'Médianes des ' + ent(s.n) + ' communes de ' + ent(s.pop_min) + ' à ' + ent(s.pop_max) + NB + 'habitants (strate de l’OFGL), exercice ' + exercices[exercices.length - 1] + NB + ': un repère descriptif, pas un groupe parfaitement comparable ni une norme de gestion.'; },
       evo: function (a0, a1) { return 'Évolution ' + a0 + '-' + a1 + ' et détail des comptes'; }, evo1: function (a) { return 'Détail des comptes ' + a; },
       t1s: 'Comptes du budget principal publiés par l’Observatoire des finances et de la gestion publique locales (OFGL). Budgets annexes et intercommunalité non compris.',
@@ -85,30 +85,33 @@
       sans24: function (a) { return 'Pas de compte ' + a + ' publié par l’OFGL pour ce code Insee (commune créée ou modifiée récemment, ou compte non transmis)' + NB + ': l’évolution ne peut pas être affichée.'; },
       cn: function (a0, a1) { return 'Commune nouvelle (elle perçoit la dotation en faveur des communes nouvelles)' + NB + ': si son périmètre a changé entre ' + a0 + ' et ' + a1 + ', les deux exercices ne sont pas directement comparables.'; },
       calc: 'Comprendre le calcul et vérifier les sources',
-      cDil: function (p, r, b, e, l) { return '<strong>DILICO</strong>' + NB + ': prélèvement 2025 de ' + p + ' (' + l.arrete_dilico + ', annexe' + NB + ': ' + l.dil + ')' + NB + '; restitution de 90' + NB + '% par tiers, soit ' + r + ' par an en 2026, 2027 et 2028 selon le droit actuel (' + l.lf2025_186 + NB + '; versement 2026' + NB + ': ' + l.rev + ')' + NB + '; selon l’article 84 du ' + l.plf + ', 12' + NB + '% de la contribution, soit ' + b + ' par an de 2027 à 2031. Écart 2027' + NB + ': ' + r + ' − ' + b + ' = ' + e + '.'; },
+      cDil: function (p, r, b, e, l) { return '<strong>DILICO</strong>' + NB + ': prélèvement 2025 de ' + p + ' (' + l.arrete_dilico + ', annexe' + NB + ': ' + l.dil + ')' + NB + '; selon le droit actuel (' + l.lf2025_186 + '), restitution de 90' + NB + '% «' + NB + 'à hauteur d’un tiers par année et dans la limite du montant du produit de la contribution pour l’année en cours' + NB + '»' + NB + ': ' + r + ' par an en 2026, 2027 et 2028 tant que ce plafond ne joue pas, comme en 2026 (versement' + NB + ': ' + l.rev + ')' + NB + '; selon l’article 84 du ' + l.plf + ', 12' + NB + '% de la contribution, soit ' + b + ' par an de 2027 à 2031. Écart 2027' + NB + ': ' + r + ' − ' + b + ' = ' + e + '.'; },
       cDilNon: function (l) { return '<strong>DILICO</strong>' + NB + ': la commune ne figure pas dans l’annexe du prélèvement 2025 (' + l.dil + NB + '; ' + l.arrete_dilico + ').'; },
       cDgf: function (x, comp, dcn, l) { return '<strong>DGF notifiée pour 2026</strong>' + NB + ': ' + x + (comp ? ' (' + comp + ')' : '') + NB + '; annexe de l’arrêté, ' + l.dgf + '.' + (dcn ? ' Dotation en faveur des communes nouvelles, distincte de la DGF' + NB + ': ' + dcn + '.' : '') + ' La DGF des comptes est la DGF comptabilisée' + NB + ': exercice et nature différents.'; },
-      cCtl: function (n, l) { return '<strong>Contrôles</strong>' + NB + ': montants DILICO et DGF relus, commune par commune, dans les annexes des arrêtés publiées au Journal officiel (' + n + ' montants, aucun écart au-delà de l’arrondi à l’euro)' + NB + '; comptes' + NB + ': ' + l.ofgl + ', budget principal' + NB + '; dotations' + NB + ': ' + l.ofgl_dot + '.'; },
-      cRat: '<strong>Ratios</strong>' + NB + ': épargne brute (marge d’autofinancement) = recettes réelles moins dépenses réelles de fonctionnement, rapportée aux recettes de fonctionnement' + NB + '; capacité de désendettement = encours de dette / épargne brute' + NB + '; part de la DGF = DGF comptabilisée / recettes de fonctionnement' + NB + '; budget principal seul.',
+      cCtl: function (n, l) { return '<strong>Contrôles</strong>' + NB + ': montants DILICO et DGF confrontés par script, commune par commune, aux annexes des arrêtés publiées au Journal officiel (' + n + ' montants non nuls, aucun écart au-delà de l’arrondi à l’euro)' + NB + '; comptes' + NB + ': ' + l.ofgl + ', budget principal' + NB + '; dotations' + NB + ': ' + l.ofgl_dot + '.'; },
+      cRat: '<strong>Ratios</strong>' + NB + ': épargne brute = recettes réelles moins dépenses réelles de fonctionnement, rapportée aux recettes de fonctionnement' + NB + '; capacité de désendettement = encours de dette / épargne brute' + NB + '; part de la DGF = DGF comptabilisée / recettes de fonctionnement' + NB + '; budget principal seul.',
       detail: 'Le détail de chaque mesure pour la commune',
       cpeb: 'Contribution progressive (art.' + NB + '37)', fctvaM: 'FCTVA (art.' + NB + '35)', dgfM: 'DGF (art.' + NB + '34)', dilicoM: 'DILICO (art.' + NB + '84)', tvaM: 'TVA affectée (art.' + NB + '36)',
       cpebTxt: function () { return 'Exonération non déterminable' + NB + ': commune absente du jeu des dotations. Montant non déterminé' + NB + ': il dépend du rang de la commune parmi toutes les autres, sur un indice de potentiel financier et de revenu' + NB + '; assiette' + NB + ': recettes réelles de fonctionnement de 2024, retraitées.'; },
       epciC: function (n) { return 'L’intercommunalité (' + n + ') était visée par une contribution distincte, qui n’est pas imputée à la commune.'; },
-      fctvaTxt: function (x, a) { return 'FCTVA perçu en ' + a + NB + ': ' + x + ' (montant passé). Le texte déposé abaissait le taux de 16,404' + NB + '% à 11,404' + NB + '% pour les attributions versées à partir de 2027, sauf pour les dépenses de transition écologique et de voirie' + NB + '; l’effet pour la commune dépend de ses investissements à venir et de leur nature, non connus ici.'; },
+      fctvaTxt: function (x, a) { return 'FCTVA perçu en ' + a + NB + ': ' + x + ' (montant passé). Le texte déposé abaissait le taux de 16,404' + NB + '% à 11,404' + NB + '% pour les attributions versées à partir de 2027, sauf pour les dépenses de transition écologique et de voirie' + NB + '; l’effet pour la commune dépend du montant et de la nature de ses dépenses éligibles, à commencer par celles de 2025 ou de 2026 selon son régime de versement, que ces données ne détaillent pas.'; },
       dgfTxt: function (x, a) { return 'DGF ' + a + NB + ': ' + x + '. Montant 2027 non déterminable' + NB + ': il dépend de la loi votée et de la répartition du Comité des finances locales.'; },
       dilicoTxt: function (n) { return 'DILICO 2025' + NB + ': contribution de la commune non disponible. DILICO 2026' + NB + ': les communes n’y contribuent pas' + (n ? NB + '; l’intercommunalité (' + n + ') peut y avoir contribué.' : '.'); },
       dilicoNon: 'DILICO 2025' + NB + ': la commune n’était pas contributrice' + NB + '; aucun reversement ne la concerne.',
       dilicoOui: function (p, r, b) { return 'DILICO 2025' + NB + ': ' + p + ' mis en réserve' + NB + '; la commune en récupère 90' + NB + '%. Reçu en 2026' + NB + ': ' + r + '. Selon le droit actuel, la même somme en 2027 et en 2028' + NB + '; selon le projet déposé, ' + b + ' par an de 2027 à 2031.'; },
       dilico26: function (n) { return ' DILICO 2026' + NB + ': les communes n’y contribuent pas' + (n ? NB + '; l’intercommunalité (' + n + ') peut y avoir contribué.' : '.'); },
+    partCom: ' (part communale)', partComT: ' — part communale du DILICO 2025 seulement',
+    parisDil: ' Pour la Ville de Paris, ce calcul ne porte que sur sa part communale' + NB + ': la collectivité a aussi contribué au DILICO, en 2025 et en 2026, au titre de ses compétences départementales, et l’article 84 étale de même ces sommes.',
+    parisDil26: ' La Ville de Paris y a contribué au titre de ses compétences départementales.',
       dgfNot: function (x, comp, dcn) { return 'DGF 2026 notifiée (base de la DGCL, via l’OFGL)' + NB + ': ' + x + (comp ? ' (' + comp + ')' : '') + '.' + (dcn ? ' Dotation en faveur des communes nouvelles, distincte de la DGF' + NB + ': ' + dcn + '.' : '') + ' Le tableau des comptes donne la DGF comptabilisée' + NB + ': exercice et nature différents. Montant 2027 non déterminable' + NB + ': il dépend de la loi votée et de la répartition du Comité des finances locales.'; },
       comp: {forf: 'dotation forfaitaire', dsu: 'dotation de solidarité urbaine', dsr: 'dotation de solidarité rurale', dnp: 'dotation nationale de péréquation', dacom: 'dotation d’aménagement des communes d’outre-mer'},
       classe: {r_dsu10: '2026 de la dotation de solidarité urbaine (communes de 10' + FIN + '000 habitants et plus)', r_dsu5: '2026 de la dotation de solidarité urbaine (communes de 5' + FIN + '000 à 9' + FIN + '999 habitants)', r_dsrc: '2026 selon l’indice de la fraction cible de la dotation de solidarité rurale'},
       rang: function (k, r, n) { return 'rang ' + ent(r) + ' au classement ' + T.classe[k] + ', ' + (r <= n ? 'parmi les ' : 'hors des ') + ent(n) + ' premières'; },
       exoDom: function (n) { return 'Exonérée par le texte déposé, qui exonérait les communes des départements et régions d’outre-mer' + (n ? ', comme leurs intercommunalités (' + n + ').' : '.'); },
       exoRang: function (r) { return 'Exonérée selon le classement publié par la DGCL (via l’OFGL)' + NB + ': ' + r + ', que le texte déposé exonérait.'; },
-      exoSeuil: function (x) { return 'Exonération possible, à confirmer' + NB + ': calculée au taux maximal de 3' + NB + '% sur les recettes de fonctionnement 2024 publiées (' + x + '), la contribution resterait sous le seuil de 5' + FIN + '000' + NB + '€ en dessous duquel le texte déposé exonérait' + NB + '; mais l’assiette légale, non publiée, peut différer de ces recettes.'; },
+      exoSeuil: function (x) { return 'Exonération possible, à confirmer' + NB + ': calculée au taux maximal de 3' + NB + '% sur les recettes de fonctionnement 2024 publiées (' + x + '), la contribution resterait sous le seuil de 5' + FIN + '000' + NB + '€ en dessous duquel le texte déposé exonérait' + NB + '; mais l’assiette prévue par le projet, non publiée, peut différer de ces recettes.'; },
       exoCom: 'Hors du champ du texte déposé, qui ne classait que les communes de métropole et des départements et régions d’outre-mer.',
-      nonExo: function (r) { return 'Aucun critère d’exonération établi dans les données examinées' + (r ? NB + ': ' + r : '') + '. Le seuil de 5' + FIN + '000' + NB + '€ dépend du taux et de l’assiette légale, non déterminables ici.'; },
+      nonExo: function (r) { return 'Aucun critère d’exonération établi dans les données examinées' + (r ? NB + ': ' + r : '') + '. Le seuil de 5' + FIN + '000' + NB + '€ dépend du taux et de l’assiette prévue par le projet, non déterminables ici.'; },
       cpebMt: ' Montant non déterminé' + NB + ': il dépend du rang de la commune parmi toutes les autres, sur un indice de potentiel financier et de revenu' + NB + '; assiette' + NB + ': recettes réelles de fonctionnement de 2024, retraitées.',
       tvaTxt: 'À vérifier' + NB + ': fraction de TVA perçue par la commune, ou par son intercommunalité.',
       exoDsrc: function (r) { return 'Exonération possible, à confirmer' + NB + ': ' + r + ', que le texte déposé exonérait' + NB + '; mais il ne précise pas l’année du classement retenu pour 2027.'; },
@@ -127,10 +130,10 @@
       n4: function (n, a) { return n + ' — Financial position (' + a + ' accounts)'; },
       col: ['Measure', 'Status as of ' + etat, 'For the municipality', 'To prepare 2027'],
       qDil: function (n, x) { return n + ': ' + x + ' of DILICO repayment deferred in 2027?'; },
-      rDil: 'This is the gap between the current DILICO repayment schedule and that of the bill as tabled (article 84). The total repaid does not change; only its spread over time would change if the article were adopted as it stands.',
+      rDil: 'This is the gap between the current DILICO repayment schedule and that of the bill as tabled (article 84). The total repaid does not change; only its spread over time would change if the article were adopted as it stands, which may carry a cash-flow cost.',
       qDgf: function (n, x, m, a) { return n + ': in ' + a + ', the DGF makes up ' + x + ' of operating revenue, against ' + m + ' for the median municipality of the same size'; },
       pDgf: function () { return 'This gap describes the structure of the municipality’s revenue; on its own, it neither measures its financial fragility nor predicts its 2027 DGF, which will be known only on notification.'; },
-      qExo: function (n) { return n + ': exempt if the revenue contribution were reinstated'; },
+      qExo: function (n, sup) { return n + (sup ? ': exempt if the revenue contribution were reinstated' : ': exempt from the revenue contribution under the bill as tabled'); },
       qRien: function (n) { return n + ': no individual effect of the measures examined can be quantified at this stage'; },
       nonContrib: 'The municipality did not contribute to the 2025 DILICO.',
       sansDot: 'The municipality’s grant data are not available: its 2025 DILICO contribution and any exemption cannot be established here.',
@@ -162,10 +165,10 @@
       actuel: 'Current law', projet: 'Bill as tabled', annee: 'Year', aucunV: 'no payment', parAn: ' a year', a2029: '2029 to 2031',
       noteDil: function (t, p) { return 'A smaller repayment in the short term, offset by payments spread until 2031: the same total repaid (' + t + ' of ' + p + ' levied); this shift may carry a cash-flow cost, not quantified here. The calculation covers the DILICO levied on the municipality in 2025; it excludes any effect of its inter-municipal body’s DILICO.'; },
       aFaire: 'To prepare the 2027 budget →', aFaireDil: 'compare two cash-flow scenarios: the current schedule and the one that would result from adopting article 84 unchanged.',
-      kEb: 'Gross savings (self-financing margin)', kEbS: 'as % of operating revenue',
+      kEb: 'Gross savings', kEbS: 'operating revenue minus operating expenditure, before repayment of debt principal; as % of operating revenue',
       kDh: 'Debt per inhabitant', kDhS: 'main-budget debt outstanding',
       kAd: 'Theoretical debt-repayment capacity', kAdS: 'main budget; a ratio, not a schedule',
-      kPd: 'Share of the DGF', kPdS: 'in operating revenue', med: 'median', ans: 'years',
+      kPd: 'Share of the DGF', kPdS: 'in operating revenue', med: 'size-band median', ans: 'years',
       strate: function (s) { return 'Medians of the ' + ent(s.n) + ' municipalities of ' + ent(s.pop_min) + ' to ' + ent(s.pop_max) + ' inhabitants (OFGL size band), ' + exercices[exercices.length - 1] + ': a descriptive marker, not a perfectly comparable group nor a management norm.'; },
       evo: function (a0, a1) { return 'Change ' + a0 + '-' + a1 + ' and detailed accounts'; }, evo1: function (a) { return 'Detailed accounts ' + a; },
       t1s: 'Main-budget accounts published by the Observatory of Local Public Finance and Management (OFGL). Ancillary budgets and the inter-municipal body excluded.',
@@ -174,30 +177,33 @@
       sans24: function (a) { return 'No ' + a + ' account published by the OFGL for this INSEE code (municipality recently created or changed, or account not filed): the change cannot be shown.'; },
       cn: function (a0, a1) { return 'New municipality (it receives the grant for new municipalities): if its boundaries changed between ' + a0 + ' and ' + a1 + ', the two years are not directly comparable.'; },
       calc: 'Understanding the calculation and checking the sources',
-      cDil: function (p, r, b, e, l) { return '<strong>DILICO</strong>: 2025 levy of ' + p + ' (' + l.arrete_dilico + ', annex: ' + l.dil + '); 90% repaid in thirds, i.e. ' + r + ' a year in 2026, 2027 and 2028 under current law (' + l.lf2025_186 + '; 2026 payment: ' + l.rev + '); under article 84 of the ' + l.plf + ', 12% of the contribution, i.e. ' + b + ' a year from 2027 to 2031. 2027 gap: ' + r + ' − ' + b + ' = ' + e + '.'; },
+      cDil: function (p, r, b, e, l) { return '<strong>DILICO</strong>: 2025 levy of ' + p + ' (' + l.arrete_dilico + ', annex: ' + l.dil + '); under current law (' + l.lf2025_186 + '), 90% repaid “in the amount of one third per year and within the limit of the amount of the proceeds of the contribution for the current year” (our translation): ' + r + ' a year in 2026, 2027 and 2028 as long as this cap does not bind, as in 2026 (payment: ' + l.rev + '); under article 84 of the ' + l.plf + ', 12% of the contribution, i.e. ' + b + ' a year from 2027 to 2031. 2027 gap: ' + r + ' − ' + b + ' = ' + e + '.'; },
       cDilNon: function (l) { return '<strong>DILICO</strong>: the municipality is not in the annex of the 2025 levy (' + l.dil + '; ' + l.arrete_dilico + ').'; },
       cDgf: function (x, comp, dcn, l) { return '<strong>DGF notified for 2026</strong>: ' + x + (comp ? ' (' + comp + ')' : '') + '; annex to the order, ' + l.dgf + '.' + (dcn ? ' Grant for new municipalities, separate from the DGF: ' + dcn + '.' : '') + ' The DGF in the accounts is the DGF recorded: a different year and nature.'; },
-      cCtl: function (n, l) { return '<strong>Checks</strong>: DILICO and DGF amounts read again, municipality by municipality, in the annexes to the orders published in the Official Journal (' + n + ' amounts, no gap beyond rounding to the euro); accounts: ' + l.ofgl + ', main budget; grants: ' + l.ofgl_dot + '.'; },
-      cRat: '<strong>Ratios</strong>: gross savings (self-financing margin) = real operating revenue minus real operating expenditure, divided by operating revenue; debt-repayment capacity = debt outstanding / gross savings; share of the DGF = DGF recorded / operating revenue; main budget only.',
+      cCtl: function (n, l) { return '<strong>Checks</strong>: DILICO and DGF amounts checked by script, municipality by municipality, against the annexes to the orders published in the Official Journal (' + n + ' non-zero amounts, no gap beyond rounding to the euro); accounts: ' + l.ofgl + ', main budget; grants: ' + l.ofgl_dot + '.'; },
+      cRat: '<strong>Ratios</strong>: gross savings = real operating revenue minus real operating expenditure, divided by operating revenue; debt-repayment capacity = debt outstanding / gross savings; share of the DGF = DGF recorded / operating revenue; main budget only.',
       detail: 'Each measure in detail for the municipality',
       cpeb: 'Progressive contribution (art. 37)', fctvaM: 'FCTVA (art. 35)', dgfM: 'DGF (art. 34)', dilicoM: 'DILICO (art. 84)', tvaM: 'Assigned VAT (art. 36)',
       cpebTxt: function () { return 'Exemption not determinable: the municipality is missing from the grants dataset. Amount not determined: it depends on the municipality’s rank among all others, on an index of financial potential and income; base: 2024 real operating revenue, adjusted.'; },
       epciC: function (n) { return 'The inter-municipal body (' + n + ') was targeted by a separate contribution, which is not attributed to the municipality.'; },
-      fctvaTxt: function (x, a) { return 'FCTVA received in ' + a + ': ' + x + ' (past amount). The bill as tabled lowered the rate from 16.404% to 11.404% for payments made from 2027, except for ecological transition and road spending; the effect for the municipality depends on its future investment and its nature, not known here.'; },
+      fctvaTxt: function (x, a) { return 'FCTVA received in ' + a + ': ' + x + ' (past amount). The bill as tabled lowered the rate from 16.404% to 11.404% for payments made from 2027, except for ecological transition and road spending; the effect for the municipality depends on the amount and nature of its eligible spending, starting with that of 2025 or 2026 depending on its payment regime, which these data do not detail.'; },
       dgfTxt: function (x, a) { return 'DGF ' + a + ': ' + x + '. Amount for 2027 not determinable: it depends on the act as passed and on the Local Finance Committee’s distribution.'; },
       dilicoTxt: function (n) { return '2025 DILICO: the municipality’s contribution is not available. 2026 DILICO: municipalities do not contribute' + (n ? '; the inter-municipal body (' + n + ') may have.' : '.'); },
       dilicoNon: '2025 DILICO: the municipality was not a contributor; no repayment concerns it.',
       dilicoOui: function (p, r, b) { return '2025 DILICO: ' + p + ' placed in reserve; the municipality recovers 90% of it. Received in 2026: ' + r + '. Under current law, the same sum in 2027 and 2028; under the bill as tabled, ' + b + ' a year from 2027 to 2031.'; },
       dilico26: function (n) { return ' 2026 DILICO: municipalities do not contribute' + (n ? '; the inter-municipal body (' + n + ') may have.' : '.'); },
+    partCom: ' (municipal share)', partComT: ' — municipal share of the 2025 DILICO only',
+    parisDil: ' For the City of Paris, this calculation covers its municipal share only: the authority also contributed to the DILICO, in 2025 and 2026, for its departmental responsibilities, and article 84 spreads those sums in the same way.',
+    parisDil26: ' The City of Paris contributed to it for its departmental responsibilities.',
       dgfNot: function (x, comp, dcn) { return '2026 DGF notified (DGCL database, via the OFGL): ' + x + (comp ? ' (' + comp + ')' : '') + '.' + (dcn ? ' Grant for new municipalities, separate from the DGF: ' + dcn + '.' : '') + ' The accounts table gives the DGF recorded: a different year and nature. Amount for 2027 not determinable: it depends on the act as passed and on the Local Finance Committee’s distribution.'; },
       comp: {forf: 'flat-rate grant', dsu: 'urban solidarity grant', dsr: 'rural solidarity grant', dnp: 'national equalisation grant', dacom: 'overseas municipalities grant'},
       classe: {r_dsu10: '2026 ranking for the urban solidarity grant (municipalities of 10,000 inhabitants or more)', r_dsu5: '2026 ranking for the urban solidarity grant (municipalities of 5,000 to 9,999 inhabitants)', r_dsrc: '2026 ranking by the index of the targeted share of the rural solidarity grant'},
       rang: function (k, r, n) { return 'ranked ' + ent(r) + ' in the ' + T.classe[k] + ', ' + (r <= n ? 'within' : 'outside') + ' the first ' + ent(n); },
       exoDom: function (n) { return 'Exempt under the bill as tabled, which exempted municipalities in overseas departments and regions' + (n ? ', like their inter-municipal bodies (' + n + ').' : '.'); },
       exoRang: function (r) { return 'Exempt according to the ranking published by the DGCL (via the OFGL): ' + r + ', which the bill as tabled exempted.'; },
-      exoSeuil: function (x) { return 'Exemption possible, to be confirmed: computed at the maximum 3% rate on published 2024 operating revenue (' + x + '), the contribution would stay under the €5,000 threshold below which the bill as tabled exempted; but the legal base, not published, may differ from this revenue.'; },
+      exoSeuil: function (x) { return 'Exemption possible, to be confirmed: computed at the maximum 3% rate on published 2024 operating revenue (' + x + '), the contribution would stay under the €5,000 threshold below which the bill as tabled exempted; but the base provided for in the bill, not published, may differ from this revenue.'; },
       exoCom: 'Outside the scope of the bill as tabled, which ranked only municipalities in metropolitan France and in overseas departments and regions.',
-      nonExo: function (r) { return 'No exemption criterion established in the data examined' + (r ? ': ' + r : '') + '. The €5,000 threshold depends on the rate and the legal base, not determinable here.'; },
+      nonExo: function (r) { return 'No exemption criterion established in the data examined' + (r ? ': ' + r : '') + '. The €5,000 threshold depends on the rate and the base provided for in the bill, not determinable here.'; },
       cpebMt: ' Amount not determined: it depends on the municipality’s rank among all others, on an index of financial potential and income; base: 2024 real operating revenue, adjusted.',
       tvaTxt: 'To check: a share of VAT received by the municipality, or by its inter-municipal body.',
       exoDsrc: function (r) { return 'Exemption possible, to be confirmed: ' + r + ', which the bill as tabled exempted; but it does not specify the year of the ranking used for 2027.'; },
@@ -327,10 +333,10 @@
     else phraseExo = T.aucunCritere;
     var q, rep, prec = '';
     var faitDgf = partDgf !== null && medDgf !== null && medDgf !== undefined && partDgf >= 1.5 * medDgf && partDgf - medDgf >= 0.05;
-    if (dil) { q = T.qDil(nom, eur(ecart)); rep = T.rDil; }
+    if (dil) { q = T.qDil(nom + (insee === '75056' ? T.partCom : ''), eur(ecart)); rep = T.rDil; }
     else if (!d) { q = T.qRien(nom); rep = T.sansDot + T.dgfReste + T.autres; }
     else if (faitDgf) { q = T.qDgf(nom, pct(partDgf), pct(medDgf), a1); rep = T.nonContrib + phraseExo; prec = T.pDgf(); }
-    else if (exoDoc) { q = T.qExo(nom); rep = T.nonContrib + phraseExo + T.aucuneAutre + T.dgfReste; }
+    else if (exoDoc) { q = T.qExo(nom, sup); rep = T.nonContrib + phraseExo + T.aucuneAutre + T.dgfReste; }
     else { q = T.qRien(nom); rep = T.nonContrib + phraseExo + T.dgfReste + T.autres; }
 
     var h = '';
@@ -344,7 +350,7 @@
     // 02 — principales mesures examinées
     var st = function (k) { return T.article + esc(statuts[k]) + (supprime(k) ? T.retab : ''); };
     var lignesM = [
-      [T.mDil, T.art(84), st('dilico'), !d ? T.nd : (dil ? T.dilDiff(eur(ecart)) : T.dilNon), dil ? T.dilPrep : '—'],
+      [T.mDil, T.art(84), st('dilico'), !d ? T.nd : (dil ? T.dilDiff(eur(ecart)) + (insee === '75056' ? T.partComT : '') : T.dilNon), dil ? T.dilPrep : '—'],
       [T.mCp, T.art(37), st('cpeb'), !d ? T.nd : (sup ? (exoDoc ? T.cpSupExo : exoPos ? T.cpSupPos : T.cpSup) : (exoDoc ? T.cpExo : exoPos ? T.cpPos : T.cpMt)), T.cpPrep],
       [T.mFc, T.art(35), st('fctva'), (supprime('fctva') ? T.fcSup : T.fcAct)(meur(v1.fctva), a1), T.fcPrep],
       [T.mDgf, T.art(34), st('dgf'), d && d.dgf !== null ? T.dgfCom(meur(d.dgf)) : T.nd, T.dgfPrep]
@@ -380,7 +386,7 @@
         [['2026', eur(rev), eur(rev)], ['2027', eur(rev), '<span class="fiche-commune__cout">' + eur(b) + '</span>'], ['2028', eur(rev), '<span class="fiche-commune__cout">' + eur(b) + '</span>'], [T.a2029, T.aucunV, eur(b) + T.parAn]]
           .map(function (r) { return '<div role="row" class="fiche-commune__crow"><span role="rowheader">' + r[0] + '</span><span role="cell">' + r[1] + '</span><span role="cell">' + r[2] + '</span></div>'; }).join('') +
         '</div>' +
-        '<p class="fiche-commune__note">' + T.noteDil(eur(3 * Math.round(rev)), eur(d.dil)) + '</p>' +
+        '<p class="fiche-commune__note">' + T.noteDil(eur(3 * Math.round(rev)), eur(d.dil)) + (insee === '75056' ? T.parisDil : '') + '</p>' +
         '<p class="fiche-commune__afaire"><span>' + T.aFaire + '</span> ' + T.aFaireDil + '</p>';
       h += bloc(T.n3, corps);
     }
@@ -439,7 +445,7 @@
     else det += mesure(T.dgfM, statuts.dgf, T.dgfTxt(meur(v1.dgf), a1));
     if (!d) det += mesure(T.dilicoM, statuts.dilico, T.dilicoTxt(nomE));
     else if (!d.dil) det += mesure(T.dilicoM, statuts.dilico, T.dilicoNon + T.dilico26(nomE));
-    else det += mesure(T.dilicoM, statuts.dilico, T.dilicoOui(eur(d.dil), eur(d.rev), eur(b)) + T.dilico26(nomE));
+    else det += mesure(T.dilicoM, statuts.dilico, T.dilicoOui(eur(d.dil), eur(d.rev), eur(b)) + T.dilico26(nomE) + (insee === '75056' ? T.parisDil26 : ''));
     det += mesure(T.tvaM, statuts.tva, T.tvaTxt);
     corps4 += '<details class="fiche-commune__repli fiche-commune__preuves"><summary>' + T.calc + '</summary>' + calc + det + '</details>';
     h += bloc(T.n4(n4, a1), corps4);

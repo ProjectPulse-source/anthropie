@@ -34,9 +34,15 @@ Le projet demande 6,2 milliards d'euros aux collectivités, et des simulateurs d
 
 ### Découverte principale
 
-Le 19/10/2026, l'Assemblée nationale a supprimé ou n'a pas adopté trois des cinq mesures, dont les deux plus importantes
-en montant ; la presse spécialisée (Localtis, 20/10) a rendu l'article 36 à l'envers ; les six simulateurs publiés
-calculent un article supprimé.
+Mise à jour du 17/11/2026, après la relecture des sources du lot « dette-c » (`LOTS\dette-c\SOURCES\
+budget-2027-votre-commune_R1a.md`, état du texte relu à sa source, et `_R1b.md`, fiche par commune) : l'Assemblée
+nationale a rejeté le 4/11 la première partie du projet, telle qu'elle l'avait amendée (0 voix pour, 458 contre), ce
+qui emporte le texte ; les trois mesures qu'elle avait écartées le 19/10 sont de nouveau dans le texte initial
+attendu au Sénat (R1a, l. 3-7, CONFORME À LA SOURCE). Aucun montant communal pour 2027 n'est certain ; le seul que
+la fiche calcule, l'écart des reversements du DILICO entre le droit actuel et l'article 84, suppose l'article voté
+tel quel, et ses montants se retrouvent à l'euro dans les annexes des arrêtés (R1b, six communes vérifiées de bout
+en bout). Découverte d'origine (22/10/2026), devenue un état passé : le 19/10, l'Assemblée avait supprimé ou n'avait
+pas adopté trois des cinq mesures ; les simulateurs publiés calculaient un article alors supprimé.
 
 ### Mécanisme explicatif
 
@@ -52,8 +58,13 @@ citation retrouvée par `verifier_plf_votes.py` ; le texte du projet n° 3210 (P
 
 ### Pouvoir discriminant
 
-Non renseigné à la création (champ ajouté le 26/10/2026, arbitrage PRO-20261026-033434) : à écrire à la prochaine
-refonte de la page.
+Rempli le 17/11/2026. Partie juridique : sans objet au sens du gabarit (un état du texte ne départage pas
+d'explications rivales) ; la page tient séparés le dépôt, le sort de chaque article et la loi à venir. Fiche par
+commune : la confrontation des deux calendriers du DILICO ne change qu'une variable, le calendrier, à total
+restitué inchangé ; elle départage la lecture « perte » et la lecture « décalage de trésorerie », et la page
+retient la seconde. Ce que la mise en regard révèle : l'écart de 2027 commune par commune, que ni le projet ni les
+simulateurs ne donnent ; robustesse : montants relus contre les annexes des arrêtés (91 459 montants non nuls) ;
+levier : un échéancier de trésorerie à deux colonnes pour le budget 2027.
 
 ### Limite
 
