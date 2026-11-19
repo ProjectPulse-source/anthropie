@@ -843,6 +843,25 @@ def double_deficit() -> int:
     return int(m.group(1))
 
 
+def hausses_fr(t: str | None = None) -> tuple[int, float]:
+    """Stabilisation du 19/11/2026. Deux nombres de la page lus dans le texte de la Commission (même édition que tr_date) :
+    la hausse du déficit de transposition de la France sur l'édition précédente (« worrying rise »), et celle de sa durée
+    moyenne de retard. La garde exige aussi ce que la page en dit : la citation « France and Hungary (N%) » mot pour mot,
+    et la hausse française en tête des hausses que la Commission juge modérées, celle de la Hongrie seule au-dessus
+    (« la deuxième hausse après celle de la Hongrie, la plus forte des hausses que la Commission juge modérées ; seule celle de la Hongrie est plus marquée »)."""
+    t = ue4.texte_page() if t is None else t
+    m = re.search(r"Some of them are even seeing a worrying rise: ([^.]*)\.", t)
+    pct = [int(p) for e, p in re.findall(r"([^,:()]+?) \((\d+)%\)", m.group(1)) if "France" in e] if m else []
+    if len(pct) != 1 or "France and Hungary (%d%%)" % pct[0] not in t:
+        raise Arret("U5 bis : hausse « worrying rise » de la France illisible, ou citation « France and Hungary » changée")
+    r = re.search(r"The increase stayed moderate: from [0-9.]+ months for [A-Z][a-z]+ to ([0-9.]+) months for France\. "
+                  r"Only Hungary.s increase is sharper: [0-9.]+ months\.", t)
+    if not r:
+        raise Arret("U5 bis : hausse du retard moyen de la France illisible, ou plus en tête des hausses « moderate », "
+                    "ou la Hongrie n'est plus seule au-dessus")
+    return pct[0], float(r.group(1))
+
+
 def affichage(typ, B, V, tr) -> tuple[dict, dict]:
     ex, pa, ap = (typ["listes"][0], typ["listes"][1], typ["listes"][2])
     joindre = lambda L, et: ", ".join(L[:-1]) + " " + et + " " + L[-1]  # noqa: E731
@@ -868,6 +887,7 @@ def affichage(typ, B, V, tr) -> tuple[dict, dict]:
          "tr_mois": fr(tr["retard_moyen_mois"][0], 1), "tr_mois_ue": fr(tr["retard_moyen_mois"][1], 1),
          "tr_inf": fr(tr["duree_infractions_mois"][0], 1), "tr_inf_ue": fr(tr["duree_infractions_mois"][1], 1),
          "tr_double": {9: "neuf", 8: "huit", 10: "dix", 7: "sept"}.get(double_deficit(), str(double_deficit())),
+         "tr_hausse": str(hausses_fr()[0]), "tr_mois_hausse": fr(hausses_fr()[1], 1),
          "cit_tue16": citation_tue16(), "etats_identiques": str(V["etats_identiques"]), "etats_total": str(len(NOMS))}
     te_ = typologie_en(typ)
     dom_en = lambda L: [d.rstrip(";.") for d in L]  # noqa: E731
@@ -890,6 +910,7 @@ def affichage(typ, B, V, tr) -> tuple[dict, dict]:
          "tr_mois": "%.1f" % tr["retard_moyen_mois"][0], "tr_mois_ue": "%.1f" % tr["retard_moyen_mois"][1],
          "tr_inf": "%.1f" % tr["duree_infractions_mois"][0], "tr_inf_ue": "%.1f" % tr["duree_infractions_mois"][1],
          "tr_double": {9: "nine", 8: "eight", 10: "ten", 7: "seven"}.get(double_deficit(), str(double_deficit())),
+         "tr_hausse": str(hausses_fr()[0]), "tr_mois_hausse": "%.1f" % hausses_fr()[1],
          "cit_tue16": TUE16_EN, "etats_identiques": str(V["etats_identiques"]), "etats_total": str(len(NOMS))}
     return A, E
 
@@ -1156,6 +1177,19 @@ def _main() -> int:
     if err:
         raise Arret("U5 : %s" % err[0])
     g.append("U5 : transposition contrôlée par le texte de la Commission")
+    hz = hausses_fr()
+    t_ue4 = ue4.texte_page()
+    for nom, mut in (("France retirée de la « worrying rise »", t_ue4.replace("France and Hungary", "Hungary")),
+                     ("France plus en tête des hausses modérées", re.sub(r"months for France\. Only", "months for Spain. Only", t_ue4)),
+                     ("Hongrie plus seule au-dessus", t_ue4.replace("Only Hungary", "Only Hungary and Poland"))):
+        try:
+            hausses_fr(mut)
+        except Arret:
+            log("autotest : la mutation a mordu : " + nom + " -> U5 bis")
+        else:
+            raise Arret("U5 bis : la mutation « %s » n'a pas mordu, contrôle ABSENT" % nom)
+    g.append("U5 bis : hausse du déficit de la France (%d %%) et de son retard moyen (+%s mois) lues dans le texte de la "
+             "Commission ; citation « France and Hungary » et rang parmi les hausses « moderate » vérifiés" % (hz[0], fr(hz[1], 1)))
     tx = textes_traite()
     CA, CE = citations_traite(tx)
     g.append("U6 : %d citations des traités (TUE 4, 5, 15, 16, 17 ; TFUE 2, 18, 76, 238, 241, 288, 293, 294) retrouvées mot pour mot, FR et EN ; protocole n° 36 relu ; TFUE 238, § 3 et 168, § 4 relus (phrases résumées)" % len(CITS))

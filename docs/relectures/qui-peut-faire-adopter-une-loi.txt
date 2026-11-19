@@ -1,14 +1,14 @@
-# relu le 2026-11-19 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire adopter une loi ?
 Les lois viennent-elles surtout du Gouvernement ?
 Depuis la XVe législature (2017-2022), la majorité des lois ordinaires promulguées, hors traités, est issue d’une proposition déposée par un député ou un sénateur ; pour la XVe, c’est de peu (au moins 103 lois sur 202).
 Ce résultat dépend de ce qu’on compte : en y ajoutant les lois à procédure propre (budgets de l’État et de la sécurité sociale et lois de même nature, lois qui complètent ou modifient la Constitution), la majorité de lois d’origine parlementaire n’apparaît qu’avec la XVIe (2022-2024).
 Pourtant, dans chacune des trois législatures closes (2012-2024), environ neuf propositions de loi ordinaires sur dix déposées en premier lieu à l’Assemblée nationale n’ont pas été examinées en séance avant la fin de la législature, d’après les données de l’Assemblée.
-Les deux constats ne se contredisent pas : ils ne portent pas sur les mêmes textes, et les propositions sont bien plus nombreuses que les projets.
+Les deux constats ne se contredisent pas : ils ne portent pas sur les mêmes textes, et, à l’Assemblée, les propositions déposées sont bien plus nombreuses que les projets.
 Faire adopter une loi demande en outre plusieurs clés, que la Constitution répartit : le Premier ministre comme les parlementaires peuvent déposer, mais le Gouvernement a des priorités à l’ordre du jour et peut seul demander à l’Assemblée nationale de statuer définitivement.
 Le vote de la loi appartient au Parlement, et trois situations sont à distinguer : l’adoption d’un texte à une étape sans vote de l’Assemblée nationale sur celui-ci (article 49, alinéa 3), la mise en vigueur (article 47) ou en œuvre (article 47-1) de dispositions budgétaires par ordonnance, sans loi votée, et l’adoption d’une loi par référendum (article 11).
-Page mise à jour le 18 novembre 2026
+Page mise à jour le 19 novembre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 La Constitution confie le vote de la loi au Parlement : « Le Parlement vote la loi. » (art.
@@ -21,8 +21,8 @@ Si le Parlement ne s’est pas prononcé dans les délais, les dispositions d’
 47) ou en œuvre (art.
 47-1) par ordonnance, sans devenir une loi votée.
 Enfin, une loi peut être adoptée par référendum (art.
-11).
-Cette page suit la voie que prennent presque toutes les lois, celle du Parlement : qui a déposé, loi par loi, les lois promulguées depuis 2012, si les propositions de loi déposées à l’Assemblée nationale ont été examinées en séance, combien de fois la responsabilité du Gouvernement a été engagée sur un texte.
+11) ; aucune ne l’a été depuis 2012, le dernier référendum datant du 29 mai 2005.
+Cette page suit donc la voie qu’ont prise toutes les lois promulguées depuis 2012, celle du Parlement : qui a déposé chacune d’elles, si les propositions de loi déposées à l’Assemblée nationale ont été examinées en séance, combien de fois la responsabilité du Gouvernement a été engagée sur un texte.
 Réponse courte.
 Faire adopter une loi demande trois clés ; le Premier ministre en tient une quatrième, facultative.
 Déposer : « L’initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement. » (art.
@@ -417,7 +417,7 @@ Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l’image sa source, sa période et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Qui est à l’origine des lois promulguées ?
-Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d’une proposition de parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 82 % sous la XVIIe, en cours au 06/10/2026 ; toutes natures hors traités, 42, 46, 58 et 76 %.
+Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d’une proposition déposée par un parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 82 % sous la XVIIe, en cours au 06/10/2026 ; toutes natures hors traités, 42, 46, 58 et 76 %.
 Origine formelle au dépôt initial, non l’influence.
 Précaution d’interprétation.
 Champ : lois promulguées, hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles.

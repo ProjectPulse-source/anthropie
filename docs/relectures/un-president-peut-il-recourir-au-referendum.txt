@@ -1,11 +1,11 @@
-# relu le 2026-11-19 ; texte servi de /un-president-peut-il-recourir-au-referendum/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /un-president-peut-il-recourir-au-referendum/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Un président peut-il recourir au référendum ?
 Un président peut-il soumettre une réforme aux électeurs quand il le veut ?
 La Constitution lui en donne le pouvoir par trois voies, et chacune a ses conditions : pour un projet de loi, une proposition du Gouvernement ou des deux assemblées, et un sujet que l’article 11 délimite ; pour une révision de la Constitution, un vote des deux assemblées en termes identiques ; pour l’adhésion d’un État à l’Union européenne, le référendum est la règle, sauf si le Parlement autorise la voie du Congrès et que le président la retient.
 Du 4 octobre 1958 au 5 octobre 2026, neuf référendums nationaux ont eu lieu, le dernier le 29 mai 2005.
 Depuis 2015, des parlementaires soutenus par des électeurs peuvent aussi engager une procédure qui peut y conduire : au 5 octobre 2026, elle n’a conduit à aucun scrutin.
-Page mise à jour le 18 novembre 2026
+Page mise à jour le 19 novembre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Promettre de soumettre une réforme aux électeurs, c’est promettre de passer par une autre voie que le seul vote du Parlement.
@@ -270,8 +270,8 @@ La décision ajoute ensuite le motif retenu pour les retraites : la proposition 
 Trois autres propositions ont été déposées « en application de l’article 11 » sans qu’aucune décision du Conseil constitutionnel ne les concerne dans le registre consulté : au Sénat, n° 459 (20 avril 2018, contrôle de l’immigration) ; à l’Assemblée nationale, n° 1749 (6 mars 2019, mesures contre les djihadistes français ayant combattu en Irak et en Syrie) et n° 5203 (5 avril 2022, mauvais traitements envers les animaux).
 Elles ne sont pas comptées parmi les sept saisines, dont l’unité est la décision du Conseil.
 Elles portaient respectivement la signature de deux, deux et un parlementaires.
-L’article 11 prévoit l’initiative d’un cinquième des membres du Parlement.
-La loi organique prévoit que la proposition est transmise au Conseil constitutionnel par le président de l’assemblée saisie ; les sources consultées ne permettent pas d’établir ce qu’il est advenu de ces textes.
+La loi organique prévoit que la proposition est transmise au Conseil constitutionnel par le président de l’assemblée saisie, et c’est au Conseil de vérifier qu’elle est présentée par un cinquième au moins des membres du Parlement (ordonnance du 7 novembre 1958, art.
+45-2, 1°) ; les sources consultées ne permettent d’établir ni ce qu’il est advenu de ces textes, ni si le nombre de leurs signataires y a joué un rôle.
 Ce qu’un référendum décide, et ce qu’il ne fait pas
 Le référendum tranche le texte soumis : adopté, un projet de loi de l’article 11 devient une loi, que le président promulgue dans les quinze jours, et un projet de révision de l’article 89 modifie la Constitution.
 Le scrutin ne garantit pas, à lui seul, la mise en œuvre de ce texte ni le résultat auquel une promesse l’associe.
@@ -308,7 +308,8 @@ Article 11, article 89, article 88-5, ou initiative partagée.
 Avec qui ?
 Le Gouvernement ou les deux assemblées, qui proposent (art.
 11) ; les deux assemblées, qui votent le texte en termes identiques (art.
-89) ; un cinquième des parlementaires et un dixième des électeurs (initiative partagée).
+89) ; les deux assemblées, qui peuvent autoriser, par une même motion votée aux trois cinquièmes, l’adoption par le Congrès plutôt que par référendum (art.
+88-5) ; un cinquième des parlementaires et un dixième des électeurs (initiative partagée).
 Quelles conditions restent à franchir, et qui les vérifie ?
 Une proposition publiée, une déclaration suivie d’un débat, un vote identique des deux assemblées, ou le contrôle du Conseil constitutionnel et le recueil des soutiens ; le Conseil veille ensuite à la régularité du scrutin.
 Pour obtenir quoi ?
@@ -355,7 +356,7 @@ Ordonnance n° 58-1067 du 7 novembre 1958, art.
 45-2 ; loi organique n° 2013-1114 du 6 décembre 2013 portant application de l’article 11, art.
 1er, 4 et 9 ; code civil, art.
 1er.
-Conseil constitutionnel, décision n° 2013-681 DC du 5 décembre 2013, considérants 30 et 31 ; proclamations des résultats des référendums (décisions 61-4, 62-7, 62-9, 69-10, 72-11, 88-14, 92-19, 2000-29, 2005-38) et décisions sur les propositions de loi de l’article 11 (2019-1 et 2019-1-8, 2021-2, 2022-3, 2023-4, 2023-5, 2024-6, 2026-7 RIP), lues dans le stock CONSTIT que publie la DILA, arrêté au 5 octobre 2026 ; décision n° 2007-560 DC.
+Conseil constitutionnel, décision n° 2013-681 DC du 5 décembre 2013, considérants 30 et 31 ; proclamations des résultats des référendums (décisions 61-4, 62-7, 62-9, 69-10, 72-11, 88-14, 92-19, 2000-29, 2005-38) et décisions sur les propositions de loi de l’article 11 (2019-1 et 2019-1-8, 2021-2, 2022-3, 2023-4, 2023-5, 2024-6, 2026-7 RIP), lues dans le stock CONSTIT que publie la DILA, arrêté au 5 octobre 2026 ; décisions n° 62-20 DC et 2007-560 DC.
 Journal officiel (Légifrance), décrets de soumission au référendum et lois adoptées par référendum ; Assemblée nationale, données ouvertes des législatures XIV à XVII (dépôts au titre de l’article 11), fiche de synthèse n° 55 « La révision de la Constitution » (mars 2024), et analyses du scrutin du Congrès du 4 février 2008 et du scrutin n° 82 du 6 février 2008 (XIIIe législature), consultées le 12 octobre 2026 ; Sénat, export de la base Dosleg (dossiers déposés au titre de l’article 11), proposition de loi n° 459 (2017-2018) et dossier législatif du projet de loi constitutionnelle n° 449 (2020-2021), consultés le 12 octobre 2026 ; EUR-Lex, intitulé du traité de Lisbonne (Journal officiel de l’Union européenne C 306 du 17 décembre 2007) ; Présidence de la République, discours du 29 juin 2020 devant la Convention citoyenne pour le climat (elysee.fr), consulté le 12 octobre 2026.
 Comment le registre des référendums a été vérifié
 Le registre.

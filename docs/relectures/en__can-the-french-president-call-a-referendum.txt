@@ -1,11 +1,11 @@
-# relu le 2026-11-19 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can the French president call a referendum?
 Can a French president put a reform to the voters whenever he wants?
 The Constitution gives him that power through three routes, each with its own conditions: for a Government Bill, a recommendation from the Government or a joint motion of the two Houses, and a subject defined by article 11; for an amendment to the Constitution, a vote of the two Houses in identical terms; for the accession of a State to the European Union, a referendum is the rule unless Parliament authorises the Congress route and the president takes it.
 From 4 October 1958 to 5 October 2026, nine national referendums were held, the last one on 29 May 2005.
 Since 2015, members of Parliament backed by voters can also initiate a procedure that may lead to one: as of 5 October 2026, it has not led to any vote.
-Page updated 18 November 2026
+Page updated 19 November 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 Promising to put a reform to the voters means promising to use a route other than a parliamentary vote alone.
@@ -287,8 +287,8 @@ Three other bills were tabled “en application de l’article 11” (under arti
 5203 (5 April 2022, mistreatment of animals).
 They are not counted among the seven referrals, whose unit is a decision of the Conseil.
 They bore the signatures of two, two and one members of Parliament respectively.
-Article 11 provides for an initiative by one fifth of the members of Parliament.
-The institutional act provides that the bill is forwarded to the Conseil constitutionnel by the president of the House in which it was tabled; the sources consulted do not establish what became of these texts.
+The institutional act provides that the bill is forwarded to the Conseil constitutionnel by the president of the House in which it was tabled, and it is for the Conseil to check that the bill is presented by at least one fifth of the members of Parliament (ordinance of 7 November 1958, art.
+45-2, 1°); the sources consulted establish neither what became of these texts nor whether the number of their signatories played a part.
 What a referendum decides, and what it does not
 A referendum settles the text put to the vote: once adopted, an article 11 Bill becomes an act, which the president promulgates within fifteen days, and an article 89 amendment changes the Constitution.
 The vote does not guarantee, on its own, that the text will be implemented, nor the result a promise attaches to it.
@@ -328,7 +328,8 @@ Article 11, article 89, article 88-5, or the shared initiative.
 With whom?
 The Government or the two Houses, which recommend or move (art.
 11); the two Houses, which pass the text in identical terms (art.
-89); one fifth of the members of Parliament and one tenth of voters (shared initiative).
+89); the two Houses, which may authorise, by the same motion passed by a three-fifths majority in each, adoption by Congress instead of by referendum (art.
+88-5); one fifth of the members of Parliament and one tenth of voters (shared initiative).
 Which conditions remain to be met, and who checks them?
 A recommendation or motion published, a statement followed by a debate, an identical vote of the two Houses, or the review of the Conseil constitutionnel and the collection of signatures; the Conseil then ensures the proper conduct of the vote.
 To obtain what?
@@ -371,8 +372,8 @@ Ordinance No.
 1, 4 and 9; Civil Code, art.
 1.
 Conseil constitutionnel, decision No.
-2013-681 DC of 5 December 2013, recitals 30 and 31; proclamations of referendum results (decisions 61-4, 62-7, 62-9, 69-10, 72-11, 88-14, 92-19, 2000-29, 2005-38) and decisions on bills under article 11 (2019-1 and 2019-1-8, 2021-2, 2022-3, 2023-4, 2023-5, 2024-6, 2026-7 RIP), read in the CONSTIT database published by the DILA, as at 5 October 2026; decision No.
-2007-560 DC.
+2013-681 DC of 5 December 2013, recitals 30 and 31; proclamations of referendum results (decisions 61-4, 62-7, 62-9, 69-10, 72-11, 88-14, 92-19, 2000-29, 2005-38) and decisions on bills under article 11 (2019-1 and 2019-1-8, 2021-2, 2022-3, 2023-4, 2023-5, 2024-6, 2026-7 RIP), read in the CONSTIT database published by the DILA, as at 5 October 2026; decisions Nos.
+62-20 DC and 2007-560 DC.
 Journal officiel (Légifrance), decrees putting texts to a referendum and acts adopted by referendum; National Assembly, open data of the 14th to 17th legislatures (bills under article 11), summary sheet No.
 55 “La révision de la Constitution” (March 2024), and analyses of the Congress vote of 4 February 2008 and of vote No.
 82 of 6 February 2008 (13th legislature), consulted on 12 October 2026; Senate, export of the Dosleg database (files tabled under article 11), bill No.

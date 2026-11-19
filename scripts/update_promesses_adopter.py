@@ -433,6 +433,28 @@ def calculer(S: dict) -> tuple[dict, list[str]]:
     g.append("B6 : %d lois = %d du champ + %d exclues (%s) + %d entre deux legislatures"
              % (len(L), n_champ, n_excl, ", ".join("%s %d" % (k, natures[k]) for k in EXCLUES), len(hors)))
 
+    # --- B9 (stabilisation du 19/11/2026) : phrase « aucune [loi] ne l'a été [adoptée par référendum] depuis 2012 [...]
+    # toutes les lois promulguées depuis 2012, celle du Parlement ». Hors du Parlement, une loi ne naît que d'un
+    # référendum (art. 11, 89, 88-5) ; les ordonnances des art. 47 et 47-1 ne sont pas des lois votées. Témoin : le
+    # registre des proclamations du Conseil constitutionnel (data/promesses_referendum.json, update_promesses_referendum.py,
+    # à relancer d'abord), indépendant de e2_lois.csv, qui ne contient par construction que des lois à dossier parlementaire.
+    def b9(reg):
+        apres = sorted(r["date_scrutin"] for r in reg if r["date_scrutin"] >= "2012-01-01")
+        if apres:
+            raise Arret("B9 : referendum(s) depuis 2012 (%s) : « aucune ne l'a ete depuis 2012 » a relire" % apres)
+    reg = json.loads((ROOT / "data" / "promesses_referendum.json").read_text(encoding="utf-8"))["registre"]
+    if not reg:
+        raise Arret("B9 : registre des referendums vide ou absent")
+    b9(reg)
+    try:
+        b9(reg + [dict(reg[-1], date_scrutin="2013-05-26")])
+    except Arret:
+        pass
+    else:
+        raise Arret("mutation referendum de 2013 : B9 n'a pas mordu, controle ABSENT")
+    g.append("B9 : aucun referendum depuis 2012 au registre du Conseil constitutionnel (%d scrutins, dernier le %s) ; "
+             "mutation (scrutin de 2013) arretee" % (len(reg), max(r["date_scrutin"] for r in reg)))
+
     # --- E2 (B2)
     for r in L:
         if r["origine_AN"] and r["origine_Dosleg"] and r["origine_AN"] != r["origine_Dosleg"]:
@@ -1119,7 +1141,7 @@ def parite_mobile(figs):
 
 
 MONTRE = {
-    "fr": {"origine": "Dans le champ étudié ({champ}), la part des lois promulguées issues d'une proposition de parlementaire "
+    "fr": {"origine": "Dans le champ étudié ({champ}), la part des lois promulguées issues d'une proposition déposée par un parlementaire "
                       "est de {Ppct14} % sous la XIVe législature, {Ppct15} % sous la XVe (au moins {Pminpct15} %), "
                       "{Ppct16} % sous la XVIe et {Ppct17} % sous la XVIIe, en cours au {releve} ; toutes natures hors "
                       "traités, {Ptotpct14}, {Ptotpct15}, {Ptotpct16} et {Ptotpct17} %. Origine formelle au dépôt initial, "
