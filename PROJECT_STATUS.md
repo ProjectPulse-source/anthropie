@@ -52,6 +52,22 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-19 — Stabilisation des pages en ligne : points ouverts vérifiés à la source et publiés (FR, EN)
+- **Commits** `87ba0378` (Union européenne : « modérée » rattaché à la bonne hausse, 120 % et +3,2 mois sous jeton et
+  garde ; Référendum : procédure de l'initiative partagée, 62-20 DC, 88-5 ; Adopter : toutes les lois promulguées depuis
+  2012, garde B9), `e998a114` (Collectivités et Budget 2027 : amendements de la commission des finances du Sénat du 12/11,
+  valables seulement en séance ; contributeurs du DILICO 2025 ; « contestent » ; Quels futurs : anglais de la matrice),
+  `5630c5cf` (dette : « un an au plus » d'après Eurostat Y_LE1, usure du capital et garde, OFCE n° 13, cartes et fiches,
+  « percentage points » et motif de contrôle avec témoin), `35e59735` (Étudiants : quatrième situation du BEH, comparateurs,
+  premier écran retesté ; Langue : indice de plaisir 2000-2009, légende de la frise), `fa036a29` (IPP n° 68 ; Céreq Bref
+  n° 452, mai 2024).
+- **Méthode** : chaque fait relu à la source, pièce archivée (`06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11  STABILISATION_2026-11-19\`) ; deux relectures indépendantes du texte servi (0 P1 à la première, 1 P1 corrigé à la
+  seconde : horizon du +0,9 point) ; test du premier écran d'Étudiants (2 lecteurs conformes, témoin mordu 3 sur 3).
+- **Contrôles** : Hugo 0, `typo_build` 0, `check-all --ci` 0, `check-rendu-ressources` 0 (témoin : 10 motifs), `check-figures`
+  0, `check-dates-build` 0 ; générateurs `--check` 0 ; envois armés : relevés identiques avant/après (498 passages), 35
+  phrases en gras du lot J01 du radar mot pour mot (contrôle vu mordre).
+- **Servi** : déploiement `hugo.yml` 44478137378 réussi ; servi = build sur 27 versions, 0 écart ; 10 scripts identiques.
+
 ### 2026-11-19 — Passes de forme des lots « Promesses A » et « Parcoursup-Étudiants » publiées après jugement externe à l'aveugle
 - **Commits** Promesses A (FR, EN) : `fe4e2ac9` (Pouvoirs : droit et pratique distingués, lettre de l'article 8),
   `b8898888` (Adopter : lettre de l'article 11, extraits lus seuls), `7bb3cdc8` (Référendum : interprétation du Conseil,
