@@ -10,9 +10,9 @@ outputs:
   - RIS
   - EndNote
 description: "Anthropy traverses 3.3 million years of human history across seven configurations — from the first tool to the digital meta-programme. The displacement of disorder is a structural mechanism of human societies, not an accident of modernity."
-doi_zenodo: "10.5281/zenodo.23807982"  # v1.1 (30/10/2026) ; v1.0 : 19433086
+doi_zenodo: "10.5281/zenodo.24368735"  # v1.2 (19/11/2026) ; v1.1 : 23807982 ; v1.0 : 19433086
 wikidata_qid: "Q139771990"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
-url_zenodo: "https://zenodo.org/records/23807982"
+url_zenodo: "https://zenodo.org/records/24368735"
 ssrn_url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615059"
 jel_codes: ["N00", "B15", "Q56"]
 keywords: ["anthropy", "long run", "economic history", "disorder displacement", "civilizations", "saturation"]
@@ -21,11 +21,11 @@ faq:
     answer: "Saturation designates the state of a space of deportation when the marginal cost of transfer exceeds the benefit, or when the displaced disorder returns to the emitting system as a boomerang effect."
   - question: "How does anthropy differ from the Anthropocene?"
     answer: "The Anthropocene designates a proposed geological epoch (Crutzen, 2000), which the International Union of Geological Sciences declined in 2024 to adopt as a formal unit of the geologic time scale; the term remains a recognised descriptive concept. Anthropy designates an institutional mechanism that precedes the Anthropocene by millions of years and illuminates its dynamics."
-pdf_url: "https://zenodo.org/records/23807982/files/AWP-02_anthropy_longue_duree_EN.pdf"
+pdf_url: "https://zenodo.org/records/24368735/files/AWP-02_anthropy_longue_duree_EN.pdf"
 language: "en"
 publication_date: "2026-04-06"
 translation:
-  doi: "10.5281/zenodo.23807981"
+  doi: "10.5281/zenodo.24368734"
   url: "/awp/awp-02/"
   title: "3,3 millions d'années en un principe"
   is_canonical: true

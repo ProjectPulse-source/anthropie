@@ -9,9 +9,9 @@ outputs:
   - RIS
   - EndNote
 description: "La dette publique n'est pas un simple solde comptable : c'est un mécanisme de transfert entropique temporel et social. Ce working paper applique le cadre anthropique aux finances publiques françaises et montre que la question n'est pas \"combien ?\" mais \"qui paie ?\""
-doi_zenodo: "10.5281/zenodo.19268769"
+doi_zenodo: "10.5281/zenodo.24368736"  # v1.1 (19/11/2026) ; v1.0 : 19268769
 wikidata_qid: "Q139771991"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
-url_zenodo: "https://zenodo.org/records/19268769"
+url_zenodo: "https://zenodo.org/records/24368736"
 jel_codes: ["H63", "H62", "E62", "E58"]
 keywords: ["dette publique", "anthropie", "transfert temporel", "finances publiques", "France"]
 keywords_en: ["public debt", "anthropy", "temporal transfer", "public finance", "France"]
@@ -20,11 +20,11 @@ faq:
     answer: "La dette déplace le coût du désordre présent vers les générations futures ; l'AWP-03 propose qu'elle le reporte aussi sur les groupes sociaux les moins capables de s'y soustraire. L'AWP-09 a confronté ces deux énoncés aux comptes publics : le report vers l'avenir s'y vérifie, au sens patrimonial ; l'asymétrie sociale reste une hypothèse."
   - question: "Qui paie vraiment la dette publique ?"
     answer: "L'analyse anthropique pose la question sur deux axes : temporel (générations futures) et social (groupes captifs sans mobilité fiscale ou géographique). Sur l'axe social, les comptes publics ne tranchent pas : ils montrent seulement que la charge d'un ajustement dépend de l'instrument, et tombe en bas par la dépense, en haut par l'impôt sur les revenus et le patrimoine (AWP-09)."
-pdf_url: "https://zenodo.org/records/19268769/files/AWP-03_dette_publique_transfert.pdf"
+pdf_url: "https://zenodo.org/records/24368736/files/AWP-03_dette_publique_transfert.pdf"
 language: "fr"
 publication_date: "2026-03-01"
 translation:
-  doi: "10.5281/zenodo.19434094"
+  doi: "10.5281/zenodo.24368737"
   url: "/en/awp/awp-03/"
   title: "Public debt and anthropy: who really pays for disorder?"
 related:

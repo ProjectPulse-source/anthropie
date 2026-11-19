@@ -9,9 +9,9 @@ outputs:
   - RIS
   - EndNote
 description: "Public debt is not a simple accounting balance: it is a mechanism of temporal and social entropic transfer. This working paper applies the framework of anthropy to French public finances and shows that the question is not \"how much?\" but \"who pays?\""
-doi_zenodo: "10.5281/zenodo.19434094"
+doi_zenodo: "10.5281/zenodo.24368737"  # v1.1 (19/11/2026) ; v1.0 : 19434094
 wikidata_qid: "Q139771991"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
-url_zenodo: "https://zenodo.org/records/19434094"
+url_zenodo: "https://zenodo.org/records/24368737"
 ssrn_url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6615278"
 jel_codes: ["H63", "H62", "E62", "E58"]
 keywords: ["public debt", "anthropy", "temporal transfer", "public finance", "France"]
@@ -20,11 +20,11 @@ faq:
     answer: "Debt displaces the cost of present disorder toward future generations; AWP-03 proposes that it also shifts it onto the social groups least able to escape it. AWP-09 tested both claims against the public accounts: the shift to the future holds, in a balance-sheet sense; the social asymmetry remains a hypothesis."
   - question: "Who really pays for public debt?"
     answer: "The anthropic analysis asks the question along two axes: temporal (future generations) and social (captive groups without fiscal or geographical mobility). On the social axis the public accounts do not settle it: they only show that the burden of an adjustment depends on the instrument, falling lower down through spending and higher up through taxes on income and wealth (AWP-09)."
-pdf_url: "https://zenodo.org/records/19434094/files/AWP-03_Public_Debt_and_Anthropy_EN.pdf"
+pdf_url: "https://zenodo.org/records/24368737/files/AWP-03_Public_Debt_and_Anthropy_EN.pdf"
 language: "en"
 publication_date: "2026-04-06"
 translation:
-  doi: "10.5281/zenodo.19268769"
+  doi: "10.5281/zenodo.24368736"
   url: "/awp/awp-03/"
   title: "Dette publique et anthropie : qui paie vraiment le désordre ?"
   is_canonical: true
