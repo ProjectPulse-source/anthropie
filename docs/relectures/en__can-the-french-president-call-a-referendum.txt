@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/can-the-french-president-call-a-referendum/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can the French president call a referendum?
 Can a French president put a reform to the voters whenever he wants?
@@ -163,7 +163,8 @@ The two time limits are those of article 11: the bill “may not be applied to t
 If it meets the conditions, registered voters can support it: “La durée de la période de recueil des soutiens est de neuf mois.” (institutional act, art.
 4; our translation: “The period for collecting signatures of support is nine months.”).
 If one tenth of registered voters has supported it, the Conseil constitutionnel declares so, and each of the two Houses has six months from the publication of that decision in the Journal officiel to consider the bill; “Ce délai est suspendu entre deux sessions ordinaires.” (institutional act, art.
-9; our translation: “This period is suspended between two ordinary sessions.”); the Conseil constitutionnel held that this period is also suspended if the National Assembly is dissolved (decision No.
+9; our translation: “This period is suspended between two ordinary sessions.”).
+The Conseil constitutionnel held that this period is also suspended if the National Assembly is dissolved (decision No.
 2013-681 DC of 5 December 2013, recital 31).
 If either House has not considered it within that period, the president submits it to a referendum.
 For there to be no referendum, it is therefore enough for each House to consider the bill at least once, even without passing it.
@@ -301,8 +302,8 @@ On 29 May 2005, the Bill authorising the ratification of the Treaty establishing
 In 2008, the ratification of another treaty, the Treaty of Lisbon, was authorised by an act, after an amendment to the Constitution approved by Congress; no referendum was held.
 The Treaty of Lisbon, signed after the 2005 rejection, is a different treaty; its title (“Treaty of Lisbon amending the Treaty on European Union and the Treaty establishing the European Community”) says that it amends the existing treaties.
 The Conseil constitutionnel held that the authorisation to ratify it “ne peut intervenir qu’après révision de la Constitution” (decision No.
-2007-560 DC of 20 December 2007; our translation: can take place only after the Constitution has been amended).
-On 4 February 2008, Parliament convened in Congress approved the Bill amending Title XV of the Constitution “dans les conditions prévues à l’article 89, alinéa 3, de la Constitution” (under the conditions laid down in article 89, paragraph 3, of the Constitution; Congress vote); this is Act No.
+2007-560 DC of 20 December 2007; our translation: “can take place only after the Constitution has been amended”).
+On 4 February 2008, Parliament convened in Congress approved the Bill amending Title XV of the Constitution “dans les conditions prévues à l’article 89, alinéa 3, de la Constitution” (our translation: “under the conditions laid down in article 89, paragraph 3, of the Constitution”; Congress vote); this is Act No.
 2008-103 of the same day, amending the Constitution.
 The ratification of the Treaty of Lisbon was then authorised by act No.
 2008-125 of 13 February 2008.

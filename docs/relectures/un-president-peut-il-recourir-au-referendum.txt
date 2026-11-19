@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /un-president-peut-il-recourir-au-referendum/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /un-president-peut-il-recourir-au-referendum/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Un président peut-il recourir au référendum ?
 Un président peut-il soumettre une réforme aux électeurs quand il le veut ?
@@ -154,7 +154,8 @@ Les deux délais sont ceux de l’article 11 : la proposition « ne peut avoir p
 Si elle est conforme, les électeurs inscrits peuvent la soutenir : « La durée de la période de recueil des soutiens est de neuf mois. » (loi organique, art.
 4).
 Si un dixième des inscrits l’a soutenue, le Conseil constitutionnel le déclare, et chacune des deux assemblées a six mois, à compter de la publication de cette décision au Journal officiel, pour examiner la proposition ; « Ce délai est suspendu entre deux sessions ordinaires. » (loi organique, art.
-9) ; le Conseil constitutionnel a jugé que ce délai est aussi suspendu en cas de dissolution de l’Assemblée nationale (décision n° 2013-681 DC du 5 décembre 2013, considérant 31).
+9).
+Le Conseil constitutionnel a jugé que ce délai est aussi suspendu en cas de dissolution de l’Assemblée nationale (décision n° 2013-681 DC du 5 décembre 2013, considérant 31).
 Si l’une d’elles ne l’a pas examinée dans ce délai, le président la soumet au référendum.
 Pour qu’il n’y ait pas de référendum, il suffit donc que chaque assemblée examine la proposition au moins une fois, même sans l’adopter.
 Pour cette étape, l’article 11 emploie l’indicatif : « le Président de la République la soumet au référendum », là où son premier alinéa dit « peut soumettre ».
