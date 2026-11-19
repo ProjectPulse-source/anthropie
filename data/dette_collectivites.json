@@ -27,12 +27,12 @@
    },
    "ggd": {
     "jeu": "gov_10dd_ggd",
-    "maj_source": "2026-11-17T23:00:00+0100",
-    "sha256": "f09f77c3c09c36e077e09cd3011d7157880d2daa2638c4e92114d70afb7dcee3"
+    "maj_source": "2026-11-18T23:00:00+0100",
+    "sha256": "d01c6fe35cc20c637aa9150c1c1908fb66d1c19fda8e80d730a08517de494e8a"
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-11-18T",
+    "maj_source": "2026-11-19T",
     "sha256": "c924192f0552b859d6837582dc5875f8ddf7ef1bbb41823aebb284e77dcc93a0"
    },
    "notif": {
@@ -1148,6 +1148,12 @@
   "plf_senat_rct": "2026-12-02",
   "plf_senat_amdt": "2026-11-27",
   "plf_senat_vote": "2026-12-09",
+  "plf_cs_date": "2026-11-12",
+  "plf_cs_cpeb_md": 1,
+  "plf_cs_com_avant": 14000,
+  "plf_cs_com_apres": 4000,
+  "plf_cs_var_m": 371,
+  "plf_cs_tva_annee": 2027,
   "plf_votes": [
    {
     "article": 34,
@@ -1211,7 +1217,7 @@
   "plf_vote_dates": [
    "2026-10-19"
   ],
-  "plf_etat_au": "2026-11-17",
+  "plf_etat_au": "2026-11-19",
   "plf_statut_dgf": "texte initial, attendu au Sénat",
   "plf_statut_dgf_en": "initial text, due before the Senate",
   "plf_etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
@@ -1241,7 +1247,12 @@
    37,
    39,
    40
-  ]
+  ],
+  "dilico25_com": 1924,
+  "dilico25_epci": 141,
+  "dilico25_dep": 50,
+  "dilico25_reg": 12,
+  "dilico25_n": 2127
  },
  "series": {
   "serie_inv_fr": {
@@ -1397,7 +1408,7 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1,7",
   "plf_vote_date": "19 octobre 2026",
-  "plf_etat_au": "17 novembre 2026",
+  "plf_etat_au": "19 novembre 2026",
   "plf_etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27,9",
@@ -1420,6 +1431,17 @@
   "plf_statut_ministeres": "texte initial, attendu au Sénat",
   "plf_statut_dilico": "texte initial, attendu au Sénat",
   "plf_statut_dgf": "texte initial, attendu au Sénat",
+  "plf_cs_date": "12 novembre 2026",
+  "plf_cs_cpeb_md": "1",
+  "plf_cs_var_m": "371",
+  "plf_cs_com_avant": "14 000",
+  "plf_cs_com_apres": "4 000",
+  "plf_cs_tva_annee": "2027",
+  "dilico25_n": "2 127",
+  "dilico25_com": "1 924",
+  "dilico25_epci": "141",
+  "dilico25_dep": "50",
+  "dilico25_reg": "12",
   "plf_inv_n_pct": "4,0",
   "plf_inv_n1_pct": "4,2",
   "dgf_vote_13": "41,5",
@@ -1639,7 +1661,7 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1.7",
   "plf_vote_date": "19 October 2026",
-  "plf_etat_au": "17 November 2026",
+  "plf_etat_au": "19 November 2026",
   "plf_etape_suivante": "examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27.9",
@@ -1662,6 +1684,17 @@
   "plf_statut_ministeres": "initial text, due before the Senate",
   "plf_statut_dilico": "initial text, due before the Senate",
   "plf_statut_dgf": "initial text, due before the Senate",
+  "plf_cs_date": "12 November 2026",
+  "plf_cs_cpeb_md": "1",
+  "plf_cs_var_m": "371",
+  "plf_cs_com_avant": "14,000",
+  "plf_cs_com_apres": "4,000",
+  "plf_cs_tva_annee": "2027",
+  "dilico25_n": "2,127",
+  "dilico25_com": "1,924",
+  "dilico25_epci": "141",
+  "dilico25_dep": "50",
+  "dilico25_reg": "12",
   "plf_inv_n_pct": "4.0",
   "plf_inv_n1_pct": "4.2",
   "dgf_vote_13": "41.5",

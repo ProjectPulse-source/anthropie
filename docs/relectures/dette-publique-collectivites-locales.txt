@@ -1,4 +1,4 @@
-# relu le 2026-11-19 ; texte servi de /dette-publique-collectivites-locales/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /dette-publique-collectivites-locales/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Les collectivités locales sont-elles une variable d’ajustement des finances publiques ?
 La dette des collectivités ne permet pas de trancher : la règle d’équilibre de leurs budgets leur interdit d’emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu’une contrainte venue de l’État se lirait dans leurs recettes et leurs dépenses.
@@ -6,16 +6,17 @@ De 2013 à 2017, les administrations publiques locales ont amélioré leur solde
 Leurs dépenses totales sont restées presque stables en euros courants, tandis que les recettes fiscales progressaient et que les transferts reçus reculaient.
 Rapportées au PIB, leurs dépenses ont diminué de 0,82 point, dont 0,50 point pour l’investissement.
 Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d’attribuer le recul de l’investissement à la baisse des dotations.
-Page mise à jour le 18 novembre 2026
+Page mise à jour le 19 novembre 2026
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Projet de loi de finances pour 2027, état au 17 novembre 2026.
+Projet de loi de finances pour 2027, état au 19 novembre 2026.
 L’Assemblée nationale a rejeté la première partie du texte le 4 novembre 2026, ce qui emporte l’ensemble ; ses votes sur les articles tombent avec lui : le 19 octobre 2026, l’Assemblée avait supprimé la baisse du taux du FCTVA (art.
 35) et la contribution progressive à l’effort budgétaire (art.
 37), n’avait pas adopté l’écrêtement de la TVA affectée (art.
 36), et avait porté la DGF pour 2027 à 27,9 milliards d’euros.
 La procédure n’est pas achevée : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l’article 84 le 2 décembre, puis vote sur l’ensemble le 9 décembre.
+Le 12 novembre 2026, la commission des finances du Sénat a adopté des amendements qui suppriment la baisse du taux du FCTVA, réduisent de 1 milliard d’euros, selon elle, la contribution progressive et limitent à 2027 l’écrêtement de la TVA affectée, en contrepartie d’une baisse supplémentaire de 371 millions d’euros des dotations dites variables d’ajustement ; ils ne modifient le texte que si le Sénat les adopte en séance.
 Les montants du projet déposé restent présentés plus bas comme le cadrage initial du débat → mesures et état du texte.
 Ce que cela change pour une commune, mesure par mesure : Budget 2027 : que sait-on réellement pour votre commune ?
 Comment une contrainte peut-elle ne pas apparaître dans la dette ?
@@ -281,7 +282,7 @@ Le sous-secteur des administrations d’États fédérés (S1312) n’existe, da
 En Allemagne et en Espagne, la dette territoriale additionne donc les deux échelons ; les dettes croisées entre eux représentent au plus 0,2 point de PIB : le double compte est marginal et ne modifie pas les ordres de grandeur.
 En Espagne, la loi organique 2/2012 affecte en outre les excédents de chaque niveau d’administration à la réduction de son endettement net (article 32).
 Que demande le projet de loi de finances aux collectivités ?
-État du texte au 17 novembre 2026 : projet de loi de finances pour 2027, déposé le 1er octobre 2026, rejeté par l’Assemblée nationale le 4 novembre 2026 ; le 19 octobre 2026, celle-ci avait supprimé la baisse du taux du FCTVA (art.
+État du texte au 19 novembre 2026 : projet de loi de finances pour 2027, déposé le 1er octobre 2026, rejeté par l’Assemblée nationale le 4 novembre 2026 ; le 19 octobre 2026, celle-ci avait supprimé la baisse du taux du FCTVA (art.
 35) et la contribution progressive à l’effort budgétaire (art.
 37), n’avait pas adopté l’écrêtement de la TVA affectée (art.
 36), votes tombés avec le texte.
@@ -435,6 +436,7 @@ Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l’image sa source, sa période et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 Investissement des administrations locales et transferts reçus, France, en % du PIB
 De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; la série comparable des transferts s’arrête en 2017.
+Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d’attribuer le recul de l’investissement à la baisse des dotations.
 Précaution d’interprétation.
 Transferts reçus : de l’État et de la sécurité sociale, toutes dotations confondues ; ce n’est pas la DGF.
 Série comparable arrêtée en 2017 : en 2018, une dotation, puis en 2021 le dégrèvement de taxe d’habitation, enregistré en transfert de l’État, sont remplacés par des fractions de TVA ou de taxe foncière, comptées en impôts.
@@ -446,7 +448,7 @@ SVG
 Solde des administrations locales, 2013-2017 : la même variation, en euros et en points de PIB
 De 2013 à 2017, le solde des administrations publiques locales s’améliore de 9,7 milliards d’euros (0,45 point de PIB).
 Leurs dépenses totales restent presque stables en euros courants (+1,2 milliard d’euros) ; rapportées au PIB, elles diminuent de 0,82 point, dont 0,50 point pour l’investissement, pendant que les recettes fiscales progressent et que les transferts reçus reculent.
-Ces évolutions sont concomitantes ; elles n’attribuent pas le recul de l’investissement à la baisse des dotations.
+Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d’attribuer le recul de l’investissement à la baisse des dotations.
 Précaution d’interprétation.
 Barres : contribution de chaque poste à la variation du solde ; pour une dépense, l’inverse de sa variation.
 Les autres dépenses augmentent de 8,7 milliards d’euros (barre négative) et reculent de 0,32 point de PIB (barre positive) : le PIB nominal augmente de 8,1 %.

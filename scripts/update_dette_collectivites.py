@@ -219,12 +219,19 @@ RECLASSEMENT = {"fr": r"ne baissent pas|ne baisse pas,? (?:elle|elles) change|ch
 ECART_NEG = {"fr": r"\b(?:pas|ni|n'est|aucun)\b", "en": r"\b(?:not|nor|no)\b"}
 # 6. (22/10/2026) le projet de loi a ete examine en seance : « avant examen par le Parlement » ment depuis le 19/10.
 PERIME = {"fr": r"avant (?:son )?examen par le Parlement", "en": r"before (?:its )?examination by Parliament"}
+# 7. (19/11/2026) une decision de la commission des finances du Senat ne change pas le texte discute en seance (Constitution,
+#    art. 42) : toute phrase qui la cite dit qu'elle ne vaut qu'adoptee en seance. Lue aussi sur les pages Budget 2027.
+COMMISSION_SENAT = {"fr": (r"commission des finances du Sénat (?:en )?a adopté", r"en séance"),
+                    "en": (r"Senate finance committee adopted", r"in plenary")}
+PAGES_BUDGET = {"fr": Path(__file__).resolve().parent.parent / "content" / "budget-2027-votre-commune" / "_index.md",
+                "en": Path(__file__).resolve().parent.parent / "content" / "budget-2027-votre-commune" / "_index.en.md"}
 MUTATIONS_PROSE = {
     "unite": "Le solde s'est redressé surtout par la baisse des dépenses ({{< coll-val \"ep_te_pt\" >}} de PIB).",
     "verdict": "Les collectivités ne sont pas une variable d'ajustement, car leur dette a peu augmenté.",
     "plf_net": "Le projet impose aux collectivités un prélèvement net de {{< coll-val \"plf_somme\" >}} milliards d'euros.",
     "reclassement": "Une dotation devient une fraction de TVA : les ressources ne baissent pas, elles changent de case.",
     "perime": "Projet de loi de finances, avant examen par le Parlement.",
+    "commission_senat": "Le 12 novembre, la commission des finances du Sénat a adopté la suppression de l'article 35.",
     "plf_ecart": "Le projet retire aux collectivités {{< coll-val \"plf_ecart_mde\" >}} de ressources.",
 }
 
@@ -265,6 +272,9 @@ def fautes_prose(textes: dict) -> list[str]:
                     out.append("[%s] écart somme / variation du projet de loi présenté comme un montant : %s" % (lang, court))
                 if re.search(PERIME[lang], ph, re.I):
                     out.append("[%s] état du texte périmé (le registre des votes porte des séances) : %s" % (lang, court))
+                c1, c2 = COMMISSION_SENAT[lang]
+                if re.search(c1, ph) and not re.search(c2, ph):
+                    out.append("[%s] décision de la commission du Sénat sans « %s » : %s" % (lang, c2, court))
                 if lang == "fr" and re.search(r"\bmonté\b", ph):
                     out.append("[fr] « a monté » (tournure proscrite) : %s" % court)
     return out
@@ -278,6 +288,9 @@ def gardes_prose(extra: dict | None = None) -> int:
     for lang, l_ in (extra or {}).items():
         textes[lang] += l_
     f_ = fautes_prose(textes)
+    # Pages « Budget 2027 » : la seule règle de la commission du Sénat (19/11/2026).
+    f_ += [x for x in fautes_prose({l_: [p_.read_text(encoding="utf-8")] for l_, p_ in PAGES_BUDGET.items()})
+           if "commission du Sénat" in x]
     if f_:
         fail("garde de prose : " + " | ".join(f_))
     return sum(len(phrases(t)) for l_ in textes.values() for t in l_)
@@ -609,7 +622,7 @@ def plf_mesures() -> dict:
 
 
 PLF_VOTES = DON / "plf_votes.json"
-PLF_VOTES_SHA = "4b7dbb14a276e44087d3cc1bb4938f8fd5535f2c1027508e1e53493dedb2ee4d"  # 06/11/2026 : rejet du texte, calendrier du Senat
+PLF_VOTES_SHA = "08dadb704a09602260f7ab63dd22ac02275b3e96445675dfef51c94725658538"  # 19/11/2026 : commission des finances du Senat (12/11), etat au 19/11
 # Etat du projet au Parlement (22/10/2026, arbitrage de l'auteur, piece 1807_Communes.txt) : chaque resultat est une
 # citation verbatim du compte rendu officiel, retrouvee par sources_collectivites/verifier_plf_votes.py dans le compte
 # rendu archive (empreinte dans plf_votes.json). Mesure -> article qui la porte ; None = credits de seconde partie.
@@ -687,6 +700,94 @@ def senat_txt(x, attendu: bool):
 def date_fr(iso: str) -> str:
     a, m, j = (int(x) for x in iso.split("-"))
     return ("1er" if j == 1 else str(j)) + "\u00a0" + MOIS_FR[m - 1] + "\u00a0" + str(a)
+
+
+# Commission des finances du Senat (stabilisation du 19/11/2026) : amendements adoptes le 12/11 sur la premiere partie,
+# cites mot pour mot dans la liasse archivee (registre, `commission_senat`). Ils ne modifient le texte discute en seance que
+# si la seance les adopte (garde de prose COMMISSION_SENAT). Condition de mort des phrases qui les citent : un vote de
+# seance du Senat sur les articles 34 a 37 entre au registre (arret ci-dessous, les phrases sont alors a reecrire).
+CS_ARTICLES = (34, 35, 36, 37)
+
+
+def _entier(s: str) -> int:
+    return int(s.strip().replace(" ", "").replace("\u202f", "").replace("\xa0", ""))
+
+
+def commission_senat(v: dict, r: dict) -> dict:
+    """Jetons plf_cs_* lus dans les citations des amendements de la commission du Senat ; aucun nombre saisi."""
+    import re
+    cs = v.get("commission_senat", [])
+    if not cs:
+        return {}
+    textes = {}
+    for c in cs:
+        s = v["seances"][c["seance"]]
+        if c["seance"] not in textes:
+            brut = (DON / s["texte"]).read_bytes()
+            if hashlib.sha256(brut).hexdigest() != s["sha256_texte"]:
+                fail("commission du Senat : texte archive %s altere (empreinte)" % c["seance"])
+            textes[c["seance"]] = brut.decode("utf-8")
+        for q in c["citations"]:
+            if q not in textes[c["seance"]]:
+                fail("commission du Senat : art. %d (%s) : citation introuvable : %s" % (c["article"], c["amendement"], q[:80]))
+    par = {c["article"]: c for c in cs}
+    if tuple(sorted(par)) != CS_ARTICLES or len(par) != len(cs):
+        fail("commission du Senat : une entree par article 34 a 37 attendue")
+    if par[35]["statut"] != "suppression_adoptee" or any(par[a]["statut"] != "modification_adoptee" for a in (34, 36, 37)):
+        fail("commission du Senat : statuts inattendus (art. 35 supprime, art. 34, 36 et 37 modifies)")
+    for a in v["articles"]:
+        if a["article"] in CS_ARTICLES and v["seances"][a["seance"]].get("assemblee") == "Sénat":
+            fail("registre : vote de seance du Senat sur l'art. %d -- les phrases de la commission sont a reecrire" % a["article"])
+
+    def lire(art, motif):
+        for q in par[art]["citations"]:
+            m = re.search(motif, q)
+            if m:
+                return m
+        fail("commission du Senat : art. %d, valeur introuvable dans les citations (%s)" % (art, motif))
+
+    baisse = lire(37, r"diminuer d’(un) milliard d’euros le montant global de la CPEB")
+    com = lire(37, r"ramené de ([\d \u202f\xa0]+) à ([\d \u202f\xa0]+)")
+    var = lire(34, r"minoration de (\d+) millions d’euros des variables d’ajustement")
+    an = lire(36, r"à la seule année (\d{4})")
+    n0, n1 = _entier(com.group(1)), _entier(com.group(2))
+    if not 0 < n1 < n0:
+        fail("commission du Senat : communes contributrices %d -> %d, pas une baisse" % (n0, n1))
+    if int(an.group(1)) != r["plf_edition"]:
+        fail("commission du Senat : ecretement limite a %s, edition %s" % (an.group(1), r["plf_edition"]))
+    dates = {v["seances"][c["seance"]]["date"] for c in cs}
+    if len(dates) != 1:
+        fail("commission du Senat : amendements de dates differentes %s" % sorted(dates))
+    return {"plf_cs_date": dates.pop(), "plf_cs_cpeb_md": {"un": 1}[baisse.group(1)], "plf_cs_com_avant": n0,
+            "plf_cs_com_apres": n1, "plf_cs_var_m": int(var.group(1)), "plf_cs_tva_annee": int(an.group(1))}
+
+
+# Contributeurs du DILICO de 2025 (19/11/2026) : Cour des comptes, « Les finances publiques locales 2025 », fascicule 2,
+# p. 49, page archivee (texte normalise du PDF, empreinte du PDF 0eb2bc65...0966) ; aucun nombre recopie a la main.
+CCOMPTES_DILICO = DON / "ccomptes_FPL2025_fasc2_p49.txt"
+CCOMPTES_DILICO_SHA = "76a82bdbbf46a8c810b6534080e27a6991b52c9ffe6c71b66fcb4f243eebab3c"
+
+
+def dilico25_contributeurs() -> dict:
+    import re
+    brut = CCOMPTES_DILICO.read_bytes()
+    if hashlib.sha256(brut).hexdigest() != CCOMPTES_DILICO_SHA:
+        fail("Cour des comptes, contributeurs du DILICO 2025 : page archivee alteree (empreinte)")
+    t = brut.decode("utf-8")
+    if "contribuent au Dilico en 2025" not in t:
+        fail("Cour des comptes : la page archivee ne porte plus la liste des contributeurs du DILICO 2025")
+    motifs = {"dilico25_com": r"- ([\d \u202f\xa0]+) communes de métropole",
+              "dilico25_epci": r"- (\d+) intercommunalités à fiscalité propre",
+              "dilico25_dep": r"- (\d+) départements, soit la moitié",
+              "dilico25_reg": r"- (\d+) des 13 régions métropolitaines"}
+    out = {}
+    for k, m in motifs.items():
+        x = re.findall(m, t)
+        if len(x) != 1:
+            fail("Cour des comptes, DILICO 2025 : %s lu %d fois" % (k, len(x)))
+        out[k] = _entier(x[0])
+    out["dilico25_n"] = sum(out.values())
+    return out
 
 
 def plf_votes(r: dict) -> dict:
@@ -769,7 +870,8 @@ def plf_votes(r: dict) -> dict:
         extra = {"plf_senat_attendu": senat_attendu(v), "plf_rejet": rejet["date"], "plf_rejet_contre": e_["contre"], "plf_rejet_pour": e_["pour"],
                  "plf_senat_debut": sen["debut"], "plf_senat_rct": sen["mission_rct"],
                  "plf_senat_amdt": sen["amendements_rct"], "plf_senat_vote": sen["vote_ensemble"]}
-    return {**extra, "plf_votes": v["articles"], "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
+    cs = commission_senat(v, r)
+    return {**extra, **cs, "plf_votes": v["articles"], "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
             "plf_statut_dgf": dgf_court[0], "plf_statut_dgf_en": dgf_court[1],
             "plf_etape_suivante": v["etape_suivante"], "plf_etape_suivante_en": v["etape_suivante_en"],
             "plf_dgf_an_m": (ap - av) / 1e6, "plf_dgf_an": ap / 1e9,
@@ -1119,6 +1221,7 @@ def calculer(J: Jeu) -> tuple[dict, list[dict]]:
     ]
     r.update(plf_mesures())
     r.update(plf_votes(r))
+    r.update(dilico25_contributeurs())
     gardes += [
         ("projet de loi de finances : « la DGF augmente » (abondements et montant à périmètre courant)",
          r["plf_dgf_hausse_m"] > 0 and r["plf_dgf_hausse_courant_m"] > 0),
@@ -1223,6 +1326,12 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         **{"plf_etat_" + m_["cle"]: (m_["etat_en"] if lang == "en" else m_["etat"]) for m_ in r["plf_mesures"]},
         **{"plf_statut_" + m_["cle"]: (m_["statut_court_en"] if lang == "en" else m_["statut_court"]) for m_ in r["plf_mesures"]},
         "plf_statut_dgf": r["plf_statut_dgf_en"] if lang == "en" else r["plf_statut_dgf"],
+        **({"plf_cs_date": date_en(date_fr(r["plf_cs_date"])) if lang == "en" else date_fr(r["plf_cs_date"]),
+            "plf_cs_cpeb_md": fr1(r["plf_cs_cpeb_md"], 0), "plf_cs_var_m": fr1(r["plf_cs_var_m"], 0),
+            "plf_cs_com_avant": lg.nombre(r["plf_cs_com_avant"], 0, lang),
+            "plf_cs_com_apres": lg.nombre(r["plf_cs_com_apres"], 0, lang),
+            "plf_cs_tva_annee": str(r["plf_cs_tva_annee"])} if r.get("plf_cs_date") else {}),
+        **{k_: lg.nombre(r[k_], 0, lang) for k_ in ("dilico25_n", "dilico25_com", "dilico25_epci", "dilico25_dep", "dilico25_reg")},
         "plf_inv_n_pct": fr1(-r["plf_inv_n_pct"]), "plf_inv_n1_pct": fr1(-r["plf_inv_n1_pct"]),
 
         "dgf_vote_13": fr1(r["dgf_vote"][2013]), "dgf_vote_17": fr1(r["dgf_vote"][2017]),
@@ -2055,13 +2164,14 @@ MONTRE = {
         ("investissement", "collectivites-investissement",
          "De {ep_a0} à {ep_a1}, les transferts reçus par les administrations publiques locales reculent de {ep_transf_mde} "
          "({ep_transf_pt} de PIB) et leur investissement de {ep_inv_mde} ({ep_inv_pt}) ; la série comparable des transferts "
-         "s'arrête en {ep_a1}."),
+         "s'arrête en {ep_a1}. Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, d'attribuer "
+         "le recul de l'investissement à la baisse des dotations."),
         ("cascade", "collectivites-cascade",
          "De {ep_a0} à {ep_a1}, le solde des administrations publiques locales s'améliore de {ep_solde_mde} ({ep_solde_pt} de "
          "PIB). Leurs dépenses totales restent presque stables en euros courants ({ep_te_mde_s}) ; rapportées au PIB, elles "
          "diminuent de {ep_te_pt}, dont {ep_inv_pt} pour l'investissement, pendant que les recettes fiscales progressent et que "
-         "les transferts reçus reculent. Ces évolutions sont concomitantes ; elles n'attribuent pas le recul de l'investissement "
-         "à la baisse des dotations."),
+         "les transferts reçus reculent. Ces évolutions sont concomitantes ; elles ne permettent pas, à elles seules, "
+         "d'attribuer le recul de l'investissement à la baisse des dotations."),
         ("europe", "collectivites-europe",
          "Une même dette territoriale peut recouvrir des architectures opposées : en Espagne, {es_part_etat_pct} % en est "
          "détenue par l'État central ; en France, {fr_part_etat_pct} %."),
@@ -2069,12 +2179,14 @@ MONTRE = {
     "en": [
         ("investissement", "collectivites-investissement",
          "From {ep_a0} to {ep_a1}, the transfers received by local government fell by {ep_transf_mde} ({ep_transf_pt} of GDP) "
-         "and its investment by {ep_inv_mde} ({ep_inv_pt}); the comparable transfer series stops in {ep_a1}."),
+         "and its investment by {ep_inv_mde} ({ep_inv_pt}); the comparable transfer series stops in {ep_a1}. These "
+         "movements are concomitant; on their own, they do not allow the fall in investment to be attributed to the "
+         "grant cuts."),
         ("cascade", "collectivites-cascade",
          "From {ep_a0} to {ep_a1}, the local government balance improved by {ep_solde_mde} ({ep_solde_pt} of GDP). Total "
          "spending stayed almost flat in current euros ({ep_te_mde_s}); relative to GDP, it fell by {ep_te_pt}, of which "
          "{ep_inv_pt} for investment, while tax revenue rose and transfers received fell. These movements are concomitant; "
-         "they do not attribute the fall in investment to the grant cuts."),
+         "on their own, they do not allow the fall in investment to be attributed to the grant cuts."),
         ("europe", "collectivites-europe",
          "The same subnational debt can conceal opposite architectures: in Spain, {es_part_etat_pct}% of it is held by central "
          "government; in France, {fr_part_etat_pct}%."),
@@ -2179,10 +2291,13 @@ def _egal(x, y) -> bool:
 
 
 def ecarts_publies(prev: dict, calcul: dict, series: dict) -> list[str]:
-    """Grandeurs deja publiees (calcul et series du JSON precedent) qui different du calcul du jour."""
+    """Grandeurs deja publiees (calcul et series du JSON precedent) qui different du calcul du jour. Les jetons du projet
+    de loi et du DILICO 2025 (plf_*, dilico25_*) viennent de pieces archivees et portent leur propre date (« Etat au ») :
+    ils ne datent pas le releve des series (19/11/2026 : l'etat au Parlement faisait dater du jour les series Eurostat)."""
     pc_, nc_ = _norm(prev.get("calcul", {})), _norm(calcul)
     ps_, ns_ = _norm(prev.get("series", {})), _norm(series)
-    return [k for k in pc_ if not _egal(pc_[k], nc_.get(k))] + [k for k in ps_ if not _egal(ps_[k], ns_.get(k))]
+    return [k for k in pc_ if not k.startswith(("plf_", "dilico25_")) and not _egal(pc_[k], nc_.get(k))] + \
+        [k for k in ps_ if not _egal(ps_[k], ns_.get(k))]
 
 
 def date_releve(b: dict, r: dict) -> str:

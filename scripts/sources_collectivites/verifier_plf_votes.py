@@ -83,6 +83,13 @@ def main():
             if norm(x) not in t:
                 sys.exit(f"ECHEC : art. {c['article']} ({c['amendement']}) : « {x} » introuvable")
         print(f"art. {c['article']} : {c['statut']} en commission ({c['amendement']}) -- citations retrouvees")
+    # Commission des finances du Senat (19/11/2026) : citations relues dans la liasse archivee dans le depot.
+    for c in v.get("commission_senat", []):
+        t = textes[c["seance"]]
+        for x in c["citations"]:
+            if norm(x) not in t:
+                sys.exit(f"ECHEC : art. {c['article']} ({c['amendement']}, Senat) : « {x} » introuvable")
+        print(f"art. {c['article']} : {c['statut']} en commission du Senat ({c['amendement']}) -- citations retrouvees")
     print("OK : %d article(s) relu(s), %d decision(s) de commission%s ; toutes citations retrouvees"
           % (n, len(v.get("commission", [])) if d else 0,
              (" ; hors depot, non relues ici : %s" % ", ".join(sorted(hors))) if hors else ""))

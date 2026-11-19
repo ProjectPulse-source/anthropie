@@ -1,7 +1,7 @@
 {
  "_role": "Etat du projet de loi de finances au Parlement, article par article, pour la page collectivites. Chaque resultat est une citation VERBATIM du compte rendu officiel de la seance ; le compte rendu est archive hors depot (06_PROMOTION/RECHERCHE_VOTRE_COMMUNE_2026-10-22/_SOURCES, SHA256SUMS.txt) et chaque citation y a ete retrouvee par verifier_plf_votes.py le jour de l'ecriture. Une decision de commission (amendement adopte) entre dans `commission`, citee sur la page de l'amendement archivee : en premiere lecture, la seance discute le texte du Gouvernement (Constitution, art. 42), la decision de commission n'y vaut que si la seance la reprend. A completer a chaque etape (27/10-2/11, vote solennel du 3/11, Senat, CMP, loi promulguee) : une etape = une entree datee, jamais une ecrasee. 06/11/2026 : texte rejeté par l'Assemblée le 4/11 (`texte_rejete`) ; les entrées `articles` et `commission` restent comme historique, sans effet sur le texte transmis au Sénat ; calendrier du Sénat dans `senat` (ordre du jour archivé).",
  "edition": 2027,
- "etat_au": "2026-11-17",
+ "etat_au": "2026-11-19",
  "etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
  "etape_suivante_en": "examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December",
  "etape_source": {
@@ -47,6 +47,33 @@
    "sha256_html": "80d84572f4887f0add33321c6bcd7fe60a0a411de2b09031ce75d259cc83e741",
    "texte": "comptes_rendus/SENAT-ODJ-2026-11-05.txt",
    "sha256_texte": "ccd1e3cdd0ee0e5dc212c1c2debca869b257d6fa7907e4f2ac1200f2c3768cc0"
+  },
+  "SENAT-CF-2026-11-12": {
+   "date": "2026-11-12",
+   "assemblee": "Sénat",
+   "seance": "commission des finances, amendements adoptés sur la première partie (liasse publiée par la commission, marquée « provisoire »)",
+   "url": "https://www.senat.fr/fileadmin/cru-1794931274/Commissions/Finances/2026-2027/PLF_2027/Divers_PLF_2027/Liasse_amdts_RG.pdf",
+   "sha256_pdf": "03af989d715b30a1de5365cc1d9e5c1ab8f106bd2d8b841910262f8f91267936",
+   "texte": "comptes_rendus/SENAT-CF-2026-11-12.txt",
+   "sha256_texte": "4eb33ee6fc983bdc44a7213ad0129254a5ae0538c3936661eea7fe6f8484d895"
+  },
+  "SENAT-CF-ACTU-8609": {
+   "date": "2026-11-12",
+   "assemblee": "Sénat",
+   "seance": "actualité de la commission des finances : examen des articles de la première partie",
+   "url": "https://www.senat.fr/travaux-parlementaires/commissions/commission-des-finances/detail-actualite/plf-pour-2027-examen-des-articles-de-la-premiere-partie-du-projet-de-loi-de-finances-pour-2027-8609.html",
+   "sha256_html": "a0aaa076af1edcff91e73bea8e42cdbdd589a8673f360be646702575d5b8397c",
+   "texte": "comptes_rendus/SENAT-CF-ACTU-8609.txt",
+   "sha256_texte": "0d4a37c3c538d5a3e71cde157a5ae91681a1b1366804e77e0886037b5c54b9cb"
+  },
+  "SENAT-CF-2026-11-19": {
+   "date": "2026-11-19",
+   "assemblee": "Sénat",
+   "seance": "page d'accueil de la commission des finances, lue le 19 novembre 2026",
+   "url": "https://www.senat.fr/commission/fin/index.html",
+   "sha256_html": "1e098cc3c61d91ddc9495391ee321a3cb9b43fcdc86cac0322b7188430b8600f",
+   "texte": "comptes_rendus/SENAT-CF-2026-11-19.txt",
+   "sha256_texte": "179e43369be53ea0aac88df0c2f3cdc5766be42b5fa209e48cd0e4f67ec60367"
   }
  },
  "articles": [
@@ -156,6 +183,16 @@
    "etape": "senat_mission_rct",
    "seance": "SENAT-ODJ-2026-11-05",
    "citation": "Relations avec les collectivités territoriales (+ articles 83 à 87)"
+  },
+  {
+   "etape": "senat_commission_examen",
+   "seance": "SENAT-CF-ACTU-8609",
+   "citation": "Le jeudi 12 novembre, la commission des finances examine articles de la première partie du projet de loi de finances pour 2027"
+  },
+  {
+   "etape": "senat_commission_adoption",
+   "seance": "SENAT-CF-2026-11-19",
+   "citation": "Les amendements adoptés par la commission sur la première partie"
   }
  ],
  "texte_rejete": {
@@ -184,5 +221,47 @@
   "AN-2026-11-16-2",
   "AN-2026-11-17-1",
   "AN-2026-11-17-2"
+ ],
+ "commission_senat": [
+  {
+   "article": 34,
+   "amendement": "I-45",
+   "seance": "SENAT-CF-2026-11-12",
+   "statut": "modification_adoptee",
+   "citations": [
+    "N° I-45 DIRECTION DE LA SÉANCE (n° 999) A M E N D E M E N T présenté par Mme LAVARDE _________________ ARTICLE 34",
+    "le présent amendement propose une minoration de 371 millions d’euros des variables d’ajustement"
+   ]
+  },
+  {
+   "article": 35,
+   "amendement": "I-46",
+   "seance": "SENAT-CF-2026-11-12",
+   "statut": "suppression_adoptee",
+   "citations": [
+    "N° I-46 DIRECTION DE LA SÉANCE (n° 999) A M E N D E M E N T présenté par Mme LAVARDE _________________ ARTICLE 35 Supprimer cet article."
+   ]
+  },
+  {
+   "article": 36,
+   "amendement": "I-47",
+   "seance": "SENAT-CF-2026-11-12",
+   "statut": "modification_adoptee",
+   "citations": [
+    "N° I-47 DIRECTION DE LA SÉANCE (n° 999) A M E N D E M E N T présenté par Mme LAVARDE _________________ ARTICLE 36 Rédiger ainsi cet article",
+    "Cet amendement propose de limiter l’écrêtement de la TVA transférée à la seule année 2027"
+   ]
+  },
+  {
+   "article": 37,
+   "amendement": "I-48",
+   "seance": "SENAT-CF-2026-11-12",
+   "statut": "modification_adoptee",
+   "citations": [
+    "N° I-48 DIRECTION DE LA SÉANCE (n° 999) A M E N D E M E N T présenté par Mme LAVARDE _________________ ARTICLE 37",
+    "Il propose tout d’abord de diminuer d’un milliard d’euros le montant global de la CPEB",
+    "Le nombre des communes contributrices serait ainsi ramené de 14 000 à 4 000"
+   ]
+  }
  ]
 }

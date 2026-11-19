@@ -281,8 +281,9 @@ def figure_jumeaux(d: ImageDraw.ImageDraw, rows: list[dict], bas_code: str, haut
     d.text((x0, bas + 14), "0", font=fa, fill=URL_GREY)
     en = lang == "en"
     d.text((x1 - 70, bas + 14), "160%" if en else "160 %", font=fa, fill=URL_GREY)
-    d.text((x0, bas + 40), "The 27 EU countries: debt as % of GDP (across)" if en
-           else "Les 27 pays de l'UE : dette en % du PIB (horizontal)", font=font("inter", 17, 400), fill=URL_GREY)
+    d.text((x0, bas + 40), ("%d EU countries: debt as %% of GDP (across)" if en
+                           else "%d pays de l'UE : dette en %% du PIB (horizontal)") % len(rows),
+           font=font("inter", 17, 400), fill=URL_GREY)
     d.text((x0, bas + 62), "and interest as % of public revenue (up)" if en
            else "et intérêts en % des recettes publiques (vertical)", font=font("inter", 17, 400), fill=URL_GREY)
 
@@ -489,7 +490,7 @@ def carte_generations() -> None:
           lambda d: figure_generations_mini(d, per),
           [(C1, "Actifs : %s %% → %s %%" % (A["d1_part"], A["d3_part"])),
            (SEC, "Transferts en capital"),
-           (C2, "Dépenses courantes non couvertes")])
+           (C2, "Dépenses courantes non couvertes (usure comprise)")])
     # Version anglaise (07/10/2026, miroir de la page) : même figure, même contrôle ; chaînes du bloc affichage_en.
     E = j.get("affichage_en")
     if not E:
@@ -502,7 +503,7 @@ def carte_generations() -> None:
           lambda d: figure_generations_mini(d, per, "en"),
           [(C1, "Assets: %s%% → %s%%" % (E["d1_part"], E["d3_part"])),
            (SEC, "Capital transfers"),
-           (C2, "Uncovered current spending")])
+           (C2, "Uncovered current spending (wear and tear included)")])
 
 
 def figure_eventail_mini(d: ImageDraw.ImageDraw, j: dict, lang: str = "fr") -> None:
@@ -603,7 +604,7 @@ def carte_monde() -> None:
         if 100 + fc.getlength(t) > 640:
             fail("carte monde : ligne de clé trop longue pour la colonne (%s)" % t)
     carte("og-dette-monde.jpg",
-          ["Même dette,", "coût × %s" % A["j_rapport"]],
+          ["Même dette,", "charge × %s" % A["j_rapport"]],
           "Le stock ne dit pas ce que la dette coûte.",
           "Eurostat %s · %d pays de l'UE · CC BY 4.0" % (j["meta"]["annee"], len(rows)),
           "stephane-lalut.com/dette-publique-comparaison-internationale/",
@@ -668,7 +669,7 @@ def carte_collectivites() -> None:
     inv = {int(k): v for k, v in se["serie_inv_fr"].items()}
     tr = {int(k): v for k, v in se["serie_transf_fr"].items()}
     carte("og-collectivites.jpg",
-          ["L'ajustement local,", "hors de la dette"],
+          ["L'ajustement local,", "hors de la dette ?"],
           "La dette locale est restée contenue ; l'investissement a reculé.",
           "Eurostat %s · OFGL · CC BY 4.0" % A["an_fin"],
           "stephane-lalut.com/dette-publique-collectivites-locales/",
@@ -682,7 +683,7 @@ def carte_collectivites() -> None:
     if not E:
         fail("carte collectivités EN : bloc affichage_en absent de data/dette_collectivites.json")
     carte("og-collectivites-en.jpg",
-          ["Local adjustment,", "outside the debt"],
+          ["Local adjustment,", "outside the debt?"],
           "Local debt stayed contained; investment fell.",
           "Eurostat %s · OFGL · CC BY 4.0" % E["an_fin"],
           "stephane-lalut.com/en/local-government-debt/",

@@ -112,10 +112,10 @@ T = {
         fam=("Primary balance", "Financing conditions", "Economic activity"),
         l_solde="Primary balance 1 percentage point of GDP higher every year, from 2028 to 2035",
         l_solde_n="Accounting calculation, ignoring any effect on growth or interest rates",
-        l_eub="Market rates 0.2 percentage point lower",
+        l_eub="Market rates 0.2 percentage points lower",
         l_t100="Market rates 1 percentage point higher",
-        l_gp="Real growth 0.5 percentage point higher each year, inflation\u00a0unchanged",
-        l_gm="Real growth 0.5 percentage point lower each year, inflation\u00a0unchanged",
+        l_gp="Real growth 0.5 percentage points higher each year, inflation\u00a0unchanged",
+        l_gm="Real growth 0.5 percentage points lower each year, inflation\u00a0unchanged",
         b_note="Sensitivities: one parameter changed at a time, the others unchanged. These are not forecasts, full policy assessments or a "
                "cost-benefit ranking.",
         b_source="Author's calculations based on the European Commission's baseline (Debt Sustainability Monitor 2025, "

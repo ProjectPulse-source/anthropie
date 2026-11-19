@@ -1,4 +1,4 @@
-# relu le 2026-11-19 ; texte servi de /dette-publique-quels-futurs/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /dette-publique-quels-futurs/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Peut-on changer les règles du jeu de la dette publique ?
 Oui, mais sans effet automatique : selon son mécanisme et ses conditions, une même opération peut réduire la dette, déplacer des charges ou des risques vers d’autres, ou l’aggraver.

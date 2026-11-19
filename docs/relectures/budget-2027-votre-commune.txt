@@ -1,4 +1,4 @@
-# relu le 2026-11-19 ; texte servi de /budget-2027-votre-commune/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /budget-2027-votre-commune/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Budget 2027 : que sait-on réellement pour votre commune ?
 Le 4 novembre 2026, l’Assemblée nationale a rejeté le projet de loi de finances pour 2027 (0 voix pour, 458 contre, sur sa première partie telle qu’elle l’avait amendée) : le Sénat doit examiner, à partir du 20 novembre 2026 et sous réserve de sa transmission, le texte initial du Gouvernement, où figurent les cinq principales mesures qu’il destinait aux collectivités.
@@ -8,12 +8,12 @@ Le 19 octobre 2026, l’Assemblée avait écarté trois des cinq mesures, dont l
 36) ; ces votes tombent avec le texte.
 Peuvent donc concerner la commune la contribution progressive, la baisse du FCTVA, l’écrêtement de la TVA affectée si elle en perçoit une fraction, l’étalement du DILICO, dont l’examen au Sénat est prévu le 2 décembre 2026, et la répartition de la DGF.
 Elle peut vérifier dès maintenant ses comptes de 2024, son FCTVA et ses sommes mises en réserve ; ses montants pour 2027 viendront de la loi votée, puis des notifications.
-Page mise à jour le 18 novembre 2026
+Page mise à jour le 19 novembre 2026
 Dossier dette publique
-Source · PLF 2027, état au 17 novembre 2026
+Source · PLF 2027, état au 19 novembre 2026
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 L’essentiel pour votre commune
-État du projet de loi de finances pour 2027 au 17 novembre 2026 : aucune mesure n’est définitivement acquise ni définitivement écartée.
+État du projet de loi de finances pour 2027 au 19 novembre 2026 : aucune mesure n’est définitivement acquise ni définitivement écartée.
 Cette page est révisée à chaque étape qui modifie ces mesures.
 Qu’a décidé l’Assemblée nationale ?
 Elle a rejeté le projet le 4 novembre 2026 : sa première partie, telle qu’elle l’avait amendée, a recueilli 0 voix pour et 458 contre, ce qui emporte l’ensemble du texte.
@@ -29,7 +29,7 @@ Quels chiffres ma commune peut-elle vérifier dès maintenant ?
 Ses propres comptes, pas des montants pour 2027 : les sommes qu’elle a mises en réserve au DILICO en 2025, notifiées par arrêté (les communes n’y contribuent pas en 2026) ; le FCTVA qu’elle perçoit et l’année des dépenses sur laquelle il porte ; ses recettes réelles de fonctionnement de 2024, exercice qui servirait d’assiette à la contribution progressive si elle était adoptée.
 Quand ma commune connaîtra-t-elle ses montants pour 2027 ?
 Après le vote définitif de la loi de finances : le préfet communique alors le montant de chacune des dotations de la DGF, et les mesures nouvelles passent par leurs arrêtés ou décrets.
-Prochaine étape au 17 novembre 2026 : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l’article 84 le 2 décembre, puis vote sur l’ensemble le 9 décembre.
+Prochaine étape au 19 novembre 2026 : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l’article 84 le 2 décembre, puis vote sur l’ensemble le 9 décembre.
 Ce que le service financier doit retenir, vérifier et en faire
 Contribution progressive (art.
 37)
@@ -74,7 +74,7 @@ Pour préparer le budget 2027 → Inscrire la fraction selon les règles actuell
 Prochaine échéance : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l’article 84 le 2 décembre, puis vote sur l’ensemble le 9 décembre.
 Chaque ligne est développée mesure par mesure, avec ce qu’il serait trompeur de chiffrer à ce stade.
 Budget 2027 : ce qui pourrait changer pour votre commune
-Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au 17 novembre 2026.
+Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure au 19 novembre 2026.
 Une fiche pour préparer le budget 2027 et, s’il y a lieu, le débat d’orientation budgétaire.
 Votre commune : nom, département ou code Insee
 Voir la fiche
@@ -95,7 +95,7 @@ Le projet de loi de finances pour 2027 déposé prévoyait cinq principales mesu
 TéléchargerCiterDonnées
 Cette somme décrivait le projet déposé ; elle ne mesurait pas un prélèvement net, et la page consacrée aux collectivités explique pourquoi elle coexistait avec une hausse prévue des ressources locales.
 La seconde partie ne pouvant être discutée avant l’adoption de la première (loi organique relative aux lois de finances, article 42), le rejet de la première partie emporte l’ensemble du texte : les votes de l’Assemblée sur les articles tombent avec lui, et le Sénat doit examiner le projet initial du Gouvernement.
-À l’ouverture du débat du 19 octobre, la ministre de l’aménagement du territoire et de la décentralisation, Françoise Gatel, chiffrait à 5,5 milliards d’euros la contribution des collectivités prévue par le projet.
+À l’ouverture du débat du 19 octobre, la ministre de l’aménagement du territoire et de la décentralisation, Françoise Gatel, chiffrait à 5,5 milliards d’euros la contribution des collectivités prévue par le projet, sans dire quelles mesures la composent ni pour quel montant chacune : ce chiffre ne se compare donc pas, mesure par mesure, à la somme des cinq mesures.
 Le détail des cinq mesures du projet déposé : texte, nature, montant
 Mesure du projet de loi de finances pour 2027, tel que déposé
 Texte
@@ -140,9 +140,10 @@ Ce que prévoyait le projet.
 Une contribution de 2,5 milliards d’euros pour 2027, due selon l’exposé des motifs par 40 % des communes et par les intercommunalités, à un taux de 0,5 % à 3 % des recettes réelles de fonctionnement de 2024, retraitées, et prélevée chaque mois sur les douzièmes de fiscalité : un effet de trésorerie dès la notification.
 Un fonds de soutien de 50 millions d’euros était prévu pour les communes contributrices en difficulté (article 87), dont le texte déposé renvoie encore à un « article X » : une référence non finalisée, et un fonds qui dépend du sort de la contribution.
 Où en est le texte.
-État au 17 novembre 2026 : dans le texte initial attendu au Sénat ; à l’Assemblée, art.
+État au 19 novembre 2026 : dans le texte initial attendu au Sénat ; à l’Assemblée, art.
 37 supprimé en séance le 19 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026.
 Si elle était adoptée, le montant de chaque collectivité serait fixé par un arrêté publié au Journal officiel.
+La commission des finances du Sénat a adopté le 12 novembre 2026 un amendement qui, selon elle, réduit de 1 milliard d’euros le montant global de la contribution et ramène de 14 000 à 4 000 le nombre de communes contributrices ; il ne vaut que si le Sénat l’adopte en séance.
 Ce que cela signifie pour une commune.
 Rien n’est dû en l’état du texte.
 La commune et son intercommunalité étaient visées par deux contributions distinctes ; ce que celle de l’intercommunalité ferait peser sur ses membres dépendrait de leurs relations financières, que le texte ne règle pas.
@@ -151,7 +152,7 @@ Les recettes réelles de fonctionnement du budget principal de 2024, l’exercic
 Ce qu’il serait trompeur de chiffrer.
 Un montant : le taux dépend du rang de la commune parmi toutes les autres.
 Des associations d’élus et des cabinets de conseil l’ont simulé sur le texte initial ; ces simulations décrivent l’article initial, qui doit revenir en discussion au Sénat.
-Les associations qui les publient s’opposent au dispositif, France urbaine en demandant la réduction.
+Les associations qui les publient contestent le dispositif ; France urbaine en demande une autre répartition et un effort global réduit.
 Entre 0,5 % et 3 % de l’assiette retraitée, c’est une comparaison statique, pas une prévision.
 Pour préparer le budget 2027.
 Ne pas inscrire la contribution comme une charge certaine ; la garder dans un scénario conditionnel, calculé sur l’assiette de 2024 retraitée, à réactiver si l’article était adopté.
@@ -167,9 +168,10 @@ Ce que prévoyait le projet.
 Pour les attributions versées à compter du 1er janvier 2027, un taux ramené de 16,404 % à 11,404 %, soit 5 points de moins, sauf pour les dépenses liées à la transition écologique et à la voirie, maintenues à 16,404 %, et un rendement de 2,1 milliards d’euros.
 La liste des comptes ouvrant droit au taux maintenu relevait d’un arrêté à venir.
 Où en est le texte.
-État au 17 novembre 2026 : dans le texte initial attendu au Sénat ; à l’Assemblée, art.
+État au 19 novembre 2026 : dans le texte initial attendu au Sénat ; à l’Assemblée, art.
 35 supprimé en séance le 19 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026.
 Si la mesure était adoptée, l’arrêté fixant les comptes au taux maintenu dirait quelles dépenses en bénéficient.
+La commission des finances du Sénat en a adopté la suppression le 12 novembre 2026 ; celle-ci ne vaut que si le Sénat l’adopte en séance.
 Ce que cela signifie pour une commune.
 La mesure portait sur les attributions versées, pas sur les dépenses engagées.
 Selon l’article L.
@@ -190,6 +192,7 @@ L’article 83 fixe lui-même, dans le code (article L.
 Le Comité des finances locales peut majorer ces dotations au-delà de cette hausse.
 Où en est le texte.
 Le 19 octobre 2026, l’Assemblée avait adopté l’article 34 modifié, portant la DGF pour 2027 à 27,9 milliards d’euros, soit 356 millions de plus que le projet ; ce vote tombe avec le rejet du texte le 4 novembre 2026, et le Sénat doit examiner le montant initial de 27,5 milliards.
+La commission des finances du Sénat a adopté le 12 novembre 2026 un amendement à cet article qui baisse de 371 millions d’euros supplémentaires d’autres concours de l’État, les dotations dites variables d’ajustement ; il ne vaut que si le Sénat l’adopte en séance.
 L’article 83 relève de la seconde partie ; le Sénat doit l’examiner le 2 décembre 2026, avec la mission « Relations avec les collectivités territoriales ».
 Ce que cela signifie pour une commune.
 Un montant national ne se répartit pas entre communes par simple proportion : chaque dotation obéit à ses propres critères, et une commune peut voir sa dotation forfaitaire écrêtée tandis que sa dotation de solidarité augmente.
@@ -204,6 +207,7 @@ Le dispositif de lissage des recettes fiscales a mis en réserve, en 2025, une p
 Chaque reversement annuel va pour 10 % à la péréquation (pour le bloc communal, le fonds de péréquation intercommunal), le reste aux contributeurs : une collectivité récupère ainsi 90 % de sa contribution.
 Ce que prévoyait le projet.
 Étaler jusqu’en 2031 le reversement des sommes mises en réserve, sans changer leur total ; selon l’exposé des motifs, environ 2 000 collectivités sont concernées.
+Pour le seul DILICO de 2025, la Cour des comptes dénombrait parmi les contributeurs 1 924 communes, 141 intercommunalités à fiscalité propre, 50 départements et 12 régions, soit 2 127 collectivités.
 Les deux dispositifs ne se traitent pas de la même façon : pour celui de 2025, un tiers a déjà été reversé en 2026 et les deux tiers restants seraient reversés par cinquièmes de 2027 à 2031, au lieu de deux tiers en 2027 et 2028 ; pour celui de 2026, la totalité serait reversée par cinquièmes de 2027 à 2031, au lieu de tiers de 2027 à 2029.
 Pour 300 000 € mis en réserve (exemple), part revenant au contributeur
 DILICO 2025 (commune ou intercommunalité)
@@ -221,7 +225,7 @@ Total reçu
 270 000 € dans les deux cas
 270 000 € dans les deux cas
 Où en est le texte.
-État au 17 novembre 2026 : dans le texte initial attendu au Sénat, examen prévu le 2 décembre 2026 ; à l’Assemblée, art.
+État au 19 novembre 2026 : dans le texte initial attendu au Sénat, examen prévu le 2 décembre 2026 ; à l’Assemblée, art.
 84 supprimé en commission le 28 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026.
 Au Sénat, les amendements sur cette mission se déposent jusqu’au 27 novembre 2026 à 11 heures.
 L’exposé des motifs annonce un arrêté unique de reversement.
@@ -242,9 +246,10 @@ Ce que prévoyait le projet.
 Pour les fractions de TVA versées en remplacement d’impôts supprimés (articles 16 de la loi de finances pour 2020 et 55 de celle pour 2023), une progression annuelle diminuée de l’inflation hors tabac de l’année précédente, sans que cette réduction puisse faire baisser le montant d’une année sur l’autre.
 Le Haut Conseil des finances publiques chiffrait l’écrêtement à 0,6 milliard d’euros pour l’ensemble des bénéficiaires.
 Où en est le texte.
-État au 17 novembre 2026 : dans le texte initial attendu au Sénat ; à l’Assemblée, art.
+État au 19 novembre 2026 : dans le texte initial attendu au Sénat ; à l’Assemblée, art.
 36 non adopté en séance le 19 octobre 2026, avant le rejet de l’ensemble du texte le 4 novembre 2026.
 À l’Assemblée, les amendements qui supprimaient l’article avaient d’abord été rejetés ; c’est l’article amendé qui n’avait pas été adopté.
+La commission des finances du Sénat a adopté le 12 novembre 2026 une nouvelle rédaction qui limite l’écrêtement à 2027 ; elle ne vaut que si le Sénat l’adopte en séance.
 Ce que cela signifie pour une commune.
 Seules sont concernées les collectivités qui perçoivent une telle fraction ; si c’est l’intercommunalité, l’effet sur la commune passerait par leurs relations financières.
 Ce que le service financier peut vérifier dès maintenant.
@@ -275,7 +280,7 @@ Elle ne prévoit pas le texte définitif : le Sénat peut modifier ou supprimer 
 Elle ne donne aucun montant certain pour 2027 : les seuls montants 2027 de la fiche d’une commune sont les reversements du DILICO selon les deux calendriers, et leur écart suppose l’article 84 adopté en l’état ; les ordres de grandeur qu’elle indique sont des comparaisons statiques, sous les conditions écrites à côté d’eux.
 Elle ne reprend que les principales dispositions du projet qui visent directement les communes ; les mesures fiscales générales peuvent aussi peser sur leurs recettes.
 D’où viennent ces chiffres
-État du texte — Assemblée nationale, comptes rendus des première et deuxième séances du 19 octobre 2026 et de la deuxième séance du 4 novembre 2026 (rejet du texte) ; Sénat, ordre du jour de la séance publique, lu le 5 novembre 2026 ; chaque résultat repris ici y est cité mot pour mot dans le registre des votes de la page, archivé avec l’empreinte des comptes rendus.
+État du texte — Assemblée nationale, comptes rendus des première et deuxième séances du 19 octobre 2026 et de la deuxième séance du 4 novembre 2026 (rejet du texte) ; Sénat, ordre du jour de la séance publique, lu le 5 novembre 2026, puis le 19 novembre ; commission des finances du Sénat, amendements adoptés sur la première partie (liasse provisoire) et examen du 12 novembre 2026 ; chaque résultat repris ici y est cité mot pour mot dans le registre des votes de la page, archivé avec l’empreinte des comptes rendus.
 Dossier législatif de l’Assemblée nationale pour les étapes franchies, l’ordre du jour du Sénat pour le calendrier à venir.
 Comptes des communes (fiche) — Observatoire des finances et de la gestion publique locales, base des comptes des communes (DGFiP), budget principal, deux derniers exercices publiés ; relevés par script ; à chaque relevé, la recette de fonctionnement de dix communes tirées au sort est relue par une seconde requête.
 Dotations des communes (fiche) — Observatoire des finances et de la gestion publique locales, dotations des communes, données de la Direction générale des collectivités locales : DILICO prélevé en 2025 et reversé en 2026, dotation globale notifiée pour 2026, rangs de 2026 à la dotation de solidarité urbaine et à la fraction cible de la dotation de solidarité rurale ; relevés par script et confrontés, commune par commune et à l’euro près, aux annexes des arrêtés publiées au Journal officiel (prélèvement DILICO 2025, reversement 2026, DGF 2026), ainsi qu’au total de 250 millions d’euros fixé par la loi de finances pour 2025.
@@ -287,6 +292,8 @@ Textes — Projet de loi de finances pour 2027, n° 3210, déposé le 1er octobr
 1612-1, L.
 1615-6 et L.
 2336-3, relus sur Légifrance le 22 octobre 2026.
+Cour des comptes, Les finances publiques locales 2025, fascicule 2, septembre 2025, p.
+49, pour les contributeurs du DILICO de 2025.
 Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l’image sa source, sa période et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
@@ -300,7 +307,7 @@ Somme arithmétique de montants hétérogènes, chacun évalué par rapport à l
 Le Sénat peut modifier chaque mesure avant la loi définitive.
 Projet de loi de finances pour 2027 (n° 3210) et avis n° 2026-5 du Haut Conseil des finances publiques ; état : Assemblée nationale, comptes rendus des séances du 19 octobre 2026 et du 4 novembre 2026 ; commission des finances, amendement II-CF2778 (art.
 84), 28 octobre 2026 ; Sénat, ordre du jour.
-État au 17 novembre 2026.
+État au 19 novembre 2026.
 Télécharger en PNG
 SVG
 Citer cette page

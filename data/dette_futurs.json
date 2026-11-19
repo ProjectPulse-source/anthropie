@@ -1899,7 +1899,7 @@
       },
       "droit": {
        "libelle": "Applicable law",
-       "texte": "Under current law for covered securities only. According to our reconstruction from the AFT line sheets (9 November 2026), 86.3% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€2,282 billion of €2,645 billion) belongs to lines created since 2013, to which the clause regime applies in principle; 13 older lines (€362 billion, maturing up to 2060) are excluded; securities of one year or less (€216 billion) fall outside its scope. Three lines indexed to euro-area inflation are classed by their creation date, without reading their creation orders. Clauses ease a collective modification; they guarantee neither its adoption nor its feasibility.",
+       "texte": "Under current law for covered securities only. According to our reconstruction from the AFT line sheets (9 November 2026), 86.3% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€2,282 billion of €2,645 billion) belongs to lines created since 2013, to which the clause regime applies in principle; 13 older lines (€362 billion, maturing up to 2060) are excluded; securities of one year or less (€216 billion) fall outside its scope. Three lines indexed to euro-area inflation are classed by their creation date; their creation orders have not been read. Clauses ease a collective modification; they guarantee neither its adoption nor its feasibility.",
        "fiche": false,
        "intro": null,
        "items": null,

@@ -1,4 +1,4 @@
-# relu le 2026-11-19 ; texte servi de /en/local-government-debt/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/local-government-debt/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
 Local authorities’ debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government would show up in their revenue and spending.
@@ -6,16 +6,17 @@ From 2013 to 2017, local government improved its balance by €9.7 billion.
 Its total spending remained almost flat in current euros, while tax revenue rose and transfers received fell.
 Relative to GDP, its spending fell by 0.82 points, of which 0.50 points for investment.
 These movements are concomitant; on their own, they do not allow the fall in investment to be attributed to the grant cuts.
-Page updated 18 November 2026
+Page updated 19 November 2026
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
-Draft budget bill for 2027, state on 17 November 2026.
+Draft budget bill for 2027, state on 19 November 2026.
 The National Assembly rejected the first part of the bill on 4 November 2026, which carries the whole bill with it; its votes on the articles fall with it: on 19 October 2026, the Assembly had deleted the cut in the FCTVA rate (art.
 35) and the progressive contribution to the budgetary effort (art.
 37), had not adopted the capping of assigned VAT (art.
 36), and had raised the DGF for 2027 to €27.9 billion.
 The procedure is not over: examination by the Senate, subject to its transmission, of the Government’s initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
+On 12 November 2026, the Senate finance committee adopted amendments that delete the cut in the FCTVA rate, reduce the progressive contribution by €1 billion according to the committee, and limit the capping of assigned VAT to 2027, in return for a further cut of €371 million in the grants known as adjustment variables; they change the text only if the Senate adopts them in plenary.
 The amounts of the bill as tabled are still presented below, as the initial framing of the debate → measures and state of the text.
 What it changes for a municipality, measure by measure: Budget 2027: what do we actually know for your municipality?
 How can a constraint fail to show up in the debt?
@@ -282,7 +283,7 @@ The state government subsector (S1312) exists in the Eurostat data only in a few
 In Germany and Spain, subnational debt therefore adds the two tiers together; cross-holdings between them amount to at most 0.2 points of GDP: the double counting is marginal and does not change the orders of magnitude.
 In Spain, Organic Law 2/2012 also assigns the surpluses of each level of government to reducing its net debt (article 32).
 What does the draft budget bill ask of local authorities?
-State of the text on 17 November 2026: draft budget bill for 2027 (projet de loi de finances), tabled on 1 October 2026 and rejected by the National Assembly on 4 November 2026; on 19 October 2026, it had deleted the cut in the FCTVA rate (art.
+State of the text on 19 November 2026: draft budget bill for 2027 (projet de loi de finances), tabled on 1 October 2026 and rejected by the National Assembly on 4 November 2026; on 19 October 2026, it had deleted the cut in the FCTVA rate (art.
 35) and the progressive contribution to the budgetary effort (art.
 37), had not adopted the capping of assigned VAT (art.
 36), votes that fell with the bill.
@@ -430,6 +431,7 @@ The charts, the data and a ready-made citation, under an open licence.
 Each chart carries its source, period and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 Local government investment and transfers received, France, in % of GDP
 From 2013 to 2017, the transfers received by local government fell by €8.9 billion (0.64 points of GDP) and its investment by €7.5 billion (0.50 points); the comparable transfer series stops in 2017.
+These movements are concomitant; on their own, they do not allow the fall in investment to be attributed to the grant cuts.
 Reading caveat.
 Transfers received: from central government and social security, all grants together; this is not the DGF grant.
 Comparable series stops in 2017: in 2018 a grant, then in 2021 the residence tax relief, recorded as a transfer from the State, were replaced by shares of VAT or of property tax, counted as taxes.
@@ -441,7 +443,7 @@ SVG
 Local government balance, 2013-2017: the same change, in euros and in percentage points of GDP
 From 2013 to 2017, the local government balance improved by €9.7 billion (0.45 points of GDP).
 Total spending stayed almost flat in current euros (+€1.2 billion); relative to GDP, it fell by 0.82 points, of which 0.50 points for investment, while tax revenue rose and transfers received fell.
-These movements are concomitant; they do not attribute the fall in investment to the grant cuts.
+These movements are concomitant; on their own, they do not allow the fall in investment to be attributed to the grant cuts.
 Reading caveat.
 Bars: each item’s contribution to the change in the balance; for spending, the opposite of its change.
 Other spending rose by €8.7 billion (negative bar) and fell by 0.32 percentage points of GDP (positive bar): nominal GDP rose by 8.1%.

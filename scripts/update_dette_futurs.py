@@ -473,6 +473,9 @@ def main() -> int:
         for x in (a, b):
             x["meta"] = dict(x["meta"], releve_le=None)
             x.pop("affichage", None); x.pop("affichage_en", None)
+            # Prose de la matrice (FR, EN) : du texte, pas une donnee relevee ; un texte change ne date pas les donnees.
+            if isinstance(x.get("matrice"), dict):
+                x["matrice"] = {k: v for k, v in x["matrice"].items() if k not in ("fr", "en")}
         if a == b and prev.get("releve_le"):
             releve = prev["releve_le"]
     P["meta"]["releve_le"] = releve

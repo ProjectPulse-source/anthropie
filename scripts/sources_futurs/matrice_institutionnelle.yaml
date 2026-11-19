@@ -495,8 +495,8 @@ operations:
       {cac_part}% of the non-indexed nominal outstanding of OATs, OATis and OAT€is (€{cac_md} billion of €{oat_md} billion)
       belongs to lines created since 2013, to which the clause regime applies in principle; {sans_cac_n} older lines
       (€{sans_cac_md} billion, maturing up to {sans_cac_fin}) are excluded; securities of one year or less (€{btf_md}
-      billion) fall outside its scope. Three lines indexed to euro-area inflation are classed by their creation date,
-      without reading their creation orders. Clauses ease a collective modification; they guarantee neither its adoption
+      billion) fall outside its scope. Three lines indexed to euro-area inflation are classed by their creation date;
+      their creation orders have not been read. Clauses ease a collective modification; they guarantee neither its adoption
       nor its feasibility.
   repartition:
     statut: site
