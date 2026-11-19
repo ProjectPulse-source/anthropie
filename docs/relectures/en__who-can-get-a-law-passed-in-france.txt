@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/who-can-get-a-law-passed-in-france/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/who-can-get-a-law-passed-in-france/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who can get a law passed in France?
 Do laws mostly come from the Government?
@@ -22,7 +22,7 @@ If Parliament has not reached a decision within the time limits, the provisions 
 47-1) by ordinance, without becoming a statute passed by vote.
 Lastly, a law may be passed by referendum (art.
 11).
-This page follows the route almost every law takes, through Parliament: who tabled, law by law, the laws promulgated in France since 2012, what became of the private members’ bills tabled in the National Assembly, how many times article 49, paragraph 3 was used.
+This page follows the route almost every law takes, through Parliament: who tabled, law by law, the laws promulgated in France since 2012, whether the private members’ bills tabled in the National Assembly were debated in plenary, how many times article 49, paragraph 3 was used.
 The Constitution is quoted in the English translation published by the Conseil constitutionnel.
 Short answer.
 Getting a law passed takes three keys; the Prime Minister holds a fourth, which is optional.
@@ -351,7 +351,7 @@ If Parliament has not reached a decision within the time limit set by the Consti
 These ordinances do not make a statute passed by vote: they apply the provisions of a bill.
 A referendum, by contrast, passes a law without Parliament voting on its text: where the outcome is favourable to the bill, the President of the Republic promulgates the resulting statute (art.
 11).
-When it is held on the Government’s recommendation, Parliament debates without voting: the Government makes a statement before each House, followed by a debate.
+When it is held on the Government’s recommendation, Parliament debates, and article 11 provides for no vote: the Government makes a statement before each House, followed by a debate.
 The page Can the French president call a referendum? counts them.
 The wording of articles 47, 47-1 and 11
 Article 47: “Should Parliament fail to reach a decision within seventy days, the provisions of the Bill may be brought into force by Ordinance.” Article 47-1: “Should Parliament fail to reach a decision within fifty days, the provisions of the Bill may be implemented by Ordinance.”
@@ -367,7 +367,9 @@ Three questions place a promise of a law, without assuming anything about its co
 Who will table the text?
 The Government or a member of Parliament.
 A bill or an amendment from a member of Parliament cannot create or increase public expenditure, and a loss of revenue must be offset by another revenue (art.
-40, as read by the National Assembly); when a bill is tabled, the National Assembly nevertheless accepts that expenditure be offset, article 40 remaining applicable afterwards; this rule does not cover the Government’s texts.
+40, as read by the National Assembly).
+When a bill is tabled, the National Assembly nevertheless accepts that expenditure be offset, article 40 remaining applicable afterwards.
+Article 40 does not cover the Government’s texts.
 Who will put it on the agenda?
 The Government in its priority weeks, a House in its own, an opposition or minority group on its monthly day (art.
 48).

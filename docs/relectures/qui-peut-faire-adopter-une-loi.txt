@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /qui-peut-faire-adopter-une-loi/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Qui peut faire adopter une loi ?
 Les lois viennent-elles surtout du Gouvernement ?
@@ -22,7 +22,7 @@ Si le Parlement ne s’est pas prononcé dans les délais, les dispositions d’
 47-1) par ordonnance, sans devenir une loi votée.
 Enfin, une loi peut être adoptée par référendum (art.
 11).
-Cette page suit la voie que prennent presque toutes les lois, celle du Parlement : qui a déposé, loi par loi, les lois promulguées depuis 2012, ce que sont devenues les propositions de loi déposées à l’Assemblée nationale, combien de fois la responsabilité du Gouvernement a été engagée sur un texte.
+Cette page suit la voie que prennent presque toutes les lois, celle du Parlement : qui a déposé, loi par loi, les lois promulguées depuis 2012, si les propositions de loi déposées à l’Assemblée nationale ont été examinées en séance, combien de fois la responsabilité du Gouvernement a été engagée sur un texte.
 Réponse courte.
 Faire adopter une loi demande trois clés ; le Premier ministre en tient une quatrième, facultative.
 Déposer : « L’initiative des lois appartient concurremment au Premier ministre et aux membres du Parlement. » (art.
@@ -44,7 +44,7 @@ Il laisse de côté les lois qui ont leur procédure ou leur origine propre : lo
 Lois promulguées, rattachées à la législature de leur promulgation, selon l’origine du texte au dépôt initial.
 Champ étudié : lois ordinaires, hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles.
 Le résultat en une phrase.
-Dans le champ étudié, la part des lois promulguées issues d’une proposition de parlementaire est de 46 % sous la XIVe législature (2012-2017), puis dépasse la moitié : 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 82 % sous la XVIIe, en cours au 06/10/2026.
+Dans le champ étudié, la part des lois promulguées issues d’une proposition déposée par un parlementaire est de 46 % sous la XIVe législature (2012-2017), puis dépasse la moitié : 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 82 % sous la XVIIe, en cours au 06/10/2026.
 Ce que l’origine ne dit pas.
 Elle dit qui a déposé le texte, non qui l’a voulu ni ce qu’il est devenu.
 Une proposition de loi peut avoir été préparée avec un ministère ou soutenue par le Gouvernement ; un projet peut être profondément modifié par le Parlement.
@@ -347,7 +347,7 @@ Si le Parlement ne s’est pas prononcé dans le délai que fixe la Constitution
 Ces ordonnances ne font pas une loi votée : elles appliquent les dispositions d’un projet.
 Le référendum, lui, adopte une loi sans vote du Parlement sur son texte : si le résultat est favorable au texte, le Président de la République promulgue la loi (art.
 11).
-Quand il est organisé sur proposition du Gouvernement, le Parlement débat sans voter : le Gouvernement fait devant chaque assemblée une déclaration suivie d’un débat.
+Quand il est organisé sur proposition du Gouvernement, le Parlement débat, et l’article 11 ne prévoit pas de vote : le Gouvernement fait devant chaque assemblée une déclaration suivie d’un débat.
 La page Un président peut-il recourir au référendum ? en fait le compte.
 La lettre des articles 47, 47-1 et 11
 Article 47 : « Si le Parlement ne s’est pas prononcé dans un délai de soixante-dix jours, les dispositions du projet peuvent être mises en vigueur par ordonnance. » Article 47-1 : « Si le Parlement ne s’est pas prononcé dans un délai de cinquante jours, les dispositions du projet peuvent être mises en oeuvre par ordonnance. »
@@ -363,7 +363,9 @@ Trois questions situent une promesse de loi, sans rien supposer de son contenu.
 Qui déposera le texte ?
 Le Gouvernement ou un parlementaire.
 Une proposition ou un amendement de parlementaire ne peut créer ou aggraver une charge publique, et une perte de recettes doit y être compensée par une autre recette (art.
-40, selon la lecture qu’en fait l’Assemblée nationale) ; au dépôt d’une proposition, l’Assemblée nationale admet toutefois qu’une charge soit compensée, l’article 40 restant opposable ensuite ; cette règle ne vise pas les textes du Gouvernement.
+40, selon la lecture qu’en fait l’Assemblée nationale).
+Au dépôt d’une proposition, l’Assemblée nationale admet toutefois qu’une charge soit compensée, l’article 40 restant opposable ensuite.
+L’article 40 ne vise pas les textes du Gouvernement.
 Qui l’inscrira à l’ordre du jour ?
 Le Gouvernement sur ses semaines prioritaires, une assemblée sur les siennes, un groupe d’opposition ou minoritaire sur son jour mensuel (art.
 48).
@@ -443,9 +445,9 @@ Citer cette page
 Lalut, Stéphane (2026). « Qui peut faire adopter une loi ? » Données Assemblée nationale, Sénat (Dosleg), Journal officiel, Légifrance, relevé du 06/10/2026 (données de l’Assemblée nationale et base Dosleg du Sénat du 06/10/2026, Journal officiel ; bulletins statistiques de l’Assemblée nationale). https://stephane-lalut.com/qui-peut-faire-adopter-une-loi/
 Copier la citation
 En trois phrases
-Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d’une proposition de parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 82 % sous la XVIIe en cours ; toutes natures hors traités, la XVe passe sous la moitié (46 %).
+Dans le champ étudié (hors lois autorisant un traité, lois de finances et de financement de la sécurité sociale, lois organiques et lois constitutionnelles), la part des lois promulguées issues d’une proposition déposée par un parlementaire est de 46 % sous la XIVe législature, 53 % sous la XVe (au moins 51 %), 66 % sous la XVIe et 82 % sous la XVIIe en cours ; toutes natures hors traités, la XVe passe sous la moitié (46 %).
 Environ neuf propositions de loi ordinaires sur dix déposées en premier lieu à l’Assemblée n’ont pas été examinées en séance avant la fin de leur législature d’après les données de l’Assemblée, de la XIVe à la XVIe, pire cas compris.
-La responsabilité du Gouvernement a été engagée sur un texte 23 fois sous la XVIe législature, dont 21 sur des projets de loi de finances ou de financement de la sécurité sociale.
+La responsabilité du Gouvernement a été engagée 23 fois sous la XVIe législature au titre de l’article 49, alinéa 3, dont 21 sur des projets de loi de finances ou de financement de la sécurité sociale.
 Copier le résumé
 Les données
 L’origine des lois promulguées par législature, par nature et par session, les propositions de loi déposées à l’Assemblée et restées sans examen en séance, et les engagements de responsabilité de l’article 49, alinéa 3 ; le même contenu existe en CSV, en format long, lisible dans un tableur.
