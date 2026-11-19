@@ -349,7 +349,7 @@ pouvoirs:
   - id: nommer-premier-ministre
     groupe: sans_contreseing
     question: "Le président peut-il nommer et renvoyer le Premier ministre ?"
-    bref: "Nommer, oui : sa seule signature suffit. Renvoyer, en droit, non : l'article 8 ne prévoit que la démission que le Premier ministre présente. L'article 50 l'oblige à la présenter quand l'Assemblée nationale vote la censure ; ce n'est pas une révocation par le président."
+    bref: "Nommer, oui : sa seule signature suffit. Renvoyer, en droit, non : l'article 8 ne prévoit que la démission que le Premier ministre présente. L'article 50 l'oblige à la présenter quand l'Assemblée nationale vote la censure ; ce n'est pas une révocation par le président. En pratique, un Premier ministre peut quitter ses fonctions à la demande du président : même alors, elles ne prennent fin, en droit, que sur la démission qu'il présente."
     pouvoir: "Nommer le Premier ministre, mettre fin à ses fonctions"
     articles: ["8", "19", "20", "50"]
     decide: "Le président, pour deux actes de l'article 8 : « Le Président de la République nomme le Premier ministre. Il met fin à ses fonctions sur la présentation par celui-ci de la démission du Gouvernement. »"

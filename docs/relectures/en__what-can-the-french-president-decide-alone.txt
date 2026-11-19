@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/what-can-the-french-president-decide-alone/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/what-can-the-french-president-decide-alone/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What can the French president decide alone?
 The president appoints the Prime Minister.
@@ -54,6 +54,7 @@ Can the president appoint and dismiss the Prime Minister?
 Appoint, yes: his signature alone is enough.
 Dismiss, not in law: article 8 provides only for the resignation the Prime Minister tenders.
 Article 50 obliges him to tender it when the National Assembly passes a resolution of no-confidence; it is not a dismissal by the president.
+In practice, a Prime Minister may leave office at the president’s request: even then, in law, the appointment ends only upon the Prime Minister’s tendering of the Government’s resignation.
 The detail, quotation by quotation
 Basis
 art.
@@ -438,7 +439,8 @@ Art.
 Art.
 47: “Should Parliament fail to reach a decision within seventy days, the provisions of the Bill may be brought into force by Ordinance.”
 A tax promise is therefore a matter for statute law, but not always for a vote on the text.
-On a finance bill, the Prime Minister may, after deliberation by the Council of Ministers, which the president chairs (article 9), make its passing an issue of a vote of confidence: “the Bill shall be considered passed” unless a resolution of no-confidence is carried (article 49, paragraph 3).
+On a finance bill, the Prime Minister may, after deliberation by the Council of Ministers, which the president chairs (article 9), make its passing an issue of a vote of confidence (article 49, paragraph 3).
+In that event, “the Bill shall be considered passed” unless a resolution of no-confidence is carried.
 And if Parliament fails to reach a decision within the time limit set by article 47, the provisions of the bill may be brought into force by ordinance.
 These procedures are set out in the page “Who can get a law passed in France?”.
 A promise implemented by decree also brings in signatures other than the president’s: the Prime Minister’s, or the countersignature if the decree is deliberated upon in the Council of Ministers.
@@ -451,7 +453,7 @@ The Government therefore cannot remain in office against an absolute majority of
 The Prime Minister may also tender his resignation without having been censured (article 8).
 When the Assembly’s majority supports the president, the Government he appointed conducts the policy on which the president was elected: this is a plausible explanation, not demonstrated here, of the image of a president who decides everything.
 That link belongs to political practice, which the text does not describe.
-When a Prime Minister leaves office at the president’s request, which belongs to the same practice, the end of the appointment still goes, in law, through the resignation he tenders (article 8).
+When a Prime Minister leaves office at the president’s request, which belongs to the same practice, the appointment ends, in law, only upon the Prime Minister’s tendering of the Government’s resignation (article 8).
 The text makes that resignation compulsory only after a vote of the Assembly (article 50).
 When that majority is opposed to him, that is, in cohabitation, the same text gives a different presidency: the Government, accountable to that majority, determines and conducts the policy of the Nation, and the president keeps the acts exempt from countersignature, with their conditions.
 Dissolution allows him to ask the voters again for a majority; they are the ones who grant it.
@@ -825,16 +827,18 @@ What can the French president decide alone?
 The Constitution does not speak of deciding alone.
 Article 19 exempts from countersignature (that of the Prime Minister and, where required, of the ministers concerned) the instruments of eight provisions: appointing the Prime Minister and terminating his appointment, submitting a text to a referendum, dissolving the National Assembly, exercising emergency powers, addressing Parliament, referring a treaty or a statute to the Constitutional Council, appointing to the Constitutional Council.
 Of the twelve acts they contain, nine bring in, in their own article, another actor before or after the president: a recommendation for the referendum, a consultation and then an election for dissolution.
-His other instruments are countersigned.
+Stepping in does not always mean blocking.
+The president’s other instruments are countersigned.
 Can the French president dismiss the Prime Minister?
 Not in law.
 Article 8 describes a single route: the president terminates the Prime Minister’s appointment “when the latter tenders the resignation of the Government” (English translation published by the Conseil constitutionnel).
 Article 50 describes the case in which this resignation becomes compulsory: when the National Assembly passes a resolution of no-confidence or fails to endorse the Government programme or a general policy statement.
 This obligation arises from a vote of the Assembly; the text does not give it to the president.
-In practice, a Prime Minister may leave office at the president’s request: the end of the appointment still goes, in law, through the resignation he tenders.
+In practice, a Prime Minister may leave office at the president’s request: even then, in law, the appointment ends only upon the Prime Minister’s tendering of the Government’s resignation.
 Who sets taxes in France: the president, the Government or Parliament?
 Article 34 reserves to statute law “the base, rates and methods of collection of all types of taxes” (English translation published by the Conseil constitutionnel).
-A tax promise is therefore a matter for statute law, but not always for a vote on the text: on a finance bill, the Prime Minister may, after deliberation by the Council of Ministers, make its passing an issue of a vote of confidence, and the bill is considered passed unless a resolution of no-confidence is carried (article 49, paragraph 3); if Parliament fails to reach a decision within the time limit set by article 47, the provisions of the bill may be brought into force by ordinance.
+A tax promise is therefore a matter for statute law, but not always for a vote on the text: on a finance bill, the Prime Minister may, after deliberation by the Council of Ministers, make its passing an issue of a vote of confidence, and the bill is considered passed unless a resolution of no-confidence is carried (article 49, paragraph 3).
+And if Parliament fails to reach a decision within the time limit set by article 47, the provisions of the bill may be brought into force by ordinance.
 In none of these cases is the president’s signature enough.
 Sources
 All the texts cited here were read in their version in force, on Légifrance, on the date indicated; article 17 was also read in its 1958 version, for the comparison drawn in the entry on pardon.

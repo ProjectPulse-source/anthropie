@@ -131,7 +131,7 @@ groupes:
 pouvoirs:
   nommer-premier-ministre:
     question: "Can the president appoint and dismiss the Prime Minister?"
-    bref: "Appoint, yes: his signature alone is enough. Dismiss, not in law: article 8 provides only for the resignation the Prime Minister tenders. Article 50 obliges him to tender it when the National Assembly passes a resolution of no-confidence; it is not a dismissal by the president."
+    bref: "Appoint, yes: his signature alone is enough. Dismiss, not in law: article 8 provides only for the resignation the Prime Minister tenders. Article 50 obliges him to tender it when the National Assembly passes a resolution of no-confidence; it is not a dismissal by the president. In practice, a Prime Minister may leave office at the president's request: even then, in law, the appointment ends only upon the Prime Minister's tendering of the Government's resignation."
     pouvoir: "Appoint the Prime Minister, terminate his appointment"
     decide: "The president, for two acts of article 8: “The President of the Republic shall appoint the Prime Minister. He shall terminate the appointment of the Prime Minister when the latter tenders the resignation of the Government.”"
     condition: "To appoint, article 8 requires neither a recommendation nor a consultation. To terminate the appointment, it requires an act of the Prime Minister: tendering the resignation of the Government."
