@@ -38,8 +38,8 @@ MARK = {"fr": "deplacent le desordre plutot qu",
 TARGETS = [
     ("AWP-03 EN", "19434094", "en"),
     ("AWP-07 EN", "21200288", "en"),
-    ("AWP-08 FR", "21506320", "fr"),
-    ("AWP-08 EN", "21507249", "en"),
+    ("AWP-08 FR", "24364809", "fr"),
+    ("AWP-08 EN", "24364810", "en"),
 ]
 
 

@@ -10,25 +10,25 @@ outputs:
   - RIS
   - EndNote
 description: "L'inégalité se mesure en stocks (revenu, patrimoine) et en flux (mobilité) ; ces mesures saisissent mal ce qu'une personne peut se permettre de rater sans fermer durablement son avenir. Ce working paper construit la réversibilité sociale comme troisième dimension de l'inégalité : la capacité, évaluée avant une tentative, de supporter son échec. Il en propose une définition, une architecture de mesure, quatre familles de propositions testables et une matrice de réfutabilité. Cadre réfutable, non résultat empirique. Prolonge le programme anthropique (AWP-01, AWP-07)."
-doi_zenodo: "10.5281/zenodo.21506320"
+doi_zenodo: "10.5281/zenodo.24364809"
 wikidata_qid: "Q140680750"  # item de l'œuvre (FR+EN) — alimente sameAs du ScholarlyArticle
-url_zenodo: "https://zenodo.org/records/21506320"
+url_zenodo: "https://zenodo.org/records/24364809"
 jel_codes: ["D63", "D81", "I32", "J62", "D31", "I38"]
 keywords: ["réversibilité sociale", "capacité de repli", "mémoire institutionnelle", "réadmission", "complémentarité", "inégalité"]
 keywords_en: ["social reversibility", "fallback capacity", "institutional memory", "readmission", "complementarity", "inequality"]
 faq:
   - question: "Qu'est-ce que la réversibilité sociale ?"
-    answer: "La capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Ni un stock, ni un flux : un profil conditionnel d'options récupérables, qui dépend d'une capacité de repli et d'un régime de réadmission. Elle est formalisée dans AWP-08 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.21506320)."
+    answer: "La capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Ni un stock, ni un flux : un profil conditionnel d'options récupérables, qui dépend d'une capacité de repli et d'un régime de réadmission. Elle est formalisée dans AWP-08 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.24364809)."
   - question: "En quoi diffère-t-elle des mesures d'inégalité habituelles ?"
     answer: "Le revenu et le patrimoine mesurent ce qu'on possède ; la mobilité, ce qu'on franchit. La réversibilité mesure ce qu'on peut se permettre de rater. Deux personnes voisines en revenu peuvent avoir des avenirs très différents selon leur capacité à survivre à l'erreur."
   - question: "Quel est le lien avec le cadre anthropique ?"
     answer: "AWP-01 pose que les systèmes déplacent le désordre ; AWP-07 en formalise la boucle. AWP-08 en donne la contrepartie micro-institutionnelle : le tarif stratifié de l'échec répartit inégalement la capacité de différer, mutualiser ou absorber le coût d'un échec."
-pdf_url: "https://zenodo.org/records/21506320/files/AWP-08_reversibilite_sociale.pdf"
+pdf_url: "https://zenodo.org/records/24364809/files/AWP-08_reversibilite_sociale.pdf"
 language: "fr"
 publication_date: "2026-07-23"
 lastmod: 2026-11-08
 translation:
-  doi: "10.5281/zenodo.21507249"
+  doi: "10.5281/zenodo.24364810"
   url: "/en/awp/awp-08/"
   title: "Social Reversibility as a Dimension of Inequality"
 related:

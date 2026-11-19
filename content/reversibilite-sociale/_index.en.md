@@ -14,7 +14,7 @@ journal:  # révisions qui changent la lecture de la page
 og_title: "What is social reversibility? — definition and sources — S. Lalut"
 faq:
   - question: "What is social reversibility?"
-    answer: "The capacity, assessed before an attempt, to withstand its possible failure without lasting closure of the set of accessible options. Neither a stock (like wealth) nor a flow (like mobility): a conditional profile of recoverable options. The concept is formalised by economist Stéphane Lalut in AWP-08 (2026, DOI 10.5281/zenodo.21507249)."
+    answer: "The capacity, assessed before an attempt, to withstand its possible failure without lasting closure of the set of accessible options. Neither a stock (like wealth) nor a flow (like mobility): a conditional profile of recoverable options. The concept is formalised by economist Stéphane Lalut in AWP-08 (2026, DOI 10.5281/zenodo.24364810)."
   - question: "How does it differ from standard inequality measures?"
     answer: "Income and wealth measure what one owns; mobility, what one crosses. Reversibility measures what one can afford to fail. Two people with similar incomes can face very different futures depending on their capacity to survive error."
   - question: "What does the capacity to bounce back after failure depend on?"
@@ -24,7 +24,7 @@ faq:
   - question: "Can social reversibility be measured?"
     answer: "That is the programme opened by AWP-08: a measurement architecture (V = f(C, T, A)), four families of testable propositions and a refutability matrix. Published studies have already estimated the average effect of some erasures, including the removal of the 040 indicator from the Banque de France's FIBEN file; what AWP-08 adds for testing, notably on the insurance right-to-be-forgotten of the Lemoine Act, is the complementarity between fallback and trace. It is a refutable framework, not yet an empirical result."
   - question: "Who proposed the concept of social reversibility?"
-    answer: "Stéphane Lalut, economist and independent researcher, in the working paper AWP-08 — Social Reversibility as a Dimension of Inequality (2026, DOI 10.5281/zenodo.21507249), eighth of the Anthropie Working Papers. The concept extends the framework of anthropy: the stratified price of failure is a mechanism of social disorder distribution."
+    answer: "Stéphane Lalut, economist and independent researcher, in the working paper AWP-08 — Social Reversibility as a Dimension of Inequality (2026, DOI 10.5281/zenodo.24364810), eighth of the Anthropie Working Papers. The concept extends the framework of anthropy: the stratified price of failure is a mechanism of social disorder distribution."
   - question: "Is social reversibility a synonym for resilience?"
     answer: "No. In the psychological sense used here, resilience describes an individual capacity to overcome hardship. Social reversibility describes a structural position — fallback, price, readmission — that exists before any hardship and independently of a person's psychological dispositions."
   - question: "Why \"reversibility\"?"
@@ -128,7 +128,7 @@ This is the link with the general framework of [anthropy](/en/quest-ce-que-lanth
 
 ## Further reading
 
-- [AWP-08 — *Social Reversibility as a Dimension of Inequality*](/en/awp/awp-08/) — the working paper that formalises the concept (DOI: 10.5281/zenodo.21507249, open-access PDF).
+- [AWP-08 — *Social Reversibility as a Dimension of Inequality*](/en/awp/awp-08/) — the working paper that formalises the concept (DOI: 10.5281/zenodo.24364810, open-access PDF).
 - [*La Société du premier coup*](/livres/la-societe-du-premier-coup/) — the book that turns the question into narrative, through concrete cases and without formal apparatus. **In French**; its sourced figures are gathered on its [companion page](/premier-coup/).
 - [AWP-07 — *The Anthropic Loop*](/en/awp/awp-07/) — the general mechanism of which reversibility is the micro-institutional counterpart.
 - [What is anthropy?](/en/quest-ce-que-lanthropie/) — the concept page, and the [glossary](/en/glossaire/) of the framework.

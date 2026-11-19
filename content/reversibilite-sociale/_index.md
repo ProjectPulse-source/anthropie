@@ -14,7 +14,7 @@ journal:  # révisions qui changent la lecture de la page
 og_title: "Qu'est-ce que la réversibilité sociale ? — définition et sources — S. Lalut"
 faq:
   - question: "Qu'est-ce que la réversibilité sociale ?"
-    answer: "La capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Ni un stock (comme le patrimoine), ni un flux (comme la mobilité) : un profil conditionnel d'options récupérables. Le concept est formalisé par l'économiste Stéphane Lalut dans AWP-08 (2026, DOI 10.5281/zenodo.21506320)."
+    answer: "La capacité, évaluée avant une tentative, de supporter son éventuel échec sans fermeture durable de l'ensemble des options accessibles. Ni un stock (comme le patrimoine), ni un flux (comme la mobilité) : un profil conditionnel d'options récupérables. Le concept est formalisé par l'économiste Stéphane Lalut dans AWP-08 (2026, DOI 10.5281/zenodo.24364809)."
   - question: "Quelle est la différence entre la réversibilité sociale et le droit à l'erreur de la loi ESSOC ?"
     answer: "Le droit à l'erreur de la loi ESSOC (2018) est un dispositif administratif : une personne de bonne foi qui méconnaît pour la première fois une règle, ou commet une erreur matérielle en déclarant sa situation, peut régulariser sans sanction, sauf exceptions. La réversibilité sociale est un concept d'analyse : elle mesure ce que coûte réellement un échec — professionnel, entrepreneurial, financier — selon la capacité de repli de la personne, la trace que les institutions gardent de l'échec et les conditions de réadmission. L'un est une règle de procédure administrative, l'autre une dimension de l'inégalité."
   - question: "De quoi dépend la capacité à rebondir après un échec ?"
@@ -24,7 +24,7 @@ faq:
   - question: "La réversibilité sociale se mesure-t-elle ?"
     answer: "C'est l'objet du programme ouvert par AWP-08 : une architecture de mesure (V = f(C, T, A)), quatre familles de propositions testables et une matrice de réfutabilité. Des travaux publiés ont déjà estimé l'effet moyen de certains effacements, dont la suppression par décret, en 2013, de l'indicateur 040 du fichier FIBEN de la Banque de France ; ce qu'AWP-08 ajoute à éprouver, notamment sur le droit à l'oubli assurantiel de la loi Lemoine, est la complémentarité entre repli et trace. C'est un cadre réfutable, pas encore un résultat empirique."
   - question: "Qui a proposé le concept de réversibilité sociale ?"
-    answer: "Stéphane Lalut, économiste et chercheur indépendant, dans le working paper AWP-08 — « La réversibilité sociale comme dimension de l'inégalité » (2026, DOI 10.5281/zenodo.21506320), huitième des Anthropie Working Papers. Le concept prolonge le cadre anthropique : le tarif stratifié de l'échec est un mécanisme de distribution du désordre social."
+    answer: "Stéphane Lalut, économiste et chercheur indépendant, dans le working paper AWP-08 — « La réversibilité sociale comme dimension de l'inégalité » (2026, DOI 10.5281/zenodo.24364809), huitième des Anthropie Working Papers. Le concept prolonge le cadre anthropique : le tarif stratifié de l'échec est un mécanisme de distribution du désordre social."
   - question: "La réversibilité sociale est-elle un synonyme de résilience ?"
     answer: "Non. Au sens psychologique retenu ici, la résilience décrit une capacité individuelle à surmonter l'épreuve. La réversibilité sociale décrit une position structurelle — repli, tarif, réadmission — qui existe avant toute épreuve et indépendamment des dispositions psychologiques de la personne."
   - question: "Pourquoi « réversibilité » ?"
@@ -134,7 +134,7 @@ C'est le lien avec le cadre général de l'[anthropie](/quest-ce-que-lanthropie/
 
 ## Pour aller plus loin
 
-- [AWP-08 — *La réversibilité sociale comme dimension de l'inégalité*](/awp/awp-08/) — le working paper qui formalise le concept (DOI&nbsp;: 10.5281/zenodo.21506320, PDF en accès libre).
+- [AWP-08 — *La réversibilité sociale comme dimension de l'inégalité*](/awp/awp-08/) — le working paper qui formalise le concept (DOI&nbsp;: 10.5281/zenodo.24364809, PDF en accès libre).
 - [*La Société du premier coup*](/livres/la-societe-du-premier-coup/) — le livre qui met la question en récit, à partir de cas concrets et sans appareil formel&nbsp;; ses repères chiffrés et leurs sources sont réunis sur la [page compagnon](/premier-coup/).
 - [AWP-07 — *La boucle anthropique*](/awp/awp-07/) — le mécanisme général dont la réversibilité est la contrepartie micro-institutionnelle.
 - [Qu'est-ce que l'anthropie&nbsp;?](/quest-ce-que-lanthropie/) — la page du concept général, et le [glossaire](/glossaire/) du cadre.

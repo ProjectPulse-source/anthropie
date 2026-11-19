@@ -10,24 +10,24 @@ outputs:
   - RIS
   - EndNote
 description: "Inequality is measured in stocks (income, wealth) and flows (mobility); these measures capture poorly what a person can afford to fail at without durably closing off their future. This working paper builds social reversibility as a third dimension of inequality: the capacity, assessed before an attempt, to withstand its failure. It offers a definition, a measurement architecture, four families of testable propositions, and a refutability matrix. A refutable framework, not an empirical result. Extends the anthropic programme (AWP-01, AWP-07)."
-doi_zenodo: "10.5281/zenodo.21507249"
+doi_zenodo: "10.5281/zenodo.24364810"
 wikidata_qid: "Q140680750"  # same work item as the FR paper — feeds ScholarlyArticle sameAs
-url_zenodo: "https://zenodo.org/records/21507249"
+url_zenodo: "https://zenodo.org/records/24364810"
 jel_codes: ["D63", "D81", "I32", "J62", "D31", "I38"]
 keywords: ["social reversibility", "fallback capacity", "institutional memory", "readmission", "complementarity", "inequality"]
 faq:
   - question: "What is social reversibility?"
-    answer: "The capacity, assessed before an attempt, to withstand its possible failure without durably closing off the set of accessible options. Neither a stock nor a flow: a conditional profile of recoverable options, depending on a fallback capacity and a readmission regime. It is formalised in AWP-08 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.21507249)."
+    answer: "The capacity, assessed before an attempt, to withstand its possible failure without durably closing off the set of accessible options. Neither a stock nor a flow: a conditional profile of recoverable options, depending on a fallback capacity and a readmission regime. It is formalised in AWP-08 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.24364810)."
   - question: "How does it differ from the usual measures of inequality?"
     answer: "Income and wealth measure what one holds; mobility, what one crosses. Reversibility measures what one can afford to fail at. Two people close in income can face very different futures depending on their capacity to survive a mistake."
   - question: "How does it relate to the anthropic framework?"
     answer: "AWP-01 posits that systems displace disorder; AWP-07 formalises the loop. AWP-08 gives its micro-institutional counterpart: the stratified tariff of failure distributes unequally the capacity to defer, pool, or absorb the cost of a failure."
-pdf_url: "https://zenodo.org/records/21507249/files/AWP-08_Social_Reversibility_EN.pdf"
+pdf_url: "https://zenodo.org/records/24364810/files/AWP-08_Social_Reversibility_EN.pdf"
 language: "en"
 publication_date: "2026-07-23"
 lastmod: 2026-11-08
 translation:
-  doi: "10.5281/zenodo.21506320"
+  doi: "10.5281/zenodo.24364809"
   url: "/awp/awp-08/"
   title: "La réversibilité sociale comme dimension de l'inégalité"
   is_canonical: true

@@ -27,6 +27,10 @@ meta:
   total_works: 44
   source_registry: "registre_soumissions_v73.xlsx"
   changelog:
+    v1_26: |
+      AWP-08 version 1.1 (publiée le 2026-11-19) — nouvelles versions Zenodo FR 10.5281/zenodo.24364809 et EN
+      10.5281/zenodo.24364810 (concepts 21506319 / 21507248 inchangés) : positionnement corrigé dans la
+      littérature, revendication resserrée, annexe C. Même œuvre : total_works inchangé.
     v1_25: |
       Ajout recension Lalut (2026-11-03) — En attendant Nadeau n° 254, « Gouverner sans être
       contredit », sur Rainer Mühlhoff, Intelligence artificielle & nouveau fascisme (Agone, 2026).
@@ -458,16 +462,16 @@ works:
     publication_date_en: "2026-07-23"
     license: "CC-BY 4.0"
     abstract_short:
-      fr: "L'inégalité se mesure en niveaux et positions observés à une date, presque jamais en réversibilité : ce qu'une personne peut se permettre de rater sans fermeture durable de son avenir. AWP-08 définit la réversibilité sociale comme profil conditionnel d'options récupérables (repli × mémoire institutionnelle de l'échec), en propose une architecture de mesure et quatre familles de propositions pré-spécifiées, avec quatre terrains français de quasi-expériences."
-      en: "Inequality is measured through levels and positions observed at a date, almost never through reversibility: what a person can afford to fail without a lasting closure of options. AWP-08 defines social reversibility as a conditional profile of recoverable options (fallback × institutional memory of failure), proposes a measurement architecture and four pre-specified families of propositions, with four French quasi-experimental settings."
+      fr: "L'inégalité se mesure en niveaux et positions observés à une date ; ces mesures saisissent moins directement la réversibilité : ce qu'une personne peut se permettre de rater sans fermeture durable de son avenir. AWP-08 définit la réversibilité sociale comme profil conditionnel d'options récupérables (repli × mémoire institutionnelle de l'échec), en propose une architecture de mesure et quatre familles de propositions pré-spécifiées, dont la complémentarité entre repli et trace, confrontée par une matrice de réfutabilité à des terrains français déjà étudiés (indicateur 040, Visale) ou prospectifs (loi Lemoine). Version 1.1 (novembre 2026)."
+      en: "Inequality is measured through levels and positions observed at a date; these measures capture less directly reversibility: what a person can afford to fail without a lasting closure of options. AWP-08 defines social reversibility as a conditional profile of recoverable options (fallback × institutional memory of failure), proposes a measurement architecture and four pre-specified families of propositions, including the complementarity between fallback and trace, confronted through a refutability matrix with French settings already studied (indicator 040, Visale) or prospective (Lemoine Act). Version 1.1 (November 2026)."
     keywords:
       fr: [réversibilité sociale, capacité de repli, mémoire institutionnelle, réadmission, complémentarité, inégalité]
       en: [social reversibility, fallback capacity, institutional memory, readmission, complementarity, inequality]
     jel_codes_fr: [D63, D81, I32, J62, D31, I38]
     jel_codes_en: [D63, D81, I32, J62, D31, I38]
     deposits:
-      zenodo_fr: { doi: "10.5281/zenodo.21506320", url: "https://doi.org/10.5281/zenodo.21506320", status: published, date: "2026-07-23" }
-      zenodo_en: { doi: "10.5281/zenodo.21507249", url: "https://doi.org/10.5281/zenodo.21507249", status: published, date: "2026-07-23" }
+      zenodo_fr: { doi: "10.5281/zenodo.24364809", url: "https://doi.org/10.5281/zenodo.24364809", status: published, date: "2026-11-19", version: "1.1", concept_doi: "10.5281/zenodo.21506319", previous_doi: "10.5281/zenodo.21506320" }
+      zenodo_en: { doi: "10.5281/zenodo.24364810", url: "https://doi.org/10.5281/zenodo.24364810", status: published, date: "2026-11-19", version: "1.1", concept_doi: "10.5281/zenodo.21507248", previous_doi: "10.5281/zenodo.21507249" }
     site_pages:
       fr: "https://stephane-lalut.com/awp/awp-08/"
       en: "https://stephane-lalut.com/en/awp/awp-08/"
