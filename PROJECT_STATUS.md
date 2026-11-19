@@ -52,6 +52,21 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-19 — Passe de forme du lot « Dette C » publiée après jugement externe à l'aveugle (FR, EN)
+- **Commits** `2b340de2` (Collectivités), `e6711ef4` (Budget 2027), `f118e4cf` (Quels futurs) : niveau de connaissance
+  qualifié une fois là où il change le sens (conditionnel, simulation, identité, attribution d'AWP-09), extraits lus seuls
+  avec leur réserve, intertitres en questions ; générateur « Quels futurs » : fiche « Réutiliser » de l'éventail. EN
+  « Collectivités » : l'étalement du DILICO concerne aussi les fonds de péréquation (alignement sur le français).
+- **Jugement externe** : paquet n° 05 (44 passages), réponse archivée avant lecture (`BD118535…B9996AAE`) et arbitrée :
+  version proposée retenue à 42 passages sur 44 ; version en ligne gardée pour la légende de l'éventail (« sans mesure
+  nouvelle » non établi pour la distribution simulée) ; dédoublonnage OFGL de Paris et Lyon vérifié au générateur.
+- **Relecture** : texte servi relu contre le corps par un relecteur indépendant (0 P1, 5 P2 appliqués).
+- **Contrôles** : Hugo 0, `typo_build` 0, `check-rendu-ressources` 0, `check-typo-fr` 0, `check-figures` 0,
+  `check-all --ci` 0 ; générateurs « Quels futurs » et « Collectivités » (`--check`, 70 gardes, 991 phrases) ; lettre :
+  aucun nombre retiré ; envois DILICO : phrases citées de « Budget 2027 » identiques, fiche par commune inchangée.
+- **Servi** : déploiement `hugo.yml` 44461582409 réussi ; version servie attestée le 19/11 : 6 versions, 0 écart ;
+  10 scripts identiques au build.
+
 ### 2026-11-18 — Passe de forme de la page d'enseignants « École et parcours » publiée après jugement externe à l'aveugle (FR)
 - **Commit** `ceab7246` : durée et support en tête du bloc du professeur (deux activités) ; corrigé 4, dénominateur de
   l'écart en points dit dans les mots de la question 1 ; corrigé 5, « candidatures », le mot de la note de la figure.
