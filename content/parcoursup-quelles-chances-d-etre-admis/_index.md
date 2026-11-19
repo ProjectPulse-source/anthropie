@@ -46,7 +46,7 @@ faq:
   - question: "Un candidat resté sur liste d'attente est-il compté dans le taux d'accès ?"
     answer: "Cela dépend du moment. Un candidat encore en attente à la fin de la phase principale est compté parmi les candidats, pas parmi ceux dont le rang permettait de recevoir une proposition. Un candidat d'abord en attente, puis appelé avant la fin de cette phase, est compté parmi eux. Ce qui se passe après la phase principale n'entre pas dans le calcul du taux."
   - question: "Taux d'accès et taux d'admission, est-ce la même chose ?"
-    answer: "Non, si l'on entend par taux d'admission la part des candidats finalement admis : le mot n'a pas de définition commune, et l'Onisep l'emploie pour le taux d'accès. Le taux d'accès compte les candidats qui ont pu recevoir une proposition, qu'ils l'aient acceptée ou non ; la part des candidats finalement admis est en général bien plus faible, comme dans l'exemple qui suit. Exemple tiré des données publiques : dans un BUT de l'{psup.ex_etab}, en {psup.ex_session}, le taux d'accès était de {psup.ex_taux} %, et {psup.ex_adm} candidats sur {psup.ex_cand} ont été admis, soit {psup.ex_adm_part} %."
+    answer: "Non, si l'on entend par taux d'admission la part des candidats finalement admis : le mot n'a pas de définition commune, et l'Onisep l'emploie pour le taux d'accès. Le taux d'accès compte les candidats qui ont pu recevoir une proposition, qu'ils l'aient acceptée ou non ; la part des candidats finalement admis peut être bien plus faible, comme dans l'exemple qui suit. Exemple tiré des données publiques : dans un BUT de l'{psup.ex_etab}, en {psup.ex_session}, le taux d'accès était de {psup.ex_taux} %, et {psup.ex_adm} candidats sur {psup.ex_cand} ont été admis, soit {psup.ex_adm_part} %."
   - question: "Où trouver les chiffres qui correspondent à mon bac ?"
     answer: "Sur la fiche de la formation, dans Parcoursup, à la rubrique « Visualiser les chiffres d'accès » : elle donne le taux d'accès par type de bac, puis les possibilités d'accès selon la série et le niveau de moyenne. Le fichier public ne donne pas ce taux par type de bac : il donne, par type de bac, les nombres de candidats, de candidats classés, de candidats ayant reçu une proposition et d'admis, et la répartition par bac des élèves de terminale qui pouvaient recevoir une proposition, qui est une composition, pas une chance."
   - question: "Le taux publié cette année vaudra-t-il l'an prochain ?"
@@ -130,7 +130,7 @@ Deux choses sont à retenir, et elles vont ensemble.
 <div class="carte-point">
 <p class="carte-point__titre">Le taux change peu pour beaucoup de formations</p>
 
-Pour {{< psup-val "d_absmed_frac" >}}, l'écart d'une session à la suivante, c'est-à-dire la différence entre les deux taux, en points de pourcentage, est de {{< psup-val "d_absmed_pts" >}} ou moins&nbsp;: {{< psup-val "p_part_absmed" >}}&nbsp;% des formations de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}}, {{< psup-val "d_part_absmed" >}}&nbsp;% de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}.
+Pour {{< psup-val "d_absmed_frac" >}}, l'écart d'une session à la suivante est de {{< psup-val "d_absmed_pts" >}} ou moins&nbsp;: {{< psup-val "p_part_absmed" >}}&nbsp;% des formations de {{< psup-val "p_de" >}} à {{< psup-val "p_a" >}}, {{< psup-val "d_part_absmed" >}}&nbsp;% de {{< psup-val "d_de" >}} à {{< psup-val "d_a" >}}. Cet écart est la différence, en points de pourcentage, entre le taux d'une formation une année et son taux l'année suivante.
 
 </div>
 <div class="carte-point">

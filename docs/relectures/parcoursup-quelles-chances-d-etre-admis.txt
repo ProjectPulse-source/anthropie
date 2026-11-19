@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /parcoursup-quelles-chances-d-etre-admis/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /parcoursup-quelles-chances-d-etre-admis/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Parcoursup : quelles sont vraiment vos chances d’être admis ?
 Le taux d’accès que publie le ministère pour chaque formation de Parcoursup ne mesure pas vos chances d’être admis : il dit quelle part des candidats de l’année précédente ont pu recevoir une proposition.
 D’une année à la suivante, ce taux reste proche pour une formation sur deux parmi celles que l’on retrouve d’une session à l’autre (6 points d’écart ou moins de 2024 à 2025) ; il change parfois beaucoup, même au-dessus de 90 %.
@@ -31,7 +31,8 @@ Le résultat en une phrase.
 Un taux d’accès n’est pas une promesse pour l’année suivante : parmi les formations à 60-74 % en 2024, huit sur dix se situaient entre 43 et 83 % en 2025.
 Deux choses sont à retenir, et elles vont ensemble.
 Le taux change peu pour beaucoup de formations
-Pour une formation sur deux, l’écart d’une session à la suivante, c’est-à-dire la différence entre les deux taux, en points de pourcentage, est de 6 points ou moins : 55,0 % des formations de 2023 à 2024, 51,6 % de 2024 à 2025.
+Pour une formation sur deux, l’écart d’une session à la suivante est de 6 points ou moins : 55,0 % des formations de 2023 à 2024, 51,6 % de 2024 à 2025.
+Cet écart est la différence, en points de pourcentage, entre le taux d’une formation une année et son taux l’année suivante.
 Il change parfois beaucoup
 Parmi les formations à 60-74 % en 2024, une sur dix s’est retrouvée à 43 % ou moins en 2025.
 Ces intervalles décrivent ce qui s’est passé, pas ce qui se passera.
@@ -160,7 +161,7 @@ Un candidat d’abord en attente, puis appelé avant la fin de cette phase, est 
 Ce qui se passe après la phase principale n’entre pas dans le calcul du taux.
 Taux d’accès et taux d’admission, est-ce la même chose ?
 Non, si l’on entend par taux d’admission la part des candidats finalement admis : le mot n’a pas de définition commune, et l’Onisep l’emploie pour le taux d’accès.
-Le taux d’accès compte les candidats qui ont pu recevoir une proposition, qu’ils l’aient acceptée ou non ; la part des candidats finalement admis est en général bien plus faible, comme dans l’exemple qui suit.
+Le taux d’accès compte les candidats qui ont pu recevoir une proposition, qu’ils l’aient acceptée ou non ; la part des candidats finalement admis peut être bien plus faible, comme dans l’exemple qui suit.
 Exemple tiré des données publiques : dans un BUT de l’I.U.T. d’Illkirch, en 2025, le taux d’accès était de 26 %, et 32 candidats sur 378 ont été admis, soit 8,5 %.
 Où trouver les chiffres qui correspondent à mon bac ?
 Sur la fiche de la formation, dans Parcoursup, à la rubrique « Visualiser les chiffres d’accès » : elle donne le taux d’accès par type de bac, puis les possibilités d’accès selon la série et le niveau de moyenne.
