@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /ce-que-la-france-peut-decider-dans-l-union-europeenne/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /ce-que-la-france-peut-decider-dans-l-union-europeenne/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Que peut décider la France dans l’Union européenne ?
 Ce que les traités n’ont pas attribué à l’Union reste aux États : la France y décide seule, en respectant les règles communes.
@@ -498,10 +498,12 @@ La Commission mesure chaque année, dans son tableau d’affichage du marché un
 Au 30 novembre 2025, ce déficit était de 1,1 % en France, la même valeur que la moyenne de l’Union.
 Cela représente 11 directives sur 1 022.
 La Commission compte aussi les directives qu’elle tient pour mal transposées, d’après ses procédures d’infraction : c’est le déficit de conformité, de 1,5 % pour la France.
-La moyenne de l’Union est de 1,1 %, et une procédure engagée n’est pas un manquement constaté par la Cour.
+La moyenne de l’Union est de 1,1 %.
+Une procédure engagée n’est pas un manquement constaté par la Cour.
 La Commission range la France parmi les neuf États qui cumulent un déficit de transposition élevé et un déficit de conformité élevé.
 Le retard de la France augmente.
-La même édition du tableau d’affichage range la France parmi les États dont le déficit connaît par rapport à l’édition précédente une hausse que la Commission qualifie d’inquiétante (« worrying rise » : « France and Hungary (120%) »), et parmi ceux dont la durée moyenne de retard s’allonge le plus (+3,2 mois, la deuxième hausse après celle de la Hongrie, que la Commission juge encore modérée).
+La même édition du tableau d’affichage range la France parmi les États dont le déficit connaît, par rapport à l’édition précédente, une hausse que la Commission qualifie d’inquiétante (« worrying rise » : « France and Hungary (120%) »).
+Elle la range aussi parmi ceux dont la durée moyenne de retard s’allonge le plus (+3,2 mois, la deuxième hausse après celle de la Hongrie, que la Commission juge encore modérée).
 Comment ces valeurs ont été relevées, et l’objectif fixé
 La Commission ne publie ces valeurs que dans un tableau interactif, sans fichier : elles ont été relevées sur une capture archivée, et les moyennes de l’Union contrôlées par le texte de la Commission.
 Le Conseil européen avait fixé en 2007 un objectif de déficit de transposition de 1 %.
@@ -608,7 +610,7 @@ Lalut, Stéphane (2026). « Que peut décider la France dans l’Union européen
 Copier la citation
 En trois phrases
 Ce que les traités n’ont pas attribué à l’Union reste aux États : la France y décide seule, en respectant les règles communes.
-Là où l’Union est compétente, la Commission propose, et le Conseil vote le plus souvent à la majorité qualifiée, parfois à l’unanimité.
+Là où l’Union est compétente, la Commission propose en règle générale, et le Conseil vote le plus souvent à la majorité qualifiée, parfois à l’unanimité.
 Sur les votes publics du Conseil sur des actes législatifs, du 22 décembre 2009 au 1er octobre 2026, la France a voté contre deux fois et s’est abstenue trois fois ; un vote pour ne dit pas ce qu’elle a obtenu ou cédé dans la négociation.
 Copier le résumé
 Les données

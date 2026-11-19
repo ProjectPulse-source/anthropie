@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de 79fb9bab + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/what-can-france-decide-in-the-european-union/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What can France decide in the European Union?
 What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules.
@@ -499,10 +499,12 @@ Every year, in its Single Market Scoreboard, the European Commission measures th
 As at 30 November 2025, this deficit stood at 1.1% in France, the same value as the EU average.
 That amounts to 11 directives out of 1,022.
 The Commission also counts the directives it considers incorrectly transposed, on the basis of its infringement proceedings: this is the conformity deficit, at 1.5% for France.
-The EU average is 1.1%, and the opening of infringement proceedings does not itself establish a breach found by the Court.
+The EU average is 1.1%.
+The opening of infringement proceedings does not itself establish a breach found by the Court.
 The Commission places France among the nine Member States that combine a high transposition deficit and a high conformity deficit.
 France’s delay is growing.
-The same edition of the scoreboard places France among the Member States whose deficit shows a “worrying rise” compared with the previous edition (“France and Hungary (120%)”), and among those whose average transposition delay lengthens the most (+3.2 months, the second largest increase after Hungary’s, which the Commission still describes as moderate).
+The same edition of the scoreboard places France among the Member States whose deficit shows a “worrying rise” compared with the previous edition (“France and Hungary (120%)”).
+It also places France among those whose average transposition delay lengthens the most (+3.2 months, the second largest increase after Hungary’s, which the Commission still describes as moderate).
 How these values were recorded, and the target set
 The Commission publishes these values only in an interactive table, with no file: they were recorded from an archived screenshot, and the EU averages checked against the Commission’s text.
 The European Council set a transposition deficit target of 1% in 2007.
@@ -600,7 +602,7 @@ Lalut, Stéphane (2026).
 Copy citation
 In three sentences
 What the Treaties have not conferred on the Union remains with the Member States: France decides alone there, while respecting the common rules.
-Where the Union has competence, the Commission proposes, and the Council votes most often by qualified majority, sometimes unanimously.
+Where the Union has competence, the Commission generally proposes, and the Council votes most often by qualified majority, sometimes unanimously.
 In the public votes of the Council on legislative acts, from 22 December 2009 to 1 October 2026, France voted against twice and abstained three times; a vote in favour does not say what it obtained or gave up in the negotiation.
 Copy summary
 The data
