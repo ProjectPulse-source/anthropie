@@ -740,14 +740,17 @@ def carte_plf_communes() -> None:
     if not E:
         fail("carte budget 2027 EN : bloc affichage_en absent")
     SENAT_ATTENDU[0] = bool(c.get("plf_senat_attendu"))
+    # 19/11/2026 : « examine » seulement quand la veille a lu l'ouverture de la discussion au Senat (phase « discussion »
+    # du registre) ; transmis mais pas encore en seance, il « doit examiner ».
+    examine = c.get("plf_senat_phase") == "discussion"
     if c.get("plf_rejet"):
         # 06/11/2026 : texte rejeté par l'Assemblée ; garde de l'accroche « les cinq mesures reviennent au Sénat ».
         if retires or len(c["plf_mesures"]) != 5 or c.get("plf_rejet_pour") != 0:
             fail("carte budget 2027 : « texte rejeté, cinq mesures au Sénat » n'est plus vrai dans les données")
         carte("og-budget-2027-commune.jpg",
               ["Budget 2027 :", "tout revient au Sénat"],
-              "Texte rejeté par l'Assemblée nationale : le Sénat doit examiner les cinq mesures visant les collectivités."
-              if SENAT_ATTENDU[0] else "Texte rejeté par l'Assemblée nationale : le Sénat examine les cinq mesures visant les collectivités.",
+              "Texte rejeté par l'Assemblée nationale : le Sénat examine les cinq mesures visant les collectivités."
+              if examine else "Texte rejeté par l'Assemblée nationale : le Sénat doit examiner les cinq mesures visant les collectivités.",
               "PLF %s · état au %s" % (A["plf_edition"], A["plf_etat_au"]),
               "stephane-lalut.com/budget-2027-votre-commune/",
               lambda d: figure_plf_mini(d, c["plf_mesures"], retires),
@@ -755,8 +758,8 @@ def carte_plf_communes() -> None:
                (URL_GREY, "Rejet le %s ; Sénat dès le %s" % (A["plf_rejet_date"].rsplit(" ", 1)[0], A["plf_senat_debut"].rsplit(" ", 1)[0]))])
         carte("og-budget-2027-commune-en.jpg",
               ["Budget 2027:", "all back to the Senate"],
-              "Bill rejected by the National Assembly: the Senate is due to examine all five measures aimed at local authorities."
-              if SENAT_ATTENDU[0] else "Bill rejected by the National Assembly: the Senate examines all five measures aimed at local authorities.",
+              "Bill rejected by the National Assembly: the Senate is examining all five measures aimed at local authorities."
+              if examine else "Bill rejected by the National Assembly: the Senate is due to examine all five measures aimed at local authorities.",
               "Draft budget bill %s · state on %s" % (E["plf_edition"], E["plf_etat_au"]),
               "stephane-lalut.com/en/2027-budget-your-municipality/",
               lambda d: figure_plf_mini(d, c["plf_mesures"], retires, "en"),

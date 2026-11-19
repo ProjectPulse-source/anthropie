@@ -225,6 +225,31 @@ COMMISSION_SENAT = {"fr": (r"commission des finances du Sénat (?:en )?a adopté
                     "en": (r"Senate finance committee adopted", r"in plenary")}
 PAGES_BUDGET = {"fr": Path(__file__).resolve().parent.parent / "content" / "budget-2027-votre-commune" / "_index.md",
                 "en": Path(__file__).resolve().parent.parent / "content" / "budget-2027-votre-commune" / "_index.en.md"}
+# 8. (19/11/2026, decision de l'auteur : « la mise a jour de la page AMF doit etre automatique ») l'etat du texte au Senat
+#    (attendu, transmis, en discussion, vote d'un article, proposition de la commission des finances) n'est ecrit que par
+#    ce generateur, a partir du registre (jetons plf_senat_*, plf_cs_*, plf_etat_*, plf_texte_senat) : saisie a la main
+#    dans une page, une telle phrase se perimerait au vote suivant sans que rien ne le signale. Lu sur le Markdown des
+#    pages Collectivites et Budget 2027, journal (historique date) et commentaires exceptes.
+SENAT_MAIN = {"fr": r"attendu au Sénat|sous réserve de sa transmission|commission des finances du Sénat|le Sénat doit (?:l['’])?examiner"
+                    r"|transmis au Sénat|le Sénat examine",
+              "en": r"due before the Senate|subject to its transmission|Senate finance committee|Senate is due to examine|sent to the "
+                    r"Senate|expected before the Senate|Senate is examining"}
+
+
+def senat_main(textes: dict) -> list[str]:
+    """textes : {langue: [(nom, texte Markdown)]}. Lignes de page qui ecrivent a la main un etat du texte au Senat."""
+    import re
+    out = []
+    for lang, l_ in textes.items():
+        for nom, t in l_:
+            for ligne in t.splitlines():
+                if ligne.lstrip().startswith(("- {date:", "#")):
+                    continue
+                m = re.search(SENAT_MAIN[lang], ligne)
+                if m:
+                    out.append("[%s] %s : état du Sénat écrit à la main (« %s ») -- passer par un jeton plf_senat_*, plf_cs_* ou "
+                               "plf_texte_senat" % (lang, nom, m.group(0)))
+    return out
 MUTATIONS_PROSE = {
     "unite": "Le solde s'est redressé surtout par la baisse des dépenses ({{< coll-val \"ep_te_pt\" >}} de PIB).",
     "verdict": "Les collectivités ne sont pas une variable d'ajustement, car leur dette a peu augmenté.",
@@ -232,6 +257,7 @@ MUTATIONS_PROSE = {
     "reclassement": "Une dotation devient une fraction de TVA : les ressources ne baissent pas, elles changent de case.",
     "perime": "Projet de loi de finances, avant examen par le Parlement.",
     "commission_senat": "Le 12 novembre, la commission des finances du Sénat a adopté la suppression de l'article 35.",
+    "senat_main": "Les cinq mesures figurent dans le texte initial attendu au Sénat.",
     "plf_ecart": "Le projet retire aux collectivités {{< coll-val \"plf_ecart_mde\" >}} de ressources.",
 }
 
@@ -291,6 +317,12 @@ def gardes_prose(extra: dict | None = None) -> int:
     # Pages « Budget 2027 » : la seule règle de la commission du Sénat (19/11/2026).
     f_ += [x for x in fautes_prose({l_: [p_.read_text(encoding="utf-8")] for l_, p_ in PAGES_BUDGET.items()})
            if "commission du Sénat" in x]
+    # État du texte au Sénat écrit à la main dans une page (19/11/2026) ; témoin : --mutation=senat_main.
+    src = {lang: [(p_.parent.name, p_.read_text(encoding="utf-8")) for l2, p_ in list(PAGES.items()) + list(PAGES_BUDGET.items())
+                  if l2 == lang] for lang in ("fr", "en")}
+    if MUTATION == "senat_main":
+        src["fr"].append(("mutation", MUTATIONS_PROSE["senat_main"]))
+    f_ += senat_main(src)
     if f_:
         fail("garde de prose : " + " | ".join(f_))
     return sum(len(phrases(t)) for l_ in textes.values() for t in l_)
@@ -685,8 +717,11 @@ SENAT_ATTENDU = [
 
 
 def senat_attendu(v: dict) -> bool:
+    """« Attendu » tant que l'ordre du jour porte « sous réserve de sa transmission » ET que la veille n'a pas lu la
+    transmission dans le dossier législatif du Sénat (étape `senat_transmis`, 19/11/2026)."""
     sen = v.get("senat") or {}
-    return "sous réserve de sa transmission" in sen.get("texte", "")
+    transmis = any(e["etape"] == "senat_transmis" for e in v.get("etapes", []))
+    return "sous réserve de sa transmission" in sen.get("texte", "") and not transmis
 
 
 def senat_txt(x, attendu: bool):
@@ -703,14 +738,28 @@ def date_fr(iso: str) -> str:
 
 
 # Commission des finances du Senat (stabilisation du 19/11/2026) : amendements adoptes le 12/11 sur la premiere partie,
-# cites mot pour mot dans la liasse archivee (registre, `commission_senat`). Ils ne modifient le texte discute en seance que
-# si la seance les adopte (garde de prose COMMISSION_SENAT). Condition de mort des phrases qui les citent : un vote de
-# seance du Senat sur les articles 34 a 37 entre au registre (arret ci-dessous, les phrases sont alors a reecrire).
-CS_ARTICLES = (34, 35, 36, 37)
+# cites mot pour mot dans la liasse archivee (registre, `commission_senat`), et amendements de suppression deposes au nom
+# de la commission, lus par la veille dans le jeu des amendements (source « ameli », page de l'amendement archivee). Ils
+# ne modifient le texte que si la seance les adopte (garde de prose COMMISSION_SENAT). Depuis le 19/11/2026 (decision de
+# l'auteur : mise a jour automatique), un vote de seance du Senat ne fait plus arreter le generateur : les phrases qui
+# citent la commission sont produites par textes_senat() selon l'etat du registre, et la garde verifie leur coherence.
+CS_LIASSE = {"I-45": 34, "I-46": 35, "I-47": 36, "I-48": 37}   # amendements de la liasse, qualifies a la main le 19/11/2026
 
 
 def _entier(s: str) -> int:
-    return int(s.strip().replace(" ", "").replace("\u202f", "").replace("\xa0", ""))
+    return int(s.strip().replace(" ", "").replace(" ", "").replace("\xa0", ""))
+
+
+def texte_archive(s: dict) -> str:
+    """Texte d'une piece archivee du registre, empreinte controlee ; une archive « lignes » (compte rendu integral du Senat,
+    veille_plf.py) se relit en texte plat, paragraphes joints par une espace, comme dans verifier_plf_votes.py."""
+    brut = (DON / s["texte"]).read_bytes()
+    if hashlib.sha256(brut).hexdigest() != s["sha256_texte"]:
+        fail("registre des votes : texte archive %s altere (empreinte)" % s["texte"])
+    t = brut.decode("utf-8")
+    if s.get("format") == "lignes":
+        t = " ".join(x.split("\t", 1)[1] for x in t.splitlines() if "\t" in x and not x.startswith("NAV\t"))
+    return t
 
 
 def commission_senat(v: dict, r: dict) -> dict:
@@ -719,47 +768,88 @@ def commission_senat(v: dict, r: dict) -> dict:
     cs = v.get("commission_senat", [])
     if not cs:
         return {}
-    textes = {}
     for c in cs:
-        s = v["seances"][c["seance"]]
-        if c["seance"] not in textes:
-            brut = (DON / s["texte"]).read_bytes()
-            if hashlib.sha256(brut).hexdigest() != s["sha256_texte"]:
-                fail("commission du Senat : texte archive %s altere (empreinte)" % c["seance"])
-            textes[c["seance"]] = brut.decode("utf-8")
+        t = texte_archive(v["seances"][c["seance"]])
         for q in c["citations"]:
-            if q not in textes[c["seance"]]:
+            if q not in t:
                 fail("commission du Senat : art. %d (%s) : citation introuvable : %s" % (c["article"], c["amendement"], q[:80]))
-    par = {c["article"]: c for c in cs}
-    if tuple(sorted(par)) != CS_ARTICLES or len(par) != len(cs):
-        fail("commission du Senat : une entree par article 34 a 37 attendue")
-    if par[35]["statut"] != "suppression_adoptee" or any(par[a]["statut"] != "modification_adoptee" for a in (34, 36, 37)):
+        if c["amendement"] in CS_LIASSE and CS_LIASSE[c["amendement"]] != c["article"]:
+            fail("commission du Senat : %s porte sur l'art. %d, pas %d" % (c["amendement"], CS_LIASSE[c["amendement"]], c["article"]))
+        if c.get("source") == "ameli" and c["statut"] != "suppression_adoptee":
+            fail("commission du Senat : %s (jeu des amendements) : seule une suppression s'integre seule" % c["amendement"])
+    par = {c["amendement"]: c for c in cs}
+    if len(par) != len(cs):
+        fail("commission du Senat : amendement en double au registre")
+    liasse = [c for c in cs if c["amendement"] in CS_LIASSE]
+    if not liasse:
+        return {}
+    if {c["amendement"] for c in liasse} != set(CS_LIASSE):
+        fail("commission du Senat : liasse incomplete (%s)" % sorted(c["amendement"] for c in liasse))
+    if par["I-46"]["statut"] != "suppression_adoptee" or any(par[a]["statut"] != "modification_adoptee" for a in ("I-45", "I-47", "I-48")):
         fail("commission du Senat : statuts inattendus (art. 35 supprime, art. 34, 36 et 37 modifies)")
-    for a in v["articles"]:
-        if a["article"] in CS_ARTICLES and v["seances"][a["seance"]].get("assemblee") == "Sénat":
-            fail("registre : vote de seance du Senat sur l'art. %d -- les phrases de la commission sont a reecrire" % a["article"])
 
-    def lire(art, motif):
-        for q in par[art]["citations"]:
+    def lire(num, motif):
+        for q in par[num]["citations"]:
             m = re.search(motif, q)
             if m:
                 return m
-        fail("commission du Senat : art. %d, valeur introuvable dans les citations (%s)" % (art, motif))
+        fail("commission du Senat : %s, valeur introuvable dans les citations (%s)" % (num, motif))
 
-    baisse = lire(37, r"diminuer d’(un) milliard d’euros le montant global de la CPEB")
-    com = lire(37, r"ramené de ([\d \u202f\xa0]+) à ([\d \u202f\xa0]+)")
-    var = lire(34, r"minoration de (\d+) millions d’euros des variables d’ajustement")
-    an = lire(36, r"à la seule année (\d{4})")
+    baisse = lire("I-48", r"diminuer d’(un) milliard d’euros le montant global de la CPEB")
+    com = lire("I-48", r"ramené de ([\d  \xa0]+) à ([\d  \xa0]+)")
+    var = lire("I-45", r"minoration de (\d+) millions d’euros des variables d’ajustement")
+    an = lire("I-47", r"à la seule année (\d{4})")
     n0, n1 = _entier(com.group(1)), _entier(com.group(2))
     if not 0 < n1 < n0:
         fail("commission du Senat : communes contributrices %d -> %d, pas une baisse" % (n0, n1))
     if int(an.group(1)) != r["plf_edition"]:
         fail("commission du Senat : ecretement limite a %s, edition %s" % (an.group(1), r["plf_edition"]))
-    dates = {v["seances"][c["seance"]]["date"] for c in cs}
+    dates = {v["seances"][c["seance"]]["date"] for c in liasse}
     if len(dates) != 1:
         fail("commission du Senat : amendements de dates differentes %s" % sorted(dates))
     return {"plf_cs_date": dates.pop(), "plf_cs_cpeb_md": {"un": 1}[baisse.group(1)], "plf_cs_com_avant": n0,
             "plf_cs_com_apres": n1, "plf_cs_var_m": int(var.group(1)), "plf_cs_tva_annee": int(an.group(1))}
+
+
+# Etat du texte au Senat (19/11/2026), lu dans le registre que tient veille_plf.py : phase (attendu, transmis, en
+# discussion), resultat de seance de chaque article suivi (la derniere entree l'emporte : une seconde deliberation vient
+# apres le premier vote), sort des amendements de la commission des finances. Les phrases des pages en sont tirees par
+# textes_senat() ; aucune n'est ecrite a la main (garde SENAT_MAIN).
+sys.path.insert(0, str(DON))
+import veille_plf as VP  # noqa: E402  -- liste des articles affiches (ARTICLES_PAGE) : une seule liste pour les deux scripts
+
+STATUTS_SENAT = ("adopte", "adopte_modifie", "non_adopte", "supprime", "redige")
+SORTS_AMDT = ("adopte", "adopte_modifie", "rejete", "retire", "tombe", "non_soutenu")
+
+
+def etat_senat(v: dict) -> dict:
+    import re
+    et = {e["etape"]: e for e in v.get("etapes", [])}
+    res, sorts = {}, {}
+    for a in v["articles"]:
+        s = v["seances"][a["seance"]]
+        if s.get("assemblee") == "Sénat":
+            if a["statut"] not in STATUTS_SENAT:
+                fail("registre : statut de seance du Senat inconnu pour l'art. %d : %s" % (a["article"], a["statut"]))
+            res[str(a["article"])] = {"statut": a["statut"], "date": s["date"], "seance": a["seance"]}
+    for x in v.get("amendements_senat", []):
+        if x["sort"] not in SORTS_AMDT:
+            fail("registre : sort d'amendement inconnu : %s %s" % (x["amendement"], x["sort"]))
+        sorts[x["amendement"]] = {"sort": x["sort"], "date": v["seances"][x["seance"]]["date"], "article": x["article"]}
+    disc = et.get("senat_discussion")
+    ouverture = v["seances"][disc["seance"]]["date"] if disc and re.search(r"(?<!Suite de la )\bDiscussion d[’']un projet de loi",
+                                                                         disc["citation"]) else None
+    sen = v.get("senat") or {}
+    return {"phase": "attendu" if senat_attendu(v) else ("discussion" if disc else "transmis"),
+            "transmis": et["senat_transmis"]["date"] if "senat_transmis" in et else None,
+            "discussion": v["seances"][disc["seance"]]["date"] if disc else None, "ouverture": ouverture,
+            "premiere": "senat_premiere_partie_adoptee" in et, "res": res, "sorts": sorts,
+            "cs": [{"article": c["article"], "amendement": c["amendement"], "statut": c["statut"],
+                    "source": c.get("source", "liasse"), "date": v["seances"][c["seance"]]["date"]}
+                   for c in v.get("commission_senat", [])],
+            "debut": sen.get("debut"), "rct": sen.get("mission_rct"), "amdt": sen.get("amendements_rct"),
+            "vote": sen.get("vote_ensemble"), "pp_fin": sen.get("premiere_partie_fin"), "etat_au": v["etat_au"],
+            "seances": sorted({x["date"] for x in res.values()} | {x["date"] for x in sorts.values()})}
 
 
 # Contributeurs du DILICO de 2025 (19/11/2026) : Cour des comptes, « Les finances publiques locales 2025 », fascicule 2,
@@ -790,9 +880,21 @@ def dilico25_contributeurs() -> dict:
     return out
 
 
+# Vote de seance du Senat sur un article (19/11/2026) : etat long, statut court du tableau et de la fiche, ligne de figure.
+SEN_ETAT = {"supprime": ("supprimé", "deleted"), "adopte": ("adopté", "adopted"),
+            "adopte_modifie": ("adopté modifié", "adopted as amended"), "non_adopte": ("non adopté", "not adopted"),
+            "redige": ("adopté dans une nouvelle rédaction", "adopted in a new wording")}
+SEN_COURT = {"supprime": ("supprimé par le Sénat", "deleted by the Senate"), "adopte": ("adopté par le Sénat", "adopted by the Senate"),
+             "adopte_modifie": ("adopté modifié par le Sénat", "adopted as amended by the Senate"),
+             "non_adopte": ("non adopté par le Sénat", "not adopted by the Senate"),
+             "redige": ("réécrit par le Sénat", "rewritten by the Senate")}
+
+
 def plf_votes(r: dict) -> dict:
     """Ajoute a chaque mesure son etat au Parlement, et les jetons de l'etat du texte. Un article sans entree reste
-    « non examiné » (seconde partie) ; l'article 34 doit porter les deux montants de la DGF."""
+    « non examiné » (seconde partie) ; l'article 34 doit porter les deux montants de la DGF. Depuis le 19/11/2026, les
+    entrees du registre se lisent par assemblee : l'historique de l'Assemblee (votes tombes avec le rejet du texte) et
+    l'etat au Senat (etat_senat), qui l'emporte pour l'etat d'une mesure des qu'un vote de seance y est lu."""
     import re
     brut = PLF_VOTES.read_bytes()
     if hashlib.sha256(brut).hexdigest() != PLF_VOTES_SHA:
@@ -800,12 +902,16 @@ def plf_votes(r: dict) -> dict:
     v = json.loads(brut)
     if v["edition"] != r["plf_edition"]:
         fail("registre des votes : edition %s != projet de loi archive %s" % (v["edition"], r["plf_edition"]))
-    arts = {a["article"]: a for a in v["articles"]}
+    an_arts = [a for a in v["articles"] if v["seances"][a["seance"]].get("assemblee") != "Sénat"]
+    arts = {a["article"]: a for a in an_arts}
     cion = {c["article"]: c for c in v.get("commission", []) if c["statut"] == "suppression_adoptee"}
     rejet, sen = v.get("texte_rejete"), v.get("senat")
     if rejet and not sen:
         fail("registre des votes : texte rejete sans calendrier du Senat (cle `senat`)")
-    dates = sorted({v["seances"][a["seance"]]["date"] for a in v["articles"]})
+    es = etat_senat(v)
+    if es["res"] and not rejet:
+        fail("registre des votes : vote de seance du Senat sans rejet du texte par l'Assemblee -- cas non prevu par la page")
+    dates = sorted({v["seances"][a["seance"]]["date"] for a in an_arts})
     for m in r["plf_mesures"]:
         a = arts.get(PLF_ARTICLE[m["cle"]])
         if a:
@@ -824,7 +930,7 @@ def plf_votes(r: dict) -> dict:
                                                                ("commission_suppression" if PLF_ARTICLE[m["cle"]] in cion else None)]
         if rejet:
             # Le rejet de la première partie emporte le texte (LOLF, art. 42) : chaque vote de l'Assemblée devient un
-            # antécédent ; la mesure est dans le texte transmis au Sénat, à la date que donne son ordre du jour.
+            # antécédent ; la mesure est dans le texte transmis au Sénat, et son état au Sénat l'emporte dès qu'il y a voté.
             n_ = PLF_ARTICLE[m["cle"]]
             if a:
                 d_ = v["seances"][a["seance"]]["date"]
@@ -835,24 +941,36 @@ def plf_votes(r: dict) -> dict:
                 hist_en = "art. %d deleted in committee on %s" % (n_, date_en(date_fr(cion[n_]["date"])))
             else:
                 hist, hist_en = "seconde partie, non examinée", "second part, not examined"
-            if n_ == 84:
-                quand = ", examen le %s" % date_fr(sen["mission_rct"])
-                quand_en = ", examined on %s" % date_en(date_fr(sen["mission_rct"]))
+            if n_ == 84 and es["etat_au"] < sen["mission_rct"]:
+                quand = ", examen prévu le %s" % date_fr(sen["mission_rct"])
+                quand_en = ", examination scheduled for %s" % date_en(date_fr(sen["mission_rct"]))
             else:
                 quand, quand_en = "", ""
-            if a or n_ in cion:
-                m["etat"] = ("dans le texte transmis au Sénat%s ; à l'Assemblée, %s, avant le rejet de l'ensemble du texte le %s"
-                             % (quand, hist, date_fr(rejet["date"])))
-                m["etat_en"] = ("in the bill sent to the Senate%s; in the Assembly, %s, before the whole bill was rejected on %s"
-                                % (quand_en, hist_en, date_en(date_fr(rejet["date"]))))
+            res = es["res"].get(str(n_)) if n_ else None
+            if res:
+                fr_, en_ = SEN_ETAT[res["statut"]]
+                tete = "art. %d %s par le Sénat le %s" % (n_, fr_, date_fr(res["date"]))
+                tete_en = "art. %d %s by the Senate on %s" % (n_, en_, date_en(date_fr(res["date"])))
             else:
-                m["etat"] = ("dans le texte transmis au Sénat%s ; seconde partie, que l'Assemblée n'a pas examinée avant de "
-                             "rejeter l'ensemble du texte le %s" % (quand, date_fr(rejet["date"])))
-                m["etat_en"] = ("in the bill sent to the Senate%s; second part, which the Assembly did not examine before "
-                                "rejecting the whole bill on %s" % (quand_en, date_en(date_fr(rejet["date"]))))
-            m["etat_fig"] = "texte transmis au Sénat%s ; Assemblée : %s" % (quand, hist)
-            m["etat_fig_en"] = "bill sent to the Senate%s; Assembly: %s" % (quand_en, hist_en)
-            m["statut_court"], m["statut_court_en"] = STATUT_COURT["senat"]
+                tete, tete_en = "dans le texte transmis au Sénat%s" % quand, "in the bill sent to the Senate%s" % quand_en
+            if a or n_ in cion:
+                m["etat"] = ("%s ; à l'Assemblée, %s, avant le rejet de l'ensemble du texte le %s"
+                             % (tete, hist, date_fr(rejet["date"])))
+                m["etat_en"] = ("%s; in the Assembly, %s, before the whole bill was rejected on %s"
+                                % (tete_en, hist_en, date_en(date_fr(rejet["date"]))))
+            else:
+                m["etat"] = ("%s ; seconde partie, que l'Assemblée n'a pas examinée avant de rejeter l'ensemble du texte le %s"
+                             % (tete, date_fr(rejet["date"])))
+                m["etat_en"] = ("%s; second part, which the Assembly did not examine before rejecting the whole bill on %s"
+                                % (tete_en, date_en(date_fr(rejet["date"]))))
+            if res:
+                m["etat_fig"] = "Sénat : %s le %s ; Assemblée : %s" % (SEN_ETAT[res["statut"]][0], date_fr(res["date"]), hist)
+                m["etat_fig_en"] = "Senate: %s on %s; Assembly: %s" % (SEN_ETAT[res["statut"]][1], date_en(date_fr(res["date"])), hist_en)
+                m["statut_court"], m["statut_court_en"] = SEN_COURT[res["statut"]]
+            else:
+                m["etat_fig"] = "texte transmis au Sénat%s ; Assemblée : %s" % (quand, hist)
+                m["etat_fig_en"] = "bill sent to the Senate%s; Assembly: %s" % (quand_en, hist_en)
+                m["statut_court"], m["statut_court_en"] = STATUT_COURT["senat"]
             att = senat_attendu(v)
             for k in ("etat", "etat_en", "etat_fig", "etat_fig_en", "statut_court", "statut_court_en"):
                 m[k] = senat_txt(m[k], att)
@@ -862,23 +980,363 @@ def plf_votes(r: dict) -> dict:
     av, ap = (int(x.replace(" ", "")) for x in hausse.groups())
     if abs(av / 1e9 - r["plf_dgf"]) > 1e-6:
         fail("registre des votes : DGF initiale de l'article 34 != montant lu dans le projet archive")
-    dgf_court = tuple(senat_txt(x, rejet and senat_attendu(v)) for x in STATUT_COURT["senat" if rejet else arts[34]["statut"]])
-    supp_an = sorted(a["article"] for a in v["articles"] if a["statut"] in ("supprime", "non_adopte"))
+    r34 = es["res"].get("34")
+    if rejet and r34:
+        dgf_court = SEN_COURT[r34["statut"]]
+    else:
+        dgf_court = tuple(senat_txt(x, rejet and senat_attendu(v)) for x in STATUT_COURT["senat" if rejet else arts[34]["statut"]])
+    supp_an = sorted(a["article"] for a in an_arts if a["statut"] in ("supprime", "non_adopte"))
     extra = {}
     if rejet:
         e_ = next(x for x in v["etapes"] if x["etape"] == "premiere_partie_rejetee")
         extra = {"plf_senat_attendu": senat_attendu(v), "plf_rejet": rejet["date"], "plf_rejet_contre": e_["contre"], "plf_rejet_pour": e_["pour"],
                  "plf_senat_debut": sen["debut"], "plf_senat_rct": sen["mission_rct"],
-                 "plf_senat_amdt": sen["amendements_rct"], "plf_senat_vote": sen["vote_ensemble"]}
+                 "plf_senat_amdt": sen["amendements_rct"], "plf_senat_vote": sen["vote_ensemble"],
+                 "plf_senat": es, "plf_senat_phase": es["phase"]}
     cs = commission_senat(v, r)
-    return {**extra, **cs, "plf_votes": v["articles"], "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
+    return {**extra, **cs, "plf_votes": an_arts, "plf_vote_dates": dates, "plf_etat_au": v["etat_au"],
             "plf_statut_dgf": dgf_court[0], "plf_statut_dgf_en": dgf_court[1],
             "plf_etape_suivante": v["etape_suivante"], "plf_etape_suivante_en": v["etape_suivante_en"],
             "plf_dgf_an_m": (ap - av) / 1e6, "plf_dgf_an": ap / 1e9,
             "plf_commission": v.get("commission", []),
-            # Mesures retirées du texte EN DISCUSSION : aucune après le rejet (le Sénat examine le texte initial) ;
-            # celles que l'Assemblée avait écartées restent dans plf_supprimes_an (historique, gardes de prose).
+            # Mesures retirées du texte EN DISCUSSION : aucune après le rejet (le Sénat examine le texte initial ; son vote
+            # sur un article se lit dans l'état de la mesure, la barre reste pleine) ; celles que l'Assemblée avait écartées
+            # restent dans plf_supprimes_an (historique, gardes de prose).
             "plf_supprimes": [] if rejet else supp_an, "plf_supprimes_an": supp_an}
+
+
+# ------------------------------------------------------------------ phrases de l'etat au Senat (19/11/2026)
+# Toute phrase des pages qui dit ou se trouve le texte au Senat est produite ici, a partir du registre (etat_senat) :
+# phase (attendu, transmis, en discussion), vote de seance de chaque article, sort des amendements de la commission des
+# finances. Avant un vote de seance, la phrase de la commission est celle de la stabilisation du 19/11 (« ... il ne vaut
+# que si le Sénat l'adopte en séance ») ; apres, elle dit le vote et, s'il est lu, le sort de l'amendement de la
+# commission. coherence_senat() le verifie sur les jetons produits ; SENAT_MAIN refuse toute phrase d'etat ecrite a la main.
+LIB_SENAT = {34: ("l'article sur la DGF et les variables d'ajustement", "the article on the DGF and the adjustment variables"),
+             35: ("la baisse du taux du FCTVA", "the cut in the FCTVA rate"),
+             36: ("l'écrêtement de la TVA affectée", "the capping of assigned VAT"),
+             37: ("la contribution progressive à l'effort budgétaire", "the progressive contribution to the budgetary effort"),
+             84: ("l'étalement du reversement du DILICO", "the spreading of DILICO repayments")}
+VERBE_SENAT = {"supprime": ("a supprimé %s", "deleted %s"), "adopte": ("a adopté %s sans modification", "adopted %s unchanged"),
+               "adopte_modifie": ("a modifié %s", "amended %s"), "non_adopte": ("n'a pas adopté %s", "did not adopt %s"),
+               "redige": ("a réécrit %s", "rewrote %s")}
+ART_SEANCE = {"supprime": ("a supprimé cet article", "deleted this article"),
+              "adopte": ("a adopté cet article sans modification", "adopted this article unchanged"),
+              "adopte_modifie": ("a adopté cet article modifié", "adopted this article as amended"),
+              "non_adopte": ("n'a pas adopté cet article", "did not adopt this article"),
+              "redige": ("a adopté une nouvelle rédaction de cet article", "adopted a new wording of this article")}
+ART_N = {"supprime": ("a supprimé l'article %d", "deleted article %d"),
+         "adopte": ("a adopté l'article %d sans modification", "adopted article %d unchanged"),
+         "adopte_modifie": ("a adopté l'article %d modifié", "adopted article %d as amended"),
+         "non_adopte": ("n'a pas adopté l'article %d", "did not adopt article %d"),
+         "redige": ("a adopté une nouvelle rédaction de l'article %d", "adopted a new wording of article %d")}
+L_PRONOM = {"supprime": ("l'a supprimé", "deleted it"), "adopte": ("l'a adopté", "adopted it"),
+            "adopte_modifie": ("l'a adopté en le modifiant", "adopted it with amendments"),
+            "non_adopte": ("ne l'a pas adopté", "did not adopt it"), "redige": ("l'a réécrit", "rewrote it")}
+QUE_SENAT = {"supprime": ("que le Sénat a supprimé", "which the Senate deleted"), "adopte": ("que le Sénat a adopté", "which the Senate adopted"),
+             "adopte_modifie": ("que le Sénat a adopté en le modifiant", "which the Senate adopted with amendments"),
+             "non_adopte": ("que le Sénat n'a pas adopté", "which the Senate did not adopt"),
+             "redige": ("que le Sénat a réécrit", "which the Senate rewrote")}
+SORT_TXT = {"adopte": ("y a été adopté", "was adopted"), "adopte_modifie": ("y a été adopté après modification", "was adopted after being amended"),
+            "rejete": ("a été rejeté", "was rejected"), "retire": ("a été retiré", "was withdrawn"),
+            "tombe": ("est devenu sans objet", "lapsed"), "non_soutenu": ("n'a pas été soutenu", "was not moved")}
+RCT = ("la mission « Relations avec les collectivités territoriales »", "the “Relations with local authorities” mission")
+MESURES_ORDRE = (37, 35, 36, 84)   # ordre des mesures du tableau (montant decroissant), hors credits des ministeres
+
+
+def textes_senat(r: dict, lang: str) -> dict:
+    """Jetons plf_senat_*, plf_cs_* et plf_etape_suivante (hors phase « attendu »), FR ou EN, lus dans r["plf_senat"]."""
+    es, L = r["plf_senat"], (1 if lang == "en" else 0)
+
+    def d(iso):
+        return date_en(date_fr(iso)) if L else date_fr(iso)
+    ph, res, au = es["phase"], es["res"], es["etat_au"]
+    ouv = es["ouverture"]
+    depuis = ((" since %s" if L else " depuis le %s") % d(ouv)) if ouv else ""
+    cs_par_art = {}
+    for c in es["cs"]:
+        cs_par_art.setdefault(c["article"], []).append(c)
+    A = {k: (fr1(r[k]) if not L else en1(r[k])) for k in ("plf_dgf",)}
+    t = {}
+    t["plf_texte_senat"] = (("initial bill due before the Senate", "initial bill sent to the Senate") if L else
+                            ("texte initial attendu au Sénat", "texte initial transmis au Sénat"))[ph != "attendu"]
+    if ph == "attendu":
+        t["plf_senat_desc"] = "and due before the Senate in its initial form" if L else "et attendu au Sénat dans son texte initial"
+        t["plf_senat_examen"] = (("the Senate is due to examine, from %s and subject to its transmission, the Government's initial bill" if L else
+                                  "le Sénat doit examiner, à partir du %s et sous réserve de sa transmission, le texte initial du Gouvernement")
+                                 % d(es["debut"]))
+    elif ph == "transmis":
+        t["plf_senat_desc"] = ("and sent to the Senate in its initial form on %s" if L else "et transmis au Sénat dans son texte initial le %s") % d(es["transmis"])
+        if au < es["debut"]:
+            t["plf_senat_examen"] = (("the Senate, to which it was sent on %s, is due to examine from %s the Government's initial bill" if L else
+                                      "le Sénat, saisi le %s, doit examiner à partir du %s le texte initial du Gouvernement")
+                                     % (d(es["transmis"]), d(es["debut"])))
+        else:
+            t["plf_senat_examen"] = (("the Senate, to which it was sent on %s, is due to examine the Government's initial bill" if L else
+                                      "le Sénat, saisi le %s, doit examiner le texte initial du Gouvernement") % d(es["transmis"]))
+    else:
+        t["plf_senat_desc"] = ("and under examination in the Senate, in its initial form,%s" if L else
+                               "et examiné par le Sénat, dans son texte initial,%s") % depuis
+        t["plf_senat_examen"] = (("%sthe Senate has been examining the Government's initial bill" % (("since %s, " % d(ouv)) if ouv else "")) if L else
+                                 ("%sle Sénat examine le texte initial du Gouvernement" % (("depuis le %s, " % d(ouv)) if ouv else "")))
+    if t["plf_senat_desc"].endswith(","):
+        t["plf_senat_desc"] = t["plf_senat_desc"][:-1]
+    doit = ph != "discussion"
+    if doit:
+        t["plf_senat_phrase"] = "The Senate is due to examine the Government's initial bill." if L else "Le Sénat doit examiner le projet initial du Gouvernement."
+        t["plf_senat_min"] = "the Senate is due to examine the Government's initial bill" if L else "le Sénat doit examiner le projet initial du Gouvernement"
+        t["plf_senat_examine_rel"] = ("which the Senate is due to examine from %s" if L else "que le Sénat doit examiner à partir du %s") % d(es["debut"])
+        t["plf_senat_texte_rel"] = "the bill the Senate is due to examine" if L else "le texte que le Sénat doit examiner"
+    else:
+        t["plf_senat_phrase"] = (("Since %s, the Senate has been examining the Government's initial bill." % d(ouv)) if ouv else
+                                 "The Senate is examining the Government's initial bill.") if L else \
+            (("Depuis le %s, le Sénat examine le projet initial du Gouvernement." % d(ouv)) if ouv else
+             "Le Sénat examine le projet initial du Gouvernement.")
+        t["plf_senat_min"] = ("the Senate has been examining the Government's initial bill%s" % depuis) if L else \
+            ("le Sénat examine%s le projet initial du Gouvernement" % depuis)
+        t["plf_senat_examine_rel"] = ("which the Senate has been examining%s" % depuis) if L else ("que le Sénat examine%s" % depuis)
+        t["plf_senat_texte_rel"] = "the initial bill the Senate is examining" if L else "le texte initial que le Sénat examine"
+    # Les cinq mesures : bilan des votes de seance du Senat sur leurs articles.
+    faits = [(n, res[str(n)]) for n in MESURES_ORDRE if str(n) in res]
+    if faits:
+        items = [VERBE_SENAT[x["statut"]][L] % ("%s (art. %d)" % (LIB_SENAT[n][L], n)) for n, x in faits]
+        t["plf_senat_cinq"] = ("the Senate, examining the initial bill, %s" if L else "le Sénat, qui examine le texte initial, %s") % lg.enumere(items, lang)
+    else:
+        t["plf_senat_cinq"] = ("all five measures are in %s" if L else "les cinq mesures sont dans %s") % t["plf_senat_texte_rel"]
+    # DILICO (chapo) ; article 34 (DGF) ; article 83 ; date limite des amendements de la mission.
+    r84, r34, r83 = res.get("84"), res.get("34"), res.get("83")
+    if r84:
+        t["plf_senat_dilico"] = "%s %s %s" % (QUE_SENAT[r84["statut"]][L], "on" if L else "le", d(r84["date"]))
+    elif au < es["rct"]:
+        t["plf_senat_dilico"] = ("due before the Senate on %s" if L else "dont l'examen au Sénat est prévu le %s") % d(es["rct"])
+    else:
+        t["plf_senat_dilico"] = ("scheduled in the Senate for %s" if L else "dont l'examen au Sénat était prévu le %s") % d(es["rct"])
+    if r34:
+        t["plf_senat_dgf_court"] = ("the Senate %s on %s" if L else "le Sénat %s le %s") % (ART_N[r34["statut"]][L] % 34, d(r34["date"]))
+        t["plf_senat_dgf"] = ("and " if L else "et ") + t["plf_senat_dgf_court"]
+    else:
+        v_ = ("is due to examine" if doit else "is examining") if L else ("doit examiner" if doit else "examine")
+        t["plf_senat_dgf_court"] = ("the Senate %s the initial amount" if L else "le Sénat %s le montant initial") % v_
+        t["plf_senat_dgf"] = ("and the Senate %s the initial amount of €%s billion" % (v_, A["plf_dgf"])) if L else \
+            ("et le Sénat %s le montant initial de %s milliards" % (v_, A["plf_dgf"]))
+    if r83:
+        t["plf_senat_art83"] = ("the Senate %s on %s" if L else "le Sénat %s le %s") % (L_PRONOM[r83["statut"]][L], d(r83["date"]))
+    else:
+        t["plf_senat_art83"] = ((("the Senate is due to examine it on %s, with %s" if au < es["rct"] else
+                                  "the Senate was due to examine it on %s, with %s") if L else
+                                 ("le Sénat doit l'examiner le %s, avec %s" if au < es["rct"] else "le Sénat devait l'examiner le %s, avec %s"))
+                                % (d(es["rct"]), RCT[L]))
+    t["plf_senat_amdt_phrase"] = (("In the Senate, amendments on this mission may be tabled until 11 a.m. on %s." if au < es["amdt"] else
+                                   "In the Senate, amendments on this mission could be tabled until 11 a.m. on %s.") if L else
+                                  ("Au Sénat, les amendements sur cette mission se déposent jusqu'au %s à 11 heures." if au < es["amdt"] else
+                                   "Au Sénat, les amendements sur cette mission pouvaient être déposés jusqu'au %s à 11 heures.")) % d(es["amdt"])
+    # Etat d'un article des « Autres dispositions » (40, 53) : vote de seance, sinon texte initial et proposition de la commission.
+    for n in (40, 53):
+        x = res.get(str(n))
+        if x:
+            t["plf_senat_art_%d" % n] = ("%s by the Senate on %s" if L else "%s par le Sénat le %s") % (SEN_ETAT[x["statut"]][L], d(x["date"]))
+        else:
+            sup = any(c["statut"] == "suppression_adoptee" for c in cs_par_art.get(n, []))
+            t["plf_senat_art_%d" % n] = ("in the %s%s" if L else "dans le %s%s") % (
+                t["plf_texte_senat"], ((", whose deletion the Senate finance committee proposes" if L else
+                                        ", dont la commission des finances du Sénat propose la suppression") if sup else ""))
+    # Phrases de la commission, par mesure (cle de la page) : avant le vote de seance, puis apres.
+    cs_txt = commission_textes(r, es, L, d, cs_par_art)
+    for cle, n in (("cpeb", 37), ("fctva", 35), ("dgf", 34), ("tva", 36), ("dilico", 84)):
+        if cs_txt.get(n):  # jamais de jeton vide (coll-val le refuse) : absent tant que la commission n'a rien sur l'article
+            t["plf_cs_" + cle] = cs_txt[n]
+    # Bloc DILICO : date limite des amendements, puis, s'il y en a une, la proposition de la commission sur l'article 84.
+    t["plf_senat_dilico_phrases"] = " ".join(x for x in (t["plf_senat_amdt_phrase"], cs_txt.get(84, "")) if x)
+    t["plf_senat_bilan"] = bilan_senat(r, es, L, d)
+    if ph != "attendu":
+        t["plf_etape_suivante"] = etape_suivante_senat(es, L, d)
+    return t
+
+
+# Amendements de la liasse de la commission (19/11/2026) : ce qu'ils font, qualifie a la main sur la liasse archivee ;
+# nombres lus dans les citations (commission_senat). OBJET : phrase avant le vote de seance (texte de la stabilisation du
+# 19/11, inchange) ; OBJET_REL : la meme, en relative, quand la seance a adopte l'amendement.
+OBJET = {"I-45": ("un amendement à cet article qui baisse de {var} millions d'euros supplémentaires d'autres concours de l'État, "
+                  "les dotations dites variables d'ajustement",
+                  "an amendment to this article cutting other State transfers, the grants known as adjustment variables, by a further "
+                  "€{var} million"),
+         "I-47": ("une nouvelle rédaction qui limite l'écrêtement à {annee}", "a new wording limiting the capping to {annee}"),
+         "I-48": ("un amendement qui, selon elle, réduit de {cpeb} milliard d'euros le montant global de la contribution et ramène "
+                  "de {av} à {ap} le nombre de communes contributrices",
+                  "an amendment which, according to the committee, cuts the overall amount of the contribution by €{cpeb} billion and "
+                  "brings the number of contributing municipalities down from {av} to {ap}")}
+OBJET_REL = {"I-45": ("qui baisse de {var} millions d'euros supplémentaires d'autres concours de l'État, les dotations dites "
+                      "variables d'ajustement",
+                      "which cuts other State transfers, the grants known as adjustment variables, by a further €{var} million"),
+             "I-47": ("qui limite l'écrêtement à {annee}", "which limits the capping to {annee}"),
+             "I-48": ("qui, selon elle, réduit de {cpeb} milliard d'euros le montant global de la contribution et ramène de {av} "
+                      "à {ap} le nombre de communes contributrices",
+                      "which, according to the committee, cuts the overall amount of the contribution by €{cpeb} billion and brings "
+                      "the number of contributing municipalities down from {av} to {ap}")}
+
+
+def commission_textes(r: dict, es: dict, L: int, d, cs_par_art: dict) -> dict:
+    """{article: phrase} : la commission des finances du Senat, avant le vote de seance de l'article, puis apres."""
+    lang = "en" if L else "fr"
+    W = dict(cpeb=str(r.get("plf_cs_cpeb_md")), var=str(r.get("plf_cs_var_m")), annee=str(r.get("plf_cs_tva_annee")),
+             av=lg.nombre(r["plf_cs_com_avant"], 0, lang) if r.get("plf_cs_com_avant") else "",
+             ap=lg.nombre(r["plf_cs_com_apres"], 0, lang) if r.get("plf_cs_com_apres") else "")
+    out = {}
+    for n, cs in cs_par_art.items():
+        res = es["res"].get(str(n))
+        ph = []
+        for c in cs:
+            num, sup = c["amendement"], c["statut"] == "suppression_adoptee"
+            if not res:  # avant le vote de seance : proposition de la commission, valable seulement si la seance l'adopte
+                if c["source"] == "ameli":
+                    ph.append(("The Senate finance committee proposes to delete article %d (amendment no. %s, tabled on %s); the "
+                               "deletion applies only if the Senate adopts it in plenary." if L else
+                               "La commission des finances du Sénat propose de supprimer l'article %d (amendement n° %s, déposé "
+                               "le %s) ; cette suppression ne vaut que si le Sénat l'adopte en séance.") % (n, num, d(c["date"])))
+                elif sup:
+                    ph.append(("On %s, the Senate finance committee adopted its deletion; this applies only if the Senate adopts it in "
+                               "plenary." if L else "La commission des finances du Sénat en a adopté la suppression le %s ; celle-ci ne "
+                               "vaut que si le Sénat l'adopte en séance.") % d(c["date"]))
+                elif num in OBJET:
+                    obj = OBJET[num][L].format(**W)
+                    if L:
+                        ph.append("On %s, the Senate finance committee adopted %s; it applies only if the Senate adopts it in plenary."
+                                  % (d(c["date"]), obj))
+                    else:
+                        ph.append("La commission des finances du Sénat a adopté le %s %s ; %s ne vaut que si le Sénat l'adopte en séance."
+                                  % (d(c["date"]), obj, "elle" if obj.startswith("une ") else "il"))
+                continue
+            sort = es["sorts"].get(num)
+            if sup and res["statut"] == "supprime":
+                suite = (", as its finance committee proposed (amendment no. %s)" if L else
+                         ", comme le proposait sa commission des finances (amendement n° %s)") % num
+            elif sup and res["statut"] in ("adopte", "adopte_modifie", "redige"):
+                suite = ("; the deletion its finance committee proposed (amendment no. %s) was therefore not retained" if L else
+                         " ; la suppression que proposait sa commission des finances (amendement n° %s) n'a donc pas été retenue") % num
+            elif sup:
+                suite = ("; its finance committee had proposed deleting it (amendment no. %s)" if L else
+                         " ; sa commission des finances en proposait la suppression (amendement n° %s)") % num
+            elif sort:
+                obj = (", %s," % OBJET_REL[num][L].format(**W)) if sort["sort"] == "adopte" and num in OBJET_REL else ""
+                suite = ("; its finance committee's amendment (no. %s)%s %s" if L else
+                         " ; l'amendement de sa commission des finances (n° %s)%s %s") % (num, obj, SORT_TXT[sort["sort"]][L])
+            else:
+                suite = ""
+            if not ph:
+                ph.append(("In plenary, on %s, the Senate %s%s." if L else "En séance, le %s, le Sénat %s%s.")
+                          % (d(res["date"]), ART_SEANCE[res["statut"]][L], suite))
+            elif suite:
+                ph[-1] = ph[-1][:-1] + suite + "."
+        out[n] = " ".join(ph)
+    return out
+
+
+def bilan_senat(r: dict, es: dict, L: int, d) -> str:
+    """Page Collectivites, encadre du premier ecran : les amendements de la commission tant qu'aucun vote de seance n'est lu
+    sur les articles 34 a 37 ; ensuite, le bilan des votes de seance."""
+    faits = [(n, es["res"][str(n)]) for n in (37, 35, 36, 34, 84) if str(n) in es["res"]]
+    if faits:
+        items = [("%s on %s" if L else "%s le %s") % (VERBE_SENAT[x["statut"]][L] % ("%s (art. %d)" % (LIB_SENAT[n][L], n)), d(x["date"]))
+                 for n, x in faits]
+        return ("In plenary, the Senate %s." if L else "En séance, le Sénat %s.") % lg.enumere(items, "en" if L else "fr")
+    if not r.get("plf_cs_date"):
+        return ""
+    if L:
+        return ("On %s, the Senate finance committee adopted amendments that delete the cut in the FCTVA rate, reduce the progressive "
+                "contribution by €%s billion according to the committee, and limit the capping of assigned VAT to %s, in return for a "
+                "further cut of €%s million in the grants known as adjustment variables; they change the text only if the Senate "
+                "adopts them in plenary." % (d(r["plf_cs_date"]), r["plf_cs_cpeb_md"], r["plf_cs_tva_annee"], r["plf_cs_var_m"]))
+    return ("Le %s, la commission des finances du Sénat a adopté des amendements qui suppriment la baisse du taux du FCTVA, réduisent "
+            "de %s milliard d'euros, selon elle, la contribution progressive et limitent à %s l'écrêtement de la TVA affectée, en "
+            "contrepartie d'une baisse supplémentaire de %s millions d'euros des dotations dites variables d'ajustement ; ils ne "
+            "modifient le texte que si le Sénat les adopte en séance." % (d(r["plf_cs_date"]), r["plf_cs_cpeb_md"], r["plf_cs_tva_annee"],
+                                                                         r["plf_cs_var_m"]))
+
+
+def etape_suivante_senat(es: dict, L: int, d) -> str:
+    au, res = es["etat_au"], es["res"]
+    if au < es["debut"]:
+        return (("examination by the Senate of the Government's initial bill from %s, of %s and article 84 on %s, then vote on the whole "
+                 "bill on %s") if L else ("examen par le Sénat du texte initial du Gouvernement à partir du %s, de %s et de l'article 84 "
+                                          "le %s, puis vote sur l'ensemble le %s")) % (d(es["debut"]), RCT[L], d(es["rct"]), d(es["vote"]))
+    morceaux = []
+    if not es["premiere"] and es.get("pp_fin") and au < es["pp_fin"]:
+        morceaux.append(("end of the examination of the first part scheduled for %s" if L else
+                         "fin de l'examen de la première partie prévue le %s") % d(es["pp_fin"]))
+    if "84" not in res and au < es["rct"]:
+        morceaux.append(("examination of %s and article 84 on %s" if L else "examen de %s et de l'article 84 le %s") % (RCT[L], d(es["rct"])))
+    morceaux.append(("vote on the whole bill on %s" if L else "vote sur l'ensemble le %s") % d(es["vote"]) if au < es["vote"] else
+                    ("vote on the whole bill scheduled for %s" if L else "vote sur l'ensemble prévu le %s") % d(es["vote"]))
+    tete = "in the Senate, " if L else "au Sénat, "
+    if len(morceaux) == 1:
+        return tete + morceaux[0]
+    return tete + ", ".join(morceaux[:-1]) + (", then " if L else ", puis ") + morceaux[-1]
+
+
+def coherence_senat(r: dict, aff: dict, lang: str) -> list[str]:
+    """Garde (19/11/2026), a la place de l'arret au premier vote de seance : la phrase de la commission d'un article dit la
+    condition « en seance » tant qu'aucun vote de seance n'est lu, et ne la dit plus ensuite (elle cite alors le vote et
+    sa date) ; la phase « attendu » n'est jamais affichee apres la transmission lue."""
+    es = r.get("plf_senat")
+    if not es:
+        return []
+    L = lang == "en"
+    cond = "applies only if the Senate adopts it in plenary" if L else "ne vaut que si le Sénat l'adopte en séance"
+    out = []
+    for cle, n in (("cpeb", 37), ("fctva", 35), ("dgf", 34), ("tva", 36), ("dilico", 84)):
+        x, res = aff.get("plf_cs_" + cle, ""), es["res"].get(str(n))
+        a_commission = any(c["article"] == n for c in es["cs"])
+        if res and cond in x:
+            out.append("[%s] art. %d : vote de séance du Sénat au registre (%s), mais la phrase de la commission dit encore « %s »"
+                       % (lang, n, res["date"], cond))
+        if res and a_commission and (date_en(date_fr(res["date"])) if L else date_fr(res["date"])) not in x:
+            out.append("[%s] art. %d : la phrase ne cite pas la date du vote de séance (%s)" % (lang, n, res["date"]))
+        if not res and a_commission and cond not in x:
+            out.append("[%s] art. %d : proposition de la commission sans la condition « %s »" % (lang, n, cond))
+    # « Attendu » : le texte n'est pas encore transmis (en anglais, « due before » dit aussi une date prevue : seules les
+    # tournures de la phase « attendu » comptent).
+    attendu = (r"initial bill due before the Senate|due before the Senate in its initial form|initial text, due before the Senate|"
+               r"subject to its transmission" if L else r"attendu au Sénat|sous réserve de sa transmission")
+    if es["phase"] != "attendu":
+        import re
+        for k, x in aff.items():
+            m = isinstance(x, str) and re.search(attendu, x)
+            if m:
+                out.append("[%s] %s : « %s » alors que la transmission au Sénat est lue (%s)" % (lang, k, m.group(0), es["transmis"]))
+    return out
+
+
+def senat_simule(r: dict) -> dict:
+    """Copie de r ou le Senat, saisi et en discussion, a supprime l'article 35 et adopte modifie l'article 37 (amendement
+    I-48 de la commission adopte) : etat d'apres un vote de seance, pour les temoins (rien n'est ecrit)."""
+    import copy
+    es = copy.deepcopy(r["plf_senat"])
+    jour = es["etat_au"]
+    es.update(phase="discussion", transmis=jour, discussion=jour, ouverture=jour)
+    es["res"].update({"35": {"statut": "supprime", "date": jour, "seance": "SIMULATION"},
+                      "37": {"statut": "adopte_modifie", "date": jour, "seance": "SIMULATION"}})
+    es["sorts"]["I-48"] = {"sort": "adopte", "date": jour, "article": 37}
+    return dict(r, plf_senat=es)
+
+
+def temoin_coherence_senat() -> None:
+    """--mutation=senat_coherence, hors reseau : sur un vote de seance simule, les phrases produites passent la garde
+    (aucun faux positif) ; la phrase d'avant le vote, laissee sur l'article 35, doit la faire mordre."""
+    r = plf_mesures()
+    r.update(plf_votes(r))
+    if not r.get("plf_senat"):
+        fail("mutation senat_coherence : registre sans etat du Senat (texte non rejete ?)")
+    s = senat_simule(r)
+    for lang in ("fr", "en"):
+        vrai = textes_senat(s, lang)
+        faux = coherence_senat(s, vrai, lang)
+        if faux:
+            fail("mutation senat_coherence : faux positif sur les phrases produites : " + " | ".join(faux))
+    avant = textes_senat(r, "fr")["plf_cs_fctva"]  # phrase de la commission d'avant le vote de seance
+    perime = dict(textes_senat(s, "fr"), plf_cs_fctva=avant)
+    inc = coherence_senat(s, perime, "fr")
+    if inc:
+        fail("coherence prose <-> registre (Senat) : " + " | ".join(inc))
+    fail("mutation senat_coherence : aucune garde n'a mordu (controle ABSENT)")
 
 
 def calculer(J: Jeu) -> tuple[dict, list[dict]]:
@@ -1409,6 +1867,9 @@ def affichage(r: dict, lang: str = "fr") -> dict:
         a[f"{k}_detenu_total"] = fr1(p["detenu_total"])
         a[f"{k}_part_etat_pct"] = fr1(p["part_etat_pct"], 0)
         a[f"{k}_excedents"] = (LETTRES_ANGLAIS if lang == "en" else EN_LETTRES).get(p["excedents_2012_2019"], str(p["excedents_2012_2019"]))
+    # Etat du texte au Senat (19/11/2026) : phrases produites a partir du registre, jamais ecrites dans les pages.
+    if r.get("plf_senat"):
+        a.update(textes_senat(r, lang))
     return a
 
 
@@ -2009,7 +2470,7 @@ PLF_TXT_REJET = {
                     "mesures figurent dans le texte transmis au Sénat. État au {etat}.",
                src="Projet de loi de finances pour {ed} (n° 3210) et avis n° 2026-5 du Haut Conseil des finances "
                    "publiques ; état : Assemblée nationale, comptes rendus des séances du {vote} et du {rejet}{cion} ; "
-                   "Sénat, ordre du jour. État au {etat}.",
+                   "Sénat, ordre du jour{sen}. État au {etat}.",
                note="Somme arithmétique de montants hétérogènes, chacun évalué par rapport à la situation sans la mesure : "
                     "elle ne mesure pas un prélèvement net. Le Sénat peut modifier chaque mesure avant la loi définitive.",
                montre="Le projet déposé prévoyait cinq principales mesures visant les collectivités, dont la somme "
@@ -2024,7 +2485,7 @@ PLF_TXT_REJET = {
                     "National Assembly {resume} on {vote}, then rejected the whole bill on {rejet}: all five measures are "
                     "in the bill sent to the Senate. State on {etat}.",
                src="Draft budget bill for {ed} (no. 3210) and opinion no. 2026-5 of the High Council of Public Finance; "
-                   "state: National Assembly, records of the sittings of {vote} and {rejet}{cion}; Senate, agenda. "
+                   "state: National Assembly, records of the sittings of {vote} and {rejet}{cion}; Senate, agenda{sen}. "
                    "State on {etat}.",
                note="Arithmetic sum of heterogeneous amounts, each assessed against the situation without the measure: it "
                     "does not measure a net levy. The Senate may amend each measure before the final act.",
@@ -2046,7 +2507,11 @@ def _plf_vals(r, A, lang):
                PLF_ARTICLE[m["cle"]] in r["plf_supprimes"],
                m.get("etat_fig_en", m["etat_en"]) if L == "en" else m.get("etat_fig", m["etat"])) for m in ms]
     liste = ("; " if L == "en" else " ; ").join("%s %s" % (lib, v) for _, lib, v, *_ in lignes)
-    V = dict(ed=r["plf_edition"], somme=A["plf_somme"], vote=A["plf_vote_date"], etat=A["plf_etat_au"],
+    # Sources de l'état au Sénat (19/11/2026) : comptes rendus intégraux des séances dont le registre cite un résultat.
+    sea = (r.get("plf_senat") or {}).get("seances") or []
+    dts = lg.enumere([date_en(date_fr(x)) if L == "en" else date_fr(x) for x in sea], L) if sea else ""
+    sen = ((" and full records of the sittings of %s" if L == "en" else " et comptes rendus intégraux des séances du %s") % dts) if sea else ""
+    V = dict(ed=r["plf_edition"], somme=A["plf_somme"], vote=A["plf_vote_date"], etat=A["plf_etat_au"], sen=sen,
              resume=A["plf_vote_resume"], liste=liste, rejet=A.get("plf_rejet_date", ""),
              # Décision de commission citée comme source de l'état qu'elle fonde (05/11/2026).
              cion="".join(("; finance committee, amendment %s (art. %d), %s" if L == "en" else
@@ -2254,9 +2719,13 @@ def csv_texte(r: dict) -> str:
                     m["source"] + " (projet depose ; %s)" % m["etat"]])
     w.writerow(["projet_loi_finances_dgf", "FR", r["plf_edition"], "%.3f" % r["plf_dgf"], "Md EUR",
                 "projet de loi de finances pour %d, article 34 (projet depose)" % r["plf_edition"]])
+    r34 = ((r.get("plf_senat") or {}).get("res") or {}).get("34")
     w.writerow(["dgf_adoptee_assemblee_premiere_lecture", "FR", r["plf_edition"], "%.3f" % r["plf_dgf_an"], "Md EUR",
                 "Assemblee nationale, %s, article 34 amende (texte non definitif)" % r["plf_vote_dates"][-1]
-                + ("; vote tombe avec le rejet du texte le %s, le Senat doit examiner le montant initial" % r["plf_rejet"]
+                + (("; vote tombe avec le rejet du texte le %s ; Senat, seance du %s : article 34 %s" % (
+                    r["plf_rejet"], r34["date"], {"supprime": "supprime", "adopte": "adopte", "adopte_modifie": "adopte modifie",
+                                                  "non_adopte": "non adopte", "redige": "adopte dans une nouvelle redaction"}[r34["statut"]]))
+                   if r34 else ("; vote tombe avec le rejet du texte le %s, le Senat doit examiner le montant initial" % r["plf_rejet"])
                    if r.get("plf_rejet") else "")])
     # Refonte du 11/10/2026 : la decomposition 2013-2017 dans les deux unites (contribution de chaque poste a la variation
     # du solde ; pour une depense, l'inverse de sa variation). Lignes AJOUTEES ; les lignes precedentes sont inchangees.
@@ -2349,8 +2818,11 @@ def main() -> int:
 
 def _main() -> int:
     check = "--check" in sys.argv[1:] or MUTATION is not None
-    if MUTATION is not None and MUTATION not in MUTATIONS_PROSE and MUTATION not in ("stables", "cahors", "doublon", "contre_epreuve"):
+    if MUTATION is not None and MUTATION not in MUTATIONS_PROSE and MUTATION not in ("stables", "cahors", "doublon", "contre_epreuve",
+                                                                                    "senat_coherence"):
         fail("mutation inconnue : %s" % MUTATION)
+    if MUTATION == "senat_coherence":
+        temoin_coherence_senat()
     if not check:
         try:
             import cairosvg  # noqa: F401
@@ -2378,6 +2850,10 @@ def _main() -> int:
     a_en = affichage(r, "en")
     if set(a) != set(a_en):
         fail("blocs affichage et affichage_en : cles differentes (%s)" % sorted(set(a) ^ set(a_en)))
+    # Etat au Senat (19/11/2026) : la prose produite concorde avec le registre (garde a la place de l'arret au premier vote).
+    inc = coherence_senat(r, a, "fr") + coherence_senat(r, a_en, "en")
+    if inc:
+        fail("coherence prose <-> registre (Senat) : " + " | ".join(inc))
     # Affichage coherent : l'effet du PIB et la variation en euros, arrondis, redonnent le recul affiche en points
     if abs(round(abs(r["ep_te_effet_pib"]), 2) - round(abs(r["ep_te_effet_eur"]), 2) - round(abs(r["ep_te"]), 2)) > 0.0051:
         fail("decomposition du denominateur : les valeurs arrondies ne se referment pas (%.2f - %.2f != %.2f)"
