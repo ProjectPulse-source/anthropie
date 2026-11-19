@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /dette-publique-quels-futurs/, build de cec77101 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /dette-publique-quels-futurs/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Peut-on changer les règles du jeu de la dette publique ?
 Oui, mais sans effet automatique : selon son mécanisme et ses conditions, une même opération peut réduire la dette, déplacer des charges ou des risques vers d’autres, ou l’aggraver.
@@ -25,12 +25,13 @@ La Commission européenne projette la dette à politique inchangée : sans mesur
 Ce n’est pas le scénario le plus probable, elle l’écrit elle-même, ni donc une prévision.
 La Commission n’est pas un observateur extérieur : elle veille au respect des règles budgétaires européennes.
 Sa référence sert ici d’étalon commun parce qu’elle est publiée, datée et reproductible, non parce qu’elle serait neutre.
-Le Gouvernement publie des prévisions, en octobre 2024 dans son plan budgétaire et structurel à moyen terme, qui l’engage sur une trajectoire de dépenses, et en 2026 dans le rapport sur la dette annexé au projet de loi de finances pour 2027 : elles supposent des mesures qui ne sont pas toutes votées.
+Le Gouvernement publie des prévisions, en octobre 2024 dans son plan budgétaire et structurel à moyen terme, qui l’engage sur une trajectoire de dépenses, et en 2026 dans le rapport sur la dette annexé au projet de loi de finances pour 2027.
+Ces prévisions supposent des mesures qui ne sont pas toutes votées.
 Cette page ajoute la troisième sorte, des sensibilités : ce que changerait un seul paramètre, sur la référence de la Commission.
 Dette publique de la France, en % du PIB : distribution des trajectoires simulées par la Commission européenne (centiles 10 à 90), trajectoire à politique inchangée, prévision du PLF 2027 et prévision du plan d’octobre 2024.
 Ces trajectoires ne partent pas du même point en 2025 et ne supposent pas les mêmes politiques.
 Le résultat en une phrase.
-À politique inchangée, la Commission projette une dette de 126,5 % du PIB en 2030, contre 116,3 % en 2025, et juge à 95 % la probabilité que la dette de 2030 dépasse celle de 2025.
+À politique inchangée, la Commission projette une dette de 126,5 % du PIB en 2030, contre 116,3 % en 2025, et ses simulations situent à 95 % la probabilité que la dette de 2030 dépasse celle de 2025.
 Lire l’éventail.
 La prévision du Gouvernement, 120,9 %, se place dans la moitié basse de cet éventail, vers le 20e centile : environ 20 % des trajectoires simulées finissent plus bas.
 Les deux exercices n’ont toutefois ni les mêmes politiques, ni les mêmes points de départ, ni les mêmes hypothèses économiques : ce rang ne mesure ni l’effet propre des décisions du Gouvernement ni leur probabilité de réussite.
@@ -45,8 +46,8 @@ Placée dans l’éventail de la Commission, la prévision de 2024 pour 2029, 11
 Mais elle partait de plus bas : les trois trajectoires ne partent pas du même point en 2025 (116,3 % pour la Commission, 115,7 % dans le PLF 2027, 114,7 % dans le plan de 2024).
 Mesurée en variation depuis 2025, la même prévision se place vers le 12e centile, et la prévision du PLF 2027 pour 2030 vers le 24e.
 Le rang d’une trajectoire dans l’éventail dépend donc aussi de son point de départ.
-Ce que changent le solde, les taux et la croissance
-Une trajectoire de dette ne bouge que par quatre canaux : le solde primaire, c’est-à-dire les recettes moins les dépenses hors intérêts, le taux d’intérêt payé sur la dette, la croissance du PIB nominal, et les ajustements entre le déficit et la variation de la dette, dont les opérations sur le stock de dette lui-même.
+Que changent le solde, les taux et la croissance ?
+Par construction, une trajectoire de dette ne bouge que par quatre canaux : le solde primaire, c’est-à-dire les recettes moins les dépenses hors intérêts, le taux d’intérêt payé sur la dette, la croissance du PIB nominal, et les ajustements entre le déficit et la variation de la dette, dont les opérations sur le stock de dette lui-même.
 Toute réforme, y compris un changement de règle, n’agit sur la trajectoire qu’à travers eux.
 La figure applique à la référence de la Commission un seul changement à la fois.
 Écart de dette publique en 2035 par rapport à la référence de la Commission européenne, en points de PIB, un paramètre modifié à la fois (calculs de l’auteur sur la référence du Debt Sustainability Monitor 2025).
@@ -61,7 +62,8 @@ L’effet est lent : un taux de marché ne touche d’abord que la dette à cour
 La croissance.
 Un demi-point de croissance réelle de plus chaque année, à inflation inchangée, abaisserait la dette de 5,7 points en 2035 ; un demi-point de moins la relèverait de 5,9 points.
 La croissance n’est pas une décision : c’est une hypothèse, qui module toutes les autres.
-Elle joue avec le taux : par simple arithmétique de la dette, à solde primaire nul et hors ajustements flux-stock, le ratio monte quand le taux d’intérêt moyen de la dette dépasse la croissance nominale et baisse dans le cas inverse ; un déficit primaire ou des ajustements flux-stock peuvent toutefois inverser ce résultat.
+Elle joue avec le taux : par simple arithmétique de la dette, à solde primaire nul et hors ajustements flux-stock, le ratio monte quand le taux d’intérêt moyen de la dette dépasse la croissance nominale et baisse dans le cas inverse.
+Un déficit primaire ou des ajustements flux-stock peuvent toutefois inverser ce résultat.
 Le progrès technique entre dans la croissance comme l’un de ses déterminants possibles ; cette page ne lui attribue aucun effet propre chiffré.
 Ces barres ne se comparent pas comme des efforts équivalents : un point de solde primaire est un effort budgétaire à renouveler chaque année, alors qu’un taux ou une croissance ne se décrètent pas.
 Elles disent l’ordre de grandeur de chaque canal, non ce qu’une politique coûterait ni ce qu’elle rapporterait.
@@ -389,6 +391,7 @@ D.
 213-25-12 et D.
 213-25-13 du code monétaire et financier).
 Selon notre reconstitution des fiches de l’Agence France Trésor, 86,3 % de l’encours des obligations de l’État (OAT, OATi et OAT€i, à leur valeur nominale hors indexation) relève de ces lignes.
+Trois lignes indexées sur l’inflation de la zone euro y sont rangées d’après leur date de création, sans lecture de leurs arrêtés de création.
 Ces clauses rendent une modification possible ; elles ne garantissent ni l’accord des créanciers ni l’absence de hausse des taux ensuite.
 Dans le dossier dette publique
 Les quatre scénarios, racontés sur dix ans
@@ -414,7 +417,7 @@ Réutiliser cette page
 Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l’image sa source, sa période et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 La dette publique en 2030 : plusieurs futurs, sous quelles hypothèses ?
-Où mène la trajectoire actuelle selon la Commission européenne, à politique inchangée et sous des chocs historiques, et où se placent les trajectoires annoncées par le Gouvernement en 2024 et en 2026.
+Où mène la trajectoire actuelle selon la Commission européenne, à politique inchangée et sous des chocs historiques, et où se placent les prévisions du Gouvernement de 2024 et de 2026.
 Précaution d’interprétation.
 Au-delà de 2030, hors de l’éventail : projection à politique inchangée de la Commission en 2035, 140,8 % du PIB, sans nouvelles mesures après 2026.
 Les bandes sont des projections conditionnelles, à politique inchangée, fondées sur des chocs économiques historiques ; elles ne prédisent ni les décisions futures ni leurs conséquences.
@@ -435,7 +438,7 @@ Citer cette page
 Lalut, Stéphane (2026). « Peut-on changer les règles du jeu de la dette publique ? » Données Commission européenne, Gouvernement et Agence France Trésor, relevé du 18 novembre 2026. https://stephane-lalut.com/dette-publique-quels-futurs/
 Copier la citation
 En trois phrases
-À politique inchangée, la Commission européenne projette une dette publique française de 126,5 % du PIB en 2030 et de 140,8 % en 2035 ; la prévision du Gouvernement pour 2030 (120,9 %) se place dans la moitié basse de l’éventail de ses projections.
+À politique inchangée, la Commission européenne projette une dette publique française de 126,5 % du PIB en 2030 et de 140,8 % en 2035 ; la prévision du Gouvernement pour 2030 (120,9 %) se place dans la moitié basse de l’éventail des projections de la Commission, un rang qui ne mesure ni l’effet propre des décisions du Gouvernement ni leur probabilité de réussite.
 Une trajectoire ne change que par le solde primaire, les taux, la croissance ou le stock ; selon l’opération, changer les règles du jeu peut modifier les compétences et les accords nécessaires, et réduire la dette, en déplacer la charge ou l’aggraver.
 La référence de la Commission est une projection à politique inchangée, la trajectoire du Gouvernement une prévision qui suppose des mesures nouvelles, les leviers des sensibilités : aucun de ces chiffres n’est une certitude.
 Copier le résumé

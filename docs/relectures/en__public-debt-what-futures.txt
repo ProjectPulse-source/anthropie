@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/public-debt-what-futures/, build de cec77101 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/public-debt-what-futures/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can the rules of the public debt game be changed?
 Yes, but with no automatic effect: depending on its mechanism and conditions, the same operation can reduce debt, shift burdens or risks onto others, or worsen it.
@@ -25,12 +25,13 @@ The European Commission projects debt with unchanged policy: with no new measure
 It is not the most likely scenario, as the Commission itself writes, and so not a forecast.
 The Commission is not an outside observer: it oversees compliance with the European fiscal rules.
 Its baseline serves here as a common yardstick because it is published, dated and reproducible, not on any claim to neutrality.
-The Government publishes forecasts, in October 2024 in its medium-term fiscal-structural plan, which commits it to a spending path, and in 2026 in the debt report annexed to the 2027 draft budget: they assume measures not all of which have been passed.
+The Government publishes forecasts, in October 2024 in its medium-term fiscal-structural plan, which commits it to a spending path, and in 2026 in the debt report annexed to the 2027 draft budget.
+These forecasts assume measures not all of which have been passed.
 This page adds the third kind, sensitivities: what a single parameter would change, on the Commission’s baseline.
 French public debt, % of GDP: distribution of the paths simulated by the European Commission (10th to 90th percentiles), unchanged-policy path, 2027 draft budget forecast and forecast of the October 2024 plan.
 These paths do not start from the same point in 2025 and do not assume the same policies.
 The result in one sentence.
-With unchanged policy, the Commission projects debt at 126.5% of GDP in 2030, against 116.3% in 2025, and puts at 95% the probability that debt in 2030 exceeds its 2025 level.
+With unchanged policy, the Commission projects debt at 126.5% of GDP in 2030, against 116.3% in 2025, and its simulations put at 95% the probability that debt in 2030 exceeds its 2025 level.
 Reading the fan.
 The Government’s forecast, 120.9%, sits in the lower half of this fan, around the 20th percentile: about 20% of the simulated paths end lower.
 The two exercises, however, rest on different policies, starting points and economic assumptions: this rank measures neither the specific effect of the Government’s decisions nor their probability of success.
@@ -45,8 +46,8 @@ Placed within the Commission’s fan, the 2024 forecast for 2029, 115.8%, falls 
 But it started lower: the three paths do not start from the same point in 2025 (116.3% for the Commission, 115.7% in the 2027 draft budget, 114.7% in the 2024 plan).
 Measured as a change since 2025, the same forecast sits around the 12th percentile, and the 2027 draft budget’s forecast for 2030 around the 24th.
 A path’s rank in the fan therefore also depends on its starting point.
-What the balance, interest rates and growth change
-A debt path moves only through four channels: the primary balance, that is revenue minus spending excluding interest, the interest rate paid on the debt, nominal GDP growth, and the adjustments between the deficit and the change in debt, including operations on the stock of debt itself.
+What do the balance, interest rates and growth change?
+By construction, a debt path moves only through four channels: the primary balance, that is revenue minus spending excluding interest, the interest rate paid on the debt, nominal GDP growth, and the adjustments between the deficit and the change in debt, including operations on the stock of debt itself.
 Any reform, including a change of rule, acts on the path only through them.
 The chart applies a single change at a time to the Commission’s baseline.
 Gap in public debt in 2035 relative to the European Commission’s baseline, in points of GDP, one parameter changed at a time (author’s calculations on the Debt Sustainability Monitor 2025 baseline).
@@ -61,7 +62,8 @@ The effect is slow: a market rate first affects only short-term debt and the sec
 Growth.
 Half a point of extra real growth every year, with inflation unchanged, would lower debt by 5.7 points in 2035; half a point less would raise it by 5.9 points.
 Growth is not a decision: it is an assumption, which modulates all the others.
-It works together with the interest rate: by the simple arithmetic of debt, with a zero primary balance and no stock-flow adjustments, the ratio rises when the average interest rate on the debt exceeds nominal growth and falls in the opposite case; a primary deficit or stock-flow adjustments can nevertheless reverse that result.
+It works together with the interest rate: by the simple arithmetic of debt, with a zero primary balance and no stock-flow adjustments, the ratio rises when the average interest rate on the debt exceeds nominal growth and falls in the opposite case.
+A primary deficit or stock-flow adjustments can nevertheless reverse that result.
 Technical progress enters growth as one possible driver; this page assigns it no separately quantified effect.
 These bars are not to be compared as equivalent efforts: a point of primary balance is a budgetary effort to be renewed every year, whereas an interest rate or growth cannot be decreed.
 They give the order of magnitude of each channel, not what a policy would cost or yield.
@@ -389,6 +391,7 @@ D.
 213-25-12 and D.
 213-25-13 of the Monetary and Financial Code).
 According to our reconstruction from the Agence France Trésor’s line sheets, 86.3% of the outstanding State bonds (OAT, OATi and OAT€i, at nominal value excluding indexation) belongs to these lines.
+Three lines indexed to euro-area inflation are classed among them by their creation date; their creation orders have not been read.
 The clauses make a change possible; they guarantee neither creditors’ consent nor the absence of higher interest rates afterwards.
 In the public debt dossier
 The four scenarios, told over ten years Dette Publique: Qui paie vraiment?, the author’s book, in French: contents, excerpts and reviews →
@@ -404,7 +407,7 @@ Reusing this page
 The charts, the data and a ready-made citation, under an open licence.
 Each chart carries its source, period and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 Public debt in 2030: several futures, under which assumptions?
-Where the current path leads according to the European Commission, with unchanged policy and under historical shocks, and where the paths announced by the Government in 2024 and 2026 stand.
+Where the current path leads according to the European Commission, with unchanged policy and under historical shocks, and where the Government’s 2024 and 2026 forecasts stand.
 Reading caveat.
 Beyond 2030, outside the fan: the Commission’s unchanged-policy projection for 2035 is 140.8% of GDP, with no new measures after 2026.
 The bands are conditional projections, under unchanged policy, based on historical economic shocks; they do not predict future decisions or their consequences.
@@ -415,7 +418,7 @@ Sources: European Commission, Debt Sustainability Monitor 2025 (France country f
 Download PNG
 SVG
 Public debt in 2035: how far the primary balance, interest rates and growth move it
-What a primary balance one point of GDP higher, market rates 0.2 point lower or one point higher, or half a point of real growth with inflation unchanged would each change in 2035, on the Commission’s baseline.
+What a primary balance one point of GDP higher, market rates 0.2 points lower or one point higher, or half a point of real growth with inflation unchanged would each change in 2035, on the Commission’s baseline.
 Reading caveat.
 Sensitivities: one parameter changed at a time, the others unchanged.
 These are not forecasts, full policy assessments or a cost-benefit ranking.
@@ -427,7 +430,7 @@ Lalut, Stéphane (2026).
 “Can the rules of the public debt game be changed?” European Commission, French Government and Agence France Trésor data, retrieved 18 November 2026. https://stephane-lalut.com/en/public-debt-what-futures/
 Copy citation
 In three sentences
-With unchanged policy, the European Commission projects French public debt at 126.5% of GDP in 2030 and 140.8% in 2035; the Government’s forecast for 2030 (120.9%) sits in the lower half of the fan of its projections.
+With unchanged policy, the European Commission projects French public debt at 126.5% of GDP in 2030 and 140.8% in 2035; the Government’s forecast for 2030 (120.9%) sits in the lower half of the fan of the Commission’s projections, a rank that measures neither the specific effect of the Government’s decisions nor their probability of success.
 A path changes only through the primary balance, interest rates, growth or the stock; depending on the operation, changing the rules of the game can change the powers and agreements required, and reduce debt, shift its burden or worsen it.
 The Commission’s baseline is an unchanged-policy projection, the Government’s path a forecast that assumes new measures, the levers sensitivities: none of these figures is certain.
 Copy summary
