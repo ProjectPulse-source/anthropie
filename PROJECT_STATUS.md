@@ -52,6 +52,24 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-19 — Passes de forme des lots « Promesses A » et « Parcoursup-Étudiants » publiées après jugement externe à l'aveugle
+- **Commits** Promesses A (FR, EN) : `fe4e2ac9` (Pouvoirs : droit et pratique distingués, lettre de l'article 8),
+  `b8898888` (Adopter : lettre de l'article 11, extraits lus seuls), `7bb3cdc8` (Référendum : interprétation du Conseil,
+  traductions signalées), `f2affe4a` (Union européenne : réserves au contact ; journal du 18/11, « sauf exceptions » : la
+  garde de prose U9 de `update_promesses_europe.py` arrêtait sur la version en ligne). Parcoursup-Étudiants (FR) :
+  `7c6ee687` (Étudiants : sources et réserves dans les extraits lus seuls), `705bedcf` (Parcoursup : la part des admis
+  « peut être » bien plus faible ; la page ne calcule aucun agrégat).
+- **Jugement externe** : paquet n° 06 (34 passages, réponse `4893D401…`) : version proposée retenue à 28 passages sur 34 ;
+  version en ligne gardée pour le chapô de « Pouvoirs » et « private member's bill » ; phrase de l'article 8 réécrite sur
+  la lettre du texte. Paquet n° 08 (9 passages, réponse `01D0EF27…`) : version proposée retenue partout ; réserve causale
+  reformulée par le contradicteur.
+- **Relecture** : texte servi relu contre le corps par un relecteur indépendant par lot (0 P1 ; P2 appliqués).
+- **Contrôles** : Hugo 0, `typo_build` 0, `check-all --ci` 0, `check-rendu-ressources` 0, `check-typo-fr` 0 ; six
+  générateurs `--check` 0 (Pouvoirs, Adopter, Référendum, Europe, Étudiants, Parcoursup) ; lettre : aucun nombre retiré ;
+  envois du 30/11, du 02/12 et ETUDIANTS-2026-11 : phrases citées identiques.
+- **Servi** : déploiement `hugo.yml` 44466178533 réussi ; version servie attestée le 19/11 : 10 versions, 0 écart ;
+  9 scripts identiques au build.
+
 ### 2026-11-19 — Passe de forme du lot « Dette C » publiée après jugement externe à l'aveugle (FR, EN)
 - **Commits** `2b340de2` (Collectivités), `e6711ef4` (Budget 2027), `f118e4cf` (Quels futurs) : niveau de connaissance
   qualifié une fois là où il change le sens (conditionnel, simulation, identité, attribution d'AWP-09), extraits lus seuls
