@@ -1,7 +1,7 @@
-# relu le 2026-11-18 ; texte servi de /en/local-government-debt/, build de cec77101 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/local-government-debt/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Are local authorities the adjustment variable of public finances?
-Local authorities’ debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government shows up in their revenue and spending.
+Local authorities’ debt does not settle the question: the balanced-budget rule forbids them to borrow to offset a lasting fall in the revenue that pays for their day-to-day spending, so a constraint coming from central government would show up in their revenue and spending.
 From 2013 to 2017, local government improved its balance by €9.7 billion.
 Its total spending remained almost flat in current euros, while tax revenue rose and transfers received fell.
 Relative to GDP, its spending fell by 0.82 points, of which 0.50 points for investment.
@@ -10,11 +10,11 @@ Page updated 18 November 2026
 Public debt dossier
 Data · Eurostat 2025
 ↓ Charts, data and citations to reuseReuse this page
-Draft budget bill for 2027, state on 16 November 2026.
-The National Assembly rejected the first part of the bill on 4 November 2026, which carries the whole bill with it; its votes on the articles fall with it (on 19 October 2026, it had deleted the cut in the FCTVA rate (art.
+Draft budget bill for 2027, state on 17 November 2026.
+The National Assembly rejected the first part of the bill on 4 November 2026, which carries the whole bill with it; its votes on the articles fall with it: on 19 October 2026, the Assembly had deleted the cut in the FCTVA rate (art.
 35) and the progressive contribution to the budgetary effort (art.
 37), had not adopted the capping of assigned VAT (art.
-36), and had raised the DGF for 2027 to €27.9 billion).
+36), and had raised the DGF for 2027 to €27.9 billion.
 The procedure is not over: examination by the Senate, subject to its transmission, of the Government’s initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
 The amounts of the bill as tabled are still presented below, as the initial framing of the debate → measures and state of the text.
 What it changes for a municipality, measure by measure: Budget 2027: what do we actually know for your municipality?
@@ -27,7 +27,8 @@ In Spain, central government holds more than half of subnational debt: carrying 
 Investment by local government (gross fixed capital formation) and current transfers it receives from other general government units, in % of GDP.
 These transfers include those from social security: they are not just central government grants.
 The 2010 peak is a one-off: that year the State compensated for the abolition of the business tax (taxe professionnelle), a reform “neutral for the balance of local government” according to Insee (May 2011, our translation).
-The comparable transfer series stops in 2017: in 2018 a grant, then in 2021 the residence tax relief, recorded as a transfer from the State, were replaced by shares of VAT or of property tax, counted as taxes, a reclassification that does not, on its own, say whether resources rose or fell (details).
+The comparable transfer series stops in 2017: in 2018 a grant, then in 2021 the residence tax relief, recorded as a transfer from the State, were replaced by shares of VAT or of property tax, counted as taxes.
+This reclassification does not, on its own, say whether resources rose or fell (details).
 The finding in one sentence.
 From 2013 to 2017, the transfers received by local government fell by €8.9 billion (0.64 points of GDP) and its investment by €7.5 billion (0.50 points); after the 2014 municipal elections, the fall in investment was 2.8 times as large as the largest of the falls that followed those of 2001, 2008 and 2020; these concomitant movements do not, on their own, allow this fall to be attributed to the cut in grants.
 DownloadCiteData
@@ -80,7 +81,7 @@ Nor does the rule govern the whole subsector, which includes bodies other than l
 Contained debt is consistent with an adjustment through resources and spending, and with the absence of one: it does not measure how intense a constraint has been.
 No single indicator replaces it here.
 The accounts make it possible to observe mechanisms and episodes; they do not make it possible to turn them into a general rule since 2000, nor to attribute those episodes to a cause.
-2013-2017: the grant cuts, in euros and in points of GDP
+2013-2017: during the grant cuts, what do the accounts say in euros and in points of GDP?
 Over these four years, the State cut its general operating grant (dotation globale de fonctionnement, DGF) under the heading of the “contribution to the recovery of public finances”.
 Three quantities describe the episode, and none replaces the others:
 Quantity
@@ -149,7 +150,7 @@ The waterfall is checked by an identity the generator verifies on every run: tot
 Over the 31 years available, the largest gap is €0.1 million, a rounding difference.
 Each of the two waterfalls adds up to the change in the balance.
 The denominator’s share is computed through an exact identity, on the GDP implied by the same accounts: with spending unchanged, GDP growth would have lowered the ratio of spending to GDP by 0.87 points; the rise in spending in euros took back 0.05 points, hence the fall of 0.82 points.
-The mechanism changes, the question remains
+Through which channels can a constraint from central government reach local authorities?
 A constraint from central government can reach local authorities through channels that are not of the same kind: some reduce resources, others cap spending, others again change the make-up of revenue.
 Since 2014, they have followed one another.
 2013-2017: acting on resources.
@@ -172,7 +173,7 @@ The emergency act of 23 March 2020 set this clawback aside for 2020 expenditure 
 The effect of the contracts cannot be measured in these series: they bore only on the main budget of the authorities concerned, which the national aggregate does not separate out.
 Two other channels escape these series: responsibilities transferred without full funding, whose compensation, when it is fixed as for the minimum income benefit (RSA), falls behind the actual cost and is read responsibility by responsibility (the departments’ individual solidarity allowances, for example), and unfunded standards, whose cost is read in impact assessments.
 All these channels share a hypothesis to test: a decision taken at one level can shift part of its cost onto another.
-Working paper AWP-09 confronts it with the 2013-2017 episode: the accounts make it compatible, without establishing it.
+Working paper AWP-09, by the author of this page, confronts it with the 2013-2017 episode: the accounts make it compatible, without establishing it.
 2018 and 2021: when a resource changes classification
 In 2018, the regions’ DGF went from €4.1 billion to €0.3 billion while they received €4.2 billion of VAT (OFGL): a revenue item classified among transfers became a tax revenue.
 In 2021, transfers received by local government as a whole dropped by 0.66 points of GDP and its taxes rose by 0.44 points: the residence tax on main homes (taxe d’habitation), part of which the State used to pay through a tax relief counted as a transfer, was replaced by shares of VAT or, for municipalities, by the departmental share of property tax; the regional share of the business value-added tax (CVAE), also replaced by VAT, moved from one tax to another.
@@ -229,10 +230,11 @@ France and Italy, where regions are classified in local government, form the mai
 Subnational government debt (state and local government, S1312 + S1313) in % of GDP, fourth quarter of each year, and the share held by central government in 2025 (shown under each country).
 DownloadCiteData
 In Spain, subnational debt went from 9.2% of GDP in 2000 to 21.4% in 2025, driven by the autonomous communities, and subnational investment fell by 64% between its peak in the 2000s and its low in the 2010s (table below).
-But this debt does not measure a constraint passed downwards: in 2025, 12.6 points of GDP out of 21.4, or 59%, were held by the central State itself, notably through the Fondo de Liquidez Autonómico, through which the State lends to the autonomous communities, created in 2012 (Real Decreto-ley 21/2012, articles 9 and 14) and since 2015 a compartment of the Fondo de Financiación a Comunidades Autónomas (Real Decreto-ley 17/2014, article 6).
+But this debt does not measure a constraint passed downwards: in 2025, 12.6 points of GDP out of 21.4, or 59%, were held by the central State itself, notably through the Fondo de Liquidez Autonómico, through which the State lends to the autonomous communities.
+This fund, created in 2012 (Real Decreto-ley 21/2012, articles 9 and 14), became a compartment of the Fondo de Financiación a Comunidades Autónomas in 2015 (Real Decreto-ley 17/2014, article 6).
 The equivalent share is 26% in Italy, 1% in France and 1% in Germany.
 Who carries a debt and who finances it are two distinct questions.
-In Italy, the three indicators point the same way: subnational debt fell back from 8.8% of GDP in 2014 to 4.7% in 2025, the balance was in surplus in eight years out of eight between 2012 and 2019 (France: three), and investment fell to half, from its peak in the 2000s to its low in the 2010s.
+In Italy, the three indicators point the same way: subnational debt fell back from 8.8% of GDP in 2014 to 4.7% in 2025, the balance was in surplus in eight years out of eight between 2012 and 2019 (France: three), and investment halved between its peak in the 2000s and its low in the 2010s.
 These concomitant movements do not separate the effect of national rules — the internal stability pact, introduced in 1999 and abandoned for local authorities in 2016 — from that of the sovereign debt crisis.
 In Germany, subnational debt remains well below its 2012 peak (30.3%, 19.6% in 2025), with a limited fall in investment (16% between its peak in the 2000s and its low in the 2010s); it is carried mainly by the Länder.
 The comparison yields no single ranking: debt, balance and investment order the four countries differently.
@@ -280,7 +282,7 @@ The state government subsector (S1312) exists in the Eurostat data only in a few
 In Germany and Spain, subnational debt therefore adds the two tiers together; cross-holdings between them amount to at most 0.2 points of GDP: the double counting is marginal and does not change the orders of magnitude.
 In Spain, Organic Law 2/2012 also assigns the surpluses of each level of government to reducing its net debt (article 32).
 What does the draft budget bill ask of local authorities?
-State of the text on 16 November 2026: draft budget bill for 2027 (projet de loi de finances), tabled on 1 October 2026 and rejected by the National Assembly on 4 November 2026; on 19 October 2026, it had deleted the cut in the FCTVA rate (art.
+State of the text on 17 November 2026: draft budget bill for 2027 (projet de loi de finances), tabled on 1 October 2026 and rejected by the National Assembly on 4 November 2026; on 19 October 2026, it had deleted the cut in the FCTVA rate (art.
 35) and the progressive contribution to the budgetary effort (art.
 37), had not adopted the capping of assigned VAT (art.
 36), votes that fell with the bill.
@@ -387,7 +389,7 @@ Investment spending: in euros and relative to revenue, taking the municipal cycl
 For 2027, three measures of the bill as tabled bore directly on these lines: the progressive contribution, the cut in the compensation fund’s rate and the capping of the shares of VAT, all three in the initial bill due before the Senate after the National Assembly rejected it on 4 November 2026.
 Were the progressive contribution adopted, liability would be checked against the criteria of article 37 of the bill (criteria, rates, exemptions), then, once the act is passed, in the ministerial order published in the Journal officiel which was to set the amount levied on each authority.
 The spreading of the sums placed in reserve (in the initial bill due before the Senate, examination scheduled for 2 December 2026; in the Assembly, art.
-84 deleted in committee on 28 October 2026, before the whole bill was rejected on 4 November 2026) concerns only the authorities that contributed to them in 2025 or 2026.
+84 deleted in committee on 28 October 2026, before the whole bill was rejected on 4 November 2026) concerns the authorities that contributed to them in 2025 or 2026 and, for 10% of each repayment, the equalisation funds.
 Frequently asked questions
 How can I tell whether my local authority is affected by the draft budget bill?
 In the bill tabled on 1 October 2026, the progressive contribution targeted 40% of municipalities, 60% of departments and the inter-municipal groupings of metropolitan France, under the criteria of its article 37, and the amount levied on each authority was to be set by a ministerial order published in the Journal officiel.

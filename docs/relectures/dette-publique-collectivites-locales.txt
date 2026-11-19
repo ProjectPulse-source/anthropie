@@ -1,7 +1,7 @@
-# relu le 2026-11-18 ; texte servi de /dette-publique-collectivites-locales/, build de cec77101 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /dette-publique-collectivites-locales/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Les collectivités locales sont-elles une variable d’ajustement des finances publiques ?
-La dette des collectivités ne permet pas de trancher : la règle d’équilibre de leurs budgets leur interdit d’emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu’une contrainte venue de l’État se lit dans leurs recettes et leurs dépenses.
+La dette des collectivités ne permet pas de trancher : la règle d’équilibre de leurs budgets leur interdit d’emprunter pour compenser une baisse durable des recettes qui financent leurs dépenses courantes, si bien qu’une contrainte venue de l’État se lirait dans leurs recettes et leurs dépenses.
 De 2013 à 2017, les administrations publiques locales ont amélioré leur solde de 9,7 milliards d’euros.
 Leurs dépenses totales sont restées presque stables en euros courants, tandis que les recettes fiscales progressaient et que les transferts reçus reculaient.
 Rapportées au PIB, leurs dépenses ont diminué de 0,82 point, dont 0,50 point pour l’investissement.
@@ -10,11 +10,11 @@ Page mise à jour le 18 novembre 2026
 Dossier dette publique
 Données · Eurostat 2025
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
-Projet de loi de finances pour 2027, état au 16 novembre 2026.
-L’Assemblée nationale a rejeté la première partie du texte le 4 novembre 2026, ce qui emporte l’ensemble ; ses votes sur les articles tombent avec lui (le 19 octobre 2026, elle avait supprimé la baisse du taux du FCTVA (art.
+Projet de loi de finances pour 2027, état au 17 novembre 2026.
+L’Assemblée nationale a rejeté la première partie du texte le 4 novembre 2026, ce qui emporte l’ensemble ; ses votes sur les articles tombent avec lui : le 19 octobre 2026, l’Assemblée avait supprimé la baisse du taux du FCTVA (art.
 35) et la contribution progressive à l’effort budgétaire (art.
 37), n’avait pas adopté l’écrêtement de la TVA affectée (art.
-36), et avait porté la DGF pour 2027 à 27,9 milliards d’euros).
+36), et avait porté la DGF pour 2027 à 27,9 milliards d’euros.
 La procédure n’est pas achevée : examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l’article 84 le 2 décembre, puis vote sur l’ensemble le 9 décembre.
 Les montants du projet déposé restent présentés plus bas comme le cadrage initial du débat → mesures et état du texte.
 Ce que cela change pour une commune, mesure par mesure : Budget 2027 : que sait-on réellement pour votre commune ?
@@ -27,7 +27,8 @@ En Espagne, l’État central détient plus de la moitié de la dette territoria
 Investissement des administrations publiques locales (formation brute de capital fixe) et transferts courants qu’elles reçoivent des autres administrations publiques, en % du PIB.
 Ces transferts comprennent ceux de la sécurité sociale : ce ne sont pas les seules dotations de l’État.
 Le pic de 2010 est ponctuel : l’État compense cette année-là la suppression de la taxe professionnelle, réforme « neutre sur le solde des administrations publiques locales » selon l’Insee (mai 2011).
-La série comparable des transferts s’arrête en 2017 : en 2018, une dotation, puis en 2021 le dégrèvement de taxe d’habitation, enregistré en transfert de l’État, sont remplacés par des fractions de TVA ou de taxe foncière, comptées en impôts, un reclassement qui ne dit pas, à lui seul, si les ressources ont augmenté ou baissé (détail).
+La série comparable des transferts s’arrête en 2017 : en 2018, une dotation, puis en 2021 le dégrèvement de taxe d’habitation, enregistré en transfert de l’État, sont remplacés par des fractions de TVA ou de taxe foncière, comptées en impôts.
+Ce reclassement ne dit pas, à lui seul, si les ressources ont augmenté ou baissé (détail).
 Le résultat en une phrase.
 De 2013 à 2017, les transferts reçus par les administrations publiques locales reculent de 8,9 milliards d’euros (0,64 point de PIB) et leur investissement de 7,5 milliards d’euros (0,50 point) ; après les élections municipales de 2014, le recul de l’investissement est 2,8 fois plus marqué que le plus fort des reculs qui ont suivi celles de 2001, 2008 et 2020 ; ces évolutions concomitantes ne permettent pas, à elles seules, d’attribuer ce recul à la baisse des dotations.
 TéléchargerCiterDonnées
@@ -56,7 +57,7 @@ Notions voisines, retraitements différents.
 Encours de dette
 Dette au sens de Maastricht
 Valeur nominale ; pour les administrations locales, consolidée à l’intérieur du sous-secteur, non entre sous-secteurs.
-La somme des encours des quatre catégories suivies par l’OFGL, la Ville de Paris et la métropole de Lyon comptées une seule fois (205,0 milliards d’euros en 2025) reste inférieure à la dette des administrations locales au sens de Maastricht : celle-ci comprend aussi les syndicats et les organismes divers, et suit d’autres conventions.
+La somme des encours des quatre catégories suivies par l’OFGL (205,0 milliards d’euros en 2025), dans laquelle la Ville de Paris et la métropole de Lyon ne sont comptées qu’une fois, reste inférieure à la dette des administrations locales au sens de Maastricht : celle-ci comprend aussi les syndicats et les organismes divers, et suit d’autres conventions.
 Elle n’est pas non plus consolidée avec l’État : la part que celui-ci en détient (0,1 point de PIB) y reste comptée, ce qui la distingue de la « contribution » des administrations locales à la dette publique consolidée que publie l’Insee.
 L’écart se documente ; il ne se corrige pas.
 Deux récits, une même série
@@ -79,7 +80,7 @@ Elle ne régit pas non plus tout le sous-secteur, qui comprend d’autres organi
 Une dette contenue est compatible avec un ajustement par les ressources et les dépenses comme avec son absence : elle ne mesure pas l’intensité d’une contrainte.
 Aucun indicateur unique ne la remplace ici.
 Les comptes permettent d’observer des mécanismes et des épisodes ; ils ne permettent ni d’en faire une règle générale depuis 2000, ni d’attribuer ces épisodes à une cause.
-2013-2017 : la baisse des dotations, en euros et en points de PIB
+2013-2017 : pendant la baisse des dotations, que disent les comptes en euros et en points de PIB ?
 Pendant ces quatre années, l’État réduit sa dotation globale de fonctionnement (DGF) au titre de la « contribution au redressement des finances publiques ».
 Trois grandeurs décrivent l’épisode, et aucune ne remplace les autres :
 Grandeur
@@ -148,7 +149,7 @@ La cascade se vérifie par une identité que le générateur contrôle à chaque
 Sur les 31 années disponibles, l’écart maximal est de 0,1 million d’euros, un arrondi.
 Les deux cascades se referment chacune sur la variation du solde.
 La part du dénominateur se calcule par une identité exacte, sur le PIB qu’impliquent les mêmes comptes : à dépense inchangée, la croissance du PIB aurait fait reculer de 0,87 point le ratio des dépenses au PIB ; la hausse des dépenses en euros en a repris 0,05 point, d’où le recul de 0,82 point.
-Le mécanisme change, la question demeure
+Par quels canaux une contrainte de l’État peut-elle atteindre les collectivités ?
 Une contrainte de l’État peut atteindre les collectivités par des canaux qui ne sont pas de même nature : certains réduisent des ressources, d’autres encadrent des dépenses, d’autres encore changent la composition des recettes.
 Depuis 2014, ils se sont succédé.
 2013-2017 : agir sur les ressources.
@@ -171,7 +172,7 @@ La loi d’urgence du 23 mars 2020 écarte cette reprise pour les dépenses de 2
 L’effet des contrats ne se mesure pas dans ces séries : ils ne portent que sur le budget principal des collectivités concernées, que l’agrégat national ne sépare pas.
 Deux autres canaux échappent à ces séries : les compétences transférées sans financement complet, dont la compensation, quand elle est figée comme pour le revenu de solidarité active, décroche du coût réel et se lit compétence par compétence (les allocations individuelles de solidarité des départements, par exemple), et les normes non financées, dont le coût se lit dans les évaluations préalables.
 Tous ces canaux partagent une hypothèse à tester : une décision prise à un niveau peut déplacer une partie de son coût vers un autre.
-Le document de travail AWP-09 la confronte à l’épisode 2013-2017 : les comptes la rendent compatible, sans l’établir.
+Le document de travail AWP-09, de l’auteur de cette page, la confronte à l’épisode 2013-2017 : les comptes la rendent compatible, sans l’établir.
 2018 et 2021 : quand une ressource change de classement
 En 2018, la DGF des régions passe de 4,1 à 0,3 milliard d’euros pendant qu’elles reçoivent 4,2 milliards de TVA (OFGL) : une recette classée parmi les transferts devient une recette fiscale.
 En 2021, les transferts reçus par l’ensemble des administrations locales chutent de 0,66 point de PIB et leurs impôts augmentent de 0,44 point : la taxe d’habitation sur les résidences principales, dont l’État prenait en charge une part par un dégrèvement compté comme un transfert, est remplacée par des fractions de TVA ou, pour les communes, par la part départementale de taxe foncière ; la part régionale de la cotisation sur la valeur ajoutée des entreprises (CVAE), remplacée elle aussi par de la TVA, passe d’un impôt à un autre.
@@ -225,13 +226,14 @@ Ni l’Insee ni Eurostat ne documentent son enregistrement en comptabilité nati
 Ailleurs en Europe : une même dette, des architectures opposées
 Les comparaisons se font ici par périmètre statistique, non par compétences exercées.
 La France et l’Italie, où les régions sont classées parmi les administrations locales, forment la comparaison principale ; l’Allemagne et l’Espagne, dont la dette territoriale additionne celle des Länder ou des communautés autonomes et celle des collectivités locales, servent de contrepoints.
-Dette des administrations territoriales en % du PIB, quatrième trimestre de chaque année, et part détenue par l’administration centrale en 2025 (indiquée sous chaque pays).
+Dette des administrations territoriales (administrations d’États fédérés et administrations locales, S1312 + S1313) en % du PIB, quatrième trimestre de chaque année, et part détenue par l’administration centrale en 2025 (indiquée sous chaque pays).
 TéléchargerCiterDonnées
 En Espagne, la dette territoriale passe de 9,2 % du PIB en 2000 à 21,4 % en 2025, portée par les communautés autonomes, et l’investissement territorial perd 64 % entre son plus haut des années 2000 et son plus bas des années 2010 (tableau ci-dessous).
-Mais cette dette ne mesure pas un report de contrainte vers le bas : en 2025, 12,6 points de PIB sur 21,4, soit 59 %, sont détenus par l’État central lui-même, notamment par le Fondo de Liquidez Autonómico, par lequel l’État prête aux communautés autonomes, créé en 2012 (Real Decreto-ley 21/2012, articles 9 et 14) et devenu en 2015 un compartiment du Fondo de Financiación a Comunidades Autónomas (Real Decreto-ley 17/2014, article 6).
+Mais cette dette ne mesure pas un report de contrainte vers le bas : en 2025, 12,6 points de PIB sur 21,4, soit 59 %, sont détenus par l’État central lui-même, notamment par le Fondo de Liquidez Autonómico, par lequel l’État prête aux communautés autonomes.
+Ce fonds, créé en 2012 (Real Decreto-ley 21/2012, articles 9 et 14), est devenu en 2015 un compartiment du Fondo de Financiación a Comunidades Autónomas (Real Decreto-ley 17/2014, article 6).
 La part équivalente est de 26 % en Italie, de 1 % en France et de 1 % en Allemagne.
 Qui porte une dette et qui la finance sont deux questions distinctes.
-En Italie, les trois indicateurs vont dans le même sens : la dette territoriale redescend de 8,8 % du PIB en 2014 à 4,7 % en 2025, le solde est excédentaire huit années sur huit entre 2012 et 2019 (France : trois), l’investissement tombe, de son plus haut des années 2000 à son plus bas des années 2010, à la moitié.
+En Italie, les trois indicateurs vont dans le même sens : la dette territoriale redescend de 8,8 % du PIB en 2014 à 4,7 % en 2025, le solde est excédentaire huit années sur huit entre 2012 et 2019 (France : trois), et l’investissement est divisé par deux entre son plus haut des années 2000 et son plus bas des années 2010.
 Ces concomitances n’isolent pas l’effet des règles nationales — le pacte de stabilité interne, institué en 1999 et abandonné pour les collectivités locales en 2016 — de celui de la crise des dettes souveraines.
 En Allemagne, la dette territoriale reste nettement sous son pic de 2012 (30,3 %, 19,6 % en 2025), avec un recul d’investissement limité (16 % entre son plus haut des années 2000 et son plus bas des années 2010) ; elle est portée surtout par les Länder.
 La comparaison ne fait apparaître aucun classement unique : dette, solde et investissement ordonnent les quatre pays différemment.
@@ -279,7 +281,7 @@ Le sous-secteur des administrations d’États fédérés (S1312) n’existe, da
 En Allemagne et en Espagne, la dette territoriale additionne donc les deux échelons ; les dettes croisées entre eux représentent au plus 0,2 point de PIB : le double compte est marginal et ne modifie pas les ordres de grandeur.
 En Espagne, la loi organique 2/2012 affecte en outre les excédents de chaque niveau d’administration à la réduction de son endettement net (article 32).
 Que demande le projet de loi de finances aux collectivités ?
-État du texte au 16 novembre 2026 : projet de loi de finances pour 2027, déposé le 1er octobre 2026, rejeté par l’Assemblée nationale le 4 novembre 2026 ; le 19 octobre 2026, celle-ci avait supprimé la baisse du taux du FCTVA (art.
+État du texte au 17 novembre 2026 : projet de loi de finances pour 2027, déposé le 1er octobre 2026, rejeté par l’Assemblée nationale le 4 novembre 2026 ; le 19 octobre 2026, celle-ci avait supprimé la baisse du taux du FCTVA (art.
 35) et la contribution progressive à l’effort budgétaire (art.
 37), n’avait pas adopté l’écrêtement de la TVA affectée (art.
 36), votes tombés avec le texte.
