@@ -231,9 +231,9 @@ PAGES_BUDGET = {"fr": Path(__file__).resolve().parent.parent / "content" / "budg
 #    dans une page, une telle phrase se perimerait au vote suivant sans que rien ne le signale. Lu sur le Markdown des
 #    pages Collectivites et Budget 2027, journal (historique date) et commentaires exceptes.
 SENAT_MAIN = {"fr": r"attendu au Sénat|sous réserve de sa transmission|commission des finances du Sénat|le Sénat doit (?:l['’])?examiner"
-                    r"|transmis au Sénat|le Sénat examine",
+                    r"|transmis au Sénat|le Sénat examine|(?:revenir|revient) en discussion au Sénat",
               "en": r"due before the Senate|subject to its transmission|Senate finance committee|Senate is due to examine|sent to the "
-                    r"Senate|expected before the Senate|Senate is examining"}
+                    r"Senate|expected before the Senate|Senate is examining|discussed again in the Senate"}
 
 
 def senat_main(textes: dict) -> list[str]:
@@ -1104,6 +1104,9 @@ def textes_senat(r: dict, lang: str) -> dict:
         t["plf_senat_cinq"] = ("all five measures are in %s" if L else "les cinq mesures sont dans %s") % t["plf_senat_texte_rel"]
     # DILICO (chapo) ; article 34 (DGF) ; article 83 ; date limite des amendements de la mission.
     r84, r34, r83 = res.get("84"), res.get("34"), res.get("83")
+    # Date d'examen de la mission « Relations avec les collectivités territoriales » : celle du vote lu sur l'article 84,
+    # sinon celle de l'ordre du jour (une mission reportée au lendemain ne laisse pas une date fausse sur la page).
+    t["plf_senat_rct_reel"] = d(r84["date"]) if r84 else d(es["rct"])
     if r84:
         t["plf_senat_dilico"] = "%s %s %s" % (QUE_SENAT[r84["statut"]][L], "on" if L else "le", d(r84["date"]))
     elif au < es["rct"]:

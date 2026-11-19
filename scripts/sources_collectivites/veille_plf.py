@@ -668,10 +668,10 @@ def passer_senat(v: dict, ecrire: bool, tickets: list, aujourdhui: dt.date | Non
         for a in jeu:
             if a["amendement"] in connus:
                 continue
-            if not a["suppression"]:
+            if not a["suppression"] or not a["url"].startswith(SENAT + "/amendements/"):
                 tickets.append(("Senat, amendement %s de la commission (art. %d)" % (a["amendement"], a["article"]),
-                                "Amendement de la commission des finances sur l'article %d, autre qu'une suppression : a "
-                                "qualifier pour la page (%s)." % (a["article"], a["url"]), False))
+                                "Amendement de la commission des finances sur l'article %d, autre qu'une suppression ou hors du "
+                                "site du Senat : a qualifier pour la page (%s)." % (a["article"], a["url"]), False))
                 continue
             brut = lire_url(a["url"])
             t = texte(brut.decode("utf-8", "replace"))
