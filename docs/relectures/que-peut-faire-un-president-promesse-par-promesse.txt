@@ -1,10 +1,10 @@
-# relu le 2026-11-18 ; texte servi de /que-peut-faire-un-president-promesse-par-promesse/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /que-peut-faire-un-president-promesse-par-promesse/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Neuf promesses de campagne : que peut vraiment faire un président ?
 Un président peut-il augmenter les salaires, baisser les prix, faire embaucher, rendre le pays plus sûr, expulser davantage ?
 L’exécutif, président et Gouvernement, décide une partie de chaque promesse, presque jamais toute : le reste passe par un vote, une négociation, ou dépend d’acteurs qu’il ne commande pas.
 La frontière n’est pas au même endroit selon le thème.
-Page mise à jour le 18 novembre 2026
+Page mise à jour le 19 novembre 2026
 Promesses présidentielles
 Aucun texte n’oblige un président à exécuter son programme : un programme de campagne n’est pas un acte juridique, et la Constitution confie au Gouvernement, non au président, le soin de déterminer et conduire « la politique de la Nation » (article 20).
 Une promesse présidentielle ne désigne donc pas nécessairement un pouvoir du président : elle peut engager l’action du Gouvernement, exiger une loi, dépendre d’une négociation ou attendre une décision qu’aucun membre de l’exécutif ne peut imposer.
@@ -136,7 +136,9 @@ La démographie du travail, déjà largement écrite, et l’appariement entre p
 Ce que le livre ajoute.
 Le chapitre suit une promesse écrite pour 2027, au conditionnel dans son texte même : une réforme de l’assurance-chômage « qui incite au travail et qui créerait 100 000 emplois supplémentaires ».
 Il montre où elle casse : entre reprendre plus vite et des emplois en plus restent deux maillons, qu’un poste existe et qu’un employeur signe.
-L’évaluation de l’accompagnement rénové des allocataires du RSA dans dix-huit territoires (Dares et Institut des politiques publiques, juin 2026) en fournit une épreuve, sur un canal voisin : la probabilité d’emploi salarié des participants gagne environ 3,2 points dans l’année qui suit l’entrée, et près des deux tiers de leur surcroît d’emploi durable passent par des contrats aidés ; sur l’ensemble des allocataires des territoires, l’effet net ne se distingue plus, les gains des participants étant compensés par des effets de bord sur les autres bénéficiaires.
+L’évaluation de l’accompagnement rénové des allocataires du RSA dans dix-huit territoires (Dares et Institut des politiques publiques, juin 2026) en fournit une épreuve, sur un canal voisin : la probabilité d’emploi salarié des participants gagne environ 3,2 points dans l’année qui suit l’entrée, et près des deux tiers de leur surcroît d’emploi durable passent par des contrats aidés.
+Sur l’ensemble des allocataires de ces territoires, participants ou non, l’effet est plus faible, environ 0,9 point sur l’emploi salarié à six mois.
+Une fois comptés les effets de bord négatifs sur l’emploi des allocataires qui vivent ailleurs dans les mêmes zones d’emploi, l’évaluation ne peut exclure un effet net nul sur la création d’emplois salariés.
 Le précédent du crédit d’impôt pour la compétitivité et l’emploi (CICE), environ 100 000 emplois pour un coût de l’ordre de 18 milliards d’euros en 2016 selon l’évaluation de France Stratégie publiée en 2020, montre qu’à cette échelle l’incertitude d’attribution peut devenir du même ordre que l’effet estimé ; celui de la prime à l’apprentissage, qu’un volume attribuable reste inférieur au volume affiché.
 Le chapitre confronte aussi une promesse de garantie d’emploi, puis pose quatre questions dans cet ordre : le compteur et l’horizon, la règle exacte et qui doit y consentir, le canal revendiqué avec sa preuve, la méthode du juge.
 Sécurité : un président peut-il rendre le pays plus sûr ?

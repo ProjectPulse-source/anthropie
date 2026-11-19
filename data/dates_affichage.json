@@ -1,10 +1,10 @@
 {
  "_doc": "Date, page par page, du dernier changement DE FOND du texte affiché (bloc affichage d'un jeu) quand ses données n'ont pas changé (pages), et retouches de forme classées sans date (formes). Écrit par scripts/dates-affichage.py --ecrire ou --forme, contrôlé avant commit par check-all ; pages lu par layouts/partials/page-date.html. Le Dataset garde la date de son relevé. historique : toutes les dates de fond par le texte d'une page, admises pour son journal sans la dater (18/10/2026).",
  "pages": {
-  "budget-2027-votre-commune/_index.en.md": "2026-11-18",
-  "budget-2027-votre-commune/_index.md": "2026-11-18",
-  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.en.md": "2026-11-18",
-  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.md": "2026-11-18",
+  "budget-2027-votre-commune/_index.en.md": "2026-11-19",
+  "budget-2027-votre-commune/_index.md": "2026-11-19",
+  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.en.md": "2026-11-19",
+  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.md": "2026-11-19",
   "comment-savoir-si-une-promesse-est-tenue/_index.en.md": "2026-11-18",
   "comment-savoir-si-une-promesse-est-tenue/_index.md": "2026-11-18",
   "cout-de-la-dette-publique/_index.en.md": "2026-11-18",
@@ -15,8 +15,8 @@
   "dechets-radioactifs-volume-ou-radioactivite/_index.md": "2026-11-05",
   "decouplage-energie-croissance/_index.en.md": "2026-11-05",
   "decouplage-energie-croissance/_index.md": "2026-11-05",
-  "dette-publique-collectivites-locales/_index.en.md": "2026-11-18",
-  "dette-publique-collectivites-locales/_index.md": "2026-11-18",
+  "dette-publique-collectivites-locales/_index.en.md": "2026-11-19",
+  "dette-publique-collectivites-locales/_index.md": "2026-11-19",
   "dette-publique-comparaison-internationale/_index.en.md": "2026-11-05",
   "dette-publique-comparaison-internationale/_index.md": "2026-11-05",
   "dette-publique-generations-futures/_index.en.md": "2026-11-18",
@@ -31,7 +31,7 @@
   "inflation-et-dette-publique/_index.md": "2026-11-17",
   "le-niveau-des-eleves-baisse-t-il/_index.md": "2026-11-05",
   "les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/_index.md": "2026-11-18",
-  "les-etudiants-vont-ils-plus-mal/_index.md": "2026-11-18",
+  "les-etudiants-vont-ils-plus-mal/_index.md": "2026-11-19",
   "manque-t-il-des-professeurs/_index.md": "2026-11-13",
   "parcoursup-quelles-chances-d-etre-admis/_index.md": "2026-11-18",
   "pourquoi-la-dette-publique-augmente/_index.en.md": "2026-11-06",
@@ -61,50 +61,47 @@
   "qui-paie-la-dette-publique/_index.md": "2026-10-27"
  },
  "historique": {
-  "parcoursup-quelles-chances-d-etre-admis/_index.md": [
-   "2026-11-11",
-   "2026-11-18"
+  "boucle-anthropique/_index.en.md": [
+   "2026-07-24",
+   "2026-11-05"
   ],
-  "comment-savoir-si-une-promesse-est-tenue/_index.md": [
-   "2026-11-06",
-   "2026-11-18"
-  ],
-  "comment-savoir-si-une-promesse-est-tenue/_index.en.md": [
-   "2026-11-06",
-   "2026-11-18"
-  ],
-  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.md": [
-   "2026-11-05",
-   "2026-11-18"
-  ],
-  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.en.md": [
-   "2026-11-05",
-   "2026-11-18"
-  ],
-  "un-president-peut-il-recourir-au-referendum/_index.md": [
-   "2026-11-18"
-  ],
-  "un-president-peut-il-recourir-au-referendum/_index.en.md": [
-   "2026-11-18"
+  "boucle-anthropique/_index.md": [
+   "2026-07-24",
+   "2026-10-30"
   ],
   "budget-2027-votre-commune/_index.en.md": [
    "2026-10-22",
    "2026-11-04",
    "2026-11-06",
    "2026-11-07",
-   "2026-11-18"
+   "2026-11-18",
+   "2026-11-19"
   ],
   "budget-2027-votre-commune/_index.md": [
    "2026-10-22",
    "2026-11-04",
    "2026-11-06",
    "2026-11-07",
-   "2026-11-18"
+   "2026-11-18",
+   "2026-11-19"
+  ],
+  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.en.md": [
+   "2026-11-05",
+   "2026-11-18",
+   "2026-11-19"
+  ],
+  "ce-que-la-france-peut-decider-dans-l-union-europeenne/_index.md": [
+   "2026-11-05",
+   "2026-11-18",
+   "2026-11-19"
   ],
   "chercheur-independant/_index.en.md": [
    "2026-11-05"
   ],
   "chercheur-independant/_index.md": [
+   "2026-11-05"
+  ],
+  "citations-celebres-verifiees/_index.md": [
    "2026-11-05"
   ],
   "combien-de-temps-une-erreur-reste-inscrite/_index.md": [
@@ -117,6 +114,22 @@
   ],
   "comment-lecriture-a-transforme-la-pensee/_index.md": [
    "2026-11-01"
+  ],
+  "comment-savoir-si-une-promesse-est-tenue/_index.en.md": [
+   "2026-11-06",
+   "2026-11-18"
+  ],
+  "comment-savoir-si-une-promesse-est-tenue/_index.md": [
+   "2026-11-06",
+   "2026-11-18"
+  ],
+  "communs-negatifs/_index.en.md": [
+   "2026-07-26",
+   "2026-11-05"
+  ],
+  "communs-negatifs/_index.md": [
+   "2026-07-26",
+   "2026-11-05"
   ],
   "cout-de-la-dette-publique/_index.en.md": [
    "2026-11-05",
@@ -159,7 +172,8 @@
    "2026-11-04",
    "2026-11-06",
    "2026-11-07",
-   "2026-11-18"
+   "2026-11-18",
+   "2026-11-19"
   ],
   "dette-publique-collectivites-locales/_index.md": [
    "2026-10-16",
@@ -168,7 +182,8 @@
    "2026-11-04",
    "2026-11-06",
    "2026-11-07",
-   "2026-11-18"
+   "2026-11-18",
+   "2026-11-19"
   ],
   "dette-publique-comparaison-internationale/_index.en.md": [
    "2026-10-16",
@@ -208,6 +223,10 @@
    "2026-07-04",
    "2026-11-04",
    "2026-11-05"
+  ],
+  "dette-technologique/_index.md": [
+   "2026-07-04",
+   "2026-11-04"
   ],
   "effet-rebond/_index.en.md": [
    "2026-11-05"
@@ -264,11 +283,16 @@
    "2026-11-07",
    "2026-11-08",
    "2026-11-17",
-   "2026-11-18"
+   "2026-11-18",
+   "2026-11-19"
   ],
   "manque-t-il-des-professeurs/_index.md": [
    "2026-11-05",
    "2026-11-13"
+  ],
+  "parcoursup-quelles-chances-d-etre-admis/_index.md": [
+   "2026-11-11",
+   "2026-11-18"
   ],
   "pourquoi-la-dette-publique-augmente/_index.en.md": [
    "2026-10-18",
@@ -281,6 +305,9 @@
    "2026-11-02",
    "2026-11-05",
    "2026-11-06"
+  ],
+  "premier-coup/_index.md": [
+   "2026-11-05"
   ],
   "que-peut-faire-un-president-promesse-par-promesse/_index.en.md": [
    "2026-11-04",
@@ -351,6 +378,12 @@
   "tabula-rasa-locke/_index.md": [
    "2026-11-05"
   ],
+  "un-president-peut-il-recourir-au-referendum/_index.en.md": [
+   "2026-11-18"
+  ],
+  "un-president-peut-il-recourir-au-referendum/_index.md": [
+   "2026-11-18"
+  ],
   "une-loi-votee-s-applique-t-elle-tout-de-suite/_index.en.md": [
    "2026-11-06",
    "2026-11-18"
@@ -368,32 +401,6 @@
    "2026-11-05",
    "2026-11-07",
    "2026-11-18"
-  ],
-  "boucle-anthropique/_index.md": [
-   "2026-07-24",
-   "2026-10-30"
-  ],
-  "boucle-anthropique/_index.en.md": [
-   "2026-07-24",
-   "2026-11-05"
-  ],
-  "communs-negatifs/_index.md": [
-   "2026-07-26",
-   "2026-11-05"
-  ],
-  "communs-negatifs/_index.en.md": [
-   "2026-07-26",
-   "2026-11-05"
-  ],
-  "dette-technologique/_index.md": [
-   "2026-07-04",
-   "2026-11-04"
-  ],
-  "citations-celebres-verifiees/_index.md": [
-   "2026-11-05"
-  ],
-  "premier-coup/_index.md": [
-   "2026-11-05"
   ]
  }
 }

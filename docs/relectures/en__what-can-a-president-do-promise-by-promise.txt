@@ -1,10 +1,10 @@
-# relu le 2026-11-18 ; texte servi de /en/what-can-a-president-do-promise-by-promise/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/what-can-a-president-do-promise-by-promise/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Nine campaign promises: what can a president really do?
 Can a president raise wages, lower prices, get people hired, make the country safer, deport more people?
 The executive, president and Government, decides part of each promise, almost never all of it: the rest goes through a vote, a negotiation, or depends on actors he does not command.
 The boundary does not fall in the same place from one theme to another.
-Page updated 18 November 2026
+Page updated 19 November 2026
 Presidential promises
 No text obliges a president to carry out his programme: a campaign programme is not a legal act, and the Constitution entrusts the Government, not the president, with determining and conducting “the policy of the Nation” (article 20).
 A presidential promise therefore does not necessarily designate a power of the president: it may commit the Government to act, require a statute, depend on a negotiation or wait for a decision that no member of the executive can impose.
@@ -144,7 +144,9 @@ The demography of the workforce, already largely written, and the matching of po
 What the book adds.
 The chapter follows a written promise for 2027, in the conditional in its very text: a reform of unemployment insurance “that encourages work and that would create 100,000 additional jobs” (our translation).
 It shows where it breaks: between returning to work faster and extra jobs lie two links, that a post exists and that an employer signs.
-The evaluation of the revamped support for RSA recipients in eighteen areas (Dares and the Institut des politiques publiques, June 2026) provides a test, on a neighbouring channel: participants’ probability of salaried employment rises by about 3.2 percentage points in the year after entry, and nearly two thirds of their additional lasting employment comes through subsidised contracts; across all recipients in the areas, the net effect can no longer be distinguished, the participants’ gains being offset by side effects on other recipients.
+The evaluation of the revamped support for RSA recipients in eighteen areas (Dares and the Institut des politiques publiques, June 2026) provides a test, on a neighbouring channel: participants’ probability of salaried employment rises by about 3.2 percentage points in the year after entry, and nearly two thirds of their additional lasting employment comes through subsidised contracts.
+Across all recipients in these areas, participants or not, the effect is smaller, about 0.9 percentage points on salaried employment six months on.
+Once the negative side effects on the employment of recipients living elsewhere in the same employment zones are counted, the evaluation cannot rule out a zero net effect on the creation of salaried jobs.
 The precedent of the CICE (a tax credit for competitiveness and employment), about 100,000 jobs for a cost of the order of 18 billion euros in 2016 according to the France Stratégie evaluation published in 2020, shows that at this scale the uncertainty of attribution can become of the same order as the estimated effect; that of the apprenticeship bonus, that an attributable volume remains below the volume announced.
 The chapter also examines a job-guarantee promise, then asks four questions in this order: the counter and the horizon, the exact rule and who must consent to it, the claimed channel with its proof, the judge’s method.
 Security: can a president make the country safer?

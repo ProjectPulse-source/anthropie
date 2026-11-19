@@ -214,7 +214,7 @@ Chaque repère porte une **ancre permanente** — le lien reste valide, il peut 
 
 Parmi les enfants de cadres entrés dans le supérieur, **13&nbsp;%** en ressortent sans aucun diplôme. Chez les jeunes d'origine modeste&nbsp;: **un sur quatre, parfois un sur trois**.
 
-- **Millésime**&nbsp;: enquête Génération 2017 · **Publication**&nbsp;: [Céreq](https://www.cereq.fr/), *Bref* n°&nbsp;452, novembre 2024
+- **Millésime**&nbsp;: enquête Génération 2017 · **Publication**&nbsp;: [Céreq](https://www.cereq.fr/), *Bref* n°&nbsp;452, mai 2024
 - **Portée**&nbsp;: entrants dans l'enseignement supérieur, France
 - **Qualification**&nbsp;: enquête de suivi de génération, mesure statistique
 - **Dans le livre**&nbsp;: prologue
