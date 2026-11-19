@@ -32,7 +32,14 @@ Controle 7 — pourquoi il n'est plus universellement bloquant :
 
 Usage : python scripts/zenodo_audit_complet.py [--json]
 """
-import os, sys, json, re, html, urllib.request
+import os, sys, json, re, html, ssl, urllib.request
+# Certificats : magasin certifi s'il est installe (19/11/2026 : sous Windows, le magasin systeme refusait
+# zenodo.org, 19 records sur 19 illisibles, et le script sortait quand meme en 0).
+try:
+    import certifi
+    _CTX = ssl.create_default_context(cafile=certifi.where())
+except ImportError:
+    _CTX = None
 
 TOKEN = os.environ.get('ZENODO_TOKEN')
 if not TOKEN:
@@ -74,7 +81,7 @@ AWPS = [
     {"label": "AWP-05", "source": "fr", "records": {"fr": "19269487", "en": "19440866"}},
     {"label": "AWP-06", "source": "fr", "records": {"fr": "20025421", "en": "20077993"}},
     {"label": "AWP-07", "source": "fr", "records": {"fr": "21200286", "en": "21200288"}},
-    {"label": "AWP-08", "source": "fr", "records": {"fr": "21506320", "en": "21507249"}},
+    {"label": "AWP-08", "source": "fr", "records": {"fr": "24364809", "en": "24364810"}},
     # AWP-09 : FR et EN publies le 2026-10-04 (EN = traduction, isDerivedFrom FR).
     {"label": "AWP-09", "source": "fr", "records": {"fr": "23143030", "en": "23145963"}},
     # AWP-01 espagnol : v1 publiee le 2026-08-03 (21766184), v2 le meme jour
@@ -144,7 +151,7 @@ def norm(s):
 def api(path):
     req = urllib.request.Request(f"https://zenodo.org/api{path}")
     req.add_header("Authorization", f"Bearer {TOKEN}")
-    with urllib.request.urlopen(req, timeout=30) as r:
+    with urllib.request.urlopen(req, timeout=30, context=_CTX) as r:
         return json.loads(r.read())
 
 
@@ -313,3 +320,4 @@ if total_holes == 0:
     print("Aucun trou bloquant. Les AWP sont conformes.")
 if AS_JSON:
     print(json.dumps(results, indent=2, ensure_ascii=False))
+sys.exit(1 if total_holes else 0)   # un bloquant ne sort plus en succes (19/11/2026)
