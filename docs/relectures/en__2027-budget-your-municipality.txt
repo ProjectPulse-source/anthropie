@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/2027-budget-your-municipality/, build de cec77101 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/2027-budget-your-municipality/, build de 37d28807 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Budget 2027: what do we actually know for your municipality?
 On 4 November 2026, the National Assembly rejected the draft budget bill for 2027 (0 votes for, 458 against, on its first part as it had amended it): the Senate is due to examine, from 20 November 2026 and subject to its transmission, the Government’s initial bill, which contains the five main measures it aimed at local authorities.
@@ -10,10 +10,10 @@ So the municipality may be affected by the progressive contribution, the FCTVA c
 It can check its 2024 accounts, its FCTVA and its sums placed in reserve now; its amounts for 2027 will come from the act as passed, then from notifications.
 Page updated 18 November 2026
 Public debt dossier
-Source · draft budget bill 2027, state on 16 November 2026
+Source · draft budget bill 2027, state on 17 November 2026
 ↓ Charts, data and citations to reuseReuse this page
 The essentials for your municipality
-State of the draft budget bill for 2027 on 16 November 2026: no measure is settled, and none has been set aside for good.
+State of the draft budget bill for 2027 on 17 November 2026: no measure is settled, and none has been set aside for good.
 This page is revised at each step that changes these measures.
 What did the National Assembly decide?
 It rejected the bill on 4 November 2026: its first part, as it had amended it, received 0 votes for and 458 against, which carries the whole bill with it.
@@ -29,7 +29,7 @@ Which figures can my municipality check now?
 Its own accounts, not amounts for 2027: the sums it placed in reserve under DILICO in 2025, notified by order (municipalities do not contribute in 2026); the FCTVA it receives and the year of spending it relates to; its 2024 real operating revenue, the year that would serve as the base of the progressive contribution if it were adopted.
 When will my municipality know its amounts for 2027?
 After the budget act is finally passed: the prefect then communicates the amount of each DGF grant, and new measures go through their orders or decrees.
-Next step on 16 November 2026: examination by the Senate, subject to its transmission, of the Government’s initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
+Next step on 17 November 2026: examination by the Senate, subject to its transmission, of the Government’s initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
 What finance departments should note, check and do
 Progressive contribution (art.
 37)
@@ -43,7 +43,7 @@ FCTVA (art.
 35)
 initial text, due before the Senate
 What to note
-The proposed cut may also hit investment already carried out
+The proposed cut may hit investment already carried out
 What can be checked now
 The year of spending the payment relates to, and the share of ecological transition and road spending
 For the 2027 budget → Enter the payment at the current rate; the cut, as a conditional scenario.
@@ -74,7 +74,7 @@ For the 2027 budget → Enter the share under the current rules; the capping, as
 Next deadline: examination by the Senate, subject to its transmission, of the Government’s initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December.
 Each row is developed measure by measure, with what it would be misleading to quantify at this stage.
 2027 budget: what could change for your municipality
-The municipality’s official figures and the provisional status of each measure as of 16 November 2026.
+The municipality’s official figures and the provisional status of each measure as of 17 November 2026.
 A sheet to help prepare the 2027 budget and, where applicable, the budget policy debate.
 Your municipality: name, department or INSEE code
 See the sheet
@@ -84,7 +84,7 @@ For each municipality, the sheet opens with an answer: the most informative fact
 That is the effect of deferring DILICO repayments when it contributed in 2025, the share of the general operating grant in its revenue when it clearly exceeds that of municipalities of the same size, or what the published data allow us to say about its exemption from the progressive contribution.
 Then come the main measures of the bill, with their status in Parliament, its financial position set against municipalities of the same size, and finally the calculation and the sources, each linked to its official document.
 The only amounts for 2027 are the DILICO repayments under current law and under the bill, whose gap assumes article 84 is adopted as it stands: anything not published shows as “not available”, never zero, and the municipality is never confused with its inter-municipal body.
-The bill as tabled and its state in Parliament
+What did the bill as tabled provide for, and where does it stand in Parliament?
 The five main measures of the draft budget bill as tabled aimed at local authorities, all in the bill the Senate is due to examine.
 Amounts in the bill as tabled, the text the Senate is due to examine: they describe the initial framing of the debate, not the act that will be passed; their arithmetic sum does not measure a net levy.
 The result in one sentence.
@@ -140,7 +140,7 @@ What the bill provided for.
 A contribution of €2.5 billion for 2027, owed according to the explanatory memorandum by 40% of municipalities and by inter-municipal bodies, at a rate of 0.5% to 3% of 2024 real operating revenue, after deductions, and deducted every month from the monthly tax advances: a cash effect from notification onwards.
 A support fund of €50 million was planned for contributing municipalities in difficulty (article 87); the bill as tabled still refers to an “article X” there: an unfinished reference, and a fund that depends on the fate of the contribution.
 Where the text stands.
-State on 16 November 2026: in the initial bill due before the Senate; in the Assembly, art.
+State on 17 November 2026: in the initial bill due before the Senate; in the Assembly, art.
 37 deleted in plenary on 19 October 2026, before the whole bill was rejected on 4 November 2026.
 Were it adopted, each authority’s amount would be set by an order published in the Journal officiel.
 What it means for a municipality.
@@ -150,7 +150,8 @@ What finance departments can check now.
 The real operating revenue of the 2024 main budget, the year that would have served as the base, bearing in mind that the base provided for in the bill deducts revenue reductions, exceptional revenue and staff made available to the inter-municipal body and invoiced; the municipality’s rankings for the urban solidarity grant and the targeted share of the rural solidarity grant, which opened an exemption.
 What it would be misleading to quantify.
 An amount: the rate depends on the municipality’s rank among all the others.
-Associations of elected officials and consultancies have simulated it on the initial text; those simulations describe the initial article, due to be discussed again in the Senate, and the associations that publish them oppose the scheme, France urbaine calling for it to be reduced.
+Associations of elected officials and consultancies have simulated it on the initial text; those simulations describe the initial article, due to be discussed again in the Senate.
+The associations that publish them oppose the scheme, France urbaine calling for it to be reduced.
 Between 0.5% and 3% of the adjusted base is a static comparison, not a forecast.
 For the 2027 budget.
 Do not enter the contribution as a certain charge; keep it as a conditional scenario, computed on the adjusted 2024 base, to be reactivated if the article were adopted.
@@ -166,7 +167,7 @@ What the bill provided for.
 For payments made from 1 January 2027, a rate cut from 16.404% to 11.404%, that is 5 percentage points lower, except for spending on the ecological transition and on roads, kept at 16.404%, and a yield of €2.1 billion.
 The list of accounts qualifying for the maintained rate was left to a forthcoming order.
 Where the text stands.
-State on 16 November 2026: in the initial bill due before the Senate; in the Assembly, art.
+State on 17 November 2026: in the initial bill due before the Senate; in the Assembly, art.
 35 deleted in plenary on 19 October 2026, before the whole bill was rejected on 4 November 2026.
 Were the measure adopted, the order setting the accounts at the maintained rate would say which spending benefits.
 What it means for a municipality.
@@ -185,7 +186,8 @@ The general operating grant (articles 34 and 83)
 What the bill provided for.
 A national amount of €27.5 billion; a rise in the urban and rural solidarity grants funded partly by capping the lump-sum grant (article 83, second part).
 Article 83 itself writes into the code (article L.
-2334-13) how that rise is split between the two grants, the same split as in 2026; the general presentation of the bill swaps the two amounts, and the Local Finance Committee may raise those grants further.
+2334-13) how that rise is split between the two grants, the same split as in 2026; the general presentation of the bill swaps the two amounts.
+The Local Finance Committee may raise those grants beyond that rise.
 Where the text stands.
 On 19 October 2026, the Assembly had adopted article 34 as amended, raising the DGF for 2027 to €27.9 billion, €356 million more than in the bill; that vote fell with the bill’s rejection on 4 November 2026, and the Senate is due to examine the initial amount of €27.5 billion.
 Article 83 belongs to the second part; the Senate is due to examine it on 2 December 2026, with the “Relations with local authorities” mission.
@@ -219,7 +221,7 @@ Total received
 €270,000 in both cases
 €270,000 in both cases
 Where the text stands.
-State on 16 November 2026: in the initial bill due before the Senate, examination scheduled for 2 December 2026; in the Assembly, art.
+State on 17 November 2026: in the initial bill due before the Senate, examination scheduled for 2 December 2026; in the Assembly, art.
 84 deleted in committee on 28 October 2026, before the whole bill was rejected on 4 November 2026.
 In the Senate, amendments on this mission may be tabled until 11 a.m. on 27 November 2026.
 The explanatory memorandum announces a single repayment order.
@@ -240,7 +242,7 @@ What the bill provided for.
 For the shares of VAT paid in place of abolished taxes (article 16 of the 2020 budget act and article 55 of the 2023 act), annual growth reduced by the previous year’s inflation excluding tobacco, without that reduction being allowed to make the amount fall from one year to the next.
 The High Council of Public Finance put the capping at €0.6 billion for all recipients.
 Where the text stands.
-State on 16 November 2026: in the initial bill due before the Senate; in the Assembly, art.
+State on 17 November 2026: in the initial bill due before the Senate; in the Assembly, art.
 36 not adopted in plenary on 19 October 2026, before the whole bill was rejected on 4 November 2026.
 In the Assembly, the amendments deleting the article had first been rejected; it is the amended article that had not been adopted.
 What it means for a municipality.
@@ -250,7 +252,7 @@ Whether the municipality itself receives a share of VAT, or its inter-municipal 
 What it would be misleading to quantify.
 The effect: it would depend on VAT receipts and on inflation, unknown to date.
 For the 2027 budget.
-Enter the share under the current rules; keep the capping, back in the text before the Senate, as a conditional scenario.
+Enter the share under the current rules; keep the capping, which is back in the text expected before the Senate, as a conditional scenario.
 Other provisions
 Grant for low-density rural municipalities (article 85, second part): €50 million, reserved for municipalities classed as sparsely or very sparsely populated in the Insee grid whose density is below a reference average, excluding recipients of the rural amenities grant, and shared out by area under a forthcoming decree.
 Post-parking charges (article 53, first part, in the initial bill due before the Senate): 1.9% of charges paid after an enforcement order is issued would go to the central government budget, for orders issued from 1 January 2027.
@@ -301,7 +303,7 @@ Draft budget bill for 2027 (no.
 3210) and opinion no.
 2026-5 of the High Council of Public Finance; state: National Assembly, records of the sittings of 19 October 2026 and 4 November 2026; finance committee, amendment II-CF2778 (art.
 84), 28 October 2026; Senate, agenda.
-State on 16 November 2026.
+State on 17 November 2026.
 Download PNG
 SVG
 Cite this page

@@ -98,7 +98,7 @@ Les chiffres officiels de la commune et le statut, provisoire, de chaque mesure 
 
 Pour chaque commune, la fiche commence par une réponse&nbsp;: le fait le plus informatif que les données établissent pour elle. C'est l'effet du report des reversements du DILICO quand elle y a contribué en 2025, la part de la dotation globale dans ses recettes quand elle dépasse nettement celle des communes de même taille, ou ce que les données publiées permettent de dire de son exonération de la contribution progressive. Suivent les principales mesures du projet, avec leur statut au Parlement, puis sa situation financière comparée à celle des communes de même taille, et enfin le calcul et les sources, chacune liée à son document officiel. Les seuls montants pour 2027 sont les reversements du DILICO selon le droit actuel et selon le projet, dont l'écart suppose l'article 84 adopté en l'état&nbsp;: ce qui n'est pas publié s'affiche «&nbsp;non disponible&nbsp;», jamais zéro, et la commune n'est jamais confondue avec son intercommunalité.
 
-## Le projet déposé et son état au Parlement {#etat-du-texte}
+## Que prévoyait le projet déposé, et où en est-il au Parlement&nbsp;? {#etat-du-texte}
 
 <div class="figure-lecture">
 {{< figure-svg fichier="collectivites-plf" alt="Cinq barres horizontales orange pleines, en milliards d'euros : les mesures du projet de loi de finances déposé qui visent les collectivités, contribution progressive, baisse du FCTVA, contributions de ministères, écrêtement de la TVA et étalement du DILICO, toutes dans le texte initial attendu au Sénat ; sous chaque barre, le sort de l'article à l'Assemblée nationale avant le rejet du texte." >}}Les cinq principales mesures du projet de loi de finances déposé qui visent les collectivités, toutes dans le texte que le Sénat doit examiner. Montants du projet déposé, texte que le Sénat doit examiner&nbsp;: ils décrivent le cadrage initial du débat, non la loi qui sera votée&nbsp;; leur somme arithmétique ne mesure pas un prélèvement net.{{< /figure-svg >}}
@@ -133,7 +133,7 @@ Cette somme décrivait le projet déposé&nbsp;; elle ne mesurait pas un prélè
 
 **Ce que le service financier peut vérifier dès maintenant.** Les recettes réelles de fonctionnement du budget principal de 2024, l'exercice qui aurait servi d'assiette, en sachant que l'assiette prévue par le projet en retranche les atténuations de produits, les recettes exceptionnelles et les mises à disposition de personnel facturées à l'intercommunalité&nbsp;; les rangs de la commune dans les classements de la dotation de solidarité urbaine et de la fraction cible de la dotation de solidarité rurale, qui ouvraient une exonération.
 
-**Ce qu'il serait trompeur de chiffrer.** Un montant&nbsp;: le taux dépend du rang de la commune parmi toutes les autres. Des associations d'élus et des cabinets de conseil l'ont simulé sur le texte initial&nbsp;; ces simulations décrivent l'article initial, qui doit revenir en discussion au Sénat, et les associations qui les publient s'opposent au dispositif, France urbaine en demandant la réduction. Entre 0,5&nbsp;% et 3&nbsp;% de l'assiette retraitée, c'est une comparaison statique, pas une prévision.
+**Ce qu'il serait trompeur de chiffrer.** Un montant&nbsp;: le taux dépend du rang de la commune parmi toutes les autres. Des associations d'élus et des cabinets de conseil l'ont simulé sur le texte initial&nbsp;; ces simulations décrivent l'article initial, qui doit revenir en discussion au Sénat. Les associations qui les publient s'opposent au dispositif, France urbaine en demandant la réduction. Entre 0,5&nbsp;% et 3&nbsp;% de l'assiette retraitée, c'est une comparaison statique, pas une prévision.
 
 **Pour préparer le budget 2027.** Ne pas inscrire la contribution comme une charge certaine&nbsp;; la garder dans un scénario conditionnel, calculé sur l'assiette de 2024 retraitée, à réactiver si l'article était adopté.
 
@@ -159,7 +159,7 @@ Les communes sont classées selon un indice qui pondère à 75&nbsp;% leur poten
 
 ### La dotation globale de fonctionnement (articles 34 et 83) {#dgf}
 
-**Ce que prévoyait le projet.** Un montant national de {{< coll-val "plf_dgf" >}}&nbsp;milliards d'euros&nbsp;; une hausse des dotations de solidarité urbaine et rurale financée en partie par l'écrêtement de la dotation forfaitaire (article 83, seconde partie). L'article 83 fixe lui-même, dans le code (article L.&nbsp;2334-13), la répartition de cette hausse entre les deux dotations, la même qu'en 2026&nbsp;; la présentation générale du projet en inverse les deux montants, et le Comité des finances locales peut majorer ces dotations au-delà.
+**Ce que prévoyait le projet.** Un montant national de {{< coll-val "plf_dgf" >}}&nbsp;milliards d'euros&nbsp;; une hausse des dotations de solidarité urbaine et rurale financée en partie par l'écrêtement de la dotation forfaitaire (article 83, seconde partie). L'article 83 fixe lui-même, dans le code (article L.&nbsp;2334-13), la répartition de cette hausse entre les deux dotations, la même qu'en 2026&nbsp;; la présentation générale du projet en inverse les deux montants. Le Comité des finances locales peut majorer ces dotations au-delà de cette hausse.
 
 **Où en est le texte.** Le {{< coll-val "plf_vote_date" >}}, l'Assemblée avait adopté l'article 34 modifié, portant la DGF pour {{< coll-val "plf_edition" >}} à {{< coll-val "plf_dgf_an" >}}&nbsp;milliards d'euros, soit {{< coll-val "plf_dgf_an_m" >}}&nbsp;millions de plus que le projet&nbsp;; ce vote tombe avec le rejet du texte le {{< coll-val "plf_rejet_date" >}}, et le Sénat doit examiner le montant initial de {{< coll-val "plf_dgf" >}}&nbsp;milliards. L'article 83 relève de la seconde partie&nbsp;; le Sénat doit l'examiner le {{< coll-val "plf_senat_rct" >}}, avec la mission «&nbsp;Relations avec les collectivités territoriales&nbsp;».
 
@@ -208,7 +208,7 @@ Le dispositif de lissage des recettes fiscales a mis en réserve, en 2025, une p
 
 **Ce qu'il serait trompeur de chiffrer.** L'effet&nbsp;: il dépendrait de la TVA encaissée et de l'inflation, inconnues à ce jour.
 
-**Pour préparer le budget 2027.** Inscrire la fraction selon les règles actuelles&nbsp;; garder l'écrêtement, de nouveau dans le texte au Sénat, dans un scénario conditionnel.
+**Pour préparer le budget 2027.** Inscrire la fraction selon les règles actuelles&nbsp;; garder l'écrêtement, de nouveau dans le texte attendu au Sénat, dans un scénario conditionnel.
 
 ### Les autres dispositions {#autres}
 
