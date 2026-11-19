@@ -1,0 +1,1317 @@
+S1	Présidence de M. Alain Marc
+P	1
+S1	Loi de finances de fin de gestion pour 2025
+P	M. le président. Nous passons à la discussion du texte élaboré par la commission mixte paritaire.
+P	Je rappelle que, en application de l’article 42, alinéa 12, du règlement, le Sénat examinant après l’Assemblée nationale le texte élaboré par la commission mixte paritaire, il se prononce par un seul vote sur l’ensemble du texte, en ne retenant que les amendements présentés ou acceptés par le Gouvernement.
+P	En conséquence, le vote sur les amendements et sur les articles est réservé.
+P	Je donne lecture du texte élaboré par la commission mixte paritaire.
+P	projet de loi de finances de fin de gestion pour 2025
+ART	Article liminaire
+P	2024
+P	2025
+P	2025
+P	26
+P	28
+P	34
+P	651
+P	664
+P	658
+P	330
+P	337
+P	329
+P	778
+P	805
+P	779
+ART	Article 1er
+ART	Article 2
+ART	Article 3
+ART	Article 4
+P	1
+P	2
+P	3
+P	1
+P	2
+P	3
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	1101
+P	1201
+P	1301
+P	1302
+P	1303
+P	1401
+P	1402
+P	1404
+P	1405
+P	1406
+P	1407
+P	1408
+P	1411
+P	1412
+P	1413
+P	1415
+P	1416
+P	1421
+P	1427
+P	1430
+P	1440
+P	1441
+P	1497
+P	1498
+P	1499
+P	1501
+P	1601
+P	1701
+P	1702
+P	1703
+P	1704
+P	1705
+P	1706
+P	1707
+P	1711
+P	1713
+P	1714
+P	1716
+P	1721
+P	1726
+P	1752
+P	1753
+P	1754
+P	1755
+P	1756
+P	1761
+P	1768
+P	1769
+P	1776
+P	1777
+P	1781
+P	1782
+P	1785
+P	1786
+P	1787
+P	1788
+P	1789
+P	1797
+P	1799
+P	2110
+P	2116
+P	2199
+P	2201
+P	2202
+P	2203
+P	2212
+P	2299
+P	2301
+P	2303
+P	2304
+P	2305
+P	2306
+P	2399
+P	2401
+P	2402
+P	2403
+P	2409
+P	2413
+P	2499
+P	2501
+P	2502
+P	2503
+P	2504
+P	2505
+P	2510
+P	2511
+P	2512
+P	2513
+P	2601
+P	2602
+P	2603
+P	2604
+P	2612
+P	2613
+P	2615
+P	2616
+P	2617
+P	2618
+P	2620
+P	2621
+P	2623
+P	2624
+P	2625
+P	2626
+P	2697
+P	2698
+P	2699
+P	3106
+P	3107
+P	3120
+P	3121
+P	3122
+P	3145
+P	3146
+P	3163
+P	3165
+P	3201
+P	11
+P	12
+P	13
+P	14
+P	15
+P	16
+P	17
+P	18
+P	21
+P	22
+P	23
+P	24
+P	25
+P	26
+P	31
+P	32
+P	7060
+P	7061
+P	7063
+P	7069
+P	7081
+P	7501
+P	9200
+P	04
+P	01
+P	01
+P	02
+P	01
+P	04
+P	06
+P	01
+P	02
+P	03
+P	04
+P	05
+P	06
+P	07
+P	10
+P	11
+P	14
+P	21
+P	22
+P	23
+P	24
+P	25
+P	26
+P	27
+P	32
+P	33
+P	34
+P	41
+P	42
+P	43
+P	44
+P	45
+P	47
+P	51
+P	52
+P	53
+P	54
+P	55
+P	57
+P	61
+P	65
+P	67
+P	71
+P	72
+P	74
+P	75
+P	81
+P	87
+P	89
+P	91
+P	01
+P	05
+P	09
+P	10
+P	11
+P	12
+P	01
+P	02
+P	04
+P	06
+P	12
+P	01
+P	03
+P	04
+P	06
+ART	Article 5
+ART	Article 6
+ART	Article 7
+ART	Article 8
+P	2024
+P	2025
+P	2025
+P	26
+P	28
+P	34
+P	651
+P	664
+P	658
+P	330
+P	337
+P	329
+P	778
+P	805
+P	779
+P	1
+P	2
+P	3
+P	1
+P	2
+P	3
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	M. le président. Personne ne demande plus à voter ?…
+P	Le scrutin est clos.
+P	Voici, compte tenu de l’ensemble des délégations de vote accordées par les sénateurs aux groupes politiques et notifiées à la présidence, le résultat du scrutin n° 72 :
+P	Nombre de votants
+P	345
+P	276
+P	239
+P	Contre
+P	37
+P	Le Sénat a adopté définitivement.
+P	M. Jean-François Husson, rapporteur. Ça fait rêver !
+P	2
+NAV	pjlf2026
+S1	Loi de finances pour 2026
+P	Suite de la discussion d’un projet de loi
+NAV	pjlf2026
+ART	Article 31
+NAV	pjlf2026
+P	J’ai eu l’occasion de le rappeler à la ministre et à d’autres membres du Gouvernement, il m’était un peu difficile de voir le Gouvernement demander un effort ou une contribution de près de 5 milliards d’euros aux élus locaux en fin de mandat municipal. Ce n’était pas une façon de les remercier du travail qu’ils ont accompli depuis bientôt six ans, sachant qu’ils ont été élus en mars 2020 et qu’ils ont rencontré bien des difficultés. Certains sont devenus maires dans la période post-20 mars 2020.
+P	Souvent, l’exécutif, qu’il s’agisse du Président de la République ou des Premiers ministres, ont félicité ces femmes et ces hommes qui, à la tête de communes ou d’intercommunalités, ont pris les choses à bras-le-corps et ont fait comme ils ont pu durant cette période. Puis sont survenues la guerre en Ukraine et la crise de l’énergie. Ils ont vraiment rencontré beaucoup de difficultés. Il convient de leur témoigner notre considération et notre reconnaissance en réduisant la facture à 2 milliards d’euros au maximum.
+P	M. le président. Je mets aux voix les amendements identiques nos I-531 rectifié bis, I-717, I-1024 rectifié ter et I-1994 rectifié septies.
+P	J’ai été saisi d’une demande de scrutin public émanant du groupe Les Républicains.
+P	Je rappelle que l’avis de la commission est favorable, de même que celui du Gouvernement.
+P	M. le président. Personne ne demande plus à voter ?…
+P	Le scrutin est clos.
+P	Voici, compte tenu de l’ensemble des délégations de vote accordées par les sénateurs aux groupes politiques et notifiées à la présidence, le résultat du scrutin n° 73 :
+P	Nombre de votants
+P	344
+P	341
+P	338
+P	Contre
+P	3
+P	Le Sénat a adopté ces amendements, modifiés par la suppression du gage.
+P	En conséquence, l’amendement n° I-1484, les amendements identiques nos I-30 rectifié, I-1075 et I-1393, les amendements identiques nos I-716 et I-1989 rectifié, l’amendement n° I-29, les amendements identiques nos I-346 rectifié quinquies, I-2169 et I-2355 ainsi que l’amendement n° I-1889 n’ont plus d’objet.
+P	Je mets aux voix l’amendement n° I-2737.
+P	J’ai été saisi d’une demande de scrutin public émanant du groupe Les Républicains.
+P	Je rappelle que l’avis du Gouvernement est défavorable.
+P	M. le président. Personne ne demande plus à voter ?…
+P	Le scrutin est clos.
+P	Voici, compte tenu de l’ensemble des délégations de vote accordées par les sénateurs aux groupes politiques et notifiées à la présidence, le résultat du scrutin n° 74 :
+P	Nombre de votants
+P	342
+P	327
+P	324
+P	Contre
+P	3
+P	Le Sénat a adopté.
+P	En conséquence, les amendements n° I-1640, I-719 rectifié et I-718 n’ont plus d’objet.
+P	Je mets aux voix le sous-amendement n° I-2783.
+P	M. Jean-François Husson, rapporteur général de la commission des finances. La commission a émis un avis défavorable sur ce sous-amendement, monsieur le président.
+P	(Le sous-amendement n’est pas adopté.)
+P	M. le président. Je mets aux voix les amendements identiques nos I-20 rectifié et I-2341 rectifié ter.
+P	J’ai été saisi d’une demande de scrutin public émanant du groupe Les Républicains.
+P	Je rappelle que la commission et le Gouvernement s’en remettent à la sagesse du Sénat.
+P	M. le président. Personne ne demande plus à voter ?…
+P	Le scrutin est clos.
+P	Voici, compte tenu de l’ensemble des délégations de vote accordées par les sénateurs aux groupes politiques et notifiées à la présidence, le résultat du scrutin n° 75 :
+P	Nombre de votants
+P	345
+P	274
+P	228
+P	Contre
+P	46
+P	Le Sénat a adopté.
+P	En conséquence, l’amendement n° I-2154, les amendements identiques nos I-169 rectifié bis, 355 rectifié ter, I-528 rectifié quater, I-714, I-1288 rectifié ter, I-1890, I-2097, I-2258 rectifié bis et I-2342 rectifié ter ainsi que les amendements nos I-2165 et I-2027 rectifié ter n’ont plus d’objet.
+P	Je mets aux voix l’amendement n° I-1029 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	M. le président. Je mets aux voix l’amendement n° I-2177.
+P	(L’amendement n’est pas adopté.)
+P	M. le président. Je mets aux voix les amendements identiques nos I-715 et I-1093 rectifié.
+P	(Les amendements ne sont pas adoptés.)
+P	M. le président. La parole est à M. Bernard Delcros, pour explication de vote.
+P	M. Bernard Delcros. Madame la ministre, je vais vous le dire très gentiment, les chiffres que vous nous avez donnés ne sont pas bons. Avec vos 23 millions d’euros, vous augmentez la dotation particulière relative aux conditions d’exercice des mandats locaux, dite dotation particulière « élu local » pour les communes de plus de 3 500 habitants. Vous l’augmentez également pour les communes de 1 000 à 3 500 habitants, mais nous n’augmentons pas du tout la DPEL des communes de moins de 1 000 habitants.
+P	Mme Isabelle Briquet. Je comprends tout à fait l’intention de notre collègue Bernard Delcros.
+P	Effectivement, les montants correspondent bien au niveau de DPEL qui serait nécessaire. Pour autant, nous mettons d’un côté ce que nous prenons de l’autre, puisque c’est à due concurrence de la diminution de la dotation de compensation de la réforme de la taxe professionnelle (DCRTP)… Je suis donc assez réservée sur le mécanisme.
+P	M. le président. Je mets aux voix le sous-amendement n° I-2793.
+P	(Le sous-amendement est adopté.)
+P	M. le président. Je mets aux voix l’amendement n° I-2658, modifié.
+P	(L’amendement est adopté.)
+P	M. le président. Je mets aux voix l’amendement n° I-1706 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	M. le président. L’amendement n° I-801 rectifié, présenté par Mme Lavarde, MM. Anglars, Brisson et Burgoa, Mme Canayer, M. Daubresse, Mmes Di Folco et Estrosi Sassone, M. Genet, Mme Gosselin, M. Gremillet, Mme Josende, M. Khalifé, Mme Lassarade, MM. Lefèvre, Naturel, H. Leroy, Sautarel, Piednoir et Rapin, Mme Aeschlimann et M. Mandelli, est ainsi libellé :
+P	I. – Alinéa 20
+P	Il est ici proposé de faire porter les économies sur les collectivités territoriales. C’est un débat. Pour ce qui nous concerne, nous ne sommes pas d’accord, non pas sur le principe, mais sur la façon de les mettre à contribution. Il y a eu, par exemple, le pacte de Cahors, qui avait le mérite d’être plus clair. Ce que nous venons de faire, en diminuant les compensations sur des exonérations d’imposition locale, est une innovation.
+P	En ce qui concerne les exonérations de taxe foncière sur les logements sociaux, les collectivités attendent plus de 1 milliard d’euros de l’État, qui s’est engagé à compenser et qui ne le fait toujours pas. Si nous adoptons l’article 31, nous adressons aussi le signal aux collectivités territoriales qui ont de nombreux logements sociaux – pour lesquels l’État s’était engagé à compenser – qu’en fin de compte, elles ne reverront jamais l’argent. C’est notamment l’une des raisons pour lesquelles, en plus de toutes celles qui ont été exposées au moment du débat, nous ne voterons pas cet article 31.
+P	M. le président. Je mets aux voix l’article 31, modifié.
+P	(L’article 31 est adopté.)
+NAV	pjlf2026
+P	3
+S1	Mises au point au sujet de votes
+S1	PRÉSIDENCE DE Mme Sylvie Robert
+P	4
+NAV	pjlf2026
+S1	Loi de finances pour 2026
+P	Suite de la discussion d’un projet de loi
+NAV	pjlf2026
+ART	Après l’article 31
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué auprès de la ministre de l’action et des comptes publics, chargé de la fonction publique et de la réforme de l’État. Le Gouvernement a émis un avis défavorable sur ces amendements.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2082 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-908 rectifié ter.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. Je suis saisie de deux amendements identiques.
+P	M. Stéphane Sautarel. Je retire mon amendement, madame la présidente.
+P	Mme la présidente. L’amendement n° I-339 rectifié ter est retiré.
+P	Je mets aux voix l’amendement n° I-2031 rectifié.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-1253 rectifié ter, présenté par MM. Pla, Montaugé et Roiron, Mme G. Jourda, MM. Bouad, Bourgi et Gillé, Mme Matray, MM. Mérillou et Michau, Mme Monier, MM. Vayssouze-Faure et M. Weber, Mme Conway-Mouret, MM. Omar Oili, Redon-Sarrazy et Temal et Mme Le Houerou, est ainsi libellé :
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Le Gouvernement a émis un avis défavorable sur cet amendement.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1253 rectifié ter.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+ART	Article 32
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Le Gouvernement a émis un avis défavorable sur ces amendements.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1716 rectifié bis et I-2100.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je suis saisie de six amendements faisant l’objet d’une discussion commune.
+P	Les deux premiers sont identiques.
+P	Ce que je trouve tout de même sidérant, c’est que, chaque année, nous repoussons ce sujet. Chaque année, la seule réponse est que cela coûterait trop cher. Si cela coûte trop cher à l’État, c’est bien que, de fait, ce sont les collectivités territoriales qui absorbent ce coût. Souvenons-nous-en tout de même dans les débats qui vont venir, et jusque dans les projets de loi prévus l’an prochain.
+P	À un moment, la défense des collectivités territoriales passe aussi par le fait de leur verser ce que nous leur devons et de leur donner les moyens réels de répondre aux besoins de leurs habitants.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1677 rectifié bis et I-2098 rectifié.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1713 rectifié ter, I-1964 rectifié et I-2178 rectifié.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2582 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de trente-deux amendements faisant l’objet d’une discussion commune.
+P	Les trois premiers sont identiques.
+P	Mme Paulette Matray. L’article 32 tend à modifier les conditions d’attribution du FCTVA. Seraient ainsi exclues du bénéfice du fonds les dépenses de fonctionnement, actuellement éligibles, liées aux travaux de voirie ou encore aux solutions informatiques en nuage.
+P	Il prévoit également de décaler le versement du FCTVA aux intercommunalités : celles-ci ne le percevraient plus l’année même de la réalisation des investissements, mais seulement l’année suivante.
+P	En conséquence, nous proposons de supprimer la modification des règles de perception du FCTVA par les intercommunalités.
+P	Cet amendement a été préparé par Intercommunalités de France.
+P	Mme la présidente. Les cinq amendements suivants sont identiques.
+P	Peut-être pourrions-nous, à tout le moins, commencer par rendre éligibles les fournitures, puis réfléchir à aller plus loin. Il ne faudrait en aucun cas dissuader les collectivités d’effectuer des travaux en régie.
+P	Mme la présidente. Je suis donc saisie d’un amendement n° I-2518 rectifié quater, dont le libellé est identique à celui des amendements nos I-21 rectifié, I-34 rectifié, I-1196 rectifié sexies et I-810 rectifié quater.
+P	Je mets aux voix les amendements identiques nos I-281 rectifié, I-724 et I-2161.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2101.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-21 rectifié, I-34 rectifié, I-810 rectifié quater, I-2518 rectifié quater et I-1196 rectifié sexies.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. En conséquence, les amendements nos I-1127 rectifié bis, I-275 rectifié, I-613 rectifié decies, I-1976 rectifié bis, I-2099, I-1163 rectifié, I-1655, I-1977 rectifié ainsi que les amendements identiques nos I-282 rectifié, I-1891 et I-2179 n’ont plus d’objet.
+P	Je mets aux voix les amendements identiques nos I-132 rectifié ter et I-1133 rectifié ter.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-393 rectifié quater.
+P	(L’amendement est adopté.)
+P	Mme la présidente. En conséquence, l’amendement n° I-2159 rectifié n’a plus d’objet.
+P	Je mets aux voix les amendements identiques nos I-133 rectifié ter et I-1712 rectifié quater.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2168 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-131 rectifié ter et I-1132 rectifié ter.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1963 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2156 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. L’amendement n° I-1975 rectifié, présenté par M. Michallet, Mme Puissat, MM. Savin, H. Leroy, Séné, Genet, Piednoir et Pointereau, Mme P. Martin et MM. Bruyen, Sido et C. Vial, est ainsi libellé :
+P	I. – Après l’alinéa 5
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Même avis.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1975 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. L’amendement n° I-583 rectifié ter, présenté par MM. Delahaye, Canévet, Courtial, Dhersin, Duffourg et Henno, Mme Lavarde, M. Maurey et Mmes Patru et Saint-Pé, est ainsi libellé :
+P	Alinéa 23
+P	Mme la présidente. Quel est maintenant l’avis de la commission ?
+P	M. Jean-François Husson, rapporteur général de la commission des finances. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-583 rectifié ter.
+P	(L’amendement est adopté.)
+P	Mme la présidente. L’amendement n° I-2738, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Alinéa 24
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2738.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je mets aux voix l’article 32, modifié.
+P	(L’article 32 est adopté.)
+NAV	pjlf2026
+ART	Après l’article 32
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Même avis.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1962.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-819 rectifié, présenté par Mme Canayer, MM. Chauvet, Daubresse, Rapin, Brisson, P. Martin et Courtial, Mme Dumont, MM. Gremillet et Khalifé, Mme Petrus, M. Cambon, Mmes Aeschlimann et Bellamy et MM. C. Vial, H. Leroy, Anglars et Levi, est ainsi libellé :
+NAV	pjlf2026
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable !
+P	Mme la présidente. Je mets aux voix l’amendement n° I-181 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-362 rectifié ter, présenté par Mme Noël, MM. Pellevat, J.M. Boyer, Bacci, J.B. Blanc et Bonhomme, Mmes Puissat et Muller-Bronn, MM. Sol, Houpert et H. Leroy, Mmes Richer, Dumont et Gosselin, MM. Panunzi et D. Laurent, Mme Belrhiti, M. Anglars, Mme Drexler, MM. Séné, Pointereau, Sido, Allizard et Reynaud, Mme Pluchet et M. Michallet, est ainsi libellé :
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-362 rectifié ter.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+ART	Article 33
+P	Vous avez le choix : soit vous soutenez les départements en entérinant l’augmentation de taux proposée par le Premier ministre, soit vous adoptez ces amendements. Dans ce dernier cas, je vous souhaite bonne chance quand vous irez expliquer votre vote aux élus et aux présidents des conseils départementaux.
+P	Je me permets de défendre, par anticipation, l’amendement n° I-22, déposé au nom de la commission, car il vise exactement le même objectif. En outre, il tend à porter le fonds de sauvegarde des départements de 300 millions d’euros, soit la somme qui était à l’origine prévue par le Gouvernement, à 600 millions d’euros.
+P	En conséquence, je vous demande de retirer vos amendements, faute de quoi j’émettrai un avis défavorable, à moins que vous ne souhaitiez les rendre identiques à celui de la commission.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Monsieur Masset, l’amendement n° I-578 rectifié est-il maintenu ?
+P	M. Michel Masset. Oui, je le maintiens, madame la présidente.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-578 rectifié, I-725 et I-2102.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. L’amendement n° I-22, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Rédiger ainsi cet article :
+P	Un partage de la dynamique a donc bien lieu et un abondement sera acté pour garantir la pérennité du fonds de sauvegarde, le tout n’ayant aucun impact l’an prochain pour la part de l’écrêtement. Dans ces conditions, nous assurons la visibilité du financement de ce fonds.
+P	Pour l’ensemble de ces raisons, le Gouvernement sollicite le retrait de cet amendement ; à défaut, il émettra un avis défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-22.
+P	(L’amendement est adopté.)
+P	Mme la présidente. En conséquence, l’article 33 est ainsi rédigé, et les amendements nos I-2001 et I-2147, les amendements identiques nos I-540 rectifié quinquies, I-1641 rectifié bis et I-1992 rectifié septies, l’amendement n° I-811 rectifié bis, les amendements identiques nos I-1162 et 1628 ainsi que l’amendement n° I-2146 n’ont plus d’objet.
+NAV	pjlf2026
+ART	Après l’article 33
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1879 rectifié.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. Je suis saisie de quatre amendements faisant l’objet d’une discussion commune.
+P	Mme la présidente. Quel est l’avis de la commission ?
+P	M. Jean-François Husson, rapporteur général de la commission des finances. Veillons à ne pas toujours refaire le match : il est logique que la dérogation cesse pour les communes nouvelles lorsqu’elles regroupent des communes exonérées.
+P	En conséquence, la commission demande le retrait de ces amendements ; à défaut, elle émettra un avis défavorable.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-37 rectifié ter.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-548 rectifié, I-808 rectifié bis et I-2180.
+P	(Les amendements ne sont pas adoptés.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-1880 rectifié, présenté par MM. Mérillou, P. Joly et Uzenat, Mme Bélim, MM. M. Weber et Pla, Mme Matray, MM. Omar Oili et Tissot et Mme Monier, est ainsi libellé :
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Même avis.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1880 rectifié.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+ART	Article 34
+P	2026
+P	2025
+P	2
+P	Guingamp et son stade du Roudourou ont été cités ; tout le monde connaît l’En avant Guingamp. Nous pourrions également citer Boulazac (Bravo ! sur des travées des groupes CRCE-K, SER et INDEP.) et son club de basket-ball, qui évolue en Pro A. Que je sache, il s’agit là de la ruralité : Guingamp est par excellence un exemple de ruralité, et de culture en ruralité !
+P	Le juste retour des choses serait, par exemple, de ne pas pénaliser cette commune en la privant de 223 000 euros. Il convient donc de voter ces amendements. (Applaudissements sur les travées des groupes CRCE-K, Socialiste, Écologiste et Républicain, RDSE et RDPI.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2096.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. La parole est à M. Bernard Delcros, pour explication de vote.
+P	M. Bernard Delcros. J’ai une question technique à poser, madame la présidente : les amendements présentés par Jean-Baptiste Lemoyne et Marc Laménie, d’une part, et mon amendement n° I-2525 rectifié, d’autre part, portent sur des sujets différents ; je veux m’assurer que son éventuelle adoption ne ferait pas tomber le mien.
+P	M. Bernard Delcros. On le fait ici parce qu’il s’agit de petites communes.
+P	En toute franchise – je le dis gentiment –, je suis fâché de cette situation. Je demande donc que l’on compense intégralement les pertes de recettes subies par les collectivités par l’effet de telles décisions, au moins l’année où elles sont prises. La dynamique, c’est autre chose…
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-254 rectifié ter et I-547 rectifié ter.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2525 rectifié.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-726 rectifié, I-1678 rectifié bis et I-1892.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2195.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’article 34, modifié.
+P	(L’article 34 est adopté.)
+NAV	pjlf2026
+ART	Après l’article 34
+P	Le sujet est grave, le cercle vicieux : moins il y aura de titulaires, plus le déficit de la CNRACL se creusera. Il nous faut assumer pleinement la défense de la fonction publique territoriale ; nous ne pouvons donc accepter cette situation.
+NAV	pjlf2026
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2106.
+P	(L’amendement n’est pas adopté.)
+P	L’amendement n° I-1173 rectifié, présenté par Mme Briquet et M. Sautarel, est ainsi libellé :
+P	Après l’article 34
+P	Alors que les programmes immobiliers connaissent un creux et que les rendements des droits de mutation à titre onéreux (DMTO) et de la taxe d’aménagement s’en ressentent, vous semblez dire qu’il n’y a aucun espoir de rebond ; c’est dramatique !
+P	Nous vous proposons un dispositif robuste : intégrons-le dans notre boîte à outils, à charge pour l’État, qui est directement responsable de cette situation, d’intervenir en cas de difficulté. Cette solution-là va très bien : dans l’immédiat, nous garantissons une avance, après quoi l’État devra prendre ses responsabilités. (Applaudissements sur des travées du groupe SER.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1173 rectifié.
+P	(L’amendement est adopté.) – (Applaudissements.)
+NAV	pjlf2026
+P	Mme la présidente. En conséquence, un article additionnel ainsi rédigé est inséré dans le projet de loi, après l’article 34.
+P	L’amendement n° I-2506 rectifié bis, présenté par M. Delcros, Mmes Vermeillet et Billon, M. Dhersin, Mmes Bourguignon, Antoine et Saint-Pé, M. Canévet et les membres du groupe Union Centriste, est ainsi libellé :
+P	Après l’article 34
+NAV	pjlf2026
+P	M. Jean-Baptiste Lemoyne. Merci !
+P	M. Olivier Paccaud. Bravo !
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1333 rectifié ter.
+P	(L’amendement est adopté.)
+NAV	pjlf2026
+P	Mme la présidente. En conséquence, un article additionnel ainsi rédigé est inséré dans le projet de loi, après l’article 34.
+P	L’amendement n° I-533 rectifié quater, présenté par MM. Maurey et de Nicolaÿ, Mmes Canayer, Pluchet, de La Provôté et Sollogoub, MM. Mizzon, J.B. Blanc, Sol et Bonneau, Mme L. Darcos, M. Courtial, Mmes Aeschlimann, Schalck et Antoine, MM. L. Vogel, Gremillet et Wattebled, Mme Saint-Pé, MM. Chauvet et Chevalier et Mme Lermytte, est ainsi libellé :
+P	Après l’article 34
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-533 rectifié quater.
+P	(L’amendement est adopté.)
+NAV	pjlf2026
+P	Mme la présidente. En conséquence, un article additionnel ainsi rédigé est inséré dans le projet de loi, après l’article 34.
+P	Je suis saisie de deux amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-2182 rectifié, présenté par Mmes Cukierman et Apourceau-Poly, MM. Bacchi, Barros, Basquin et Brossat, Mmes Brulin et Corbière Naminzo, MM. Corbisez et Gay, Mme Gréaume, M. Lahellec, Mme Margaté, MM. Ouzoulias et Savoldelli, Mmes Silvani et Varaillas et M. Xowie, est ainsi libellé :
+P	Par cet amendement de bon sens, nos collègues nous proposent de fluidifier les relations des départements avec un certain nombre de structures et d’associations, qui peinent à recruter tant les salaires sont bas dans ces métiers.
+P	Ne diluons donc pas ce qui ne doit pas l’être, mes chers collègues : à question spécifique, message spécifique ; une réponse globale ne suffit pas.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2182 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1944 rectifié ter.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-1941 rectifié bis, présenté par Mme Jacquemet, M. Delcros, Mme Saint-Pé et M. L. Hervé, est ainsi libellé :
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1941 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-2150, présenté par Mmes Cukierman et Apourceau-Poly, MM. Bacchi, Barros, Basquin et Brossat, Mmes Brulin et Corbière Naminzo, MM. Corbisez et Gay, Mme Gréaume, M. Lahellec, Mme Margaté, MM. Ouzoulias et Savoldelli, Mmes Silvani et Varaillas, M. Xowie et les membres du groupe Communiste Républicain Citoyen et Écologiste – Kanaky, est ainsi libellé :
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Même avis.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2150.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. Je suis saisie de cinq amendements faisant l’objet d’une discussion commune.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-570 rectifié quater, I-1209 rectifié et I-1553 rectifié bis.
+P	(Les amendements ne sont pas adoptés.)
+NAV	pjlf2026
+P	Mme la présidente. Je suis saisie de huit amendements identiques.
+P	M. Laurent Burgoa. Qui dit mieux ? (Sourires.)
+P	Mme la présidente. Les amendements nos I-883 rectifié ter, I-2536 rectifié ter et I-2564 rectifié ter sont retirés.
+P	Je mets aux voix les amendements identiques nos I-729 rectifié, I-1570 rectifié ter et I-2105.
+P	(Les amendements ne sont pas adoptés.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-2107, présenté par Mmes Cukierman et Apourceau-Poly, MM. Bacchi, Barros, Basquin et Brossat, Mmes Brulin et Corbière Naminzo, MM. Corbisez et Gay, Mme Gréaume, M. Lahellec, Mme Margaté, MM. Ouzoulias et Savoldelli, Mmes Silvani et Varaillas et M. Xowie, est ainsi libellé :
+NAV	pjlf2026
+P	M. David Amiel, ministre délégué. Aux éléments que le rapporteur général vient d’exposer, j’ajouterai que le Gouvernement a bien entendu les demandes des élus de Corse. Messieurs les sénateurs, vous venez vous-mêmes d’exposer les besoins qui existent encore cette année. C’est la raison pour laquelle nous déposerons, en seconde partie du projet de loi de finances, un amendement visant à abonder de 50 millions d’euros la dotation pour la continuité territoriale.
+P	Je demande donc le retrait de vos amendements de création d’un prélèvement sur recettes au profit de l’amendement du Gouvernement, que nous examinerons en seconde partie.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-558 rectifié et I-1648 rectifié ter.
+P	J’ai été saisie d’une demande de scrutin public émanant du groupe Union Centriste.
+P	Je rappelle que l’avis de la commission est défavorable, de même que celui du Gouvernement.
+NAV	pjlf2026
+P	Mme la présidente. Personne ne demande plus à voter ?…
+P	Le scrutin est clos.
+P	Voici, compte tenu de l’ensemble des délégations de vote accordées par les sénateurs aux groupes politiques et notifiées à la présidence, le résultat du scrutin n° 76 :
+P	Nombre de votants
+P	342
+P	320
+P	298
+P	Contre
+P	22
+P	Le Sénat a adopté.
+P	En conséquence, un article additionnel ainsi rédigé est inséré dans le projet de loi, après l’article 34, et l’amendement n° I-383 rectifié n’a plus d’objet.
+P	L’amendement n° I-2775, présenté par le Gouvernement, est ainsi libellé :
+P	Après l’article 34
+P	0
+P	0
+P	0
+P	0
+P	760
+P	435
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	0
+P	Mme la présidente. Quel est l’avis de la commission ?
+P	M. Jean-François Husson, rapporteur général de la commission des finances. Avis de sagesse !
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2775.
+P	(L’amendement est adopté.)
+P	Mme la présidente. En conséquence, un article additionnel ainsi rédigé est inséré dans le projet de loi, après l’article 34.
+NAV	pjlf2026
+ART	Article 35
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. L’avis du Gouvernement émet un avis défavorable sur les amendements identiques nos I-427 rectifié quinquies, I-557 rectifié quinquies, I-2515 rectifié quinquies et I-728 rectifié bis comme sur l’amendement n° I-468 rectifié ter.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-427 rectifié quinquies, I-557 rectifié quinquies, I-2515 rectifié quinquies et I-728 rectifié bis.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. En conséquence, les amendements nos I-2659 et I-468 rectifié ter n’ont plus d’objet.
+P	Je suis saisie de deux amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-23 rectifié, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Le Gouvernement s’en remet à la sagesse du Sénat sur l’amendement de la commission ; l’avis est défavorable sur l’amendement n° I-1160.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-23 rectifié.
+P	(L’amendement est adopté.)
+P	Mme la présidente. En conséquence, l’amendement n° I-1160 n’a plus d’objet.
+P	L’amendement n° I-723, présenté par MM. Uzenat et Lurel, Mme Bélim, MM. Omar Oili, Pla, Jacquin, Cozic, Kanner et Raynal, Mmes Blatrix Contat, Briquet et Espagnac, MM. Éblé, Féraud et Jeansannetas, Mmes Artigalas et Bonnefoy, M. Bourgi, Mmes Brossel et Canalès, MM. Chaillou et Chantrel, Mmes Conconne et Daniel, MM. Darras, Devinaz, Fagnen, Fichet et Gillé, Mmes Harribey et G. Jourda, M. Kerrouche, Mmes Le Houerou et Linkenheld, M. Marie, Mme Matray, MM. Mérillou et Michau, Mme Monier, M. Montaugé, Mme Narassiguin, MM. Ouizille et Redon-Sarrazy, Mme S. Robert, MM. Roiron, Ros, Temal, Tissot, M. Vallet, Vayssouze-Faure, M. Weber, Ziane et les membres du groupe Socialiste, Écologiste et Républicain, est ainsi libellé :
+P	Alinéa 2, tableau, seconde colonne, vingt-troisième ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Avis défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-723.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de sept amendements identiques.
+P	L’amendement n° I-85 rectifié quinquies est présenté par MM. V. Louault, Chasseing, Grand, Chevalier, Verzelen et Dhersin, Mme Paoli-Gagin, MM. Levi et Brault, Mmes Bourcier et Perrot, MM. A. Marc, Folliot et Fargeot, Mme Lermytte et M. Capus.
+P	Mme Marie-Do Aeschlimann. Je le retire, madame la présidente !
+P	Mme la présidente. L’amendement n° I-1701 rectifié septies est retiré.
+P	Je mets aux voix les amendements identiques nos I-1027 rectifié ter, I-1154 rectifié, I-1679 rectifié bis, I-1893, I-2103, I-2356 et I-2623 rectifié bis.
+P	(Après une épreuve à main levée déclarée douteuse par le bureau, le Sénat, par assis et levé, n’adopte pas les amendements.)
+P	Mme la présidente. Je suis saisie de deux amendements identiques.
+P	Voici les mesures que nous avons adoptées : nous avons abaissé le seuil de surface retenu pour définir les grands projets donnant lieu au versement d’un acompte de taxe d’aménagement ; nous avons facilité la procédure de taxation d’office ; nous avons créé un PSR, c’est-à-dire un prélèvement sur recettes ; enfin, l’abondement du fonds de sauvegarde des départements, même si certains ont indiqué qu’il n’était pas fléché prioritairement vers les CAUE, a été porté de 300 millions à 600 millions d’euros.
+P	Je vous invite donc, mes chers collègues, à bien garder à l’esprit tous les dispositifs que nous avons votés ; j’en appelle également à la responsabilité de chacun pour que soient respectées les enveloppes budgétaires d’un certain nombre de missions. Certes, les débats sont longs, mais nous discutons des ressources des collectivités locales, et ces collectivités locales, de manière générale, nous regardent !
+P	Mme la présidente. Je mets aux voix le sous-amendement n° I-2692 rectifié.
+P	(Le sous-amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-408 rectifié, I-1567 rectifié quater et I-1864 rectifié bis.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je suis saisie de trois amendements identiques.
+P	L’amendement n° I-897 rectifié bis est présenté par Mme Romagny, MM. Cambier, Verzelen, Lemoyne et Pillefer, Mme de La Provôté, MM. Courtial, Saury et Fargeot, Mmes Bourguignon et Housseau, MM. Genet, Dhersin et Levi, Mme Saint-Pé, M. Duffourg et Mme Lermytte.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-897 rectifié bis, I-2272 et I-2603 rectifié ter.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. L’amendement n° I-727, présenté par MM. Cozic, Kanner et Raynal, Mmes Blatrix Contat, Briquet et Espagnac, MM. Éblé, Féraud, Jeansannetas et Lurel, Mmes Artigalas, Bélim et Bonnefoy, M. Bourgi, Mmes Brossel et Canalès, MM. Chaillou et Chantrel, Mmes Conconne et Daniel, MM. Darras, Devinaz, Fagnen, Fichet et Gillé, Mme Harribey, M. Jacquin, Mme G. Jourda, M. Kerrouche, Mmes Le Houerou et Linkenheld, M. Marie, Mme Matray, MM. Mérillou et Michau, Mme Monier, M. Montaugé, Mme Narassiguin, MM. Ouizille, Pla et Redon-Sarrazy, Mme S. Robert, MM. Roiron, Ros, Temal, Tissot, Uzenat, M. Vallet, Vayssouze-Faure, M. Weber, Ziane et les membres du groupe Socialiste, Écologiste et Républicain, est ainsi libellé :
+P	I. – Alinéa 2, tableau, après l’avant-dernière ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-727.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. L’amendement n° I-1211, présenté par Mme Schillinger, MM. Rambaud, Fouassin, Patient, Buis et Buval, Mmes Cazebonne, Duranton et Havet, MM. Iacovelli, Kulimoetoke, Lemoyne, Lévrier et Mohamed Soilihi, Mme Nadille, M. Patriat, Mme Phinera-Horth, MM. Rohfritsch, Théophile et les membres du groupe Rassemblement des démocrates, progressistes et indépendants, est ainsi libellé :
+P	I. – Alinéa 2, tableau, après l’avant-dernière ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Même avis.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1211.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de deux amendements identiques.
+P	L’amendement n° I-1960 est présenté par Mme Senée, MM. G. Blanc, Dossus, Benarroche et Dantec, Mme de Marco, MM. Fernique et Gontard, Mme Guhl, MM. Jadot et Mellouli, Mmes Ollivier et Poncet Monge, M. Salmon et Mmes Souyris et M. Vogel.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1960 et I-2181.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. L’amendement n° I-2271, présenté par M. Xowie et les membres du groupe Communiste Républicain Citoyen et Écologiste – Kanaky, est ainsi libellé :
+P	I. – Alinéa 2, tableau, après l’avant-dernière ligne
+P	En tout état de cause, en seconde partie du projet de loi de finances, dans le cadre de l’examen de la mission « Outre-mer », nous déposerons des amendements visant à renforcer le soutien apporté à la Nouvelle-Calédonie.
+P	Pour cette raison, le Gouvernement demande le retrait de cet amendement ; à défaut, l’avis sera défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2271.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’article 35, modifié.
+P	(L’article 35 est adopté.)
+NAV	pjlf2026
+ART	Après l’article 35
+P	L’assiette est donc plus large que les seules sociétés autoroutières : elle inclut notamment des aéroports. Si nous augmentons trop fortement le taux, nous risquons évidemment de fragiliser la situation déjà délicate de certains aéroports régionaux, qui contribuent à l’équilibre du territoire.
+P	C’est la raison pour laquelle le Gouvernement est favorable au maintien d’un taux stable : demande de retrait ou, à défaut, avis défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-616 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2083 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1968 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	B. – Impositions et autres ressources affectées à des tiers
+NAV	pjlf2026
+ART	Article 36
+P	1
+P	2
+P	3
+P	4
+P	5
+P	6
+P	7
+P	8
+P	9
+P	10
+P	11
+P	12
+P	13
+P	14
+P	15
+P	16
+P	17
+P	18
+P	19
+P	20
+P	21
+P	22
+P	23
+P	24
+P	25
+P	26
+P	27
+P	28
+P	29
+P	30
+P	31
+P	32
+P	33
+P	34
+P	35
+P	36
+P	37
+P	38
+P	39
+P	40
+P	41
+P	42
+P	43
+P	44
+P	45
+P	46
+P	47
+P	48
+P	49
+P	50
+P	51
+P	52
+P	53
+P	54
+P	55
+P	56
+P	57
+P	58
+P	59
+P	60
+P	61
+P	62
+P	63
+P	64
+P	65
+P	66
+P	67
+P	68
+P	69
+P	70
+P	71
+P	72
+P	73
+P	74
+P	75
+P	76
+P	77
+P	78
+P	79
+P	80
+P	81
+P	82
+P	83
+P	84
+P	85
+P	86
+P	87
+P	88
+P	89
+P	90
+P	91
+P	92
+P	93
+P	94
+P	95
+P	96
+P	97
+P	98
+P	99
+P	100
+P	101
+P	102
+P	103
+P	104
+P	105
+P	106
+P	107
+P	108
+P	109
+P	110
+P	111
+P	112
+P	113
+P	114
+P	115
+P	116
+P	117
+P	118
+P	119
+P	120
+P	121
+P	122
+P	123
+P	124
+P	125
+P	126
+P	127
+P	128
+P	129
+P	130
+P	131
+P	132
+P	133
+P	134
+P	135
+P	Si cet amendement était adopté, le CNC serait contraint de procéder à des coupes radicales dans son budget : celles-ci s’élèveraient à 98 millions d’euros, soit plus de 12 % de son budget. Ces coupes conduiraient à une diminution considérable du soutien qu’il apporte au cinéma et à l’audiovisuel, voire à l’amputation d’une partie de ses aides automatiques et sélectives.
+P	Une telle diminution serait insoutenable pour le secteur et aurait des effets majeurs sur l’ensemble du territoire : le moindre soutien aux salles de cinéma conduirait à des fermetures, dans une période économiquement difficile pour elles ; la baisse des aides à la distribution nuirait à la diffusion des œuvres dans les territoires ; celle des aides à la production cinématographique et audiovisuelle, y compris en région, entraînerait des défaillances d’entreprises ; on couperait dans les budgets de certaines structures et de certains festivals ; et j’en passe !
+P	En conséquence, ce sous-amendement vise à supprimer le plafonnement des taxes affectées au CNC.
+P	Mme la présidente. La parole est à M. Adel Ziane, pour présenter le sous-amendement n° I-2796.
+P	M. Adel Ziane. Ce sous-amendement de la présidente Robert est défendu, madame la présidente ! (Sourires.)
+P	Mme la présidente. La parole est à Mme Ghislaine Senée, pour explication de vote.
+P	Mme Ghislaine Senée. Juste un mot sur l’amendement de M. Bilhac : il n’est tout simplement pas concevable de voter une proposition pareille.
+P	Mme la présidente. Je mets aux voix les sous-amendements identiques nos I-2795 et I-2796.
+P	(Les sous-amendements sont adoptés.)
+P	Mme Guylène Pantel. Je retire l’amendement n° I-143 rectifié bis, madame la présidente !
+P	Mme la présidente. L’amendement n° I-143 rectifié bis, modifié, est retiré.
+P	Je mets aux voix l’amendement n° I-139 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-860.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2741.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1925.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1578.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je suis saisie de quarante amendements et d’un sous-amendement faisant l’objet d’une discussion commune.
+P	L’amendement n° I-137 rectifié bis n’est pas soutenu.
+P	L’amendement n° I-26 tend à maintenir plutôt qu’à rehausser les plafonds d’affectation applicables à la SGP. Je crains qu’une telle décision ne réduise la capacité d’emprunt de cet établissement et ne soit source de difficultés de financement, notamment pour le Grand Paris Express : avis défavorable également.
+P	Le Gouvernement émet un avis défavorable sur l’ensemble des autres amendements en discussion commune.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1070.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix le sous-amendement n° I-2797.
+P	(Le sous-amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-144 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2557.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1071 et I-2480.
+P	(Après une épreuve à main levée déclarée douteuse par le bureau, le Sénat, par assis et levé, n’adopte pas les amendements.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1059 rectifié bis, I-2771 et I-2786.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. Madame Michelle Gréaume, l’amendement n° I-2128 est-il maintenu ?
+P	Mme Michelle Gréaume. Oui, madame la présidente.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2128.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-55 rectifié quinquies, I-59, I-240 rectifié ter, I-279 rectifié bis, I-296 rectifié ter, I-577 rectifié, I-742 rectifié, I-1658 rectifié bis, I-1965 rectifié sexies, I-2129 et I-2519 rectifié quater.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. En conséquence, les amendements identiques nos I-403 rectifié ter, I-1123 rectifié ter et I-1483, ainsi que les amendements identiques nos I-402 rectifié et I-823 rectifié bis, n’ont plus d’objet.
+P	Je mets aux voix l’amendement n° I-2435 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1073 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2633 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-749 rectifié et I-1099 rectifié.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1074 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1100 rectifié et I-1525 rectifié.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-25.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-26.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-852 rectifié, I-970 rectifié, I-1053 et I-2482.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. L’amendement n° I-2556, présenté par Mmes M. Vogel et Ollivier, est ainsi libellé :
+P	I. – Alinéa 2, tableau, après la troisième ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2556.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de six amendements faisant l’objet d’une discussion commune.
+P	Les deux premiers sont identiques.
+P	M. David Amiel, ministre délégué. Je suis en effet d’accord avec le rapporteur général sur les quatre premiers de ces amendements en discussion commune.
+P	Je demande en revanche le retrait des amendements identiques nos I-1054 rectifié et I-1379 rectifié ter : nous remplirons nos engagements au travers d’instruments budgétaires que nous examinerons dans la seconde partie du projet de loi de finances.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-851 rectifié et I-2260 rectifié.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1072 rectifié et I-2477 rectifié.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1054 rectifié et I-1379 rectifié ter.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. L’amendement n° I-1810 rectifié, présenté par MM. Longeot, Courtial et Pointereau, Mmes de Cidrac et Aeschlimann, M. Chauvet, Mme de La Provôté, MM. de Nicolaÿ, Khalifé et Dhersin, Mme Sollogoub, M. Bacci, Mme Jacques, M. Bleunven, Mme Jacquemet, MM. Fargeot, S. Demilly, Canévet et Duffourg et Mme Billon, est ainsi libellé :
+P	I. – Alinéa 2, tableau, après la sixième ligne
+P	Mme la présidente. La parole est à M. le ministre délégué.
+P	M. David Amiel, ministre délégué. Le cadre européen en matière de politique commerciale est contraignant : la taxe sur les petits colis doit servir à financer le coût de gestion des contrôles par les douanes et la direction générale de la concurrence, de la consommation et de la répression des fraudes (DGCCRF).
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1810 rectifié.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je suis saisie de quinze amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-2311, présenté par Mme Varaillas, MM. Corbisez, Basquin, Barros, Savoldelli et les membres du groupe Communiste Républicain Citoyen et Écologiste – Kanaky, est ainsi libellé :
+P	M. François Bonhomme. Le Gouvernement a été touché par la grâce ! (Sourires.)
+P	Mme Christine Lavarde. En tout état de cause, il faudra que le Gouvernement en tire les conséquences lorsque nous examinerons les crédits des missions et des programmes dans la seconde partie du texte. Voyez comme l’exercice est difficile pour nous, parlementaires…
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2311.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1297.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-57 rectifié ter, I-459 rectifié bis, I-628 rectifié bis, I-735, I-850 rectifié bis, I-1122 rectifié bis, I-1309 rectifié, I-1349 rectifié ter, I-1868 rectifié bis et I-2363 rectifié ter.
+P	(Les amendements, modifiés par la suppression du gage, sont adoptés.)
+P	Mme la présidente. En conséquence, l’amendement n° I-627 rectifié bis n’a plus d’objet.
+P	L’amendement n° I-732, présenté par Mme Conconne, M. Lurel, Mme Bélim, MM. Omar Oili, Cozic, Kanner et Raynal, Mmes Blatrix Contat, Briquet et Espagnac, MM. Éblé, Féraud et Jeansannetas, Mmes Artigalas et Bonnefoy, M. Bourgi, Mmes Brossel et Canalès, MM. Chaillou et Chantrel, Mme Daniel, MM. Darras, Devinaz, Fagnen, Fichet et Gillé, Mme Harribey, M. Jacquin, Mme G. Jourda, M. Kerrouche, Mmes Le Houerou et Linkenheld, M. Marie, Mme Matray, MM. Mérillou et Michau, Mme Monier, M. Montaugé, Mme Narassiguin, MM. Ouizille, Pla et Redon-Sarrazy, Mme S. Robert, MM. Roiron, Ros, Temal, Tissot, Uzenat, M. Vallet, Vayssouze-Faure, M. Weber, Ziane et les membres du groupe Socialiste, Écologiste et Républicain, est ainsi libellé :
+P	I. – Alinéa 2, tableau, dernière colonne, douzième ligne
+P	Mme la présidente. Madame Conconne, l’amendement n° I-732 est-il maintenu ?
+P	Mme Catherine Conconne. Je le maintiens symboliquement, madame la présidente.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-732.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. L’amendement n° I-1947, présenté par MM. Dantec, Benarroche, G. Blanc, Dossus, Fernique et Gontard, Mme Guhl, M. Jadot, Mme de Marco, M. Mellouli, Mmes Ollivier et Poncet Monge, M. Salmon et Mmes Souyris et M. Vogel, est ainsi libellé :
+P	I. – Alinéa 2, tableau, dernière colonne, quinzième ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Avis défavorable également.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1947.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de six amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-140 rectifié bis n’est pas soutenu.
+P	La parole est à M. le ministre délégué.
+P	M. David Amiel, ministre délégué. Monsieur Savin, les crédits d’investissement dans les infrastructures n’ont pas été gelés en 2025. La réforme proposée de la dotation d’investissement doit permettre de poursuivre le financement de ces infrastructures.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1555 rectifié, I-343 rectifié bis, I-739 rectifié et I-2163 rectifié.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. L’amendement n° I-1009, présenté par MM. Salmon, G. Blanc et Dossus, Mme Senée, MM. Benarroche et Dantec, Mme de Marco, MM. Fernique et Gontard, Mme Guhl, MM. Jadot et Mellouli et Mmes Ollivier, Poncet Monge, Souyris et M. Vogel, est ainsi libellé :
+P	I. – Alinéa 2, tableau
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1009.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. L’amendement n° I-2739, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Alinéa 2, tableau, troisième colonne, trente-deuxième ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2739.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je suis saisie de trois amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-2440 rectifié, présenté par Mme de Marco, MM. Dossus et G. Blanc, Mme Senée, MM. Benarroche, Dantec, Fernique et Gontard, Mme Guhl, MM. Jadot et Mellouli, Mmes Ollivier et Poncet Monge, M. Salmon et Mmes Souyris et M. Vogel, est ainsi libellé :
+P	M. David Amiel, ministre délégué. Je serai sobre également : j’émets un avis défavorable sur ces amendements.
+P	Mme Marie-Pierre de La Gontrie. Peut faire mieux : il faudra travailler pour être réélu ! (Rires.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2440 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Monsieur Féraud, l’amendement n° I-730 est-il maintenu ?
+P	M. Rémi Féraud. Je le maintiens, madame la présidente.
+P	Mme la présidente. Madame Darcos, l’amendement n° I-2552 rectifié bis est-il maintenu ?
+P	Mme Laure Darcos. Je le maintiens également, madame la présidente.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-730 et I-2552 rectifié bis.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je suis saisie de deux amendements identiques.
+P	L’amendement n° I-995 est présenté par Mme N. Goulet.
+P	Mme la présidente. La parole est à M. Pierre-Alain Roiron, pour explication de vote.
+P	M. Pierre-Alain Roiron. Ce que vous dites est tout à fait vrai, monsieur le ministre, mais le risque est qu’il n’y ait plus de crédits disponibles en milieu d’année.
+P	En conséquence, je maintiens cet amendement.
+P	Mme Nathalie Goulet. Qu’en pense la commission ?
+P	Mme la présidente. La commission suit l’avis du Gouvernement, sauf contre-ordre de sa part.
+P	M. Jean-François Husson, rapporteur général de la commission des finances. En effet : la commission demande le retrait de cet amendement ; à défaut, l’avis sera défavorable.
+P	Mme Nathalie Goulet. Je maintiens mon amendement, madame la présidente !
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-995 et I-2357.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. L’amendement n° I-2740, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Alinéa 2, tableau, deuxième colonne, quarante-quatrième ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2740.
+P	(L’amendement est adopté.)
+P	Mme la présidente. L’amendement n° I-2781, présenté par le Gouvernement, est ainsi libellé :
+P	I. – Alinéa 2, tableau, après la quarante-sixième ligne
+P	M. Jean-François Husson, rapporteur général de la commission des finances. L’avis de la commission est favorable sur cet amendement.
+P	Il me semble néanmoins qu’il serait préférable d’anticiper. Il existe désormais trois taxes affectées au financement d’un projet dont le Gouvernement rappelle qu’il est majeur. Il conviendrait, pour de tels projets, de trouver enfin les bonnes modalités de financement, plutôt que de recourir chaque année à de nouvelles affectations de taxe…
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2781.
+P	(L’amendement est adopté.)
+NAV	pjlf2026
+P	5
+S1	Conférence des présidents
+P	6
+S1	Mise au point au sujet de votes
+S1	PRÉSIDENCE DE Mme Sylvie Vermeillet
+P	7
+S1	Mises au point au sujet de votes
+P	8
+NAV	pjlf2026
+S1	Loi de finances pour 2026
+P	Suite de la discussion d’un projet de loi
+NAV	pjlf2026
+NAV	pjlf2026
+ART	Article 36 (suite)
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué auprès de la ministre de l’action et des comptes publics, chargé de la fonction publique et de la réforme de l’État. Défavorable.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-594 rectifié ter, I-1795 rectifié bis, I-2113 rectifié, I-2545 rectifié ter, I-2635 rectifié ter et I-2644 rectifié bis.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. Je suis saisie de trois amendements faisant l’objet d’une discussion commune.
+P	Les deux premiers sont identiques.
+P	À titre d’exemple, dans les Pays de la Loire, le groupement Mode Grand Ouest représente 13 500 emplois, dont plus de 3 000 en Vendée, et nous constatons une croissance soutenue de l’emploi depuis 2018.
+P	Globalement, les entreprises du secteur sont totalement défavorables à cette fusion.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-261 rectifié ter et I-269 rectifié quinquies.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2742.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je suis saisie de neuf amendements identiques.
+P	L’amendement n° I-56 rectifié ter est présenté par MM. Capus et Malhuret, Mme Paoli-Gagin, M. Laménie, Mmes Bourcier et Bessin-Guérin, MM. Brault, Chasseing et Chevalier, Mme L. Darcos, M. Grand, Mme Lermytte et MM. V. Louault, A. Marc, Médevielle, Pellevat, Rochette, Verzelen, L. Vogel et Wattebled.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-56 rectifié ter, I-60, I-105 rectifié ter, I-241 rectifié bis, I-593 rectifié bis, I-733, I-891 rectifié sexies, I-2149 et I-2643 rectifié ter.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. L’amendement n° I-2743, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Alinéa 2, tableau
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2743.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je suis saisie de sept amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-1862 rectifié bis, présenté par MM. Bilhac et Cabanel, Mmes M. Carrère et Girardin, MM. Gold et Grosvalet, Mme Guillotin, M. Guiol, Mmes Jouve et Pantel et MM. Roux et Masset, est ainsi libellé :
+P	M. Vincent Capo-Canellas. Non, je le retire, madame la présidente.
+P	Mme la présidente. L’amendement n° I-1582 rectifié est retiré.
+P	Je mets aux voix l’amendement n° I-815 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-734.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de trois amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-1659 rectifié septies, présenté par MM. Bacci, Longeot, Bonnus, Khalifé, Sido, Parigi, Séné, Burgoa et H. Leroy, Mmes Belrhiti, Petrus et Dumont, MM. Margueritte et Genet, Mme Nadille, MM. Gremillet, Levi et Théophile et Mme Berthet, est ainsi libellé :
+P	Mme Ghislaine Senée. C’est d’accord, madame la présidente !
+P	Mme la présidente. Je suis donc saisie des amendements nos I-1807 rectifié quater et I-1926 rectifié ter, dont le libellé est identique à celui de l’amendement n° I-1659 rectifié septies.
+P	Je mets aux voix les amendements identiques nos I-1659 rectifié septies, I-1807 rectifié quater et I-1926 rectifié ter.
+P	(Les amendements, modifiés par la suppression du gage, sont adoptés.)
+P	Mme la présidente. Je suis saisie de deux amendements identiques.
+P	L’amendement n° I-985 rectifié bis est présenté par M. Cambier, Mme Billon, MM. Courtial et Chevalier et Mmes Saint-Pé et Romagny.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Même avis.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-985 rectifié bis et I-2632 rectifié ter.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. L’amendement n° I-2744, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Alinéa 2, tableau, cent-vingt-et-unième ligne, deuxième colonne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2744.
+P	(L’amendement est adopté.)
+P	Mme la présidente. L’amendement n° I-2745, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Alinéa 2, tableau, deuxième colonne, cent-vingt-quatrième ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2745.
+P	(L’amendement est adopté.)
+P	Mme la présidente. L’amendement n° I-2746, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Alinéa 2, tableau, cent vingt-sixième ligne
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2746.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je suis saisie de cinq amendements faisant l’objet d’une discussion commune.
+P	Les trois premiers sont identiques.
+P	Mme Maryse Carrère. Oui, madame la présidente.
+P	Mme la présidente. Je suis donc saisie des amendements nos I-869 rectifié quinquies et I-2077 rectifié ter, dont le libellé est identique à celui des amendements identiques nos I-222 rectifié et I-1062.
+P	Je mets aux voix les amendements identiques nos I-222 rectifié, I-1062, I-869 rectifié quinquies et I-2077 rectifié ter.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. L’amendement n° I-2747, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Alinéas 3 à 5
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2747.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je suis saisie de deux amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-390 rectifié bis, présenté par MM. Parigi et Henno, Mme Housseau, MM. Bitz et Kern, Mmes Vermeillet et Patru et M. Courtial, est ainsi libellé :
+P	Mme la présidente. Monsieur Parigi, l’amendement n° I-825 rectifié bis est-il maintenu ?
+P	M. Paul Toussaint Parigi. Oui, je le maintiens, madame la présidente.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-390 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-825 rectifié bis.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de trois amendements faisant l’objet d’une discussion commune.
+P	Les deux premiers sont identiques.
+P	De plus, nous avons subi ici même, le 11 juillet dernier, de la part de la ministre de la culture, un vote bloqué qui nous a laissé une impression quelque peu désagréable sur les perspectives d’avenir de l’audiovisuel public. Les messages adressés depuis plusieurs mois, voire plusieurs années, sont peu favorables à notre grand service public, qui fait l’honneur de la France.
+P	Ces amendements ont pour objet de corriger cette tendance particulièrement négative. Bien sûr, le groupe Socialiste, Écologiste et Républicain les soutiendra.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-740 et I-1699.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1523 rectifié.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. L’amendement n° I-2434, présenté par Mme de Marco, MM. Dossus et G. Blanc, Mme Senée, MM. Benarroche, Dantec, Fernique et Gontard, Mme Guhl, MM. Jadot et Mellouli, Mmes Ollivier et Poncet Monge, M. Salmon et Mmes Souyris et M. Vogel, est ainsi libellé :
+P	Alinéa 31
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Même avis.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2434.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de neuf amendements faisant l’objet d’une discussion commune.
+P	Les cinq premiers sont identiques.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Mêmes avis.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-424 rectifié quater, I-1077 rectifié bis, I-1543 rectifié, I-1559 et I-2054.
+P	(Après une épreuve à main levée déclarée douteuse par le bureau, le Sénat, par assis et levé, n’adopte pas les amendements.)
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-731, I-1629 rectifié, I-1667 et I-1796 rectifié bis.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je suis saisie de deux amendements identiques.
+P	L’amendement n° I-1948 rectifié est présenté par Mme M. Carrère, MM. Bilhac, Cabanel, Gold, Grosvalet et Guiol, Mmes Jouve et Pantel et M. Roux.
+P	Mme la présidente. Quel est l’avis de la commission ?
+P	M. Jean-François Husson, rapporteur général de la commission des finances. Sagesse.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1948 rectifié et I-2777.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. Je mets aux voix l’article 36, modifié.
+P	(L’article 36 est adopté.)
+NAV	pjlf2026
+ART	Après l’article 36
+P	M. David Amiel, ministre délégué. Je rappellerai simplement que la CVEC n’est pas acquittée par les étudiants boursiers et que sa création s’est accompagnée d’une suppression de la cotisation au régime étudiant de sécurité sociale. Cette contribution vise justement à financer la vie étudiante.
+P	Par conséquent, je demande le retrait de l’amendement ; à défaut, j’émettrai un avis défavorable.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1556 et I-2160 rectifié.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-903.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. Je suis saisie de deux amendements faisant l’objet d’une discussion commune.
+P	Il y a effectivement des gares qui présentent les caractéristiques du patrimoine remarquable, mais on pourrait également ajouter certaines voies ferrées, avec des paysages superbes, des viaducs – Garabit dans le Cantal, par exemple, conçu par Gustave Eiffel –, des tunnels, des ponts… (Marques d’amusement.) Le patrimoine ferroviaire est véritablement très riche.
+P	Et je n’oublierai pas la gare de Limoges, pour ne pas froisser ma collègue Isabelle Briquet, la gare de Metz, voire des petites gares, dans le département de la Lozère, par exemple ! (Bravo ! et vifs applaudissements sur l’ensemble des travées.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-833 rectifié bis.
+P	(L’amendement est adopté.) – (Exclamations amusées et applaudissements.)
+P	M. Emmanuel Capus. C’est grâce à M. Laménie !
+NAV	pjlf2026
+P	Mme la présidente. En conséquence, un article additionnel ainsi rédigé est inséré dans le projet de loi, après l’article 36, et l’amendement n° I-968 rectifié bis n’a plus d’objet.
+P	Les deux amendements suivants sont identiques.
+P	L’amendement n° I-871 rectifié est présenté par Mme Sylvie Robert, MM. Cozic, Kanner et Raynal, Mmes Blatrix Contat, Briquet et Espagnac, MM. Éblé, Féraud, Jeansannetas et Lurel, Mmes Artigalas, Bélim et Bonnefoy, M. Bourgi, Mmes Brossel et Canalès, MM. Chaillou et Chantrel, Mmes Conconne et Daniel, MM. Darras, Devinaz, Fagnen, Fichet et Gillé, Mme Harribey, M. Jacquin, Mme Gisèle Jourda, M. Kerrouche, Mmes Le Houerou et Linkenheld, M. Marie, Mme Matray, MM. Mérillou et Michau, Mme Monier, M. Montaugé, Mme Narassiguin, MM. Ouizille, Pla, Redon-Sarrazy, Roiron, Ros, Temal, Tissot, Uzenat, Mickaël Vallet, Vayssouze-Faure, Michaël Weber, Ziane et les membres du groupe Socialiste, Écologiste et Républicain.
+P	Tout d’abord, les entreprises publiques locales et les sociétés publiques locales culturelles sont essentielles dans tous les territoires. Elles participent pleinement à la vie culturelle et facilitent à l’accès à la culture. Toutes les entités culturelles ne sont pas des structures publiques d’État labellisées. Nous avons donc besoin de ces outils.
+P	Ensuite, il s’agit d’une mesure de justice, car le mécénat permet à la société civile de contribuer à la vie culturelle, et cela dans tous les territoires.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-871 rectifié et I-2441 rectifié bis.
+P	(Les amendements sont adoptés.)
+NAV	pjlf2026
+P	Mme la présidente. En conséquence, un article additionnel ainsi rédigé est inséré dans le projet de loi, après l’article 36.
+P	L’amendement n° I-1068, présenté par M. Delia, au nom de la commission de l’aménagement du territoire et du développement durable, est ainsi libellé :
+P	Après l’article 36
+NAV	pjlf2026
+P	Certes, cette suppression est importante pour nos concitoyens, car ils ont ainsi moins d’impôts à payer. Malheureusement, nous avons également supprimé la taxe d’habitation et la redevance télévisuelle.
+P	Alors qu’il nous faut trouver plusieurs milliards d’euros, je le répète, je voterai cet amendement.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-743.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-940.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-2170, présenté par MM. Barros, Savoldelli et les membres du groupe Communiste Républicain Citoyen et Écologiste – Kanaky, est ainsi libellé :
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2170.
+P	(L’amendement n’est pas adopté.)
+NAV	pjlf2026
+P	Mme la présidente. L’amendement n° I-1336 rectifié bis, présenté par Mme Gosselin, M. Margueritte, Mme Canayer, M. Somon, Mmes Belrhiti et Bellamy, MM. Panunzi, Khalifé et Henri Leroy, Mme Nédélec et MM. Pernot, Gremillet et Genet est ainsi libellé :
+P	Mme Béatrice Gosselin. J’entends bien, monsieur le ministre, mais il faut trouver des solutions.
+P	On nous dit que le produit de la taxe sur l’éolien en mer est destiné aux pêcheurs ou aux collectivités, mais, pour l’instant, rien n’est fléché. Il me semble donc important de flécher rapidement des fonds pour lutter contre l’érosion des côtes littorales, même si ce n’est que pour 2031.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1336 rectifié bis.
+P	(L’amendement est pas adopté.)
+P	C. – Dispositions relatives aux budgets annexes et aux comptes spéciaux
+NAV	pjlf2026
+ART	Article 37
+P	Sous réserve des dispositions de la présente loi, les affectations résultant de budgets annexes créés et de comptes spéciaux ouverts antérieurement à la date d’entrée en vigueur de la présente loi sont confirmées pour l’année 2026 – (Adopté.)
+NAV	pjlf2026
+ART	Article 38
+P	Au premier alinéa du II de l’article 49 de la loi n° 2005-1719 du 30 décembre 2005 de finances pour 2006, le montant : « 506,65 millions d’euros » est remplacé par le montant : « 514,65 millions d’euros » et le montant : « 336,65 millions d’euros » est remplacé par le montant : « 344,65 millions d’euros » – (Adopté.)
+NAV	pjlf2026
+ART	Article 39
+P	Les deuxième et troisième alinéas de l’article 3 de la loi n° 60-1356 du 17 décembre 1960 de finances rectificative pour 1960 sont remplacés par les dispositions suivantes :
+P	« Ce compte est crédité, d’une part, des soldes périodiques positifs des mouvements de retrait et d’émission des pièces et, d’autre part, du produit de la vente des pièces démonétisées. II est débité des soldes périodiques négatifs des mouvements de retrait et d’émission des pièces et des dépenses de fabrication de celles-ci engagées pour le compte de l’État. – (Adopté.)
+P	D. – Autres dispositions
+NAV	pjlf2026
+ART	Article 40
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable également.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1927 et I-2108.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. L’amendement n° I-1929, présenté par Mmes Senée et Poncet Monge et M. G. Blanc, est ainsi libellé :
+P	I. – Alinéa 2
+P	Mme la présidente. Madame Senée, l’amendement n° I-1929 est-il maintenu ?
+P	Mme Ghislaine Senée. Oui, je le maintiens, madame la présidente.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-1929.
+P	(L’amendement n’est pas adopté.)
+P	Mme la présidente. Je suis saisie de deux amendements identiques.
+P	L’amendement n° I-1928 est présenté par Mmes Senée et Poncet Monge, MM. G. Blanc, Dossus, Benarroche et Dantec, Mme de Marco, MM. Fernique et Gontard, Mme Guhl, MM. Jadot et Mellouli, Mme Ollivier, M. Salmon et Mmes Souyris et M. Vogel.
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Défavorable également.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-1928 et I-2109.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je mets aux voix l’article 40.
+P	(L’article 40 est adopté.)
+NAV	pjlf2026
+ART	Article 41
+P	En revanche, comme l’a dit très justement M. Louault, il n’est pas urgent aujourd’hui de mettre en place ce nouveau mécanisme. Compte tenu du niveau des prix aujourd’hui, il n’y aura aucune raison de l’activer, les prix resteront stables, sauf si une crise de l’énergie comme celles que nous avons connues après la pandémie de covid ou le début de la guerre en Ukraine survenait, mais nous ne le souhaitons pas.
+P	De grâce, n’agissons pas à la va-vite. Nous pouvons consacrer une année supplémentaire pour discuter ensemble du mécanisme. Car même si l’adoption de l’amendement n° I-2665 du Gouvernement permettrait de résoudre une partie des difficultés, nous constatons tous, quelle que soit la façon dont nous analysons la situation, que le dispositif n’est pas abouti.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-905, I-2061 rectifié bis et I-2121.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. En conséquence, l’article 41 est supprimé, et les amendements nos I-2196, I-2197, I-1991 rectifié ter, I-2198 rectifié et I-2665 n’ont plus d’objet.
+NAV	pjlf2026
+ART	Article 42
+P	Oui, monsieur le rapporteur général, l’opération est neutre. Ce qui me dérange, c’est que le débat sorte de cet hémicycle. Mon petit cœur va finir par saigner. Je ne suis pas venu au Sénat pour entériner des pertes de recettes et sucrer les fraises en constatant que le programme 345 a disparu du budget de l’État. Demain, ils nous feront le même coup avec l’éolien et le photovoltaïque ! Que croyez-vous ? C’est cran par cran qu’ils progressent !
+P	Je vous le dis pour la troisième fois, mes chers collègues : il est temps de sonner la fin de la récréation. Je vous appelle vraiment à voter cet amendement de suppression.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-94 rectifié quinquies et I-1116 rectifié ter.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. En conséquence, l’article 42 est supprimé, et les amendements nos I-2631 rectifié bis et I-2748 n’ont plus d’objet.
+NAV	pjlf2026
+ART	Article 43
+P	Mme Maryse Carrère. Non, je le retire, madame la présidente.
+P	Mme la présidente. L’amendement n° I-2079 rectifié bis est retiré.
+P	Je mets aux voix les amendements identiques nos I-936, I-1287 rectifié et I-1481.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. Je suis saisie de trois amendements faisant l’objet d’une discussion commune.
+P	L’amendement n° I-2784, présenté par le Gouvernement, est ainsi libellé :
+P	Quel est l’avis de la commission ?
+P	M. Jean-François Husson, rapporteur général de la commission des finances. Je suis tout à fait favorable à ces trois amendements devenus identiques.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-952 rectifié bis, I-2784 rectifié, et I-1066 rectifié.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. Je mets aux voix l’article 43, modifié.
+P	(L’article 43 est adopté.)
+NAV	pjlf2026
+ART	Article 44
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Le Gouvernement s’en remet à la sagesse de la Haute Assemblée.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-27, I-224 rectifié ter et I-1067.
+P	(Les amendements sont adoptés.)
+P	Mme la présidente. Je mets aux voix l’article 44, modifié.
+P	(L’article 44 est adopté.)
+NAV	pjlf2026
+ART	Article 45 (précédemment examiné)
+NAV	pjlf2026
+ART	Article 46
+P	Admettons que nous cherchions de l’argent et réfléchissons. Pour que cela fonctionne, il va falloir mettre en place un dispositif considérable, avec des applicatifs qui n’existent pas, pour éventuellement réussir à reconstituer les sommes.
+P	À la question des principes, évoquée par mes collègues, s’ajoute donc celle de l’application concrète : dans la vraie vie, le dispositif ne « tourne pas », comme dit fréquemment M. le rapporteur général. Enfin, un problème se pose pour les parties civiles : on ne peut prétendre que l’on veut mettre l’accent sur le sort des victimes et ne pas s’intéresser à elles le moment venu.
+P	Mme la présidente. Je mets aux voix les amendements identiques nos I-746, I-1155 rectifié et I-2273.
+P	(Les amendements ne sont pas adoptés.)
+P	Mme la présidente. L’amendement n° I-2749, présenté par M. Husson, au nom de la commission des finances, est ainsi libellé :
+P	Après l’alinéa 13
+P	Mme la présidente. Quel est l’avis du Gouvernement ?
+P	M. David Amiel, ministre délégué. Favorable.
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2749.
+P	(L’amendement est adopté.)
+P	Mme la présidente. Je mets aux voix l’article 46, modifié.
+P	(L’article 46 est adopté.)
+NAV	pjlf2026
+ART	Article 47
+P	Par dérogation à l’article L. 1511-1-2 du code général des collectivités territoriales, les corrections financières résultant des décisions d’exécution de la Commission européenne prises dans le cadre des procédures d’apurement des dépenses du fonds européen agricole pour le développement rural, exécutées depuis le 1er janvier 2014 en application du règlement (UE) n° 1305/2013 du Parlement européen et du Conseil du 17 décembre 2013, sont prises en charge de manière forfaitaire par l’État et chacune des autres autorités de gestion de ce fonds.
+P	Les conditions et modalités de répartition de ces corrections financières entre ces autorités de gestion sont fixées par décret, en tenant notamment compte, d’une part, du montant des paiements exécutés au titre de chaque programme de développement rural placé sous leur autorité, d’autre part, de l’origine et de la proportion des erreurs constatées dans chaque programme de développement rural prises en compte dans le calcul des corrections financières par la Commission européenne – (Adopté.)
+NAV	pjlf2026
+ART	Après l’article 47
+P	M. David Amiel, ministre délégué. J’entends ce que vous dites, madame la sénatrice. Il faut effectivement que nous prenions le temps d’approfondir la question et de prolonger d’un an le dispositif, comme vous le proposez.
+P	C’est la raison pour laquelle le Gouvernement a émis un avis favorable sur ce sous-amendement.
+P	Mme la présidente. Je mets aux voix le sous-amendement n° I-2798.
+P	(Le sous-amendement est adopté.)
+P	Mme la présidente. Je mets aux voix l’amendement n° I-2642, modifié.
+P	(L’amendement est adopté.)
+P	Mme la présidente. En conséquence, un article additionnel ainsi rédigé est inséré dans le projet de loi, après l’article 47.
+P	Mes chers collègues, je vais lever la séance.
+P	Nous avons examiné aujourd’hui 400 amendements. Je vous remercie tous, sur quelque travée que vous siégiez, des efforts que vous avez réalisés pour que nous puissions tenir les délais prévus. (Applaudissements.)
+NAV	pjlf2026
+P	9
+S1	Ordre du jour

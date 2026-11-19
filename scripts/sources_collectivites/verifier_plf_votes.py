@@ -4,7 +4,10 @@ Le dossier contient AN_CR_<date>_<premiere|deuxieme>_seance.html (06_PROMOTION/R
 Une seance integree par la veille automatique (veille_plf.py, 05/11/2026) porte son texte dans le depot
 (`texte`, `sha256_texte`, dossier comptes_rendus/) : elle se relit sans le dossier, donc aussi en CI. Sans dossier, les
 seances archivees hors depot sont dites « hors depot » et ne sont pas relues.
-Sort 1 a la premiere citation introuvable ou a la premiere empreinte fausse : une citation non retrouvee ne se publie pas."""
+Sort 1 a la premiere citation introuvable ou a la premiere empreinte fausse : une citation non retrouvee ne se publie pas.
+Senat (19/11/2026) : comptes rendus integraux archives par la veille au format « lignes » (un paragraphe par ligne), relus
+en texte plat ; transmission, ouverture de la discussion et premiere partie (etapes), votes d'articles, sort des
+amendements de la commission (amendements_senat) et amendements de suppression lus dans le jeu Ameli (commission_senat)."""
 import hashlib
 import html
 import json
@@ -37,6 +40,11 @@ def main():
             if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest() != s["sha256_texte"]:
                 sys.exit(f"ECHEC : texte du compte rendu {cle} absent du depot ou empreinte differente")
             textes[cle] = p.read_text(encoding="utf-8")
+            if s.get("format") == "lignes":
+                # Compte rendu integral du Senat (veille_plf.py, 19/11/2026) : une ligne par paragraphe, « TYPE<tab>texte » ;
+                # la citation se relit dans le texte plat, paragraphes joints par une espace (navigation exclue).
+                textes[cle] = " ".join(x.split("\t", 1)[1] for x in textes[cle].splitlines()
+                                       if "\t" in x and not x.startswith("NAV\t"))
         elif d is None:
             hors.add(cle)
         elif s["sha256_html"] not in par_sha:
@@ -83,13 +91,23 @@ def main():
             if norm(x) not in t:
                 sys.exit(f"ECHEC : art. {c['article']} ({c['amendement']}) : « {x} » introuvable")
         print(f"art. {c['article']} : {c['statut']} en commission ({c['amendement']}) -- citations retrouvees")
-    # Commission des finances du Senat (19/11/2026) : citations relues dans la liasse archivee dans le depot.
+    # Commission des finances du Senat (19/11/2026) : citations relues dans la liasse archivee dans le depot, ou dans la page
+    # de l'amendement archivee par la veille (source « ameli »).
     for c in v.get("commission_senat", []):
         t = textes[c["seance"]]
         for x in c["citations"]:
             if norm(x) not in t:
                 sys.exit(f"ECHEC : art. {c['article']} ({c['amendement']}, Senat) : « {x} » introuvable")
         print(f"art. {c['article']} : {c['statut']} en commission du Senat ({c['amendement']}) -- citations retrouvees")
+    # Sort des amendements de la commission, lu par la veille dans le compte rendu integral du Senat (19/11/2026).
+    for a in v.get("amendements_senat", []):
+        if norm(a["citation"]) not in textes[a["seance"]] or a["amendement"] not in a["citation"]:
+            sys.exit(f"ECHEC : amendement {a['amendement']} ({a['sort']}, Senat) : « {a['citation'][:80]} » introuvable")
+        print(f"amendement {a['amendement']} : {a['sort']} en seance du Senat -- citation retrouvee")
+    # Les entrees du Senat se relisent toutes dans le depot : aucune ne peut etre « hors depot ».
+    for a in v["articles"]:
+        if v["seances"][a["seance"]].get("assemblee") == "Sénat" and "texte" not in v["seances"][a["seance"]]:
+            sys.exit(f"ECHEC : art. {a['article']} : seance du Senat {a['seance']} sans texte archive dans le depot")
     print("OK : %d article(s) relu(s), %d decision(s) de commission%s ; toutes citations retrouvees"
           % (n, len(v.get("commission", [])) if d else 0,
              (" ; hors depot, non relues ici : %s" % ", ".join(sorted(hors))) if hors else ""))
