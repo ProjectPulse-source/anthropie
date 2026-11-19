@@ -74,6 +74,33 @@
    "sha256_html": "1e098cc3c61d91ddc9495391ee321a3cb9b43fcdc86cac0322b7188430b8600f",
    "texte": "comptes_rendus/SENAT-CF-2026-11-19.txt",
    "sha256_texte": "179e43369be53ea0aac88df0c2f3cdc5766be42b5fa209e48cd0e4f67ec60367"
+  },
+  "SENAT-DOSLEG-2026-11-19": {
+   "date": "2026-11-19",
+   "assemblee": "Sénat",
+   "seance": "dossier législatif du projet de loi de finances pour 2027, lu le jeudi 19 novembre 2026",
+   "url": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
+   "sha256_html": "752f61e658fd886d00ddb28b300a1f01511d54debe6e7f7ab91a19493496867b",
+   "texte": "comptes_rendus/SENAT-DOSLEG-2026-11-19.txt",
+   "sha256_texte": "6182ec904920a5317eb88f56d8b31d6e476956783c7ff73ba84ee088e9527c2e"
+  },
+  "SENAT-AMDT-I-51": {
+   "date": "2026-11-12",
+   "assemblee": "Sénat",
+   "seance": "amendement n[°o] ?I-51 de la commission des finances, page lue le jeudi 19 novembre 2026",
+   "url": "https://www.senat.fr/amendements/2026-2027/155/Amdt_I-51.html",
+   "sha256_html": "5321242d9947b354804cb7cebaeb0d54020def27a23e5ca517eb68db916f9083",
+   "texte": "comptes_rendus/SENAT-AMDT-I-51.txt",
+   "sha256_texte": "0b5d882e1d9565dcc4cea721b9f3f99b7d48e348a3c07c2cd5295c6f8aa7ff73"
+  },
+  "SENAT-AMDT-I-61": {
+   "date": "2026-11-12",
+   "assemblee": "Sénat",
+   "seance": "amendement n[°o] ?I-61 de la commission des finances, page lue le jeudi 19 novembre 2026",
+   "url": "https://www.senat.fr/amendements/2026-2027/155/Amdt_I-61.html",
+   "sha256_html": "d5c9aa720491f0938ba32b9c926eb19604b7f630141f6239eb9dd8fe39f23ae5",
+   "texte": "comptes_rendus/SENAT-AMDT-I-61.txt",
+   "sha256_texte": "0a94df90435395e1bf086ee53c5378a84fec3659a205437c21169a9560cd6b64"
   }
  },
  "articles": [
@@ -193,6 +220,13 @@
    "etape": "senat_commission_adoption",
    "seance": "SENAT-CF-2026-11-19",
    "citation": "Les amendements adoptés par la commission sur la première partie"
+  },
+  {
+   "etape": "senat_transmis",
+   "seance": "SENAT-DOSLEG-2026-11-19",
+   "citation": "Texte n° 155 (2026-2027) transmis au Sénat le 19 novembre 2026",
+   "date": "2026-11-19",
+   "texte_senat": "n° 155 (2026-2027)"
   }
  ],
  "texte_rejete": {
@@ -261,6 +295,28 @@
     "N° I-48 DIRECTION DE LA SÉANCE (n° 999) A M E N D E M E N T présenté par Mme LAVARDE _________________ ARTICLE 37",
     "Il propose tout d’abord de diminuer d’un milliard d’euros le montant global de la CPEB",
     "Le nombre des communes contributrices serait ainsi ramené de 14 000 à 4 000"
+   ]
+  },
+  {
+   "article": 40,
+   "amendement": "I-51",
+   "seance": "SENAT-AMDT-I-51",
+   "statut": "suppression_adoptee",
+   "source": "ameli",
+   "citations": [
+    "N° I-51 12 novembre 2026 AMENDEMENT",
+    "au nom de la commission des finances ARTICLE 40 Supprimer cet article."
+   ]
+  },
+  {
+   "article": 53,
+   "amendement": "I-61",
+   "seance": "SENAT-AMDT-I-61",
+   "statut": "suppression_adoptee",
+   "source": "ameli",
+   "citations": [
+    "N° I-61 12 novembre 2026 AMENDEMENT",
+    "au nom de la commission des finances ARTICLE 53 Supprimer cet article."
    ]
   }
  ]
