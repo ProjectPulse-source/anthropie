@@ -1,4 +1,4 @@
-# relu le 2026-11-13 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 3898af2 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 1e2cb088 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 Six mois pour récupérer un point de permis quand l’infraction n’en a retiré qu’un, deux années consécutives sans sinistre pour effacer un malus, cinq ans au plus pour une interdiction d’émettre des chèques, quarante ans pour la fiche d’une condamnation pour crime ou délit — parfois davantage.
@@ -6,10 +6,10 @@ Le droit français ne conserve pas toutes les traces du passé selon les mêmes 
 Certaines disparaissent avec le temps, d’autres après un remboursement déclaré, une réhabilitation ou une décision judiciaire.
 Et supprimer une inscription ne signifie pas toujours effacer l’information.
 Pour savoir quand une trace cesse de produire ses effets, trois questions comptent : quel registre la conserve, quelle condition permet d’en sortir et qui doit agir ?
-Page mise à jour le 13 novembre 2026
+Page mise à jour le 19 novembre 2026
 Une dette se rembourse, une peine s’exécute, une maladie se soigne (la maladie n’est pas une erreur, mais elle aussi laisse une trace).
 Cela ne fait pas nécessairement disparaître toutes les conséquences qui leur sont associées : selon le registre, il faut laisser passer un délai, remplir une condition, obtenir une décision ou attendre qu’un organisme accomplisse une formalité.
-Cette page donne ces délais et ces conditions pour les principaux registres, d’après les textes en vigueur au 1er novembre 2026, relus sur Légifrance le 12 novembre 2026.
+Cette page donne ces délais et ces conditions pour les principaux registres, d’après les textes en vigueur au 20 novembre 2026, relus sur Légifrance le 19 novembre 2026.
 Elle décrit des règles générales ; elle ne remplace pas un conseil juridique, et chaque section renvoie au texte qui fait foi.
 Le tableau se lit registre par registre ; viennent ensuite quatre situations courantes, avec ce qu’il faut vérifier et à qui s’adresser.
 Le tableau : combien de temps, et qu’est-ce qui efface ?
@@ -50,16 +50,16 @@ Casier, bulletin n° 1
 un délai de retrait de la fiche
 40 ans sans nouvelle condamnation criminelle ou correctionnelle ; 3 ans pour une contravention, une dispense de peine, une amende forfaitaire délictuelle ou une composition pénale, ces deux dernières sans nouvelle condamnation criminelle ou correctionnelle ni nouvelle mesure de même nature dans l’intervalle ; 4 ans pour une contravention dont la récidive constitue un délit
 le prononcé de la condamnation, ou le jour où elle est devenue définitive ; pour une amende forfaitaire délictuelle, son paiement (autre cas : art.
-769, 11°) ; pour une composition pénale, le jour où son exécution a été constatée
+769, 11°), mais ces amendes ne sont pas encore enregistrées au casier (annoncé pour fin 2027 par le ministère de la Justice, sans reprise prévue de celles déjà prononcées) ; pour une composition pénale, le jour où son exécution a été constatée
 exclus du délai de 40 ans : faits imprescriptibles, condamnations étrangères ; retrait plus tôt si la juridiction qui prononce une réhabilitation judiciaire en ordonne la suppression (art.
 769, 8°)
 aucune démarche pour le retrait automatique
 Permis à points
 un délai de récupération des points
 2 ans sans infraction entraînant un retrait de points (3 ans si l’une des infractions est un délit ou une contravention de 4e ou 5e classe) ; 6 mois quand une infraction n’a retiré qu’un point, sans nouvelle infraction entraînant un retrait de points ; pour les points retirés pour des contraventions des quatre premières classes, au plus tard 10 ans après la condamnation définitive ou le paiement de l’amende forfaitaire, même après une nouvelle infraction
-la dernière infraction établie (paiement de l’amende, condamnation définitive…)
+le paiement de la dernière amende forfaitaire, l’émission du titre exécutoire de la dernière amende forfaitaire majorée, la dernière condamnation définitive ou l’exécution de la dernière composition pénale
 un stage par an ; règles propres au permis probatoire ; un permis à zéro point perd sa validité
-aucune démarche, sauf pour le stage
+aucune démarche, sauf pour le stage, obligatoire pendant le délai probatoire après un retrait d’au moins trois points, dans les quatre mois
 Assurance auto, malus
 un plafond du coefficient
 après 2 années consécutives sans sinistre, coefficient ramené à 1 au plus
@@ -70,7 +70,7 @@ Assurance d’un prêt, cancer ou hépatite C
 une interdiction de demander l’information
 5 ans
 la fin du protocole thérapeutique, sans rechute
-prêts couverts par la convention AERAS, assurance prenant fin avant le 71e anniversaire de l’assuré ; pour un crédit immobilier, aucun questionnaire de santé si la part assurée, tous crédits cumulés, ne dépasse pas 200 000 € par assuré et que le crédit est remboursé avant le 60e anniversaire de l’assuré
+prêts couverts par la convention AERAS, assurance prenant fin avant le 71e anniversaire de l’assuré ; pour un crédit immobilier, aucun questionnaire de santé si la part assurée sur l’encours cumulé des contrats de crédit ne dépasse pas 200 000 € par assuré et que le crédit est remboursé avant le 60e anniversaire de l’assuré
 aucune démarche : l’antécédent n’a plus à être déclaré
 Ces délais ne mesurent pas la même chose : certains bornent la conservation d’une donnée, d’autres conditionnent une réhabilitation, une récupération de points ou l’interdiction de demander une information.
 Lu à partir de sa dernière colonne, le tableau montre aussi ce que les durées seules ne disent pas : une trace peut cesser avec le temps, par une démarche de la personne, par la déclaration d’un tiers, ou, comme on le verra, par la suppression d’une règle pour toute une catégorie.
@@ -79,29 +79,36 @@ Qui accompagne une personne part de sa situation plutôt que du registre ; en vo
 Ces repères n’épuisent pas l’examen d’un dossier.
 La dette est payée, l’inscription au FICP demeure
 La radiation suit la déclaration du paiement intégral, et cette déclaration revient à l’établissement qui a déclaré l’incident, non à la personne.
+À compter du 20 novembre 2026, elle doit être faite au plus tard le quatrième jour ouvré qui suit le paiement, ou qui suit le jour où l’établissement en est informé si la personne a payé un tiers qui n’alimente pas le fichier.
 Si le crédit a été cédé, la rédaction en vigueur à compter du 20 novembre 2026 met cette déclaration à la charge de l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier (un établissement de crédit, par exemple), ou du gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits.
 Tout autre repreneur informe du paiement l’entreprise responsable de l’inscription, qui le déclare.
-Un contrat en cours à cette date reste régi par les règles antérieures.
+Un contrat en cours à cette date reste régi par les règles antérieures du code de la consommation ; l’arrêté du 11 août 2026, lui, ne prévoit pas de disposition transitoire.
 Ce que contient le fichier, la personne peut le demander à la Banque de France, en ligne depuis son espace personnel, à un guichet sur rendez-vous ou par courrier avec une copie de sa pièce d’identité.
 Si l’établissement ne fait pas la déclaration, elle peut saisir le médiateur de sa banque, puis adresser une réclamation à la CNIL (Service-public, fiche F17608, vérifiée par la DILA, Direction de l’information légale et administrative, le 25 septembre 2025).
-L’inscription ne dépasse pas, de toute façon, cinq ans (le détail).
+Une inscription pour un incident de remboursement ne dépasse pas, de toute façon, cinq ans (le détail).
 Une condamnation pèse sur une embauche
 Il faut d’abord savoir quel bulletin est en cause, et quel est l’employeur.
-Le bulletin n° 2 est délivré, avec ses mentions, aux administrations de l’État et à certains employeurs pour leurs recrutements (collectivités locales, SNCF, EDF ou Banque de France, par exemple, et, pour un emploi au contact habituel de mineurs, les administrations, les collectivités et certains établissements publics).
+Le bulletin n° 2 est délivré, avec ses mentions, aux administrations de l’État, notamment pour un emploi public, et à certains employeurs pour leurs recrutements (collectivités locales, SNCF, EDF ou Banque de France, par exemple, et, pour un emploi au contact habituel de mineurs, les administrations, les collectivités et certains établissements publics).
 Les dirigeants de certains organismes qui exercent auprès de mineurs une activité culturelle, éducative ou sociale, et dont un décret fixe la liste, ne l’obtiennent que s’il ne porte la mention d’aucune condamnation.
 Les autres employeurs n’obtiennent aucun bulletin : seule la personne peut demander son bulletin n° 3 et le leur remettre (Code de procédure pénale, art.
 777).
 Plusieurs voies retirent une condamnation du bulletin n° 2.
-D’abord, des sorties automatiques : sursis devenu non avenu, sauf mesure qui l’y maintient ; certaines peines au bout de trois ou cinq ans ; amendes forfaitaires délictuelles trois ans après leur paiement (Code de procédure pénale, art.
+D’abord, des sorties automatiques : sursis devenu non avenu, sauf mesure qui l’y maintient ; certaines peines au bout de trois ou cinq ans ; amendes forfaitaires délictuelles (une sanction d’un montant fixé à l’avance, dont le paiement éteint les poursuites pour les délits où la loi le prévoit : Code de procédure pénale, art.
+495-17) trois ans après leur paiement, si le casier les enregistre comme le prévoit le ministère de la Justice, pour fin 2027 (Code de procédure pénale, art.
 775).
 Ensuite, la réhabilitation légale, acquise sans démarche après trois, cinq ou dix ans selon la peine, pour les peines que vise l’article 133-13 du Code pénal.
 Enfin, l’exclusion, que le tribunal décide dans le jugement ou plus tard sur requête de la personne, sauf si elle a été condamnée pour une infraction de l’article 706-47 du Code de procédure pénale.
-Ce qu’il faut vérifier : la peine prononcée et la date de son paiement, de son exécution ou de sa prescription, ou, pour un sursis, celle où la condamnation est devenue non avenue, d’où court le délai de réhabilitation ; une interdiction, une incapacité ou une déchéance prononcée à titre définitif comme peine complémentaire, un suivi socio-judiciaire ou une interdiction d’activité au contact de mineurs, qui retarde les effets de la réhabilitation (le détail).
+Ce qu’il faut vérifier : la peine prononcée et la date de son paiement, de son exécution ou de sa prescription, ou, pour un sursis, celle où la condamnation est devenue non avenue, d’où court le délai de réhabilitation ; une interdiction, une incapacité ou une déchéance prononcée à titre définitif comme peine complémentaire, un suivi socio-judiciaire (des mesures de surveillance et d’assistance destinées à prévenir la récidive, sous le contrôle du juge de l’application des peines : Code pénal, art.
+131-36-1) ou une interdiction d’activité au contact de mineurs, qui retarde les effets de la réhabilitation (le détail).
 Un jeune conducteur perd des points pendant le permis probatoire
 Le délai probatoire dure trois ans, deux après un apprentissage anticipé de la conduite, et il est réduit pour le titulaire d’un premier permis qui suit une formation complémentaire sans commettre d’infraction ayant donné lieu à un retrait de points ou à une restriction ou une suspension du droit de conduire.
 Le permis y gagne des points chaque année, tant qu’aucune infraction ayant donné lieu à un retrait de points n’a été commise depuis son début : une seule suffit à arrêter ce gain, et la récupération de tous les points après deux ans sans infraction ne joue pas pendant ce délai (Code de la route, art.
 L.
 223-1).
+Une infraction qui retire au moins trois points pendant ce délai oblige en outre à suivre, dans les quatre mois, un stage de sensibilisation qui se substitue à l’amende de cette infraction ; ne pas le suivre est puni d’une amende de quatrième classe et peut entraîner une suspension du permis (art.
+L.
+223-6 et R.
+223-4).
 Ce qu’il faut vérifier : le solde de points, que le titulaire consulte sur le téléservice Mes points permis, avec un calendrier prévisionnel de récupération (Service-public, consulter les informations du permis) ; à zéro point, le permis perd sa validité (le détail).
 La cause est réglée depuis longtemps, une trace demeure
 La dernière colonne du tableau dit qui la fait cesser, et l’on y lit trois cas.
@@ -111,10 +118,12 @@ Un tiers, enfin, déclare le paiement, et c’est cette déclaration qui fait ra
 Savoir lequel des trois cas s’applique, c’est savoir à qui s’adresser (le tableau).
 Combien de temps reste-t-on fiché à la Banque de France ?
 Le fichier des incidents de remboursement des crédits aux particuliers (FICP) reçoit les incidents de paiement caractérisés que déclarent les établissements de crédit, les sociétés de financement, les établissements de paiement et de monnaie électronique et quelques autres organismes que vise le code.
-Ces informations « ne peuvent en tout état de cause être conservées dans le fichier pendant plus de cinq ans à compter de la date d’enregistrement par la Banque de France de l’incident ».
+Ces informations « ne peuvent être conservées dans le fichier pendant plus de cinq ans à compter de la date d’enregistrement par la Banque de France de l’incident ayant entraîné la déclaration ».
 Elles sont radiées « immédiatement à la réception de la déclaration de paiement intégral des sommes dues » — déclaration que fait l’établissement, non la personne (Code de la consommation, art.
 L.
 752-1).
+À compter du 20 novembre 2026, cette déclaration doit être faite au plus tard le quatrième jour ouvré qui suit le paiement intégral ; si la personne a payé un tiers qui n’alimente pas le fichier, le délai court du jour où l’établissement reçoit de ce tiers l’information du paiement (arrêté du 26 octobre 2010 relatif au FICP, art.
+6, II, dans sa rédaction issue de l’arrêté du 11 août 2026).
 Le code assigne au fichier une finalité : fournir aux prêteurs « un élément d’appréciation de la solvabilité » de qui demande un crédit, sans que l’inscription interdise de lui en accorder un (art.
 L.
 751-2).
@@ -133,11 +142,15 @@ Ces mentions sont radiées plus tôt si la personne justifie auprès de la Banqu
 11).
 Ce qui change le 20 novembre 2026.
 La nouvelle rédaction de l’article L.
-752-1, déjà publiée, garde la durée de cinq ans.
-Elle précise qui doit déclarer le paiement quand le crédit a été cédé : l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier, ou le gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits ; tout autre repreneur informe du paiement l’entreprise responsable de l’inscription, qui le déclare (version au 20 novembre 2026).
-C’est la faille que décrit le livre : une dette payée dont la trace demeure, faute que quelqu’un déclare le paiement.
+752-1, en vigueur à compter de ce jour, garde la durée de cinq ans.
+Elle précise qui doit déclarer le paiement quand le crédit a été cédé : l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier, ou le gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits ; tout autre repreneur informe du paiement l’entreprise responsable de l’inscription, qui le déclare (version au 20 novembre 2026, issue des ordonnances n° 2025-880 du 3 septembre 2025 et n° 2025-1154 du 2 décembre 2025).
+L’arrêté du 11 août 2026, qui entre en vigueur le même jour, en fixe les modalités ; il ajoute que l’entreprise tenue de déclarer au fichier à laquelle un repreneur qui n’y est pas lui-même tenu confie le recouvrement devient responsable de l’inscription (arrêté du 26 octobre 2010, art.
+6-1, arrêté du 11 août 2026).
+La réforme traite ainsi, pour les crédits cédés, une forme de la faille que décrit le livre : une dette payée dont la trace demeure, faute que quelqu’un déclare le paiement.
 Les contrats de crédit en cours au 20 novembre 2026 restent toutefois régis par les règles antérieures ; les exceptions que l’ordonnance du 3 septembre 2025 prévoit pour les crédits à durée indéterminée en cours ne portent pas sur cet article (ordonnance n° 2025-880, art.
-99).
+99 ; ordonnance n° 2025-1154, art.
+7).
+Cette réserve est celle du code : l’arrêté du 11 août 2026 ne prévoit, lui, aucune disposition transitoire.
 Pour les chèques, la règle est voisine et l’initiative inverse.
 Après un chèque sans provision, la banque enjoint de ne plus émettre de chèques ; la personne retrouve cette faculté dès qu’elle justifie avoir réglé le chèque ou constitué la provision, et, à défaut, « à l’issue d’un délai de cinq ans qui court à compter de l’injonction » (Code monétaire et financier, art.
 L.
@@ -156,7 +169,7 @@ Les dirigeants de certains organismes qui exercent auprès de mineurs une activi
 Le bulletin n° 3 ne retient que les peines privatives de liberté de plus de deux ans prononcées sans sursis (en France ou à l’étranger) ou à exécuter en totalité après révocation du sursis, celles de deux ans au plus dont la juridiction a ordonné la mention, et, pendant leur durée, certaines interdictions, déchéances ou incapacités ainsi que le suivi socio-judiciaire et l’interdiction d’activité au contact de mineurs.
 Seule la personne peut l’obtenir (art.
 777).
-La réhabilitation légale est acquise de plein droit, sans démarche, à la personne qui n’a subi aucune nouvelle condamnation criminelle ou correctionnelle pendant un délai de :
+La réhabilitation légale est acquise de plein droit, sans démarche, à la personne physique qui n’a subi aucune nouvelle condamnation criminelle ou correctionnelle pendant un délai de :
 Trois ans pour une amende ou des jours-amende (une contribution quotidienne fixée par le juge, due pendant un certain nombre de jours ; Code pénal, art.
 131-5), à compter du paiement ou de la prescription
 Cinq ans pour une condamnation unique à un emprisonnement d’un an au plus, ou à une peine autre que la réclusion criminelle, la détention criminelle, l’emprisonnement, l’amende ou le jour-amende (par exemple une détention à domicile sous surveillance électronique, un travail d’intérêt général ou un stage, prononcés à la place de l’emprisonnement ; Code pénal, art.
@@ -166,7 +179,7 @@ Un emprisonnement exécuté sous bracelet électronique (Code pénal, art.
 132-25), ou assorti d’un sursis avec travail d’intérêt général, reste un emprisonnement : c’est sa durée qui fixe le délai.
 Pour une condamnation avec sursis, le délai court du jour où elle est « non avenue » : pour un sursis simple, cinq ans après la condamnation, si aucun crime ou délit commis pendant ces cinq ans n’en a fait révoquer totalement le sursis (Code pénal, art.
 132-35).
-Au-delà de ces trois cas — notamment réclusion criminelle, emprisonnement de plus de dix ans, emprisonnements cumulés de plus de cinq ans —, la loi ne prévoit pas de réhabilitation de plein droit.
+Au-delà de ces trois cas — notamment réclusion criminelle, emprisonnement de plus de dix ans, emprisonnements cumulés de plus de cinq ans —, la loi ne prévoit pas de réhabilitation de plein droit ; reste la réhabilitation judiciaire, que la personne condamnée doit demander (Service-public, fiche F31802, pour ses conditions et ses délais).
 Ces délais sont doublés lorsque la condamnation a sanctionné des faits commis en état de récidive légale (Code pénal, art.
 133-13, version en vigueur jusqu’au 31 décembre 2028).
 La récidive légale suppose une première condamnation définitive, puis une nouvelle infraction ; ses conditions et ses délais varient selon l’une et l’autre (Code pénal, art.
@@ -175,20 +188,23 @@ La récidive légale suppose une première condamnation définitive, puis une no
 La réhabilitation efface les incapacités et déchéances ; elle ne produit ses effets qu’au bout de quarante ans si une interdiction, une incapacité ou une déchéance a été prononcée à titre définitif comme peine complémentaire, et seulement à la fin de la mesure pour un suivi socio-judiciaire ou une interdiction d’activité au contact de mineurs (art.
 133-16).
 Une condamnation réhabilitée ne figure plus au bulletin n° 2 (Code de procédure pénale, art.
-775, 5°), ni donc au bulletin n° 3, qui ne relève que les condamnations non exclues du bulletin n° 2 (art.
+775, 5°), ni donc au bulletin n° 3, qui, pour les condamnations françaises, ne relève que celles non exclues du bulletin n° 2 (art.
 777).
 Les sorties automatiques du bulletin n° 2.
-Sans démarche ni décision, n’y figurent pas, ou plus, les condamnations pour contravention, les condamnations avec sursis devenues non avenues, les peines des articles 131-5 à 131-11 du Code pénal prononcées sans sursis, cinq ans après être devenues définitives (trois ans pour des jours-amende, sauf interdiction plus longue), et les amendes forfaitaires délictuelles trois ans après leur paiement ou à l’expiration du délai mentionné au second alinéa de l’article 495-19 (Code de procédure pénale, art.
+Sans démarche ni décision, n’y figurent pas, ou plus, les condamnations pour contravention, les condamnations avec sursis devenues non avenues, les peines des articles 131-5 à 131-11 du Code pénal prononcées sans sursis, cinq ans après être devenues définitives (trois ans pour des jours-amende ; une interdiction, une déchéance ou une incapacité de plus de cinq ans y reste le temps qu’elle dure), et les amendes forfaitaires délictuelles trois ans après leur paiement ou à l’expiration du délai mentionné au second alinéa de l’article 495-19 (Code de procédure pénale, art.
 775, version en vigueur depuis le 20 août 2026).
-Avant cette date, les amendes forfaitaires délictuelles n’y figuraient jamais ; elles y restent désormais jusqu’à ce terme.
+Avant cette date, les amendes forfaitaires délictuelles n’y figuraient jamais ; la loi les y fait désormais figurer jusqu’à ce terme.
+Le casier ne les enregistre pourtant pas encore : selon le ministère de la Justice, leur enregistrement est « planifié pour fin 2027 », et la reprise de celles déjà prononcées n’est pas prévue à ce stade (réponses aux questions écrites n° 14425 et 16852, Journal officiel des 30 juin et 25 août 2026).
 Pour une condamnation avec sursis, la mention demeure toutefois pendant la durée de la mesure en cas de suivi socio-judiciaire, d’interdiction d’une activité au contact habituel de mineurs, ou d’interdiction, d’incapacité ou de déchéance prononcée à titre définitif, et pour une inéligibilité prononcée comme peine complémentaire.
 L’exclusion du bulletin n° 2 peut être décidée par le tribunal, dans le jugement ou plus tard sur requête de la personne ; elle emporte relèvement des interdictions qui résultaient de la condamnation.
 Elle n’est pas ouverte aux personnes condamnées pour les infractions, notamment sexuelles, de l’article 706-47 du Code de procédure pénale.
-Depuis le 20 août 2026, elle s’applique aussi aux amendes forfaitaires délictuelles (Code de procédure pénale, art.
+Depuis le 20 août 2026, elle s’applique aussi aux amendes forfaitaires délictuelles, ce qui reste sans objet tant que le casier ne les enregistre pas (Code de procédure pénale, art.
 775-1).
 Le casier lui-même perd ses fiches de condamnation quarante ans après leur prononcé, sans nouvelle condamnation criminelle ou correctionnelle, sauf pour les faits imprescriptibles et les condamnations prononcées par une juridiction étrangère, qui ont leurs propres règles.
-Les contraventions et les dispenses de peine en sortent trois ans après la condamnation définitive, quatre ans pour une contravention dont la récidive constitue un délit.
-Les amendes forfaitaires délictuelles en sortent trois ans après leur paiement ou à l’expiration du délai mentionné au second alinéa de l’article 495-19, et les compositions pénales trois ans après que leur exécution a été constatée, à condition, dans les deux cas, qu’aucune condamnation criminelle ou correctionnelle ni nouvelle mesure de même nature ne soit intervenue entre-temps.
+Les contraventions et les dispenses de peine (le juge déclare la personne coupable sans prononcer de peine, quand son reclassement est acquis, le dommage réparé et le trouble cessé : Code pénal, art.
+132-59) en sortent trois ans après la condamnation définitive, quatre ans pour une contravention dont la récidive constitue un délit.
+Les amendes forfaitaires délictuelles, une fois enregistrées, en sortent trois ans après leur paiement ou à l’expiration du délai mentionné au second alinéa de l’article 495-19, et les compositions pénales (des mesures que le procureur de la République peut proposer tant que l’action publique n’a pas été engagée : Code de procédure pénale, art.
+41-2) trois ans après que leur exécution a été constatée, à condition, dans les deux cas, qu’aucune condamnation criminelle ou correctionnelle ni nouvelle mesure de même nature ne soit intervenue entre-temps.
 La fiche peut aussi être retirée plus tôt, lorsque la juridiction qui prononce une réhabilitation judiciaire en ordonne expressément la suppression ; sans cet ordre, la réhabilitation ne retire pas la fiche, qui la mentionne.
 Le retrait de la fiche ne se confond donc ni avec la réhabilitation ni avec l’exclusion du bulletin n° 2 (art.
 769 ; Service-public, fiche F31802, vérifiée par la DILA le 20 octobre 2025).
@@ -236,11 +252,12 @@ L’antécédent n’a alors plus à être déclaré (convention AERAS, droit à
 Depuis le 1er juin 2022, une règle va plus loin pour les crédits immobiliers : « aucune information relative à l’état de santé ni aucun examen médical de l’assuré ne peut être sollicité » quand la part assurée sur l’encours cumulé des crédits ne dépasse pas 200 000 € par assuré et que le crédit est remboursé avant le 60e anniversaire de l’assuré (Code des assurances, art.
 L.
 113-2-1).
+Les assureurs n’appréciaient pas tous ce seuil de la même façon ; devant le Comité consultatif du secteur financier (CCSF), ils ont proposé de ne compter que les encours des crédits immobiliers, à partir du 1er septembre 2026 et au plus tard le 1er juin 2027 ; l’avis ne dit pas où en est chaque assureur (avis du CCSF, communiqué du 24 juin 2026).
 Là, le droit n’attend plus que le passé s’efface : il interdit de poser la question.
 Ce que montrent ces durées : un choix, et pas le même pour tout le monde
 D’un registre à l’autre, la durée d’une trace ne dit pas la gravité de l’erreur
 Six mois pour un point, cinq ans pour un incident de crédit non régularisé, quarante ans pour une condamnation pour crime ou délit inscrite au bulletin n° 1 : chaque durée est fixée par un texte.
-Et chaque trace a ses lecteurs : les prêteurs pour le fichier des incidents de crédit, que le code destine à l’appréciation de la solvabilité de qui demande un crédit ; les juges pour le bulletin n° 1 ; des administrations et des employeurs pour le bulletin n° 2 ; le nouvel assureur pour le relevé d’informations.
+Et chaque trace a ses lecteurs : les prêteurs pour le fichier des incidents de crédit, que le code destine à l’appréciation de la solvabilité de qui demande un crédit ; la justice et l’administration pénitentiaire pour le bulletin n° 1 ; des administrations et des employeurs pour le bulletin n° 2 ; le nouvel assureur pour le relevé d’informations.
 Certaines traces protègent, et c’est leur raison d’être.
 La question que pose La Société du premier coup est ailleurs : la durée est-elle proportionnée à ce que la trace protège encore, et quelqu’un est-il chargé de la réexaminer ?
 Qui efface compte autant que le délai
@@ -262,9 +279,10 @@ Aucun des textes cités ici ne la prévoit, et sa valeur dépendrait de la final
 Ce que cette page ne dit pas
 Elle résume des règles générales, avec leurs principales exceptions, sans tenir lieu de conseil juridique : les points de départ des délais, la récidive, les peines complémentaires et les infractions exclues ont leurs règles propres, qu’il faut lire dans le texte.
 Elle ne couvre pas les fichiers tenus par des acteurs privés (bailleurs, opérateurs, assureurs hors le relevé d’informations de l’assurance automobile), ni les fichiers de police.
-Le droit décrit est celui du 1er novembre 2026 : la nouvelle rédaction de l’article L.
-752-1 du Code de la consommation entre en vigueur le 20 novembre 2026, et les contrats de crédit en cours à cette date restent régis par les règles antérieures (ordonnance n° 2025-880 du 3 septembre 2025, art.
-99) ; l’ordonnance n° 2025-1091 du 19 novembre 2025, qui réécrit la partie législative du Code de procédure pénale, en abroge les articles législatifs relatifs au casier judiciaire cités ici, en principe au 1er janvier 2029.
+Le droit décrit est celui du 20 novembre 2026, jour où entrent en vigueur la nouvelle rédaction de l’article L.
+752-1 du Code de la consommation et l’arrêté du 11 août 2026 qui l’applique ; les contrats de crédit en cours à cette date restent régis, pour le code, par les règles antérieures (ordonnances n° 2025-880 du 3 septembre 2025, art.
+99, et n° 2025-1154 du 2 décembre 2025, art.
+7) ; l’ordonnance n° 2025-1091 du 19 novembre 2025, qui réécrit la partie législative du Code de procédure pénale, en abroge les articles législatifs relatifs au casier judiciaire cités ici, en principe au 1er janvier 2029 ; le projet de loi qui la ratifie, en première lecture au Sénat, permettrait de reporter cette date par décret jusqu’au 1er septembre 2030.
 Ce qu’une erreur coûte, et à qui
 La Société du premier coup
 Pourquoi certains peuvent recommencer — et d’autres non
@@ -280,7 +298,8 @@ Combien de temps reste-t-on fiché au FICP de la Banque de France ?
 Cinq ans au plus pour un incident de remboursement d’un crédit, à compter de l’enregistrement de l’incident par la Banque de France (Code de la consommation, art.
 L.
 752-1).
-Le paiement intégral des sommes dues entraîne une radiation immédiate, dès que l’établissement le déclare.
+Le paiement intégral des sommes dues entraîne une radiation immédiate, dès que l’établissement le déclare ; à compter du 20 novembre 2026, il doit le faire au plus tard le quatrième jour ouvré qui suit le paiement, ou qui suit l’information du paiement quand la personne a payé un tiers qui n’alimente pas le fichier (arrêté du 26 octobre 2010 relatif au FICP, art.
+6).
 À compter du 20 novembre 2026, une nouvelle rédaction précise qui déclare le paiement quand le crédit a été cédé ; les contrats en cours à cette date restent régis par les règles antérieures.
 Pour un plan de surendettement, l’inscription dure le temps du plan, sans pouvoir excéder sept ans, et cinq ans s’il est exécuté sans incident ; cinq ans après un rétablissement personnel (art.
 L.
@@ -290,12 +309,13 @@ Ces inscriptions sont radiées plus tôt si la personne justifie auprès de la B
 J’ai remboursé mon crédit : pourquoi suis-je encore fiché au FICP ?
 La radiation suit la déclaration du paiement intégral à la Banque de France, et cette déclaration revient à l’établissement qui a déclaré l’incident, non à la personne (Code de la consommation, art.
 L.
-752-1).
+752-1) ; à compter du 20 novembre 2026, elle doit être faite au plus tard le quatrième jour ouvré qui suit le paiement intégral, ou qui suit l’information du paiement si la personne a payé un tiers qui n’alimente pas le fichier (arrêté du 26 octobre 2010 relatif au FICP, art.
+6).
 Si le crédit a été cédé, la rédaction en vigueur à compter du 20 novembre 2026 met cette déclaration à la charge de l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier (un établissement de crédit, par exemple), ou du gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits.
 Tout autre repreneur informe du paiement l’entreprise responsable de l’inscription, qui le déclare.
-Un contrat en cours à cette date reste régi par les règles antérieures.
+Un contrat en cours à cette date reste régi par les règles antérieures du code de la consommation ; l’arrêté du 11 août 2026, lui, ne prévoit pas de disposition transitoire.
 La personne peut demander à la Banque de France ce que contient le fichier ; si l’établissement ne fait pas la déclaration, elle peut saisir le médiateur de sa banque, puis, si les difficultés persistent, la CNIL (Service-public, fiche F17608).
-L’inscription ne dépasse pas cinq ans.
+Une inscription pour un incident de remboursement ne dépasse pas cinq ans.
 Un employeur peut-il voir une condamnation inscrite au casier judiciaire ?
 Cela dépend de l’employeur.
 Certains employeurs et organismes expressément habilités obtiennent le bulletin n° 2 avec ses mentions ; les dirigeants de certains organismes qui exercent auprès de mineurs une activité culturelle, éducative ou sociale, et dont un décret fixe la liste, ne peuvent l’obtenir que s’il ne porte la mention d’aucune condamnation.
@@ -309,14 +329,14 @@ Le bulletin n° 2 est délivré avec ses mentions aux administrations de l’Ét
 776 et R.
 79).
 Une mention en sort d’elle-même dans plusieurs cas : condamnation avec sursis devenue non avenue, sauf suivi socio-judiciaire, interdiction définitive ou autre mesure qui l’y maintient pendant sa durée ; peines des articles 131-5 à 131-11 du Code pénal prononcées sans sursis, cinq ans après être devenues définitives (trois ans pour des jours-amende ; une interdiction de plus de cinq ans y reste le temps qu’elle dure) ; amendes forfaitaires délictuelles trois ans après leur paiement (Code de procédure pénale, art.
-775).
+775), si le casier les enregistre comme le prévoit le ministère de la Justice, pour fin 2027.
 La réhabilitation légale s’acquiert sans démarche, si aucune nouvelle condamnation criminelle ou correctionnelle n’intervient, trois, cinq ou dix ans après le paiement, l’exécution ou la prescription de la peine (pour un sursis, après la date où la condamnation est non avenue), pour les seules peines que vise l’article 133-13 du Code pénal.
 Ces délais sont doublés si la condamnation a sanctionné des faits commis en état de récidive légale, et les effets de la réhabilitation sont reportés en cas d’interdiction, d’incapacité ou de déchéance définitive, de suivi socio-judiciaire ou d’interdiction d’activité au contact de mineurs (art.
 133-16).
-La réhabilitation judiciaire est prononcée par une juridiction.
+La réhabilitation judiciaire est prononcée par une juridiction, à la demande de la personne condamnée.
 L’exclusion décidée par le tribunal, dans le jugement ou plus tard sur requête de la personne, n’est pas ouverte aux personnes condamnées pour une infraction de l’article 706-47 du Code de procédure pénale (art.
 775-1).
-Droit en vigueur au 1er novembre 2026.
+Droit en vigueur au 20 novembre 2026.
 Comment une condamnation disparaît-elle du casier judiciaire ?
 De plusieurs façons.
 La réhabilitation légale est acquise de plein droit, sans nouvelle condamnation criminelle ou correctionnelle, après un délai qui court du paiement, de l’exécution ou de la prescription de la peine (pour un sursis, du jour où la condamnation est non avenue) : trois ans pour une amende ou des jours-amende ; cinq ans pour une condamnation unique à un emprisonnement d’un an au plus ou à une peine autre que la réclusion criminelle, la détention criminelle, l’emprisonnement, l’amende ou le jour-amende ; dix ans pour une condamnation unique à un emprisonnement de dix ans au plus ou pour plusieurs totalisant cinq ans au plus.
@@ -335,10 +355,10 @@ Le tribunal peut aussi exclure la mention du bulletin n° 2, dans le jugement ou
 775-1), sauf pour les personnes condamnées pour certaines infractions, notamment sexuelles (art.
 706-47).
 Certaines mentions quittent en outre le bulletin n° 2 sans démarche : sursis devenu non avenu, sauf mesure qui l’y maintient pendant sa durée ; peines des articles 131-5 à 131-11 du Code pénal prononcées sans sursis, cinq ans après être devenues définitives (trois ans pour des jours-amende ; une interdiction de plus de cinq ans y reste le temps qu’elle dure) ; amendes forfaitaires délictuelles trois ans après leur paiement (Code de procédure pénale, art.
-775).
+775), si le casier les enregistre comme le prévoit le ministère de la Justice, pour fin 2027.
 Enfin, les fiches du casier, dont le bulletin n° 1 est le relevé intégral, sont retirées quarante ans après la condamnation, sans nouvelle condamnation criminelle ou correctionnelle, sauf pour les faits imprescriptibles et les condamnations étrangères ; celles des contraventions, des dispenses de peine, des amendes forfaitaires délictuelles et des compositions pénales le sont au bout de trois ou quatre ans, sous conditions (art.
 769).
-Droit en vigueur au 1er novembre 2026.
+Droit en vigueur au 20 novembre 2026.
 Combien de temps faut-il pour récupérer ses points de permis ?
 Le permis retrouve tous ses points après deux ans sans nouvelle infraction entraînant un retrait, trois ans si l’une des infractions est un délit ou une contravention de quatrième ou de cinquième classe ; ces délais courent de la dernière condamnation définitive, du paiement de la dernière amende forfaitaire, de l’émission du titre exécutoire de la dernière amende forfaitaire majorée ou de l’exécution de la dernière composition pénale.
 Quand une infraction n’a entraîné le retrait que d’un point, ce point est rendu six mois après cette même date, sans nouvelle infraction entraînant un retrait de points.
@@ -349,7 +369,7 @@ L.
 Ces règles valent pour un permis encore valide (à zéro point, il perd sa validité) ; le délai probatoire d’un jeune conducteur a ses règles propres (art.
 L.
 223-1).
-Droit en vigueur au 1er novembre 2026.
+Droit en vigueur au 20 novembre 2026.
 Combien de temps dure un malus en assurance auto ?
 Deux ans sans sinistre : après deux années consécutives sans sinistre, le coefficient de réduction-majoration ne peut être supérieur à 1 (annexe à l’article A.
 121-1 du Code des assurances, art.
@@ -360,9 +380,9 @@ Un sinistre responsable majore en règle générale le coefficient de 25 %, moit
 5) ; la majoration est de 20 % pour un véhicule à usage « Tournées ou Tous Déplacements », et aucune n’est appliquée au premier sinistre qui suit au moins trois ans au coefficient minimal (art.
 4).
 Le bonus, lui, avance de 5 % par an (7 % pour cet usage) : depuis le coefficient de départ, 1, il faut treize ans sans sinistre pour atteindre le coefficient minimal de 0,50 (neuf pour cet usage).
-Droit en vigueur au 1er novembre 2026.
+Droit en vigueur au 20 novembre 2026.
 Sources
-Textes en vigueur au 1er novembre 2026, lus sur Légifrance ce jour-là et relus le 12 novembre 2026 : Code de la consommation, art.
+Textes en vigueur au 20 novembre 2026, lus sur Légifrance le 1er novembre et relus les 12 et 19 novembre 2026 : Code de la consommation, art.
 L.
 752-1 (et sa version au 20 novembre 2026) et L.
 752-3 ; Code monétaire et financier, art.
@@ -383,6 +403,15 @@ A.
 L.
 1141-5 (version en vigueur, et version de 2016 à 2022 lue le 5 novembre 2026) ; ordonnance n° 2025-880 du 3 septembre 2025, art.
 99 ; loi n° 2022-270 du 28 février 2022 ; décret n° 2013-799 du 2 septembre 2013.
+Lus le 19 novembre 2026 : arrêté du 11 août 2026 modifiant l’arrêté du 26 octobre 2010 relatif au FICP (art.
+4, 5 et 10) ; ordonnance n° 2025-1154 du 2 décembre 2025, art.
+7 ; loi n° 2026-798 du 18 août 2026 (art.
+775 et 775-1 du Code de procédure pénale) ; réponses ministérielles aux questions écrites n° 14425 et 16852 (Assemblée nationale) ; avis du CCSF sur l’assurance emprunteur (communiqué du 24 juin 2026) ; projet de loi n° 604 (Sénat, 2025-2026), art.
+5 ; Code de la route, art.
+R.
+223-4 ; Code de procédure pénale, art.
+41-2 et 495-17 ; Code pénal, art.
+131-36-1 et 132-59.
 Lus le 12 novembre 2026, à la relecture de la page : Code de la consommation, art.
 L.
 711-1, L.

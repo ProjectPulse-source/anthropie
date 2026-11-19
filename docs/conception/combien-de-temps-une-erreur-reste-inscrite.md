@@ -42,6 +42,8 @@ n'est pas le temps seul, et l'effacement s'obtient de quatre manières différen
 - par un tiers : la radiation d'un incident au FICP dépend de la déclaration de l'établissement responsable de l'inscription (cession du crédit : R1-É11) ;
 - ou par une règle, pour toute une catégorie : l'indicateur « 040 » des dirigeants, retiré par décret en 2013 pour une liquidation unique, la liquidation restant communiquée aux banques cinq ans au lieu de trois (ce n'est pas un effacement : R2-13, D. 144-12 sondé).
 
+Le délai d'un tiers est lui-même borné : l'établissement responsable de l'inscription déclare le paiement intégral au plus tard le quatrième jour ouvré (arrêté FICP, art. 6, II, rédaction du 20/11/2026, lue au JO le 19/11 : relecture A, P1-2 ; sonde de la session). Et une règle en vigueur ne produit pas toujours son effet : les amendes forfaitaires délictuelles figurent au bulletin n° 2 en droit depuis le 20/08/2026, mais le casier ne les enregistre pas avant fin 2027, sans reprise prévue (QE 14425 et 16852 : relecture B, E1, P0 de la page du 13/11 ; sonde de la session sur le PDF du JO).
+
 Le même registre oublie aussi à des vitesses différentes selon le sens. Un malus revient au plus à 1 après deux années consécutives sans sinistre ; le bonus maximal demande treize ans depuis 1 (neuf pour un usage « Tournées ou Tous Déplacements » : R1-É1) ; le relevé d'informations garde cinq ans de sinistres.
 
 ### Mécanisme explicatif
@@ -62,6 +64,8 @@ Les textes en vigueur, lus sur Légifrance le 01/11/2026 (outil `sources`, versi
 - décret n° 2013-799 ;
 - Service-public F14710 (bulletins du casier, vérifiée le 20/08/2026) et F31802 (effacement, vérifiée le 20/10/2025).
 
+Relu le 19/11/2026 (lot « erreur-inscrite », `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\erreur-inscrite\SOURCES\`) : C. consom. L. 752-1 (version du 20/11/2026, ord. n° 2025-1154) ; arrêté du 11/08/2026 (art. 4, 5, 10) ; ord. n° 2025-1154, art. 7 ; CPP 775 et 775-1 (loi n° 2026-798) ; QE 14425 et 16852 ; C. assur. L. 113-2-1 et avis du CCSF (communiqué du 24/06/2026) ; C. route L. 223-6 ; PJL Sénat n° 604, art. 5.
+
 ### Pouvoir discriminant
 
 Sans objet (page sans série).
@@ -71,7 +75,7 @@ Sans objet (page sans série).
 La page décrit des règles générales, sans conseil juridique. Les points de départ des délais et les exceptions
 (récidive, infractions de l'art. 706-47 CPP, peines complémentaires définitives) sont résumés. Les fichiers privés
 (assureurs, bailleurs, opérateurs) ne sont pas couverts. Les versions des articles du casier publiées pour le 01/01/2029
-ne sont pas décrites.
+ne sont pas décrites. Deux écarts entre la lettre et la pratique sont rapportés d'après les sources officielles, sans mesure propre : l'interprétation du seuil de 200 000 € (engagement proposé par les assureurs devant le CCSF, généralisé au plus tard le 01/06/2027) et le calendrier d'enregistrement des AFD (ministère de la Justice).
 
 ### Valeur finale
 
