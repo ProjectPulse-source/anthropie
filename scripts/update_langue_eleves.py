@@ -467,8 +467,8 @@ def pied(e, y0, source, note, licence=LICENCE):
 FIG = {
     "chronologie": dict(
         titre="La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement",
-        source="DEPP (Notes d'Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
-        note="Seul le sens de l'évolution est montré, pas son ampleur. Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l'auteur ; tirets : sans test. Ronds : bornes des intervalles, pas toutes les vagues d'enquête. PISA, compréhension de l'écrit : recul de 2000 à 2006 non\u00a0tracé. Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu'en 2008, non\u00a0tracée.",
+        source="DEPP (Notes d'Information) ; OCDE (PISA 2018 et 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
+        note="Seul le sens de l'évolution est montré, pas son ampleur. Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l'auteur ; tirets : sans test. Ronds : bornes des intervalles, pas toutes les vagues d'enquête. PISA, compréhension de l'écrit : recul de 2000 à 2006 non\u00a0tracé. PISA, plaisir de lire (indice) : 2000-2009 non\u00a0tracé, sans baisse significative ni chez les filles ni chez les garçons. Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu'en 2008, non\u00a0tracée.",
         montre="Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA, revenu en 2012 à son niveau de 2000, baisse significativement ensuite, et les évaluations passées en classe ne suivent pas toutes cette pente."),
     "dictee": dict(
         titre="La même dictée en CM2 : nombre moyen d'erreurs",
@@ -622,7 +622,11 @@ def fig_chronologie(c, A):
     x = 0
     for (col, plein), lib in ((( ORANGE, True), "recul significatif"), ((GRIS, True), "sans évolution significative"),
                               ((BLEU, True), "hausse significative"), ((ORANGE, False), "tirets : sens observé, sans test publié")):
-        e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="%s"%s/>' % (x, yl, x + 22, yl, col, "4" if plein else "3", "" if plein else ' stroke-dasharray="5 3"'))  # trait des tracés
+        if plein:
+            e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="4"/>' % (x, yl, x + 22, yl, col))  # trait des tracés
+        else:  # 19/11/2026 : deux tirets orange, un bleu (longueur des tirets tracés : 5) : les deux sens sans test
+            e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="3" stroke-dasharray="5 3"/>' % (x, yl, x + 13, yl, ORANGE))
+            e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="3"/>' % (x + 16, yl, x + 21, yl, BLEU))
         e.append('<text x="%d" y="%d" font-size="11" fill="%s">%s</text>' % (x + 28, yl + 4, INK2, esc(lib)))
         x += 34 + int(5.2 * 11 / 10 * len(lib))   # 5,2 px par caractère à 10 px, portés à la police de 11 (7 px sortaient la 4e entrée du cadre, mesure du 11/10/2026)
     return pied(e, h + 2, t["source"], t["note"])
@@ -792,8 +796,18 @@ def fig_chronologie_m(c, A):
     for col, plein, lib in ((ORANGE, True, "recul significatif"), (GRIS, True, "sans évolution significative"),
                             (BLEU, True, "hausse significative"), (ORANGE, False, "tirets : sens observé, sans test publié")):
         y += 20
-        e.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="%s"%s/>' % (y - 5, 24 if plein else 18, y - 5, col, "6" if plein else "4.5", "" if plein else ' stroke-dasharray="7 4"'))  # trait des tracés ; tirets sur 18 : deux tirets entiers
+        if plein:
+            e.append('<line x1="0" y1="%d" x2="24" y2="%d" stroke="%s" stroke-width="6"/>' % (y - 5, y - 5, col))  # trait des tracés
+        else:  # 19/11/2026 : un tiret orange, un tiret bleu, chacun de la longueur des tirets tracés (7) : les deux sens sans test
+            for xa, xb, cl in ((0, 7, ORANGE), (11, 18, BLEU)):
+                e.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="4.5"/>' % (xa, y - 5, xb, y - 5, cl))
         e.append('<text x="32" y="%d" font-size="%s" fill="%s">%s</text>' % (y, FS_MIN, INK2, lib))
+    y += 22  # 19/11/2026 : repère dans la légende, échantillon = trait vertical et fond de la frise
+    e.append('<rect x="0" y="%d" width="24" height="20" fill="#f1efec"/>' % (y - 15))
+    e.append('<line x1="0.7" y1="%d" x2="0.7" y2="%d" stroke="%s" stroke-width="1.4"/>' % (y - 15, y + 5, INK2))
+    for k, ligne in enumerate(("%s : plus de la moitié des 12-17 ans" % A["smart_seuil"], "ont un smartphone (trait vertical)")):
+        e.append('<text x="32" y="%d" font-size="%s" fill="%s">%s</text>' % (y + 18 * k, FS_MIN, INK2, ligne))
+    y += 18
     for titre_p, rows, a0, a1, pas_ax, repere in (("Mesures commencées avant %s" % A["smart_seuil"], longues, 1985, 2026, 10, True),
                                                   ("Mesures commencées depuis %s" % A["smart_seuil"], recentes, a0_rec, 2026, 5, False)):
         y += 34
@@ -821,10 +835,7 @@ def fig_chronologie_m(c, A):
         for a in range(a0 + (pas_ax - a0 % pas_ax) % pas_ax, a1 + 1, pas_ax):
             e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">%d</text>' % (sx(a), y + 18, FS_MIN, MUTED, a))
         y += 24
-        if repere:  # arbitrage multi-angle du 10/10 : dire ce que 2013 désigne
-            for k, ligne in enumerate(("%s : plus de la moitié des 12-17 ans" % A["smart_seuil"], "ont un smartphone (trait vertical)")):
-                e.append('<text x="0" y="%d" font-size="%s" fill="%s">%s</text>' % (y + 16 + 18 * k, FS_MIN, INK2, ligne))
-            y += 34
+        # 19/11/2026 : le repère (arbitrage du 10/10, « dire ce que 2013 désigne ») est dit dans la légende, plus ici
     e, h = pied_m(e, y + 14, t["source"], t["note"])
     return finir_m(e, h)
 
@@ -988,9 +999,6 @@ def main() -> int:
     A = affichage(c)
     log("Dictee CM2 : %s -> %s erreurs (lexicales %s -> %s) ; PISA lecture 2012-2025 : -%s ; seuil smartphone %s"
         % (A["tot87"], A["tot21"], A["lex87"], A["lex21"], A["pisa_v12"], A["smart_seuil"]))
-    if check:
-        log("--check : %d gardes passees (%d cles d'affichage), rien ecrit." % (n, len(A)))
-        return 0
     import cairosvg
     figs = {"langue-chronologie.svg": fig_chronologie(c, A), "langue-dictee.svg": fig_dictee(c, A), "langue-plaisir.svg": fig_plaisir(c, A),
             "langue-chronologie-m.svg": fig_chronologie_m(c, A), "langue-dictee-m.svg": fig_dictee_m(c, A), "langue-plaisir-m.svg": fig_plaisir_m(c, A),
@@ -999,6 +1007,9 @@ def main() -> int:
     ecarts = pied_figure.controler_page((ROOT / "content" / "les-eleves-maitrisent-ils-moins-bien-la-langue-francaise" / "_index.md").read_text(encoding="utf-8"), figs)
     if ecarts:
         fail("page : " + " ; ".join(ecarts))
+    if check:  # 19/11/2026 : après la parité téléphone et les hauteurs déclarées par la page
+        log("--check : %d gardes passees (%d cles d'affichage), parite et hauteurs de la page controlees, rien ecrit." % (n, len(A)))
+        return 0
     X = c["X"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
                         "champ": "France ; élèves de CM1, CM2, sixième, troisième, seconde ; jeunes de 15 ans (PISA) ; 15-24 ans (enquêtes Pratiques culturelles)",

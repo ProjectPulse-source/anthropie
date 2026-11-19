@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 455ee018 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les élèves maîtrisent-ils moins bien la langue française ?
 Pas d’un bloc.
 À la même dictée de CM2, les élèves faisaient 10,7 erreurs en 1987 et 19,4 en 2021 ; mais sur ces 8,7 erreurs supplémentaires, 0,9 portent sur l’orthographe des mots eux-mêmes.
@@ -274,8 +274,9 @@ Seul le sens de l’évolution est montré, pas son ampleur.
 Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l’auteur ; tirets : sans test.
 Ronds : bornes des intervalles, pas toutes les vagues d’enquête.
 PISA, compréhension de l’écrit : recul de 2000 à 2006 non tracé.
+PISA, plaisir de lire (indice) : 2000-2009 non tracé, sans baisse significative ni chez les filles ni chez les garçons.
 Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu’en 2008, non tracée.
-DEPP (Notes d’Information) ; OCDE (PISA 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC
+DEPP (Notes d’Information) ; OCDE (PISA 2018 et 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC
 Télécharger en PNG
 SVG
 La même dictée en CM2 : nombre moyen d’erreurs

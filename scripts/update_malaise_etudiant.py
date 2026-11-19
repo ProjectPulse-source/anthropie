@@ -252,6 +252,8 @@ def gardes(c: dict) -> int:
     g(abs((e["2021"] - e["2017"]) - hz["etudiants"]) < 0.05, "etudiants : niveaux 2017 et 2021 coherents avec la hausse publiee")
     g(all(lg.depasse(hz["etudiants"], v) for k, v in hz.items() if k != "etudiants"),
       "la plus forte hausse de toutes les situations publiees")
+    g(sorted(hz) == sorted(("etudiants", "chomeurs", "actifs_occupes", "retraites")),
+      "les quatre situations professionnelles que le bulletin analyse : quatre hausses, toutes donnees sur la page")
     g(e["2010"] < e["2017"] < e["2021"], "la hausse precede le covid, qui l'accelere")
     g(e["2021"] - e["2017"] > e["2017"] - e["2010"], "accelere apres 2017")
     t18 = c["t1824"]
@@ -394,6 +396,7 @@ def affichage(c: dict) -> dict:
         "etu_2010": n(e["2010"]), "etu_2017": n(e["2017"]), "etu_2021": n(e["2021"]),
         "h_etu": lg.points(hz["etudiants"], signe_=True), "h_chom": lg.points(hz["chomeurs"], signe_=True),
         "h_actifs": lg.points(hz["actifs_occupes"], signe_=True),
+        "h_retr": lg.points(hz["retraites"], signe_=True),
         "f1824_2017": n(c["f1824"]["2017"]), "f1824_2021": n(c["f1824"]["2021"]),
         "t1824_2017": n(c["t1824"]["2017"]), "t1824_2021": n(c["t1824"]["2021"]),
         "t1824_hausse": lg.points(c["t1824"]["2021"] - c["t1824"]["2017"], signe_=True),
