@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /les-etudiants-vont-ils-plus-mal/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /les-etudiants-vont-ils-plus-mal/, build de ff74e230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les étudiants vont-ils plus mal que les autres jeunes ?
 La dépression déclarée a fortement augmenté chez les étudiants de 2017 à 2021, et les traitements comme le taux de jeunes hospitalisés pour un geste auto-infligé vont dans le même sens et indiquent une dégradation réelle dans cette classe d’âge.
 Mais cette dégradation touche d’abord les jeunes femmes, commence avant l’université et avant le covid, et elle ne se limite pas aux étudiants : dans la comparaison publiée par situation d’activité (18-25 ans, 2017-2021), la hausse estimée de la dépression déclarée est plus forte chez les jeunes en emploi ou sans emploi ni formation, sans que l’écart soit testé.
@@ -13,7 +13,8 @@ Patients hospitalisés pour un geste auto-infligé, 18-24 ans, par sexe (DREES, 
 Le résultat en une phrase.
 De 2019 à 2025, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé a augmenté de 53 %, celui des jeunes hommes de 15 % : la dégradation, engagée avant le covid, touche d’abord les jeunes femmes.
 Le Baromètre santé de Santé publique France suit l’épisode dépressif des étudiants : en 2021, 20,3 % des étudiants déclarent un épisode dépressif caractérisé (au moins deux semaines de tristesse ou de perte d’intérêt, avec d’autres symptômes et un retentissement sur la vie quotidienne) au cours des douze derniers mois, contre 13,3 % en 2017 et 10,1 % en 2010.
-Parmi les quatre situations professionnelles que le bulletin analyse, c’est chez eux que la hausse estimée est la plus forte (écarts non testés : rien ne dit qu’ils dépassent l’incertitude de l’enquête) : +7,0 points chez les étudiants, +5,3 points chez les chômeurs, +4,4 points chez les actifs occupés.
+Parmi les quatre situations professionnelles que le bulletin analyse, c’est chez eux que la hausse estimée est la plus forte : +7,0 points chez les étudiants, +5,3 points chez les chômeurs, +4,4 points chez les actifs occupés.
+Ces écarts ne sont pas testés : rien ne dit qu’ils dépassent l’incertitude de l’enquête.
 Ce classement ne dit pas que les étudiants se dégradent plus que les autres jeunes.
 Chez l’ensemble des 18-24 ans, étudiants compris, la part passe de 11,7 % en 2017 à 20,8 % en 2021 (+9,1 points) : une hausse plus forte, pour un niveau du même ordre en 2021 (20,3 % chez les étudiants).
 Les deux groupes se recouvrent et n’ont pas les mêmes âges : on ne peut pas en conclure que les jeunes non étudiants se dégradent davantage, seulement que la « plus forte hausse » des étudiants ne vaut que parmi les situations professionnelles.
@@ -34,7 +35,7 @@ Pour l’ensemble des 20-24 ans, la hausse commence dès 2018, avant le covid.
 Ce qui conduit à l’hôpital.
 Les jeunes femmes de 18 à 24 ans hospitalisées pour un geste auto-infligé (tentative de suicide, automutilation) étaient 234,5 pour 100 000 en 2019 ; elles sont 359,7 en 2025, soit 53 % de plus (données DREES, calcul de l’auteur).
 Ce qui est irréversible.
-Les suicides de jeunes femmes de 20 à 24 ans restent rares, une centaine par an, mais leur taux a augmenté de 39 % entre 2018-2019 et 2021-2023 (de 3,30 à 4,59 pour 100 000).
+Les suicides de jeunes femmes de 20 à 24 ans restent rares, une centaine par an, mais leur taux a augmenté de 39 % entre 2018-2019 et 2021-2023 (de 3,30 à 4,59 pour 100 000 ; Eurostat, CépiDc-Inserm).
 Celui des hommes du même âge est resté à peu près stable (+3 %).
 En 2024, 100 décès contre 93 l’année précédente : le niveau élevé se maintient, sans nouvelle hausse établie.
 Traitements par antidépresseurs ou régulateurs de l’humeur, 20-24 ans, par sexe (Assurance maladie).
@@ -76,6 +77,7 @@ Les études peuvent l’aggraver, la révéler ou l’atténuer, et ce que l’o
 Mais l’origine d’un trouble ne désigne pas le lieu du remède : un service de santé universitaire peut être utile pour une souffrance née au lycée.
 Les conditions sociales et d’études modifient-elles le risque ?
 La dépense par étudiant, mesure des moyens consacrés aux études, a reculé depuis 2009 ; deux conditions de vie, les difficultés financières et l’isolement, vont de pair avec la détresse.
+Ni le recul de la dépense ni ces associations ne suffisent à établir un effet causal de ces conditions sur la détresse.
 Les moyens par étudiant.
 En euros constants (corrigés de la hausse des prix), la dépense moyenne par étudiant culmine en 2009 (14 410 €) et n’a plus retrouvé ce niveau depuis : 13 300 € en 2024.
 Elle varie fortement selon les filières : 12 460 € par étudiant à l’université contre 19 070 € en classe préparatoire en 2024 (Insee, d’après le compte de l’éducation de la Depp).
@@ -104,7 +106,7 @@ L’écart entre ces hausses n’est pas testé, et les groupes ne sont comparé
 Ce qui reste à établir est donc plus précis : à âge et sexe égaux, le fait d’étudier va-t-il de pair avec une dégradation plus forte, ou plus faible ?
 Pour la dépression, nous n’avons trouvé aucune analyse nationale publiée de l’évolution qui compare étudiants et non-étudiants à âge et sexe égaux (recherche bibliographique du 18 novembre 2026).
 Pour les idées suicidaires et les tentatives de suicide, Husky et coauteurs (2024) l’ont fait sur les Baromètres santé de 2000 à 2021 : l’évolution des idées suicidaires y diffère significativement selon la situation d’activité, avec une forte hausse chez les jeunes sans emploi ni formation, aucune évolution significative chez les jeunes en emploi et, chez les étudiants, une courbe en U, avec une estimation plus basse en 2021 qu’en 2000, sans que la baisse soit significative ; pour les tentatives, l’écart entre situations n’est pas significatif.
-Nous l’avons demandée à Santé publique France (demande en cours au 18 novembre 2026).
+Nous avons demandé cette analyse, pour la dépression, à Santé publique France (demande en cours au 18 novembre 2026).
 Ce que change la composition des populations
 On peut au moins estimer ce que produirait le seul écart de composition par sexe.
 Parmi les 18-24 ans, la part des femmes est plus élevée chez les étudiants que chez les non-étudiants : de 7,6 points en 2017, de 10,2 points en 2021 (Eurostat).
@@ -151,7 +153,7 @@ dégradation visible au lycée, plus forte chez les filles
 dans une étude observationnelle anglaise, les établissements qui restreignent le téléphone n’ont pas un meilleur bien-être moyen (SMART Schools, 2025) : une politique évaluée, pas les usages
 un effet possible de certaines pratiques, non un facteur établi
 Covid et confinement
-accélération après 2020 ; symptômes dépressifs plus fréquents chez les étudiants en 2020-2021 (EPICOV), surtout pendant les confinements (CONFINS)
+accélération après 2020 ; symptômes dépressifs plus fréquents chez les étudiants en 2020-2021 (EPICOV), surtout pendant les confinements (CONFINS, enquête en ligne auprès de volontaires)
 la hausse commence avant le covid, dans les séries d’hospitalisation des jeunes femmes et des adolescentes
 pas l’origine ; un rôle d’accélérateur plausible, non mesuré
 Inflation et logement
@@ -195,13 +197,13 @@ De 2019 à 2025, le taux de jeunes femmes de 18 à 24 ans hospitalisées pour un
 Une partie de la hausse des déclarations peut toutefois tenir à une parole plus libre.
 Les jeunes femmes sont-elles plus touchées ?
 Oui pour la dépression déclarée, les traitements et les hospitalisations pour un geste auto-infligé ; pour les suicides, plus rares chez elles, c’est la hausse de leur taux qui les distingue.
-Chez les 18-24 ans, l’épisode dépressif déclaré est passé de 15,1 % à 26,5 % chez les femmes entre 2017 et 2021, de 8,3 % à 15,2 % chez les hommes.
-Le taux de jeunes femmes hospitalisées pour un geste auto-infligé a augmenté de 53 % de 2019 à 2025, celui des jeunes hommes de 15 %.
+Chez les 18-24 ans, l’épisode dépressif déclaré est passé de 15,1 % à 26,5 % chez les femmes entre 2017 et 2021, de 8,3 % à 15,2 % chez les hommes (Santé publique France, Baromètre santé).
+Le taux de jeunes femmes hospitalisées pour un geste auto-infligé a augmenté de 53 % de 2019 à 2025, celui des jeunes hommes de 15 % (données DREES, calcul de l’auteur).
 Au lycée, 25,7 % des filles présentent un risque important de dépression en 2024, contre 11,7 % des garçons (EnCLASS).
 Le malaise des étudiants vient-il du covid ?
 Les séries disponibles ne le font pas commencer avec lui.
-La part des étudiants déclarant un épisode dépressif était déjà passée de 10,1 % en 2010 à 13,3 % en 2017 (estimations dont l’écart n’est pas testé), et le taux de jeunes femmes hospitalisées pour un geste auto-infligé remonte dès 2018.
-La hausse s’accélère ensuite : un rôle amplificateur du confinement est plausible (une enquête en ligne trouve les étudiants plus souvent atteints de symptômes dépressifs que les non-étudiants pendant les confinements), mais ces séries n’en mesurent pas la part.
+La part des étudiants déclarant un épisode dépressif était déjà passée de 10,1 % en 2010 à 13,3 % en 2017 (Santé publique France, Baromètre santé, estimations dont l’écart n’est pas testé), et le taux de jeunes femmes hospitalisées pour un geste auto-infligé remonte dès 2018 (données DREES, calcul de l’auteur).
+La hausse s’accélère ensuite : un rôle amplificateur du confinement est plausible (une enquête en ligne auprès de volontaires trouve les étudiants plus souvent atteints de symptômes dépressifs que les non-étudiants pendant les confinements), mais ces séries n’en mesurent pas la part.
 Ce qu’une année ratée coûte dépend de qui la rate
 La Société du premier coup
 Pourquoi certains peuvent recommencer — et d’autres non
