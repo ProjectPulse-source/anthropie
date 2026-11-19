@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/can-public-debt-come-down/, build de b191128c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/can-public-debt-come-down/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can public debt come down?
 Yes.
@@ -383,7 +383,8 @@ The French Court of Audit (Cour des comptes) makes the same calculation for 2025
 8).
 Over the long run, it attributes 57.4 points of the rise in the ratio from 1978 to 2024 to primary deficits, and 8.8 points to the “snowball” effect of interest rates and growth (June 2025, pp.
 93-94).
-The OFCE puts at 2.1 points, in 2024, the gap between the primary balance and the one that would stabilise the debt; the page’s Eurostat measure gives 2.0 points for 2024.
+In its working paper no.
+13 (July 2025), the OFCE puts at 2.1 points, in 2024, the gap between the primary balance and the one that would stabilise the debt; the page’s Eurostat measure gives 2.0 points for 2024.
 For the four largest euro-area countries, from 1995 to 2024, the Cour des comptes (France’s court of audit) makes the finding that the euro-area section extends to 21 countries: the change in the primary balance is “the main explanatory factor” (our translation) of the differences in debt paths, France having run a primary deficit since 2002.
 The page separates what the Cour combines in the “snowball effect”, the interest rate and growth, and does not take up its reading, which sees in it the effect of a public-finance strategy: the accounting identity does not settle the causes.
 Challenged by.

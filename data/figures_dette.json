@@ -45,7 +45,7 @@
    "fichier": "charge-interets-mdeur",
    "titre": "La charge d'intérêts en milliards d'euros, 1995-2025",
    "montre": "Ce que la dette coûte en euros, et non en part de PIB : le creux, puis la remontée.",
-   "source": "Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), 1995-2025",
+   "source": "Eurostat, intérêts dus par les administrations publiques (gov_10a_main, D41PAY), 1995-2025 ; prévision du Gouvernement, projet de loi de finances pour 2027 (avis du HCFP, § 115)",
    "precaution": "Milliards d'euros courants, non corrigés de l'inflation. Cercles évidés : prévision du Gouvernement ; l'avis du Haut Conseil n'en donne la base 2025 qu'arrondie, dans un tableau qui mêle conventions de comptabilité nationale et budgétaire : aucune variation ne se lit entre l'observé et le prévu."
   },
   {
@@ -103,7 +103,7 @@
    "fichier": "charge-interets-mdeur-en",
    "titre": "Interest due in billion euros, 1995-2025",
    "montre": "What the debt costs in euros rather than as a share of GDP: the trough, then the climb.",
-   "source": "Eurostat, interest due by general government (gov_10a_main, D41PAY), 1995-2025",
+   "source": "Eurostat, interest due by general government (gov_10a_main, D41PAY), 1995-2025; Government forecast, 2027 budget bill (HCFP opinion, para. 115)",
    "precaution": "Billion euros at current prices, not adjusted for inflation. Open circles: Government forecast; the Haut Conseil's opinion gives its 2025 base only as a rounded figure, in a table that mixes national-accounts and budgetary conventions: no change can be read between the observed and the forecast values."
   },
   {

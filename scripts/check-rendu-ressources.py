@@ -58,6 +58,14 @@ MOTIFS = [
      r"(?<![\d.,])[+−-]?(?!1\b)\d+(?:\.\d+)?\s+point\b(?!s)(?![- ](?:increase|decrease|rise|fall|gap|drop|difference|reduction|cut|shift|swing))"
      r"|(?<![\d.,])[+−-]?1\s+points\b",
      "plural except for exactly 1 (_pt token)"),
+    # 19/11/2026 : « 0.2 percentage point » passait, le motif precedent voulant « point » juste apres le nombre (pages
+    # anglaises de « Quels futurs ? » et figure des leviers). Regle de l'ONS (Service manual, « Percentages and
+    # percentage points ») : « points » au pluriel, sauf pour 1.
+    ("percentage point agreement", "en",
+     r"(?<![\d.,])[+−-]?(?!1\b)\d+(?:\.\d+)?\s+percentage\s+point\b(?!s)"
+     r"(?![- ](?:increase|decrease|rise|fall|gap|drop|difference|reduction|cut|shift|swing))"
+     r"|(?<![\d.,])[+−-]?1\s+percentage\s+points\b",
+     "plural except for exactly 1 (_pt token)"),
     ("em dash then comma", "en", r"—\s*,", "an em dash is not followed by a comma"),
     ("double ponctuation", None, r"[?!]\s?\.(?!\.)|(?<!\.)\.\s?\.(?!\.)|,\s?,", "deux signes de ponctuation finale"),
     ("tournure proscrite", "fr", r"\b(?:a|ont|avait|avaient|aurait|auraient)\s+monté\b|\bpartis de plus de\b",
@@ -71,7 +79,8 @@ _MOTIFS = [(i, l, re.compile(m), a) for i, l, m, a in MOTIFS]
 # Un exemple fautif par motif, injecté par --temoin (le témoin positif DOIT mordre sur chacun).
 EXEMPLES = {"jeton non resolu": "La dette atteint {dette.fin} %.", "signe contraire au verbe": "Le ratio gagne +7,7 points.",
             "sign contradicts verb": "Deficits added +6.1 points.", "accord de point": "Un écart de 1,5 points.",
-            "point agreement": "A gap of 0.1 point.", "em dash then comma": "the levies on it —, health",
+            "point agreement": "A gap of 0.1 point.",
+            "percentage point agreement": "Market rates 0.2 percentage point lower.", "em dash then comma": "the levies on it —, health",
             "double ponctuation": "Est-ce vrai ?.", "tournure proscrite": "Les prix ont monté de 19 %.",
             "entite affichee": "aucun n'est écarté par le contrôle&nbsp;: chaque année"}
 

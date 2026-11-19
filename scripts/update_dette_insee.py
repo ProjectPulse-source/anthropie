@@ -1765,7 +1765,7 @@ def atomic_write(path: Path, text: str) -> None:
 
 def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
                  masses: tuple[int, int], charge: tuple[int, int], decomp: tuple[int, int] = (0, 0),
-                 sous_gf03: tuple[int, int] = (0, 0)) -> dict:
+                 sous_gf03: tuple[int, int] = (0, 0), *, edition: int) -> dict:
     """Donnees des cartes « Reutiliser » : meme texte que les cartouches.
 
     Source UNIQUE de la precaution de lecture : elle est ecrite une fois, dans
@@ -1800,10 +1800,9 @@ def meta_figures(lastq: str, last_y: str, taux: dict, annuel: dict,
              "source": C["src_marche"] % (t0, t1), "precaution": C["marche"]},
             {"id": "charge", "fichier": "charge-interets-mdeur" + suf,
              "titre": C["titre_charge"] % (c0, c1), "montre": C["montre_charge"],
-             "source": (("Eurostat, intérêts dus par les administrations publiques "
-                         "(gov_10a_main, D41PAY), %s-%s") if lang == "fr" else
-                        ("Eurostat, interest due by general government "
-                         "(gov_10a_main, D41PAY), %s-%s")) % (c0, c1),
+             # 19/11/2026, lot dette-b (FG-1) : meme ligne de source que le cartouche de l'image (src_charge_m),
+             # qui date la prevision du Gouvernement ; la carte la taisait.
+             "source": C["src_charge_m"] % (c0, c1, edition),
              "precaution": C["charge"]},
             {"id": "masses", "fichier": "masses-comparees" + suf,
              "titre": C["titre_masses"] % (m0, m1), "montre": C["montre_masses"] % sous_gf03,
@@ -2523,7 +2522,7 @@ def main() -> int:
             lastq, last_y, taux_apparent, annuel,
             (ans_masses[0], ans_masses[-1]),
             (min(inter_md), max(inter_md)), (dec_cumul["a0"], dec_cumul["a1"]),
-            (sous_gf03[0], sous_gf03[-1])),
+            (sous_gf03[0], sous_gf03[-1]), edition=trajectoire["edition"]),
             ensure_ascii=False, indent=1) + "\n"),
         (OUT_JSON, txt),
         (OUT_ENDPOINT, txt),

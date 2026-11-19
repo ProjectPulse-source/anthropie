@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/public-debt-international-comparison/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/public-debt-international-comparison/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Public debt: why 100% of GDP does not carry the same burden everywhere
 In 2025, at almost equal debt levels, Hungary devotes 8.8% of its public revenue to interest; Slovenia, 2.7%.

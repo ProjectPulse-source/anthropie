@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /dette-publique-generations-futures/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /dette-publique-generations-futures/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique est-elle un fardeau pour les générations futures ?
 Une dette peut laisser aux générations suivantes une charge, mais aussi des écoles, des routes et d’autres équipements.
@@ -22,6 +22,7 @@ Le résultat en une phrase.
 De 1996 à 2025, 18 % seulement des déficits publics français ont correspondu à un accroissement net des actifs publics comptabilisés, et 66 %, près des deux tiers, à des dépenses courantes, usure du capital comprise, que les recettes courantes (impôts, cotisations sociales et autres recettes, hors transferts en capital reçus) ne couvraient pas ; la part en actifs est tombée de 32 % sur 1996-2005 à 10 % sur 2016-2025.
 C’est une lecture comptable : elle dit à quoi les déficits ont correspondu, non ce qu’ils ont produit.
 Les 66 % ne veulent pas dire que les deux tiers des emprunts ont payé des dépenses de fonctionnement : ils résultent d’une décomposition des comptes qui range l’usure du capital existant parmi les dépenses courantes.
+Hors de cette usure, les recettes courantes ont dépassé les dépenses courantes, en cumul de 1996 à 2025.
 Chaque année, le déficit public se décompose exactement en trois emplois.
 Les acquisitions nettes d’actifs : les bâtiments, équipements, logiciels et travaux de recherche, terrains et stocks publics en plus, une fois déduite l’usure de ceux qui existent.
 Les transferts en capital, 16 % du total : des aides versées à d’autres, entreprises, ménages ou organismes, pour qu’ils investissent, et d’autres transferts en capital, comme des reprises de dettes, moins les transferts en capital reçus.
@@ -406,6 +407,7 @@ La dette publique pèse-t-elle sur les générations futures ?
 Elle peut leur laisser une charge, et leur laisse aussi ce qui a été acquis en même temps ; aucune statistique ne mesure à elle seule le solde des deux.
 En France, de 1996 à 2025, 18 % des déficits publics ont correspondu, dans les comptes, à un accroissement net des actifs publics comptabilisés, 16 % à des transferts en capital vers d’autres secteurs et 66 % à des dépenses courantes, usure du capital comprise, que les recettes courantes ne couvraient pas.
 Les 66 % ne veulent pas dire que les deux tiers des emprunts ont payé des dépenses de fonctionnement : ils résultent d’une décomposition des comptes qui range l’usure du capital existant parmi les dépenses courantes.
+Hors de cette usure, les recettes courantes ont dépassé les dépenses courantes, en cumul sur la période.
 C’est une composition comptable : elle ne mesure ni ce que chaque génération paiera, ni ce que les dépenses courantes, en éducation ou en santé, ont produit.
 Une dette contractée pour investir pèse-t-elle moins ?
 Elle laisse un capital en même temps qu’une charge : c’est pourquoi l’usage est un critère pertinent, qui ne dit pas pour autant ce que rapportent les dépenses.
@@ -471,6 +473,7 @@ Les figures, les données et une citation prête, sous licence libre.
 Chaque figure porte dans l’image sa source, sa période et sa précaution de lecture : reprise dans un cours ou un article, elle ne se sépare pas de ce qui permet de la lire.
 France : à quoi ont correspondu les déficits publics
 Depuis trente ans, la part des déficits français qui a correspondu, dans les comptes, à un accroissement net des actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes, usure du capital comprise, que les recettes courantes ne couvraient pas.
+Cette part ne veut pas dire que la plupart des emprunts ont payé des dépenses de fonctionnement : elle résulte d’une décomposition des comptes qui range l’usure du capital existant parmi les dépenses courantes ; hors de cette usure, les recettes courantes ont dépassé les dépenses courantes, en cumul sur ces trente ans.
 Ces parts ne mesurent ni la rentabilité ni l’utilité des dépenses.
 Précaution d’interprétation.
 Dépenses courantes non couvertes : usure du capital comprise.

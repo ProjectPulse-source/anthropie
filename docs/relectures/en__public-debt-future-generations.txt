@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/public-debt-future-generations/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/public-debt-future-generations/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Is public debt a burden on future generations?
 A debt can leave the next generations a charge, but also schools, roads and other equipment.
@@ -22,6 +22,7 @@ The finding in one sentence.
 From 1996 to 2025, only 18% of French public deficits corresponded to a net increase in recorded public assets, and 66%, nearly two thirds, to current spending, wear and tear of capital included, that current revenue (taxes, social contributions and other revenue, excluding capital transfers received) did not cover; the share in assets fell from 32% over 1996-2005 to 10% over 2016-2025.
 This is an accounting reading: it says what deficits corresponded to, not what they produced.
 The 66% do not mean that two thirds of borrowing paid for running costs: they come from a breakdown of the accounts that counts the wear and tear of existing capital among current spending.
+Excluding that wear and tear, current revenue exceeded current spending cumulatively from 1996 to 2025.
 Every year, the public deficit breaks down exactly into three uses.
 Net acquisitions of assets: additional public buildings, equipment, software and research, land and inventories, once the wear and tear of what already exists has been deducted.
 Capital transfers, 16% of the total: grants paid to others, firms, households or other bodies, so that they invest, and other capital transfers, such as debt assumptions, minus the capital transfers received.
@@ -407,6 +408,7 @@ Does public debt weigh on future generations?
 It may leave them a charge, and it also leaves what was acquired at the same time; no single statistic measures the balance of the two.
 In France, from 1996 to 2025, 18% of public deficits corresponded, in the accounts, to a net increase in recorded public assets, 16% to capital transfers to other sectors and 66% to current spending, wear and tear of capital included, that current revenue did not cover.
 The 66% do not mean that two thirds of borrowing paid for running costs: they come from a breakdown of the accounts that counts the wear and tear of existing capital among current spending.
+Excluding that wear and tear, current revenue exceeded current spending cumulatively over the period.
 This is an accounting composition: it measures neither what each generation will pay, nor what current spending on education or health produced.
 Does debt taken on to invest weigh less?
 It leaves capital along with the charge: that is why use is a relevant criterion, though it does not say what the spending yields.
@@ -469,6 +471,7 @@ The charts, the data and a ready-made citation, under an open licence.
 Each chart carries its source, period and reading caveat inside the image: reused in a lecture or an article, it is not separated from what makes it readable.
 France: what public deficits corresponded to
 Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public assets has fallen decade by decade; the largest share corresponded to current spending, wear and tear of capital included, that current revenue did not cover.
+That share does not mean that most borrowing paid for running costs: it comes from a breakdown of the accounts that counts the wear and tear of existing capital among current spending; excluding that wear and tear, current revenue exceeded current spending cumulatively over those thirty years.
 These shares measure neither the return on spending nor its usefulness.
 Reading caveat.
 Uncovered current spending: wear and tear of capital included.

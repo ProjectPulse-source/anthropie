@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 493" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mt-t mt-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="mt-t">Pression de refinancement : échéances et écart de taux, 2025</title><desc id="mt-d">Chaque point est un pays : à droite, une plus grande part de la dette arrive à échéance dans l'année ; en haut, le rendement harmonisé à 10 ans dépasse davantage le taux implicite du stock. Si les conditions de financement restaient supérieures au coût de la dette remplacée, les refinancements pousseraient le coût moyen à la hausse. Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision. France : 9,5 % de la dette à moins d'un an, écart de 1,36 point.</desc>
+<title id="mt-t">Pression de refinancement : échéances et écart de taux, 2025</title><desc id="mt-d">Chaque point est un pays : à droite, une plus grande part de la dette arrive à échéance dans l'année ; en haut, le rendement harmonisé à 10 ans dépasse davantage le taux implicite du stock. Si les conditions de financement restaient supérieures au coût de la dette remplacée, les refinancements pousseraient le coût moyen à la hausse. Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision. France : 9,5 % de la dette à un an au plus, écart de 1,36 point.</desc>
 <rect width="720" height="493" fill="#ffffff"/>
 <text x="0" y="18" font-size="13" font-weight="600" fill="#0A0A0E">Pression de refinancement : échéances et écart de taux, 2025</text>
 <circle cx="470.0" cy="14.0" r="5.0" fill="#184f95"/>
@@ -27,7 +27,7 @@
 <text x="486.0" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">20 %</text>
 <text x="593.0" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">25 %</text>
 <text x="700.0" y="403.0" font-size="11" fill="#6f6c66" text-anchor="middle">30 %</text>
-<text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">part de la dette à échéance résiduelle de moins d'un an</text>
+<text x="379.0" y="420.0" font-size="11" fill="#52514e" text-anchor="middle">part de la dette à échéance résiduelle d'un an au plus</text>
 <circle cx="247.3" cy="204.0" r="5.5" fill="#184f95" stroke="#fff" stroke-width="1"/>
 <rect x="207.0" y="280.3" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>
 <rect x="173.9" y="176.8" width="9.9" height="9.9" fill="#eb6834" stroke="#fff" stroke-width="1"/>

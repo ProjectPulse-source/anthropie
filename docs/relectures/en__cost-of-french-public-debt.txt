@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/cost-of-french-public-debt/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/cost-of-french-public-debt/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 What does French public debt actually cost?
 In 2025, French general government interest expenditure amounts to 65.7 billion euros, or 4.2% of its revenue.
@@ -285,7 +285,8 @@ What the debt costs in euros rather than as a share of GDP: the trough, then the
 Reading caveat.
 Billion euros at current prices, not adjusted for inflation.
 Open circles: Government forecast; the Haut Conseil’s opinion gives its 2025 base only as a rounded figure, in a table that mixes national-accounts and budgetary conventions: no change can be read between the observed and the forecast values.
-Eurostat, interest due by general government (gov_10a_main, D41PAY), 1995-2025
+Eurostat, interest due by general government (gov_10a_main, D41PAY), 1995-2025; Government forecast, 2027 budget bill (HCFP opinion, para.
+115)
 Download PNG
 SVG
 Interest due against the main public budgets, 1995-2024

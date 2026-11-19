@@ -13,7 +13,7 @@ apres trois avis externes (29/09/2026). Quatre mots, quatre definitions :
                  l'« apparent cost » d'Eurostat (interets / dette MOYENNE de l'annee) : les deux sont proches,
                  non identiques -- d'ou le nom, fixe par la contre-expertise PRO-20260930-061613.
   CHARGE       = interets / recettes publiques
-  TRANSMISSION = part de la dette a moins d'un an, ecart taux a 10 ans - prix
+  TRANSMISSION = part de la dette a un an au plus, ecart taux a 10 ans - prix
 Identite EXACTE, verifiee pays par pays (assertion) :
   I_t/R_t = (D_{t-1}/Y_t) x (I_t/D_{t-1}) / (R_t/Y_t)
 
@@ -960,16 +960,16 @@ def transmission(rows, an, source, lang="fr"):
     # Contre-expertise PRO-20260930-061613 (P1) : repère conditionnel, jamais une prévision -- le <desc> lu par
     # les lecteurs d'écran ne doit pas affirmer plus que le texte visible.
     T = {"fr": ("Pression de refinancement : échéances et écart de taux, %s",
-                "part de la dette à échéance résiduelle de moins d'un an",
+                "part de la dette à échéance résiduelle d'un an au plus",
                 "écart rendement à 10 ans − taux implicite du stock, en points",
                 "Chaque point est un pays : à droite, une plus grande part de la dette arrive à échéance dans l'année ; en haut, "
                 "le rendement harmonisé à 10 ans dépasse davantage le taux implicite du stock. Si les conditions de financement "
                 "restaient supérieures au coût de la dette remplacée, les refinancements pousseraient le coût moyen à la hausse. "
-                "Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision. France : %s de la dette à moins "
-                "d'un an, écart de %s." % (pct(by["FR"]["part_1an"]), LOC["fr"]["point"](by["FR"]["taux10"] - by["FR"]["prix"])),
+                "Sous zéro, l'indicateur est orienté dans l'autre sens. Repère, non prévision. France : %s de la dette à un an "
+                "au plus, écart de %s." % (pct(by["FR"]["part_1an"]), LOC["fr"]["point"](by["FR"]["taux10"] - by["FR"]["prix"])),
                 "Rendement de convergence à 10 ans, non le coût de toutes les émissions nouvelles. Repère, non prévision."),
          "en": ("Refinancing pressure: maturities and rate gap, %s",
-                "share of debt with a residual maturity of less than one year",
+                "share of debt with a residual maturity of one year or less",
                 "10-year yield − implicit interest rate on the stock, in percentage points",
                 "Each dot is a country: further right, a larger share of the debt falls due within the year; higher up, "
                 "the harmonised 10-year yield exceeds the implicit interest rate on the stock by more. If financing conditions "
@@ -1717,8 +1717,8 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
             p_ly="taux implicite : intérêts %s / dette fin %s" % (an, an_1),
             p_titre="Prix de la dette et inflation récente : l'Europe en %s" % an,
             p_desc="Hors de la zone euro, le taux implicite est étroitement associé à l'inflation récente ; dans la zone euro, beaucoup "
-                   "moins : les pays baltes ont connu une forte inflation sans taux élevé. La Suède, hors euro, a le même taux implicite "
-                   "que l'Allemagne. Association observée sur une année, non causalité. Taux implicite : Hongrie %s, Roumanie %s, "
+                   "moins : les pays baltes ont connu une forte inflation sans payer autant que les pays hors de l'euro d'inflation comparable. "
+                   "La Suède, hors euro, paie comme l'Allemagne. Association observée sur une année, non causalité. Taux implicite : Hongrie %s, Roumanie %s, "
                    "France %s, Allemagne %s, Suède %s." % tuple(pct(by[c]["prix"], 2) for c in ("HU", "RO", "FR", "DE", "SE")),
             p_src="Eurostat prc_hicp_aind (IPCH), gov_10a_main, gov_10dd_edpt1, %s" % an,
             p_note="Relation descriptive sur une année, non causale.",
@@ -1750,8 +1750,8 @@ def figures(lang: str, an: str, rows: list[dict], stats: dict, jum: list[dict], 
             p_ly="implicit interest rate: interest %s / debt at end-%s" % (an, an_1),
             p_titre="Average interest cost and recent inflation: Europe in %s" % an,
             p_desc="Outside the euro area, the implicit interest rate is closely associated with recent inflation; within the "
-                   "euro area, much less so: the Baltic states saw high inflation without a high rate. Sweden, outside the euro, "
-                   "has the same implicit interest rate as Germany. Association observed over one year, not causation. Implicit "
+                   "euro area, much less so: the Baltic states saw high inflation without paying as much as countries outside the euro "
+                   "with similar inflation. Sweden, outside the euro, pays about the same as Germany. Association observed over one year, not causation. Implicit "
                    "rate: Hungary %s, Romania %s, France %s, Germany %s, Sweden %s." % tuple(
                        pct_en(by[c]["prix"], 2) for c in ("HU", "RO", "FR", "DE", "SE")),
             p_src="Eurostat prc_hicp_aind (HICP), gov_10a_main, gov_10dd_edpt1, %s" % an,
@@ -1865,7 +1865,7 @@ def figures_m(lang, an, rows, stats, jum, ecarts, D, T, suf):
               "en": ("Same debt, different burden: the EU in %s" % an, "Average interest cost and recent inflation, %s" % an,
                      "Refinancing pressure, %s" % an, "Public debt as a % of GDP, end-" + an)}[lang]
     lx = {"fr": ("Stock : dette fin %s / PIB %s" % (an_1, an), "Inflation moyenne des trois années précédentes (IPCH)",
-                 "Part de la dette à moins d'un an"),
+                 "Part de la dette à un an au plus"),
           "en": ("Stock: debt end-%s / %s GDP" % (an_1, an), "Average inflation over the three previous years (HICP)",
                  "Share of debt due within a year")}[lang]
     ly = {"fr": ("Intérêts en % des recettes", "Taux implicite du stock", "Rendement à 10 ans − taux implicite"),
@@ -1988,7 +1988,7 @@ def main() -> int:
                                  "prix": "taux implicite : intérêts de l'année / dette de fin d'année précédente "
                                          "(convention de la BCE ; différent du « coût apparent » d'Eurostat, fondé sur la dette moyenne)",
                                  "charge": "intérêts / recettes publiques",
-                                 "transmission": "part de la dette à moins d'un an ; écart taux à 10 ans − prix"},
+                                 "transmission": "part de la dette à un an au plus ; écart taux à 10 ans − prix"},
                  # Pendants anglais (convention « _en » à côté du champ français, voir NOMS_EN).
                  "definitions_en": {"stock": "gross debt / GDP (debt at the end of the previous year for the decomposition)",
                                     "prix": "implicit interest rate: interest for the year / debt at the end of the previous year "

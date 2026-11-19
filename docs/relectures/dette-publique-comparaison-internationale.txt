@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /dette-publique-comparaison-internationale/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /dette-publique-comparaison-internationale/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Dette publique : pourquoi 100 % du PIB ne pèse pas partout de la même façon
 En 2025, à dette presque égale, la Hongrie consacre 8,8 % de ses recettes publiques aux intérêts, la Slovénie 2,7 %.
@@ -252,7 +252,7 @@ Le prix de la dette est-il associé à l’inflation récente ?
 Taux implicite de la dette (2025) et inflation moyenne des trois années précédentes (indice des prix harmonisé, Eurostat).
 Relation descriptive sur une année.
 La zone en tirets du graphique précédent, agrandie : mêmes données, chaque pays nommé.
-Hors de la zone euro, le taux implicite est étroitement associé à l’inflation récente (R² = 0,60) ; dans la zone euro, beaucoup moins (R² = 0,13) : les pays baltes ont connu une forte inflation sans payer autant que les pays hors de l’euro de même inflation.
+Hors de la zone euro, le taux implicite est étroitement associé à l’inflation récente (R² = 0,60) ; dans la zone euro, beaucoup moins (R² = 0,13) : les pays baltes ont connu une forte inflation sans payer autant que les pays hors de l’euro d’inflation comparable.
 L’appartenance monétaire ne suffit pas pour autant : la Suède, hors de l’euro, paie 1,89 %, comme l’Allemagne.
 Ces données décrivent une année et des pays ; elles ne disent ni que l’euro rend la dette moins chère, ni l’inverse.
 Elles ne permettent pas non plus de calculer un taux « réel » : retrancher l’inflation passée d’un taux moyen payé sur des emprunts de dates diverses ne mesure ni le rendement réel des créanciers, ni l’érosion de la dette.
@@ -374,7 +374,7 @@ Part de la dette arrivant à échéance dans l’année (Eurostat, dette par éc
 Repère de pression, non prévision : il ne mesure que la transmission par les refinancements, alors que le coût de la dette indexée ou à taux variable change sans attendre l’échéance.
 Le taux implicite d’une année rémunère une dette émise à des dates différentes : il ne rejoint les conditions de marché, pour l’essentiel, qu’au fil des refinancements.
 Deux mesures situent cette inertie : la part de la dette qui arrive à échéance dans l’année, et l’écart entre le rendement harmonisé à 10 ans et le taux implicite.
-Ni l’une ni l’autre n’est une prévision : un État n’emprunte pas qu’à 10 ans, le rendement d’aujourd’hui n’est pas celui de demain, et la dette à moins d’un an n’épuise pas les besoins de financement à venir, auxquels s’ajoutent les déficits futurs et les renouvellements successifs de dette courte.
+Ni l’une ni l’autre n’est une prévision : un État n’emprunte pas qu’à 10 ans, le rendement d’aujourd’hui n’est pas celui de demain, et la dette à un an au plus n’épuise pas les besoins de financement à venir, auxquels s’ajoutent les déficits futurs et les renouvellements successifs de dette courte.
 En France, 9,5 % de la dette présente à fin 2025 a une échéance résiduelle d’un an au plus, et le rendement à 10 ans dépassait de 1,36 point le taux implicite du stock.
 Si les conditions de financement restaient supérieures au coût de la dette remplacée, chaque refinancement rapprocherait le prix du stock de celui du marché : les intérêts pourraient augmenter à dette inchangée.
 Leur part dans les recettes n’augmenterait pas nécessairement pour autant, si les recettes augmentaient elles aussi.

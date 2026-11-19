@@ -10,7 +10,7 @@
    "stock": "dette brute / PIB (dette de fin d'année précédente pour la décomposition)",
    "prix": "taux implicite : intérêts de l'année / dette de fin d'année précédente (convention de la BCE ; différent du « coût apparent » d'Eurostat, fondé sur la dette moyenne)",
    "charge": "intérêts / recettes publiques",
-   "transmission": "part de la dette à moins d'un an ; écart taux à 10 ans − prix"
+   "transmission": "part de la dette à un an au plus ; écart taux à 10 ans − prix"
   },
   "definitions_en": {
    "stock": "gross debt / GDP (debt at the end of the previous year for the decomposition)",

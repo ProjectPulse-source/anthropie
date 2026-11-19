@@ -54,7 +54,7 @@ elles lisent la page FR et EN et refusent une conclusion qui rend le bilan proba
 relues dans data/dette_generations.json, les pièces archivées sont relues et comparées au jeu.
 
 Usage : python scripts/update_dette_generations.py [--check] [--hors-ligne]
-        [--mutation-garde | --mutation=bilan|bilan_mot|vieillissement|proscrit|cote|deux_temps|deux_temps_2]
+        [--mutation-garde | --mutation=bilan|bilan_mot|vieillissement|proscrit|cote|deux_temps|deux_temps_2|usure]
 Sorties : data/ et static/dette_generations.json, static/dette_generations.csv, data/figures_generations.json,
           static/img/dette-generations-{actifs,detention,vieillissement}{,-en}{,-m}.svg + .png
 """
@@ -330,7 +330,11 @@ def fetch(url: str, essais: int = 4) -> bytes:
 
 def eurostat(ds: str, **f) -> dict[tuple[str, int], float]:
     """Tous les pays d'un jeu, une seule valeur par (pays, année) : toute autre dimension doit être fixée."""
-    d = json.loads(fetch(API % (ds, "&".join("%s=%s" % kv for kv in f.items()))))
+    return jsonstat(json.loads(fetch(API % (ds, "&".join("%s=%s" % kv for kv in f.items())))), ds)
+
+
+def jsonstat(d: dict, ds: str) -> dict[tuple[str, int], float]:
+    """Réponse Eurostat (JSON-stat) en {(pays, année): valeur} ; sert aussi à une pièce archivée, lue hors ligne."""
     if "dimension" not in d:
         fail("Eurostat %s : reponse sans dimensions" % ds)
     ids, size = d["id"], d["size"]
@@ -363,7 +367,7 @@ def bce(cle: str) -> dict[tuple[str, str], dict[int, float]]:
 
 def piece(cle: str) -> Path:
     """Une pièce archivée n'est lue que si son empreinte est celle de SHA256SUMS."""
-    f = PIECES / SOURCES[cle]["fichier"]
+    f = PIECES / (SOURCES[cle]["fichier"] if cle in SOURCES else cle)   # ou le nom d'une pièce de garde (hors SOURCES)
     sums = dict(reversed(l.split(None, 1)) for l in (PIECES / "SHA256SUMS").read_text(encoding="utf-8").split("\n") if l.strip())
     if not f.is_file():
         fail("piece absente : %s" % f)
@@ -427,6 +431,29 @@ def emplois():
     # (le Danemark, sans B9 ni B8N pour 2024-2025 dans gov_10a_main alors que son investissement y figure).
     manques = {(p, a): [it for it in POSTES_REQUIS if (p, a) not in M[it]] for (p, a) in Y if p in PAYS}
     return R, ecartes, calculables, {k: v for k, v in manques.items() if v}
+
+
+# 0-6, troisième phrase (19/11/2026) : consommation de capital fixe des APU (S13), France, en % du PIB, telle qu'Eurostat
+# la publie (gov_10a_main, P51C, PC_GDP, mise à jour du 21/10/2026), archivée pour le mode hors ligne ; requête :
+# https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&geo=FR&na_item=P51C
+# &sector=S13&unit=PC_GDP&sinceTimePeriod=1996&untilTimePeriod=2025 . Pièce de garde : elle ne fournit aucun nombre
+# publié, d'où son absence de SOURCES. À remplacer quand le relevé en ligne déplace la dernière année.
+PIECE_CCF = "eurostat_gov_10a_main_FR_S13_P51C_PC_GDP_1996-2025.json"
+
+
+def usure_cumulee(annees: list) -> float:
+    """0-6, troisième phrase : consommation de capital fixe (P51C, % du PIB publié) cumulée sur les années de la page.
+    En ligne : Eurostat ; hors ligne : la pièce archivée, lue si son empreinte est celle de SHA256SUMS. Une année
+    absente arrête tout (jamais un zéro)."""
+    if "--hors-ligne" in sys.argv[1:]:
+        s = jsonstat(json.loads(piece(PIECE_CCF).read_text(encoding="utf-8")), "gov_10a_main")
+    else:
+        s = eurostat("gov_10a_main", na_item="P51C", sector="S13", unit="PC_GDP")
+    ans = [r["annee"] for r in annees]
+    manque = [a for a in ans if ("FR", a) not in s]
+    if manque:
+        fail("consommation de capital fixe (P51C, %% du PIB) absente pour %s : remplacer la piece ccf" % manque)
+    return sum(s[("FR", a)] for a in ans)
 
 
 def cumul(an: dict, a0: int, a1: int):
@@ -996,6 +1023,10 @@ def gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux):
         ("la mesure en euros donne le même ordre (à 3 points près)", abs(total["part_actifs_euros"] - total["part_actifs"]) < 3),
         ("« près des deux tiers » en dépenses courantes non couvertes (60 à 70 %)", 60 <= total["part_desepargne"] < 70),
         ("la désépargne est le premier emploi du besoin de financement", total["desepargne"] > max(total["actifs"], total["transferts"])),
+        # 0-6, troisième phrase (19/11/2026) : « hors de cette usure, les recettes courantes ont dépassé les dépenses
+        # courantes, en cumul » = épargne brute cumulée (usure cumulée moins désépargne nette cumulée) positive.
+        ("hors usure du capital, recettes courantes au-dessus des dépenses courantes en cumul (épargne brute cumulée > 0)",
+         aux["usure_cumulee"] - total["desepargne"] > 0),
         ("« la part investie a baissé de décennie en décennie »", lg.depasse(d1["part_actifs"], d2["part_actifs"], 0) and lg.depasse(d2["part_actifs"], d3["part_actifs"], 0)),
         # Corrections de clôture (11/10/2026, contre-expertise du rendu, § 2) : la baisse 32 -> 19 -> 10 % en deux mouvements,
         # décomposition arithmétique de la part (actifs / besoin), aucune cause. Seuils écrits avant l'écriture de la phrase :
@@ -1281,7 +1312,10 @@ TXT = {
   montre=[("actifs", "Depuis trente ans, la part des déficits français qui a correspondu, dans les comptes, à un accroissement net des "
                      "actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes, usure du "
                      "capital comprise, que les "
-                     "recettes courantes ne couvraient pas. Ces parts ne mesurent ni la rentabilité ni l'utilité des dépenses."),
+                     "recettes courantes ne couvraient pas. Cette part ne veut pas dire que la plupart des emprunts ont payé des "
+                     "dépenses de fonctionnement : elle résulte d'une décomposition des comptes qui range l'usure du capital existant "
+                     "parmi les dépenses courantes ; hors de cette usure, les recettes courantes ont dépassé les dépenses courantes, en "
+                     "cumul sur ces trente ans. Ces parts ne mesurent ni la rentabilité ni l'utilité des dépenses."),
           ("detention", "La part de la dette française détenue par des non-résidents dépasse la moitié la plupart des années depuis le "
                         "début des années 2000 ; elle a reculé pendant les achats de la Banque de France et remonte depuis le reflux de "
                         "ses avoirs. C'est la résidence des détenteurs enregistrés, non une mesure du fardeau."),
@@ -1338,7 +1372,10 @@ TXT = {
   montre=[("actifs", "Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public "
                      "assets has fallen decade by decade; the largest share corresponded to current spending, wear and tear of "
                      "capital included, that current revenue did "
-                     "not cover. These shares measure neither the return on spending nor its usefulness."),
+                     "not cover. That share does not mean that most borrowing paid for running costs: it comes from a breakdown of "
+                     "the accounts that counts the wear and tear of existing capital among current spending; excluding that wear and "
+                     "tear, current revenue exceeded current spending cumulatively over those thirty years. These shares measure "
+                     "neither the return on spending nor its usefulness."),
           ("detention", "The share of French debt held by non-residents has been above half in most years since the early 2000s; "
                         "it fell during the Banque de France's purchases and has been rising since its holdings began to ebb. This is the "
                         "residence of registered holders, not a measure of the burden."),
@@ -1663,7 +1700,7 @@ def mutation_donnees(cp, dec) -> str | None:
         dec[1]["actifs"] = dec[0]["actifs"] * 1.10
     elif m == "deux_temps_2":
         dec[2]["besoin"] = dec[1]["besoin"] * 1.10
-    elif m not in (None, "bilan", "bilan_mot", "vieillissement", "proscrit", "point_bas", "remontee"):
+    elif m not in (None, "bilan", "bilan_mot", "vieillissement", "proscrit", "point_bas", "remontee", "usure"):
         fail("mutation inconnue : %s" % m)
     return m
 
@@ -1686,6 +1723,8 @@ def main() -> int:
     vides = sorted(k for k in A if bool(A[k]) != bool(A_en[k]))
     if vides:
         fail("blocs affichage et affichage_en : valeur vide dans une seule langue (%s)" % vides)
+    # Témoin --mutation=usure : l'usure cumulée passe sous la désépargne cumulée ; la garde 0-6 doit mordre.
+    aux["usure_cumulee"] = usure_cumulee(annees) if m != "usure" else total["desepargne"] - 1.0
     n = gardes(fin, total, dec, annees, cp, pat, det, det_pays, S2, C, aux)
     textes = mutation_texte({"fr": PAGE_FR.read_text(encoding="utf-8"), "en": PAGE_EN.read_text(encoding="utf-8")})
     txt_fig = {lang: "\n".join(v if isinstance(v, str) else " ".join(map(str, v)) for k, v in TXT[lang].items() if k != "pc")

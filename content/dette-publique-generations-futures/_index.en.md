@@ -7,7 +7,7 @@ date: 2026-07-24
 lastmod: 2026-11-18
 og_title: "Is public debt a burden on future generations? — S. Lalut"
 og_image: "images/og-dette-generations-en.jpg"
-og_image_alt: "Share card: “What did thirty years of deficits correspond to?” — France, share of public deficits that corresponded, in the accounts, to assets, to capital transfers and to uncovered current spending, by decade."
+og_image_alt: "Share card: “What did thirty years of deficits correspond to?” — France, share of public deficits that corresponded, in the accounts, to assets, to capital transfers and to uncovered current spending (wear and tear of capital included), by decade."
 # English version of the "future generations" extension of the public debt dossier (FR: content/dette-publique-generations-futures/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/dette_generations.json
 # (scripts/update_dette_generations.py), whose guards cover both languages, text guards included (phase B, 11/10/2026).
@@ -48,7 +48,7 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html); tokens resolved
   fichiers: ["dette_generations.csv", "dette_generations.json", "dette_generations_controles.csv"]
 faq:
   - question: "Does public debt weigh on future generations?"
-    answer: "It may leave them a charge, and it also leaves what was acquired at the same time; no single statistic measures the balance of the two. In France, from {gen.a0} to {gen.fin}, {gen.part_k}% of public deficits corresponded, in the accounts, to a net increase in recorded public assets, {gen.part_t}% to capital transfers to other sectors and {gen.part_e}% to current spending, wear and tear of capital included, that current revenue did not cover. The {gen.part_e}% do not mean that two thirds of borrowing paid for running costs: they come from a breakdown of the accounts that counts the wear and tear of existing capital among current spending. This is an accounting composition: it measures neither what each generation will pay, nor what current spending on education or health produced."
+    answer: "It may leave them a charge, and it also leaves what was acquired at the same time; no single statistic measures the balance of the two. In France, from {gen.a0} to {gen.fin}, {gen.part_k}% of public deficits corresponded, in the accounts, to a net increase in recorded public assets, {gen.part_t}% to capital transfers to other sectors and {gen.part_e}% to current spending, wear and tear of capital included, that current revenue did not cover. The {gen.part_e}% do not mean that two thirds of borrowing paid for running costs: they come from a breakdown of the accounts that counts the wear and tear of existing capital among current spending. Excluding that wear and tear, current revenue exceeded current spending cumulatively over the period. This is an accounting composition: it measures neither what each generation will pay, nor what current spending on education or health produced."
   - question: "Does debt taken on to invest weigh less?"
     answer: "It leaves capital along with the charge: that is why use is a relevant criterion, though it does not say what the spending yields. In France, the share of deficits that corresponded, in the accounts, to a net increase in public assets went from {gen.d1_part}% ({gen.d1_lib}) to {gen.d2_part}% ({gen.d2_lib}), and then to {gen.d3_part}% ({gen.d3_lib}). These shares measure neither the return on spending nor its usefulness to future generations."
   - question: "The “we owe it to ourselves” argument: does it hold for France?"
@@ -98,7 +98,7 @@ Borrowing to build a school, a road or a network leaves capital as well as a deb
 </div>
 </div>
 
-The {{< gen-val "part_e" >}}% do not mean that two thirds of borrowing paid for running costs: they come from a breakdown of the accounts that counts the wear and tear of existing capital among current spending.
+The {{< gen-val "part_e" >}}% do not mean that two thirds of borrowing paid for running costs: they come from a breakdown of the accounts that counts the wear and tear of existing capital among current spending. Excluding that wear and tear, current revenue exceeded current spending cumulatively from {{< gen-val "a0" >}} to {{< gen-val "fin" >}}.
 
 Every year, the public deficit breaks down exactly into three uses. **Net acquisitions of assets**: additional public buildings, equipment, software and research, land and inventories, once the wear and tear of what already exists has been deducted. **Capital transfers**, {{< gen-val "part_t" >}}% of the total: grants paid to others, firms, households or other bodies, so that they invest, and other capital transfers, such as debt assumptions, minus the capital transfers received. **Uncovered current spending**: the part of current spending that current revenue did not cover. **It includes the wear and tear of existing capital**, counted as current spending. Since public money is, for the most part, not earmarked for a given expense (local authorities, for their part, may borrow only to invest), this breakdown does not say which borrowed euro paid for which expense: it says what, overall, the deficit corresponded to.
 

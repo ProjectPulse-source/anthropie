@@ -4,7 +4,7 @@
    "id": "actifs",
    "fichier": "dette-generations-actifs",
    "titre": "France : à quoi ont correspondu les déficits publics",
-   "montre": "Depuis trente ans, la part des déficits français qui a correspondu, dans les comptes, à un accroissement net des actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes, usure du capital comprise, que les recettes courantes ne couvraient pas. Ces parts ne mesurent ni la rentabilité ni l'utilité des dépenses.",
+   "montre": "Depuis trente ans, la part des déficits français qui a correspondu, dans les comptes, à un accroissement net des actifs publics a baissé de décennie en décennie ; la plus grande part a correspondu à des dépenses courantes, usure du capital comprise, que les recettes courantes ne couvraient pas. Cette part ne veut pas dire que la plupart des emprunts ont payé des dépenses de fonctionnement : elle résulte d'une décomposition des comptes qui range l'usure du capital existant parmi les dépenses courantes ; hors de cette usure, les recettes courantes ont dépassé les dépenses courantes, en cumul sur ces trente ans. Ces parts ne mesurent ni la rentabilité ni l'utilité des dépenses.",
    "source": "Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (PIB), administrations publiques, France, 1996-2025",
    "precaution": "Dépenses courantes non couvertes : usure du capital comprise. Identité comptable : elle dit à quoi les déficits ont correspondu, non ce qu'ils ont produit. Ces parts ne mesurent ni la rentabilité des dépenses ni leur utilité pour les générations futures ; l'éducation n'y est pas un actif."
   },
@@ -30,7 +30,7 @@
    "id": "actifs",
    "fichier": "dette-generations-actifs-en",
    "titre": "France: what public deficits corresponded to",
-   "montre": "Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public assets has fallen decade by decade; the largest share corresponded to current spending, wear and tear of capital included, that current revenue did not cover. These shares measure neither the return on spending nor its usefulness.",
+   "montre": "Over thirty years, the share of French deficits that corresponded, in the accounts, to a net increase in public assets has fallen decade by decade; the largest share corresponded to current spending, wear and tear of capital included, that current revenue did not cover. That share does not mean that most borrowing paid for running costs: it comes from a breakdown of the accounts that counts the wear and tear of existing capital among current spending; excluding that wear and tear, current revenue exceeded current spending cumulatively over those thirty years. These shares measure neither the return on spending nor its usefulness.",
    "source": "Eurostat gov_10a_main (B9, B8N, P51G, P51C, NP, P52_P53, D9), gov_10dd_edpt1 (GDP), general government, France, 1996-2025",
    "precaution": "Uncovered current spending: wear and tear of capital included. Accounting identity: it shows what deficits corresponded to, not what they produced. These shares measure neither the return on spending nor its usefulness to future generations; education does not count as an asset."
   },

@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /dette-publique-peut-elle-baisser/, build de b191128c + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /dette-publique-peut-elle-baisser/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 La dette publique peut-elle baisser ?
 Oui.
@@ -380,7 +380,7 @@ Deux conventions différentes, et un écart presque identique en 2025 : environ 
 La Cour des comptes fait le même calcul pour 2025, sur les comptes de l’INSEE, et trouve à l’arrondi les mêmes valeurs que la page : un solde primaire stabilisant de +0,1 % du PIB, un solde observé de −2,9 %, un écart de 3,0 points (juin 2026, tableau n° 8).
 Sur longue période, elle attribue aux déficits primaires 57,4 points de la hausse du ratio de 1978 à 2024, et 8,8 points à l’effet « boule de neige » des taux et de la croissance (juin 2025, p.
 93-94).
-L’OFCE estime à 2,1 points, en 2024, l’écart entre le solde primaire et celui qui stabiliserait la dette ; la mesure Eurostat de la page donne 2,0 points pour 2024.
+Dans son document de travail n° 13 (juillet 2025), l’OFCE estime à 2,1 points, en 2024, l’écart entre le solde primaire et celui qui stabiliserait la dette ; la mesure Eurostat de la page donne 2,0 points pour 2024.
 Sur les quatre plus grands pays de la zone euro, de 1995 à 2024, la Cour des comptes fait le constat que la section sur la zone euro étend à 21 pays : « c’est l’évolution du solde primaire qui constitue le principal facteur explicatif » des écarts d’évolution de la dette, la France étant en déficit primaire depuis 2002.
 La page sépare ce que la Cour réunit dans l’« effet boule de neige », le taux et la croissance, et ne reprend pas sa lecture, qui y voit l’effet d’une stratégie de finances publiques : l’identité comptable ne départage pas les causes.
 Mis en danger par.

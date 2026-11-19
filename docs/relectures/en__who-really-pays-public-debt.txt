@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /en/who-really-pays-public-debt/, build de a59eb21a + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-19 ; texte servi de /en/who-really-pays-public-debt/, build de 6f47ce70 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Who really pays for public debt?
 The same budgetary effort of €10 billion, allocated using INSEE’s 2023 distributional accounts (an accounting profile at constant structure, not a simulation of its effects), falls on different households depending on the instrument chosen: an adjustment through education weighs proportionally more on low-income households, an adjustment through taxes on income and wealth more on well-off households.
@@ -456,7 +456,7 @@ Reading caveat.
 An accounting exposure profile, not a simulation: no behaviour, no feedback effect.
 A cut in a valued public service is not a loss of cash income.
 The D1 point of the tax decision is excluded; the reason is given in the figure’s footer.
-Insee, distributional national accounts, table CND.101 (standard-of-living twentiles, 2020-2023, base 2020) — 2023 vintage
+Insee, distributional national accounts, table CND.101 (standard-of-living twentiles, 2020-2023, base 2020) — 2023 vintage; author’s calculation
 Download PNG
 SVG
 Through which channels can the burden be distributed?
