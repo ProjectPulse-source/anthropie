@@ -1,0 +1,119 @@
+# Bibliographie d'AWP-03 v1.1 (sources : WORKING PAPERS/AWP-03/SOURCE_V1-1, relues le 19/11/2026).
+# Produite par 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/PILOTE_AWP-03/ecrire_donnees.py ; DOI cités par la
+# référence ou vérifiés chez Crossref et relus (titre, année, auteur). Alimente citation_reference et le JSON-LD
+# « citation » de la fiche (layouts/partials/head.html), et les liens « references » du dépôt Zenodo.
+references:
+  - cle: acemoglu-2012
+    fr: "Acemoglu, Daron et Robinson, James A. (2012). Why Nations Fail: The Origins of Power, Prosperity, and Poverty. New York, Crown."
+    en: "Acemoglu, Daron and Robinson, James A. (2012). Why Nations Fail: The Origins of Power, Prosperity, and Poverty. New York, Crown."
+  - cle: aft-2025
+    fr: "AFT (Agence France Trésor) (2025). Budget de l'État — Programme de financement. Paris."
+    en: "AFT (Agence France Trésor) (2025). Budget de l'État — Programme de financement. Paris."
+  - cle: banque-2022
+    fr: "Banque de France (2022). « Deux ans après son lancement, quel bilan pour le PEPP ? ». Bloc-notes Éco, billet n° 276, 30 juin 2022, Paris (H. Camatte, T. Legrand, A. Recoules)."
+    en: "Banque de France (2022). “Deux ans après son lancement, quel bilan pour le PEPP ?”. Bloc-notes Éco, post no. 276, 30 June 2022, Paris (H. Camatte, T. Legrand, A. Recoules)."
+  - cle: blanchard-2013
+    fr: "Blanchard, Olivier et Leigh, Daniel (2013). « Growth Forecast Errors and Fiscal Multipliers ». American Economic Review, vol. 103, n° 3, p. 117-120. DOI : 10.1257/aer.103.3.117."
+    en: "Blanchard, Olivier and Leigh, Daniel (2013). “Growth Forecast Errors and Fiscal Multipliers”. American Economic Review, vol. 103, no. 3, pp. 117–120. DOI: 10.1257/aer.103.3.117."
+    doi: "10.1257/aer.103.3.117"
+  - cle: blyth-2013
+    fr: "Blyth, Mark (2013). Austerity: The History of a Dangerous Idea. Oxford, Oxford University Press."
+    en: "Blyth, Mark (2013). Austerity: The History of a Dangerous Idea. Oxford, Oxford University Press."
+  - cle: challenges-2024
+    fr: "Challenges (2024). « Classement des 500 plus grandes fortunes de France ». Paris."
+    en: "Challenges (2024). “Classement des 500 plus grandes fortunes de France”. Paris."
+  - cle: chiocchetti-2025
+    fr: "Chiocchetti, F. et al. (2025). « Shift or Share? Profit Shifting and Workers' Profit-Sharing ». EU Tax Observatory Working Paper, n° 39, décembre 2025. Paris, Observatoire européen de la fiscalité."
+    en: "Chiocchetti, F. et al. (2025). “Shift or Share? Profit Shifting and Workers' Profit-Sharing”. EU Tax Observatory Working Paper, no. 39, December 2025. Paris, EU Tax Observatory."
+  - cle: cour-2025
+    fr: "Cour des comptes (2025). « La situation et les perspectives des finances publiques ». Rapport annuel, juin 2025, Paris."
+    en: "Cour des comptes (2025). “La situation et les perspectives des finances publiques”. Annual report, June 2025, Paris."
+  - cle: crutzen-2000
+    fr: "Crutzen, Paul J. et Stoermer, Eugene F. (2000). « The \"Anthropocene\" ». IGBP Newsletter, n° 41, p. 17-18."
+    en: "Crutzen, Paul J. and Stoermer, Eugene F. (2000). “The 'Anthropocene'”. IGBP Newsletter, no. 41, pp. 17–18."
+  - cle: dgfip-2025
+    fr: "DGFiP (2025). « L'impôt sur le revenu 2024 ». DGFiP Statistiques, n° 41, Paris."
+    en: "DGFiP (2025). “L'impôt sur le revenu 2024”. DGFiP Statistiques, no. 41, Paris."
+  - cle: drees-2024
+    fr: "DREES (2024). « En 2023, la baisse du nombre de lits et la hausse du nombre de places se poursuivent dans les établissements de santé ». Études et Résultats, n° 1315, octobre 2024, Paris."
+    en: "DREES (2024). “En 2023, la baisse du nombre de lits et la hausse du nombre de places se poursuivent dans les établissements de santé”. Études et Résultats, no. 1315, October 2024, Paris."
+  - cle: drees-2025
+    fr: "DREES (2025). « Urgences : la moitié des patients y restent plus de 3 heures en 2023, 45 minutes de plus qu'en 2013 ». Études et Résultats, n° 1334, mars 2025, Paris."
+    en: "DREES (2025). “Urgences : la moitié des patients y restent plus de 3 heures en 2023, 45 minutes de plus qu'en 2013”. Études et Résultats, no. 1334, March 2025, Paris."
+  - cle: bce-2022
+    fr: "BCE (Banque centrale européenne) (2022). Asset Purchase Programme (APP) et Pandemic Emergency Purchase Programme (PEPP), encours cumulés, décembre 2022. Francfort."
+    en: "ECB (European Central Bank) (2022). Asset Purchase Programme (APP) and Pandemic Emergency Purchase Programme (PEPP), cumulative outstanding, December 2022. Frankfurt."
+  - cle: esma-2023
+    fr: "ESMA (2023). CRA Market Share Report – 2023 edition, ESMA84-2037069784-2106. Paris."
+    en: "ESMA (2023). CRA Market Share Report – 2023 edition, ESMA84-2037069784-2106. Paris."
+  - cle: esmt-2016
+    fr: "ESMT (2016). « Where Did the Greek Bailout Money Go ? ». White Paper WP-16-02. Berlin, European School of Management and Technology."
+    en: "ESMT (2016). “Where Did the Greek Bailout Money Go?”. White Paper WP-16-02. Berlin, European School of Management and Technology."
+  - cle: euronext
+    fr: "Euronext. Données historiques CAC 40, indice de clôture journalier, séries 2015-2022, Paris, consultées en janvier 2026."
+    en: "Euronext. Historical CAC 40 data, daily closing index, 2015–2022 series, Paris, consulted January 2026."
+  - cle: commission-2012
+    fr: "Commission européenne (2012). State Aid Scoreboard – Autumn 2012 Update, SEC(2012) 443 final. Bruxelles."
+    en: "European Commission (2012). State Aid Scoreboard – Autumn 2012 Update, SEC(2012) 443 final. Brussels."
+  - cle: fipeco-2025
+    fr: "FIPECO (2025). « Le montant et l'évolution de la dette publique » et « La charge d'intérêts de la dette publique ». Fiches mises à jour, Paris."
+    en: "FIPECO (2025). “Le montant et l'évolution de la dette publique” and “La charge d'intérêts de la dette publique”. Updated fact sheets, Paris."
+  - cle: graeber-2011
+    fr: "Graeber, David (2011). Debt: The First 5,000 Years. Brooklyn, Melville House. Trad. fr. : Dette : 5 000 ans d'histoire, Paris, Les Liens qui Libèrent, 2013."
+    en: "Graeber, David (2011). Debt: The First 5,000 Years. Brooklyn, Melville House. French trans.: Dette : 5 000 ans d'histoire, Paris, Les Liens qui Libèrent, 2013."
+  - cle: insee-2024
+    fr: "INSEE (2024). « Séries longues sur les salaires dans le secteur privé et dans la fonction publique ». Insee Résultats, décembre 2024, Paris."
+    en: "INSEE (2024). “Séries longues sur les salaires dans le secteur privé et dans la fonction publique”. Insee Résultats, December 2024, Paris."
+  - cle: insee-2025
+    fr: "INSEE (2025). Comptes nationaux, dette APU au sens de Maastricht, T2-2025."
+    en: "INSEE (2025). National accounts, general government debt (Maastricht definition), Q2 2025."
+  - cle: kelton-2020
+    fr: "Kelton, Stephanie (2020). The Deficit Myth: Modern Monetary Theory and the Birth of the People's Economy. New York, PublicAffairs."
+    en: "Kelton, Stephanie (2020). The Deficit Myth: Modern Monetary Theory and the Birth of the People's Economy. New York, PublicAffairs."
+  - cle: lalut-2025-a
+    fr: "Lalut, Stéphane (2025a). ANTHROPIE — Ordre ici. Dette ailleurs. 606 p."
+    en: "Lalut, Stéphane (2025a). ANTHROPIE — Ordre ici. Dette ailleurs. 606 pp. In French."
+  - cle: lalut-2025-b
+    fr: "Lalut, Stéphane (2025b). Dette Publique : Qui paie vraiment ? 216 p. ISBN : 978-2-9586347-3-5."
+    en: "Lalut, Stéphane (2025b). Dette Publique : Qui paie vraiment ? 216 pp. In French. ISBN: 978-2-9586347-3-5."
+  - cle: lalut-2026-a
+    fr: "Lalut, Stéphane (2026a). « Qu'est-ce que l'anthropie ? Principes d'une hypothèse ». Anthropie Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    en: "Lalut, Stéphane (2026a). “What is anthropy? Principles of a hypothesis”. Anthropy Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    doi: "10.5281/zenodo.19266862"
+  - cle: lalut-2026-b
+    fr: "Lalut, Stéphane (2026b). « 3,3 millions d'années en un principe : l'anthropie dans la longue durée ». Anthropie Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    en: "Lalut, Stéphane (2026b). “3.3 million years in one principle: anthropy in the long duration”. Anthropy Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    doi: "10.5281/zenodo.19268037"
+  - cle: lazzarato-2011
+    fr: "Lazzarato, Maurizio (2011). La Fabrique de l'homme endetté : essai sur la condition néolibérale. Paris, Amsterdam."
+    en: "Lazzarato, Maurizio (2011). La Fabrique de l'homme endetté : essai sur la condition néolibérale. Paris, Amsterdam."
+  - cle: lettre-2024
+    fr: "Lettre Vernimmen (2024). N° 214, janvier 2024. « Dividendes et rachats d'actions du CAC 40 »."
+    en: "Lettre Vernimmen (2024). No. 214, January 2024. “Dividendes et rachats d'actions du CAC 40”."
+  - cle: nbim-2024
+    fr: "NBIM (2024). Government Pension Fund Global, Annual Report. Oslo."
+    en: "NBIM (2024). Government Pension Fund Global, Annual Report. Oslo."
+  - cle: north-1990
+    fr: "North, Douglass C. (1990). Institutions, Institutional Change and Economic Performance. Cambridge, Cambridge University Press."
+    en: "North, Douglass C. (1990). Institutions, Institutional Change and Economic Performance. Cambridge, Cambridge University Press."
+    doi: "10.1017/cbo9780511808678"
+  - cle: orlean-2011
+    fr: "Orléan, André (2011). L'Empire de la valeur : refonder l'économie. Paris, Seuil."
+    en: "Orléan, André (2011). L'Empire de la valeur : refonder l'économie. Paris, Seuil."
+  - cle: piketty-2013
+    fr: "Piketty, Thomas (2013). Le Capital au XXI<sup>e</sup> siècle. Paris, Seuil."
+    en: "Piketty, Thomas (2013). Le Capital au XXIe siècle. Paris, Seuil."
+  - cle: plf-2025
+    fr: "PLF (2025). Projet de loi de finances pour 2025, bleus budgétaires. Paris."
+    en: "PLF (2025). Projet de loi de finances pour 2025, blue books. Paris."
+  - cle: reinhart-2009
+    fr: "Reinhart, Carmen M. et Rogoff, Kenneth S. (2009). This Time Is Different: Eight Centuries of Financial Folly. Princeton, Princeton University Press."
+    en: "Reinhart, Carmen M. and Rogoff, Kenneth S. (2009). This Time Is Different: Eight Centuries of Financial Folly. Princeton, Princeton University Press."
+    doi: "10.1515/9781400831722"
+  - cle: reinhart-2010
+    fr: "Reinhart, Carmen M. et Rogoff, Kenneth S. (2010). « Growth in a Time of Debt ». American Economic Review, vol. 100, n° 2, p. 573-578. DOI : 10.1257/aer.100.2.573."
+    en: "Reinhart, Carmen M. and Rogoff, Kenneth S. (2010). “Growth in a Time of Debt”. American Economic Review, vol. 100, no. 2, pp. 573–578. DOI: 10.1257/aer.100.2.573."
+    doi: "10.1257/aer.100.2.573"
+  - cle: senat-2024
+    fr: "Sénat (2024). « L'essentiel sur le projet de loi de finances pour 2025 – mission Engagements financiers de l'État ». Commission des finances, rapporteur A. de Montgolfier. Paris."
+    en: "Sénat (2024). “L'essentiel sur le projet de loi de finances pour 2025 – mission Engagements financiers de l'État”. Finance Committee, rapporteur A. de Montgolfier. Paris."

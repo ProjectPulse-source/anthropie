@@ -128,6 +128,10 @@
 <meta name="citation_technical_report_institution" content="Anthropie Working Papers">
 {{ with .Params.keywords }}<meta name="citation_keywords" content="{{ delimit . "; " }}">{{ end }}
 {{ with (or .Params.abstract .Params.description) }}<meta name="citation_abstract" content="{{ . }}">{{ end }}
+{{- /* Bibliographie (data/bibliographies/<awp-NN>.yaml, 20/11/2026) : une balise par référence, texte dans la langue
+       de la fiche ; Google Scholar s'en sert pour relier l'AWP aux œuvres citées. Absente du fichier = rien d'émis. */ -}}
+{{ with index site.Data.bibliographies .File.ContentBaseName }}{{ $bl := cond (eq ($.Params.language | default $.Language.Lang) "en") "en" "fr" }}{{ range .references }}
+<meta name="citation_reference" content="{{ index . $bl }}">{{ end }}{{ end }}
 {{ end }}
 
 <!-- Schema.org Article / WebPage d'une ressource (2026-10-16) : dates et auteur de la page -->
@@ -256,6 +260,16 @@
 {{- with .Params.wikidata_qid -}}{{- $sameAs = $sameAs | append (printf "https://www.wikidata.org/entity/%s" .) -}}{{- end -}}
 {{- $article = merge $article (dict "sameAs" $sameAs) -}}
 {{- with .Params.keywords -}}{{- $article = merge $article (dict "keywords" .) -}}{{- end -}}
+{{- /* citation : la bibliographie (même fichier que citation_reference) ; une œuvre à DOI est désignée par son DOI. */ -}}
+{{- with index site.Data.bibliographies .File.ContentBaseName -}}
+  {{- $bl := cond $isEn "en" "fr" -}}
+  {{- $cit := slice -}}
+  {{- range .references -}}
+    {{- if .doi -}}{{- $cit = $cit | append (dict "@type" "CreativeWork" "@id" (printf "https://doi.org/%s" .doi) "name" (index . $bl)) -}}
+    {{- else -}}{{- $cit = $cit | append (dict "@type" "CreativeWork" "name" (index . $bl)) -}}{{- end -}}
+  {{- end -}}
+  {{- $article = merge $article (dict "citation" $cit) -}}
+{{- end -}}
 {{- /* Une fiche anglaise d'un papier encore francais seul (text_language) decrit la MEME
        oeuvre sous le MEME DOI : la declarer traduction d'elle-meme serait faux. */ -}}
 {{- with .Params.translation -}}{{- if not $.Params.text_language -}}
