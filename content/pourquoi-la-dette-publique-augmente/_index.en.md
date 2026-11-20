@@ -21,7 +21,7 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
   nom: "Why French public debt rises: a decomposition of the change in the debt-to-GDP ratio"
-  description: "Annual decomposition, from {dyn.annee_depart} to {dyn.annee_fin}, of the change in the debt-to-GDP ratio of French general government into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments; spending, revenue and balance as a share of GDP; cyclically adjusted primary balance according to the European Commission (AMECO, with its cyclically adjusted revenue and spending), the IMF and the OECD; ratios checked against those published by Eurostat. Producers' series, no value entered by hand."
+  description: "Annual decomposition, from {dyn.annee_depart} to {dyn.annee_fin}, of the change in the debt-to-GDP ratio of French general government into the interest effect, the nominal growth effect, the primary balance and stock-flow adjustments; spending, revenue and balance as a share of GDP; cyclically adjusted primary balance according to the European Commission (AMECO, with its cyclically adjusted revenue and spending), the IMF and the OECD; ratios checked against those published by Eurostat; decomposition of the change in compulsory levies (INSEE rate, new measures and spontaneous growth according to the Cour des comptes). Producers' series read by program, except the figures taken from the Cour des comptes' reports, transcribed and checked against those reports."
   couverture_temporelle: "{dyn.annee_depart}/{dyn.annee_fin}"
   couverture_spatiale: "France"
   doi: "10.5281/zenodo.23995830"  # Zenodo concept DOI (always the latest version), published 6 November 2026; deposit = these files minus the IMF series (commercial reuse subject to authorisation)
@@ -38,6 +38,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en"
     - "https://www.imf.org/external/datamapper/datasets/FM"
     - "https://data-explorer.oecd.org/"
+    - "https://www.insee.fr/fr/statistiques/2381412"
+    - "https://www.vie-publique.fr/rapport/303867-la-situation-et-les-perspectives-des-finances-publiques-2026"  # Cour des comptes, rapport de juin 2026 (dernier millésime des mesures nouvelles)
   mots: ["public debt", "France", "primary deficit", "snowball effect", "implicit interest rate", "nominal growth", "public spending", "public revenue", "Eurostat"]
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
   citation: ["https://doi.org/10.5281/zenodo.23145963"]  # AWP-09 (English edition): method and benchmark of this decomposition

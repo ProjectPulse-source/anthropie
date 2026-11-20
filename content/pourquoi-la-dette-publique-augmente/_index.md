@@ -22,7 +22,7 @@ journal:  # révisions qui changent la lecture de la page (partials/page-date-vi
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "dette_dynamique"
   nom: "Pourquoi la dette publique française augmente : décomposition de la variation du ratio dette/PIB"
-  description: "Décomposition annuelle, de {dyn.annee_depart} à {dyn.annee_fin}, de la variation du ratio dette/PIB des administrations publiques françaises en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock ; dépenses, recettes et solde en % du PIB ; solde primaire corrigé du cycle selon la Commission européenne (AMECO, avec ses recettes et dépenses corrigées), le FMI et l'OCDE ; ratios contrôlés contre ceux que publie Eurostat. Séries des producteurs, aucune valeur saisie à la main."
+  description: "Décomposition annuelle, de {dyn.annee_depart} à {dyn.annee_fin}, de la variation du ratio dette/PIB des administrations publiques françaises en effet des intérêts, effet de la croissance nominale, solde primaire et ajustements flux-stock ; dépenses, recettes et solde en % du PIB ; solde primaire corrigé du cycle selon la Commission européenne (AMECO, avec ses recettes et dépenses corrigées), le FMI et l'OCDE ; ratios contrôlés contre ceux que publie Eurostat ; décomposition de l'évolution des prélèvements obligatoires (taux de l'INSEE, mesures nouvelles et évolution spontanée selon la Cour des comptes). Séries des producteurs lues par programme, sauf les chiffres repris des rapports de la Cour des comptes, transcrits et vérifiés contre ces rapports."
   couverture_temporelle: "{dyn.annee_depart}/{dyn.annee_fin}"
   couverture_spatiale: "France"
   doi: "10.5281/zenodo.23995830"  # DOI de concept Zenodo (toujours la dernière version), publié le 06/11/2026 ; dépôt = ces fichiers moins les séries du FMI (réutilisation commerciale soumise à autorisation)
@@ -39,6 +39,8 @@ dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
     - "https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en"
     - "https://www.imf.org/external/datamapper/datasets/FM"
     - "https://data-explorer.oecd.org/"
+    - "https://www.insee.fr/fr/statistiques/2381412"
+    - "https://www.vie-publique.fr/rapport/303867-la-situation-et-les-perspectives-des-finances-publiques-2026"  # Cour des comptes, rapport de juin 2026 (dernier millésime des mesures nouvelles)
   mots: ["dette publique", "France", "déficit primaire", "effet boule de neige", "taux implicite", "croissance nominale", "dépenses publiques", "recettes publiques", "Eurostat"]
   fichiers: ["dette_dynamique.csv", "dette_dynamique.json"]
   citation: ["https://doi.org/10.5281/zenodo.23143030"]  # AWP-09 : méthode et témoin de cette décomposition
