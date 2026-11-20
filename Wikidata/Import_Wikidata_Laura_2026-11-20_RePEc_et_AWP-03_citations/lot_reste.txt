@@ -1,0 +1,27 @@
+Q138909233|P2428|"pla1203"|S854|"https://ideas.repec.org/f/pla1203.html"|S813|+2026-11-20T00:00:00Z/11
+CREATE
+LAST|Len|"Growth Forecast Errors and Fiscal Multipliers"
+LAST|Den|"article by Olivier Blanchard and Daniel Leigh in the American Economic Review (2013)"
+LAST|P31|Q13442814
+LAST|P1476|en:"Growth Forecast Errors and Fiscal Multipliers"
+LAST|P356|"10.1257/AER.103.3.117"
+LAST|P1433|Q1740221
+LAST|P478|"103"
+LAST|P433|"3"
+LAST|P304|"117-120"
+LAST|P577|+2013-05-01T00:00:00Z/11
+LAST|P407|Q1860
+LAST|P50|Q241094|P1545|"1"|P1932|"Olivier J. Blanchard"
+LAST|P2093|"Daniel Leigh"|P1545|"2"
+Q139771991|P2860|LAST|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q1304168|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q105688040|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q132092829|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q140151990|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q11836440|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q138827344|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q138910896|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q139771989|S854|"https://zenodo.org/records/24368737"
+Q139771991|P2860|Q139771990|S854|"https://zenodo.org/records/24368737"
+Q139771991|P921|Q274490
+Q139771991|P921|Q2814650

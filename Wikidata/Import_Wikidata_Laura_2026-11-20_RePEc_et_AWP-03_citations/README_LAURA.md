@@ -24,3 +24,14 @@ d'item, et aucune n'est créée sans identifiant sérieux.
    retrouvera par son DOI.
 
 Ce lot est indépendant de celui des nouvelles versions AWP-02/03/08 (même jour) : l'ordre importe peu.
+
+## Essai du 20/11 — relu par l'API le même jour
+
+Premier passage : tout en erreur ; second passage : quelques commandes passées (compte de Laura : 5 ou 6 bonnes,
+25 erreurs). **État réel relu par l'API** : seuls 3 liens P2860 sont écrits, avec leur référence (Q7997840 Acemoglu,
+Q54489071 Blyth, Q15991228 Piketty). Rien d'autre : ni RePEc, ni l'item Blanchard-Leigh, ni les 10 autres P2860, ni
+les 2 P921. Cause non établie : retard de réplication de Wikidata faible au moment de la relecture (0,6 s) ; la même
+journée, l'autre lot (AWP-08) a aussi échoué à répétition, et le service de requêtes de Wikidata était en panne
+partielle. **Pour le prochain essai : `deeplink_reste.txt`** (27 lignes, 41 commandes, lu par l'API d'import :
+`status OK`), qui ne reprend pas les 3 liens déjà écrits. Si des erreurs reviennent, copier le message d'erreur
+d'une ligne (colonne « status ») : il dira si c'est le compte, le lot ou le service.
