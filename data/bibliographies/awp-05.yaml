@@ -1,0 +1,40 @@
+# Bibliographie de AWP-05 (PDF servis par Zenodo, version en cours, FR et EN), produite par
+# 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/BIBLIOGRAPHIES/ecrire.py : DOI cités par la référence, ou
+# vérifiés chez Crossref et relus (décisions_<awp>.json). Alimente citation_reference et le JSON-LD « citation »
+# de la fiche (layouts/partials/head.html) et les liens « cites » du dépôt Zenodo.
+references:
+  - cle: afep-2012
+    fr: "AFEP (Association française d'économie politique) (2012). « Pour une nouvelle section d'économie \"Économie et Société\" au CNU ». Communiqué. En ligne : assoeconomiepolitique.org (consulté le 3 mars 2026)."
+    en: "AFEP (Association française d’économie politique) (2012). “Pour une nouvelle section d’économie ‘Économie et Société’ au CNU” [For a new economics section “Economics and Society” at the CNU]. Communiqué. Online: assoeconomiepolitique.org (accessed 3 March 2026)."
+  - cle: bourdieu-1984
+    fr: "Bourdieu, Pierre (1984). Homo academicus. Paris, Minuit."
+    en: "Bourdieu, Pierre (1984). Homo academicus. Paris: Minuit."
+  - cle: gingras-2014
+    fr: "Gingras, Yves (2014). Les Dérives de l'évaluation de la recherche. Du bon usage de la bibliométrie. Paris, Raisons d'agir."
+    en: "Gingras, Yves (2014). Les Dérives de l’évaluation de la recherche. Du bon usage de la bibliométrie. Paris: Raisons d’agir."
+  - cle: kuhn-1962
+    fr: "Kuhn, Thomas S. (1962). The Structure of Scientific Revolutions. Chicago, University of Chicago Press. Trad. fr. : La Structure des révolutions scientifiques, Paris, Flammarion, 1983."
+    en: "Kuhn, Thomas S. (1962). The Structure of Scientific Revolutions. Chicago: University of Chicago Press."
+  - cle: lalut-2025
+    fr: "Lalut, Stéphane (2025). ANTHROPIE — Ordre ici. Dette ailleurs. 606 p."
+    en: "Lalut, Stéphane (2025). ANTHROPIE — Ordre ici. Dette ailleurs. 606 pp."
+  - cle: lalut-2026-a
+    fr: "Lalut, Stéphane (2026a). « Qu'est-ce que l'anthropie ? Principes d'une hypothèse ». Anthropie Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    en: "Lalut, Stéphane (2026a). “What Is Anthropy? Principles of a Hypothesis”. Anthropy Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    doi: "10.5281/zenodo.19266862"
+  - cle: lalut-2026-b
+    fr: "Lalut, Stéphane (2026b). « 3,3 millions d'années en un principe : l'anthropie dans la longue durée ». Anthropie Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    en: "Lalut, Stéphane (2026b). “3.3 Million Years in a Single Principle: Anthropy in the Long Duration”. Anthropy Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    doi: "10.5281/zenodo.19268037"
+  - cle: lalut-2026-c
+    fr: "Lalut, Stéphane (2026c). « Dette publique et anthropie : qui paie vraiment le désordre ? ». Anthropie Working Pa-pers, AWP-03. Zenodo. https://doi.org/10.5281/zenodo.19268769"
+    en: "Lalut, Stéphane (2026c). “Public Debt and Anthropy: Who Really Pays for Disorder?”. Anthropy Working Papers, AWP-03. Zenodo. https://doi.org/10.5281/zenodo.19434094"
+    doi: "10.5281/zenodo.19434094"
+  - cle: lalut-2026-d
+    fr: "Lalut, Stéphane (2026d). « Transition énergétique ou transfert entropique ? ». Anthropie Working Papers, AWP-04. Zenodo. https://doi.org/10.5281/zenodo.19269244"
+    en: "Lalut, Stéphane (2026d). “Energy Transition, or Anthropic Transfer?”. Anthropy Working Papers, AWP-04. Zenodo. https://doi.org/10.5281/zenodo.19439921"
+    doi: "10.5281/zenodo.19439921"
+  - cle: merton-1968
+    fr: "Merton, Robert K. (1968). « The Matthew Effect in Science ». Science, vol. 159, n° 3810, p. 56-63. DOI : 10.1126/science.159.3810.56."
+    en: "Merton, Robert K. (1968). “The Matthew Effect in Science”. Science, vol. 159, no. 3810, pp. 56–63. DOI: 10.1126/science.159.3810.56."
+    doi: "10.1126/science.159.3810.56"

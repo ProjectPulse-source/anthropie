@@ -1,0 +1,283 @@
+# Bibliographie de AWP-08 (PDF servis par Zenodo, version en cours, FR et EN), produite par
+# 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/BIBLIOGRAPHIES/ecrire.py : DOI cités par la référence, ou
+# vérifiés chez Crossref et relus (décisions_<awp>.json). Alimente citation_reference et le JSON-LD « citation »
+# de la fiche (layouts/partials/head.html) et les liens « cites » du dépôt Zenodo.
+references:
+  - cle: agan-2026
+    fr: "Agan, A., Garin, A., Koustas, D., Mas, A., & Yang, C. S. (2026). Can you erase the mark of a criminal record? Labor market impacts of criminal record remediation. American Economic Journal: Economic Policy, 18(4), 423-456. https://doi.org/10.1257/pol.20240830 [NBER Working Paper No. 32394.]"
+    en: "Agan, A., Garin, A., Koustas, D., Mas, A., & Yang, C. S. (2026). Can you erase the mark of a criminal record? Labor market impacts of criminal record remediation. American Economic Journal: Economic Policy, 18(4), 423-456. https://doi.org/10.1257/pol.20240830 [NBER Working Paper No. 32394.]"
+    doi: "10.1257/pol.20240830"
+  - cle: agan-2017
+    fr: "Agan, A., & Starr, S. (2017). The effect of criminal records on access to employment. American Economic Review: Papers & Proceedings, 107(5), 560-564."
+    en: "Agan, A., & Starr, S. (2017). The effect of criminal records on access to employment. American Economic Review: Papers & Proceedings, 107(5), 560-564."
+    doi: "10.1257/aer.p20171003"
+  - cle: agan-2018
+    fr: "Agan, A., & Starr, S. (2018). Ban the Box, criminal records, and racial discrimination: A field expe-riment. The Quarterly Journal of Economics, 133(1), 191-235."
+    en: "Agan, A., & Starr, S. (2018). Ban the Box, criminal records, and racial discrimination: A field experiment. The Quarterly Journal of Economics, 133(1), 191-235."
+  - cle: albertini-2013
+    fr: "Albertini, M., & Kohli, M. (2013). The generational contract in the family: An analysis of transfer regimes in Europe. European Sociological Review, 29(4), 828-840."
+    en: "Albertini, M., & Kohli, M. (2013). The generational contract in the family: An analysis of transfer regimes in Europe. European Sociological Review, 29(4), 828-840."
+  - cle: allen-2026
+    fr: "Allen, M., & Drolc, C. A. (2026). Worth the effort? Compliance costs, heuristics, and perceived program accessibility. Journal of Public Administration Research and Theory, 36(3), 299-315. https://doi.org/10.1093/jopart/muag007"
+    en: "Allen, M., & Drolc, C. A. (2026). Worth the effort? Compliance costs, heuristics, and perceived program accessibility. Journal of Public Administration Research and Theory, 36(3), 299-315. https://doi.org/10.1093/jopart/muag007"
+    doi: "10.1093/jopart/muag007"
+  - cle: armour-2008
+    fr: "Armour, J., & Cumming, D. (2008). Bankruptcy law and entrepreneurship. American Law and Economics Review, 10(2), 303-350. https://doi.org/10.1093/aler/ahn008"
+    en: "Armour, J., & Cumming, D. (2008). Bankruptcy law and entrepreneurship. American Law and Economics Review, 10(2), 303-350. https://doi.org/10.1093/aler/ahn008"
+    doi: "10.1093/aler/ahn008"
+  - cle: arulampalam-2001
+    fr: "Arulampalam, W. (2001). Is unemployment really scarring? Effects of unemployment experiences on wages. The Economic Journal, 111(475), F585-F606."
+    en: "Arulampalam, W. (2001). Is unemployment really scarring? Effects of unemployment experiences on wages. The Economic Journal, 111(475), F585-F606."
+    doi: "10.1111/1468-0297.00664"
+  - cle: bellon-2021
+    fr: "Bellon, A., Cookson, J. A., Gilje, E. P., & Heimer, R. Z. (2021). Personal wealth, self-employment, and business ownership. The Review of Financial Studies, 34(8), 3935-3975."
+    en: "Bellon, A., Cookson, J. A., Gilje, E. P., & Heimer, R. Z. (2021). Personal wealth, self-employment, and business ownership. The Review of Financial Studies, 34(8), 3935-3975."
+    doi: "10.1093/rfs/hhab044"
+  - cle: bezy-2026
+    fr: "Bézy, T., Levy, A., & McQuade, T. (2026). Insuring landlords (NBER Working Paper No. 35932). National Bureau of Economic Research. https://doi.org/10.3386/w35932"
+    en: "Bézy, T., Levy, A., & McQuade, T. (2026). Insuring landlords (NBER Working Paper No. 35932). National Bureau of Economic Research. https://doi.org/10.3386/w35932"
+    doi: "10.3386/w35932"
+  - cle: blanchard-1986
+    fr: "Blanchard, O. J., & Summers, L. H. (1986). Hysteresis and the European unemployment problem. NBER Macroeconomics Annual, 1, 15-78."
+    en: "Blanchard, O. J., & Summers, L. H. (1986). Hysteresis and the European unemployment problem. NBER Macroeconomics Annual, 1, 15-78."
+  - cle: bos-2018
+    fr: "Bos, M., Breza, E., & Liberman, A. (2018). The labor market effects of credit market information. The Review of Financial Studies, 31(6), 2005-2037."
+    en: "Bos, M., Breza, E., & Liberman, A. (2018). The labor market effects of credit market information. The Review of Financial Studies, 31(6), 2005-2037."
+    doi: "10.1093/rfs/hhy006"
+  - cle: bougas-2025
+    fr: "Bougas, N., Dabakuyo Yonli, T. S., Assogba, E., Haddy, N., De Vathaire, F., Janah, A., Michel, M., Bourmaud, A., Jeanningros, H., Ursino, M., Debailly, R., & Dumas, A. (2025). Effects of the right to be forgotten for childhood or breast cancer survivors: Results of a quasi-experimental study in France. Journal of Cancer Survivorship. https://doi.org/10.1007/s11764-025-01830-4"
+    en: "Bougas, N., Dabakuyo Yonli, T. S., Assogba, E., Haddy, N., De Vathaire, F., Janah, A., Michel, M., Bourmaud, A., Jeanningros, H., Ursino, M., Debailly, R., & Dumas, A. (2025). Effects of the right to be forgotten for childhood or breast cancer survivors: Results of a quasi-experimental study in France. Journal of Cancer Survivorship. https://doi.org/10.1007/s11764-025-01830-4"
+    doi: "10.1007/s11764-025-01830-4"
+  - cle: bourdieu-1986
+    fr: "Bourdieu, P. (1986). The forms of capital. In J. G. Richardson (Ed.), Handbook of Theory and Research for the Sociology of Education (pp. 241-258). Greenwood."
+    en: "Bourdieu, P. (1986). The forms of capital. In J. G. Richardson (Ed.), Handbook of Theory and Research for the Sociology of Education (pp. 241-258). Greenwood."
+  - cle: cahn-2021
+    fr: "Cahn, C., Girotti, M., & Landier, A. (2021). Entrepreneurship and information on past failures: A natural experiment. Journal of Financial Economics, 141(1), 102-121. https://doi.org/10.1016/j.jfineco.2020.06.021 [Banque de France Working Paper No. 644, 2017.]"
+    en: "Cahn, C., Girotti, M., & Landier, A. (2021). Entrepreneurship and information on past failures: A natural experiment. of Economics, 141(1), 102-121. https://doi.org/10.1016/j.jfineco.2020.06.021 [Banque de France Working Paper No. 644, 2017.]"
+    doi: "10.1016/j.jfineco.2020.06.021"
+  - cle: castel-1995
+    fr: "Castel, R. (1995). Les métamorphoses de la question sociale. Une chronique du salariat. Fayard."
+    en: "Castel, R. (1995). Les métamorphoses de la question sociale. Une chronique du salariat [The Metamorphoses of the Social Question: A Chronicle of Wage Labour]. Fayard."
+  - cle: castel-2003
+    fr: "Castel, R. (2003). L’insécurité sociale. Qu’est-ce qu’être protégé ? Seuil / La République des idées."
+    en: "Castel, R. (2003). L'insécurité sociale. Qu'est-ce qu'être protégé ? [Social Insecurity: What Does It Mean to Be Protected?]. Seuil / La République des idées."
+  - cle: clark-2021
+    fr: "Clark, R. L., Lusardi, A., & Mitchell, O. S. (2021). Financial fragility during the COVID-19 pande-mic. AEA Papers and Proceedings, 111, 292-296. https://doi.org/10.1257/pandp.20211000"
+    en: "Clark, R. L., Lusardi, A., & Mitchell, O. S. (2021). Financial fragility during the COVID-19 pandemic. AEA Papers and Proceedings, 111, 292-296. https://doi.org/10.1257/pandp.20211000"
+    doi: "10.1257/pandp.20211000"
+  - cle: coleman-1988
+    fr: "Coleman, J. S. (1988). Social capital in the creation of human capital. American Journal of Sociology, 94, S95-S120."
+    en: "Coleman, J. S. (1988). Social capital in the creation of human capital. American Journal of Sociology, 94, S95-S120."
+  - cle: dahrendorf-1979
+    fr: "Dahrendorf, R. (1979). Life Chances: Approaches to Social and Political Theory. University of Chicago Press. [Éd. anglaise de Lebenschancen. Anläufe zur sozialen und politischen Theorie, Suhrkamp ; les chances de vie comme produit d’options et de ligatures.]"
+    en: "Dahrendorf, R. (1979). Life Chances: Approaches to Social and Political Theory. University of Chicago Press. [English edition of Lebenschancen. Anläufe zur sozialen und politischen Theorie, Suhrkamp; life chances as the product of options and ligatures.]"
+  - cle: david-1985
+    fr: "David, P. A. (1985). Clio and the economics of QWERTY. American Economic Review, 75(2), 332-337."
+    en: "David, P. A. (1985). Clio and the economics of QWERTY. American Economic Review, 75(2), 332-337."
+  - cle: diprete-2006
+    fr: "DiPrete, T. A., & Eirich, G. M. (2006). Cumulative advantage as a mechanism for inequality: A review of theoretical and empirical developments. Annual Review of Sociology, 32, 271-297."
+    en: "DiPrete, T. A., & Eirich, G. M. (2006). Cumulative advantage as a mechanism for inequality: A review of theoretical and empirical developments. Annual Review of Sociology, 32, 271-297."
+    doi: "10.1146/annurev.soc.32.061604.123127"
+  - cle: dixit-1994
+    fr: "Dixit, A. K., & Pindyck, R. S. (1994). Investment under Uncertainty. Princeton University Press."
+    en: "Dixit, A. K., & Pindyck, R. S. (1994). Investment under Uncertainty. Princeton University Press."
+    doi: "10.1515/9781400830176"
+  - cle: dobbie-2020
+    fr: "Dobbie, W., Goldsmith-Pinkham, P., Mahoney, N., & Song, J. (2020). Bad credit, no problem? Credit and labor market consequences of bad credit reports. The Journal of Finance, 75(5), 2377-2419. https://doi.org/10.1111/jofi.12954 [NBER Working Paper No. 22711, 2016.]"
+    en: "Dobbie, W., Goldsmith-Pinkham, P., Mahoney, N., & Song, J. (2020). Bad credit, no problem? Credit and labor market consequences of bad credit reports. The Journal of Finance, 75(5), 2377-2419. https://doi.org/10.1111/jofi.12954 [NBER Working Paper No. 22711, 2016.]"
+    doi: "10.1111/jofi.12954"
+  - cle: dobbie-2015
+    fr: "Dobbie, W., & Song, J. (2015). Debt relief and debtor outcomes: Measuring the effects of consumer bankruptcy protection. American Economic Review, 105(3), 1272-1311."
+    en: "Dobbie, W., & Song, J. (2015). Debt relief and debtor outcomes: Measuring the effects of consumer bankruptcy protection. American Economic Review, 105(3), 1272-1311."
+    doi: "10.1257/aer.20130612"
+  - cle: duvoux-2023
+    fr: "Duvoux, N. (2023). L’avenir confisqué. Inégalités de temps vécu, classes sociales et patrimoine. Presses Universitaires de France."
+    en: "Duvoux, N. (2023). L'avenir confisqué. Inégalités de temps vécu, classes sociales et patrimoine [The Confiscated Future: Inequalities of Lived Time, Social Class, and Wealth]. Presses Universitaires de France."
+  - cle: eberhart-2017
+    fr: "Eberhart, R. N., Eesley, C. E., & Eisenhardt, K. M. (2017). Failure is an option: Institutional change, entrepreneurial risk, and new firm growth. Organization Science, 28(1), 93-112. https://doi.org/10.1287/orsc.2017.1110"
+    en: "Eberhart, R. N., Eesley, C. E., & Eisenhardt, K. M. (2017). Failure is an option: Institutional change, entrepreneurial risk, and new firm growth. Science, 28(1), 93-112. https://doi.org/10.1287/orsc.2017.1110"
+    doi: "10.1287/orsc.2017.1110"
+  - cle: elul-2015
+    fr: "Elul, R., & Gottardi, P. (2015). Bankruptcy: Is it enough to forgive or must we also forget? Ameri-can Economic Journal: Microeconomics, 7(4), 294-338. https://doi.org/10.1257/mic.20130139"
+    en: "Elul, R., & Gottardi, P. (2015). Bankruptcy: Is it enough to forgive or must we also forget? American Economic Journal: Microeconomics, 7(4), 294-338. https://doi.org/10.1257/mic.20130139"
+    doi: "10.1257/mic.20130139"
+  - cle: eriksson-2014
+    fr: "Eriksson, S., & Rooth, D.-O. (2014). Do employers use unemployment as a sorting criterion when hiring? Evidence from a field experiment. American Economic Review, 104(3), 1014-1039."
+    en: "Eriksson, S., & Rooth, D.-O. (2014). Do employers use unemployment as a sorting criterion when hiring? Evidence from a field experiment. American Economic Review, 104(3), 1014-1039."
+    doi: "10.1257/aer.104.3.1014"
+  - cle: fan-2003
+    fr: "Fan, W., & White, M. J. (2003). Personal bankruptcy and the level of entrepreneurial activity. The Journal of Law and Economics, 46(2), 543-567. https://doi.org/10.1086/382602"
+    en: "Fan, W., & White, M. J. (2003). Personal bankruptcy and the level of entrepreneurial activity. The Journal of Law and Economics, 46(2), 543-567. https://doi.org/10.1086/382602"
+    doi: "10.1086/382602"
+  - cle: fossen-2014
+    fr: "Fossen, F. M. (2014). Personal bankruptcy law, wealth, and entrepreneurship—Evidence from the introduction of a “fresh start” policy. American Law and Economics Review, 16(1), 269-312. https://doi.org/10.1093/aler/aht015"
+    en: "Fossen, F. M. (2014). Personal bankruptcy law, wealth, and entrepreneurship—Evidence from the introduction of a \"fresh start\" policy. American Law and Economics Review, 16(1), 269-312. https://doi.org/10.1093/aler/aht015"
+    doi: "10.1093/aler/aht015"
+  - cle: gonalons-2022
+    fr: "Gonalons-Pons, P., & Gangl, M. (2022). Regulated earnings security: The relationship between employment protection and unemployment scarring over the Great Recession. Socio-Economic Review, 20(1), 169-198."
+    en: "Gonalons-Pons, P., & Gangl, M. (2022). Regulated earnings security: The relationship between employment protection and unemployment scarring over the Great Recession. Socio-Economic Review, 20(1), 169-198."
+  - cle: gregg-2005
+    fr: "Gregg, P., & Tominey, E. (2005). The wage scar from male youth unemployment. Labour Econo-mics, 12(4), 487-509."
+    en: "Gregg, P., & Tominey, E. (2005). The wage scar from male youth unemployment. Labour Economics, 12(4), 487-509."
+    doi: "10.1016/j.labeco.2005.05.004"
+  - cle: gross-2020
+    fr: "Gross, T., Notowidigdo, M. J., & Wang, J. (2020). The marginal propensity to consume over the business cycle. American Economic Journal: Macroeconomics, 12(2), 351-384."
+    en: "Gross, T., Notowidigdo, M. J., & Wang, J. (2020). The marginal propensity to consume over the business cycle. American Economic Journal: Macroeconomics, 12(2), 351-384."
+    doi: "10.1257/mac.20160287"
+  - cle: herd-2018
+    fr: "Herd, P., & Moynihan, D. P. (2018). Administrative Burden: Policymaking by Other Means. Russell Sage Foundation."
+    en: "Herd, P., & Moynihan, D. P. (2018). Administrative Burden: Policymaking by Other Means. Russell Sage Foundation."
+  - cle: herkenhoff-2021
+    fr: "Herkenhoff, K., Phillips, G. M., & Cohen-Cole, E. (2021). The impact of consumer credit access on self-employment and entrepreneurship. Journal of Financial Economics, 141(1), 345-371. https://doi.org/10.1016/j.jfineco.2021.03.004 [Version publiée du NBER Working Paper No. 22846, 2016 ; à ne pas confondre avec Herkenhoff (2019), The Review of Economic Studies, 86(6), 2605-2642, issu du NBER Working Paper No. 25187.]"
+    en: "Herkenhoff, K., Phillips, G. M., & Cohen-Cole, E. (2021). The impact of consumer credit access on self-employment and entrepreneurship. Journal of Financial Economics, 141(1), 345-371. https://doi.org/10.1016/j.jfineco.2021.03.004 [Published version of NBER Working Paper No. 22846, 2016; not to be confused with Herkenhoff (2019), The Review of Economic Studies, 86(6), 2605-2642, from NBER Working Paper No. 25187.]"
+    doi: "10.1016/j.jfineco.2021.03.004"
+  - cle: hombert-2020
+    fr: "Hombert, J., Schoar, A., Sraer, D., & Thesmar, D. (2020). Can unemployment insurance spur entrepreneurial activity? Evidence from France. The Journal of Finance, 75(3), 1247-1285. [NBER Working Paper No. 20717, 2014.]"
+    en: "Hombert, J., Schoar, A., Sraer, D., & Thesmar, D. (2020). Can unemployment insurance spur entrepreneurial activity? Evidence from France. The Journal of Finance, 75(3), 1247-1285. [NBER Working Paper No. 20717, 2014.]"
+    doi: "10.1111/jofi.12880"
+  - cle: knol-2012
+    fr: "Knol, M. J., & VanderWeele, T. J. (2012). Recommendations for presenting analyses of effect modification and interaction. International Journal of Epidemiology, 41(2), 514-520."
+    en: "Knol, M. J., & VanderWeele, T. J. (2012). Recommendations for presenting analyses of effect modification and interaction. International Journal of Epidemiology, 41(2), 514-520."
+    doi: "10.1093/ije/dyr218"
+  - cle: kovbasyuk-2024
+    fr: "Kovbasyuk, S., & Spagnolo, G. (2024). Memory and markets. The Review of Economic Studies, 91(3), 1775-1806. https://doi.org/10.1093/restud/rdad067"
+    en: "Kovbasyuk, S., & Spagnolo, G. (2024). Memory and markets. The Review of Economic Studies, 91(3), 1775-1806. https://doi.org/10.1093/restud/rdad067"
+    doi: "10.1093/restud/rdad067"
+  - cle: kroft-2013
+    fr: "Kroft, K., Lange, F., & Notowidigdo, M. J. (2013). Duration dependence and labor market conditions: Evidence from a field experiment. The Quarterly Journal of Economics, 128(3), 1123-1167."
+    en: "Kroft, K., Lange, F., & Notowidigdo, M. J. (2013). Duration dependence and labor market conditions: Evidence from a field experiment. The Quarterly Journal of Economics, 128(3), 1123-1167."
+  - cle: lalut-2026-a
+    fr: "Lalut, S. (2026a). Qu’est-ce que l’anthropie ? Principes d’une hypothèse (Anthropie Working Paper No. 01). Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    en: "Lalut, S. (2026a). Qu'est-ce que l'anthropie ? Principes d'une hypothèse [What Is Anthropy? Principles of a Hypothesis] (Anthropie Working Paper No. 01). Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    doi: "10.5281/zenodo.19266862"
+  - cle: lalut-2026-b
+    fr: "Lalut, S. (2026b). La boucle anthropique : déplacement, saturation, retour — formaliser un mécanisme, de Kapp à Stiegler (Anthropie Working Paper No. 07). Zenodo. https://doi.org/10.5281/zenodo.21200286"
+    en: "Lalut, S. (2026b). La boucle anthropique : déplacement, saturation, retour — formaliser un mécanisme, de Kapp à Stiegler [The Anthropic Loop: Displacement, Saturation, Return—Formalizing a Mechanism, from to Stiegler] (Anthropie No. 07). Zenodo. https://doi.org/10.5281/zenodo.21200286"
+    doi: "10.5281/zenodo.21200286"
+  - cle: landier-2005
+    fr: "Landier, A. (2005). Entrepreneurship and the stigma of failure (document de travail). SSRN 850446."
+    en: "Landier, A. (2005). Entrepreneurship and the stigma of failure (working paper). SSRN 850446."
+    doi: "10.2139/ssrn.850446"
+  - cle: liberman-2018
+    fr: "Liberman, A., Neilson, C., Opazo, L., & Zimmerman, S. (2018). The equilibrium effects of informa-tion deletion: Evidence from consumer credit markets (NBER Working Paper No. 25097). National Bureau of Economic Research. https://doi.org/10.3386/w25097"
+    en: "Liberman, A., Neilson, C., Opazo, L., & Zimmerman, S. (2018). The equilibrium effects of information deletion: Evidence from consumer credit markets (NBER Working Paper No. 25097). National Bureau of Economic Research. https://doi.org/10.3386/w25097"
+    doi: "10.3386/w25097"
+  - cle: mayer-2009
+    fr: "Mayer, K. U. (2009). New directions in life course research. Annual Review of Sociology, 35, 413-433."
+    en: "Mayer, K. U. (2009). New directions in life course research. Annual Review of Sociology, 35, 413-433."
+    doi: "10.1146/annurev.soc.34.040507.134619"
+  - cle: merton-1968
+    fr: "Merton, R. K. (1968). The Matthew effect in science. Science, 159(3810), 56-63."
+    en: "Merton, R. K. (1968). The Matthew effect in science. Science, 159(3810), 56-63."
+    doi: "10.1126/science.159.3810.56"
+  - cle: moynihan-2015
+    fr: "Moynihan, D., Herd, P., & Harvey, H. (2015). Administrative burden: Learning, psychological, and compliance costs in citizen-state interactions. Journal of Public Administration Research and Theory, 25(1), 43-69."
+    en: "Moynihan, D., Herd, P., & Harvey, H. (2015). Administrative burden: Learning, psychological, and compliance costs in citizen-state interactions. Journal of Public Administration Research and Theory, 25(1), 43-69."
+  - cle: mullainathan-2013
+    fr: "Mullainathan, S., & Shafir, E. (2013). Scarcity: Why Having Too Little Means So Much. Times Books."
+    en: "Mullainathan, S., & Shafir, E. (2013). Scarcity: Why Having Too Little Means So Much. Times Books."
+  - cle: musto-2004
+    fr: "Musto, D. K. (2004). What happens when information leaves a market? Evidence from postbankruptcy consumers. The Journal of Business, 77(4), 725-748."
+    en: "Musto, D. K. (2004). What happens when information leaves a market? Evidence from postbankruptcy consumers. The Journal of Business, 77(4), 725-748."
+    doi: "10.1086/422437"
+  - cle: nguyen-2018
+    fr: "Nguyen, H., & Loughran, T. A. (2018). On the measurement and identification of turning points in criminology. Annual Review of Criminology, 1, 335-358."
+    en: "Nguyen, H., & Loughran, T. A. (2018). On the measurement and identification of turning points in criminology. Annual Review of Criminology, 1, 335-358."
+    doi: "10.1146/annurev-criminol-032317-091949"
+  - cle: nussbaum-2000
+    fr: "Nussbaum, M. C. (2000). Women and Human Development: The Capabilities Approach. Cambridge University Press."
+    en: "Nussbaum, M. C. (2000). Women and Human Development: The Capabilities Approach. Cambridge University Press."
+    doi: "10.1017/cbo9780511841286"
+  - cle: portes-1998
+    fr: "Portes, A. (1998). Social capital: Its origins and applications in modern sociology. Annual Review of Sociology, 24, 1-24."
+    en: "Portes, A. (1998). Social capital: Its origins and applications in modern sociology. Annual Review of Sociology, 24, 1-24."
+    doi: "10.1146/annurev.soc.24.1.1"
+  - cle: portes-1996
+    fr: "Portes, A., & Landolt, P. (1996). The downside of social capital. The American Prospect, 26, 18-21."
+    en: "Portes, A., & Landolt, P. (1996). The downside of social capital. The American Prospect, 26, 18-21."
+  - cle: prescott-2020
+    fr: "Prescott, J. J., & Starr, S. B. (2020). Expungement of criminal convictions: An empirical study. Harvard Law Review, 133(8), 2460-2555."
+    en: "Prescott, J. J., & Starr, S. B. (2020). Expungement of criminal convictions: An empirical study. Harvard Law Review, 133(8), 2460-2555."
+  - cle: pugno-2017
+    fr: "Pugno, M. (2017). Scitovsky meets Sen: Endogenising the dynamics of capability. Cambridge Jour-nal of Economics, 41(4), 1177-1196."
+    en: "Pugno, M. (2017). Scitovsky meets Sen: Endogenising the dynamics of capability. Cambridge Journal of Economics, 41(4), 1177-1196."
+  - cle: rajkumar-2022
+    fr: "Rajkumar, K., Saint-Jacques, G., Bojinov, I., Brynjolfsson, E., & Aral, S. (2022). A causal test of the strength of weak ties. Science, 377(6612), 1304-1310."
+    en: "Rajkumar, K., Saint-Jacques, G., Bojinov, I., Brynjolfsson, E., & Aral, S. (2022). A causal test of the strength of weak ties. Science, 377(6612), 1304-1310."
+    doi: "10.1126/science.abl4476"
+  - cle: schmalz-2017
+    fr: "Schmalz, M. C., Sraer, D. A., & Thesmar, D. (2017). Housing collateral and entrepreneurship. The Journal of Finance, 72(1), 99-132."
+    en: "Schmalz, M. C., Sraer, D. A., & Thesmar, D. (2017). Housing collateral and entrepreneurship. The Journal of Finance, 72(1), 99-132."
+  - cle: sen-1985
+    fr: "Sen, A. (1985). Commodities and Capabilities. North-Holland."
+    en: "Sen, A. (1985). Commodities and Capabilities. North-Holland."
+  - cle: sen-1999
+    fr: "Sen, A. (1999). Development as Freedom. Knopf."
+    en: "Sen, A. (1999). Development as Freedom. Knopf."
+  - cle: sherraden-1991
+    fr: "Sherraden, M. (1991). Assets and the Poor: A New American Welfare Policy. M. E. Sharpe."
+    en: "Sherraden, M. (1991). Assets and the Poor: A New American Welfare Policy. M. E. Sharpe."
+  - cle: starr-2026
+    fr: "Starr, S. B. (2026). Empirical research on criminal record expungement: A critical review. Annual Review of Criminology. https://doi.org/10.1146/annurev-criminol-111523-122628"
+    en: "Starr, S. B. (2026). Empirical research on criminal record expungement: A critical review. Annual Review of Criminology. https://doi.org/10.1146/annurev-criminol-111523-122628"
+    doi: "10.1146/annurev-criminol-111523-122628"
+  - cle: warin-2015
+    fr: "Warin, P. (2015, 15 mai). Pourquoi le non-recours ? Revue Projet, n° 346. https://www.revue-projet.com/articles/2015-05-warin-pourquoi-le-non-recours/8052 [Travaux de l’ODENORE.]"
+    en: "Warin, P. (2015, 15 May). Pourquoi le non-recours ? [Why non-take-up?]. Revue Projet, No. 346. https://www.revue-projet.com/articles/2015-05-warin-pourquoi-le-non-recours/8052 [Work of ODENORE, the French observatory of non-take-up of rights and services.]"
+  - cle: wolff-2007
+    fr: "Wolff, J., & de-Shalit, A. (2007). Disadvantage. Oxford University Press. [Partie 1, « The secure functionings approach ».]"
+    en: "Wolff, J., & de-Shalit, A. (2007). Disadvantage. Oxford University Press. [Part 1, \"The secure functionings approach\".]"
+  - cle: zapha-2023
+    fr: "Zapha, C. (2023). Access to bank credit after emerging from corporate bankruptcy (Banque de France Working Paper No. 928)."
+    en: "Zapha, C. (2023). Access to bank credit after emerging from corporate bankruptcy (Banque de France Working Paper No. 928)."
+  - cle: action-2026
+    fr: "Action Logement (2026, 24 juillet). Visale, 10 ans de confiance. [Deux millions de garanties sous-crites.]"
+    en: "Action Logement (2026, 24 July). Visale, 10 ans de confiance [Visale: ten years of trust]. [Two million guarantees taken out.]"
+  - cle: antunez-2020
+    fr: "Antunez, K., Castell, L., Perron-Bailly, É., et al. (2020). Les rendez-vous des droits des Caf : quels effets sur le non-recours ? (Les Dossiers de la DREES n° 47). DREES."
+    en: "Antunez, K., Castell, L., Perron-Bailly, É., et al. (2020). Les rendez-vous des droits des Caf : quels effets sur le non-recours ? [Rights appointments at the family-benefits funds: what effects on non-take-up?] (Les Dossiers de la DREES No. 47). DREES."
+  - cle: banque-2025
+    fr: "Banque de France (2025). FICP — Chiffres clés 2024. [Fichier national des incidents de rembourse-ment des crédits aux particuliers.]"
+    en: "Banque de France (2025). FICP — Chiffres clés 2024 [FICP — Key Figures 2024]. [National file of household credit repayment incidents.]"
+  - cle: banque-2024
+    fr: "Banque de France (2024). FIBEN — Fichier bancaire des entreprises [notice d’accès]."
+    en: "Banque de France (2024). FIBEN — Fichier bancaire des entreprises [FIBEN — Companies' Banking File] [access notice]."
+  - cle: france-nd-2013-799
+    fr: "France. Décret n° 2013-799 du 2 septembre 2013 modifiant l’article D. 144-12 du code monétaire et financier, JORF du 4 septembre 2013. [Suppression de l’indicateur 040 du fichier FIBEN ; entrée en vigueur le 9 septembre 2013 ; notice officielle : 144 000 dirigeants concernés.]"
+    en: "France. Decree No. 2013-799 of 2 September 2013 amending Article D. 144-12 of the Monetary and Financial Code, Journal officiel of 4 September 2013. [Abolition of indicator 040 in the FIBEN file; entry into force on 9 September 2013; official notice: 144,000 directors concerned.]"
+  - cle: france-nd-2018-834
+    fr: "France. Décret n° 2018-834 du 1er octobre 2018 modifiant l’article D. 144-12 du code monétaire et financier. [Suppression de l’indicateur 050 au 1er janvier 2019, seconde réforme sur laquelle s’appuie le raisonnement méthodologique de la section 7.2.]"
+    en: "France. Decree No. 2018-834 of 1 October 2018 amending Article D. 144-12 of the Monetary and Financial Code. [Abolition of indicator 050 on 1 January 2019, the second reform on which the methodological reasoning of Section 7.2 rests.]"
+  - cle: cereq-2024
+    fr: "Céreq (2024). Origine sociale, diplôme et insertion : la force des liens (Céreq Bref n° 452, Génération 2017). Code des assurances, art. L.113-2-1 [issu de la loi n° 2022-270 du 28 février 2022, art. 10]."
+    en: "Céreq (2024). Origine sociale, diplôme et insertion : la force des liens [Social Origin, Qualifications, and Labour-Market Entry: The Strength of Ties] (Céreq Bref No. 452, Génération 2017). Insurance Code (France), art. L.113-2-1 [introduced by Law No. 2022-270 of 28 February 2022, art. 10]."
+  - cle: drees-2023
+    fr: "DREES (2023). Prestations sociales : quatre personnes sur dix… (Études & Résultats n° 1263, Baromètre 2021)."
+    en: "DREES (2023). Prestations sociales : quatre personnes sur dix… [Social Benefits: Four People in Ten…] (Études & Résultats No. 1263, 2021 Barometer)."
+  - cle: drees-2026
+    fr: "DREES (2026). Le non-recours au RSA fin 2021 (Études & Résultats n° 1370)."
+    en: "DREES (2026). Le non-recours au RSA fin 2021 [Non-Take-Up of the RSA at the End of 2021] (Études & Résultats No. 1370)."
+  - cle: igesr-2020
+    fr: "IGÉSR (2020). La réorientation dans l’enseignement supérieur."
+    en: "IGÉSR (2020). La réorientation dans l'enseignement supérieur [Reorientation in Higher Education]."
+  - cle: ipp-2023
+    fr: "IPP — Institut des politiques publiques (2023). Transferts parentaux vers les jeunes adultes (Rapport n° 44)."
+    en: "IPP — Institut des politiques publiques (2023). Transferts parentaux vers les jeunes adultes [Parental Transfers to Young Adults] (Report No. 44)."
+  - cle: loi-nd-2022-270
+    fr: "Loi n° 2022-270 du 28 février 2022 (dite loi Lemoine)."
+    en: "Law No. 2022-270 of 28 February 2022 (the \"Lemoine Act\")."
+  - cle: ccsf-2026
+    fr: "CCSF — Comité consultatif du secteur financier (2026). Avis du 26 mai 2026 sur l’assurance emprunteur."
+    en: "CCSF — Comité consultatif du secteur financier (2026). Avis du 26 mai 2026 sur l'assurance emprunteur [Opinion of 26 May 2026 on borrower insurance]."
+  - cle: dgccrf-2026
+    fr: "DGCCRF (2026, avril). Crédits immobiliers : les banques plus promptes à accepter les changements d’assurance emprunteur [enquête de contrôle 2023-2024 sur l’application de la loi Lemoine]."
+    en: "DGCCRF (2026, April). Crédits immobiliers : les banques plus promptes à accepter les changements d'assurance emprunteur [Mortgage loans: banks quicker to accept changes of borrower insurance] [2023-2024 compliance survey on the application of the Lemoine Act]."
+  - cle: senat-2022
+    fr: "Sénat (2022). Réponse du ministère à la question écrite n° SEQ220700353, JO Sénat du 29 décembre 2022 [évaluation du CRÉDOC sur Visale]."
+    en: "French Senate (2022). Ministerial answer to written question No. SEQ220700353, JO Sénat, 29 December 2022 [CRÉDOC evaluation of Visale]."
+  - cle: united-1973
+    fr: "United States v. Kras, 409 U.S. 434 (1973). [Absence de droit constitutionnel à l’effacement des dettes ; le discharge est un bénéfice créé par le législateur, non par la Constitution.]"
+    en: "United States v. Kras, 409 U.S. 434 (1973). [No constitutional right to the discharge of debts; the discharge is a benefit created by the legislature, not by the Constitution.]"
+  - cle: local-1934
+    fr: "Local Loan Co. v. Hunt, 292 U.S. 234 (1934). [Le fresh start comme finalité de politique publique : « a new opportunity in life and a clear field for future effort ».]"
+    en: "Local Loan Co. v. Hunt, 292 U.S. 234 (1934). [The fresh start as a policy objective: \"a new opportunity in life and a clear field for future effort\".]"

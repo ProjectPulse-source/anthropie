@@ -1,0 +1,98 @@
+# Bibliographie de AWP-09 (PDF servis par Zenodo, version en cours, FR et EN), produite par
+# 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/BIBLIOGRAPHIES/ecrire.py : DOI cités par la référence, ou
+# vérifiés chez Crossref et relus (décisions_<awp>.json). Alimente citation_reference et le JSON-LD « citation »
+# de la fiche (layouts/partials/head.html) et les liens « cites » du dépôt Zenodo.
+references:
+  - cle: agnello-2014
+    fr: "Agnello, Luca et Sousa, Ricardo M. (2014). « How Does Fiscal Consolidation Impact on Income In-equality? ». Review of Income and Wealth, vol. 60, n° 4, p. 702-726. https://doi.org/10.1111/roiw.12004"
+    en: "Agnello, Luca and Sousa, Ricardo M. (2014). “How Does Fiscal Consolidation Impact on Income In-equality?”. Review of Income and Wealth, vol. 60, no. 4, pp. 702-726. https://doi.org/10.1111/roiw.12004"
+    doi: "10.1111/roiw.12004"
+  - cle: auclert-2024
+    fr: "Auclert, Adrien, Philippon, Thomas et Ragot, Xavier (2024). « Quelle trajectoire pour les finances publiques françaises ? ». Les notes du Conseil d’analyse économique, n° 82, juillet."
+    en: "Auclert, Adrien, Philippon, Thomas and Ragot, Xavier (2024). “Quelle trajectoire pour les finances publiques françaises ?”. Les notes du Conseil d’analyse économique, no. 82, July."
+  - cle: auerbach-1991
+    fr: "Auerbach, Alan J., Gokhale, Jagadeesh et Kotlikoff, Laurence J. (1991). « Generational Accounts: A Meaningful Alternative to Deficit Accounting ». Tax Policy and the Economy, vol. 5, p. 55-110. https://doi.org/10.1086/tpe.5.20061801"
+    en: "Auerbach, Alan J., Gokhale, Jagadeesh and Kotlikoff, Laurence J. (1991). “Generational Accounts: A Meaningful Alternative to Deficit Accounting”. Tax Policy and the Economy, vol. 5, pp. 55-110. https://doi.org/10.1086/tpe.5.20061801"
+    doi: "10.1086/tpe.5.20061801"
+  - cle: ball-2013
+    fr: "Ball, Laurence, Furceri, Davide, Leigh, Daniel et Loungani, Prakash (2013). « The Distributional Effects of Fiscal Consolidation ». IMF Working Paper, WP/13/151. https://doi.org/10.2139/ssrn.2292338"
+    en: "Ball, Laurence, Furceri, Davide, Leigh, Daniel and Loungani, Prakash (2013). “The Distributional Effects of Fiscal Consolidation”. IMF Working Paper, WP/13/151. https://doi.org/10.2139/ssrn.2292338"
+    doi: "10.2139/ssrn.2292338"
+  - cle: blanchard-2019
+    fr: "Blanchard, Olivier (2019). « Public Debt and Low Interest Rates ». American Economic Review, vol. 109, n° 4, p. 1197-1229. https://doi.org/10.1257/aer.109.4.1197"
+    en: "Blanchard, Olivier (2019). “Public Debt and Low Interest Rates”. American Economic Review, vol. 109, no. 4, pp. 1197-1229. https://doi.org/10.1257/aer.109.4.1197"
+    doi: "10.1257/aer.109.4.1197"
+  - cle: bonnet-2002
+    fr: "Bonnet, Carole (2002). « Application de la méthode de la comptabilité générationnelle à la France. Quelques facteurs d’instabilité des résultats ». Revue économique, vol. 53, n° 4, p. 719-766. https://doi.org/10.3917/reco.534.0719"
+    en: "Bonnet, Carole (2002). “Application de la méthode de la comptabilité générationnelle à la France. Quelques facteurs d’instabilité des résultats”. Revue économique, vol. 53, no. 4, pp. 719-766. https://doi.org/10.3917/reco.534.0719"
+    doi: "10.3917/reco.534.0719"
+  - cle: buchanan-1958
+    fr: "Buchanan, James M. (1958). Public Principles of Public Debt. Homewood, Richard D. Irwin."
+    en: "Buchanan, James M. (1958). Public Principles of Public Debt. Homewood, Richard D. Irwin."
+  - cle: claveres-2023
+    fr: "Clavères, Guillaume (2023). « Taux d’intérêt, croissance et soutenabilité de la dette publique ». Tré-sor-Éco, n° 334, direction générale du Trésor, octobre."
+    en: "Clavères, Guillaume (2023). “Taux d’intérêt, croissance et soutenabilité de la dette publique”. Trésor-Éco, no. 334, direction générale du Trésor, October."
+  - cle: collectif-2014
+    fr: "Collectif pour un audit citoyen de la dette publique (2014). Que faire de la dette ? Un audit de la dette publique de la France. Paris, Attac, mai."
+    en: "Collectif pour un audit citoyen de la dette publique (2014). Que faire de la dette ? Un audit de la dette publique de la France. Paris, Attac, May."
+  - cle: commission-2026
+    fr: "Commission européenne (2026). Debt Sustainability Monitor 2025. Institutional Paper 332, DG ECFIN, février."
+    en: "Commission européenne (2026). Debt Sustainability Monitor 2025. Institutional Paper 332, DG ECFIN, February."
+  - cle: cour-2025
+    fr: "Cour des comptes (2025). La situation et les perspectives des finances publiques. Paris, juin."
+    en: "Cour des comptes (2025). La situation et les perspectives des finances publiques. Paris, June."
+  - cle: diamond-1965
+    fr: "Diamond, Peter A. (1965). « National Debt in a Neoclassical Growth Model ». American Economic Review, vol. 55, n° 5, p. 1126-1150."
+    en: "Diamond, Peter A. (1965). “National Debt in a Neoclassical Growth Model”. American Economic Review, vol. 55, no. 5, pp. 1126-1150."
+  - cle: direction-2026
+    fr: "Direction générale du Trésor (2026). « Finances publiques : une situation dégradée, un redressement nécessaire ». Trésor-Éco, n° 403, septembre."
+    en: "Direction générale du Trésor (2026). “Finances publiques : une situation dégradée, un redressement nécessaire”. Trésor-Éco, no. 403, September."
+  - cle: escolano-2010
+    fr: "Escolano, Julio (2010). A Practical Guide to Public Debt Dynamics, Fiscal Sustainability, and Cyclical Adjustment of Budgetary Aggregates. IMF Technical Notes and Manuals, n° 10/02. https://doi.org/10.5089/9781462396955.005"
+    en: "Escolano, Julio (2010). A Practical Guide to Public Debt Dynamics, Fiscal Sustainability, and Cyclical Adjustment of Budgetary Aggregates. IMF Technical Notes and Manuals, no. 10/02. https://doi.org/10.5089/9781462396955.005"
+    doi: "10.5089/9781462396955.005"
+  - cle: fipeco-2024
+    fr: "FIPECO (2024). « Le patrimoine des administrations publiques à la fin de 2023 ». Fiche, 17 sep-tembre."
+    en: "FIPECO (2024). “Le patrimoine des administrations publiques à la fin de 2023”. Fiche, September 17."
+  - cle: haut-2026
+    fr: "Haut Conseil des finances publiques (2026). Avis n° HCFP-2026-5 du 25 septembre 2026 relatif aux projets de lois de finances et de financement de la sécurité sociale pour 2027."
+    en: "Haut Conseil des finances publiques (2026). Avis no. HCFP-2026-5 du 25 septembre 2026 relatif aux projets de lois de finances et de financement de la sécurité sociale pour 2027."
+  - cle: herndon-2014
+    fr: "Herndon, Thomas, Ash, Michael et Pollin, Robert (2014). « Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogoff ». Cambridge Journal of Economics, vol. 38, n° 2, p. 257-279. https://doi.org/10.1093/cje/bet075"
+    en: "Herndon, Thomas, Ash, Michael and Pollin, Robert (2014). “Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogoff”. Cambridge Journal of Economics, vol. 38, no. 2, pp. 257-279. https://doi.org/10.1093/cje/bet075"
+    doi: "10.1093/cje/bet075"
+  - cle: heyer-2025
+    fr: "Heyer, Éric, Plane, Mathieu, Ragot, Xavier, Sampognaro, Raul et Timbeau, Xavier (2025). « Quelles trajectoires pour les finances publiques de la France ? ». Document de travail de l’OFCE, n° 13, juillet."
+    en: "Heyer, Éric, Plane, Mathieu, Ragot, Xavier, Sampognaro, Raul and Timbeau, Xavier (2025). “Quelles trajectoires pour les finances publiques de la France ?”. Document de travail de l’OFCE, no. 13, July."
+  - cle: lalut-2026-a
+    fr: "Lalut, Stéphane (2026a). « Qu’est-ce que l’anthropie ? Principes d’une hypothèse ». Anthropie Wor-king Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    en: "Lalut, Stéphane (2026a). “Qu’est-ce que l’anthropie ? Principes d’une hypothèse”. Anthropie Work-ing Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    doi: "10.5281/zenodo.19266862"
+  - cle: lalut-2026-b
+    fr: "Lalut, Stéphane (2026b). « Dette publique et anthropie : qui paie vraiment le désordre ? ». Anthro-pie Working Papers, AWP-03. Zenodo. https://doi.org/10.5281/zenodo.19268769"
+    en: "Lalut, Stéphane (2026b). “Dette publique et anthropie : qui paie vraiment le désordre ?”. Anthropie Working Papers, AWP-03. Zenodo. https://doi.org/10.5281/zenodo.19268769"
+    doi: "10.5281/zenodo.19268769"
+  - cle: lemoine-2016
+    fr: "Lemoine, Benjamin (2016). L’Ordre de la dette. Les infortunes de l’État et la prospérité du marché. Paris, La Découverte."
+    en: "Lemoine, Benjamin (2016). L’Ordre de la dette. Les infortunes de l’État et la prospérité du marché. Paris, La Découverte."
+  - cle: mauvieux-2026
+    fr: "Mauvieux, Kévin (2026). Rapport d’information sur l’effet boule de neige de la dette. Assemblée na-tionale, commission des finances, n° 3006, 2 juillet."
+    en: "Mauvieux, Kévin (2026). Rapport d’information sur l’effet boule de neige de la dette. Assemblée na-tionale, commission des finances, no. 3006, July 2."
+  - cle: piketty-2013
+    fr: "Piketty, Thomas (2013). Le Capital au XXIe siècle. Paris, Seuil."
+    en: "Piketty, Thomas (2013). Le Capital au XXIe siècle. Paris, Seuil."
+  - cle: reinhart-2010
+    fr: "Reinhart, Carmen M. et Rogoff, Kenneth S. (2010). « Growth in a Time of Debt ». American Eco-nomic Review, vol. 100, n° 2, p. 573-578. https://doi.org/10.1257/aer.100.2.573"
+    en: "Reinhart, Carmen M. and Rogoff, Kenneth S. (2010). “Growth in a Time of Debt”. American Eco-nomic Review, vol. 100, no. 2, pp. 573-578. https://doi.org/10.1257/aer.100.2.573"
+    doi: "10.1257/aer.100.2.573"
+  - cle: serviere-2024
+    fr: "Servière, Samuel-Frédéric (2024). « Depuis 1974, les intérêts de la dette représentent 53 % de l’endettement cumulé par la France ». Fondation iFRAP, 19 juin."
+    en: "Servière, Samuel-Frédéric (2024). “Depuis 1974, les intérêts de la dette représentent 53 % de l’endettement cumulé par la France”. Fondation iFRAP, June 19."
+  - cle: von-2006
+    fr: "von Hagen, Jürgen et Wolff, Guntram B. (2006). « What Do Deficits Tell Us about Debt? Empirical Evidence on Creative Accounting with Fiscal Rules in the EU ». Journal of Banking & Fi-nance, vol. 30, n° 12, p. 3259-3279. https://doi.org/10.1016/j.jbankfin.2006.05.011"
+    en: "von Hagen, Jürgen and Wolff, Guntram B. (2006). “What Do Deficits Tell Us about Debt? Empirical Evidence on Creative Accounting with Fiscal Rules in the EU”. Journal of Banking & Fin-ance, vol. 30, no. 12, pp. 3259-3279. https://doi.org/10.1016/j.jbankfin.2006.05.011"
+    doi: "10.1016/j.jbankfin.2006.05.011"
+  - cle: weber-2012
+    fr: "Weber, Anke (2012). « Stock-Flow Adjustments and Fiscal Transparency: A Cross-Country Comparison ». IMF Working Paper, WP/12/39."
+    en: "Weber, Anke (2012). “Stock-Flow Adjustments and Fiscal Transparency: A Cross-Country Comparison”. IMF Working Paper, WP/12/39."
+    doi: "10.5089/9781463933821.001"

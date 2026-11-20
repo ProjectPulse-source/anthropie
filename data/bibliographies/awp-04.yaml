@@ -1,0 +1,83 @@
+# Bibliographie de AWP-04 (PDF servis par Zenodo, version en cours, FR et EN), produite par
+# 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/BIBLIOGRAPHIES/ecrire.py : DOI cités par la référence, ou
+# vérifiés chez Crossref et relus (décisions_<awp>.json). Alimente citation_reference et le JSON-LD « citation »
+# de la fiche (layouts/partials/head.html) et les liens « cites » du dépôt Zenodo.
+references:
+  - cle: amnesty-2016
+    fr: "Amnesty International (2016). « This is What We Die For » : les violations des droits humains en République démocratique du Congo alimentent le commerce mondial du cobalt. Londres, Amnesty International."
+    en: "Amnesty International (2016). “This Is What We Die For”: Human Rights Abuses in the Democratic Republic of the Congo Power the Global Trade in Cobalt. London: Amnesty International."
+  - cle: andra-2025
+    fr: "Andra (Agence nationale pour la gestion des déchets radioactifs) (2025). « Mise à jour de l'évaluation du chiffrage de Cigéo ». Rapport remis au ministre de l'Industrie et de l'Énergie, 12 mai 2025."
+    en: "Andra (Agence nationale pour la gestion des déchets radioactifs) (2025). Mise à jour de l’évaluation du chiffrage de Cigéo [Update of the Cost Assessment of the Cigéo Project]. Report submitted to the Minister for Industry and Energy, 12 May 2025."
+  - cle: bihouix-2014
+    fr: "Bihouix, Philippe (2014). L'Âge des low tech. Vers une civilisation techniquement soutenable. Paris, Seuil."
+    en: "Bihouix, Philippe (2014). L’Âge des low tech. Vers une civilisation techniquement soutenable. Paris: Seuil. English edition: The Age of Low Tech: Towards a Technologically Sustainable Civilization, Bristol University Press, 2020."
+  - cle: brockway-2021
+    fr: "Brockway, Paul E., Sorrell, Steve, Semieniuk, Gregor, Heun, Matthew K. et Court, Victor (2021). « Energy efficiency and economy-wide rebound effects: A review of the evidence and its implications ». Renewable and Sustainable Energy Reviews, vol. 141, 110781. DOI : 10.1016/j.rser.2021.110781."
+    en: "Brockway, Paul E., Sorrell, Steve, Semieniuk, Gregor, Heun, Matthew K., and Court, Victor (2021). 10.1016/j.rser.2021.110781."
+    doi: "10.1016/j.rser.2021.110781"
+  - cle: callon-2001
+    fr: "Callon, Michel, Lascoumes, Pierre et Barthe, Yannick (2001). Agir dans un monde incertain. Essai sur la démocratie technique. Paris, Seuil."
+    en: "Callon, Michel, Lascoumes, Pierre, and Barthe, Yannick (2001). Agir dans un monde incertain. Essai sur la démocratie technique. Paris: Seuil. English edition: Acting in an Uncertain World: An Essay on Technical Democracy, MIT Press, 2009."
+  - cle: crutzen-2000
+    fr: "Crutzen, Paul J. et Stoermer, Eugene F. (2000). « The \"Anthropocene\" ». Global Change Newsletter, n° 41, p. 17-18."
+    en: "Crutzen, Paul J., and Stoermer, Eugene F. (2000). “The ‘Anthropocene’”. Global Change Newsletter, no. 41, pp. 17–18."
+  - cle: commission-2023
+    fr: "Commission européenne (2023). Règlement (UE) 2023/956 du 10 mai 2023 établissant un mécanisme d'ajustement carbone aux frontières. Journal officiel de l'Union européenne, L 130."
+    en: "European Commission (2023). Regulation (EU) 2023/956 of 10 May 2023 establishing a Carbon Border Adjustment Mechanism. Official Journal of the European Union, L 130."
+  - cle: fressoz-2024
+    fr: "Fressoz, Jean-Baptiste (2024). Sans transition : une nouvelle histoire de l'énergie. Paris, Seuil."
+    en: "Fressoz, Jean-Baptiste (2024). Sans transition : une nouvelle histoire de l’énergie. Paris: Seuil. English edition: More and More and More: An All-Consuming History of Energy, London: Allen Lane / Penguin, 2024."
+  - cle: ghg-2004
+    fr: "GHG Protocol (2004, révisé 2015). A Corporate Accounting and Reporting Standard. World Resources Institute et World Business Council for Sustainable Development."
+    en: "GHG Protocol (2004, revised 2015). A Corporate Accounting and Reporting Standard. World Resources Institute and World Business Council for Sustainable Development."
+  - cle: gorz-2008
+    fr: "Gorz, André (2008). Écologica. Paris, Galilée."
+    en: "Gorz, André (2008). Écologica. Paris: Galilée. English edition: Ecologica, Seagull Books, 2010."
+  - cle: hickel-2020
+    fr: "Hickel, Jason et Kallis, Giorgos (2020). « Is Green Growth Possible? ». New Political Economy, vol. 25, n° 4, p. 469-486. DOI : 10.1080/13563467.2019.1598964."
+    en: "Hickel, Jason, and Kallis, Giorgos (2020). “Is Green Growth Possible?”. New Political Economy, vol. 25, no. 4, pp. 469–486. DOI: 10.1080/13563467.2019.1598964."
+    doi: "10.1080/13563467.2019.1598964"
+  - cle: aie-2023
+    fr: "IEA (International Energy Agency) (2023). Critical Minerals Market Review 2023. Paris, IEA."
+    en: "IEA (International Energy Agency) (2023). Critical Minerals Market Review 2023. Paris: IEA."
+  - cle: aie-2025
+    fr: "IEA (International Energy Agency) (2025). Energy and AI. Paris, IEA."
+    en: "IEA (International Energy Agency) (2025). Energy and AI. Paris: IEA."
+  - cle: ipcc-2022
+    fr: "IPCC (2022). Climate Change 2022: Mitigation of Climate Change. Contribution of Working Group III to the Sixth Assessment Report. Cambridge, Cambridge University Press."
+    en: "IPCC (2022). Climate Change 2022: Mitigation of Climate Change. Cont Cambridge University Press."
+  - cle: jackson-2017
+    fr: "Jackson, Tim (2017). Prosperity Without Growth. Foundations for the Economy of Tomorrow, 2e éd. Londres, Routledge."
+    en: "Jackson, Tim (2017). Prosperity Without Growth: Foundations for the Economy of Tomorrow, 2nd edn. London: Routledge."
+  - cle: jevons-1865
+    fr: "Jevons, William Stanley (1865). The Coal Question: An Inquiry Concerning the Progress of the Nation, and the Probable Exhaustion of Our Coal-Mines. Londres, Macmillan."
+    en: "Jevons, William Stanley (1865). The Coal Question: An Inquiry Concerning the Progress of the Nation, and the Probable Exhaustion of Our Coal-Mines. London: Macmillan."
+  - cle: lalut-2025
+    fr: "Lalut, Stéphane (2025). ANTHROPIE — Ordre ici. Dette ailleurs. 606 p."
+    en: "Lalut, Stéphane (2025). ANTHROPY — Order here. Debt elsewhere. 606 pp."
+  - cle: lalut-2026-a
+    fr: "Lalut, Stéphane (2026a). « Qu'est-ce que l'anthropie ? Principes d'une hypothèse ». Anthropie Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    en: "Lalut, Stéphane (2026a). “What Is Anthropy? Principles of a Hypothesis”. Anthropy Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    doi: "10.5281/zenodo.19266862"
+  - cle: lalut-2026-b
+    fr: "Lalut, Stéphane (2026b). « 3,3 millions d'années en un principe : l'anthropie dans la longue durée ». Anthropie Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    en: "Lalut, Stéphane (2026b). “3.3 Million Years in a Single Principle: Anthropy in the Long Duration”. Anthropy Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    doi: "10.5281/zenodo.19268037"
+  - cle: lalut-2026-c
+    fr: "Lalut, Stéphane (2026c). « Dette publique et anthropie : qui paie vraiment le désordre ? ». Anthropie Working Pa-pers, AWP-03. Zenodo. https://doi.org/10.5281/zenodo.19268769"
+    en: "Lalut, Stéphane (2026c). “Public Debt and Anthropy: Who Really Pays for Disorder?”. Anthropy Working Papers, AWP-03. Zenodo. https://doi.org/10.5281/zenodo.19268769"
+    doi: "10.5281/zenodo.19268769"
+  - cle: latouche-2006
+    fr: "Latouche, Serge (2006). Le Pari de la décroissance. Paris, Fayard."
+    en: "Latouche, Serge (2006). Le Pari de la décroissance. Paris: Fayard."
+  - cle: moore-2015
+    fr: "Moore, Jason W. (2015). Capitalism in the Web of Life. Ecology and the Accumulation of Capital. Londres, Verso."
+    en: "Moore, Jason W. (2015). Capitalism in the Web of Life: Ecology and the Accumulation of Capital. London: Verso."
+  - cle: sdes-2024
+    fr: "SDES (Service des données et études statistiques) (2024). « L'empreinte carbone de la France de 1990 à 2023 ». Paris, Ministère de la Transition écologique."
+    en: "SDES (Service des données et études statistiques) (2024). L’empreinte carbone de la France de 1990 à 2023 [The Carbon Footprint of France, 1990–2023]. Paris: Ministry of Ecological Transition."
+  - cle: smil-2017
+    fr: "Smil, Vaclav (2017). Energy and Civilization: A History. Cambridge (MA), MIT Press."
+    en: "Smil, Vaclav (2017). Energy and Civilization: A History. Cambridge, MA: MIT Press."
+    doi: "10.7551/mitpress/9780262035774.001.0001"

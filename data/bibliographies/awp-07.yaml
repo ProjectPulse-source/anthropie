@@ -1,0 +1,102 @@
+# Bibliographie de AWP-07 (PDF servis par Zenodo, version en cours, FR et EN), produite par
+# 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/BIBLIOGRAPHIES/ecrire.py : DOI cités par la référence, ou
+# vérifiés chez Crossref et relus (décisions_<awp>.json). Alimente citation_reference et le JSON-LD « citation »
+# de la fiche (layouts/partials/head.html) et les liens « cites » du dépôt Zenodo.
+references:
+  - cle: beck-1986
+    fr: "Beck, Ulrich (1986). Risikogesellschaft. Auf dem Weg in eine andere Moderne. Francfort, Suhrkamp. Trad. fr. : La Société du risque. Sur la voie d’une autre modernité, trad. Laure Bernardi, Paris, Aubier, 2001 ; rééd. Flammarion, coll. « Champs essais », 2008."
+    en: "Beck, Ulrich (1986). Risikogesellschaft. Auf dem Weg in eine andere Moderne. Frankfurt, Suhrkamp. English trans.: Risk Society: Towards a New Modernity, trans. Mark Ritter, London, Sage, 1992."
+  - cle: berger-2015
+    fr: "Berger, Sebastian (2015). « K. William Kapp’s Social Theory of Social Costs ». History of Political Economy, vol. 47, suppl. 1, p. 227–252."
+    en: "Berger, Sebastian (2015). 'K. William Kapp's Social Theory of Social Costs'. History of Political Economy, vol. 47, suppl. 1, pp. 227–252."
+  - cle: bunker-1985
+    fr: "Bunker, Stephen G. (1985). Underdeveloping the Amazon: Extraction, Unequal Exchange, and the Failure of the Modern State. Urbana, University of Illinois Press."
+    en: "Bunker, Stephen G. (1985). Underdeveloping the Amazon: Extraction, Unequal Exchange, and the Failure of the Modern State. Urbana, University of Illinois Press."
+  - cle: georgescu-1971
+    fr: "Georgescu-Roegen, Nicholas (1971). The Entropy Law and the Economic Process. Cambridge (MA), Harvard University Press."
+    en: "Georgescu-Roegen, Nicholas (1971). The Entropy Law and the Economic Process. Cambridge (MA), Harvard University Press."
+    doi: "10.4159/harvard.9780674281653"
+  - cle: georgescu-1975
+    fr: "Georgescu-Roegen, Nicholas (1975). « Energy and Economic Myths ». Southern Economic Journal, vol. 41, n° 3, p. 347–381."
+    en: "Georgescu-Roegen, Nicholas (1975). 'Energy and Economic Myths'. Southern Economic Journal, vol. 41, no. 3, pp. 347–381."
+    doi: "10.2307/1056148"
+  - cle: georgescu-1979
+    fr: "Georgescu-Roegen, Nicholas (1979). Demain la décroissance : entropie, écologie, économie. Trad. et présentation Jacques Grinevald et Ivo Rens. Lausanne, Pierre-Marcel Favre. Rééd. augmentée : La Décroissance. Entropie – Écologie – Économie, Paris, Sang de la terre, 1995."
+    en: "Georgescu-Roegen, Nicholas (1979). Demain la décroissance : entropie, écologie, économie [Tomorrow, Degrowth: Entropy, Ecology, Economy]. Trans. and presentation Jacques Grinevald and Ivo Rens. Lausanne, Pierre-Marcel Favre. Expanded reissue: La Décroissance. Entropie – Écologie – Économie, Paris, Sang de la terre, 1995."
+  - cle: harvey-1982
+    fr: "Harvey, David (1982). The Limits to Capital. Oxford, Basil Blackwell."
+    en: "Harvey, David (1982). The Limits to Capital. Oxford, Basil Blackwell."
+  - cle: harvey-2001
+    fr: "Harvey, David (2001). « Globalization and the “spatial fix” ». Geographische Revue, vol. 3, n° 2, p. 23– 30."
+    en: "Harvey, David (2001). 'Globalization and the \"spatial fix\"'. Geographische Revue, vol. 3, no. 2, pp. 23–30."
+  - cle: harvey-2003
+    fr: "Harvey, David (2003). The New Imperialism. Oxford, Oxford University Press."
+    en: "Harvey, David (2003). The New Imperialism. Oxford, Oxford University Press."
+    doi: "10.1093/oso/9780199264315.001.0001"
+  - cle: hornborg-2001
+    fr: "Hornborg, Alf (2001). The Power of the Machine: Global Inequalities of Economy, Technology, and Environment. Walnut Creek (CA), AltaMira Press."
+    en: "Hornborg, Alf (2001). The Power of the Machine: Global Inequalities of Economy, Technology, and Environment. Walnut Creek (CA), AltaMira Press."
+  - cle: jessop-2006
+    fr: "Jessop, Bob (2006). « Spatial Fixes, Temporal Fixes and Spatio-Temporal Fixes ». In Noel Castree et Derek Gregory (dir.), David Harvey: A Critical Reader, Oxford, Blackwell, p. 142–166."
+    en: "Jessop, Bob (2006). 'Spatial Fixes, Temporal Fixes and Spatio-Temporal Fixes'. In Noel Castree and Derek Gregory (eds.), David Harvey: A Critical Reader, Oxford, Blackwell, pp. 142–166."
+    doi: "10.1002/9780470773581.ch8"
+  - cle: kapp-1950
+    fr: "Kapp, K. William (1950). The Social Costs of Private Enterprise. Cambridge (MA), Harvard University Press. Éd. révisée : The Social Costs of Business Enterprise, Bombay/Londres, Asia Publishing House, 1963. Trad. fr. : Les Coûts sociaux de l’entreprise privée, trad. Blanche Bronstein-Vinaver, Paris, Les Petits Matins / Institut Veblen, 2015."
+    en: "Kapp, K. William (1950). The Social Costs of Private Enterprise. Cambridge (MA), Harvard University Press. Revised edition: The Social Costs of Business Enterprise, Bombay/London, Asia Publishing House, 1963. French trans.: Les Coûts sociaux de l'entreprise privée, trans. Blanche Bronstein-Vinaver, Paris, Les Petits Matins / Institut Veblen, 2015."
+  - cle: lalut-2025
+    fr: "Lalut, Stéphane (2025). ANTHROPIE — Ordre ici. Dette ailleurs. 622 p."
+    en: "Lalut, Stéphane (2025). ANTHROPY — Order here. Debt elsewhere. 622 pp."
+  - cle: lalut-2026-a
+    fr: "Lalut, Stéphane (2026a). Qu’est-ce que l’anthropie ? Principes d’une hypothèse. Anthropie Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    en: "Lalut, Stéphane (2026a). What is Anthropy? Principles of a Hypothesis. Anthropy Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19431208"
+    doi: "10.5281/zenodo.19431208"
+  - cle: lalut-2026-b
+    fr: "Lalut, Stéphane (2026b). 3,3 millions d’années en un principe : l’anthropie dans la longue durée. Anthropie Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    en: "Lalut, Stéphane (2026b). 3.3 million years distilled into one principle: anthropy in the longue durée. Anthropy Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19433086"
+    doi: "10.5281/zenodo.19433086"
+  - cle: lalut-2026-c
+    fr: "Lalut, Stéphane (2026c). Dette publique et anthropie : qui paie vraiment le désordre ? Anthropie Working Papers, AWP-03. Zenodo. https://doi.org/10.5281/zenodo.19268769"
+    en: "Lalut, Stéphane (2026c). Public Debt and Anthropy: Who Really Pays for Disorder? Anthropy Working Papers, AWP-03. Zenodo. https://doi.org/10.5281/zenodo.19434094"
+    doi: "10.5281/zenodo.19434094"
+  - cle: lalut-2026-d
+    fr: "Lalut, Stéphane (2026d). Transition énergétique ou transfert entropique ? Anthropie Working Papers, AWP-04. Zenodo. https://doi.org/10.5281/zenodo.19269244"
+    en: "Lalut, Stéphane (2026d). Energy Transition, or Anthropic Transfer? Anthropy Working Papers, AWP-04. Zenodo. https://doi.org/10.5281/zenodo.19439921"
+    doi: "10.5281/zenodo.19439921"
+  - cle: lalut-2026-e
+    fr: "Lalut, Stéphane (2026e). Penser hors les murs : notes sur la recherche indépendante en économie. Anthropie Working Papers, AWP-05. Zenodo. https://doi.org/10.5281/zenodo.19269487"
+    en: "Lalut, Stéphane (2026e). Thinking Beyond the Walls: Notes on Independent Research in Economics. Anthropy Working Papers, AWP-05. Zenodo. https://doi.org/10.5281/zenodo.19440866"
+    doi: "10.5281/zenodo.19440866"
+  - cle: lalut-2026-f
+    fr: "Lalut, Stéphane (2026f). Infrastructures numériques et dette technologique : data centers, IA et déplacement du désordre. Anthropie Working Papers, AWP-06. Zenodo. https://doi.org/10.5281/zenodo.20025421"
+    en: "Lalut, Stéphane (2026f). Digital Infrastructures and Technological Debt: Data Centers, AI, and the of Disorder. Papers, AWP-06. Zenodo. https://doi.org/10.5281/zenodo.20077993"
+    doi: "10.5281/zenodo.20077993"
+  - cle: lessenich-2016
+    fr: "Lessenich, Stephan (2016). Neben uns die Sintflut. Die Externalisierungsgesellschaft und ihr Preis. Berlin, Hanser Berlin. Trad. fr. : À côté de nous le déluge. La société d’externalisation et son prix, Montréal, Écosociété, 2019."
+    en: "Lessenich, Stephan (2016). Neben uns die Sintflut. Die Externalisierungsgesellschaft und ihr Preis. Berlin, Hanser Berlin. English trans.: Living Well at Others' Expense: The Hidden Costs of Western Prosperity, trans. Nick Somers, Cambridge, Polity, 2019."
+  - cle: martinez-2002
+    fr: "Martinez-Alier, Joan (2002). The Environmentalism of the Poor: A Study of Ecological Conflicts and Valuation. Cheltenham, Edward Elgar."
+    en: "Martinez-Alier, Joan (2002). The Environmentalism of the Poor: A Study of Ecological Conflicts and Valuation. Cheltenham, Edward Elgar."
+  - cle: meadows-1972
+    fr: "Meadows, Donella H., Meadows, Dennis L., Randers, Jørgen et Behrens III, William W. (1972). The Limits to Growth. New York, Universe Books."
+    en: "Meadows, Donella H., Meadows, Dennis L., Randers, Jørgen and Behrens III, William W. (1972). The Limits to Growth. New York, Universe Books."
+  - cle: schnaiberg-1980
+    fr: "Schnaiberg, Allan (1980). The Environment: From Surplus to Scarcity. New York, Oxford University Press."
+    en: "Schnaiberg, Allan (1980). The Environment: From Surplus to Scarcity. New York, Oxford University Press."
+  - cle: senge-1990
+    fr: "Senge, Peter M. (1990). The Fifth Discipline: The Art and Practice of the Learning Organization. New York, Doubleday."
+    en: "Senge, Peter M. (1990). The Fifth Discipline: The Art and Practice of the Learning Organization. New York, Doubleday."
+  - cle: stiegler-2015-a
+    fr: "Stiegler, Bernard (2015a). La Société automatique. 1. L’avenir du travail. Paris, Fayard."
+    en: "Stiegler, Bernard (2015a). La Société automatique. 1. L'avenir du travail. Paris, Fayard. English trans.: Automatic Society, Volume 1: The Future of Work, trans. Daniel Ross, Cambridge, Polity, 2016."
+  - cle: stiegler-2015-b
+    fr: "Stiegler, Bernard (2015b). « Sortir de l’anthropocène ». Multitudes, 2015/3, n° 60, p. 137–146."
+    en: "Stiegler, Bernard (2015b). 'Sortir de l'anthropocène' ['Escaping the Anthropocene']. Multitudes, 2015/3, no. 60, pp. 137–146."
+  - cle: stiegler-2016
+    fr: "Stiegler, Bernard (2016). Dans la disruption. Comment ne pas devenir fou ? Paris, Les Liens qui libèrent."
+    en: "Stiegler, Bernard (2016). Dans la disruption. Comment ne pas devenir fou ? Paris, Les Liens qui libèrent. English trans.: The Age of Disruption: Technology and Madness in Computational Capitalism, trans. Daniel Ross, Cambridge, Polity, 2019."
+  - cle: stiegler-2018
+    fr: "Stiegler, Bernard (2018). The Neganthropocene. Trad. et éd. Daniel Ross. Londres, Open Humanities Press."
+    en: "Stiegler, Bernard (2018). The Neganthropocene. Trans. and ed. Daniel Ross. London, Open Humanities Press."
+  - cle: stiegler-2020
+    fr: "Stiegler, Bernard et Collectif Internation (2020). Bifurquer. « Il n’y a pas d’alternative ». Paris, Les Liens qui libèrent."
+    en: "Stiegler, Bernard and the Internation Collective (2020). Bifurquer. « Il n'y a pas d'alternative ». Paris, Les Liens qui libèrent. English trans.: Bifurcate: 'There Is No Alternative', trans. Daniel Ross, London, Open Humanities Press, 2021."

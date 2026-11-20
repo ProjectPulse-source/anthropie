@@ -1,0 +1,97 @@
+# Bibliographie de AWP-02 (PDF servis par Zenodo, version en cours, FR et EN), produite par
+# 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/BIBLIOGRAPHIES/ecrire.py : DOI cités par la référence, ou
+# vérifiés chez Crossref et relus (décisions_<awp>.json). Alimente citation_reference et le JSON-LD « citation »
+# de la fiche (layouts/partials/head.html) et les liens « cites » du dépôt Zenodo.
+references:
+  - cle: acemoglu-2012
+    fr: "Acemoglu, Daron et Robinson, James A. (2012). Why Nations Fail: The Origins of Power, Prosperity, and Poverty. New York, Crown Business."
+    en: "Acemoglu, Daron and Robinson, James A. (2012). Why Nations Fail: The Origins of Power, Prosperity, and Poverty. New York, Crown Business."
+  - cle: braudel-1958
+    fr: "Braudel, Fernand (1958). « Histoire et sciences sociales : la longue durée ». Annales. Économies, Sociétés, Civilisations, vol. 13, n° 4, p. 725–753."
+    en: "Braudel, Fernand (1958). “Histoire et sciences sociales : la longue durée”. Annales. Économies, Sociétés, Civilisations, vol. 13, no. 4, pp. 725–753."
+    doi: "10.3406/ahess.1958.2781"
+  - cle: braudel-1979
+    fr: "Braudel, Fernand (1979). Civilisation matérielle, économie et capitalisme, XVe–XVIIIe siècle. Paris, Ar-mand Colin, 3 vol."
+    en: "Braudel, Fernand (1979). Civilisation matérielle, économie et capitalisme, XVe–XVIIIe siècle. Paris, Ar-mand Colin. Eng. trans.: Civilization and Capitalism, 15th–18th Century, 3 vols., London, Collins, 1981–1984."
+  - cle: conophagos-1980
+    fr: "Conophagos, Constantin E. (1980). Le Laurium antique et la technique grecque de la production de l’ar-gent. Athènes, Ekdotike Hellados."
+    en: "Conophagos, Constantin E. (1980). Le Laurium antique et la technique grecque de la production de l’ar-gent. Athens, Ekdotike Hellados."
+  - cle: crosby-1986
+    fr: "Crosby, Alfred W. (1986). Ecological Imperialism: The Biological Expansion of Europe, 900–1900. Cam-bridge, Cambridge University Press."
+    en: "Crosby, Alfred W. (1986). Ecological Imperialism: The Biological Expansion of Europe, 900–1900. Cam-bridge, Cambridge University Press."
+  - cle: crutzen-2000
+    fr: "Crutzen, Paul J. et Stoermer, Eugene F. (2000). « The “Anthropocene” ». Global Change Newsletter, n° 41, p. 17–18."
+    en: "Crutzen, Paul J. and Stoermer, Eugene F. (2000). “The ‘Anthropocene’”. Global Change Newsletter, no. 41, pp. 17–18."
+  - cle: diamond-1987
+    fr: "Diamond, Jared (1987). « The Worst Mistake in the History of the Human Race ». Discover Maga-zine, mai 1987, p. 64–66."
+    en: "Diamond, Jared (1987). “The Worst Mistake in the History of the Human Race”. Discover Magazine, May 1987, pp. 64–66."
+  - cle: diamond-1997
+    fr: "Diamond, Jared (1997). Guns, Germs, and Steel: The Fates of Human Societies. New York, W.W. Nor-ton. Trad. fr. : De l’inégalité parmi les sociétés, Paris, Gallimard, 2000."
+    en: "Diamond, Jared (1997). Guns, Germs, and Steel: The Fates of Human Societies. New York, W.W. Norton."
+  - cle: engels-1845
+    fr: "Engels, Friedrich (1845). Die Lage der arbeitenden Klasse in England. Leipzig, Otto Wigand. Trad. fr. : La Situation de la classe laborieuse en Angleterre, Paris, Éditions sociales, 1960."
+    en: "Engels, Friedrich (1845). Die Lage der arbeitenden Klasse in England. Leipzig, Otto Wigand. Eng. trans.: The Condition of the Working Class in England."
+  - cle: georgescu-1971
+    fr: "Georgescu-Roegen, Nicholas (1971). The Entropy Law and the Economic Process. Cambridge (MA), Harvard University Press."
+    en: "Georgescu-Roegen, Nicholas (1971). The Entropy Law and the Economic Process. Cambridge (MA), Harvard University Press."
+    doi: "10.4159/harvard.9780674281653"
+  - cle: graeber-2021
+    fr: "Graeber, David et Wengrow, David (2021). The Dawn of Everything: A New History of Humanity. Lon-don, Allen Lane. Trad. fr. : Au commencement était… Une nouvelle histoire de l’humanité, Paris, Les Liens qui Libèrent, 2021."
+    en: "Graeber, David and Wengrow, David (2021). The Dawn of Everything: A New History of Humanity. London, Allen Lane."
+  - cle: harmand-2015
+    fr: "Harmand, Sonia, Lewis, Jason E., Feibel, Craig S. et al. (2015). « 3.3-million-year-old stone tools from Lomekwi 3, West Turkana, Kenya ». Nature, vol. 521, p. 310–315. DOI : 10.1038/nature14464."
+    en: "Harmand, Sonia, Lewis, Jason E., Feibel, Craig S. et al. (2015). “3.3-million-year-old stone tools from Lomekwi 3, West Turkana, Kenya”. Nature, vol. 521, pp. 310–315. DOI: 10.1038/nature14464."
+    doi: "10.1038/nature14464"
+  - cle: aie-2025
+    fr: "AIE (Agence internationale de l’énergie) (2025). Energy and AI. World Energy Outlook Special Report. Paris, AIE."
+    en: "IEA (International Energy Agency) (2025). Energy and AI. World Energy Outlook Special Report. Paris, IEA."
+  - cle: lalut-2025
+    fr: "Lalut, Stéphane (2025). ANTHROPIE — Ordre ici. Dette ailleurs. Stéphane Lalut, 606 p. ISBN 978-2-9586347-2-8."
+    en: "Lalut, Stéphane (2025). ANTHROPIE — Ordre ici. Dette ailleurs. Stéphane Lalut, 606 pp. ISBN 978-2-9586347-2-8. In French."
+  - cle: lalut-2026
+    fr: "Lalut, Stéphane (2026). « Qu’est-ce que l’anthropie ? Principes d’une hypothèse ». Anthropie Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    en: "Lalut, Stéphane (2026). “What is anthropy? Principles of a hypothesis”. Anthropy Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    doi: "10.5281/zenodo.19266862"
+  - cle: malm-2016
+    fr: "Malm, Andreas (2016). Fossil Capital: The Rise of Steam Power and the Roots of Global Warming. Lon-don, Verso."
+    en: "Malm, Andreas (2016). Fossil Capital: The Rise of Steam Power and the Roots of Global Warming. Lon-don, Verso."
+  - cle: meadows-1972
+    fr: "Meadows, Donella H., Meadows, Dennis L., Randers, Jørgen et Behrens III, William W. (1972). The Limits to Growth. New York, Universe Books."
+    en: "Meadows, Donella H., Meadows, Dennis L., Randers, Jørgen and Behrens III, William W. (1972). The Limits to Growth. New York, Universe Books."
+  - cle: meta-2023
+    fr: "Meta Platforms (2023). Annual Report 2023 (Form 10-K). Menlo Park, Meta Platforms Inc."
+    en: "Meta Platforms (2023). Annual Report 2023 (Form 10-K). Menlo Park, Meta Platforms Inc."
+  - cle: moore-2015
+    fr: "Moore, Jason W. (2015). Capitalism in the Web of Life: Ecology and the Accumulation of Capital. Lon-don, Verso."
+    en: "Moore, Jason W. (2015). Capitalism in the Web of Life: Ecology and the Accumulation of Capital. Lon-don, Verso."
+  - cle: morris-2010
+    fr: "Morris, Ian (2010). Why the West Rules — for Now. New York, Farrar, Straus and Giroux."
+    en: "Morris, Ian (2010). Why the West Rules—for Now. New York, Farrar, Straus and Giroux."
+  - cle: schmidt-2006
+    fr: "Schmidt, Klaus (2006). Sie bauten die ersten Tempel. Munich, C.H. Beck. Trad. fr. : Le Premier Temple : Göbekli Tepe, Paris, CNRS Éditions, 2015."
+    en: "Schmidt, Klaus (2006). Sie bauten die ersten Tempel. Munich, C.H. Beck."
+  - cle: scott-2017
+    fr: "Scott, James C. (2017). Against the Grain: A Deep History of the Earliest States. New Haven, Yale Uni-versity Press. Trad. fr. : Homo domesticus, Paris, La Découverte, 2019."
+    en: "Scott, James C. (2017). Against the Grain: A Deep History of the Earliest States. New Haven, Yale Uni-versity Press."
+    doi: "10.2307/j.ctv1bvnfk9"
+  - cle: steckel-2002
+    fr: "Steckel, Richard H. et Rose, Jerome C. (dir.) (2002). The Backbone of History: Health and Nutrition in the Western Hemisphere. Cambridge, Cambridge University Press."
+    en: "Steckel, Richard H. and Rose, Jerome C. (eds.) (2002). The Backbone of History: Health and Nutrition in the Western Hemisphere. Cambridge, Cambridge University Press."
+  - cle: stern-2006
+    fr: "Stern, Nicholas (2006). Stern Review: The Economics of Climate Change. Londres, HM Treasury."
+    en: "Stern, Nicholas (2006). Stern Review: The Economics of Climate Change. London, HM Treasury."
+  - cle: tainter-1988
+    fr: "Tainter, Joseph A. (1988). The Collapse of Complex Societies. Cambridge, Cambridge University Press."
+    en: "Tainter, Joseph A. (1988). The Collapse of Complex Societies. Cambridge, Cambridge University Press."
+  - cle: tooze-2018
+    fr: "Tooze, Adam (2018). Crashed: How a Decade of Financial Crises Changed the World. New York, Vi-king."
+    en: "Tooze, Adam (2018). Crashed: How a Decade of Financial Crises Changed the World. New York, Vik-ing."
+  - cle: wallerstein-1974
+    fr: "Wallerstein, Immanuel (1974). The Modern World-System, vol. I. New York, Academic Press."
+    en: "Wallerstein, Immanuel (1974). The Modern World-System, vol. I. New York, Academic Press."
+  - cle: wrangham-2009
+    fr: "Wrangham, Richard (2009). Catching Fire: How Cooking Made Us Human. New York, Basic Books."
+    en: "Wrangham, Richard (2009). Catching Fire: How Cooking Made Us Human. New York, Basic Books."
+  - cle: zuboff-2019
+    fr: "Zuboff, Shoshana (2019). The Age of Surveillance Capitalism. New York, PublicAffairs. Trad. fr. : L’Âge du capitalisme de surveillance, Paris, Zulma, 2020."
+    en: "Zuboff, Shoshana (2019). The Age of Surveillance Capitalism. New York, PublicAffairs."

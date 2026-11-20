@@ -1,0 +1,53 @@
+# Bibliographie de AWP-01 (PDF servis par Zenodo, version en cours, FR et EN), produite par
+# 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/BIBLIOGRAPHIES/ecrire.py : DOI cités par la référence, ou
+# vérifiés chez Crossref et relus (décisions_<awp>.json). Alimente citation_reference et le JSON-LD « citation »
+# de la fiche (layouts/partials/head.html) et les liens « cites » du dépôt Zenodo.
+references:
+  - cle: beck-1986
+    fr: "Beck, Ulrich (1986). Risikogesellschaft. Auf dem Weg in eine andere Moderne. Francfort, Suhrkamp. Trad. fr. : La Société du risque. Sur la voie d'une autre modernité, Paris, Flammarion, 2001."
+    en: "Beck, Ulrich (1986). Risikogesellschaft. Auf dem Weg in eine andere Moderne. Frankfurt, Suhrkamp. English trans.: Risk Society: Towards a New Modernity, London, Sage, 1992."
+  - cle: bourdieu-1979
+    fr: "Bourdieu, Pierre (1979). La Distinction. Critique sociale du jugement. Paris, Minuit."
+    en: "Bourdieu, Pierre (1979). La Distinction. Critique sociale du jugement. Paris, Minuit. English trans.: Distinction: A Social Critique of the Judgement of Taste, Cambridge (MA), Harvard University Press, 1984."
+  - cle: georgescu-1971
+    fr: "Georgescu-Roegen, Nicholas (1971). The Entropy Law and the Economic Process. Cambridge (MA), Harvard Uni-versity Press."
+    en: "Georgescu-Roegen, Nicholas (1971). The Entropy Law and the Economic Process. Cambridge (MA), Harvard University Press."
+    doi: "10.4159/harvard.9780674281653"
+  - cle: graeber-2011
+    fr: "Graeber, David (2011). Debt: The First 5,000 Years. New York, Melville House. Trad. fr. : Dette : 5 000 ans d'his-toire, Paris, Les Liens qui Libèrent, 2013."
+    en: "Graeber, David (2011). Debt: The First 5,000 Years. New York, Melville House. French trans.: Dette : 5 000 ans d'histoire, Paris, Les Liens qui Libèrent, 2013."
+  - cle: lalut-2025
+    fr: "Lalut, Stéphane (2025). ANTHROPIE — Ordre ici. Dette ailleurs. 606 p."
+    en: "Lalut, Stéphane (2025). ANTHROPY — Order here. Debt elsewhere. 606 pp."
+  - cle: luhmann-1984
+    fr: "Luhmann, Niklas (1984). Soziale Systeme. Grundriß einer allgemeinen Theorie. Francfort, Suhrkamp. Trad. angl. : Social Systems, Stanford, Stanford University Press, 1995."
+    en: "Luhmann, Niklas (1984). Soziale Systeme. Grundriß einer allgemeinen Theorie. Frankfurt, Suhrkamp. English trans.: Social Systems, Stanford, Stanford University Press, 1995."
+  - cle: moore-2015
+    fr: "Moore, Jason W. (2015). Capitalism in the Web of Life. Ecology and the Accumulation of Capital. Londres, Verso."
+    en: "Moore, Jason W. (2015). Capitalism in the Web of Life. Ecology and the Accumulation of Capital. London, Verso."
+  - cle: north-1990
+    fr: "North, Douglass C. (1990). Institutions, Institutional Change and Economic Performance. Cambridge, Cam-bridge University Press."
+    en: "North, Douglass C. (1990). Institutions, Institutional Change and Economic Performance. Cambridge, Cambridge University Press."
+    doi: "10.1017/cbo9780511808678"
+  - cle: prigogine-1979
+    fr: "Prigogine, Ilya et Isabelle Stengers (1979). La Nouvelle Alliance. Métamorphose de la science. Paris, Gallimard."
+    en: "Prigogine, Ilya and Isabelle Stengers (1979). La Nouvelle Alliance. Métamorphose de la science. Paris, Gallimard. English trans.: Order out of Chaos: Man's New Dialogue with Nature, New York, Bantam, 1984."
+  - cle: stiegler-2015
+    fr: "Stiegler, Bernard (2015). La Société automatique. 1. L'avenir du travail. Paris, Fayard."
+    en: "Stiegler, Bernard (2015). La Société automatique. 1. L'avenir du travail. Paris, Fayard. English trans.: Automatic Society, Volume 1: The Future of Work, Cambridge, Polity, 2016."
+  - cle: acemoglu-2012
+    fr: "Acemoglu, Daron et James A. Robinson (2012). Why Nations Fail. The Origins of Power, Prosperity, and Poverty. New York, Crown."
+    en: "Acemoglu, Daron and James A. Robinson (2012). Why Nations Fail. The Origins of Power, Prosperity, and Poverty. New York, Crown."
+  - cle: gorz-2008
+    fr: "Gorz, André (2008). Écologica. Paris, Galilée."
+    en: "Gorz, André (2008). Écologica. Paris, Galilée."
+  - cle: latour-2015
+    fr: "Latour, Bruno (2015). Face à Gaïa. Huit conférences sur le Nouveau Régime Climatique. Paris, La Découverte."
+    en: "Latour, Bruno (2015). Face à Gaïa. Huit conférences sur le Nouveau Régime Climatique. Paris, La Découverte. English trans.: Facing Gaia, Cambridge, Polity, 2017."
+    doi: "10.3917/dec.latou.2015.01"
+  - cle: scott-1998
+    fr: "Scott, James C. (1998). Seeing Like a State. How Certain Schemes to Improve the Human Condition Have Failed. New Haven, Yale University Press."
+    en: "Scott, James C. (1998). Seeing Like a State. How Certain Schemes to Improve the Human Condition Have Failed. New Haven, Yale University Press."
+  - cle: wallerstein-1974
+    fr: "Wallerstein, Immanuel (1974). The Modern World-System I. Capitalist Agriculture and the Origins of the European World-Economy in the Sixteenth Century. New York, Academic Press."
+    en: "Wallerstein, Immanuel (1974). The Modern World-System I. Capitalist Agriculture and the Origins of the European World-Economy in the Sixteenth Century. New York, Academic Press."

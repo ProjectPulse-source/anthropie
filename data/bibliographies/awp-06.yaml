@@ -1,0 +1,39 @@
+# Bibliographie de AWP-06 (PDF servis par Zenodo, version en cours, FR et EN), produite par
+# 06_PROMOTION/WIKIDATA_GRAPHE_DIFFUSION_2026-11-20/BIBLIOGRAPHIES/ecrire.py : DOI cités par la référence, ou
+# vérifiés chez Crossref et relus (décisions_<awp>.json). Alimente citation_reference et le JSON-LD « citation »
+# de la fiche (layouts/partials/head.html) et les liens « cites » du dépôt Zenodo.
+references:
+  - cle: diguet-2019
+    fr: "Diguet, Cécile et Lopez, Fanny (dir.) (2019). L’impact spatial et énergétique des data centers sur les ter-ritoires. Avec Laurent Lefevre. Rapport ADEME, projet ENERNUM."
+    en: "Diguet, Cécile and Lopez, Fanny (eds.) (2019). L'impact spatial et énergétique des data centers sur les territoires [The spatial and energy impact of data centers on territories]. With Laurent Lefevre. ADEME report, ENERNUM project."
+  - cle: gabor-2021
+    fr: "Gabor, Daniela (2021). « The Wall Street Consensus ». Development and Change, vol. 52, n° 3, p. 429-459. DOI : 10.1111/dech.12645."
+    en: "Gabor, Daniela (2021). 'The Wall Street Consensus'. Development and Change, vol. 52, no. 3, pp. 429–459. DOI: 10.1111/dech.12645."
+    doi: "10.1111/dech.12645"
+  - cle: lalut-2026-a
+    fr: "Lalut, Stéphane (2026a). Qu’est-ce que l’anthropie ? Principes d’une hypothèse. Anthropie Working Pa-pers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    en: "Lalut, Stéphane (2026a). What Is Anthropy? Principles of a Hypothesis. Anthropy Working Papers, AWP-01. Zenodo. https://doi.org/10.5281/zenodo.19266862"
+    doi: "10.5281/zenodo.19266862"
+  - cle: lalut-2026-b
+    fr: "Lalut, Stéphane (2026b). 3,3 millions d’années en un principe : l’anthropie dans la longue durée. An-thropie Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    en: "Lalut, Stéphane (2026b). 3.3 Million Years in a Single Principle: Anthropy in the Long Duration. Anthropy Working Papers, AWP-02. Zenodo. https://doi.org/10.5281/zenodo.19268037"
+    doi: "10.5281/zenodo.19268037"
+  - cle: lalut-2026-c
+    fr: "Lalut, Stéphane (2026c). Transition énergétique ou transfert entropique ?. Anthropie Working Papers, AWP-04. Zenodo. https://doi.org/10.5281/zenodo.19269244"
+    en: "Lalut, Stéphane (2026c). Energy Transition, or Anthropic Transfer? Anthropy Working Papers, AWP-04. Zenodo. https://doi.org/10.5281/zenodo.19439921"
+    doi: "10.5281/zenodo.19439921"
+  - cle: lemoine-2016
+    fr: "Lemoine, Benjamin (2016). L’ordre de la dette : enquête sur les infortunes de l’État et la prospérité du marché. Préface d’André Orléan. Paris : La Découverte."
+    en: "Lemoine, Benjamin (2016). L'ordre de la dette : enquête sur les infortunes de l'État et la prospérité du marché [The Order of Debt: An Investigation into the Misfortunes of the State and the Prosperity of the Market]. Foreword by André Orléan. Paris: La Découverte."
+    doi: "10.3917/dec.lemoi.2016.01"
+  - cle: mah-2019
+    fr: "Mah, Alice et Wang, Xinhong (2019). « Accumulated Injuries of Environmental Injustice: Living and Working with Petrochemical Pollution in Nanjing, China ». Annals of the American Association of Geographers, vol. 109, n° 6, p. 1961-1977. DOI : 10.1080/24694452.2019.1574551."
+    en: "Mah, Alice and Wang, Xinhong (2019). 'Accumulated Injuries of Environmental Injustice: Living and Working with Petrochemical Pollution in Nanjing, China'. Annals of the American Association of Geographers, vol. 109, no. 6, pp. 1961–1977. DOI: 10.1080/24694452.2019.1574551."
+    doi: "10.1080/24694452.2019.1574551"
+  - cle: marquet-2019
+    fr: "Marquet, Clément (2019). Binaire béton. Quand les infrastructures numériques aménagent la ville. Thèse de doctorat en sociologie, Université Paris-Saclay, préparée à Télécom ParisTech. NNT : 2019SACLT036."
+    en: "Marquet, Clément (2019). Binaire béton. Quand les infrastructures numériques aménagent la ville [Concrete Binary: When Digital Infrastructures Shape the City]. Doctoral thesis in sociology, Université Paris-Saclay, prepared at Télécom ParisTech. NNT: 2019SACLT036."
+  - cle: monnin-2021
+    fr: "Monnin, Alexandre (2021). « Les “communs négatifs”. Entre déchets et ruines ». Études, 2021/9, sep-tembre, p. 59-68. DOI : 10.3917/etu.4285.0059."
+    en: "Monnin, Alexandre (2021). 'Les \"communs négatifs\". Entre déchets et ruines' ['Negative commons': Between waste and ruins]. Études, 2021/9, September, pp. 59–68. DOI: 10.3917/etu.4285.0059."
+    doi: "10.3917/etu.4285.0059"
