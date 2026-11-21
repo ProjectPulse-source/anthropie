@@ -1,5 +1,14 @@
 # Wikidata — identifiant RePEc de Stéphane et bibliographie d'AWP-03 (2026-11-20)
 
+> ✅ **Exécuté le 21/11/2026** (Laura, 08:27-08:32 UTC, 24 modifications ; les commandes déjà écrites le 20/11 n'ont
+> pas été refaites). **Relu par l'API le 21/11** (session GRAPHE) : Q138909233 P2428 `pla1203` avec sa source ; item
+> créé **Q142233801** (Blanchard et Leigh 2013 : P356 10.1257/AER.103.3.117, P1433 Q1740221, P50 Q241094, P2093
+> Daniel Leigh) ; Q139771991 : **13 P2860, tous sourcés**, P921 Q274490 et Q2814650 (4 sujets au total). Une source
+> manquait sur le P2860 visant l'item créé dans le même lot (cible LAST) : posée par
+> `Import_Wikidata_Laura_2026-11-21_corrections` (révision 2573095460). Leçon : une source sur une déclaration qui vise
+> LAST se pose dans un second lot. Registre : AWP-03 n'a pas d'entrée nouvelle ; RePEc n'a pas de champ dans
+> `data/works.yaml` (identité dans `data/author.toml`, sameAs RePEc servi depuis le commit `13b03529`).
+
 Laura — un lot en trois parties, **47 commandes** (lues sans écriture par l'API d'import le 20/11 : `status OK`).
 
 1. **Identifiant RePEc** sur l'item de Stéphane (Q138909233) : `pla1203` (P2428), référence : sa page IDEAS
