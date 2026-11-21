@@ -77,3 +77,37 @@ key = "socarxiv"
 url = "https://osf.io/ymkpj/"
 label = "SocArXiv"
 labelLong = "SocArXiv (OSF)"
+
+# Ajoutés le 21/11/2026 (chantier graphe, module identite-graphe --auteur) : identifiants connus de Wikidata ou vérifiés
+# à la source, absents du sameAs. ISNI : notice d'autorité BnF ; VIAF : grappe qui rattache les notices BnF et IdRef
+# (viaf.org/viaf/sourceID/BNF|17672810) ; RePEc : page IDEAS servie ; Semantic Scholar : page d'auteur revendiquée le 20/11.
+# Aucun n'est affiché (pied de page, accueil et pastilles filtrent par clé) : ils n'entrent que dans le JSON-LD.
+[[author.sameAs]]
+key = "isni"
+url = "https://isni.org/isni/0000000518014301"
+label = "ISNI"
+labelLong = "ISNI 0000 0005 1801 4301"
+
+[[author.sameAs]]
+key = "viaf"
+url = "https://viaf.org/viaf/4173121349629981270"
+label = "VIAF"
+labelLong = "VIAF 4173121349629981270"
+
+[[author.sameAs]]
+key = "bnf"
+url = "https://catalogue.bnf.fr/ark:/12148/cb17672810m"
+label = "BnF"
+labelLong = "BnF, notice d'autorité cb17672810m"
+
+[[author.sameAs]]
+key = "repec"
+url = "https://ideas.repec.org/f/pla1203.html"
+label = "RePEc"
+labelLong = "RePEc pla1203"
+
+[[author.sameAs]]
+key = "semanticScholar"
+url = "https://www.semanticscholar.org/author/2429754197"
+label = "Semantic Scholar"
+labelLong = "Semantic Scholar 2429754197"
