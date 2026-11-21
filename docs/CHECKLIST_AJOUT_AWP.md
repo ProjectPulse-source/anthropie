@@ -86,6 +86,22 @@ S'aligner sur un AWP existant (par exemple `awp-05.md`) pour la complétude. Cha
 
 Nouvelle entrée AWP avec `type: awp`, `series_number: N`, `canonical_title.{fr,en}`, `publication_date_fr`, `publication_date_en`, blocs `deposits.{zenodo_fr,zenodo_en,ssrn_en,mpra_en}`, `site_pages.{fr,en}`. Conserver l'ordre chronologique des entrées.
 
+## 4 bis. Bibliographie déclarée (site et Zenodo) — depuis le 21/11/2026
+
+Une fiche d'AWP déclare sa bibliographie : une balise `citation_reference` par référence (Google Scholar) et le champ
+`citation` du `ScholarlyArticle`, tous deux lus dans `data/bibliographies/awp-NN.yaml` par `layouts/partials/head.html`
+(sans fichier, rien n'est émis). Le même fichier fournit les liens « cites » du dépôt Zenodo, qui permettent à OpenAlex
+et à DataCite de relier l'AWP aux œuvres citées. Outils (hors dépôt) :
+`D:\PRO\06_PROMOTION\WIKIDATA_GRAPHE_DIFFUSION_2026-11-20\BIBLIOGRAPHIES\`.
+
+1. `python extraire.py awp-NN` : bibliographie tirée des PDF servis (FR et EN), appariée, DOI cités, candidats Crossref.
+   Le PDF est le texte publié : il fait foi. Contrôler l'appariement (« EN sans FR : 0 ») et les entrées longues.
+2. Relire **chaque** candidat Crossref (même œuvre, pas une recension, pas une autre version) et l'inscrire dans
+   `decisions_relecture.py` ; `ecrire.py awp-NN` refuse un candidat non relu.
+3. Après le dépôt Zenodo : ajouter les DOI de la bibliographie en `cites` (métadonnées seules, accord de l'auteur).
+4. Après publication : `python D:\PRO\02_FABRIQUE\control-plane\modules\identite-graphe\identite_oeuvre.py --oeuvre awp-NN`
+   (identité, index, balises, liens : ce qui reste à faire).
+
 ## 5. Rendu local Hugo + vérifications
 
 Lancer `hugo server` et vérifier sur les deux URLs FR et EN : balises `<meta name="citation_*">` présentes, lien hreflang, JSON-LD `ScholarlyArticle` et `FAQPage` valides (extension Schema Markup Validator ou copier-coller dans schema.org/validator).

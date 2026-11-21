@@ -1,5 +1,14 @@
 # Project Status — stephane-lalut.com
 
+## 2026-11-21 — Bibliographies des AWP déclarées (chantier graphe, `/reprise-graphe`)
+
+- `data/bibliographies/awp-0{1..9}.yaml` : 259 références (FR et EN, tirées des PDF servis), 92 DOI cités ou vérifiés
+  chez Crossref et relus ; `head.html` émet `citation_reference` et le JSON-LD `citation` (18 fiches attestées en ligne).
+- Zenodo : 18 dépôts AWP portent les liens « cites » vers ces DOI (149 ajoutés, métadonnées seules, accord de l'auteur) ;
+  `zenodo_audit_complet.py` : 0 bloquant.
+- Procédure : `docs/CHECKLIST_AJOUT_AWP.md` § 4 bis ; état et mesure (OpenAlex au 20/12) :
+  `D:\PRO\06_PROMOTION\WIKIDATA_GRAPHE_DIFFUSION_2026-11-20\ETAT.md`.
+
 ## Bilan 2026-05-13 — Chantier diffusion clos
 
 Synthèse des 4 axes de diffusion exécutés en mai 2026 ; le chantier est désormais clos pour la durée de la fenêtre GEO/diffusion 90 jours.
