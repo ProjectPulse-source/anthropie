@@ -1,0 +1,8 @@
+// AWP-02 v1.2, AWP-03 v1.1, AWP-08 v1.1 (Zenodo, 19/11/2026) : texte integral des nouvelles versions.
+// P356 inchange sur les trois items (DOI de la v1.0, valeur unique) ; liens Zenodo anterieurs conserves.
+Q139771990|P953|"https://zenodo.org/records/24368734"|P407|Q150
+Q139771990|P953|"https://zenodo.org/records/24368735"|P407|Q1860
+Q139771991|P953|"https://zenodo.org/records/24368736"|P407|Q150
+Q139771991|P953|"https://zenodo.org/records/24368737"|P407|Q1860
+Q140680750|P953|"https://zenodo.org/records/24364809"|P407|Q150
+Q140680750|P953|"https://zenodo.org/records/24364810"|P407|Q1860
