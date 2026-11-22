@@ -1,7 +1,7 @@
 {
  "_role": "Etat du projet de loi de finances au Parlement, article par article, pour la page collectivites. Chaque resultat est une citation VERBATIM du compte rendu officiel de la seance ; le compte rendu est archive hors depot (06_PROMOTION/RECHERCHE_VOTRE_COMMUNE_2026-10-22/_SOURCES, SHA256SUMS.txt) et chaque citation y a ete retrouvee par verifier_plf_votes.py le jour de l'ecriture. Une decision de commission (amendement adopte) entre dans `commission`, citee sur la page de l'amendement archivee : en premiere lecture, la seance discute le texte du Gouvernement (Constitution, art. 42), la decision de commission n'y vaut que si la seance la reprend. A completer a chaque etape (27/10-2/11, vote solennel du 3/11, Senat, CMP, loi promulguee) : une etape = une entree datee, jamais une ecrasee. 06/11/2026 : texte rejeté par l'Assemblée le 4/11 (`texte_rejete`) ; les entrées `articles` et `commission` restent comme historique, sans effet sur le texte transmis au Sénat ; calendrier du Sénat dans `senat` (ordre du jour archivé).",
  "edition": 2027,
- "etat_au": "2026-11-19",
+ "etat_au": "2026-11-20",
  "etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
  "etape_suivante_en": "examination by the Senate, subject to its transmission, of the Government's initial bill from 20 November, of the “Relations with local authorities” mission and article 84 on 2 December, then vote on the whole bill on 9 December",
  "etape_source": {
@@ -101,6 +101,18 @@
    "sha256_html": "d5c9aa720491f0938ba32b9c926eb19604b7f630141f6239eb9dd8fe39f23ae5",
    "texte": "comptes_rendus/SENAT-AMDT-I-61.txt",
    "sha256_texte": "0a94df90435395e1bf086ee53c5378a84fec3659a205437c21169a9560cd6b64"
+  },
+  "SENAT-2026-11-20": {
+   "date": "2026-11-20",
+   "assemblee": "Sénat",
+   "seance": "séance du vendredi 20 novembre 2026 (n° 25), compte rendu intégral, version provisoire",
+   "numero": 25,
+   "version": "provisoire",
+   "url": "https://www.senat.fr/seances/s202611/s20261120/s20261120_mono.html",
+   "sha256_html": "d8979aac7437ca5dc58f2d8548034a4cbcca2dd48a8f142e8b7b41f0ec52292c",
+   "format": "lignes",
+   "texte": "comptes_rendus/SENAT-2026-11-20.txt",
+   "sha256_texte": "c242b2a00467bcf307a76b35c1dabc42ae6a99d8b1427aa14a6f78486ce1a51c"
   }
  },
  "articles": [
@@ -227,6 +239,11 @@
    "citation": "Texte n° 155 (2026-2027) transmis au Sénat le 19 novembre 2026",
    "date": "2026-11-19",
    "texte_senat": "n° 155 (2026-2027)"
+  },
+  {
+   "etape": "senat_discussion",
+   "seance": "SENAT-2026-11-20",
+   "citation": "Loi de finances pour 2027 Discussion d'un projet de loi"
   }
  ],
  "texte_rejete": {
@@ -258,7 +275,8 @@
   "AN-2026-11-19-1",
   "AN-2026-11-19-2",
   "AN-2026-11-19-3",
-  "SENAT-2026-11-19"
+  "SENAT-2026-11-19",
+  "SENAT-2026-11-20"
  ],
  "commission_senat": [
   {
