@@ -61,6 +61,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-23 — Pages « livres offerts » : présentation A+ (dix pages par livre et page mère), non commité à l'écriture
+- **Décision** : trois maquettes (https://claude.ai/artifact/4jtex25JvXgQqDncmUytmn), avis externe archivé et arbitré
+  (`D:\CONTRE_EXPERTISE\promotion\2026-11-23_HABILLAGE_ODYSSEE_OFFERTE\ARBITRAGE.md`, pièce SHA-256 `4f55062c…`), A+ retenue,
+  report demandé par l'auteur à toutes les pages du guichet.
+- **Fait** : premier écran (couverture, titre, chiffres, bouton « Recevoir mon exemplaire Kindle offert » / « Recevoir
+  l'exemplaire de consultation » sur les façades enseignants, réassurance, note) ; voix du livre (`partials/book-voix.html`,
+  sorti de `livres/single.html` : fiches livres identiques au build d'avant, empreinte CSS exceptée) ; rappel du bouton et
+  barre téléphone par `static/js/ressources-relais.js`, sans logique d'attribution (clic du bouton du guichet, cachés sans
+  script ou sans stock) ; page mère : catalogue sous l'accroche, réassurance, chiffres dans les cartes, aucun texte retiré ;
+  champ facultatif `chiffres_cles` ({nombre, libelle}) sur deux fiches, garde `errorf` vue mordre (clé `n` lue « faux » en YAML).
+- **Contrôles** : `check-all --ci` 0, `typo_build` 0, `audit-liens-build` 0 critique, `check-dates-build` 0 ; recette 390,
+  768, 1920 px sur un build local (bouton activé à la main, jamais cliqué : le guichet refuse l'origine locale).
+- **Reste** : commit et push sur demande de l'auteur ; attestation de la version servie après déploiement.
+
 ### 2026-11-19 — Stabilisation des pages en ligne : points ouverts vérifiés à la source et publiés (FR, EN)
 - **Commits** `87ba0378` (Union européenne : « modérée » rattaché à la bonne hausse, 120 % et +3,2 mois sous jeton et
   garde ; Référendum : procédure de l'initiative partagée, 62-20 DC, 88-5 ; Adopter : toutes les lois promulguées depuis

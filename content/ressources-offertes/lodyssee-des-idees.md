@@ -13,9 +13,21 @@ _build:
 
 *L'Odyssée des idées* traverse l'aventure intellectuelle humaine — de l'aube de
 l'humanité à l'intelligence artificielle — en **250 escales**&nbsp;: œuvres, vies,
-inventions, crises, instants de bascule. Sept parcours relient les penseurs par-delà
-les siècles&nbsp;: non pas un défilé chronologique, mais un réseau — un instrument de
-curiosité, pas un réservoir de certitudes.
+inventions, crises, instants de bascule. Sept chemins de lecture relient les penseurs
+par-delà les siècles&nbsp;: non pas un défilé chronologique, mais un réseau — un instrument
+de curiosité, pas un réservoir de certitudes.
+
+<div class="book-sommaire">
+
+1. Les signes
+2. Le pouvoir
+3. L'argent
+4. La liberté
+5. Le sacré
+6. L'opinion
+7. La condition humaine
+
+</div>
 
 Cet exemplaire numérique est **déjà financé**&nbsp;: une part des ventes sert à
 transmettre le livre à de nouveaux lecteurs.

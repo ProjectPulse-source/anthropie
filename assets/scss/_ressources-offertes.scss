@@ -442,3 +442,177 @@
   .ressources-btn,
   .ressources-toast { transition: none; }
 }
+
+// =======================================================================
+// Présentation A+ (arbitrage du 23/11/2026, maquettes https://claude.ai/artifact/4jtex25JvXgQqDncmUytmn) :
+// l'offre se comprend dans le premier écran (couverture, titre, chiffres, bouton, réassurance, note) ;
+// puis la voix du livre ; rappel du bouton en fin de page, barre collante au téléphone.
+// =======================================================================
+
+// ----- Chiffres d'un livre (partials/ressources-chiffres.html), page par livre ET page mère -----
+.ro-chiffres {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-rule-soft);
+  border-bottom: 1px solid var(--color-rule-soft);
+  column-gap: 26px;
+  li {
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 10px 0;
+    font-family: var(--font-sans);
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+    color: var(--color-text-subtle);
+  }
+  b {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+    margin-right: 4px;
+  }
+}
+
+// ----- Page par livre : premier écran -----
+.ro-hero-wrap { margin-top: 8px; }
+.ressources-book.ro-hero {
+  grid-template-columns: 250px minmax(0, 1fr);
+  grid-template-areas: "cover head" "cover chiffres" "cover action";
+  grid-template-rows: auto auto 1fr;
+  gap: 0 56px;
+  align-items: start;
+  padding: 24px 0 8px;
+}
+.ro-hero__head { grid-area: head; }
+.ro-hero__title { margin: 0; }
+.ro-hero__head .ressources-tagline { margin-bottom: 0; }
+.ressources-book__aside.ro-hero__cover { grid-area: cover; width: 250px; margin: 6px 0 0; }
+.ro-hero__cover .ressources-book__emblem,
+.ro-hero__cover .ressources-book__cover { width: 250px; }
+.ro-hero__chiffres { grid-area: chiffres; margin-top: 22px; }
+.ro-hero__action { grid-area: action; padding-top: 22px; }
+.ro-hero .ressources-book__cta { font-size: 15px; padding: 14px 24px; }
+.ressources-btn-note.ro-note { max-width: 52ch; font-size: 13px; line-height: 1.55; }
+.ro-note strong { font-weight: 500; color: var(--color-text); }
+
+@media (max-width: 760px) {
+  .ressources-book.ro-hero {
+    grid-template-columns: 120px minmax(0, 1fr);
+    grid-template-areas: "head head" "cover chiffres" "action action";
+    grid-template-rows: auto auto auto;
+    gap: 0 18px;
+    padding-top: 8px;
+  }
+  // Au téléphone, la colonne de la couverture (120 px) est trop étroite pour la note Amazon : la colonne s'efface
+  // (display: contents) et la note passe sous les chiffres, à droite de la couverture.
+  .ressources-book.ro-hero { grid-template-areas: none; }
+  .ro-hero__head { grid-column: 1 / -1; grid-row: 1; }
+  .ressources-book__aside.ro-hero__cover { display: contents; }
+  .ro-hero__cover .ressources-book__emblem { grid-column: 1; grid-row: 2 / span 3; margin-top: 20px; }
+  .ro-hero__cover .ressources-book__emblem,
+  .ro-hero__cover .ressources-book__cover { width: 120px; }
+  .ro-hero__cover > :not(.ressources-book__emblem) { grid-column: 2; justify-content: flex-start; text-align: left; }
+  .ro-hero__chiffres { grid-column: 2; grid-row: 2; margin-top: 20px; }
+  .ro-hero__action { grid-column: 1 / -1; grid-row: 5; }
+  .ro-hero__chiffres .ro-chiffres { flex-direction: column; border: 0; }
+  .ro-hero__chiffres .ro-chiffres li { padding: 6px 0; border-bottom: 1px solid var(--color-rule-soft); }
+  .ro-hero__chiffres .ro-chiffres b { font-size: 21px; }
+  .ro-hero .ressources-book__cta { width: 100%; min-height: 48px; }
+  .ro-hero__action { padding-top: 20px; }
+}
+
+// ----- La voix du livre, en carte (partials/book-voix.html, classe ro-voix__carte) -----
+.ro-voix { margin-top: 48px; }
+.book-voix.ro-voix__carte {
+  margin: 10px 0 0;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-soft);
+  padding: 36px 44px 32px;
+  box-shadow: 0 16px 30px -22px rgba(15, 27, 54, 0.35);
+  blockquote p { max-width: 62ch; }
+  @media (max-width: 760px) { padding: 22px 20px; }
+}
+
+// ----- Texte dédié, liens -----
+.ro-texte { margin-top: 48px; }
+.ro-texte .ressources-single__text { max-width: 64ch; }
+.ro-liens { font-family: var(--font-sans); font-size: var(--fs-small); color: var(--color-text-subtle); }
+
+// ----- Rappel du bouton en fin de texte -----
+.ro-reprise {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 28px;
+  margin: 40px 0 0;
+  padding: 22px 26px;
+  background: var(--color-dossier-tint);
+  p {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--color-text);
+  }
+  p span {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--color-text-subtle);
+    margin-top: 4px;
+  }
+  .ressources-btn { font-size: 15px; padding: 14px 24px; }
+  @media (max-width: 760px) { .ressources-btn { width: 100%; min-height: 48px; } }
+}
+.ro-reprise[hidden] { display: none; }
+
+// ----- Barre compacte, téléphone seulement -----
+.ro-barre {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-rule-strong);
+  box-shadow: 0 -6px 18px rgba(15, 15, 18, 0.06);
+}
+.ro-barre[hidden] { display: none; }
+.ro-barre__cover { width: 40px; height: auto; box-shadow: 2px 2px 0 var(--color-accent-soft); }
+.ro-barre__titre {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-text);
+  span { display: block; font-weight: 400; color: var(--color-text-subtle); }
+}
+.ressources-btn.ro-barre__btn { min-height: 44px; padding: 10px 16px; }
+@media (min-width: 761px) { .ro-barre { display: none !important; } }
+@media (max-width: 760px) { body.avec-ro-barre { padding-bottom: 76px; } }
+
+// ----- Page mère : réassurance au-dessus du catalogue, chiffres dans les cartes -----
+.ro-assurance {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--color-text);
+  margin: 0 0 26px;
+  strong { font-weight: 500; }
+}
+.ressources-book__body .ro-chiffres { margin: 4px 0 14px; }
+.ressources-book__body .ro-chiffres b { font-size: 21px; }
+.ressources-book__body .ressources-book__cta { font-size: 15px; padding: 13px 22px; }

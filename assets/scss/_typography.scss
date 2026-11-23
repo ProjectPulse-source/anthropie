@@ -143,6 +143,7 @@ main .citation-entree__corps > ul > li,
 main .book-parcours__ch li,
 main .book-others__list--grille > li,
 main .book-sommaire li,
+main .ro-chiffres li,
 main .awp-breadcrumb li,
 main .related-awp__list > li {
   padding-left: 0 !important;
@@ -173,6 +174,9 @@ main .awp-article__keywords { padding-left: 0 !important; margin: 0.75rem 0 0 !i
 main .awp-article__keywords > li { margin-bottom: 0 !important; padding-left: 0.6rem !important; }
 main .related-awp__list { padding-left: 0 !important; margin: 0 0 1.5rem !important; list-style: none !important; }
 main .awp-sidebar__series > li { margin-bottom: 0.4rem !important; padding-left: 0 !important; }
+// Chiffres d'un livre offert (partials/ressources-chiffres.html, 23/11/2026) : sans puce ni retrait ; ses marges restent
+// celles de sa feuille (_ressources-offertes.scss).
+main .ro-chiffres { padding-left: 0 !important; list-style: none !important; }
 main .awp-breadcrumb [aria-current] { font-weight: 500 !important; }
 
 main li::marker {

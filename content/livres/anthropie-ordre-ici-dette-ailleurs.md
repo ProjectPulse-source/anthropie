@@ -11,6 +11,10 @@ amazon_rating_date: 2026-11-22  # date du relevé, affichée sous la note ; la m
 amazon_reviews: 28       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
 description_en: "The foundational work on the anthropic framework. Across 630 pages, the book develops the hypothesis that social systems do not resolve disorder but displace it — across space, across time, or onto other social groups. Drawing on economic history, public finance, and ecological economics, it argues that what appears as order in one location is sustained by debt — material, ecological, or moral — contracted elsewhere."
 pages: 630  # sync data/works.yaml (book-anthropie.pages) — nombre de pages broché
+# Chiffres de tête de l'exemplaire offert (partials/ressources-chiffres.html, A+ du 23/11/2026) : repris du
+# sous-titre ; la pagination s'ajoute seule depuis `pages`.
+chiffres_cles:
+  - { nombre: "7", libelle: "âges d'histoire" }
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer (priceCurrency EUR par défaut)
 serie: "anthropie"
 # Axe du cadre affiché sur /livres/ (auteur, 01/10/2026) ; source : sous-titre « Sept âges d'histoire pour une seule hypothèse ».

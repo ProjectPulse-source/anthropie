@@ -37,41 +37,8 @@ Aucune contrepartie n'est demandée.` $url -}}
   parce qu'il ne vaut rien. Il vous est proposé parce qu'il a <strong>déjà été
   financé</strong>.</p>
 
-  {{/* Chaîne visuelle — ligne principale unique. Au pluriel (arbitrage 19/09) : aussi
-         concret que « Un livre acheté → un lecteur invité », sans promettre un exemplaire
-         offert par achat, ce que le dispositif ne fait pas. */}}
-  <div class="ressources-chain ressources-chain--main">
-    <span class="ressources-chain__node">Des livres achetés</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
-    <span class="ressources-chain__node">des lecteurs invités</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
-    <span class="ressources-chain__node ressources-chain__node--last">le savoir circule</span>
-  </div>
-
-  <p class="ressources-intro">Une partie des bénéfices issus de mes ouvrages sert à
-  financer de nouveaux exemplaires Kindle, transmis à des lecteurs invités. Parce que je
-  publie mes livres de manière indépendante, je peux réorienter une part de leur valeur
-  vers leur diffusion directe&nbsp;: moins de dépendance aux seuls circuits publicitaires,
-  plus de transmission de lecteur à lecteur.</p>
-
-  {{/* ── 2. Fonctionnement ── */}}
-  <section class="ressources-how">
-    <h2 class="ressources-kicker">Comment cela fonctionne</h2>
-    <p>Vous avez reçu cette invitation parce qu'un lecteur, un proche, une bibliothèque
-    ou l'auteur a souhaité vous donner accès à un livre déjà financé.</p>
-    <p>Choisissez le titre qui vous intéresse, puis cliquez sur «&nbsp;Obtenir mon
-    exemplaire Kindle prépayé&nbsp;». Un lien individuel vous est attribué et Amazon.fr
-    s'ouvre dans un nouvel onglet. Connectez-vous à votre compte Amazon.fr pour accepter
-    le livre, sans paiement.</p>
-    <p>Chaque lien est prépayé, individuel et utilisable une seule fois. Dans cette
-    première phase, chaque lecteur peut recevoir un seul livre parmi les titres
-    proposés.</p>
-    <p>Aucune contrepartie n'est demandée&nbsp;: ni avis, ni inscription commerciale, ni
-    abonnement. Si le livre vous paraît utile, vous êtes simplement libre de le lire, de
-    le recommander ou de le faire connaître.</p>
-    <p>Vous vous êtes trompé de livre, ou n'avez pas pu utiliser votre lien&nbsp;?
-    <a href="{{ "/contact/" | relLangURL }}">Écrivez-moi</a>&nbsp;: je vérifie et je
-    remets l'exemplaire en circulation.</p>
-  </section>
-
+  {{/* Présentation A+ (arbitrage du 23/11/2026) : le catalogue vient tout de suite après l'accroche, l'explication
+         du dispositif (chaîne, fonctionnement) le suit. Aucun texte retiré : seulement déplacé. */}}
   {{/* ── 3. Catalogue — source unique : content/livres/.
          Ordre d'affichage = liste de slugs Hugo (une erreur ici = livre absent,
          panne VISIBLE). data-book = promo_slug lu dans le front matter du livre
@@ -79,8 +46,8 @@ Aucune contrepartie n'est demandée.` $url -}}
   <section class="ressources-catalogue">
     <h2>Les livres proposés</h2>
     <div class="ressources-rule"></div>
-    <p class="ressources-controlled-note">Chaque exemplaire s'obtient en un clic, dans la limite du stock, à
-    raison d'un par lecteur.</p>
+    <p class="ro-assurance"><strong>Déjà financé · aucun paiement · ni avis ni inscription demandés.</strong>
+    Un clic, dans la limite du stock, à raison d'un exemplaire par lecteur.</p>
     <div class="ressources-books">
       {{/* la-societe-du-premier-coup : REMIS le 2026-08-10 au soir, une fois le stock réel
            en place (10 liens importés, `premier-coup: true` sur /stock du Worker). Il avait
@@ -133,13 +100,14 @@ Aucune contrepartie n'est demandée.` $url -}}
           <div class="ressources-book__body">
             <h3>{{ .Title }}</h3>
             {{ with .Params.subtitle }}<p class="ressources-book__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
-            {{ with .Params.pages }}<p class="ressources-book__meta">Édition Kindle · Édition brochée&nbsp;: {{ . }} pages</p>{{ end }}
+            <p class="ressources-book__meta">Édition Kindle offerte</p>
+            {{ partial "ressources-chiffres.html" . }}
             {{ with .Description }}<p class="ressources-book__resume">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" . "isbn" $isbn)) }}</p>{{ end }}
-            <a class="ressources-book__readmore" href="{{ .RelPermalink }}">Lire plus</a>
+            <a class="ressources-book__readmore" href="{{ .RelPermalink }}">Fiche du livre et extrait</a>
 
             <div class="ressources-book__obtain">
               <p class="ressources-book__state" data-role="state">Vérification du stock…</p>
-              <button class="ressources-btn ressources-book__cta" type="button" disabled>Obtenir mon exemplaire Kindle prépayé</button>
+              <button class="ressources-btn ressources-book__cta" type="button" disabled>Recevoir mon exemplaire Kindle offert</button>
               <p class="ressources-btn-note" data-role="note">Un clic vous attribue ce livre
               et ouvre Amazon.fr. Un seul exemplaire offert par lecteur.</p>
             </div>
@@ -162,6 +130,41 @@ Aucune contrepartie n'est demandée.` $url -}}
       Vous pouvez aussi <a href="{{ "/contact/" | relLangURL }}">me contacter</a> pour
       recevoir votre exemplaire.</p>
     </noscript>
+  </section>
+
+  {{/* Chaîne visuelle — ligne principale unique. Au pluriel (arbitrage 19/09) : aussi
+         concret que « Un livre acheté → un lecteur invité », sans promettre un exemplaire
+         offert par achat, ce que le dispositif ne fait pas. */}}
+  <div class="ressources-chain ressources-chain--main">
+    <span class="ressources-chain__node">Des livres achetés</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node">des lecteurs invités</span><span class="ressources-chain__arrow" aria-hidden="true">→</span>
+    <span class="ressources-chain__node ressources-chain__node--last">le savoir circule</span>
+  </div>
+
+  <p class="ressources-intro">Une partie des bénéfices issus de mes ouvrages sert à
+  financer de nouveaux exemplaires Kindle, transmis à des lecteurs invités. Parce que je
+  publie mes livres de manière indépendante, je peux réorienter une part de leur valeur
+  vers leur diffusion directe&nbsp;: moins de dépendance aux seuls circuits publicitaires,
+  plus de transmission de lecteur à lecteur.</p>
+
+  {{/* ── 2. Fonctionnement ── */}}
+  <section class="ressources-how">
+    <h2 class="ressources-kicker">Comment cela fonctionne</h2>
+    <p>Vous avez reçu cette invitation parce qu'un lecteur, un proche, une bibliothèque
+    ou l'auteur a souhaité vous donner accès à un livre déjà financé.</p>
+    <p>Choisissez le titre qui vous intéresse, puis cliquez sur «&nbsp;Recevoir mon
+    exemplaire Kindle offert&nbsp;». Un lien individuel vous est attribué et Amazon.fr
+    s'ouvre dans un nouvel onglet. Connectez-vous à votre compte Amazon.fr pour accepter
+    le livre, sans paiement.</p>
+    <p>Chaque lien est prépayé, individuel et utilisable une seule fois. Dans cette
+    première phase, chaque lecteur peut recevoir un seul livre parmi les titres
+    proposés.</p>
+    <p>Aucune contrepartie n'est demandée&nbsp;: ni avis, ni inscription commerciale, ni
+    abonnement. Si le livre vous paraît utile, vous êtes simplement libre de le lire, de
+    le recommander ou de le faire connaître.</p>
+    <p>Vous vous êtes trompé de livre, ou n'avez pas pu utiliser votre lien&nbsp;?
+    <a href="{{ "/contact/" | relLangURL }}">Écrivez-moi</a>&nbsp;: je vérifie et je
+    remets l'exemplaire en circulation.</p>
   </section>
 
   {{/* ── 3 bis. Pourquoi ce dispositif ? (sens intellectuel / anthropie) ── */}}

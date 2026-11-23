@@ -16,6 +16,11 @@ amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chr
 amazon_rating_date: 2026-11-22  # date du relevé, affichée sous la note ; la mettre à jour avec elle
 amazon_reviews: 169      # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
 pages: 682  # sync data/works.yaml (book-lodyssee-des-idees.pages) — nombre de pages broché
+# Chiffres de tête de l'exemplaire offert (partials/ressources-chiffres.html, A+ du 23/11/2026), lus dans le livre et
+# déjà affirmés par cette fiche (corps, FAQ) ; la pagination s'ajoute seule depuis `pages`.
+chiffres_cles:
+  - { nombre: "250", libelle: "escales" }
+  - { nombre: "7", libelle: "chemins de lecture" }
 description_en: "From the dawn of humanity to artificial intelligence, 250 ports of call — works, lives, inventions, crises, tipping points — and seven itineraries connect thinkers across the centuries. Not a chronological parade but a network. An instrument of curiosity, not a reservoir of certainties."
 price: "36"  # prix broché EUR — affiché sur la page + schema.org Offer
 serie: "autres-ouvrages"

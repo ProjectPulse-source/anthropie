@@ -22,15 +22,7 @@
     <div class="book-single__main content-narrow content-reading">
       {{- /* La voix du livre : une scène, verbatim, coupée sans chiffre détaché de sa note
              (leçon du module A+ « La voix » ; arbitrage Audit-05). */ -}}
-      {{ with .Params.extrait_voix }}
-      <figure class="book-voix">
-        <figcaption class="book-voix__src">{{ partial "fr-typo.html" .source }}</figcaption>
-        <blockquote>
-          {{ range .paragraphes }}<p>{{ partial "fr-typo.html" . }}</p>{{ end }}
-          {{ with .chute }}<p class="book-voix__chute">{{ partial "fr-typo.html" . }}</p>{{ end }}
-        </blockquote>
-      </figure>
-      {{ end }}
+      {{ partial "book-voix.html" (dict "voix" .Params.extrait_voix) }}
 
       {{ .Content }}
 

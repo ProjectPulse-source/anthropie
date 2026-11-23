@@ -1,0 +1,13 @@
+{{- /* La voix du livre : une scène verbatim (front matter `extrait_voix` de la fiche /livres/<slug>).
+       SEUL exemplaire du balisage : la fiche livre (livres/single.html) et la page d'exemplaire offert
+       (ressources-offertes/single.html, arbitrage A+ du 23/11/2026) l'appellent toutes deux.
+       Entrée : dict "voix" (la valeur d'extrait_voix) et, facultatif, "classe" (classe ajoutée au figure). */ -}}
+{{- with .voix -}}
+<figure class="book-voix{{ with $.classe }} {{ . }}{{ end }}">
+  <figcaption class="book-voix__src">{{ partial "fr-typo.html" .source }}</figcaption>
+  <blockquote>
+    {{ range .paragraphes }}<p>{{ partial "fr-typo.html" . }}</p>{{ end }}
+    {{ with .chute }}<p class="book-voix__chute">{{ partial "fr-typo.html" . }}</p>{{ end }}
+  </blockquote>
+</figure>
+{{- end -}}

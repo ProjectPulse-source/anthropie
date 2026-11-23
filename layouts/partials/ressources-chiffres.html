@@ -1,0 +1,14 @@
+{{- /* Chiffres d'un livre en tête de son exemplaire offert (arbitrage A+ du 23/11/2026) : les repères
+       éditoriaux de la fiche (`chiffres_cles`, facultatif : liste de {nombre, libelle} (jamais « n » : en YAML 1.1, n se lit comme le booléen faux), valeurs lues dans le livre),
+       puis la pagination du broché (`pages`, dérivée, jamais recopiée).
+       Entrée : la PAGE LIVRE (content/livres/*.md). Rien à afficher : rien rendu. */ -}}
+{{- $items := slice -}}
+{{- range .Params.chiffres_cles -}}{{- if not (and .nombre .libelle) -}}{{- errorf "chiffres_cles de %s : entree sans `nombre` ou sans `libelle` (%v)" $.File.Path . -}}{{- end -}}{{- $items = $items | append (dict "n" .nombre "l" .libelle) -}}{{- end -}}
+{{- with .Params.pages -}}{{- $items = $items | append (dict "n" (string .) "l" "pages (broché)") -}}{{- end -}}
+{{- with $items -}}
+<ul class="ro-chiffres">
+  {{- range . }}
+  <li><b>{{ .n }}</b>&nbsp;<span>{{ partial "fr-typo.html" .l }}</span></li>
+  {{- end }}
+</ul>
+{{- end -}}
