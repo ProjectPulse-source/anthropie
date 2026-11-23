@@ -61,7 +61,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-23 (nuit, fin) — Ménage des styles de l'ancien accueil + fiche livre retouche B, non poussés à l'écriture
+### 2026-11-23 (nuit, fin) — Ménage des styles de l'ancien accueil (`2e6cd94f`) + fiche livre retouche B (`11efff6c`), en ligne (servi attesté : fiche Livresque 912 px, achat avant Transmettre, promesse, carte ; identifiants de l'accueil stylés, axes-anim absent ; registre AWP de /a-propos/ intact)
 - **Ménage** : `_home.scss` 483 → 49 lignes, `_hero.scss` 144 → 27 (gardés : `.credibility-strip`, `.awp-registre`) ;
   `axes-anim.js` et son chargement retirés ; exemption `main .home-reception__liste li` retirée. Preuve : diff de la feuille
   compilée (tinycss2) — 182 règles et 5 `@keyframes` retirés, aucun sélecteur retiré ne vise un élément des 193 pages
