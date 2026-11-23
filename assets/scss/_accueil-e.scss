@@ -1,0 +1,251 @@
+// =======================================================================
+// _accueil-e.scss — accueil français, maquette E (arbitrage du 23/11/2026 ; partials/accueil-e.html).
+// Valeurs de la maquette https://claude.ai/artifact/LLNtLFVNJE9aevD8EHtNaL (onglet E). Texte en pleine largeur de sa
+// colonne (préférence constante de l'auteur). Couleurs des chiffres : charte des figures (bleu = stock, orange = coût ;
+// texte orange en orange foncé #b8420f, décision de l'auteur du 11/11/2026).
+// =======================================================================
+.acc {
+  --acc-bleu: #184f95;
+  --acc-orange-texte: #b8420f;
+  padding-bottom: 24px;
+}
+
+// ----- 1. Premier écran -----
+.acc-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+  padding: 44px 0 8px;
+  @media (max-width: 860px) { grid-template-columns: 1fr; gap: 26px; padding-top: 20px; }
+}
+.acc-hero__texte { min-width: 0; }
+.acc-id {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-pivot);
+  margin: 0 0 16px;
+}
+.acc-question {
+  font-family: var(--font-serif);
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin: 0;
+  text-wrap: balance;
+  em { color: var(--color-pivot); }
+  @media (max-width: 860px) { font-size: 34px; }
+}
+.acc-chiffres {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 26px 0 0;
+  @media (max-width: 860px) { gap: 16px; }
+  // Au téléphone, les deux chiffres (insécables, sur une ligne) ne tiennent pas côte à côte : l'un sous l'autre.
+  @media (max-width: 600px) { grid-template-columns: 1fr; gap: 14px; }
+}
+.acc-chiffre {
+  min-width: 0;
+  border-top: 3px solid var(--acc-bleu);
+  padding-top: 10px;
+  b {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-serif);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.05;
+    white-space: nowrap;
+    color: var(--acc-bleu);
+    font-variant-numeric: tabular-nums;
+    @media (max-width: 860px) { font-size: 32px; }
+  }
+}
+.acc-chiffre--orange { border-top-color: #eb6834; b { color: var(--acc-orange-texte); } }
+.acc-chiffre__u {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+.acc-chiffre__p { display: block; margin-top: 6px; font-family: var(--font-serif); font-size: 15px; line-height: 1.4; color: var(--color-text-body); }
+.acc-appui { font-family: var(--font-serif); font-size: 18px; line-height: 1.55; color: var(--color-text-body); margin: 20px 0 0; @media (max-width: 860px) { font-size: 16.5px; } }
+.acc-src { font-family: var(--font-mono); font-size: 12px; line-height: 1.45; color: var(--color-text-subtle); margin: 10px 0 0; }
+.acc-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+  @media (max-width: 860px) { .btn { width: 100%; justify-content: center; text-align: center; } }
+}
+.acc-acces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 16px 0 0;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+}
+.acc-hero__figure {
+  display: block;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-soft);
+  padding: 14px;
+  img { display: block; width: 100%; height: auto; }
+  &:hover { border-color: var(--color-accent-rule); }
+}
+.acc-presse {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 24px;
+  margin: 32px 0 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-rule-soft);
+  border-bottom: 1px solid var(--color-rule-soft);
+  span { font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-subtle); }
+  i { font-family: var(--font-serif); font-size: 18px; color: var(--color-text-muted); }
+}
+
+// ----- Blocs suivants -----
+.acc-bloc { margin-top: 72px; scroll-margin-top: 80px; }
+.acc-kicker { font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-text-muted); margin: 0 0 10px; }
+// La règle commune des h2 de section (.home-section h2…) ne vise pas ce gabarit (pas de .home-section) : style propre.
+h2.acc-titre { font-family: var(--font-serif); font-size: 32px; font-weight: 400; line-height: 1.15; color: var(--color-text); margin: 0; border: 0; padding: 0; }
+.acc-tout { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 18px 0 0; font-family: var(--font-sans); font-size: 14px; font-weight: 500; }
+
+// 2. Trois enquêtes
+.acc-enquetes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 18px;
+  @media (max-width: 1000px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+.acc-enquete {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-soft);
+  color: inherit;
+  text-decoration: none;
+  img { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--color-rule-soft); }
+  &:hover { border-color: var(--color-accent-rule); color: inherit; }
+}
+.acc-enquete__c { display: flex; flex-direction: column; gap: 8px; flex: 1; padding: 16px 18px 18px; }
+.acc-enquete__t { font-family: var(--font-serif); font-size: 20px; font-weight: 500; line-height: 1.2; color: var(--color-text); }
+.acc-enquete__r { flex: 1; font-family: var(--font-serif); font-size: 15px; line-height: 1.5; color: var(--color-text-muted); }
+.acc-enquete__go { font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: var(--color-link); }
+
+// 3. Livres
+.acc-livres {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 28px;
+  @media (max-width: 1000px) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 600px) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
+  > li { margin: 0; padding: 0; min-width: 0; }
+  a { display: block; color: inherit; text-decoration: none; }
+  a:hover .acc-livre__promesse { color: var(--color-accent); }
+}
+.acc-livre__couv {
+  max-width: 130px;
+  transform: rotate(-3deg);
+  box-shadow: 5px 5px 0 0 var(--color-accent-soft);
+  img { display: block; width: 100%; height: auto; }
+  @media (max-width: 600px) { max-width: 110px; }
+}
+.acc-livre__promesse { display: block; margin-top: 16px; font-family: var(--font-serif); font-size: 15.5px; font-weight: 500; line-height: 1.3; color: var(--color-text); text-wrap: balance; }
+.acc-livre__titre { display: block; margin-top: 6px; font-family: var(--font-sans); font-size: 12px; line-height: 1.35; color: var(--color-text-subtle); }
+
+// 4. Hypothèse
+.acc-hypothese { padding: 40px 44px; background: var(--color-dossier-tint); @media (max-width: 760px) { padding: 26px 20px; } }
+h2.acc-these {
+  font-family: var(--font-serif);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-wrap: balance;
+  em { color: var(--color-pivot); }
+  @media (max-width: 760px) { font-size: 30px; }
+}
+.acc-nota { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); margin: 12px 0 0; }
+.acc-axes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+  @media (max-width: 760px) { grid-template-columns: 1fr; }
+}
+.acc-axe { min-width: 0; }
+.acc-axe__b {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid var(--color-rule-soft);
+  background: var(--color-bg-elevated);
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  &:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
+}
+.acc-axe__q { font-family: var(--font-serif); font-size: 38px; line-height: 1; color: var(--acc-orange-texte); }
+.acc-axe__n { font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-muted); }
+.acc-axe__s { font-family: var(--font-serif); font-size: 17px; line-height: 1.3; color: var(--color-text); }
+.acc-axe__txt { font-family: var(--font-serif); font-size: 16px; line-height: 1.6; color: var(--color-text-body); margin: 12px 0 0; }
+// Avec script (static/js/accueil-axes.js) : une seule explication visible, sous la rangée des questions sur ordinateur.
+.acc-hypothese.is-js {
+  .acc-axe__txt { display: none; }
+  .acc-axe.is-open .acc-axe__txt { display: block; }
+  .acc-axe.is-open .acc-axe__b { border-color: var(--color-accent); box-shadow: inset 0 -4px 0 var(--color-accent); }
+  // Sur ordinateur, l'explication ouverte occupe toute la largeur sous la rangée des trois questions (maquette E).
+  @media (min-width: 761px) {
+    .acc-axe { display: contents; }
+    .acc-axe__b { grid-row: 1; }
+    .acc-axe__txt { grid-column: 1 / -1; grid-row: 2; margin-top: 4px; }
+  }
+}
+
+// 5. Garanties
+.acc-garanties {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 2px solid var(--color-accent-rule);
+  @media (max-width: 760px) { grid-template-columns: 1fr; }
+}
+.acc-garantie {
+  min-width: 0;
+  padding: 20px 24px 6px 0;
+  b { display: block; font-family: var(--font-serif); font-size: 22px; font-weight: 400; line-height: 1.2; color: var(--color-text); margin-bottom: 6px; }
+  p { font-family: var(--font-serif); font-size: 15px; line-height: 1.55; color: var(--color-text-muted); margin: 0 0 10px; }
+  a { font-family: var(--font-sans); font-size: 13.5px; font-weight: 500; }
+  @media (max-width: 760px) { padding: 16px 0; border-bottom: 1px solid var(--color-rule-soft); }
+}
+.acc-garantie + .acc-garantie {
+  padding-left: 24px;
+  border-left: 1px solid var(--color-rule-soft);
+  @media (max-width: 760px) { padding-left: 0; border-left: 0; }
+}
+.acc-ids { margin-top: 20px; }

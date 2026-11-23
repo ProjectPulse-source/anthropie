@@ -61,6 +61,20 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-23 (nuit) — Accueil français : maquette E (« GO E » de l'auteur), non poussé à l'écriture
+- **Décision** : quatre maquettes (https://claude.ai/artifact/LLNtLFVNJE9aevD8EHtNaL), deux contre-expertises archivées et
+  arbitrées (`D:\CONTRE_EXPERTISE\promotion\2026-11-23_ACCUEIL_MAQUETTES\ARBITRAGE.md`, `9882e411…`, `1788aff1…`) ; audit
+  non inscrit au registre global (navette refusée par le mode automatique, commande donnée à l'auteur).
+- **Fait** : `partials/accueil-e.html` (question « La dette publique augmentait. Pourquoi ses intérêts pesaient-ils moins
+  dans le PIB ? », deux chiffres, figure, accès ; trois enquêtes ; livres et promesses ; hypothèse distincte des enquêtes ;
+  garanties) ; tous les chiffres lus dans les blocs `affichage` (dette_officielle, niveau_eleves, pouvoirs_president_donnees,
+  data_centers), déclarés en `date_suit` ; deux gardes de prose vues mordre (seuil de 100 % après l'année de fin ; charge de
+  fin ≥ charge de 1995). `layouts/index.html` : FR → partial, EN inchangé (exclusion déclarée) ; ordre des livres et
+  identifiants extraits en partials communs (`livres-portes.html`, `identifiants-auteur.html`). `static/js/accueil-axes.js`.
+- **Contrôles** : check-all --ci 0, typo_build 0, audit-liens 0 critique, check-dates-build 0, check-corpus-counters 0 ;
+  recette 390, 768, 1920 px. Fiche D0 : `D:\PRO\06_PROMOTION\MAQUETTES_ACCUEIL_2026-11-23\FICHE_D0.md` (état initial à
+  relever par l'auteur, jeton GoatCounter).
+
 ### 2026-11-23 (nuit, suite) — Page mère `/ressources-offertes/` : maquette C+ « l'étagère des promesses » (auteur : « GO C+ »), commit `91057b9d` en ligne (version servie attestée : six couvertures chargées, six promesses, script actif, fiche du livre déjà reçu ouverte au chargement, aucun débordement)
 - **Pourquoi** : l'auteur préfère le visuel de C ; ses trois défauts (avis externe) corrigés : promesses écrites sous les
   couvertures (comparaison sans clic), couvertures 150 px, plus de défilement horizontal (6 / 3 / 2 par rangée).

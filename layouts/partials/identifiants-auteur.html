@@ -1,0 +1,13 @@
+{{- /* identifiants-auteur.html — liens vers les identifiants de chercheur (ORCID, Google Scholar, Zenodo, OpenAlex,
+       Wikidata), lus dans data/author.toml (source unique d'identité). Extrait de layouts/index.html le 23/11/2026 pour
+       servir les deux accueils sans copie. Entrée : rien (contexte ignoré). */ -}}
+{{ $visibleKeys := slice "orcid" "googleScholar" "zenodoCommunity" "openalex" "wikidata" }}
+{{ $sameAs := site.Data.author.author.sameAs }}
+{{ range $i, $key := $visibleKeys }}
+  {{ range $sameAs }}
+    {{ if eq .key $key }}
+      {{ if $i }}<span class="credibility-strip__sep" aria-hidden="true"></span>{{ end }}
+      <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
+    {{ end }}
+  {{ end }}
+{{ end }}

@@ -1,4 +1,9 @@
 {{ define "main" }}
+{{- /* Accueil FRANÇAIS = maquette E (arbitrage du 23/11/2026, D:\CONTRE_EXPERTISE\promotion6-11-23_ACCUEIL_MAQUETTES,
+       « GO E » de l'auteur) : partials/accueil-e.html. Ce gabarit reste celui de l'accueil ANGLAIS : déploiement limité au
+       français, exclusion déclarée (accroche, promesses de lecture et dossiers non traduits ni validés en anglais).
+       Les branches françaises ci-dessous ne sont donc plus servies ; elles restent pour rouvrir l'anglais à part. */ -}}
+{{ if eq .Lang "fr" }}{{ partial "accueil-e.html" . }}{{ else }}
 
 {{/* ══════════ Section 1 — Hero ══════════ */}}
 <section class="home-hero">
@@ -28,16 +33,7 @@
     </div>
     <p class="hero__lede-suite">{{ $siteTxt | safeHTML }}</p>
     <div class="credibility-strip">
-      {{ $visibleKeys := slice "orcid" "googleScholar" "zenodoCommunity" "openalex" "wikidata" }}
-      {{ $sameAs := site.Data.author.author.sameAs }}
-      {{ range $i, $key := $visibleKeys }}
-        {{ range $sameAs }}
-          {{ if eq .key $key }}
-            {{ if $i }}<span class="credibility-strip__sep" aria-hidden="true"></span>{{ end }}
-            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
-          {{ end }}
-        {{ end }}
-      {{ end }}
+      {{ partial "identifiants-auteur.html" . }}
     </div>
   </div>
 
@@ -301,18 +297,7 @@
      vient du dépôt : un livre absent de `commencer` s'affiche quand même, à la suite, et le build l'avertit.
      Ni bouton ni lien d'achat : la couverture et le titre mènent à la fiche (décision de l'auteur D2, 01/10/2026). */}}
 {{- $idxLivres := site.GetPage "/livres" -}}
-{{- $livres := partial "livres-merged.html" . -}}
-{{- $portes := slice -}}
-{{- with $idxLivres }}{{ range .Params.commencer }}
-  {{- $e := . -}}{{- $f := "" -}}
-  {{- range $livres }}{{ if eq .File.ContentBaseName $e.livre }}{{ $f = . }}{{ end }}{{ end -}}
-  {{- with $f }}{{ $portes = $portes | append (dict "page" . "q" $e.pour) }}{{ end -}}
-{{ end }}{{ end -}}
-{{- range $livres }}
-  {{- $slug := .File.ContentBaseName -}}{{- $vu := false -}}
-  {{- range $portes }}{{ if eq .page.File.ContentBaseName $slug }}{{ $vu = true }}{{ end }}{{ end -}}
-  {{- if not $vu }}{{ warnf "accueil : %q absent de `commencer` de l'index Livres — affiché sans question" $slug }}{{ $portes = $portes | append (dict "page" . "q" "") }}{{ end -}}
-{{- end }}
+{{- $portes := partial "livres-portes.html" . -}}
 <section class="home-section home-livres" aria-labelledby="home-livres-titre">
   <h2 id="home-livres-titre">{{ if eq .Lang "en" }}Books{{ else }}Les livres{{ end }}</h2>
   {{- with $idxLivres }}{{ with .Params.chapo }}<p class="home-livres__chapo">{{ partial "fr-typo.html" . }}</p>{{ end }}{{ end }}
@@ -354,5 +339,7 @@
   </p>
   <p class="home-tout"><a href="{{ "/publications/" | relLangURL }}">{{ if eq .Lang "en" }}All publications&nbsp;→{{ else }}Toutes les publications&nbsp;→{{ end }}</a></p>
 </section>
+
+{{ end }}{{/* fin de la branche anglaise */}}
 
 {{ end }}

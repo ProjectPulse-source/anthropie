@@ -1,0 +1,18 @@
+{{- /* livres-portes.html — les livres dans l'ordre éditorial de la liste `commencer` de l'index Livres, chacun avec sa
+       question de porte (`pour`). Extrait de layouts/index.html le 23/11/2026 pour servir les deux accueils (FR, maquette
+       E ; EN, gabarit d'origine) sans copie. La présence vient du dépôt : un livre absent de `commencer` est rendu quand
+       même, à la suite, et le build l'avertit. Entrée : la page d'accueil. Sortie : slice de dict {page, q}. */ -}}
+{{- $idxLivres := site.GetPage "/livres" -}}
+{{- $livres := partial "livres-merged.html" . -}}
+{{- $portes := slice -}}
+{{- with $idxLivres }}{{ range .Params.commencer }}
+  {{- $e := . -}}{{- $f := "" -}}
+  {{- range $livres }}{{ if eq .File.ContentBaseName $e.livre }}{{ $f = . }}{{ end }}{{ end -}}
+  {{- with $f }}{{ $portes = $portes | append (dict "page" . "q" $e.pour) }}{{ end -}}
+{{ end }}{{ end -}}
+{{- range $livres }}
+  {{- $slug := .File.ContentBaseName -}}{{- $vu := false -}}
+  {{- range $portes }}{{ if eq .page.File.ContentBaseName $slug }}{{ $vu = true }}{{ end }}{{ end -}}
+  {{- if not $vu }}{{ warnf "accueil : %q absent de `commencer` de l'index Livres — affiché sans question" $slug }}{{ $portes = $portes | append (dict "page" . "q" "") }}{{ end -}}
+{{- end -}}
+{{- return $portes -}}

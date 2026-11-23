@@ -1,0 +1,159 @@
+{{- /* accueil-e.html — accueil FRANÇAIS, maquette E (arbitrage du 23/11/2026 ; deux contre-expertises, « GO E » de l'auteur).
+       Ordre : une question qui intrigue, un résultat qui étonne, une source qui rassure, puis d'autres découvertes.
+       1. premier écran : l'auteur, la question, deux chiffres datés et sourcés, la figure, les accès (enquêtes, livres) ;
+       2. trois enquêtes de domaines distincts de la dette ;  3. les livres (ordre `commencer`, promesses de lecture) ;
+       4. l'hypothèse de l'auteur, DISTINCTE des enquêtes (règle du site : un fait n'est jamais présenté comme sa preuve) ;
+       5. les garanties (données ouvertes, working papers, articles et recensions, identifiants).
+       AUCUN chiffre saisi : tout vient des blocs `affichage` des jeux (mêmes clés que les shortcodes des dossiers), et la
+       page les déclare dans `date_suit` (content/_index.md). Clé absente = échec du build. */ -}}
+{{- $p := . -}}
+{{- define "partials/accueil-e/val.html" -}}
+  {{- $v := index .jeu .k -}}
+  {{- if not $v }}{{ errorf "accueil-e : cle %q absente du jeu %s" .k .nom }}{{ end -}}
+  {{- return $v -}}
+{{- end -}}
+{{- $dette := site.Data.dette_officielle.affichage -}}
+{{- $niv := site.Data.niveau_eleves.affichage -}}
+{{- $pv := site.Data.pouvoirs_president_donnees.affichage -}}
+{{- $dtc := site.Data.data_centers.affichage -}}
+{{- $v := dict
+    "d95" (partial "accueil-e/val.html" (dict "jeu" $dette "k" "dette_1995_pct_pib" "nom" "dette_officielle"))
+    "i95" (partial "accueil-e/val.html" (dict "jeu" $dette "k" "interets_1995_pct_pib" "nom" "dette_officielle"))
+    "ic"  (partial "accueil-e/val.html" (dict "jeu" $dette "k" "interets_creux_pct_pib" "nom" "dette_officielle"))
+    "an"  (partial "accueil-e/val.html" (dict "jeu" $dette "k" "interets_creux_annee" "nom" "dette_officielle"))
+    "s100" (partial "accueil-e/val.html" (dict "jeu" $dette "k" "hist_seuil_100_annee" "nom" "dette_officielle"))
+    "lect" (partial "accueil-e/val.html" (dict "jeu" $niv "k" "lect_v15" "nom" "niveau_eleves"))
+    "math" (partial "accueil-e/val.html" (dict "jeu" $niv "k" "math_v15" "nom" "niveau_eleves"))
+    "sci"  (partial "accueil-e/val.html" (dict "jeu" $niv "k" "sci_v15" "nom" "niveau_eleves"))
+    "nact" (partial "accueil-e/val.html" (dict "jeu" $pv "k" "n_actes" "nom" "pouvoirs_president_donnees"))
+    "nenc" (partial "accueil-e/val.html" (dict "jeu" $pv "k" "n_encadres_acte" "nom" "pouvoirs_president_donnees"))
+    "res"  (partial "accueil-e/val.html" (dict "jeu" $dtc "k" "res_nov2025" "nom" "data_centers"))
+    "rpt"  (partial "accueil-e/val.html" (dict "jeu" $dtc "k" "rpt_2025" "nom" "data_centers"))
+-}}
+{{- /* Garde de prose : « plus de 100 % en <année de fin> » n'est vrai que si la dette a franchi 100 % au plus tard cette
+       année-là. Si une révision des séries déplace l'un ou l'autre, la phrase est à réécrire : le build s'arrête. */ -}}
+{{- if gt (int $v.s100) (int $v.an) }}{{ errorf "accueil-e : la dette franchit 100 %% en %s, apres l'annee de fin %s -- phrase du premier ecran a reecrire" $v.s100 $v.an }}{{ end -}}
+{{- /* Garde de prose : la question dit que les intérêts « pesaient moins dans le PIB » ; vrai si la charge de fin est
+       inférieure à celle de 1995 (valeurs à virgule décimale). */ -}}
+{{- if ge (float (replace $v.ic "," ".")) (float (replace $v.i95 "," ".")) }}{{ errorf "accueil-e : charge d'interets %s %% en %s >= %s %% en 1995 -- question du premier ecran a reecrire" $v.ic $v.an $v.i95 }}{{ end -}}
+{{- $pDette := site.GetPage "/cout-de-la-dette-publique" -}}
+{{- $enquetes := slice
+    (dict "page" (site.GetPage "/le-niveau-des-eleves-baisse-t-il") "txt" (printf "PISA, 2015-2025&nbsp;: %s&nbsp;points de moins en compréhension de l'écrit, %s en mathématiques, %s en sciences." $v.lect $v.math $v.sci))
+    (dict "page" (site.GetPage "/pouvoirs-du-president-de-la-republique") "txt" (printf "Sur les %s actes que l'article&nbsp;19 dispense de contreseing, %s font intervenir quelqu'un d'autre, dans le texte même de leur article." $v.nact $v.nenc))
+    (dict "page" (site.GetPage "/data-centers-puissance-reservee") "txt" (printf "En novembre 2025, %s&nbsp;GW de raccordement réservés auprès de RTE&nbsp;; pour les data centers déjà raccordés à son réseau, une consommation de près de %s&nbsp;TWh en 2025." $v.res $v.rpt))
+-}}
+{{- range $enquetes }}{{ if not .page }}{{ errorf "accueil-e : une enquete du bloc 2 est introuvable" }}{{ end }}{{ end -}}
+{{- if not $pDette }}{{ errorf "accueil-e : /cout-de-la-dette-publique introuvable" }}{{ end -}}
+{{- $awps := where site.RegularPages "Section" "awp" -}}
+{{- $mots := dict "1" "Un" "2" "Deux" "3" "Trois" "4" "Quatre" "5" "Cinq" "6" "Six" "7" "Sept" "8" "Huit" "9" "Neuf" "10" "Dix" "11" "Onze" "12" "Douze" -}}
+{{- $nAwp := index $mots (string (len $awps)) | default (string (len $awps)) -}}
+{{- $portes := partial "livres-portes.html" $p -}}
+
+<div class="acc">
+
+{{/* ══════════ 1. Premier écran ══════════ */}}
+<section class="acc-hero" aria-labelledby="acc-question">
+  <div class="acc-hero__texte">
+    <p class="acc-id">{{ site.Data.author.author.name }} · {{ site.Data.author.author.jobTitleFr }}</p>
+    <h1 class="acc-question" id="acc-question">La dette publique augmentait. <em>Pourquoi ses intérêts pesaient-ils moins dans le PIB&nbsp;?</em></h1>
+    <div class="acc-chiffres">
+      <div class="acc-chiffre">
+        <span class="acc-chiffre__u">Dette publique / PIB</span>
+        <b>{{ $v.d95 }}&nbsp;% → 100&nbsp;%</b>
+        <span class="acc-chiffre__p">de 1995 à {{ $v.an }} (plus de 100&nbsp;% en {{ $v.an }})</span>
+      </div>
+      <div class="acc-chiffre acc-chiffre--orange">
+        <span class="acc-chiffre__u">Charge d'intérêts / PIB</span>
+        <b>{{ $v.i95 }}&nbsp;% → {{ $v.ic }}&nbsp;%</b>
+        <span class="acc-chiffre__p">sur la même période</span>
+      </div>
+    </div>
+    <p class="acc-appui">La baisse du coût moyen de la dette compensait la hausse de son encours. Depuis {{ $v.an }}, les deux forces jouent de nouveau dans le même sens.</p>
+    <p class="acc-src">France, 1995-{{ $v.an }} · séries officielles&nbsp;: Insee, Eurostat&nbsp;; calculs de l'auteur</p>
+    <div class="acc-cta">
+      <a class="btn btn--primary" href="{{ $pDette.RelPermalink }}">Comprendre pourquoi</a>
+      <a class="btn btn--secondary" href="/ressources/">Les autres enquêtes</a>
+    </div>
+    <p class="acc-acces">
+      <a href="#acc-enquetes">L'école, le président, les data centers</a>
+      <a href="#acc-livres">Les livres</a>
+      <a href="#acc-hypothese">L'hypothèse de l'auteur</a>
+    </p>
+  </div>
+  <a class="acc-hero__figure" href="{{ $pDette.RelPermalink }}" aria-label="Combien coûte la dette publique ? Le dossier">
+    {{- with partial "vignette-ressource.html" $pDette }}<img src="/{{ . }}" alt="Figure : dette publique et charge d'intérêts en part du PIB depuis 1995" width="1200" height="630" loading="eager" fetchpriority="high">{{ end -}}
+  </a>
+</section>
+
+<p class="acc-presse"><span>Articles et recensions dans</span> <i>Alternatives Économiques</i> <i>La Vie des idées</i> <i>En attendant Nadeau</i> <i>Terrestres</i> <i>Nonfiction</i> <i>Le Temps</i></p>
+
+{{/* ══════════ 2. Trois enquêtes, trois domaines ══════════ */}}
+<section class="acc-bloc" id="acc-enquetes" aria-labelledby="acc-enquetes-titre">
+  <p class="acc-kicker">D'autres questions, documentées</p>
+  <h2 class="acc-titre" id="acc-enquetes-titre">Trois enquêtes, trois domaines</h2>
+  <div class="acc-enquetes">
+    {{- range $enquetes }}{{ $e := .page }}
+    <a class="acc-enquete" href="{{ $e.RelPermalink }}">
+      {{- with partial "vignette-ressource.html" $e }}<img src="/{{ . }}" alt="" width="1200" height="630" loading="lazy">{{ end }}
+      <span class="acc-enquete__c">
+        <span class="acc-enquete__t">{{ partial "fr-typo.html" $e.Title }}</span>
+        <span class="acc-enquete__r">{{ partial "fr-typo.html" .txt }}</span>
+        <span class="acc-enquete__go">Lire l'enquête&nbsp;→</span>
+      </span>
+    </a>
+    {{- end }}
+  </div>
+  <p class="acc-tout"><a href="/ressources/">Toutes les questions documentées&nbsp;→</a>{{ " " }}<a href="/enseignants/">Pour enseigner&nbsp;: activités prêtes pour la classe&nbsp;→</a></p>
+</section>
+
+{{/* ══════════ 3. Les livres (ordre `commencer`, promesse de lecture de chaque fiche) ══════════ */}}
+<section class="acc-bloc" id="acc-livres" aria-labelledby="acc-livres-titre">
+  <p class="acc-kicker">{{ index $mots (string (len $portes)) | default (string (len $portes)) }} livres · partez de la question qui vous occupe</p>
+  <h2 class="acc-titre" id="acc-livres-titre">Les livres</h2>
+  <ul class="acc-livres">
+    {{- range $portes }}{{ $l := .page }}{{ $q := .q }}
+    {{- $pl := $l.Params.promesse_lecture }}
+    <li>
+      <a href="{{ $l.RelPermalink }}">
+        {{- partial "book-cover.html" (dict "slug" $l.File.ContentBaseName "alt" "" "wrapClass" "acc-livre__couv" "sizes" "(max-width: 600px) 40vw, 150px") -}}
+        <span class="acc-livre__promesse">{{ with $pl }}{{ partial "fr-typo.html" .titre }}{{ else }}{{ with $q }}{{ partial "fr-typo.html" . }}{{ end }}{{ end }}</span>
+        <span class="acc-livre__titre">{{ partial "fr-typo.html" $l.Title }}</span>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+  <p class="acc-tout"><a href="/livres/">Voir tous les livres et choisir&nbsp;→</a></p>
+</section>
+
+{{/* ══════════ 4. L'hypothèse de l'auteur — distincte des enquêtes ══════════ */}}
+<section class="acc-bloc acc-hypothese" id="acc-hypothese" aria-labelledby="acc-hypothese-titre" data-acc-axes>
+  <p class="acc-kicker">L'hypothèse de l'auteur</p>
+  <h2 class="acc-these" id="acc-hypothese-titre">{{ $p.Params.hero_lead | safeHTML }} <em>{{ strings.TrimSpace $p.Params.hero_statement | safeHTML }}</em></h2>
+  <p class="acc-nota">Une hypothèse, formulée dans l'AWP-01 et mise à l'épreuve dans la série&nbsp;; les enquêtes ci-dessus se consultent indépendamment d'elle.</p>
+  <div class="acc-axes">
+    <div class="acc-axe" data-axe>
+      <button type="button" class="acc-axe__b" aria-expanded="false"><span class="acc-axe__q">Où&nbsp;?</span><span class="acc-axe__n">Spatial</span><span class="acc-axe__s">Centre → périphérie</span></button>
+      <p class="acc-axe__txt">L'ordre local s'acquiert au prix d'une externalisation vers d'autres territoires&nbsp;: métropoles, zones de consommation, centres de décision d'un côté&nbsp;; extraction, déchets, chaleur, pollutions de l'autre.</p>
+    </div>
+    <div class="acc-axe" data-axe>
+      <button type="button" class="acc-axe__b" aria-expanded="false"><span class="acc-axe__q">Quand&nbsp;?</span><span class="acc-axe__n">Temporel</span><span class="acc-axe__s">Présent → futur</span></button>
+      <p class="acc-axe__txt">Le présent consomme, le futur compense. Dette publique, dette climatique, déchets nucléaires ou dette technologique prolongent aujourd'hui leurs coûts vers des générations qui n'ont pas décidé.</p>
+    </div>
+    <div class="acc-axe" data-axe>
+      <button type="button" class="acc-axe__b" aria-expanded="false"><span class="acc-axe__q">Qui&nbsp;?</span><span class="acc-axe__n">Social</span><span class="acc-axe__s">Mobiles → captifs</span></button>
+      <p class="acc-axe__txt">Ceux qui disposent de mobilité financière, juridique ou résidentielle transfèrent plus facilement les charges vers ceux qui ne peuvent pas les refuser&nbsp;: usagers, précaires, contribuables, travailleurs sous-traités, groupes relégués.</p>
+    </div>
+  </div>
+  <p class="acc-tout"><a href="/quest-ce-que-lanthropie/">Qu'est-ce que l'anthropie&nbsp;?&nbsp;→</a>{{ " " }}<a href="/awp/awp-01/">Lire l'AWP-01&nbsp;→</a></p>
+</section>
+
+{{/* ══════════ 5. Les garanties ══════════ */}}
+<section class="acc-bloc acc-garanties" aria-label="Garanties du travail">
+  <div class="acc-garantie"><b>Données ouvertes</b><p>Chaque enquête publie ses sources, ses calculs et ses fichiers à réutiliser, sous licence CC&nbsp;BY&nbsp;4.0.</p><a href="/ressources/">Les enquêtes&nbsp;→</a></div>
+  <div class="acc-garantie"><b>{{ $nAwp }} working papers</b><p><i>Anthropie Working Papers</i>, déposés sur Zenodo avec DOI&nbsp;: une trace citable et datée de chaque version.</p><a href="/serie-awp/">La série&nbsp;→</a></div>
+  <div class="acc-garantie"><b>Articles et recensions</b><p>Dans <i>Alternatives Économiques</i>, <i>La Vie des idées</i>, <i>En attendant Nadeau</i>, <i>Terrestres</i>, <i>Nonfiction</i>, <i>Le Temps</i>.</p><a href="/publications/">Toutes les publications&nbsp;→</a></div>
+</section>
+<div class="credibility-strip acc-ids">{{ partial "identifiants-auteur.html" . }}</div>
+
+</div>
+<script src="{{ partial "js-url.html" "accueil-axes.js" }}" defer></script>
