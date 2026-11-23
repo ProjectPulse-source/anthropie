@@ -844,3 +844,50 @@ main .book-sommaire ol > li { padding-left: 2rem !important; }
   .book-single__subtitle { font-size: 1.05rem; }
   .book-single__head h1, .book-single__subtitle { hyphens: auto; overflow-wrap: break-word; }
 }
+
+/* ---------------------------------------------------------------------------
+   Retouche B (auteur, 23/11/2026 ; maquettes https://claude.ai/artifact/Vgjm67HqNiRHkkdtUq23s3) :
+   1. texte et en-tête en pleine largeur de leur colonne, alignés à gauche (préférence constante de l'auteur) ;
+   2. marge d'achat : l'achat d'abord, « Transmettre » en bouton à filet dessous ;
+   3. la promesse de lecture sous le sous-titre ;
+   4. la voix du livre en carte : source en chasse fixe, lettrine, dernière phrase entre guillemets
+      (même dessin que la page « exemplaire offert », _ressources-offertes.scss).
+   --------------------------------------------------------------------------- */
+.book-single__head.content-narrow,
+.book-single__main.content-narrow { max-width: none; margin-left: 0; margin-right: 0; }
+
+.book-single__actions {
+  .book-single__fiche-titre { order: 1; }
+  .book-single__price { order: 2; }
+  .amazon-buy { order: 3; }
+  .transmettre { order: 4; margin-top: 6px; }
+  .book-single__fiche-meta { order: 5; }
+  .transmettre__button { background: transparent; color: var(--color-accent); border: 1px solid var(--color-accent-rule); box-shadow: none; }
+  .transmettre__button:hover { background: var(--color-accent-faint); color: var(--color-accent); }
+}
+
+.book-single__promesse {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-accent);
+  margin: 18px 0 0;
+  text-wrap: balance;
+  @media (max-width: 767px) { font-size: 21px; margin-top: 12px; }
+}
+
+.book-single__main .book-voix {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-soft);
+  padding: 34px 42px 30px;
+  margin-top: 1.75rem;
+  .book-voix__src { font-family: var(--font-mono); font-size: 12px; font-weight: 400; text-transform: none; letter-spacing: 0.02em; }
+  blockquote p:first-child::first-letter { float: left; font-size: 3.2em; line-height: 0.85; padding: 6px 10px 0 0; color: var(--color-accent); }
+  .book-voix__chute::before { content: "«\00a0"; }
+  .book-voix__chute::after { content: "\00a0»"; }
+  .book-voix__chute:lang(en)::before { content: "\201C"; }
+  .book-voix__chute:lang(en)::after { content: "\201D"; }
+  @media (max-width: 767px) { padding: 22px 20px; }
+}
+

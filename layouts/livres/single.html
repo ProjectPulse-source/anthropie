@@ -16,6 +16,9 @@
       {{- /* Sous-titre éditorial, même idiome que les AWP (titre médian : H1 court +
              sous-titre). Rendu si le champ existe — anthropie et dette n'en ont pas. */ -}}
       {{ with .Params.subtitle }}<p class="book-single__subtitle">{{ partial "fr-typo.html" . }}</p>{{ end }}
+      {{- /* Promesse de lecture (retouche B, auteur 23/11/2026) : le champ validé `promesse_lecture.titre`, sous le
+             sous-titre ; omise quand la fiche a une `accroche`, qui dit déjà ce que le livre apporte (Premier coup). */ -}}
+      {{ if not .Params.accroche }}{{ with .Params.promesse_lecture }}<p class="book-single__promesse">{{ partial "fr-typo.html" .titre }}</p>{{ end }}{{ end }}
       {{ with .Params.accroche }}<p class="book-single__accroche">{{ partial "fr-typo.html" . }}</p>{{ end }}
     </header>
 

@@ -61,6 +61,18 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-23 (nuit, fin) — Ménage des styles de l'ancien accueil + fiche livre retouche B, non poussés à l'écriture
+- **Ménage** : `_home.scss` 483 → 49 lignes, `_hero.scss` 144 → 27 (gardés : `.credibility-strip`, `.awp-registre`) ;
+  `axes-anim.js` et son chargement retirés ; exemption `main .home-reception__liste li` retirée. Preuve : diff de la feuille
+  compilée (tinycss2) — 182 règles et 5 `@keyframes` retirés, aucun sélecteur retiré ne vise un élément des 193 pages
+  construites (soupsieve) ; la règle groupée des exemptions n'a perdu que ce sélecteur. Feuille 238 → 221 Ko.
+- **Fiche livre, retouche B** (maquettes https://claude.ai/artifact/Vgjm67HqNiRHkkdtUq23s3, « Go pour B » de l'auteur) :
+  texte et en-tête en pleine largeur ; achat avant « Transmettre » (bouton à filet) ; promesse de lecture sous le
+  sous-titre, omise si la fiche a une `accroche` (Premier coup) ; extrait en carte (source en chasse fixe, lettrine,
+  guillemets selon la langue). Deux octets nuls et deux caractères C1 écrits par des échappements de shell, trouvés et
+  corrigés avant build ; balayage de tous les SCSS, gabarits et scripts : aucun reste.
+- **Contrôles** : check-all --ci 0, typo_build 0, audit-liens 0 critique, check-dates-build 0 ; recette 390, 768, 1920 px.
+
 ### 2026-11-23 (nuit, suite) — Accueil anglais en maquette E (demande de l'auteur), commit `c2191dac` en ligne (versions servies FR et EN attestées : question, chiffres au format de la langue, enquêtes, 6 livres dont 5 « In French », 10/10 images ; état initial `/en` relevé dans la fiche D0)
 - **Fait** : `partials/accueil-e.html` bilingue (blocs `affichage_en` des jeux ; enquêtes anglaises : président, data
   centres, déchets radioactifs — l'école n'a pas de version anglaise ; livres : question `pour` de l'index anglais) ;
