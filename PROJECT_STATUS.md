@@ -61,7 +61,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-23 (nuit) — Page mère `/ressources-offertes/` : maquette D (promesse de lecture d'abord), non poussé à l'écriture
+### 2026-11-23 (nuit) — Page mère `/ressources-offertes/` : maquette D (promesse de lecture d'abord), commit `c13931f7` en ligne (version servie attestée : titre, six cartes et promesses, nombres de Livresque résolus, aucun `&nbsp;` visible, trois étapes, ligne des replis)
 - **Décision** : maquettes https://claude.ai/artifact/Y6FyxuvQ8TuUw4nY5KjktV ; avis externe archivé et arbitré
   (`D:\CONTRE_EXPERTISE\promotion\2026-11-23_HABILLAGE_LISTE_LIVRES_OFFERTS\ARBITRAGE.md`, SHA-256 `ffc7421a…`) ; quatre des
   six « promesses » proposées disaient plus que les livres, réécrites depuis les fiches ; D et promesses validées par
