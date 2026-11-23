@@ -10,6 +10,11 @@ amazon_rating: 4.3       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chr
 amazon_rating_date: 2026-11-22  # date du relevé, affichée sous la note ; la mettre à jour avec elle
 amazon_reviews: 32       # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
 pages: 225  # sync data/works.yaml (book-dette-publique.pages) — nombre de pages broché
+# Promesse de lecture : ce que le livre apporte au lecteur, en tête de sa carte sur /ressources-offertes/
+# (arbitrage du 23/11/2026, validé par l'auteur ; réécrite depuis la description et la FAQ de cette fiche).
+promesse_lecture:
+  titre: "Savoir qui paie vraiment la dette publique."
+  appui: "Au-delà des milliards et des pourcentages&nbsp;: les canaux par lesquels le coût se déplace vers les générations futures et les groupes sociaux les moins mobiles."
 description_en: "A focused application of the anthropic framework to the question of public debt. Who, ultimately, bears the cost of fiscal imbalances — present taxpayers, future generations, foreign creditors, or the ecological commons? The book maps the displacement chains by which sovereign debt redistributes disorder across time and across borders."
 price: "19"  # prix broché EUR — affiché sur la page + schema.org Offer
 kindle_price: "9.99"  # prix EUR de l'édition Kindle (auteur, 20/09/2026) — rendu par le shortcode appel-livre ; format schema.org, séparateur décimal = point

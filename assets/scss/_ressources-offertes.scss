@@ -698,14 +698,120 @@
 @media (min-width: 761px) { .ro-barre { display: none !important; } }
 @media (max-width: 760px) { body.avec-ro-barre { padding-bottom: 76px; } }
 
-// ----- Page mère : réassurance au-dessus du catalogue, chiffres dans les cartes -----
-.ro-assurance {
-  font-family: var(--font-sans);
-  font-size: var(--fs-small);
-  color: var(--color-text);
-  margin: 0 0 26px;
-  strong { font-weight: 500; }
+// ----- Page mère : maquette D (arbitrage du 23/11/2026) — promesse de lecture d'abord, six livres comparables -----
+.ro-liste__head { margin-bottom: 0; }
+.home-section h1.ro-liste__titre { font-size: 52px; line-height: 1.08; letter-spacing: -0.01em; margin: 0; }
+.ro-liste__chapo {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-text-body);
+  margin: 16px 0 0;
+  strong { font-weight: 500; color: var(--color-accent); }
 }
-.ressources-book__body .ro-chiffres { margin: 4px 0 14px; }
-.ressources-book__body .ro-chiffres b { font-size: 21px; }
-.ressources-book__body .ressources-book__cta { font-size: 15px; padding: 13px 22px; }
+.ressources-catalogue.ro-liste { margin-top: 44px; }
+.ressources-books.ro-liste__grille {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 52px 40px;
+  @media (max-width: 1000px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 640px) { grid-template-columns: 1fr; gap: 44px; }
+}
+// La carte reprend la classe du guichet (.ressources-book) pour le script ; sa grille de 200 px est neutralisée.
+.ressources-book.ro-carte {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  @media (max-width: 520px) { display: flex; }
+}
+.ro-carte__haut { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 18px; align-items: end; }
+.ressources-book__emblem.ro-carte__couv { width: 96px; perspective: none; }
+.ro-carte .ressources-book__cover { width: 96px; transform: rotate(-3deg); box-shadow: 4px 4px 0 0 var(--color-accent-soft); }
+.ro-carte:hover .ressources-book__cover { transform: rotate(-2deg) translateY(-2px); box-shadow: 5px 6px 0 0 var(--color-accent-soft); }
+.ro-carte__id { min-width: 0; }
+.home-section h3.ro-carte__titre {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  text-wrap: balance;
+  a { color: var(--color-text); text-decoration: none; }
+  a:hover { color: var(--color-accent); text-decoration: underline; }
+}
+.ro-carte__sous { font-family: var(--font-serif); font-style: italic; font-size: 14px; line-height: 1.4; color: var(--color-pivot); margin: 6px 0 0; }
+.ro-carte__promesse {
+  font-family: var(--font-serif);
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-accent);
+  margin: 22px 0 0;
+  text-wrap: balance;
+}
+.ro-carte__appui { font-family: var(--font-serif); font-size: 16px; line-height: 1.55; color: var(--color-text-muted); margin: 10px 0 0; flex: 1; }
+.ro-carte__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px 12px;
+  margin-top: 16px;
+  // La note et « Nouveauté » sont centrées sous une couverture ailleurs ; ici, en ligne.
+  .ressources-book__rating, .ressources-book__novelty { margin: 0; justify-content: flex-start; }
+  .ressources-book__rating-date { display: none; }
+}
+.ro-carte__pages { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); }
+.ro-carte .ressources-book__obtain { margin-top: 14px; }
+.ro-carte .ressources-book__cta { width: 100%; font-size: 15px; padding: 14px 18px; }
+.ro-carte__rassure { font-family: var(--font-sans); font-size: 12.5px; line-height: 1.45; color: var(--color-text-subtle); margin: 8px 0 0; }
+.ro-carte__voix {
+  margin-top: 14px;
+  border-top: 1px solid var(--color-rule-soft);
+  summary { cursor: pointer; font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: var(--color-link); padding: 12px 0 0; }
+  blockquote { border: 0; margin: 0; padding: 0; }
+  blockquote p { font-family: var(--font-serif); font-style: italic; font-size: 19px; line-height: 1.4; color: var(--color-accent); margin: 0; }
+  blockquote p::before { content: "«\00a0"; }
+  blockquote p::after { content: "\00a0»"; }
+}
+.ro-carte__src { font-family: var(--font-mono); font-size: 12px; line-height: 1.45; color: var(--color-text-subtle); margin: 12px 0 6px; }
+.ro-carte__fiche { font-family: var(--font-sans); font-size: 13px; margin: 10px 0 0; }
+
+// Fonctionnement en trois étapes
+.ro-etapes {
+  margin-top: 64px;
+  ol {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 2px solid var(--color-accent-rule);
+    @media (max-width: 760px) { grid-template-columns: 1fr; }
+  }
+  li {
+    margin: 0;
+    padding: 18px 24px 0 0;
+    font-family: var(--font-serif);
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+    @media (max-width: 760px) { padding: 16px 0; border-bottom: 1px solid var(--color-rule-soft); }
+  }
+  li + li {
+    padding-left: 24px;
+    border-left: 1px solid var(--color-rule-soft);
+    @media (max-width: 760px) { padding-left: 0; border-left: 0; }
+  }
+  li span { display: block; font-family: var(--font-mono); font-size: 12px; color: var(--color-pivot); margin-bottom: 8px; }
+  li strong { display: block; font-weight: 400; font-size: 20px; line-height: 1.25; color: var(--color-text); margin-bottom: 6px; }
+  > p { font-size: 16px; margin: 22px 0 0; }
+}
+.ro-liste__anti { margin-top: 48px; }
+
+@media (max-width: 640px) {
+  .home-section h1.ro-liste__titre { font-size: 36px; }
+  .ro-liste__chapo { font-size: 17px; }
+}
+
+// « Pourquoi ce dispositif ? » en pleine largeur (préférence constante de l'auteur, redite le 23/11/2026).
+.ressources-how.ressources-why { max-width: none; }

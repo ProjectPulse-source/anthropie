@@ -16,6 +16,11 @@ amazon_rating: 5.0       # note moyenne Amazon.fr (relevé du 22/11/2026, fiche 
 amazon_rating_date: 2026-11-22
 amazon_reviews: 5        # sous socialProofMinReviews (10) : « Nouveauté » sur le site, note sur les pages de comité
 pages: 286  # sync data/works.yaml (book-promesses-2027.pages) — nombre de pages broché
+# Promesse de lecture : ce que le livre apporte au lecteur, en tête de sa carte sur /ressources-offertes/
+# (arbitrage du 23/11/2026, validé par l'auteur ; réécrite depuis la description et la FAQ de cette fiche).
+promesse_lecture:
+  titre: "Savoir ce qui dépend vraiment d'un président."
+  appui: "Une grille en quatre zones, applicable à n'importe quelle promesse, éprouvée sur neuf promesses écrites, datées et signées."
 wikidata_qid: "Q141640333"
 # `price` (broché, 19,90 €) alimente l'Offer schema.org, dont l'URL est celle du broché :
 # ouvert le 22/09, jour de parution, après avoir vu la page produit répondre (titre du livre lu).

@@ -61,6 +61,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-23 (nuit) — Page mère `/ressources-offertes/` : maquette D (promesse de lecture d'abord), non poussé à l'écriture
+- **Décision** : maquettes https://claude.ai/artifact/Y6FyxuvQ8TuUw4nY5KjktV ; avis externe archivé et arbitré
+  (`D:\CONTRE_EXPERTISE\promotion\2026-11-23_HABILLAGE_LISTE_LIVRES_OFFERTS\ARBITRAGE.md`, SHA-256 `ffc7421a…`) ; quatre des
+  six « promesses » proposées disaient plus que les livres, réécrites depuis les fiches ; D et promesses validées par
+  l'auteur (« Ok GO »).
+- **Fait** : champ `promesse_lecture` (titre, appui) sur les six fiches, un seul exemplaire, jetons `{citations}` et
+  `{auteurs}` résolus par `desc-figures.html` (`htmlUnescape` avant `fr-typo` : la sortie du partial échappait `&nbsp;`) ;
+  carte sans promesse = `errorf`. Titre « Six livres pour comprendre autrement » (nombre dérivé de `$order`), chapeau de
+  choix ; cartes en trois colonnes (couverture inclinée, promesse, appui, note, bouton, réassurance, phrase du livre en
+  dépliant soumis à la règle des replis) ; fonctionnement en trois étapes ; aucun texte retiré (antithèse, chaîne,
+  paragraphes déplacés sous les étapes) ; « Pourquoi ce dispositif ? » en pleine largeur.
+- **Contrôles** : check-all --ci 0, typo_build 0, audit-liens 0 critique, check-dates-build 0 ; recette 390, 768, 1920 px.
+
 ### 2026-11-23 (soir) — Pages « livres offerts » : écarts avec la maquette A+ relevés par l'auteur, corrigés, commit `b0c2fa48` en ligne (version servie attestée : inclinaison, réassurance, note, lettrine, extrait à 1 110 px, 7 chemins)
 - **Constat de l'auteur** sur la version servie : couverture droite (rotation 3D), réassurance disparue (elle vivait dans
   la note que le guichet masque quand un exemplaire a déjà été reçu), lettrine absente, textes bornés (608 px sur 1 216),

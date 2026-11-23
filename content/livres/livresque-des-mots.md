@@ -3,6 +3,11 @@ title: "Livresque des mots"
 promo_slug: "livresque"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 subtitle: "Anthologie inédite & éclectique de citations"  # page de titre de l'intérieur et couverture
 pages: 680  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, édition 2026 révisée (sommaire, Promenades, index des auteurs)
+# Promesse de lecture : ce que le livre apporte au lecteur, en tête de sa carte sur /ressources-offertes/
+# (arbitrage du 23/11/2026, validé par l'auteur ; réécrite depuis la description et la FAQ de cette fiche).
+promesse_lecture:
+  titre: "Des voix qu'aucun classement ne réunirait."
+  appui: "{citations} citations, {auteurs} voix, 25 siècles&nbsp;: une anthologie qui préfère la surprise des rencontres à l'ordre alphabétique."
 wikidata_qid: "Q140517745"  # item canonique (doublon Q138911600 fusionné) — alimente sameAs du Book
 description: "Une anthologie qui refuse l'ordre alphabétique et thématique pour privilégier la surprise des rencontres. {citations} citations, {auteurs} voix, 25 siècles de génie humain, tissés en un fil d'Ariane subtil. Quarante ans de passion littéraire pour offrir non un classement, mais un voyage."
 date: 2022-12-20

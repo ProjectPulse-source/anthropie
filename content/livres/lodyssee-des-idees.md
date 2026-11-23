@@ -16,6 +16,11 @@ amazon_rating: 4.4       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chr
 amazon_rating_date: 2026-11-22  # date du relevé, affichée sous la note ; la mettre à jour avec elle
 amazon_reviews: 169      # nb d'avis Amazon.fr ; omettre les 2 champs = pas d'étoiles sur /ressources-offertes
 pages: 682  # sync data/works.yaml (book-lodyssee-des-idees.pages) — nombre de pages broché
+# Promesse de lecture : ce que le livre apporte au lecteur, en tête de sa carte sur /ressources-offertes/
+# (arbitrage du 23/11/2026, validé par l'auteur ; réécrite depuis la description et la FAQ de cette fiche).
+promesse_lecture:
+  titre: "Relier ce que les disciplines séparent."
+  appui: "De l'aube de l'humanité à l'intelligence artificielle, 250 escales où les idées se répondent, se contredisent et reviennent sous d'autres noms."
 # Chiffres de tête de l'exemplaire offert (partials/ressources-chiffres.html, A+ du 23/11/2026), lus dans le livre et
 # déjà affirmés par cette fiche (corps, FAQ) ; la pagination s'ajoute seule depuis `pages`.
 chiffres_cles:

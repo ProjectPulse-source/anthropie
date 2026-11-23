@@ -13,6 +13,11 @@ amazon_reviews: 4        # sous socialProofMinReviews (10) : « Nouveauté » s'
                          # et la note prend le relais toute seule au 10e avis.
 wikidata_qid: "Q141072263"  # item créé le 15/08/2026, resté absent de la fiche jusqu'au 16/08 — alimente le sameAs du JSON-LD Book
 pages: 140  # sync data/works.yaml (book-premier-coup.pages) — nombre de pages broché
+# Promesse de lecture : ce que le livre apporte au lecteur, en tête de sa carte sur /ressources-offertes/
+# (arbitrage du 23/11/2026, validé par l'auteur ; réécrite depuis la description et la FAQ de cette fiche).
+promesse_lecture:
+  titre: "Comprendre pourquoi nous n'avons pas tous le même nombre d'essais."
+  appui: "Une grille pour voir ce qu'un échec coûte selon celui qui le commet, et combien de tentatives une trajectoire autorise réellement."
 price: "13.90"  # prix broché EUR — affiché sur la page + schema.org Offer
 kindle_price: "5.99"  # prix EUR de l'édition Kindle (non rendu : information de registre)
 serie: "anthropie"

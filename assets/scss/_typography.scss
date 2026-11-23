@@ -180,6 +180,11 @@ main .ro-chiffres { padding-left: 0 !important; margin: 0 !important; list-style
 main .ressources-book__body .ro-chiffres { margin: 4px 0 14px !important; }
 main .ro-chemins ol { padding-left: 0 !important; margin: 14px 0 0 !important; list-style: none !important; }
 main .ro-chemins li { margin-bottom: 0 !important; padding-left: 0 !important; line-height: 1.25 !important; }
+main .ro-etapes ol { padding-left: 0 !important; margin: 10px 0 0 !important; list-style: none !important; }
+main .ro-etapes li { margin-bottom: 0 !important; line-height: 1.55 !important; }
+main .ro-etapes li + li { padding-left: 24px !important; }
+main .ro-etapes li:first-child { padding-left: 0 !important; }
+@media (max-width: 760px) { main .ro-etapes li + li { padding-left: 0 !important; } }
 main .awp-breadcrumb [aria-current] { font-weight: 500 !important; }
 
 main li::marker {
