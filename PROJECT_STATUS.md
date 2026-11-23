@@ -61,7 +61,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-23 — Pages « livres offerts » : présentation A+ (dix pages par livre et page mère), non commité à l'écriture
+### 2026-11-23 — Pages « livres offerts » : présentation A+ (dix pages par livre et page mère), commit `10d4863b`, en ligne
 - **Décision** : trois maquettes (https://claude.ai/artifact/4jtex25JvXgQqDncmUytmn), avis externe archivé et arbitré
   (`D:\CONTRE_EXPERTISE\promotion\2026-11-23_HABILLAGE_ODYSSEE_OFFERTE\ARBITRAGE.md`, pièce SHA-256 `4f55062c…`), A+ retenue,
   report demandé par l'auteur à toutes les pages du guichet.
@@ -73,7 +73,10 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
   champ facultatif `chiffres_cles` ({nombre, libelle}) sur deux fiches, garde `errorf` vue mordre (clé `n` lue « faux » en YAML).
 - **Contrôles** : `check-all --ci` 0, `typo_build` 0, `audit-liens-build` 0 critique, `check-dates-build` 0 ; recette 390,
   768, 1920 px sur un build local (bouton activé à la main, jamais cliqué : le guichet refuse l'origine locale).
-- **Reste** : commit et push sur demande de l'auteur ; attestation de la version servie après déploiement.
+- **En ligne** : commit `10d4863b` poussé sur demande de l'auteur, déploiement réussi ; version servie attestée le jour même
+  (premier écran, extrait, chiffres 250 / 7 / 682, script relais chargé, réassurance et six cartes sur la page mère).
+  État « exemplaire disponible » non observé en ligne : le navigateur de contrôle avait déjà reçu un exemplaire (rappel
+  et barre restés cachés, comportement voulu) ; à voir depuis un navigateur neuf, sans cliquer.
 
 ### 2026-11-19 — Stabilisation des pages en ligne : points ouverts vérifiés à la source et publiés (FR, EN)
 - **Commits** `87ba0378` (Union européenne : « modérée » rattaché à la bonne hausse, 120 % et +3,2 mois sous jeton et
