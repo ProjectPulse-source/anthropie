@@ -61,6 +61,19 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-23 (soir) — Pages « livres offerts » : écarts avec la maquette A+ relevés par l'auteur, corrigés (non poussé à l'écriture)
+- **Constat de l'auteur** sur la version servie : couverture droite (rotation 3D), réassurance disparue (elle vivait dans
+  la note que le guichet masque quand un exemplaire a déjà été reçu), lettrine absente, textes bornés (608 px sur 1 216),
+  chemins en liste. Consigne : « texte pleine largeur, pour le reste l'identique de la maquette A+ ».
+- **Corrigé** : couverture inclinée à plat (−3°) ; réassurance hors de la note masquable ; note Amazon sous le bouton ;
+  chiffres en colonnes, nombre au-dessus du libellé (espace insécable posée en CSS) ; extrait en carte avec source en
+  chasse fixe, lettrine et dernière phrase entre guillemets ; chemins en rangée (front matter `chemins` de la page,
+  7 colonnes, 4 sous 1 000 px, 2 au téléphone) ; titre du bloc `voix_titre` ; rappel « Lisez. Et si vous aimez, faites
+  circuler. » puis liens ; aucune borne de largeur ; bloc « Le livre » affiché seulement si la page a un texte (retiré
+  de la page Odyssée, absent de la maquette ; texte précédent dans 10d4863b). Listes exemptées de la règle `main ol/li`
+  (marges forcées). Octet nul écrit par un échappement de shell, trouvé et remplacé avant tout build.
+- **Contrôles** : check-all --ci 0, typo_build 0, audit-liens 0 critique, check-dates-build 0 ; recette 390, 768, 1920 px.
+
 ### 2026-11-23 — Pages « livres offerts » : présentation A+ (dix pages par livre et page mère), commit `10d4863b`, en ligne
 - **Décision** : trois maquettes (https://claude.ai/artifact/4jtex25JvXgQqDncmUytmn), avis externe archivé et arbitré
   (`D:\CONTRE_EXPERTISE\promotion\2026-11-23_HABILLAGE_ODYSSEE_OFFERTE\ARBITRAGE.md`, pièce SHA-256 `4f55062c…`), A+ retenue,

@@ -174,9 +174,12 @@ main .awp-article__keywords { padding-left: 0 !important; margin: 0.75rem 0 0 !i
 main .awp-article__keywords > li { margin-bottom: 0 !important; padding-left: 0.6rem !important; }
 main .related-awp__list { padding-left: 0 !important; margin: 0 0 1.5rem !important; list-style: none !important; }
 main .awp-sidebar__series > li { margin-bottom: 0.4rem !important; padding-left: 0 !important; }
-// Chiffres d'un livre offert (partials/ressources-chiffres.html, 23/11/2026) : sans puce ni retrait ; ses marges restent
-// celles de sa feuille (_ressources-offertes.scss).
-main .ro-chiffres { padding-left: 0 !important; list-style: none !important; }
+// Chiffres et chemins d'un livre offert (ressources-offertes, 23/11/2026) : sans puce ni retrait ; la règle commune
+// ci-dessus imposait aussi 1,4 em de marge et 0,4 em de retrait (décalage mesuré sur la liste des chiffres).
+main .ro-chiffres { padding-left: 0 !important; margin: 0 !important; list-style: none !important; }
+main .ressources-book__body .ro-chiffres { margin: 4px 0 14px !important; }
+main .ro-chemins ol { padding-left: 0 !important; margin: 14px 0 0 !important; list-style: none !important; }
+main .ro-chemins li { margin-bottom: 0 !important; padding-left: 0 !important; line-height: 1.25 !important; }
 main .awp-breadcrumb [aria-current] { font-weight: 500 !important; }
 
 main li::marker {

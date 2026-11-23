@@ -477,9 +477,13 @@
     font-variant-numeric: tabular-nums;
     margin-right: 4px;
   }
+  // L'espace insécable entre le nombre et son libellé est posée ici, pas dans le HTML : quand le nombre passe au-dessus
+  // de son libellé (premier écran, ordinateur), une espace de texte décalait le libellé d'un caractère.
+  b::after { content: "\00a0"; }
 }
 
-// ----- Page par livre : premier écran -----
+// ----- Page par livre : premier écran (valeurs de la maquette A+, auteur 23/11/2026 : « l'identique de la maquette A+ ») -----
+// Texte en pleine largeur de sa colonne (préférence constante de l'auteur, redite le 23/11/2026) : aucune borne en ch ici.
 .ro-hero-wrap { margin-top: 8px; }
 .ressources-book.ro-hero {
   grid-template-columns: 250px minmax(0, 1fr);
@@ -487,78 +491,167 @@
   grid-template-rows: auto auto 1fr;
   gap: 0 56px;
   align-items: start;
-  padding: 24px 0 8px;
+  padding: 56px 0 40px;
 }
 .ro-hero__head { grid-area: head; }
-.ro-hero__title { margin: 0; }
-.ro-hero__head .ressources-tagline { margin-bottom: 0; }
-.ressources-book__aside.ro-hero__cover { grid-area: cover; width: 250px; margin: 6px 0 0; }
-.ro-hero__cover .ressources-book__emblem,
-.ro-hero__cover .ressources-book__cover { width: 250px; }
+.home-section h1.ro-hero__title { margin: 0; font-size: 56px; line-height: 1.06; letter-spacing: -0.01em; }
+.ro-hero__head .ressources-tagline { margin: 10px 0 0; font-size: 22px; line-height: 1.3; }
+.ressources-book__aside.ro-hero__cover { grid-area: cover; width: 250px; margin: 0; align-self: center; }
+.ro-hero__cover .ressources-book__emblem { width: 250px; perspective: none; }
+// Couverture inclinée À PLAT (−3°), comme dans la maquette : la rotation 3D de la liste la faisait paraître droite.
+.ro-hero .ressources-book__cover {
+  width: 250px;
+  transform: rotate(-3deg);
+  box-shadow: 5px 5px 0 0 var(--color-accent-soft);
+}
+.ro-hero:hover .ressources-book__cover {
+  transform: rotate(-2deg) translateY(-2px);
+  box-shadow: 6px 7px 0 0 var(--color-accent-soft);
+}
 .ro-hero__chiffres { grid-area: chiffres; margin-top: 22px; }
-.ro-hero__action { grid-area: action; padding-top: 22px; }
-.ro-hero .ressources-book__cta { font-size: 15px; padding: 14px 24px; }
-.ressources-btn-note.ro-note { max-width: 52ch; font-size: 13px; line-height: 1.55; }
-.ro-note strong { font-weight: 500; color: var(--color-text); }
+// Chiffres en colonnes égales séparées d'un filet, le nombre au-dessus de son libellé.
+.ro-hero__chiffres .ro-chiffres { column-gap: 0; }
+.ro-hero__chiffres .ro-chiffres li { flex: 1 1 0; min-width: 90px; padding: 12px 14px 12px 0; }
+.ro-hero__chiffres .ro-chiffres li + li { padding-left: 14px; border-left: 1px solid var(--color-rule-soft); }
+.ro-hero__chiffres .ro-chiffres b { display: block; font-size: 28px; margin: 0 0 4px; }
+.ro-hero__chiffres .ro-chiffres span { font-size: 12px; }
+.ro-hero__action { grid-area: action; padding-top: 26px; }
+.ro-hero .ressources-book__cta { font-size: 15px; padding: 14px 22px; }
+.ro-assurance-hero {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-subtle);
+  margin: 10px 0 0;
+  strong { font-weight: 500; color: var(--color-text); }
+}
+.ressources-btn-note.ro-note { max-width: none; font-size: 13px; line-height: 1.55; margin-top: 6px; }
+// Note Amazon sous le bouton, alignée à gauche (la règle de la liste la centre sous une couverture).
+.ro-hero__preuve { margin-top: 12px; }
+.ro-hero__preuve .ressources-book__rating,
+.ro-hero__preuve .ressources-book__novelty { justify-content: flex-start; flex-wrap: wrap; margin: 0; }
+.ro-hero__preuve .ressources-book__rating-date { text-align: left; }
 
 @media (max-width: 760px) {
   .ressources-book.ro-hero {
-    grid-template-columns: 120px minmax(0, 1fr);
+    grid-template-columns: 112px minmax(0, 1fr);
     grid-template-areas: "head head" "cover chiffres" "action action";
     grid-template-rows: auto auto auto;
-    gap: 0 18px;
-    padding-top: 8px;
+    gap: 0 20px;
+    padding: 28px 0 24px;
   }
-  // Au téléphone, la colonne de la couverture (120 px) est trop étroite pour la note Amazon : la colonne s'efface
-  // (display: contents) et la note passe sous les chiffres, à droite de la couverture.
-  .ressources-book.ro-hero { grid-template-areas: none; }
-  .ro-hero__head { grid-column: 1 / -1; grid-row: 1; }
-  .ressources-book__aside.ro-hero__cover { display: contents; }
-  .ro-hero__cover .ressources-book__emblem { grid-column: 1; grid-row: 2 / span 3; margin-top: 20px; }
+  .home-section h1.ro-hero__title { font-size: 38px; }
+  .ro-hero__head .ressources-tagline { font-size: 19px; }
+  .ressources-book__aside.ro-hero__cover { width: 112px; margin: 22px 0 0; }
   .ro-hero__cover .ressources-book__emblem,
-  .ro-hero__cover .ressources-book__cover { width: 120px; }
-  .ro-hero__cover > :not(.ressources-book__emblem) { grid-column: 2; justify-content: flex-start; text-align: left; }
-  .ro-hero__chiffres { grid-column: 2; grid-row: 2; margin-top: 20px; }
-  .ro-hero__action { grid-column: 1 / -1; grid-row: 5; }
+  .ro-hero .ressources-book__cover { width: 112px; }
+  .ro-hero__chiffres { margin-top: 22px; align-self: center; }
   .ro-hero__chiffres .ro-chiffres { flex-direction: column; border: 0; }
-  .ro-hero__chiffres .ro-chiffres li { padding: 6px 0; border-bottom: 1px solid var(--color-rule-soft); }
-  .ro-hero__chiffres .ro-chiffres b { font-size: 21px; }
+  .ro-hero__chiffres .ro-chiffres li,
+  .ro-hero__chiffres .ro-chiffres li + li { padding: 6px 0; border-left: 0; border-bottom: 1px solid var(--color-rule-soft); }
+  .ro-hero__chiffres .ro-chiffres b { display: inline; font-size: 22px; margin-right: 6px; }
   .ro-hero .ressources-book__cta { width: 100%; min-height: 48px; }
-  .ro-hero__action { padding-top: 20px; }
+  .ro-hero__action { padding-top: 22px; }
 }
 
 // ----- La voix du livre, en carte (partials/book-voix.html, classe ro-voix__carte) -----
-.ro-voix { margin-top: 48px; }
+.ro-voix { margin-top: 12px; }
 .book-voix.ro-voix__carte {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-rule-soft);
-  padding: 36px 44px 32px;
-  box-shadow: 0 16px 30px -22px rgba(15, 27, 54, 0.35);
-  blockquote p { max-width: 62ch; }
-  @media (max-width: 760px) { padding: 22px 20px; }
+  padding: 44px 52px 40px;
+  .book-voix__src {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: var(--color-text-subtle);
+    margin: 0 0 18px;
+  }
+  blockquote p { max-width: none; font-size: 21px; line-height: 1.6; color: var(--color-text-body); }
+  // Lettrine sur le premier paragraphe de l'extrait.
+  blockquote p:first-child::first-letter {
+    float: left;
+    font-size: 3.3em;
+    line-height: 0.85;
+    padding: 6px 10px 0 0;
+    color: var(--color-accent);
+  }
+  blockquote .book-voix__chute {
+    font-size: 26px;
+    line-height: 1.35;
+    margin: 26px 0 0;
+    &::before { content: "«\00a0"; }
+    &::after { content: "\00a0»"; }
+  }
+  @media (max-width: 760px) {
+    padding: 26px 22px;
+    blockquote p { font-size: 18px; }
+    blockquote .book-voix__chute { font-size: 22px; }
+  }
 }
 
-// ----- Texte dédié, liens -----
-.ro-texte { margin-top: 48px; }
-.ro-texte .ressources-single__text { max-width: 64ch; }
-.ro-liens { font-family: var(--font-sans); font-size: var(--fs-small); color: var(--color-text-subtle); }
+// ----- Chemins de lecture (front matter `chemins` de la page) -----
+.ro-chemins { margin-top: 52px; }
+.ro-chemins ol {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-top: 1px solid var(--color-rule-strong);
+  @media (max-width: 1000px) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  @media (max-width: 760px) { grid-template-columns: 1fr 1fr; }
+}
+.ro-chemins li {
+  margin: 0;
+  padding: 14px 10px 4px 0;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--color-text);
+  span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-pivot);
+    margin-bottom: 6px;
+  }
+  @media (max-width: 760px) { border-bottom: 1px solid var(--color-rule-soft); padding-bottom: 12px; }
+}
+.ro-chemins__texte {
+  font-family: var(--font-serif);
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 18px 0 0;
+}
 
-// ----- Rappel du bouton en fin de texte -----
+// ----- Texte dédié, liens ; transmission et confidentialité en pleine largeur -----
+.ro-texte { margin-top: 48px; }
+.ressources--single .ressources-single__text,
+.ressources--single .ressources-single__text p,
+.ressources--single .ressources-transmit__inner p,
+.ressources-legal--single .ressources-legal__block p { max-width: none; }
+.ro-liens { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); margin-top: 14px; }
+
+// ----- Rappel du bouton -----
 .ro-reprise {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 14px 28px;
-  margin: 40px 0 0;
+  gap: 16px 28px;
+  margin: 48px 0 0;
   padding: 22px 26px;
   background: var(--color-dossier-tint);
   p {
     margin: 0;
     font-family: var(--font-serif);
-    font-size: 20px;
-    line-height: 1.3;
+    font-size: 19px;
+    line-height: 1.4;
     color: var(--color-text);
   }
   p span {
@@ -568,7 +661,7 @@
     color: var(--color-text-subtle);
     margin-top: 4px;
   }
-  .ressources-btn { font-size: 15px; padding: 14px 24px; }
+  .ressources-btn { font-size: 15px; padding: 14px 22px; }
   @media (max-width: 760px) { .ressources-btn { width: 100%; min-height: 48px; } }
 }
 .ro-reprise[hidden] { display: none; }
@@ -589,7 +682,7 @@
   box-shadow: 0 -6px 18px rgba(15, 15, 18, 0.06);
 }
 .ro-barre[hidden] { display: none; }
-.ro-barre__cover { width: 40px; height: auto; box-shadow: 2px 2px 0 var(--color-accent-soft); }
+.ro-barre__cover { width: 34px; height: auto; box-shadow: 2px 2px 0 var(--color-accent-soft); }
 .ro-barre__titre {
   flex: 1;
   min-width: 0;
@@ -601,7 +694,7 @@
   color: var(--color-text);
   span { display: block; font-weight: 400; color: var(--color-text-subtle); }
 }
-.ressources-btn.ro-barre__btn { min-height: 44px; padding: 10px 16px; }
+.ressources-btn.ro-barre__btn { min-height: 44px; padding: 10px 14px; font-size: 13px; }
 @media (min-width: 761px) { .ro-barre { display: none !important; } }
 @media (max-width: 760px) { body.avec-ro-barre { padding-bottom: 76px; } }
 

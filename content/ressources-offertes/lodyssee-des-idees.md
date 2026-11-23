@@ -9,29 +9,14 @@ og_image_alt: "Livres offerts — un exemplaire de L'Odyssée des idées transmi
 _build:
   list: never
   render: always
+# Présentation A+ (23/11/2026) : titre du bloc extrait et rangée des chemins (gabarit ressources-offertes/single.html).
+# Les sept chemins sont ceux de la fiche du livre (corps, liste « book-sommaire », et FAQ).
+# Pas de texte dédié (auteur, 23/11/2026 : « l'identique de la maquette A+ ») : ce qu'il disait est porté par les
+# chiffres (250 escales, 7 chemins), la réassurance (déjà financé) et le rappel (« Lisez. Et si vous aimez, faites
+# circuler. »). Texte précédent : git show 10d4863b:content/ressources-offertes/lodyssee-des-idees.md
+voix_titre: "Ouvrir le livre à une escale"
+chemins:
+  titre: "Sept chemins de lecture"
+  liste: ["Les signes", "Le pouvoir", "L'argent", "La liberté", "Le sacré", "L'opinion", "La condition humaine"]
+  texte: "Page après page comme une traversée, au hasard d'une date ou d'un nom, ou par chemins, en suivant les renvois qui font surgir échos, ruptures et filiations."
 ---
-
-*L'Odyssée des idées* traverse l'aventure intellectuelle humaine — de l'aube de
-l'humanité à l'intelligence artificielle — en **250 escales**&nbsp;: œuvres, vies,
-inventions, crises, instants de bascule. Sept chemins de lecture relient les penseurs
-par-delà les siècles&nbsp;: non pas un défilé chronologique, mais un réseau — un instrument
-de curiosité, pas un réservoir de certitudes.
-
-<div class="book-sommaire">
-
-1. Les signes
-2. Le pouvoir
-3. L'argent
-4. La liberté
-5. Le sacré
-6. L'opinion
-7. La condition humaine
-
-</div>
-
-Cet exemplaire numérique est **déjà financé**&nbsp;: une part des ventes sert à
-transmettre le livre à de nouveaux lecteurs.
-
-Aucune contrepartie n'est demandée — ni avis, ni inscription. **Lisez. Et si vous
-aimez, faites circuler**&nbsp;: chaque exemplaire transmis invite un nouveau lecteur,
-c'est ainsi que ce dispositif vit.

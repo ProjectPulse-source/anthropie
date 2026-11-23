@@ -51,17 +51,18 @@ Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique
         <a href="{{ $book.RelPermalink }}" target="_blank" rel="noopener" class="ressources-book__emblem" aria-hidden="true" tabindex="-1">
           {{ partial "book-cover.html" (dict "slug" $slug "alt" $book.Title "wrapClass" "ressources-book__cover" "sizes" "250px") }}
         </a>
-        {{- /* Même règle que la liste, même exemplaire : partials/preuve-sociale.html. */ -}}
-        {{ partial "preuve-sociale.html" $book }}
       </div>
       <div class="ro-hero__chiffres">{{ partial "ressources-chiffres.html" $book }}</div>
       <div class="ressources-book__body ro-hero__action">
         <div class="ressources-book__obtain">
           <p class="ressources-book__state" data-role="state">Vérification du stock…</p>
           <button class="ressources-btn ressources-book__cta" type="button" disabled>{{ $libelle }}</button>
-          <p class="ressources-btn-note ro-note" data-role="note"><strong>Déjà financé · aucun paiement · {{ if $ens }}aucune contrepartie{{ else }}ni avis ni inscription demandés{{ end }}.</strong>
-          Exemplaire Kindle prépayé&nbsp;: un clic vous l'attribue et ouvre Amazon.fr (compte Amazon.fr requis).
-          Un seul exemplaire offert par lecteur. Vous vous êtes trompé de livre ou n'avez pas pu
+          {{- /* Réassurance HORS de data-role="note" : le script du guichet masque la note quand le visiteur a déjà
+                 reçu un livre ou quand le stock est épuisé ; ces deux phrases restent vraies dans tous les cas
+                 (constat de l'auteur, 23/11/2026 : elles avaient disparu). */ -}}
+          <p class="ro-assurance-hero"><strong>Déjà financé · aucun paiement · {{ if $ens }}aucune contrepartie{{ else }}ni avis ni inscription demandés{{ end }}.</strong><br>
+          Exemplaire prépayé, attribué au clic sur Amazon.fr (compte requis). Un seul par lecteur.</p>
+          <p class="ressources-btn-note ro-note" data-role="note">Vous vous êtes trompé de livre ou n'avez pas pu
           l'utiliser&nbsp;? <a href="{{ "/contact/" | relLangURL }}" target="_blank" rel="noopener">Écrivez-moi</a>,
           je le remets en circulation.</p>
         </div>
@@ -73,6 +74,8 @@ Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique
           <p class="ressources-assigned-msg">Amazon.fr s'est ouvert dans un nouvel onglet.</p>
           <a class="ressources-btn ressources-btn--outline ressources-assigned-link" href="#" target="_blank" rel="noopener">Rouvrir le lien Amazon.fr</a>
         </div>
+        {{- /* Note Amazon sous le bouton (maquette A+) ; même règle que la liste : partials/preuve-sociale.html. */ -}}
+        <div class="ro-hero__preuve">{{ partial "preuve-sociale.html" $book }}</div>
       </div>
     </article>
     <noscript>
@@ -85,29 +88,45 @@ Un compte Amazon.fr est nécessaire. Les liens sont individuels, à usage unique
   {{/* ── 2. La voix du livre : ce qui fait juger l'ouvrage avant de l'accepter (fiche du livre, verbatim). */}}
   {{ with $book.Params.extrait_voix }}
   <section class="ro-voix">
-    <h2 class="ressources-kicker">Ouvrir le livre</h2>
+    <h2 class="ressources-kicker">{{ $.Params.voix_titre | default "Ouvrir le livre" }}</h2>
     {{ partial "book-voix.html" (dict "voix" . "classe" "ro-voix__carte") }}
   </section>
   {{ end }}
 
-  {{/* ── 3. Texte dédié (corps du .md — registre lecteur, jamais la description de la fiche) */}}
+  {{/* ── 3. Chemins de lecture (facultatif, front matter `chemins` de la page : titre, liste, texte). */}}
+  {{ with $.Params.chemins }}
+  <section class="ro-chemins">
+    <h2 class="ressources-kicker">{{ .titre }}</h2>
+    <ol>
+      {{- range .liste }}
+      <li><span>chemin</span>{{ partial "fr-typo.html" . }}</li>
+      {{- end }}
+    </ol>
+    {{ with .texte }}<p class="ro-chemins__texte">{{ partial "fr-typo.html" . }}</p>{{ end }}
+  </section>
+  {{ end }}
+
+  {{/* ── 4. Texte dédié (corps du .md — registre lecteur, jamais la description de la fiche) */}}
+  {{ with .Content }}
   <section class="ro-texte">
     <h2 class="ressources-kicker">Le livre</h2>
     <div class="ressources-intro ressources-single__text">
-      {{ .Content }}
+      {{ . }}
     </div>
-    <p class="ro-liens">
-      <a class="ressources-book__readmore" href="{{ $book.RelPermalink }}" target="_blank" rel="noopener">Fiche complète du livre <span aria-hidden="true">↗</span></a>
-      &nbsp;·&nbsp;
-      <a class="ressources-book__readmore" href="{{ "/ressources-offertes/" | relLangURL }}" target="_blank" rel="noopener">Tous les livres du dispositif <span aria-hidden="true">↗</span></a>
-    </p>
   </section>
+  {{ end }}
 
-  {{/* ── 4. Rappel du bouton (relais : static/js/ressources-relais.js ; caché sans script ou sans stock). */}}
+  {{/* ── 5. Rappel du bouton (relais : static/js/ressources-relais.js ; caché sans script ou sans stock). */}}
   <div class="ro-reprise" data-ro-reprise hidden>
-    <p>{{ $book.Title }}<span>Déjà financé · aucun paiement</span></p>
+    {{ if $ens }}<p>{{ $book.Title }}<span>Exemplaire de consultation déjà financé</span></p>
+    {{ else }}<p>Lisez. Et si vous aimez, faites circuler.</p>{{ end }}
     <button class="ressources-btn" type="button" data-ro-relais>{{ $libelle }}</button>
   </div>
+  <p class="ro-liens">
+    <a class="ressources-book__readmore" href="{{ $book.RelPermalink }}" target="_blank" rel="noopener">Fiche complète du livre <span aria-hidden="true">↗</span></a>
+    &nbsp;·&nbsp;
+    <a class="ressources-book__readmore" href="{{ "/ressources-offertes/" | relLangURL }}" target="_blank" rel="noopener">Tous les livres du dispositif <span aria-hidden="true">↗</span></a>
+  </p>
 
   {{/* Transmission — la circulation est le cœur du dispositif (registre lecteur).
        ABSENTE des façades enseignants (`facade: enseignants`, arbitrage ENTRANTE_2026-10-02_Enseignants_Structure, E3) :
