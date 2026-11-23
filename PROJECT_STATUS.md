@@ -61,7 +61,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-23 (nuit, suite) — Page mère `/ressources-offertes/` : maquette C+ « l'étagère des promesses » (auteur : « GO C+ »), non poussé à l'écriture
+### 2026-11-23 (nuit, suite) — Page mère `/ressources-offertes/` : maquette C+ « l'étagère des promesses » (auteur : « GO C+ »), commit `91057b9d` en ligne (version servie attestée : six couvertures chargées, six promesses, script actif, fiche du livre déjà reçu ouverte au chargement, aucun débordement)
 - **Pourquoi** : l'auteur préfère le visuel de C ; ses trois défauts (avis externe) corrigés : promesses écrites sous les
   couvertures (comparaison sans clic), couvertures 150 px, plus de défilement horizontal (6 / 3 / 2 par rangée).
 - **Fait** : étagère (liens d'ancre vers chaque fiche) + six fiches au balisage du guichet, toutes présentes ;
