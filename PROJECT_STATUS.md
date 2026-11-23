@@ -61,7 +61,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-23 (soir) — Pages « livres offerts » : écarts avec la maquette A+ relevés par l'auteur, corrigés (non poussé à l'écriture)
+### 2026-11-23 (soir) — Pages « livres offerts » : écarts avec la maquette A+ relevés par l'auteur, corrigés, commit `b0c2fa48` en ligne (version servie attestée : inclinaison, réassurance, note, lettrine, extrait à 1 110 px, 7 chemins)
 - **Constat de l'auteur** sur la version servie : couverture droite (rotation 3D), réassurance disparue (elle vivait dans
   la note que le guichet masque quand un exemplaire a déjà été reçu), lettrine absente, textes bornés (608 px sur 1 216),
   chemins en liste. Consigne : « texte pleine largeur, pour le reste l'identique de la maquette A+ ».
