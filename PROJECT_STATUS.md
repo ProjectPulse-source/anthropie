@@ -61,7 +61,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-23 (nuit) — Accueil français : maquette E (« GO E » de l'auteur), non poussé à l'écriture
+### 2026-11-23 (nuit) — Accueil français : maquette E (« GO E » de l'auteur), commit `19db98b4` en ligne (version servie attestée : question, deux chiffres, source, 3 enquêtes, 6 livres, 10/10 images, axes actifs, aucun débordement ; `/en/` inchangé). Restent à l'auteur : état initial GoatCounter (jeton), inscription de l'audit au registre (navette)
 - **Décision** : quatre maquettes (https://claude.ai/artifact/LLNtLFVNJE9aevD8EHtNaL), deux contre-expertises archivées et
   arbitrées (`D:\CONTRE_EXPERTISE\promotion\2026-11-23_ACCUEIL_MAQUETTES\ARBITRAGE.md`, `9882e411…`, `1788aff1…`) ; audit
   non inscrit au registre global (navette refusée par le mode automatique, commande donnée à l'auteur).
