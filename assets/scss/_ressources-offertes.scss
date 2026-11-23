@@ -709,72 +709,134 @@
   margin: 16px 0 0;
   strong { font-weight: 500; color: var(--color-accent); }
 }
-.ressources-catalogue.ro-liste { margin-top: 44px; }
-.ressources-books.ro-liste__grille {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 52px 40px;
-  @media (max-width: 1000px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  @media (max-width: 640px) { grid-template-columns: 1fr; gap: 44px; }
+.ressources-catalogue.ro-liste { margin-top: 40px; }
+
+// ----- Étagère : six couvertures et leurs promesses (maquette C+, 23/11/2026) -----
+.ro-etagere__rayon {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 36px 0;
+  @media (max-width: 1000px) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 640px) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 0; }
+  > li { margin: 0; padding: 0; min-width: 0; }
 }
-// La carte reprend la classe du guichet (.ressources-book) pour le script ; sa grille de 200 px est neutralisée.
-.ressources-book.ro-carte {
+.ro-slot {
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  @media (max-width: 520px) { display: flex; }
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  &:hover { color: inherit; }
+  &:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
 }
-.ro-carte__haut { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 18px; align-items: end; }
-.ressources-book__emblem.ro-carte__couv { width: 96px; perspective: none; }
-.ro-carte .ressources-book__cover { width: 96px; transform: rotate(-3deg); box-shadow: 4px 4px 0 0 var(--color-accent-soft); }
-.ro-carte:hover .ressources-book__cover { transform: rotate(-2deg) translateY(-2px); box-shadow: 5px 6px 0 0 var(--color-accent-soft); }
-.ro-carte__id { min-width: 0; }
-.home-section h3.ro-carte__titre {
+// Le socle : une planche continue d'une couverture à l'autre (aucun écart de colonne).
+.ro-slot__socle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 250px;
+  padding: 0 14px;
+  border-bottom: 9px solid #d9d4c6;
+  box-shadow: 0 12px 14px -12px rgba(15, 15, 18, 0.35);
+  @media (max-width: 640px) { height: 190px; padding: 0 10px; }
+}
+.ro-slot .ressources-book__cover {
+  width: 100%;
+  max-width: 150px;
+  transform: none;
+  box-shadow: 3px 3px 0 0 var(--color-accent-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  @media (max-width: 640px) { max-width: 112px; }
+}
+.ro-slot:hover .ressources-book__cover { transform: rotate(-2deg) translateY(-8px); }
+.ro-slot[aria-current="true"] .ressources-book__cover,
+.ro-slot[aria-current="true"]:hover .ressources-book__cover {
+  transform: rotate(-3deg) translateY(-14px);
+  box-shadow: 6px 8px 0 0 var(--color-accent-soft);
+}
+.ro-slot[aria-current="true"] .ro-slot__socle { border-bottom-color: var(--color-accent); }
+.ro-slot__txt { display: block; padding: 14px 14px 0; @media (max-width: 640px) { padding: 12px 10px 0; } }
+.ro-slot__titre { display: block; font-family: var(--font-sans); font-size: 12.5px; font-weight: 500; line-height: 1.3; color: var(--color-text-subtle); }
+.ro-slot__promesse {
+  display: block;
+  margin-top: 6px;
   font-family: var(--font-serif);
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 1.2;
-  margin: 0;
+  line-height: 1.3;
+  color: var(--color-text);
   text-wrap: balance;
+  @media (max-width: 640px) { font-size: 15px; }
+}
+.ro-slot[aria-current="true"] .ro-slot__titre { color: var(--color-accent); font-weight: 600; }
+.ro-slot[aria-current="true"] .ro-slot__promesse { color: var(--color-accent); }
+@media (prefers-reduced-motion: reduce) { .ro-slot .ressources-book__cover { transition: none; } }
+
+// ----- Fiches : une par livre ; sans script, l'une sous l'autre ; avec script, une seule visible -----
+.ro-etagere__fiches { display: grid; gap: 32px; margin-top: 48px; }
+.ressources-book.ro-fiche {
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+  padding: 36px 40px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule-soft);
+  scroll-margin-top: 80px;
+  @media (max-width: 760px) { grid-template-columns: 1fr; gap: 20px; padding: 24px 20px; }
+}
+// `display: grid` de .ressources-book l'emporterait sur l'attribut hidden posé par ressources-etagere.js.
+.ressources-book.ro-fiche[hidden] { display: none; }
+.ressources-book__emblem.ro-fiche__couv { width: 220px; perspective: none; @media (max-width: 760px) { width: 130px; } }
+.ro-fiche .ressources-book__cover { width: 100%; transform: rotate(-3deg); box-shadow: 5px 5px 0 0 var(--color-accent-soft); }
+.ro-fiche__corps { min-width: 0; }
+.home-section h3.ro-fiche__titre {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
   a { color: var(--color-text); text-decoration: none; }
   a:hover { color: var(--color-accent); text-decoration: underline; }
+  @media (max-width: 760px) { font-size: 26px; }
 }
-.ro-carte__sous { font-family: var(--font-serif); font-style: italic; font-size: 14px; line-height: 1.4; color: var(--color-pivot); margin: 6px 0 0; }
-.ro-carte__promesse {
+.ro-fiche__sous { font-family: var(--font-serif); font-style: italic; font-size: 18px; line-height: 1.4; color: var(--color-pivot); margin: 8px 0 0; }
+.ro-fiche__promesse {
   font-family: var(--font-serif);
-  font-size: 23px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 1.25;
   color: var(--color-accent);
   margin: 22px 0 0;
   text-wrap: balance;
+  @media (max-width: 760px) { font-size: 23px; }
 }
-.ro-carte__appui { font-family: var(--font-serif); font-size: 16px; line-height: 1.55; color: var(--color-text-muted); margin: 10px 0 0; flex: 1; }
-.ro-carte__meta {
+.ro-fiche__appui { font-family: var(--font-serif); font-size: 17px; line-height: 1.6; color: var(--color-text-body); margin: 10px 0 18px; }
+.ro-fiche__src { font-family: var(--font-mono); font-size: 12px; line-height: 1.45; color: var(--color-text-subtle); margin: 20px 0 6px; }
+.ro-fiche__voix {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--color-accent);
+  margin: 0;
+  &::before { content: "«\00a0"; }
+  &::after { content: "\00a0»"; }
+}
+.ro-fiche .ressources-book__obtain { margin-top: 24px; }
+.ro-fiche__action {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  gap: 6px 12px;
-  margin-top: 16px;
-  // La note et « Nouveauté » sont centrées sous une couverture ailleurs ; ici, en ligne.
+  gap: 12px 24px;
   .ressources-book__rating, .ressources-book__novelty { margin: 0; justify-content: flex-start; }
   .ressources-book__rating-date { display: none; }
 }
-.ro-carte__pages { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); }
-.ro-carte .ressources-book__obtain { margin-top: 14px; }
-.ro-carte .ressources-book__cta { width: 100%; font-size: 15px; padding: 14px 18px; }
-.ro-carte__rassure { font-family: var(--font-sans); font-size: 12.5px; line-height: 1.45; color: var(--color-text-subtle); margin: 8px 0 0; }
-.ro-carte__voix {
-  margin-top: 14px;
-  border-top: 1px solid var(--color-rule-soft);
-  summary { cursor: pointer; font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: var(--color-link); padding: 12px 0 0; }
-  blockquote { border: 0; margin: 0; padding: 0; }
-  blockquote p { font-family: var(--font-serif); font-style: italic; font-size: 19px; line-height: 1.4; color: var(--color-accent); margin: 0; }
-  blockquote p::before { content: "«\00a0"; }
-  blockquote p::after { content: "\00a0»"; }
-}
-.ro-carte__src { font-family: var(--font-mono); font-size: 12px; line-height: 1.45; color: var(--color-text-subtle); margin: 12px 0 6px; }
-.ro-carte__fiche { font-family: var(--font-sans); font-size: 13px; margin: 10px 0 0; }
+.ro-fiche .ressources-book__cta { font-size: 15px; padding: 14px 22px; @media (max-width: 760px) { width: 100%; min-height: 48px; } }
+.ro-fiche__lien { font-family: var(--font-sans); font-size: 13px; }
+.ro-fiche__rassure { font-family: var(--font-sans); font-size: 12.5px; line-height: 1.45; color: var(--color-text-subtle); margin: 8px 0 0; }
 
 // Fonctionnement en trois étapes
 .ro-etapes {

@@ -61,6 +61,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-23 (nuit, suite) — Page mère `/ressources-offertes/` : maquette C+ « l'étagère des promesses » (auteur : « GO C+ »), non poussé à l'écriture
+- **Pourquoi** : l'auteur préfère le visuel de C ; ses trois défauts (avis externe) corrigés : promesses écrites sous les
+  couvertures (comparaison sans clic), couvertures 150 px, plus de défilement horizontal (6 / 3 / 2 par rangée).
+- **Fait** : étagère (liens d'ancre vers chaque fiche) + six fiches au balisage du guichet, toutes présentes ;
+  `static/js/ressources-etagere.js` n'en montre qu'une (adresse `#offre-<livre>`, sinon livre déjà reçu, sinon la
+  première) et ne touche à rien du guichet ; sans script, les six fiches l'une sous l'autre. Défilement calculé
+  (`scrollIntoView` resté sans effet dans un cadre de 390 px). Cartes de D retirées (styles `ro-carte*`).
+- **Contrôles** : check-all --ci 0, typo_build 0, audit-liens 0 critique, check-dates-build 0 ; recette 390, 768, 1920 px.
+
 ### 2026-11-23 (nuit) — Page mère `/ressources-offertes/` : maquette D (promesse de lecture d'abord), commit `c13931f7` en ligne (version servie attestée : titre, six cartes et promesses, nombres de Livresque résolus, aucun `&nbsp;` visible, trois étapes, ligne des replis)
 - **Décision** : maquettes https://claude.ai/artifact/Y6FyxuvQ8TuUw4nY5KjktV ; avis externe archivé et arbitré
   (`D:\CONTRE_EXPERTISE\promotion\2026-11-23_HABILLAGE_LISTE_LIVRES_OFFERTS\ARBITRAGE.md`, SHA-256 `ffc7421a…`) ; quatre des

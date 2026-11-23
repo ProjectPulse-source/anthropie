@@ -38,15 +38,15 @@ Aucune contrepartie n'est demandée.` $url -}}
     <p class="ro-liste__chapo">Choisissez celui qui vous intéresse&nbsp;: votre exemplaire Kindle est <strong>déjà financé</strong>, sans paiement ni contrepartie. Un livre par lecteur.</p>
   </header>
 
-  {{/* ── 2. Catalogue — source unique : content/livres/.
+  {{/* ── 2. Catalogue — maquette C+ « l'étagère des promesses » (auteur, 23/11/2026 : « GO C+ ») — source unique : content/livres/.
          Ordre d'affichage = liste de slugs Hugo (une erreur ici = livre absent,
          panne VISIBLE). data-book = promo_slug lu dans le front matter du livre
          (clé D1/books.toml) : une seule autorité, pas de valeur dupliquée ici.
-         Carte : promesse de lecture → phrase d'appui → note → bouton et réassurance → une phrase du livre, à déplier
-         (champs `promesse_lecture` et `extrait_voix` de la fiche ; phrase de carte = `ligne`, sinon `chute`, même règle
-         que partials/livre-porte.html). Le dépliant suit la règle constante des replis (ligne « Lire le détail »). */}}
-  <section class="ressources-catalogue ro-liste">
-    <div class="ressources-books ro-liste__grille">
+         Deux étages : l'ÉTAGÈRE (couverture + promesse de lecture de chaque livre : les apports se comparent sans clic)
+         et les FICHES (une par livre, balisage du guichet : .ressources-book, data-book, .ressources-book__cta, data-role —
+         le script du guichet les voit toutes). Sans script : les six fiches l'une sous l'autre, l'étagère mène à chacune
+         par ancre. Avec script (static/js/ressources-etagere.js) : une seule fiche visible, celle de la couverture touchée. */}}
+  <section class="ressources-catalogue ro-liste ro-etagere" data-ro-etagere>
       {{/* la-societe-du-premier-coup : REMIS le 2026-08-10 au soir, une fois le stock réel
            en place (10 liens importés, `premier-coup: true` sur /stock du Worker). Il avait
            été retiré quelques heures plus tôt, à la publication de la fiche, pour ne pas
@@ -79,56 +79,72 @@ Aucune contrepartie n'est demandée.` $url -}}
           {{- end -}}
         {{- end -}}
       {{- end }}
-      {{ range $hugo := $order }}
+
+    {{/* Étage 1 — l'étagère */}}
+    <ul class="ro-etagere__rayon" aria-label="Choisir un livre">
+      {{- range $i, $hugo := $order }}
+      {{- with site.GetPage (printf "/livres/%s" $hugo) }}
+      {{- $pl := .Params.promesse_lecture -}}
+      {{- if not (and $pl $pl.titre $pl.appui) }}{{ errorf "ressources-offertes : /livres/%s sans promesse_lecture (titre, appui) en front matter" $hugo }}{{ end -}}
+      {{- $court := index (split (index (split .Title " — ") 0) " – ") 0 }}
+      <li>
+        <a class="ro-slot" href="#offre-{{ $hugo }}" data-ro-slot="{{ $i }}">
+          <span class="ro-slot__socle">
+            {{ partial "book-cover.html" (dict "slug" $hugo "alt" "" "wrapClass" "ressources-book__cover" "sizes" "150px" "loading" "eager") }}
+          </span>
+          <span class="ro-slot__txt">
+            <span class="ro-slot__titre">{{ $court }}</span>
+            <span class="ro-slot__promesse">{{ partial "fr-typo.html" $pl.titre }}</span>
+          </span>
+        </a>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+
+    {{/* Étage 2 — les fiches (une par livre ; toutes présentes pour le guichet) */}}
+    <div class="ro-etagere__fiches">
+      {{ range $i, $hugo := $order }}
         {{ with site.GetPage (printf "/livres/%s" $hugo) }}
         {{ $promo := .Params.promo_slug }}
         {{ $isbn := .Params.isbn }}
-        {{ $urlLivre := .RelPermalink }}
         {{ if not $promo }}{{ errorf "ressources-offertes : /livres/%s sans promo_slug en front matter" $hugo }}{{ end }}
-        {{- /* Une carte sans promesse de lecture retomberait sur une présentation de l'objet : le build s'arrête. */ -}}
         {{ $pl := .Params.promesse_lecture }}
-        {{ if not (and $pl $pl.titre $pl.appui) }}{{ errorf "ressources-offertes : /livres/%s sans promesse_lecture (titre, appui) en front matter" $hugo }}{{ end }}
-        <article class="ressources-book ro-carte" data-book="{{ $promo }}">
-          <div class="ro-carte__haut">
-            <a href="{{ .RelPermalink }}" class="ressources-book__emblem ro-carte__couv" aria-hidden="true" tabindex="-1">
-              {{ partial "book-cover.html" (dict "slug" $hugo "alt" .Title "wrapClass" "ressources-book__cover" "sizes" "96px") }}
-            </a>
-            <div class="ro-carte__id">
-              <h3 class="ro-carte__titre"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-              {{ with .Params.subtitle }}<p class="ro-carte__sous">{{ partial "fr-typo.html" . }}</p>{{ end }}
+        <article class="ressources-book ro-fiche" data-book="{{ $promo }}" id="offre-{{ $hugo }}" data-ro-fiche="{{ $i }}">
+          <a href="{{ .RelPermalink }}" class="ressources-book__emblem ro-fiche__couv" aria-hidden="true" tabindex="-1">
+            {{ partial "book-cover.html" (dict "slug" $hugo "alt" .Title "wrapClass" "ressources-book__cover" "sizes" "220px") }}
+          </a>
+          <div class="ro-fiche__corps">
+            <h3 class="ro-fiche__titre"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Params.subtitle }}<p class="ro-fiche__sous">{{ partial "fr-typo.html" . }}</p>{{ end }}
+            <p class="ro-fiche__promesse">{{ partial "fr-typo.html" $pl.titre }}</p>
+            <p class="ro-fiche__appui">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" $pl.appui "isbn" $isbn) | htmlUnescape) }}</p>
+            {{ partial "ressources-chiffres.html" . }}
+            {{ with .Params.extrait_voix }}
+            <p class="ro-fiche__src">{{ partial "fr-typo.html" .source }}</p>
+            <p class="ro-fiche__voix">{{ partial "fr-typo.html" (.ligne | default .chute) }}</p>
+            {{ end }}
+
+            <div class="ressources-book__obtain">
+              <p class="ressources-book__state" data-role="state">Vérification du stock…</p>
+              <div class="ro-fiche__action">
+                <button class="ressources-btn ressources-book__cta" type="button" disabled>Recevoir mon exemplaire Kindle offert</button>
+                {{- /* Preuve sociale : note Amazon.fr, ou « Nouveauté », ou rien (partials/preuve-sociale.html, seul exemplaire). */ -}}
+                {{ partial "preuve-sociale.html" . }}
+                <a class="ro-fiche__lien" href="{{ .RelPermalink }}">Fiche du livre <span aria-hidden="true">↗</span></a>
+              </div>
+              <p class="ro-fiche__rassure">Déjà financé · aucun paiement · compte Amazon.fr requis</p>
+            </div>
+
+            {{ partial "ressources-rupture.html" . }}
+
+            <div class="ressources-book__assigned" hidden>
+              <p class="ressources-book__state ressources-book__state--ok">Vous avez choisi un livre.</p>
+              <p class="ressources-assigned-msg">Votre exemplaire Kindle prépayé a été
+              attribué. Amazon.fr s'est ouvert dans un nouvel onglet.</p>
+              <a class="ressources-btn ressources-btn--outline ressources-assigned-link" href="#" target="_blank" rel="noopener">Rouvrir le lien Amazon.fr</a>
             </div>
           </div>
-          <p class="ro-carte__promesse">{{ partial "fr-typo.html" $pl.titre }}</p>
-          <p class="ro-carte__appui">{{ partial "fr-typo.html" (partial "desc-figures.html" (dict "text" $pl.appui "isbn" $isbn) | htmlUnescape) }}</p>
-          <div class="ro-carte__meta">
-            {{- /* Preuve sociale : note Amazon.fr, ou « Nouveauté », ou rien (partials/preuve-sociale.html, seul exemplaire). */ -}}
-            {{ partial "preuve-sociale.html" . }}
-            {{ with .Params.pages }}<span class="ro-carte__pages">{{ . }}&nbsp;pages</span>{{ end }}
-          </div>
-
-          <div class="ressources-book__obtain">
-            <p class="ressources-book__state" data-role="state">Vérification du stock…</p>
-            <button class="ressources-btn ressources-book__cta" type="button" disabled>Recevoir mon exemplaire Kindle offert</button>
-            <p class="ro-carte__rassure">Déjà financé · aucun paiement · compte Amazon.fr requis</p>
-          </div>
-
-          {{ partial "ressources-rupture.html" . }}
-
-          <div class="ressources-book__assigned" hidden>
-            <p class="ressources-book__state ressources-book__state--ok">Vous avez choisi un livre.</p>
-            <p class="ressources-assigned-msg">Votre exemplaire Kindle prépayé a été
-            attribué. Amazon.fr s'est ouvert dans un nouvel onglet.</p>
-            <a class="ressources-btn ressources-btn--outline ressources-assigned-link" href="#" target="_blank" rel="noopener">Rouvrir le lien Amazon.fr</a>
-          </div>
-
-          {{ with .Params.extrait_voix }}
-          <details class="ro-carte__voix">
-            <summary>Une phrase du livre</summary>
-            <p class="ro-carte__src">{{ partial "fr-typo.html" .source }}</p>
-            <blockquote><p>{{ partial "fr-typo.html" (.ligne | default .chute) }}</p></blockquote>
-            <p class="ro-carte__fiche"><a href="{{ $urlLivre }}">Fiche complète et extrait <span aria-hidden="true">↗</span></a></p>
-          </details>
-          {{ end }}
         </article>
         {{ end }}
       {{ end }}
@@ -245,4 +261,5 @@ Aucune contrepartie n'est demandée.` $url -}}
 <div class="ressources-toast" id="ro-toast" role="status" aria-live="polite"></div>
 
 {{ partial "ressources-guichet-script.html" . }}
+<script src="{{ partial "js-url.html" "ressources-etagere.js" }}" defer></script>
 {{ end }}

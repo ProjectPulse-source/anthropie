@@ -178,6 +178,8 @@ main .awp-sidebar__series > li { margin-bottom: 0.4rem !important; padding-left:
 // ci-dessus imposait aussi 1,4 em de marge et 0,4 em de retrait (décalage mesuré sur la liste des chiffres).
 main .ro-chiffres { padding-left: 0 !important; margin: 0 !important; list-style: none !important; }
 main .ressources-book__body .ro-chiffres { margin: 4px 0 14px !important; }
+main .ro-etagere__rayon { padding-left: 0 !important; margin: 0 !important; list-style: none !important; }
+main .ro-etagere__rayon > li { margin-bottom: 0 !important; padding-left: 0 !important; }
 main .ro-chemins ol { padding-left: 0 !important; margin: 14px 0 0 !important; list-style: none !important; }
 main .ro-chemins li { margin-bottom: 0 !important; padding-left: 0 !important; line-height: 1.25 !important; }
 main .ro-etapes ol { padding-left: 0 !important; margin: 10px 0 0 !important; list-style: none !important; }
