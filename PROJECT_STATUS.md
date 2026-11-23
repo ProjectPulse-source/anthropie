@@ -61,7 +61,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
-### 2026-11-23 (nuit, suite) — Accueil anglais en maquette E (demande de l'auteur), non poussé à l'écriture
+### 2026-11-23 (nuit, suite) — Accueil anglais en maquette E (demande de l'auteur), commit `c2191dac` en ligne (versions servies FR et EN attestées : question, chiffres au format de la langue, enquêtes, 6 livres dont 5 « In French », 10/10 images ; état initial `/en` relevé dans la fiche D0)
 - **Fait** : `partials/accueil-e.html` bilingue (blocs `affichage_en` des jeux ; enquêtes anglaises : président, data
   centres, déchets radioactifs — l'école n'a pas de version anglaise ; livres : question `pour` de l'index anglais) ;
   `layouts/index.html` réduit à l'appel du partial (ancien accueil : `git show 9d80fbfb:layouts/index.html`) ;
