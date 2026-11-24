@@ -692,7 +692,7 @@ works:
     # 2026-09-13). Les 88 avis courent depuis l'édition d'origine.
     isbn: "978-2-9586347-0-4"
     isbn_13_normalized: "9782958634704"
-    pages: 680  # broché, édition 2026 révisée (2026-10-04 : audit des citations) — était 694 (P15), 672 (P11)
+    pages: 678  # broché, CORR14 téléversée sur KDP le 2026-11-24 (passes « traductions » et « françaises ») — était 680 (04/10), 694 (P15), 672 (P11)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"
     asin_kindle: "B0CW994YWH"
@@ -708,7 +708,7 @@ works:
     # sans les corriger ici en premier.
     corpus_stats:
       citations: 4656          # édition 2026 révisée (était 4658, P15)
-      auteurs: 1387            # « voix » (était 1388 : graphies d'un même auteur réunies)
+      auteurs: 1390            # « voix » ; CORR14 du 2026-11-24 : attributions rendues (Agathon, Douglass, Yang Hu, Zénon…) — était 1387 (04/10), 1388
       siecles: 25              # de Homère/Confucius au présent (≈ conservateur)
       annees_selection: 40
       derniere_verif: "2026-10-04"

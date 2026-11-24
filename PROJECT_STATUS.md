@@ -61,6 +61,15 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-24 — Livresque des mots CORR14 (téléversée sur KDP par l'auteur) : 1 390 auteurs, broché 678 p.
+- Livre : 51 corrections de citations (dépôt livresque `3b87569`), couverture « 1 390 auteurs ».
+- Site : `data/works.yaml` (pages 680 → 678, auteurs 1 387 → 1 390), fiche (`pages`), `/livresque/methode-et-corpus/`,
+  `data/offre_culturelle.toml`, `static/llms.txt`. EN : aucune page n'affiche ces chiffres (jetons de `works.yaml`).
+- Wikidata : lot `Wikidata/Import_Wikidata_Laura_2026-11-24_Livresque_CORR14/` (P1104 680 → 678), **à lancer quand
+  amazon.fr affiche 678 p.** ; relié (ISBN 978-2-9586347-9-7, 540 p.) sans item : lot 2 à la mise en vente.
+- Reste hors site : Open Library (édition OL61896252M : 680 → 678 p., épaisseur 3,89 → 3,88 cm ; œuvre OL45424544W :
+  « 1 387 » → « 1 390 » dans la description) ; relié absent du site (ASIN à venir) ; dépôt légal BnF de la version revue.
+
 ### 2026-11-23 (nuit, fin) — Ménage des styles de l'ancien accueil (`2e6cd94f`) + fiche livre retouche B (`11efff6c`), en ligne (servi attesté : fiche Livresque 912 px, achat avant Transmettre, promesse, carte ; identifiants de l'accueil stylés, axes-anim absent ; registre AWP de /a-propos/ intact)
 - **Ménage** : `_home.scss` 483 → 49 lignes, `_hero.scss` 144 → 27 (gardés : `.credibility-strip`, `.awp-registre`) ;
   `axes-anim.js` et son chargement retirés ; exemption `main .home-reception__liste li` retirée. Preuve : diff de la feuille

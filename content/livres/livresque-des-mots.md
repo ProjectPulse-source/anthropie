@@ -2,7 +2,7 @@
 title: "Livresque des mots"
 promo_slug: "livresque"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 subtitle: "Anthologie inédite & éclectique de citations"  # page de titre de l'intérieur et couverture
-pages: 680  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, édition 2026 révisée (sommaire, Promenades, index des auteurs)
+pages: 678  # sync data/works.yaml (book-livresque-des-mots.pages) — broché, édition 2026 révisée (sommaire, Promenades, index des auteurs)
 # Promesse de lecture : ce que le livre apporte au lecteur, en tête de sa carte sur /ressources-offertes/
 # (arbitrage du 23/11/2026, validé par l'auteur ; réécrite depuis la description et la FAQ de cette fiche).
 promesse_lecture:

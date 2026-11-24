@@ -26,7 +26,7 @@ Cette page est la référence publique du corpus de [*Livresque des mots*](/livr
 - **{{< stat "auteurs" "nbsp" >}} voix**
 - **{{< stat "siecles" >}} siècles couverts** — des présocratiques et de la sagesse chinoise au présent
 - **{{< stat "annees_selection" >}} ans de sélection**
-- Édition courante&nbsp;: édition 2026, 680 pages avec sommaire et index des auteurs (broché, ISBN 978-2-9586347-0-4)
+- Édition courante&nbsp;: édition 2026, 678 pages avec sommaire et index des auteurs (broché, ISBN 978-2-9586347-0-4)
 
 Ces valeurs proviennent d'un **recomptage intégral du corpus**, vérifié en dernier lieu le 4 octobre 2026 sur le livre fabriqué. Elles constituent la source unique&nbsp;: le site, les fiches libraires et les bases bibliographiques sont alignés sur elles à mesure de leurs mises à jour.
 
