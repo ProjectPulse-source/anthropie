@@ -35,7 +35,7 @@ Ce qui en fait un cadeau&nbsp;: c'est un **objet littéraire** avant d'être un 
 
 ## Broché ou Kindle&nbsp;? {#broché-ou-kindle}
 
-Le broché reste le cadeau classique — un objet qu'on emballe. Pour un cadeau qui dure, *Livresque des mots* existe aussi en [édition reliée](https://www.amazon.fr/dp/2958634795), couverture rigide. Mais le Kindle s'offre aussi, par **lien prépayé**&nbsp;: vous payez, le destinataire échange le lien contre le livre, sans liseuse (l'application gratuite suffit). C'est le cadeau de dernière minute ou de longue distance par excellence — à condition de connaître deux ou trois règles&nbsp;: [Offrir un livre Kindle&nbsp;: mode d'emploi](/offrir-un-livre-kindle/).
+Le broché reste le cadeau classique — un objet qu'on emballe. Pour un cadeau qui dure, *Livresque des mots* existe aussi en {{< amazon-lien url="https://www.amazon.fr/dp/2958634795" >}}édition reliée{{< /amazon-lien >}}, couverture rigide. Mais le Kindle s'offre aussi, par **lien prépayé**&nbsp;: vous payez, le destinataire échange le lien contre le livre, sans liseuse (l'application gratuite suffit). C'est le cadeau de dernière minute ou de longue distance par excellence — à condition de connaître deux ou trois règles&nbsp;: [Offrir un livre Kindle&nbsp;: mode d'emploi](/offrir-un-livre-kindle/).
 
 ## Questions fréquentes
 

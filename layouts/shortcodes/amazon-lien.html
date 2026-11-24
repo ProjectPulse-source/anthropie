@@ -1,0 +1,5 @@
+{{- /* {{< amazon-lien url="https://www.amazon.fr/dp/<ASIN>" >}}texte{{< /amazon-lien >}} — lien Amazon écrit dans le
+       texte d'une page, passé par partials/amazon-href.html : il reçoit la balise Amazon Attribution quand l'ASIN est au
+       registre (data/attribution_fr.yaml, _com.yaml), comme les boutons d'achat (24/11/2026). */ -}}
+<a href="{{ partial "amazon-href.html" (.Get "url") }}" target="_blank" rel="noopener noreferrer">{{ .Inner | markdownify }}</a>
+{{- /**/ -}}
