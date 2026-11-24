@@ -51,16 +51,17 @@ faq:
     answer: "À l'amoureux de la langue et des formules, à l'écrivain en quête de compagnie, au lecteur qui aime ouvrir un livre au hasard. Une anthologie sans ordre imposé se prête naturellement au cadeau ; en version Kindle, le cadeau passe par un lien prépayé (mode d'emploi sur la page Offrir un livre Kindle)."
 lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 # Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
-# mot pour mot contre la source : broché HTML de l'édition 2026 (03-BROCHE-PDF, WEASY-2026-10-04-ED2026) ; quatre citations contiguës, confirmées par l'audit.
+# mot pour mot contre la source. Série changée le 24/11/2026 (auteur) : trois citations contiguës (Q004236-Q004238 de l'audit),
+# texte de la version corrigée CORR13 (03-BROCHE-PDF/_A_REPUBLIER) ; Nietzsche rendu à Ecce Homo, « Warum ich so klug bin », § 4
+# (« Nicht der Zweifel, die Gewissheit ist das, was wahnsinnig macht »), l'édition 2026 imprimait « l'incertitude ».
 extrait_voix:
-  source: "Quatre citations consécutives de l'édition 2026 · en exergue, l'avertissement du livre"
+  source: "Trois citations consécutives du livre · en exergue, l'avertissement du livre"
   paragraphes:
-    - "La meilleure manière d'être revenu de bien des choses, c'est de n'y être jamais allé.<br><span class=\"book-voix__auteur\">— Louise-Victorine Ackermann</span>"
-    - "Elle était revenue de bien des choses ce qui ne l'empêchait pas d'y retourner.<br><span class=\"book-voix__auteur\">— Natalie Clifford Barney</span>"
-    - "Ce n'est pas que je sache bien employer mon temps mais c'est que je sais bien le perdre et soit dit sans me vanter c'est peut-être la première de toutes les sciences.<br><span class=\"book-voix__auteur\">— Duchesse de Choiseul</span>"
-    - "Le regret qu'ont les hommes du mauvais emploi du temps qu'ils ont déjà vécu, ne les conduit pas toujours à faire de celui qui leur reste à vivre un meilleur usage.<br><span class=\"book-voix__auteur\">— Jean de La Bruyère</span>"
-  ligne: "Elle était revenue de bien des choses ce qui ne l'empêchait pas d'y retourner."
-  ligne_auteur: "Natalie Clifford Barney, dans le livre"
+    - "C'est quand on a raison qu'il est difficile de prouver qu'on n'a pas tort.<br><span class=\"book-voix__auteur\">— Pierre Dac</span>"
+    - "Ce n'est pas le doute qui rend fou, c'est la certitude.<br><span class=\"book-voix__auteur\">— Friedrich Nietzsche, <em>Ecce Homo</em></span>"
+    - "Certitude, servitude.<br><span class=\"book-voix__auteur\">— Jean Rostand</span>"
+  ligne: "Certitude, servitude."
+  ligne_auteur: "Jean Rostand, dans le livre"
   chute: "Si vous ne voyez pas la couture, c'est qu'elle est réussie."
 ---
 
