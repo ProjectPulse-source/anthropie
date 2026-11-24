@@ -3,8 +3,9 @@ title: "Comment savoir si une promesse est tenue ?"
 description: "Juger « faire baisser le chômage » : chômage au sens du BIT et inscrits en catégorie A à France Travail ne comptent pas tout à fait les mêmes personnes, et la règle de comptage des inscrits a changé en 2022, fin 2024 et 2025. Estimation Insee, séries Dares, données ouvertes."
 chapo: "Deux chiffres exacts peuvent raconter deux histoires différentes. En 2024, selon l'Insee, {mes.p_a} % seulement des inscrits en catégorie A à France Travail sont chômeurs au sens du Bureau international du travail (BIT). Les autres, pour la plupart, sont eux aussi sans emploi. Et la règle qui compte les inscrits a changé en 2022, à la fin de 2024 et en 2025, tantôt à la baisse, tantôt à la hausse. Pour juger une promesse sur le chômage, quatre questions : selon quel indicateur, depuis quand, la règle est-elle restée la même, quelle part attribuer."
 date: 2026-10-05
-lastmod: 2026-11-18
+lastmod: 2026-11-24
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-24, texte: "Précision : la série de la Dares est nommée en entier, « hors bénéficiaires du RSA et hors jeunes en parcours », dans le corps et dans la description du jeu de données, qui parlait à tort des « publics inscrits d'office » (les personnes suivies par Cap emploi, inscrites d'office, restent dans cette série)."}
   - {date: 2026-11-18, texte: "Corrections après relecture des sources : la page cite le chiffrage de l'Insee du 10 novembre 2026 (Informations rapides n° 270 : la loi pour le plein emploi explique moins de la moitié de la hausse), qui remplace celui d'août ; la rénovation de l'enquête Emploi de 2021 n'est plus donnée comme cause des mouvements de l'écart, l'Insee en ayant corrigé l'effet ; les dates de relevé sont rectifiées."}
   - {date: 2026-11-06, texte: "Précision : le code du travail renvoie à un arrêté des ministres les modalités du renouvellement mensuel de l'inscription (art. L5411-2)."}
 donnees: [promesses_mesurer]
@@ -13,13 +14,13 @@ og_image: "images/og-mesurer-promesse.jpg"
 og_image_alt: "Carte de partage : « Deux mesures, deux populations » — une barre en trois segments, en milliers de personnes, moyenne 2024 : 863 chômeurs au sens du BIT non inscrits en catégorie A, 1 427 dans les deux mesures à la fois, 1 466 inscrits en catégorie A non chômeurs au sens du BIT (estimation Insee)."
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "promesses_mesurer"
-  nom: "Chômage au sens du BIT et inscription en catégorie A : croisement 2024, séries d'inscrits avec et sans les publics inscrits d'office, série longue 2012-2025"
+  nom: "Chômage au sens du BIT et inscription en catégorie A : croisement 2024, séries d'inscrits avec et sans les bénéficiaires du RSA et les jeunes en parcours, série longue 2012-2025"
   description: "Restitution, vérifiée contre le PDF publié, du croisement estimé par l'Insee entre statut d'activité au sens du BIT et catégorie d'inscription à France Travail (moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; Insee Références 2026, dossier 1, figure 2) ; séries trimestrielles CVS-CJO des inscrits en catégorie A et des inscrits en catégorie A hors bénéficiaires du RSA et hors jeunes en parcours (moyenne trimestrielle des inscrits en fin de mois, Dares-France Travail, France hors Mayotte, 2018 à 2026) ; moyennes annuelles 2012-2025 des deux mesures publiées par l'Insee (même dossier, figure 1) ; ruptures de règle datées."
   couverture_temporelle: "1996/2026"
   couverture_spatiale: "France hors Mayotte"
   variables:
     - {nom: "Personnes par statut au sens du BIT et catégorie d'inscription", unite: "milliers de personnes (moyenne 2024, estimation)"}
-    - {nom: "Inscrits en catégorie A, avec et sans les publics inscrits d'office depuis 2025", unite: "personnes, moyenne trimestrielle des inscrits en fin de mois, CVS-CJO"}
+    - {nom: "Inscrits en catégorie A, avec et sans les bénéficiaires du RSA et les jeunes en parcours (depuis 2018)", unite: "personnes, moyenne trimestrielle des inscrits en fin de mois, CVS-CJO"}
     - {nom: "Chômeurs au sens du BIT et inscrits en catégorie A, 2012-2025", unite: "millions de personnes, moyenne annuelle"}
   sources:
     - "https://www.insee.fr/fr/statistiques/8733119?sommaire=8733125"
@@ -146,9 +147,9 @@ La Dares publie aussi une série d'inscrits en catégorie A **hors bénéficiair
 
 {{< fig-actions id="regle" >}}
 
-**La série hors RSA porte elle aussi la rupture de 2025.** Au 1er&nbsp;trimestre 2025, elle saute ({{< mes-val "dares_hors_t1_2025" >}}, contre {{< mes-val "dares_a_t1_2025" >}} pour la série publiée). Au 2e, elle recule ({{< mes-val "dares_hors_t2_2025" >}}, contre {{< mes-val "dares_a_t2_2025" >}}). Ces mouvements sont affectés par l'actualisation automatique de janvier à mars 2025, qui touchait tous les nouveaux inscrits sans droit à une allocation de France Travail et dont la Dares documente l'effet sur la catégorie A. Ils montrent que la série hors RSA et jeunes en parcours n'échappe pas à cette rupture, sans permettre d'attribuer toute son évolution à ce seul mécanisme. Et le point de départ de la comparaison, le 4e&nbsp;trimestre 2024, porte déjà le formulaire modifié en octobre-novembre 2024. Quelle part de la hausse observée en 2025 provient de ce formulaire de fin 2024&nbsp;? Les sources mobilisées ne permettent pas de l'isoler&nbsp;: l'Insee ne fournit pas de décomposition de l'écart entre les deux mesures pour 2025, et l'appariement détaillé porte sur 2024.
+**La série hors RSA et hors jeunes en parcours porte elle aussi la rupture de 2025.** Au 1er&nbsp;trimestre 2025, elle saute ({{< mes-val "dares_hors_t1_2025" >}}, contre {{< mes-val "dares_a_t1_2025" >}} pour la série publiée). Au 2e, elle recule ({{< mes-val "dares_hors_t2_2025" >}}, contre {{< mes-val "dares_a_t2_2025" >}}). Ces mouvements sont affectés par l'actualisation automatique de janvier à mars 2025, qui touchait tous les nouveaux inscrits sans droit à une allocation de France Travail et dont la Dares documente l'effet sur la catégorie A. Ils montrent que la série hors RSA et jeunes en parcours n'échappe pas à cette rupture, sans permettre d'attribuer toute son évolution à ce seul mécanisme. Et le point de départ de la comparaison, le 4e&nbsp;trimestre 2024, porte déjà le formulaire modifié en octobre-novembre 2024. Quelle part de la hausse observée en 2025 provient de ce formulaire de fin 2024&nbsp;? Les sources mobilisées ne permettent pas de l'isoler&nbsp;: l'Insee ne fournit pas de décomposition de l'écart entre les deux mesures pour 2025, et l'appariement détaillé porte sur 2024.
 
-Sur l'ensemble de la période, entre le 4e&nbsp;trimestre 2024 et le {{< mes-val "dares_fin" >}}, la catégorie A publiée compte {{< mes-val "dares_a_var" >}} inscrits de plus. La série hors RSA en compte {{< mes-val "dares_a_hors_var" >}} de plus.
+Sur l'ensemble de la période, entre le 4e&nbsp;trimestre 2024 et le {{< mes-val "dares_fin" >}}, la catégorie A publiée compte {{< mes-val "dares_a_var" >}} inscrits de plus. La série hors RSA et hors jeunes en parcours en compte {{< mes-val "dares_a_hors_var" >}} de plus.
 
 <details class="repli"><summary>Les niveaux des deux séries</summary>
 
@@ -228,6 +229,6 @@ Les chiffres, les passages cités, les contrôles et les figures sont produits p
 
 </details>
 
-{{< reutiliser figures="figures_mesurer" jeu="promesses_mesurer" sources="Insee et Dares" donnees="Le croisement 2024 du statut au sens du BIT et de la catégorie d'inscription (24 cases et totaux, en milliers), les séries trimestrielles des inscrits en catégorie A avec et sans les publics inscrits d'office, et les moyennes annuelles 2012-2025 des deux mesures ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
+{{< reutiliser figures="figures_mesurer" jeu="promesses_mesurer" sources="Insee et Dares" donnees="Le croisement 2024 du statut au sens du BIT et de la catégorie d'inscription (24 cases et totaux, en milliers), les séries trimestrielles des inscrits en catégorie A avec et sans les bénéficiaires du RSA et les jeunes en parcours, et les moyennes annuelles 2012-2025 des deux mesures ; le même contenu existe en CSV, en format long, lisible dans un tableur." >}}
 Pour juger une promesse sur le chômage, il faut d'abord choisir son chiffre&nbsp;: en 2024, selon l'estimation de l'Insee, {{< mes-val "p_a" >}}&nbsp;% seulement des inscrits en catégorie A sont chômeurs au sens du BIT, et la plupart des autres sont sans emploi. Il faut ensuite vérifier la règle&nbsp;: le comptage des inscrits a changé en 2022 (environ {{< mes-val "rupture_2022" >}} inscrits de moins en catégorie A), à la fin de 2024 (environ {{< mes-val "formulaire_2024" >}} de plus) et en 2025 (inscription d'office, actualisation automatique), et ces séries ne sont plus labellisées depuis le 1er&nbsp;janvier 2025. Une contribution n'est pas un effet, et une évolution observée ne dit pas sa cause.
 {{< /reutiliser >}}

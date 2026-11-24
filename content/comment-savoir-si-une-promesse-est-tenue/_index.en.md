@@ -4,13 +4,14 @@ url: /en/how-can-we-tell-whether-a-promise-was-kept/
 description: "Judging \"bringing unemployment down\" in France: ILO unemployment and category A registrants at France Travail do not count quite the same people, and the rule for counting registrants changed in 2022, late 2024 and 2025. Insee estimate, Dares series, open data."
 chapo: "Two accurate figures can tell two different stories. In 2024, according to Insee, only {mes.p_a}% of category A registrants at France Travail are unemployed in the sense of the International Labour Organization (ILO). Most of the others are without a job too. And the rule for counting registrants changed in 2022, at the end of 2024 and in 2025, sometimes downwards, sometimes upwards. To judge a promise on unemployment, four questions: by which indicator, since when, has the rule stayed the same, what share can be attributed."
 date: 2026-10-06
-lastmod: 2026-11-18
+lastmod: 2026-11-24
 # English version of tab 5 of the "Presidential promises" dossier (FR: content/comment-savoir-si-une-promesse-est-tenue/_index.md).
 # Same tokens, same keys: values come from the affichage_en block of data/promesses_mesurer.json
 # (scripts/update_promesses_mesurer.py), whose guards cover both languages. French texts are quoted in our translation
 # (the French originals are in the French page and in the JSON); the numbers of each translation are checked against
 # the original (guard M7).
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-24, texte: "Clarification: the Dares series is named in full, 'excluding RSA recipients and young people in programmes', in the text and in the description of the dataset, which wrongly referred to 'groups registered automatically' (people followed by Cap emploi, also registered automatically, remain in this series)."}
   - {date: 2026-11-18, texte: "Corrections after a review of the sources: the page cites INSEE's estimate of 10 November 2026 (Informations rapides no. 270: the full-employment act explains less than half of the rise), which replaces August's; the 2021 overhaul of the Labour Force Survey is no longer given as a cause of the gap's movements, INSEE having corrected its effect; the retrieval dates are corrected."}
   - {date: 2026-11-06, texte: "Clarification: the Labour Code leaves the arrangements for the monthly renewal of registration to a ministerial order (art. L5411-2)."}
 donnees: [promesses_mesurer]
@@ -19,13 +20,13 @@ og_image: "images/og-mesurer-promesse-en.jpg"
 og_image_alt: "Share card: \"Two measures, two populations\" — a bar in three segments, in thousands of people, 2024 average: the people unemployed under the ILO definition not registered in category A, those counted in both measures, and the category A registrants who are not unemployed under the ILO definition (Insee estimate)."
 dataset:  # JSON-LD Dataset (partials/schema-dataset-page.html)
   jeu: "promesses_mesurer"
-  nom: "Unemployment in the ILO sense and category A registration in France: 2024 cross-tabulation, registrant series with and without automatically registered groups, long series 2012-2025"
+  nom: "Unemployment in the ILO sense and category A registration in France: 2024 cross-tabulation, registrant series with and without RSA recipients and young people in programmes, long series 2012-2025"
   description: "Restitution, checked against the published PDF, of Insee's estimated cross-tabulation of ILO activity status and France Travail registration category (2024 average, France excluding Mayotte, aged 15-64, ordinary households; Insee Références 2026, dossier 1 (in-depth study), figure 2); quarterly seasonally adjusted series of category A registrants and of category A registrants excluding RSA recipients and young people in programmes (quarterly average of end-of-month registrants, Dares-France Travail, France excluding Mayotte, 2018 to 2026); 2012-2025 annual averages of both measures published by Insee (same file, figure 1); dated rule changes."
   couverture_temporelle: "1996/2026"
   couverture_spatiale: "France excluding Mayotte"
   variables:
     - {nom: "People by ILO status and registration category", unite: "thousands of people (2024 average, estimate)"}
-    - {nom: "Category A registrants, with and without the groups registered automatically since 2025", unite: "people, quarterly average of end-of-month registrants, seasonally adjusted"}
+    - {nom: "Category A registrants, with and without RSA recipients and young people in programmes (since 2018)", unite: "people, quarterly average of end-of-month registrants, seasonally adjusted"}
     - {nom: "ILO unemployed and category A registrants, 2012-2025", unite: "millions of people, annual average"}
   sources:
     - "https://www.insee.fr/fr/statistiques/8733119?sommaire=8733125"
@@ -152,9 +153,9 @@ The Dares also publishes a series of category A registrants **excluding RSA reci
 
 {{< fig-actions id="regle" >}}
 
-**The series excluding RSA also carries the 2025 break.** In the first quarter of 2025, it jumps ({{< mes-val "dares_hors_t1_2025" >}}, against {{< mes-val "dares_a_t1_2025" >}} for the published series). In the second, it falls back ({{< mes-val "dares_hors_t2_2025" >}}, against {{< mes-val "dares_a_t2_2025" >}}). These movements are affected by the automatic updating from January to March 2025, which applied to all new registrants without entitlement to a France Travail allowance and whose effect on category A the Dares documents. They show that the series excluding RSA recipients and young people in programmes does not escape this break, without allowing its whole movement to be attributed to that mechanism alone. And the starting point of the comparison, the fourth quarter of 2024, already carries the form changed in October-November 2024. What share of the rise observed in 2025 comes from that late-2024 form? The sources used do not allow it to be isolated: Insee does not provide a breakdown of the gap between the two measures for 2025, and the detailed matching covers 2024.
+**The series excluding RSA recipients and young people in programmes also carries the 2025 break.** In the first quarter of 2025, it jumps ({{< mes-val "dares_hors_t1_2025" >}}, against {{< mes-val "dares_a_t1_2025" >}} for the published series). In the second, it falls back ({{< mes-val "dares_hors_t2_2025" >}}, against {{< mes-val "dares_a_t2_2025" >}}). These movements are affected by the automatic updating from January to March 2025, which applied to all new registrants without entitlement to a France Travail allowance and whose effect on category A the Dares documents. They show that the series excluding RSA recipients and young people in programmes does not escape this break, without allowing its whole movement to be attributed to that mechanism alone. And the starting point of the comparison, the fourth quarter of 2024, already carries the form changed in October-November 2024. What share of the rise observed in 2025 comes from that late-2024 form? The sources used do not allow it to be isolated: Insee does not provide a breakdown of the gap between the two measures for 2025, and the detailed matching covers 2024.
 
-Over the whole period, between the fourth quarter of 2024 and the {{< mes-val "dares_fin" >}}, published category A has {{< mes-val "dares_a_var" >}} more registrants. The series excluding RSA has {{< mes-val "dares_a_hors_var" >}} more.
+Over the whole period, between the fourth quarter of 2024 and the {{< mes-val "dares_fin" >}}, published category A has {{< mes-val "dares_a_var" >}} more registrants. The series excluding RSA recipients and young people in programmes has {{< mes-val "dares_a_hors_var" >}} more.
 
 <details class="repli"><summary>The levels of the two series</summary>
 
@@ -234,6 +235,6 @@ The figures, quoted passages, checks and charts are produced by a single script,
 
 </details>
 
-{{< reutiliser figures="figures_mesurer" jeu="promesses_mesurer" sources="Insee and Dares" donnees="The 2024 cross-tabulation of ILO status and registration category (24 cells and totals, in thousands), the quarterly series of category A registrants with and without the groups registered automatically, and the 2012-2025 annual averages of both measures; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
+{{< reutiliser figures="figures_mesurer" jeu="promesses_mesurer" sources="Insee and Dares" donnees="The 2024 cross-tabulation of ILO status and registration category (24 cells and totals, in thousands), the quarterly series of category A registrants with and without RSA recipients and young people in programmes, and the 2012-2025 annual averages of both measures; the same content exists as CSV, in long format, readable in a spreadsheet." >}}
 To judge a promise on unemployment in France, one must first choose its figure: in 2024, according to the Insee estimate, only {{< mes-val "p_a" >}}% of category A registrants are unemployed in the ILO sense, and most of the others are without a job. One must then check the rule: the counting of registrants changed in 2022 (about {{< mes-val "rupture_2022" >}} fewer registrants in category A), at the end of 2024 (about {{< mes-val "formulaire_2024" >}} more) and in 2025 (automatic registration, automatic updating), and these series have not carried the statistical quality label since 1 January 2025. A contribution is not an effect, and an observed change does not tell its cause.
 {{< /reutiliser >}}

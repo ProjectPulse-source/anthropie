@@ -57,7 +57,8 @@ en témoin de définition) ; les séries de la Dares avec et sans les publics in
 Explications rivales soutenues : « les chiffres divergent parce qu'ils sont manipulés » ; « la loi pour le plein emploi
 explique la hausse ». Le croisement départage la première (deux définitions, populations qui se recoupent, écart expliqué
 par les catégories) ; la seconde ne se départage pas avec ces données (contributions comptables, aucun contrefactuel), et la
-page le dit. Robustesse : la série hors RSA porte elle aussi la rupture de 2025 (variante calculée).
+page le dit. Robustesse : la série hors RSA et hors jeunes en parcours porte elle aussi la rupture de 2025 (variante
+calculée ; nom complet de la série, définition de la Dares, depuis le 24/11/2026).
 
 ### Limite
 

@@ -1,4 +1,4 @@
-# relu le 2026-11-18 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-24 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 4233a6a9 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment savoir si une promesse est tenue ?
 Deux chiffres exacts peuvent raconter deux histoires différentes.
@@ -6,7 +6,7 @@ En 2024, selon l’Insee, 49 % seulement des inscrits en catégorie A à France 
 Les autres, pour la plupart, sont eux aussi sans emploi.
 Et la règle qui compte les inscrits a changé en 2022, à la fin de 2024 et en 2025, tantôt à la baisse, tantôt à la hausse.
 Pour juger une promesse sur le chômage, quatre questions : selon quel indicateur, depuis quand, la règle est-elle restée la même, quelle part attribuer.
-Page mise à jour le 18 novembre 2026
+Page mise à jour le 24 novembre 2026
 Promesses présidentielles
 ↓ Graphiques, données et citations à réutiliserRéutiliser cette page
 Quand un candidat promet de « faire baisser le chômage », on croit savoir ce que l’on regardera cinq ans plus tard : le chiffre du chômage.
@@ -123,7 +123,7 @@ Inscrits en catégorie A à France Travail, moyenne trimestrielle des inscrits e
 Dernier point : 3e trimestre 2026.
 Ces niveaux ne se comparent pas directement à ceux du croisement de 2024, qui porte sur un autre champ.
 TéléchargerCiterDonnées
-La série hors RSA porte elle aussi la rupture de 2025.
+La série hors RSA et hors jeunes en parcours porte elle aussi la rupture de 2025.
 Au 1er trimestre 2025, elle saute (+100 300, contre +261 200 pour la série publiée).
 Au 2e, elle recule (−74 500, contre −167 700).
 Ces mouvements sont affectés par l’actualisation automatique de janvier à mars 2025, qui touchait tous les nouveaux inscrits sans droit à une allocation de France Travail et dont la Dares documente l’effet sur la catégorie A.
@@ -132,7 +132,7 @@ Et le point de départ de la comparaison, le 4e trimestre 2024, porte déjà le 
 Quelle part de la hausse observée en 2025 provient de ce formulaire de fin 2024 ?
 Les sources mobilisées ne permettent pas de l’isoler : l’Insee ne fournit pas de décomposition de l’écart entre les deux mesures pour 2025, et l’appariement détaillé porte sur 2024.
 Sur l’ensemble de la période, entre le 4e trimestre 2024 et le 3e trimestre 2026, la catégorie A publiée compte 224 400 inscrits de plus.
-La série hors RSA en compte 64 200 de plus.
+La série hors RSA et hors jeunes en parcours en compte 64 200 de plus.
 Les niveaux des deux séries
 4e trimestre 2024
 3e trimestre 2026
@@ -269,7 +269,7 @@ Il faut ensuite vérifier la règle : le comptage des inscrits a changé en 2022
 Une contribution n’est pas un effet, et une évolution observée ne dit pas sa cause.
 Copier le résumé
 Les données
-Le croisement 2024 du statut au sens du BIT et de la catégorie d’inscription (24 cases et totaux, en milliers), les séries trimestrielles des inscrits en catégorie A avec et sans les publics inscrits d’office, et les moyennes annuelles 2012-2025 des deux mesures ; le même contenu existe en CSV, en format long, lisible dans un tableur.
+Le croisement 2024 du statut au sens du BIT et de la catégorie d’inscription (24 cases et totaux, en milliers), les séries trimestrielles des inscrits en catégorie A avec et sans les bénéficiaires du RSA et les jeunes en parcours, et les moyennes annuelles 2012-2025 des deux mesures ; le même contenu existe en CSV, en format long, lisible dans un tableur.
 Télécharger en JSON CSV
 Données et graphiques CC BY 4.0 — réutilisation libre, y compris commerciale, en citant la source.
 Texte soumis au droit d’auteur — citation courte libre, reproduction intégrale sur demande.
