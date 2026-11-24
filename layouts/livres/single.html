@@ -126,6 +126,7 @@
         {{ end }}
         <p class="book-single__fiche-meta">
           {{- with .Params.isbn }}ISBN&nbsp;{{ . }}{{ end -}}
+          {{- with .Params.isbn_relie }}<br>{{ if $isEn }}Hardcover{{ else }}Relié{{ end }}&nbsp;: ISBN&nbsp;{{ . }}{{ end -}}
           {{- if and (not $isEn) (or .Params.url_amazon_fr_kindle .Params.url_amazon_com_kindle) }}<br><a href="/offrir-un-livre-kindle/">Offrir la version Kindle</a>{{ end -}}
         </p>
       </div>
@@ -192,6 +193,13 @@
       "url" $offerURL
       "seller" (dict "@type" "Organization" "name" "Amazon") -}}
   {{- $book = merge $book (dict "offers" $offer) -}}
+{{- end -}}
+{{- /* Édition reliée (24/11/2026) : workExample, seulement si son ISBN est déclaré en front matter. */ -}}
+{{- with .Params.isbn_relie -}}
+  {{- $rel := dict "@type" "Book" "bookFormat" "https://schema.org/Hardcover" "isbn" . "gtin13" (replace . "-" "") "inLanguage" "fr" -}}
+  {{- with $.Params.pages_relie -}}{{- $rel = merge $rel (dict "numberOfPages" .) -}}{{- end -}}
+  {{- with $.Params.price_relie -}}{{- $rel = merge $rel (dict "offers" (dict "@type" "Offer" "price" (printf "%v" .) "priceCurrency" "EUR" "availability" "https://schema.org/InStock" "url" $.Params.url_amazon_fr_relie "seller" (dict "@type" "Organization" "name" "Amazon"))) -}}{{- end -}}
+  {{- $book = merge $book (dict "workExample" (slice $rel)) -}}
 {{- end -}}
 {{- /* review : recensions tierces réelles (front matter reviews[]). Pas de reviewRating (aucune note explicite) ; pas d'aggregateRating importé. */ -}}
 {{- with .Params.reviews -}}

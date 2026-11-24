@@ -21,6 +21,12 @@
     <span>{{ $store }}&#160;· Kindle</span>
   </a>
   {{ end }}
+  {{- /* Édition reliée (24/11/2026) : français seulement, champ facultatif url_amazon_fr_relie. */ -}}
+  {{ if not $isEn }}{{ with $page.Params.url_amazon_fr_relie }}
+  <a class="amazon-cta amazon-cta--kindle" href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">
+    <span>Amazon.fr&#160;· Relié{{ with $page.Params.price_relie }}&#160;· {{ replace . "." "," }}&#160;€{{ end }}</span>
+  </a>
+  {{ end }}{{ end }}
 
   <div class="amazon-wrapper">
     <button class="amazon-more" data-amazon-trigger aria-expanded="false" aria-controls="{{ $id }}">
@@ -31,6 +37,7 @@
       {{/* Un lien par marché × format. Liens canoniques /dp/<ASIN> uniquement. */}}
       {{ with $page.Params.url_amazon_fr }}<a href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">Amazon.fr · Broché</a>{{ end }}
       {{ with $page.Params.url_amazon_fr_kindle }}<a href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">Amazon.fr · Kindle</a>{{ end }}
+      {{ with $page.Params.url_amazon_fr_relie }}<a href="{{ partial "amazon-href.html" . }}" target="_blank" rel="noopener noreferrer">Amazon.fr · Relié</a>{{ end }}
       {{ with $page.Params.url_amazon_es }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es · Broché</a>{{ end }}
       {{ with $page.Params.url_amazon_es_kindle }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.es · Kindle</a>{{ end }}
       {{ with $page.Params.url_amazon_ca }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Amazon.ca · Broché</a>{{ end }}

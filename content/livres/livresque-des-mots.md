@@ -23,6 +23,11 @@ weight: 4
 # Liens canoniques /dp/<ASIN broché 2958634701> — jamais de shortener amzn.eu/a.co
 # (l'ancien CA réutilisait le shortener FR — corrigé 2026-06-04).
 url_amazon_fr: "https://www.amazon.fr/dp/2958634701"
+# Édition reliée (24/11/2026, ASIN = ISBN-10 2958634795) — data/works.yaml, bloc hardcover ; Wikidata Q142274168
+url_amazon_fr_relie: "https://www.amazon.fr/dp/2958634795"
+price_relie: "44.90"
+isbn_relie: "978-2-9586347-9-7"
+pages_relie: 540
 url_amazon_ca: "https://www.amazon.ca/dp/2958634701"
 url_amazon_com: "https://www.amazon.com/dp/2958634701"
 url_amazon_uk: "https://www.amazon.co.uk/dp/2958634701"
