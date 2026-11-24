@@ -699,7 +699,7 @@ works:
       pages: 540
       format: "17,78 x 25,4 cm (7 x 10 po)"
       prix: "44,90 €"
-      wikidata: ""            # item à créer : Wikidata/Import_Wikidata_Laura_2026-11-24_Livresque_relie/
+      wikidata: "Q142274168"  # créé par Laura le 2026-11-24 (lot Import_Wikidata_Laura_2026-11-24_Livresque_relie), relu par l API
     pages: 678  # broché, CORR14 téléversée sur KDP le 2026-11-24 (passes « traductions » et « françaises ») — était 680 (04/10), 694 (P15), 672 (P11)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"

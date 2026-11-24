@@ -1,8 +1,6 @@
 # Wikidata — Livresque des mots, édition CORR14 (2026-11-24)
 
-> ⏳ **À EXÉCUTER par Laura QUAND amazon.fr affiche 678 pages** pour le broché (fiche https://www.amazon.fr/dp/2958634701,
-> rubrique « Nombre de pages »). Téléversement KDP le 24/11/2026 ; mise en ligne sous 72 h environ. Avant, la référence
-> Amazon dirait encore 680 : ne pas lancer.
+> ✅ **EXÉCUTÉ par Laura le 2026-11-24 : P1104 = 678, source amazon.fr/dp/2958634701 du 24/11, ancienne valeur 680 retirée (relu par l API le jour même). Dossier clos.**
 
 Deux commandes, en **« Run »** (pas « Run in background »), en ouvrant `deeplink.txt` (jamais une copie du chat) :
 

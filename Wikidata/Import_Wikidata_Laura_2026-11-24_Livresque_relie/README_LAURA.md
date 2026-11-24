@@ -1,6 +1,6 @@
 # Wikidata — Livresque des mots, édition reliée (2026-11-24)
 
-> ⏳ À EXÉCUTER par Laura : ouvrir `LIEN_QUICKSTATEMENTS.txt`, lancer en **« Run »**.
+> ✅ **EXÉCUTÉ par Laura le 2026-11-24 : item Q142274168, P747 posé sur Q140517745 (relu par l API le jour même). Dossier clos.**
 
 Crée l'item de l'édition reliée (ISBN-13 978-2-9586347-9-7, ISBN-10 2-9586347-9-5, 540 p.), « édition de »
 Q140517745, autrice/auteur Q138909233, langue français ; source amazon.fr/dp/2958634795 consultée le 24/11/2026 ; et
