@@ -692,6 +692,14 @@ works:
     # 2026-09-13). Les 88 avis courent depuis l'édition d'origine.
     isbn: "978-2-9586347-0-4"
     isbn_13_normalized: "9782958634704"
+    hardcover:                # édition reliée, téléversée sur KDP le 2026-11-24 (CORR14) ; pas encore affichée sur la fiche
+      isbn: "978-2-9586347-9-7"
+      isbn_10: "2-9586347-9-5"
+      asin: "2958634795"      # = ISBN-10 (règle Amazon pour un livre imprimé) ; à confirmer sur amazon.fr
+      pages: 540
+      format: "17,78 x 25,4 cm (7 x 10 po)"
+      prix: "44,90 €"
+      wikidata: ""            # item à créer : Wikidata/Import_Wikidata_Laura_2026-11-24_Livresque_relie/
     pages: 678  # broché, CORR14 téléversée sur KDP le 2026-11-24 (passes « traductions » et « françaises ») — était 680 (04/10), 694 (P15), 672 (P11)
     publisher: "Auto-édition"
     distribution: "Amazon KDP"

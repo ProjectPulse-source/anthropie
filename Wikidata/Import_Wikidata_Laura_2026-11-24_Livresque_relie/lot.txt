@@ -1,0 +1,14 @@
+CREATE
+LAST|Lfr|"Livresque des mots"
+LAST|Dfr|"édition reliée (2026) de l’anthologie de Stéphane Lalut"
+LAST|Len|"Livresque des mots"
+LAST|Den|"2026 hardcover edition of the anthology by Stéphane Lalut"
+LAST|P31|Q3331189
+LAST|P629|Q140517745
+LAST|P1476|fr:"Livresque des mots"
+LAST|P50|Q138909233
+LAST|P407|Q150
+LAST|P212|"978-2-9586347-9-7"|S854|"https://www.amazon.fr/dp/2958634795"|S813|+2026-11-24T00:00:00Z/11
+LAST|P957|"2-9586347-9-5"
+LAST|P1104|540|S854|"https://www.amazon.fr/dp/2958634795"|S813|+2026-11-24T00:00:00Z/11
+Q140517745|P747|LAST
