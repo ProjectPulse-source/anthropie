@@ -78,7 +78,6 @@ textes_choisis:  # maquette D2 (25/11/2026) : la phrase est RECOPIÉE du chapô 
   - {slug: la-vie-des-idees-khalili, type: Recension, phrase: 2}
   - {slug: alternatives-economiques-teletravail, type: Article}
   - {slug: en-attendant-nadeau-muhlhoff, type: Recension}
-wall_sans_pages: true
 ---
 
 <blockquote class="apropos-question">«&nbsp;Quand un système paraît résoudre un problème, quels coûts peut-il déplacer, et sur qui&nbsp;?&nbsp;»</blockquote>

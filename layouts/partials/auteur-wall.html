@@ -51,8 +51,7 @@
                main (il ne se déduit pas), la pagination vient toujours de la fiche. */ -}}
         {{- $parts := slice -}}
         {{- with $rang }}{{ $parts = $parts | append . }}{{ end -}}
-        {{- /* `wall_sans_pages` (À propos, maquette D2, 25/11/2026) : ce que le livre apporte, pas sa pagination. */ -}}
-        {{- if not $page.Params.wall_sans_pages }}{{ with $b.Params.pages }}{{ $parts = $parts | append (printf "%v pages" .) }}{{ end }}{{ end -}}
+        {{- with $b.Params.pages }}{{ $parts = $parts | append (printf "%v pages" .) }}{{ end -}}
         {{- $meta := delimit $parts " · " -}}
         {{- /* Une ligne éditoriale ne se devine pas : on ne la fabrique pas, on
                la réclame. Non bloquant — mieux vaut une tuile nue qu'un livre absent. */ -}}
