@@ -1,10 +1,10 @@
 {
- "releve_le": "2026-11-18",
+ "releve_le": "2026-11-25",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources DEPP, OCDE (PISA), IEA (PIRLS), ministère de la Culture, CREDOC",
  "meta": {
   "page": "https://stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/",
   "licence": "CC BY 4.0",
-  "champ": "France ; élèves de CM1, CM2, sixième, troisième, seconde ; jeunes de 15 ans (PISA) ; 15-24 ans (enquêtes Pratiques culturelles)",
+  "champ": "France ; élèves de CP, CM1, CM2, sixième, quatrième, troisième, seconde ; jeunes de 15 ans (PISA) ; 15-24 ans (enquêtes Pratiques culturelles)",
   "source_calcul": "calcul de l'auteur (protocole écrit avant calcul) ; extrait figé scripts/sources_langue_eleves/ (SHA256SUMS)"
  },
  "protocole": "ddab2bc",
@@ -835,9 +835,9 @@
   }
  },
  "complement": {
-  "_objet": "complement de l'extrait fige, lu par ancre dans des pieces de la DEPP (reprise du 16/11/2026)",
+  "_objet": "complement de l'extrait fige, lu par ancre dans des pieces de la DEPP (reprises du 16/11 et du 25/11/2026)",
   "_ancres": "comparees sans blancs (couche texte des PDF)",
-  "releve_le": "2026-11-16",
+  "releve_le": "2026-11-25",
   "_pieces": {
    "ni12_21": {
     "fichier": "ni12-21_pirls2011.pdf",
@@ -866,6 +866,34 @@
    "pisa2018_vol2_b18": {
     "fichier": "pisa2018_vol2_annexB1-8_tables.xlsx",
     "sha256": "27910fee73ea35ae058fe5706fb9e53fec7ccb7665e98f594b0ed495ee457a90"
+   },
+   "dt2026_e26": {
+    "fichier": "dt2026-e26_debut4e_2026_resultats_nov2026.pdf",
+    "sha256": "3fdf9eac81b6a2e6a64ab9af8f77ca60bb80ea6c15f3f6ab4966363ff70c3458"
+   },
+   "dt2025_e14": {
+    "fichier": "dt2025-e14_debut4e_2025_resultats_avr2026.pdf",
+    "sha256": "8002163eff943e9e8157d2b363ec1916214f8bfd08999faeed8768682c362a99"
+   },
+   "dt2026_e27": {
+    "fichier": "test_seconde_2026_resultats_nov2026.pdf",
+    "sha256": "d07033813c0661c50f11e391d170756e90eaf504eb4aef348ef9f63a5ea04d03"
+   },
+   "dt2026_e24": {
+    "fichier": "dt2026-e24_debut6e_2026_resultats_nov2026.pdf",
+    "sha256": "0aa46fede0314644b0dfddc5018e658b15ddce0299f7a13166766128465f76db"
+   },
+   "dt2026_e19": {
+    "fichier": "dt2026-e19_reperes_cp_2026_nov2026.pdf",
+    "sha256": "013e4e2a7baefcab0dae184bb2657667497f8396b8bc206769c1e637f11c26dd"
+   },
+   "dt2026_e22": {
+    "fichier": "dt2026-e22_reperes_cm1_2026_nov2026.pdf",
+    "sha256": "277cc112ac5cda2ba06d0cd2edec0fade33f7bfca189e4cd4939788467019303"
+   },
+   "ni22_29_donnees": {
+    "fichier": "ni22-29_donnees.xlsx",
+    "sha256": "4ce461a9ab2e25d26de77ef1581aaaba6af8202d8510a8c8108704e445433022"
    }
   },
   "pirls_2001_2006_2011": {
@@ -954,6 +982,162 @@
     "se": 0.038
    },
    "source": "OCDE, PISA 2018 Results, vol. II, tableau II.B1.8.5, ligne France"
+  },
+  "evaluations_nationales_2026": {
+   "quatrieme": {
+    "score_francais": {
+     "2023": 250.0,
+     "2024": 248.0,
+     "2025": 247.0,
+     "2026": 243.0
+    },
+    "variation_publiee": {
+     "2023_2025": -3.0,
+     "2023_2026": -7.0,
+     "2025_2026": -4.0
+    },
+    "stable_2024_2025_declare": true,
+    "lexique_satisfaisant": {
+     "2024": 67.3,
+     "2025": 67.3,
+     "2026": 65.3
+    },
+    "lexique_variation_publiee_2025_2026": -2.0,
+    "lexique_test_specifique_questions": 15,
+    "epreuves_identiques_2024_2025": true,
+    "lexique_repris_2025_2026": true,
+    "participation_francais_2026": 89.0,
+    "sources": [
+     "DEPP, document de travail 2026-E26 (novembre 2026), p. 42 et 55",
+     "DEPP, document de travail 2025-E14 (avril 2026), p. 22 et 64"
+    ]
+   },
+   "seconde": {
+    "deux_voies": {
+     "2019": 251.0,
+     "2021": 260.0,
+     "2025": 251.0,
+     "2026": 249.0
+    },
+    "deux_voies_variation_publiee": {
+     "2021_2026": -11.0,
+     "2025_2026": -2.0
+    },
+    "deux_voies_plus_bas_2019_2026_declare": true,
+    "GT_2026": 262.0,
+    "GT_stable_2025_2026_declare": true,
+    "GT_au_niveau_de_2019_declare": true,
+    "Pro": {
+     "2025": 209.0,
+     "2026": 207.0
+    },
+    "Pro_variation_publiee_2019_2026": -3.0,
+    "lexique_GT": {
+     "2025": 56.2,
+     "2026": 55.8
+    },
+    "lexique_Pro_test_specifique_depuis_2025": {
+     "2025": 46.5,
+     "2026": 45.4
+    },
+    "items_repris_2025_2026": true,
+    "participation_francais_2026": {
+     "GT": 89.0,
+     "Pro": 81.0
+    },
+    "sources": [
+     "DEPP, document de travail 2026-E27 (novembre 2026), p. 59, 64, 78, 100 et 112"
+    ]
+   },
+   "sixieme": {
+    "score_francais": {
+     "2025": 256.0,
+     "2026": 255.0
+    },
+    "stable_2025_2026_declare": true,
+    "variation_publiee_2017_2026": 5.0,
+    "items_repris_2025_2026": true,
+    "satisfaisant_par_domaine_2026_ensemble": {
+     "Compréhension de l'oral": 59.4,
+     "Grammaire": 49.2,
+     "Lexique": 43.3,
+     "Orthographe": 42.1,
+     "Compréhension de l'écrit": 42.1
+    },
+    "lexique_satisfaisant_2026": {
+     "Groupe d'IPS 1": 25.4,
+     "Groupe d'IPS 5": 61.0,
+     "Ensemble": 43.3
+    },
+    "ecart_ips5_ips1_par_domaine_2026": {
+     "Orthographe": 32.0,
+     "Compréhension de l'oral": 32.7,
+     "Grammaire": 32.7,
+     "Compréhension de l'écrit": 33.8,
+     "Lexique": 35.6
+    },
+    "domaines_stables_2025_2026_declare": true,
+    "lexique_ips1_baisse_publiee_points": -1.0,
+    "groupes_ips": "20 % des collèges chacun (groupe 1 : les moins favorisés ; groupe 5 : les plus favorisés)",
+    "participation_francais_2026": 91.0,
+    "sources": [
+     "DEPP, document de travail 2026-E24 (novembre 2026), p. 22, 42, 54 et tableau 19"
+    ]
+   },
+   "reperes": {
+    "cp_comprendre_mots_entendus_points_2019_2026": 1.2,
+    "cp_stable_2025_2026_declare": true,
+    "cp_libelle_2025": "comprendre des mots à l'oral",
+    "cp_libelle_2026": "comprendre des mots entendus",
+    "cm1_synonymes_points_2023_2026": -2.2,
+    "cm1_meme_famille_points_2023_2026": -1.5,
+    "cm1_lexicales_stables_2025_2026_declare": true,
+    "sources": [
+     "DEPP, document de travail 2026-E19 (Repères CP 2026), p. 25",
+     "DEPP, document de travail 2026-E22 (Repères CM1 2026), p. 5 et 26"
+    ]
+   },
+   "occurrences_significati": {
+    "dt2026_e26": 1,
+    "dt2025_e14": 1,
+    "dt2026_e27": 0,
+    "dt2026_e24": 0,
+    "dt2026_e19": 0,
+    "dt2026_e22": 0
+   },
+   "publie_le": "2026-11-18",
+   "toulouse_absente_2026": true
+  },
+  "cedre_college_age": {
+   "a_l_heure": {
+    "part": {
+     "2015": 83.1,
+     "2021": 88.5
+    },
+    "score": {
+     "2015": 255.3,
+     "2021": 251.5
+    },
+    "significatif_2021": true
+   },
+   "en_retard": {
+    "part": {
+     "2015": 16.9,
+     "2021": 11.5
+    },
+    "score": {
+     "2015": 223.7,
+     "2021": 209
+    },
+    "significatif_2021": true
+   },
+   "source": "DEPP, Note d'Information 22.29, données de la figure 3 (gras : évolution significative)"
+  },
+  "pirls_2001_2011_sous_scores": {
+   "textes_informatifs_baisse_significative": true,
+   "competences_complexes_baisse_significative": true,
+   "filles_baisse_significative": true,
+   "source": "DEPP, Note d'Information 12.21, p. 1 et 3"
   }
  },
  "affichage": {
@@ -969,6 +1153,7 @@
   "tot21": "19,4",
   "lex21": "3",
   "aut21": "16,4",
+  "tot15_1d": "18,0",
   "et87": "8,4",
   "et21": "11,0",
   "cv87": "0,79",
@@ -1024,6 +1209,39 @@
   "lex_ips5": "61,5",
   "voc_cp": "1,7",
   "syn_cm1": "1,7",
+  "q4_23": "250",
+  "q4_25": "247",
+  "q4_26": "243",
+  "q4_v2326": "7 points",
+  "q4_lex24": "67,3",
+  "q4_lex25": "67,3",
+  "q4_lex26": "65,3",
+  "sec2v_21": "260",
+  "sec2v_26": "249",
+  "sec2v_v21": "11 points",
+  "sec26": "262",
+  "sec_pro26": "207",
+  "six26": "255",
+  "lex_sat26": "43,3",
+  "lex_ips1_26": "25,4",
+  "lex_ips5_26": "61,0",
+  "sec_lex_gt25": "56,2",
+  "sec_lex_gt26": "55,8",
+  "sec_lex_pro25": "46,5",
+  "sec_lex_pro26": "45,4",
+  "lex_baisse_min": "0,4",
+  "lex_baisse_max": "2,0 points",
+  "voc_cp26": "1,2 point",
+  "syn_cm1_26": "2,2 points",
+  "fam_cm1_26": "1,5 point",
+  "part_min": "81",
+  "part_max": "91",
+  "cc_heure_part21": "88,5",
+  "cc_retard_part15": "16,9",
+  "cc_retard_part21": "11,5",
+  "cc_dh": "3,8",
+  "cc_dr": "14,7",
+  "cc_dm": "3,4",
   "h00": "3,8",
   "h09": "3,3",
   "h18": "3,5",

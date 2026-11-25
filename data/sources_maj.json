@@ -156,7 +156,7 @@
    "objet": "Notes d'Information de la DEPP, PISA, PIRLS",
    "mode": "manuel", "pages": ["/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/"],
    "generateurs": ["update_langue_eleves.py"], "jeu": "data/langue_eleves.json",
-   "cadence": "irrégulier (notes de la DEPP, enquêtes internationales)", "nature": "irrégulier (notes de la DEPP, enquêtes internationales)", "revoir_avant": "2027-09-30"
+   "cadence": "annuel pour les évaluations nationales de la DEPP (résultats de la rentrée publiés en novembre : CP, CM1, sixième, quatrième, seconde) ; irrégulier pour les notes de la DEPP et les enquêtes internationales", "nature": "annuel (évaluations nationales, novembre) et irrégulier (notes de la DEPP, enquêtes internationales)", "revoir_avant": "2027-11-30"
   },
   {
    "id": "pouvoirs-president", "producteur": "Légifrance, Conseil constitutionnel",

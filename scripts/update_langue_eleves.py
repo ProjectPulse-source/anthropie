@@ -7,8 +7,12 @@ avant calcul, commit ddab2bc ; verdict du 09/10/2026) : la langue des élèves n
 anciens (orthographe et lecture en fin d'école, temps de lecture pour le plaisir à 15 ans) précèdent la généralisation
 du smartphone chez les adolescents ; à la même dictée, l'orthographe des mots compte pour un dixième environ de la hausse des
 erreurs, et la hausse de 1987 à 2007, seule détaillée par type, est surtout grammaticale (NI 08.38, tableau 4) ; PISA ne baisse qu'après 2012, quand PIRLS et CEDRE ne reculent pas
-significativement sur des périodes qui recouvrent en partie cette baisse ; le vocabulaire n'est suivi par aucune série
-publique. Prose corrigée après la contre-expertise PRO-20261009-202511 (arbitrage dans D:\PRO\.claude\external-audits).
+significativement sur des périodes qui recouvrent en partie cette baisse. Prose corrigée après la contre-expertise
+PRO-20261009-202511 (arbitrage dans D:\PRO\.claude\external-audits). 25/11/2026 (lot corrections-radar-2411) : la page
+disait le vocabulaire du collège et du lycée suivi par aucune série publique ; la DEPP compare le lexique de quatrième
+depuis 2024, de sixième et de seconde depuis 2025 (séries courtes, sans test, de compétences et non d'étendue du
+vocabulaire) ; millésime 2026 des évaluations nationales (sixième, quatrième, seconde, CP, CM1) lu dans l'extrait
+complémentaire, sans toucher à la frise, arrêtée au millésime 2025.
 
 Entrée : l'extrait FIGÉ du calcul, scripts/sources_langue_eleves/extrait_langue.json (écrit par extrait_langue.py du dépôt
 de recherche, qui lit chaque valeur par une ancre dans les pièces archivées), contrôlé contre SHA256SUMS. Ce générateur
@@ -205,10 +209,57 @@ def mutation(c):
         X["seconde_francais"]["Pro"]["2025"] = 225.0
     elif m == "ocde_ecrans":  # une tranche ne baisserait pas significativement selon l'OCDE
         X["complement"]["ocde_numerique_loisir"]["avant_apres_ecole"]["dif"][1] = -0.2
+    # Millésime 2026 (lot corrections-radar-2411, 25/11/2026) : un témoin par garde nouvelle
+    elif m == "quatrieme_2026":  # le score de 2026 ne serait plus celui que donnent les écarts publiés
+        X["complement"]["evaluations_nationales_2026"]["quatrieme"]["score_francais"]["2026"] = 245.0
+    elif m == "lexique_4e":  # le lexique de quatrième ne baisserait pas en 2026
+        X["complement"]["evaluations_nationales_2026"]["quatrieme"]["lexique_satisfaisant"]["2026"] = 67.5
+    elif m == "seconde_2026":  # les deux voies ne seraient pas à leur plus bas en 2026
+        X["complement"]["evaluations_nationales_2026"]["seconde"]["deux_voies"]["2026"] = 252.0
+    elif m == "seconde_gt_2026":  # la voie GT ne serait plus au niveau de 2019
+        X["complement"]["evaluations_nationales_2026"]["seconde"]["GT_2026"] = 266.0
+    elif m == "seconde_pro_2026":  # la voie professionnelle ne serait pas à son plus bas
+        X["complement"]["evaluations_nationales_2026"]["seconde"]["Pro"]["2026"] = 212.0
+    elif m == "sixieme_2026":  # la sixième 2026 ne serait plus sous le sommet de 2020-2021
+        X["complement"]["evaluations_nationales_2026"]["sixieme"]["score_francais"]["2026"] = 262.0
+    elif m == "lexique_6e_ips":  # l'écart du lexique selon l'IPS ne serait plus le plus grand
+        X["complement"]["evaluations_nationales_2026"]["sixieme"]["lexique_satisfaisant_2026"]["Groupe d'IPS 1"] = 30.0
+    elif m == "lexique_2026":  # le lexique de seconde GT aurait monté en 2026
+        X["complement"]["evaluations_nationales_2026"]["seconde"]["lexique_GT"]["2026"] = 56.5
+    elif m == "cm1_2026":  # la recherche de synonymes en CM1 aurait progressé de 2023 à 2026
+        X["complement"]["evaluations_nationales_2026"]["reperes"]["cm1_synonymes_points_2023_2026"] = 0.3
+    elif m == "participation":  # un taux de participation sortirait de la fourchette écrite
+        X["complement"]["evaluations_nationales_2026"]["sixieme"]["participation_francais_2026"] = 78.0
+    elif m == "a_l_heure":  # les élèves « à l'heure » ne baisseraient pas significativement
+        X["complement"]["cedre_college_age"]["a_l_heure"]["significatif_2021"] = False
+    elif m == "composition":  # la moyenne baisserait autant que le groupe « à l'heure » (pas d'effet de répartition)
+        X["complement"]["cedre_college_age"]["a_l_heure"]["score"]["2021"] = 252.0
+    elif m == "pirls_sous_scores":  # la DEPP n'aurait pas publié de baisse significative des textes informatifs
+        X["complement"]["pirls_2001_2011_sous_scores"]["textes_informatifs_baisse_significative"] = False
+    elif m == "pisa_2009":  # PISA 2009 aurait rejoint le niveau de 2000 (« effacé en 2009 »)
+        X["pisa_lecture"]["score"]["2009"] = 505.0
     else:
         fail("mutation inconnue : %s" % m)
     c.update(calcul(X))
     return m
+
+
+def lexique_baisses(c):
+    """Écart 2025-2026 des quatre taux de maîtrise satisfaisante en lexique du collège et du lycée (points ; positif =
+    plus bas en 2026). Sixième 2025 : extrait figé (NI 26.21) ; le reste : extrait complémentaire du 25/11/2026."""
+    ev = c["X"]["complement"]["evaluations_nationales_2026"]
+    q4, se, s6 = ev["quatrieme"], ev["seconde"], ev["sixieme"]
+    return {"sixième": round(c["six"]["satisfaisant_par_domaine_2025"]["Ensemble"]["Lexique"] - s6["lexique_satisfaisant_2026"]["Ensemble"], 1),
+            "quatrième": round(q4["lexique_satisfaisant"]["2025"] - q4["lexique_satisfaisant"]["2026"], 1),
+            "seconde GT": round(se["lexique_GT"]["2025"] - se["lexique_GT"]["2026"], 1),
+            "seconde professionnelle": round(se["lexique_Pro_test_specifique_depuis_2025"]["2025"] - se["lexique_Pro_test_specifique_depuis_2025"]["2026"], 1)}
+
+
+def participations(c):
+    """Taux de participation des élèves en français, 2026 : sixième, quatrième, seconde GT, seconde professionnelle."""
+    ev = c["X"]["complement"]["evaluations_nationales_2026"]
+    return (ev["sixieme"]["participation_francais_2026"], ev["quatrieme"]["participation_francais_2026"],
+            ev["seconde"]["participation_francais_2026"]["GT"], ev["seconde"]["participation_francais_2026"]["Pro"])
 
 
 # ------------------------------------------------------------------ gardes : chaque qualificatif de la prose
@@ -263,9 +314,17 @@ def gardes(c):
     L = lignes_chrono(c)
     g(len(L) == 11, "chronologie : « onze mesures »")
     g(sum(1 for _, _, seg in L for u, v, sg, bs in seg if v < c["seuil"] - 1 and sg and bs) == 3, "chronologie : « trois reculs sont acquis avant » le smartphone")
-    g(lg.depasse(s["2000"], s["2006"], 0) and lg.depasse(s["2009"], s["2006"], 0) and s["2012"] >= s["2000"]
-      and cmp["pisa_2000_2006_depp"]["baisse_importante"],
-      "PISA : « un recul de 2000 à 2006, que la DEPP jugeait important, effacé en 2009 et en 2012 » (NI 08.08)")
+    # 25/11/2026 (relecture des sources, P2-4) : « effacé en 2009 » ne tenait qu'avec l'erreur de liaison ; au test que la
+    # page applique à 2000-2012 (sans erreur de liaison), 2009 reste sous 2000. La prose dit « en partie résorbé en 2009 ».
+    # Contradicteur externe PRO-20261125-195657 : la trajectoire se dit sans dépendre du test (« remonte en partie en 2009,
+    # retrouve en 2012 un niveau proche de celui de 2000 ») ; « proche » : moins d'un point d'écart, même valeur affichée.
+    g(lg.depasse(s["2000"], s["2006"], 0) and lg.depasse(s["2009"], s["2006"], 0) and lg.depasse(s["2000"], s["2009"], 0)
+      and abs(s["2012"] - s["2000"]) < 1 and nb(s["2012"], 0) == nb(s["2000"], 0) and cmp["pisa_2000_2006_depp"]["baisse_importante"],
+      "PISA : « un recul de 2000 à 2006, que la DEPP jugeait important, remonte en partie en 2009 et retrouve en 2012 un niveau proche de celui de 2000 » (NI 08.08)")
+    # Précision des erreurs lexicales (relecture P2-1, juges internes, contradicteur) : la NI 22.37 n'écrit pas la décimale
+    # nulle (total de 2015 : « 18 » dans le texte, 18,0 dans ses données) ; la page lit « 3 » comme 3,0 et le dit.
+    g(tot["2015"] == int(tot["2015"]) and lx["2021"] == int(lx["2021"]) and lx["2015"] == int(lx["2015"]),
+      "dictée : « la note n'écrit pas la décimale nulle (total de 2015 : 18,0) ; la page lit de même les erreurs lexicales de 2015 et de 2021 »")
     # vocabulaire et dictée
     cit = set(dic["citations_depp"])
     g({"mots_usuels_neuf_sur_dix", "accords_baisse_1987_2015_seulement", "hausse_2015_2021_deux_fois_moindre"} <= cit,
@@ -297,6 +356,66 @@ def gardes(c):
     g(vp["evalue_le_vocabulaire_sans_contexte"] and vp["evaluations_exhaustives_sans_test"]
       and vp["cp_comprendre_mots_oral_points_2019_2025"] > 0 and vp["cm1_synonymes_points_2023_2025"] < 0,
       "vocabulaire à l'école : au CP, la compréhension de mots à l'oral « augmente » de 2019 à 2025 ; en CM1, la recherche de synonymes « baisse » de 2023 à 2025 (DEPP, sans test)")
+    # Millésime 2026 des évaluations nationales (DEPP, 18/11/2026) et lexique au collège et au lycée (lot
+    # corrections-radar-2411, PLAN_E07.md, 25/11/2026) : écarts publiés par la DEPP rejoués, qualificatifs de la prose gardés.
+    ev = cmp["evaluations_nationales_2026"]
+    q4, se, s6, rp = ev["quatrieme"], ev["seconde"], ev["sixieme"], ev["reperes"]
+    qs, qv = q4["score_francais"], q4["variation_publiee"]
+    g(qs["2023"] + qv["2023_2025"] == qs["2025"] and qs["2023"] + qv["2023_2026"] == qs["2026"] and qs["2025"] + qv["2025_2026"] == qs["2026"]
+      and qs["2023"] > qs["2024"] > qs["2025"] > qs["2026"] and q4["stable_2024_2025_declare"],
+      "quatrième : « de 250 points en 2023 à 243 en 2026 », écarts publiés rejoués (−3 de 2023 à 2025, −7 de 2023 à 2026, −4 en 2026)")
+    ql = q4["lexique_satisfaisant"]
+    g(ql["2024"] == ql["2025"] and lg.depasse(ql["2025"], ql["2026"], 1) and round(ql["2025"] + q4["lexique_variation_publiee_2025_2026"], 1) == ql["2026"]
+      and q4["epreuves_identiques_2024_2025"] and q4["lexique_repris_2025_2026"] and q4["lexique_test_specifique_questions"] == 15,
+      "quatrième, lexique : même taux en 2024 et en 2025, plus bas en 2026, test de quinze questions repris à l'identique (DEPP)")
+    dv, dvv = se["deux_voies"], se["deux_voies_variation_publiee"]
+    g(dv["2021"] + dvv["2021_2026"] == dv["2026"] and dv["2025"] + dvv["2025_2026"] == dv["2026"] and dv["2026"] == min(dv.values())
+      and dv["2021"] == max(dv.values()) and se["deux_voies_plus_bas_2019_2026_declare"] and se["items_repris_2025_2026"],
+      "seconde, deux voies : « de 260 points en 2021 à 249 en 2026 » (−11 publié), « son plus bas niveau depuis 2019 » (DEPP)")
+    gt_, pro_ = c["sec"]["GT"], c["sec"]["Pro"]
+    g(abs(se["GT_2026"] - gt_["2019"]) <= 1 and se["GT_au_niveau_de_2019_declare"] and lg.depasse(gt_["2021"], se["GT_2026"], 0)
+      and abs(se["GT_2026"] - gt_["2025"]) <= 1 and se["GT_stable_2025_2026_declare"],
+      "seconde GT : « en 2026 au niveau de 2019 », sous le sommet de 2020-2021")
+    g(se["Pro"]["2025"] == pro_["2025"] and se["Pro"]["2026"] < min(pro_.values()) and pro_["2019"] + se["Pro_variation_publiee_2019_2026"] == se["Pro"]["2026"],
+      "seconde professionnelle : « de 219 en 2021 à 207 en 2026 », plus bas de la série, −3 depuis 2019 (DEPP)")
+    sf_ = six["score_francais"]
+    ss6 = s6["score_francais"]
+    g(ss6["2025"] == sf_["2025"] and ss6["2026"] - sf_["2017"] == s6["variation_publiee_2017_2026"] and lg.depasse(ss6["2026"], sf_["2017"], 0)
+      and lg.depasse(sf_["2021"], ss6["2026"], 0) and s6["stable_2025_2026_declare"] and s6["items_repris_2025_2026"],
+      "sixième : « 255 points en 2026 (256 en 2025) », au-dessus de 2017, sous le sommet de 2020-2021")
+    sl6, ei6, sat25 = s6["lexique_satisfaisant_2026"], s6["ecart_ips5_ips1_par_domaine_2026"], six["satisfaisant_par_domaine_2025"]
+    g(lg.depasse(sat25["Ensemble"]["Lexique"], sl6["Ensemble"], 1) and s6["domaines_stables_2025_2026_declare"]
+      and round(sl6["Groupe d'IPS 5"] - sl6["Groupe d'IPS 1"], 1) == ei6["Lexique"] and lg.extremum(ei6, ei6.get, 1) == "Lexique"
+      and sl6["Groupe d'IPS 5"] > 2 * sl6["Groupe d'IPS 1"]
+      and round(sat25["Groupe d'IPS 1"]["Lexique"] + s6["lexique_ips1_baisse_publiee_points"], 1) == sl6["Groupe d'IPS 1"],
+      "sixième, lexique 2026 : écart selon l'IPS le plus grand des cinq domaines, « plus du double », recul d'un point dans les collèges les moins favorisés (DEPP)")
+    lgt, lpro = se["lexique_GT"], se["lexique_Pro_test_specifique_depuis_2025"]
+    bl = lexique_baisses(c)
+    g(all(0 < b_ <= 2.05 for b_ in bl.values()) and lpro["2026"] < lpro["2025"] and lgt["2026"] < lgt["2025"],
+      "lexique au collège et au lycée : « en 2026, les quatre taux sont un peu plus bas qu'en 2025 » (de quelques dixièmes à deux points)")
+    g(rp["cp_comprendre_mots_entendus_points_2019_2026"] > 0 and rp["cp_stable_2025_2026_declare"] and rp["cm1_synonymes_points_2023_2026"] < 0
+      and rp["cm1_meme_famille_points_2023_2026"] < 0 and rp["cm1_lexicales_stables_2025_2026_declare"]
+      and all(n_ == 0 for k_, n_ in ev["occurrences_significati"].items() if k_ not in ("dt2026_e26", "dt2025_e14"))
+      and all(ev["occurrences_significati"][k_] <= 1 for k_ in ("dt2026_e26", "dt2025_e14")),
+      "vocabulaire à l'école : au CP, « comprendre des mots entendus » progresse de 2019 à 2026 ; en CM1, synonymes et mots de la même famille baissent de 2023 à 2026 ; stables par rapport à 2025 (DEPP, sans test)")
+    parts = participations(c)
+    g(all(80 <= p_ < 100 for p_ in parts) and ev["toulouse_absente_2026"],
+      "évaluations de 2026 : « de 81 % à 91 % des élèves » les ont passées en français ; « l'académie de Toulouse n'y a pas participé »")
+    # Fin de collège selon l'âge (relecture des sources, P2-6 et conclusion interdite n° 10) : les deux groupes baissent
+    # significativement, la moyenne moins que chacun (à la précision affichée, une décimale) ; la moyenne pondérée des deux
+    # groupes retrouve la moyenne publiée, témoin de la partition.
+    ag = cmp["cedre_college_age"]
+    ah, ar = ag["a_l_heure"], ag["en_retard"]
+    d_h, d_r, d_m = (ah["score"]["2021"] - ah["score"]["2015"], ar["score"]["2021"] - ar["score"]["2015"],
+                     cc["score"]["2021"] - cc["score"]["2015"])
+    pond = {a: (ah["part"][a] * ah["score"][a] + ar["part"][a] * ar["score"][a]) / 100 for a in ("2015", "2021")}
+    g(ah["significatif_2021"] and ar["significatif_2021"] and d_h < 0 and d_r < 0 and lg.depasse(-d_h, -d_m, 1) and lg.depasse(-d_r, -d_m, 1)
+      and ar["part"]["2021"] < ar["part"]["2015"] and ah["score"]["2021"] > ar["score"]["2021"] and 85 < ah["part"]["2021"] < 90
+      and all(abs(pond[a] - cc["score"][a]) < 0.3 for a in pond) and not cc["significatif"]["2021"],
+      "CEDRE fin de collège : élèves « à l'heure » et en retard en baisse significative, la moyenne « sans évolution significative » et moins que chacun des deux, la part des élèves en retard ayant diminué (juge interne du 25/11 : la prose dit aussi que la composition de chaque groupe a changé)")
+    ps = cmp["pirls_2001_2011_sous_scores"]
+    g(ps["textes_informatifs_baisse_significative"] and ps["competences_complexes_baisse_significative"] and ps["filles_baisse_significative"],
+      "PIRLS 2001-2011 : baisses significatives des textes informatifs, des compétences les plus complexes et du score des filles (NI 12.21)")
     # lecture pour le plaisir
     jr = oc["joyread"]
     g(jr["variation"] < 0 and abs(jr["variation"]) >= 1.96 * jr["variation_et"], "OCDE : le plaisir de lire baisse significativement de 2009 à 2018")
@@ -325,7 +444,7 @@ def gardes(c):
     g(cis["baisses_non_significatives_dans_chaque_quart"] and cis["ecart_premier_quatrieme_quart_points"]["2015"] == cis["ecart_premier_quatrieme_quart_points"]["2021"],
       "CEDRE fin de collège, selon l'indice social des collèges : baisse « non significative » dans chaque quart, écart « de … points en 2015 comme en 2021 » (NI 22.29)")
     g(not ce["secteurs_significatif"]["EP"]["2021"] and ce["secteurs_significatif"]["Public hors EP"]["2021"],
-      "CEDRE fin d'école : « la hausse vient du public hors éducation prioritaire »")
+      "CEDRE fin d'école : « la hausse de 2021 est significative dans le public hors éducation prioritaire ; l'éducation prioritaire n'évolue pas significativement »")
     # textes offerts (Gate 0)
     em, tb = c["tx"]["emmanuelle"], c["tx"]["temoins_bnf"]
     g(len(em["disciplines_saisies"]) == 8 and "français" not in em["disciplines_saisies"] and em["francais_en_cours"]
@@ -370,6 +489,7 @@ def affichage(c):
         A["tot" + a[2:]] = nbp(tot[a])
         A["lex" + a[2:]] = nbp(lx[a])
         A["aut" + a[2:]] = nbp(round(tot[a] - lx[a], 1))
+    A["tot15_1d"] = nb(tot["2015"], 1)  # précision des données de la NI 22.37 (une décimale), dite dans les sources
     et = dic["ecart_type"]
     A["et87"], A["et21"] = nb(et["1987"]), nb(et["2021"])
     A["cv87"], A["cv21"] = nb(et["1987"] / tot["1987"], 2), nb(et["2021"] / tot["2021"], 2)
@@ -414,6 +534,38 @@ def affichage(c):
     vp = c["X"]["complement"]["vocabulaire_primaire"]
     A["voc_cp"] = nb(vp["cp_comprendre_mots_oral_points_2019_2025"])
     A["syn_cm1"] = nb(-vp["cm1_synonymes_points_2023_2025"])
+    # Millésime 2026 (lot corrections-radar-2411, 25/11/2026) : unités et accords portés par le jeton quand la valeur varie
+    ev = c["X"]["complement"]["evaluations_nationales_2026"]
+    q4, se, s6, rp = ev["quatrieme"], ev["seconde"], ev["sixieme"], ev["reperes"]
+    qs = q4["score_francais"]
+    A["q4_23"], A["q4_25"], A["q4_26"] = nb(qs["2023"], 0), nb(qs["2025"], 0), nb(qs["2026"], 0)
+    A["q4_v2326"] = lg.points(-q4["variation_publiee"]["2023_2026"], 0)
+    ql = q4["lexique_satisfaisant"]
+    A["q4_lex24"], A["q4_lex25"], A["q4_lex26"] = nb(ql["2024"]), nb(ql["2025"]), nb(ql["2026"])
+    dv = se["deux_voies"]
+    A["sec2v_21"], A["sec2v_26"] = nb(dv["2021"], 0), nb(dv["2026"], 0)
+    A["sec2v_v21"] = lg.points(-se["deux_voies_variation_publiee"]["2021_2026"], 0)
+    A["sec26"], A["sec_pro26"] = nb(se["GT_2026"], 0), nb(se["Pro"]["2026"], 0)
+    A["six26"] = nb(s6["score_francais"]["2026"], 0)
+    sl6 = s6["lexique_satisfaisant_2026"]
+    A["lex_sat26"], A["lex_ips1_26"], A["lex_ips5_26"] = nb(sl6["Ensemble"]), nb(sl6["Groupe d'IPS 1"]), nb(sl6["Groupe d'IPS 5"])
+    A["sec_lex_gt25"], A["sec_lex_gt26"] = nb(se["lexique_GT"]["2025"]), nb(se["lexique_GT"]["2026"])
+    lp = se["lexique_Pro_test_specifique_depuis_2025"]
+    A["sec_lex_pro25"], A["sec_lex_pro26"] = nb(lp["2025"]), nb(lp["2026"])
+    bl = lexique_baisses(c)
+    A["lex_baisse_min"], A["lex_baisse_max"] = nb(min(bl.values())), lg.points(max(bl.values()))
+    A["voc_cp26"] = lg.points(rp["cp_comprendre_mots_entendus_points_2019_2026"])
+    A["syn_cm1_26"] = lg.points(-rp["cm1_synonymes_points_2023_2026"])
+    A["fam_cm1_26"] = lg.points(-rp["cm1_meme_famille_points_2023_2026"])
+    pa = participations(c)
+    A["part_min"], A["part_max"] = nb(min(pa), 0), nb(max(pa), 0)
+    ag = c["X"]["complement"]["cedre_college_age"]
+    ah, ar = ag["a_l_heure"], ag["en_retard"]
+    A["cc_heure_part21"] = nb(ah["part"]["2021"])
+    A["cc_retard_part15"], A["cc_retard_part21"] = nb(ar["part"]["2015"]), nb(ar["part"]["2021"])
+    A["cc_dh"] = nb(ah["score"]["2015"] - ah["score"]["2021"])
+    A["cc_dr"] = nb(ar["score"]["2015"] - ar["score"]["2021"])
+    A["cc_dm"] = nb(cc["score"]["2015"] - cc["score"]["2021"])
     hs = oc["heures_semaine"]
     A["h00"], A["h09"], A["h18"] = nb(hs["2000"]), nb(hs["2009"]), nb(hs["2018"])
     ob = oc["lit_seulement_si_oblige"]
@@ -469,7 +621,7 @@ FIG = {
         titre="La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement",
         source="DEPP (Notes d'Information) ; OCDE (PISA 2018 et 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
         note="Seul le sens de l'évolution est montré, pas son ampleur. Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l'auteur ; tirets : sans test. Ronds : bornes des intervalles, pas toutes les vagues d'enquête. PISA, compréhension de l'écrit : recul de 2000 à 2006 non\u00a0tracé. PISA, plaisir de lire (indice) : 2000-2009 non\u00a0tracé, sans baisse significative ni chez les filles ni chez les garçons. Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu'en 2008, non\u00a0tracée.",
-        montre="Les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA, revenu en 2012 à son niveau de 2000, baisse significativement ensuite, et les évaluations passées en classe ne suivent pas toutes cette pente."),
+        montre="Jusqu'au millésime 2025, auquel la frise s'arrête : les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA, revenu en 2012 à un niveau proche de celui de 2000, baisse significativement ensuite ; CEDRE et PIRLS ne reculent pas significativement sur leurs dernières périodes, quand l'évaluation de sixième et le test de positionnement de seconde, sans significativité publiée, baissent depuis leur sommet de 2020-2021."),
     "dictee": dict(
         titre="La même dictée en CM2 : nombre moyen d'erreurs",
         source="DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; détail des autres erreurs, 1987 et 2007 : NI 08.38",
@@ -597,7 +749,10 @@ def fig_chronologie(c, A):
     h = top + pas * len(L) + 70
     mots = {(ORANGE, True): "recul significatif", (BLEU, True): "hausse significative", (GRIS, True): "sans évolution significative",
             (ORANGE, False): "recul, sans test publié", (BLEU, False): "hausse, sans test publié"}
-    desc = "Frise 1985-2026, une ligne par mesure, sens de chaque intervalle ; repère : %s, plus de la moitié des 12-17 ans équipés d'un smartphone. " % A["smart_seuil"] + " ; ".join(
+    # 25/11/2026 (arbitrage final du contradicteur externe) : la description dit la dernière année tracée, et non plus
+    # l'étendue de l'axe (« Frise 1985-2026 »), pour qui consulte le SVG isolément ; le dessin ne change pas.
+    fin = max(v for _, _, seg in L for _, v, _, _ in seg)
+    desc = "Frise des mesures jusqu'au millésime %d, une ligne par mesure, sens de chaque intervalle ; repère : %s, plus de la moitié des 12-17 ans équipés d'un smartphone. " % (fin, A["smart_seuil"]) + " ; ".join(
         "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + ". " + t["note"].split("tirets : sans test. ", 1)[1]
     e = tete("lan-c", t["titre"], desc, h + 52)
     xs = sx(c["seuil"])
@@ -786,7 +941,8 @@ def fig_chronologie_m(c, A):
     L = lignes_chrono(c)
     mots = {(ORANGE, True): "recul significatif", (BLEU, True): "hausse significative", (GRIS, True): "sans évolution significative",
             (ORANGE, False): "recul, sans test publié", (BLEU, False): "hausse, sans test publié"}
-    desc = "Frise en deux panneaux, une ligne par mesure, sens de chaque intervalle ; repère : %s, plus de la moitié des 12-17 ans équipés d'un smartphone. " % A["smart_seuil"] + " ; ".join(
+    fin = max(v for _, _, seg in L for _, v, _, _ in seg)
+    desc = "Frise en deux panneaux, mesures jusqu'au millésime %d, une ligne par mesure, sens de chaque intervalle ; repère : %s, plus de la moitié des 12-17 ans équipés d'un smartphone. " % (fin, A["smart_seuil"]) + " ; ".join(
         "%s (%s) : %s" % (lib, pop, ", ".join("%d-%d %s" % (u, v, mots[statut(sg, bs)]) for u, v, sg, bs in seg)) for lib, pop, seg in L) + ". " + t["note"].split("tirets : sans test. ", 1)[1]
     longues = [r for r in L if min(u for u, *_ in r[2]) < c["seuil"]]  # partage au repère (forme, 18/11/2026)
     recentes = [r for r in L if min(u for u, *_ in r[2]) >= c["seuil"]]
@@ -962,6 +1118,36 @@ def csv_texte(c):
     vp = cx["vocabulaire_primaire"]
     w.writerow(["depp_reperes_cp_comprendre_des_mots_a_l_oral", "evolution du taux de maitrise", "2019-2025", vp["cp_comprendre_mots_oral_points_2019_2025"], "points (NI 26.18 ; evaluation exhaustive, sans test)"])
     w.writerow(["depp_reperes_cm1_trouver_des_synonymes", "evolution du taux de maitrise", "2023-2025", vp["cm1_synonymes_points_2023_2025"], "points (NI 26.18 ; evaluation exhaustive, sans test)"])
+    # Millésime 2026 des évaluations nationales (lot corrections-radar-2411, 25/11/2026)
+    ev = cx["evaluations_nationales_2026"]
+    q4, se, s6, rp = ev["quatrieme"], ev["seconde"], ev["sixieme"], ev["reperes"]
+    for a, v in sorted(q4["score_francais"].items()):
+        w.writerow(["depp_quatrieme_francais", "score", a, v, "points (250 en 2023 par construction ; DT 2025-E14 et 2026-E26 ; evaluation exhaustive, sans test)"])
+    for a, v in sorted(q4["lexique_satisfaisant"].items()):
+        w.writerow(["depp_quatrieme_lexique", "maitrise satisfaisante (test specifique de 15 questions)", a, v, "% des eleves (DT 2025-E14 et 2026-E26 ; sans test)"])
+    w.writerow(["depp_sixieme_francais", "score", "2026", s6["score_francais"]["2026"], "points (250 en 2017 ; DT 2026-E24)"])
+    for d, v in s6["satisfaisant_par_domaine_2026_ensemble"].items():
+        w.writerow(["depp_sixieme_2026_maitrise_satisfaisante", "Ensemble / " + d, "2026", v, "% des eleves (DT 2026-E24)"])
+    for g_, v in s6["lexique_satisfaisant_2026"].items():
+        if g_ != "Ensemble":
+            w.writerow(["depp_sixieme_2026_maitrise_satisfaisante", g_ + " / Lexique", "2026", v, "% des eleves (DT 2026-E24, tableau 19 ; groupes d'IPS : 20 % des colleges chacun)"])
+    for a, v in sorted(se["deux_voies"].items()):
+        w.writerow(["depp_test_seconde_francais", "deux voies", a, v, "points (250 en 2019 ; DT 2026-E27)"])
+    w.writerow(["depp_test_seconde_francais", "GT", "2026", se["GT_2026"], "points (250 en 2019 ; DT 2026-E27)"])
+    w.writerow(["depp_test_seconde_francais", "Pro", "2026", se["Pro"]["2026"], "points (250 en 2019 ; DT 2026-E27)"])
+    for voie, k in (("GT (domaine lexique)", "lexique_GT"), ("Pro (test specifique, depuis 2025)", "lexique_Pro_test_specifique_depuis_2025")):
+        for a, v in sorted(se[k].items()):
+            w.writerow(["depp_seconde_lexique", voie + " / maitrise satisfaisante", a, v, "% des eleves (DT 2026-E27 ; sans test)"])
+    w.writerow(["depp_reperes_cp_comprendre_des_mots_entendus", "evolution du taux de maitrise", "2019-2026", rp["cp_comprendre_mots_entendus_points_2019_2026"], "points (DT 2026-E19 ; libelle 2025 : comprendre des mots a l'oral ; sans test)"])
+    w.writerow(["depp_reperes_cm1_trouver_des_synonymes", "evolution du taux de maitrise", "2023-2026", rp["cm1_synonymes_points_2023_2026"], "points (DT 2026-E22 ; sans test)"])
+    w.writerow(["depp_reperes_cm1_trouver_des_mots_de_la_meme_famille", "evolution du taux de maitrise", "2023-2026", rp["cm1_meme_famille_points_2023_2026"], "points (DT 2026-E22 ; sans test)"])
+    for niv, v in zip(("sixieme", "quatrieme", "seconde GT", "seconde Pro"), participations({"X": X, "six": X["sixieme"]})):
+        w.writerow(["depp_evaluations_2026_participation", niv + " / francais", "2026", v, "% des eleves (hors academie de Toulouse, absente en 2026)"])
+    for grp, lib in (("a_l_heure", "eleves a l'heure"), ("en_retard", "eleves en retard")):
+        s_ = cx["cedre_college_age"][grp]
+        for a in ("2015", "2021"):
+            w.writerow(["depp_cedre_fin_college", lib + " / part", a, s_["part"][a], "% des eleves (NI 22.29, figure 3)"])
+            w.writerow(["depp_cedre_fin_college", lib + " / score", a, s_["score"][a], "points (250 en 2015)" + (" ; evolution significative" if a == "2021" and s_["significatif_2021"] else "")])
     for a, v in sorted(cx["cedre_college_indice_social"]["ecart_premier_quatrieme_quart_points"].items()):
         w.writerow(["depp_cedre_fin_college", "ecart 4e quart - 1er quart d'indice social des colleges (texte de la DEPP)", a, v, "points ; baisses non significatives dans chaque quart (NI 22.29)"])
     for k, v in cx["ocde_indice_plaisir_2000_2009"].items():
@@ -1012,7 +1198,7 @@ def main() -> int:
         return 0
     X = c["X"]
     payload = {"meta": {"page": "https://" + PAGE_URL, "licence": "CC BY 4.0",
-                        "champ": "France ; élèves de CM1, CM2, sixième, troisième, seconde ; jeunes de 15 ans (PISA) ; 15-24 ans (enquêtes Pratiques culturelles)",
+                        "champ": "France ; élèves de CP, CM1, CM2, sixième, quatrième, troisième, seconde ; jeunes de 15 ans (PISA) ; 15-24 ans (enquêtes Pratiques culturelles)",
                         "source_calcul": "calcul de l'auteur (protocole écrit avant calcul) ; extrait figé scripts/sources_langue_eleves/ (SHA256SUMS)"},
                **{k: v for k, v in X.items() if k not in ("releve_le",)},
                "affichage": A}

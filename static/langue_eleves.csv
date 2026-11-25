@@ -194,6 +194,46 @@ pisa_numerique_loisir_week_end,plus_de_5h / part,2025,28.26,% des repondants (ca
 pisa_numerique_loisir_week_end,plus_de_5h / lecture,2025,464.75,points PISA (calcul)
 depp_reperes_cp_comprendre_des_mots_a_l_oral,evolution du taux de maitrise,2019-2025,1.7,"points (NI 26.18 ; evaluation exhaustive, sans test)"
 depp_reperes_cm1_trouver_des_synonymes,evolution du taux de maitrise,2023-2025,-1.7,"points (NI 26.18 ; evaluation exhaustive, sans test)"
+depp_quatrieme_francais,score,2023,250.0,"points (250 en 2023 par construction ; DT 2025-E14 et 2026-E26 ; evaluation exhaustive, sans test)"
+depp_quatrieme_francais,score,2024,248.0,"points (250 en 2023 par construction ; DT 2025-E14 et 2026-E26 ; evaluation exhaustive, sans test)"
+depp_quatrieme_francais,score,2025,247.0,"points (250 en 2023 par construction ; DT 2025-E14 et 2026-E26 ; evaluation exhaustive, sans test)"
+depp_quatrieme_francais,score,2026,243.0,"points (250 en 2023 par construction ; DT 2025-E14 et 2026-E26 ; evaluation exhaustive, sans test)"
+depp_quatrieme_lexique,maitrise satisfaisante (test specifique de 15 questions),2024,67.3,% des eleves (DT 2025-E14 et 2026-E26 ; sans test)
+depp_quatrieme_lexique,maitrise satisfaisante (test specifique de 15 questions),2025,67.3,% des eleves (DT 2025-E14 et 2026-E26 ; sans test)
+depp_quatrieme_lexique,maitrise satisfaisante (test specifique de 15 questions),2026,65.3,% des eleves (DT 2025-E14 et 2026-E26 ; sans test)
+depp_sixieme_francais,score,2026,255.0,points (250 en 2017 ; DT 2026-E24)
+depp_sixieme_2026_maitrise_satisfaisante,Ensemble / Compréhension de l'oral,2026,59.4,% des eleves (DT 2026-E24)
+depp_sixieme_2026_maitrise_satisfaisante,Ensemble / Grammaire,2026,49.2,% des eleves (DT 2026-E24)
+depp_sixieme_2026_maitrise_satisfaisante,Ensemble / Lexique,2026,43.3,% des eleves (DT 2026-E24)
+depp_sixieme_2026_maitrise_satisfaisante,Ensemble / Orthographe,2026,42.1,% des eleves (DT 2026-E24)
+depp_sixieme_2026_maitrise_satisfaisante,Ensemble / Compréhension de l'écrit,2026,42.1,% des eleves (DT 2026-E24)
+depp_sixieme_2026_maitrise_satisfaisante,Groupe d'IPS 1 / Lexique,2026,25.4,"% des eleves (DT 2026-E24, tableau 19 ; groupes d'IPS : 20 % des colleges chacun)"
+depp_sixieme_2026_maitrise_satisfaisante,Groupe d'IPS 5 / Lexique,2026,61.0,"% des eleves (DT 2026-E24, tableau 19 ; groupes d'IPS : 20 % des colleges chacun)"
+depp_test_seconde_francais,deux voies,2019,251.0,points (250 en 2019 ; DT 2026-E27)
+depp_test_seconde_francais,deux voies,2021,260.0,points (250 en 2019 ; DT 2026-E27)
+depp_test_seconde_francais,deux voies,2025,251.0,points (250 en 2019 ; DT 2026-E27)
+depp_test_seconde_francais,deux voies,2026,249.0,points (250 en 2019 ; DT 2026-E27)
+depp_test_seconde_francais,GT,2026,262.0,points (250 en 2019 ; DT 2026-E27)
+depp_test_seconde_francais,Pro,2026,207.0,points (250 en 2019 ; DT 2026-E27)
+depp_seconde_lexique,GT (domaine lexique) / maitrise satisfaisante,2025,56.2,% des eleves (DT 2026-E27 ; sans test)
+depp_seconde_lexique,GT (domaine lexique) / maitrise satisfaisante,2026,55.8,% des eleves (DT 2026-E27 ; sans test)
+depp_seconde_lexique,"Pro (test specifique, depuis 2025) / maitrise satisfaisante",2025,46.5,% des eleves (DT 2026-E27 ; sans test)
+depp_seconde_lexique,"Pro (test specifique, depuis 2025) / maitrise satisfaisante",2026,45.4,% des eleves (DT 2026-E27 ; sans test)
+depp_reperes_cp_comprendre_des_mots_entendus,evolution du taux de maitrise,2019-2026,1.2,points (DT 2026-E19 ; libelle 2025 : comprendre des mots a l'oral ; sans test)
+depp_reperes_cm1_trouver_des_synonymes,evolution du taux de maitrise,2023-2026,-2.2,points (DT 2026-E22 ; sans test)
+depp_reperes_cm1_trouver_des_mots_de_la_meme_famille,evolution du taux de maitrise,2023-2026,-1.5,points (DT 2026-E22 ; sans test)
+depp_evaluations_2026_participation,sixieme / francais,2026,91.0,"% des eleves (hors academie de Toulouse, absente en 2026)"
+depp_evaluations_2026_participation,quatrieme / francais,2026,89.0,"% des eleves (hors academie de Toulouse, absente en 2026)"
+depp_evaluations_2026_participation,seconde GT / francais,2026,89.0,"% des eleves (hors academie de Toulouse, absente en 2026)"
+depp_evaluations_2026_participation,seconde Pro / francais,2026,81.0,"% des eleves (hors academie de Toulouse, absente en 2026)"
+depp_cedre_fin_college,eleves a l'heure / part,2015,83.1,"% des eleves (NI 22.29, figure 3)"
+depp_cedre_fin_college,eleves a l'heure / score,2015,255.3,points (250 en 2015)
+depp_cedre_fin_college,eleves a l'heure / part,2021,88.5,"% des eleves (NI 22.29, figure 3)"
+depp_cedre_fin_college,eleves a l'heure / score,2021,251.5,points (250 en 2015) ; evolution significative
+depp_cedre_fin_college,eleves en retard / part,2015,16.9,"% des eleves (NI 22.29, figure 3)"
+depp_cedre_fin_college,eleves en retard / score,2015,223.7,points (250 en 2015)
+depp_cedre_fin_college,eleves en retard / part,2021,11.5,"% des eleves (NI 22.29, figure 3)"
+depp_cedre_fin_college,eleves en retard / score,2021,209,points (250 en 2015) ; evolution significative
 depp_cedre_fin_college,ecart 4e quart - 1er quart d'indice social des colleges (texte de la DEPP),2015,30.0,points ; baisses non significatives dans chaque quart (NI 22.29)
 depp_cedre_fin_college,ecart 4e quart - 1er quart d'indice social des colleges (texte de la DEPP),2021,30.0,points ; baisses non significatives dans chaque quart (NI 22.29)
 ocde_indice_plaisir_de_lire_france,evolution 2000-2009 / garcons,2000-2009,0.107,"indice (erreur type 0.039 ; PISA 2018 vol. II, tab. II.B1.8.5)"

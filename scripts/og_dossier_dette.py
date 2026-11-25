@@ -1056,7 +1056,7 @@ def carte_langue() -> None:
         fail("carte langue : « environ un dixième de la hausse » n'est plus vrai dans les données")
     carte("og-langue-eleves.jpg",
           ["Les élèves maîtrisent-ils", "moins bien la langue ?"],
-          "Même dictée : %s erreurs de plus, dont %s sur l'orthographe des mots." % (A["h_tot"], A["h_lex"]),
+          "Même dictée : %s erreurs de plus, dont environ %s sur l'orthographe des mots." % (A["h_tot"], A["h_lex"]),
           "DEPP, NI 22.37 · calcul de l'auteur · CC BY 4.0",
           "stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/",
           lambda d: figure_langue_mini(d, A, j),
