@@ -50,14 +50,14 @@ def main() -> int:
     E = j["affichage_en"]
     og.carte("og-delais-promesse-en.jpg",
              ["At least %s years to" % E["duree_chiffre"], "train a GP in France"],
-             "%s a presidential term, under the %s rules." % ({"two": "Twice", "three": "Three times"}.get(E["nmax"], E["nmax"].capitalize() + " times"), E["an_reforme"]),
+             "%s a presidential term, for residents starting in %s or later." % ({"two": "Twice", "three": "Three times"}.get(E["nmax"], E["nmax"].capitalize() + " times"), E["an_reforme"]),
              "Texts in force (Légifrance) · DREES · ONDPS · CC BY 4.0",
              "stephane-lalut.com/en/can-a-campaign-promise-produce-results-within-five-years/",
              lambda d: barres(d, c, "en"),
              [(BLEU_CLAIR, "Residency: %s years" % E["mg"]), (og.C1, "Term: %s years" % E["mandat"])])
     og.carte("og-delais-promesse.jpg",
              ["Au moins %s ans pour" % A["duree_chiffre"], "former un généraliste"],
-             "%s fois un mandat, aux règles de %s." % (A["nmax"].capitalize(), A["an_reforme"]),
+             "%s fois un mandat, pour les internes entrés à partir de %s." % (A["nmax"].capitalize(), A["an_reforme"]),
              "Textes en vigueur (Légifrance) · DREES · ONDPS · CC BY 4.0",
              "stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/",
              lambda d: barres(d, c),

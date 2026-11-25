@@ -1,12 +1,12 @@
-# relu le 2026-11-18 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de 8aacc230 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-25 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de e0eaeda4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can a campaign promise produce results within five years?
-The test case of training general practitioners in France.
-A decision that raises the number of medical students admitted does not reach its final result within the term that takes it.
-A general practitioner is trained in at least ten years from the first year, twice the length of a presidential term (rules applying since the 2023 academic year).
-Such a decision can still act before the diploma, since residents provide care under supervision, but not before the additional students admitted have reached residency.
-And the number of students admitted does not depend on a single signature: the State sets a target, and each university votes its places.
-Page updated 18 November 2026
+Can a president who wants more doctors trained in France improve access to care before the end of the term?
+For students who begin their general practice residency from the 2023 academic year onwards, training takes at least ten years from the first year of medical studies, twice the length of a presidential term: an increase in admissions at the start of medical studies therefore cannot produce new qualified general practitioners within the same term.
+Effects on care remain possible before the diploma, because from the second cycle onwards, even before residency, students take part in hospital and outpatient activity, under the responsibility of doctors.
+But this participation does not by itself establish better access to care, and the training timetable cannot date such an improvement.
+And the number of students admitted does not depend on a single signature: the State sets national training targets, and universities determine their intake capacities.
+Page updated 25 November 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 Suppose a decision is taken today to train more doctors.
@@ -22,9 +22,9 @@ The presidential term lasts five years.
 Minimum durations written in the texts in force, without repeating a year, interruption or alternative-entry route.
 Comparison of scale only: it measures neither the effect of a policy nor the date on which its first effects can appear.
 The finding in one sentence.
-Under the rules applying since the 2023 academic year, the standard training pathway to become a general practitioner in France takes at least ten years from the first year, twice the length of a presidential term.
+For students who entered residency from the 2023 academic year onwards, the standard training pathway to become a general practitioner in France takes at least ten years from the first year, twice the length of a presidential term.
 DownloadCiteData
-This length is that of a diploma, not the delay of an effect.
+This is the length of a training programme, not the time a public policy takes to produce its effects.
 For the ordinary route, from admission to the second year of the first cycle, at least nine years of training remain.
 Some alternative-entry routes, open to candidates coming from other courses, allow direct admission to the third year; the aggregated series presented here do not allow their number to be isolated.
 For the national observatory of the demography of the health professions (ONDPS), the targets set in 2021 likewise concern “des professionnels en exercice 9 à 11 ans plus tard selon la durée de la formation” [our translation: “professionals in practice 9 to 11 years later depending on the length of the training”].
@@ -80,10 +80,12 @@ Each year, an order of the ministers responsible for health and higher education
 In general practice, the order for 2023-2024, the last year of the national ranking examinations (the national competition that allocated students to residency posts), opened 3,856 posts; the first year of the reform of access to residency opened 3,221 (2024-2025), a low year, then 3,593 (2025-2026) and 4,070 (2026-2027).
 The rise therefore depends on the starting point: 849 more open posts (+26.4%) since the low of 2024-2025, 214 (+5.5%) since 2023-2024, and the two access regimes do not compare like for like.
 Across all specialties, the number of open posts went from 9,485 in 2023-2024 to 7,974 in 2024-2025, then to 10,260 in 2026-2027: the share of general practice does not grow (40.7% of posts in 2023-2024, 39.7% in 2026-2027).
-This lever can act sooner than the national target: a general-practice resident obtains the diploma at the earliest four years after entering residency, whereas a student admitted to the second year does so at the earliest nine years after admission.
+This lever can act sooner than an increase in admissions: for students who entered residency from the 2023 academic year onwards, a general-practice resident can qualify no earlier than four years after entering residency.
+A student admitted to the second year and subject to the same rules can qualify no earlier than nine years after admission.
 But these orders count open posts, not filled ones: no official source read for this page says how many remain vacant.
 Can the State impose more places?
 Within the legal framework currently in force, it sets the target, not the places.
+This concerns admissions at the start of medical studies, whose intake capacities the universities determine; residency posts, by contrast, are set each year by ministerial order.
 Since 29 June 2025, if the regional health agency and the territorial health councils consider that a university’s capacities do not match the targets it set itself, “cette dernière peut être appelée à mettre en œuvre des mesures visant à accroître ses capacités d’accueil” [our translation: “the latter may be called upon to implement measures to increase its intake capacities”]: the law says “may”, not “must”.
 It leaves to a decree the terms of such an increase, “en particulier en matière de moyens financiers et humains dégagés notamment par l’Etat” [our translation: “in particular as regards the financial and human resources made available, notably by the State”].
 The word “may” alone does not establish the absence of any obligation: one could arise from other texts or from these implementing arrangements.
@@ -105,13 +107,18 @@ Two breaks can be seen in the figure.
 From 2011 (partly from 2010), the DREES series adds to the main numerus clausus the alternative-entry routes (passerelles) and reorientation entries (droit au remords).
 In 2021, the numerus clausus disappears and the numbers come from the ONDPS, which records admissions with the universities: this step is not a jump in one and the same measure.
 Do students provide care before the end of the curriculum?
-Yes, and the texts organise it during residency: in the first year, residents do their placements in hospital and in ambulatory care, “toujours sous supervision étroite” [our translation: “always under close supervision”] (interministerial instruction of 21 May 2026); in the third year, they already do an ambulatory primary-care placement under supervised autonomy (same instruction).
+Yes, from the second cycle onwards (the stage of medical studies that precedes residency): from the first year of the second cycle until their appointment as residents, hospital medical students take part in hospital and outpatient activity, and their placements are carried out under the responsibility of doctors (Public Health Code, art.
+R.
+6153-46 and R.
+6153-51).
+Residency goes further: in the first year, residents do their placements in hospital and in ambulatory care, “toujours sous supervision étroite” [our translation: “always under close supervision”] (interministerial instruction of 21 May 2026); in the third year, they already do an ambulatory primary-care placement under supervised autonomy (same instruction).
 The last year of general practice goes further.
 “La dernière année du diplôme d’études spécialisées de médecine générale est effectuée en stage, sous un régime d’autonomie supervisée” [our translation: “The last year of the diploma of specialised studies in general practice is carried out as an internship, under a regime of supervised autonomy”], in ambulatory practice alongside general practitioners, and as a priority in areas where the supply of care is insufficient or access to care difficult (Education Code, art.
 L632-2); a hospital placement is possible in that year only exceptionally.
 During this last year, the general practice resident works as a docteur junior, a resident in the final, supervised phase of training.
 “Les actes réalisés sous ce régime le sont par le docteur junior seul.” [our translation: “The acts performed under this regime are performed by the docteur junior alone.”] A practitioner can be called on at any time, and the act remains under that practitioner’s responsibility: alone for the act, then, but never without recourse.
 The texts organise this care; they do not measure its share of all care.
+Supervised participation does not by itself prove a net increase in the capacity to provide care, nor better access to care.
 The texts on residency and the docteur junior, quoted word for word
 The first year of residency (instruction of 21 May 2026): “L’étudiant de troisième cycle, exerçant sous le statut d’interne, effectue des stages qui se déroulent en milieu hospitalier et en milieu ambulatoire, afin de découvrir la prise en charge globale du patient et de commencer à développer une autonomie progressive, toujours sous supervision étroite.” [our translation: “The third-cycle student, working with the status of intern, carries out internships in hospital and in ambulatory settings, in order to discover the overall care of the patient and to begin to develop progressive autonomy, always under close supervision.”]
 The last year (Education Code, art.
@@ -150,11 +157,12 @@ One case shows that a clock can outlast the term of office; it does not say how 
 How should a promise that depends on training be judged?
 Three questions separate what such a promise can change during the term from what it can only set in motion.
 The clock of the texts: what length of training does the law impose, and since when?
-Here, at least ten years from the first year (rules applying since the 2023 academic year).
+Here, at least ten years from the first year (for students who entered residency from the 2023 academic year onwards).
 The clock of capacity: who decides the number of places, and are they already filled?
-Here, each university, every year, within a State target; according to the ONDPS, they almost were from 2021 to 2025.
-The clock of the effect: what acts before the diploma, and what can only be measured afterwards?
-Here, residents provide care under supervision during their training, but an additional student admitted only enters residency after the second cycle; access to care depends on factors that none of these series measures.
+Here, each university, every year, within a State target; according to the ONDPS, intake capacities were almost saturated from 2021 to 2025.
+The clock of the effect: what effects can emerge before the diploma, and which of them can the data measure?
+Here, students take part in hospital and outpatient activity from the second cycle onwards, then during residency: an increase in admissions can therefore translate into additional participation in care before the diploma, as the additional students admitted reach these stages of training.
+The data presented here establish neither a net increase in the capacity to provide care nor its effect on access to care, which depends on factors that none of these series measures.
 The same grid applies to any promise whose result depends on people to be trained, provided the texts of each profession are read.
 The clock of a promise Un président peut-il tenir ses promesses?, the author’s book, in French: contents, excerpts and reviews →
 Frequently asked questions

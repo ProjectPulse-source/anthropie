@@ -768,6 +768,10 @@ Q2 = {  # jeton -> (portée, motif exigé)
     **{"pg_part_%s" % a: ("phrase", r"\bpart\b|share") for a in ("24", "25", "26")}, "onp": ("phrase", r"objectif|target"),
     "places_1972": ("phrase", r"pourvu|filled"), "places_min": ("phrase", r"pourvu|filled"),
     "rapport_baisse": ("phrase", r"pourvu|filled"), "admis_2016_2020": ("phrase", r"numerus clausus"),
+    # 24/11/2026 (lot corrections-radar-2411) : la durée de l'internat de médecine générale ne vaut que pour les
+    # étudiants entrés en internat à partir de la rentrée de la réforme (loi n° 2022-1616, art. 37, II) ; une phrase
+    # qui la donne sans cette cohorte la laisse lire pour tous les internes en cours.
+    "pg_internat": ("phrase", r"à partir de la rentrée|academic year"),
 }
 T_PREVU = re.compile(r"\bprévu|\bdoit commencer|\bdevait commencer|\bscheduled|\bplanned|\bis (?:due|set) to", re.I)
 # Date passée (T3) : prévu AU PASSÉ, jamais au futur, et aucun début constaté sans preuve archivée (PREUVE_DEBUT).
@@ -827,6 +831,10 @@ def prose(textes: dict, an_reforme: int, passee: bool = False, preuve: bool = Fa
             if "duree" in jetons and not ((str(an_reforme) in JETON.sub(" ", ph) or "an_reforme" in jetons)
                                           and re.search(r"première année|first year", JETON.sub(" ", ph), re.I)):
                 raise Arret("T2 %s : duree du cursus sans « premiere annee » ou sans la rentree %d : %s" % (nom, an_reforme, ph[:90]))
+            # 25/11/2026 (lot corrections-radar-2411, N08) : la duree ne vaut que pour les etudiants entres en internat a partir
+            # de la rentree de la reforme ; « regles applicables depuis la rentree » ne dit pas a qui (contre-expertise P0).
+            if "duree" in jetons and not re.search(r"internat|residency", JETON.sub(" ", ph), re.I):
+                raise Arret("T2 %s : duree du cursus sans sa population (etudiants entres en internat) : %s" % (nom, ph[:90]))
             if "debut_conso" in jetons and not passee and not T_PREVU.search(ph):
                 raise Arret("T3 %s : la date du jeton debut_conso n'est pas dite prevue : %s" % (nom, ph[:90]))
             if "debut_conso" in jetons and passee and (not T_PREVU_PASSE.search(ph) or T_FUTUR.search(ph)):
@@ -1306,6 +1314,14 @@ MUTATIONS = [  # (nom, mutation, garde qui DOIT arrêter)
     ("part de la medecine generale en hausse (CHU et total releves ensemble)", _poste("2026", "mg", 1000, total_aussi=True), "P2"),
     ("postes de medecine generale 2025 au-dessus de 2026 (CHU et total releves ensemble)", _poste("2025", "mg", 500, total_aussi=True), "P3"),
     ("postes ouverts appeles pourvus", _page("fr", "En 2026, {del.pg_mg_26} postes de médecine générale ont été pourvus."), "Q2"),
+    ("duree du cursus sans la population (FR)",
+     _page("fr", "Un généraliste se forme en au moins {del.duree} ans depuis la première année (règles applicables depuis la rentrée {del.an_reforme})."), "T2"),
+    ("duree du cursus sans la population (EN)",
+     _page("en", "A GP is trained in at least {del.duree} years from the first year (rules applying since the {del.an_reforme} academic year)."), "T2"),
+    ("duree de l'internat sans la cohorte de la reforme (FR)",
+     _page("fr", "Un interne de médecine générale obtient son diplôme au plus tôt {del.pg_internat} ans après son entrée en internat."), "Q2"),
+    ("duree de l'internat sans la cohorte de la reforme (EN)",
+     _page("en", "A general-practice resident obtains the diploma at the earliest {del.pg_internat} years after entering residency."), "Q2"),
 ]
 
 
