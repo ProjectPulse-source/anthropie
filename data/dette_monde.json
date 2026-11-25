@@ -1,9 +1,9 @@
 {
- "releve_le": "2026-11-18",
+ "releve_le": "2026-11-25",
  "_licence": "CC BY 4.0 — compilation Stéphane Lalut ; sources Eurostat, OCDE, FMI, Banque mondiale ; les valeurs du FMI ne sont pas couvertes par la licence CC BY : ce producteur soumet leur réutilisation commerciale à autorisation",
  "meta": {
   "annee": "2025",
-  "releve_le": "2026-11-18",
+  "releve_le": "2026-11-25",
   "page": "https://stephane-lalut.com/dette-publique-comparaison-internationale/",
   "licence": "CC BY 4.0",
   "definitions": {
@@ -227,7 +227,7 @@
     "5": 3.3
    },
    "taux10": 3.34979,
-   "part_1an": 9.47173257144
+   "part_1an": 9.28228892079
   },
   {
    "code": "HR",
@@ -315,7 +315,7 @@
     "5": 6.18
    },
    "taux10": 3.27045,
-   "part_1an": 2.47002314872
+   "part_1an": 2.4333363105
   },
   {
    "code": "LT",
@@ -601,7 +601,7 @@
     "5": 3.88
    },
    "taux10": 2.44662,
-   "part_1an": 28.880702316
+   "part_1an": 28.6600139096
   }
  ],
  "statistiques": {
@@ -1301,10 +1301,10 @@
   "n_plus_charges_moins_endettes_mots": "six",
   "se_prix": "1,89 %",
   "de_prix": "1,82 %",
-  "fr_part_1an": "9,5 %",
+  "fr_part_1an": "9,3 %",
   "fr_ecart_taux": "1,36 point",
   "fr_taux10": "3,35 %",
-  "se_part_1an": "28,9 %",
+  "se_part_1an": "28,7 %",
   "se_ecart_taux": "0,56 point",
   "se_taux10": "2,45 %",
   "pt_part_1an": "21,5 %",
@@ -1472,10 +1472,10 @@
   "n_plus_charges_moins_endettes_mots": "six",
   "se_prix": "1.89%",
   "de_prix": "1.82%",
-  "fr_part_1an": "9.5%",
+  "fr_part_1an": "9.3%",
   "fr_ecart_taux": "1.36 percentage points",
   "fr_taux10": "3.35%",
-  "se_part_1an": "28.9%",
+  "se_part_1an": "28.7%",
   "se_ecart_taux": "0.56 percentage points",
   "se_taux10": "2.45%",
   "pt_part_1an": "21.5%",

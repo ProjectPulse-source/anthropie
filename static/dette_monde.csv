@@ -1,7 +1,7 @@
 ﻿niveau,comparabilite,pays,code,annee,zone_euro,stock_depart_pct_pib,stock_cloture_pct_pib,prix_taux_implicite_pct,recettes_pct_pib,charge_interets_pct_recettes,part_dette_moins_1an_pct,taux_10ans_pct
 europe,strictement comparable (Eurostat S.13),Grèce,EL,2025,oui,146.14,145.4,2.149,49.77,6.31,4.37,3.37
 europe,strictement comparable (Eurostat S.13),Italie,IT,2025,oui,131.03,136.7,2.937,48.01,8.01,10.87,3.59
-europe,strictement comparable (Eurostat S.13),France,FR,2025,oui,110.53,115.7,1.988,52.24,4.21,9.47,3.35
+europe,strictement comparable (Eurostat S.13),France,FR,2025,oui,110.53,115.7,1.988,52.24,4.21,9.28,3.35
 europe,strictement comparable (Eurostat S.13),Belgique,BE,2025,oui,100.50,108.1,2.253,49.22,4.60,8.85,3.17
 europe,strictement comparable (Eurostat S.13),Espagne,ES,2025,oui,95.89,100.5,2.495,42.94,5.57,5.19,3.21
 europe,strictement comparable (Eurostat S.13),Portugal,PT,2025,oui,87.79,89.2,2.226,43.01,4.54,21.52,3.08
@@ -16,12 +16,12 @@ europe,strictement comparable (Eurostat S.13),Croatie,HR,2025,oui,52.42,55.7,2.6
 europe,strictement comparable (Eurostat S.13),Pologne,PL,2025,non,51.40,59.6,4.876,43.61,5.75,3.15,5.52
 europe,strictement comparable (Eurostat S.13),Roumanie,RO,2025,non,49.99,58.9,5.627,35.63,7.90,6.96,6.96
 europe,strictement comparable (Eurostat S.13),Malte,MT,2025,oui,43.06,46.3,2.800,35.06,3.44,7.97,3.44
-europe,strictement comparable (Eurostat S.13),Lettonie,LV,2025,oui,43.06,46.2,2.528,42.83,2.54,2.47,3.27
+europe,strictement comparable (Eurostat S.13),Lettonie,LV,2025,oui,43.06,46.2,2.528,42.83,2.54,2.43,3.27
 europe,strictement comparable (Eurostat S.13),Pays-Bas,NL,2025,oui,41.97,44.7,1.729,43.58,1.67,11.62,2.80
 europe,strictement comparable (Eurostat S.13),Tchéquie,CZ,2025,non,40.69,44.2,3.196,41.14,3.16,5.65,4.29
 europe,strictement comparable (Eurostat S.13),Irlande,IE,2025,oui,35.78,34.8,1.358,24.04,2.02,6.86,2.89
 europe,strictement comparable (Eurostat S.13),Lituanie,LT,2025,oui,35.39,39.3,2.556,39.35,2.30,0.73,2.88
-europe,strictement comparable (Eurostat S.13),Suède,SE,2025,non,32.97,35.1,1.886,47.77,1.30,28.88,2.45
+europe,strictement comparable (Eurostat S.13),Suède,SE,2025,non,32.97,35.1,1.886,47.77,1.30,28.66,2.45
 europe,strictement comparable (Eurostat S.13),Danemark,DK,2025,non,28.63,27.2,2.777,,,4.42,2.33
 europe,strictement comparable (Eurostat S.13),Luxembourg,LU,2025,oui,24.79,26.0,1.393,46.90,0.74,2.02,2.90
 europe,strictement comparable (Eurostat S.13),Estonie,EE,2025,oui,22.35,24.0,2.159,43.61,1.11,12.04,3.31
