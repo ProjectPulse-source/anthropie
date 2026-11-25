@@ -1,1 +1,1 @@
-{{- partial "awp-list.html" .Page -}}
+{{- partial "awp-list.html" (dict "page" .Page "n" (int (.Get "n" | default 0))) -}}

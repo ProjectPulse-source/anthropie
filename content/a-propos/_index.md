@@ -70,35 +70,38 @@ presse_objets:
   terrestres-sous-le-cloud-la-fournaise: "Data centers"
   nonfiction-fressoz: "Transition énergétique"
   en-attendant-nadeau-christophers: "Profit et transition"
+statut: "Économiste · chercheur indépendant · essayiste"
+textes_choisis:  # maquette D2 (25/11/2026) : la phrase est RECOPIÉE du chapô de la fiche (phrase: 2 = seconde phrase)
+  - {slug: rfse-lemoine-chasseurs-detats, type: Recension}
+  - {slug: sociologie-du-travail-pugh, type: Recension}
+  - {slug: terrestres-sous-le-cloud-la-fournaise, type: Article}
+  - {slug: la-vie-des-idees-khalili, type: Recension, phrase: 2}
+  - {slug: alternatives-economiques-teletravail, type: Article}
+  - {slug: en-attendant-nadeau-muhlhoff, type: Recension}
+wall_sans_pages: true
 ---
 
-Stéphane Lalut est économiste, chercheur indépendant et essayiste. Il développe le cadre anthropique, l'hypothèse selon laquelle les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent&nbsp;: dans l'espace, dans le temps, ou entre groupes sociaux. Ce cadre structure une série de working papers et quatre de ses six livres&nbsp;; les deux autres sont consacrés à l'histoire des idées et à la littérature.
+<blockquote class="apropos-question">«&nbsp;Quand un système paraît résoudre un problème, quels coûts peut-il déplacer, et sur qui&nbsp;?&nbsp;»</blockquote>
 
-Ses recensions et ses articles paraissent dans des revues de sciences sociales, comme *Sociologie du travail* et la *Revue française de socio-économie*, et dans la presse intellectuelle, d'*En attendant Nadeau* à *La Vie des idées*. Du travail à la dette, de l'énergie à l'intelligence artificielle, il y pose la même question&nbsp;: quand un système paraît résoudre un problème, quels coûts peut-il déplacer, et sur qui&nbsp;?
+Cette question traverse ses travaux. Il en a fait un cadre d'analyse, le cadre anthropique&nbsp;: l'hypothèse que les systèmes sociaux déplacent le désordre plutôt qu'ils ne le résolvent — dans l'espace, dans le temps, ou entre groupes sociaux. De la dette publique aux inégalités, du travail aux transformations technologiques, ses recherches explorent ce que les solutions apportées aux problèmes collectifs rendent moins visible.
 
 {{< identifiants >}}
 
-{{< reperes-auteur >}}
+<div class="apropos-tete"><h2 id="dans-la-presse-et-les-revues" class="apropos-tete__titre section-title">Une même question, des terrains différents</h2></div>
 
-<div class="apropos-tete"><h2 id="auteur" class="apropos-tete__titre section-title">Auteur</h2><p class="apropos-tete__phrase">Les livres du corpus anthropique, puis les autres ouvrages.</p></div>
+{{< textes-choisis >}}
+
+<div class="apropos-tete"><h2 id="auteur" class="apropos-tete__titre section-title">Livres</h2></div>
 
 {{< mur-livres >}}
 
-Chaque fiche présente l'argument du livre, son sommaire et ses liens d'achat.
+<div class="apropos-tete"><h2 id="chercheur" class="apropos-tete__titre section-title">Recherche</h2></div>
 
-<div class="apropos-tete"><h2 id="dans-la-presse-et-les-revues" class="apropos-tete__titre section-title">Dans les revues et la presse intellectuelle</h2><p class="apropos-tete__phrase">Chaque tuile nomme ce dont parle le texte.</p></div>
+<p id="anthropie-working-papers" class="apropos-nature"><strong>Anthropie Working Papers</strong> — documents de travail en accès ouvert, déposés sur Zenodo avec DOI, sans évaluation par les pairs.</p>
 
-{{< mur-presse >}}
+{{< liste-awp n="3" >}}
 
-→ [Toutes les publications](/publications/)
-
-<div class="apropos-tete"><h2 id="chercheur" class="apropos-tete__titre section-title">Chercheur</h2></div>
-
-Comment ce travail se conduit et se publie hors institution — outils, exigences de méthode, position dans le champ — est détaillé sur la page [Chercheur indépendant](/chercheur-independant/).
-
-<h3 id="anthropie-working-papers" class="apropos-sous">Anthropie Working Papers</h3>
-
-{{< liste-awp >}}
+<p class="apropos-lien"><a href="/serie-awp/">Les working papers&nbsp;→</a><a href="/chercheur-independant/">Chercheur indépendant&nbsp;→</a></p>
 
 <div class="apropos-tete"><h2 id="contact" class="apropos-tete__titre section-title">Contact</h2></div>
 

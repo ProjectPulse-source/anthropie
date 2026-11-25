@@ -5,7 +5,11 @@
 {{- $isEn := eq .Lang "en" -}}
 <div class="home-section">
   <header class="page-header">
-    <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
+    {{- /* Maquette D2 (25/11/2026) : la page présente une personne ; le nom est le titre, « À propos » le surtitre,
+           le statut tient en une ligne (front matter `statut`), sans titre universitaire ni chiffres en vitrine. */ -}}
+    <p class="apropos-surtitre">{{ partial "fr-typo.html" .Title }}</p>
+    <h1 class="page-header__title">{{ site.Data.author.author.name }}</h1>
+    {{ with .Params.statut }}<p class="apropos-statut">{{ partial "fr-typo.html" . }}</p>{{ end }}
     {{- /* Pas de chapô visible : la description (meta, moteurs) répétait mot pour mot la première phrase du texte
            (auteur, 07/11/2026). Elle reste dans <head>. */ -}}
   </header>

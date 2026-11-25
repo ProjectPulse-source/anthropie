@@ -1,0 +1,34 @@
+{{- /* textes-choisis.html — « Une même question, des terrains différents » (page À propos, maquette D2, 25/11/2026).
+       Six textes choisis dans le front matter (`textes_choisis` : slug, type, phrase), lus dans leur fiche publiée :
+       revue, titre, et une phrase du chapô RECOPIÉE (1re par défaut, `phrase: 2` pour la seconde) — jamais rédigée
+       pour l'accroche (arbitrage 03_ARBITRAGE_A_PROPOS.md). Puis la ligne des revues et journaux, dérivée de toutes
+       les fiches (présence venue du dépôt), et le lien vers les publications.
+       Les fiches publications n'existent qu'en français : on lit toujours le site FR (comme presse-wall.html). */ -}}
+{{- $page := . -}}
+{{- $isEn := eq $page.Lang "en" -}}
+{{- $frSite := index site.Sites 0 -}}
+{{- $pubs := where (where $frSite.RegularPages "Type" "publications") "Params.source_type" "!=" "Blog" -}}
+{{- $pubsURL := "/publications/" | relLangURL -}}
+<div class="textes-choisis">
+{{- range $page.Params.textes_choisis -}}
+  {{- $p := $frSite.GetPage (printf "/publications/%s" .slug) -}}
+  {{- if not $p -}}{{- errorf "textes-choisis : fiche publications/%s introuvable (%s)" .slug $page.File.Path -}}{{- end -}}
+  {{- $chapo := cond $isEn ($p.Params.chapo_en | default $p.Params.chapo) $p.Params.chapo -}}
+  {{- $phrases := split (replaceRE `([.!?])\s+` "$1§" ($chapo | plainify)) "§" -}}
+  {{- $n := sub (int (.phrase | default 1)) 1 -}}
+  {{- $phrase := index $phrases $n -}}
+  {{- $type := cond $isEn (cond (eq .type "Recension") "Review" "Article") .type }}
+  <a class="textes-choisis__carte" href="{{ $pubsURL }}#{{ .slug }}">
+    <span class="textes-choisis__source">{{ $type }} · <i>{{ $p.Params.revue }}</i></span>
+    <span class="textes-choisis__titre">{{ partial "fr-typo.html" $p.Title }}</span>
+    <span class="textes-choisis__phrase">{{ partial "fr-typo.html" $phrase }}</span>
+  </a>
+{{- end }}
+</div>
+{{- $revues := slice -}}{{- $vus := slice -}}
+{{- range $pubs.ByDate.Reverse -}}
+  {{- $k := lower .Params.revue -}}
+  {{- if not (in $vus $k) -}}{{- $vus = $vus | append $k -}}{{- $revues = $revues | append .Params.revue -}}{{- end -}}
+{{- end }}
+<p class="apropos-parus">{{ if $isEn }}Reviews and articles published in{{ else }}Recensions et articles parus dans{{ end }} {{ range $i, $r := $revues }}{{ if $i }} · {{ end }}<i>{{ $r }}</i>{{ end }}.</p>
+<p class="apropos-lien"><a href="{{ $pubsURL }}">{{ if $isEn }}All publications{{ else }}Toutes les publications{{ end }}&nbsp;→</a></p>

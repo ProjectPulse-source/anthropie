@@ -58,35 +58,38 @@ presse_objets:
   terrestres-sous-le-cloud-la-fournaise: "Data centres"
   nonfiction-fressoz: "Energy transition"
   en-attendant-nadeau-christophers: "Profit and transition"
+statut: "Economist · independent researcher · essayist"
+textes_choisis:  # maquette D2 (25/11/2026) : la phrase est RECOPIÉE du chapô de la fiche (phrase: 2 = seconde phrase)
+  - {slug: rfse-lemoine-chasseurs-detats, type: Recension}
+  - {slug: sociologie-du-travail-pugh, type: Recension}
+  - {slug: terrestres-sous-le-cloud-la-fournaise, type: Article}
+  - {slug: la-vie-des-idees-khalili, type: Recension, phrase: 2}
+  - {slug: alternatives-economiques-teletravail, type: Article}
+  - {slug: en-attendant-nadeau-muhlhoff, type: Recension}
+wall_sans_pages: true
 ---
 
-Stéphane Lalut is an economist, independent researcher and essayist. He develops the framework of anthropy: the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups. The framework runs through a series of working papers and four of his six books; the other two are devoted to the history of ideas and to literature.
+<blockquote class="apropos-question">“When a system appears to solve a problem, what costs can it displace, and onto whom?”</blockquote>
 
-His reviews and articles appear in social science journals such as *Sociologie du travail* and the *Revue française de socio-économie*, and in the French-language intellectual press, from *En attendant Nadeau* to *La Vie des idées*. From work to debt, from energy to artificial intelligence, he asks the same question: when a system appears to solve a problem, what costs may it displace, and onto whom?
+This question runs through his work. He has made it a framework of analysis, the framework of anthropy: the hypothesis that social systems displace disorder rather than resolve it — in space, in time, or between social groups. From public debt to inequality, from work to technological change, his research explores what the solutions to collective problems make less visible.
 
 {{< identifiants >}}
 
-{{< reperes-auteur >}}
+<div class="apropos-tete"><h2 id="in-the-press-and-in-journals" class="apropos-tete__titre section-title">One question, many fields</h2></div>
 
-<div class="apropos-tete"><h2 id="author" class="apropos-tete__titre section-title">Author</h2><p class="apropos-tete__phrase">The books of the anthropic corpus, then the other works.</p></div>
+{{< textes-choisis >}}
+
+<div class="apropos-tete"><h2 id="author" class="apropos-tete__titre section-title">Books</h2></div>
 
 {{< mur-livres >}}
 
-Each page sets out the book's argument, its contents and where to buy it.
+<div class="apropos-tete"><h2 id="researcher" class="apropos-tete__titre section-title">Research</h2></div>
 
-<div class="apropos-tete"><h2 id="in-the-press-and-in-journals" class="apropos-tete__titre section-title">In journals and the intellectual press</h2><p class="apropos-tete__phrase">Each tile names what the text is about.</p></div>
+<p id="anthropie-working-papers" class="apropos-nature"><strong>Anthropie Working Papers</strong> — open-access working papers deposited on Zenodo with a DOI, not peer-reviewed.</p>
 
-{{< mur-presse >}}
+{{< liste-awp n="3" >}}
 
-→ [All publications](/en/publications/)
-
-<div class="apropos-tete"><h2 id="researcher" class="apropos-tete__titre section-title">Researcher</h2></div>
-
-Each paper in the series is deposited on Zenodo with its own DOI.
-
-<h3 id="anthropie-working-papers" class="apropos-sous">Anthropie Working Papers</h3>
-
-{{< liste-awp >}}
+<p class="apropos-lien"><a href="/en/serie-awp/">The working papers&nbsp;→</a><a href="/en/independent-researcher/">Independent researcher&nbsp;→</a></p>
 
 <div class="apropos-tete"><h2 id="contact" class="apropos-tete__titre section-title">Contact</h2></div>
 
