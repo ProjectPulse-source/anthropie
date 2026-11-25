@@ -237,3 +237,11 @@
 .apropos-nature { margin: 0.4rem 0 0.8rem; font-size: 0.95rem; color: var(--color-text-muted); }
 // Titre de section seul (sans phrase) : toute la largeur, sinon il se coupe dans la colonne de 11rem.
 .apropos-tete > .apropos-tete__titre:only-child { grid-column: 1 / -1; }
+
+// Mention d'un livre : rang d'édition et pagination. Point médian entre les parts sur ordinateur ; sur téléphone,
+// une part par ligne et pas de point (le point restait seul en fin de ligne, 25/11/2026).
+.wall-tile__meta-part + .wall-tile__meta-part::before { content: " · "; }
+@media (max-width: 760px) {
+  .wall-tile__meta-part { display: block; }
+  .wall-tile__meta-part + .wall-tile__meta-part::before { content: none; }
+}

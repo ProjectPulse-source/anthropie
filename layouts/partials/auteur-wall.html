@@ -52,7 +52,9 @@
         {{- $parts := slice -}}
         {{- with $rang }}{{ $parts = $parts | append . }}{{ end -}}
         {{- with $b.Params.pages }}{{ $parts = $parts | append (printf "%v pages" .) }}{{ end -}}
-        {{- $meta := delimit $parts " · " -}}
+        {{- /* Une part par élément (rang d'édition, pagination) : le point médian est posé en CSS, et disparaît sur
+               téléphone, où chaque part prend sa ligne (sinon « Nouvelle édition · » laissait le point seul en fin
+               de ligne, 25/11/2026). */ -}}
         {{- /* Une ligne éditoriale ne se devine pas : on ne la fabrique pas, on
                la réclame. Non bloquant — mieux vaut une tuile nue qu'un livre absent. */ -}}
         {{- if not $line -}}
@@ -66,7 +68,7 @@
                  Même signal que partials/livre-porte.html : ne pas laisser croire
                  qu'une traduction existe. ANTHROPY, native EN, ne le porte pas. */ -}}
           {{- if and (eq site.Language.Lang "en") (eq $b.Lang "fr") }}<span class="wall-tile__lang"><em>In French</em></span>{{ end }}
-          {{- with $meta }}<span class="wall-tile__meta">{{ partial "fr-typo.html" . }}</span>{{ end }}
+          {{- with $parts }}<span class="wall-tile__meta">{{ range . }}<span class="wall-tile__meta-part">{{ partial "fr-typo.html" . }}</span>{{ end }}</span>{{ end }}
           {{- with $line }}<span class="wall-tile__line">{{ partial "fr-typo.html" . }}</span>{{ end }}
         </span>
       </a>
