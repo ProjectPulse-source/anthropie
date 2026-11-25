@@ -46,4 +46,8 @@ main .awp-registre { list-style: none; padding: 0 !important; margin: 0 !importa
 // Identifiants (ORCID, Scholar…) au téléphone : des liens de ~15 px de haut ; cibles tactiles de 44 px (07/11/2026).
 @media (max-width: 600px) {
   .credibility-strip a { display: inline-flex; align-items: center; min-height: 44px; }
+  // Sans les ronds au téléphone (auteur, 26/11/2026) : la bande passe à la ligne et un rond restait seul en fin de
+  // ligne ; l'écart du flex (18 px) sépare seul les noms. Pas d'écart entre les rangées : les cibles de 44 px suffisent.
+  .credibility-strip__sep { display: none; }
+  .credibility-strip { row-gap: 0; }
 }
