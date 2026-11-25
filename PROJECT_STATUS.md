@@ -61,6 +61,16 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-24/25 — Relié Livresque à l'achat et suivi ; page « À propos » refondue (D2)
+- Relié : bouton et menu de la fiche, `workExample` Hardcover, phrase de `/offrir-un-livre-de-culture-generale/` (shortcode
+  `amazon-lien`, lien balisé) ; balise Amazon Attribution `FR-livresque-relie` (`data/attribution_fr.yaml`) ; `works.yaml`
+  bloc `hardcover` (Wikidata `Q142274168`).
+- « À propos » D2 (FR, EN) : nom en titre, statut en une ligne, question en exergue, six textes choisis (`textes_choisis`,
+  partial `textes-choisis.html`, phrase recopiée du chapô), livres sans pagination (`wall_sans_pages`), trois derniers AWP
+  (`liste-awp n="3"`) ; repères chiffrés et mur presse retirés de la page ; ancres conservées. Arbitrages :
+  `D:\PRO_PROMOTION\MAQUETTES_APROPOS_2026-11-25\`. Dossiers antérieurs cités plus bas (`A_PROPOS_2026-11-07`,
+  `MAQUETTES_ACCUEIL_2026-11-07`, `…_AXES_2026-11-04`) déplacés dans `06_PROMOTION\_ARCHIVE\` le 25/11.
+
 ### 2026-11-24 — Livresque des mots CORR14 (téléversée sur KDP par l'auteur) : 1 390 auteurs, broché 678 p.
 - Livre : 51 corrections de citations (dépôt livresque `3b87569`), couverture « 1 390 auteurs ».
 - Site : `data/works.yaml` (pages 680 → 678, auteurs 1 387 → 1 390), fiche (`pages`), `/livresque/methode-et-corpus/`,
