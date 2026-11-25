@@ -35,7 +35,8 @@
 {{- /* Garde de prose : « plus de 100 % en <année de fin> » n'est vrai que si la dette a franchi 100 % au plus tard cette
        année-là. Si une révision des séries déplace l'un ou l'autre, la phrase est à réécrire : le build s'arrête. */ -}}
 {{- if gt (int $v.s100) (int $v.an) }}{{ errorf "accueil-e : la dette franchit 100 %% en %s, apres l'annee de fin %s -- phrase du premier ecran a reecrire" $v.s100 $v.an }}{{ end -}}
-{{- /* Garde de prose : la question dit que les intérêts « pesaient moins dans le PIB » ; vrai si la charge de fin est
+{{- /* Garde de prose : la question (« intérêts en baisse », à l'imparfait : « comment était-ce possible ? », auteur
+       25/11/2026) dit que les intérêts ont baissé ; vrai si la charge de fin est
        inférieure à celle de 1995 (virgule ou point décimal selon la langue). */ -}}
 {{- if ge (float (replace $v.ic "," ".")) (float (replace $v.i95 "," ".")) }}{{ errorf "accueil-e : charge d'interets %s en %s >= %s en 1995 -- question du premier ecran a reecrire" $v.ic $v.an $v.i95 }}{{ end -}}
 {{- $pv := partial "accueil-e/bloc.html" (dict "nom" "pouvoirs_president_donnees" "en" $en) -}}
@@ -86,9 +87,9 @@
   <div class="acc-hero__texte">
     <p class="acc-id">{{ $auteur.name }} · {{ cond $en $auteur.jobTitleEn $auteur.jobTitleFr }}</p>
     {{- if $en }}
-    <h1 class="acc-question" id="acc-question">Public debt was rising. <em>Why was its interest burden falling as a share of GDP?</em></h1>
+    <h1 class="acc-question" id="acc-question">Rising public debt, falling interest: <em>how was it possible?</em></h1>
     {{- else }}
-    <h1 class="acc-question" id="acc-question">La dette publique augmentait. <em>Pourquoi ses intérêts pesaient-ils moins dans le PIB&nbsp;?</em></h1>
+    <h1 class="acc-question" id="acc-question">Dette publique en hausse, intérêts en baisse&nbsp;: <em>comment était-ce possible&nbsp;?</em></h1>
     {{- end }}
     <div class="acc-chiffres">
       <div class="acc-chiffre">
