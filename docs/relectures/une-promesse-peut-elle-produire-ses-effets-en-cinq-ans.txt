@@ -1,4 +1,4 @@
-# relu le 2026-11-25 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de e0eaeda4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-25 ; texte servi de /une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/, build de b928d218 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Une promesse peut-elle produire ses effets en cinq ans ?
 Un président qui veut faire former davantage de médecins peut-il améliorer l’accès aux soins avant la fin de son mandat ?
@@ -224,7 +224,8 @@ Aux règles en vigueur pour les étudiants entrés en internat à partir de la r
 Comparaison d’échelle seulement.
 Précaution d’interprétation.
 Durées minimales, sans redoublement, interruption ni passerelle, pour les étudiants entrés en internat à partir de la rentrée 2023.
-Comparaison d’échelle seulement : ni l’effet d’une politique, ni la date de ses premiers effets ; les internes soignent avant la fin du cursus, mais un étudiant admis en plus n’entre en internat qu’après le deuxième cycle.
+Comparaison d’échelle seulement : ni l’effet d’une politique, ni la date de ses premiers effets.
+Des effets sur les soins restent possibles avant le diplôme : dès le deuxième cycle, les étudiants participent à l’activité hospitalière et ambulatoire, sous la responsabilité de médecins, mais cette participation ne prouve pas, à elle seule, une amélioration de l’accès aux soins.
 Arrêté du 8 avril 2013, art.
 1 ; code de l’éducation, art.
 L632-2 ; loi n° 2022-1616, art.

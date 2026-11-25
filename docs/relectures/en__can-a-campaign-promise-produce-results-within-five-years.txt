@@ -1,4 +1,4 @@
-# relu le 2026-11-25 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de e0eaeda4 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-25 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de b928d218 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can a campaign promise produce results within five years?
 Can a president who wants more doctors trained in France improve access to care before the end of the term?
@@ -226,7 +226,8 @@ Under the rules in force for students who entered residency from the 2023 academ
 Comparison of scale only.
 Reading caveat.
 Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered residency from the 2023 academic year.
-Comparison of scale only: neither the effect of a policy nor the date of its first effects; residents provide care before the end of the curriculum; an additional student, however, does not enter residency until after the second cycle.
+Comparison of scale only: neither the effect of a policy nor the date of its first effects.
+Effects on care remain possible before the diploma: from the second cycle onwards, students take part in hospital and outpatient activity, under the responsibility of doctors, but this participation does not by itself establish better access to care.
 Order of 8 April 2013, art.
 1; Education Code, art.
 L632-2; Law no.

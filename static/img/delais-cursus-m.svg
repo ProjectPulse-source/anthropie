@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 673" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm-t dcm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 741" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dcm-t dcm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="dcm-t">Former un médecin généraliste, et la durée d&#x27;un mandat présidentiel</title><desc id="dcm-d">Deux barres de même échelle. En haut, le cursus de médecine générale : 3 ans de premier cycle, 3 ans de deuxième cycle, puis 4 ans d&#x27;internat de médecine générale dont la dernière en autonomie supervisée, soit 10 ans depuis la première année et 9 depuis l&#x27;admission en deuxième année. En bas, un mandat présidentiel de 5 ans. Comparaison d&#x27;échelle seulement.</desc>
-<rect width="300" height="673" fill="#ffffff"/>
+<rect width="300" height="741" fill="#ffffff"/>
 <text x="0.0" y="20.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">Former un médecin</text>
 <text x="0.0" y="42.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">généraliste, et la durée</text>
 <text x="0.0" y="64.0" font-size="17" fill="#0A0A0E" text-anchor="start" font-weight="600">d&#x27;un mandat présidentiel</text>
@@ -38,10 +38,14 @@
 <text class="pied-note" x="0.0" y="523.0" font-size="13.5" fill="#52514e" text-anchor="start">de la rentrée 2023. Comparaison</text>
 <text class="pied-note" x="0.0" y="540.0" font-size="13.5" fill="#52514e" text-anchor="start">d&#x27;échelle seulement : ni l&#x27;effet d&#x27;une</text>
 <text class="pied-note" x="0.0" y="557.0" font-size="13.5" fill="#52514e" text-anchor="start">politique, ni la date de ses premiers</text>
-<text class="pied-note" x="0.0" y="574.0" font-size="13.5" fill="#52514e" text-anchor="start">effets ; les internes soignent avant</text>
-<text class="pied-note" x="0.0" y="591.0" font-size="13.5" fill="#52514e" text-anchor="start">la fin du cursus, mais un étudiant</text>
-<text class="pied-note" x="0.0" y="608.0" font-size="13.5" fill="#52514e" text-anchor="start">admis en plus n&#x27;entre en internat</text>
-<text class="pied-note" x="0.0" y="625.0" font-size="13.5" fill="#52514e" text-anchor="start">qu&#x27;après le deuxième cycle.</text>
-<text class="pied-licence" x="0.0" y="646.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0.0" y="663.0" font-size="13.5" fill="#6f6c66" text-anchor="start">· stephane-lalut.com</text>
+<text class="pied-note" x="0.0" y="574.0" font-size="13.5" fill="#52514e" text-anchor="start">effets. Des effets sur les soins</text>
+<text class="pied-note" x="0.0" y="591.0" font-size="13.5" fill="#52514e" text-anchor="start">restent possibles avant le diplôme :</text>
+<text class="pied-note" x="0.0" y="608.0" font-size="13.5" fill="#52514e" text-anchor="start">dès le deuxième cycle, les étudiants</text>
+<text class="pied-note" x="0.0" y="625.0" font-size="13.5" fill="#52514e" text-anchor="start">participent à l&#x27;activité hospitalière</text>
+<text class="pied-note" x="0.0" y="642.0" font-size="13.5" fill="#52514e" text-anchor="start">et ambulatoire, sous la responsabilité</text>
+<text class="pied-note" x="0.0" y="659.0" font-size="13.5" fill="#52514e" text-anchor="start">de médecins, mais cette participation</text>
+<text class="pied-note" x="0.0" y="676.0" font-size="13.5" fill="#52514e" text-anchor="start">ne prouve pas, à elle seule, une</text>
+<text class="pied-note" x="0.0" y="693.0" font-size="13.5" fill="#52514e" text-anchor="start">amélioration de l&#x27;accès aux soins.</text>
+<text class="pied-licence" x="0.0" y="714.0" font-size="13.5" fill="#6f6c66" text-anchor="start">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0.0" y="731.0" font-size="13.5" fill="#6f6c66" text-anchor="start">· stephane-lalut.com</text>
 </svg>

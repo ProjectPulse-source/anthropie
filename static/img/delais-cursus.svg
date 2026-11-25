@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 345" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 359" role="img" font-variant-numeric="tabular-nums" aria-labelledby="dc-t dc-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
 <title id="dc-t">Former un médecin généraliste, et la durée d&#x27;un mandat présidentiel</title><desc id="dc-d">Deux barres de même échelle. En haut, le cursus de médecine générale : 3 ans de premier cycle, 3 ans de deuxième cycle, puis 4 ans d&#x27;internat de médecine générale dont la dernière en autonomie supervisée, soit 10 ans depuis la première année et 9 depuis l&#x27;admission en deuxième année. En bas, un mandat présidentiel de 5 ans. Comparaison d&#x27;échelle seulement.</desc>
-<rect width="720" height="345" fill="#ffffff"/>
+<rect width="720" height="359" fill="#ffffff"/>
 <text x="0.0" y="18.0" font-size="13" fill="#0A0A0E" text-anchor="start" font-weight="600">Former un médecin généraliste, et la durée d&#x27;un mandat présidentiel</text>
 <text x="0.0" y="36.0" font-size="12" fill="#52514e" text-anchor="start">en années, durées minimales écrites dans les textes en vigueur</text>
 <text x="0.0" y="91.0" font-size="11" fill="#0A0A0E" text-anchor="start" font-weight="600">Médecine générale</text>
@@ -35,8 +35,9 @@
 <text class="pied-source" x="0" y="253.0" font-size="11" fill="#52514e">Arrêté du 8 avril 2013, art. 1 ; code de l'éducation, art. L632-2 ; loi n° 2022-1616, art. 37 ; Constitution, art. 6</text>
 <text class="pied-source" x="0" y="267.0" font-size="11" fill="#52514e">(Légifrance)</text>
 <text class="pied-note" x="0" y="281.0" font-size="11" fill="#52514e">Durées minimales, sans redoublement, interruption ni passerelle, pour les étudiants entrés en internat à partir de la</text>
-<text class="pied-note" x="0" y="295.0" font-size="11" fill="#52514e">rentrée 2023. Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets ; les</text>
-<text class="pied-note" x="0" y="309.0" font-size="11" fill="#52514e">internes soignent avant la fin du cursus, mais un étudiant admis en plus n'entre en internat qu'après</text>
-<text class="pied-note" x="0" y="323.0" font-size="11" fill="#52514e">le deuxième cycle.</text>
-<text class="pied-licence" x="0" y="337.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/</text>
+<text class="pied-note" x="0" y="295.0" font-size="11" fill="#52514e">rentrée 2023. Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets. Des</text>
+<text class="pied-note" x="0" y="309.0" font-size="11" fill="#52514e">effets sur les soins restent possibles avant le diplôme : dès le deuxième cycle, les étudiants participent à</text>
+<text class="pied-note" x="0" y="323.0" font-size="11" fill="#52514e">l'activité hospitalière et ambulatoire, sous la responsabilité de médecins, mais cette participation ne prouve pas, à</text>
+<text class="pied-note" x="0" y="337.0" font-size="11" fill="#52514e">elle seule, une amélioration de l'accès aux soins.</text>
+<text class="pied-licence" x="0" y="351.0" font-size="11" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/</text>
 </svg>

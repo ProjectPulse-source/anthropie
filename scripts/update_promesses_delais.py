@@ -906,9 +906,15 @@ def pied(e, y0, source, note) -> str:
                                        (LICENCES[LANG], MUTED, "pied-licence")], GRID)
 
 
+# 25/11/2026 (lot corrections-radar-2411, décision B de l'auteur) : note1 ne dit plus qu'un étudiant admis en plus n'agit
+# qu'à son entrée en internat (« mais un étudiant admis en plus n'entre en internat qu'après le deuxième cycle ») ; elle
+# reprend les formules du chapô : des effets sur les soins restent possibles avant le diplôme (participation dès le
+# deuxième cycle, CSP, R. 6153-46, sous la responsabilité de médecins, R. 6153-51), mais cette participation ne prouve
+# pas, à elle seule, une amélioration de l'accès aux soins. Elle passe aussi dans la précaution du bloc « Réutiliser »
+# (data/figures_delais.json).
 T = {
     "fr": {"src1": "Arrêté du 8 avril 2013, art. 1 ; code de l'éducation, art. L632-2 ; loi n° 2022-1616, art. 37 ; Constitution, art. 6 (Légifrance)",
-           "note1": "Durées minimales, sans redoublement, interruption ni passerelle, pour les étudiants entrés en internat à partir de la rentrée 2023. Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets ; les internes soignent avant la fin du cursus, mais un étudiant admis en plus n'entre en internat qu'après le\u00a0deuxième\u00a0cycle.",
+           "note1": "Durées minimales, sans redoublement, interruption ni passerelle, pour les étudiants entrés en internat à partir de la rentrée 2023. Comparaison d'échelle seulement : ni l'effet d'une politique, ni la date de ses premiers effets. Des effets sur les soins restent possibles avant le diplôme : dès le deuxième cycle, les étudiants participent à l'activité hospitalière et ambulatoire, sous la responsabilité de médecins, mais cette participation ne prouve pas, à elle seule, une amélioration de l'accès aux\u00a0soins.",
            "src2": "DREES, Dossier n° 76 (2021), graphique 8, source ONDPS (1972-2020) ; ONDPS, bilan 2021-2025 (admis)",
            "note2": "Admissions en deuxième année du premier cycle, ou directement en troisième pour certaines passerelles. Jusqu'en 2020, places pourvues du numerus clausus, élargi aux passerelles et aux droits au remords à partir de 2010-2011 ; depuis 2021, admis. Chaque barre à l'année publiée par la source, sans décalage.",
            "t1": "Former un médecin généraliste,\u00a0et la durée d'un\u00a0mandat\u00a0présidentiel",
@@ -931,7 +937,7 @@ T = {
                  "an de 2021 à 2025 ({admis_2025} en 2025).",
            "r1": "2010-2011 : passerelles incluses", "r2": "2021 : fin du numerus clausus", "annot": "%s : %s"},
     "en": {"src1": "Order of 8 April 2013, art. 1; Education Code, art. L632-2; Law no. 2022-1616, art. 37; Constitution, art. 6",
-           "note1": "Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered residency from the 2023 academic year. Comparison of scale only: neither the effect of a policy nor the date of its first effects; residents provide care before the end of the curriculum; an additional student, however, does not enter residency until after the\u00a0second\u00a0cycle.",
+           "note1": "Minimum durations, without repeating a year, interruption or alternative-entry route, for students who entered residency from the 2023 academic year. Comparison of scale only: neither the effect of a policy nor the date of its first effects. Effects on care remain possible before the diploma: from the second cycle onwards, students take part in hospital and outpatient activity, under the responsibility of doctors, but this participation does not by itself establish better access to\u00a0care.",
            "src2": "DREES, Dossier no. 76 (2021), chart 8, source ONDPS (1972-2020); ONDPS, 2021-2025 report (admissions)",
            "note2": "Admissions to the second year of the first cycle, or directly to the third for some alternative-entry routes. Until 2020, places filled under the numerus clausus, widened to alternative-entry routes and reorientation entries from 2010-2011; since 2021, students admitted. Each bar at the year published by the source, no shift.",
            "t1": "Training a general practitioner in France, and the length of a\u00a0presidential\u00a0term",
@@ -943,7 +949,7 @@ T = {
            "mg": "General practice", "cycles": ["1st cycle", "2nd cycle", "General practice residency"],
            "court": ["1st", "2nd", "Residency"],
            "auto": "last year: supervised autonomy", "mandat": "Presidential term", "ans": "{} years",
-           "depuis_adm": "{} years from admission to the 2nd year", "internat": "General practice residency: {} years",
+           "depuis_adm": "{} years from admission to the 2nd year", "internat": "General practice residency: {} years",
            "cycle1_m": "1st cycle: {} years", "cycle2_m": "2nd cycle: {} years", "internat_m": "General practice residency",
            "dont": "{} years, the last under supervised autonomy", "total": "Total: {} years from the 1st year",
            "t2": "Students admitted into the medical curriculum in France, 1972-2025",
