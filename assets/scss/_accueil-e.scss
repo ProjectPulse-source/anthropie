@@ -251,3 +251,6 @@ h2.acc-these {
   @media (max-width: 760px) { padding-left: 0; border-left: 0; }
 }
 .acc-ids { margin-top: 20px; }
+
+// Un nom de revue ne se coupe pas en fin de ligne (« Socio-/Économie » au téléphone, 26/11/2026).
+.acc-garantie p i { white-space: nowrap; }
