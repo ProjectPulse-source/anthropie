@@ -81,17 +81,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - **Accueil** : *Sociologie du travail*, *Revue Française de Socio-Économie* et *Lectures* dans les deux listes de supports (`12f47563`).
 - **Livres** : attribution anglaise de la citation de *Livresque des mots* (`ligne_auteur_en`) ; « Le projet » présente *La Société du premier coup*, FR et EN (`ef9fc640`).
 - **Questions fréquentes à deux colonnes** : une question sans vis-à-vis passe en pleine largeur (règle unique de `_ressource-relief.scss`, 11 grilles impaires sur 34) — commit `54d953ee`, **à pousser**.
-- Vue téléphone vérifiée (Publications, accueil, Livres, FR et EN). Dossier des maquettes archivé : `D:\PRO_PROMOTION\_ARCHIVE\MAQUETTES_PUBLICATIONS_2026-11-26\`.
+- Vue téléphone vérifiée (Publications, accueil, Livres, FR et EN). Dossier des maquettes archivé : `D:\PRO\06_PROMOTION\_ARCHIVE\MAQUETTES_PUBLICATIONS_2026-11-26\`.
 
 ### 2026-11-26 (après-midi) — Page « Publications » : montage éditorial F4.2 (cinq contre-expertises arbitrées, « on lance la mise en ligne »)
 
 - Montage calculé (`partials/publications-montage.html`) : 01 = fil de la dernière publication (une : titre d'œuvre / auteur recensé, « en écho », données, working paper) ; 02-03 = autres thèmes à page de données (`data/themes_publications.yaml` : `ressource`, `livre`), ouverts par les `chiffres` d'une fiche (aplat marine) ou la phrase de la fiche `exergue` (aplat bleu pâle). Intitulés = titres des working papers ; livres avec leur ligne publiée sur « À propos » (entre guillemets). Catalogue : filtres thème + genre. Une publication nouvelle = une fiche.
 - Fiche Lemoine : première phrase corrigée (accord de 2016 après contentieux, non décision du tribunal), FR et EN ; `chiffres` (177 M$ investissement estimé, Guzmán-Stiglitz 2016 ; 2,4 Md$ versés au titre de l'accord, Informe n° 93 p. 10 lu sur Internet Archive) avec garde vue mordre.
-- Arbitrages : `D:\PRO_PROMOTION\MAQUETTES_PUBLICATIONS_2026-11-26_ARBITRAGE_PUBLICATIONS.md`. Contrôles : check-all 0, liens 0 critique, rendu FR/EN 1 280 et 390 px, filtres, ancres, textes alternatifs.
+- Arbitrages : `D:\PRO\06_PROMOTION\_ARCHIVE\MAQUETTES_PUBLICATIONS_2026-11-26\03_ARBITRAGE_PUBLICATIONS.md`. Contrôles : check-all 0, liens 0 critique, rendu FR/EN 1 280 et 390 px, filtres, ancres, textes alternatifs.
 
 ### 2026-11-26 — Page « Publications » refondue (maquette D2, « go » de l'auteur) ; bande des identifiants de l'accueil sans ronds au téléphone (`33bced7f`)
 
-- **Publications** : trois maquettes, deux contre-expertises arbitrées (`D:\PRO_PROMOTION\MAQUETTES_PUBLICATIONS_2026-11-26_ARBITRAGE_PUBLICATIONS.md`), D2 retenue avec trois corrections de l'auteur. Accroche = texte de l'auteur (front matter `accroche`) ; supports par ordre alphabétique, blogs à part ; **aucun compte affiché** (décision de l'auteur) ; « À découvrir » (`a_decouvrir`, trois slugs) ; liste par année, deux colonnes sur ordinateur, première phrase du chapô puis repli (`partials/chapo-phrases.html`, découpage vérifié identique sur les 21 fiches FR) ; champ `genre` (recension | article | billet) ajouté aux 21 fiches ; « Prolonge » → « Pour aller plus loin » (livre d'abord, titres des AWP au survol) ; filtre par genre retiré ; sortie « Les livres → ». Ancres `#<slug>` du mur presse de /a-propos/ conservées. Hauteur au téléphone : 11 262 → 8 245 px (FR).
+- **Publications** : trois maquettes, deux contre-expertises arbitrées (`D:\PRO\06_PROMOTION\_ARCHIVE\MAQUETTES_PUBLICATIONS_2026-11-26\03_ARBITRAGE_PUBLICATIONS.md`), D2 retenue avec trois corrections de l'auteur. Accroche = texte de l'auteur (front matter `accroche`) ; supports par ordre alphabétique, blogs à part ; **aucun compte affiché** (décision de l'auteur) ; « À découvrir » (`a_decouvrir`, trois slugs) ; liste par année, deux colonnes sur ordinateur, première phrase du chapô puis repli (`partials/chapo-phrases.html`, découpage vérifié identique sur les 21 fiches FR) ; champ `genre` (recension | article | billet) ajouté aux 21 fiches ; « Prolonge » → « Pour aller plus loin » (livre d'abord, titres des AWP au survol) ; filtre par genre retiré ; sortie « Les livres → ». Ancres `#<slug>` du mur presse de /a-propos/ conservées. Hauteur au téléphone : 11 262 → 8 245 px (FR).
 - Contrôles : `check-all --ci` à 0 ; audit des liens 0 critique ; dates concordantes.
 
 ### 2026-11-24/25 — Relié Livresque à l'achat et suivi ; page « À propos » refondue (D2)
@@ -101,7 +101,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - « À propos » D2 (FR, EN) : nom en titre, statut en une ligne, question en exergue, six textes choisis (`textes_choisis`,
   partial `textes-choisis.html`, phrase recopiée du chapô), livres sans pagination (`wall_sans_pages`), trois derniers AWP
   (`liste-awp n="3"`) ; repères chiffrés et mur presse retirés de la page ; ancres conservées. Arbitrages :
-  `D:\PRO_PROMOTION\MAQUETTES_APROPOS_2026-11-25\`. Dossiers antérieurs cités plus bas (`A_PROPOS_2026-11-07`,
+  `D:\PRO\06_PROMOTION\MAQUETTES_APROPOS_2026-11-25\`. Dossiers antérieurs cités plus bas (`A_PROPOS_2026-11-07`,
   `MAQUETTES_ACCUEIL_2026-11-07`, `…_AXES_2026-11-04`) déplacés dans `06_PROMOTION\_ARCHIVE\` le 25/11.
 
 ### 2026-11-24 — Livresque des mots CORR14 (téléversée sur KDP par l'auteur) : 1 390 auteurs, broché 678 p.
