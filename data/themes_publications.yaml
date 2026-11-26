@@ -4,15 +4,25 @@
 # AWP-01 et AWP-07 (le cadre, sa formalisation) ne font pas de thème : ils concernent presque tous les textes.
 # AWP-05 non plus : aucune publication ne s'y rattache aujourd'hui.
 # Ordre = ordre des filtres.
+# `ressource` : la page de données du site qui documente le thème (carte de partage, titre et texte alternatif lus sur la page) ;
+# `livre` : le livre du fil. Lus par le montage de /publications/ (maquette F4.2, 26/11/2026). Un thème sans ressource
+# n'ouvre pas d'ensemble, sauf s'il est celui de la dernière publication.
 - awp: "awp-03"
   fr: "Dette publique"
   en: "Public debt"
+  ressource: "/qui-paie-la-dette-publique/"
+  livre: "dette-publique-qui-paie-vraiment"
 - awp: "awp-06"
   fr: "Numérique"
   en: "Digital"
+  ressource: "/data-centers-puissance-reservee/"
+  livre: "anthropie-ordre-ici-dette-ailleurs"
 - awp: "awp-04"
   fr: "Énergie"
   en: "Energy"
+  ressource: "/decouplage-energie-croissance/"
+  livre: "anthropie-ordre-ici-dette-ailleurs"
 - awp: "awp-02"
   fr: "Longue durée"
   en: "Long run"
+  livre: "lodyssee-des-idees"

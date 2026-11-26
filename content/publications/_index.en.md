@@ -8,7 +8,7 @@ cascade:
   og_image: "images/og-publications.en.jpg"
   og_image_alt: "Publications — Reviews & articles. Order here. Debt elsewhere."
 accroche: "Not *how much* a public policy costs, but *who* bears the cost. Not *whether* a transition is taking place, but *onto whom* the disorder it claims to resolve is displaced."  # author's own text (folded paragraph at the end of the page); D2 mock-up, 26/11/2026
-a_decouvrir: [en-attendant-nadeau-muhlhoff, revue-projet-commune-republique, terrestres-sous-le-cloud-la-fournaise]  # choix de l'auteur (26/11/2026) : diversité de genres et de terrains, pas les trois derniers
+exergue: nonfiction-fressoz  # fiche dont la première phrase ouvre l'ensemble de son thème (choix de l'auteur, facultatif)
 ---
 
 <details class="publications-chantiers"><summary>What connects these texts</summary>

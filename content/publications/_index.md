@@ -10,7 +10,7 @@ cascade:
   og_image: "images/og-publications.jpg"
   og_image_alt: "Publications — Recensions & articles. On ne crée pas l'ordre, on déplace le désordre."
 accroche: "Non pas *combien* coûte une politique publique, mais *qui* en porte le coût. Non pas *si* une transition a lieu, mais *vers qui* se déplace le désordre qu'elle prétend résoudre."  # recopiée du texte de l'auteur (paragraphe replié en fin de page) ; maquette D2, 26/11/2026
-a_decouvrir: [en-attendant-nadeau-muhlhoff, revue-projet-commune-republique, terrestres-sous-le-cloud-la-fournaise]  # choix de l'auteur (26/11/2026) : diversité de genres et de terrains, pas les trois derniers
+exergue: nonfiction-fressoz  # fiche dont la première phrase ouvre l'ensemble de son thème (choix de l'auteur, facultatif)
 ---
 
 <details class="publications-chantiers"><summary>Ce qui relie ces textes</summary>

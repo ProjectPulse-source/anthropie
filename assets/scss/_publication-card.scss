@@ -179,19 +179,12 @@
   font-family: var(--font-serif); font-size: 1.55rem; line-height: 1.4; color: var(--color-accent);
   max-width: 46ch; margin: 0.4rem 0 0; padding-left: 1.1rem; border-left: 3px solid var(--color-accent);
 }
+.publications-sous { display: block; font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-subtle); margin: 0 0 0.25rem; }
 .publications-parus { font-family: var(--font-sans); font-size: 14px; line-height: 1.7; color: var(--color-text-subtle); max-width: 95ch; margin: 0 0 0.5rem; }
 .publications-parus__noms { font-family: var(--font-serif); font-size: 1.05rem; color: var(--color-accent); }
 .publications-parus__noms i { white-space: nowrap; }
 .publications-parus__blogs { display: block; margin-top: 0.2rem; }
 .home-section h2.publications-h2.section-title { margin: 2.2rem 0 1rem; }
-.publications-decouvrir { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 1.75rem; align-items: start; }
-.publications-decouvrir__une .pub-entree {
-  background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-radius: 4px; padding: 1.25rem 1.4rem;
-  .pub-entree__titre { font-size: 1.5rem; }
-}
-.publications-decouvrir__autres { display: grid; gap: 0; }
-.publications-decouvrir__autres .pub-entree { padding: 0.9rem 0; border-bottom: 1px solid var(--color-rule-soft); }
-.publications-decouvrir__autres .pub-entree:first-child { padding-top: 0; }
 .publications-filtres { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 0.5rem; }
 .publications-filtres button {
   font-family: var(--font-sans); font-size: 13px; font-weight: 500; cursor: pointer;
@@ -202,6 +195,73 @@
 }
 .publications-annee { font-family: var(--font-sans); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: var(--color-text-subtle); margin: 1.2rem 0 0; }
 .publications-grille { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; }
+
+// ── En-tête sur une bande et montage éditorial (maquette F4.2, auteur, 26/11/2026 ; partials/publications-montage.html) ──
+.publications-tete {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0 2.25rem; align-items: end;
+  padding-bottom: 1.3rem; border-bottom: 1.5px solid var(--color-accent); margin-bottom: 0;
+  .page-header__title { margin: 0; }
+  .publications-accroche { margin: 0; max-width: 80ch; font-size: 1.3rem; }
+}
+.publications-vers-catalogue { margin: 0; font-family: var(--font-sans); font-size: 14px; font-weight: 600; white-space: nowrap; }
+.mtg-ens { padding: 1.7rem 0 1.9rem; border-bottom: 1px solid var(--color-rule-soft); }
+.mtg-tete { margin: 0 0 1.1rem; }
+.mtg-num { font-family: var(--font-sans); font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-pivot); margin: 0 0 0.25rem; }
+// Spécificité (0,4,1) : bat la règle commune `.home-section h2:not(.page-header__title):not(.section-title)` (0,3,1) de
+// _page-common.scss, qui posait marge, retrait, filet et taille fixe (mesuré le 26/11/2026).
+.home-section h2.mtg-question:not(.page-header__title):not(.section-title) { font-family: var(--font-serif); font-size: 1.85rem; font-weight: 400; line-height: 1.2; color: var(--color-accent); margin: 0; max-width: 40ch; border: 0; padding: 0; }
+.mtg-grille { display: grid; gap: 2.9rem; }
+.mtg-grille--57 { grid-template-columns: minmax(0, 57fr) minmax(0, 43fr); }
+.mtg-grille--43 { grid-template-columns: minmax(0, 43fr) minmax(0, 57fr); }
+.mtg-g, .mtg-d { display: grid; gap: 1.3rem; align-content: start; min-width: 0; }
+.mtg-d { border-left: 1px solid var(--color-rule-soft); padding-left: 1.9rem; }
+.mtg-label { display: block; font-family: var(--font-sans); font-size: 12px; font-weight: 600; font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-subtle); margin: 0 0 0.35rem; }
+.mtg-sur { font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-pivot); margin: 0 0 0.6rem; }
+// Spécificité (0,4,1) : bat la règle commune `.home-section h2:not(.page-header__title):not(.section-title)` (0,3,1) de
+// _page-common.scss, qui posait marge, retrait, filet et taille fixe (mesuré le 26/11/2026).
+.home-section h2.mtg-une__titre:not(.page-header__title):not(.section-title) { font-family: var(--font-serif); font-size: 3.4rem; font-weight: 400; line-height: 1.04; letter-spacing: -0.01em; margin: 0.25rem 0 0.35rem; border: 0; padding: 0;
+  a { color: var(--color-text); text-decoration: none; } a:hover { text-decoration: underline; text-underline-offset: 6px; } }
+.mtg-une__auteur { font-family: var(--font-serif); font-style: italic; font-size: 1.5rem; color: var(--color-accent); margin: 0 0 1rem; }
+.mtg-une__chapeau { font-size: 1.3rem; line-height: 1.55; color: var(--color-text-muted); margin: 0 0 1rem; max-width: 60ch; }
+.mtg-une__lire { font-family: var(--font-sans); font-size: 15px; font-weight: 600; margin: 0; }
+.mtg-court .pub-entree__titre { font-size: 1.35rem; line-height: 1.22; margin: 0.1rem 0 0.35rem; }
+.mtg-g .mtg-court, .mtg-d .mtg-court + .mtg-court { border-top: 1px solid var(--color-rule-soft); padding-top: 1rem; }
+.mtg-carte { display: block; text-decoration: none; background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); padding: 0.5rem;
+  img { display: block; width: 100%; height: auto; }
+  .mtg-carte__titre { display: block; font-family: var(--font-sans); font-size: 14px; line-height: 1.4; color: var(--color-accent); margin-top: 0.5rem; } }
+.mtg-carte:hover .mtg-carte__titre { text-decoration: underline; }
+.mtg-awp { font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+.mtg-livre { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 0.9rem; align-items: start;
+  .mtg-livre__couv img { display: block; width: 84px; height: auto; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22); } }
+.mtg-livre__titre { font-family: var(--font-serif); font-size: 1.05rem; }
+.mtg-livre__ligne { font-size: 0.97rem; line-height: 1.5; color: var(--color-text-muted); margin: 0.35rem 0 0; }
+.mtg-chiffre { background: var(--color-accent); color: #fff; padding: 1.5rem 1.5rem 1.35rem;
+  .mtg-label { color: #b9c6e0; }
+  p { margin: 0; } }
+.mtg-chiffre__l { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem;
+  b { display: block; font-family: var(--font-serif); font-weight: 400; font-size: 3.4rem; line-height: 1; }
+  span { font-family: var(--font-sans); font-size: 14px; line-height: 1.35; color: #d5ddef; } }
+.mtg-chiffre .mtg-chiffre__phrase { font-size: 1.15rem; line-height: 1.5; margin: 0.9rem 0 0.4rem; }
+.mtg-chiffre .mtg-chiffre__src { font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: #d5ddef;
+  a { color: #fff; } }
+.mtg-idee { margin: 0; background: var(--color-dossier-tint); padding: 1.35rem 1.4rem 1.1rem;
+  blockquote { font-family: var(--font-serif); font-style: italic; font-size: 2.1rem; line-height: 1.2; color: var(--color-accent); margin: 0 0 0.7rem; padding: 0; border: 0; }
+  figcaption { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-subtle); } }
+.publications-page .publications-parus { margin-top: 1.4rem; }
+@media (max-width: 760px) {
+  .publications-tete { grid-template-columns: 1fr; gap: 0.7rem; }
+  .publications-tete .publications-accroche { font-size: 1.15rem; }
+  .mtg-grille--57, .mtg-grille--43 { grid-template-columns: 1fr; gap: 1.3rem; }
+  .mtg-d { border-left: 0; padding-left: 0; border-top: 1px solid var(--color-rule-soft); padding-top: 1.1rem; }
+  .home-section h2.mtg-question:not(.page-header__title):not(.section-title) { font-size: 1.5rem; }
+  .home-section h2.mtg-une__titre:not(.page-header__title):not(.section-title) { font-size: 2.25rem; }
+  .mtg-une__auteur { font-size: 1.25rem; }
+  .mtg-une__chapeau { font-size: 1.12rem; }
+  .mtg-chiffre__l b { font-size: 2.5rem; }
+  .mtg-idee blockquote { font-size: 1.6rem; }
+  .mtg-livre { grid-template-columns: 64px minmax(0, 1fr); }
+  .mtg-livre .mtg-livre__couv img { width: 64px; }
+}
 
 // Une entrée : genre · revue · date, titre vers l'article, résumé (première phrase + repli), thèmes, « Pour aller plus loin », DOI.
 .pub-entree {
@@ -243,10 +303,6 @@
 .publications-sortie { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
 @media (max-width: 760px) {
   .publications-accroche { font-size: 1.3rem; padding-left: 0.9rem; }
-  .publications-decouvrir { grid-template-columns: 1fr; gap: 0.75rem; }
-  .publications-decouvrir__une .pub-entree { padding: 1rem; }
-  .publications-decouvrir__une .pub-entree .pub-entree__titre { font-size: 1.3rem; }
-  .publications-decouvrir__autres .pub-entree:first-child { padding-top: 0.9rem; border-top: 0; }
   .publications-grille { grid-template-columns: 1fr; }
   .publications-grille .pub-entree__themes { display: none; } // le filtre par thème reste ; les pastilles allongeaient chaque entrée
 }

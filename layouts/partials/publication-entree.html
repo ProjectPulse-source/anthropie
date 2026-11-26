@@ -1,13 +1,11 @@
 {{- /* publication-entree.html — une publication sur /publications/ (maquette D2 retenue par l'auteur, 26/11/2026 ;
        dossier D:\PRO\06_PROMOTION\MAQUETTES_PUBLICATIONS_2026-11-26\).
-       Entrée : dict { page (fiche publication, toujours française), lang (langue de la page), forme ("liste" | "une" |
-       "breve") }.
+       Entrée : dict { page (fiche publication, toujours française), lang (langue de la page), forme ("liste") }.
+       Le montage du haut de page a ses propres blocs (partials/publications-montage.html, maquette F4.2).
          liste : genre · revue · date, titre vers l'article, première phrase du chapô puis la suite repliée (la ligne
                  « Lire le détail » est posée par replis-action.js), thèmes, « Pour aller plus loin » (livre d'abord, puis
                  working papers, leur titre au survol), DOI. L'id = slug de la fiche : adresse publiée et visée par le mur
                  presse de /a-propos/ (/publications/#<slug>).
-         une   : bloc « À découvrir », texte principal : deux premières phrases du chapô, « Pour aller plus loin ».
-         breve : bloc « À découvrir », textes secondaires : première phrase seulement.
        Genre : champ `genre` de la fiche (recension | article | billet) ; absent, l'entrée s'affiche et le build avertit. */ -}}
 {{- $p := .page -}}
 {{- $isEn := eq .lang "en" -}}
@@ -20,7 +18,7 @@
 {{- if not $genre }}{{ warnf "publication-entree : fiche %s sans genre valide (recension | article | billet)" $p.File.Path }}{{ end -}}
 {{- $chapo := cond (and $isEn $p.Params.chapo_en) $p.Params.chapo_en $p.Params.chapo -}}
 {{- $ph := partial "chapo-phrases.html" ($chapo | default "") -}}
-<article class="pub-entree pub-entree--{{ $forme }}"{{ if eq $forme "liste" }} id="{{ $p.File.ContentBaseName }}" data-themes="{{ delimit $themes "|" }}"{{ end }}>
+<article class="pub-entree pub-entree--{{ $forme }}"{{ if eq $forme "liste" }} id="{{ $p.File.ContentBaseName }}" data-themes="{{ delimit $themes "|" }}" data-genre="{{ $p.Params.genre }}"{{ end }}>
   <p class="pub-entree__meta">{{ with $genre }}<span class="pub-entree__genre pub-entree__genre--{{ $p.Params.genre }}">{{ . }}</span> {{ end }}<i class="pub-entree__revue">{{ $p.Params.revue }}</i>{{ if eq $p.Params.source_type "Académique" }} <span class="pub-entree__academique">· {{ if $isEn }}academic journal{{ else }}revue académique{{ end }}</span>{{ end }} · <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" $p.Date "fmt" ":date_long" "en" $isEn) }}</time>{{ if $isEn }} · <span lang="en">In French</span>{{ end }}</p>
   <h3 class="pub-entree__titre"><a href="{{ $p.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $p.Title }}<span class="pub-entree__ext" aria-hidden="true">&nbsp;↗</span></a></h3>
   {{- if eq $forme "liste" }}
@@ -30,13 +28,8 @@
   <p class="pub-entree__chapo">{{ $ph.premiere | safeHTML }}</p>
     {{- end }}
     {{- with $themes }}<p class="pub-entree__themes">{{ range . }}<span>{{ . }}</span>{{ end }}</p>{{ end }}
-  {{- else if eq $forme "une" }}
-    {{- $deux := $ph.premiere }}{{ with $ph.reste }}{{ $deux = printf "%s %s" $deux (partial "chapo-phrases.html" .).premiere }}{{ end }}
-  <p class="pub-entree__chapo">{{ $deux | safeHTML }}</p>
-  {{- else }}
-  <p class="pub-entree__chapo">{{ $ph.premiere | safeHTML }}</p>
   {{- end }}
-  {{- if and (ne $forme "breve") (or $p.Params.related $p.Params.related_book) }}
+  {{- if or $p.Params.related $p.Params.related_book }}
   <p class="pub-card__related">
     <span class="pub-card__related-label">{{ i18n "pub_related_label" }}</span>
     {{- with $p.Params.related_book }}

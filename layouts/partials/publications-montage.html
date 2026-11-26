@@ -1,0 +1,163 @@
+{{- /* publications-montage.html — montage éditorial de /publications/ (maquette F4.2, « go » de l'auteur, 26/11/2026 ;
+       dossier D:\PRO\06_PROMOTION\MAQUETTES_PUBLICATIONS_2026-11-26\, cinq contre-expertises arbitrées).
+       Entrée : dict { page (la page /publications/ de la langue), pubs (fiches FR, plus récente d'abord) }.
+
+       TOUT SE CALCULE — une publication nouvelle = une fiche, rien d'autre :
+         01  le fil de la DERNIÈRE publication (quel que soit son thème) : la une (titre d'œuvre en grand, auteur recensé
+             dessous, coupure sur « — »), deux premières phrases du chapô ; à droite le texte le plus récent qui prolonge le
+             même working paper (« en écho »), la page de données du thème, le working paper ;
+         02, 03  les deux autres thèmes qui ont une page de données (data/themes_publications.yaml, `ressource`), du plus
+             récemment alimenté au moins récent. Chacun s'ouvre par son élément le plus fort : les `chiffres` d'une fiche
+             du thème (aplat marine, dominante à gauche 43/57), sinon la phrase de la fiche `exergue` de la page (aplat
+             bleu pâle, figure dominante 57/43) ; puis deux textes, la carte de la page de données, le working paper, le
+             livre du thème avec SA LIGNE PUBLIÉE sur « À propos » (wall_lignes), entre guillemets : la thèse du livre.
+       Intitulé d'ensemble = TITRE DU WORKING PAPER du thème (formulation de l'auteur) ; thème en surtitre numéroté.
+       Aucune phrase n'est écrite pour la page : chapôs coupés (partials/chapo-phrases.html), titres, lignes publiées.
+       Garde : une valeur de `chiffres` absente du chapô de sa fiche arrête la construction. */ -}}
+{{- $page := .page -}}
+{{- $pubs := .pubs -}}
+{{- $isEn := eq $page.Lang "en" -}}
+{{- $themes := site.Data.themes_publications -}}
+{{- $apropos := site.GetPage "/a-propos" -}}
+{{- $lignes := $apropos.Params.wall_lignes -}}
+{{- $une := index $pubs 0 -}}
+{{- $L := dict
+    "derniere" (cond $isEn "Latest publication" "Dernière publication")
+    "echo" (cond $isEn "Read alongside" "À lire en écho")
+    "donnees" (cond $isEn "The data behind it" "Les données pour comprendre")
+    "approfondir" (cond $isEn "To go further" "Pour approfondir")
+    "awp" (cond $isEn "The working paper" "Le working paper")
+    "lire" (cond $isEn "Read it in" "Lire chez")
+    "chiffre" (cond $isEn "The price of a debt claim" "Le prix d'une créance")
+    "idee" (cond $isEn "An idea to keep" "Une idée à retenir")
+    "extrait" (cond $isEn "Excerpt from the review of" "Extrait de la recension de")
+    "sources" (cond $isEn "Sources:" "Sources :") -}}
+
+{{- /* Thème de la une : le premier working paper de sa fiche qui porte un thème. */ -}}
+{{- $t1 := dict -}}
+{{- range $a := ($une.Params.related | default slice) }}{{ if not $t1.awp }}{{ range $themes }}{{ if eq .awp $a }}{{ $t1 = . }}{{ end }}{{ end }}{{ end }}{{ end -}}
+{{- $vus := slice $une.File.ContentBaseName -}}
+{{- $echo := false -}}
+{{- with $t1.awp }}{{ $a := . }}{{ range after 1 $pubs }}{{ if and (not $echo) (in (.Params.related | default slice) $a) }}{{ $echo = . }}{{ end }}{{ end }}{{ end -}}
+{{- with $echo }}{{ $vus = $vus | append .File.ContentBaseName }}{{ end -}}
+
+{{- /* Les autres ensembles : thèmes à page de données, sauf celui de la une, du plus récemment alimenté au moins récent. */ -}}
+{{- $cands := slice -}}
+{{- range $t := $themes }}{{ if and $t.ressource (ne $t.awp $t1.awp) }}
+  {{- $d := "" }}{{ range $pubs }}{{ if and (not $d) (in (.Params.related | default slice) $t.awp) }}{{ $d = .Date.Format "2006-01-02" }}{{ end }}{{ end }}
+  {{- with $d }}{{ $cands = $cands | append (dict "t" $t "d" .) }}{{ end }}
+{{- end }}{{ end -}}
+{{- $autres := first 2 (sort $cands "d" "desc") -}}
+
+{{- define "partials/inline/pub-kick.html" -}}
+{{- $p := .p }}{{ $isEn := .isEn -}}
+{{- $genres := dict "recension" (cond $isEn "Review" "Recension") "article" "Article" "billet" (cond $isEn "Blog post" "Billet") -}}
+<p class="pub-entree__meta">{{ with index $genres ($p.Params.genre | default "") }}<span class="pub-entree__genre pub-entree__genre--{{ $p.Params.genre }}">{{ . }}</span> {{ end }}<i class="pub-entree__revue">{{ $p.Params.revue }}</i>{{ if eq $p.Params.source_type "Académique" }} <span class="pub-entree__academique">· {{ if $isEn }}academic journal{{ else }}revue académique{{ end }}</span>{{ end }} · <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" $p.Date "fmt" ":date_long" "en" $isEn) }}</time>{{ if $isEn }} · <span lang="en">In French</span>{{ end }}</p>
+{{- end -}}
+
+{{- define "partials/inline/pub-court.html" -}}
+{{- $p := .p }}{{ $isEn := .isEn -}}
+{{- $chapo := cond (and $isEn $p.Params.chapo_en) $p.Params.chapo_en $p.Params.chapo -}}
+<article class="mtg-court">{{ partial "inline/pub-kick.html" . }}<h3 class="pub-entree__titre"><a href="{{ $p.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $p.Title }}<span class="pub-entree__ext" aria-hidden="true">&nbsp;↗</span></a></h3><p class="pub-entree__chapo">{{ (partial "chapo-phrases.html" ($chapo | default "")).premiere | safeHTML }}</p></article>
+{{- end -}}
+
+{{- define "partials/inline/mtg-carte.html" -}}
+{{- with site.GetPage .t.ressource -}}
+<a class="mtg-carte" href="{{ .RelPermalink }}"><span class="mtg-label">{{ $.label }}</span>{{ with .Params.og_image }}<img src="{{ . | relURL }}" alt="{{ $.alt | default "" }}" width="1200" height="630" loading="lazy">{{ end }}<span class="mtg-carte__titre">{{ partial "fr-typo.html" .Title }}</span></a>
+{{- else -}}{{ warnf "publications-montage : ressource introuvable (%s)" .t.ressource }}{{- end -}}
+{{- end -}}
+
+{{- define "partials/inline/mtg-awp.html" -}}
+{{- with site.GetPage (printf "/awp/%s" .t.awp) }}<a class="mtg-awp" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ $.label }} · {{ upper $.t.awp }}&nbsp;→</a>{{ end -}}
+{{- end -}}
+
+{{- define "partials/inline/mtg-livre.html" -}}
+{{- $slug := .t.livre -}}
+{{- $b := site.GetPage (printf "/livres/%s" $slug) -}}
+{{- if not $b }}{{ range site.Sites }}{{ if eq .Language.Lang "fr" }}{{ $b = .GetPage (printf "/livres/%s" $slug) }}{{ end }}{{ end }}{{ end -}}
+{{- with $b -}}
+<div class="mtg-livre">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "%s — %s" (cond $.isEn "Cover" "Couverture") .Title) "wrapClass" "mtg-livre__couv" "sizes" "84px" "lang" .Lang) }}
+<div><span class="mtg-label">{{ $.label }}</span><a class="mtg-livre__titre" href="{{ .RelPermalink }}"{{ if and $.isEn (ne .Lang "en") }} hreflang="fr" lang="fr"{{ end }}><i>{{ .Title }}</i>{{ if and $.isEn (ne .Lang "en") }} <span lang="en">(in French)</span>{{ end }}</a>
+{{- with index ($.lignes | default dict) $slug }}{{ with .line }}<p class="mtg-livre__ligne">{{ if $.isEn }}“{{ . }}”{{ else }}«&nbsp;{{ . }}&nbsp;»{{ end }}</p>{{ end }}{{ end }}</div></div>
+{{- end -}}
+{{- end -}}
+
+{{- define "partials/inline/mtg-tete.html" -}}
+<header class="mtg-tete"><p class="mtg-num">{{ printf "%02d" .n }} · {{ cond .isEn .t.en .t.fr }}</p>{{ with site.GetPage (printf "/awp/%s" .t.awp) }}<h2 class="mtg-question">{{ partial "fr-typo.html" .Title }}</h2>{{ end }}</header>
+{{- end -}}
+
+<div class="mtg">
+  {{- /* 01 — la dernière publication */ -}}
+  {{- $chapoU := cond (and $isEn $une.Params.chapo_en) $une.Params.chapo_en $une.Params.chapo -}}
+  {{- $phU := partial "chapo-phrases.html" ($chapoU | default "") -}}
+  {{- $deux := $phU.premiere }}{{ with $phU.reste }}{{ $deux = printf "%s %s" $deux (partial "chapo-phrases.html" .).premiere }}{{ end -}}
+  {{- $titre := $une.Title }}{{ $auteurR := "" }}{{ with findRE ` — ` $une.Title 1 }}{{ $parts := split $une.Title " — " }}{{ $titre = index $parts 0 }}{{ $auteurR = delimit (after 1 $parts) " — " }}{{ end }}
+  <section class="mtg-ens">
+    {{- with $t1.awp }}{{ partial "inline/mtg-tete.html" (dict "n" 1 "t" $t1 "isEn" $isEn) }}{{ end }}
+    <div class="mtg-grille mtg-grille--57">
+      <div class="mtg-g">
+        <article class="mtg-une">
+          <p class="mtg-sur">{{ $L.derniere }}</p>
+          {{ partial "inline/pub-kick.html" (dict "p" $une "isEn" $isEn) }}
+          <h2 class="mtg-une__titre"><a href="{{ $une.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $titre }}</a></h2>
+          {{ with $auteurR }}<p class="mtg-une__auteur"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" . }}</p>{{ end }}
+          <p class="mtg-une__chapeau">{{ $deux | safeHTML }}</p>
+          <p class="mtg-une__lire"><a href="{{ $une.Params.url_externe }}" target="_blank" rel="noopener">{{ $L.lire }} <i>{{ $une.Params.revue }}</i>&nbsp;↗</a></p>
+        </article>
+      </div>
+      <div class="mtg-d">
+        {{- with $echo }}<div><span class="mtg-label">{{ $L.echo }}</span>{{ partial "inline/pub-court.html" (dict "p" . "isEn" $isEn) }}</div>{{ end }}
+        {{- with $t1.ressource }}{{ with site.GetPage $t1.ressource }}{{ partial "inline/mtg-carte.html" (dict "t" $t1 "label" $L.donnees "alt" .Params.og_image_alt) }}{{ end }}{{ end }}
+        {{- with $t1.awp }}{{ partial "inline/mtg-awp.html" (dict "t" $t1 "label" $L.awp) }}{{ end }}
+        {{- if not $t1.awp }}{{ with $une.Params.related_book }}{{ partial "inline/mtg-livre.html" (dict "t" (dict "livre" .) "label" $L.approfondir "isEn" $isEn "lignes" $lignes) }}{{ end }}{{ end }}
+      </div>
+    </div>
+  </section>
+
+  {{- /* 02, 03 — les autres fils */ -}}
+  {{- range $i, $c := $autres }}
+    {{- $t := $c.t -}}
+    {{- $tp := slice }}{{ range $pubs }}{{ if and (in (.Params.related | default slice) $t.awp) (not (in $vus .File.ContentBaseName)) }}{{ $tp = $tp | append . }}{{ end }}{{ end -}}
+    {{- $chf := false }}{{ range $tp }}{{ if and (not $chf) .Params.chiffres }}{{ $chf = . }}{{ end }}{{ end -}}
+    {{- $exg := false }}{{ if not $chf }}{{ with $page.Params.exergue }}{{ $s := . }}{{ range $tp }}{{ if eq .File.ContentBaseName $s }}{{ $exg = . }}{{ end }}{{ end }}{{ end }}{{ end -}}
+    {{- $lead := $chf | default $exg -}}
+    {{- $textes := slice }}{{ range $tp }}{{ if and (lt (len $textes) 2) (or (not $lead) (ne .File.ContentBaseName $lead.File.ContentBaseName)) }}{{ $textes = $textes | append . }}{{ end }}{{ end -}}
+    {{- with $lead }}{{ $vus = $vus | append .File.ContentBaseName }}{{ end }}{{ range $textes }}{{ $vus = $vus | append .File.ContentBaseName }}{{ end -}}
+    {{- $alt := "" }}{{ with site.GetPage $t.ressource }}{{ $alt = .Params.og_image_alt | default "" }}{{ end -}}
+    {{- $carte := partial "inline/mtg-carte.html" (dict "t" $t "label" $L.donnees "alt" $alt) -}}
+    {{- $livre := partial "inline/mtg-livre.html" (dict "t" $t "label" $L.approfondir "isEn" $isEn "lignes" $lignes) -}}
+    {{- $awp := partial "inline/mtg-awp.html" (dict "t" $t "label" $L.awp) -}}
+    {{- $courts := "" }}{{ range $textes }}{{ $courts = printf "%s%s" $courts (partial "inline/pub-court.html" (dict "p" . "isEn" $isEn)) }}{{ end }}
+  <section class="mtg-ens">
+    {{ partial "inline/mtg-tete.html" (dict "n" (add $i 2) "t" $t "isEn" $isEn) }}
+    {{- if $chf }}
+      {{- $chapo := cond (and $isEn $chf.Params.chapo_en) $chf.Params.chapo_en $chf.Params.chapo -}}
+      {{- range $chf.Params.chiffres }}{{ $v := cond $isEn (replaceRE `[^0-9.,]` "" .valeur_en) .valeur }}{{ if not (in $chapo $v) }}{{ errorf "publications-montage : la valeur %q de %s n'est pas dans son chapô (%s)" $v $chf.File.Path $page.Lang }}{{ end }}{{ end }}
+    <div class="mtg-grille mtg-grille--43">
+      <div class="mtg-g">
+        <div class="mtg-chiffre">
+          <span class="mtg-label">{{ $L.chiffre }}</span>
+          <div class="mtg-chiffre__l">{{ range $chf.Params.chiffres }}<p><b>{{ if $isEn }}{{ .valeur_en }}{{ else }}{{ .valeur }}&nbsp;{{ .unite }}{{ end }}</b><span>{{ cond $isEn .libelle_en .libelle }}</span></p>{{ end }}</div>
+          <p class="mtg-chiffre__phrase">{{ (partial "chapo-phrases.html" $chapo).premiere | safeHTML }}</p>
+          <p class="mtg-chiffre__src">{{ with cond $isEn $chf.Params.chiffres_sources_en $chf.Params.chiffres_sources }}{{ $L.sources }} {{ . | markdownify }}{{ end }} {{ cond $isEn "The review:" "La recension :" }} <a href="{{ $chf.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $chf.Title }}&nbsp;↗</a></p>
+        </div>
+        {{ $livre }}
+      </div>
+      <div class="mtg-d">{{ $carte }}{{ $courts | safeHTML }}{{ $awp }}</div>
+    </div>
+    {{- else }}
+    <div class="mtg-grille mtg-grille--57">
+      <div class="mtg-g">{{ $carte }}{{ $livre }}</div>
+      <div class="mtg-d">
+        {{- with $exg }}
+        {{- $chapo := cond (and $isEn .Params.chapo_en) .Params.chapo_en .Params.chapo }}
+        <figure class="mtg-idee"><span class="mtg-label">{{ $L.idee }}</span><blockquote>{{ if $isEn }}“{{ (partial "chapo-phrases.html" $chapo).premiere | safeHTML }}”{{ else }}«&nbsp;{{ (partial "chapo-phrases.html" $chapo).premiere | safeHTML }}&nbsp;»{{ end }}</blockquote>
+        <figcaption>{{ $L.extrait }} <a href="{{ .Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" .Title }}&nbsp;↗</a>, <i>{{ .Params.revue }}</i>.</figcaption></figure>
+        {{- end }}
+        {{ $courts | safeHTML }}{{ $awp }}
+      </div>
+    </div>
+    {{- end }}
+  </section>
+  {{- end }}
+</div>

@@ -61,6 +61,12 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-26 (après-midi) — Page « Publications » : montage éditorial F4.2 (cinq contre-expertises arbitrées, « on lance la mise en ligne »)
+
+- Montage calculé (`partials/publications-montage.html`) : 01 = fil de la dernière publication (une : titre d'œuvre / auteur recensé, « en écho », données, working paper) ; 02-03 = autres thèmes à page de données (`data/themes_publications.yaml` : `ressource`, `livre`), ouverts par les `chiffres` d'une fiche (aplat marine) ou la phrase de la fiche `exergue` (aplat bleu pâle). Intitulés = titres des working papers ; livres avec leur ligne publiée sur « À propos » (entre guillemets). Catalogue : filtres thème + genre. Une publication nouvelle = une fiche.
+- Fiche Lemoine : première phrase corrigée (accord de 2016 après contentieux, non décision du tribunal), FR et EN ; `chiffres` (177 M$ investissement estimé, Guzmán-Stiglitz 2016 ; 2,4 Md$ versés au titre de l'accord, Informe n° 93 p. 10 lu sur Internet Archive) avec garde vue mordre.
+- Arbitrages : `D:\PRO_PROMOTION\MAQUETTES_PUBLICATIONS_2026-11-26_ARBITRAGE_PUBLICATIONS.md`. Contrôles : check-all 0, liens 0 critique, rendu FR/EN 1 280 et 390 px, filtres, ancres, textes alternatifs.
+
 ### 2026-11-26 — Page « Publications » refondue (maquette D2, « go » de l'auteur) ; bande des identifiants de l'accueil sans ronds au téléphone (`33bced7f`)
 
 - **Publications** : trois maquettes, deux contre-expertises arbitrées (`D:\PRO_PROMOTION\MAQUETTES_PUBLICATIONS_2026-11-26_ARBITRAGE_PUBLICATIONS.md`), D2 retenue avec trois corrections de l'auteur. Accroche = texte de l'auteur (front matter `accroche`) ; supports par ordre alphabétique, blogs à part ; **aucun compte affiché** (décision de l'auteur) ; « À découvrir » (`a_decouvrir`, trois slugs) ; liste par année, deux colonnes sur ordinateur, première phrase du chapô puis repli (`partials/chapo-phrases.html`, découpage vérifié identique sur les 21 fiches FR) ; champ `genre` (recension | article | billet) ajouté aux 21 fiches ; « Prolonge » → « Pour aller plus loin » (livre d'abord, titres des AWP au survol) ; filtre par genre retiré ; sortie « Les livres → ». Ancres `#<slug>` du mur presse de /a-propos/ conservées. Hauteur au téléphone : 11 262 → 8 245 px (FR).
