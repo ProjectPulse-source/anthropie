@@ -213,7 +213,7 @@
 .pub-entree__genre {
   display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
   padding: 1px 6px; border-radius: 3px; margin-right: 0.3rem; vertical-align: 1px;
-  background: var(--color-dossier-tint); color: var(--color-accent);
+  background: var(--color-pivot); color: #fff; // recension : même poids que l'article, teinte distincte (auteur, 26/11/2026 ; blanc sur #4A6FA5 = 5,1:1)
 }
 .pub-entree__genre--article { background: var(--color-accent); color: var(--color-bg); }
 .pub-entree__genre--billet { background: var(--color-bg-elevated); color: var(--color-text-subtle); border: 1px solid var(--color-rule-soft); }
