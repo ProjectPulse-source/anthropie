@@ -140,8 +140,13 @@
         <div class="mtg-chiffre">
           <span class="mtg-label">{{ $L.chiffre }}</span>
           <div class="mtg-chiffre__l">{{ range $chf.Params.chiffres }}<p><b>{{ if $isEn }}{{ .valeur_en }}{{ else }}{{ .valeur }}&nbsp;{{ .unite }}{{ end }}</b><span>{{ cond $isEn .libelle_en .libelle }}</span></p>{{ end }}</div>
-          <p class="mtg-chiffre__phrase">{{ (partial "chapo-phrases.html" $chapo).premiere | safeHTML }}</p>
-          <p class="mtg-chiffre__src">{{ with cond $isEn $chf.Params.chiffres_sources_en $chf.Params.chiffres_sources }}{{ $L.sources }} {{ . | markdownify }}{{ end }} {{ cond $isEn "The review:" "La recension :" }} <a href="{{ $chf.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $chf.Title }}&nbsp;↗</a></p>
+          {{- $phC := partial "chapo-phrases.html" $chapo }}
+          <p class="mtg-chiffre__phrase">{{ $phC.premiere | safeHTML }}</p>
+          {{- /* Suite du chapô de la recension (auteur, 26/11/2026 : une ou deux phrases de la recension, lien clair). */ -}}
+          {{ with $phC.reste }}<p class="mtg-chiffre__suite">{{ . | safeHTML }}</p>{{ end }}
+          <p class="mtg-chiffre__src">{{ with cond $isEn $chf.Params.chiffres_sources_en $chf.Params.chiffres_sources }}{{ $L.sources }} {{ . | markdownify }}{{ end }}</p>
+          {{- $oeuvre := index (split $chf.Title " — ") 0 }}
+          <a class="mtg-chiffre__cta" href="{{ $chf.Params.url_externe }}" target="_blank" rel="noopener"><span>{{ if $isEn }}Read the review of <i lang="fr">{{ partial "fr-typo.html" $oeuvre }}</i> (in French){{ else }}Lire la recension de <i>{{ partial "fr-typo.html" $oeuvre }}</i>{{ end }}&nbsp;↗</span><small{{ if $isEn }} lang="fr"{{ end }}>{{ $chf.Params.revue }}</small></a>
         </div>
         {{ $livre }}
       </div>

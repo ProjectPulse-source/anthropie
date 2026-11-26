@@ -239,13 +239,24 @@
   .mtg-livre__couv img { display: block; width: 84px; height: auto; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22); } }
 .mtg-livre__titre { font-family: var(--font-serif); font-size: 1.05rem; }
 .mtg-livre__ligne { font-size: 0.97rem; line-height: 1.5; color: var(--color-text-muted); margin: 0.35rem 0 0; }
-.mtg-chiffre { background: var(--color-accent); color: #fff; padding: 1.5rem 1.5rem 1.35rem;
+.mtg-chiffre { background: linear-gradient(180deg, #0f1a33 0%, var(--color-accent) 45%, #3a5182 100%); color: #fff; padding: 1.5rem 1.5rem 1.35rem;
   .mtg-label { color: #b9c6e0; }
   p { margin: 0; } }
 .mtg-chiffre__l { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem;
   b { display: block; font-family: var(--font-serif); font-weight: 400; font-size: 3.4rem; line-height: 1; }
   span { font-family: var(--font-sans); font-size: 14px; line-height: 1.35; color: #d5ddef; } }
 .mtg-chiffre .mtg-chiffre__phrase { font-size: 1.15rem; line-height: 1.5; margin: 0.9rem 0 0.4rem; }
+.mtg-chiffre .mtg-chiffre__suite { font-family: var(--font-serif); font-style: italic; font-size: 1.08rem; line-height: 1.5; color: #e3e9f5;
+  border-top: 1px solid rgba(255, 255, 255, 0.25); padding-top: 0.8rem; margin: 0.8rem 0 0.9rem; }
+.mtg-chiffre__cta { display: block; margin-top: 1.4rem; padding: 0.85rem 1rem; border: 1px solid rgba(255, 255, 255, 0.55); color: #fff; text-decoration: none;
+  font-family: var(--font-sans); font-size: 15px; font-weight: 600; line-height: 1.35;
+  span { display: block; } i { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; white-space: nowrap; }
+  small { display: block; margin-top: 0.2rem; font-size: 13px; font-weight: 400; color: #d5ddef; font-style: italic; }
+  &:hover, &:focus-visible { background: rgba(255, 255, 255, 0.1); } }
+/* Bloc chiffre étiré à la hauteur de la colonne voisine, lien en pied (auteur, 26/11/2026). */
+.mtg-grille--43 > .mtg-g { display: flex; flex-direction: column; }
+.mtg-grille--43 .mtg-chiffre { flex: 1 0 auto; display: flex; flex-direction: column;
+  .mtg-chiffre__cta { margin-top: auto; } .mtg-chiffre__src { margin-bottom: 1.4rem; } }
 .mtg-chiffre .mtg-chiffre__src { font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: #d5ddef;
   a { color: #fff; } }
 .mtg-idee { margin: 0; background: var(--color-dossier-tint); padding: 1.35rem 1.4rem 1.1rem;
