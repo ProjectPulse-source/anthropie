@@ -3,6 +3,7 @@ title: "La financiarisation de la santé au Sénégal (1840-1960) — Valéry Ri
 date: 2026-07-03
 revue: "Lectures"
 source_type: "Académique"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://journals.openedition.org/lectures/71869"
 doi: "10.4000/16ihm"
 wikidata_qid: "Q141072265"  # alimente sameAs de l'ItemList /publications/

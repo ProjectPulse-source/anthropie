@@ -3,6 +3,7 @@ title: "Sous le cloud, la fournaise"
 date: 2026-01-22
 revue: "Terrestres"
 source_type: "Revue"
+genre: "article"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.terrestres.org/2026/01/22/resister-a-la-dematerialisation-depuis-marseille/"
 image_type: "logo"
 chapo: "À Marseille, les data centers avalent l'espace et l'électricité des quartiers populaires. Le cloud n'a rien de virtuel : il chauffe, il consomme, il déplace."

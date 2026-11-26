@@ -3,6 +3,7 @@ title: "Chasseurs d'États — Benjamin Lemoine"
 date: 2026-08-04
 revue: "Revue Française de Socio-Économie"
 source_type: "Académique"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"  # page de la recension ; la page du bloc (-247) est « Page non trouvée » chez Cairn (lu le 2026-09-16)
 doi: "10.3917/rfse.036.0247d"  # DOI propre de la recension (registre : doi_review) ; le DOI commun du bloc reste au registre
 doi_url: "https://shs.cairn.info/revue-francaise-de-socio-economie-2026-1-page-247d"  # repli : doi.org → reseaucairn.info rend 503 (mesuré le 2026-09-29). Condition de retrait : supprimer ce champ dès que `curl -sIL https://doi.org/10.3917/rfse.036.0247d` finit en 200.

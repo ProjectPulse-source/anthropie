@@ -3,6 +3,7 @@ title: "La main et l'esprit — Arnaud Kaba"
 date: 2026-04-14
 revue: "Lectures"
 source_type: "Académique"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://journals.openedition.org/lectures/70897"
 doi: "10.4000/162f0"
 wikidata_qid: "Q141072264"  # alimente sameAs de l'ItemList /publications/

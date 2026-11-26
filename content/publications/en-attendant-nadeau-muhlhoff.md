@@ -3,6 +3,7 @@ title: "Gouverner sans être contredit — Rainer Mühlhoff"
 date: 2026-11-03
 revue: "En attendant Nadeau"
 source_type: "Revue"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.en-attendant-nadeau.fr/2026/11/03/gouverner-sans-etre-contredit-muhlhoff/"
 image_type: "logo"
 chapo: "Une agence pour l'emploi peut examiner chaque dossier, ou parier sur la décision la moins contestée. Dans <em>Intelligence artificielle & nouveau fascisme</em> (Agone, trad. Pierre Deshusses), Rainer Mühlhoff montre comment l'IA fait de la vérité une valeur procédurale. Mais des recours peuvent coexister des années avec une injustice massive, l'affaire néerlandaise des allocations de garde d'enfants l'a montré : le danger commence quand une société perd les moyens de savoir qu'elle se trompe."

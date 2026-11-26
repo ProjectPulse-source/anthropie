@@ -61,6 +61,11 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-26 — Page « Publications » refondue (maquette D2, « go » de l'auteur) ; bande des identifiants de l'accueil sans ronds au téléphone (`33bced7f`)
+
+- **Publications** : trois maquettes, deux contre-expertises arbitrées (`D:\PRO_PROMOTION\MAQUETTES_PUBLICATIONS_2026-11-26_ARBITRAGE_PUBLICATIONS.md`), D2 retenue avec trois corrections de l'auteur. Accroche = texte de l'auteur (front matter `accroche`) ; supports par ordre alphabétique, blogs à part ; **aucun compte affiché** (décision de l'auteur) ; « À découvrir » (`a_decouvrir`, trois slugs) ; liste par année, deux colonnes sur ordinateur, première phrase du chapô puis repli (`partials/chapo-phrases.html`, découpage vérifié identique sur les 21 fiches FR) ; champ `genre` (recension | article | billet) ajouté aux 21 fiches ; « Prolonge » → « Pour aller plus loin » (livre d'abord, titres des AWP au survol) ; filtre par genre retiré ; sortie « Les livres → ». Ancres `#<slug>` du mur presse de /a-propos/ conservées. Hauteur au téléphone : 11 262 → 8 245 px (FR).
+- Contrôles : `check-all --ci` à 0 ; audit des liens 0 critique ; dates concordantes.
+
 ### 2026-11-24/25 — Relié Livresque à l'achat et suivi ; page « À propos » refondue (D2)
 - Relié : bouton et menu de la fiche, `workExample` Hardcover, phrase de `/offrir-un-livre-de-culture-generale/` (shortcode
   `amazon-lien`, lien balisé) ; balise Amazon Attribution `FR-livresque-relie` (`data/attribution_fr.yaml`) ; `works.yaml`

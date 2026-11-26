@@ -3,6 +3,7 @@ title: "Quand l'entreprise agit, qui en répond ?"
 date: 2026-06-03
 revue: "Nonfiction"
 source_type: "Portail"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.nonfiction.fr/article-12742-quand-lentreprise-agit-qui-en-repond.htm"
 image_type: "logo"
 chapo: "L'entreprise moderne peut agir sans que personne n'en réponde. Vuillemey montre comment la responsabilité limitée sépare l'agir du répondre, et reporte les dommages sur les biens communs."

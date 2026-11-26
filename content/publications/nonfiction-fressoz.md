@@ -3,6 +3,7 @@ title: "La transition énergétique n'a jamais eu lieu — Fressoz"
 date: 2026-02-03
 revue: "Nonfiction"
 source_type: "Portail"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.nonfiction.fr/article-12589-la-transition-energetique-na-jamais-eu-lieu.htm"
 image_type: "logo"
 chapo: "Les énergies ne se remplacent pas : elles s'empilent. Fressoz déconstruit le récit de la « transition » et oblige à repenser nos usages."

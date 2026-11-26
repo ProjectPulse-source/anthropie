@@ -3,6 +3,7 @@ title: "Qui paie la fluidité ? — Khalili, Extractive Capitalism"
 date: 2026-03-16
 revue: "La Vie des Idées"
 source_type: "Revue"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://laviedesidees.fr/Laleh-Khalili-Extractive-Capitalism"
 image_type: "logo"
 chapo: "80 % du commerce mondial transite par mer. Khalili montre que la fluidité des marchandises repose sur la captivité des corps et des territoires."

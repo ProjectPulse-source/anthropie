@@ -3,6 +3,7 @@ title: "Le passé recalculé — Alexandre Gefen (dir.)"
 date: 2026-09-02
 revue: "En attendant Nadeau"
 source_type: "Revue"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.en-attendant-nadeau.fr/2026/09/02/le-passe-recalcule/"
 image_type: "logo"
 chapo: "L'IA est-elle née en 1956, ou a-t-elle des millénaires d'ancêtres ? L'<em>Histoire culturelle de l'IA</em> (Alexandre Gefen dir., CNRS Éditions) défait le mythe de Dartmouth, mais laisse au lecteur le soin de séparer la filiation de l'analogie, et tient à la marge les travailleurs du clic qui fabriquent aujourd'hui son évidence. Les ancêtres ne sont pas trouvés : ils sont institués."

@@ -3,6 +3,7 @@ title: "Qui absorbe le coût de la dette française ?"
 date: 2026-06-04
 revue: "La Grande Conversation"
 source_type: "Revue"
+genre: "article"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.lagrandeconversation.com/economie/qui-absorbe-le-cout-de-la-dette-francaise/"
 image_type: "logo"
 chapo: "Une dette souveraine ne se rembourse pas comme un crédit immobilier. La vraie question n'est pas « qui rembourse ? » mais « qui absorbe le coût ? » — car la dette ne s'évanouit pas, elle se déplace dans l'espace, le temps et entre les groupes sociaux."

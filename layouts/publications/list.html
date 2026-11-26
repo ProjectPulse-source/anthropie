@@ -1,54 +1,71 @@
 {{ define "main" }}
-{{- /* Page /publications/ (variante B retenue par l'auteur, 01/10/2026) : chronologie compacte groupée par mois,
-       filtrable par thème. Les fiches n'existent qu'en français ; la page anglaise les liste marquées « In French ».
-       Tout se déduit des fiches : revues et nombres, thèmes (data/themes_publications.yaml), mois. Les deux derniers
-       paragraphes d'introduction sont repliés dans le Markdown (« Trois chantiers »). */ -}}
+{{- /* Page /publications/ — maquette D2 retenue par l'auteur (26/11/2026 ; deux contre-expertises arbitrées :
+       D:\PRO\06_PROMOTION\MAQUETTES_PUBLICATIONS_2026-11-26\03_ARBITRAGE_PUBLICATIONS.md). Remplace la variante B du
+       01/10/2026 (chronologie par mois).
+       Ordre : accroche de l'auteur (front matter `accroche`, recopiée de son texte publié) ; supports par ordre
+       alphabétique, billets de blog nommés à part ; « À découvrir » (front matter `a_decouvrir` : trois slugs choisis par
+       l'auteur pour la diversité des genres et des terrains) ; toutes les publications, filtrables par thème, groupées
+       par année ; le texte de l'auteur replié en fin de liste.
+       AUCUN COMPTE AFFICHÉ (décision de l'auteur, 26/11/2026 : « l'impression du nombre et de l'activité impacte plus
+       qu'un chiffre »). Tout se déduit des fiches, qui n'existent qu'en français ; la page anglaise les marque « In French ». */ -}}
 {{- $isEn := eq .Lang "en" -}}
 {{- $frSite := index site.Sites 0 -}}
 {{- $pubs := (where $frSite.RegularPages "Type" "publications").ByDate.Reverse -}}
 <div class="home-section publications-page">
   <header class="page-header">
     <h1 class="page-header__title">{{ partial "fr-typo.html" .Title }}</h1>
-    {{ with .Description }}<p class="page-header__lede">{{ partial "fr-typo.html" . }}</p>{{ end }}
+    {{ with .Params.accroche }}<p class="publications-accroche">{{ . | markdownify | partial "fr-typo.html" }}</p>{{ end }}
   </header>
 
-  <div class="article__body publications-intro">{{ .Content }}</div>
-
-  {{- /* Où ces textes ont paru : chaque revue et son nombre de textes, du plus au moins fréquent. */ -}}
-  {{- $revues := dict -}}
-  {{- range $pubs }}{{ with .Params.revue }}{{ $revues = merge $revues (dict . (add (index $revues . | default 0) 1)) }}{{ end }}{{ end -}}
-  {{- $lignes := slice -}}
-  {{- range $nom, $n := $revues }}{{ $lignes = $lignes | append (dict "nom" $nom "n" $n) }}{{ end }}
-  <p class="publications-revues">
-    <span class="publications-sous">{{ if $isEn }}Where these texts appeared{{ else }}Où ces textes ont paru{{ end }}</span>
-    {{ $parts := slice }}{{ range sort (sort $lignes "nom") "n" "desc" }}{{ $parts = $parts | append (printf "<i>%s</i>&nbsp;%d" .nom .n) }}{{ end }}{{ delimit $parts " · " | safeHTML }}
+  {{- /* Où ces textes ont paru : revues et journaux par ordre alphabétique, sans compteur ; blogs à part. */ -}}
+  {{- $revues := slice }}{{ $blogs := slice -}}
+  {{- range $pubs }}{{ $r := .Params.revue }}{{ if $r }}{{ if eq .Params.source_type "Blog" }}{{ if not (in $blogs $r) }}{{ $blogs = $blogs | append $r }}{{ end }}{{ else if not (in $revues $r) }}{{ $revues = $revues | append $r }}{{ end }}{{ end }}{{ end -}}
+  <p class="publications-parus">
+    {{ if $isEn }}Reviews and articles published in{{ else }}Recensions et articles parus dans{{ end }}
+    <span class="publications-parus__noms">{{ $parts := slice }}{{ range sort $revues }}{{ $parts = $parts | append (printf "<i>%s</i>" .) }}{{ end }}{{ delimit $parts " · " | safeHTML }}</span>.
+    {{- with $blogs }}
+    <span class="publications-parus__blogs">{{ if $isEn }}As well as blog posts on{{ else }}Ainsi que des billets sur le{{ end }} {{ $b := slice }}{{ range . }}{{ $b = $b | append (printf "<i>%s</i>" .) }}{{ end }}{{ delimit $b ", " | safeHTML }}.</span>
+    {{- end }}
   </p>
 
-  {{- /* Filtres par thème : sans script, tout reste visible ; le script masque les entrées hors thème et les mois vides. */ -}}
-  {{- $nb := dict -}}
-  {{- range $pubs }}{{ $rel := .Params.related | default (slice) }}{{ range site.Data.themes_publications }}{{ if in $rel .awp }}{{ $nb = merge $nb (dict .awp (add (index $nb .awp | default 0) 1)) }}{{ end }}{{ end }}{{ end }}
+  {{- with .Params.a_decouvrir }}
+  {{- $choix := slice }}{{ range . }}{{ with $frSite.GetPage (printf "/publications/%s" .) }}{{ $choix = $choix | append . }}{{ else }}{{ warnf "publications : a_decouvrir vise une fiche absente (%s)" . }}{{ end }}{{ end }}
+  {{- if $choix }}
+  <h2 class="publications-h2 section-title">{{ if $isEn }}To discover{{ else }}À découvrir{{ end }}</h2>
+  <div class="publications-decouvrir">
+    <div class="publications-decouvrir__une">{{ partial "publication-entree.html" (dict "page" (index $choix 0) "lang" $.Lang "forme" "une") }}</div>
+    <div class="publications-decouvrir__autres">{{ range after 1 $choix }}{{ partial "publication-entree.html" (dict "page" . "lang" $.Lang "forme" "breve") }}{{ end }}</div>
+  </div>
+  {{- end }}
+  {{- end }}
+
+  <h2 class="publications-h2 section-title">{{ if $isEn }}All publications{{ else }}Toutes les publications{{ end }}</h2>
+
+  {{- /* Filtres par thème (thèmes déduits des working papers de chaque fiche, data/themes_publications.yaml), sans
+         compteur. Sans script, tout reste visible ; le script masque les entrées hors thème et les années vides. */ -}}
+  {{- $presents := slice -}}
+  {{- range $pubs }}{{ $rel := .Params.related | default (slice) }}{{ range site.Data.themes_publications }}{{ if and (in $rel .awp) (not (in $presents .awp)) }}{{ $presents = $presents | append .awp }}{{ end }}{{ end }}{{ end }}
   <div class="publications-filtres" role="group" aria-label="{{ if $isEn }}Themes{{ else }}Thèmes{{ end }}" hidden>
-    <button type="button" class="is-actif" data-theme="" aria-pressed="true">{{ if $isEn }}All{{ else }}Tous{{ end }}&nbsp;· {{ len $pubs }}</button>
-    {{- range $t := site.Data.themes_publications }}{{ $n := index $nb $t.awp }}{{ if $n }}{{ $lib := cond $isEn $t.en $t.fr }}
-    <button type="button" data-theme="{{ $lib }}" aria-pressed="false">{{ $lib }}&nbsp;· {{ $n }}</button>
+    <button type="button" class="is-actif" data-theme="" aria-pressed="true">{{ if $isEn }}All{{ else }}Tous{{ end }}</button>
+    {{- range $t := site.Data.themes_publications }}{{ if in $presents $t.awp }}{{ $lib := cond $isEn $t.en $t.fr }}
+    <button type="button" data-theme="{{ $lib }}" aria-pressed="false">{{ $lib }}</button>
     {{- end }}{{ end }}
   </div>
 
   <div class="publications-liste">
-    {{- $mois := "" -}}
-    {{- range $i, $p := $pubs }}
-      {{- $m := $p.Date.Format "2006-01" -}}
-      {{- if ne $m $mois }}{{ $mois = $m }}
-      <h2 class="publications-mois section-title">{{ time.Format "January 2006" $p.Date }}</h2>
-      {{- end }}
-      {{ partial "publication-entree.html" (dict "page" $p "lang" $.Lang "variant" (cond (eq (mod $i 2) 0) "navy" "cream")) }}
+    {{- range $pubs.GroupByDate "2006" }}
+    <h3 class="publications-annee">{{ .Key }}</h3>
+    <div class="publications-grille">
+      {{- range .Pages }}{{ partial "publication-entree.html" (dict "page" . "lang" $.Lang "forme" "liste") }}{{ end }}
+    </div>
     {{- end }}
   </div>
 
-  <div class="page-exit">
-    <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">
-      {{ if $isEn }}View the Working Papers →{{ else }}Voir la série AWP →{{ end }}
-    </a>
+  <div class="article__body publications-intro">{{ .Content }}</div>
+
+  <div class="page-exit publications-sortie">
+    <a href="{{ "/livres/" | relLangURL }}" class="text-link">{{ if $isEn }}The books →{{ else }}Les livres →{{ end }}</a>
+    <a href="{{ "/serie-awp/" | relLangURL }}" class="text-link">{{ if $isEn }}View the Working Papers →{{ else }}Voir la série AWP →{{ end }}</a>
   </div>
 </div>
 <script>
@@ -61,13 +78,12 @@
       b.addEventListener('click', function () {
         var t = b.dataset.theme;
         boutons.forEach(function (x) { var on = x === b; x.classList.toggle('is-actif', on); x.setAttribute('aria-pressed', on); });
-        document.querySelectorAll('.pub-entree').forEach(function (a) {
+        document.querySelectorAll('.pub-entree--liste').forEach(function (a) {
           a.hidden = !!t && a.dataset.themes.split('|').indexOf(t) < 0;
         });
-        document.querySelectorAll('.publications-mois').forEach(function (m) {
-          var n = m.nextElementSibling, vis = false;
-          while (n && !n.classList.contains('publications-mois')) { if (!n.hidden) vis = true; n = n.nextElementSibling; }
-          m.hidden = !vis;
+        document.querySelectorAll('.publications-annee').forEach(function (h) {
+          var g = h.nextElementSibling;
+          h.hidden = g ? !g.querySelector('.pub-entree--liste:not([hidden])') : false;
         });
       });
     });

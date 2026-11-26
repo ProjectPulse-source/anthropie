@@ -3,6 +3,7 @@ title: "MaPrimeRénov' : l'arrêt faute de budget"
 date: 2026-01-12
 revue: "Club de Mediapart"
 source_type: "Blog"
+genre: "billet"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://blogs.mediapart.fr/stephane-lalut/blog/120126/maprimerenov-l-arret-faute-de-budget-les-menages-modestes-font-les-frais-du-gel"
 image_type: "logo"
 chapo: "Quand l'État gèle MaPrimeRénov', ce sont les ménages modestes qui paient la facture. Le coût de la rénovation ne disparaît pas : il change de porteur."

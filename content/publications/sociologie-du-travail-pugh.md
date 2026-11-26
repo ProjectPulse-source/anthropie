@@ -3,6 +3,7 @@ title: "The Last Human Job — Allison J. Pugh"
 date: 2026-09-09
 revue: "Sociologie du travail"
 source_type: "Académique"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://journals.openedition.org/sdt/50224"
 doi: "10.4000/16rju"
 wikidata_qid: "Q141435769"  # alimente sameAs de l'ItemList /publications/

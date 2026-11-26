@@ -3,6 +3,7 @@ title: "La limite retournée — Carton & Malm"
 date: 2026-03-24
 revue: "En attendant Nadeau"
 source_type: "Revue"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.en-attendant-nadeau.fr/2026/03/24/la-limite-retournee/"
 image_type: "logo"
 chapo: "Le dépassement climatique n'est pas un échec : c'est un programme. Carton et Malm décryptent la machinerie intellectuelle qui a rendu l'overshoot désirable."

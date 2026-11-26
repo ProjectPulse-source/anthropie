@@ -3,6 +3,7 @@ title: "Parler sans savoir à qui"
 date: 2026-08-11
 revue: "En attendant Nadeau"
 source_type: "Revue"
+genre: "article"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.en-attendant-nadeau.fr/2026/08/11/parler-sans-savoir-a-qui-ia/"
 image_type: "logo"
 chapo: "L'objet connecté se conforme à nos désirs ; le livre s'y refuse — il parle sans savoir à qui. Défense du quant-à-soi du livre face aux algorithmes, pour le hors-série « États du livre » d'En attendant Nadeau."

@@ -3,6 +3,7 @@ title: "La nécessité fabriquée — Welgryn & Alves Da Costa"
 date: 2026-05-05
 revue: "En attendant Nadeau"
 source_type: "Revue"
+genre: "recension"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.en-attendant-nadeau.fr/2026/05/05/le-grand-enfumage/"
 image_type: "logo"
 chapo: "Welgryn et Alves Da Costa déconstruisent le récit qui rend l'IA inéluctable. La nécessité technologique n'est pas donnée : elle se fabrique. Recension du livre <em>IA. Le grand enfumage. Comprendre les enjeux, déconstruire les mythes, reprendre le pouvoir</em> (Payot, 240 p., 19,90 €)."

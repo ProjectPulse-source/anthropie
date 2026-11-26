@@ -172,15 +172,26 @@
   .pub-thumb__rule  { background: rgba(27, 42, 78, 0.55); }
 }
 
-// ── Page /publications/ (variante B, 01/10/2026) : chronologie compacte, filtrable par thème ──
-.publications-intro details.publications-chantiers {
-  border-top: 1px solid var(--color-rule-soft); border-bottom: 1px solid var(--color-rule-soft);
-  padding: 0.5rem 0; margin: 0 0 1rem;
-  summary { cursor: pointer; font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--color-accent); }
-  p { color: var(--color-text-muted); }
+// ── Page /publications/ (maquette D2 retenue par l'auteur, 26/11/2026) ──
+// Accroche de l'auteur, supports sans compteur, « À découvrir », liste par année en deux colonnes sur ordinateur, résumé
+// en première phrase puis repli (ligne « Lire le détail » posée par replis-action.js), texte de l'auteur replié en fin.
+.publications-accroche {
+  font-family: var(--font-serif); font-size: 1.55rem; line-height: 1.4; color: var(--color-accent);
+  max-width: 46ch; margin: 0.4rem 0 0; padding-left: 1.1rem; border-left: 3px solid var(--color-accent);
 }
-.publications-sous { display: block; font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.2rem; }
-.publications-revues { font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; max-width: 72ch; margin: 0 0 1.25rem; }
+.publications-parus { font-family: var(--font-sans); font-size: 14px; line-height: 1.7; color: var(--color-text-subtle); max-width: 95ch; margin: 0 0 0.5rem; }
+.publications-parus__noms { font-family: var(--font-serif); font-size: 1.05rem; color: var(--color-accent); }
+.publications-parus__noms i { white-space: nowrap; }
+.publications-parus__blogs { display: block; margin-top: 0.2rem; }
+.home-section h2.publications-h2.section-title { margin: 2.2rem 0 1rem; }
+.publications-decouvrir { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 1.75rem; align-items: start; }
+.publications-decouvrir__une .pub-entree {
+  background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); border-radius: 4px; padding: 1.25rem 1.4rem;
+  .pub-entree__titre { font-size: 1.5rem; }
+}
+.publications-decouvrir__autres { display: grid; gap: 0; }
+.publications-decouvrir__autres .pub-entree { padding: 0.9rem 0; border-bottom: 1px solid var(--color-rule-soft); }
+.publications-decouvrir__autres .pub-entree:first-child { padding-top: 0; }
 .publications-filtres { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 0.5rem; }
 .publications-filtres button {
   font-family: var(--font-sans); font-size: 13px; font-weight: 500; cursor: pointer;
@@ -189,43 +200,55 @@
   &.is-actif { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-bg); }
   &:focus-visible { outline: 2px solid var(--color-pivot); outline-offset: 2px; }
 }
-.home-section h2.publications-mois.section-title {
-  font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--color-accent); margin: 1.5rem 0 0; padding: 0 0 0.4rem; border: 0; border-bottom: 1px solid var(--color-accent-rule);
-}
+.publications-annee { font-family: var(--font-sans); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: var(--color-text-subtle); margin: 1.2rem 0 0; }
+.publications-grille { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; }
 
-// Une entrée : petite tuile de revue, méta, titre vers l'article, chapô, thèmes, « Prolonge : », DOI.
+// Une entrée : genre · revue · date, titre vers l'article, résumé (première phrase + repli), thèmes, « Pour aller plus loin », DOI.
 .pub-entree {
-  display: grid; grid-template-columns: 164px minmax(0, 1fr); gap: 0.25rem 1.1rem;
-  padding: 0.9rem 0; border-bottom: 1px solid var(--color-rule-soft);
+  display: grid; gap: 0.3rem; align-content: start; min-width: 0;
+  padding: 1.1rem 0; border-bottom: 1px solid var(--color-rule-soft);
   scroll-margin-top: 80px; // l'en-tête est collant : une ancre #<slug> (mur presse) dégage l'entrée
 }
-.pub-entree__tuile { display: block; text-decoration: none; }
-.pub-entree .pub-thumb {
-  width: 164px; min-width: 164px; height: 107px; border-radius: 6px; padding: 8px 10px; gap: 5px; // même tuile que le mur presse de /a-propos/ (auteur, 02/11/2026)
-  .pub-thumb__label { font-size: 12px; line-height: 1.2; letter-spacing: 0.06em; text-align: center; } // = mur presse (07/11/2026)
-  .pub-thumb__name { font-size: 17px; }
-  .pub-thumb__rule { width: 32px; }
-}
-.pub-entree__corps { display: grid; gap: 0.3rem; min-width: 0; }
 .pub-entree__meta { font-family: var(--font-sans); font-size: 12px; color: var(--color-text-subtle); margin: 0; }
+.pub-entree__genre {
+  display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 1px 6px; border-radius: 3px; margin-right: 0.3rem; vertical-align: 1px;
+  background: var(--color-dossier-tint); color: var(--color-accent);
+}
+.pub-entree__genre--article { background: var(--color-accent); color: var(--color-bg); }
+.pub-entree__genre--billet { background: var(--color-bg-elevated); color: var(--color-text-subtle); border: 1px solid var(--color-rule-soft); }
 .pub-entree__academique { font-weight: 600; color: var(--color-accent); }
-.pub-entree__titre { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500; line-height: 1.3; margin: 0; }
+.pub-entree__titre { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; line-height: 1.3; margin: 0; }
 .pub-entree__ext { font-size: 0.8em; color: var(--color-pivot); }
 .pub-entree__chapo { color: var(--color-text-muted); max-width: 70ch; margin: 0; }
+.pub-entree__resume { margin: 0; }
+.pub-entree__resume > summary { list-style: none; cursor: pointer; }
+.pub-entree__resume > summary::-webkit-details-marker { display: none; }
+.pub-entree__resume > summary .pub-entree__chapo { display: block; }
+.pub-entree__resume > summary .repli__action { margin-top: 0.2rem; font-weight: 500; } // discrète : elle revient sous chaque résumé
+.pub-entree__resume > p { margin: 0.3rem 0 0; }
 .pub-entree__themes { display: flex; flex-wrap: wrap; gap: 5px; margin: 0.1rem 0 0; }
 .pub-entree__themes span {
   font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--color-accent);
   background: var(--color-dossier-tint); padding: 2px 8px; border-radius: 999px;
 }
-// « Prolonge : » et DOI : alignés sur la colonne de texte de l'entrée (ils l'étaient sur l'ancienne tuile de 160 px).
 .pub-entree .pub-card__related, .pub-entree .pub-card__doi { margin: 0; padding: 0; }
-@media (max-width: 560px) {
-  .pub-entree { grid-template-columns: 86px minmax(0, 1fr); }
-  .pub-entree .pub-thumb { width: 86px; min-width: 86px; height: 58px; padding: 3px 4px; }
-  .pub-entree .pub-thumb .pub-thumb__label { display: none; }
-  .pub-entree .pub-thumb .pub-thumb__name { font-size: 12px; }
+.pub-card__related-awps { display: inline-flex; flex-wrap: wrap; gap: 0.25rem 0.8rem; } // les codes passent à la ligne ensemble, jamais un seul
+.publications-intro { margin-top: 2rem; }
+.publications-intro details.publications-chantiers {
+  border-top: 1px solid var(--color-rule-soft); border-bottom: 1px solid var(--color-rule-soft); padding: 0.5rem 0;
+  summary { cursor: pointer; font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--color-accent); }
+  p { color: var(--color-text-muted); }
 }
-// `display: grid` de l'entrée l'emportait sur l'attribut `hidden` posé par le filtre : l'entrée restait affichée
-// (mesuré le 01/10/2026 : 5 entrées « cachées » sur 20 visibles à l'écran).
-.pub-entree[hidden], .home-section h2.publications-mois[hidden], .publications-filtres[hidden] { display: none; }
+.publications-sortie { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
+@media (max-width: 760px) {
+  .publications-accroche { font-size: 1.3rem; padding-left: 0.9rem; }
+  .publications-decouvrir { grid-template-columns: 1fr; gap: 0.75rem; }
+  .publications-decouvrir__une .pub-entree { padding: 1rem; }
+  .publications-decouvrir__une .pub-entree .pub-entree__titre { font-size: 1.3rem; }
+  .publications-decouvrir__autres .pub-entree:first-child { padding-top: 0.9rem; border-top: 0; }
+  .publications-grille { grid-template-columns: 1fr; }
+  .publications-grille .pub-entree__themes { display: none; } // le filtre par thème reste ; les pastilles allongeaient chaque entrée
+}
+// `display: grid` de l'entrée l'emportait sur l'attribut `hidden` posé par le filtre (mesuré le 01/10/2026).
+.pub-entree[hidden], .publications-annee[hidden], .publications-filtres[hidden] { display: none; }

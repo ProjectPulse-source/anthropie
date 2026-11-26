@@ -3,6 +3,7 @@ title: "La commune, variable d'ajustement de la République ?"
 date: 2026-07-08
 revue: "Revue Projet"
 source_type: "Revue"
+genre: "article"  # recension | article | billet — lu par /publications/ (auteur, 26/11/2026)
 url_externe: "https://www.revue-projet.com/articles/2026-07-lalut-variable-d-ajustement-de-la-republique/11589"
 doi: "10.3917/pro.412.0078"
 wikidata_qid: "Q141640335"  # alimente sameAs de l'ItemList /publications/
