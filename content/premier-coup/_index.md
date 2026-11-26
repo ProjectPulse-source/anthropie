@@ -1,8 +1,9 @@
 ---
 title: "La Société du premier coup — sources, compléments et mises à jour"
 date: 2026-07-29
-lastmod: 2026-11-16
+lastmod: 2026-11-26
 journal:  # révisions qui changent la lecture de la page
+  - {date: 2026-11-26, texte: "Correction de l'encadré FICP : le paiement intégral entraîne la radiation dès que la Banque de France reçoit sa déclaration ; quand il est fait à l'établissement chargé de cette déclaration, celle-ci doit être faite au plus tard le quatrième jour ouvré suivant le paiement (et non « sous environ quatre jours ouvrés ») ; durées maximales d'inscription rapportées au Code de la consommation (art. L. 752-1 et L. 752-3) et à l'arrêté relatif au FICP (art. 8), et non à son article 6."}
   - date: 2026-11-16
     texte: "Corrections : 82 % de non-recours au minimum vieillesse chez les nouveaux éligibles par un seul droit dérivé n'est pas le taux le plus haut (près de 95 % pour un autre motif) ; le RSA est ouvert avant 25 ans aux jeunes actifs depuis 2010 ; sortie de l'aide sociale à l'enfance : 51 % en moyenne, 32 % et 58 % aux quartiles ; Visale : plus de 2 millions de garanties souscrites (le livre disait « ménages »), et près de 80 % des baux selon une enquête, non une mesure d'effet ; crédit : effet redistributif des exemptions de faillite ; Child Trust Fund britannique avant le Connecticut ; Warin (2010) distingue trois formes de non-recours ; réexamen périodique déjà prévu pour les fichiers de police (directive 2016/680). Retirés : deux enchaînements non sourcés. Ajouté : mises à jour FICP, condamnations et Parcoursup (2025). Version 1.3."
   - {date: 2026-11-05, texte: "Corrections : « Un chez-soi d'abord » renvoie à Tinland et al., Epidemiology and Psychiatric Sciences, 2020 ; le seuil européen des minima sociaux vient de la CNAF (2020) : 24 des 28 pays ouvrent leur minimum à la majorité, quatre fixent un âge plus élevé (France et Luxembourg 25 ans, Espagne 23, Chypre 28)."}
@@ -265,11 +266,11 @@ Environ **16&nbsp;%** des jeunes sortis sur décision de l'aide sociale à l'enf
 
 ### Le FICP {#ficp}
 
-Plus de **2,14&nbsp;millions** de personnes inscrites au fichier national des incidents de remboursement des crédits aux particuliers. Le paiement intégral ouvre droit à une **radiation anticipée**, que l'établissement doit déclarer sous environ **quatre jours ouvrés**.
+Plus de **2,14&nbsp;millions** de personnes inscrites au fichier national des incidents de remboursement des crédits aux particuliers. Le paiement intégral entraîne la **radiation** dès réception de sa déclaration par la Banque de France&nbsp;; lorsqu'il est effectué auprès de l'établissement chargé de cette déclaration, celle-ci doit être faite au plus tard le **quatrième jour ouvré** suivant le paiement.
 
 - **Millésime**&nbsp;: fin 2024 · **Source**&nbsp;: Banque de France
 - **Mise à jour**&nbsp;: 2&nbsp;273&nbsp;435 personnes inscrites fin 2025 (Banque de France, chiffres clés du FICP)
-- **Durées d'inscription**&nbsp;: 5&nbsp;ans pour un incident, jusqu'à 7&nbsp;ans pour un plan de surendettement · **Texte**&nbsp;: arrêté du 26 octobre 2010, art.&nbsp;6
+- **Durées maximales d'inscription**&nbsp;: 5&nbsp;ans pour un incident de remboursement, 7&nbsp;ans pour un plan de surendettement · **Textes**&nbsp;: Code de la consommation, art.&nbsp;L.&nbsp;752-1 et L.&nbsp;752-3&nbsp;; arrêté du 26 octobre 2010 relatif au FICP, art.&nbsp;8
 - **Texte par texte, et qui intervient**&nbsp;: [combien de temps reste-t-on fiché, et qui déclare le paiement](/combien-de-temps-une-erreur-reste-inscrite/#ficp)
 - **Qualification**&nbsp;: donnée administrative + règle de droit
 - **Dans le livre**&nbsp;: chapitre&nbsp;5
