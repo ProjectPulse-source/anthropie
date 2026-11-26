@@ -1,10 +1,10 @@
 {{- /* chapo-phrases.html — coupe un chapô après sa première phrase (page /publications/, D2 du 26/11/2026).
        Entrée : la chaîne du chapô (HTML en ligne permis). Sortie : dict { premiere, reste } ; reste = "" s'il n'y a
-       qu'une phrase. Une phrase finit par . ! ? suivi d'une espace et d'une majuscule ou d'un « ; les abréviations
+       qu'une phrase. Une phrase finit par . ! ? suivi d'une espace et d'une majuscule ou d'un « (éventuellement ouverte par <em> ou <i> : un titre d'œuvre en tête de phrase, cas du chapô anglais de Gefen, 26/11/2026) ; les abréviations
        courantes des chapôs (trad., dir., éd., ed., p., vol., coll., cf., M.) ne coupent pas. Phrases RECOPIÉES : rien
        n'est réécrit, seule la coupure se calcule. */ -}}
 {{- $c := replaceRE `(^|[\s(])(trad|dir|éd|ed|p|vol|coll|cf|M)\. ` "${1}${2}.§" . -}}
-{{- $premiere := replaceRE `(?s)^(.+?[.!?])\s+[\p{Lu}«].*$` "$1" $c -}}
+{{- $premiere := replaceRE `(?s)^(.+?[.!?])\s+(?:<(?:em|i)>)?[\p{Lu}«].*$` "$1" $c -}}
 {{- $reste := "" -}}
-{{- if ne $premiere $c }}{{ $reste = replaceRE `(?s)^.+?[.!?]\s+([\p{Lu}«].*)$` "$1" $c }}{{ end -}}
+{{- if ne $premiere $c }}{{ $reste = replaceRE `(?s)^.+?[.!?]\s+((?:<(?:em|i)>)?[\p{Lu}«].*)$` "$1" $c }}{{ end -}}
 {{- return dict "premiere" (replace $premiere "§" " ") "reste" (replace $reste "§" " ") -}}
