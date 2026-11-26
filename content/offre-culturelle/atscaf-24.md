@@ -6,7 +6,8 @@ description: "Six livres numériques offerts par leur auteur aux adhérents de l
 # qui demande « une communication à transmettre » aux adhérents. Engagement décidé par l'auteur le 26/11/2026 : 100
 # exemplaires (environ 1 000 à 1 200 adhérents), réassort si nécessaire ; guichet :
 #   python gift.py partner add --id atscaf-24 --name "ATSCAF 24 Dordogne" --quota 100 --ends-on 2027-03-31
-# Logo : logo fédéral ATSCAF (atscaf.fr), la vitrine locale n'en publie pas ; à remplacer si l'association en fournit un.
+# Logo : celui de l'ATSCAF Dordogne, tiré de son bulletin d'adhésion 2026-2027 publié sur locales.atscaf.fr/2400/
+# (image recadrée, 288 px) ; le courriel au bureau propose de le retirer s'il le préfère.
 # Ordre : le livre sur la dette publique en premier, pour un public des finances publiques (auteur, 26/11).
 partner: "atscaf-24"
 partenaire: "ATSCAF 24 Dordogne"
