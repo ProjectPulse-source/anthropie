@@ -1,4 +1,4 @@
-# relu le 2026-11-24 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de 4233a6a9 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-26 ; texte servi de /combien-de-temps-une-erreur-reste-inscrite/, build de f3b348bd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Combien de temps une erreur reste-t-elle inscrite ?
 Fichier bancaire, casier, permis, assurance
 Six mois pour récupérer un point de permis quand l’infraction n’en a retiré qu’un, deux années consécutives sans sinistre pour effacer un malus, cinq ans au plus pour une interdiction d’émettre des chèques, quarante ans pour la fiche d’une condamnation pour crime ou délit — parfois davantage.
@@ -6,7 +6,7 @@ Le droit français ne conserve pas toutes les traces du passé selon les mêmes 
 Certaines disparaissent avec le temps, d’autres après un remboursement déclaré, une réhabilitation ou une décision judiciaire.
 Et supprimer une inscription ne signifie pas toujours effacer l’information.
 Pour savoir quand une trace cesse de produire ses effets, trois questions comptent : quel registre la conserve, quelle condition permet d’en sortir et qui doit agir ?
-Page mise à jour le 24 novembre 2026
+Page mise à jour le 26 novembre 2026
 Une dette se rembourse, une peine s’exécute, une maladie se soigne (la maladie n’est pas une erreur, mais elle aussi laisse une trace).
 Cela ne fait pas nécessairement disparaître toutes les conséquences qui leur sont associées : selon le registre, il faut laisser passer un délai, remplir une condition, obtenir une décision ou attendre qu’un organisme accomplisse une formalité.
 Cette page donne ces délais et ces conditions pour les principaux registres, d’après les textes en vigueur au 20 novembre 2026, relus sur Légifrance le 19 novembre 2026 (le 24 novembre pour le FICP).
@@ -23,9 +23,10 @@ Qui intervient
 Fichier des incidents de crédit (FICP)
 une durée maximale de conservation
 5 ans
-l’enregistrement de l’incident par la Banque de France
+la date où l’incident est devenu déclarable (arrêté relatif au FICP, art.
+8), quelques jours avant son enregistrement par la Banque de France, que retient le code
 le paiement intégral
-l’établissement, qui déclare le paiement
+l’entreprise responsable de l’inscription, qui déclare le paiement
 FICP, surendettement
 une durée de conservation, maximale pour un plan ou des mesures
 la durée du plan ou des mesures, 7 ans au plus ; 5 ans si le plan ou les mesures sont exécutés sans incident ; 5 ans après un rétablissement personnel ou, en Alsace-Moselle, la liquidation judiciaire d’un particulier
@@ -78,13 +79,16 @@ Quatre situations : ce qu’il faut vérifier, et qui agit
 Qui accompagne une personne part de sa situation plutôt que du registre ; en voici quatre, avec, pour chacune, ce qu’il faut vérifier et à qui s’adresser.
 Ces repères n’épuisent pas l’examen d’un dossier.
 La dette est payée, l’inscription au FICP demeure
-La radiation suit la déclaration du paiement intégral, et cette déclaration revient à l’établissement qui a déclaré l’incident, non à la personne.
+La radiation suit la déclaration du paiement intégral, et cette déclaration revient en principe à l’établissement qui a déclaré l’incident, non à la personne.
 Si le crédit a été cédé, la rédaction en vigueur à compter du 20 novembre 2026 met cette déclaration à la charge de l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier (un établissement de crédit, par exemple), ou du gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits.
 Tout autre repreneur informe immédiatement du paiement l’entreprise responsable de l’inscription, qui le déclare.
 Quand la personne paie l’établissement lui-même, la déclaration doit être faite au plus tard le quatrième jour ouvré qui suit le paiement, comme avant le 20 novembre 2026 ; depuis cette date, si la personne a payé un tiers qui n’alimente pas le fichier, ce délai court du jour où l’établissement responsable de l’inscription reçoit de ce tiers l’information du paiement, et non du paiement.
 Un contrat en cours à cette date reste régi par les règles antérieures du code de la consommation ; l’arrêté du 11 août 2026, lui, ne prévoit pas de disposition transitoire : ces deux éléments ne suffisent pas à dire, dans tous les cas, quel régime de déclaration s’applique à un crédit conclu avant cette date et cédé ensuite.
+Si la créance a été cédée et que l’on ne sait pas qui est responsable de l’inscription, la personne peut interroger à la fois l’établissement qui avait déclaré l’incident et l’entreprise qui a repris la créance, ou son gestionnaire de crédits, pour savoir lequel doit déclarer le paiement.
 Ce que contient le fichier, la personne peut le demander à la Banque de France, en ligne depuis son espace personnel, à un guichet sur rendez-vous ou par courrier avec une copie de sa pièce d’identité.
-Si l’établissement ne fait pas la déclaration, elle peut saisir le médiateur de sa banque, puis adresser une réclamation à la CNIL (Service-public, fiche F17608, vérifiée par la DILA, Direction de l’information légale et administrative, le 25 septembre 2025).
+Pour faire rectifier ou effacer une inscription due à un incident de remboursement, elle s’adresse à l’entreprise responsable de l’inscription ; depuis le 20 novembre 2026, ce peut être, selon les règles applicables au crédit, une autre que celle qui a déclaré l’incident (arrêté du 26 octobre 2010 relatif au FICP, art.
+6-1 et 15).
+Si le paiement n’a pas été déclaré, elle s’adresse d’abord à l’entreprise responsable de l’inscription, puis, si c’est une banque, au médiateur bancaire compétent ; si les difficultés persistent, elle peut adresser une réclamation à la CNIL (Service-public, fiche F17608, vérifiée par la DILA, Direction de l’information légale et administrative, le 25 septembre 2025, avant la réforme).
 Une inscription pour un incident de remboursement ne dépasse pas, de toute façon, cinq ans (le détail).
 Une condamnation pèse sur une embauche
 Il faut d’abord savoir quel bulletin est en cause, et quel est l’employeur.
@@ -128,7 +132,7 @@ Quand la personne paie l’établissement lui-même, cette déclaration doit êt
 Ce qui change à cette date, c’est le cas où la personne a payé un tiers qui n’alimente pas le fichier : le délai de quatre jours ouvrés court désormais du jour où l’établissement responsable de l’inscription reçoit de ce tiers l’information du paiement, et non plus du paiement ; la rédaction antérieure, en vigueur depuis 2020, accordait sept jours ouvrés à compter du paiement fait à une société de recouvrement de créances ou à un huissier.
 Les deux délais n’ayant pas le même point de départ, on ne peut en déduire que la réforme raccourcit ou allonge le temps qui sépare le paiement de la radiation (arrêté du 26 octobre 2010 relatif au FICP, art.
 6, II, dans sa rédaction issue de l’arrêté du 11 août 2026, et dans sa rédaction antérieure).
-Le code assigne au fichier une finalité : fournir aux prêteurs « un élément d’appréciation de la solvabilité » de qui demande un crédit, sans que l’inscription interdise de lui en accorder un (art.
+Le code assigne d’abord au fichier une finalité : fournir aux prêteurs « un élément d’appréciation de la solvabilité » de qui demande un crédit, sans que l’inscription interdise de lui en accorder un ; il peut aussi éclairer l’attribution des moyens de paiement et la gestion des risques liés aux crédits déjà souscrits (art.
 L.
 751-2).
 Pour le surendettement (« l’impossibilité manifeste de faire face à l’ensemble de ses dettes », art.
@@ -147,9 +151,11 @@ Ces mentions sont radiées plus tôt si la personne justifie auprès de la Banqu
 Ce qui change le 20 novembre 2026.
 La nouvelle rédaction de l’article L.
 752-1, en vigueur à compter de ce jour, garde la durée de cinq ans.
-Elle précise qui doit déclarer le paiement quand le crédit a été cédé : l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier, ou le gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits ; tout autre repreneur informe immédiatement du paiement l’entreprise responsable de l’inscription, qui le déclare (version au 20 novembre 2026, issue des ordonnances n° 2025-880 du 3 septembre 2025 et n° 2025-1154 du 2 décembre 2025).
+Elle modifie la répartition des responsabilités quand le crédit a été cédé : le paiement est déclaré par l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier, ou par le gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits ; tout autre repreneur informe immédiatement du paiement l’entreprise responsable de l’inscription, qui le déclare (version au 20 novembre 2026, issue des ordonnances n° 2025-880 du 3 septembre 2025 et n° 2025-1154 du 2 décembre 2025).
 L’arrêté du 11 août 2026, qui entre en vigueur le même jour, en fixe les modalités ; il ajoute que l’entreprise tenue de déclarer au fichier à laquelle un repreneur qui n’y est pas lui-même tenu confie le recouvrement devient responsable de l’inscription (arrêté du 26 octobre 2010, art.
 6-1, arrêté du 11 août 2026).
+Les droits de rectification et d’effacement d’une inscription due à un incident de remboursement s’exercent désormais auprès de ce responsable de l’inscription, qui n’est plus forcément l’entreprise qui avait déclaré l’incident (arrêté du 26 octobre 2010, art.
+15).
 La réforme désigne ainsi, pour les crédits cédés, qui doit déclarer le paiement, face à une forme de la faille que décrit le livre : une dette payée dont la trace demeure, faute que quelqu’un le déclare.
 Elle change une responsabilité juridique, sans établir à elle seule que ces traces deviendront plus rares ou plus courtes.
 Les contrats de crédit en cours au 20 novembre 2026 restent toutefois régis par les règles antérieures ; les exceptions que l’ordonnance du 3 septembre 2025 prévoit pour les crédits à durée indéterminée en cours ne portent pas sur cet article (ordonnance n° 2025-880, art.
@@ -308,14 +314,14 @@ L.
 La Banque de France radie l’inscription dès qu’elle reçoit la déclaration du paiement intégral.
 Quand la personne paie l’établissement lui-même, cette déclaration doit être faite au plus tard le quatrième jour ouvré qui suit le paiement ; depuis le 20 novembre 2026, quand elle a payé un tiers qui n’alimente pas le fichier, ce délai court de la réception de l’information transmise par ce tiers, et non du paiement (même arrêté, art.
 6).
-À compter du 20 novembre 2026, une nouvelle rédaction précise qui déclare le paiement quand le crédit a été cédé ; les contrats en cours à cette date restent régis par les règles antérieures du code de la consommation, et l’arrêté du 11 août 2026, lui, ne prévoit pas de disposition transitoire : ces deux éléments ne suffisent pas à dire, dans tous les cas, quel régime de déclaration s’applique à un crédit conclu avant cette date et cédé ensuite.
+À compter du 20 novembre 2026, une nouvelle rédaction modifie, quand le crédit a été cédé, la répartition des responsabilités pour déclarer le paiement ; les contrats en cours à cette date restent régis par les règles antérieures du code de la consommation, et l’arrêté du 11 août 2026, lui, ne prévoit pas de disposition transitoire : ces deux éléments ne suffisent pas à dire, dans tous les cas, quel régime de déclaration s’applique à un crédit conclu avant cette date et cédé ensuite.
 Pour un plan de surendettement, l’inscription dure le temps du plan, sans pouvoir excéder sept ans, et cinq ans s’il est exécuté sans incident ; cinq ans après un rétablissement personnel (art.
 L.
 752-3).
 Ces inscriptions sont radiées plus tôt si la personne justifie auprès de la Banque de France avoir réglé intégralement ses dettes envers tous les créanciers du plan ou du jugement (arrêté du 26 octobre 2010 relatif au FICP, art.
 11).
 J’ai remboursé mon crédit : pourquoi suis-je encore fiché au FICP ?
-La radiation suit la déclaration du paiement intégral à la Banque de France, et cette déclaration revient à l’établissement qui a déclaré l’incident, non à la personne (Code de la consommation, art.
+La radiation suit la déclaration du paiement intégral à la Banque de France, et cette déclaration revient en principe à l’établissement qui a déclaré l’incident, non à la personne (Code de la consommation, art.
 L.
 752-1).
 Si le crédit a été cédé, la rédaction en vigueur à compter du 20 novembre 2026 met cette déclaration à la charge de l’entreprise qui a repris la créance, si elle est elle-même tenue de déclarer au fichier (un établissement de crédit, par exemple), ou du gestionnaire de crédits quand la créance a été vendue à un acheteur de crédits.
@@ -323,7 +329,8 @@ Tout autre repreneur informe immédiatement du paiement l’entreprise responsab
 Quand la personne paie l’établissement lui-même, cette déclaration doit être faite au plus tard le quatrième jour ouvré qui suit le paiement intégral ; depuis le 20 novembre 2026, quand elle a payé un tiers qui n’alimente pas le fichier, ce délai court de la réception de l’information transmise par ce tiers, et non du paiement (arrêté du 26 octobre 2010 relatif au FICP, art.
 6).
 Un contrat en cours à cette date reste régi par les règles antérieures du code de la consommation ; l’arrêté du 11 août 2026, lui, ne prévoit pas de disposition transitoire : ces deux éléments ne suffisent pas à dire, dans tous les cas, quel régime de déclaration s’applique à un crédit conclu avant cette date et cédé ensuite.
-La personne peut demander à la Banque de France ce que contient le fichier ; si l’établissement ne fait pas la déclaration, elle peut saisir le médiateur de sa banque, puis, si les difficultés persistent, la CNIL (Service-public, fiche F17608).
+Si la créance a été cédée et que l’on ne sait pas qui est responsable de l’inscription, la personne peut interroger à la fois l’établissement qui avait déclaré l’incident et l’entreprise qui a repris la créance, ou son gestionnaire de crédits, pour savoir lequel doit déclarer le paiement.
+La personne peut demander à la Banque de France ce que contient le fichier ; si le paiement n’a pas été déclaré, elle s’adresse d’abord à l’entreprise responsable de l’inscription, puis, si c’est une banque, au médiateur bancaire compétent ; si les difficultés persistent, elle peut saisir la CNIL (Service-public, fiche F17608, antérieure à la réforme).
 Une inscription pour un incident de remboursement ne dépasse pas cinq ans.
 Un employeur peut-il voir une condamnation inscrite au casier judiciaire ?
 Cela dépend de l’employeur.
@@ -421,6 +428,9 @@ R.
 223-4 ; Code de procédure pénale, art.
 41-2 et 495-17 ; Code pénal, art.
 131-36-1 et 132-59.
+Lus le 24 novembre 2026 : arrêté du 26 octobre 2010 relatif au FICP, art.
+6-1 et 15, dans leur rédaction en vigueur au 20 novembre 2026, et arrêté du 11 août 2026, art.
+8, qui modifie cet article 15.
 Lus le 12 novembre 2026, à la relecture de la page : Code de la consommation, art.
 L.
 711-1, L.

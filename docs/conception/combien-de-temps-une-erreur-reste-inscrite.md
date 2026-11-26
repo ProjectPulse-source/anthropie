@@ -336,3 +336,21 @@ Méthode `06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\METHODE_REPRISE_RES
   `hugo.yml` n° 43393816179 réussi (build, mise en ligne, contrôle de fumée, relecture). Attestation de la version
   servie : faite le 13/11/2026 à 9 h 33 (heure de Paris) ; HTML servi identique au build contrôlé, aux empreintes de
   cache des feuilles et scripts près ; fichiers statiques servis (figures, cartes de partage) identiques au commit.
+
+### Correction du FICP (26/11/2026, lot `corrections-radar-2411`)
+
+- Origine : contre-expertise externe `PRO-20261126-121229` (dix points restés ouverts, réponse archivée avant lecture,
+  arbitrage `ARBITRATIONS\PRO-20261126-121229_arbitrage.md`) et décisions de l'auteur du 26/11 (« 1 à 6 oui »).
+- Appliqué : « en principe » (déclaration du paiement par l'établissement qui a déclaré l'incident, arrêté FICP, art. 6-1,
+  II, 1°) ; réforme du 20/11/2026 qui « modifie la répartition des responsabilités » quand le crédit a été cédé ;
+  droits de rectification et d'effacement auprès de l'entreprise responsable de l'inscription (art. 6-1 et 15
+  consolidés, lus le 24/11) : c'est le P1 de la contre-expertise du 01/11 laissé ouvert faute d'avoir lu l'arrêté ;
+  recours dans l'ordre (responsable de l'inscription, médiateur bancaire si c'est une banque, CNIL ; fiche F17608 dite
+  antérieure à la réforme) ; indication pratique pour une créance cédée dont on ignore le responsable, la réserve sur
+  les crédits anciens cédés restant entière (question écrite au service gestionnaire du FICP, rédigée le 26/11, à envoyer par l'auteur) ; autres usages
+  du fichier (art. L. 751-2) ; tableau : point de départ des cinq ans selon l'arrêté (art. 8) et « l'entreprise
+  responsable de l'inscription » ; sources complétées.
+- Écarté : l'information sur un nouveau gestionnaire (art. 5 consolidé, lu le 26/11 : elle figure dans le courrier qui
+  notifie l'inscription) ; une figure « paiement, déclaration, radiation » (secondaire, motif dans `A_ARBITRER.md` du lot).
+- Frise des durées : `generer_frise_durees.py --check` à 0 (le tableau change hors de la colonne « Délai »).
+- Phrases citées par les envois armés (J05, J07, J08) : présentes, mot pour mot ou en substance.
