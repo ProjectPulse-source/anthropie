@@ -63,7 +63,7 @@
 
 {{- define "partials/inline/mtg-carte.html" -}}
 {{- with site.GetPage .t.ressource -}}
-<a class="mtg-carte" href="{{ .RelPermalink }}"><span class="mtg-label">{{ $.label }}</span>{{ with .Params.og_image }}<img src="{{ . | relURL }}" alt="{{ $.alt | default "" }}" width="1200" height="630" loading="lazy">{{ end }}<span class="mtg-carte__titre">{{ partial "fr-typo.html" .Title }}</span></a>
+<a class="mtg-carte" href="{{ .RelPermalink }}"><span class="mtg-label">{{ $.label }}</span>{{ with .Params.og_image }}{{- /* La VIGNETTE d'index (même dessin, fond blanc, source et licence imprimées) plutôt que la carte de partage, dont le fond beige est imprimé dans l'image (auteur, 26/11/2026). Convention du site : og-X.jpg → vig-X.jpg ; repli sur la carte si la vignette manque. */ -}}{{ $vig := replace . "images/og-" "images/vig-" }}{{ $src := . }}{{ $w := 1200 }}{{ $h := 630 }}{{ if fileExists (printf "static/%s" $vig) }}{{ $src = $vig }}{{ $w = 720 }}{{ $h = 378 }}{{ else }}{{ warnf "publications-montage : vignette absente (%s), carte de partage utilisée" $vig }}{{ end }}<img src="{{ $src | relURL }}" alt="{{ $.alt | default "" }}" width="{{ $w }}" height="{{ $h }}" loading="lazy">{{ end }}<span class="mtg-carte__titre">{{ partial "fr-typo.html" .Title }}</span></a>
 {{- else -}}{{ warnf "publications-montage : ressource introuvable (%s)" .t.ressource }}{{- end -}}
 {{- end -}}
 

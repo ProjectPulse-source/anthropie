@@ -226,9 +226,12 @@
 .mtg-une__lire { font-family: var(--font-sans); font-size: 15px; font-weight: 600; margin: 0; }
 .mtg-court .pub-entree__titre { font-size: 1.35rem; line-height: 1.22; margin: 0.1rem 0 0.35rem; }
 .mtg-g .mtg-court, .mtg-d .mtg-court + .mtg-court { border-top: 1px solid var(--color-rule-soft); padding-top: 1rem; }
-.mtg-carte { display: block; text-decoration: none; background: var(--color-bg-elevated); border: 1px solid var(--color-rule-soft); padding: 0.5rem;
+// Carte « Les données pour comprendre » : fond blanc, filet marine en tête (celui des ensembles), bordure fine ; l'image
+// (vignette sur fond blanc) va bord à bord (auteur, 26/11/2026 : le beige des cartes de partage est écarté).
+.mtg-carte { display: block; text-decoration: none; background: #fff; border: 1px solid var(--color-rule-soft); border-top: 2px solid var(--color-accent);
+  .mtg-label { padding: 0.7rem 0.9rem 0; margin: 0; }
   img { display: block; width: 100%; height: auto; }
-  .mtg-carte__titre { display: block; font-family: var(--font-sans); font-size: 14px; line-height: 1.4; color: var(--color-accent); margin-top: 0.5rem; } }
+  .mtg-carte__titre { display: block; font-family: var(--font-sans); font-size: 14px; line-height: 1.4; color: var(--color-accent); padding: 0.1rem 0.9rem 0.8rem; border-top: 1px solid var(--color-rule-ghost); margin-top: 0; } }
 .mtg-carte:hover .mtg-carte__titre { text-decoration: underline; }
 .mtg-awp { font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--color-accent); text-decoration: none; }
 .mtg-livre { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 0.9rem; align-items: start;
