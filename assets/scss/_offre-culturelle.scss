@@ -157,11 +157,20 @@
 // ----- Bandeau de la page d'essai (essai: true) -----
 // Bandeau de la page d'essai, collé en haut au défilement (auteur, 25/10 : « qu'il demeure apparent ») ; les ancres de la
 // page s'arrêtent sous lui.
+// Barre du site + bandeau d'essai : un seul bloc collant (auteur, 26/11/2026 : barre du site fixe en haut des pages
+// d'offre). La barre perd son propre `sticky` : deux éléments collants à top 0 se recouvraient.
+.oc-haut {
+  position: sticky; top: 0; z-index: 100;
+  .site-header { position: static; }
+}
 .oc-demo {
   margin: 0; background: #fff4d6; color: #5a4400; font-size: 12.5px; line-height: 1.3; text-align: center; padding: 5px 12px;
-  position: sticky; top: 0; z-index: 20; box-shadow: 0 1px 0 rgba(90, 68, 0, .12), 0 2px 8px rgba(0, 0, 0, .08);
+  box-shadow: 0 1px 0 rgba(90, 68, 0, .12), 0 2px 8px rgba(0, 0, 0, .08);
 }
-.oc-demo ~ .oc [id] { scroll-margin-top: 72px; }
+// Arrivée par une ancre (« Choisir mon livre ↑ ») : le titre visé reste visible sous le bloc collant.
+.oc [id] { scroll-margin-top: 110px; }
+// Pour aller plus loin : même corps que « Bon à savoir ».
+.oc-plus p { margin: 0 0 8px; }
 
 // Note Amazon.fr dans le texte de la carte, sur une ligne (25/10 : sous la couverture, la colonne de 96 px la
 // cassait en trois lignes et décalait les boutons des deux cartes).

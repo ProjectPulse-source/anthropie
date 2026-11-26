@@ -1,3 +1,7 @@
+{{- /* Bandeau d'essai : rendu dans le bloc collant de baseof.html, sous la barre du site (26/11/2026). */ -}}
+{{ define "bandeau" }}
+{{- if .Params.essai }}<p class="oc-demo" role="note">Page d'essai pour les {{ .Params.structure | default "comité" }}s&nbsp;: le livre que vous choisissez vous est réellement offert, un par personne.</p>{{ end -}}
+{{ end }}
 {{ define "main" }}
 {{- /* Page de comité — offre culturelle (arbitrages CSE des 14 et 24-25/10/2026 : maquette D, compteur propre au comité
        sur stock commun, famille bénéficiaire de droit, partage cadré). Le nombre de livres n'est écrit nulle part : il
@@ -19,7 +23,6 @@
 {{- $structure := $p.structure | default "comité" -}}
 {{- $pronom := cond (eq $structure "association") "Elle" "Il" -}}
 {{- $fin := time.AsTime ($p.fin | default "2027-03-31") -}}
-{{- if $essai }}<p class="oc-demo" role="note">Page d'essai pour les {{ $structure }}s&nbsp;: le livre que vous choisissez vous est réellement offert, un par personne.</p>{{ end }}
 <div class="oc" data-partner="{{ $p.partner }}" data-structure="{{ $structure }}">
   <header class="oc-tete">
     <div class="oc-wrap">
@@ -120,7 +123,7 @@
     {{- end }}
 
     <noscript><p class="oc-aide">Le choix d'un livre nécessite JavaScript. Vous pouvez aussi
-    <a href="{{ "/contact/" | relLangURL }}">m'écrire</a>&nbsp;: je vous transmets votre exemplaire.</p></noscript>
+    <a href="{{ "/contact/" | relLangURL }}" target="_blank" rel="noopener">m'écrire</a>&nbsp;: je vous transmets votre exemplaire.</p></noscript>
 
     <p class="oc-aide">Vous choisissez le livre, puis vous l'acceptez gratuitement sur Amazon.fr. Pas besoin de
     liseuse&nbsp;: l'application Kindle est gratuite sur téléphone, tablette et ordinateur. Un livre par {{ $p.public_singulier | default (cond (eq $structure "association") "adhérent" "bénéficiaire") }}.</p>
@@ -145,8 +148,18 @@
       <p class="oc-auteur"><b>L'auteur.</b> Stéphane Lalut, économiste et chercheur indépendant, publie dans plusieurs
       revues de sciences sociales et d'idées&nbsp;: <i>En attendant Nadeau</i>, <i>La Vie des idées</i>,
       <i>Alternatives Économiques</i>, <i>Le Temps</i>.
-      <a href="{{ "/a-propos/" | relLangURL }}">L'auteur</a> · <a href="{{ "/publications/" | relLangURL }}">Ses publications</a></p>
+      <a href="{{ "/a-propos/" | relLangURL }}" target="_blank" rel="noopener">L'auteur</a> · <a href="{{ "/publications/" | relLangURL }}" target="_blank" rel="noopener">Ses publications</a></p>
     </section>
+
+    {{- /* Pour aller plus loin (auteur, 26/11/2026, ATSCAF 24 : « population sur la finance, signaler le dossier sur la
+           dette ») : facultatif, propre au public de la page ; une ressource du site, ouverte dans un nouvel onglet
+           pour ne pas perdre la page de l'offre. Champs : plus_loin.titre, .avant, .lien, .url, .apres. */ -}}
+    {{- with $p.plus_loin }}
+    <section class="oc-plus" aria-labelledby="oc-plus-titre">
+      <h2 class="oc-sec" id="oc-plus-titre">{{ partial "fr-typo.html" (.titre | default "Pour aller plus loin") }}</h2>
+      <p>{{ with .avant }}{{ partial "fr-typo.html" . }} {{ end }}<a href="{{ .url | relLangURL }}" target="_blank" rel="noopener">{{ partial "fr-typo.html" .lien }}</a>{{ with .apres }}{{ partial "fr-typo.html" . }}{{ end }}</p>
+    </section>
+    {{- end }}
 
     <section class="oc-conditions">
       <h2 class="oc-sec">Bon à savoir</h2>
@@ -159,11 +172,11 @@
         {{ $structure }} ne nous transmet aucune donnée sur ses {{ $public }}, et aucun nom ni aucune adresse électronique ne vous
         est demandé. Un livre par {{ $p.public_singulier | default (cond (eq $structure "association") "adhérent" "bénéficiaire") }}&nbsp;: un identifiant technique, enregistré dans votre navigateur, limite
         les retraits répétés depuis un même navigateur.
-        <a href="{{ with site.GetPage "/transparence-contacts" }}{{ .RelPermalink }}{{ end }}#ressources-offertes">Transparence et données</a>.</li>
+        <a href="{{ with site.GetPage "/transparence-contacts" }}{{ .RelPermalink }}{{ end }}#ressources-offertes" target="_blank" rel="noopener">Transparence et données</a>.</li>
         <li><b>Une proposition indépendante.</b> Votre {{ $structure }} relaie une proposition de l'auteur, sans contrepartie
         d'aucune sorte. Le lien utilise l'infrastructure Kindle d'Amazon comme canal de transmission&nbsp;; il ne
         constitue pas un partenariat avec Amazon.</li>
-        <li><b>Un souci avec votre lien&nbsp;?</b> <a href="{{ "/contact/" | relLangURL }}">Écrivez-moi</a>&nbsp;: je
+        <li><b>Un souci avec votre lien&nbsp;?</b> <a href="{{ "/contact/" | relLangURL }}" target="_blank" rel="noopener">Écrivez-moi</a>&nbsp;: je
         vérifie votre lien et vous propose une solution.</li>
       </ul>
     </section>

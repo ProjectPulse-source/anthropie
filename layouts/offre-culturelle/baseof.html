@@ -1,12 +1,19 @@
-{{- /* Pages de comité : gabarit dépouillé, sans l'en-tête ni le pied du site, comme la maquette D validée le 14/10/2026
-       (le premier bouton doit rester haut sur téléphone). La feuille de style et la typographie du site restent
-       chargées par head.html. */ -}}
+{{- /* Pages de comité : gabarit dépouillé, sans le pied du site, comme la maquette D validée le 14/10/2026. La feuille de
+       style et la typographie du site restent chargées par head.html.
+       Barre du site en haut, collante, et ses liens dans un nouvel onglet (auteur, 26/11/2026 : « mettre la barre du site
+       en fixe en haut et un clic ouvre le site mais sur une autre fenêtre, pour qu'il ne perde pas la page de l'offre ») ;
+       remplace l'absence d'en-tête du 14/10. Le bandeau d'essai, collant lui aussi, vit dans le même bloc : deux éléments
+       collants à top 0 se recouvraient. Le bouton du menu (téléphone) n'est pas un lien et ouvre le menu sur place. */ -}}
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
   {{- partial "head.html" . -}}
 </head>
 <body class="oc-body">
+  <div class="oc-haut">
+    {{- partial "header.html" . | replaceRE `<a ` `<a target="_blank" rel="noopener" ` | safeHTML -}}
+    {{- block "bandeau" . }}{{- end -}}
+  </div>
   {{- block "main" . }}{{- end }}
 </body>
 </html>
