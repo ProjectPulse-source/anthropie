@@ -162,7 +162,9 @@ main .liste-cartes > ol > li::before { content: counter(carte); position: absolu
 
 // ---- Questions fréquentes sur deux colonnes (ordinateur) : shortcode faq-visible colonnes="2" ----
 .faq-visible--colonnes { display: grid; gap: 1.2rem 0; }
-@media (min-width: 900px) { .faq-visible--colonnes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 3rem; } }
+@media (min-width: 900px) { .faq-visible--colonnes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 3rem; }
+  // Nombre impair de questions : la dernière, sans vis-à-vis, prend toute la largeur (auteur, 26/11/2026).
+  .faq-visible--colonnes > .faq-visible__qr:last-child:nth-child(odd) { grid-column: 1 / -1; } }
 .faq-visible__qr > p { margin-bottom: 0; }
 
 // Impression : les blocs gardent leur contenu, sans fonds ni ombres.
