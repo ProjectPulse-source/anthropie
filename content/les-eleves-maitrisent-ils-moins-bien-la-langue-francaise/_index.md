@@ -161,9 +161,11 @@ Deux choses reculent l'une après l'autre&nbsp;: d'abord le temps de lecture, en
 
 </div>
 
-Cette enquête de la DEPP était proposée à tous les élèves de quatre niveaux (la seconde est distinguée selon la voie), à la suite des évaluations nationales&nbsp;; la réponse y était facultative, et les parts portent sur les élèves qui ont répondu. Elle compare des élèves différents la même année&nbsp;: elle décrit un écart entre les âges et les filières, pas une évolution. Elle ne dit pas que les élèves perdent le goût de lire en grandissant, seulement qu'en 2023 les plus âgés, et ceux de la voie professionnelle, sont plus nombreux à ne pas lire pour leur plaisir.
+Cette enquête de la DEPP était proposée à tous les élèves de quatre niveaux (la seconde est distinguée selon la voie), à la suite des évaluations nationales&nbsp;; la réponse y était facultative, et les parts portent sur les élèves qui ont répondu. Elle compare des élèves différents la même année&nbsp;: elle décrit un écart entre les âges et les filières, pas une évolution.
 </div>
 </div>
+
+Elle ne dit pas que les élèves perdent le goût de lire en grandissant, seulement qu'en 2023 les plus âgés, et ceux de la voie professionnelle, sont plus nombreux à ne pas lire pour leur plaisir.
 
 Le goût de lire recule de 2009 à 2018, période où le smartphone se généralise. La coïncidence pose la question des écrans.
 

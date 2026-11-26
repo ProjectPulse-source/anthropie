@@ -1,5 +1,15 @@
 # Project Status — stephane-lalut.com
 
+## 2026-11-26 (soir) — Passe de forme : France Travail (A5) et Langue (A15)
+
+- `/comment-savoir-si-une-promesse-est-tenue/` (FR, EN), figure « règle » et jeu : la série porte le nom que lui donne la
+  Dares (« hors bénéficiaires du RSA et hors jeunes en parcours ») ; jeunes en parcours définis (CEJ, Pacea, AIJ), sigles
+  développés, « Autorité de la statistique publique » en toutes lettres ; anglais « seasonally and working-day adjusted ».
+  Aucun nombre ne change (`update_promesses_mesurer.py`, 11 gardes ; deux contrôleurs indépendants, trois passages).
+- `/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/` : la lecture à côté de la figure « plaisir » repasse sous
+  le seuil de la mise en page figure-lecture (+67 px pour 150), sans changer une phrase.
+- Points A5 et A15 de `D:\PRO\06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\POINTS_OUVERTS_APRES_FINIR_RESSOURCES.md`.
+
 ## 2026-11-26 — Lot `corrections-radar-2411` : les dix points restés ouverts, publiés (FICP, `/premier-coup/`, Langue, médecine générale)
 
 - Origine : contre-expertise externe `PRO-20261126-121229` (arbitrage dans `D:\PRO\.claude\external-audits\ARBITRATIONS\`)

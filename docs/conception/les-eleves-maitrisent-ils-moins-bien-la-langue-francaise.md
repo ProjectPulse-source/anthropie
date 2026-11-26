@@ -171,3 +171,8 @@ après la republication : à inscrire par la session de publication.
   « l'indice de plaisir de lire ne baisse ni chez les filles ni chez les garçons » (2000-2009) taisait une hausse
   significative chez les garçons (OCDE, tableau II.B1.8.5 : +0,107, e.t. 0,039), relue dans le classeur archivé :
   corps, frise, texte alternatif et sources corrigés, garde réécrite et vue mordre ; contrôles : voir le lot.
+- Forme du 26/11/2026 (point A15 du lot, demande de l'auteur) : la lecture à côté de la figure « plaisir » dépassait la
+  figure de 215 px ; la dernière phrase (« Elle ne dit pas que les élèves perdent le goût de lire en grandissant… »)
+  passe sous le bloc, sans changer une phrase ; la réserve qui qualifie le résultat (« des élèves différents la même
+  année… pas une évolution ») reste à côté de lui. Mesure (`captures.py`, lecture contre figure) : +67 px, sous le seuil
+  de 150 ; aucun débordement de 320 à 1 440 px. Texte servi inchangé, phrase pour phrase (instantané valable).
