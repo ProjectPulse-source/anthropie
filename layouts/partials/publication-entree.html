@@ -21,7 +21,7 @@
 {{- $chapo := cond (and $isEn $p.Params.chapo_en) $p.Params.chapo_en $p.Params.chapo -}}
 {{- $ph := partial "chapo-phrases.html" ($chapo | default "") -}}
 <article class="pub-entree pub-entree--{{ $forme }}"{{ if eq $forme "liste" }} id="{{ $p.File.ContentBaseName }}" data-themes="{{ delimit $themes "|" }}"{{ end }}>
-  <p class="pub-entree__meta">{{ with $genre }}<span class="pub-entree__genre pub-entree__genre--{{ $p.Params.genre }}">{{ . }}</span> {{ end }}{{ $p.Params.revue }}{{ if eq $p.Params.source_type "Académique" }} <span class="pub-entree__academique">· {{ if $isEn }}academic journal{{ else }}revue académique{{ end }}</span>{{ end }} · <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" $p.Date "fmt" ":date_long" "en" $isEn) }}</time>{{ if $isEn }} · <span lang="en">In French</span>{{ end }}</p>
+  <p class="pub-entree__meta">{{ with $genre }}<span class="pub-entree__genre pub-entree__genre--{{ $p.Params.genre }}">{{ . }}</span> {{ end }}<i class="pub-entree__revue">{{ $p.Params.revue }}</i>{{ if eq $p.Params.source_type "Académique" }} <span class="pub-entree__academique">· {{ if $isEn }}academic journal{{ else }}revue académique{{ end }}</span>{{ end }} · <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ partial "date-affichee.html" (dict "t" $p.Date "fmt" ":date_long" "en" $isEn) }}</time>{{ if $isEn }} · <span lang="en">In French</span>{{ end }}</p>
   <h3 class="pub-entree__titre"><a href="{{ $p.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $p.Title }}<span class="pub-entree__ext" aria-hidden="true">&nbsp;↗</span></a></h3>
   {{- if eq $forme "liste" }}
     {{- if $ph.reste }}
