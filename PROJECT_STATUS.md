@@ -81,6 +81,7 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 - **Accueil** : *Sociologie du travail*, *Revue Française de Socio-Économie* et *Lectures* dans les deux listes de supports (`12f47563`).
 - **Livres** : attribution anglaise de la citation de *Livresque des mots* (`ligne_auteur_en`) ; « Le projet » présente *La Société du premier coup*, FR et EN (`ef9fc640`).
 - **Questions fréquentes à deux colonnes** : une question sans vis-à-vis passe en pleine largeur (règle unique de `_ressource-relief.scss`, 11 grilles impaires sur 34) — commit `54d953ee`, **à pousser**.
+- Accueil : un nom de revue ne se coupe plus en fin de ligne dans « Articles et recensions » (`01b8ed40`).
 - Vue téléphone vérifiée (Publications, accueil, Livres, FR et EN). Dossier des maquettes archivé : `D:\PRO\06_PROMOTION\_ARCHIVE\MAQUETTES_PUBLICATIONS_2026-11-26\`.
 
 ### 2026-11-26 (après-midi) — Page « Publications » : montage éditorial F4.2 (cinq contre-expertises arbitrées, « on lance la mise en ligne »)
