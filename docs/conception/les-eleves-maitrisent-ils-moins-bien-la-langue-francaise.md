@@ -70,7 +70,7 @@ contradicteur externe, plus prudente que celle du juge interne) (juge interne du
 
 ### Preuve décisive
 
-La frise des onze mesures face au repère de 2013, où chaque intervalle porte le verdict publié par le producteur (trait
+La frise des douze mesures (onze jusqu'au 26/11/2026 ; quatrième ajoutée avec le millésime 2026) face au repère de 2013, où chaque intervalle porte le verdict publié par le producteur (trait
 plein) ou son absence (tirets) — recodée le 17/11/2026 pour PIRLS 2001-2011, test publié et non significatif (NI 12.21 ;
 R1, P0-1 ; sonde S4) ; et la même dictée de 67 mots, décomposée entre erreurs lexicales et autres (NI 22.37, NI 08.38).
 
@@ -93,7 +93,8 @@ Les enquêtes mesurent des compétences évaluées par des épreuves, pas la pen
 déclarés, et la non-réponse a presque doublé dans PISA 2025 ; les instruments ne sont pas comparables entre eux ; les
 séries anciennes n'ont pas d'erreur type ; les évaluations exhaustives n'ont pas de test, et leur participation va de 81 % à
 91 % en 2026, sans l'académie de Toulouse ; l'étendue du vocabulaire des adolescents n'a pas de série, et leurs compétences
-lexicales ne sont comparées que sur deux ou trois années ; la frise s'arrête au millésime 2025 ; aucune mesure ne dit si les
+lexicales ne sont comparées que sur deux ou trois années ; la correction de la dictée, centralisée à partir de 2007, a un
+effet éventuel que la DEPP ne peut pas estimer directement ; aucune mesure ne dit si les
 textes donnés à lire se sont simplifiés.
 
 ### Valeur finale
@@ -104,7 +105,7 @@ l'argument des écrans sans le trancher.
 
 ### Singularité
 
-Cette page existe parce qu'elle place onze mesures de la langue face à la généralisation du smartphone et décompose une
+Cette page existe parce qu'elle place douze mesures de la langue face à la généralisation du smartphone et décompose une
 même dictée sur trente-quatre ans, ce que le lecteur ne trouve ni dans les notes de la DEPP (une enquête à la fois), ni dans
 le dossier de presse ministériel de PISA 2025, qui impute la baisse aux usages numériques (R1, l. 88), ni dans la chronique
 de Franck Ramus, qui date la baisse de 2000 (R2, P2-2).
@@ -160,3 +161,13 @@ après la republication : à inscrire par la session de publication.
   et carte de partage) ; repère du smartphone daté à chaque affirmation de la page ; description de la frise bornée à son
   dernier millésime (dessin inchangé) ; accord de l'auteur : demande de publication du 25/11 ; contrôles et instantané de
   relecture : voir le lot.
+- **Correction du 26/11/2026** (contre-expertise PRO-20261126-121229, décisions de l'auteur L1, L2, L3) : la frise va
+  jusqu'au millésime 2026 et trace douze mesures (sixième et seconde GT de 2021 à 2026, quatrième de 2023 à 2026, sans test
+  publié), par le générateur, garde nouvelle vue mordre (mutation « sixième 2026 ») ; chapô et note de la figure de la
+  dictée : correction centralisée à partir de 2007, effet éventuel non directement estimable selon la DEPP ; « en France »
+  pour la passation de PISA sur ordinateur (NI 16.38 ; OCDE, *PISA 2018 Results*, vol. III). Premier écran retesté
+  conforme ; figures : deux contrôleurs indépendants, deux passages ; ils ont fait lire 2026 sur la frise, porter la
+  réserve de la dictée et le champ des évaluations de 2026 (hors académie de Toulouse) dans sa note, et trouvé que
+  « l'indice de plaisir de lire ne baisse ni chez les filles ni chez les garçons » (2000-2009) taisait une hausse
+  significative chez les garçons (OCDE, tableau II.B1.8.5 : +0,107, e.t. 0,039), relue dans le classeur archivé :
+  corps, frise, texte alternatif et sources corrigés, garde réécrite et vue mordre ; contrôles : voir le lot.

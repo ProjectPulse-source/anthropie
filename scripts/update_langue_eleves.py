@@ -12,7 +12,9 @@ PRO-20261009-202511 (arbitrage dans D:\PRO\.claude\external-audits). 25/11/2026 
 disait le vocabulaire du collège et du lycée suivi par aucune série publique ; la DEPP compare le lexique de quatrième
 depuis 2024, de sixième et de seconde depuis 2025 (séries courtes, sans test, de compétences et non d'étendue du
 vocabulaire) ; millésime 2026 des évaluations nationales (sixième, quatrième, seconde, CP, CM1) lu dans l'extrait
-complémentaire, sans toucher à la frise, arrêtée au millésime 2025.
+complémentaire. 26/11/2026 (contre-expertise PRO-20261126-121229, L1 et L2, décisions de l'auteur) : la frise va jusqu'au
+millésime 2026 et trace douze mesures (sixième et seconde GT jusqu'en 2026, quatrième depuis 2023) ; la note de la figure
+de la dictée dit la correction centralisée à partir de 2007, dont la DEPP ne peut pas estimer directement l'effet éventuel.
 
 Entrée : l'extrait FIGÉ du calcul, scripts/sources_langue_eleves/extrait_langue.json (écrit par extrait_langue.py du dépôt
 de recherche, qui lit chaque valeur par une ancre dans les pièces archivées), contrôlé contre SHA256SUMS. Ce générateur
@@ -312,7 +314,10 @@ def gardes(c):
     pro = c["sec"]["Pro"]
     g(pro["2025"] < pro["2021"] == max(pro.values()), "seconde professionnelle : « passe de 2021 à 2025 », plus bas en 2025, 2021 sommet de la série")
     L = lignes_chrono(c)
-    g(len(L) == 11, "chronologie : « onze mesures »")
+    g(len(L) == 12, "chronologie : « douze mesures »")
+    g([seg[-1][:2] for lib, _, seg in L if "sixième" in lib or "quatrième" in lib or "(GT)" in lib] == [(2021, 2026), (2023, 2026), (2021, 2026)]
+      and all(seg[-1][3] for lib, _, seg in L if "sixième" in lib or "quatrième" in lib or "(GT)" in lib),
+      "chronologie : sixième et seconde GT en recul de 2021 à 2026, quatrième de 2023 à 2026 (« jusqu'au millésime 2026 »)")
     g(sum(1 for _, _, seg in L for u, v, sg, bs in seg if v < c["seuil"] - 1 and sg and bs) == 3, "chronologie : « trois reculs sont acquis avant » le smartphone")
     # 25/11/2026 (relecture des sources, P2-4) : « effacé en 2009 » ne tenait qu'avec l'erreur de liaison ; au test que la
     # page applique à 2000-2012 (sans erreur de liaison), 2009 reste sous 2000. La prose dit « en partie résorbé en 2009 ».
@@ -422,8 +427,11 @@ def gardes(c):
     ob = oc["lit_seulement_si_oblige"]
     g(ob["2009"] < 35 and ob["2018"] > 40, "OCDE : « je ne lis que si j'y suis obligé », « d'un tiers à plus de quatre sur dix »")
     ij = cmp["ocde_indice_plaisir_2000_2009"]
-    g(all(not (ij[k]["dif"] < 0 and abs(ij[k]["dif"]) >= 1.96 * ij[k]["se"]) for k in ("garcons", "filles")),
-      "OCDE : de 2000 à 2009, l'indice de plaisir de lire « ne baisse ni chez les filles ni chez les garçons » (d'abord le temps, ensuite le goût)")
+    # 26/11/2026 : la garde ne testait que l'absence de baisse ; la phrase dit désormais la hausse des garçons.
+    g(ij["garcons"]["dif"] > 0 and ij["garcons"]["dif"] >= 1.96 * ij["garcons"]["se"] and abs(ij["filles"]["dif"]) < 1.96 * ij["filles"]["se"],
+      "OCDE : de 2000 à 2009, l'indice de plaisir de lire « progresse significativement chez les garçons » et « n'évolue pas"
+      " significativement chez les filles » (significativité publiée par l'OCDE, en gras au tableau II.B1.8.5 ; d'abord le"
+      " temps, ensuite le goût)")
     pr = c["pr"]
     g(all(pr[a] < pr[b] for a, b in zip(NIVEAUX_2023[:3], NIVEAUX_2023[1:4])), "DEPP 2023 : la part qui ne lit pas pour le plaisir « croît de la sixième à la seconde professionnelle »")
     g(45 <= pr["Seconde professionnelle"] < 50 and 11 <= pr["Sixième"] < 14, "DEPP 2023 : « un élève de sixième sur huit », « près de la moitié » en seconde professionnelle")
@@ -619,13 +627,17 @@ def pied(e, y0, source, note, licence=LICENCE):
 FIG = {
     "chronologie": dict(
         titre="La langue des élèves : quand chaque mesure recule, progresse ou n'évolue pas significativement",
-        source="DEPP (Notes d'Information) ; OCDE (PISA 2018 et 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
-        note="Seul le sens de l'évolution est montré, pas son ampleur. Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l'auteur ; tirets : sans test. Ronds : bornes des intervalles, pas toutes les vagues d'enquête. PISA, compréhension de l'écrit : recul de 2000 à 2006 non\u00a0tracé. PISA, plaisir de lire (indice) : 2000-2009 non\u00a0tracé, sans baisse significative ni chez les filles ni chez les garçons. Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu'en 2008, non\u00a0tracée.",
-        montre="Jusqu'au millésime 2025, auquel la frise s'arrête : les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA, revenu en 2012 à un niveau proche de celui de 2000, baisse significativement ensuite ; CEDRE et PIRLS ne reculent pas significativement sur leurs dernières périodes, quand l'évaluation de sixième et le test de positionnement de seconde, sans significativité publiée, baissent depuis leur sommet de 2020-2021."),
+        source="DEPP (Notes d'Information, documents de travail) ; OCDE (PISA 2018 et 2025 ; 21st-Century Readers) ; IEA (PIRLS) ; ministère de la Culture ; CREDOC",
+        # 26/11/2026 (contrôleurs indépendants de la frise) : la réserve de la dictée accompagne son intervalle 1987-2007 ;
+        # le champ des évaluations de 2026 est dit ; « GT » est développé ; l'indice de plaisir 2000-2009 dit la hausse
+        # significative des garçons (OCDE, tableau II.B1.8.5 : +0,107, e.t. 0,039, en gras : significativité publiée par
+        # l'OCDE, note de la feuille et mise en forme |écart / e.t.| > 1,96), que « sans baisse » taisait.
+        note="Seul le sens de l'évolution est montré, pas son ampleur. Plein : test publié par le producteur, ou, pour PISA 2000-2012, test de l'auteur ; tirets : sans test. Ronds : bornes des intervalles, pas toutes les vagues d'enquête. Dictée : copies corrigées par les professeurs des élèves en 1987, de façon centralisée à partir de 2007 ; effet éventuel non directement estimable selon la DEPP. Évaluations nationales de 2026 : hors académie de Toulouse. GT : voie générale et technologique. PISA, compréhension de l'écrit : recul de 2000 à 2006 non\u00a0tracé. PISA, plaisir de lire (indice) : 2000-2009 non\u00a0tracé, hausse significative chez les garçons, sans évolution significative chez les filles (OCDE). Vingt livres ou plus, hors bandes dessinées : même part en 2018 qu'en 2008, non\u00a0tracée.",
+        montre="Jusqu'au millésime 2026 : les reculs les plus anciens (dictée et lecture en CM2, temps de lecture pour le plaisir à 15 ans) précèdent 2013 ; PISA, revenu en 2012 à un niveau proche de celui de 2000, baisse significativement ensuite ; CEDRE et PIRLS ne reculent pas significativement sur leurs dernières périodes, quand l'évaluation de sixième et le test de positionnement de seconde, sans significativité publiée, baissent depuis leur sommet de 2020-2021, comme l'évaluation de quatrième depuis sa création en 2023."),
     "dictee": dict(
         titre="La même dictée en CM2 : nombre moyen d'erreurs",
         source="DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; détail des autres erreurs, 1987 et 2007 : NI 08.38",
-        note="Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales).",
+        note="Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation, oublis (total moins lexicales). Copies corrigées par les professeurs des élèves en 1987, de façon centralisée à partir de 2007 : effet éventuel de ce changement non directement estimable selon la DEPP.",
         montre="De 1987 à 2021, l'orthographe des mots eux-mêmes ne compte que pour un dixième environ de la hausse des erreurs ; les autres erreurs ont presque doublé. Le détail par type d'erreur n'existe que pour 1987-2007 : la hausse y est surtout grammaticale."),
     "plaisir": dict(
         titre="Élèves qui déclarent ne pas lire pour leur plaisir, selon la classe (2023)",
@@ -718,6 +730,11 @@ def lignes_chrono(c):
     # 17/11/2026 (relecture des sources, R1 P0-1) : la DEPP a publié le test de PIRLS 2001-2006-2011, non
     # significatif (NI 12.21, p. 4) ; ces deux segments étaient codés « recul, sans test publié ».
     pns = c["X"]["complement"]["pirls_2001_2006_2011"]["ecarts_non_significatifs"]
+    # 26/11/2026 (L2, décision de l'auteur) : millésime 2026 des évaluations nationales (extrait complémentaire, DEPP,
+    # DT 2026-E24 et suivants), sixième et seconde GT jusqu'en 2026 depuis leur sommet de 2021, quatrième depuis sa
+    # création en 2023 ; sans test publié (tirets), comme les autres évaluations nationales.
+    en26 = c["X"]["complement"]["evaluations_nationales_2026"]
+    s6_26, gt_26, q4s = en26["sixieme"]["score_francais"]["2026"], en26["seconde"]["GT_2026"], en26["quatrieme"]["score_francais"]
     L = [
         ("PIRLS, lecture", "CM1", [(2001, 2006, False if pns else None, pi["2006"]["score"] < pi["2001"]["score"]),
                                    (2006, 2011, False if pns else None, pi["2011"]["score"] < pi["2006"]["score"]),
@@ -727,14 +744,15 @@ def lignes_chrono(c):
         ("CEDRE, maîtrise de la langue", "CM2", [(2003, 2009, False if ce["stable_2003_2015_declare"] else None, False),
                                                  (2009, 2015, False if ce["stable_2003_2015_declare"] else None, False),
                                                  (2015, 2021, ce["significatif"]["2021"], lg.depasse(ce["score"]["2015"], ce["score"]["2021"], 0))]),
-        ("Évaluation de début de sixième", "6e", [(2017, 2021, None, lg.depasse(sf["2017"], sf["2021"], 0)), (2021, 2025, None, lg.depasse(sf["2021"], sf["2025"], 0))]),
+        ("Évaluation de début de sixième", "6e", [(2017, 2021, None, lg.depasse(sf["2017"], sf["2021"], 0)), (2021, 2026, None, lg.depasse(sf["2021"], s6_26, 0))]),
+        ("Évaluation de début de quatrième", "4e", [(2023, 2026, None, lg.depasse(q4s["2023"], q4s["2026"], 0))]),
         ("CEDRE, langue et littératie", "3e", [(2015, 2021, cc["significatif"]["2021"], lg.depasse(cc["score"]["2015"], cc["score"]["2021"], 0))]),
         ("PISA, compréhension de l'écrit", "15 ans", [(2000, 2012, abs(c["d_00_12"]) >= 1.96 * c["se_00_12"], c["d_00_12"] < 0),
                                                        (2012, 2025, abs(v12[0]) >= 1.96 * v12[1], v12[0] < 0)]),
         ("PISA, temps de lecture-plaisir", "15 ans", [(2000, 2009, abs(hs["d2009_2000"]) >= 1.96 * hs["d2009_2000_et"], hs["d2009_2000"] < 0),
                                                        (2009, 2018, abs(hs["d2018_2009"]) >= 1.96 * hs["d2018_2009_et"], hs["d2018_2009"] < 0)]),
         ("PISA, plaisir de lire (indice)", "15 ans", [(2009, 2018, abs(jr["variation"]) >= 1.96 * jr["variation_et"], jr["variation"] < 0)]),
-        ("Test d'entrée, français (GT)", "seconde", [(2019, 2021, None, lg.depasse(gt["2019"], gt["2021"], 0)), (2021, 2025, None, lg.depasse(gt["2021"], gt["2025"], 0))]),
+        ("Test d'entrée, français (GT)", "seconde", [(2019, 2021, None, lg.depasse(gt["2019"], gt["2021"], 0)), (2021, 2026, None, lg.depasse(gt["2021"], gt_26, 0))]),
         ("20 livres ou plus dans l'année", "15-24 ans", [(1988, 1997, None, lg.depasse(v20["1988"], v20["1997"], 0)), (1997, 2008, None, lg.depasse(v20["1997"], v20["2008"], 0))]),
     ]
     return L
@@ -743,7 +761,7 @@ def lignes_chrono(c):
 def fig_chronologie(c, A):
     t = FIG["chronologie"]
     L = lignes_chrono(c)
-    a0, a1, x0, x1 = 1985, 2026, 262, 704
+    a0, a1, x0, x1 = 1985, 2026.5, 262, 704  # 26/11/2026 : une demi-année après le dernier rond, qui quitte le bord du fond
     sx = lambda a: x0 + (x1 - x0) * (a - a0) / (a1 - a0)
     top, pas = 74, 30
     h = top + pas * len(L) + 70
@@ -760,6 +778,10 @@ def fig_chronologie(c, A):
     e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="1.2"/>' % (xs, top - 22, xs, top + pas * len(L), INK2))
     e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="end">%s : plus de la moitié des 12-17 ans ont un smartphone →</text>'
              % (xs - 4, top - 28, INK2, A["smart_seuil"]))
+    # 26/11/2026 (contrôleur du rendu) : la dernière année tracée se lit. Sur l'axe, « 2026 » chevaucherait « 2025 »
+    # (fin de PISA) : il ferme la bande grise, en face du repère qui l'ouvre.
+    if fin not in range(1990, 2026, 5):
+        e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (sx(fin), top - 28, INK2, fin))
     for a in range(1990, 2026, 5):
         e.append('<text x="%.1f" y="%d" font-size="11" fill="%s" text-anchor="middle">%d</text>' % (sx(a), top + pas * len(L) + 14, MUTED, a))
         e.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="0.5"/>' % (sx(a), top - 10, sx(a), top + pas * len(L), GRID))
@@ -964,8 +986,8 @@ def fig_chronologie_m(c, A):
     for k, ligne in enumerate(("%s : plus de la moitié des 12-17 ans" % A["smart_seuil"], "ont un smartphone (trait vertical)")):
         e.append('<text x="32" y="%d" font-size="%s" fill="%s">%s</text>' % (y + 18 * k, FS_MIN, INK2, ligne))
     y += 18
-    for titre_p, rows, a0, a1, pas_ax, repere in (("Mesures commencées avant %s" % A["smart_seuil"], longues, 1985, 2026, 10, True),
-                                                  ("Mesures commencées depuis %s" % A["smart_seuil"], recentes, a0_rec, 2026, 5, False)):
+    for titre_p, rows, a0, a1, pas_ax, repere in (("Mesures commencées avant %s" % A["smart_seuil"], longues, 1985, 2026.5, 10, True),
+                                                  ("Mesures commencées depuis %s" % A["smart_seuil"], recentes, a0_rec, 2026.5, 5, False)):
         y += 34
         e.append('<text x="0" y="%d" font-size="15.5" font-weight="600" fill="%s">%s</text>' % (y, INK, titre_p))
         y += 10
@@ -988,8 +1010,19 @@ def fig_chronologie_m(c, A):
             for a in sorted({u for u, *_ in seg} | {v for _, v, *_ in seg}):
                 e.append('<circle cx="%.1f" cy="%d" r="3.6" fill="#ffffff" stroke="%s" stroke-width="1.5"/>' % (sx(a), yb, INK2))
         y += haut
-        for a in range(a0 + (pas_ax - a0 % pas_ax) % pas_ax, a1 + 1, pas_ax):
-            e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">%d</text>' % (sx(a), y + 18, FS_MIN, MUTED, a))
+        graduations = list(range(a0 + (pas_ax - a0 % pas_ax) % pas_ax, int(a1) + 1, pas_ax))
+        # 26/11/2026 (contrôleur du rendu) : la dernière année tracée d'un panneau remplace la dernière graduation quand
+        # aucun rond n'y tombe et qu'elle en est proche (panneau « depuis 2013 » : 2026 au lieu de 2025), alignée à droite.
+        fin_p = max(v for _, _, seg in rows for _, v, _, _ in seg)
+        bornes_p = {b for _, _, seg in rows for u, v, *_ in seg for b in (u, v)}
+        fin_lue = fin_p not in graduations and graduations[-1] not in bornes_p and 0 < fin_p - graduations[-1] < pas_ax / 2
+        if fin_lue:
+            graduations[-1] = fin_p
+        for a in graduations:
+            if fin_lue and a == fin_p:
+                e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="end">%d</text>' % (WM - 2, y + 18, FS_MIN, MUTED, a))
+            else:
+                e.append('<text x="%.1f" y="%d" font-size="%s" fill="%s" text-anchor="middle">%d</text>' % (sx(a), y + 18, FS_MIN, MUTED, a))
         y += 24
         # 19/11/2026 : le repère (arbitrage du 10/10, « dire ce que 2013 désigne ») est dit dans la légende, plus ici
     e, h = pied_m(e, y + 14, t["source"], t["note"])

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 441" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-d-t lan-d-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 455" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-d-t lan-d-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="lan-d-t">La même dictée en CM2 : nombre moyen d'erreurs</title><desc id="lan-d-d">Barres empilées, nombre moyen d'erreurs à la même dictée en CM2 : 1987 : 2,1 erreurs lexicales et 8,6 autres erreurs, 10,7 au total ; 2007 : 2,6 erreurs lexicales et 12,1 autres erreurs, 14,7 au total ; 2015 : 3 erreurs lexicales et 15 autres erreurs, 18 au total ; 2021 : 3 erreurs lexicales et 16,4 autres erreurs, 19,4 au total.</desc>
-<rect width="720" height="441" fill="#ffffff"/>
+<rect width="720" height="455" fill="#ffffff"/>
 <text x="0" y="18" font-size="14" font-weight="600" fill="#26262f">La même dictée en CM2 : nombre moyen d'erreurs</text>
 <line x1="100" y1="300.0" x2="680" y2="300.0" stroke="#dcd8d3" stroke-width="0.6"/>
 <text x="94" y="303.5" font-size="11" fill="#6f6c66" text-anchor="end">0</text>
@@ -47,6 +47,7 @@
 <text class="pied-source" x="0" y="377.0" font-size="11" fill="#55524f">DEPP, Note d'Information 22.37 (dictée de 67 mots, 1987, 2007, 2015, 2021 ; secteur public) ; détail des autres</text>
 <text class="pied-source" x="0" y="391.0" font-size="11" fill="#55524f">erreurs, 1987 et 2007 : NI 08.38</text>
 <text class="pied-note" x="0" y="405.0" font-size="11" fill="#55524f">Erreurs lexicales : orthographe des mots eux-mêmes. Autres erreurs : grammaire (accords, conjugaison), ponctuation,</text>
-<text class="pied-note" x="0" y="419.0" font-size="11" fill="#55524f">oublis (total moins lexicales).</text>
-<text class="pied-licence" x="0" y="433.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
+<text class="pied-note" x="0" y="419.0" font-size="11" fill="#55524f">oublis (total moins lexicales). Copies corrigées par les professeurs des élèves en 1987, de façon centralisée à partir</text>
+<text class="pied-note" x="0" y="433.0" font-size="11" fill="#55524f">de 2007 : effet éventuel de ce changement non directement estimable selon la DEPP.</text>
+<text class="pied-licence" x="0" y="447.0" font-size="11" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0 · stephane-lalut.com/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/</text>
 </svg>

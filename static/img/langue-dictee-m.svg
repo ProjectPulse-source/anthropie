@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 689" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-dm-t lan-dm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 757" role="img" font-variant-numeric="tabular-nums" aria-labelledby="lan-dm-t lan-dm-d" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 <title id="lan-dm-t">La même dictée en CM2 : nombre moyen d'erreurs</title><desc id="lan-dm-d">Barres horizontales empilées, nombre moyen d'erreurs à la même dictée en CM2 : 1987 : 2,1 erreurs lexicales et 8,6 autres erreurs, 10,7 au total ; 2007 : 2,6 erreurs lexicales et 12,1 autres erreurs, 14,7 au total ; 2015 : 3 erreurs lexicales et 15 autres erreurs, 18 au total ; 2021 : 3 erreurs lexicales et 16,4 autres erreurs, 19,4 au total.</desc>
-<rect width="300" height="689" fill="#ffffff"/>
+<rect width="300" height="757" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#26262f">La même dictée en CM2 : nombre</text>
 <text x="0" y="42" font-size="17" font-weight="600" fill="#26262f">moyen d'erreurs</text>
 <rect x="0" y="66" width="14" height="14" fill="#184f95"/>
@@ -38,7 +38,11 @@
 <text x="0" y="590.0" font-size="13.5" fill="#55524f">mots eux-mêmes. Autres erreurs :</text>
 <text x="0" y="607.0" font-size="13.5" fill="#55524f">grammaire (accords, conjugaison),</text>
 <text x="0" y="624.0" font-size="13.5" fill="#55524f">ponctuation, oublis (total moins</text>
-<text x="0" y="641.0" font-size="13.5" fill="#55524f">lexicales).</text>
-<text x="0" y="662.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
-<text x="0" y="679.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text x="0" y="641.0" font-size="13.5" fill="#55524f">lexicales). Copies corrigées par les</text>
+<text x="0" y="658.0" font-size="13.5" fill="#55524f">professeurs des élèves en 1987, de</text>
+<text x="0" y="675.0" font-size="13.5" fill="#55524f">façon centralisée à partir de 2007 :</text>
+<text x="0" y="692.0" font-size="13.5" fill="#55524f">effet éventuel de ce changement non</text>
+<text x="0" y="709.0" font-size="13.5" fill="#55524f">directement estimable selon la DEPP.</text>
+<text x="0" y="730.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="747.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>
