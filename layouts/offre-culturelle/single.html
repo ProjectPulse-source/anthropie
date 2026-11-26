@@ -33,9 +33,13 @@
         {{- else }}{{ if $essai }}<span class="oc-logo oc-logo--place" aria-hidden="true">Logo de<br>votre {{ $structure }}</span>{{ end }}{{ end -}}
         <span class="oc-part__nom">{{ partial "fr-typo.html" $p.partenaire }}</span>
       </div>
-      <p class="oc-surtitre">Offre culturelle de votre {{ $structure }}</p>
+      {{- /* surtitre et initiative : surcharges facultatives propres à la page (auteur, 26/11/2026, ATSCAF 24 : « le bureau
+             doit apparaître comme le relais d'une initiative culturelle et non comme le prescripteur des thèses défendues
+             dans les ouvrages » ; « que le logo identifie les bénéficiaires de l'offre sans suggérer une caution
+             éditoriale »). Sans surcharge, le texte commun aux comités. */}}
+      <p class="oc-surtitre">{{ with $p.surtitre }}{{ partial "fr-typo.html" . }}{{ else }}Offre culturelle de votre {{ $structure }}{{ end }}</p>
       <h1 class="oc-titre"><span data-role="compteur" hidden><span data-role="total"></span> livres numériques offerts</span><span data-role="sans-compteur">Des livres numériques offerts</span></h1>
-      <p class="oc-initiative">Une initiative culturelle proposée par votre {{ $structure }}, avec des livres financés par l'auteur.</p>
+      <p class="oc-initiative">{{ with $p.initiative }}{{ partial "fr-typo.html" . }}{{ else }}Une initiative culturelle proposée par votre {{ $structure }}, avec des livres financés par l'auteur.{{ end }}</p>
       <p class="oc-chapo">{{ partial "fr-typo.html" $p.intro }}</p>
       <p class="oc-mention">Sans paiement · Compte Amazon.fr nécessaire · Application Kindle gratuite</p>
       {{- /* Les six couvertures en éventail (maquette A, auteur, 02/11), toutes de la même taille ; ordre éditorial : le premier livre devant (auteur, 25/10 : « conserve
@@ -78,6 +82,10 @@
       <article class="ressources-book oc-livre oc-livre--carte" data-book="{{ $livre.Params.promo_slug }}">
         <div class="oc-livre__couv">{{ partial "book-cover.html" (dict "slug" $slug "alt" (printf "Couverture de %s" $livre.Title) "wrapClass" "oc-couv" "sizes" "(min-width: 1024px) 150px, 110px") }}</div>
         <div class="oc-livre__corps">
+          {{- /* presentations : surcharge facultative de la ligne de présentation d'un livre, propre à la page (auteur,
+                 26/11/2026, ATSCAF 24 : « distinguer clairement son statut d'essai d'économie politique de celui du
+                 dossier documentaire »). */ -}}
+          {{- $presentation := index ($p.presentations | default dict) $slug }}
           <p class="oc-theme">{{ $e.theme }}</p>
           <h3>{{ partial "fr-typo.html" $livre.Title }}</h3>
           {{- /* Signal de crédibilité par livre (arbitrage CSE § 14) : la note Amazon.fr et son nombre d'évaluations,
@@ -93,7 +101,7 @@
             {{- else }}{{ partial "preuve-sociale.html" $livre }}{{ end -}}
           </div>
           <p class="oc-q">{{ partial "fr-typo.html" $e.question }}</p>
-          <p class="oc-l">{{ partial "fr-typo.html" $e.raison }}</p>
+          <p class="oc-l">{{ partial "fr-typo.html" ($presentation | default $e.raison) }}</p>
           {{- /* Aperçu avant le choix (auteur, 25/10 : « avant de choisir, le lecteur doit avoir un aperçu plus large du
                  livre avant de basculer vers Amazon ») : l'aperçu propre à cette page (`apercu` de data/offre_culturelle.toml,
                  CSE-13 du 25/10 : le détail apprend quelque chose de plus que l'accroche, en mots de lecteur), sinon la
