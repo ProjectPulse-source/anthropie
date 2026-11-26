@@ -67,6 +67,7 @@ extrait_voix:
     - "Certitude, servitude.<br><span class=\"book-voix__auteur\">— Jean Rostand</span>"
   ligne: "Certitude, servitude."
   ligne_auteur: "Jean Rostand, dans le livre"
+  ligne_auteur_en: "Jean Rostand, quoted in the book"  # carte de /en/books/ (26/11/2026)
   chute: "Si vous ne voyez pas la couture, c'est qu'elle est réussie."
 ---
 

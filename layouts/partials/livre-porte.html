@@ -16,7 +16,7 @@
 {{- $repli := and $isEn (eq $p.Lang "fr") -}}
 {{- $v := $p.Params.extrait_voix -}}
 {{- $ligne := "" -}}{{- $auteur := "" -}}
-{{- with $v }}{{ $ligne = .ligne | default .chute }}{{ $auteur = .ligne_auteur }}{{ end -}}
+{{- with $v }}{{ $ligne = .ligne | default .chute }}{{ $auteur = cond (and $isEn .ligne_auteur_en) .ligne_auteur_en .ligne_auteur }}{{ end -}}
 {{- $broche := cond $isEn (or $p.Params.url_amazon_com $p.Params.url_amazon_fr) (or $p.Params.url_amazon_fr $p.Params.url_amazon_com) -}}
 {{- $kindle := cond $isEn (or $p.Params.url_amazon_com_kindle $p.Params.url_amazon_fr_kindle) (or $p.Params.url_amazon_fr_kindle $p.Params.url_amazon_com_kindle) -}}
 {{- $achat := $broche | default $kindle -}}
@@ -32,7 +32,7 @@
     {{- $st := "" -}}{{- with $porte }}{{ $st = .pourquoi }}{{ end -}}
     {{- with ($st | default $p.Params.subtitle) }}<p class="livre-porte__st"{{ if and $repli $st }} lang="en"{{ end }}>{{ partial "fr-typo.html" . }}</p>{{ end }}
     {{- $en := eq $p.Lang "en" -}}
-    {{- with $ligne }}<p class="livre-porte__voix">{{ if $en }}“{{ . }}”{{ else }}«&nbsp;{{ partial "fr-typo.html" . }}&nbsp;»{{ end }}{{ with $auteur }}<span class="livre-porte__voix-auteur">{{ partial "fr-typo.html" . }}</span>{{ end }}</p>{{ end }}
+    {{- with $ligne }}<p class="livre-porte__voix">{{ if $en }}“{{ . }}”{{ else }}«&nbsp;{{ partial "fr-typo.html" . }}&nbsp;»{{ end }}{{ with $auteur }}<span class="livre-porte__voix-auteur"{{ if and $repli $v.ligne_auteur_en }} lang="en"{{ end }}>{{ partial "fr-typo.html" . }}</span>{{ end }}</p>{{ end }}
   </div>
   {{- /* Pied de carte hors du corps : sur téléphone il passe sous la couverture, sur toute la largeur (audit du 07/11/2026 :
          dans la colonne de texte, la note s'étalait sur quatre à six lignes à 320 px). */}}
