@@ -90,7 +90,8 @@
   {{- /* 01 — la dernière publication */ -}}
   {{- $chapoU := cond (and $isEn $une.Params.chapo_en) $une.Params.chapo_en $une.Params.chapo -}}
   {{- $phU := partial "chapo-phrases.html" ($chapoU | default "") -}}
-  {{- $deux := $phU.premiere }}{{ with $phU.reste }}{{ $deux = printf "%s %s" $deux (partial "chapo-phrases.html" .).premiere }}{{ end -}}
+  {{- $deux := $phU.premiere }}{{ $suite := "" }}{{ with $phU.reste }}{{ $ph2 := partial "chapo-phrases.html" . }}{{ $deux = printf "%s %s" $deux $ph2.premiere }}{{ $suite = $ph2.reste }}{{ end -}}
+  {{- /* Second appât (auteur, 26/11/2026) : la suite du chapô, en exergue sous les deux premières phrases, quand elle existe. */ -}}
   {{- $titre := $une.Title }}{{ $auteurR := "" }}{{ with findRE ` — ` $une.Title 1 }}{{ $parts := split $une.Title " — " }}{{ $titre = index $parts 0 }}{{ $auteurR = delimit (after 1 $parts) " — " }}{{ end }}
   <section class="mtg-ens">
     {{- with $t1.awp }}{{ partial "inline/mtg-tete.html" (dict "n" 1 "t" $t1 "isEn" $isEn) }}{{ end }}
@@ -102,6 +103,7 @@
           <h2 class="mtg-une__titre"><a href="{{ $une.Params.url_externe }}" target="_blank" rel="noopener"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" $titre }}</a></h2>
           {{ with $auteurR }}<p class="mtg-une__auteur"{{ if $isEn }} lang="fr"{{ end }}>{{ partial "fr-typo.html" . }}</p>{{ end }}
           <p class="mtg-une__chapeau">{{ $deux | safeHTML }}</p>
+          {{ with $suite }}<p class="mtg-une__exergue">{{ . | safeHTML }}</p>{{ end }}
           <p class="mtg-une__lire"><a href="{{ $une.Params.url_externe }}" target="_blank" rel="noopener">{{ $L.lire }} <i>{{ $une.Params.revue }}</i>&nbsp;↗</a></p>
         </article>
       </div>
