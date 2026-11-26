@@ -115,3 +115,9 @@ généraliste », « numerus clausus »), citations par les moteurs génératifs
   l'aveugle, contre-expertise externe finale `PRO-20261125-152944`, premier écran testé puis retesté (FR, EN) : voir
   `LOT.md` et `JUGE\` du lot ; page publiée le 25/11 (`b928d218`), note de la figure du cursus alignée ensuite (même
   décision B).
+- Correction du 26/11/2026 (contre-expertise `PRO-20261126-121229`, décisions de l'auteur M1 et M3) : chapô et synthèse
+  disent l'autre levier de l'État pendant le mandat, les postes d'internat fixés chaque année par les ministres, et qu'un
+  poste ouvert n'est pas nécessairement pourvu ; la synthèse se clôt sur la leçon du cas (des effets avant le terme du
+  dispositif ; sa mise en œuvre ne prouve pas que la promesse est tenue). FR et EN. Premier écran retesté conforme
+  (`JUGE\PREMIER_ECRAN_L_M_2611_RESULTATS.md` du lot). Refonte de la figure du cursus écartée comme secondaire : elle
+  montre déjà l'internat de quatre ans à côté du mandat de cinq ans, à la même échelle.

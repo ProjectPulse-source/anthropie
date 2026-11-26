@@ -1,4 +1,4 @@
-# relu le 2026-11-25 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de b928d218 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-26 ; texte servi de /en/can-a-campaign-promise-produce-results-within-five-years/, build de f3b348bd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 Can a campaign promise produce results within five years?
 Can a president who wants more doctors trained in France improve access to care before the end of the term?
@@ -6,7 +6,9 @@ For students who begin their general practice residency from the 2023 academic y
 Effects on care remain possible before the diploma, because from the second cycle onwards, even before residency, students take part in hospital and outpatient activity, under the responsibility of doctors.
 But this participation does not by itself establish better access to care, and the training timetable cannot date such an improvement.
 And the number of students admitted does not depend on a single signature: the State sets national training targets, and universities determine their intake capacities.
-Page updated 25 November 2026
+The State does, however, have another lever during the term: each year, ministers set the number of residency posts in each specialty, for students already engaged in their training.
+But an open post is not necessarily a filled one.
+Page updated 26 November 2026
 Presidential promises
 ↓ Charts, data and citations to reuseReuse this page
 Suppose a decision is taken today to train more doctors.
@@ -160,10 +162,13 @@ The clock of the texts: what length of training does the law impose, and since w
 Here, at least ten years from the first year (for students who entered residency from the 2023 academic year onwards).
 The clock of capacity: who decides the number of places, and are they already filled?
 Here, each university, every year, within a State target; according to the ONDPS, intake capacities were almost saturated from 2021 to 2025.
+Residency posts follow a different mechanism: their number is set each year by ministerial order, and the number of open posts does not by itself tell how many are filled.
 The clock of the effect: what effects can emerge before the diploma, and which of them can the data measure?
 Here, students take part in hospital and outpatient activity from the second cycle onwards, then during residency: an increase in admissions can therefore translate into additional participation in care before the diploma, as the additional students admitted reach these stages of training.
 The data presented here establish neither a net increase in the capacity to provide care nor its effect on access to care, which depends on factors that none of these series measures.
 The same grid applies to any promise whose result depends on people to be trained, provided the texts of each profession are read.
+A promise can begin to produce effects before the measure that implements it has run its course.
+But observing that it has been implemented is not enough to show that the promise was kept.
 The clock of a promise Un président peut-il tenir ses promesses?, the author’s book, in French: contents, excerpts and reviews →
 Frequently asked questions
 How long does it take to train a general practitioner in France?

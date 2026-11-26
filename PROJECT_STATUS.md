@@ -1,5 +1,19 @@
 # Project Status — stephane-lalut.com
 
+## 2026-11-26 — Lot `corrections-radar-2411` : les dix points restés ouverts, publiés (FICP, `/premier-coup/`, Langue, médecine générale)
+
+- Origine : contre-expertise externe `PRO-20261126-121229` (arbitrage dans `D:\PRO\.claude\external-audits\ARBITRATIONS\`)
+  et décisions de l'auteur du 26/11 ; détail et motifs : `D:\PRO\06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\corrections-radar-2411\A_ARBITRER.md`.
+- `/combien-de-temps-une-erreur-reste-inscrite/` : FICP (« en principe », répartition des responsabilités après cession,
+  droits de rectification et d'effacement, ordre des recours, autres usages du fichier, tableau). `/premier-coup/` :
+  encadré FICP (déclaration distinguée de la radiation, durées rapportées au code et à l'art. 8 de l'arrêté).
+- `/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/` : frise jusqu'au millésime 2026, douze mesures
+  (`update_langue_eleves.py`, garde nouvelle) ; correction centralisée de la dictée au chapô et dans la figure ; PISA
+  sur ordinateur « en France ». `/une-promesse-peut-elle-produire-ses-effets-en-cinq-ans/` (FR, EN) : postes d'internat
+  au chapô et dans la synthèse ; leçon du cas en fin de synthèse.
+- Contrôles : `check-all --ci`, build, liens, rendu, dates, langue ; premier écran (L, M) ; figures : deux contrôleurs
+  indépendants ; phrases citées par les envois armés présentes.
+
 ## 2026-11-21 — Bibliographies des AWP déclarées (chantier graphe, `/reprise-graphe`)
 
 - `data/bibliographies/awp-0{1..9}.yaml` : 259 références (FR et EN, tirées des PDF servis), 92 DOI cités ou vérifiés
