@@ -113,6 +113,15 @@
    "format": "lignes",
    "texte": "comptes_rendus/SENAT-2026-11-20.txt",
    "sha256_texte": "c242b2a00467bcf307a76b35c1dabc42ae6a99d8b1427aa14a6f78486ce1a51c"
+  },
+  "SENAT-AMDT-II-64": {
+   "date": "2026-11-26",
+   "assemblee": "Sénat",
+   "seance": "amendement n[°o] ?II-64 de la commission des finances, page lue le jeudi 26 novembre 2026",
+   "url": "https://www.senat.fr/amendements/2026-2027/155/Amdt_II-64.html",
+   "sha256_html": "2ee38bb387a0a238b8e1387a125e62b6e37aaf68225323845856aecc5ced8f21",
+   "texte": "comptes_rendus/SENAT-AMDT-II-64.txt",
+   "sha256_texte": "247e6a192fcf1977e0c9ed0f4798206a8249294d563f9cc683b4fb87bdfbdddd"
   }
  },
  "articles": [
@@ -278,6 +287,7 @@
   "AN-2026-11-24-1",
   "AN-2026-11-24-2",
   "AN-2026-11-24-3",
+  "AN-2026-11-25-1",
   "SENAT-2026-11-19",
   "SENAT-2026-11-20",
   "SENAT-2026-11-23",
@@ -344,6 +354,17 @@
    "citations": [
     "N° I-61 12 novembre 2026 AMENDEMENT",
     "au nom de la commission des finances ARTICLE 53 Supprimer cet article."
+   ]
+  },
+  {
+   "article": 87,
+   "amendement": "II-64",
+   "seance": "SENAT-AMDT-II-64",
+   "statut": "suppression_adoptee",
+   "source": "ameli",
+   "citations": [
+    "N° II-64 26 novembre 2026 AMENDEMENT",
+    "au nom de la commission des finances ARTICLE 87 Supprimer cet article."
    ]
   }
  ]

@@ -32,7 +32,7 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-11-25T",
+    "maj_source": "2026-11-26T",
     "sha256": "c924192f0552b859d6837582dc5875f8ddf7ef1bbb41823aebb284e77dcc93a0"
    },
    "notif": {
@@ -1198,6 +1198,13 @@
      "statut": "suppression_adoptee",
      "source": "ameli",
      "date": "2026-11-12"
+    },
+    {
+     "article": 87,
+     "amendement": "II-64",
+     "statut": "suppression_adoptee",
+     "source": "ameli",
+     "date": "2026-11-26"
     }
    ],
    "debut": "2026-11-20",
