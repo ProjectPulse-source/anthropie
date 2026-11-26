@@ -99,3 +99,17 @@ J+60 : à inscrire dans `06_PROMOTION\FEUILLE_DE_ROUTE_GEO_RESSOURCES.md` à la 
 - Figures téléphone : inchangées (parité contrôlée par le générateur).
 - Recette, juge interne à l'aveugle, premier écran : voir `LOT.md` du lot.
 - Relecture phrase à phrase, instantané, accord de l'auteur : à la publication (pas avant le 10/12/2026, envoi du 07 au 09/12).
+- Forme du 26/11/2026 (point A5 du lot `corrections-radar-2411`, demande de l'auteur) : la série porte partout son nom
+  entier, celui de la Dares (« hors bénéficiaires du RSA et hors jeunes en parcours » : source, titre, légendes bureau et
+  téléphone, libellé du CSV) ; les jeunes en parcours sont définis comme la Dares les définit (« CEJ, Pacea et AIJ »,
+  métadonnées du jeu relevées le 24/11) dans la note de la figure et dans le corps, FR et EN ; anglais : « seasonally and
+  working-day adjusted » (CVS-CJO), « young people in programmes », terme du corps. Titres trop longs passés à la ligne,
+  sans abréviation, jamais dans le terme défini ni dans un nom propre (soudures au moment de couper). Les deux
+  contrôleurs indépendants ont fait développer les sigles (AIJ : « accompagnement individualisé des jeunes », nom que
+  France Travail donne depuis le 01/03/2022 à l'ancien « accompagnement intensif », page officielle archivée), écrire
+  « Autorité de la statistique publique » en toutes lettres (« l'ASP » se lisait Agence de services et de paiement), dire
+  « affectées par » l'actualisation automatique, légender la bande et le pointillé au téléphone juste sous les panneaux,
+  agrandir l'en-tête anglais, retirer « à gauche / à droite » du texte alternatif (au téléphone, les panneaux sont l'un
+  sous l'autre). Aucun nombre ne change ; `--check` (11 gardes), `check-figures` à 0 ; trois passages de chaque
+  contrôleur, le dernier sans défaut bloquant ni gênant (une coupure cosmétique, corrigée comme le contrôleur l'avait
+  testée) ; instantanés FR et EN refaits.

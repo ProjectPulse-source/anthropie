@@ -1,4 +1,4 @@
-# relu le 2026-11-24 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de 4233a6a9 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-26 ; texte servi de /en/how-can-we-tell-whether-a-promise-was-kept/, build de f7cd8dd1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 FRThis page is also available in French — version française
 How can we tell whether a promise was kept?
 Two accurate figures can tell two different stories.
@@ -83,7 +83,7 @@ October-November 2024
 Form changed again
 Up: about 36,000 registrants (Dares and France Travail)
 January 2025
-Automatic registration of the groups covered by the full employment act (applicants for and recipients of the RSA minimum income, young people in programmes, disabled people)
+Automatic registration of the groups covered by the full employment act (applicants for and recipients of the RSA minimum income, young people followed by the missions locales, disabled people)
 Up: the 2025 rise partly results from it (Insee)
 January-March 2025
 Automatic updating of new registrants without entitlement to a France Travail allowance
@@ -111,14 +111,14 @@ October-November 2024.
 The form changes again, this time upwards: “between October and November 2024, a change in the monthly updating form led to an increase in the number of jobseekers in category A”, by about 36,000 people at national level in the fourth quarter of 2024 (Dares and France Travail, quarterly publication reproduced by the regional labour directorate of Normandy, the Dreets).
 January 2025.
 The full employment act of 18 December 2023 provides for automatic registration.
-According to the Dares, applicants for and recipients of the RSA (minimum income), young people followed by local youth employment services (missions locales) in a youth commitment contract (CEJ) or a contractual support pathway (Pacea), and disabled people followed by Cap emploi, the specialised support network, are now registered systematically; for people already on the RSA, their direction to a support track is gradual.
+According to the Dares, applicants for and recipients of the RSA (minimum income), young people followed by local youth employment services (missions locales) in a youth commitment contract (CEJ) or a contractual support pathway towards employment and autonomy (Pacea), and disabled people followed by Cap emploi, the specialised support network, are now registered systematically; for people already on the RSA, their direction to a support track is gradual.
 Two new categories, F and G, take in people directed to a social pathway and RSA applicants and recipients awaiting orientation.
 January to April 2025.
 From January to March, new registrants without benefit entitlement are updated automatically, and therefore counted in category A until they sign their commitment contract; the rule is restricted in April to first-time registrations.
 In March, an incident wrongly counts 36,000 people in category A, reclassified into category G in April (Dares).
 Since June 2025.
 A decree changes the sanctions regime: a “suspension-remobilisation” now precedes any removal from the register, which reduces the number of removals (Dares, Insee).
-The Dares also publishes a series of category A registrants excluding RSA recipients and young people in programmes, available since 2018.
+The Dares also publishes a series of category A registrants excluding RSA recipients and young people in programmes (as it defines them, young people on a youth commitment contract, a contractual support pathway towards employment and autonomy known as Pacea, or France Travail’s individualised support for young people known as AIJ), available since 2018.
 It thus neutralises part of the population changes linked to the law, but neither all the groups concerned (people followed by Cap emploi, for instance, remain in it) nor the changes to the updating rules, nor the new sanctions regime.
 Category A registrants at France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally and working-day adjusted, with and without RSA recipients and young people in programmes.
 Latest point: third quarter of 2026.
@@ -238,14 +238,15 @@ Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary hou
 Insee Références, Emploi, chômage, revenus du travail, 2026 ed., dossier 1 (in-depth study), figures 2 and 8 (Dares-Insee-France Travail matching)
 Download PNG
 SVG
-Category A registrants: published series and series without RSA recipients or youth programmes
+Category A registrants: published series and series excluding RSA recipients and young people in programmes
 Both series of category A registrants carry the rule changes: monthly updating form in 2022, automatic registration and automatic updating in 2025.
 They describe two populations, and the gap between them does not measure the effect of the reform.
 Reading caveat.
+Young people in programmes: on a youth commitment contract (CEJ), a contractual support pathway towards employment and autonomy (Pacea) or France Travail’s individualised support for young people (AIJ), according to the Dares.
+RSA: minimum income benefit.
 Scope and period differ from the 2024 cross-tabulation figure.
-Series not labelled since 1 Jan.
-2025 (2021 label suspended by the ASP, which ran until 20 May 2026).
-Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA’ since 2018)
+Series not labelled since 1 January 2025 (2021 label, valid until 20 May 2026, suspended by France’s official statistics authority).
+Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally and working-day adjusted (series excluding RSA recipients and young people in programmes since 2018)
 Download PNG
 SVG
 ILO unemployment and category A registrants in France, 2012-2025

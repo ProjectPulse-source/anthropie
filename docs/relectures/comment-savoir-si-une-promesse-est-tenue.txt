@@ -1,4 +1,4 @@
-# relu le 2026-11-24 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de 4233a6a9 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-26 ; texte servi de /comment-savoir-si-une-promesse-est-tenue/, build de f7cd8dd1 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 ENCette page existe aussi en anglais — English version
 Comment savoir si une promesse est tenue ?
 Deux chiffres exacts peuvent raconter deux histoires différentes.
@@ -110,14 +110,14 @@ Octobre-novembre 2024.
 Le formulaire change de nouveau, cette fois à la hausse : « entre octobre et novembre 2024, une évolution dans le formulaire d’actualisation a conduit à augmenter le nombre de demandeurs d’emploi en catégorie A », d’environ 36 000 personnes au niveau national au 4e trimestre 2024 (Dares et France Travail, publication trimestrielle reprise par la Dreets de Normandie, direction régionale de l’État pour l’économie, l’emploi, le travail et les solidarités).
 Janvier 2025.
 La loi du 18 décembre 2023 pour le plein emploi prévoit l’inscription d’office.
-Selon la Dares, les demandeurs et bénéficiaires du RSA, les jeunes suivis par les missions locales en contrat d’engagement jeune (CEJ) ou en parcours contractualisé d’accompagnement (Pacea), et les personnes handicapées suivies par Cap emploi, le réseau d’accompagnement spécialisé, sont désormais inscrits systématiquement ; pour les personnes déjà au RSA, l’orientation est progressive.
+Selon la Dares, les demandeurs et bénéficiaires du RSA, les jeunes suivis par les missions locales en contrat d’engagement jeune (CEJ) ou en parcours contractualisé d’accompagnement vers l’emploi et l’autonomie (Pacea), et les personnes handicapées suivies par Cap emploi, le réseau d’accompagnement spécialisé, sont désormais inscrits systématiquement ; pour les personnes déjà au RSA, l’orientation est progressive.
 Deux catégories nouvelles, F et G, accueillent les personnes orientées en parcours social et les demandeurs et bénéficiaires du RSA qui attendent leur orientation.
 Janvier à avril 2025.
 De janvier à mars, les nouveaux inscrits non indemnisables sont actualisés automatiquement, donc classés en catégorie A jusqu’à la signature de leur contrat d’engagement ; la règle est restreinte en avril aux premières inscriptions.
 En mars, un incident fait compter à tort 36 000 personnes en catégorie A, reclassées en catégorie G en avril (Dares).
 Depuis juin 2025.
 Un décret change le régime des sanctions : une « suspension-remobilisation » précède désormais l’éventuelle radiation, ce qui réduit le nombre de radiations (Dares, Insee).
-La Dares publie aussi une série d’inscrits en catégorie A hors bénéficiaires du RSA et hors jeunes en parcours, disponible depuis 2018.
+La Dares publie aussi une série d’inscrits en catégorie A hors bénéficiaires du RSA et hors jeunes en parcours (selon sa définition, les jeunes en contrat d’engagement jeune, en parcours contractualisé d’accompagnement vers l’emploi et l’autonomie, dit Pacea, ou en accompagnement individualisé des jeunes de France Travail, dit AIJ), disponible depuis 2018.
 Elle neutralise ainsi une partie des changements de population liés à la loi, mais ni l’ensemble des publics concernés (les personnes suivies par Cap emploi, par exemple, y restent), ni les modifications des règles d’actualisation, ni le nouveau régime des sanctions.
 Inscrits en catégorie A à France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données corrigées des variations saisonnières et des jours ouvrables, avec et sans les bénéficiaires du RSA et les jeunes en parcours.
 Dernier point : 3e trimestre 2026.
@@ -127,7 +127,7 @@ La série hors RSA et hors jeunes en parcours porte elle aussi la rupture de 202
 Au 1er trimestre 2025, elle saute (+100 300, contre +261 200 pour la série publiée).
 Au 2e, elle recule (−74 500, contre −167 700).
 Ces mouvements sont affectés par l’actualisation automatique de janvier à mars 2025, qui touchait tous les nouveaux inscrits sans droit à une allocation de France Travail et dont la Dares documente l’effet sur la catégorie A.
-Ils montrent que la série hors RSA et jeunes en parcours n’échappe pas à cette rupture, sans permettre d’attribuer toute son évolution à ce seul mécanisme.
+Ils montrent que la série hors RSA et hors jeunes en parcours n’échappe pas à cette rupture, sans permettre d’attribuer toute son évolution à ce seul mécanisme.
 Et le point de départ de la comparaison, le 4e trimestre 2024, porte déjà le formulaire modifié en octobre-novembre 2024.
 Quelle part de la hausse observée en 2025 provient de ce formulaire de fin 2024 ?
 Les sources mobilisées ne permettent pas de l’isoler : l’Insee ne fournit pas de décomposition de l’écart entre les deux mesures pour 2025, et l’appariement détaillé porte sur 2024.
@@ -242,13 +242,14 @@ Insee Références, Emploi, chômage, revenus du travail, éd.
 2026, dossier 1, figures 2 et 8 (appariement Dares-Insee-France Travail)
 Télécharger en PNG
 SVG
-Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours
+Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et hors jeunes en parcours
 Les deux séries d’inscrits en catégorie A portent les changements de règles : formulaire d’actualisation en 2022, inscription d’office et actualisation automatique en 2025.
 Elles décrivent deux populations, et leur écart ne mesure pas l’effet de la réforme.
 Précaution d’interprétation.
+Jeunes en parcours : en contrat d’engagement jeune (CEJ), en parcours contractualisé d’accompagnement vers l’emploi et l’autonomie (Pacea) ou en accompagnement individualisé des jeunes de France Travail (AIJ), selon la Dares.
 Champ et période différents de la figure du croisement 2024.
-Séries non labellisées depuis le 01/01/2025 (label de 2021 suspendu par l’ASP, qui courait jusqu’au 20/05/2026).
-Dares et France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)
+Séries non labellisées depuis le 01/01/2025 (label de 2021, valable jusqu’au 20/05/2026, suspendu par l’Autorité de la statistique publique).
+Dares et France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données CVS-CJO (série hors bénéficiaires du RSA et hors jeunes en parcours depuis 2018)
 Télécharger en PNG
 SVG
 Chômeurs au sens du BIT et inscrits en catégorie A, 2012-2025

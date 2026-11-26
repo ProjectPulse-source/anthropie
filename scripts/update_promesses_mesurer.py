@@ -543,7 +543,10 @@ def cadre(H: int, ident: str, titre: str, sous: str, desc: str) -> list[str]:
             'aria-labelledby="%s-t %s-d" font-family="%s">' % (W, H + 48, ident, ident, FONT),
             '<title id="%s-t">%s</title><desc id="%s-d">%s</desc>' % (ident, esc(titre), ident, esc(desc)),
             '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, H + 48),
-            txt(0, 18, titre, 13, INK, weight="600"), txt(0, 36, sous, 12, INK2)]
+            txt(0, 18, titre, 13, INK, weight="600")] + \
+        [txt(0, 36 + 16 * k, l, 12, INK2) for k, l in enumerate(pied_figure.coupe(sous, 120))]
+    # 26/11/2026 (A5) : le sous-titre passe à la ligne au-delà de 120 signes (anglais, « seasonally and working-day
+    # adjusted » rendu en entier) ; les autres tiennent sur une ligne, inchangés.
 
 
 LICENCES_M = {"fr": "Compilation Stéphane Lalut, CC BY 4.0 · stephane-lalut.com",
@@ -558,8 +561,17 @@ def blocs_pied(src: str, note: str, mobile: bool = False) -> list:
 T = {
     "fr": {"src1": "Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figures 2 et 8 (appariement Dares-Insee-France Travail)",
            "note1": "Estimation de l'Insee, moyenne 2024, France hors Mayotte, 15-64 ans, logement ordinaire ; deux définitions distinctes ; marge d'enquête non publiée.",
-           "src2": "Dares et France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données CVS-CJO (série « hors RSA » depuis 2018)",
-           "note2": "Champ et période différents de la figure du croisement 2024. Séries non labellisées depuis le 01/01/2025 (label de 2021 suspendu par l'ASP, qui courait jusqu'au 20/05/2026).",
+           # 26/11/2026 (point A5 du lot corrections-radar-2411) : la série porte son nom entier, celui de la Dares (« hors
+           # bénéficiaires du RSA et hors jeunes en parcours ») dans la source, le titre, les deux légendes et le CSV ; les
+           # jeunes en parcours sont définis comme la Dares les définit (métadonnées du jeu, relevé du 24/11/2026 : « CEJ,
+           # Pacea et AIJ ») ; en anglais, « seasonally and working-day adjusted » (CVS-CJO) et « young people in
+           # programmes », le terme du corps de la page.
+           "src2": "Dares et France Travail, moyenne trimestrielle des inscrits en fin de mois, France hors Mayotte, données CVS-CJO (série hors bénéficiaires du RSA et hors jeunes en parcours depuis 2018)",
+           # Contrôleur du rendu (26/11) : sigles développés ; « l'ASP » se lisait Agence de services et de paiement, et
+           # « qui courait » se rattachait à elle. AIJ : « accompagnement individualisé des jeunes », nom donné par France
+           # Travail depuis le 01/03/2022 (pages francetravail.fr, lues le 26/11/2026).
+           "note2": "Jeunes en parcours : en contrat d'engagement jeune (CEJ), en parcours contractualisé d'accompagnement vers l'emploi et l'autonomie (Pacea) ou en accompagnement individualisé des jeunes de France Travail (AIJ), selon la Dares. Champ et période différents de la figure du croisement 2024. Séries non labellisées depuis le 01/01/2025 (label de 2021, valable jusqu'au 20/05/2026, suspendu par l'Autorité de la statistique publique).",
+           "leg_m": "Bande : nouveau formulaire d'actualisation, 2022 ; pointillé : loi pour le plein emploi, 1er janvier 2025.",
            "src3": "Insee Références, Emploi, chômage, revenus du travail, éd. 2026, dossier 1, figure 1 (Insee, enquête Emploi, séries longues ; Dares-France Travail, STMT)",
            "note3": "Moyennes annuelles publiées, en millions, France hors Mayotte, 15-64 ans. Repères : Insee (1, 2) et Dares (3, 4).",
            "t1": "Chômeurs au sens du BIT et inscrits en catégorie A, 2024",
@@ -575,14 +587,19 @@ T = {
            "m_bit": "Chômeurs BIT non inscrits en A", "m_deux": "Dans les deux à la fois", "m_a": "Inscrits en A non chômeurs BIT",
            "m_tot_bit": "Chômeurs BIT : %s, dont %s %% inscrits en A", "m_tot_a": "Inscrits en A : %s, dont %s %% chômeurs BIT",
            "m_unite": "En milliers de personnes, moyenne 2024",
-           "t2": "Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours",
+           "t2": "Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et hors jeunes en parcours",
            "s2": "France hors Mayotte, moyenne trimestrielle des inscrits en fin de mois, CVS-CJO ; même échelle pour les deux panneaux",
            "d2": "Deux panneaux de 2018 à {an}, sur la même échelle : à gauche la catégorie A publiée, à droite la série hors "
                  "bénéficiaires du RSA et hors jeunes en parcours. Une bande marque 2022 (nouveau formulaire d'actualisation), une "
-                 "ligne le 1er janvier 2025 (loi pour le plein emploi). Au {fin}, {va} pour la catégorie A publiée et {vh} hors RSA.",
-           "p1": "Catégorie A publiée", "p2": "Hors bénéficiaires du RSA et jeunes en parcours", "p2m": "Hors RSA et jeunes en parcours",
+                 "ligne le 1er janvier 2025 (loi pour le plein emploi). Au {fin}, {va} pour la catégorie A publiée et {vh} hors "
+                 "bénéficiaires du RSA et hors jeunes en parcours.",
+           # Le terme défini ne se coupe jamais : soudures dans titre_panneau().
+           "p1": "Catégorie A publiée", "p2": "Hors bénéficiaires du RSA et hors jeunes en parcours",
+           "p2m": "Hors bénéficiaires du RSA et hors jeunes en parcours",
            "r2022": "2022 : formulaire", "r2025": "2025 : loi",
-           "ecart": "Les deux séries sautent au 1er trimestre 2025 et reculent au 2e (actualisation automatique, janvier-mars 2025) ; leur écart ne mesure pas l'effet de la réforme.",
+           # « affectées par » : la parenthèse se lisait comme la cause unique du saut (la page : sans permettre d'attribuer
+           # toute son évolution à ce seul mécanisme).
+           "ecart": "Les deux séries sautent au 1er trimestre 2025 et reculent au 2e (affectées par l'actualisation automatique de janvier à mars 2025) ; leur écart ne mesure pas l'effet de la réforme.",
            "t3": "Chômeurs au sens du BIT et inscrits en catégorie A, 2012-2025",
            "s3": "moyennes annuelles publiées par l'Insee, en millions de personnes",
            "d3": "Deux courbes annuelles de 2012 à 2025, en millions. Chômeurs au sens du BIT : {bit}. Inscrits en catégorie A : {a}. "
@@ -594,8 +611,9 @@ T = {
            "M": lambda v: fr(v / 1e6, 1) + " M", "Mi": lambda v: fr(v, 1)},
     "en": {"src1": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., dossier 1 (in-depth study), figures 2 and 8 (Dares-Insee-France Travail matching)",
            "note1": "Insee estimate, 2024 average, France excluding Mayotte, aged 15-64, ordinary households; two distinct definitions; survey margin not published.",
-           "src2": "Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally adjusted (series 'excluding RSA' since 2018)",
-           "note2": "Scope and period differ from the 2024 cross-tabulation figure. Series not labelled since 1 Jan. 2025 (2021 label suspended by the ASP, which ran until 20 May 2026).",
+           "src2": "Dares and France Travail, quarterly average of end-of-month registrants, France excluding Mayotte, seasonally and working-day adjusted (series excluding RSA recipients and young people in programmes since 2018)",
+           "note2": "Young people in programmes: on a youth commitment contract (CEJ), a contractual support pathway towards employment and autonomy (Pacea) or France Travail's individualised support for young people (AIJ), according to the Dares. RSA: minimum income benefit. Scope and period differ from the 2024 cross-tabulation figure. Series not labelled since 1 January 2025 (2021 label, valid until 20 May 2026, suspended by France's official statistics authority).",
+           "leg_m": "Band: new monthly updating form, 2022; dotted line: full employment act, 1 January 2025.",
            "src3": "Insee Références, Emploi, chômage, revenus du travail, 2026 ed., dossier 1, figure 1 (Insee, Labour Force Survey, long series; Dares-France Travail, STMT)",
            "note3": "Published annual averages, in millions, France excluding Mayotte, aged 15-64. Markers: Insee (1, 2) and Dares (3, 4).",
            "t1": "ILO-defined unemployment and category A registration in France, 2024",
@@ -611,14 +629,16 @@ T = {
            "m_bit": "ILO unemployed, not in A", "m_deux": "In both at once", "m_a": "In category A, not ILO unemployed",
            "m_tot_bit": "ILO unemployed: %s, %s%% in A", "m_tot_a": "In category A: %s, %s%% ILO unemployed",
            "m_unite": "Thousands of people, 2024 average",
-           "t2": "Category A registrants: published series and series without RSA recipients or youth programmes",
-           "s2": "France excluding Mayotte, quarterly average of end-of-month registrants, seasonally adjusted; same scale for both panels",
+           "t2": "Category A registrants: published series and series excluding RSA recipients and young people in programmes",
+           "s2": "France excluding Mayotte, quarterly average of end-of-month registrants, seasonally and working-day adjusted; same scale for both panels",
            "d2": "Two panels from 2018 to {an}, on the same scale: left, published category A; right, the series excluding RSA "
                  "recipients and young people in programmes. A band marks 2022 (new monthly updating form), a line 1 January 2025 "
-                 "(full employment act). In the {fin}, {va} for published category A and {vh} excluding RSA.",
-           "p1": "Published category A", "p2": "Excluding RSA recipients and youth programmes", "p2m": "Excluding RSA and youth programmes",
+                 "(full employment act). In the {fin}, {va} for published category A and {vh} excluding RSA recipients and "
+                 "young people in programmes.",
+           "p1": "Published category A", "p2": "Excluding RSA recipients and young people in programmes",
+           "p2m": "Excluding RSA recipients and young people in programmes",
            "r2022": "2022: form", "r2025": "2025: law",
-           "ecart": "Both series jump in the first quarter of 2025 and fall back in the second (automatic updating, Jan.-Mar. 2025); their gap does not measure the effect of the reform.",
+           "ecart": "Both series jump in the first quarter of 2025 and fall back in the second (affected by the automatic updating of January to March 2025); their gap does not measure the effect of the reform.",
            "t3": "ILO unemployment and category A registrants in France, 2012-2025",
            "s3": "annual averages published by Insee, in millions of people",
            "d3": "Two annual lines from 2012 to 2025, in millions. Unemployed under the ILO definition: {bit}. Category A registrants: "
@@ -705,12 +725,42 @@ def _fmt_fig2(r: dict) -> dict:
     return {"an": fin[:4], "fin": lib_fin, "va": L["M"](da[fin]), "vh": L["M"](dh[fin])}
 
 
+INSECABLE = chr(0xA0)
+# Groupes qui ne se coupent jamais en fin de ligne (contrôleur géométrie, 26/11/2026) : le nom de la série, coupé avant
+# « et hors » / « and young », jamais sur un mot-outil ni dans le terme défini ; les noms propres de la note de la figure
+# « règle » (« France's official statistics authority » entier : « official… » seul laissait « France's » sur une
+# ligne). Soudure faite au moment de couper, jamais dans T, pour que le source reste lisible ; les textes tirés des SVG
+# (fiche « Réutiliser », <title> du téléphone) en héritent, sans effet à l'affichage.
+SOUDURES = ("Hors bénéficiaires du RSA", "hors bénéficiaires du RSA", "et hors jeunes en parcours",
+            "Excluding RSA recipients", "excluding RSA recipients", "and young people in programmes",
+            "France Travail", "Autorité de la statistique publique", "France's official statistics authority")
+
+
+def souder(s: str) -> str:
+    """Soude les groupes de SOUDURES (titres de panneau, titre de la version téléphone, note de la figure « règle »)."""
+    for g in SOUDURES:
+        s = s.replace(g, g.replace(" ", INSECABLE))
+    return s
+
+
+def titre_panneau(nom: str, mobile: bool) -> list:
+    """Lignes du titre d'un panneau : 34 signes au téléphone, 53 au bureau (le nom français entier tient sur une ligne),
+    groupes de SOUDURES jamais coupés."""
+    return pied_figure.coupe(souder(nom), 34 if mobile else 53)
+
+
 def _panneau(e: list, s: dict, cles: list, vmin: int, vmax: int, x0: float, pw: float, y0: float, y1: float,
              col: str, nom: str, fs: float, axe: bool, an_pas: int, mobile: bool = False) -> None:
     L = T[LANG]
     Y = lambda v: y1 - (v - vmin) / (vmax - vmin) * (y1 - y0)  # noqa: E731
     X = lambda i: x0 + i / (len(cles) - 1) * pw  # noqa: E731
-    e.append(txt(0 if mobile else x0, y0 - 26, nom, fs, col if col == BLEU else INK2, "start", "600"))
+    # 26/11/2026 (A5) : le nom entier de la série, sans abréviation, passe à la ligne s'il ne tient pas (dernière ligne à
+    # sa place habituelle, les précédentes au-dessus ; au téléphone, l'appelant décale le panneau d'autant).
+    lignes = titre_panneau(nom, mobile)
+    base = y0 - 26 - (6 if mobile and len(lignes) > 1 else 0)
+    for k, ligne in enumerate(lignes):
+        e.append(txt(0 if mobile else x0, base - (18 if mobile else 14) * (len(lignes) - 1 - k), ligne, fs,
+                     col if col == BLEU else INK2, "start", "600"))
     i22a, i22b = cles.index("2022-T1"), cles.index("2022-T4")
     e.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s" opacity="0.6"/>'
              % (X(i22a), y0 - 8, X(i22b) - X(i22a), y1 - y0 + 8, "#eeede8"))
@@ -735,34 +785,46 @@ def fig_regle(r: dict) -> str:
     """Deux PANNEAUX sur la même échelle (contre-expertise PRO-20261005-183942, P6) : deux courbes superposées autour
     d'une date se lisent comme une quasi-expérience ; deux panneaux séparés disent deux populations. Phase B : bande
     2022 (formulaire d'actualisation) et note sur le saut du 1er trimestre 2025, commun aux deux panneaux (D2, D3)."""
-    H = 360
-    cles, vmin, vmax = _echelle(r)
     L = T[LANG]
+    # 26/11/2026 (contrôleur du rendu) : l'en-tête grandit avec le sous-titre (16 par ligne en plus), au lieu que sa
+    # seconde ligne vienne se coller aux titres des panneaux.
+    dy = 16 * (len(pied_figure.coupe(L["s2"], 120)) - 1)
+    H = 360 + dy
+    cles, vmin, vmax = _echelle(r)
     e = cadre(H, "mg", L["t2"], L["s2"], L["d2"].format(**_fmt_fig2(r)))
     pw, gap, x0g = 300, 50, 56
     for k, (s, col, nom) in enumerate(((r["dares_a"], BLEU, L["p1"]), (r["dares_a_hors"], GRIS, L["p2"]))):
-        _panneau(e, s, cles, vmin, vmax, x0g + k * (pw + gap), pw, 96, 300, col, nom, 11, k == 0, 2)
+        _panneau(e, s, cles, vmin, vmax, x0g + k * (pw + gap), pw, 96 + dy, 300 + dy, col, nom, 11, k == 0, 2)
     # Deux lignes au plus (03/11/2026, check-figures R3 : la note anglaise, sur une ligne, sortait du cadre avec une police
-    # plus large que celle du rendu de controle).
-    for k, ligne in enumerate(pied_figure.coupe(L["ecart"], 118)[:2]):
-        e.append(txt(0, 332 + 14 * k, ligne, FS_D, INK2))
-    return pied_figure.pied(e, H + 2, W, blocs_pied(L["src2"], L["note2"]), GRID)
+    # plus large que celle du rendu de controle). 26/11/2026 : plus de troncature muette ([:2]) ; une note plus longue arrête.
+    lignes = pied_figure.coupe(L["ecart"], 118)
+    if len(lignes) > 2:
+        raise Arret("figure regle : la note sur 2025 tient en %d lignes, 2 au plus" % len(lignes))
+    for k, ligne in enumerate(lignes):
+        e.append(txt(0, 332 + dy + 14 * k, ligne, FS_D, INK2))
+    return pied_figure.pied(e, H + 2, W, blocs_pied(L["src2"], souder(L["note2"])), GRID)
 
 
 def fig_regle_m(r: dict) -> str:
     L, P = T[LANG], pied_figure.POLICE_M
     cles, vmin, vmax = _echelle(r)
     F = _fmt_fig2(r)
-    e, y = pied_figure.tete_mobile("mgm", L["t2"], L["d2"].format(**F), INK, FONT)
+    # 26/11/2026 (contrôleur géométrie) : au téléphone, les panneaux sont l'un sous l'autre ; la description le dit.
+    d2m = L["d2"].format(**F).replace("à gauche", "en haut").replace("à droite", "en bas") \
+        .replace(": left,", ": top,").replace("; right,", "; bottom,")
+    e, y = pied_figure.tete_mobile("mgm", souder(L["t2"]), d2m, INK, FONT)
     for s, col, nom, val in ((r["dares_a"], BLEU, L["p1"], F["va"]), (r["dares_a_hors"], GRIS, L["p2m"], F["vh"])):
-        y0 = y + 60
+        n_l = len(titre_panneau(nom, True))
+        y0 = y + 60 + (18 * (n_l - 1) + 6 if n_l > 1 else 0)  # 6 d'air au-dessus de « 2022 » (contrôleur du rendu)
         _panneau(e, s, cles, vmin, vmax, 52, 236, y0, y0 + 150, col, nom, P + 2, True, 4, mobile=True)
         e.append(txt(298, y0 + 150 + 34, "%s : %s" % (F["fin"], val) if LANG == "fr" else "%s: %s" % (F["fin"], val), P, INK, "end", "600"))
         y = y0 + 150 + 40
-    for l in pied_figure.coupe(L["ecart"], 38):
+    # 26/11/2026 : au téléphone, la bande et le pointillé ne portent que leur année ; ce qu'ils marquent se dit d'abord,
+    # juste sous les panneaux (contrôleurs : en fin de pied, la légende tombait vingt lignes plus bas).
+    for l in pied_figure.coupe(L["leg_m"], 38) + pied_figure.coupe(L["ecart"], 38):
         y += 18
         e.append(txt(0, y, l, P, INK2))
-    return pied_figure.pied_mobile(e, y + 12, blocs_pied(L["src2"], L["note2"], True), GRID)
+    return pied_figure.pied_mobile(e, y + 12, blocs_pied(L["src2"], souder(L["note2"]), True), GRID)
 
 
 REPERES = [("2019", "2021", 1), ("2021", "2021", 2), ("2022", "2022", 3), ("2024", "2025", 4)]
@@ -900,7 +962,7 @@ def csv_texte(r: dict, Lg: dict) -> str:
         w.writerow(["inscrits_categorie_A", k, "", "A", v, "personnes, moyenne trimestrielle des inscrits en fin de mois",
                     "France hors Mayotte, CVS-CJO", "Dares-France Travail"])
     for k, v in r["dares_a_hors"].items():
-        w.writerow(["inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours", k, "", "A hors RSA et jeunes en parcours", v,
+        w.writerow(["inscrits_categorie_A_hors_RSA_et_jeunes_en_parcours", k, "", "A hors RSA et hors jeunes en parcours", v,
                     "personnes, moyenne trimestrielle des inscrits en fin de mois", "France hors Mayotte, CVS-CJO", "Dares-France Travail"])
     for cle, nom, cat in (("bit", "serie_longue_chomeurs_bit", ""), ("a", "serie_longue_inscrits_categorie_A", "A")):
         for k, v in Lg[cle].items():
@@ -1045,8 +1107,8 @@ def _main() -> int:
                      {"date": "2021", "objet": "enquête Emploi rénovée, pondérations rétropolées", "touche": "chômage BIT (Insee)"},
                      {"date": "2022-01/2022-11", "objet": "nouveau formulaire d'actualisation", "touche": "catégorie A, -%d (Dares)" % N["rupture_2022"]},
                      {"date": "2024-10/2024-11", "objet": "évolution du formulaire d'actualisation", "touche": "catégorie A, +%d environ au 4e trimestre 2024 (Dares-France Travail, Dreets Normandie)" % N["formulaire_2024"]},
-                     {"date": "2025-01", "objet": "loi pour le plein emploi : inscription d'office", "touche": "catégorie A et série hors RSA (Dares)"},
-                     {"date": "2025-01/2025-03", "objet": "actualisation automatique des nouveaux inscrits non indemnisables, restreinte en avril", "touche": "catégorie A et série hors RSA (Dares)"},
+                     {"date": "2025-01", "objet": "loi pour le plein emploi : inscription d'office", "touche": "catégorie A et série hors RSA et hors jeunes en parcours (Dares)"},
+                     {"date": "2025-01/2025-03", "objet": "actualisation automatique des nouveaux inscrits non indemnisables, restreinte en avril", "touche": "catégorie A et série hors RSA et hors jeunes en parcours (Dares)"},
                      {"date": "2025-03/2025-04", "objet": "incident : %d personnes comptées à tort en A, reclassées en G" % N["incident_2025"], "touche": "catégorie A (Dares)"},
                      {"date": "2025-06", "objet": "décret relatif aux sanctions", "touche": "radiations (Dares, Insee)"}]},
         "gardes": g,

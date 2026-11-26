@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 936" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mgm-t mgm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-<title id="mgm-t">Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et jeunes en parcours</title><desc id="mgm-d">Deux panneaux de 2018 à 2026, sur la même échelle : à gauche la catégorie A publiée, à droite la série hors bénéficiaires du RSA et hors jeunes en parcours. Une bande marque 2022 (nouveau formulaire d'actualisation), une ligne le 1er janvier 2025 (loi pour le plein emploi). Au 3e trimestre 2026, 3,4 M pour la catégorie A publiée et 2,4 M hors RSA.</desc>
-<rect width="300" height="936" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 1186" role="img" font-variant-numeric="tabular-nums" aria-labelledby="mgm-t mgm-d" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+<title id="mgm-t">Inscrits en catégorie A : série publiée et série hors bénéficiaires du RSA et hors jeunes en parcours</title><desc id="mgm-d">Deux panneaux de 2018 à 2026, sur la même échelle : en haut la catégorie A publiée, en bas la série hors bénéficiaires du RSA et hors jeunes en parcours. Une bande marque 2022 (nouveau formulaire d'actualisation), une ligne le 1er janvier 2025 (loi pour le plein emploi). Au 3e trimestre 2026, 3,4 M pour la catégorie A publiée et 2,4 M hors bénéficiaires du RSA et hors jeunes en parcours.</desc>
+<rect width="300" height="1186" fill="#ffffff"/>
 <text x="0" y="20" font-size="17" font-weight="600" fill="#0A0A0E">Inscrits en catégorie A :</text>
-<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">série publiée et série hors</text>
-<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">bénéficiaires du RSA et jeunes</text>
-<text x="0" y="86" font-size="17" font-weight="600" fill="#0A0A0E">en parcours</text>
+<text x="0" y="42" font-size="17" font-weight="600" fill="#0A0A0E">série publiée et série</text>
+<text x="0" y="64" font-size="17" font-weight="600" fill="#0A0A0E">hors bénéficiaires du RSA</text>
+<text x="0" y="86" font-size="17" font-weight="600" fill="#0A0A0E">et hors jeunes en parcours</text>
 <text x="0.0" y="142.0" font-size="15.5" fill="#184f95" text-anchor="start" font-weight="600">Catégorie A publiée</text>
 <rect x="163.1" y="160.0" width="20.8" height="158.0" fill="#eeede8" opacity="0.6"/>
 <line x1="52.0" y1="318.0" x2="288.0" y2="318.0" stroke="#e1e0d9"/>
@@ -26,43 +26,57 @@
 <text x="173.5" y="158.0" font-size="13.5" fill="#52514e" text-anchor="middle">2022</text>
 <text x="245.9" y="158.0" font-size="13.5" fill="#52514e" text-anchor="start">2025</text>
 <text x="298.0" y="352.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">3e trimestre 2026 : 3,4 M</text>
-<text x="0.0" y="392.0" font-size="15.5" fill="#52514e" text-anchor="start" font-weight="600">Hors RSA et jeunes en parcours</text>
-<rect x="163.1" y="410.0" width="20.8" height="158.0" fill="#eeede8" opacity="0.6"/>
-<line x1="52.0" y1="568.0" x2="288.0" y2="568.0" stroke="#e1e0d9"/>
-<text x="46.0" y="572.0" font-size="14.5" fill="#6f6c66" text-anchor="end">2,2 M</text>
-<line x1="52.0" y1="540.7" x2="288.0" y2="540.7" stroke="#e1e0d9"/>
-<text x="46.0" y="544.7" font-size="14.5" fill="#6f6c66" text-anchor="end">2,6 M</text>
-<line x1="52.0" y1="513.5" x2="288.0" y2="513.5" stroke="#e1e0d9"/>
-<text x="46.0" y="517.5" font-size="14.5" fill="#6f6c66" text-anchor="end">3,0 M</text>
-<line x1="52.0" y1="486.2" x2="288.0" y2="486.2" stroke="#e1e0d9"/>
-<text x="46.0" y="490.2" font-size="14.5" fill="#6f6c66" text-anchor="end">3,4 M</text>
-<line x1="52.0" y1="458.9" x2="288.0" y2="458.9" stroke="#e1e0d9"/>
-<text x="46.0" y="462.9" font-size="14.5" fill="#6f6c66" text-anchor="end">3,8 M</text>
-<line x1="52.0" y1="431.6" x2="288.0" y2="431.6" stroke="#e1e0d9"/>
-<text x="46.0" y="435.6" font-size="14.5" fill="#6f6c66" text-anchor="end">4,2 M</text>
-<text x="107.5" y="583.0" font-size="14.5" fill="#6f6c66" text-anchor="middle">2020</text>
-<text x="218.6" y="583.0" font-size="14.5" fill="#6f6c66" text-anchor="middle">2024</text>
-<line x1="242.9" y1="410.0" x2="242.9" y2="568.0" stroke="#52514e" stroke-dasharray="3 3"/>
-<polyline points="52.0,521.1 58.9,525.7 65.9,525.4 72.8,524.8 79.8,527.2 86.7,532.0 93.6,531.9 100.6,532.3 107.5,531.5 114.5,486.9 121.4,517.8 128.4,522.9 135.3,524.5 142.2,528.4 149.2,539.4 156.1,547.7 163.1,555.0 170.0,558.3 176.9,557.8 183.9,562.4 190.8,563.8 197.8,564.1 204.7,562.3 211.6,562.2 218.6,562.8 225.5,562.4 232.5,561.0 239.4,555.8 246.4,549.0 253.3,554.1 260.2,552.9 267.2,548.7 274.1,551.8 281.1,552.0 288.0,551.5" fill="none" stroke="#8a8f98" stroke-width="2.4" stroke-dasharray="5 3"/>
-<text x="173.5" y="408.0" font-size="13.5" fill="#52514e" text-anchor="middle">2022</text>
-<text x="245.9" y="408.0" font-size="13.5" fill="#52514e" text-anchor="start">2025</text>
-<text x="298.0" y="602.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">3e trimestre 2026 : 2,4 M</text>
-<text x="0.0" y="626.0" font-size="13.5" fill="#52514e" text-anchor="start">Les deux séries sautent au 1er</text>
-<text x="0.0" y="644.0" font-size="13.5" fill="#52514e" text-anchor="start">trimestre 2025 et reculent au 2e</text>
-<text x="0.0" y="662.0" font-size="13.5" fill="#52514e" text-anchor="start">(actualisation automatique,</text>
-<text x="0.0" y="680.0" font-size="13.5" fill="#52514e" text-anchor="start">janvier-mars 2025) ; leur écart ne</text>
-<text x="0.0" y="698.0" font-size="13.5" fill="#52514e" text-anchor="start">mesure pas l&#x27;effet de la réforme.</text>
-<line x1="0" y1="710.0" x2="300" y2="710.0" stroke="#e1e0d9"/>
-<text class="pied-source" x="0" y="731.0" font-size="13.5" fill="#52514e">Dares et France Travail, moyenne</text>
-<text class="pied-source" x="0" y="748.0" font-size="13.5" fill="#52514e">trimestrielle des inscrits en fin de</text>
-<text class="pied-source" x="0" y="765.0" font-size="13.5" fill="#52514e">mois, France hors Mayotte, données</text>
-<text class="pied-source" x="0" y="782.0" font-size="13.5" fill="#52514e">CVS-CJO (série « hors RSA » depuis</text>
-<text class="pied-source" x="0" y="799.0" font-size="13.5" fill="#52514e">2018)</text>
-<text class="pied-note" x="0" y="820.0" font-size="13.5" fill="#52514e">Champ et période différents de la</text>
-<text class="pied-note" x="0" y="837.0" font-size="13.5" fill="#52514e">figure du croisement 2024. Séries non</text>
-<text class="pied-note" x="0" y="854.0" font-size="13.5" fill="#52514e">labellisées depuis le 01/01/2025</text>
-<text class="pied-note" x="0" y="871.0" font-size="13.5" fill="#52514e">(label de 2021 suspendu par l'ASP, qui</text>
-<text class="pied-note" x="0" y="888.0" font-size="13.5" fill="#52514e">courait jusqu'au 20/05/2026).</text>
-<text class="pied-licence" x="0" y="909.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
-<text class="pied-licence" x="0" y="926.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
+<text x="0.0" y="392.0" font-size="15.5" fill="#52514e" text-anchor="start" font-weight="600">Hors bénéficiaires du RSA</text>
+<text x="0.0" y="410.0" font-size="15.5" fill="#52514e" text-anchor="start" font-weight="600">et hors jeunes en parcours</text>
+<rect x="163.1" y="434.0" width="20.8" height="158.0" fill="#eeede8" opacity="0.6"/>
+<line x1="52.0" y1="592.0" x2="288.0" y2="592.0" stroke="#e1e0d9"/>
+<text x="46.0" y="596.0" font-size="14.5" fill="#6f6c66" text-anchor="end">2,2 M</text>
+<line x1="52.0" y1="564.7" x2="288.0" y2="564.7" stroke="#e1e0d9"/>
+<text x="46.0" y="568.7" font-size="14.5" fill="#6f6c66" text-anchor="end">2,6 M</text>
+<line x1="52.0" y1="537.5" x2="288.0" y2="537.5" stroke="#e1e0d9"/>
+<text x="46.0" y="541.5" font-size="14.5" fill="#6f6c66" text-anchor="end">3,0 M</text>
+<line x1="52.0" y1="510.2" x2="288.0" y2="510.2" stroke="#e1e0d9"/>
+<text x="46.0" y="514.2" font-size="14.5" fill="#6f6c66" text-anchor="end">3,4 M</text>
+<line x1="52.0" y1="482.9" x2="288.0" y2="482.9" stroke="#e1e0d9"/>
+<text x="46.0" y="486.9" font-size="14.5" fill="#6f6c66" text-anchor="end">3,8 M</text>
+<line x1="52.0" y1="455.6" x2="288.0" y2="455.6" stroke="#e1e0d9"/>
+<text x="46.0" y="459.6" font-size="14.5" fill="#6f6c66" text-anchor="end">4,2 M</text>
+<text x="107.5" y="607.0" font-size="14.5" fill="#6f6c66" text-anchor="middle">2020</text>
+<text x="218.6" y="607.0" font-size="14.5" fill="#6f6c66" text-anchor="middle">2024</text>
+<line x1="242.9" y1="434.0" x2="242.9" y2="592.0" stroke="#52514e" stroke-dasharray="3 3"/>
+<polyline points="52.0,545.1 58.9,549.7 65.9,549.4 72.8,548.8 79.8,551.2 86.7,556.0 93.6,555.9 100.6,556.3 107.5,555.5 114.5,510.9 121.4,541.8 128.4,546.9 135.3,548.5 142.2,552.4 149.2,563.4 156.1,571.7 163.1,579.0 170.0,582.3 176.9,581.8 183.9,586.4 190.8,587.8 197.8,588.1 204.7,586.3 211.6,586.2 218.6,586.8 225.5,586.4 232.5,585.0 239.4,579.8 246.4,573.0 253.3,578.1 260.2,576.9 267.2,572.7 274.1,575.8 281.1,576.0 288.0,575.5" fill="none" stroke="#8a8f98" stroke-width="2.4" stroke-dasharray="5 3"/>
+<text x="173.5" y="432.0" font-size="13.5" fill="#52514e" text-anchor="middle">2022</text>
+<text x="245.9" y="432.0" font-size="13.5" fill="#52514e" text-anchor="start">2025</text>
+<text x="298.0" y="626.0" font-size="13.5" fill="#0A0A0E" text-anchor="end" font-weight="600">3e trimestre 2026 : 2,4 M</text>
+<text x="0.0" y="650.0" font-size="13.5" fill="#52514e" text-anchor="start">Bande : nouveau formulaire</text>
+<text x="0.0" y="668.0" font-size="13.5" fill="#52514e" text-anchor="start">d&#x27;actualisation, 2022 ; pointillé :</text>
+<text x="0.0" y="686.0" font-size="13.5" fill="#52514e" text-anchor="start">loi pour le plein emploi,</text>
+<text x="0.0" y="704.0" font-size="13.5" fill="#52514e" text-anchor="start">1er janvier 2025.</text>
+<text x="0.0" y="722.0" font-size="13.5" fill="#52514e" text-anchor="start">Les deux séries sautent au 1er</text>
+<text x="0.0" y="740.0" font-size="13.5" fill="#52514e" text-anchor="start">trimestre 2025 et reculent au 2e</text>
+<text x="0.0" y="758.0" font-size="13.5" fill="#52514e" text-anchor="start">(affectées par l&#x27;actualisation</text>
+<text x="0.0" y="776.0" font-size="13.5" fill="#52514e" text-anchor="start">automatique de janvier à mars 2025) ;</text>
+<text x="0.0" y="794.0" font-size="13.5" fill="#52514e" text-anchor="start">leur écart ne mesure pas l&#x27;effet de la</text>
+<text x="0.0" y="812.0" font-size="13.5" fill="#52514e" text-anchor="start">réforme.</text>
+<line x1="0" y1="824.0" x2="300" y2="824.0" stroke="#e1e0d9"/>
+<text class="pied-source" x="0" y="845.0" font-size="13.5" fill="#52514e">Dares et France Travail, moyenne</text>
+<text class="pied-source" x="0" y="862.0" font-size="13.5" fill="#52514e">trimestrielle des inscrits en fin de</text>
+<text class="pied-source" x="0" y="879.0" font-size="13.5" fill="#52514e">mois, France hors Mayotte, données</text>
+<text class="pied-source" x="0" y="896.0" font-size="13.5" fill="#52514e">CVS-CJO (série hors bénéficiaires du</text>
+<text class="pied-source" x="0" y="913.0" font-size="13.5" fill="#52514e">RSA et hors jeunes en parcours depuis</text>
+<text class="pied-source" x="0" y="930.0" font-size="13.5" fill="#52514e">2018)</text>
+<text class="pied-note" x="0" y="951.0" font-size="13.5" fill="#52514e">Jeunes en parcours : en contrat</text>
+<text class="pied-note" x="0" y="968.0" font-size="13.5" fill="#52514e">d'engagement jeune (CEJ), en parcours</text>
+<text class="pied-note" x="0" y="985.0" font-size="13.5" fill="#52514e">contractualisé d'accompagnement vers</text>
+<text class="pied-note" x="0" y="1002.0" font-size="13.5" fill="#52514e">l'emploi et l'autonomie (Pacea) ou en</text>
+<text class="pied-note" x="0" y="1019.0" font-size="13.5" fill="#52514e">accompagnement individualisé des</text>
+<text class="pied-note" x="0" y="1036.0" font-size="13.5" fill="#52514e">jeunes de France Travail (AIJ), selon</text>
+<text class="pied-note" x="0" y="1053.0" font-size="13.5" fill="#52514e">la Dares. Champ et période différents</text>
+<text class="pied-note" x="0" y="1070.0" font-size="13.5" fill="#52514e">de la figure du croisement 2024.</text>
+<text class="pied-note" x="0" y="1087.0" font-size="13.5" fill="#52514e">Séries non labellisées depuis le</text>
+<text class="pied-note" x="0" y="1104.0" font-size="13.5" fill="#52514e">01/01/2025 (label de 2021, valable</text>
+<text class="pied-note" x="0" y="1121.0" font-size="13.5" fill="#52514e">jusqu'au 20/05/2026, suspendu par</text>
+<text class="pied-note" x="0" y="1138.0" font-size="13.5" fill="#52514e">l'Autorité de la statistique publique).</text>
+<text class="pied-licence" x="0" y="1159.0" font-size="13.5" fill="#6f6c66">Compilation Stéphane Lalut, CC BY 4.0</text>
+<text class="pied-licence" x="0" y="1176.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>
