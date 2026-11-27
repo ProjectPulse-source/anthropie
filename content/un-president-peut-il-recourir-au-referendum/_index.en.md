@@ -7,7 +7,7 @@ date: 2026-10-06
 lastmod: 2026-11-19
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
   - {date: 2026-11-19, texte: "Clarification: checking the one-fifth threshold of signatories falls to the Constitutional Council; the page no longer suggests a role for the number of signatories; decision No. 62-20 DC is added to the sources; Article 88-5 appears in the “With whom?” grid."}
-  - {date: 2026-11-18, texte: "Corrections after a review of the sources and a legal counter-analysis: the quotation of Article 89 includes the time condition of Article 42; the motion provided for by Article 88-5 is described as the text describes it; the page quotes the Constitutional Council on the shared-initiative bill (decision no. 2013-681 DC, recital 30); the acronym RIP and the two meanings of “proposition” are defined."}
+  - {date: 2026-11-18, texte: "Corrections after a review of the sources and adversarial checking of the legal reading: the quotation of Article 89 includes the time condition of Article 42; the motion provided for by Article 88-5 is described as the text describes it; the page quotes the Constitutional Council on the shared-initiative bill (decision no. 2013-681 DC, recital 30); the acronym RIP and the two meanings of “proposition” are defined."}
 # English version of the "Referendum" further topic of the "Presidential promises" dossier (FR:
 # content/un-president-peut-il-recourir-au-referendum/_index.md). Same tokens, same keys: values come from the
 # affichage_en block of data/promesses_referendum.json (scripts/update_promesses_referendum.py). The Constitution is quoted

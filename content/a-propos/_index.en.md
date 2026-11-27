@@ -88,6 +88,8 @@ This question runs through his work. He has made it a framework of analysis, the
 
 {{< liste-awp n="3" >}}
 
+<p id="method" class="apropos-nature"><strong>Method</strong> — The work published on this site rests on original sources, reproducible calculations and documented verification procedures. Artificial intelligence tools are used for some documentary processing, especially when the volume of texts to examine exceeds the means of individual research; where their use bears on how results are produced or on what they can claim, each page's method says so. The adversarial checking mentioned on the pages consists of counter-analyses carried out by language models, arbitrated in writing point by point against the original sources: it is not peer review. The author takes editorial responsibility for the analyses published.</p>
+
 <p class="apropos-lien"><a href="/en/serie-awp/">The working papers&nbsp;→</a><a href="/en/independent-researcher/">Independent researcher&nbsp;→</a></p>
 
 <div class="apropos-tete"><h2 id="contact" class="apropos-tete__titre section-title">Contact</h2></div>

@@ -8,7 +8,7 @@ date: 2026-10-02
 lastmod: 2026-11-17
 journal:  # révisions qui changent la lecture de la page
   - {date: 2026-11-05, texte: "Précision : les émissions importées sont presque au même niveau qu'au départ, après un pic au milieu de la période."}
-  - {date: 2026-11-17, texte: "Relecture des sources et contre-analyse externe : la France publie plusieurs totaux, dont l'inventaire territorial ; émissions importées en légère hausse depuis 1990 ; unités résidentes et demande finale définies sur la feuille ; question 4 ouverte aux deux totaux ; corrigé de la question 5 complété par les facteurs que cite l'Insee."}
+  - {date: 2026-11-17, texte: "Relecture des sources et vérification contradictoire : la France publie plusieurs totaux, dont l'inventaire territorial ; émissions importées en légère hausse depuis 1990 ; unités résidentes et demande finale définies sur la feuille ; question 4 ouverte aux deux totaux ; corrigé de la question 5 complété par les facteurs que cite l'Insee."}
 date_suit: [empreinte_carbone]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Troisième thème de la couche enseignants (auteur, 02/10/2026 ; arbitrage
 # .claude/external-audits/ARBITRATIONS/ENTRANTE_2026-10-02_Enseignants_Theme3_Exemplaires_arbitrage.md). Navigation

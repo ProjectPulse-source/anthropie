@@ -100,6 +100,8 @@ Cette question traverse ses travaux. Il en a fait un cadre d'analyse, le cadre a
 
 {{< liste-awp n="3" >}}
 
+<p id="methode" class="apropos-nature"><strong>Méthode</strong> — Les travaux publiés sur ce site s'appuient sur les sources originales, des calculs reproductibles et des procédures de vérification documentées. Des outils d'intelligence artificielle servent à certains traitements documentaires, notamment lorsque le volume des textes à examiner dépasse les moyens d'une recherche individuelle&nbsp;; la méthode de chaque page précise leur intervention lorsqu'elle touche à la production ou à la portée des résultats. Les vérifications contradictoires mentionnées sur les pages sont des contre-analyses réalisées par des modèles de langage, arbitrées par écrit point par point avec retour aux sources&nbsp;: elles ne sont pas une évaluation par des pairs. L'auteur assume la responsabilité éditoriale des analyses publiées.</p>
+
 <p class="apropos-lien"><a href="/serie-awp/">Les working papers&nbsp;→</a><a href="/chercheur-independant/">Chercheur indépendant&nbsp;→</a></p>
 
 <div class="apropos-tete"><h2 id="contact" class="apropos-tete__titre section-title">Contact</h2></div>

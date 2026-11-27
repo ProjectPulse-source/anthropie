@@ -6,7 +6,7 @@ date: 2026-10-06
 lastmod: 2026-11-19
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
   - {date: 2026-11-19, texte: "Précision : le contrôle du cinquième des signataires revient au Conseil constitutionnel ; la page ne prête plus de rôle au nombre des signataires ; la décision n° 62-20 DC est ajoutée aux sources ; l'article 88-5 figure dans la grille « Avec qui ? »."}
-  - {date: 2026-11-18, texte: "Corrections après relecture des sources et contre-analyse juridique : la citation de l'article 89 comprend la condition de délai de l'article 42 ; la motion prévue par l'article 88-5 est décrite comme le texte la décrit ; la page cite le Conseil constitutionnel sur la proposition de loi d'initiative partagée (décision n° 2013-681 DC, considérant 30) ; le sigle RIP et les deux sens de « proposition » sont définis."}
+  - {date: 2026-11-18, texte: "Corrections après relecture des sources et vérification contradictoire de la lecture juridique : la citation de l'article 89 comprend la condition de délai de l'article 42 ; la motion prévue par l'article 88-5 est décrite comme le texte la décrit ; la page cite le Conseil constitutionnel sur la proposition de loi d'initiative partagée (décision n° 2013-681 DC, considérant 30) ; le sigle RIP et les deux sens de « proposition » sont définis."}
 donnees: [promesses_referendum]
 og_title: "Un président peut-il recourir au référendum ? — le registre des référendums de la Ve République et l'initiative partagée — S. Lalut"
 og_image: "images/og-referendum-promesse.jpg"

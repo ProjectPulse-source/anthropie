@@ -7,7 +7,7 @@ og_image_alt: "Quatre barres empilées : devenir des bacheliers un an après une
 date: 2026-10-02
 lastmod: 2026-11-18
 journal:  # révisions qui changent la lecture de la page (partials/page-date-visible.html affiche la plus récente)
-  - {date: 2026-11-18, texte: "Relecture des sources et contre-analyse externe : la page cite la note du SIES de juillet 2026, qui trouve faible, à caractéristiques égales, la corrélation entre origine sociale et réussite en licence ; la figure « Après le bac » est contrôlée sur le tableau 13.01 du SIES ; les questions 5 des deux activités demandent ce que la note de la figure ne nomme pas ; au corrigé 5 de la première, les parts par origine sont celles des bacheliers dont l'origine est renseignée."}
+  - {date: 2026-11-18, texte: "Relecture des sources et vérification contradictoire : la page cite la note du SIES de juillet 2026, qui trouve faible, à caractéristiques égales, la corrélation entre origine sociale et réussite en licence ; la figure « Après le bac » est contrôlée sur le tableau 13.01 du SIES ; les questions 5 des deux activités demandent ce que la note de la figure ne nomme pas ; au corrigé 5 de la première, les parts par origine sont celles des bacheliers dont l'origine est renseignée."}
 date_suit: [parcours_licence, acces_superieur]  # jeux affichés par la page : leur relevé entre dans sa date (sitemap) ; contrôle scripts/check-dates-jeux.py
 # Second thème de la couche enseignants : UNE PAGE PAR THÈME (auteur, 02/10/2026 ; arbitrage
 # .claude/external-audits/ARBITRATIONS/ENTRANTE_2026-10-02_Enseignants_Structure_arbitrage.md). Navigation « École et

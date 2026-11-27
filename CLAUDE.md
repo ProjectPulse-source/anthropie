@@ -448,6 +448,40 @@ gate éditorial, relecture phrase à phrase FR et EN du texte servi, contre-expe
 posé, instantané de relecture → accord de l'auteur → push → attestation de la version
 servie. Lecteurs réels (trois à cinq, pages pilotes) : point ouvert à l'auteur ; le panel simulé reste une hypothèse.
 
+## Crédibilité par le résultat, non par l'outil ni par le volume (auteur, 2026-11-27) — RÈGLE GÉNÉRALE DU SITE
+
+Pièce : `D:\PRO\06_PROMOTION\PLAN_SUJETS_LIVRES_2026-11\FORMULES_DETTE\_PIECES_RECUES\2026-11-27_Debat-01.txt` (SHA-256
+`23d38307…282e`), arbitrage `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-11-27_Formules_dette_debat_arbitrage.md`.
+L'auteur l'érige en règle générale du site : « il faut tenir compte de la psychologie humaine ». Un lecteur juge vite, et
+deux réflexes jouent contre une page : la mention d'une IA fait rejeter un travail sans examen ; un volume (« 368 documents »)
+fait douter de la profondeur. À l'inverse, une présentation ambiguë de la méthode, relevée par un journaliste ou un
+universitaire, coûte la crédibilité du site entier. D'où cinq règles, pour toute page, neuve ou reprise :
+
+1. **Convaincre par la question et le résultat, puis renforcer par les preuves.** Premier écran : la question, la thèse
+   démontrée, les accès. Les volumes du corpus viennent ensuite et toujours avec leur périmètre ; jamais l'argument principal.
+2. **Corps des pages et journal : la vérification, pas l'outil.** Écrire « vérification contradictoire » (EN « adversarial
+   checking »), « comparaison à l'aveugle des versions » ; **jamais** « contre-expertise externe », « contre-analyse externe »,
+   « juge », « external review » non qualifiés, qui se lisent comme une évaluation par des experts humains. Jamais un
+   identifiant de navette (`PRO-…`) dans un texte servi.
+3. **Section de méthode : la nature exacte.** Les contre-analyses sont **réalisées par des modèles de langage** (non
+   « assistées ») et arbitrées par écrit, point par point, avec retour aux sources ; le dire là, une fois, et dire surtout ce
+   qu'elles ont fait corriger. Le nombre de cycles n'est pas un argument.
+4. **Mentionner l'IA quand elle peut influer sur l'interprétation, la reproductibilité ou la validité d'un résultat** :
+   sélection et classement d'énoncés, codage de discours, lecture exhaustive de centaines de documents — oui, dans la
+   méthode, avec le statut **exploratoire** du résultat tant qu'aucune validation humaine indépendante n'existe. Correction,
+   rédaction, programmation, graphiques, recherche documentaire, calcul reproductible : non. Jamais l'IA comme argument de
+   valorisation, jamais comme substitut à une validation indépendante.
+5. **Séparer les deux statuts** : démonstration économique ou statistique reproductible (vérifiable sur les sources,
+   diffusable sans réserve) ; résultat interprétatif issu d'un classement automatique (exploratoire, qualifié). L'absence de
+   relecteur humain ne bloque ni la publication ni la diffusion ; elle fixe le statut.
+
+Figures : comparaisons homogènes ; quand années ou conventions diffèrent, rien ne doit se lire comme une évolution. Une
+vérification faite avec des comptes postérieurs se dit **rétrospective**, jamais « reconstitution » de l'information du jour.
+« Vérification contradictoire » ne doit jamais se lire comme une expertise indépendante : sa nature (modèles de langage, arbitrage écrit, pas une évaluation par des pairs) est dite dans « À propos » (`#methode`), et dans la méthode de la page dès qu'elle y est nommée (arbitrage final `Debat-02`, 27/11/2026, doctrine déclarée stable). Formule de doctrine, page « À propos » : « Les travaux publiés sur ce site s'appuient sur les sources originales, des calculs
+reproductibles et des procédures de vérification documentées… » (texte complet dans la page). Contrôle :
+`grep -rniE "contre-(expertise|analyse)s? externes?|external (review|counter|critical)|juge interne|blind review|PRO-2026" content`
+sur le texte servi (hors commentaires `#`) doit être vide.
+
 ## Couche pédagogique — `/enseignants/` (actée par l'auteur, 2026-09-30)
 
 Une page d'**usage** pour les enseignants, qui transforme les ressources en activités sans les recopier ; les pages de
