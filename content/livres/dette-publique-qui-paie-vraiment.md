@@ -3,7 +3,7 @@ title: "Dette Publique : Qui paie vraiment ?"
 subtitle: "La question n'est pas «&nbsp;combien&nbsp;?&nbsp;» mais «&nbsp;qui paie&nbsp;?&nbsp;» — et par quels canaux le coût se déplace."
 promo_slug: "dette-publique"  # clé D1/books.toml pour /ressources-offertes (guichet Kindle)
 date: 2025-10-17
-lastmod: 2026-11-01  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
+lastmod: 2026-11-27  # date de la derniere modification de contenu (fraicheur legere GEO-04 ; jamais enableGitInfo)
 description: "La dette publique n'est pas un solde à contenir mais un mécanisme de transfert. Ce livre pose la question non plus combien, mais qui paie — et par quels canaux le coût se déplace vers les générations futures et les groupes sociaux les moins mobiles."
 isbn: "978-2-9586347-3-5"
 amazon_rating: 4.3       # note moyenne Amazon.fr (MAJ ~mensuelle, relecture Chrome)
@@ -77,12 +77,15 @@ related_awp:
     awp: "awp-09"
 lang_repli: "/en/books/"  # pas de version anglaise (exclusion déclarée) : cible de l'onglet EN, partials/lang-cible.html
 # Extrait « voix » (07/11/2026, à la demande de l'auteur) : scène verbatim de la dernière édition, vérifiée
-# mot pour mot contre la source : EPUB de l'édition du 17/10/2026 (en vente), 03_LIVRABLES/Dette_Publique_KINDLE_edition-20261017.epub ; coupe sur les chiffres.
+# mot pour mot contre la source. Revérifié le 27/11/2026 contre l'EPUB de l'édition du 27/11 (en vente),
+# 03_LIVRES/dette-publique/03_LIVRABLES/_ARCHIVE_EN_LIGNE_2026-11-27/Dette_Publique_KINDLE_edition-20261127.epub :
+# « Le crime est parfait : personne n'appuie sur la gâchette » y est remplacé par Merton (déplacement des buts) ;
+# les trois autres paragraphes et la chute sont inchangés. Coupe sur les chiffres.
 extrait_voix:
   source: "Chapitre 2 · « Le mécanisme anthropique — Le grand transfert » · Marie est une figure composite"
   paragraphes:
     - "Le directeur du Budget ne hait pas Marie. […] Un tableur Excel. Une cellule rouge qui doit passer au vert."
-    - "Le crime est parfait : personne n'appuie sur la gâchette, mais Marie s'épuise quand même."
+    - "Merton l'appelait le déplacement des buts : le moyen devient la fin. Et Marie s'épuise quand même."
     - "La nuit du 14 mars 2024, elle court d'une chambre à l'autre pendant douze heures sans interruption. Un homme de 73 ans sonne pendant vingt minutes. Il tente d'aller aux toilettes seul, tombe. Fracture du col du fémur."
     - "Vingt minutes d'attente se transforment en six mois de rééducation, parfois en perte d'autonomie définitive. Mais sur le tableur du directeur, le ratio s'est amélioré. Les agences sont satisfaites. […]"
   chute: "L'ordre des chiffres, le désordre des vies."

@@ -85,6 +85,10 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-27 — Livre dette : extrait « voix » aligné sur l'édition du 27/11
+
+- **Fiche du livre** (`content/livres/dette-publique-qui-paie-vraiment.md`), extrait affiché aussi sur `/ressources-offertes/dette-publique-qui-paie-vraiment/` : « Le crime est parfait : personne n'appuie sur la gâchette » remplacé par la phrase de l'édition en vente (Merton, déplacement des buts), revérifiée mot pour mot contre l'EPUB du 27/11 ; `lastmod` 2026-11-27. Balayage des autres reprises du livre (encarts `appel-livre` du dossier dette, pages d'offre, `llms.txt`, page des formules) : conformes, rien d'autre à changer. Non touché, déclaré : FAQ d'AWP-09 (115,6 %, série Eurostat datée du 3 octobre, publication versionnée distincte du livre).
+
 ### 2026-11-26 (soir) — Retouches Publications, accueil, Livres, questions fréquentes ; chantier Publications clos
 
 - **Publications** : suite du chapô de la une en exergue (`41d290ef`) ; bloc « Le prix d'une créance » en dégradé marine, suite du chapô de Lemoine, lien encadré vers la recension, étiré à la hauteur de la colonne voisine (`101c4f1e`).
