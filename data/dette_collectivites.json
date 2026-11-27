@@ -32,7 +32,7 @@
    },
    "ofgl": {
     "jeu": "data.ofgl.fr (4 bases consolidees)",
-    "maj_source": "2026-11-26T",
+    "maj_source": "2026-11-27T",
     "sha256": "c924192f0552b859d6837582dc5875f8ddf7ef1bbb41823aebb284e77dcc93a0"
    },
    "notif": {
@@ -1212,7 +1212,7 @@
    "amdt": "2026-11-27",
    "vote": "2026-12-09",
    "pp_fin": "2026-11-28",
-   "etat_au": "2026-11-24",
+   "etat_au": "2026-11-26",
    "seances": []
   },
   "plf_senat_phase": "discussion",
@@ -1285,7 +1285,7 @@
   "plf_vote_dates": [
    "2026-10-19"
   ],
-  "plf_etat_au": "2026-11-24",
+  "plf_etat_au": "2026-11-26",
   "plf_statut_dgf": "texte initial, au Sénat",
   "plf_statut_dgf_en": "initial text, before the Senate",
   "plf_etape_suivante": "examen par le Sénat, sous réserve de sa transmission, du texte initial du Gouvernement à partir du 20 novembre, de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre, puis vote sur l'ensemble le 9 décembre",
@@ -1476,7 +1476,7 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1,7",
   "plf_vote_date": "19 octobre 2026",
-  "plf_etat_au": "24 novembre 2026",
+  "plf_etat_au": "26 novembre 2026",
   "plf_etape_suivante": "au Sénat, fin de l'examen de la première partie prévue le 28 novembre 2026, examen de la mission « Relations avec les collectivités territoriales » et de l'article 84 le 2 décembre 2026, puis vote sur l'ensemble le 9 décembre 2026",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27,9",
@@ -1751,7 +1751,7 @@
   "plf_ressources_md": "5",
   "plf_ressources_pct": "1.7",
   "plf_vote_date": "19 October 2026",
-  "plf_etat_au": "24 November 2026",
+  "plf_etat_au": "26 November 2026",
   "plf_etape_suivante": "in the Senate, end of the examination of the first part scheduled for 28 November 2026, examination of the “Relations with local authorities” mission and article 84 on 2 December 2026, then vote on the whole bill on 9 December 2026",
   "plf_dgf_an_m": "356",
   "plf_dgf_an": "27.9",
