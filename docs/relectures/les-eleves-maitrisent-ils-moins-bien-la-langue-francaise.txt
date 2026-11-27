@@ -1,4 +1,4 @@
-# relu le 2026-11-26 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de f3b348bd + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-27 ; texte servi de /les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/, build de 13583e8e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Les élèves maîtrisent-ils moins bien la langue française ?
 Pas d’un bloc.
 À la même dictée de CM2, les élèves faisaient 10,7 erreurs en 1987 et 19,4 en 2021 ; mais sur ces 8,7 erreurs supplémentaires, environ 0,9 portent sur l’orthographe des mots eux-mêmes.
@@ -67,7 +67,7 @@ Le test d’entrée en seconde, les deux voies réunies, passe de 260 points en 
 Chacune de ces trois évaluations a sa propre échelle, fixée à 250 une année de référence (2017 pour la sixième, 2019 pour la seconde, 2023 pour la quatrième) : ses points se comparent d’une année à l’autre, jamais d’une évaluation à l’autre, ni avec ceux de CEDRE ou de PISA.
 Ces mesures n’évoluent pas toutes de la même façon, sans se contredire : âges, compétences, enjeux et années diffèrent, et aucune ne suit les mêmes élèves d’un âge à l’autre.
 Elles ne disent donc pas à quel âge un recul commencerait.
-En mathématiques, la page voisine confronte PISA à TIMSS, en CM1 et en quatrième, ainsi qu’au test d’entrée en seconde, et dit ce que leurs écarts permettent ou interdisent de conclure : pourquoi les évaluations ne montrent pas toutes la même baisse.
+En mathématiques, la page voisine confronte PISA à TIMSS, en CM1 et en quatrième, ainsi qu’au test d’entrée en seconde, et dit ce que leurs écarts permettent ou interdisent de conclure : toutes les évaluations montrent-elles la même baisse ?
 Le verdict série par série, et ce qui ne peut pas être conclu
 Dictée de CM2 : hausse significative des erreurs de 1987 à 2007 (DEPP), avec une correction centralisée à partir de 2007 dont la DEPP ne peut pas estimer directement l’effet éventuel ; hausse ensuite, sans test publié, deux fois moins forte de 2015 à 2021 que de 2007 à 2015.
 Recul antérieur à la généralisation du smartphone, en 2013 : établi, sous cette réserve.
@@ -282,7 +282,7 @@ Recherche.
 Sullivan et Brown, British Educational Research Journal, 2015 ; Mol et Bus, Psychological Bulletin, 2011 ; Altamura, Vargas et Salmerón, Review of Educational Research, 2023 ; Delgado, Vargas, Ackerman et Salmerón, Educational Research Review, 2018 ; Madigan et al., JAMA Pediatrics, 2020.
 Analyse externe : Ramus, « Baisse des résultats scolaires : des causes bien connues, simples, plausibles… et fausses », chronique, L’Express, 26 septembre 2026.
 Les valeurs tirées des séries sont lues dans un extrait figé, archivé avec ses empreintes, et le script qui écrit la page s’arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases ; les repères de cadrage (dates, durées légales, longueur de la dictée) sont saisis dans le texte.
-Le plan a été soumis à une contre-analyse externe, puis un protocole a été écrit avec ses règles de verdict, le tout avant le calcul (le taux de réponse aux questions de PISA sur le numérique était alors déjà connu).
+Le plan a été soumis à une contre-analyse réalisée par un modèle de langage et arbitrée par écrit, puis un protocole a été écrit avec ses règles de verdict, le tout avant le calcul (le taux de réponse aux questions de PISA sur le numérique était alors déjà connu).
 Les 107 valeurs principales tirées des notes et des tableaux ont été lues deux fois, par deux extracteurs indépendants ; ce contrôle a détecté l’erreur qu’on y avait introduite volontairement.
 Une relecture des sources, en novembre 2026, a ajouté des notes de la DEPP et un tableau de l’OCDE, lus par ancre dans un extrait complémentaire archivé avec ses empreintes.
 Réutiliser cette page

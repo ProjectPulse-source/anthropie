@@ -116,8 +116,10 @@ de Franck Ramus, qui date la baisse de 2000 (R2, P2-2).
 - Livre : retenu — *Livresque des mots*, bloc d'appel « Et si l'on rouvrait les livres par les mots ? » : le livre prend la
   question par la lecture, non par la mesure.
 - Working paper : écarté — aucun AWP ne traite de la langue des élèves.
-- Pages voisines : retenue — `/le-niveau-des-eleves-baisse-t-il/#evaluations`, « pourquoi les évaluations ne montrent pas
-  toutes la même baisse » ; la page Niveau renvoie vers `#ecrans`.
+- Pages voisines : retenue — `/le-niveau-des-eleves-baisse-t-il/#evaluations`, « toutes les évaluations montrent-elles la
+  même baisse ? », la question de la section cible (27/11/2026 : le libellé « pourquoi les évaluations ne montrent pas
+  toutes la même baisse » promettait une explication que la page Niveau ne donne pas, « aucune de ces explications n'est
+  testée ici ») ; la page Niveau renvoie vers `#ecrans`.
 
 ## Fiche D0
 
