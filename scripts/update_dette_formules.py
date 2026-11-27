@@ -197,11 +197,13 @@ def calcul(off, dyn, taux, solde, inv, doc):
     d25 = ratio[2025]
     g25 = (pib[2025] / pib[2024] - 1) * 100
     stab = lambda d, g: d * g / (100 + g)
-    d24 = ratio[2024]
+    # ratio de fin 2024 tel que publié le jour de la séance (Insee Première n° 2054, mai 2025), non le ratio révisé :
+    # la page le dit « connu le jour de la séance » (relecture des sources du 27/11/2026)
+    d24 = solde["dette_fin2024_mai2025"]["pct_pib"]
     g24 = (pib[2024] / pib[2023] - 1) * 100
     c["F16"] = {"dette_pct": d25, "g25": g25, "stab_g25": stab(d25, g25), "stab_g25b": stab(d25, 2.5), "stab_g3": stab(d25, 3.0),
                 "g_seuil": 300 / (d25 - 3), "euros_3pct": 0.03 * pib[2024],  # PIB de 2024, dernier connu le 08/09/2025 (C7, 06/11/2026)
-                "dette_pct24": d24, "g24": g24, "g_seuil24": 300 / (d24 - 3), "stab_g24": stab(d24, g24)}
+                "dette_pct24": d24, "dette_pct24_revise": ratio[2024], "g24": g24, "g_seuil24": 300 / (d24 - 3), "stab_g24": stab(d24, g24)}
 
     # F8 : rendements à dix ans, mensuels (Eurostat) et au jour (Banque de France, Banque de Grèce)
     mois = sorted(set(taux["FR"]) & set(taux["EL"]) & set(taux["DE"]))
@@ -419,6 +421,8 @@ def gardes(c):
     g(abs(f2["somme_var"] / f2["somme_def"] - 1) < 0.06, "F2 « sur trente ans, les cumuls sont proches (moins de 6 %) »")
     f16 = c["F16"]
     g(f16["g25"] < f16["g_seuil"], "F16 « la croissance nominale de 2025 est restée sous le seuil qui stabilise le ratio à 3 % »")
+    g(f16["dette_pct24"] != f16["dette_pct24_revise"] and 112 < f16["dette_pct24"] < 114,
+      "F16 : le ratio de 2024 est celui publié en mai 2025, connu le jour de la séance, et non le ratio révisé")
     g(f16["g24"] > f16["g_seuil24"], "F16 à la date « en 2024, dernière année connue, la croissance dépassait le seuil »")
     g(f16["stab_g25"] < 3 < f16["stab_g3"], "F16 : à 2025, le déficit stabilisant est sous 3 % ; à 3 % de croissance, au-dessus")
     g(80 < f16["euros_3pct"] < 100, "F16 « un besoin de financement d'environ 90 milliards par an »")

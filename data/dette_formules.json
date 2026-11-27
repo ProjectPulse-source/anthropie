@@ -38,7 +38,7 @@
    "texte": "« 3 % de déficit, seuil à partir duquel la dette n'augmente plus »",
    "orateur": "F. Bayrou",
    "question_posee": "En euros, inexact : un déficit de 3 % représente environ 90 Md€ par an",
-   "autre_question": "En % du PIB, exact si la croissance nominale dépasse environ 2,74 % : 3,58 % en 2024, 1,90 % en 2025 (connu après)",
+   "autre_question": "En % du PIB, exact si la croissance nominale dépasse environ 2,72 % : 3,58 % en 2024, 1,90 % en 2025 (connu après)",
    "conclusion": "Condition décisive non dite"
   },
   {
@@ -482,10 +482,11 @@
   "stab_g3": 3.369,
   "g_seuil": 2.662,
   "euros_3pct": 88.057,
-  "dette_pct24": 112.635,
+  "dette_pct24": 113.2,
+  "dette_pct24_revise": 112.635,
   "g24": 3.58,
-  "g_seuil24": 2.736,
-  "stab_g24": 3.893
+  "g_seuil24": 2.722,
+  "stab_g24": 3.913
  },
  "F8": {
   "ecart_france_grece_mensuel": {
@@ -1896,9 +1897,9 @@
   "f16_stab3": "3,37",
   "f16_seuil": "2,66",
   "f16_eur": "90",
-  "f16_dette24": "112,6",
+  "f16_dette24": "113,2",
   "f16_g24": "3,58",
-  "f16_seuil24": "2,74",
+  "f16_seuil24": "2,72",
   "f8_aout_fr": "3,42",
   "f8_aout_el": "3,37",
   "f8_sept_fr": "3,51",
@@ -2192,9 +2193,9 @@
   "f16_stab3": "3.37",
   "f16_seuil": "2.66",
   "f16_eur": "90",
-  "f16_dette24": "112.6",
+  "f16_dette24": "113.2",
   "f16_g24": "3.58",
-  "f16_seuil24": "2.74",
+  "f16_seuil24": "2.72",
   "f8_aout_fr": "3.42",
   "f8_aout_el": "3.37",
   "f8_sept_fr": "3.51",

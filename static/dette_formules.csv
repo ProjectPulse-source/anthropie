@@ -250,10 +250,11 @@ F16_seuil_3pct,stab_g25b,,2.822,% ou Md EUR
 F16_seuil_3pct,stab_g3,,3.369,% ou Md EUR
 F16_seuil_3pct,g_seuil,,2.662,% ou Md EUR
 F16_seuil_3pct,euros_3pct,,88.057,% ou Md EUR
-F16_seuil_3pct,dette_pct24,,112.635,% ou Md EUR
+F16_seuil_3pct,dette_pct24,,113.200,% ou Md EUR
+F16_seuil_3pct,dette_pct24_revise,,112.635,% ou Md EUR
 F16_seuil_3pct,g24,,3.580,% ou Md EUR
-F16_seuil_3pct,g_seuil24,,2.736,% ou Md EUR
-F16_seuil_3pct,stab_g24,,3.893,% ou Md EUR
+F16_seuil_3pct,g_seuil24,,2.722,% ou Md EUR
+F16_seuil_3pct,stab_g24,,3.913,% ou Md EUR
 F8_taux_10_ans_mensuels,FR,2024-01,2.740,%
 F8_taux_10_ans_mensuels,EL,2024-01,3.290,%
 F8_taux_10_ans_mensuels,DE,2024-01,2.180,%

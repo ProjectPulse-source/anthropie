@@ -1,0 +1,431 @@
+Règles de relevé et de classement des énoncés — page « Dette publique : que prouvent les chiffres du débat politique ? »
+https://stephane-lalut.com/formules-du-debat-sur-la-dette/ — licence CC BY 4.0, Stéphane Lalut
+
+Ces règles ont été appliquées par des instances d'un même modèle de langage : deux codeurs, dont l'un sans le nom de l'orateur, et un arbitre des désaccords (pour la règle v1 de la séance, première phase dont la page ne publie pas les comptes, l'arbitre était le codeur principal ; pour la v2 et pour les textes de campagne, un troisième agent). Aucun codeur humain n'a relu l'échantillon : les comptes par registre qui en résultent sont exploratoires. Les vérifications chiffrées de la page n'en dépendent pas.
+Copie publiée le 27 novembre 2026 : texte des règles inchangé, chemins complets des fichiers internes remplacés par une mention. Les deux règles de la séance consignent en fin de texte, dans leur journal, les précisions écrites après leur première version, dont elles citent l'empreinte de la version initiale ; l'empreinte donnée en tête de chaque partie est celle du fichier dans son état actuel, avant le remplacement des chemins.
+
+=====
+I a. Séance de l'Assemblée nationale du 8 septembre 2025 — règle v1 (corpus, unité, inclusion, exclusions)
+Empreinte SHA-256 du fichier source : 272b945066633fedcebb0315750b2659520dcbf31d0061bc05d4c3d65fa888eb
+Chemins internes remplacés : 1
+=====
+
+# Règle d'inventaire et de codage — séance de l'Assemblée du 8 septembre 2025
+
+Écrite le 01/11/2026, **avant** l'extraction des énoncés et avant tout calcul de test, en application de l'arbitrage
+PRO-20261101-192956 (§ 6, étapes 1 et 2). Toute modification après lecture des résultats s'inscrit au § 8, datée, avec
+son motif ; la version initiale reste lisible dans l'historique git.
+
+**Limite de l'aveuglement, dite d'avance.** La session qui écrit cette règle a déjà lu une partie de la séance (quinze,
+puis dix-huit formules relevées, F1-F18) et a formulé les motifs M1-M7. La règle ne peut donc pas être aveugle à ces
+motifs. Trois contre-mesures : les critères de rejet sont fixés ici, avant le codage ; l'inventaire couvre **toute** la
+séance, pas les seules formules connues ; un second codeur, qui ne voit ni l'orateur ni son groupe ni les motifs, code les
+mêmes énoncés (§ 7), et l'accord entre les deux se publie avec le résultat.
+
+## 1. Corpus
+
+Compte rendu intégral officiel, 1re séance du lundi 8 septembre 2025, *JO* A.N. (C.R.) n° 96, p. 7690-7720
+([dossier de recherche de l'auteur], SHA-256 `4ab51e508be4847ee57f7db6bf7fabbc7dbdf6334a2c75341debdaafdb023701`).
+Toute la séance : déclaration du Premier ministre, explications de vote des groupes, réplique du Premier ministre,
+**interruptions comprises**.
+
+## 2. Unité : l'énoncé
+
+Un énoncé est la plus petite portion de texte, d'un seul locuteur, qui affirme, prévoit, explique, conditionne, prescrit
+ou demande **une** chose sur l'un des objets du § 3. Une phrase qui porte deux propositions distinctes donne deux énoncés ;
+une proposition étalée sur deux phrases en donne un. Le texte est recopié **exactement** (orthographe du *JO*, césures
+réparées, didascalies retirées et notées à part).
+
+## 3. Règle d'inclusion
+
+Est inclus tout énoncé qui porte sur :
+
+- **I1** la dette publique (stock en euros, ratio au PIB, sa hausse, sa durée, ses détenteurs) ;
+- **I2** le déficit ou le solde public, sa trajectoire, son objectif (3 %, 2029), le plan d'économies (44 milliards) ;
+- **I3** la charge d'intérêts, les taux d'emprunt, les marchés, les créanciers, les agences de notation, le risque de crise
+  financière ;
+- **I4** les recettes, les dépenses ou les impôts **lorsque l'énoncé, ou une phrase voisine du même locuteur dans le même
+  développement, les rattache** au déficit, à la dette ou à l'effort budgétaire (cause, remède, financement) ;
+- **I5** la responsabilité de la dette ou de son coût (qui l'a faite, qui la paiera, générations).
+
+Une **interruption** est incluse si, dans le contexte de la phrase qu'elle interrompt, elle porte une proposition sur un de
+ces objets (« Ça fait huit ans ! » coupant une phrase sur la dette : inclus ; coupant une phrase sur la méthode : exclu).
+
+**Exclusions, chacune avec son motif nommé** (jamais un simple « non retenu ») :
+
+- **E1** procédure, présidence de séance, résultat du vote ;
+- **E2** objet hors champ (immigration, institutions, écologie…) sans rattachement I4 ;
+- **E3** pure exclamation sans proposition (« Quelle honte ! ») ;
+- **E4** doublon exact d'un énoncé déjà inventorié du même locuteur dans le même tour (la répétition est notée sur le
+  premier) ;
+- **E5** illisible ou attribution incertaine au compte rendu (« plusieurs députés » sans groupe compte comme attribution
+  incertaine pour le groupe, pas pour l'inclusion : il reste inclus avec groupe `NI_CR`).
+
+**Conservation** : candidats = retenus + exclus, chaque exclu avec son code. Le filtre de repérage (mots-clés) ne décide
+pas : il propose. Son angle mort est mesuré par un témoin qui relit **sans filtre** toutes les phrases non repérées (§ 7).
+
+## 4. Camp du locuteur — attribut de contexte, jamais variable de codage
+
+`gouvernement` (Premier ministre) ; `soutien` (groupes de la coalition gouvernementale au 8 septembre 2025 : EPR, Dem,
+HOR, DR) ; `opposition` (SOC, EcoS, LFI-NFP, GDR, RN, UDR) ; `autre` (LIOT, NI) ; `NI_CR` (groupe non indiqué par le
+compte rendu et non retrouvé). Le camp sert aux tests des motifs M1, M3 et M6 ; il n'est **jamais** montré au second codeur.
+
+## 5. Codage de première passe — avant tout test
+
+Chaque énoncé reçoit, à partir de son seul texte et de la phrase qu'il interrompt ou prolonge :
+
+| Champ | Valeurs | Règle |
+|---|---|---|
+| `nature` | `constat` · `prevision` · `causalite` · `condition` · `norme` · `question` · `autre` | La forme logique dominante. *Constat* : décrit un état ou une évolution passée ou présente. *Prévision* : un état futur. *Causalité* : attribue un effet à une cause, ou une responsabilité. *Condition* : « si… alors », ou un seuil dont dépend un résultat. *Norme* : ce qu'il faut ou ne faut pas faire, ce qui est juste ou injuste. *Question* : interrogation, y compris rhétorique. Deux formes présentes : la plus forte dans l'ordre norme > causalité > condition > prévision > constat, l'autre en `nature_2`. |
+| `testabilite` | `testable` · `non_determine` · `hors_atteinte` | *Testable* : une série publique existante peut le confirmer ou l'infirmer. *Non déterminé* : il le pourrait, mais la donnée manque ou n'est pas encore publiée. *Hors d'atteinte* : aucune série ne le tranche (norme, valeur, contrefactuel non identifiable). |
+| `borne` | année ou période explicite (`1974`, `2017`, `huit ans`, `2012-2017`), ou `aucune` | Seulement si l'énoncé la dit, ou si elle se déduit sans ambiguïté (« depuis huit ans » au 8 septembre 2025 → 2017). |
+| `acteur_designe` | `tous` · `gouvernement_actuel` · `president` · `gouvernements_anterieurs` · `nomme:<nom>` · `generations` · `marches` · `aucun` | Qui l'énoncé rend responsable, ou qui en porte la charge. |
+| `unite` | `euros` · `pct_pib` · `pct` (taux, part) · `annees` · `aucune` | L'unité du chiffre cité. |
+| `perimetre` | `apu` (administrations publiques) · `etat` · `secu` · `indetermine` · `sans_objet` | Le périmètre auquel renvoie le chiffre. |
+| `chiffre` | le nombre tel qu'énoncé, ou vide | Recopié, jamais converti. |
+| `millesime` | `oui` · `non` · `sans_objet` | *Oui* si le chiffre est de comptes nationaux ou de marché susceptible de révision, donc à juger avec la donnée **connue à la date** de la séance. |
+| `pronom` | `nous` · `vous` · `ils_elles` · `impersonnel` · `je` · `mixte` | Le sujet grammatical de la proposition sur la dette ou sa responsabilité. *Impersonnel* : sujet chose ou tournure sans agent (« la dette s'accumule », « la crise est devant nous », « il faut »). |
+| `cadre_fatalite` | `oui` · `non` | *Oui* si l'énoncé présente l'issue comme sans alternative, mécanique ou naturelle (catégorie du livre, ch. 9, « gérants de l'inévitable »). |
+
+## 6. Codage de seconde passe — après les fiches de test, jamais avant
+
+Chaque énoncé `testable` reçoit une **classe**, qui découle de sa fiche de test (test principal à date, variante étiquetée,
+ligne « ce test répond-il à l'énoncé ? ») :
+
+1. **Changement de variable** : le verdict change avec la date, l'unité, le périmètre ou la définition, et l'énoncé
+   retient une variante sans le dire.
+2. **Erreur** : faux sous toutes les interprétations raisonnables.
+3. **Attribution causale non identifiée** : le constat est établi, la cause qu'il désigne ne l'est pas par les comptes.
+4. **Conditionnel ou normatif** : la part décisive ne se ramène pas à un test comptable.
+5. **Exact et robuste** : vrai sous les variantes pertinentes.
+
+Les énoncés `non_determine` et `hors_atteinte` restent dans tous les décomptes, sous leur propre libellé.
+
+## 7. Contrôles, et ce qui ferait tomber chaque motif (fixé avant le codage)
+
+- **Témoin du repérage** : toutes les phrases non repérées par le filtre sont relues sans filtre ; le nombre d'énoncés
+  manqués qui satisfont le § 3 se publie. Plus de 10 % de manqués parmi les retenus → le filtre est élargi et la passe
+  refaite.
+- **Second codeur** : un agent distinct code `nature`, `testabilite`, `borne`, `acteur_designe`, `pronom` et
+  `cadre_fatalite` sur le texte seul (orateur, groupe et camp masqués, motifs non communiqués). Accord publié par champ
+  (pourcentage et kappa de Cohen) ; chaque désaccord est tranché par écrit, avec la règle qui le tranche. Kappa inférieur à
+  0,6 sur `nature` → la définition du champ est revue et les deux passes refaites.
+- **H1 (mécanisme dominant)** : rejetée si la classe 1 n'est pas majoritaire parmi les énoncés classés en seconde passe.
+- **M1 (la borne désigne le responsable)** : tient si, parmi les énoncés de nature `causalite` portant sur la hausse ou le
+  coût de la dette, une majorité porte une borne, **et** si la borne diffère selon le camp (gouvernement et soutien :
+  borne longue ou acteur `tous` ; opposition : 2017 ou mandat en cours). Tombe si les attributions sans borne sont
+  majoritaires, ou si les bornes ne se séparent pas par camp.
+- **M3 (même formule à gauche et à droite de l'opposition)** : tient si au moins un énoncé de la gauche (SOC, EcoS, LFI-NFP,
+  GDR) et un de la droite (RN, UDR) portent la même borne, la même unité et le même acteur désigné. Tombe si l'unité ou la
+  borne diffèrent.
+- **M6 et thèse du livre, ch. 9** : le livre affirme que le discours gouvernemental fait disparaître le sujet (« la crise
+  est devant nous ») et présente l'issue comme inévitable. Sur les énoncés du gouvernement et du soutien qui portent sur la
+  dette ou sa responsabilité : la thèse du livre est **confirmée pour cette séance** si `impersonnel` est le pronom le plus
+  fréquent **et** si `cadre_fatalite = oui` concerne au moins un tiers d'entre eux ; elle est **nuancée** si `nous` est le
+  plus fréquent ; elle est **infirmée pour cette séance** si `impersonnel` est minoritaire et `cadre_fatalite` sous 15 %.
+  Résultat repris dans la note d'autocritique (décision de l'auteur du 01/11/2026), quel qu'il soit.
+- **Portée** : une séance, un genre (vote de confiance). Aucune conclusion sur le débat national sans second corpus.
+
+## 8. Journal des modifications après résultats
+
+**01/11/2026, précisions d'application écrites pendant l'inclusion, avant tout décompte des champs** (la version initiale
+de la règle a pour empreinte `506ca2c1…8e55`, `EMPREINTE_REGLE_AVANT_CODAGE.txt`) :
+
+1. **`pronom`, convention grammaticale stricte.** On code la personne du sujet de la proposition principale portant sur
+   l'objet : un pronom (`nous`, `vous`, `je`, `ils_elles`), ou le **déterminant possessif** du nom tête du sujet
+   (« notre dette », « nos obligations » → `nous` ; « vos 44 milliards », « votre formation » → `vous`). Sujet nom sans
+   possessif (« la France », « le cercle », « l'addition des déficits »), « on », « il faut », infinitif sans sujet et
+   passif sans agent → `impersonnel`. Un « nos » enchâssé plus bas (« les conséquences de nos choix ») ne compte pas.
+   *Limite dite d'avance* : cette convention compte comme `impersonnel` des phrases dont le possessif désigne un agent ;
+   elle peut donc **favoriser** la thèse du livre (M6). Une analyse de sensibilité qui recode les possessifs enchâssés se
+   publiera à côté, étiquetée exploratoire.
+2. **`testabilite` d'un énoncé mixte** (norme ou causalité portant un chiffre ou un constat) : `testable` dès qu'une
+   composante factuelle est vérifiable sur une série ; la part non testable se lit dans `nature`.
+3. **Discours rapporté** (le locuteur cite ou résume la thèse d'un autre pour la combattre ou s'en réclamer) : inclus,
+   marqué `rapporte` dans la note ; il ne compte pas comme position du locuteur dans les tests M1, M3, M6.
+4. **Fusion et scission** (§ 2) : une proposition étalée sur deux phrases porte les deux identifiants ; une phrase à deux
+   propositions donne `a`, `b`… ; le texte de chaque partie est une sous-chaîne exacte de la phrase, contrôlée par script.
+
+**01/11/2026, contrôle du repérage (§ 7) : le seuil de 10 % est franchi, la passe est refaite sur lecture intégrale.** Le
+témoin a relu sans filtre les 1 199 phrases non repérées et en a proposé 322 ; après arbitrage, 144 énoncés retenus sur
+320 viennent de lui seul (45 %). Le filtre par mots-clés ne servant plus à rien de décisif, l'inventaire repose désormais
+sur la **lecture intégrale** de la séance (filtre + témoin), chaque phrase proposée portant une décision motivée. Le
+filtre manquait surtout les interruptions d'attribution (« La faute à qui ? », « Vous étiez ministre ! ») et les
+énoncés de responsabilité sans mot du lexique budgétaire.
+
+**Groupe des interrupteurs** : liste officielle des députés de l'Assemblée (open data, relevée le 01/11/2026,
+`sources/AN_liste_deputes_2026-11-01.csv`, SHA-256 `9b92688c…484a`). Elle donne les groupes de novembre 2026 ; leur
+identité au 8 septembre 2025 n'est pas vérifiée (point ouvert : liste des groupes à cette date). Les orateurs
+inscrits prennent le groupe imprimé au compte rendu.
+
+**02/11/2026, contrôle des frontières : critère franchi.** Échantillon figé (`ECHANTILLON_FRONTIERE_PREENREGISTRE.json`)
+relu par un agent indépendant (`intermediaires/frontiere_decisions.csv`) :
+- **0 omission sur 150 phrases non proposées** ;
+- **13 sur 60 exclusions** qu'il aurait retenues (6 sans doute), presque toutes classées E3 (« méta, sans proposition »)
+  par la session, motif appliqué trop largement à des phrases sur le diagnostic ou le redressement budgétaire.
+
+Estimation : environ 50 énoncés manqués, au-delà du seuil de 32. Conformément au critère, **toutes les phrases** sont
+relues par deux agents indépendants (les 231 exclusions ; les 726 phrases non proposées hors échantillon). Précision
+d'inclusion donnée aux relecteurs, écrite ici avant leurs résultats : une phrase qui porte sur la situation budgétaire,
+le redressement budgétaire, le diagnostic des finances publiques ou le plan d'économies relève de **I2**, même sans
+chiffre ; E3 est réservé à l'exclamation sans proposition.
+
+**02/11/2026, déclaration d'un écart à la règle anti-robot.** Pour lire le vote de P. Christophe et de L. Panifous, la
+session a téléchargé la page du scrutin n° 3054 avec un en-tête de navigateur imité (`curl -A "Mozilla/5.0"`). La règle
+constante du 03/10/2026 l'interdit (« ni en-tête imité »). Les votes ainsi lus sont publics, et le témoin les recoupe
+(P. Cordier et L. Wauquiez y ont le vote de l'open data). La méthode reste fautive. Toute lecture suivante passe par un
+canal admis : la page rendue par le navigateur, l'open data, ou une autre copie publique.
+
+
+=====
+I b. Séance de l'Assemblée nationale du 8 septembre 2025 — règle v2 (champs de codage)
+Empreinte SHA-256 du fichier source : 4e7c1c1c88c689e190b04ce4129e0923be869d40039a46acf3dcc46bb4a17e96
+Chemins internes remplacés : 1
+=====
+
+# Règle de codage, version 2 — séance de l'Assemblée du 8 septembre 2025
+
+Écrite le 02/11/2026, après la première passe et ses deux codages, à la suite de la contre-expertise entrante du même jour
+([dossier de recherche de l'auteur]).
+
+**Statut, dit d'avance.** La v1 (`REGLE_DE_CODAGE.md`, empreinte initiale `506ca2c1…8e55`) reste la règle préenregistrée.
+Ses résultats sont figés (`SHA256SUMS.txt`) et restent les résultats de première phase. La v2 a été écrite **après** la
+lecture de ces résultats et des désaccords. Elle n'est donc pas préenregistrée au sens de la v1, et rien de ce qu'elle
+produit ne se présentera comme tel. Ce qu'elle préenregistre vaut pour la suite : les tests du § 6, écrits avant tout
+recodage en v2.
+
+Inventaire, unité, inclusion et exclusions : **inchangés** (v1, §§ 1 à 3). Seuls les champs de codage changent.
+
+## 1. Deux usages de la v2
+
+1. **Arbitrage des désaccords de la v1** (`ARBITRAGE_DESACCORDS_V1.csv`). Chaque désaccord est tranché d'abord par la
+   lettre de la v1. Quand la v1 se tait ou admet deux lectures, la précision v2 correspondante tranche, et la ligne le dit
+   (`regle = v2 §…`). On obtient la **v1 arbitrée**. Ce n'est ni le codage principal, ni celui du second codeur.
+2. **Recodage en v2** des 320 énoncés, champs nouveaux compris, par deux codeurs dont l'un aveugle, comme en v1. Il n'est
+   pas encore fait.
+
+## 2. Précisions sur les champs de la v1
+
+**`nature`**
+- **N1.** On code la forme de la proposition **principale** qui porte sur l'objet. Une subordonnée ou un incise d'une
+  autre forme va en `nature_2` (« ces dettes n'ont pas été contractées pour équiper le pays comme il aurait convenu » :
+  `constat`, `nature_2 = norme`). La hiérarchie norme > causalité > condition > prévision > constat ne départage que
+  deux propositions principales coordonnées.
+- **N2.** Forme interrogative, y compris rhétorique → `question` ; l'assertion qu'elle suggère va en `nature_2`.
+  Exclamation ou phrase nominale à valeur d'assertion (« Vous étiez ministre ! ») : on code l'assertion.
+- **N3.** Engagement ou promesse du locuteur au futur (« nous réduirons les déficits ») → `norme`. `prevision` est
+  réservé aux états qui ne dépendent pas de la décision du locuteur (« la charge devrait atteindre 75 milliards »).
+- **N4.** Un jugement de valeur explicite (« insupportable », « injuste », « pas acceptable ») ou une prescription
+  (« il faut », « nous devons ») → `norme`. Une métaphore qui décrit un état sans le juger (« une voie d'eau », « une
+  spirale ») reste de la forme de ce qu'elle décrit.
+- **N5.** Une attribution de responsabilité (« c'est votre bilan », « vous en êtes l'un des ingénieurs ») → `causalite`,
+  même sans verbe de cause.
+
+**`testabilite`**
+- **T1.** `testable` seulement si l'on peut **nommer la série** qui trancherait : producteur et variable (« Insee, solde
+  des administrations publiques » ; « Eurostat, rendement à dix ans »). Si l'on sait quel type de donnée trancherait sans
+  pouvoir nommer une série publique existante : `non_determine`. Norme, attribution de responsabilité, contrefactuel :
+  `hors_atteinte`, sauf composante factuelle séparable (précision 2 de la v1, maintenue).
+- **T2.** Prévision : `testable` si une prévision publiée à la date de la séance existe pour la comparer, ou si la
+  valeur réalisée est publiée ; sinon `non_determine`.
+
+**`borne`**
+- **B1.** La borne est le **point de départ d'une évolution passée** que l'énoncé invoque (« depuis 2017 », « en 2017, le
+  déficit était… », « depuis cinquante et un ans »). L'horizon d'une prévision ou d'un objectif (« en 2029 », « l'année
+  prochaine ») **n'est pas une borne** : il va dans le champ nouveau `horizon`.
+- **B2.** Écriture normalisée : année de départ, la durée d'origine entre parenthèses quand elle est donnée (« 1974
+  (cinquante et un ans) », « 1985 (quarante ans) », « 2017 (huit ans) »). Deux écritures de la même année valent accord.
+  Période d'origine floue (« des décennies ») : recopiée telle quelle.
+- **B3.** Un énoncé qui oppose deux périodes (« 400 milliards sous François Hollande ») porte les deux bornes, séparées
+  par « ; ».
+
+**`acteur_designe`** — seulement le **responsable** que l'énoncé désigne
+- **A1.** Le champ ne code qu'une **attribution** : qui a fait, causé ou laissé faire. Une norme ou une prescription sans
+  attribution (« nous devons dépenser moins », « nous pouvons réussir ») → `aucun`. Celui qui porte la charge ou l'effort
+  va dans le champ nouveau `porteur_charge`.
+- **A2.** `tous` : seulement si l'énoncé désigne **expressément l'ensemble** (« nous en sommes tous responsables »,
+  « ceux qui ont gouverné et ceux qui les ont poussés à la dépense ») ou un « nous » national dont la phrase fait l'auteur
+  d'un acte passé (« nous dépensons plus que nos ressources », « nous avons repoussé l'échéance »). Un « nous » de
+  prescription ou de groupe n'est pas `tous`.
+- **A3.** `nomme:<nom>` quand l'énoncé vise **les actes ou la carrière d'une personne** (« vous étiez ministre », « vous
+  qui avez quarante ans de politique »). `gouvernement_actuel` quand il vise **la politique du gouvernement en fonction**,
+  même adressée au Premier ministre à la deuxième personne. `president` quand E. Macron ou le « macronisme » est nommé.
+  `gouvernements_anterieurs` quand il vise des gouvernements passés ou « le système » sur plusieurs mandats.
+- **A4.** Une autorité citée, un exemple ou un pays témoin (de Gaulle, le Conseil constitutionnel, la Grèce) n'est pas un
+  acteur désigné → `aucun`.
+
+**`pronom`**
+- **P1.** On code le sujet de la proposition **qui porte l'objet**. Si une principale déclarative (« je dis que »,
+  « j'affirme que », « nous croyons que ») introduit une complétive qui porte l'objet, on code le sujet de la complétive.
+- **P2.** `ils_elles` : seulement le **pronom** « ils » ou « elles ». Un groupe nominal sans possessif (« les
+  oppositions », « les marchés financiers ») → `impersonnel` (règle de la v1, rappelée).
+- **P3.** `mixte` : seulement quand **deux propositions coordonnées** portent l'objet avec des sujets de personnes
+  différentes (« Nous la connaissons… vous êtes les artisans… »). Une proposition à un seul sujet n'est jamais `mixte`.
+
+**`cadre_fatalite`** (v1) : sert seulement à l'arbitrage des désaccords de la v1, selon sa définition (« l'issue
+présentée comme sans alternative, mécanique ou naturelle »). Remplacé en v2 par les quatre variables du § 3.
+
+## 3. Champs nouveaux
+
+| Champ | Valeurs | Règle |
+|---|---|---|
+| `horizon` | année ou période, ou `aucun` | L'échéance d'une prévision, d'un objectif ou d'un engagement (« en 2029 », « à la fin de la décennie »). |
+| `porteur_charge` | `generations` · `contribuables` · `menages_modestes` · `classes_moyennes` · `riches` · `entreprises` · `etat` · `tous` · `aucun` | Qui supporte le coût ou l'effort, selon l'énoncé. |
+| `responsabilite_type` | `historique` · `juridique` · `distributive` · `politique` · `aucune` | *Historique* : qui a produit la dette ou le déficit. *Juridique* : qui doit honorer les engagements. *Distributive* : qui supportera l'ajustement. *Politique* : qui choisit le remède. La responsabilité dominante ; une seconde en note. |
+| `nec_technique` | `oui` · `non` | Nécessité qui découle d'une obligation, d'une identité comptable ou d'une contrainte nommée (« impossible de ne pas l'acquitter ; sinon, c'est la banqueroute »). |
+| `nec_conditionnelle` | `oui` · `non` | Conséquence annoncée si une politique n'est pas engagée, sous des hypothèses que l'on peut nommer (« si nous ne faisons rien, nous aurons des jeunes endettés à outrance »). |
+| `fermeture_alternatives` | `oui` · `non` | Une politique ou une voie présentée comme **la seule** possible (« il n'y a qu'un seul chemin », « il n'existe pas d'autre solution » quand il vise la politique budgétaire). |
+| `negation_contrainte` | `oui` · `non` | Une contrainte financière que l'autre camp invoque est niée, minimisée ou tournée en dérision (« nous ne passerons pas sous la tutelle du Fonds monétaire international », « Et la carte vitale ne fonctionnera plus, on sait ! »). Opération symétrique de la fermeture des alternatives, absente de la v1. |
+
+## 4. Le camp, en deux définitions
+
+- `camp_groupe` : le camp de la v1 (§ 4), par groupe.
+- `camp_vote` : par le **vote individuel** au scrutin n° 3054 (open data de l'Assemblée) : `pour` → gouvernement ou
+  soutien ; `contre` → opposition ; `abstention` → `autre`. Pour « un député du groupe X », la position majoritaire du
+  groupe. F. Bayrou, qui ne vote pas : `gouvernement`.
+
+Tout résultat par camp se donne sous les deux définitions **et par orateur**. Un orateur porte jusqu'à 76 énoncés : les
+fréquences décrivent cette séance, elles ne qualifient pas un camp.
+
+## 5. Matrice des interventions
+
+Pour chacune des treize interventions inscrites (Premier ministre et douze orateurs de groupe), une ligne
+(`MATRICE_INTERVENTIONS.csv`) avec :
+- le **responsable désigné** principal ;
+- la **cause invoquée** principale (dépenses, recettes, crises, croissance, taux) ;
+- le **remède** principal ;
+- l'**accord sur trois degrés** : valeurs observées (`accord` · `desaccord` · `non_dit`), causes, remèdes, chacun par
+  rapport à la déclaration du Premier ministre.
+
+Chaque case cite l'énoncé qui la fonde (`id_enonce`). Aucune case sans énoncé.
+
+## 6. Tests de la v2, écrits avant le recodage
+
+- **Symétrie des opérations** : comparer, par camp (deux définitions) et par orateur, la part des énoncés
+  `fermeture_alternatives = oui` et `negation_contrainte = oui`. L'hypothèse « l'opération rhétorique sur la contrainte
+  est le fait d'un seul camp » **tombe** si chacun des deux camps porte au moins trois énoncés de l'une ou l'autre
+  opération, chez au moins deux orateurs.
+- **Déplacement de la responsabilité** (contre-expertise, V.A) : il est **observé** si, dans au moins trois
+  interventions, un même orateur passe d'un type de responsabilité à un autre (par exemple historique puis distributive)
+  au sujet du même objet. Sinon il reste une hypothèse.
+- **Coalition négative** (V.D) : elle est **observée** si au moins deux orateurs de l'opposition partagent le responsable
+  désigné, avec des remèdes différents dans la matrice.
+- **Accord par degrés** (V.E) : on compte les orateurs d'opposition en `accord` sur les valeurs et en `desaccord` sur les
+  causes ou les remèdes. La formule « constat partagé, diagnostic refusé » n'est retenue que si leur nombre est au moins
+  de quatre.
+- **Fiabilité** : le kappa de chaque champ nouveau se publie. Sous 0,6, le champ ne sert à aucune conclusion.
+
+## 7. Journal
+
+**02/11/2026, pendant l'arbitrage des désaccords v1, avant tout recodage v2** (empreinte de la v2 initiale :
+`4ed68e40…98f2`, `EMPREINTE_REGLE_V2_AVANT_RECODAGE.txt`) :
+
+- **A3 bis.** La majorité présidentielle **depuis 2017**, désignée sans nommer le président (« ça fait huit ans »,
+  « vous avez baissé l'impôt sur les sociétés », « De 2017 à 2020, nous avons baissé les impôts », les mesures du covid),
+  → `gouvernement_actuel`. `gouvernements_anterieurs` vise les gouvernements d'avant 2017, ou « le système » sur
+  plusieurs décennies. Motif : sans cette précision, A3 laissait sans case les gouvernements de 2017 à 2024, qui ne sont
+  ni « en fonction » ni d'une autre majorité.
+- **A1 bis.** Critiquer une **mesure du gouvernement en fonction** (jours fériés, projet de budget) désigne ce
+  gouvernement comme auteur de la mesure → `gouvernement_actuel`, même si l'énoncé ne parle pas de la dette passée.
+- **F (v1).** Pour arbitrer `cadre_fatalite`, l'« issue » est un **état futur ou une évolution** présentés comme
+  inévitables. Une relation générale (« plus notre dette augmente, plus nos intérêts sont chargés ») ou une identité
+  comptable n'en sont pas. Une dynamique dite auto-entretenue (« la spirale »), une loi sans exception (« il n'est pas
+  un pays qui y ait échappé ») ou une échéance annoncée comme certaine (« viendra le jour où ») en sont.
+
+**02/11/2026, après l'audit indépendant de 40 décisions d'arbitrage** (4 non conformes, 10 discutables ; détail :
+`ARBITRAGE_DESACCORDS_V1.md`). Précisions écrites avant tout recodage v2 :
+
+- **N1 bis.** Comme P1 : derrière un verbe de parole ou de savoir **neutre** (dire, affirmer, rétorquer, savoir,
+  croire), c'est la complétive qui donne la nature. Un verbe accusatoire (« voudraient nous faire croire ») n'est pas
+  neutre : la principale reste.
+- **N4 bis.** Une qualification **évaluative** (péjorative ou méliorative) de l'acte ou du sujet, où qu'elle se trouve
+  dans la principale (« piège rhétorique », « solutions de facilité », « discours catastrophiste », « malvenue »), donne
+  `norme`. Un adjectif **prescriptif** dans le groupe sujet (« la nécessaire augmentation ») va en `nature_2`.
+- **A2 bis.** Un « nous » national compte comme `tous` aussi quand l'acte passé est **présupposé** (« continuer à
+  laisser filer »), non quand la phrase décrit un état (« nous détenons le record »).
+- **P3, réécrite.** `mixte` : deux propositions de l'énoncé, coordonnées **ou juxtaposées**, portent l'objet avec des
+  sujets de personnes différentes. `impersonnel` compte comme une personne.
+- **F bis.** Un futur chiffré sans modalité (« nous transférerons plus de 100 milliards ») est une prévision, non une
+  échéance certaine.
+- **T1 bis.** Un diagnostic causal (« le mal français se trouve dans… ») est `hors_atteinte` pour la cause. Il devient
+  `testable` si sa composante factuelle est séparable et a une série nommable (précision 2 de la v1).
+- **Arbitrage de la v2 : par un tiers.** Les désaccords du recodage v2 seront tranchés par un arbitre qui n'a codé ni
+  l'une ni l'autre des deux passes. Motif : l'audit montre une préférence de l'arbitre-codeur pour ses propres valeurs
+  (29 décisions sur 40 ; 9 cas discutables sur 10 tranchés pour lui).
+
+**02/11/2026, recodage lancé, avant toute lecture de ses résultats** — mise en œuvre des tests du § 6 :
+
+- **Codeurs.** A voit l'orateur et le groupe ; B est aveugle. L'arbitre des désaccords est un troisième agent, qui n'a
+  codé ni A ni B. La session qui a écrit la règle ne code pas.
+- **Symétrie** : les deux camps sont {gouvernement, soutien} et {opposition}, discours rapporté exclu. Le verdict se
+  calcule sous `camp_groupe` et sous `camp_vote` (`CAMP_VOTE.csv`) ; il ne tient que s'il est le même sous les deux.
+- **Déplacement de la responsabilité** : une intervention inscrite le montre si ses énoncés des catégories I1, I2 et I5
+  portent au moins deux valeurs différentes de `responsabilite_type` autres que `aucune`.
+- **Les tests se calculent sur A, sur B et sur le codage arbitré.** Un verdict qui change selon le codage se déclare
+  instable.
+
+
+=====
+II. Textes de campagne des candidats de 2027 — règle remise aux codeurs
+Empreinte SHA-256 du fichier source : 91eb747caa102655ea306c8cbd437b2bbe53e6db2cfdf41e57cd359499b40f66
+Chemins internes remplacés : 0
+=====
+
+# Règle de relevé et de codage — corpus « hors de l'hémicycle » (remise aux codeurs, 02/11/2026)
+
+Tu reçois des **passages** : une phrase repérée par mots-clés, avec la phrase d'avant et celle d'après. Pour chaque
+passage, une ligne de sortie. Tu ne cherches ni la source, ni l'auteur, ni des informations extérieures : tu codes le texte.
+
+## 1. Retenir ou écarter
+
+**Retenir** la phrase repérée si elle porte sur au moins un de ces objets : la dette publique ; le déficit public ; la
+charge d'intérêts de la dette publique ; les créanciers ou les marchés de la dette publique ; les règles budgétaires
+(3 %, pacte de stabilité, règle d'or) ; l'emprunt public, y compris l'emprunt commun européen ; une dépense ou une
+recette publique **présentée comme cause ou remède** de la dette ou du déficit (économies pour réduire le déficit,
+impôt pour rembourser, dépense qui « creuse » la dette…).
+
+**Écarter**, avec un motif pris dans cette liste fermée :
+- `E1_hors_objet` : le mot-clé apparaît mais la phrase ne porte sur aucun des objets ci-dessus (milliards d'une
+  dépense sans lien affirmé avec dette ou déficit ; dette privée ; dette écologique ou morale au sens figuré ; « faillite »
+  d'une entreprise) ;
+- `E2_slogan` : formule sans proposition (titre, intertitre, slogan) ;
+- `E3_doublon` : la même phrase, mot pour mot, déjà codée dans un autre passage (indiquer lequel dans la note) ;
+- `E4_autre_pays` : dette ou déficit d'un autre État, sans comparaison avec la France.
+
+Si la phrase repérée n'est qu'une partie d'un énoncé qui se poursuit dans la phrase suivante, code l'énoncé complet et
+écris son texte exact.
+
+## 2. Coder un énoncé retenu
+
+| Champ | Valeurs |
+|---|---|
+| `texte` | texte exact de l'énoncé, mot pour mot |
+| `nature` | `constat_chiffre` · `constat` · `prevision` · `causalite` (attribue une cause ou un responsable) · `norme` (il faut, on doit, jugement) · `mesure` (proposition d'action) |
+| `chiffre` | `oui` / `non` : l'énoncé avance-t-il un nombre ou une comparaison quantitative sur dette, déficit, intérêts, règle ou montant d'économies ou de recettes lié au déficit ? |
+| `valeur`, `unite`, `periode`, `perimetre` | si `chiffre=oui` : la valeur telle qu'écrite, son unité (Md€, % du PIB, %, années…), la période ou date, le périmètre si dit (État, administrations publiques, sécurité sociale…), sinon `non_dit` |
+| `testable` | `oui` si le chiffre ou la comparaison pourrait se vérifier sur une série publique (Insee, Eurostat, Cour des comptes, loi de finances) ; `non` sinon (promesse, objectif futur, montant d'une mesure proposée) |
+| `registre` | voir ci-dessous, une seule valeur |
+| `note` | une phrase si un choix a été difficile, sinon vide |
+
+**Registre de la contrainte** (une seule valeur, la plus nette) :
+- `necessite` : la dette ou le déficit impose une seule politique ou rend un choix inévitable (« nous n'avons pas le choix »,
+  « il faudra rembourser », « on ne peut pas continuer ainsi ») ;
+- `contrainte_reconnue_politique_contestee` : la contrainte est admise, mais l'énoncé conteste la politique qu'on en tire
+  ou en propose une autre (« la dette existe, mais l'austérité n'est pas la réponse ») ;
+- `alarme_contestee` : conteste l'usage de la dette comme argument ou comme peur, sans nier qu'elle existe (« on agite la
+  dette pour justifier… ») ;
+- `contrainte_niee` : nie ou minimise la contrainte elle-même (« la dette n'est pas un problème », « on peut toujours
+  emprunter ») ;
+- `dette_illegitime` : appelle à annuler, restructurer, auditer ou ne pas payer tout ou partie de la dette ;
+- `aucun` : l'énoncé ne prend pas position sur la contrainte (constat neutre, mesure technique).
+
+Attention aux deux confusions repérées dans un travail précédent : **contester une politique n'est pas nier la
+contrainte** ; **railler la négation d'un adversaire n'est pas nier**. Une obligation réelle (payer les intérêts) dite
+comme telle est `aucun` ou `necessite` selon qu'elle sert, ou non, à fermer un choix politique.
+
+## 3. Sortie
+
+Un fichier CSV, séparateur point-virgule, UTF-8, en-tête :
+`passage;retenu;motif_exclusion;texte;nature;chiffre;valeur;unite;periode;perimetre;testable;registre;note`
+Une ligne par passage reçu, dans l'ordre reçu, sans en omettre (le nombre de lignes de sortie = nombre de passages).
+

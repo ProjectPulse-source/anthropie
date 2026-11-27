@@ -25,8 +25,8 @@
   "dette-publique-peut-elle-baisser/_index.md": "2026-11-06",
   "enseignants/_index.md": "2026-11-05",
   "enseignants/environnement/_index.md": "2026-11-17",
-  "formules-du-debat-sur-la-dette/_index.en.md": "2026-11-02",
-  "formules-du-debat-sur-la-dette/_index.md": "2026-11-02",
+  "formules-du-debat-sur-la-dette/_index.en.md": "2026-11-27",
+  "formules-du-debat-sur-la-dette/_index.md": "2026-11-27",
   "inflation-et-dette-publique/_index.en.md": "2026-11-17",
   "inflation-et-dette-publique/_index.md": "2026-11-17",
   "le-niveau-des-eleves-baisse-t-il/_index.md": "2026-11-05",
@@ -259,10 +259,14 @@
    "2026-11-17"
   ],
   "formules-du-debat-sur-la-dette/_index.en.md": [
-   "2026-11-02", "2026-11-17"
+   "2026-11-02",
+   "2026-11-17",
+   "2026-11-27"
   ],
   "formules-du-debat-sur-la-dette/_index.md": [
-   "2026-11-02", "2026-11-17"
+   "2026-11-02",
+   "2026-11-17",
+   "2026-11-27"
   ],
   "glossaire/_index.en.md": [
    "2026-10-25",
