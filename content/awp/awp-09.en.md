@@ -15,9 +15,12 @@ wikidata_qid: "Q141641858"  # same work item as the FR paper — feeds Scholarly
 url_zenodo: "https://zenodo.org/records/23145963"
 jel_codes: ["H63", "H62", "H72", "E62", "C82"]
 keywords: ["anthropy", "public debt", "debt dynamics", "intergenerational burden", "data verification"]
+# La FAQ affiche le jeu dette_dynamique (jetons {dyn.*}) : sa date suit le releve (check-dates-jeux.py, 27/11/2026)
+date_suit: ["dette_dynamique"]
 faq:
   - question: "What drove the rise in French public debt since 1995?"
-    answer: "Primary deficits: in the Eurostat series retrieved on 3 October 2026, from 1995 to 2025 the ratio rose from 57.8% to 115.6% of GDP, of which primary deficits account for 50.5 of 57.7 points, interest and nominal growth effects having nearly offset each other over thirty years. AWP-09 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.23145963) recovers this result with an independent benchmark."
+    # {dyn.*} tokens (data/dette_dynamique.json, affichage_en): the answer follows each update of the dataset (27/11/2026).
+    answer: "Primary deficits: in the Eurostat series of the {dyn.millesime_dette} notification, from {dyn.annee_depart} to {dyn.annee_fin} the ratio rose from {dyn.dette_depart}% to {dyn.dette_fin}% of GDP, of which primary deficits account for {dyn.deficits_primaires} of {dyn.hausse} points, interest and nominal growth effects having nearly offset each other over the period. AWP-09 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.23145963) recovers this result with an independent benchmark, on the series retrieved on 3 October 2026."
   - question: "Why do opposite public readings of the debt all rest on official accounts?"
     answer: "Because they measure neither the same window nor the same object. In 1996-2012 the snowball effect accounts for 43% of the rise in the ratio, close to the 38% found by the 2014 citizens' audit; since 2017 it has subtracted 1.74 points a year, the figure given by the French Treasury; cumulative gross interest, without the growth that offsets it, measures yet another object."
   - question: "Do public accounts tell who pays the debt?"

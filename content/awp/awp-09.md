@@ -16,9 +16,14 @@ url_zenodo: "https://zenodo.org/records/23143030"
 jel_codes: ["H63", "H62", "H72", "E62", "C82"]
 keywords: ["anthropie", "dette publique", "dynamique de la dette", "générations futures", "vérification des données"]
 keywords_en: ["anthropy", "public debt", "debt dynamics", "intergenerational burden", "data verification"]
+# La FAQ affiche le jeu dette_dynamique (jetons {dyn.*}) : sa date suit le releve (check-dates-jeux.py, 27/11/2026)
+date_suit: ["dette_dynamique"]
 faq:
   - question: "D'où vient la hausse de la dette publique française depuis 1995 ?"
-    answer: "Des déficits primaires, hors intérêts : dans les séries d'Eurostat relevées le 3 octobre 2026, de 1995 à 2025, le ratio passe de 57,8 % à 115,6 % du PIB, et les déficits primaires en portent 50,5 points sur 57,7, l'effet des intérêts et celui de la croissance nominale s'étant presque compensés sur trente ans. La Cour des comptes et le Conseil d'analyse économique l'avaient établi sur d'autres périodes ; AWP-09 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.23143030) le retrouve avec un témoin indépendant."
+    # Jetons {dyn.*} (data/dette_dynamique.json, notification Eurostat la plus recente) : la reponse suit chaque mise
+    # a jour du jeu (decision de l'auteur, 27/11/2026). Les valeurs du papier depose restent celles des releves du
+    # 3 octobre 2026 (115,6 %, 50,5 points sur 57,7), dites en fin de reponse.
+    answer: "Des déficits primaires, hors intérêts : dans les séries d'Eurostat de la notification du {dyn.millesime_dette}, de {dyn.annee_depart} à {dyn.annee_fin}, le ratio passe de {dyn.dette_depart} % à {dyn.dette_fin} % du PIB, et les déficits primaires en portent {dyn.deficits_primaires} points sur {dyn.hausse}, l'effet des intérêts et celui de la croissance nominale s'étant presque compensés sur la période. La Cour des comptes et le Conseil d'analyse économique l'avaient établi sur d'autres périodes ; AWP-09 (Stéphane Lalut, 2026, DOI 10.5281/zenodo.23143030) le retrouve avec un témoin indépendant, sur les séries relevées le 3 octobre 2026."
   - question: "Pourquoi des lectures publiques opposées de la dette s'appuient-elles toutes sur des comptes officiels ?"
     answer: "Parce qu'elles ne mesurent ni la même fenêtre ni le même objet. Sur 1996-2012, l'effet boule de neige pèse 43 % de la hausse du ratio, du même ordre que les 38 % de l'audit citoyen de 2014 ; depuis 2017, il retire 1,74 point par an, le chiffre de la direction générale du Trésor ; les intérêts bruts cumulés, sans la croissance qui les compense, mesurent encore autre chose."
   - question: "Les comptes publics disent-ils qui paie la dette ?"

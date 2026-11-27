@@ -87,6 +87,8 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ### 2026-11-27 — Livre dette : extrait « voix » aligné sur l'édition du 27/11
 
+- **AWP-09, FAQ « D'où vient la hausse… »** (FR et EN, demande de l'auteur) : chiffres saisis (115,6 %, 50,5 sur 57,7, relevés du 3 octobre) remplacés par les jetons `{dyn.*}` du jeu `dette_dynamique` (aujourd'hui 115,7 %, 50,5 sur 57,9, notification du 21/10/2026) ; la réponse suit désormais chaque mise à jour, et dit que le papier déposé porte sur les séries du 3 octobre. `date_suit: [dette_dynamique]` (exigé par `check-dates-jeux.py`). **Défaut de gabarit corrigé** : `layouts/awp/single.html` affichait la réponse de FAQ brute, sans résoudre les jetons (le JSON-LD et les fiches livres les résolvaient) ; elle passe désormais par `desc-figures.html`.
+
 - **Fiche du livre** (`content/livres/dette-publique-qui-paie-vraiment.md`), extrait affiché aussi sur `/ressources-offertes/dette-publique-qui-paie-vraiment/` : « Le crime est parfait : personne n'appuie sur la gâchette » remplacé par la phrase de l'édition en vente (Merton, déplacement des buts), revérifiée mot pour mot contre l'EPUB du 27/11 ; `lastmod` 2026-11-27. Balayage des autres reprises du livre (encarts `appel-livre` du dossier dette, pages d'offre, `llms.txt`, page des formules) : conformes, rien d'autre à changer. Non touché, déclaré : FAQ d'AWP-09 (115,6 %, série Eurostat datée du 3 octobre, publication versionnée distincte du livre).
 
 ### 2026-11-26 (soir) — Retouches Publications, accueil, Livres, questions fréquentes ; chantier Publications clos

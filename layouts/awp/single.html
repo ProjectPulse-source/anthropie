@@ -117,7 +117,7 @@
         {{ range .Params.faq }}
           <div class="faq-item">
             <h3 class="faq-question">{{ .question }}</h3>
-            <p class="faq-answer">{{ .answer }}</p>
+            <p class="faq-answer">{{ partial "desc-figures.html" (dict "text" .answer "isbn" nil) }}</p>  {{/* jetons resolus comme dans le JSON-LD et les fiches livres (27/11/2026) */}}
           </div>
         {{ end }}
       </section>
