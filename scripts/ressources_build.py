@@ -66,6 +66,10 @@ _BLOC = re.compile(r"</?(?:p|h[1-6]|li|td|th|tr|figcaption|summary|blockquote|di
 
 def texte(h: str) -> str:
     c = main_html(h)
+    # Les repères sous le chapô (partials/reperes-page.html) sont servis dans un <nav> : ce sont des affirmations
+    # chiffrées, pas une barre de navigation. Ils restent dans le texte, un repère par ligne (27/11/2026).
+    c = re.sub(r"<nav\b[^>]*\breperes-page\b[^>]*>(.*?)</nav>",
+               lambda m: "<div>" + m.group(1).replace("</a>", "</a><br>") + "</div>", c, flags=re.S | re.I)
     c = re.sub(r"<(script|style|svg|template|nav)\b.*?</\1>", " ", c, flags=re.S | re.I)
     # Ligne d'appartenance : un nom de bloc, navigation et non phrase (arbitrage du 02/11/2026).
     c = re.sub(r"<p class=[\"']?ressource-appartenance.*?</p>", " ", c, flags=re.S | re.I)
