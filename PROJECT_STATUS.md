@@ -85,6 +85,17 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-27 (fin d'après-midi) — Citations vérifiées : quatre mouvements ; règle des supports dérivés
+
+- **`/citations-celebres-verifiees/`** : la synthèse annonçait « trois manières » quand « Comment lire cette page » en
+  liste quatre ; titre « quatre manières » (ancre inchangée), paragraphe propre « La phrase perd sa suite » (La Fontaine,
+  Tartuffe, Lord Henry). Relecture du texte servi : « le mot sur la tentation » désignait deux phrases de Wilde, la phrase
+  est désormais citée. `lastmod` 27/11, instantané refait, `check-all --ci` 0. Arbitrage :
+  `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-11-27_Promo-12_arbitrage.md`.
+- **Règle validée par l'auteur** (supports dérivés) inscrite au CLAUDE.md, section « Production des ressources » ;
+  licence des supports graphiques : CC BY-ND 4.0. Suspendus : jeu interactif, chroniques, page d'exposition ; une affiche
+  pilote après le relevé des 554 envois `LEF-*` de novembre.
+
 ### 2026-11-27 — Livre dette : extrait « voix » aligné sur l'édition du 27/11
 
 - **AWP-09, FAQ « D'où vient la hausse… »** (FR et EN, demande de l'auteur) : chiffres saisis (115,6 %, 50,5 sur 57,7, relevés du 3 octobre) remplacés par les jetons `{dyn.*}` du jeu `dette_dynamique` (aujourd'hui 115,7 %, 50,5 sur 57,9, notification du 21/10/2026) ; la réponse suit désormais chaque mise à jour, et dit que le papier déposé porte sur les séries du 3 octobre. `date_suit: [dette_dynamique]` (exigé par `check-dates-jeux.py`). **Défaut de gabarit corrigé** : `layouts/awp/single.html` affichait la réponse de FAQ brute, sans résoudre les jetons (le JSON-LD et les fiches livres les résolvaient) ; elle passe désormais par `desc-figures.html`.

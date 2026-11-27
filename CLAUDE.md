@@ -388,6 +388,14 @@ transcrite sans contrôle ; écrite en clair (étude citée) — et la phrase de
 « s'arrête si une donnée ne remplit plus les conditions dont dépendent les principales phrases ». Grille et cas :
 `D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_LECTURE_2026-10-09\REFONTE_PILOTE\AUDIT_AFFIRMATIONS_METHODE_REQUALIFIE_2026-10-12.md`.
 
+**Supports dérivés — règle de gouvernance (auteur, 27/11/2026)** : tout support dérivé d'une ressource (affiche,
+fiche, jeu, chronique, carte, page d'usage) doit renforcer directement la valeur, l'usage ou la diffusion d'un travail
+intellectuel existant ; il ne devient jamais une activité autonome, et **sa généralisation suit l'observation d'un usage
+réel** (installation, séance, publication, demande extérieure) — jamais l'existence du support lui-même, qui ne vaut pas
+déclencheur de page (raisonnement circulaire relevé le 27/11). Les supports graphiques (affiches) sont diffusés sous
+**CC BY-ND 4.0** (reproduction et diffusion intégrales avec mention de l'auteur, sans modification), distincte de la
+CC BY 4.0 des données. Arbitrage : `D:\PRO\.claude\external-audits\ARBITRATIONS\ENTRANTE_2026-11-27_Promo-12_arbitrage.md`.
+
 **Point d'entrée unique — toute page de ressource neuve ou refondue (auteur, 22/10/2026 : « cette méthodologie doit être
 câblée et systématiquement articulée lorsqu'on rajoute une page »).** Skill `ressource-site` de `D:\PRO\.claude\skills\`
 (déclenché par toute demande d'ajouter, créer ou refondre une page de ressource, et par les commandes de série) : il fait

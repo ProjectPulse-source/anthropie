@@ -1,4 +1,4 @@
-# relu le 2026-11-16 ; texte servi de /citations-celebres-verifiees/, build de e20b456 + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
+# relu le 2026-11-27 ; texte servi de /citations-celebres-verifiees/, build de 13583e8e + modifications locales ; une phrase par ligne (scripts/check-relecture.py)
 Citations célèbres : qu’ont vraiment écrit Hugo, Voltaire, Molière, La Fontaine et Wilde ?
 Sur vingt citations célèbres qu’on leur prête, quinze se lisent dans leurs œuvres, deux y sont retouchées et trois n’y ont pas été trouvées. « Je me battrai jusqu’à la mort pour que vous ayez le droit de le dire » ne se lit pas chez Voltaire, dans les sources consultées : la phrase est d’une biographe anglaise, qui l’a reconnue pour sienne en 1939.
 Et plusieurs fois, l’auteur citait déjà quelqu’un d’autre.
@@ -354,7 +354,7 @@ Lien permanent
 « Experience is the name every one gives to their mistakes. » — Oscar Wilde, Lady Windermere’s Fan (1892), acte III, Dumby ; déjà dans The Picture of Dorian Gray (1891), chap.
 IV.
 Vérification : https://stephane-lalut.com/citations-celebres-verifiees/#wilde-l-experience
-Ce que montrent ces vingt citations : trois manières de s’éloigner du texte
+Ce que montrent ces vingt citations : quatre manières de s’éloigner du texte
 L’auteur citait déjà.
 Voltaire attribue « le mieux est l’ennemi du bien » à « un sage Italien » ; Valère donne sa maxime « suivant le dire d’un ancien » ; Géronte reprend la galère de Cyrano ; Wilde se cite lui-même.
 Les guillemets que l’auteur avait posés tombent en route, et la phrase reste au dernier nom connu.
@@ -365,8 +365,11 @@ Dans ces cas, le nom d’arrivée est celui que la réputation associe au thème
 On peut en faire l’hypothèse : une attribution paraît d’autant plus crédible qu’elle confirme ce qu’on croit déjà de l’auteur.
 Vingt cas ne la mesurent pas ; c’est une interprétation.
 La forme se simplifie. « Si l’on n’est plus que mille » devient « S’il n’en est plus que mille », « ressemblent aux girouettes » devient « sont comme les girouettes », « la conviction qu’on est aimé » devient « savoir que vous êtes aimé ».
-La syntaxe se règle sur celle de la conversation, et le vers qui précède ou qui suit disparaît.
-Les trois mouvements se cumulent souvent.
+La syntaxe se règle sur celle de la conversation.
+La phrase perd sa suite.
+Exacte, elle se lit sans ce qui l’entourait : « La raison du plus fort est toujours la meilleure » sans le vers qui annonce la démonstration, « Couvrez ce sein que je ne saurais voir » sans la réplique de Dorine, « Le seul moyen de se délivrer d’une tentation, c’est d’y céder » sans Lord Henry, qui la prononce.
+La citation reste juste, et son sens peut s’inverser.
+Les quatre mouvements se cumulent souvent.
 Un auteur reprend une formule ancienne, la circulation la simplifie, puis l’attache à un nom plus célèbre : à chaque étape, l’autorité du nom remplace un peu plus la preuve du texte.
 Une citation qui quitte son œuvre change parfois de mots, parfois d’auteur, et toujours de contexte.
 La vérification des citations de Livresque des mots va dans le même sens pour ces cinq auteurs.
@@ -393,7 +396,7 @@ Lire les citations dans leur texte
 Livresque des mots
 Anthologie inédite & éclectique de citations
 Cette page relit vingt citations.
-Livresque des mots en réunit 4 656, de 1 387 voix, que l’édition 2026 a réexaminées une à une, texte et paternité : quand la formulation d’origine a pu être établie, c’est elle que le livre imprime, et quand la paternité reste discutée, la ligne d’auteur le dit.
+Livresque des mots en réunit 4 656, de 1 390 voix, que l’édition 2026 a réexaminées une à une, texte et paternité : quand la formulation d’origine a pu être établie, c’est elle que le livre imprime, et quand la paternité reste discutée, la ligne d’auteur le dit.
 Journalistes, enseignants, chercheurs, responsables publics ou associatifs
 Exemplaire numérique de consultation offert, sans contrepartie, dans la limite du stock ; compte Amazon.fr requis.
 Votre exemplaire, disponible immédiatement →
