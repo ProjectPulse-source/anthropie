@@ -188,7 +188,10 @@ def calcul(off, dyn, taux, solde, inv, doc):
                        "ecart_pct": round((dd - deficit) / deficit * 100, 1)})
     c["F2"] = {"annees": f2, "n": len(f2), "somme_def": round(sum(x["deficit"] for x in f2), 1),
                "somme_var": round(sum(x["var_dette"] for x in f2), 1),
-               "n_sup20": sum(abs(x["ecart_pct"]) > 20 for x in f2), "an0": f2[0]["annee"], "an1": f2[-1]["annee"]}
+               "n_sup20": sum(abs(x["ecart_pct"]) > 20 for x in f2), "an0": f2[0]["annee"], "an1": f2[-1]["annee"],
+               # sans 2025, inconnue le 8 septembre 2025 (contre-expertise entrante du 27/11/2026, point D2)
+               "n_seance": sum(x["annee"] <= 2024 for x in f2),
+               "n_sup20_seance": sum(abs(x["ecart_pct"]) > 20 for x in f2 if x["annee"] <= 2024)}
 
     # F16 : déficit de 3 % et dette
     d25 = ratio[2025]
@@ -365,7 +368,7 @@ def mutation(c):
     elif m == "f2":
         for x in c["F2"]["annees"]:
             x["ecart_pct"] = 1.0
-        c["F2"]["n_sup20"] = 0
+        c["F2"]["n_sup20"] = 0; c["F2"]["n_sup20_seance"] = 0
     elif m == "f3":
         c["F3"]["r_haut"] = 2.1
     elif m == "f4":
@@ -412,6 +415,7 @@ def gardes(c):
     g(len(f1["primaire_positif"]) >= 1, "F1 variante : le solde hors intérêts a été positif certaines années")
     f2 = c["F2"]
     g(f2["n_sup20"] / f2["n"] > 0.4, "F2 « l'écart dépasse 20 % du déficit plus de quatre années sur dix »")
+    g(f2["n_sup20_seance"] / f2["n_seance"] > 0.4, "F2 « plus de quatre années sur dix » tient aussi sans 2025, inconnue le jour de la séance")
     g(abs(f2["somme_var"] / f2["somme_def"] - 1) < 0.06, "F2 « sur trente ans, les cumuls sont proches (moins de 6 %) »")
     f16 = c["F16"]
     g(f16["g25"] < f16["g_seuil"], "F16 « la croissance nominale de 2025 est restée sous le seuil qui stabilise le ratio à 3 % »")
@@ -554,7 +558,7 @@ def affichage(c, lang):
         "f1_prim": ("%d à %d" if lang == "fr" else "%d to %d") % (prim[0], prim[-1]) if prim == list(range(prim[0], prim[-1] + 1)) else ", ".join(map(str, prim)),
         "f1_prim_n": str(len(prim)), "f1_prim_l": lg.lettres(len(prim), lang),
         "f2_n": str(f2["n"]), "f2_sup": str(f2["n_sup20"]), "f2_def": n0(f2["somme_def"]), "f2_var": n0(f2["somme_var"]),
-        "f2_an0": str(f2["an0"]), "f2_an1": str(f2["an1"]), "f2_ecart_cumul": n0(abs(f2["somme_var"] / f2["somme_def"] - 1) * 100),
+        "f2_an0": str(f2["an0"]), "f2_an1": str(f2["an1"]), "f2_n_s": str(f2["n_seance"]), "f2_sup_s": str(f2["n_sup20_seance"]), "f2_ecart_cumul": n0(abs(f2["somme_var"] / f2["somme_def"] - 1) * 100),
         "f2_2020": n0(next(x["ecart"] for x in f2["annees"] if x["annee"] == 2020)),
         "f16_dette": n1(f16["dette_pct"]), "f16_g25": n2(f16["g25"]), "f16_stab": n2(f16["stab_g25"]), "f16_stab3": n2(f16["stab_g3"]),
         "f16_seuil": n2(f16["g_seuil"]), "f16_eur": n0(round(f16["euros_3pct"], -1)),  # ordre de grandeur arrondi : le PIB de l'année ne fait pas le verdict (audit du 05/11/2026)

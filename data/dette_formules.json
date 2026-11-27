@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-16",
+ "releve_le": "2026-11-27",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources Assemblée nationale, Insee, Eurostat, Cour des comptes, Gouvernement, Sénat, Banque de France, Banque de Grèce",
  "meta": {
   "page": "https://stephane-lalut.com/formules-du-debat-sur-la-dette/",
@@ -470,7 +470,9 @@
   "somme_var": 2758.5,
   "n_sup20": 13,
   "an0": 1996,
-  "an1": 2025
+  "an1": 2025,
+  "n_seance": 29,
+  "n_sup20_seance": 13
  },
  "F16": {
   "dette_pct": 115.682,
@@ -1884,6 +1886,8 @@
   "f2_var": "2 758",
   "f2_an0": "1996",
   "f2_an1": "2025",
+  "f2_n_s": "29",
+  "f2_sup_s": "13",
   "f2_ecart_cumul": "4",
   "f2_2020": "70",
   "f16_dette": "115,7",
@@ -2178,6 +2182,8 @@
   "f2_var": "2,758",
   "f2_an0": "1996",
   "f2_an1": "2025",
+  "f2_n_s": "29",
+  "f2_sup_s": "13",
   "f2_ecart_cumul": "4",
   "f2_2020": "70",
   "f16_dette": "115.7",
