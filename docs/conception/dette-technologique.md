@@ -28,8 +28,7 @@ Le numérique est immatériel ; « dette technologique » désigne la dette tech
 
 ### Découverte principale
 
-Trois opérations (engagement, garantie, irréversibilisation) convertissent un coût en dette, sur quatre registres couplés — énergie, matière, territoire et, à titre de registre possible seulement, attention. Porté par relecture des sources du 13/11/2026, `LOTS
-otions-a\SOURCES\dette-technologique_R1.md`, l. 66 et 70 (conforme à AWP-06, p. 2 et 6) et P1-1 (l'attention n'est pas une dette constituée, AWP-06 p. 5).
+Trois opérations (engagement, garantie, irréversibilisation) convertissent un coût en dette, sur quatre registres couplés — énergie, matière, territoire et, à titre de registre possible seulement, attention. Porté par relecture des sources du 13/11/2026, `LOTS\notions-a\SOURCES\dette-technologique_R1.md`, l. 66 et 70 (conforme à AWP-06, p. 2 et 6) et P1-1 (l'attention n'est pas une dette constituée, AWP-06 p. 5).
 
 ### Mécanisme explicatif
 

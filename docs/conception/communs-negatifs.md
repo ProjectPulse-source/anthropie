@@ -32,8 +32,7 @@ Les communs négatifs inversent la figure d'Ostrom : la chose partagée est une 
 
 ### Mécanisme explicatif
 
-Lecture anthropique, au titre d'hypothèse : quand le désordre déplacé s'accumule et que le réceptacle sature — ce qui n'est jamais obligé —, ce qui reste devient un héritage matériel. Borné par la relecture des sources du 13/11/2026 (`LOTS
-otions-a\SOURCES\communs-negatifs_R1.md`, P2-6 : hypothèse posée en fait, saturation donnée pour obligée).
+Lecture anthropique, au titre d'hypothèse : quand le désordre déplacé s'accumule et que le réceptacle sature — ce qui n'est jamais obligé —, ce qui reste devient un héritage matériel. Borné par la relecture des sources du 13/11/2026 (`LOTS\notions-a\SOURCES\communs-negatifs_R1.md`, P2-6 : hypothèse posée en fait, saturation donnée pour obligée).
 
 ### Preuve décisive
 
