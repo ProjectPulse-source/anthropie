@@ -147,7 +147,7 @@
 <text x="292.0" y="440" font-size="13.5" fill="#6f6c66" text-anchor="end">+20</text>
 <text x="0" y="458" font-size="13.5" fill="#6f6c66">points de score, 2025 moins 2015</text>
 <line x1="0" y1="472.0" x2="300" y2="472.0" stroke="#dcd8d3"/>
-<text x="0" y="493.0" font-size="13.5" fill="#55524f">OCDE, PISA 2025, volume I, tableaux</text>
+<text x="0" y="493.0" font-size="13.5" fill="#55524f">OCDE, PISA 2025, volume I, tableaux</text>
 <text x="0" y="510.0" font-size="13.5" fill="#55524f">I.B1.2a.36 à 38 (variation du score</text>
 <text x="0" y="527.0" font-size="13.5" fill="#55524f">moyen entre 2015 et 2025)</text>
 <text x="0" y="548.0" font-size="13.5" fill="#55524f">Chaque point est un pays membre de</text>
@@ -157,6 +157,6 @@
 <text x="0" y="616.0" font-size="13.5" fill="#55524f">(du premier au troisième quartile).</text>
 <text x="0" y="633.0" font-size="13.5" fill="#55524f">Rangs sur estimations ponctuelles ;</text>
 <text x="0" y="650.0" font-size="13.5" fill="#55524f">différences entre pays non testées.</text>
-<text x="0" y="671.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
+<text x="0" y="671.0" font-size="13.5" fill="#6f6c66">Calcul Stéphane Lalut, CC BY 4.0</text>
 <text x="0" y="688.0" font-size="13.5" fill="#6f6c66">· stephane-lalut.com</text>
 </svg>

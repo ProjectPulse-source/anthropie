@@ -1,0 +1,193 @@
+{
+ "releve_le": "2026-11-27",
+ "protocole": "PROTOCOLE_10.md (SHA-256 0FCABF41C00C0A3EEB9B08C633095F087D6F51F758FEC83BFF322CE75E9277E1)",
+ "sources": {
+  "mathematiques": "DEPP, NI 20.33 et 20.34 (septembre 2020), figure 1, valeurs transcrites (lecture au navigateur, captures archivees)",
+  "sciences": "DEPP, NI 26.12 et 26.13 (avril 2026), figure 1 (gras lu dans le PDF)",
+  "francais": "DEPP, NI 22.28 et 22.29 (2022), donnees, Fig 2 (gras lu dans le tableur)"
+ },
+ "series": {
+  "sciences ecole": {
+   "2007": {
+    "score": 250.0,
+    "et": 50.0,
+    "sig": false
+   },
+   "2013": {
+    "score": 249.0,
+    "et": 52.0,
+    "sig": false
+   },
+   "2018": {
+    "score": 249.0,
+    "et": 43.0,
+    "sig": false
+   },
+   "2024": {
+    "score": 246.0,
+    "et": 44.0,
+    "sig": false
+   }
+  },
+  "sciences college": {
+   "2007": {
+    "score": 250.0,
+    "et": 50.0,
+    "sig": false
+   },
+   "2013": {
+    "score": 250.0,
+    "et": 50.0,
+    "sig": false
+   },
+   "2018": {
+    "score": 238.0,
+    "et": 49.0,
+    "sig": true
+   },
+   "2024": {
+    "score": 232.0,
+    "et": 48.0,
+    "sig": true
+   }
+  },
+  "francais ecole": {
+   "2003": {
+    "score": 250.0,
+    "et": 50.0,
+    "sig": false
+   },
+   "2009": {
+    "score": 251.0,
+    "et": 48.0,
+    "sig": false
+   },
+   "2015": {
+    "score": 251.0,
+    "et": 43.0,
+    "sig": false
+   },
+   "2021": {
+    "score": 254.3,
+    "et": 45.9,
+    "sig": true
+   }
+  },
+  "francais college": {
+   "2015": {
+    "score": 250.0,
+    "et": 50.0,
+    "sig": false
+   },
+   "2021": {
+    "score": 246.6,
+    "et": 49.3,
+    "sig": false
+   }
+  },
+  "mathematiques ecole": {
+   "2008": {
+    "score": 250.0,
+    "et": 50.0,
+    "sig": false
+   },
+   "2014": {
+    "score": 249.0,
+    "et": 52.0,
+    "sig": false
+   },
+   "2019": {
+    "score": 232.0,
+    "et": 54.0,
+    "sig": true
+   }
+  },
+  "mathematiques college": {
+   "2008": {
+    "score": 250.0,
+    "et": 50.0,
+    "sig": false
+   },
+   "2014": {
+    "score": 243.0,
+    "et": 50.0,
+    "sig": true
+   },
+   "2019": {
+    "score": 237.0,
+    "et": 54.0,
+    "sig": true
+   }
+  }
+ },
+ "verdicts": {
+  "francais college": {
+   "intervalle": [
+    2015,
+    2021
+   ],
+   "variation": -3.4000000000000057,
+   "significatif": false,
+   "sens": "baisse non significative"
+  },
+  "francais ecole": {
+   "intervalle": [
+    2015,
+    2021
+   ],
+   "variation": 3.3000000000000114,
+   "significatif": true,
+   "sens": "hausse significative"
+  },
+  "mathematiques college": {
+   "intervalle": [
+    2014,
+    2019
+   ],
+   "variation": -6.0,
+   "significatif": true,
+   "sens": "baisse significative"
+  },
+  "mathematiques ecole": {
+   "intervalle": [
+    2014,
+    2019
+   ],
+   "variation": -17.0,
+   "significatif": true,
+   "sens": "baisse significative"
+  },
+  "sciences college": {
+   "intervalle": [
+    2018,
+    2024
+   ],
+   "variation": -6.0,
+   "significatif": true,
+   "sens": "baisse significative"
+  },
+  "sciences ecole": {
+   "intervalle": [
+    2018,
+    2024
+   ],
+   "variation": -3.0,
+   "significatif": false,
+   "sens": "baisse non significative"
+  }
+ },
+ "N27_maths_baisse_2014_2019_deux_niveaux": true,
+ "maths_2019_passage_ecran": true,
+ "temoin_hcsp": {
+  "hcsp": {
+   "maths_cm2": -0.35,
+   "maths_3e": -0.24,
+   "sciences_3e": -0.36
+  },
+  "calcule": {
+   "maths_cm2": -0.36,
+   "maths_3e": -0.26,
+   "sciences_3e": -0.36
+  }
+ }
+}

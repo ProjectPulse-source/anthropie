@@ -236,6 +236,63 @@ test_positionnement_seconde_score_moyen,Pro maths,2022,199.0,points (echelle 250
 test_positionnement_seconde_score_moyen,Pro maths,2023,205.0,points (echelle 250/50 en 2019)
 test_positionnement_seconde_score_moyen,Pro maths,2024,205.0,points (echelle 250/50 en 2019)
 test_positionnement_seconde_score_moyen,Pro maths,2025,202.0,points (echelle 250/50 en 2019)
+test_positionnement_seconde_score_moyen,GT francais,2026,262.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie)"
+test_positionnement_seconde_score_moyen,GT maths,2026,259.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie)"
+test_positionnement_seconde_score_moyen,Pro francais,2026,207.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie)"
+test_positionnement_seconde_score_moyen,Deux voies francais,2019,251.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie) ; valeurs ecrites dans le texte de la DEPP"
+test_positionnement_seconde_score_moyen,Deux voies francais,2021,260.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie) ; valeurs ecrites dans le texte de la DEPP"
+test_positionnement_seconde_score_moyen,Deux voies francais,2025,251.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie) ; valeurs ecrites dans le texte de la DEPP"
+test_positionnement_seconde_score_moyen,Deux voies francais,2026,249.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie) ; valeurs ecrites dans le texte de la DEPP"
+test_positionnement_seconde_score_moyen,Deux voies maths,2025,247.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie) ; valeurs ecrites dans le texte de la DEPP"
+test_positionnement_seconde_score_moyen,Deux voies maths,2026,245.0,"points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie) ; valeurs ecrites dans le texte de la DEPP"
+cedre_score_moyen,sciences / fin d'ecole (CM2),2007,250.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,sciences / fin d'ecole (CM2),2013,249.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,sciences / fin d'ecole (CM2),2018,249.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,sciences / fin d'ecole (CM2),2024,246.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,sciences / fin de college (troisieme),2007,250.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,sciences / fin de college (troisieme),2013,250.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,sciences / fin de college (troisieme),2018,238.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente significative (DEPP)
+cedre_score_moyen,sciences / fin de college (troisieme),2024,232.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente significative (DEPP)
+cedre_score_moyen,francais / fin d'ecole (CM2),2003,250.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,francais / fin d'ecole (CM2),2009,251.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,francais / fin d'ecole (CM2),2015,251.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,francais / fin d'ecole (CM2),2021,254.3,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente significative (DEPP)
+cedre_score_moyen,francais / fin de college (troisieme),2015,250.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,francais / fin de college (troisieme),2021,246.6,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,mathematiques / fin d'ecole (CM2),2008,250.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,mathematiques / fin d'ecole (CM2),2014,249.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,mathematiques / fin d'ecole (CM2),2019,232.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente significative (DEPP)
+cedre_score_moyen,mathematiques / fin de college (troisieme),2008,250.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente non significative ou premiere annee (DEPP)
+cedre_score_moyen,mathematiques / fin de college (troisieme),2014,243.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente significative (DEPP)
+cedre_score_moyen,mathematiques / fin de college (troisieme),2019,237.0,points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente significative (DEPP)
+depp_debut_sixieme_score_moyen,francais,2017,250.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2018,254.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2019,255.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2020,261.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2021,261.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2022,257.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2023,257.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2024,256.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2025,256.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,francais,2026,255.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2017,250.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2018,249.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2019,249.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2020,253.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2021,254.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2022,253.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2023,254.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2024,254.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2025,254.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_sixieme_score_moyen,mathematiques,2026,253.0,"points (echelle 250/50 en 2017 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_quatrieme_score_moyen,francais,2023,250.0,"points (echelle 250/50 en 2023 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_quatrieme_score_moyen,francais,2024,248.0,"points (echelle 250/50 en 2023 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_quatrieme_score_moyen,francais,2025,247.0,"points (echelle 250/50 en 2023 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_quatrieme_score_moyen,francais,2026,243.0,"points (echelle 250/50 en 2023 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_quatrieme_score_moyen,mathematiques,2023,250.0,"points (echelle 250/50 en 2023 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_quatrieme_score_moyen,mathematiques,2024,249.0,"points (echelle 250/50 en 2023 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_quatrieme_score_moyen,mathematiques,2025,250.0,"points (echelle 250/50 en 2023 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
+depp_debut_quatrieme_score_moyen,mathematiques,2026,248.0,"points (echelle 250/50 en 2023 ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)"
 depp_ecart_generations_2021_2024,Tests de positionnement de seconde / Français,100 x d de Cohen,-12.54,centiemes d'ecart-type
 depp_ecart_generations_2021_2024,Tests de positionnement de seconde / Mathématiques,100 x d de Cohen,9.2,centiemes d'ecart-type
 depp_ecart_generations_2021_2024,PISA / Compréhension de l'écrit,100 x d de Cohen,-16.15,centiemes d'ecart-type

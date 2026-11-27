@@ -85,6 +85,30 @@ complète fonctionne sans attendre le prochain push naturel ou le 1er du mois.
 
 ## 0. Log chronologique
 
+### 2026-11-27 (soir) — Niveau des élèves : CEDRE et évaluations nationales 2026, avis externe arbitré (lot `niveau-depp-2026`)
+
+- **`/le-niveau-des-eleves-baisse-t-il/`** : la version en ligne disait que les évaluations passées en classe ne mettent
+  pas en évidence la même baisse récente que PISA — vrai de PIRLS et de TIMSS, faux de CEDRE (baisses significatives en
+  mathématiques, 2014-2019, et en sciences en fin de collège, 2018 et 2024) et des évaluations nationales (recul en
+  français depuis le début des années 2020, sans test publié). Chapô, repères, synthèse en trois résultats, questions
+  fréquentes, grilles CEDRE et évaluations nationales (organe `grille-reperes`), millésime 2026 des évaluations nationales.
+- Protocoles 9 et 10 (`D:\PRO\06_PROMOTION\RECHERCHE_LYCEES_NIVEAU_2026-10-07\`), extraits et empreintes dans
+  `scripts/sources_niveau_eleves/` ; `update_niveau_eleves.py` : 138 gardes, 42 mutations vues mordre ; jeu JSON et CSV
+  augmentés.
+- Avis externe à l'aveugle archivé et arbitré (`D:\PRO\06_PROMOTION\INTELLIGIBILITE_RESSOURCES_2026-11-11\LOTS\niveau-depp-2026\`) :
+  repondération sans la classe écrite dans le corps avec sa limite (`VERDICT_6`) ; « significatif » défini par le test ;
+  variation sans test publié décrite sans seuil, « stable » attribué à la DEPP ; juges neufs sur les passages changés
+  (un P1 de la méthode raccourcie corrigé : les doubles lectures détectent, elles n'arrêtent pas toutes le calcul).
+- **Passage du papier à l'écran de CEDRE** (mathématiques 2019, et sciences de fin de collège dès 2018, constat d'un juge
+  vérifié à la source) : réserve complète, symétrique et attribuée partout où ses baisses sont citées — la DEPP a mesuré
+  l'écart de difficulté entre supports et l'a reporté sur les scores (NI 19.33, 20.33, 20.34, paragraphes archivés dans
+  `RECHERCHE_LYCEES_NIVEAU_2026-10-07\pieces\cedre\`). Au chapô, la réserve porte sur CEDRE avant l'énumération : placée
+  après les sciences, les lecteurs du test du premier écran la rattachaient à elles seules.
+- Contrôles : `check-all --ci`, build, liens, rendu, dates, langue, lettre, captures de 320 à 1 440 px, premier écran
+  (deux lecteurs, témoin) ; instantané de relecture refait. Fiche de conception : étapes du 27/11 ; deux chemins coupés
+  par une barre inverse interprétée recousus dans `docs/conception/communs-negatifs.md` et `dette-technologique.md`.
+- Organe des repères (`e9127210`, poussé à 16 h 24 avec les commits des citations) : les repères entrent dans le texte relu.
+
 ### 2026-11-27 (fin d'après-midi) — Citations vérifiées : quatre mouvements ; règle des supports dérivés
 
 - **`/citations-celebres-verifiees/`** : la synthèse annonçait « trois manières » quand « Comment lire cette page » en

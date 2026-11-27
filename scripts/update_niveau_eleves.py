@@ -90,11 +90,21 @@ LETTRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8
 
 # ------------------------------------------------------------------ données
 def lire():
+    noms = []
     for ligne in (SRC / "SHA256SUMS").read_text(encoding="utf-8").splitlines():
         h, nom_ = ligne.split()
+        noms.append(nom_.lstrip("*"))
         if hashlib.sha256((SRC / nom_.lstrip("*")).read_bytes()).hexdigest() != h:
             fail("empreinte de %s differente de SHA256SUMS : extrait modifie hors du depot de recherche" % nom_)
-    return json.loads((SRC / "extrait_niveau.json").read_text(encoding="utf-8"))
+    if sorted(noms) != ["extrait_niveau.json", "extrait_niveau_10.json", "extrait_niveau_9.json"]:
+        fail("SHA256SUMS ne couvre pas exactement les trois extraits : %s" % noms)
+    X = json.loads((SRC / "extrait_niveau.json").read_text(encoding="utf-8"))
+    # Protocoles 9 et 10 (27/11/2026) : évaluations nationales de la DEPP au millésime 2026 (sixième, quatrième, seconde)
+    # et CEDRE (mathématiques, sciences, français), extraits distincts écrits par calc_niveau_9.py et calc_niveau_10.py du
+    # dépôt de recherche ; le premier extrait reste celui du 12/11/2026.
+    X["p9"] = json.loads((SRC / "extrait_niveau_9.json").read_text(encoding="utf-8"))
+    X["p10"] = json.loads((SRC / "extrait_niveau_10.json").read_text(encoding="utf-8"))
+    return X
 
 
 def calcul(X):
@@ -117,7 +127,9 @@ def calcul(X):
         seconde_gt=X["p2_composition_sciences"]["parts_2025"]["b_seconde_gt"],
         seconde_pro=X["p2_composition_sciences"]["parts_2025"]["c_seconde_pro_cap"],
         sec=X["seconde"], timss=X["timss_adv"], gen=gen, p1=p1, p2={int(a): v for a, v in X["p2"].items()},
-        p3=X["p3"], p4=X["p4"], releve=X["releve_le"],
+        p3=X["p3"], p4=X["p4"], releve=max(X["releve_le"], X["p9"]["releve_le"], X["p10"]["releve_le"]),
+        dn={k: {int(a): v for a, v in s.items()} for k, s in X["p9"]["series"].items()}, p9=X["p9"],
+        ce={k: {int(a): v for a, v in s.items()} for k, s in X["p10"]["series"].items()}, p10=X["p10"],
         t3=X["p3_timss_pisa_maths"], t4=X["p4_timss_pisa_facteurs"], p5=X["p5_donnees_individuelles"],
         p6=X["p6_composition_conjointe"], p7=X["p7_controles"], p8=X["p8_premiere"],
         comp=X["p2_composition_sciences"], pct=X["p2_percentiles"], eff=X["p2_effort"], ae=X["p2_autres_evaluations"],
@@ -192,6 +204,10 @@ def mutation(c):
     elif m == "quarts_hisei":  # avec la profession des parents, la médiane d'un quart ne reculerait pas
         c["p7"] = json.loads(json.dumps(c["p7"]))
         c["p7"]["A"]["I1"]["lecture"]["P50"]["1"] = [-2.0, 7.9]
+    elif m == "sans_classe":  # sans la classe, la repondération n'effacerait plus la baisse en sciences
+        c["p6"] = json.loads(json.dumps(c["p6"]))
+        x = c["p6"]["N22"]["social_sans_classe"]["sciences"]
+        x["rec"] = x["m25"]
     elif m == "cas_complets":  # sur les élèves à la famille renseignée, la repondération réduirait la baisse en lecture
         c["p7"] = json.loads(json.dumps(c["p7"]))
         x = c["p7"]["B"]["B3"]["lecture"]
@@ -220,9 +236,56 @@ def mutation(c):
         c["page_mut"] = ('fort: "Pas la même baisse récente"', 'fort: "Pas la même baisse récente, 3 points"')
     elif m == "bloc_saisi_seconde":  # une valeur saisie dans le résultat en une phrase de la section « seconde »
         c["page_mut"] = ("en mathématiques, il monte quand celui de PISA baisse.", "en mathématiques, il monte de 7 points quand celui de PISA baisse.")
+    elif m in ("cedre_sciences", "cedre_maths"):   # protocole 10 (27/11/2026)
+        c["ce"] = json.loads(json.dumps({k: {str(a): v for a, v in s.items()} for k, s in c["ce"].items()}))
+        c["ce"] = {k: {int(a): v for a, v in s.items()} for k, s in c["ce"].items()}
+        if m == "cedre_sciences":   # la baisse de 2024 des sciences en fin de collège ne serait plus significative
+            c["ce"]["sciences college"][2024]["sig"] = False
+        else:                       # la baisse de 2019 en fin d'école ne serait plus significative
+            c["ce"]["mathematiques ecole"][2019]["sig"] = False
+    elif m in ("nationales_fr", "nationales_ma", "plus_bas", "seconde_2026", "toulouse", "sensibilite_ma",
+               "ma_2526"):   # protocole 9
+        c["dn"] = {k: dict(v) for k, v in c["dn"].items()}
+        c["p9"] = json.loads(json.dumps(c["p9"]))
+        if m == "nationales_fr":    # la sixième n'aurait pas reculé en français depuis 2021
+            c["dn"]["sixieme francais"][2026] = c["dn"]["sixieme francais"][2021]
+        elif m == "nationales_ma":  # en mathématiques, les trois évaluations reculeraient toutes depuis 2021
+            c["dn"]["sixieme mathematiques"][2026] -= 4
+            c["dn"]["seconde_gt mathematiques"][2026] -= 8
+            c["p9"]["seconde_deux_voies_phrases"]["ma_2019_2021"] = [4.0]
+        elif m == "plus_bas":       # la seconde, deux voies, ne serait plus à son plus bas depuis 2019 en français
+            c["dn"]["seconde_2v francais"][2026] = 252.0
+        elif m == "seconde_2026":   # la seconde générale et technologique ne serait plus stable en français en 2026
+            c["dn"]["seconde_gt francais"][2026] -= 4
+        elif m == "sensibilite_ma":  # la seconde, deux voies, ne serait plus sous son niveau de 2019 en mathématiques
+            c["p9"]["seconde_deux_voies_phrases"]["ma_2019_2026"] = [0.0]
+        elif m == "ma_2526":        # la seconde, deux voies, ne perdrait rien en mathématiques de 2025 à 2026
+            c["dn"]["seconde_2v mathematiques"][2025] = c["dn"]["seconde_2v mathematiques"][2026]
+        else:                       # les résultats de 2026 incluraient l'académie de Toulouse
+            c["p9"]["toulouse_absente_2026"] = False
     elif m is not None:
         fail("mutation inconnue : %s" % m)
     return m
+
+
+FEN9 = {"sixieme": 2021, "quatrieme": 2023, "seconde_gt": 2021, "seconde_2v": 2021}   # PROTOCOLE_9.md, R9-4
+DEB9 = {"sixieme": 2017, "quatrieme": 2023, "seconde_gt": 2019, "seconde_2v": 2019}
+
+
+def variations_p9(c):
+    """(évaluation, discipline) -> (depuis la fenêtre principale, depuis le début de la série, de 2025 à 2026), recalculés
+    sur les séries de l'extrait 9. Seconde, deux voies, mathématiques : la DEPP n'écrit que 2025, 2026 et des variations
+    (2019-2026, 2019-2021) ; la variation 2021-2026 s'en déduit, sans valeur lue sur un graphique."""
+    dn, out = c["dn"], {}
+    for ev in FEN9:
+        for dom in ("francais", "mathematiques"):
+            s = dn["%s %s" % (ev, dom)]
+            if ev == "seconde_2v" and dom == "mathematiques":
+                ph = c["p9"]["seconde_deux_voies_phrases"]
+                out[(ev, dom)] = (-ph["ma_2019_2026"][0] + ph["ma_2019_2021"][0], -ph["ma_2019_2026"][0], s[2026] - s[2025])
+            else:
+                out[(ev, dom)] = (s[2026] - s[FEN9[ev]], s[2026] - s[DEB9[ev]] if DEB9[ev] in s else None, s[2026] - s[2025])
+    return out
 
 
 # ------------------------------------------------------------------ gardes : chaque qualificatif de la prose
@@ -300,7 +363,18 @@ def gardes(c):
       "composition conjointe : la baisse « ne diminue pas » dans les trois domaines")
     variantes = [p6["N22"][k] for k in ("a_classe_x_diplome", "b_diplome_deux_groupes", "c_avec_profession")] + [B7[k] for k in ("B2", "B3", "B4")]
     g(all(v[d]["rec"] - v[d]["m25"] < 1 for v in variantes for d in ("mathematiques", "lecture", "sciences")),
-      "composition conjointe : « dans aucune variante, la baisse ne diminue de plus d'un point »")
+      "composition conjointe : « dans les variantes calculées avec la classe, la baisse n'est jamais inférieure de plus "
+      "d'un point à la baisse observée » (rec - m25 < 1 : écart à la baisse observée, non à la spécification centrale)")
+    # 27/11/2026 (vérification contradictoire ; VERDICT_6, décomposition descriptive) : sans la classe, la repondération
+    # sur le sexe, le diplôme et l'origine « ramène la baisse » en mathématiques et en lecture et « l'efface presque » en
+    # sciences ; avec la classe, « les deux mouvements se compensent presque exactement ».
+    sc, ce = p6["N22"]["social_sans_classe"], p6["N22"]["central"]
+    dec, obs = (lambda x: x["m15"] - x["rec"]), (lambda x: x["m15"] - x["m25"])
+    g(all(obs(sc[d]) - dec(sc[d]) >= 5 for d in ("mathematiques", "lecture"))
+      and dec(sc["sciences"]) < 1.5 <= obs(sc["sciences"]) and all(abs(x["s"]) <= 0.1 for x in ce.values()),
+      "composition sans la classe : baisse « ramenée » en mathématiques et en lecture, « presque effacée » en sciences ; "
+      "avec la classe, « dont la repondération accroît la baisse » (garde du protocole 5, N18, plus haut), « les deux "
+      "mouvements se compensent presque exactement »")
     g(all(B7["B3"][d]["rec"] <= B7["B3"][d]["m25"] for d in ("mathematiques", "lecture", "sciences")),
       "composition conjointe : sur les élèves à la famille renseignée, la repondération « ne réduit pas non plus la baisse »")
     g(B7["B5"]["ecart_max"] < 1, "composition conjointe : croisements retrouvés « à moins d'un point »")
@@ -370,8 +444,9 @@ def gardes(c):
     # « l'écart au premier quartile est du même ordre que la marge d'erreur de la variation française » (maths)
     eq = m["q1"] - m["france"]
     g(0.5 <= eq / P["mathematiques"]["dif"]["2015"]["se"] <= 2.0, "maths : écart au premier quartile « du même ordre » que l'erreur type")
-    # « l'essentiel s'est produit depuis 2018 » : la baisse 2018-2025 dépasse celle de 2015-2018, dans chaque domaine
-    for d in DOM:
+    # « en lecture et en mathématiques, l'essentiel s'est produit depuis 2018 » : la baisse 2018-2025 dépasse celle de
+    # 2015-2018 (en sciences, les deux sous-périodes ne sont pas significatives : la phrase ne les couvre plus, 27/11/2026)
+    for d in ("lecture", "mathematiques"):
         f_ = P[d]["france"]
         g(f_["2015"] - f_["2018"] < f_["2018"] - f_["2025"], "%s : « l'essentiel depuis 2018 »" % d)
     # « sans les N pays dont l'échantillon ne respecte pas toutes les normes » (nombre écrit en lettres)
@@ -410,7 +485,8 @@ def gardes(c):
               for p in ("P90", "P50") for q in "1234"),
       "mesures comparables : le sommet et la médiane « reculent aussi dans chaque quart »")
     # échantillon : « près de huit sur dix au lycée »
-    g(c["lycee"] >= 85, "« PISA parle bien de l'entrée au lycée » : au moins 85 % des jeunes de 15 ans représentés sont au lycée")
+    g(c["lycee"] >= 85, "« PISA mesure donc surtout, en France, les compétences d'élèves qui viennent d'entrer au lycée » : "
+      "au moins 85 % des jeunes de 15 ans représentés sont au lycée")
     g(c["seconde_gt"] > 50, "« plus de la moitié en seconde générale et technologique »")
     # N4 : sens contraire en mathématiques, même sens en français ; DEPP : idem en standardisé
     sec = c["sec"]
@@ -433,6 +509,85 @@ def gardes(c):
     # P2/P3 : « de moitié » ; au secondaire plus que l'OCDE, l'inverse avec le primaire
     p2 = c["p2"]
     g(1.4 <= p2[max(p2)] / p2[min(p2)] <= 1.6, "P2 : « a augmenté de moitié »")
+    # Protocole 9 (27/11/2026) : évaluations nationales de la DEPP, millésime 2026. Chaque qualificatif du chapô, de la
+    # description, de la liste, de la grille, du paragraphe qui la suit, de la seconde 2026, de la synthèse, des questions
+    # fréquentes et de « Réutiliser » est recalculé sur les séries (variations_p9), jamais lu dans les verdicts écrits de
+    # l'extrait. Règles d'écriture de PROTOCOLE_9.md : « recul » ou « hausse » à deux points ou plus (R9-2).
+    dn, p9, v9 = c["dn"], c["p9"], variations_p9(c)
+    fr = {ev: v9[(ev, "francais")][0] for ev in FEN9}
+    g(all(d <= -2 for d in fr.values()),
+      "protocole 9 : « en français, les trois reculent » (depuis 2021, quatrième depuis 2023) -- lu : %s" % fr)
+    ma = {ev: v9[(ev, "mathematiques")][0] for ev in FEN9}
+    sens_ma = {"recul" if d <= -2 else ("hausse" if d >= 2 else "meme") for d in ma.values()}
+    g(len(sens_ma) > 1 and sens_ma != {"recul"},
+      "protocole 9 : « en mathématiques, elles ne vont pas dans le même sens », « mais pas toutes » -- lu : %s" % ma)
+    # 27/11/2026 (vérification contradictoire, règle A) : toute variation se décrit, sans seuil de deux points ; la
+    # grille écrit « 1 point de moins » pour la sixième (singulier : l'écart doit valoir exactement un point).
+    g(ma["sixieme"] == -1 and ma["quatrieme"] <= -2 and ma["seconde_2v"] >= 2,
+      "protocole 9, grille : sixième « 1 point de moins », quatrième « points de moins », seconde « points de plus »")
+    s2f = dn["seconde_2v francais"]
+    g(p9["seconde_deux_voies_phrases"]["fr_plus_bas_2019_2026"] and s2f[2026] == min(s2f.values()),
+      "protocole 9 : seconde, deux voies, français « le plus bas depuis 2019 »")
+    s6 = dn["sixieme francais"]
+    g(s6[2020] == s6[2021] == max(s6.values()) and s6[2017] < s6[2020] and s2f[2019] < s2f[2021],
+      "protocole 9 : en sixième et en seconde, le recul « suit une hausse jusqu'en 2020-2021 »")
+    g(v9[("sixieme", "francais")][1] >= 2, "protocole 9 : « la sixième reste au-dessus de 2017 »")
+    g(v9[("seconde_2v", "francais")][1] <= -1, "protocole 9 : la seconde, deux voies, « sous son niveau de 2019 »")
+    # 27/11/2026 : la DEPP écrit la sixième « stable » de 2025 à 2026 (2026-E24, p. 61) ; la page décrit la variation
+    # (règle A de la vérification contradictoire : aucun seuil) et attribue « stable » à la DEPP : « la quatrième perd
+    # N points, la seconde N et la sixième 1, que la DEPP juge stable ».
+    g(v9[("quatrieme", "mathematiques")][2] <= -2 and v9[("seconde_2v", "mathematiques")][2] <= -2
+      and -1 <= v9[("sixieme", "mathematiques")][2] < 0,
+      "protocole 9 : de 2025 à 2026, en mathématiques, « la quatrième perd N points, la seconde N et la sixième 1, que la "
+      "DEPP juge stable »")
+    ph9 = p9["seconde_deux_voies_phrases"]
+    g(v9[("sixieme", "mathematiques")][1] >= 2 and ph9["ma_2019_2021"][0] >= 2 and v9[("seconde_2v", "mathematiques")][0] >= 2
+      and v9[("seconde_2v", "mathematiques")][1] <= -2 and c["sec"]["GT maths"]["2019"] - c["sec"]["GT maths"]["2021"] >= 2,
+      "protocole 9 (R9-4), mathématiques : « le sens dépend de l'année de départ » (sixième au-dessus de 2017 ; seconde, "
+      "deux voies, recul de 2019 à 2021, hausse depuis 2021, sous 2019 en 2026 ; seconde GT plus haute en 2019 qu'en 2021)")
+    sig9 = p9["occurrences_significati"]
+    g(all(v == 0 for k, v in sig9.items() if "e26" not in k) and all(v <= 1 for k, v in sig9.items() if "e26" in k),
+      "protocole 9 : « la DEPP ne publie aucun test de significativité » (seule occurrence admise : 2026-E26, p. 13, hors statistique)")
+    g(p9["toulouse_absente_2026"] is True, "protocole 9 : « résultats de 2026 hors académie de Toulouse »")
+    g(p9["seconde_items_repris_2026"] is True and abs(dn["seconde_gt francais"][2026] - dn["seconde_gt francais"][2025]) <= 1
+      and dn["seconde_gt mathematiques"][2026] - dn["seconde_gt mathematiques"][2025] <= -2,
+      "protocole 9, seconde 2026 : « épreuves reprises à l'identique », « stable en français », « en baisse » en mathématiques")
+    g(all(p9["temoins"].values()), "protocole 9 : témoins du calcul (valeurs 2025 citées, étiquettes, texte de la seconde)")
+    g(all({int(a): v for a, v in c["sec"][k].items()} == {a: v for a, v in dn[k9].items() if a < 2026}
+          for k, k9 in (("GT francais", "seconde_gt francais"), ("GT maths", "seconde_gt mathematiques"),
+                        ("Pro francais", "seconde_pro francais"))),
+      "protocole 9 : la seconde 2019-2025 de l'extrait 9 est celle du premier extrait")
+    # Protocole 10 (27/11/2026) : CEDRE. Chaque qualificatif (« baisse significative », « ne varie pas significativement »,
+    # « hausse significative », passage à l'écran) est recalculé sur les séries et le gras lus par calc_niveau_10.py.
+    ce, p10 = c["ce"], c["p10"]
+
+    def evo(cle, a0, a1):
+        return ce[cle][a1]["score"] - ce[cle][a0]["score"], ce[cle][a1]["sig"]
+    d1, s1 = evo("mathematiques ecole", 2014, 2019)
+    d0, s0 = evo("mathematiques college", 2008, 2014)
+    d2, s2 = evo("mathematiques college", 2014, 2019)
+    g(d1 < 0 and s1 and d0 < 0 and s0 and d2 < 0 and s2 and p10["N27_maths_baisse_2014_2019_deux_niveaux"],
+      "CEDRE, mathématiques : baisse significative de 2014 à 2019 en fin d'école, de 2008 à 2014 et de 2014 à 2019 en fin de collège")
+    d0, s0 = evo("sciences college", 2013, 2018)
+    d1, s1 = evo("sciences college", 2018, 2024)
+    g(d0 < 0 and s0 and d1 < 0 and s1, "CEDRE, sciences : baisses significatives en fin de collège en 2018 puis en 2024")
+    g(not any(v["sig"] for v in ce["sciences ecole"].values()), "CEDRE, sciences : en fin d'école, « ne varie pas significativement »")
+    d0, s0 = evo("francais ecole", 2015, 2021)
+    g(d0 > 0 and s0 and not ce["francais college"][2021]["sig"],
+      "CEDRE, français : hausse significative en fin d'école, aucune variation significative en fin de collège (2015-2021)")
+    g(p10["maths_2019_passage_ecran"] is True, "CEDRE, mathématiques 2019 : passage à l'écran (réserve au contact)")
+    th = p10["temoin_hcsp"]
+    g(all(abs(th["calcule"][k] - th["hcsp"][k]) <= 0.03 for k in th["hcsp"]) and len(th["hcsp"]) == 3,
+      "CEDRE : témoin du HCSP sur les valeurs transcrites des mathématiques")
+    # CAPES (relecture R3, 27/11/2026) : la page nomme les « cinq disciplines suivies ici »
+    g(sorted(c["p1"]) == ["anglais", "histoire-geographie", "lettres modernes", "mathematiques", "physique-chimie"],
+      "CAPES : « les cinq disciplines suivies ici » (lettres modernes, mathématiques, histoire-géographie, anglais, physique-chimie)")
+    # Effort déclaré : « plus des neuf dixièmes » de la baisse demeurent, non-réponses en catégorie à part (protocole 5,
+    # N21). La relecture R1 (27/11/2026) relève que ce résultat tient à cette catégorie ; le calcul sur les seuls
+    # répondants (protocole 2, N10, écarté par un contrôle écrit d'avance) n'est pas dans l'extrait : décision de l'auteur
+    # (A_ARBITRER.md du lot niveau-depp-2026).
+    g(all(1 - c["p5"]["N21"][d] >= 0.9 for d in ("mathematiques", "lecture")),
+      "effort : « plus des neuf dixièmes » de la baisse demeurent, non-réponses en catégorie à part (N21)")
     # Blocs citables (12/11/2026, modèle : garde 6 de update_parcoursup.py) : les repères du haut de page et chaque
     # « résultat en une phrase » ne portent aucune VALEUR saisie, seulement des jetons. Les millésimes (1995-2025),
     # écrits en clair sur cette page depuis l'origine, restent permis, comme « CM1 » et les niveaux de PISA nommés
@@ -500,6 +655,28 @@ def affichage(c):
             A["%s_%s" % (k, a[2:])] = nb(sec[cle][a], 0)
     A["sm_v"] = nb(sec["GT maths"]["2024"] - sec["GT maths"]["2021"], 0)
     A["sf_v"] = nb(sec["GT francais"]["2021"] - sec["GT francais"]["2024"], 0)
+    # Protocole 9 (27/11/2026) : évaluations nationales de la DEPP, millésime 2026 -- séries lues par calc_niveau_9.py dans
+    # les tableurs de 2025 et le texte des documents de 2026 ; variations en valeur absolue, le sens est porté par le
+    # verbe et gardé (gardes « protocole 9 »).
+    dn = c["dn"]
+    for cle, k in (("sixieme francais", "six_fr"), ("sixieme mathematiques", "six_ma"), ("quatrieme francais", "q4_fr"),
+                   ("quatrieme mathematiques", "q4_ma"), ("seconde_gt francais", "sgt_fr"),
+                   ("seconde_gt mathematiques", "sgt_ma"), ("seconde_2v francais", "s2v_fr"),
+                   ("seconde_2v mathematiques", "s2v_ma"), ("seconde_pro francais", "spro_fr")):
+        for a, v in dn[cle].items():
+            A["%s_%s" % (k, str(a)[2:])] = nb(v, 0)
+    # Protocole 10 (27/11/2026) : CEDRE, scores par discipline, niveau et année (valeur du jeton : score arrondi)
+    for cle, k in (("mathematiques ecole", "ce_ma_e"), ("mathematiques college", "ce_ma_c"), ("sciences ecole", "ce_sc_e"),
+                   ("sciences college", "ce_sc_c"), ("francais ecole", "ce_fr_e"), ("francais college", "ce_fr_c")):
+        for a, v in c["ce"][cle].items():
+            A["%s_%s" % (k, str(a)[2:])] = nb(v["score"], 0)
+    for (ev, dom), (d_fen, d_deb, d_25) in variations_p9(c).items():
+        k = {"sixieme": "six", "quatrieme": "q4", "seconde_gt": "sgt", "seconde_2v": "s2v"}[ev] + "_" + dom[:2]
+        A[k + "_dfen"], A[k + "_d25"] = nb(abs(d_fen), 0), nb(abs(d_25), 0)
+        if d_deb is not None:
+            A[k + "_ddeb"] = nb(abs(d_deb), 0)
+    # seconde, deux voies, mathématiques : recul de 2019 à 2021 écrit par la DEPP (2026-E27), fenêtre de sensibilité (R9-4)
+    A["s2v_ma_d1921"] = nb(c["p9"]["seconde_deux_voies_phrases"]["ma_2019_2021"][0], 0)
     for (ev, dom), v in c["gen"].items():
         k = ("t" if ev.startswith("Tests") else "p") + ("m" if dom.startswith(("Math", "Culture")) else "f")
         A["g_" + k] = nb(abs(v["d100"]), 0)
@@ -532,6 +709,10 @@ def affichage(c):
     for d, k in (("mathematiques", "math"), ("lecture", "lect"), ("sciences", "sci")):
         x = p6["N22"]["central"][d]
         A["p6_%s_rec" % k] = nb(x["m15"] - x["rec"], 0)
+    # 27/11/2026 : baisse à la composition sociale de 2015 SANS la classe (décomposition descriptive du protocole 6)
+    for d, k in (("mathematiques", "math"), ("lecture", "lect")):
+        x = p6["N22"]["social_sans_classe"][d]
+        A["sansc_%s" % k] = nb(x["m15"] - x["rec"], 0)
     A["p6_dipl_nr15"], A["p6_dipl_nr25"] = (nb(v, 0) for v in p6["compo"]["diplome"]["manquant"])
     A["p6_orig_nr15"], A["p6_orig_nr25"] = (nb(v, 0) for v in p6["compo"]["origine"]["manquant"])
     for d, k in (("mathematiques", "math"), ("lecture", "lect")):
@@ -614,7 +795,7 @@ FIG = {
         titre="Quatre évaluations, la variation comparée en France",
         source="IEA (TIMSS 2023, rapport international) ; DEPP (PIRLS 2021, NI 23-21 ; test de positionnement de seconde, NI 26-22) ; OCDE (PISA 2025)",
         note="Chaque évaluation a son échelle : les points ne se comparent pas d'une ligne à l'autre. Point plein : test publié, significatif ou non ; point creux : aucun test publié. Couleur : sens de la variation.",
-        montre="Sur les périodes comparées, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde monte en mathématiques de 2021 à 2024, sans test publié. Ces écarts de significativité ne prouvent pas que les tendances diffèrent."),
+        montre="Sur les périodes comparées, différentes, PISA à 15 ans baisse significativement ; PIRLS en CM1 et TIMSS en CM1 et en quatrième ne mettent pas en évidence de baisse significative ; le score du test d'entrée en seconde, sans test publié, baisse en français et monte en mathématiques de 2021 à 2024. Ces écarts de significativité ne prouvent pas que les tendances diffèrent."),
     "sommet": dict(
         titre="Les élèves en difficulté et les meilleurs élèves, 2015 et 2025",
         source="OCDE, PISA 2025, volume I, tableaux I.B1.2a.34 et 35 ; moyenne de l'OCDE sur 35 pays comparables",
@@ -624,7 +805,7 @@ FIG = {
         titre="Test de seconde et PISA, cohortes largement correspondantes : écart 2021-2022 / 2024-2025",
         source="DEPP, Note d'Information 26-40, figure 11 web (tests de positionnement de seconde 2021 et 2024 ; PISA 2022 et 2025)",
         note="En centièmes d'écart-type (d de Cohen), calculé par la DEPP. Cohortes largement correspondantes, pas les mêmes élèves. Seconde : deux voies, sans test publié.",
-        montre="En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le score du test de seconde monte quand PISA baisse. Les deux épreuves ne mesurent ni les mêmes compétences ni les mêmes élèves."),
+        montre="En français, le test de seconde et PISA baissent tous les deux ; en mathématiques, le score du test de seconde monte quand PISA baisse. Les deux épreuves ne mesurent pas exactement les mêmes compétences, ni les mêmes élèves."),
 }
 
 
@@ -1101,6 +1282,24 @@ def csv_texte(c):
     for cle, s in c["sec"].items():
         for a, v in sorted(s.items()):
             w.writerow(["test_positionnement_seconde_score_moyen", cle, a, v, "points (echelle 250/50 en 2019)"])
+    # protocole 9 : 2026 (DT 2026-E27, hors academie de Toulouse) et les deux voies reunies (valeurs ecrites par la DEPP)
+    t26 = "points (echelle 250/50 en 2019 ; 2026 : DT 2026-E27, hors academie de Toulouse ; sans test publie)"
+    for cle9, cle in (("seconde_gt francais", "GT francais"), ("seconde_gt mathematiques", "GT maths"),
+                      ("seconde_pro francais", "Pro francais")):
+        w.writerow(["test_positionnement_seconde_score_moyen", cle, "2026", c["dn"][cle9][2026], t26])
+    for cle9, cle in (("seconde_2v francais", "Deux voies francais"), ("seconde_2v mathematiques", "Deux voies maths")):
+        for a, v in sorted(c["dn"][cle9].items()):
+            w.writerow(["test_positionnement_seconde_score_moyen", cle, str(a), v, t26 + " ; valeurs ecrites dans le texte de la DEPP"])
+    for cle, s in c["ce"].items():   # protocole 10 : CEDRE
+        disc, niv = cle.split()
+        for a, v in sorted(s.items()):
+            w.writerow(["cedre_score_moyen", "%s / %s" % (disc, "fin d'ecole (CM2)" if niv == "ecole" else "fin de college (troisieme)"),
+                        str(a), v["score"], "points (echelle 250/50 la premiere annee de la serie) ; evolution depuis l'evaluation precedente "
+                        + ("significative" if v["sig"] else "non significative ou premiere annee") + " (DEPP)"])
+    for cle9, tab, ref in (("sixieme francais", "depp_debut_sixieme_score_moyen", "2017"), ("sixieme mathematiques", "depp_debut_sixieme_score_moyen", "2017"),
+                           ("quatrieme francais", "depp_debut_quatrieme_score_moyen", "2023"), ("quatrieme mathematiques", "depp_debut_quatrieme_score_moyen", "2023")):
+        for a, v in sorted(c["dn"][cle9].items()):
+            w.writerow([tab, cle9.split()[1], str(a), v, "points (echelle 250/50 en %s ; evaluation exhaustive, sans test publie ; NI 26-21, DT 2026-E24 et E26 ; 2026 hors academie de Toulouse)" % ref])
     for (ev, dom), v in c["gen"].items():
         w.writerow(["depp_ecart_generations_2021_2024", ev + " / " + dom, "100 x d de Cohen", v["d100"], "centiemes d'ecart-type"])
     for d, t in c["timss"].items():
@@ -1182,6 +1381,11 @@ def main() -> int:
                             "variation_2022_2025": P[d]["dif"]["2022"], "pays_ocde_2015_2025": P[d]["n2"]["pays"],
                             "niveaux": P[d]["niveaux"], "ecart_social": P[d]["social"]} for d in DOM},
                "test_positionnement_seconde": c["sec"],
+               "evaluations_nationales_depp_2026": {k: c["p9"][k] for k in ("protocole", "sources", "series",
+                                                                             "seconde_deux_voies_phrases",
+                                                                             "toulouse_absente_2026", "verdicts")},
+               "cedre": {k: c["p10"][k] for k in ("protocole", "sources", "series", "verdicts", "maths_2019_passage_ecran",
+                                                   "temoin_hcsp")},
                "depp_ecart_generations": c["X"]["depp_generations"],
                "timss_advanced": c["timss"],
                "protocole_3_timss_pisa_maths": c["t3"],

@@ -1,0 +1,224 @@
+{
+ "releve_le": "2026-11-27",
+ "protocole": "PROTOCOLE_9.md (SHA-256 315072ECA43A5D0E8A7EBBEA521D3FF73099B1E7099B69E724E1B4C3620BC54F)",
+ "sources": {
+  "sixieme_quatrieme_2017_2025": "DEPP, NI 26.21, donnees (figures 1.1 a 4.1 web, ensemble)",
+  "seconde_2019_2025": "DEPP, NI 26.22, donnees (figures 1.1, 2.1, 4.1, 5.1 web, ensemble)",
+  "2026": {
+   "sixieme": "DEPP, DT 2026-E24, p. 42 et 61",
+   "quatrieme": "DEPP, DT 2026-E26, p. 42 et 61",
+   "seconde": "DEPP, DT 2026-E27, p. 59, 61, 64, 84 et 100"
+  }
+ },
+ "series": {
+  "sixieme francais": {
+   "2017": 250.0,
+   "2018": 254.0,
+   "2019": 255.0,
+   "2020": 261.0,
+   "2021": 261.0,
+   "2022": 257.0,
+   "2023": 257.0,
+   "2024": 256.0,
+   "2025": 256.0,
+   "2026": 255.0
+  },
+  "sixieme mathematiques": {
+   "2017": 250.0,
+   "2018": 249.0,
+   "2019": 249.0,
+   "2020": 253.0,
+   "2021": 254.0,
+   "2022": 253.0,
+   "2023": 254.0,
+   "2024": 254.0,
+   "2025": 254.0,
+   "2026": 253.0
+  },
+  "quatrieme francais": {
+   "2023": 250.0,
+   "2024": 248.0,
+   "2025": 247.0,
+   "2026": 243.0
+  },
+  "quatrieme mathematiques": {
+   "2023": 250.0,
+   "2024": 249.0,
+   "2025": 250.0,
+   "2026": 248.0
+  },
+  "seconde_gt francais": {
+   "2019": 263.0,
+   "2020": 272.0,
+   "2021": 272.0,
+   "2022": 270.0,
+   "2023": 268.0,
+   "2024": 268.0,
+   "2025": 263.0,
+   "2026": 262.0
+  },
+  "seconde_gt mathematiques": {
+   "2019": 263.0,
+   "2020": 260.0,
+   "2021": 255.0,
+   "2022": 257.0,
+   "2023": 260.0,
+   "2024": 262.0,
+   "2025": 261.0,
+   "2026": 259.0
+  },
+  "seconde_2v francais": {
+   "2019": 251.0,
+   "2021": 260.0,
+   "2025": 251.0,
+   "2026": 249.0
+  },
+  "seconde_2v mathematiques": {
+   "2025": 247.0,
+   "2026": 245.0
+  },
+  "seconde_pro francais": {
+   "2019": 210.0,
+   "2020": 215.0,
+   "2021": 219.0,
+   "2022": 217.0,
+   "2023": 215.0,
+   "2024": 214.0,
+   "2025": 209.0,
+   "2026": 207.0
+  }
+ },
+ "seconde_deux_voies_phrases": {
+  "fr_2019_2021": [
+   251.0,
+   260.0
+  ],
+  "fr_baisse_depuis_2021": [
+   -11.0
+  ],
+  "ma_2019_2026": [
+   6.0
+  ],
+  "ma_2021_2023": [
+   5.0
+  ],
+  "ma_2019_2021": [
+   8.0
+  ],
+  "gt_ma_2019": [
+   263.0,
+   259.0
+  ],
+  "fr_plus_bas_2019_2026": true,
+  "gt_fr_niveau_2019": true,
+  "ma_stable_2023_2025": true
+ },
+ "toulouse_absente_2026": true,
+ "occurrences_significati": {
+  "dt2026-e24_debut6e_2026_resultats_nov2026.pdf": 0,
+  "dt2026-e26_debut4e_2026_resultats_nov2026.pdf": 1,
+  "test_seconde_2026_resultats_nov2026.pdf": 0
+ },
+ "seconde_items_repris_2026": true,
+ "temoins": {
+  "valeurs_2025_citees_egales_tableurs": true,
+  "etiquettes_egales_tableurs_et_texte": true,
+  "seconde_deux_voies_texte_egal_etiquettes": true
+ },
+ "verdicts": {
+  "N24": {
+   "domaine": "francais",
+   "verdict": "TIENT",
+   "evaluations": {
+    "sixieme": {
+     "fenetre": 2021,
+     "d_fenetre": -6.0,
+     "mot_fenetre": "recul",
+     "debut": 2017,
+     "d_debut": 5.0,
+     "mot_debut": "hausse",
+     "d_2025": -1.0,
+     "mot_2025": "meme niveau (1 point au plus)"
+    },
+    "quatrieme": {
+     "fenetre": 2023,
+     "d_fenetre": -7.0,
+     "mot_fenetre": "recul",
+     "debut": 2023,
+     "d_debut": -7.0,
+     "mot_debut": "recul",
+     "d_2025": -4.0,
+     "mot_2025": "recul"
+    },
+    "seconde_gt": {
+     "fenetre": 2021,
+     "d_fenetre": -10.0,
+     "mot_fenetre": "recul",
+     "debut": 2019,
+     "d_debut": -1.0,
+     "mot_debut": "meme niveau (1 point au plus)",
+     "d_2025": -1.0,
+     "mot_2025": "meme niveau (1 point au plus)"
+    },
+    "seconde_2v": {
+     "fenetre": 2021,
+     "d_fenetre": -11.0,
+     "mot_fenetre": "recul",
+     "debut": 2019,
+     "d_debut": -2.0,
+     "mot_debut": "recul",
+     "d_2025": -2.0,
+     "mot_2025": "recul"
+    }
+   },
+   "sensibilite_debut": "SENS CHANGE (hausse, meme niveau (1 point au plus), recul)"
+  },
+  "N25": {
+   "domaine": "mathematiques",
+   "verdict": "SENS DIVERS",
+   "evaluations": {
+    "sixieme": {
+     "fenetre": 2021,
+     "d_fenetre": -1.0,
+     "mot_fenetre": "meme niveau (1 point au plus)",
+     "debut": 2017,
+     "d_debut": 3.0,
+     "mot_debut": "hausse",
+     "d_2025": -1.0,
+     "mot_2025": "meme niveau (1 point au plus)"
+    },
+    "quatrieme": {
+     "fenetre": 2023,
+     "d_fenetre": -2.0,
+     "mot_fenetre": "recul",
+     "debut": 2023,
+     "d_debut": -2.0,
+     "mot_debut": "recul",
+     "d_2025": -2.0,
+     "mot_2025": "recul"
+    },
+    "seconde_gt": {
+     "fenetre": 2021,
+     "d_fenetre": 4.0,
+     "mot_fenetre": "hausse",
+     "debut": 2019,
+     "d_debut": -4.0,
+     "mot_debut": "recul",
+     "d_2025": -2.0,
+     "mot_2025": "recul"
+    },
+    "seconde_2v": {
+     "fenetre": 2021,
+     "d_fenetre": 2.0,
+     "mot_fenetre": "hausse",
+     "debut": 2019,
+     "d_debut": -6.0,
+     "mot_debut": "recul",
+     "d_2025": -2.0,
+     "mot_2025": "recul"
+    }
+   },
+   "sensibilite_debut": "SENS CHANGE (hausse, recul)"
+  }
+ }
+}

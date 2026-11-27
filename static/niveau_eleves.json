@@ -1,5 +1,5 @@
 {
- "releve_le": "2026-11-12",
+ "releve_le": "2026-11-27",
  "_licence": "CC BY 4.0 — calcul Stéphane Lalut ; sources OCDE (PISA, Regards sur l'éducation), DEPP, IEA",
  "meta": {
   "page": "https://stephane-lalut.com/le-niveau-des-eleves-baisse-t-il/",
@@ -464,6 +464,409 @@
    "2021": 199.0,
    "2020": 205.0,
    "2019": 211.0
+  }
+ },
+ "evaluations_nationales_depp_2026": {
+  "protocole": "PROTOCOLE_9.md (SHA-256 315072ECA43A5D0E8A7EBBEA521D3FF73099B1E7099B69E724E1B4C3620BC54F)",
+  "sources": {
+   "sixieme_quatrieme_2017_2025": "DEPP, NI 26.21, donnees (figures 1.1 a 4.1 web, ensemble)",
+   "seconde_2019_2025": "DEPP, NI 26.22, donnees (figures 1.1, 2.1, 4.1, 5.1 web, ensemble)",
+   "2026": {
+    "sixieme": "DEPP, DT 2026-E24, p. 42 et 61",
+    "quatrieme": "DEPP, DT 2026-E26, p. 42 et 61",
+    "seconde": "DEPP, DT 2026-E27, p. 59, 61, 64, 84 et 100"
+   }
+  },
+  "series": {
+   "sixieme francais": {
+    "2017": 250.0,
+    "2018": 254.0,
+    "2019": 255.0,
+    "2020": 261.0,
+    "2021": 261.0,
+    "2022": 257.0,
+    "2023": 257.0,
+    "2024": 256.0,
+    "2025": 256.0,
+    "2026": 255.0
+   },
+   "sixieme mathematiques": {
+    "2017": 250.0,
+    "2018": 249.0,
+    "2019": 249.0,
+    "2020": 253.0,
+    "2021": 254.0,
+    "2022": 253.0,
+    "2023": 254.0,
+    "2024": 254.0,
+    "2025": 254.0,
+    "2026": 253.0
+   },
+   "quatrieme francais": {
+    "2023": 250.0,
+    "2024": 248.0,
+    "2025": 247.0,
+    "2026": 243.0
+   },
+   "quatrieme mathematiques": {
+    "2023": 250.0,
+    "2024": 249.0,
+    "2025": 250.0,
+    "2026": 248.0
+   },
+   "seconde_gt francais": {
+    "2019": 263.0,
+    "2020": 272.0,
+    "2021": 272.0,
+    "2022": 270.0,
+    "2023": 268.0,
+    "2024": 268.0,
+    "2025": 263.0,
+    "2026": 262.0
+   },
+   "seconde_gt mathematiques": {
+    "2019": 263.0,
+    "2020": 260.0,
+    "2021": 255.0,
+    "2022": 257.0,
+    "2023": 260.0,
+    "2024": 262.0,
+    "2025": 261.0,
+    "2026": 259.0
+   },
+   "seconde_2v francais": {
+    "2019": 251.0,
+    "2021": 260.0,
+    "2025": 251.0,
+    "2026": 249.0
+   },
+   "seconde_2v mathematiques": {
+    "2025": 247.0,
+    "2026": 245.0
+   },
+   "seconde_pro francais": {
+    "2019": 210.0,
+    "2020": 215.0,
+    "2021": 219.0,
+    "2022": 217.0,
+    "2023": 215.0,
+    "2024": 214.0,
+    "2025": 209.0,
+    "2026": 207.0
+   }
+  },
+  "seconde_deux_voies_phrases": {
+   "fr_2019_2021": [
+    251.0,
+    260.0
+   ],
+   "fr_baisse_depuis_2021": [
+    -11.0
+   ],
+   "ma_2019_2026": [
+    6.0
+   ],
+   "ma_2021_2023": [
+    5.0
+   ],
+   "ma_2019_2021": [
+    8.0
+   ],
+   "gt_ma_2019": [
+    263.0,
+    259.0
+   ],
+   "fr_plus_bas_2019_2026": true,
+   "gt_fr_niveau_2019": true,
+   "ma_stable_2023_2025": true
+  },
+  "toulouse_absente_2026": true,
+  "verdicts": {
+   "N24": {
+    "domaine": "francais",
+    "verdict": "TIENT",
+    "evaluations": {
+     "sixieme": {
+      "fenetre": 2021,
+      "d_fenetre": -6.0,
+      "mot_fenetre": "recul",
+      "debut": 2017,
+      "d_debut": 5.0,
+      "mot_debut": "hausse",
+      "d_2025": -1.0,
+      "mot_2025": "meme niveau (1 point au plus)"
+     },
+     "quatrieme": {
+      "fenetre": 2023,
+      "d_fenetre": -7.0,
+      "mot_fenetre": "recul",
+      "debut": 2023,
+      "d_debut": -7.0,
+      "mot_debut": "recul",
+      "d_2025": -4.0,
+      "mot_2025": "recul"
+     },
+     "seconde_gt": {
+      "fenetre": 2021,
+      "d_fenetre": -10.0,
+      "mot_fenetre": "recul",
+      "debut": 2019,
+      "d_debut": -1.0,
+      "mot_debut": "meme niveau (1 point au plus)",
+      "d_2025": -1.0,
+      "mot_2025": "meme niveau (1 point au plus)"
+     },
+     "seconde_2v": {
+      "fenetre": 2021,
+      "d_fenetre": -11.0,
+      "mot_fenetre": "recul",
+      "debut": 2019,
+      "d_debut": -2.0,
+      "mot_debut": "recul",
+      "d_2025": -2.0,
+      "mot_2025": "recul"
+     }
+    },
+    "sensibilite_debut": "SENS CHANGE (hausse, meme niveau (1 point au plus), recul)"
+   },
+   "N25": {
+    "domaine": "mathematiques",
+    "verdict": "SENS DIVERS",
+    "evaluations": {
+     "sixieme": {
+      "fenetre": 2021,
+      "d_fenetre": -1.0,
+      "mot_fenetre": "meme niveau (1 point au plus)",
+      "debut": 2017,
+      "d_debut": 3.0,
+      "mot_debut": "hausse",
+      "d_2025": -1.0,
+      "mot_2025": "meme niveau (1 point au plus)"
+     },
+     "quatrieme": {
+      "fenetre": 2023,
+      "d_fenetre": -2.0,
+      "mot_fenetre": "recul",
+      "debut": 2023,
+      "d_debut": -2.0,
+      "mot_debut": "recul",
+      "d_2025": -2.0,
+      "mot_2025": "recul"
+     },
+     "seconde_gt": {
+      "fenetre": 2021,
+      "d_fenetre": 4.0,
+      "mot_fenetre": "hausse",
+      "debut": 2019,
+      "d_debut": -4.0,
+      "mot_debut": "recul",
+      "d_2025": -2.0,
+      "mot_2025": "recul"
+     },
+     "seconde_2v": {
+      "fenetre": 2021,
+      "d_fenetre": 2.0,
+      "mot_fenetre": "hausse",
+      "debut": 2019,
+      "d_debut": -6.0,
+      "mot_debut": "recul",
+      "d_2025": -2.0,
+      "mot_2025": "recul"
+     }
+    },
+    "sensibilite_debut": "SENS CHANGE (hausse, recul)"
+   }
+  }
+ },
+ "cedre": {
+  "protocole": "PROTOCOLE_10.md (SHA-256 0FCABF41C00C0A3EEB9B08C633095F087D6F51F758FEC83BFF322CE75E9277E1)",
+  "sources": {
+   "mathematiques": "DEPP, NI 20.33 et 20.34 (septembre 2020), figure 1, valeurs transcrites (lecture au navigateur, captures archivees)",
+   "sciences": "DEPP, NI 26.12 et 26.13 (avril 2026), figure 1 (gras lu dans le PDF)",
+   "francais": "DEPP, NI 22.28 et 22.29 (2022), donnees, Fig 2 (gras lu dans le tableur)"
+  },
+  "series": {
+   "sciences ecole": {
+    "2007": {
+     "score": 250.0,
+     "et": 50.0,
+     "sig": false
+    },
+    "2013": {
+     "score": 249.0,
+     "et": 52.0,
+     "sig": false
+    },
+    "2018": {
+     "score": 249.0,
+     "et": 43.0,
+     "sig": false
+    },
+    "2024": {
+     "score": 246.0,
+     "et": 44.0,
+     "sig": false
+    }
+   },
+   "sciences college": {
+    "2007": {
+     "score": 250.0,
+     "et": 50.0,
+     "sig": false
+    },
+    "2013": {
+     "score": 250.0,
+     "et": 50.0,
+     "sig": false
+    },
+    "2018": {
+     "score": 238.0,
+     "et": 49.0,
+     "sig": true
+    },
+    "2024": {
+     "score": 232.0,
+     "et": 48.0,
+     "sig": true
+    }
+   },
+   "francais ecole": {
+    "2003": {
+     "score": 250.0,
+     "et": 50.0,
+     "sig": false
+    },
+    "2009": {
+     "score": 251.0,
+     "et": 48.0,
+     "sig": false
+    },
+    "2015": {
+     "score": 251.0,
+     "et": 43.0,
+     "sig": false
+    },
+    "2021": {
+     "score": 254.3,
+     "et": 45.9,
+     "sig": true
+    }
+   },
+   "francais college": {
+    "2015": {
+     "score": 250.0,
+     "et": 50.0,
+     "sig": false
+    },
+    "2021": {
+     "score": 246.6,
+     "et": 49.3,
+     "sig": false
+    }
+   },
+   "mathematiques ecole": {
+    "2008": {
+     "score": 250.0,
+     "et": 50.0,
+     "sig": false
+    },
+    "2014": {
+     "score": 249.0,
+     "et": 52.0,
+     "sig": false
+    },
+    "2019": {
+     "score": 232.0,
+     "et": 54.0,
+     "sig": true
+    }
+   },
+   "mathematiques college": {
+    "2008": {
+     "score": 250.0,
+     "et": 50.0,
+     "sig": false
+    },
+    "2014": {
+     "score": 243.0,
+     "et": 50.0,
+     "sig": true
+    },
+    "2019": {
+     "score": 237.0,
+     "et": 54.0,
+     "sig": true
+    }
+   }
+  },
+  "verdicts": {
+   "francais college": {
+    "intervalle": [
+     2015,
+     2021
+    ],
+    "variation": -3.4000000000000057,
+    "significatif": false,
+    "sens": "baisse non significative"
+   },
+   "francais ecole": {
+    "intervalle": [
+     2015,
+     2021
+    ],
+    "variation": 3.3000000000000114,
+    "significatif": true,
+    "sens": "hausse significative"
+   },
+   "mathematiques college": {
+    "intervalle": [
+     2014,
+     2019
+    ],
+    "variation": -6.0,
+    "significatif": true,
+    "sens": "baisse significative"
+   },
+   "mathematiques ecole": {
+    "intervalle": [
+     2014,
+     2019
+    ],
+    "variation": -17.0,
+    "significatif": true,
+    "sens": "baisse significative"
+   },
+   "sciences college": {
+    "intervalle": [
+     2018,
+     2024
+    ],
+    "variation": -6.0,
+    "significatif": true,
+    "sens": "baisse significative"
+   },
+   "sciences ecole": {
+    "intervalle": [
+     2018,
+     2024
+    ],
+    "variation": -3.0,
+    "significatif": false,
+    "sens": "baisse non significative"
+   }
+  },
+  "maths_2019_passage_ecran": true,
+  "temoin_hcsp": {
+   "hcsp": {
+    "maths_cm2": -0.35,
+    "maths_3e": -0.24,
+    "sciences_3e": -0.36
+   },
+   "calcule": {
+    "maths_cm2": -0.36,
+    "maths_3e": -0.26,
+    "sciences_3e": -0.36
+   }
   }
  },
  "depp_ecart_generations": [
@@ -2404,6 +2807,109 @@
   "pm_25": "202",
   "sm_v": "7",
   "sf_v": "4",
+  "six_fr_17": "250",
+  "six_fr_18": "254",
+  "six_fr_19": "255",
+  "six_fr_20": "261",
+  "six_fr_21": "261",
+  "six_fr_22": "257",
+  "six_fr_23": "257",
+  "six_fr_24": "256",
+  "six_fr_25": "256",
+  "six_fr_26": "255",
+  "six_ma_17": "250",
+  "six_ma_18": "249",
+  "six_ma_19": "249",
+  "six_ma_20": "253",
+  "six_ma_21": "254",
+  "six_ma_22": "253",
+  "six_ma_23": "254",
+  "six_ma_24": "254",
+  "six_ma_25": "254",
+  "six_ma_26": "253",
+  "q4_fr_23": "250",
+  "q4_fr_24": "248",
+  "q4_fr_25": "247",
+  "q4_fr_26": "243",
+  "q4_ma_23": "250",
+  "q4_ma_24": "249",
+  "q4_ma_25": "250",
+  "q4_ma_26": "248",
+  "sgt_fr_19": "263",
+  "sgt_fr_20": "272",
+  "sgt_fr_21": "272",
+  "sgt_fr_22": "270",
+  "sgt_fr_23": "268",
+  "sgt_fr_24": "268",
+  "sgt_fr_25": "263",
+  "sgt_fr_26": "262",
+  "sgt_ma_19": "263",
+  "sgt_ma_20": "260",
+  "sgt_ma_21": "255",
+  "sgt_ma_22": "257",
+  "sgt_ma_23": "260",
+  "sgt_ma_24": "262",
+  "sgt_ma_25": "261",
+  "sgt_ma_26": "259",
+  "s2v_fr_19": "251",
+  "s2v_fr_21": "260",
+  "s2v_fr_25": "251",
+  "s2v_fr_26": "249",
+  "s2v_ma_25": "247",
+  "s2v_ma_26": "245",
+  "spro_fr_19": "210",
+  "spro_fr_20": "215",
+  "spro_fr_21": "219",
+  "spro_fr_22": "217",
+  "spro_fr_23": "215",
+  "spro_fr_24": "214",
+  "spro_fr_25": "209",
+  "spro_fr_26": "207",
+  "ce_ma_e_08": "250",
+  "ce_ma_e_14": "249",
+  "ce_ma_e_19": "232",
+  "ce_ma_c_08": "250",
+  "ce_ma_c_14": "243",
+  "ce_ma_c_19": "237",
+  "ce_sc_e_07": "250",
+  "ce_sc_e_13": "249",
+  "ce_sc_e_18": "249",
+  "ce_sc_e_24": "246",
+  "ce_sc_c_07": "250",
+  "ce_sc_c_13": "250",
+  "ce_sc_c_18": "238",
+  "ce_sc_c_24": "232",
+  "ce_fr_e_03": "250",
+  "ce_fr_e_09": "251",
+  "ce_fr_e_15": "251",
+  "ce_fr_e_21": "254",
+  "ce_fr_c_15": "250",
+  "ce_fr_c_21": "247",
+  "six_fr_dfen": "6",
+  "six_fr_d25": "1",
+  "six_fr_ddeb": "5",
+  "six_ma_dfen": "1",
+  "six_ma_d25": "1",
+  "six_ma_ddeb": "3",
+  "q4_fr_dfen": "7",
+  "q4_fr_d25": "4",
+  "q4_fr_ddeb": "7",
+  "q4_ma_dfen": "2",
+  "q4_ma_d25": "2",
+  "q4_ma_ddeb": "2",
+  "sgt_fr_dfen": "10",
+  "sgt_fr_d25": "1",
+  "sgt_fr_ddeb": "1",
+  "sgt_ma_dfen": "4",
+  "sgt_ma_d25": "2",
+  "sgt_ma_ddeb": "4",
+  "s2v_fr_dfen": "11",
+  "s2v_fr_d25": "2",
+  "s2v_fr_ddeb": "2",
+  "s2v_ma_dfen": "2",
+  "s2v_ma_d25": "2",
+  "s2v_ma_ddeb": "6",
+  "s2v_ma_d1921": "8",
   "g_tf": "13",
   "g_tm": "9",
   "g_pf": "16",
@@ -2441,6 +2947,8 @@
   "p6_math_rec": "36",
   "p6_lect_rec": "44",
   "p6_sci_rec": "13",
+  "sansc_math": "25",
+  "sansc_lect": "33",
   "p6_dipl_nr15": "4",
   "p6_dipl_nr25": "13",
   "p6_orig_nr15": "3",
