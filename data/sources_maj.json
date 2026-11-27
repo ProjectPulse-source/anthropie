@@ -156,7 +156,10 @@
    "objet": "Notes d'Information de la DEPP, PISA, PIRLS",
    "mode": "manuel", "pages": ["/les-eleves-maitrisent-ils-moins-bien-la-langue-francaise/"],
    "generateurs": ["update_langue_eleves.py"], "jeu": "data/langue_eleves.json",
-   "cadence": "annuel pour les évaluations nationales de la DEPP (résultats de la rentrée publiés en novembre : CP, CM1, sixième, quatrième, seconde) ; irrégulier pour les notes de la DEPP et les enquêtes internationales", "nature": "annuel (évaluations nationales, novembre) et irrégulier (notes de la DEPP, enquêtes internationales)", "revoir_avant": "2027-11-30"
+   "cadence": "annuel pour les évaluations nationales de la DEPP (résultats de la rentrée publiés en novembre : CP, CM1, sixième, quatrième, seconde) ; irrégulier pour les notes de la DEPP et les enquêtes internationales", "nature": "annuel (évaluations nationales, novembre) et irrégulier (notes de la DEPP, enquêtes internationales)", "revoir_avant": "2027-11-30",
+  "echeances": [
+   {"date": "2027-11-30", "etape": "évaluations nationales de novembre 2027 ; à la même reprise, les deux ajouts de la recherche A16 du 27/11/2026 (lexique de CM2 depuis 2024, DEPP, DT 2026-E23 ; épreuve de lecture de 1987 reprise en 2015 et 2021, résultats non exploités, DT 2024-E04, p. 41) ; 06_PROMOTION\\INTELLIGIBILITE_RESSOURCES_2026-11-11\\POINTS_OUVERTS_APRES_FINIR_RESSOURCES.md"}
+  ]
   },
   {
    "id": "pouvoirs-president", "producteur": "Légifrance, Conseil constitutionnel",
